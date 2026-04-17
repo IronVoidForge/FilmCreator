@@ -123,6 +123,7 @@ echo   2. The batch manifest status should be completed
 echo   3. Each candidate in the manifest should have output_files populated
 echo   4. The motion should start from the approved keyframe composition rather than a random new frame
 echo   5. Each candidate should be one short cut, not a stitched long-form continuation
+echo   6. The short motion should preserve the approved keyframe lighting rather than shifting to an unexplained blue cast
 
 del "%PLAN_JSON%" >nul 2>nul
 del "%RUN_JSON%" >nul 2>nul

@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Any
 
 from .common import PROJECTS_ROOT, ROOT, read_json, repo_relative, write_json
+from .manifest_tools import extract_manifest_candidate_paths
 from .style_profiles import empty_stage_style_preferences, stage_family
 
 
@@ -201,7 +202,7 @@ def record_review_batch(
         raise FileNotFoundError(f"Run manifest not found: {manifest_file}")
 
     manifest = read_json(manifest_file)
-    candidate_paths = _extract_manifest_candidate_paths(manifest)
+    candidate_paths = extract_manifest_candidate_paths(manifest)
     normalized_top_two = [path_to_manifest_value(resolve_user_path(path)) for path in top_two]
     normalized_chosen = path_to_manifest_value(resolve_user_path(chosen_primary)) if chosen_primary else None
 
@@ -254,22 +255,6 @@ def record_review_batch(
     _update_style_preferences_from_review(clip_state, manifest, review_entry)
     write_clip_state(project_slug, scene_id, clip_id, clip_state)
     return review_entry
-
-
-def _extract_manifest_candidate_paths(manifest: dict[str, Any]) -> list[str]:
-    batch = manifest.get("batch", {})
-    candidate_entries = batch.get("candidates", [])
-    if candidate_entries:
-        paths = []
-        for entry in candidate_entries:
-            output_files = entry.get("output_files", [])
-            if output_files:
-                paths.extend(output_files)
-        if paths:
-            return paths
-    return list(manifest.get("output_files", []))
-
-
 def _update_manifest_review_state(
     manifest_file: Path,
     manifest: dict[str, Any],

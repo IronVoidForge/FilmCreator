@@ -6,6 +6,12 @@ import orchestrator.state as state_module
 from orchestrator.common import TEMPLATES_ROOT as REAL_TEMPLATES_ROOT
 
 
+def _fake_extract_last_frame(_video_path: Path, output_path: Path) -> Path:
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_bytes(b"last-frame")
+    return output_path
+
+
 def test_create_run_manifest_project_scope_uses_explicit_fields(tmp_path: Path, monkeypatch) -> None:
     projects_root = tmp_path / "projects"
     monkeypatch.setattr(scaffold_module, "PROJECTS_ROOT", projects_root)
@@ -36,6 +42,7 @@ def test_promote_asset_approved_video_updates_clip_state(tmp_path: Path, monkeyp
     monkeypatch.setattr(scaffold_module, "TEMPLATES_ROOT", REAL_TEMPLATES_ROOT)
     monkeypatch.setattr(state_module, "PROJECTS_ROOT", projects_root)
     monkeypatch.setattr(state_module, "ROOT", tmp_path)
+    monkeypatch.setattr(scaffold_module, "extract_last_frame", _fake_extract_last_frame)
 
     source_video = tmp_path / "candidate_video.mp4"
     source_video.write_bytes(b"filmcreator-test-video")
@@ -59,6 +66,22 @@ def test_promote_asset_approved_video_updates_clip_state(tmp_path: Path, monkeyp
     assert clip_state["approved_assets"]["cut_motion_videos"] == [
         "projects/demo/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV01.mp4"
     ]
+    assert clip_state["approved_video_last_frame"] == (
+        "projects/demo/05_scenes/SC001/clips/CL001/stills/video_last_frames/SC001_CL001_VL01.png"
+    )
 
     review_copy = projects_root / "demo" / "06_reviews" / "selected" / "SC001_CL001_MV01.mp4"
     assert review_copy.exists()
+
+    extracted_frame = (
+        projects_root
+        / "demo"
+        / "05_scenes"
+        / "SC001"
+        / "clips"
+        / "CL001"
+        / "stills"
+        / "video_last_frames"
+        / "SC001_CL001_VL01.png"
+    )
+    assert extracted_frame.exists()

@@ -1,0 +1,174 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 6002,
+      "steps": 12,
+      "cfg": 5,
+      "sampler_name": "uni_pc",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": [
+        "48",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "55",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "Lead with subject behavior, interaction, body language, and visible action before secondary camera details.\n\nStart from the provided opening duel frame and preserve the exact visible identities, costumes, proportions, lighting, architecture, and overall composition from that image. Two combatants hold crossed blades on a circular platform inside a monumental pale alien command chamber with ribbed nonhuman arches, cold sculptural overhead light, and faint haze. Motion should stay restrained and elegant. Use a slow cinematic push-in with a slight rightward drift. The lean dark-haired human duelist makes two tiny blade adjustments and a measured half-step inward, testing the bind without breaking the tableau. The taller pale alien prince answers with a controlled forward press, a subtle wrist turn, and a small shift of weight that keeps visible dominance. Let haze drift softly, let fabric and armor tails move slightly, and allow a faint seam-light pulse in the distant walls. No strike lands, no blood, no new characters, no costume changes, no room redesign, no abrupt camera move, and no chaotic action.",
+      "clip": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "identity drift, face drift, anatomy errors, extra limbs, extra weapons, duplicate characters, costume redesign, room redesign, hard cut, jumpy camera, fast action, impact hit, blood, gore, explosion, debris burst, comedy, text, watermark, logo",
+      "clip": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "37": {
+    "inputs": {
+      "unet_name": "wan2.2_ti2v_5B_fp16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "38": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "39": {
+    "inputs": {
+      "vae_name": "wan2.2_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "48": {
+    "inputs": {
+      "shift": 8,
+      "model": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "ModelSamplingSD3"
+    }
+  },
+  "55": {
+    "inputs": {
+      "width": 1280,
+      "height": 704,
+      "length": 121,
+      "batch_size": 1,
+      "vae": [
+        "39",
+        0
+      ],
+      "start_image": [
+        "56",
+        0
+      ]
+    },
+    "class_type": "Wan22ImageToVideoLatent",
+    "_meta": {
+      "title": "Wan22ImageToVideoLatent"
+    }
+  },
+  "56": {
+    "inputs": {
+      "image": "filmcreator/RUN_0043/source_frame_SC001_CL001_KF01.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "57": {
+    "inputs": {
+      "fps": 24,
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "Create Video"
+    }
+  },
+  "58": {
+    "inputs": {
+      "filename_prefix": "filmcreator/pilot_scene/RUN_0043_cut_motion",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "57",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  }
+}

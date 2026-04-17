@@ -49,3 +49,4 @@ def test_parse_prompt_package_sections(tmp_path: Path) -> None:
     assert prompt.positive_prompt == "cinematic frame"
     assert prompt.inputs["project_id"] == "demo"
     assert prompt.sources == ["02_story_analysis/clip_plans/SC001/CL001.md"]
+    assert prompt.repair_notes_markdown == ""

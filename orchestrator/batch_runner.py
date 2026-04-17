@@ -417,6 +417,7 @@ def _build_candidate_prompt_package(
         inputs_markdown="\n".join(f"- {key}: {value}" for key, value in inputs.items()),
         continuity_notes_markdown=continuity_lines,
         sources_markdown="\n".join(f"- {source}" for source in sources),
+        repair_notes_markdown=prompt_package.repair_notes_markdown,
     )
 
 

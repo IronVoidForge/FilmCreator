@@ -5,6 +5,7 @@ import json
 
 from .batch_runner import plan_prompt_batch, run_prompt_batch
 from .registry_loader import get_workflow
+from .review_tools import interactive_review_and_promote_batch, review_candidates_summary
 from .runner import run_still
 from .scaffold import (
     create_clip,
@@ -67,6 +68,24 @@ def build_parser() -> argparse.ArgumentParser:
     review_cmd.add_argument("--decision", required=True, choices=["approve", "needs_fix", "regenerate_batch"])
     review_cmd.add_argument("--primary")
     review_cmd.add_argument("--top-two", action="append", default=[])
+
+    review_candidates_cmd = subparsers.add_parser(
+        "list-review-candidates",
+        help="List the candidate outputs recorded in a batch manifest",
+    )
+    review_candidates_cmd.add_argument("manifest_path")
+
+    interactive_review_cmd = subparsers.add_parser(
+        "interactive-review-and-promote",
+        help="Interactively review a batch and promote the selected primary candidate",
+    )
+    interactive_review_cmd.add_argument("project_slug")
+    interactive_review_cmd.add_argument("scene_id")
+    interactive_review_cmd.add_argument("clip_id")
+    interactive_review_cmd.add_argument("stage")
+    interactive_review_cmd.add_argument("manifest_path")
+    interactive_review_cmd.add_argument("promotion_target")
+    interactive_review_cmd.add_argument("--index", type=int, default=1)
 
     run_cmd = subparsers.add_parser("run-still", help="Prepare or execute a still-image run")
     run_cmd.add_argument("project_slug")
@@ -224,6 +243,50 @@ def main() -> None:
             top_two=args.top_two,
         )
         print(json.dumps(review, indent=2))
+        return
+
+    if args.command == "list-review-candidates":
+        print(json.dumps(review_candidates_summary(args.manifest_path), indent=2))
+        return
+
+    if args.command == "interactive-review-and-promote":
+        summary = interactive_review_and_promote_batch(
+            project_slug=args.project_slug,
+            scene_id=args.scene_id,
+            clip_id=args.clip_id,
+            stage=args.stage,
+            manifest_path=args.manifest_path,
+            promotion_target=args.promotion_target,
+            promotion_index=args.index,
+        )
+        clip_state = summary["clip_state"]
+        manifest = summary["manifest"]
+        latest_review = clip_state.get("latest_review_decision") or {}
+
+        print("Approval summary:")
+        if args.promotion_target == "approved_keyframe":
+            print(f"approved_keyframe: {clip_state['approved_assets'].get('approved_keyframe')}")
+            print(f"golden_frame: {clip_state['approved_assets'].get('golden_frame')}")
+            print(f"current_continuity_source: {clip_state.get('current_continuity_source')}")
+        elif args.promotion_target == "approved_video":
+            print(f"approved_video: {clip_state['approved_assets'].get('approved_video')}")
+            print(f"approved_video_last_frame: {clip_state.get('approved_video_last_frame')}")
+        elif args.promotion_target == "approved_still_fix":
+            still_fixes = clip_state["approved_assets"].get("still_fixes", [])
+            print(f"approved_still_fix: {still_fixes[-1] if still_fixes else None}")
+            print(f"current_continuity_source: {clip_state.get('current_continuity_source')}")
+        print(f"latest_review_decision: {latest_review.get('decision')}")
+        print(f"chosen_primary: {latest_review.get('chosen_primary')}")
+        print("top_two:")
+        for candidate in latest_review.get("top_two", []):
+            print(f"  {candidate}")
+        print("")
+        print("Manifest review summary:")
+        print(f"batch.review_status: {manifest.get('batch', {}).get('review_status')}")
+        print(f"batch.chosen_primary: {manifest.get('batch', {}).get('chosen_primary')}")
+        print("batch.top_two:")
+        for candidate in manifest.get("batch", {}).get("top_two", []):
+            print(f"  {candidate}")
         return
 
 

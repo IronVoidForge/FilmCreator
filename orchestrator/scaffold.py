@@ -19,6 +19,7 @@ from .common import (
 )
 from .registry_loader import get_workflow
 from .state import load_clip_state, write_clip_state
+from .video_utils import VideoFrameExtractionError, extract_last_frame
 
 
 PROJECT_DIRS = [
@@ -56,6 +57,7 @@ CLIP_STILL_DIRS = [
     "fixes",
     "anchor_frames",
     "interval_frames",
+    "video_last_frames",
     "selected",
 ]
 
@@ -68,6 +70,8 @@ ASSET_CODE_BY_TARGET = {
     "anchor_frame": "AF",
     "interval_frame": "IF",
 }
+
+LAST_VIDEO_FRAME_ASSET_CODE = "VL"
 
 
 def _project_path(project_slug: str) -> Path:
@@ -107,12 +111,28 @@ def _write_prompt_file(path: Path, title: str, prompt_id: str, workflow_type: st
             "- duration_seconds:",
             "- required_refs:",
             "- optional_refs:",
+            "- visible_character_assets:",
+            "- look_continuity_policy:",
+            "- intended_lighting_change:",
+            "- composition_type:",
+            "- continuity_mode:",
+            "- starting_keyframe_strategy:",
+            "- dependency_policy:",
+            "- auto_advance_policy:",
+            "- fallback_strategy:",
+            "- consistency_assist_policy:",
+            "- consistency_assist_method:",
+            "- anatomy_repair_policy:",
+            "- consistency_targets:",
             "- style_profile:",
             "- batch_role:",
             "- fix_of:",
             "",
             "# Continuity Notes",
             "- Capture the continuity rules for this stage.",
+            "",
+            "# Repair Notes",
+            "- Capture any repair or corrective guidance for this stage.",
             "",
             "# Sources",
             *[f"- {source}" for source in sources],
@@ -428,7 +448,50 @@ def promote_asset(
     ensure_dir(destination.parent)
     shutil.copy2(source_path, destination)
 
+    if target == "approved_video":
+        _sync_approved_video_last_frame(
+            project_slug=project_slug,
+            scene_id=scene_id,
+            clip_id=clip_id,
+            index=index,
+            promoted_video_path=destination,
+        )
+
     review_copy = project_dir / "06_reviews" / "selected" / destination.name
     ensure_dir(review_copy.parent)
     shutil.copy2(destination, review_copy)
     return destination
+
+
+def _sync_approved_video_last_frame(
+    *,
+    project_slug: str,
+    scene_id: str | None,
+    clip_id: str | None,
+    index: int,
+    promoted_video_path: Path,
+) -> None:
+    if not scene_id or not clip_id:
+        return
+
+    clip_dir = create_clip(project_slug, scene_id, clip_id)
+    clip_state = load_clip_state(project_slug, scene_id, clip_id)
+    clip_state["approved_video_last_frame"] = None
+    last_frame_path = (
+        clip_dir
+        / "stills"
+        / "video_last_frames"
+        / f"{scene_id}_{clip_id}_{LAST_VIDEO_FRAME_ASSET_CODE}{index:02d}.png"
+    )
+
+    try:
+        extract_last_frame(promoted_video_path, last_frame_path)
+    except VideoFrameExtractionError as exc:
+        notes = clip_state.setdefault("notes", [])
+        message = f"Approved video promoted, but last-frame extraction failed: {exc}"
+        if message not in notes:
+            notes.append(message)
+    else:
+        clip_state["approved_video_last_frame"] = repo_relative(last_frame_path)
+
+    write_clip_state(project_slug, scene_id, clip_id, clip_state)

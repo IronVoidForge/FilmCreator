@@ -23,6 +23,7 @@ extra characters, merged anatomy, duplicate limbs, duplicate weapons, blurred fa
 - duration_seconds: 5
 - required_refs: image_1, image_2
 - optional_refs: image_3, image_4
+- visible_character_assets: ulurani3
 - style_profile:
 - batch_role:
 - fix_of:
@@ -31,6 +32,9 @@ extra characters, merged anatomy, duplicate limbs, duplicate weapons, blurred fa
 - Keep the alien war prince and human duelist visually distinct.
 - Keep the environment monumental and uncluttered.
 - Preserve this frame as a stable cut-opening composition that later motion can extend from.
+
+# Repair Notes
+- Favor readable hands, stable facial structure, and clean silhouette separation for both combatants.
 
 # Sources
 - projects/pilot_scene/02_story_analysis/clip_plans/SC001/CL001.md

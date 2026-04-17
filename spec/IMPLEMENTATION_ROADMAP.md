@@ -15,46 +15,67 @@ Ship a local-first, cut-oriented pipeline that can:
 - Local generation is the product core.
 - LM Studio and ComfyUI are separate phases on VRAM-constrained hardware.
 - `clip = cut` in the working implementation.
+- Previous-shot video last frame is an optional continuity tool, not the universal default next-shot source.
 - Every generated stage is batch-first and review-gated.
 - The next stage only advances from one approved primary candidate.
 - Overnight runs are stage-bounded. Human review remains the boundary between stage families unless we later add an explicit auto-advance mode.
+- Optional post-keyframe identity-consistency and anatomy-repair assists should plug in as corrective still passes, not as hidden replacements for the base keyframe stage.
 
 ## Current Validated Checkpoint
 
-- A clip-scoped `keyframe` batch can now render successfully through the clean Comfy path.
+- A clip-scoped `keyframe` batch can render successfully through the clean Comfy path.
 - `RUN_0001` produced four clip-local keyframe candidates in:
   - `projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/`
-- The orchestrator can:
+- A short-cut `cut_motion` batch can also render successfully from the approved keyframe.
+- `RUN_0040` produced four clip-local short video candidates in:
+  - `projects/pilot_scene/05_scenes/SC001/clips/CL001/video/`
+- The orchestrator can now:
   - scaffold clip folders and prompt packages,
   - generate 4 style-profile prompt variants,
   - patch the canonical four-ref still workflow,
-  - submit a live render job,
-  - route outputs into canonical clip folders,
-  - record a batch manifest with per-candidate metadata,
-  - record top 2 and chosen primary review results,
-  - promote the chosen primary into `approved_keyframe`,
+  - patch the primary Wan 5B short-cut motion workflow,
+  - submit live still and short-motion render jobs,
+  - route still and video outputs into canonical clip folders,
+  - record batch manifests with per-candidate metadata,
+  - record top 2 and chosen primary review results for keyframes,
+  - promote the chosen keyframe into `approved_keyframe`,
   - update `clip_state.json` so continuity resolves from the approved keyframe.
 
 ## Known Gaps At This Checkpoint
 
 - `still_fix` has not yet been run from a reviewed prior stage.
-- `cut_motion` short-cut workflow wiring exists, but the new Wan 5B default path has not yet been live-validated.
+- The repaired manifest-backed cut-motion review launcher has not yet been live-validated after the folder-counting bug fix.
+- The current short-cut motion path appears to introduce an unwanted blue-shift relative to the approved keyframe and needs look-preservation tuning.
 - Longer 10-second clips are not yet represented as explicit multi-segment motion plans.
-- approved video promotion now exists, but approved video last-frame extraction and continuity handoff are not yet implemented.
+- approved video last-frame extraction now exists in code, but it has not yet been live-validated on a reviewed motion approval.
 - LM Studio authoring is still manual-file driven rather than automated.
+- The planning-time shot-start decision model is not yet implemented:
+  - continuity mode
+  - composition type
+  - dependency policy
+  - review fallback strategy
+- Optional identity-consistency assist after keyframe generation is not yet implemented:
+  - character-ref mapping
+  - safe multi-character targeting
+  - low-denoise reference-guided still correction
+- Experimental motion-time hand-fix LoRA support is not yet implemented or validated.
 - Scene-wide overnight batching is not yet implemented as a first-class orchestration mode.
 - The desktop/custom-node Comfy runtime on `8188` still fails inside the `comfyui_manager` logging path, so the clean render path remains the recommended smoke-test runtime.
 
 ## Next Immediate Step
 
-Validate the first normal-cut short-motion smoke path:
+Validate the next two workflow checkpoints:
 
-1. run one planned `cut_motion` batch through the new Wan 5B short-cut workflow,
-2. confirm routed preview videos land in the clip-local `video/` folder for each completed candidate,
-3. review the batch and promote one chosen primary into `approved_video`,
-4. confirm LongLook remains available only as the explicit extended-cut path.
+1. run the repaired `test_review_and_approve_pilot_cut_motion.bat` launcher and confirm:
+   - the manifest-backed candidate list opens correctly even when older videos exist in the folder
+   - `approved_video` is recorded in clip state
+   - `approved_video_last_frame` is extracted into the clip still hierarchy
+2. run the new `run_pilot_scene_still_fix_batch_clean_8190.bat` smoke path and confirm:
+   - a reviewed prior still is used as the automatic base image
+   - the secondary reference image patches into the two-ref workflow
+   - 3-4 corrective still candidates land under `stills/fixes/`
 
-That is the smallest next step that proves both the approved-keyframe-to-short-video render handoff and the reviewed-video promotion handoff are real in the intended production shape.
+That pair of validations closes the motion review handoff and opens the first real corrective still stage.
 
 ## End-To-End Delivery Plan
 
@@ -117,6 +138,14 @@ Support corrective still batches after keyframe review.
 - generate 3-4 `still_fix` variants
 - review and approve a corrected still when needed
 - preserve the relationship between the fix batch and the asset it is correcting
+- define optional corrective intents for `still_fix`:
+  - identity consistency against approved character-sheet refs
+  - anatomy repair
+  - compositional cleanup
+- support a recommended safe default mode:
+  - review-triggered finalist-only consistency assist
+- leave open a later aggressive option:
+  - post-batch automatic consistency assist on all keyframe candidates
 
 #### Handoff
 
@@ -128,6 +157,7 @@ Support corrective still batches after keyframe review.
 #### Test Point
 
 - a `still_fix` batch can run from the approved keyframe and record what it was fixing
+- a consistency-assist still-fix can run from a generated keyframe plus approved character refs and produce a corrected still without replacing the normal keyframe pipeline
 
 ### Phase 3: Short-Cut Motion Smoke Path
 
@@ -147,6 +177,7 @@ Prove one approved keyframe can drive one normal movie-cut video generation with
   - save/output node selection
   - seed
   - any exposed motion-length or generation settings
+- tune the short-cut motion workflow and prompt contract so it preserves the approved keyframe look by default instead of drifting toward a cool blue grade
 - add `cut_motion` workflow resolution to the runner
 - route outputs into the clip `video/` folder
 - capture enough metadata to identify the video output and its originating approved keyframe
@@ -174,6 +205,7 @@ Close the loop between motion generation and continuity state.
   - needs_fix
   - regenerate_batch
 - capture approved video metadata in clip state
+- support launcher and CLI paths that derive review candidates from the run manifest rather than from a raw folder listing
 - record the approved video last frame as a continuity source when appropriate
 - if a clip plan explicitly declares multiple motion segments, define how later segments inherit from:
   - the approved keyframe
@@ -223,11 +255,23 @@ Automate planning and prompt writing without changing the runner contract.
   - keyframe
   - still fix
   - cut motion
+- the planning layer must decide, per clip:
+  - continuity mode
+  - composition type
+  - starting-keyframe strategy
+  - dependency policy
+  - auto-advance policy
+  - review fallback strategy
 - prompt rules enforced in generated output:
   - no proper nouns in prompt text
   - descriptive noun phrases only
   - duration stored in metadata, not body text
   - Wan motion prompts emphasize visible motion and camera behavior rather than restating the entire image
+- planning and prompt writing should also be able to declare:
+  - visible character assets
+  - consistency-assist policy
+  - consistency-assist method
+  - anatomy-repair policy
 
 #### Handoff
 
@@ -248,12 +292,17 @@ Prepare an entire scene in one authoring pass before any rendering begins.
 
 - scene-level planning command that:
   - decomposes the scene into clips
+  - groups clips by beat or shared staging packet when appropriate
   - assigns clip IDs
   - records shot purpose and duration
   - breaks each clip into textual 3-5 second motion segments
   - identifies required shared refs
   - identifies character and environment asset IDs referenced by the scene
   - writes all prompt packages for the scene
+- clip plans should prefer `reframe_same_moment`, `reblock_same_scene`, `insert`, and `cutaway` for most coverage
+- `continuous_follow` should be rare and intentionally chosen
+- the default opening-keyframe plan for most clips should not wait on previous video completion
+- a failed keyframe review may escalate into a previous-video-last-frame camera-reposition fallback
 - normal clips should plan as one short motion segment by default, while longer clips may declare multiple sequential motion segments such as two segments for an approximately 10-second cut
 - scene manifest that records all clips and their current stage readiness
 
@@ -276,11 +325,14 @@ Render a full scene in unattended overnight passes without skipping required hum
 
 - batch runner that can operate at scene scope
 - queueing by stage family:
-  - pass A: render all keyframe batches for all clips in the scene
+  - pass A: render all keyframe batches for all clips in the scene that are `independent` or `soft_ref_previous`
   - review gate
-  - pass B: render all requested still-fix batches
+  - pass B: render all requested still-fix batches and any review-triggered fallback keyframe retries
   - review gate
   - pass C: render all cut-motion batches for approved clips
+- explicit dependency handling:
+  - clips that are `hard_ref_previous` wait on their required source result
+  - clips that are `independent` or `soft_ref_previous` should not be blocked by unfinished earlier videos
 - resume and retry behavior:
   - skip already completed batches
   - retry failed clips only
@@ -312,6 +364,12 @@ Make scene-wide cut progression robust enough for longer unattended runs.
   - shared refs plus text only
   - prior approved keyframe
   - previous approved video last frame
+- explicit rules for when a new cut should instead be treated as:
+  - `reframe_same_moment`
+  - `reblock_same_scene`
+  - `insert`
+  - `cutaway`
+  - `scene_reset`
 - scene-level continuity preferences so adjacent cuts can reuse the right approved source when appropriate
 - batch video creation across all cuts in a scene after keyframe approvals are in place
 - handoff rules so the next cut knows whether it should inherit continuity or intentionally reset composition
@@ -357,10 +415,11 @@ Make scene-wide cut progression robust enough for longer unattended runs.
 - approved keyframe or approved still-fix becomes the motion input frame for the first short motion segment
 - normal cuts render from one approved still into one short video generation
 - if a longer clip is explicitly planned as multiple motion segments, the approved last frame from segment 1 may become the input frame for segment 2
+- many next-shot keyframes should be able to generate before those motion results complete, because they are planned as reframes, reblocks, inserts, or cutaways rather than direct continuity follows
 
 ### Handoff 5: Approved Video To Later Continuity
 
-- approved video last frame may become the next continuity source when scene logic calls for continuity carry-forward
+- approved video last frame may become the next continuity source when scene logic or a review fallback calls for continuity carry-forward or camera repositioning from the prior cut
 
 ## Overnight Batch Strategy
 
@@ -370,12 +429,12 @@ Because review is intentionally required after each generated stage family, the 
    - plan the whole scene
    - write all prompt packages
 2. overnight keyframe render pass:
-   - render all clip keyframe batches
+   - render all clip keyframe batches that do not hard-depend on earlier video results
 3. morning review:
    - choose primary keyframes
    - flag clips that need still fixes
 4. overnight still-fix render pass:
-   - render only the flagged clips
+   - render only the flagged clips and any fallback retries that now require previous-video-last-frame reframing
 5. morning review:
    - approve fixes
 6. overnight cut-motion render pass:
@@ -388,12 +447,13 @@ This preserves review quality while still letting you use sleep-time for the exp
 
 ## Recommended Build Order From Here
 
-1. Fix successful-batch manifest hygiene.
-2. Import and smoke-test the primary short-cut Wan `cut_motion` workflow.
-3. Validate `still_fix` from an approved keyframe.
+1. Validate repaired cut-motion review plus approved-video last-frame extraction.
+2. Validate `still_fix` from an approved keyframe.
+3. Tune the short-cut motion path to preserve keyframe look without the current blue-shift.
 4. Add LM Studio planning and prompt writing.
-5. Add scene-wide planning.
-6. Add scene-wide stage-bounded overnight rendering.
-7. Add explicit multi-segment clip rules for longer cuts.
-8. Reserve LongLook for extended-cut workflows after the short-cut path is stable.
-9. Add cross-cut continuity rules and scene-scale video completion.
+5. Validate `still_fix` as a corrective stage, including optional identity-consistency assist.
+6. Add scene-wide planning.
+7. Add scene-wide stage-bounded overnight rendering.
+8. Add explicit multi-segment clip rules for longer cuts.
+9. Reserve LongLook for extended-cut workflows after the short-cut path is stable.
+10. Add cross-cut continuity rules and scene-scale video completion.

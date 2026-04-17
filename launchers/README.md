@@ -16,8 +16,8 @@ These batch files are convenience entry points for the current local workflow sp
   - requires ComfyUI to already be reachable on `8188`
 - `test_review_and_approve_pilot_keyframe.bat`
   - opens the current pilot keyframe folder
-  - prompts for the top 2 finalists and the primary winner
-  - records the review on `RUN_0001`
+  - resolves the latest keyframe manifest from clip state
+  - prompts for the top 2 finalists and the primary winner through the interactive Python review helper
   - promotes the chosen winner to `approved_keyframe`
   - prints the clip-state and manifest fields that prove the handoff worked
 - `start_comfyui_clean_8190.bat`
@@ -43,9 +43,20 @@ These batch files are convenience entry points for the current local workflow sp
   - routes short video candidates into the clip-local `video/` folder
 - `test_review_and_approve_pilot_cut_motion.bat`
   - opens the current pilot video candidate folder
-  - prompts for the top 2 finalists and the primary winner
-  - records the review on the latest `cut_motion` batch
+  - resolves the latest `cut_motion` manifest from clip state
+  - prompts for the top 2 finalists and the primary winner through the interactive Python review helper
   - promotes the chosen winner to `approved_video`
+  - extracts the approved video's last frame into clip-local still storage when backend support is available
+  - prints the clip-state and manifest fields that prove the handoff worked
+- `run_pilot_scene_still_fix_batch_clean_8190.bat`
+  - plans and executes the current pilot `still_fix` batch against the clean `8190` server
+  - automatically uses the approved keyframe as the base image and `smoke_char.png` as the secondary reference
+  - routes corrective still candidates into the clip-local `stills/fixes/` folder
+- `test_review_and_approve_pilot_still_fix.bat`
+  - opens the current pilot still-fix folder
+  - resolves the latest `still_fix` manifest from clip state
+  - prompts for the top 2 finalists and the primary winner through the interactive Python review helper
+  - promotes the chosen winner to `approved_still_fix`
   - prints the clip-state and manifest fields that prove the handoff worked
 
 Current pilot batch assets:
@@ -61,4 +72,6 @@ Recommended usage right now:
 3. Review generated outputs under the `pilot_scene` project folders
 4. Run `test_review_and_approve_pilot_keyframe.bat` to validate review recording and approved-keyframe promotion
 5. Run `run_pilot_scene_cut_motion_batch_video_8191.bat` for the short-cut motion smoke test after a keyframe has been approved
-6. Run `test_review_and_approve_pilot_cut_motion.bat` to validate the video review-and-approval handoff
+6. Run `test_review_and_approve_pilot_cut_motion.bat` to validate the video review-and-approval handoff and last-frame extraction
+7. Run `run_pilot_scene_still_fix_batch_clean_8190.bat` for the first corrective still smoke test
+8. Run `test_review_and_approve_pilot_still_fix.bat` to validate the still-fix review-and-promotion handoff

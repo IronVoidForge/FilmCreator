@@ -32,6 +32,7 @@ class PromptPackage:
     inputs_markdown: str
     continuity_notes_markdown: str
     sources_markdown: str
+    repair_notes_markdown: str = ""
 
     @property
     def sources(self) -> list[str]:
@@ -62,6 +63,7 @@ class PromptPackage:
             "negative_prompt": self.negative_prompt,
             "inputs": self.inputs,
             "continuity_notes": _parse_bullet_list(self.continuity_notes_markdown),
+            "repair_notes": _parse_bullet_list(self.repair_notes_markdown),
             "sources": self.sources,
         }
 
@@ -69,6 +71,7 @@ class PromptPackage:
         input_lines = [f"- {key}: {value}" for key, value in self.inputs.items()]
         continuity_lines = _parse_bullet_list(self.continuity_notes_markdown)
         source_lines = self.sources
+        repair_lines = _parse_bullet_list(self.repair_notes_markdown)
 
         sections = [
             "# Title",
@@ -95,6 +98,9 @@ class PromptPackage:
             "# Continuity Notes",
             *[f"- {line}" for line in continuity_lines],
             "",
+            "# Repair Notes",
+            *[f"- {line}" for line in repair_lines],
+            "",
             "# Sources",
             *[f"- {line}" for line in source_lines],
             "",
@@ -120,6 +126,7 @@ def parse_prompt_package(path: Path) -> PromptPackage:
         negative_prompt=sections["Negative Prompt"].strip(),
         inputs_markdown=sections["Inputs"].strip(),
         continuity_notes_markdown=sections["Continuity Notes"].strip(),
+        repair_notes_markdown=sections.get("Repair Notes", "").strip(),
         sources_markdown=sections["Sources"].strip(),
     )
 
