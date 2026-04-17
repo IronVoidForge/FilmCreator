@@ -1,0 +1,135 @@
+{
+  "project_id": "pilot_scene",
+  "scene_id": "SC001",
+  "clip_id": "CL001",
+  "status": "planning",
+  "inputs": {
+    "shared_character_refs": [],
+    "shared_environment_refs": [],
+    "scene_prompt_package": null,
+    "anchor_prompt_packages": [],
+    "video_prompt_package": null,
+    "scene_stage_prompt_package": null,
+    "keyframe_prompt_package": "projects/pilot_scene/03_prompt_packages/keyframes/SC001/CL001/SC001_CL001_keyframe_prompt.md",
+    "fix_prompt_packages": [],
+    "cut_motion_prompt_package": "projects/pilot_scene/03_prompt_packages/cut_motion/SC001/CL001/SC001_CL001_cut_motion_prompt.md",
+    "legacy_anchor_prompt_packages": [],
+    "legacy_video_prompt_package": null
+  },
+  "approved_assets": {
+    "golden_frame": "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF01.png",
+    "anchor_frames": [],
+    "interval_frames": [],
+    "approved_keyframe": "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF01.png",
+    "still_fixes": [],
+    "approved_video": null,
+    "cut_motion_videos": []
+  },
+  "current_continuity_source": "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF01.png",
+  "latest_runs": {
+    "keyframe": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0001.json",
+    "cut_motion": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0040.json"
+  },
+  "notes": [],
+  "approved_video_last_frame": null,
+  "review_batches": [
+    {
+      "timestamp": "2026-04-17T20:00:31.459537+00:00",
+      "stage": "keyframe",
+      "stage_family": "keyframe",
+      "manifest_path": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0001.json",
+      "review_decision": "approve",
+      "candidates": [
+        "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF01_v001.png",
+        "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF02_v002.png",
+        "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF03_v003.png",
+        "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF04_v004.png"
+      ],
+      "top_two": [
+        "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF01_v001.png",
+        "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF04_v004.png"
+      ],
+      "chosen_primary": "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF01_v001.png"
+    }
+  ],
+  "latest_review_decision": {
+    "stage": "keyframe",
+    "stage_family": "keyframe",
+    "decision": "approve",
+    "manifest_path": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0001.json",
+    "chosen_primary": "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF01_v001.png",
+    "top_two": [
+      "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF01_v001.png",
+      "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF04_v004.png"
+    ],
+    "timestamp": "2026-04-17T20:00:31.459537+00:00"
+  },
+  "stage_style_preferences": {
+    "still_fix": {
+      "literal_descriptive": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "cinematic_compositional": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "performance_action_led": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "sparse_conservative": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      }
+    },
+    "cut_motion": {
+      "literal_descriptive": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "cinematic_compositional": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "performance_action_led": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "sparse_conservative": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      }
+    },
+    "keyframe": {
+      "literal_descriptive": {
+        "appearances": 1,
+        "top_two": 1,
+        "wins": 1
+      },
+      "cinematic_compositional": {
+        "appearances": 1,
+        "top_two": 0,
+        "wins": 0
+      },
+      "performance_action_led": {
+        "appearances": 1,
+        "top_two": 0,
+        "wins": 0
+      },
+      "sparse_conservative": {
+        "appearances": 1,
+        "top_two": 1,
+        "wins": 0
+      }
+    }
+  }
+}

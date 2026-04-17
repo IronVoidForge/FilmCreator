@@ -1,0 +1,39 @@
+# Title
+SC001 CL001 Keyframe Prompt [02 cinematic_compositional]
+
+# ID
+SC001_CL001_keyframe_prompt_02_cinematic_compositional
+
+# Purpose
+Establish the opening approved keyframe for the first cut so review can choose one primary still to drive later continuity and motion.
+
+# Workflow Type
+still.scene_build.four_ref.klein.distilled
+
+# Positive Prompt
+Use cinematic composition, framing, lens, lighting, and production language while keeping subjects explicitly described and visually grounded.
+
+Grand alien flagship chamber with pale bone-and-obsidian architecture, ribbed nonhuman arches, circular duel platform, cold sculptural overhead light, faint haze, ceremonial warship atmosphere. A larger ash-pale alien war prince with elongated cranial silhouette, horn-like ridges, bone-carved armor, and a ritual dueling weapon faces a lean dark-haired human duelist in restrained formal combatwear with a straight sword. Both figures are distinct and readable, standing in tense confrontation near the center of the platform. Emphasize grand scale, elegant hostile atmosphere, clean silhouettes, visible costume contrast, cinematic clarity, and stable composition suitable as a starting keyframe.
+
+# Negative Prompt
+extra characters, merged anatomy, duplicate limbs, duplicate weapons, blurred faces, muddy lighting, low contrast, cropped heads, unreadable hands, text, watermark, blood, gore, comedic tone
+
+# Inputs
+- project_id: pilot_scene
+- scene_id: SC001
+- clip_id: CL001
+- duration_seconds: 5
+- required_refs: image_1, image_2
+- optional_refs: image_3, image_4
+- style_profile: cinematic_compositional
+- batch_role: candidate_02
+- fix_of: 
+
+# Continuity Notes
+- Keep the alien war prince and human duelist visually distinct.
+- Keep the environment monumental and uncluttered.
+- Preserve this frame as a stable cut-opening composition that later motion can extend from.
+- Generated batch candidate 02 for style profile 'cinematic_compositional'.
+
+# Sources
+- projects/pilot_scene/02_story_analysis/clip_plans/SC001/CL001.md

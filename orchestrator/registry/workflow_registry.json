@@ -1,0 +1,398 @@
+{
+  "version": 1,
+  "workflows": [
+    {
+      "id": "still.t2i.klein.distilled",
+      "filename": "workflows/stills/text_to_image/klein4b_text_to_image_api.json",
+      "supported_stages": [
+        "character_reference",
+        "environment_reference"
+      ],
+      "output_scope": "project",
+      "prompt_type": "text_to_image",
+      "required_image_slots": [],
+      "optional_image_slots": [],
+      "output_dir_template": "projects/{project_slug}/04_references/{asset_family}/{asset_id}",
+      "output_name_pattern": "{asset_id}_{stage}_{variant}_v{version:03d}.png",
+      "patch_points": {
+        "prompt_text": {
+          "node_id": 76,
+          "node_type": "PrimitiveStringMultiline",
+          "path": "inputs.value"
+        },
+        "negative_prompt": {
+          "node_id": "75:67",
+          "node_type": "CLIPTextEncode",
+          "path": "inputs.text"
+        },
+        "seed": {
+          "node_id": "75:73",
+          "path": "inputs.noise_seed"
+        },
+        "save_prefix": {
+          "node_id": 9,
+          "path": "inputs.filename_prefix"
+        },
+        "notes": [
+          "Canonical file is now the API-exported workflow.",
+          "Prompt, negative prompt, seed, and save prefix are patched against API node inputs."
+        ]
+      },
+      "preferred_output_nodes": [
+        9
+      ]
+    },
+    {
+      "id": "still.next_scene.single_ref.klein.distilled",
+      "filename": "workflows/stills/single_ref_continuation/klein_single_image_edit_api.json",
+      "supported_stages": [
+        "anchor_frame",
+        "interval_frame"
+      ],
+      "output_scope": "clip",
+      "prompt_type": "image_to_image_single_ref",
+      "required_image_slots": [
+        {
+          "slot": "source_frame",
+          "label": "base frame"
+        }
+      ],
+      "optional_image_slots": [
+        {
+          "slot": "continuity_ref",
+          "label": "secondary continuity reference"
+        }
+      ],
+      "output_dir_template": "projects/{project_slug}/05_scenes/{scene_id}/clips/{clip_id}/stills/{stage_dir}",
+      "output_name_pattern": "{scene_id}_{clip_id}_{asset_code}{index:02d}.png",
+      "patch_points": {
+        "source_images": {
+          "source_frame": {
+            "node_id": 76,
+            "path": "inputs.image"
+          },
+          "continuity_ref": {
+            "node_id": 81,
+            "path": "inputs.image"
+          }
+        },
+        "prompt_text": {
+          "node_id": "75:74",
+          "node_type": "CLIPTextEncode",
+          "path": "inputs.text"
+        },
+        "seed": {
+          "node_id": "75:73",
+          "path": "inputs.noise_seed"
+        },
+        "scheduler_steps": {
+          "node_id": "75:62",
+          "path": "inputs.steps"
+        },
+        "cfg": {
+          "node_id": "75:63",
+          "path": "inputs.cfg"
+        },
+        "model_name": {
+          "node_id": "75:70",
+          "path": "inputs.unet_name"
+        },
+        "save_prefix": {
+          "node_id": 9,
+          "path": "inputs.filename_prefix"
+        },
+        "notes": [
+          "Canonical file is now the API-exported workflow.",
+          "This workflow currently exposes source_frame and continuity_ref as two separate LoadImage nodes."
+        ]
+      },
+      "preferred_output_nodes": [
+        9
+      ]
+    },
+    {
+      "id": "still.scene_insert.two_ref.klein.distilled",
+      "filename": "workflows/stills/two_ref_insert/klein_multi_image_edit_flattened_api.json",
+      "supported_stages": [
+        "still_fix",
+        "scene_build_two_ref",
+        "scene_refinement_two_ref"
+      ],
+      "output_scope": "clip",
+      "prompt_type": "image_edit_two_ref",
+      "required_image_slots": [
+        {
+          "slot": "image_1",
+          "label": "base scene"
+        },
+        {
+          "slot": "image_2",
+          "label": "secondary subject reference"
+        }
+      ],
+      "optional_image_slots": [],
+      "output_dir_template": "projects/{project_slug}/05_scenes/{scene_id}/clips/{clip_id}/stills/{stage_dir}",
+      "output_name_pattern": "{scene_id}_{clip_id}_{asset_code}{index:02d}_v{version:03d}.png",
+      "patch_points": {
+        "prompt_text": {
+          "node_id": 132,
+          "node_type": "CLIPTextEncode",
+          "path": "inputs.text"
+        },
+        "source_images": {
+          "image_1": {
+            "node_id": 76,
+            "path": "inputs.image"
+          },
+          "image_2": {
+            "node_id": 81,
+            "path": "inputs.image"
+          }
+        },
+        "seed": {
+          "node_id": 129,
+          "path": "inputs.noise_seed"
+        },
+        "scheduler_steps": {
+          "node_id": 125,
+          "path": "inputs.steps"
+        },
+        "cfg": {
+          "node_id": 126,
+          "path": "inputs.cfg"
+        },
+        "model_name": {
+          "node_id": 130,
+          "path": "inputs.unet_name"
+        },
+        "save_prefix": {
+          "node_ids": [
+            9,
+            94
+          ],
+          "path": "inputs.filename_prefix"
+        }
+      },
+      "preferred_output_nodes": [
+        94
+      ]
+    },
+    {
+      "id": "still.scene_build.four_ref.klein.distilled",
+      "filename": "workflows/stills/four_ref_scene_build/klein_multi_image_edit_4_image_scene_build_api.json",
+      "supported_stages": [
+        "keyframe",
+        "scene_build",
+        "scene_refinement"
+      ],
+      "output_scope": "clip",
+      "prompt_type": "image_edit_four_ref",
+      "required_image_slots": [
+        {
+          "slot": "image_1",
+          "label": "base scene or environment reference"
+        },
+        {
+          "slot": "image_2",
+          "label": "primary character reference"
+        }
+      ],
+      "optional_image_slots": [
+        {
+          "slot": "image_3",
+          "label": "secondary character or costume reference"
+        },
+        {
+          "slot": "image_4",
+          "label": "detail or continuity reference"
+        }
+      ],
+      "output_dir_template": "projects/{project_slug}/05_scenes/{scene_id}/clips/{clip_id}/stills/{stage_dir}",
+      "output_name_pattern": "{scene_id}_{clip_id}_{asset_code}{index:02d}_v{version:03d}.png",
+      "patch_points": {
+        "prompt_text": {
+          "node_id": 132,
+          "node_type": "CLIPTextEncode",
+          "path": "inputs.text"
+        },
+        "source_images": {
+          "image_1": {
+            "node_id": 76,
+            "path": "inputs.image"
+          },
+          "image_2": {
+            "node_id": 81,
+            "path": "inputs.image"
+          },
+          "image_3": {
+            "node_id": 141,
+            "path": "inputs.image"
+          },
+          "image_4": {
+            "node_id": 144,
+            "path": "inputs.image"
+          }
+        },
+        "seed": {
+          "node_id": 129,
+          "path": "inputs.noise_seed"
+        },
+        "scheduler_steps": {
+          "node_id": 125,
+          "path": "inputs.steps"
+        },
+        "cfg": {
+          "node_id": 126,
+          "path": "inputs.cfg"
+        },
+        "model_name": {
+          "node_id": 130,
+          "path": "inputs.unet_name"
+        },
+        "save_prefix": {
+          "node_ids": [
+            9,
+            94
+          ],
+          "path": "inputs.filename_prefix"
+        }
+      },
+      "preferred_output_nodes": [
+        94
+      ]
+    },
+    {
+      "id": "video.cut_motion.wan.i2v",
+      "filename": "workflows/video/cut_motion_wan_5b_short_i2v/wan22_5b_short_cut_image_to_video_api.json",
+      "supported_stages": [
+        "cut_motion"
+      ],
+      "output_scope": "clip",
+      "prompt_type": "image_to_video_single_ref",
+      "required_image_slots": [
+        {
+          "slot": "source_frame",
+          "label": "approved keyframe or current continuity start frame"
+        }
+      ],
+      "optional_image_slots": [],
+      "output_dir_template": "projects/{project_slug}/05_scenes/{scene_id}/clips/{clip_id}/video",
+      "output_name_pattern": "{scene_id}_{clip_id}_{asset_code}{index:02d}_v{version:03d}",
+      "patch_points": {
+        "prompt_text": {
+          "node_id": 6,
+          "path": "inputs.text"
+        },
+        "negative_prompt": {
+          "node_id": 7,
+          "path": "inputs.text"
+        },
+        "source_images": {
+          "source_frame": {
+            "node_id": 56,
+            "path": "inputs.image"
+          }
+        },
+        "seed": {
+          "node_id": 3,
+          "path": "inputs.seed"
+        },
+        "save_prefix": {
+          "node_id": 58,
+          "path": "inputs.filename_prefix"
+        },
+        "notes": [
+          "Primary short-cut cut_motion workflow for ordinary movie-style cuts.",
+          "This workflow animates one approved starting frame into one short video candidate without LongLook chunk stitching."
+        ]
+      },
+      "preferred_output_nodes": [
+        58
+      ]
+    },
+    {
+      "id": "video.cut_motion.wan.longlook.extended",
+      "filename": "workflows/video/cut_motion_wan_longlook/wan22_longlook_cut_motion_api.json",
+      "supported_stages": [
+        "cut_motion"
+      ],
+      "output_scope": "clip",
+      "prompt_type": "image_to_video_single_ref",
+      "required_image_slots": [
+        {
+          "slot": "source_frame",
+          "label": "approved keyframe or current continuity start frame"
+        }
+      ],
+      "optional_image_slots": [],
+      "output_dir_template": "projects/{project_slug}/05_scenes/{scene_id}/clips/{clip_id}/video",
+      "output_name_pattern": "{scene_id}_{clip_id}_{asset_code}{index:02d}_v{version:03d}",
+      "patch_points": {
+        "prompt_text": {
+          "node_ids": [
+            3,
+            "256:378",
+            "129:127",
+            "130:344",
+            "142:351",
+            "143:358",
+            "144:364",
+            "149:372"
+          ],
+          "path": "inputs.text"
+        },
+        "negative_prompt": {
+          "node_ids": [
+            4,
+            "256:379",
+            "129:123",
+            "130:345",
+            "142:352",
+            "143:359",
+            "144:365",
+            "149:373"
+          ],
+          "path": "inputs.text"
+        },
+        "source_images": {
+          "source_frame": {
+            "node_id": 85,
+            "path": "inputs.image"
+          }
+        },
+        "seed": {
+          "node_ids": [
+            35,
+            36,
+            "256:380",
+            "256:381",
+            "129:125",
+            "129:126",
+            "130:343",
+            "130:346",
+            "142:350",
+            "142:353",
+            "143:357",
+            "143:360",
+            "144:369",
+            "144:370",
+            "149:371",
+            "149:374"
+          ],
+          "path": "inputs.noise_seed"
+        },
+        "save_prefix": {
+          "node_id": 150,
+          "path": "inputs.filename_prefix"
+        },
+        "notes": [
+          "Extended-cut LongLook workflow reserved for explicitly longer motion sequences.",
+          "The runner prunes the API workflow to the final preview output node so one candidate yields one routed preview video."
+        ]
+      },
+      "preferred_output_nodes": [
+        150
+      ]
+    }
+  ]
+}

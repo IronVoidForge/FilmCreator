@@ -1,0 +1,124 @@
+{
+  "run_id": "RUN_0003",
+  "project_id": "pilot_scene",
+  "scene_id": null,
+  "clip_id": null,
+  "stage": "character_reference",
+  "workflow_id": "still.t2i.klein.distilled",
+  "prompt_file": "projects/pilot_scene/03_prompt_packages/characters/ulurani3/ulurani3_ref_prompt.md",
+  "input_refs": [],
+  "output_files": [],
+  "seed": null,
+  "key_settings": {
+    "seed": null,
+    "save_prefix": "filmcreator/pilot_scene/RUN_0003_character_reference",
+    "comfy_base_url": "http://127.0.0.1:8000"
+  },
+  "timestamp": "2026-04-12T04:57:17.249444+00:00",
+  "status": "failed",
+  "output_root": "projects/pilot_scene/04_references/characters/ulurani3",
+  "prompt_package": {
+    "path": "C:\\FilmCreator\\projects\\pilot_scene\\03_prompt_packages\\characters\\ulurani3\\ulurani3_ref_prompt.md",
+    "title": "Ulurani3 Character Reference Prompt",
+    "id": "ulurani3_ref_prompt",
+    "purpose": "Generate a shared project-level character reference still for Ulurani3 that we can review and approve before using the character in scene-build and continuation workflows.",
+    "workflow_type": "still.t2i.klein.distilled",
+    "positive_prompt": "Ulurani3 character reference, full body character turnaround still, centered composition, clear silhouette, premium live-action science fantasy realism, grounded materials, neutral readable lighting, clean background, consistent facial structure, consistent costume design, detailed wardrobe, sharp focus, high texture fidelity, production-ready reference image",
+    "negative_prompt": "blurry, low quality, duplicate limbs, extra fingers, malformed anatomy, distorted face, cropped body, text, watermark, logo, cluttered background",
+    "inputs": {
+      "project_id": "pilot_scene",
+      "asset_id": "ulurani3",
+      "required_refs": "",
+      "optional_refs": ""
+    },
+    "continuity_notes": [
+      "This is a shared reference image, so prioritize stable identity, costume, body proportions, and silhouette over dramatic action.",
+      "Keep the pose readable and neutral enough to reuse as a project-level character reference."
+    ],
+    "sources": [
+      "manual_setup: initial smoke-test prompt package created before automated authoring is connected"
+    ]
+  },
+  "input_ref_map": {},
+  "comfy_input_ref_map": {},
+  "continuity_source": null,
+  "patched_workflow_file": "projects/pilot_scene/logs/RUN_0003_patched_workflow.json",
+  "workflow_file": "workflows/stills/text_to_image/klein_distilled.json",
+  "workflow_format": "api_prompt",
+  "warnings": [],
+  "blockers": [],
+  "comfy_prompt_id": "aeb2ff06-b000-455a-83ab-f0bd7dc92fc8",
+  "error": "ComfyUI execution failed for prompt aeb2ff06-b000-455a-83ab-f0bd7dc92fc8 at node 75:64 (SamplerCustomAdvanced): [Errno 22] Invalid argument",
+  "error_details": {
+    "prompt_id": "aeb2ff06-b000-455a-83ab-f0bd7dc92fc8",
+    "node_id": "75:64",
+    "node_type": "SamplerCustomAdvanced",
+    "executed": [],
+    "exception_message": "[Errno 22] Invalid argument\n",
+    "exception_type": "OSError",
+    "traceback": [
+      "  File \"C:\\ComfyUI\\resources\\ComfyUI\\execution.py\", line 525, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "  File \"C:\\ComfyUI\\resources\\ComfyUI\\execution.py\", line 334, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "  File \"C:\\ComfyUI\\resources\\ComfyUI\\execution.py\", line 308, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n",
+      "  File \"C:\\ComfyUI\\resources\\ComfyUI\\execution.py\", line 296, in process_inputs\n    result = f(**inputs)\n             ^^^^^^^^^^^\n",
+      "  File \"C:\\ComfyUI\\resources\\ComfyUI\\comfy_api\\internal\\__init__.py\", line 149, in wrapped_func\n    return method(locked_class, **inputs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "  File \"C:\\ComfyUI\\resources\\ComfyUI\\comfy_api\\latest\\_io.py\", line 1764, in EXECUTE_NORMALIZED\n    to_return = cls.execute(*args, **kwargs)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "  File \"C:\\ComfyUI\\resources\\ComfyUI\\comfy_extras\\nodes_custom_sampler.py\", line 963, in execute\n    samples = guider.sample(noise.generate_noise(latent), latent_image, sampler, sigmas, denoise_mask=noise_mask, callback=callback, disable_pbar=disable_pbar, seed=noise.seed)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "  File \"C:\\ComfyUI\\resources\\ComfyUI\\comfy\\samplers.py\", line 1052, in sample\n    output = executor.execute(noise, latent_image, sampler, sigmas, denoise_mask, callback, disable_pbar, seed, latent_shapes=latent_shapes)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "  File \"C:\\ComfyUI\\resources\\ComfyUI\\comfy\\patcher_extension.py\", line 112, in execute\n    return self.original(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "  File \"C:\\ComfyUI\\resources\\ComfyUI\\comfy\\samplers.py\", line 995, in outer_sample\n    output = self.inner_sample(noise, latent_image, device, sampler, sigmas, denoise_mask, callback, disable_pbar, seed, latent_shapes=latent_shapes)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "  File \"C:\\ComfyUI\\resources\\ComfyUI\\comfy\\samplers.py\", line 981, in inner_sample\n    samples = executor.execute(self, sigmas, extra_args, callback, noise, latent_image, denoise_mask, disable_pbar)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "  File \"C:\\ComfyUI\\resources\\ComfyUI\\comfy\\patcher_extension.py\", line 112, in execute\n    return self.original(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "  File \"C:\\ComfyUI\\resources\\ComfyUI\\comfy\\samplers.py\", line 751, in sample\n    samples = self.sampler_function(model_k, noise, sigmas, extra_args=extra_args, callback=k_callback, disable=disable_pbar, **self.extra_options)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "  File \"C:\\ComfyUIInstall\\.venv\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n",
+      "  File \"C:\\ComfyUI\\resources\\ComfyUI\\comfy\\k_diffusion\\sampling.py\", line 194, in sample_euler\n    for i in trange(len(sigmas) - 1, disable=disable):\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "  File \"C:\\ComfyUI\\resources\\ComfyUI\\comfy\\utils.py\", line 1185, in model_trange\n    return trange(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "  File \"C:\\ComfyUIInstall\\.venv\\Lib\\site-packages\\tqdm\\auto.py\", line 37, in trange\n    return tqdm(range(*args), **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "  File \"C:\\ComfyUIInstall\\.venv\\Lib\\site-packages\\tqdm\\asyncio.py\", line 24, in __init__\n    super().__init__(iterable, *args, **kwargs)\n",
+      "  File \"C:\\ComfyUIInstall\\.venv\\Lib\\site-packages\\tqdm\\std.py\", line 1098, in __init__\n    self.refresh(lock_args=self.lock_args)\n",
+      "  File \"C:\\ComfyUIInstall\\.venv\\Lib\\site-packages\\tqdm\\std.py\", line 1347, in refresh\n    self.display()\n",
+      "  File \"C:\\ComfyUIInstall\\.venv\\Lib\\site-packages\\tqdm\\std.py\", line 1495, in display\n    self.sp(self.__str__() if msg is None else msg)\n",
+      "  File \"C:\\ComfyUIInstall\\.venv\\Lib\\site-packages\\tqdm\\std.py\", line 459, in print_status\n    fp_write('\\r' + s + (' ' * max(last_len[0] - len_s, 0)))\n",
+      "  File \"C:\\ComfyUIInstall\\.venv\\Lib\\site-packages\\tqdm\\std.py\", line 452, in fp_write\n    fp.write(str(s))\n",
+      "  File \"C:\\ComfyUIInstall\\.venv\\Lib\\site-packages\\tqdm\\utils.py\", line 196, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n",
+      "  File \"C:\\ComfyUIInstall\\.venv\\Lib\\site-packages\\comfyui_manager\\prestartup_script.py\", line 315, in write\n    write_stderr(message)\n",
+      "  File \"C:\\ComfyUI\\resources\\ComfyUI\\app\\logger.py\", line 32, in write\n    super().write(data)\n"
+    ],
+    "current_inputs": {
+      "noise": [
+        "<C:\\ComfyUI\\resources\\ComfyUI\\comfy_extras\\nodes_custom_sampler.Noise_RandomNoise object at 0x000001D363A0B0B0>"
+      ],
+      "guider": [
+        "<comfy.samplers.CFGGuider object at 0x000001D363A0BCB0>"
+      ],
+      "sampler": [
+        "<comfy.samplers.KSAMPLER object at 0x000001D363888FE0>"
+      ],
+      "sigmas": [
+        "tensor([1.0000, 0.9942, 0.9878, 0.9808, 0.9730, 0.9643, 0.9546, 0.9436, 0.9311,\n        0.9167, 0.9001, 0.8805, 0.8572, 0.8291, 0.7942, 0.7501, 0.6925, 0.6138,\n        0.5002, 0.3216, 0.0000])"
+      ],
+      "latent_image": [
+        "{'samples': tensor([[[[0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          ...,\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.]],\n\n         [[0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          ...,\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.]],\n\n         [[0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          ...,\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.]],\n\n         ...,\n\n         [[0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          ...,\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.]],\n\n         [[0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          ...,\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.]],\n\n         [[0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          ...,\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.]]]])}"
+      ]
+    },
+    "current_outputs": [
+      "75:71",
+      "75:62",
+      "75:61",
+      "75:68",
+      "75:73",
+      "75:63",
+      "75:72",
+      "75:64",
+      "75:66",
+      "75:67",
+      "75:70",
+      "76",
+      "75:74",
+      "75:65",
+      "75:69",
+      "9"
+    ],
+    "timestamp": 1775969837287
+  }
+}

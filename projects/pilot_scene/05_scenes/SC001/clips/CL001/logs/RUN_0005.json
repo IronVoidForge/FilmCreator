@@ -1,0 +1,69 @@
+{
+  "run_id": "RUN_0005",
+  "project_id": "pilot_scene",
+  "scene_id": "SC001",
+  "clip_id": "CL001",
+  "stage": "keyframe",
+  "workflow_id": "still.scene_build.four_ref.klein.distilled",
+  "prompt_file": "projects/pilot_scene/03_prompt_packages/keyframes/SC001/CL001/batches/RUN_0001/SC001_CL001_keyframe_prompt__04_sparse_conservative.md",
+  "input_refs": [
+    "projects/pilot_scene/05_scenes/SC001/clips/CL001/inputs/smoke_env.png",
+    "projects/pilot_scene/05_scenes/SC001/clips/CL001/inputs/smoke_char.png"
+  ],
+  "output_files": [],
+  "seed": 1003,
+  "key_settings": {
+    "seed": 1003,
+    "save_prefix": "filmcreator/pilot_scene/RUN_0005_keyframe",
+    "comfy_base_url": "http://127.0.0.1:8000"
+  },
+  "timestamp": "2026-04-17T04:58:47.142434+00:00",
+  "status": "prepared",
+  "output_root": "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes",
+  "prompt_package": {
+    "path": "C:\\FilmCreator\\projects\\pilot_scene\\03_prompt_packages\\keyframes\\SC001\\CL001\\batches\\RUN_0001\\SC001_CL001_keyframe_prompt__04_sparse_conservative.md",
+    "title": "SC001 CL001 Keyframe Prompt [04 sparse_conservative]",
+    "id": "SC001_CL001_keyframe_prompt_04_sparse_conservative",
+    "purpose": "Establish the opening approved keyframe for the first cut so review can choose one primary still to drive later continuity and motion.",
+    "workflow_type": "still.scene_build.four_ref.klein.distilled",
+    "positive_prompt": "Use the shortest safe prompt, rely strongly on the provided references and source image, and avoid adding extra invented details.\n\nGrand alien flagship chamber with pale bone-and-obsidian architecture, ribbed nonhuman arches, circular duel platform, cold sculptural overhead light, faint haze, ceremonial warship atmosphere. A larger ash-pale alien war prince with elongated cranial silhouette, horn-like ridges, bone-carved armor, and a ritual dueling weapon faces a lean dark-haired human duelist in restrained formal combatwear with a straight sword. Both figures are distinct and readable, standing in tense confrontation near the center of the platform. Emphasize grand scale, elegant hostile atmosphere, clean silhouettes, visible costume contrast, cinematic clarity, and stable composition suitable as a starting keyframe.",
+    "negative_prompt": "extra characters, merged anatomy, duplicate limbs, duplicate weapons, blurred faces, muddy lighting, low contrast, cropped heads, unreadable hands, text, watermark, blood, gore, comedic tone",
+    "inputs": {
+      "project_id": "pilot_scene",
+      "scene_id": "SC001",
+      "clip_id": "CL001",
+      "duration_seconds": "5",
+      "required_refs": "image_1, image_2",
+      "optional_refs": "image_3, image_4",
+      "style_profile": "sparse_conservative",
+      "batch_role": "candidate_04",
+      "fix_of": ""
+    },
+    "continuity_notes": [
+      "Keep the alien war prince and human duelist visually distinct.",
+      "Keep the environment monumental and uncluttered.",
+      "Preserve this frame as a stable cut-opening composition that later motion can extend from.",
+      "Generated batch candidate 04 for style profile 'sparse_conservative'."
+    ],
+    "sources": [
+      "projects/pilot_scene/02_story_analysis/clip_plans/SC001/CL001.md"
+    ]
+  },
+  "input_ref_map": {
+    "image_1": "projects/pilot_scene/05_scenes/SC001/clips/CL001/inputs/smoke_env.png",
+    "image_2": "projects/pilot_scene/05_scenes/SC001/clips/CL001/inputs/smoke_char.png"
+  },
+  "comfy_input_ref_map": {
+    "image_1": "filmcreator/RUN_0005/image_1_smoke_env.png",
+    "image_2": "filmcreator/RUN_0005/image_2_smoke_char.png"
+  },
+  "continuity_source": null,
+  "patched_workflow_file": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0005_patched_workflow.json",
+  "workflow_file": "workflows/stills/four_ref_scene_build/klein_multi_image_edit_4_image_scene_build_api.json",
+  "workflow_format": "api_prompt",
+  "warnings": [
+    "Optional image slots were not provided: image_3, image_4. If the workflow export still contains baked-in example filenames for those nodes, live execution may need explicit refs.",
+    "Negative Prompt is present, but the registry does not yet declare a negative_prompt patch point."
+  ],
+  "blockers": []
+}

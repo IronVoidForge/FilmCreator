@@ -1,0 +1,87 @@
+{
+  "run_id": "RUN_0022",
+  "project_id": "pilot_scene",
+  "scene_id": "SC001",
+  "clip_id": "CL001",
+  "stage": "keyframe",
+  "workflow_id": "still.scene_build.four_ref.klein.distilled",
+  "prompt_file": "projects/pilot_scene/03_prompt_packages/keyframes/SC001/CL001/batches/RUN_0001/SC001_CL001_keyframe_prompt__01_literal_descriptive.md",
+  "input_refs": [
+    "projects/pilot_scene/05_scenes/SC001/clips/CL001/inputs/smoke_env.png",
+    "projects/pilot_scene/05_scenes/SC001/clips/CL001/inputs/smoke_char.png",
+    "projects/pilot_scene/05_scenes/SC001/clips/CL001/inputs/smoke_char.png",
+    "projects/pilot_scene/05_scenes/SC001/clips/CL001/inputs/smoke_env.png"
+  ],
+  "output_files": [
+    "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF01_v001.png"
+  ],
+  "seed": 3000,
+  "key_settings": {
+    "seed": 3000,
+    "save_prefix": "filmcreator/pilot_scene/RUN_0022_keyframe",
+    "comfy_base_url": "http://127.0.0.1:8190"
+  },
+  "timestamp": "2026-04-17T06:13:45.127183+00:00",
+  "status": "completed",
+  "output_root": "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes",
+  "prompt_package": {
+    "path": "C:\\FilmCreator\\projects\\pilot_scene\\03_prompt_packages\\keyframes\\SC001\\CL001\\batches\\RUN_0001\\SC001_CL001_keyframe_prompt__01_literal_descriptive.md",
+    "title": "SC001 CL001 Keyframe Prompt [01 literal_descriptive]",
+    "id": "SC001_CL001_keyframe_prompt_01_literal_descriptive",
+    "purpose": "Establish the opening approved keyframe for the first cut so review can choose one primary still to drive later continuity and motion.",
+    "workflow_type": "still.scene_build.four_ref.klein.distilled",
+    "positive_prompt": "Use explicit visible nouns, spatial relationships, and plain descriptive language. Avoid metaphor, flourish, and proper nouns.\n\nGrand alien flagship chamber with pale bone-and-obsidian architecture, ribbed nonhuman arches, circular duel platform, cold sculptural overhead light, faint haze, ceremonial warship atmosphere. A larger ash-pale alien war prince with elongated cranial silhouette, horn-like ridges, bone-carved armor, and a ritual dueling weapon faces a lean dark-haired human duelist in restrained formal combatwear with a straight sword. Both figures are distinct and readable, standing in tense confrontation near the center of the platform. Emphasize grand scale, elegant hostile atmosphere, clean silhouettes, visible costume contrast, cinematic clarity, and stable composition suitable as a starting keyframe.",
+    "negative_prompt": "extra characters, merged anatomy, duplicate limbs, duplicate weapons, blurred faces, muddy lighting, low contrast, cropped heads, unreadable hands, text, watermark, blood, gore, comedic tone",
+    "inputs": {
+      "project_id": "pilot_scene",
+      "scene_id": "SC001",
+      "clip_id": "CL001",
+      "duration_seconds": "5",
+      "required_refs": "image_1, image_2",
+      "optional_refs": "image_3, image_4",
+      "style_profile": "literal_descriptive",
+      "batch_role": "candidate_01",
+      "fix_of": ""
+    },
+    "continuity_notes": [
+      "Keep the alien war prince and human duelist visually distinct.",
+      "Keep the environment monumental and uncluttered.",
+      "Preserve this frame as a stable cut-opening composition that later motion can extend from.",
+      "Generated batch candidate 01 for style profile 'literal_descriptive'."
+    ],
+    "sources": [
+      "projects/pilot_scene/02_story_analysis/clip_plans/SC001/CL001.md"
+    ]
+  },
+  "input_ref_map": {
+    "image_1": "projects/pilot_scene/05_scenes/SC001/clips/CL001/inputs/smoke_env.png",
+    "image_2": "projects/pilot_scene/05_scenes/SC001/clips/CL001/inputs/smoke_char.png",
+    "image_3": "projects/pilot_scene/05_scenes/SC001/clips/CL001/inputs/smoke_char.png",
+    "image_4": "projects/pilot_scene/05_scenes/SC001/clips/CL001/inputs/smoke_env.png"
+  },
+  "comfy_input_ref_map": {
+    "image_1": "filmcreator/RUN_0022/image_1_smoke_env.png",
+    "image_2": "filmcreator/RUN_0022/image_2_smoke_char.png",
+    "image_3": "filmcreator/RUN_0022/image_3_smoke_char.png",
+    "image_4": "filmcreator/RUN_0022/image_4_smoke_env.png"
+  },
+  "continuity_source": null,
+  "patched_workflow_file": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0022_patched_workflow.json",
+  "workflow_file": "workflows/stills/four_ref_scene_build/klein_multi_image_edit_4_image_scene_build_api.json",
+  "workflow_format": "api_prompt",
+  "warnings": [
+    "No image_3 ref was provided, so the runner will duplicate image_2 for that optional slot.",
+    "No image_4 ref was provided, so the runner will duplicate image_1 for that optional slot.",
+    "Negative Prompt is present, but the registry does not yet declare a negative_prompt patch point."
+  ],
+  "blockers": [],
+  "comfy_prompt_id": "4db751d5-89f7-4a2b-8155-99611c3c3ada",
+  "comfy_outputs": [
+    {
+      "node_id": "94",
+      "filename": "RUN_0022_keyframe_00001_.png",
+      "subfolder": "filmcreator\\pilot_scene",
+      "type": "output"
+    }
+  ]
+}

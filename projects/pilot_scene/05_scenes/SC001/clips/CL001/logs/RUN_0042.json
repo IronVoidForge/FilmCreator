@@ -1,0 +1,64 @@
+{
+  "run_id": "RUN_0042",
+  "project_id": "pilot_scene",
+  "scene_id": "SC001",
+  "clip_id": "CL001",
+  "stage": "cut_motion",
+  "workflow_id": "video.cut_motion.wan.i2v",
+  "prompt_file": "projects/pilot_scene/03_prompt_packages/cut_motion/SC001/CL001/batches/RUN_0040/SC001_CL001_cut_motion_prompt__02_cinematic_compositional.md",
+  "input_refs": [
+    "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF01.png"
+  ],
+  "output_files": [],
+  "seed": 6001,
+  "key_settings": {
+    "seed": 6001,
+    "save_prefix": "filmcreator/pilot_scene/RUN_0042_cut_motion",
+    "comfy_base_url": "http://127.0.0.1:8191"
+  },
+  "timestamp": "2026-04-17T22:26:52.574246+00:00",
+  "status": "submitted",
+  "output_root": "projects/pilot_scene/05_scenes/SC001/clips/CL001/video",
+  "prompt_package": {
+    "path": "C:\\FilmCreator\\projects\\pilot_scene\\03_prompt_packages\\cut_motion\\SC001\\CL001\\batches\\RUN_0040\\SC001_CL001_cut_motion_prompt__02_cinematic_compositional.md",
+    "title": "SC001 CL001 Cut Motion Prompt [02 cinematic_compositional]",
+    "id": "SC001_CL001_cut_motion_prompt_02_cinematic_compositional",
+    "purpose": "Generate the first approved cut-motion pass from the approved opening keyframe while preserving identity, environment, and composition continuity.",
+    "workflow_type": "video.cut_motion.wan.i2v",
+    "positive_prompt": "Use cinematic composition, framing, lens, lighting, and production language while keeping subjects explicitly described and visually grounded.\n\nStart from the provided opening duel frame and preserve the exact visible identities, costumes, proportions, lighting, architecture, and overall composition from that image. Two combatants hold crossed blades on a circular platform inside a monumental pale alien command chamber with ribbed nonhuman arches, cold sculptural overhead light, and faint haze. Motion should stay restrained and elegant. Use a slow cinematic push-in with a slight rightward drift. The lean dark-haired human duelist makes two tiny blade adjustments and a measured half-step inward, testing the bind without breaking the tableau. The taller pale alien prince answers with a controlled forward press, a subtle wrist turn, and a small shift of weight that keeps visible dominance. Let haze drift softly, let fabric and armor tails move slightly, and allow a faint seam-light pulse in the distant walls. No strike lands, no blood, no new characters, no costume changes, no room redesign, no abrupt camera move, and no chaotic action.",
+    "negative_prompt": "identity drift, face drift, anatomy errors, extra limbs, extra weapons, duplicate characters, costume redesign, room redesign, hard cut, jumpy camera, fast action, impact hit, blood, gore, explosion, debris burst, comedy, text, watermark, logo",
+    "inputs": {
+      "project_id": "pilot_scene",
+      "scene_id": "SC001",
+      "clip_id": "CL001",
+      "duration_seconds": "5",
+      "required_refs": "source_frame",
+      "optional_refs": "",
+      "style_profile": "cinematic_compositional",
+      "batch_role": "candidate_02",
+      "fix_of": ""
+    },
+    "continuity_notes": [
+      "Use the approved keyframe as the only starting image for the motion pass.",
+      "Preserve the duel axis, chamber layout, costume silhouettes, and cold pale lighting.",
+      "Keep motion small, readable, and unresolved so the cut can still feed later refinement.",
+      "Generated batch candidate 02 for style profile 'cinematic_compositional'."
+    ],
+    "sources": [
+      "projects/pilot_scene/02_story_analysis/clip_plans/SC001/CL001.md"
+    ]
+  },
+  "input_ref_map": {
+    "source_frame": "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF01.png"
+  },
+  "comfy_input_ref_map": {
+    "source_frame": "filmcreator/RUN_0042/source_frame_SC001_CL001_KF01.png"
+  },
+  "continuity_source": "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF01.png",
+  "patched_workflow_file": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0042_patched_workflow.json",
+  "workflow_file": "workflows/video/cut_motion_wan_5b_short_i2v/wan22_5b_short_cut_image_to_video_api.json",
+  "workflow_format": "api_prompt",
+  "warnings": [],
+  "blockers": [],
+  "comfy_prompt_id": "42f0555a-d5ba-4c3e-91a3-ca42bf34d2de"
+}

@@ -1,0 +1,747 @@
+{
+  "9": {
+    "inputs": {
+      "filename_prefix": "filmcreator/pilot_scene/RUN_0004_keyframe",
+      "images": [
+        "75:65",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "76": {
+    "inputs": {
+      "image": "filmcreator/RUN_0004/image_1_smoke_env.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "81": {
+    "inputs": {
+      "image": "filmcreator/RUN_0004/image_2_smoke_char.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "94": {
+    "inputs": {
+      "filename_prefix": "filmcreator/pilot_scene/RUN_0004_keyframe",
+      "images": [
+        "128",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "124": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "125": {
+    "inputs": {
+      "steps": 4,
+      "width": [
+        "140",
+        0
+      ],
+      "height": [
+        "140",
+        1
+      ]
+    },
+    "class_type": "Flux2Scheduler",
+    "_meta": {
+      "title": "Flux2Scheduler"
+    }
+  },
+  "126": {
+    "inputs": {
+      "cfg": 1,
+      "model": [
+        "130",
+        0
+      ],
+      "positive": [
+        "146:120",
+        0
+      ],
+      "negative": [
+        "146:118",
+        0
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFGGuider"
+    }
+  },
+  "127": {
+    "inputs": {
+      "noise": [
+        "129",
+        0
+      ],
+      "guider": [
+        "126",
+        0
+      ],
+      "sampler": [
+        "124",
+        0
+      ],
+      "sigmas": [
+        "125",
+        0
+      ],
+      "latent_image": [
+        "139",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "128": {
+    "inputs": {
+      "samples": [
+        "127",
+        0
+      ],
+      "vae": [
+        "133",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "129": {
+    "inputs": {
+      "noise_seed": 1002
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "130": {
+    "inputs": {
+      "unet_name": "flux-2-klein-4b-fp8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "131": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "132": {
+    "inputs": {
+      "text": "Lead with subject behavior, interaction, body language, and visible action before secondary camera details.\n\nGrand alien flagship chamber with pale bone-and-obsidian architecture, ribbed nonhuman arches, circular duel platform, cold sculptural overhead light, faint haze, ceremonial warship atmosphere. A larger ash-pale alien war prince with elongated cranial silhouette, horn-like ridges, bone-carved armor, and a ritual dueling weapon faces a lean dark-haired human duelist in restrained formal combatwear with a straight sword. Both figures are distinct and readable, standing in tense confrontation near the center of the platform. Emphasize grand scale, elegant hostile atmosphere, clean silhouettes, visible costume contrast, cinematic clarity, and stable composition suitable as a starting keyframe.",
+      "clip": [
+        "131",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "133": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "134": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 1,
+      "resolution_steps": 1,
+      "image": [
+        "76",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "ImageScaleToTotalPixels"
+    }
+  },
+  "135": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 1,
+      "resolution_steps": 1,
+      "image": [
+        "81",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "ImageScaleToTotalPixels"
+    }
+  },
+  "138": {
+    "inputs": {
+      "conditioning": [
+        "132",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "139": {
+    "inputs": {
+      "width": [
+        "140",
+        0
+      ],
+      "height": [
+        "140",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
+    }
+  },
+  "140": {
+    "inputs": {
+      "image": [
+        "134",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "Get Image Size"
+    }
+  },
+  "141": {
+    "inputs": {
+      "image": "Flux2-Klein_00001_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "142": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 1,
+      "resolution_steps": 1,
+      "image": [
+        "141",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "ImageScaleToTotalPixels"
+    }
+  },
+  "144": {
+    "inputs": {
+      "image": "Flux2-Klein_00001_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "145": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 1,
+      "resolution_steps": 1,
+      "image": [
+        "144",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "ImageScaleToTotalPixels"
+    }
+  },
+  "75:61": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "75:70": {
+    "inputs": {
+      "unet_name": "flux-2-klein-4b-fp8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "75:71": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "75:72": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "75:66": {
+    "inputs": {
+      "width": [
+        "75:99",
+        0
+      ],
+      "height": [
+        "75:99",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
+    }
+  },
+  "75:80": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 1,
+      "resolution_steps": 1,
+      "image": [
+        "76",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "ImageScaleToTotalPixels"
+    }
+  },
+  "75:62": {
+    "inputs": {
+      "steps": 4,
+      "width": [
+        "75:99",
+        0
+      ],
+      "height": [
+        "75:99",
+        1
+      ]
+    },
+    "class_type": "Flux2Scheduler",
+    "_meta": {
+      "title": "Flux2Scheduler"
+    }
+  },
+  "75:74": {
+    "inputs": {
+      "text": "create a larger cinematic shot of this room in an alien world ship. no characters. architecture and lighting only\n",
+      "clip": [
+        "75:71",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "75:82": {
+    "inputs": {
+      "conditioning": [
+        "75:74",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "75:121": {
+    "inputs": {
+      "conditioning": [
+        "75:82",
+        0
+      ],
+      "latent": [
+        "75:122",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "75:99": {
+    "inputs": {
+      "image": [
+        "75:80",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "Get Image Size"
+    }
+  },
+  "75:123": {
+    "inputs": {
+      "conditioning": [
+        "75:74",
+        0
+      ],
+      "latent": [
+        "75:122",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "75:122": {
+    "inputs": {
+      "pixels": [
+        "75:80",
+        0
+      ],
+      "vae": [
+        "75:72",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "75:64": {
+    "inputs": {
+      "noise": [
+        "75:73",
+        0
+      ],
+      "guider": [
+        "75:63",
+        0
+      ],
+      "sampler": [
+        "75:61",
+        0
+      ],
+      "sigmas": [
+        "75:62",
+        0
+      ],
+      "latent_image": [
+        "75:66",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "75:65": {
+    "inputs": {
+      "samples": [
+        "75:64",
+        0
+      ],
+      "vae": [
+        "75:72",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "75:73": {
+    "inputs": {
+      "noise_seed": 408892330171421
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "75:63": {
+    "inputs": {
+      "cfg": 1,
+      "model": [
+        "75:70",
+        0
+      ],
+      "positive": [
+        "75:123",
+        0
+      ],
+      "negative": [
+        "75:121",
+        0
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFGGuider"
+    }
+  },
+  "136:115": {
+    "inputs": {
+      "conditioning": [
+        "138",
+        0
+      ],
+      "latent": [
+        "136:116",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "136:116": {
+    "inputs": {
+      "pixels": [
+        "134",
+        0
+      ],
+      "vae": [
+        "133",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "136:117": {
+    "inputs": {
+      "conditioning": [
+        "132",
+        0
+      ],
+      "latent": [
+        "136:116",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "137:118": {
+    "inputs": {
+      "conditioning": [
+        "136:115",
+        0
+      ],
+      "latent": [
+        "137:119",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "137:119": {
+    "inputs": {
+      "pixels": [
+        "135",
+        0
+      ],
+      "vae": [
+        "133",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "137:120": {
+    "inputs": {
+      "conditioning": [
+        "136:117",
+        0
+      ],
+      "latent": [
+        "137:119",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "143:118": {
+    "inputs": {
+      "conditioning": [
+        "137:118",
+        0
+      ],
+      "latent": [
+        "143:119",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "143:119": {
+    "inputs": {
+      "pixels": [
+        "142",
+        0
+      ],
+      "vae": [
+        "133",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "143:120": {
+    "inputs": {
+      "conditioning": [
+        "137:120",
+        0
+      ],
+      "latent": [
+        "143:119",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "146:118": {
+    "inputs": {
+      "conditioning": [
+        "143:118",
+        0
+      ],
+      "latent": [
+        "146:119",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "146:119": {
+    "inputs": {
+      "pixels": [
+        "145",
+        0
+      ],
+      "vae": [
+        "133",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "146:120": {
+    "inputs": {
+      "conditioning": [
+        "143:120",
+        0
+      ],
+      "latent": [
+        "146:119",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  }
+}

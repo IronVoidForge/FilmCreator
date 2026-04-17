@@ -1,0 +1,1462 @@
+{
+  "3": {
+    "inputs": {
+      "text": "Use cinematic composition, framing, lens, lighting, and production language while keeping subjects explicitly described and visually grounded.\n\nStart from the provided opening duel frame and preserve the exact visible identities, costumes, proportions, lighting, architecture, and overall composition from that image. Two combatants hold crossed blades on a circular platform inside a monumental pale alien command chamber with ribbed nonhuman arches, cold sculptural overhead light, and faint haze. Motion should stay restrained and elegant. Use a slow cinematic push-in with a slight rightward drift. The lean dark-haired human duelist makes two tiny blade adjustments and a measured half-step inward, testing the bind without breaking the tableau. The taller pale alien prince answers with a controlled forward press, a subtle wrist turn, and a small shift of weight that keeps visible dominance. Let haze drift softly, let fabric and armor tails move slightly, and allow a faint seam-light pulse in the distant walls. No strike lands, no blood, no new characters, no costume changes, no room redesign, no abrupt camera move, and no chaotic action.",
+      "clip": [
+        "29",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Chunk 1 Positive"
+    }
+  },
+  "4": {
+    "inputs": {
+      "text": "identity drift, face drift, anatomy errors, extra limbs, extra weapons, duplicate characters, costume redesign, room redesign, hard cut, jumpy camera, fast action, impact hit, blood, gore, explosion, debris burst, comedy, text, watermark, logo",
+      "clip": [
+        "29",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Chunk 1 Negative"
+    }
+  },
+  "8": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "22": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "29": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_A14b_high_noise_lora_rank64_lightx2v_4step_1022.safetensors",
+      "strength_model": 1,
+      "strength_clip": 1,
+      "model": [
+        "326",
+        0
+      ],
+      "clip": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA (Model and CLIP)"
+    }
+  },
+  "35": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 6001,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "332",
+        0
+      ],
+      "positive": [
+        "84",
+        0
+      ],
+      "negative": [
+        "84",
+        1
+      ],
+      "latent_image": [
+        "84",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "Sampler 1A (High Noise)"
+    }
+  },
+  "36": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 6001,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 4,
+      "end_at_step": 8,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "253",
+        0
+      ],
+      "positive": [
+        "84",
+        0
+      ],
+      "negative": [
+        "84",
+        1
+      ],
+      "latent_image": [
+        "35",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "Sampler 1B (Low Noise)"
+    }
+  },
+  "44": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_A14b_low_noise_lora_rank64_lightx2v_4step_1022.safetensors",
+      "strength_model": 1,
+      "model": [
+        "329",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "61": {
+    "inputs": {
+      "samples": [
+        "36",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "76": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "77": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "84": {
+    "inputs": {
+      "width": [
+        "98",
+        1
+      ],
+      "height": [
+        "98",
+        2
+      ],
+      "length": 81,
+      "batch_size": 1,
+      "positive": [
+        "3",
+        0
+      ],
+      "negative": [
+        "4",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ],
+      "start_image": [
+        "98",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "LENGTH FOR 1ST CHUNK"
+    }
+  },
+  "85": {
+    "inputs": {
+      "image": "filmcreator/RUN_0029/source_frame_SC001_CL001_KF01.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "98": {
+    "inputs": {
+      "megapixels": 0.2,
+      "multiple_of": 16,
+      "resize_mode": "crop",
+      "upscale_method": "lanczos",
+      "resolution": "",
+      "image": [
+        "85",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixelsX",
+    "_meta": {
+      "title": "Scale Image to Total Pixels Adv"
+    }
+  },
+  "150": {
+    "inputs": {
+      "frame_rate": 16,
+      "loop_count": 0,
+      "filename_prefix": "filmcreator/pilot_scene/RUN_0029_cut_motion",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 19,
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": true,
+      "images": [
+        "247",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "Chunk 1 Output"
+    }
+  },
+  "241": {
+    "inputs": {
+      "image1": [
+        "61",
+        0
+      ],
+      "image2": [
+        "256:382",
+        0
+      ]
+    },
+    "class_type": "ImageBatch",
+    "_meta": {
+      "title": "Batch Images"
+    }
+  },
+  "242": {
+    "inputs": {
+      "image1": [
+        "241",
+        0
+      ],
+      "image2": [
+        "129:128",
+        0
+      ]
+    },
+    "class_type": "ImageBatch",
+    "_meta": {
+      "title": "Batch Images"
+    }
+  },
+  "243": {
+    "inputs": {
+      "image1": [
+        "242",
+        0
+      ],
+      "image2": [
+        "130:347",
+        0
+      ]
+    },
+    "class_type": "ImageBatch",
+    "_meta": {
+      "title": "Batch Images"
+    }
+  },
+  "244": {
+    "inputs": {
+      "image1": [
+        "243",
+        0
+      ],
+      "image2": [
+        "142:355",
+        0
+      ]
+    },
+    "class_type": "ImageBatch",
+    "_meta": {
+      "title": "Batch Images"
+    }
+  },
+  "245": {
+    "inputs": {
+      "image1": [
+        "244",
+        0
+      ],
+      "image2": [
+        "143:362",
+        0
+      ]
+    },
+    "class_type": "ImageBatch",
+    "_meta": {
+      "title": "Batch Images"
+    }
+  },
+  "246": {
+    "inputs": {
+      "image1": [
+        "245",
+        0
+      ],
+      "image2": [
+        "144:366",
+        0
+      ]
+    },
+    "class_type": "ImageBatch",
+    "_meta": {
+      "title": "Batch Images"
+    }
+  },
+  "247": {
+    "inputs": {
+      "image1": [
+        "246",
+        0
+      ],
+      "image2": [
+        "149:375",
+        0
+      ]
+    },
+    "class_type": "ImageBatch",
+    "_meta": {
+      "title": "Batch Images"
+    }
+  },
+  "249": {
+    "inputs": {
+      "gguf_name": "Wan2.2-I2V-A14B-LowNoise-Q4_K_M.gguf"
+    },
+    "class_type": "LoaderGGUF",
+    "_meta": {
+      "title": "GGUF Loader"
+    }
+  },
+  "250": {
+    "inputs": {
+      "gguf_name": "Wan2.2-I2V-A14B-LowNoise-Q4_K_M.gguf"
+    },
+    "class_type": "LoaderGGUF",
+    "_meta": {
+      "title": "GGUF Loader"
+    }
+  },
+  "253": {
+    "inputs": {
+      "shift": 8.000000000000002,
+      "model": [
+        "44",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "Low Shift"
+    }
+  },
+  "254": {
+    "inputs": {
+      "shift": 8.000000000000002,
+      "model": [
+        "29",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "High Shift"
+    }
+  },
+  "326": {
+    "inputs": {
+      "select": 1,
+      "sel_mode": false,
+      "input1": [
+        "76",
+        0
+      ],
+      "input2": [
+        "249",
+        0
+      ]
+    },
+    "class_type": "ImpactSwitch",
+    "_meta": {
+      "title": "High Noise GGUF OR REGULAR"
+    }
+  },
+  "329": {
+    "inputs": {
+      "select": 1,
+      "sel_mode": false,
+      "input1": [
+        "77",
+        0
+      ],
+      "input2": [
+        "250",
+        0
+      ]
+    },
+    "class_type": "ImpactSwitch",
+    "_meta": {
+      "title": "Low Noise GGUF OR REGULAR"
+    }
+  },
+  "332": {
+    "inputs": {
+      "enabled": true,
+      "motion_lock_ratio": 0.15,
+      "blend_strength": 0.8,
+      "low_freq_ratio": 0.8,
+      "local_window_frames": 29,
+      "motion_lock_blocks": 5,
+      "model": [
+        "254",
+        0
+      ]
+    },
+    "class_type": "WanFreeLongEnforcer",
+    "_meta": {
+      "title": "Wan FreeLong Enforcer"
+    }
+  },
+  "256:378": {
+    "inputs": {
+      "text": "Use cinematic composition, framing, lens, lighting, and production language while keeping subjects explicitly described and visually grounded.\n\nStart from the provided opening duel frame and preserve the exact visible identities, costumes, proportions, lighting, architecture, and overall composition from that image. Two combatants hold crossed blades on a circular platform inside a monumental pale alien command chamber with ribbed nonhuman arches, cold sculptural overhead light, and faint haze. Motion should stay restrained and elegant. Use a slow cinematic push-in with a slight rightward drift. The lean dark-haired human duelist makes two tiny blade adjustments and a measured half-step inward, testing the bind without breaking the tableau. The taller pale alien prince answers with a controlled forward press, a subtle wrist turn, and a small shift of weight that keeps visible dominance. Let haze drift softly, let fabric and armor tails move slightly, and allow a faint seam-light pulse in the distant walls. No strike lands, no blood, no new characters, no costume changes, no room redesign, no abrupt camera move, and no chaotic action.",
+      "clip": [
+        "29",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Chunk 2 Positive"
+    }
+  },
+  "256:379": {
+    "inputs": {
+      "text": "identity drift, face drift, anatomy errors, extra limbs, extra weapons, duplicate characters, costume redesign, room redesign, hard cut, jumpy camera, fast action, impact hit, blood, gore, explosion, debris burst, comedy, text, watermark, logo",
+      "clip": [
+        "29",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Chunk 2 Negative"
+    }
+  },
+  "256:380": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 6001,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "332",
+        0
+      ],
+      "positive": [
+        "256:384",
+        0
+      ],
+      "negative": [
+        "256:384",
+        1
+      ],
+      "latent_image": [
+        "256:384",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "Sampler 2A (High Noise)"
+    }
+  },
+  "256:381": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 6001,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 4,
+      "end_at_step": 8,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "253",
+        0
+      ],
+      "positive": [
+        "256:384",
+        0
+      ],
+      "negative": [
+        "256:384",
+        1
+      ],
+      "latent_image": [
+        "256:380",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "Sampler 2B (Low Noise)"
+    }
+  },
+  "256:382": {
+    "inputs": {
+      "samples": [
+        "256:381",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "256:384": {
+    "inputs": {
+      "width": [
+        "98",
+        1
+      ],
+      "height": [
+        "98",
+        2
+      ],
+      "video_length": 81,
+      "positive": [
+        "256:378",
+        0
+      ],
+      "negative": [
+        "256:379",
+        0
+      ],
+      "anchor_images": [
+        "61",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "WanContinuationConditioning",
+    "_meta": {
+      "title": "Continuation Conditioning"
+    }
+  },
+  "129:125": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 6001,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 4,
+      "end_at_step": 8,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "253",
+        0
+      ],
+      "positive": [
+        "129:124",
+        0
+      ],
+      "negative": [
+        "129:124",
+        1
+      ],
+      "latent_image": [
+        "129:126",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "Sampler 2B (Low Noise)"
+    }
+  },
+  "129:127": {
+    "inputs": {
+      "text": "Use cinematic composition, framing, lens, lighting, and production language while keeping subjects explicitly described and visually grounded.\n\nStart from the provided opening duel frame and preserve the exact visible identities, costumes, proportions, lighting, architecture, and overall composition from that image. Two combatants hold crossed blades on a circular platform inside a monumental pale alien command chamber with ribbed nonhuman arches, cold sculptural overhead light, and faint haze. Motion should stay restrained and elegant. Use a slow cinematic push-in with a slight rightward drift. The lean dark-haired human duelist makes two tiny blade adjustments and a measured half-step inward, testing the bind without breaking the tableau. The taller pale alien prince answers with a controlled forward press, a subtle wrist turn, and a small shift of weight that keeps visible dominance. Let haze drift softly, let fabric and armor tails move slightly, and allow a faint seam-light pulse in the distant walls. No strike lands, no blood, no new characters, no costume changes, no room redesign, no abrupt camera move, and no chaotic action.",
+      "clip": [
+        "29",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Chunk 2 Positive"
+    }
+  },
+  "129:123": {
+    "inputs": {
+      "text": "identity drift, face drift, anatomy errors, extra limbs, extra weapons, duplicate characters, costume redesign, room redesign, hard cut, jumpy camera, fast action, impact hit, blood, gore, explosion, debris burst, comedy, text, watermark, logo",
+      "clip": [
+        "29",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Chunk 2 Negative"
+    }
+  },
+  "129:126": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 6001,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "332",
+        0
+      ],
+      "positive": [
+        "129:124",
+        0
+      ],
+      "negative": [
+        "129:124",
+        1
+      ],
+      "latent_image": [
+        "129:124",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "Sampler 2A (High Noise)"
+    }
+  },
+  "129:128": {
+    "inputs": {
+      "samples": [
+        "129:125",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "129:124": {
+    "inputs": {
+      "width": [
+        "98",
+        1
+      ],
+      "height": [
+        "98",
+        2
+      ],
+      "video_length": 81,
+      "positive": [
+        "129:127",
+        0
+      ],
+      "negative": [
+        "129:123",
+        0
+      ],
+      "anchor_images": [
+        "256:382",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "WanContinuationConditioning",
+    "_meta": {
+      "title": "Continuation Conditioning"
+    }
+  },
+  "130:343": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 6001,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 4,
+      "end_at_step": 8,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "253",
+        0
+      ],
+      "positive": [
+        "130:349",
+        0
+      ],
+      "negative": [
+        "130:349",
+        1
+      ],
+      "latent_image": [
+        "130:346",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "Sampler 2B (Low Noise)"
+    }
+  },
+  "130:344": {
+    "inputs": {
+      "text": "Use cinematic composition, framing, lens, lighting, and production language while keeping subjects explicitly described and visually grounded.\n\nStart from the provided opening duel frame and preserve the exact visible identities, costumes, proportions, lighting, architecture, and overall composition from that image. Two combatants hold crossed blades on a circular platform inside a monumental pale alien command chamber with ribbed nonhuman arches, cold sculptural overhead light, and faint haze. Motion should stay restrained and elegant. Use a slow cinematic push-in with a slight rightward drift. The lean dark-haired human duelist makes two tiny blade adjustments and a measured half-step inward, testing the bind without breaking the tableau. The taller pale alien prince answers with a controlled forward press, a subtle wrist turn, and a small shift of weight that keeps visible dominance. Let haze drift softly, let fabric and armor tails move slightly, and allow a faint seam-light pulse in the distant walls. No strike lands, no blood, no new characters, no costume changes, no room redesign, no abrupt camera move, and no chaotic action.",
+      "clip": [
+        "29",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Chunk 2 Positive"
+    }
+  },
+  "130:345": {
+    "inputs": {
+      "text": "identity drift, face drift, anatomy errors, extra limbs, extra weapons, duplicate characters, costume redesign, room redesign, hard cut, jumpy camera, fast action, impact hit, blood, gore, explosion, debris burst, comedy, text, watermark, logo",
+      "clip": [
+        "29",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Chunk 2 Negative"
+    }
+  },
+  "130:346": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 6001,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "332",
+        0
+      ],
+      "positive": [
+        "130:349",
+        0
+      ],
+      "negative": [
+        "130:349",
+        1
+      ],
+      "latent_image": [
+        "130:349",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "Sampler 2A (High Noise)"
+    }
+  },
+  "130:347": {
+    "inputs": {
+      "samples": [
+        "130:343",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "130:349": {
+    "inputs": {
+      "width": [
+        "98",
+        1
+      ],
+      "height": [
+        "98",
+        2
+      ],
+      "video_length": 81,
+      "positive": [
+        "130:344",
+        0
+      ],
+      "negative": [
+        "130:345",
+        0
+      ],
+      "anchor_images": [
+        "129:128",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "WanContinuationConditioning",
+    "_meta": {
+      "title": "Continuation Conditioning"
+    }
+  },
+  "142:350": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 6001,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 4,
+      "end_at_step": 8,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "253",
+        0
+      ],
+      "positive": [
+        "142:356",
+        0
+      ],
+      "negative": [
+        "142:356",
+        1
+      ],
+      "latent_image": [
+        "142:353",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "Sampler 2B (Low Noise)"
+    }
+  },
+  "142:351": {
+    "inputs": {
+      "text": "Use cinematic composition, framing, lens, lighting, and production language while keeping subjects explicitly described and visually grounded.\n\nStart from the provided opening duel frame and preserve the exact visible identities, costumes, proportions, lighting, architecture, and overall composition from that image. Two combatants hold crossed blades on a circular platform inside a monumental pale alien command chamber with ribbed nonhuman arches, cold sculptural overhead light, and faint haze. Motion should stay restrained and elegant. Use a slow cinematic push-in with a slight rightward drift. The lean dark-haired human duelist makes two tiny blade adjustments and a measured half-step inward, testing the bind without breaking the tableau. The taller pale alien prince answers with a controlled forward press, a subtle wrist turn, and a small shift of weight that keeps visible dominance. Let haze drift softly, let fabric and armor tails move slightly, and allow a faint seam-light pulse in the distant walls. No strike lands, no blood, no new characters, no costume changes, no room redesign, no abrupt camera move, and no chaotic action.",
+      "clip": [
+        "29",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Chunk 2 Positive"
+    }
+  },
+  "142:352": {
+    "inputs": {
+      "text": "identity drift, face drift, anatomy errors, extra limbs, extra weapons, duplicate characters, costume redesign, room redesign, hard cut, jumpy camera, fast action, impact hit, blood, gore, explosion, debris burst, comedy, text, watermark, logo",
+      "clip": [
+        "29",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Chunk 2 Negative"
+    }
+  },
+  "142:353": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 6001,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "332",
+        0
+      ],
+      "positive": [
+        "142:356",
+        0
+      ],
+      "negative": [
+        "142:356",
+        1
+      ],
+      "latent_image": [
+        "142:356",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "Sampler 2A (High Noise)"
+    }
+  },
+  "142:355": {
+    "inputs": {
+      "samples": [
+        "142:350",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "142:356": {
+    "inputs": {
+      "width": [
+        "98",
+        1
+      ],
+      "height": [
+        "98",
+        2
+      ],
+      "video_length": 81,
+      "positive": [
+        "142:351",
+        0
+      ],
+      "negative": [
+        "142:352",
+        0
+      ],
+      "anchor_images": [
+        "130:347",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "WanContinuationConditioning",
+    "_meta": {
+      "title": "Continuation Conditioning"
+    }
+  },
+  "143:357": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 6001,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 4,
+      "end_at_step": 8,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "253",
+        0
+      ],
+      "positive": [
+        "143:363",
+        0
+      ],
+      "negative": [
+        "143:363",
+        1
+      ],
+      "latent_image": [
+        "143:360",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "Sampler 2B (Low Noise)"
+    }
+  },
+  "143:358": {
+    "inputs": {
+      "text": "Use cinematic composition, framing, lens, lighting, and production language while keeping subjects explicitly described and visually grounded.\n\nStart from the provided opening duel frame and preserve the exact visible identities, costumes, proportions, lighting, architecture, and overall composition from that image. Two combatants hold crossed blades on a circular platform inside a monumental pale alien command chamber with ribbed nonhuman arches, cold sculptural overhead light, and faint haze. Motion should stay restrained and elegant. Use a slow cinematic push-in with a slight rightward drift. The lean dark-haired human duelist makes two tiny blade adjustments and a measured half-step inward, testing the bind without breaking the tableau. The taller pale alien prince answers with a controlled forward press, a subtle wrist turn, and a small shift of weight that keeps visible dominance. Let haze drift softly, let fabric and armor tails move slightly, and allow a faint seam-light pulse in the distant walls. No strike lands, no blood, no new characters, no costume changes, no room redesign, no abrupt camera move, and no chaotic action.",
+      "clip": [
+        "29",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Chunk 2 Positive"
+    }
+  },
+  "143:359": {
+    "inputs": {
+      "text": "identity drift, face drift, anatomy errors, extra limbs, extra weapons, duplicate characters, costume redesign, room redesign, hard cut, jumpy camera, fast action, impact hit, blood, gore, explosion, debris burst, comedy, text, watermark, logo",
+      "clip": [
+        "29",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Chunk 2 Negative"
+    }
+  },
+  "143:360": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 6001,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "332",
+        0
+      ],
+      "positive": [
+        "143:363",
+        0
+      ],
+      "negative": [
+        "143:363",
+        1
+      ],
+      "latent_image": [
+        "143:363",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "Sampler 2A (High Noise)"
+    }
+  },
+  "143:362": {
+    "inputs": {
+      "samples": [
+        "143:357",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "143:363": {
+    "inputs": {
+      "width": [
+        "98",
+        1
+      ],
+      "height": [
+        "98",
+        2
+      ],
+      "video_length": 81,
+      "positive": [
+        "143:358",
+        0
+      ],
+      "negative": [
+        "143:359",
+        0
+      ],
+      "anchor_images": [
+        "142:355",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "WanContinuationConditioning",
+    "_meta": {
+      "title": "Continuation Conditioning"
+    }
+  },
+  "144:364": {
+    "inputs": {
+      "text": "Use cinematic composition, framing, lens, lighting, and production language while keeping subjects explicitly described and visually grounded.\n\nStart from the provided opening duel frame and preserve the exact visible identities, costumes, proportions, lighting, architecture, and overall composition from that image. Two combatants hold crossed blades on a circular platform inside a monumental pale alien command chamber with ribbed nonhuman arches, cold sculptural overhead light, and faint haze. Motion should stay restrained and elegant. Use a slow cinematic push-in with a slight rightward drift. The lean dark-haired human duelist makes two tiny blade adjustments and a measured half-step inward, testing the bind without breaking the tableau. The taller pale alien prince answers with a controlled forward press, a subtle wrist turn, and a small shift of weight that keeps visible dominance. Let haze drift softly, let fabric and armor tails move slightly, and allow a faint seam-light pulse in the distant walls. No strike lands, no blood, no new characters, no costume changes, no room redesign, no abrupt camera move, and no chaotic action.",
+      "clip": [
+        "29",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Chunk 2 Positive"
+    }
+  },
+  "144:365": {
+    "inputs": {
+      "text": "identity drift, face drift, anatomy errors, extra limbs, extra weapons, duplicate characters, costume redesign, room redesign, hard cut, jumpy camera, fast action, impact hit, blood, gore, explosion, debris burst, comedy, text, watermark, logo",
+      "clip": [
+        "29",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Chunk 2 Negative"
+    }
+  },
+  "144:366": {
+    "inputs": {
+      "samples": [
+        "144:370",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "144:368": {
+    "inputs": {
+      "width": [
+        "98",
+        1
+      ],
+      "height": [
+        "98",
+        2
+      ],
+      "video_length": 81,
+      "positive": [
+        "144:364",
+        0
+      ],
+      "negative": [
+        "144:365",
+        0
+      ],
+      "anchor_images": [
+        "143:362",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "WanContinuationConditioning",
+    "_meta": {
+      "title": "Continuation Conditioning"
+    }
+  },
+  "144:369": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 6001,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "332",
+        0
+      ],
+      "positive": [
+        "144:368",
+        0
+      ],
+      "negative": [
+        "144:368",
+        1
+      ],
+      "latent_image": [
+        "144:368",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "Sampler 2A (High Noise)"
+    }
+  },
+  "144:370": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 6001,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 4,
+      "end_at_step": 8,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "253",
+        0
+      ],
+      "positive": [
+        "144:368",
+        0
+      ],
+      "negative": [
+        "144:368",
+        1
+      ],
+      "latent_image": [
+        "144:369",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "Sampler 2B (Low Noise)"
+    }
+  },
+  "149:371": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 6001,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 4,
+      "end_at_step": 8,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "253",
+        0
+      ],
+      "positive": [
+        "149:377",
+        0
+      ],
+      "negative": [
+        "149:377",
+        1
+      ],
+      "latent_image": [
+        "149:374",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "Sampler 2B (Low Noise)"
+    }
+  },
+  "149:372": {
+    "inputs": {
+      "text": "Use cinematic composition, framing, lens, lighting, and production language while keeping subjects explicitly described and visually grounded.\n\nStart from the provided opening duel frame and preserve the exact visible identities, costumes, proportions, lighting, architecture, and overall composition from that image. Two combatants hold crossed blades on a circular platform inside a monumental pale alien command chamber with ribbed nonhuman arches, cold sculptural overhead light, and faint haze. Motion should stay restrained and elegant. Use a slow cinematic push-in with a slight rightward drift. The lean dark-haired human duelist makes two tiny blade adjustments and a measured half-step inward, testing the bind without breaking the tableau. The taller pale alien prince answers with a controlled forward press, a subtle wrist turn, and a small shift of weight that keeps visible dominance. Let haze drift softly, let fabric and armor tails move slightly, and allow a faint seam-light pulse in the distant walls. No strike lands, no blood, no new characters, no costume changes, no room redesign, no abrupt camera move, and no chaotic action.",
+      "clip": [
+        "29",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Chunk 2 Positive"
+    }
+  },
+  "149:373": {
+    "inputs": {
+      "text": "identity drift, face drift, anatomy errors, extra limbs, extra weapons, duplicate characters, costume redesign, room redesign, hard cut, jumpy camera, fast action, impact hit, blood, gore, explosion, debris burst, comedy, text, watermark, logo",
+      "clip": [
+        "29",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Chunk 2 Negative"
+    }
+  },
+  "149:374": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 6001,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "332",
+        0
+      ],
+      "positive": [
+        "149:377",
+        0
+      ],
+      "negative": [
+        "149:377",
+        1
+      ],
+      "latent_image": [
+        "149:377",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "Sampler 2A (High Noise)"
+    }
+  },
+  "149:375": {
+    "inputs": {
+      "samples": [
+        "149:371",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "149:377": {
+    "inputs": {
+      "width": [
+        "98",
+        1
+      ],
+      "height": [
+        "98",
+        2
+      ],
+      "video_length": 81,
+      "positive": [
+        "149:372",
+        0
+      ],
+      "negative": [
+        "149:373",
+        0
+      ],
+      "anchor_images": [
+        "144:366",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "WanContinuationConditioning",
+    "_meta": {
+      "title": "Continuation Conditioning"
+    }
+  }
+}
