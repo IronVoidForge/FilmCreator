@@ -27,6 +27,7 @@ RECORD_END_TAG = "[[/FILMCREATOR_RECORD]]"
 SECTION_END_TAG = "[[/SECTION]]"
 PACKET_VERSION = "1"
 MANUAL_PLACEHOLDER_MARKER = "<!-- FILMCREATOR_MANUAL_PLACEHOLDER -->"
+CLARIFICATION_PLACEHOLDER_MARKER = "<!-- FILMCREATOR_CHARACTER_CLARIFICATION -->"
 
 
 @dataclass(frozen=True)
@@ -44,6 +45,22 @@ class ManualCharacterDescriptionRequest:
 
 
 @dataclass(frozen=True)
+class CharacterClarificationRequest:
+    asset_id: str
+    source_path: str
+    reason: str
+    question: str
+
+    def to_dict(self) -> dict[str, str]:
+        return {
+            "asset_id": self.asset_id,
+            "source_path": self.source_path,
+            "reason": self.reason,
+            "question": self.question,
+        }
+
+
+@dataclass(frozen=True)
 class StoryAnalysisSummary:
     project_slug: str
     chapter_path: str
@@ -52,6 +69,8 @@ class StoryAnalysisSummary:
     written_files: list[str]
     scene_ids: list[str]
     manual_character_description_requests: list[ManualCharacterDescriptionRequest]
+    character_clarification_requests: list[CharacterClarificationRequest]
+    warnings: list[str]
 
     def to_dict(self) -> dict[str, object]:
         return {
@@ -64,6 +83,10 @@ class StoryAnalysisSummary:
             "manual_character_description_requests": [
                 item.to_dict() for item in self.manual_character_description_requests
             ],
+            "character_clarification_requests": [
+                item.to_dict() for item in self.character_clarification_requests
+            ],
+            "warnings": self.warnings,
         }
 
 
@@ -75,6 +98,7 @@ class ScenePlanningSummary:
     written_files: list[str]
     beat_ids: list[str]
     clip_ids: list[str]
+    warnings: list[str]
 
     def to_dict(self) -> dict[str, object]:
         return {
@@ -84,6 +108,23 @@ class ScenePlanningSummary:
             "written_files": self.written_files,
             "beat_ids": self.beat_ids,
             "clip_ids": self.clip_ids,
+            "warnings": self.warnings,
+        }
+
+
+@dataclass(frozen=True)
+class SharedPromptFailure:
+    asset_id: str
+    asset_type: str
+    reason: str
+    failure_artifact_path: str
+
+    def to_dict(self) -> dict[str, str]:
+        return {
+            "asset_id": self.asset_id,
+            "asset_type": self.asset_type,
+            "reason": self.reason,
+            "failure_artifact_path": self.failure_artifact_path,
         }
 
 
@@ -92,12 +133,18 @@ class SharedPromptSummary:
     project_slug: str
     model: str
     written_files: list[str]
+    warnings: list[str]
+    failures: list[SharedPromptFailure]
 
     def to_dict(self) -> dict[str, object]:
         return {
             "project_slug": self.project_slug,
             "model": self.model,
             "written_files": self.written_files,
+            "warnings": self.warnings,
+            "failures": [item.to_dict() for item in self.failures],
+            "success_count": len(self.written_files),
+            "failure_count": len(self.failures),
         }
 
 
@@ -127,6 +174,12 @@ class _ChapterSource:
 
 
 @dataclass(frozen=True)
+class _ParsedInputsMarkdown:
+    items: dict[str, str]
+    warnings: list[str]
+
+
+@dataclass(frozen=True)
 class _StructuredPromptDraft:
     asset_id: str
     purpose: str
@@ -135,6 +188,7 @@ class _StructuredPromptDraft:
     inputs: dict[str, str]
     continuity_notes: list[str]
     repair_notes: list[str]
+    warnings: list[str]
 
 
 @dataclass(frozen=True)
@@ -148,6 +202,22 @@ class _PacketDocument:
     metadata: dict[str, str]
     sections: dict[str, str]
     records: list[_PacketRecord]
+
+
+@dataclass(frozen=True)
+class _TaskAttempt:
+    kind: str
+    status: str
+    log_path: str
+    message: str
+
+
+@dataclass(frozen=True)
+class _TaskFailure:
+    task_name: str
+    message: str
+    attempts: list[_TaskAttempt]
+    failure_artifact_path: str
 
 
 def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAnalysisSummary:
@@ -169,6 +239,8 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
 
     written_files: list[str] = []
     manual_requests: list[ManualCharacterDescriptionRequest] = []
+    clarification_requests: list[CharacterClarificationRequest] = []
+    warnings: list[str] = []
 
     summary_packet = _call_packet_task(
         client=client,
@@ -176,6 +248,7 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
         task_name="chapter_summary",
         system_prompt=_analysis_system_prompt(),
         user_prompt=_chapter_summary_user_prompt(project_slug, chapter_source),
+        degraded_user_prompt=_chapter_summary_user_prompt(project_slug, chapter_source, degraded=True),
     )
     project_summary_markdown = _require_packet_section(summary_packet, "project_summary_markdown")
     chapter_summary_markdown = _require_packet_section(summary_packet, "chapter_summary_markdown")
@@ -198,6 +271,12 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
             chapter_source=chapter_source,
             chapter_summary=chapter_summary_markdown,
         ),
+        degraded_user_prompt=_character_extraction_user_prompt(
+            project_slug=project_slug,
+            chapter_source=chapter_source,
+            chapter_summary=chapter_summary_markdown,
+            degraded=True,
+        ),
     )
     character_index_markdown = _require_packet_section(character_packet, "character_index_markdown")
     character_index_path = project_dir / "02_story_analysis" / "character_breakdowns" / "CHARACTER_INDEX.md"
@@ -205,6 +284,7 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
     written_files.append(repo_relative(character_index_path))
 
     active_manual_description_requests: dict[str, str] = {}
+    active_clarification_requests: dict[str, tuple[str, str]] = {}
     for raw_character in _require_packet_records(character_packet, record_type="character"):
         asset_id = _normalize_asset_id(
             _require_record_field(raw_character, "asset_id"),
@@ -220,9 +300,30 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
             "manual_description_reason",
             allow_empty=not manual_description_required,
         )
+        clarification_required = _parse_packet_bool(
+            _require_record_field(raw_character, "clarification_required", allow_empty=True) or "false"
+        )
+        clarification_reason = _require_record_field(
+            raw_character,
+            "clarification_reason",
+            allow_empty=not clarification_required,
+        )
+        clarification_question = _require_record_field(
+            raw_character,
+            "clarification_question",
+            allow_empty=not clarification_required,
+        )
+        aliases = _require_record_field(raw_character, "aliases", allow_empty=True)
+        canonical_character_id = _require_record_field(raw_character, "canonical_character_id", allow_empty=True)
+        is_fully_identified = _require_record_field(raw_character, "is_fully_identified", allow_empty=True) or "false"
 
         character_markdown = _append_manual_description_section(
-            markdown=markdown,
+            markdown=_append_character_identity_section(
+                markdown=markdown,
+                aliases=aliases,
+                canonical_character_id=canonical_character_id,
+                is_fully_identified=is_fully_identified,
+            ),
             manual_required=manual_description_required,
             manual_reason=manual_description_reason,
         )
@@ -241,11 +342,28 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
                 )
             )
 
+        if clarification_required:
+            clarification_path = _character_clarification_path(project_dir=project_dir, asset_id=asset_id)
+            active_clarification_requests[asset_id] = (clarification_reason, clarification_question)
+            clarification_requests.append(
+                CharacterClarificationRequest(
+                    asset_id=asset_id,
+                    source_path=repo_relative(clarification_path),
+                    reason=clarification_reason,
+                    question=clarification_question,
+                )
+            )
+
     manual_placeholder_paths = _reconcile_manual_character_description_placeholders(
         project_dir=project_dir,
         active_requests=active_manual_description_requests,
     )
+    clarification_placeholder_paths = _reconcile_character_clarification_placeholders(
+        project_dir=project_dir,
+        active_requests=active_clarification_requests,
+    )
     written_files.extend(repo_relative(path) for path in manual_placeholder_paths)
+    written_files.extend(repo_relative(path) for path in clarification_placeholder_paths)
 
     environment_packet = _call_packet_task(
         client=client,
@@ -256,6 +374,12 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
             project_slug=project_slug,
             chapter_source=chapter_source,
             chapter_summary=chapter_summary_markdown,
+        ),
+        degraded_user_prompt=_environment_extraction_user_prompt(
+            project_slug=project_slug,
+            chapter_source=chapter_source,
+            chapter_summary=chapter_summary_markdown,
+            degraded=True,
         ),
     )
     environment_index_markdown = _require_packet_section(environment_packet, "environment_index_markdown")
@@ -284,6 +408,12 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
             chapter_id=chapter_source.chapter_id,
             chapter_summary=chapter_summary_markdown,
         ),
+        degraded_user_prompt=_scene_decomposition_user_prompt(
+            project_slug=project_slug,
+            chapter_id=chapter_source.chapter_id,
+            chapter_summary=chapter_summary_markdown,
+            degraded=True,
+        ),
     )
     scene_index_markdown = _require_packet_section(scene_packet, "scene_index_markdown")
     scene_index_path = project_dir / "02_story_analysis" / "scene_breakdowns" / "SCENE_INDEX.md"
@@ -309,6 +439,8 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
         written_files=written_files,
         scene_ids=scene_ids,
         manual_character_description_requests=manual_requests,
+        character_clarification_requests=clarification_requests,
+        warnings=warnings,
     )
 
 
@@ -321,6 +453,7 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
         raise FileNotFoundError(f"Scene breakdown not found: {scene_path}")
 
     written_files: list[str] = []
+    warnings: list[str] = []
 
     beat_dir = project_dir / "02_story_analysis" / "beat_bundles" / scene_id
     ensure_dir(beat_dir)
@@ -335,6 +468,12 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
             project_slug=project_slug,
             scene_id=scene_id,
             scene_markdown=_scene_brief_markdown(scene_path),
+        ),
+        degraded_user_prompt=_scene_beats_user_prompt(
+            project_slug=project_slug,
+            scene_id=scene_id,
+            scene_markdown=_scene_brief_markdown(scene_path),
+            degraded=True,
         ),
     )
     updated_scene_markdown = _require_packet_section(beat_packet, "updated_scene_markdown")
@@ -367,6 +506,13 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
             scene_markdown=_scene_brief_markdown(scene_path),
             beat_index_path=beat_index_path,
         ),
+        degraded_user_prompt=_clip_planning_user_prompt(
+            project_slug=project_slug,
+            scene_id=scene_id,
+            scene_markdown=_scene_brief_markdown(scene_path),
+            beat_index_path=beat_index_path,
+            degraded=True,
+        ),
     )
     clip_roster_markdown = _require_packet_section(clip_packet, "clip_roster_markdown")
     clip_dir = project_dir / "02_story_analysis" / "clip_plans" / scene_id
@@ -394,6 +540,7 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
         written_files=written_files,
         beat_ids=beat_ids,
         clip_ids=clip_ids,
+        warnings=warnings,
     )
 
 
@@ -403,6 +550,8 @@ def write_shared_prompts(*, project_slug: str) -> SharedPromptSummary:
     character_index_path = project_dir / "02_story_analysis" / "character_breakdowns" / "CHARACTER_INDEX.md"
     environment_index_path = project_dir / "02_story_analysis" / "environment_breakdowns" / "ENVIRONMENT_INDEX.md"
     written_files: list[str] = []
+    warnings: list[str] = []
+    failures: list[SharedPromptFailure] = []
     character_breakdown_dir = project_dir / "02_story_analysis" / "character_breakdowns"
     character_breakdowns = sorted(
         path
@@ -412,46 +561,70 @@ def write_shared_prompts(*, project_slug: str) -> SharedPromptSummary:
     for character_breakdown_path in character_breakdowns:
         asset_id = _normalize_asset_id(character_breakdown_path.stem, fallback_prefix="character")
         manual_description_path = _manual_description_path(project_dir=project_dir, asset_id=asset_id)
-        character_packet = _call_packet_task(
-            client=client,
-            project_dir=project_dir,
-            task_name="character_shared_prompts",
-            system_prompt=_analysis_system_prompt(),
-            user_prompt=_character_shared_prompt_user_prompt(
-                project_slug=project_slug,
-                asset_id=asset_id,
-                character_breakdown_path=character_breakdown_path,
-                manual_description_path=manual_description_path,
-            ),
-        )
-        raw_prompt = _require_single_packet_record(character_packet, record_type="character_prompt")
-        record_asset_id = _normalize_asset_id(
-            _require_record_field(raw_prompt, "asset_id"),
-            fallback_prefix="character",
-        )
-        if record_asset_id != asset_id:
-            raise LMStudioError(
-                f"LM Studio returned character prompt for '{record_asset_id}' when '{asset_id}' was requested."
+        try:
+            character_packet = _call_packet_task(
+                client=client,
+                project_dir=project_dir,
+                task_name="character_shared_prompts",
+                system_prompt=_analysis_system_prompt(),
+                user_prompt=_character_shared_prompt_user_prompt(
+                    project_slug=project_slug,
+                    asset_id=asset_id,
+                    character_breakdown_path=character_breakdown_path,
+                    manual_description_path=manual_description_path,
+                ),
+                degraded_user_prompt=_character_shared_prompt_user_prompt(
+                    project_slug=project_slug,
+                    asset_id=asset_id,
+                    character_breakdown_path=character_breakdown_path,
+                    manual_description_path=manual_description_path,
+                    degraded=True,
+                ),
             )
-        draft = _structured_prompt_draft(raw_prompt)
-        prompt_path = (
-            project_dir / "03_prompt_packages" / "characters" / asset_id / f"{asset_id}_ref_prompt.md"
-        )
-        sources = [repo_relative(character_index_path), repo_relative(character_breakdown_path)]
-        if manual_description_path.exists():
-            sources.append(repo_relative(manual_description_path))
-        write_prompt_package(
-            prompt_path,
-            _build_prompt_package(
-                path=prompt_path,
-                title=f"{asset_id} Character Reference Prompt",
-                prompt_id=f"{asset_id}_ref_prompt",
-                workflow_type="still.t2i.klein.distilled",
-                draft=draft,
-                sources=sources,
-            ),
-        )
-        written_files.append(repo_relative(prompt_path))
+            raw_prompt = _require_single_packet_record(character_packet, record_type="character_prompt")
+            record_asset_id = _normalize_asset_id(
+                _require_record_field(raw_prompt, "asset_id"),
+                fallback_prefix="character",
+            )
+            if record_asset_id != asset_id:
+                raise LMStudioError(
+                    f"LM Studio returned character prompt for '{record_asset_id}' when '{asset_id}' was requested."
+                )
+            draft = _structured_prompt_draft(raw_prompt)
+            warnings.extend(f"{asset_id}: {warning}" for warning in draft.warnings)
+            prompt_path = (
+                project_dir / "03_prompt_packages" / "characters" / asset_id / f"{asset_id}_ref_prompt.md"
+            )
+            sources = [repo_relative(character_index_path), repo_relative(character_breakdown_path)]
+            if manual_description_path.exists():
+                sources.append(repo_relative(manual_description_path))
+            write_prompt_package(
+                prompt_path,
+                _build_prompt_package(
+                    path=prompt_path,
+                    title=f"{asset_id} Character Reference Prompt",
+                    prompt_id=f"{asset_id}_ref_prompt",
+                    workflow_type="still.t2i.klein.distilled",
+                    draft=draft,
+                    sources=sources,
+                ),
+            )
+            written_files.append(repo_relative(prompt_path))
+        except LMStudioError as exc:
+            failure_path = _write_authoring_failure_artifact(
+                project_dir=project_dir,
+                task_name="character_shared_prompts",
+                asset_id=asset_id,
+                reason=str(exc),
+            )
+            failures.append(
+                SharedPromptFailure(
+                    asset_id=asset_id,
+                    asset_type="character",
+                    reason=str(exc),
+                    failure_artifact_path=repo_relative(failure_path),
+                )
+            )
 
     environment_breakdown_dir = project_dir / "02_story_analysis" / "environment_breakdowns"
     environment_breakdowns = sorted(
@@ -461,48 +634,73 @@ def write_shared_prompts(*, project_slug: str) -> SharedPromptSummary:
     )
     for environment_breakdown_path in environment_breakdowns:
         asset_id = _normalize_asset_id(environment_breakdown_path.stem, fallback_prefix="environment")
-        environment_packet = _call_packet_task(
-            client=client,
-            project_dir=project_dir,
-            task_name="environment_shared_prompts",
-            system_prompt=_analysis_system_prompt(),
-            user_prompt=_environment_shared_prompt_user_prompt(
-                project_slug=project_slug,
-                asset_id=asset_id,
-                environment_breakdown_path=environment_breakdown_path,
-            ),
-        )
-        raw_prompt = _require_single_packet_record(environment_packet, record_type="environment_prompt")
-        record_asset_id = _normalize_asset_id(
-            _require_record_field(raw_prompt, "asset_id"),
-            fallback_prefix="environment",
-        )
-        if record_asset_id != asset_id:
-            raise LMStudioError(
-                f"LM Studio returned environment prompt for '{record_asset_id}' when '{asset_id}' was requested."
+        try:
+            environment_packet = _call_packet_task(
+                client=client,
+                project_dir=project_dir,
+                task_name="environment_shared_prompts",
+                system_prompt=_analysis_system_prompt(),
+                user_prompt=_environment_shared_prompt_user_prompt(
+                    project_slug=project_slug,
+                    asset_id=asset_id,
+                    environment_breakdown_path=environment_breakdown_path,
+                ),
+                degraded_user_prompt=_environment_shared_prompt_user_prompt(
+                    project_slug=project_slug,
+                    asset_id=asset_id,
+                    environment_breakdown_path=environment_breakdown_path,
+                    degraded=True,
+                ),
             )
-        draft = _structured_prompt_draft(raw_prompt)
-        prompt_path = (
-            project_dir / "03_prompt_packages" / "environments" / asset_id / f"{asset_id}_ref_prompt.md"
-        )
-        sources = [repo_relative(environment_index_path), repo_relative(environment_breakdown_path)]
-        write_prompt_package(
-            prompt_path,
-            _build_prompt_package(
-                path=prompt_path,
-                title=f"{asset_id} Environment Reference Prompt",
-                prompt_id=f"{asset_id}_ref_prompt",
-                workflow_type="still.t2i.klein.distilled",
-                draft=draft,
-                sources=sources,
-            ),
-        )
-        written_files.append(repo_relative(prompt_path))
+            raw_prompt = _require_single_packet_record(environment_packet, record_type="environment_prompt")
+            record_asset_id = _normalize_asset_id(
+                _require_record_field(raw_prompt, "asset_id"),
+                fallback_prefix="environment",
+            )
+            if record_asset_id != asset_id:
+                raise LMStudioError(
+                    f"LM Studio returned environment prompt for '{record_asset_id}' when '{asset_id}' was requested."
+                )
+            draft = _structured_prompt_draft(raw_prompt)
+            warnings.extend(f"{asset_id}: {warning}" for warning in draft.warnings)
+            prompt_path = (
+                project_dir / "03_prompt_packages" / "environments" / asset_id / f"{asset_id}_ref_prompt.md"
+            )
+            sources = [repo_relative(environment_index_path), repo_relative(environment_breakdown_path)]
+            write_prompt_package(
+                prompt_path,
+                _build_prompt_package(
+                    path=prompt_path,
+                    title=f"{asset_id} Environment Reference Prompt",
+                    prompt_id=f"{asset_id}_ref_prompt",
+                    workflow_type="still.t2i.klein.distilled",
+                    draft=draft,
+                    sources=sources,
+                ),
+            )
+            written_files.append(repo_relative(prompt_path))
+        except LMStudioError as exc:
+            failure_path = _write_authoring_failure_artifact(
+                project_dir=project_dir,
+                task_name="environment_shared_prompts",
+                asset_id=asset_id,
+                reason=str(exc),
+            )
+            failures.append(
+                SharedPromptFailure(
+                    asset_id=asset_id,
+                    asset_type="environment",
+                    reason=str(exc),
+                    failure_artifact_path=repo_relative(failure_path),
+                )
+            )
 
     return SharedPromptSummary(
         project_slug=project_slug,
         model=resolved_model,
         written_files=written_files,
+        warnings=warnings,
+        failures=failures,
     )
 
 
@@ -572,13 +770,17 @@ def _analysis_system_prompt() -> str:
     return "\n".join(
         [
             "You are FilmCreator's local authoring analyst.",
+            "Work like a careful local planning assistant for chapter analysis and shot-prep authoring.",
             "Return exactly one FILMCREATOR packet in Markdown.",
             "Do not return JSON.",
             "Do not use markdown fences.",
             "Do not add commentary before or after the packet.",
             "Preserve uncertainty instead of inventing hidden facts.",
+            "Prefer short, concrete section bodies over long prose.",
+            "Follow the requested headings and record fields exactly.",
             "When asked to write Markdown file contents, place the complete file body inside the requested SECTION tags.",
             "When asked to extract render-facing facts, focus on visible, continuity-relevant details.",
+            "If information is missing, say so briefly instead of guessing.",
         ]
     )
 
@@ -635,7 +837,20 @@ def _packet_contract_block(
     return "\n".join(lines)
 
 
-def _chapter_summary_user_prompt(project_slug: str, chapter_source: _ChapterSource) -> str:
+def _chapter_summary_user_prompt(project_slug: str, chapter_source: _ChapterSource, degraded: bool = False) -> str:
+    requirements = [
+        "- proper nouns are allowed",
+        "- do not mention ComfyUI nodes or workflow patching",
+        "- separate visual continuity facts from broad story summary",
+        "- make the project summary reusable across later chapters, not just this one scene",
+        "- make the chapter summary specific enough to support later scene decomposition without re-reading the whole chapter",
+    ]
+    if degraded:
+        requirements = [
+            "- keep both sections short and concrete",
+            "- avoid flourish and avoid hidden assumptions",
+            "- if uncertain, state uncertainty briefly and continue",
+        ]
     return "\n\n".join(
         [
             f"Project slug: {project_slug}",
@@ -647,23 +862,46 @@ def _chapter_summary_user_prompt(project_slug: str, chapter_source: _ChapterSour
             ),
             "",
             "Requirements:",
-            "- proper nouns are allowed",
-            "- do not mention ComfyUI nodes or workflow patching",
-            "- separate visual continuity facts from broad story summary",
-            "- make the project summary reusable across later chapters, not just this one scene",
-            "- make the chapter summary specific enough to support later scene decomposition without re-reading the whole chapter",
+            *requirements,
             "",
             "Chapter source markdown:",
             chapter_source.full_markdown,
         ]
     )
 
+
 def _character_extraction_user_prompt(
     *,
     project_slug: str,
     chapter_source: _ChapterSource,
     chapter_summary: str,
+    degraded: bool = False,
 ) -> str:
+    record_fields = [
+        "asset_id",
+        "canonical_character_id",
+        "aliases",
+        "is_fully_identified",
+        "manual_description_required",
+        "manual_description_reason",
+        "clarification_required",
+        "clarification_reason",
+        "clarification_question",
+    ]
+    body_requirements = [
+        "- if a character does not have enough physical or visual description in the supplied material to support dependable later image generation, set manual_description_required to true",
+        "- explain exactly why in manual_description_reason",
+        "- do not guess ornate missing details just to avoid the flag",
+        "- if the chapter names a character without enough stable identification, set is_fully_identified to false",
+        "- use aliases for alternate names or partial labels seen in the chapter",
+        "- if the character might already exist under another name or is too weakly identified, set clarification_required to true and ask a targeted question",
+    ]
+    if degraded:
+        body_requirements = [
+            "- keep one record per meaningful character mention",
+            "- prefer short facts over long prose",
+            "- if uncertain, use clarification_required instead of guessing",
+        ]
     return "\n\n".join(
         [
             f"Project slug: {project_slug}",
@@ -672,19 +910,11 @@ def _character_extraction_user_prompt(
             _packet_contract_block(
                 task_name="character_extraction",
                 section_names=["character_index_markdown"],
-                record_templates=[
-                    (
-                        "character",
-                        ["asset_id", "manual_description_required", "manual_description_reason"],
-                        ["markdown"],
-                    )
-                ],
+                record_templates=[("character", record_fields, ["markdown"])],
             ),
             "",
-            "Important rule:",
-            "- if a character does not have enough physical or visual description in the supplied material to support dependable later image generation, set manual_description_required to true",
-            "- explain exactly why in manual_description_reason",
-            "- do not guess ornate missing details just to avoid the flag",
+            "Important rules:",
+            *body_requirements,
             "",
             "Asset id rules:",
             "- lowercase snake_case",
@@ -709,7 +939,17 @@ def _environment_extraction_user_prompt(
     project_slug: str,
     chapter_source: _ChapterSource,
     chapter_summary: str,
+    degraded: bool = False,
 ) -> str:
+    notes = [
+        "- include stable environment families rather than every one-off mention",
+        "- prefer visible geography and atmosphere over literary abstraction",
+    ]
+    if degraded:
+        notes = [
+            "- keep the environment set small and useful",
+            "- use concise visible descriptions",
+        ]
     return "\n\n".join(
         [
             f"Project slug: {project_slug}",
@@ -724,6 +964,7 @@ def _environment_extraction_user_prompt(
             "Asset id rules:",
             "- lowercase snake_case",
             "- stable across later reruns",
+            *notes,
             "",
             "Each environment Markdown file should include:",
             "- environment role such as primary, secondary, or transit setting",
@@ -743,7 +984,16 @@ def _scene_decomposition_user_prompt(
     project_slug: str,
     chapter_id: str,
     chapter_summary: str,
+    degraded: bool = False,
 ) -> str:
+    extra_rules = [
+        "Prefer dramatic and staging boundaries, not every paragraph break.",
+    ]
+    if degraded:
+        extra_rules = [
+            "Keep scene count small and practical.",
+            "Prefer fewer strong scenes over many weak ones.",
+        ]
     return "\n\n".join(
         [
             f"Project slug: {project_slug}",
@@ -758,8 +1008,7 @@ def _scene_decomposition_user_prompt(
             "Scene id rules:",
             "- use SC###",
             "- start at SC001 for this chapter",
-            "",
-            "Prefer dramatic and staging boundaries, not every paragraph break.",
+            *extra_rules,
             "Each scene Markdown file should include:",
             "- scene purpose",
             "- scene summary",
@@ -780,7 +1029,15 @@ def _scene_beats_user_prompt(
     project_slug: str,
     scene_id: str,
     scene_markdown: str,
+    degraded: bool = False,
 ) -> str:
+    extra_rules = [
+        "- keep beats reusable for later coverage planning",
+    ]
+    if degraded:
+        extra_rules = [
+            "- keep beats short and practical",
+        ]
     return "\n\n".join(
         [
             f"Project slug: {project_slug}",
@@ -794,7 +1051,7 @@ def _scene_beats_user_prompt(
             "",
             "Beat id rules:",
             "- use BT### within the scene",
-            "",
+            *extra_rules,
             "Each beat Markdown file should include:",
             "- beat purpose",
             "- beat start state and end state",
@@ -815,12 +1072,27 @@ def _clip_planning_user_prompt(
     scene_id: str,
     scene_markdown: str,
     beat_index_path: Path,
+    degraded: bool = False,
 ) -> str:
     beat_bundle_dir = beat_index_path.parent
     beat_bundles = _markdown_bundle(
         directory=beat_bundle_dir,
         exclude_names={"BEAT_INDEX.md", "README.md"},
     )
+    clip_rules = [
+        "- clip = cut",
+        "- most clips should target around 5 seconds",
+        "- treat continuous_follow as rare",
+        "- prefer reframe_same_moment, reblock_same_scene, insert, and cutaway when appropriate",
+        "- include continuity mode, composition type, starting keyframe strategy, dependency policy, fallback strategy, visible character assets, required refs, optional refs, opening keyframe intent, cut motion intent, and interval beats",
+        "- identify one or two strong initial test clips if the scene allows it",
+    ]
+    if degraded:
+        clip_rules = [
+            "- keep the first clip roster small and testable",
+            "- prefer independent clips",
+            "- keep metadata concise but complete",
+        ]
     return "\n\n".join(
         [
             f"Project slug: {project_slug}",
@@ -833,12 +1105,7 @@ def _clip_planning_user_prompt(
             ),
             "",
             "Clip planning rules:",
-            "- clip = cut",
-            "- most clips should target around 5 seconds",
-            "- treat continuous_follow as rare",
-            "- prefer reframe_same_moment, reblock_same_scene, insert, and cutaway when appropriate",
-            "- include continuity mode, composition type, starting keyframe strategy, dependency policy, fallback strategy, visible character assets, required refs, optional refs, opening keyframe intent, cut motion intent, and interval beats",
-            "- identify one or two strong initial test clips if the scene allows it",
+            *clip_rules,
             "",
             "Scene breakdown markdown:",
             scene_markdown,
@@ -858,9 +1125,22 @@ def _character_shared_prompt_user_prompt(
     asset_id: str,
     character_breakdown_path: Path,
     manual_description_path: Path,
+    degraded: bool = False,
 ) -> str:
     character_markdown = character_breakdown_path.read_text(encoding="utf-8")
     manual_description = manual_description_path.read_text(encoding="utf-8") if manual_description_path.exists() else ""
+    rules = [
+        "- purpose and inputs may use stable asset ids",
+        "- final positive and negative prompt bodies should avoid proper nouns and use descriptive noun phrases",
+        "- keep prompts concrete and visible",
+        "- prefer stable face, hair, body type, costume logic, silhouette, and recurring materials over scene-specific blocking",
+    ]
+    if degraded:
+        rules = [
+            "- keep the sections short and usable",
+            "- preserve only the most stable visible traits",
+            "- if uncertain, leave a short continuity note instead of inventing detail",
+        ]
     return "\n\n".join(
         [
             f"Project slug: {project_slug}",
@@ -886,10 +1166,7 @@ def _character_shared_prompt_user_prompt(
             ),
             "",
             "Rules:",
-            "- purpose and inputs may use stable asset ids",
-            "- final positive and negative prompt bodies should avoid proper nouns and use descriptive noun phrases",
-            "- keep prompts concrete and visible",
-            "- prefer stable face, hair, body type, costume logic, silhouette, and recurring materials over scene-specific blocking",
+            *rules,
             "",
             f"Character breakdown path: {repo_relative(character_breakdown_path)}",
             character_markdown,
@@ -905,8 +1182,20 @@ def _environment_shared_prompt_user_prompt(
     project_slug: str,
     asset_id: str,
     environment_breakdown_path: Path,
+    degraded: bool = False,
 ) -> str:
     environment_markdown = environment_breakdown_path.read_text(encoding="utf-8")
+    rules = [
+        "- purpose and inputs may use stable asset ids",
+        "- final positive and negative prompt bodies should avoid proper nouns and use descriptive noun phrases",
+        "- keep prompts concrete and visible",
+        "- emphasize stable architecture, geography, scale, atmosphere, and recurring environmental anchors",
+    ]
+    if degraded:
+        rules = [
+            "- keep the environment identity compact and stable",
+            "- use short visible descriptors only",
+        ]
     return "\n\n".join(
         [
             f"Project slug: {project_slug}",
@@ -932,10 +1221,7 @@ def _environment_shared_prompt_user_prompt(
             ),
             "",
             "Rules:",
-            "- purpose and inputs may use stable asset ids",
-            "- final positive and negative prompt bodies should avoid proper nouns and use descriptive noun phrases",
-            "- keep prompts concrete and visible",
-            "- emphasize stable architecture, geography, scale, atmosphere, and recurring environmental anchors",
+            *rules,
             "",
             f"Environment breakdown path: {repo_relative(environment_breakdown_path)}",
             environment_markdown,
@@ -971,33 +1257,70 @@ def _call_packet_task(
     task_name: str,
     system_prompt: str,
     user_prompt: str,
+    degraded_user_prompt: str,
 ) -> _PacketDocument:
-    response = client.chat_completion(system_prompt=system_prompt, user_prompt=user_prompt, temperature=0.2)
-    log_path = _write_authoring_exchange_log(
+    attempts: list[_TaskAttempt] = []
+    for kind, active_user_prompt in [
+        ("normal", user_prompt),
+        ("same_prompt_retry", user_prompt),
+        ("degraded_retry", degraded_user_prompt),
+    ]:
+        result = client.chat_completion_result(
+            system_prompt=system_prompt,
+            user_prompt=active_user_prompt,
+            temperature=0.2,
+        )
+        log_path = _write_authoring_exchange_log(
+            project_dir=project_dir,
+            task_name=task_name,
+            system_prompt=system_prompt,
+            user_prompt=active_user_prompt,
+            response=result.text,
+        )
+        if result.is_success:
+            try:
+                return _parse_packet_document(result.text, expected_task=task_name)
+            except LMStudioError as exc:
+                attempts.append(
+                    _TaskAttempt(
+                        kind=kind,
+                        status="parse_failed",
+                        log_path=repo_relative(log_path),
+                        message=str(exc),
+                    )
+                )
+                continue
+        attempts.append(
+            _TaskAttempt(
+                kind=kind,
+                status=result.status,
+                log_path=repo_relative(log_path),
+                message=result.error_message or "Unspecified LM Studio authoring failure.",
+            )
+        )
+
+    failure_path = _write_authoring_failure_artifact(
         project_dir=project_dir,
         task_name=task_name,
-        system_prompt=system_prompt,
-        user_prompt=user_prompt,
-        response=response,
+        asset_id=None,
+        reason="; ".join(f"{attempt.kind}:{attempt.status}:{attempt.message}" for attempt in attempts),
     )
-    try:
-        return _parse_packet_document(response, expected_task=task_name)
-    except LMStudioError as exc:
-        raise LMStudioError(
-            f"{exc} Raw response saved to {repo_relative(log_path)}"
-        ) from exc
+    raise LMStudioError(
+        f"Authoring task '{task_name}' failed after retries. Failure artifact: {repo_relative(failure_path)}"
+    )
 
 
 def _structured_prompt_draft(record: _PacketRecord) -> _StructuredPromptDraft:
-    inputs = _parse_markdown_key_value_items(_require_record_section(record, "inputs_markdown"))
+    parsed_inputs = _parse_markdown_key_value_items(_require_record_section(record, "inputs_markdown"))
     return _StructuredPromptDraft(
         asset_id=_require_record_field(record, "asset_id"),
         purpose=_require_record_section(record, "purpose"),
         positive_prompt=_require_record_section(record, "positive_prompt"),
         negative_prompt=_require_record_section(record, "negative_prompt"),
-        inputs=inputs,
+        inputs=parsed_inputs.items,
         continuity_notes=_parse_markdown_list(_require_record_section(record, "continuity_notes_markdown")),
         repair_notes=_parse_markdown_list(_require_record_section(record, "repair_notes_markdown")),
+        warnings=parsed_inputs.warnings,
     )
 
 
@@ -1023,6 +1346,29 @@ def _build_prompt_package(
         repair_notes_markdown="\n".join(f"- {item}" for item in draft.repair_notes),
         sources_markdown="\n".join(f"- {source}" for source in sources),
     )
+
+
+def _append_character_identity_section(
+    *,
+    markdown: str,
+    aliases: str,
+    canonical_character_id: str,
+    is_fully_identified: str,
+) -> str:
+    suffix = "\n\n".join(
+        [
+            "# Aliases",
+            aliases or "None",
+            "",
+            "# Canonical Character ID",
+            canonical_character_id or "",
+            "",
+            "# Fully Identified",
+            is_fully_identified,
+            "",
+        ]
+    )
+    return markdown.rstrip() + "\n\n" + suffix
 
 
 def _append_manual_description_section(
@@ -1069,8 +1415,37 @@ def _manual_character_description_placeholder(*, asset_id: str, reason: str) -> 
     )
 
 
+def _character_clarification_placeholder(*, asset_id: str, reason: str, question: str) -> str:
+    return "\n".join(
+        [
+            CLARIFICATION_PLACEHOLDER_MARKER,
+            "",
+            "# Asset ID",
+            asset_id,
+            "",
+            "# Why This Needs Clarification",
+            reason,
+            "",
+            "# Question",
+            question,
+            "",
+            "# Guidance",
+            "- answer briefly and concretely",
+            "- if another chapter already describes the character, note that source chapter",
+            "- if the character is never described well, say whether FilmCreator should generate a reusable film-wide default description",
+            "",
+            "# Clarification Response",
+            "",
+        ]
+    )
+
+
 def _manual_description_path(*, project_dir: Path, asset_id: str) -> Path:
     return project_dir / "01_source" / "character_descriptions" / f"{asset_id}_manual_description.md"
+
+
+def _character_clarification_path(*, project_dir: Path, asset_id: str) -> Path:
+    return project_dir / "01_source" / "character_descriptions" / f"{asset_id}_clarification.md"
 
 
 def _reconcile_manual_character_description_placeholders(
@@ -1105,6 +1480,26 @@ def _reconcile_manual_character_description_placeholders(
     return written_paths
 
 
+def _reconcile_character_clarification_placeholders(
+    *,
+    project_dir: Path,
+    active_requests: dict[str, tuple[str, str]],
+) -> list[Path]:
+    clarification_dir = project_dir / "01_source" / "character_descriptions"
+    ensure_dir(clarification_dir)
+    written_paths: list[Path] = []
+    for asset_id, (reason, question) in active_requests.items():
+        path = _character_clarification_path(project_dir=project_dir, asset_id=asset_id)
+        if path.exists() and _clarification_has_user_content(path):
+            continue
+        content = _character_clarification_placeholder(asset_id=asset_id, reason=reason, question=question)
+        if path.exists() and path.read_text(encoding="utf-8") == content:
+            continue
+        _write_text(path, content)
+        written_paths.append(path)
+    return written_paths
+
+
 def _is_generated_manual_placeholder(path: Path) -> bool:
     text = path.read_text(encoding="utf-8")
     return MANUAL_PLACEHOLDER_MARKER in text or (
@@ -1117,6 +1512,11 @@ def _manual_description_has_user_content(path: Path) -> bool:
     sections = _split_sections(path.read_text(encoding="utf-8"))
     manual_description = sections.get("Manual Description", "").strip()
     return bool(manual_description)
+
+
+def _clarification_has_user_content(path: Path) -> bool:
+    sections = _split_sections(path.read_text(encoding="utf-8"))
+    return bool(sections.get("Clarification Response", "").strip())
 
 
 def _write_authoring_exchange_log(
@@ -1154,6 +1554,32 @@ def _write_authoring_exchange_log(
     )
     _write_text(log_path, log_body)
     return log_path
+
+
+def _write_authoring_failure_artifact(
+    *,
+    project_dir: Path,
+    task_name: str,
+    asset_id: str | None,
+    reason: str,
+) -> Path:
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+    slug = asset_id or "task"
+    path = project_dir / "02_story_analysis" / "logs" / "failures" / f"{timestamp}_{task_name}_{slug}.md"
+    body = "\n".join(
+        [
+            "# FilmCreator Authoring Failure",
+            f"- timestamp_utc: {datetime.now(timezone.utc).isoformat()}",
+            f"- task: {task_name}",
+            f"- asset_id: {asset_id or ''}",
+            "",
+            "## Reason",
+            reason,
+            "",
+        ]
+    )
+    _write_text(path, body)
+    return path
 
 
 def _parse_packet_document(response: str, *, expected_task: str | None = None) -> _PacketDocument:
@@ -1372,8 +1798,9 @@ def _parse_packet_bool(value: str) -> bool:
     raise LMStudioError(f"Expected boolean packet field but got '{value}'.")
 
 
-def _parse_markdown_key_value_items(markdown: str) -> dict[str, str]:
+def _parse_markdown_key_value_items(markdown: str) -> _ParsedInputsMarkdown:
     values: dict[str, str] = {}
+    warnings: list[str] = []
     current_key: str | None = None
     for line in markdown.splitlines():
         stripped = line.strip()
@@ -1381,22 +1808,27 @@ def _parse_markdown_key_value_items(markdown: str) -> dict[str, str]:
             continue
         if stripped.startswith(("- ", "* ")):
             stripped = stripped[2:].strip()
-        if ":" not in stripped:
-            if current_key is None:
-                current_key = "note"
-                values[current_key] = stripped if not values.get(current_key) else f"{values[current_key]}\n{stripped}"
+        if ":" in stripped:
+            key, value = stripped.split(":", 1)
+            normalized_key = key.strip()
+            if normalized_key:
+                values[normalized_key] = value.strip()
+                current_key = normalized_key
                 continue
+            warnings.append(f"Ignored inputs_markdown line with empty key: {line.strip()}")
+            continue
+        if current_key is not None:
             values[current_key] = f"{values[current_key]}\n{stripped}" if values[current_key] else stripped
             continue
-        key, value = stripped.split(":", 1)
-        normalized_key = key.strip()
-        if not normalized_key:
-            raise LMStudioError(f"Inputs Markdown contained an empty key in line '{line}'.")
-        values[normalized_key] = value.strip()
-        current_key = normalized_key
+        if re.search(r"[\\/].+\.[a-z0-9]+$", stripped, re.IGNORECASE):
+            generated_key = f"source_{len(values) + 1}"
+            values[generated_key] = stripped
+            current_key = generated_key
+            continue
+        warnings.append(f"Ignored unparsed inputs_markdown line: {line.strip()}")
     if not values:
-        raise LMStudioError("Inputs Markdown did not contain any 'key: value' lines.")
-    return values
+        raise LMStudioError("Inputs Markdown did not contain any usable lines.")
+    return _ParsedInputsMarkdown(items=values, warnings=warnings)
 
 
 def _parse_markdown_list(markdown: str) -> list[str]:
