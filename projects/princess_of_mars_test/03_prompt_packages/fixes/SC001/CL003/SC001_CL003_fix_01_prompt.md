@@ -5,16 +5,16 @@ SC001 CL003 Fix 01 Prompt
 SC001_CL003_fix_01_prompt
 
 # Purpose
-Corrective still-generation preserving window view composition and emotional tone
+Corrective still-generation preserving window view composition and emotional tone for narrator observation beat, ensuring alignment with approved base image and secondary reference for fleet visibility.
 
 # Workflow Type
 still.scene_insert.two_ref.klein.distilled
 
 # Positive Prompt
-Close-up facial shot of human male figure standing at window glass, three-quarter profile view, interior room dimly lit with polished stone tiles visible, exterior valley and hills bathed in natural sunlight, upper floor window frame geometry intact, warm skin tones matching reference base, neutral expression with slight smile of interest visible on face, hound resting nearby on floor without obstructing focal point, cinematic depth of field, high contrast between interior shadow and exterior light
+Over-the-shoulder view of human male figure standing at window glass, three-quarter profile facing exterior valley and hills, interior room dimly lit with polished stone tiles visible, upper floor window frame geometry intact, warm skin tones matching reference base, neutral expression with slight smile of interest visible on face, cinematic depth of field, high contrast between interior shadow and exterior light, twenty gray air ships visible in distance over hill crests.
 
 # Negative Prompt
-blurry, low quality, distorted face, extra fingers, bad anatomy, text watermark, signature, noisy, overexposed, underexposed, wrong color palette, green tint on skin, floating objects, motion blur, dark vignette too heavy, window frame broken, interior too dark relative to exterior
+blurry, low quality, distorted face, extra fingers, bad anatomy, text watermark, signature, noisy, overexposed, underexposed, wrong color palette, green tint on skin, floating objects, motion blur, dark vignette too heavy, window frame broken, interior too dark relative to exterior.
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -24,9 +24,9 @@ blurry, low quality, distorted face, extra fingers, bad anatomy, text watermark,
 - required_refs: image_1
 - optional_refs: image_2
 - visible_character_assets: human male figure, hound
-- look_continuity_policy: 
-- intended_lighting_change: 
-- composition_type: close-up facial
+- look_continuity_policy: preserve geometry
+- intended_lighting_change: maintain balance
+- composition_type: over-the-shoulder observation
 - continuity_mode: insert
 - starting_keyframe_strategy: approach window position
 - dependency_policy: dependent on CL002
@@ -45,6 +45,7 @@ blurry, low quality, distorted face, extra fingers, bad anatomy, text watermark,
 - Maintain lighting consistency between interior shadow and exterior valley light.
 - Ensure human male figure expression matches neutral tone with slight smile.
 - Keep hound in vicinity but not obstructing primary focal point.
+- Verify ship positions relative to hill crests remain consistent with CL002.
 
 # Repair Notes
 - Fix any distortion on window glass or frame edges.
