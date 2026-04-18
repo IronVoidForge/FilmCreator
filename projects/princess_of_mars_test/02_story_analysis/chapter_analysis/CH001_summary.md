@@ -1,8 +1,19 @@
-**Story Summary:**
-John Carter observes from a window as a fleet of twenty gray airships approaches the deserted city. Green Martians fire a volley from buildings, initiating a battle where the airships return fire with ineffectual results due to suddenness and damage. The fleet retreats after sustaining heavy casualties; one ship drifts helplessly and is boarded by warriors who loot arms, jewels, and water. The crew empties carboys over dead sailors and burns the vessel before it drifts away. Carter feels a strange yearning for the "kindred people" defeated. He sees a human woman prisoner being dragged into a building; she looks at him with hope then dejection as he fails to signal help due to cultural ignorance.
+# Chapter Label
+Chapter VIII - A Fair Captive from the Sky
 
-**Visual Continuity:**
-- **Locations:** Window of upper floor (Carter's vantage point), Rooftops, Plaza/Street level, Building interiors.
-- **Characters Visible:** John Carter, Sola, Woola, Green Martian Warriors, Airship Crews (distant figures), Human Woman Prisoner.
-- **Props/Vehicles:** Gray airships (20+), Chariots, Mastodons, Grappling hooks, Carboys, Stone vessels, Banners/Devices on ships.
-- **Lighting/Atmosphere:** Daylight, sunlight reflecting off ship devices, smoke and flame from burning vessel.
+# Visual Continuity Facts
+- **Airships:** Long, low, gray-painted vessels with banners and glowing devices on prows.
+- **Warriors:** Green Martians (erect posture), wearing green attire, using spears and grappling hooks.
+- **Prisoner:** Slender, girlish figure; light reddish copper skin; coal black hair; naked except for ornaments.
+- **Environment:** Deserted city buildings with windows/roofs; valley floor; hills beyond.
+- **Fire Effects:** Spurts of flame on ship banners; roaring flames on vessel decks; drifting funeral pyre.
+
+# Broad Story Summary
+The narrator and procession return to the deserted city after an incubation ceremony but are ordered back immediately upon seeing a fleet of twenty gray airships approaching. The green Martians fire from buildings, engaging the ships in a deadly exchange where the Martians demonstrate high accuracy against the ships' crews and equipment. The fleet retreats with damage; one unmanned ship drifts helplessly toward the city. Warriors capture this vessel, loot it for arms, jewels, and water, then burn it before towing it away. As the narrator watches from a window, he sees a prisoner being dragged into a building by green Martian females. The prisoner turns to look at the narrator, signaling hope which fades into dejection as she is taken into the depths of the edifice.
+
+# Key Scene Decomposition Points
+- **Arrival:** Procession returns; order given for retreat upon sighting ships.
+- **Engagement:** Martians fire volley; ships return fire; specific targeting of crew/apparatus.
+- **Retreat:** Fleet limps away; one ship unmanned and drifting.
+- **Recovery:** Warriors swarm the drifting ship; loot operation (hours); burning of vessel.
+- **Discovery:** Narrator sees prisoner dragged in; visual contact between narrator and prisoner.

@@ -1,8 +1,23 @@
-# Clip Roster - Scene 001: Carter at Window Observing Fleet Approach
+# Clip Roster: SC001 Princess of Mars Test
 
-| Clip ID | Beat Index | Duration (s) | Composition Type | Continuity Mode | Opening Keyframe Intent | Cut Motion Intent | Interval Beats |
-|---------|------------|--------------|------------------|-----------------|------------------------|-------------------|----------------|
-| CL001 | BT001 | 5 | Medium Profile | Window Frame Consistent | Carter at window, hands on sill | Static hold → slight head tilt | Initial curiosity beat |
-| CL002 | BT002 | 5 | Wide Establishing | Fleet Formation Consistent | First airship visible in distance | Cut to full fleet formation | Scale establishment beat |
-| CL003 | BT003 | 5 | Close-up Facial | Window Frame Shadows Deepening | Neutral expression → slight smile | Reframe same moment on facial shift | Emotional response beat |
-| CL004 | BT004 | 5 | Medium Two-shot | Midday Light Established | Fleet at mid-distance, Carter neutral | Cutaway to approaching fleet | Rising tension beat |
+## Primary Clips (3)
+
+| Clip ID | Beat | Duration | Composition | Motion Intent |
+|---------|------|----------|-------------|---------------|
+| CLIP_001 | BT001 - Procession Return | 5s | Wide Establishing | Forward Movement |
+| CLIP_002 | BT002 - Fleet Approach | 5s | Medium Observation | Static Scan |
+| CLIP_003 | BT003 - Retreat Order | 5s | Close Command | Tactical Shift |
+
+## Test Clips (2)
+
+| Clip ID | Beat | Duration | Composition | Motion Intent |
+|---------|------|----------|-------------|---------------|
+| TEST_001 | BT001 - Procession Return | 3s | Medium Walking | Forward Movement |
+| TEST_002 | BT002 - Fleet Approach | 4s | Wide Valley Floor | Static Establishing |
+
+## Continuity Notes
+
+- Gray airship count: twenty (must be consistent across all clips)
+- Narrator window location: established in CLIP_001 for later scene reference
+- Procession formation: consistent spacing throughout CLIP_001 and CLIP_002
+- Ship positioning relative to city buildings: tracked for continuity

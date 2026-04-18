@@ -1,8 +1,10 @@
 # Environment Index - Princess of Mars Test
 
-| Asset ID | Environment Name | Role | Primary Features |
-|----------|------------------|------|------------------|
-| window_upper_floor | Carter's Vantage Window | Primary | Upper floor observation point, daylight view |
-| rooftops | City Rooftop Network | Secondary/Transit | Elevated positions, smoke and flame visible |
-| plaza_street_level | Plaza and Street Level | Primary/Transit | Ground level action zone, building facades |
-| building_interiors | Building Interior Spaces | Secondary | Enclosed spaces, prisoner movement areas |
+## Extracted Environment Families
+
+| Asset ID | Role | Description |
+|----------|------|-------------|
+| city_buildings | primary | Deserted urban structures with windows and roofs where Martians fire from |
+| valley_floor | transit | Open ground between city buildings and distant hills |
+| hills_background | secondary | Elevated geography beyond the valley floor |
+| airship_fleet | secondary | Gray vessels with banners approaching and retreating from city |
