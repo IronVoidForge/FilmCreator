@@ -1,30 +1,16 @@
-# Beat Index - Scene 001
+# Scene SC001 Beat Index
 
-## BT001 - Return Procession to City Plaza
-**Purpose:** Establish Carter and Sola's return from incubation ceremony, showing procession movement through city plaza.
+## BT001 - Opening Procession Return
+**Beat Purpose:** Establish the ceremonial procession returning through deserted city streets after incubator ceremony.
 
-**Start State:** Carter and Sola walking together in ceremonial attire, Green Martians visible in background.
+**Start State:** Narrator walking in procession, Martians visible in plaza distance, city appears empty.
 
-**End State:** Carter and Sola arrive at upper floor window of building, preparing to observe valley.
+**End State:** Narrator enters building interior, transition from exterior to interior space complete.
 
-**Character Placement & Movement Logic:**
-- Carter: Leading position, confident stride
-- Sola: Following closely, attentive posture
-- Woola: Mentioned as accompanying (not visually present in this beat)
-- Green Martians: Melting into buildings along procession route
+**Character Placement & Movement:** Narrator moves forward with procession, Woola follows close behind, Sola not yet present.
 
-**Geography, Axis, Eyeline Facts:**
-- Location: City plaza transitioning to upper floor window
-- Camera axis: Eye-level wide shot → Medium shot at window
-- Eyeline: Characters looking forward toward city entrance, then upward to window
+**Geography/Axis/Eyeline:** Wide axis showing deserted city streets, eyeline toward plaza in distance, vertical transition from street level to building entrance.
 
-**Prop, Vehicle, Crowd, Environmental State:**
-- Ceremonial robes visible on Carter and Sola
-- Stone buildings lining plaza
-- Valley visible in background through open architecture
-- No vehicles present (Martian technology)
+**Prop/Vehicle/Crowd/Environmental State:** Procession garments intact, no vehicles visible, Martians distant in plaza, ceremonial atmosphere fading.
 
-**Likely Coverage Families:**
-- Wide shot: Full procession entering city
-- Medium shot: Carter and Sola at window threshold
-- Establishing shot: City plaza with Green Martians melting into structures
+**Likely Coverage Families:** Wide establishing shots, medium tracking through streets, close-up on narrator's face.

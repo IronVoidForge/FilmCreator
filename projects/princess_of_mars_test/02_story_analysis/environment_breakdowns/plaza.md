@@ -1,38 +1,20 @@
-# City Plaza - Environment File
+# Martian Plaza
 
 ## Environment Role
-Primary setting - central gathering space where key character interactions occur
+Primary action arena for crowd gatherings and combat sequences.
 
 ## Architecture and Geography
-- Open urban gathering space
-- Central city location with building connections
-- Stone-paved or constructed surface
-- Connection points to surrounding city buildings
+Open paved public square surrounded by building facades. Crowded with green Martian figures. Central gathering space for procession activities.
 
 ## Lighting and Atmosphere Cues
-- Natural daylight illuminating open plaza space
-- Building shadows falling across plaza surface
-- Atmospheric haze from surrounding structures
-- Ambient light from valley surroundings visible in distance
+Ambient daylight illuminating open plaza space. Smoke and fire effects from naval engagement create dynamic lighting conditions. Dust clouds from combat activity.
 
 ## Scale Cues and Environmental Anchors
-- Plaza width relative to character group sizes
-- Surrounding building heights as vertical anchors
-- Ground texture consistency with city buildings
-- Distant valley/hill silhouettes for horizon reference
+Building perimeters define plaza boundaries. Crowd density provides human scale reference. Central plaza area serves as focal point for action sequences.
 
 ## Descriptive Noun Phrases
-- "open plaza gathering space"
-- "central city location"
-- "plaza stone surfaces"
-- "urban plaza grounds"
-- "plaza connection points"
-- "city plaza exteriors"
-- "Martian plaza spaces"
-- "plaza horizon views"
-
-## Render-Facing Notes
-- Emphasize open space with building connections
-- Include surrounding building heights for scale
-- Maintain stone texture consistency with city buildings
-- Focus on atmospheric depth from valley perspective
+- "open paved square"
+- "surrounding building facades"
+- "green Martian crowd"
+- "combat smoke effects"
+- "central gathering space"

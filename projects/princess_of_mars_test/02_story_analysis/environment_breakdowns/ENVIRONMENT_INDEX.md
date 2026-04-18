@@ -2,13 +2,16 @@
 
 ## Extracted Environments
 
-| Asset ID | Environment Name | Role | Architecture/Geography |
-|----------|------------------|------|------------------------|
-| city_buildings | City Buildings | Primary Setting | Upper floors, windows, stone structures |
-| valley | The Valley | Transit Setting | Open terrain, natural landscape |
-| hills | Hills | Secondary Setting | Elevated terrain, distant views |
-| plaza | City Plaza | Primary Setting | Open gathering space, central location |
+| Asset ID | Environment Name | Role |
+|----------|------------------|------|
+| upper_floor_window | Upper Floor Window View | Primary Observation Point |
+| building_roofs | Building Roofs | Secondary Transit Setting |
+| plaza | Martian Plaza | Primary Action Arena |
+| building_interior | Building Interior Depths | Secondary Portal Setting |
+| disabled_airship | Disabled Airship Hull | Recovery Operation Zone |
 
-## Environment Descriptions
+## Environment Categories
 
-Each environment file contains detailed render-facing information including role, architecture, lighting cues, scale anchors, and descriptive noun phrases for prompt writing.
+- **Observation Points:** upper_floor_window, building_roofs
+- **Action Arenas:** plaza, disabled_airship
+- **Portal Settings:** building_interior
