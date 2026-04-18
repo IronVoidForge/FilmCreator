@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+import time
 import unicodedata
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -221,6 +222,8 @@ class _TaskFailure:
 
 
 def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAnalysisSummary:
+    started = time.perf_counter()
+    print(f"[authoring] Starting chapter analysis for {project_slug}...")
     client, resolved_model = _client_and_model()
     project_dir = create_project(project_slug)
     chapter_source = _resolve_chapter_source(project_slug, chapter)
@@ -286,7 +289,6 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
     canonical_lookup = _existing_character_lookup(project_dir=project_dir)
     active_manual_description_requests: dict[str, str] = {}
     active_clarification_requests: dict[str, tuple[str, str]] = {}
-    resolved_records: set[str] = set()
 
     for raw_character in _require_packet_records(character_packet, record_type="character"):
         asset_id = _normalize_asset_id(
@@ -326,13 +328,13 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
             markdown=markdown,
             canonical_lookup=canonical_lookup,
         )
-        resolved_records.add(resolved_asset_id)
         filename = f"{resolved_asset_id}.md"
 
         if inferred_clarification is not None and not clarification_required:
             clarification_required = True
             clarification_reason = inferred_clarification[0]
             clarification_question = inferred_clarification[1]
+            warnings.append(f"Auto-generated clarification request for character '{resolved_asset_id}'.")
 
         if clarification_required:
             manual_description_required = False
@@ -452,6 +454,8 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
         written_files.append(repo_relative(scene_path))
         scene_ids.append(scene_id)
 
+    elapsed = time.perf_counter() - started
+    print(f"[authoring] Finished chapter analysis in {elapsed:.1f}s")
     return StoryAnalysisSummary(
         project_slug=project_slug,
         chapter_path=repo_relative(chapter_source.path),
@@ -466,6 +470,8 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
 
 
 def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
+    started = time.perf_counter()
+    print(f"[authoring] Starting scene planning for {project_slug}/{scene_id}...")
     scene_id = validate_scene_id(scene_id)
     client, resolved_model = _client_and_model()
     project_dir = create_project(project_slug)
@@ -545,7 +551,10 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
 
     clip_ids: list[str] = []
     for raw_clip in _require_packet_records(clip_packet, record_type="clip"):
-        clip_id = _normalize_clip_id(_require_record_field(raw_clip, "clip_id"))
+        raw_clip_id = _require_record_field(raw_clip, "clip_id")
+        clip_id, clip_warning = _normalize_clip_id(raw_clip_id)
+        if clip_warning:
+            warnings.append(clip_warning)
         filename = f"{clip_id}.md"
         markdown = _require_record_section(raw_clip, "markdown")
         create_clip(project_slug, scene_id, clip_id)
@@ -554,6 +563,8 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
         written_files.append(repo_relative(clip_path))
         clip_ids.append(clip_id)
 
+    elapsed = time.perf_counter() - started
+    print(f"[authoring] Finished scene planning for {scene_id} in {elapsed:.1f}s")
     return ScenePlanningSummary(
         project_slug=project_slug,
         scene_id=scene_id,
@@ -566,6 +577,8 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
 
 
 def write_shared_prompts(*, project_slug: str) -> SharedPromptSummary:
+    started = time.perf_counter()
+    print(f"[authoring] Starting shared prompt writing for {project_slug}...")
     client, resolved_model = _client_and_model()
     project_dir = create_project(project_slug)
     character_index_path = project_dir / "02_story_analysis" / "character_breakdowns" / "CHARACTER_INDEX.md"
@@ -716,6 +729,8 @@ def write_shared_prompts(*, project_slug: str) -> SharedPromptSummary:
                 )
             )
 
+    elapsed = time.perf_counter() - started
+    print(f"[authoring] Finished shared prompt writing in {elapsed:.1f}s")
     return SharedPromptSummary(
         project_slug=project_slug,
         model=resolved_model,
@@ -731,11 +746,15 @@ def authoring_checkpoint(
     chapter: str | None = None,
     scene_id: str | None = None,
 ) -> AuthoringCheckpointSummary:
+    started = time.perf_counter()
+    print(f"[authoring] Starting authoring checkpoint for {project_slug}...")
     analysis = analyze_chapter(project_slug=project_slug, chapter=chapter)
     target_scene_id = scene_id or (analysis.scene_ids[0] if analysis.scene_ids else "SC001")
     planning = plan_scene(project_slug=project_slug, scene_id=target_scene_id)
     shared_prompts = write_shared_prompts(project_slug=project_slug)
     clip_prompts = write_prompts(project_slug=project_slug, scene_id=target_scene_id)
+    elapsed = time.perf_counter() - started
+    print(f"[authoring] Finished authoring checkpoint in {elapsed:.1f}s")
     return AuthoringCheckpointSummary(
         analysis=analysis,
         planning=planning,
@@ -1170,6 +1189,7 @@ def _clip_planning_user_prompt(
     )
     clip_rules = [
         "- clip = cut",
+        "- use clip ids in canonical CL001 format if possible",
         "- most clips should target around 5 seconds",
         "- treat continuous_follow as rare",
         "- prefer reframe_same_moment, reblock_same_scene, insert, and cutaway when appropriate",
@@ -1180,6 +1200,7 @@ def _clip_planning_user_prompt(
         clip_rules = [
             "- keep the first clip roster small and testable",
             "- prefer independent clips",
+            "- use simple numeric ordering if needed but prefer CL001 format",
             "- keep metadata concise but complete",
         ]
     return "\n\n".join(
@@ -1348,12 +1369,16 @@ def _call_packet_task(
     user_prompt: str,
     degraded_user_prompt: str,
 ) -> _PacketDocument:
+    task_started = time.perf_counter()
+    print(f"[authoring] Task {task_name} started...")
     attempts: list[_TaskAttempt] = []
     for kind, active_user_prompt in [
         ("normal", user_prompt),
         ("same_prompt_retry", user_prompt),
         ("degraded_retry", degraded_user_prompt),
     ]:
+        if kind != "normal":
+            print(f"[authoring] Task {task_name} retrying with {kind}...")
         result = client.chat_completion_result(
             system_prompt=system_prompt,
             user_prompt=active_user_prompt,
@@ -1368,7 +1393,10 @@ def _call_packet_task(
         )
         if result.is_success:
             try:
-                return _parse_packet_document(result.text, expected_task=task_name)
+                packet = _parse_packet_document(result.text, expected_task=task_name)
+                elapsed = time.perf_counter() - task_started
+                print(f"[authoring] Task {task_name} finished in {elapsed:.1f}s")
+                return packet
             except LMStudioError as exc:
                 attempts.append(
                     _TaskAttempt(
@@ -1979,15 +2007,22 @@ def _normalize_beat_id(value: str) -> str:
     return normalized
 
 
-def _normalize_clip_id(value: str) -> str:
-    normalized = value.strip().upper()
+def _normalize_clip_id(value: str) -> tuple[str, str | None]:
+    original = value.strip()
+    normalized = original.upper()
+    normalized = normalized.replace("-", "_").replace(" ", "")
     if re.fullmatch(r"\d{1,3}", normalized):
-        normalized = f"CL{int(normalized):03d}"
-    elif re.fullmatch(r"CL\d{1,3}", normalized):
-        normalized = f"CL{int(normalized[2:]):03d}"
-    if not CLIP_ID_PATTERN.fullmatch(normalized):
-        raise LMStudioError(f"Invalid clip id returned by LM Studio: {value}")
-    return validate_clip_id(normalized)
+        coerced = f"CL{int(normalized):03d}"
+    else:
+        match = re.fullmatch(r"CL(?:IP)?_?(\d{1,3})", normalized)
+        if match:
+            coerced = f"CL{int(match.group(1)):03d}"
+        else:
+            raise LMStudioError(f"Invalid clip id returned by LM Studio: {value}")
+    warning = None
+    if coerced != original.upper():
+        warning = f"Normalized non-canonical clip id '{value}' to '{coerced}'."
+    return validate_clip_id(coerced), warning
 
 
 def _normalize_asset_id(value: str, *, fallback_prefix: str) -> str:
