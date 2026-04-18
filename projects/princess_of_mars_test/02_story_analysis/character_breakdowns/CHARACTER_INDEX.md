@@ -1,10 +1,14 @@
-# Character Index - Chapter VIII - A Fair Captive from the Sky
+# Character Index - CH001
 
-| Display Name | Asset ID | Chapter Role | Presence Status | Description Sufficiency |
-| :--- | :--- | :--- | :--- | :--- |
-| John Carter | john_carter | Narrator / Observer | Physically Present | Insufficient |
-| Sola | sola | Companion | Physically Present | Insufficient |
-| Woola | woola | Hound / Companion | Physically Present | Insufficient |
-| Lorquas Ptomel | lorquas_ptomel | Warrior Leader | Referenced | Insufficient |
-| The Captive | the_captive | Prisoner / Subject | Physically Present | Sufficient |
-| Green Martians | green_martians | Antagonists / Warriors | Physically Present (Group) | Insufficient |
+| Asset ID | Display Name | Chapter Role | Physical Presence | Description Status |
+|----------|---------------|---------------|-------------------|-------------------|
+| john_carter | John Carter | Human protagonist, witness to prisoner capture | Physically present | Insufficient physical description for image generation |
+| sola | Sola | Martian companion | Physically present | Insufficient physical description for image generation |
+| woola | Woola | Hound companion | Physically present | Insufficient physical description for image generation |
+| prisoner_figure | Slender Girlish Figure | Captured humanoid female, signaling for help | Referenced (captured) | Sufficient physical description for image generation |
+
+## Notes
+
+- John Carter, Sola, and Woola lack specific physical/visual details in source material to support dependable later image generation
+- The prisoner figure has detailed visual continuity facts supporting reliable image generation
+- All characters are from Chapter 001 of princess_of_mars_test project

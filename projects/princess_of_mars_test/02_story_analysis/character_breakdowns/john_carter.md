@@ -1,27 +1,43 @@
 # John Carter
 
-**Display Name:** John Carter  
-**Chapter Role:** Narrator / Observer  
-**Presence Status:** Physically Present (Observer)  
+## Display Name
+John Carter
 
-**Physical Description:** None supported by source text. Character is identified only as "I" and "Carter". No height, build, hair color, or skin tone details are provided in this chapter.  
+## Chapter Role
+Human protagonist, witness to prisoner capture in CH001
 
-**Costume & Silhouette:** None described. Attire is not mentioned in the source material for this specific scene.  
+## Physical Presence
+Physically present - returns to city plaza after incubator ceremony, witnesses captured female being dragged into building
 
-**Continuity-Critical Traits:**  
-- Observer of the Martian fleet engagement.  
-- Witness to the capture of the captive.  
-- Companion to Sola and Woola.  
+## Physical Description (Source-Supported)
+- Human species
+- No specific physical features documented in source material
 
-**Descriptive Noun Phrases:**  
-- Human male observer  
-- Narrator protagonist  
-- Warrior companion (implied by context)  
+## Costume & Silhouette
+- No costume details available in source material
+- Silhouette not described
 
-**Uncertainty Notes:**  
-- Physical appearance is entirely unknown based on this source text.  
-- Attire details are missing.  
-- Facial features and body type cannot be determined from the provided material.
+## Continuity-Critical Traits
+- Witness to prisoner capture event
+- Returns to city plaza location
+- Shows ignorance of local customs regarding captured female
+
+## Render-Facing Prompt Noun Phrases
+- human protagonist
+- witness character
+- city plaza observer
+- ignorant of local customs
+
+## Uncertainty Notes
+**CRITICAL:** No physical description available in source material. Cannot generate reliable images without manual description of:
+- Facial features and structure
+- Height and body build
+- Hair color and style
+- Eye color
+- Distinguishing marks or scars
+- Clothing details (if any)
+
+This character requires manual description before dependable image generation can proceed.
 
 # Manual Description Input Required
 
@@ -31,4 +47,4 @@ Yes
 
 # Manual Description Reason
 
-First-person narrator; no physical description provided in source text.
+Source material only identifies John Carter as "human" with no specific physical features, facial structure, height, build, or distinguishing marks. Cannot support dependable later image generation without manual description of these fundamental visual elements.

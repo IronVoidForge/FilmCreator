@@ -1,50 +1,38 @@
-# City Buildings Environment
+# City Buildings - Environment File
 
-## Overview
-Multi-story urban structures serving as primary defensive positions and observation points during Martian fleet engagement.
+## Environment Role
+Primary setting - main urban location where characters interact with the city infrastructure
 
-## Architecture & Geography
-- Spacious doorways with mist-like entry/exit patterns
-- Upper floors accessible for valley observation
-- Windows facing the little valley across which ships advance
-- Building fronts positioned on city perimeter
-- Interior depths accessible through building portals
+## Architecture and Geography
+- Multi-story stone structures with upper floors
+- Windowed facades facing outward
+- Dense urban clustering
+- Vertical building arrangements typical of Martian city design
 
-## Lighting & Atmosphere
-- Sunlight visible on exterior surfaces
-- Interior shadows from window openings
-- Daylight conditions throughout engagement
-- Atmospheric visibility allowing distant fleet observation
+## Lighting and Atmosphere Cues
+- Natural daylight filtering through windows
+- Interior shadows on upper levels
+- Exterior ambient light from valley surroundings
+- Atmospheric haze between buildings
 
-## Scale Cues
-- Large enough for warriors to swarm from multiple levels
-- Upper floors provide elevated observation vantage points
-- Windows serve as firing positions for volley engagements
-- Building fronts positioned for maximum defensive coverage
-
-## Environmental Anchors
-- Building front locations on city perimeter
-- Upper floor observation decks
-- Window firing positions facing valley
-- Interior depths accessible through portals
-- Doorways with spacious entry patterns
+## Scale Cues and Environmental Anchors
+- Building height relative to human/Martian figures
+- Window size indicating interior spaces
+- Street level perspective for plaza connection
+- Stone material texture as recurring anchor
 
 ## Descriptive Noun Phrases
-- Spacious doorways of nearby buildings
-- Upper floors for valley observation
-- Windows facing the little valley
-- Building fronts on city perimeter
-- Interior depths of deserted edifice
-- Portal entrances to building interiors
-- Elevated observation vantage points
-- Window firing positions
+- "stone upper floors"
+- "windowed facades"
+- "urban stone structures"
+- "city building exteriors"
+- "upper level windows"
+- "stone architectural elements"
+- "Martian city buildings"
+- "building window frames"
 
-## Render-Facing Prompt Elements
-- Multi-story defensive structures
-- Urban buildings with upper levels
-- Window openings for engagement
-- Spacious entry doorways
-- Building front positioning
-- Interior depth accessibility
-- Elevated observation platforms
-- Defensive urban architecture
+## Render-Facing Notes
+- Focus on verticality and density
+- Emphasize stone texture consistency
+- Include atmospheric haze between structures
+- Maintain scale relative to character figures

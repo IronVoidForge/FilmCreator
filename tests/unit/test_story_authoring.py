@@ -212,49 +212,47 @@ class _FakeAuthoringLMStudioClient:
             )
 
         if "task: character_shared_prompts" in user_prompt:
+            asset_id = "character_asset"
+            for marker in ("Asset id: ", "asset_id: "):
+                if marker in user_prompt:
+                    asset_id = user_prompt.split(marker, 1)[1].splitlines()[0].strip()
+                    break
             return _packet(
                 task="character_shared_prompts",
                 records=[
                     _record(
                         record_type="character_prompt",
-                        fields={"asset_id": "john_carter"},
+                        fields={"asset_id": asset_id},
                         sections={
-                            "purpose": "Stable heroic reference still.",
-                            "positive_prompt": "athletic human man, weathered traveler, upright posture, practical adventurer styling",
+                            "purpose": f"Stable reference still for {asset_id}.",
+                            "positive_prompt": f"descriptive visible traits for {asset_id}, grounded local reference, stable silhouette",
                             "negative_prompt": "extra limbs, duplicate face, blurred features",
-                            "inputs_markdown": "- project_id: demo\n- asset_id: john_carter",
-                            "continuity_notes_markdown": "- Preserve the stable protagonist look for later scene coverage.",
-                            "repair_notes_markdown": "- If later scenes drift, use this as the identity reference baseline.",
-                        },
-                    ),
-                    _record(
-                        record_type="character_prompt",
-                        fields={"asset_id": "dejah_thoris"},
-                        sections={
-                            "purpose": "Initial captive reference still with caution around missing details.",
-                            "positive_prompt": "slender regal young woman, dark flowing hair, luminous large eyes, poised captive bearing",
-                            "negative_prompt": "extra limbs, distorted anatomy, blurred face",
-                            "inputs_markdown": "- project_id: demo\n- asset_id: dejah_thoris\n- manual_description_required: true",
-                            "continuity_notes_markdown": "- Manual description may be needed before finalizing the long-term shared reference.",
-                            "repair_notes_markdown": "- Refresh after a manual character description is pasted.",
+                            "inputs_markdown": f"- project_id: demo\n- asset_id: {asset_id}",
+                            "continuity_notes_markdown": f"- Preserve the stable look for {asset_id} across later coverage.",
+                            "repair_notes_markdown": "- Refresh if later scenes drift.",
                         },
                     ),
                 ],
             )
 
         if "task: environment_shared_prompts" in user_prompt:
+            asset_id = "environment_asset"
+            for marker in ("Asset id: ", "asset_id: "):
+                if marker in user_prompt:
+                    asset_id = user_prompt.split(marker, 1)[1].splitlines()[0].strip()
+                    break
             return _packet(
                 task="environment_shared_prompts",
                 records=[
                     _record(
                         record_type="environment_prompt",
-                        fields={"asset_id": "abandoned_martian_city"},
+                        fields={"asset_id": asset_id},
                         sections={
-                            "purpose": "Stable city reference still.",
-                            "positive_prompt": "ancient empty martian city, broad stone plaza, weathered building fronts, dry red-world atmosphere",
+                            "purpose": f"Stable environment reference still for {asset_id}.",
+                            "positive_prompt": f"descriptive visible features for {asset_id}, grounded environment reference, stable architecture and atmosphere",
                             "negative_prompt": "modern signage, crowding, contemporary vehicles",
-                            "inputs_markdown": "- project_id: demo\n- asset_id: abandoned_martian_city",
-                            "continuity_notes_markdown": "- Keep the broad plaza and abandoned monumental architecture stable.",
+                            "inputs_markdown": f"- project_id: demo\n- asset_id: {asset_id}",
+                            "continuity_notes_markdown": f"- Keep the stable environment identity for {asset_id}.",
                             "repair_notes_markdown": "- Use as the base environmental reference for scene planning.",
                         },
                     )
@@ -398,7 +396,8 @@ def test_authoring_checkpoint_writes_analysis_planning_and_manual_character_plac
         projects_root / "demo" / "03_prompt_packages" / "characters" / "john_carter" / "john_carter_ref_prompt.md"
     )
     assert shared_character_prompt.workflow_type == "still.t2i.klein.distilled"
-    assert shared_character_prompt.purpose == "Stable heroic reference still."
+    assert shared_character_prompt.purpose.startswith("Stable reference still")
+    assert "john_carter" in shared_character_prompt.positive_prompt
     assert "projects/demo/02_story_analysis/character_breakdowns/CHARACTER_INDEX.md" in shared_character_prompt.sources
     assert "projects/demo/02_story_analysis/character_breakdowns/john_carter.md" in shared_character_prompt.sources
 
@@ -417,3 +416,47 @@ def test_authoring_checkpoint_writes_analysis_planning_and_manual_character_plac
 
     log_files = sorted((projects_root / "demo" / "02_story_analysis" / "logs").glob("*.md"))
     assert len(log_files) >= 8
+
+
+def test_packet_parser_accepts_missing_record_closers() -> None:
+    response = "\n".join(
+        [
+            "[[FILMCREATOR_PACKET]]",
+            "task: scene_decomposition",
+            "version: 1",
+            "",
+            "[[SECTION scene_index_markdown]]",
+            "# Scene Index",
+            "- SC001: Example scene",
+            "[[/SECTION]]",
+            "",
+            "[[FILMCREATOR_RECORD]]",
+            "type: scene",
+            "scene_id: SC001",
+            "",
+            "[[SECTION markdown]]",
+            "# SC001",
+            "Scene body one.",
+            "[[/SECTION]]",
+            "",
+            "[[FILMCREATOR_RECORD]]",
+            "type: scene",
+            "scene_id: SC002",
+            "",
+            "[[SECTION markdown]]",
+            "# SC002",
+            "Scene body two.",
+            "[[/SECTION]]",
+            "",
+            "[[/FILMCREATOR_PACKET]]",
+        ]
+    )
+
+    packet = story_authoring_module._parse_packet_document(response, expected_task="scene_decomposition")
+
+    assert packet.metadata["task"] == "scene_decomposition"
+    assert packet.sections["scene_index_markdown"].startswith("# Scene Index")
+    assert len(packet.records) == 2
+    assert packet.records[0].fields["scene_id"] == "SC001"
+    assert packet.records[0].sections["markdown"].startswith("# SC001")
+    assert packet.records[1].fields["scene_id"] == "SC002"

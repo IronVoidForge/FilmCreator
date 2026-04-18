@@ -1,27 +1,43 @@
 # Woola
 
-**Display Name:** Woola  
-**Chapter Role:** Hound / Companion  
-**Presence Status:** Physically Present (Follows)  
+## Display Name
+Woola
 
-**Physical Description:** Identified as a "hound". No specific breed, size, coat color, or markings are described in the source text.  
+## Chapter Role
+Hound companion in CH001
 
-**Costume & Silhouette:** None described. Animal nature is implied by species designation.  
+## Physical Presence
+Physically present - accompanies John Carter and Sola from incubator ceremony, retreats with them upon fleet arrival
 
-**Continuity-Critical Traits:**  
-- Follows John Carter at heel.  
-- Present during street scenes and plaza return.  
-- Accompanies the cavalcade.  
+## Physical Description (Source-Supported)
+- Hound species
+- No specific physical features documented in source material
 
-**Descriptive Noun Phrases:**  
-- Hound companion  
-- Loyal animal follower  
-- Martian hound (implied by setting)  
+## Costume & Silhouette
+- No costume details available in source material
+- Silhouette not described
 
-**Uncertainty Notes:**  
-- Specific breed is unknown.  
-- Coat color and markings are not described.  
-- Size relative to humans is not specified beyond "hound".
+## Continuity-Critical Traits
+- Companion to John Carter and Sola
+- Present during airship fleet arrival event
+- Retreats immediately upon spotting enemy ships
+
+## Render-Facing Prompt Noun Phrases
+- hound companion
+- animal ally character
+- incubator ceremony participant
+- retreat witness
+
+## Uncertainty Notes
+**CRITICAL:** No physical description available in source material. Cannot generate reliable images without manual description of:
+- Breed or type
+- Size and build
+- Fur color and texture
+- Facial features
+- Ear shape and position
+- Any distinguishing marks or scars
+
+This character requires manual description before dependable image generation can proceed.
 
 # Manual Description Input Required
 
@@ -31,4 +47,4 @@ Yes
 
 # Manual Description Reason
 
-Generic hound designation; specific breed or markings not described in source text.
+Source material only identifies Woola as "hound" with no specific breed, physical features, or visual details. Cannot support dependable later image generation without manual description of these fundamental visual elements.
