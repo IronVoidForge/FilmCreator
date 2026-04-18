@@ -1,9 +1,25 @@
-# Chapter VIII Scene Decomposition Index
+# Scene Index for Chapter CH001: A Fair Captive from the Sky
 
-This chapter is decomposed into five coherent scenes based on dramatic and staging boundaries, focusing on visual continuity and emotional shifts.
+## SC001: The Fleet Arrives
+*   **Purpose:** Establish the transition from Martian retreat to Fleet arrival.
+*   **Summary:** Following the incubation ceremony, orders are given for an immediate return. The green Martians melt into buildings within three minutes. From a window, the protagonist observes twenty gray air vessels swinging low above the ground toward the valley.
+*   **Characters:** Protagonist, Green Martians (melting), Fleet (observed).
+*   **Environments:** Upper window/balcony, Valley ground.
 
-1.  **SC001 - The Arrival:** Establishes the threat with the appearance of twenty gray airships over the hills.
-2.  **SC002 - The Battle:** Depicts the exchange of fire between Martian and Carter's warriors, highlighting specific targeting and ship maneuvers.
-3.  **SC003 - The Crash & Recovery:** Covers the disabled ship drifting to the city, the swarm of warriors, and the looting process.
-4.  **SC004 - The Burning:** Shows the final destruction sequence where the ship is set ablaze and soars into the air.
-5.  **SC005 - The Prisoner:** Focuses on the emotional interaction between Carter and the captured Martian figure, resolving the chapter's tension.
+## SC002: The Fire Exchange and Drifting Vessel
+*   **Purpose:** Depict the conflict, casualties, and focus on the damaged vessel.
+*   **Summary:** Green Martians fire a volley from building windows first. The fleet returns fire with high accuracy; figures drop at bullet explosions, banners dissolve in flames. Fleet damage is evident (limping vessels) after twenty minutes. One vessel drifts helpless, unmanned, and damaged. Warriors rush to capture it before it hits the ground.
+*   **Characters:** Green Martians, Fleet Warriors, Figures dropping.
+*   **Environments:** Building windows, Air vessels, Ground impact zone.
+
+## SC003: The Funeral Pyre
+*   **Purpose:** Show the disposal of the vessel and the funeral aspect.
+*   **Summary:** Warriors search the vessel for loot (arms, jewels, water). After removal, they tow it away, then empty carboys over the dead sailors and burn the vessel. The ship drifts southeast as a funeral pyre.
+*   **Characters:** Warriors, Dead Sailors.
+*   **Environments:** Vessel interior/exterior, Ground.
+
+## SC004: The Captive Girl
+*   **Purpose:** Introduce the prisoner and her emotional state.
+*   **Summary:** As the protagonist descends to the street, Sola rushes up. A prisoner is being dragged into a building by green Martian females. The figure is slender and girlish, similar to earthly women. Features include an oval face, coal black waving hair, light reddish copper skin, and ruby lips. She is naked except for ornaments. The prisoner makes a sign of appeal (unanswered by the protagonist). Her expression shifts from hope to dejection and loathing as she is dragged away.
+*   **Characters:** Protagonist, Sola, Prisoner, Green Martian females.
+*   **Environments:** Street level, Building portal.

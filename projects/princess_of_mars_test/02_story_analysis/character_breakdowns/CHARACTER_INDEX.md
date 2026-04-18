@@ -1,6 +1,9 @@
-| Asset ID | Canonical Name | Role | Presence | Description Status |
-| :--- | :--- | :--- | :--- | :--- |
-| carter | Carter | Leader/Warrior | Referenced | Missing Physical Details |
-| sola | Sola | Companion/Leader | Referenced | Missing Physical Details |
-| lorquas_ptomel | Lorquas Ptomel | City Guardian | Referenced | Missing Physical Details |
-| martian_prisoner | The Prisoner | Captive | Referenced | Detailed Visual Description |
+# Character Index - CH001
+
+| Asset ID | Canonical ID | Name/Role | Physical Presence | Description Status |
+|----------|--------------|-----------|-------------------|--------------------|
+| protagonist | protagonist_ch001 | Unnamed Observer (Window Viewpoint) | Referenced | Missing physical description |
+| sola | sola_ch001 | Sola (Street Level Contact) | Present | Missing physical description |
+| prisoner | prisoner_ch001 | Captured Figure (Building Portal Entry) | Present | Fully described physically |
+| green_martian_female | green_martian_female_ch001 | Female Warriors (Prisoner Draggers) | Referenced | Minimal description (green, female) |
+| green_martian_warrior | green_martian_warrior_ch001 | Warrior Fleet (Vessel Capturers) | Referenced | Minimal description (warrior) |

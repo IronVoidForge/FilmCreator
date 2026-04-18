@@ -1,18 +1,9 @@
-# Environment Index - Princess of Mars Test (Chapter VIII)
+# Environment Index - Chapter CH001
 
-## Stable Environment Families
+## Primary Settings
+- **upper_window_balcony** - Protagonist observation point for fleet arrival and burning ship
+- **valley_ground** - Fleet arrival zone where air vessels swing low above ground
 
-| Asset ID | Role | Primary Anchor |
-|----------|------|----------------|
-| city | primary | urban windows, deserted streets |
-| hills | transit | hill crests, arrival/dip zones |
-| valley | secondary | open drift space, southeast direction |
-| buildings | secondary | window firing positions, urban structures |
-| airship | secondary | crashed vessel, wooden decks, upper works |
-
-## Notes
-
-- All environments stable across reruns
-- Focus on visible geography and atmosphere
-- Excludes literary abstractions
-- Includes recurring environmental anchors
+## Secondary Settings  
+- **building_interior_portal** - Where Martians retreat into buildings, prisoner dragged through building portal
+- **street_level** - Transit setting for protagonist descent, Sola's approach point
