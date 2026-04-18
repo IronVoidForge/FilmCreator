@@ -11,7 +11,7 @@ corrective still generation preserving composition and look while fixing local i
 still.scene_insert.two_ref.klein.distilled
 
 # Positive Prompt
-faithful reproduction of approved still base composition, human male observer standing at upper floor window frame, hands resting on stone sill, profile view facing outward, deserted city skyline background, painted gray vessels visible in daylight sky, distant indigenous warriors on lower balconies, polished stone floor tiles visible inside, soft morning sunlight filtering through glass, dark wood window frame with metal accents, medium profile shot composition, cinematic lighting consistency
+human male observer standing at upper floor window frame, hands resting on stone sill, profile view facing outward, deserted city skyline background, twenty painted gray vessels visible in daylight sky, distant indigenous warriors on lower balconies carrying strange banners and odd devices, polished stone floor tiles visible inside, soft morning sunlight filtering through glass, dark wood window frame with metal accents, medium profile shot composition, cinematic lighting consistency
 
 # Negative Prompt
 distorted anatomy, extra limbs, wrong skin tone, inconsistent lighting, blurry details, text, watermark, floating objects, mismatched colors, crowded foreground, sudden movement artifacts, new crowd elements, incorrect character positioning, wrong number of vessels, incorrect vessel color, distorted window frame, misplaced horizon line
@@ -23,7 +23,7 @@ distorted anatomy, extra limbs, wrong skin tone, inconsistent lighting, blurry d
 - duration_seconds: 5
 - required_refs: image_1
 - optional_refs: image_2
-- visible_character_assets: observer character, hound companion
+- visible_character_assets: observer character, green warriors fleet
 - look_continuity_policy: preserve window frame geometry and exterior lighting
 - intended_lighting_change: none - maintain soft morning daylight
 - composition_type: medium profile shot at window
@@ -45,10 +45,10 @@ distorted anatomy, extra limbs, wrong skin tone, inconsistent lighting, blurry d
 - maintain deserted city atmosphere
 - preserve lighting consistency with exterior view
 - keep observer position forward
-- ensure hound follows close
+- ensure indigenous warriors match balcony elevation
 - avoid introducing new crowd elements
 - match painted gray vessel color to background sky
-- ensure indigenous warriors match balcony elevation
+- ensure vessel count matches continuity requirements
 
 # Repair Notes
 - correct local artifacts on approved base

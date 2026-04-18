@@ -1,19 +1,21 @@
-# Clip Roster for SC001 - Princess of Mars Test
+# SC001 Clip Roster - Retreat & Investigation
 
 ## Overview
-This roster contains planned clips covering Beat BT001 (Protagonist observes fleet arrival from window). Each clip is designed to be approximately 5 seconds in duration and includes various shot types and continuity techniques.
+Six clips covering BT001-BT003 beats, establishing narrator observation and Martian fleet retreat from upper floor window perspective
 
-## Clips
+## Clip Sequence
 
-| Clip ID | Composition Type | Duration | Continuity Mode | Primary Intent |
-|---------|------------------|----------|-----------------|----------------|
-| CL001_01 | Over-the-shoulder interior | 5s | reframe_same_moment | Establishing observation beat |
-| CL001_02 | POV from window | 5s | reblock_same_scene | Visual connection to exterior |
-| CL001_03 | Wide establishing valley | 5s | insert | Fleet arrival context |
+| Clip ID | Beat | Duration | Composition | Primary Action |
+|---------|------|----------|-------------|----------------|
+| CL001 | BT001 | 5s | Medium Shot | Narrator at window, eyeline to horizon ships |
+| CL002 | BT001→BT002 | 5s | Wide Exterior | Twenty gray air ships over hill crests |
+| CL003 | BT002 | 5s | Over-the-Shoulder | Narrator observing fleet movement |
+| CL004 | BT003 | 5s | Close-Up | Banner designs on ship prows |
+| CL005 | BT003 | 5s | Detail Insert | Devices on individual vessels |
+| CL006 | BT003→End | 5s | Cutaway Detail | Continuity markers maintained |
 
-## Notes
+## Coverage Notes
 - All clips target ~5 seconds duration
-- Green Martians melting serves as continuity marker (3-minute window)
-- Window frame acts as framing device for exterior shots
-- Eyeline directed downward toward valley ground
-- Emotional shift from calm to alertness across sequence
+- Continuity elements: ship count (20), window framing, banner designs, device shapes
+- Emotional arc: Curiosity → Concern about sudden retreat
+- Primary character assets: Narrator (Earth human), Green Warriors (Martian fleet)

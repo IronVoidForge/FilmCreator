@@ -1,12 +1,22 @@
-# Project Summary: Barsoom Chronicles
+# Project Title
+A Princess of Mars
 
-## Setting & Context
-The narrative takes place on Mars (Barsoom), dominated by the Green Martian faction. The protagonist is an incubation survivor, likely human or hybrid, navigating a military environment alongside Woola (a hound) and Sola. The tone is observational and awe-inspiring, focusing on warfare, technology, and exploration of alien landscapes.
+# Author
+Edgar Rice Burroughs
 
-## Visual Continuity
-*   **Green Martians:** Wear green attire, utilize chariots, mastodons, and mounted warriors. They possess high marksmanship accuracy with firearms.
-*   **Air Fleet:** Gray-painted, long, low vessels that sail above the ground. Each carries a strange banner and odd devices on the prow.
-*   **Protagonist's Location:** Occupies buildings within a city/valley, often viewing events from upper floors or windows.
+# Setting
+Green Martian City, Valley, Plaza
 
-## Narrative Scope
-The story follows the protagonist's integration into Martian society while witnessing conflicts between Green Martians and external air fleets. Themes of accuracy in combat, destruction of technology, and the discovery of new life forms (including Earth humans) are central. The project summary remains applicable to subsequent chapters involving fleet movements, city defense, or prisoner interactions.
+# Key Characters
+Narrator (Green Warrior), Sola, Woola (hound)
+
+# Context
+The story follows a Green Warrior on Mars who has been captured by Martians. He lives among them and observes their society, warfare, and technology. The narrative involves conflict between the Green Warriors and an Air Fleet of unknown origin.
+
+# Visual Continuity
+- **Architecture:** Spacious doorways, upper floors with windows overlooking valley/hills.
+- **Technology:** Incubator ceremony, chariots, mastodons, mounted warriors, air craft (gray-painted, long/low).
+- **Warfare:** Green warriors fire from building windows; Air fleet uses guns and sighting apparatus.
+
+# Narrative Tone
+Sci-fi adventure with themes of war, observation, and the intersection of Martian and Earthly aesthetics.

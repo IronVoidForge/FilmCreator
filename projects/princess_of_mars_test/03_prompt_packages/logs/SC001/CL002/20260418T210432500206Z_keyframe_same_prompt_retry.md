@@ -1,0 +1,669 @@
+# FilmCreator Prompt Writing Exchange
+- timestamp_utc: 2026-04-18T21:04:32.500206+00:00
+- stage: keyframe
+- clip_id: CL002
+- retry_kind: same_prompt_retry
+
+## System Prompt
+````text
+You are writing one FilmCreator prompt package for a local generation pipeline.
+Return exactly one FILMCREATOR packet in Markdown.
+Do not return JSON.
+Do not use markdown fences.
+Do not add commentary before or after the packet.
+Target stage: keyframe
+Stage guidance: Write the exact visible state at cut start as a single frozen still. Avoid proper nouns. Use descriptive noun phrases only.
+Use descriptive noun phrases and avoid proper nouns in prompt text.
+Keep duration and workflow metadata in inputs_markdown, not in the prompt body.
+Follow the requested section names exactly.
+````
+
+## User Prompt
+````text
+Project: princess_of_mars_test
+
+Scene: SC001
+
+Clip: CL002
+
+Prompt title: SC001 CL002 Keyframe Prompt
+
+Prompt id: SC001_CL002_keyframe_prompt
+
+Workflow type: still.scene_build.four_ref.klein.distilled
+
+Write improved content for this canonical prompt package.
+
+Use this exact packet envelope and section names:
+
+[[FILMCREATOR_PACKET]]
+
+task: clip_prompt
+
+stage: keyframe
+
+version: 1
+
+
+
+[[SECTION purpose]]
+
+...purpose text...
+
+[[/SECTION]]
+
+
+
+[[SECTION positive_prompt]]
+
+...positive prompt text...
+
+[[/SECTION]]
+
+
+
+[[SECTION negative_prompt]]
+
+...negative prompt text...
+
+[[/SECTION]]
+
+
+
+[[SECTION inputs_markdown]]
+
+- key: value
+
+[[/SECTION]]
+
+
+
+[[SECTION continuity_notes_markdown]]
+
+- note
+
+[[/SECTION]]
+
+
+
+[[SECTION repair_notes_markdown]]
+
+- note
+
+[[/SECTION]]
+
+[[/FILMCREATOR_PACKET]]
+
+
+
+Clip context:
+
+## Project Summary
+
+# Project Title
+A Princess of Mars
+
+# Author
+Edgar Rice Burroughs
+
+# Setting
+Green Martian City, Valley, Plaza
+
+# Key Characters
+Narrator (Green Warrior), Sola, Woola (hound)
+
+# Context
+The story follows a Green Warrior on Mars who has been captured by Martians. He lives among them and observes their society, warfare, and technology. The narrative involves conflict between the Green Warriors and an Air Fleet of unknown origin.
+
+# Visual Continuity
+- **Architecture:** Spacious doorways, upper floors with windows overlooking valley/hills.
+- **Technology:** Incubator ceremony, chariots, mastodons, mounted warriors, air craft (gray-painted, long/low).
+- **Warfare:** Green warriors fire from building windows; Air fleet uses guns and sighting apparatus.
+
+# Narrative Tone
+Sci-fi adventure with themes of war, observation, and the intersection of Martian and Earthly aesthetics.
+
+## Chapter Summaries
+
+## CH001_summary.md
+# Chapter Title
+Chapter VIII - A Fair Captive from the Sky
+
+# Scene 1: Retreat & Investigation
+- **Event:** Martians retreat immediately after incubation ceremony procession debouches into open ground.
+- **Action:** Narrator investigates cause of sudden retreat from upper floor window.
+- **Visual:** Twenty gray air ships swing slowly over hill crests, each carrying strange banners and odd devices on prows.
+
+# Scene 2: Battle
+- **Event:** Green warriors fire a terrific volley from building windows facing the valley.
+- **Action:** Air fleet returns fire with guns; ships move parallel to firing line then turn back.
+- **Visual:** Banners dissolve in spurts of flame; green figures drop at bullet explosions; fire from vessels is ineffectual due to suddenness of first volley.
+- **Outcome:** Fleet limps away; one ship receives brunt of fire, appears unmanned and helpless.
+
+# Scene 3: Disabled Ship & Loot
+- **Event:** Warriors chase disabled ship; board with spears and grappling hooks.
+- **Action:** Ship hauled to ground; systematic rifling of vessel.
+- **Visual:** Loot includes arms, ammunition, silks, furs, jewels, stone vessels, food/water.
+- **Outcome:** Ship towed out, emptied, set on fire by missile from last warrior. Drifts away as floating funeral pyre.
+
+# Scene 4: Return & Prisoner
+- **Event:** Warriors return to plaza; danger of air craft passed for a week.
+- **Action:** Narrator sees prisoner dragged into building by green Martian females.
+- **Visual:** Slender girlish figure, Earthly woman appearance, oval face, coal black hair, light reddish copper skin, naked except ornaments.
+- **Interaction:** She looks at narrator, makes sign (appeal for help), then is dragged away. Narrator feels hope and dejection.
+
+# Emotional Beats
+- **Depression:** Narrator feels defeat of kindred people rather than routing of horde.
+- **Hope:** Mixed surge of hope, fear, exultation, and depression upon seeing prisoner.
+- **Regret:** Realizes he did not answer her signal for succor due to ignorance of Martian customs.
+
+## Character Index
+
+# Character Index - Chapter VIII - A Fair Captive from the Sky
+
+| Asset ID | Canonical Character ID | Display Name | Role | Physical Presence | Description Status |
+|----------|------------------------|--------------|------|-------------------|-------------------|
+| narrator | CH001_NARRATOR | The Narrator | Observer/Investigator | Referenced | Manual description required |
+| green_martian_females | CH001_GREEN_MARTIAN_FEMALES | Green Martian Females | Warriors/Captors | Referenced | Manual description required |
+| earthly_woman_prisoner | CH001_EARTHLY_WOMAN_PRISONER | Earthly Woman / Prisoner | Captive/Subject | Physically Present | Fully identified |
+| green_warriors | CH001_GREEN_WARRIORS | Green Warriors | Combatants | Referenced | Manual description required |
+
+**Notes:**
+- All characters except the prisoner lack sufficient physical description for dependable image generation
+- The narrator's identity is stable but physically undefined in source material
+- Martian warriors appear as a group without individual differentiation
+- Prisoner has detailed visual description but may require cultural clarification
+
+## Environment Index
+
+# Environment Index - Chapter VIII
+
+## Primary Environments
+- **open_ground_hill** - Main retreat location with air ships visible over hill crests
+- **valley_battlefield** - Central battle zone where green warriors fire from building windows
+
+## Secondary Environments  
+- **building_windows_upper_floor** - Narrator's observation point for investigation
+- **plaza_return** - Gathering space after danger passes, prisoner brought here
+- **disabled_martian_ship** - Looting target, towed to ground and set ablaze
+
+## Transit/Functional Environments
+- All environments serve as staging grounds for Martian fleet movements and warrior operations
+
+## Clip Plan
+
+# CL002 - Wide Exterior Fleet Establishing Shot
+
+## Continuity Mode
+reblock_same_scene
+
+## Composition Type
+Wide exterior establishing shot
+
+## Starting Keyframe Strategy
+insert_fleet_position_base
+
+## Dependency Policy
+dependent_on_window_frame_continuity
+
+## Fallback Strategy
+cutaway_to_individual_ship_detail
+
+## Visible Character Assets
+- Green Warriors fleet - twenty gray air ships in formation over hill crests
+- Narrator - implied observation point from upper floor
+
+## Required Refs
+- SC001 beat bundle BT001.md and BT002.md
+- Ship positions relative to hill crests continuity notes
+- Banner visibility markers across shots
+
+## Optional Refs
+- Hill crest depth axis reference points
+- Movement timing consistency notes
+- Interior lighting level contrast (warm vs cool)
+
+## Opening Keyframe Intent
+Show full scale of twenty ships positioned at base of first hill crest, establishing retreat formation
+
+## Cut Motion Intent
+Transition from window perspective to exterior wide shot maintaining ship count continuity
+
+## Interval Beats
+- 0s: Ships positioned at base of first hill crest visible
+- 2.5s: Fleet beginning coordinated movement pattern across terrain
+- 5s: Fleet distributed across multiple hill crests in formation established
+
+## Scene Breakdown
+
+# SC001: Retreat & Investigation
+
+## Scene Purpose
+Establish the sudden Martian retreat and narrator's investigation of cause from observation point
+
+## Scene Summary
+Martians withdraw immediately after incubation ceremony procession debouches into open ground. Narrator observes from upper floor window as twenty gray air ships swing slowly over hill crests, each carrying strange banners and odd devices on prows. The visual emphasizes the scale of retreat and narrator's curiosity about what triggered it.
+
+## Beat Breakdown
+- **BT001**: Window Observation - Establishing retreat from safe distance
+- **BT002**: Fleet Movement - Showing scale across hill crests
+- **BT003**: Detail Focus - Banners and devices on ship prows
+
+## Participating Characters
+- **Narrator** (Earth human) - Observer from upper floor
+- **Green Warriors** (Martian) - Retreatting fleet personnel
+
+## Participating Environments
+- Upper floor observation point
+- Hill crests
+- Open ground where procession ended
+
+## Dominant Emotional Shift
+Curiosity → Concern about sudden retreat of kindred people
+
+## Likely Visual Coverage Families
+- Wide establishing shots of air ships over hill crests
+- Medium shots from window perspective showing narrator observing
+- Close-ups on banners and devices on ship prows
+- Over-the-shoulder shots from narrator's viewpoint
+
+## Likely Continuity Sensitivities
+- Ship positions relative to hill crests must remain consistent
+- Banner designs must be identifiable across shots
+- Window framing and interior elements must stay consistent
+- Number of ships (twenty) must be maintained in wide shots
+
+## Beat Bundles
+
+## BT001.md
+# BT001 - Window Observation
+
+## Beat Purpose
+Establish narrator's position and initial observation of fleet retreat from safe distance
+
+## Start State
+- Narrator standing at upper floor window
+- Ships just visible on horizon line
+- Interior lighting warm, establishing safety contrast to exterior
+
+## End State
+- Full view of twenty ships over hill crests established
+- Narrator's curiosity visually confirmed through eyeline movement
+- Exterior scale now understood by audience
+
+## Character Placement and Movement Logic
+- **Narrator**: Static position at window frame, slight body turn toward observation point
+- **Green Warriors**: Distant fleet formation, minimal individual movement, collective retreat pattern
+- Movement follows ship trajectory across horizontal axis from left to right
+
+## Geography, Axis, or Eyeline Facts
+- Window frame establishes interior boundary and safe zone
+- Eyeline follows ship movement along horizontal plane
+- Hill crests create depth reference points for ship positioning
+- Vertical axis: interior (warm) vs exterior (cool) lighting contrast
+
+## Prop, Vehicle, Crowd, and Environmental State
+- **Vehicles**: Twenty gray air ships in formation
+- **Props**: Strange banners on prows, odd devices visible
+- **Environment**: Hill crests, open ground below, upper floor observation point
+- **Continuity**: Ship count (20), window framing elements, interior lighting level
+
+## Likely Coverage Families
+- Medium shot from window showing narrator's eyeline
+- Wide establishing exterior of ships over hill crests
+- Over-the-shoulder from narrator to fleet
+- Cutaway to ship details in distance
+
+## BT002.md
+# BT002 - Fleet Movement
+
+## Beat Purpose
+Show scale of retreat and synchronized fleet movement across terrain
+
+## Start State
+- Ships positioned at base of first hill crest
+- Fleet beginning coordinated movement pattern
+- Narrator observing from fixed position
+
+## End State
+- Fleet distributed across multiple hill crests in formation
+- Scale of retreat fully established through positioning
+- Movement timing consistent with retreat urgency
+
+## Character Placement and Movement Logic
+- **Narrator**: Static observation point, body remains at window
+- **Green Warriors**: Coordinated fleet movement, ships following established pattern
+- Movement follows terrain contours with elevation changes
+
+## Geography, Axis, or Eyeline Facts
+- Hill crests create depth axis for ship positioning
+- Ships move along horizontal plane with slight elevation variations
+- Eyeline tracks fleet distribution across multiple reference points
+- Vertical axis: hill base to crest creates scale reference
+
+## Prop, Vehicle, Crowd, and Environmental State
+- **Vehicles**: Twenty gray air ships maintaining formation
+- **Props**: Banners visible on ship prows, devices on individual vessels
+- **Environment**: Hill crests, open ground, upper floor observation point
+- **Continuity**: Ship positions relative to crests, banner visibility, movement timing
+
+## Likely Coverage Families
+- Wide exterior shots showing fleet across hill crests
+- Over-the-shoulder from narrator to fleet
+- Cutaway to individual ship positioning
+- Establishing shot of retreat scale
+
+## BT003.md
+# BT003 - Detail Focus
+
+## Beat Purpose
+Emphasize mysterious elements on ship prows and banner designs
+
+## Start State
+- Fleet in wide formation visible from observation point
+- Narrator's eyeline available for detail shifts
+- Banner designs partially visible in wide shots
+
+## End State
+- Close examination of banners and devices on individual ships
+- Specific design elements now identifiable
+- Narrator's curiosity focused on mysterious objects
+
+## Character Placement and Movement Logic
+- **Narrator**: Eyeline shifts to specific ships, minimal body movement
+- **Green Warriors**: Static or minimal movement on selected vessels
+- Focus axis moves from fleet-wide to individual ship prows
+
+## Geography, Axis, or Eyeline Facts
+- Eyeline zooms from wide formation to close detail
+- Focus axis moves from horizontal fleet distribution to vertical ship prow details
+- Banner designs create visual reference points across shots
+- Device shapes establish continuity markers
+
+## Prop, Vehicle, Crowd, and Environmental State
+- **Vehicles**: Individual ships with visible prows and devices
+- **Props**: Strange banners on prows, odd devices on vessels
+- **Environment**: Hill crests provide depth context for close-ups
+- **Continuity**: Banner designs, device shapes, ship prow details, lighting consistency
+
+## Likely Coverage Families
+- Close-up shots of banner designs
+- Detail inserts of devices on ship prows
+- Over-the-shoulder with focus pull to specific ships
+- Cutaway detail shots maintaining continuity markers
+
+## Clip Roster
+
+# SC001 Clip Roster - Retreat & Investigation
+
+## Overview
+Six clips covering BT001-BT003 beats, establishing narrator observation and Martian fleet retreat from upper floor window perspective
+
+## Clip Sequence
+
+| Clip ID | Beat | Duration | Composition | Primary Action |
+|---------|------|----------|-------------|----------------|
+| CL001 | BT001 | 5s | Medium Shot | Narrator at window, eyeline to horizon ships |
+| CL002 | BT001→BT002 | 5s | Wide Exterior | Twenty gray air ships over hill crests |
+| CL003 | BT002 | 5s | Over-the-Shoulder | Narrator observing fleet movement |
+| CL004 | BT003 | 5s | Close-Up | Banner designs on ship prows |
+| CL005 | BT003 | 5s | Detail Insert | Devices on individual vessels |
+| CL006 | BT003→End | 5s | Cutaway Detail | Continuity markers maintained |
+
+## Coverage Notes
+- All clips target ~5 seconds duration
+- Continuity elements: ship count (20), window framing, banner designs, device shapes
+- Emotional arc: Curiosity → Concern about sudden retreat
+- Primary character assets: Narrator (Earth human), Green Warriors (Martian fleet)
+
+## Clip State
+
+{
+  "project_id": "princess_of_mars_test",
+  "scene_id": "SC001",
+  "clip_id": "CL002",
+  "status": "planning",
+  "inputs": {
+    "shared_character_refs": [],
+    "shared_environment_refs": [],
+    "scene_prompt_package": "projects/princess_of_mars_test/03_prompt_packages/scenes/SC001/CL002/SC001_CL002_scene_stage_prompt.md",
+    "scene_stage_prompt_package": "projects/princess_of_mars_test/03_prompt_packages/scenes/SC001/CL002/SC001_CL002_scene_stage_prompt.md",
+    "keyframe_prompt_package": "projects/princess_of_mars_test/03_prompt_packages/keyframes/SC001/CL002/SC001_CL002_keyframe_prompt.md",
+    "fix_prompt_packages": [
+      "projects/princess_of_mars_test/03_prompt_packages/fixes/SC001/CL002/SC001_CL002_fix_01_prompt.md"
+    ],
+    "anchor_prompt_packages": [],
+    "video_prompt_package": "projects/princess_of_mars_test/03_prompt_packages/cut_motion/SC001/CL002/SC001_CL002_cut_motion_prompt.md",
+    "cut_motion_prompt_package": "projects/princess_of_mars_test/03_prompt_packages/cut_motion/SC001/CL002/SC001_CL002_cut_motion_prompt.md",
+    "legacy_anchor_prompt_packages": [],
+    "legacy_video_prompt_package": null
+  },
+  "approved_assets": {
+    "golden_frame": null,
+    "approved_keyframe": null,
+    "approved_video": null,
+    "still_fixes": [],
+    "anchor_frames": [],
+    "interval_frames": [],
+    "cut_motion_videos": []
+  },
+  "approved_video_last_frame": null,
+  "current_continuity_source": null,
+  "latest_runs": {},
+  "review_batches": [],
+  "latest_review_decision": null,
+  "notes": [],
+  "stage_style_preferences": {
+    "still_fix": {
+      "literal_descriptive": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "cinematic_compositional": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "performance_action_led": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "sparse_conservative": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      }
+    },
+    "cut_motion": {
+      "literal_descriptive": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "cinematic_compositional": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "performance_action_led": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "sparse_conservative": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      }
+    },
+    "keyframe": {
+      "literal_descriptive": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "cinematic_compositional": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "performance_action_led": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "sparse_conservative": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      }
+    }
+  }
+}
+
+
+
+Existing prompt draft:
+
+# Title
+SC001 CL002 Keyframe Prompt
+
+# ID
+SC001_CL002_keyframe_prompt
+
+# Purpose
+Establish fleet formation and scale relative to city landscape from elevated observation point
+
+# Workflow Type
+still.scene_build.four_ref.klein.distilled
+
+# Positive Prompt
+elevated stone observation platform, two human observers in profile view, distant gray-painted airships forming pattern across horizon, deserted urban rooftop network below, valley vista stretching southward, morning sunlight illuminating sky, fleet halfway over hill crest, mechanical devices gleaming on prows
+
+# Negative Prompt
+interior corridor, close-up facial features, crowd of civilians, fire, smoke, burning vessel, prisoner figure, distorted anatomy, blurry focus, text, watermark, low resolution, extra limbs, missing weapons, green Martian warriors, chariots
+
+# Inputs
+- project_id: princess_of_mars_test
+- scene_id: SC001
+- clip_id: CL002
+- duration_seconds: 5
+- required_refs: 
+- optional_refs: 
+- visible_character_assets: human male observer, female companion
+- look_continuity_policy: motion_opening
+- intended_lighting_change: golden hour sunlight
+- composition_type: medium tracking through corridors
+- continuity_mode: reblock_same_scene
+- starting_keyframe_strategy: fleet halfway over hill crest
+- dependency_policy: dependent_on_CL001
+- auto_advance_policy: 
+- fallback_strategy: reframe_same_moment
+- consistency_assist_policy: 
+- consistency_assist_method: 
+- anatomy_repair_policy: 
+- consistency_targets: 
+- style_profile: 
+- batch_role: 
+- fix_of: 
+- workflow_type: still.scene_build.four_ref.klein.distilled
+- video_prompt_package: 
+
+# Continuity Notes
+- Maintain vertical axis with elevated observation point
+- Ensure distant airships visible but not dominating frame
+- Match lighting conditions with previous exterior shots
+- Keep rooftop network consistent for scale reference
+
+# Repair Notes
+- Fix any anatomy distortions on observer figure
+- Correct lighting mismatch if balcony looks too dark
+- Ensure distant ships are clearly defined against horizon
+- Verify window frame details match continuity
+
+# Sources
+- projects/princess_of_mars_test/02_story_analysis/clip_plans/SC001/CL002.md
+- projects/princess_of_mars_test/02_story_analysis/scene_breakdowns/SC001.md
+- projects/princess_of_mars_test/02_story_analysis/clip_plans/SC001/SC001_clip_roster.md
+- projects/princess_of_mars_test/02_story_analysis/character_breakdowns/CHARACTER_INDEX.md
+- projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/ENVIRONMENT_INDEX.md
+- projects/princess_of_mars_test/02_story_analysis/story_summary/project_summary.md
+
+````
+
+## Raw Response
+````text
+
+
+[[FILMCREATOR_PACKET]]
+task: clip_prompt
+stage: keyframe
+version: 1
+
+[[SECTION purpose]]
+Establish full scale of twenty gray airships positioned at base of first hill crest, showing retreat formation from elevated observation point with warm interior lighting contrast to cool exterior sky
+
+[[/SECTION]]
+
+[[SECTION positive_prompt]]
+elevated stone window frame on upper floor, two human figures in profile view observing distant horizon, twenty gray-painted airships forming pattern across multiple hill crests, deserted urban rooftop network below, valley vista stretching southward, morning sunlight illuminating sky, mechanical devices gleaming on ship prows, strange banners visible on vessel fronts, open ground where procession ended
+
+[[/SECTION]]
+
+[[SECTION negative_prompt]]
+interior corridor, close-up facial features, crowd of civilians, fire, smoke, burning vessel, prisoner figure, distorted anatomy, blurry focus, text, watermark, low resolution, extra limbs, missing weapons, chariots, mounted warriors, stone vessels, food items, jewels, silks, furs, ammunition, arms
+
+[[/SECTION]]
+
+[[SECTION inputs_markdown]]
+- project_id: princess_of_mars_test
+- scene_id: SC001
+- clip_id: CL002
+- duration_seconds: 5
+- required_refs: SC001 beat bundle BT001.md and BT002.md, ship positions relative to hill crests continuity notes, banner visibility markers across shots
+- optional_refs: Hill crest depth axis reference points, movement timing consistency notes, interior lighting level contrast warm versus cool
+- visible_character_assets: human male observer, female companion
+- look_continuity_policy: motion_opening
+- intended_lighting_change: golden hour sunlight
+- composition_type: wide exterior establishing shot
+- continuity_mode: reblock_same_scene
+- starting_keyframe_strategy: fleet positioned at base of first hill crest
+- dependency_policy: dependent_on_CL001
+- auto_advance_policy: none
+- fallback_strategy: cutaway_to_individual_ship_detail
+- consistency_assist_policy: maintain ship count and positioning
+- consistency_assist_method: reference previous exterior shots
+- anatomy_repair_policy: fix observer figure distortions
+- consistency_targets: twenty ships, window framing elements, banner designs, device shapes
+- style_profile: sci-fi adventure aesthetic
+- batch_role: establishing shot
+- fix_of: none
+- workflow_type: still.scene_build.four_ref.klein.distilled
+- video_prompt_package: projects/princess_of_mars_test/03_prompt_packages/cut_motion/SC001/CL002/SC001_CL002_cut_motion_prompt.md
+
+[[/SECTION]]
+
+[[SECTION continuity_notes_markdown]]
+- Maintain vertical axis with elevated observation point from upper floor window
+- Ensure distant airships visible but not dominating frame composition
+- Match lighting conditions with previous exterior shots for consistency
+- Keep rooftop network consistent for scale reference across shots
+- Ship count of twenty must remain constant in wide exterior compositions
+- Banner designs must be identifiable across multiple viewing angles
+- Window framing elements must stay consistent with interior observation point
+
+[[/SECTION]]
+
+[[SECTION repair_notes_markdown]]
+- Fix any anatomy distortions on observer figure profile view
+- Correct lighting mismatch if window frame appears too dark compared to exterior
+- Ensure distant ships are clearly defined against horizon line
+- Verify window frame details match continuity from previous shots
+- Check that hill crest positioning matches established depth axis reference points
+
+[[/SECTION]]
+
+[[/FILMCREATOR_PACKET]]
+````

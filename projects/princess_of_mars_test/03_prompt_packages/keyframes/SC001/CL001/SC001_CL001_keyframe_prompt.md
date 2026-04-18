@@ -5,16 +5,16 @@ SC001 CL001 Keyframe Prompt
 SC001_CL001_keyframe_prompt
 
 # Purpose
-Generate frozen keyframe for opening observation beat, establishing exterior city context and threat presence before narrator movement
+Establish frozen keyframe for opening observation beat, showing narrator at window and distant fleet over hills
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-two figures standing at upper floor window frame, hands resting on polished stone sill, observing distant horizon with neutral expression, daylight illumination reflecting off dark wood window frame with metal accents, twenty gray airships visible in formation across valley sky, deserted city buildings and rooftops in background, clear atmosphere before combat
+Earth human figure standing at upper floor window frame, hands resting on polished stone sill, observing distant horizon with neutral expression, daylight illumination reflecting off dark wood window frame with metal accents, twenty gray airships visible in formation across valley sky, hill crests creating depth reference points, interior warm lighting contrasting exterior cool tones
 
 # Negative Prompt
-blurry, distorted faces, extra limbs, missing hands, text, watermark, low resolution, dark shadows, night time, crowded streets, modern clothing, fire, smoke, collapsing buildings, indoor artificial light, close-up of prisoner, green-skinned warriors in foreground
+blurry, distorted faces, extra limbs, missing hands, text, watermark, low resolution, dark shadows, night time, crowded streets, modern clothing, fire, smoke, collapsing buildings, indoor artificial light, close-up of prisoner, green-skinned warriors in foreground, specific names
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -46,12 +46,15 @@ blurry, distorted faces, extra limbs, missing hands, text, watermark, low resolu
 - Keep distant plaza warriors visible but not obstructing foreground action
 - Verify hound follows close behind without blocking narrator path if present
 - Preserve deserted city street environment state throughout keyframe
+- Ship count (20) must be maintained in wide shots
+- Window framing and interior elements must stay consistent
 
 # Repair Notes
 - Apply anatomy repair policy for hands and feet during walking motion
 - Ensure style profile consistency with ceremonial garment textures
 - Correct any facial distortion on narrator or distant warriors
 - Verify no modern clothing elements appear in environment assets
+- Fix lighting contrast between interior warm and exterior cool tones
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/SC001/CL001.md

@@ -5,7 +5,7 @@ SC001 CL001 Cut Motion Prompt
 SC001_CL001_cut_motion_prompt
 
 # Purpose
-Generate cut motion starting from approved opening frame, preserving keyframe lighting and grade, focusing on visible motion, camera behavior, and environment change.
+Generate cut motion starting from approved opening frame, preserving keyframe lighting and grade, focusing on visible motion, camera behavior, and environment change for window observation establishing shot.
 
 # Workflow Type
 video.cut_motion.wan.i2v
@@ -35,7 +35,7 @@ morphing artifacts, flickering lighting, wrong anatomy, extra characters, sudden
 - consistency_assist_policy: enabled
 - consistency_assist_method: interval_frames
 - anatomy_repair_policy: enabled
-- consistency_targets: narrator_position, woola_position
+- consistency_targets: narrator_position, green_warriors_fleet_position
 - style_profile: epic_narrative
 - batch_role: opening_sequence
 - fix_of: none
@@ -49,13 +49,13 @@ morphing artifacts, flickering lighting, wrong anatomy, extra characters, sudden
 - Maintain window frame consistency (dark wood with metal accents).
 - Keep window wiper position unchanged (upper right).
 - Preserve floor material (polished stone tiles).
-- Ensure Carter maintains 2-3 feet from window frame.
+- Ensure narrator maintains 2-3 feet from window frame.
 
 # Repair Notes
 - Fix any morphing artifacts during zoom/pan transition.
 - Ensure lighting consistency between exterior view and window frame interior.
 - Correct anatomy if human observer or green warriors distort during movement.
-- Maintain environment state (deserted streets) without introducing new crowds prematurely.
+- Maintain environment state (upper floor observation point) without introducing new crowds prematurely.
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/SC001/CL001.md

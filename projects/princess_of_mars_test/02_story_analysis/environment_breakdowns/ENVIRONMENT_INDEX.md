@@ -1,9 +1,13 @@
-# Environment Index - Chapter CH001
+# Environment Index - Chapter VIII
 
-## Primary Settings
-- **upper_window_balcony** - Protagonist observation point for fleet arrival and burning ship
-- **valley_ground** - Fleet arrival zone where air vessels swing low above ground
+## Primary Environments
+- **open_ground_hill** - Main retreat location with air ships visible over hill crests
+- **valley_battlefield** - Central battle zone where green warriors fire from building windows
 
-## Secondary Settings  
-- **building_interior_portal** - Where Martians retreat into buildings, prisoner dragged through building portal
-- **street_level** - Transit setting for protagonist descent, Sola's approach point
+## Secondary Environments  
+- **building_windows_upper_floor** - Narrator's observation point for investigation
+- **plaza_return** - Gathering space after danger passes, prisoner brought here
+- **disabled_martian_ship** - Looting target, towed to ground and set ablaze
+
+## Transit/Functional Environments
+- All environments serve as staging grounds for Martian fleet movements and warrior operations

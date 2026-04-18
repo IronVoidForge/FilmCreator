@@ -1,25 +1,38 @@
-# Scene Index for Chapter CH001: A Fair Captive from the Sky
+# Chapter VIII - A Fair Captive from the Sky
+## Scene Decomposition Index
 
-## SC001: The Fleet Arrives
-*   **Purpose:** Establish the transition from Martian retreat to Fleet arrival.
-*   **Summary:** Following the incubation ceremony, orders are given for an immediate return. The green Martians melt into buildings within three minutes. From a window, the protagonist observes twenty gray air vessels swinging low above the ground toward the valley.
-*   **Characters:** Protagonist, Green Martians (melting), Fleet (observed).
-*   **Environments:** Upper window/balcony, Valley ground.
+### SC001: Retreat & Investigation
+**Purpose:** Establish Martian retreat and narrator's investigation of cause
+**Summary:** Martians withdraw after incubation ceremony procession; narrator observes from upper floor window as twenty gray air ships swing over hill crests with strange banners and odd devices on prows
+**Characters:** Narrator (Earth human), Green Warriors (Martian)
+**Environments:** Upper floor observation point, Hill crests, Open ground
+**Emotional Shift:** Curiosity → Concern about sudden retreat
+**Visual Coverage Families:** Wide establishing shots of air ships, Medium shots from window perspective, Close-ups on banners and devices
+**Continuity Sensitivities:** Ship positions relative to hill crests, Banner designs consistency, Window framing consistency
 
-## SC002: The Fire Exchange and Drifting Vessel
-*   **Purpose:** Depict the conflict, casualties, and focus on the damaged vessel.
-*   **Summary:** Green Martians fire a volley from building windows first. The fleet returns fire with high accuracy; figures drop at bullet explosions, banners dissolve in flames. Fleet damage is evident (limping vessels) after twenty minutes. One vessel drifts helpless, unmanned, and damaged. Warriors rush to capture it before it hits the ground.
-*   **Characters:** Green Martians, Fleet Warriors, Figures dropping.
-*   **Environments:** Building windows, Air vessels, Ground impact zone.
+### SC002: Battle
+**Purpose:** Depict first volley exchange between Earth defenders and Martian fleet
+**Summary:** Green warriors fire terrific volley from building windows; air fleet returns fire with guns; ships move parallel then turn back as banners dissolve in flame and green figures drop at bullet explosions
+**Characters:** Narrator (observer), Green Warriors (Martian), Air Fleet (Martian)
+**Environments:** Building windows facing valley, Air fleet formation above hill
+**Emotional Shift:** Tension → Shock at sudden effectiveness of first volley
+**Visual Coverage Families:** Wide shots of battle field, Medium shots from window perspective, Close-ups on banners dissolving, Green figures dropping
+**Continuity Sensitivities:** Bullet trajectory consistency, Banner flame effects timing, Ship movement patterns
 
-## SC003: The Funeral Pyre
-*   **Purpose:** Show the disposal of the vessel and the funeral aspect.
-*   **Summary:** Warriors search the vessel for loot (arms, jewels, water). After removal, they tow it away, then empty carboys over the dead sailors and burn the vessel. The ship drifts southeast as a funeral pyre.
-*   **Characters:** Warriors, Dead Sailors.
-*   **Environments:** Vessel interior/exterior, Ground.
+### SC003: Disabled Ship & Loot
+**Purpose:** Show pursuit, boarding, and systematic rifling of disabled Martian vessel
+**Summary:** Warriors chase disabled ship; board with spears and grappling hooks; ship hauled to ground for systematic rifling including arms, ammunition, silks, furs, jewels, stone vessels, food/water; ship set on fire by missile from last warrior and drifts away as floating funeral pyre
+**Characters:** Green Warriors (Martian), Disabled Ship crew (Martian)
+**Environments:** Ground level near disabled ship, Air fleet formation
+**Emotional Shift:** Determination → Satisfaction at successful capture
+**Visual Coverage Families:** Wide shots of pursuit, Medium shots of boarding action, Close-ups on loot items, Wide shot of burning ship drifting away
+**Continuity Sensitivities:** Loot item consistency across shots, Ship fire progression, Grappling hook positions
 
-## SC004: The Captive Girl
-*   **Purpose:** Introduce the prisoner and her emotional state.
-*   **Summary:** As the protagonist descends to the street, Sola rushes up. A prisoner is being dragged into a building by green Martian females. The figure is slender and girlish, similar to earthly women. Features include an oval face, coal black waving hair, light reddish copper skin, and ruby lips. She is naked except for ornaments. The prisoner makes a sign of appeal (unanswered by the protagonist). Her expression shifts from hope to dejection and loathing as she is dragged away.
-*   **Characters:** Protagonist, Sola, Prisoner, Green Martian females.
-*   **Environments:** Street level, Building portal.
+### SC004: Return & Prisoner
+**Purpose:** Reveal captured Earth woman and narrator's emotional response to her plight
+**Summary:** Warriors return to plaza; danger of air craft passed for a week; Narrator sees prisoner dragged into building by green Martian females; Slender girlish figure with oval face, coal black hair, light reddish copper skin, naked except ornaments; She looks at narrator, makes sign (appeal for help), then is dragged away; Narrator feels hope and dejection
+**Characters:** Narrator (Earth human), Green Warriors (Martian), Green Martian females, Captured Earth woman
+**Environments:** Plaza area, Building entrance, Interior observation point
+**Emotional Shift:** Hope → Dejection at inability to help
+**Visual Coverage Families:** Wide shots of plaza, Medium shots of prisoner being dragged, Close-ups on prisoner's face and ornaments, Over-the-shoulder from narrator perspective
+**Continuity Sensitivities:** Prisoner appearance consistency, Ornament details, Narrator reaction timing
