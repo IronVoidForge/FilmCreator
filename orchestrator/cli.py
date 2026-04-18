@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 
+from .authoring import lmstudio_check, write_prompts
 from .batch_runner import plan_prompt_batch, run_prompt_batch
 from .registry_loader import get_workflow
 from .review_tools import interactive_review_and_promote_batch, review_candidates_summary
@@ -129,6 +130,20 @@ def build_parser() -> argparse.ArgumentParser:
         help="Submit every prepared candidate workflow in the batch to ComfyUI",
     )
 
+    lmstudio_check_cmd = subparsers.add_parser(
+        "lmstudio-check",
+        help="Verify local LM Studio connectivity and the resolved model selection",
+    )
+    lmstudio_check_cmd.add_argument("--json", action="store_true", help="Print the check summary as JSON")
+
+    write_prompts_cmd = subparsers.add_parser(
+        "write-prompts",
+        help="Write canonical scene-stage, keyframe, still-fix, and cut-motion prompt packages through LM Studio",
+    )
+    write_prompts_cmd.add_argument("project_slug")
+    write_prompts_cmd.add_argument("--scene", required=True)
+    write_prompts_cmd.add_argument("--clip")
+
     return parser
 
 
@@ -227,6 +242,28 @@ def main() -> None:
             ref_args=args.ref,
             seed_base=args.seed_base,
             execute=args.execute,
+        )
+        print(json.dumps(summary.to_dict(), indent=2))
+        return
+
+    if args.command == "lmstudio-check":
+        summary = lmstudio_check()
+        if args.json:
+            print(json.dumps(summary.to_dict(), indent=2))
+        else:
+            print(f"base_url: {summary.base_url}")
+            print(f"configured_model: {summary.configured_model}")
+            print(f"resolved_model: {summary.resolved_model}")
+            print("available_models:")
+            for model_id in summary.available_models:
+                print(f"  - {model_id}")
+        return
+
+    if args.command == "write-prompts":
+        summary = write_prompts(
+            project_slug=args.project_slug,
+            scene_id=args.scene,
+            clip_id=args.clip,
         )
         print(json.dumps(summary.to_dict(), indent=2))
         return

@@ -39,16 +39,20 @@ Ship a local-first, cut-oriented pipeline that can:
   - record batch manifests with per-candidate metadata,
   - record top 2 and chosen primary review results for keyframes,
   - promote the chosen keyframe into `approved_keyframe`,
-  - update `clip_state.json` so continuity resolves from the approved keyframe.
+  - update `clip_state.json` so continuity resolves from the approved keyframe,
+  - review and approve short-cut motion batches through the manifest-backed review helper,
+  - promote the chosen video into `approved_video`,
+  - extract `approved_video_last_frame` into the canonical clip still hierarchy.
 
 ## Known Gaps At This Checkpoint
 
 - `still_fix` has not yet been run from a reviewed prior stage.
-- The repaired manifest-backed cut-motion review launcher has not yet been live-validated after the folder-counting bug fix.
+- `still_fix` is no longer the recommended immediate product focus until the character-to-scene pipeline can identify which approved character refs belong in each clip and pass those references forward intentionally.
+- The still-fix source-selection bug that allowed a reviewed motion `MP4` to flow into an image slot has now been fixed in code, but the stage should still be treated as secondary until character-scene mapping exists.
 - The current short-cut motion path appears to introduce an unwanted blue-shift relative to the approved keyframe and needs look-preservation tuning.
 - Longer 10-second clips are not yet represented as explicit multi-segment motion plans.
-- approved video last-frame extraction now exists in code, but it has not yet been live-validated on a reviewed motion approval.
-- LM Studio authoring is still manual-file driven rather than automated.
+- LM Studio authoring now covers clip-local prompt writing, but scene analysis, clip planning, and shared character/environment prompt generation are still manual.
+- The SQLite relational layer is now designed in the specs, but it does not exist in code yet.
 - The planning-time shot-start decision model is not yet implemented:
   - continuity mode
   - composition type
@@ -66,16 +70,30 @@ Ship a local-first, cut-oriented pipeline that can:
 
 Validate the next two workflow checkpoints:
 
-1. run the repaired `test_review_and_approve_pilot_cut_motion.bat` launcher and confirm:
-   - the manifest-backed candidate list opens correctly even when older videos exist in the folder
-   - `approved_video` is recorded in clip state
-   - `approved_video_last_frame` is extracted into the clip still hierarchy
-2. run the new `run_pilot_scene_still_fix_batch_clean_8190.bat` smoke path and confirm:
-   - a reviewed prior still is used as the automatic base image
-   - the secondary reference image patches into the two-ref workflow
-   - 3-4 corrective still candidates land under `stills/fixes/`
+1. run the new LM Studio authoring smoke path and confirm:
+   - `test_lmstudio_connectivity.bat` resolves the local API base URL and model
+   - `test_pilot_scene_prompt_writer_lmstudio.bat` rewrites the canonical prompt-package files for `SC001/CL001`
+   - `clip_state.json` records the canonical prompt-package paths without requiring a render run
+2. build the character-to-scene pipeline layer so authoring can decide:
+   - which approved character refs are visible in each clip
+   - which shared environment refs are relevant to that clip
+   - which references should be passed to keyframe generation first
+   - whether optional consistency-assist or still-fix should even be considered for that clip
 
-That pair of validations closes the motion review handoff and opens the first real corrective still stage.
+That pair of steps opens the authoring-side LLM handoff and the character-scene mapping layer that should drive later corrective still work.
+
+## Database Implementation Timing
+
+- The SQLite database should be implemented after:
+  - LM Studio authoring commands are validated
+  - scene analysis and clip planning exist
+  - character-to-scene mapping exists
+- The first database release should be:
+  - per-project
+  - SQLite
+  - file-synced
+  - read-mostly
+- It should not become the only source of truth for prompts or media in the first release.
 
 ## End-To-End Delivery Plan
 
@@ -273,6 +291,16 @@ Automate planning and prompt writing without changing the runner contract.
   - consistency-assist method
   - anatomy-repair policy
 
+#### Current Implementation Note
+
+- `lmstudio-check` is now implemented.
+- `write-prompts` is now implemented for clip-local prompt families:
+  - `scene_stage`
+  - `keyframe`
+  - `still_fix`
+  - `cut_motion`
+- shared character/environment prompt writing and analysis generation remain planned follow-up work.
+
 #### Handoff
 
 - input: story analysis and scene intent
@@ -281,6 +309,44 @@ Automate planning and prompt writing without changing the runner contract.
 #### Test Point
 
 - with LM Studio running and ComfyUI closed, one scene can generate all required planning and prompt files automatically
+
+### Phase 5.5: SQLite Relational Layer
+
+#### Goal
+
+Add a queryable local relational layer after authoring and planning concepts have stabilized.
+
+#### Deliverables
+
+- create one project-local SQLite database file
+- add schema models and migrations
+- add commands:
+  - `db-init`
+  - `db-upgrade`
+  - `db-sync-from-files`
+  - `db-validate`
+- sync these entities into SQLite:
+  - chapters
+  - scenes
+  - beats
+  - clips
+  - motion segments
+  - characters
+  - environments
+  - clip-character mappings
+  - clip-environment mappings
+  - ref bindings
+  - prompt packages
+  - runs
+  - candidates
+  - review batches
+  - approvals
+  - continuity links
+- keep Markdown, JSON, and media files as canonical artifacts in the first release
+
+#### Test Point
+
+- one project database can be initialized and synced from the filesystem, and queries can answer which characters, environments, prompts, and approved assets belong to a clip
 
 ### Phase 6: Scene-Wide Planning
 
@@ -447,13 +513,15 @@ This preserves review quality while still letting you use sleep-time for the exp
 
 ## Recommended Build Order From Here
 
-1. Validate repaired cut-motion review plus approved-video last-frame extraction.
-2. Validate `still_fix` from an approved keyframe.
-3. Tune the short-cut motion path to preserve keyframe look without the current blue-shift.
-4. Add LM Studio planning and prompt writing.
-5. Validate `still_fix` as a corrective stage, including optional identity-consistency assist.
-6. Add scene-wide planning.
-7. Add scene-wide stage-bounded overnight rendering.
-8. Add explicit multi-segment clip rules for longer cuts.
-9. Reserve LongLook for extended-cut workflows after the short-cut path is stable.
-10. Add cross-cut continuity rules and scene-scale video completion.
+1. Validate LM Studio connectivity and pilot clip prompt writing through the new authoring BATs.
+2. Extend prompt writing from clip-local packages into shared character and environment prompt families.
+3. Add LM Studio analysis and scene-wide clip planning.
+4. Add character-to-scene mapping so each clip knows which approved character refs and environment refs it should use.
+5. Implement the first SQLite read-side sync layer after the authoring and mapping model stabilizes.
+6. Tune the short-cut motion path to preserve keyframe look without the current blue-shift.
+7. Validate `still_fix` from an approved keyframe only after character-scene mapping exists.
+8. Validate `still_fix` as a corrective stage, including optional identity-consistency assist.
+9. Add scene-wide stage-bounded overnight rendering.
+10. Add explicit multi-segment clip rules for longer cuts.
+11. Reserve LongLook for extended-cut workflows after the short-cut path is stable.
+12. Add cross-cut continuity rules and scene-scale video completion.

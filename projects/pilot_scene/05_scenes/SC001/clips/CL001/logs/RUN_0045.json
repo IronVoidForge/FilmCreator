@@ -1,0 +1,155 @@
+{
+  "run_id": "RUN_0045",
+  "project_id": "pilot_scene",
+  "scene_id": "SC001",
+  "clip_id": "CL001",
+  "stage": "still_fix",
+  "workflow_id": "still.scene_insert.two_ref.klein.distilled",
+  "prompt_file": "projects/pilot_scene/03_prompt_packages/fixes/SC001/CL001/SC001_CL001_fix_01_prompt.md",
+  "input_refs": [],
+  "output_files": [],
+  "seed": 7000,
+  "key_settings": {},
+  "timestamp": "2026-04-18T01:37:14.754643+00:00",
+  "status": "failed",
+  "output_root": "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills",
+  "base_prompt_package": {
+    "path": "C:\\FilmCreator\\projects\\pilot_scene\\03_prompt_packages\\fixes\\SC001\\CL001\\SC001_CL001_fix_01_prompt.md",
+    "title": "SC001 CL001 Fix 01 Prompt",
+    "id": "SC001_CL001_fix_01_prompt",
+    "purpose": "Generate a corrective still pass from the approved opening duel frame while preserving composition, chamber layout, and cold sculptural lighting.",
+    "workflow_type": "still.scene_insert.two_ref.klein.distilled",
+    "positive_prompt": "Use the approved duel frame as the base image and preserve the exact camera angle, crossed-blade staging, pale alien chamber architecture, cold overhead lighting, and overall composition. Tighten likeness, facial structure, costume silhouette, and hand clarity for the dark-haired human duelist using the provided character reference image. Keep both combatants in the same positions, keep the monumental circular platform, preserve the restrained dramatic tension, and improve small hand, grip, and blade-contact details without redesigning the scene.",
+    "negative_prompt": "composition change, camera angle change, room redesign, lighting change, blue cast, extra limbs, extra fingers, merged hands, duplicate characters, duplicate weapons, costume redesign, anatomy drift, face drift, blur, text, watermark",
+    "inputs": {
+      "project_id": "pilot_scene",
+      "scene_id": "SC001",
+      "clip_id": "CL001",
+      "duration_seconds": "0",
+      "required_refs": "image_2",
+      "optional_refs": "",
+      "visible_character_assets": "ulurani3",
+      "look_continuity_policy": "preserve_keyframe_look",
+      "intended_lighting_change": "",
+      "composition_type": "two_shot",
+      "continuity_mode": "reframe_same_moment",
+      "starting_keyframe_strategy": "approved_keyframe_to_reframe",
+      "dependency_policy": "soft_ref_previous",
+      "auto_advance_policy": "manual",
+      "fallback_strategy": "regenerate_from_approved_keyframe",
+      "consistency_assist_policy": "off",
+      "consistency_assist_method": "reference_img2img",
+      "anatomy_repair_policy": "still_only",
+      "consistency_targets": "dark-haired human duelist hands, face, costume silhouette",
+      "style_profile": "",
+      "batch_role": "",
+      "fix_of": ""
+    },
+    "continuity_notes": [
+      "Use the approved keyframe as the base image for the corrective pass.",
+      "Preserve the cold pale chamber lighting, the duel axis, the crossed blades, and the existing framing.",
+      "Do not redesign the room, move the camera, or restage the duel."
+    ],
+    "repair_notes": [
+      "Correct local hand and grip issues first.",
+      "Tighten likeness and facial stability for the dark-haired human duelist using the provided reference image.",
+      "Keep the scene frozen as a still correction, not a new shot design."
+    ],
+    "sources": [
+      "projects/pilot_scene/02_story_analysis/clip_plans/SC001/CL001.md"
+    ]
+  },
+  "warnings": [
+    "Generated prompts may still contain likely proper nouns: Keep, Tighten. Replace them with descriptive noun phrases before final use when possible.",
+    "No image_1 ref was provided, so the runner will use Inputs -> fix_of as the still-fix base image.",
+    "Negative Prompt is present, but the registry does not yet declare a negative_prompt patch point."
+  ],
+  "blockers": [
+    "ComfyUI execution failed for prompt aac44387-6170-41ee-99b7-54a6c1b7ea84 at node 76 (LoadImage): cannot identify image file 'C:\\\\FilmCreator\\\\.comfy_clean\\\\input\\\\filmcreator/RUN_0046/image_1_SC001_CL001_MV03_v003.mp4'",
+    "ComfyUI execution failed for prompt d3154b20-115f-48d9-adac-6fc98c5ab5e4 at node 76 (LoadImage): cannot identify image file 'C:\\\\FilmCreator\\\\.comfy_clean\\\\input\\\\filmcreator/RUN_0047/image_1_SC001_CL001_MV03_v003.mp4'",
+    "ComfyUI execution failed for prompt 50271c0b-0e23-4555-978c-bb51c621d815 at node 76 (LoadImage): cannot identify image file 'C:\\\\FilmCreator\\\\.comfy_clean\\\\input\\\\filmcreator/RUN_0048/image_1_SC001_CL001_MV03_v003.mp4'",
+    "ComfyUI execution failed for prompt 9dc060f2-cad3-40c0-8e6e-8981094781fa at node 76 (LoadImage): cannot identify image file 'C:\\\\FilmCreator\\\\.comfy_clean\\\\input\\\\filmcreator/RUN_0049/image_1_SC001_CL001_MV03_v003.mp4'"
+  ],
+  "batch": {
+    "stage_family": "still_fix",
+    "batch_size": 4,
+    "batch_prompt_dir": "projects/pilot_scene/03_prompt_packages/fixes/SC001/CL001/batches/RUN_0045",
+    "review_status": "pending",
+    "chosen_primary": null,
+    "top_two": [],
+    "candidates": [
+      {
+        "candidate_rank": 1,
+        "style_profile": "literal_descriptive",
+        "prompt_file": "projects/pilot_scene/03_prompt_packages/fixes/SC001/CL001/batches/RUN_0045/SC001_CL001_fix_01_prompt__01_literal_descriptive.md",
+        "status": "failed",
+        "review_status": "unreviewed",
+        "output_files": [],
+        "run_manifest_path": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0046.json",
+        "patched_workflow_path": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0046_patched_workflow.json",
+        "continuity_source": null,
+        "warnings": [
+          "No image_1 ref was provided, so the runner will use Inputs -> fix_of as the still-fix base image.",
+          "Negative Prompt is present, but the registry does not yet declare a negative_prompt patch point."
+        ],
+        "blockers": [],
+        "seed": 8000,
+        "error": "ComfyUI execution failed for prompt aac44387-6170-41ee-99b7-54a6c1b7ea84 at node 76 (LoadImage): cannot identify image file 'C:\\\\FilmCreator\\\\.comfy_clean\\\\input\\\\filmcreator/RUN_0046/image_1_SC001_CL001_MV03_v003.mp4'"
+      },
+      {
+        "candidate_rank": 2,
+        "style_profile": "cinematic_compositional",
+        "prompt_file": "projects/pilot_scene/03_prompt_packages/fixes/SC001/CL001/batches/RUN_0045/SC001_CL001_fix_01_prompt__02_cinematic_compositional.md",
+        "status": "failed",
+        "review_status": "unreviewed",
+        "output_files": [],
+        "run_manifest_path": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0047.json",
+        "patched_workflow_path": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0047_patched_workflow.json",
+        "continuity_source": null,
+        "warnings": [
+          "No image_1 ref was provided, so the runner will use Inputs -> fix_of as the still-fix base image.",
+          "Negative Prompt is present, but the registry does not yet declare a negative_prompt patch point."
+        ],
+        "blockers": [],
+        "seed": 8001,
+        "error": "ComfyUI execution failed for prompt d3154b20-115f-48d9-adac-6fc98c5ab5e4 at node 76 (LoadImage): cannot identify image file 'C:\\\\FilmCreator\\\\.comfy_clean\\\\input\\\\filmcreator/RUN_0047/image_1_SC001_CL001_MV03_v003.mp4'"
+      },
+      {
+        "candidate_rank": 3,
+        "style_profile": "performance_action_led",
+        "prompt_file": "projects/pilot_scene/03_prompt_packages/fixes/SC001/CL001/batches/RUN_0045/SC001_CL001_fix_01_prompt__03_performance_action_led.md",
+        "status": "failed",
+        "review_status": "unreviewed",
+        "output_files": [],
+        "run_manifest_path": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0048.json",
+        "patched_workflow_path": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0048_patched_workflow.json",
+        "continuity_source": null,
+        "warnings": [
+          "No image_1 ref was provided, so the runner will use Inputs -> fix_of as the still-fix base image.",
+          "Negative Prompt is present, but the registry does not yet declare a negative_prompt patch point."
+        ],
+        "blockers": [],
+        "seed": 8002,
+        "error": "ComfyUI execution failed for prompt 50271c0b-0e23-4555-978c-bb51c621d815 at node 76 (LoadImage): cannot identify image file 'C:\\\\FilmCreator\\\\.comfy_clean\\\\input\\\\filmcreator/RUN_0048/image_1_SC001_CL001_MV03_v003.mp4'"
+      },
+      {
+        "candidate_rank": 4,
+        "style_profile": "sparse_conservative",
+        "prompt_file": "projects/pilot_scene/03_prompt_packages/fixes/SC001/CL001/batches/RUN_0045/SC001_CL001_fix_01_prompt__04_sparse_conservative.md",
+        "status": "failed",
+        "review_status": "unreviewed",
+        "output_files": [],
+        "run_manifest_path": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0049.json",
+        "patched_workflow_path": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0049_patched_workflow.json",
+        "continuity_source": null,
+        "warnings": [
+          "No image_1 ref was provided, so the runner will use Inputs -> fix_of as the still-fix base image.",
+          "Negative Prompt is present, but the registry does not yet declare a negative_prompt patch point."
+        ],
+        "blockers": [],
+        "seed": 8003,
+        "error": "ComfyUI execution failed for prompt 9dc060f2-cad3-40c0-8e6e-8981094781fa at node 76 (LoadImage): cannot identify image file 'C:\\\\FilmCreator\\\\.comfy_clean\\\\input\\\\filmcreator/RUN_0049/image_1_SC001_CL001_MV03_v003.mp4'"
+      }
+    ]
+  }
+}

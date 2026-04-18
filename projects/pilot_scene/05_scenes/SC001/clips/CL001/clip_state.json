@@ -6,12 +6,14 @@
   "inputs": {
     "shared_character_refs": [],
     "shared_environment_refs": [],
-    "scene_prompt_package": null,
+    "scene_prompt_package": "projects/pilot_scene/03_prompt_packages/scenes/SC001/CL001/SC001_CL001_scene_stage_prompt.md",
     "anchor_prompt_packages": [],
-    "video_prompt_package": null,
-    "scene_stage_prompt_package": null,
+    "video_prompt_package": "projects/pilot_scene/03_prompt_packages/cut_motion/SC001/CL001/SC001_CL001_cut_motion_prompt.md",
+    "scene_stage_prompt_package": "projects/pilot_scene/03_prompt_packages/scenes/SC001/CL001/SC001_CL001_scene_stage_prompt.md",
     "keyframe_prompt_package": "projects/pilot_scene/03_prompt_packages/keyframes/SC001/CL001/SC001_CL001_keyframe_prompt.md",
-    "fix_prompt_packages": [],
+    "fix_prompt_packages": [
+      "projects/pilot_scene/03_prompt_packages/fixes/SC001/CL001/SC001_CL001_fix_01_prompt.md"
+    ],
     "cut_motion_prompt_package": "projects/pilot_scene/03_prompt_packages/cut_motion/SC001/CL001/SC001_CL001_cut_motion_prompt.md",
     "legacy_anchor_prompt_packages": [],
     "legacy_video_prompt_package": null
@@ -22,16 +24,19 @@
     "interval_frames": [],
     "approved_keyframe": "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF01.png",
     "still_fixes": [],
-    "approved_video": null,
-    "cut_motion_videos": []
+    "approved_video": "projects/pilot_scene/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV01.mp4",
+    "cut_motion_videos": [
+      "projects/pilot_scene/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV01.mp4"
+    ]
   },
   "current_continuity_source": "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF01.png",
   "latest_runs": {
     "keyframe": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0001.json",
-    "cut_motion": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0040.json"
+    "cut_motion": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0040.json",
+    "still_fix": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0045.json"
   },
   "notes": [],
-  "approved_video_last_frame": null,
+  "approved_video_last_frame": "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/video_last_frames/SC001_CL001_VL01.png",
   "review_batches": [
     {
       "timestamp": "2026-04-17T20:00:31.459537+00:00",
@@ -50,19 +55,37 @@
         "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF04_v004.png"
       ],
       "chosen_primary": "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF01_v001.png"
+    },
+    {
+      "timestamp": "2026-04-18T01:30:52.907968+00:00",
+      "stage": "cut_motion",
+      "stage_family": "cut_motion",
+      "manifest_path": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0040.json",
+      "review_decision": "approve",
+      "candidates": [
+        "projects/pilot_scene/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV02_v002.mp4",
+        "projects/pilot_scene/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV03_v003.mp4",
+        "projects/pilot_scene/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV04_v004.mp4",
+        "projects/pilot_scene/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV05_v005.mp4"
+      ],
+      "top_two": [
+        "projects/pilot_scene/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV03_v003.mp4",
+        "projects/pilot_scene/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV05_v005.mp4"
+      ],
+      "chosen_primary": "projects/pilot_scene/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV03_v003.mp4"
     }
   ],
   "latest_review_decision": {
-    "stage": "keyframe",
-    "stage_family": "keyframe",
+    "stage": "cut_motion",
+    "stage_family": "cut_motion",
     "decision": "approve",
-    "manifest_path": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0001.json",
-    "chosen_primary": "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF01_v001.png",
+    "manifest_path": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0040.json",
+    "chosen_primary": "projects/pilot_scene/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV03_v003.mp4",
     "top_two": [
-      "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF01_v001.png",
-      "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF04_v004.png"
+      "projects/pilot_scene/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV03_v003.mp4",
+      "projects/pilot_scene/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV05_v005.mp4"
     ],
-    "timestamp": "2026-04-17T20:00:31.459537+00:00"
+    "timestamp": "2026-04-18T01:30:52.907968+00:00"
   },
   "stage_style_preferences": {
     "still_fix": {
@@ -89,23 +112,23 @@
     },
     "cut_motion": {
       "literal_descriptive": {
-        "appearances": 0,
+        "appearances": 1,
         "top_two": 0,
         "wins": 0
       },
       "cinematic_compositional": {
-        "appearances": 0,
-        "top_two": 0,
-        "wins": 0
+        "appearances": 1,
+        "top_two": 1,
+        "wins": 1
       },
       "performance_action_led": {
-        "appearances": 0,
+        "appearances": 1,
         "top_two": 0,
         "wins": 0
       },
       "sparse_conservative": {
-        "appearances": 0,
-        "top_two": 0,
+        "appearances": 1,
+        "top_two": 1,
         "wins": 0
       }
     },

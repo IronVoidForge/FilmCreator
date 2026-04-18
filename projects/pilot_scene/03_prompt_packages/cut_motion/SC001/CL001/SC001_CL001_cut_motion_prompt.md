@@ -5,13 +5,13 @@ SC001 CL001 Cut Motion Prompt
 SC001_CL001_cut_motion_prompt
 
 # Purpose
-Generate the first approved cut-motion pass from the approved opening keyframe while preserving identity, environment, and composition continuity.
+Generate motion pass from approved opening keyframe preserving identity and lighting.
 
 # Workflow Type
 video.cut_motion.wan.i2v
 
 # Positive Prompt
-Start from the provided opening duel frame and preserve the exact visible identities, costumes, proportions, lighting, architecture, and overall composition from that image. Two combatants hold crossed blades on a circular platform inside a monumental pale alien command chamber with ribbed nonhuman arches, cold sculptural overhead light, and faint haze. Motion should stay restrained and elegant. Use a slow cinematic push-in with a slight rightward drift. The lean dark-haired human duelist makes two tiny blade adjustments and a measured half-step inward, testing the bind without breaking the tableau. The taller pale alien prince answers with a controlled forward press, a subtle wrist turn, and a small shift of weight that keeps visible dominance. Let haze drift softly, let fabric and armor tails move slightly, and allow a faint seam-light pulse in the distant walls. No strike lands, no blood, no new characters, no costume changes, no room redesign, no abrupt camera move, and no chaotic action.
+Start from the provided opening frame and preserve the exact visible identities, costumes, proportions, lighting, architecture, and overall composition from that image. Two combatants hold crossed blades on a circular platform inside a monumental pale alien command chamber with ribbed nonhuman arches, cold sculptural overhead light, and faint haze. Motion should stay restrained and elegant. Use a slow cinematic push-in with a slight rightward drift. The lean dark-haired human duelist makes two tiny blade adjustments and a measured half-step inward, testing the bind without breaking the tableau. The taller pale alien prince answers with a controlled forward press, a subtle wrist turn, and a small shift of weight that keeps visible dominance. Let haze drift softly, let fabric and armor tails move slightly, and allow a faint seam-light pulse in the distant walls. No strike lands, no blood, no new characters, no costume changes, no room redesign, no abrupt camera move, and no chaotic action.
 
 # Negative Prompt
 identity drift, face drift, anatomy errors, extra limbs, extra weapons, duplicate characters, costume redesign, room redesign, hard cut, jumpy camera, fast action, impact hit, blood, gore, explosion, debris burst, comedy, text, watermark, logo, blue cast, cool color shift, relit scene
@@ -22,13 +22,16 @@ identity drift, face drift, anatomy errors, extra limbs, extra weapons, duplicat
 - clip_id: CL001
 - duration_seconds: 5
 - required_refs: source_frame
-- optional_refs:
+- optional_refs: 
 - visible_character_assets: ulurani3
 - look_continuity_policy: preserve_keyframe_look
-- intended_lighting_change:
-- style_profile:
-- batch_role:
-- fix_of:
+- intended_lighting_change: 
+- style_profile: 
+- batch_role: 
+- fix_of: 
+- workflow_type: video.cut_motion.wan.i2v
+- source_frame_ref: projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/SC001_CL001_KF01.png
+- style_preference: cinematic_compositional
 
 # Continuity Notes
 - Use the approved keyframe as the only starting image for the motion pass.

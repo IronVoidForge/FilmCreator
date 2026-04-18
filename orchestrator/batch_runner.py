@@ -34,6 +34,8 @@ DEFAULT_PROMPT_FILENAME_BY_STAGE = {
     "cut_motion": "{scene_id}_{clip_id}_cut_motion_prompt.md",
 }
 
+IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".webp", ".bmp", ".tif", ".tiff"}
+
 
 @dataclass(frozen=True)
 class BatchPlanSummary:
@@ -425,11 +427,22 @@ def _default_fix_of(project_slug: str, scene_id: str | None, clip_id: str | None
     if not scene_id or not clip_id:
         return ""
     clip_state = load_clip_state(project_slug, scene_id, clip_id)
-    latest_review = clip_state.get("latest_review_decision") or {}
-    if latest_review.get("chosen_primary"):
-        return latest_review["chosen_primary"]
     approved_assets = clip_state.get("approved_assets", {})
-    return approved_assets.get("approved_keyframe") or approved_assets.get("golden_frame") or ""
+    candidate_paths = [
+        approved_assets.get("still_fixes", [])[-1] if approved_assets.get("still_fixes") else "",
+        approved_assets.get("approved_keyframe"),
+        approved_assets.get("golden_frame"),
+        clip_state.get("current_continuity_source"),
+        clip_state.get("approved_video_last_frame"),
+    ]
+
+    latest_review = clip_state.get("latest_review_decision") or {}
+    candidate_paths.append(latest_review.get("chosen_primary", ""))
+
+    for candidate in candidate_paths:
+        if _is_image_reference(candidate):
+            return candidate
+    return ""
 
 
 def _collect_batch_warnings(
@@ -490,3 +503,9 @@ def _dedupe(items: list[str]) -> list[str]:
         seen.add(item)
         ordered.append(item)
     return ordered
+
+
+def _is_image_reference(value: str | None) -> bool:
+    if not value:
+        return False
+    return Path(value).suffix.lower() in IMAGE_SUFFIXES

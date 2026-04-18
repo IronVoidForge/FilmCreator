@@ -11,7 +11,7 @@ Establish the opening approved keyframe for the first cut so review can choose o
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Grand alien flagship chamber with pale bone-and-obsidian architecture, ribbed nonhuman arches, circular duel platform, cold sculptural overhead light, faint haze, ceremonial warship atmosphere. A larger ash-pale alien war prince with elongated cranial silhouette, horn-like ridges, bone-carved armor, and a ritual dueling weapon faces a lean dark-haired human duelist in restrained formal combatwear with a straight sword. Both figures are distinct and readable, standing in tense confrontation near the center of the platform. Emphasize grand scale, elegant hostile atmosphere, clean silhouettes, visible costume contrast, cinematic clarity, and stable composition suitable as a starting keyframe.
+Grand alien flagship chamber with pale bone-and-obsidian architecture, ribbed nonhuman arches, circular duel platform, cold sculptural overhead light, faint haze, ceremonial warship atmosphere. A larger ash-pale alien war prince with elongated cranial silhouette, horn-like ridges, bone-carved armor, and a ritual dueling weapon faces a lean dark-haired human duelist in restrained formal combatwear with a straight sword. Both figures are distinct and readable, standing in tense confrontation near the center of the platform.
 
 # Negative Prompt
 extra characters, merged anatomy, duplicate limbs, duplicate weapons, blurred faces, muddy lighting, low contrast, cropped heads, unreadable hands, text, watermark, blood, gore, comedic tone
@@ -24,9 +24,10 @@ extra characters, merged anatomy, duplicate limbs, duplicate weapons, blurred fa
 - required_refs: image_1, image_2
 - optional_refs: image_3, image_4
 - visible_character_assets: ulurani3
-- style_profile:
-- batch_role:
-- fix_of:
+- style_profile: 
+- batch_role: 
+- fix_of: 
+- workflow_type: still.scene_build.four_ref.klein.distilled
 
 # Continuity Notes
 - Keep the alien war prince and human duelist visually distinct.

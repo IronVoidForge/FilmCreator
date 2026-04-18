@@ -46,6 +46,8 @@ ASSET_CODE_BY_STAGE = {
     "interval_frame": "IF",
 }
 
+IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".webp", ".bmp", ".tif", ".tiff"}
+
 
 @dataclass(frozen=True)
 class RunSummary:
@@ -542,20 +544,27 @@ def _resolve_stage_refs(
 
     if stage == "still_fix" and "image_1" in required_slots and "image_1" not in resolved:
         fix_of = prompt_package.inputs.get("fix_of")
-        if fix_of:
+        if _is_image_reference(fix_of):
             resolved["image_1"] = fix_of
             warnings.append("No image_1 ref was provided, so the runner will use Inputs -> fix_of as the still-fix base image.")
         elif scene_id and clip_id:
             clip_state = load_clip_state(project_slug, scene_id, clip_id)
+            approved_assets = clip_state.get("approved_assets", {})
             latest_review = clip_state.get("latest_review_decision") or {}
-            chosen_primary = latest_review.get("chosen_primary")
-            approved_keyframe = clip_state.get("approved_assets", {}).get("approved_keyframe")
-            fallback_fix_of = chosen_primary or approved_keyframe
+            fallback_candidates = [
+                approved_assets.get("still_fixes", [])[-1] if approved_assets.get("still_fixes") else "",
+                approved_assets.get("approved_keyframe"),
+                approved_assets.get("golden_frame"),
+                clip_state.get("current_continuity_source"),
+                clip_state.get("approved_video_last_frame"),
+                latest_review.get("chosen_primary"),
+            ]
+            fallback_fix_of = next((candidate for candidate in fallback_candidates if _is_image_reference(candidate)), "")
             if fallback_fix_of:
                 resolved["image_1"] = fallback_fix_of
                 warnings.append(
-                    "No image_1 ref was provided, so the runner will use the latest reviewed primary candidate "
-                    "or approved keyframe as the still-fix base image."
+                    "No image_1 ref was provided, so the runner will use the latest approved still-compatible image "
+                    "as the still-fix base image."
                 )
 
     if "source_frame" in required_slots and "source_frame" not in resolved:
@@ -705,3 +714,9 @@ def _remove_empty_parents(path: Path, stop_at: Path) -> None:
         except OSError:
             return
         current = current.parent
+
+
+def _is_image_reference(value: str | None) -> bool:
+    if not value:
+        return False
+    return Path(value).suffix.lower() in IMAGE_SUFFIXES

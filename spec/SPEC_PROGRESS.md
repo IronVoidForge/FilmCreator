@@ -35,8 +35,13 @@
 
 - `1.5` project, scene, and clip state contracts
   - status: `validated`
-  - evidence: `clip_state.json` now records the approved keyframe, latest review decision, review batch history, and current continuity source after the live `RUN_0001` approval handoff
-  - next validation: use the hardened cut-motion review launcher to record `approved_video`, then confirm `approved_video_last_frame` is populated after promotion
+  - evidence: `clip_state.json` now records the approved keyframe, approved video, approved video last frame, latest review decision, review batch history, and current continuity source after the live `RUN_0001` and `RUN_0040` approval handoffs
+  - next validation: validate that LM Studio prompt writing refreshes canonical prompt-package paths in clip state without a render run
+
+- `1.6` SQLite relational model
+  - status: `planned`
+  - evidence: the relational design, setup plan, table map, sync direction, and implementation timing have now been specified for a per-project SQLite database
+  - next validation: implement the first read-side database phase with `db-init`, `db-upgrade`, and `db-sync-from-files`
 
 - `2.1` character reference generation
   - status: `validated`
@@ -70,8 +75,8 @@
 
 - `3.4` clip review and selection
   - status: `validated`
-  - evidence: the live pilot review recorded top 2 plus primary on `RUN_0001`, and the review path is now hardened through manifest-backed interactive review helpers instead of brittle folder counting
-  - next validation: perform the same review-and-handoff loop on a live cut-motion batch and confirm `approved_video` plus `approved_video_last_frame` are recorded
+  - evidence: the live pilot review recorded top 2 plus primary on both `RUN_0001` and `RUN_0040`, and the review path is now hardened through manifest-backed interactive review helpers instead of brittle folder counting
+  - next validation: perform the same review-and-handoff loop on a live `still_fix` batch and confirm the approved corrective still is promoted cleanly
 
 - `4.1` runner CLI and job dispatch
   - status: `validated`
@@ -85,12 +90,12 @@
 
 - `4.3` output routing, logging, and manifests
   - status: `validated`
-  - evidence: `RUN_0001` records successful keyframe outputs, and `RUN_0040` records four routed short-cut motion outputs under the clip-local `video/` folder
-  - next validation: validate live video review-and-promotion handoff and confirm approved-video last-frame extraction lands in the canonical clip hierarchy
+  - evidence: `RUN_0001` records successful keyframe outputs, `RUN_0040` records four routed short-cut motion outputs under the clip-local `video/` folder, and approved-video promotion now extracts a canonical clip-local last frame
+  - next validation: validate the live still-fix batch so routed corrective stills and review metadata cover all three current generated stage families
 
 - `4.4` automated testing and CI strategy
   - status: `implemented`
-  - evidence: unit coverage now includes prompt parsing, review-candidate discovery, review-and-promotion helpers, state normalization, scaffold promotion, and workflow patching
+  - evidence: unit coverage now includes prompt parsing, review-candidate discovery, review-and-promotion helpers, state normalization, scaffold promotion, workflow patching, LM Studio client discovery, and prompt-writer file generation
   - next validation: expand from unit coverage into launcher-level or smoke-test coverage
 
 - `5.1` story analysis outputs
@@ -100,12 +105,14 @@
   - status: `planned`
 
 - `5.3` prompt writer integration
-  - status: `planned`
+  - status: `implemented`
+  - evidence: `lmstudio-check` and `write-prompts` now exist in the CLI, the authoring layer can rewrite canonical `scene_stage`, `keyframe`, `still_fix`, and `cut_motion` prompt packages through the local LM Studio client, and clip state is updated with the resulting prompt-package paths
+  - next validation: run the LM Studio authoring smoke test against the pilot clip and confirm the written files contain fresh non-placeholder content
 
 - `6.1` deferred video motion stage
   - status: `validated`
-  - evidence: `RUN_0040` completed a live short-cut Wan 5B motion batch from the approved keyframe and routed four clip-local video candidates into `projects/pilot_scene/05_scenes/SC001/clips/CL001/video/`
-  - next validation: run the repaired motion review-and-promotion path and confirm `approved_video` plus `approved_video_last_frame` are populated after approval
+  - evidence: `RUN_0040` completed a live short-cut Wan 5B motion batch from the approved keyframe, the repaired motion review-and-promotion path selected a primary candidate successfully, and `approved_video` plus `approved_video_last_frame` are now populated after approval
+  - next validation: tune look preservation so the short-cut motion path stops introducing the reported blue-shift unless a prompt explicitly asks for it
 
 - `6.2` acceptance test matrix
   - status: `implemented`

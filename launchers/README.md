@@ -4,7 +4,14 @@ These batch files are convenience entry points for the current local workflow sp
 
 - `start_authoring_terminal.bat`
   - opens a FilmCreator shell for the planning or authoring phase
-  - intended for the LM Studio side later, without ComfyUI loaded at the same time
+  - intended for the LM Studio side, without ComfyUI loaded at the same time
+  - echoes the current `lmstudio-check` and `write-prompts` commands
+- `test_lmstudio_connectivity.bat`
+  - runs the local LM Studio connectivity smoke test
+  - verifies the resolved API base URL and chosen model before authoring
+- `test_pilot_scene_prompt_writer_lmstudio.bat`
+  - runs `lmstudio-check`, then rewrites the canonical pilot prompt packages for `SC001/CL001`
+  - intended to validate the authoring-side prompt writer without loading ComfyUI
 - `start_comfyui_8188.bat`
   - starts the known-good ComfyUI Python entrypoint on `127.0.0.1:8188`
   - skips launching a duplicate server if `8188` is already responding
@@ -67,11 +74,13 @@ Current pilot batch assets:
 
 Recommended usage right now:
 
-1. Preferred for current smoke tests: run `start_render_terminals_clean_8190.bat`
-2. In the FilmCreator shell, either paste the echoed command or run `run_pilot_scene_keyframe_batch_clean_8190.bat`
-3. Review generated outputs under the `pilot_scene` project folders
-4. Run `test_review_and_approve_pilot_keyframe.bat` to validate review recording and approved-keyframe promotion
-5. Run `run_pilot_scene_cut_motion_batch_video_8191.bat` for the short-cut motion smoke test after a keyframe has been approved
-6. Run `test_review_and_approve_pilot_cut_motion.bat` to validate the video review-and-approval handoff and last-frame extraction
-7. Run `run_pilot_scene_still_fix_batch_clean_8190.bat` for the first corrective still smoke test
-8. Run `test_review_and_approve_pilot_still_fix.bat` to validate the still-fix review-and-promotion handoff
+1. For authoring-side smoke tests, run `test_lmstudio_connectivity.bat`
+2. Then run `test_pilot_scene_prompt_writer_lmstudio.bat`
+3. Preferred for current render smoke tests: run `start_render_terminals_clean_8190.bat`
+4. In the FilmCreator shell, either paste the echoed command or run `run_pilot_scene_keyframe_batch_clean_8190.bat`
+5. Review generated outputs under the `pilot_scene` project folders
+6. Run `test_review_and_approve_pilot_keyframe.bat` to validate review recording and approved-keyframe promotion
+7. Run `run_pilot_scene_cut_motion_batch_video_8191.bat` for the short-cut motion smoke test after a keyframe has been approved
+8. Run `test_review_and_approve_pilot_cut_motion.bat` to validate the video review-and-approval handoff and last-frame extraction
+9. Run `run_pilot_scene_still_fix_batch_clean_8190.bat` for the first corrective still smoke test
+10. Run `test_review_and_approve_pilot_still_fix.bat` to validate the still-fix review-and-promotion handoff

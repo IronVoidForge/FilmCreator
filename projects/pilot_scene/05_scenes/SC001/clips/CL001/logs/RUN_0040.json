@@ -52,16 +52,19 @@
     "stage_family": "cut_motion",
     "batch_size": 4,
     "batch_prompt_dir": "projects/pilot_scene/03_prompt_packages/cut_motion/SC001/CL001/batches/RUN_0040",
-    "review_status": "pending",
-    "chosen_primary": null,
-    "top_two": [],
+    "review_status": "approve",
+    "chosen_primary": "projects/pilot_scene/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV03_v003.mp4",
+    "top_two": [
+      "projects/pilot_scene/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV03_v003.mp4",
+      "projects/pilot_scene/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV05_v005.mp4"
+    ],
     "candidates": [
       {
         "candidate_rank": 1,
         "style_profile": "literal_descriptive",
         "prompt_file": "projects/pilot_scene/03_prompt_packages/cut_motion/SC001/CL001/batches/RUN_0040/SC001_CL001_cut_motion_prompt__01_literal_descriptive.md",
         "status": "completed",
-        "review_status": "unreviewed",
+        "review_status": "rejected",
         "output_files": [
           "projects/pilot_scene/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV02_v002.mp4"
         ],
@@ -77,7 +80,7 @@
         "style_profile": "cinematic_compositional",
         "prompt_file": "projects/pilot_scene/03_prompt_packages/cut_motion/SC001/CL001/batches/RUN_0040/SC001_CL001_cut_motion_prompt__02_cinematic_compositional.md",
         "status": "completed",
-        "review_status": "unreviewed",
+        "review_status": "chosen_primary",
         "output_files": [
           "projects/pilot_scene/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV03_v003.mp4"
         ],
@@ -93,7 +96,7 @@
         "style_profile": "performance_action_led",
         "prompt_file": "projects/pilot_scene/03_prompt_packages/cut_motion/SC001/CL001/batches/RUN_0040/SC001_CL001_cut_motion_prompt__03_performance_action_led.md",
         "status": "completed",
-        "review_status": "unreviewed",
+        "review_status": "rejected",
         "output_files": [
           "projects/pilot_scene/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV04_v004.mp4"
         ],
@@ -109,7 +112,7 @@
         "style_profile": "sparse_conservative",
         "prompt_file": "projects/pilot_scene/03_prompt_packages/cut_motion/SC001/CL001/batches/RUN_0040/SC001_CL001_cut_motion_prompt__04_sparse_conservative.md",
         "status": "completed",
-        "review_status": "unreviewed",
+        "review_status": "top_two",
         "output_files": [
           "projects/pilot_scene/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV05_v005.mp4"
         ],

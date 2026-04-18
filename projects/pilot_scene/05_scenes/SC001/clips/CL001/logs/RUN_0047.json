@@ -1,0 +1,138 @@
+{
+  "run_id": "RUN_0047",
+  "project_id": "pilot_scene",
+  "scene_id": "SC001",
+  "clip_id": "CL001",
+  "stage": "still_fix",
+  "workflow_id": "still.scene_insert.two_ref.klein.distilled",
+  "prompt_file": "projects/pilot_scene/03_prompt_packages/fixes/SC001/CL001/batches/RUN_0045/SC001_CL001_fix_01_prompt__02_cinematic_compositional.md",
+  "input_refs": [
+    "projects/pilot_scene/05_scenes/SC001/clips/CL001/inputs/smoke_char.png",
+    "projects/pilot_scene/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV03_v003.mp4"
+  ],
+  "output_files": [],
+  "seed": 8001,
+  "key_settings": {
+    "seed": 8001,
+    "save_prefix": "filmcreator/pilot_scene/RUN_0047_still_fix",
+    "comfy_base_url": "http://127.0.0.1:8190"
+  },
+  "timestamp": "2026-04-18T01:37:16.225450+00:00",
+  "status": "failed",
+  "output_root": "projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/fixes",
+  "prompt_package": {
+    "path": "C:\\FilmCreator\\projects\\pilot_scene\\03_prompt_packages\\fixes\\SC001\\CL001\\batches\\RUN_0045\\SC001_CL001_fix_01_prompt__02_cinematic_compositional.md",
+    "title": "SC001 CL001 Fix 01 Prompt [02 cinematic_compositional]",
+    "id": "SC001_CL001_fix_01_prompt_02_cinematic_compositional",
+    "purpose": "Generate a corrective still pass from the approved opening duel frame while preserving composition, chamber layout, and cold sculptural lighting.",
+    "workflow_type": "still.scene_insert.two_ref.klein.distilled",
+    "positive_prompt": "Use cinematic composition, framing, lens, lighting, and production language while keeping subjects explicitly described and visually grounded.\n\nUse the approved duel frame as the base image and preserve the exact camera angle, crossed-blade staging, pale alien chamber architecture, cold overhead lighting, and overall composition. Tighten likeness, facial structure, costume silhouette, and hand clarity for the dark-haired human duelist using the provided character reference image. Keep both combatants in the same positions, keep the monumental circular platform, preserve the restrained dramatic tension, and improve small hand, grip, and blade-contact details without redesigning the scene.",
+    "negative_prompt": "composition change, camera angle change, room redesign, lighting change, blue cast, extra limbs, extra fingers, merged hands, duplicate characters, duplicate weapons, costume redesign, anatomy drift, face drift, blur, text, watermark",
+    "inputs": {
+      "project_id": "pilot_scene",
+      "scene_id": "SC001",
+      "clip_id": "CL001",
+      "duration_seconds": "0",
+      "required_refs": "image_2",
+      "optional_refs": "",
+      "visible_character_assets": "ulurani3",
+      "look_continuity_policy": "preserve_keyframe_look",
+      "intended_lighting_change": "",
+      "composition_type": "two_shot",
+      "continuity_mode": "reframe_same_moment",
+      "starting_keyframe_strategy": "approved_keyframe_to_reframe",
+      "dependency_policy": "soft_ref_previous",
+      "auto_advance_policy": "manual",
+      "fallback_strategy": "regenerate_from_approved_keyframe",
+      "consistency_assist_policy": "off",
+      "consistency_assist_method": "reference_img2img",
+      "anatomy_repair_policy": "still_only",
+      "consistency_targets": "dark-haired human duelist hands, face, costume silhouette",
+      "style_profile": "cinematic_compositional",
+      "batch_role": "candidate_02",
+      "fix_of": "projects/pilot_scene/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV03_v003.mp4"
+    },
+    "continuity_notes": [
+      "Use the approved keyframe as the base image for the corrective pass.",
+      "Preserve the cold pale chamber lighting, the duel axis, the crossed blades, and the existing framing.",
+      "Do not redesign the room, move the camera, or restage the duel.",
+      "Generated batch candidate 02 for style profile 'cinematic_compositional'."
+    ],
+    "repair_notes": [
+      "Correct local hand and grip issues first.",
+      "Tighten likeness and facial stability for the dark-haired human duelist using the provided reference image.",
+      "Keep the scene frozen as a still correction, not a new shot design."
+    ],
+    "sources": [
+      "projects/pilot_scene/02_story_analysis/clip_plans/SC001/CL001.md"
+    ]
+  },
+  "input_ref_map": {
+    "image_2": "projects/pilot_scene/05_scenes/SC001/clips/CL001/inputs/smoke_char.png",
+    "image_1": "projects/pilot_scene/05_scenes/SC001/clips/CL001/video/SC001_CL001_MV03_v003.mp4"
+  },
+  "comfy_input_ref_map": {
+    "image_2": "filmcreator/RUN_0047/image_2_smoke_char.png",
+    "image_1": "filmcreator/RUN_0047/image_1_SC001_CL001_MV03_v003.mp4"
+  },
+  "continuity_source": null,
+  "patched_workflow_file": "projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0047_patched_workflow.json",
+  "workflow_file": "workflows/stills/two_ref_insert/klein_multi_image_edit_flattened_api.json",
+  "workflow_format": "api_prompt",
+  "warnings": [
+    "No image_1 ref was provided, so the runner will use Inputs -> fix_of as the still-fix base image.",
+    "Negative Prompt is present, but the registry does not yet declare a negative_prompt patch point."
+  ],
+  "blockers": [],
+  "comfy_prompt_id": "d3154b20-115f-48d9-adac-6fc98c5ab5e4",
+  "error": "ComfyUI execution failed for prompt d3154b20-115f-48d9-adac-6fc98c5ab5e4 at node 76 (LoadImage): cannot identify image file 'C:\\\\FilmCreator\\\\.comfy_clean\\\\input\\\\filmcreator/RUN_0047/image_1_SC001_CL001_MV03_v003.mp4'",
+  "error_details": {
+    "prompt_id": "d3154b20-115f-48d9-adac-6fc98c5ab5e4",
+    "node_id": "76",
+    "node_type": "LoadImage",
+    "executed": [],
+    "exception_message": "cannot identify image file 'C:\\\\FilmCreator\\\\.comfy_clean\\\\input\\\\filmcreator/RUN_0047/image_1_SC001_CL001_MV03_v003.mp4'\n",
+    "exception_type": "PIL.UnidentifiedImageError",
+    "traceback": [
+      "  File \"C:\\ComfyUI\\resources\\ComfyUI\\execution.py\", line 534, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "  File \"C:\\ComfyUI\\resources\\ComfyUI\\execution.py\", line 334, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "  File \"C:\\ComfyUI\\resources\\ComfyUI\\execution.py\", line 308, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n",
+      "  File \"C:\\ComfyUI\\resources\\ComfyUI\\execution.py\", line 296, in process_inputs\n    result = f(**inputs)\n             ^^^^^^^^^^^\n",
+      "  File \"C:\\ComfyUI\\resources\\ComfyUI\\nodes.py\", line 1719, in load_image\n    img = node_helpers.pillow(Image.open, image_path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "  File \"C:\\ComfyUI\\resources\\ComfyUI\\node_helpers.py\", line 62, in pillow\n    x = fn(arg)\n        ^^^^^^^\n",
+      "  File \"C:\\ComfyUIInstall\\.venv\\Lib\\site-packages\\PIL\\Image.py\", line 3560, in open\n    raise UnidentifiedImageError(msg)\n"
+    ],
+    "current_inputs": {
+      "image": [
+        "filmcreator/RUN_0047/image_1_SC001_CL001_MV03_v003.mp4"
+      ]
+    },
+    "current_outputs": [
+      "140",
+      "139",
+      "81",
+      "94",
+      "137:120",
+      "125",
+      "124",
+      "126",
+      "130",
+      "132",
+      "137:118",
+      "128",
+      "129",
+      "136:116",
+      "137:119",
+      "127",
+      "134",
+      "131",
+      "138",
+      "76",
+      "136:117",
+      "133",
+      "135",
+      "136:115"
+    ],
+    "timestamp": 1776476236265
+  }
+}

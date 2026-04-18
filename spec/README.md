@@ -24,6 +24,7 @@ This folder breaks the project into numbered implementation chunks by feature an
 - `1.3` workflow catalog and registry contract
 - `1.4` prompt package schema
 - `1.5` project, scene, and clip state contracts
+- `1.6` SQLite relational model
 - `2.1` character reference generation
 - `2.2` environment reference generation
 - `2.3` shared reference promotion and reuse

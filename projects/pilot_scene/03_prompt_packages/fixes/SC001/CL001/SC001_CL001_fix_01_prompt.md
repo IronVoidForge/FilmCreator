@@ -11,7 +11,7 @@ Generate a corrective still pass from the approved opening duel frame while pres
 still.scene_insert.two_ref.klein.distilled
 
 # Positive Prompt
-Use the approved duel frame as the base image and preserve the exact camera angle, crossed-blade staging, pale alien chamber architecture, cold overhead lighting, and overall composition. Tighten likeness, facial structure, costume silhouette, and hand clarity for the dark-haired human duelist using the provided character reference image. Keep both combatants in the same positions, keep the monumental circular platform, preserve the restrained dramatic tension, and improve small hand, grip, and blade-contact details without redesigning the scene.
+Use the approved base image as the foundation and preserve the exact camera angle, crossed-blade staging, pale alien chamber architecture, cold overhead lighting, and overall composition. Tighten likeness, facial structure, costume silhouette, and hand clarity for the dark-haired human duelist using the provided character reference image. Keep both combatants in the same positions, keep the monumental circular platform, preserve the restrained dramatic tension, and improve small hand, grip, and blade-contact details without redesigning the scene.
 
 # Negative Prompt
 composition change, camera angle change, room redesign, lighting change, blue cast, extra limbs, extra fingers, merged hands, duplicate characters, duplicate weapons, costume redesign, anatomy drift, face drift, blur, text, watermark
@@ -22,10 +22,10 @@ composition change, camera angle change, room redesign, lighting change, blue ca
 - clip_id: CL001
 - duration_seconds: 0
 - required_refs: image_2
-- optional_refs:
+- optional_refs: 
 - visible_character_assets: ulurani3
 - look_continuity_policy: preserve_keyframe_look
-- intended_lighting_change:
+- intended_lighting_change: 
 - composition_type: two_shot
 - continuity_mode: reframe_same_moment
 - starting_keyframe_strategy: approved_keyframe_to_reframe
@@ -36,9 +36,12 @@ composition change, camera angle change, room redesign, lighting change, blue ca
 - consistency_assist_method: reference_img2img
 - anatomy_repair_policy: still_only
 - consistency_targets: dark-haired human duelist hands, face, costume silhouette
-- style_profile:
-- batch_role:
-- fix_of:
+- style_profile: 
+- batch_role: 
+- fix_of: 
+- workflow_type: still.scene_insert.two_ref.klein.distilled
+- base_image_ref: image_1
+- secondary_image_ref: image_2
 
 # Continuity Notes
 - Use the approved keyframe as the base image for the corrective pass.
