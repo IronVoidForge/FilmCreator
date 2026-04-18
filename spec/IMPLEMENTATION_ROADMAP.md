@@ -8,7 +8,8 @@ Ship a local-first, cut-oriented pipeline that can:
 2. render review batches for each clip without hand-editing workflow JSONs,
 3. record review decisions and approvals in state,
 4. generate motion from approved keyframes,
-5. run large scene batches overnight in stage-separated passes.
+5. run large scene batches overnight in stage-separated passes,
+6. evolve cleanly into a persistent multi-chapter world model without discarding the file-first workflow.
 
 ## Working Principles
 
@@ -20,6 +21,9 @@ Ship a local-first, cut-oriented pipeline that can:
 - The next stage only advances from one approved primary candidate.
 - Overnight runs are stage-bounded. Human review remains the boundary between stage families unless we later add an explicit auto-advance mode.
 - Optional post-keyframe identity-consistency and anatomy-repair assists should plug in as corrective still passes, not as hidden replacements for the base keyframe stage.
+- All LLM output must be tagged Markdown packets, never strict raw JSON.
+- All rigid JSON structures must be produced by local forgiving parsers.
+- The system remains file-first until the multi-chapter world model stabilizes enough to justify SQLite.
 
 ## Current Validated Checkpoint
 
@@ -43,62 +47,292 @@ Ship a local-first, cut-oriented pipeline that can:
   - review and approve short-cut motion batches through the manifest-backed review helper,
   - promote the chosen video into `approved_video`,
   - extract `approved_video_last_frame` into the canonical clip still hierarchy.
+- Chapter-based authoring for `princess_of_mars_test` is live and substantially more resilient than the original strict-JSON version.
 
 ## Current Project Status
 
-- Chapter-level authoring for `princess_of_mars_test` is live and mostly stable.
-- `analyze-chapter` and `plan-scene` are working.
-- Shared character/environment prompt writing is the current weak point because some LM Studio responses come back empty or partially malformed on per-asset drafts.
-- The project is still file-first; SQLite remains planned after the authoring flow is fully stable.
+- `analyze-chapter` and `plan-scene` are working and now have live task timing output.
+- Shared character/environment prompt writing is running one asset per LM Studio call.
+- Clip prompt writing has been migrated to tagged Markdown packet output with local parsing.
+- Scene planning is now tolerant of several non-canonical clip-id formats and duplicate post-normalization collisions.
+- The project is still intentionally file-first; SQLite remains deferred until the world model is stable enough to avoid churn.
 
-## Known Gaps At This Checkpoint
+## Current Risks And Known Gaps
 
-- `still_fix` has not yet been run from a reviewed prior stage.
-- `still_fix` is no longer the recommended immediate product focus until the character-to-scene pipeline can identify which approved character refs belong in each clip and pass those references forward intentionally.
-- The still-fix source-selection bug that allowed a reviewed motion `MP4` to flow into an image slot has now been fixed in code, but the stage should still be treated as secondary until character-scene mapping exists.
-- The current short-cut motion path appears to introduce an unwanted blue-shift relative to the approved keyframe and needs look-preservation tuning.
-- Longer 10-second clips are not yet represented as explicit multi-segment motion plans.
-- LM Studio authoring now covers clip-local prompt writing, but scene analysis, clip planning, and shared character/environment prompt generation still need live validation.
-- Shared prompt generation now uses one asset per LM Studio call, but a few assets still return empty output or malformed `inputs_markdown` and need one more resilience pass.
-- The chapter-authoring path should now use packetized Markdown exchanges with one bounded LM Studio task per call instead of trusting large strict-JSON responses from the local model.
-- The SQLite relational layer is now designed in the specs, but it does not exist in code yet.
-- The planning-time shot-start decision model is not yet implemented:
-  - continuity mode
-  - composition type
-  - dependency policy
-  - review fallback strategy
-- Optional identity-consistency assist after keyframe generation is not yet implemented:
-  - character-ref mapping
-  - safe multi-character targeting
-  - low-denoise reference-guided still correction
-- Experimental motion-time hand-fix LoRA support is not yet implemented or validated.
-- Scene-wide overnight batching is not yet implemented as a first-class orchestration mode.
-- The desktop/custom-node Comfy runtime on `8188` still fails inside the `comfyui_manager` logging path, so the clean render path remains the recommended smoke-test runtime.
+- We still need repeated full checkpoint validation to prove the current chapter pipeline can complete end-to-end without throwing.
+- The next quality-focused change is the character split:
+  - roster / identity pass
+  - per-character detail pass
+- Shared prompt generation and clip prompt writing may still need prompt tuning to reduce retries and malformed packet edge cases.
+- We do not yet have a reviewer/rework loop for weak but syntactically valid outputs.
+- The SQLite relational layer is still a future migration, not a current implementation target.
+- The multi-chapter world model is planned, but should not begin until the current single-chapter pipeline is consistently boring and reliable.
 
-## Next Immediate Step
+## Agreed Sequencing From Here
 
-Harden the remaining shared-prompt authoring edge cases before SQLite:
+This is the authoritative order we want to follow.
 
-1. make shared prompt generation resilient to empty LM Studio responses.
-2. make `inputs_markdown` parsing accept freeform path lines without failing the whole asset.
-3. keep scene planning and clip planning green while that last authoring edge case is fixed.
-4. then proceed to the character-to-scene mapping layer.
+### Stage A – Stabilize The Single-Chapter Checkpoint
 
-That sequence gives us a full file-first authoring handoff we can validate before introducing the database layer.
+#### Goal
+
+Get the current `princess_of_mars_test` checkpoint to run end-to-end reliably with no hard failures from packet drift, clip-id formatting, or malformed clip prompt output.
+
+#### Work In Scope
+
+- finish hardening chapter analysis, scene planning, shared prompt writing, and clip prompt writing
+- keep all LLM output in tagged Markdown packet form
+- keep all rigid structure generation in local parsers
+- improve logging, retry visibility, and failure artifacts until debugging is straightforward
+
+#### Verification
+
+We do **not** move on until all of the following are true:
+
+- 2-3 consecutive full checkpoint runs complete without an uncaught exception
+- any malformed clip or prompt target is either:
+  - recovered,
+  - skipped with a warning,
+  - or recorded as a bounded failure artifact
+- CLI output shows start / finish / retry / timing for essentially every LM Studio call
+- final summary clearly reports warnings, failures, and failed clips
+
+#### Useful Future Hooks To Preserve Now
+
+- packet parsing helpers should remain reusable by future authoring commands
+- clip/state warnings should remain machine-readable for later QA/rework logic
+- failure artifacts should preserve enough context to support later replay / rework tools
+
+### Stage B – Character Split (Quality Upgrade)
+
+#### Goal
+
+Improve character quality by separating discovery/identity work from detailed character authoring.
+
+#### New Flow
+
+1. character roster / identity pass
+2. per-character detail pass
+3. clarification/manual-description generation per character when needed
+
+#### Why This Happens Before Multi-Chapter
+
+- character identity is the first domain that must be stable before persistence exists
+- the multi-chapter system will depend on clean canonical character entities
+- this reduces the risk of building a persistent world model on top of noisy first-pass character records
+
+#### Verification
+
+- no duplicate canonical characters from one chapter unless explicitly unresolved
+- aliases are captured consistently
+- weakly identified characters become clarification requests instead of muddy canonical entries
+- per-character markdown quality improves relative to the one-shot extraction version
+
+#### Suggested Future Functions / Modules
+
+- `build_character_roster_packet(...)`
+- `parse_character_roster_packet(...)`
+- `author_character_detail_packet(...)`
+- `parse_character_detail_packet(...)`
+- `review_character_roster(...)`
+
+### Stage C – Output Review / Rework Layer
+
+#### Goal
+
+Add quality control after syntax stability is proven.
+
+#### Planned Capabilities
+
+- reviewer pass for character roster quality
+- reviewer pass for scene/clip planning quality
+- targeted rework for weak outputs
+- automated retry reasons plus optional reviewer explanation
+
+#### Verification
+
+- weak outputs are flagged before they pollute downstream prompt writing
+- rework targets only the broken items, not entire chapters/scenes
+- reviewer outputs remain tagged Markdown packets
+
+#### Suggested Future Functions / Modules
+
+- `review_packet_quality(...)`
+- `parse_review_packet(...)`
+- `apply_rework_request(...)`
+- `should_accept_packet(...)`
+
+### Stage D – File-First Multi-Chapter World Model (Wave 1)
+
+#### Goal
+
+Support ingestion of a full book, chapter splitting, chapter manifests, and chapter-by-chapter world updates while remaining file-first.
+
+#### Work In Scope
+
+- full-book ingestion
+- table-of-contents skipping
+- chapter boundary detection
+- chapter file generation
+- book manifest creation
+- project-level chapter processing loop
+
+#### Why This Starts Here
+
+- by this point the single-chapter flow should be stable
+- character extraction should already be split and improved
+- we can reuse packet parsing and review patterns instead of inventing them during the migration
+
+#### Verification
+
+- a full-book source can be split into chapter files with a parse report
+- front matter and table of contents are not misinterpreted as chapter bodies
+- chapter order is stable and auditable
+- re-running the chapter splitter is deterministic or clearly reports ambiguities
+
+#### Suggested Future Functions / Modules
+
+- `parse_full_book_to_chapter_candidates(...)`
+- `write_book_manifest(...)`
+- `write_book_parse_report(...)`
+- `reconcile_chapter_boundaries_with_llm(...)`
+- `parse_book_boundary_packet(...)`
+
+### Stage E – Persistent Character / Environment World Model (Wave 2)
+
+#### Goal
+
+Introduce persistent world state while still keeping Markdown files as the human-editable source of truth.
+
+#### Work In Scope
+
+- canonical character registry
+- canonical environment registry
+- alias resolution across chapters
+- layered description model
+- deferred clarification that can resolve later
+- chapter-to-world update flow
+
+#### Verification
+
+- later chapters can refine earlier unresolved character descriptions
+- chapter-specific and forward-from state changes are represented distinctly
+- canonical ids remain stable across updates
+- contradictions are logged, not silently overwritten
+
+#### Suggested Future Functions / Modules
+
+- `load_world_state(...)`
+- `update_world_from_chapter(...)`
+- `merge_character_update(...)`
+- `merge_environment_update(...)`
+- `resolve_alias_candidates(...)`
+- `write_world_index_markdown(...)`
+- `write_world_index_json(...)`
+
+### Stage F – Revision / Timeline / Snapshot Layer (Wave 3)
+
+#### Goal
+
+Support long-form continuity and future scene generation from time-correct state.
+
+#### Work In Scope
+
+- revision log
+- contradiction detection
+- character evolution timeline
+- environment state changes over time
+- chapter/scene state snapshots
+- prompt generation from frozen chapter/scene state only
+
+#### Verification
+
+- later reveals do not silently corrupt earlier chapter prompts
+- a scene generated from CH003 does not leak CH009 state
+- revisions are auditable
+- continuity questions are queryable from the file-first world model
+
+#### Suggested Future Functions / Modules
+
+- `detect_world_contradictions(...)`
+- `write_revision_entry(...)`
+- `build_chapter_state_snapshot(...)`
+- `build_scene_state_snapshot(...)`
+- `resolve_prompt_state_at_chapter(...)`
+
+### Stage G – SQLite Migration
+
+#### Goal
+
+Add a queryable relational layer **after** the file-first world model is stable.
+
+#### Rule
+
+SQLite does not become the source of truth first. It becomes a synced, queryable acceleration layer after the file structures and semantics are proven.
+
+#### Start SQLite Only When
+
+- single-chapter checkpoint is stable
+- character split is complete
+- file-first multi-chapter ingest exists
+- persistent world model exists
+- layered descriptions and alias resolution have settled enough to stop thrashing the schema
+
+#### Verification
+
+- the SQLite schema can be derived cleanly from working file-first artifacts
+- sync from files to SQLite is deterministic
+- the most useful queries are known from actual workflow pain points, not guessed in advance
+
+#### Suggested Future Functions / Modules
+
+- `db_init(...)`
+- `db_upgrade(...)`
+- `db_sync_from_files(...)`
+- `db_validate_against_files(...)`
+- `query_character_timeline(...)`
+- `query_scene_state(...)`
+- `query_alias_history(...)`
 
 ## Database Implementation Timing
 
-- The SQLite database should be implemented after:
-  - LM Studio authoring commands are validated
-  - chapter-based scene analysis and clip planning exist
-  - at least one scene has one or two prompt-ready clips
-  - character-to-scene mapping exists
-- The first database release should be:
+- SQLite should be implemented only after the world model semantics are stable enough to deserve schema permanence.
+- The first SQLite release should be:
   - per-project
   - SQLite
   - file-synced
   - read-mostly
-- It should not become the only source of truth for prompts or media in the first release.
+- Markdown, JSON, and media files remain canonical artifacts in the first database release.
+- SQLite should accelerate querying and reporting, not replace the file-first authoring system prematurely.
+
+## Near-Term Verification Matrix
+
+These are the checks we should run before moving beyond the current single-chapter stabilization work.
+
+### Verification Group 1 – End-to-End Stability
+
+- full authoring checkpoint completes without uncaught exception
+- output summary is produced
+- warnings/failures are bounded and inspectable
+
+### Verification Group 2 – Clip Planning Robustness
+
+- non-canonical clip ids are normalized or skipped with warnings
+- duplicate normalized ids do not corrupt outputs
+- at least one usable clip remains when clip planning succeeds semantically
+
+### Verification Group 3 – Prompt Writing Robustness
+
+- clip prompt writing uses tagged Markdown packets only
+- malformed packet responses create retries and failure artifacts, not raw JSON crashes
+- minimum viable clip-stage policy behaves as expected
+
+### Verification Group 4 – Logging / Debuggability
+
+- every LM Studio call logs start and finish
+- retries log a reason
+- durations are visible
+- relevant log files exist on disk
 
 ## End-To-End Delivery Plan
 
@@ -130,7 +364,6 @@ Make the first real human approval step complete and reproducible.
 - use `review-batch` to record:
   - top 2 finalists
   - one chosen primary
-  - review decision
 - promote the chosen primary into the approved keyframe slot
 - update `clip_state.json`:
   - `approved_assets.approved_keyframe`
@@ -304,8 +537,9 @@ Automate planning and prompt writing without changing the runner contract.
   - `keyframe`
   - `still_fix`
   - `cut_motion`
-- the next pre-SQL milestone is chapter-based analysis and scene planning for `princess_of_mars_test`
-- shared character/environment prompt writing and analysis generation remain planned follow-up work.
+- the chapter-based pilot is active.
+- shared character/environment prompt writing is active.
+- the current remaining priority is full validation and then character-split quality improvements before any multi-chapter migration.
 
 #### Handoff
 
@@ -342,7 +576,7 @@ Prove the authoring pipeline on a real public-domain chapter before any database
 
 #### Goal
 
-Add a queryable local relational layer after authoring and planning concepts have stabilized.
+Add a queryable local relational layer after authoring, character stability, and world-model concepts have stabilized.
 
 #### Deliverables
 
@@ -541,16 +775,13 @@ This preserves review quality while still letting you use sleep-time for the exp
 
 ## Recommended Build Order From Here
 
-1. Implement chapter intake, character extraction, environment extraction, and scene decomposition for `princess_of_mars_test`.
-2. Implement beat bundles plus scene-level clip planning for the first scene.
-3. Extend prompt writing from clip-local packages into shared character and environment prompt families.
-4. Write canonical clip-local prompt packages for one scene and one or two initial clips.
-5. Add character-to-scene mapping so each clip knows which approved character refs and environment refs it should use.
-6. Implement the first SQLite read-side sync layer after the authoring and mapping model stabilizes.
-7. Tune the short-cut motion path to preserve keyframe look without the current blue-shift.
-8. Validate `still_fix` from an approved keyframe only after character-scene mapping exists.
-9. Validate `still_fix` as a corrective stage, including optional identity-consistency assist.
-10. Add scene-wide stage-bounded overnight rendering.
-11. Add explicit multi-segment clip rules for longer cuts.
-12. Reserve LongLook for extended-cut workflows after the short-cut path is stable.
-13. Add cross-cut continuity rules and scene-scale video completion.
+1. Finish repeated validation of the single-chapter checkpoint until it is boring and reliable.
+2. Implement the character split:
+   - roster / identity pass
+   - per-character detail pass
+3. Add reviewer / rework support for weak but syntactically valid outputs.
+4. Only then begin file-first multi-chapter ingest and world-state migration.
+5. Add persistent character and environment world state.
+6. Add revision, contradiction, and snapshot tooling.
+7. Only after those stabilize, implement the SQLite read-side sync layer.
+8. Continue motion-path and batch-render improvements on top of the stabilized authoring foundation.
