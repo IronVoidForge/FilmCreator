@@ -1,16 +1,3 @@
-# Scene SC001 Beat Index
-
-## BT001 - Opening Procession Return
-**Beat Purpose:** Establish the ceremonial procession returning through deserted city streets after incubator ceremony.
-
-**Start State:** Narrator walking in procession, Martians visible in plaza distance, city appears empty.
-
-**End State:** Narrator enters building interior, transition from exterior to interior space complete.
-
-**Character Placement & Movement:** Narrator moves forward with procession, Woola follows close behind, Sola not yet present.
-
-**Geography/Axis/Eyeline:** Wide axis showing deserted city streets, eyeline toward plaza in distance, vertical transition from street level to building entrance.
-
-**Prop/Vehicle/Crowd/Environmental State:** Procession garments intact, no vehicles visible, Martians distant in plaza, ceremonial atmosphere fading.
-
-**Likely Coverage Families:** Wide establishing shots, medium tracking through streets, close-up on narrator's face.
+BT001 - Narrator observes fleet approaching from upper floor window
+BT002 - Warriors fire volley at approaching fleet
+BT003 - Ships maneuver and retreat with one disabled

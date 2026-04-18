@@ -11,10 +11,10 @@ corrective still generation preserving composition and look while fixing local i
 still.scene_insert.two_ref.klein.distilled
 
 # Positive Prompt
-medium tracking shot through dim corridor interior, narrator moving forward into space, hound following close at heel, stone walls visible, portal depth visible at far end, tension increasing, sunlight gleaming on devices, fire from burning ship creates floating funeral pyre effect in background, high stakes military engagement atmosphere, cinematic lighting, detailed textures
+green Martian warriors on balcony ledge, spears and banners ready for combat, gray painted airships in sky distance, valley hills vista background, combat preparation atmosphere, cinematic lighting, high tension, detailed textures, upper floor observation point, desert city buildings environment
 
 # Negative Prompt
-blurry, distorted anatomy, extra limbs, wrong colors, low resolution, artifacts, noise, bad hands, missing fingers, morphing faces, inconsistent lighting, watermark, text, signature
+blurry, distorted anatomy, extra limbs, wrong colors, low resolution, artifacts, noise, bad hands, missing fingers, morphing faces, inconsistent lighting, watermark, text, signature, corridor interior, narrator walking alone, dim lighting, dark shadows obscuring details
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -22,36 +22,36 @@ blurry, distorted anatomy, extra limbs, wrong colors, low resolution, artifacts,
 - clip_id: CL002
 - duration_seconds: 5
 - required_refs: image_1, image_2
-- optional_refs: corridor wall details, portal visibility at far end
-- visible_character_assets: narrator, hound
+- optional_refs: balcony ledge details, airship visibility in sky
+- visible_character_assets: green Martian warriors collective
 - look_continuity_policy: reblock_same_scene
-- intended_lighting_change: dimmer than exterior
-- composition_type: medium tracking -> close-up
+- intended_lighting_change: cinematic exterior match
+- composition_type: medium shot balcony
 - continuity_mode: reblock_same_scene
-- starting_keyframe_strategy: begin at building entrance
+- starting_keyframe_strategy: warriors positioned weapons ready
 - dependency_policy: dependent on CL001 completion for spatial continuity
 - auto_advance_policy: standard
 - fallback_strategy: static medium shot if tracking unavailable
-- consistency_assist_policy: 
-- consistency_assist_method: anatomy repair
-- anatomy_repair_policy: fix local issues
+- consistency_assist_policy: anatomy repair
+- consistency_assist_method: fix local issues
+- anatomy_repair_policy: preserve warrior features
 - consistency_targets: 
 - style_profile: princess_of_mars_test
 - batch_role: still_fix
 - fix_of: CL002
 
 # Continuity Notes
-- match lighting consistency between interior and exterior views
-- maintain narrator position and movement through building
+- match lighting consistency between balcony and sky views
+- maintain warrior position and movement through building
 - keep corridor depth perception consistent with previous shots
-- ensure portal visibility at far end remains clear
+- ensure airship visibility at far end remains clear
 - preserve spatial continuity while increasing tension through closer framing
 
 # Repair Notes
-- fix local anatomy issues on hound and narrator
-- correct lighting contrast between interior and exterior references
+- fix local anatomy issues on warriors and weapons
+- correct lighting contrast between interior balcony and exterior sky references
 - remove artifacts or noise from image_1 base
-- ensure portal visibility is not obscured by shadows
+- ensure airship visibility is not obscured by shadows
 - maintain high stakes military engagement atmosphere without distortion
 
 # Sources

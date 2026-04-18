@@ -1,17 +1,11 @@
-# Environment Index - Princess of Mars Test
+# Environment Index - Chapter VIII
 
-## Extracted Environments
+## Primary Observation Setting
+- Upper floor window (narrator's vantage point)
 
-| Asset ID | Environment Name | Role |
-|----------|------------------|------|
-| upper_floor_window | Upper Floor Window View | Primary Observation Point |
-| building_roofs | Building Roofs | Secondary Transit Setting |
-| plaza | Martian Plaza | Primary Action Arena |
-| building_interior | Building Interior Depths | Secondary Portal Setting |
-| disabled_airship | Disabled Airship Hull | Recovery Operation Zone |
+## Transit/Encounter Setting  
+- Plaza (public gathering space, prisoner encounter location)
 
-## Environment Categories
-
-- **Observation Points:** upper_floor_window, building_roofs
-- **Action Arenas:** plaza, disabled_airship
-- **Portal Settings:** building_interior
+## Combat/Background Setting
+- Deserted city buildings (urban decay environment)
+- Valley/hills vista (distant landscape backdrop)

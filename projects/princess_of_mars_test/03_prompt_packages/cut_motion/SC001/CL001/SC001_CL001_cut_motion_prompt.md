@@ -5,13 +5,13 @@ SC001 CL001 Cut Motion Prompt
 SC001_CL001_cut_motion_prompt
 
 # Purpose
-Fill in the stage intent for cut motion generation between keyframes.
+Generate cut motion starting from approved opening frame, preserving keyframe lighting and grade, focusing on visible motion, camera behavior, and environment change.
 
 # Workflow Type
 video.cut_motion.wan.i2v
 
 # Positive Prompt
-Wide establishing shot transitions to medium tracking forward movement. Narrator walks through deserted city streets with procession garments intact. Woola follows close behind at heel. Camera tracks subject smoothly into building entrance interior depth. Lighting remains consistent with exterior sunlight gleaming on surroundings. Environment shifts from open valley view to corridor space.
+Over-the-shoulder view of human observer looking out window frame. Fleet of gray vessels approaches in distance valley. Slight zoom or pan tracks fleet movement. Deserted city buildings and open plaza visible. Daylight lighting consistent with keyframe. Cinematic grade.
 
 # Negative Prompt
 morphing artifacts, flickering lighting, wrong anatomy, extra characters, sudden crowd appearance, incorrect camera angle, distorted background, inconsistent grade, blurry motion, static frame, low resolution
@@ -23,15 +23,15 @@ morphing artifacts, flickering lighting, wrong anatomy, extra characters, sudden
 - duration_seconds: 5
 - required_refs: BT001.md, Scene SC001 breakdown
 - optional_refs: Procession garment details, plaza distance markers
-- visible_character_assets: narrator, woola
+- visible_character_assets: human observer at window frame, green warriors on balcony below
 - look_continuity_policy: preserve_keyframe_lighting
 - intended_lighting_change: none
-- composition_type: wide_establishing_to_medium_tracking
+- composition_type: over_the_shoulder_observation_to_zoom_track_fleet
 - continuity_mode: cut
-- starting_keyframe_strategy: establish_exterior_city_context_first
+- starting_keyframe_strategy: establish_vertical_axis_elevated_observer
 - dependency_policy: none_standalone_opening_shot
 - auto_advance_policy: standard
-- fallback_strategy: use_static_wide_if_tracking_unavailable
+- fallback_strategy: use_static_wide_if_zoom_unavailable
 - consistency_assist_policy: enabled
 - consistency_assist_method: interval_frames
 - anatomy_repair_policy: enabled
@@ -43,14 +43,14 @@ morphing artifacts, flickering lighting, wrong anatomy, extra characters, sudden
 # Continuity Notes
 - Preserve keyframe lighting and grade by default.
 - Focus on visible motion, camera behavior, and environment change.
-- Ensure narrator moves forward smoothly into interior.
-- Maintain procession garment integrity throughout transition.
-- Keep Woola close behind at heel throughout transition.
+- Ensure fleet approaches smoothly without jumping.
+- Maintain vertical axis of observer above city.
+- Keep green warriors stationary or firing in place below.
 
 # Repair Notes
-- Fix any morphing artifacts during wide-to-medium transition.
-- Ensure lighting consistency between exterior and interior entrance.
-- Correct anatomy if narrator or Woola distort during movement.
+- Fix any morphing artifacts during zoom/pan transition.
+- Ensure lighting consistency between exterior view and window frame interior.
+- Correct anatomy if human observer or green warriors distort during movement.
 - Maintain environment state (deserted streets) without introducing new crowds prematurely.
 
 # Sources

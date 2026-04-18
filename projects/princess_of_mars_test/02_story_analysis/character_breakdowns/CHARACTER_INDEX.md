@@ -1,8 +1,11 @@
-# Character Index: CH001
+# Character Index - Chapter VIII
 
-| Asset ID | Canonical Character ID | Aliases | Fully Identified | Manual Description Required | Clarification Required |
-|----------|------------------------|---------|------------------|------------------------------|------------------------|
-| narrator_ch001 | narrator | - | true | true | false |
-| sola_ch001 | sola | - | true | true | false |
-| woola_ch001 | woola | - | true | true | false |
-| captive_ch001 | captive | - | true | false | false |
+| Display Name | Role | Physical Presence | Description Status |
+|--------------|------|-------------------|--------------------|
+| The Narrator | Observer/Protagonist | Present (observation point) | Manual description required |
+| The Prisoner | Captive/Secondary | Referenced (encounter point) | Fully described |
+
+**Notes:**
+- Both characters lack specific names in the chapter text.
+- Visual descriptions are sufficient for image generation except for the Narrator.
+- Clarification questions needed for canonical identification.

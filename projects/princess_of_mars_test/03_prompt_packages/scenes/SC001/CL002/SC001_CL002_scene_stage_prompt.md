@@ -5,46 +5,46 @@ SC001 CL002 Scene Stage Prompt
 SC001_CL002_scene_stage_prompt
 
 # Purpose
-Define the staging intent for the interior corridor transition, establishing subject placement within the building depth and environmental context for the opening frame setup.
+Define staging intent for the balcony combat preparation scene, establishing subject placement on the ledge and environmental context for the opening frame setup.
 
 # Workflow Type
 authoring.scene_stage
 
 # Positive Prompt
-Medium tracking shot through dim interior corridor, narrator moving forward into depth, hound following close behind, stone walls visible, portal depth in background, lighting consistent with exterior view but darker, tense atmosphere, transition from entrance to corridor space
+Medium shot of green-skinned warriors positioned on stone balcony ledge, weapons held ready at stations, spears and banners visible, distant gray airships in sky above valley vista, clear daylight conditions, urban city buildings in background, combat tension atmosphere, vertical axis established between elevated warriors and distant fleet
 
 # Negative Prompt
-exterior valley view, bright sunlight, crowd of martians, Sola present, static camera, wide establishing shot, cartoon style, floating funeral pyre
+interior corridor space, human figure walking forward, bright sunlight glare, crowd of civilians, static camera movement, wide establishing shot, cartoon style, floating funeral pyre, close-up on faces only
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: SC001
 - clip_id: CL002
 - duration_seconds: 5
-- required_refs: 
-- optional_refs: 
-- visible_character_assets: 
-- look_continuity_policy: 
-- intended_lighting_change: 
-- composition_type: medium tracking through corridors
-- continuity_mode: reblock_same_scene
-- starting_keyframe_strategy: begin at building entrance
-- dependency_policy: 
-- auto_advance_policy: 
-- fallback_strategy: 
-- consistency_assist_policy: 
-- consistency_assist_method: 
-- anatomy_repair_policy: 
-- consistency_targets: 
-- style_profile: 
-- batch_role: 
-- fix_of: 
+- required_refs: BT001.md, Scene SC001 overview
+- optional_refs: Window frame for spatial continuity
+- visible_character_assets: Green Martian Warriors (collective on balcony/ledge), Airships (distant in sky)
+- look_continuity_policy: Follows CL001 observation sequence
+- intended_lighting_change: Clear daylight conditions
+- composition_type: Medium shot of warriors on balcony
+- continuity_mode: Cut to combat preparation
+- starting_keyframe_strategy: Warriors positioned, weapons ready for engagement
+- dependency_policy: Follows CL001 observation sequence
+- auto_advance_policy: Insert close-up on weapon stations if warriors not visible
+- fallback_strategy: Insert close-up on weapon stations if warriors not visible
+- consistency_assist_policy: Maintain spatial continuity from previous clip
+- consistency_assist_method: Narrator position must align with corridor axis
+- anatomy_repair_policy: Fix anatomy if limbs distort during movement
+- consistency_targets: Height of narrator vs city, color of airships vs buildings, number of ships visible
+- style_profile: authoring.scene_stage
+- batch_role: planning
+- fix_of: SC001_CL002_scene_stage_prompt.md
 - workflow_type: authoring.scene_stage
 
 # Continuity Notes
 - Maintain spatial continuity from previous clip
-- Narrator position must align with corridor axis
-- Lighting must reflect interior depth shift
+- Warrior positioning must align with balcony axis
+- Lighting must reflect exterior view consistency
 - Woola remains trailing narrator throughout movement
 
 # Repair Notes

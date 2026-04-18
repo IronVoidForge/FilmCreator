@@ -5,25 +5,25 @@ upper_floor_window Environment Reference Prompt
 upper_floor_window_ref_prompt
 
 # Purpose
-Primary observation point for narrator's initial perspective, establishing elevated window frame overlooking valley terrain and distant hills with natural daylight filtering through glass panes. Soft shadows cast by interior architecture contrast with exterior openness. Martian atmospheric haze over valley floor suggests environmental conditions. Window frame establishes human scale against vast landscape. Interior room boundaries define intimate space contrasting with exterior openness.
+Primary observation setting for narrator's vantage point during fleet engagement sequence. Elevated interior space with window opening to exterior cityscape, providing panoramic view of approaching airships and distant valley terrain. Daytime conditions with natural light filtering through window frame. Atmospheric tension conveyed through elevated perspective during combat sequence.
 
 # Workflow Type
 still.t2i.klein.distilled
 
 # Positive Prompt
-elevated observation vantage, framed valley view, distant hill silhouette, interior window frame, Martian atmospheric haze, natural daylight filtering through glass panes, soft shadows cast by interior architecture, human scale against vast landscape, intimate interior room boundaries, elevated window overlooking terrain, glass panes providing framed view of landscape beyond immediate city walls
+elevated interior observation point, window frame architectural anchor, panoramic cityscape vista, daylight natural illumination, interior-exterior visual boundary, narrator's vantage position, upper floor residential space, clear sky visibility conditions, gray-painted vessels against sky backdrop, green warriors on building facades, burning ship drifting across valley floor
 
 # Negative Prompt
-proper nouns, brand names, specific character references, indoor artificial lighting, night time conditions, heavy fog obscuring distant hills, close-up interior only without exterior view, distorted perspective, unrealistic scale proportions, modern urban skyline elements, clear weather without atmospheric haze, low angle shots from ground level
+proper nouns, brand names, specific character names, interior darkness, night conditions, cloudy sky, street level view, close-up perspective, blurry details, distorted proportions, artificial lighting, indoor shadows, obscured visibility, low resolution, pixelation, color bleeding, inconsistent scale
 
 # Inputs
 - source_1: projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/upper_floor_window.md
 
 # Continuity Notes
-- Maintain consistent elevated perspective across all frames. Window frame boundaries should remain stable in composition. Atmospheric haze density should not vary significantly between shots. Interior room scale must stay human-sized relative to exterior landscape. Lighting temperature should reflect natural daylight conditions throughout sequence.
+- Window frame serves as primary architectural anchor. Elevated position allows observation of: twenty airships at distance, green warriors on building facades, burning ship drifting southeast across valley floor. Interior space provides intimate contrast to expansive exterior battlefield view. Daylight natural illumination maintains consistent time period. Clear sky visibility conditions establish atmospheric baseline for combat sequence.
 
 # Repair Notes
-- If generation shows ground-level perspective, reframe to elevated vantage point. If interior dominates without exterior view, ensure glass panes provide framed landscape beyond city walls. If atmospheric haze is missing, add Martian atmospheric conditions over valley floor. If lighting appears artificial, adjust to natural daylight filtering through window glass.
+- Maintain window frame as stable architectural anchor across all shots. Preserve elevated interior-exterior visual boundary consistency. Ensure daylight natural illumination remains constant throughout engagement sequence. Verify clear sky visibility conditions match established atmospheric tension. Keep scale cues consistent between interior observation point and exterior battlefield elements.
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/ENVIRONMENT_INDEX.md

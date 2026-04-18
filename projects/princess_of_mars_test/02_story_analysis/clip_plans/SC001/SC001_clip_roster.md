@@ -1,19 +1,35 @@
-# Clip Roster - Scene SC001: The Retreat After Ceremony
+# Clip Roster - SC001 Princess of Mars Test
 
 ## Overview
-This clip roster organizes the scene beats into a structured sequence of shots, targeting approximately 5-second intervals per clip while maintaining continuity and emotional progression.
+**Scene Purpose:** Establish threat observation from elevated position, execute combat volley, and show fleet retreat with damage sustained.
 
-## Clip Sequence
+**Total Clips:** 6 clips (targeting ~5 seconds each)
 
-| Clip ID | Beat Reference | Duration | Shot Type | Continuity Mode |
-|---------|----------------|----------|-----------|-----------------|
-| CL001 | BT001 (Opening) | ~5s | Wide establishing → Medium tracking | cut |
-| CL002 | BT002 (Corridor) | ~5s | Medium tracking → Close-up | reblock_same_scene |
-| CL003 | BT003 (Window) | ~5s | POV window view → Close-up narrator | insert |
-| CL004 | BT004 (Sola) | ~5s | Medium shot Sola entrance → Close-up reaction | cutaway |
+---
 
-## Notes
-- All clips target approximately 5-second intervals for consistent pacing
-- Continuity sensitivities tracked: Narrator movement, lighting consistency, character positioning
-- Emotional arc: Peaceful ceremony → Tense retreat → Anticipation of threat
-- Character assets: Narrator (primary), Woola (hound), Sola (entrance)
+## Clip List
+
+| Clip ID | Beat Reference | Duration | Composition Type | Continuity Mode |
+|---------|----------------|----------|------------------|-----------------|
+| CL001 | BT001 - Part A | 5s | Over-the-shoulder at narrator | Long shot of fleet in distance |
+| CL002 | BT001 - Part B | 5s | Medium shot of warriors on balcony | Cut to combat preparation |
+| CL003 | BT002 - Part A | 5s | Medium shot of warriors firing weapons | Close-up on weapon discharge effects |
+| CL004 | BT002 - Part B | 5s | Long shot of fleet receiving fire damage | Cut to ships reacting |
+| CL005 | BT003 - Part A | 5s | Wide shot of fleet retreating along valley | Medium shot of disabled ship drifting away |
+| CL006 | BT003 - Part B | 5s | Long shot establishing retreat distance from city | Cut to aftermath |
+
+---
+
+## Initial Test Clips (Recommended)
+
+**CL001 & CL002** - Strong initial test sequence for threat observation and combat preparation. These clips establish the vertical axis and viewer position before action intensifies.
+
+**CL003 & CL004** - Recommended for testing combat volley coverage families with weapon discharge effects and fleet damage indicators.
+
+---
+
+## Scene Continuity Sensitivities
+
+- Height of narrator vs city (maintain vertical axis)
+- Color of airships vs buildings (ensure visual distinction)
+- Number of ships visible (track from distant to closer approach)

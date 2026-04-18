@@ -11,10 +11,10 @@ corrective still generation preserving composition and look while fixing local i
 still.scene_insert.two_ref.klein.distilled
 
 # Positive Prompt
-fidelity to approved still base, deserted city streets, ceremonial procession moving through empty space, observer character walking forward, hound companion following close behind, distant green warriors, gray airships in background, sunlight gleaming on devices, wide establishing composition, medium tracking perspective, maintain original lighting and color palette
+fidelity to approved still base, upper floor window view, deserted city buildings, gray airships in sky, green warriors on balcony below, observer character stationary at frame, hound companion following close, sunlight gleaming on devices, wide establishing composition, medium tracking perspective, maintain original lighting and color palette
 
 # Negative Prompt
-distorted anatomy, extra limbs, wrong skin tone, inconsistent lighting, blurry details, text, watermark, floating objects, mismatched colors, crowded foreground, sudden movement artifacts, new crowd elements, incorrect character positioning
+distorted anatomy, extra limbs, wrong skin tone, inconsistent lighting, blurry details, text, watermark, floating objects, mismatched colors, crowded foreground, sudden movement artifacts, new crowd elements, incorrect character positioning, wrong number of ships, incorrect ship color, distorted window frame, misplaced horizon line
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -26,10 +26,10 @@ distorted anatomy, extra limbs, wrong skin tone, inconsistent lighting, blurry d
 - visible_character_assets: observer character, hound companion
 - look_continuity_policy: 
 - intended_lighting_change: 
-- composition_type: 
-- continuity_mode: 
-- starting_keyframe_strategy: 
-- dependency_policy: 
+- composition_type: over-the-shoulder at narrator looking out
+- continuity_mode: long shot of fleet in distance
+- starting_keyframe_strategy: establish vertical axis with narrator elevated above city
+- dependency_policy: none - standalone observation clip
 - auto_advance_policy: 
 - fallback_strategy: 
 - consistency_assist_policy: 
@@ -46,12 +46,16 @@ distorted anatomy, extra limbs, wrong skin tone, inconsistent lighting, blurry d
 - keep observer position forward
 - ensure hound follows close
 - avoid introducing new crowd elements
+- match gray airship color to background sky
+- ensure green warriors match balcony elevation
 
 # Repair Notes
 - correct local artifacts on approved base
 - smooth edges of distant figures
 - match color palette to Mars setting
 - fix any anatomical distortions in foreground characters
+- align window frame geometry with perspective
+- ensure ship count matches continuity requirements
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/SC001/CL001.md

@@ -5,16 +5,16 @@ SC001 CL002 Keyframe Prompt
 SC001_CL002_keyframe_prompt
 
 # Purpose
-Establish spatial transition from exterior to interior corridor while maintaining lighting continuity and character positioning for the tracking shot sequence
+Establish combat preparation state from elevated balcony position with distant fleet visible
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Medium shot of narrator character stepping through doorway into dim corridor space, hound follower moving closely behind heels, stone walls lining passage, distant portal visible at far end, natural light filtering from entrance contrasting with interior shadows, tension in posture, abandoned building atmosphere
+Medium shot of green-skinned warriors standing on stone balcony ledge, weapons held ready for discharge, spears and banners visible, distant gray-painted airships sailing in sky above valley vista, clear daylight conditions, urban decay environment background, anticipation of combat action, vertical axis established with elevated position
 
 # Negative Prompt
-exterior landscape, bright sunlight, crowd of warriors, green skin, airships, fire, smoke, weapons, other characters, distorted anatomy, blurry focus, text, watermark, project id, scene number
+interior corridor, narrator face close-up, bright sunlight, crowd of civilians, fire, smoke, burning ship, prisoner figure, distorted anatomy, blurry focus, text, watermark, project id, scene number, low resolution, extra limbs, missing weapons
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -42,15 +42,15 @@ exterior landscape, bright sunlight, crowd of warriors, green skin, airships, fi
 - workflow_type: still.scene_build.four_ref.klein.distilled
 
 # Continuity Notes
-- Maintain lighting consistency with previous exterior shots (dimmer interior)
-- Ensure narrator position matches tracking shot start
-- Keep background portal visible but out of focus
-- No green warriors or ships in frame
+- Maintain vertical axis with elevated observation point
+- Ensure green skin tone consistency across warriors
+- Keep distant airships visible but not dominating frame
+- Match lighting conditions with previous exterior shots
 
 # Repair Notes
-- Fix any anatomy distortions on hound companion
-- Correct lighting mismatch if interior looks too bright
-- Ensure doorway transition is clear
+- Fix any anatomy distortions on warrior figures
+- Correct lighting mismatch if balcony looks too dark
+- Ensure weapons are clearly visible and ready
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/SC001/CL002.md

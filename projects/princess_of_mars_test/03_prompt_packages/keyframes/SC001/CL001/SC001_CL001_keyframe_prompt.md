@@ -5,16 +5,16 @@ SC001 CL001 Keyframe Prompt
 SC001_CL001_keyframe_prompt
 
 # Purpose
-Generate frozen keyframe for opening procession return beat, establishing exterior city context before narrator movement
+Generate frozen keyframe for opening observation beat, establishing exterior city context and threat presence before narrator movement
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-wide establishing shot of deserted city streets, ceremonial procession moving through empty space, narrator walking forward in center frame, small hound following close behind, distant plaza crowded with green-clad warriors, sunlight gleaming on ceremonial garments, empty valley visible beyond city walls, peaceful yet tense atmosphere, high fidelity still image
+over-the-shoulder view of human observer standing at upper floor window frame, distant sky containing gray-painted airships approaching valley, green-skinned warriors positioned on balcony ledge below, clear daylight illumination, vertical axis established with elevated position, deserted city buildings visible in background, calm atmosphere before combat
 
 # Negative Prompt
-blurry, distorted faces, extra limbs, missing hands, text, watermark, low resolution, dark shadows, night time, crowded streets, modern clothing, green skin on narrator, fire, smoke, Sola present, buildings collapsing
+blurry, distorted faces, extra limbs, missing hands, text, watermark, low resolution, dark shadows, night time, crowded streets, modern clothing, fire, smoke, collapsing buildings, indoor artificial light, close-up of prisoner
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -23,12 +23,12 @@ blurry, distorted faces, extra limbs, missing hands, text, watermark, low resolu
 - duration_seconds: 5
 - required_refs: BT001.md, Scene SC001 breakdown
 - optional_refs: Procession garment details, plaza distance markers
-- visible_character_assets: Narrator, Woola
+- visible_character_assets: human observer, green-skinned warriors
 - look_continuity_policy: 
 - intended_lighting_change: 
-- composition_type: Wide establishing → Medium tracking
+- composition_type: over-the-shoulder at narrator looking out
 - continuity_mode: cut
-- starting_keyframe_strategy: 
+- starting_keyframe_strategy: establish vertical axis with narrator elevated above city
 - dependency_policy: 
 - auto_advance_policy: 
 - fallback_strategy: 
@@ -42,9 +42,9 @@ blurry, distorted faces, extra limbs, missing hands, text, watermark, low resolu
 
 # Continuity Notes
 - Maintain exterior daylight lighting consistency with valley view
-- Ensure narrator remains central in frame during walking motion
+- Ensure narrator remains stationary at window frame during keyframe
 - Keep distant plaza warriors visible but not obstructing foreground action
-- Verify hound follows close behind without blocking narrator path
+- Verify hound follows close behind without blocking narrator path if present
 - Preserve deserted city street environment state throughout keyframe
 
 # Repair Notes

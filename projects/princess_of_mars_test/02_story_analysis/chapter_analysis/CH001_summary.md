@@ -1,30 +1,17 @@
-# Chapter Summary: A Fair Captive from the Sky
+# Chapter Label
+Chapter VIII - A Fair Captive from the Sky
 
-## Story Arc
-1.  **Retreat:** The procession returns to a deserted city immediately after an incubator ceremony due to sudden orders.
-2.  **Airship Arrival:** Twenty gray-painted airships swing over the hills toward the city. They are met with a volley of fire from building windows.
-3.  **Naval Engagement:** Green Martian warriors return fire with high accuracy, targeting crew points and upper works. Several ships limp away; one is disabled and drifting.
-4.  **Recovery Operation:** Warriors board the disabled ship to loot arms, ammunition, jewels, and water. They burn the vessel from within before towing it away.
-5.  **Discovery:** While returning to the plaza, the narrator spots a slender, girlish figure being dragged into a building by green Martian females.
+# Story Summary
+The procession returns home after the incubator ceremony but is ordered back immediately upon seeing a fleet of airships approaching. The narrator observes from an upper floor window as twenty gray-painted vessels sail toward the city. Green Martian warriors fire a volley from building windows, engaging the ships. The fleet returns fire and maneuvers to complete circles before retreating. One ship is disabled and drifting southeast. Warriors chase it, board with spears and grappling hooks, and loot the vessel of arms, jewels, water, and food. They empty carboys onto the dead crew and burn the ship as a funeral pyre. The narrator witnesses the burning from the roof until it drifts into the distance. Depressed by the defeat of a kindred people's forces, he descends to the street. In the plaza, he sees a prisoner being dragged into a building. He catches a glimpse of her before she enters: a slender, girlish figure with coal black hair and reddish copper skin. She looks at him with hope then dejection as she is dragged away.
 
-## Visual Continuity Facts
-- **Locations:**
-    - Upper floor window (view of valley/hills).
-    - Building roofs (observation point).
-    - Plaza (crowded with Martians).
-    - Building interior (portal/depths).
-- **Characters & Appearance:**
-    - **Narrator:** Observes from distance, descends to street.
-    - **Sola:** Rushes up to narrator upon arrival at plaza.
-    - **Woola:** Hound follows close at heel.
-    - **Captive:** Slender, girlish figure. Skin: light reddish copper. Hair: coal black, loosely caught. Features: Oval face, large lustrous eyes, finely chiseled. Attire: Destitute of clothes except ornaments.
-- **Actions:**
-    - Warriors melt like mist into doorways.
-    - Ships swing broadside and circle.
-    - Bodies strewn about decks (crews dead/unmanned).
-    - Grappling hooks used to haul ship to ground.
-    - Missile thrown back onto vessel causing flame spurt.
-- **Atmosphere:**
-    - Initial: Peaceful advance of ships.
-    - Middle: Deadly accuracy, fire, smoke.
-    - End: Hope mixed with dejection; captive looks at narrator with hope then loathing.
+# Visual Continuity Facts
+- **Location:** Upper floor window (observation point), Plaza (encounter point).
+- **Martian Warriors:** Green skin, erect walking, wear spears, banners, ornaments.
+- **Airships:** Gray-painted, long, low, twenty total, carry strange devices on prow/stem.
+- **Combat Visuals:** Figures drop at bullet explosions; banners dissolve in flame; ships swing broadside.
+- **Prisoner Appearance:** Slender girlish figure, oval face, finely chiseled features, large lustrous eyes, coal black waving hair (loose coiffure), light reddish copper skin, crimson cheeks, ruby lips.
+- **Attire:** Destitute of clothes, entirely naked save for highly wrought ornaments.
+- **Height Comparison:** Prisoner considerably less than half as tall as green Martian warriors.
+- **Movement:** Walks erect upon two legs; dragged by females into building.
+- **Environment:** Deserted city buildings, open ground/plaza, valley/hills vista.
+]]

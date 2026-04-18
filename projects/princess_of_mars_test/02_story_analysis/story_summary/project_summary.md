@@ -1,19 +1,34 @@
-# Project Summary
+# Project Title
+A Princess of Mars
 
-**Setting:** Mars. The environment features open valleys, outlying hills, and spacious city buildings with upper floors and windows.
+# Author
+Edgar Rice Burroughs
 
-**Factions:**
-- **Green Martians:** Warriors equipped with spears, chariots, mastodons, and mounted gear. They display high marksmanship accuracy targeting specific crew points (wireless, officers, steering).
-- **Narrator's Group:** Includes the narrator (John Carter), Sola, and Woola (hound). They occupy city buildings for defense.
+# Setting
+Martian City (Green Martians)
 
-**Technology & Assets:**
-- **Airships:** Long, low, gray-painted vessels with banners and upper works. Capable of flight at fifty feet above ground.
-- **Transport:** Chariots and mastodons used for movement and loot transport.
-- **Incubation:** Reference to an "incubator ceremony" preceding this chapter's events.
+# Core Characters
+- Narrator (Human Observer)
+- Sola (Martian Companion)
+- Woola (Hound)
+- Lorquas Ptomel (Old Warrior Leader)
 
-**Visual Continuity Baseline:**
-- **Colors:** Green warriors, gray ships, copper skin (captive), black hair, crimson cheeks, ruby lips.
-- **Materials:** Wooden parts on ships, stone vessels, silks, furs, jewels.
-- **Lighting:** Sunlight gleaming on devices; fire from burning ship creates a "floating funeral pyre."
+# Narrative Context
+The story follows a human observer on Mars, accompanied by local Martians and a hound. The narrative explores advanced Martian technology, including airships and wireless apparatus, alongside inter-species warfare. Key themes include the accuracy of combat aim, societal structures of the green warriors, and the discovery of new species or monstrosities.
 
-**Narrative Tone:** High-stakes military engagement transitioning to personal discovery. The narrator observes events from defensive positions (windows, roofs) before descending to the plaza.
+# Continuity Notes
+- Incubator ceremony precedes this chapter's events.
+- Martians retreat to city buildings for protection.
+- Fleet engagement occurs over the valley/hills.
+- Narrator observes from upper floors/windows.
+- Woola follows close at heel.
+- Sola interacts with narrator in plaza.
+
+# Reusable Elements
+- Martian warriors are green and wear spears/banners.
+- Airships are gray-painted, long, low, and carry strange devices.
+- Combat involves volley fire from buildings and ship guns.
+- Loot includes arms, ammunition, silks, furs, jewels, stone vessels, food/liquid.
+- Ship destruction involves burning as a funeral pyre.
+- Prisoner discovery involves dragging figure to ground/building.
+]]
