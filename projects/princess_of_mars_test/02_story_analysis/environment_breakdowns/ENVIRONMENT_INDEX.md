@@ -1,10 +1,18 @@
-# Environment Index - Princess of Mars Test
+# Environment Index - Princess of Mars Test (Chapter VIII)
 
-## Extracted Environment Families
+## Stable Environment Families
 
-| Asset ID | Role | Description |
-|----------|------|-------------|
-| city_buildings | primary | Deserted urban structures with windows and roofs where Martians fire from |
-| valley_floor | transit | Open ground between city buildings and distant hills |
-| hills_background | secondary | Elevated geography beyond the valley floor |
-| airship_fleet | secondary | Gray vessels with banners approaching and retreating from city |
+| Asset ID | Role | Primary Anchor |
+|----------|------|----------------|
+| city | primary | urban windows, deserted streets |
+| hills | transit | hill crests, arrival/dip zones |
+| valley | secondary | open drift space, southeast direction |
+| buildings | secondary | window firing positions, urban structures |
+| airship | secondary | crashed vessel, wooden decks, upper works |
+
+## Notes
+
+- All environments stable across reruns
+- Focus on visible geography and atmosphere
+- Excludes literary abstractions
+- Includes recurring environmental anchors

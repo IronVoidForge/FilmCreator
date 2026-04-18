@@ -11,10 +11,10 @@ Establish fleet formation and scale relative to city landscape from elevated obs
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-elevated window observation point, distant gray airships forming pattern across horizon, deserted city rooftop network in background, valley vista below, morning light brightening sky, human male observer profile visible at window frame, urban decay environment, clear daylight conditions
+elevated stone observation platform, two human observers in profile view, distant gray-painted airships forming pattern across horizon, deserted urban rooftop network below, valley vista stretching southward, morning sunlight illuminating sky, fleet halfway over hill crest, mechanical devices gleaming on prows
 
 # Negative Prompt
-interior corridor, close-up face details, crowd of civilians, fire, smoke, burning ship, prisoner figure, distorted anatomy, blurry focus, text, watermark, low resolution, extra limbs, missing weapons
+interior corridor, close-up facial features, crowd of civilians, fire, smoke, burning vessel, prisoner figure, distorted anatomy, blurry focus, text, watermark, low resolution, extra limbs, missing weapons, green Martian warriors, chariots
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -23,15 +23,15 @@ interior corridor, close-up face details, crowd of civilians, fire, smoke, burni
 - duration_seconds: 5
 - required_refs: 
 - optional_refs: 
-- visible_character_assets: 
-- look_continuity_policy: 
-- intended_lighting_change: 
-- composition_type: Medium tracking through corridors
+- visible_character_assets: human male observer, female companion
+- look_continuity_policy: motion_opening
+- intended_lighting_change: golden hour sunlight
+- composition_type: medium tracking through corridors
 - continuity_mode: reblock_same_scene
-- starting_keyframe_strategy: 
-- dependency_policy: 
+- starting_keyframe_strategy: fleet halfway over hill crest
+- dependency_policy: dependent_on_CL001
 - auto_advance_policy: 
-- fallback_strategy: 
+- fallback_strategy: reframe_same_moment
 - consistency_assist_policy: 
 - consistency_assist_method: 
 - anatomy_repair_policy: 
@@ -40,6 +40,7 @@ interior corridor, close-up face details, crowd of civilians, fire, smoke, burni
 - batch_role: 
 - fix_of: 
 - workflow_type: still.scene_build.four_ref.klein.distilled
+- video_prompt_package: 
 
 # Continuity Notes
 - Maintain vertical axis with elevated observation point

@@ -1,8 +1,6 @@
-# Character Index - Chapter VIII (CH001)
-
-| Asset ID | Canonical ID | Role | Status | Description Source |
+| Asset ID | Canonical Name | Role | Presence | Description Status |
 | :--- | :--- | :--- | :--- | :--- |
-| `narrator` | `narrator` | Narrator / Observer | Referenced | None provided |
-| `prisoner` | `prisoner` | Prisoner / Captive | Physically Present | Visual Continuity Facts |
-| `martian_warrior` | `martian_warrior` | Warrior / Defender | Physically Present | Visual Continuity Facts |
-| `martian_female` | `martian_female` | Warrior / Capturer | Physically Present | Broad Story Summary |
+| carter | Carter | Leader/Warrior | Referenced | Missing Physical Details |
+| sola | Sola | Companion/Leader | Referenced | Missing Physical Details |
+| lorquas_ptomel | Lorquas Ptomel | City Guardian | Referenced | Missing Physical Details |
+| martian_prisoner | The Prisoner | Captive | Referenced | Detailed Visual Description |

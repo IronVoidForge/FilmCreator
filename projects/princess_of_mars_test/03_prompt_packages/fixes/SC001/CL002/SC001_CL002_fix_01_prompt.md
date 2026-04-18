@@ -11,10 +11,10 @@ corrective still generation preserving composition and look while fixing local i
 still.scene_insert.two_ref.klein.distilled
 
 # Positive Prompt
-human male warrior standing at window frame observing gray painted airships in sky distance, desert city buildings environment, valley hills vista background, daylight lighting conditions, cinematic exterior match, high tension atmosphere, detailed textures, upper floor observation point, military engagement preparation
+two observers on elevated platform left and right foreground, twenty gray painted airships descending over hill crest background, fortified city buildings environment, valley hills vista background, daylight lighting conditions, cinematic exterior match, high tension atmosphere, detailed textures, upper floor observation point, military engagement preparation, golden hour sunlight highlights on prows devices
 
 # Negative Prompt
-blurry, distorted anatomy, extra limbs, wrong colors, low resolution, artifacts, noise, bad hands, missing fingers, morphing faces, inconsistent lighting, watermark, text, signature, dark shadows obscuring details
+blurry, distorted anatomy, extra limbs, wrong colors, low resolution, artifacts, noise, bad hands, missing fingers, morphing faces, inconsistent lighting, watermark, text, signature, dark shadows obscuring details, motion blur, overexposed highlights, underexposed shadows
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -23,7 +23,7 @@ blurry, distorted anatomy, extra limbs, wrong colors, low resolution, artifacts,
 - duration_seconds: 5
 - required_refs: image_1, image_2
 - optional_refs: balcony ledge details, airship visibility in sky
-- visible_character_assets: green Martian warriors collective
+- visible_character_assets: alien warrior collective
 - look_continuity_policy: reblock_same_scene
 - intended_lighting_change: cinematic exterior match
 - composition_type: medium shot balcony

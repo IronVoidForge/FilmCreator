@@ -5,25 +5,25 @@ SC001 CL002 Scene Stage Prompt
 SC001_CL002_scene_stage_prompt
 
 # Purpose
-Define staging intent for the fleet approach observation scene, establishing subject placement at the window and environmental context for the opening frame setup.
+Define staging intent for the fleet approach observation scene, establishing subject placement at the elevated vantage point and environmental context for the opening frame setup
 
 # Workflow Type
 authoring.scene_stage
 
 # Positive Prompt
-Medium shot of male warrior standing at upper floor window frame, hands resting on sill, observing distant horizon, fleet of gray airships forming pattern across sky above valley vista, clear daylight conditions, city rooftops visible in background for scale reference, plaza street level becoming clearer as ships approach, vertical axis established between observer and approaching fleet, first airship visible in distance
+Elevated vantage point setup with male warrior observer and female companion positioned at window frame, distant fleet of gray airships descending over hill crest in background, clear daylight conditions illuminating prow devices, city rooftops visible below establishing scale, valley vista expanding as ships approach, vertical axis established between observers and approaching vessels
 
 # Negative Prompt
-interior corridor space, human figure walking forward, bright sunlight glare, crowd of civilians, static camera movement, wide establishing shot only, cartoon style, floating funeral pyre, close-up on faces only, green-skinned warriors on balcony ledge, human woman prisoner visible
+interior corridor space, human figure walking forward, bright sunlight glare, crowd of civilians, static camera movement, wide establishing shot only, cartoon style, floating funeral pyre, close-up on faces only, indigenous warriors on balcony ledge, human woman prisoner visible
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: SC001
 - clip_id: CL002
 - duration_seconds: 5
-- required_refs: BT001.md, Scene SC001 overview
+- required_refs: BT001.md, Scene SC001 overview, BT002.md for completion planning
 - optional_refs: Window frame for spatial continuity
-- visible_character_assets: male warrior observer, gray airships distant figures
+- visible_character_assets: male warrior observer, female companion observer, gray airships distant figures
 - look_continuity_policy: Follows CL001 observation sequence
 - intended_lighting_change: Clear daylight conditions
 - composition_type: Wide Establishing Shot / Medium Two-shot

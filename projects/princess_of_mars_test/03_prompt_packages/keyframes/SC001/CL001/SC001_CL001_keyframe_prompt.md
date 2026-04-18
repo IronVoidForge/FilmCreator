@@ -11,7 +11,7 @@ Generate frozen keyframe for opening observation beat, establishing exterior cit
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-medium profile shot of male figure standing at upper floor window frame, hands resting on polished stone sill, observing distant horizon with neutral expression, daylight illumination reflecting off dark wood window frame with metal accents, twenty gray airships visible in formation across valley sky, deserted city buildings and rooftops in background, clear atmosphere before combat
+two figures standing at upper floor window frame, hands resting on polished stone sill, observing distant horizon with neutral expression, daylight illumination reflecting off dark wood window frame with metal accents, twenty gray airships visible in formation across valley sky, deserted city buildings and rooftops in background, clear atmosphere before combat
 
 # Negative Prompt
 blurry, distorted faces, extra limbs, missing hands, text, watermark, low resolution, dark shadows, night time, crowded streets, modern clothing, fire, smoke, collapsing buildings, indoor artificial light, close-up of prisoner, green-skinned warriors in foreground

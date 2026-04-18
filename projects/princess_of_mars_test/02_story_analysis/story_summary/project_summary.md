@@ -1,23 +1,22 @@
-# Project Title
-A Princess of Mars
+# Project Summary: A Princess of Mars
 
-# Author
-Edgar Rice Burroughs
+**Setting & World:**
+The narrative takes place on the planet Mars, specifically within fortified Green Martian cities and surrounding open valleys. The environment features high hills, distant vistas, and plazas used for gathering.
 
-# Setting
-Mars (Barsoom), specifically a deserted city, surrounding valley, and hills.
+**Key Characters:**
+*   **John Carter:** An Earthman transported to Mars, serving as the primary narrator and observer. He possesses keen tactical awareness and accuracy with weaponry.
+*   **Sola:** Carter's companion, often present during movements and observations.
+*   **Woola:** A hound accompanying Carter.
+*   **Lorquas Ptomel:** An astute old warrior leader.
 
-# Core Characters
-- The Narrator (John Carter): Human protagonist, green Martian warrior ally.
-- Sola: Companion/ally.
-- Woola: Hound companion.
-- Lorquas Ptomel: Astute old warrior leader.
+**Factions & Forces:**
+*   **Green Martians:** Indigenous warriors utilizing chariots, mastodons, mounted units, and fortified buildings for defense. They employ specific tactical firing points (guns, officers, crew).
+*   **Aerial Fleet:** A mysterious force arriving in gray-painted airships with banners and devices on prows. They engage in naval-style warfare from the sky.
 
-# Narrative Context
-The story follows the narrator's military and exploratory experiences on Mars alongside green Martian warriors. This chapter centers on a specific engagement with an invading fleet of gray airships, resulting in the capture of a human female prisoner who becomes a focal point for the narrator. The tone blends high-stakes warfare with personal observation and mystery regarding the captured entity.
+**Visual Continuity:**
+*   **Transportation:** Chariots, mastodons, mounted warriors, and large gray airships.
+*   **Weapons & Tech:** Firearms (bullets), grappling hooks, spears, carboys, solid foods/liquids, casks of water.
+*   **Environment:** Open ground, city doorways, upper floors/windows, roofs, valley crests, hills.
 
-# Reusable Elements
-- Green Martian warrior tactics (targeted fire, use of buildings).
-- Gray airship technology (banners, devices, wooden construction).
-- City architecture (upper floors, windows, roofs, plazas).
-- Social dynamics between Martians and the narrator.
+**Tone & Themes:**
+The story is a science fiction adventure focused on intense combat, strategic warfare, and the discovery of alien life forms. The tone shifts between awe-inspiring military displays and personal emotional reactions to conflict and captives.

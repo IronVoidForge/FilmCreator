@@ -1,0 +1,532 @@
+# FilmCreator Prompt Writing Exchange
+- timestamp_utc: 2026-04-18T19:29:52.742604+00:00
+- stage: cut_motion
+- clip_id: CL001
+- retry_kind: degraded_retry
+
+## System Prompt
+````text
+You are writing one FilmCreator prompt package for a local model.
+Return only valid JSON.
+Do not use markdown fences.
+Target stage: cut_motion
+Stage guidance: Write a short-cut motion prompt that starts from the approved opening frame. Preserve the keyframe lighting and grade by default. Focus on visible motion, camera behavior, and environment change.
+Required JSON keys: purpose, positive_prompt, negative_prompt, inputs, continuity_notes, repair_notes.
+Keep values short, concrete, and usable.
+If uncertain, keep inputs minimal but non-empty.
+````
+
+## User Prompt
+````text
+Project: princess_of_mars_test
+
+Scene: SC001
+
+Clip: CL001
+
+Prompt title: SC001 CL001 Cut Motion Prompt
+
+Prompt id: SC001_CL001_cut_motion_prompt
+
+Workflow type: video.cut_motion.wan.i2v
+
+
+
+Write a compact but valid version of this prompt package. Keep every required field non-empty.
+
+Keep the prompt aligned with the clip context and current workflow type.
+
+
+
+## Project Summary
+
+# Project Summary: A Princess of Mars
+
+**Setting & World:**
+The narrative takes place on the planet Mars, specifically within fortified Green Martian cities and surrounding open valleys. The environment features high hills, distant vistas, and plazas used for gathering.
+
+**Key Characters:**
+*   **John Carter:** An Earthman transported to Mars, serving as the primary narrator and observer. He possesses keen tactical awareness and accuracy with weaponry.
+*   **Sola:** Carter's companion, often present during movements and observations.
+*   **Woola:** A hound accompanying Carter.
+*   **Lorquas Ptomel:** An astute old warrior leader.
+
+**Factions & Forces:**
+*   **Green Martians:** Indigenous warriors utilizing chariots, mastodons, mounted units, and fortified buildings for defense. They employ specific tactical firing points (guns, officers, crew).
+*   **Aerial Fleet:** A mysterious force arriving in gray-painted airships with banners and devices on prows. They engage in naval-style warfare from the sky.
+
+**Visual Continuity:**
+*   **Transportation:** Chariots, mastodons, mounted warriors, and large gray airships.
+*   **Weapons & Tech:** Firearms (bullets), grappling hooks, spears, carboys, solid foods/liquids, casks of water.
+*   **Environment:** Open ground, city doorways, upper floors/windows, roofs, valley crests, hills.
+
+**Tone & Themes:**
+The story is a science fiction adventure focused on intense combat, strategic warfare, and the discovery of alien life forms. The tone shifts between awe-inspiring military displays and personal emotional reactions to conflict and captives.
+
+## Chapter Summaries
+
+## CH001_summary.md
+# Chapter Summary: A Fair Captive from the Sky (Chapter VIII)
+
+**Plot Overview:**
+Following an incubation ceremony, Carter and Sola return to their city but are ordered back immediately upon seeing a fleet of gray airships arriving over the hills. A battle ensues where Carter's warriors demonstrate deadly accuracy against the ships. One vessel is disabled and crashes near the city. Martians loot and burn the ship before dragging a prisoner into a building, who signals Carter with hope then dejection.
+
+**Scene Decomposition & Visual Facts:**
+
+1.  **The Arrival (Visual Continuity):**
+    *   **Object:** Twenty gray-painted airships, long and low.
+    *   **Details:** Each carries a strange banner from stem to stern; odd devices painted on prows gleam in sunlight.
+    *   **Action:** Ships swing slowly over the crest of the nearest hill toward the city.
+
+2.  **The Battle (Visual Continuity):**
+    *   **Martian Action:** Green warriors fire a terrific volley from building windows.
+    *   **Carter's Action:** Warriors return fire with high accuracy (approx. 75% hit rate).
+    *   **Targeting:** Specific points targeted: wireless finding/sighting apparatus, smaller guns, gunners, officers, crew members, upper works, steering gear/propellers.
+    *   **Effect:** Banners and upper works dissolve in spurts of flame; vessels swing broadside or turn back to complete circles.
+
+3.  **The Crash (Visual Continuity):**
+    *   **Object:** One barely moving craft receives the brunt of fire, appears unmanned.
+    *   **Action:** Drifts slowly with light breeze in southeasterly direction; bodies of crew strewn about decks.
+    *   **Martian Response:** Warriors rush to roofs, follow retreating armada with fusillade. One ship dips below hill crests until only one is visible.
+
+4.  **The Recovery (Visual Continuity):**
+    *   **Action:** Warriors swarm onto the craft from windows just before it strikes buildings.
+    *   **Equipment:** Great spears ease collision shock; grappling hooks used to haul boat to ground.
+    *   **Loot:** Arms, ammunition, silks, furs, jewels, carved stone vessels, solid foods/liquids, casks of water.
+
+5.  **The Burning (Visual Continuity):**
+    *   **Action:** Warriors tow craft far out into valley; empty contents of carboys onto dead sailors/decks.
+    *   **Missile:** Last warrior throws missile back onto vessel; faint spurt of flame rises.
+    *   **Result:** Guy ropes released; great warship soars majestically into air, decks/upper works a mass of roaring flames. Drifts to southeast, rising higher as flames eat wooden parts.
+
+6.  **The Prisoner (Visual Continuity):**
+    *   **Appearance:** Slender, girlish figure similar to earthly women; oval and beautiful face; finely chiseled features; large/lustrous eyes; coal black waving hair caught loosely into strange coiffure; light reddish copper skin; crimson glow of cheeks; ruby lips.
+    *   **Attire:** Destitute of clothes, entirely naked save for highly wrought ornaments.
+    *   **Action:** Dragged roughly into nearby building by green Martian females.
+    *   **Interaction:** Eyes meet Carter's; she makes a little sign with free hand (ununderstood); expression shifts from hope/renewed courage to utter dejection/loathing/contempt because he did not answer her signal.
+
+**Continuity Notes:**
+*   The city remains deserted for over a week due to fear of return attack by air craft.
+*   Carter feels depressed, viewing the scene as defeat of kindred people rather than routing of horde.
+*   Sola rushes up to Carter upon his emergence onto street; Lorquas Ptomel remains at deserted city until danger passed.
+
+## Character Index
+
+| Asset ID | Canonical Name | Role | Presence | Description Status |
+| :--- | :--- | :--- | :--- | :--- |
+| carter | Carter | Leader/Warrior | Referenced | Missing Physical Details |
+| sola | Sola | Companion/Leader | Referenced | Missing Physical Details |
+| lorquas_ptomel | Lorquas Ptomel | City Guardian | Referenced | Missing Physical Details |
+| martian_prisoner | The Prisoner | Captive | Referenced | Detailed Visual Description |
+
+## Environment Index
+
+# Environment Index - Princess of Mars Test (Chapter VIII)
+
+## Stable Environment Families
+
+| Asset ID | Role | Primary Anchor |
+|----------|------|----------------|
+| city | primary | urban windows, deserted streets |
+| hills | transit | hill crests, arrival/dip zones |
+| valley | secondary | open drift space, southeast direction |
+| buildings | secondary | window firing positions, urban structures |
+| airship | secondary | crashed vessel, wooden decks, upper works |
+
+## Notes
+
+- All environments stable across reruns
+- Focus on visible geography and atmosphere
+- Excludes literary abstractions
+- Includes recurring environmental anchors
+
+## Clip Plan
+
+# Clip CL001: Initial Fleet Observation
+
+**Continuity Mode:** continuity_follow  
+**Composition Type:** Wide Shot  
+**Starting Keyframe Strategy:** static_opening  
+**Dependency Policy:** independent  
+**Fallback Strategy:** reblock_same_scene  
+**Visible Character Assets:** Carter (left third), Sola (right third)  
+**Required Refs:** BT001.md, Scene 001 breakdown  
+**Optional Refs:** BT002.md for transition planning  
+**Opening Keyframe Intent:** Establish fleet presence at hill crest  
+**Cut Motion Intent:** static_hold_to_tracking_transition  
+**Interval Beats:** 
+- 0s: Fleet visible at background hill crest
+- 2.5s: Banners stem-to-stern readable
+- 5s: Fleet begins descending motion
+
+## Scene Breakdown
+
+# Scene 001: The Arrival
+
+**Scene Purpose:**
+Establish the immediate threat to the city and set the visual tone for the arrival of the Martian fleet.
+
+**Scene Summary:**
+Twenty gray-painted airships, long and low, swing slowly over the crest of the nearest hill toward the city. Each carries a strange banner from stem to stern; odd devices painted on prows gleam in sunlight. The ships move deliberately, creating a sense of impending doom as they approach the deserted urban landscape.
+
+**Participating Characters:**
+*   Carter (Observer) - Positioned on elevated vantage point, left side of frame initially
+*   Sola (Observer) - Positioned beside Carter, right side of frame, maintains eye contact with fleet
+*   Martian Fleet (Collective presence) - Enters from background hill crest, moves toward foreground city
+
+**Participating Environments:**
+*   City Streets (Foreground) - Empty, deserted, serves as arrival destination
+*   Hill Crest (Background) - Entry point for fleet, establishes scale and distance
+*   Sky (Above) - Dominates upper third of frame, emphasizes fleet size
+
+**Dominant Emotional Shift:**
+Anticipation -> Tension
+
+**Likely Visual Coverage Families:**
+*   Wide Shots: Establishing the scale of the fleet against the landscape.
+*   Medium Shots: Detailing the banners and devices on the prows.
+*   Tracking Shots: Following the ships as they descend toward the city.
+
+**Likely Continuity Sensitivities:**
+*   **Object:** Twenty gray-painted airships, long and low.
+*   **Details:** Strange banner from stem to stern; odd devices painted on prows gleam in sunlight.
+*   **Action:** Ships swing slowly over the crest of the nearest hill toward the city.
+
+**Staging Facts:**
+*   Carter and Sola positioned 15 feet apart on observation platform
+*   Fleet enters frame at -45 degree angle from background to foreground
+*   Camera maintains eye-level with observers throughout scene
+*   Lighting: Golden hour sunlight creates strong highlights on fleet devices
+*   Sound design: Distant mechanical hum increases as fleet approaches
+
+**Character Movement Logic:**
+*   Carter remains stationary, observing silently
+*   Sola shifts gaze from fleet to Carter every 10 seconds
+*   Both characters maintain forward-facing orientation toward hill crest
+
+## Beat Bundles
+
+## BT001.md
+# Beat 001: Initial Fleet Observation
+
+**Beat Purpose:**
+Establish the visual presence of the Martian fleet and observer reactions.
+
+**Start State:**
+Carter and Sola on observation platform, fleet visible at hill crest in background
+
+**End State:**
+Fleet begins descending over hill crest, observers maintain focus
+
+**Character Placement:**
+*   Carter: Left third of frame, stationary
+*   Sola: Right third of frame, slight head turn toward fleet
+*   Fleet: Background, centered horizontally
+
+**Geography & Axis:**
+*   Camera at eye-level with observers
+*   Hill crest serves as entry point from background
+*   45-degree angle from background to foreground
+
+**Continuity Facts:**
+*   Twenty gray-painted airships visible
+*   Banners stem-to-stern clearly readable
+*   Prow devices gleaming in sunlight
+
+**Likely Coverage Families:**
+*   Wide Shot: Full fleet against landscape
+*   Medium Shot: Observer reactions
+*   Over-the-shoulder: Fleet from observer perspective
+
+## BT002.md
+# Beat 002: Fleet Descent Sequence
+
+**Beat Purpose:**
+Show the deliberate movement of fleet toward city, building tension.
+
+**Start State:**
+Fleet halfway over hill crest, beginning descent
+
+**End State:**
+Fleet fully descended, approaching city streets
+
+**Character Placement:**
+*   Carter: Maintains forward-facing orientation
+*   Sola: Shifts gaze between fleet and Carter every 8 seconds
+*   Fleet: Moves from background to mid-ground
+
+**Geography & Axis:**
+*   Camera maintains eye-level throughout
+*   Hill crest recedes as fleet descends
+*   City streets become more prominent in foreground
+
+**Continuity Facts:**
+*   Ship count remains constant at twenty
+*   Banner details remain visible throughout descent
+*   Prow device highlights consistent with lighting
+
+**Likely Coverage Families:**
+*   Tracking Shot: Following fleet movement
+*   Medium Wide: Fleet against city backdrop
+*   Close-up: Detail shots of banners and devices
+
+## BT003.md
+# Beat 003: City Approach Completion
+
+**Beat Purpose:**
+Establish the imminent arrival and emotional impact on observers.
+
+**Start State:**
+Fleet at city street level, closest ship visible in foreground
+
+**End State:**
+Full fleet positioned over city, observers maintain focus
+
+**Character Placement:**
+*   Carter: Slight forward lean toward city view
+*   Sola: Eyes locked on nearest ship
+*   Fleet: Dominates lower two-thirds of frame
+
+**Geography & Axis:**
+*   Camera at eye-level with observers
+*   City streets now primary foreground element
+*   Hill crest largely out of frame
+
+**Continuity Facts:**
+*   All twenty ships visible in formation
+*   Banner details remain consistent
+*   Prow device gleam maintained throughout
+
+**Likely Coverage Families:**
+*   Wide Shot: Full fleet over city
+*   Medium Shot: Observer emotional reactions
+*   Low Angle: Fleet dominance perspective
+
+## Clip Roster
+
+# Clip Roster: Scene 001 - The Arrival
+
+| Clip ID | Duration | Description |
+|---------|----------|-------------|
+| CL001 | 5s | Initial Fleet Observation - Wide shot establishing fleet at hill crest |
+| CL002 | 5s | Fleet Descent Sequence - Tracking shot following ships descending |
+| CL003 | 5s | City Approach Completion - Medium shot showing observers' reactions |
+
+## Clip State
+
+{
+  "project_id": "princess_of_mars_test",
+  "scene_id": "SC001",
+  "clip_id": "CL001",
+  "status": "planning",
+  "inputs": {
+    "shared_character_refs": [],
+    "shared_environment_refs": [],
+    "scene_prompt_package": "projects/princess_of_mars_test/03_prompt_packages/scenes/SC001/CL001/SC001_CL001_scene_stage_prompt.md",
+    "scene_stage_prompt_package": "projects/princess_of_mars_test/03_prompt_packages/scenes/SC001/CL001/SC001_CL001_scene_stage_prompt.md",
+    "keyframe_prompt_package": "projects/princess_of_mars_test/03_prompt_packages/keyframes/SC001/CL001/SC001_CL001_keyframe_prompt.md",
+    "fix_prompt_packages": [
+      "projects/princess_of_mars_test/03_prompt_packages/fixes/SC001/CL001/SC001_CL001_fix_01_prompt.md"
+    ],
+    "anchor_prompt_packages": [],
+    "video_prompt_package": "projects/princess_of_mars_test/03_prompt_packages/cut_motion/SC001/CL001/SC001_CL001_cut_motion_prompt.md",
+    "cut_motion_prompt_package": "projects/princess_of_mars_test/03_prompt_packages/cut_motion/SC001/CL001/SC001_CL001_cut_motion_prompt.md",
+    "legacy_anchor_prompt_packages": [],
+    "legacy_video_prompt_package": null
+  },
+  "approved_assets": {
+    "golden_frame": null,
+    "approved_keyframe": null,
+    "approved_video": null,
+    "still_fixes": [],
+    "anchor_frames": [],
+    "interval_frames": [],
+    "cut_motion_videos": []
+  },
+  "approved_video_last_frame": null,
+  "current_continuity_source": null,
+  "latest_runs": {},
+  "review_batches": [],
+  "latest_review_decision": null,
+  "notes": [],
+  "stage_style_preferences": {
+    "still_fix": {
+      "literal_descriptive": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "cinematic_compositional": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "performance_action_led": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "sparse_conservative": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      }
+    },
+    "cut_motion": {
+      "literal_descriptive": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "cinematic_compositional": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "performance_action_led": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "sparse_conservative": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      }
+    },
+    "keyframe": {
+      "literal_descriptive": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "cinematic_compositional": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "performance_action_led": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "sparse_conservative": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      }
+    }
+  }
+}
+
+
+
+## Existing Prompt Draft
+
+# Title
+SC001 CL001 Cut Motion Prompt
+
+# ID
+SC001_CL001_cut_motion_prompt
+
+# Purpose
+Generate cut motion starting from approved opening frame, preserving keyframe lighting and grade, focusing on visible motion, camera behavior, and environment change.
+
+# Workflow Type
+video.cut_motion.wan.i2v
+
+# Positive Prompt
+Human male warrior stands at dark wood window sill inside upper floor room. Medium profile shot three-quarter angle facing outward. Hands resting on polished stone window ledge. Slight head tilt right toward distant horizon where gray airships form fleet in valley. Subtle forward weight shift onto legs as interest grows. Daylight sunlight reflects off ship devices outside. Dust motes visible in beam inside room. Cinematic grade preserved.
+
+# Negative Prompt
+morphing artifacts, flickering lighting, wrong anatomy, extra characters, sudden crowd appearance, incorrect camera angle, distorted background, inconsistent grade, blurry motion, static frame, low resolution
+
+# Inputs
+- project_id: princess_of_mars_test
+- scene_id: SC001
+- clip_id: CL001
+- duration_seconds: 5
+- required_refs: BT001.md, Scene SC001 breakdown
+- optional_refs: Procession garment details, plaza distance markers
+- visible_character_assets: human observer at window frame, green warriors on balcony below
+- look_continuity_policy: preserve_keyframe_lighting
+- intended_lighting_change: none
+- composition_type: medium_profile_shot
+- continuity_mode: window_frame_consistent
+- starting_keyframe_strategy: establish_vertical_axis_elevated_observer
+- dependency_policy: none_standalone_opening_shot
+- auto_advance_policy: standard
+- fallback_strategy: use_static_wide_if_zoom_unavailable
+- consistency_assist_policy: enabled
+- consistency_assist_method: interval_frames
+- anatomy_repair_policy: enabled
+- consistency_targets: narrator_position, woola_position
+- style_profile: epic_narrative
+- batch_role: opening_sequence
+- fix_of: none
+- workflow_type: video.cut_motion.wan.i2v
+- beat_index: BT001
+
+# Continuity Notes
+- Preserve keyframe lighting and grade by default.
+- Focus on visible motion, camera behavior, and environment change.
+- Ensure fleet approaches smoothly without jumping.
+- Maintain window frame consistency (dark wood with metal accents).
+- Keep window wiper position unchanged (upper right).
+- Preserve floor material (polished stone tiles).
+- Ensure Carter maintains 2-3 feet from window frame.
+
+# Repair Notes
+- Fix any morphing artifacts during zoom/pan transition.
+- Ensure lighting consistency between exterior view and window frame interior.
+- Correct anatomy if human observer or green warriors distort during movement.
+- Maintain environment state (deserted streets) without introducing new crowds prematurely.
+
+# Sources
+- projects/princess_of_mars_test/02_story_analysis/clip_plans/SC001/CL001.md
+- projects/princess_of_mars_test/02_story_analysis/scene_breakdowns/SC001.md
+- projects/princess_of_mars_test/02_story_analysis/clip_plans/SC001/SC001_clip_roster.md
+- projects/princess_of_mars_test/02_story_analysis/character_breakdowns/CHARACTER_INDEX.md
+- projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/ENVIRONMENT_INDEX.md
+- projects/princess_of_mars_test/02_story_analysis/story_summary/project_summary.md
+
+````
+
+## Raw Response
+````text
+
+
+{
+  "purpose": "Generate cut motion for CL001, establishing fleet presence at hill crest.",
+  "positive_prompt": "Wide shot of deserted city streets and hill crest. Twenty gray airships swing slowly over hill toward city. Golden hour sunlight gleams on ship devices. Carter and Sola visible as small figures on elevated platform left side observing fleet. Fleet descends gradually. Dust motes in foreground. Cinematic grade preserved.",
+  "negative_prompt": "morphing artifacts, flickering lighting, wrong anatomy, extra characters, sudden crowd appearance, incorrect camera angle, distorted background, inconsistent grade, blurry motion, static frame, low resolution",
+  "inputs": {
+    "project_id": "princess_of_mars_test",
+    "scene_id": "SC001",
+    "clip_id": "CL001",
+    "duration_seconds": 5,
+    "required_refs": "BT001.md, Scene SC001 breakdown",
+    "optional_refs": "Procession garment details, plaza distance markers",
+    "visible_character_assets": "human observer at window frame, green warriors on balcony below",
+    "look_continuity_policy": "preserve_keyframe_lighting",
+    "intended_lighting_change": "none",
+    "composition_type": "wide_shot",
+    "continuity_mode": "window_frame_consistent",
+    "starting_keyframe_strategy": "establish_vertical_axis_elevated_observer",
+    "dependency_policy": "none_standalone_opening_shot",
+    "auto_advance_policy": "standard",
+    "fallback_strategy": "use_static_wide_if_zoom_unavailable",
+    "consistency_assist_policy": "enabled",
+    "consistency_assist_method": "interval_frames",
+    "anatomy_repair_policy": "enabled",
+    "consistency_targets": "narrator_position, woola_position",
+    "style_profile": "epic_narrative",
+    "batch_role": "opening_sequence",
+    "fix_of": "none",
+    "workflow_type": "video.cut_motion.wan.i2v",
+    "beat_index": "BT001"
+  },
+  "continuity_notes": "Preserve keyframe lighting and grade by default. Focus on visible motion, camera behavior, and environment change. Ensure fleet approaches smoothly without jumping. Maintain platform consistency (dark wood/metal). Keep floor material (polished stone tiles). Ensure Carter maintains position relative to window/platform.",
+  "repair_notes": "Fix any morphing artifacts during zoom/pan transition. Ensure lighting consistency between exterior view and platform interior. Correct anatomy if human observer or green warriors distort during movement. Maintain environment state (deserted streets) without introducing new crowds prematurely."
+}
+````

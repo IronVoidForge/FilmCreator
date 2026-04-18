@@ -4,10 +4,10 @@
 sola
 
 # Why This Needs Clarification
-Character has stable name identification but insufficient visual details for render-facing prompts
+The character is not fully identified from this chapter alone.
 
 # Question
-What are Sola's specific physical features (hair color, eye color, build, facial features) and costume details?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely
