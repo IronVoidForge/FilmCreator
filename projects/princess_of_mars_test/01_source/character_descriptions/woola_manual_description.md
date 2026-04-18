@@ -1,3 +1,5 @@
+<!-- FILMCREATOR_MANUAL_PLACEHOLDER -->
+
 # Asset ID
 woola
 
@@ -5,7 +7,7 @@ woola
 Paste a stable manual visual description for this character so later shared reference generation can use it.
 
 # Why This Is Needed
-Breed, size, and coat color not specified in chapter text or visual continuity facts.
+Generic hound designation; specific breed or markings not described in source text.
 
 # Guidance
 - describe face, hair, body type, age impression, silhouette, skin tone, costume logic, and any continuity-critical marks

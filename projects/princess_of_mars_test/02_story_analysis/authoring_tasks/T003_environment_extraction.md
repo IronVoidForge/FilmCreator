@@ -17,16 +17,17 @@ Extract the environment families from the chapter and normalize them into stable
 
 ## Response Contract
 
-Return valid JSON only with these keys:
+Return one tagged Markdown packet only:
 
-- `environment_index_markdown`
-- `environments`
-
-Where `environments` is an array of objects containing:
-
-- `asset_id`
-- `filename`
-- `markdown`
+- packet task: `environment_extraction`
+- top-level sections:
+  - `environment_index_markdown`
+- repeated record type:
+  - `environment`
+- each `environment` record must contain fields:
+  - `asset_id`
+- each `environment` record must contain sections:
+  - `markdown`
 
 ## Required Coverage
 
@@ -50,6 +51,7 @@ Where `environments` is an array of objects containing:
 - separate:
   - airship exterior
   - abandoned Martian city
-  - plaza/street zones
-  - valley/plain battlefield zones
+- plaza/street zones
+- valley/plain battlefield zones
 - only split environments when later shot planning would genuinely benefit from separate reference stills
+- keep this as one single-purpose LM Studio call rather than combining it with scene decomposition

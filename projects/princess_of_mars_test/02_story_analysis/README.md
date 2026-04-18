@@ -50,8 +50,10 @@ At that point we can verify the authoring handoff end to end before database wor
 ## Implementation Notes
 
 - LM Studio side:
-  - prefer OpenAI-compatible chat completions with structured JSON outputs
-  - use strict schemas when the local model supports them
+  - every LM Studio invocation should perform one bounded task only
+  - convenience commands may chain multiple single-purpose LM Studio calls, but should not ask the model to do chapter analysis, scene planning, cut planning, and prompt writing in one response
+  - prefer tagged Markdown packet outputs for chapter analysis, scene planning, and shared prompt drafting
+  - use parser-side validation and conversion instead of trusting nested JSON from the local model
   - keep temperatures low for reproducible extraction and file regeneration
 - ComfyUI side:
   - treat workflows as node graphs with known patch points, not as freeform prompt blobs

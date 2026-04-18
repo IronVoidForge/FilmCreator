@@ -1,3 +1,5 @@
+<!-- FILMCREATOR_MANUAL_PLACEHOLDER -->
+
 # Asset ID
 john_carter
 
@@ -5,7 +7,7 @@ john_carter
 Paste a stable manual visual description for this character so later shared reference generation can use it.
 
 # Why This Is Needed
-No physical attributes (skin tone, hair, clothing) provided in chapter text or visual continuity facts.
+First-person narrator; no physical description provided in source text.
 
 # Guidance
 - describe face, hair, body type, age impression, silhouette, skin tone, costume logic, and any continuity-critical marks

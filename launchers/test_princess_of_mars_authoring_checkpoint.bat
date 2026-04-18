@@ -37,6 +37,7 @@ echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\scene_bre
 echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\beat_bundles\SC001\BEAT_INDEX.md
 echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\clip_plans\SC001\SC001_clip_roster.md
 echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\clip_plans\SC001\CL001.md
+echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\logs\
 echo   C:\FilmCreator\projects\princess_of_mars_test\03_prompt_packages\characters\
 echo   C:\FilmCreator\projects\princess_of_mars_test\03_prompt_packages\environments\
 echo   C:\FilmCreator\projects\princess_of_mars_test\03_prompt_packages\keyframes\SC001\
@@ -48,6 +49,8 @@ echo   3. If a character is flagged, a manual paste target should exist under:
 echo      C:\FilmCreator\projects\princess_of_mars_test\01_source\character_descriptions\
 echo   4. SC001 should now have beat bundles, a clip roster, and clip plans such as CL001 and CL002.
 echo   5. Shared character/environment prompt packages and clip-local prompt packages should now exist.
+echo   6. The logs folder should now contain one raw LM Studio exchange file per authoring task.
+echo   7. The checkpoint should have reached those outputs through multiple single-purpose LM Studio calls rather than one monolithic generation.
 pause
 exit /b 0
 

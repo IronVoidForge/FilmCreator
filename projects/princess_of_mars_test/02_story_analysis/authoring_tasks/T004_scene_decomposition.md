@@ -19,16 +19,17 @@ Break the chapter into discrete scenes that can later be planned into beats and 
 
 ## Response Contract
 
-Return valid JSON only with these keys:
+Return one tagged Markdown packet only:
 
-- `scene_index_markdown`
-- `scenes`
-
-Where `scenes` is an array of objects containing:
-
-- `scene_id`
-- `filename`
-- `markdown`
+- packet task: `scene_decomposition`
+- top-level sections:
+  - `scene_index_markdown`
+- repeated record type:
+  - `scene`
+- each `scene` record must contain fields:
+  - `scene_id`
+- each `scene` record must contain sections:
+  - `markdown`
 
 ## Required Coverage
 
@@ -51,7 +52,8 @@ Where `scenes` is an array of objects containing:
 
 - create a new scene when one or more of these changes materially:
   - location or environment family
-  - dramatic goal
-  - major action phase
-  - dominant staging problem
-  - emotional beat family
+- dramatic goal
+- major action phase
+- dominant staging problem
+- emotional beat family
+- keep this pass focused on chapter-to-scene decomposition only, not beat or clip planning

@@ -17,18 +17,19 @@ Extract the visible and referenced characters from the chapter and normalize the
 
 ## Response Contract
 
-Return valid JSON only with these keys:
+Return one tagged Markdown packet only:
 
-- `character_index_markdown`
-- `characters`
-
-Where `characters` is an array of objects containing:
-
-- `asset_id`
-- `filename`
-- `markdown`
-- `manual_description_required`
-- `manual_description_reason`
+- packet task: `character_extraction`
+- top-level sections:
+  - `character_index_markdown`
+- repeated record type:
+  - `character`
+- each `character` record must contain fields:
+  - `asset_id`
+  - `manual_description_required`
+  - `manual_description_reason`
+- each `character` record must contain sections:
+  - `markdown`
 
 ## Required Coverage
 
@@ -56,3 +57,4 @@ Where `characters` is an array of objects containing:
 - separate named characters from unnamed groups such as crew, warriors, or civilians
 - only create separate asset IDs for unnamed groups if they are likely to matter as recurring visual entities
 - flagged characters should later receive a manual pasted description under `01_source/character_descriptions/`
+- keep this as one single-purpose LM Studio call rather than bundling later scene or shot planning into the same response

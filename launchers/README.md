@@ -16,6 +16,18 @@ These batch files are convenience entry points for the current local workflow sp
   - runs the first pre-SQL authoring checkpoint for `princess_of_mars_test`
   - writes chapter analysis, character/environment breakdowns, scene decomposition, beat bundles, clip plans, shared prompts, and clip-local prompts
   - also creates manual character-description placeholder files when the local LLM flags that a character is underdescribed in the chapter source
+- `test_princess_of_mars_chapter_analysis_pass.bat`
+  - runs only the chapter analysis pass for `princess_of_mars_test`
+  - writes project summary, chapter summary, character breakdowns, environment breakdowns, scene decomposition, and raw LM task logs
+- `test_princess_of_mars_scene_planning_pass.bat`
+  - runs only the scene-planning pass for `SC001`
+  - writes beat bundles, clip roster, clip plans, and raw LM task logs
+- `test_princess_of_mars_shared_prompt_pass.bat`
+  - runs only the shared character/environment prompt-writing pass
+  - writes prompt packages under `03_prompt_packages/characters/` and `03_prompt_packages/environments/`
+- `test_princess_of_mars_clip_prompt_pass.bat`
+  - runs only the clip-local prompt-writing pass for `SC001`
+  - writes scene-stage, keyframe, still-fix, and cut-motion prompt packages for that scene
 - `start_comfyui_8188.bat`
   - starts the known-good ComfyUI Python entrypoint on `127.0.0.1:8188`
   - skips launching a duplicate server if `8188` is already responding
@@ -79,13 +91,18 @@ Current pilot batch assets:
 Recommended usage right now:
 
 1. For authoring-side smoke tests, run `test_lmstudio_connectivity.bat`
-2. Run `test_princess_of_mars_authoring_checkpoint.bat` for the new chapter-to-analysis-to-prompt checkpoint
-3. Then run `test_pilot_scene_prompt_writer_lmstudio.bat` if you want the smaller pilot clip-only prompt smoke test
-4. Preferred for current render smoke tests: run `start_render_terminals_clean_8190.bat`
-5. In the FilmCreator shell, either paste the echoed command or run `run_pilot_scene_keyframe_batch_clean_8190.bat`
-6. Review generated outputs under the `pilot_scene` project folders
-7. Run `test_review_and_approve_pilot_keyframe.bat` to validate review recording and approved-keyframe promotion
-8. Run `run_pilot_scene_cut_motion_batch_video_8191.bat` for the short-cut motion smoke test after a keyframe has been approved
-9. Run `test_review_and_approve_pilot_cut_motion.bat` to validate the video review-and-approval handoff and last-frame extraction
-10. Run `run_pilot_scene_still_fix_batch_clean_8190.bat` for the first corrective still smoke test
-11. Run `test_review_and_approve_pilot_still_fix.bat` to validate the still-fix review-and-promotion handoff
+2. For pass-by-pass chapter authoring tests, run:
+   - `test_princess_of_mars_chapter_analysis_pass.bat`
+   - `test_princess_of_mars_scene_planning_pass.bat`
+   - `test_princess_of_mars_shared_prompt_pass.bat`
+   - `test_princess_of_mars_clip_prompt_pass.bat`
+3. Or run `test_princess_of_mars_authoring_checkpoint.bat` for the full chained chapter-to-analysis-to-prompt checkpoint
+4. Then run `test_pilot_scene_prompt_writer_lmstudio.bat` if you want the smaller pilot clip-only prompt smoke test
+5. Preferred for current render smoke tests: run `start_render_terminals_clean_8190.bat`
+6. In the FilmCreator shell, either paste the echoed command or run `run_pilot_scene_keyframe_batch_clean_8190.bat`
+7. Review generated outputs under the `pilot_scene` project folders
+8. Run `test_review_and_approve_pilot_keyframe.bat` to validate review recording and approved-keyframe promotion
+9. Run `run_pilot_scene_cut_motion_batch_video_8191.bat` for the short-cut motion smoke test after a keyframe has been approved
+10. Run `test_review_and_approve_pilot_cut_motion.bat` to validate the video review-and-approval handoff and last-frame extraction
+11. Run `run_pilot_scene_still_fix_batch_clean_8190.bat` for the first corrective still smoke test
+12. Run `test_review_and_approve_pilot_still_fix.bat` to validate the still-fix review-and-promotion handoff

@@ -16,10 +16,12 @@ Read the chapter source file and produce a project-level summary and a chapter-l
 
 ## Response Contract
 
-Return valid JSON only with these keys:
+Return one tagged Markdown packet only:
 
-- `project_summary_markdown`
-- `chapter_summary_markdown`
+- packet task: `chapter_summary`
+- top-level sections:
+  - `project_summary_markdown`
+  - `chapter_summary_markdown`
 
 ## Required Coverage
 
@@ -40,6 +42,7 @@ Return valid JSON only with these keys:
 
 ## Local LLM Guidance
 
-- use chat-completions style structured generation
+- use one single-purpose LM Studio call for this task only
+- return tagged Markdown packet content, not JSON
 - prefer low temperature for reproducible extraction
 - return complete Markdown strings that can be written directly to files

@@ -21,17 +21,17 @@ Turn one scene plus its beat bundles into an ordered clip roster and one clip-pl
 
 ## Response Contract
 
-Return valid JSON only with these keys:
+Return one tagged Markdown packet only:
 
-- `scene_id`
-- `clip_roster_markdown`
-- `clips`
-
-Where `clips` is an array of objects containing:
-
-- `clip_id`
-- `filename`
-- `markdown`
+- packet task: `clip_planning`
+- top-level sections:
+  - `clip_roster_markdown`
+- repeated record type:
+  - `clip`
+- each `clip` record must contain fields:
+  - `clip_id`
+- each `clip` record must contain sections:
+  - `markdown`
 
 ## Required Coverage
 
@@ -81,3 +81,4 @@ Where `clips` is an array of objects containing:
 - plan clips scene by scene, not paragraph by paragraph
 - be explicit about what must be preserved from beat bundles so later prompt writing does not have to infer it
 - keep duration in metadata fields, not later prompt wording
+- keep this pass focused on beat-map-to-cut-list planning, not final prompt package wording

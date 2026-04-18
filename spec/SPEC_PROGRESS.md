@@ -99,10 +99,14 @@
   - next validation: expand from unit coverage into launcher-level or smoke-test coverage
 
 - `5.1` story analysis outputs
-  - status: `planned`
+  - status: `implemented`
+  - evidence: the authoring path now has a packetized Markdown contract, per-task LM Studio logging, manual-description placeholder reconciliation, and unit coverage for chapter analysis outputs
+  - next validation: run the live `princess_of_mars_test` chapter authoring checkpoint successfully through LM Studio and inspect the resulting story-analysis files
 
 - `5.2` clip plan generation
-  - status: `planned`
+  - status: `implemented`
+  - evidence: scene beat mapping and clip planning now run as dedicated authoring passes in code, with canonical scene, beat, and clip filenames enforced by the orchestrator
+  - next validation: run the live chapter authoring checkpoint through scene beat and clip plan generation for `SC001`
 
 - `5.3` prompt writer integration
   - status: `validated`

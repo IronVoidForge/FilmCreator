@@ -10,6 +10,56 @@ from orchestrator.common import TEMPLATES_ROOT as REAL_TEMPLATES_ROOT
 from orchestrator.prompt_package import parse_prompt_package
 
 
+def _packet(
+    *,
+    task: str,
+    sections: dict[str, str] | None = None,
+    records: list[str] | None = None,
+    fenced: bool = False,
+) -> str:
+    lines = [
+        "[[FILMCREATOR_PACKET]]",
+        f"task: {task}",
+        "version: 1",
+    ]
+    for name, content in (sections or {}).items():
+        lines.extend(
+            [
+                "",
+                f"[[SECTION {name}]]",
+                content.rstrip(),
+                "[[/SECTION]]",
+            ]
+        )
+    for record in records or []:
+        lines.extend(["", record.rstrip()])
+    lines.append("[[/FILMCREATOR_PACKET]]")
+    body = "\n".join(lines)
+    if fenced:
+        return f"```md\n{body}\n```"
+    return body
+
+
+def _record(*, record_type: str, fields: dict[str, str], sections: dict[str, str]) -> str:
+    lines = [
+        "[[FILMCREATOR_RECORD]]",
+        f"type: {record_type}",
+    ]
+    for key, value in fields.items():
+        lines.append(f"{key}: {value}")
+    for name, content in sections.items():
+        lines.extend(
+            [
+                "",
+                f"[[SECTION {name}]]",
+                content.rstrip(),
+                "[[/SECTION]]",
+            ]
+        )
+    lines.append("[[/FILMCREATOR_RECORD]]")
+    return "\n".join(lines)
+
+
 class _FakeAuthoringLMStudioClient:
     def __init__(self, _settings: object) -> None:
         pass
@@ -28,161 +78,187 @@ class _FakeAuthoringLMStudioClient:
         assert temperature == 0.2
         assert model is None
 
-        if "project_summary_markdown" in user_prompt:
-            return json.dumps(
-                {
+        if "task: chapter_summary" in user_prompt:
+            return _packet(
+                task="chapter_summary",
+                sections={
                     "project_summary_markdown": "# Project Summary\nA Mars adventure project.\n",
                     "chapter_summary_markdown": "# Chapter Summary\nAirship battle, drifting vessel, captive introduction.\n",
-                }
+                },
             )
 
-        if "character_index_markdown" in user_prompt:
-            return json.dumps(
-                {
+        if "task: character_extraction" in user_prompt:
+            return _packet(
+                task="character_extraction",
+                sections={
                     "character_index_markdown": "# Character Index\n- john_carter\n- dejah_thoris\n",
-                    "characters": [
-                        {
+                },
+                records=[
+                    _record(
+                        record_type="character",
+                        fields={
                             "asset_id": "john_carter",
-                            "filename": "hero_protagonist_profile.md",
-                            "markdown": "# John Carter\nReliable protagonist breakdown.\n",
-                            "manual_description_required": False,
+                            "manual_description_required": "false",
                             "manual_description_reason": "",
                         },
-                        {
+                        sections={
+                            "markdown": "# John Carter\nReliable protagonist breakdown.\n",
+                        },
+                    ),
+                    _record(
+                        record_type="character",
+                        fields={
                             "asset_id": "dejah_thoris",
-                            "filename": "captured_princess_profile.md",
-                            "markdown": "# Dejah Thoris\nImportant captive figure with incomplete stable visual description in this chapter alone.\n",
-                            "manual_description_required": True,
+                            "manual_description_required": "true",
                             "manual_description_reason": "The chapter introduces her vividly but does not provide enough stable facial, costume, and silhouette detail for dependable reference generation by itself.",
                         },
-                    ],
-                }
+                        sections={
+                            "markdown": "# Dejah Thoris\nImportant captive figure with incomplete stable visual description in this chapter alone.\n",
+                        },
+                    ),
+                ],
             )
 
-        if "environment_index_markdown" in user_prompt:
-            return json.dumps(
-                {
+        if "task: environment_extraction" in user_prompt:
+            return _packet(
+                task="environment_extraction",
+                sections={
                     "environment_index_markdown": "# Environment Index\n- abandoned_martian_city\n- martian_airship_battlefield\n",
-                    "environments": [
-                        {
-                            "asset_id": "abandoned_martian_city",
-                            "filename": "ancient_city_reference.md",
+                },
+                records=[
+                    _record(
+                        record_type="environment",
+                        fields={"asset_id": "abandoned_martian_city"},
+                        sections={
                             "markdown": "# Abandoned Martian City\nAncient empty city with broad plazas and building fronts.\n",
                         },
-                        {
-                            "asset_id": "martian_airship_battlefield",
-                            "filename": "airship_battlefield_zone.md",
+                    ),
+                    _record(
+                        record_type="environment",
+                        fields={"asset_id": "martian_airship_battlefield"},
+                        sections={
                             "markdown": "# Martian Airship Battlefield\nOpen valley and sky battle zone around the city.\n",
                         },
-                    ],
-                }
+                    ),
+                ],
+                fenced=True,
             )
 
-        if "scene_index_markdown" in user_prompt:
-            return json.dumps(
-                {
+        if "task: scene_decomposition" in user_prompt:
+            return _packet(
+                task="scene_decomposition",
+                sections={
                     "scene_index_markdown": "# Scene Index\n- SC001: Airship attack and discovery of the captive\n",
-                    "scenes": [
-                        {
-                            "scene_id": "SC001",
-                            "filename": "SC001_airship_attack_and_captive_reveal.md",
+                },
+                records=[
+                    _record(
+                        record_type="scene",
+                        fields={"scene_id": "SC001"},
+                        sections={
                             "markdown": "# SC001\n## Purpose\nAirship attack, damaged drift, looting, and the first sight of the captive.\n",
-                        }
-                    ],
-                }
+                        },
+                    )
+                ],
             )
 
-        if "updated_scene_markdown" in user_prompt:
-            return json.dumps(
-                {
-                    "scene_id": "SC001",
+        if "task: scene_beats" in user_prompt:
+            return _packet(
+                task="scene_beats",
+                sections={
                     "updated_scene_markdown": "# SC001\n## Purpose\nAirship attack and captive reveal.\n## Beats\n- BT001 attack from cover\n- BT002 damaged ship drift and seizure\n- BT003 captive reveal\n",
                     "beat_index_markdown": "# Beat Index\n- BT001 attack from cover\n- BT002 damaged ship drift and seizure\n- BT003 captive reveal\n",
-                    "beats": [
-                        {
-                            "beat_id": "BT001",
-                            "filename": "BT001_attack_from_cover.md",
-                            "markdown": "# BT001\nAttack from cover.\n",
-                        },
-                        {
-                            "beat_id": "BT002",
-                            "filename": "BT002_derelict_drift.md",
-                            "markdown": "# BT002\nDamaged ship drifts and is boarded.\n",
-                        },
-                        {
-                            "beat_id": "BT003",
-                            "filename": "BT003_captive_reveal.md",
-                            "markdown": "# BT003\nThe captive is revealed and seen by the protagonist.\n",
-                        },
-                    ],
-                }
+                },
+                records=[
+                    _record(
+                        record_type="beat",
+                        fields={"beat_id": "BT001"},
+                        sections={"markdown": "# BT001\nAttack from cover.\n"},
+                    ),
+                    _record(
+                        record_type="beat",
+                        fields={"beat_id": "BT002"},
+                        sections={"markdown": "# BT002\nDamaged ship drifts and is boarded.\n"},
+                    ),
+                    _record(
+                        record_type="beat",
+                        fields={"beat_id": "BT003"},
+                        sections={"markdown": "# BT003\nThe captive is revealed and seen by the protagonist.\n"},
+                    ),
+                ],
             )
 
-        if "clip_roster_markdown" in user_prompt:
-            return json.dumps(
-                {
-                    "scene_id": "SC001",
+        if "task: clip_planning" in user_prompt:
+            return _packet(
+                task="clip_planning",
+                sections={
                     "clip_roster_markdown": "# SC001 Clip Roster\n- CL001 battle reveal wide\n- CL002 captive reaction reveal\n",
-                    "clips": [
-                        {
-                            "clip_id": "CL001",
-                            "filename": "CL001_battle_reveal_wide.md",
+                },
+                records=[
+                    _record(
+                        record_type="clip",
+                        fields={"clip_id": "CL001"},
+                        sections={
                             "markdown": "# Title\nSC001 CL001 Clip Plan\n\n# ID\nSC001_CL001\n\n# Purpose\nEstablish the sudden attack and the first exchange of fire.\n\n# Inputs\n- beat_id: BT001\n- duration_seconds: 5\n- composition_type: master_wide\n- continuity_mode: reframe_same_moment\n- starting_keyframe_strategy: scene_refs_to_keyframe\n- dependency_policy: independent\n- visible_character_assets: john_carter\n- required_refs: image_1,image_2\n- optional_refs: image_3,image_4\n\n# Output Targets\n- SC001_CL001_KF01_v001.png\n- SC001_CL001_MV01_v001.mp4\n",
                         },
-                        {
-                            "clip_id": "CL002",
-                            "filename": "CL002_captive_reaction_reveal.md",
+                    ),
+                    _record(
+                        record_type="clip",
+                        fields={"clip_id": "CL002"},
+                        sections={
                             "markdown": "# Title\nSC001 CL002 Clip Plan\n\n# ID\nSC001_CL002\n\n# Purpose\nReveal the captive and the exchanged look.\n\n# Inputs\n- beat_id: BT003\n- duration_seconds: 5\n- composition_type: reaction\n- continuity_mode: cutaway\n- starting_keyframe_strategy: scene_refs_to_keyframe\n- dependency_policy: independent\n- visible_character_assets: john_carter,dejah_thoris\n- required_refs: image_1,image_2\n- optional_refs: image_3,image_4\n\n# Output Targets\n- SC001_CL002_KF01_v001.png\n- SC001_CL002_MV01_v001.mp4\n",
                         },
-                    ],
-                }
+                    ),
+                ],
             )
 
-        if "character_prompts" in user_prompt and "environment_prompts" in user_prompt:
-            return json.dumps(
-                {
-                    "character_prompts": [
-                        {
-                            "asset_id": "john_carter",
+        if "task: character_shared_prompts" in user_prompt:
+            return _packet(
+                task="character_shared_prompts",
+                records=[
+                    _record(
+                        record_type="character_prompt",
+                        fields={"asset_id": "john_carter"},
+                        sections={
                             "purpose": "Stable heroic reference still.",
                             "positive_prompt": "athletic human man, weathered traveler, upright posture, practical adventurer styling",
                             "negative_prompt": "extra limbs, duplicate face, blurred features",
-                            "inputs": {
-                                "project_id": "demo",
-                                "asset_id": "john_carter",
-                            },
-                            "continuity_notes": ["Preserve the stable protagonist look for later scene coverage."],
-                            "repair_notes": ["If later scenes drift, use this as the identity reference baseline."],
+                            "inputs_markdown": "- project_id: demo\n- asset_id: john_carter",
+                            "continuity_notes_markdown": "- Preserve the stable protagonist look for later scene coverage.",
+                            "repair_notes_markdown": "- If later scenes drift, use this as the identity reference baseline.",
                         },
-                        {
-                            "asset_id": "dejah_thoris",
+                    ),
+                    _record(
+                        record_type="character_prompt",
+                        fields={"asset_id": "dejah_thoris"},
+                        sections={
                             "purpose": "Initial captive reference still with caution around missing details.",
                             "positive_prompt": "slender regal young woman, dark flowing hair, luminous large eyes, poised captive bearing",
                             "negative_prompt": "extra limbs, distorted anatomy, blurred face",
-                            "inputs": {
-                                "project_id": "demo",
-                                "asset_id": "dejah_thoris",
-                                "manual_description_required": "true",
-                            },
-                            "continuity_notes": ["Manual description may be needed before finalizing the long-term shared reference."],
-                            "repair_notes": ["Refresh after a manual character description is pasted."],
+                            "inputs_markdown": "- project_id: demo\n- asset_id: dejah_thoris\n- manual_description_required: true",
+                            "continuity_notes_markdown": "- Manual description may be needed before finalizing the long-term shared reference.",
+                            "repair_notes_markdown": "- Refresh after a manual character description is pasted.",
                         },
-                    ],
-                    "environment_prompts": [
-                        {
-                            "asset_id": "abandoned_martian_city",
+                    ),
+                ],
+            )
+
+        if "task: environment_shared_prompts" in user_prompt:
+            return _packet(
+                task="environment_shared_prompts",
+                records=[
+                    _record(
+                        record_type="environment_prompt",
+                        fields={"asset_id": "abandoned_martian_city"},
+                        sections={
                             "purpose": "Stable city reference still.",
                             "positive_prompt": "ancient empty martian city, broad stone plaza, weathered building fronts, dry red-world atmosphere",
                             "negative_prompt": "modern signage, crowding, contemporary vehicles",
-                            "inputs": {
-                                "project_id": "demo",
-                                "asset_id": "abandoned_martian_city",
-                            },
-                            "continuity_notes": ["Keep the broad plaza and abandoned monumental architecture stable."],
-                            "repair_notes": ["Use as the base environmental reference for scene planning."],
-                        }
-                    ],
-                }
+                            "inputs_markdown": "- project_id: demo\n- asset_id: abandoned_martian_city",
+                            "continuity_notes_markdown": "- Keep the broad plaza and abandoned monumental architecture stable.",
+                            "repair_notes_markdown": "- Use as the base environmental reference for scene planning.",
+                        },
+                    )
+                ],
             )
 
         if "Target stage: " in system_prompt:
@@ -257,6 +333,36 @@ def test_authoring_checkpoint_writes_analysis_planning_and_manual_character_plac
         "# stale environment alias\n",
         encoding="utf-8",
     )
+    (projects_root / "demo" / "01_source" / "character_descriptions" / "legacy_extra_manual_description.md").write_text(
+        "\n".join(
+            [
+                "<!-- FILMCREATOR_MANUAL_PLACEHOLDER -->",
+                "",
+                "# Asset ID",
+                "legacy_extra",
+                "",
+                "# Purpose",
+                "Paste a stable manual visual description for this character so later shared reference generation can use it.",
+                "",
+                "# Manual Description",
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    (projects_root / "demo" / "01_source" / "character_descriptions" / "archivist_manual_description.md").write_text(
+        "\n".join(
+            [
+                "# Asset ID",
+                "archivist",
+                "",
+                "# Manual Description",
+                "A real manually pasted description that should survive cleanup.",
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
 
     summary = story_authoring_module.authoring_checkpoint(
         project_slug="demo",
@@ -274,6 +380,8 @@ def test_authoring_checkpoint_writes_analysis_planning_and_manual_character_plac
     manual_description_path = projects_root / "demo" / "01_source" / "character_descriptions" / "dejah_thoris_manual_description.md"
     assert manual_description_path.exists()
     assert "Paste a stable manual visual description" in manual_description_path.read_text(encoding="utf-8")
+    assert (projects_root / "demo" / "01_source" / "character_descriptions" / "legacy_extra_manual_description.md").exists() is False
+    assert (projects_root / "demo" / "01_source" / "character_descriptions" / "archivist_manual_description.md").exists()
 
     assert summary.planning.scene_id == "SC001"
     assert summary.planning.beat_ids == ["BT001", "BT002", "BT003"]
@@ -292,6 +400,7 @@ def test_authoring_checkpoint_writes_analysis_planning_and_manual_character_plac
     assert shared_character_prompt.workflow_type == "still.t2i.klein.distilled"
     assert shared_character_prompt.purpose == "Stable heroic reference still."
     assert "projects/demo/02_story_analysis/character_breakdowns/CHARACTER_INDEX.md" in shared_character_prompt.sources
+    assert "projects/demo/02_story_analysis/character_breakdowns/john_carter.md" in shared_character_prompt.sources
 
     clip_keyframe_prompt = parse_prompt_package(
         projects_root
@@ -305,3 +414,6 @@ def test_authoring_checkpoint_writes_analysis_planning_and_manual_character_plac
     assert clip_keyframe_prompt.purpose == "keyframe purpose"
     assert "projects/demo/02_story_analysis/character_breakdowns/CHARACTER_INDEX.md" in clip_keyframe_prompt.sources
     assert "projects/demo/02_story_analysis/story_summary/project_summary.md" in clip_keyframe_prompt.sources
+
+    log_files = sorted((projects_root / "demo" / "02_story_analysis" / "logs").glob("*.md"))
+    assert len(log_files) >= 8

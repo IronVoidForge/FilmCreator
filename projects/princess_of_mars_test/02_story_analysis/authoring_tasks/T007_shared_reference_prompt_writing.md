@@ -21,17 +21,29 @@ Write the reusable shared character-reference and environment-reference prompt p
 
 ## Response Contract
 
-Return valid JSON only with these keys:
+This stage should run as two separate single-purpose LM Studio calls:
 
-- `character_prompts`
-- `environment_prompts`
+1. `character_shared_prompts`
+2. `environment_shared_prompts`
 
-Where each array item contains:
+Each call should return one tagged Markdown packet only.
 
-- `asset_id`
-- `path`
-- `workflow_type`
-- `markdown`
+- `character_shared_prompts`
+  - repeated record type: `character_prompt`
+- `environment_shared_prompts`
+  - repeated record type: `environment_prompt`
+
+Each prompt record must contain:
+
+- field:
+  - `asset_id`
+- sections:
+  - `purpose`
+  - `positive_prompt`
+  - `negative_prompt`
+  - `inputs_markdown`
+  - `continuity_notes_markdown`
+  - `repair_notes_markdown`
 
 ## Required Coverage
 
@@ -63,6 +75,6 @@ Where each array item contains:
 
 ## Local LLM Guidance
 
-- prefer structured JSON output that maps directly to files
+- prefer tagged Markdown packet output that the parser can validate and convert
 - use low temperature and stable wording so reruns preserve asset identity
 - if an asset is underdescribed, preserve uncertainty instead of inventing ornate detail

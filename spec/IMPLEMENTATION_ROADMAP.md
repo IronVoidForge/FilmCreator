@@ -51,7 +51,8 @@ Ship a local-first, cut-oriented pipeline that can:
 - The still-fix source-selection bug that allowed a reviewed motion `MP4` to flow into an image slot has now been fixed in code, but the stage should still be treated as secondary until character-scene mapping exists.
 - The current short-cut motion path appears to introduce an unwanted blue-shift relative to the approved keyframe and needs look-preservation tuning.
 - Longer 10-second clips are not yet represented as explicit multi-segment motion plans.
-- LM Studio authoring now covers clip-local prompt writing, but scene analysis, clip planning, and shared character/environment prompt generation are still manual.
+- LM Studio authoring now covers clip-local prompt writing, but scene analysis, clip planning, and shared character/environment prompt generation still need live validation.
+- The chapter-authoring path should now use packetized Markdown exchanges with one bounded LM Studio task per call instead of trusting large strict-JSON responses from the local model.
 - The SQLite relational layer is now designed in the specs, but it does not exist in code yet.
 - The planning-time shot-start decision model is not yet implemented:
   - continuity mode
@@ -81,6 +82,7 @@ Build and validate the first real chapter-based authoring pass before SQLite:
    - clip plans
    - shared character and environment prompt packages
    - clip-local prompt packages for one scene and one or two initial clips
+   - keep each LM Studio call limited to one bounded task inside this sequence
 3. build the character-to-scene pipeline layer so authoring can decide:
    - which approved character refs are visible in each clip
    - which shared environment refs are relevant to that clip

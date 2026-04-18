@@ -21,18 +21,18 @@ Take one extracted scene and deepen it into a staging-focused scene file plus re
 
 ## Response Contract
 
-Return valid JSON only with these keys:
+Return one tagged Markdown packet only:
 
-- `scene_id`
-- `updated_scene_markdown`
-- `beat_index_markdown`
-- `beats`
-
-Where `beats` is an array of objects containing:
-
-- `beat_id`
-- `filename`
-- `markdown`
+- packet task: `scene_beats`
+- top-level sections:
+  - `updated_scene_markdown`
+  - `beat_index_markdown`
+- repeated record type:
+  - `beat`
+- each `beat` record must contain fields:
+  - `beat_id`
+- each `beat` record must contain sections:
+  - `markdown`
 
 ## Required Coverage
 
@@ -61,3 +61,4 @@ Where `beats` is an array of objects containing:
 - prefer explicit staging and geography over literary paraphrase
 - favor deterministic extraction over creative expansion
 - if the chapter is ambiguous, record the ambiguity instead of forcing false precision
+- keep this pass focused on scene-to-beat decomposition only, not clip or prompt writing
