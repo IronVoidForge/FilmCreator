@@ -550,11 +550,21 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
     written_files.append(repo_relative(clip_roster_path))
 
     clip_ids: list[str] = []
+    seen_clip_ids: set[str] = set()
     for raw_clip in _require_packet_records(clip_packet, record_type="clip"):
         raw_clip_id = _require_record_field(raw_clip, "clip_id")
-        clip_id, clip_warning = _normalize_clip_id(raw_clip_id)
+        try:
+            clip_id, clip_warning = _normalize_clip_id(raw_clip_id)
+        except LMStudioError as exc:
+            warnings.append(f"Skipped clip record with unusable clip_id '{raw_clip_id}': {exc}")
+            continue
         if clip_warning:
             warnings.append(clip_warning)
+        if clip_id in seen_clip_ids:
+            warnings.append(
+                f"Skipped duplicate clip record after normalization: '{raw_clip_id}' resolved to '{clip_id}', which already exists."
+            )
+            continue
         filename = f"{clip_id}.md"
         markdown = _require_record_section(raw_clip, "markdown")
         create_clip(project_slug, scene_id, clip_id)
@@ -562,6 +572,10 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
         _write_text(clip_path, markdown)
         written_files.append(repo_relative(clip_path))
         clip_ids.append(clip_id)
+        seen_clip_ids.add(clip_id)
+
+    if not clip_ids:
+        raise LMStudioError("Clip planning did not yield any usable clip ids after normalization.")
 
     elapsed = time.perf_counter() - started
     print(f"[authoring] Finished scene planning for {scene_id} in {elapsed:.1f}s")
@@ -1189,7 +1203,9 @@ def _clip_planning_user_prompt(
     )
     clip_rules = [
         "- clip = cut",
-        "- use clip ids in canonical CL001 format if possible",
+        "- use clip ids in canonical CL001 format only",
+        "- do not append suffixes like _01, -A, _variant, _alt, or sub-shot fragments to clip ids",
+        "- if you need to describe an alternate angle or sub-shot, put that in the clip markdown, not the clip id",
         "- most clips should target around 5 seconds",
         "- treat continuous_follow as rare",
         "- prefer reframe_same_moment, reblock_same_scene, insert, and cutaway when appropriate",
@@ -1200,7 +1216,8 @@ def _clip_planning_user_prompt(
         clip_rules = [
             "- keep the first clip roster small and testable",
             "- prefer independent clips",
-            "- use simple numeric ordering if needed but prefer CL001 format",
+            "- use simple canonical ids only, such as CL001, CL002, CL003",
+            "- do not add suffixes or variants to clip ids",
             "- keep metadata concise but complete",
         ]
     return "\n\n".join(
@@ -2009,16 +2026,27 @@ def _normalize_beat_id(value: str) -> str:
 
 def _normalize_clip_id(value: str) -> tuple[str, str | None]:
     original = value.strip()
-    normalized = original.upper()
-    normalized = normalized.replace("-", "_").replace(" ", "")
-    if re.fullmatch(r"\d{1,3}", normalized):
+    normalized = original.upper().replace("-", "_").replace(" ", "")
+
+    direct_match = re.fullmatch(r"CL(?:IP)?_?(\d{1,3})", normalized)
+    subclip_match = re.fullmatch(r"CL(?:IP)?_?(\d{1,3})_(\d{1,3}|[A-Z])", normalized)
+    suffixed_match = re.fullmatch(r"CL(?:IP)?_?(\d{1,3})([A-Z])", normalized)
+    plain_number_match = re.fullmatch(r"\d{1,3}", normalized)
+    compound_number_match = re.fullmatch(r"(\d{1,3})_(\d{1,3})", normalized)
+
+    if plain_number_match:
         coerced = f"CL{int(normalized):03d}"
+    elif direct_match:
+        coerced = f"CL{int(direct_match.group(1)):03d}"
+    elif subclip_match:
+        coerced = f"CL{int(subclip_match.group(1)):03d}"
+    elif suffixed_match:
+        coerced = f"CL{int(suffixed_match.group(1)):03d}"
+    elif compound_number_match:
+        coerced = f"CL{int(compound_number_match.group(1)):03d}"
     else:
-        match = re.fullmatch(r"CL(?:IP)?_?(\d{1,3})", normalized)
-        if match:
-            coerced = f"CL{int(match.group(1)):03d}"
-        else:
-            raise LMStudioError(f"Invalid clip id returned by LM Studio: {value}")
+        raise LMStudioError(f"Invalid clip id returned by LM Studio: {value}")
+
     warning = None
     if coerced != original.upper():
         warning = f"Normalized non-canonical clip id '{value}' to '{coerced}'."
