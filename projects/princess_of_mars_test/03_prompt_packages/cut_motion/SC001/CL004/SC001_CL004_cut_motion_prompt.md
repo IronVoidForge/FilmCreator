@@ -5,7 +5,7 @@ SC001 CL004 Cut Motion Prompt
 SC001_CL004_cut_motion_prompt
 
 # Purpose
-Establish post-ceremony setting and narrator's observational role. Focus on visible motion, camera behavior, and environment change. Preserve keyframe lighting and grade by default. Ensure fleet entrance is deliberate not glitchy. Maintain character consistency with previous clips in scene. Keep warrior and window positioning stable during motion. Preserve banner design continuity markers across shots. Ensure device shapes on individual ship prows remain identifiable.
+Describe the cut beat, framing, and continuity intent for this clip. Establish post-ceremony setting and narrator's observational role. Focus on visible motion, camera behavior, and environment change. Preserve keyframe lighting and grade by default. Ensure fleet entrance is deliberate not glitchy. Maintain character consistency with previous clips in scene. Keep warrior and window positioning stable during motion. Preserve banner design continuity markers across shots. Ensure device shapes on individual ship prows remain identifiable.
 
 # Workflow Type
 video.cut_motion.wan.i2v

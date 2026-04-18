@@ -5,16 +5,16 @@ SC001 CL005 Keyframe Prompt
 SC001_CL005_keyframe_prompt
 
 # Purpose
-Generate frozen still of intricate mechanical devices mounted on prows of gray vessels observed from upper floor window perspective, emphasizing continuity with previous banner visibility and maintaining lighting consistency for observation sequence.
+Generate frozen still of intricate mechanical devices mounted on prows of gray vessels observed from upper floor window perspective, emphasizing continuity with previous banner visibility and maintaining lighting consistency for observation sequence. Focus on visible state at cut start as single frozen still. Avoid proper nouns. Use descriptive noun phrases only.
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Close examination of odd devices mounted on prows of gray airships, visible through dark wood window frame, narrator's eyeline focused on specific vessel details, red planet valley landscape in background, dust motes floating in sunlight beam, cinematic lighting, high detail, mysterious objects, intricate shapes, green-skinned figure observing from interior, abandoned city rooftops below horizon, tense atmosphere.
+Close examination of odd devices mounted on prows of gray airships, visible through dark wood window frame, observer's eyeline focused on specific vessel details, red planet valley landscape in background, dust motes floating in sunlight beam, cinematic lighting, high detail, mysterious objects, intricate shapes, abandoned city rooftops below horizon, tense atmosphere, smoke trails from damaged hulls, banners showing minor damage indicators
 
 # Negative Prompt
-blurry, distorted faces, extra limbs, text, watermark, low resolution, dark shadows, oversaturated colors, wrong perspective, floating objects, missing window frame, incorrect device count, proper nouns, names, logos, bright daylight exterior only, green-skinned figure facing interior, banners dominating frame.
+blurry, distorted faces, extra limbs, text, watermark, low resolution, dark shadows, oversaturated colors, wrong perspective, floating objects, missing window frame, incorrect device count, proper nouns, names, logos, bright daylight exterior only, interior figure blocking main observation line, banners dominating frame, green-skinned figure facing interior
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -42,7 +42,7 @@ blurry, distorted faces, extra limbs, text, watermark, low resolution, dark shad
 
 # Continuity Notes
 - Ensure window frame geometry matches BT003 establishing shot
-- Maintain narrator's anxious expression consistent with retreat tension
+- Maintain observer's anxious expression consistent with retreat tension
 - Keep interior lighting dimmer than exterior valley view
 - Verify device shapes align with banner visibility from CL004
 - Check for text artifacts on interior walls and remove if present
@@ -51,7 +51,7 @@ blurry, distorted faces, extra limbs, text, watermark, low resolution, dark shad
 - If window glass appears distorted, regenerate with corrected refraction settings
 - If device details are unclear, increase focus pull to specific vessel prows
 - Check for text artifacts on interior walls and remove if present
-- Ensure green-skinned figure does not block main observation line of devices
+- Ensure observer does not block main observation line of devices
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/SC001/CL005.md

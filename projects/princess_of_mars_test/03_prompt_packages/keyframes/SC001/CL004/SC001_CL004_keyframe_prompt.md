@@ -11,7 +11,7 @@ Generate high-fidelity still reference image for scene build workflow, capturing
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Upper floor window frame edge visible, human male figure standing in neutral observation posture, close-up detail of strange banners on gray airship prows visible in distance, midday sunlight reflecting off ship devices, stone floor tiles polished surface, open ground street level below, concern expression on face, hands near chest position, deserted city landscape background, hills and rooftops visible, focus axis locked on vertical ship prow details.
+Upper floor stone window frame edge visible, human observer figure standing in neutral observation posture, close-up detail of strange banners on low painted vessel prows visible in distance, bright natural daylight reflecting off ship devices, polished stone floor tiles surface, open ground street level below, concern expression on face, hands near chest position, deserted city landscape background, hills and rooftops visible, focus axis locked on vertical vessel prow details.
 
 # Negative Prompt
 Crowds, movement blur, exterior only views, other characters, dim lighting, chaotic scene, distorted anatomy, multiple figures, named locations, interior corridor space, dark shadows, companion presence, earthly woman appearance, bright artificial light, night sky, interior wall textures.
@@ -23,7 +23,7 @@ Crowds, movement blur, exterior only views, other characters, dim lighting, chao
 - duration_seconds: 5
 - required_refs: BT003.md, Scene SC001 breakdown
 - optional_refs: Portal visibility in background, lighting consistency
-- visible_character_assets: human male figure, distant airship fleet
+- visible_character_assets: human observer figure, distant vessel fleet
 - look_continuity_policy: Interior lighting consistency with previous beats
 - intended_lighting_change: None, maintain ambient interior light
 - composition_type: Close-up shot capturing banner detail focus
@@ -35,7 +35,7 @@ Crowds, movement blur, exterior only views, other characters, dim lighting, chao
 - consistency_assist_policy: Maintain character proportions and lighting
 - consistency_assist_method: Reference alignment with previous frames
 - anatomy_repair_policy: Fix any distorted limbs or facial features
-- consistency_targets: Narrator position, corridor depth, banner visibility
+- consistency_targets: Observer position, corridor depth, banner visibility
 - style_profile: Klein distilled still scene build
 - batch_role: Keyframe generation
 - fix_of: Still scene build reference
@@ -55,7 +55,7 @@ Crowds, movement blur, exterior only views, other characters, dim lighting, chao
 - Ensure background depth matches window view
 - Correct lighting brightness to match midday conditions
 - Verify banner detail focus is sharp
-- Check ship prow device alignment
+- Check vessel prow device alignment
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/SC001/CL004.md

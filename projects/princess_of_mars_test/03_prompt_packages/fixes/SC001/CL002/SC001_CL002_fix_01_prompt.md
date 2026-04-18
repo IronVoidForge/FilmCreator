@@ -5,7 +5,7 @@ SC001 CL002 Fix 01 Prompt
 SC001_CL002_fix_01_prompt
 
 # Purpose
-corrective still generation preserving composition and look while fixing local issues, specifically ensuring fleet continuity and ship count accuracy over hill crests
+Corrective still generation preserving composition and look while fixing local issues, specifically ensuring fleet continuity and ship count accuracy over hill crests during initial combat engagement.
 
 # Workflow Type
 still.scene_insert.two_ref.klein.distilled

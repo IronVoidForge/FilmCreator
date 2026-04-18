@@ -5,29 +5,30 @@ disabled_airship Environment Reference Prompt
 disabled_airship_ref_prompt
 
 # Purpose
-Recovery operation zone for looting and destruction sequences. Large metallic airship hull structure with open deck areas. Damaged vessel with bodies strewn across decks. Grappling hooks attached to hull exterior. Fire and flame effects from burning interior. Smoke billowing from damaged sections. Daylight illuminating exterior hull surfaces. Hull dimensions establish massive scale compared to human figures. Deck areas provide flat ground reference.
+Secondary action hub transit setting prompt for stable local generation. Defines gray-painted vessel drifting unguided into distance with upper works and stem-to-stern configuration. Supports fire spurring from banners/upper works upon impact. Burning ship drift serves as dynamic environmental anchor for warriors and loot elements.
 
 # Workflow Type
 still.t2i.klein.distilled
 
 # Positive Prompt
-metallic airship hull, open deck areas, damaged vessel structure, grappled hull exterior, burning interior effects, smoke billowing from sections, daylight on exterior surfaces, massive scale architecture, flat ground reference decks, fire and flame effects, grappling hooks attached to hull
+gray-painted airship hull, burning vessel drifting southeast, swinging banners on disabled ship, loot casks and stone vessels on deck, fire spurring from upper works, sunlight gleaming on devices, smoke and heat implied by burning state, large vessel compared to warriors, stem-to-stern configuration, upper works structure
 
 # Negative Prompt
-proper nouns, character names, specific locations, indoor settings, night scenes, calm atmosphere, intact structure, small scale, enclosed spaces, peaceful environment, clean surfaces, no damage, no fire, no smoke, no daylight, no debris, no bodies, no destruction
+proper nouns, unrelated terrain elements, static grounded architecture, calm weather conditions, intact hull without damage, absence of fire or smoke, small scale relative to environment, missing banners or loot items, daytime without sunlight cues, peaceful transit without impact effects
 
 # Inputs
-- Architecture: metallic airship hull, open deck areas
-- Geography: large metallic structure, flat ground reference (decks)
-- Lighting: fire/flame effects, smoke billowing, daylight on exterior
-- Scale: massive compared to human figures
-- Anchors: grappling hooks attached to hull
+- asset_id: disabled_airship
+- project_slug: princess_of_mars_test
+- environment_role: secondary_action_hub_transit_setting
+- architecture_geography: long_low_gray_painted_vessel_drifting_unguided_into_distance
+- lighting_atmosphere: sunlight_gleaming_on_devices_fire_spurs_from_banners_upper_works_upon_impact
+- scale_environmental_anchors: large_vessel_compared_to_warriors_banners_swinging_from_stem_to_stern_loot_casks_of_water_silks_furs_stone_vessels
 
 # Continuity Notes
-- Environment serves as recovery operation zone for looting and destruction sequences. Hull dimensions establish massive scale compared to human figures. Deck areas provide flat ground reference. Grappling hooks mark attachment points on exterior hull. Fire and flame effects from burning interior sections. Smoke billowing from damaged sections. Daylight illuminating exterior hull surfaces. Bodies strewn across decks indicate recent destruction activity.
+- Burning drift serves as dynamic anchor for scene composition. Banners swinging from stem to stern maintain visual rhythm across vessel length. Loot elements (casks, silks, furs, stone vessels) provide texture anchors on deck. Fire spurring from upper works indicates impact state and maintains action hub role. Sunlight gleaming on devices establishes lighting consistency. Southeast drift direction maintained for continuity across shots.
 
 # Repair Notes
-- Ensure metallic airship hull maintains consistent damage patterns across shots. Grappling hooks should appear at same attachment points in continuity. Fire and smoke effects need to match intensity and location from previous scenes. Daylight exterior illumination must remain consistent with time of day established. Deck areas should show same debris patterns for continuity. Hull structure damage should not change between consecutive shots.
+- Maintain burning vessel state without transitioning to intact hull. Keep fire spurring from upper works visible in all frames. Ensure banners remain swinging from stem to stern configuration. Preserve large vessel scale relative to warriors and loot items. Avoid proper nouns in prompt bodies for stable generation. Keep sunlight cues consistent with device gleaming effects.
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/ENVIRONMENT_INDEX.md

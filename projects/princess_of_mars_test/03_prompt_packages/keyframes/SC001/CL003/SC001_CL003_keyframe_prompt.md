@@ -5,16 +5,16 @@ SC001 CL003 Keyframe Prompt
 SC001_CL003_keyframe_prompt
 
 # Purpose
-Establish upper floor window observation perspective showing exterior landscape and interior lighting contrast while maintaining spatial continuity with previous shot
+Establish upper floor window observation perspective showing exterior landscape and interior lighting contrast while maintaining spatial continuity with previous shot, capturing a frozen still of the observer at the window frame looking out at distant gray airships approaching under bright sunlight.
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-A frozen still of an observer standing at an upper floor window frame looking out at distant gray airships approaching under bright sunlight. The interior room shows polished stone tiles and wooden furniture with dim lighting contrasting the exterior glow. Outside, the landscape is barren with multiple ships visible in formation. Hand rests on window sill. Over-the-shoulder composition showing shoulder profile. Small hound companion visible in periphery without obstructing view. Natural light gleams on devices inside while the view remains clear and open
+A frozen still of a green-skinned figure standing at an upper floor window frame looking out at distant gray airships approaching under bright sunlight. The interior room shows polished stone tiles and wooden furniture with dim lighting contrasting the exterior glow. Outside, the landscape is barren with multiple ships visible in formation. Hand rests on window sill. Over-the-shoulder composition showing shoulder profile. Small hound companion visible in periphery without obstructing view. Natural light gleams on devices inside while the view remains clear and open.
 
 # Negative Prompt
-crowded streets, moving camera, dark shadows, night time, vehicles in valley, other characters blocking view, blurry details, text overlays, interior clutter, excessive motion, female companion present, specific character titles, names visible
+crowded streets, moving camera, dark shadows, night time, vehicles in valley, other characters blocking view, blurry details, text overlays, interior clutter, excessive motion, female companion present, specific character titles, names visible, proper nouns, human observer, John Carter, Sola, Woola.
 
 # Inputs
 - project_id: princess_of_mars_test

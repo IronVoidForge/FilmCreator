@@ -4,10 +4,10 @@
 green_martian_females
 
 # Why This Needs Clarification
-Character may already exist under different name or cultural designation; "green" descriptor alone is too weak for stable identification across reruns.
+The character is not fully identified from this chapter alone.
 
 # Question
-What specific physical features distinguish these green Martian females from other Martians? Are there additional descriptive terms beyond "green"?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

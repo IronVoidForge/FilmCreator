@@ -5,16 +5,16 @@ SC001 CL006 Scene Stage Prompt
 SC001_CL006_scene_stage_prompt
 
 # Purpose
-Describe staging intent for scene stage clip within upper floor observation sequence showing Martian fleet retreat from hill crests with continuity markers maintained across banner designs and device shapes on ship prows
+Describe staging intent for scene stage clip within heavy damage observation sequence showing Martian fleet retreat from hill crests with continuity markers maintained across banner designs and device shapes on ship prows, focusing on visible damage progression indicators like smoke trails and hull breaches as observed from the upper floor window.
 
 # Workflow Type
 authoring.scene_stage
 
 # Positive Prompt
-human male protagonist standing at upper floor window observing distant formation of twenty gray airships positioned over hill crests, daylight conditions bright midday, polished stone floor visible inside, dark wood window frame with metal accents, profile view facing outward, strange banners on ship prows visible in distance, odd devices mounted on vessel prows identifiable
+human male protagonist standing at upper floor window observing distant formation of twenty gray airships positioned over hill crests, daylight conditions bright midday, polished stone floor visible inside, dark wood window frame with metal accents, profile view facing outward, strange banners on ship prows visible in distance, odd devices mounted on vessel prows identifiable, smoke trails rising from hulls, minor damage indicators visible, ships drifting slightly southeast, valley floor visible below, hills beyond framing the action.
 
 # Negative Prompt
-night scene, indoor artificial lighting, different character attire, crowded street level inside window, modern technology props, incorrect fleet formation, dark wood frame missing metal accents, close up facial expressions only, single ship instead of twenty ships, banners dissolving in flame, green figures dropping at bullet explosions
+night scene, indoor artificial lighting, different character attire, crowded street level inside window, modern technology props, incorrect fleet formation, dark wood frame missing metal accents, close up facial expressions only, single ship instead of twenty ships, banners dissolving in flame, green figures dropping at bullet explosions, no smoke trails, no hull breaches, wrong banner designs, missing device shapes.
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -50,6 +50,7 @@ night scene, indoor artificial lighting, different character attire, crowded str
 - banner designs on ship prows must be identifiable across all detail shots
 - device shapes mounted on vessel prows must match visual notes from previous clips
 - interior lighting level warm contrast must align with CL001 established conditions
+- damage progression (smoke trails, hull breaches) must track logically across shots
 
 # Repair Notes
 - ensure narrator hand placement on window sill varies by emotional beat while maintaining continuity
@@ -59,6 +60,7 @@ night scene, indoor artificial lighting, different character attire, crowded str
 - confirm ship prow details are visible in frame during cutaway detail shots
 - validate that twenty ships remain visible in wide formation shots without counting errors
 - ensure window frame elements including metal accents appear consistent across all angles
+- fix smoke trail density to reflect heavy damage sustained phase of BT003
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/SC001/CL006.md

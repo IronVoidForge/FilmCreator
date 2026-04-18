@@ -11,7 +11,7 @@ Describe staging intent for scene stage of SC001 CL005 detail insert shot focusi
 authoring.scene_stage
 
 # Positive Prompt
-detail insert of mysterious odd devices mounted on prows of gray painted airships, narrator human male warrior visible in frame with eyeline directed toward specific ships, upper floor window frame establishing interior boundary, dark wood window structure with metal accents visible, hill crests providing depth reference points for ship positioning, soft morning light transitioning to brighter midday illumination, stone floor material consistent in medium shots, vertical axis showing interior warm lighting contrast to exterior cool daylight, focus axis moving from horizontal fleet distribution to vertical ship prow details, specific device shapes now identifiable as mysterious objects
+detail insert of mysterious odd devices mounted on prows of gray painted airships, human observer visible in frame with eyeline directed toward specific ships, upper floor window frame establishing interior boundary, dark wood window structure with metal accents visible, hill crests providing depth reference points for ship positioning, soft morning light transitioning to brighter midday illumination, stone floor material consistent in medium shots, vertical axis showing interior warm lighting contrast to exterior cool daylight, focus axis moving from horizontal fleet distribution to vertical ship prow details, specific device shapes now identifiable as mysterious objects
 
 # Negative Prompt
 full fleet formation visible without detail focus, airships landing or taking off, text labels or readable signage on devices, bright interior lighting overwhelming exterior view, dark exterior view obscuring ship details, chaotic movement patterns, blurred faces or distorted anatomy, low resolution artifacts, crowds in immediate area, enemy combatants close up, ships positioned at wrong elevation relative to hill crests, inconsistent window frame elements, mismatched stone floor material
@@ -23,7 +23,7 @@ full fleet formation visible without detail focus, airships landing or taking of
 - duration_seconds: 5
 - required_refs: SC001 beat bundle BT003.md, device shapes continuity markers across shots, ship prow details visible in frame
 - optional_refs: hill crests depth context for close-ups, lighting consistency notes, banner designs as visual reference points
-- visible_character_assets: narrator human male warrior, green warriors static or minimal movement on selected vessels with visible devices
+- visible_character_assets: human observer, green warriors static or minimal movement on selected vessels with visible devices
 - look_continuity_policy: match previous beats from CL004 banner close-up
 - intended_lighting_change: interior dimmer than exterior daylight view
 - composition_type: detail insert of devices on ship prows

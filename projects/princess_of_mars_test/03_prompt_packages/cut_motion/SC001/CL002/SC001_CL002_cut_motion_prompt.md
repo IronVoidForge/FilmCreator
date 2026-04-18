@@ -11,7 +11,7 @@ Execute cut motion transition establishing fleet scale and formation while maint
 video.cut_motion.wan.i2v
 
 # Positive Prompt
-Wide establishing shot cutting from interior window POV to distant horizon view. Twenty gray airships forming synchronized pattern across sky above hill crests. Ships positioned at base of first crest then distributed across multiple reference points in formation. Strange banners visible on ship prows with odd devices on individual vessels. Morning light brightening throughout sequence. Camera maintains subject-object relationship while tracking fleet movement along horizontal plane with slight elevation variations. Minimal character movement; focus on fleet formation and relationship to landscape. Hill crests create depth axis for ship positioning.
+Wide establishing shot cutting from interior window POV to distant horizon view. Twenty gray airships forming synchronized pattern across sky above hill crests. Ships positioned at base of first crest then distributed across multiple reference points in formation. Strange banners visible on ship prows with devices on individual vessels. Morning light brightening throughout sequence. Camera maintains subject-object relationship while tracking fleet movement along horizontal plane with slight elevation variations. Minimal character movement; focus on fleet formation and relationship to landscape. Hill crests create depth axis for ship positioning.
 
 # Negative Prompt
 static image, sudden jump cut, distorted anatomy, extra limbs, flickering lights, wrong color grade, exterior sunlight bleeding into interior, blurry motion, morphing characters, static background, incorrect camera angle, narrator figure walking through entrance, interior corridor space, doorway frame, building entrance, interior corridor, ship count less than twenty, missing banners, missing devices, wrong hill crest positioning, inconsistent lighting levels
@@ -23,7 +23,7 @@ static image, sudden jump cut, distorted anatomy, extra limbs, flickering lights
 - duration_seconds: 5
 - required_refs: SC001 beat bundle BT001.md and BT002.md, Ship positions relative to hill crests continuity notes, Banner visibility markers across shots
 - optional_refs: Hill crest depth axis reference points, Movement timing consistency notes, Interior lighting level contrast warm versus cool
-- visible_character_assets: Green-skinned Warriors fleet, Airships
+- visible_character_assets: green Martians fleet, Airships
 - look_continuity_policy: Preserve keyframe lighting and grade by default
 - intended_lighting_change: None
 - composition_type: Wide exterior establishing shot

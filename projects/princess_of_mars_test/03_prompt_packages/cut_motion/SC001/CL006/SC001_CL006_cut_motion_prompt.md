@@ -39,6 +39,7 @@ distorted faces, extra limbs, flickering lights, dark shadows, night time, blurr
 - style_profile: sci_fi_adventure_war_observation
 - batch_role: cut_motion_clip
 - fix_of: SC001_CL006_cut_motion_prompt
+- workflow_type: video.cut_motion.wan.i2v
 
 # Continuity Notes
 - Green warrior attire remains consistent throughout clip with dark wood window frame and metal accents

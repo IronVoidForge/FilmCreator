@@ -1,8 +1,8 @@
-# Character Index - Chapter VIII
+# Character Index - Chapter CH008
 
-| Asset ID | Canonical Character ID | Display Name | Role | Identification Status | Description Status |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| the_narrator | the_narrator | The Narrator | Protagonist / Observer | Fully Identified | Manual Description Required |
-| dejah_thoris | dejah_thoris | Dejah Thoris | Princess / Prisoner | Fully Identified | Physically Described |
-| lorquas_ptomel | lorquas_ptomel | Lorquas Ptomel | Warrior Leader | Fully Identified | Manual Description Required |
-| sola | sola | Sola | Companion / Messenger | Fully Identified | Manual Description Required |
+| Asset ID | Display Name | Role | Identification Status | Description Availability |
+| :--- | :--- | :--- | :--- | :--- |
+| carter | Carter | Observer / Commander | Partial (Name Only) | None (Visual Unknown) |
+| prisoner | The Prisoner | Captive / Subject | Full (Visual Defined) | Detailed Visual Traits |
+| green_martians | Green Martians | Warriors / Attackers | Full (Species Defined) | General Species Traits |
+| green_martian_females | Green Martian Females | Captors | Full (Subset Defined) | Specific Action Group |

@@ -5,34 +5,27 @@ carter Character Reference Prompt
 carter_ref_prompt
 
 # Purpose
-Create reusable character reference prompts for stable local generation. Asset ID carter requires manual physical description input due to missing chapter summary details. Prompts should establish consistent face, hair, body type, costume logic, silhouette, and recurring materials without scene-specific blocking. Purpose is to document uncertainty and guide future image generation with descriptive noun phrases avoiding proper nouns.
+Carter is an Observer/Commander figure referenced in Chapter CH008 with no physical description provided in source material. Visual identity, costume, and silhouette are entirely undefined per uncertainty notes. Manual character description required before stable image generation can proceed. Current prompts use general descriptive terms to accommodate future manual input addition.
 
 # Workflow Type
 still.t2i.klein.distilled
 
 # Positive Prompt
-leader of warriors, city dweller, confident posture, urban environment, detailed facial features, styled hair, fitted costume, strong silhouette, visible clothing textures, mature build, expressive eyes, practical footwear, structured shoulders, clean lines, neutral background, consistent character design
+Observer standing at window or balcony, composed posture, formal attire, neutral expression, clean lines, structured silhouette, muted color palette, professional appearance, calm demeanor, architectural background, minimalistic design, steady stance, dignified presence, understated elegance, composed figure, restrained movement, balanced composition
 
 # Negative Prompt
-proper nouns, scene-specific blocking, temporary materials, inconsistent proportions, distorted face, messy hair, ill-fitting costume, weak silhouette, blurry details, inappropriate age markers, casual stance, cluttered environment, variable lighting, mismatched textures, undefined features, unstable character identity
+exaggerated features, distorted proportions, overly detailed textures, chaotic blocking, bright saturated colors, emotional expressions, dynamic action poses, cluttered background, messy silhouette, informal clothing, casual stance, animated gestures, complex patterns, ornate details, busy composition, unrealistic anatomy, inconsistent lighting, over-processed appearance
 
 # Inputs
-- Asset ID: carter
-- Display Name: Carter
-- Chapter Role: Leader/Warrior
-- Presence Status: Referenced (Eyes meet him, emerges onto street)
-- Physical Description: None provided in chapter summary
-- Costume & Silhouette: None provided in chapter summary
-- Continuity-Critical Traits: None provided in chapter summary
-- Descriptive Noun Phrases: Leader of warriors, city dweller
-- Uncertainty Notes: No physical description available in chapter summary. Manual description required for image generation.
-- Manual Description Path: projects/princess_of_mars_test/01_source/character_descriptions/carter_manual_description.md (missing)
+- Manual character description path: projects/princess_of_mars_test/01_source/character_descriptions/carter_manual_description.md (missing)
+- Character breakdown path: projects/princess_of_mars_test/02_story_analysis/character_breakdowns/carter.md
+- Current status: Visual appearance undefined in Chapter CH008 source material. Manual description required per uncertainty notes before stable generation can proceed.
 
 # Continuity Notes
-- Character carter appears referenced in chapter VIII with eye contact and street emergence. No physical description exists in current chapter summary, requiring manual input for image generation. Costume and silhouette details are absent from source material. Continuity-critical traits not documented in chapter breakdown. Descriptive noun phrases available: leader of warriors, city dweller. Manual character description path is missing and needs creation before prompt finalization.
+- Carter identified by name only with no physical attributes recorded in Chapter CH008. Physical presence supported by source is limited to window/balcony observation location. Costume and silhouette traits not recorded in chapter material. Visual identity unknown per uncertainty notes. Manual description input required for future image generation. Face, hair, body type, costume logic, silhouette, and recurring materials cannot be specified without manual character description addition.
 
 # Repair Notes
-- Manual character description file at projects/princess_of_mars_test/01_source/character_descriptions/carter_manual_description.md is missing and must be created with physical details for carter. Current prompts use placeholder descriptive phrases due to lack of source material. Future iterations should incorporate actual costume, silhouette, and facial feature specifications once manual description is completed. Prompts currently avoid proper nouns as required but need concrete visual descriptors from manual input.
+- Add manual character description to projects/princess_of_mars_test/01_source/character_descriptions/carter_manual_description.md before stable generation can proceed. Current prompts use general descriptive terms to accommodate future manual input. Once manual description is added, update positive/negative prompts with specific face, hair, body type, costume logic, silhouette, and recurring materials from that manual description.
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/character_breakdowns/CHARACTER_INDEX.md
