@@ -1,5 +1,5 @@
 # Chapter
-CH003
+CH010
 
 # Title
 A Princess of Mars - Chapter X
@@ -353,6 +353,3 @@ of one. They did not molest us, and so Dejah Thoris, Princess of
 Helium, and John Carter, gentleman of Virginia, followed by the
 faithful Woola, passed through utter silence from the audience chamber
 of Lorquas Ptomel, Jed among the Tharks of Barsoom.
-
-
-
