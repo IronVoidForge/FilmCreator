@@ -126,6 +126,8 @@ def write_prompts(
 
     total_targets = len(target_clip_ids) * 4
     completed_targets = 0
+    successful_targets = 0
+    failed_targets = 0
     print(f"[authoring] Starting clip prompt writing for {project_slug}/{scene_id}: {len(target_clip_ids)} clips, {total_targets} targets total...")
 
     for current_clip_id in target_clip_ids:
@@ -133,9 +135,12 @@ def write_prompts(
         targets = list(_prompt_targets(project_slug, scene_id, current_clip_id))
         clip_successful_stages: set[str] = set()
         clip_failures: list[PromptWriteFailure] = []
+        clip_completed = 0
+        clip_succeeded = 0
 
         for target in targets:
             completed_targets += 1
+            clip_completed += 1
             existing = _load_existing_prompt(target.path)
             print(f"[authoring] Clip prompt {completed_targets}/{total_targets} started: {scene_id}/{current_clip_id} {target.stage}")
             package, local_warnings, log_path, duration_seconds = _write_prompt_target_with_retries(
@@ -149,7 +154,7 @@ def write_prompts(
             )
             warnings.extend(f"{current_clip_id}:{target.stage}: {warning}" for warning in local_warnings)
             if package is None:
-                failure_reason = "LM Studio prompt-writing retries exhausted."
+                failure_reason = local_warnings[-1] if local_warnings else "LM Studio prompt-writing retries exhausted."
                 failure_path = _write_prompt_failure_artifact(
                     project_slug=project_slug,
                     scene_id=scene_id,
@@ -166,6 +171,7 @@ def write_prompts(
                 )
                 failures.append(failure)
                 clip_failures.append(failure)
+                failed_targets += 1
                 print(f"[authoring] Clip prompt {scene_id}/{current_clip_id} {target.stage} failed after retries; continuing")
                 continue
 
@@ -181,6 +187,8 @@ def write_prompts(
                 )
             )
             clip_successful_stages.add(target.stage)
+            successful_targets += 1
+            clip_succeeded += 1
             print(f"[authoring] Clip prompt {scene_id}/{current_clip_id} {target.stage} finished in {duration_seconds:.1f}s")
 
         missing_required = sorted(MINIMUM_VIABLE_STAGES - clip_successful_stages)
@@ -199,6 +207,12 @@ def write_prompts(
                 clip_id=current_clip_id,
                 targets=targets,
             )
+        print(
+            f"[authoring] Clip {scene_id}/{current_clip_id} summary: {clip_succeeded}/{clip_completed} targets succeeded, {len(clip_failures)} failed"
+        )
+        print(
+            f"[authoring] Clip prompt progress: {completed_targets}/{total_targets} complete, {successful_targets} succeeded, {failed_targets} failed"
+        )
 
     elapsed = time.perf_counter() - started
     print(f"[authoring] Finished clip prompt writing in {elapsed:.1f}s")
@@ -373,10 +387,13 @@ def _load_existing_prompt(path: Path) -> PromptPackage | None:
 def _authoring_system_prompt(target: PromptTarget, degraded: bool = False) -> str:
     lines = [
         "You are writing one FilmCreator prompt package for a local generation pipeline.",
+        "Your first output line must be exactly [[FILMCREATOR_PACKET]].",
+        "Your last output line must be exactly [[/FILMCREATOR_PACKET]].",
         "Return exactly one FILMCREATOR packet in Markdown.",
         "Do not return JSON.",
         "Do not use markdown fences.",
         "Do not add commentary before or after the packet.",
+        "Do not omit the outer packet envelope.",
         f"Target stage: {target.stage}",
         f"Stage guidance: {target.guidance}",
         "Use descriptive noun phrases and avoid proper nouns in prompt text.",
@@ -421,6 +438,13 @@ def _authoring_user_prompt(
             f"Prompt id: {target.prompt_id}",
             f"Workflow type: {target.workflow_type}",
             request,
+            "Output rules:",
+            f"1. First line must be {PACKET_START_TAG}",
+            f"2. Last line must be {PACKET_END_TAG}",
+            "3. No text before the first line",
+            "4. No text after the last line",
+            "5. Every required section must appear exactly once",
+            "",
             "Use this exact packet envelope and section names:",
             PACKET_START_TAG,
             "task: clip_prompt",
@@ -673,9 +697,21 @@ def _extract_packet_body(response: str) -> str:
     lines = response.splitlines()
     start_index = next((index for index, line in enumerate(lines) if line.strip() == PACKET_START_TAG), -1)
     end_index = next((index for index in range(len(lines) - 1, -1, -1) if lines[index].strip() == PACKET_END_TAG), -1)
-    if start_index == -1 or end_index == -1 or end_index <= start_index:
-        raise LMStudioError("Prompt-writing response did not include a FILMCREATOR packet envelope.")
-    return "\n".join(lines[start_index + 1 : end_index]).strip()
+    if start_index != -1 and end_index != -1 and end_index > start_index:
+        return "\n".join(lines[start_index + 1 : end_index]).strip()
+
+    has_sections = any(SECTION_TAG_PATTERN.fullmatch(line.strip()) for line in lines)
+    if has_sections:
+        salvaged = "\n".join(
+            [
+                "task: clip_prompt",
+                f"version: {PACKET_VERSION}",
+                *lines,
+            ]
+        )
+        return salvaged.strip()
+
+    raise LMStudioError("Prompt-writing response did not include a FILMCREATOR packet envelope.")
 
 
 def _parse_packet_body(packet_body: str) -> _PacketDocument:
