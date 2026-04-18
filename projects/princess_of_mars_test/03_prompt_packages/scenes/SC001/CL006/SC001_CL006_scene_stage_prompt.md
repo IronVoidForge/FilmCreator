@@ -5,53 +5,60 @@ SC001 CL006 Scene Stage Prompt
 SC001_CL006_scene_stage_prompt
 
 # Purpose
-Describe staging intent for scene stage clip within upper floor observation sequence
+Describe staging intent for scene stage clip within upper floor observation sequence showing Martian fleet retreat from hill crests with continuity markers maintained across banner designs and device shapes on ship prows
 
 # Workflow Type
 authoring.scene_stage
 
 # Positive Prompt
-human male protagonist standing at upper floor window observing distant fleet of gray airships approaching deserted city landscape, daylight conditions transitioning from soft morning to bright midday, polished stone floor visible inside, dark wood window frame with metal accents, profile view facing outward, smoke and flame visible on distant rooftops
+human male protagonist standing at upper floor window observing distant formation of twenty gray airships positioned over hill crests, daylight conditions bright midday, polished stone floor visible inside, dark wood window frame with metal accents, profile view facing outward, strange banners on ship prows visible in distance, odd devices mounted on vessel prows identifiable
 
 # Negative Prompt
-night scene, indoor artificial lighting, different character attire, crowded street level inside window, modern technology props, incorrect fleet formation, dark wood frame missing metal accents, close up facial expressions only
+night scene, indoor artificial lighting, different character attire, crowded street level inside window, modern technology props, incorrect fleet formation, dark wood frame missing metal accents, close up facial expressions only, single ship instead of twenty ships, banners dissolving in flame, green figures dropping at bullet explosions
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: SC001
 - clip_id: CL006
 - duration_seconds: 5
-- required_refs: 
-- optional_refs: 
-- visible_character_assets: human male protagonist
+- required_refs: SC001 beat bundle BT003.md, banner designs continuity markers across all shots, device shapes continuity markers across all shots, ship prow details visible in frame
+- optional_refs: Hill crests depth context for close-ups, lighting consistency notes, interior lighting level warm contrast from CL001
+- visible_character_assets: human male protagonist narrator observer
 - look_continuity_policy: window frame consistent
 - intended_lighting_change: morning to midday
-- composition_type: medium profile
-- continuity_mode: window frame consistent
-- starting_keyframe_strategy: static hold
-- dependency_policy: 
-- auto_advance_policy: 
-- fallback_strategy: 
-- consistency_assist_policy: 
-- consistency_assist_method: 
-- anatomy_repair_policy: 
-- consistency_targets: 
+- composition_type: cutaway detail shots maintaining continuity markers
+- continuity_mode: reblock_same_scene
+- starting_keyframe_strategy: insert_continuity_marker_detail
+- dependency_policy: dependent_on_all_previous_clip_continuity_elements
+- auto_advance_policy: none
+- fallback_strategy: cutaway_to_hill_crest_context
+- consistency_assist_policy: enabled
+- consistency_assist_method: banner design and device shape matching
+- anatomy_repair_policy: minimal
+- consistency_targets: ship count twenty, window framing elements, interior lighting level, banner designs, device shapes
 - style_profile: action oriented
-- batch_role: 
-- fix_of: 
+- batch_role: continuity detail shot
+- fix_of: SC001_CL005_scene_stage_prompt
 
 # Continuity Notes
-- Carter maintains consistent distance from window frame
-- Window wiper position remains unchanged for continuity
-- Fleet approaches in steady formation with angle toward plaza
-- Lighting shifts from soft morning to brighter midday
-- Floor material remains consistent polished stone tiles
+- narrator maintains consistent distance from window frame throughout clip sequence
+- window wiper position remains unchanged for continuity across all shots
+- fleet positioned over hill crests in wide formation with angle toward plaza maintained
+- lighting shifts from soft morning to brighter midday conditions visible in exterior shots
+- floor material remains consistent polished stone tiles inside observation point
+- ship count of twenty must be maintained in wide establishing shots
+- banner designs on ship prows must be identifiable across all detail shots
+- device shapes mounted on vessel prows must match visual notes from previous clips
+- interior lighting level warm contrast must align with CL001 established conditions
 
 # Repair Notes
-- Ensure Carter's hand placement on window sill varies by emotional beat
-- Verify fleet formation consistency across shots
-- Match daylight continuity conditions accurately
-- Check for any visible props or devices on ships matching visual notes
+- ensure narrator hand placement on window sill varies by emotional beat while maintaining continuity
+- verify fleet formation consistency across shots with hill crest positioning maintained
+- match daylight continuity conditions accurately between exterior and interior lighting levels
+- check for any visible props or devices on ships matching visual notes from banner design continuity markers
+- confirm ship prow details are visible in frame during cutaway detail shots
+- validate that twenty ships remain visible in wide formation shots without counting errors
+- ensure window frame elements including metal accents appear consistent across all angles
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/SC001/CL006.md

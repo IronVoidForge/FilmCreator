@@ -5,7 +5,7 @@ SC001 CL005 Fix 01 Prompt
 SC001_CL005_fix_01_prompt
 
 # Purpose
-Correct local generation artifacts for CL005 Beat 004 while preserving rising tension composition and midday daylight continuity
+Correct local generation artifacts for CL005 Beat 003 detail insert while preserving midday daylight continuity and rising tension composition from approved still base
 
 # Workflow Type
 still.scene_insert.two_ref.klein.distilled
@@ -21,24 +21,24 @@ blurry, distorted anatomy, fused fingers, wrong color palette, bright blue sky, 
 - scene_id: SC001
 - clip_id: CL005
 - duration_seconds: 5
-- required_refs: 
-- optional_refs: 
-- visible_character_assets: 
-- look_continuity_policy: 
-- intended_lighting_change: 
-- composition_type: 
-- continuity_mode: 
-- starting_keyframe_strategy: 
-- dependency_policy: 
-- auto_advance_policy: 
-- fallback_strategy: 
-- consistency_assist_policy: 
-- consistency_assist_method: 
-- anatomy_repair_policy: 
-- consistency_targets: 
-- style_profile: 
-- batch_role: 
-- fix_of: 
+- required_refs: approved_still_base
+- optional_refs: secondary_style_reference
+- visible_character_assets: human male protagonist, green-skinned warriors
+- look_continuity_policy: midday daylight consistency
+- intended_lighting_change: none
+- composition_type: detail insert
+- continuity_mode: reblock_same_scene
+- starting_keyframe_strategy: insert_device_detail_focus
+- dependency_policy: dependent_on_banner_visibility_and_device_shapes
+- auto_advance_policy: standard
+- fallback_strategy: cutaway_to_ship_prow_detail
+- consistency_assist_policy: enabled
+- consistency_assist_method: lighting_match
+- anatomy_repair_policy: strict
+- consistency_targets: ship count twenty, window frame position, banner designs, device shapes
+- style_profile: sci-fi adventure
+- batch_role: fix_01
+- fix_of: CL005_Beat003_detail_insert
 - workflow_type: still.scene_insert.two_ref.klein.distilled
 - image_1_reference: approved_still_base
 - image_2_reference: secondary_style_reference

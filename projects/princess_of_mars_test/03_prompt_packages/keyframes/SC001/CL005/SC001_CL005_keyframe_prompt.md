@@ -5,16 +5,16 @@ SC001 CL005 Keyframe Prompt
 SC001_CL005_keyframe_prompt
 
 # Purpose
-Generate frozen still of human male warrior observing approaching fleet from upper floor window during daylight observation sequence
+Generate frozen still of mysterious devices mounted on prows of gray airships observed from upper floor window perspective, emphasizing continuity with previous banner close-up and maintaining lighting consistency for observation sequence
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Human male warrior standing at dark wood window frame, hands resting on polished stone sill, profile view facing outward, twenty gray airships visible in distance across red planet valley landscape, interior room walls dimly lit by natural sunlight, dust motes floating in beam, abandoned city rooftops below horizon, tense atmosphere, cinematic lighting, high detail
+Close examination of odd devices mounted on prows of gray airships, visible through dark wood window frame, narrator's eyeline focused on specific vessel details, red planet valley landscape in background, dust motes floating in sunlight beam, cinematic lighting, high detail, mysterious objects, intricate shapes, green-skinned figure observing from interior, abandoned city rooftops below horizon, tense atmosphere
 
 # Negative Prompt
-blurry, distorted faces, extra limbs, text, watermark, low resolution, dark shadows, oversaturated colors, wrong perspective, floating objects, missing window frame, incorrect character count, proper nouns, names, logos
+blurry, distorted faces, extra limbs, text, watermark, low resolution, dark shadows, oversaturated colors, wrong perspective, floating objects, missing window frame, incorrect device count, proper nouns, names, logos, bright daylight exterior only, green-skinned figure facing interior, banners dominating frame
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -23,33 +23,35 @@ blurry, distorted faces, extra limbs, text, watermark, low resolution, dark shad
 - duration_seconds: 5
 - required_refs: upper_floor_window_view
 - optional_refs: building_interior_portal
-- visible_character_assets: human_male_warrior,hound,female_companion
+- visible_character_assets: human_male_warrior, green_skinned_figure
 - look_continuity_policy: match_previous_clip_lighting_and_position
 - intended_lighting_change: natural_sunlight_contrasting_interior_darkness
-- composition_type: medium_shot_window_view
+- composition_type: detail_insert_device_focus
 - continuity_mode: reblock_same_scene
-- starting_keyframe_strategy: frozen_observation_point
-- dependency_policy: independent_generation_with_ref_check
+- starting_keyframe_strategy: insert_device_detail_focus
+- dependency_policy: dependent_on_banner_visibility_and_device_shapes
 - auto_advance_policy: manual_review_required
-- fallback_strategy: retry_with_higher_resolution_seed
+- fallback_strategy: cutaway_to_ship_prow_detail
 - consistency_assist_policy: enabled_for_character_features
 - consistency_assist_method: feature_matching
 - anatomy_repair_policy: strict_enforcement
-- consistency_targets: face_shape,hair_style,clothing_details
+- consistency_targets: face_shape, hair_style, clothing_details, device_shapes
 - style_profile: cinematic_realism_klein_distilled
 - batch_role: keyframe_generation
 - fix_of: none
 
 # Continuity Notes
 - Ensure window frame geometry matches BT003 establishing shot
-- Maintain human male warrior's anxious expression consistent with retreat tension
+- Maintain narrator's anxious expression consistent with retreat tension
 - Keep interior lighting dimmer than exterior valley view
-- Verify hound position does not block main observation line
+- Verify device shapes align with banner visibility from CL004
+- Check for text artifacts on interior walls and remove if present
 
 # Repair Notes
 - If window glass appears distorted, regenerate with corrected refraction settings
-- If female companion is missing from corridor background, add subtle silhouette reference
+- If device details are unclear, increase focus pull to specific vessel prows
 - Check for text artifacts on interior walls and remove if present
+- Ensure green-skinned figure does not block main observation line of devices
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/SC001/CL005.md

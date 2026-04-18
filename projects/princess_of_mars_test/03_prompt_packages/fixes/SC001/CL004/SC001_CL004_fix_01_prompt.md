@@ -5,16 +5,16 @@ SC001 CL004 Fix 01 Prompt
 SC001_CL004_fix_01_prompt
 
 # Purpose
-Corrective still generation preserving composition and look while fixing local issues based on approved base image
+Corrective still generation preserving composition and look while fixing local issues based on approved base image, ensuring continuity with previous beats and maintaining visual fidelity for banner detail focus
 
 # Workflow Type
 still.scene_insert.two_ref.klein.distilled
 
 # Positive Prompt
-Medium shot interior window space, male human warrior observing exterior view, gray airships fleet approaching plaza, daylight reflecting off ship devices, stone floor tiles visible, dark wood window frame foreground, polished stone walls, midday light fully established, cinematic composition, high stakes military engagement atmosphere
+Medium shot interior window space, male human warrior observing exterior view, gray airships fleet approaching plaza, daylight reflecting off ship devices, stone floor tiles visible, dark wood window frame foreground, polished stone walls, midday light fully established, cinematic composition, high stakes military engagement atmosphere, clearly defined banner designs on prows, intact ship structures, consistent lighting between interior and exterior
 
 # Negative Prompt
-distorted anatomy, extra limbs, missing fingers, bad hands, blurry, low quality, text, watermark, signature, deformed face, ugly, mutation, morphed, disfigured, inconsistent lighting, floating elements, artifacts, crowd in immediate foreground, wrong skin tone, poor resolution, female figure, interior corridor space
+distorted anatomy, extra limbs, missing fingers, bad hands, blurry, low quality, text, watermark, signature, deformed face, ugly, mutation, morphed, disfigured, inconsistent lighting, floating elements, artifacts, crowd in immediate foreground, wrong skin tone, poor resolution, female figure, interior corridor space, distorted ship prows, faded banner details
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -46,6 +46,7 @@ distorted anatomy, extra limbs, missing fingers, bad hands, blurry, low quality,
 - ensure fleet formation matches visual baseline
 - keep observer reaction expression consistent with emotional arc
 - avoid introducing new crowd elements in immediate foreground
+- align banner designs with established continuity markers from fleet position
 
 # Repair Notes
 - fix any hand distortion on observer
@@ -53,6 +54,7 @@ distorted anatomy, extra limbs, missing fingers, bad hands, blurry, low quality,
 - ensure fleet anatomy is anatomically correct
 - remove any floating artifacts near window frame
 - align character scale with medium shot framing
+- sharpen banner details to match continuity markers
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/SC001/CL004.md

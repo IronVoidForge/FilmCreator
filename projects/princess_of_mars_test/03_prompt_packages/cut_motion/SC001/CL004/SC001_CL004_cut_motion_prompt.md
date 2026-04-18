@@ -5,23 +5,23 @@ SC001 CL004 Cut Motion Prompt
 SC001_CL004_cut_motion_prompt
 
 # Purpose
-Generate cut motion video for human male warrior observing approaching alien fleet from window, transitioning from mid-distance to plaza level with rising tension
+Generate cut motion video focusing on banner design details on Martian airships, transitioning from observation eyeline to close-up detail of ship prows and devices.
 
 # Workflow Type
 video.cut_motion.wan.i2v
 
 # Positive Prompt
-Medium shot human male warrior standing at dark wood window frame, hands moving from sill to chest position, weight shifting forward toward glass, outside view shows gray airships descending toward plaza street level, green-skinned alien warriors visible in distant fleet formation, midday sunlight reflecting off ship devices, camera slight push-in on warrior reaction, atmosphere tense anticipation, smoke and flame visible in background valley
+Close-up view of gray airship prows with strange banners and odd devices, midday sunlight reflecting off metal surfaces, camera slight push-in to reveal banner patterns, background hill crests blurred for depth, focus shift from fleet-wide to individual ship prow details, visible motion in fabric and light reflection.
 
 # Negative Prompt
-morphing faces, flickering lights, extra limbs, distorted anatomy, sudden jumps, static image, wrong character count, blurry text, inconsistent lighting, background shifting, glitchy movement, incorrect character identity, interior corridor space, female figure entrance, empty room transition
+morphing faces, flickering lights, extra limbs, distorted anatomy, sudden jumps, static image, wrong character count, blurry text, inconsistent lighting, background shifting, glitchy movement, incorrect character identity, interior corridor space, female figure entrance, empty room transition, rapid camera shake, loss of banner detail.
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: SC001
 - clip_id: CL004
 - duration_seconds: 5
-- required_refs: Beat BT004.md, Scene Summary, Chapter Summary daylight conditions
+- required_refs: Beat BT003.md, Scene Summary, Chapter Summary daylight conditions
 - optional_refs: Medium shot warrior + fleet in frame, POV from warrior looking at approaching ships
 - visible_character_assets: human male warrior, green-skinned alien warriors, gray airships
 - look_continuity_policy: Midday Light Established - Midday light fully established by end of beat
@@ -47,12 +47,15 @@ morphing faces, flickering lights, extra limbs, distorted anatomy, sudden jumps,
 - Ensure fleet entrance is deliberate not glitchy
 - Maintain character consistency with previous clips in scene
 - Keep warrior and window positioning stable during motion
+- Preserve banner design continuity markers across shots
+- Ensure device shapes on individual ship prows remain identifiable
 
 # Repair Notes
 - If fleet appears too fast, slow motion slightly
 - If lighting shifts, revert to base grade from keyframe
 - If anatomy distorts on entrance, regenerate with stricter constraints
 - If camera push is too abrupt, smooth out transition
+- If banner detail is lost, increase focus pull strength
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/SC001/CL004.md

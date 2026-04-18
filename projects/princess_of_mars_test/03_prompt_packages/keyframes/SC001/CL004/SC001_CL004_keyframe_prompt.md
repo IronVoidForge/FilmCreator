@@ -5,37 +5,37 @@ SC001 CL004 Keyframe Prompt
 SC001_CL004_keyframe_prompt
 
 # Purpose
-Generate high-fidelity still reference image for scene build workflow, capturing upper floor window observation point and narrator presence at cut start to establish tension before fleet arrival
+Generate high-fidelity still reference image for scene build workflow, capturing upper floor window observation point and banner design detail focus at cut start to establish visual continuity of fleet movement and narrator curiosity regarding strange devices on ship prows.
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Upper floor window frame, human male warrior standing, gray airships visible in distance, midday sunlight reflecting off ship devices, stone floor tiles, polished surface, plaza street level below, concern expression on face, hands near chest position, neutral observation posture, deserted city landscape, hills and rooftops in background
+Upper floor window frame, human male figure standing, close-up detail of strange banners on gray airship prows visible in distance, midday sunlight reflecting off ship devices, stone floor tiles, polished surface, open ground street level below, concern expression on face, hands near chest position, neutral observation posture, deserted city landscape, hills and rooftops in background, focus axis moves from fleet-wide to vertical ship prow details.
 
 # Negative Prompt
-Crowds, movement blur, exterior only views, other characters, dim lighting, chaotic scene, distorted anatomy, multiple figures, named locations, interior corridor space, dark shadows
+Crowds, movement blur, exterior only views, other characters, dim lighting, chaotic scene, distorted anatomy, multiple figures, named locations, interior corridor space, dark shadows, Sola presence, Earthly woman appearance, bright artificial light, night sky, interior wall textures.
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: SC001
 - clip_id: CL004
 - duration_seconds: 5
-- required_refs: BT004.md, Scene SC001 breakdown
+- required_refs: BT003.md, Scene SC001 breakdown
 - optional_refs: Portal visibility in background, lighting consistency
-- visible_character_assets: human male warrior, distant airship fleet
+- visible_character_assets: human male figure, distant airship fleet
 - look_continuity_policy: Interior lighting consistency with previous beats
 - intended_lighting_change: None, maintain ambient interior light
-- composition_type: Medium shot capturing Sola's entrance → Close-up on narrator's reaction
-- continuity_mode: cutaway
-- starting_keyframe_strategy: Show interior space empty, then introduce Sola's presence
+- composition_type: Close-up shot capturing banner detail focus
+- continuity_mode: reblock_same_scene
+- starting_keyframe_strategy: insert_banner_detail_focus
 - dependency_policy: Dependent on CL003 for emotional progression
 - auto_advance_policy: Static hold until entrance movement completes
 - fallback_strategy: Use static medium if movement unavailable
 - consistency_assist_policy: Maintain character proportions and lighting
 - consistency_assist_method: Reference alignment with previous frames
 - anatomy_repair_policy: Fix any distorted limbs or facial features
-- consistency_targets: Narrator position, corridor depth, portal visibility
+- consistency_targets: Narrator position, corridor depth, banner visibility
 - style_profile: Klein distilled still scene build
 - batch_role: Keyframe generation
 - fix_of: Still scene build reference
@@ -46,12 +46,16 @@ Crowds, movement blur, exterior only views, other characters, dim lighting, chao
 - Midday lighting intensity
 - Fleet positioning at mid-distance
 - Character posture shift from sill to chest
-- Plaza details clarity
+- Open ground details clarity
+- Banner design visibility across shots
+- Device shape continuity markers
 
 # Repair Notes
 - Fix anatomy distortions in hands or face
 - Ensure background depth matches window view
 - Correct lighting brightness to match midday conditions
+- Verify banner detail focus is sharp
+- Check ship prow device alignment
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/SC001/CL004.md

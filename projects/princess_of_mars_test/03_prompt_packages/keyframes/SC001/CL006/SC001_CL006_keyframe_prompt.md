@@ -5,23 +5,23 @@ SC001 CL006 Keyframe Prompt
 SC001_CL006_keyframe_prompt
 
 # Purpose
-Keyframe for rising tension beat start state
+Keyframe for rising tension beat start state establishing continuity markers at observation point
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Human male warrior standing at window frame, hands resting on sill, observing distant horizon, daylight lighting, alien city rooftops background, gray airships approaching in distance, polished stone floor tiles visible
+Human male figure standing at upper floor window frame, hands resting on sill, observing distant horizon line, daylight exterior lighting, interior warm contrast, twenty gray airships visible over hill crests in wide formation, strange banners attached to ship prows, odd devices mounted on vessel fronts, polished stone floor tiles visible inside
 
 # Negative Prompt
-distorted anatomy, wrong lighting, blurry, text, watermark, extra limbs, bad hands, low resolution, dark shadows, night time, human woman prisoner, green martian warriors close up
+distorted anatomy, extra limbs, blurry, text, watermark, low resolution, night time, dark shadows, human woman prisoner close up, green humanoid warriors close up, wrong ship count, missing banners
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: SC001
 - clip_id: CL006
 - duration_seconds: 5
-- required_refs: 
+- required_refs: banner designs continuity markers, device shapes continuity markers, ship prow details visible in frame
 - optional_refs: 
 - visible_character_assets: 
 - look_continuity_policy: 
@@ -46,7 +46,7 @@ distorted anatomy, wrong lighting, blurry, text, watermark, extra limbs, bad han
 - Floor material polished stone tiles
 - Lighting soft morning transitioning to bright midday
 - Fleet approaches in steady formation 15-degree angle toward plaza
-- Carter maintains consistent distance from window 2-3 feet
+- Human figure maintains consistent distance from window 2-3 feet
 
 # Repair Notes
 - Ensure hand placement on window sill matches continuity

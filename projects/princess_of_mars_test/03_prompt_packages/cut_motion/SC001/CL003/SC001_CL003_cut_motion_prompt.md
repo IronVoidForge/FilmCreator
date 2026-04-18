@@ -5,25 +5,25 @@ SC001 CL003 Cut Motion Prompt
 SC001_CL003_cut_motion_prompt
 
 # Purpose
-Generate cut motion transition from window approach to POV exterior view and close-up on narrator reaction, maintaining emotional weight and lighting consistency
+Generate cut motion transition from wide exterior to over-the-shoulder narrator view, maintaining fleet positioning and lighting contrast between interior dimness and exterior sunlight
 
 # Workflow Type
 video.cut_motion.wan.i2v
 
 # Positive Prompt
-Camera pushes forward through open window frame, exterior daylight floods interior space, male warrior turns head slightly towards approaching fleet, facial expression shifts from curiosity to concern, dim room shadows deepen against bright outside light
+Camera maintains over-the-shoulder perspective behind observer figure, head turns slightly towards distant horizon, twenty gray air ships move slowly across hill crests in formation, interior room shadows remain dim against bright daylight outside window frame, slight body tension visible in shoulder line
 
 # Negative Prompt
-distorted faces, extra limbs, sudden camera jumps not in plan, bright interior lighting mismatch, crowded plaza visible through window, enemy warriors appearing unexpectedly, text overlays, blurry motion, inconsistent lighting grade, wrong background environment
+distorted facial features, extra limbs, sudden camera jumps not in plan, bright interior lighting mismatch, crowded plaza visible through window, enemy warriors appearing unexpectedly, text overlays, blurry motion, inconsistent lighting grade, wrong background environment
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: SC001
 - clip_id: CL003
 - duration_seconds: 5
-- required_refs: BT003.md, Scene SC001 breakdown
+- required_refs: BT002.md, Scene SC001 breakdown
 - optional_refs: Valley hills landscape details, natural light contrast
-- visible_character_assets: male warrior at window, companion hound nearby
+- visible_character_assets: observer figure at window, companion hound nearby
 - look_continuity_policy: preserve keyframe lighting and grade by default
 - intended_lighting_change: interior dimness against exterior sunlight
 - composition_type: POV window view to close-up on narrator anxious expression
@@ -39,6 +39,7 @@ distorted faces, extra limbs, sudden camera jumps not in plan, bright interior l
 - style_profile: cinematic_compositional
 - batch_role: cut_motion
 - fix_of: none
+- workflow_type: video.cut_motion.wan.i2v
 
 # Continuity Notes
 - Preserve keyframe lighting and grade by default
