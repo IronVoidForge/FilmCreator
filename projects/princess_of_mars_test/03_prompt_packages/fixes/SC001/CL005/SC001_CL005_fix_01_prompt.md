@@ -5,16 +5,16 @@ SC001 CL005 Fix 01 Prompt
 SC001_CL005_fix_01_prompt
 
 # Purpose
-Correct local generation artifacts while preserving the established visual style of the Martian city retreat scene
+Correct local generation artifacts for CL005 Beat 004 while preserving rising tension composition and midday daylight continuity
 
 # Workflow Type
 still.scene_insert.two_ref.klein.distilled
 
 # Positive Prompt
-A deserted city street with upper floors and windows, gray painted airships hovering low over hills, green warriors in spears and chariots, narrator figure observing from a window or roof, copper skin tones, black hair, crimson lighting accents, sunlight gleaming on devices, stone vessels, silks, furs, jewels, open valleys, outlying hills
+human male protagonist standing at upper floor window, dark wood frame with metal accents, polished stone tiles visible, gray painted airships hovering low over plaza street level, midday sunlight reflecting off ship devices, concern expression on face, hands near window sill, distant green-skinned warriors in fleet formation, open valley background, outlying hills
 
 # Negative Prompt
-blurry, distorted anatomy, fused fingers, wrong color palette, bright blue sky, modern clothing, text, watermark, low resolution, excessive smoke obscuring faces, floating debris, incorrect ship banners
+blurry, distorted anatomy, fused fingers, wrong color palette, bright blue sky, modern clothing, text, watermark, low resolution, excessive smoke obscuring faces, floating debris, incorrect ship banners, red lighting accents, copper skin tones too pale
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -44,15 +44,15 @@ blurry, distorted anatomy, fused fingers, wrong color palette, bright blue sky, 
 - image_2_reference: secondary_style_reference
 
 # Continuity Notes
-- Match lighting consistency from previous clips (sunlight vs fire)
-- Maintain character appearance consistency (narrator position, green warrior armor style)
-- Preserve city architecture details and color palette
-- Ensure hound positioning follows close at heel if present
-- Keep emotional tone of high-stakes military engagement
+- Match midday lighting shift from soft morning to bright daylight
+- Maintain window frame position and wiper location consistency
+- Preserve fleet formation angle approaching plaza at fifteen degree tilt
+- Keep human male protagonist distance from window sill constant
+- Ensure stone vessel props match visual continuity notes
 
 # Repair Notes
 - Fix any local artifacts like floating debris or incorrect ship banners
-- Ensure narrator expression matches tension level of retreat
+- Ensure narrator expression matches tension level of approach
 - Verify copper skin tones are not too red or too pale
 - Check that gray airships maintain low altitude and painted finish
 - Correct any anatomy distortions in warrior gear or hands

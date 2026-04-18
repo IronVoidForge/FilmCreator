@@ -1,34 +1,11 @@
-# Project Title
-A Princess of Mars
+**Work:** A Princess of Mars (Barsoom) by Edgar Rice Burroughs.
 
-# Author
-Edgar Rice Burroughs
+**Narrator:** John Carter (human male, green Martian warrior).
 
-# Setting
-Martian City (Green Martians)
+**Key Companions:** Sola (Martian woman), Woola (hound).
 
-# Core Characters
-- Narrator (Human Observer)
-- Sola (Martian Companion)
-- Woola (Hound)
-- Lorquas Ptomel (Old Warrior Leader)
+**Setting:** Mars (Barsoom), specifically a deserted city with open valley, hills, and rooftops.
 
-# Narrative Context
-The story follows a human observer on Mars, accompanied by local Martians and a hound. The narrative explores advanced Martian technology, including airships and wireless apparatus, alongside inter-species warfare. Key themes include the accuracy of combat aim, societal structures of the green warriors, and the discovery of new species or monstrosities.
+**Core Conflict:** Military engagements between Green Martians and John Carter's forces; exploration of alien technology including airships and chariots.
 
-# Continuity Notes
-- Incubator ceremony precedes this chapter's events.
-- Martians retreat to city buildings for protection.
-- Fleet engagement occurs over the valley/hills.
-- Narrator observes from upper floors/windows.
-- Woola follows close at heel.
-- Sola interacts with narrator in plaza.
-
-# Reusable Elements
-- Martian warriors are green and wear spears/banners.
-- Airships are gray-painted, long, low, and carry strange devices.
-- Combat involves volley fire from buildings and ship guns.
-- Loot includes arms, ammunition, silks, furs, jewels, stone vessels, food/liquid.
-- Ship destruction involves burning as a funeral pyre.
-- Prisoner discovery involves dragging figure to ground/building.
-]]
+**Tone:** Action-oriented, military strategy, discovery of alien species and customs.

@@ -11,10 +11,10 @@ corrective still generation preserving composition and look while fixing local i
 still.scene_insert.two_ref.klein.distilled
 
 # Positive Prompt
-green Martian warriors on balcony ledge, spears and banners ready for combat, gray painted airships in sky distance, valley hills vista background, combat preparation atmosphere, cinematic lighting, high tension, detailed textures, upper floor observation point, desert city buildings environment
+human male warrior standing at window frame observing gray painted airships in sky distance, desert city buildings environment, valley hills vista background, daylight lighting conditions, cinematic exterior match, high tension atmosphere, detailed textures, upper floor observation point, military engagement preparation
 
 # Negative Prompt
-blurry, distorted anatomy, extra limbs, wrong colors, low resolution, artifacts, noise, bad hands, missing fingers, morphing faces, inconsistent lighting, watermark, text, signature, corridor interior, narrator walking alone, dim lighting, dark shadows obscuring details
+blurry, distorted anatomy, extra limbs, wrong colors, low resolution, artifacts, noise, bad hands, missing fingers, morphing faces, inconsistent lighting, watermark, text, signature, dark shadows obscuring details
 
 # Inputs
 - project_id: princess_of_mars_test

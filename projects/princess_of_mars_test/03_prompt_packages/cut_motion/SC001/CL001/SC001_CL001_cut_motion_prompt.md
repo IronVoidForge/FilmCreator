@@ -11,7 +11,7 @@ Generate cut motion starting from approved opening frame, preserving keyframe li
 video.cut_motion.wan.i2v
 
 # Positive Prompt
-Over-the-shoulder view of human observer looking out window frame. Fleet of gray vessels approaches in distance valley. Slight zoom or pan tracks fleet movement. Deserted city buildings and open plaza visible. Daylight lighting consistent with keyframe. Cinematic grade.
+Human male warrior stands at dark wood window sill inside upper floor room. Medium profile shot three-quarter angle facing outward. Hands resting on polished stone window ledge. Slight head tilt right toward distant horizon where gray airships form fleet in valley. Subtle forward weight shift onto legs as interest grows. Daylight sunlight reflects off ship devices outside. Dust motes visible in beam inside room. Cinematic grade preserved.
 
 # Negative Prompt
 morphing artifacts, flickering lighting, wrong anatomy, extra characters, sudden crowd appearance, incorrect camera angle, distorted background, inconsistent grade, blurry motion, static frame, low resolution
@@ -26,8 +26,8 @@ morphing artifacts, flickering lighting, wrong anatomy, extra characters, sudden
 - visible_character_assets: human observer at window frame, green warriors on balcony below
 - look_continuity_policy: preserve_keyframe_lighting
 - intended_lighting_change: none
-- composition_type: over_the_shoulder_observation_to_zoom_track_fleet
-- continuity_mode: cut
+- composition_type: medium_profile_shot
+- continuity_mode: window_frame_consistent
 - starting_keyframe_strategy: establish_vertical_axis_elevated_observer
 - dependency_policy: none_standalone_opening_shot
 - auto_advance_policy: standard
@@ -39,13 +39,17 @@ morphing artifacts, flickering lighting, wrong anatomy, extra characters, sudden
 - style_profile: epic_narrative
 - batch_role: opening_sequence
 - fix_of: none
+- workflow_type: video.cut_motion.wan.i2v
+- beat_index: BT001
 
 # Continuity Notes
 - Preserve keyframe lighting and grade by default.
 - Focus on visible motion, camera behavior, and environment change.
 - Ensure fleet approaches smoothly without jumping.
-- Maintain vertical axis of observer above city.
-- Keep green warriors stationary or firing in place below.
+- Maintain window frame consistency (dark wood with metal accents).
+- Keep window wiper position unchanged (upper right).
+- Preserve floor material (polished stone tiles).
+- Ensure Carter maintains 2-3 feet from window frame.
 
 # Repair Notes
 - Fix any morphing artifacts during zoom/pan transition.

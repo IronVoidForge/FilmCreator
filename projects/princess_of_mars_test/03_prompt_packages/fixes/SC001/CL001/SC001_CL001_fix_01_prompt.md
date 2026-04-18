@@ -11,7 +11,7 @@ corrective still generation preserving composition and look while fixing local i
 still.scene_insert.two_ref.klein.distilled
 
 # Positive Prompt
-fidelity to approved still base, upper floor window view, deserted city buildings, gray airships in sky, green warriors on balcony below, observer character stationary at frame, hound companion following close, sunlight gleaming on devices, wide establishing composition, medium tracking perspective, maintain original lighting and color palette
+faithful reproduction of approved still base composition, human male observer standing at upper floor window frame, hands resting on stone sill, profile view facing outward, deserted city skyline background, gray airships visible in daylight sky, distant green warriors on lower balconies, polished stone floor tiles visible inside, soft morning sunlight filtering through glass, dark wood window frame with metal accents, medium profile shot composition, cinematic lighting consistency
 
 # Negative Prompt
 distorted anatomy, extra limbs, wrong skin tone, inconsistent lighting, blurry details, text, watermark, floating objects, mismatched colors, crowded foreground, sudden movement artifacts, new crowd elements, incorrect character positioning, wrong number of ships, incorrect ship color, distorted window frame, misplaced horizon line
@@ -24,21 +24,21 @@ distorted anatomy, extra limbs, wrong skin tone, inconsistent lighting, blurry d
 - required_refs: image_1
 - optional_refs: image_2
 - visible_character_assets: observer character, hound companion
-- look_continuity_policy: 
-- intended_lighting_change: 
-- composition_type: over-the-shoulder at narrator looking out
-- continuity_mode: long shot of fleet in distance
+- look_continuity_policy: preserve window frame geometry and exterior lighting
+- intended_lighting_change: none - maintain soft morning daylight
+- composition_type: medium profile shot at window
+- continuity_mode: window frame consistent
 - starting_keyframe_strategy: establish vertical axis with narrator elevated above city
-- dependency_policy: none - standalone observation clip
-- auto_advance_policy: 
-- fallback_strategy: 
-- consistency_assist_policy: 
-- consistency_assist_method: 
-- anatomy_repair_policy: 
-- consistency_targets: 
-- style_profile: 
-- batch_role: 
-- fix_of: 
+- dependency_policy: standalone observation clip
+- auto_advance_policy: none
+- fallback_strategy: maintain sill position for first three seconds
+- consistency_assist_policy: match gray airship color to background sky
+- consistency_assist_method: color palette alignment
+- anatomy_repair_policy: fix foreground character distortions
+- consistency_targets: window frame, ship count, lighting
+- style_profile: cinematic_compositional
+- batch_role: still_fix
+- fix_of: local artifacts on approved base
 
 # Continuity Notes
 - maintain deserted city atmosphere
@@ -52,7 +52,7 @@ distorted anatomy, extra limbs, wrong skin tone, inconsistent lighting, blurry d
 # Repair Notes
 - correct local artifacts on approved base
 - smooth edges of distant figures
-- match color palette to Mars setting
+- match color palette to alien setting
 - fix any anatomical distortions in foreground characters
 - align window frame geometry with perspective
 - ensure ship count matches continuity requirements

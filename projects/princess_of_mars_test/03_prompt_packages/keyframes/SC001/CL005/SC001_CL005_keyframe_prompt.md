@@ -5,16 +5,16 @@ SC001 CL005 Keyframe Prompt
 SC001_CL005_keyframe_prompt
 
 # Purpose
-Generate frozen still of narrator observing deserted valley from upper floor window during retreat sequence
+Generate frozen still of human male warrior observing approaching fleet from upper floor window during daylight observation sequence
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-narrator standing at upper floor window frame looking outward, deserted valley hills visible beyond glass, interior room walls visible, natural sunlight gleaming on devices, tense atmosphere, abandoned city streets below, hound resting nearby, female companion entering corridor in background, cinematic lighting, high detail
+Human male warrior standing at dark wood window frame, hands resting on polished stone sill, profile view facing outward, twenty gray airships visible in distance across red planet valley landscape, interior room walls dimly lit by natural sunlight, dust motes floating in beam, abandoned city rooftops below horizon, tense atmosphere, cinematic lighting, high detail
 
 # Negative Prompt
-blurry, distorted faces, extra limbs, text, watermark, low resolution, dark shadows, oversaturated colors, wrong perspective, floating objects, missing window frame, incorrect character count
+blurry, distorted faces, extra limbs, text, watermark, low resolution, dark shadows, oversaturated colors, wrong perspective, floating objects, missing window frame, incorrect character count, proper nouns, names, logos
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -23,7 +23,7 @@ blurry, distorted faces, extra limbs, text, watermark, low resolution, dark shad
 - duration_seconds: 5
 - required_refs: upper_floor_window_view
 - optional_refs: building_interior_portal
-- visible_character_assets: narrator,hound,female_companion
+- visible_character_assets: human_male_warrior,hound,female_companion
 - look_continuity_policy: match_previous_clip_lighting_and_position
 - intended_lighting_change: natural_sunlight_contrasting_interior_darkness
 - composition_type: medium_shot_window_view
@@ -42,7 +42,7 @@ blurry, distorted faces, extra limbs, text, watermark, low resolution, dark shad
 
 # Continuity Notes
 - Ensure window frame geometry matches BT003 establishing shot
-- Maintain narrator's anxious expression consistent with retreat tension
+- Maintain human male warrior's anxious expression consistent with retreat tension
 - Keep interior lighting dimmer than exterior valley view
 - Verify hound position does not block main observation line
 

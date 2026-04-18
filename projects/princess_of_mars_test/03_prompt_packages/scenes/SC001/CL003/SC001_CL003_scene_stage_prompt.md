@@ -5,13 +5,13 @@ SC001 CL003 Scene Stage Prompt
 SC001_CL003_scene_stage_prompt
 
 # Purpose
-Establish staging intent for scene SC001 clip CL003, focusing on narrator's window view and emotional transition from interior to exterior observation.
+Establish staging intent for scene SC001 clip CL003, focusing on narrator's window view and emotional transition from interior to exterior observation within upper floor context
 
 # Workflow Type
 authoring.scene_stage
 
 # Positive Prompt
-narrator character approaching upper floor window frame, interior room visible behind, POV looking out at empty alien valley and hills, natural sunlight gleaming on exterior landscape, copper-skinned figure with anxious expression, hound nearby but not blocking view, vertical axis from interior floor to exterior view, emotional weight of abandonment conveyed
+narrator character standing at upper floor window frame, interior room visible behind subject, POV looking out at empty alien valley and hills, natural sunlight gleaming on exterior landscape, copper-skinned figure with anxious expression, hand placement transitioning from sill to chest, vertical axis from interior floor to exterior view, emotional weight of observation conveyed
 
 # Negative Prompt
 blurry window frame, extra characters blocking view, wrong lighting direction, crowded valley, text overlays, distorted anatomy, static camera without movement intent, bright interior shadows mismatching exterior light
@@ -39,18 +39,18 @@ blurry window frame, extra characters blocking view, wrong lighting direction, c
 - style_profile: 
 - batch_role: 
 - fix_of: 
+- beat_ref: BT003
+- workflow_type: authoring.scene_stage
 
 # Continuity Notes
 - Maintain narrator's movement path from corridor to window without skipping steps.
 - Ensure lighting contrast between interior room and exterior valley remains consistent.
 - Keep hound positioned nearby but not obstructing the window view line of sight.
-- Preserve emotional tone of abandonment in facial expression during exterior gaze.
 
 # Repair Notes
 - Fix any mismatched shadows on narrator's face caused by interior vs exterior light sources.
 - Remove accidental characters or objects blocking the window frame visibility.
 - Correct distorted anatomy if copper skin texture appears unnatural under sunlight.
-- Adjust camera movement to ensure smooth transition from interior approach to POV shot.
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/SC001/CL003.md

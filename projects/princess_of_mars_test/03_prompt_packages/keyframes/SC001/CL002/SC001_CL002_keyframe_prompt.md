@@ -5,16 +5,16 @@ SC001 CL002 Keyframe Prompt
 SC001_CL002_keyframe_prompt
 
 # Purpose
-Establish combat preparation state from elevated balcony position with distant fleet visible
+Establish fleet formation and scale relative to city landscape from elevated observation point
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Medium shot of green-skinned warriors standing on stone balcony ledge, weapons held ready for discharge, spears and banners visible, distant gray-painted airships sailing in sky above valley vista, clear daylight conditions, urban decay environment background, anticipation of combat action, vertical axis established with elevated position
+elevated window observation point, distant gray airships forming pattern across horizon, deserted city rooftop network in background, valley vista below, morning light brightening sky, human male observer profile visible at window frame, urban decay environment, clear daylight conditions
 
 # Negative Prompt
-interior corridor, narrator face close-up, bright sunlight, crowd of civilians, fire, smoke, burning ship, prisoner figure, distorted anatomy, blurry focus, text, watermark, project id, scene number, low resolution, extra limbs, missing weapons
+interior corridor, close-up face details, crowd of civilians, fire, smoke, burning ship, prisoner figure, distorted anatomy, blurry focus, text, watermark, low resolution, extra limbs, missing weapons
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -43,14 +43,15 @@ interior corridor, narrator face close-up, bright sunlight, crowd of civilians, 
 
 # Continuity Notes
 - Maintain vertical axis with elevated observation point
-- Ensure green skin tone consistency across warriors
-- Keep distant airships visible but not dominating frame
+- Ensure distant airships visible but not dominating frame
 - Match lighting conditions with previous exterior shots
+- Keep rooftop network consistent for scale reference
 
 # Repair Notes
-- Fix any anatomy distortions on warrior figures
+- Fix any anatomy distortions on observer figure
 - Correct lighting mismatch if balcony looks too dark
-- Ensure weapons are clearly visible and ready
+- Ensure distant ships are clearly defined against horizon
+- Verify window frame details match continuity
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/SC001/CL002.md

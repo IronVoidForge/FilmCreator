@@ -11,10 +11,10 @@ Corrective still generation preserving composition and look while fixing local i
 still.scene_insert.two_ref.klein.distilled
 
 # Positive Prompt
-Medium shot interior corridor space, slender female figure entering from doorway, dark hair loosely caught, oval face, large lustrous eyes, finely chiseled features, destitute of clothes except ornaments, copper skin tone, male observer reacting in foreground, hound reacting to presence, dim interior lighting, stone walls visible, portal depth background, cinematic composition, high stakes military engagement atmosphere
+Medium shot interior window space, male human warrior observing exterior view, gray airships fleet approaching plaza, daylight reflecting off ship devices, stone floor tiles visible, dark wood window frame foreground, polished stone walls, midday light fully established, cinematic composition, high stakes military engagement atmosphere
 
 # Negative Prompt
-distorted anatomy, extra limbs, missing fingers, bad hands, blurry, low quality, text, watermark, signature, deformed face, ugly, mutation, morphed, disfigured, inconsistent lighting, floating elements, artifacts, crowd in immediate foreground, wrong skin tone, poor resolution
+distorted anatomy, extra limbs, missing fingers, bad hands, blurry, low quality, text, watermark, signature, deformed face, ugly, mutation, morphed, disfigured, inconsistent lighting, floating elements, artifacts, crowd in immediate foreground, wrong skin tone, poor resolution, female figure, interior corridor space
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -22,36 +22,36 @@ distorted anatomy, extra limbs, missing fingers, bad hands, blurry, low quality,
 - clip_id: CL004
 - duration_seconds: 5
 - required_refs: image_1, image_2
-- optional_refs: portal visibility in background, lighting consistency
-- visible_character_assets: narrator, hound, female figure
-- look_continuity_policy: preserve interior lighting consistency with previous beats
+- optional_refs: fleet formation consistency, daylight continuity
+- visible_character_assets: male human warrior, gray airships fleet
+- look_continuity_policy: preserve midday lighting consistency with previous beats
 - intended_lighting_change: none
-- composition_type: medium shot capturing entrance
+- composition_type: medium shot capturing observation posture
 - continuity_mode: cutaway
-- starting_keyframe_strategy: show interior space empty, then introduce female figure presence
+- starting_keyframe_strategy: show observer at window, fleet at mid-distance
 - dependency_policy: dependent on CL003 for emotional progression
 - auto_advance_policy: static medium if movement unavailable
 - fallback_strategy: use static medium if movement unavailable
-- consistency_assist_policy: maintain character positioning relative to corridor depth
+- consistency_assist_policy: maintain character positioning relative to window frame
 - consistency_assist_method: align character scale with medium shot framing
-- anatomy_repair_policy: fix any hand distortion on entering figure
-- consistency_targets: copper skin tone, black hair, dim interior lighting
+- anatomy_repair_policy: fix any hand distortion on observer
+- consistency_targets: male skin tone, dark hair, bright daylight
 - style_profile: still.scene_insert.two_ref.klein.distilled
 - batch_role: fix_stage
 - fix_of: local issues in approved still base
 
 # Continuity Notes
-- preserve interior lighting consistency with previous beats
-- maintain character positioning relative to corridor depth
-- ensure copper skin tone matches visual baseline
+- preserve midday lighting consistency with previous beats
+- maintain character positioning relative to window frame
+- ensure fleet formation matches visual baseline
 - keep observer reaction expression consistent with emotional arc
 - avoid introducing new crowd elements in immediate foreground
 
 # Repair Notes
-- fix any hand distortion on entering figure
-- correct lighting mismatch between doorway and interior wall
-- ensure hound anatomy is anatomically correct
-- remove any floating artifacts near portal depth
+- fix any hand distortion on observer
+- correct lighting mismatch between interior and exterior view
+- ensure fleet anatomy is anatomically correct
+- remove any floating artifacts near window frame
 - align character scale with medium shot framing
 
 # Sources

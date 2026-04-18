@@ -1,11 +1,8 @@
-# Environment Index - Chapter VIII
+# Environment Index - Princess of Mars Test
 
-## Primary Observation Setting
-- Upper floor window (narrator's vantage point)
-
-## Transit/Encounter Setting  
-- Plaza (public gathering space, prisoner encounter location)
-
-## Combat/Background Setting
-- Deserted city buildings (urban decay environment)
-- Valley/hills vista (distant landscape backdrop)
+| Asset ID | Environment Name | Role | Primary Features |
+|----------|------------------|------|------------------|
+| window_upper_floor | Carter's Vantage Window | Primary | Upper floor observation point, daylight view |
+| rooftops | City Rooftop Network | Secondary/Transit | Elevated positions, smoke and flame visible |
+| plaza_street_level | Plaza and Street Level | Primary/Transit | Ground level action zone, building facades |
+| building_interiors | Building Interior Spaces | Secondary | Enclosed spaces, prisoner movement areas |

@@ -5,46 +5,59 @@ SC001 CL006 Keyframe Prompt
 SC001_CL006_keyframe_prompt
 
 # Purpose
-Fill in the stage intent here.
+Keyframe for rising tension beat start state
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Write the positive prompt text here.
+Human male warrior standing at window frame, hands resting on sill, observing distant horizon, daylight lighting, alien city rooftops background, gray airships approaching in distance, polished stone floor tiles visible
 
 # Negative Prompt
-Write the negative prompt text here.
+distorted anatomy, wrong lighting, blurry, text, watermark, extra limbs, bad hands, low resolution, dark shadows, night time, human woman prisoner, green martian warriors close up
 
 # Inputs
-- project_id:
-- scene_id:
-- clip_id:
-- duration_seconds:
-- required_refs:
-- optional_refs:
-- visible_character_assets:
-- look_continuity_policy:
-- intended_lighting_change:
-- composition_type:
-- continuity_mode:
-- starting_keyframe_strategy:
-- dependency_policy:
-- auto_advance_policy:
-- fallback_strategy:
-- consistency_assist_policy:
-- consistency_assist_method:
-- anatomy_repair_policy:
-- consistency_targets:
-- style_profile:
-- batch_role:
-- fix_of:
+- project_id: princess_of_mars_test
+- scene_id: SC001
+- clip_id: CL006
+- duration_seconds: 5
+- required_refs: 
+- optional_refs: 
+- visible_character_assets: 
+- look_continuity_policy: 
+- intended_lighting_change: 
+- composition_type: medium two-shot
+- continuity_mode: midday light established
+- starting_keyframe_strategy: 
+- dependency_policy: 
+- auto_advance_policy: 
+- fallback_strategy: 
+- consistency_assist_policy: 
+- consistency_assist_method: 
+- anatomy_repair_policy: 
+- consistency_targets: 
+- style_profile: 
+- batch_role: 
+- fix_of: 
+- workflow_type: still.scene_build.four_ref.klein.distilled
 
 # Continuity Notes
-- Capture the continuity rules for this stage.
+- Window frame color dark wood with metal accents
+- Floor material polished stone tiles
+- Lighting soft morning transitioning to bright midday
+- Fleet approaches in steady formation 15-degree angle toward plaza
+- Carter maintains consistent distance from window 2-3 feet
 
 # Repair Notes
-- Capture any repair or corrective guidance for this stage.
+- Ensure hand placement on window sill matches continuity
+- Verify facial expression neutral to slight concern
+- Check ship props match visual continuity notes
+- Maintain eye level alignment with shoulder height 5-foot-8-inch camera level
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/SC001/CL006.md
+- projects/princess_of_mars_test/02_story_analysis/scene_breakdowns/SC001.md
+- projects/princess_of_mars_test/02_story_analysis/clip_plans/SC001/SC001_clip_roster.md
+- projects/princess_of_mars_test/02_story_analysis/character_breakdowns/CHARACTER_INDEX.md
+- projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/ENVIRONMENT_INDEX.md
+- projects/princess_of_mars_test/02_story_analysis/story_summary/project_summary.md

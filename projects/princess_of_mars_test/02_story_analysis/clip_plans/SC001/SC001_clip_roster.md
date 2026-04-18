@@ -1,35 +1,8 @@
-# Clip Roster - SC001 Princess of Mars Test
+# Clip Roster - Scene 001: Carter at Window Observing Fleet Approach
 
-## Overview
-**Scene Purpose:** Establish threat observation from elevated position, execute combat volley, and show fleet retreat with damage sustained.
-
-**Total Clips:** 6 clips (targeting ~5 seconds each)
-
----
-
-## Clip List
-
-| Clip ID | Beat Reference | Duration | Composition Type | Continuity Mode |
-|---------|----------------|----------|------------------|-----------------|
-| CL001 | BT001 - Part A | 5s | Over-the-shoulder at narrator | Long shot of fleet in distance |
-| CL002 | BT001 - Part B | 5s | Medium shot of warriors on balcony | Cut to combat preparation |
-| CL003 | BT002 - Part A | 5s | Medium shot of warriors firing weapons | Close-up on weapon discharge effects |
-| CL004 | BT002 - Part B | 5s | Long shot of fleet receiving fire damage | Cut to ships reacting |
-| CL005 | BT003 - Part A | 5s | Wide shot of fleet retreating along valley | Medium shot of disabled ship drifting away |
-| CL006 | BT003 - Part B | 5s | Long shot establishing retreat distance from city | Cut to aftermath |
-
----
-
-## Initial Test Clips (Recommended)
-
-**CL001 & CL002** - Strong initial test sequence for threat observation and combat preparation. These clips establish the vertical axis and viewer position before action intensifies.
-
-**CL003 & CL004** - Recommended for testing combat volley coverage families with weapon discharge effects and fleet damage indicators.
-
----
-
-## Scene Continuity Sensitivities
-
-- Height of narrator vs city (maintain vertical axis)
-- Color of airships vs buildings (ensure visual distinction)
-- Number of ships visible (track from distant to closer approach)
+| Clip ID | Beat Index | Duration (s) | Composition Type | Continuity Mode | Opening Keyframe Intent | Cut Motion Intent | Interval Beats |
+|---------|------------|--------------|------------------|-----------------|------------------------|-------------------|----------------|
+| CL001 | BT001 | 5 | Medium Profile | Window Frame Consistent | Carter at window, hands on sill | Static hold → slight head tilt | Initial curiosity beat |
+| CL002 | BT002 | 5 | Wide Establishing | Fleet Formation Consistent | First airship visible in distance | Cut to full fleet formation | Scale establishment beat |
+| CL003 | BT003 | 5 | Close-up Facial | Window Frame Shadows Deepening | Neutral expression → slight smile | Reframe same moment on facial shift | Emotional response beat |
+| CL004 | BT004 | 5 | Medium Two-shot | Midday Light Established | Fleet at mid-distance, Carter neutral | Cutaway to approaching fleet | Rising tension beat |

@@ -11,10 +11,10 @@ Generate cut motion for clip CL005 in scene SC001, continuing from approved open
 video.cut_motion.wan.i2v
 
 # Positive Prompt
-Motion continues from previous frame. Camera pans slightly right following narrator gaze towards window view. Green-skinned warriors visible in distance valley. Smoke rises gently. Lighting preserved with sunlight and fire glow.
+Narrator stands at upper floor window observing approaching fleet of gray airships. Camera tracks subtle head movement as gaze shifts toward distant valley. Fleet formation descends slowly across horizon. Smoke drifts upward from burning vessel in background. Daylight brightens gradually from morning to midday. Green-skinned warriors visible on rooftops and ships.
 
 # Negative Prompt
-morphing faces, flickering lights, wrong color grade, extra limbs, distorted anatomy, sudden lighting changes, blurry textures
+morphing faces, flickering lights, wrong color grade, extra limbs, distorted anatomy, sudden lighting changes, blurry textures, static image, noise artifacts
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -40,6 +40,8 @@ morphing faces, flickering lights, wrong color grade, extra limbs, distorted ana
 - batch_role: 
 - fix_of: 
 - workflow_type: video.cut_motion.wan.i2v
+- shared_character_refs: 
+- shared_environment_refs: 
 
 # Continuity Notes
 - Maintain keyframe lighting and grade by default

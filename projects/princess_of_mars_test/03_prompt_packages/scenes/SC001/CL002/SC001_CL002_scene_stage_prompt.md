@@ -5,16 +5,16 @@ SC001 CL002 Scene Stage Prompt
 SC001_CL002_scene_stage_prompt
 
 # Purpose
-Define staging intent for the balcony combat preparation scene, establishing subject placement on the ledge and environmental context for the opening frame setup.
+Define staging intent for the fleet approach observation scene, establishing subject placement at the window and environmental context for the opening frame setup.
 
 # Workflow Type
 authoring.scene_stage
 
 # Positive Prompt
-Medium shot of green-skinned warriors positioned on stone balcony ledge, weapons held ready at stations, spears and banners visible, distant gray airships in sky above valley vista, clear daylight conditions, urban city buildings in background, combat tension atmosphere, vertical axis established between elevated warriors and distant fleet
+Medium shot of male warrior standing at upper floor window frame, hands resting on sill, observing distant horizon, fleet of gray airships forming pattern across sky above valley vista, clear daylight conditions, city rooftops visible in background for scale reference, plaza street level becoming clearer as ships approach, vertical axis established between observer and approaching fleet, first airship visible in distance
 
 # Negative Prompt
-interior corridor space, human figure walking forward, bright sunlight glare, crowd of civilians, static camera movement, wide establishing shot, cartoon style, floating funeral pyre, close-up on faces only
+interior corridor space, human figure walking forward, bright sunlight glare, crowd of civilians, static camera movement, wide establishing shot only, cartoon style, floating funeral pyre, close-up on faces only, green-skinned warriors on balcony ledge, human woman prisoner visible
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -23,17 +23,17 @@ interior corridor space, human figure walking forward, bright sunlight glare, cr
 - duration_seconds: 5
 - required_refs: BT001.md, Scene SC001 overview
 - optional_refs: Window frame for spatial continuity
-- visible_character_assets: Green Martian Warriors (collective on balcony/ledge), Airships (distant in sky)
+- visible_character_assets: male warrior observer, gray airships distant figures
 - look_continuity_policy: Follows CL001 observation sequence
 - intended_lighting_change: Clear daylight conditions
-- composition_type: Medium shot of warriors on balcony
-- continuity_mode: Cut to combat preparation
-- starting_keyframe_strategy: Warriors positioned, weapons ready for engagement
+- composition_type: Wide Establishing Shot / Medium Two-shot
+- continuity_mode: Fleet Formation Consistent
+- starting_keyframe_strategy: First airship visible in distance, fleet beginning to form pattern
 - dependency_policy: Follows CL001 observation sequence
 - auto_advance_policy: Insert close-up on weapon stations if warriors not visible
 - fallback_strategy: Insert close-up on weapon stations if warriors not visible
 - consistency_assist_policy: Maintain spatial continuity from previous clip
-- consistency_assist_method: Narrator position must align with corridor axis
+- consistency_assist_method: Narrator position must align with window axis
 - anatomy_repair_policy: Fix anatomy if limbs distort during movement
 - consistency_targets: Height of narrator vs city, color of airships vs buildings, number of ships visible
 - style_profile: authoring.scene_stage
@@ -43,14 +43,17 @@ interior corridor space, human figure walking forward, bright sunlight glare, cr
 
 # Continuity Notes
 - Maintain spatial continuity from previous clip
-- Warrior positioning must align with balcony axis
+- Warrior positioning must align with window axis
 - Lighting must reflect exterior view consistency
-- Woola remains trailing narrator throughout movement
+- Fleet formation must match visual continuity notes from chapter summary daylight conditions
+- Window frame color and wiper position remain unchanged for continuity
 
 # Repair Notes
 - Fix anatomy if limbs distort during movement
 - Ensure background portal remains consistent
 - Correct lighting balance between entrance and corridor
+- Verify ship props match visual continuity notes from chapter summary daylight conditions
+- Check eyeline alignment with shoulder height approximately five feet eight inches
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/SC001/CL002.md

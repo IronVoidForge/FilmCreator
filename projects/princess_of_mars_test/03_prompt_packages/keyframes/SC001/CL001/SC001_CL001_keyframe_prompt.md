@@ -11,10 +11,10 @@ Generate frozen keyframe for opening observation beat, establishing exterior cit
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-over-the-shoulder view of human observer standing at upper floor window frame, distant sky containing gray-painted airships approaching valley, green-skinned warriors positioned on balcony ledge below, clear daylight illumination, vertical axis established with elevated position, deserted city buildings visible in background, calm atmosphere before combat
+medium profile shot of male figure standing at upper floor window frame, hands resting on polished stone sill, observing distant horizon with neutral expression, daylight illumination reflecting off dark wood window frame with metal accents, twenty gray airships visible in formation across valley sky, deserted city buildings and rooftops in background, clear atmosphere before combat
 
 # Negative Prompt
-blurry, distorted faces, extra limbs, missing hands, text, watermark, low resolution, dark shadows, night time, crowded streets, modern clothing, fire, smoke, collapsing buildings, indoor artificial light, close-up of prisoner
+blurry, distorted faces, extra limbs, missing hands, text, watermark, low resolution, dark shadows, night time, crowded streets, modern clothing, fire, smoke, collapsing buildings, indoor artificial light, close-up of prisoner, green-skinned warriors in foreground
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -23,11 +23,11 @@ blurry, distorted faces, extra limbs, missing hands, text, watermark, low resolu
 - duration_seconds: 5
 - required_refs: BT001.md, Scene SC001 breakdown
 - optional_refs: Procession garment details, plaza distance markers
-- visible_character_assets: human observer, green-skinned warriors
+- visible_character_assets: male observer, distant fleet figures
 - look_continuity_policy: 
 - intended_lighting_change: 
-- composition_type: over-the-shoulder at narrator looking out
-- continuity_mode: cut
+- composition_type: medium profile at window looking out
+- continuity_mode: window frame consistent
 - starting_keyframe_strategy: establish vertical axis with narrator elevated above city
 - dependency_policy: 
 - auto_advance_policy: 
