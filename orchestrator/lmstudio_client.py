@@ -28,6 +28,31 @@ class LMStudioCheckSummary:
         }
 
 
+@dataclass(frozen=True)
+class LMStudioChatResult:
+    status: str
+    model: str
+    payload: dict[str, Any] | None
+    text: str
+    error_message: str | None = None
+
+    @property
+    def is_success(self) -> bool:
+        return self.status == "success"
+
+    @property
+    def is_empty(self) -> bool:
+        return self.status == "empty_response"
+
+    @property
+    def is_transport_error(self) -> bool:
+        return self.status == "transport_error"
+
+    @property
+    def is_payload_error(self) -> bool:
+        return self.status == "payload_error"
+
+
 class LMStudioClient:
     def __init__(self, settings: RuntimeSettings) -> None:
         self._settings = settings
@@ -81,26 +106,80 @@ class LMStudioClient:
         temperature: float = 0.2,
         model: str | None = None,
     ) -> str:
-        resolved_model = model or self.resolve_model()
-        payload = self._request_json(
-            "POST",
-            "/chat/completions",
-            {
-                "model": resolved_model,
-                "messages": [
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt},
-                ],
-                "temperature": temperature,
-            },
+        result = self.chat_completion_result(
+            system_prompt=system_prompt,
+            user_prompt=user_prompt,
+            temperature=temperature,
+            model=model,
         )
+        if result.is_success:
+            return result.text
+        if result.error_message:
+            raise LMStudioError(result.error_message)
+        raise LMStudioError("LM Studio returned an unusable chat completion.")
+
+    def chat_completion_result(
+        self,
+        *,
+        system_prompt: str,
+        user_prompt: str,
+        temperature: float = 0.2,
+        model: str | None = None,
+    ) -> LMStudioChatResult:
+        resolved_model = model or self.resolve_model()
+        try:
+            payload = self._request_json(
+                "POST",
+                "/chat/completions",
+                {
+                    "model": resolved_model,
+                    "messages": [
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": user_prompt},
+                    ],
+                    "temperature": temperature,
+                },
+            )
+        except LMStudioError as exc:
+            return LMStudioChatResult(
+                status="transport_error",
+                model=resolved_model,
+                payload=None,
+                text="",
+                error_message=str(exc),
+            )
+
         try:
             choice = payload["choices"][0]
             message = choice["message"]
             content = message["content"]
         except (KeyError, IndexError, TypeError) as exc:
-            raise LMStudioError(f"LM Studio returned an unexpected chat completion payload: {exc}") from exc
+            return LMStudioChatResult(
+                status="payload_error",
+                model=resolved_model,
+                payload=payload,
+                text="",
+                error_message=f"LM Studio returned an unexpected chat completion payload: {exc}",
+            )
 
+        extracted = self._extract_chat_content(content)
+        if self._is_effectively_empty(extracted):
+            return LMStudioChatResult(
+                status="empty_response",
+                model=resolved_model,
+                payload=payload,
+                text=extracted,
+                error_message="LM Studio returned an empty chat completion.",
+            )
+
+        return LMStudioChatResult(
+            status="success",
+            model=resolved_model,
+            payload=payload,
+            text=extracted,
+        )
+
+    def _extract_chat_content(self, content: object) -> str:
         if isinstance(content, str):
             return content
         if isinstance(content, list):
@@ -110,7 +189,11 @@ class LMStudioClient:
                     parts.append(item["text"])
             if parts:
                 return "\n".join(parts)
-        raise LMStudioError("LM Studio returned a chat completion without text content.")
+        return ""
+
+    def _is_effectively_empty(self, text: str) -> bool:
+        normalized = text.strip().replace("`", "")
+        return not normalized
 
     def _discover_api_base_url(self) -> str:
         original = self._settings.lmstudio_base_url.rstrip("/")
