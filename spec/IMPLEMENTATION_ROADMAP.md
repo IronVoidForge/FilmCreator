@@ -68,25 +68,33 @@ Ship a local-first, cut-oriented pipeline that can:
 
 ## Next Immediate Step
 
-Validate the next two workflow checkpoints:
+Build and validate the first real chapter-based authoring pass before SQLite:
 
-1. run the new LM Studio authoring smoke path and confirm:
-   - `test_lmstudio_connectivity.bat` resolves the local API base URL and model
-   - `test_pilot_scene_prompt_writer_lmstudio.bat` rewrites the canonical prompt-package files for `SC001/CL001`
-   - `clip_state.json` records the canonical prompt-package paths without requiring a render run
-2. build the character-to-scene pipeline layer so authoring can decide:
+1. implement and test chapter intake plus analysis outputs:
+   - chapter summary
+   - character extraction
+   - environment extraction
+   - scene decomposition
+   - beat bundles
+2. implement and test scene planning plus prompt handoff:
+   - clip roster
+   - clip plans
+   - shared character and environment prompt packages
+   - clip-local prompt packages for one scene and one or two initial clips
+3. build the character-to-scene pipeline layer so authoring can decide:
    - which approved character refs are visible in each clip
    - which shared environment refs are relevant to that clip
    - which references should be passed to keyframe generation first
    - whether optional consistency-assist or still-fix should even be considered for that clip
 
-That pair of steps opens the authoring-side LLM handoff and the character-scene mapping layer that should drive later corrective still work.
+That sequence gives us a full file-first authoring handoff we can validate before introducing the database layer.
 
 ## Database Implementation Timing
 
 - The SQLite database should be implemented after:
   - LM Studio authoring commands are validated
-  - scene analysis and clip planning exist
+  - chapter-based scene analysis and clip planning exist
+  - at least one scene has one or two prompt-ready clips
   - character-to-scene mapping exists
 - The first database release should be:
   - per-project
@@ -299,6 +307,7 @@ Automate planning and prompt writing without changing the runner contract.
   - `keyframe`
   - `still_fix`
   - `cut_motion`
+- the next pre-SQL milestone is chapter-based analysis and scene planning for `princess_of_mars_test`
 - shared character/environment prompt writing and analysis generation remain planned follow-up work.
 
 #### Handoff
@@ -309,6 +318,28 @@ Automate planning and prompt writing without changing the runner contract.
 #### Test Point
 
 - with LM Studio running and ComfyUI closed, one scene can generate all required planning and prompt files automatically
+
+### Phase 5.1: Chapter-Based Authoring Pilot
+
+#### Goal
+
+Prove the authoring pipeline on a real public-domain chapter before any database migration.
+
+#### Deliverables
+
+- chapter intake and chapter summary
+- character extraction and character index
+- environment extraction and environment index
+- scene decomposition and scene index
+- scene beat bundles
+- one scene clip roster
+- one or two prompt-ready clip plans
+- shared character and environment prompt packages
+- clip-local prompt packages for the first scene
+
+#### Test Point
+
+- with LM Studio running and ComfyUI closed, Chapter VIII of `princess_of_mars_test` can be transformed into one scene with one or two prompt-ready clips and their canonical prompt packages
 
 ### Phase 5.5: SQLite Relational Layer
 
@@ -513,15 +544,16 @@ This preserves review quality while still letting you use sleep-time for the exp
 
 ## Recommended Build Order From Here
 
-1. Validate LM Studio connectivity and pilot clip prompt writing through the new authoring BATs.
-2. Extend prompt writing from clip-local packages into shared character and environment prompt families.
-3. Add LM Studio analysis and scene-wide clip planning.
-4. Add character-to-scene mapping so each clip knows which approved character refs and environment refs it should use.
-5. Implement the first SQLite read-side sync layer after the authoring and mapping model stabilizes.
-6. Tune the short-cut motion path to preserve keyframe look without the current blue-shift.
-7. Validate `still_fix` from an approved keyframe only after character-scene mapping exists.
-8. Validate `still_fix` as a corrective stage, including optional identity-consistency assist.
-9. Add scene-wide stage-bounded overnight rendering.
-10. Add explicit multi-segment clip rules for longer cuts.
-11. Reserve LongLook for extended-cut workflows after the short-cut path is stable.
-12. Add cross-cut continuity rules and scene-scale video completion.
+1. Implement chapter intake, character extraction, environment extraction, and scene decomposition for `princess_of_mars_test`.
+2. Implement beat bundles plus scene-level clip planning for the first scene.
+3. Extend prompt writing from clip-local packages into shared character and environment prompt families.
+4. Write canonical clip-local prompt packages for one scene and one or two initial clips.
+5. Add character-to-scene mapping so each clip knows which approved character refs and environment refs it should use.
+6. Implement the first SQLite read-side sync layer after the authoring and mapping model stabilizes.
+7. Tune the short-cut motion path to preserve keyframe look without the current blue-shift.
+8. Validate `still_fix` from an approved keyframe only after character-scene mapping exists.
+9. Validate `still_fix` as a corrective stage, including optional identity-consistency assist.
+10. Add scene-wide stage-bounded overnight rendering.
+11. Add explicit multi-segment clip rules for longer cuts.
+12. Reserve LongLook for extended-cut workflows after the short-cut path is stable.
+13. Add cross-cut continuity rules and scene-scale video completion.

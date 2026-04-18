@@ -24,10 +24,13 @@ from .video_utils import VideoFrameExtractionError, extract_last_frame
 
 PROJECT_DIRS = [
     "01_source/chapters",
+    "01_source/character_descriptions",
     "01_source/excerpts",
     "01_source/notes",
+    "02_story_analysis/chapter_analysis",
     "02_story_analysis/story_summary",
     "02_story_analysis/scene_breakdowns",
+    "02_story_analysis/beat_bundles",
     "02_story_analysis/character_breakdowns",
     "02_story_analysis/environment_breakdowns",
     "02_story_analysis/clip_plans",
@@ -165,6 +168,7 @@ def create_scene(project_slug: str, scene_id: str) -> Path:
     scene_dir = project_dir / "05_scenes" / scene_id
 
     ensure_dir(project_dir / "02_story_analysis" / "scene_breakdowns" / scene_id)
+    ensure_dir(project_dir / "02_story_analysis" / "beat_bundles" / scene_id)
     ensure_dir(project_dir / "02_story_analysis" / "clip_plans" / scene_id)
     ensure_dir(project_dir / "03_prompt_packages" / "scenes" / scene_id)
     ensure_dir(project_dir / "03_prompt_packages" / "keyframes" / scene_id)

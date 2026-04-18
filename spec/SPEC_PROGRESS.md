@@ -35,8 +35,8 @@
 
 - `1.5` project, scene, and clip state contracts
   - status: `validated`
-  - evidence: `clip_state.json` now records the approved keyframe, approved video, approved video last frame, latest review decision, review batch history, and current continuity source after the live `RUN_0001` and `RUN_0040` approval handoffs
-  - next validation: validate that LM Studio prompt writing refreshes canonical prompt-package paths in clip state without a render run
+  - evidence: `clip_state.json` now records the approved keyframe, approved video, approved video last frame, latest review decision, review batch history, current continuity source, and canonical prompt-package paths after the live `RUN_0001`, `RUN_0040`, and LM Studio `write-prompts` validation passes
+  - next validation: validate that scene-level authoring can refresh state-linked prompt packages for more than one clip without a render run
 
 - `1.6` SQLite relational model
   - status: `planned`
@@ -105,9 +105,9 @@
   - status: `planned`
 
 - `5.3` prompt writer integration
-  - status: `implemented`
-  - evidence: `lmstudio-check` and `write-prompts` now exist in the CLI, the authoring layer can rewrite canonical `scene_stage`, `keyframe`, `still_fix`, and `cut_motion` prompt packages through the local LM Studio client, and clip state is updated with the resulting prompt-package paths
-  - next validation: run the LM Studio authoring smoke test against the pilot clip and confirm the written files contain fresh non-placeholder content
+  - status: `validated`
+  - evidence: `lmstudio-check` resolved the live local model set and `write-prompts` rewrote the canonical pilot clip prompt-package files with fresh content while updating clip state with the resulting package paths
+  - next validation: expand from clip-local prompt writing into chapter-based scene analysis, clip planning, and shared character/environment prompt generation
 
 - `6.1` deferred video motion stage
   - status: `validated`

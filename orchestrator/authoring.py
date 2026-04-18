@@ -148,20 +148,46 @@ def _resolve_clip_ids(project_slug: str, scene_id: str, clip_id: str | None) -> 
 def _load_clip_context(project_slug: str, scene_id: str, clip_id: str) -> str:
     clip_dir = create_clip(project_slug, scene_id, clip_id)
     project_root = ROOT / "projects" / project_slug
+    project_summary_path = project_root / "02_story_analysis" / "story_summary" / "project_summary.md"
+    project_summary = project_summary_path.read_text(encoding="utf-8") if project_summary_path.exists() else ""
+    chapter_summaries_dir = project_root / "02_story_analysis" / "chapter_analysis"
+    chapter_summaries = _markdown_bundle(
+        chapter_summaries_dir,
+        exclude_names={"README.md"},
+    )
+    character_index_path = project_root / "02_story_analysis" / "character_breakdowns" / "CHARACTER_INDEX.md"
+    character_index = character_index_path.read_text(encoding="utf-8") if character_index_path.exists() else ""
+    environment_index_path = project_root / "02_story_analysis" / "environment_breakdowns" / "ENVIRONMENT_INDEX.md"
+    environment_index = environment_index_path.read_text(encoding="utf-8") if environment_index_path.exists() else ""
     clip_plan_path = ROOT / "projects" / project_slug / "02_story_analysis" / "clip_plans" / scene_id / f"{clip_id}.md"
     clip_plan = clip_plan_path.read_text(encoding="utf-8") if clip_plan_path.exists() else ""
     scene_breakdown_path = project_root / "02_story_analysis" / "scene_breakdowns" / f"{scene_id}.md"
     scene_breakdown = scene_breakdown_path.read_text(encoding="utf-8") if scene_breakdown_path.exists() else ""
     clip_roster_path = project_root / "02_story_analysis" / "clip_plans" / scene_id / f"{scene_id}_clip_roster.md"
     clip_roster = clip_roster_path.read_text(encoding="utf-8") if clip_roster_path.exists() else ""
+    beat_bundle_dir = project_root / "02_story_analysis" / "beat_bundles" / scene_id
+    beat_bundles = _markdown_bundle(
+        beat_bundle_dir,
+        exclude_names={"BEAT_INDEX.md", "README.md"},
+    )
     clip_state_path = clip_dir / "clip_state.json"
     clip_state = clip_state_path.read_text(encoding="utf-8") if clip_state_path.exists() else ""
 
     sections: list[str] = []
+    if project_summary.strip():
+        sections.extend(["## Project Summary", project_summary.strip()])
+    if chapter_summaries.strip():
+        sections.extend(["## Chapter Summaries", chapter_summaries.strip()])
+    if character_index.strip():
+        sections.extend(["## Character Index", character_index.strip()])
+    if environment_index.strip():
+        sections.extend(["## Environment Index", environment_index.strip()])
     if clip_plan.strip():
         sections.extend(["## Clip Plan", clip_plan.strip()])
     if scene_breakdown.strip():
         sections.extend(["## Scene Breakdown", scene_breakdown.strip()])
+    if beat_bundles.strip():
+        sections.extend(["## Beat Bundles", beat_bundles.strip()])
     if clip_roster.strip():
         sections.extend(["## Clip Roster", clip_roster.strip()])
     sections.extend(["## Clip State", clip_state.strip() or "(missing)"])
@@ -171,6 +197,19 @@ def _load_clip_context(project_slug: str, scene_id: str, clip_id: str) -> str:
 def _prompt_targets(project_slug: str, scene_id: str, clip_id: str) -> Iterable[PromptTarget]:
     project_root = ROOT / "projects" / project_slug
     clip_plan_source = f"projects/{project_slug}/02_story_analysis/clip_plans/{scene_id}/{clip_id}.md"
+    scene_breakdown_source = f"projects/{project_slug}/02_story_analysis/scene_breakdowns/{scene_id}.md"
+    clip_roster_source = f"projects/{project_slug}/02_story_analysis/clip_plans/{scene_id}/{scene_id}_clip_roster.md"
+    character_index_source = f"projects/{project_slug}/02_story_analysis/character_breakdowns/CHARACTER_INDEX.md"
+    environment_index_source = f"projects/{project_slug}/02_story_analysis/environment_breakdowns/ENVIRONMENT_INDEX.md"
+    project_summary_source = f"projects/{project_slug}/02_story_analysis/story_summary/project_summary.md"
+    base_sources = [
+        clip_plan_source,
+        scene_breakdown_source,
+        clip_roster_source,
+        character_index_source,
+        environment_index_source,
+        project_summary_source,
+    ]
     return [
         PromptTarget(
             stage="scene_stage",
@@ -182,7 +221,7 @@ def _prompt_targets(project_slug: str, scene_id: str, clip_id: str) -> Iterable[
                 "Describe staging intent, subject placement, environmental context, and the intended visible opening frame setup. "
                 "This is authoring-only and should not read like a render prompt for a model."
             ),
-            sources=[clip_plan_source],
+            sources=base_sources,
         ),
         PromptTarget(
             stage="keyframe",
@@ -194,7 +233,7 @@ def _prompt_targets(project_slug: str, scene_id: str, clip_id: str) -> Iterable[
                 "Write the exact visible state at cut start as a single frozen still. "
                 "Avoid proper nouns. Use descriptive noun phrases only."
             ),
-            sources=[clip_plan_source],
+            sources=base_sources,
         ),
         PromptTarget(
             stage="still_fix",
@@ -206,7 +245,7 @@ def _prompt_targets(project_slug: str, scene_id: str, clip_id: str) -> Iterable[
                 "Write a corrective still-generation prompt that preserves composition and look while fixing local issues. "
                 "Assume image_1 is the approved still base and image_2 is a secondary reference when needed."
             ),
-            sources=[clip_plan_source],
+            sources=base_sources,
         ),
         PromptTarget(
             stage="cut_motion",
@@ -218,9 +257,20 @@ def _prompt_targets(project_slug: str, scene_id: str, clip_id: str) -> Iterable[
                 "Write a short-cut motion prompt that starts from the approved opening frame. "
                 "Preserve the keyframe lighting and grade by default. Focus on visible motion, camera behavior, and environment change."
             ),
-            sources=[clip_plan_source],
+            sources=base_sources,
         ),
     ]
+
+
+def _markdown_bundle(directory: Path, *, exclude_names: set[str]) -> str:
+    if not directory.exists():
+        return ""
+    chunks: list[str] = []
+    for path in sorted(directory.glob("*.md")):
+        if path.name in exclude_names:
+            continue
+        chunks.append(f"## {path.name}\n{path.read_text(encoding='utf-8').strip()}")
+    return "\n\n".join(chunks)
 
 
 def _load_existing_prompt(path: Path) -> PromptPackage | None:
@@ -308,9 +358,15 @@ def _build_prompt_package_from_llm(
 
 
 def _sources_markdown(existing_prompt: PromptPackage | None, target: PromptTarget) -> str:
-    if existing_prompt and existing_prompt.sources:
-        return "\n".join(f"- {source}" for source in existing_prompt.sources)
-    return "\n".join(f"- {source}" for source in target.sources)
+    merged: list[str] = []
+    for source in target.sources:
+        if source not in merged:
+            merged.append(source)
+    if existing_prompt:
+        for source in existing_prompt.sources:
+            if source not in merged:
+                merged.append(source)
+    return "\n".join(f"- {source}" for source in merged)
 
 
 def _merge_inputs(existing_inputs: dict[str, str], raw_inputs: object) -> dict[str, str]:

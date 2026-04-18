@@ -82,7 +82,14 @@ def test_write_prompts_writes_canonical_files_and_updates_clip_state(tmp_path: P
     assert keyframe_prompt.purpose == "keyframe purpose"
     assert keyframe_prompt.positive_prompt == "keyframe positive prompt"
     assert keyframe_prompt.inputs["duration_seconds"] == "5"
-    assert keyframe_prompt.sources == ["projects/demo/02_story_analysis/clip_plans/SC001/CL001.md"]
+    assert keyframe_prompt.sources == [
+        "projects/demo/02_story_analysis/clip_plans/SC001/CL001.md",
+        "projects/demo/02_story_analysis/scene_breakdowns/SC001.md",
+        "projects/demo/02_story_analysis/clip_plans/SC001/SC001_clip_roster.md",
+        "projects/demo/02_story_analysis/character_breakdowns/CHARACTER_INDEX.md",
+        "projects/demo/02_story_analysis/environment_breakdowns/ENVIRONMENT_INDEX.md",
+        "projects/demo/02_story_analysis/story_summary/project_summary.md",
+    ]
 
     clip_state = state_module.load_clip_state("demo", "SC001", "CL001")
     assert clip_state["inputs"]["scene_stage_prompt_package"] == (

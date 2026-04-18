@@ -16,6 +16,7 @@ from .scaffold import (
     list_workflows,
     promote_asset,
 )
+from .story_authoring import analyze_chapter, authoring_checkpoint, plan_scene, write_shared_prompts
 from .state import record_review_batch
 
 
@@ -144,6 +145,34 @@ def build_parser() -> argparse.ArgumentParser:
     write_prompts_cmd.add_argument("--scene", required=True)
     write_prompts_cmd.add_argument("--clip")
 
+    analyze_chapter_cmd = subparsers.add_parser(
+        "analyze-chapter",
+        help="Run the first authoring analysis pass for one source chapter through LM Studio",
+    )
+    analyze_chapter_cmd.add_argument("project_slug")
+    analyze_chapter_cmd.add_argument("--chapter")
+
+    plan_scene_cmd = subparsers.add_parser(
+        "plan-scene",
+        help="Write beat bundles, a clip roster, and clip plans for one analyzed scene",
+    )
+    plan_scene_cmd.add_argument("project_slug")
+    plan_scene_cmd.add_argument("--scene", required=True)
+
+    write_shared_prompts_cmd = subparsers.add_parser(
+        "write-shared-prompts",
+        help="Write shared character and environment prompt packages through LM Studio",
+    )
+    write_shared_prompts_cmd.add_argument("project_slug")
+
+    authoring_checkpoint_cmd = subparsers.add_parser(
+        "authoring-checkpoint",
+        help="Run the full pre-SQL authoring checkpoint for one chapter and the first planned scene",
+    )
+    authoring_checkpoint_cmd.add_argument("project_slug")
+    authoring_checkpoint_cmd.add_argument("--chapter")
+    authoring_checkpoint_cmd.add_argument("--scene")
+
     return parser
 
 
@@ -264,6 +293,36 @@ def main() -> None:
             project_slug=args.project_slug,
             scene_id=args.scene,
             clip_id=args.clip,
+        )
+        print(json.dumps(summary.to_dict(), indent=2))
+        return
+
+    if args.command == "analyze-chapter":
+        summary = analyze_chapter(
+            project_slug=args.project_slug,
+            chapter=args.chapter,
+        )
+        print(json.dumps(summary.to_dict(), indent=2))
+        return
+
+    if args.command == "plan-scene":
+        summary = plan_scene(
+            project_slug=args.project_slug,
+            scene_id=args.scene,
+        )
+        print(json.dumps(summary.to_dict(), indent=2))
+        return
+
+    if args.command == "write-shared-prompts":
+        summary = write_shared_prompts(project_slug=args.project_slug)
+        print(json.dumps(summary.to_dict(), indent=2))
+        return
+
+    if args.command == "authoring-checkpoint":
+        summary = authoring_checkpoint(
+            project_slug=args.project_slug,
+            chapter=args.chapter,
+            scene_id=args.scene,
         )
         print(json.dumps(summary.to_dict(), indent=2))
         return
