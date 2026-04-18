@@ -283,14 +283,16 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
     _write_text(character_index_path, character_index_markdown)
     written_files.append(repo_relative(character_index_path))
 
+    canonical_lookup = _existing_character_lookup(project_dir=project_dir)
     active_manual_description_requests: dict[str, str] = {}
     active_clarification_requests: dict[str, tuple[str, str]] = {}
+    resolved_records: set[str] = set()
+
     for raw_character in _require_packet_records(character_packet, record_type="character"):
         asset_id = _normalize_asset_id(
             _require_record_field(raw_character, "asset_id"),
             fallback_prefix="character",
         )
-        filename = f"{asset_id}.md"
         markdown = _require_record_section(raw_character, "markdown")
         manual_description_required = _parse_packet_bool(
             _require_record_field(raw_character, "manual_description_required")
@@ -317,11 +319,30 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
         canonical_character_id = _require_record_field(raw_character, "canonical_character_id", allow_empty=True)
         is_fully_identified = _require_record_field(raw_character, "is_fully_identified", allow_empty=True) or "false"
 
+        resolved_asset_id, inferred_clarification = _resolve_character_identity(
+            asset_id=asset_id,
+            canonical_character_id=canonical_character_id,
+            aliases=aliases,
+            markdown=markdown,
+            canonical_lookup=canonical_lookup,
+        )
+        resolved_records.add(resolved_asset_id)
+        filename = f"{resolved_asset_id}.md"
+
+        if inferred_clarification is not None and not clarification_required:
+            clarification_required = True
+            clarification_reason = inferred_clarification[0]
+            clarification_question = inferred_clarification[1]
+
+        if clarification_required:
+            manual_description_required = False
+            manual_description_reason = ""
+
         character_markdown = _append_manual_description_section(
             markdown=_append_character_identity_section(
                 markdown=markdown,
                 aliases=aliases,
-                canonical_character_id=canonical_character_id,
+                canonical_character_id=resolved_asset_id,
                 is_fully_identified=is_fully_identified,
             ),
             manual_required=manual_description_required,
@@ -332,22 +353,22 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
         written_files.append(repo_relative(character_path))
 
         if manual_description_required:
-            manual_path = _manual_description_path(project_dir=project_dir, asset_id=asset_id)
-            active_manual_description_requests[asset_id] = manual_description_reason
+            manual_path = _manual_description_path(project_dir=project_dir, asset_id=resolved_asset_id)
+            active_manual_description_requests[resolved_asset_id] = manual_description_reason
             manual_requests.append(
                 ManualCharacterDescriptionRequest(
-                    asset_id=asset_id,
+                    asset_id=resolved_asset_id,
                     source_path=repo_relative(manual_path),
                     reason=manual_description_reason,
                 )
             )
 
         if clarification_required:
-            clarification_path = _character_clarification_path(project_dir=project_dir, asset_id=asset_id)
-            active_clarification_requests[asset_id] = (clarification_reason, clarification_question)
+            clarification_path = _character_clarification_path(project_dir=project_dir, asset_id=resolved_asset_id)
+            active_clarification_requests[resolved_asset_id] = (clarification_reason, clarification_question)
             clarification_requests.append(
                 CharacterClarificationRequest(
-                    asset_id=asset_id,
+                    asset_id=resolved_asset_id,
                     source_path=repo_relative(clarification_path),
                     reason=clarification_reason,
                     question=clarification_question,
@@ -590,7 +611,7 @@ def write_shared_prompts(*, project_slug: str) -> SharedPromptSummary:
                 raise LMStudioError(
                     f"LM Studio returned character prompt for '{record_asset_id}' when '{asset_id}' was requested."
                 )
-            draft = _structured_prompt_draft(raw_prompt)
+            draft = _structured_prompt_draft(raw_prompt, asset_id=asset_id, asset_type="character")
             warnings.extend(f"{asset_id}: {warning}" for warning in draft.warnings)
             prompt_path = (
                 project_dir / "03_prompt_packages" / "characters" / asset_id / f"{asset_id}_ref_prompt.md"
@@ -661,7 +682,7 @@ def write_shared_prompts(*, project_slug: str) -> SharedPromptSummary:
                 raise LMStudioError(
                     f"LM Studio returned environment prompt for '{record_asset_id}' when '{asset_id}' was requested."
                 )
-            draft = _structured_prompt_draft(raw_prompt)
+            draft = _structured_prompt_draft(raw_prompt, asset_id=asset_id, asset_type="environment")
             warnings.extend(f"{asset_id}: {warning}" for warning in draft.warnings)
             prompt_path = (
                 project_dir / "03_prompt_packages" / "environments" / asset_id / f"{asset_id}_ref_prompt.md"
@@ -764,6 +785,74 @@ def _resolve_chapter_source(project_slug: str, chapter: str | None) -> _ChapterS
         full_markdown=full_markdown,
         text=text,
     )
+
+
+def _existing_character_lookup(*, project_dir: Path) -> dict[str, str]:
+    lookup: dict[str, str] = {}
+    character_dir = project_dir / "02_story_analysis" / "character_breakdowns"
+    if not character_dir.exists():
+        return lookup
+    for path in sorted(character_dir.glob("*.md")):
+        if path.name in {"CHARACTER_INDEX.md", "README.md"}:
+            continue
+        asset_id = path.stem
+        lookup[asset_id] = asset_id
+        sections = _split_sections(path.read_text(encoding="utf-8"))
+        aliases = sections.get("Aliases", "").strip()
+        for line in aliases.splitlines():
+            normalized = _normalize_alias(line)
+            if normalized:
+                lookup.setdefault(normalized, asset_id)
+    return lookup
+
+
+def _normalize_alias(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "_", value.strip().lower()).strip("_")
+
+
+def _resolve_character_identity(
+    *,
+    asset_id: str,
+    canonical_character_id: str,
+    aliases: str,
+    markdown: str,
+    canonical_lookup: dict[str, str],
+) -> tuple[str, tuple[str, str] | None]:
+    candidates = [asset_id]
+    if canonical_character_id:
+        candidates.append(_normalize_alias(canonical_character_id))
+    for alias_line in aliases.splitlines():
+        normalized = _normalize_alias(alias_line)
+        if normalized:
+            candidates.append(normalized)
+    for candidate in candidates:
+        if candidate in canonical_lookup:
+            return canonical_lookup[candidate], None
+
+    generic_labels = {"narrator", "captain", "captive", "guard", "woman", "man", "girl", "boy", "hound"}
+    if any(label in asset_id for label in generic_labels):
+        question = (
+            "This character is named or role-labeled but not fully identified. Can you find a stronger canonical identity from another chapter, "
+            "or should FilmCreator keep this as a scene-local provisional character?"
+        )
+        return asset_id, (
+            "The extracted character id appears generic or role-based rather than clearly canonical.",
+            question,
+        )
+
+    sections = _split_sections(markdown)
+    description_blob = "\n".join(sections.values()).lower()
+    if "no physical description" in description_blob or "uncertain" in description_blob:
+        question = (
+            "This character is named but lacks a stable visual description. Can you find a description from another source chapter, "
+            "or should FilmCreator generate a reusable film-wide description?"
+        )
+        return asset_id, (
+            "The character is not fully identified from this chapter alone.",
+            question,
+        )
+
+    return asset_id, None
 
 
 def _analysis_system_prompt() -> str:
@@ -1310,8 +1399,12 @@ def _call_packet_task(
     )
 
 
-def _structured_prompt_draft(record: _PacketRecord) -> _StructuredPromptDraft:
-    parsed_inputs = _parse_markdown_key_value_items(_require_record_section(record, "inputs_markdown"))
+def _structured_prompt_draft(record: _PacketRecord, *, asset_id: str, asset_type: str) -> _StructuredPromptDraft:
+    parsed_inputs = _parse_markdown_key_value_items(
+        _require_record_section(record, "inputs_markdown", allow_empty=True),
+        asset_id=asset_id,
+        asset_type=asset_type,
+    )
     return _StructuredPromptDraft(
         asset_id=_require_record_field(record, "asset_id"),
         purpose=_require_record_section(record, "purpose"),
@@ -1798,7 +1891,7 @@ def _parse_packet_bool(value: str) -> bool:
     raise LMStudioError(f"Expected boolean packet field but got '{value}'.")
 
 
-def _parse_markdown_key_value_items(markdown: str) -> _ParsedInputsMarkdown:
+def _parse_markdown_key_value_items(markdown: str, *, asset_id: str, asset_type: str) -> _ParsedInputsMarkdown:
     values: dict[str, str] = {}
     warnings: list[str] = []
     current_key: str | None = None
@@ -1825,9 +1918,18 @@ def _parse_markdown_key_value_items(markdown: str) -> _ParsedInputsMarkdown:
             values[generated_key] = stripped
             current_key = generated_key
             continue
-        warnings.append(f"Ignored unparsed inputs_markdown line: {line.strip()}")
+        if stripped:
+            generated_key = f"note_{len(values) + 1}"
+            values[generated_key] = stripped
+            current_key = generated_key
+            warnings.append(f"Salvaged freeform inputs_markdown line into {generated_key}: {line.strip()}")
+
     if not values:
-        raise LMStudioError("Inputs Markdown did not contain any usable lines.")
+        values = {
+            "project_asset": f"{asset_type}:{asset_id}",
+            "asset_id": asset_id,
+        }
+        warnings.append("Synthesized minimal inputs_markdown because no usable lines were returned.")
     return _ParsedInputsMarkdown(items=values, warnings=warnings)
 
 
