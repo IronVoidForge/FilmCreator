@@ -1,5 +1,5 @@
 # Chapter
-CH002
+CH009
 
 # Title
 A Princess of Mars - Chapter IX
@@ -148,6 +148,3 @@ I decided that at the first opportunity I would take Sola into my
 confidence and openly ask her to aid me, and with this resolution
 strong upon me I turned among my silks and furs and slept the dreamless
 and refreshing sleep of Mars.
-
-
-
