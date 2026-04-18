@@ -7,7 +7,7 @@ Turn one scene plus its beat bundles into an ordered clip roster and one clip-pl
 
 ## Inputs
 
-- `02_story_analysis/chapter_analysis/CH001_summary.md`
+- `02_story_analysis/chapter_analysis/CH008_summary.md`
 - `02_story_analysis/character_breakdowns/CHARACTER_INDEX.md`
 - `02_story_analysis/environment_breakdowns/ENVIRONMENT_INDEX.md`
 - `02_story_analysis/scene_breakdowns/<scene_id>.md`

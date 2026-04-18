@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-green_martian_female_ch001
+protagonist_ch008
 
 # Why This Needs Clarification
-Character may exist under another name or identity; "green Martian" designation may be species identifier rather than individual name
+Character may exist under another name or identity not yet revealed in this chapter
 
 # Question
-Do green Martians have individual names or stable identifiers beyond species designation?
+Does the protagonist have a known name, appearance, or background from prior chapters that should be incorporated?
 
 # Guidance
 - answer briefly and concretely

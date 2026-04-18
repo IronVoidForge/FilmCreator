@@ -7,8 +7,8 @@ Break the chapter into discrete scenes that can later be planned into beats and 
 
 ## Inputs
 
-- `01_source/chapters/CH001_a_princess_of_mars_ch08.md`
-- `02_story_analysis/chapter_analysis/CH001_summary.md`
+- `01_source/chapters/CH008_a_princess_of_mars_ch08.md`
+- `02_story_analysis/chapter_analysis/CH008_summary.md`
 - `02_story_analysis/character_breakdowns/CHARACTER_INDEX.md`
 - `02_story_analysis/environment_breakdowns/ENVIRONMENT_INDEX.md`
 

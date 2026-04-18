@@ -7,12 +7,12 @@ Read the chapter source file and produce a project-level summary and a chapter-l
 
 ## Inputs
 
-- `01_source/chapters/CH001_a_princess_of_mars_ch08.md`
+- `01_source/chapters/CH008_a_princess_of_mars_ch08.md`
 
 ## Output Files
 
 - `02_story_analysis/story_summary/project_summary.md`
-- `02_story_analysis/chapter_analysis/CH001_summary.md`
+- `02_story_analysis/chapter_analysis/CH008_summary.md`
 
 ## Response Contract
 

@@ -5,7 +5,7 @@ A Princess of Mars - Chapter VIII - A Fair Captive from the Sky
 A Princess of Mars
 
 # Chapter
-CH001
+CH008
 
 # Chapter Label
 Chapter VIII - A Fair Captive from the Sky

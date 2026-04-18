@@ -8,7 +8,7 @@ Write the reusable shared character-reference and environment-reference prompt p
 ## Inputs
 
 - `02_story_analysis/story_summary/project_summary.md`
-- `02_story_analysis/chapter_analysis/CH001_summary.md`
+- `02_story_analysis/chapter_analysis/CH008_summary.md`
 - `02_story_analysis/character_breakdowns/CHARACTER_INDEX.md`
 - `02_story_analysis/character_breakdowns/<asset_id>.md`
 - `02_story_analysis/environment_breakdowns/ENVIRONMENT_INDEX.md`

@@ -7,8 +7,8 @@ Extract the visible and referenced characters from the chapter and normalize the
 
 ## Inputs
 
-- `01_source/chapters/CH001_a_princess_of_mars_ch08.md`
-- `02_story_analysis/chapter_analysis/CH001_summary.md`
+- `01_source/chapters/CH008_a_princess_of_mars_ch08.md`
+- `02_story_analysis/chapter_analysis/CH008_summary.md`
 
 ## Output Files
 

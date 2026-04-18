@@ -27,7 +27,7 @@ if errorlevel 1 goto :fail
 
 echo.
 echo [2/2] Running chapter analysis...
-python -m orchestrator analyze-chapter princess_of_mars_test --chapter CH001_a_princess_of_mars_ch08.md
+python -m orchestrator analyze-chapter princess_of_mars_test --chapter CH008_a_princess_of_mars_ch08.md
 if errorlevel 1 goto :fail
 
 echo.

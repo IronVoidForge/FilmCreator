@@ -1,7 +1,7 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-green_martian_warrior_ch001
+green_martian_female_ch008
 
 # Why This Needs Clarification
 Character may exist under another name or identity; "green Martian" designation may be species identifier rather than individual name

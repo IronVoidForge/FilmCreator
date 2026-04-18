@@ -23,13 +23,13 @@ if errorlevel 1 goto :fail
 
 echo.
 echo [2/2] Running the authoring checkpoint...
-python -m orchestrator authoring-checkpoint princess_of_mars_test --chapter CH001_a_princess_of_mars_ch08.md --scene SC001
+python -m orchestrator authoring-checkpoint princess_of_mars_test --chapter CH008_a_princess_of_mars_ch08.md --scene SC001
 if errorlevel 1 goto :fail
 
 echo.
 echo If this worked, inspect these outputs:
 echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\story_summary\project_summary.md
-echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\chapter_analysis\CH001_summary.md
+echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\chapter_analysis\CH008_summary.md
 echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\character_breakdowns\CHARACTER_INDEX.md
 echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\environment_breakdowns\ENVIRONMENT_INDEX.md
 echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\scene_breakdowns\SCENE_INDEX.md

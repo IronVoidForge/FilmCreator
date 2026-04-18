@@ -8,7 +8,7 @@ Write the canonical clip-local prompt packages for one scene or one clip using t
 ## Inputs
 
 - `02_story_analysis/story_summary/project_summary.md`
-- `02_story_analysis/chapter_analysis/CH001_summary.md`
+- `02_story_analysis/chapter_analysis/CH008_summary.md`
 - `02_story_analysis/character_breakdowns/CHARACTER_INDEX.md`
 - `02_story_analysis/environment_breakdowns/ENVIRONMENT_INDEX.md`
 - `02_story_analysis/scene_breakdowns/<scene_id>.md`
