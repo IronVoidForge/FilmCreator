@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-import json
+import re
+import time
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -13,20 +14,31 @@ from .scaffold import create_clip, create_scene
 from .settings import load_runtime_settings
 from .state import load_clip_state, write_clip_state
 
+PACKET_START_TAG = "[[FILMCREATOR_PACKET]]"
+PACKET_END_TAG = "[[/FILMCREATOR_PACKET]]"
+SECTION_END_TAG = "[[/SECTION]]"
+SECTION_TAG_PATTERN = re.compile(r"^\[\[SECTION ([a-z0-9_]+)\]\]$", re.IGNORECASE)
+PACKET_VERSION = "1"
+MINIMUM_VIABLE_STAGES = {"keyframe", "cut_motion"}
+
 
 @dataclass(frozen=True)
 class PromptWriteResult:
+    clip_id: str
     stage: str
     path: str
     workflow_type: str
     model: str
+    duration_seconds: float
 
     def to_dict(self) -> dict[str, object]:
         return {
+            "clip_id": self.clip_id,
             "stage": self.stage,
             "path": self.path,
             "workflow_type": self.workflow_type,
             "model": self.model,
+            "duration_seconds": self.duration_seconds,
         }
 
 
@@ -57,6 +69,7 @@ class PromptWriteSummary:
     written_files: list[PromptWriteResult]
     warnings: list[str]
     failures: list[PromptWriteFailure]
+    failed_clips: list[str]
 
     def to_dict(self) -> dict[str, object]:
         return {
@@ -67,6 +80,7 @@ class PromptWriteSummary:
             "written_files": [item.to_dict() for item in self.written_files],
             "warnings": self.warnings,
             "failures": [item.to_dict() for item in self.failures],
+            "failed_clips": self.failed_clips,
         }
 
 
@@ -81,6 +95,12 @@ class PromptTarget:
     sources: list[str]
 
 
+@dataclass(frozen=True)
+class _PacketDocument:
+    metadata: dict[str, str]
+    sections: dict[str, str]
+
+
 def lmstudio_check() -> LMStudioCheckSummary:
     settings = load_runtime_settings()
     client = LMStudioClient(settings)
@@ -93,6 +113,7 @@ def write_prompts(
     scene_id: str,
     clip_id: str | None = None,
 ) -> PromptWriteSummary:
+    started = time.perf_counter()
     settings = load_runtime_settings()
     client = LMStudioClient(settings)
     resolved_model = client.resolve_model()
@@ -101,14 +122,23 @@ def write_prompts(
     written_files: list[PromptWriteResult] = []
     warnings: list[str] = []
     failures: list[PromptWriteFailure] = []
+    failed_clips: list[str] = []
+
+    total_targets = len(target_clip_ids) * 4
+    completed_targets = 0
+    print(f"[authoring] Starting clip prompt writing for {project_slug}/{scene_id}: {len(target_clip_ids)} clips, {total_targets} targets total...")
 
     for current_clip_id in target_clip_ids:
         clip_context = _load_clip_context(project_slug, scene_id, current_clip_id)
         targets = list(_prompt_targets(project_slug, scene_id, current_clip_id))
-        clip_had_success = False
+        clip_successful_stages: set[str] = set()
+        clip_failures: list[PromptWriteFailure] = []
+
         for target in targets:
+            completed_targets += 1
             existing = _load_existing_prompt(target.path)
-            package, local_warnings, log_path = _write_prompt_target_with_retries(
+            print(f"[authoring] Clip prompt {completed_targets}/{total_targets} started: {scene_id}/{current_clip_id} {target.stage}")
+            package, local_warnings, log_path, duration_seconds = _write_prompt_target_with_retries(
                 client=client,
                 project_slug=project_slug,
                 scene_id=scene_id,
@@ -119,36 +149,50 @@ def write_prompts(
             )
             warnings.extend(f"{current_clip_id}:{target.stage}: {warning}" for warning in local_warnings)
             if package is None:
+                failure_reason = "LM Studio prompt-writing retries exhausted."
                 failure_path = _write_prompt_failure_artifact(
                     project_slug=project_slug,
                     scene_id=scene_id,
                     clip_id=current_clip_id,
                     stage=target.stage,
-                    reason="LM Studio prompt-writing retries exhausted.",
+                    reason=failure_reason,
                 )
-                failures.append(
-                    PromptWriteFailure(
-                        clip_id=current_clip_id,
-                        stage=target.stage,
-                        reason="LM Studio prompt-writing retries exhausted.",
-                        log_path=repo_relative(log_path),
-                        failure_artifact_path=repo_relative(failure_path),
-                    )
+                failure = PromptWriteFailure(
+                    clip_id=current_clip_id,
+                    stage=target.stage,
+                    reason=failure_reason,
+                    log_path=repo_relative(log_path),
+                    failure_artifact_path=repo_relative(failure_path),
                 )
+                failures.append(failure)
+                clip_failures.append(failure)
+                print(f"[authoring] Clip prompt {scene_id}/{current_clip_id} {target.stage} failed after retries; continuing")
                 continue
 
             write_prompt_package(target.path, package)
             written_files.append(
                 PromptWriteResult(
+                    clip_id=current_clip_id,
                     stage=target.stage,
                     path=target.path.relative_to(ROOT).as_posix(),
                     workflow_type=target.workflow_type,
                     model=resolved_model,
+                    duration_seconds=duration_seconds,
                 )
             )
-            clip_had_success = True
+            clip_successful_stages.add(target.stage)
+            print(f"[authoring] Clip prompt {scene_id}/{current_clip_id} {target.stage} finished in {duration_seconds:.1f}s")
 
-        if clip_had_success:
+        missing_required = sorted(MINIMUM_VIABLE_STAGES - clip_successful_stages)
+        if missing_required:
+            failed_clips.append(current_clip_id)
+            warnings.append(
+                f"{current_clip_id}: failed minimum viable stage set; missing {', '.join(missing_required)}"
+            )
+            print(
+                f"[authoring] Clip {scene_id}/{current_clip_id} failed minimum viable set because it is missing {', '.join(missing_required)}"
+            )
+        else:
             _record_prompt_packages_in_clip_state(
                 project_slug=project_slug,
                 scene_id=scene_id,
@@ -156,6 +200,8 @@ def write_prompts(
                 targets=targets,
             )
 
+    elapsed = time.perf_counter() - started
+    print(f"[authoring] Finished clip prompt writing in {elapsed:.1f}s")
     return PromptWriteSummary(
         project_slug=project_slug,
         scene_id=scene_id,
@@ -164,6 +210,7 @@ def write_prompts(
         written_files=written_files,
         warnings=warnings,
         failures=failures,
+        failed_clips=failed_clips,
     )
 
 
@@ -324,33 +371,31 @@ def _load_existing_prompt(path: Path) -> PromptPackage | None:
 
 
 def _authoring_system_prompt(target: PromptTarget, degraded: bool = False) -> str:
+    lines = [
+        "You are writing one FilmCreator prompt package for a local generation pipeline.",
+        "Return exactly one FILMCREATOR packet in Markdown.",
+        "Do not return JSON.",
+        "Do not use markdown fences.",
+        "Do not add commentary before or after the packet.",
+        f"Target stage: {target.stage}",
+        f"Stage guidance: {target.guidance}",
+        "Use descriptive noun phrases and avoid proper nouns in prompt text.",
+    ]
     if degraded:
-        return "\n".join(
+        lines.extend(
             [
-                "You are writing one FilmCreator prompt package for a local model.",
-                "Return only valid JSON.",
-                "Do not use markdown fences.",
-                f"Target stage: {target.stage}",
-                f"Stage guidance: {target.guidance}",
-                "Required JSON keys: purpose, positive_prompt, negative_prompt, inputs, continuity_notes, repair_notes.",
-                "Keep values short, concrete, and usable.",
-                "If uncertain, keep inputs minimal but non-empty.",
+                "Keep all sections short, concrete, and non-empty.",
+                "If uncertain, keep inputs minimal and preserve useful continuity notes.",
             ]
         )
-    return "\n".join(
-        [
-            "You are writing one FilmCreator prompt package section set for a local generation pipeline.",
-            "Return only valid JSON.",
-            "Do not use markdown fences.",
-            "Use descriptive noun phrases and avoid proper nouns in prompt text.",
-            "Keep duration and workflow metadata in inputs, not in the prompt body.",
-            f"Target stage: {target.stage}",
-            f"Stage guidance: {target.guidance}",
-            "Required JSON keys: purpose, positive_prompt, negative_prompt, inputs, continuity_notes, repair_notes.",
-            "The inputs value must be an object whose values are plain strings.",
-            "The continuity_notes and repair_notes values must be arrays of strings.",
-        ]
-    )
+    else:
+        lines.extend(
+            [
+                "Keep duration and workflow metadata in inputs_markdown, not in the prompt body.",
+                "Follow the requested section names exactly.",
+            ]
+        )
+    return "\n".join(lines)
 
 
 def _authoring_user_prompt(
@@ -366,7 +411,7 @@ def _authoring_user_prompt(
     existing_markdown = existing_prompt.to_markdown() if existing_prompt else "(none)"
     request = "Write improved content for this canonical prompt package."
     if degraded:
-        request = "Write a compact but valid version of this prompt package. Keep every required field non-empty."
+        request = "Write a compact but valid version of this prompt package. Keep every required section non-empty."
     return "\n\n".join(
         [
             f"Project: {project_slug}",
@@ -375,13 +420,42 @@ def _authoring_user_prompt(
             f"Prompt title: {target.title}",
             f"Prompt id: {target.prompt_id}",
             f"Workflow type: {target.workflow_type}",
-            "",
             request,
-            "Keep the prompt aligned with the clip context and current workflow type.",
+            "Use this exact packet envelope and section names:",
+            PACKET_START_TAG,
+            "task: clip_prompt",
+            f"stage: {target.stage}",
+            f"version: {PACKET_VERSION}",
             "",
+            "[[SECTION purpose]]",
+            "...purpose text...",
+            SECTION_END_TAG,
+            "",
+            "[[SECTION positive_prompt]]",
+            "...positive prompt text...",
+            SECTION_END_TAG,
+            "",
+            "[[SECTION negative_prompt]]",
+            "...negative prompt text...",
+            SECTION_END_TAG,
+            "",
+            "[[SECTION inputs_markdown]]",
+            "- key: value",
+            SECTION_END_TAG,
+            "",
+            "[[SECTION continuity_notes_markdown]]",
+            "- note",
+            SECTION_END_TAG,
+            "",
+            "[[SECTION repair_notes_markdown]]",
+            "- note",
+            SECTION_END_TAG,
+            PACKET_END_TAG,
+            "",
+            "Clip context:",
             clip_context,
             "",
-            "## Existing Prompt Draft",
+            "Existing prompt draft:",
             existing_markdown,
         ]
     )
@@ -396,10 +470,11 @@ def _write_prompt_target_with_retries(
     target: PromptTarget,
     clip_context: str,
     existing_prompt: PromptPackage | None,
-) -> tuple[PromptPackage | None, list[str], Path]:
+) -> tuple[PromptPackage | None, list[str], Path, float]:
     warnings: list[str] = []
     latest_log_path: Path | None = None
-    for kind, degraded in [("normal", False), ("same_prompt_retry", False), ("degraded_retry", True)]:
+    target_started = time.perf_counter()
+    for attempt_index, (kind, degraded) in enumerate([("normal", False), ("same_prompt_retry", False), ("degraded_retry", True)], start=1):
         system_prompt = _authoring_system_prompt(target, degraded=degraded)
         user_prompt = _authoring_user_prompt(
             project_slug=project_slug,
@@ -410,6 +485,9 @@ def _write_prompt_target_with_retries(
             existing_prompt=existing_prompt,
             degraded=degraded,
         )
+        if kind != "normal":
+            reason = warnings[-1] if warnings else "prior attempt failed"
+            print(f"[authoring] Retrying {scene_id}/{clip_id} {target.stage} with {kind} because {reason}")
         result = client.chat_completion_result(
             system_prompt=system_prompt,
             user_prompt=user_prompt,
@@ -425,17 +503,17 @@ def _write_prompt_target_with_retries(
             response=result.text,
         )
         if not result.is_success:
-            warnings.append(f"{kind} returned {result.status}: {result.error_message or 'no message'}")
+            warnings.append(result.error_message or f"{kind} returned {result.status}")
             continue
         try:
-            package = _build_prompt_package_from_llm(
+            package = _build_prompt_package_from_packet(
                 response=result.text,
                 target=target,
                 existing_prompt=existing_prompt,
             )
-            return package, warnings, latest_log_path
+            return package, warnings, latest_log_path, time.perf_counter() - target_started
         except LMStudioError as exc:
-            warnings.append(f"{kind} parse/build failed: {exc}")
+            warnings.append(str(exc))
             continue
 
     if latest_log_path is None:
@@ -449,7 +527,7 @@ def _write_prompt_target_with_retries(
             user_prompt="",
             response="",
         )
-    return None, warnings, latest_log_path
+    return None, warnings, latest_log_path, time.perf_counter() - target_started
 
 
 def _write_prompt_exchange_log(
@@ -540,20 +618,19 @@ def _write_prompt_failure_artifact(
     return path
 
 
-def _build_prompt_package_from_llm(
+def _build_prompt_package_from_packet(
     *,
     response: str,
     target: PromptTarget,
     existing_prompt: PromptPackage | None,
 ) -> PromptPackage:
-    payload = _parse_llm_json(response)
-    purpose = _require_string(payload, "purpose")
-    positive_prompt = _require_string(payload, "positive_prompt")
-    negative_prompt = _require_string(payload, "negative_prompt")
-    continuity_notes = _require_string_list(payload, "continuity_notes")
-    repair_notes = _require_string_list(payload, "repair_notes")
-
-    inputs = _merge_inputs(existing_prompt.inputs if existing_prompt else {}, payload.get("inputs"))
+    packet = _parse_prompt_packet(response)
+    purpose = _require_section(packet, "purpose")
+    positive_prompt = _require_section(packet, "positive_prompt")
+    negative_prompt = _require_section(packet, "negative_prompt")
+    continuity_notes = _parse_markdown_list(_require_section(packet, "continuity_notes_markdown"))
+    repair_notes = _parse_markdown_list(_require_section(packet, "repair_notes_markdown"))
+    inputs = _merge_inputs_from_markdown(existing_prompt.inputs if existing_prompt else {}, _require_section(packet, "inputs_markdown"))
     inputs_markdown = "\n".join(f"- {key}: {value}" for key, value in inputs.items())
 
     return PromptPackage(
@@ -571,6 +648,100 @@ def _build_prompt_package_from_llm(
     )
 
 
+def _parse_prompt_packet(response: str) -> _PacketDocument:
+    cleaned = response.strip()
+    if not cleaned:
+        raise LMStudioError("LM Studio returned an empty prompt-writing response.")
+    cleaned = _strip_markdown_fences(cleaned)
+    packet_body = _extract_packet_body(cleaned)
+    return _parse_packet_body(packet_body)
+
+
+def _strip_markdown_fences(text: str) -> str:
+    cleaned = text.strip()
+    if not cleaned.startswith("```"):
+        return cleaned
+    lines = cleaned.splitlines()
+    if lines and lines[0].startswith("```"):
+        lines = lines[1:]
+    if lines and lines[-1].startswith("```"):
+        lines = lines[:-1]
+    return "\n".join(lines).strip()
+
+
+def _extract_packet_body(response: str) -> str:
+    lines = response.splitlines()
+    start_index = next((index for index, line in enumerate(lines) if line.strip() == PACKET_START_TAG), -1)
+    end_index = next((index for index in range(len(lines) - 1, -1, -1) if lines[index].strip() == PACKET_END_TAG), -1)
+    if start_index == -1 or end_index == -1 or end_index <= start_index:
+        raise LMStudioError("Prompt-writing response did not include a FILMCREATOR packet envelope.")
+    return "\n".join(lines[start_index + 1 : end_index]).strip()
+
+
+def _parse_packet_body(packet_body: str) -> _PacketDocument:
+    metadata: dict[str, str] = {}
+    sections: dict[str, str] = {}
+    lines = packet_body.splitlines()
+    index = 0
+    while index < len(lines):
+        stripped = lines[index].strip()
+        if not stripped:
+            index += 1
+            continue
+        section_match = SECTION_TAG_PATTERN.fullmatch(stripped)
+        if section_match:
+            section_name = section_match.group(1).lower()
+            section_lines, index = _collect_section_block(lines, index)
+            sections[section_name] = "\n".join(section_lines).strip()
+            continue
+        if ":" in stripped:
+            key, value = stripped.split(":", 1)
+            metadata[key.strip().lower()] = value.strip()
+            index += 1
+            continue
+        index += 1
+    if metadata.get("task") != "clip_prompt":
+        raise LMStudioError("Prompt-writing response packet is missing task: clip_prompt.")
+    if metadata.get("version") != PACKET_VERSION:
+        raise LMStudioError("Prompt-writing response packet has an unexpected version.")
+    return _PacketDocument(metadata=metadata, sections=sections)
+
+
+def _collect_section_block(lines: list[str], start_index: int) -> tuple[list[str], int]:
+    body: list[str] = []
+    index = start_index + 1
+    while index < len(lines):
+        stripped = lines[index].strip()
+        if stripped == SECTION_END_TAG:
+            return body, index + 1
+        if stripped.startswith("[[SECTION ") and stripped.endswith("]]"):
+            return body, index
+        body.append(lines[index])
+        index += 1
+    return body, index
+
+
+def _require_section(packet: _PacketDocument, name: str) -> str:
+    value = packet.sections.get(name.lower(), "").strip()
+    if not value:
+        raise LMStudioError(f"Prompt-writing packet is missing required section '{name}'.")
+    return value
+
+
+def _parse_markdown_list(markdown: str) -> list[str]:
+    items: list[str] = []
+    for line in markdown.splitlines():
+        stripped = line.strip()
+        if not stripped:
+            continue
+        if stripped.startswith(("- ", "* ")):
+            stripped = stripped[2:].strip()
+        items.append(stripped)
+    if not items:
+        raise LMStudioError("Expected at least one list item in markdown section.")
+    return items
+
+
 def _sources_markdown(existing_prompt: PromptPackage | None, target: PromptTarget) -> str:
     merged: list[str] = []
     for source in target.sources:
@@ -583,55 +754,39 @@ def _sources_markdown(existing_prompt: PromptPackage | None, target: PromptTarge
     return "\n".join(f"- {source}" for source in merged)
 
 
-def _merge_inputs(existing_inputs: dict[str, str], raw_inputs: object) -> dict[str, str]:
+def _merge_inputs_from_markdown(existing_inputs: dict[str, str], markdown: str) -> dict[str, str]:
     merged = dict(existing_inputs)
-    if isinstance(raw_inputs, dict):
-        for key, value in raw_inputs.items():
-            if isinstance(key, str):
-                merged[key] = "" if value is None else str(value)
+    parsed = _parse_markdown_key_value_items(markdown)
+    merged.update(parsed)
     if not merged:
         merged = {"context": "generated_from_clip_context"}
     return merged
 
 
-def _parse_llm_json(response: str) -> dict[str, object]:
-    cleaned = response.strip()
-    if not cleaned:
-        raise LMStudioError("LM Studio returned an empty prompt-writing response.")
-    if cleaned.startswith("```"):
-        cleaned = cleaned.strip("`")
-        if cleaned.startswith("json"):
-            cleaned = cleaned[4:].strip()
-
-    try:
-        payload = json.loads(cleaned)
-    except json.JSONDecodeError:
-        start = cleaned.find("{")
-        end = cleaned.rfind("}")
-        if start == -1 or end == -1 or end <= start:
-            raise LMStudioError("LM Studio did not return valid JSON for prompt writing.")
-        payload = json.loads(cleaned[start : end + 1])
-
-    if not isinstance(payload, dict):
-        raise LMStudioError("LM Studio prompt-writing response must be a JSON object.")
-    return payload
-
-
-def _require_string(payload: dict[str, object], key: str) -> str:
-    value = payload.get(key)
-    if not isinstance(value, str) or not value.strip():
-        raise LMStudioError(f"LM Studio prompt-writing response is missing a non-empty string for '{key}'.")
-    return value.strip()
-
-
-def _require_string_list(payload: dict[str, object], key: str) -> list[str]:
-    value = payload.get(key)
-    if not isinstance(value, list):
-        raise LMStudioError(f"LM Studio prompt-writing response is missing a list for '{key}'.")
-    items = [item.strip() for item in value if isinstance(item, str) and item.strip()]
-    if not items:
-        raise LMStudioError(f"LM Studio prompt-writing response did not provide any values for '{key}'.")
-    return items
+def _parse_markdown_key_value_items(markdown: str) -> dict[str, str]:
+    values: dict[str, str] = {}
+    current_key: str | None = None
+    for line in markdown.splitlines():
+        stripped = line.strip()
+        if not stripped:
+            continue
+        if stripped.startswith(("- ", "* ")):
+            stripped = stripped[2:].strip()
+        if ":" in stripped:
+            key, value = stripped.split(":", 1)
+            normalized_key = key.strip()
+            if normalized_key:
+                values[normalized_key] = value.strip()
+                current_key = normalized_key
+                continue
+        if current_key is not None:
+            values[current_key] = f"{values[current_key]}\n{stripped}" if values[current_key] else stripped
+        else:
+            values[f"note_{len(values) + 1}"] = stripped
+            current_key = f"note_{len(values)}"
+    if not values:
+        values = {"context": "generated_from_clip_context"}
+    return values
 
 
 def _record_prompt_packages_in_clip_state(
@@ -645,6 +800,8 @@ def _record_prompt_packages_in_clip_state(
     inputs = clip_state.setdefault("inputs", {})
 
     for target in targets:
+        if not target.path.exists():
+            continue
         prompt_value = repo_relative(target.path)
         if target.stage == "scene_stage":
             inputs["scene_stage_prompt_package"] = prompt_value
