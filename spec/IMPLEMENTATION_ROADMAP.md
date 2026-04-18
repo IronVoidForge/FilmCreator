@@ -44,6 +44,13 @@ Ship a local-first, cut-oriented pipeline that can:
   - promote the chosen video into `approved_video`,
   - extract `approved_video_last_frame` into the canonical clip still hierarchy.
 
+## Current Project Status
+
+- Chapter-level authoring for `princess_of_mars_test` is live and mostly stable.
+- `analyze-chapter` and `plan-scene` are working.
+- Shared character/environment prompt writing is the current weak point because some LM Studio responses come back empty or partially malformed on per-asset drafts.
+- The project is still file-first; SQLite remains planned after the authoring flow is fully stable.
+
 ## Known Gaps At This Checkpoint
 
 - `still_fix` has not yet been run from a reviewed prior stage.
@@ -52,6 +59,7 @@ Ship a local-first, cut-oriented pipeline that can:
 - The current short-cut motion path appears to introduce an unwanted blue-shift relative to the approved keyframe and needs look-preservation tuning.
 - Longer 10-second clips are not yet represented as explicit multi-segment motion plans.
 - LM Studio authoring now covers clip-local prompt writing, but scene analysis, clip planning, and shared character/environment prompt generation still need live validation.
+- Shared prompt generation now uses one asset per LM Studio call, but a few assets still return empty output or malformed `inputs_markdown` and need one more resilience pass.
 - The chapter-authoring path should now use packetized Markdown exchanges with one bounded LM Studio task per call instead of trusting large strict-JSON responses from the local model.
 - The SQLite relational layer is now designed in the specs, but it does not exist in code yet.
 - The planning-time shot-start decision model is not yet implemented:
@@ -69,25 +77,12 @@ Ship a local-first, cut-oriented pipeline that can:
 
 ## Next Immediate Step
 
-Build and validate the first real chapter-based authoring pass before SQLite:
+Harden the remaining shared-prompt authoring edge cases before SQLite:
 
-1. implement and test chapter intake plus analysis outputs:
-   - chapter summary
-   - character extraction
-   - environment extraction
-   - scene decomposition
-   - beat bundles
-2. implement and test scene planning plus prompt handoff:
-   - clip roster
-   - clip plans
-   - shared character and environment prompt packages
-   - clip-local prompt packages for one scene and one or two initial clips
-   - keep each LM Studio call limited to one bounded task inside this sequence
-3. build the character-to-scene pipeline layer so authoring can decide:
-   - which approved character refs are visible in each clip
-   - which shared environment refs are relevant to that clip
-   - which references should be passed to keyframe generation first
-   - whether optional consistency-assist or still-fix should even be considered for that clip
+1. make shared prompt generation resilient to empty LM Studio responses.
+2. make `inputs_markdown` parsing accept freeform path lines without failing the whole asset.
+3. keep scene planning and clip planning green while that last authoring edge case is fixed.
+4. then proceed to the character-to-scene mapping layer.
 
 That sequence gives us a full file-first authoring handoff we can validate before introducing the database layer.
 

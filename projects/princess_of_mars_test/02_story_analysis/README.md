@@ -14,6 +14,13 @@ The goal is to take one pasted public-domain chapter and turn it into:
 - clip-local prompt packages for initial test clips
 - manual character-description placeholders when the chapter does not describe a character well enough
 
+## Current Status
+
+- Chapter intake, character extraction, environment extraction, scene decomposition, beat bundling, and clip planning are working on the live `Princess of Mars` chapter pilot.
+- `plan-scene` now produces canonical scene, beat, and clip files for `SC001`.
+- Shared prompt generation is partially working, but some character assets still return empty or malformed LM Studio output and need a final robustness pass.
+- SQLite has not been implemented yet; the file-first authoring pass is still the source of truth.
+
 ## Pre-SQL Rule
 
 - Files are the source of truth in this phase.
@@ -44,6 +51,7 @@ The first meaningful pre-SQL checkpoint is:
 - one scene clip roster written
 - one or two clip plans written
 - canonical prompt packages written for those clips
+- shared character/environment prompt generation should succeed for the same scene without blocking the whole run
 
 At that point we can verify the authoring handoff end to end before database work.
 
@@ -55,6 +63,7 @@ At that point we can verify the authoring handoff end to end before database wor
   - prefer tagged Markdown packet outputs for chapter analysis, scene planning, and shared prompt drafting
   - use parser-side validation and conversion instead of trusting nested JSON from the local model
   - keep temperatures low for reproducible extraction and file regeneration
+  - current difficulty: shared prompt drafting still sometimes returns empty or malformed packets for manual-description-required characters
 - ComfyUI side:
   - treat workflows as node graphs with known patch points, not as freeform prompt blobs
   - keep authoring outputs workflow-aware by naming required reference slots like `image_1` or `source_frame`

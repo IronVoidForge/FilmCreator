@@ -99,19 +99,22 @@
   - next validation: expand from unit coverage into launcher-level or smoke-test coverage
 
 - `5.1` story analysis outputs
-  - status: `implemented`
-  - evidence: the authoring path now has a packetized Markdown contract, per-task LM Studio logging, manual-description placeholder reconciliation, and unit coverage for chapter analysis outputs
-  - next validation: run the live `princess_of_mars_test` chapter authoring checkpoint successfully through LM Studio and inspect the resulting story-analysis files
+  - status: `validated`
+  - evidence: the authoring path now has a packetized Markdown contract, per-task LM Studio logging, manual-description placeholder reconciliation, and live chapter analysis plus scene decomposition for `princess_of_mars_test`
+  - current difficulty: shared prompt drafting still has occasional empty or malformed LM Studio responses for some assets, especially when a manual description is required
+  - next validation: make shared character/environment prompt generation resilient enough to complete the authoring checkpoint without blocking on one bad asset
 
 - `5.2` clip plan generation
-  - status: `implemented`
-  - evidence: scene beat mapping and clip planning now run as dedicated authoring passes in code, with canonical scene, beat, and clip filenames enforced by the orchestrator
-  - next validation: run the live chapter authoring checkpoint through scene beat and clip plan generation for `SC001`
+  - status: `validated`
+  - evidence: `plan-scene princess_of_mars_test --scene SC001` now writes canonical scene, beat, and clip files from the live chapter pilot
+  - current difficulty: the model sometimes emits shorthand clip ids or partial packet wrappers, so parser-side normalization remains important
+  - next validation: keep the clip-planning pass stable while shared prompt generation is hardened
 
 - `5.3` prompt writer integration
   - status: `validated`
   - evidence: `lmstudio-check` resolved the live local model set and `write-prompts` rewrote the canonical pilot clip prompt-package files with fresh content while updating clip state with the resulting package paths
-  - next validation: expand from clip-local prompt writing into chapter-based scene analysis, clip planning, and shared character/environment prompt generation
+  - current difficulty: clip-local prompt writing is stable, but chapter-based shared prompt generation still needs a final robustness pass for per-asset empty responses and malformed `inputs_markdown`
+  - next validation: expand the authoring checkpoint so shared character/environment prompt generation completes reliably for every asset in the chapter
 
 - `6.1` deferred video motion stage
   - status: `validated`

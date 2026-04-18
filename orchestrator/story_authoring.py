@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+import unicodedata
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -1173,13 +1174,7 @@ def _parse_packet_document(response: str, *, expected_task: str | None = None) -
 
 
 def _extract_packet_body(response: str) -> str:
-    cleaned = (
-        response.replace("\ufeff", "")
-        .replace("\u200b", "")
-        .replace("\u200e", "")
-        .replace("\u200f", "")
-        .strip()
-    )
+    cleaned = _sanitize_llm_text(response)
     lines = cleaned.splitlines()
     start_index = next((index for index, line in enumerate(lines) if line.strip() == PACKET_START_TAG), -1)
     end_index = next((index for index in range(len(lines) - 1, -1, -1) if lines[index].strip() == PACKET_END_TAG), -1)
@@ -1187,9 +1182,29 @@ def _extract_packet_body(response: str) -> str:
         start = cleaned.find(PACKET_START_TAG)
         end = cleaned.rfind(PACKET_END_TAG)
         if start == -1 or end == -1 or end <= start:
+            if start_index != -1:
+                body_lines = lines[start_index + 1 :]
+                while body_lines and not body_lines[-1].strip():
+                    body_lines.pop()
+                while body_lines and body_lines[-1].strip() == PACKET_START_TAG:
+                    body_lines.pop()
+                if body_lines:
+                    return "\n".join(body_lines).strip()
             raise LMStudioError("LM Studio did not return a FILMCREATOR packet envelope.")
         return cleaned[start + len(PACKET_START_TAG) : end].strip()
     return "\n".join(lines[start_index + 1 : end_index]).strip()
+
+
+def _sanitize_llm_text(text: str) -> str:
+    cleaned_chars: list[str] = []
+    for ch in text:
+        if ch in "\n\r\t":
+            cleaned_chars.append(ch)
+            continue
+        if unicodedata.category(ch) == "Cf":
+            continue
+        cleaned_chars.append(ch)
+    return "".join(cleaned_chars).strip()
 
 
 def _strip_markdown_fences(response: str) -> str:
@@ -1359,6 +1374,7 @@ def _parse_packet_bool(value: str) -> bool:
 
 def _parse_markdown_key_value_items(markdown: str) -> dict[str, str]:
     values: dict[str, str] = {}
+    current_key: str | None = None
     for line in markdown.splitlines():
         stripped = line.strip()
         if not stripped:
@@ -1366,12 +1382,18 @@ def _parse_markdown_key_value_items(markdown: str) -> dict[str, str]:
         if stripped.startswith(("- ", "* ")):
             stripped = stripped[2:].strip()
         if ":" not in stripped:
-            raise LMStudioError(f"Expected '- key: value' line but got '{line}'.")
+            if current_key is None:
+                current_key = "note"
+                values[current_key] = stripped if not values.get(current_key) else f"{values[current_key]}\n{stripped}"
+                continue
+            values[current_key] = f"{values[current_key]}\n{stripped}" if values[current_key] else stripped
+            continue
         key, value = stripped.split(":", 1)
         normalized_key = key.strip()
         if not normalized_key:
             raise LMStudioError(f"Inputs Markdown contained an empty key in line '{line}'.")
         values[normalized_key] = value.strip()
+        current_key = normalized_key
     if not values:
         raise LMStudioError("Inputs Markdown did not contain any 'key: value' lines.")
     return values
