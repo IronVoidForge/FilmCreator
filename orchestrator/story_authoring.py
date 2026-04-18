@@ -133,6 +133,18 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
     client, resolved_model = _client_and_model()
     project_dir = create_project(project_slug)
     chapter_source = _resolve_chapter_source(project_slug, chapter)
+    _prune_markdown_dir(
+        project_dir / "02_story_analysis" / "character_breakdowns",
+        keep_names={"README.md"},
+    )
+    _prune_markdown_dir(
+        project_dir / "02_story_analysis" / "environment_breakdowns",
+        keep_names={"README.md"},
+    )
+    _prune_markdown_dir(
+        project_dir / "02_story_analysis" / "scene_breakdowns",
+        keep_names={"README.md"},
+    )
 
     written_files: list[str] = []
     manual_requests: list[ManualCharacterDescriptionRequest] = []
@@ -290,6 +302,10 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
 
     written_files: list[str] = []
 
+    beat_dir = project_dir / "02_story_analysis" / "beat_bundles" / scene_id
+    ensure_dir(beat_dir)
+    _prune_markdown_dir(beat_dir, keep_names=set())
+
     beat_payload = _call_json_task(
         client=client,
         system_prompt=_analysis_system_prompt(),
@@ -307,8 +323,6 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
     _write_text(scene_path, updated_scene_markdown)
     written_files.append(repo_relative(scene_path))
 
-    beat_dir = project_dir / "02_story_analysis" / "beat_bundles" / scene_id
-    ensure_dir(beat_dir)
     beat_index_path = beat_dir / "BEAT_INDEX.md"
     _write_text(beat_index_path, beat_index_markdown)
     written_files.append(repo_relative(beat_index_path))
@@ -338,6 +352,7 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
     clip_roster_markdown = _require_string(clip_payload, "clip_roster_markdown")
     clip_dir = project_dir / "02_story_analysis" / "clip_plans" / scene_id
     ensure_dir(clip_dir)
+    _prune_markdown_dir(clip_dir, keep_names=set())
     clip_roster_path = clip_dir / f"{scene_id}_clip_roster.md"
     _write_text(clip_roster_path, clip_roster_markdown)
     written_files.append(repo_relative(clip_roster_path))
@@ -996,6 +1011,15 @@ def _markdown_bundle(*, directory: Path, exclude_names: set[str]) -> str:
             continue
         chunks.append(f"## {path.name}\n{path.read_text(encoding='utf-8').strip()}")
     return "\n\n".join(chunks)
+
+
+def _prune_markdown_dir(directory: Path, *, keep_names: set[str]) -> None:
+    if not directory.exists():
+        return
+    for path in directory.glob("*.md"):
+        if path.name in keep_names:
+            continue
+        path.unlink(missing_ok=True)
 
 
 def _require_string(

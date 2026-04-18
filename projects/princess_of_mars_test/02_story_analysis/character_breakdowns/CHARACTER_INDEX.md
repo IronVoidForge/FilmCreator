@@ -1,22 +1,9 @@
-# Character Index - Chapter VIII
+# Character Index: Chapter VIII - A Fair Captive from the Sky
 
-This document lists all visible and referenced characters from Chapter VIII of A Princess of Mars.
-
-## Characters Requiring Manual Description
-
-The following characters lack sufficient physical or visual description in the source material to support dependable image generation:
-
-- **the_narrator** - No detailed physical description provided in this chapter
-- **sola** - Only identified as a green Martian female companion
-- **woola_the_hound** - No specific physical description given
-- **green_martian_warriors** - Multiple unnamed warriors, no individual descriptions
-- **lorquas_ptomel** - Briefly mentioned old warrior, no physical details
-- **martian_females** - Two female Martians dragging the prisoner, no detailed descriptions
-
-## Character with Sufficient Description
-
-- **the_fair_captive** - Detailed visual description provided in source text
-
----
-
-*Generated from Chapter VIII: A Fair Captive from the Sky*
+| Asset ID | Name | Role | Description Status |
+| :--- | :--- | :--- | :--- |
+| john_carter | John Carter | Narrator | Missing Physical Details |
+| sola | Sola | Companion | Missing Physical Details |
+| woola | Woola | Animal (Hound) | Missing Breed/Color |
+| prisoner_human_female | Human-like Female Prisoner | Captive | Complete Visual Description |
+| martian_warrior | Green Martian Warrior | Enemy | Generic Group Description |

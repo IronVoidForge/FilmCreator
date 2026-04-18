@@ -1,3 +1,4 @@
-# Project: Princess of Mars Test
+# A Princess of Mars - Test Project
 
-This project focuses on the digital extraction and scene analysis of Edgar Rice Burroughs' "A Princess of Mars". The current scope covers Chapter VIII, titled "A Fair Captive from the Sky", within the test workflow. The objective is to maintain visual continuity for future scene reconstruction while preserving narrative integrity regarding the arrival of enemy airships and the discovery of the human captive.
+## Context
+This project tracks the narrative progression of John Carter's expedition on Mars, specifically focusing on Chapter VIII where a significant shift in conflict occurs involving aerial warfare and the discovery of a human captive. The text provided is sourced from Project Gutenberg Ebook 62.

@@ -1,7 +1,14 @@
-# John Carter
-**Role:** Narrator / Protagonist
-**Description:** Human male narrator observing events from a window in a city building. He witnesses the Martian fleet's defeat and the capture of the princess. He is accompanied by Sola and Woola (hound).
-**Context:** Returns toward home city on third day after incubator ceremony.
+# Asset ID: john_carter
+## Name: John Carter
+## Role: Narrator / Protagonist
+## Description:
+Referred to as "I" throughout the chapter. The narrator observes the events from a building window and later descends to the street.
+## Visual Traits:
+- Skin Tone: Not specified in supplied material.
+- Hair Color/Style: Not specified in supplied material.
+- Clothing: Not specified in supplied material.
+## Notes:
+No physical attributes provided in chapter text or visual continuity facts. Manual description required for image generation.
 
 # Manual Description Input Required
 
@@ -11,4 +18,4 @@ Yes
 
 # Manual Description Reason
 
-The provided chapter text does not contain physical descriptions of the narrator's appearance (skin tone, hair, build, attire), only his name and role.
+No physical attributes (skin tone, hair, clothing) provided in chapter text or visual continuity facts.

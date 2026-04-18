@@ -245,6 +245,18 @@ def test_authoring_checkpoint_writes_analysis_planning_and_manual_character_plac
         ),
         encoding="utf-8",
     )
+    (projects_root / "demo" / "02_story_analysis" / "scene_breakdowns" / "SC001_airship_attack_and_captive_reveal.md").write_text(
+        "# stale scene file\n",
+        encoding="utf-8",
+    )
+    (projects_root / "demo" / "02_story_analysis" / "character_breakdowns" / "the_narrator.md").write_text(
+        "# stale character alias\n",
+        encoding="utf-8",
+    )
+    (projects_root / "demo" / "02_story_analysis" / "environment_breakdowns" / "ancient_city_reference.md").write_text(
+        "# stale environment alias\n",
+        encoding="utf-8",
+    )
 
     summary = story_authoring_module.authoring_checkpoint(
         project_slug="demo",
@@ -271,6 +283,8 @@ def test_authoring_checkpoint_writes_analysis_planning_and_manual_character_plac
     assert (projects_root / "demo" / "02_story_analysis" / "clip_plans" / "SC001" / "CL001.md").exists()
     assert (projects_root / "demo" / "02_story_analysis" / "clip_plans" / "SC001" / "CL002.md").exists()
     assert (projects_root / "demo" / "02_story_analysis" / "scene_breakdowns" / "SC001_airship_attack_and_captive_reveal.md").exists() is False
+    assert (projects_root / "demo" / "02_story_analysis" / "character_breakdowns" / "the_narrator.md").exists() is False
+    assert (projects_root / "demo" / "02_story_analysis" / "environment_breakdowns" / "ancient_city_reference.md").exists() is False
 
     shared_character_prompt = parse_prompt_package(
         projects_root / "demo" / "03_prompt_packages" / "characters" / "john_carter" / "john_carter_ref_prompt.md"
