@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 from dataclasses import dataclass
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable
 
@@ -30,12 +31,32 @@ class PromptWriteResult:
 
 
 @dataclass(frozen=True)
+class PromptWriteFailure:
+    clip_id: str
+    stage: str
+    reason: str
+    log_path: str
+    failure_artifact_path: str
+
+    def to_dict(self) -> dict[str, object]:
+        return {
+            "clip_id": self.clip_id,
+            "stage": self.stage,
+            "reason": self.reason,
+            "log_path": self.log_path,
+            "failure_artifact_path": self.failure_artifact_path,
+        }
+
+
+@dataclass(frozen=True)
 class PromptWriteSummary:
     project_slug: str
     scene_id: str
     clip_ids: list[str]
     model: str
     written_files: list[PromptWriteResult]
+    warnings: list[str]
+    failures: list[PromptWriteFailure]
 
     def to_dict(self) -> dict[str, object]:
         return {
@@ -44,6 +65,8 @@ class PromptWriteSummary:
             "clip_ids": self.clip_ids,
             "model": self.model,
             "written_files": [item.to_dict() for item in self.written_files],
+            "warnings": self.warnings,
+            "failures": [item.to_dict() for item in self.failures],
         }
 
 
@@ -76,28 +99,44 @@ def write_prompts(
 
     target_clip_ids = _resolve_clip_ids(project_slug, scene_id, clip_id)
     written_files: list[PromptWriteResult] = []
+    warnings: list[str] = []
+    failures: list[PromptWriteFailure] = []
 
     for current_clip_id in target_clip_ids:
         clip_context = _load_clip_context(project_slug, scene_id, current_clip_id)
         targets = list(_prompt_targets(project_slug, scene_id, current_clip_id))
+        clip_had_success = False
         for target in targets:
             existing = _load_existing_prompt(target.path)
-            response = client.chat_completion(
-                system_prompt=_authoring_system_prompt(target),
-                user_prompt=_authoring_user_prompt(
+            package, local_warnings, log_path = _write_prompt_target_with_retries(
+                client=client,
+                project_slug=project_slug,
+                scene_id=scene_id,
+                clip_id=current_clip_id,
+                target=target,
+                clip_context=clip_context,
+                existing_prompt=existing,
+            )
+            warnings.extend(f"{current_clip_id}:{target.stage}: {warning}" for warning in local_warnings)
+            if package is None:
+                failure_path = _write_prompt_failure_artifact(
                     project_slug=project_slug,
                     scene_id=scene_id,
                     clip_id=current_clip_id,
-                    target=target,
-                    clip_context=clip_context,
-                    existing_prompt=existing,
-                ),
-            )
-            package = _build_prompt_package_from_llm(
-                response=response,
-                target=target,
-                existing_prompt=existing,
-            )
+                    stage=target.stage,
+                    reason="LM Studio prompt-writing retries exhausted.",
+                )
+                failures.append(
+                    PromptWriteFailure(
+                        clip_id=current_clip_id,
+                        stage=target.stage,
+                        reason="LM Studio prompt-writing retries exhausted.",
+                        log_path=repo_relative(log_path),
+                        failure_artifact_path=repo_relative(failure_path),
+                    )
+                )
+                continue
+
             write_prompt_package(target.path, package)
             written_files.append(
                 PromptWriteResult(
@@ -107,12 +146,15 @@ def write_prompts(
                     model=resolved_model,
                 )
             )
-        _record_prompt_packages_in_clip_state(
-            project_slug=project_slug,
-            scene_id=scene_id,
-            clip_id=current_clip_id,
-            targets=targets,
-        )
+            clip_had_success = True
+
+        if clip_had_success:
+            _record_prompt_packages_in_clip_state(
+                project_slug=project_slug,
+                scene_id=scene_id,
+                clip_id=current_clip_id,
+                targets=targets,
+            )
 
     return PromptWriteSummary(
         project_slug=project_slug,
@@ -120,6 +162,8 @@ def write_prompts(
         clip_ids=target_clip_ids,
         model=resolved_model,
         written_files=written_files,
+        warnings=warnings,
+        failures=failures,
     )
 
 
@@ -279,7 +323,20 @@ def _load_existing_prompt(path: Path) -> PromptPackage | None:
     return parse_prompt_package(path)
 
 
-def _authoring_system_prompt(target: PromptTarget) -> str:
+def _authoring_system_prompt(target: PromptTarget, degraded: bool = False) -> str:
+    if degraded:
+        return "\n".join(
+            [
+                "You are writing one FilmCreator prompt package for a local model.",
+                "Return only valid JSON.",
+                "Do not use markdown fences.",
+                f"Target stage: {target.stage}",
+                f"Stage guidance: {target.guidance}",
+                "Required JSON keys: purpose, positive_prompt, negative_prompt, inputs, continuity_notes, repair_notes.",
+                "Keep values short, concrete, and usable.",
+                "If uncertain, keep inputs minimal but non-empty.",
+            ]
+        )
     return "\n".join(
         [
             "You are writing one FilmCreator prompt package section set for a local generation pipeline.",
@@ -304,8 +361,12 @@ def _authoring_user_prompt(
     target: PromptTarget,
     clip_context: str,
     existing_prompt: PromptPackage | None,
+    degraded: bool = False,
 ) -> str:
     existing_markdown = existing_prompt.to_markdown() if existing_prompt else "(none)"
+    request = "Write improved content for this canonical prompt package."
+    if degraded:
+        request = "Write a compact but valid version of this prompt package. Keep every required field non-empty."
     return "\n\n".join(
         [
             f"Project: {project_slug}",
@@ -315,7 +376,7 @@ def _authoring_user_prompt(
             f"Prompt id: {target.prompt_id}",
             f"Workflow type: {target.workflow_type}",
             "",
-            "Write improved content for this canonical prompt package.",
+            request,
             "Keep the prompt aligned with the clip context and current workflow type.",
             "",
             clip_context,
@@ -324,6 +385,159 @@ def _authoring_user_prompt(
             existing_markdown,
         ]
     )
+
+
+def _write_prompt_target_with_retries(
+    *,
+    client: LMStudioClient,
+    project_slug: str,
+    scene_id: str,
+    clip_id: str,
+    target: PromptTarget,
+    clip_context: str,
+    existing_prompt: PromptPackage | None,
+) -> tuple[PromptPackage | None, list[str], Path]:
+    warnings: list[str] = []
+    latest_log_path: Path | None = None
+    for kind, degraded in [("normal", False), ("same_prompt_retry", False), ("degraded_retry", True)]:
+        system_prompt = _authoring_system_prompt(target, degraded=degraded)
+        user_prompt = _authoring_user_prompt(
+            project_slug=project_slug,
+            scene_id=scene_id,
+            clip_id=clip_id,
+            target=target,
+            clip_context=clip_context,
+            existing_prompt=existing_prompt,
+            degraded=degraded,
+        )
+        result = client.chat_completion_result(
+            system_prompt=system_prompt,
+            user_prompt=user_prompt,
+        )
+        latest_log_path = _write_prompt_exchange_log(
+            project_slug=project_slug,
+            scene_id=scene_id,
+            clip_id=clip_id,
+            target=target,
+            kind=kind,
+            system_prompt=system_prompt,
+            user_prompt=user_prompt,
+            response=result.text,
+        )
+        if not result.is_success:
+            warnings.append(f"{kind} returned {result.status}: {result.error_message or 'no message'}")
+            continue
+        try:
+            package = _build_prompt_package_from_llm(
+                response=result.text,
+                target=target,
+                existing_prompt=existing_prompt,
+            )
+            return package, warnings, latest_log_path
+        except LMStudioError as exc:
+            warnings.append(f"{kind} parse/build failed: {exc}")
+            continue
+
+    if latest_log_path is None:
+        latest_log_path = _write_prompt_exchange_log(
+            project_slug=project_slug,
+            scene_id=scene_id,
+            clip_id=clip_id,
+            target=target,
+            kind="failed_without_attempt",
+            system_prompt="",
+            user_prompt="",
+            response="",
+        )
+    return None, warnings, latest_log_path
+
+
+def _write_prompt_exchange_log(
+    *,
+    project_slug: str,
+    scene_id: str,
+    clip_id: str,
+    target: PromptTarget,
+    kind: str,
+    system_prompt: str,
+    user_prompt: str,
+    response: str,
+) -> Path:
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+    path = (
+        ROOT
+        / "projects"
+        / project_slug
+        / "03_prompt_packages"
+        / "logs"
+        / scene_id
+        / clip_id
+        / f"{timestamp}_{target.stage}_{kind}.md"
+    )
+    body = "\n".join(
+        [
+            "# FilmCreator Prompt Writing Exchange",
+            f"- timestamp_utc: {datetime.now(timezone.utc).isoformat()}",
+            f"- stage: {target.stage}",
+            f"- clip_id: {clip_id}",
+            f"- retry_kind: {kind}",
+            "",
+            "## System Prompt",
+            "````text",
+            system_prompt,
+            "````",
+            "",
+            "## User Prompt",
+            "````text",
+            user_prompt,
+            "````",
+            "",
+            "## Raw Response",
+            "````text",
+            response,
+            "````",
+        ]
+    )
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(body + "\n", encoding="utf-8")
+    return path
+
+
+def _write_prompt_failure_artifact(
+    *,
+    project_slug: str,
+    scene_id: str,
+    clip_id: str,
+    stage: str,
+    reason: str,
+) -> Path:
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+    path = (
+        ROOT
+        / "projects"
+        / project_slug
+        / "03_prompt_packages"
+        / "logs"
+        / scene_id
+        / clip_id
+        / "failures"
+        / f"{timestamp}_{stage}.md"
+    )
+    body = "\n".join(
+        [
+            "# FilmCreator Prompt Writing Failure",
+            f"- timestamp_utc: {datetime.now(timezone.utc).isoformat()}",
+            f"- scene_id: {scene_id}",
+            f"- clip_id: {clip_id}",
+            f"- stage: {stage}",
+            "",
+            "## Reason",
+            reason,
+        ]
+    )
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(body + "\n", encoding="utf-8")
+    return path
 
 
 def _build_prompt_package_from_llm(
@@ -375,11 +589,15 @@ def _merge_inputs(existing_inputs: dict[str, str], raw_inputs: object) -> dict[s
         for key, value in raw_inputs.items():
             if isinstance(key, str):
                 merged[key] = "" if value is None else str(value)
+    if not merged:
+        merged = {"context": "generated_from_clip_context"}
     return merged
 
 
 def _parse_llm_json(response: str) -> dict[str, object]:
     cleaned = response.strip()
+    if not cleaned:
+        raise LMStudioError("LM Studio returned an empty prompt-writing response.")
     if cleaned.startswith("```"):
         cleaned = cleaned.strip("`")
         if cleaned.startswith("json"):
