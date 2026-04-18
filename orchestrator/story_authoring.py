@@ -307,16 +307,17 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
         clarification_required = _parse_packet_bool(
             _require_record_field(raw_character, "clarification_required", allow_empty=True) or "false"
         )
-        clarification_reason = _require_record_field(
-            raw_character,
-            "clarification_reason",
-            allow_empty=not clarification_required,
-        )
-        clarification_question = _require_record_field(
-            raw_character,
-            "clarification_question",
-            allow_empty=not clarification_required,
-        )
+        clarification_reason = _require_record_field(raw_character, "clarification_reason", allow_empty=True)
+        clarification_question = _require_record_field(raw_character, "clarification_question", allow_empty=True)
+        if clarification_required:
+            if not clarification_reason:
+                clarification_reason = "The character record indicates clarification is needed, but LM Studio did not supply a reason."
+                warnings.append(f"Synthesized clarification_reason for character '{asset_id}'.")
+            if not clarification_question:
+                clarification_question = (
+                    "This character appears to need clarification. Can you identify the missing canonical identity or provide the missing visual facts?"
+                )
+                warnings.append(f"Synthesized clarification_question for character '{asset_id}'.")
         aliases = _require_record_field(raw_character, "aliases", allow_empty=True)
         canonical_character_id = _require_record_field(raw_character, "canonical_character_id", allow_empty=True)
         is_fully_identified = _require_record_field(raw_character, "is_fully_identified", allow_empty=True) or "false"
@@ -1017,12 +1018,14 @@ def _character_extraction_user_prompt(
         "- if the chapter names a character without enough stable identification, set is_fully_identified to false",
         "- use aliases for alternate names or partial labels seen in the chapter",
         "- if the character might already exist under another name or is too weakly identified, set clarification_required to true and ask a targeted question",
+        "- if clarification is not required, still include clarification_reason and clarification_question as empty values",
     ]
     if degraded:
         body_requirements = [
             "- keep one record per meaningful character mention",
             "- prefer short facts over long prose",
             "- if uncertain, use clarification_required instead of guessing",
+            "- if clarification is not required, still include clarification_reason and clarification_question as empty values",
         ]
     return "\n\n".join(
         [
