@@ -5,13 +5,13 @@ SC001 CL004 Cut Motion Prompt
 SC001_CL004_cut_motion_prompt
 
 # Purpose
-Generate cut motion video focusing on banner design details on Martian airships, transitioning from observation eyeline to close-up detail of ship prows and devices.
+Establish post-ceremony setting and narrator's observational role. Focus on visible motion, camera behavior, and environment change. Preserve keyframe lighting and grade by default. Ensure fleet entrance is deliberate not glitchy. Maintain character consistency with previous clips in scene. Keep warrior and window positioning stable during motion. Preserve banner design continuity markers across shots. Ensure device shapes on individual ship prows remain identifiable.
 
 # Workflow Type
 video.cut_motion.wan.i2v
 
 # Positive Prompt
-Close-up view of gray airship prows with strange banners and odd devices, midday sunlight reflecting off metal surfaces, camera slight push-in to reveal banner patterns, background hill crests blurred for depth, focus shift from fleet-wide to individual ship prow details, visible motion in fabric and light reflection.
+Close-up view of human male warrior face observing valley and hills, midday sunlight reflecting off skin, camera slight push-in to reveal banner patterns on distant gray airship, background hill crests blurred for depth, focus shift from fleet-wide to individual ship prow details, visible motion in fabric and light reflection.
 
 # Negative Prompt
 morphing faces, flickering lights, extra limbs, distorted anatomy, sudden jumps, static image, wrong character count, blurry text, inconsistent lighting, background shifting, glitchy movement, incorrect character identity, interior corridor space, female figure entrance, empty room transition, rapid camera shake, loss of banner detail.

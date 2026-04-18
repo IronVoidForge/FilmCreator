@@ -23,7 +23,7 @@ static image, sudden jump cut, distorted anatomy, extra limbs, flickering lights
 - duration_seconds: 5
 - required_refs: SC001 beat bundle BT001.md and BT002.md, Ship positions relative to hill crests continuity notes, Banner visibility markers across shots
 - optional_refs: Hill crest depth axis reference points, Movement timing consistency notes, Interior lighting level contrast warm versus cool
-- visible_character_assets: Green Martian Warriors fleet, Airships
+- visible_character_assets: Green-skinned Warriors fleet, Airships
 - look_continuity_policy: Preserve keyframe lighting and grade by default
 - intended_lighting_change: None
 - composition_type: Wide exterior establishing shot

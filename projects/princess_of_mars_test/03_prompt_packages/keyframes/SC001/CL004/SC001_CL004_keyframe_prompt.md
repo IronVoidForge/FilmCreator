@@ -11,10 +11,10 @@ Generate high-fidelity still reference image for scene build workflow, capturing
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Upper floor window frame, human male figure standing, close-up detail of strange banners on gray airship prows visible in distance, midday sunlight reflecting off ship devices, stone floor tiles, polished surface, open ground street level below, concern expression on face, hands near chest position, neutral observation posture, deserted city landscape, hills and rooftops in background, focus axis moves from fleet-wide to vertical ship prow details.
+Upper floor window frame edge visible, human male figure standing in neutral observation posture, close-up detail of strange banners on gray airship prows visible in distance, midday sunlight reflecting off ship devices, stone floor tiles polished surface, open ground street level below, concern expression on face, hands near chest position, deserted city landscape background, hills and rooftops visible, focus axis locked on vertical ship prow details.
 
 # Negative Prompt
-Crowds, movement blur, exterior only views, other characters, dim lighting, chaotic scene, distorted anatomy, multiple figures, named locations, interior corridor space, dark shadows, Sola presence, Earthly woman appearance, bright artificial light, night sky, interior wall textures.
+Crowds, movement blur, exterior only views, other characters, dim lighting, chaotic scene, distorted anatomy, multiple figures, named locations, interior corridor space, dark shadows, companion presence, earthly woman appearance, bright artificial light, night sky, interior wall textures.
 
 # Inputs
 - project_id: princess_of_mars_test

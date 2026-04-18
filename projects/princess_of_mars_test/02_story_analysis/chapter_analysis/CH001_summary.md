@@ -1,37 +1,42 @@
 # Chapter Title
-A Fair Captive from the Sky
+Chapter VIII - A Fair Captive from the Sky
 
-# Summary
-The narrator returns to the city after an incubator ceremony but is ordered to retreat immediately. From a window on an upper floor, he witnesses the arrival of twenty gray airships approaching the deserted city. The green Martian warriors fire a volley from building windows, causing the fleet to return fire. A battle ensues where the fleet's sighting apparatus and crews are targeted.
+# Scene 1: Return to City & Observation
+**Action:** The procession returns to the city after the incubator ceremony. Orders are given for immediate retreat. Narrator climbs to an upper floor window to observe the cause of the sudden scurrying.
+**Visuals:** Green Martians melting into building doorways like mist. View of valley and hills from window.
+**Key Detail:** The narrator identifies a huge gray craft swinging over the crest of the nearest hill as the cause.
 
-# Scene Breakdown
-1. **Retreat Order:** The procession debouches into open ground; orders given for hasty return. Green Martians melt into doorways within three minutes.
-2. **Observation:** Narrator enters a building (same one with ape encounter) and mounts to an upper floor. He sees the cause of retreat: twenty gray airships swinging over hills.
-3. **Engagement:** Each vessel carries a strange banner and odd device on prow. Figures crowd forward decks. Green Martians fire volley; foremost vessel swings broadside, returns fire, and moves parallel to front before turning back. Other vessels follow.
-4. **Battle Accuracy:** Narrator notes deadly accuracy of aim (25% shots wild). Little figure on craft drops at explosion of each bullet; banners and upper works dissolve in flame.
-5. **Fleet Retreat:** Twenty minutes after first volley, fleet swings trailing off. Several craft limping, barely under control. Fire ceases; energies focused on escape.
-6. **Disabled Ship:** One ship receives brunt of fire, unmanned, drifting southeast. Warriors cease firing as vessel appears helpless.
-7. **Capture:** Warriors rush to roofs to cover possibility of return fleet/reinforcements. Disabled ship drifts some fifty feet above ground. Warriors gallop ahead, dismount, enter building she is destined to touch.
-8. **Boarding:** Just before strike, warriors swarm from windows, ease shock of collision with spears. Grappling hooks thrown; big boat hauled to ground.
-9. **Looting:** Warriors search vessel stem to stern. Examine dead sailors for signs of life. Drag little figure among them (considerably less than half as tall as green Martians).
-10. **Removal:** Prisoner removed to ground. Systematic rifling of vessel begins. Arms, ammunition, silks, furs, jewels, stone vessels, solid foods/liquids (including casks of water) requisitioned. Chariots transport loot.
-11. **Destruction:** Lines fast to craft; towed far out into valley southwesterly. Warriors board and empty contents of carboys upon dead sailors/decks. Last warrior throws missile back; faint spurt of flame rises. Guy ropes released; warship lightened by loot removal soars majestically into air, decks/upper works mass of roaring flames.
-12. **Aftermath:** Ship drifts to southeast, rising higher as flames eat wooden parts. Narrator ascends to roof and watches for hours until lost in distance. Awe-inspiring sight of floating funeral pyre.
-13. **Emotional Reaction:** Narrator depressed; scene marks defeat/annihilation of forces of kindred people rather than routing by green warriors. Strange yearning toward unknown foemen; hope fleet would return.
-14. **Return to Plaza:** Woola follows at heel. Sola rushes up as cavalcade returns to plaza. Homeward march given up for day; not recommenced for more than a week due to fear of return attack.
-15. **Prisoner Reveal:** As Sola and I enter plaza, sight met eyes: prisoner from battle craft roughly dragged into nearby building by couple of green Martian females.
-16. **Final Encounter:** Slender, girlish figure similar to earthly women. Oval face, beautiful features, large lustrous eyes, coal black waving hair caught loosely into strange coiffure. Light reddish copper skin, crimson glow cheeks, ruby lips. Destitute of clothes save for highly wrought ornaments; entirely naked.
-17. **Eye Contact:** Gaze rests on me; eyes open wide in astonishment. Makes little sign with free hand (appeal for succor/protection). Look of hope fades into dejection, loathing, contempt. Dragged out of sight into depths of deserted edifice.
+# Scene 2: Fleet Arrival & Battle Initiation
+**Action:** Twenty gray ships appear, sailing slowly toward the city. Martians fire a terrific volley from building windows. Fleet returns fire with guns.
+**Visuals:** Gray ships with banners and devices gleaming in sunlight. Figures crowding forward decks. Window firing positions.
+**Key Detail:** The first volley catches ship crews unprepared. Bullets drop figures at explosions; banners dissolve in spurts of flame.
 
-# Visual Continuity Facts
-- **Prisoner Appearance:** Oval face, coal black waving hair, light reddish copper skin, naked save for ornaments.
-- **Airships:** Gray-painted, long and low, swinging over hills with banners.
-- **Green Martians:** Melting into doorways, firing from windows, swarming from windows to board disabled ship.
-- **Disabled Ship:** Drifting southeast, unmanned, eventually burning and drifting away.
+# Scene 3: Fleet Maneuver & Damage Assessment
+**Action:** Fleet circles to position opposite the firing line, then retreats trailing off. Several craft are limping perceptibly. One ship receives the brunt of fire and seems entirely unmanned.
+**Visuals:** Ships moving parallel to front, turning back. Depleted crews controlling damaged vessels. Erratic movement of the last ship.
+**Key Detail:** The last ship is drifting some fifty feet above ground, helpless and unable to escape.
 
-# Story Summary Facts
-- **Incubation:** Return march after ceremony interrupted by airship attack.
-- **Fleet Destruction:** Twenty ships destroyed; one captured and burned.
-- **Prisoner Capture:** Human woman captured from disabled ship.
-- **Emotional State:** Narrator feels depression over defeat of kindred people; hope for fleet return.
-- **Location:** Green Martian city, plaza, upper floor window.
+# Scene 4: Drifting Ship Rescue & Loot Operation
+**Action:** Warriors rush to the plain to meet the drifting ship. They board with spears and grappling hooks, hauling it to ground. Systematic rifling of the vessel begins.
+**Visuals:** Bodies of crew strewn about decks. Grappling hooks thrown out. Chariots requisitioned for transport. Loot includes arms, ammunition, silks, furs, jewels, stone vessels, water casks.
+**Key Detail:** The ship is towed far out into the valley in a southwesterly direction after loot removal.
+
+# Scene 5: Ship Fire & Funeral Pyre
+**Action:** Warriors empty carboys upon dead bodies and decks. Last warrior throws missile back onto vessel, causing flame spurt. Guy ropes released; ship soars majestically into air as funeral pyre.
+**Visuals:** Decks and upper works a mass of roaring flames. Ship drifting to southeast, rising higher. Dim vistas of distance.
+**Key Detail:** The sight is described as an awe-inspiring floating funeral pyre typifying the life story of the strange creatures.
+
+# Scene 6: Narrator's Reaction & Prisoner Discovery
+**Action:** Narrator descends to street, feeling depressed by the defeat. Sola rushes up. Cavalcade returns to plaza. Narrator enters plaza and catches glimpse of prisoner being dragged into building.
+**Visuals:** Narrator emerging upon street. Throng of Martians in plaza. Building portal where prisoner is dragged.
+**Key Detail:** The prisoner is a slender, girlish figure similar to earthly women, wearing highly wrought ornaments but otherwise naked.
+
+# Scene 7: The Princess Close-Up & Interaction
+**Action:** Close-up of the prisoner (Dejah Thoris). Her eyes meet narrator's. She makes a sign with free hand. Look of hope fades into dejection, loathing, and contempt. She is dragged away.
+**Visuals:** Oval face, coal black waving hair, light reddish copper skin, crimson cheeks, ruby lips. Eyes large and lustrous.
+**Key Detail:** Narrator realizes he did not answer her signal for succor and protection due to ignorance of Martian customs.
+
+# Scene 8: Aftermath & Safety Measures
+**Action:** Lorquas Ptomel remains at deserted city until danger passed. Fear of return attack by air craft prevents recommencement of homeward march for a week.
+**Visuals:** Deserted city environment. Plaza gathering.
+**Key Detail:** The city remains occupied to avoid open plains with caravan of chariots and children due to fear of fleet return or reinforcements.

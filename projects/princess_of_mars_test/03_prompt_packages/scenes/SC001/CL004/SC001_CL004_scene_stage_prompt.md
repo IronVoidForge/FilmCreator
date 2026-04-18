@@ -5,7 +5,7 @@ SC001 CL004 Scene Stage Prompt
 SC001_CL004_scene_stage_prompt
 
 # Purpose
-Define staging intent and subject placement for Scene SC001 Clip CL004, focusing on close-up banner designs on ship prows while maintaining visual continuity with previous beats regarding lighting and composition. The narrator's eyeline shift from wide formation to detail focus is central to the beat.
+Define staging intent and subject placement for Scene SC001 Clip CL004, focusing on close-up banner designs on ship prows while maintaining visual continuity with previous beats regarding lighting and composition. The narrator's eyeline shift from wide formation to detail focus is central to the beat. Establish post-ceremony setting and narrator's observational role from upper floor window, identifying gray craft over hill as per BT003 context.
 
 # Workflow Type
 authoring.scene_stage

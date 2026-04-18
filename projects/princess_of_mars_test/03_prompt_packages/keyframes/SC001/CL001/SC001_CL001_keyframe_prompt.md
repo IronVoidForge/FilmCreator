@@ -5,13 +5,13 @@ SC001 CL001 Keyframe Prompt
 SC001_CL001_keyframe_prompt
 
 # Purpose
-Establish frozen keyframe for opening observation beat, showing narrator at window and distant fleet over hills
+Establish frozen keyframe for opening observation beat, showing observer at window and distant fleet over hills
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Earth human figure standing at upper floor window frame, hands resting on polished stone sill, observing distant horizon with neutral expression, daylight illumination reflecting off dark wood window frame with metal accents, twenty gray airships visible in formation across valley sky, hill crests creating depth reference points, interior warm lighting contrasting exterior cool tones
+Observer figure standing at upper floor window frame, hands resting on polished stone sill, observing distant horizon with neutral expression, daylight illumination reflecting off dark wood window frame with metal accents, twenty gray airships visible in formation across valley sky, hill crests creating depth reference points, interior warm lighting contrasting exterior cool tones
 
 # Negative Prompt
 blurry, distorted faces, extra limbs, missing hands, text, watermark, low resolution, dark shadows, night time, crowded streets, modern clothing, fire, smoke, collapsing buildings, indoor artificial light, close-up of prisoner, green-skinned warriors in foreground, specific names
@@ -23,12 +23,12 @@ blurry, distorted faces, extra limbs, missing hands, text, watermark, low resolu
 - duration_seconds: 5
 - required_refs: BT001.md, Scene SC001 breakdown
 - optional_refs: Procession garment details, plaza distance markers
-- visible_character_assets: male observer, distant fleet figures
+- visible_character_assets: observer figure, distant fleet figures
 - look_continuity_policy: 
 - intended_lighting_change: 
 - composition_type: medium profile at window looking out
 - continuity_mode: window frame consistent
-- starting_keyframe_strategy: establish vertical axis with narrator elevated above city
+- starting_keyframe_strategy: establish vertical axis with observer elevated above city
 - dependency_policy: 
 - auto_advance_policy: 
 - fallback_strategy: 
@@ -39,12 +39,13 @@ blurry, distorted faces, extra limbs, missing hands, text, watermark, low resolu
 - style_profile: 
 - batch_role: 
 - fix_of: 
+- workflow_type: still.scene_build.four_ref.klein.distilled
 
 # Continuity Notes
 - Maintain exterior daylight lighting consistency with valley view
-- Ensure narrator remains stationary at window frame during keyframe
+- Ensure observer remains stationary at window frame during keyframe
 - Keep distant plaza warriors visible but not obstructing foreground action
-- Verify hound follows close behind without blocking narrator path if present
+- Verify hound follows close behind without blocking observer path if present
 - Preserve deserted city street environment state throughout keyframe
 - Ship count (20) must be maintained in wide shots
 - Window framing and interior elements must stay consistent
@@ -52,7 +53,7 @@ blurry, distorted faces, extra limbs, missing hands, text, watermark, low resolu
 # Repair Notes
 - Apply anatomy repair policy for hands and feet during walking motion
 - Ensure style profile consistency with ceremonial garment textures
-- Correct any facial distortion on narrator or distant warriors
+- Correct any facial distortion on observer or distant warriors
 - Verify no modern clothing elements appear in environment assets
 - Fix lighting contrast between interior warm and exterior cool tones
 

@@ -5,16 +5,16 @@ SC001 CL005 Cut Motion Prompt
 SC001_CL005_cut_motion_prompt
 
 # Purpose
-Generate cut motion for clip CL005 in scene SC001, continuing from approved opening frame with preserved lighting and grade. Focus on detail insert of devices on ship prows while maintaining continuity with previous banner shot.
+Generate cut motion for clip CL005 in scene SC001, continuing from approved opening frame with preserved lighting and grade. Focus on detail insert of devices on ship prows while maintaining continuity with previous banner shot. Ensure camera behavior aligns with visible motion requirements and environment change constraints.
 
 # Workflow Type
 video.cut_motion.wan.i2v
 
 # Positive Prompt
-Close examination of mysterious devices mounted on individual ship prows. Strange banner designs visible in periphery. Gray airship hulls maintain formation over hill crests. Earth human observer eyeline shifts from horizontal fleet distribution to vertical prow details. Daylight remains consistent with morning brightness. Smoke drifts naturally from distant vessel.
+Close examination of mysterious devices mounted on individual ship prows. Strange banner designs visible in periphery. Gray airship hulls maintain formation over hill crests. Earth human observer eyeline shifts from horizontal fleet distribution to vertical prow details. Daylight remains consistent with morning brightness. Smoke drifts naturally from distant vessel. Green Martians visible on decks remain static. Camera slowly zooms in on device details while maintaining ship formation context.
 
 # Negative Prompt
-morphing device shapes, flickering banner designs, wrong color grade, extra limbs, distorted anatomy, sudden lighting changes, blurry textures, static image, noise artifacts, green skin morphing on observer, incorrect ship count, mismatched hill crest positions
+morphing device shapes, flickering banner designs, wrong color grade, extra limbs, distorted anatomy, sudden lighting changes, blurry textures, static image, noise artifacts, green skin morphing on observer, incorrect ship count, mismatched hill crest positions, unnatural smoke movement, camera shake, inconsistent weather conditions.
 
 # Inputs
 - project_id: princess_of_mars_test

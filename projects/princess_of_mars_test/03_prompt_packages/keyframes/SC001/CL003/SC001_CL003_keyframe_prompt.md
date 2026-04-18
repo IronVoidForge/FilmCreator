@@ -5,16 +5,16 @@ SC001 CL003 Keyframe Prompt
 SC001_CL003_keyframe_prompt
 
 # Purpose
-Establish window view moment and emotional weight of curiosity through exterior landscape and facial expression while maintaining spatial continuity with previous shot
+Establish upper floor window observation perspective showing exterior landscape and interior lighting contrast while maintaining spatial continuity with previous shot
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-A frozen still of a green-skinned figure standing at an upper floor window frame looking out at distant gray airships approaching under bright sunlight. The interior room shows polished stone tiles and wooden furniture with dim lighting contrasting the exterior glow. Outside, the landscape is barren with multiple ships visible in formation. Hand rests on window sill. Over-the-shoulder composition showing shoulder profile. Small hound companion visible in periphery without obstructing view. Natural light gleams on devices inside while the view remains clear and open.
+A frozen still of an observer standing at an upper floor window frame looking out at distant gray airships approaching under bright sunlight. The interior room shows polished stone tiles and wooden furniture with dim lighting contrasting the exterior glow. Outside, the landscape is barren with multiple ships visible in formation. Hand rests on window sill. Over-the-shoulder composition showing shoulder profile. Small hound companion visible in periphery without obstructing view. Natural light gleams on devices inside while the view remains clear and open
 
 # Negative Prompt
-crowded streets, moving camera, dark shadows, night time, vehicles in valley, other characters blocking view, blurry details, text overlays, names, proper nouns, interior clutter, excessive motion, female companion present, narrator name visible, specific character titles
+crowded streets, moving camera, dark shadows, night time, vehicles in valley, other characters blocking view, blurry details, text overlays, interior clutter, excessive motion, female companion present, specific character titles, names visible
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -47,7 +47,6 @@ crowded streets, moving camera, dark shadows, night time, vehicles in valley, ot
 - Keep hound companion nearby but not obstructing the window view
 - Window frame shadows deepen slightly as light changes
 - Ship positions relative to hill crests must remain consistent
-- Banner designs must be identifiable across shots
 
 # Repair Notes
 - Fix any facial expression inconsistencies

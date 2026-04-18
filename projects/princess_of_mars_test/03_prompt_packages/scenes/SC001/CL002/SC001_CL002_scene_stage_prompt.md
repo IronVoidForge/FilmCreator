@@ -5,13 +5,13 @@ SC001 CL002 Scene Stage Prompt
 SC001_CL002_scene_stage_prompt
 
 # Purpose
-Define staging intent for the fleet retreat observation scene, establishing subject placement at the elevated vantage point and environmental context for the opening frame setup. Focus on the transition from interior safety to exterior scale while maintaining continuity with previous window observation sequence. Ensure the visual emphasizes the sudden Martian retreat and narrator's investigation of cause from upper floor window perspective.
+Define staging intent for the Martian retreat observation scene, establishing subject placement at the elevated vantage point and environmental context for the opening frame setup. Focus on the transition from interior safety to exterior scale while maintaining continuity with previous window observation sequence. Ensure the visual emphasizes the sudden Martian retreat and narrator's investigation of cause from upper floor window perspective.
 
 # Workflow Type
 authoring.scene_stage
 
 # Positive Prompt
-Elevated vantage point setup with male warrior observer positioned at window frame, distant fleet of gray airships descending over hill crest in background, clear daylight conditions illuminating prow devices, city rooftops visible below establishing scale, valley vista expanding as ships approach, vertical axis established between observers and approaching vessels, upper floor observation point context maintained.
+Elevated vantage point setup with male warrior observer positioned at window frame, distant procession of green Martians descending over hill crest in background, clear daylight conditions illuminating figures, city rooftops visible below establishing scale, valley vista expanding as Martians approach, vertical axis established between observers and approaching vessels, upper floor observation point context maintained.
 
 # Negative Prompt
 interior corridor space, human figure walking forward, bright sunlight glare, crowd of civilians, static camera movement, wide establishing shot only, cartoon style, floating funeral pyre, close-up on faces only, indigenous warriors on balcony ledge, human woman prisoner visible, wrong ship count, incorrect banner designs.

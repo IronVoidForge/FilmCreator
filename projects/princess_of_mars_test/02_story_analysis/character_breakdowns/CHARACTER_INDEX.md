@@ -1,9 +1,8 @@
-# Character Index - CH001
+# Character Index - Chapter VIII
 
-| Character | Role | Status |
-| :--- | :--- | :--- |
-| Narrator | Protagonist / Observer | Identified |
-| Sola | Companion / Witness | Identified |
-| Woola | Companion / Witness | Identified |
-| Green Martian | Antagonist / Warrior | Identified (Species) |
-| The Prisoner | Captive / Subject | Identified |
+| Asset ID | Canonical Character ID | Display Name | Role | Identification Status | Description Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| the_narrator | the_narrator | The Narrator | Protagonist / Observer | Fully Identified | Manual Description Required |
+| dejah_thoris | dejah_thoris | Dejah Thoris | Princess / Prisoner | Fully Identified | Physically Described |
+| lorquas_ptomel | lorquas_ptomel | Lorquas Ptomel | Warrior Leader | Fully Identified | Manual Description Required |
+| sola | sola | Sola | Companion / Messenger | Fully Identified | Manual Description Required |

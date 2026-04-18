@@ -23,7 +23,7 @@ blurry, distorted anatomy, extra limbs, wrong colors, low resolution, artifacts,
 - duration_seconds: 5
 - required_refs: image_1, image_2
 - optional_refs: hill crest depth axis reference points, banner visibility markers across shots
-- visible_character_assets: Green Warriors fleet collective
+- visible_character_assets: green-skinned warrior collective
 - look_continuity_policy: reblock_same_scene
 - intended_lighting_change: cinematic exterior match
 - composition_type: wide exterior establishing shot

@@ -5,16 +5,16 @@ SC001 CL005 Keyframe Prompt
 SC001_CL005_keyframe_prompt
 
 # Purpose
-Generate frozen still of mysterious devices mounted on prows of gray airships observed from upper floor window perspective, emphasizing continuity with previous banner close-up and maintaining lighting consistency for observation sequence
+Generate frozen still of intricate mechanical devices mounted on prows of gray vessels observed from upper floor window perspective, emphasizing continuity with previous banner visibility and maintaining lighting consistency for observation sequence.
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Close examination of odd devices mounted on prows of gray airships, visible through dark wood window frame, narrator's eyeline focused on specific vessel details, red planet valley landscape in background, dust motes floating in sunlight beam, cinematic lighting, high detail, mysterious objects, intricate shapes, green-skinned figure observing from interior, abandoned city rooftops below horizon, tense atmosphere
+Close examination of odd devices mounted on prows of gray airships, visible through dark wood window frame, narrator's eyeline focused on specific vessel details, red planet valley landscape in background, dust motes floating in sunlight beam, cinematic lighting, high detail, mysterious objects, intricate shapes, green-skinned figure observing from interior, abandoned city rooftops below horizon, tense atmosphere.
 
 # Negative Prompt
-blurry, distorted faces, extra limbs, text, watermark, low resolution, dark shadows, oversaturated colors, wrong perspective, floating objects, missing window frame, incorrect device count, proper nouns, names, logos, bright daylight exterior only, green-skinned figure facing interior, banners dominating frame
+blurry, distorted faces, extra limbs, text, watermark, low resolution, dark shadows, oversaturated colors, wrong perspective, floating objects, missing window frame, incorrect device count, proper nouns, names, logos, bright daylight exterior only, green-skinned figure facing interior, banners dominating frame.
 
 # Inputs
 - project_id: princess_of_mars_test

@@ -14,7 +14,7 @@ still.scene_insert.two_ref.klein.distilled
 Medium shot interior window space, male human warrior observing exterior view, gray airships fleet approaching plaza, daylight reflecting off ship devices, stone floor tiles visible, dark wood window frame foreground, polished stone walls, midday light fully established, cinematic composition, high stakes military engagement atmosphere, clearly defined banner designs on prows, intact ship structures, consistent lighting between interior and exterior
 
 # Negative Prompt
-distorted anatomy, extra limbs, missing fingers, bad hands, blurry, low quality, text, watermark, signature, deformed face, ugly, mutation, morphed, disfigured, inconsistent lighting, floating elements, artifacts, crowd in immediate foreground, wrong skin tone, poor resolution, female figure, interior corridor space, distorted ship prows, faded banner details
+distorted anatomy, extra limbs, missing fingers, bad hands, blurry, low quality, text, watermark, signature, deformed face, ugly, mutation, morphed, disfigured, inconsistent lighting, floating elements, artifacts, crowd in immediate foreground, wrong skin tone, poor resolution, interior corridor space, distorted ship prows, faded banner details
 
 # Inputs
 - project_id: princess_of_mars_test

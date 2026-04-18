@@ -11,7 +11,7 @@ Keyframe for rising tension beat start state establishing continuity markers at 
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Human male figure standing at upper floor window frame, hands resting on sill, observing distant horizon line, daylight exterior lighting, interior warm contrast, twenty gray airships visible over hill crests in wide formation, strange banners attached to ship prows, odd devices mounted on vessel fronts, polished stone floor tiles visible inside
+Human figure standing at upper floor window frame, hands resting on sill, observing distant horizon line, daylight exterior lighting, interior warm contrast, twenty gray airships visible over hill crests in wide formation, strange banners attached to ship prows, odd devices mounted on vessel fronts, polished stone floor tiles visible inside
 
 # Negative Prompt
 distorted anatomy, extra limbs, blurry, text, watermark, low resolution, night time, dark shadows, human woman prisoner close up, green humanoid warriors close up, wrong ship count, missing banners

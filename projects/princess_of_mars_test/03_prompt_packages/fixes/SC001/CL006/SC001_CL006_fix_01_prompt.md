@@ -43,7 +43,7 @@ blurry, distorted, extra fingers, floating limbs, wrong anatomy, inconsistent li
 # Continuity Notes
 - Window wiper position must remain unchanged for continuity
 - Lighting shifts from soft morning to brighter midday throughout scene
-- Carter maintains consistent distance from window frame
+- narrator maintains consistent distance from window frame
 - Floor material remains consistent polished stone tiles
 
 # Repair Notes
