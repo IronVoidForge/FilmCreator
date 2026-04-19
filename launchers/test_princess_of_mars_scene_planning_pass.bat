@@ -26,13 +26,13 @@ if errorlevel 1 goto :fail
 
 echo.
 echo [2/2] Running scene planning...
-python -m orchestrator plan-scene princess_of_mars_test --scene SC001
+python -m orchestrator plan-scene princess_of_mars_test --scene CH008_SC001
 if errorlevel 1 goto :fail
 
 echo.
 echo If this worked, inspect:
-echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\beat_bundles\SC001\
-echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\clip_plans\SC001\
+echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\beat_bundles\CH008_SC001\
+echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\clip_plans\CH008_SC001\
 echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\logs\
 pause
 exit /b 0

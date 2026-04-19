@@ -15,6 +15,7 @@ echo.
 echo This runs the first pre-SQL authoring checkpoint against the pasted Chapter VIII source.
 echo LM Studio should be running.
 echo ComfyUI should be closed during this test if VRAM is tight.
+echo The chapter analysis pass now scopes its first scene as CH008_SC001.
 echo.
 
 echo [1/2] Checking LM Studio connectivity...
@@ -33,8 +34,8 @@ echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\chapter_a
 echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\character_breakdowns\CHARACTER_INDEX.md
 echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\environment_breakdowns\ENVIRONMENT_INDEX.md
 echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\scene_breakdowns\SCENE_INDEX.md
-echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\beat_bundles\
-echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\clip_plans\
+echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\beat_bundles\CH008_SC001\
+echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\clip_plans\CH008_SC001\
 echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\logs\
 echo   C:\FilmCreator\projects\princess_of_mars_test\03_prompt_packages\characters\
 echo   C:\FilmCreator\projects\princess_of_mars_test\03_prompt_packages\environments\

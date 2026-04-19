@@ -446,7 +446,8 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
 
     scene_ids: list[str] = []
     for raw_scene in _require_packet_records(scene_packet, record_type="scene"):
-        scene_id = _normalize_scene_id(_require_record_field(raw_scene, "scene_id"))
+        raw_scene_id = _normalize_scene_id(_require_record_field(raw_scene, "scene_id"))
+        scene_id = validate_scene_id(f"{chapter_source.chapter_id}_{raw_scene_id}")
         filename = f"{scene_id}.md"
         markdown = _require_record_section(raw_scene, "markdown")
         create_scene(project_slug, scene_id)
@@ -764,7 +765,8 @@ def authoring_checkpoint(
     started = time.perf_counter()
     print(f"[authoring] Starting authoring checkpoint for {project_slug}...")
     analysis = analyze_chapter(project_slug=project_slug, chapter=chapter)
-    target_scene_id = scene_id or (analysis.scene_ids[0] if analysis.scene_ids else "SC001")
+    fallback_scene_id = validate_scene_id(f"{analysis.chapter_id}_SC001")
+    target_scene_id = scene_id or (analysis.scene_ids[0] if analysis.scene_ids else fallback_scene_id)
     planning = plan_scene(project_slug=project_slug, scene_id=target_scene_id)
     shared_prompts = write_shared_prompts(project_slug=project_slug)
     clip_prompts = write_prompts(project_slug=project_slug, scene_id=target_scene_id)
@@ -1131,8 +1133,10 @@ def _scene_decomposition_user_prompt(
             ),
             "",
             "Scene id rules:",
-            "- use SC###",
+            "- use SC### only inside the packet",
             "- start at SC001 for this chapter",
+            "- do not include the chapter prefix in scene_id values",
+            "- the chapter prefix will be applied externally by FilmCreator",
             *extra_rules,
             "Each scene Markdown file should include:",
             "- scene purpose",
