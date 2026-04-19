@@ -29,7 +29,7 @@ if errorlevel 1 goto :fail
 
 echo.
 echo [2/2] Running full chapter authoring cascade...
-python -c "from orchestrator.story_authoring import analyze_chapter, build_chapter_continuity, plan_scene, write_shared_prompts; from orchestrator.authoring import write_prompts; import json; project='princess_of_mars_test'; chapter='CH008_a_princess_of_mars_ch08.md'; analysis = analyze_chapter(project_slug=project, chapter=chapter); continuity = build_chapter_continuity(project_slug=project, analysis=analysis); scene_runs = []; [scene_runs.append({'scene_id': scene_id, 'planning': plan_scene(project_slug=project, scene_id=scene_id).to_dict(), 'clip_prompts': write_prompts(project_slug=project, scene_id=scene_id).to_dict()}) for scene_id in analysis.scene_ids]; shared = write_shared_prompts(project_slug=project).to_dict(); print(json.dumps({'analysis': analysis.to_dict(), 'continuity': continuity.to_dict(), 'scene_runs': scene_runs, 'shared_prompts': shared}, indent=2))"
+python -m orchestrator.chapter_authoring_runner
 if errorlevel 1 goto :fail
 
 echo.

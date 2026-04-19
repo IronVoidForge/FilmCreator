@@ -1,26 +1,13 @@
-# Chapter XI Environment Index
+# Environment Index - Chapter CH013
 
-## Open Area
-- Role: Transit setting for confrontation scene
-- Features: Open space near audience chamber, accessible from Korad Building
-- Atmosphere: Tense, charged with conflict between guards and John Carter
+## Extracted Environments
 
-## Korad Building - Second Floor Quarters
-- Role: Primary setting for chapter
-- Features: Ancient beds of wrought metal swinging from gold chains, marble ceilings, elaborate wall decorations with human figures, fair-haired people at play frescoes
-- Atmosphere: Magnificent, extinct civilization artistry, rapturous aesthetic
+| Asset ID | Name | Role | Description |
+|----------|------|------|-------------|
+| community_plaza_area | Community Plaza Area | Primary Setting | Main action location including plaza, courtyard, and surrounding buildings |
+| martian_avenue_night | Martian Avenue Night | Transit/Intimate Setting | Great avenue leading into plaza from east, illuminated under two moons |
 
-## Korad Building - Adjoining Rear Room
-- Role: Secondary setting for supplies
-- Features: Cooking and storage space, connected to main quarters
-- Atmosphere: Functional, practical within ornate building
+## Environment Families Summary
 
-## Audience Chamber
-- Role: Transit/Conclusion setting
-- Features: Rostrum seating, formal chamber for chieftains
-- Atmosphere: Formal, authoritative, political significance
-
-## Plaza
-- Role: Transit setting from second floor
-- Features: Open space below second-floor room overlooking area
-- Atmosphere: Public gathering space, architectural connection to Korad Building
+1. **community_plaza_area** - The central community space where beast training, military recognition, and pre-departure conversations occur
+2. **martian_avenue_night** - The romantic evening setting for intimate dialogue and declaration of love

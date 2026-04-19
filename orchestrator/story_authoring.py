@@ -531,6 +531,7 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
     warnings.extend(scene_validation_warnings)
 
     scene_ids: list[str] = []
+    duplicate_scene_ids: list[str] = []
     for raw_scene in scene_records:
         raw_scene_id = _normalize_scene_id(_require_record_field(raw_scene, "scene_id"))
         scene_id = validate_scene_id(f"{chapter_source.chapter_id}_{raw_scene_id}")
@@ -540,7 +541,17 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
         scene_path = project_dir / "02_story_analysis" / "scene_breakdowns" / filename
         _write_text(scene_path, markdown)
         written_files.append(repo_relative(scene_path))
+        if scene_id in scene_ids:
+            duplicate_scene_ids.append(scene_id)
         scene_ids.append(scene_id)
+
+    if duplicate_scene_ids:
+        for duplicate_scene_id in _ordered_unique(duplicate_scene_ids):
+            warnings.append(
+                f"Duplicate scene_id detected after normalization: {duplicate_scene_id}. "
+                "Keeping first occurrence and skipping later duplicate in chapter summary output."
+            )
+        scene_ids = _ordered_unique(scene_ids)
 
     character_breakdown_dir = project_dir / "02_story_analysis" / "character_breakdowns"
     character_breakdowns = sorted(
@@ -563,6 +574,16 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
         repo_relative(environment_registry_path(project_slug)),
     ]
     written_files.extend(world_registry_paths)
+
+    key_artifacts: list[str] = [
+        repo_relative(project_summary_path),
+        repo_relative(chapter_summary_path),
+        repo_relative(character_index_path),
+        repo_relative(environment_index_path),
+        repo_relative(scene_index_path),
+        *world_registry_paths,
+    ]
+    _print_saved_artifacts("[authoring] Saved chapter analysis artifacts:", key_artifacts)
 
     elapsed = time.perf_counter() - started
     print(f"[authoring] Finished chapter analysis in {elapsed:.1f}s")
@@ -780,6 +801,14 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
     warnings.extend(accepted_clip_warnings)
     clip_ids = accepted_clip_ids
 
+    scene_artifacts: list[str] = [
+        repo_relative(scene_path),
+        repo_relative(beat_index_path),
+        repo_relative(clip_dir / f"{scene_id}_clip_roster.md"),
+    ]
+    _print_saved_artifacts(f"[authoring] Saved scene planning artifacts for {scene_id}:", scene_artifacts)
+    print(f"[authoring] Planned {len(clip_ids)} clips for {scene_id}: {', '.join(clip_ids)}")
+
     elapsed = time.perf_counter() - started
     print(f"[authoring] Finished scene planning for {scene_id} in {elapsed:.1f}s")
     return ScenePlanningSummary(
@@ -803,9 +832,25 @@ def author_chapter(*, project_slug: str, chapter: str | None = None) -> ChapterA
     started = time.perf_counter()
     print(f"[authoring] Starting chapter authoring cascade for {project_slug}...")
     analysis = analyze_chapter(project_slug=project_slug, chapter=chapter)
+    raw_scene_ids = analysis.scene_ids
+    unique_scene_ids = _ordered_unique(raw_scene_ids)
+    print(f"[authoring] Raw analyzed scene order: {', '.join(raw_scene_ids)}")
+    if unique_scene_ids != raw_scene_ids:
+        print(f"[authoring] Deduped scene order for cascade: {', '.join(unique_scene_ids)}")
     scene_runs: list[SceneAuthoringSummary] = []
-    for scene_id in analysis.scene_ids:
-        scene_runs.append(author_scene(project_slug=project_slug, scene_id=scene_id))
+    total_scenes = len(unique_scene_ids)
+    for index, scene_id in enumerate(unique_scene_ids, start=1):
+        print(f"[authoring] Starting scene cascade {index}/{total_scenes}: {scene_id}")
+        scene_started = time.perf_counter()
+        scene_run = author_scene(project_slug=project_slug, scene_id=scene_id)
+        scene_runs.append(scene_run)
+        scene_elapsed = time.perf_counter() - scene_started
+        succeeded = scene_run.clip_prompts.success_count
+        failed = scene_run.clip_prompts.failure_count
+        print(
+            f"[authoring] Finished scene cascade {scene_id} in {scene_elapsed:.1f}s "
+            f"({succeeded} prompt targets succeeded, {failed} failed)"
+        )
     shared_prompts = write_shared_prompts(project_slug=project_slug)
     elapsed = time.perf_counter() - started
     print(f"[authoring] Finished chapter authoring cascade in {elapsed:.1f}s")
@@ -1018,6 +1063,10 @@ def build_chapter_continuity(*, project_slug: str, analysis: StoryAnalysisSummar
         ]
     )
     _write_text(summary_path, summary_markdown)
+    _print_saved_artifacts(
+        f"[authoring] Saved chapter continuity artifacts for {analysis.chapter_id}:",
+        [repo_relative(state_path), repo_relative(summary_path)],
+    )
     return ChapterContinuitySummary(
         chapter_id=analysis.chapter_id,
         state_path=repo_relative(state_path),
@@ -1118,6 +1167,25 @@ def _existing_character_lookup(*, project_dir: Path) -> dict[str, str]:
 
 def _normalize_alias(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", value.strip().lower()).strip("_")
+
+
+def _ordered_unique(values: list[str]) -> list[str]:
+    seen: set[str] = set()
+    ordered: list[str] = []
+    for value in values:
+        if value in seen:
+            continue
+        seen.add(value)
+        ordered.append(value)
+    return ordered
+
+
+def _print_saved_artifacts(header: str, paths: list[str]) -> None:
+    if not paths:
+        return
+    print(header)
+    for path in paths:
+        print(f"  - {path}")
 
 
 def _resolve_character_identity(

@@ -4,10 +4,10 @@
 lorquas_ptomel
 
 # Why This Needs Clarification
-Lorquas Ptomel is mentioned as a chieftain seated on rostrum but no physical details are provided. Need clarification on whether this is a specific character with established appearance or if visual description should be created from scratch.
+The character is not fully identified from this chapter alone.
 
 # Question
-Should Lorquas Ptomel be treated as a specific character with established appearance, or is new visual description needed? What chieftain rank and distinguishing features should be assigned?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely
