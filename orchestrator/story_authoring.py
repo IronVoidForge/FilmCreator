@@ -633,10 +633,18 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
 
     clip_ids: list[str] = []
     seen_clip_ids: set[str] = set()
+    promoted_hierarchical_map: dict[str, str] = {}
+    hierarchical_sequence_seen = 0
     for raw_clip in _require_packet_records(clip_packet, record_type="clip"):
         raw_clip_id = _require_record_field(raw_clip, "clip_id")
         try:
-            clip_id, clip_warning = _normalize_clip_id(raw_clip_id)
+            clip_id, clip_warning = _normalize_clip_id(
+                raw_clip_id,
+                promoted_hierarchical_map=promoted_hierarchical_map,
+                hierarchical_sequence_seen=hierarchical_sequence_seen,
+            )
+            if _is_hierarchical_clip_id(raw_clip_id):
+                hierarchical_sequence_seen += 1
         except LMStudioError as exc:
             warnings.append(f"Skipped clip record with unusable clip_id '{raw_clip_id}': {exc}")
             continue
@@ -931,7 +939,7 @@ def _resolve_chapter_source(project_slug: str, chapter: str | None) -> _ChapterS
     else:
         chapter_files = sorted(chapter_dir.glob("*.md"))
         if not chapter_files:
-            raise FileNotFoundError(f"No chapter Markdown files found under {chapter_dir}")
+            raise FileNotFoundError(f"No files matching *.md found under {chapter_dir}")
         chapter_path = chapter_files[0]
 
     if not chapter_path.exists():
@@ -1344,7 +1352,10 @@ def _clip_planning_user_prompt(
     clip_rules = [
         "- clip = cut",
         "- use clip ids in canonical CL001 format only",
+        "- every shot must get its own top-level clip id such as CL001, CL002, CL003, CL004",
+        "- never use parent-child or hierarchical clip ids such as CL001_001, CL001-A, CL001.1, CL001/001, CL001a, or CL001_variant",
         "- do not append suffixes like _01, -A, _variant, _alt, or sub-shot fragments to clip ids",
+        "- if you feel tempted to write CL001_001 and CL001_002, write CL001 and CL002 instead",
         "- if you need to describe an alternate angle or sub-shot, put that in the clip markdown, not the clip id",
         "- most clips should target around 5 seconds",
         "- treat continuous_follow as rare",
@@ -1357,6 +1368,7 @@ def _clip_planning_user_prompt(
             "- keep the first clip roster small and testable",
             "- prefer independent clips",
             "- use simple canonical ids only, such as CL001, CL002, CL003",
+            "- never use hierarchical ids like CL001_001 or CL001-A",
             "- do not add suffixes or variants to clip ids",
             "- keep metadata concise but complete",
         ]
@@ -2164,7 +2176,17 @@ def _normalize_beat_id(value: str) -> str:
     return normalized
 
 
-def _normalize_clip_id(value: str) -> tuple[str, str | None]:
+def _is_hierarchical_clip_id(value: str) -> bool:
+    normalized = value.strip().upper().replace("-", "_").replace(" ", "")
+    return bool(re.fullmatch(r"CL(?:IP)?_?\d{1,3}_(\d{1,3}|[A-Z])", normalized))
+
+
+def _normalize_clip_id(
+    value: str,
+    *,
+    promoted_hierarchical_map: dict[str, str] | None = None,
+    hierarchical_sequence_seen: int = 0,
+) -> tuple[str, str | None]:
     original = value.strip()
     normalized = original.upper().replace("-", "_").replace(" ", "")
 
@@ -2174,21 +2196,30 @@ def _normalize_clip_id(value: str) -> tuple[str, str | None]:
     plain_number_match = re.fullmatch(r"\d{1,3}", normalized)
     compound_number_match = re.fullmatch(r"(\d{1,3})_(\d{1,3})", normalized)
 
-    if plain_number_match:
+    warning = None
+    if subclip_match:
+        if promoted_hierarchical_map is None:
+            promoted_hierarchical_map = {}
+        if normalized not in promoted_hierarchical_map:
+            promoted_hierarchical_map[normalized] = f"CL{hierarchical_sequence_seen + 1:03d}"
+        coerced = promoted_hierarchical_map[normalized]
+        warning = (
+            f"Promoted hierarchical clip id '{value}' to top-level canonical clip id '{coerced}'."
+        )
+    elif plain_number_match:
         coerced = f"CL{int(normalized):03d}"
     elif direct_match:
         coerced = f"CL{int(direct_match.group(1)):03d}"
-    elif subclip_match:
-        coerced = f"CL{int(subclip_match.group(1)):03d}"
     elif suffixed_match:
         coerced = f"CL{int(suffixed_match.group(1)):03d}"
+        warning = f"Normalized suffixed non-canonical clip id '{value}' to '{coerced}'."
     elif compound_number_match:
         coerced = f"CL{int(compound_number_match.group(1)):03d}"
+        warning = f"Normalized compound non-canonical clip id '{value}' to '{coerced}'."
     else:
         raise LMStudioError(f"Invalid clip id returned by LM Studio: {value}")
 
-    warning = None
-    if coerced != original.upper():
+    if warning is None and coerced != original.upper():
         warning = f"Normalized non-canonical clip id '{value}' to '{coerced}'."
     return validate_clip_id(coerced), warning
 
