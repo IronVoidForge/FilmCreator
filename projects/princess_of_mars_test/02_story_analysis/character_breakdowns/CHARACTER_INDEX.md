@@ -1,16 +1,14 @@
 # Character Index - Chapter CH008
 
-## Earthling Woman (Captive)
-- **Role:** Captive brought to the plaza, referenced by narrator
-- **Status:** Physically present in Story Beat 3
-- **Description:** Slender girlish figure with oval face, copper skin, black hair, highly wrought ornaments only. Light reddish copper color with crimson glow of cheeks and ruby lips.
+| Asset ID | Canonical Character ID | Display Name | Role | Physical Presence |
+|----------|------------------------|--------------|------|-------------------|
+| john_carter | john_carter | John Carter | Observer, Witness | Present |
+| human_female_prisoner | prisoner_human_female | Human Female Prisoner | Captive, Appeal Signal | Referenced |
+| green_martian_warriors | green_martian_warrior | Green Martian Warriors | Combatants, Looters | Referenced |
+| green_martian_females | green_martian_female | Green Martian Females | Draggers, Enforcers | Referenced |
 
-## Green Martian Warriors
-- **Role:** Procession participants, defenders against airships
-- **Status:** Physically present throughout chapter
-- **Description:** Group entity without individual physical descriptions; green warriors in procession returning to city after incubator ceremony.
-
-## Martian Females
-- **Role:** Dragging captives into buildings
-- **Status:** Physically present in Story Beat 3
-- **Description:** Group entity without individual physical descriptions; female Martians involved in captive handling and ship salvage operations.
+**Notes:**
+- John Carter: Physically present observing from window; witnesses prisoner's appeal
+- Human Female Prisoner: Detailed visual description provided in chapter; signals to Carter
+- Green Martians: Multiple individuals; described as group with consistent physical traits
+- All characters have sufficient identification for continuity tracking

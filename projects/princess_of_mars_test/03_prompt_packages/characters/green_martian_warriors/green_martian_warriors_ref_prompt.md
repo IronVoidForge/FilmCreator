@@ -5,25 +5,30 @@ green_martian_warriors Character Reference Prompt
 green_martian_warriors_ref_prompt
 
 # Purpose
-Reusable shared prompt for generating Green Martian warrior group visualizations; maintains collective form without individualized physical details; supports continuity across procession, combat, and salvage scenes; avoids proper nouns and uses descriptive noun phrases for stable face, hair, body type, costume logic, silhouette, and recurring materials over scene-specific blocking.
+Create reusable shared character-reference prompt for stable local generation focusing on Green Martian Warriors combatants with consistent visual traits across multiple individuals. Prioritize skin tone, ornamentation style, weapon presence, and positioning logic over scene-specific blocking to maintain continuity during group action sequences.
 
 # Workflow Type
 still.t2i.klein.distilled
 
 # Positive Prompt
-Green Martian warrior group collective form without individualized physical details; green color designation on armor and clothing; mounted warriors on chariots and mastodons; combat-ready stance with weapons drawn; procession returning to city or firing from windows against airships; ship salvage operations with burning materials; armored silhouette with flowing green fabric; bronze metal accents on helmets and shields; group formation maintaining visual continuity across scenes.
+Green skin tone humanoid figures wearing decorative ornaments and carrying long spears positioned firing from elevated building windows and rooftops. Multiple combatants in coordinated group formation with ornamental accessories visible on upper body. Standing posture with weapon held ready for combat engagement. Elevated position relative to ground level with architectural background elements. Consistent green dermal coloring across all individuals with ornamentation patterns maintained uniformly.
 
 # Negative Prompt
-blurry individual facial features, specific body types not in source material, detailed costume elements beyond green designation, scene-specific blocking details, airship designs not associated with warrior group, mastodon or chariot variations beyond established transport, burning effects not part of salvage operations, floating or detached armor pieces, overly bright or dark color saturation outside green palette.
+Proper nouns, specific brand names, individual character identities, detailed facial features beyond skin tone, hair styling variations, scene-specific blocking details, ground-level positioning, isolated single combatant, inconsistent skin coloring, missing weapon presence, architectural background elements removed, ornamental accessories absent, varied ornamentation styles, detailed costume patterns beyond general ornamentation.
 
 # Inputs
-- note_1: projects/princess_of_mars_test/02_story_analysis/character_breakdowns/green_martian_warriors.md; projects/princess_of_mars_test/01_source/character_descriptions/green_martian_warriors_manual_description.md (missing); green_martian_warriors canonical character ID.
+- Skin: Green tone consistent across all individuals
+- Accessories: Ornamentation worn on upper body (style not specified)
+- Weapons: Long spears carried and held ready
+- Positioning: Elevated building windows and rooftops
+- Group Action: Multiple combatants in coordinated formation
+- Continuity Traits: Combat between Green Martians and Air Fleet, looting disabled air craft vessel, firing from buildings causes flame spurt on missile impact, releasing guy ropes during retreat
 
 # Continuity Notes
-- Green color designation must remain consistent across all warrior group visualizations; collective form without individualized physical details per source material; associated with chariots and mastodons as established transport; combat against airships and ship salvage operations are key scene contexts; manual description input required for specific individuals to support dependable image generation since no individual profiles established in source.
+- Green Martian Warriors function as group combatants rather than individual characters. Visual consistency maintained through green skin tone and ornamentation presence across multiple individuals. Weapon presence (spears) and elevated positioning from buildings are key continuity markers. Group action sequences prioritize formation over individual silhouettes. Ornamentation style remains general without specific pattern details to allow flexibility in generation while maintaining character identity.
 
 # Repair Notes
-- Manual character description path missing at projects/princess_of_mars_test/01_source/character_descriptions/green_martian_warriors_manual_description.md; uncertainty noted that individual physical descriptions not provided in source material requiring manual intervention for specific individuals; group references only without individual warrior profiles established; render-facing prompt elements must avoid proper nouns and use descriptive noun phrases per task requirements.
+- Monitor for inconsistent skin tone variations across generated individuals. Ensure ornamentation presence is maintained even when detailed patterns are unspecified. Verify weapon presence and elevated positioning remain consistent during group action sequences. Check that proper nouns and specific brand references are absent from all prompt variations. Maintain general ornamentation style without over-specifying pattern details to preserve generation flexibility.
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/character_breakdowns/CHARACTER_INDEX.md

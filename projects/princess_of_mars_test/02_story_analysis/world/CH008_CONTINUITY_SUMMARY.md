@@ -4,24 +4,23 @@
 - CH008_SC001
 - CH008_SC002
 - CH008_SC003
+- CH008_SC004
+- CH008_SC005
 
 ## Known Canonical Characters
-- earthling_woman
+- green_martian_females
 - green_martian_warriors
+- human_female_prisoner
 - john_carter
-- martian_females
 
 ## Unresolved / Provisional Characters
-- captive
+- None
 
 ## Known Canonical Environments
-- building_upper_floors_windows
-- city_plaza
-- city_plaza_open_ground
-- deserted_city_buildings
-- disabled_airship_interior_deck
-- drifting_warship
-- outlying_hills_hill_crest
+- city_buildings
+- hills_beyond
+- open_ground_plaza
+- valley
 
 ## Registry Artifacts
 - projects/princess_of_mars_test/02_story_analysis/world/CHARACTER_REGISTRY.json

@@ -5,16 +5,16 @@ CH008_SC001 CL004 Scene Stage Prompt
 CH008_SC001_CL004_scene_stage_prompt
 
 # Purpose
-Establish immediate tactical response to enemy airships approaching valley city. Martians halt procession and execute coordinated retreat into deserted buildings within three-minute window. Wide-angle framing captures full group movement from plaza floor toward building entrances, emphasizing urgency shift from calm procession to sudden scurrying for cover. Shot serves as establishing context for subsequent close-ups of doorway vanishing action.
+Establish John Carter's perspective from upper floor window as he observes twenty large gray air craft descending toward city building. Focus on his emotional shift from initial curiosity to growing concern/anticipation as vessels appear in valley view below. Window frame visible on left edge of composition. Shot serves as character reaction close-up that will cutaway to aircraft fleet for scene transition.
 
 # Workflow Type
 authoring.scene_stage
 
 # Positive Prompt
-Green Martian warriors in formation marching through deserted city plaza into open valley with hills beyond, gray-painted enemy airships visible on horizon crest, sudden halt motion followed by synchronized reverse movement toward multi-story building entrances, wide angle composition, high stakes warfare atmosphere, red copper sky lighting, detailed green armor and weaponry, deserted buildings intact with clear doorways, urgent tactical retreat sequence, procession reversing direction upon command signal.
+John Carter upper torso and face positioned at window frame edge, body angled downward toward city view, expression shifting from curiosity to concern with subtle eyebrow movement and slight mouth tension, partial window frame visible on left side of composition, background valley floor stable with distant hills beyond, minimal posture movement reflecting emotional change, daylight illumination consistent with Mars environment, no motion blur artifacts, clear facial features showing growing anticipation.
 
 # Negative Prompt
-deformed limbs, extra fingers, static shot, blurry text, low resolution, blue sky, green sky, inconsistent character count, wrong facial expressions, motion blur artifacts, distorted architecture, missing command signal source, incorrect color palette for Mars environment, open ground without buildings, city plaza with debris, calm procession without urgency, single warrior instead of group formation.
+deformed facial features, extra fingers, static expression without concern shift, blurry text, low resolution, blue sky, green sky, inconsistent character count, wrong emotional expressions, motion blur artifacts, distorted architecture, missing window frame edge, incorrect color palette for Mars environment, valley floor with debris, hills beyond not visible, group formations of Martians in plaza, calm expression without growing concern.
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -23,28 +23,28 @@ deformed limbs, extra fingers, static shot, blurry text, low resolution, blue sk
 - duration_seconds: 5
 - required_refs: BT001.md, BT002.md, BT003.md
 - optional_refs: CH008_SC001_scene_breakdown, CH008_SC001_clip_roster
-- visible_character_assets: Green Martian Warriors group_formation, implied_command_signal_source
-- look_continuity_policy: wide_halt_reverse_with_building_entry_focus
-- intended_lighting_change: daylight_to_dramatic_fire_illumination_transition
-- composition_type: wide_establishing_tactical_response
-- continuity_mode: dependent_on_airship_threat_context
-- starting_keyframe_strategy: static_opening_with_full_procession_visible_before_movement_change
-- dependency_policy: dependent_on_CL003_reaction_clip_first
-- auto_advance_policy: advance_to_doorway_entry_sequence_after_halt_completion
-- fallback_strategy: cut_to_high_angle_command_source_if_continuity_breaks
-- consistency_assist_policy: maintain_character_count_across_wide_frame
-- consistency_assist_method: group_formation_tracking_through_building_entrances
-- anatomy_repair_policy: prevent_deformation_during_rapid_pivot_motion
-- consistency_targets: doorway_entry_pattern, retreat_timing_marker_three_minutes
-- style_profile: tactical_warfare_establishing_shot
-- batch_role: establishing_context_clip
+- visible_character_assets: John Carter upper torso face, window frame partial
+- look_continuity_policy: close_up_face_with_window_frame_edge_focus
+- intended_lighting_change: daylight_consistent_with_mars_environment
+- composition_type: character_reaction_close_up
+- continuity_mode: dependent_on_aircraft_arrival_context
+- starting_keyframe_strategy: static_hold_with_expression_shift
+- dependency_policy: none
+- auto_advance_policy: advance_to_cutaway_aircraft_fleet_after_4_seconds
+- fallback_strategy: insert_if_continuity_breaks
+- consistency_assist_policy: maintain_window_frame_position_across_frames
+- consistency_assist_method: facial_expression_tracking_for_concern_progression
+- anatomy_repair_policy: prevent_deformation_during_subtle_posture_shift
+- consistency_targets: window_frame_edge, valley_background_stability, expression_progression_marker
+- style_profile: character_reaction_establishing_shot
+- batch_role: character_perspective_clip
 - fix_of: CL003_reaction_close_up_continuity
 
 # Continuity Notes
-- Procession movement must transition smoothly from city plaza to open valley terrain with hills beyond. Character placement consistency is critical (Green Martian Warriors group formation maintaining cohesion). The halt and reverse motion must be synchronized across the wide frame. Environmental context shifts from built architecture to natural valley floor before building entry sequence. Enemy airships visible on horizon crest establish threat scale without dominating composition. Doorway entrances must remain clear and accessible throughout retreat sequence. Three-minute timing marker active for vanishing action completion.
+- John Carter's position at window frame must remain consistent across all frames with partial frame visible on left edge. Background valley floor and distant hills beyond must stay stable for continuity tracking. Expression progression from curiosity to concern should be subtle but visible through eyebrow movement, slight mouth tension, and posture shifts reflecting emotional change. Window frame edge position must not shift between frames. Valley/hills background continuity is critical - no debris or changes in terrain appearance. Minimal movement overall - only subtle shifts in posture reflecting emotional progression.
 
 # Repair Notes
-- Address potential issues like motion blur consistency during rapid pivot from forward movement to reverse direction, ensuring character deformation does not occur during the retreat motion, verifying that the valley floor environment is distinct from city plaza in terms of lighting and texture. Ensure the command signal source is visible or correctly implied for continuity with airship threat context. Verify doorway entry pattern maintains consistent group clusters (2-3 Martians per entrance). Confirm red copper sky lighting remains consistent throughout Mars environment without shifting to generic tones. Check that deserted buildings show no debris or damage from previous combat sequences.
+- Address potential issues like facial expression consistency during concern progression, ensuring window frame edge remains visible and stable across frames, verifying that valley background does not shift or introduce debris artifacts. Ensure daylight illumination remains consistent with Mars environment without shifting to generic tones. Check that subtle posture shifts do not create motion blur artifacts. Verify John Carter's upper torso positioning at window frame edge maintains consistency throughout clip duration. Confirm expression progression marker is visible by 4-second mark for scene transition preparation.
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC001/CL004.md

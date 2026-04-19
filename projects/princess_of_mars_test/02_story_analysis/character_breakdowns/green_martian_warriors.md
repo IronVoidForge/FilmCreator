@@ -1,38 +1,38 @@
-# Green Martian Warriors
+# Green Martian Warriors - Chapter CH008
 
-## Display Name
-Green Martian Warriors / Warrior Group
-
-## Chapter Role
-Procession participants returning to city after incubator ceremony; defenders firing volley from building windows against approaching airships; involved in ship salvage and burning operations.
+## Display Name & Role
+**Green Martian Warriors** - Combatants, Looters
 
 ## Physical Presence
-**Present:** Yes - Physically present throughout chapter as group entity; no individual warriors specifically detailed beyond collective description.
+**Referenced** - Multiple individuals firing from buildings and looting disabled air craft.
 
 ## Physical Description (Supported by Source)
-- **Group Identity:** Green Martian warriors referenced collectively
-- **Individual Details:** Not provided in source material
-- **Visual Continuity:** Procession returning to city, firing from windows, boarding drifting ship
+- Skin: Green tone
+- Accessories: Wear ornaments
+- Weapons: Carry spears
+- Positioning: Fire from windows and roofs of city buildings
 
 ## Costume & Silhouette
-- **Silhouette:** Warrior group form (individual silhouettes not detailed)
-- **Color Association:** Green (implied by "Green Martian" designation)
-- **Equipment:** Chariots and mastodons mentioned as associated transport
+- Ornamentation worn (specific style not detailed in this chapter)
+- Group action described rather than individual silhouettes
 
 ## Continuity-Critical Traits
-- Group entity without individualized physical descriptions
-- Associated with chariots, mastodons, mounted warriors
-- Involved in combat against airships and ship salvage operations
-- Green color designation distinguishes from other entities
+- Combatants in battle between Green Martians and Air Fleet
+- Loot disabled air craft for arms, jewels, water
+- Fire from buildings causes spurt of flame on missile impact
+- Release guy ropes simultaneously during retreat
 
-## Render-Facing Prompt Elements
-"Green Martian warrior group; collective form without individualized physical details; associated with chariots and mastodons; green color designation"
+## Render-Facing Noun Phrases
+- "Green Martian warriors with green skin"
+- "Wearing ornaments, carrying spears"
+- "Firing from city building windows and roofs"
+- "Looting disabled air craft vessel"
+- "Multiple combatants in group action"
 
 ## Uncertainty Notes
-- **CRITICAL:** Individual physical descriptions not provided in source material
-- No specific facial features, body types, or individual costume details available
-- Manual description required for specific individuals to support dependable image generation
-- Group references only; no individual warrior profiles established
+- Described as group rather than individual characters
+- Ornamentation style not specifically detailed beyond general presence
+- Individual warrior identities not distinguished in this chapter
 
 # Aliases
 

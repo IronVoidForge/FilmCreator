@@ -1,11 +1,12 @@
 # Clip Roster - CH008_SC001
 
-| Beat | Clip ID | Duration | Coverage Type | Purpose |
-|------|---------|----------|---------------|---------|
-| BT001 | CL001 | 5s | Wide Shot | City Procession & Threat Scale |
-| BT002 | CL002 | 5s | Medium Shot | Building Entry Pattern |
-| BT003 | CL003 | 5s | Close-Up | Doorway Vanishing Action |
+| Clip ID | Description | Duration Target |
+|---------|-------------|-----------------|
+| CL001 | John Carter at Window - Initial Observation | 5s |
+| CL002 | Air Craft Descending - Wide Establishing | 5s |
+| CL003 | Green Martians on Forward Decks - Medium | 5s |
+| CL004 | John Carter Reaction - Growing Concern | 5s |
 
-**Scene Purpose:** Establish immediate tactical response to enemy airships. Orders given for hasty retreat into buildings as enemy airships approach. Martians melt into doorways and vanish within three minutes.
-
-**Visual Coverage Families:** Wide shots of the city/procession, Medium shots of Martians entering buildings, Close-ups on doorways/vanishing.
+**Scene:** CH008_SC001  
+**Project:** princess_of_mars_test  
+**Total Clips:** 4
