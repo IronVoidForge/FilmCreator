@@ -1,26 +1,11 @@
-# Environment Index - Chapter XVI
+# Warhoon Environment Index
 
-## thark_city
-- Role: Primary setting
-- Architecture: Ancient city with hollow courts, magnificent doorways for large beasts, winding runways to second-story windows
-- Lighting: Approaching sunset gloom, moonlight flooding rooms, red sun disappearing behind horizon
-- Atmosphere: Red Barsoomian landscape visible in distance (Helium northwest)
-- Scale: Large-scale architecture designed for thoats, zitidars, bulls
+## warhoon_camp_room
+- **Role:** Primary Setting
+- **Description:** Small room with sleeping silks/furs; mossy floor. Dim torch light for food delivery.
+- **Atmosphere:** Organic textures of furs contrast with cold stone/moss. Shadowed interior.
 
-## john_quarters
-- Role: Secondary setting
-- Architecture: Large building near plaza, courtyards within buildings
-- Lighting: Interior rooms with sunset approaches
-- Atmosphere: Restless animal activity in paddocks, gates where animals fed
-
-## dejah_apartment
-- Role: Secondary setting
-- Architecture: Apartment quarters with marble floor
-- Lighting: Moonlight flooding room
-- Atmosphere: Private quarters for escape planning
-
-## courtyards_rooftops
-- Role: Transit setting
-- Architecture: Courtyards, doorways, rooftops connecting buildings
-- Lighting: Approaching gloom of sunset
-- Atmosphere: Movement through hollow courts, climbing winding runways
+## warhoon_dungeon
+- **Role:** Secondary/Transit Setting
+- **Description:** Inky blackness of dungeon; utter darkness, creeping things; cold sinuous bodies. Gleaming fiery eyes visible only in dark.
+- **Atmosphere:** Total darkness; oppressive atmosphere with creeping shadows. Cold, underground cell.

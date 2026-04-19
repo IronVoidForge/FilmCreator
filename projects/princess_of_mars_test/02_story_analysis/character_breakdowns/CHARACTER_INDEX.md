@@ -1,10 +1,7 @@
-# Chapter 16 Character Index
+# Character Index: CH018
 
-| Name | Role | Status | Description Available |
+| Character | Role | Visual ID Status | Description Source |
 | :--- | :--- | :--- | :--- |
-| John Carter | Protagonist, Escape Planner | Physically Present | No physical details in chapter summary |
-| Dejah Thoris | Lead Female, Map Drawer | Physically Present | No physical details in chapter summary |
-| Sola | Companion, Thoat Rider | Physically Present | No physical details in chapter summary |
-| Sarkoja | Antagonist, Jeddak's Associate | Referenced | No physical details in chapter summary |
-| Tal Hajus | Jeddak of Thark | Referenced | No physical details in chapter summary |
-| Woola | Animal Companion | Mentioned | No physical details in chapter summary |
+| **Narrator** | Protagonist / Prisoner | Incomplete | Actions only; no physical traits. |
+| **Dak Kova** | Former Jeddak / Warrior | Complete | Green skin, tusks, skull ornaments. |
+| **Bar Comas** | Jeddak of Warhoon / Ruler | Incomplete | Name only; no physical traits. |

@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-narrator
+dak_kova
 
 # Why This Needs Clarification
-The character record indicates clarification is needed, but LM Studio did not supply a reason.
+The character is not fully identified from this chapter alone.
 
 # Question
-What is the physical appearance of the narrator?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

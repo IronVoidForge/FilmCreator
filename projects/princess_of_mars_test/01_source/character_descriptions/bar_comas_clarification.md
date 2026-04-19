@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-narrator
+bar_comas
 
 # Why This Needs Clarification
 The character record indicates clarification is needed, but LM Studio did not supply a reason.
 
 # Question
-What is the physical appearance of the narrator?
+Does Bar Comas share the same Warhoon physical traits (green skin, tusks) as Dak Kova, or is he distinct?
 
 # Guidance
 - answer briefly and concretely

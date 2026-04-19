@@ -4,10 +4,10 @@
 green_warriors
 
 # Why This Needs Clarification
-Character may already exist under different name or cultural designation; "green figures" descriptor alone is too weak for stable identification across reruns.
+Character group might already exist under another name or is too weakly identified for dependable image generation
 
 # Question
-What specific physical features distinguish these green warriors from other Martians? Are there additional descriptive terms beyond "green"?
+Are the Green Warriors/Thark Warriors a distinct character group with established visual continuity, or should they be treated as generic warrior figures?
 
 # Guidance
 - answer briefly and concretely
