@@ -1,19 +1,14 @@
 # Character Index - Chapter CH008
 
-## Extracted Characters
+| Asset ID | Canonical Character ID | Display Name | Role | Physical Presence |
+|----------|------------------------|--------------|------|-------------------|
+| john_carter | john_carter | John Carter | Observer, Witness | Present |
+| human_female_prisoner | prisoner_human_female | Human Female Prisoner | Captive, Appeal Signal | Referenced |
+| green_martian_warriors | green_martian_warrior | Green Martian Warriors | Combatants, Looters | Referenced |
+| green_martian_females | green_martian_female | Green Martian Females | Draggers, Enforcers | Referenced |
 
-| Asset ID | Canonical ID | Display Name | Role | Physical Presence | Description Status |
-|----------|--------------|--------------|------|-------------------|-------------------|
-| carter | carter | Carter | Observer/Narrator | Present | No physical description in chapter |
-| captive | princess_of_mars | The Captive | Signal-sender | Present | Detailed visual description provided |
-
-## Notes
-
-- **Carter**: Main observer throughout chapter; no physical or visual description given in text. Character is physically present in city plaza/building but lacks renderable details.
-
-- **The Captive**: Slender girlish figure with copper skin and black hair seen by Carter before being taken inside building. Detailed physical description provided but canonical name not explicitly stated in chapter text.
-
-## Uncertainty Flags
-
-- Both characters require manual descriptions due to insufficient visual/physical details for dependable image generation
-- The Captive requires clarification regarding canonical identity (Princess of Mars)
+**Notes:**
+- John Carter: Physically present observing from window; witnesses prisoner's appeal
+- Human Female Prisoner: Detailed visual description provided in chapter; signals to Carter
+- Green Martians: Multiple individuals; described as group with consistent physical traits
+- All characters have sufficient identification for continuity tracking

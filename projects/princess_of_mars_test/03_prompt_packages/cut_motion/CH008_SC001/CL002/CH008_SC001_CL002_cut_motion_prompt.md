@@ -5,30 +5,30 @@ CH008_SC001 CL002 Cut Motion Prompt
 CH008_SC001_CL002_cut_motion_prompt
 
 # Purpose
-Fill in the stage intent here. Establish a medium tracking shot following Carter from the rear of the procession, moving forward with synchronized steps and anticipation building as they approach the boundary between city plaza and open ground. Preserve keyframe lighting and grade from approved opening frame. Ensure visible motion matches procession movement logic.
+Establish wide establishing shot showing air craft fleet descending from upper sky toward city building. Start from approved opening frame where first craft is visible in distance. Ensure visible motion matches descent trajectory (downward diagonal). Preserve keyframe lighting and grade.
 
 # Workflow Type
 video.cut_motion.wan.i2v
 
 # Positive Prompt
-Medium tracking shot following Carter from rear position. Procession moves forward with synchronized steps. Warriors in central column visible. City architecture frames left and right. Environmental transition from built environment to natural terrain begins. Anticipation building among onlookers. Forward progression with coordinated movement. Gray-painted airships distant on hill crest. Green Martians marching in formation.
+Wide establishing shot showing twenty large gray air craft descending from upper sky toward city building facade. Long low vessels with strange banners visible on prows. Valley below and hills beyond maintain continuity. Figures crowd forward decks of air craft. Downward diagonal movement from upper sky to lower city level. Gray-painted vessels drift southeast/southwesterly.
 
 # Negative Prompt
-Static shot. Wrong composition. Lighting shift. Grade change. Anatomy error. Clothing distortion. Background blur. Motion stall. Reverse movement. Panic expression. Inconsistent character proportions. Degraded features. Overexposed or underexposed. Wrong color palette.
+Static shot. Wrong composition. Lighting shift. Grade change. Anatomy error. Clothing distortion. Background blur. Motion stall. Reverse movement (ascending). Panic expression. Inconsistent character proportions. Degraded features. Overexposed or underexposed. Wrong color palette.
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: CH008_SC001
 - clip_id: CL002
 - duration_seconds: 5s
-- required_refs: BT001.md processions_return_beat_documentation
+- required_refs: BT002.md air_craft_descending_documentation
 - optional_refs: CH008_SC001_scene_breakdown
-- visible_character_assets: Carter rear_position, Warriors central_column visible
+- visible_character_assets: Air Craft fleet (20 vessels), Green Martians on forward decks
 - look_continuity_policy: preserve_keyframe_lighting_and_grade
 - intended_lighting_change: none
-- composition_type: medium_tracking
-- continuity_mode: insert
-- starting_keyframe_strategy: follow_carter_position_from_rear_of_procession
+- composition_type: wide_establishing
+- continuity_mode: reframe_same_moment
+- starting_keyframe_strategy: static_hold_first_craft_visible_in_distance
 - dependency_policy: dependent_on_CL001_wide_establishing_first
 - auto_advance_policy: advance_if_motion_stalls
 - fallback_strategy: cut_to_medium_static_if_movement_disrupted
@@ -41,11 +41,11 @@ Static shot. Wrong composition. Lighting shift. Grade change. Anatomy error. Clo
 - fix_of: CL001
 
 # Continuity Notes
-- Maintain procession movement logic (forward progression with synchronized steps).
+- Maintain air craft appearance consistency (long, low, gray-painted vessels with strange banners).
 - Preserve keyframe lighting and grade from approved opening frame.
-- Ensure transition from city plaza to open ground boundary is visible but smooth.
-- Keep character proportions consistent with previous clips in sequence.
-- Avoid sudden camera jerks or focus pulls during motion.
+- Ensure transition from upper sky to city level is visible but smooth.
+- Keep background valley/hills continuity stable throughout motion.
+- Avoid sudden camera jerks or focus pulls during descent.
 
 # Repair Notes
 - If motion stalls, advance camera position slightly.

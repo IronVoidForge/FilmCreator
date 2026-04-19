@@ -5,16 +5,16 @@ CH008_SC001 CL001 Fix 01 Prompt
 CH008_SC001_CL001_fix_01_prompt
 
 # Purpose
-Refine approved keyframe composition and lighting while correcting local artifacts such as distorted anatomy or inconsistent background colors to maintain continuity with established golden frame style.
+Refine approved keyframe composition showing John Carter at upper floor window observing air craft arrival, correcting local artifacts such as distorted anatomy or inconsistent background colors to maintain continuity with established golden frame style. Preserve close-up face framing with window frame edge visible on left side.
 
 # Workflow Type
 still.scene_insert.two_ref.klein.distilled
 
 # Positive Prompt
-Wide establishing shot of procession returning through city plaza, Green Martians in central column marching forward, Carter positioned at rear, anticipation building among onlookers, city architecture framing left and right sides, environmental transition from built environment to natural valley terrain visible in background, natural daylight lighting with high stakes atmosphere, sharp focus on character details, correct anatomy for all figures.
+Close-up shot of John Carter standing at upper floor window frame edge visible on left side, initial curiosity visible on face, body angled toward city view below, background valley and hills stable for continuity, natural daylight lighting with smoke from fire visible in distance, sharp focus on character details, correct anatomy for all figures, Mars red orange tones in environment.
 
 # Negative Prompt
-distorted limbs, extra fingers, wrong background colors, blue sky, text artifacts, blurry details, inconsistent lighting, shadow mismatches, deformed faces, missing weapons, incorrect clothing colors, low resolution, noise, grain.
+distorted limbs, extra fingers, blue sky, text artifacts, blurry details, inconsistent lighting, shadow mismatches, deformed faces, missing window frame, incorrect clothing colors, low resolution, noise, grain, green skin on Carter, wrong background geometry, sudden shadows or highlights.
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -23,15 +23,15 @@ distorted limbs, extra fingers, wrong background colors, blue sky, text artifact
 - duration_seconds: 5
 - required_refs: BT001.md
 - optional_refs: CH008_SC001_scene_breakdown
-- visible_character_assets: Carter rear_position, Warriors central_column, implied_commanders_ahead
+- visible_character_assets: john_carter_upper_torso_face, window_frame_partial
 - look_continuity_policy: preserve_approved_golden_frame_style
 - intended_lighting_change: none
-- composition_type: wide_establishing
+- composition_type: close_up_face_with_window_frame_edge
 - continuity_mode: reblock_same_scene
-- starting_keyframe_strategy: static_opening_with_procession_movement_visible
+- starting_keyframe_strategy: static_hold
 - dependency_policy: independent_no_prerequisites
 - auto_advance_policy: manual_review_required
-- fallback_strategy: cut_to_alternate_wide_angle_if_needed
+- fallback_strategy: insert
 - consistency_assist_policy: enabled
 - consistency_assist_method: frame_interpolation_refinement
 - anatomy_repair_policy: strict_correction
@@ -41,16 +41,18 @@ distorted limbs, extra fingers, wrong background colors, blue sky, text artifact
 - fix_of: approved_keyframe_01
 
 # Continuity Notes
-- Maintain procession movement direction (forward through plaza).
-- Preserve city architecture framing on left/right.
-- Ensure character positions match approved reference (Carter rear, Warriors center).
-- Keep environmental transition from built to natural terrain consistent.
+- Maintain John Carter position at upper floor window.
+- Preserve window frame visible on left edge of composition.
+- Ensure background valley and hills stable for continuity across shots.
+- Keep lighting consistent with approved golden frame (no sudden shadows or highlights).
+- Maintain Mars red orange tones in environment, not blue sky.
 
 # Repair Notes
-- Correct any distorted anatomy in Green Martians or Carter.
+- Correct any distorted anatomy on John Carter face or upper torso.
 - Fix incorrect background colors (ensure Mars red/orange tones, not blue sky).
 - Align lighting with approved golden frame (no sudden shadows or highlights).
-- Ensure text/wireless apparatus details are clear and consistent.
+- Ensure window frame edge is visible and properly positioned on left side.
+- Verify valley/hills background continuity matches established reference.
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC001/CL001.md

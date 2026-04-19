@@ -5,33 +5,33 @@ CH008_SC001 CL001 Scene Stage Prompt
 CH008_SC001_CL001_scene_stage_prompt
 
 # Purpose
-Establish wide shot of ceremonial procession returning through city plaza with forward movement visible, transitioning from built environment to open ground threshold. Capture anticipation building among onlookers as warriors march in formation through city architecture frames left and right, environmental transition from built environment to natural terrain begins at valley entrance horizon. Procession axis runs perpendicular to valley entrance with eyelines directed toward approaching open ground horizon.
+Establish John Carter's perspective from an upper floor window as he observes the arrival of twenty large gray air craft descending toward the city. Capture his initial curiosity and growing anticipation regarding the procession retreat to a city building due to immediate orders. Frame the shot with the window edge visible to ground the viewer in location, showing the valley/hills background for continuity.
 
 # Workflow Type
 authoring.scene_stage
 
 # Positive Prompt
-wide establishing shot, ceremonial procession moving forward through city plaza, green martians warriors marching in formation, spacious doorways and plazas visible, buildings with upper floors framing left and right, anticipation building among onlookers, forward progression with synchronized steps, city architecture frames scene edges, environmental transition from built environment to natural terrain begins at valley entrance horizon, processions return beat documentation style, Barsoom Mars setting, wide composition showing full procession movement through plaza
+close-up face, John Carter upper torso, standing at window frame edge, looking downward toward valley, initial curiosity visible on expression, daylight conditions, city building interior background, partial view of air craft descending outside window, window frame left edge, valley hills beyond stable background, Barsoom cinematic style, observer perspective
 
 # Negative Prompt
-close up shots, medium shots, static composition, single character focus, dark lighting, night scene, indoor scenes, blurry movement, distorted anatomy, missing limbs, extra fingers, bad hands, text overlays, watermark, signature, low resolution, poor quality, deformed faces, morphed features, inconsistent colors, wrong era clothing, modern technology, airships visible in frame, disabled ships, burning vessels, captive figure, copper skin character
+wide establishing shot, medium shots, static composition, single character focus without window context, dark lighting, night scene, indoor scenes without window view, blurry movement, distorted anatomy, missing limbs, extra fingers, bad hands, text overlays, watermark, signature, low resolution, poor quality, deformed faces, morphed features, inconsistent colors, wrong era clothing, modern technology, disabled ships, burning vessels, captive figure, copper skin character, air fleet combat sequences
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: CH008_SC001
 - clip_id: CL001
 - duration_seconds: 5
-- required_refs: BT001.md processions_return_beat_documentation
+- required_refs: BT001.md
 - optional_refs: CH008_SC001_scene_breakdown
-- visible_character_assets: Carter rear_position, Warriors central_column, implied_commanders_ahead
+- visible_character_assets: John Carter (upper torso, face), window frame partial
 - look_continuity_policy: reblock_same_scene
 - intended_lighting_change: none
-- composition_type: wide_establishing
+- composition_type: close_up_face_with_window_frame_edge
 - continuity_mode: reblock_same_scene
-- starting_keyframe_strategy: static_opening_with_procession_movement_visible
-- dependency_policy: independent_no_prerequisites
+- starting_keyframe_strategy: static_hold
+- dependency_policy: none
 - auto_advance_policy: none
-- fallback_strategy: cut_to_alternate_wide_angle_if_needed
+- fallback_strategy: insert
 - consistency_assist_policy: enabled
 - consistency_assist_method: frame_matching
 - anatomy_repair_policy: standard
@@ -41,21 +41,21 @@ close up shots, medium shots, static composition, single character focus, dark l
 - fix_of: none
 
 # Continuity Notes
-- Procession movement must maintain forward progression through city plaza axis perpendicular to valley entrance
-- Character placement keeps Carter at rear position with Warriors in central column throughout clip duration
-- Environmental transition from built environment to natural terrain begins at frame boundary between city and open ground
-- Lighting remains consistent with daylight conditions showing clear visibility of procession details
-- Movement synchronization maintained across warriors marching in formation with synchronized steps
-- No cutaways or insert shots within this wide establishing composition
-- Eyelines directed toward approaching open ground horizon visible at valley entrance
+- Establish Carter's perspective from upper floor window with window frame edge visible to ground viewer in location
+- Show initial curiosity on face as he observes arrival of twenty large gray air craft descending toward city
+- Maintain valley/hills background stability for continuity across shots
+- Ensure daylight conditions remain consistent showing clear visibility of air craft details
+- Keep Carter's position at window frame without shifting to central or leading position
+- Avoid wide establishing shots or medium shots that contradict close-up face composition intent
+- Verify no disabled ships, burning vessels, or captive figures appear in this initial observation sequence
 
 # Repair Notes
-- If procession movement appears static, add subtle forward progression to maintain continuity with BT001 beat documentation
-- Ensure Carter rear position remains consistent throughout clip duration without shifting to central or leading position
-- Verify environmental transition from built environment to natural terrain begins at frame boundary as specified in scene breakdown
-- Check that no airships or disabled vessels appear in frame during this establishing sequence
-- Confirm warriors green attire and formation marching style matches Barsoom cinematic style profile
-- If lighting appears inconsistent with daylight conditions, adjust exposure to maintain clear visibility of procession details
+- If Carter's expression appears static, add subtle shifts reflecting growing concern/anticipation as more craft appear
+- Ensure window frame edge remains visible on left side to maintain location context
+- Check that valley/hills background is stable and consistent with previous shots for continuity
+- If air craft details are unclear, adjust exposure to maintain clear visibility of descending vessels
+- Verify no modern technology or wrong era clothing appears in scene
+- If lighting appears inconsistent with daylight conditions, adjust exposure to maintain clear visibility of air craft details
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC001/CL001.md

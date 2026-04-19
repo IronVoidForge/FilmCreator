@@ -5,30 +5,30 @@ city_buildings Environment Reference Prompt
 city_buildings_ref_prompt
 
 # Purpose
-Generate stable local environment reference prompts for deserted city buildings with upper floors and rooftops. Prompts should capture multi-story structures providing elevation for warriors, windows used as firing positions, rooftops accessible for climbing, valley floor beyond structures, hills in background horizon. Architecture emphasizes deserted urban setting with sunlight illuminating building facades and devices gleaming in open daylight conditions.
+This environment prompt defines the urban building structures used in observation and action sequences, establishing vertical scale and atmospheric conditions for the plaza setting. The architecture supports multiple vertical levels with consistent daylight illumination and fire damage effects that maintain visibility of foreground-background relationships.
 
 # Workflow Type
 still.t2i.klein.distilled
 
 # Positive Prompt
-Deserted city buildings with upper floors, windows used for firing, rooftops with grappling hooks, valley floor beyond structures, hills in background horizon, sunlight illuminating building facades, devices gleam in sunlight, multi-story structures providing elevation, open daylight conditions.
+upper floor windows with daylight illumination, building facades facing open plaza area, interior spaces accessible from exterior levels, rooftop positions with firing stances, missile impact flames spurt from building surfaces, smoke accumulation from fire damage, valley visibility from upper levels indicating regional geography, vertical scale established through window-to-ground distances
 
 # Negative Prompt
-proper nouns, specific names, indoor lighting, night time, dark shadows, enclosed spaces, underground areas, modern technology, neon lights, artificial illumination, crowded scenes, people inside buildings, vehicles, machinery, industrial equipment.
+proper nouns, character names, specific brand identifiers, indoor lighting without daylight, dark interiors, closed windows, empty rooftops, no smoke or fire effects, flat perspective, lack of vertical scale, artificial lighting sources, obscured plaza visibility
 
 # Inputs
-- Project: princess_of_mars_test
-- Asset: city_buildings
-- Environment Role: Primary / Observation Point (Transit Setting)
-- Architecture or Geography: Deserted city buildings with upper floors and rooftops. Valley floor context visible beyond structures. Hills beyond the city horizon.
-- Lighting and Atmosphere Cues: Sunlight illuminating building facades. Green Martians firing from windows. Devices gleam in sunlight. Open daylight conditions.
-- Scale Cues and Recurring Environmental Anchors: Multi-story structures providing elevation for warriors. Windows used as firing positions. Rooftops accessible for climbing. Building entrance where prisoner is dragged.
+- asset_id: city_buildings
+- project_slug: princess_of_mars_test
+- environment_role: Primary setting for observation and action sequences. Multiple vertical levels utilized throughout chapter.
+- architecture_geography: Urban structures with upper floors, windows, and roofs; Building facades facing open plaza area; Interior spaces accessible from exterior levels; Rooftop positions for firing stances; Window openings serving as vantage points.
+- lighting_atmosphere: Daylight conditions throughout primary sequences; Smoke accumulation from fire damage; Missile impact flames spurt from building surfaces; Fire-induced atmospheric disturbance visible from plaza.
+- scale_anchors: Building height establishes vertical scale for air craft approach; Window-to-ground distance defines observation perspective; Rooftop elevation provides firing platform context; Plaza proximity creates foreground-background relationship; Valley visibility from upper levels indicates regional geography.
 
 # Continuity Notes
-- Environmental anchors remain consistent across shots: building facades illuminated by sunlight, windows serving as firing positions, rooftops with grappling hooks visible, valley floor beyond structures, hills in background horizon. Scale maintained through multi-story structures providing elevation for warriors. Lighting conditions stay open daylight with devices gleaming in sunlight throughout sequence.
+- The building structures maintain consistent daylight illumination across all sequences without introducing artificial lighting sources. Smoke and fire effects are present but do not obscure the plaza area or valley visibility. Vertical scale is established through window-to-ground distances and rooftop elevations that remain constant throughout shots. The foreground-background relationship between plaza proximity and upper levels is preserved in every frame.
 
 # Repair Notes
-- Review prompts to ensure no proper nouns appear in positive or negative prompt bodies. Verify environmental anchors are consistently described using descriptive noun phrases. Check that scale cues emphasize multi-story structures and elevation points. Confirm lighting conditions maintain open daylight atmosphere across all generated images.
+- Ensure proper nouns like "Green Martian" are replaced with descriptive terms such as "firing stances". Maintain daylight conditions without introducing artificial lighting sources. Keep smoke accumulation visible but not overwhelming to the plaza area. Preserve the plaza foreground-background relationship throughout all shots and ensure valley visibility remains constant as a regional anchor.
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/ENVIRONMENT_INDEX.md

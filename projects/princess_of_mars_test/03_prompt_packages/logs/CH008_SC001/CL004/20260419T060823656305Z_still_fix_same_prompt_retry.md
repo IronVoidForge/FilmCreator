@@ -1,0 +1,532 @@
+# FilmCreator Prompt Writing Exchange
+- timestamp_utc: 2026-04-19T06:08:23.656305+00:00
+- stage: still_fix
+- clip_id: CL004
+- retry_kind: same_prompt_retry
+
+## System Prompt
+````text
+You are writing one FilmCreator prompt package for a local generation pipeline.
+Your first output line must be exactly [[FILMCREATOR_PACKET]].
+Your last output line must be exactly [[/FILMCREATOR_PACKET]].
+Return exactly one FILMCREATOR packet in Markdown.
+Do not return JSON.
+Do not use markdown fences.
+Do not add commentary before or after the packet.
+Do not omit the outer packet envelope.
+Target stage: still_fix
+Stage guidance: Write a corrective still-generation prompt that preserves composition and look while fixing local issues. Assume image_1 is the approved still base and image_2 is a secondary reference when needed.
+Use descriptive noun phrases and avoid proper nouns in prompt text.
+Keep duration and workflow metadata in inputs_markdown, not in the prompt body.
+Follow the requested section names exactly.
+````
+
+## User Prompt
+````text
+Project: princess_of_mars_test
+
+Scene: CH008_SC001
+
+Clip: CL004
+
+Prompt title: CH008_SC001 CL004 Fix 01 Prompt
+
+Prompt id: CH008_SC001_CL004_fix_01_prompt
+
+Workflow type: still.scene_insert.two_ref.klein.distilled
+
+Write improved content for this canonical prompt package.
+
+Output rules:
+
+1. First line must be [[FILMCREATOR_PACKET]]
+
+2. Last line must be [[/FILMCREATOR_PACKET]]
+
+3. No text before the first line
+
+4. No text after the last line
+
+5. Every required section must appear exactly once
+
+
+
+Use this exact packet envelope and section names:
+
+[[FILMCREATOR_PACKET]]
+
+task: clip_prompt
+
+stage: still_fix
+
+version: 1
+
+
+
+[[SECTION purpose]]
+
+...purpose text...
+
+[[/SECTION]]
+
+
+
+[[SECTION positive_prompt]]
+
+...positive prompt text...
+
+[[/SECTION]]
+
+
+
+[[SECTION negative_prompt]]
+
+...negative prompt text...
+
+[[/SECTION]]
+
+
+
+[[SECTION inputs_markdown]]
+
+- key: value
+
+[[/SECTION]]
+
+
+
+[[SECTION continuity_notes_markdown]]
+
+- note
+
+[[/SECTION]]
+
+
+
+[[SECTION repair_notes_markdown]]
+
+- note
+
+[[/SECTION]]
+
+[[/FILMCREATOR_PACKET]]
+
+
+
+Clip context:
+
+## Project Summary
+
+The narrative follows a Green Martian group residing in a deserted city within a valley, surrounded by hills. The narrator (a human male) and Sola are integrated into this society, accompanied by Woola the hound. A significant plot thread involves the presence of advanced airships and naval forces from a "kindred people" or enemy fleet that has been attacked. The Martians possess superior marksmanship against these vessels. The group is currently in a state of alert due to potential return attacks. A major new element introduced is the arrival of an Earthling female captive, who is being held by the Martians and is the focus of the narrator's hope and curiosity.
+
+## Chapter Summaries
+
+## CH008_summary.md
+**Story Beat 1: The Retreat Order**
+After the incubator ceremony, the procession returns to the city. Orders are given for a hasty retreat into buildings due to the approach of enemy airships. The Martians melt into doorways and vanish within three minutes.
+
+**Visual Continuity:**
+- **Setting:** Deserted city in a valley with hills beyond.
+- **Entities:** Green Martian warriors, chariots, mastodons, mounted warriors.
+- **Atmosphere:** Sudden scurrying to cover; deserted buildings.
+
+**Story Beat 2: The Airship Battle and Salvage**
+From a window, the narrator observes twenty gray airships approaching. Green Martians fire a volley from building windows. The ships return fire but suffer damage. Several limping craft retreat; one remains unmanned and drifting. Martians board the last ship, loot it (arms, food, water), and burn it as a funeral pyre before towing it away.
+
+**Visual Continuity:**
+- **Vessels:** Huge craft, long, low, gray-painted.
+- **Action:** Banners dissolved in flame; upper works mowed through by projectiles.
+- **Loot:** Arms, ammunition, silks, furs, jewels, strangely carved stone vessels, casks of water.
+- **Aftermath:** Great warship soaring majestically into the air as a floating funeral pyre.
+
+**Story Beat 3: The Captive's Arrival**
+The group returns to the plaza. The narrator sees an Earthling woman being dragged into a building by Martian females. She is naked, has copper skin and black hair. She signals for help; the narrator fails to respond due to ignorance of customs. She is taken away into the building.
+
+**Visual Continuity:**
+- **Figure:** Slender, girlish figure similar to earthly women.
+- **Features:** Oval face, finely chiseled features, large lustrous eyes, coal black waving hair caught loosely.
+- **Skin:** Light reddish copper color with crimson glow of cheeks and ruby lips.
+- **Attire:** Destitute of clothes; highly wrought ornaments only.
+
+## Character Index
+
+# Character Index - Chapter CH008
+
+## Earthling Woman (Captive)
+- **Role:** Captive brought to the plaza, referenced by narrator
+- **Status:** Physically present in Story Beat 3
+- **Description:** Slender girlish figure with oval face, copper skin, black hair, highly wrought ornaments only. Light reddish copper color with crimson glow of cheeks and ruby lips.
+
+## Green Martian Warriors
+- **Role:** Procession participants, defenders against airships
+- **Status:** Physically present throughout chapter
+- **Description:** Group entity without individual physical descriptions; green warriors in procession returning to city after incubator ceremony.
+
+## Martian Females
+- **Role:** Dragging captives into buildings
+- **Status:** Physically present in Story Beat 3
+- **Description:** Group entity without individual physical descriptions; female Martians involved in captive handling and ship salvage operations.
+
+## Environment Index
+
+# Environment Index - Princess of Mars Test (CH008)
+
+## Primary Environments
+
+| Asset ID | Name | Role | Description |
+|----------|------|------|-------------|
+| city_plaza | City Plaza | Primary | Central gathering space in valley city where procession returns and orders given for retreat |
+| deserted_city_buildings | Deserted City Buildings | Secondary | Multi-story structures in valley with hills beyond; used for cover and window fire positions |
+| drifting_warship | Drifting Warship | Secondary | Unmanned gray airship captured by Martians, converted to funeral pyre |
+
+## Environment Families
+
+- **Urban Transit Settings**: Plaza, building interiors, doorways - spaces for movement and gathering
+- **Combat Cover Environments**: Deserted buildings with windows - tactical positions for Martian warriors
+- **Salvage/Aftermath Zones**: Drifting warship - captured vessel serving as memorial pyre
+
+## Notes
+
+All environments situated in valley city with hills beyond. Primary action occurs at plaza level, secondary action in building windows and on drifting airship. Lighting shifts from daylight to dramatic fire illumination during salvage sequence.
+
+## Clip Plan
+
+# Title
+CH008_SC001 CL004 Clip Plan
+
+# ID
+CH008_SC001_CL004
+
+# Purpose
+Describe the cut beat, framing, and continuity intent for this clip.
+
+# Inputs
+- scene_breakdown:
+- shared_refs:
+- duration_seconds:
+- review_batch_size: 4
+
+# Output Targets
+- CH008_SC001_CL004_KF01_v001.png
+- CH008_SC001_CL004_KF01.png
+- CH008_SC001_CL004_FX01_v001.png
+- CH008_SC001_CL004_MV01_v001.mp4
+
+## Scene Breakdown
+
+**Purpose:** Establish immediate tactical response to enemy airships.
+
+**Summary:** Orders given for hasty retreat into buildings as enemy airships approach. Martians melt into doorways and vanish within three minutes.
+
+**Characters:** Green Martian warriors (group), Narrator (implied observer).
+
+**Environments:** Deserted city in a valley, hills beyond, deserted buildings.
+
+**Emotional Shift:** Calm procession -> Sudden urgency/scorring.
+
+**Visual Coverage Families:** Wide shots of the city/procession, Medium shots of Martians entering buildings, Close-ups on doorways/vanishing.
+
+**Continuity Sensitivities:** Number of Martians, specific locations entered, timing of retreat (3 minutes).
+
+## Beat Bundles
+
+## BT001.md
+**Beat Purpose:** Establish tactical context and enemy threat scale.
+
+**Start State:** Martians moving in calm procession across valley floor.
+
+**End State:** Enemy airships visible on horizon, urgency begins.
+
+**Character Placement & Movement:** Wide group formation (5-7 Martians), moving parallel to city edge toward buildings.
+
+**Geography/Axis/Eyeline:** Valley floor axis, eyelines directed toward hills and approaching airships.
+
+**Environmental State:** Deserted buildings intact, no debris, clear visibility for threat assessment.
+
+**Likely Coverage Families:** Extreme wide establishing shot, Medium tracking shot following group movement.
+
+## BT002.md
+**Beat Purpose:** Execute tactical retreat order and show building entry pattern.
+
+**Start State:** Retreat command given, Martians pause at building entrances.
+
+**End State:** Martians entering doorways in groups, buildings partially occupied.
+
+**Character Placement & Movement:** Medium group clusters (2-3 Martians per doorway), synchronized entry motion.
+
+**Geography/Axis/Eyeline:** Building entrance axis, eyelines directed inward toward interior spaces.
+
+**Environmental State:** Doorways clear and accessible, no obstacles at entrances, building interiors dark.
+
+**Likely Coverage Families:** Medium shot showing group entry, Over-the-shoulder from doorway perspective.
+
+## BT003.md
+**Beat Purpose:** Complete vanishing action and establish retreat timing constraint.
+
+**Start State:** Martians at doorway threshold, beginning to melt into interior spaces.
+
+**End State:** Doorways empty, Martians fully vanished within 3-minute window.
+
+**Character Placement & Movement:** Close-up on individual or small group at doorway edge, melting motion inward.
+
+**Geography/Axis/Eyeline:** Doorway frame axis, eyelines from exterior looking into darkness.
+
+**Environmental State:** Doorway edges visible, interior shadows swallowing figures, timing marker (3 minutes) active.
+
+**Likely Coverage Families:** Close-up on doorway threshold, Interior POV shot showing vanishing point.
+
+## Clip Roster
+
+# Clip Roster - CH008_SC001
+
+| Beat | Clip ID | Duration | Coverage Type | Purpose |
+|------|---------|----------|---------------|---------|
+| BT001 | CL001 | 5s | Wide Shot | City Procession & Threat Scale |
+| BT002 | CL002 | 5s | Medium Shot | Building Entry Pattern |
+| BT003 | CL003 | 5s | Close-Up | Doorway Vanishing Action |
+
+**Scene Purpose:** Establish immediate tactical response to enemy airships. Orders given for hasty retreat into buildings as enemy airships approach. Martians melt into doorways and vanish within three minutes.
+
+**Visual Coverage Families:** Wide shots of the city/procession, Medium shots of Martians entering buildings, Close-ups on doorways/vanishing.
+
+## Clip State
+
+{
+  "project_id": "princess_of_mars_test",
+  "scene_id": "CH008_SC001",
+  "clip_id": "CL004",
+  "status": "planning",
+  "inputs": {
+    "shared_character_refs": [],
+    "shared_environment_refs": [],
+    "scene_prompt_package": "projects/princess_of_mars_test/03_prompt_packages/scenes/CH008_SC001/CL004/CH008_SC001_CL004_scene_stage_prompt.md",
+    "scene_stage_prompt_package": "projects/princess_of_mars_test/03_prompt_packages/scenes/CH008_SC001/CL004/CH008_SC001_CL004_scene_stage_prompt.md",
+    "keyframe_prompt_package": "projects/princess_of_mars_test/03_prompt_packages/keyframes/CH008_SC001/CL004/CH008_SC001_CL004_keyframe_prompt.md",
+    "fix_prompt_packages": [
+      "projects/princess_of_mars_test/03_prompt_packages/fixes/CH008_SC001/CL004/CH008_SC001_CL004_fix_01_prompt.md"
+    ],
+    "anchor_prompt_packages": [],
+    "video_prompt_package": "projects/princess_of_mars_test/03_prompt_packages/cut_motion/CH008_SC001/CL004/CH008_SC001_CL004_cut_motion_prompt.md",
+    "cut_motion_prompt_package": "projects/princess_of_mars_test/03_prompt_packages/cut_motion/CH008_SC001/CL004/CH008_SC001_CL004_cut_motion_prompt.md",
+    "legacy_anchor_prompt_packages": [],
+    "legacy_video_prompt_package": null
+  },
+  "approved_assets": {
+    "golden_frame": null,
+    "approved_keyframe": null,
+    "approved_video": null,
+    "still_fixes": [],
+    "anchor_frames": [],
+    "interval_frames": [],
+    "cut_motion_videos": []
+  },
+  "approved_video_last_frame": null,
+  "current_continuity_source": null,
+  "latest_runs": {},
+  "review_batches": [],
+  "latest_review_decision": null,
+  "notes": [],
+  "stage_style_preferences": {
+    "still_fix": {
+      "literal_descriptive": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "cinematic_compositional": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "performance_action_led": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "sparse_conservative": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      }
+    },
+    "cut_motion": {
+      "literal_descriptive": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "cinematic_compositional": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "performance_action_led": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "sparse_conservative": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      }
+    },
+    "keyframe": {
+      "literal_descriptive": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "cinematic_compositional": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "performance_action_led": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "sparse_conservative": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      }
+    }
+  }
+}
+
+
+
+Existing prompt draft:
+
+# Title
+CH008_SC001 CL004 Fix 01 Prompt
+
+# ID
+CH008_SC001_CL004_fix_01_prompt
+
+# Purpose
+Generate a corrected still for CL004 that captures the abrupt halt and reverse movement of the procession in open ground, ensuring the command signal is visible and maintaining continuity with the retreat order beat. Preserve the wide composition and lighting while fixing local generation issues.
+
+# Workflow Type
+still.scene_insert.two_ref.klein.distilled
+
+# Positive Prompt
+wide angle view green-clad warriors marching formation stopping suddenly open terrain valley floor main observer standing rear of column high vantage point commander issuing order visible above horizon urban structures bordering left and right sides tense mood anticipation turning to fear atmospheric lighting consistent with previous clips
+
+# Negative Prompt
+blurry distorted anatomy wrong movement direction missing characters inconsistent lighting text artifacts low resolution noise flickering incorrect color palette
+
+# Inputs
+- project_id: princess_of_mars_test
+- scene_id: CH008_SC001
+- clip_id: CL004
+- duration_seconds: 5
+- required_refs: BT002.md
+- optional_refs: CH008_SC001_scene_breakdown
+- visible_character_assets: Carter rear_position, Warriors central_column, implied_commanders_elevated
+- look_continuity_policy: 
+- intended_lighting_change: 
+- composition_type: wide_halt_reverse
+- continuity_mode: reframe_same_moment
+- starting_keyframe_strategy: static_opening_with_full_procession_visible_before_movement_change
+- dependency_policy: dependent_on_CL003_reaction_clip_first
+- auto_advance_policy: 
+- fallback_strategy: 
+- consistency_assist_policy: 
+- consistency_assist_method: 
+- anatomy_repair_policy: 
+- consistency_targets: 
+- style_profile: 
+- batch_role: 
+- fix_of: 
+
+# Continuity Notes
+- Procession must halt abruptly upon entering open ground.
+- Command signal source must be visible from elevated position.
+- Maintain formation integrity before reverse movement begins.
+- Ensure city architecture frames the left and right sides of the shot.
+
+# Repair Notes
+- Correct any anatomy distortions in warrior figures or protagonist.
+- Fix movement artifacts that suggest incorrect direction (ensure halt is clear).
+- Preserve lighting consistency with previous clips (BT002 reaction).
+- Verify command signal visibility matches elevated position description.
+
+# Sources
+- projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC001/CL004.md
+- projects/princess_of_mars_test/02_story_analysis/scene_breakdowns/CH008_SC001.md
+- projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC001/CH008_SC001_clip_roster.md
+- projects/princess_of_mars_test/02_story_analysis/character_breakdowns/CHARACTER_INDEX.md
+- projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/ENVIRONMENT_INDEX.md
+- projects/princess_of_mars_test/02_story_analysis/story_summary/project_summary.md
+
+````
+
+## Raw Response
+````text
+
+
+[[FILMCREATOR_PACKET]]
+task: clip_prompt
+stage: still_fix
+version: 1
+
+[[SECTION purpose]]
+Generate a corrected still for CL004 that captures the abrupt halt and reverse movement of the procession in open ground, ensuring the command signal is visible and maintaining continuity with the retreat order beat. Preserve the wide composition and lighting while fixing local generation issues.
+[[/SECTION]]
+
+[[SECTION positive_prompt]]
+wide angle view green-clad warriors marching formation stopping suddenly open terrain valley floor main observer standing rear of column high vantage point commander issuing order visible above horizon urban structures bordering left and right sides tense mood anticipation turning to fear atmospheric lighting consistent with previous clips sharp anatomy clear movement direction correct color palette
+[[/SECTION]]
+
+[[SECTION negative_prompt]]
+blurry distorted anatomy wrong movement direction missing characters inconsistent lighting text artifacts low resolution noise flickering incorrect color palette proper nouns named characters individual names
+[[/SECTION]]
+
+[[SECTION inputs_markdown]]
+- project_id: princess_of_mars_test
+- scene_id: CH008_SC001
+- clip_id: CL004
+- duration_seconds: 5
+- required_refs: BT002.md
+- optional_refs: CH008_SC001_scene_breakdown
+- visible_character_assets: rear_position, central_column, elevated_commanders
+- look_continuity_policy: preserve_wide_composition_with_city_framing
+- intended_lighting_change: consistent_with_BT002_reaction_clip
+- composition_type: wide_halt_reverse
+- continuity_mode: reframe_same_moment
+- starting_keyframe_strategy: static_opening_with_full_procession_visible_before_movement_change
+- dependency_policy: dependent_on_CL003_reaction_clip_first
+- auto_advance_policy: none
+- fallback_strategy: maintain_original_composition_with_anatomy_fixes
+- consistency_assist_policy: preserve_lighting_and_architecture_continuity
+- consistency_assist_method: reference_previous_clip_lighting_patterns
+- anatomy_repair_policy: correct_warrior_figures_and_protagonist_distortions
+- consistency_targets: movement_direction_and_command_signal_visibility
+- style_profile: wide_angle_cinematic_with_tactical_atmosphere
+- batch_role: still_fix_iteration_one
+- fix_of: CL004_original_generation_issues
+[[/SECTION]]
+
+[[SECTION continuity_notes_markdown]]
+- Procession must halt abruptly upon entering open ground.
+- Command signal source must be visible from elevated position.
+- Maintain formation integrity before reverse movement begins.
+- Ensure city architecture frames the left and right sides of the shot.
+- Lighting must match previous clip BT002 reaction sequence.
+- Warrior count and positioning must align with procession continuity.
+[[/SECTION]]
+
+[[SECTION repair_notes_markdown]]
+- Correct any anatomy distortions in warrior figures or protagonist.
+- Fix movement artifacts that suggest incorrect direction (ensure halt is clear).
+- Preserve lighting consistency with previous clips BT002 reaction.
+- Verify command signal visibility matches elevated position description.
+- Ensure urban structures properly frame left and right sides of composition.
+- Remove any proper nouns or named character references from prompt text.
+[[/SECTION]]
+
+[[/FILMCREATOR_PACKET]]
+````

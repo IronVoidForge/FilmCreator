@@ -4,10 +4,10 @@
 green_martian_warriors
 
 # Why This Needs Clarification
-Group identification is too weakly defined for individual character work; may already exist under another name or need clarification
+The character is not fully identified from this chapter alone.
 
 # Question
-What are the specific physical features, costume details, and distinguishing characteristics of Green Martian Warriors? Are they a single group or multiple distinct characters?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

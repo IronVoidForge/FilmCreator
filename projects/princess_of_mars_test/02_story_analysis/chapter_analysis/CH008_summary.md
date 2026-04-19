@@ -1,17 +1,11 @@
 # Chapter Summary: CH008 - A Fair Captive from the Sky
 
-## Story Beats (Decomposition Ready)
-1.  **Return Interrupted:** Procession returns to city after incubation ceremony; sudden retreat order given immediately upon entering open ground.
-2.  **Fleet Sighting:** Carter observes gray-painted airships approaching from hill crest; fleet count approximates twenty vessels.
-3.  **Battle Engagement:** Green Martians fire first volley; enemy ships return fire with high accuracy targeting specific weak points (guns, officers, steering).
-4.  **Ship Disabled:** One vessel limps erratically, unmanned, drifting southeast. Warriors rush to intercept before it hits buildings.
-5.  **Looting & Burning:** Warriors board disabled ship, remove loot (arms, jewels, water), empty carboys over dead sailors, then burn vessel from within using missile.
-6.  **Emotional Aftermath:** Carter feels depression and yearning for the enemy fleet; fears return attack; city remains deserted for a week.
-7.  **Captive Discovery:** As prisoners are dragged into building, Carter sees a slender girlish figure with copper skin and black hair. She signals him before being taken inside.
+## Story Summary
+The narrative begins on the third day after an incubator ceremony. The procession retreats to a city building due to an immediate order. From a window, John Carter observes the arrival of twenty large gray air craft. A battle ensues between Green Martians firing from buildings and the Air Fleet returning fire. The fleet retreats after damage; one ship is disabled and unmanned. Warriors loot the vessel (arms, jewels, water), burn it, and tow it away before it explodes. Carter witnesses a human female prisoner being dragged from the burning ship into a nearby building by Green Martian females. At the city plaza, the prisoner turns to Carter as she enters the building; he fails to respond to her signal of appeal. She is dragged away into the depths of the edifice.
 
-## Visual Continuity Facts
-- **Airships:** Long, low, gray-painted hulls; banners swung from stem to stern; odd devices painted on prow.
-- **Warriors:** Green Martians; mounted or in chariots; fire from windows/roofs; carry spears and grappling hooks.
-- **Disabled Ship:** Drifting southeast at approx fifty feet altitude; decks and upper works mass of roaring flames later; wooden parts eaten away.
-- **Captive Appearance:** Slender, girlish figure; oval face; light reddish copper skin; coal black waving hair (loose coiffure); naked except highly wrought ornaments; crimson cheeks/ruby lips.
-- **Locations:** City plaza, building upper floors/windows, open ground/valley, outlying hills.
+## Visual Continuity
+- **Air Craft:** Long, low, gray-painted vessels with strange banners and odd devices on prows. Figures crowd forward decks.
+- **Green Martians:** Green skin, wear ornaments, carry spears, fire from windows/roofs.
+- **Prisoner:** Slender, girlish figure. Skin is light reddish copper. Features finely chiseled. Eyes large/lustrous. Hair coal black, waving, caught loosely into a strange coiffure. Naked except for highly wrought ornaments. Cheeks crimson, lips ruby.
+- **Locations:** City buildings (upper floors, windows, roofs), open ground/plaza, valley, hills beyond.
+- **Action Details:** Ships swing broadside, dip below hill crests, drift southeast/southwesterly. Fire causes spurt of flame from missile impact. Guy ropes release simultaneously.

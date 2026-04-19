@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import re
 import time
 import unicodedata
@@ -13,6 +14,13 @@ from .lmstudio_client import LMStudioClient, LMStudioError
 from .prompt_package import PromptPackage, write_prompt_package
 from .scaffold import create_clip, create_project, create_scene
 from .settings import load_runtime_settings
+from .world_registry import (
+    character_registry_path,
+    environment_registry_path,
+    resolve_character_registry,
+    resolve_environment_registry,
+    summarize_registry_status,
+)
 
 
 HEADING_PATTERN = re.compile(r"(?m)^# ([^\r\n]+)\s*$")
@@ -72,6 +80,11 @@ class StoryAnalysisSummary:
     manual_character_description_requests: list[ManualCharacterDescriptionRequest]
     character_clarification_requests: list[CharacterClarificationRequest]
     warnings: list[str]
+    canonical_character_ids: list[str]
+    provisional_character_ids: list[str]
+    canonical_environment_ids: list[str]
+    provisional_environment_ids: list[str]
+    world_registry_paths: list[str]
 
     def to_dict(self) -> dict[str, object]:
         return {
@@ -88,6 +101,11 @@ class StoryAnalysisSummary:
                 item.to_dict() for item in self.character_clarification_requests
             ],
             "warnings": self.warnings,
+            "canonical_character_ids": self.canonical_character_ids,
+            "provisional_character_ids": self.provisional_character_ids,
+            "canonical_environment_ids": self.canonical_environment_ids,
+            "provisional_environment_ids": self.provisional_environment_ids,
+            "world_registry_paths": self.world_registry_paths,
         }
 
 
@@ -172,6 +190,28 @@ class ChapterAuthoringSummary:
             "analysis": self.analysis.to_dict(),
             "scene_runs": [scene_run.to_dict() for scene_run in self.scene_runs],
             "shared_prompts": self.shared_prompts.to_dict(),
+        }
+
+
+@dataclass(frozen=True)
+class ChapterContinuitySummary:
+    chapter_id: str
+    state_path: str
+    summary_path: str
+    known_characters: list[str]
+    known_environments: list[str]
+    unresolved_character_ids: list[str]
+    scene_order: list[str]
+
+    def to_dict(self) -> dict[str, object]:
+        return {
+            "chapter_id": self.chapter_id,
+            "state_path": self.state_path,
+            "summary_path": self.summary_path,
+            "known_characters": self.known_characters,
+            "known_environments": self.known_environments,
+            "unresolved_character_ids": self.unresolved_character_ids,
+            "scene_order": self.scene_order,
         }
 
 
@@ -483,8 +523,15 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
     _write_text(scene_index_path, scene_index_markdown)
     written_files.append(repo_relative(scene_index_path))
 
+    scene_records = _require_packet_records(scene_packet, record_type="scene")
+    scene_validation_warnings = _validate_scene_decomposition(
+        chapter_id=chapter_source.chapter_id,
+        scene_records=scene_records,
+    )
+    warnings.extend(scene_validation_warnings)
+
     scene_ids: list[str] = []
-    for raw_scene in _require_packet_records(scene_packet, record_type="scene"):
+    for raw_scene in scene_records:
         raw_scene_id = _normalize_scene_id(_require_record_field(raw_scene, "scene_id"))
         scene_id = validate_scene_id(f"{chapter_source.chapter_id}_{raw_scene_id}")
         filename = f"{scene_id}.md"
@@ -494,6 +541,28 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
         _write_text(scene_path, markdown)
         written_files.append(repo_relative(scene_path))
         scene_ids.append(scene_id)
+
+    character_breakdown_dir = project_dir / "02_story_analysis" / "character_breakdowns"
+    character_breakdowns = sorted(
+        path
+        for path in character_breakdown_dir.glob("*.md")
+        if path.name not in {"CHARACTER_INDEX.md", "README.md"}
+    )
+    environment_breakdown_dir = project_dir / "02_story_analysis" / "environment_breakdowns"
+    environment_breakdowns = sorted(
+        path
+        for path in environment_breakdown_dir.glob("*.md")
+        if path.name not in {"ENVIRONMENT_INDEX.md", "README.md"}
+    )
+    character_registry = resolve_character_registry(project_slug, character_breakdowns)
+    environment_registry = resolve_environment_registry(project_slug, environment_breakdowns)
+    canonical_character_ids, provisional_character_ids = summarize_registry_status(character_registry)
+    canonical_environment_ids, provisional_environment_ids = summarize_registry_status(environment_registry)
+    world_registry_paths = [
+        repo_relative(character_registry_path(project_slug)),
+        repo_relative(environment_registry_path(project_slug)),
+    ]
+    written_files.extend(world_registry_paths)
 
     elapsed = time.perf_counter() - started
     print(f"[authoring] Finished chapter analysis in {elapsed:.1f}s")
@@ -507,6 +576,11 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
         manual_character_description_requests=manual_requests,
         character_clarification_requests=clarification_requests,
         warnings=warnings,
+        canonical_character_ids=canonical_character_ids,
+        provisional_character_ids=provisional_character_ids,
+        canonical_environment_ids=canonical_environment_ids,
+        provisional_environment_ids=provisional_environment_ids,
+        world_registry_paths=world_registry_paths,
     )
 
 
@@ -563,60 +637,148 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
         written_files.append(repo_relative(beat_path))
         beat_ids.append(beat_id)
 
-    clip_packet = _call_packet_task(
-        client=client,
-        project_dir=project_dir,
-        task_name="clip_planning",
-        system_prompt=_analysis_system_prompt(),
-        user_prompt=_clip_planning_user_prompt(
-            project_slug=project_slug,
-            scene_id=scene_id,
-            scene_markdown=_scene_brief_markdown(scene_path),
-            beat_index_path=beat_index_path,
-        ),
-        degraded_user_prompt=_clip_planning_user_prompt(
-            project_slug=project_slug,
-            scene_id=scene_id,
-            scene_markdown=_scene_brief_markdown(scene_path),
-            beat_index_path=beat_index_path,
-            degraded=True,
-        ),
-    )
-    clip_roster_markdown = _require_packet_section(clip_packet, "clip_roster_markdown")
     clip_dir = project_dir / "02_story_analysis" / "clip_plans" / scene_id
     ensure_dir(clip_dir)
     _prune_markdown_dir(clip_dir, keep_names=set())
-    clip_roster_path = clip_dir / f"{scene_id}_clip_roster.md"
-    _write_text(clip_roster_path, clip_roster_markdown)
-    written_files.append(repo_relative(clip_roster_path))
+    scene_markdown_for_validation = _scene_brief_markdown(scene_path)
 
-    clip_ids: list[str] = []
-    seen_clip_ids: set[str] = set()
-    for raw_clip in _require_packet_records(clip_packet, record_type="clip"):
-        raw_clip_id = _require_record_field(raw_clip, "clip_id")
+    clip_attempt_specs = [
+        {
+            "label": "normal",
+            "scene_markdown": scene_markdown_for_validation,
+            "degraded": False,
+        },
+        {
+            "label": "repair_retry",
+            "scene_markdown": scene_markdown_for_validation
+            + "\n\n# Repair Instruction\n"
+            + "Rebuild this clip roster so every beat is covered and every shot has a unique top-level CL### id. "
+            + "Do not compress multiple beats into one clip unless the scene is explicitly single-shot.",
+            "degraded": True,
+        },
+    ]
+
+    last_validation_error: str | None = None
+    accepted_clip_ids: list[str] = []
+    accepted_clip_warnings: list[str] = []
+    accepted_written_files: list[str] = []
+
+    for attempt in clip_attempt_specs:
+        attempt_written_files: list[str] = []
+        attempt_warnings: list[str] = []
+
+        clip_packet = _call_packet_task(
+            client=client,
+            project_dir=project_dir,
+            task_name="clip_planning",
+            system_prompt=_analysis_system_prompt(),
+            user_prompt=_clip_planning_user_prompt(
+                project_slug=project_slug,
+                scene_id=scene_id,
+                scene_markdown=attempt["scene_markdown"],
+                beat_index_path=beat_index_path,
+                degraded=attempt["degraded"],
+            ),
+            degraded_user_prompt=_clip_planning_user_prompt(
+                project_slug=project_slug,
+                scene_id=scene_id,
+                scene_markdown=attempt["scene_markdown"],
+                beat_index_path=beat_index_path,
+                degraded=True,
+            ),
+        )
+        clip_roster_markdown = _require_packet_section(clip_packet, "clip_roster_markdown")
+        clip_roster_path = clip_dir / f"{scene_id}_clip_roster.md"
+        _write_text(clip_roster_path, clip_roster_markdown)
+        attempt_written_files.append(repo_relative(clip_roster_path))
+
+        clip_ids: list[str] = []
+        clip_markdowns: dict[str, str] = {}
+        seen_clip_ids: set[str] = set()
+        promoted_hierarchical_map: dict[str, str] = {}
+        hierarchical_sequence_seen = 0
+
+        _prune_markdown_dir(clip_dir, keep_names={clip_roster_path.name})
+
+        for raw_clip in _require_packet_records(clip_packet, record_type="clip"):
+            raw_clip_id = _require_record_field(raw_clip, "clip_id")
+            try:
+                clip_id, clip_warning = _normalize_clip_id(
+                    raw_clip_id,
+                    promoted_hierarchical_map=promoted_hierarchical_map,
+                    hierarchical_sequence_seen=hierarchical_sequence_seen,
+                )
+                if _is_hierarchical_clip_id(raw_clip_id):
+                    hierarchical_sequence_seen += 1
+            except LMStudioError as exc:
+                attempt_warnings.append(f"Skipped clip record with unusable clip_id '{raw_clip_id}': {exc}")
+                continue
+
+            if clip_warning:
+                attempt_warnings.append(clip_warning)
+
+            if clip_id in seen_clip_ids:
+                attempt_warnings.append(
+                    f"Skipped duplicate clip record after normalization: '{raw_clip_id}' resolved to '{clip_id}', which already exists."
+                )
+                continue
+
+            filename = f"{clip_id}.md"
+            markdown = _require_record_section(raw_clip, "markdown")
+            create_clip(project_slug, scene_id, clip_id)
+            clip_path = clip_dir / filename
+            _write_text(clip_path, markdown)
+            attempt_written_files.append(repo_relative(clip_path))
+            clip_ids.append(clip_id)
+            clip_markdowns[clip_id] = markdown
+            seen_clip_ids.add(clip_id)
+
+        if not clip_ids:
+            last_validation_error = "Clip planning did not yield any usable clip ids after normalization."
+            attempt_warnings.append(last_validation_error)
+            warnings.extend(attempt_warnings)
+            continue
+
         try:
-            clip_id, clip_warning = _normalize_clip_id(raw_clip_id)
-        except LMStudioError as exc:
-            warnings.append(f"Skipped clip record with unusable clip_id '{raw_clip_id}': {exc}")
-            continue
-        if clip_warning:
-            warnings.append(clip_warning)
-        if clip_id in seen_clip_ids:
-            warnings.append(
-                f"Skipped duplicate clip record after normalization: '{raw_clip_id}' resolved to '{clip_id}', which already exists."
+            validation_warnings = _validate_clip_plan(
+                scene_id=scene_id,
+                scene_markdown=scene_markdown_for_validation,
+                beat_ids=beat_ids,
+                clip_ids=clip_ids,
+                clip_markdowns=clip_markdowns,
+                roster_markdown=clip_roster_markdown,
+                strict_missing_beats=attempt["degraded"],
             )
+            attempt_warnings.extend(validation_warnings)
+            missing_beat_warning = next(
+                (warning for warning in validation_warnings if "does not explicitly reference all beats" in warning),
+                None,
+            )
+            if missing_beat_warning and not attempt["degraded"]:
+                last_validation_error = missing_beat_warning
+                attempt_warnings.append(
+                    f"Clip plan for {scene_id} will be retried because beat coverage is incomplete on the first pass."
+                )
+                warnings.extend(attempt_warnings)
+                continue
+            accepted_clip_ids = clip_ids
+            accepted_clip_warnings = attempt_warnings
+            accepted_written_files = attempt_written_files
+            break
+        except LMStudioError as exc:
+            last_validation_error = str(exc)
+            attempt_warnings.append(f"Clip plan validation failed for {scene_id} during {attempt['label']}: {exc}")
+            warnings.extend(attempt_warnings)
             continue
-        filename = f"{clip_id}.md"
-        markdown = _require_record_section(raw_clip, "markdown")
-        create_clip(project_slug, scene_id, clip_id)
-        clip_path = clip_dir / filename
-        _write_text(clip_path, markdown)
-        written_files.append(repo_relative(clip_path))
-        clip_ids.append(clip_id)
-        seen_clip_ids.add(clip_id)
 
-    if not clip_ids:
-        raise LMStudioError("Clip planning did not yield any usable clip ids after normalization.")
+    if not accepted_clip_ids:
+        raise LMStudioError(
+            last_validation_error or f"Clip planning for {scene_id} failed validation after retries."
+        )
+
+    written_files.extend(accepted_written_files)
+    warnings.extend(accepted_clip_warnings)
+    clip_ids = accepted_clip_ids
 
     elapsed = time.perf_counter() - started
     print(f"[authoring] Finished scene planning for {scene_id} in {elapsed:.1f}s")
@@ -818,6 +980,55 @@ def write_shared_prompts(*, project_slug: str) -> SharedPromptSummary:
     )
 
 
+def build_chapter_continuity(*, project_slug: str, analysis: StoryAnalysisSummary) -> ChapterContinuitySummary:
+    project_dir = create_project(project_slug)
+    world_dir = project_dir / "02_story_analysis" / "world"
+    ensure_dir(world_dir)
+    state_path = world_dir / f"{analysis.chapter_id}_STATE.json"
+    summary_path = world_dir / f"{analysis.chapter_id}_CONTINUITY_SUMMARY.md"
+    state = {
+        "chapter_id": analysis.chapter_id,
+        "scene_order": analysis.scene_ids,
+        "known_characters": analysis.canonical_character_ids,
+        "known_environments": analysis.canonical_environment_ids,
+        "unresolved_character_ids": analysis.provisional_character_ids,
+        "world_registry_paths": analysis.world_registry_paths,
+        "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+    }
+    _write_text(state_path, json.dumps(state, indent=2))
+    summary_markdown = "\n".join(
+        [
+            f"# {analysis.chapter_id} Continuity Summary",
+            "",
+            "## Scene Order",
+            *[f"- {scene_id}" for scene_id in analysis.scene_ids],
+            "",
+            "## Known Canonical Characters",
+            *([f"- {item}" for item in analysis.canonical_character_ids] or ["- None"]),
+            "",
+            "## Unresolved / Provisional Characters",
+            *([f"- {item}" for item in analysis.provisional_character_ids] or ["- None"]),
+            "",
+            "## Known Canonical Environments",
+            *([f"- {item}" for item in analysis.canonical_environment_ids] or ["- None"]),
+            "",
+            "## Registry Artifacts",
+            *[f"- {item}" for item in analysis.world_registry_paths],
+            "",
+        ]
+    )
+    _write_text(summary_path, summary_markdown)
+    return ChapterContinuitySummary(
+        chapter_id=analysis.chapter_id,
+        state_path=repo_relative(state_path),
+        summary_path=repo_relative(summary_path),
+        known_characters=analysis.canonical_character_ids,
+        known_environments=analysis.canonical_environment_ids,
+        unresolved_character_ids=analysis.provisional_character_ids,
+        scene_order=analysis.scene_ids,
+    )
+
+
 def authoring_checkpoint(
     *,
     project_slug: str,
@@ -827,6 +1038,7 @@ def authoring_checkpoint(
     started = time.perf_counter()
     print(f"[authoring] Starting authoring checkpoint for {project_slug}...")
     analysis = analyze_chapter(project_slug=project_slug, chapter=chapter)
+    build_chapter_continuity(project_slug=project_slug, analysis=analysis)
     fallback_scene_id = validate_scene_id(f"{analysis.chapter_id}_SC001")
     target_scene_id = scene_id or (analysis.scene_ids[0] if analysis.scene_ids else fallback_scene_id)
     planning = plan_scene(project_slug=project_slug, scene_id=target_scene_id)
@@ -863,7 +1075,7 @@ def _resolve_chapter_source(project_slug: str, chapter: str | None) -> _ChapterS
     else:
         chapter_files = sorted(chapter_dir.glob("*.md"))
         if not chapter_files:
-            raise FileNotFoundError(f"No chapter Markdown files found under {chapter_dir}")
+            raise FileNotFoundError(f"No files matching *.md found under {chapter_dir}")
         chapter_path = chapter_files[0]
 
     if not chapter_path.exists():
@@ -1180,11 +1392,17 @@ def _scene_decomposition_user_prompt(
 ) -> str:
     extra_rules = [
         "Prefer dramatic and staging boundaries, not every paragraph break.",
+        "Preserve major narrative function changes as separate scenes.",
+        "Do not merge setup, escalation, climax, and aftermath into one scene if they have different emotional or staging functions.",
+        "If the chapter includes a reveal, aftermath, or emotional payoff after action, give that material its own scene when possible.",
+        "Use a new scene when location, primary objective, or emotional mode changes significantly.",
+        "For action chapters, prefer a sequence like: setup scene, escalation scene, climax/action consequence scene, aftermath/reveal scene when the source supports it.",
     ]
     if degraded:
         extra_rules = [
-            "Keep scene count small and practical.",
-            "Prefer fewer strong scenes over many weak ones.",
+            "Keep scene count practical, but do not collapse the ending payoff into the action scene.",
+            "Prefer 4 strong scenes over 3 merged scenes when the chapter clearly contains setup, escalation, consequence, and aftermath.",
+            "Create a new scene when a new emotional function begins.",
         ]
     return "\n\n".join(
         [
@@ -1276,7 +1494,10 @@ def _clip_planning_user_prompt(
     clip_rules = [
         "- clip = cut",
         "- use clip ids in canonical CL001 format only",
+        "- every shot must get its own top-level clip id such as CL001, CL002, CL003, CL004",
+        "- never use parent-child or hierarchical clip ids such as CL001_001, CL001-A, CL001.1, CL001/001, CL001a, or CL001_variant",
         "- do not append suffixes like _01, -A, _variant, _alt, or sub-shot fragments to clip ids",
+        "- if you feel tempted to write CL001_001 and CL001_002, write CL001 and CL002 instead",
         "- if you need to describe an alternate angle or sub-shot, put that in the clip markdown, not the clip id",
         "- most clips should target around 5 seconds",
         "- treat continuous_follow as rare",
@@ -1289,6 +1510,7 @@ def _clip_planning_user_prompt(
             "- keep the first clip roster small and testable",
             "- prefer independent clips",
             "- use simple canonical ids only, such as CL001, CL002, CL003",
+            "- never use hierarchical ids like CL001_001 or CL001-A",
             "- do not add suffixes or variants to clip ids",
             "- keep metadata concise but complete",
         ]
@@ -1999,6 +2221,122 @@ def _require_record_section(record: _PacketRecord, section_name: str, *, allow_e
     return value
 
 
+def _validate_scene_decomposition(
+    *,
+    chapter_id: str,
+    scene_records: list[_PacketRecord],
+) -> list[str]:
+    warnings: list[str] = []
+    if len(scene_records) < 3:
+        raise LMStudioError(
+            f"Scene decomposition for {chapter_id} returned only {len(scene_records)} scenes; minimum expected is 3."
+        )
+
+    emotional_shifts: list[str] = []
+    for record in scene_records:
+        markdown = _require_record_section(record, "markdown")
+        normalized = markdown.lower()
+
+        if "aftermath" in normalized or "payoff" in normalized or "helplessness" in normalized or "reveal" in normalized:
+            emotional_shifts.append("aftermath")
+        if "battle" in normalized or "attack" in normalized or "destruction" in normalized or "boarding" in normalized:
+            emotional_shifts.append("action")
+        if "introduce" in normalized or "setup" in normalized or "return" in normalized or "arrival" in normalized:
+            emotional_shifts.append("setup")
+
+    if "action" in emotional_shifts and "aftermath" not in emotional_shifts:
+        warnings.append(
+            "Scene decomposition may have collapsed aftermath/reveal material into action scenes; no aftermath-like scene language detected."
+        )
+
+    return warnings
+
+
+def _extract_clip_beat_refs(markdown: str) -> set[str]:
+    refs: set[str] = set()
+    for match in re.finditer(r"BT\d{3}", markdown.upper()):
+        refs.add(match.group(0))
+    return refs
+
+
+def _scene_allows_single_clip(scene_markdown: str) -> bool:
+    normalized = scene_markdown.lower()
+    return "single-shot" in normalized or "single shot" in normalized
+
+
+def _validate_scene_duration_sanity(
+    *,
+    scene_id: str,
+    beat_ids: list[str],
+    clip_ids: list[str],
+) -> list[str]:
+    warnings: list[str] = []
+    estimated_duration_seconds = len(clip_ids) * 5
+
+    if len(beat_ids) >= 4 and estimated_duration_seconds < 15:
+        warnings.append(
+            f"{scene_id} may be under-covered: {len(beat_ids)} beats mapped to only {len(clip_ids)} clips (~{estimated_duration_seconds}s)."
+        )
+
+    if len(clip_ids) >= 10 and estimated_duration_seconds > 60:
+        warnings.append(
+            f"{scene_id} may be over-segmented: {len(clip_ids)} clips (~{estimated_duration_seconds}s)."
+        )
+
+    return warnings
+
+
+def _validate_clip_plan(
+    *,
+    scene_id: str,
+    scene_markdown: str,
+    beat_ids: list[str],
+    clip_ids: list[str],
+    clip_markdowns: dict[str, str],
+    roster_markdown: str,
+    strict_missing_beats: bool = False,
+) -> list[str]:
+    warnings: list[str] = []
+
+    if len(clip_ids) < 2 and not _scene_allows_single_clip(scene_markdown):
+        raise LMStudioError(
+            f"Clip plan for {scene_id} produced only {len(clip_ids)} clip(s), but the scene is not marked as a valid single-shot scene."
+        )
+
+    covered_beats: set[str] = set()
+    for markdown in clip_markdowns.values():
+        covered_beats.update(_extract_clip_beat_refs(markdown))
+
+    missing_beats = [beat_id for beat_id in beat_ids if beat_id not in covered_beats]
+    if missing_beats:
+        message = (
+            f"Clip plan for {scene_id} does not explicitly reference all beats. Missing beat refs: {', '.join(missing_beats)}"
+        )
+        if strict_missing_beats:
+            raise LMStudioError(message)
+        warnings.append(message)
+
+    roster_ids = re.findall(r"\bCL\d{3}\b", roster_markdown.upper())
+    if roster_ids and len(set(roster_ids)) != len(clip_ids):
+        warnings.append(
+            f"Clip roster / clip file parity mismatch in {scene_id}: roster shows {len(set(roster_ids))} clip ids but {len(clip_ids)} clip files were created."
+        )
+
+    if len(beat_ids) >= 3 and len(clip_ids) == 1:
+        raise LMStudioError(
+            f"Clip plan for {scene_id} compressed {len(beat_ids)} beats into a single clip, which is not allowed."
+        )
+
+    warnings.extend(
+        _validate_scene_duration_sanity(
+            scene_id=scene_id,
+            beat_ids=beat_ids,
+            clip_ids=clip_ids,
+        )
+    )
+    return warnings
+
+
 def _parse_packet_bool(value: str) -> bool:
     normalized = value.strip().lower()
     if normalized in {"true", "yes", "1"}:
@@ -2096,7 +2434,17 @@ def _normalize_beat_id(value: str) -> str:
     return normalized
 
 
-def _normalize_clip_id(value: str) -> tuple[str, str | None]:
+def _is_hierarchical_clip_id(value: str) -> bool:
+    normalized = value.strip().upper().replace("-", "_").replace(" ", "")
+    return bool(re.fullmatch(r"CL(?:IP)?_?\d{1,3}_(\d{1,3}|[A-Z])", normalized))
+
+
+def _normalize_clip_id(
+    value: str,
+    *,
+    promoted_hierarchical_map: dict[str, str] | None = None,
+    hierarchical_sequence_seen: int = 0,
+) -> tuple[str, str | None]:
     original = value.strip()
     normalized = original.upper().replace("-", "_").replace(" ", "")
 
@@ -2106,21 +2454,30 @@ def _normalize_clip_id(value: str) -> tuple[str, str | None]:
     plain_number_match = re.fullmatch(r"\d{1,3}", normalized)
     compound_number_match = re.fullmatch(r"(\d{1,3})_(\d{1,3})", normalized)
 
-    if plain_number_match:
+    warning = None
+    if subclip_match:
+        if promoted_hierarchical_map is None:
+            promoted_hierarchical_map = {}
+        if normalized not in promoted_hierarchical_map:
+            promoted_hierarchical_map[normalized] = f"CL{hierarchical_sequence_seen + 1:03d}"
+        coerced = promoted_hierarchical_map[normalized]
+        warning = (
+            f"Promoted hierarchical clip id '{value}' to top-level canonical clip id '{coerced}'."
+        )
+    elif plain_number_match:
         coerced = f"CL{int(normalized):03d}"
     elif direct_match:
         coerced = f"CL{int(direct_match.group(1)):03d}"
-    elif subclip_match:
-        coerced = f"CL{int(subclip_match.group(1)):03d}"
     elif suffixed_match:
         coerced = f"CL{int(suffixed_match.group(1)):03d}"
+        warning = f"Normalized suffixed non-canonical clip id '{value}' to '{coerced}'."
     elif compound_number_match:
         coerced = f"CL{int(compound_number_match.group(1)):03d}"
+        warning = f"Normalized compound non-canonical clip id '{value}' to '{coerced}'."
     else:
         raise LMStudioError(f"Invalid clip id returned by LM Studio: {value}")
 
-    warning = None
-    if coerced != original.upper():
+    if warning is None and coerced != original.upper():
         warning = f"Normalized non-canonical clip id '{value}' to '{coerced}'."
     return validate_clip_id(coerced), warning
 

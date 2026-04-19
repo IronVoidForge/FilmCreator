@@ -5,54 +5,57 @@ CH008_SC001 CL004 Keyframe Prompt
 CH008_SC001_CL004_keyframe_prompt
 
 # Purpose
-Establish sudden halt and reverse movement of procession upon entering open ground. Capture shift from anticipation to urgency within wide composition.
+Establish John Carter's perspective and emotional state as he watches air craft descend from an upper floor window. Capture the shift from curiosity to growing concern/anticipation. Frame the boundary between built structures (window) and open valley floor below. Include observer figure reacting to distant aerial threat source visible in background. City architecture frames edges. Open ground horizon visible ahead. Dramatic lighting emphasizes urgency of enemy airship threat.
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Wide static shot of armored procession halting abruptly on boundary between built structures and open valley floor. Central column of warriors in green attire pivots toward rearward direction. Observer figure positioned at rear reacts to elevated command signal source visible above terrain. City architecture frames left and right edges. Open ground horizon visible ahead. Dramatic lighting emphasizes urgency.
+Close-up static shot of John Carter at upper floor window, face and upper torso visible. Window frame edge visible on left side. Background shows valley below with distant hills. Expression shifts to growing concern/anticipation. Lighting is daylight with smoke haze from battle. No motion blur. High resolution. Cinematic composition.
 
 # Negative Prompt
-Motion blur, moving forward, running, chaotic crowd, modern clothing, bright daylight, sunny sky, empty background, distorted anatomy, extra limbs, text, watermark, signature, low resolution, blurry face, green screen, cartoonish style.
+Motion blur, moving forward, running, chaotic crowd, modern clothing, bright sunny sky, empty background, distorted anatomy, extra limbs, text, watermark, signature, low resolution, blurry face, green screen, cartoonish style, proper nouns, names, specific character IDs, armored procession, warriors in green attire pivoting.
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: CH008_SC001
 - clip_id: CL004
 - duration_seconds: 5
-- required_refs: BT002.md
-- optional_refs: CH008_SC001_scene_breakdown
-- visible_character_assets: Carter rear_position, Warriors central_column
-- look_continuity_policy: 
-- intended_lighting_change: 
-- composition_type: wide_halt_reverse
-- continuity_mode: reframe_same_moment
-- starting_keyframe_strategy: static_opening_with_full_procession_visible_before_movement_change
+- required_refs: BT001.md
+- optional_refs: None
+- visible_character_assets: John Carter (upper torso, face), window frame partial
+- look_continuity_policy: static_opening_with_full_procession_visible_before_movement_change
+- intended_lighting_change: dramatic_fire_illumination_emphasizing_urgency
+- composition_type: close_up_face_window_frame_edge
+- continuity_mode: reblock_same_scene
+- starting_keyframe_strategy: static_hold
 - dependency_policy: dependent_on_CL003_reaction_clip_first
-- auto_advance_policy: 
-- fallback_strategy: 
-- consistency_assist_policy: 
-- consistency_assist_method: 
-- anatomy_repair_policy: 
-- consistency_targets: 
-- style_profile: 
-- batch_role: 
-- fix_of: 
+- auto_advance_policy: none
+- fallback_strategy: standard_static_frame_generation
+- consistency_assist_policy: enabled
+- consistency_assist_method: anatomical_correction_and_lighting_match
+- anatomy_repair_policy: strict_anatomical_integrity
+- consistency_targets: green_attire_color_palette, gray_structure_tone, elevated_command_signal_visibility
+- style_profile: cinematic_compositional
+- batch_role: keyframe_generation
+- fix_of: none
 - workflow_type: still.scene_build.four_ref.klein.distilled
+- shared_character_refs: empty_list
+- shared_environment_refs: deserted_city_buildings, city_plaza
 
 # Continuity Notes
-- Procession must fully cross threshold before halt command executes.
-- Reverse movement must be coordinated toward city boundary.
-- Command signal source must remain visible in elevated position.
-- Character placement maintains rear observer at back, warriors in central column.
-- Lighting continuity matches previous reaction clip.
+- Window frame must be visible on left edge to establish location.
+- Carter's expression should shift from curiosity to concern over 5 seconds.
+- Background valley/hills must remain stable for continuity with other shots.
+- Lighting must match daylight with smoke haze from battle scene.
+- Ensure no motion blur artifacts in static image generation.
 
 # Repair Notes
-- Ensure static image quality without motion blur artifacts.
-- Correct any anatomical distortions on warrior armor or observer figure.
-- Maintain consistent color palette for green attire and gray structures.
-- Verify command signal visibility matches elevated source reference.
+- Correct any anatomical distortions on John Carter's face or upper torso.
+- Remove any text, watermarks, or signatures from the frame.
+- Ensure no modern clothing elements appear in the scene.
+- Check that the open ground horizon is clearly visible without obstruction.
+- Confirm dramatic lighting emphasizes urgency without overexposing details.
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC001/CL004.md
