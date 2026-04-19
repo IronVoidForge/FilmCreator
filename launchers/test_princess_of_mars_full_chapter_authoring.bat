@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-set "FILMCREATOR_ROOT=C:\FilmCreator"
+for %%I in ("%~dp0..") do set "FILMCREATOR_ROOT=%%~fI"
 
 if not exist "%FILMCREATOR_ROOT%" (
     echo Missing FilmCreator root: %FILMCREATOR_ROOT%
@@ -34,12 +34,12 @@ if errorlevel 1 goto :fail
 
 echo.
 echo If this worked, inspect:
-echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\world\
-echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\scene_breakdowns\
-echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\beat_bundles\
-echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\clip_plans\
-echo   C:\FilmCreator\projects\princess_of_mars_test\03_prompt_packages\
-echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\logs\
+echo   %FILMCREATOR_ROOT%\projects\princess_of_mars_test\02_story_analysis\world\
+echo   %FILMCREATOR_ROOT%\projects\princess_of_mars_test\02_story_analysis\scene_breakdowns\
+echo   %FILMCREATOR_ROOT%\projects\princess_of_mars_test\02_story_analysis\beat_bundles\
+echo   %FILMCREATOR_ROOT%\projects\princess_of_mars_test\02_story_analysis\clip_plans\
+echo   %FILMCREATOR_ROOT%\projects\princess_of_mars_test\03_prompt_packages\
+echo   %FILMCREATOR_ROOT%\projects\princess_of_mars_test\02_story_analysis\logs\
 pause
 exit /b 0
 
