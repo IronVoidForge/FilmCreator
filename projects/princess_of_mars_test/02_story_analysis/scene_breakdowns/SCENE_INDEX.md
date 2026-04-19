@@ -1,5 +1,8 @@
-SC001 | Introduction - Narrator's backstory as an immortal old man
-SC002 | Mine and Departure - Gold vein discovery, Powell leaves for machinery
-SC003 | The Chase - Carter investigates vanishing trail, pursues ponies through valley
-SC004 | Discovery and Escape - Finds Powell dead in Apache camp, charges in, escapes into cave
-SC005 | The Cave - Enters cave chamber, lays Powell down, collapses from exhaustion
+# Chapter V Scene Index
+
+| Scene ID | Title | Summary |
+| :--- | :--- | :--- |
+| SC001 | Observation & Environment Setup | Narrator observes room details, paintings, and food after Sola departs. |
+| SC002 | Care & Security Interaction | Sola returns with supplies; narrator eats, sleeps, and wakes to find coverings replenished. |
+| SC003 | Loyalty Test & Action Climax | Narrator tests Watch Dog loyalty by leaving room; leaps over dog at city edge. |
+| SC004 | Reveal & Resolution | Narrator dragged back by huge hand; faces colossal ape-like creature standing over him. |

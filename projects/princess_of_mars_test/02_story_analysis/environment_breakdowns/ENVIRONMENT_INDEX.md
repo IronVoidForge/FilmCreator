@@ -1,25 +1,25 @@
-# Environment Index - Chapter II
+# Environment Index - Chapter V
 
-## Cave Interior (Primary Setting)
-- Role: Primary setting throughout chapter
-- Architecture: Stone cave walls, floor, recesses
-- Lighting: Early morning sun through opening, moonlight floods interior
-- Atmosphere: Vapor tenuous against opening, pungent odor, midnight silence, black shadows
-- Scale: Short trail visible between cave and cliff turn, narrow ledge outside
-- Anchors: Cave opening, cave floor, cave wall
+## chamber_room
+- Role: Primary setting
+- Architecture: Interior space with floor for food/drink placement, sleeping silks/furs, window sill ~30 feet from ground
+- Lighting/Atmosphere: Cold Martian nights visible through window, rapid moon movement (one every 7.5 hours)
+- Scale: Large enough to contain Watch Dog full length across threshold
 
-## Cave Opening/Ledge Transition (Transit Setting)
-- Role: Transit setting between interior and exterior
-- Architecture: Cave mouth, cliff shoulder, narrow ledge
-- Lighting: Early morning sun falls full upon protagonist through opening, starlight of clear Arizona night
-- Atmosphere: Crisp fresh mountain air outside acts as immediate tonic
-- Scale: Vista stretches far below with beautiful rocky gorge, level cacti-studded flat
-- Anchors: Opening threshold, cliff edge, ledge brink
+## threshold_guarded
+- Role: Transit setting / Guarded boundary
+- Architecture: Doorway/threshold with floor space for food/drink placement
+- Lighting/Atmosphere: Cold drafts partially dislodge fur coverings, Watch Dog eyes glued upon narrator even while sleeping
+- Scale: Full length of Watch Dog lies across threshold initially
 
-## Arizona Desert Landscape (Secondary Setting)
-- Role: Secondary setting visible from cave opening
-- Geography: Rocky gorge, hog back, arroyo, silvered mountains in distance
-- Lighting: Moonlight creates soft splendor and wondrous enchantment across landscape
-- Atmosphere: Crisp fresh mountain air, starlight of clear Arizona night
-- Scale: Vista stretches far below, large red star close to distant horizon visible
-- Anchors: Hog back terrain, arroyo features, distant mountains
+## deserted_streets
+- Role: Transit setting / Exterior city
+- Architecture: Deserted streets outside the city
+- Lighting/Atmosphere: Cold Martian nights, rapid moon movement visible
+- Scale: Narrator follows ten paces behind Watch Dog before intercepting at city edge
+
+## window_sill_valley
+- Role: Secondary setting / Observation point
+- Architecture: Window sill overlooking valley approximately thirty feet from ground
+- Lighting/Atmosphere: Valley view through window, cold Martian nights
+- Scale: High vantage point ~30 feet above ground

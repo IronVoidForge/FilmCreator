@@ -1,24 +1,11 @@
-# Project Summary: Princess of Mars Test
+# Project Context: Martian Captivity Arc
 
-## Core Setting
-The story unfolds in Arizona's mountainous terrain, centered around a cave with an opening to daylight and a trail leading through rocky gorge. The protagonist occupies this cave as a temporary living space, with a horse tethered outside and a friend's body placed on the ledge within vision range.
+**Setting:** The narrative takes place within a dwelling in a Martian city, characterized by silks, furs, and thin atmospheric conditions. The environment features green vegetation with distinct colorings compared to Earth, and is illuminated by two moons that cycle rapidly through the night sky.
 
-## Main Character Profile
-The protagonist is a fighting man accustomed to combat for survival, possessing a powerful physique. He wears revolvers strapped to his person and carries a carbine in a boot mounted on his saddle. His vocation involves warfare, with Mars holding special significance as the god of war that has always held irresistible enchantment for him.
+**Key Characters:**
+*   **The Narrator:** A human captive possessing high jumping ability and a propensity for adventure/experimentation.
+*   **Sola:** A Martian female who serves as the primary caretaker, displaying sympathy, kindliness, and unfailing ministrations to the narrator's needs.
+*   **Watch Dog:** A ferocious, short-legged brute used for protection and hunting. It is loyal but physically distinct from human or Earth animals.
+*   **Ape-like Creature:** A colossal, white, hairless entity with a bristly head shock, appearing as a guardian or overseer within the room.
 
-## Key Story Elements
-- Paralysis phenomenon: Protagonist experiences sudden inability to move while retaining mental faculties
-- Unknown presence: An unseen entity within the cave causes terror among Apache warriors who flee in panic
-- Body transformation: Protagonist's physical state changes from clothed to naked during paralysis episode
-- Space transition: The narrative moves from Arizona landscape through space toward Mars
-
-## Visual Continuity Facts
-- Cave opening faces daylight trail with short stretch between cave and cliff turn
-- Apache warriors positioned on narrow ledge outside cave, unable to pass each other
-- Horse stands with dragging rein before cave entrance
-- Friend's body placed on ledge within protagonist's range of vision
-- Moonlight floods cave interior during key transformation scene
-- Arizona landscape features rocky gorge, cacti-studded flat, silvered mountains in distance
-
-## Narrative Arc
-The story progresses from paralysis-induced fear through mysterious presence discovery, to physical transformation realization, escape into open space, and final attraction toward Mars. The protagonist's journey moves from terrestrial danger to cosmic destination with the chapter ending during space transition.
+**Core Themes:** Survival under alien conditions, observation of Martian biology and culture, and the tension between captivity and escape attempts. The project focuses on the narrator's adaptation to the Martian environment and the specific behaviors of their non-human guardians.

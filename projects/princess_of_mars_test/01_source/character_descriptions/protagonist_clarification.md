@@ -4,10 +4,10 @@
 protagonist
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Character is unnamed and lacks specific visual details for image generation.
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+What is the protagonist's name and physical appearance?
 
 # Guidance
 - answer briefly and concretely

@@ -4,10 +4,10 @@
 the_narrator
 
 # Why This Needs Clarification
-The extracted character id appears generic or role-based rather than clearly canonical.
+Character may already exist under another name or is too weakly identified; need clarification about species, age, and appearance
 
 # Question
-This character is named or role-labeled but not fully identified. Can you find a stronger canonical identity from another chapter, or should FilmCreator keep this as a scene-local provisional character?
+Is the narrator a human male character? What are their approximate age, height, and distinguishing physical features?
 
 # Guidance
 - answer briefly and concretely
