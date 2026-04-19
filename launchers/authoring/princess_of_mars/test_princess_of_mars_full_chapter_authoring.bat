@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-for %%I in ("%~dp0..") do set "FILMCREATOR_ROOT=%%~fI"
+for %%I in ("%~dp0..\..") do set "FILMCREATOR_ROOT=%%~fI"
 
 if not exist "%FILMCREATOR_ROOT%" (
     echo Missing FilmCreator root: %FILMCREATOR_ROOT%

@@ -28,7 +28,7 @@ if not exist "%FILMCREATOR_ROOT%\%REF_CHAR%" (
 powershell -NoProfile -ExecutionPolicy Bypass -Command "try { $null = Invoke-WebRequest -UseBasicParsing '%COMFY_URL%' -TimeoutSec 3; exit 0 } catch { exit 1 }"
 if not "%ERRORLEVEL%"=="0" (
     echo Clean ComfyUI is not reachable on 127.0.0.1:8190.
-    echo Run launchers\start_render_terminals_clean_8190.bat first, then retry this file.
+    echo Run launchers\render\clean_8190\start_render_terminals_clean_8190.bat first, then retry this file.
     exit /b 1
 )
 
