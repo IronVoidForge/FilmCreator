@@ -365,11 +365,11 @@ def test_authoring_checkpoint_writes_analysis_planning_and_manual_character_plac
     summary = story_authoring_module.authoring_checkpoint(
         project_slug="demo",
         chapter="CH001_demo.md",
-        scene_id="SC001",
+        scene_id="CH001_SC001",
     )
 
     assert summary.analysis.chapter_id == "CH001"
-    assert summary.analysis.scene_ids == ["SC001"]
+    assert summary.analysis.scene_ids == ["CH001_SC001"]
     assert len(summary.analysis.manual_character_description_requests) == 1
     manual_request = summary.analysis.manual_character_description_requests[0]
     assert manual_request.asset_id == "dejah_thoris"
@@ -381,13 +381,13 @@ def test_authoring_checkpoint_writes_analysis_planning_and_manual_character_plac
     assert (projects_root / "demo" / "01_source" / "character_descriptions" / "legacy_extra_manual_description.md").exists() is False
     assert (projects_root / "demo" / "01_source" / "character_descriptions" / "archivist_manual_description.md").exists()
 
-    assert summary.planning.scene_id == "SC001"
+    assert summary.planning.scene_id == "CH001_SC001"
     assert summary.planning.beat_ids == ["BT001", "BT002", "BT003"]
     assert summary.planning.clip_ids == ["CL001", "CL002"]
-    assert (projects_root / "demo" / "02_story_analysis" / "scene_breakdowns" / "SC001.md").exists()
-    assert (projects_root / "demo" / "02_story_analysis" / "beat_bundles" / "SC001" / "BT001.md").exists()
-    assert (projects_root / "demo" / "02_story_analysis" / "clip_plans" / "SC001" / "CL001.md").exists()
-    assert (projects_root / "demo" / "02_story_analysis" / "clip_plans" / "SC001" / "CL002.md").exists()
+    assert (projects_root / "demo" / "02_story_analysis" / "scene_breakdowns" / "CH001_SC001.md").exists()
+    assert (projects_root / "demo" / "02_story_analysis" / "beat_bundles" / "CH001_SC001" / "BT001.md").exists()
+    assert (projects_root / "demo" / "02_story_analysis" / "clip_plans" / "CH001_SC001" / "CL001.md").exists()
+    assert (projects_root / "demo" / "02_story_analysis" / "clip_plans" / "CH001_SC001" / "CL002.md").exists()
     assert (projects_root / "demo" / "02_story_analysis" / "scene_breakdowns" / "SC001_airship_attack_and_captive_reveal.md").exists() is False
     assert (projects_root / "demo" / "02_story_analysis" / "character_breakdowns" / "the_narrator.md").exists() is False
     assert (projects_root / "demo" / "02_story_analysis" / "environment_breakdowns" / "ancient_city_reference.md").exists() is False
@@ -406,9 +406,9 @@ def test_authoring_checkpoint_writes_analysis_planning_and_manual_character_plac
         / "demo"
         / "03_prompt_packages"
         / "keyframes"
-        / "SC001"
+        / "CH001_SC001"
         / "CL001"
-        / "SC001_CL001_keyframe_prompt.md"
+        / "CH001_SC001_CL001_keyframe_prompt.md"
     )
     assert clip_keyframe_prompt.purpose == "keyframe purpose"
     assert "projects/demo/02_story_analysis/character_breakdowns/CHARACTER_INDEX.md" in clip_keyframe_prompt.sources
