@@ -4,10 +4,10 @@
 apache_warriors
 
 # Why This Needs Clarification
-Need to know if this is a specific named group or generic Apache warriors - currently identified only by cultural affiliation without stable character names
+Group reference is insufficient for individual image generation. Need clarification on whether depicting group or individuals, and what distinguishing features apply to the collective or specific members.
 
 # Question
-Are these specific named Apache characters or generic warriors? Do any have individual canonical names beyond "Apache warrior"?
+Should this be depicted as a group scene or individual warriors? What are their physical characteristics (build, facial features, hair, eyes)? What clothing or gear do they wear? Are there any distinctive marks, accessories, or cultural identifiers visible?
 
 # Guidance
 - answer briefly and concretely

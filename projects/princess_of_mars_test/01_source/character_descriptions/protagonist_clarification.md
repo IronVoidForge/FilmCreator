@@ -4,10 +4,10 @@
 protagonist
 
 # Why This Needs Clarification
-Character is unnamed and lacks specific visual details for image generation.
+Protagonist is unnamed in source material; need to determine if actual name exists in broader work
 
 # Question
-What is the protagonist's name and physical appearance?
+What is the protagonist's actual name in the source material?
 
 # Guidance
 - answer briefly and concretely

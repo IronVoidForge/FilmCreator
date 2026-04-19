@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-powell
+apache_warrior
 
 # Why This Needs Clarification
-Character is deceased companion but lacks stable identification for image generation. Need physical description, distinguishing features, and visual continuity notes before collapse.
+Multiple unnamed individuals referenced; need to determine if specific warrior names exist in source material or if this is purely group reference
 
 # Question
-What are Powell's physical characteristics (age appearance, build, facial features, hair, eyes)? What clothing or gear does he wear? Are there any distinctive marks or accessories?
+Do any specific Apache Warrior names exist in the source material, or are they all unnamed group members?
 
 # Guidance
 - answer briefly and concretely

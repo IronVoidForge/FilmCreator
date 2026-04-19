@@ -1,26 +1,28 @@
-# Chapter II: Scene Decomposition Summary
+# Chapter II Summary: The Escape of the Dead
 
-## Scene 1: Paralysis in Cave (Opening)
-**Visual Continuity:** Protagonist lies facing cave opening, muscles refuse to respond to will despite mental awareness. Short trail visible between cave and cliff turn. Apache warriors positioned on narrow ledge outside, unable to pass each other. Horse with dragging rein stands before cave entrance. Friend's body within vision range on ledge.
+## Scene 1: Paralysis Discovery (Early Morning)
+Protagonist experiences paralysis in cave - muscles refuse to respond while mental faculties intact. Notices vapor filling cave, pungent odor suggesting poisonous gas. Lying facing cave opening with short trail stretch visible between cave and cliff turn. Horse standing before cave entrance with dragging rein.
 
-**Story Beat:** Protagonist experiences paralysis while retaining mental faculties. Attempts to spring to feet but muscles refuse response. Notices vapor filling cave (tenuous, only noticeable against opening). Faint pungent odor reaches nostrils. Assumes poisonous gas but cannot fathom why mental faculties remain while movement impossible.
+## Scene 2: Apache Warriors Arrive (Early Morning)
+Approaching horses noise ceases - Indians creeping stealthily along ledge toward protagonist's living tomb. War-bonneted, paint-streaked face appears around cliff shoulder with savage eyes. Warriors display awe and fear rather than aggression. Multiple faces craning over narrow ledge shoulders. Leaders pass whispered words to braves behind them.
 
-## Scene 2: Unknown Presence Frightens Warriors
-**Visual Continuity:** Apache warriors on narrow ledge outside cave. One brave's face appears around shoulder of cliff, savage eyes look into protagonist's. Early morning sun falls full upon protagonist through opening. Another and more faces appear craning necks over shoulders of fellows. Each face shows awe and fear.
+## Scene 3: Moaning Sound & Warrior Flight (Early Morning)
+Low distinct moaning sound issues from cave recesses behind protagonist. Indians turn and flee in terror, panic-stricken. One brave hurled headlong from cliff to rocks below. Wild cries echo in canyon briefly then stillness returns. Protagonist speculates on horror lurking in shadows at back.
 
-**Story Beat:** Stealthy sound apprises protagonist of warriors' nearness. War-bonneted, paint-streaked face cautiously appears around cliff shoulder. Warriors stand and stare with bulging eyes and dropped jaws. Unknown presence in cave recesses issues low moaning sound. Warriors turn and flee in terror, panic-stricken. One brave hurled headlong from cliff to rocks below. Wild cries echo in canyon then all still once more.
+## Scene 4: Paralysis Resolution (Late Afternoon)
+Horse wanders off trail searching for food and water. Protagonist left alone with mysterious unknown companion and dead body of friend on ledge. Silence maintained until midnight when awful moan breaks upon startled ears again. Protagonist makes superhuman effort to break bonds - feeling of nausea, sharp click like steel wire snapping. Stands facing unknown foe in moonlight.
 
-## Scene 3: Body Transformation Discovery
-**Visual Continuity:** Moonlight floods cave interior. Protagonist's body lies on cave floor with eyes staring toward open ledge and hands resting limply upon ground. Protagonist stands naked against wall of cave facing unknown foe. Earlier state was clothed while lying in cave hours.
+## Scene 5: Transformation Discovery (Midnight)
+Moonlight floods cave revealing protagonist's own body lying lifeless on floor with staring eyes and limply resting hands. Protagonist stands naked while previously clothed - complete metamorphosis. Heart pounding from exertion, cold sweat from every pore, pinching test confirms not wraith.
 
-**Story Beat:** Late afternoon horse starts slowly down trail searching for food and water. Protagonist left alone with mysterious unknown companion and dead body of friend within range of vision. Midnight silence broken by awful moan from black shadows. Sound of moving thing and faint rustling as of dead leaves heard. Protagonist makes superhuman effort to break bonds through mind, will, nerves—not muscular. Something gives with momentary nausea, sharp click like snapping steel wire. Protagonist stands with back against cave wall facing unknown foe. Discovers own body lying lifeless on floor while protagonist now naked and clothed simultaneously. Heart pounding from exertion, cold sweat from every pore, pinching reveals not wraith.
+## Scene 6: Escape Decision (Midnight to Early Morning)
+Protagonist naked and unarmed with no desire to face unseen thing menacing. Revolvers strapped to lifeless body cannot be touched. Carbine in boot strapped to saddle, horse wandered off leaving without defense. Only alternative is flight. Leaps through opening into starlight of clear Arizona night. Crisp mountain air acts as immediate tonic.
 
-## Scene 4: Escape into Arizona Night
-**Visual Continuity:** Protagonist leaps through opening into starlight of clear Arizona night. Crisp fresh mountain air outside acts as immediate tonic. Vista stretches far below with beautiful rocky gorge and level cacti-studded flat wrought by moonlight into soft splendor. Silvered mountains in distance, strange lights and shadows upon hog back and arroyo, grotesque details of stiff yet beautiful cacti form enchanting picture.
+## Scene 7: Landscape Investigation (Early Morning)
+Protagonist pauses on brink of ledge upbraiding unwarranted apprehension. Reasons nothing molested during helpless hours, better judgment convinces noises from natural causes - cave conformation causing breeze sounds. Decides to investigate but first lifts head to fill lungs with pure night air. Sees beautiful vista of rocky gorge and level cacti-studded flat wrought by moonlight into soft splendor.
 
-**Story Beat:** Protagonist left without means of defense—revolvers strapped to lifeless body cannot be touched, carbine in boot strapped to saddle, horse wandered off. Decision crystallized by recurrence of rustling sound from thing creeping stealthily upon protagonist in darkness. Unable longer to resist temptation to escape horrible place, leaps quickly through opening into starlight. Mountain air acts as immediate tonic with new life and courage coursing through. Pauses on brink of ledge, upbraids self for unwarranted apprehension. Better judgment convinces noises must have resulted from purely natural and harmless causes—probably cave conformation such that slight breeze caused sounds heard. Decides to investigate but first lifts head to fill lungs with pure invigorating night air.
+## Scene 8: Mars Encounter (Early Morning)
+Protagonist meditating on landscape turns gaze from scene to heavens where myriad stars form gorgeous canopy. Large red star close to distant horizon captures attention with overpowering fascination - identified as Mars, god of war. Star seems calling across unthinkable void, luring protagonist like lodestone attracting iron. Longing beyond opposition - closes eyes, stretches arms toward god of vocation.
 
-## Scene 5: Attraction to Mars (Chapter End)
-**Visual Continuity:** Protagonist stands meditating on landscape. Heavens where myriad stars form gorgeous and fitting canopy for earthly scene wonders. Large red star close to distant horizon visible. Moonlight creates soft splendor and wondrous enchantment across Arizona landscape.
-
-**Story Beat:** Protagonist turns gaze from landscape to heavens where myriad stars form gorgeous canopy. Attention riveted by large red star close to distant horizon. Feels spell of overpowering fascination—it is Mars, the god of war. For fighting man protagonist, Mars has always held power of irresistible enchantment. As gazes on that far-gone night, seems to call across unthinkable void, lure protagonist to it, draw him as lodestone attracts particle of iron. Longing beyond power of opposition. Closes eyes, stretches out arms toward god of vocation, feels self drawn with suddenness of thought through trackless immensity of space. Instant of extreme cold and utter darkness marks chapter end during space transition.
+## Scene 9: Space Transition (Early Morning)
+Protagonist feels drawn through trackless immensity of space with suddenness of thought. Instant of extreme cold and utter darkness marks transition point. Chapter ends at moment of space entry.

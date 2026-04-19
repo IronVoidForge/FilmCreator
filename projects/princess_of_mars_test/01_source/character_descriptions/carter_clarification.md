@@ -4,10 +4,10 @@
 carter
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Character is central to narrative but lacks stable identification for image generation. Need physical description, distinguishing features, and visual continuity notes.
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+What are Carter's physical characteristics (age appearance, build, facial features, hair, eyes)? What clothing or gear does he wear? Are there any distinctive marks or accessories?
 
 # Guidance
 - answer briefly and concretely

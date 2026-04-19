@@ -1,7 +1,8 @@
-# Character Index: CH018
+# Character Index - Chapter II
 
-| Character | Role | Visual ID Status | Description Source |
-| :--- | :--- | :--- | :--- |
-| **Narrator** | Protagonist / Prisoner | Incomplete | Actions only; no physical traits. |
-| **Dak Kova** | Former Jeddak / Warrior | Complete | Green skin, tusks, skull ornaments. |
-| **Bar Comas** | Jeddak of Warhoon / Ruler | Incomplete | Name only; no physical traits. |
+| Character | Status | Identification | Description Available |
+|-----------|--------|----------------|----------------------|
+| Protagonist | Main Character | Unnamed | No physical description provided |
+| Apache Warrior | Group Reference | Multiple unnamed individuals | Described as war-bonneted, paint-streaked faces |
+
+*Note: This chapter contains no specifically named characters. All references are either generic (Protagonist) or group-based (Apache Warriors/Indians/Braves).*
