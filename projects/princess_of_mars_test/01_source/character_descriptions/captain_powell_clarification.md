@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-apache_warriors
+captain_powell
 
 # Why This Needs Clarification
-Character is a group of multiple unnamed individuals without stable identification. Cannot determine if this refers to specific known Apache warriors or generic reference.
+The extracted character id appears generic or role-based rather than clearly canonical.
 
 # Question
-Does "Apache warriors" refer to specific named characters from established lore, or is this a generic group reference requiring manual description for each individual?
+This character is named or role-labeled but not fully identified. Can you find a stronger canonical identity from another chapter, or should FilmCreator keep this as a scene-local provisional character?
 
 # Guidance
 - answer briefly and concretely
