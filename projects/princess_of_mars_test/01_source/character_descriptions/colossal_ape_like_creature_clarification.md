@@ -4,10 +4,10 @@
 colossal_ape_like_creature
 
 # Why This Needs Clarification
-Character may already exist under another name (possibly Sola) or is too weakly identified; need clarification about identity and appearance
+The character is not fully identified from this chapter alone.
 
 # Question
-Is the colossal ape-like creature a separate entity from Sola, or is it Sola in some form? What are its approximate size, species, and distinguishing features?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

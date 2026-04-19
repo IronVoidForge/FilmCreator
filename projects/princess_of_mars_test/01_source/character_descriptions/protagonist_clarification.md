@@ -4,10 +4,10 @@
 protagonist
 
 # Why This Needs Clarification
-Protagonist is unnamed in source material; need to determine if actual name exists in broader work
+The character is not fully identified from this chapter alone.
 
 # Question
-What is the protagonist's actual name in the source material?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

@@ -4,10 +4,10 @@
 martian_leader
 
 # Why This Needs Clarification
-Character is unnamed.
+The character is not fully identified from this chapter alone.
 
 # Question
-What is the Martian Leader's name?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

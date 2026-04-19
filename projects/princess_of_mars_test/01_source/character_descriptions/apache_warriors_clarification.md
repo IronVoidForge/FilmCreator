@@ -4,10 +4,10 @@
 apache_warriors
 
 # Why This Needs Clarification
-Character is a group of multiple unnamed individuals without stable identification. Cannot determine if this refers to specific known Apache warriors or generic reference.
+The character is not fully identified from this chapter alone.
 
 # Question
-Does "Apache warriors" refer to specific named characters from established lore, or is this a generic group reference requiring manual description for each individual?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

@@ -1,10 +1,17 @@
-# Environment Index - CH001
+# Environment Index - Princess of Mars Chapter CH006
 
-## Extracted Environments
+## Chamber/Room (Primary Setting)
+- Role: Primary fight setting where protagonist is captured and battles bull apes
+- Architecture: Chamber with doorway entrance, windows with wooden casings, masonry walls
+- Lighting: Interior lighting with window light sources
+- Atmosphere: Tense combat environment, blood-stained struggle
+- Scale: Human-sized interior space, 10-15 foot tall bull apes operate within
+- Anchors: Doorway (entry point for Tars Tarkas/Sola), wooden window casings
 
-| Asset ID | Role | Primary Geography | Lighting/Atmosphere | Scale Anchors |
-|----------|------|-------------------|---------------------|---------------|
-| arizona_hills_valley_plateau | primary | Rolling hills, valley floor, elevated plateau | Clear Arizona morning light, dusty trails | Rocky ravines, jagged rock formations |
-| apache_tepee_camp | secondary | Apache tepee encampment under moonlight | Bright moonlight during night chase | Dense shadow in cave back |
-| narrow_gorge_defile | transit | Narrow gorge with defile entrance | Sudden daylight without warning | 4ft high, 3-4ft wide cave mouth |
-| cave_mouth_interior | resolution | Cave interior with collapsed wall | Dim light from cave entrance | Exhaustion against wall anchor |
+## Plaza (Secondary Setting)
+- Role: Transit/return setting where protagonist and companions arrive after fight
+- Architecture: Open plaza space, exterior environment
+- Lighting: Natural daylight
+- Atmosphere: Public gathering space, celebratory mood with warriors applauding
+- Scale: Larger open area compared to chamber interior
+- Anchors: Entry from chamber doorway, beast following at heel

@@ -4,10 +4,10 @@
 narrator
 
 # Why This Needs Clarification
-The character record indicates clarification is needed, but LM Studio did not supply a reason.
+The extracted character id appears generic or role-based rather than clearly canonical.
 
 # Question
-What is the physical appearance of the narrator?
+This character is named or role-labeled but not fully identified. Can you find a stronger canonical identity from another chapter, or should FilmCreator keep this as a scene-local provisional character?
 
 # Guidance
 - answer briefly and concretely
