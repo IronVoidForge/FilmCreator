@@ -5,52 +5,53 @@ CH008_SC002 CL008 Fix 01 Prompt
 CH008_SC002_CL008_fix_01_prompt
 
 # Purpose
-Resolve scene through wide shot showing ship being towed away with finality. Maintain continuity with burning ship state from BT007. Ensure Martians operate towing equipment while Narrator observes from window POV.
+Correct focus from salvage/towing to crew realignment and broadside firing on a damaged ship. Maintain continuity with battle state (smoke, fire damage). Ensure Martians operate weapons while Narrator observes from window POV context.
 
 # Workflow Type
 still.scene_insert.two_ref.klein.distilled
 
 # Positive Prompt
-Wide shot, valley city background, gray warship fully consumed by fire but being towed away, Martian figures operating towing equipment, Narrator POV from window secondary ref, dramatic fire illumination mixed with daylight, deserted buildings in valley, hills beyond horizon.
+Medium shot of damaged gray warship swinging broadside across valley, crew members shifting to new firing positions, weapons elevated and realigned, hull scorched with visible thruster sway, smoke trails rising, daylight mixed with fire illumination, distant hills beyond horizon, city buildings in background.
 
 # Negative Prompt
-No crew on ship, no undamaged ships visible, no sudden movement breaking continuity, no modern elements, no excessive smoke obscuring the ship entirely, no green Martian anatomy errors, no floating debris unrelated to salvage.
+No undamaged ships visible, no towing equipment deployed, no modern elements, no excessive smoke obscuring the ship entirely, no green Martian anatomy errors, no floating debris unrelated to battle, no sudden movement breaking continuity.
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: CH008_SC002
 - clip_id: CL008
 - duration_seconds: 5.0
-- required_refs: Ship fully consumed by fire, towing equipment deployed, ship moving away from building
+- required_refs: Damaged ship hull, crew realignment positions
 - optional_refs: Window frame
-- visible_character_assets: 
-- look_continuity_policy: 
-- intended_lighting_change: 
-- composition_type: Wide/POV
-- continuity_mode: cutaway
-- starting_keyframe_strategy: static_hold
-- dependency_policy: linear_sequence
-- auto_advance_policy: 
-- fallback_strategy: cut_to_previous_angle
-- consistency_assist_policy: 
+- visible_character_assets: Crew members on ship
+- look_continuity_policy: Maintain battle damage state
+- intended_lighting_change: Fire glow mixed with daylight
+- composition_type: Medium shot
+- continuity_mode: reframe_same_moment
+- starting_keyframe_strategy: slight sway on damaged thrusters
+- dependency_policy: parallel to wide shot for coverage
+- auto_advance_policy: none
+- fallback_strategy: insert crew adjusting angles if movement erratic
+- consistency_assist_policy: maintain weapon alignment
 - consistency_assist_method: 
-- anatomy_repair_policy: 
+- anatomy_repair_policy: correct green Martian features
 - consistency_targets: 
-- style_profile: 
-- batch_role: 
+- style_profile: cinematic_compositional
+- batch_role: fix_01
 - fix_of: 
 
 # Continuity Notes
-- Only the one being towed should be prominent in frame
-- Martians engaged in towing not just standing
-- Narrator position window POV consistent with previous beats
-- Fire intensity allows visibility for towing action
+- Focus on crew movement and weapon alignment, not salvage operations.
+- Ship is damaged but maneuverable (thruster sway).
+- Maintain battle damage state (scorched hull, smoke).
+- Ensure visibility of firing positions despite smoke.
+- Window frame context consistent with observer POV from previous beats.
 
 # Repair Notes
-- Ensure ship is clearly moving away across valley floor
-- Fire intensity matches BT007 climax but allows visibility for towing
-- Martians engaged in towing not just standing around fire
-- Avoid anatomy errors on Martian figures operating equipment
+- Correct the focus from towing/salvage to active engagement/realignment.
+- Ensure ship rotation mechanism or thruster sway is visible.
+- Avoid anatomy errors on Martian figures operating equipment.
+- Maintain continuity with previous beats regarding fire intensity and damage.
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC002/CL008.md

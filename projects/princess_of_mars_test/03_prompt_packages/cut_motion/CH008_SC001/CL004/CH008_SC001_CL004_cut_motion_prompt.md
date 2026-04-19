@@ -5,7 +5,7 @@ CH008_SC001 CL004 Cut Motion Prompt
 CH008_SC001_CL004_cut_motion_prompt
 
 # Purpose
-Describe the cut beat, framing, and continuity intent for this clip. Establish John Carter's growing concern/anticipation as he watches air craft descend from upper floor window. Focus on subtle emotional shifts in facial expression and minimal posture movement reflecting anticipation.
+Describe the cut beat, framing, and continuity intent for this clip. Establish John Carter's growing concern/anticipation as he watches air craft descend from upper floor window. Focus on subtle emotional shifts in facial expression and minimal posture movement reflecting anticipation. Window frame serves as visual boundary maintaining spatial consistency with previous shot. Background valley/hills remain stable for continuity tracking across all frames.
 
 # Workflow Type
 video.cut_motion.wan.i2v

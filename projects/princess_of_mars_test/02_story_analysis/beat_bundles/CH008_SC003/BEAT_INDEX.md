@@ -1,8 +1,18 @@
-**BT001 - Plaza Arrival**
-Purpose: Establish group returning to plaza and Narrator's observational position. Start state: Group approaches plaza from distance. End state: Group fully visible in plaza center. Character placement: Martians form V-shape formation, Narrator positioned at edge of frame observing. Geography/axis: Camera at 45-degree angle to approach path. Coverage families: Medium shots, wide establishing.
+# CH008_SC003 Beat Index
 
-**BT002 - Captive Discovery**
-Purpose: Reveal Earthling captive being dragged and her signaling for help. Start state: Group stops at building entrance. End state: Captive fully visible in frame, naked with copper skin and black hair. Character placement: Captive positioned center of action, Martians flanking sides. Geography/axis: Close-up eyeline on captive's face and body. Coverage families: Extreme close-ups, medium shots of dragging action.
+## Available Beats for Scene Coverage Planning
 
-**BT003 - Cultural Response Failure**
-Purpose: Show Narrator's failure to respond due to ignorance of customs. Start state: Captive signals for help with hand gestures. End state: Martians drag captive into building, Narrator remains silent. Character placement: Narrator fixed in position, no movement toward action. Geography/axis: POV shots from Narrator's perspective showing lack of response. Coverage families: Over-the-shoulder shots, reaction close-ups.
+### BT001 - Boarding Action Beat
+**Purpose:** Warriors approach and board drifting craft  
+**Coverage Families:** Tracking shots of drifting craft, close-ups on boarding action  
+**Continuity Notes:** Bodies strewn about, no sign of life
+
+### BT002 - Haul to Ground Beat  
+**Purpose:** Drag prisoner from craft to ground  
+**Coverage Families:** Medium shot of prisoner being dragged  
+**Continuity Notes:** Creature less than half as tall, walks erect
+
+### BT003 - Discovery Beat
+**Purpose:** Warriors discover the prisoner  
+**Coverage Families:** Close-ups on boarding action, medium shots  
+**Continuity Notes:** Building south of position, plain environment

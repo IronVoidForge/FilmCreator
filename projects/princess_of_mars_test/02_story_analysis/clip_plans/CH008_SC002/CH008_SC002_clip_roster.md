@@ -1,10 +1,13 @@
-| Clip ID | Beat Index | Composition | Duration (s) | Continuity Mode |
-| :--- | :--- | :--- | :--- | :--- |
-| CL001 | BT001 | POV/Wide | 5.0 | reblock_same_scene |
-| CL002 | BT002 | Medium/Close-up | 5.0 | reframe_same_moment |
-| CL003 | BT003 | Wide/Medium | 5.0 | insert |
-| CL004 | BT004 | Wide/Medium | 5.0 | cutaway |
-| CL005 | BT005 | Wide/Medium | 5.0 | reblock_same_scene |
-| CL006 | BT006 | Extreme Close-up | 5.0 | insert |
-| CL007 | BT007 | Wide/Medium/POV | 5.0 | reframe_same_moment |
-| CL008 | BT008 | Wide/POV | 5.0 | cutaway |
+# Clip Roster for CH008_SC002
+
+| Clip ID | Beat Index | Shot Description | Duration Target |
+| :--- | :--- | :--- | :--- |
+| CL001 | BT001 | Wide two-shot of warriors firing | 5s |
+| CL002 | BT001 | Close-up on weapon discharge | 5s |
+| CL003 | BT001 | Reaction shot of fleet impact | 5s |
+| CL004 | BT002 | Medium shot of crew firing | 5s |
+| CL005 | BT002 | Close-up on weapon muzzle flash | 5s |
+| CL006 | BT002 | Wide shot of fire arcs | 5s |
+| CL007 | BT003 | Wide shot of fleet formation change | 5s |
+| CL008 | BT003 | Medium shot of crew realignment | 5s |
+| CL009 | BT003 | Close-up on ship rotation mechanism | 5s |

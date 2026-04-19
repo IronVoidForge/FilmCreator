@@ -5,47 +5,47 @@ CH008_SC002 CL006 Keyframe Prompt
 CH008_SC002_CL006_keyframe_prompt
 
 # Purpose
-Depict resource acquisition details through extreme close-ups of loot items (arms, food, water) being handled by green-skinned warriors on a captured ship deck, establishing the transition from battle to salvage ritual.
+Depict return fire impact vectors and debris field expansion across valley floor, showing fire arcs striking ridge positions while smoke density increases from missile impacts, establishing the defensive aggression to desperation emotional shift during fleet limping sequence.
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Extreme close-up of green-skinned hands securing metallic weapons and gathering organic food supplies from wooden storage compartments. Shiny copper-colored water casks being lifted by armored figures. Interior of captured vessel showing polished wood planks and metal fixtures. Soft daylight illuminating the scene before ritual fire begins.
+Wide shot of multiple fire arcs traveling through air toward ridge positions, explosions erupting at impact points on warrior formations, debris falling from blast zones, smoke trails visible in daylight, damaged ship hulls in valley floor with scorched surfaces, banners partially dissolved in heat haze, crew members huddled behind ship structures firing elevated weapons, valley-to-ridge return vector showing vertical firing angle from lower elevation.
 
 # Negative Prompt
-Blurry image, distorted anatomy, extra fingers, human facial features, modern clothing, plastic materials, bright sunlight shadows inconsistent with interior, text overlays, low resolution, deformed weapons, floating objects, fire flames on loot items yet.
+Blurry image, distorted anatomy, extra fingers, human facial features, modern clothing, plastic materials, bright sunlight shadows inconsistent with interior, text overlays, low resolution, deformed weapons, floating objects, fire flames on loot items yet, close-up framing instead of wide shot, static composition without motion intent, clean ridge positions without explosions.
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: CH008_SC002
 - clip_id: CL006
 - duration_seconds: 5.0
-- required_refs: Arms (weapons), food supplies, water containers visible and being collected; ship storage areas accessible.
-- optional_refs: Window frame.
-- visible_character_assets: Martians handling loot items; Narrator observing collection process.
-- look_continuity_policy: 
-- intended_lighting_change: 
-- composition_type: Extreme Close-up
-- continuity_mode: insert
+- required_refs: Fire arcs visible traveling through air, explosions at ridge impact points, debris falling from blast zones, smoke trails and density increase, damaged ship hulls in valley floor, crew firing elevated weapons.
+- optional_refs: Window frame, banners partially dissolved.
+- visible_character_assets: Fleet ships, return fire vectors, crew members behind structures.
+- look_continuity_policy: Maintain interior lighting consistency with previous boarding sequence.
+- intended_lighting_change: Smoke density increases from 0-2s to 4-5s interval beats.
+- composition_type: Wide shot
+- continuity_mode: cut
 - starting_keyframe_strategy: static_hold
 - dependency_policy: linear_sequence
-- auto_advance_policy: 
-- fallback_strategy: 
-- consistency_assist_policy: 
-- consistency_assist_method: 
-- anatomy_repair_policy: 
-- consistency_targets: 
-- style_profile: 
-- batch_role: 
-- fix_of: 
+- auto_advance_policy: sequential_to_broadside_formation_change
+- fallback_strategy: insert_debris_falling_if_fire_arcs_heavy
+- consistency_assist_policy: smoke_trails_visible
+- consistency_assist_method: banners_partially_dissolved
+- anatomy_repair_policy: crew_members_huddled_behind_structures
+- consistency_targets: valley_to_ridge_return_vector
+- style_profile: action_oriented_awe_inspiring
+- batch_role: fleet_returns_fire
+- fix_of: BT002
 - workflow_type: still.scene_build.four_ref.klein.distilled
 
 # Continuity Notes
-- Ensure weapons appear metallic and sharp; food supplies look organic and fresh; water containers must be copper-colored casks; Martians skin tone remains consistent green; no fire flames visible on loot items yet as burning occurs in next beat; maintain interior lighting consistency with previous boarding sequence.
+- Ensure fire arcs appear as multiple traveling vectors through air toward ridge positions; explosions must erupt at impact points on warrior formations; debris falling from blast zones must be visible; smoke trails and density increase from 0-2s to 4-5s interval beats; damaged ship hulls in valley floor with scorched surfaces; banners partially dissolved in heat haze; crew members huddled behind ship structures firing elevated weapons; maintain interior lighting consistency with previous boarding sequence; no fire flames on loot items yet as burning occurs in next beat.
 
 # Repair Notes
-- If hands appear distorted, regenerate with focus on palm details; if weapons look dull, increase metallic reflectivity; ensure no human faces are visible in extreme close-up unless intended; verify water casks match copper skin tone description.
+- If fire arcs appear weak or single, regenerate with multiple traveling vectors through air toward ridge positions; if explosions look small, increase blast zone impact at warrior formations; ensure debris falling from blast zones is visible and matches interval beats; verify smoke trails and density increase from 0-2s to 4-5s; check damaged ship hulls in valley floor show scorched surfaces; confirm banners partially dissolved in heat haze; if crew members appear exposed, regenerate with huddled behind ship structures firing elevated weapons.
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC002/CL006.md

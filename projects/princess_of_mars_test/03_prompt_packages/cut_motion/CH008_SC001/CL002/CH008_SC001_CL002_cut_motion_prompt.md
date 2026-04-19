@@ -5,30 +5,30 @@ CH008_SC001 CL002 Cut Motion Prompt
 CH008_SC001_CL002_cut_motion_prompt
 
 # Purpose
-Establish wide establishing shot showing air craft fleet descending from upper sky toward city building. Start from approved opening frame where first craft is visible in distance. Ensure visible motion matches descent trajectory (downward diagonal). Preserve keyframe lighting and grade.
+Establish medium group shot showing Green Martians retreating from city perimeter toward eastern sector. Start from approved opening frame where Martians are positioned at city boundary. Ensure visible motion matches retreat trajectory (diagonal movement away from center). Preserve keyframe lighting and grade.
 
 # Workflow Type
 video.cut_motion.wan.i2v
 
 # Positive Prompt
-Wide establishing shot showing twenty large gray air craft descending from upper sky toward city building facade. Long low vessels with strange banners visible on prows. Valley below and hills beyond maintain continuity. Figures crowd forward decks of air craft. Downward diagonal movement from upper sky to lower city level. Gray-painted vessels drift southeast/southwesterly.
+Medium group shot showing coordinated Green Martians in formation retreating from city perimeter toward eastern sector. Warriors maintain consistent spacing with green skin and ornaments visible. Dust kicked up by retreating troops visible in foreground. City boundary serves as visual reference for movement direction. Valley below and hills beyond maintain continuity. Green Martians move in unison maintaining formation.
 
 # Negative Prompt
-Static shot. Wrong composition. Lighting shift. Grade change. Anatomy error. Clothing distortion. Background blur. Motion stall. Reverse movement (ascending). Panic expression. Inconsistent character proportions. Degraded features. Overexposed or underexposed. Wrong color palette.
+Static shot. Wrong composition. Lighting shift. Grade change. Anatomy error. Clothing distortion. Background blur. Motion stall. Reverse movement (ascending). Panic expression. Inconsistent character proportions. Degraded features. Overexposed or underexposed. Wrong color palette. Air craft visible.
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: CH008_SC001
 - clip_id: CL002
 - duration_seconds: 5s
-- required_refs: BT002.md air_craft_descending_documentation
+- required_refs: BT002.md
 - optional_refs: CH008_SC001_scene_breakdown
-- visible_character_assets: Air Craft fleet (20 vessels), Green Martians on forward decks
+- visible_character_assets: Green Martians in formation
 - look_continuity_policy: preserve_keyframe_lighting_and_grade
 - intended_lighting_change: none
-- composition_type: wide_establishing
-- continuity_mode: reframe_same_moment
-- starting_keyframe_strategy: static_hold_first_craft_visible_in_distance
+- composition_type: medium_group
+- continuity_mode: cutaway
+- starting_keyframe_strategy: eastern_sector_marked_as_retreat_destination
 - dependency_policy: dependent_on_CL001_wide_establishing_first
 - auto_advance_policy: advance_if_motion_stalls
 - fallback_strategy: cut_to_medium_static_if_movement_disrupted
@@ -41,11 +41,11 @@ Static shot. Wrong composition. Lighting shift. Grade change. Anatomy error. Clo
 - fix_of: CL001
 
 # Continuity Notes
-- Maintain air craft appearance consistency (long, low, gray-painted vessels with strange banners).
+- Maintain Green Martian appearance consistency (green skin, ornaments, spears).
 - Preserve keyframe lighting and grade from approved opening frame.
-- Ensure transition from upper sky to city level is visible but smooth.
+- Ensure transition from city perimeter to eastern sector is visible but smooth.
 - Keep background valley/hills continuity stable throughout motion.
-- Avoid sudden camera jerks or focus pulls during descent.
+- Avoid sudden camera jerks or focus pulls during retreat.
 
 # Repair Notes
 - If motion stalls, advance camera position slightly.

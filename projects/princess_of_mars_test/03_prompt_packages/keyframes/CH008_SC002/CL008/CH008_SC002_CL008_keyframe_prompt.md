@@ -5,31 +5,31 @@ CH008_SC002 CL008 Keyframe Prompt
 CH008_SC002_CL008_keyframe_prompt
 
 # Purpose
-Resolve scene through wide shot showing ship being towed away with finality, establishing aftermath of salvage ritual and funeral pyre completion.
+Depict fleet ships swinging broadside to maximize firepower and reposition, showing crew realigning on damaged vessels with thrusters swaying.
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Wide shot of valley city with hills beyond, large gray airship fully ablaze floating above ground, fire consuming hull structure, towing cables deployed connecting ship to unseen anchor point, green-skinned warriors operating mechanical equipment near vessel base, smoke billowing upward, daylight mixed with orange fire illumination, deserted buildings in background, window frame visible in foreground edge.
+Medium shot of gray-painted airship hull rotating on damaged thrusters, crew members moving to new firing positions, weapons realigned, smoke density increasing, debris scattered around vessel base, daylight mixed with orange fire illumination, valley city background with hills beyond.
 
 # Negative Prompt
-crew members on deck, intact ship hull, dark night sky, close-up shots, indoor lighting only, human faces without green skin, modern technology, text overlays, blurry details, distorted anatomy, missing towing equipment, unburned cargo, floating debris unrelated to ship.
+wide shot perspective, intact ship structure, dark night sky, close-up shots only, indoor lighting, human faces without green skin, modern technology, text overlays, blurry details, missing thruster damage, unburned cargo, floating debris unrelated to battle.
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: CH008_SC002
 - clip_id: CL008
 - duration_seconds: 5.0
-- required_refs: Ship fully consumed by fire, towing equipment deployed, ship moving away from building
-- optional_refs: Window frame
-- visible_character_assets: Martians operating towing equipment; Narrator watching resolution
+- required_refs: Ship rotation mechanism visible, crew silhouettes moving, smoke trails increasing
+- optional_refs: Hull damage visible, valley geography beyond
+- visible_character_assets: Crew members realigning weapons; Green-skinned warriors operating equipment
 - look_continuity_policy: 
-- intended_lighting_change: 
-- composition_type: Wide/POV
-- continuity_mode: cutaway
-- starting_keyframe_strategy: static_hold
-- dependency_policy: linear_sequence
+- intended_lighting_change: None
+- composition_type: Medium shot
+- continuity_mode: reframe_same_moment
+- starting_keyframe_strategy: slight sway on damaged thrusters
+- dependency_policy: parallel to wide shot for coverage
 - auto_advance_policy: 
 - fallback_strategy: cut_to_previous_angle
 - consistency_assist_policy: 
@@ -41,14 +41,14 @@ crew members on deck, intact ship hull, dark night sky, close-up shots, indoor l
 - fix_of: 
 
 # Continuity Notes
-- Maintain wide shot perspective showing ship departure path.
-- Ensure fire intensity matches funeral pyre state (fully ablaze).
-- Keep towing equipment visible and functional.
+- Maintain medium shot perspective showing ship rotation.
+- Ensure thruster sway is visible and consistent with damage state.
+- Keep crew movement aligned with new firing angles.
 - Preserve valley city geography with hills beyond.
 
 # Repair Notes
-- If ship looks intact, increase fire coverage.
-- If towing cables missing, add mechanical rigging details.
+- If ship looks static, increase thruster sway animation cues in still.
+- If crew missing, add silhouettes of figures moving to positions.
 - Ensure green skin tone consistency on warriors.
 
 # Sources

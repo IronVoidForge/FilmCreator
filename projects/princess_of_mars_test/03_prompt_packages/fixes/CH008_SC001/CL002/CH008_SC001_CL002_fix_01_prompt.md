@@ -14,7 +14,7 @@ still.scene_insert.two_ref.klein.distilled
 Wide establishing shot showing twenty large gray air craft descending from upper sky toward city building facade. Long low vessels with strange banners visible on prows. Valley below and hills beyond maintain continuity. Figures crowd forward decks of vessels. Downward diagonal movement from upper sky to lower city level. Gray-painted vessels with odd devices on prows.
 
 # Negative Prompt
-Anatomical errors, inconsistent lighting, wrong character count, misplaced elements, blurred details, incorrect color palette, anatomical distortions, extra limbs, missing weapons, wrong environmental state, inconsistent motion blur, poor depth of field, low resolution artifacts, facial expression mismatches, weapon placement errors, background element intrusions, John Carter, Earthling Woman, bright daylight interiors, open ground valley floor.
+Anatomical errors, inconsistent lighting, wrong character count, misplaced elements, blurred details, incorrect color palette, anatomical distortions, extra limbs, missing weapons, wrong environmental state, inconsistent motion blur, poor depth of field, low resolution artifacts, facial expression mismatches, weapon placement errors, background element intrusions.
 
 # Inputs
 - project_id: princess_of_mars_test

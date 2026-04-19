@@ -11,7 +11,7 @@ Corrective still generation for BT001, preserving window POV composition and shi
 still.scene_insert.two_ref.klein.distilled
 
 # Positive Prompt
-Narrator eye extreme close-up window frame foreground twenty gray airships approaching valley floor daylight dramatic tension Green Martian aesthetic deserted city buildings hills beyond
+Narrator eye extreme close-up window frame foreground twenty gray airships approaching valley floor daylight dramatic tension green-skinned warriors aesthetic deserted city buildings hills beyond
 
 # Negative Prompt
 distorted anatomy extra limbs wrong lighting blurry details inconsistent style missing ships incorrect geography wrong character count

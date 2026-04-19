@@ -5,51 +5,53 @@ CH008_SC002 CL006 Scene Stage Prompt
 CH008_SC002_CL006_scene_stage_prompt
 
 # Purpose
-Describe the staging intent for this scene stage to capture resource acquisition details through extreme close-ups on the drifting warship during the salvage sequence, establishing the value of salvaged goods while maintaining continuity with the battle context.
+Depict the engagement and damage to fleet through wide shot of fire arcs toward ridge, establishing return fire impact on warrior positions while maintaining continuity with battle context and debris field expansion.
 
 # Workflow Type
 authoring.scene_stage
 
 # Positive Prompt
-extreme close-up green skin hands securing metallic weapons and ammunition casks, organic food supplies being gathered into woven baskets, water containers filled from ship storage areas, dim interior lighting reflecting off polished hull surfaces, static hold framing on individual loot items, linear sequence of resource collection actions.
+wide shot fire arcs from damaged ships swinging broadside toward ridge, explosions erupting on warrior positions, debris falling from missile impact points, smoke density increasing across valley floor, hull fires burning on ship structures, banners partially dissolved in flame, static hold framing on return fire vectors, linear sequence of fleet repositioning actions.
 
 # Negative Prompt
-blurry focus, wide angle shots, human faces, extra limbs, bright daylight, fire flames directly on face, distorted anatomy, low resolution, text overlays, motion blur during static hold, incorrect scale of weapons.
+blurry focus, extreme close-up shots, human faces, extra limbs, bright daylight without smoke, fire flames directly on face, distorted anatomy, low resolution, text overlays, motion blur during static hold, incorrect scale of ships, missing debris field, banners fully intact.
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: CH008_SC002
 - clip_id: CL006
 - duration_seconds: 5.0
-- required_refs: Arms (weapons), food supplies, water containers visible and being collected; ship storage areas accessible.
-- optional_refs: Window frame.
-- visible_character_assets: Martians handling loot items; Narrator observing collection process.
+- required_refs: Fire arcs, explosions on ridge, debris falling visible; ship storage areas accessible.
+- optional_refs: Window frame, smoke trails visible.
+- visible_character_assets: Fleet ships, return fire vectors, Green Martians firing from buildings.
 - look_continuity_policy: 
 - intended_lighting_change: 
-- composition_type: extreme_close_up
-- continuity_mode: insert
-- starting_keyframe_strategy: static_hold
-- dependency_policy: linear_sequence
-- auto_advance_policy: 
+- composition_type: wide_shot
+- continuity_mode: cut
+- starting_keyframe_strategy: static_on_valley_floor
+- dependency_policy: sequential_to_broadside_formation_change
+- auto_advance_policy: insert_debris_falling_if_fire_arcs_heavy
 - fallback_strategy: 
-- consistency_assist_policy: 
+- consistency_assist_policy: smoke_density_increase_tracking
 - consistency_assist_method: 
-- anatomy_repair_policy: 
+- anatomy_repair_policy: ship_scale_verification
 - consistency_targets: 
-- style_profile: 
-- batch_role: 
+- style_profile: action_oriented_awe_inspiring
+- batch_role: fleet_damage_sequence
 - fix_of: 
 
 # Continuity Notes
-- Capture the continuity rules for this stage regarding BT006 Loot Collection beat, ensuring static hold start strategy is maintained.
-- Track specific item types (arms, food, water) to ensure linear sequence dependency policy is followed without skipping visual beats.
-- Verify that extreme close-up framing remains consistent across cuts to avoid scale shifts during resource acquisition shots.
+- Capture the continuity rules for this stage regarding BT002 Fleet Returns Fire beat, ensuring static hold start strategy is maintained.
+- Track specific fire arc vectors and explosion points to ensure sequential dependency policy is followed without skipping visual beats.
+- Verify that wide shot framing remains consistent across cuts to avoid scale shifts during fleet movement shots.
+- Monitor smoke density increase across interval beats 0-2s, 2-4s, 4-5s for proper progression tracking.
 
 # Repair Notes
-- Ensure extreme close-up framing is maintained throughout the clip to match intended composition type.
-- Check for correct item identification in storage areas to align with required refs list.
-- Verify continuity with previous loot shots if this stage is inserted into a larger sequence.
+- Ensure wide shot framing is maintained throughout the clip to match intended composition type.
+- Check for correct fire arc identification in valley-to-ridge return vector to align with required refs list.
+- Verify continuity with previous fleet shots if this stage is inserted into a larger sequence.
 - Correct any motion blur that violates the static hold starting keyframe strategy.
+- Ensure debris field expansion matches interval beat progression from 0-2s to 4-5s.
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC002/CL006.md

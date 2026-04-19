@@ -5,7 +5,7 @@ CH008_SC001 CL004 Scene Stage Prompt
 CH008_SC001_CL004_scene_stage_prompt
 
 # Purpose
-Establish John Carter's perspective from upper floor window as he observes twenty large gray air craft descending toward city building. Focus on his emotional shift from initial curiosity to growing concern/anticipation as vessels appear in valley view below. Window frame visible on left edge of composition. Shot serves as character reaction close-up that will cutaway to aircraft fleet for scene transition.
+Establish John Carter's observational perspective from upper floor window as he witnesses twenty large gray air craft descending toward city building. Focus on emotional progression from initial curiosity to growing concern and anticipation as vessels appear in valley view below. Window frame visible on left edge of composition serves as visual boundary. Shot functions as character reaction close-up that will cutaway to aircraft fleet for scene transition. Opening keyframe establishes Carter's stationary observation stance with city view through glass, maintaining continuity across frames while expression shifts subtly reflect emotional response to unfolding events.
 
 # Workflow Type
 authoring.scene_stage

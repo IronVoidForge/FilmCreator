@@ -5,13 +5,13 @@ CH008_SC001 CL004 Fix 01 Prompt
 CH008_SC001_CL004_fix_01_prompt
 
 # Purpose
-Generate a corrected still for CL004 that captures John Carter's growing concern as he observes air craft arrival from window position, ensuring facial expression continuity and window frame edge preservation while fixing local generation issues. Maintain close-up composition with upper torso framing and valley background stability.
+Generate corrected still for CL004 capturing human male protagonist growing concern while observing air craft arrival from window position, ensuring facial expression continuity and window frame edge preservation while fixing local generation issues. Maintain close-up composition with upper torso framing and valley background stability.
 
 # Workflow Type
 still.scene_insert.two_ref.klein.distilled
 
 # Positive Prompt
-close-up face view human male protagonist standing at window frame edge upper torso visible growing concern on facial expression window frame partial left side valley floor beyond hills distant horizon daylight atmospheric lighting smoke from fire missile impact flames subtle posture shift reflecting emotional change minimal movement sharp anatomy clear composition wide angle cinematic with tactical atmosphere
+close-up face view human male standing at window frame edge upper torso visible growing concern on facial expression window frame partial left side valley floor beyond hills distant horizon daylight atmospheric lighting smoke from fire missile impact flames subtle posture shift reflecting emotional change minimal movement sharp anatomy clear composition wide angle cinematic with tactical atmosphere
 
 # Negative Prompt
 blurry distorted anatomy wrong facial expression missing window frame proper nouns named characters individual names text artifacts low resolution noise flickering incorrect color palette inconsistent lighting motion blur excessive movement

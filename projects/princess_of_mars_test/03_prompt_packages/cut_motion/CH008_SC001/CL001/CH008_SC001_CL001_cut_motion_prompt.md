@@ -5,16 +5,16 @@ CH008_SC001 CL001 Cut Motion Prompt
 CH008_SC001_CL001_cut_motion_prompt
 
 # Purpose
-Establish John Carter's perspective and emotional state as he watches air craft descend from upper floor window. Start State: Static hold showing curiosity, End State: Slight posture shift indicating engagement with scene. Capture smooth progression of observation while maintaining established lighting and grade.
+Establish wide exterior view of city perimeter with approaching procession and distant horizon anchor. Start State: Empty perimeter line visible with horizon stable, End State: Camera tracks forward along procession path maintaining eye-level perspective. Capture smooth progression of scene establishment while preserving established lighting and grade from approved keyframe.
 
 # Workflow Type
 video.cut_motion.wan.i2v
 
 # Positive Prompt
-close-up shot of John Carter standing at upper floor window frame edge, face displaying initial curiosity and concern, background valley and hills stable in daylight, slight camera movement or subtle subject motion visible, natural lighting preserved, atmospheric depth maintained, static opening frame transitioning to gentle observation motion
+wide exterior shot showing city boundary line as visual anchor, approaching ground forces entering frame from distance, distant horizon figures visible, gray-painted airships in background with consistent color grading, strange banners on prow requiring specific prop placement, odd devices on prow needing continuity tracking, camera moves forward tracking procession path, natural daylight preserved, atmospheric depth maintained, static opening frame transitioning to gentle forward motion along procession
 
 # Negative Prompt
-morphing faces, flickering lights, static camera when motion expected, distorted limbs, inconsistent color grading, sudden zooms, blurry text, extra characters, wrong background, low resolution, noise, anatomy errors, lighting shifts, jerky movement, inconsistent character placement, warping environment, incorrect horizon line
+morphing faces, flickering lights, close-up when wide exterior expected, distorted limbs, inconsistent color grading, sudden zooms, blurry text, extra characters, wrong background, low resolution, noise, anatomy errors, lighting shifts, jerky movement, inconsistent character placement, warping environment, incorrect horizon line, static camera when tracking expected, wrong composition type, missing procession elements
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -23,12 +23,12 @@ morphing faces, flickering lights, static camera when motion expected, distorted
 - duration_seconds: 5
 - required_refs: BT001.md
 - optional_refs: CH008_SC001_scene_breakdown
-- visible_character_assets: John Carter (upper torso, face), window frame partial
+- visible_character_assets: approaching ground forces, distant horizon figures, gray-painted airships background
 - look_continuity_policy: preserve_keyframe_lighting_and_grade
 - intended_lighting_change: none
-- composition_type: close-up_face_with_window_frame_edge
+- composition_type: wide_exterior_city_perimeter
 - continuity_mode: reblock_same_scene
-- starting_keyframe_strategy: static_hold
+- starting_keyframe_strategy: horizon_anchor_with_city_perimeter_line
 - dependency_policy: independent_no_prerequisites
 - auto_advance_policy: smooth_forward_progression
 - fallback_strategy: cut_to_alternate_wide_angle_if_needed
@@ -42,17 +42,19 @@ morphing faces, flickering lights, static camera when motion expected, distorted
 - workflow_type: video.cut_motion.wan.i2v
 
 # Continuity Notes
-- Maintain John Carter's position at window frame edge
+- Maintain city perimeter line as visual anchor throughout shot
 - Preserve established lighting and color grade from approved keyframe
-- Ensure background valley/hills remain stable for continuity
-- Monitor subtle posture shifts reflecting emotional change
-- Keep character count consistent (John Carter only)
+- Ensure background airships maintain consistent gray-painted appearance
+- Monitor forward tracking motion along procession path
+- Keep character count consistent (approaching forces, horizon figures only)
+- Track strange banners on prow for prop placement continuity
 
 # Repair Notes
-- If face morphs, revert to stable anatomy matching keyframe
-- If lighting shifts occur, match keyframe grade exactly
-- If camera movement is jerky, smooth interpolation
-- If background warps, correct to valley/hills continuity
+- If composition shifts to close-up, revert to wide exterior angle
+- If lighting changes occur, match keyframe grade exactly
+- If camera movement is jerky, smooth interpolation along procession path
+- If background warps, correct to city perimeter and horizon continuity
+- If airship color grading inconsistent, restore gray-painted appearance
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC001/CL001.md
