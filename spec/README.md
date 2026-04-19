@@ -49,3 +49,35 @@ The orchestration layer is the product core. The authoring layer is a producer o
 Local generation is the default architecture. Authoring may use a local LLM runtime, and rendering targets a configured local ComfyUI runtime.
 
 Authoring and rendering are separate phases so heavy local services can be run one at a time on VRAM-constrained machines.
+
+## Terminology Rule
+
+User-facing documentation should prefer **shot** language. Internal implementation may continue to use `clip_id`, clip folders, and existing runner semantics until a later refactor.
+
+Recommended user-facing hierarchy:
+
+- chapter
+- scene
+- shot
+- prompt target
+
+Practical compatibility note:
+
+- `shot` = the user-facing term
+- `clip` = the current internal render/planning unit and file naming term
+
+## Current Phase Focus
+
+Phase A is now structurally in place:
+
+- chapter-scoped scene ids
+- chapter -> scene -> clip/shot cascade entrypoints
+- resilient chapter analysis and scene planning
+- packetized prompt writing and shared prompt generation
+
+Phase B is now focused on:
+
+- canonical character identity
+- canonical environment identity
+- chapter continuity state
+- chapter storyboard artifacts
