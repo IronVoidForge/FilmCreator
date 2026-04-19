@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import re
 import time
 import unicodedata
@@ -13,6 +14,13 @@ from .lmstudio_client import LMStudioClient, LMStudioError
 from .prompt_package import PromptPackage, write_prompt_package
 from .scaffold import create_clip, create_project, create_scene
 from .settings import load_runtime_settings
+from .world_registry import (
+    character_registry_path,
+    environment_registry_path,
+    resolve_character_registry,
+    resolve_environment_registry,
+    summarize_registry_status,
+)
 
 
 HEADING_PATTERN = re.compile(r"(?m)^# ([^\r\n]+)\s*$")
@@ -72,6 +80,11 @@ class StoryAnalysisSummary:
     manual_character_description_requests: list[ManualCharacterDescriptionRequest]
     character_clarification_requests: list[CharacterClarificationRequest]
     warnings: list[str]
+    canonical_character_ids: list[str]
+    provisional_character_ids: list[str]
+    canonical_environment_ids: list[str]
+    provisional_environment_ids: list[str]
+    world_registry_paths: list[str]
 
     def to_dict(self) -> dict[str, object]:
         return {
@@ -88,6 +101,11 @@ class StoryAnalysisSummary:
                 item.to_dict() for item in self.character_clarification_requests
             ],
             "warnings": self.warnings,
+            "canonical_character_ids": self.canonical_character_ids,
+            "provisional_character_ids": self.provisional_character_ids,
+            "canonical_environment_ids": self.canonical_environment_ids,
+            "provisional_environment_ids": self.provisional_environment_ids,
+            "world_registry_paths": self.world_registry_paths,
         }
 
 
@@ -146,6 +164,28 @@ class SharedPromptSummary:
             "failures": [item.to_dict() for item in self.failures],
             "success_count": len(self.written_files),
             "failure_count": len(self.failures),
+        }
+
+
+@dataclass(frozen=True)
+class ChapterContinuitySummary:
+    chapter_id: str
+    state_path: str
+    summary_path: str
+    known_characters: list[str]
+    known_environments: list[str]
+    unresolved_character_ids: list[str]
+    scene_order: list[str]
+
+    def to_dict(self) -> dict[str, object]:
+        return {
+            "chapter_id": self.chapter_id,
+            "state_path": self.state_path,
+            "summary_path": self.summary_path,
+            "known_characters": self.known_characters,
+            "known_environments": self.known_environments,
+            "unresolved_character_ids": self.unresolved_character_ids,
+            "scene_order": self.scene_order,
         }
 
 
@@ -469,6 +509,28 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
         written_files.append(repo_relative(scene_path))
         scene_ids.append(scene_id)
 
+    character_breakdown_dir = project_dir / "02_story_analysis" / "character_breakdowns"
+    character_breakdowns = sorted(
+        path
+        for path in character_breakdown_dir.glob("*.md")
+        if path.name not in {"CHARACTER_INDEX.md", "README.md"}
+    )
+    environment_breakdown_dir = project_dir / "02_story_analysis" / "environment_breakdowns"
+    environment_breakdowns = sorted(
+        path
+        for path in environment_breakdown_dir.glob("*.md")
+        if path.name not in {"ENVIRONMENT_INDEX.md", "README.md"}
+    )
+    character_registry = resolve_character_registry(project_slug, character_breakdowns)
+    environment_registry = resolve_environment_registry(project_slug, environment_breakdowns)
+    canonical_character_ids, provisional_character_ids = summarize_registry_status(character_registry)
+    canonical_environment_ids, provisional_environment_ids = summarize_registry_status(environment_registry)
+    world_registry_paths = [
+        repo_relative(character_registry_path(project_slug)),
+        repo_relative(environment_registry_path(project_slug)),
+    ]
+    written_files.extend(world_registry_paths)
+
     elapsed = time.perf_counter() - started
     print(f"[authoring] Finished chapter analysis in {elapsed:.1f}s")
     return StoryAnalysisSummary(
@@ -481,6 +543,11 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
         manual_character_description_requests=manual_requests,
         character_clarification_requests=clarification_requests,
         warnings=warnings,
+        canonical_character_ids=canonical_character_ids,
+        provisional_character_ids=provisional_character_ids,
+        canonical_environment_ids=canonical_environment_ids,
+        provisional_environment_ids=provisional_environment_ids,
+        world_registry_paths=world_registry_paths,
     )
 
 
@@ -769,6 +836,55 @@ def write_shared_prompts(*, project_slug: str) -> SharedPromptSummary:
     )
 
 
+def build_chapter_continuity(*, project_slug: str, analysis: StoryAnalysisSummary) -> ChapterContinuitySummary:
+    project_dir = create_project(project_slug)
+    world_dir = project_dir / "02_story_analysis" / "world"
+    ensure_dir(world_dir)
+    state_path = world_dir / f"{analysis.chapter_id}_STATE.json"
+    summary_path = world_dir / f"{analysis.chapter_id}_CONTINUITY_SUMMARY.md"
+    state = {
+        "chapter_id": analysis.chapter_id,
+        "scene_order": analysis.scene_ids,
+        "known_characters": analysis.canonical_character_ids,
+        "known_environments": analysis.canonical_environment_ids,
+        "unresolved_character_ids": analysis.provisional_character_ids,
+        "world_registry_paths": analysis.world_registry_paths,
+        "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+    }
+    _write_text(state_path, json.dumps(state, indent=2))
+    summary_markdown = "\n".join(
+        [
+            f"# {analysis.chapter_id} Continuity Summary",
+            "",
+            "## Scene Order",
+            *[f"- {scene_id}" for scene_id in analysis.scene_ids],
+            "",
+            "## Known Canonical Characters",
+            *([f"- {item}" for item in analysis.canonical_character_ids] or ["- None"]),
+            "",
+            "## Unresolved / Provisional Characters",
+            *([f"- {item}" for item in analysis.provisional_character_ids] or ["- None"]),
+            "",
+            "## Known Canonical Environments",
+            *([f"- {item}" for item in analysis.canonical_environment_ids] or ["- None"]),
+            "",
+            "## Registry Artifacts",
+            *[f"- {item}" for item in analysis.world_registry_paths],
+            "",
+        ]
+    )
+    _write_text(summary_path, summary_markdown)
+    return ChapterContinuitySummary(
+        chapter_id=analysis.chapter_id,
+        state_path=repo_relative(state_path),
+        summary_path=repo_relative(summary_path),
+        known_characters=analysis.canonical_character_ids,
+        known_environments=analysis.canonical_environment_ids,
+        unresolved_character_ids=analysis.provisional_character_ids,
+        scene_order=analysis.scene_ids,
+    )
+
+
 def authoring_checkpoint(
     *,
     project_slug: str,
@@ -778,6 +894,7 @@ def authoring_checkpoint(
     started = time.perf_counter()
     print(f"[authoring] Starting authoring checkpoint for {project_slug}...")
     analysis = analyze_chapter(project_slug=project_slug, chapter=chapter)
+    build_chapter_continuity(project_slug=project_slug, analysis=analysis)
     fallback_scene_id = validate_scene_id(f"{analysis.chapter_id}_SC001")
     target_scene_id = scene_id or (analysis.scene_ids[0] if analysis.scene_ids else fallback_scene_id)
     planning = plan_scene(project_slug=project_slug, scene_id=target_scene_id)
