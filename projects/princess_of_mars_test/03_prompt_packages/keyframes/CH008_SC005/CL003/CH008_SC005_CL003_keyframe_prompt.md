@@ -5,7 +5,7 @@ CH008_SC005 CL003 Keyframe Prompt
 CH008_SC005_CL003_keyframe_prompt
 
 # Purpose
-Establish static medium close-up keyframe capturing urgent female figure with light reddish copper skin and coal black hair, showing emotional intensity and facial expression continuity from previous spatial context where all three parties positioned for gaze exchange.
+Establish static medium close-up keyframe capturing urgent female figure with light reddish copper skin, showing emotional intensity and facial expression continuity from previous spatial context where all three parties positioned for gaze exchange.
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
@@ -42,7 +42,6 @@ Motion blur, low resolution, distorted features, wrong character identity, backg
 - workflow_type: still.scene_build.four_ref.klein.distilled
 
 # Continuity Notes
-- Capture the continuity rules for this stage.
 - Maintain eye line consistency with male observer in adjacent shots.
 - Ensure lighting matches daylight conditions with smoke haze from battle effects.
 - Preserve facial expression urgency without introducing motion artifacts.
@@ -50,7 +49,6 @@ Motion blur, low resolution, distorted features, wrong character identity, backg
 - Multi-directional gaze exchange between all parties requires clear eyeline tracking for coverage planning.
 
 # Repair Notes
-- Capture any repair or corrective guidance for this stage.
 - Apply anatomy repair policy to ensure facial feature integrity.
 - Use consistency assist method to match previous spatial context.
 - Verify no proper nouns appear in generated text overlays.

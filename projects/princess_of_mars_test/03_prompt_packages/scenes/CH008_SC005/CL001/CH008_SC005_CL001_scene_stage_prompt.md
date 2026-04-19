@@ -5,16 +5,16 @@ CH008_SC005 CL001 Scene Stage Prompt
 CH008_SC005_CL001_scene_stage_prompt
 
 # Purpose
-Define spatial setup for wide establishing shot of CL001 within CH008_SC005. Focus on female figure entry trajectory and male observer observation point at corridor threshold. Establish urgency through movement path and gaze alignment without proper nouns.
+Define spatial setup for wide establishing shot of CL001 within CH008_SC005. Focus on female companion entry trajectory from left edge moving diagonally toward center-right where male observer stands stationary at corridor threshold. Establish urgency through movement path and gaze alignment without proper nouns or specific names.
 
 # Workflow Type
 authoring.scene_stage
 
 # Positive Prompt
-wide exterior shot, building corridor entrance threshold, slender female figure entering from left edge moving diagonally toward center-right, human male observer standing stationary at center-right facing camera, daylight atmosphere with distant smoke haze, full body female figure visible, partial profile male figure visible, urgent movement speed increasing as she nears, open ground plaza background context.
+wide exterior shot, building corridor entrance threshold space, slender female figure entering from left edge moving diagonally toward center-right with urgent forward motion blur, human male observer standing stationary at center-right facing camera, daylight atmosphere with distant smoke haze visible, full body female figure visible in foreground, partial profile male figure visible, open ground plaza background context, exterior corridor lighting active, transition space between exterior urgency and interior threat visible.
 
 # Negative Prompt
-air fleet ships, green martian warriors in foreground, close up faces, wrong movement direction, blurry figures, extra characters, indoor lighting, static background elements unrelated to corridor, proper nouns, specific names, dark shadows obscuring movement.
+air fleet ships, green martian warriors in foreground, close up faces, wrong movement direction, blurry figures unrelated to approach motion, extra characters, indoor lighting, static background elements unrelated to corridor, proper nouns, specific names, dark shadows obscuring movement, interior-exterior transition failure, missile impact flames, burning ship debris.
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -27,16 +27,16 @@ air fleet ships, green martian warriors in foreground, close up faces, wrong mov
 - look_continuity_policy: 
 - intended_lighting_change: 
 - composition_type: wide_two_shot
-- continuity_mode: cutaway_to_action
-- starting_keyframe_strategy: insert_from_distance
-- dependency_policy: reblock_same_scene
+- continuity_mode: continuous_follow
+- starting_keyframe_strategy: left_entering_character_focus
+- dependency_policy: independent_start
 - auto_advance_policy: 
 - fallback_strategy: If Sola entry is unclear, tighten to medium wide and emphasize her movement path
-- consistency_assist_policy: 
+- consistency_assist_policy: Adjust eyeline if gaze alignment fails during final meters of approach
 - consistency_assist_method: 
 - anatomy_repair_policy: 
 - consistency_targets: 
-- style_profile: 
+- style_profile: action_led_performance
 - batch_role: 
 - fix_of: 
 
@@ -45,6 +45,7 @@ air fleet ships, green martian warriors in foreground, close up faces, wrong mov
 - Keep male observer stationary at center-right facing camera for observation.
 - Ensure background implies city buildings or valley context consistent with Chapter 8 environment index.
 - Preserve urgency in movement speed as female figure approaches male observer.
+- Exterior corridor lighting must remain consistent throughout approach sequence.
 
 # Repair Notes
 - If female figure entry is unclear, tighten to medium wide and emphasize her movement path.

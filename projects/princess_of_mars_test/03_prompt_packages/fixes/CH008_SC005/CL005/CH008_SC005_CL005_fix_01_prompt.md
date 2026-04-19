@@ -11,10 +11,10 @@ Corrective pass for CL005 (Eye Contact & Reaction) to ensure emotional connectio
 still.scene_insert.two_ref.klein.distilled
 
 # Positive Prompt
-Medium shot, human male observer face locked on background captive movement, exterior corridor daylight, smoke from fire, Martian city buildings upper floors, open ground plaza, valley hills beyond, action-oriented tone, awe-inspiring atmosphere, tense during combat sequences, light reddish copper skin features, coal black hair waving, highly wrought ornaments, crimson cheeks, ruby lips, observer face and upper body visible, captive background partial visibility.
+Medium shot, human male observer face locked on background captive movement, exterior corridor daylight, smoke from fire, Martian city buildings upper floors, open ground plaza, valley hills beyond, action-oriented tone, awe-inspiring atmosphere, tense during combat sequences, light reddish copper skin features, coal black hair waving, highly wrought ornaments, crimson cheeks, ruby lips, observer face and upper body visible, captive background partial visibility
 
 # Negative Prompt
-blurry, distorted face, extra fingers, missing eyes, text, watermark, signature, low resolution, bad anatomy, morphed hands, inconsistent lighting, wrong skin tone, extra limbs, facial distortion, low quality, jpeg artifacts, noise, grain, overexposed, underexposed.
+blurry, distorted face, extra fingers, missing eyes, text, watermark, signature, low resolution, bad anatomy, morphed hands, inconsistent lighting, wrong skin tone, extra limbs, facial distortion, low quality, jpeg artifacts, noise, grain, overexposed, underexposed
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -42,10 +42,10 @@ blurry, distorted face, extra fingers, missing eyes, text, watermark, signature,
 - workflow_type: still.scene_insert.two_ref.klein.distilled
 
 # Continuity Notes
-- Capture the continuity rules for this stage. Preserve composition and look while fixing local issues. Assume image_1 is the approved still base and image_2 is a secondary reference when needed. Use descriptive noun phrases and avoid proper nouns in prompt text. Keep duration and workflow metadata in inputs_markdown, not in the prompt body.
+- Preserve composition and look while fixing local issues. Assume image_1 is the approved still base and image_2 is a secondary reference when needed. Use descriptive noun phrases and avoid proper nouns in prompt text. Keep duration and workflow metadata in inputs_markdown, not in the prompt body.
 
 # Repair Notes
-- Capture any repair or corrective guidance for this stage. Ensure eye contact clarity between observer and captive. Fix any local artifacts like blur or distortion. Maintain Barsoom aesthetic (Martian city environment). Focus on emotional anchor through eye contact; show observer's reaction to captive's state.
+- Ensure eye contact clarity between observer and captive. Fix any local artifacts like blur or distortion. Maintain Barsoom aesthetic (Martian city environment). Focus on emotional anchor through eye contact; show observer's reaction to captive's state.
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC005/CL005.md

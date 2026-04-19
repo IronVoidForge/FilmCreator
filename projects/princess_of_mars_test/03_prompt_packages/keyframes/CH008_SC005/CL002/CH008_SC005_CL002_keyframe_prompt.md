@@ -11,10 +11,10 @@ Establish visual intent for medium two-shot keyframe where foreground observer r
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Medium two shot over-the-shoulder perspective, human male shoulder profile in foreground left facing right, slender figure full body upper body approaching from background right moving diagonally towards camera, dragging motion through building entrance threshold, daylight environment with smoke haze from battle aftermath, city building exterior corridor visible beyond, open ground plaza area visible in distance, muted gray tones with warm skin highlights, cinematic lighting, high detail, atmospheric depth, sharp focus on foreground silhouette and background subject movement vector.
+Medium two shot over-the-shoulder perspective, human male shoulder profile in foreground left facing right, slender figure full body upper body approaching from background right moving diagonally towards camera, dragging motion through building entrance threshold, daylight environment with smoke haze from battle aftermath, city building exterior corridor visible beyond, open ground plaza area visible in distance, muted gray tones with warm skin highlights, cinematic lighting, high detail, atmospheric depth, sharp focus on foreground silhouette and background subject movement vector
 
 # Negative Prompt
-blurry, low resolution, distorted anatomy, extra limbs, missing fingers, wrong perspective, flat lighting, overexposed, underexposed, text, watermark, signature, cartoonish, 3d render, painting, sketch, static pose, lack of movement vector, incorrect skin tone, oversaturated colors, proper nouns, character names, location names.
+blurry, low resolution, distorted anatomy, extra limbs, missing fingers, wrong perspective, flat lighting, overexposed, underexposed, text, watermark, signature, cartoonish, 3d render, painting, sketch, static pose, lack of movement vector, incorrect skin tone, oversaturated colors, proper nouns, character names, location names
 
 # Inputs
 - project_id: princess_of_mars_test

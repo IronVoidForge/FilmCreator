@@ -5,13 +5,13 @@ CH008_SC005 CL001 Keyframe Prompt
 CH008_SC005_CL001_keyframe_prompt
 
 # Purpose
-Establishes spatial relationship between approaching green-skinned companion and stationary human observer within exterior corridor threshold. Static wide frame captures urgent diagonal movement vector from left edge toward center-right position, setting up connection initiation beat BT001 start state with daylight smoke haze atmosphere.
+Establishes spatial relationship between approaching human companion and stationary human observer within exterior corridor threshold. Static wide frame captures urgent diagonal movement vector from left edge toward center-right position, setting up connection initiation beat start state with daylight smoke haze atmosphere and burning vessel visible in background distance.
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Wide exterior corridor threshold, green-skinned humanoid companion entering from left edge moving rightward across frame, human male observer standing center-right partial profile facing camera, daylight atmosphere with smoke haze, burning vessel visible in background distance, open plaza ground texture, gray painted air craft debris scattered near horizon, minimal crowd presence, building entrance threshold visible behind characters.
+Wide exterior corridor threshold, human companion entering from left edge moving rightward across frame, human male observer standing center-right partial profile facing camera, daylight atmosphere with smoke haze, burning vessel visible in background distance, open plaza ground texture, gray painted air craft debris scattered near horizon, minimal crowd presence, building entrance threshold visible behind characters.
 
 # Negative Prompt
 blur, motion artifacts on static subjects, wrong character count, text overlay, distorted anatomy, dark shadows obscuring faces, extra limbs, missing eyes, low resolution, color shift, green skin on observer, fire on companion face, inconsistent proportions, facial feature distortion, background element misplacement, overexposed highlights, underexposed shadows, wrong skin tone for characters.
@@ -39,6 +39,7 @@ blur, motion artifacts on static subjects, wrong character count, text overlay, 
 - style_profile: Martian environment, daylight, smoke haze
 - batch_role: establishing_shot
 - fix_of: 
+- workflow_type: still.scene_build.four_ref.klein.distilled
 
 # Continuity Notes
 - Keyframe must match start state of beat BT001.
@@ -47,12 +48,11 @@ blur, motion artifacts on static subjects, wrong character count, text overlay, 
 - No motion blur on observer during initial frame lock.
 - Background smoke and fire effects consistent with chapter summary.
 - Spatial axis: Left-to-center-right (companion to observer).
-- Background movement: Right-to-left for prisoner silhouette if visible.
 - Environment continuity: Exterior corridor threshold with building entrance.
 
 # Repair Notes
 - Apply four_ref consistency targets for humanoid figures.
-- Ensure anatomy repair policy active for green-skinned entities.
+- Ensure anatomy repair policy active for human entities.
 - Maintain style profile for Martian environment lighting conditions.
 - Verify character count matches visible assets list strictly.
 - Check skin tone consistency between companion and observer.

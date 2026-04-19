@@ -11,7 +11,7 @@ Establish emotional anchor through eye contact; show observer's reaction to capt
 video.cut_motion.wan.i2v
 
 # Positive Prompt
-Medium shot of observer face and upper body, eyes focused on captive figure in background right, micro-expression shift showing concern, daylight lighting with smoke haze, city building exterior corridor, static camera slight breathing movement, cinematic Barsoom style.
+Medium shot of observer face and upper body, eyes focused on captive figure in background right, micro-expression shift showing concern, daylight lighting with smoke haze, city building exterior corridor, static camera slight breathing movement, cinematic style.
 
 # Negative Prompt
 distorted faces, extra limbs, wrong character identities, sudden camera zooms, flickering lighting, blurry details, text, watermarks, green screen, cartoonish.
@@ -41,10 +41,10 @@ distorted faces, extra limbs, wrong character identities, sudden camera zooms, f
 - fix_of: None
 
 # Continuity Notes
-- Capture the continuity rules for this stage. Match keyframe lighting and grade by default. Preserve eye contact direction between observer and captive figure. Maintain medium shot composition without sudden zooms. Ensure smoke haze remains consistent with background fire effects.
+- Match keyframe lighting and grade by default. Preserve eye contact direction between observer and captive figure. Maintain medium shot composition without sudden zooms. Ensure smoke haze remains consistent with background fire effects.
 
 # Repair Notes
-- Capture any repair or corrective guidance for this stage. If motion is too fast, reduce scale of micro-expressions. If faces blur during breathing movement, increase focus strength on observer's eyes. If lighting shifts, revert to keyframe daylight settings.
+- If motion is too fast, reduce scale of micro-expressions. If faces blur during breathing movement, increase focus strength on observer's eyes. If lighting shifts, revert to keyframe daylight settings.
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC005/CL005.md

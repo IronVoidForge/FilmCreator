@@ -5,7 +5,7 @@ CH008_SC005 CL002 Cut Motion Prompt
 CH008_SC005_CL002_cut_motion_prompt
 
 # Purpose
-Fill in the stage intent here. Transition from wide establishing shot to tighter medium two-shot as approaching companion reaches proximity, maintaining spatial context and lighting continuity.
+Transition from wide establishing shot to tighter medium two-shot as approaching companion reaches proximity, maintaining spatial context and lighting continuity.
 
 # Workflow Type
 video.cut_motion.wan.i2v
