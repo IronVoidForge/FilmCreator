@@ -138,6 +138,9 @@ def resolve_character_registry(project_slug: str, character_files: list[Path]) -
                 "parent_entity_id": None,
             },
         )
+        entry.setdefault("aliases", [])
+        entry.setdefault("sources", [])
+        entry.setdefault("parent_entity_id", None)
         entry["status"] = status
         entry["entity_kind"] = entity_kind
         entry["resolution_reason"] = resolution_reason
@@ -173,6 +176,9 @@ def resolve_environment_registry(project_slug: str, env_files: list[Path]) -> di
                 "sources": [],
             },
         )
+        entry.setdefault("aliases", [])
+        entry.setdefault("sources", [])
+        entry.setdefault("children", [])
         entry["status"] = status
         entry["entity_kind"] = entity_kind
         entry["parent_environment_id"] = parent_environment_id
@@ -197,6 +203,9 @@ def resolve_environment_registry(project_slug: str, env_files: list[Path]) -> di
                     "sources": [],
                 },
             )
+            parent.setdefault("aliases", [])
+            parent.setdefault("sources", [])
+            parent.setdefault("children", [])
             if canonical_id not in parent["children"]:
                 parent["children"].append(canonical_id)
             registry[parent_environment_id] = parent
