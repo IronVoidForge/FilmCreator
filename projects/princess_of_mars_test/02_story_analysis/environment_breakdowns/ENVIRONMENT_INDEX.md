@@ -1,17 +1,25 @@
-# Environment Index - CH008
+# Environment Index - Chapter II
 
-## Extracted Environments
+## Cave Interior (Primary Setting)
+- Role: Primary setting throughout chapter
+- Architecture: Stone cave walls, floor, recesses
+- Lighting: Early morning sun through opening, moonlight floods interior
+- Atmosphere: Vapor tenuous against opening, pungent odor, midnight silence, black shadows
+- Scale: Short trail visible between cave and cliff turn, narrow ledge outside
+- Anchors: Cave opening, cave floor, cave wall
 
-| Asset ID | Role | Primary Geography | Atmosphere Cues |
-|----------|------|-------------------|-----------------|
-| city_buildings | primary | urban structures, upper floors, windows, roofs | daylight, smoke from fire, missile impact flames |
-| open_ground_plaza | transit | open ground, plaza area | daylight, spurt of flame from impacts |
-| valley | secondary | valley floor beyond city | daylight, distant horizon |
-| hills_beyond | secondary | hill crests, slopes southeast/southwesterly | daylight, dip below crests |
+## Cave Opening/Ledge Transition (Transit Setting)
+- Role: Transit setting between interior and exterior
+- Architecture: Cave mouth, cliff shoulder, narrow ledge
+- Lighting: Early morning sun falls full upon protagonist through opening, starlight of clear Arizona night
+- Atmosphere: Crisp fresh mountain air outside acts as immediate tonic
+- Scale: Vista stretches far below with beautiful rocky gorge, level cacti-studded flat
+- Anchors: Opening threshold, cliff edge, ledge brink
 
-## Environment Families Summary
-
-- **city_buildings**: Primary observation and action setting with multiple levels
-- **open_ground_plaza**: Transit zone for fleet movement and battle effects
-- **valley**: Background geography establishing scale
-- **hills_beyond**: Distant geography providing directional context
+## Arizona Desert Landscape (Secondary Setting)
+- Role: Secondary setting visible from cave opening
+- Geography: Rocky gorge, hog back, arroyo, silvered mountains in distance
+- Lighting: Moonlight creates soft splendor and wondrous enchantment across landscape
+- Atmosphere: Crisp fresh mountain air, starlight of clear Arizona night
+- Scale: Vista stretches far below, large red star close to distant horizon visible
+- Anchors: Hog back terrain, arroyo features, distant mountains

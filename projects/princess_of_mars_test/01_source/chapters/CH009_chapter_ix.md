@@ -2,11 +2,10 @@
 CH009
 
 # Title
-A Princess of Mars - Chapter IX
-I LEARN THE LANGUAGE
+CHAPTER IX
 
 # Text
-
+I LEARN THE LANGUAGE
 
 
 As I came back to myself I glanced at Sola, who had witnessed this

@@ -2,9 +2,11 @@
 CH010
 
 # Title
-A Princess of Mars - Chapter X
-CHAMPION AND CHIEF
+CHAPTER X
+
 # Text
+CHAMPION AND CHIEF
+
 
 Early the next morning I was astir. Considerable freedom was allowed
 me, as Sola had informed me that so long as I did not attempt to leave

@@ -1,17 +1,24 @@
-# Project Summary
+# Project Summary: Princess of Mars Test
 
-**Title:** A Princess of Mars Test Project
-**Slug:** princess_of_mars_test
+## Core Setting
+The story unfolds in Arizona's mountainous terrain, centered around a cave with an opening to daylight and a trail leading through rocky gorge. The protagonist occupies this cave as a temporary living space, with a horse tethered outside and a friend's body placed on the ledge within vision range.
 
-**Setting:** Barsoom (Mars). Primary locations include a large Martian city with spacious doorways, upper floors, roofs, and the surrounding valley/hills. The environment features open plains and distant hills.
+## Main Character Profile
+The protagonist is a fighting man accustomed to combat for survival, possessing a powerful physique. He wears revolvers strapped to his person and carries a carbine in a boot mounted on his saddle. His vocation involves warfare, with Mars holding special significance as the god of war that has always held irresistible enchantment for him.
 
-**Key Characters:**
-- **John Carter:** Human protagonist, observer of events from windows/roofs.
-- **Sola:** Companion, present in the plaza and procession.
-- **Woola:** Hound companion, follows Carter closely.
-- **Green Martians:** Warriors inhabiting the city buildings; use chariots, mastodons, mounted warriors.
-- **Air Fleet Crews:** Operate large gray-painted air craft with wireless finding apparatus.
+## Key Story Elements
+- Paralysis phenomenon: Protagonist experiences sudden inability to move while retaining mental faculties
+- Unknown presence: An unseen entity within the cave causes terror among Apache warriors who flee in panic
+- Body transformation: Protagonist's physical state changes from clothed to naked during paralysis episode
+- Space transition: The narrative moves from Arizona landscape through space toward Mars
 
-**Core Themes:** Aerial warfare, inter-species conflict (Green Martians vs. Air Fleet), rescue operations, discovery of new life forms.
+## Visual Continuity Facts
+- Cave opening faces daylight trail with short stretch between cave and cliff turn
+- Apache warriors positioned on narrow ledge outside cave, unable to pass each other
+- Horse stands with dragging rein before cave entrance
+- Friend's body placed on ledge within protagonist's range of vision
+- Moonlight floods cave interior during key transformation scene
+- Arizona landscape features rocky gorge, cacti-studded flat, silvered mountains in distance
 
-**Tone:** Action-oriented, awe-inspiring, tense during combat sequences, melancholic regarding the destruction of the fleet.
+## Narrative Arc
+The story progresses from paralysis-induced fear through mysterious presence discovery, to physical transformation realization, escape into open space, and final attraction toward Mars. The protagonist's journey moves from terrestrial danger to cosmic destination with the chapter ending during space transition.
