@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -8,6 +9,7 @@ from .scaffold import create_project
 from .story_authoring import analyze_chapter, build_chapter_continuity
 from .world_global import (
     append_world_failure,
+    load_world_snapshot,
     update_global_character_state,
     update_global_environment_state,
     write_chapter_world_snapshot,
@@ -76,12 +78,13 @@ def analyze_book(*, project_slug: str, continue_on_error: bool = False) -> BookA
     failures: list[BookChapterFailureSummary] = []
     succeeded_ids: list[str] = []
     failed_ids: list[str] = []
+    total_chapters = len(chapter_paths)
 
-    for chapter_path in chapter_paths:
+    for index, chapter_path in enumerate(chapter_paths, start=1):
         chapter_rel = repo_relative(chapter_path)
+        print(f"[authoring] Starting manifest chapter {index}/{total_chapters}: {chapter_rel}")
         try:
             analysis = analyze_chapter(project_slug=project_slug, chapter=chapter_rel)
-            continuity = build_chapter_continuity(project_slug=project_slug, analysis=analysis)
 
             char_reg_rel, char_dir_rel = update_global_character_state(
                 project_slug=project_slug, analysis=analysis
@@ -97,6 +100,12 @@ def analyze_book(*, project_slug: str, continue_on_error: bool = False) -> BookA
                 global_environment_registry_relpath=env_reg_rel,
                 global_character_directory_relpath=char_dir_rel,
                 global_environment_directory_relpath=env_dir_rel,
+            )
+            snapshot_data = load_world_snapshot(project_slug=project_slug, chapter_id=analysis.chapter_id)
+            continuity = build_chapter_continuity(
+                project_slug=project_slug,
+                analysis=analysis,
+                snapshot_data=snapshot_data,
             )
 
             chapter_summaries.append(
