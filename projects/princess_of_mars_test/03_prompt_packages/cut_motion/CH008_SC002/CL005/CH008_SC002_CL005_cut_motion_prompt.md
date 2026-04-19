@@ -5,33 +5,33 @@ CH008_SC002 CL005 Cut Motion Prompt
 CH008_SC002_CL005_cut_motion_prompt
 
 # Purpose
-Execute tactical boarding sequence with close-ups and medium shots of Martians moving onto ship. Camera follows boarding trajectory from window to ship; cuts between wide boarding shots and close-ups of individual Martians.
+Depict close-up of weapon muzzle flash from Martian Fleet ship firing counter-battery volley. Camera captures intensity of discharge and recoil. Cut motion matches return vector to previous angle.
 
 # Workflow Type
 video.cut_motion.wan.i2v
 
 # Positive Prompt
-Green Martian warriors transitioning from building windows to unmanned gray airship deck, boarding equipment deployed, ship hull intact but vulnerable, Martians moving across ship deck, camera following boarding trajectory from window perspective, cuts between wide shot of boarding action and medium shot of Martians on ship, loot items visible in storage areas, valley floor below, daylight lighting preserved.
+Green Martian fleet automated weapon systems on damaged gray airship hull, muzzle flash burst visible, smoke trails rising, valley floor below, daylight lighting preserved, camera following weapon discharge trajectory, close-up shot composition.
 
 # Negative Prompt
-crew resistance visible, damaged hull inconsistent with previous beats, wrong number of ships, incorrect lighting shift, anatomical errors, extra limbs, morphing faces, crew members on deck, fire illumination before boarding complete, drifting warship without Martians.
+boarding sequence visible, crew resistance, wrong number of ships, incorrect lighting shift, anatomical errors, extra limbs, morphing faces, fire illumination before discharge complete, drifting warship without weapon discharge.
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: CH008_SC002
 - clip_id: CL005
 - duration_seconds: 5.0
-- required_refs: Ship deck accessible, boarding equipment deployed, no crew resistance visible
+- required_refs: Unmanned airship hull, weapon barrel visible, smoke trails rising
 - optional_refs: Window frame
-- visible_character_assets: Martians transitioning from windows to ship deck; Narrator observing boarding action
+- visible_character_assets: Weapon barrel, muzzle flash, smoke
 - look_continuity_policy: 
 - intended_lighting_change: 
-- composition_type: 
-- continuity_mode: reblock_same_scene
-- starting_keyframe_strategy: track_forward
-- dependency_policy: linear_sequence
+- composition_type: close-up
+- continuity_mode: reframe_same_moment
+- starting_keyframe_strategy: static on weapon muzzle
+- dependency_policy: parallel to medium shot for coverage
 - auto_advance_policy: 
-- fallback_strategy: cut_to_previous_angle
+- fallback_strategy: cutaway to fire arcs if flash timing varies
 - consistency_assist_policy: 
 - consistency_assist_method: 
 - anatomy_repair_policy: 
@@ -42,12 +42,12 @@ crew resistance visible, damaged hull inconsistent with previous beats, wrong nu
 
 # Continuity Notes
 - Maintain the unmanned status of the target airship.
-- Ensure Martians are shown moving from window positions to ship deck without gaps.
+- Ensure weapon discharge is consistent with unmanned status.
 - Preserve daylight lighting and keyframe grade as per stage guidance.
-- Do not introduce new damage to the ship hull beyond what was established in BT003/BT004.
+- Do not introduce new damage to the ship hull beyond what was established in previous beats.
 
 # Repair Notes
-- If Martians fail to reach the ship, adjust camera trajectory to show successful boarding.
+- If weapon discharge fails to appear, adjust camera trajectory to show muzzle flash clearly.
 - If lighting shifts significantly from keyframe grade, revert to approved lighting parameters.
 - If extra crew members appear on deck, remove them via inpainting or prompt adjustment.
 

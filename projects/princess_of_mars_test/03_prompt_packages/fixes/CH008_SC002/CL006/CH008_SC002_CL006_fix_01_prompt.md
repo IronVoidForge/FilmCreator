@@ -5,28 +5,28 @@ CH008_SC002 CL006 Fix 01 Prompt
 CH008_SC002_CL006_fix_01_prompt
 
 # Purpose
-Correct local artifacts in extreme close-up loot collection sequence while preserving continuity of arms, food, and water items against drifting warship background and fire illumination.
+Correct local artifacts in wide shot of fire arcs sequence while preserving continuity of fleet ships, return fire vectors, and debris field against valley background and burning ship illumination.
 
 # Workflow Type
 still.scene_insert.two_ref.klein.distilled
 
 # Positive Prompt
-extreme close-up on ancient weapons being secured by green hands, pile of dried food supplies gathered into baskets, casks of water filled by martian fingers, glowing fire light illuminating storage area, gray painted ship hull in background, detailed texture on metal and wood, solemn atmosphere, high resolution focus on item surfaces.
+wide shot showing multiple gray painted vessels firing across valley floor, bright orange fire arcs rising from muzzle points toward ridge, smoke trails visible in air, debris falling from impact zones, green Martian crew members huddled behind damaged ship structures, weapons elevated and firing, hull fires burning along sides, daylight illumination with fire glow overlay, high resolution focus on fleet formation, cinematic composition with valley-to-ridge eyeline.
 
 # Negative Prompt
-daylight lighting, distorted anatomy, extra characters, blurry focus, wrong item count, daylight shadows, bright sun, incorrect skin tone, low resolution, morphing hands, overexposed fire glow, missing loot items.
+daylight lighting without fire glow, distorted anatomy, extra characters, blurry focus, wrong item count, bright sun, incorrect skin tone, low resolution, morphing hands, overexposed fire glow, missing fleet ships, daylight shadows, wrong debris field, incorrect ship colors.
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: CH008_SC002
 - clip_id: CL006
 - duration_seconds: 5.0
-- required_refs: Arms, food supplies, water containers
-- optional_refs: window frame
-- visible_character_assets: Martians handling loot items
+- required_refs: Fleet ships, return fire vectors, debris field
+- optional_refs: valley background, burning ship glow
+- visible_character_assets: Green Martian crew members
 - look_continuity_policy: match_fire_illumination
 - intended_lighting_change: maintain_burning_ship_glow
-- composition_type: Extreme Close-up
+- composition_type: Wide shot
 - continuity_mode: insert
 - starting_keyframe_strategy: static_hold
 - dependency_policy: linear_sequence
@@ -41,10 +41,10 @@ daylight lighting, distorted anatomy, extra characters, blurry focus, wrong item
 - fix_of: 
 
 # Continuity Notes
-- Match previous loot item styles and lighting conditions from BT005. Ensure fire glow intensity matches burning ship sequence. Maintain consistent green Martian skin tone.
+- Match previous fleet ship styles and lighting conditions from BT002. Ensure fire glow intensity matches burning ship sequence. Maintain consistent green Martian skin tone. Preserve valley background geography and debris field continuity.
 
 # Repair Notes
-- Fix any hand distortion during item handling. Sharpen focus on specific loot textures. Correct color balance to match fire-illuminated environment.
+- Fix any hand distortion during weapon handling. Sharpen focus on specific fleet textures and fire arcs. Correct color balance to match fire-illuminated environment. Ensure ship hull damage is visible and consistent with previous shots.
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC002/CL006.md

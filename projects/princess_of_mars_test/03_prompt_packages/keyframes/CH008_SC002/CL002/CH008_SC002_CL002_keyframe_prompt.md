@@ -28,7 +28,7 @@ blurry, distorted anatomy, extra limbs, text, watermark, wrong color skin, missi
 - intended_lighting_change: 
 - composition_type: Medium/Close-up/Wide
 - continuity_mode: reframe_same_moment
-- starting_keyframe_strategy: pan_in
+- starting_keyframe_strategy: motion blur on weapon barrel
 - dependency_policy: linear_sequence
 - auto_advance_policy: 
 - fallback_strategy: 

@@ -5,13 +5,13 @@ CH008_SC001 CL004 Keyframe Prompt
 CH008_SC001_CL004_keyframe_prompt
 
 # Purpose
-Establish John Carter's perspective and emotional state as he watches air craft descend from an upper floor window. Capture the shift from curiosity to growing concern/anticipation. Frame the boundary between built structures (window) and open valley floor below. Include observer figure reacting to distant aerial threat source visible in background. City architecture frames edges. Open ground horizon visible ahead. Dramatic lighting emphasizes urgency of enemy airship threat.
+Establish observer figure at upper floor window with city view. Capture shift from curiosity to growing concern/anticipation regarding distant aerial threat source visible in background. Frame boundary between built structures (window) and open valley floor below. Dramatic lighting emphasizes urgency of enemy airship threat.
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Close-up static shot of John Carter at upper floor window, face and upper torso visible. Window frame edge visible on left side. Background shows valley below with distant hills. Expression shifts to growing concern/anticipation. Lighting is daylight with smoke haze from battle. No motion blur. High resolution. Cinematic composition.
+Static medium shot of human protagonist positioned at upper floor window, face and upper torso visible. Window frame edge visible on left side. Background shows valley below with distant hills. Expression shifts to growing concern/anticipation. Lighting is daylight with smoke haze from battle. No motion blur. High resolution. Cinematic composition.
 
 # Negative Prompt
 Motion blur, moving forward, running, chaotic crowd, modern clothing, bright sunny sky, empty background, distorted anatomy, extra limbs, text, watermark, signature, low resolution, blurry face, green screen, cartoonish style, proper nouns, names, specific character IDs, armored procession, warriors in green attire pivoting.
@@ -23,7 +23,7 @@ Motion blur, moving forward, running, chaotic crowd, modern clothing, bright sun
 - duration_seconds: 5
 - required_refs: BT001.md
 - optional_refs: None
-- visible_character_assets: John Carter (upper torso, face), window frame partial
+- visible_character_assets: human protagonist (upper torso, face), window frame partial
 - look_continuity_policy: static_opening_with_full_procession_visible_before_movement_change
 - intended_lighting_change: dramatic_fire_illumination_emphasizing_urgency
 - composition_type: close_up_face_window_frame_edge
@@ -45,13 +45,13 @@ Motion blur, moving forward, running, chaotic crowd, modern clothing, bright sun
 
 # Continuity Notes
 - Window frame must be visible on left edge to establish location.
-- Carter's expression should shift from curiosity to concern over 5 seconds.
+- Observer figure's expression should shift from curiosity to concern over 5 seconds.
 - Background valley/hills must remain stable for continuity with other shots.
 - Lighting must match daylight with smoke haze from battle scene.
 - Ensure no motion blur artifacts in static image generation.
 
 # Repair Notes
-- Correct any anatomical distortions on John Carter's face or upper torso.
+- Correct any anatomical distortions on observer figure's face or upper torso.
 - Remove any text, watermarks, or signatures from the frame.
 - Ensure no modern clothing elements appear in the scene.
 - Check that the open ground horizon is clearly visible without obstruction.

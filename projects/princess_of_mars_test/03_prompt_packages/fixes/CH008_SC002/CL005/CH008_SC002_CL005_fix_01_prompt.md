@@ -5,28 +5,28 @@ CH008_SC002 CL005 Fix 01 Prompt
 CH008_SC002_CL005_fix_01_prompt
 
 # Purpose
-Generate corrective still for Clip CL005 Beat BT005 (Boarding Action) preserving composition and look while fixing local issues. Ensure green-skinned warriors transition smoothly from building windows to gray vessel deck without breaking scene continuity or introducing extra crew members. Maintain daylight mixed with fire glow consistency as salvage phase begins.
+Generate corrective still for Clip CL005 Beat BT002 (Fleet Returns Fire) preserving composition and look while fixing local issues. Ensure Martian Fleet Crews transition smoothly from damaged ship structures to firing positions without breaking scene continuity or introducing extra crew members. Maintain daylight mixed with fire glow consistency as counter-battery phase begins.
 
 # Workflow Type
 still.scene_insert.two_ref.klein.distilled
 
 # Positive Prompt
-green-skinned warriors boarding gray vessel from window, daylight mixed with fire glow on hull, wide shot perspective from building, boarding equipment visible on deck, loot collection starting, smooth movement trajectory, cinematic lighting, detailed textures, desert city background, floating craft in air space, tactical boarding sequence, no crew resistance visible.
+Martian Fleet Crews firing from damaged ships, daylight mixed with fire glow on hull, close-up perspective on weapon muzzle flash, return fire arcs visible, debris falling, smooth movement trajectory, cinematic lighting, detailed textures, scorched hull background, gray vessel structures, tactical counter-battery sequence, no crew resistance visible.
 
 # Negative Prompt
-distorted limbs, extra crew members, static composition, missing boarding gear, wrong lighting, blurry movement, dark shadows, human figures on deck, damaged hull inconsistent, poor anatomy, low resolution, overexposed fire, underexposed window view, floating debris, incorrect vessel shape.
+distorted limbs, extra crew members, static composition, missing firing gear, wrong lighting, blurry movement, dark shadows, human figures on deck, damaged hull inconsistent, poor anatomy, low resolution, overexposed fire, underexposed ship view, floating debris, incorrect vessel shape, boarding action.
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: CH008_SC002
 - clip_id: CL005
 - duration_seconds: 5.0
-- required_refs: Ship deck accessible, boarding equipment deployed, no crew resistance visible.
+- required_refs: Ship deck accessible, firing equipment deployed, no crew resistance visible.
 - optional_refs: Window frame.
-- visible_character_assets: green-skinned warriors transitioning from windows to ship deck; human observer watching boarding action.
+- visible_character_assets: Martian Fleet Crews transitioning from ship structures to firing positions; human observer watching counter-battery action.
 - look_continuity_policy: 
 - intended_lighting_change: 
-- composition_type: Wide shot of boarding from window perspective, Medium shot of green figures on ship deck.
+- composition_type: Close-up of weapon muzzle flash, Medium shot of crew firing from damaged ships.
 - continuity_mode: reblock_same_scene
 - starting_keyframe_strategy: track_forward
 - dependency_policy: linear_sequence
@@ -41,15 +41,15 @@ distorted limbs, extra crew members, static composition, missing boarding gear, 
 - fix_of: 
 
 # Continuity Notes
-- Maintain reblock_same_scene continuity ensuring green-skinned warriors move from windows to deck without teleportation.
-- Preserve context of twenty gray vessels in scene while focusing on single unmanned craft for boarding sequence.
+- Maintain reblock_same_scene continuity ensuring Martian Fleet Crews move from ship structures to firing positions without teleportation.
+- Preserve context of twenty gray vessels in scene while focusing on single damaged craft for counter-battery sequence.
 - Ensure lighting shifts from daylight to fire illumination are consistent with salvage phase progression.
 - Keep visible character assets aligned with observer perspective at window frame.
 
 # Repair Notes
-- Fix anatomy distortion during movement from window to deck trajectory.
-- Ensure boarding equipment is clearly visible on vessel deck without adding extra crew members.
-- Correct fire glow intensity on hull to match salvage ritual solemnity.
+- Fix anatomy distortion during movement from ship structures to firing positions trajectory.
+- Ensure firing equipment is clearly visible on vessel deck without adding extra crew members.
+- Correct fire glow intensity on hull to match counter-battery ritual solemnity.
 - Maintain window frame obstruction in foreground for perspective consistency.
 
 # Sources

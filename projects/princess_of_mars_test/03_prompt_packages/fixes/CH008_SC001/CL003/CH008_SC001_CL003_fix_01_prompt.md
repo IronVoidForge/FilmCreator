@@ -5,7 +5,7 @@ CH008_SC001 CL003 Fix 01 Prompt
 CH008_SC001_CL003_fix_01_prompt
 
 # Purpose
-Corrective still-generation that preserves composition and look while fixing local issues for CL003 medium shot showing Green Martian figures distributed across forward sections of descending air craft, maintaining visual continuity with scene requirements showing martians crowding toward front edge of vessels.
+Corrective still-generation preserving composition and look while fixing local issues for CL003 medium shot showing Green Martian figures distributed across forward sections of descending air craft, maintaining visual continuity with scene requirements showing martians crowding toward front edge of vessels.
 
 # Workflow Type
 still.scene_insert.two_ref.klein.distilled

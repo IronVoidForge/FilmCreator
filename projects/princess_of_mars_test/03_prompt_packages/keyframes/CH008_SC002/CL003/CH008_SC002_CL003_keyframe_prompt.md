@@ -11,7 +11,7 @@ Depict aerial conflict and resourcefulness in salvaging supplies from a building
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-wide shot of damaged gray airships hovering over valley floor, visible hull breaches and smoke rising from multiple vessels, single undamaged ship remains intact in center frame, green-skinned warriors positioned at building windows observing scene, distant hills beyond city plaza, daylight illumination with dramatic fire glow on damaged hulls, window frame establishes foreground obstruction
+wide shot of damaged gray vessels hovering over valley floor, visible hull breaches and smoke rising from multiple ships, single intact vessel remains centered in frame, green-skinned warriors positioned at building windows observing scene, distant hills beyond city plaza, daylight illumination with dramatic fire glow on damaged hulls, window frame establishes foreground obstruction
 
 # Negative Prompt
 no visible crew members on deck, no complete ship destruction, no close-up facial expressions, no modern machinery, no text overlays, no blurry focus, no excessive fire consuming entire hull immediately, no earthling figures present, no close-up of loot items yet

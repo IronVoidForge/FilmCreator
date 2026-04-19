@@ -11,7 +11,7 @@ Bridge static opening frame with lateral group movement and dragging action into
 video.cut_motion.wan.i2v
 
 # Positive Prompt
-Green Martian females moving laterally from left edge toward center plaza, dragging slender figure with copper skin and black hair into shadowed archway, camera tracking group movement maintaining forty-five degree angle, copper flooring reflecting ambient light, building entrance deepening shadows, narrator observing from right edge static.
+Green Martian females moving laterally from left edge toward center plaza, dragging slender figure with copper skin and black hair into shadowed archway, camera tracking group movement maintaining forty-five degree angle, copper flooring reflecting ambient light, building entrance deepening shadows, human observer on right edge static.
 
 # Negative Prompt
 morphing faces, extra limbs, blue skin, green hair, static camera, flickering textures, disappearing characters, wrong lighting, distorted anatomy, sudden cuts.
@@ -23,22 +23,22 @@ morphing faces, extra limbs, blue skin, green hair, static camera, flickering te
 - duration_seconds: 5
 - required_refs: BT001.md, CH008_SC003/BEAT_INDEX.md
 - optional_refs: plaza_environment_assets.md
-- visible_character_assets: Green Martian females, copper-skinned figure, narrator edge
-- look_continuity_policy: 
-- intended_lighting_change: 
+- visible_character_assets: Green Martian females, copper-skinned figure, human observer edge
+- look_continuity_policy: maintain_keyframe_lighting_grade
+- intended_lighting_change: interior_shadows_deepening
 - composition_type: medium_shot
 - continuity_mode: reblock_same_scene
 - starting_keyframe_strategy: static_opening
 - dependency_policy: independent
-- auto_advance_policy: 
+- auto_advance_policy: none
 - fallback_strategy: insert_alternate_angle
-- consistency_assist_policy: 
-- consistency_assist_method: 
-- anatomy_repair_policy: 
-- consistency_targets: 
-- style_profile: 
-- batch_role: 
-- fix_of: 
+- consistency_assist_policy: standard
+- consistency_assist_method: bounding_box_separation
+- anatomy_repair_policy: skin_color_correction
+- consistency_targets: copper_skin_texture, green_martian_skin
+- style_profile: action_oriented_awe_inspiring
+- batch_role: cut_motion
+- fix_of: null
 - workflow_type: video.cut_motion.wan.i2v
 
 # Continuity Notes

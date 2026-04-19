@@ -5,29 +5,29 @@ CH008_SC002 CL007 Scene Stage Prompt
 CH008_SC002_CL007_scene_stage_prompt
 
 # Purpose
-Depict funeral pyre ritual through wide-to-medium shots establishing solemnity and emotional climax. Camera transitions from wide shot showing entire burning ship to medium shots of Martians around fire; cuts between fire and observer reactions. Establish narrator's vantage point throughout scene via window frame obstruction. Focus on visual continuity of ship fully ablaze, smoke rising, fire consuming ship structure, no visible crew remaining. Authoring intent is to resolve aerial conflict sequence through resourcefulness in salvaging supplies and honoring fallen vessel. Staging includes wide coverage of valley floor with hills beyond, medium coverage of figures near pyre, and POV coverage from building window.
+Depict the engagement and damage to fleet through wide shots establishing staggered formation transitioning to broadside alignment. Camera captures entire fleet movement across valley floor with hills beyond. Focus on visual continuity of damaged hulls maneuvering, smoke rising from impact points, and crew members realigning positions for coordinated volley fire. Authoring intent is to resolve aerial conflict sequence through resourcefulness in salvaging supplies and honoring fallen vessel. Staging includes wide coverage of valley floor with hills beyond, medium coverage of figures near pyre, and POV coverage from building window.
 
 # Workflow Type
 authoring.scene_stage
 
 # Positive Prompt
-Burning gray airship hull engulfed in flames, thick smoke rising into valley sky, Green warriors standing around funeral pyre, observer looking from window frame, fire illuminating faces, solemn atmosphere, wide shot composition, medium shot of figures near fire, drifting vessel floating above ground, no visible crew members, ancient weaponry secured on deck, water containers filled, casks of supplies gathered.
+Gray-painted vessels with strange banners and odd devices on prows, thick smoke rising into valley sky, crew members moving on forward decks, debris field expanding across ground, hills beyond visible in distance, damaged thrusters swaying on hulls, coordinated volley fire arcs toward ridge, figures crowd forward decks, fire causes spurt of flame from missile impact, banners fluttering in wind.
 
 # Negative Prompt
-crew members, modern technology, colorful clothing, text, logo, bright daylight without fire illumination, green Martian faces without copper skin tone, window frame missing, ship intact without flames, visible enemy fleet, floating debris unrelated to pyre, crew resistance, modern uniforms.
+Intact hulls without damage, modern technology, text, logo, bright daylight without smoke/fire context, floating debris unrelated to battle, window frame missing, ship intact without flames, visible enemy fleet, crew resistance, modern uniforms.
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: CH008_SC002
 - clip_id: CL007
 - duration_seconds: 5.0
-- required_refs: Ship fully ablaze, smoke rising, fire consuming ship structure, no visible crew remaining
-- optional_refs: Window frame
-- visible_character_assets: Martians surrounding burning ship; Narrator observing pyre ritual
+- required_refs: Fleet formation change, staggered to broadside alignment, damaged hulls visible, smoke density increasing
+- optional_refs: Ship banners fluttering, debris scattered
+- visible_character_assets: Fleet ships, crew members moving
 - look_continuity_policy: 
 - intended_lighting_change: 
-- composition_type: Wide/Medium/POV
-- continuity_mode: reframe_same_moment
+- composition_type: Wide shot
+- continuity_mode: reblock_same_scene
 - starting_keyframe_strategy: pan_across
 - dependency_policy: linear_sequence
 - auto_advance_policy: 
@@ -41,24 +41,19 @@ crew members, modern technology, colorful clothing, text, logo, bright daylight 
 - fix_of: 
 
 # Continuity Notes
-- Ship fully ablaze, smoke rising, fire consuming ship structure, no visible crew remaining
-- Window POV establishes narrator's vantage point throughout scene
-- Twenty airships create scale for wide coverage shots (contextual)
-- Martians positioned at building windows for volley fire sequences (contextual)
-- Damage to ships visible in wide/medium coverage (contextual)
-- Unmanned ship becomes focal point after damage sequence (contextual)
-- Loot items require extreme close-up coverage for detail (contextual)
-- Tow away shot provides scene resolution (contextual)
-- Ensure fire intensity matches funeral pyre solemnity
-- Maintain window frame obstruction for POV shots
+- Fleet in staggered formation changing to broadside
+- Damaged hulls visible with smoke rising from impact points
+- Valley floor geography establishing scale
+- Hills beyond providing directional context
+- Crew members realigning positions for coordinated volley fire
+- Debris field expanding after previous impacts
 
 # Repair Notes
-- Ensure fire intensity matches funeral pyre solemnity
-- Maintain window frame obstruction for POV shots
-- Verify no visible crew remaining on ship deck
-- Check consistency of Green warrior skin tone with copper description
+- Ensure ship rotation is smooth but shows damage
+- Verify fire intensity matches battle context
+- Check consistency of ship banners and devices
 - Confirm smoke direction aligns with valley wind flow
-- Validate loot items match salvage sequence (arms, food, water)
+- Validate debris field matches salvage sequence (arms, food, water)
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC002/CL007.md

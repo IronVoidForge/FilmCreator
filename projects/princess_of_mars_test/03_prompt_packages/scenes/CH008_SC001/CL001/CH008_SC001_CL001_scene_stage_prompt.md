@@ -5,16 +5,16 @@ CH008_SC001 CL001 Scene Stage Prompt
 CH008_SC001_CL001_scene_stage_prompt
 
 # Purpose
-Establish John Carter's perspective from an upper floor window as he observes the arrival of twenty large gray air craft descending toward the city. Capture his initial curiosity and growing anticipation regarding the procession retreat to a city building due to immediate orders. Frame the shot with the window edge visible to ground the viewer in location, showing the valley/hills background for continuity.
+Establish John Carter's observation position from upper floor window with city perimeter visible in background, showing approaching ground forces and horizon anchor line. Frame composition as wide exterior angle to capture procession approach while maintaining valley/hills continuity reference. Ground viewer in location through partial window frame edge visible on left side, showing initial curiosity expression without shifting to close-up face that contradicts wide exterior staging intent.
 
 # Workflow Type
 authoring.scene_stage
 
 # Positive Prompt
-close-up face, John Carter upper torso, standing at window frame edge, looking downward toward valley, initial curiosity visible on expression, daylight conditions, city building interior background, partial view of air craft descending outside window, window frame left edge, valley hills beyond stable background, Barsoom cinematic style, observer perspective
+wide exterior shot, John Carter upper torso standing at window frame edge left side, looking downward toward approaching ground forces and horizon line, initial curiosity visible on facial expression, daylight conditions, city building interior background with partial view of valley hills beyond stable reference, Barsoom cinematic style, observer perspective from upper floor, wide angle showing city boundary as visual anchor, horizon line marked for eyeline reference, procession figures entering frame from distance, no close-up face composition, window frame edge visible maintaining location context
 
 # Negative Prompt
-wide establishing shot, medium shots, static composition, single character focus without window context, dark lighting, night scene, indoor scenes without window view, blurry movement, distorted anatomy, missing limbs, extra fingers, bad hands, text overlays, watermark, signature, low resolution, poor quality, deformed faces, morphed features, inconsistent colors, wrong era clothing, modern technology, disabled ships, burning vessels, captive figure, copper skin character, air fleet combat sequences
+close-up face shot, medium shots, static composition, single character focus without window context, dark lighting, night scene, indoor scenes without exterior view, blurry movement, distorted anatomy, missing limbs, extra fingers, bad hands, text overlays, watermark, signature, low resolution, poor quality, deformed faces, morphed features, inconsistent colors, wrong era clothing, modern technology, disabled ships, burning vessels, captive figure, copper skin character, air fleet combat sequences, Carter in central leading position, valley background unstable or missing
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -23,15 +23,15 @@ wide establishing shot, medium shots, static composition, single character focus
 - duration_seconds: 5
 - required_refs: BT001.md
 - optional_refs: CH008_SC001_scene_breakdown
-- visible_character_assets: John Carter (upper torso, face), window frame partial
+- visible_character_assets: John Carter (upper torso, face), window frame partial left edge
 - look_continuity_policy: reblock_same_scene
 - intended_lighting_change: none
-- composition_type: close_up_face_with_window_frame_edge
+- composition_type: wide_exterior_with_window_frame_edge
 - continuity_mode: reblock_same_scene
-- starting_keyframe_strategy: static_hold
+- starting_keyframe_strategy: horizon_anchor_with_city_perimeter_line
 - dependency_policy: none
 - auto_advance_policy: none
-- fallback_strategy: insert
+- fallback_strategy: static_wide_if_tracking_fails
 - consistency_assist_policy: enabled
 - consistency_assist_method: frame_matching
 - anatomy_repair_policy: standard
@@ -41,21 +41,21 @@ wide establishing shot, medium shots, static composition, single character focus
 - fix_of: none
 
 # Continuity Notes
-- Establish Carter's perspective from upper floor window with window frame edge visible to ground viewer in location
-- Show initial curiosity on face as he observes arrival of twenty large gray air craft descending toward city
+- Establish Carter's perspective from upper floor window with window frame edge visible on left side to ground viewer in location
+- Show initial curiosity on face as he observes arrival of approaching ground forces and horizon anchor line
 - Maintain valley/hills background stability for continuity across shots
-- Ensure daylight conditions remain consistent showing clear visibility of air craft details
+- Ensure daylight conditions remain consistent showing clear visibility of procession figures entering frame
 - Keep Carter's position at window frame without shifting to central or leading position
-- Avoid wide establishing shots or medium shots that contradict close-up face composition intent
+- Avoid close-up face compositions that contradict wide exterior staging intent from BT001 beat bundle
 - Verify no disabled ships, burning vessels, or captive figures appear in this initial observation sequence
 
 # Repair Notes
-- If Carter's expression appears static, add subtle shifts reflecting growing concern/anticipation as more craft appear
-- Ensure window frame edge remains visible on left side to maintain location context
-- Check that valley/hills background is stable and consistent with previous shots for continuity
-- If air craft details are unclear, adjust exposure to maintain clear visibility of descending vessels
+- If Carter's expression appears static, add subtle shifts reflecting growing concern/anticipation as more procession figures appear
+- Ensure window frame edge remains visible on left side to maintain location context and prevent composition drift
+- Check that valley/hills background is stable and consistent with previous shots for continuity tracking
+- If procession figures are unclear or not entering frame properly, adjust exposure to maintain clear visibility of approaching elements
 - Verify no modern technology or wrong era clothing appears in scene
-- If lighting appears inconsistent with daylight conditions, adjust exposure to maintain clear visibility of air craft details
+- If lighting appears inconsistent with daylight conditions, adjust exposure to maintain clear visibility of horizon anchor line
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC001/CL001.md

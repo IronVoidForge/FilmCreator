@@ -5,16 +5,16 @@ CH008_SC001 CL003 Scene Stage Prompt
 CH008_SC001_CL003_scene_stage_prompt
 
 # Purpose
-Establish John Carter's perspective from upper floor window as he observes multiple Green Martian figures crowding forward sections of descending air craft vessels. Introduce secondary character element on vessel deck to build tension for arrival moment. Maintain continuity with procession movement while transitioning from open valley floor to city building approach pattern. Show coordinated forward movement along vessel length synchronized with downward descent trajectory toward city facade.
+Establish the visual entry of the airship fleet from the northern horizon into the frame, observed from John Carter's upper floor window perspective. Define the composition as Extreme Long Sky to capture the scale of arrival and maintain continuity with the procession movement context.
 
 # Workflow Type
 authoring.scene_stage
 
 # Positive Prompt
-Green Martian warrior figures distributed across forward sections of descending air craft vessels, medium shot showing vessel deck horizontal axis, multiple martians crowding toward front edge, vessel long low gray-painted form visible with strange banners on prows, coordinated forward movement along deck synchronized with downward descent trajectory, city building upper floor window view in foreground, valley below and hills beyond in background, daylight lighting, cinematic composition, tactical arrival urgency implied, group entity without individual physical descriptions, horizontal axis along vessel deck, eyeline from Carter's POV includes martians as secondary focus, atmospheric depth, clear focus on vessel deck action.
+Northern sky clear with visible horizon line, multiple long low gray-painted airships descending into frame from northern direction, strange banners on prows, odd devices on prow, daylight lighting, cinematic composition, static camera position holding full approach, atmospheric depth, tactical arrival urgency implied, group entity without individual physical descriptions.
 
 # Negative Prompt
-blurry vessel form, distorted anatomy, wrong skin tone, static image, missing timing marker, protagonist wearing green attire, dark lighting, crowded city buildings in foreground, calm expression, low resolution, extra limbs, incorrect eye direction, foggy atmosphere, text overlay, visible faces on Martians, individual warrior descriptions, bright interior spaces, empty vessel decks, doorway threshold elements, melting motion inward, deserted valley without hills, vertical descent path missing.
+blurry vessel form, distorted anatomy, wrong skin tone, static image, missing timing marker, dark lighting, crowded city buildings in foreground, calm expression, low resolution, extra limbs, incorrect eye direction, foggy atmosphere, text overlay, visible faces on Martians, bright interior spaces, empty vessel decks, vertical descent path missing.
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -23,12 +23,12 @@ blurry vessel form, distorted anatomy, wrong skin tone, static image, missing ti
 - duration_seconds: 5
 - required_refs: BT003.md
 - optional_refs: CH008_SC001_scene_breakdown, CH008_SC001_clip_roster
-- visible_character_assets: Green Martian figures group at forward vessel deck edge, air craft forward section
+- visible_character_assets: multiple gray-painted airships, horizon line reference
 - look_continuity_policy: match_previous_procession_movement
 - intended_lighting_change: maintain_daylight_deserted_city
-- composition_type: medium_shot_vessel_deck_with_martians
+- composition_type: extreme_long_sky_fleet_arrival
 - continuity_mode: insert
-- starting_keyframe_strategy: static_hold_vessel_deck_axis_with_martians_crowding_forward
+- starting_keyframe_strategy: northern_sky_clear_with_horizon_line_visible
 - dependency_policy: none
 - auto_advance_policy: standard_cut_on_arrival_completion
 - fallback_strategy: cut_to_wide_if_close_unavailable

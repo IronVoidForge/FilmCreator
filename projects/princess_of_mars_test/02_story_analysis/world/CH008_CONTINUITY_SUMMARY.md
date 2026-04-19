@@ -5,6 +5,7 @@
 - CH008_SC002
 - CH008_SC003
 - CH008_SC004
+- CH008_SC005
 
 ## Known Canonical Characters
 - apache_warriors

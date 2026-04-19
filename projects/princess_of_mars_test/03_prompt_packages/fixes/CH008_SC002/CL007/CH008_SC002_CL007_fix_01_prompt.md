@@ -39,6 +39,7 @@ text, watermark, blurry, distorted anatomy, extra limbs, modern objects, crew me
 - style_profile: 
 - batch_role: 
 - fix_of: 
+- workflow_type: still.scene_insert.two_ref.klein.distilled
 
 # Continuity Notes
 - Ensure single burning ship is focal point without other vessels in immediate frame

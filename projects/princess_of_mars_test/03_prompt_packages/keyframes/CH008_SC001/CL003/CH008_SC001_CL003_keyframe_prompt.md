@@ -5,7 +5,7 @@ CH008_SC001 CL003 Keyframe Prompt
 CH008_SC001_CL003_keyframe_prompt
 
 # Purpose
-Capture the visible state of green-skinned warriors distributed across forward sections of descending air craft vessel. Freeze the moment of coordinated movement along deck surface.
+Capture visible state of green-skinned warriors distributed across forward sections of descending air craft vessel. Freeze moment of coordinated movement along deck surface.
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled

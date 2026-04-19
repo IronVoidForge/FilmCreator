@@ -5,13 +5,13 @@ CH008_SC002 CL002 Cut Motion Prompt
 CH008_SC002_CL002_cut_motion_prompt
 
 # Purpose
-Execute Martian volley fire sequence from building window perspective with camera cuts between shooter POV and target impact on airship hulls.
+Depict Green Martian warriors firing volley from building windows, camera cutting between shooter POV and airship hull impacts.
 
 # Workflow Type
 video.cut_motion.wan.i2v
 
 # Positive Prompt
-Green Martian warriors at multi-story building windows, rifle muzzle flashes illuminating dark interior, gray projectiles arcing through valley air toward distant airships, smoke rising from damaged ship hulls, narrator observing from window frame, daylight lighting shifting to fire glow on muzzle, medium shot composition, dynamic camera movement following projectile trajectory.
+Green Martian warriors at multi-story building windows, rifle muzzle flashes illuminating dark interior, gray projectiles arcing through valley air toward distant airships, smoke rising from damaged ship hulls, daylight lighting shifting to fire glow on muzzle, medium shot composition, dynamic camera movement following projectile trajectory.
 
 # Negative Prompt
 static image, morphing faces, extra limbs, wrong number of ships, missing muzzle flash, distorted projectiles, darkened sky, incorrect lighting grade, blurry text, low resolution, anatomical errors, green skin fading to normal human skin, ship hulls melting, floating debris without cause.

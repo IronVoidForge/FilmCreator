@@ -5,31 +5,31 @@ CH008_SC002 CL005 Keyframe Prompt
 CH008_SC002_CL005_keyframe_prompt
 
 # Purpose
-Depict tactical boarding sequence from window perspective showing green-skinned warriors moving onto gray vessel deck, capturing transition from building to ship with daylight illumination and valley city background context.
+Depict close-up of weapon muzzle flash from fleet crew perspective showing counter-battery discharge against ridge buildings with daylight illumination and damaged ship hull background context.
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Green-skinned warriors climbing onto floating gray hull, wooden planks connecting building to ship, daylight illuminating valley city background, loose black hair on figures, ornate jewelry visible, smoke rising from distant damaged ships, wide angle capturing boarding trajectory, medium detail on warrior movement, no crew resistance on deck, boarding equipment deployed, ship storage areas accessible.
+Close-up of weapon barrel, hands gripping trigger mechanism, bright muzzle flash burst, smoke trails rising, green-skinned crew members huddled behind armored structures, gray painted hull visible, valley city background, daylight illuminating scene, loose black hair on figures, ornate jewelry visible, damaged ship plating showing scorch marks.
 
 # Negative Prompt
-blurry, distorted anatomy, extra limbs, text, watermark, human faces close up, bright sun glare, dark shadows inconsistent with daylight, floating debris not part of ship, wrong color skin tone, missing boarding equipment, crew members on deck, fire consuming hull prematurely.
+blurry, distorted anatomy, extra limbs, text, watermark, human faces close up (unless crew hands), bright sun glare overpowering flash, dark shadows inconsistent with daylight, floating debris not part of ship, wrong color skin tone, missing weapon parts, boarding equipment visible, fire consuming hull prematurely.
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: CH008_SC002
 - clip_id: CL005
 - duration_seconds: 5.0
-- required_refs: Ship deck accessible, boarding equipment deployed, no crew resistance visible
-- optional_refs: Window frame
-- visible_character_assets: Martians transitioning from windows to ship deck; Narrator observing boarding action
-- look_continuity_policy: 
-- intended_lighting_change: 
-- composition_type: Wide/Medium
+- required_refs: Weapon barrel accessible, muzzle flash timing aligned, damaged ship hull visible
+- optional_refs: Valley city background
+- visible_character_assets: Crew hands, weapon barrel, muzzle flash
+- look_continuity_policy: reframe_same_moment
+- intended_lighting_change: daylight with fire glow accents
+- composition_type: Close-up
 - continuity_mode: reblock_same_scene
-- starting_keyframe_strategy: track_forward
-- dependency_policy: linear_sequence
+- starting_keyframe_strategy: static on weapon muzzle
+- dependency_policy: parallel to medium shot for coverage
 - auto_advance_policy: 
 - fallback_strategy: cut_to_previous_angle
 - consistency_assist_policy: 
@@ -41,17 +41,17 @@ blurry, distorted anatomy, extra limbs, text, watermark, human faces close up, b
 - fix_of: 
 
 # Continuity Notes
-- Maintain green skin consistency across all warrior figures in sequence
+- Maintain green skin consistency across all crew figures in sequence
 - Ensure gray hull color remains consistent with previous airship shots
 - Valley city background must match deserted buildings established in BT001-BT004
-- Boarding equipment state must align with deployment shown in BT004
-- No visible crew members on deck to maintain unmanned ship continuity
+- Weapon barrel state must align with firing shown in BT002
+- No visible boarding equipment to maintain firing continuity
 
 # Repair Notes
-- Fix anatomy during climbing motion to ensure natural weight distribution
+- Fix anatomy during firing motion to ensure natural weight distribution
 - Ensure lighting matches fire glow if present from distant burning ships
-- Check for extra crew members on deck and remove if detected
-- Verify boarding planks connect correctly between building and hull
+- Check for extra crew members on open deck and remove if detected
+- Verify weapon barrel connects correctly between hands and flash
 - Adjust skin tone saturation to match established green warrior profile
 
 # Sources

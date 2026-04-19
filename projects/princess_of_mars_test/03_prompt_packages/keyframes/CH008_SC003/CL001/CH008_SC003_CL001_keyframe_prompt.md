@@ -5,16 +5,16 @@ CH008_SC003 CL001 Keyframe Prompt
 CH008_SC003_CL001_keyframe_prompt
 
 # Purpose
-Establish group approach from left side at 45-degree camera angle, static opening keyframe for CL001 sequence.
+Establish aftermath and vertical axis for boarding action, static opening keyframe showing drifting craft positioned centrally with building roofs as elevated approach point, wide angle composition from rooftop position.
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Group of green-skinned figures entering plaza from left, V-shape formation visible, copper flooring reflecting ambient light, arched building entrance in background, hills beyond valley, medium shot composition, static camera position, deserted city environment.
+Green-skinned warriors positioned on upper building rooftops, long low gray vessels floating in plain below, smoke rising from damaged craft, daylight illumination, arched doorway visible on building facade, distant hills beyond valley floor, wide shot composition, static camera position, deserted urban environment with battle aftermath.
 
 # Negative Prompt
-Earthling woman face, human male facial features, motion blur, night lighting, fire illumination, wrong skin tones, extra characters, text overlays, close-up details, interior shadows too deep.
+human female facial features, earthling male face, motion blur, night lighting, fire glow, wrong skin tones, extra characters, text overlays, close-up details, interior shadows too deep, copper flooring reflections, plaza ground surface, narrator presence.
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -23,33 +23,38 @@ Earthling woman face, human male facial features, motion blur, night lighting, f
 - duration_seconds: 5
 - required_refs: BT001.md, CH008_SC003/BEAT_INDEX.md
 - optional_refs: plaza_environment_assets.md
-- visible_character_assets: 2-3 Green Martian females, Narrator (edge of frame)
-- look_continuity_policy: 
-- intended_lighting_change: 
-- composition_type: medium_shot
-- continuity_mode: reblock_same_scene
-- starting_keyframe_strategy: static_opening
+- visible_character_assets: green_warriors_on_building_roofs, drifting_craft_in_plain_below
+- look_continuity_policy: independent_opening_keyframe_with_contextual_reference_to_bodies_strewn_about
+- intended_lighting_change: daylight with smoke haze
+- composition_type: wide_angle
+- continuity_mode: tracking_shot_of_drifting_craft
+- starting_keyframe_strategy: establishing_wide_frame_from_building_roof_position
 - dependency_policy: independent
-- auto_advance_policy: 
-- fallback_strategy: insert_alternate_angle
-- consistency_assist_policy: 
-- consistency_assist_method: 
-- anatomy_repair_policy: 
-- consistency_targets: 
-- style_profile: 
-- batch_role: 
-- fix_of: 
+- auto_advance_policy: none
+- fallback_strategy: reframe_same_moment_if_tracking_fails_to_show_vertical_axis
+- consistency_assist_policy: cinematic_compositional
+- consistency_assist_method: literal_descriptive
+- anatomy_repair_policy: sparse_conservative
+- consistency_targets: vertical_axis_between_roof_and_plain
+- style_profile: still.scene_build.four_ref.klein.distilled
+- batch_role: opening_keyframe
+- fix_of: null
 
 # Continuity Notes
-- Camera positioned at 45-degree angle to group approach path.
-- Copper flooring reflects ambient light; shadows deepen at building threshold.
-- Group enters from left side, moves toward center building entrance in synchronized motion.
-- Static camera position for opening keyframe.
+- Camera positioned at rooftop elevation looking down toward plain below.
+- Vertical axis emphasized between building roofs and drifting craft in plain.
+- Warriors visible on upper floors with arched doorways, craft floating centrally in frame.
+- Static camera position for opening keyframe establishing spatial relationship.
+- Smoke from battle damage creates atmospheric haze across scene.
+- Distant hills provide directional context beyond valley floor.
 
 # Repair Notes
 - Ensure green skin tone matches Martian warriors without over-saturation.
 - Avoid motion blur in static opening keyframe.
-- Verify copper flooring reflection is consistent with daylight lighting.
+- Verify vertical axis between roof and plain is clearly visible.
+- Confirm daylight lighting with smoke haze creates proper atmospheric depth.
+- Check that drifting craft shows battle damage from missile impacts.
+- Ensure no human facial features appear in frame.
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC003/CL001.md
