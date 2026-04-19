@@ -5,13 +5,13 @@ CH008_SC001 CL004 Cut Motion Prompt
 CH008_SC001_CL004_cut_motion_prompt
 
 # Purpose
-Establish sudden halt and reverse movement of procession on open ground.
+Describe airship entry sequence from interior window view following martian dissolution.
 
 # Workflow Type
 video.cut_motion.wan.i2v
 
 # Positive Prompt
-Wide shot green-clad warriors halting abruptly on valley floor. Camera holds steady then pans slightly to follow reverse movement toward city skyline. Warriors execute synchronized turn in place. Dust kicks up from boots during pivot. Lighting remains consistent with previous keyframe daylight high contrast. Background shows distant hills and approaching airship fleet silhouette.
+Wide shot interior window view. Gray airships sailing toward valley floor. Green warriors fading into mist below. Human observer watching from frame edge. Banners and glowing devices visible on vessels. Daylight high contrast lighting consistent with keyframe.
 
 # Negative Prompt
 morphing faces extra limbs sudden zoom darkening or brightening exposure floating objects incorrect marching direction blurry text distorted anatomy static image low resolution color bleeding glitchy transitions.
@@ -41,10 +41,10 @@ morphing faces extra limbs sudden zoom darkening or brightening exposure floatin
 - fix_of: 
 
 # Continuity Notes
-- Preserve keyframe lighting and grade by default. Focus on visible motion, camera behavior, and environment change. Ensure procession direction reverses smoothly without snapping. Maintain character count consistency.
+- Preserve keyframe lighting and grade by default. Focus on visible motion, camera behavior, and environment change. Ensure airship entry is smooth without snapping. Maintain character count consistency.
 
 # Repair Notes
-- If reverse movement is too slow, increase pivot speed. If lighting shifts, force continuity with previous frame. If anatomy distorts during turn, apply repair policy.
+- If ship motion is too slow, increase forward velocity. If lighting shifts, force continuity with previous frame. If anatomy distorts during turn, apply repair policy.
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC001/CL004.md

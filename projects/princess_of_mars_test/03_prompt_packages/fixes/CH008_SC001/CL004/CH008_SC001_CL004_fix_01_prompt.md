@@ -5,13 +5,13 @@ CH008_SC001 CL004 Fix 01 Prompt
 CH008_SC001_CL004_fix_01_prompt
 
 # Purpose
-Generate a corrected still for CL004 that captures the abrupt halt and reverse movement of the procession in open ground, ensuring the command signal is visible and maintaining continuity with the retreat order beat. Preserve the wide composition and lighting while fixing local generation issues.
+Generate a corrected still for CL004 that captures the arrival of enemy airships and the narrator's observation from the window, ensuring continuity with the melting Martians beat. Preserve the wide composition and lighting while fixing local generation issues.
 
 # Workflow Type
 still.scene_insert.two_ref.klein.distilled
 
 # Positive Prompt
-wide angle view green-clad warriors marching formation stopping suddenly open terrain valley floor main observer standing rear of column high vantage point commander issuing order visible above horizon urban structures bordering left and right sides tense mood anticipation turning to fear atmospheric lighting consistent with previous clips
+interior room view narrator standing at window observing valley floor twenty gray low-profile airships sailing toward valley banners on stem stern glowing devices on prow urban structures bordering left and right sides tense mood anticipation turning to fear atmospheric lighting consistent with previous clips
 
 # Negative Prompt
 blurry distorted anatomy wrong movement direction missing characters inconsistent lighting text artifacts low resolution noise flickering incorrect color palette
@@ -23,33 +23,33 @@ blurry distorted anatomy wrong movement direction missing characters inconsisten
 - duration_seconds: 5
 - required_refs: BT002.md
 - optional_refs: CH008_SC001_scene_breakdown
-- visible_character_assets: Carter rear_position, Warriors central_column, implied_commanders_elevated
-- look_continuity_policy: 
-- intended_lighting_change: 
-- composition_type: wide_halt_reverse
+- visible_character_assets: Narrator window_position, Martians melting_state, Airships entering_valley
+- look_continuity_policy: wide_establishing
+- intended_lighting_change: atmospheric_consistency
+- composition_type: wide_establishing
 - continuity_mode: reframe_same_moment
 - starting_keyframe_strategy: static_opening_with_full_procession_visible_before_movement_change
 - dependency_policy: dependent_on_CL003_reaction_clip_first
-- auto_advance_policy: 
-- fallback_strategy: 
-- consistency_assist_policy: 
-- consistency_assist_method: 
-- anatomy_repair_policy: 
-- consistency_targets: 
-- style_profile: 
-- batch_role: 
-- fix_of: 
+- auto_advance_policy: none
+- fallback_strategy: retry_with_refined_prompt
+- consistency_assist_policy: enabled
+- consistency_assist_method: prompt_reinforcement
+- anatomy_repair_policy: strict
+- consistency_targets: ship_banners_device_visibility, narrator_eyeline_alignment
+- style_profile: cinematic_martian
+- batch_role: fix_01
+- fix_of: CH008_SC001_CL004_KF01_v001.png
 
 # Continuity Notes
-- Procession must halt abruptly upon entering open ground.
-- Command signal source must be visible from elevated position.
-- Maintain formation integrity before reverse movement begins.
-- Ensure city architecture frames the left and right sides of the shot.
+- Martians must have melted into mist before airships enter frame.
+- Airships must move steadily toward valley center.
+- Narrator remains stationary at window.
+- City architecture frames the shot.
 
 # Repair Notes
-- Correct any anatomy distortions in warrior figures or protagonist.
-- Fix movement artifacts that suggest incorrect direction (ensure halt is clear).
-- Preserve lighting consistency with previous clips (BT002 reaction).
+- Correct any anatomy distortions in narrator or ship details.
+- Fix movement artifacts that suggest incorrect direction (ensure steady approach).
+- Preserve lighting consistency with previous clips.
 - Verify command signal visibility matches elevated position description.
 
 # Sources

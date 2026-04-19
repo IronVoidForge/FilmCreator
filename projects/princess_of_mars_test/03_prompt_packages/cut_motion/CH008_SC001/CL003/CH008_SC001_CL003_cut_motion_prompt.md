@@ -5,33 +5,33 @@ CH008_SC001 CL003 Cut Motion Prompt
 CH008_SC001_CL003_cut_motion_prompt
 
 # Purpose
-Capture the sudden retreat order reaction upon entering open ground. Focus on observer emotional shift from anticipation to urgency while maintaining keyframe lighting and grade.
+Capture the arrival of enemy airships from the valley view. Focus on camera tracking motion and ship entry while maintaining keyframe lighting and grade.
 
 # Workflow Type
 video.cut_motion.wan.i2v
 
 # Positive Prompt
-Static observer face reacting to overhead command signal, sudden stop on motion, emotional shift visible in eyes, medium close up composition, open valley terrain background, preserved lighting grade, subtle camera shake indicating urgency.
+Static hold then track twenty gray airships entering from horizon moving toward camera and valley center, banners on stem and stern visible, glowing devices on prow clearly seen, sky environment established, wide shot exterior valley view from window composition, subtle camera movement indicating forward motion across sky plane.
 
 # Negative Prompt
-morphing face, extra limbs, flickering signal, wrong color palette, blurry text, distorted background, inconsistent lighting, static image, low resolution
+morphing ships, extra limbs, flickering signal, wrong color palette, blurry text, distorted background, inconsistent lighting, static image, low resolution, human faces in ship, wrong banners, missing glowing devices.
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: CH008_SC001
 - clip_id: CL003
 - duration_seconds: 5
-- required_refs: BT002.md
+- required_refs: BT003.md
 - optional_refs: CH008_SC001_scene_breakdown
-- visible_character_assets: Carter face_reaction, implied_command_signal_source
+- visible_character_assets: twenty_gray_airships_sailing_toward_valley, banners_on_ships, glowing_devices_on_ships
 - look_continuity_policy: 
 - intended_lighting_change: 
-- composition_type: medium_close_up_reaction
-- continuity_mode: cutaway
-- starting_keyframe_strategy: static_on_carter_face_with_command_signal_visible_above
-- dependency_policy: independent_can_follow_any_previous_clip
-- auto_advance_policy: 
-- fallback_strategy: cut_to_wide_halt_if_reaction_misread
+- composition_type: wide_shot_exterior_valley_view_from_window
+- continuity_mode: insert
+- starting_keyframe_strategy: static_clear_valley_view_no_ships_visible_yet
+- dependency_policy: follows_CL002_directly
+- auto_advance_policy: none
+- fallback_strategy: cut_to_pov_tracking_ships_if_scale_issue
 - consistency_assist_policy: 
 - consistency_assist_method: 
 - anatomy_repair_policy: 
@@ -42,10 +42,10 @@ morphing face, extra limbs, flickering signal, wrong color palette, blurry text,
 - workflow_type: video.cut_motion.wan.i2v
 
 # Continuity Notes
-- Preserve keyframe lighting and grade by default. Focus on visible motion, camera behavior, and environment change. Ensure command signal remains visible above terrain.
+- Preserve keyframe lighting and grade by default. Focus on visible motion, camera behavior, and environment change. Ensure airships enter frame from horizon moving toward camera/valley center. Maintain banner and device visibility without distortion.
 
 # Repair Notes
-- Ensure observer face consistency with previous clip. Maintain signal visibility without distortion. Correct any anatomy drift during emotional shift.
+- Ensure ship consistency with previous clip. Maintain banner/device visibility without distortion. Correct any anatomy drift during entry sequence.
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC001/CL003.md

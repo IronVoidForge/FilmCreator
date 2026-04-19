@@ -1,17 +1,21 @@
-# Chapter Summary: CH008 - A Fair Captive from the Sky
+# Chapter Summary: A Fair Captive from the Sky
 
-## Story Beats (Decomposition Ready)
-1.  **Return Interrupted:** Procession returns to city after incubation ceremony; sudden retreat order given immediately upon entering open ground.
-2.  **Fleet Sighting:** Carter observes gray-painted airships approaching from hill crest; fleet count approximates twenty vessels.
-3.  **Battle Engagement:** Green Martians fire first volley; enemy ships return fire with high accuracy targeting specific weak points (guns, officers, steering).
-4.  **Ship Disabled:** One vessel limps erratically, unmanned, drifting southeast. Warriors rush to intercept before it hits buildings.
-5.  **Looting & Burning:** Warriors board disabled ship, remove loot (arms, jewels, water), empty carboys over dead sailors, then burn vessel from within using missile.
-6.  **Emotional Aftermath:** Carter feels depression and yearning for the enemy fleet; fears return attack; city remains deserted for a week.
-7.  **Captive Discovery:** As prisoners are dragged into building, Carter sees a slender girlish figure with copper skin and black hair. She signals him before being taken inside.
+## Sequence of Events
+1.  **Return Order:** Immediately after an incubator ceremony, orders are given for a hasty return to the city. The Martians melt into buildings within three minutes.
+2.  **Airship Arrival:** From the window, the narrator observes twenty gray airships sailing toward the valley. Each carries banners and glowing devices.
+3.  **Battle Initiation:** Green warriors fire a volley from building windows. The lead vessel returns fire, swinging broadside to complete a circle.
+4.  **Martian Victory:** Martians target specific points (sighting apparatus, gunners, officers). Twenty minutes later, the fleet retreats with several craft limping.
+5.  **Disabled Ship Recovery:** One ship is unmanned and drifting. Warriors rush to intercept it before it hits buildings south of their position. They board using spears and grappling hooks.
+6.  **Looting & Burning:** Martians search the vessel, removing arms, silks, jewels, and food (including water). Afterward, they empty carboys over dead sailors and set the ship ablaze with a missile. The burning ship drifts southeast as a funeral pyre.
+7.  **Prisoner Reveal:** Warriors drag a small figure from the ship. The narrator sees a human woman being dragged into a building by female Martians.
 
-## Visual Continuity Facts
-- **Airships:** Long, low, gray-painted hulls; banners swung from stem to stern; odd devices painted on prow.
-- **Warriors:** Green Martians; mounted or in chariots; fire from windows/roofs; carry spears and grappling hooks.
-- **Disabled Ship:** Drifting southeast at approx fifty feet altitude; decks and upper works mass of roaring flames later; wooden parts eaten away.
-- **Captive Appearance:** Slender, girlish figure; oval face; light reddish copper skin; coal black waving hair (loose coiffure); naked except highly wrought ornaments; crimson cheeks/ruby lips.
-- **Locations:** City plaza, building upper floors/windows, open ground/valley, outlying hills.
+## Visual Details for Scene Decomposition
+*   **Ship Appearance:** Gray, low profile, long shape, banners on stem/stern, glowing devices on prow.
+*   **Martian Fire:** Terrific volley from windows; bullets dropping at explosion points; banners dissolving in flame.
+*   **Prisoner Appearance:** Slender girlish figure, oval face, large lustrous eyes, coal black waving hair (loose coiffure), light reddish copper skin, crimson cheeks, ruby lips, destitute of clothes save for ornaments.
+*   **Movement:** Ships swing majestically then erratically; warriors melt into mist; prisoner dragged roughly through portal.
+
+## Narrative Beats & Emotional Arc
+*   **Awe/Depression:** The narrator feels the defeat marks a kindred people's annihilation rather than a simple victory.
+*   **Hope/Fear:** Upon seeing the human woman, the narrator experiences mingled hope and fear.
+*   **Regret:** The narrator realizes he failed to answer her signal for succor due to ignorance of Martian customs.

@@ -4,10 +4,10 @@
 human_woman_prisoner
 
 # Why This Needs Clarification
-Character has stable name identification but insufficient visual details for render-facing prompts
+The extracted character id appears generic or role-based rather than clearly canonical.
 
 # Question
-What are the Human Woman Prisoner's specific physical features (hair color, eye color, build, facial features) and costume details?
+This character is named or role-labeled but not fully identified. Can you find a stronger canonical identity from another chapter, or should FilmCreator keep this as a scene-local provisional character?
 
 # Guidance
 - answer briefly and concretely

@@ -5,28 +5,28 @@ CH008_SC001 CL004 Scene Stage Prompt
 CH008_SC001_CL004_scene_stage_prompt
 
 # Purpose
-Establish the visual staging for the retreat order clip (CL004). This shot captures the full procession halting and reversing direction upon entering open ground, reacting to the command signal. It serves as a wide-angle reframe of the same moment initiated by CL003's reaction close-up.
+Establish the visual staging for the airship arrival observation from the window (CL004). This shot captures the full procession of gray airships entering the valley view as observed by the narrator, following the dissolution of the Martians. It serves as a wide-angle reframe of the same moment initiated by BT003's reaction close-up, ensuring continuity with the scene breakdown where Martians melt into buildings within three minutes.
 
 # Workflow Type
 authoring.scene_stage
 
 # Positive Prompt
-Green Martians in formation marching through city plaza into open valley, Carter positioned at rear of procession, gray-painted airships visible on hill crest in distance, sudden halt motion followed by coordinated reverse movement toward city boundary, wide angle composition, high stakes warfare atmosphere, red sky lighting, detailed armor and weaponry.
+Interior window POV, Narrator observing from elevated position, Martians dissolving into mist below within room space, twenty gray airships sailing toward valley center, banners on stem/stern visible, glowing devices on prow clearly seen, red sky lighting, high stakes warfare atmosphere, detailed armor and weaponry, wide angle composition.
 
 # Negative Prompt
-deformed limbs, extra fingers, static shot, blurry text, low resolution, blue sky, green sky, inconsistent character count, wrong facial expressions, motion blur artifacts, distorted architecture, missing command signal source, incorrect color palette for Mars environment.
+deformed limbs, extra fingers, static shot, blurry text, low resolution, blue sky, green sky, inconsistent character count, wrong facial expressions, motion blur artifacts, distorted architecture, missing command signal source, incorrect color palette for Mars environment, marching through city plaza, solid martian presence without dissolve.
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: CH008_SC001
 - clip_id: CL004
 - duration_seconds: 5
-- required_refs: BT002.md
+- required_refs: BT003.md
 - optional_refs: CH008_SC001_scene_breakdown
-- visible_character_assets: Carter rear_position, Warriors central_column, implied_commanders_elevated
-- look_continuity_policy: 
-- intended_lighting_change: 
-- composition_type: wide_halt_reverse
+- visible_character_assets: Narrator window_position, Martians dissolving_state, Airships entering_valley
+- look_continuity_policy: wide_entering_observation
+- intended_lighting_change: red sky lighting
+- composition_type: wide_window_view
 - continuity_mode: reframe_same_moment
 - starting_keyframe_strategy: static_opening_with_full_procession_visible_before_movement_change
 - dependency_policy: dependent_on_CL003_reaction_clip_first
@@ -41,10 +41,10 @@ deformed limbs, extra fingers, static shot, blurry text, low resolution, blue sk
 - fix_of: 
 
 # Continuity Notes
-- Capture the continuity rules for this stage. Procession movement must transition smoothly from city plaza to open ground. Character placement consistency is critical (Carter at rear). The halt and reverse motion must be synchronized across the wide frame. Environmental context shifts from built architecture to natural valley terrain.
+- Capture the continuity rules for this stage. Martians dissolve into mist within three minutes before disappearing from room space. Character placement consistency is critical (Narrator at window). The airship entry must be synchronized across the wide frame with banners and glowing devices visible. Environmental context shifts from built architecture to natural valley terrain as ships enter.
 
 # Repair Notes
-- Address potential issues like motion blur consistency during rapid pivot, ensuring character deformation does not occur during the reverse movement, verifying that the "open ground" environment is distinct from "city plaza" in terms of lighting and texture. Ensure the command signal source is visible or implied correctly for continuity with CL003.
+- Address potential issues like motion blur consistency during airship entry, ensuring character deformation does not occur during the dissolve, verifying that the "open ground" environment is distinct from "city plaza" in terms of lighting and texture. Ensure the command signal source is visible or implied correctly for continuity with CL003.
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC001/CL004.md

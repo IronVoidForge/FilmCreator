@@ -1,0 +1,475 @@
+# FilmCreator Prompt Writing Exchange
+- timestamp_utc: 2026-04-19T04:25:59.046414+00:00
+- stage: cut_motion
+- clip_id: CL004
+- retry_kind: same_prompt_retry
+
+## System Prompt
+````text
+You are writing one FilmCreator prompt package for a local generation pipeline.
+Your first output line must be exactly [[FILMCREATOR_PACKET]].
+Your last output line must be exactly [[/FILMCREATOR_PACKET]].
+Return exactly one FILMCREATOR packet in Markdown.
+Do not return JSON.
+Do not use markdown fences.
+Do not add commentary before or after the packet.
+Do not omit the outer packet envelope.
+Target stage: cut_motion
+Stage guidance: Write a short-cut motion prompt that starts from the approved opening frame. Preserve the keyframe lighting and grade by default. Focus on visible motion, camera behavior, and environment change.
+Use descriptive noun phrases and avoid proper nouns in prompt text.
+Keep duration and workflow metadata in inputs_markdown, not in the prompt body.
+Follow the requested section names exactly.
+````
+
+## User Prompt
+````text
+Project: princess_of_mars_test
+
+Scene: CH008_SC001
+
+Clip: CL004
+
+Prompt title: CH008_SC001 CL004 Cut Motion Prompt
+
+Prompt id: CH008_SC001_CL004_cut_motion_prompt
+
+Workflow type: video.cut_motion.wan.i2v
+
+Write improved content for this canonical prompt package.
+
+Output rules:
+
+1. First line must be [[FILMCREATOR_PACKET]]
+
+2. Last line must be [[/FILMCREATOR_PACKET]]
+
+3. No text before the first line
+
+4. No text after the last line
+
+5. Every required section must appear exactly once
+
+
+
+Use this exact packet envelope and section names:
+
+[[FILMCREATOR_PACKET]]
+
+task: clip_prompt
+
+stage: cut_motion
+
+version: 1
+
+
+
+[[SECTION purpose]]
+
+...purpose text...
+
+[[/SECTION]]
+
+
+
+[[SECTION positive_prompt]]
+
+...positive prompt text...
+
+[[/SECTION]]
+
+
+
+[[SECTION negative_prompt]]
+
+...negative prompt text...
+
+[[/SECTION]]
+
+
+
+[[SECTION inputs_markdown]]
+
+- key: value
+
+[[/SECTION]]
+
+
+
+[[SECTION continuity_notes_markdown]]
+
+- note
+
+[[/SECTION]]
+
+
+
+[[SECTION repair_notes_markdown]]
+
+- note
+
+[[/SECTION]]
+
+[[/FILMCREATOR_PACKET]]
+
+
+
+Clip context:
+
+## Project Summary
+
+# Project Summary: A Princess of Mars - Chapter VIII
+
+## Setting & Context
+The narrative takes place in a fortified Martian city inhabited by green-skinned warriors. The protagonist ("I") and his companion Sola reside within the urban structures, having recently undergone an incubator ceremony. The city serves as a strategic base for observation and defense against aerial threats.
+
+## Key Characters
+*   **Narrator:** A human male observer, currently stationed in the Martian city.
+*   **Sola:** A female companion, likely of Martian origin or raised locally, who accompanies the narrator.
+*   **Woola:** A hound that follows the narrator closely.
+*   **Green Martians:** The native warriors, characterized by their green skin and use of chariots, mastodons, and mounted weaponry.
+
+## Core Conflict
+The city is under threat from a fleet of gray-painted airships arriving from the hills. A battle ensues where the Martians utilize superior marksmanship to disable enemy vessels. The chapter culminates in the recovery of a disabled ship and the discovery of a human female prisoner, establishing a new dynamic between the protagonist and the captives.
+
+## Visual Continuity
+*   **Environment:** Urban Martian architecture with open valleys and distant hills.
+*   **Aerial Threats:** Long, low, gray-painted vessels with strange banners and glowing devices.
+*   **Warriors:** Green-skinned figures using spears, grappling hooks, and firearms from building windows.
+*   **Prisoner:** A slender human female with light reddish copper skin, coal black hair, and highly wrought ornaments.
+
+## Chapter Summaries
+
+## CH008_summary.md
+# Chapter Summary: A Fair Captive from the Sky
+
+## Sequence of Events
+1.  **Return Order:** Immediately after an incubator ceremony, orders are given for a hasty return to the city. The Martians melt into buildings within three minutes.
+2.  **Airship Arrival:** From the window, the narrator observes twenty gray airships sailing toward the valley. Each carries banners and glowing devices.
+3.  **Battle Initiation:** Green warriors fire a volley from building windows. The lead vessel returns fire, swinging broadside to complete a circle.
+4.  **Martian Victory:** Martians target specific points (sighting apparatus, gunners, officers). Twenty minutes later, the fleet retreats with several craft limping.
+5.  **Disabled Ship Recovery:** One ship is unmanned and drifting. Warriors rush to intercept it before it hits buildings south of their position. They board using spears and grappling hooks.
+6.  **Looting & Burning:** Martians search the vessel, removing arms, silks, jewels, and food (including water). Afterward, they empty carboys over dead sailors and set the ship ablaze with a missile. The burning ship drifts southeast as a funeral pyre.
+7.  **Prisoner Reveal:** Warriors drag a small figure from the ship. The narrator sees a human woman being dragged into a building by female Martians.
+
+## Visual Details for Scene Decomposition
+*   **Ship Appearance:** Gray, low profile, long shape, banners on stem/stern, glowing devices on prow.
+*   **Martian Fire:** Terrific volley from windows; bullets dropping at explosion points; banners dissolving in flame.
+*   **Prisoner Appearance:** Slender girlish figure, oval face, large lustrous eyes, coal black waving hair (loose coiffure), light reddish copper skin, crimson cheeks, ruby lips, destitute of clothes save for ornaments.
+*   **Movement:** Ships swing majestically then erratically; warriors melt into mist; prisoner dragged roughly through portal.
+
+## Narrative Beats & Emotional Arc
+*   **Awe/Depression:** The narrator feels the defeat marks a kindred people's annihilation rather than a simple victory.
+*   **Hope/Fear:** Upon seeing the human woman, the narrator experiences mingled hope and fear.
+*   **Regret:** The narrator realizes he failed to answer her signal for succor due to ignorance of Martian customs.
+
+## Character Index
+
+# Character Index: Chapter CH008
+
+| Asset ID | Canonical Character ID | Aliases | Fully Identified | Manual Description Required |
+| :--- | :--- | :--- | :--- | :--- |
+| `narrator_human` | Narrator | - | Yes | No (Role clear) |
+| `martian_warrior` | Martian Warrior | Green Warriors, Female Martians | Yes | Yes (Anatomy unclear) |
+| `human_woman_prisoner` | Human Woman | Prisoner, Small Figure | Yes | No (Description detailed) |
+
+*Note: "Fully Identified" refers to the character's role and presence being stable. "Manual Description Required" indicates if physical traits are missing for reliable image generation.*
+
+## Environment Index
+
+# Environment Index - Chapter CH008
+
+## Airship Fleet (asset_id: airship_fleet)
+Gray low-profile vessels with banners on stem/stern and glowing devices on prow. Primary transit setting for Martian fleet operations.
+
+## Martian Buildings/Valley (asset_id: martian_buildings_valley)
+Building interiors where Martians melt into structures within three minutes. Secondary battle setting with window fire positions.
+
+## Disabled Ship (asset_id: disabled_ship)
+Unmanned gray ship drifting south of position, later burned as funeral pyre. Primary recovery and looting setting.
+
+## Building Interior/Portal (asset_id: building_interior_portal)
+Building entrance where prisoner dragged through portal by female Martians. Secondary transit setting for human capture sequence.
+
+## Clip Plan
+
+# Title
+CH008_SC001 CL004 Clip Plan
+
+# ID
+CH008_SC001_CL004
+
+# Purpose
+Describe the cut beat, framing, and continuity intent for this clip.
+
+# Inputs
+- scene_breakdown:
+- shared_refs:
+- duration_seconds:
+- review_batch_size: 4
+
+# Output Targets
+- CH008_SC001_CL004_KF01_v001.png
+- CH008_SC001_CL004_KF01.png
+- CH008_SC001_CL004_FX01_v001.png
+- CH008_SC001_CL004_MV01_v001.mp4
+
+## Scene Breakdown
+
+# SC001 - The Return Order & Airship Arrival
+## Scene Purpose
+Establish the aftermath of the incubator ceremony and introduce the arrival of enemy forces.
+## Scene Summary
+Immediately after an incubator ceremony, orders are given for a hasty return to the city. The Martians melt into buildings within three minutes. From the window, the narrator observes twenty gray airships sailing toward the valley. Each carries banners and glowing devices.
+## Participating Characters
+Narrator (primary observer), Martians (implied presence, melting away), Enemy Airships (visual focal point).
+## Participating Environments
+City buildings (interior observation point), Sky/Valley view from window (exterior visual field).
+## Dominant Emotional Shift
+Awe/Depression -> Hope/Fear (anticipation of conflict).
+## Likely Visual Coverage Families
+Wide shots of cityscape, POV from window looking at ships, Close-ups on narrator's reaction.
+## Likely Continuity Sensitivities
+Martians melting into mist vs appearing as ships, Timing of airship arrival relative to narration.
+## Staging Facts
+- Narrator positioned at interior window with clear line of sight to valley
+- Martians occupy lower room space before dissolving
+- Airships enter frame from horizon moving toward camera/valley center
+- Banners and glowing devices on ships are key visual identifiers
+- Three-minute dissolve timing for martians is critical beat marker
+
+## Beat Bundles
+
+## BT001.md
+# BT001 - Narrator at Window Observation
+## Beat Purpose
+Establish narrator's position and initial observation state before main action.
+## Start State
+Narrator standing at interior window, calm, observing city below.
+## End State
+Narrator notices movement in sky, tension begins to build.
+## Character Placement and Movement Logic
+Narrator remains stationary at window; subtle body language shift from relaxed to alert.
+## Geography, Axis, or Eyeline Facts
+Interior room with window facing valley direction; eyeline horizontal across cityscape then upward to sky.
+## Prop, Vehicle, Crowd, and Environmental State
+Window frame visible; interior lighting establishes mood; no crowd present at this beat.
+## Likely Coverage Families
+Medium shot of narrator at window, Over-the-shoulder looking out, Wide establishing shot of room.
+
+## BT002.md
+# BT002 - Martians Melting Away
+## Beat Purpose
+Show the dissolution of Martian presence and transition to enemy arrival focus.
+## Start State
+Martians visible in lower room space, beginning to fade into mist.
+## End State
+Martians fully dissolved; room empty except for narrator at window.
+## Character Placement and Movement Logic
+Martians occupy floor level before dissolving upward/outward into mist; no physical movement, only state change.
+## Geography, Axis, or Eyeline Facts
+Lower room space visible from window perspective; dissolve occurs within interior frame then extends to exterior view.
+## Prop, Vehicle, Crowd, and Environmental State
+Mist/moisture effect critical for continuity; three-minute timing marker; no physical props involved.
+## Likely Coverage Families
+Wide shot of room showing dissolution, Close-up on mist effect, POV from window tracking dissolve.
+
+## BT003.md
+# BT003 - Airships Entering Valley View
+## Beat Purpose
+Introduce enemy forces and establish visual threat through airship arrival sequence.
+## Start State
+Valley view clear, no ships visible in frame.
+## End State
+Twenty gray airships sailing toward valley; banners and glowing devices clearly visible.
+## Character Placement and Movement Logic
+Airships enter from horizon moving toward camera/valley center; steady forward motion across sky plane.
+## Geography, Axis, or Eyeline Facts
+Exterior view from window looking down valley; ships move along horizontal axis then descend toward valley floor.
+## Prop, Vehicle, Crowd, and Environmental State
+Airships are key vehicles; banners and glowing devices are critical visual identifiers; sky environment establishes scale.
+## Likely Coverage Families
+Wide establishing shot of valley with ships entering, POV from window tracking ships, Close-up on ship details (banners/devices).
+
+## Clip Roster
+
+# Clip Roster - SC001 The Return Order & Airship Arrival
+
+| Clip ID | Description | Duration | Beat Reference |
+|---------|-------------|----------|----------------|
+| CL001 | Narrator at Window Observation | ~5s | BT001 |
+| CL002 | Martians Melting Away Transition | ~5s | BT002 |
+| CL003 | Airships Entering Valley View | ~5s | BT003 |
+
+## Clip State
+
+{
+  "project_id": "princess_of_mars_test",
+  "scene_id": "CH008_SC001",
+  "clip_id": "CL004",
+  "status": "planning",
+  "inputs": {
+    "shared_character_refs": [],
+    "shared_environment_refs": [],
+    "scene_prompt_package": "projects/princess_of_mars_test/03_prompt_packages/scenes/CH008_SC001/CL004/CH008_SC001_CL004_scene_stage_prompt.md",
+    "scene_stage_prompt_package": "projects/princess_of_mars_test/03_prompt_packages/scenes/CH008_SC001/CL004/CH008_SC001_CL004_scene_stage_prompt.md",
+    "keyframe_prompt_package": "projects/princess_of_mars_test/03_prompt_packages/keyframes/CH008_SC001/CL004/CH008_SC001_CL004_keyframe_prompt.md",
+    "fix_prompt_packages": [
+      "projects/princess_of_mars_test/03_prompt_packages/fixes/CH008_SC001/CL004/CH008_SC001_CL004_fix_01_prompt.md"
+    ],
+    "anchor_prompt_packages": [],
+    "video_prompt_package": "projects/princess_of_mars_test/03_prompt_packages/cut_motion/CH008_SC001/CL004/CH008_SC001_CL004_cut_motion_prompt.md",
+    "cut_motion_prompt_package": "projects/princess_of_mars_test/03_prompt_packages/cut_motion/CH008_SC001/CL004/CH008_SC001_CL004_cut_motion_prompt.md",
+    "legacy_anchor_prompt_packages": [],
+    "legacy_video_prompt_package": null
+  },
+  "approved_assets": {
+    "golden_frame": null,
+    "approved_keyframe": null,
+    "approved_video": null,
+    "still_fixes": [],
+    "anchor_frames": [],
+    "interval_frames": [],
+    "cut_motion_videos": []
+  },
+  "approved_video_last_frame": null,
+  "current_continuity_source": null,
+  "latest_runs": {},
+  "review_batches": [],
+  "latest_review_decision": null,
+  "notes": [],
+  "stage_style_preferences": {
+    "still_fix": {
+      "literal_descriptive": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "cinematic_compositional": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "performance_action_led": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "sparse_conservative": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      }
+    },
+    "cut_motion": {
+      "literal_descriptive": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "cinematic_compositional": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "performance_action_led": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "sparse_conservative": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      }
+    },
+    "keyframe": {
+      "literal_descriptive": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "cinematic_compositional": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "performance_action_led": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      },
+      "sparse_conservative": {
+        "appearances": 0,
+        "top_two": 0,
+        "wins": 0
+      }
+    }
+  }
+}
+
+
+
+Existing prompt draft:
+
+# Title
+CH008_SC001 CL004 Cut Motion Prompt
+
+# ID
+CH008_SC001_CL004_cut_motion_prompt
+
+# Purpose
+Establish sudden halt and reverse movement of procession on open ground.
+
+# Workflow Type
+video.cut_motion.wan.i2v
+
+# Positive Prompt
+Wide shot green-clad warriors halting abruptly on valley floor. Camera holds steady then pans slightly to follow reverse movement toward city skyline. Warriors execute synchronized turn in place. Dust kicks up from boots during pivot. Lighting remains consistent with previous keyframe daylight high contrast. Background shows distant hills and approaching airship fleet silhouette.
+
+# Negative Prompt
+morphing faces extra limbs sudden zoom darkening or brightening exposure floating objects incorrect marching direction blurry text distorted anatomy static image low resolution color bleeding glitchy transitions.
+
+# Inputs
+- project_id: princess_of_mars_test
+- scene_id: CH008_SC001
+- clip_id: CL004
+- duration_seconds: 5
+- required_refs: BT002.md
+- optional_refs: CH008_SC001_scene_breakdown
+- visible_character_assets: protagonist rear_position, green-clad warriors central_column
+- look_continuity_policy: 
+- intended_lighting_change: 
+- composition_type: wide_halt_reverse
+- continuity_mode: reframe_same_moment
+- starting_keyframe_strategy: 
+- dependency_policy: 
+- auto_advance_policy: 
+- fallback_strategy: 
+- consistency_assist_policy: 
+- consistency_assist_method: 
+- anatomy_repair_policy: 
+- consistency_targets: 
+- style_profile: 
+- batch_role: 
+- fix_of: 
+
+# Continuity Notes
+- Preserve keyframe lighting and grade by default. Focus on visible motion, camera behavior, and environment change. Ensure procession direction reverses smoothly without snapping. Maintain character count consistency.
+
+# Repair Notes
+- If reverse movement is too slow, increase pivot speed. If lighting shifts, force continuity with previous frame. If anatomy distorts during turn, apply repair policy.
+
+# Sources
+- projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC001/CL004.md
+- projects/princess_of_mars_test/02_story_analysis/scene_breakdowns/CH008_SC001.md
+- projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC001/CH008_SC001_clip_roster.md
+- projects/princess_of_mars_test/02_story_analysis/character_breakdowns/CHARACTER_INDEX.md
+- projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/ENVIRONMENT_INDEX.md
+- projects/princess_of_mars_test/02_story_analysis/story_summary/project_summary.md
+
+````
+
+## Raw Response
+````text
+
+````

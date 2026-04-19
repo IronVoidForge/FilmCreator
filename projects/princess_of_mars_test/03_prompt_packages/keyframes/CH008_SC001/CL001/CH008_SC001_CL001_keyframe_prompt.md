@@ -5,16 +5,16 @@ CH008_SC001 CL001 Keyframe Prompt
 CH008_SC001_CL001_keyframe_prompt
 
 # Purpose
-Establish the ceremonial procession returning through the city plaza, capturing anticipation and forward movement before the transition to open ground.
+Establish observer figure position at interior window and initial calm observation state before action begins. Show valley view below with horizon visible for ship arrival.
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Wide establishing shot of a procession moving through a spacious city plaza. Warriors in green attire march in synchronized formation. Protagonist positioned at rear of column. City architecture frames left and right with upper floors visible. Horizon shows transition from built environment to open valley terrain. Lighting suggests high stakes anticipation. Cinematic composition, detailed textures, atmospheric depth.
+Medium shot of observer figure standing at interior window frame, looking out towards distant valley landscape. Room interior dimly lit with warm ambient light. Through window, valley floor visible with low-lying gray vessels entering from horizon line. Observer posture relaxed but attentive. Architectural details of fortified urban structure visible in foreground. Cinematic composition, atmospheric depth, red planet environment lighting.
 
 # Negative Prompt
-blurry, low resolution, modern clothing, extra characters, distorted faces, wrong color palette (blue sky instead of red planet atmosphere), static image without motion cues, crowded composition, text, watermark, deformed limbs.
+blurry, low resolution, modern clothing, extra characters, distorted faces, wrong color palette (blue sky), static image without motion cues, crowded composition, text, watermark, deformed limbs, exterior plaza view, procession, green attire marching, martians melting into mist.
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -23,13 +23,13 @@ blurry, low resolution, modern clothing, extra characters, distorted faces, wron
 - duration_seconds: 5
 - required_refs: BT001.md
 - optional_refs: CH008_SC001_scene_breakdown
-- visible_character_assets: 
+- visible_character_assets: narrator_standing_at_window, interior_window_frame, cityscape_below_view
 - look_continuity_policy: 
 - intended_lighting_change: 
-- composition_type: wide_establishing
-- continuity_mode: reblock_same_scene
-- starting_keyframe_strategy: static_opening_with_procession_movement_visible
-- dependency_policy: independent_no_prerequisites
+- composition_type: medium_shot_interior
+- continuity_mode: reframe_same_moment
+- starting_keyframe_strategy: static_opening_with_subtle_body_shift
+- dependency_policy: standalone_initial_test_clip
 - auto_advance_policy: 
 - fallback_strategy: cut_to_alternate_wide_angle_if_needed
 - consistency_assist_policy: 
@@ -42,14 +42,14 @@ blurry, low resolution, modern clothing, extra characters, distorted faces, wron
 - workflow_type: still.scene_build.four_ref.klein.distilled
 
 # Continuity Notes
-- Maintain procession axis perpendicular to valley entrance.
-- Keep warrior formation consistent with previous shots.
-- Ensure protagonist remains at rear position.
-- Transition from city plaza to open ground must be visible in background.
+- Maintain window frame visibility.
+- Ensure interior lighting matches warm ambient mood.
+- Keep ship entry timing consistent with valley view.
+- Avoid showing martians melting in this specific keyframe.
 
 # Repair Notes
-- Fix any anatomy distortions on warriors.
-- Ensure lighting matches high-stakes atmosphere.
+- Fix any anatomy distortions on observer figure.
+- Ensure room geometry is consistent.
 - Correct color grading to match red planet environment if needed.
 
 # Sources

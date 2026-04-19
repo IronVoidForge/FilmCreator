@@ -5,16 +5,16 @@ CH008_SC001 CL003 Keyframe Prompt
 CH008_SC001_CL003_keyframe_prompt
 
 # Purpose
-Capture the protagonist's facial reaction to an overhead command signal during a sudden halt of a procession. Freeze the moment of emotional shift from anticipation to urgency.
+Establish the wide exterior view from the window, capturing the open valley landscape before the gray airships fully enter the frame. Freeze the moment of initial observation with clear sky and horizon visible.
 
 # Workflow Type
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Close-up portrait of a human male with determined expression transitioning to shock. Overhead vertical signal visible in upper frame. Dusty open valley background. Natural daylight with high contrast shadows. Cinematic composition. Medium close-up framing.
+Wide angle view from interior window looking out over a dusty open valley under natural daylight. Gray low-profile airships with banners on stem and glowing devices on prow entering from horizon moving toward valley center. Clear sky environment. Cinematic composition. Static hold framing.
 
 # Negative Prompt
-Distorted face, extra limbs, blurry text, low resolution, cartoonish, oversaturated, wrong lighting, crowded background, modern clothing, weapons visible on protagonist.
+Close-up portrait, distorted face, modern clothing, crowded background, wrong lighting, blurry text, extra limbs, cartoonish, oversaturated, city architecture instead of valley, ships missing or static, interior walls obscuring view.
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -23,29 +23,33 @@ Distorted face, extra limbs, blurry text, low resolution, cartoonish, oversatura
 - duration_seconds: 5
 - required_refs: BT002.md
 - optional_refs: CH008_SC001_scene_breakdown
-- visible_character_assets: protagonist face_reaction, implied_command_signal_source
+- visible_character_assets: twenty_gray_airships_sailing_toward_valley, banners_on_ships, glowing_devices_on_ships, sky_environment
 - look_continuity_policy: match_previous_clip_lighting
 - intended_lighting_change: none
-- composition_type: medium_close_up_reaction
-- continuity_mode: cutaway
-- starting_keyframe_strategy: static_on_face_with_signal_visible
-- dependency_policy: independent_can_follow_any_previous_clip
+- composition_type: wide_shot_exterior_valley_view_from_window
+- continuity_mode: insert
+- starting_keyframe_strategy: static_clear_valley_view_no_ships_visible_yet
+- dependency_policy: follows_CL002_directly, final_clip_in_sequence
 - auto_advance_policy: manual_review_required
-- fallback_strategy: cut_to_wide_halt_if_reaction_misread
+- fallback_strategy: cut_to_pov_tracking_ships_if_scale_issue
 - consistency_assist_policy: enabled
 - consistency_assist_method: reference_alignment
 - anatomy_repair_policy: strict
-- consistency_targets: facial_expression
+- consistency_targets: vehicle_positioning, sky_environment
 - style_profile: cinematic_realism
 - batch_role: keyframe_generation
 - fix_of: none
 - workflow_type: still.scene_build.four_ref.klein.distilled
 
 # Continuity Notes
-- Maintain lighting consistency with previous procession shots. Ensure command signal is visible in upper third without obscuring face. Freeze frame on initial reaction moment before full movement starts.
+- Ensure lighting matches previous interior observation sequences.
+- Maintain static hold on valley view before tracking ships enter frame.
+- Keep horizon line clear to show airship entry direction.
 
 # Repair Notes
-- If facial expression looks too neutral, increase intensity of shock or urgency. Ensure background remains open valley terrain, not city architecture.
+- If airships appear stationary, adjust motion to show entry from horizon.
+- If composition is too close, widen to show valley scale.
+- Ensure banners and glowing devices are visible on airships.
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC001/CL003.md

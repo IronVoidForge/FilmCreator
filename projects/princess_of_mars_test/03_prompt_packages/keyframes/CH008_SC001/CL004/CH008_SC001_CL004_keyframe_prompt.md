@@ -11,10 +11,10 @@ Establish sudden halt and reverse movement of procession upon entering open grou
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Wide static shot of armored procession halting abruptly on boundary between built structures and open valley floor. Central column of warriors in green attire pivots toward rearward direction. Observer figure positioned at rear reacts to elevated command signal source visible above terrain. City architecture frames left and right edges. Open ground horizon visible ahead. Dramatic lighting emphasizes urgency.
+Wide static shot of interior window looking out to valley floor. Central column of green-skinned warriors in mist melting into structures below. Twenty gray low-profile airships sailing toward valley center. Banners on stem/stern, glowing devices on prow visible on ships. Observer figure positioned at rear reacting to elevated command signal source visible above terrain. City architecture frames left and right edges. Open ground horizon visible ahead. Dramatic lighting emphasizes urgency.
 
 # Negative Prompt
-Motion blur, moving forward, running, chaotic crowd, modern clothing, bright daylight, sunny sky, empty background, distorted anatomy, extra limbs, text, watermark, signature, low resolution, blurry face, green screen, cartoonish style.
+Motion blur, moving forward, running, chaotic crowd, modern clothing, bright daylight, sunny sky, empty background, distorted anatomy, extra limbs, text, watermark, signature, low resolution, blurry face, green screen, cartoonish style, human female prisoner, chariot, mastodon.
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -23,7 +23,7 @@ Motion blur, moving forward, running, chaotic crowd, modern clothing, bright day
 - duration_seconds: 5
 - required_refs: BT002.md
 - optional_refs: CH008_SC001_scene_breakdown
-- visible_character_assets: Carter rear_position, Warriors central_column
+- visible_character_assets: Observer rear_position, Warriors central_column
 - look_continuity_policy: 
 - intended_lighting_change: 
 - composition_type: wide_halt_reverse

@@ -5,13 +5,13 @@ CH008_SC001 CL002 Cut Motion Prompt
 CH008_SC001_CL002_cut_motion_prompt
 
 # Purpose
-Fill in the stage intent here. Establish a medium tracking shot following Carter from the rear of the procession, moving forward with synchronized steps and anticipation building as they approach the boundary between city plaza and open ground. Preserve keyframe lighting and grade from approved opening frame. Ensure visible motion matches procession movement logic.
+Establish the stage intent here. Show the dissolution of Martian presence and transition to enemy arrival focus. Preserve keyframe lighting and grade from approved opening frame. Ensure visible motion matches dissolve progression logic.
 
 # Workflow Type
 video.cut_motion.wan.i2v
 
 # Positive Prompt
-Medium tracking shot following Carter from rear position. Procession moves forward with synchronized steps. Warriors in central column visible. City architecture frames left and right. Environmental transition from built environment to natural terrain begins. Anticipation building among onlookers. Forward progression with coordinated movement. Gray-painted airships distant on hill crest. Green Martians marching in formation.
+Wide shot of room showing dissolution, POV from window tracking dissolve. Martians occupy floor level before dissolving upward/outward into mist. No physical movement, only state change. Mist/moisture effect critical for continuity; three-minute timing marker. Narrator at interior window with clear line of sight to valley. Airships enter frame from horizon moving toward camera/valley center. Banners and glowing devices on ships are key visual identifiers.
 
 # Negative Prompt
 Static shot. Wrong composition. Lighting shift. Grade change. Anatomy error. Clothing distortion. Background blur. Motion stall. Reverse movement. Panic expression. Inconsistent character proportions. Degraded features. Overexposed or underexposed. Wrong color palette.
@@ -21,17 +21,17 @@ Static shot. Wrong composition. Lighting shift. Grade change. Anatomy error. Clo
 - scene_id: CH008_SC001
 - clip_id: CL002
 - duration_seconds: 5s
-- required_refs: BT001.md processions_return_beat_documentation
+- required_refs: BT002.md martians_melting_away_beat_documentation
 - optional_refs: CH008_SC001_scene_breakdown
-- visible_character_assets: Carter rear_position, Warriors central_column visible
+- visible_character_assets: martians_visible_in_lower_room_space, mist_moisture_dissolve_effect, narrator_at_window_periphery
 - look_continuity_policy: preserve_keyframe_lighting_and_grade
 - intended_lighting_change: none
-- composition_type: medium_tracking
-- continuity_mode: insert
-- starting_keyframe_strategy: follow_carter_position_from_rear_of_procession
-- dependency_policy: dependent_on_CL001_wide_establishing_first
+- composition_type: wide_shot_interior_to_exterior_blend
+- continuity_mode: reblock_same_scene
+- starting_keyframe_strategy: static_showing_martian_presence_beginning_dissolve
+- dependency_policy: follows_CL001_directly, leads_to_CL003
 - auto_advance_policy: advance_if_motion_stalls
-- fallback_strategy: cut_to_medium_static_if_movement_disrupted
+- fallback_strategy: cut_to_close_up_on_mist_effect_if_continuity_issue
 - consistency_assist_policy: apply_consistency_targets
 - consistency_assist_method: anatomy_and_style_alignment
 - anatomy_repair_policy: repair_degraded_features
@@ -41,14 +41,14 @@ Static shot. Wrong composition. Lighting shift. Grade change. Anatomy error. Clo
 - fix_of: CL001
 
 # Continuity Notes
-- Maintain procession movement logic (forward progression with synchronized steps).
+- Maintain dissolve progression logic (state change from presence to absence).
 - Preserve keyframe lighting and grade from approved opening frame.
-- Ensure transition from city plaza to open ground boundary is visible but smooth.
+- Ensure transition from martian presence to empty room is visible but smooth.
 - Keep character proportions consistent with previous clips in sequence.
 - Avoid sudden camera jerks or focus pulls during motion.
 
 # Repair Notes
-- If motion stalls, advance camera position slightly.
+- If motion stalls, advance dissolve progression slightly.
 - If anatomy degrades, apply consistency targets for character proportions and clothing details.
 - If lighting shifts, revert to keyframe lighting profile.
 - If composition drifts, re-align with starting_keyframe_strategy.

@@ -1,6 +1,7 @@
-| Clip ID | Scene Beat | Duration | Continuity Mode | Composition Type |
-|---------|------------|----------|-----------------|------------------|
-| CL001 | BT001 - Procession Return | 5s | reblock_same_scene | Wide establishing |
-| CL002 | BT001 - Procession Return | 5s | insert | Medium tracking |
-| CL003 | BT002 - Retreat Order | 5s | cutaway | Medium close-up reaction |
-| CL004 | BT002 - Retreat Order | 5s | reframe_same_moment | Wide halt/reverse |
+# Clip Roster - SC001 The Return Order & Airship Arrival
+
+| Clip ID | Description | Duration | Beat Reference |
+|---------|-------------|----------|----------------|
+| CL001 | Narrator at Window Observation | ~5s | BT001 |
+| CL002 | Martians Melting Away Transition | ~5s | BT002 |
+| CL003 | Airships Entering Valley View | ~5s | BT003 |

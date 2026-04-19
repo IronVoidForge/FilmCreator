@@ -5,16 +5,16 @@ CH008_SC001 CL001 Cut Motion Prompt
 CH008_SC001_CL001_cut_motion_prompt
 
 # Purpose
-Capture smooth forward progression of procession from city plaza to open ground threshold while maintaining established lighting and grade, ensuring visible motion aligns with approved keyframe continuity.
+Capture smooth forward progression of observation from interior window to sky view while maintaining established lighting and grade, ensuring visible motion aligns with approved keyframe continuity (static hold to subtle tension).
 
 # Workflow Type
 video.cut_motion.wan.i2v
 
 # Positive Prompt
-wide establishing shot of green martian warriors marching in formation through city plaza towards open ground horizon, procession moving forward smoothly along axis, camera tracks alongside group maintaining wide angle, built structures receding left right, valley terrain emerging ahead, natural lighting preserved, anticipation building in atmosphere, synchronized steps visible, dust rising from boots, static opening frame transitioning to motion
+medium shot interior narrator standing at window frame, static opening frame transitioning to subtle body shift alert posture, cityscape below view visible through glass, valley terrain emerging ahead, natural lighting preserved, anticipation building in atmosphere, sky movement detected, calm observation state shifting to alertness, synchronized breathing visible, dust motes dancing in light, static camera maintaining medium shot
 
 # Negative Prompt
-morphing faces, flickering lights, static camera when motion expected, distorted limbs, inconsistent color grading, sudden zooms, blurry text, extra characters, wrong background, low resolution, noise, anatomy errors, lighting shifts, jerky movement, inconsistent character placement
+morphing faces, flickering lights, static camera when motion expected, distorted limbs, inconsistent color grading, sudden zooms, blurry text, extra characters, wrong background, low resolution, noise, anatomy errors, lighting shifts, jerky movement, inconsistent character placement, marching warriors, airships appearing prematurely
 
 # Inputs
 - project_id: princess_of_mars_test
@@ -23,15 +23,15 @@ morphing faces, flickering lights, static camera when motion expected, distorted
 - duration_seconds: 5
 - required_refs: BT001.md
 - optional_refs: CH008_SC001_scene_breakdown
-- visible_character_assets: Carter rear_position, Warriors central_column
+- visible_character_assets: narrator_standing_at_window, interior_window_frame, cityscape_below_view
 - look_continuity_policy: preserve_keyframe_lighting_and_grade
 - intended_lighting_change: none
-- composition_type: wide_establishing
-- continuity_mode: reblock_same_scene
-- starting_keyframe_strategy: static_opening_with_procession_movement_visible
-- dependency_policy: independent_no_prerequisites
+- composition_type: medium_shot_interior
+- continuity_mode: reframe_same_moment
+- starting_keyframe_strategy: static_opening_with_subtle_body_shift
+- dependency_policy: standalone_initial_test_clip
 - auto_advance_policy: smooth_forward_progression
-- fallback_strategy: cut_to_alternate_wide_angle_if_needed
+- fallback_strategy: cut_to_wider_room_establishing_if_necessary
 - consistency_assist_policy: enabled
 - consistency_assist_method: motion_flow_matching
 - anatomy_repair_policy: standard
@@ -41,15 +41,15 @@ morphing faces, flickering lights, static camera when motion expected, distorted
 - fix_of: null
 
 # Continuity Notes
-- Maintain procession movement direction from city plaza to open ground
+- Maintain narrator position at interior window frame
 - Preserve established lighting and color grade from approved keyframe
-- Ensure camera tracks smoothly without abrupt cuts or zooms
-- Keep character placement consistent (Carter rear, Warriors center)
+- Ensure camera holds medium shot without abrupt cuts or zooms
+- Keep character placement consistent (narrator central, window framing view)
 
 # Repair Notes
 - If motion appears jerky, adjust interpolation for smoothness
 - If lighting shifts occur, revert to keyframe grade
-- If anatomy distorts during march, apply standard repair targets
+- If anatomy distorts during body shift, apply standard repair targets
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/clip_plans/CH008_SC001/CL001.md
