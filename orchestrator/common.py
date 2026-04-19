@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -9,6 +10,8 @@ ROOT = Path(__file__).resolve().parents[1]
 PROJECTS_ROOT = ROOT / "projects"
 REGISTRY_PATH = ROOT / "orchestrator" / "registry" / "workflow_registry.json"
 TEMPLATES_ROOT = ROOT / "orchestrator" / "templates"
+SCENE_ID_PATTERN = re.compile(r"(?:CH\d{3}_)?SC\d{3}$")
+CLIP_ID_PATTERN = re.compile(r"CL\d{3}$")
 
 
 def ensure_dir(path: Path) -> Path:
@@ -43,13 +46,14 @@ def replace_tokens(payload: Any, replacements: dict[str, str]) -> Any:
 
 
 def validate_scene_id(scene_id: str) -> str:
-    if not scene_id.startswith("SC"):
-        raise ValueError("scene_id must start with 'SC', for example SC001")
-    return scene_id
+    normalized = scene_id.strip().upper()
+    if not SCENE_ID_PATTERN.fullmatch(normalized):
+        raise ValueError("scene_id must be SC### or CH###_SC###, for example SC001 or CH008_SC001")
+    return normalized
 
 
 def validate_clip_id(clip_id: str) -> str:
-    if not clip_id.startswith("CL"):
-        raise ValueError("clip_id must start with 'CL', for example CL001")
-    return clip_id
-
+    normalized = clip_id.strip().upper()
+    if not CLIP_ID_PATTERN.fullmatch(normalized):
+        raise ValueError("clip_id must be CL###, for example CL001")
+    return normalized
