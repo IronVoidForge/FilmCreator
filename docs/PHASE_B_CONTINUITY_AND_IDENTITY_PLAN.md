@@ -11,6 +11,7 @@ Phase A established the chapter -> scene -> clip cascade, chapter-scoped scene i
 - scene-to-scene continuity inheritance
 - chapter-wide continuity summaries and storyboard outputs
 - stable authoring contracts for future SQL / database-backed world state
+- dialogue/script timing contracts for future audio integration
 
 User-facing terminology should prefer **shot** over **clip** in docs and operator language. Internal ids may remain `CL001` until a later refactor.
 
@@ -22,7 +23,8 @@ User-facing terminology should prefer **shot** over **clip** in docs and operato
 2. Preserve continuity from one scene to the next inside a chapter.
 3. Reduce duplicated environment and character breakdowns across scenes and chapters.
 4. Produce chapter-level storyboard and continuity artifacts that can be reviewed before rendering.
-5. Keep all new Phase B behavior compatible with the current Phase A file layout.
+5. Add a future-proof dialogue/script timing layer so spoken lines can later align exactly with shot timing and audio assets.
+6. Keep all new Phase B behavior compatible with the current Phase A file layout.
 
 ---
 
@@ -179,7 +181,54 @@ For each scene:
 
 ---
 
-### B5. User-facing terminology transition: clip -> shot
+### B5. Dialogue and script timing integration
+
+#### Problem
+Future audio integration will require exact knowledge of when dialogue starts and ends, which line belongs to which speaker, and how spoken material spans one or more shots.
+
+#### Goal
+Add a timing-aware dialogue/script layer so FilmCreator can later align generated or recorded audio precisely against chapter scenes and shot plans.
+
+#### Deliverables
+- dialogue timing contract per scene
+- shot-to-dialogue mapping
+- speaker-aware script segment tracking
+- chapter-level dialogue alignment summary for later audio export
+
+#### Proposed artifacts
+- `projects/<project>/02_story_analysis/dialogue/CH008_dialogue_timeline.md`
+- `projects/<project>/02_story_analysis/dialogue/CH008_dialogue_timeline.json`
+- `projects/<project>/02_story_analysis/dialogue/CH008_SC001_dialogue_map.md`
+
+#### Required future fields
+For each dialogue segment:
+- speaker_id
+- spoken_text
+- scene_id
+- shot_start_id
+- shot_end_id
+- estimated_start_seconds
+- estimated_end_seconds
+- whether the line completes inside one shot or spans multiple shots
+- reaction or non-speaking hold requirements before/after the line
+
+#### Required rules
+- dialogue timing must be scene-bounded first, then shot-bounded
+- a line may begin in one shot and end in a later shot, but this must be explicit
+- non-speaking reaction shots that complete a line's emotional beat should be mapped as part of the same dialogue event group
+- future audio integration must be able to derive a deterministic ordered script timeline from these artifacts
+- dialogue timing metadata must never rely only on freeform prose; it needs machine-readable structure
+
+#### Minimum implementation steps
+1. Define a dialogue event schema.
+2. Add a future scene dialogue pass after shot planning.
+3. Emit shot-to-dialogue alignment artifacts in markdown and json.
+4. Ensure storyboard summaries can reference dialogue start/end ranges.
+5. Reserve later hooks for audio file binding and lipsync-driven timing refinement.
+
+---
+
+### B6. User-facing terminology transition: clip -> shot
 
 #### Problem
 Current code and file ids still use `clip`, but user-facing language should use `shot`.
@@ -216,9 +265,12 @@ Adopt `shot` in docs, launcher descriptions, summary outputs, and future specs w
 - chapter summary improvements for review
 
 ### Phase B.4
+- dialogue/script timing schema and scene-level dialogue mapping
+
+### Phase B.5
 - broader terminology cleanup (`clip` -> `shot`) across docs and operator-facing text
 
-This order minimizes risk and ensures continuity state is grounded in canonical identities before trying to summarize or storyboard the chapter globally.
+This order minimizes risk and ensures continuity state is grounded in canonical identities before trying to summarize, dialogue-map, or storyboard the chapter globally.
 
 ---
 
@@ -259,7 +311,15 @@ This order minimizes risk and ensures continuity state is grounded in canonical 
 - [ ] include continuity flags in storyboard output
 - [ ] create regression test for storyboard generation
 
-### B5 terminology checklist
+### B5 dialogue/script timing checklist
+- [ ] define dialogue event schema
+- [ ] define shot-to-dialogue mapping schema
+- [ ] add scene-level dialogue timing pass after shot planning
+- [ ] emit markdown and json dialogue alignment artifacts
+- [ ] include dialogue span references in storyboard output
+- [ ] create regression test for a line spanning multiple shots
+
+### B6 terminology checklist
 - [ ] update specs and docs to use `shot`
 - [ ] update launcher README wording
 - [ ] update CLI help strings where safe
@@ -296,6 +356,19 @@ This order minimizes risk and ensures continuity state is grounded in canonical 
 - active_continuity_notes
 - unresolved_clarifications
 
+### Dialogue event entry
+- dialogue_event_id
+- speaker_id
+- spoken_text
+- scene_id
+- shot_start_id
+- shot_end_id
+- estimated_start_seconds
+- estimated_end_seconds
+- spans_multiple_shots
+- pre_line_hold_seconds
+- post_line_hold_seconds
+
 ---
 
 ## Output contract changes for Phase B
@@ -314,6 +387,7 @@ Add future optional fields:
 - continuity_summary_path
 - storyboard_scene_path
 - estimated_scene_duration_seconds
+- dialogue_map_path
 
 ### `ChapterAuthoringSummary`
 Add future optional fields:
@@ -321,6 +395,7 @@ Add future optional fields:
 - storyboard_json_path
 - chapter_state_path
 - canonical_registry_paths
+- dialogue_timeline_paths
 
 ---
 
@@ -344,6 +419,11 @@ Mitigation:
 Mitigation:
 - use concise shot summaries built from existing clip roster and clip plan metadata
 
+### Risk: dialogue timing becomes hand-wavy and unusable for audio sync
+Mitigation:
+- require deterministic timing fields and machine-readable dialogue event artifacts
+- track lines against shot ranges, not just scene prose
+
 ---
 
 ## Definition of done for Phase B
@@ -354,14 +434,15 @@ Phase B should be considered complete when:
 2. Scene planning uses inherited continuity context from earlier scenes in the same chapter.
 3. Chapter authoring produces a storyboard artifact with ordered scenes and shots.
 4. Shared prompt writing and shot prompt writing prefer canonical assets when available.
-5. Operator-facing docs describe the system in chapter -> scene -> shot terms.
+5. Dialogue/script timing artifacts can map a spoken line across one or more shots deterministically.
+6. Operator-facing docs describe the system in chapter -> scene -> shot terms.
 
 ---
 
 ## Immediate next recommended coding tasks
 
-1. Add canonical registry utilities for characters and environments.
-2. Add post-analysis resolution passes.
-3. Extend `author_chapter(...)` to maintain and update `chapter_state` between scenes.
-4. Add a storyboard writer that summarizes all scene runs.
+1. Finish canonical registry integration into authoring summaries and prompt-source selection.
+2. Extend `author_chapter(...)` to maintain and update `chapter_state` between scenes.
+3. Add a storyboard writer that summarizes all scene runs.
+4. Define the dialogue event schema and shot-alignment contract before audio integration work begins.
 5. Update launcher/docs/help text to describe shots rather than clips in user-facing language.
