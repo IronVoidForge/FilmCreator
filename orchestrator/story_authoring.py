@@ -1025,37 +1025,51 @@ def write_shared_prompts(*, project_slug: str) -> SharedPromptSummary:
     )
 
 
-def build_chapter_continuity(*, project_slug: str, analysis: StoryAnalysisSummary) -> ChapterContinuitySummary:
+def build_chapter_continuity(
+    *,
+    project_slug: str,
+    analysis: StoryAnalysisSummary,
+    snapshot_data: dict | None = None,
+) -> ChapterContinuitySummary:
     project_dir = create_project(project_slug)
-    world_dir = project_dir / "02_story_analysis" / "world"
-    ensure_dir(world_dir)
-    state_path = world_dir / f"{analysis.chapter_id}_STATE.json"
-    summary_path = world_dir / f"{analysis.chapter_id}_CONTINUITY_SUMMARY.md"
+    continuity_dir = project_dir / "02_story_analysis" / "world" / "continuity"
+    ensure_dir(continuity_dir)
+    state_path = continuity_dir / f"{analysis.chapter_id}_STATE.json"
+    summary_path = continuity_dir / f"{analysis.chapter_id}_CONTINUITY_SUMMARY.md"
+
+    snapshot_data = snapshot_data or {}
+    scene_order = list(snapshot_data.get("scene_order", analysis.scene_ids))
+    known_characters = list(snapshot_data.get("known_characters", analysis.canonical_character_ids))
+    known_environments = list(snapshot_data.get("known_environments", analysis.canonical_environment_ids))
+    unresolved_character_ids = list(snapshot_data.get("provisional_roles", analysis.provisional_character_ids))
+
     state = {
         "chapter_id": analysis.chapter_id,
-        "scene_order": analysis.scene_ids,
-        "known_characters": analysis.canonical_character_ids,
-        "known_environments": analysis.canonical_environment_ids,
-        "unresolved_character_ids": analysis.provisional_character_ids,
+        "scene_order": scene_order,
+        "known_characters": known_characters,
+        "known_environments": known_environments,
+        "unresolved_character_ids": unresolved_character_ids,
         "world_registry_paths": analysis.world_registry_paths,
+        "snapshot_path": repo_relative(project_dir / "02_story_analysis" / "world" / "snapshots" / f"{analysis.chapter_id}_WORLD_SNAPSHOT.json"),
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
     }
     _write_text(state_path, json.dumps(state, indent=2))
+
     summary_markdown = "\n".join(
         [
             f"# {analysis.chapter_id} Continuity Summary",
             "",
             "## Scene Order",
-            *[f"- {scene_id}" for scene_id in analysis.scene_ids],
+            *[f"- {scene_id}" for scene_id in scene_order],
             "",
             "## Known Canonical Characters",
-            *([f"- {item}" for item in analysis.canonical_character_ids] or ["- None"]),
+            *([f"- {item}" for item in known_characters] or ["- None"]),
             "",
             "## Unresolved / Provisional Characters",
-            *([f"- {item}" for item in analysis.provisional_character_ids] or ["- None"]),
+            *([f"- {item}" for item in unresolved_character_ids] or ["- None"]),
             "",
             "## Known Canonical Environments",
-            *([f"- {item}" for item in analysis.canonical_environment_ids] or ["- None"]),
+            *([f"- {item}" for item in known_environments] or ["- None"]),
             "",
             "## Registry Artifacts",
             *[f"- {item}" for item in analysis.world_registry_paths],
@@ -1071,10 +1085,10 @@ def build_chapter_continuity(*, project_slug: str, analysis: StoryAnalysisSummar
         chapter_id=analysis.chapter_id,
         state_path=repo_relative(state_path),
         summary_path=repo_relative(summary_path),
-        known_characters=analysis.canonical_character_ids,
-        known_environments=analysis.canonical_environment_ids,
-        unresolved_character_ids=analysis.provisional_character_ids,
-        scene_order=analysis.scene_ids,
+        known_characters=known_characters,
+        known_environments=known_environments,
+        unresolved_character_ids=unresolved_character_ids,
+        scene_order=scene_order,
     )
 
 
