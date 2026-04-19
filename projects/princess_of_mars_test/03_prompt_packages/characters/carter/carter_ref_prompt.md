@@ -5,27 +5,25 @@ carter Character Reference Prompt
 carter_ref_prompt
 
 # Purpose
-Carter is an Observer/Commander figure referenced in Chapter CH008 with no physical description provided in source material. Visual identity, costume, and silhouette are entirely undefined per uncertainty notes. Manual character description required before stable image generation can proceed. Current prompts use general descriptive terms to accommodate future manual input addition.
+Character serves as primary observer/narrator positioned in city plaza or building upper floors throughout chapter. No physical description exists in source material - requires manual intervention for visual production. Role is clear but renderable details undefined. Prompts must reflect uncertainty while maintaining continuity of observer positioning and avoiding proper nouns.
 
 # Workflow Type
 still.t2i.klein.distilled
 
 # Positive Prompt
-Observer standing at window or balcony, composed posture, formal attire, neutral expression, clean lines, structured silhouette, muted color palette, professional appearance, calm demeanor, architectural background, minimalistic design, steady stance, dignified presence, understated elegance, composed figure, restrained movement, balanced composition
+observer character, neutral expression, standing or seated position, city plaza background, building windows visible, upper floor location, no specific costume details, undefined physical features, narrator presence, urban environment, consistent silhouette, minimal blocking, static composition, observer role emphasis
 
 # Negative Prompt
-exaggerated features, distorted proportions, overly detailed textures, chaotic blocking, bright saturated colors, emotional expressions, dynamic action poses, cluttered background, messy silhouette, informal clothing, casual stance, animated gestures, complex patterns, ornate details, busy composition, unrealistic anatomy, inconsistent lighting, over-processed appearance
+proper nouns, brand names, specific character identities, detailed facial features, named clothing items, scene-specific actions, dynamic camera movement, complex lighting setups, multiple characters, dialogue bubbles, text overlays, weather effects, time of day indicators, location markers, numbered elements, copyrighted imagery, animated sequences
 
 # Inputs
-- Manual character description path: projects/princess_of_mars_test/01_source/character_descriptions/carter_manual_description.md (missing)
-- Character breakdown path: projects/princess_of_mars_test/02_story_analysis/character_breakdowns/carter.md
-- Current status: Visual appearance undefined in Chapter CH008 source material. Manual description required per uncertainty notes before stable generation can proceed.
+- source_1: projects/princess_of_mars_test/02_story_analysis/character_breakdowns/carter.md
 
 # Continuity Notes
-- Carter identified by name only with no physical attributes recorded in Chapter CH008. Physical presence supported by source is limited to window/balcony observation location. Costume and silhouette traits not recorded in chapter material. Visual identity unknown per uncertainty notes. Manual description input required for future image generation. Face, hair, body type, costume logic, silhouette, and recurring materials cannot be specified without manual character description addition.
+- Character role as observer/narrator is consistent across chapter. Physical description undefined - requires manual intervention before visual production. Positioning in city plaza or building upper floors should remain constant. No costume or silhouette details available for render-facing prompts. All prompts must avoid proper nouns and use descriptive noun phrases only.
 
 # Repair Notes
-- Add manual character description to projects/princess_of_mars_test/01_source/character_descriptions/carter_manual_description.md before stable generation can proceed. Current prompts use general descriptive terms to accommodate future manual input. Once manual description is added, update positive/negative prompts with specific face, hair, body type, costume logic, silhouette, and recurring materials from that manual description.
+- Manual character description required before proceeding with visual generation. Source material lacks physical details for dependable image production. Consider adding generic observer characteristics (neutral expression, undefined features) while noting uncertainty in continuity notes. Recommend creating separate manual description document at projects/princess_of_mars_test/01_source/character_descriptions/carter_manual_description.md
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/character_breakdowns/CHARACTER_INDEX.md

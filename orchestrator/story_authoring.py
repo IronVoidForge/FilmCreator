@@ -289,38 +289,47 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
     canonical_lookup = _existing_character_lookup(project_dir=project_dir)
     active_manual_description_requests: dict[str, str] = {}
     active_clarification_requests: dict[str, tuple[str, str]] = {}
+    usable_character_count = 0
 
-    for raw_character in _require_packet_records(character_packet, record_type="character"):
-        asset_id = _normalize_asset_id(
-            _require_record_field(raw_character, "asset_id"),
-            fallback_prefix="character",
-        )
-        markdown = _require_record_section(raw_character, "markdown")
-        manual_description_required = _parse_packet_bool(
-            _require_record_field(raw_character, "manual_description_required")
-        )
-        manual_description_reason = _require_record_field(
-            raw_character,
-            "manual_description_reason",
-            allow_empty=not manual_description_required,
-        )
-        clarification_required = _parse_packet_bool(
-            _require_record_field(raw_character, "clarification_required", allow_empty=True) or "false"
-        )
-        clarification_reason = _require_record_field(raw_character, "clarification_reason", allow_empty=True)
-        clarification_question = _require_record_field(raw_character, "clarification_question", allow_empty=True)
-        if clarification_required:
-            if not clarification_reason:
-                clarification_reason = "The character record indicates clarification is needed, but LM Studio did not supply a reason."
-                warnings.append(f"Synthesized clarification_reason for character '{asset_id}'.")
-            if not clarification_question:
-                clarification_question = (
-                    "This character appears to need clarification. Can you identify the missing canonical identity or provide the missing visual facts?"
-                )
-                warnings.append(f"Synthesized clarification_question for character '{asset_id}'.")
-        aliases = _require_record_field(raw_character, "aliases", allow_empty=True)
-        canonical_character_id = _require_record_field(raw_character, "canonical_character_id", allow_empty=True)
-        is_fully_identified = _require_record_field(raw_character, "is_fully_identified", allow_empty=True) or "false"
+    for index, raw_character in enumerate(_require_packet_records(character_packet, record_type="character"), start=1):
+        try:
+            asset_id = _normalize_asset_id(
+                _require_record_field(raw_character, "asset_id"),
+                fallback_prefix="character",
+            )
+            markdown = _require_record_section(raw_character, "markdown")
+            manual_description_required = _parse_packet_bool(
+                _require_record_field(raw_character, "manual_description_required")
+            )
+            manual_description_reason = _require_record_field(
+                raw_character,
+                "manual_description_reason",
+                allow_empty=not manual_description_required,
+            )
+            clarification_required = _parse_packet_bool(
+                _require_record_field(raw_character, "clarification_required", allow_empty=True) or "false"
+            )
+            clarification_reason = _require_record_field(raw_character, "clarification_reason", allow_empty=True)
+            clarification_question = _require_record_field(raw_character, "clarification_question", allow_empty=True)
+            if clarification_required:
+                if not clarification_reason:
+                    clarification_reason = "The character record indicates clarification is needed, but LM Studio did not supply a reason."
+                    warnings.append(f"Synthesized clarification_reason for character '{asset_id}'.")
+                if not clarification_question:
+                    clarification_question = (
+                        "This character appears to need clarification. Can you identify the missing canonical identity or provide the missing visual facts?"
+                    )
+                    warnings.append(f"Synthesized clarification_question for character '{asset_id}'.")
+            aliases = _require_record_field(raw_character, "aliases", allow_empty=True)
+            canonical_character_id = _require_record_field(raw_character, "canonical_character_id", allow_empty=True)
+            is_fully_identified = _require_record_field(raw_character, "is_fully_identified", allow_empty=True) or "false"
+        except LMStudioError as exc:
+            warnings.append(
+                f"Skipped malformed character record #{index}: {exc}. "
+                f"Fields present: {sorted(raw_character.fields.keys())}. "
+                f"Sections present: {sorted(raw_character.sections.keys())}."
+            )
+            continue
 
         resolved_asset_id, inferred_clarification = _resolve_character_identity(
             asset_id=asset_id,
@@ -377,6 +386,10 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
                     question=clarification_question,
                 )
             )
+        usable_character_count += 1
+
+    if usable_character_count == 0:
+        raise LMStudioError("Character extraction returned no usable character records after validation.")
 
     manual_placeholder_paths = _reconcile_manual_character_description_placeholders(
         project_dir=project_dir,
@@ -1021,6 +1034,9 @@ def _character_extraction_user_prompt(
         "- use aliases for alternate names or partial labels seen in the chapter",
         "- if the character might already exist under another name or is too weakly identified, set clarification_required to true and ask a targeted question",
         "- if clarification is not required, still include clarification_reason and clarification_question as empty values",
+        "- every character record must include a non-empty markdown section",
+        "- if details are sparse, still write a short markdown file explaining the uncertainty instead of omitting markdown",
+        "- never omit the markdown section for any character record",
     ]
     if degraded:
         body_requirements = [

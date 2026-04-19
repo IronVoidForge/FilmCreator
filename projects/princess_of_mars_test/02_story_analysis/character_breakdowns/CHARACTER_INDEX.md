@@ -1,12 +1,19 @@
-# Character Index - CH008
+# Character Index - Chapter CH008
 
-| Asset ID | Canonical Character ID | Aliases | Fully Identified | Manual Description Required | Clarification Required |
-|----------|------------------------|---------|------------------|----------------------------|------------------------|
-| carter_ch008 | Carter | - | true | true | false |
-| sola_ch008 | Sola | - | true | true | false |
-| captive_human_ch008 | The Captive/Human Woman | - | false | true | true |
+## Extracted Characters
 
-**Notes:**
-- Carter and Sola have no physical/visual description in this chapter for image generation
-- The Captive has visual details but lacks stable identification (unnamed, unclear origin)
-- All three require manual descriptions for dependable later rendering
+| Asset ID | Canonical ID | Display Name | Role | Physical Presence | Description Status |
+|----------|--------------|--------------|------|-------------------|-------------------|
+| carter | carter | Carter | Observer/Narrator | Present | No physical description in chapter |
+| captive | princess_of_mars | The Captive | Signal-sender | Present | Detailed visual description provided |
+
+## Notes
+
+- **Carter**: Main observer throughout chapter; no physical or visual description given in text. Character is physically present in city plaza/building but lacks renderable details.
+
+- **The Captive**: Slender girlish figure with copper skin and black hair seen by Carter before being taken inside building. Detailed physical description provided but canonical name not explicitly stated in chapter text.
+
+## Uncertainty Flags
+
+- Both characters require manual descriptions due to insufficient visual/physical details for dependable image generation
+- The Captive requires clarification regarding canonical identity (Princess of Mars)
