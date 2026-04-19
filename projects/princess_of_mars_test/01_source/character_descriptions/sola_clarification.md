@@ -4,10 +4,10 @@
 sola
 
 # Why This Needs Clarification
-Character may already exist under another name or is too weakly identified; need clarification about species, age, and appearance
+The character is not fully identified from this chapter alone.
 
 # Question
-Is Sola a human female character? What are her approximate age, height, and distinguishing physical features?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

@@ -1,11 +1,19 @@
-# Project Context: Martian Captivity Arc
+# Project Summary: The Thark City Integration
 
-**Setting:** The narrative takes place within a dwelling in a Martian city, characterized by silks, furs, and thin atmospheric conditions. The environment features green vegetation with distinct colorings compared to Earth, and is illuminated by two moons that cycle rapidly through the night sky.
+**Setting:**
+The narrative is situated within the fortified city of Thark, a community of green Martians governed by strict customs and led by chieftains. The physical layout consists of multi-story buildings arranged around central courtyards, with specific floors designated for warriors, families, and leadership.
 
-**Key Characters:**
-*   **The Narrator:** A human captive possessing high jumping ability and a propensity for adventure/experimentation.
-*   **Sola:** A Martian female who serves as the primary caretaker, displaying sympathy, kindliness, and unfailing ministrations to the narrator's needs.
-*   **Watch Dog:** A ferocious, short-legged brute used for protection and hunting. It is loyal but physically distinct from human or Earth animals.
-*   **Ape-like Creature:** A colossal, white, hairless entity with a bristly head shock, appearing as a guardian or overseer within the room.
+**Key Characters & Dynamics:**
+- **John Carter:** Occupies a precarious position as a prisoner who commands authority. He is under investigation by Lorquas Ptomel due to accusations involving Dejah Thoris.
+- **Tars Tarkas:** Acts as Carter's protector and guide within Thark society. He holds significant power alongside Lorquas Ptomel and manages the logistics of Carter's integration (quarters, spoils, retinue).
+- **Lorquas Ptomel:** The chieftain who interrogates Carter regarding escape plots and potential execution risks.
+- **Sarkoja:** Influential figure behind Tarkas; her persecution of Carter is a driving force for the current conflict.
 
-**Core Themes:** Survival under alien conditions, observation of Martian biology and culture, and the tension between captivity and escape attempts. The project focuses on the narrator's adaptation to the Martian environment and the specific behaviors of their non-human guardians.
+**Thark Customs (Reusable Context):**
+- **Retinues:** Women in a warrior's retinue are not wives but community property, managed like military units. They provide service (cooking, arms care) and reside in upper floors.
+- **Property Rights:** Personal weapons, ornaments, and sleeping silks/furs are individual property; surplus is held as custodian for the community.
+- **Communication:** Carter plans to establish a signal system between his quarters and Dejah Thoris' residence due to their proximity.
+
+**Ongoing Threats:**
+- **Tal Hajus:** The "red prisoner" (granddaughter of a red jeddak) is being held at Tal Hajus' headquarters, posing a risk to Dejah Thoris.
+- **Escape Plot:** Accusations suggest Carter plotted to escape with the red girl, threatening his life and Tars Tarkas' standing.

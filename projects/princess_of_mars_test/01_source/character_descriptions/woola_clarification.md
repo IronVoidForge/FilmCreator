@@ -4,10 +4,10 @@
 woola
 
 # Why This Needs Clarification
-Character has stable name identification but insufficient visual details for render-facing prompts
+Woola is mentioned as companion but species and appearance are not specified in this chapter. Need clarification on whether this is a specific animal type (dog, wolf, etc.) and what appearance characteristics should be assigned.
 
 # Question
-What are Woola's specific physical features (species, build, distinctive markings) and costume/attire details?
+What species or animal type is Woola? Should he be depicted as a dog, wolf, or other creature? What size, build, and distinguishing features should be assigned?
 
 # Guidance
 - answer briefly and concretely

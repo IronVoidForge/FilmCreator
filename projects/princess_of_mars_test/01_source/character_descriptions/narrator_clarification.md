@@ -4,10 +4,10 @@
 narrator
 
 # Why This Needs Clarification
-The extracted character id appears generic or role-based rather than clearly canonical.
+Character may exist under different name or identification in broader work; needs confirmation of canonical identity
 
 # Question
-This character is named or role-labeled but not fully identified. Can you find a stronger canonical identity from another chapter, or should FilmCreator keep this as a scene-local provisional character?
+What is the narrator's full physical description including hair, eyes, build, age appearance?
 
 # Guidance
 - answer briefly and concretely

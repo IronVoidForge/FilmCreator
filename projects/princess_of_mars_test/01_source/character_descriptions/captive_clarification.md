@@ -4,10 +4,10 @@
 captive
 
 # Why This Needs Clarification
-Character is clearly Princess of Mars from story context but chapter does not explicitly name her; requires confirmation of intended identity
+The extracted character id appears generic or role-based rather than clearly canonical.
 
 # Question
-Is this slender girlish figure with copper skin and black hair intended to be Princess of Mars?
+This character is named or role-labeled but not fully identified. Can you find a stronger canonical identity from another chapter, or should FilmCreator keep this as a scene-local provisional character?
 
 # Guidance
 - answer briefly and concretely
