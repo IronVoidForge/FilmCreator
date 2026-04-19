@@ -47,16 +47,74 @@ def _iter_environment_files(environment_files: Iterable[Path]) -> list[Path]:
     return [path for path in environment_files if path.name not in ENVIRONMENT_SKIP_NAMES]
 
 
-def _character_resolution(asset_id: str) -> tuple[str, str, str]:
+def _character_entity_kind(asset_id: str, source_markdown: str) -> tuple[str, str]:
+    normalized = asset_id.lower()
+    markdown = source_markdown.lower()
+    if any(token in normalized for token in ["warriors", "females", "soldiers", "guards", "martians"]):
+        return "group", "Detected plural/group-like character asset."
+    if any(label == normalized or normalized.startswith(f"{label}_") for label in GENERIC_CHARACTER_LABELS):
+        return "provisional_role", "Generic role-based character remains provisional."
+    if "group" in markdown or "2-3" in markdown or "crowd" in markdown:
+        return "group", "Character markdown describes a group entity."
+    return "individual", "Character appears to be a singular individual entity."
+
+
+def _character_resolution(asset_id: str, source_markdown: str) -> tuple[str, str, str, str]:
     if asset_id in {"carter", "john_carter", "johncarter"}:
-        return "john_carter", "canonical", "Resolved known Carter alias to john_carter."
-    if any(label == asset_id or asset_id.startswith(f"{label}_") for label in GENERIC_CHARACTER_LABELS):
-        return asset_id, "provisional", "Generic or role-based character remains provisional pending clarification."
-    return asset_id, "canonical", "No competing canonical alias detected; kept extracted asset id."
+        return "john_carter", "canonical", "individual", "Resolved known Carter alias to john_carter."
+
+    entity_kind, entity_reason = _character_entity_kind(asset_id, source_markdown)
+    if asset_id == "earthling_woman":
+        return asset_id, "provisional", "provisional_role", (
+            "Earthling woman is still a role-like placeholder and should not yet be treated as a strong canonical named identity."
+        )
+    if entity_kind == "provisional_role":
+        return asset_id, "provisional", entity_kind, "Generic or role-based character remains provisional pending clarification."
+    return asset_id, "canonical", entity_kind, f"No competing canonical alias detected; kept extracted asset id. {entity_reason}"
 
 
-def _environment_resolution(asset_id: str) -> tuple[str, str, str]:
-    return asset_id, "canonical", "Environment currently kept under extracted canonical id."
+def _environment_entity_kind(asset_id: str) -> str:
+    normalized = asset_id.lower()
+    if normalized == "deserted_city_buildings" or ("city" in normalized and "plaza" not in normalized):
+        return "city"
+    if "plaza" in normalized:
+        return "plaza"
+    if "building" in normalized:
+        return "building"
+    if any(token in normalized for token in ["window", "upper_floors", "interior", "deck", "open_ground"]):
+        return "sub_location"
+    if "warship" in normalized or "airship" in normalized:
+        return "vehicle"
+    if "hill" in normalized:
+        return "landform"
+    return "environment"
+
+
+def _environment_parent(asset_id: str) -> str | None:
+    normalized = asset_id.lower()
+    if normalized == "city_plaza_open_ground":
+        return "city_plaza"
+    if normalized == "building_upper_floors_windows":
+        return "city_plaza"
+    if normalized == "disabled_airship_interior_deck":
+        return "drifting_warship"
+    if normalized == "city_plaza":
+        return "deserted_city_buildings"
+    return None
+
+
+def _environment_resolution(asset_id: str) -> tuple[str, str, str, str, str | None]:
+    canonical_id = asset_id
+    status = "canonical"
+    entity_kind = _environment_entity_kind(asset_id)
+    parent_environment_id = _environment_parent(asset_id)
+    if asset_id == "city_plaza_open_ground":
+        return canonical_id, status, entity_kind, "Open-ground sub-location tied to city_plaza.", parent_environment_id
+    if asset_id == "building_upper_floors_windows":
+        return canonical_id, status, entity_kind, "Building sub-location attached to plaza/city hierarchy.", parent_environment_id
+    if asset_id == "disabled_airship_interior_deck":
+        return canonical_id, status, entity_kind, "Interior deck is a sub-location of the drifting warship.", parent_environment_id
+    return canonical_id, status, entity_kind, "Environment currently kept under extracted canonical id.", parent_environment_id
 
 
 def resolve_character_registry(project_slug: str, character_files: list[Path]) -> dict:
@@ -65,29 +123,29 @@ def resolve_character_registry(project_slug: str, character_files: list[Path]) -
 
     for file in _iter_character_files(character_files):
         asset_id = file.stem
-        canonical_id, status, resolution_reason = _character_resolution(asset_id)
-
+        markdown = file.read_text(encoding="utf-8")
+        canonical_id, status, entity_kind, resolution_reason = _character_resolution(asset_id, markdown)
         entry = registry.get(
             canonical_id,
             {
                 "canonical_id": canonical_id,
+                "display_name": canonical_id,
                 "status": status,
+                "entity_kind": entity_kind,
                 "resolution_reason": resolution_reason,
                 "aliases": [],
                 "sources": [],
+                "parent_entity_id": None,
             },
         )
-
         entry["status"] = status
+        entry["entity_kind"] = entity_kind
         entry["resolution_reason"] = resolution_reason
-
         if asset_id not in entry["aliases"] and asset_id != canonical_id:
             entry["aliases"].append(asset_id)
-
         rel_path = repo_relative(file)
         if rel_path not in entry["sources"]:
             entry["sources"].append(rel_path)
-
         registry[canonical_id] = entry
 
     _write_json(path, registry)
@@ -100,26 +158,48 @@ def resolve_environment_registry(project_slug: str, env_files: list[Path]) -> di
 
     for file in _iter_environment_files(env_files):
         asset_id = file.stem
-        canonical_id, status, resolution_reason = _environment_resolution(asset_id)
+        canonical_id, status, entity_kind, resolution_reason, parent_environment_id = _environment_resolution(asset_id)
         entry = registry.get(
             canonical_id,
             {
                 "canonical_id": canonical_id,
+                "display_name": canonical_id,
                 "status": status,
+                "entity_kind": entity_kind,
+                "parent_environment_id": parent_environment_id,
+                "children": [],
                 "resolution_reason": resolution_reason,
                 "aliases": [],
                 "sources": [],
             },
         )
-
         entry["status"] = status
+        entry["entity_kind"] = entity_kind
+        entry["parent_environment_id"] = parent_environment_id
         entry["resolution_reason"] = resolution_reason
-
         rel_path = repo_relative(file)
         if rel_path not in entry["sources"]:
             entry["sources"].append(rel_path)
-
         registry[canonical_id] = entry
+
+        if parent_environment_id:
+            parent = registry.get(
+                parent_environment_id,
+                {
+                    "canonical_id": parent_environment_id,
+                    "display_name": parent_environment_id,
+                    "status": "canonical",
+                    "entity_kind": _environment_entity_kind(parent_environment_id),
+                    "parent_environment_id": _environment_parent(parent_environment_id),
+                    "children": [],
+                    "resolution_reason": "Synthesized parent environment from hierarchical child mapping.",
+                    "aliases": [],
+                    "sources": [],
+                },
+            )
+            if canonical_id not in parent["children"]:
+                parent["children"].append(canonical_id)
+            registry[parent_environment_id] = parent
 
     _write_json(path, registry)
     return registry
@@ -136,20 +216,37 @@ def summarize_registry_status(registry: dict) -> tuple[list[str], list[str]]:
     return canonical_ids, provisional_ids
 
 
+def summarize_character_registry(registry: dict) -> dict[str, list[str]]:
+    canonical_individual_ids: list[str] = []
+    canonical_group_ids: list[str] = []
+    provisional_role_ids: list[str] = []
+    for canonical_id, entry in sorted(registry.items()):
+        kind = entry.get("entity_kind")
+        status = entry.get("status")
+        if status == "provisional":
+            provisional_role_ids.append(canonical_id)
+        elif kind == "group":
+            canonical_group_ids.append(canonical_id)
+        else:
+            canonical_individual_ids.append(canonical_id)
+    return {
+        "canonical_individual_ids": canonical_individual_ids,
+        "canonical_group_ids": canonical_group_ids,
+        "provisional_role_ids": provisional_role_ids,
+    }
+
+
 def run_phase_b1_resolution(project_slug: str) -> dict:
     project_dir = create_project(project_slug)
-
     char_dir = project_dir / "02_story_analysis" / "character_breakdowns"
     env_dir = project_dir / "02_story_analysis" / "environment_breakdowns"
-
     char_files = list(char_dir.glob("*.md"))
     env_files = list(env_dir.glob("*.md"))
-
     char_registry = resolve_character_registry(project_slug, char_files)
     env_registry = resolve_environment_registry(project_slug, env_files)
     canonical_character_ids, provisional_character_ids = summarize_registry_status(char_registry)
     canonical_environment_ids, provisional_environment_ids = summarize_registry_status(env_registry)
-
+    character_semantics = summarize_character_registry(char_registry)
     return {
         "character_registry_path": repo_relative(character_registry_path(project_slug)),
         "environment_registry_path": repo_relative(environment_registry_path(project_slug)),
@@ -157,6 +254,9 @@ def run_phase_b1_resolution(project_slug: str) -> dict:
         "provisional_character_ids": provisional_character_ids,
         "canonical_environment_ids": canonical_environment_ids,
         "provisional_environment_ids": provisional_environment_ids,
+        "canonical_individual_ids": character_semantics["canonical_individual_ids"],
+        "canonical_group_ids": character_semantics["canonical_group_ids"],
+        "provisional_role_ids": character_semantics["provisional_role_ids"],
         "character_registry": char_registry,
         "environment_registry": env_registry,
     }
