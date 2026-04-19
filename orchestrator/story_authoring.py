@@ -150,6 +150,32 @@ class SharedPromptSummary:
 
 
 @dataclass(frozen=True)
+class SceneAuthoringSummary:
+    planning: ScenePlanningSummary
+    clip_prompts: PromptWriteSummary
+
+    def to_dict(self) -> dict[str, object]:
+        return {
+            "planning": self.planning.to_dict(),
+            "clip_prompts": self.clip_prompts.to_dict(),
+        }
+
+
+@dataclass(frozen=True)
+class ChapterAuthoringSummary:
+    analysis: StoryAnalysisSummary
+    scene_runs: list[SceneAuthoringSummary]
+    shared_prompts: SharedPromptSummary
+
+    def to_dict(self) -> dict[str, object]:
+        return {
+            "analysis": self.analysis.to_dict(),
+            "scene_runs": [scene_run.to_dict() for scene_run in self.scene_runs],
+            "shared_prompts": self.shared_prompts.to_dict(),
+        }
+
+
+@dataclass(frozen=True)
 class AuthoringCheckpointSummary:
     analysis: StoryAnalysisSummary
     planning: ScenePlanningSummary
@@ -602,6 +628,29 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
         beat_ids=beat_ids,
         clip_ids=clip_ids,
         warnings=warnings,
+    )
+
+
+def author_scene(*, project_slug: str, scene_id: str) -> SceneAuthoringSummary:
+    planning = plan_scene(project_slug=project_slug, scene_id=scene_id)
+    clip_prompts = write_prompts(project_slug=project_slug, scene_id=scene_id)
+    return SceneAuthoringSummary(planning=planning, clip_prompts=clip_prompts)
+
+
+def author_chapter(*, project_slug: str, chapter: str | None = None) -> ChapterAuthoringSummary:
+    started = time.perf_counter()
+    print(f"[authoring] Starting chapter authoring cascade for {project_slug}...")
+    analysis = analyze_chapter(project_slug=project_slug, chapter=chapter)
+    scene_runs: list[SceneAuthoringSummary] = []
+    for scene_id in analysis.scene_ids:
+        scene_runs.append(author_scene(project_slug=project_slug, scene_id=scene_id))
+    shared_prompts = write_shared_prompts(project_slug=project_slug)
+    elapsed = time.perf_counter() - started
+    print(f"[authoring] Finished chapter authoring cascade in {elapsed:.1f}s")
+    return ChapterAuthoringSummary(
+        analysis=analysis,
+        scene_runs=scene_runs,
+        shared_prompts=shared_prompts,
     )
 
 
