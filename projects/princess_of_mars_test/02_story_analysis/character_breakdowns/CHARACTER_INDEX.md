@@ -1,19 +1,16 @@
 # Character Index - Chapter CH008
 
-## Extracted Characters
+## Earthling Woman (Captive)
+- **Role:** Captive brought to the plaza, referenced by narrator
+- **Status:** Physically present in Story Beat 3
+- **Description:** Slender girlish figure with oval face, copper skin, black hair, highly wrought ornaments only. Light reddish copper color with crimson glow of cheeks and ruby lips.
 
-| Asset ID | Canonical ID | Display Name | Role | Physical Presence | Description Status |
-|----------|--------------|--------------|------|-------------------|-------------------|
-| carter | carter | Carter | Observer/Narrator | Present | No physical description in chapter |
-| captive | princess_of_mars | The Captive | Signal-sender | Present | Detailed visual description provided |
+## Green Martian Warriors
+- **Role:** Procession participants, defenders against airships
+- **Status:** Physically present throughout chapter
+- **Description:** Group entity without individual physical descriptions; green warriors in procession returning to city after incubator ceremony.
 
-## Notes
-
-- **Carter**: Main observer throughout chapter; no physical or visual description given in text. Character is physically present in city plaza/building but lacks renderable details.
-
-- **The Captive**: Slender girlish figure with copper skin and black hair seen by Carter before being taken inside building. Detailed physical description provided but canonical name not explicitly stated in chapter text.
-
-## Uncertainty Flags
-
-- Both characters require manual descriptions due to insufficient visual/physical details for dependable image generation
-- The Captive requires clarification regarding canonical identity (Princess of Mars)
+## Martian Females
+- **Role:** Dragging captives into buildings
+- **Status:** Physically present in Story Beat 3
+- **Description:** Group entity without individual physical descriptions; female Martians involved in captive handling and ship salvage operations.

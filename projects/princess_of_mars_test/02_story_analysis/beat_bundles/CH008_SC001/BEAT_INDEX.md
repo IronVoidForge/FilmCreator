@@ -1,2 +1,3 @@
-BT001 - Procession Return Beat
-BT002 - Retreat Order Beat
+BT001: Wide Shot - City Procession
+BT002: Medium Shot - Building Entry
+BT003: Close-Up - Doorway Vanishing

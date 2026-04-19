@@ -1,16 +1,1 @@
-# Project Summary: A Princess of Mars (Test)
-
-## Setting & World
-- **Location:** Barsoom (Mars). Cities feature spacious doorways, plazas, and buildings with upper floors.
-- **Environment:** Valley terrain with outlying hills; open plains for chariot movement.
-- **Atmosphere:** High stakes warfare involving airships and ground forces; presence of advanced weaponry (guns, wireless apparatus).
-
-## Factions & Characters
-- **Green Martians:** Ground warriors, mounted on mastodons or in chariots. Wear green attire. Highly accurate marksmen with specific targeting protocols.
-- **Humans:** John Carter (protagonist), Sola (companion), Woola (hound).
-- **Technology:** Chariots, mastodons, gray-painted airships, grappling hooks, carboys of water/liquids.
-
-## Narrative Context
-- **Status:** Post-incubation ceremony return march interrupted by enemy fleet attack.
-- **Conflict:** Defensive warfare against an unknown hostile naval force; looting of disabled vessels.
-- **Themes:** Survival, tactical accuracy, emotional reaction to defeat/allies, discovery of captives.
+The narrative follows a Green Martian group residing in a deserted city within a valley, surrounded by hills. The narrator (a human male) and Sola are integrated into this society, accompanied by Woola the hound. A significant plot thread involves the presence of advanced airships and naval forces from a "kindred people" or enemy fleet that has been attacked. The Martians possess superior marksmanship against these vessels. The group is currently in a state of alert due to potential return attacks. A major new element introduced is the arrival of an Earthling female captive, who is being held by the Martians and is the focus of the narrator's hope and curiosity.

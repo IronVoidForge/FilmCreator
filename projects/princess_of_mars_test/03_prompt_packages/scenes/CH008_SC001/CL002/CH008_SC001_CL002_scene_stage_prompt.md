@@ -5,30 +5,30 @@ CH008_SC001 CL002 Scene Stage Prompt
 CH008_SC001_CL002_scene_stage_prompt
 
 # Purpose
-Establish the visual staging for the medium tracking shot of the procession returning from the incubation ceremony. Focus on Carter positioned at the rear of the formation, moving forward through the city plaza towards the open ground boundary. Capture the synchronized movement of Green Martians in the central column and the anticipation building as they approach the valley entrance. The frame should convey forward momentum and the transition from built environment to natural terrain without showing the sudden retreat order yet (that is a subsequent beat).
+Establish the visual staging for the medium shot of the tactical retreat order into buildings. Focus on Green Martian warriors pausing at building entrances before entering in groups. Capture the sudden urgency and synchronized entry motion as they melt into doorways. The frame should convey the transition from open plaza to covered interiors without showing the subsequent vanishing action yet (that is a subsequent beat).
 
 # Workflow Type
 authoring.scene_stage
 
 # Positive Prompt
-Medium tracking shot, Carter visible at rear of procession, Green Martians in central column marching forward, city plaza architecture framing left and right sides, open ground valley horizon ahead, synchronized steps, daylight lighting, high stakes atmosphere, anticipation building, forward progression movement logic.
+Medium shot, group clusters of Green Martian warriors at building entrances, sudden urgency atmosphere, synchronized entry motion inward, deserted city architecture framing sides, daylight lighting, high stakes atmosphere, anticipation building, forward progression movement logic into interiors, over-the-shoulder from doorway perspective.
 
 # Negative Prompt
-Static pose, close-up facial details, chaotic movement, wrong faction colors (non-green attire), indoor setting only, night time, sudden halt or reverse movement within this clip duration, blurred background, incorrect character count.
+Static pose, close-up facial details, chaotic movement, wrong faction colors (non-green attire), indoor setting only, night time, sudden halt or reverse movement within this clip duration, blurred background, incorrect character count, forward progression into valley terrain.
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: CH008_SC001
 - clip_id: CL002
 - duration_seconds: 5
-- required_refs: BT001.md processions_return_beat_documentation
-- optional_refs: CH008_SC001_scene_breakdown
-- visible_character_assets: Carter rear_position, Warriors central_column visible
+- required_refs: BT002.md building_entry_beat_documentation, CH008_SC001_scene_breakdown
+- optional_refs: CH008_SC001_clip_roster
+- visible_character_assets: Green Martian warriors group clusters (2-3 per doorway), building interiors dark
 - look_continuity_policy: 
 - intended_lighting_change: 
-- composition_type: medium_tracking
-- continuity_mode: insert
-- starting_keyframe_strategy: follow_carter_position_from_rear_of_procession
+- composition_type: medium_shot_building_entry
+- continuity_mode: reframe_same_moment
+- starting_keyframe_strategy: building_entrance_axis_eyelines_inward
 - dependency_policy: dependent_on_CL001_wide_establishing_first
 - auto_advance_policy: 
 - fallback_strategy: cut_to_medium_static_if_movement_disrupted
@@ -42,14 +42,14 @@ Static pose, close-up facial details, chaotic movement, wrong faction colors (no
 
 # Continuity Notes
 - Maintain tracking shot consistency with synchronized steps throughout the 5-second duration.
-- Ensure location transition cues (plaza to valley) are visible in background/environment without abrupt cuts.
+- Ensure location transition cues (plaza to building entrances) are visible in background/environment without abrupt cuts.
 - Keep Green Martian attire consistent (green color, specific weaponry).
-- Position Carter clearly at the rear of the formation relative to the camera angle.
+- Position Martians clearly at building entrances relative to camera angle.
 
 # Repair Notes
-- If Carter lacks physical description details, focus on silhouette and movement flow rather than facial features.
+- If character lacks physical description details, focus on silhouette and movement flow rather than facial features.
 - Ensure Green Martians are distinct from any other factions present.
-- Verify that the forward momentum is maintained until the end of the clip (retreat order happens in subsequent beats).
+- Verify that the entry momentum is maintained until the end of the clip (retreat order happens in subsequent beats).
 - Check for correct lighting consistency with previous establishing shots (daylight).
 
 # Sources

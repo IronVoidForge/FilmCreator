@@ -11,7 +11,7 @@ Refine approved keyframe composition and lighting while correcting local artifac
 still.scene_insert.two_ref.klein.distilled
 
 # Positive Prompt
-Wide establishing shot of procession returning through city plaza, Green Martians in central column marching forward, Carter positioned at rear, anticipation building among onlookers, city architecture framing left and right sides, environmental transition from built environment to natural valley terrain visible in background, natural daylight lighting with high stakes atmosphere, sharp focus on character details, correct anatomy for all figures.
+Wide establishing shot of procession returning through city plaza, green warriors in central column marching forward, rear figure positioned at back, anticipation building among onlookers, city architecture framing left and right sides, environmental transition from built environment to natural valley terrain visible in background, natural daylight lighting with high stakes atmosphere, sharp focus on character details, correct anatomy for all figures.
 
 # Negative Prompt
 distorted limbs, extra fingers, wrong background colors, blue sky, text artifacts, blurry details, inconsistent lighting, shadow mismatches, deformed faces, missing weapons, incorrect clothing colors, low resolution, noise, grain.
@@ -23,7 +23,7 @@ distorted limbs, extra fingers, wrong background colors, blue sky, text artifact
 - duration_seconds: 5
 - required_refs: BT001.md
 - optional_refs: CH008_SC001_scene_breakdown
-- visible_character_assets: Carter rear_position, Warriors central_column, implied_commanders_ahead
+- visible_character_assets: rear_position, central_column_warriors, implied_commanders_ahead
 - look_continuity_policy: preserve_approved_golden_frame_style
 - intended_lighting_change: none
 - composition_type: wide_establishing
@@ -43,11 +43,11 @@ distorted limbs, extra fingers, wrong background colors, blue sky, text artifact
 # Continuity Notes
 - Maintain procession movement direction (forward through plaza).
 - Preserve city architecture framing on left/right.
-- Ensure character positions match approved reference (Carter rear, Warriors center).
+- Ensure character positions match approved reference (rear figure, Warriors center).
 - Keep environmental transition from built to natural terrain consistent.
 
 # Repair Notes
-- Correct any distorted anatomy in Green Martians or Carter.
+- Correct any distorted anatomy in green warriors or rear figure.
 - Fix incorrect background colors (ensure Mars red/orange tones, not blue sky).
 - Align lighting with approved golden frame (no sudden shadows or highlights).
 - Ensure text/wireless apparatus details are clear and consistent.

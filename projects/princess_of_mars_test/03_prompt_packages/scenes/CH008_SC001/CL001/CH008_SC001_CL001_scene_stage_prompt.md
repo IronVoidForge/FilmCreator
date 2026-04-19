@@ -11,7 +11,7 @@ Establish wide shot of ceremonial procession returning through city plaza with f
 authoring.scene_stage
 
 # Positive Prompt
-wide establishing shot, ceremonial procession moving forward through city plaza, green martians warriors marching in formation, spacious doorways and plazas visible, buildings with upper floors framing left and right, anticipation building among onlookers, forward progression with synchronized steps, city architecture frames scene edges, environmental transition from built environment to natural terrain begins at valley entrance horizon, processions return beat documentation style, Barsoom Mars setting, wide composition showing full procession movement through plaza
+wide establishing shot, ceremonial procession moving forward through city plaza, green martians warriors marching in formation, spacious doorways and plazas visible, buildings with upper floors framing left and right, anticipation building among onlookers, forward progression with synchronized steps, city architecture frames scene edges, environmental transition from built environment to natural terrain begins at valley entrance horizon, processions return beat documentation style, Mars valley setting, wide composition showing full procession movement through plaza
 
 # Negative Prompt
 close up shots, medium shots, static composition, single character focus, dark lighting, night scene, indoor scenes, blurry movement, distorted anatomy, missing limbs, extra fingers, bad hands, text overlays, watermark, signature, low resolution, poor quality, deformed faces, morphed features, inconsistent colors, wrong era clothing, modern technology, airships visible in frame, disabled ships, burning vessels, captive figure, copper skin character

@@ -5,30 +5,30 @@ CH008_SC001 CL002 Cut Motion Prompt
 CH008_SC001_CL002_cut_motion_prompt
 
 # Purpose
-Fill in the stage intent here. Establish a medium tracking shot following Carter from the rear of the procession, moving forward with synchronized steps and anticipation building as they approach the boundary between city plaza and open ground. Preserve keyframe lighting and grade from approved opening frame. Ensure visible motion matches procession movement logic.
+Establish medium tracking shot showing Green Martian warriors retreating into building entrances. Start from approved opening frame where retreat command is given. Ensure visible motion matches tactical retreat logic (entering doorways). Preserve keyframe lighting and grade.
 
 # Workflow Type
 video.cut_motion.wan.i2v
 
 # Positive Prompt
-Medium tracking shot following Carter from rear position. Procession moves forward with synchronized steps. Warriors in central column visible. City architecture frames left and right. Environmental transition from built environment to natural terrain begins. Anticipation building among onlookers. Forward progression with coordinated movement. Gray-painted airships distant on hill crest. Green Martians marching in formation.
+Medium tracking shot following Green Martian warriors entering building doorways. Group clusters of 2-3 Martians per entrance. Synchronized entry motion into dark interiors. Building exteriors frame left and right. Environmental transition from plaza to occupied buildings begins. Tactical retreat urgency visible. Gray-painted airships distant on hill crest. Deserted city architecture frames scene.
 
 # Negative Prompt
-Static shot. Wrong composition. Lighting shift. Grade change. Anatomy error. Clothing distortion. Background blur. Motion stall. Reverse movement. Panic expression. Inconsistent character proportions. Degraded features. Overexposed or underexposed. Wrong color palette.
+Static shot. Wrong composition. Lighting shift. Grade change. Anatomy error. Clothing distortion. Background blur. Motion stall. Reverse movement (marching forward). Panic expression. Inconsistent character proportions. Degraded features. Overexposed or underexposed. Wrong color palette.
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: CH008_SC001
 - clip_id: CL002
 - duration_seconds: 5s
-- required_refs: BT001.md processions_return_beat_documentation
+- required_refs: BT002.md building_entry_pattern_documentation
 - optional_refs: CH008_SC001_scene_breakdown
-- visible_character_assets: Carter rear_position, Warriors central_column visible
+- visible_character_assets: Green Martian warriors (group clusters 2-3 Martians per doorway), building interiors dark
 - look_continuity_policy: preserve_keyframe_lighting_and_grade
 - intended_lighting_change: none
 - composition_type: medium_tracking
-- continuity_mode: insert
-- starting_keyframe_strategy: follow_carter_position_from_rear_of_procession
+- continuity_mode: reframe_same_moment
+- starting_keyframe_strategy: building_entrance_axis_eyelines_inward_toward_interior_spaces
 - dependency_policy: dependent_on_CL001_wide_establishing_first
 - auto_advance_policy: advance_if_motion_stalls
 - fallback_strategy: cut_to_medium_static_if_movement_disrupted
@@ -41,9 +41,9 @@ Static shot. Wrong composition. Lighting shift. Grade change. Anatomy error. Clo
 - fix_of: CL001
 
 # Continuity Notes
-- Maintain procession movement logic (forward progression with synchronized steps).
+- Maintain tactical retreat logic (entering doorways).
 - Preserve keyframe lighting and grade from approved opening frame.
-- Ensure transition from city plaza to open ground boundary is visible but smooth.
+- Ensure transition from city plaza to occupied buildings is visible but smooth.
 - Keep character proportions consistent with previous clips in sequence.
 - Avoid sudden camera jerks or focus pulls during motion.
 

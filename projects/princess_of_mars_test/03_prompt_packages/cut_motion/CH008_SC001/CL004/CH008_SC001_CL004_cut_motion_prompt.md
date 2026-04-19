@@ -5,7 +5,7 @@ CH008_SC001 CL004 Cut Motion Prompt
 CH008_SC001_CL004_cut_motion_prompt
 
 # Purpose
-Establish sudden halt and reverse movement of procession on open ground.
+Describe the cut beat, framing, and continuity intent for this clip. Establish sudden halt and reverse movement of procession on open ground as enemy airships approach.
 
 # Workflow Type
 video.cut_motion.wan.i2v
@@ -23,12 +23,12 @@ morphing faces extra limbs sudden zoom darkening or brightening exposure floatin
 - duration_seconds: 5
 - required_refs: BT002.md
 - optional_refs: CH008_SC001_scene_breakdown
-- visible_character_assets: protagonist rear_position, green-clad warriors central_column
-- look_continuity_policy: 
-- intended_lighting_change: 
+- visible_character_assets: green-clad warriors central_column, protagonist rear_position
+- look_continuity_policy: preserve_lighting_grade
+- intended_lighting_change: none
 - composition_type: wide_halt_reverse
 - continuity_mode: reframe_same_moment
-- starting_keyframe_strategy: 
+- starting_keyframe_strategy: approved_keyframe
 - dependency_policy: 
 - auto_advance_policy: 
 - fallback_strategy: 
@@ -39,6 +39,7 @@ morphing faces extra limbs sudden zoom darkening or brightening exposure floatin
 - style_profile: 
 - batch_role: 
 - fix_of: 
+- workflow_type: video.cut_motion.wan.i2v
 
 # Continuity Notes
 - Preserve keyframe lighting and grade by default. Focus on visible motion, camera behavior, and environment change. Ensure procession direction reverses smoothly without snapping. Maintain character count consistency.

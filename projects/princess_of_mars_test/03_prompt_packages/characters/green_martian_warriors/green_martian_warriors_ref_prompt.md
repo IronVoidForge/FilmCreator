@@ -5,25 +5,25 @@ green_martian_warriors Character Reference Prompt
 green_martian_warriors_ref_prompt
 
 # Purpose
-Define visual consistency for enemy combatants referenced in the story analysis breakdown. Focus on group composition, positioning on high ground (rooftops/buildings), and interaction with drifting vessels. Maintain stable attire logic and silhouette across shots to ensure continuity without relying on specific physical features that are limited in source material. Use stable asset ids for reference files.
+Reusable shared prompt for generating Green Martian warrior group visualizations; maintains collective form without individualized physical details; supports continuity across procession, combat, and salvage scenes; avoids proper nouns and uses descriptive noun phrases for stable face, hair, body type, costume logic, silhouette, and recurring materials over scene-specific blocking.
 
 # Workflow Type
 still.t2i.klein.distilled
 
 # Positive Prompt
-Group of armored figures, enemy combatants, positioned on high ground, building interiors, looting vessels, metallic and fabric textures, warrior attire, dark tones, volley firing stance, atmospheric lighting, dynamic battle composition, structural backgrounds, alien silhouette, tactical gear, debris and dust particles.
+Green Martian warrior group collective form without individualized physical details; green color designation on armor and clothing; mounted warriors on chariots and mastodons; combat-ready stance with weapons drawn; procession returning to city or firing from windows against airships; ship salvage operations with burning materials; armored silhouette with flowing green fabric; bronze metal accents on helmets and shields; group formation maintaining visual continuity across scenes.
 
 # Negative Prompt
-Human faces, civilian clothing, peaceful scenes, bright daylight only, specific named characters, clean backgrounds, static poses, modern technology, civilian architecture, detailed facial features, bright colors, soft focus, indoor domestic settings, non-combatant expressions.
+blurry individual facial features, specific body types not in source material, detailed costume elements beyond green designation, scene-specific blocking details, airship designs not associated with warrior group, mastodon or chariot variations beyond established transport, burning effects not part of salvage operations, floating or detached armor pieces, overly bright or dark color saturation outside green palette.
 
 # Inputs
-- source_1: projects/princess_of_mars_test/02_story_analysis/character_breakdowns/green_martian_warriors.md
+- note_1: projects/princess_of_mars_test/02_story_analysis/character_breakdowns/green_martian_warriors.md; projects/princess_of_mars_test/01_source/character_descriptions/green_martian_warriors_manual_description.md (missing); green_martian_warriors canonical character ID.
 
 # Continuity Notes
-- Source material indicates limited specific physical details for individual characters within the group. Visual continuity should prioritize role (enemy, building-based) and general attire over distinct facial features or specific coloration not explicitly detailed in the breakdown. Interaction with other factions (e.g., John Carter) notes cultural differences but does not specify exact costume variations.
+- Green color designation must remain consistent across all warrior group visualizations; collective form without individualized physical details per source material; associated with chariots and mastodons as established transport; combat against airships and ship salvage operations are key scene contexts; manual description input required for specific individuals to support dependable image generation since no individual profiles established in source.
 
 # Repair Notes
-- If physical details remain ambiguous during generation, rely on visual continuity files to maintain consistent silhouette and attire style. Avoid inventing specific facial features or color palettes that contradict the general "warrior" archetype established in the breakdown. Use atmospheric elements (dust, debris) to bridge gaps between shots where character specifics are limited.
+- Manual character description path missing at projects/princess_of_mars_test/01_source/character_descriptions/green_martian_warriors_manual_description.md; uncertainty noted that individual physical descriptions not provided in source material requiring manual intervention for specific individuals; group references only without individual warrior profiles established; render-facing prompt elements must avoid proper nouns and use descriptive noun phrases per task requirements.
 
 # Sources
 - projects/princess_of_mars_test/02_story_analysis/character_breakdowns/CHARACTER_INDEX.md

@@ -11,24 +11,24 @@ Corrective still-generation prompt that preserves composition and look while fix
 still.scene_insert.two_ref.klein.distilled
 
 # Positive Prompt
-Procession of warriors marching in formation through city plaza transitioning to open ground valley. Carter positioned at rear of procession with synchronized forward movement. Green Martians warriors in central column wearing green attire. City architecture frames left and right sides. Open terrain visible ahead showing boundary between built environment and natural valley floor. Anticipation building among figures as they approach threshold. Medium tracking composition following Carter's position from behind.
+Group of Green Martian warriors entering dark doorways in deserted city buildings. Medium shot composition showing synchronized entry motion from exterior perspective. Doorway frames visible with interior shadows swallowing figures. Deserted valley city architecture surrounding entrances. Martians wearing green attire moving inward into darkness. Over-the-shoulder angle from doorway threshold looking into building interiors. Synchronized steps maintaining formation integrity as they vanish within three minutes.
 
 # Negative Prompt
-Anatomical errors, inconsistent lighting, wrong character count, misplaced elements, blurred details, incorrect color palette, anatomical distortions, extra limbs, missing weapons, wrong environmental state, inconsistent motion blur, poor depth of field, low resolution artifacts, facial expression mismatches, weapon placement errors, background element intrusions.
+Anatomical errors, inconsistent lighting, wrong character count, misplaced elements, blurred details, incorrect color palette, anatomical distortions, extra limbs, missing weapons, wrong environmental state, inconsistent motion blur, poor depth of field, low resolution artifacts, facial expression mismatches, weapon placement errors, background element intrusions, Carter, Earthling Woman, bright daylight interiors, open ground valley floor.
 
 # Inputs
 - project_id: princess_of_mars_test
 - scene_id: CH008_SC001
 - clip_id: CL002
 - duration_seconds: 5
-- required_refs: BT001.md processions_return_beat_documentation
+- required_refs: BT002.md building_entry_beat_documentation
 - optional_refs: CH008_SC001_scene_breakdown
-- visible_character_assets: Carter rear_position, Warriors central_column visible
-- look_continuity_policy: preserve_procession_movement_and_architecture_style
-- intended_lighting_change: maintain_valley_transition_atmosphere
-- composition_type: medium_tracking
+- visible_character_assets: Green Martian warriors group_clusters_entrance
+- look_continuity_policy: preserve_building_entry_motion_and_architecture_style
+- intended_lighting_change: maintain_valley_transition_atmosphere_dark_interiors
+- composition_type: medium_shot_over_the_shoulder
 - continuity_mode: insert
-- starting_keyframe_strategy: follow_carter_position_from_rear_of_procession
+- starting_keyframe_strategy: follow_group_entry_from_doorway_threshold
 - dependency_policy: dependent_on_CL001_wide_establishing_first
 - auto_advance_policy: none
 - fallback_strategy: cut_to_medium_static_if_movement_disrupted
@@ -41,20 +41,20 @@ Anatomical errors, inconsistent lighting, wrong character count, misplaced eleme
 - fix_of: CL002_medium_tracking_shot
 
 # Continuity Notes
-- Procession moves forward with synchronized steps maintaining formation integrity
-- Carter remains at rear position throughout tracking shot
-- Warriors occupy central column visible in medium frame
-- City plaza architecture transitions to open ground valley terrain
-- Anticipation builds as procession approaches boundary threshold
-- Movement logic follows forward progression toward valley entrance
-- Environmental state shifts from built environment to natural terrain
+- Martians enter doorways in groups maintaining formation integrity
+- Green attire visible against dark building interiors
+- Doorway frames clear and accessible with no obstacles
+- Interior shadows swallowing figures as they vanish
+- Deserted city buildings frame the entrance axis
+- Valley terrain visible beyond building exteriors
+- Motion logic follows forward progression into darkness
 
 # Repair Notes
 - Preserve overall composition and architectural style while correcting local issues
 - Maintain character placement consistency with approved base image
 - Fix any anatomical errors or misplaced elements without altering motion logic
-- Ensure lighting continuity matches valley transition atmosphere
-- Correct environmental state transitions between city plaza and open ground
+- Ensure lighting continuity matches dark interior atmosphere
+- Correct environmental state transitions between exterior and doorway interiors
 - Repair any inconsistent details while preserving cinematic warfare aesthetic
 
 # Sources
