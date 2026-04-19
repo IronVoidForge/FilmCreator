@@ -1,9 +1,17 @@
-**Story Summary**
-The procession retreats to the city after an incubator ceremony. A fleet of twenty gray airships arrives from the hills, bearing strange banners. Green Martians fire a volley from building windows; ships return fire but suffer heavy damage due to suddenness and targeting tactics (wireless, officers). One ship is disabled and drifting southeast. Warriors rush to capture it, loot arms, food, water, and jewels, then burn the vessel before towing it away. The crew is dead or incapacitated. Carter observes from a window/balcony. Upon returning to the plaza, Carter sees the prisoner being dragged into a building by green Martian females.
+# Chapter Summary: CH008 - A Fair Captive from the Sky
 
-**Visual Continuity**
-*   **Ships:** Long, low, gray-painted vessels. Twenty in total initially. One disabled drifting southeast.
-*   **Warriors:** Green Martians. Wear spears. Some climb windows to fire. Others swarm the disabled ship from sides/windows using grappling hooks.
-*   **Prisoner:** Slender, girlish figure. Naked except for highly wrought ornaments. Skin is light reddish copper color. Cheeks have crimson glow. Lips are ruby. Hair is coal black, waving, caught loosely into a strange coiffure. Eyes large and lustrous. Oval face.
-*   **Environment:** Deserted city buildings with upper floors and rooftops. Valley floor. Hills beyond. Open ground/plaza.
-*   **Action Details:** Banners swing from stem to stern. Devices gleam in sunlight. Fire spurs from banners/upper works upon impact. Loot includes casks of water, silks, furs, stone vessels. Burning ship drifts unguided into the distance.
+## Visual Continuity Facts
+- **Airships:** Long, low, gray-painted vessels with banners and upper works; drift southeast after burning.
+- **Warriors:** Green-skinned Martians wearing chariots or mounted on mastodons; carry spears and firearms.
+- **Captive:** Slender, girlish figure; light reddish copper skin; coal black hair in loose coiffure; naked save for ornaments.
+- **Environment:** Open valley, city buildings with upper floors/windows, outlying hills.
+
+## Narrative Beats
+1.  **Return Order:** Carter and Sola return home after incubation ceremony but retreat immediately upon seeing airships.
+2.  **Fleet Arrival:** Twenty gray ships approach; Green warriors fire a volley from building windows.
+3.  **Battle Exchange:** Fleet returns fire with guns; Green warriors demonstrate high accuracy targeting crew/apparatus.
+4.  **Retreat & Crash:** Fleet limps away; one unmanned ship drifts toward city buildings, fifty feet above ground.
+5.  **Looting & Burning:** Warriors swarm the crashed ship, loot arms/food/water, tow it out, then burn it while drifting southeast.
+6.  **Emotional Reaction:** Carter feels depressed, interpreting the event as a defeat of his people rather than a victory.
+7.  **Captive Discovery:** As Carter returns to plaza, he sees a human woman being dragged into a building by Green Martians.
+8.  **Failed Interaction:** Woman looks at Carter; he fails to signal help due to ignorance of customs; she is dragged away in dejection.

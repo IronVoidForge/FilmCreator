@@ -1,8 +1,12 @@
-# Character Index - Chapter CH008
+# Character Index - CH008
 
-| Asset ID | Display Name | Role | Identification Status | Description Availability |
-| :--- | :--- | :--- | :--- | :--- |
-| carter | Carter | Observer / Commander | Partial (Name Only) | None (Visual Unknown) |
-| prisoner | The Prisoner | Captive / Subject | Full (Visual Defined) | Detailed Visual Traits |
-| green_martians | Green Martians | Warriors / Attackers | Full (Species Defined) | General Species Traits |
-| green_martian_females | Green Martian Females | Captors | Full (Subset Defined) | Specific Action Group |
+| Asset ID | Canonical Character ID | Aliases | Fully Identified | Manual Description Required | Clarification Required |
+|----------|------------------------|---------|------------------|----------------------------|------------------------|
+| carter_ch008 | Carter | - | true | true | false |
+| sola_ch008 | Sola | - | true | true | false |
+| captive_human_ch008 | The Captive/Human Woman | - | false | true | true |
+
+**Notes:**
+- Carter and Sola have no physical/visual description in this chapter for image generation
+- The Captive has visual details but lacks stable identification (unnamed, unclear origin)
+- All three require manual descriptions for dependable later rendering
