@@ -1,13 +1,26 @@
-# Environment Index - Chapter CH013
+# Environment Index - Chapter XVI
 
-## Extracted Environments
+## thark_city
+- Role: Primary setting
+- Architecture: Ancient city with hollow courts, magnificent doorways for large beasts, winding runways to second-story windows
+- Lighting: Approaching sunset gloom, moonlight flooding rooms, red sun disappearing behind horizon
+- Atmosphere: Red Barsoomian landscape visible in distance (Helium northwest)
+- Scale: Large-scale architecture designed for thoats, zitidars, bulls
 
-| Asset ID | Name | Role | Description |
-|----------|------|------|-------------|
-| community_plaza_area | Community Plaza Area | Primary Setting | Main action location including plaza, courtyard, and surrounding buildings |
-| martian_avenue_night | Martian Avenue Night | Transit/Intimate Setting | Great avenue leading into plaza from east, illuminated under two moons |
+## john_quarters
+- Role: Secondary setting
+- Architecture: Large building near plaza, courtyards within buildings
+- Lighting: Interior rooms with sunset approaches
+- Atmosphere: Restless animal activity in paddocks, gates where animals fed
 
-## Environment Families Summary
+## dejah_apartment
+- Role: Secondary setting
+- Architecture: Apartment quarters with marble floor
+- Lighting: Moonlight flooding room
+- Atmosphere: Private quarters for escape planning
 
-1. **community_plaza_area** - The central community space where beast training, military recognition, and pre-departure conversations occur
-2. **martian_avenue_night** - The romantic evening setting for intimate dialogue and declaration of love
+## courtyards_rooftops
+- Role: Transit setting
+- Architecture: Courtyards, doorways, rooftops connecting buildings
+- Lighting: Approaching gloom of sunset
+- Atmosphere: Movement through hollow courts, climbing winding runways
