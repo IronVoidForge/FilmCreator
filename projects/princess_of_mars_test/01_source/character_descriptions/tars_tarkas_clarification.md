@@ -4,10 +4,10 @@
 tars_tarkas
 
 # Why This Needs Clarification
-Character may exist under different name or be too weakly identified for reliable rendering; only functional role specified
+Need to establish Tars Tarkas's physical appearance for consistent character representation across future chapters and media.
 
 # Question
-Is Tars Tarkas a specific individual character or a title/role reference in Martian society?
+What does Tars Tarkas look like? Please describe his physical features, clothing, and any distinctive visual characteristics.
 
 # Guidance
 - answer briefly and concretely

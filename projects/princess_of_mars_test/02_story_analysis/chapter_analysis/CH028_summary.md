@@ -1,0 +1,5 @@
+Visual Continuity:
+The scene opens in darkness within a cave where the narrator finds stiff garments that crack and powder away upon rising. He discovers a match wrapped in oiled paper, which illuminates a grotesque tableau: a mummified old woman huddled over a charcoal burner with greenish powder, and human skeletons hanging from rawhide thongs across the roof. Stepping out onto a ledge reveals a new landscape of silvered mountains, cacti-studded valleys, and a stationary moon—identifying the location as Arizona rather than Mars.
+
+Narrative Arc:
+The narrator realizes he has returned to Earth after ten years on Mars (totaling twenty years since his first awakening). He feels consternation at the sight of the familiar Arizona landscape from which he once gazed longingly at Mars. Despite his wealth, he is broken and sorrowful, questioning whether Dejah Thoris lives or died beside her incubator in Tardos Mors's palace. The chapter concludes with him looking out his window at Mars, imagining Dejah Thoris and a young boy waiting for him across the abyss of space, suggesting an impending reunion or revelation regarding their fate.

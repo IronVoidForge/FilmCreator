@@ -4,10 +4,10 @@
 green_warriors
 
 # Why This Needs Clarification
-Character group might already exist under another name or is too weakly identified for dependable image generation
+The character is not fully identified from this chapter alone.
 
 # Question
-Are the Green Warriors/Thark Warriors a distinct character group with established visual continuity, or should they be treated as generic warrior figures?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

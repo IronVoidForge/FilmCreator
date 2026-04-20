@@ -4,10 +4,10 @@
 sola
 
 # Why This Needs Clarification
-Companion character lacks established identity and physical appearance beyond name reference
+Character appears only once in chapter with minimal description. May already exist under another name or be too weakly identified for reliable character tracking.
 
 # Question
-What are Sola's physical characteristics (age, build, hair color, skin tone, distinguishing features)?
+Is Sola a previously established character from earlier chapters? If so, what is her canonical character ID and full physical description?
 
 # Guidance
 - answer briefly and concretely

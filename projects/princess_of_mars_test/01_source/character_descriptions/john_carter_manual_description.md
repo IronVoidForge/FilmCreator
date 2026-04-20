@@ -7,7 +7,7 @@ john_carter
 Paste a stable manual visual description for this character so later shared reference generation can use it.
 
 # Why This Is Needed
-The chapter summary provides no physical description of John Carter, only his actions and dialogue. Visual continuity notes are absent.
+Chapter summary describes actions ("flies low across old sea bottom", "opens doors sequentially") but provides no physical description, facial features, or costume details for image generation purposes.
 
 # Guidance
 - describe face, hair, body type, age impression, silhouette, skin tone, costume logic, and any continuity-critical marks

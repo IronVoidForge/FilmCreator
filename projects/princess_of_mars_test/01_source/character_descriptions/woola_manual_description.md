@@ -7,7 +7,7 @@ woola
 Paste a stable manual visual description for this character so later shared reference generation can use it.
 
 # Why This Is Needed
-Insufficient physical description details (species, size, fur color) for dependable image generation. Only "heavy neck/body" mentioned for affection display.
+Chapter summary only identifies "Woola" as part of the Royal family gathering in Palace Garden with no physical description, facial features, or costume details provided.
 
 # Guidance
 - describe face, hair, body type, age impression, silhouette, skin tone, costume logic, and any continuity-critical marks

@@ -1,0 +1,5 @@
+SC001|Recap of Training and Thoat Handling|John Carter demonstrates kindness with beasts|Training ground, community|Community marvels at his power|Establishing shot, medium shots of John with beasts|Location continuity for training area
+SC002|Evening Before Departure|John intercepts Dejah Thoris before march resumes|Dejah's quarters, evening|Companionship desire despite origin difference|Close-ups of John and Dejah|Interior lighting consistency
+SC003|Dialogue on Status and Jealousy|Dejah reveals warriors' treatment, John defends Earth customs|Avenue near quarters|Mutual love developing|Two-shots during dialogue|Character positioning for conversation
+SC004|Night Walk and Physical Intimacy|Physical contact between John and Dejah|Great avenue lit by two moons|Love and connection confirmed|Wide shots of moonlit avenue, intimate close-ups|Moonlight consistency, character nudity continuity
+SC005|Confirmation of Love|John reflects on his love for Dejah since first meeting|Martian night, great avenue|Emotional realization|Close-up on John's face|Facial expression continuity

@@ -4,10 +4,10 @@
 carter
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Need to establish Carter's physical appearance for consistent character representation across future chapters and media.
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+What does Carter look like? Please describe his physical features, clothing, and any distinctive visual characteristics.
 
 # Guidance
 - answer briefly and concretely

@@ -7,7 +7,7 @@ tars_tarkas
 Paste a stable manual visual description for this character so later shared reference generation can use it.
 
 # Why This Is Needed
-The chapter summary provides no physical description of Tars Tarkas, only his demeanor and actions. Visual continuity notes are absent for other features.
+Chapter provides limited physical description beyond context of leading fifty Tharks; no detailed facial features, body type, or specific costume elements documented for dependable image generation.
 
 # Guidance
 - describe face, hair, body type, age impression, silhouette, skin tone, costume logic, and any continuity-critical marks

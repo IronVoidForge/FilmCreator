@@ -4,10 +4,10 @@
 protagonist
 
 # Why This Needs Clarification
-Need physical description for later render-facing prompt writing
+Character might already exist under another name or is too weakly identified for dependable later image generation. No stable physical or visual description supports later render-facing prompt writing.
 
 # Question
-What does the protagonist look like? (height, build, skin tone, hair, facial features)
+What is the protagonist's canonical name and what are their key physical characteristics (appearance, clothing, distinguishing features)?
 
 # Guidance
 - answer briefly and concretely
