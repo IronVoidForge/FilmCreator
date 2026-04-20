@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-protagonist
+narrator_voice
 
 # Why This Needs Clarification
-Needs identity clarification regarding physical form and origin.
+The extracted character id appears generic or role-based rather than clearly canonical.
 
 # Question
-What is the protagonist's physical form and origin?
+This character is named or role-labeled but not fully identified. Can you find a stronger canonical identity from another chapter, or should FilmCreator keep this as a scene-local provisional character?
 
 # Guidance
 - answer briefly and concretely

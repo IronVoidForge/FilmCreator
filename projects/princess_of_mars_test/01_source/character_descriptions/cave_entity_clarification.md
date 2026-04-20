@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-protagonist
+cave_entity
 
 # Why This Needs Clarification
-Needs identity clarification regarding physical form and origin.
+Needs clarification on nature of consciousness in cave setting.
 
 # Question
-What is the protagonist's physical form and origin?
+Is this a standard human consciousness, supernatural presence, or unknown biological entity? What is the relationship between this entity and the dead body discovered?
 
 # Guidance
 - answer briefly and concretely

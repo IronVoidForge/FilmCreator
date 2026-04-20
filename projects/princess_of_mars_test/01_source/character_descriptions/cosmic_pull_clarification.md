@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-protagonist
+cosmic_pull
 
 # Why This Needs Clarification
-Needs identity clarification regarding physical form and origin.
+Needs clarification on nature and source of cosmic pull.
 
 # Question
-What is the protagonist's physical form and origin?
+Is this gravitational force, supernatural attraction, or unknown phenomenon? What is the relationship between Mars observation and space travel initiation?
 
 # Guidance
 - answer briefly and concretely

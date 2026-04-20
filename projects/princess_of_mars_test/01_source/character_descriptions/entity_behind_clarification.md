@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-protagonist
+entity_behind
 
 # Why This Needs Clarification
-Needs identity clarification regarding physical form and origin.
+Needs clarification on nature and origin of mysterious presence behind protagonist.
 
 # Question
-What is the protagonist's physical form and origin?
+Is this the same as the unseen entity, or a separate presence? What is its relationship to protagonist and why does it cause fear response?
 
 # Guidance
 - answer briefly and concretely

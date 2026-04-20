@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-protagonist
+native_americans
 
 # Why This Needs Clarification
-Needs identity clarification regarding physical form and origin.
+Needs clarification on specific individuals and their relationship to protagonist.
 
 # Question
-What is the protagonist's physical form and origin?
+Are these a specific group or general reference? What is their connection to the protagonist?
 
 # Guidance
 - answer briefly and concretely

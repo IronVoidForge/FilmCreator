@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-protagonist
+death_discovery
 
 # Why This Needs Clarification
-Needs identity clarification regarding physical form and origin.
+Needs clarification on nature of consciousness-body duality.
 
 # Question
-What is the protagonist's physical form and origin?
+Is this a standard medical condition, supernatural phenomenon, or unknown biological state? What is the relationship between conscious entity and dead body?
 
 # Guidance
 - answer briefly and concretely

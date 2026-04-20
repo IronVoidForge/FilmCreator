@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-protagonist
+protagonist_dead_body
 
 # Why This Needs Clarification
-Needs identity clarification regarding physical form and origin.
+Needs clarification on relationship between conscious entity and dead body.
 
 # Question
-What is the protagonist's physical form and origin?
+Is this the same consciousness inhabiting a corpse, or is there a separation between mind and body? What is the nature of this duality?
 
 # Guidance
 - answer briefly and concretely

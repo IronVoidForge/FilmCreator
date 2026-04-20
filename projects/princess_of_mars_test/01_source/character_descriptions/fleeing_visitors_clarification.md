@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-protagonist
+fleeing_visitors
 
 # Why This Needs Clarification
-Needs identity clarification regarding physical form and origin.
+Needs clarification on specific individuals and their relationship to protagonist.
 
 # Question
-What is the protagonist's physical form and origin?
+Are these specific individuals or a general group reference? What is their connection to the protagonist beyond fleeing from unseen entity?
 
 # Guidance
 - answer briefly and concretely

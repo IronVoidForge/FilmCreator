@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-protagonist
+consciousness_entity
 
 # Why This Needs Clarification
-Needs identity clarification regarding physical form and origin.
+Needs clarification on relationship between consciousness and physical body.
 
 # Question
-What is the protagonist's physical form and origin?
+Is this a disembodied consciousness, a soul inhabiting a corpse, or a standard human mind? What is the nature of this entity's existence?
 
 # Guidance
 - answer briefly and concretely

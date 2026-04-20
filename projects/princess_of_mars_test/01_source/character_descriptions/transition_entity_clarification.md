@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-protagonist
+transition_entity
 
 # Why This Needs Clarification
-Needs identity clarification regarding physical form and origin.
+Needs clarification on nature of consciousness during space travel.
 
 # Question
-What is the protagonist's physical form and origin?
+Is this a disembodied consciousness, a soul inhabiting a corpse in space, or standard human mind? What is the nature of this entity's existence during space travel?
 
 # Guidance
 - answer briefly and concretely
