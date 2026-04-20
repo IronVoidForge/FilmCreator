@@ -1,33 +1,31 @@
-# Narrator
+# Character File: Narrator
 
-**Chapter Role:** POV character, escapes chamber, attempts city edge jump, captured by New Guardian
+**Display Name:** The Narrator  
+**Chapter Role:** Protagonist / Human Observer  
+**Physical Presence:** Physically Present  
 
-**Presence Status:** Physically present throughout chapter
-
-**Physical Description:** 
-- Humanoid figure (implied from escape actions)
-- Capable of jumping thirty feet vertically
-- Wears fur covering (found on floor space)
-- Cold-sensitive (wakes cold at night)
+**Supported Physical Description:**
+- Human-like figure (implied by "tender morsel of meat", "human or brute" distinction in mural).
+- Capable of jumping and running.
+- Sleeps on silks.
 
 **Costume & Silhouette:**
-- Fur coverings present in room environment
-- No specific clothing details provided in source
+- Unknown attire (wears silks/furs provided by Sola).
+- No specific build details provided.
 
 **Continuity-Critical Traits:**
-- Escapes threshold guarded by Watch Dog
-- Jumps over attacking brute at city edge
-- Leaps into thirty-foot window on building overlooking valley
-- Captured from behind upon reaching window sill
+- Subject of the Watch Dog's constant observation ("eyes glued upon narrator").
+- Capable of leaping over the beast during escape attempt.
+- Located in room with five female occupants.
 
-**Render-Facing Noun Phrases:**
-- Cold-sensitive humanoid escapee
-- Fur-covered figure jumping vertically
-- Window-sill survivor captured by giant
+**Descriptive Noun Phrases for Prompts:**
+- "Human protagonist on Mars"
+- "Sleeping figure covered in furs"
+- "Jumping human observer"
 
 **Uncertainty Notes:**
-- Specific clothing items not described in source material
-- Height and build dimensions not explicitly stated
+- **Visual Gap:** No description of hair, eyes, or skin tone is available in the source text. Image generation must rely on default assumptions for human figures unless clarified.
+- **Silhouette:** Height and build are unknown; only functional actions (sleeping, jumping) are documented.
 
 # Aliases
 
@@ -47,10 +45,10 @@ true
 
 # Manual Description Input Required
 
-No
+Yes
 
 
 
 # Manual Description Reason
 
-None
+Text refers to the figure only as "narrator" or "I"; no physical traits (hair, eyes, skin tone, build) are described in this chapter.

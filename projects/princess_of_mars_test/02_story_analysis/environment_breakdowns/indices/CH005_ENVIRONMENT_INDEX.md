@@ -1,15 +1,15 @@
-# Environment Index - Princess of Mars Test (Chapter CH005)
+# Environment Index - Chapter V: "I ELUDE MY WATCH DOG"
 
 ## Primary Environments
 
-| Asset ID | Name | Role | Key Features |
-|----------|------|------|--------------|
-| chamber_room | The Chamber | Primary Setting | Interior room with murals, food containers, fur coverings, threshold guarded by brute |
-| city_edge | City Edge | Transit Setting | Open space at building perimeter where brute attacks narrator |
-| window_building_valley_view | Window Building Overlooking Valley | Secondary Setting | Thirty-foot high window sill overlooking valley, interior hand grab point |
+| Asset ID | Environment Name | Role | Key Features |
+|----------|------------------|------|--------------|
+| chamber_room_01 | The Chamber/Room | Primary Setting | Interior room with silks, furs, mural painting, watch dog threshold |
+| city_edge_01 | City Edge | Transit Setting | Open space at edge of city, buildings overlooking valley |
+| building_window_01 | Building Overlooking Valley | Escape Setting | Window ~30 feet from ground, dark Martian night |
 
-## Environmental Families
+## Environment Families Summary
 
-1. **Interior Chamber Space** - Main living quarters with mural paintings and food supplies
-2. **City Perimeter Zone** - Boundary area between building structure and open space
-3. **Valley View Platform** - Elevated observation point with interior capture mechanism
+- **chamber_room_01**: Main interior chamber where narrator and Sola reside throughout chapter
+- **city_edge_01**: Edge of city location for escape attempt sequence
+- **building_window_01**: Building with window used for final escape jump

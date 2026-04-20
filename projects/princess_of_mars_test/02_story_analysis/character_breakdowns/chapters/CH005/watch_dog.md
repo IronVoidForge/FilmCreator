@@ -1,36 +1,33 @@
-# Watch Dog
+# Character File: Watch Dog
 
-**Chapter Role:** Brute guardian, threshold protector throughout chapter
+**Display Name:** The Watch Dog  
+**Chapter Role:** Guardian / Brute Creature  
+**Physical Presence:** Physically Present  
 
-**Presence Status:** Physically present and visible
-
-**Physical Description:** 
-- Short legs
-- Fast runner (high-speed chase capability)
-- Loyal protector nature
-- Shuffling gait when walking (distinct from running)
-- Brute classification confirmed
+**Supported Physical Description:**
+- "Brute" with "wicked-looking eyes".
+- Possesses ugly ferocious tusks.
+- Eyes glued upon narrator throughout chapter (sleepless).
+- Colossal size relative to narrator (implied by ability to spring and charge).
 
 **Costume & Silhouette:**
-- No specific costume details provided in source
-- Brute silhouette implied by species designation
+- Unknown fur color or texture.
+- Silhouette suggests quadrupedal beast with canine features.
 
 **Continuity-Critical Traits:**
-- Guards threshold throughout entire chapter
-- Follows narrator with shuffling gait after exit
-- Attacks at city edge (brute behavior)
-- Chases at high speed to window location
-- Captures narrator from behind upon reaching sill
+- Never voluntarily away from narrator a moment.
+- Occupies room threshold when narrator sleeps.
+- Springs before narrator at edge of city during escape attempt.
+- Wheels instantly charging with appalling speed.
 
-**Render-Facing Noun Phrases:**
-- Short-legged brute guardian
-- Fast-running loyal protector
-- Shuffling-gait threshold guard
-- City-edge attacking brute
+**Descriptive Noun Phrases for Prompts:**
+- "Colossal canine brute"
+- "Sleepless guardian beast"
+- "Tusked watch dog"
 
 **Uncertainty Notes:**
-- Specific species beyond "brute" not detailed in source
-- Physical markings or distinctive features not described
+- **Visual Gap:** No description of fur color, eye color, or specific species classification is available in the source text. Image generation must rely on default assumptions for Martian brutes unless clarified.
+- **Silhouette:** Height and build are unknown; only relative size (colossal) and functional actions (charging, watching) are documented.
 
 # Aliases
 
@@ -50,10 +47,10 @@ true
 
 # Manual Description Input Required
 
-No
+Yes
 
 
 
 # Manual Description Reason
 
-None
+Text describes the creature as a "brute" or "watch dog"; no species confirmation, fur color, or detailed anatomy beyond tusks and eyes is provided.

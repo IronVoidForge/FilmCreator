@@ -4,10 +4,10 @@
 tars_tarkas
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Character may exist under different name or be too weakly identified for reliable rendering; only functional role specified
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+Is Tars Tarkas a specific individual character or a title/role reference in Martian society?
 
 # Guidance
 - answer briefly and concretely

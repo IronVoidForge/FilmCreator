@@ -4,10 +4,10 @@
 narrator
 
 # Why This Needs Clarification
-Character may be human or Martian; needs clarification on species and physical details
+Character is unnamed POV figure with no established identity beyond narrative role
 
 # Question
-Is the narrator a human visitor, and what are their specific physical characteristics?
+What are the narrator's physical characteristics (age, build, hair color, skin tone, distinguishing features)?
 
 # Guidance
 - answer briefly and concretely

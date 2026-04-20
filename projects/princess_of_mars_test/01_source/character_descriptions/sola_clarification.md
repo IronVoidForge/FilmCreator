@@ -4,10 +4,10 @@
 sola
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Companion character lacks established identity and physical appearance beyond name reference
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+What are Sola's physical characteristics (age, build, hair color, skin tone, distinguishing features)?
 
 # Guidance
 - answer briefly and concretely

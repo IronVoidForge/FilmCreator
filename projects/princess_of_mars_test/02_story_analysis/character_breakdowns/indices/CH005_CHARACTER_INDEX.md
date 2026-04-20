@@ -1,10 +1,12 @@
-# Character Index - CH005
+# Chapter V Character Index
 
-| Character | Role in Chapter | Status |
-|-----------|-----------------|--------|
-| Narrator | POV, escapes room, jumps window | Present/Referenced |
-| Sola | Female Martian, caretaker | Referenced |
-| Watch Dog | Brute guardian, short legs | Visible/Referenced |
-| New Guardian | Colossal ape-like creature | Visible |
+| Asset ID | Canonical ID | Name/Role | Identification Status | Description Sufficiency |
+| :--- | :--- | :--- | :--- | :--- |
+| `sola` | `sola` | Female Martian Caretaker | Fully Identified | Manual Description Required |
+| `narrator` | `narrator` | Protagonist (Human) | Fully Identified | Manual Description Required |
+| `watch_dog` | `watch_dog` | Guardian Brute | Fully Identified | Manual Description Required |
+| `colossal_ape` | `colossal_ape` | Colossal Ape-like Creature | Weakly Identified (Unnamed) | Manual Description Required |
 
-*Note: All characters extracted from chapter summary and visual continuity facts.*
+**Notes:**
+- All characters require manual description for image generation due to sparse physical details in source text.
+- `colossal_ape` lacks a proper name in this chapter and may require clarification on canonical identity.

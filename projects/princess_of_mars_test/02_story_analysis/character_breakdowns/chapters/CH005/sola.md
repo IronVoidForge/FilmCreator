@@ -1,32 +1,31 @@
-# Sola
+# Character File: Sola
 
-**Chapter Role:** Female Martian caretaker, referenced in chapter summary
+**Display Name:** Sola  
+**Chapter Role:** Caretaker / Female Martian Occupant  
+**Physical Presence:** Physically Present  
 
-**Presence Status:** Referenced only (not physically present in scene)
-
-**Physical Description:** 
-- Female Martian (species confirmed)
-- Sympathetic disposition
-- Kind nature
-- Provides unfailing ministrations
+**Supported Physical Description:**
+- Female Martian.
+- Shows sympathy, kindliness, and affection toward the narrator.
+- Brings food and drink to the narrator.
+- Covers narrator with fur during cold nights.
 
 **Costume & Silhouette:**
-- No specific costume details provided in source
-- Feminine silhouette implied by gender designation
+- Unknown attire or skin tone.
+- No specific build details (height, weight) provided in text.
 
 **Continuity-Critical Traits:**
-- Leaves chamber with watch dog at chapter start
-- Represents caretaker role within facility
-- Associated with initial room environment
+- One of five female occupants of the room (all sleeping piled with silks).
+- Distinct from other green Martians due to disclosed characteristics of sympathy.
 
-**Render-Facing Noun Phrases:**
-- Female Martian caretaker figure
-- Sympathetic ministrations provider
-- Chamber-leaving companion
+**Descriptive Noun Phrases for Prompts:**
+- "Female Martian caretaker"
+- "Sympathetic alien figure"
+- "Green Martian occupant"
 
 **Uncertainty Notes:**
-- Physical appearance beyond gender/species not detailed
-- Specific clothing or markings not described in source material
+- **Visual Gap:** No description of hair, eyes, or skin color is available in the source text. Image generation must rely on default assumptions for female Martians unless clarified.
+- **Silhouette:** Height and build are unknown; only functional actions (bringing food, covering with fur) are documented.
 
 # Aliases
 
@@ -46,10 +45,10 @@ true
 
 # Manual Description Input Required
 
-No
+Yes
 
 
 
 # Manual Description Reason
 
-None
+Text provides no details on skin tone, hair, height, or facial features; only gender and species (female Martian) are confirmed.

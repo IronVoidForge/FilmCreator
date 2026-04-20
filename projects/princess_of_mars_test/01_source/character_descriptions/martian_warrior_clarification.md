@@ -4,10 +4,10 @@
 martian_warrior
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Multiple unnamed warrior figures with group-level appearance but no established individual identities or detailed physical characteristics
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+What are the specific physical characteristics of individual Martian warriors (age range, build variations, hair color, skin tone details, distinguishing features)?
 
 # Guidance
 - answer briefly and concretely

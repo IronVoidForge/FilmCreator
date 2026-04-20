@@ -7,7 +7,7 @@ narrator
 Paste a stable manual visual description for this character so later shared reference generation can use it.
 
 # Why This Is Needed
-Source text lacks specific physical traits (hair, eyes, facial features) required for consistent image generation.
+Text refers to the figure only as "narrator" or "I"; no physical traits (hair, eyes, skin tone, build) are described in this chapter.
 
 # Guidance
 - describe face, hair, body type, age impression, silhouette, skin tone, costume logic, and any continuity-critical marks

@@ -7,7 +7,7 @@ sola
 Paste a stable manual visual description for this character so later shared reference generation can use it.
 
 # Why This Is Needed
-Source text specifies skin tone and height but lacks facial feature details.
+Summary identifies her as a female Martian but provides no physical description.
 
 # Guidance
 - describe face, hair, body type, age impression, silhouette, skin tone, costume logic, and any continuity-critical marks
