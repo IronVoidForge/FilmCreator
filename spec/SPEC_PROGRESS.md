@@ -1,12 +1,16 @@
 # Spec Progress
 
-## Current Refactor Status
+## Current Project Status
 
-The orchestration refactor is now mostly complete:
+The refactor foundation is in place and the project has moved beyond basic ingest hardening.
 
-- completed: `story_authoring.py`, `world_global.py`, `runner.py`, `batch_runner.py`, `scaffold.py`, `state.py`, `review_tools.py`, `book_ingest.py`, `common.py`
-- in progress: `authoring.py`, `book_authoring.py`, `cli.py`, `workflow_patcher.py`, final cleanup
-- the live refactor tracker lives in [`00_refactor_PROGRESS.md`](./00_refactor_PROGRESS.md)
+The latest validated state is:
+
+- the refactor branch has merged into `main`
+- multi-chapter analysis for `princess_of_mars_test` completed `28/28` chapters with `0` failures
+- chapter analysis, world registries, snapshots, continuity, and librarian/index retrieval are stable enough to build on
+- the current bottleneck is no longer extraction correctness
+- the current bottleneck is synthesis and production-facing contract generation
 
 ## Status Legend
 
@@ -18,120 +22,174 @@ The orchestration refactor is now mostly complete:
   - at least one real validation checkpoint has passed, but the full acceptance criteria are not complete yet
 - `complete`
   - the acceptance criteria have been validated end to end
-  - when a spec reaches this state, its filename is renamed with the suffix `__complete.md`
+  - when a spec reaches this state, its filename may be renamed with the suffix `__complete.md`
 
-## Current Status
+## Foundation Status
 
-- `1.1` repo, project, scene, and clip hierarchy
-  - status: `validated`
-  - evidence: runtime scene work, authoring outputs, and render-stage clip folders are all using the canonical project hierarchy under `projects/<project_slug>/...`, including scoped story scenes and clip-local render units
-  - next validation: keep the same hierarchy guarantees while adding chapter-wide continuity artifacts and storyboard outputs
+### 1.1 repo, project, scene, and clip hierarchy
+- status: `validated`
+- evidence: runtime scene work, authoring outputs, render-stage clip folders, and the refactor launchers all use the canonical hierarchy under `projects/<project_slug>/...`
+- next validation: keep the same hierarchy guarantees while adding bible, scene-package, and shot-package layers
 
-- `1.2` IDs, filenames, and naming rules
-  - status: `validated`
-  - evidence: chapter authoring now emits chapter-scoped scene ids such as `CH008_SC001`, while render-stage clip assets still use canonical filenames such as `SC001_CL001_KF01_v001.png`
-  - next validation: validate the same naming rules across chapter-wide scene cascades and future canonical character/environment registries
+### 1.2 IDs, filenames, and naming rules
+- status: `validated`
+- evidence: chapter-scoped scene ids such as `CH008_SC001` are live while render-stage shot assets still use canonical filenames such as `SC001_CL001_KF01_v001.png`
+- next validation: extend naming discipline into character bibles, environment bibles, scene contracts, shot packages, and dialogue timeline artifacts
 
-- `1.3` workflow catalog and registry contract
-  - status: `complete`
-  - evidence: `RUN_0001` prepare-only run resolved `character_reference` to `still.t2i.klein.distilled` entirely through the registry after canonical API workflow swaps
+### 1.3 workflow catalog and registry contract
+- status: `complete`
+- evidence: live workflow selection continues to resolve through the registry and clean runner paths
 
-- `1.4` prompt package schema
-  - status: `validated`
-  - evidence: packetized authoring and prompt-package writing are both live; prompt-package parsing and scaffold templates support the expanded prompt contract including optional `Repair Notes`
-  - next validation: consume the same expanded schema in a live still-fix or cut-motion run end to end
+### 1.4 prompt package schema
+- status: `validated`
+- evidence: packetized authoring and prompt-package writing are live and resilient
+- next validation: consume expanded prompt schema through the future shot-package and production contract layers
 
-- `1.5` project, scene, and clip state contracts
-  - status: `validated`
-  - evidence: `clip_state.json` now records approved assets, review history, current continuity source, and canonical prompt-package paths; authoring outputs also populate scene-scoped planning and prompt-package paths consistently
-  - next validation: extend state contracts with chapter-wide continuity summaries and canonical identity registries
+### 1.5 project, scene, and clip state contracts
+- status: `validated`
+- evidence: `clip_state.json` records approved assets, review history, continuity source, and prompt-package references; book-level run artifacts now also track failed chapter recovery state
+- next validation: extend state contracts with artifact lifecycle, staleness, approval, and dependency metadata for synthesis and production phases
 
-- `1.6` SQLite relational model
-  - status: `planned`
-  - evidence: the relational design, setup plan, table map, sync direction, and implementation timing have now been specified for a per-project SQLite database
-  - next validation: implement the first read-side database phase with `db-init`, `db-upgrade`, and `db-sync-from-files`
+### 1.6 SQLite relational model
+- status: `planned`
+- evidence: SQLite remains deferred until the file-first production contracts stabilize
+- next validation: revisit only after phases 7–11 contracts and lifecycle semantics are stable
 
-- `2.1` character reference generation
-  - status: `validated`
-  - evidence: shared character prompt writing now completes inside the live Chapter VIII authoring checkpoint for `princess_of_mars_test`, producing character reference prompt packages from chapter analysis outputs
-  - next validation: resolve provisional identities like `carter` and `captive` into canonical character assets through the Phase B.1 registry layer
+## Shared Asset Foundation
 
-- `2.2` environment reference generation
-  - status: `validated`
-  - evidence: shared environment prompt writing now completes inside the live Chapter VIII authoring checkpoint and writes reusable environment prompt packages under `03_prompt_packages/environments/`
-  - next validation: normalize environment families into canonical reusable environment assets through the Phase B.1 registry layer
+### 2.1 character reference generation
+- status: `validated`
+- evidence: shared character prompt writing exists and can operate from analysis outputs
+- next validation: upgrade from reference prompt generation into canonical character bible synthesis and approved character reference bundles
 
-- `2.3` shared ref promotion and reuse
-  - status: `implemented`
-  - evidence: promotion logic exists in the scaffold layer for character and environment refs
-  - next validation: promote a live output into project references and confirm review copies plus state updates
+### 2.2 environment reference generation
+- status: `validated`
+- evidence: shared environment prompt writing exists and can operate from analysis outputs
+- next validation: upgrade from reference prompt generation into canonical environment bible synthesis and approved environment reference bundles
 
-- `3.1` clip input contract
-  - status: `validated`
-  - evidence: the validated keyframe batch consumed clip-scoped prompt packages and routed clip-local outputs without ad hoc filenames; chapter authoring also now emits explicit 5-second clip/shot rosters for planned scenes
-  - next validation: validate the same contract across a full chapter-wide authoring cascade
+### 2.3 shared ref promotion and reuse
+- status: `implemented`
+- evidence: promotion logic exists in scaffold/state flows
+- next validation: integrate that logic into future approved bible-driven reference bundle workflows
 
-- `3.2` scene build and golden frame
-  - status: `validated`
-  - evidence: a live clip-scoped keyframe batch rendered successfully, review recorded a top 2 and chosen primary, and the chosen still was promoted into the approved keyframe slot
-  - next validation: use the approved keyframe as the source for a live short-cut cut-motion smoke run
+## Clip / Render Pipeline Foundation
 
-- `3.3` anchor and interval frames
-  - status: `implemented`
-  - evidence: continuation workflow registry, continuity-source resolver, and current continuity tracking exist
-  - next validation: live continuation run that reuses the approved prior frame
+### 3.1 clip input contract
+- status: `validated`
+- evidence: keyframe and motion batches consume clip-scoped prompt packages and route outputs correctly; chapter authoring also emits explicit clip/shot rosters
+- next validation: adapt this contract cleanly into future shot-package architecture rather than leaving it as the final planning abstraction
 
-- `3.4` clip review and selection
-  - status: `validated`
-  - evidence: the live pilot review recorded top 2 plus primary on both `RUN_0001` and `RUN_0040`, and the review path is now hardened through manifest-backed interactive review helpers instead of brittle folder counting
-  - next validation: perform the same review-and-handoff loop on a live `still_fix` batch and confirm the approved corrective still is promoted cleanly
+### 3.2 scene build and golden frame
+- status: `validated`
+- evidence: live clip-scoped keyframe batch rendered successfully with review and promotion
+- next validation: use bible- and scene-contract-driven shot plans to improve generation consistency upstream
 
-- `4.1` runner CLI and job dispatch
-  - status: `validated`
-  - evidence: `plan-batch` and `run-batch` produced successful live pilot batches, and the authoring layer now includes scene-level and chapter-level cascade functions (`author_scene`, `author_chapter`) on top of the existing checkpoint path
-  - next validation: expose the chapter-wide authoring cascade through a stable first-class CLI command and validate it through a launcher-level smoke test
+### 3.3 anchor and interval frames
+- status: `implemented`
+- evidence: continuation workflow registry, continuity-source resolver, and current continuity tracking exist
+- next validation: tie continuation logic into future edit timeline and shot-sequencing contracts
 
-- `4.2` ComfyUI client and workflow patching
-  - status: `validated`
-  - evidence: the four-ref still workflow and the short-cut Wan 5B motion workflow have both been patched and submitted successfully through their registry-driven paths
-  - next validation: validate the two-ref still-fix workflow on the same patch-and-submit path
+### 3.4 clip review and selection
+- status: `validated`
+- evidence: review/promotion helpers work for still and motion batches
+- next validation: extend the same approval model upward to scene packages, shot packages, and future character/environment reference bundles
 
-- `4.3` output routing, logging, and manifests
-  - status: `validated`
-  - evidence: live keyframe and short-cut motion runs record successful outputs, and authoring now writes one raw LM Studio exchange log per task under the story-analysis logs folder
-  - next validation: validate chapter-wide storyboard and continuity manifest outputs in Phase B
+## Orchestration Foundation
 
-- `4.4` automated testing and CI strategy
-  - status: `implemented`
-  - evidence: unit coverage now includes prompt parsing, review-candidate discovery, review-and-promotion helpers, state normalization, scaffold promotion, workflow patching, LM Studio client discovery, and authoring packet parsing/file generation
-  - next validation: expand from unit coverage into launcher-level or smoke-test coverage
+### 4.1 runner CLI and job dispatch
+- status: `validated`
+- evidence: runner commands, scene/chapter authoring entrypoints, and render dispatch are live
+- next validation: expose the next synthesis and contract phases as first-class CLI commands
 
-- `4.5` resilient chapter batch orchestration and run recovery
-  - status: `validated`
-  - evidence: `analyze_book` now continues after per-chapter failures by default, writes `BOOK_RUN_latest.json`, `BOOK_RUN_<timestamp>.json`, `failed_chapters.json`, and `FAILED_CHAPTERS_REPORT.md`, and exposes `retry-failed-chapters` for rerunning only the latest failed chapters
-  - next validation: run a real manifest with one injected chapter failure, confirm later chapters still complete, then retry the failed chapters from the saved run artifacts
+### 4.2 ComfyUI client and workflow patching
+- status: `validated`
+- evidence: live still and short-motion workflow patching remain operational
+- next validation: consume future shot-package prompt outputs without manual conversion layers
 
-- `5.1` story analysis outputs
-  - status: `validated`
-  - evidence: the authoring path now has a packetized Markdown contract, per-task LM Studio logging, malformed-character tolerance, manual-description placeholder reconciliation, and live chapter analysis plus four-scene decomposition for `princess_of_mars_test` Chapter VIII
-  - next validation: add canonical character/environment resolution and chapter continuity summaries after analysis
+### 4.3 output routing, logging, and manifests
+- status: `validated`
+- evidence: render outputs, manifests, and per-task LM Studio logs are working
+- next validation: extend manifests and routing to support scene packages, shot packages, dialogue timelines, and approval queues
 
-- `5.2` clip plan generation
-  - status: `validated`
-  - evidence: scoped scene planning now writes canonical scene, beat, and clip files such as `CH008_SC001`, and the live Chapter VIII Scene 1 roster produced four explicit 5-second clips/shots with continuity metadata and interval beats
-  - next validation: validate stable scene planning across all scenes in a chapter-wide cascade
+### 4.4 automated testing and CI strategy
+- status: `implemented`
+- evidence: broad unit coverage exists for core authoring and render support
+- next validation: expand smoke tests around synthesis, lifecycle, and dependency-aware rebuild logic
 
-- `5.3` prompt writer integration
-  - status: `validated`
-  - evidence: `lmstudio-check` resolves the live local model set, `write-prompts` rewrites canonical prompt packages, and the live Chapter VIII authoring checkpoint completes shared prompt generation plus clip-local prompt generation for Scene 1 end to end
-  - next validation: run prompt writing across every scene in a chapter cascade and validate future canonical asset selection during Phase B.1
+### 4.5 resilient chapter batch orchestration and run recovery
+- status: `validated`
+- evidence: `analyze_book` continues after per-chapter failures, writes run summaries, failed chapter lists, and supports retrying failed chapters only
+- next validation: verify retry/reuse behavior against future synthesis stages and stale rebuild workflows
 
-- `6.1` deferred video motion stage
-  - status: `validated`
-  - evidence: `RUN_0040` completed a live short-cut Wan 5B motion batch from the approved keyframe, the repaired motion review-and-promotion path selected a primary candidate successfully, and `approved_video` plus `approved_video_last_frame` are now populated after approval
-  - next validation: tune look preservation so the short-cut motion path stops introducing the reported blue-shift unless a prompt explicitly asks for it
+## Analysis / World Model Foundation
 
-- `6.2` acceptance test matrix
-  - status: `implemented`
-  - evidence: it is acting as the checklist for deterministic and live validation
-  - next validation: keep advancing it as checkpoints pass
+### 5.1 story analysis outputs
+- status: `complete_enough_to_build_on`
+- evidence: chapter analysis, registries, snapshots, continuity summaries, librarian/indexing, and resilient parsing are all working across a full 28/28 chapter run
+- next validation: treat this as an upstream input phase for synthesis rather than continuing to expand it as the main product output
+
+### 5.2 clip plan generation
+- status: `validated_but_needs_architecture_upgrade`
+- evidence: scoped scene planning writes canonical scene, beat, and clip files and remains useful as a structural predecessor
+- next validation: adapt useful parts into future scene-contract and shot-package layers through compatibility adapters rather than treating legacy clip planning as the final design
+
+### 5.3 prompt writer integration
+- status: `validated`
+- evidence: prompt writing, packet parsing, and local prompt package generation are live end to end
+- next validation: make prompt writing consume canonical bibles, scene contracts, and shot packages rather than raw analysis-first sources
+
+## Deferred / Future Production Stages
+
+### 6.1 video motion stage
+- status: `validated_foundation`
+- evidence: a live short-cut motion batch rendered successfully, review/promotion worked, and approved video state updates are live
+- next validation: tie motion generation to future shot contracts, edit timelines, and approved reference bundles instead of isolated clip-local scaffolding
+
+### 6.2 acceptance test matrix
+- status: `implemented`
+- evidence: it continues to act as the checklist for deterministic and live validation
+- next validation: expand it to include synthesis, lifecycle, approval, and dependency-aware rebuild checkpoints
+
+## New Active Roadmap Phases
+
+### Phase 7 – Character Bible Synthesis
+- status: `planned`
+- evidence: upstream registries, refinement inputs, and librarian retrieval now exist to support this phase
+- next validation: produce canonical character bibles with evidence refs, revision history, locked fields, and review queues
+
+### Phase 8 – Environment Bible Synthesis
+- status: `planned`
+- evidence: upstream registries, continuity state, and retrieval now exist to support this phase
+- next validation: produce canonical environment bibles with hierarchy rules, evidence refs, revision history, and review queues
+
+### Phase 9 – Scene Production Contracts
+- status: `planned`
+- evidence: scene decomposition, continuity, and future bible inputs now define the required upstream structure
+- next validation: build scene contract and chapter storyboard artifacts that bridge analysis into production planning
+
+### Phase 10 – Shot Planning and Shot Packages
+- status: `planned`
+- evidence: legacy clip planning and prompt writing provide reusable structural precedent but not the final architecture
+- next validation: emit ordered shot packages, prompt bundles, and reference bundles driven by scene contracts and canonical bibles
+
+### Phase 11 – Dialogue, Timing, and Edit-Aware Sequencing
+- status: `planned`
+- evidence: continuity and shot planning foundations now make a formal timing layer feasible
+- next validation: produce dialogue maps, shot-to-dialogue bindings, and chapter edit timeline artifacts
+
+## Cross-Cutting Work Newly Required
+
+### Artifact lifecycle and reuse
+- status: `planned`
+- evidence: the project now needs approved/locked/stale semantics to avoid destructive reruns in synthesis and generation phases
+- next validation: define and implement artifact lifecycle metadata and reuse rules
+
+### Dependency graph and staleness
+- status: `planned`
+- evidence: future phases 7–11 require selective rebuilds based on upstream changes
+- next validation: define dependency tracking and stale propagation rules
+
+### Review and approval model
+- status: `planned`
+- evidence: render review exists, but synthesis and contract layers now need a broader approval system
+- next validation: add review queues and approval states across bibles, scene contracts, shot packages, and later generated assets
