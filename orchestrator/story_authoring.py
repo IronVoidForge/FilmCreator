@@ -17,6 +17,7 @@ from .prompt_package import PromptPackage, write_prompt_package
 from .scaffold import create_clip, create_project, create_scene
 from .settings import load_runtime_settings
 from .features.authoring import shared_prompts as authoring_prompts
+from .features.authoring import packet_parser as authoring_packets
 from .world_registry import (
     character_registry_path,
     environment_registry_path,
@@ -1868,3 +1869,39 @@ def _write_text(path: Path, content: str) -> None:
     ensure_dir(path.parent)
     text = content.rstrip() + "\n"
     path.write_text(text, encoding="utf-8")
+
+
+# Bind the pure parsing and validation helpers to the feature module so the
+# orchestration code uses the extracted implementation while keeping this file
+# backward compatible during the refactor.
+_parse_packet_document = authoring_packets.parse_packet_document
+_extract_packet_body = authoring_packets.extract_packet_body
+_sanitize_llm_text = authoring_packets.sanitize_llm_text
+_strip_markdown_fences = authoring_packets.strip_markdown_fences
+_parse_packet_body = authoring_packets.parse_packet_body
+_parse_packet_record = authoring_packets.parse_packet_record
+_collect_tagged_block = authoring_packets.collect_tagged_block
+_split_packet_key_value = authoring_packets.split_packet_key_value
+_require_packet_section = authoring_packets.require_packet_section
+_require_packet_records = authoring_packets.require_packet_records
+_require_single_packet_record = authoring_packets.require_single_packet_record
+_require_record_field = authoring_packets.require_record_field
+_require_record_section = authoring_packets.require_record_section
+_validate_scene_decomposition = authoring_packets.validate_scene_decomposition
+_extract_clip_beat_refs = authoring_packets.extract_clip_beat_refs
+_scene_allows_single_clip = authoring_packets.scene_allows_single_clip
+_validate_clip_plan = authoring_packets.validate_clip_plan
+_parse_packet_bool = authoring_packets.parse_packet_bool
+_parse_markdown_key_value_items = authoring_packets.parse_markdown_key_value_items
+_parse_markdown_list = authoring_packets.parse_markdown_list
+_split_sections = authoring_packets.split_sections
+_chapter_id_from_name = authoring_packets.chapter_id_from_name
+_normalize_scene_id = authoring_packets.normalize_scene_id
+_normalize_beat_id = authoring_packets.normalize_beat_id
+_is_hierarchical_clip_id = authoring_packets.is_hierarchical_clip_id
+_normalize_clip_id = authoring_packets.normalize_clip_id
+_normalize_asset_id = authoring_packets.normalize_asset_id
+_scene_record_summary_line = authoring_packets.scene_record_summary_line
+_markdown_bundle = authoring_packets.markdown_bundle
+_prune_markdown_dir = authoring_packets.prune_markdown_dir
+_write_text = authoring_packets.write_text
