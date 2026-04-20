@@ -1,4 +1,4 @@
-# Refactor Plan
+# Refactor Progress Plan
 
 ## Goal
 
@@ -10,6 +10,31 @@ Turn the current flat `orchestrator` package into a maintainable feature-based c
 - external adapters
 
 The main objective is to make the codebase easier to extend without creating more monolithic modules.
+
+## Progress Snapshot
+
+Completed:
+
+- `story_authoring.py` split into feature modules and compatibility wrappers
+- `world_global.py` split into feature modules and compatibility wrappers
+- `runner.py` split into feature modules and compatibility wrappers
+- `batch_runner.py` split into feature modules and compatibility wrappers
+- `scaffold.py` split into feature modules and compatibility wrappers
+- `state.py` split into feature modules and compatibility wrappers
+- `review_tools.py` split into feature modules and compatibility wrappers
+- `book_ingest.py` now writes `book_index.json`
+- `common.py` has been reduced into `core/` helpers
+- authoring parser/repair hardening is in place
+- chapter-summary, character, environment, and scene recovery flows are in place
+- book librarian retrieval and character/environment matching helpers are in place
+
+Still in progress:
+
+- `authoring.py`
+- `book_authoring.py`
+- `cli.py`
+- `workflow_patcher.py`
+- final cleanup and import consolidation
 
 ## Refactor Principles
 
@@ -75,27 +100,27 @@ These numbers are meant to be practical budgets, not hard law. The goal is to ke
 
 For the large current files, the target is to split them into smaller files in the new package layout. For modules that remain mostly intact, the target is to keep them compact and single-purpose.
 
-| File | Current lines | Target lines after refactor | Notes |
-|---|---:|---:|---|
-| `orchestrator/story_authoring.py` | 2,593 | 250-500 per file | Split into authoring feature modules. |
-| `orchestrator/authoring.py` | 855 | 250-400 per file | Split prompt writing concerns into dedicated authoring submodules. |
-| `orchestrator/world_global.py` | 778 | 200-450 per file | Split registry, snapshot, and sequence logic. |
-| `orchestrator/runner.py` | 722 | 200-350 per file | Split planning, execution, routing, and cleanup. |
-| `orchestrator/batch_runner.py` | 511 | 180-300 per file | Split batch planning from batch execution. |
-| `orchestrator/scaffold.py` | 501 | 150-300 per file | Split project bootstrap, manifests, and promotion. |
-| `orchestrator/cli.py` | 390 | 120-220 per file | Keep thin; if it stays one file, stay under the target budget. |
-| `orchestrator/state.py` | 315 | 120-250 per file | Split normalization, continuity, and review state handling. |
-| `orchestrator/world_registry.py` | 271 | 150-250 per file | Likely stay mostly intact or split lightly if needed. |
-| `orchestrator/workflow_patcher.py` | 253 | 180-260 | Can remain a single utility module unless new patching formats grow. |
-| `orchestrator/lmstudio_client.py` | 247 | 180-260 | Keep as one adapter unless transport behavior expands. |
-| `orchestrator/review_tools.py` | 231 | 120-220 per file | Split review catalog, service, and interactive flow. |
-| `orchestrator/book_authoring.py` | 727 | 150-300 per file | Now includes resilient book-run tracking, failed-chapter retry, and refinement entrypoints; should be split once the new batch flow settles. |
-| `orchestrator/prompt_package.py` | 159 | 120-200 | Fine as a compact parser/serializer. |
-| `orchestrator/book_ingest.py` | 136 | 100-180 | Fine as a compact ingestion helper. |
-| `orchestrator/comfy_client.py` | 132 | 100-180 | Keep as a single adapter. |
-| `orchestrator/style_profiles.py` | 126 | 100-180 | Keep as a single policy module. |
-| `orchestrator/video_utils.py` | 104 | 80-150 | Keep as a single adapter unless more extraction backends are added. |
-| `orchestrator/common.py` | 59 | 40-120 per file | This should be decomposed into core utility modules. |
+| File | Current lines | Target lines after refactor | Status | Notes |
+|---|---:|---:|---|---|
+| `orchestrator/story_authoring.py` | 2,593 | 250-500 per file | COMPLETE | Split into authoring feature modules. |
+| `orchestrator/authoring.py` | 855 | 250-400 per file | IN PROGRESS | Split prompt writing concerns into dedicated authoring submodules. |
+| `orchestrator/world_global.py` | 778 | 200-450 per file | COMPLETE | Split registry, snapshot, and sequence logic. |
+| `orchestrator/runner.py` | 722 | 200-350 per file | COMPLETE | Split planning, execution, routing, and cleanup. |
+| `orchestrator/batch_runner.py` | 511 | 180-300 per file | COMPLETE | Split batch planning from batch execution. |
+| `orchestrator/scaffold.py` | 501 | 150-300 per file | COMPLETE | Split project bootstrap, manifests, and promotion. |
+| `orchestrator/cli.py` | 390 | 120-220 per file | IN PROGRESS | Keep thin; if it stays one file, stay under the target budget. |
+| `orchestrator/state.py` | 315 | 120-250 per file | COMPLETE | Split normalization, continuity, and review state handling. |
+| `orchestrator/world_registry.py` | 271 | 150-250 per file | IN PROGRESS | Likely stay mostly intact or split lightly if needed. |
+| `orchestrator/workflow_patcher.py` | 253 | 180-260 | IN PROGRESS | Can remain a single utility module unless new patching formats grow. |
+| `orchestrator/lmstudio_client.py` | 247 | 180-260 | IN PROGRESS | Keep as one adapter unless transport behavior expands. |
+| `orchestrator/review_tools.py` | 231 | 120-220 per file | COMPLETE | Split review catalog, service, and interactive flow. |
+| `orchestrator/book_authoring.py` | 727 | 150-300 per file | IN PROGRESS | Now includes resilient book-run tracking, failed-chapter retry, and refinement entrypoints; should be split once the new batch flow settles. |
+| `orchestrator/prompt_package.py` | 159 | 120-200 | IN PROGRESS | Fine as a compact parser/serializer. |
+| `orchestrator/book_ingest.py` | 136 | 100-180 | COMPLETE | Fine as a compact ingestion helper. |
+| `orchestrator/comfy_client.py` | 132 | 100-180 | IN PROGRESS | Keep as a single adapter. |
+| `orchestrator/style_profiles.py` | 126 | 100-180 | IN PROGRESS | Keep as a single policy module. |
+| `orchestrator/video_utils.py` | 104 | 80-150 | IN PROGRESS | Keep as a single adapter unless more extraction backends are added. |
+| `orchestrator/common.py` | 59 | 40-120 per file | COMPLETE | This has been decomposed into core utility modules. |
 
 ## Priority Plan
 
@@ -103,7 +128,7 @@ For the large current files, the target is to split them into smaller files in t
 
 These are the first changes to make because they remove the biggest maintenance bottlenecks.
 
-#### 1. Split `orchestrator/story_authoring.py`
+#### 1. Split `orchestrator/story_authoring.py` [COMPLETE]
 
 - Priority: `P0`
 - Difficulty: `Hard`
@@ -133,7 +158,7 @@ Notes:
 - Move pure parsing helpers first, then move orchestration logic.
 - Keep prompt templates and packet parsing testable without filesystem setup where possible.
 
-#### 2. Split `orchestrator/world_global.py`
+#### 2. Split `orchestrator/world_global.py` [COMPLETE]
 
 - Priority: `P0`
 - Difficulty: `Hard`
@@ -159,7 +184,7 @@ Notes:
 - Keep normalization and visibility/projection rules separate from file writing.
 - Preserve provenance logic as explicit service methods.
 
-#### 3. Split `orchestrator/runner.py`
+#### 3. Split `orchestrator/runner.py` [COMPLETE]
 
 - Priority: `P0`
 - Difficulty: `Hard`
@@ -186,7 +211,7 @@ Notes:
 
 These modules are easier than the P0 group and should be done once the new package structure exists.
 
-#### 4. Split `orchestrator/batch_runner.py`
+#### 4. Split `orchestrator/batch_runner.py` [COMPLETE]
 
 - Priority: `P1`
 - Difficulty: `Medium`
@@ -205,7 +230,7 @@ Notes:
 
 - This module is already a clean pipeline and should become a smaller set of explicit steps.
 
-#### 5. Split `orchestrator/scaffold.py`
+#### 5. Split `orchestrator/scaffold.py` [COMPLETE]
 
 - Priority: `P1`
 - Difficulty: `Medium`
@@ -227,7 +252,7 @@ Notes:
 
 - This file is doing three distinct jobs today: workspace creation, manifest creation, and asset promotion.
 
-#### 6. Split `orchestrator/state.py`
+#### 6. Split `orchestrator/state.py` [COMPLETE]
 
 - Priority: `P1`
 - Difficulty: `Medium`
@@ -250,7 +275,7 @@ Notes:
 - The normalization rules should be their own unit-tested module.
 - Recording review batches should be a higher-level service on top of state persistence.
 
-#### 7. Split `orchestrator/review_tools.py`
+#### 7. Split `orchestrator/review_tools.py` [COMPLETE]
 
 - Priority: `P1`
 - Difficulty: `Medium`
@@ -269,7 +294,7 @@ Notes:
 
 - Keep interactive prompting separated from review business rules.
 
-#### 8. Split `orchestrator/authoring.py`
+#### 8. Split `orchestrator/authoring.py` [IN PROGRESS]
 
 - Priority: `P1`
 - Difficulty: `Medium`
@@ -293,7 +318,7 @@ Notes:
 
 These are worthwhile, but they should come after the major workflow modules are stabilized.
 
-#### 9. Split `orchestrator/book_authoring.py` and `orchestrator/book_ingest.py`
+#### 9. Split `orchestrator/book_authoring.py` and `orchestrator/book_ingest.py` [PARTIALLY COMPLETE]
 
 - Priority: `P2`
 - Difficulty: `Low to Medium`
@@ -316,7 +341,7 @@ Notes:
 - This is a good final step because it becomes much simpler once authoring and world state are modular.
 - The book-analysis module now also owns resilient manifest runs, failed-chapter artifacts, and retry-only recovery, so that behavior should stay stable before extracting more files.
 
-#### 10. Split `orchestrator/common.py`
+#### 10. Split `orchestrator/common.py` [COMPLETE]
 
 - Priority: `P2`
 - Difficulty: `Low`
@@ -371,16 +396,16 @@ Good candidates for functions:
 
 ## Execution Order
 
-1. `story_authoring.py`
-2. `world_global.py`
-3. `runner.py`
-4. `batch_runner.py`
-5. `scaffold.py`
-6. `state.py`
-7. `review_tools.py`
-8. `authoring.py`
-9. `book_authoring.py` and `book_ingest.py`
-10. `common.py`
+1. `story_authoring.py` [COMPLETE]
+2. `world_global.py` [COMPLETE]
+3. `runner.py` [COMPLETE]
+4. `batch_runner.py` [COMPLETE]
+5. `scaffold.py` [COMPLETE]
+6. `state.py` [COMPLETE]
+7. `review_tools.py` [COMPLETE]
+8. `authoring.py` [IN PROGRESS]
+9. `book_authoring.py` and `book_ingest.py` [PARTIALLY COMPLETE]
+10. `common.py` [COMPLETE]
 
 ## Testing Strategy
 
@@ -403,6 +428,14 @@ The lower one-shot confidence comes from the amount of shared filesystem state, 
 ### Recommended Number Of Passes
 
 Use `4` passes minimum, `5` if we want to be cautious.
+
+Current pass status:
+
+- Pass 1: COMPLETE
+- Pass 2: COMPLETE
+- Pass 3: COMPLETE
+- Pass 4: PARTIALLY COMPLETE
+- Pass 5: PENDING
 
 #### Pass 1: Core And Utilities
 

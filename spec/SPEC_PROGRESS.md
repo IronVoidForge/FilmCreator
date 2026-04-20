@@ -1,5 +1,13 @@
 # Spec Progress
 
+## Current Refactor Status
+
+The orchestration refactor is now mostly complete:
+
+- completed: `story_authoring.py`, `world_global.py`, `runner.py`, `batch_runner.py`, `scaffold.py`, `state.py`, `review_tools.py`, `book_ingest.py`, `common.py`
+- in progress: `authoring.py`, `book_authoring.py`, `cli.py`, `workflow_patcher.py`, final cleanup
+- the live refactor tracker lives in [`00_refactor_PROGRESS.md`](./00_refactor_PROGRESS.md)
+
 ## Status Legend
 
 - `planned`

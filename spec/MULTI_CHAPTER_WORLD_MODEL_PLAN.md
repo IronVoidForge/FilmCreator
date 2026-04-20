@@ -39,6 +39,13 @@ These artifacts live under:
 
 They are the required foundation for all later multi-chapter logic.
 
+Current status:
+
+- The canonical character and environment registries are in use.
+- Chapter continuity summaries and world snapshots are being written per chapter.
+- The latest full `princess_of_mars_test` run completed `28/28` chapters with `0` failures using the Gemma 4 IT model and the repair-first retry policy.
+- The remaining improvement work is mostly about speed and context-window headroom, not basic correctness.
+
 ---
 
 ## Resilient Run Orchestration

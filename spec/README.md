@@ -7,6 +7,7 @@ This folder breaks the project into numbered implementation chunks by feature an
 - Progress across specs is tracked in `SPEC_PROGRESS.md`.
 - A spec file only gets a filename suffix of `__complete.md` after its acceptance criteria have been validated.
 - Implemented or partially validated specs keep their normal filenames until they are fully complete.
+- Refactor progress is tracked in `00_refactor_PROGRESS.md`.
 
 ## Phase Order
 
@@ -42,6 +43,10 @@ This folder breaks the project into numbered implementation chunks by feature an
 - `5.3` prompt writer integration
 - `6.1` deferred video motion stage
 - `6.2` acceptance test matrix
+
+## Progress Docs
+
+- `00_refactor_PROGRESS.md` - live refactor status and completed split tracking
 
 ## Working Rule
 
