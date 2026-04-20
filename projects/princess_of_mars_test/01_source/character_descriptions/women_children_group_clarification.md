@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-lorquas_ptomel_jed
+women_children_group
 
 # Why This Needs Clarification
 Character exists in narrative but lacks stable identification through physical description. May already exist under another name or be too weakly identified for reliable rendering.
 
 # Question
-What are Lorquas Ptomel Jed's physical appearance details (height, build, hair color, eye color, distinctive features) and what specific chieftain responsibilities does he hold?
+What are the women and children's typical physical appearance details (height, build, hair color, eye color, distinctive features) and what specific attire do they wear during the gauntlet formation?
 
 # Guidance
 - answer briefly and concretely

@@ -4,10 +4,10 @@
 sola
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Character exists in narrative but lacks stable identification through physical description. May already exist under another name or be too weakly identified for reliable rendering.
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+What are Sola's physical appearance details (height, build, hair color, eye color, distinctive features) and what role does she play in the narrator's journey?
 
 # Guidance
 - answer briefly and concretely
