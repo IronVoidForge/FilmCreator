@@ -1,4 +1,0 @@
-- **SC001:** Morning Reflection & Gift Presentation
-- **SC002:** Training Montage & Society Context
-- **SC003:** Audience Chamber, Night Talk, and Sola's Defense
-- **SC004:** Resolution

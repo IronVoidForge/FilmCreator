@@ -1,36 +1,44 @@
-# powell.md
+# Powell - Chapter CH001
 
 ## Display Name
 Powell
 
 ## Chapter Role
-Deceased companion of John Carter
+Protagonist/Deceased character whose trail is followed by Carter
 
-## Physical Presence
-Physically present as deceased body found in cave; referenced throughout chapter
+## Physical Presence Status
+Referenced only - found dead in cave chamber. Not physically present during chapter events.
 
 ## Physical Description
-No physical description available in source material. Body is confirmed dead with no spark of life despite water forced between lips and continuous resuscitation efforts.
+**Source-supported details:** None available in chapter summary. Character is mentioned as departing to buy mining equipment and being discovered dead in a cave with smooth floor and shadowed back.
 
-## Costume & Silhouette
-Body bristling with hostile arrows from Apache attack. No specific clothing or uniform details provided.
+**Missing details requiring manual description:**
+- Age and build
+- Facial features and expression
+- Hair color and style
+- Eye color
+- Height and weight
+- Distinguishing marks or scars
+- Typical clothing style (before death)
+- Build/silhouette characteristics
 
-## Continuity-Critical Traits
-- Friend who departed toward valley on March 3, 1866 with burros and provisions
-- Trail last seen where three dots appeared; initially dismissed as antelope/horses but growing unease
-- Found dead under Arizona moonlight after Apache attack
-- Body pulled across saddle during escape sequence
-- Confirmed dead by morning examination in cave
+## Costume/Silhouette Traits
+**Known:** None - character is deceased in cave chamber. No costume details provided in source material.
 
-## Render-Facing Prompt Notes
-Character is deceased, body bristling with hostile arrows. Found in large cave chamber possibly hundred feet diameter, thirty or forty feet height. Morning daylight at cave entrance.
+**Continuity-critical notes:** Character's appearance must be established through manual description for later image generation and continuity tracking across chapters.
+
+## Descriptive Noun Phrases for Render Prompts
+- "mining equipment buyer"
+- "deceased in cave chamber"
+- "trail follower subject"
+- "Powell character from 1866 narrative"
 
 ## Uncertainty Notes
-Physical appearance, facial features, hair color, eye color, height, weight, and age are not specified in source material. Any visual representation will require manual description specification for accurate rendering.
+⚠️ **CRITICAL:** No physical description available in source material. Character must be manually described for reliable image generation and continuity tracking. Appearance details are completely unknown from chapter summary alone.
 
 # Aliases
 
-Friend of Carter
+None
 
 
 
@@ -42,7 +50,7 @@ powell
 
 # Fully Identified
 
-true
+false
 
 # Manual Description Input Required
 

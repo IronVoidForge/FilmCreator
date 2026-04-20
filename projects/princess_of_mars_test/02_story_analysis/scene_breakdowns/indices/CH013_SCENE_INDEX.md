@@ -1,2 +1,0 @@
-- SC001: Training the Thoats (City Courtyard)
-- SC002: Secret Meeting on the Avenue (Great Avenue)

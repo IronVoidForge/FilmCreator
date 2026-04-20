@@ -5,10 +5,6 @@
 - CH001_SC002
 - CH001_SC003
 - CH001_SC004
-- CH001_SC005
-- CH001_SC006
-- CH001_SC007
-- CH001_SC008
 
 ## Known Canonical Characters
 - john_carter
@@ -18,10 +14,9 @@
 - None
 
 ## Known Canonical Environments
-- apache_camp_plateau
-- arizona_hills_chase
-- cave_entrance_mouth
-- cave_interior_chamber
+- apache_tepees
+- arizona_hills
+- cave_chamber
 
 ## Registry Artifacts
 - projects/princess_of_mars_test/02_story_analysis/world/CHARACTER_REGISTRY.json

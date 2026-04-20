@@ -7,7 +7,7 @@ tars_tarkas
 Paste a stable manual visual description for this character so later shared reference generation can use it.
 
 # Why This Is Needed
-Only referenced in past tense instruction scenes; no physical description provided for image generation support
+"Chapter summary only mentions Tars Tarkas as a Martian warrior with no specific physical features like height, build, or distinctive marks"
 
 # Guidance
 - describe face, hair, body type, age impression, silhouette, skin tone, costume logic, and any continuity-critical marks

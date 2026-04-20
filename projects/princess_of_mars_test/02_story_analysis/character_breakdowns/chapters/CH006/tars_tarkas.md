@@ -1,40 +1,39 @@
-# Tars Tarkas - CH006
+# Tars Tarkas - Character File
 
 ## Display Name
 Tars Tarkas
 
 ## Chapter Role
-Arriving warrior leader, brings warriors to scene
+Martian warrior, leader of the Martians
 
-## Physical Presence Status
-Mentioned as arriving with warriors; not physically detailed in chapter
+## Physical Presence
+Appears in doorway during victory celebration (Scene 4) and enters with warriors (Scene 5)
 
 ## Physical Description
-**Uncertain:** No physical description provided in source material. Cannot determine:
-- Facial features or expression
-- Body build or height
-- Hair style or color
-- Skin tone
-- Eye appearance
-- Clothing or attire
+Limited details provided in chapter summary. Identified as a Martian warrior but no specific physical features like height, build, or distinctive marks are mentioned in the source material.
 
-## Costume & Silhouette
-**Unknown:** No costume details available from chapter summary or visual continuity notes.
+## Costume and Silhouette
+No costume details provided in chapter summary. Silhouette not described beyond general human form implied by context of Mars setting.
 
 ## Continuity-Critical Traits
-- Arrives with warriors after narrator defeats bull ape
-- Represents Martian warrior presence and support
-- Part of group that arrives to scene (no individual physical description provided)
+- Signs that protagonist be left to his own devices (Scene 6)
+- Enters with warriors to stand over the reviving beast (Scene 5)
+- Offers zealously guarded applause for protagonist's feats (Scene 4)
+- Appears sober with apparent solicitude unlike other laughing Martians
 
-## Render-Facing Prompt Notes
-```
-[Uncertainty: Physical description missing - requires manual description before image generation]
-Key actions: arriving leader, warrior figure, Martian respected individual
-```
+## Descriptive Noun Phrases for Render-Facing Prompts
+- "Martian warrior leader"
+- "figure in doorway offering applause"
+- "warrior deep in argument with others"
+- "leader returning to plaza with beast"
+- "Martian devoid of finer sentiments"
+
+## Uncertainty Notes
+Physical appearance details are uncertain due to limited description in chapter summary. Height, build, hair color, eye color, and distinctive marks cannot be reliably determined from source material. Costume and accessories not described beyond general context of Mars setting.
 
 # Aliases
 
-None
+"Martian warrior"
 
 
 
@@ -46,7 +45,7 @@ tars_tarkas
 
 # Fully Identified
 
-false
+true
 
 # Manual Description Input Required
 
@@ -56,4 +55,4 @@ Yes
 
 # Manual Description Reason
 
-No physical description provided in chapter summary or visual continuity notes. Cannot determine facial features, body type, hair, skin tone, or other appearance details needed for image generation.
+"Chapter summary only mentions Tars Tarkas as a Martian warrior with no specific physical features like height, build, or distinctive marks"

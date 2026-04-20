@@ -1,20 +1,22 @@
-# Project Summary: Barsoom Chronicles
+# Project Summary: Mars Chronicles
 
-## Setting and World
-The narrative takes place on Barsoom (Mars), specifically within the Thark community of Lorquas Ptomel. The environment is characterized by a harsh, warlike society where warriors wear metal armor and ride great beasts known as thoats. The sky features two moons, and Earth is visible from the surface.
+## Setting and Atmosphere
+The narrative takes place on the planet Mars, specifically within deserted cities and a central plaza. The environment is characterized by ancient architecture (doorways, windows, masonry) that serves as both shelter and battleground. The atmosphere oscillates between tension during combat sequences and reverence among the Martian inhabitants for physical prowess.
 
-## Main Characters
-- **John Carter:** An Earthman wearing Thark metal, transitioning from visitor to integrated warrior. He possesses a moral code rooted in kindness and civilization, contrasting with local customs.
-- **Dejah Thoris:** A Red Martian Princess, daughter of ten thousand jeddaks. She represents the noble lineage and is often subject to the jealousy of the warrior caste.
-- **Tars Tarkas:** A Thark warrior and mentor figure who instructs John in their customs and warfare.
-- **Lorquas Ptomel:** The chieftain of the community, who rewards John for his service.
-- **Sola & Woola:** Companions to Dejah and John respectively, often involved in protective duties or errands.
+## Key Characters
+- **Protagonist:** An outsider on Mars who values duty and gratitude. He possesses "earthly arms" and relies on tactical fighting styles (fists, cudgel).
+- **Sola:** A young Martian woman who exhibits motherly solicitude toward the protagonist. She is distinct from other Martians in her emotional capacity (sober with solicitude rather than laughter).
+- **Tars Tarkas:** The leader of the Martian group. He commands warriors and represents the Martian hierarchy.
+- **The Beast (Watch-thing):** A large, dumb creature that serves as the protagonist's guardian. It is described as "hideous" but possesses immense love, loyalty, and gratitude.
+- **Martian Warriors:** Followers who worship physical strength and bravery. They are devoid of finer sentiments like friendship or affection in their interactions with the beast.
 
-## Themes and Conflicts
-- **Kindness vs. Violence:** John Carter's approach to training beasts (kindness) challenges the traditional Thark method of force, proving superior efficiency.
-- **Cultural Integration:** The struggle between Earth customs (nursing enemies, bowing to fate with grace) and Martian survival instincts (dead enemy means more resources).
-- **Love Across Planets:** A developing romantic bond between John Carter and Dejah Thoris, complicated by societal barriers and the physical distance of 48 million miles.
-- **Societal Hierarchy:** The jealousy of the warrior caste towards Dejah Thoris due to her noble ancestry and status.
+## Themes and Dynamics
+- **Physical Prowess:** The Martians fairly worship physical prowess and bravery. Feats of jumping, strength, and courage place the protagonist on a "high pinnacle" in their regard.
+- **Gratitude vs. Indifference:** While the Martians lack finer sentiments, the beast holds more love and loyalty than the entire population of green Martians. The protagonist actively protects the beast despite the risk to himself.
+- **Conflict Resolution:** Battles are resolved through direct physical confrontation (cudgel, fists) rather than technology or strategy.
 
-## Narrative Status
-John Carter is in a transitional phase, having mastered Thark riding techniques and earning respect from the community. He is preparing to depart for the city of Thark, with his relationship with Dejah Thoris becoming increasingly intimate despite external pressures to keep them apart.
+## Visual Continuity Notes
+- The beast is consistently depicted as large, powerful, and loyal.
+- Sola is often seen holding the protagonist's arm tightly.
+- The plaza serves as a recurring location for safety and gathering.
+- Martian warriors are frequently shown in groups (three or four) entering doorways.

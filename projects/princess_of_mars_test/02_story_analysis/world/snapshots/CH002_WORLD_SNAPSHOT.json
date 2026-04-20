@@ -4,37 +4,40 @@
   "scene_order": [
     "CH002_SC001",
     "CH002_SC002",
-    "CH002_SC003"
+    "CH002_SC003",
+    "CH002_SC004",
+    "CH002_SC005"
   ],
   "known_characters": [
+    "dead_friend",
     "john_carter",
+    "mars",
     "powell"
   ],
   "known_groups": [
-    "indians_ch002",
-    "narrator_ch002"
+    "apache_warriors",
+    "narrator"
   ],
   "provisional_roles": [
-    "narrator_ch002"
+    "narrator"
   ],
   "known_environments": [
-    "apache_camp_plateau",
-    "arizona_hills_chase",
-    "arizona_night_landscape",
-    "cave_entrance_mouth",
+    "apache_tepees",
+    "arizona_exterior_night",
+    "arizona_hills",
+    "cave_chamber",
     "cave_interior",
-    "cave_interior_chamber",
-    "cliff_ledge"
+    "heavens_above_landscape"
   ],
   "resolved_this_chapter": [],
   "character_entries": [
     {
-      "canonical_id": "indians_ch002",
-      "display_name": "indians_ch002",
+      "canonical_id": "apache_warriors",
+      "display_name": "apache_warriors",
       "status": "canonical",
       "entity_kind": "group",
       "aliases": [
-        "indians_ch002"
+        "apache_warriors"
       ],
       "first_seen_chapter": "CH002",
       "last_seen_chapter": "CH002",
@@ -46,14 +49,14 @@
         {
           "chapter_id": "CH002",
           "action": "created_as_canonical",
-          "reason": "No competing canonical alias detected; kept extracted asset id. Character markdown describes a group entity.",
-          "timestamp_utc": "2026-04-20T02:08:48.560090+00:00"
+          "reason": "No competing canonical alias detected; kept extracted asset id. Detected plural/group-like character asset.",
+          "timestamp_utc": "2026-04-20T03:25:20.467328+00:00"
         }
       ],
       "source_history": [
         {
           "chapter_id": "CH002",
-          "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/indians_ch002.md",
+          "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
           "record_kind": "chapter_local_character_breakdown"
         }
       ],
@@ -61,16 +64,63 @@
         "initial_extracted": [
           {
             "chapter_id": "CH002",
-            "summary": "No competing canonical alias detected; kept extracted asset id. Character markdown describes a group entity.",
-            "source": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/indians_ch002.md"
+            "summary": "No competing canonical alias detected; kept extracted asset id. Detected plural/group-like character asset.",
+            "source": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md"
           }
         ],
         "stable_canonical": [
-          "No competing canonical alias detected; kept extracted asset id. Character markdown describes a group entity."
+          "No competing canonical alias detected; kept extracted asset id. Detected plural/group-like character asset."
         ],
         "chapter_specific": {
           "CH002": [
-            "No competing canonical alias detected; kept extracted asset id. Character markdown describes a group entity."
+            "No competing canonical alias detected; kept extracted asset id. Detected plural/group-like character asset."
+          ]
+        }
+      }
+    },
+    {
+      "canonical_id": "dead_friend",
+      "display_name": "dead_friend",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "aliases": [
+        "dead_friend"
+      ],
+      "first_seen_chapter": "CH002",
+      "last_seen_chapter": "CH002",
+      "chapter_mentions": [
+        "CH002"
+      ],
+      "resolved_to": null,
+      "resolution_history": [
+        {
+          "chapter_id": "CH002",
+          "action": "created_as_canonical",
+          "reason": "No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.",
+          "timestamp_utc": "2026-04-20T03:25:20.467828+00:00"
+        }
+      ],
+      "source_history": [
+        {
+          "chapter_id": "CH002",
+          "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/dead_friend.md",
+          "record_kind": "chapter_local_character_breakdown"
+        }
+      ],
+      "description_layers": {
+        "initial_extracted": [
+          {
+            "chapter_id": "CH002",
+            "summary": "No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.",
+            "source": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/dead_friend.md"
+          }
+        ],
+        "stable_canonical": [
+          "No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity."
+        ],
+        "chapter_specific": {
+          "CH002": [
+            "No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity."
           ]
         }
       }
@@ -81,7 +131,8 @@
       "status": "canonical",
       "entity_kind": "individual",
       "aliases": [
-        "john_carter"
+        "john_carter",
+        "carter"
       ],
       "first_seen_chapter": "CH001",
       "last_seen_chapter": "CH001",
@@ -94,13 +145,13 @@
           "chapter_id": "CH001",
           "action": "created_as_canonical",
           "reason": "Resolved known Carter alias to john_carter.",
-          "timestamp_utc": "2026-04-20T02:07:28.394603+00:00"
+          "timestamp_utc": "2026-04-20T03:22:57.080630+00:00"
         }
       ],
       "source_history": [
         {
           "chapter_id": "CH001",
-          "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+          "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/carter.md",
           "record_kind": "chapter_local_character_breakdown"
         }
       ],
@@ -109,7 +160,7 @@
           {
             "chapter_id": "CH001",
             "summary": "Resolved known Carter alias to john_carter.",
-            "source": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md"
+            "source": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/carter.md"
           }
         ],
         "stable_canonical": [
@@ -123,12 +174,59 @@
       }
     },
     {
-      "canonical_id": "narrator_ch002",
-      "display_name": "narrator_ch002",
+      "canonical_id": "mars",
+      "display_name": "mars",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "aliases": [
+        "mars"
+      ],
+      "first_seen_chapter": "CH002",
+      "last_seen_chapter": "CH002",
+      "chapter_mentions": [
+        "CH002"
+      ],
+      "resolved_to": null,
+      "resolution_history": [
+        {
+          "chapter_id": "CH002",
+          "action": "created_as_canonical",
+          "reason": "No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.",
+          "timestamp_utc": "2026-04-20T03:25:20.467828+00:00"
+        }
+      ],
+      "source_history": [
+        {
+          "chapter_id": "CH002",
+          "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/mars.md",
+          "record_kind": "chapter_local_character_breakdown"
+        }
+      ],
+      "description_layers": {
+        "initial_extracted": [
+          {
+            "chapter_id": "CH002",
+            "summary": "No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.",
+            "source": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/mars.md"
+          }
+        ],
+        "stable_canonical": [
+          "No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity."
+        ],
+        "chapter_specific": {
+          "CH002": [
+            "No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity."
+          ]
+        }
+      }
+    },
+    {
+      "canonical_id": "narrator",
+      "display_name": "narrator",
       "status": "provisional",
       "entity_kind": "provisional_role",
       "aliases": [
-        "narrator_ch002"
+        "narrator"
       ],
       "first_seen_chapter": "CH002",
       "last_seen_chapter": "CH002",
@@ -141,13 +239,13 @@
           "chapter_id": "CH002",
           "action": "created_as_provisional",
           "reason": "Generic or role-based character remains provisional pending clarification.",
-          "timestamp_utc": "2026-04-20T02:08:48.560090+00:00"
+          "timestamp_utc": "2026-04-20T03:25:20.467828+00:00"
         }
       ],
       "source_history": [
         {
           "chapter_id": "CH002",
-          "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/narrator_ch002.md",
+          "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/narrator.md",
           "record_kind": "chapter_local_character_breakdown"
         }
       ],
@@ -156,7 +254,7 @@
           {
             "chapter_id": "CH002",
             "summary": "Generic or role-based character remains provisional pending clarification.",
-            "source": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/narrator_ch002.md"
+            "source": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/narrator.md"
           }
         ],
         "stable_canonical": [],
@@ -186,7 +284,7 @@
           "chapter_id": "CH001",
           "action": "created_as_canonical",
           "reason": "No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.",
-          "timestamp_utc": "2026-04-20T02:07:28.394603+00:00"
+          "timestamp_utc": "2026-04-20T03:22:57.080630+00:00"
         }
       ],
       "source_history": [
@@ -217,8 +315,8 @@
   ],
   "environment_entries": [
     {
-      "canonical_id": "apache_camp_plateau",
-      "display_name": "apache_camp_plateau",
+      "canonical_id": "apache_tepees",
+      "display_name": "apache_tepees",
       "status": "canonical",
       "entity_kind": "environment",
       "aliases": [],
@@ -232,7 +330,7 @@
       "source_history": [
         {
           "chapter_id": "CH001",
-          "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH001/apache_camp_plateau.md",
+          "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH001/apache_tepees.md",
           "record_kind": "chapter_local_environment_breakdown"
         }
       ],
@@ -241,7 +339,7 @@
           {
             "chapter_id": "CH001",
             "summary": "Environment currently kept under extracted canonical id.",
-            "source": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH001/apache_camp_plateau.md"
+            "source": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH001/apache_tepees.md"
           }
         ],
         "stable_canonical": [
@@ -255,46 +353,8 @@
       }
     },
     {
-      "canonical_id": "arizona_hills_chase",
-      "display_name": "arizona_hills_chase",
-      "status": "canonical",
-      "entity_kind": "landform",
-      "aliases": [],
-      "parent_environment_id": null,
-      "children": [],
-      "first_seen_chapter": "CH001",
-      "last_seen_chapter": "CH001",
-      "chapter_mentions": [
-        "CH001"
-      ],
-      "source_history": [
-        {
-          "chapter_id": "CH001",
-          "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH001/arizona_hills_chase.md",
-          "record_kind": "chapter_local_environment_breakdown"
-        }
-      ],
-      "description_layers": {
-        "initial_extracted": [
-          {
-            "chapter_id": "CH001",
-            "summary": "Environment currently kept under extracted canonical id.",
-            "source": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH001/arizona_hills_chase.md"
-          }
-        ],
-        "stable_canonical": [
-          "Environment currently kept under extracted canonical id."
-        ],
-        "chapter_specific": {
-          "CH001": [
-            "Environment currently kept under extracted canonical id."
-          ]
-        }
-      }
-    },
-    {
-      "canonical_id": "arizona_night_landscape",
-      "display_name": "arizona_night_landscape",
+      "canonical_id": "arizona_exterior_night",
+      "display_name": "arizona_exterior_night",
       "status": "canonical",
       "entity_kind": "environment",
       "aliases": [],
@@ -308,7 +368,7 @@
       "source_history": [
         {
           "chapter_id": "CH002",
-          "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/arizona_night_landscape.md",
+          "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/arizona_exterior_night.md",
           "record_kind": "chapter_local_environment_breakdown"
         }
       ],
@@ -317,7 +377,7 @@
           {
             "chapter_id": "CH002",
             "summary": "Environment currently kept under extracted canonical id.",
-            "source": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/arizona_night_landscape.md"
+            "source": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/arizona_exterior_night.md"
           }
         ],
         "stable_canonical": [
@@ -331,8 +391,46 @@
       }
     },
     {
-      "canonical_id": "cave_entrance_mouth",
-      "display_name": "cave_entrance_mouth",
+      "canonical_id": "arizona_hills",
+      "display_name": "arizona_hills",
+      "status": "canonical",
+      "entity_kind": "landform",
+      "aliases": [],
+      "parent_environment_id": null,
+      "children": [],
+      "first_seen_chapter": "CH001",
+      "last_seen_chapter": "CH001",
+      "chapter_mentions": [
+        "CH001"
+      ],
+      "source_history": [
+        {
+          "chapter_id": "CH001",
+          "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH001/arizona_hills.md",
+          "record_kind": "chapter_local_environment_breakdown"
+        }
+      ],
+      "description_layers": {
+        "initial_extracted": [
+          {
+            "chapter_id": "CH001",
+            "summary": "Environment currently kept under extracted canonical id.",
+            "source": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH001/arizona_hills.md"
+          }
+        ],
+        "stable_canonical": [
+          "Environment currently kept under extracted canonical id."
+        ],
+        "chapter_specific": {
+          "CH001": [
+            "Environment currently kept under extracted canonical id."
+          ]
+        }
+      }
+    },
+    {
+      "canonical_id": "cave_chamber",
+      "display_name": "cave_chamber",
       "status": "canonical",
       "entity_kind": "environment",
       "aliases": [],
@@ -346,7 +444,7 @@
       "source_history": [
         {
           "chapter_id": "CH001",
-          "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH001/cave_entrance_mouth.md",
+          "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH001/cave_chamber.md",
           "record_kind": "chapter_local_environment_breakdown"
         }
       ],
@@ -355,7 +453,7 @@
           {
             "chapter_id": "CH001",
             "summary": "Environment currently kept under extracted canonical id.",
-            "source": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH001/cave_entrance_mouth.md"
+            "source": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH001/cave_chamber.md"
           }
         ],
         "stable_canonical": [
@@ -407,46 +505,8 @@
       }
     },
     {
-      "canonical_id": "cave_interior_chamber",
-      "display_name": "cave_interior_chamber",
-      "status": "canonical",
-      "entity_kind": "sub_location",
-      "aliases": [],
-      "parent_environment_id": null,
-      "children": [],
-      "first_seen_chapter": "CH001",
-      "last_seen_chapter": "CH001",
-      "chapter_mentions": [
-        "CH001"
-      ],
-      "source_history": [
-        {
-          "chapter_id": "CH001",
-          "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH001/cave_interior_chamber.md",
-          "record_kind": "chapter_local_environment_breakdown"
-        }
-      ],
-      "description_layers": {
-        "initial_extracted": [
-          {
-            "chapter_id": "CH001",
-            "summary": "Environment currently kept under extracted canonical id.",
-            "source": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH001/cave_interior_chamber.md"
-          }
-        ],
-        "stable_canonical": [
-          "Environment currently kept under extracted canonical id."
-        ],
-        "chapter_specific": {
-          "CH001": [
-            "Environment currently kept under extracted canonical id."
-          ]
-        }
-      }
-    },
-    {
-      "canonical_id": "cliff_ledge",
-      "display_name": "cliff_ledge",
+      "canonical_id": "heavens_above_landscape",
+      "display_name": "heavens_above_landscape",
       "status": "canonical",
       "entity_kind": "environment",
       "aliases": [],
@@ -460,7 +520,7 @@
       "source_history": [
         {
           "chapter_id": "CH002",
-          "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/cliff_ledge.md",
+          "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/heavens_above_landscape.md",
           "record_kind": "chapter_local_environment_breakdown"
         }
       ],
@@ -469,7 +529,7 @@
           {
             "chapter_id": "CH002",
             "summary": "Environment currently kept under extracted canonical id.",
-            "source": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/cliff_ledge.md"
+            "source": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/heavens_above_landscape.md"
           }
         ],
         "stable_canonical": [
@@ -487,5 +547,5 @@
   "global_environment_directory_path": "projects/princess_of_mars_test/02_story_analysis/world/global/ENVIRONMENT_DIRECTORY.json",
   "global_character_registry_path": "projects/princess_of_mars_test/02_story_analysis/world/global/CHARACTER_REGISTRY_GLOBAL.json",
   "global_environment_registry_path": "projects/princess_of_mars_test/02_story_analysis/world/global/ENVIRONMENT_REGISTRY_GLOBAL.json",
-  "generated_at_utc": "2026-04-20T02:08:48.585109+00:00"
+  "generated_at_utc": "2026-04-20T03:25:20.492356+00:00"
 }

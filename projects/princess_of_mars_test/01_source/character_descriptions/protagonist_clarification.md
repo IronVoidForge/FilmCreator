@@ -4,10 +4,10 @@
 protagonist
 
 # Why This Needs Clarification
-Character lacks stable identification for image generation purposes.
+The character is not fully identified from this chapter alone.
 
 # Question
-What are the protagonist's approximate height, build, hair color, and any distinguishing physical features?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

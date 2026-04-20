@@ -1,15 +1,14 @@
-# Environment Index - Princess of Mars Chapter 4
+# Chapter CH004 Environment Index
 
-## Primary Environments
+## Extracted Environments
 
-| Asset ID | Name | Role | Description |
-|----------|------|------|-------------|
-| city_plaza_entrance | City Plaza Entrance | Transit Setting | White marble city with ruined roadway entrance; broad steps leading to table land; plaza surrounded by buildings |
-| audience_chamber | Audience Chamber | Primary Setting | Low building, wide 100-foot entrance, canopy over hall; chamber dotted with carved wooden desks and chairs; rostrum platform |
-| accommodation_chamber | Accommodation Chamber | Primary Setting | Spacious chamber decorated with murals/mosaics; ten-legged creature (frog-headed pony) waddles into room |
+1. **martian_ruined_city_exterior** - Arrival at foot of mountains near ruined city structures.
+2. **chieftain_palace_interior** - Audience chamber with white marble, gold, galleries, and carved desks.
+3. **ceremonial_grounds** - Open space for sak jumps and distance demonstrations.
+4. **sola_sleeping_quarters** - Spacious chamber with mural paintings, mosaics, and ten-legged creature anchor.
 
-## Environment Families Summary
+## Notes
 
-- **Cityscape Family**: White marble architecture, ruined roadway, plaza geography
-- **Interior Chamber Family**: Low buildings, wide entrances, canopy structures, furniture arrangements
-- **Accommodation Interior**: Murals, mosaics, decorative elements, creature introductions
+- All environments are stable across later reruns.
+- Asset IDs follow lowercase snake_case convention.
+- Descriptions prioritize visible geography and atmosphere over literary abstraction.

@@ -1,29 +1,16 @@
-# Cave Interior Environment
+# Cave Interior
 
-## Environment Role
-Primary setting - narrator's paralysis location and initial confrontation space
+## Role
+Primary
 
-## Architecture/Geography
-Interior cave chamber with natural opening to exterior. Rough stone walls, uneven floor surface. Opening positioned at one end allowing light penetration from outside.
+## Architecture or Geography
+Cave interior facing cliff opening, internal ledge, floor space.
 
-## Lighting and Atmosphere Cues
-- Early morning sun filtering through opening creates directional illumination
-- Moonlight flooding interior during night sequences
-- Vapor/tenuous mist filling space creating atmospheric depth
-- Dim overall lighting with high contrast between interior shadows and exterior light source
+## Lighting and Atmosphere
+Dim light (early morning sun/moonlight), vapor filling space, pungent odor of poisonous gas, faint vapor against daylight opening.
 
-## Scale Cues and Environmental Anchors
-- Cave walls provide vertical scale reference
-- Opening size establishes relationship between interior/exterior spaces
-- Floor surface texture indicates rough, natural terrain
-- Hanging vapor creates depth perception within chamber
+## Scale Cues and Anchors
+Lifeless body lying on floor, horse standing outside, cliff opening visible.
 
-## Descriptive Noun Phrases for Render Prompts
-- dimly lit stone chamber
-- cave opening with exterior light spill
-- tenuous atmospheric mist
-- rough interior floor surface
-- directional morning illumination
-- moonlit cavern interior
-- vapor-filled underground space
-- natural rock formation interior
+## Descriptive Noun Phrases
+Vapor-filled cave space, dim cliff opening, lifeless body anchor, internal ledge, stone-like paralysis zone.

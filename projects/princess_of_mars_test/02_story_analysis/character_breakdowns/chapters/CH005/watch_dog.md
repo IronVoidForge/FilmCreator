@@ -1,25 +1,41 @@
-# Watch Dog - CH005
+# Watch Dog
 
 **Display Name:** Watch Dog  
-**Chapter Role:** Chamber Guardian / Loyalty Test Subject  
-**Physical Presence:** Referenced (guards chamber, narrator jumps over it)  
+**Chapter Role:** Martian Beast / Guardian  
+**Physical Presence:** Present (surveys narrator, guards chamber, follows escape attempt)  
 
-**Physical Description:** Insufficient detail in source material for reliable image generation. Chapter only identifies this as a "dog" with no breed, size, color, or physical features mentioned.
+## Physical Description Status
+**Supported by Source:** Limited  
+- Short legs documented  
+- Wicked-looking eyes noted  
+- Ferocious tusks specified  
+- White hairless body implied by later capture context  
+- Glues eyes upon narrator while sleeping  
 
-**Costume/Silhouette:** Unknown - no costume or silhouette details provided in source material.
+## Uncertainty Notes
+**Missing Details:**
+- No head shape or facial structure described
+- No eye color or pupil structure documented
+- No tusk arrangement or size specifications
+- No body proportions (length, width, height) specified
+- No fur texture beyond "hairless" noted
+- No tail or limb count mentioned
 
-**Continuity-Critical Traits:** 
-- Guards chamber alone when Sola leaves
-- Subject of narrator's escape test (narrator jumps over it)
-- Appears to be loyal but narrator tests its loyalty
+**Render-Facing Prompt Needs:**
+- Head and facial anatomy details required
+- Eye structure and expression documentation needed
+- Tusk positioning and arrangement absent from source
+- Body proportions and silhouette not established
 
-**Render-Facing Prompt Notes:** Character requires manual description specification for later image generation. Focus on role-based visual cues (guardian, watch dog) rather than invented physical details. Consider size relative to narrator and chamber space.
-
-**Uncertainty Notes:** Physical appearance is not described in source material beyond being a "dog." Any visual representation must be based on external knowledge or manual description specification, not chapter content.
+## Continuity-Critical Traits
+- Guardian role confirmed: guards narrator carefully during captivity
+- Life-saving actions documented: twice saves narrator's life
+- Physical limitations noted: short legs are bar to swiftness (no jumper/runner)
+- Martian species identification: fleetest animal on Mars when charging
 
 # Aliases
 
-""
+Martian Watch Dog, Brute, Beast
 
 
 

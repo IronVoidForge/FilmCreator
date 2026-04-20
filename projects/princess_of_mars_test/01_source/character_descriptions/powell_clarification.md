@@ -4,10 +4,10 @@
 powell
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Character might already exist under another name or is too weakly identified for reliable continuity tracking across chapters.
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+What are Powell's physical characteristics (age, build, distinguishing features) and what name variations should be used for continuity?
 
 # Guidance
 - answer briefly and concretely

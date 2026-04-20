@@ -4,10 +4,10 @@
 apache_warriors
 
 # Why This Needs Clarification
-Collective group may already exist under another name or is too weakly identified as a unified entity for consistent character tracking across chapters.
+The character is not fully identified from this chapter alone.
 
 # Question
-Should Apache Warriors be treated as a single collective character asset or broken into individual warrior assets for more detailed physical descriptions?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

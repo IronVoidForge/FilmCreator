@@ -1,14 +1,9 @@
-# Character Index - CH005
+# Character Index - Chapter V: The Watch Dog and the Escape Attempt
 
-| Asset ID | Canonical ID | Aliases | Fully Identified | Manual Description Required |
-|----------|--------------|---------|------------------|------------------------------|
-| sola | Sola | - | true | false |
-| watch_dog | Watch Dog | - | true | true |
-| narrator | Narrator | - | false | true |
-| colossal_ape | Colossal White Ape | - | false | true |
+| Character | Role | Physical Presence | Description Status |
+|-----------|------|-------------------|-------------------|
+| Sola | Female Guardian | Referenced (not visually present in chapter) | Manual description required |
+| Watch Dog | Martian Beast | Present (surveys narrator, guards chamber) | Manual description required |
+| Ape-like Creature | Colossal Capturer | Present (captures narrator at city edge) | Manual description required |
 
-**Notes:**
-- Sola: Limited physical description in source material
-- Watch Dog: Minimal description beyond "dog"
-- Narrator: First-person perspective, no physical traits provided
-- Colossal Ape: Some description but insufficient for reliable image generation
+**Notes:** All characters have sparse physical descriptions insufficient for dependable image generation. Additional visual details needed for render-facing prompts.

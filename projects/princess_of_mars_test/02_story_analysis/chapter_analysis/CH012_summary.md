@@ -1,3 +1,0 @@
-Story: Carter is summoned by Lorquas Ptomel and accused of plotting an escape with Dejah Thoris ("red girl"). He faces a trial on return to Thark. Tars Tarkas offers him quarters in the building adjoining Sola's, explaining Thark retinue customs and distributing loot (weapons, silks, food). Carter selects a room on the third floor near Dejah Thoris's apartment to establish communication.
-
-Visual: Audience chamber interior -> Plaza exterior -> Winding corridor -> Upper floors overlooking moss-covered court with fountains/statuary -> Back rooms receiving loads of weapons/silks/furs/cooking utensils.

@@ -1,4 +1,6 @@
-SC001 - Sola leaves chamber; narrator examines murals alone
-SC002 - Sola returns with provisions; narrator sleeps through cold night
-SC003 - Narrator attempts escape over Watch Dog; reaches window sill
-SC004 - Narrator dragged back; confronts colossal white ape-like creature
+SC001 - Sola's Departure & Dog Introduction
+SC002 - Room Inspection & Food Delivery
+SC003 - Sleep Cycle & Guardian Care
+SC004 - Escape Attempt Preparation
+SC005 - The Escape Execution
+SC006 - The Chase & Capture

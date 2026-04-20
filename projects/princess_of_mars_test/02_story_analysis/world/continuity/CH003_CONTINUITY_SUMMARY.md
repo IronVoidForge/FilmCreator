@@ -8,25 +8,27 @@
 - CH003_SC005
 
 ## Known Canonical Characters
+- dead_friend
+- hatching_creature_ch003
 - john_carter
-- martian_leader
+- mars
+- martian_leader_ch003
+- martian_soldier_ch003
 - powell
-- protagonist
 
 ## Unresolved / Provisional Characters
-- narrator_ch002
+- narrator
+- narrator_ch003
 
 ## Known Canonical Environments
-- apache_camp_plateau
-- arizona_hills_chase
-- arizona_night_landscape
-- cave_entrance_mouth
+- apache_tepees
+- arizona_exterior_night
+- arizona_hills
+- cave_chamber
 - cave_interior
-- cave_interior_chamber
-- cliff_ledge
-- glass_enclosure
-- mars_surface
-- martian_mount_conveyance
+- circular_basin_incubator
+- heavens_above_landscape
+- martian_hills_landscape
 
 ## Registry Artifacts
 - projects/princess_of_mars_test/02_story_analysis/world/CHARACTER_REGISTRY.json

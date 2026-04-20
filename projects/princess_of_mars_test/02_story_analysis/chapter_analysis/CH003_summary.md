@@ -1,15 +1,14 @@
-# Chapter III: My Advent on Mars
+**Visual Context:**
+- Landscape: Yellowish moss, quartz rocks, low hills, frozen poles (mentioned as exception).
+- Enclosure: Glass roof (4-5 inches thick), 4 feet high wall, no doors/windows on near side.
+- Eggs: Snowy white, 2.5 ft diameter, hatching process visible.
+- Martians: Olive green skin (darker in males), blood red iris, six limbs (young), antennae ears, longitudinal slit noses.
+- Mounts: Slate color, four legs, broad flat tail, nailless feet.
+- Weapons: Metal-shod spear (40 feet long), rifle (white metal/wood stock).
 
-## Narrative Arc
-1. **Awakening & Physics:** Protagonist wakes on Mars, realizes lower gravity via jumping (3 yards high). Struggles with walking mechanics (hopping/sprawling) due to unfamiliar muscular exertion.
-2. **Incubator Discovery:** Finds glass-walled enclosure containing large eggs (2.5 ft diameter) hatching into six-legged creatures (later clarified as two legs/arms + intermediaries). Creatures have blood red eyes, yellowish-green bodies.
-3. **Confrontation & Escape:** Adult Martians arrive on mounts (10 ft shoulder height). Leader's spear (40 ft long) nearly hits protagonist. Protagonist jumps 30 ft high to escape enclosure.
-4. **First Contact Resolution:** Martians observe agility, shift intent from killing to capturing. Leader approaches unarmed, offers metal armlet. Protagonist accepts and bows.
-5. **Departure:** Protagonist rides behind Martian mount with others towards hills.
-
-## Visual Continuity
-- **Environment:** Yellowish moss, low hills, midday sun.
-- **Enclosure:** Glass roof (4-5 inches thick), wall height (4 feet).
-- **Creatures:** Egg diameter (2.5 ft), Eye placement (side-set, protruding), Body color (light yellowish-green).
-- **Martians:** Height (15 ft Earth weight), Mount shoulder height (10 ft), Spear length (40 ft).
-- **Rifles:** White metal stock, aluminum/steel barrel.
+**Story Beats:**
+1. Awakening & Gravity Check: Narrator wakes in circular basin. Tests movement; hops instead of walking due to low gravity.
+2. The Incubator: Discovers glass-walled enclosure with giant eggs. Observes hatching grotesque creatures.
+3. Warrior Arrival: Adult Martians approach silently on mounts. Leader's spear nearly hits narrator. Mounts described (slate color, four legs).
+4. The Leap: Narrator jumps 30 feet to escape spear point. Lands safely across enclosure. Martians observe with astonishment.
+5. Negotiation & Ride: Leader approaches unarmed. Offers metal armlet. Narrator accepts. Taken prisoner on mount, cavalcade rides toward hills.

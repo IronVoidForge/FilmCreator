@@ -4,10 +4,10 @@
 dead_friend
 
 # Why This Needs Clarification
-Character might already exist under another name or is too weakly identified for reliable image generation without additional clarification about identity and relationship to protagonist.
+The character is not fully identified from this chapter alone.
 
 # Question
-What is the proper name of the friend/deceased companion? Is this a specific character from earlier chapters (Chapter I) or an unnamed deceased individual?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

@@ -1,11 +1,5 @@
-# Scene Index: THE ESCAPE OF THE DEAD (CH002)
-
-| Scene ID | Title | Location | Primary Characters | Narrative Function |
-|----------|-------|----------|-------------------|--------------------|
-| SC001 | The Cave Paralysis & Indian Encounter | Interior of cave (dim light, opening to daylight) | Narrator, Indians | Establish paralysis, introduce stealthy threat, cliff-edge tension |
-| SC002 | Breaking Free & Flight | Cave interior -> Arizona night landscape | Narrator | Break paralysis, discover body state, flee into night |
-| SC003 | The Night Landscape & Mars Reveal | Arizona night landscape (rocky gorge, cacti-studded flat) | Narrator | Investigate sounds, observe Mars, mystical pull through space |
-
-**Total Scenes:** 3  
-**Chapter Prefix:** CH002  
-**Scene ID Format:** SC### (no chapter prefix in scene_id values)
+SC001: Paralysis and Indian Encounter - Narrator paralyzed in cave, Apache warriors approach and flee due to moaning sound.
+SC002: Speculation and Silence - Narrator speculates on paralysis cause, horse wanders off, silence persists until midnight.
+SC003: Metamorphosis and Liberation - Narrator breaks free of paralysis, discovers own body is dead while standing alive.
+SC004: Flight and Investigation - Narrator flees cave into starlight, observes rocky gorge and cacti-studded flat.
+SC005: Drawn to Mars - Narrator gazes at large red star (Mars), feels spell of fascination and drawn through space.

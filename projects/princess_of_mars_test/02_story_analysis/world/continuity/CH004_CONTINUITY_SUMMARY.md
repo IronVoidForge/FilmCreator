@@ -5,33 +5,38 @@
 - CH004_SC002
 - CH004_SC003
 - CH004_SC004
-- CH004_SC005
 
 ## Known Canonical Characters
+- carter_human
+- chieftain_martian
+- dead_friend
+- hatching_creature_ch003
 - john_carter
-- martian_leader
+- mars
+- martian_leader_ch003
+- martian_soldier_ch003
 - powell
-- protagonist
 - sola
 - tars_tarkas
+- warrior_martian
 
 ## Unresolved / Provisional Characters
-- narrator_ch002
+- narrator
+- narrator_ch003
 
 ## Known Canonical Environments
-- accommodation_chamber
-- apache_camp_plateau
-- arizona_hills_chase
-- arizona_night_landscape
-- audience_chamber
-- cave_entrance_mouth
+- apache_tepees
+- arizona_exterior_night
+- arizona_hills
+- cave_chamber
 - cave_interior
-- cave_interior_chamber
-- city_plaza_entrance
-- cliff_ledge
-- glass_enclosure
-- mars_surface
-- martian_mount_conveyance
+- ceremonial_grounds
+- chieftain_palace_interior
+- circular_basin_incubator
+- heavens_above_landscape
+- martian_hills_landscape
+- martian_ruined_city_exterior
+- sola_sleeping_quarters
 
 ## Registry Artifacts
 - projects/princess_of_mars_test/02_story_analysis/world/CHARACTER_REGISTRY.json

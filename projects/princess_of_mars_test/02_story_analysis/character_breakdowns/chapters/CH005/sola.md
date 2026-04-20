@@ -1,25 +1,38 @@
-# Sola - CH005
+# Sola
 
 **Display Name:** Sola  
-**Chapter Role:** Chamber Attendant / Food Provider  
-**Physical Presence:** Referenced (leaves chamber, returns with provisions)  
+**Chapter Role:** Female Guardian / Sympathetic Caregiver  
+**Physical Presence:** Referenced (not visually present in chapter)  
 
-**Physical Description:** Insufficient detail in source material for reliable image generation. Character is identified by name and role but lacks specific physical traits, appearance, or distinguishing features mentioned in the chapter summary.
+## Physical Description Status
+**Supported by Source:** Limited  
+- Female guardian who brings food and drink to narrator  
+- Sits short ways off regarding narrator intently  
+- Shows sympathy, kindliness, affection toward narrator  
+- Provides unfailing care and ministrations  
 
-**Costume/Silhouette:** Unknown - no costume or silhouette details provided in source material.
+## Uncertainty Notes
+**Missing Details:**
+- No facial features documented (eyes, nose, mouth)
+- No body proportions specified (height, build)
+- No hair color or style mentioned
+- No distinctive markings or accessories noted
+- No skin tone or complexion described
 
-**Continuity-Critical Traits:** 
-- Provides food and drink to narrator
-- Guards chamber alongside Watch Dog (when present)
-- Returns after narrator's escape attempt
+**Render-Facing Prompt Needs:**
+- Specific facial structure and expression details required
+- Body type and posture documentation needed
+- Hair and clothing descriptions absent from source material
+- Distinctive visual identifiers not established in chapter
 
-**Render-Facing Prompt Notes:** Character requires manual description specification for later image generation. Focus on role-based visual cues (attendant, provider) rather than invented physical details.
-
-**Uncertainty Notes:** Physical appearance is not described in source material. Any visual representation must be based on external knowledge or manual description specification, not chapter content.
+## Continuity-Critical Traits
+- Sympathetic caregiver role confirmed through actions (food delivery, covering narrator with fur)
+- Guardian identity verified by narrator presumption and later confirmation
+- Caregiver functions: feeding, warming, protecting narrator from suffering/hardships
 
 # Aliases
 
-""
+Female Guardian, Sympathetic Caregiver
 
 
 
@@ -35,10 +48,10 @@ true
 
 # Manual Description Input Required
 
-No
+Yes
 
 
 
 # Manual Description Reason
 
-"Character has sufficient physical presence and action description in source material"
+Physical description is sparse (female guardian who brings food/drink) - insufficient visual details for dependable image generation. Needs specific facial features, body proportions, and distinctive markings documented.

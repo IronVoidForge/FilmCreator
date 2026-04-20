@@ -1,11 +1,10 @@
-# Environment Index - Chapter CH002
+# Environment Index - CH002
 
-## Primary Settings
-- cave_interior
-- cliff_ledge
+## Cave Interior
+Primary setting for paralysis and transformation. Features a cave interior facing a cliff opening, internal ledges, and vapor-filled space.
 
-## Secondary/Transit Settings
-- arizona_night_landscape
+## Arizona Exterior Night
+Secondary transit environment featuring rocky gorges, cacti-studded flats, and silvered mountains under starlight.
 
-## Notes
-All environments listed are stable geography and atmosphere families suitable for render-facing prompt writing. Each environment includes role designation, architecture/geography description, lighting/atmosphere cues, scale anchors, and descriptive noun phrases.
+## Heavens Above Landscape
+Metaphysical setting focusing on the red star (Mars) and the vast canopy of stars above the landscape.
