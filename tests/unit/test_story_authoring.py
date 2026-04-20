@@ -419,6 +419,112 @@ class _ChunkFallbackAuthoringLMStudioClient(_FakeAuthoringLMStudioClient):
         )
 
 
+class _ChunkFallbackEnvironmentAuthoringLMStudioClient(_FakeAuthoringLMStudioClient):
+    def chat_completion_result(
+        self,
+        *,
+        system_prompt: str,
+        user_prompt: str,
+        temperature: float = 0.2,
+        model: str | None = None,
+    ) -> LMStudioChatResult:
+        if "task: environment_extraction" in user_prompt and "Fallback extraction chunk" not in user_prompt:
+            return LMStudioChatResult(
+                status="transport_error",
+                model=model or "test-local-model",
+                payload=None,
+                text="",
+                error_message="Timed out waiting for LM Studio at http://127.0.0.1:1234/v1/chat/completions",
+            )
+
+        if "task: environment_extraction" in user_prompt and "Fallback extraction chunk 1/2" in user_prompt:
+            return LMStudioChatResult(
+                status="success",
+                model=model or "test-local-model",
+                payload={},
+                text=_packet(
+                    task="environment_extraction",
+                    sections={
+                        "environment_index_markdown": "\n".join(
+                            [
+                                "# Environment Index - CH001",
+                                "",
+                                "## Visible Environments",
+                                "",
+                                "| Asset ID | Role | Geography | Lighting | Atmosphere | Scale | Anchors | Description |",
+                                "|---|---|---|---|---|---|---|---|",
+                                "| arizona_cave_location | Primary | Cave interior | Dim lighting | Mysterious tension | Medium | Rock walls, exit passage | Narrator awakens inside a cave |",
+                            ]
+                        ),
+                    },
+                    records=[
+                        _record(
+                            record_type="environment",
+                            fields={
+                                "asset_id": "arizona_cave_location",
+                                "role": "Primary",
+                                "geography": "Cave interior",
+                                "lighting": "Dim lighting",
+                                "atmosphere": "Mysterious tension",
+                                "scale": "Medium",
+                                "anchors": "Rock walls, exit passage",
+                            },
+                            sections={
+                                "markdown": "# Arizona Cave Location\nOpening half environment record.\n",
+                            },
+                        )
+                    ],
+                ),
+            )
+
+        if "task: environment_extraction" in user_prompt and "Fallback extraction chunk 2/2" in user_prompt:
+            return LMStudioChatResult(
+                status="success",
+                model=model or "test-local-model",
+                payload={},
+                text=_packet(
+                    task="environment_extraction",
+                    sections={
+                        "environment_index_markdown": "\n".join(
+                            [
+                                "# Environment Index - CH001",
+                                "",
+                                "## Visible Environments",
+                                "",
+                                "| Asset ID | Role | Geography | Lighting | Atmosphere | Scale | Anchors | Description |",
+                                "|---|---|---|---|---|---|---|---|",
+                                "| mars_garden_setting | Secondary | Garden geography | Warm lighting | Reunion atmosphere | Medium | Plant life, waiting figure | Visionary Mars garden |",
+                            ]
+                        ),
+                    },
+                    records=[
+                        _record(
+                            record_type="environment",
+                            fields={
+                                "asset_id": "mars_garden_setting",
+                                "role": "Secondary",
+                                "geography": "Garden geography",
+                                "lighting": "Warm lighting",
+                                "atmosphere": "Reunion atmosphere",
+                                "scale": "Medium",
+                                "anchors": "Plant life, waiting figure",
+                            },
+                            sections={
+                                "markdown": "# Mars Garden Setting\nLater half environment record.\n",
+                            },
+                        )
+                    ],
+                ),
+            )
+
+        return super().chat_completion_result(
+            system_prompt=system_prompt,
+            user_prompt=user_prompt,
+            temperature=temperature,
+            model=model,
+        )
+
+
 def test_authoring_checkpoint_writes_analysis_planning_and_manual_character_placeholders(
     tmp_path: Path, monkeypatch
 ) -> None:
@@ -637,6 +743,58 @@ def test_scene_decomposition_validator_warns_on_two_scenes_and_rejects_empty() -
         assert "no usable scenes" in str(exc)
     else:
         raise AssertionError("Expected empty scene decomposition to fail validation.")
+
+
+def test_analyze_chapter_falls_back_to_chunked_environment_extraction_on_timeout(
+    tmp_path: Path, monkeypatch
+) -> None:
+    projects_root = tmp_path / "projects"
+
+    monkeypatch.setattr(common_module, "ROOT", tmp_path)
+    monkeypatch.setattr(common_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(scaffold_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(scaffold_module, "ROOT", tmp_path)
+    monkeypatch.setattr(scaffold_module, "TEMPLATES_ROOT", REAL_TEMPLATES_ROOT)
+    monkeypatch.setattr(scaffold_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(state_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(state_module, "ROOT", tmp_path)
+    monkeypatch.setattr(state_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(authoring_module, "ROOT", tmp_path)
+    monkeypatch.setattr(authoring_module, "LMStudioClient", _ChunkFallbackEnvironmentAuthoringLMStudioClient)
+    monkeypatch.setattr(authoring_module, "load_runtime_settings", lambda: object())
+    monkeypatch.setattr(authoring_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(story_authoring_module, "LMStudioClient", _ChunkFallbackEnvironmentAuthoringLMStudioClient)
+    monkeypatch.setattr(story_authoring_module, "load_runtime_settings", lambda: object())
+
+    scaffold_module.create_project("demo")
+
+    chapter_path = projects_root / "demo" / "01_source" / "chapters" / "CH001_demo.md"
+    chapter_path.write_text(
+        "\n".join(
+            [
+                "# Title",
+                "Demo Chapter",
+                "",
+                "# Chapter",
+                "CH001",
+                "",
+                "# Text",
+                "A damaged vessel drifts above an abandoned city while a captive is discovered.",
+                "",
+                "The second half of the chapter adds a new setting shift and an earth-referential vision.",
+                "",
+                "Another paragraph gives enough material for the chunked fallback to split cleanly.",
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    summary = story_authoring_module.analyze_chapter(project_slug="demo", chapter="CH001_demo.md")
+
+    assert summary.chapter_id == "CH001"
+    assert (projects_root / "demo" / "02_story_analysis" / "environment_breakdowns" / "chapters" / "CH001" / "arizona_cave_location.md").exists()
+    assert (projects_root / "demo" / "02_story_analysis" / "environment_breakdowns" / "chapters" / "CH001" / "mars_garden_setting.md").exists()
 
 
 def test_analyze_chapter_falls_back_to_chunked_character_extraction_on_timeout(
