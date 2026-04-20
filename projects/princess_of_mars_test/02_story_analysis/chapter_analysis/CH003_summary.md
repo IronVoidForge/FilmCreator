@@ -1,10 +1,9 @@
-**Visual Continuity:**
-- Environment: Yellowish moss terrain, glass enclosure roof (4-5 inches thick), low hills in distance.
-- Flora/Fauna: Giant eggs (2.5 ft diameter), hatchlings (six legs, red eyes, white tusks), adult Martians (15 ft tall), mounts (dark slate color, four legs each side, broad tail).
-- Equipment: Metal-shod spears (40 ft long), rifles (white metal/wood stock, aluminum/steel barrel).
+# Visual Continuity Facts
+- **Environment:** Yellowish mosslike vegetation, quartz-bearing rock, low hills, solid glass roof (4-5 inches thick).
+- **Martians:** 15 feet tall, dark slate skin, yellow feet, small cup-shaped antennae ears, blood red iris, white teeth with upward-curving tusks.
+- **Mounts:** Ten feet high at shoulder, four legs, broad flat tail, no hair, smooth glossy, no bridle/reins.
+- **Eggs:** Snowy white, 2.5 feet diameter, hatching process observed.
+- **Weapons:** 40-foot spears (metal-tipped), rifles (white metal barrel, wood stock, radium projectiles).
 
-**Narrative Arc:**
-1. Waking & Gravity Test: Narrator wakes on Mars, discovers low gravity via hopping instead of walking.
-2. Discovery: Finds glass incubator with hatching eggs and strange hatchlings.
-3. Encounter: Adult Martians arrive; narrator nearly impaled by spear but escapes using agility leap.
-4. Resolution: Martian leader approaches unarmed, offers metal armlet for peace. Narrator accepts armlet and rides off towards hills.
+# Broad Story Summary
+The narrator wakes in a circular basin on Mars and realizes gravity is significantly lower, causing them to jump three yards upon standing. While attempting to walk, they hop and sprawl due to unfamiliar muscle dynamics. They discover a glass incubator containing giant eggs and observe grotesque young Martians hatching. A group of adult Martians approaches; the leader's spear nearly strikes the narrator, but the sound alerts the leader. The narrator leaps thirty feet into the air to escape, landing safely on the opposite side. The Martians are surprised by this agility. The leader dismounts unarmed and offers a metal armlet as a peace token. The narrator accepts it, and they walk together before the leader mounts his animal. The entire cavalcade departs towards the range of hills.

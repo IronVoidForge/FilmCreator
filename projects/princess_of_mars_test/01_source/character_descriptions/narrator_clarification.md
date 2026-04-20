@@ -4,10 +4,10 @@
 narrator
 
 # Why This Needs Clarification
-The extracted character id appears generic or role-based rather than clearly canonical.
+Character may be human or Martian; needs clarification on species and physical details
 
 # Question
-This character is named or role-labeled but not fully identified. Can you find a stronger canonical identity from another chapter, or should FilmCreator keep this as a scene-local provisional character?
+Is the narrator a human visitor, and what are their specific physical characteristics?
 
 # Guidance
 - answer briefly and concretely

@@ -4,10 +4,10 @@
 chieftain
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Character may exist under different name or be too weakly identified; needs clarification on identity
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+Is the Chieftain a separate character from Tars Tarkas, and what is their physical description?
 
 # Guidance
 - answer briefly and concretely
