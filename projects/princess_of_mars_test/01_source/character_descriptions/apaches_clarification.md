@@ -4,10 +4,10 @@
 apaches
 
 # Why This Needs Clarification
-Needs identity clarification for image generation of group members.
+The character is not fully identified from this chapter alone.
 
 # Question
-What are the physical characteristics and attire of Apache warriors in this historical setting?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

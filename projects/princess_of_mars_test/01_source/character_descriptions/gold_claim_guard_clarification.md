@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-john_carter
+gold_claim_guard
 
 # Why This Needs Clarification
-Needs identity clarification for consistent image generation.
+Needs identity clarification for consistent image generation of claim guard character.
 
 # Question
-What is John Carter's physical form and origin story?
+What is the claim guard's physical form during gold discovery events?
 
 # Guidance
 - answer briefly and concretely

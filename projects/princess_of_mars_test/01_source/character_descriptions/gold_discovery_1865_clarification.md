@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-john_carter
+gold_discovery_1865
 
 # Why This Needs Clarification
-Needs identity clarification for consistent image generation.
+Needs identity clarification for consistent image generation of gold discovery character.
 
 # Question
-What is John Carter's physical form and origin story?
+What is the gold discovery participant's physical form during 1865 events?
 
 # Guidance
 - answer briefly and concretely

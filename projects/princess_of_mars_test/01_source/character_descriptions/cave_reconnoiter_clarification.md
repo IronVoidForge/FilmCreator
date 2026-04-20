@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-john_carter
+cave_reconnoiter
 
 # Why This Needs Clarification
-Needs identity clarification for consistent image generation.
+Needs identity clarification for consistent image generation of cave reconnoiter character.
 
 # Question
-What is John Carter's physical form and origin story?
+What is the cave reconnoiter's physical form during ten-year stay initiation?
 
 # Guidance
 - answer briefly and concretely

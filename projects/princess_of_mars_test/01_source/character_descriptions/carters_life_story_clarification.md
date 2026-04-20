@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-john_carter
+carters_life_story
 
 # Why This Needs Clarification
-Needs identity clarification for consistent image generation.
+Needs identity clarification for consistent image generation of life story character.
 
 # Question
-What is John Carter's physical form and origin story?
+What is the life story writer's physical form and relationship to John Carter?
 
 # Guidance
 - answer briefly and concretely

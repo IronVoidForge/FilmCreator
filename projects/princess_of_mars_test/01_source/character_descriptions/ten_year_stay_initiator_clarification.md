@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-john_carter
+ten_year_stay_initiator
 
 # Why This Needs Clarification
-Needs identity clarification for consistent image generation.
+Needs identity clarification for consistent image generation of ten-year stay character.
 
 # Question
-What is John Carter's physical form and origin story?
+What is the ten-year stay initiator's physical form during cave dwelling?
 
 # Guidance
 - answer briefly and concretely

@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-john_carter
+story_narrator_voice
 
 # Why This Needs Clarification
-Needs identity clarification for consistent image generation.
+Needs identity clarification for consistent image generation of narrator voice character.
 
 # Question
-What is John Carter's physical form and origin story?
+What is the story narrator's physical form and relationship to John Carter?
 
 # Guidance
 - answer briefly and concretely

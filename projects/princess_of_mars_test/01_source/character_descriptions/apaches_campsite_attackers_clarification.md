@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-john_carter
+apaches_campsite_attackers
 
 # Why This Needs Clarification
-Needs identity clarification for consistent image generation.
+The character is not fully identified from this chapter alone.
 
 # Question
-What is John Carter's physical form and origin story?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely
