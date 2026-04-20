@@ -1,20 +1,22 @@
-# Character File - Sola
+# Sola (CH009)
 
 **Display Name:** Sola  
-**Chapter Role:** Foster mother/caregiver of young Martians  
-**Physical Presence:** Present throughout multiple scenes (Educational Development Scene, Aftermath Scene, Training Development Scene)  
+**Chapter Role:** Female Martian Warrior / Leader  
 
-**Physical Description:** Not detailed beyond holding a hideous little creature. No specific features, height, or distinguishing visual traits provided in source material.
+**Physical Presence:** Physically Present  
+Sola is actively present, instructing Carter on weapons, remodeling his armor, and conversing with Sarkoja regarding the prisoner's fate.
 
-**Costume/Silhouette/Continuity Traits:** Unknown. No costume details or silhouette information available from chapter text.
+**Physical Description:**  
+Supported by source: Female Martian, described as having "smallness and beauty". Her countenance is usually expressionless but shows emotion here.  
 
-**Useful Descriptive Noun Phrases for Render-Facing Prompts:** 
-- Female Martian caregiver
-- Foster mother of young Martians  
-- Holds hideous little creature
-- Trains narrator and young together
+**Costume & Silhouette:**  
+Warrior attire; implied to be of standard Martian female build (lesser than male warriors).  
 
-**Uncertainty Notes:** Complete lack of physical description prevents dependable later image generation. Chapter focuses on her role in child-raising system rather than visual appearance. Continuity-critical traits are not documented beyond her functional role as foster mother.
+**Continuity-Critical Traits:**  
+Shows sympathy for the prisoner; instructs Carter; displays emotional reaction to events.
+
+**Uncertainty Notes:**  
+None regarding identity or basic physical classification (female Martian).
 
 # Aliases
 

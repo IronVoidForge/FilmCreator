@@ -1,10 +1,26 @@
-# Character Index - CH007: Child-Raising on Mars
+# Chapter CH009 Character Index
 
-| Asset ID | Canonical Name | Role in Chapter | Physical Presence | Description Status |
-|----------|----------------|------------------|-------------------|-------------------|
-| sola | Sola | Foster mother/caregiver of young Martians | Present throughout multiple scenes | Manual description required |
-| narrator | The Narrator | First-person protagonist experiencing Martian child-raising | Referenced as first-person narrator | Manual description required |
-| lorquas_ptomel_jed | Lorquas Ptomel Jed | Enormous chieftain leading warriors | Present in post-ceremony scene | Manual description required |
-| tars_tarkas | Tars Tarkas | Warrior giving commands to narrator | Referenced in dialogue moments | Manual description required |
+## Carter
+*   **Role:** Protagonist (Human Male)
+*   **Status:** Physically Present
+*   **Description:** Human male with lesser proportions than Martians; familiar with earthly weapons.
 
-**Note:** Groups such as "Women Martians" and "Younger Martians" are referenced but not individually identified; they lack stable identification for character records.
+## Sola
+*   **Role:** Female Martian Warrior/Leader
+*   **Status:** Physically Present
+*   **Description:** Female Martian, small and beautiful; usually expressionless but shows emotion here.
+
+## Sarkoja
+*   **Role:** Female Martian Guard/Leader
+*   **Status:** Referenced/Physically Present (in conversation)
+*   **Description:** Female Martian guard at audience chamber; scolds Sola for weakness.
+
+## Woola
+*   **Role:** Human Male Companion
+*   **Status:** Referenced (Sleeping Quarters)
+*   **Description:** Human male companion present in sleeping quarters with Carter and females.
+
+## The Prisoner
+*   **Role:** Female Martian Exile/Prisoner
+*   **Status:** Referenced
+*   **Description:** Red woman; small and beautiful; fate discussed (exhibition at games).

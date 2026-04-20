@@ -386,6 +386,126 @@ Each refactor step should keep or improve test coverage.
 - Prefer small tests for service boundaries instead of huge end-to-end tests.
 - When a module is split, move its tests to match the new package structure.
 
+## Confidence And Migration Plan
+
+### Confidence Level
+
+- One-shot refactor with only minimal verification: `50-60%`
+- Refactor with phased passes and tests after each pass: `85-90%`
+
+The lower one-shot confidence comes from the amount of shared filesystem state, manifest schemas, and cross-module orchestration in this repo.
+
+### Recommended Number Of Passes
+
+Use `4` passes minimum, `5` if we want to be cautious.
+
+#### Pass 1: Core And Utilities
+
+- Goal: create the new package structure and move low-risk utilities first.
+- Main targets:
+  - `orchestrator/prompt_package.py`
+  - `orchestrator/style_profiles.py`
+  - `orchestrator/workflow_patcher.py`
+  - `orchestrator/common.py` split into `core/` modules
+- Intended outcome:
+  - `core/`, `adapters/`, and `features/` exist
+  - pure helpers are isolated from feature orchestration
+
+Tests to run:
+
+- `pytest tests/unit/test_prompt_package.py`
+- `pytest tests/unit/test_workflow_patcher.py`
+- `pytest tests/unit/test_state.py` if shared helpers moved into `core/`
+- import smoke tests for the refactored modules
+
+#### Pass 2: Authoring
+
+- Goal: break up `story_authoring.py` and `authoring.py`.
+- Main targets:
+  - chapter analysis
+  - scene planning
+  - shared prompt writing
+  - prompt parsing
+  - prompt artifact writing
+- Intended outcome:
+  - authoring logic is split into feature modules
+  - packet parsing is testable independently
+
+Tests to run:
+
+- `pytest tests/unit/test_story_authoring.py`
+- `pytest tests/unit/test_authoring.py`
+- any new unit tests created for prompt parsing or prompt artifact writing
+- a targeted smoke run for chapter analysis or prompt writing if the environment allows it
+
+#### Pass 3: State, World, And Runs
+
+- Goal: split `world_global.py`, `state.py`, `runner.py`, and `batch_runner.py`.
+- Main targets:
+  - state normalization and continuity resolution
+  - world registries and snapshots
+  - still-run planning and execution
+  - batch planning and batch execution
+- Intended outcome:
+  - orchestration logic is separated from persistence and domain rules
+  - run execution and batch execution are independently testable
+
+Tests to run:
+
+- `pytest tests/unit/test_state.py`
+- `pytest tests/unit/test_runner.py`
+- `pytest tests/unit/test_batch_runner.py`
+- any tests added for world registry or snapshot services
+
+#### Pass 4: Scaffold, Review, Book, And CLI Wiring
+
+- Goal: split `scaffold.py`, `review_tools.py`, `book_authoring.py`, `book_ingest.py`, and update `cli.py` imports.
+- Main targets:
+  - project bootstrap
+  - run manifest creation
+  - asset promotion
+  - review catalog and interactive review flow
+  - book ingestion and book analysis
+- Intended outcome:
+  - CLI becomes a thin dispatch layer
+  - project-scaffolding responsibilities are explicit
+  - review and book workflows have clearer service boundaries
+
+Tests to run:
+
+- `pytest tests/unit/test_scaffold.py`
+- `pytest tests/unit/test_review_tools.py`
+- any book workflow tests added during the refactor
+- CLI smoke tests for the major commands
+
+#### Pass 5: Cleanup And Compatibility Removal
+
+- Goal: remove temporary compatibility shims, flatten imports, tighten names, and simplify the final package surface.
+- Intended outcome:
+  - no leftover transitional modules unless they serve a deliberate compatibility role
+  - package imports are stable and intuitive
+
+Tests to run:
+
+- full `pytest`
+- import smoke tests across the package
+- one sample-project workflow smoke test covering:
+  - project init
+  - chapter analysis
+  - prompt writing
+  - run planning
+  - batch planning
+  - review recording
+
+### Stop And Check Criteria
+
+Do not move to the next pass until:
+
+- the current pass tests are green
+- the public APIs used by the next pass are still working
+- no file import paths are broken
+- any temporary compatibility layer is documented or removed intentionally
+
 ## Success Criteria
 
 The refactor is successful when:

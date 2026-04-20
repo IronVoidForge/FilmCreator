@@ -1,17 +1,16 @@
-# Environment Index - Princess of Mars Chapter CH006
+# Environment Index - CH009
 
-## Chamber/Room (Primary Setting)
-- Role: Primary fight setting where protagonist is captured and battles bull apes
-- Architecture: Chamber with doorway entrance, windows with wooden casings, masonry walls
-- Lighting: Interior lighting with window light sources
-- Atmosphere: Tense combat environment, blood-stained struggle
-- Scale: Human-sized interior space, 10-15 foot tall bull apes operate within
-- Anchors: Doorway (entry point for Tars Tarkas/Sola), wooden window casings
+## plaza_training_grounds
+**Role:** Primary/Secondary Setting  
+**Description:** Open plaza where warriors train with young Martians and manufacture weapons. Women produce powder, cartridges, firearms, and manufactured articles here. In wartime, women form reserves and fight with intelligence/ferocity exceeding men.  
+**Atmosphere:** Daylight training under open sky, industrial production zones visible, martial activity constant.
 
-## Plaza (Secondary Setting)
-- Role: Transit/return setting where protagonist and companions arrive after fight
-- Architecture: Open plaza space, exterior environment
-- Lighting: Natural daylight
-- Atmosphere: Public gathering space, celebratory mood with warriors applauding
-- Scale: Larger open area compared to chamber interior
-- Anchors: Entry from chamber doorway, beast following at heel
+## audience_chamber
+**Role:** Secondary Setting  
+**Description:** Interior chamber where prisoner visits for audience. Guarded by Sarkoja who confirms prisoner will be taken to Thark for games.  
+**Atmosphere:** Formal interior space, guarded access points, ceremonial function implied.
+
+## sleeping_quarters
+**Role:** Primary/Transit Setting  
+**Description:** Occupied by females, young Martians, Sola, Carter, and Woola. Adults converse desultorily before sleep.  
+**Atmosphere:** Interior living quarters, intimate adult conversations, nighttime lighting conditions.
