@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -16,6 +17,7 @@ class BookIngestSummary:
     project_slug: str
     raw_book_path: str
     manifest_path: str
+    book_index_path: str
     chapter_paths: list[str]
     chapter_ids: list[str]
 
@@ -24,6 +26,7 @@ class BookIngestSummary:
             "project_slug": self.project_slug,
             "raw_book_path": self.raw_book_path,
             "manifest_path": self.manifest_path,
+            "book_index_path": self.book_index_path,
             "chapter_paths": self.chapter_paths,
             "chapter_ids": self.chapter_ids,
         }
@@ -75,11 +78,19 @@ def ingest_book_text(
         chapter_ids=chapter_ids,
         chapter_paths=chapter_paths,
     )
+    book_index_path = write_book_index(
+        project_slug=project_slug,
+        source_name=source_name,
+        chapters=chapters,
+        chapter_paths=chapter_paths,
+        chapter_ids=chapter_ids,
+    )
 
     return BookIngestSummary(
         project_slug=project_slug,
         raw_book_path=repo_relative(raw_book_path),
         manifest_path=repo_relative(manifest_path),
+        book_index_path=repo_relative(book_index_path),
         chapter_paths=chapter_paths,
         chapter_ids=chapter_ids,
     )
@@ -129,6 +140,70 @@ def write_book_manifest(
     lines.append("")
     manifest_path.write_text("\n".join(lines), encoding="utf-8")
     return manifest_path
+
+
+def write_book_index(
+    *,
+    project_slug: str,
+    source_name: str,
+    chapters: list[dict[str, str]],
+    chapter_paths: list[str],
+    chapter_ids: list[str],
+) -> Path:
+    project_dir = create_project(project_slug)
+    index_path = project_dir / "01_source" / "book" / "book_index.json"
+    chapter_entries: list[dict[str, object]] = []
+    for chapter_id, chapter_path, chapter in zip(chapter_ids, chapter_paths, chapters):
+        paragraph_entries = _index_paragraphs(chapter.get("text", ""))
+        chapter_entries.append(
+            {
+                "chapter_id": chapter_id,
+                "title": chapter.get("title", chapter_id).strip() or chapter_id,
+                "chapter_path": chapter_path,
+                "paragraph_count": len(paragraph_entries),
+                "paragraphs": paragraph_entries,
+            }
+        )
+
+    payload = {
+        "project_slug": project_slug,
+        "source_name": source_name,
+        "chapter_count": len(chapter_entries),
+        "chapters": chapter_entries,
+    }
+    index_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    return index_path
+
+
+def _index_paragraphs(text: str) -> list[dict[str, object]]:
+    paragraphs: list[dict[str, object]] = []
+    cursor = 0
+    for paragraph_index, paragraph in enumerate(_split_paragraphs(text), start=1):
+        if not paragraph.strip():
+            continue
+        start = text.find(paragraph, cursor)
+        if start < 0:
+            start = cursor
+        end = start + len(paragraph)
+        cursor = end
+        paragraphs.append(
+            {
+                "paragraph_index": paragraph_index,
+                "char_start": start,
+                "char_end": end,
+                "preview": _paragraph_preview(paragraph),
+            }
+        )
+    return paragraphs
+
+
+def _split_paragraphs(text: str) -> list[str]:
+    return [paragraph.strip() for paragraph in re.split(r"\n\s*\n", text.strip()) if paragraph.strip()]
+
+
+def _paragraph_preview(paragraph: str, *, limit: int = 180) -> str:
+    collapsed = " ".join(paragraph.split())
+    return collapsed[:limit] + ("..." if len(collapsed) > limit else "")
 
 
 def _slugify_title(title: str) -> str:

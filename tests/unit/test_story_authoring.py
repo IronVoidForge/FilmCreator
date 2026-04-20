@@ -593,6 +593,111 @@ class _ChunkFallbackChapterSummaryAuthoringLMStudioClient(_FakeAuthoringLMStudio
         )
 
 
+class _ChapterSummaryRepairAuthoringLMStudioClient(_FakeAuthoringLMStudioClient):
+    def chat_completion_result(
+        self,
+        *,
+        system_prompt: str,
+        user_prompt: str,
+        temperature: float = 0.2,
+        model: str | None = None,
+    ) -> LMStudioChatResult:
+        if "task: chapter_summary" in user_prompt and "Missing sections to supply:" in user_prompt and "project_summary_markdown" in user_prompt and "chapter_summary_markdown" in user_prompt:
+            return LMStudioChatResult(
+                status="success",
+                model=model or "test-local-model",
+                payload={},
+                text=_packet(
+                    task="chapter_summary",
+                    sections={
+                        "project_summary_markdown": "# Project Summary\nA repaired project summary.\n",
+                    },
+                ),
+            )
+
+        if "task: chapter_summary" in user_prompt and "Chapter id: CH001" in user_prompt:
+            return LMStudioChatResult(
+                status="success",
+                model=model or "test-local-model",
+                payload={},
+                text=_packet(
+                    task="chapter_summary",
+                    sections={
+                        "chapter_summary_markdown": "# Chapter Summary\nA partial chapter summary missing the project summary.\n",
+                    },
+                ),
+            )
+
+        return super().chat_completion_result(
+            system_prompt=system_prompt,
+            user_prompt=user_prompt,
+            temperature=temperature,
+            model=model,
+        )
+
+
+class _CharacterExtractionRepairAuthoringLMStudioClient(_FakeAuthoringLMStudioClient):
+    def chat_completion_result(
+        self,
+        *,
+        system_prompt: str,
+        user_prompt: str,
+        temperature: float = 0.2,
+        model: str | None = None,
+    ) -> LMStudioChatResult:
+        if "task: character_extraction" in user_prompt and "repair the character_extraction packet" in user_prompt:
+            return LMStudioChatResult(
+                status="success",
+                model=model or "test-local-model",
+                payload={},
+                text=_packet(
+                    task="character_extraction",
+                    sections={
+                        "character_index_markdown": "# Character Index\n- john_carter\n",
+                    },
+                    records=[
+                        _record(
+                            record_type="character",
+                            fields={
+                                "asset_id": "john_carter",
+                                "canonical_character_id": "john_carter",
+                                "aliases": "Carter",
+                                "is_fully_identified": "true",
+                                "manual_description_required": "false",
+                                "manual_description_reason": "",
+                                "clarification_required": "false",
+                                "clarification_reason": "",
+                                "clarification_question": "",
+                            },
+                            sections={
+                                "markdown": "# John Carter\nRepaired character record.\n",
+                            },
+                        )
+                    ],
+                ),
+            )
+
+        if "task: character_extraction" in user_prompt:
+            return LMStudioChatResult(
+                status="success",
+                model=model or "test-local-model",
+                payload={},
+                text=_packet(
+                    task="character_extraction",
+                    sections={
+                        "character_index_markdown": "# Character Index\n- john_carter\n",
+                    },
+                ),
+            )
+
+        return super().chat_completion_result(
+            system_prompt=system_prompt,
+            user_prompt=user_prompt,
+            temperature=temperature,
+            model=model,
+        )
+
+
 def test_authoring_checkpoint_writes_analysis_planning_and_manual_character_placeholders(
     tmp_path: Path, monkeypatch
 ) -> None:
@@ -915,6 +1020,109 @@ def test_analyze_chapter_falls_back_to_chunked_chapter_summary_on_empty_response
     assert summary.chapter_id == "CH001"
     assert (projects_root / "demo" / "02_story_analysis" / "story_summary" / "project_summary.md").exists()
     assert (projects_root / "demo" / "02_story_analysis" / "chapter_analysis" / "CH001_summary.md").exists()
+
+
+def test_analyze_chapter_repairs_missing_chapter_summary_section_before_chunking(
+    tmp_path: Path, monkeypatch
+) -> None:
+    projects_root = tmp_path / "projects"
+
+    monkeypatch.setattr(common_module, "ROOT", tmp_path)
+    monkeypatch.setattr(common_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(scaffold_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(scaffold_module, "ROOT", tmp_path)
+    monkeypatch.setattr(scaffold_module, "TEMPLATES_ROOT", REAL_TEMPLATES_ROOT)
+    monkeypatch.setattr(scaffold_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(state_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(state_module, "ROOT", tmp_path)
+    monkeypatch.setattr(state_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(authoring_module, "ROOT", tmp_path)
+    monkeypatch.setattr(authoring_module, "LMStudioClient", _ChapterSummaryRepairAuthoringLMStudioClient)
+    monkeypatch.setattr(authoring_module, "load_runtime_settings", lambda: object())
+    monkeypatch.setattr(authoring_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(story_authoring_module, "LMStudioClient", _ChapterSummaryRepairAuthoringLMStudioClient)
+    monkeypatch.setattr(story_authoring_module, "load_runtime_settings", lambda: object())
+
+    scaffold_module.create_project("demo")
+
+    chapter_path = projects_root / "demo" / "01_source" / "chapters" / "CH001_demo.md"
+    chapter_path.write_text(
+        "\n".join(
+            [
+                "# Title",
+                "Demo Chapter",
+                "",
+                "# Chapter",
+                "CH001",
+                "",
+                "# Text",
+                "A damaged vessel drifts above an abandoned city while a captive is discovered.",
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    summary = story_authoring_module.analyze_chapter(project_slug="demo", chapter="CH001_demo.md")
+
+    assert summary.chapter_id == "CH001"
+    project_summary_path = projects_root / "demo" / "02_story_analysis" / "story_summary" / "project_summary.md"
+    chapter_summary_path = projects_root / "demo" / "02_story_analysis" / "chapter_analysis" / "CH001_summary.md"
+    assert project_summary_path.exists()
+    assert chapter_summary_path.exists()
+    project_summary_text = project_summary_path.read_text(encoding="utf-8")
+    chapter_summary_text = chapter_summary_path.read_text(encoding="utf-8")
+    assert "A repaired project summary." in project_summary_text
+    assert "A partial chapter summary missing the project summary." in chapter_summary_text
+
+
+def test_analyze_chapter_repairs_missing_character_records_before_chunking(
+    tmp_path: Path, monkeypatch
+) -> None:
+    projects_root = tmp_path / "projects"
+
+    monkeypatch.setattr(common_module, "ROOT", tmp_path)
+    monkeypatch.setattr(common_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(scaffold_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(scaffold_module, "ROOT", tmp_path)
+    monkeypatch.setattr(scaffold_module, "TEMPLATES_ROOT", REAL_TEMPLATES_ROOT)
+    monkeypatch.setattr(scaffold_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(state_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(state_module, "ROOT", tmp_path)
+    monkeypatch.setattr(state_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(authoring_module, "ROOT", tmp_path)
+    monkeypatch.setattr(authoring_module, "LMStudioClient", _CharacterExtractionRepairAuthoringLMStudioClient)
+    monkeypatch.setattr(authoring_module, "load_runtime_settings", lambda: object())
+    monkeypatch.setattr(authoring_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(story_authoring_module, "LMStudioClient", _CharacterExtractionRepairAuthoringLMStudioClient)
+    monkeypatch.setattr(story_authoring_module, "load_runtime_settings", lambda: object())
+
+    scaffold_module.create_project("demo")
+
+    chapter_path = projects_root / "demo" / "01_source" / "chapters" / "CH001_demo.md"
+    chapter_path.write_text(
+        "\n".join(
+            [
+                "# Title",
+                "Demo Chapter",
+                "",
+                "# Chapter",
+                "CH001",
+                "",
+                "# Text",
+                "Carter appears in the chapter and gets a brief description.",
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    summary = story_authoring_module.analyze_chapter(project_slug="demo", chapter="CH001_demo.md")
+
+    assert summary.chapter_id == "CH001"
+    character_path = projects_root / "demo" / "02_story_analysis" / "character_breakdowns" / "chapters" / "CH001" / "john_carter.md"
+    assert character_path.exists()
+    assert "Repaired character record." in character_path.read_text(encoding="utf-8")
 
 
 def test_analyze_chapter_falls_back_to_chunked_character_extraction_on_timeout(

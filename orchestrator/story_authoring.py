@@ -18,6 +18,9 @@ from .scaffold import create_clip, create_project, create_scene
 from .settings import load_runtime_settings
 from .features.authoring import shared_prompts as authoring_prompts
 from .features.authoring import packet_parser as authoring_packets
+from .book_librarian import chapter_text, get_paragraph_window, search_chapter_context
+from .character_match import find_character_match_candidates
+from .features.world.global_helpers import is_generic_character_label
 from .world_registry import (
     character_registry_path,
     environment_registry_path,
@@ -373,6 +376,7 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
             continue
 
         resolved_asset_id, inferred_clarification = _resolve_character_identity(
+            project_slug=project_slug,
             asset_id=asset_id,
             canonical_character_id=canonical_character_id,
             aliases=aliases,
@@ -1065,7 +1069,7 @@ def _print_saved_artifacts(header: str, paths: list[str]) -> None:
         print(f"  - {path}")
 
 
-def _resolve_character_identity(*, asset_id: str, canonical_character_id: str, aliases: str, markdown: str, canonical_lookup: dict[str, str]) -> tuple[str, tuple[str, str] | None]:
+def _resolve_character_identity(*, project_slug: str, asset_id: str, canonical_character_id: str, aliases: str, markdown: str, canonical_lookup: dict[str, str]) -> tuple[str, tuple[str, str] | None]:
     candidates = [asset_id]
     if canonical_character_id:
         candidates.append(_normalize_alias(canonical_character_id))
@@ -1076,6 +1080,35 @@ def _resolve_character_identity(*, asset_id: str, canonical_character_id: str, a
     for candidate in candidates:
         if candidate in canonical_lookup:
             return canonical_lookup[candidate], None
+    scored_candidates = find_character_match_candidates(
+        project_slug=project_slug,
+        asset_id=asset_id,
+        aliases=aliases,
+        markdown=markdown,
+        top_n=3,
+    )
+    if scored_candidates:
+        top_candidate = scored_candidates[0]
+        second_score = scored_candidates[1].score if len(scored_candidates) > 1 else 0
+        strong_unique_match = top_candidate.score >= 70 and top_candidate.score - second_score >= 10
+        if strong_unique_match and not is_generic_character_label(top_candidate.canonical_id):
+            return top_candidate.canonical_id, None
+        if top_candidate.score >= 40 or second_score:
+            candidate_lines = []
+            for candidate in scored_candidates[:3]:
+                chapter_texts = ", ".join(candidate.source_chapters[:2]) or "no source chapter"
+                snippet = candidate.context_snippets[0] if candidate.context_snippets else ""
+                snippet_text = f" Example context: {snippet}" if snippet else ""
+                candidate_lines.append(
+                    f"- {candidate.canonical_id} (score {candidate.score}; chapters: {chapter_texts}; aliases: {', '.join(candidate.aliases[:4]) or '-'}){snippet_text}"
+                )
+            reason = "Potential existing identity matches detected:\n" + "\n".join(candidate_lines)
+            question = (
+                "This character may match one of the existing canonical identities above. "
+                "Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, "
+                "or keep this as a new canonical character?"
+            )
+            return asset_id, (reason, question)
     generic_labels = {"narrator", "captain", "captive", "guard", "woman", "man", "girl", "boy", "hound"}
     if any(label in asset_id for label in generic_labels):
         question = "This character is named or role-labeled but not fully identified. Can you find a stronger canonical identity from another chapter, or should FilmCreator keep this as a scene-local provisional character?"
@@ -1372,6 +1405,44 @@ def _call_record_extraction_with_chunked_fallback(
         warnings.append(
             f"{task_name} returned no usable {record_type} records on the full chapter pass; retrying with overlapping half-chapter chunks."
         )
+        repair_packet, repair_warnings = _repair_record_extraction_packet(
+            client=client,
+            project_dir=project_dir,
+            project_slug=project_slug,
+            chapter_source=chapter_source,
+            chapter_summary_markdown=chapter_summary_markdown,
+            task_name=task_name,
+            record_type=record_type,
+            index_section_name=index_section_name,
+            existing_index_markdown=full_index_markdown,
+        )
+        warnings.extend(repair_warnings)
+        if repair_packet is not None:
+            repair_records, repair_record_warnings, repair_index_markdown = _extract_usable_records_from_packet(
+                packet=repair_packet,
+                record_type=record_type,
+                index_section_name=index_section_name,
+            )
+            warnings.extend(repair_record_warnings)
+            if repair_records:
+                if not repair_index_markdown.strip():
+                    repair_index_markdown = _synthesize_record_index_markdown(
+                        chapter_id=chapter_source.chapter_id,
+                        record_type=record_type,
+                        records=repair_records,
+                    )
+                    warnings.append(
+                        f"{task_name} repair pass omitted {index_section_name}; synthesized an index from explicit records."
+                    )
+                warnings.append(f"{task_name} recovered usable {record_type} records from a focused repair pass before chunking.")
+                return (
+                    _PacketDocument(
+                        metadata=dict(repair_packet.metadata),
+                        sections={index_section_name: repair_index_markdown},
+                        records=repair_records,
+                    ),
+                    warnings,
+                )
 
     chunk_texts = _split_text_into_fallback_chunks(chapter_source.full_markdown)
     merged_records_by_asset_id: dict[str, _PacketRecord] = {}
@@ -1471,6 +1542,54 @@ def _call_record_extraction_with_chunked_fallback(
     )
 
 
+def _repair_record_extraction_packet(
+    *,
+    client: LMStudioClient,
+    project_dir: Path,
+    project_slug: str,
+    chapter_source: _ChapterSource,
+    chapter_summary_markdown: str,
+    task_name: str,
+    record_type: str,
+    index_section_name: str,
+    existing_index_markdown: str,
+) -> tuple[_PacketDocument | None, list[str]]:
+    warnings: list[str] = []
+    repair_prompt = _record_extraction_repair_prompt(
+        project_slug=project_slug,
+        chapter_id=chapter_source.chapter_id,
+        chapter_summary=chapter_summary_markdown,
+        task_name=task_name,
+        record_type=record_type,
+        index_section_name=index_section_name,
+        existing_index_markdown=existing_index_markdown,
+        chapter_markdown=chapter_source.full_markdown,
+    )
+    try:
+        repair_packet = _call_packet_task(
+            client=client,
+            project_dir=project_dir,
+            task_name=task_name,
+            system_prompt=authoring_prompts.analysis_system_prompt(),
+            user_prompt=repair_prompt,
+            degraded_user_prompt=_record_extraction_repair_prompt(
+                project_slug=project_slug,
+                chapter_id=chapter_source.chapter_id,
+                chapter_summary=chapter_summary_markdown,
+                task_name=task_name,
+                record_type=record_type,
+                index_section_name=index_section_name,
+                existing_index_markdown=existing_index_markdown,
+                chapter_markdown=chapter_source.full_markdown,
+                degraded=True,
+            ),
+        )
+    except LMStudioError as exc:
+        warnings.append(f"{task_name} focused repair pass failed: {exc}")
+        return None, warnings
+    return repair_packet, warnings
+
+
 def _call_chapter_summary_with_chunked_fallback(
     *,
     client: LMStudioClient,
@@ -1492,12 +1611,9 @@ def _call_chapter_summary_with_chunked_fallback(
     except LMStudioError as exc:
         warnings.append(f"chapter_summary full chapter pass failed: {exc}")
     else:
-        try:
-            project_summary_markdown = _require_packet_section(full_packet, "project_summary_markdown")
-            chapter_summary_markdown = _require_packet_section(full_packet, "chapter_summary_markdown")
-        except LMStudioError as exc:
-            warnings.append(f"chapter_summary full chapter pass was missing required summary sections: {exc}")
-        else:
+        project_summary_markdown = _require_packet_section(full_packet, "project_summary_markdown", allow_empty=True)
+        chapter_summary_markdown = _require_packet_section(full_packet, "chapter_summary_markdown", allow_empty=True)
+        if project_summary_markdown and chapter_summary_markdown:
             return (
                 _PacketDocument(
                     metadata=dict(full_packet.metadata),
@@ -1509,6 +1625,53 @@ def _call_chapter_summary_with_chunked_fallback(
                 ),
                 warnings,
             )
+        missing_sections = [
+            section_name
+            for section_name, section_value in (
+                ("project_summary_markdown", project_summary_markdown),
+                ("chapter_summary_markdown", chapter_summary_markdown),
+            )
+            if not section_value.strip()
+        ]
+        warnings.append(
+            "chapter_summary full chapter pass was missing required summary sections: "
+            + ", ".join(missing_sections)
+        )
+        if len(missing_sections) == 1:
+            repair_packet, repair_warnings = _repair_chapter_summary_sections(
+                client=client,
+                project_dir=project_dir,
+                project_slug=project_slug,
+                chapter_source=chapter_source,
+                missing_sections=missing_sections,
+                existing_sections={
+                    "project_summary_markdown": project_summary_markdown,
+                    "chapter_summary_markdown": chapter_summary_markdown,
+                },
+            )
+            warnings.extend(repair_warnings)
+            if repair_packet is not None:
+                repaired_sections = {
+                    "project_summary_markdown": project_summary_markdown or _require_packet_section(
+                        repair_packet,
+                        "project_summary_markdown",
+                    ),
+                    "chapter_summary_markdown": chapter_summary_markdown or _require_packet_section(
+                        repair_packet,
+                        "chapter_summary_markdown",
+                    ),
+                }
+                warnings.append(
+                    f"chapter_summary repaired missing section(s) from a smaller repair pass: {', '.join(missing_sections)}"
+                )
+                return (
+                    _PacketDocument(
+                        metadata=dict(full_packet.metadata),
+                        sections=repaired_sections,
+                        records=full_packet.records,
+                    ),
+                    warnings,
+                )
 
     chunk_texts = _split_text_into_fallback_chunks(chapter_source.full_markdown)
     chunk_packets: list[_PacketDocument] = []
@@ -1595,17 +1758,67 @@ def _call_chapter_summary_with_chunked_fallback(
             title="Chapter Summary",
             texts=[_require_packet_section(packet, "chapter_summary_markdown") for packet in chunk_packets],
         )
-        return (
-            _PacketDocument(
-                metadata={"task": "chapter_summary", "version": PACKET_VERSION, "source_mode": "chunked_merge"},
-                sections={
-                    "project_summary_markdown": merged_project_summary,
+    return (
+        _PacketDocument(
+            metadata={"task": "chapter_summary", "version": PACKET_VERSION, "source_mode": "chunked_merge"},
+            sections={
+                "project_summary_markdown": merged_project_summary,
                     "chapter_summary_markdown": merged_chapter_summary,
                 },
                 records=[],
+        ),
+        warnings,
+    )
+
+
+def _repair_chapter_summary_sections(
+    *,
+    client: LMStudioClient,
+    project_dir: Path,
+    project_slug: str,
+    chapter_source: _ChapterSource,
+    missing_sections: list[str],
+    existing_sections: dict[str, str],
+) -> tuple[_PacketDocument | None, list[str]]:
+    warnings: list[str] = []
+    existing_section_names = [
+        section_name
+        for section_name, section_value in existing_sections.items()
+        if section_value.strip()
+    ]
+    try:
+        repair_packet = _call_packet_task(
+            client=client,
+            project_dir=project_dir,
+            task_name="chapter_summary",
+            system_prompt=authoring_prompts.analysis_system_prompt(),
+            user_prompt=_chapter_summary_repair_prompt(
+                project_slug=project_slug,
+                chapter_id=chapter_source.chapter_id,
+                missing_sections=missing_sections,
+                existing_sections=existing_section_names,
+                chapter_markdown=chapter_source.full_markdown,
             ),
-            warnings,
+            degraded_user_prompt=_chapter_summary_repair_prompt(
+                project_slug=project_slug,
+                chapter_id=chapter_source.chapter_id,
+                missing_sections=missing_sections,
+                existing_sections=existing_section_names,
+                chapter_markdown=chapter_source.full_markdown,
+                degraded=True,
+            ),
         )
+    except LMStudioError as exc:
+        warnings.append(f"chapter_summary repair pass failed: {exc}")
+        return None, warnings
+
+    for section_name in missing_sections:
+        try:
+            _require_packet_section(repair_packet, section_name)
+        except LMStudioError as exc:
+            warnings.append(f"chapter_summary repair pass still missing {section_name}: {exc}")
+            return None, warnings
+    return repair_packet, warnings
 
 
 def _chat_completion_result(
@@ -1661,6 +1874,110 @@ def _chapter_summary_chunk_prompt(*, project_slug: str, chapter_id: str, chunk_l
             "",
             "Chapter source markdown:",
             chunk_markdown,
+        ]
+    )
+
+
+def _chapter_summary_repair_prompt(
+    *,
+    project_slug: str,
+    chapter_id: str,
+    missing_sections: list[str],
+    existing_sections: list[str],
+    chapter_markdown: str,
+    degraded: bool = False,
+) -> str:
+    try:
+        chapter_body = chapter_text(project_slug, chapter_id) or chapter_markdown
+    except FileNotFoundError:
+        chapter_body = chapter_markdown
+    missing_section_list = "\n".join(f"- {section_name}" for section_name in missing_sections)
+    existing_section_list = "\n".join(f"- {section_name}" for section_name in existing_sections) or "- none"
+    requirements = [
+        "- repair only the missing summary section(s)",
+        "- do not rewrite the section(s) that are already present unless absolutely necessary",
+        "- keep the summary grounded in the chapter source",
+        "- return a valid FilmCreator packet with the requested markdown sections only",
+    ]
+    if degraded:
+        requirements = [
+            "- keep the repair concise",
+            "- supply only the missing section body or bodies",
+        ]
+    return "\n\n".join(
+        [
+            f"Project slug: {project_slug}",
+            f"Chapter id: {chapter_id}",
+            "Task: repair missing chapter-summary section(s) after a partial packet response.",
+            _packet_contract_block(task_name="chapter_summary", section_names=["project_summary_markdown", "chapter_summary_markdown"]),
+            "",
+            "Existing sections already present in the prior packet:",
+            existing_section_list,
+            "",
+            "Missing sections to supply:",
+            missing_section_list,
+            "",
+            "Requirements:",
+            *requirements,
+            "",
+            "Chapter source markdown:",
+            chapter_body,
+        ]
+    )
+
+
+def _record_extraction_repair_prompt(
+    *,
+    project_slug: str,
+    chapter_id: str,
+    chapter_summary: str,
+    task_name: str,
+    record_type: str,
+    index_section_name: str,
+    existing_index_markdown: str,
+    chapter_markdown: str,
+    degraded: bool = False,
+) -> str:
+    try:
+        chapter_body = chapter_text(project_slug, chapter_id) or chapter_markdown
+    except FileNotFoundError:
+        chapter_body = chapter_markdown
+    record_label = {
+        "character": "character",
+        "environment": "environment",
+        "scene": "scene",
+    }.get(record_type, "record")
+    requirements = [
+        f"- repair only the missing explicit {record_label} record blocks",
+        "- keep the response grounded in the supplied chapter summary and source text",
+        "- preserve any working index markdown if it already exists",
+        "- do not invent new record types",
+        "- return a valid FilmCreator packet using the requested task name",
+    ]
+    if degraded:
+        requirements = [
+            f"- keep the repair concise and emit only the missing explicit {record_label} records",
+            "- preserve the existing index markdown if possible",
+        ]
+    existing_index_text = existing_index_markdown.strip() or "(missing)"
+    return "\n\n".join(
+        [
+            f"Project slug: {project_slug}",
+            f"Chapter id: {chapter_id}",
+            f"Task: repair the {task_name} packet by emitting missing explicit {record_label} records.",
+            _packet_contract_block(task_name=task_name, section_names=[index_section_name], record_templates=[(record_label, ["asset_id"], ["markdown"])]),
+            "",
+            "Existing index markdown from the prior packet:",
+            existing_index_text,
+            "",
+            "Requirements:",
+            *requirements,
+            "",
+            "Chapter summary:",
+            chapter_summary,
+            "",
+            "Chapter source markdown:",
+            chapter_body,
         ]
     )
 
