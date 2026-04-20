@@ -163,6 +163,7 @@ class WorldIdentityRefiner:
 
     def run(self, *, use_llm: bool = True, apply_changes: bool = True) -> RefinementSummary:
         warnings: list[str] = []
+        review_queue: list[dict[str, object]] = []
 
         candidates, comparison_count = self._generate_candidates()
         decisions: list[RefinementDecision] = []
@@ -181,9 +182,19 @@ class WorldIdentityRefiner:
 
             validated_decision = self._validate_decision(candidate, decision)
             decisions.append(validated_decision)
+            if validated_decision.requires_human_review:
+                review_queue.append(
+                    {
+                        "entity_type": validated_decision.entity_type,
+                        "subject_ids": validated_decision.subject_ids,
+                        "reason": validated_decision.reason,
+                        "confidence": validated_decision.confidence,
+                    }
+                )
 
         applied_count = 0
         human_review_count = sum(1 for decision in decisions if decision.requires_human_review)
+        merge_plan_path = self.refinement_dir / "CHARACTER_MERGE_PLAN.json"
 
         if apply_changes:
             for decision in decisions:
@@ -203,6 +214,30 @@ class WorldIdentityRefiner:
         result_path = self.refinement_dir / "REFINEMENT_RESULT.json"
         report_path = self.refinement_dir / "REFINEMENT_REPORT.md"
 
+        merge_groups: list[dict[str, object]] = []
+        for decision in decisions:
+            if decision.requires_human_review or decision.action == "keep_separate":
+                continue
+            canonical_id = decision.target_id or decision.new_canonical_id or decision.subject_ids[0]
+            merge_groups.append(
+                {
+                    "entity_type": decision.entity_type,
+                    "action": decision.action,
+                    "canonical_id": canonical_id,
+                    "subject_ids": decision.subject_ids,
+                    "target_id": decision.target_id,
+                    "new_canonical_id": decision.new_canonical_id,
+                    "new_entity_kind": decision.new_entity_kind,
+                    "reason": decision.reason,
+                    "confidence": decision.confidence,
+                }
+            )
+        merge_plan_payload = {
+            "merge_groups": merge_groups,
+            "review": review_queue,
+        }
+
+        self._write_json(merge_plan_path, merge_plan_payload)
         self._write_json(candidates_path, [candidate.to_dict() for candidate in candidates])
         self._write_json(decisions_path, [decision.to_dict() for decision in decisions])
         self._write_json(
@@ -216,6 +251,7 @@ class WorldIdentityRefiner:
                 "human_review_count": human_review_count,
                 "warnings": warnings,
                 "files": [
+                    repo_relative(merge_plan_path),
                     repo_relative(candidates_path),
                     repo_relative(decisions_path),
                     repo_relative(result_path),
@@ -239,6 +275,7 @@ class WorldIdentityRefiner:
         )
 
         written_files = [
+            repo_relative(merge_plan_path),
             repo_relative(candidates_path),
             repo_relative(decisions_path),
             repo_relative(result_path),

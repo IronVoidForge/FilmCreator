@@ -14,7 +14,7 @@
 
 ## Visual Bible
 
-No competing canonical alias detected; kept extracted asset id. Detected plural/group-like character asset.
+A group-level entity identified as martial combatants.
 
 - physical_traits: (none)
 - costume_signature: (none)
@@ -22,14 +22,14 @@ No competing canonical alias detected; kept extracted asset id. Detected plural/
 ## Behavioral Bible
 
 - personality: (none)
-- role: group
+- role: Group of warriors.
 - voice_notes: (none)
 - relationship_notes: (none)
 
 ## Continuity
 
 - continuity_constraints: (none)
-- unresolved_ambiguities: (none)
+- unresolved_ambiguities: Specific visual appearance, equipment, and individual characteristics are not provided in the evidence.
 
 ## Evidence Summary
 
@@ -41,4 +41,4 @@ No competing canonical alias detected; kept extracted asset id. Detected plural/
 - status: `generated`
 - source_fingerprint: `ae5eb69ac19976af8db0004e1dcc0ee179b5f67e`
 - created_at_utc: `2026-04-20T22:16:45.890511+00:00`
-- updated_at_utc: `2026-04-20T23:01:01.809364+00:00`
+- updated_at_utc: `2026-04-20T23:11:05.841864+00:00`

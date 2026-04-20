@@ -14,7 +14,7 @@
 
 ## Visual Bible
 
-No competing canonical alias detected; kept extracted asset id. Detected plural/group-like character asset.
+A group-based entity identified as 'red martians'. Specific visual details are currently unestablished.
 
 - physical_traits: (none)
 - costume_signature: (none)
@@ -22,14 +22,14 @@ No competing canonical alias detected; kept extracted asset id. Detected plural/
 ## Behavioral Bible
 
 - personality: (none)
-- role: group
+- role: Group/Collective entity
 - voice_notes: (none)
 - relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: (none)
-- unresolved_ambiguities: (none)
+- continuity_constraints: Must be treated as a plural or group-like asset.
+- unresolved_ambiguities: Specific physical appearance and visual characteristics are unknown., Individual traits within the group are not defined., Nature of their collective behavior or personality is unestablished.
 
 ## Evidence Summary
 
@@ -41,4 +41,4 @@ No competing canonical alias detected; kept extracted asset id. Detected plural/
 - status: `generated`
 - source_fingerprint: `37e8b07b17ccc6e64a962bbf4cb57e395dfd53ac`
 - created_at_utc: `2026-04-20T22:16:45.916536+00:00`
-- updated_at_utc: `2026-04-20T23:03:47.548410+00:00`
+- updated_at_utc: `2026-04-20T23:13:52.019862+00:00`

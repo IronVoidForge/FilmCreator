@@ -14,22 +14,22 @@
 
 ## Visual Bible
 
-No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
+Insufficient evidence to establish a visual identity.
 
 - physical_traits: (none)
-- costume_signature: (none)
+- costume_signature: Unknown
 
 ## Behavioral Bible
 
-- personality: (none)
-- role: individual
-- voice_notes: (none)
+- personality: Unknown
+- role: Singular individual entity identified as 'the_chieftain'.
+- voice_notes: Unknown
 - relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: (none)
-- unresolved_ambiguities: (none)
+- continuity_constraints: Must be treated as a singular individual entity.
+- unresolved_ambiguities: Physical appearance is undocumented., Personality and temperament are undocumented., Specific role within the narrative hierarchy is unstated beyond the title 'chieftain'.
 
 ## Evidence Summary
 
@@ -41,4 +41,4 @@ No competing canonical alias detected; kept extracted asset id. Character appear
 - status: `generated`
 - source_fingerprint: `c2bde96847795b8d0ef51a6160cec18d24d24f57`
 - created_at_utc: `2026-04-20T22:16:45.894525+00:00`
-- updated_at_utc: `2026-04-20T23:01:34.616237+00:00`
+- updated_at_utc: `2026-04-20T23:11:38.050524+00:00`

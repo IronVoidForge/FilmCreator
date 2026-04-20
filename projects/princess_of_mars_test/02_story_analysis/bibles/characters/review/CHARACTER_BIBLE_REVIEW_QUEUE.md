@@ -1,3 +1,151 @@
 # Character Bible Review Queue
 
-- No character bible review items.
+- `james_k_powell`
+  - Physical appearance and personality are undocumented in the provided evidence.
+- `john_carter`
+  - Character identity is confirmed as john_carter, but no physical, personality, or role-based details are provided in the evidence.
+- `apache_warriors`
+  - Specific visual details, individual traits, and personality characteristics are not provided in the evidence.
+- `deceased_friend`
+  - Actual name and identity are unknown.
+  - Physical appearance, personality, and voice are undocumented in provided evidence.
+- `protagonist`
+  - Physical appearance, personality, and specific character details are not present in the provided evidence.
+- `martian_leader`
+  - Physical appearance and visual characteristics are undocumented.
+  - Personality traits and vocal qualities are undocumented.
+  - Specific role within the narrative hierarchy is unstated beyond the identifier 'leader'.
+- `martian_mounts`
+  - Visual identity and physical characteristics are not documented.
+  - Personality, role, and vocal qualities are unknown.
+- `martian_warriors`
+  - Specific visual appearance, equipment, and individual characteristics are not provided in the evidence.
+- `narrator`
+  - Identity and physical presence are unestablished.
+  - Nature of the role (on-screen vs. off-screen) is unconfirmed.
+- `sola`
+  - Physical appearance, personality, and specific role within the narrative are not defined in the provided evidence.
+- `tars_tarkas`
+  - Physical appearance, costume, personality, and specific character role are not defined in the provided evidence.
+- `the_chieftain`
+  - Physical appearance is undocumented.
+  - Personality and temperament are undocumented.
+  - Specific role within the narrative hierarchy is unstated beyond the title 'chieftain'.
+- `colossal_creature`
+  - Specific physical appearance and biological/mechanical nature are undefined
+  - Personality and behavioral traits are unknown
+- `watchdog`
+  - Physical appearance is undocumented.
+  - Personality and vocal characteristics are undocumented.
+  - Specific role or function within the narrative is unstated.
+- `ape_creature_1`
+  - Specific physical appearance and species details are unstated.
+  - Behavioral traits and personality are unknown.
+  - Role within the narrative is undefined.
+- `ape_creature_2`
+  - Specific physical appearance and scale are undefined.
+  - Behavioral traits and personality are unknown.
+  - Functional role within the narrative is unestablished.
+- `watch_thing`
+  - Physical appearance and visual identity are completely undocumented.
+  - Personality, role, and vocal characteristics are unknown.
+- `lorquas_ptomel`
+  - Physical appearance, personality, and specific role within the narrative are unstated in provided evidence.
+- `young_martian`
+  - Physical appearance and visual identity are undocumented.
+  - Personality, voice, and specific role within the narrative remain unknown.
+- `the_prisoner`
+  - Physical appearance and visual identity are undocumented.
+  - Personality, voice, and specific role within the narrative are unknown.
+  - No details provided regarding costume or relationships.
+- `woola`
+  - Physical appearance, personality, and specific role within the narrative are not documented in the provided evidence.
+- `green_martian_women_group`
+  - Specific physical features beyond skin color are undefined.
+  - Individual identities and group hierarchy are unknown.
+  - Costume and attire details are not provided.
+- `red_prisoner`
+  - Physical appearance and specific identity are unknown.
+  - Nature of imprisonment and character background are unstated.
+- `sarkoja`
+  - Physical appearance and visual identity are completely undocumented.
+  - Personality, temperament, and character motivations are unknown.
+  - Specific role within the narrative hierarchy is not defined by provided evidence.
+- `dejah_thoris`
+  - Visual identity, personality, and specific character details are not present in the provided evidence.
+- `tal_hajus`
+  - Physical appearance, personality, and specific role within the narrative are not documented in the provided evidence.
+- `young_warrior_aggressor`
+  - Physical appearance and specific visual identity are undocumented.
+  - Specific personality traits beyond the 'aggressor' designation are unknown.
+  - No established costume or equipment details.
+- `warhoon_green_men`
+  - Specific physical dimensions and scale of the group members are unknown.
+  - Detailed costume or attire is not specified.
+  - Behavioral traits and personality are undocumented.
+- `zad`
+  - Physical appearance, personality, and specific role within the narrative are not documented in the provided evidence.
+- `sola_mother`
+  - Physical appearance is undocumented.
+  - Personality and vocal characteristics are undocumented.
+  - Specific role within the narrative is undefined beyond being an individual entity.
+- `thark_warriors`
+  - Specific physical appearance and visual characteristics are not provided in the evidence.
+  - Individual traits or specific group behaviors are undefined.
+- `dak_kova`
+  - Physical appearance, personality, and specific role within the narrative are unstated in provided evidence.
+- `female_healer`
+  - Physical appearance and visual identity are undocumented.
+  - Personality traits and vocal characteristics are undocumented.
+  - Specific relationships or social standing within the narrative are unstated.
+- `warhoon_warriors`
+  - Specific visual appearance, physical traits, and individual characteristics are undocumented.
+  - No specific personality or behavioral traits provided.
+- `kantos_kan`
+  - Physical appearance and visual identity are undocumented.
+  - Personality, temperament, and motivations are unknown.
+  - Specific role within the narrative is not defined by provided evidence.
+- `warhoon_horde`
+  - Specific physical appearance and composition of the group are not defined in provided evidence.
+- `invisible_host`
+  - Physical appearance and visual identity are undocumented.
+  - Personality, voice, and specific role within the narrative are unknown.
+- `old_man`
+  - Physical appearance, personality, and specific role are undocumented in the provided evidence.
+- `red_martians`
+  - Specific physical appearance and visual characteristics are unknown.
+  - Individual traits within the group are not defined.
+  - Nature of their collective behavior or personality is unestablished.
+- `red_martian_scout`
+  - Physical appearance and visual identity are undocumented.
+  - Personality traits and vocal characteristics are undocumented.
+  - Specific role within a larger hierarchy is unconfirmed beyond the designation 'scout'.
+- `sab_than`
+  - Physical appearance, costume, personality, and specific role within the narrative are unstated in the provided evidence.
+- `than_kosis`
+  - Physical appearance is undocumented.
+  - Personality and motivations are undocumented.
+  - Specific role within the narrative remains unstated.
+- `notan`
+  - Physical appearance is undocumented.
+  - Personality and vocal characteristics are undocumented.
+  - Specific role within the narrative is undefined beyond being an individual entity.
+- `zodangan_sentry`
+  - Physical appearance and visual characteristics are undocumented.
+  - Personality, voice, and specific role functions are unknown.
+  - No established relationships or affiliations provided in evidence.
+- `mors_kajak`
+  - Physical appearance and visual identity are undocumented.
+  - Personality, role, and vocal characteristics are undocumented.
+- `tardos_mors`
+  - Physical appearance, costume, personality, and vocal characteristics are undocumented in the provided evidence.
+- `assistant_keeper_assassin`
+  - Physical appearance and personality are undocumented in provided evidence.
+  - Specific role or function within the narrative is not defined beyond the identifier.
+- `surviving_technician`
+  - Physical appearance and gender are unstated.
+  - Specific technical expertise or background is unknown.
+  - Personality traits and vocal characteristics are undocumented.
+- `old_woman_mummified`
+  - Specific physical features beyond mummification are unknown
+  - Identity and backstory are unestablished

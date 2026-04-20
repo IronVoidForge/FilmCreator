@@ -14,22 +14,22 @@
 
 ## Visual Bible
 
-No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
+No visual data provided.
 
 - physical_traits: (none)
-- costume_signature: (none)
+- costume_signature: Unknown
 
 ## Behavioral Bible
 
-- personality: (none)
-- role: individual
-- voice_notes: (none)
+- personality: Insufficient evidence to determine personality.
+- role: Individual entity appearing in CH026 and CH027.
+- voice_notes: Unknown
 - relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: (none)
-- unresolved_ambiguities: (none)
+- continuity_constraints: Character is identified as a singular individual entity.
+- unresolved_ambiguities: Physical appearance, costume, personality, and vocal characteristics are undocumented in the provided evidence.
 
 ## Evidence Summary
 
@@ -41,4 +41,4 @@ No competing canonical alias detected; kept extracted asset id. Character appear
 - status: `generated`
 - source_fingerprint: `edff0f70a48e3a48462ea3cd6c8685b644d8fdb5`
 - created_at_utc: `2026-04-20T22:16:45.922537+00:00`
-- updated_at_utc: `2026-04-20T23:04:18.729184+00:00`
+- updated_at_utc: `2026-04-20T23:14:24.083549+00:00`

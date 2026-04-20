@@ -14,22 +14,22 @@
 
 ## Visual Bible
 
-No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
+No visual data available.
 
 - physical_traits: (none)
-- costume_signature: (none)
+- costume_signature: Unknown
 
 ## Behavioral Bible
 
-- personality: (none)
-- role: individual
-- voice_notes: (none)
+- personality: Unknown
+- role: Individual entity identified as assistant_keeper_assassin.
+- voice_notes: Unknown
 - relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: (none)
-- unresolved_ambiguities: (none)
+- continuity_constraints: Character is a singular individual entity.
+- unresolved_ambiguities: Physical appearance and personality are undocumented in provided evidence., Specific role or function within the narrative is not defined beyond the identifier.
 
 ## Evidence Summary
 
@@ -41,4 +41,4 @@ No competing canonical alias detected; kept extracted asset id. Character appear
 - status: `generated`
 - source_fingerprint: `669f2d1079994785cae08978520428158ecec1cf`
 - created_at_utc: `2026-04-20T22:16:45.923536+00:00`
-- updated_at_utc: `2026-04-20T23:04:23.295927+00:00`
+- updated_at_utc: `2026-04-20T23:14:28.976162+00:00`

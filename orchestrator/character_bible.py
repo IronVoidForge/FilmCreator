@@ -21,6 +21,7 @@ from .core.json_io import read_json, write_json
 from .lmstudio_client import LMStudioClient
 from .settings import load_runtime_settings
 from .scaffold import create_project
+from .features.authoring.packet_parser import parse_packet_document
 from .world_global import global_character_registry_path
 
 
@@ -142,7 +143,7 @@ Return JSON with exactly these keys:
 
     try:
         text = client.chat_completion(system_prompt=system, user_prompt=user, temperature=0.1)
-        payload = json.loads(text)
+        payload = _parse_json_object(text)
         required = {
             "display_name",
             "stable_visual_summary",
@@ -160,6 +161,21 @@ Return JSON with exactly these keys:
         return payload
     except Exception:
         return None
+
+
+def _parse_json_object(text: str) -> dict[str, Any]:
+    stripped = text.strip()
+    if stripped.startswith("```"):
+        stripped = stripped.replace("```json", "```", 1)
+        stripped = stripped.strip("`").strip()
+
+    start = stripped.find("{")
+    end = stripped.rfind("}")
+    if start == -1 or end == -1 or end < start:
+        raise ValueError("LLM response did not contain a JSON object.")
+
+    candidate = stripped[start : end + 1]
+    return json.loads(candidate)
 
 
 def _load_existing_metadata(existing: dict | None, artifact_id: str, fp: str) -> CharacterBibleMetadata:

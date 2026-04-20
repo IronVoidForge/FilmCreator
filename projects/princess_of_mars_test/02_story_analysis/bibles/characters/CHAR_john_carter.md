@@ -14,22 +14,22 @@
 
 ## Visual Bible
 
-Resolved known Carter alias to john_carter.
+No visual data available.
 
 - physical_traits: (none)
-- costume_signature: (none)
+- costume_signature: Unknown
 
 ## Behavioral Bible
 
-- personality: (none)
-- role: individual
-- voice_notes: (none)
+- personality: Insufficient evidence to determine personality.
+- role: Unknown
+- voice_notes: No vocal data available.
 - relationship_notes: (none)
 
 ## Continuity
 
 - continuity_constraints: (none)
-- unresolved_ambiguities: (none)
+- unresolved_ambiguities: Character identity is confirmed as john_carter, but no physical, personality, or role-based details are provided in the evidence.
 
 ## Evidence Summary
 
@@ -41,4 +41,4 @@ Resolved known Carter alias to john_carter.
 - status: `generated`
 - source_fingerprint: `106e1895c6cffe019efb62ab4ee69418ffd2a745`
 - created_at_utc: `2026-04-20T22:16:45.886505+00:00`
-- updated_at_utc: `2026-04-20T23:00:24.081498+00:00`
+- updated_at_utc: `2026-04-20T23:10:28.074867+00:00`

@@ -14,22 +14,22 @@
 
 ## Visual Bible
 
-No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
+Insufficient data to establish a visual profile.
 
 - physical_traits: (none)
-- costume_signature: (none)
+- costume_signature: Unknown
 
 ## Behavioral Bible
 
-- personality: (none)
-- role: individual
-- voice_notes: (none)
+- personality: Aggressive (per identifier).
+- role: Individual entity; warrior/aggressor.
+- voice_notes: Unknown
 - relationship_notes: (none)
 
 ## Continuity
 
 - continuity_constraints: (none)
-- unresolved_ambiguities: (none)
+- unresolved_ambiguities: Physical appearance and specific visual identity are undocumented., Specific personality traits beyond the 'aggressor' designation are unknown., No established costume or equipment details.
 
 ## Evidence Summary
 
@@ -41,4 +41,4 @@ No competing canonical alias detected; kept extracted asset id. Character appear
 - status: `generated`
 - source_fingerprint: `fa7f36cb55e4708c832c0a3f5b67fa831f621c3e`
 - created_at_utc: `2026-04-20T22:16:45.907025+00:00`
-- updated_at_utc: `2026-04-20T23:02:57.112757+00:00`
+- updated_at_utc: `2026-04-20T23:13:01.374175+00:00`
