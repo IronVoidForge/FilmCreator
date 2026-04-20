@@ -4,10 +4,10 @@
 sarkoja
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Character may already exist under another name or is too weakly identified in this chapter to confirm stable identity across reruns.
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+Is Sarkoja present in this chapter's scenes, and what are her physical characteristics?
 
 # Guidance
 - answer briefly and concretely

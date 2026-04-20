@@ -4,10 +4,10 @@
 young_warrior
 
 # Why This Needs Clarification
-Character is unnamed and might exist under another name or be too weakly identified for stable image generation.
+Character may already exist under another name or is too weakly identified in this chapter to confirm stable identity across reruns.
 
 # Question
-Does this character have a proper name in the source material, or should he remain "the young warrior" / "the brute"?
+Is the young warrior a distinct character from other warriors mentioned, and what are his physical characteristics?
 
 # Guidance
 - answer briefly and concretely

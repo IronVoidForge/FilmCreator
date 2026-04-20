@@ -4,10 +4,10 @@
 the_prisoner
 
 # Why This Needs Clarification
-if the chapter names a character without enough stable identification, set is_fully_identified to false
+The character is not fully identified from this chapter alone.
 
 # Question
-What is the prisoner's proper name or designation in the story context?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

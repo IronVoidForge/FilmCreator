@@ -4,10 +4,10 @@
 tars_tarkas
 
 # Why This Needs Clarification
-Character exists in narrative but lacks stable identification through physical description. May already exist under another name or be too weakly identified for reliable rendering.
+Character may already exist under another name or is too weakly identified in this chapter to confirm stable identity across reruns.
 
 # Question
-What are Tars Tarkas's physical appearance details (height, build, hair color, eye color, distinctive features) and what specific chieftain responsibilities does he hold?
+Is Tars Tarkas a distinct character from other chieftains mentioned, and what are his physical characteristics?
 
 # Guidance
 - answer briefly and concretely
