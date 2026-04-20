@@ -1,0 +1,123 @@
+# World Refinement Report
+
+- project_slug: princess_of_mars_test
+- generated_at_utc: 2026-04-20T04:18:55.900533+00:00
+- candidate_count: 57
+- decision_count: 57
+
+## Decisions
+
+- character ['narrator', 'narrator_ch003'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator', 'narrator_i'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['ancient_female', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['apache_warriors', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['apache_warriors', 'protagonist'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['apache_warriors', 'watch_dog'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['ape_like_creature', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['bar_comas', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['bull_ape', 'bull_ape_mate'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['bull_ape', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['bull_ape_mate', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['carter_human', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['chieftain_martian', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['dak_kova', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['dead_friend', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['dejah_thoris', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['hatching_creature_ch003', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['jeddak_than_kosis', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['john_carter', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['kantos_kan', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['lorquas_ptomel', 'lorquas_ptomel_jed'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['lorquas_ptomel', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['lorquas_ptomel_jed', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['mars', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['martian_leader_ch003', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['martian_soldier_ch003', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator', 'nell'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator', 'old_martian_guardian'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator', 'powell'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator', 'prisoner_human_female'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator', 'protagonist'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator', 'sab_than'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator', 'sarkoja'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator', 'sola'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator', 'tal_hajus'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator', 'tars_tarkas'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator', 'than_kosis'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator', 'the_prisoner'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator', 'warrior_martian'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator', 'warriors_group'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator', 'watch_dog'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator', 'women_children_group'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator', 'woola'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator', 'young_martians'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator', 'young_warrior'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator', 'zad'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator_ch003', 'protagonist'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator_ch003', 'watch_dog'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator_i', 'protagonist'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['narrator_i', 'watch_dog'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['protagonist', 'warriors_group'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['protagonist', 'women_children_group'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['protagonist', 'young_martians'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['warriors_group', 'watch_dog'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['watch_dog', 'women_children_group'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- character ['watch_dog', 'young_martians'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
+- environment ['plaza', 'plaza_destination'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
+  - reason: LLM disabled for this refinement run.
