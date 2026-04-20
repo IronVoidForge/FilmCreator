@@ -112,6 +112,7 @@ class RefinementSummary:
     project_slug: str
     written_files: list[str]
     candidate_count: int
+    comparison_count: int
     decision_count: int
     applied_count: int
     human_review_count: int
@@ -122,11 +123,18 @@ class RefinementSummary:
             "project_slug": self.project_slug,
             "written_files": self.written_files,
             "candidate_count": self.candidate_count,
+            "comparison_count": self.comparison_count,
             "decision_count": self.decision_count,
             "applied_count": self.applied_count,
             "human_review_count": self.human_review_count,
             "warnings": self.warnings,
         }
+
+
+class RefinementDecisionError(RuntimeError):
+    def __init__(self, message: str, *, retriable: bool = False) -> None:
+        super().__init__(message)
+        self.retriable = retriable
 
 
 class WorldIdentityRefiner:
@@ -152,7 +160,7 @@ class WorldIdentityRefiner:
     def run(self, *, use_llm: bool = True, apply_changes: bool = True) -> RefinementSummary:
         warnings: list[str] = []
 
-        candidates = self._generate_candidates()
+        candidates, comparison_count = self._generate_candidates()
         decisions: list[RefinementDecision] = []
 
         for candidate in candidates:
@@ -198,6 +206,7 @@ class WorldIdentityRefiner:
             {
                 "project_slug": self.project_slug,
                 "candidate_count": len(candidates),
+                "comparison_count": comparison_count,
                 "decision_count": len(decisions),
                 "applied_count": applied_count,
                 "human_review_count": human_review_count,
@@ -245,14 +254,15 @@ class WorldIdentityRefiner:
             project_slug=self.project_slug,
             written_files=written_files,
             candidate_count=len(candidates),
+            comparison_count=comparison_count,
             decision_count=len(decisions),
             applied_count=applied_count,
             human_review_count=human_review_count,
             warnings=warnings,
         )
 
-    def _generate_candidates(self) -> list[RefinementCandidate]:
-        candidates: list[RefinementCandidate] = []
+    def _generate_candidates(self) -> tuple[list[RefinementCandidate], int]:
+        pair_candidates: list[RefinementCandidate] = []
         seen_keys: set[tuple[str, tuple[str, ...]]] = set()
 
         character_ids = sorted(self.character_registry.keys())
@@ -265,7 +275,7 @@ class WorldIdentityRefiner:
                 if key in seen_keys:
                     continue
                 seen_keys.add(key)
-                candidates.append(candidate)
+                pair_candidates.append(candidate)
 
         environment_ids = sorted(self.environment_registry.keys())
         for index, left_id in enumerate(environment_ids):
@@ -277,10 +287,11 @@ class WorldIdentityRefiner:
                 if key in seen_keys:
                     continue
                 seen_keys.add(key)
-                candidates.append(candidate)
+                pair_candidates.append(candidate)
 
-        candidates.sort(key=lambda item: (-item.heuristic_score, item.entity_type, item.subject_ids))
-        return candidates
+        clusters = self._cluster_pair_candidates(pair_candidates)
+        clusters.sort(key=lambda item: (-item.heuristic_score, item.entity_type, item.subject_ids))
+        return clusters, len(pair_candidates)
 
     def _maybe_character_candidate(self, left_id: str, right_id: str) -> RefinementCandidate | None:
         left = self.character_registry[left_id]
@@ -293,6 +304,11 @@ class WorldIdentityRefiner:
         right_root = self._root_identity_token(right_id)
         left_norm = self._normalize_token(left_id)
         right_norm = self._normalize_token(right_id)
+        overlap = self._alias_overlap(left, right)
+        strong_overlap = bool(overlap) or left_root == right_root or self._has_prefix_relationship(left_norm, right_norm)
+
+        if not strong_overlap:
+            return None
 
         if left_root == right_root and left_id != right_id:
             score += 5
@@ -302,7 +318,6 @@ class WorldIdentityRefiner:
             score += 4
             reasons.append("chapter suffix or short title variant detected")
 
-        overlap = self._alias_overlap(left, right)
         if overlap:
             score += 4
             reasons.append(f"alias overlap: {sorted(overlap)}")
@@ -343,6 +358,11 @@ class WorldIdentityRefiner:
         right_root = self._root_identity_token(right_id)
         left_norm = self._normalize_token(left_id)
         right_norm = self._normalize_token(right_id)
+        overlap = self._alias_overlap(left, right)
+        strong_overlap = bool(overlap) or left_root == right_root or self._has_prefix_relationship(left_norm, right_norm)
+
+        if not strong_overlap:
+            return None
 
         if left_root == right_root and left_id != right_id:
             score += 5
@@ -352,7 +372,6 @@ class WorldIdentityRefiner:
             score += 4
             reasons.append("chapter suffix or short title variant detected")
 
-        overlap = self._alias_overlap(left, right)
         if overlap:
             score += 3
             reasons.append(f"alias overlap: {sorted(overlap)}")
@@ -378,6 +397,176 @@ class WorldIdentityRefiner:
             evidence=evidence,
         )
 
+    def _cluster_pair_candidates(self, pair_candidates: list[RefinementCandidate]) -> list[RefinementCandidate]:
+        clusters: dict[str, set[str]] = {}
+        parents: dict[str, str] = {}
+        entity_types: dict[str, Literal["character", "environment"]] = {}
+        all_ids: set[str] = set()
+
+        def find(item: str) -> str:
+            parents.setdefault(item, item)
+            if parents[item] != item:
+                parents[item] = find(parents[item])
+            return parents[item]
+
+        def union(left: str, right: str) -> None:
+            left_root = find(left)
+            right_root = find(right)
+            if left_root != right_root:
+                parents[right_root] = left_root
+
+        for candidate in pair_candidates:
+            left_id, right_id = candidate.subject_ids
+            all_ids.update(candidate.subject_ids)
+            entity_types[left_id] = candidate.entity_type
+            entity_types[right_id] = candidate.entity_type
+            union(left_id, right_id)
+
+        for item in all_ids:
+            root = find(item)
+            clusters.setdefault(root, set()).add(item)
+
+        clustered_candidates: list[RefinementCandidate] = []
+        for root, members in clusters.items():
+            if len(members) < 2:
+                continue
+            entity_type = entity_types[next(iter(members))]
+            member_list = sorted(members)
+            member_summaries = [self._cluster_member_summary(member_id, entity_type) for member_id in member_list]
+            edge_candidates = [
+                candidate
+                for candidate in pair_candidates
+                if set(candidate.subject_ids).issubset(members)
+            ]
+            ranked_members = self._rank_cluster_members(member_list, entity_type)
+            representative = ranked_members[0]["canonical_id"] if ranked_members else member_list[0]
+            evidence = {
+                "cluster_root": root,
+                "member_summaries": member_summaries,
+                "pairwise_edges": [
+                    {
+                        "subject_ids": candidate.subject_ids,
+                        "reason": candidate.reason,
+                        "heuristic_score": candidate.heuristic_score,
+                    }
+                    for candidate in sorted(
+                        edge_candidates,
+                        key=lambda item: (-item.heuristic_score, item.subject_ids),
+                    )
+                ],
+                "ranked_members": ranked_members,
+                "preferred_target_id": representative,
+            }
+            reason = self._summarize_cluster_reason(edge_candidates, ranked_members)
+            score = sum(candidate.heuristic_score for candidate in edge_candidates) + len(members) * 5
+            clustered_candidates.append(
+                RefinementCandidate(
+                    entity_type=entity_type,
+                    subject_ids=member_list,
+                    reason=reason,
+                    heuristic_score=score,
+                    evidence=evidence,
+                )
+            )
+
+        return clustered_candidates
+
+    def _cluster_member_summary(self, canonical_id: str, entity_type: Literal["character", "environment"]) -> dict:
+        registry = self.character_registry if entity_type == "character" else self.environment_registry
+        entry = registry.get(canonical_id, {})
+        description_layers = entry.get("description_layers", {})
+        return {
+            "canonical_id": canonical_id,
+            "display_name": entry.get("display_name"),
+            "status": entry.get("status"),
+            "entity_kind": entry.get("entity_kind"),
+            "aliases": entry.get("aliases", []),
+            "first_seen_chapter": entry.get("first_seen_chapter"),
+            "last_seen_chapter": entry.get("last_seen_chapter"),
+            "chapter_mentions": entry.get("chapter_mentions", []),
+            "source_count": len(entry.get("sources", [])),
+            "weak_name": self._is_weak_character_name(canonical_id) if entity_type == "character" else False,
+            "canonical_rank_score": self._rank_entity_candidate(canonical_id, entry, entity_type),
+            "stable_canonical_descriptions": description_layers.get("stable_canonical", []),
+        }
+
+    def _rank_cluster_members(self, member_ids: list[str], entity_type: Literal["character", "environment"]) -> list[dict]:
+        ranked = [
+            self._cluster_member_summary(member_id, entity_type)
+            for member_id in member_ids
+        ]
+        shortest_normalized_length = min(len(self._normalize_token(member_id)) for member_id in member_ids)
+        prefix_candidates = [
+            member_id
+            for member_id in member_ids
+            if any(
+                other_id != member_id
+                and self._normalize_token(other_id).startswith(self._normalize_token(member_id))
+                for other_id in member_ids
+            )
+        ]
+        for item in ranked:
+            if len(self._normalize_token(item["canonical_id"])) == shortest_normalized_length:
+                item["canonical_rank_score"] += 12
+            if item["canonical_id"] in prefix_candidates:
+                item["canonical_rank_score"] += 30
+        ranked.sort(key=lambda item: (-item["canonical_rank_score"], item["canonical_id"]))
+        return ranked
+
+    def _rank_entity_candidate(self, canonical_id: str, entry: dict, entity_type: Literal["character", "environment"]) -> int:
+        score = 0
+        display_name = self._normalize_token(entry.get("display_name", canonical_id))
+        canonical_token = self._normalize_token(canonical_id)
+        aliases = {self._normalize_token(alias) for alias in entry.get("aliases", [])}
+        aliases.discard("")
+
+        if canonical_token == display_name:
+            score += 10
+        if entity_type == "character":
+            if entry.get("status") == "canonical":
+                score += 25
+            if entry.get("entity_kind") != "provisional_role":
+                score += 8
+            if self._is_weak_character_name(canonical_id):
+                score -= 20
+        else:
+            if entry.get("status") == "canonical":
+                score += 18
+            if entry.get("entity_kind") == "environment":
+                score += 8
+        if self._chapter_suffix_match(canonical_id):
+            score -= 12
+        if self._main_suffix_match(canonical_id):
+            score -= 6
+        score += min(len(entry.get("chapter_mentions", [])), 8) * 3
+        score += min(len(entry.get("sources", [])), 8) * 2
+        score += min(len(entry.get("description_layers", {}).get("stable_canonical", [])), 6) * 2
+        score += min(len(aliases), 5)
+        return score
+
+    def _summarize_cluster_reason(
+        self,
+        pair_candidates: list[RefinementCandidate],
+        ranked_members: list[dict],
+    ) -> str:
+        if not pair_candidates:
+            return "Clustered from shared identity overlap."
+        reasons: list[str] = []
+        for candidate in sorted(pair_candidates, key=lambda item: (-item.heuristic_score, item.subject_ids)):
+            for fragment in candidate.reason.split("; "):
+                if fragment and fragment not in reasons:
+                    reasons.append(fragment)
+        if ranked_members:
+            top = ranked_members[0]
+            reasons.append(f"preferred target ranked as {top['canonical_id']} (score {top['canonical_rank_score']})")
+        return "; ".join(reasons[:5])
+
+    def _chapter_suffix_match(self, value: str) -> bool:
+        return bool(_CHAPTER_SUFFIX_RE.search(value))
+
+    def _main_suffix_match(self, value: str) -> bool:
+        return bool(_MAIN_SUFFIX_RE.search(value))
+
     def _classify_candidate_with_llm(self, candidate: RefinementCandidate) -> RefinementDecision:
         client = self._get_client()
         system_prompt = (
@@ -385,52 +574,95 @@ class WorldIdentityRefiner:
             "Choose only from the allowed actions and return valid JSON only. "
             "Do not invent entities or rewrite the registry. If uncertain, flag_for_human_review."
         )
-        user_prompt = json.dumps(
-            {
-                "task": "classify_identity_refinement_candidate",
-                "allowed_actions": [
-                    "keep_separate",
-                    "merge_into_existing",
-                    "rename_canonical",
-                    "retype_entity",
-                    "mark_provisional",
-                    "flag_for_human_review",
-                ],
-                "candidate": candidate.to_dict(),
-                "output_schema": {
-                    "entity_type": "character|environment",
-                    "subject_ids": ["id1", "id2"],
-                    "action": "allowed action",
-                    "target_id": "existing target id or null",
-                    "new_canonical_id": "new id or null",
-                    "new_entity_kind": "new kind or null",
-                    "reason": "short reason",
-                    "confidence": "low|medium|high",
-                    "requires_human_review": "bool",
-                },
+        last_error: Exception | None = None
+        for compact in (False, True):
+            result = client.chat_completion_result(
+                system_prompt=system_prompt,
+                user_prompt=self._build_classification_prompt(candidate, compact=compact),
+                temperature=0.0,
+            )
+            if not result.is_success:
+                last_error = LMStudioError(result.error_message or "LM Studio returned an unusable response.")
+                continue
+
+            try:
+                payload = self._parse_json_object(result.text)
+            except LMStudioError as exc:
+                last_error = exc
+                continue
+
+            try:
+                decision = self._decision_from_payload(payload)
+                return self._validate_decision(candidate, decision)
+            except RefinementDecisionError as exc:
+                last_error = exc
+                if exc.retriable and not compact:
+                    continue
+                return self._force_human_review(candidate, str(exc))
+
+        raise LMStudioError(str(last_error) if last_error else "LM Studio returned an unusable response.")
+
+    def _build_classification_prompt(self, candidate: RefinementCandidate, *, compact: bool) -> str:
+        allowed_actions = [
+            "keep_separate",
+            "merge_into_existing",
+            "rename_canonical",
+            "retype_entity",
+            "mark_provisional",
+            "flag_for_human_review",
+        ]
+        payload: dict[str, object] = {
+            "task": "classify_identity_refinement_candidate",
+            "allowed_actions": allowed_actions,
+            "candidate": candidate.to_dict(),
+            "allowed_target_ids": [item["canonical_id"] for item in candidate.evidence.get("ranked_members", [])[:3]],
+            "output_schema": {
+                "entity_type": "character|environment",
+                "subject_ids": ["id1", "id2"],
+                "action": "allowed action",
+                "target_id": "existing target id or null",
+                "new_canonical_id": "new id or null",
+                "new_entity_kind": "new kind or null",
+                "reason": "short reason",
+                "confidence": "low|medium|high",
+                "requires_human_review": "bool",
             },
-            indent=2,
-        )
+        }
+        if compact:
+            ranked_members = candidate.evidence.get("ranked_members", [])
+            payload["mode"] = "compact_retry"
+            payload["candidate"] = {
+                "entity_type": candidate.entity_type,
+                "subject_ids": candidate.subject_ids,
+                "reason": candidate.reason,
+                "heuristic_score": candidate.heuristic_score,
+                "preferred_target_id": candidate.evidence.get("preferred_target_id"),
+                "ranked_members": ranked_members[:3],
+                "pairwise_edges": candidate.evidence.get("pairwise_edges", [])[:4],
+            }
+            payload["allowed_target_ids"] = [item["canonical_id"] for item in ranked_members[:3]]
+        return json.dumps(payload, indent=2)
 
-        result = client.chat_completion_result(
-            system_prompt=system_prompt,
-            user_prompt=user_prompt,
-            temperature=0.0,
-        )
-        if not result.is_success:
-            raise LMStudioError(result.error_message or "LM Studio returned an unusable response.")
-
-        payload = self._parse_json_object(result.text)
+    def _decision_from_payload(self, payload: dict) -> RefinementDecision:
+        entity_type = payload["entity_type"]
+        subject_ids = list(payload["subject_ids"])
+        action = payload["action"]
+        target_id = payload.get("target_id")
+        new_canonical_id = payload.get("new_canonical_id")
+        new_entity_kind = payload.get("new_entity_kind")
+        reason = str(payload.get("reason", "")).strip()
+        confidence = payload.get("confidence", "low")
+        requires_human_review = bool(payload.get("requires_human_review", False))
         return RefinementDecision(
-            entity_type=payload["entity_type"],
-            subject_ids=list(payload["subject_ids"]),
-            action=payload["action"],
-            target_id=payload.get("target_id"),
-            new_canonical_id=payload.get("new_canonical_id"),
-            new_entity_kind=payload.get("new_entity_kind"),
-            reason=str(payload.get("reason", "")).strip(),
-            confidence=payload.get("confidence", "low"),
-            requires_human_review=bool(payload.get("requires_human_review", False)),
+            entity_type=entity_type,
+            subject_ids=subject_ids,
+            action=action,
+            target_id=target_id,
+            new_canonical_id=new_canonical_id,
+            new_entity_kind=new_entity_kind,
+            reason=reason,
+            confidence=confidence,
+            requires_human_review=requires_human_review,
         )
 
     def _validate_decision(
@@ -447,15 +679,15 @@ class WorldIdentityRefiner:
             "flag_for_human_review",
         }
         if decision.action not in allowed_actions:
-            return self._force_human_review(candidate, f"Invalid action '{decision.action}'.")
+            raise RefinementDecisionError(f"Invalid action '{decision.action}'.")
 
         if sorted(decision.subject_ids) != sorted(candidate.subject_ids):
-            return self._force_human_review(candidate, "Decision subject ids did not match candidate ids.")
+            raise RefinementDecisionError("Decision subject ids did not match candidate ids.", retriable=True)
 
         registry = self.character_registry if candidate.entity_type == "character" else self.environment_registry
         for subject_id in candidate.subject_ids:
             if subject_id not in registry:
-                return self._force_human_review(candidate, f"Unknown subject id '{subject_id}'.")
+                raise RefinementDecisionError(f"Unknown subject id '{subject_id}'.", retriable=True)
 
         if decision.action == "keep_separate":
             return decision
@@ -468,47 +700,41 @@ class WorldIdentityRefiner:
 
         if decision.action == "merge_into_existing":
             if not decision.target_id or decision.target_id not in registry:
-                return self._force_human_review(candidate, "Merge target missing or unknown.")
+                raise RefinementDecisionError("Merge target missing or unknown.", retriable=True)
             if self._is_resolved_stub(registry[decision.target_id]):
-                return self._force_human_review(candidate, "Merge target is already resolved into another entity.")
+                raise RefinementDecisionError("Merge target is already resolved into another entity.", retriable=True)
+            ranked_members = [item["canonical_id"] for item in candidate.evidence.get("ranked_members", [])]
             if decision.target_id not in candidate.subject_ids:
-                if not any(
-                    self._root_identity_token(decision.target_id) == self._root_identity_token(subject_id)
-                    or self._has_prefix_relationship(
-                        self._normalize_token(decision.target_id),
-                        self._normalize_token(subject_id),
-                    )
-                    or self._has_prefix_relationship(
-                        self._normalize_token(subject_id),
-                        self._normalize_token(decision.target_id),
-                    )
-                    for subject_id in candidate.subject_ids
-                ):
-                    return self._force_human_review(candidate, "Merge target is not closely related to the candidate ids.")
+                raise RefinementDecisionError("Merge target is not a member of the cluster.", retriable=True)
+            if ranked_members and decision.target_id not in ranked_members[:3]:
+                raise RefinementDecisionError(
+                    f"Merge target '{decision.target_id}' is not among the top-ranked cluster members.",
+                    retriable=True,
+                )
 
         if decision.action == "rename_canonical":
             if not decision.new_canonical_id:
-                return self._force_human_review(candidate, "Rename decision missing new_canonical_id.")
+                raise RefinementDecisionError("Rename decision missing new_canonical_id.", retriable=True)
             if not self._is_valid_asset_id(decision.new_canonical_id):
-                return self._force_human_review(candidate, "Rename target is not a valid asset id.")
+                raise RefinementDecisionError("Rename target is not a valid asset id.", retriable=True)
             if decision.new_canonical_id in registry and decision.new_canonical_id not in candidate.subject_ids:
-                return self._force_human_review(candidate, "Rename target already exists in the registry.")
+                raise RefinementDecisionError("Rename target already exists in the registry.", retriable=True)
 
         if decision.action == "retype_entity":
             if candidate.entity_type == "character":
                 if decision.new_entity_kind not in _CHARACTER_ALLOWED_KINDS:
-                    return self._force_human_review(candidate, "Invalid character entity kind.")
+                    raise RefinementDecisionError("Invalid character entity kind.", retriable=True)
             else:
                 if decision.new_entity_kind not in _ENVIRONMENT_ALLOWED_KINDS:
-                    return self._force_human_review(candidate, "Invalid environment entity kind.")
+                    raise RefinementDecisionError("Invalid environment entity kind.", retriable=True)
             if not decision.new_entity_kind:
-                return self._force_human_review(candidate, "Retype decision missing new_entity_kind.")
+                raise RefinementDecisionError("Retype decision missing new_entity_kind.", retriable=True)
 
         if decision.action == "mark_provisional":
             if candidate.entity_type != "character":
-                return self._force_human_review(candidate, "Environment provisional marking is not supported.")
+                raise RefinementDecisionError("Environment provisional marking is not supported.")
             if not any(self._is_weak_character_name(subject_id) for subject_id in candidate.subject_ids):
-                return self._force_human_review(candidate, "Provisional marking requires a weak character name.")
+                raise RefinementDecisionError("Provisional marking requires a weak character name.")
 
         return decision
 
@@ -830,6 +1056,7 @@ class WorldIdentityRefiner:
             f"- project_slug: {self.project_slug}",
             f"- generated_at_utc: {datetime.now(timezone.utc).isoformat()}",
             f"- candidate_count: {len(candidates)}",
+            f"- comparison_count: {sum(len(candidate.evidence.get('pairwise_edges', [])) for candidate in candidates)}",
             f"- decision_count: {len(decisions)}",
             "",
             "## Decisions",
