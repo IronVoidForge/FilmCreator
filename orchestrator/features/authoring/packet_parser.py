@@ -413,7 +413,7 @@ def parse_markdown_bullet_key_value(line: str) -> tuple[str, str]:
     stripped = line.strip()
     if stripped.startswith(("- ", "* ")):
         stripped = stripped[2:].strip()
-    stripped = re.sub(r"^\*\*(.+?)\*\*:\s*", r"\1: ", stripped)
+    stripped = re.sub(r"^\*\*(.+?)\*\*", r"\1", stripped)
     if ":" not in stripped:
         return "", ""
     key, value = stripped.split(":", 1)
