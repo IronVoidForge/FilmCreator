@@ -20,6 +20,8 @@ PREFERRED_SCENE_COUNT = 3
 THIN_SCENE_MARKDOWN_THRESHOLD = 240
 HEADING_PATTERN = re.compile(r"(?m)^# ([^\r\n]+)\s*$")
 CHAPTER_ID_PATTERN = re.compile(r"\b(CH\d{3})\b", re.IGNORECASE)
+IMPLICIT_MARKDOWN_FIELD_PATTERN = re.compile(r"^[a-z0-9_]+_markdown:\s*$", re.IGNORECASE)
+TOP_LEVEL_FIELD_PATTERN = re.compile(r"^[a-z0-9_]+:\s*$", re.IGNORECASE)
 SCENE_ID_PATTERN = re.compile(r"^SC\d{3}$")
 CLIP_ID_PATTERN = re.compile(r"^CL\d{3}$")
 ASSET_ID_PATTERN = re.compile(r"^[a-z0-9_]+$")
@@ -125,6 +127,10 @@ def parse_packet_body(packet_body: str) -> PacketDocument:
             sections[section_name] = "\n".join(section_lines).strip()
             continue
         key, value = split_packet_key_value(stripped)
+        if key.endswith("_markdown") and not value:
+            block_lines, index = collect_implicit_markdown_block(lines, index + 1)
+            metadata[key] = "\n".join(block_lines).strip()
+            continue
         metadata[key] = value
         index += 1
     return PacketDocument(metadata=metadata, sections=sections, records=records)
@@ -146,12 +152,36 @@ def parse_packet_record(record_lines: list[str]) -> PacketRecord:
             sections[section_name] = "\n".join(section_body).strip()
             continue
         key, value = split_packet_key_value(stripped)
+        if key.endswith("_markdown") and not value:
+            block_lines, index = collect_implicit_markdown_block(record_lines, index + 1)
+            sections[key] = "\n".join(block_lines).strip()
+            continue
         fields[key] = value
         index += 1
     record_type = fields.get("type", "")
     if not record_type:
         raise LMStudioError("Packet record is missing required field 'type'.")
     return PacketRecord(fields=fields, sections=sections)
+
+
+def collect_implicit_markdown_block(lines: list[str], start_index: int) -> tuple[list[str], int]:
+    body: list[str] = []
+    index = start_index
+    while index < len(lines):
+        stripped = lines[index].strip()
+        if not stripped:
+            body.append(lines[index])
+            index += 1
+            continue
+        if stripped in {PACKET_START_TAG, PACKET_END_TAG, RECORD_START_TAG, RECORD_END_TAG}:
+            break
+        if SECTION_TAG_PATTERN.fullmatch(stripped):
+            break
+        if TOP_LEVEL_FIELD_PATTERN.fullmatch(stripped):
+            break
+        body.append(lines[index])
+        index += 1
+    return body, index
 
 
 def collect_tagged_block(

@@ -47,6 +47,29 @@ def test_parse_packet_document_accepts_missing_record_closers() -> None:
     assert packet.records[1].fields["scene_id"] == "SC002"
 
 
+def test_parse_packet_document_accepts_implicit_markdown_sections() -> None:
+    response = "\n".join(
+        [
+            "[[FILMCREATOR_PACKET]]",
+            "task: chapter_summary",
+            "version: 1",
+            "project_summary_markdown:",
+            "# Project Summary",
+            "Reusable overview text.",
+            "",
+            "chapter_summary_markdown:",
+            "# Chapter Summary",
+            "Chapter-specific text.",
+            "[[/FILMCREATOR_PACKET]]",
+        ]
+    )
+
+    packet = packet_parser.parse_packet_document(response, expected_task="chapter_summary")
+
+    assert packet.metadata["project_summary_markdown"].startswith("# Project Summary")
+    assert packet.metadata["chapter_summary_markdown"].startswith("# Chapter Summary")
+
+
 def test_validate_scene_decomposition_warns_on_two_scenes_and_rejects_empty() -> None:
     scene_records = [
         packet_parser.PacketRecord(
