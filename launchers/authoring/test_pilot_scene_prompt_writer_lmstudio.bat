@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-set "FILMCREATOR_ROOT=C:\FilmCreator"
+call "%~dp0..\_shared\resolve_filmcreator_root.bat" "%~dp0" || goto :fail
 
 if not exist "%FILMCREATOR_ROOT%" (
     echo Missing FilmCreator root: %FILMCREATOR_ROOT%
@@ -28,10 +28,10 @@ if errorlevel 1 goto :fail
 
 echo.
 echo If this worked, inspect these files:
-echo   C:\FilmCreator\projects\pilot_scene\03_prompt_packages\scenes\SC001\CL001\SC001_CL001_scene_stage_prompt.md
-echo   C:\FilmCreator\projects\pilot_scene\03_prompt_packages\keyframes\SC001\CL001\SC001_CL001_keyframe_prompt.md
-echo   C:\FilmCreator\projects\pilot_scene\03_prompt_packages\fixes\SC001\CL001\SC001_CL001_fix_01_prompt.md
-echo   C:\FilmCreator\projects\pilot_scene\03_prompt_packages\cut_motion\SC001\CL001\SC001_CL001_cut_motion_prompt.md
+echo   %FILMCREATOR_ROOT%\projects\pilot_scene\03_prompt_packages\scenes\SC001\CL001\SC001_CL001_scene_stage_prompt.md
+echo   %FILMCREATOR_ROOT%\projects\pilot_scene\03_prompt_packages\keyframes\SC001\CL001\SC001_CL001_keyframe_prompt.md
+echo   %FILMCREATOR_ROOT%\projects\pilot_scene\03_prompt_packages\fixes\SC001\CL001\SC001_CL001_fix_01_prompt.md
+echo   %FILMCREATOR_ROOT%\projects\pilot_scene\03_prompt_packages\cut_motion\SC001\CL001\SC001_CL001_cut_motion_prompt.md
 echo.
 echo What to look for:
 echo   1. Each file should still have the canonical heading schema.

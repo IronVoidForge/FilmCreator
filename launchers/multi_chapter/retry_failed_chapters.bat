@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-set "FILMCREATOR_ROOT=C:\FilmCreator_MC"
+call "%~dp0..\_shared\resolve_filmcreator_root.bat" "%~dp0" || goto :fail
 set "PROJECT_SLUG=princess_of_mars_test"
 
 if not exist "%FILMCREATOR_ROOT%" (

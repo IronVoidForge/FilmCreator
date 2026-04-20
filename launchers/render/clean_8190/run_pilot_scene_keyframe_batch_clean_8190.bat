@@ -1,14 +1,14 @@
 @echo off
 setlocal
 
-set "FILMCREATOR_ROOT=C:\FilmCreator"
+call "%~dp0..\..\_shared\resolve_filmcreator_root.bat" "%~dp0" || exit /b 1
 set "COMFY_URL=http://127.0.0.1:8190/system_stats"
 set "BATCH_MANIFEST=projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0001.json"
 set "REF_ENV=projects/pilot_scene/05_scenes/SC001/clips/CL001/inputs/smoke_env.png"
 set "REF_CHAR=projects/pilot_scene/05_scenes/SC001/clips/CL001/inputs/smoke_char.png"
 set "FILMCREATOR_COMFY_BASE_URL=http://127.0.0.1:8190"
-set "FILMCREATOR_COMFY_INPUT_DIR=C:\FilmCreator\.comfy_clean\input"
-set "FILMCREATOR_COMFY_OUTPUT_DIR=C:\FilmCreator\.comfy_clean\output"
+set "FILMCREATOR_COMFY_INPUT_DIR=%FILMCREATOR_ROOT%\.comfy_clean\input"
+set "FILMCREATOR_COMFY_OUTPUT_DIR=%FILMCREATOR_ROOT%\.comfy_clean\output"
 
 if not exist "%FILMCREATOR_ROOT%\%BATCH_MANIFEST%" (
     echo Missing batch manifest: %FILMCREATOR_ROOT%\%BATCH_MANIFEST%

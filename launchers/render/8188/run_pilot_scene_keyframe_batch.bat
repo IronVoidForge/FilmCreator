@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-set "FILMCREATOR_ROOT=C:\FilmCreator"
+call "%~dp0..\..\_shared\resolve_filmcreator_root.bat" "%~dp0" || exit /b 1
 set "COMFY_URL=http://127.0.0.1:8188/system_stats"
 set "BATCH_MANIFEST=projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0001.json"
 set "REF_ENV=projects/pilot_scene/05_scenes/SC001/clips/CL001/inputs/smoke_env.png"

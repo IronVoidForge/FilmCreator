@@ -1,12 +1,14 @@
 @echo off
 setlocal
 
+call "%~dp0..\..\_shared\resolve_filmcreator_root.bat" "%~dp0" || exit /b 1
+
 set "COMFY_ROOT=C:\ComfyUI\resources\ComfyUI"
 set "COMFY_BASE=C:\ComfyUIInstall"
 set "COMFY_PYTHON=C:\ComfyUIInstall\.venv\Scripts\python.exe"
 set "COMFY_FRONTEND=C:\ComfyUI\resources\ComfyUI\web_custom_versions\desktop_app"
 set "COMFY_URL=http://127.0.0.1:8191/system_stats"
-set "VIDEO_ROOT=C:\FilmCreator\.comfy_video"
+set "VIDEO_ROOT=%FILMCREATOR_ROOT%\.comfy_video"
 set "VIDEO_USER=%VIDEO_ROOT%\user"
 set "VIDEO_INPUT=%VIDEO_ROOT%\input"
 set "VIDEO_OUTPUT=%VIDEO_ROOT%\output"

@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-set "FILMCREATOR_ROOT=C:\FilmCreator"
+call "%~dp0..\..\_shared\resolve_filmcreator_root.bat" "%~dp0" || goto :fail
 set "PROJECT_SLUG=pilot_scene"
 set "SCENE_ID=SC001"
 set "CLIP_ID=CL001"

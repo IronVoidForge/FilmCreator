@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-set "FILMCREATOR_ROOT=C:\FilmCreator"
+call "%~dp0..\..\_shared\resolve_filmcreator_root.bat" "%~dp0" || goto :fail
 
 if not exist "%FILMCREATOR_ROOT%" (
     echo Missing FilmCreator root: %FILMCREATOR_ROOT%
@@ -30,9 +30,9 @@ if errorlevel 1 goto :fail
 
 echo.
 echo If this worked, inspect:
-echo   C:\FilmCreator\projects\princess_of_mars_test\03_prompt_packages\characters\
-echo   C:\FilmCreator\projects\princess_of_mars_test\03_prompt_packages\environments\
-echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\logs\
+echo   %FILMCREATOR_ROOT%\projects\princess_of_mars_test\03_prompt_packages\characters\
+echo   %FILMCREATOR_ROOT%\projects\princess_of_mars_test\03_prompt_packages\environments\
+echo   %FILMCREATOR_ROOT%\projects\princess_of_mars_test\02_story_analysis\logs\
 pause
 exit /b 0
 

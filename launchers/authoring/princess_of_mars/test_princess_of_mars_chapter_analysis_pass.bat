@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-set "FILMCREATOR_ROOT=C:\FilmCreator"
+call "%~dp0..\..\_shared\resolve_filmcreator_root.bat" "%~dp0" || goto :fail
 
 if not exist "%FILMCREATOR_ROOT%" (
     echo Missing FilmCreator root: %FILMCREATOR_ROOT%
@@ -32,12 +32,12 @@ if errorlevel 1 goto :fail
 
 echo.
 echo If this worked, inspect:
-echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\story_summary\
-echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\chapter_analysis\
-echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\character_breakdowns\
-echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\environment_breakdowns\
-echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\scene_breakdowns\
-echo   C:\FilmCreator\projects\princess_of_mars_test\02_story_analysis\logs\
+echo   %FILMCREATOR_ROOT%\projects\princess_of_mars_test\02_story_analysis\story_summary\
+echo   %FILMCREATOR_ROOT%\projects\princess_of_mars_test\02_story_analysis\chapter_analysis\
+echo   %FILMCREATOR_ROOT%\projects\princess_of_mars_test\02_story_analysis\character_breakdowns\
+echo   %FILMCREATOR_ROOT%\projects\princess_of_mars_test\02_story_analysis\environment_breakdowns\
+echo   %FILMCREATOR_ROOT%\projects\princess_of_mars_test\02_story_analysis\scene_breakdowns\
+echo   %FILMCREATOR_ROOT%\projects\princess_of_mars_test\02_story_analysis\logs\
 pause
 exit /b 0
 

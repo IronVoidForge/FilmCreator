@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-for %%I in ("%~dp0..\..") do set "FILMCREATOR_ROOT=%%~fI"
+call "%~dp0..\..\_shared\resolve_filmcreator_root.bat" "%~dp0" || goto :fail
 
 if not exist "%FILMCREATOR_ROOT%" (
     echo Missing FilmCreator root: %FILMCREATOR_ROOT%

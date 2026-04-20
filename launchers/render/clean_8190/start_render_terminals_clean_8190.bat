@@ -1,10 +1,10 @@
 @echo off
 setlocal
 
-set "FILMCREATOR_ROOT=C:\FilmCreator"
+call "%~dp0..\..\_shared\resolve_filmcreator_root.bat" "%~dp0" || exit /b 1
 set "COMFY_URL=http://127.0.0.1:8190/system_stats"
-set "CLEAN_INPUT=C:\FilmCreator\.comfy_clean\input"
-set "CLEAN_OUTPUT=C:\FilmCreator\.comfy_clean\output"
+set "CLEAN_INPUT=%FILMCREATOR_ROOT%\.comfy_clean\input"
+set "CLEAN_OUTPUT=%FILMCREATOR_ROOT%\.comfy_clean\output"
 
 if not exist "%FILMCREATOR_ROOT%" (
     echo Missing FilmCreator root: %FILMCREATOR_ROOT%
