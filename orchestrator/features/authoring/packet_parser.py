@@ -272,14 +272,14 @@ def extract_character_records_from_index_markdown(markdown: str) -> list[PacketR
             return
         fields: dict[str, str] = {
             "type": "character",
-            "asset_id": normalize_asset_id(current_title),
+            "asset_id": normalize_asset_id(current_title, fallback_prefix="character"),
         }
         for line in current_lines:
             key, value = parse_markdown_bullet_key_value(line)
             if key:
                 fields[key] = value
         if not fields.get("asset_id"):
-            fields["asset_id"] = normalize_asset_id(current_title)
+            fields["asset_id"] = normalize_asset_id(current_title, fallback_prefix="character")
         sections = {
             "markdown": "\n".join([f"## {current_title}", *current_lines]).strip(),
         }
