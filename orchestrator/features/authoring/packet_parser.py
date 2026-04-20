@@ -134,7 +134,9 @@ def parse_packet_body(packet_body: str) -> PacketDocument:
         key, value = split_packet_key_value(stripped)
         if key.endswith("_markdown") and not value:
             block_lines, index = collect_implicit_markdown_block(lines, index + 1)
-            metadata[key] = "\n".join(block_lines).strip()
+            markdown_text = "\n".join(block_lines).strip()
+            metadata[key] = markdown_text
+            sections.setdefault(key, markdown_text)
             continue
         metadata[key] = value
         index += 1

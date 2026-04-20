@@ -94,6 +94,27 @@ def test_parse_packet_document_infers_missing_task_and_version_when_sections_are
     assert packet.sections["chapter_summary_markdown"] == "# Chapter Summary"
 
 
+def test_parse_packet_document_promotes_implicit_markdown_fields_into_sections() -> None:
+    response = "\n".join(
+        [
+            "[[FILMCREATOR_PACKET]]",
+            "project_summary_markdown:",
+            "# Project Summary",
+            "Reusable overview text.",
+            "",
+            "chapter_summary_markdown:",
+            "# Chapter Summary",
+            "Chapter-specific text.",
+            "[[/FILMCREATOR_PACKET]]",
+        ]
+    )
+
+    packet = packet_parser.parse_packet_document(response, expected_task="chapter_summary")
+
+    assert packet.sections["project_summary_markdown"].startswith("# Project Summary")
+    assert packet.sections["chapter_summary_markdown"].startswith("# Chapter Summary")
+
+
 def test_extract_character_records_from_index_markdown_salvages_heading_blocks() -> None:
     markdown = "\n".join(
         [
