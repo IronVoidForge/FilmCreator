@@ -14,22 +14,22 @@
 
 ## Visual Bible
 
-An individual ape-like creature.
+No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
-- physical_traits: Ape-like morphology
+- physical_traits: (none)
 - costume_signature: (none)
 
 ## Behavioral Bible
 
 - personality: (none)
-- role: (none)
+- role: individual
 - voice_notes: (none)
 - relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: Must be treated as a singular individual entity.
-- unresolved_ambiguities: Specific physical appearance and species details are unstated., Behavioral traits and personality are unknown., Role within the narrative is undefined.
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -41,4 +41,4 @@ An individual ape-like creature.
 - status: `generated`
 - source_fingerprint: `4188507ddc57fe4c159c6356bae100cf1b9a0904`
 - created_at_utc: `2026-04-20T22:16:45.897025+00:00`
-- updated_at_utc: `2026-04-20T23:11:51.442199+00:00`
+- updated_at_utc: `2026-04-20T23:29:32.698424+00:00`

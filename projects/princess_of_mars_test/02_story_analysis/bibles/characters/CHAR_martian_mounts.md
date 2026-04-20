@@ -14,22 +14,22 @@
 
 ## Visual Bible
 
-Insufficient evidence to establish a visual identity.
+No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 - physical_traits: (none)
-- costume_signature: Unknown
+- costume_signature: (none)
 
 ## Behavioral Bible
 
-- personality: Unknown
-- role: Singular individual entity
-- voice_notes: Unknown
+- personality: (none)
+- role: individual
+- voice_notes: (none)
 - relationship_notes: (none)
 
 ## Continuity
 
 - continuity_constraints: (none)
-- unresolved_ambiguities: Visual identity and physical characteristics are not documented., Personality, role, and vocal qualities are unknown.
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -41,4 +41,4 @@ Insufficient evidence to establish a visual identity.
 - status: `generated`
 - source_fingerprint: `e0255cf499f0410f5d8449056c142fc64a4d818f`
 - created_at_utc: `2026-04-20T22:16:45.890511+00:00`
-- updated_at_utc: `2026-04-20T23:11:02.111499+00:00`
+- updated_at_utc: `2026-04-20T23:29:32.623351+00:00`

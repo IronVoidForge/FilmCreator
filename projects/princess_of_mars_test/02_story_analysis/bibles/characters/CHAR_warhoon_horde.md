@@ -14,7 +14,7 @@
 
 ## Visual Bible
 
-A collective group entity.
+No competing canonical alias detected; kept extracted asset id. Character markdown describes a group entity.
 
 - physical_traits: (none)
 - costume_signature: (none)
@@ -22,14 +22,14 @@ A collective group entity.
 ## Behavioral Bible
 
 - personality: (none)
-- role: Group entity
+- role: group
 - voice_notes: (none)
 - relationship_notes: (none)
 
 ## Continuity
 
 - continuity_constraints: (none)
-- unresolved_ambiguities: Specific physical appearance and composition of the group are not defined in provided evidence.
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -41,4 +41,4 @@ A collective group entity.
 - status: `generated`
 - source_fingerprint: `6acbb200a060d80e623b756a5dd8774a04c6788f`
 - created_at_utc: `2026-04-20T22:16:45.914036+00:00`
-- updated_at_utc: `2026-04-20T23:13:41.002492+00:00`
+- updated_at_utc: `2026-04-20T23:29:32.889118+00:00`

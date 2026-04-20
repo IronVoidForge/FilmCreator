@@ -14,7 +14,7 @@
 
 ## Visual Bible
 
-No visual data available; character is currently defined as a generic or role-based entity.
+Generic or role-based character remains provisional pending clarification.
 
 - physical_traits: (none)
 - costume_signature: (none)
@@ -22,14 +22,14 @@ No visual data available; character is currently defined as a generic or role-ba
 ## Behavioral Bible
 
 - personality: (none)
-- role: Provisional role-based character/narrator.
+- role: provisional_role
 - voice_notes: (none)
 - relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: Character is provisional pending further clarification.
-- unresolved_ambiguities: Identity and physical presence are unestablished., Nature of the role (on-screen vs. off-screen) is unconfirmed.
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -41,4 +41,4 @@ No visual data available; character is currently defined as a generic or role-ba
 - status: `generated`
 - source_fingerprint: `43d9ecd72e50080ac91f6c9e19062881c5e862bd`
 - created_at_utc: `2026-04-20T22:16:45.892020+00:00`
-- updated_at_utc: `2026-04-20T23:11:11.064821+00:00`
+- updated_at_utc: `2026-04-20T23:29:32.642858+00:00`

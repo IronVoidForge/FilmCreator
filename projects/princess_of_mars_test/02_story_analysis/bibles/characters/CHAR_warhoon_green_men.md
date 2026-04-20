@@ -14,22 +14,22 @@
 
 ## Visual Bible
 
-A group entity identified as 'green men'.
+No competing canonical alias detected; kept extracted asset id. Character markdown describes a group entity.
 
-- physical_traits: Green skin/complexion
+- physical_traits: (none)
 - costume_signature: (none)
 
 ## Behavioral Bible
 
 - personality: (none)
-- role: Group entity
+- role: group
 - voice_notes: (none)
 - relationship_notes: (none)
 
 ## Continuity
 
 - continuity_constraints: (none)
-- unresolved_ambiguities: Specific physical dimensions and scale of the group members are unknown., Detailed costume or attire is not specified., Behavioral traits and personality are undocumented.
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -41,4 +41,4 @@ A group entity identified as 'green men'.
 - status: `generated`
 - source_fingerprint: `2a6f065e8ba81e9fcab194a67fd6f5e10a726e24`
 - created_at_utc: `2026-04-20T22:16:45.907025+00:00`
-- updated_at_utc: `2026-04-20T23:13:05.803075+00:00`
+- updated_at_utc: `2026-04-20T23:29:32.818543+00:00`

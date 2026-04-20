@@ -14,22 +14,22 @@
 
 ## Visual Bible
 
-Insufficient evidence to establish a visual identity.
+No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 - physical_traits: (none)
-- costume_signature: Unknown
+- costume_signature: (none)
 
 ## Behavioral Bible
 
-- personality: Unknown
-- role: Individual entity identified as 'the_prisoner'.
-- voice_notes: Unknown
+- personality: (none)
+- role: individual
+- voice_notes: (none)
 - relationship_notes: (none)
 
 ## Continuity
 
 - continuity_constraints: (none)
-- unresolved_ambiguities: Physical appearance and visual identity are undocumented., Personality, voice, and specific role within the narrative are unknown., No details provided regarding costume or relationships.
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -41,4 +41,4 @@ Insufficient evidence to establish a visual identity.
 - status: `generated`
 - source_fingerprint: `974abef46900e74ae42506266163f389101ee5c3`
 - created_at_utc: `2026-04-20T22:16:45.901025+00:00`
-- updated_at_utc: `2026-04-20T23:12:14.753543+00:00`
+- updated_at_utc: `2026-04-20T23:29:32.741964+00:00`

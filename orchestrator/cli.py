@@ -4,6 +4,7 @@ import argparse
 import json
 
 from .character_bible import run_character_bible_synthesis
+from .environment_bible import run_environment_bible_synthesis
 from .identity_refinement import run_identity_refinement
 
 
@@ -15,6 +16,11 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("project_slug")
     s.add_argument("--no-llm", action="store_true")
     s.add_argument("--force", action="store_true")
+
+    e = subparsers.add_parser("synthesize-environment-bibles")
+    e.add_argument("project_slug")
+    e.add_argument("--no-llm", action="store_true")
+    e.add_argument("--force", action="store_true")
 
     r = subparsers.add_parser("refine-identities")
     r.add_argument("project_slug")
@@ -30,6 +36,14 @@ def main() -> None:
 
     if args.command == "synthesize-character-bibles":
         summary = run_character_bible_synthesis(
+            args.project_slug,
+            use_llm=not args.no_llm,
+            force=args.force,
+        )
+        print(json.dumps(summary.to_dict(), indent=2))
+
+    elif args.command == "synthesize-environment-bibles":
+        summary = run_environment_bible_synthesis(
             args.project_slug,
             use_llm=not args.no_llm,
             force=args.force,

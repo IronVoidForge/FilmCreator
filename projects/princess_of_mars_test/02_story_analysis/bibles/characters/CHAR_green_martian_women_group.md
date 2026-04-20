@@ -14,22 +14,22 @@
 
 ## Visual Bible
 
-A collective group of green-skinned Martian women.
+No competing canonical alias detected; kept extracted asset id. Character markdown describes a group entity.
 
-- physical_traits: Green skin
+- physical_traits: (none)
 - costume_signature: (none)
 
 ## Behavioral Bible
 
 - personality: (none)
-- role: Group entity
+- role: group
 - voice_notes: (none)
 - relationship_notes: (none)
 
 ## Continuity
 
 - continuity_constraints: (none)
-- unresolved_ambiguities: Specific physical features beyond skin color are undefined., Individual identities and group hierarchy are unknown., Costume and attire details are not provided.
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -41,4 +41,4 @@ A collective group of green-skinned Martian women.
 - status: `generated`
 - source_fingerprint: `62753bc5f5fc74f353e3246b703fa664b60af684`
 - created_at_utc: `2026-04-20T22:16:45.902525+00:00`
-- updated_at_utc: `2026-04-20T23:12:26.190840+00:00`
+- updated_at_utc: `2026-04-20T23:29:32.760989+00:00`

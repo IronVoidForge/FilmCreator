@@ -14,22 +14,22 @@
 
 ## Visual Bible
 
-Insufficient data to establish a visual profile.
+No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 - physical_traits: (none)
-- costume_signature: Unknown; identity is linked to the designation 'red_prisoner'.
+- costume_signature: (none)
 
 ## Behavioral Bible
 
-- personality: No personality data available.
-- role: Singular individual entity identified as a prisoner.
-- voice_notes: No audio/vocal data available.
+- personality: (none)
+- role: individual
+- voice_notes: (none)
 - relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: Must be treated as a singular individual entity.
-- unresolved_ambiguities: Physical appearance and specific identity are unknown., Nature of imprisonment and character background are unstated.
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -41,4 +41,4 @@ Insufficient data to establish a visual profile.
 - status: `generated`
 - source_fingerprint: `71e0468fb7dadd870ea657c5b421182637edbae5`
 - created_at_utc: `2026-04-20T22:16:45.903524+00:00`
-- updated_at_utc: `2026-04-20T23:12:30.417590+00:00`
+- updated_at_utc: `2026-04-20T23:29:32.769492+00:00`

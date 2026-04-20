@@ -14,22 +14,22 @@
 
 ## Visual Bible
 
-No visual data provided.
+No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 - physical_traits: (none)
-- costume_signature: Unknown
+- costume_signature: (none)
 
 ## Behavioral Bible
 
-- personality: Unknown
-- role: Individual entity identified as a deceased friend.
-- voice_notes: Unknown
-- relationship_notes: Identified as a friend of the protagonist/other characters.
+- personality: (none)
+- role: individual
+- voice_notes: (none)
+- relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: Character is established as deceased.
-- unresolved_ambiguities: Actual name and identity are unknown., Physical appearance, personality, and voice are undocumented in provided evidence.
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -41,4 +41,4 @@ No visual data provided.
 - status: `generated`
 - source_fingerprint: `4f5c4e638201f21d9fa5b45f052afa7f9ef1b33b`
 - created_at_utc: `2026-04-20T22:16:45.888013+00:00`
-- updated_at_utc: `2026-04-20T23:10:43.854933+00:00`
+- updated_at_utc: `2026-04-20T23:29:32.594823+00:00`

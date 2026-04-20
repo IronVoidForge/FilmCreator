@@ -14,22 +14,22 @@
 
 ## Visual Bible
 
-Insufficient evidence to establish a visual profile.
+No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 - physical_traits: (none)
-- costume_signature: Unknown
+- costume_signature: (none)
 
 ## Behavioral Bible
 
-- personality: Unknown
-- role: Individual entity identified as a surviving technician.
-- voice_notes: Unknown
+- personality: (none)
+- role: individual
+- voice_notes: (none)
 - relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: Must be treated as a singular individual entity.
-- unresolved_ambiguities: Physical appearance and gender are unstated., Specific technical expertise or background is unknown., Personality traits and vocal characteristics are undocumented.
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -41,4 +41,4 @@ Insufficient evidence to establish a visual profile.
 - status: `generated`
 - source_fingerprint: `9d17f0af60d5471ae7a6601b47d4bec970281506`
 - created_at_utc: `2026-04-20T22:16:45.923536+00:00`
-- updated_at_utc: `2026-04-20T23:14:33.252115+00:00`
+- updated_at_utc: `2026-04-20T23:29:32.995233+00:00`

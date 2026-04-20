@@ -14,22 +14,22 @@
 
 ## Visual Bible
 
-A singular individual entity of colossal scale.
+No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
-- physical_traits: Colossal size
+- physical_traits: (none)
 - costume_signature: (none)
 
 ## Behavioral Bible
 
 - personality: (none)
-- role: Individual entity
+- role: individual
 - voice_notes: (none)
 - relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: Must be treated as a singular individual entity
-- unresolved_ambiguities: Specific physical appearance and biological/mechanical nature are undefined, Personality and behavioral traits are unknown
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -41,4 +41,4 @@ A singular individual entity of colossal scale.
 - status: `generated`
 - source_fingerprint: `9a337e2e90ea0dfbbf282d05baa2b3410465fe36`
 - created_at_utc: `2026-04-20T22:16:45.895525+00:00`
-- updated_at_utc: `2026-04-20T23:11:43.332171+00:00`
+- updated_at_utc: `2026-04-20T23:29:32.682408+00:00`

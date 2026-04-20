@@ -14,7 +14,7 @@
 
 ## Visual Bible
 
-A group-based entity identified as Apache warriors.
+No competing canonical alias detected; kept extracted asset id. Detected plural/group-like character asset.
 
 - physical_traits: (none)
 - costume_signature: (none)
@@ -22,14 +22,14 @@ A group-based entity identified as Apache warriors.
 ## Behavioral Bible
 
 - personality: (none)
-- role: Group/Collective entity.
+- role: group
 - voice_notes: (none)
 - relationship_notes: (none)
 
 ## Continuity
 
 - continuity_constraints: (none)
-- unresolved_ambiguities: Specific visual details, individual traits, and personality characteristics are not provided in the evidence.
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -41,4 +41,4 @@ A group-based entity identified as Apache warriors.
 - status: `generated`
 - source_fingerprint: `b041477dbc80c97a18644302607e6c5a5d349ff1`
 - created_at_utc: `2026-04-20T22:16:45.886505+00:00`
-- updated_at_utc: `2026-04-20T23:10:39.641435+00:00`
+- updated_at_utc: `2026-04-20T23:29:32.586813+00:00`

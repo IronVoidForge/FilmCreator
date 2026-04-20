@@ -14,22 +14,22 @@
 
 ## Visual Bible
 
-Insufficient evidence to establish a visual profile.
+No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 - physical_traits: (none)
-- costume_signature: Unknown
+- costume_signature: (none)
 
 ## Behavioral Bible
 
-- personality: No personality data provided.
-- role: Individual entity appearing in CH007.
-- voice_notes: No vocal characteristics documented.
+- personality: (none)
+- role: individual
+- voice_notes: (none)
 - relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: Character is identified as a singular individual entity.
-- unresolved_ambiguities: Physical appearance and visual identity are undocumented., Personality, voice, and specific role within the narrative remain unknown.
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -41,4 +41,4 @@ Insufficient evidence to establish a visual profile.
 - status: `generated`
 - source_fingerprint: `3b263167ad1bc5b32f121fcd5cc8cbf6c3c91a14`
 - created_at_utc: `2026-04-20T22:16:45.900025+00:00`
-- updated_at_utc: `2026-04-20T23:12:10.465369+00:00`
+- updated_at_utc: `2026-04-20T23:29:32.733965+00:00`

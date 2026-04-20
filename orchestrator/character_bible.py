@@ -18,6 +18,7 @@ from .character_bible_writer import (
     write_character_review_queue_markdown,
 )
 from .core.json_io import read_json, write_json
+from .book_librarian import search_book_index, search_chapter_context
 from .lmstudio_client import LMStudioClient
 from .settings import load_runtime_settings
 from .scaffold import create_project
@@ -34,54 +35,85 @@ def _fingerprint(data: Any) -> str:
     return hashlib.sha1(raw.encode("utf-8")).hexdigest()
 
 
-def _collect_evidence(entry: dict) -> tuple[list[str], list[dict[str, Any]]]:
-    evidence_summary: list[str] = []
+def _collect_evidence(project_slug: str, entry: dict) -> tuple[list[str], list[dict[str, Any]]]:
+    evidence_lines: list[str] = []
     evidence_refs: list[dict[str, Any]] = []
+    seen_lines: set[str] = set()
+
+    def add_line(line: str, ref: dict[str, Any] | None = None) -> None:
+        normalized = " ".join(line.split()).strip()
+        if not normalized or normalized in seen_lines:
+            return
+        if len(normalized) > 260:
+            normalized = normalized[:257].rstrip() + "..."
+        seen_lines.add(normalized)
+        evidence_lines.append(normalized)
+        if ref is not None:
+            evidence_refs.append(ref)
 
     desc = entry.get("description_layers", {})
-
-    for item in desc.get("initial_extracted", []):
+    for item in desc.get("stable_canonical", [])[:3]:
         if isinstance(item, dict):
-            summary = item.get("summary")
+            summary = str(item.get("summary", "")).strip()
             if summary:
-                evidence_summary.append(summary)
-                evidence_refs.append(
-                    {
-                        "chapter_id": item.get("chapter_id"),
-                        "source_path": item.get("source_path"),
-                    }
-                )
-        elif isinstance(item, str) and item.strip():
-            evidence_summary.append(item.strip())
+                add_line(summary, {"source": "registry_stable_canonical", "chapter_id": item.get("chapter_id"), "source_path": item.get("source_path")})
+        elif isinstance(item, str):
+            add_line(item, {"source": "registry_stable_canonical", "chapter_id": None, "source_path": None})
 
-    for chapter_id, items in desc.get("chapter_specific", {}).items():
-        if not isinstance(items, list):
+    for item in desc.get("initial_extracted", [])[:4]:
+        if isinstance(item, dict):
+            summary = str(item.get("summary", "")).strip()
+            if summary:
+                add_line(summary, {"source": "registry_initial_extracted", "chapter_id": item.get("chapter_id"), "source_path": item.get("source_path")})
+        elif isinstance(item, str):
+            add_line(item, {"source": "registry_initial_extracted", "chapter_id": None, "source_path": None})
+
+    chapter_mentions = [str(chapter_id) for chapter_id in entry.get("chapter_mentions", []) if isinstance(chapter_id, str)]
+    query_terms = _evidence_query_terms(entry)
+    search_terms = " ".join(query_terms[:3]).strip()
+    if search_terms:
+        index_hits = search_book_index(project_slug, search_terms, top_n=3)
+        for hit in index_hits:
+            chapter_id = str(hit.get("chapter_id", "")).strip()
+            title = str(hit.get("title", "")).strip()
+            reasons = ", ".join(str(reason) for reason in hit.get("reasons", [])[:2] if str(reason).strip())
+            add_line(
+                f"[{chapter_id}] {title} ({reasons or 'book index hit'})",
+                {"source": "book_index", "chapter_id": chapter_id or None, "source_path": None},
+            )
+            if chapter_id and chapter_id not in chapter_mentions:
+                chapter_mentions.append(chapter_id)
+
+    for chapter_id in chapter_mentions[:3]:
+        try:
+            contexts = search_chapter_context(project_slug, chapter_id, query_terms, window=1, top_n=2)
+        except Exception:
             continue
-        for item in items:
-            if isinstance(item, dict):
-                summary = item.get("summary")
-                if summary:
-                    evidence_summary.append(summary)
-                    evidence_refs.append(
-                        {
-                            "chapter_id": chapter_id,
-                            "source_path": item.get("source_path"),
-                        }
-                    )
-            elif isinstance(item, str) and item.strip():
-                evidence_summary.append(item.strip())
-                evidence_refs.append({"chapter_id": chapter_id, "source_path": None})
+        for context in contexts:
+            snippet = _compact_snippet(context.preview or context.text)
+            if not snippet:
+                continue
+            add_line(
+                f"[{chapter_id} p{context.paragraph_start}-p{context.paragraph_end}] {snippet}",
+                {
+                    "source": "paragraph_window",
+                    "chapter_id": chapter_id,
+                    "source_path": context.chapter_path,
+                    "paragraph_start": context.paragraph_start,
+                    "paragraph_end": context.paragraph_end,
+                },
+            )
+            if len(evidence_lines) >= 8:
+                break
+        if len(evidence_lines) >= 8:
+            break
 
-    seen: set[str] = set()
-    deduped_summary: list[str] = []
-    for item in evidence_summary:
-        key = item.strip()
-        if not key or key in seen:
-            continue
-        seen.add(key)
-        deduped_summary.append(key)
+    if not evidence_lines:
+        fallback = _compact_snippet(str(entry.get("resolution_reason", "")).strip() or entry.get("display_name", "") or entry.get("canonical_id", ""))
+        if fallback:
+            add_line(fallback, {"source": "registry_fallback", "chapter_id": None, "source_path": None})
 
-    return deduped_summary[:25], evidence_refs
+    return evidence_lines[:8], evidence_refs[:8]
 
 
 def _deterministic_synthesis(entry: dict, evidence_summary: list[str]) -> dict[str, Any]:
@@ -108,11 +140,12 @@ def _llm_synthesis(entry: dict, evidence_summary: list[str]) -> dict[str, Any] |
     system = (
         "You are a film character bible synthesis system. "
         "Use only the provided evidence. Prefer cinematic clarity and consistency. "
-        "Do not invent unsupported details. Return strict JSON only."
+        "Do not invent unsupported details. Return one tagged FilmCreator markdown packet only. "
+        "Do not return JSON."
     )
 
     user = f"""
-Synthesize a canonical character bible from the provided evidence.
+Synthesize a canonical character bible from the provided evidence as tagged markdown.
 
 PRIORITIES:
 1. stable visual identity
@@ -126,56 +159,221 @@ ENTRY:
 EVIDENCE:
 {json.dumps(evidence_summary, indent=2, ensure_ascii=False)}
 
-Return JSON with exactly these keys:
-{{
-  "display_name": str,
-  "stable_visual_summary": str,
-  "physical_traits": [str],
-  "costume_signature": str,
-  "personality": str,
-  "role": str,
-  "voice_notes": str,
-  "relationship_notes": [str],
-  "continuity_constraints": [str],
-  "unresolved_ambiguities": [str]
-}}
+Return exactly one FilmCreator packet in this structure:
+[[FILMCREATOR_PACKET]]
+task: character_bible_synthesis
+version: 1
+
+[[FILMCREATOR_RECORD]]
+type: character_bible
+artifact_id: CHAR_{entry.get("canonical_id") or entry.get("display_name") or ""}
+character_id: {entry.get("canonical_id") or entry.get("display_name") or ""}
+status: {entry.get("status", "canonical")}
+entity_kind: {entry.get("entity_kind", "individual")}
+
+[[SECTION identity_markdown]]
+display_name: <display name>
+aliases:
+- alias 1
+- alias 2
+chapter_mentions:
+- CH001
+- CH010
+[[/SECTION]]
+
+[[SECTION visual_markdown]]
+stable_visual_summary: <one grounded paragraph>
+physical_traits:
+- trait 1
+- trait 2
+costume_signature: <short costume note or unknown>
+[[/SECTION]]
+
+[[SECTION behavioral_markdown]]
+personality: <grounded personality note or unknown>
+role: <role note or unknown>
+voice_notes: <voice note or unknown>
+relationship_notes:
+- relation note 1
+- relation note 2
+[[/SECTION]]
+
+[[SECTION continuity_markdown]]
+continuity_constraints:
+- continuity constraint 1
+- continuity constraint 2
+unresolved_ambiguities:
+- ambiguity 1
+- ambiguity 2
+[[/SECTION]]
+
+[[SECTION evidence_markdown]]
+- evidence line 1
+- evidence line 2
+[[/SECTION]]
+
+[[/FILMCREATOR_RECORD]]
+[[/FILMCREATOR_PACKET]]
 """
 
     try:
         text = client.chat_completion(system_prompt=system, user_prompt=user, temperature=0.1)
-        payload = _parse_json_object(text)
-        required = {
-            "display_name",
-            "stable_visual_summary",
-            "physical_traits",
-            "costume_signature",
-            "personality",
-            "role",
-            "voice_notes",
-            "relationship_notes",
-            "continuity_constraints",
-            "unresolved_ambiguities",
-        }
-        if not required.issubset(payload.keys()):
-            return None
-        return payload
+        return _parse_character_bible_packet(text, entry)
     except Exception:
         return None
 
 
-def _parse_json_object(text: str) -> dict[str, Any]:
-    stripped = text.strip()
-    if stripped.startswith("```"):
-        stripped = stripped.replace("```json", "```", 1)
-        stripped = stripped.strip("`").strip()
+def _parse_character_bible_packet(text: str, entry: dict[str, Any]) -> dict[str, Any]:
+    packet = parse_packet_document(text, expected_task="character_bible_synthesis")
+    if not packet.records:
+        raise ValueError("LLM response did not contain a character bible record.")
 
-    start = stripped.find("{")
-    end = stripped.rfind("}")
-    if start == -1 or end == -1 or end < start:
-        raise ValueError("LLM response did not contain a JSON object.")
+    record = packet.records[0]
+    fields = record.fields
+    sections = record.sections
 
-    candidate = stripped[start : end + 1]
-    return json.loads(candidate)
+    identity_scalars, identity_lists, identity_freeform = _parse_bible_markdown_section(sections.get("identity_markdown", ""))
+    visual_scalars, visual_lists, visual_freeform = _parse_bible_markdown_section(sections.get("visual_markdown", ""))
+    behavioral_scalars, behavioral_lists, behavioral_freeform = _parse_bible_markdown_section(sections.get("behavioral_markdown", ""))
+    continuity_scalars, continuity_lists, continuity_freeform = _parse_bible_markdown_section(sections.get("continuity_markdown", ""))
+    evidence_scalars, evidence_lists, evidence_freeform = _parse_bible_markdown_section(sections.get("evidence_markdown", ""))
+
+    display_name = _first_nonempty(
+        identity_scalars.get("display_name"),
+        fields.get("display_name"),
+        entry.get("display_name"),
+        entry.get("canonical_id"),
+        fallback=str(entry.get("canonical_id") or ""),
+    )
+
+    aliases = _coerce_string_list(identity_lists.get("aliases"), identity_scalars.get("aliases"))
+    chapter_mentions = _coerce_string_list(identity_lists.get("chapter_mentions"), identity_scalars.get("chapter_mentions"))
+    physical_traits = _coerce_string_list(visual_lists.get("physical_traits"), visual_scalars.get("physical_traits"))
+    relationship_notes = _coerce_string_list(behavioral_lists.get("relationship_notes"), behavioral_scalars.get("relationship_notes"))
+    continuity_constraints = _coerce_string_list(continuity_lists.get("continuity_constraints"), continuity_scalars.get("continuity_constraints"))
+    unresolved_ambiguities = _coerce_string_list(continuity_lists.get("unresolved_ambiguities"), continuity_scalars.get("unresolved_ambiguities"))
+    evidence_summary = _coerce_string_list(evidence_lists.get("evidence_markdown"), evidence_scalars.get("evidence_markdown"))
+    if not evidence_summary:
+        evidence_summary = list(evidence_freeform)
+
+    stable_visual_summary = _first_nonempty(
+        visual_scalars.get("stable_visual_summary"),
+        visual_freeform[0] if visual_freeform else None,
+        fallback="",
+    )
+    costume_signature = _first_nonempty(visual_scalars.get("costume_signature"), fallback="Unknown")
+    personality = _first_nonempty(
+        behavioral_scalars.get("personality"),
+        behavioral_freeform[0] if behavioral_freeform else None,
+        fallback="Insufficient evidence to determine personality.",
+    )
+    role = _first_nonempty(behavioral_scalars.get("role"), fallback=entry.get("entity_kind", "Unknown"))
+    voice_notes = _first_nonempty(behavioral_scalars.get("voice_notes"), fallback="No vocal data available.")
+
+    return {
+        "display_name": display_name,
+        "stable_visual_summary": stable_visual_summary,
+        "physical_traits": physical_traits,
+        "costume_signature": costume_signature,
+        "personality": personality,
+        "role": role,
+        "voice_notes": voice_notes,
+        "relationship_notes": relationship_notes,
+        "continuity_constraints": continuity_constraints,
+        "unresolved_ambiguities": unresolved_ambiguities,
+        "evidence_summary": evidence_summary[:25],
+    }
+
+
+def _parse_bible_markdown_section(section_text: str) -> tuple[dict[str, str], dict[str, list[str]], list[str]]:
+    scalars: dict[str, str] = {}
+    lists: dict[str, list[str]] = {}
+    freeform: list[str] = []
+    current_list_key: str | None = None
+
+    for raw_line in section_text.splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line.startswith("- "):
+            item = line[2:].strip()
+            if current_list_key:
+                if item and item.lower() not in {"none", "(none)", "n/a"}:
+                    lists.setdefault(current_list_key, []).append(item)
+            elif item:
+                freeform.append(item)
+            continue
+        if ":" in line:
+            key, value = line.split(":", 1)
+            key = key.strip().lower().replace(" ", "_")
+            value = value.strip()
+            if value:
+                scalars[key] = value
+                current_list_key = None
+            else:
+                current_list_key = key
+                lists.setdefault(key, [])
+            continue
+        if current_list_key:
+            lists.setdefault(current_list_key, []).append(line)
+        else:
+            freeform.append(line)
+
+    return scalars, lists, freeform
+
+
+def _coerce_string_list(*values: object) -> list[str]:
+    items: list[str] = []
+    for value in values:
+        if value is None:
+            continue
+        if isinstance(value, list):
+            for item in value:
+                if isinstance(item, str) and item.strip() and item.strip().lower() not in {"none", "(none)", "n/a"}:
+                    items.append(item.strip())
+        elif isinstance(value, str):
+            stripped = value.strip()
+            if not stripped or stripped.lower() in {"none", "(none)", "n/a"}:
+                continue
+            if "," in stripped:
+                for item in stripped.split(","):
+                    item = item.strip()
+                    if item and item.lower() not in {"none", "(none)", "n/a"}:
+                        items.append(item)
+            else:
+                items.append(stripped)
+
+    seen: set[str] = set()
+    deduped: list[str] = []
+    for item in items:
+        if item not in seen:
+            seen.add(item)
+            deduped.append(item)
+    return deduped
+
+
+def _evidence_query_terms(entry: dict[str, Any]) -> list[str]:
+    terms: list[str] = []
+    for value in [entry.get("canonical_id"), entry.get("display_name"), *entry.get("aliases", [])]:
+        if isinstance(value, str):
+            normalized = " ".join(value.replace("_", " ").split()).strip()
+            if normalized and normalized not in terms:
+                terms.append(normalized)
+    return terms[:4]
+
+
+def _compact_snippet(text: str, *, limit: int = 220) -> str:
+    collapsed = " ".join(text.split()).strip()
+    if len(collapsed) <= limit:
+        return collapsed
+    return collapsed[: limit - 3].rstrip() + "..."
+
+
+def _first_nonempty(*values: object, fallback: str = "") -> str:
+    for value in values:
+        if isinstance(value, str) and value.strip():
+            return value.strip()
+    return fallback
 
 
 def _load_existing_metadata(existing: dict | None, artifact_id: str, fp: str) -> CharacterBibleMetadata:
@@ -223,8 +421,6 @@ def _is_film_facing_character(entry: dict[str, Any], bible: CharacterBible | Non
     if entry.get("status") != "canonical":
         return False
     if entry.get("entity_kind") != "individual":
-        return False
-    if bible is not None and bible.unresolved_ambiguities:
         return False
     return True
 
@@ -291,7 +487,7 @@ def run_character_bible_synthesis(
                     metadata=metadata,
                 )
                 bible_records.append(bible)
-                if not _is_film_facing_character(entry, bible):
+                if not _is_film_facing_character(entry, bible) or bible.unresolved_ambiguities:
                     review_records.append(bible)
                 continue
 
@@ -302,7 +498,7 @@ def run_character_bible_synthesis(
                 warnings.append(f"Locked character bible became stale and was not regenerated: {char_id}")
                 continue
 
-        evidence_summary, evidence_refs = _collect_evidence(entry)
+        evidence_summary, evidence_refs = _collect_evidence(project_slug, entry)
         synthesized_payload = _llm_synthesis(entry, evidence_summary) if use_llm else None
         if not synthesized_payload:
             synthesized_payload = _deterministic_synthesis(entry, evidence_summary)
@@ -354,7 +550,7 @@ def run_character_bible_synthesis(
         synthesized += 1
         bible_records.append(bible)
 
-        if not _is_film_facing_character(entry, bible):
+        if not _is_film_facing_character(entry, bible) or bible.unresolved_ambiguities:
             review_records.append(bible)
 
         if bible.unresolved_ambiguities:
