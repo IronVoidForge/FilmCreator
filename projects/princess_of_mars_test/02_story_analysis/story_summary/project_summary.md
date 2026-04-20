@@ -1,19 +1,25 @@
-# Project Summary: Barsoom Chronicles
+# Project Summary: Princess of Mars (Chapter XI Context)
 
-## Setting and Context
-The narrative takes place on Mars, specifically within the Thark city of Barsoom. The environment is characterized by ancient Martian civilization structures, desert landscapes, and a society governed by strict customs regarding combat, captivity, and social hierarchy. The "green men" (Martians) possess distinct physical traits (e.g., tusks, height) and cultural norms that differ from Earthly standards.
+## Setting & Location
+- **City:** Korad, a center of commerce and culture built on a natural harbor (now diminished).
+- **Architecture:** Ancient Martian buildings featuring marble ceilings, gold chains, and frescoes depicting fair-haired Martians.
+- **Environment:** Drying seas forcing Martians into fertile areas; presence of "Green Men" hordes as external threat.
 
-## Key Characters
-- **John Carter:** A human from Virginia, USA, currently a prisoner but functioning as a Thark chieftain due to his valor and the regalia he wears. He is learning the Martian tongue and adapting to local customs while maintaining his conscience.
-- **Woola:** John Carter's companion, a large canine-like creature (Martian animal) who serves as both protector and friend. His behavior shifts between fierce loyalty and playful affection depending on context.
-- **Dejah Thoris:** The Princess of Helium, held captive by the Tharks. She represents human civilization and kindness amidst Martian brutality.
-- **Sola:** A Martian woman/guard associated with John Carter's group, acting as an intermediary or instructor in Martian customs.
-- **Lorquas Ptomel:** A high-ranking Thark chieftain presiding over the audience chamber. He represents the established order and custom-bound leadership.
-- **Tars Tarkas:** A Thark warrior who acts as a guide to John Carter regarding Martian laws, customs, and social dynamics.
-- **Sarkoja:** A Thark woman present at the council, noted for her harsh treatment of the captive.
+## Key Characters & Dynamics
+- **John Carter:** Thark chieftain (ranked 11th out of 10, effectively above the standard hierarchy). Protector of Dejah Thoris. Origin: Earth (Virginia), though this is a mystery to Martians.
+- **Dejah Thoris:** Red Martian princess/captive. Curious about Earth; protective of John's reputation. Questions his origin and Barsoomian customs.
+- **Sola:** Thark warrior/guide assigned to protect John Carter. Acts as intermediary between John and Dejah Thoris.
+- **Sarkoja:** Antagonist Thark woman. Attempts to harm Dejah Thoris; eavesdrops on conversations. Threats against her are ineffective on Mars (men do not kill women).
+- **Tars Tarkas:** Second-in-command to Lorquas Ptomel; respected warrior figure.
+- **Lorquas Ptomel:** High-ranking Thark authority; summons John Carter at chapter end.
 
-## Themes and Dynamics
-The project explores the tension between captivity and freedom, particularly how John Carter navigates his status as a prisoner who is effectively free due to his actions. It examines Martian customs regarding combat (e.g., regalia transfer upon killing an opponent), social hierarchy, and the contrast between human empathy and Martian atrophy of sentiment. The narrative focuses on cross-cultural understanding, where John Carter must interpret Martian behaviors without violating his own moral code.
+## Established Lore & Technology
+- **Thark Hierarchy:** Chieftains ranked by prowess (kills/promotions). First place requires combat with Lorquas Ptomel or self-defense kill.
+- **Viewing Screens:** Instruments used to project images of Earth/Mars events onto screens; allow observation of distant planets/stars.
+- **Martian Races:** Red (Dejah's race), Dark (almost black), Yellow (reddish). Mixed due to alliance against Green Men and drying seas.
+- **Language:** All Barsoomians speak the same tongue, though written languages differ. Valley Dor has a different language (rarely visited).
 
-## Reusability Notes
-This summary establishes the foundational character relationships and setting rules applicable to subsequent chapters. Future scenes should reference John Carter's growing authority as a "Martian chieftain," the specific customs of the Tharks (e.g., respect for valor, treatment of prisoners), and the ongoing dynamic between Dejah Thoris and her captors.
+## Ongoing Plot Threads
+- **Origin Mystery:** Dejah Thoris struggles to believe John is from Earth; he confirms it but fears her reaction if she knows he is not of Barsoom.
+- **Protection Dynamic:** John arranges quarters for Dejah and Sola; threatens Sarkoja (ineffective); establishes mutual reliance between John and Dejah.
+- **Historical Context:** Discussion of lost ancient Martians, their civilization, and the current state of Korad city.
