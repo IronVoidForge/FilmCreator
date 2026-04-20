@@ -20,6 +20,7 @@ Ship a local-first, reviewable, resumable film pipeline that can:
 - The latest full `princess_of_mars_test` run completed `28/28` chapters with `0` failures.
 - Multi-chapter authoring now produces stable analysis artifacts, world registries, continuity state, and run-level failure/retry tracking.
 - The librarian/index layer exists and can now serve as the retrieval backbone for synthesis stages.
+- Phase 8 environment bible synthesis is now implemented and runnable through the CLI and launcher.
 - Repair-first retries and chunk fallback are active and materially improved authoring stability.
 
 ## Working Principles
@@ -130,6 +131,10 @@ Turn fragmented environment evidence into stable, reusable, film-usable canonica
 #### Why It Follows Phase 7
 
 Scenes and shots need stable people and stable places before they can become production-ready contracts.
+
+#### Current Status
+
+Implemented and runnable.
 
 ### Phase 9 – Scene Production Contracts
 
