@@ -1,19 +1,15 @@
-# Environment Index - Chapter CH003
-## Circular Basin on Mars
-- Primary setting where narrator awakens
-- Features yellowish mosslike vegetation and quartz-bearing rock
-- Low hills visible in background
-- Solid glass roof structure (4-5 inches thick)
-- Gravity significantly lower than Earth
+# Environment Index - Chapter III: MY ADVENT ON MARS
 
-## Glass Incubator
-- Secondary containment within circular basin
-- Houses giant eggs for Martian hatching
-- Transparent enclosure allowing observation
-- Connected to main environment via glass walls
+## Primary Environments
 
-## Hills Range
-- Transit destination for cavalcade
-- Visible from circular basin
-- Solid ground with natural terrain
-- Low elevation hills across Mars surface
+| Asset ID | Environment Name | Role | Key Features |
+|----------|------------------|------|--------------|
+| glass_walled_enclosure | Martian Egg Incubator | Primary/Transit | Glass-roofed structure containing hatching Martians |
+| circular_basin_mars | Yellow Moss Basin | Primary/Combat | Circular basin with mosslike vegetation and quartz rocks |
+| distant_hills_mars | Hill Range Destination | Transit | Distant hills toward which cavalcade travels |
+
+## Environment Families Summary
+
+- **Glass-walled enclosure**: Contains large eggs (~2.5 ft diameter) inside solid glass roof; hatching Martians with six limbs, blood red iris, white teeth/tusks
+- **Circular basin**: Yellowish mosslike vegetation covering circular basin; midday sun with intense heat; quartz-bearing rock outcroppings; low hills in distance
+- **Distant hills**: Destination terrain for cavalcade travel toward distant hills

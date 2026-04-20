@@ -1,63 +1,41 @@
-# Chapter II: The Escape of the Dead - Scene Decomposition Summary
+# Chapter II Summary: The Escape of the Dead
 
-## Opening Sequence (Cave Interior)
-- Protagonist experiences paralysis in cave opening to daylight
-- Muscles refuse to respond to will despite mental faculties intact
-- Vapor filling cave, tenuous and only noticeable against daylight opening
-- Faintly pungent odor from poisonous gas assumption
-- Early morning sun falling full upon protagonist through opening
+## Scene Overview
+Protagonist regains movement after hours of paralysis in the cave, escapes into Arizona night, and begins journey through space to Mars. This chapter marks the transition from terrestrial danger to cosmic exploration.
 
-## Apache Warrior Appearance (Visual Continuity)
-- Stealthy sound apprises of nearness
-- War-bonneted, paint-streaked face thrust cautiously around cliff shoulder
-- Savage eyes looking into protagonist's eyes in dim light
-- Multiple faces appear: awe and fear expressions visible
-- Leaders pass whispered words to braves behind them on narrow ledge
-
-## Entity Behind Protagonist (Mysterious Presence)
-- Low but distinct moaning sound issues from recesses of cave behind protagonist
-- Apache warriors turn and flee in terror, panic-stricken
-- One brave hurled headlong from cliff to rocks below during escape
-- Wild cries echo in canyon then all still once more
-- Sound not repeated but sufficient to start speculation on horror at back
-
-## Protagonist's Paralysis State (Physical Continuity)
-- Held paralyzed with back toward horrible and unknown danger
-- Ferocious Apache warriors turn in wild stampede from sound
-- Several faint sounds behind cease, protagonist left without interruption
-- Vague conjecture about cause of paralysis
-- Hope it might pass off as suddenly as fallen upon him
-
-## Escape Sequence (Cave to Exterior)
-- Late afternoon horse starts slowly down trail searching for food and water
-- Protagonist alone with mysterious unknown companion and dead body of friend
-- Silence from possibly midnight until morning moan breaks on startled ears
-- Superhuman effort to break awful bonds: mind, will, nerves not muscular
-- Sharp click as of snapping steel wire, nausea feeling
-- Moonlight floods cave, protagonist discovers own body lying lifeless and clothed
-- Protagonist stands naked while body remains clothed and lifeless
-
-## Final Escape (Arizona Night Landscape)
+## Visual Continuity Facts (Scene-Specific)
+- Protagonist stands with back against cave wall facing unknown foe
+- Moonlight floods cave interior revealing protagonist's body on floor
+- Protagonist's lifeless body remains clothed while standing form is naked
+- Revolvers strapped to lifeless body cannot be touched by protagonist
+- Carbine in boot strapped to saddle, horse has wandered off
 - Protagonist leaps through opening into starlight of clear Arizona night
-- Crisp fresh mountain air acts as immediate tonic
-- Pausing on brink of ledge, upbraids self for unwarranted apprehension
-- Better judgment convinces noises resulted from natural causes
-- Lifts head to fill lungs with pure invigorating night air
-- Sees beautiful vista of rocky gorge and cacti-studded flat under moonlight
+- Crisp mountain air acts as immediate tonic outside cave
+- Protagonist pauses on brink of ledge upbraiding unwarranted apprehension
+- Moonlit landscape shows rocky gorge and cacti-studded flat below
+- Large red star (Mars) appears close to distant horizon
+- Protagonist feels spell of fascination with Mars, god of war
+- Protagonist closes eyes and stretches arms toward Mars
+- Sudden sensation of cold and utter darkness during space transition
 
-## Mars Encounter (Space Transition)
-- Attention riveted by large red star close to distant horizon
-- Spell of overpowering fascination—it is Mars, god of war
-- Fighting man feels irresistible enchantment from Mars
-- Longing beyond power of opposition
-- Closes eyes, stretches arms toward god of vocation
-- Felt drawn with suddenness of thought through trackless immensity of space
-- Instant of extreme cold and utter darkness
+## Broad Story Summary (Scene-Specific)
+Protagonist regains movement after hours of paralysis in the cave. The mysterious moan from cave depths frightens Apache warriors who flee in terror, with one brave hurled from cliff. Protagonist escapes into Arizona night and investigates sounds with rational thinking, concluding they result from natural causes like breeze through cave conformation. Moonlit landscape inspires protagonist with its beauty. Protagonist notices large red star (Mars) near horizon that fascinates him as fighting man. Mars holds irresistible enchantment for protagonist who feels drawn to it across space void. Protagonist experiences sudden cold and darkness during transition to Mars.
 
-## Key Visual Continuity Points for Scene Decomposition
-- Cave interior lighting: early morning sun → moonlight → starlight
-- Character states: paralyzed clothed body → mobile naked protagonist
-- Apache warrior reactions: cautious approach → terror flight → cliff fall
-- Landscape transitions: cave opening → Arizona night exterior
-- Sky elements: myriad stars → large red Mars star
-- Space transition mechanics: cold, darkness, suddenness
+## Scene Decomposition Support
+- Opening: Protagonist regains movement after paralysis
+- Middle: Escape into Arizona night, landscape observation
+- Climax: Fascination with Mars, attraction across space
+- Ending: Cold and darkness during space transition
+
+- Paralysis recovery occurs late afternoon until midnight silence
+- Horse wanders off leaving protagonist alone with mysterious companion
+- Protagonist decides to investigate after rationalizing sounds
+- Moonlit landscape provides visual inspiration for protagonist
+- Mars star appears as focal point drawing protagonist's attention
+- Space transition marks chapter ending and next chapter beginning
+
+## Continuity Notes
+- Protagonist's physical state changes from clothed lifeless body to naked standing form
+- Apache warriors' fear of cave entity contrasts with protagonist's rational investigation
+- Moonlight serves dual purpose: reveals cave interior, illuminates landscape below
+- Star observation marks transition from terrestrial to cosmic journey

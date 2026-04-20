@@ -467,15 +467,27 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
             degraded=True,
         ),
     )
-    scene_index_markdown = _require_packet_section(scene_packet, "scene_index_markdown")
-    scene_index_path = _chapter_scene_index_path(project_dir=project_dir, chapter_id=chapter_source.chapter_id)
+    scene_index_markdown, scene_records, scene_output_warnings = _extract_scene_decomposition_outputs(
+        packet=scene_packet,
+        chapter_id=chapter_source.chapter_id,
+    )
+    warnings.extend(scene_output_warnings)
+
+    scene_index_path = _chapter_scene_index_path(
+        project_dir=project_dir,
+        chapter_id=chapter_source.chapter_id,
+    )
     _write_text(scene_index_path, scene_index_markdown)
     _write_text(_legacy_scene_index_path(project_dir=project_dir), scene_index_markdown)
     written_files.append(repo_relative(scene_index_path))
     written_files.append(repo_relative(_legacy_scene_index_path(project_dir=project_dir)))
 
-    scene_records = _require_packet_records(scene_packet, record_type="scene")
-    warnings.extend(_validate_scene_decomposition(chapter_id=chapter_source.chapter_id, scene_records=scene_records))
+    warnings.extend(
+        _validate_scene_decomposition(
+            chapter_id=chapter_source.chapter_id,
+            scene_records=scene_records,
+        )
+    )
 
     scene_ids: list[str] = []
     duplicate_scene_ids: list[str] = []
@@ -1009,6 +1021,58 @@ def _resolve_character_identity(*, asset_id: str, canonical_character_id: str, a
         question = "This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?"
         return asset_id, ("The character is not fully identified from this chapter alone.", question)
     return asset_id, None
+
+
+def _extract_scene_decomposition_outputs(
+    *,
+    packet: _PacketDocument,
+    chapter_id: str,
+) -> tuple[str, list[_PacketRecord], list[str]]:
+    warnings: list[str] = []
+    scene_records = _require_packet_records(packet, record_type="scene")
+    try:
+        scene_index_markdown = _require_packet_section(packet, "scene_index_markdown")
+    except LMStudioError:
+        scene_index_markdown = _synthesize_scene_index_markdown(
+            chapter_id=chapter_id,
+            scene_records=scene_records,
+        )
+        warnings.append(
+            f"Synthesized scene_index_markdown for {chapter_id} because the packet omitted the top-level scene index section."
+        )
+    return scene_index_markdown, scene_records, warnings
+
+
+def _synthesize_scene_index_markdown(
+    *,
+    chapter_id: str,
+    scene_records: list[_PacketRecord],
+) -> str:
+    lines = [
+        f"# {chapter_id} Scene Index",
+        "",
+        "| Scene ID | Summary |",
+        "|---|---|",
+    ]
+    for record in scene_records:
+        scene_id = _require_record_field(record, "scene_id")
+        markdown = _require_record_section(record, "markdown")
+        summary = _scene_record_summary_line(markdown)
+        lines.append(f"| {scene_id} | {summary} |")
+    return "\n".join(lines)
+
+
+def _scene_record_summary_line(markdown: str) -> str:
+    sections = _split_sections(markdown)
+    for heading in ("Scene Summary", "Scene Purpose", "Summary"):
+        value = sections.get(heading, "").strip()
+        if value:
+            return value.replace("\n", " ")[:200]
+    for line in markdown.splitlines():
+        stripped = line.strip()
+        if stripped and not stripped.startswith("#"):
+            return stripped[:200]
+    return "Scene extracted without an explicit summary."
 
 
 def _analysis_system_prompt() -> str:

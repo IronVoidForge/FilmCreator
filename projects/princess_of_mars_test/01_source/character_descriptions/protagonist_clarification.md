@@ -4,10 +4,10 @@
 protagonist
 
 # Why This Needs Clarification
-Character lacks proper name and stable identification. Cannot determine if this is a known character type or needs specific identity clarification.
+Need physical description for later render-facing prompt writing
 
 # Question
-What is the protagonist's name, age, gender, race, and physical appearance (height, build, hair color, eye color)?
+What does the protagonist look like? (height, build, skin tone, hair, facial features)
 
 # Guidance
 - answer briefly and concretely

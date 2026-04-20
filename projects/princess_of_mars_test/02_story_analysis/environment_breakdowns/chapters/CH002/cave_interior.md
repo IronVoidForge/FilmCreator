@@ -1,33 +1,26 @@
-# Cave Interior Environment
+# Cave Interior
 
 ## Environment Role
-Primary setting for paralysis sequence, Apache warrior encounter, and initial escape attempt
+Primary setting - opening sequence where protagonist regains movement after paralysis
 
 ## Architecture and Geography
-- Cave interior with daylight opening to exterior
-- Narrow ledge along cliff shoulder
-- Recesses of cave behind protagonist
-- Cliff face leading to rocks below
-- Opening through which sun/moonlight floods space
+Interior cave space with vertical walls enclosing floor area. Single large opening/ledge provides transition to exterior. Floor surface supports standing form. Wall serves as backrest against which protagonist positions body.
 
 ## Lighting and Atmosphere Cues
-- Early morning sun falling full upon protagonist through opening
-- Vapor filling cave, tenuous and only noticeable against daylight
-- Moonlight floods cave during escape sequence
-- Dim light conditions for Apache warrior appearance
-- Starlight visible after final escape
+Moonlight floods interior revealing protagonist's body on floor. Interior shadows contrast with bright moonlit landscape visible through opening. Crisp mountain air enters from exterior creating sensory transition between enclosed space and open environment.
 
-## Scale Cues and Environmental Anchors
-- Protagonist held paralyzed with back toward unknown danger
-- Multiple faces appear on narrow ledge
-- One brave hurled headlong from cliff to rocks below
-- Sound echoes in canyon then all still once more
-- Sharp click as of snapping steel wire during escape
+## Scale and Environmental Anchors
+- Cave wall: vertical anchor providing backrest position
+- Floor: horizontal plane supporting standing form
+- Opening/ledge: threshold marking boundary between interior/exterior
+- Moonlight beams: directional lighting revealing spatial dimensions
 
-## Descriptive Noun Phrases for Render-Facing Prompts
-- Vapor-filled cave interior with daylight opening
-- Narrow cliff ledge with recesses behind protagonist
-- Early morning sun beams through cave aperture
-- Moonlight flooding dark cave space
-- Dim light conditions for mysterious presence
-- Canyon echo chamber with cliff drop
+## Descriptive Noun Phrases for Render Prompts
+- moonlit cave interior
+- enclosed stone chamber
+- wall-backed standing position
+- floor-level body placement
+- opening to starlight beyond
+- crisp mountain air entrance
+- shadowed cave walls
+- single ledge threshold

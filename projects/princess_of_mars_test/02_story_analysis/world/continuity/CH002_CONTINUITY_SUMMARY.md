@@ -4,6 +4,7 @@
 - CH002_SC001
 - CH002_SC002
 - CH002_SC003
+- CH002_SC004
 
 ## Known Canonical Characters
 - None

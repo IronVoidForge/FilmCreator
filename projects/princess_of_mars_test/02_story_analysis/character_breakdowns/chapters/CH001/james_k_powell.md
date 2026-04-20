@@ -1,38 +1,32 @@
-# James K. Powell
+# james_k_powell.md
 
-**Display Name:** James K. Powell  
-**Chapter Role:** Deceased Companion / Victim  
-**Physical Presence:** Referenced (Corpse)  
-**Current State:** Dead, Arrowed  
+## Display Name
+James K. Powell
 
-## Physical Description (Source-Supported)
-- **Condition:** Dead (corpse state documented)
-- **Cause of Death:** Apache attack (arrowed)
-- **Location Context:** Found in Apache camp, later carried into cave
+## Chapter Role
+Mining Partner / Deceased Character
+
+## Physical Presence
+Deceased - Body found in cave after attack
+
+## Physical Description (Supported by Source)
+- Body bristling with arrows from Apache/Indian attack
+- Found dead in cave interior
+
+## Costume & Silhouette
+- Mining attire implied by context
+- Lying on cave floor (smooth surface mentioned)
 
 ## Continuity-Critical Traits
-- **Equipment:** None (deceased)
-- **Action State:** Body found by Carter after pursuit
-- **Movement:** Carried by Carter from Apache camp to cave entrance
+- Multiple arrows embedded in body
+- Located in Arizona cave interior
+- Victim of Apache/Indian pursuit
+
+## Render-Facing Prompt Notes
+"mining man's body found dead in Arizona cave, bristling with multiple arrows, lying on smooth cave floor, shadows present, mining context"
 
 ## Uncertainty Notes
-**Missing Details for Image Generation:**
-- No facial features or expression documented (corpse state)
-- Height and build not specified
-- Hair color/style unknown
-- Eye color not mentioned
-- Distinctive markings or scars absent from source
-- Clothing details beyond "corpse" status incomplete
-
-## Render-Facing Prompt Suggestions
-- Use deceased frontier man archetype
-- Emphasize arrow wounds on body
-- Include context: found in Apache camp, carried into cave
-- Setting: Arizona morning light (clear mornings documented)
-- Body state: Exhausted from journey, collapsed inside cave chamber
-
-**Source Limitations:**
-The chapter summary provides narrative context but lacks detailed physical description for dependable image generation. Manual description required to complete character visualization.
+**Important:** Height, build, hair color, age, facial features, skin tone, and other detailed physical characteristics are NOT described in source material. Manual description required for reliable image generation. Source only confirms arrow wounds and general mining context.
 
 # Aliases
 
@@ -52,10 +46,10 @@ true
 
 # Manual Description Input Required
 
-No
+Yes
 
 
 
 # Manual Description Reason
 
-None
+Source material only confirms Powell's body was found bristling with arrows in a cave. Height, build, hair color, age, facial features, and other physical traits are not described in the chapter summary.

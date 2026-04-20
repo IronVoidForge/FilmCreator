@@ -1,9 +1,11 @@
-# Character Index - Chapter II: The Escape of the Dead
+# Character Index - Chapter II
 
-| Character | Status | Physical Presence | Description Available |
-|-----------|--------|-------------------|----------------------|
-| Protagonist | Primary | Present (cave interior) | None - requires manual description |
-| Apache Warriors (Leaders/Braves) | Secondary | Present (cliff exterior) | Partial - war-bonneted, paint-streaked faces |
-| Dead Friend's Body | Referenced | Deceased (cave interior) | Minimal - clothed body only |
+| Asset ID | Display Name | Canonical ID | Status |
+|----------|--------------|--------------|--------|
+| protagonist | Protagonist | protagonist | Referenced |
+| apache_warriors | Apache Warriors | apache_warriors | Referenced |
+| mysterious_companion | Mysterious Companion | mysterious_companion | Uncertain |
 
-**Note:** All characters lack stable identification and physical descriptions sufficient for image generation. Manual descriptions required for all entries.
+**Notes:**
+- All characters lack sufficient physical description for dependable image generation
+- Mysterious companion requires clarification due to vague identification

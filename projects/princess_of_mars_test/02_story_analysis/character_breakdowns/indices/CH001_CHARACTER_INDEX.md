@@ -1,9 +1,9 @@
-# Character Index - Chapter CH001
+# Character Index - CH001
 
-| Asset ID | Canonical ID | Display Name | Status | Description Complete |
-|----------|--------------|--------------|--------|---------------------|
-| john_carter | john_carter | John Carter | Physically Present | Partial |
-| james_k_powell | james_k_powell | James K. Powell | Referenced (Corpse) | Partial |
-| apache_warriors | apache_warriors | Apache Warriors | Referenced (Group) | Partial |
+| Character | Role | Status | Description Available |
+|-----------|------|--------|---------------------|
+| Carter | Protagonist | Physically Present | Partial (armed with revolvers and carbine) |
+| James K. Powell | Mining Partner | Deceased | Partial (body found with arrows) |
+| Apaches/Indians | Antagonists | Physically Present | Group reference only |
 
-**Notes:** All characters have incomplete physical descriptions for image generation purposes. Additional manual descriptions required.
+**Note:** Detailed physical descriptions are limited in source material. Manual descriptions may be required for reliable image generation.

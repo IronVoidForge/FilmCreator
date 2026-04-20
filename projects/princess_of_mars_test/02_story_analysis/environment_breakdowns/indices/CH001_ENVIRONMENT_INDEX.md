@@ -1,18 +1,16 @@
-# Environment Index - Chapter CH001
+# Environment Index - CH001
 
-## Primary Environments
+## Extracted Environments
 
-| Asset ID | Role | Description |
-|----------|------|-------------|
-| arizona_hills_range | primary | Clear Arizona mornings, dark shadows of range |
-| valley_floor | secondary | Transition space between hills and pass |
-| mountain_pass | transit | Elevated passage through terrain |
-| cave_entrance | primary | 4ft high entrance with smooth floor |
-| cave_interior | primary | Dense shadow at back, smooth floor |
+| Asset ID | Name | Role | Description |
+|----------|------|------|-------------|
+| open_valley | Arizona Open Valley | Primary | Hills, moonlight, horse tracks |
+| tepee_encampment | Indian Tepee Area | Secondary | White tepees with warriors |
+| narrow_gorge | Transition Gorge | Transit | Narrow passage from valley to cave |
+| cave_chamber | Cave Interior Chamber | Primary | Smooth floor, shadows, large chamber |
 
-## Environment Families
+## Environment Families Summary
 
-- **Arizona Hills Range** - Primary setting for Carter's pursuit and discovery
-- **Valley Floor** - Transitional geography between hills and pass
-- **Mountain Pass** - Transit environment connecting regions
-- **Cave System** - Final destination including entrance and interior chamber
+- **Arizona Landscape**: Open valley terrain with hills and moonlight illumination
+- **Native Encampment**: Tepee structures with warrior presence
+- **Cave System**: Multi-section interior from narrow gorge to large chamber

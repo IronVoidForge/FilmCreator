@@ -1,4 +1,4 @@
-SC001: Arrival & Observation - Establish setting and introduce alien inhabitants.
-SC002: Introduction & Ceremony - Introduce hierarchy and ritualistic culture.
-SC003: Conflict & Fight - Physical confrontation and establishing narrator's capability through violence.
-SC004: Performance & Resolution - Successful demonstration of skill, transition to new living space, introduction of a new threat/creature.
+SC001 | Waking and Exploration of Glass Enclosure | Protagonist wakes, observes hatching Martians in glass-walled basin | Interior glass enclosure with yellow moss vegetation, quartz rocks, distant hills | Curiosity to wonder | Wide establishing shots, medium exploration coverage | Continuity: glass wall reflections, egg sizes, protagonist's hop movement
+SC002 | Ambush and Spear Attack | Adult Martians on mounts attack; leader's spear nearly kills protagonist | Exterior approach from low hills, glass enclosure interior | Fear to desperation | Dynamic action sequences, close combat shots | Continuity: mount height (15ft), spear gleam, protagonist's leap physics
+SC003 | Leap and Observation Shift | Protagonist leaps 30 feet; Martians observe agility and decide capture over kill | Glass enclosure interior, exterior observation vantage points | Desperation to intrigue | High-angle action shots, reaction close-ups | Continuity: leap distance accuracy, egg/mount positioning, protagonist's hop pattern
+SC004 | Peace Offering and Departure | Leader offers metal armlet; protagonist accepts, rides cavalcade toward hills | Glass enclosure interior, departure path toward distant hills | Intrigue to acceptance | Medium tracking shots, wide departure coverage | Continuity: armlet placement on head/limbs, mount movement without reins

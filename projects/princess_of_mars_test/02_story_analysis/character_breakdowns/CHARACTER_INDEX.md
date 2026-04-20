@@ -1,10 +1,8 @@
-# Character Index - CH005
+# Character Index - Chapter III: MY ADVENT ON MARS
 
-| Character | Role in Chapter | Status |
-|-----------|-----------------|--------|
-| Narrator | POV, escapes room, jumps window | Present/Referenced |
-| Sola | Female Martian, caretaker | Referenced |
-| Watch Dog | Brute guardian, short legs | Visible/Referenced |
-| New Guardian | Colossal ape-like creature | Visible |
+| Character | Role | Physical Presence | Description Status |
+|-----------|------|-------------------|--------------------|
+| Protagonist | Main character, explorer | Present | Manual description required |
+| Leader Martian | Adult warrior, peace offerer | Present | Manual description required |
 
-*Note: All characters extracted from chapter summary and visual continuity facts.*
+*Note: Young Martians (Eggs) and Adult Martians are treated as groups/creatures rather than individual character records.*

@@ -1,9 +1,8 @@
-# Character Index - CH003
+# Character Index - Chapter III: MY ADVENT ON MARS
 
 | Character | Role | Physical Presence | Description Status |
-|-----------|------|-------------------|-------------------|
-| Narrator | First-person perspective observer | Present | Uncertain physical details |
-| Martian Leader | Approaching adult Martian | Present | Detailed description available |
-| Martians (Group) | Adult Martian group | Present | Group description available |
+|-----------|------|-------------------|--------------------|
+| Protagonist | Main character, explorer | Present | Manual description required |
+| Leader Martian | Adult warrior, peace offerer | Present | Manual description required |
 
-*Note: Character descriptions vary in completeness based on source material.*
+*Note: Young Martians (Eggs) and Adult Martians are treated as groups/creatures rather than individual character records.*

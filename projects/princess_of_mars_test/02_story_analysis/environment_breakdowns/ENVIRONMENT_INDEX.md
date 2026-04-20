@@ -1,15 +1,15 @@
-# Environment Index - Princess of Mars Test (Chapter CH005)
+# Environment Index - Chapter III: MY ADVENT ON MARS
 
 ## Primary Environments
 
-| Asset ID | Name | Role | Key Features |
-|----------|------|------|--------------|
-| chamber_room | The Chamber | Primary Setting | Interior room with murals, food containers, fur coverings, threshold guarded by brute |
-| city_edge | City Edge | Transit Setting | Open space at building perimeter where brute attacks narrator |
-| window_building_valley_view | Window Building Overlooking Valley | Secondary Setting | Thirty-foot high window sill overlooking valley, interior hand grab point |
+| Asset ID | Environment Name | Role | Key Features |
+|----------|------------------|------|--------------|
+| glass_walled_enclosure | Martian Egg Incubator | Primary/Transit | Glass-roofed structure containing hatching Martians |
+| circular_basin_mars | Yellow Moss Basin | Primary/Combat | Circular basin with mosslike vegetation and quartz rocks |
+| distant_hills_mars | Hill Range Destination | Transit | Distant hills toward which cavalcade travels |
 
-## Environmental Families
+## Environment Families Summary
 
-1. **Interior Chamber Space** - Main living quarters with mural paintings and food supplies
-2. **City Perimeter Zone** - Boundary area between building structure and open space
-3. **Valley View Platform** - Elevated observation point with interior capture mechanism
+- **Glass-walled enclosure**: Contains large eggs (~2.5 ft diameter) inside solid glass roof; hatching Martians with six limbs, blood red iris, white teeth/tusks
+- **Circular basin**: Yellowish mosslike vegetation covering circular basin; midday sun with intense heat; quartz-bearing rock outcroppings; low hills in distance
+- **Distant hills**: Destination terrain for cavalcade travel toward distant hills

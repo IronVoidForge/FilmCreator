@@ -1,33 +1,27 @@
-# Arizona Night Landscape Environment
+# Arizona Night Landscape
 
 ## Environment Role
-Secondary setting after escape sequence, primary exterior landscape for Mars encounter
+Transit setting - middle sequence where protagonist escapes cave and observes Mars
 
 ## Architecture and Geography
-- Rocky gorge vista under moonlight
-- Cacti-studded flat terrain
-- Mountain air environment
-- Clear night sky with starlight
-- Brink of ledge overlooking canyon
+Rocky gorge terrain with cacti-studded flat below. Distant horizon visible across open landscape. Ledge brink provides elevated observation point. Mountain air creates atmospheric depth between foreground and background elements.
 
 ## Lighting and Atmosphere Cues
-- Crisp fresh mountain air acts as immediate tonic
-- Moonlight floods cave before protagonist escapes
-- Starlight of clear Arizona night
-- Beautiful vista under moonlight illumination
-- Pure invigorating night air fills lungs
+Moonlit landscape shows rocky gorge and cacti-studded flat below. Clear starlight of Arizona night illuminates terrain. Large red star (Mars) appears close to distant horizon creating focal point. Spell of fascination with Mars god of war permeates atmosphere.
 
-## Scale Cues and Environmental Anchors
-- Protagonist leaps through opening into starlight
-- Pausing on brink of ledge upbraids self
-- Lifts head to fill lungs with pure air
-- Sees beautiful vista of rocky gorge and cacti-studded flat
-- Large red Mars star close to distant horizon
+## Scale and Environmental Anchors
+- Ledge brink: elevated observation platform
+- Rocky gorge: mid-ground terrain feature
+- Cacti-studded flat: background landscape element
+- Distant horizon: spatial boundary marker
+- Large red star (Mars): celestial focal point drawing attention
 
-## Descriptive Noun Phrases for Render-Facing Prompts
-- Rocky gorge vista under moonlight illumination
-- Cacti-studded flat terrain in Arizona night
-- Clear starry sky with large red Mars star
-- Crisp mountain air environment at cliff edge
-- Moonlit canyon landscape with distant horizon
-- Night sky transition to space
+## Descriptive Noun Phrases for Render Prompts
+- moonlit rocky gorge
+- cacti-studded desert flat
+- distant mountain horizon
+- elevated ledge observation point
+- large red star near horizon
+- crisp mountain air atmosphere
+- starlight illuminated terrain
+- god of war celestial presence

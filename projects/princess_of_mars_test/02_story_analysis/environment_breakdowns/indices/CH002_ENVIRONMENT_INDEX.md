@@ -1,20 +1,15 @@
-# Environment Index - Chapter II: The Escape of the Dead
+# Environment Index - Chapter II
 
-## Cave Interior (asset_id: cave_interior)
-- Primary setting for paralysis sequence and Apache warrior encounter
-- Vapor-filled atmosphere with daylight opening
-- Early morning sun → moonlight → starlight lighting progression
-- Narrow ledge, cliff shoulder, recesses of cave
-- Poisonous gas assumption, faintly pungent odor
+## Cave
+- Role: Primary setting (opening)
+- Geography: Interior cave space with walls, floor opening to outside
+- Lighting: Moonlight floods interior revealing protagonist's body on floor
+- Atmosphere: Crisp mountain air acts as immediate tonic outside
+- Anchors: Cave wall, floor, opening/ledge
 
-## Arizona Night Landscape (asset_id: arizona_night_landscape)
-- Secondary setting after escape sequence
-- Crisp fresh mountain air, rocky gorge vista
-- Cacti-studded flat under moonlight
-- Clear night sky with starlight and Mars encounter
-
-## Space Transition (asset_id: space_transition)
-- Transit environment during Mars encounter
-- Trackless immensity of space
-- Extreme cold and utter darkness
-- Large red Mars star near distant horizon
+## Arizona Night Landscape  
+- Role: Transit setting (middle)
+- Geography: Rocky gorge, cacti-studded flat below, distant horizon
+- Lighting: Moonlit landscape with clear starlight of Arizona night
+- Atmosphere: Crisp mountain air, spell of fascination with Mars
+- Anchors: Ledge brink, large red star (Mars), rocky terrain

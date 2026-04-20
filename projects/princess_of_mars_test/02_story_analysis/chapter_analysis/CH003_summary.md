@@ -1,9 +1,12 @@
-# Visual Continuity Facts
-- **Environment:** Yellowish mosslike vegetation, quartz-bearing rock, low hills, solid glass roof (4-5 inches thick).
-- **Martians:** 15 feet tall, dark slate skin, yellow feet, small cup-shaped antennae ears, blood red iris, white teeth with upward-curving tusks.
-- **Mounts:** Ten feet high at shoulder, four legs, broad flat tail, no hair, smooth glossy, no bridle/reins.
-- **Eggs:** Snowy white, 2.5 feet diameter, hatching process observed.
-- **Weapons:** 40-foot spears (metal-tipped), rifles (white metal barrel, wood stock, radium projectiles).
+# Chapter Title
+CHAPTER III: MY ADVENT ON MARS
 
-# Broad Story Summary
-The narrator wakes in a circular basin on Mars and realizes gravity is significantly lower, causing them to jump three yards upon standing. While attempting to walk, they hop and sprawl due to unfamiliar muscle dynamics. They discover a glass incubator containing giant eggs and observe grotesque young Martians hatching. A group of adult Martians approaches; the leader's spear nearly strikes the narrator, but the sound alerts the leader. The narrator leaps thirty feet into the air to escape, landing safely on the opposite side. The Martians are surprised by this agility. The leader dismounts unarmed and offers a metal armlet as a peace token. The narrator accepts it, and they walk together before the leader mounts his animal. The entire cavalcade departs towards the range of hills.
+# Visual Continuity Facts
+- **Environment:** Yellowish mosslike vegetation covering a circular basin; midday sun with intense heat; quartz-bearing rock outcroppings; low hills in distance.
+- **Physics:** Protagonist jumps ~3 yards high on Earth-equivalent effort; walking manifests as hops and sprawls due to reduced gravity/air pressure.
+- **Young Martians (Eggs):** Large eggs (~2.5 ft diameter) inside a solid glass enclosure roof; creatures are head-heavy with six limbs, blood red iris, white teeth/tusks, dark slate skin, small cup-shaped antennae ears.
+- **Adult Martians & Mounts:** Warriors ~15 feet tall on four-legged mounts (~10 ft shoulder height); mounts have yellow feet, broad flat tail, no hair; warriors carry forty-foot spears tipped with gleaming metal; mounted without reins/bridle.
+- **Objects:** Metal armlet ornaments strapped to head/limbs/breast; rifles of white metal and wood stock; glass-walled incubator structure.
+
+# Story Summary
+Protagonist wakes on Mars, explores a glass-walled enclosure containing hatching Martians. Ambushed by adult Martians on mounts; leader's spear nearly kills him. Protagonist leaps 30 feet to safety. Martians observe his agility and decide to capture him rather than kill. Leader offers peace via metal armlet. Protagonist accepts, rides with the cavalcade toward distant hills.
