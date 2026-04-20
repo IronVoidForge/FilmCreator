@@ -1,22 +1,20 @@
-# Narrator
+# Narrator Character File
 
-**Display Name:** Narrator  
-**Chapter Role:** Human Visitor to Martian City  
-**Physical Presence:** Present - struggles with walking/jumping, performs sakk jump  
-**Physical Description:** Human (based on context of physical struggles and demands for food/water)  
-**Costume/Silhouette:** Undetermined - lacks specific costume details  
-**Continuity-Critical Traits:** Performs "sakk" jump successfully, punches bullying Martian, demands food/water  
-**Uncertainty Notes:** Not fully identified by name; lacks specific physical description beyond human context; needs clarification for image generation
+## Role and Presence
+The protagonist of the chapter, referred to as "Narrator," "I," or "The Prisoner." Physically present throughout all scenes in the city.
 
-**Render-Facing Prompt Elements:**
-- Human form
-- Physical struggles (walking/jumping difficulties)
-- Successful sakk jump performance
-- Reaction to crowd approval (applause)
+## Visual Continuity
+- **Species:** Human (implied by English language usage and size comparison).
+- **Scale:** Standard human dimensions relative to Martians.
+- **Physical Traits:** Specific features (hair color, eye color, facial structure) are not described in the source text.
+- **Attire:** Not specified beyond general clothing implied for a traveler.
+
+## Uncertainty Notes
+This character record relies on role identification rather than detailed physical description. Image generation will require manual specification of facial features and attire to match the "Prisoner" persona without contradicting the sparse source material.
 
 # Aliases
 
-Human Visitor
+The Prisoner, I
 
 
 
@@ -28,14 +26,14 @@ narrator
 
 # Fully Identified
 
-false
+true
 
 # Manual Description Input Required
 
-No
+Yes
 
 
 
 # Manual Description Reason
 
-None
+Source text lacks specific physical traits (hair, eyes, facial features) required for consistent image generation.

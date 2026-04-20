@@ -1,26 +1,30 @@
-# Project Summary: Mars Chronicles - The Green Men
+# Project Summary: A Princess of Mars - Chapter V
 
-## Setting & Architecture
-- **Location:** Ancient Martian city situated on the edge of one of Mars' long-dead seas.
-- **Buildings:** Constructed of gleaming white marble inlaid with gold and brilliant stones.
-- **Interior Halls:** Enormous chambers encircled by galleries, featuring highly carved wooden desks and chairs sized for human beings (too small for Martians).
-- **Decor:** Mural paintings, mosaics, silks, furs, and broad steps leading to table lands.
+## Setting & World
+- **Location**: Martian city, valley overlooking landscape
+- **Environment**: Thin atmosphere, no twilight/dawn, extreme temperature shifts between day and night
+- **Martian Nights**: Brilliantly illuminated when both moons present, total darkness when neither moon visible
+- **Moon System**: Two moons orbit Mars - nearer at ~5,000 miles (7.5 hour revolution), further at ~14,000 miles (30.25 hour revolution)
 
-## Characters & Appearance
-- **Martians:** Green skin (light olive-green), naked except for ornaments, large tusks (especially females), varying heights (adults 10-12 feet).
-- **Vice-Chieftain:** Tars Tarkas (great ability as statesman/warrior, heavily loaded with metal ornaments and feathers).
-- **Chieftain:** Enormous warrior on rostrum, short cape of white fur lined with scarlet silk.
-- **Female Martian:** Sola (light olive-green, smooth glossy hide, about eight feet tall at maturity).
-- **Human Narrator:** First-person perspective, English tongue.
+## Main Characters
+- **Narrator**: Adventurous protagonist with exceptional jumping ability, currently captive among Martians
+- **Sola**: Martian girl guardian - displays sympathy, kindliness, affection; provides food, drink, and protection
+- **Watch Dog**: Martian beast - short legs but fleetest animal on Mars, intelligent, loyal, ferocious; used in hunting, war, and protection
 
-## Culture & Society
-- **Hierarchy:** Chieftain system with vice-chieftains; formal greetings involve name exchange or ornament/shot exchange for strangers.
-- **Longevity:** Martians live up to 1000 years but manage population via violent death (duels, war) and voluntary pilgrimage to the river Iss.
-- **Humor & Violence:** Death agonies provoke hilarity; amusement involves inflicting death on prisoners; laughter is a horror for strong men.
-- **Weapons:** No Martian is voluntarily without a weapon of destruction.
+## Key Locations
+- Captive room with mural paintings depicting rare beauty (mountains, rivers, lakes, oceans, meadows, trees, flowers)
+- Street within city limits
+- Edge of city where escape attempt occurs
+- Building overlooking valley with window ~30 feet from ground
 
-## Visual Continuity Facts
-- **Materials:** White marble, gold, brilliant stones, wood, scarlet silk, leather trappings.
-- **Colors:** Green skin (olive), white fur, scarlet silk, gold inlay, light olive-green females/children.
-- **Sizes:** Martians 10-12ft tall; furniture human-sized (desks/chairs); creature ten-legged waddler size of Shetland pony.
-- **Details:** Human-sized desks/chairs in Martian halls; frog-like head on ten-legged creature with three rows of tusks.
+## Cultural Elements
+- Martians: Nomadic race without high intellectual development, semi-barbaric state
+- Food source: Milk from large plant (not animal - only one mammal on Mars and very rare)
+- Lighting: Crude artificial means (torches, candles, oil lamps); gas lamp produces intensely brilliant white light but rarely used due to mining requirements
+
+## Themes
+- Survival against alien environment
+- Trust between captor and captive
+- Martian intelligence vs. human capability
+- Cold nights as constant challenge
+]]

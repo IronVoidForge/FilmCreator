@@ -1,18 +1,15 @@
-# Tars Tarkas
+# Tars Tarkas Character File
 
-**Display Name:** Tars Tarkas  
-**Chapter Role:** Vice-Chieftain of Martians  
-**Physical Presence:** Present - leads party to Chieftain's edifice  
-**Physical Description:** Martian (naked except ornaments, 10-12ft tall per visual continuity)  
-**Costume/Silhouette:** Ornamented naked form, broad steps architecture context  
-**Continuity-Critical Traits:** Vice-chieftain status, leads ceremony with name exchange  
-**Uncertainty Notes:** None - fully identified by name and role
+## Role and Presence
+Vice-Chieftain of the Martian assembly. Physically present in the audience chamber, explaining the capture and offering assistance.
 
-**Render-Facing Prompt Elements:**
-- Martian physical form
-- Ornamentation details
-- 10-12ft tall stature
-- White marble/gold inlay environment context
+## Visual Continuity
+- **Skin:** Green skin (olive tone).
+- **Attire:** Wears ornaments (specific type/material not detailed).
+- **Role Indicators:** Distinguished by rank within the assembly.
+
+## Uncertainty Notes
+While skin tone is specified, the nature of the "ornaments" is vague. Manual description is required to define jewelry style and material for accurate image generation.
 
 # Aliases
 
@@ -32,10 +29,10 @@ true
 
 # Manual Description Input Required
 
-No
+Yes
 
 
 
 # Manual Description Reason
 
-None
+Specific ornament details are not described beyond "ornaments," requiring manual specification for consistent rendering.

@@ -1,22 +1,19 @@
-# Chieftain
+# Chieftain Character File
 
-**Display Name:** Chieftain  
-**Chapter Role:** Leader of Martians  
-**Physical Presence:** Referenced - party enters Chieftain's edifice  
-**Physical Description:** Unknown - no specific details provided in source material  
-**Costume/Silhouette:** Undetermined - lacks physical description  
-**Continuity-Critical Traits:** Highest authority among Martians, receives name exchange ceremony  
-**Uncertainty Notes:** Not fully identified by name; lacks physical description for image generation; may be same as Tars Tarkas or separate entity
+## Role and Presence
+The supreme leader of the Martian assembly, squatting on the rostrum platform. Addresses the narrator directly.
 
-**Render-Facing Prompt Elements:**
-- Martian form (if applicable)
-- Ornamentation details (if applicable)
-- 10-12ft tall stature (if applicable)
-- White marble/gold inlay environment context
+## Visual Continuity
+- **Scale:** Enormous warrior (significantly larger than humans).
+- **Attire:** White fur cape with scarlet silk lining.
+- **Role Indicators:** Squats on the platform; commands attention.
+
+## Uncertainty Notes
+The term "enormous" implies large scale but lacks specific metric data. Facial features are not described. Manual description is required to define the extent of size and facial structure for image generation.
 
 # Aliases
 
-None
+Enormous Warrior, Martian Leader
 
 
 
@@ -28,14 +25,14 @@ chieftain
 
 # Fully Identified
 
-false
+true
 
 # Manual Description Input Required
 
-No
+Yes
 
 
 
 # Manual Description Reason
 
-None
+Exact scale and facial features are not detailed beyond "enormous," requiring manual specification for consistent rendering.

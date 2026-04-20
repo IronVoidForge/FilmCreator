@@ -1,8 +1,6 @@
-# Character Index - Chapter III: MY ADVENT ON MARS
-
-| Character | Role | Physical Presence | Description Status |
-|-----------|------|-------------------|--------------------|
-| Protagonist | Main character, explorer | Present | Manual description required |
-| Leader Martian | Adult warrior, peace offerer | Present | Manual description required |
-
-*Note: Young Martians (Eggs) and Adult Martians are treated as groups/creatures rather than individual character records.*
+| Character Name | Role/Title | Physical Presence | Identification Status |
+| :--- | :--- | :--- | :--- |
+| Narrator | Protagonist / Prisoner | Physically Present | Fully Identified (Role) |
+| Tars Tarkas | Vice-Chieftain | Physically Present | Fully Identified (Name) |
+| Chieftain | Enormous Warrior | Physically Present | Fully Identified (Title) |
+| Sola | Young Female / Guide | Physically Present | Fully Identified (Name) |
