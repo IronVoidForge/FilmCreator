@@ -1,12 +1,8 @@
-# Character Index - Chapter CH025
+# Character Index - CH025
 
-| Asset ID | Canonical Character ID | Aliases | Fully Identified | Description Required |
-|----------|------------------------|---------|------------------|----------------------|
-| than_kosis_jeddak | Than Kosis (Jeddak) | Jeddak, Father of Sab Than | true | true |
-| sab_than_prince | Sab Than (Prince) | Prince, Son of Than Kosis | true | true |
-| dejah_thoris_princess | Dejah Thoris (Princess) | Princess of Zodanga | true | true |
-| john_carter | John Carter | - | true | true |
-| tars_tarkas | Tars Tarkas | - | true | true |
-| kantos_kan | Kantos Kan | - | true | true |
-
-*Note: All characters require manual physical description due to sparse visual continuity data in source material.*
+- [john_carter](#john_carter)
+- [dejah_thoris](#dejah_thoris)
+- [than_kosis](#than_kosis)
+- [sab_than](#sab_than)
+- [tars_tarkas](#tars_tarkas)
+- [kantos_kan](#kantos_kan)

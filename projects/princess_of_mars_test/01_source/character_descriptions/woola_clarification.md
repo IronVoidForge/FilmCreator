@@ -4,10 +4,15 @@
 woola
 
 # Why This Needs Clarification
-Character name provided but lacks stable identification details; may exist under alternate names or be too weakly identified for consistent rendering
+Needs visual specification for animal design.
 
 # Question
-What are Woola's physical features, height, build, and facial characteristics?
+What does Woola look like (size, color, fur texture)?
+
+# Candidate Matches
+- apache_warriors (score 10; chapters: CH002; aliases: -)
+- ape_creature_1 (score 10; chapters: CH006; aliases: -)
+- ape_creature_2 (score 10; chapters: CH006; aliases: -)
 
 # Guidance
 - answer briefly and concretely

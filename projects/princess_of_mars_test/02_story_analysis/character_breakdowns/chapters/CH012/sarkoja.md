@@ -1,17 +1,23 @@
-# sarkoja
+# Sarkoja
+**Role:** Spy / Manipulator
 
-**Display Name:** Sarkoja  
-**Chapter Role:** Persecutor (realized by John)  
-**Physical Presence:** Not present in chapter (only referenced by name)  
-**Physical Description:** None available; only name noted in John's realization about persecution  
-**Costume/Silhouette:** Not described in source material  
-**Continuity Traits:** John realizes this is her persecution; conversations about escape and origin recalled  
+**Status:** Referenced
 
-**Uncertainty Notes:** Character not physically present. Only referenced by name in protagonist's realization. No physical description available for reliable image generation. Clarification needed on character status and prior visual details from story context.
+**Physical Description:** 
+A powerful female figure within the Tharkian hierarchy. No visual details provided.
+
+**Costume/Silhouette:** 
+Unknown.
+
+**Prompt Phrases:** 
+Powerful female Thark, influential figure.
+
+**Uncertainty Notes:** 
+Character is only mentioned as a source of intelligence/betrayal; no physical presence in this chapter.
 
 # Aliases
 
-None
+Powerful female figure
 
 
 
@@ -27,10 +33,10 @@ false
 
 # Manual Description Input Required
 
-No
+Yes
 
 
 
 # Manual Description Reason
 
-None
+Described only as a "powerful female figure" with no physical or visual details.

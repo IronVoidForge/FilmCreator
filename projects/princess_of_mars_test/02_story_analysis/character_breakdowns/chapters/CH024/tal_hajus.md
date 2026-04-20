@@ -1,42 +1,17 @@
-# Tal Hajus - Chapter CH024
+# Tal Hajus
+**Role:** Antagonist / Former Jeddak
 
-## Display Name
-Tal Hajus
+**Status:** Physically Present (deceased by end of chapter)
 
-## Chapter Role
-Jeddak of Thark, antagonist character
+**Physical Description:** Green warrior, high-ranking Thark.
 
-## Physical Presence
-Physically present in Scenes 3, 5 of the chapter
+**Costume/Traits:** Royal/Political attire of a Jeddak, prone to rage.
 
-## Physical Description (Supported by Source)
-- Stands erect on platform glowering at entrance
-- Shrieks to strap Carter to pillar and burn eyes from head
-- Draws long-sword for combat with Tars Tarkas
-- Killed by Tars Tarkas in palace confrontation
-- Accused of cowardice for not fighting in battle
-
-## Costume & Silhouette
-- Jeddak platform attire (implied)
-- Long-sword carried for combat
-- Glowering, imposing presence on platform
-
-## Continuity-Critical Traits
-- Ordered Carter brought before him tonight
-- Accuses Carter of being chief among Tharks
-- Must prove fitness to rule according to council
-- Killed by Tars Tarkas after combat victory
-- His death allows Tars Tarkas to become jeddak
-
-## Render-Facing Prompt Notes
-"Jeddak Tal Hajus, erect platform stance, glowering expression, long-sword for combat, antagonist role in Thark palace, killed by Tars Tarkas after proving cowardice"
-
-## Uncertainty Notes
-None - character fully identified with sufficient physical description for image generation
+**Prompt Phrases:** green warrior leader, angry jeddak, fallen ruler.
 
 # Aliases
 
-None
+Jeddak (former)
 
 
 

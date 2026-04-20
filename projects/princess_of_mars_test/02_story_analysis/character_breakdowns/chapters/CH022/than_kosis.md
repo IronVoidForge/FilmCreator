@@ -1,26 +1,17 @@
-# Than Kosis
+# Jeddak Than Kosis
+**Role:** Ruler / Political Figure
 
-## Chapter Role
-Courtier / Sab Than's father (implied by context).
+**Status:** Physically Present (referenced/heard)
 
-## Physical Presence
-Referenced and Present (Dejah stands before him).
+**Physical Description:** Unknown.
 
-## Physical Description
-No specific physical description provided in the chapter text.
+**Costume/Traits:** Implied high-status/royal attire.
 
-## Costume & Silhouette
-Courtier attire; accepts Dejah's engagement announcement.
-
-## Continuity Traits
-Orders proclamation issued; searches for Carter later.
-
-## Uncertainty Notes
-Physical appearance details (hair, eyes, build) are missing from the source text and require manual description for reliable image generation.
+**Prompt Phrases:** Barsoomian ruler, authoritative presence, political leader.
 
 # Aliases
 
-None
+Than Kosis
 
 
 
@@ -36,10 +27,10 @@ true
 
 # Manual Description Input Required
 
-No
+Yes
 
 
 
 # Manual Description Reason
 
-None
+No physical description provided.

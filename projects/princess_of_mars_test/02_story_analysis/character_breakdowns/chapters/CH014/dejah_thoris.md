@@ -1,33 +1,15 @@
-# Dejah Thoris - Chapter XIV
+# Dejah Thoris
+**Role:** Primary Female Lead
 
-**Display Name:** Dejah Thoris  
-**Chapter Role:** Chained companion, mirror thrower  
-**Physical Presence:** Present and chained to chariot  
+**Presence:** Physically Present
 
-**Physical Description (Supported by Source):**
-- Silks from shoulders visible in scene
-- Riding cloths on thoats during chariot travel
-- Furs present in chariot interior
+**Description:** A figure of dignity who experiences tension and contempt toward Carter. She is kept in heavy chains/fetters on a chariot for security during the march.
 
-**Costume & Silhouette:**
-- Warrior attire with silks and furs
-- Chained by one ankle to vehicle
-- Heavy chains on ankle, massive spring lock manacles
-
-**Continuity-Critical Traits:**
-- Throws mirror that blinds Carter at crucial moment
-- Attempted stabbing by Sarkoja, shielded by Sola
-- Moonlit skies during journey to Thark
-
-**Render-Facing Prompt Notes:**
-"Dejah Thoris in silks and furs, chained ankle with heavy chains, chariot interior, throwing blinding mirror flash, moonlit plaza background"
-
-**Uncertainty Notes:**
-None - character fully identified with supported physical description
+**Prompt Phrases:** Martian princess, dignified, bound by heavy chains, riding in a chariot.
 
 # Aliases
 
--
+Princess of Mars
 
 
 
@@ -49,4 +31,4 @@ No
 
 # Manual Description Reason
 
--
+None

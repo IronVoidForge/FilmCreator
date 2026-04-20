@@ -1,39 +1,15 @@
-# sab_than.md
+# Sab Than
+**Role:** Antagonist (Target)
 
-## Display Name
-Sab Than
+**Status:** Referenced
 
-## Chapter Role
-Referenced character - marriage promise recipient
+**Description:** The ruler of Zodanga. He is currently engaged to Dejah Thoris, which serves as the catalyst for the chapter's conflict.
 
-## Physical Presence
-**UNCERTAIN** - Only referenced in chapter summary, not physically present. Appears as subject of conversation between Carter and Kantos Kan.
-
-## Physical Description Status
-**UNCERTAIN** - No physical description provided in this chapter summary. Requires manual documentation for image generation.
-
-## Known Actions & Traits
-- Receives marriage promise from Dejah Thoris (mentioned by Carter)
-- Subject of assassination plan by Kantos Kan
-
-## Continuity-Critical Notes
-- Zodanga figure (implied by location context)
-- Marriage promise recipient
-- Target of assassination attempt
-- Alliance disruption point
-
-## Render-Facing Prompt Noun Phrases
-- Male antagonist figure
-- Marriage candidate
-- Assassination target
-- Zodanga royalty representative
-
-## Uncertainty Notes
-Physical appearance, costume details, and facial features are not documented in this chapter. Character is only referenced, not present. Manual description required for dependable image generation.
+**Uncertainty Note:** No physical description or visual traits are provided in this chapter.
 
 # Aliases
 
-None
+Ruler of Zodanga
 
 
 
@@ -45,14 +21,14 @@ sab_than
 
 # Fully Identified
 
-true
+false
 
 # Manual Description Input Required
 
-Yes
+No
 
 
 
 # Manual Description Reason
 
-Character only referenced in chapter summary. No physical description provided and not physically present. Requires manual documentation for image generation.
+None

@@ -1,17 +1,6 @@
-# Environment Index - CH009
+# Environment Index
 
-## Primary Environments
-
-| Asset ID | Name | Role | Description |
-|----------|------|------|-------------|
-| training_plaza | Training Plaza | Primary | Weapons practice area with young Martians |
-| audience_chamber | Audience Chamber | Secondary | Prisoner exhibition and gathering space |
-| night_gathering_room | Night Gathering Room | Secondary | Women's discussion chamber |
-
-## Secondary/Transit Environments
-
-| Asset ID | Name | Role | Description |
-|----------|------|------|-------------|
-| games_exhibition_area | Games Exhibition Area | Transit | Mentioned exhibition space for Tal Hajus |
-
----
+| Asset ID | Description |
+| :--- | :--- |
+| martian_training_plaza | Open-air combat and training grounds for Martian youth and warriors. |
+| communal_sleeping_quarters | Shared living space for Green Martian females, youths, and the protagonist. |

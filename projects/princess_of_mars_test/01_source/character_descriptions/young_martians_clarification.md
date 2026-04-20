@@ -4,10 +4,10 @@
 young_martians
 
 # Why This Needs Clarification
-Character is a group rather than individual; may exist under different collective name or be too weakly identified as individuals
+The character is not fully identified from this chapter alone.
 
 # Question
-Are the young Martians referenced as a specific named group, or should they be treated as unnamed training partners?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

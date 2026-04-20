@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-set "FILMCREATOR_ROOT=C:\FilmCreator"
+call "%~dp0..\..\_shared\resolve_filmcreator_root.bat" "%~dp0" || exit /b 1
 set "PROJECT_SLUG=pilot_scene"
 set "SCENE_ID=SC001"
 set "CLIP_ID=CL001"
@@ -11,8 +11,8 @@ set "SECONDARY_REF=projects/pilot_scene/05_scenes/SC001/clips/CL001/inputs/smoke
 set "STILL_FIX_DIR=projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/fixes"
 set "CLIP_STATE=projects/pilot_scene/05_scenes/SC001/clips/CL001/clip_state.json"
 set "FILMCREATOR_COMFY_BASE_URL=http://127.0.0.1:8190"
-set "FILMCREATOR_COMFY_INPUT_DIR=C:\FilmCreator\.comfy_clean\input"
-set "FILMCREATOR_COMFY_OUTPUT_DIR=C:\FilmCreator\.comfy_clean\output"
+set "FILMCREATOR_COMFY_INPUT_DIR=%FILMCREATOR_ROOT%\.comfy_clean\input"
+set "FILMCREATOR_COMFY_OUTPUT_DIR=%FILMCREATOR_ROOT%\.comfy_clean\output"
 set "FILMCREATOR_COMFY_TIMEOUT_SECONDS=7200"
 set "PLAN_JSON=%TEMP%\filmcreator_still_fix_plan_%RANDOM%.json"
 

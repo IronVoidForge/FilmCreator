@@ -21,6 +21,7 @@ from .workflow_patcher import (
     patch_workflow_payload,
     prune_api_prompt_to_output_nodes,
 )
+from .features import runner as _feature_runner
 
 
 STAGE_DIR_BY_STAGE = {
@@ -720,3 +721,13 @@ def _is_image_reference(value: str | None) -> bool:
     if not value:
         return False
     return Path(value).suffix.lower() in IMAGE_SUFFIXES
+
+
+RunSummary = _feature_runner.RunSummary
+PreparedRun = _feature_runner.PreparedRun
+run_still = _feature_runner.run_still
+prepare_still_run = _feature_runner.prepare_still_run
+execute_prepared_run = _feature_runner.execute_prepared_run
+run_still = _feature_runner.run_still
+prepare_still_run = _feature_runner.prepare_still_run
+execute_prepared_run = _feature_runner.execute_prepared_run

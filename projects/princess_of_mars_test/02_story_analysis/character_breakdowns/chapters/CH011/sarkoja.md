@@ -1,31 +1,15 @@
 # Sarkoja
+**Role:** Antagonist / Rival
 
-## Display Name
-Sarkoja
+**Status:** Referenced/Present in context of conflict
 
-## Chapter Role
-Antagonist, guard commander
+**Description:** A male Thark who harbors ill will toward John Carter and Dejah Thoris.
 
-## Physical Presence
-Referenced in scene 1 (guards waved away)
-
-## Physical Description
-No physical description provided in source material. Cannot determine height, hair color, build, or other visual traits without additional information.
-
-## Costume & Silhouette
-Unknown. No costume details mentioned in chapter summary.
-
-## Continuity-Critical Traits
-Threatened with death if she harms Dejah again (threat ineffective on Mars).
-
-## Descriptive Noun Phrases
-- "Sarkoja"
-- "antagonist"
-- "guard commander"
+**Prompt Phrases:** Male Thark, hostile warrior, rival chieftain.
 
 # Aliases
 
-None
+Male Thark
 
 
 
@@ -41,10 +25,10 @@ true
 
 # Manual Description Input Required
 
-Yes
+No
 
 
 
 # Manual Description Reason
 
-No physical description (height, hair color, build) provided in chapter summary. Cannot support dependable image generation without additional details.
+None

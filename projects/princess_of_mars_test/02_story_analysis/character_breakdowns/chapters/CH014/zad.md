@@ -1,36 +1,15 @@
-# Zad - Chapter XIV
+# Zad
+**Role:** Antagonist / Combatant
 
-**Display Name:** Zad  
-**Chapter Role:** Opponent fighter, sword wielder  
-**Physical Presence:** Present and actively fighting Carter  
+**Presence:** Physically Present
 
-**Physical Description (Supported by Source):**
-- Green Martian warrior designation
-- Long-sword weapon wielder
-- Crowd surrounding the fight during combat
+**Description:** A warrior who harbors intense hatred for Carter and provokes him into a formal duel. He delivers the fatal thrust to Carter's chest.
 
-**Costume & Silhouette:**
-- Green Martian warrior attire (color specified)
-- Long-sword at ready position
-- No detailed costume or body characteristics documented
-
-**Continuity-Critical Traits:**
-- Strikes Carter with long-sword thrust
-- Wounds Carter in shoulder and chest
-- Fight occurs during halt in journey to Thark
-
-**Render-Facing Prompt Notes:**
-"Zad green Martian warrior, long-sword at ready position, crowd surrounding fight, combat stance during chariot halt"
-
-**Uncertainty Notes:**
-- Physical features beyond weapon type not documented
-- Costume details limited to color designation
-- Facial characteristics and body build unknown
-- Cannot support dependable image generation without additional visual specification
+**Prompt Phrases:** Aggressive warrior, combatant, wielding blade, lethal strike.
 
 # Aliases
 
--
+Warrior Zad
 
 
 
@@ -42,7 +21,7 @@ zad
 
 # Fully Identified
 
-false
+true
 
 # Manual Description Input Required
 

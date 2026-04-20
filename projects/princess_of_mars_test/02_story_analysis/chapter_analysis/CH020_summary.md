@@ -1,11 +1,16 @@
-# Chapter Summary: CH020 - The Atmosphere Factory
+**Events:**
+After a failed attempt to meet Kantos Kan, the protagonist embarks on a two-week trek northwest through the Martian wilderness. During this journey, he survives on vegetable milk and narrowly avoids several beast attacks, one of which is only thwarted by the intervention of his emaciated calot, Woola. On the fifteenth day, the protagonist discovers a massive, four-square-mile atmosphere factory. After gaining entry through automated doors, he is hosted by an invisible entity and meets a withered old man who has guarded the facility for eight hundred years. Through telepathy, the protagonist learns that the plant uses a "ninth ray" to generate life-sustaining air, which is then distributed via radium pumps to five principal centers across Mars.
 
-## Story Summary
-John Carter waits two days for Kantos Kan without success, then wanders northwesterly toward a waterway. He survives two weeks of starvation and wild beast attacks using his telepathic power and long-sword. He is attacked by a large, many-legged beast but is saved by Woola, who has left Dejah Thoris due to her presumed death. Carter finds the Atmosphere Factory after fifteen days of searching. Inside, he meets an old Martian guardian who explains the ninth ray and atmosphere production process. Carter learns the doors are unlocked via telepathic thought waves. He escapes the factory using this power, reaching Zodanga farm territory. There, Red Martians provide him with food, a domestic bull-throat, reddish oil to color his body, and advice to seek military employment in Zodanga.
+The situation turns dangerous when the protagonist senses the old man's murderous intent; the guardian plans to kill him to protect the factory's secrets. Using his telepathic abilities to manipulate the facility's thought-wave locks, the protagonist manages to escape with Woola. While traveling toward the central turnpike, he is intercepted by hospitable Red Martians who take him into their elevated home. To assist his journey to Zodanga, the Red Martians provide him with a disguise—anointing his skin with reddish oil and cutting his hair in the local fashion—and supply him with Zodangan money and a bullthoat. He departs for Zodanga following their advice that military service is the most effective way to gain status and trust.
 
-## Visual Continuity
-- **Woola:** Appears half-starved, shadow of former self, eating the dead beast's carcass. His loyalty is emphasized despite leaving Dejah Thoris.
-- **Atmosphere Factory:** Massive building with walls 150 feet thick and roof guarded by glass covering five feet thick. Doors are 20 feet thick and manipulated by telepathy.
-- **Old Man's Diadem:** Wears a small collar of gold with a great ornament set with huge diamonds and a strange stone scintillating nine different rays (seven colors + two new rays).
-- **Carter's Appearance:** Initially wears Green Warrior metal but is identified as Red Man figure. Later anoints body with reddish oil to resemble Red Martians, cuts hair square at back/banged in front, and renews ornaments in Zodangan style.
-- **Environment:** Barsoomian scene lit by nearer moon/hurting moons. Wild beasts are described as strange, uncouth monstrosities. Farm buildings are raised 40-50 feet from ground on metal shafts operated by radium engines.
+**Characters:**
+* **The Protagonist:** An Earthman with telepathic powers who is recognized as biologically distinct from Barsoomians; he is currently exhausted and starving.
+* **Woola:** A faithful, though seemingly emaciated, calot who protects the protagonist from wild beasts.
+* **The Invisible Host:** An entity within the factory that can see through the protagonist's body but cannot read his thoughts.
+* **The Old Man:** A mummy-like guardian of the atmosphere pumps for eight centuries; he wears a nine-rayed diadem and attempts to kill the protagonist to protect the plant's secrets.
+* **Red Martians:** A hospitable group of inhabitants who provide the protagonist with local disguises, currency, and transport.
+
+**Settings:**
+* **The Martian Wilderness:** A dangerous landscape filled with strange beasts and vegetation that yields vegetable milk.
+* **The Atmosphere Factory:** A massive, highly secure concrete facility containing automated doors and machinery used to generate the Martian atmosphere via the ninth ray.
+* **Red Martian Home:** A structure raised on a metal shaft for safety, reflecting local social structures and customs.

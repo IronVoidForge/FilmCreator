@@ -4,62 +4,53 @@
 - CH008_SC001
 - CH008_SC002
 - CH008_SC003
+- CH008_SC004
 
 ## Known Canonical Characters
-- ape_like_creature
-- bull_ape
-- bull_ape_mate
-- carter_human
-- chieftain_martian
-- dead_friend
-- hatching_creature_ch003
+- ape_creature_1
+- ape_creature_2
+- colossal_creature
+- deceased_friend
+- james_k_powell
 - john_carter
 - lorquas_ptomel
-- lorquas_ptomel_jed
-- mars
-- martian_leader_ch003
-- martian_soldier_ch003
-- powell
-- prisoner_human_female
+- martian_leader
+- martian_mounts
 - protagonist
 - sola
 - tars_tarkas
-- warrior_martian
-- watch_dog
+- the_chieftain
+- the_prisoner
+- watch_thing
+- watchdog
 - woola
+- young_martian
 
 ## Unresolved / Provisional Characters
 - narrator
-- narrator_ch003
-- narrator_i
 
 ## Known Canonical Environments
-- apache_tepees
-- arizona_exterior_night
-- arizona_hills
-- building_overlooking_valley
-- building_upper_floor_window
-- cave_chamber
-- cave_interior
-- ceremonial_grounds
-- chieftain_palace_interior
-- circular_basin_incubator
-- city_interior
-- dead_sea_bottom
-- doorway_entrance
-- heavens_above_landscape
-- hills
-- incubator_enclosure
-- interior_combat_space
-- martian_city_street
-- martian_hills_landscape
-- martian_ruined_city_exterior
-- plaza
-- plaza_destination
-- room_interior
-- sola_sleeping_quarters
-- valley_overlook
-- window_structure
+- aerial_battle_skyline
+- ancient_martian_city
+- apache_plateau_camp
+- arizona_mountain_cave
+- arizona_mountain_quartz_vein
+- captive_chamber_murals
+- chieftain_audience_chamber
+- circular_moss_basin
+- cliffside_cave_system
+- dead_city_quarters
+- dead_sea_bottom_basin
+- derelict_craft_crash_site
+- deserted_martian_city
+- deserted_martian_cityscape
+- incubator_structure
+- martian_distant_hills
+- martian_interior_chamber
+- martian_plaza
+- overlooking_building_interior
+- rocky_gorge_nightscape
+- solas_sleeping_chamber
 
 ## Registry Artifacts
 - projects/princess_of_mars_test/02_story_analysis/world/CHARACTER_REGISTRY.json

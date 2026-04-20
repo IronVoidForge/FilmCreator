@@ -1,6 +1,5 @@
-SC001 | Carter's Journey and Waiting Period
-SC002 | Survival of Starvation and Beast Attacks with Woola
-SC003 | Discovery and Entry into Atmosphere Factory
-SC004 | Meeting Old Guardian and Learning Telepathic Doors
-SC005 | Escape from Factory to Zodanga Farm Territory
-SC006 | Receiving Supplies and Advice at Zodanga Farm
+1. [SC001](#sc001) - The Trek through the Wilderness
+2. [SC002](#sc002) - Discovery of the Atmosphere Factory
+3. [SC003](#sc003) - Meeting the Guardian and the Ninth Ray
+4. [SC004](#sc004) - Escape from the Old Man
+5. [SC005](#sc005) - Encounter with the Red Martians

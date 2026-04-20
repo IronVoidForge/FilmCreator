@@ -1,13 +1,23 @@
-## Dak Kova
+# Dak Kova
+**Role:** Antagonist / Usurper
 
-- **Chapter Role**: Jeddak's lieutenant, becomes Jeddak of Warhoon.
-- **Physical Presence**: Present in battle scenes and examination.
-- **Visual Description**: Green-skinned Martian warrior. Terribly scarred face and chest. One broken tusk. Missing ear. Wears ornaments of human skulls and dried dead hands.
-- **Continuity Notes**: Killed Bar Comas with single tusk thrust.
+**Status:** Physically Present
+
+**Physical Description:** 
+A ferocious and scarred Warhoon warrior. Characterized by an ambitious, insubordinate, and murderous temperament.
+
+**Costume/Silhouette:** 
+Warhoon warrior attire; likely incorporates trophies such as human skulls or dried hands as per tribal custom.
+
+**Descriptive Noun Phrases:** 
+Scarred Warhoon warrior, ferocious jed, murderous usurper, ambitious warrior.
+
+**Uncertainty Notes:** 
+Specific scar patterns and exact trophy placement are not detailed.
 
 # Aliases
 
-None
+Former Lieutenant, New Jeddak
 
 
 

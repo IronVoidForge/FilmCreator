@@ -1,31 +1,15 @@
 # Dejah Thoris
+**Role:** Princess of the Red Martians
 
-## Display Name
-Dejah Thoris
+**Status:** Physically Present
 
-## Chapter Role
-Noblewoman, companion of John Carter
+**Description:** A princess of the red Martian race. She is highly intelligent, interested in ancient history, and possesses strong intuition.
 
-## Physical Presence
-Physically present in scenes 1, 3-5
-
-## Physical Description
-No physical description provided in source material. Cannot determine height, hair color, build, or other visual traits without additional information.
-
-## Costume & Silhouette
-Unknown. No costume details mentioned in chapter summary.
-
-## Continuity-Critical Traits
-Barsoomian noblewoman. Questions John's Earth origin claim.
-
-## Descriptive Noun Phrases
-- "Dejah Thoris"
-- "noblewoman"
-- "companion of John Carter"
+**Prompt Phrases:** Red Martian princess, noblewoman, ancient history enthusiast.
 
 # Aliases
 
-None
+Princess of the red Martians
 
 
 
@@ -41,10 +25,10 @@ true
 
 # Manual Description Input Required
 
-Yes
+No
 
 
 
 # Manual Description Reason
 
-No physical description (height, hair color, build) provided in chapter summary. Cannot support dependable image generation without additional details.
+None

@@ -1,40 +1,17 @@
-# John Carter - Chapter CH024
+# John Carter
+**Role:** Protagonist / Chieftain
 
-## Display Name
-John Carter
+**Status:** Physically Present
 
-## Chapter Role
-Protagonist, central figure throughout all scenes
+**Physical Description:** Human male, capable of high-intensity combat and scaling carborundum walls.
 
-## Physical Presence
-Physically present in every scene of the chapter
+**Costume/Traits:** Combatant, leader of an infiltration team.
 
-## Physical Description (Supported by Source)
-- Tall, athletic build typical of Barsoomian heroes
-- Wears long-sword for combat defense
-- Appears as chief among Thark warriors after transformation
-- Rides beside great Thark during march to Zodanga
-
-## Costume & Silhouette
-- Standard heroic warrior attire
-- Long-sword carried at hip
-- Distinguished by leadership presence among green men
-
-## Continuity-Critical Traits
-- Former outsider to Thark, now full-fledged chieftain
-- Has learned of Dejah Thoris's captivity by Zodanga
-- Plans alliance with Helium for supremacy among green men
-- Tasked with obtaining entry into Zodanga city
-
-## Render-Facing Prompt Notes
-"Barsoomian hero John Carter, tall athletic build, long-sword at hip, heroic warrior attire, distinguished leadership presence among green men, transformation from outsider to chieftain of Thark"
-
-## Uncertainty Notes
-None - character fully identified with sufficient physical description for image generation
+**Prompt Phrases:** human warrior, agile combatant, infiltrator, leader of Thark expedition.
 
 # Aliases
 
-None
+Carter
 
 
 

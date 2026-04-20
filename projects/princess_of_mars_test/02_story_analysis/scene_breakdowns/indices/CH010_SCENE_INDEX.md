@@ -1,5 +1,6 @@
-SC001 | Walk with Woola | City limits/Plaza | John Carter, Woola
-SC002 | Council Hearing | Audience Chamber | Dejah Thoris, Lorquas Ptomel, Tars Tarkas
-SC003 | Intervention | Audience Chamber | John Carter, Young Warrior, Dejah Thoris
-SC004 | Aftermath Conversation | Audience Chamber | John Carter, Dejah Thoris, Tars Tarkas
-SC005 | Departure | Audience Chamber Exit | John Carter, Dejah Thoris, Woola
+- [SC001](#sc001) - Morning exploration and bonding with Woola.
+- [SC002](#sc002) - Observation of the captive Princess and eavesdropping on the Council.
+- [SC003](#sc003) - Dejah Thoris's speech to the Thark Council.
+- [SC004](#sc004) - The assault on Dejah Thoris and Carter's violent intervention.
+- [SC005](#sc005) - Aftermath: Chieftaincy, revelation, and confrontation with Tars Tarkas.
+- [SC006](#sc006) - Departure from the chamber.

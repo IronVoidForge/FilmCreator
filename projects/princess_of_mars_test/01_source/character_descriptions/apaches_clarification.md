@@ -4,10 +4,10 @@
 apaches
 
 # Why This Needs Clarification
-Apaches mentioned as collective group without individual identification. May need clarification on whether to treat as single character entity or multiple individual characters for rendering purposes.
+The character is not fully identified from this chapter alone.
 
 # Question
-Should Apaches be treated as a single collective character entity or broken into individual warrior characters for image generation?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

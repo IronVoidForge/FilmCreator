@@ -189,6 +189,10 @@ class _FakeAuthoringLMStudioClient:
             )
 
         if "task: clip_planning" in user_prompt:
+            degraded_retry = "Repair Instruction" in user_prompt
+            clip_two_inputs = "- beat_id: BT003\n"
+            if degraded_retry:
+                clip_two_inputs = "- beat_id: BT002\n- beat_id: BT003\n"
             return _packet(
                 task="clip_planning",
                 sections={
@@ -206,7 +210,9 @@ class _FakeAuthoringLMStudioClient:
                         record_type="clip",
                         fields={"clip_id": "CL002"},
                         sections={
-                            "markdown": "# Title\nSC001 CL002 Clip Plan\n\n# ID\nSC001_CL002\n\n# Purpose\nReveal the captive and the exchanged look.\n\n# Inputs\n- beat_id: BT003\n- duration_seconds: 5\n- composition_type: reaction\n- continuity_mode: cutaway\n- starting_keyframe_strategy: scene_refs_to_keyframe\n- dependency_policy: independent\n- visible_character_assets: john_carter,dejah_thoris\n- required_refs: image_1,image_2\n- optional_refs: image_3,image_4\n\n# Output Targets\n- SC001_CL002_KF01_v001.png\n- SC001_CL002_MV01_v001.mp4\n",
+                            "markdown": "# Title\nSC001 CL002 Clip Plan\n\n# ID\nSC001_CL002\n\n# Purpose\nReveal the captive and the exchanged look.\n\n# Inputs\n"
+                            + clip_two_inputs
+                            + "- duration_seconds: 5\n- composition_type: reaction\n- continuity_mode: cutaway\n- starting_keyframe_strategy: scene_refs_to_keyframe\n- dependency_policy: independent\n- visible_character_assets: john_carter,dejah_thoris\n- required_refs: image_1,image_2\n- optional_refs: image_3,image_4\n\n# Output Targets\n- SC001_CL002_KF01_v001.png\n- SC001_CL002_MV01_v001.mp4\n",
                         },
                     ),
                 ],
@@ -300,6 +306,395 @@ class _FakeAuthoringLMStudioClient:
                 temperature=temperature,
                 model=model,
             ),
+        )
+
+
+class _ChunkFallbackAuthoringLMStudioClient(_FakeAuthoringLMStudioClient):
+    def chat_completion_result(
+        self,
+        *,
+        system_prompt: str,
+        user_prompt: str,
+        temperature: float = 0.2,
+        model: str | None = None,
+    ) -> LMStudioChatResult:
+        if "task: character_extraction" in user_prompt and "Fallback extraction chunk" not in user_prompt:
+            return LMStudioChatResult(
+                status="transport_error",
+                model=model or "test-local-model",
+                payload=None,
+                text="",
+                error_message="Timed out waiting for LM Studio at http://127.0.0.1:1234/v1/chat/completions",
+            )
+
+        if "task: character_extraction" in user_prompt and "Fallback extraction chunk 1/2" in user_prompt:
+            return LMStudioChatResult(
+                status="success",
+                model=model or "test-local-model",
+                payload={},
+                text=_packet(
+                    task="character_extraction",
+                    sections={
+                        "character_index_markdown": "\n".join(
+                            [
+                                "# Character Index - CH001",
+                                "",
+                                "## Visible Characters",
+                                "",
+                                "| Asset ID | Canonical Character ID | Aliases | Fully Identified | Manual Description Required | Clarification Required | Description |",
+                                "|---|---|---|---|---|---|---|",
+                                "| john_carter | CH001 John Carter | - | true | false | false | Officer and narrator in the opening half of the chapter |",
+                            ]
+                        ),
+                    },
+                    records=[
+                        _record(
+                            record_type="character",
+                            fields={
+                                "asset_id": "john_carter",
+                                "canonical_character_id": "CH001 John Carter",
+                                "aliases": "-",
+                                "is_fully_identified": "true",
+                                "manual_description_required": "false",
+                                "manual_description_reason": "",
+                                "clarification_required": "false",
+                                "clarification_reason": "",
+                                "clarification_question": "",
+                            },
+                            sections={
+                                "markdown": "# John Carter\nOpening half character record.\n",
+                            },
+                        )
+                    ],
+                ),
+            )
+
+        if "task: character_extraction" in user_prompt and "Fallback extraction chunk 2/2" in user_prompt:
+            return LMStudioChatResult(
+                status="success",
+                model=model or "test-local-model",
+                payload={},
+                text=_packet(
+                    task="character_extraction",
+                    sections={
+                        "character_index_markdown": "\n".join(
+                            [
+                                "# Character Index - CH001",
+                                "",
+                                "## Visible Characters",
+                                "",
+                                "| Asset ID | Canonical Character ID | Aliases | Fully Identified | Manual Description Required | Clarification Required | Description |",
+                                "|---|---|---|---|---|---|---|",
+                                "| dejah_thoris | CH001 Dejah Thoris | - | true | true | false | Captive princess introduced later in the chapter |",
+                            ]
+                        ),
+                    },
+                    records=[
+                        _record(
+                            record_type="character",
+                            fields={
+                                "asset_id": "dejah_thoris",
+                                "canonical_character_id": "CH001 Dejah Thoris",
+                                "aliases": "-",
+                                "is_fully_identified": "true",
+                                "manual_description_required": "true",
+                                "manual_description_reason": "Fallback chunk saw only partial physical detail.",
+                                "clarification_required": "false",
+                                "clarification_reason": "",
+                                "clarification_question": "",
+                            },
+                            sections={
+                                "markdown": "# Dejah Thoris\nLater half character record.\n",
+                            },
+                        )
+                    ],
+                ),
+            )
+
+        return super().chat_completion_result(
+            system_prompt=system_prompt,
+            user_prompt=user_prompt,
+            temperature=temperature,
+            model=model,
+        )
+
+
+class _ChunkFallbackEnvironmentAuthoringLMStudioClient(_FakeAuthoringLMStudioClient):
+    def chat_completion_result(
+        self,
+        *,
+        system_prompt: str,
+        user_prompt: str,
+        temperature: float = 0.2,
+        model: str | None = None,
+    ) -> LMStudioChatResult:
+        if "task: environment_extraction" in user_prompt and "Fallback extraction chunk" not in user_prompt:
+            return LMStudioChatResult(
+                status="transport_error",
+                model=model or "test-local-model",
+                payload=None,
+                text="",
+                error_message="Timed out waiting for LM Studio at http://127.0.0.1:1234/v1/chat/completions",
+            )
+
+        if "task: environment_extraction" in user_prompt and "Fallback extraction chunk 1/2" in user_prompt:
+            return LMStudioChatResult(
+                status="success",
+                model=model or "test-local-model",
+                payload={},
+                text=_packet(
+                    task="environment_extraction",
+                    sections={
+                        "environment_index_markdown": "\n".join(
+                            [
+                                "# Environment Index - CH001",
+                                "",
+                                "## Visible Environments",
+                                "",
+                                "| Asset ID | Role | Geography | Lighting | Atmosphere | Scale | Anchors | Description |",
+                                "|---|---|---|---|---|---|---|---|",
+                                "| arizona_cave_location | Primary | Cave interior | Dim lighting | Mysterious tension | Medium | Rock walls, exit passage | Narrator awakens inside a cave |",
+                            ]
+                        ),
+                    },
+                    records=[
+                        _record(
+                            record_type="environment",
+                            fields={
+                                "asset_id": "arizona_cave_location",
+                                "role": "Primary",
+                                "geography": "Cave interior",
+                                "lighting": "Dim lighting",
+                                "atmosphere": "Mysterious tension",
+                                "scale": "Medium",
+                                "anchors": "Rock walls, exit passage",
+                            },
+                            sections={
+                                "markdown": "# Arizona Cave Location\nOpening half environment record.\n",
+                            },
+                        )
+                    ],
+                ),
+            )
+
+        if "task: environment_extraction" in user_prompt and "Fallback extraction chunk 2/2" in user_prompt:
+            return LMStudioChatResult(
+                status="success",
+                model=model or "test-local-model",
+                payload={},
+                text=_packet(
+                    task="environment_extraction",
+                    sections={
+                        "environment_index_markdown": "\n".join(
+                            [
+                                "# Environment Index - CH001",
+                                "",
+                                "## Visible Environments",
+                                "",
+                                "| Asset ID | Role | Geography | Lighting | Atmosphere | Scale | Anchors | Description |",
+                                "|---|---|---|---|---|---|---|---|",
+                                "| mars_garden_setting | Secondary | Garden geography | Warm lighting | Reunion atmosphere | Medium | Plant life, waiting figure | Visionary Mars garden |",
+                            ]
+                        ),
+                    },
+                    records=[
+                        _record(
+                            record_type="environment",
+                            fields={
+                                "asset_id": "mars_garden_setting",
+                                "role": "Secondary",
+                                "geography": "Garden geography",
+                                "lighting": "Warm lighting",
+                                "atmosphere": "Reunion atmosphere",
+                                "scale": "Medium",
+                                "anchors": "Plant life, waiting figure",
+                            },
+                            sections={
+                                "markdown": "# Mars Garden Setting\nLater half environment record.\n",
+                            },
+                        )
+                    ],
+                ),
+            )
+
+        return super().chat_completion_result(
+            system_prompt=system_prompt,
+            user_prompt=user_prompt,
+            temperature=temperature,
+            model=model,
+        )
+
+
+class _ChunkFallbackChapterSummaryAuthoringLMStudioClient(_FakeAuthoringLMStudioClient):
+    def chat_completion_result(
+        self,
+        *,
+        system_prompt: str,
+        user_prompt: str,
+        temperature: float = 0.2,
+        model: str | None = None,
+    ) -> LMStudioChatResult:
+        if "task: chapter_summary" in user_prompt and "Chunk label:" not in user_prompt and "combine partial chapter summaries" not in user_prompt:
+            return LMStudioChatResult(
+                status="empty_response",
+                model=model or "test-local-model",
+                payload=None,
+                text="",
+                error_message="LM Studio returned an empty chat completion.",
+            )
+
+        if "combine partial chapter summaries" in user_prompt:
+            return LMStudioChatResult(
+                status="success",
+                model=model or "test-local-model",
+                payload={},
+                text=_packet(
+                    task="chapter_summary",
+                    sections={
+                        "project_summary_markdown": "# Project Summary\nA synthesized project summary from chunked fallback.\n",
+                        "chapter_summary_markdown": "# Chapter Summary\nA synthesized chapter summary from chunked fallback.\n",
+                    },
+                ),
+            )
+
+        if "task: chapter_summary" in user_prompt and "Chunk label: 1/2" in user_prompt:
+            return LMStudioChatResult(
+                status="success",
+                model=model or "test-local-model",
+                payload={},
+                text=_packet(
+                    task="chapter_summary",
+                    sections={
+                        "project_summary_markdown": "# Project Summary\nOpening half of the chapter.\n",
+                        "chapter_summary_markdown": "# Chapter Summary\nOpening events and setup.\n",
+                    },
+                ),
+            )
+
+        if "task: chapter_summary" in user_prompt and "Chunk label: 2/2" in user_prompt:
+            return LMStudioChatResult(
+                status="success",
+                model=model or "test-local-model",
+                payload={},
+                text=_packet(
+                    task="chapter_summary",
+                    sections={
+                        "project_summary_markdown": "# Project Summary\nLater half of the chapter.\n",
+                        "chapter_summary_markdown": "# Chapter Summary\nLater events and payoff.\n",
+                    },
+                ),
+            )
+
+        return super().chat_completion_result(
+            system_prompt=system_prompt,
+            user_prompt=user_prompt,
+            temperature=temperature,
+            model=model,
+        )
+
+
+class _ChapterSummaryRepairAuthoringLMStudioClient(_FakeAuthoringLMStudioClient):
+    def chat_completion_result(
+        self,
+        *,
+        system_prompt: str,
+        user_prompt: str,
+        temperature: float = 0.2,
+        model: str | None = None,
+    ) -> LMStudioChatResult:
+        if "task: chapter_summary" in user_prompt and "Missing sections to supply:" in user_prompt and "project_summary_markdown" in user_prompt and "chapter_summary_markdown" in user_prompt:
+            return LMStudioChatResult(
+                status="success",
+                model=model or "test-local-model",
+                payload={},
+                text=_packet(
+                    task="chapter_summary",
+                    sections={
+                        "project_summary_markdown": "# Project Summary\nA repaired project summary.\n",
+                    },
+                ),
+            )
+
+        if "task: chapter_summary" in user_prompt and "Chapter id: CH001" in user_prompt:
+            return LMStudioChatResult(
+                status="success",
+                model=model or "test-local-model",
+                payload={},
+                text=_packet(
+                    task="chapter_summary",
+                    sections={
+                        "chapter_summary_markdown": "# Chapter Summary\nA partial chapter summary missing the project summary.\n",
+                    },
+                ),
+            )
+
+        return super().chat_completion_result(
+            system_prompt=system_prompt,
+            user_prompt=user_prompt,
+            temperature=temperature,
+            model=model,
+        )
+
+
+class _CharacterExtractionRepairAuthoringLMStudioClient(_FakeAuthoringLMStudioClient):
+    def chat_completion_result(
+        self,
+        *,
+        system_prompt: str,
+        user_prompt: str,
+        temperature: float = 0.2,
+        model: str | None = None,
+    ) -> LMStudioChatResult:
+        if "task: character_extraction" in user_prompt and "repair the character_extraction packet" in user_prompt:
+            return LMStudioChatResult(
+                status="success",
+                model=model or "test-local-model",
+                payload={},
+                text=_packet(
+                    task="character_extraction",
+                    sections={
+                        "character_index_markdown": "# Character Index\n- john_carter\n",
+                    },
+                    records=[
+                        _record(
+                            record_type="character",
+                            fields={
+                                "asset_id": "john_carter",
+                                "canonical_character_id": "john_carter",
+                                "aliases": "Carter",
+                                "is_fully_identified": "true",
+                                "manual_description_required": "false",
+                                "manual_description_reason": "",
+                                "clarification_required": "false",
+                                "clarification_reason": "",
+                                "clarification_question": "",
+                            },
+                            sections={
+                                "markdown": "# John Carter\nRepaired character record.\n",
+                            },
+                        )
+                    ],
+                ),
+            )
+
+        if "task: character_extraction" in user_prompt:
+            return LMStudioChatResult(
+                status="success",
+                model=model or "test-local-model",
+                payload={},
+                text=_packet(
+                    task="character_extraction",
+                    sections={
+                        "character_index_markdown": "# Character Index\n- john_carter\n",
+                    },
+                ),
+            )
+
+        return super().chat_completion_result(
+            system_prompt=system_prompt,
+            user_prompt=user_prompt,
+            temperature=temperature,
+            model=model,
         )
 
 
@@ -521,3 +916,297 @@ def test_scene_decomposition_validator_warns_on_two_scenes_and_rejects_empty() -
         assert "no usable scenes" in str(exc)
     else:
         raise AssertionError("Expected empty scene decomposition to fail validation.")
+
+
+def test_analyze_chapter_falls_back_to_chunked_environment_extraction_on_timeout(
+    tmp_path: Path, monkeypatch
+) -> None:
+    projects_root = tmp_path / "projects"
+
+    monkeypatch.setattr(common_module, "ROOT", tmp_path)
+    monkeypatch.setattr(common_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(scaffold_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(scaffold_module, "ROOT", tmp_path)
+    monkeypatch.setattr(scaffold_module, "TEMPLATES_ROOT", REAL_TEMPLATES_ROOT)
+    monkeypatch.setattr(scaffold_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(state_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(state_module, "ROOT", tmp_path)
+    monkeypatch.setattr(state_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(authoring_module, "ROOT", tmp_path)
+    monkeypatch.setattr(authoring_module, "LMStudioClient", _ChunkFallbackEnvironmentAuthoringLMStudioClient)
+    monkeypatch.setattr(authoring_module, "load_runtime_settings", lambda: object())
+    monkeypatch.setattr(authoring_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(story_authoring_module, "LMStudioClient", _ChunkFallbackEnvironmentAuthoringLMStudioClient)
+    monkeypatch.setattr(story_authoring_module, "load_runtime_settings", lambda: object())
+
+    scaffold_module.create_project("demo")
+
+    chapter_path = projects_root / "demo" / "01_source" / "chapters" / "CH001_demo.md"
+    chapter_path.write_text(
+        "\n".join(
+            [
+                "# Title",
+                "Demo Chapter",
+                "",
+                "# Chapter",
+                "CH001",
+                "",
+                "# Text",
+                "A damaged vessel drifts above an abandoned city while a captive is discovered.",
+                "",
+                "The second half of the chapter adds a new setting shift and an earth-referential vision.",
+                "",
+                "Another paragraph gives enough material for the chunked fallback to split cleanly.",
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    summary = story_authoring_module.analyze_chapter(project_slug="demo", chapter="CH001_demo.md")
+
+    assert summary.chapter_id == "CH001"
+    assert (projects_root / "demo" / "02_story_analysis" / "environment_breakdowns" / "chapters" / "CH001" / "arizona_cave_location.md").exists()
+    assert (projects_root / "demo" / "02_story_analysis" / "environment_breakdowns" / "chapters" / "CH001" / "mars_garden_setting.md").exists()
+
+
+def test_analyze_chapter_falls_back_to_chunked_chapter_summary_on_empty_response(
+    tmp_path: Path, monkeypatch
+) -> None:
+    projects_root = tmp_path / "projects"
+
+    monkeypatch.setattr(common_module, "ROOT", tmp_path)
+    monkeypatch.setattr(common_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(scaffold_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(scaffold_module, "ROOT", tmp_path)
+    monkeypatch.setattr(scaffold_module, "TEMPLATES_ROOT", REAL_TEMPLATES_ROOT)
+    monkeypatch.setattr(scaffold_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(state_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(state_module, "ROOT", tmp_path)
+    monkeypatch.setattr(state_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(authoring_module, "ROOT", tmp_path)
+    monkeypatch.setattr(authoring_module, "LMStudioClient", _ChunkFallbackChapterSummaryAuthoringLMStudioClient)
+    monkeypatch.setattr(authoring_module, "load_runtime_settings", lambda: object())
+    monkeypatch.setattr(authoring_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(story_authoring_module, "LMStudioClient", _ChunkFallbackChapterSummaryAuthoringLMStudioClient)
+    monkeypatch.setattr(story_authoring_module, "load_runtime_settings", lambda: object())
+
+    scaffold_module.create_project("demo")
+
+    chapter_path = projects_root / "demo" / "01_source" / "chapters" / "CH001_demo.md"
+    chapter_path.write_text(
+        "\n".join(
+            [
+                "# Title",
+                "Demo Chapter",
+                "",
+                "# Chapter",
+                "CH001",
+                "",
+                "# Text",
+                "A damaged vessel drifts above an abandoned city while a captive is discovered.",
+                "",
+                "The second half of the chapter adds a new character and a clearer setting shift.",
+                "",
+                "Another paragraph gives enough material for the chunked fallback to split cleanly.",
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    summary = story_authoring_module.analyze_chapter(project_slug="demo", chapter="CH001_demo.md")
+
+    assert summary.chapter_id == "CH001"
+    assert (projects_root / "demo" / "02_story_analysis" / "story_summary" / "project_summary.md").exists()
+    assert (projects_root / "demo" / "02_story_analysis" / "chapter_analysis" / "CH001_summary.md").exists()
+
+
+def test_analyze_chapter_repairs_missing_chapter_summary_section_before_chunking(
+    tmp_path: Path, monkeypatch
+) -> None:
+    projects_root = tmp_path / "projects"
+
+    monkeypatch.setattr(common_module, "ROOT", tmp_path)
+    monkeypatch.setattr(common_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(scaffold_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(scaffold_module, "ROOT", tmp_path)
+    monkeypatch.setattr(scaffold_module, "TEMPLATES_ROOT", REAL_TEMPLATES_ROOT)
+    monkeypatch.setattr(scaffold_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(state_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(state_module, "ROOT", tmp_path)
+    monkeypatch.setattr(state_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(authoring_module, "ROOT", tmp_path)
+    monkeypatch.setattr(authoring_module, "LMStudioClient", _ChapterSummaryRepairAuthoringLMStudioClient)
+    monkeypatch.setattr(authoring_module, "load_runtime_settings", lambda: object())
+    monkeypatch.setattr(authoring_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(story_authoring_module, "LMStudioClient", _ChapterSummaryRepairAuthoringLMStudioClient)
+    monkeypatch.setattr(story_authoring_module, "load_runtime_settings", lambda: object())
+
+    scaffold_module.create_project("demo")
+
+    chapter_path = projects_root / "demo" / "01_source" / "chapters" / "CH001_demo.md"
+    chapter_path.write_text(
+        "\n".join(
+            [
+                "# Title",
+                "Demo Chapter",
+                "",
+                "# Chapter",
+                "CH001",
+                "",
+                "# Text",
+                "A damaged vessel drifts above an abandoned city while a captive is discovered.",
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    summary = story_authoring_module.analyze_chapter(project_slug="demo", chapter="CH001_demo.md")
+
+    assert summary.chapter_id == "CH001"
+    project_summary_path = projects_root / "demo" / "02_story_analysis" / "story_summary" / "project_summary.md"
+    chapter_summary_path = projects_root / "demo" / "02_story_analysis" / "chapter_analysis" / "CH001_summary.md"
+    assert project_summary_path.exists()
+    assert chapter_summary_path.exists()
+    project_summary_text = project_summary_path.read_text(encoding="utf-8")
+    chapter_summary_text = chapter_summary_path.read_text(encoding="utf-8")
+    assert "A repaired project summary." in project_summary_text
+    assert "A partial chapter summary missing the project summary." in chapter_summary_text
+
+
+def test_analyze_chapter_repairs_missing_character_records_before_chunking(
+    tmp_path: Path, monkeypatch
+) -> None:
+    projects_root = tmp_path / "projects"
+
+    monkeypatch.setattr(common_module, "ROOT", tmp_path)
+    monkeypatch.setattr(common_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(scaffold_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(scaffold_module, "ROOT", tmp_path)
+    monkeypatch.setattr(scaffold_module, "TEMPLATES_ROOT", REAL_TEMPLATES_ROOT)
+    monkeypatch.setattr(scaffold_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(state_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(state_module, "ROOT", tmp_path)
+    monkeypatch.setattr(state_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(authoring_module, "ROOT", tmp_path)
+    monkeypatch.setattr(authoring_module, "LMStudioClient", _CharacterExtractionRepairAuthoringLMStudioClient)
+    monkeypatch.setattr(authoring_module, "load_runtime_settings", lambda: object())
+    monkeypatch.setattr(authoring_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(story_authoring_module, "LMStudioClient", _CharacterExtractionRepairAuthoringLMStudioClient)
+    monkeypatch.setattr(story_authoring_module, "load_runtime_settings", lambda: object())
+
+    scaffold_module.create_project("demo")
+
+    chapter_path = projects_root / "demo" / "01_source" / "chapters" / "CH001_demo.md"
+    chapter_path.write_text(
+        "\n".join(
+            [
+                "# Title",
+                "Demo Chapter",
+                "",
+                "# Chapter",
+                "CH001",
+                "",
+                "# Text",
+                "Carter appears in the chapter and gets a brief description.",
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    summary = story_authoring_module.analyze_chapter(project_slug="demo", chapter="CH001_demo.md")
+
+    assert summary.chapter_id == "CH001"
+    character_path = projects_root / "demo" / "02_story_analysis" / "character_breakdowns" / "chapters" / "CH001" / "john_carter.md"
+    assert character_path.exists()
+    assert "Repaired character record." in character_path.read_text(encoding="utf-8")
+
+
+def test_analyze_chapter_falls_back_to_chunked_character_extraction_on_timeout(
+    tmp_path: Path, monkeypatch
+) -> None:
+    projects_root = tmp_path / "projects"
+
+    monkeypatch.setattr(common_module, "ROOT", tmp_path)
+    monkeypatch.setattr(common_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(scaffold_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(scaffold_module, "ROOT", tmp_path)
+    monkeypatch.setattr(scaffold_module, "TEMPLATES_ROOT", REAL_TEMPLATES_ROOT)
+    monkeypatch.setattr(scaffold_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(state_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(state_module, "ROOT", tmp_path)
+    monkeypatch.setattr(state_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(authoring_module, "ROOT", tmp_path)
+    monkeypatch.setattr(authoring_module, "LMStudioClient", _ChunkFallbackAuthoringLMStudioClient)
+    monkeypatch.setattr(authoring_module, "load_runtime_settings", lambda: object())
+    monkeypatch.setattr(authoring_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(story_authoring_module, "LMStudioClient", _ChunkFallbackAuthoringLMStudioClient)
+    monkeypatch.setattr(story_authoring_module, "load_runtime_settings", lambda: object())
+
+    scaffold_module.create_project("demo")
+
+    chapter_path = projects_root / "demo" / "01_source" / "chapters" / "CH001_demo.md"
+    chapter_path.write_text(
+        "\n".join(
+            [
+                "# Title",
+                "Demo Chapter",
+                "",
+                "# Chapter",
+                "CH001",
+                "",
+                "# Text",
+                "A damaged vessel drifts above an abandoned city while a captive is discovered.",
+                "",
+                "The second half of the chapter adds a new character and a clearer setting shift.",
+                "",
+                "Another paragraph gives enough material for the chunked fallback to split cleanly.",
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    summary = story_authoring_module.analyze_chapter(project_slug="demo", chapter="CH001_demo.md")
+
+    assert summary.chapter_id == "CH001"
+    assert summary.canonical_character_ids
+    assert (projects_root / "demo" / "02_story_analysis" / "character_breakdowns" / "chapters" / "CH001" / "john_carter.md").exists()
+    assert (projects_root / "demo" / "02_story_analysis" / "character_breakdowns" / "chapters" / "CH001" / "dejah_thoris.md").exists()
+
+
+def test_character_clarification_placeholder_includes_candidate_comparison_block() -> None:
+    text = story_authoring_module._character_clarification_placeholder(
+        asset_id="john_carter",
+        reason="Potential existing identity matches detected:",
+        question="Should this merge into an existing canonical character?",
+        candidate_summaries=(
+            "- john_carter (score 93; chapters: CH001, CH004; aliases: Carter) Example context: Carter is described as a veteran commander.",
+            "- captain_carter (score 74; chapters: CH009; aliases: Captain Carter) Example context: The captain speaks with Carter's voice and mannerisms.",
+        ),
+    )
+
+    assert "# Candidate Matches" in text
+    assert "john_carter (score 93" in text
+    assert "captain_carter (score 74" in text
+    assert "# Clarification Response" in text
+
+
+def test_environment_clarification_placeholder_includes_candidate_comparison_block() -> None:
+    text = story_authoring_module._environment_clarification_placeholder(
+        asset_id="city_plaza",
+        reason="Potential existing environment matches detected:",
+        question="Should this merge into an existing canonical environment?",
+        candidate_summaries=(
+            "- city_plaza (score 91; chapters: CH001, CH004; aliases: plaza) Example context: The plaza is described as a dry open ground framed by buildings.",
+            "- deserted_city_buildings (score 72; chapters: CH002; aliases: city_ruins) Example context: The ruined city includes the same plaza-like open ground.",
+        ),
+    )
+
+    assert "# Candidate Matches" in text
+    assert "city_plaza (score 91" in text
+    assert "deserted_city_buildings (score 72" in text
+    assert "# Clarification Response" in text

@@ -1,15 +1,17 @@
 # John Carter
+**Role:** Protagonist / Intervener
 
-**Chapter Role:** Protagonist / Thark Chieftain (after intervention)  
-**Physical Presence:** Present in scene throughout chapter  
-**Physical Description:** Tall, muscular build; wears Earth clothing initially; later accepts Thark status. Strong, commanding presence noted during combat.  
-**Costume/Silhouette:** Earth garments at start; transitions to Thark chieftain regalia after killing young warrior.  
-**Continuity-Critical Traits:** Name revealed as "John Carter" from Virginia, Earth. Origin: Helium vs. Virginia exchange with Dejah Thoris. Status change from prisoner to Chieftain via combat valor.  
-**Render-Facing Prompt Noun Phrases:** tall muscular man, earth clothing, strong commanding presence, thark chieftain status, combat valor, protective over dejah thoris.
+**Status:** Physically Present
+
+**Physical Description:** An Earthman with superior combat skills and the ability to understand the Martian tongue.
+
+**Costume/Silhouette:** Not explicitly detailed in this chapter, but possesses possessions transferred from a fallen Thark warrior.
+
+**Prompt Phrases:** Human male, Earthman, martial prowess, defiant expression.
 
 # Aliases
 
--
+Carter, Earthman
 
 
 

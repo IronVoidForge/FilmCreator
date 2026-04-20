@@ -1,16 +1,14 @@
 # Tars Tarkas
-## Role
-Vice-Chieftain, Escort to Carter.
-## Presence
-Physically present, escorts Carter.
-## Physical Description
-General appearance described as naked with ornaments. Specific physical details are not provided in the text summary.
-## Continuity Notes
-Escorts Carter to the Chieftain's rostrum.
+**Role:** Vice-chieftain / Guard
+**Presence:** Physically Present
+**Physical Description:** A Green Martian. Capable statesman and warrior. Part of the multi-legged, tusked species.
+**Costume/Silhouette:** Green Martian physiology; likely minimal clothing/ornaments consistent with his race.
+**Prompt Phrases:** Green Martian, multi-legged, large tusks, warrior, statesman.
+**Uncertainty Notes:** Specific ornamentation or exact limb count not specified in this chapter.
 
 # Aliases
 
-Vice-Chieftain
+Green Martian Vice-Chieftain, Escort
 
 
 
@@ -26,10 +24,10 @@ true
 
 # Manual Description Input Required
 
-Yes
+No
 
 
 
 # Manual Description Reason
 
-The text identifies Tars Tarkas by name but does not provide specific physical attributes.
+None

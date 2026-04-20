@@ -1,20 +1,19 @@
-# Kantos Kan - CH019
+# Kantos Kan
+**Role:** Ally / Padwar of Helium
 
-**Display Name:** Kantos Kan  
-**Chapter Role:** Red Martian prisoner, arena fighter  
-**Physical Presence:** Physically present (fighting in amphitheater)  
+**Status:** Physically Present
 
-**Physical Description:** Limited details available. Identified as red Martian/Heliumite. Details escape from Zodanga after defeat of battleships. One of final three survivors in arena games.
+**Physical Description:** A warrior capable of high-skill combat; utilizes a specialized long-distance sword throw.
 
-**Costume/Silhouette:** No specific costume or silhouette details provided in chapter summary. Wears standard attire for arena fighter (implied).
+**Costume/Silhouette:** Prisoner attire during the games.
 
-**Continuity-Critical Traits:** Red Martian identity, skilled combatant with thrown sword, killed green warrior, survived fight with Carter to reach hills east of city.
+**Prompt Phrases:** skilled helium padwar, long-distance swordsman, tactical warrior.
 
-**Uncertainty Notes:** Physical appearance details (facial features, hair, skin tone, body build) are not sufficiently documented in this chapter for dependable later image generation. Additional physical description required for render-facing prompt writing.
+**Uncertainty Notes:** Specific facial features or physical build are not detailed in this chapter.
 
 # Aliases
 
-Red Martian, Heliumite
+Padwar of Helium, Fellow Prisoner
 
 
 

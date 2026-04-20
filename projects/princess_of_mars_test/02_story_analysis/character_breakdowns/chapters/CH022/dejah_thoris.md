@@ -1,26 +1,19 @@
 # Dejah Thoris
+**Role:** Princess of Helium / Love Interest
 
-## Chapter Role
-Princess of Zodanga / Sab Than's fiancée.
+**Status:** Physically Present
 
-## Physical Presence
-Present (Enters apartment, stands before courtiers, watches fight).
+**Physical Description:** Not explicitly detailed in this chapter beyond her royal status and emotional state.
 
-## Physical Description
-No specific physical description provided in the chapter text.
+**Costume/Traits:** Royal attire (implied by setting).
 
-## Costume & Silhouette
-Radiant with smiles; stands before Than Kosis and Sab Than.
+**Prompt Phrases:** Barsoomian princess, grieving noblewoman, regal silhouette.
 
-## Continuity Traits
-Announces engagement to Sab Than; refuses John Carter due to custom.
-
-## Uncertainty Notes
-Physical appearance details (hair, eyes, build) are missing from the source text and require manual description for reliable image generation.
+**Uncertainty Note:** Specific physical features are not described in this text segment.
 
 # Aliases
 
-None
+Princess
 
 
 
@@ -36,10 +29,10 @@ true
 
 # Manual Description Input Required
 
-Yes
+No
 
 
 
 # Manual Description Reason
 
-No physical description (hair, eyes, build) provided in the chapter text to support image generation.
+None

@@ -1,20 +1,19 @@
-# Dak Kova - CH019
+# Dak Kova
+**Role:** Antagonist / Chieftain
 
-**Display Name:** Dak Kova  
-**Chapter Role:** Audience member on raised platform (referenced character)  
-**Physical Presence:** Referenced only (not physically present in amphitheater fighting)  
+**Status:** Referenced (Leader of the horde)
 
-**Physical Description:** No physical description provided in this chapter's material. Identified as audience member seated on raised platform with chieftains.
+**Physical Description:** Unknown.
 
-**Costume/Silhouette:** No specific costume or silhouette details available in chapter summary.
+**Costume/Silhouette:** Unknown.
 
-**Continuity-Critical Traits:** Audience representative, positioned on raised platform during arena games.
+**Prompt Phrases:** Warhoon chieftain, leader of the horde.
 
-**Uncertainty Notes:** Physical appearance details are not documented in this chapter for dependable later image generation. Character identification status may need clarification against prior chapter documentation. Additional physical description required for render-facing prompt writing.
+**Uncertainty Notes:** Character is mentioned as a leader but lacks any visual descriptors in this chapter.
 
 # Aliases
 
-None
+Chieftain of the Warhoon
 
 
 

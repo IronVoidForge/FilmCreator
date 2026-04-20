@@ -1,6 +1,5 @@
-SC001 - Setup: Carter regains composure, realizes keys are gone, Dejah Thoris taken to lair
-SC002 - Transition: No food for two days, new messenger arrives at amphitheater
-SC003 - Introduction: Kantos Kan arrives as prisoner, exchange greetings and stories
-SC004 - Action Sequence: Games begin with various fights (Green females vs calots, mad zitidar, etc.)
-SC005 - Climax: Final three fight to death, Carter survives in darkness
-SC006 - Aftermath/Escape: Carter escapes stealthily to top of amphitheater, reaches hills east of city
+- [SC001](#sc001) - The Dark Cell and the Stolen Keys
+- [SC002](#sc002) - Meeting Kantos Kan
+- [SC003](#sc003) - The Gladiatorial Games Begin
+- [SC004](#sc004) - Combat in the Arena
+- [SC005](#sc005) - The Staged Death and Escape

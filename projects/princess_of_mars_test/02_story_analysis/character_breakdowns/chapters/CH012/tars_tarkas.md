@@ -1,17 +1,23 @@
-# tars_tarkas
+# Tars Tarkas
+**Role:** Ally / Warrior
 
-**Display Name:** Tars Tarkas  
-**Chapter Role:** Plaza figure, building occupant (first floor)  
-**Physical Presence:** Present in plaza, approaches John with unchanged demeanor  
-**Physical Description:** Unchanged demeanor (behavioral trait only)  
-**Costume/Silhouette:** Not described in source material  
-**Continuity Traits:** Occupies first floor of three-story building; second floor by Sola/charges  
+**Status:** Physically Present
 
-**Uncertainty Notes:** Minimal physical description available. Behavioral consistency noted but full appearance uncertain for render-facing generation.
+**Physical Description:** 
+A Tharkian warrior. Specific anatomical details are not provided in this text.
+
+**Costume/Silhouette:** 
+Tharkian warrior attire.
+
+**Prompt Phrases:** 
+Tharkian warrior, martial presence, respected leader.
+
+**Uncertainty Notes:** 
+Requires species-specific anatomical definition for Tharks.
 
 # Aliases
 
-None
+Tharkian warrior
 
 
 
@@ -23,7 +29,7 @@ tars_tarkas
 
 # Fully Identified
 
-true
+false
 
 # Manual Description Input Required
 
@@ -33,4 +39,4 @@ Yes
 
 # Manual Description Reason
 
-Only "unchanged demeanor" noted; insufficient physical details for reliable image generation
+Character is identified as a Tharkian warrior but lacks specific physical descriptions.

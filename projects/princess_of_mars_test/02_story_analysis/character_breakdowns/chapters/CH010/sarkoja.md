@@ -1,15 +1,20 @@
 # Sarkoja
 
-**Chapter Role:** Listed Character / Antagonist (potential)  
-**Physical Presence:** Uncertain - listed in character summary but not detailed in specific scene notes of this chapter.  
-**Physical Description:** No description available in this chapter's material.  
-**Costume/Silhouette:** No costume details provided.  
-**Continuity-Critical Traits:** Listed as character in chapter summary; potential antagonist role based on general project context.  
-**Render-Facing Prompt Noun Phrases:** listed character, potential antagonist, uncertain presence.
+**Role:** Guard / Council member
+
+**Status:** Physically Present
+
+**Physical Description:** Unknown.
+
+**Costume/Silhouette:** Unknown.
+
+**Prompt Phrases:** Martian, guard, council member.
+
+**Uncertainty Note:** No visual details provided in the text.
 
 # Aliases
 
--
+None
 
 
 

@@ -1,16 +1,12 @@
-# John Carter - Chapter CH013
-
-**Display Name:** John Carter  
-**Chapter Role:** Protagonist, warrior demonstrating thoat riding and preparing for march toward Thark  
-**Physical Presence:** Present (wearing silks and metal armor)  
-**Physical Description:** Silks and metal armor noted; no detailed facial features, height, or build information provided in chapter summary  
-**Costume/Silhouette:** Metal armor over silks; specific design details unknown  
-**Continuity-Critical Traits:** Demonstrates ability to ride thoats using kindness rather than violence; recipient of gold anklet from Lorquas Ptomel for enhancing military precision and celerity  
-**Uncertainty Notes:** Limited visual description in this chapter context. For consistent image generation across reruns, manual description required. Physical presence confirmed but detailed appearance not fully documented.
+# John Carter
+**Role:** Protagonist / Earthman turned Thark warrior.
+**Presence:** Physically present.
+**Description:** An Earthman trained in Martian warfare. He demonstrates unique psychological methods for training animals (thoats) using kindness and authority rather than brute force.
+**Traits:** Skilled warrior, empathetic trainer, romantic interest of Dejah Thoris.
 
 # Aliases
 
-None
+Earthman, Thark warrior
 
 
 
@@ -22,14 +18,14 @@ john_carter
 
 # Fully Identified
 
-false
+true
 
 # Manual Description Input Required
 
-Yes
+No
 
 
 
 # Manual Description Reason
 
-Insufficient stable physical description for dependable image generation; only "wearing silks and metal armor" noted in chapter summary
+None

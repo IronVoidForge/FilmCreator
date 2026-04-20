@@ -1,21 +1,5 @@
-# Chapter Summary: A Costly Recapture (Chapter XVII)
+The protagonist infiltrates the city of Thark to rescue Dejah Thoris from the clutches of the jeddak, Tal Hajus. After witnessing the depraved threats made against the Princess, the protagonist intervenes, knocking Tal Hajus unconscious and successfully leading Dejah Thoris and Sola out of the city via a rear window. The group escapes on thoats, heading northeast across a two-hundred-mile mossy waste toward Helium, traveling without food or water in a state of extreme exhaustion.
 
-## Scene 1: Rescue from Tal Hajus' Chamber
-**Plot:** Carter overhears Tal Hajus planning to torture Dejah Thoris for ten days. He interrupts the scene, killing Tal Hajus with a punch after raising his sword. He rescues Dejah Thoris and Sola from the chamber where they were held captive before the floor was cleared of warriors.
-**Visuals:** The inner chamber is immense and circular, thronged with chieftains and women. Tal Hajus squats on a raised platform with six limbs resembling a devil fish. Dejah Thoris stands erect in her beautiful figure, showing scorn and disgust.
+As they traverse the trackless waste, the party becomes lost and realizes they have no visible waterways. During their trek, the protagonist discovers that his faithful hound, Woola, has followed them. The journey takes a toll as one of their thoats collapses from exhaustion; the group continues with only one beast, forcing Dejah Thoris to ride while the others walk. Their progress is interrupted when they spot a large party of several hundred mounted Thark warriors emerging from a mountain pass. 
 
-## Scene 2: Escape from Thark City and Initial Journey
-**Plot:** Carter lowers Dejah Thoris and Sola to the ground using straps and leather from his trappings. They mount their thoats and ride out of the city of Thark towards Helium. They initially turn northeast across the mossy waste instead of circling back northwest.
-**Visuals:** The courtyard where they left their thoats is visible. The group rides through the hills to the south, then turns northeast. Dejah Thoris clings to Carter's shoulder, sobbing quietly.
-
-## Scene 3: Getting Lost and Woola's Arrival
-**Plot:** The party gets lost as no waterways are in sight. They travel all night and day, eventually collapsing from fatigue. Woola (Carter's faithful dog) follows them across the trackless waste to share their fate.
-**Visuals:** The landscape is a yellow, moonlit moss with no distant trees. The group lies down on the moss to sleep. Woola snuggles close to Carter, showing his love and loyalty.
-
-## Scene 4: First Thoat Collapse
-**Plot:** The first thoat begins to stumble and eventually pitches violently to the ground. Carter decides not to kill it immediately but leaves it behind after relieving it of its trappings. They continue with one beast, walking while Dejah Thoris rides.
-**Visuals:** The poor beast is in a pitiable condition, unable to rise. Trappings are flung down beside it. Sola and Carter walk while Dejah Thoris rides the remaining thoat.
-
-## Scene 5: Encounter with Thark Warriors (Tars Tarkas' Men)
-**Plot:** A party of mounted men is sighted in the hills. They appear to be Thark warriors sent to capture them. Carter sacrifices himself, using his rifle and jumping abilities to hold off the warriors while Dejah Thoris and Sola escape into the hills. He is eventually captured by the remaining warriors after fighting until he is overwhelmed.
-**Visuals:** Several hundred mounted warriors are discernible from a pass. A chieftain uses a fieldglass to spot them. Carter fires his rifle (even hundred rounds in magazine, another hundred in belt) while lying flat on the moss. He is eventually struck down by blows falling upon him in perfect torrents.
+After a chieftain spots them, the protagonist uses his Martian rifle to shoot the leader, creating a distraction. To ensure their survival, he commands Sola to take Dejah Thoris on the remaining thoat and flee toward the hills. Following an emotional embrace, the protagonist stays behind to hold off the advancing warriors. Despite continuous rifle fire, he eventually runs out of ammunition as nearly a thousand warriors charge him. While attempting to evade them with extraordinary leaps, he trips on a piece of quartz and is beaten into unconsciousness by the overwhelming Thark force.

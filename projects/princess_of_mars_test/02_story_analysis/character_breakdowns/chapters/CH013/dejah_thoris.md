@@ -1,16 +1,12 @@
-# Dejah Thoris - Chapter CH013
-
-**Display Name:** Dejah Thoris  
-**Chapter Role:** Jeddak daughter, love interest explaining radium powder bullet mechanics and warrior customs  
-**Physical Presence:** Referenced (red Martian attire, bare shoulders during conversation)  
-**Physical Description:** Red Martian attire with bare shoulders noted during conversation; no detailed facial features or build information provided in chapter summary  
-**Costume/Silhouette:** Red Martian attire; specific design details beyond color unknown  
-**Continuity-Critical Traits:** Explains exploding radium powder bullets used in daylight battles versus non-exploding ones at night; reveals warriors' jealousy toward her status as jeddak daughter and their hatred for their own fates; exchanges red Martian salute with John Carter; expresses mutual affection through physical intimacy (arm on shoulder)  
-**Uncertainty Notes:** Limited visual description in this chapter context. For consistent image generation across reruns, manual description required. Physical presence confirmed but detailed appearance not fully documented.
+# Dejah Thoris
+**Role:** Love Interest / Red Martian Princess.
+**Presence:** Physically present.
+**Description:** A noble Red Martian princess. She is knowledgeable about Martian technology (radium projectiles) and is currently facing social friction from older Thark women due to her lineage.
+**Traits:** Noble, intelligent, target of jealousy by Thark retinue.
 
 # Aliases
 
-None
+Red Martian Princess
 
 
 
@@ -22,14 +18,14 @@ dejah_thoris
 
 # Fully Identified
 
-false
+true
 
 # Manual Description Input Required
 
-Yes
+No
 
 
 
 # Manual Description Reason
 
-Only "red Martian attire, bare shoulders during conversation" noted; insufficient for dependable image generation without detailed visual continuity data
+None

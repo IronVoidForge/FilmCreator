@@ -1,39 +1,15 @@
-# dejah_thoris.md
+# Dejah Thoris
+**Role:** Motivation / Princess
 
-## Display Name
-Dejah Thoris
+**Status:** Referenced
 
-## Chapter Role
-Referenced character - marriage promise recipient
+**Description:** The Princess of Helium. Her engagement to Sab Than drives the actions of Kantos Kan and John Carter.
 
-## Physical Presence
-**UNCERTAIN** - Only referenced in chapter summary, not physically present. Appears as subject of conversation between Carter and Kantos Kan.
-
-## Physical Description Status
-**UNCERTAIN** - No physical description provided in this chapter summary. Requires manual documentation for image generation.
-
-## Known Actions & Traits
-- Promises her hand to Sab Than (mentioned by Carter)
-- Subject of alliance discussion between male characters
-
-## Continuity-Critical Notes
-- Helium princess figure
-- Marriage promise recipient
-- Central to alliance plotline
-- Zodanga/Helium connection point
-
-## Render-Facing Prompt Noun Phrases
-- Female protagonist figure
-- Princess/marriage candidate
-- Helium royalty representative
-- Alliance negotiation subject
-
-## Uncertainty Notes
-Physical appearance, costume details, and facial features are not documented in this chapter. Character is only referenced, not present. Manual description required for dependable image generation.
+**Uncertainty Note:** No physical description or visual traits are provided in this chapter.
 
 # Aliases
 
-None
+Princess of Helium
 
 
 
@@ -45,14 +21,14 @@ dejah_thoris
 
 # Fully Identified
 
-true
+false
 
 # Manual Description Input Required
 
-Yes
+No
 
 
 
 # Manual Description Reason
 
-Character only referenced in chapter summary. No physical description provided and not physically present. Requires manual documentation for image generation.
+None

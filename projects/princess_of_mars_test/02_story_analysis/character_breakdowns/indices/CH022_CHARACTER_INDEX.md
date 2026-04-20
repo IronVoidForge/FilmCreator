@@ -1,9 +1,8 @@
-# Chapter CH022 Character Index
+# Character Index
 
-| Name | Role | Presence | Description Status |
-|------|------|----------|-------------------|
-| John Carter | Chieftain / Protagonist | Present | Missing Physical Details |
-| Dejah Thoris | Princess / Fiancée | Present | Missing Physical Details |
-| Than Kosis | Courtier | Referenced/Present | Missing Physical Details |
-| Sab Than | Noble / Fiancé | Referenced | Missing Physical Details |
-| Sola | Guard / Companion | Present | Missing Physical Details |
+- [John Carter](#john_carter)
+- [Dejah Thoris](#dejah_thoris)
+- [Jeddak Than Kosis](#jeddak_than_kosis)
+- [Tal Hajus](#tal_hajus)
+- [Sab Than](#sab_than)
+- [Notan](#notan)

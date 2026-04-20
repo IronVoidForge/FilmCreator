@@ -1,17 +1,23 @@
-# dejah_thoris
+# Dejah Thoris
+**Role:** Captive Princess / Motivation
 
-**Display Name:** Dejah Thoris  
-**Chapter Role:** Referenced love interest, not physically present  
-**Physical Presence:** Not present in chapter (only referenced)  
-**Physical Description:** None available in source material; only "red girl" epithet noted  
-**Costume/Silhouette:** Not described in source material  
-**Continuity Traits:** John Carter realizes persecution is Sarkoja's work; quarters chosen to be near her apartment  
+**Status:** Referenced
 
-**Uncertainty Notes:** Character not physically present. Only referenced by name and epithet. Physical description unavailable for reliable image generation. Clarification needed on established visual details from prior story context.
+**Physical Description:** 
+Described as a "red girl" and a Martian princess.
+
+**Costume/Silhouette:** 
+Unknown (currently captive).
+
+**Prompt Phrases:** 
+Red-skinned female, Martian princess, captive.
+
+**Uncertainty Notes:** 
+"Red girl" likely refers to skin tone or hair; requires clarification on specific shade and facial features.
 
 # Aliases
 
-red girl
+Red girl, Martian princess
 
 
 
@@ -27,10 +33,10 @@ false
 
 # Manual Description Input Required
 
-No
+Yes
 
 
 
 # Manual Description Reason
 
-None
+Described as a "red girl" and "princess," but lacks specific facial features or detailed costume.

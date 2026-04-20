@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-set "FILMCREATOR_ROOT=C:\FilmCreator"
+call "%~dp0..\..\_shared\resolve_filmcreator_root.bat" "%~dp0" || exit /b 1
 set "COMFY_URL=http://127.0.0.1:8188/system_stats"
 
 if not exist "%FILMCREATOR_ROOT%" (

@@ -1,37 +1,23 @@
-# Character File: Sola - Chapter VII
+# Sola
+**Role:** Guide and Mentor
 
-## Display Name
-Sola
+**Status:** Physically Present
 
-## Chapter Role
-Narrator's companion
+**Physical Description:** 
+A female Martian. She acts as a guide to the protagonist and serves as a foster mother to a newly hatched male.
 
-## Physical Presence Status
-Referenced (not physically present in scene descriptions)
+**Costume/Silhouette:** 
+Unknown.
 
-## Physical Description
-**Status:** Insufficient information from chapter summary. No physical description, appearance details, or visual characteristics provided in the source material.
+**Prompting Phrases:** 
+Martian female, caregiver, mentor, telepathic.
 
-## Costume and Silhouette
-**Status:** Unknown. Chapter summary does not describe clothing, accessories, or distinctive silhouette features.
-
-## Continuity-Critical Traits
-- Companion to narrator throughout child-raising ritual sequence
-- Present during incubator hatching ceremony
-- Cares for narrator and young Martian prize during training progression
-- Community size approximately 30k souls
-
-## Render-Facing Prompt Notes
-**Required Manual Description:** This character requires complete manual description before image generation can proceed. Current chapter summary provides only narrative role without visual identifiers.
-
-**Uncertainty Note:** Cannot determine physical appearance, clothing style, or distinctive features from provided material. Manual description must include: height, build, hair color and style, eye color, facial features, clothing type and colors, any accessories or distinguishing marks.
-
-## Chapter Context
-Sola appears in the chapter as the narrator's companion during the child-raising sequence on Mars. She is referenced throughout the incubator hatching ceremony, gauntlet formation, and training progression scenes but lacks sufficient visual description for reliable rendering.
+**Uncertainty Notes:** 
+Specific Martian anatomy or clothing is not detailed in this chapter.
 
 # Aliases
 
-narrator's companion
+Guide, Foster Mother
 
 
 

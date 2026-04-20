@@ -5,52 +5,42 @@
 - CH006_SC002
 - CH006_SC003
 - CH006_SC004
-- CH006_SC005
-- CH006_SC006
 
 ## Known Canonical Characters
-- ape_like_creature
-- bull_ape
-- bull_ape_mate
-- carter_human
-- chieftain_martian
-- dead_friend
-- hatching_creature_ch003
+- ape_creature_1
+- ape_creature_2
+- colossal_creature
+- deceased_friend
+- james_k_powell
 - john_carter
-- mars
-- martian_leader_ch003
-- martian_soldier_ch003
-- powell
+- martian_leader
+- martian_mounts
 - protagonist
 - sola
 - tars_tarkas
-- warrior_martian
-- watch_dog
+- the_chieftain
+- watch_thing
+- watchdog
 
 ## Unresolved / Provisional Characters
 - narrator
-- narrator_ch003
 
 ## Known Canonical Environments
-- apache_tepees
-- arizona_exterior_night
-- arizona_hills
-- building_overlooking_valley
-- cave_chamber
-- cave_interior
-- ceremonial_grounds
-- chieftain_palace_interior
-- circular_basin_incubator
-- doorway_entrance
-- heavens_above_landscape
-- interior_combat_space
-- martian_city_street
-- martian_hills_landscape
-- martian_ruined_city_exterior
-- plaza_destination
-- room_interior
-- sola_sleeping_quarters
-- window_structure
+- ancient_martian_city
+- apache_plateau_camp
+- arizona_mountain_cave
+- arizona_mountain_quartz_vein
+- captive_chamber_murals
+- chieftain_audience_chamber
+- circular_moss_basin
+- cliffside_cave_system
+- deserted_martian_cityscape
+- martian_distant_hills
+- martian_interior_chamber
+- martian_plaza
+- overlooking_building_interior
+- rocky_gorge_nightscape
+- solas_sleeping_chamber
 
 ## Registry Artifacts
 - projects/princess_of_mars_test/02_story_analysis/world/CHARACTER_REGISTRY.json

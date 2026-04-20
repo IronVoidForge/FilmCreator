@@ -1,6 +1,4 @@
-SC001 | The Bull Ape Confrontation
-SC002 | The Battle and Protagonist's Intervention
-SC003 | Arrival of Tars Tarkas and Warriors
-SC004 | Martians Witness the Victory
-SC005 | Saving the Beast from Execution
-SC006 | Return to the Plaza
+- [SC001](#sc001) - The Ape Ambush and the Watch-thing's Intervention
+- [SC002](#sc002) - The Protagonist's Counter-strike and the Second Duel
+- [SC003](#sc003) - The Arrival of the Martians and Social Recognition
+- [SC004](#sc004) - Defending the Watch-thing and Departure

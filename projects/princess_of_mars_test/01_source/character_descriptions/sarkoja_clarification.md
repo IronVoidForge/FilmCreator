@@ -4,10 +4,10 @@
 sarkoja
 
 # Why This Needs Clarification
-Character identified only by name "Sarkoja" with minimal physical attributes. Attempted stabbing action present but insufficient for complete character rendering.
+Physical appearance and specific Thark sub-type unknown.
 
 # Question
-What are Sarkoja's specific physical features (height, build, facial characteristics)? What costume details beyond general warrior attire? Any distinctive markings or accessories?
+What is Sarkoja's physical appearance and role within the palace?
 
 # Guidance
 - answer briefly and concretely

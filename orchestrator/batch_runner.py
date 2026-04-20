@@ -20,6 +20,7 @@ from .style_profiles import (
     style_profiles_for_batch,
     uses_review_batches,
 )
+from .features import batch_runner as _feature_batch_runner
 
 
 STAGE_PROMPT_SUBDIR = {
@@ -509,3 +510,9 @@ def _is_image_reference(value: str | None) -> bool:
     if not value:
         return False
     return Path(value).suffix.lower() in IMAGE_SUFFIXES
+
+
+BatchPlanSummary = _feature_batch_runner.BatchPlanSummary
+BatchRunSummary = _feature_batch_runner.BatchRunSummary
+plan_prompt_batch = _feature_batch_runner.plan_prompt_batch
+run_prompt_batch = _feature_batch_runner.run_prompt_batch

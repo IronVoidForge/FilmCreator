@@ -1,6 +1,7 @@
-# Chapter 18 Character Index
+# Character Index - Chapter 018
 
-- **Carter**: Protagonist, human prisoner of Warhoon.
-- **Dak Kova**: Martian warrior, Jeddak's lieutenant, scarred.
-- **Bar Comas**: Martian warrior, Jeddak of Warhoon hordes, scarred.
-- **Ancient Female**: Unnamed healer, tends wounds.
+- [Protagonist](#protagonist)
+- [Dak Kova](#dak-kova)
+- [Bar Comas](#bar-comas)
+- [The Female Healer](#the-female-healer)
+- [Warhoon Warriors](#warhoon-warriors)

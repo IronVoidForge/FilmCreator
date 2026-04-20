@@ -7,13 +7,21 @@ import unicodedata
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
+from types import SimpleNamespace
 
 from .authoring import PromptWriteSummary, write_prompts
-from .common import ensure_dir, repo_relative, validate_clip_id, validate_scene_id
+from .core.paths import ensure_dir, repo_relative
+from .core.validation import validate_clip_id, validate_scene_id
 from .lmstudio_client import LMStudioClient, LMStudioError
 from .prompt_package import PromptPackage, write_prompt_package
 from .scaffold import create_clip, create_project, create_scene
 from .settings import load_runtime_settings
+from .features.authoring import shared_prompts as authoring_prompts
+from .features.authoring import packet_parser as authoring_packets
+from .book_librarian import chapter_text, get_paragraph_window, search_chapter_context
+from .character_match import find_character_match_candidates
+from .environment_match import EnvironmentMatchCandidate, find_environment_match_candidates
+from .features.world.global_helpers import is_generic_character_label
 from .world_registry import (
     character_registry_path,
     environment_registry_path,
@@ -61,14 +69,52 @@ class CharacterClarificationRequest:
     source_path: str
     reason: str
     question: str
+    candidate_summaries: tuple[str, ...] = ()
 
     def to_dict(self) -> dict[str, str]:
-        return {
+        payload = {
             "asset_id": self.asset_id,
             "source_path": self.source_path,
             "reason": self.reason,
             "question": self.question,
         }
+        if self.candidate_summaries:
+            payload["candidate_summaries"] = list(self.candidate_summaries)
+        return payload
+
+
+@dataclass(frozen=True)
+class CharacterClarificationDetails:
+    reason: str
+    question: str
+    candidate_summaries: tuple[str, ...] = ()
+
+
+@dataclass(frozen=True)
+class EnvironmentClarificationRequest:
+    asset_id: str
+    source_path: str
+    reason: str
+    question: str
+    candidate_summaries: tuple[str, ...] = ()
+
+    def to_dict(self) -> dict[str, object]:
+        payload: dict[str, object] = {
+            "asset_id": self.asset_id,
+            "source_path": self.source_path,
+            "reason": self.reason,
+            "question": self.question,
+        }
+        if self.candidate_summaries:
+            payload["candidate_summaries"] = list(self.candidate_summaries)
+        return payload
+
+
+@dataclass(frozen=True)
+class EnvironmentClarificationDetails:
+    reason: str
+    question: str
+    candidate_summaries: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -295,16 +341,16 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
     written_files: list[str] = []
     manual_requests: list[ManualCharacterDescriptionRequest] = []
     clarification_requests: list[CharacterClarificationRequest] = []
+    environment_clarification_requests: list[EnvironmentClarificationRequest] = []
     warnings: list[str] = []
 
-    summary_packet = _call_packet_task(
+    summary_packet, summary_warnings = _call_chapter_summary_with_chunked_fallback(
         client=client,
         project_dir=project_dir,
-        task_name="chapter_summary",
-        system_prompt=_analysis_system_prompt(),
-        user_prompt=_chapter_summary_user_prompt(project_slug, chapter_source),
-        degraded_user_prompt=_chapter_summary_user_prompt(project_slug, chapter_source, degraded=True),
+        project_slug=project_slug,
+        chapter_source=chapter_source,
     )
+    warnings.extend(summary_warnings)
     project_summary_markdown = _require_packet_section(summary_packet, "project_summary_markdown")
     chapter_summary_markdown = _require_packet_section(summary_packet, "chapter_summary_markdown")
 
@@ -314,23 +360,19 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
     _write_text(chapter_summary_path, chapter_summary_markdown)
     written_files.extend([repo_relative(project_summary_path), repo_relative(chapter_summary_path)])
 
-    character_packet = _call_packet_task(
+    character_packet, character_fallback_warnings = _call_record_extraction_with_chunked_fallback(
         client=client,
         project_dir=project_dir,
+        project_slug=project_slug,
+        chapter_source=chapter_source,
+        chapter_summary_markdown=chapter_summary_markdown,
         task_name="character_extraction",
-        system_prompt=_analysis_system_prompt(),
-        user_prompt=_character_extraction_user_prompt(
-            project_slug=project_slug,
-            chapter_source=chapter_source,
-            chapter_summary=chapter_summary_markdown,
-        ),
-        degraded_user_prompt=_character_extraction_user_prompt(
-            project_slug=project_slug,
-            chapter_source=chapter_source,
-            chapter_summary=chapter_summary_markdown,
-            degraded=True,
-        ),
+        record_type="character",
+        index_section_name="character_index_markdown",
+        prompt_builder=authoring_prompts.character_extraction_user_prompt,
+        degraded_prompt_builder=authoring_prompts.character_extraction_user_prompt,
     )
+    warnings.extend(character_fallback_warnings)
     character_index_markdown = _require_packet_section(character_packet, "character_index_markdown")
     character_index_path = _chapter_character_index_path(project_dir=project_dir, chapter_id=chapter_source.chapter_id)
     _write_text(character_index_path, character_index_markdown)
@@ -340,11 +382,17 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
 
     canonical_lookup = _existing_character_lookup(project_dir=project_dir)
     active_manual_description_requests: dict[str, str] = {}
-    active_clarification_requests: dict[str, tuple[str, str]] = {}
+    active_clarification_requests: dict[str, CharacterClarificationRequest] = {}
     usable_character_count = 0
     character_breakdown_dir = _chapter_character_breakdown_dir(project_dir=project_dir, chapter_id=chapter_source.chapter_id)
+    try:
+        character_records = _require_packet_records(character_packet, record_type="character")
+    except LMStudioError:
+        character_records = []
+    if not character_records:
+        character_records = _extract_character_records_from_index_markdown(character_index_markdown)
 
-    for index, raw_character in enumerate(_require_packet_records(character_packet, record_type="character"), start=1):
+    for index, raw_character in enumerate(character_records, start=1):
         try:
             asset_id = _normalize_asset_id(_require_record_field(raw_character, "asset_id"), fallback_prefix="character")
             markdown = _require_record_section(raw_character, "markdown")
@@ -368,6 +416,7 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
             continue
 
         resolved_asset_id, inferred_clarification = _resolve_character_identity(
+            project_slug=project_slug,
             asset_id=asset_id,
             canonical_character_id=canonical_character_id,
             aliases=aliases,
@@ -378,8 +427,8 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
 
         if inferred_clarification is not None and not clarification_required:
             clarification_required = True
-            clarification_reason = inferred_clarification[0]
-            clarification_question = inferred_clarification[1]
+            clarification_reason = inferred_clarification.reason
+            clarification_question = inferred_clarification.question
             warnings.append(f"Auto-generated clarification request for character '{resolved_asset_id}'.")
 
         if clarification_required:
@@ -407,8 +456,15 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
 
         if clarification_required:
             clarification_path = _character_clarification_path(project_dir=project_dir, asset_id=resolved_asset_id)
-            active_clarification_requests[resolved_asset_id] = (clarification_reason, clarification_question)
-            clarification_requests.append(CharacterClarificationRequest(asset_id=resolved_asset_id, source_path=repo_relative(clarification_path), reason=clarification_reason, question=clarification_question))
+            clarification_request = CharacterClarificationRequest(
+                asset_id=resolved_asset_id,
+                source_path=repo_relative(clarification_path),
+                reason=clarification_reason,
+                question=clarification_question,
+                candidate_summaries=inferred_clarification.candidate_summaries if inferred_clarification is not None else (),
+            )
+            active_clarification_requests[resolved_asset_id] = clarification_request
+            clarification_requests.append(clarification_request)
         usable_character_count += 1
 
     if usable_character_count == 0:
@@ -419,23 +475,19 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
     written_files.extend(repo_relative(path) for path in manual_placeholder_paths)
     written_files.extend(repo_relative(path) for path in clarification_placeholder_paths)
 
-    environment_packet = _call_packet_task(
+    environment_packet, environment_fallback_warnings = _call_record_extraction_with_chunked_fallback(
         client=client,
         project_dir=project_dir,
+        project_slug=project_slug,
+        chapter_source=chapter_source,
+        chapter_summary_markdown=chapter_summary_markdown,
         task_name="environment_extraction",
-        system_prompt=_analysis_system_prompt(),
-        user_prompt=_environment_extraction_user_prompt(
-            project_slug=project_slug,
-            chapter_source=chapter_source,
-            chapter_summary=chapter_summary_markdown,
-        ),
-        degraded_user_prompt=_environment_extraction_user_prompt(
-            project_slug=project_slug,
-            chapter_source=chapter_source,
-            chapter_summary=chapter_summary_markdown,
-            degraded=True,
-        ),
+        record_type="environment",
+        index_section_name="environment_index_markdown",
+        prompt_builder=authoring_prompts.environment_extraction_user_prompt,
+        degraded_prompt_builder=authoring_prompts.environment_extraction_user_prompt,
     )
+    warnings.extend(environment_fallback_warnings)
     environment_index_markdown = _require_packet_section(environment_packet, "environment_index_markdown")
     environment_index_path = _chapter_environment_index_path(project_dir=project_dir, chapter_id=chapter_source.chapter_id)
     _write_text(environment_index_path, environment_index_markdown)
@@ -444,25 +496,60 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
     written_files.append(repo_relative(_legacy_environment_index_path(project_dir=project_dir)))
 
     environment_breakdown_dir = _chapter_environment_breakdown_dir(project_dir=project_dir, chapter_id=chapter_source.chapter_id)
-    for raw_environment in _require_packet_records(environment_packet, record_type="environment"):
+    active_environment_clarification_requests: dict[str, EnvironmentClarificationRequest] = {}
+    try:
+        environment_records = _require_packet_records(environment_packet, record_type="environment")
+    except LMStudioError:
+        environment_records = []
+    if not environment_records:
+        environment_records = _extract_environment_records_from_index_markdown(environment_index_markdown)
+
+    for raw_environment in environment_records:
         asset_id = _normalize_asset_id(_require_record_field(raw_environment, "asset_id"), fallback_prefix="environment")
         filename = f"{asset_id}.md"
         markdown = _require_record_section(raw_environment, "markdown")
+        environment_candidates = find_environment_match_candidates(
+            project_slug=project_slug,
+            asset_id=asset_id,
+            markdown=markdown,
+            top_n=3,
+        )
+        environment_clarification = _resolve_environment_clarification(
+            asset_id=asset_id,
+            candidates=environment_candidates,
+        )
+        if environment_clarification is not None:
+            clarification_path = _environment_clarification_path(project_dir=project_dir, asset_id=asset_id)
+            environment_clarification_request = EnvironmentClarificationRequest(
+                asset_id=asset_id,
+                source_path=repo_relative(clarification_path),
+                reason=environment_clarification.reason,
+                question=environment_clarification.question,
+                candidate_summaries=environment_clarification.candidate_summaries,
+            )
+            active_environment_clarification_requests[asset_id] = environment_clarification_request
+            environment_clarification_requests.append(environment_clarification_request)
         environment_path = environment_breakdown_dir / filename
         _write_text(environment_path, markdown)
         written_files.append(repo_relative(environment_path))
+
+    environment_clarification_placeholder_paths = _reconcile_environment_clarification_placeholders(project_dir=project_dir, active_requests=active_environment_clarification_requests)
+    written_files.extend(repo_relative(path) for path in environment_clarification_placeholder_paths)
+
+    _prune_markdown_dir(project_dir / "02_story_analysis" / "character_breakdowns", keep_names={"CHARACTER_INDEX.md", "README.md"})
+    _prune_markdown_dir(project_dir / "02_story_analysis" / "environment_breakdowns", keep_names={"ENVIRONMENT_INDEX.md", "README.md"})
 
     scene_packet = _call_packet_task(
         client=client,
         project_dir=project_dir,
         task_name="scene_decomposition",
-        system_prompt=_analysis_system_prompt(),
-        user_prompt=_scene_decomposition_user_prompt(
+        system_prompt=authoring_prompts.analysis_system_prompt(),
+        user_prompt=authoring_prompts.scene_decomposition_user_prompt(
             project_slug=project_slug,
             chapter_id=chapter_source.chapter_id,
             chapter_summary=chapter_summary_markdown,
         ),
-        degraded_user_prompt=_scene_decomposition_user_prompt(
+        degraded_user_prompt=authoring_prompts.scene_decomposition_user_prompt(
             project_slug=project_slug,
             chapter_id=chapter_source.chapter_id,
             chapter_summary=chapter_summary_markdown,
@@ -598,9 +685,9 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
         client=client,
         project_dir=project_dir,
         task_name="scene_beats",
-        system_prompt=_analysis_system_prompt(),
-        user_prompt=_scene_beats_user_prompt(project_slug=project_slug, scene_id=scene_id, scene_markdown=_scene_brief_markdown(scene_path)),
-        degraded_user_prompt=_scene_beats_user_prompt(project_slug=project_slug, scene_id=scene_id, scene_markdown=_scene_brief_markdown(scene_path), degraded=True),
+        system_prompt=authoring_prompts.analysis_system_prompt(),
+        user_prompt=authoring_prompts.scene_beats_user_prompt(project_slug=project_slug, scene_id=scene_id, scene_markdown=authoring_prompts.scene_brief_markdown(scene_path)),
+        degraded_user_prompt=authoring_prompts.scene_beats_user_prompt(project_slug=project_slug, scene_id=scene_id, scene_markdown=authoring_prompts.scene_brief_markdown(scene_path), degraded=True),
     )
     updated_scene_markdown = _require_packet_section(beat_packet, "updated_scene_markdown")
     beat_index_markdown = _require_packet_section(beat_packet, "beat_index_markdown")
@@ -622,7 +709,7 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
     clip_dir = project_dir / "02_story_analysis" / "clip_plans" / scene_id
     ensure_dir(clip_dir)
     _prune_markdown_dir(clip_dir, keep_names=set())
-    scene_markdown_for_validation = _scene_brief_markdown(scene_path)
+    scene_markdown_for_validation = authoring_prompts.scene_brief_markdown(scene_path)
 
     clip_attempt_specs = [
         {"label": "normal", "scene_markdown": scene_markdown_for_validation, "degraded": False},
@@ -642,9 +729,9 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
             client=client,
             project_dir=project_dir,
             task_name="clip_planning",
-            system_prompt=_analysis_system_prompt(),
-            user_prompt=_clip_planning_user_prompt(project_slug=project_slug, scene_id=scene_id, scene_markdown=attempt["scene_markdown"], beat_index_path=beat_index_path, degraded=attempt["degraded"]),
-            degraded_user_prompt=_clip_planning_user_prompt(project_slug=project_slug, scene_id=scene_id, scene_markdown=attempt["scene_markdown"], beat_index_path=beat_index_path, degraded=True),
+            system_prompt=authoring_prompts.analysis_system_prompt(),
+            user_prompt=authoring_prompts.clip_planning_user_prompt(project_slug=project_slug, scene_id=scene_id, scene_markdown=attempt["scene_markdown"], beat_index_path=beat_index_path, degraded=attempt["degraded"]),
+            degraded_user_prompt=authoring_prompts.clip_planning_user_prompt(project_slug=project_slug, scene_id=scene_id, scene_markdown=attempt["scene_markdown"], beat_index_path=beat_index_path, degraded=True),
         )
         clip_roster_markdown = _require_packet_section(clip_packet, "clip_roster_markdown")
         clip_roster_path = clip_dir / f"{scene_id}_clip_roster.md"
@@ -714,7 +801,19 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
     warnings.extend(accepted_clip_warnings)
     clip_ids = accepted_clip_ids
 
-    _print_saved_artifacts(f"[authoring] Saved scene planning artifacts for {scene_id}:", [repo_relative(scene_path), repo_relative(beat_index_path), repo_relative(clip_dir / f"{scene_id}_clip_roster.md")])
+    legacy_scene_path = project_dir / "02_story_analysis" / "scene_breakdowns" / f"{scene_id}.md"
+    if legacy_scene_path != scene_path:
+        _write_text(legacy_scene_path, updated_scene_markdown)
+        written_files.append(repo_relative(legacy_scene_path))
+
+    stale_scene_path = project_dir / "02_story_analysis" / "scene_breakdowns" / f"{scene_id}_airship_attack_and_captive_reveal.md"
+    if stale_scene_path.exists():
+        stale_scene_path.unlink()
+
+    _print_saved_artifacts(
+        f"[authoring] Saved scene planning artifacts for {scene_id}:",
+        [repo_relative(scene_path), repo_relative(beat_index_path), repo_relative(clip_dir / f"{scene_id}_clip_roster.md")],
+    )
     print(f"[authoring] Planned {len(clip_ids)} clips for {scene_id}: {', '.join(clip_ids)}")
     elapsed = time.perf_counter() - started
     print(f"[authoring] Finished scene planning for {scene_id} in {elapsed:.1f}s")
@@ -772,9 +871,9 @@ def write_shared_prompts(*, project_slug: str) -> SharedPromptSummary:
                 client=client,
                 project_dir=project_dir,
                 task_name="character_shared_prompts",
-                system_prompt=_analysis_system_prompt(),
-                user_prompt=_character_shared_prompt_user_prompt(project_slug=project_slug, asset_id=asset_id, character_breakdown_path=character_breakdown_path, manual_description_path=manual_description_path),
-                degraded_user_prompt=_character_shared_prompt_user_prompt(project_slug=project_slug, asset_id=asset_id, character_breakdown_path=character_breakdown_path, manual_description_path=manual_description_path, degraded=True),
+                system_prompt=authoring_prompts.analysis_system_prompt(),
+                user_prompt=authoring_prompts.character_shared_prompt_user_prompt(project_slug=project_slug, asset_id=asset_id, character_breakdown_path=character_breakdown_path, manual_description_path=manual_description_path),
+                degraded_user_prompt=authoring_prompts.character_shared_prompt_user_prompt(project_slug=project_slug, asset_id=asset_id, character_breakdown_path=character_breakdown_path, manual_description_path=manual_description_path, degraded=True),
             )
             raw_prompt = _require_single_packet_record(character_packet, record_type="character_prompt")
             record_asset_id = _normalize_asset_id(_require_record_field(raw_prompt, "asset_id"), fallback_prefix="character")
@@ -784,6 +883,9 @@ def write_shared_prompts(*, project_slug: str) -> SharedPromptSummary:
             warnings.extend(f"{asset_id}: {warning}" for warning in draft.warnings)
             prompt_path = project_dir / "03_prompt_packages" / "characters" / asset_id / f"{asset_id}_ref_prompt.md"
             sources = [repo_relative(character_index_path), repo_relative(character_breakdown_path)]
+            legacy_character_source = project_dir / "02_story_analysis" / "character_breakdowns" / f"{asset_id}.md"
+            if legacy_character_source != character_breakdown_path:
+                sources.append(repo_relative(legacy_character_source))
             if manual_description_path.exists():
                 sources.append(repo_relative(manual_description_path))
             write_prompt_package(prompt_path, _build_prompt_package(path=prompt_path, title=f"{asset_id} Character Reference Prompt", prompt_id=f"{asset_id}_ref_prompt", workflow_type="still.t2i.klein.distilled", draft=draft, sources=sources))
@@ -799,9 +901,9 @@ def write_shared_prompts(*, project_slug: str) -> SharedPromptSummary:
                 client=client,
                 project_dir=project_dir,
                 task_name="environment_shared_prompts",
-                system_prompt=_analysis_system_prompt(),
-                user_prompt=_environment_shared_prompt_user_prompt(project_slug=project_slug, asset_id=asset_id, environment_breakdown_path=environment_breakdown_path),
-                degraded_user_prompt=_environment_shared_prompt_user_prompt(project_slug=project_slug, asset_id=asset_id, environment_breakdown_path=environment_breakdown_path, degraded=True),
+                system_prompt=authoring_prompts.analysis_system_prompt(),
+                user_prompt=authoring_prompts.environment_shared_prompt_user_prompt(project_slug=project_slug, asset_id=asset_id, environment_breakdown_path=environment_breakdown_path),
+                degraded_user_prompt=authoring_prompts.environment_shared_prompt_user_prompt(project_slug=project_slug, asset_id=asset_id, environment_breakdown_path=environment_breakdown_path, degraded=True),
             )
             raw_prompt = _require_single_packet_record(environment_packet, record_type="environment_prompt")
             record_asset_id = _normalize_asset_id(_require_record_field(raw_prompt, "asset_id"), fallback_prefix="environment")
@@ -811,6 +913,9 @@ def write_shared_prompts(*, project_slug: str) -> SharedPromptSummary:
             warnings.extend(f"{asset_id}: {warning}" for warning in draft.warnings)
             prompt_path = project_dir / "03_prompt_packages" / "environments" / asset_id / f"{asset_id}_ref_prompt.md"
             sources = [repo_relative(environment_index_path), repo_relative(environment_breakdown_path)]
+            legacy_environment_source = project_dir / "02_story_analysis" / "environment_breakdowns" / f"{asset_id}.md"
+            if legacy_environment_source != environment_breakdown_path:
+                sources.append(repo_relative(legacy_environment_source))
             write_prompt_package(prompt_path, _build_prompt_package(path=prompt_path, title=f"{asset_id} Environment Reference Prompt", prompt_id=f"{asset_id}_ref_prompt", workflow_type="still.t2i.klein.distilled", draft=draft, sources=sources))
             written_files.append(repo_relative(prompt_path))
         except LMStudioError as exc:
@@ -1036,7 +1141,7 @@ def _print_saved_artifacts(header: str, paths: list[str]) -> None:
         print(f"  - {path}")
 
 
-def _resolve_character_identity(*, asset_id: str, canonical_character_id: str, aliases: str, markdown: str, canonical_lookup: dict[str, str]) -> tuple[str, tuple[str, str] | None]:
+def _resolve_character_identity(*, project_slug: str, asset_id: str, canonical_character_id: str, aliases: str, markdown: str, canonical_lookup: dict[str, str]) -> tuple[str, CharacterClarificationDetails | None]:
     candidates = [asset_id]
     if canonical_character_id:
         candidates.append(_normalize_alias(canonical_character_id))
@@ -1047,16 +1152,72 @@ def _resolve_character_identity(*, asset_id: str, canonical_character_id: str, a
     for candidate in candidates:
         if candidate in canonical_lookup:
             return canonical_lookup[candidate], None
+    scored_candidates = find_character_match_candidates(
+        project_slug=project_slug,
+        asset_id=asset_id,
+        aliases=aliases,
+        markdown=markdown,
+        top_n=3,
+    )
+    if scored_candidates:
+        top_candidate = scored_candidates[0]
+        second_score = scored_candidates[1].score if len(scored_candidates) > 1 else 0
+        strong_unique_match = top_candidate.score >= 70 and top_candidate.score - second_score >= 10
+        if strong_unique_match and not is_generic_character_label(top_candidate.canonical_id):
+            return top_candidate.canonical_id, None
+        if top_candidate.score >= 40 or second_score:
+            candidate_lines = []
+            for candidate in scored_candidates[:3]:
+                chapter_texts = ", ".join(candidate.source_chapters[:2]) or "no source chapter"
+                snippet = candidate.context_snippets[0] if candidate.context_snippets else ""
+                snippet_text = f" Example context: {snippet}" if snippet else ""
+                candidate_lines.append(
+                    f"- {candidate.canonical_id} (score {candidate.score}; chapters: {chapter_texts}; aliases: {', '.join(candidate.aliases[:4]) or '-'}){snippet_text}"
+                )
+            reason = "Potential existing identity matches detected:\n" + "\n".join(candidate_lines)
+            question = (
+                "This character may match one of the existing canonical identities above. "
+                "Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, "
+                "or keep this as a new canonical character?"
+            )
+            return asset_id, CharacterClarificationDetails(reason=reason, question=question, candidate_summaries=tuple(candidate_lines))
     generic_labels = {"narrator", "captain", "captive", "guard", "woman", "man", "girl", "boy", "hound"}
     if any(label in asset_id for label in generic_labels):
         question = "This character is named or role-labeled but not fully identified. Can you find a stronger canonical identity from another chapter, or should FilmCreator keep this as a scene-local provisional character?"
-        return asset_id, ("The extracted character id appears generic or role-based rather than clearly canonical.", question)
+        return asset_id, CharacterClarificationDetails(reason="The extracted character id appears generic or role-based rather than clearly canonical.", question=question)
     sections = _split_sections(markdown)
     description_blob = "\n".join(sections.values()).lower()
     if "no physical description" in description_blob or "uncertain" in description_blob:
         question = "This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?"
-        return asset_id, ("The character is not fully identified from this chapter alone.", question)
+        return asset_id, CharacterClarificationDetails(reason="The character is not fully identified from this chapter alone.", question=question)
     return asset_id, None
+
+
+def _resolve_environment_clarification(*, asset_id: str, candidates: list[EnvironmentMatchCandidate]) -> EnvironmentClarificationDetails | None:
+    if not candidates:
+        return None
+    top_candidate = candidates[0]
+    second_score = candidates[1].score if len(candidates) > 1 else 0
+    strong_unique_match = top_candidate.score >= 70 and top_candidate.score - second_score >= 10
+    if strong_unique_match:
+        return None
+    if top_candidate.score < 40 and not second_score:
+        return None
+    candidate_lines = []
+    for candidate in candidates[:3]:
+        chapter_texts = ", ".join(candidate.source_chapters[:2]) or "no source chapter"
+        snippet = candidate.context_snippets[0] if candidate.context_snippets else ""
+        snippet_text = f" Example context: {snippet}" if snippet else ""
+        candidate_lines.append(
+            f"- {candidate.canonical_id} (score {candidate.score}; chapters: {chapter_texts}; aliases: {', '.join(candidate.aliases[:4]) or '-'}){snippet_text}"
+        )
+    reason = "Potential existing environment matches detected:\n" + "\n".join(candidate_lines)
+    question = (
+        "This environment may match one of the existing canonical settings above. "
+        "Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, "
+        "or keep this as a new canonical environment?"
+    )
+    return EnvironmentClarificationDetails(reason=reason, question=question, candidate_summaries=tuple(candidate_lines))
 
 
 def _extract_scene_decomposition_outputs(
@@ -1264,7 +1425,7 @@ def _call_packet_task(*, client: LMStudioClient, project_dir: Path, task_name: s
     for kind, active_user_prompt in [("normal", user_prompt), ("same_prompt_retry", user_prompt), ("degraded_retry", degraded_user_prompt)]:
         if kind != "normal":
             print(f"[authoring] Task {task_name} retrying with {kind}...")
-        result = client.chat_completion_result(system_prompt=system_prompt, user_prompt=active_user_prompt, temperature=0.2)
+        result = _chat_completion_result(client=client, system_prompt=system_prompt, user_prompt=active_user_prompt, temperature=0.2)
         log_path = _write_authoring_exchange_log(project_dir=project_dir, task_name=task_name, system_prompt=system_prompt, user_prompt=active_user_prompt, response=result.text)
         if result.is_success:
             try:
@@ -1278,6 +1439,918 @@ def _call_packet_task(*, client: LMStudioClient, project_dir: Path, task_name: s
         attempts.append(_TaskAttempt(kind=kind, status=result.status, log_path=repo_relative(log_path), message=result.error_message or "Unspecified LM Studio authoring failure."))
     failure_path = _write_authoring_failure_artifact(project_dir=project_dir, task_name=task_name, asset_id=None, reason="; ".join(f"{attempt.kind}:{attempt.status}:{attempt.message}" for attempt in attempts))
     raise LMStudioError(f"Authoring task '{task_name}' failed after retries. Failure artifact: {repo_relative(failure_path)}")
+
+
+def _call_record_extraction_with_chunked_fallback(
+    *,
+    client: LMStudioClient,
+    project_dir: Path,
+    project_slug: str,
+    chapter_source: _ChapterSource,
+    chapter_summary_markdown: str,
+    task_name: str,
+    record_type: str,
+    index_section_name: str,
+    prompt_builder,
+    degraded_prompt_builder,
+) -> tuple[_PacketDocument, list[str]]:
+    warnings: list[str] = []
+    full_packet: _PacketDocument | None = None
+    try:
+        full_packet = _call_packet_task(
+            client=client,
+            project_dir=project_dir,
+            task_name=task_name,
+            system_prompt=authoring_prompts.analysis_system_prompt(),
+            user_prompt=prompt_builder(
+                project_slug=project_slug,
+                chapter_source=chapter_source,
+                chapter_summary=chapter_summary_markdown,
+            ),
+            degraded_user_prompt=degraded_prompt_builder(
+                project_slug=project_slug,
+                chapter_source=chapter_source,
+                chapter_summary=chapter_summary_markdown,
+                degraded=True,
+            ),
+        )
+    except LMStudioError as exc:
+        warnings.append(f"{task_name} full chapter pass failed: {exc}")
+    else:
+        full_records, full_record_warnings, full_index_markdown = _extract_usable_records_from_packet(
+            packet=full_packet,
+            record_type=record_type,
+            index_section_name=index_section_name,
+        )
+        warnings.extend(full_record_warnings)
+        if full_records:
+            if not full_index_markdown.strip():
+                full_index_markdown = _synthesize_record_index_markdown(
+                    chapter_id=chapter_source.chapter_id,
+                    record_type=record_type,
+                    records=full_records,
+                )
+                warnings.append(
+                    f"{task_name} full chapter pass omitted {index_section_name}; synthesized an index from explicit records."
+                )
+            return (
+                _PacketDocument(
+                    metadata=dict(full_packet.metadata),
+                    sections={index_section_name: full_index_markdown},
+                    records=full_records,
+                ),
+                warnings,
+            )
+        warnings.append(
+            f"{task_name} returned no usable {record_type} records on the full chapter pass; retrying with overlapping half-chapter chunks."
+        )
+        repair_packet, repair_warnings = _repair_record_extraction_packet(
+            client=client,
+            project_dir=project_dir,
+            project_slug=project_slug,
+            chapter_source=chapter_source,
+            chapter_summary_markdown=chapter_summary_markdown,
+            task_name=task_name,
+            record_type=record_type,
+            index_section_name=index_section_name,
+            existing_index_markdown=full_index_markdown,
+        )
+        warnings.extend(repair_warnings)
+        if repair_packet is not None:
+            repair_records, repair_record_warnings, repair_index_markdown = _extract_usable_records_from_packet(
+                packet=repair_packet,
+                record_type=record_type,
+                index_section_name=index_section_name,
+            )
+            warnings.extend(repair_record_warnings)
+            if repair_records:
+                if not repair_index_markdown.strip():
+                    repair_index_markdown = _synthesize_record_index_markdown(
+                        chapter_id=chapter_source.chapter_id,
+                        record_type=record_type,
+                        records=repair_records,
+                    )
+                    warnings.append(
+                        f"{task_name} repair pass omitted {index_section_name}; synthesized an index from explicit records."
+                    )
+                warnings.append(f"{task_name} recovered usable {record_type} records from a focused repair pass before chunking.")
+                return (
+                    _PacketDocument(
+                        metadata=dict(repair_packet.metadata),
+                        sections={index_section_name: repair_index_markdown},
+                        records=repair_records,
+                    ),
+                    warnings,
+                )
+
+    chunk_texts = _split_text_into_fallback_chunks(chapter_source.full_markdown)
+    merged_records_by_asset_id: dict[str, _PacketRecord] = {}
+    merged_sections_by_asset_id: dict[str, list[str]] = {}
+    chunk_successes = 0
+
+    for chunk_index, chunk_text in enumerate(chunk_texts, start=1):
+        chunk_prompt = "\n\n".join(
+            [
+                f"Fallback extraction chunk {chunk_index}/{len(chunk_texts)} for {task_name}.",
+                "Use only the chapter excerpt below for this pass.",
+                chunk_text,
+            ]
+        )
+        try:
+            chunk_packet = _call_packet_task(
+                client=client,
+                project_dir=project_dir,
+                task_name=task_name,
+                system_prompt=authoring_prompts.analysis_system_prompt(),
+                user_prompt=prompt_builder(
+                    project_slug=project_slug,
+                    chapter_source=chapter_source,
+                    chapter_summary=chunk_prompt,
+                ),
+                degraded_user_prompt=degraded_prompt_builder(
+                    project_slug=project_slug,
+                    chapter_source=chapter_source,
+                    chapter_summary=chunk_prompt,
+                    degraded=True,
+                ),
+            )
+        except LMStudioError as exc:
+            warnings.append(f"{task_name} chunk {chunk_index}/{len(chunk_texts)} failed: {exc}")
+            continue
+
+        chunk_records, chunk_warnings, chunk_index_markdown = _extract_usable_records_from_packet(
+            packet=chunk_packet,
+            record_type=record_type,
+            index_section_name=index_section_name,
+        )
+        warnings.extend(chunk_warnings)
+        if chunk_records:
+            chunk_successes += 1
+        for record in chunk_records:
+            asset_id = _normalize_asset_id(_require_record_field(record, "asset_id"), fallback_prefix=record_type)
+            if asset_id not in merged_records_by_asset_id:
+                merged_records_by_asset_id[asset_id] = record
+                merged_sections_by_asset_id[asset_id] = [record.sections.get("markdown", "").strip()]
+                continue
+            merged_records_by_asset_id[asset_id] = _merge_record_entries(
+                merged_records_by_asset_id[asset_id],
+                record,
+                record_type=record_type,
+            )
+            if record.sections.get("markdown", "").strip():
+                merged_sections_by_asset_id.setdefault(asset_id, [])
+                merged_sections_by_asset_id[asset_id].append(record.sections["markdown"].strip())
+        if not chunk_records:
+            warnings.append(
+                f"{task_name} chunk {chunk_index}/{len(chunk_texts)} produced no usable {record_type} records after validation."
+            )
+
+    merged_records = []
+    for asset_id, record in merged_records_by_asset_id.items():
+        merged_markdown_parts = []
+        for markdown_part in merged_sections_by_asset_id.get(asset_id, []):
+            if markdown_part and markdown_part not in merged_markdown_parts:
+                merged_markdown_parts.append(markdown_part)
+        merged_sections = dict(record.sections)
+        if merged_markdown_parts:
+            merged_sections["markdown"] = "\n\n---\n\n".join(merged_markdown_parts).strip()
+        merged_records.append(_PacketRecord(fields=record.fields, sections=merged_sections))
+
+    if not merged_records:
+        failure_reason = f"{task_name} could not recover any usable {record_type} records from chunked fallback."
+        warnings.append(failure_reason)
+        if full_packet is None:
+            raise LMStudioError(failure_reason)
+        raise LMStudioError(failure_reason)
+
+    synthesized_index_markdown = _synthesize_record_index_markdown(
+        chapter_id=chapter_source.chapter_id,
+        record_type=record_type,
+        records=merged_records,
+    )
+    warnings.append(
+        f"{task_name} recovered {len(merged_records)} usable {record_type} record(s) across {chunk_successes} successful chunk pass(es)."
+    )
+    return (
+        _PacketDocument(
+            metadata={"task": task_name, "version": PACKET_VERSION, "source_mode": "chunked_fallback"},
+            sections={index_section_name: synthesized_index_markdown},
+            records=merged_records,
+        ),
+        warnings,
+    )
+
+
+def _repair_record_extraction_packet(
+    *,
+    client: LMStudioClient,
+    project_dir: Path,
+    project_slug: str,
+    chapter_source: _ChapterSource,
+    chapter_summary_markdown: str,
+    task_name: str,
+    record_type: str,
+    index_section_name: str,
+    existing_index_markdown: str,
+) -> tuple[_PacketDocument | None, list[str]]:
+    warnings: list[str] = []
+    candidate_summaries = _record_repair_candidate_summaries(
+        project_slug=project_slug,
+        chapter_id=chapter_source.chapter_id,
+        record_type=record_type,
+        existing_index_markdown=existing_index_markdown,
+    )
+    repair_prompt = _record_extraction_repair_prompt(
+        project_slug=project_slug,
+        chapter_id=chapter_source.chapter_id,
+        chapter_summary=chapter_summary_markdown,
+        task_name=task_name,
+        record_type=record_type,
+        index_section_name=index_section_name,
+        existing_index_markdown=existing_index_markdown,
+        chapter_markdown=chapter_source.full_markdown,
+        candidate_summaries=candidate_summaries,
+    )
+    try:
+        repair_packet = _call_packet_task(
+            client=client,
+            project_dir=project_dir,
+            task_name=task_name,
+            system_prompt=authoring_prompts.analysis_system_prompt(),
+            user_prompt=repair_prompt,
+            degraded_user_prompt=_record_extraction_repair_prompt(
+                project_slug=project_slug,
+                chapter_id=chapter_source.chapter_id,
+                chapter_summary=chapter_summary_markdown,
+                task_name=task_name,
+                record_type=record_type,
+                index_section_name=index_section_name,
+                existing_index_markdown=existing_index_markdown,
+                chapter_markdown=chapter_source.full_markdown,
+                candidate_summaries=candidate_summaries,
+                degraded=True,
+            ),
+        )
+    except LMStudioError as exc:
+        warnings.append(f"{task_name} focused repair pass failed: {exc}")
+        return None, warnings
+    return repair_packet, warnings
+
+
+def _call_chapter_summary_with_chunked_fallback(
+    *,
+    client: LMStudioClient,
+    project_dir: Path,
+    project_slug: str,
+    chapter_source: _ChapterSource,
+) -> tuple[_PacketDocument, list[str]]:
+    warnings: list[str] = []
+    full_packet: _PacketDocument | None = None
+    try:
+        full_packet = _call_packet_task(
+            client=client,
+            project_dir=project_dir,
+            task_name="chapter_summary",
+            system_prompt=authoring_prompts.analysis_system_prompt(),
+            user_prompt=authoring_prompts.chapter_summary_user_prompt(project_slug, chapter_source),
+            degraded_user_prompt=authoring_prompts.chapter_summary_user_prompt(project_slug, chapter_source, degraded=True),
+        )
+    except LMStudioError as exc:
+        warnings.append(f"chapter_summary full chapter pass failed: {exc}")
+    else:
+        project_summary_markdown = _require_packet_section(full_packet, "project_summary_markdown", allow_empty=True)
+        chapter_summary_markdown = _require_packet_section(full_packet, "chapter_summary_markdown", allow_empty=True)
+        if project_summary_markdown and chapter_summary_markdown:
+            return (
+                _PacketDocument(
+                    metadata=dict(full_packet.metadata),
+                    sections={
+                        "project_summary_markdown": project_summary_markdown,
+                        "chapter_summary_markdown": chapter_summary_markdown,
+                    },
+                    records=full_packet.records,
+                ),
+                warnings,
+            )
+        missing_sections = [
+            section_name
+            for section_name, section_value in (
+                ("project_summary_markdown", project_summary_markdown),
+                ("chapter_summary_markdown", chapter_summary_markdown),
+            )
+            if not section_value.strip()
+        ]
+        warnings.append(
+            "chapter_summary full chapter pass was missing required summary sections: "
+            + ", ".join(missing_sections)
+        )
+        if len(missing_sections) == 1:
+            repair_packet, repair_warnings = _repair_chapter_summary_sections(
+                client=client,
+                project_dir=project_dir,
+                project_slug=project_slug,
+                chapter_source=chapter_source,
+                missing_sections=missing_sections,
+                existing_sections={
+                    "project_summary_markdown": project_summary_markdown,
+                    "chapter_summary_markdown": chapter_summary_markdown,
+                },
+            )
+            warnings.extend(repair_warnings)
+            if repair_packet is not None:
+                repaired_sections = {
+                    "project_summary_markdown": project_summary_markdown or _require_packet_section(
+                        repair_packet,
+                        "project_summary_markdown",
+                    ),
+                    "chapter_summary_markdown": chapter_summary_markdown or _require_packet_section(
+                        repair_packet,
+                        "chapter_summary_markdown",
+                    ),
+                }
+                warnings.append(
+                    f"chapter_summary repaired missing section(s) from a smaller repair pass: {', '.join(missing_sections)}"
+                )
+                return (
+                    _PacketDocument(
+                        metadata=dict(full_packet.metadata),
+                        sections=repaired_sections,
+                        records=full_packet.records,
+                    ),
+                    warnings,
+                )
+
+    chunk_texts = _split_text_into_fallback_chunks(chapter_source.full_markdown)
+    chunk_packets: list[_PacketDocument] = []
+    for chunk_index, chunk_text in enumerate(chunk_texts, start=1):
+        chunk_label = f"{chunk_index}/{len(chunk_texts)}"
+        try:
+            chunk_packet = _call_packet_task(
+                client=client,
+                project_dir=project_dir,
+                task_name="chapter_summary",
+                system_prompt=authoring_prompts.analysis_system_prompt(),
+                user_prompt=_chapter_summary_chunk_prompt(
+                    project_slug=project_slug,
+                    chapter_id=chapter_source.chapter_id,
+                    chunk_label=chunk_label,
+                    chunk_markdown=chunk_text,
+                ),
+                degraded_user_prompt=_chapter_summary_chunk_prompt(
+                    project_slug=project_slug,
+                    chapter_id=chapter_source.chapter_id,
+                    chunk_label=chunk_label,
+                    chunk_markdown=chunk_text,
+                    degraded=True,
+                ),
+            )
+        except LMStudioError as exc:
+            warnings.append(f"chapter_summary chunk {chunk_label} failed: {exc}")
+            continue
+
+        try:
+            _require_packet_section(chunk_packet, "project_summary_markdown")
+            _require_packet_section(chunk_packet, "chapter_summary_markdown")
+        except LMStudioError as exc:
+            warnings.append(f"chapter_summary chunk {chunk_label} missing summary sections: {exc}")
+            continue
+        chunk_packets.append(chunk_packet)
+
+    if not chunk_packets:
+        failure_reason = "chapter_summary could not recover any usable summary packets from chunked fallback."
+        warnings.append(failure_reason)
+        raise LMStudioError(failure_reason)
+
+    try:
+        synthesis_packet = _call_packet_task(
+            client=client,
+            project_dir=project_dir,
+            task_name="chapter_summary",
+            system_prompt=authoring_prompts.analysis_system_prompt(),
+            user_prompt=_chapter_summary_synthesis_prompt(
+                project_slug=project_slug,
+                chapter_id=chapter_source.chapter_id,
+                chunk_packets=chunk_packets,
+            ),
+            degraded_user_prompt=_chapter_summary_synthesis_prompt(
+                project_slug=project_slug,
+                chapter_id=chapter_source.chapter_id,
+                chunk_packets=chunk_packets,
+                degraded=True,
+            ),
+        )
+        project_summary_markdown = _require_packet_section(synthesis_packet, "project_summary_markdown")
+        chapter_summary_markdown = _require_packet_section(synthesis_packet, "chapter_summary_markdown")
+        warnings.append(
+            f"chapter_summary recovered from {len(chunk_packets)} chunk summary packet(s) and synthesized a final summary."
+        )
+        return (
+            _PacketDocument(
+                metadata=dict(synthesis_packet.metadata),
+                sections={
+                    "project_summary_markdown": project_summary_markdown,
+                    "chapter_summary_markdown": chapter_summary_markdown,
+                },
+                records=synthesis_packet.records,
+            ),
+            warnings,
+        )
+    except LMStudioError as exc:
+        warnings.append(f"chapter_summary synthesis pass failed: {exc}; falling back to deterministic chunk merge.")
+        merged_project_summary = _merge_summary_texts(
+            title="Project Summary",
+            texts=[_require_packet_section(packet, "project_summary_markdown") for packet in chunk_packets],
+        )
+        merged_chapter_summary = _merge_summary_texts(
+            title="Chapter Summary",
+            texts=[_require_packet_section(packet, "chapter_summary_markdown") for packet in chunk_packets],
+        )
+    return (
+        _PacketDocument(
+            metadata={"task": "chapter_summary", "version": PACKET_VERSION, "source_mode": "chunked_merge"},
+            sections={
+                "project_summary_markdown": merged_project_summary,
+                    "chapter_summary_markdown": merged_chapter_summary,
+                },
+                records=[],
+        ),
+        warnings,
+    )
+
+
+def _repair_chapter_summary_sections(
+    *,
+    client: LMStudioClient,
+    project_dir: Path,
+    project_slug: str,
+    chapter_source: _ChapterSource,
+    missing_sections: list[str],
+    existing_sections: dict[str, str],
+) -> tuple[_PacketDocument | None, list[str]]:
+    warnings: list[str] = []
+    existing_section_names = [
+        section_name
+        for section_name, section_value in existing_sections.items()
+        if section_value.strip()
+    ]
+    try:
+        repair_packet = _call_packet_task(
+            client=client,
+            project_dir=project_dir,
+            task_name="chapter_summary",
+            system_prompt=authoring_prompts.analysis_system_prompt(),
+            user_prompt=_chapter_summary_repair_prompt(
+                project_slug=project_slug,
+                chapter_id=chapter_source.chapter_id,
+                missing_sections=missing_sections,
+                existing_sections=existing_section_names,
+                chapter_markdown=chapter_source.full_markdown,
+            ),
+            degraded_user_prompt=_chapter_summary_repair_prompt(
+                project_slug=project_slug,
+                chapter_id=chapter_source.chapter_id,
+                missing_sections=missing_sections,
+                existing_sections=existing_section_names,
+                chapter_markdown=chapter_source.full_markdown,
+                degraded=True,
+            ),
+        )
+    except LMStudioError as exc:
+        warnings.append(f"chapter_summary repair pass failed: {exc}")
+        return None, warnings
+
+    for section_name in missing_sections:
+        try:
+            _require_packet_section(repair_packet, section_name)
+        except LMStudioError as exc:
+            warnings.append(f"chapter_summary repair pass still missing {section_name}: {exc}")
+            return None, warnings
+    return repair_packet, warnings
+
+
+def _chat_completion_result(
+    *,
+    client: LMStudioClient,
+    system_prompt: str,
+    user_prompt: str,
+    temperature: float,
+) -> object:
+    if hasattr(client, "chat_completion_result"):
+        return client.chat_completion_result(
+            system_prompt=system_prompt,
+            user_prompt=user_prompt,
+            temperature=temperature,
+        )
+
+    text = client.chat_completion(
+        system_prompt=system_prompt,
+        user_prompt=user_prompt,
+        temperature=temperature,
+    )
+    return SimpleNamespace(
+        status="success",
+        text=text,
+        error_message=None,
+        is_success=True,
+    )
+
+
+def _chapter_summary_chunk_prompt(*, project_slug: str, chapter_id: str, chunk_label: str, chunk_markdown: str, degraded: bool = False) -> str:
+    requirements = [
+        f"- this is only chunk {chunk_label} of the chapter source",
+        "- summarize only the information present in this chunk",
+        "- keep the project summary reusable across chapters",
+        "- keep the chapter summary focused on events, characters, and settings present in this chunk",
+    ]
+    if degraded:
+        requirements = [
+            f"- this is only chunk {chunk_label} of the chapter source",
+            "- keep both summaries concise but useful",
+            "- preserve major events and named entities from this chunk",
+        ]
+    return "\n\n".join(
+        [
+            f"Project slug: {project_slug}",
+            f"Chapter id: {chapter_id}",
+            "Task: write project summary plus chapter summary for later scene extraction.",
+            _packet_contract_block(task_name="chapter_summary", section_names=["project_summary_markdown", "chapter_summary_markdown"]),
+            "",
+            f"Chunk label: {chunk_label}",
+            "Requirements:",
+            *requirements,
+            "",
+            "Chapter source markdown:",
+            chunk_markdown,
+        ]
+    )
+
+
+def _chapter_summary_repair_prompt(
+    *,
+    project_slug: str,
+    chapter_id: str,
+    missing_sections: list[str],
+    existing_sections: list[str],
+    chapter_markdown: str,
+    degraded: bool = False,
+) -> str:
+    try:
+        chapter_body = chapter_text(project_slug, chapter_id) or chapter_markdown
+    except FileNotFoundError:
+        chapter_body = chapter_markdown
+    missing_section_list = "\n".join(f"- {section_name}" for section_name in missing_sections)
+    existing_section_list = "\n".join(f"- {section_name}" for section_name in existing_sections) or "- none"
+    requirements = [
+        "- repair only the missing summary section(s)",
+        "- do not rewrite the section(s) that are already present unless absolutely necessary",
+        "- keep the summary grounded in the chapter source",
+        "- return a valid FilmCreator packet with the requested markdown sections only",
+    ]
+    if degraded:
+        requirements = [
+            "- keep the repair concise",
+            "- supply only the missing section body or bodies",
+        ]
+    return "\n\n".join(
+        [
+            f"Project slug: {project_slug}",
+            f"Chapter id: {chapter_id}",
+            "Task: repair missing chapter-summary section(s) after a partial packet response.",
+            _packet_contract_block(task_name="chapter_summary", section_names=["project_summary_markdown", "chapter_summary_markdown"]),
+            "",
+            "Existing sections already present in the prior packet:",
+            existing_section_list,
+            "",
+            "Missing sections to supply:",
+            missing_section_list,
+            "",
+            "Requirements:",
+            *requirements,
+            "",
+            "Chapter source markdown:",
+            chapter_body,
+        ]
+    )
+
+
+def _record_extraction_repair_prompt(
+    *,
+    project_slug: str,
+    chapter_id: str,
+    chapter_summary: str,
+    task_name: str,
+    record_type: str,
+    index_section_name: str,
+    existing_index_markdown: str,
+    chapter_markdown: str,
+    candidate_summaries: list[str] | None = None,
+    degraded: bool = False,
+) -> str:
+    try:
+        chapter_body = chapter_text(project_slug, chapter_id) or chapter_markdown
+    except FileNotFoundError:
+        chapter_body = chapter_markdown
+    record_label = {
+        "character": "character",
+        "environment": "environment",
+        "scene": "scene",
+    }.get(record_type, "record")
+    requirements = [
+        f"- repair only the missing explicit {record_label} record blocks",
+        "- keep the response grounded in the supplied chapter summary and source text",
+        "- preserve any working index markdown if it already exists",
+        "- do not invent new record types",
+        "- return a valid FilmCreator packet using the requested task name",
+    ]
+    if degraded:
+        requirements = [
+            f"- keep the repair concise and emit only the missing explicit {record_label} records",
+            "- preserve the existing index markdown if possible",
+        ]
+    existing_index_text = existing_index_markdown.strip() or "(missing)"
+    candidate_summary_text = "\n".join(candidate_summaries or []).strip()
+    return "\n\n".join(
+        [
+            f"Project slug: {project_slug}",
+            f"Chapter id: {chapter_id}",
+            f"Task: repair the {task_name} packet by emitting missing explicit {record_label} records.",
+            _packet_contract_block(task_name=task_name, section_names=[index_section_name], record_templates=[(record_label, ["asset_id"], ["markdown"])]),
+            "",
+            "Existing index markdown from the prior packet:",
+            existing_index_text,
+            *( ["", "Candidate matches from the existing index markdown:", candidate_summary_text] if candidate_summary_text else [] ),
+            "",
+            "Requirements:",
+            *requirements,
+            "",
+            "Chapter summary:",
+            chapter_summary,
+            "",
+            "Chapter source markdown:",
+            chapter_body,
+        ]
+    )
+
+
+def _record_repair_candidate_summaries(
+    *,
+    project_slug: str,
+    chapter_id: str,
+    record_type: str,
+    existing_index_markdown: str,
+) -> list[str]:
+    if not existing_index_markdown.strip():
+        return []
+    if record_type == "character":
+        records = _extract_character_records_from_index_markdown(existing_index_markdown)
+        finder = find_character_match_candidates
+    elif record_type == "environment":
+        records = _extract_environment_records_from_index_markdown(existing_index_markdown)
+        finder = find_environment_match_candidates
+    else:
+        records = _extract_scene_records_from_index_markdown(existing_index_markdown)
+        finder = None
+    if not records:
+        return []
+
+    summaries: list[str] = []
+    for record in records[:3]:
+        try:
+            asset_id = _normalize_asset_id(_require_record_field(record, "asset_id"), fallback_prefix=record_type)
+            markdown = _require_record_section(record, "markdown")
+        except LMStudioError:
+            continue
+        if finder is None:
+            continue
+        candidates = finder(
+            project_slug=project_slug,
+            asset_id=asset_id,
+            markdown=markdown,
+            top_n=2,
+        )
+        if not candidates:
+            continue
+        summaries.append(f"## {asset_id}")
+        for candidate in candidates:
+            snippet = candidate.context_snippets[0] if candidate.context_snippets else ""
+            snippet_text = f" Example context: {snippet}" if snippet else ""
+            summaries.append(
+                f"- {candidate.canonical_id} (score {candidate.score}; chapters: {', '.join(candidate.source_chapters[:2]) or 'no source chapter'}; aliases: {', '.join(candidate.aliases[:4]) or '-'}){snippet_text}"
+            )
+    return summaries
+
+
+def _chapter_summary_synthesis_prompt(*, project_slug: str, chapter_id: str, chunk_packets: list[_PacketDocument], degraded: bool = False) -> str:
+    project_sections = [
+        _require_packet_section(packet, "project_summary_markdown")
+        for packet in chunk_packets
+    ]
+    chapter_sections = [
+        _require_packet_section(packet, "chapter_summary_markdown")
+        for packet in chunk_packets
+    ]
+    requirements = [
+        "- merge the partial summaries into one coherent reusable project summary",
+        "- merge the partial chapter summaries into one coherent chapter summary",
+        "- do not mention that the summaries came from chunks",
+        "- keep the result grounded and concise",
+    ]
+    if degraded:
+        requirements = [
+            "- keep the merged summaries concise",
+            "- preserve named entities and major events",
+        ]
+    return "\n\n".join(
+        [
+            f"Project slug: {project_slug}",
+            f"Chapter id: {chapter_id}",
+            "Task: combine partial chapter summaries into one final project summary and chapter summary.",
+            _packet_contract_block(task_name="chapter_summary", section_names=["project_summary_markdown", "chapter_summary_markdown"]),
+            "",
+            "Requirements:",
+            *requirements,
+            "",
+            "Partial project summaries:",
+            *[f"## Chunk {index + 1}\n{section}" for index, section in enumerate(project_sections)],
+            "",
+            "Partial chapter summaries:",
+            *[f"## Chunk {index + 1}\n{section}" for index, section in enumerate(chapter_sections)],
+        ]
+    )
+
+
+def _merge_summary_texts(*, title: str, texts: list[str]) -> str:
+    parts: list[str] = []
+    for text in texts:
+        normalized = text.strip()
+        if normalized and normalized not in parts:
+            parts.append(normalized)
+    if not parts:
+        return f"# {title}\n"
+    if len(parts) == 1:
+        return parts[0]
+    lines = [f"# {title}"]
+    for index, part in enumerate(parts, start=1):
+        lines.extend(["", f"## Chunk {index}", part])
+    return "\n".join(lines).strip()
+
+
+def _extract_usable_records_from_packet(
+    *,
+    packet: _PacketDocument,
+    record_type: str,
+    index_section_name: str,
+) -> tuple[list[_PacketRecord], list[str], str]:
+    warnings: list[str] = []
+    try:
+        records = _require_packet_records(packet, record_type=record_type)
+    except LMStudioError:
+        records = []
+    try:
+        index_markdown = _require_packet_section(packet, index_section_name)
+    except LMStudioError:
+        index_markdown = ""
+    if records:
+        return records, warnings, index_markdown
+    if record_type == "character":
+        records = _extract_character_records_from_index_markdown(index_markdown)
+    elif record_type == "environment":
+        records = _extract_environment_records_from_index_markdown(index_markdown)
+    elif record_type == "scene":
+        records = _extract_scene_records_from_index_markdown(index_markdown)
+    else:
+        records = []
+    if records:
+        warnings.append(
+            f"Recovered {len(records)} usable {record_type} record(s) from {index_section_name} salvage output."
+        )
+    return records, warnings, index_markdown
+
+
+def _split_text_into_fallback_chunks(text: str) -> list[str]:
+    normalized_text = text.strip()
+    if not normalized_text:
+        return [normalized_text]
+    lines = normalized_text.splitlines()
+    if len(lines) < 8:
+        midpoint = max(1, len(normalized_text) // 2)
+        first = normalized_text[: midpoint + 1].strip()
+        second = normalized_text[max(0, midpoint - 1) :].strip()
+        chunks = [chunk for chunk in (first, second) if chunk]
+        return chunks or [normalized_text]
+    midpoint = max(1, len(lines) // 2)
+    overlap = min(3, max(1, midpoint // 8))
+    first = "\n".join(lines[: midpoint + overlap]).strip()
+    second = "\n".join(lines[max(0, midpoint - overlap) :]).strip()
+    chunks = [chunk for chunk in (first, second) if chunk]
+    return chunks or [normalized_text]
+
+
+def _merge_record_entries(base: _PacketRecord, incoming: _PacketRecord, *, record_type: str) -> _PacketRecord:
+    fields = dict(base.fields)
+    for key, value in incoming.fields.items():
+        incoming_value = value.strip()
+        if not incoming_value:
+            continue
+        existing_value = fields.get(key, "").strip()
+        if not existing_value:
+            fields[key] = incoming_value
+            continue
+        if key in {"aliases", "clarification_reason", "clarification_question", "manual_description_reason", "description", "role"}:
+            fields[key] = _merge_text_values(existing_value, incoming_value)
+            continue
+        if key in {"manual_description_required", "clarification_required"}:
+            fields[key] = "true" if _parse_packet_bool(existing_value) or _parse_packet_bool(incoming_value) else "false"
+            continue
+        if key in {"canonical_character_id"}:
+            if len(incoming_value) > len(existing_value):
+                fields[key] = incoming_value
+            continue
+        if len(incoming_value) > len(existing_value):
+            fields[key] = incoming_value
+
+    sections = dict(base.sections)
+    base_markdown = sections.get("markdown", "").strip()
+    incoming_markdown = incoming.sections.get("markdown", "").strip()
+    if incoming_markdown and incoming_markdown not in base_markdown:
+        sections["markdown"] = _merge_markdown_blocks(base_markdown, incoming_markdown, record_type=record_type)
+    return _PacketRecord(fields=fields, sections=sections)
+
+
+def _merge_text_values(existing: str, incoming: str) -> str:
+    values: list[str] = []
+    for value in (existing, incoming):
+        normalized = value.strip()
+        if normalized and normalized not in values:
+            values.append(normalized)
+    return "\n".join(values)
+
+
+def _merge_markdown_blocks(existing: str, incoming: str, *, record_type: str) -> str:
+    parts: list[str] = []
+    for block in (existing.strip(), incoming.strip()):
+        if block and block not in parts:
+            parts.append(block)
+    if not parts:
+        return ""
+    if len(parts) == 1:
+        return parts[0]
+    heading = "# Character Merge" if record_type == "character" else "# Environment Merge" if record_type == "environment" else "# Record Merge"
+    return "\n\n".join([heading, *[f"## Chunk {index + 1}\n{part}" for index, part in enumerate(parts)]])
+
+
+def _synthesize_record_index_markdown(*, chapter_id: str, record_type: str, records: list[_PacketRecord]) -> str:
+    if record_type == "character":
+        lines = [
+            f"# Character Index - {chapter_id}",
+            "",
+            "## Visible Characters",
+            "",
+            "| Asset ID | Canonical Character ID | Aliases | Fully Identified | Manual Description Required | Clarification Required | Description |",
+            "|---|---|---|---|---|---|---|",
+        ]
+        for record in records:
+            fields = record.fields
+            lines.append(
+                "| {asset_id} | {canonical} | {aliases} | {identified} | {manual} | {clarify} | {description} |".format(
+                    asset_id=_markdown_table_cell(fields.get("asset_id", "")),
+                    canonical=_markdown_table_cell(fields.get("canonical_character_id", "")),
+                    aliases=_markdown_table_cell(fields.get("aliases", "")),
+                    identified=_markdown_table_cell(fields.get("is_fully_identified", "")),
+                    manual=_markdown_table_cell(fields.get("manual_description_required", "")),
+                    clarify=_markdown_table_cell(fields.get("clarification_required", "")),
+                    description=_markdown_table_cell(fields.get("description", "")),
+                )
+            )
+        return "\n".join(lines)
+    lines = [
+        f"# Environment Index - {chapter_id}",
+        "",
+        "## Visible Environments",
+        "",
+        "| Asset ID | Role | Geography | Lighting | Atmosphere | Scale | Anchors | Description |",
+        "|---|---|---|---|---|---|---|---|",
+    ]
+    for record in records:
+        fields = record.fields
+        lines.append(
+            "| {asset_id} | {role} | {geography} | {lighting} | {atmosphere} | {scale} | {anchors} | {description} |".format(
+                asset_id=_markdown_table_cell(fields.get("asset_id", "")),
+                role=_markdown_table_cell(fields.get("role", "")),
+                geography=_markdown_table_cell(fields.get("geography", "")),
+                lighting=_markdown_table_cell(fields.get("lighting", "")),
+                atmosphere=_markdown_table_cell(fields.get("atmosphere", "")),
+                scale=_markdown_table_cell(fields.get("scale", "")),
+                anchors=_markdown_table_cell(fields.get("anchors", "")),
+                description=_markdown_table_cell(fields.get("description", "")),
+            )
+        )
+    return "\n".join(lines)
+
+
+def _markdown_table_cell(value: str) -> str:
+    normalized = value.replace("|", r"\|").replace("\n", " ").strip()
+    return normalized or "-"
 
 
 def _structured_prompt_draft(record: _PacketRecord, *, asset_id: str, asset_type: str) -> _StructuredPromptDraft:
@@ -1303,8 +2376,68 @@ def _manual_character_description_placeholder(*, asset_id: str, reason: str) -> 
     return "\n".join([MANUAL_PLACEHOLDER_MARKER, "", "# Asset ID", asset_id, "", "# Purpose", "Paste a stable manual visual description for this character so later shared reference generation can use it.", "", "# Why This Is Needed", reason, "", "# Guidance", "- describe face, hair, body type, age impression, silhouette, skin tone, costume logic, and any continuity-critical marks", "- prefer visible facts over backstory", "- if multiple looks exist, describe the default look for this chapter", "", "# Manual Description", ""])
 
 
-def _character_clarification_placeholder(*, asset_id: str, reason: str, question: str) -> str:
-    return "\n".join([CLARIFICATION_PLACEHOLDER_MARKER, "", "# Asset ID", asset_id, "", "# Why This Needs Clarification", reason, "", "# Question", question, "", "# Guidance", "- answer briefly and concretely", "- if another chapter already describes the character, note that source chapter", "- if the character is never described well, say whether FilmCreator should generate a reusable film-wide default description", "", "# Clarification Response", ""])
+def _character_clarification_placeholder(*, asset_id: str, reason: str, question: str, candidate_summaries: tuple[str, ...] = ()) -> str:
+    lines = [
+        CLARIFICATION_PLACEHOLDER_MARKER,
+        "",
+        "# Asset ID",
+        asset_id,
+        "",
+        "# Why This Needs Clarification",
+        reason,
+        "",
+        "# Question",
+        question,
+    ]
+    if candidate_summaries:
+        lines.extend([
+            "",
+            "# Candidate Matches",
+            *candidate_summaries,
+        ])
+    lines.extend([
+        "",
+        "# Guidance",
+        "- answer briefly and concretely",
+        "- if another chapter already describes the character, note that source chapter",
+        "- if the character is never described well, say whether FilmCreator should generate a reusable film-wide default description",
+        "",
+        "# Clarification Response",
+        "",
+    ])
+    return "\n".join(lines)
+
+
+def _environment_clarification_placeholder(*, asset_id: str, reason: str, question: str, candidate_summaries: tuple[str, ...] = ()) -> str:
+    lines = [
+        CLARIFICATION_PLACEHOLDER_MARKER,
+        "",
+        "# Asset ID",
+        asset_id,
+        "",
+        "# Why This Needs Clarification",
+        reason,
+        "",
+        "# Question",
+        question,
+    ]
+    if candidate_summaries:
+        lines.extend([
+            "",
+            "# Candidate Matches",
+            *candidate_summaries,
+        ])
+    lines.extend([
+        "",
+        "# Guidance",
+        "- answer briefly and concretely",
+        "- if another chapter already describes the setting, note that source chapter",
+        "- if the environment is broader than the current chapter's label, say whether FilmCreator should keep it as a reusable canonical setting or split it into narrower sub-locations",
+        "",
+        "# Clarification Response",
+        "",
+    ])
+    return "\n".join(lines)
 
 
 def _manual_description_path(*, project_dir: Path, asset_id: str) -> Path:
@@ -1313,6 +2446,10 @@ def _manual_description_path(*, project_dir: Path, asset_id: str) -> Path:
 
 def _character_clarification_path(*, project_dir: Path, asset_id: str) -> Path:
     return project_dir / "01_source" / "character_descriptions" / f"{asset_id}_clarification.md"
+
+
+def _environment_clarification_path(*, project_dir: Path, asset_id: str) -> Path:
+    return project_dir / "01_source" / "environment_descriptions" / f"{asset_id}_clarification.md"
 
 
 def _reconcile_manual_character_description_placeholders(*, project_dir: Path, active_requests: dict[str, str]) -> list[Path]:
@@ -1340,15 +2477,41 @@ def _reconcile_manual_character_description_placeholders(*, project_dir: Path, a
     return written_paths
 
 
-def _reconcile_character_clarification_placeholders(*, project_dir: Path, active_requests: dict[str, tuple[str, str]]) -> list[Path]:
+def _reconcile_character_clarification_placeholders(*, project_dir: Path, active_requests: dict[str, CharacterClarificationRequest]) -> list[Path]:
     clarification_dir = project_dir / "01_source" / "character_descriptions"
     ensure_dir(clarification_dir)
     written_paths: list[Path] = []
-    for asset_id, (reason, question) in active_requests.items():
+    for asset_id, request in active_requests.items():
         path = _character_clarification_path(project_dir=project_dir, asset_id=asset_id)
         if path.exists() and _clarification_has_user_content(path):
             continue
-        content = _character_clarification_placeholder(asset_id=asset_id, reason=reason, question=question)
+        content = _character_clarification_placeholder(
+            asset_id=asset_id,
+            reason=request.reason,
+            question=request.question,
+            candidate_summaries=request.candidate_summaries,
+        )
+        if path.exists() and path.read_text(encoding="utf-8") == content:
+            continue
+        _write_text(path, content)
+        written_paths.append(path)
+    return written_paths
+
+
+def _reconcile_environment_clarification_placeholders(*, project_dir: Path, active_requests: dict[str, EnvironmentClarificationRequest]) -> list[Path]:
+    clarification_dir = project_dir / "01_source" / "environment_descriptions"
+    ensure_dir(clarification_dir)
+    written_paths: list[Path] = []
+    for asset_id, request in active_requests.items():
+        path = _environment_clarification_path(project_dir=project_dir, asset_id=asset_id)
+        if path.exists() and _clarification_has_user_content(path):
+            continue
+        content = _environment_clarification_placeholder(
+            asset_id=asset_id,
+            reason=request.reason,
+            question=request.question,
+            candidate_summaries=request.candidate_summaries,
+        )
         if path.exists() and path.read_text(encoding="utf-8") == content:
             continue
         _write_text(path, content)
@@ -1817,3 +2980,41 @@ def _write_text(path: Path, content: str) -> None:
     ensure_dir(path.parent)
     text = content.rstrip() + "\n"
     path.write_text(text, encoding="utf-8")
+
+
+# Bind the pure parsing and validation helpers to the feature module so the
+# orchestration code uses the extracted implementation while keeping this file
+# backward compatible during the refactor.
+_parse_packet_document = authoring_packets.parse_packet_document
+_extract_packet_body = authoring_packets.extract_packet_body
+_sanitize_llm_text = authoring_packets.sanitize_llm_text
+_strip_markdown_fences = authoring_packets.strip_markdown_fences
+_parse_packet_body = authoring_packets.parse_packet_body
+_parse_packet_record = authoring_packets.parse_packet_record
+_collect_tagged_block = authoring_packets.collect_tagged_block
+_split_packet_key_value = authoring_packets.split_packet_key_value
+_require_packet_section = authoring_packets.require_packet_section
+_require_packet_records = authoring_packets.require_packet_records
+_require_single_packet_record = authoring_packets.require_single_packet_record
+_require_record_field = authoring_packets.require_record_field
+_require_record_section = authoring_packets.require_record_section
+_extract_character_records_from_index_markdown = authoring_packets.extract_character_records_from_index_markdown
+_extract_environment_records_from_index_markdown = authoring_packets.extract_environment_records_from_index_markdown
+_validate_scene_decomposition = authoring_packets.validate_scene_decomposition
+_extract_clip_beat_refs = authoring_packets.extract_clip_beat_refs
+_scene_allows_single_clip = authoring_packets.scene_allows_single_clip
+_validate_clip_plan = authoring_packets.validate_clip_plan
+_parse_packet_bool = authoring_packets.parse_packet_bool
+_parse_markdown_key_value_items = authoring_packets.parse_markdown_key_value_items
+_parse_markdown_list = authoring_packets.parse_markdown_list
+_split_sections = authoring_packets.split_sections
+_chapter_id_from_name = authoring_packets.chapter_id_from_name
+_normalize_scene_id = authoring_packets.normalize_scene_id
+_normalize_beat_id = authoring_packets.normalize_beat_id
+_is_hierarchical_clip_id = authoring_packets.is_hierarchical_clip_id
+_normalize_clip_id = authoring_packets.normalize_clip_id
+_normalize_asset_id = authoring_packets.normalize_asset_id
+_scene_record_summary_line = authoring_packets.scene_record_summary_line
+_markdown_bundle = authoring_packets.markdown_bundle
+_prune_markdown_dir = authoring_packets.prune_markdown_dir
+_write_text = authoring_packets.write_text

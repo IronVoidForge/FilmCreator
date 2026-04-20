@@ -1,17 +1,23 @@
-# john_carter
+# John Carter
+**Role:** Protagonist / Tharkian Chieftain
 
-**Display Name:** John Carter  
-**Chapter Role:** Protagonist, prisoner yet chieftain  
-**Physical Presence:** Present throughout chapter (audience chamber, plaza, quarters)  
-**Physical Description:** Not explicitly detailed in source material; protagonist status confirmed  
-**Costume/Silhouette:** Not described in source material  
-**Continuity Traits:** Recognized by Lorquas Ptomel and Tars Tarkas; realizes persecution is Sarkoja's work  
+**Status:** Physically Present
 
-**Uncertainty Notes:** As protagonist, physical description may be sparse in this chapter. Stable identification maintained for continuity purposes.
+**Physical Description:** 
+A human man living among the Tharks. Specific physical traits (height, hair color, eye color) are not provided in this text.
+
+**Costume/Silhouette:** 
+Currently in possession of spoils of war including silks and furs.
+
+**Prompt Phrases:** 
+Human male, martial attire, silk and fur garments, Tharkian chieftain.
+
+**Uncertainty Notes:** 
+Physical appearance is entirely unstated in this chapter; requires baseline character model reference.
 
 # Aliases
 
-None
+Human, Tharkian chieftain
 
 
 
@@ -23,14 +29,14 @@ john_carter
 
 # Fully Identified
 
-true
+false
 
 # Manual Description Input Required
 
-No
+Yes
 
 
 
 # Manual Description Reason
 
-Protagonist with stable identification throughout chapter; physical presence confirmed
+Physical appearance (height, build, facial features) is not detailed in this chapter.

@@ -4,10 +4,10 @@
 tal_hajus
 
 # Why This Needs Clarification
-The character record indicates clarification is needed, but LM Studio did not supply a reason.
+Identity and appearance are not established in this chapter.
 
 # Question
-Is Tal Hajus a new character introduction or an established authority figure with prior visual details?
+What is Tal Hajus's physical appearance and relationship to the court?
 
 # Guidance
 - answer briefly and concretely

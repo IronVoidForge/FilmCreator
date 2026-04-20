@@ -1,16 +1,14 @@
 # Sola
-## Role
-Young Female Martian, Companion to Carter.
-## Presence
-Physically present, sent by Tars Tarkas.
-## Physical Description
-Height: ~8 feet tall. Skin color: Light olive-green. Specific facial features or ornaments not detailed in the text summary.
-## Continuity Notes
-Accompanies Carter to a spacious chamber with murals and mosaics.
+**Role:** Caretaker / Attendant
+**Presence:** Physically Present
+**Physical Description:** Young female Martian, approximately 8 feet tall, with light olive-green skin.
+**Costume/Silhouette:** Consistent with Green Martian species (minimal clothing/ornaments).
+**Prompt Phrases:** Female Martian, 8 feet tall, light olive-green skin, young appearance.
+**Uncertainty Notes:** None.
 
 # Aliases
 
-Young Female Martian
+Martian Retinue Member
 
 
 
@@ -26,10 +24,10 @@ true
 
 # Manual Description Input Required
 
-Yes
+No
 
 
 
 # Manual Description Reason
 
-While height and skin tone are noted, details on facial features, hair, or specific ornaments are absent.
+None

@@ -1,44 +1,30 @@
 @echo off
 setlocal
 
-set "SCRIPT_DIR=%~dp0"
-set "SEARCH_DIR=%SCRIPT_DIR%"
-set "REPO_ROOT="
-
-:find_root
-if exist "%SEARCH_DIR%projects" if exist "%SEARCH_DIR%orchestrator" (
-    set "REPO_ROOT=%SEARCH_DIR%"
-    goto found_root
-)
-for %%I in ("%SEARCH_DIR%..") do set "PARENT_DIR=%%~fI\"
-if /I "%PARENT_DIR%"=="%SEARCH_DIR%" goto root_not_found
-set "SEARCH_DIR=%PARENT_DIR%"
-goto find_root
-
-:found_root
-cd /d "%REPO_ROOT%"
+call "%~dp0..\_shared\resolve_filmcreator_root.bat" "%~dp0" || goto :root_not_found
+cd /d "%FILMCREATOR_ROOT%"
 
 set "DEFAULT_SLUG=princess_of_mars_test"
 set /p PROJECT_SLUG=Project slug [%DEFAULT_SLUG%]: 
 if "%PROJECT_SLUG%"=="" set "PROJECT_SLUG=%DEFAULT_SLUG%"
 
-set "TARGET=projects\%PROJECT_SLUG%\02_story_analysis"
+set "TARGET=%FILMCREATOR_ROOT%\projects\%PROJECT_SLUG%\02_story_analysis"
 
 echo.
-echo Repo root: %REPO_ROOT%
+echo Repo root: %FILMCREATOR_ROOT%
 echo Project slug: %PROJECT_SLUG%
 echo Target: %TARGET%
 echo.
 
-if not exist "projects\%PROJECT_SLUG%" (
-    echo Project folder not found: projects\%PROJECT_SLUG%
+if not exist "%FILMCREATOR_ROOT%\projects\%PROJECT_SLUG%" (
+    echo Project folder not found: %FILMCREATOR_ROOT%\projects\%PROJECT_SLUG%
     pause
     exit /b 1
 )
 
 if exist "%TARGET%" (
     echo Removing generated story analysis outputs...
-    rmdir /s /q "%TARGET%"
+    powershell -NoProfile -Command "$target = '%TARGET%'; if (Test-Path -LiteralPath $target) { $items = Get-ChildItem -LiteralPath $target -Force -Recurse -ErrorAction SilentlyContinue | Sort-Object FullName -Descending; foreach ($item in $items) { try { Remove-Item -LiteralPath $item.FullName -Force -ErrorAction Stop } catch { } }; try { Remove-Item -LiteralPath $target -Force -Recurse -ErrorAction Stop } catch { } }"
 ) else (
     echo Nothing to remove. Target does not exist yet.
 )

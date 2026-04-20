@@ -1,12 +1,15 @@
-# Tal Hajus - Chapter 016
+# Tal Hajus
+**Role:** Antagonist / Ruler of the Tharks
 
-**Display Name:** Tal Hajus  
-**Chapter Role:** Associated with Dejah Thoris's safety ("safe in the arms of")  
-**Physical Presence:** Referenced in chieftain's confirmation; physical presence uncertain (may be observer or active participant).  
-**Physical Description:** Not provided in source material. Actions indicate association with Dejah Thoris's safety context.  
-**Costume/Silhouette:** No specific costume details available. Silhouette inferred from role as entity associated with Dejah Thoris's safety.  
-**Continuity-Critical Traits:** Linked to Dejah Thoris's safety ("safe in the arms of Tal Hajus"); associated with Sarkoja's actions.  
-**Uncertainty Notes:** Physical appearance, height, build, and specific attire are unknown. Role may be observer or active participant; visual markers not provided for later image generation.
+**Status:** Referenced
+
+**Physical Description:** Unknown.
+
+**Costume/Silhouette:** Not described.
+
+**Prompt Phrases:** Green Thark, ruler, chieftain, antagonist.
+
+**Uncertainty Notes:** Character is only mentioned by name as the authority figure in Thark.
 
 # Aliases
 
@@ -22,14 +25,14 @@ tal_hajus
 
 # Fully Identified
 
-true
+false
 
 # Manual Description Input Required
 
-Yes
+No
 
 
 
 # Manual Description Reason
 
-No physical description provided; only mentioned in context of being "safe in the arms of".
+None

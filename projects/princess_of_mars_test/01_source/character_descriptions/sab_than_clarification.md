@@ -4,10 +4,10 @@
 sab_than
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Character is only referenced in dialogue and plot context.
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+What is the physical appearance and regalia of Sab Than?
 
 # Guidance
 - answer briefly and concretely

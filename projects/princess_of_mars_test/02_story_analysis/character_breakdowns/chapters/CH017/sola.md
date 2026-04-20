@@ -1,13 +1,19 @@
-# Sola - Chapter XVII
+# Sola
+**Role:** Companion / Escort
 
-**Display Name:** Sola  
-**Chapter Role:** Companion/sister of Dejah Thoris  
-**Physical Presence:** Physically present in all five scenes  
-**Physical Description:** Less detailed physical description than Dejah Thoris; walks while Carter and Dejah ride initially after first thoat collapse  
-**Costume/Silhouette:** No specific costume details provided beyond general presence as companion to Dejah Thoris  
-**Continuity-Critical Traits:** Escapes with Dejah Thoris into hills; walks alongside party after first beast collapses; less riding capacity than Dejah  
-**Descriptive Noun Phrases:** Companion princess, walking escapee, sister figure  
-**Uncertainty Notes:** Character is identified but has less physical description than main protagonist and Dejah Thoris
+**Status:** Physically Present
+
+**Physical Description:** 
+No specific physical traits are mentioned.
+
+**Costume/Silhouette:** 
+Unknown.
+
+**Descriptive Noun Phrases:** 
+Companion, escort, traveler.
+
+**Uncertainty Notes:** 
+Minimal character detail provided in this chapter.
 
 # Aliases
 
@@ -23,14 +29,14 @@ sola
 
 # Fully Identified
 
-true
+false
 
 # Manual Description Input Required
 
-No
+Yes
 
 
 
 # Manual Description Reason
 
-None
+No physical description provided.

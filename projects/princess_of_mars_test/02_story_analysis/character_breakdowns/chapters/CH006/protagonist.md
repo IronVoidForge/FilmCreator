@@ -1,40 +1,19 @@
-# Protagonist - Character File
+# Protagonist
+**Role:** Central combatant / Survivor
 
-## Display Name
-The Protagonist (John Carter)
+**Status:** Physically Present
 
-## Chapter Role
-Main character, central figure in all scenes
+**Physical Description:** An Earthman of significant physical prowess and combat skill. He demonstrates high endurance and tactical intelligence in hand-to-hand combat.
 
-## Physical Presence
-Physically present throughout the chapter
+**Costume/Silhouette:** Unknown.
 
-## Physical Description
-Limited details provided in chapter summary. The protagonist is primarily identified through actions and interactions rather than physical features. No specific height, build, hair color, or distinctive marks are mentioned in the source material.
+**Descriptive Noun Phrases:** Earthman survivor, skilled combatant, defender of the watch-thing.
 
-## Costume and Silhouette
-No costume details provided in chapter summary. Silhouette not described beyond general human form implied by context of Mars setting.
-
-## Continuity-Critical Traits
-- Central figure in all action sequences
-- Receives wounds examined by Sola
-- Uses cudgel as weapon against bull apes
-- Saves the beast from execution
-- Gains two friends on Mars (Sola and the beast)
-
-## Descriptive Noun Phrases for Render-Facing Prompts
-- "protagonist of Mars adventure"
-- "young man with determined expression"
-- "witness to Martian battle"
-- "hero saving creature from execution"
-- "friend to both woman and beast"
-
-## Uncertainty Notes
-Physical appearance details are uncertain due to limited description in chapter summary. Height, build, hair color, eye color, and distinctive marks cannot be reliably determined from source material. Costume and accessories not described beyond general context of Mars setting.
+**Uncertainty Notes:** No specific visual details regarding his face or clothing are provided in this text.
 
 # Aliases
 
-"me", "protagonist"
+Earthman
 
 
 
@@ -46,7 +25,7 @@ protagonist
 
 # Fully Identified
 
-true
+false
 
 # Manual Description Input Required
 

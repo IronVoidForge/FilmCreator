@@ -1,9 +1,13 @@
-**Scene 1: Training and Arms.** A warrior presents arms to Nell; women remodel the trappings for his smaller size. Sola instructs him in weapons mysteries. He practices on the plaza with young Martians, progressing satisfactorily due to familiarity with earthly weapons.
+**Events:**
+The protagonist undergoes a period of rapid adaptation, receiving Martian warrior attire and training in various weapons under the instruction of Sola and other females. He learns that Green Martian society is divided by gendered roles: women are the artisans, manufacturers, and defenders, while men focus on high-level strategy and law. Driven by curiosity regarding a beautiful Red female prisoner he witnessed being treated brutally, the protagonist pushes himself to master the Martian language. Through eavesdropping on a late-night conversation among the women in his sleeping quarters, he learns that the prisoner is destined to be taken to Thark to die in public games. A heated argument breaks out between Sola and Sarkoja; Sola expresses sympathy for the captive, which the others view as a sign of weakness and "atavism." This interaction confirms Sola's compassionate nature and motivates the protagonist to plan an eventual escape with her help.
 
-**Scene 2: Martian Society Structure.** Women are described as artisans producing powder, cartridges, and firearms. Men handle strategy and law. Justice is swift; there are no lawyers. The training of defense/offense is conducted solely by women.
+**Characters:**
+- **The Protagonist:** An Earthman learning Martian combat and language; determined to find his own kind.
+- **Sola:** A Green Martian female who acts as a mentor/guardian to the protagonist; shows unexpected empathy for the Red prisoner, defying social norms.
+- **Sarkoja:** An older, more hardened Green Martian woman; critical of Sola's perceived weakness.
+- **The Prisoner:** A beautiful "Red" Martian woman being held for public execution.
+- **The Women (Group):** Artisans and warriors who manage the domestic and manufacturing aspects of their society.
 
-**Scene 3: Prisoner's Fate.** Nell sees the prisoner briefly being taken to the audience chamber. Guards treat her harshly; Sola treats him kindly. He learns the Martian language quickly due to the incentive of the prisoner's situation.
-
-**Scene 4: Night Conversation.** Women discuss the prisoner's death throes. Sarkoja states she will be exhibited at games before Tal Hajus. Sola expresses hope for ransom; others scold her for weakness and softness. Sola defends compassion, arguing against their constant bloodshed and lack of peace.
-
-**Scene 5: Nell's Resolution.** Overhearing the conversation confirms Sola's friendliness and hatred of cruelty. Nell decides to take Sola into confidence at the first opportunity to ask for aid in escaping with the prisoner. He sleeps after resolving this plan.
+**Settings:**
+- **The Plaza/Training Grounds:** Where the protagonist practices combat with the Martian youth.
+- **The Sleeping Quarters:** A communal living space shared by several females, young Martians, the protagonist, Sola, and Woola the hound; the site of the pivotal overheard conversation.

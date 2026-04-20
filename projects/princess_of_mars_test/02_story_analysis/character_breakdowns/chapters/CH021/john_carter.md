@@ -1,32 +1,15 @@
 # John Carter
+**Role:** Protagonist / Padwar of The Guards
 
-**Display Name:** John Carter  
-**Chapter Role:** Protagonist, Air Scout, Honor Recipient  
-**Presence Status:** Physically Present  
+**Presence:** Physically Present
 
-**Physical Description (Supported by Source):**  
-Not specified in the provided chapter summary. No physical attributes are described.
+**Description:** A human traveler on Barsoom. He demonstrates exceptional combat skills, piloting air-scout aircraft using the eighth Barsoomian ray, and engaging in hand-to-hand combat with Green warriors.
 
-**Costume & Silhouette:**  
-Not specified in the provided chapter summary.
-
-**Continuity-Critical Traits:**  
-- Recognized as "Darseen" by Kantos Kan.
-- Joined air-scout squadron.
-- Awarded metal ornament and appointed padwar of The Guards.
-- Granted quarters in Jeddak Than Kosis's palace.
-
-**Descriptive Noun Phrases for Render-Facing Prompts:**  
-- Red Martian male protagonist.
-- Air scout with radium engine aircraft.
-- Recipient of Zodangan honors.
-
-**Uncertainty Notes:**  
-Physical attributes are unknown and cannot be reliably inferred from the source text. Image generation will require manual description input to ensure accuracy.
+**Prompting Phrases:** Human male, warrior, pilot, combatant, agile.
 
 # Aliases
 
-Darseen
+Carter
 
 
 
@@ -42,10 +25,10 @@ true
 
 # Manual Description Input Required
 
-Yes
+No
 
 
 
 # Manual Description Reason
 
-The chapter summary mentions John Carter's name and actions but does not provide specific physical attributes like height, build, hair color, or facial features.
+None

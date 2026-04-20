@@ -4,10 +4,18 @@
 ten_legged_creature
 
 # Why This Needs Clarification
-Creature may be new character or variant; needs clarification on identity and species
+Potential existing identity matches detected:
+- apache_warriors (score 10; chapters: CH002; aliases: -)
+- james_k_powell (score 10; chapters: CH001; aliases: -)
+- john_carter (score 10; chapters: CH001; aliases: -)
 
 # Question
-Is the ten-legged creature a new character type, and what is its full species classification?
+This character may match one of the existing canonical identities above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical character?
+
+# Candidate Matches
+- apache_warriors (score 10; chapters: CH002; aliases: -)
+- james_k_powell (score 10; chapters: CH001; aliases: -)
+- john_carter (score 10; chapters: CH001; aliases: -)
 
 # Guidance
 - answer briefly and concretely

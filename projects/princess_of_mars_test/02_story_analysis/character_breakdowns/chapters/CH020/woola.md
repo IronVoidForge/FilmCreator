@@ -1,31 +1,23 @@
-# Woola - CH020
+# Woola
+**Role:** Companion / Protector
 
-**Display Name:** Woola  
-**Chapter Role:** Loyal companion, left Dejah Thoris due to presumed death  
-**Physical Presence:** Present  
+**Status:** Physically Present
 
-**Physical Description (Supported by Source):**  
-Appears half-starved, shadow of former self. Eating dead beast's carcass.
+**Physical Description:** 
+An emaciated calot.
 
-**Costume & Silhouette:**  
-- Half-starved appearance
-- Shadow of former self (significantly changed)
-- Consuming carcass of wild beast
+**Costume & Silhouette:** 
+A Martian beast/animal companion; currently thin and bony due to the trek.
 
-**Continuity-Critical Traits:**  
-- Left Dejah Thoris due to her presumed death
-- Loyalty emphasized despite circumstances
-- Appears after Carter's two weeks of starvation and attacks
+**Descriptive Noun Phrases:** 
+Emaciated calot, faithful Martian beast, protective animal companion.
 
-**Render-Facing Prompt Noun Phrases:**  
-"half-starved appearance", "shadow of former self", "eating beast carcass", "loyal companion", "Martian dog figure"
-
-**Uncertainty Notes:**  
-The "shadow of former self" indicates significant physical change, but sufficient description exists for image generation.
+**Uncertainty Notes:** 
+Specific species morphology (size, color, number of limbs) is not detailed in this chapter beyond being a "calot."
 
 # Aliases
 
-None
+Calot
 
 
 

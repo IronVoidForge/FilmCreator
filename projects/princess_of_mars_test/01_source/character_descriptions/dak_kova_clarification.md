@@ -4,10 +4,10 @@
 dak_kova
 
 # Why This Needs Clarification
-Character may already exist under established name from earlier chapters; needs verification of current identification status
+Physical appearance and stature are unknown.
 
 # Question
-Is Dak Kova's physical appearance consistent with prior chapter documentation, or does this chapter require new descriptive details?
+What is Dak Kova's physical appearance and what does his Warhoon chieftain attire look like?
 
 # Guidance
 - answer briefly and concretely

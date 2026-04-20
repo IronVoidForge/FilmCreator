@@ -1,31 +1,11 @@
-# Atmosphere Factory Environment
+# Atmosphere Factory
 
-## Role
-Primary and Secondary Setting - Main industrial facility where Carter meets the old Martian guardian and learns about atmosphere production
+**Role:** Primary Setting
 
-## Architecture and Geography
-- Massive building structure with walls 150 feet thick
-- Roof guarded by glass covering five feet thick  
-- Doors 20 feet thick, manipulated via telepathic thought waves
-- Interior space for guardian quarters and ninth ray production area
-- Barsoomian industrial architecture style
+**Architecture:** Massive four-square-mile concrete facility; automated heavy doors; complex internal machinery; high-security industrial design.
 
-## Lighting and Atmosphere Cues
-- Moon-lit interior with nearer moon illumination
-- Strange atmospheric quality from ninth ray scintillation
-- Telepathic activation creates visible energy waves
-- Industrial lighting mixed with natural moonlight
+**Lighting and Atmosphere:** Artificial lighting; humming energy from the "ninth ray"; sterile yet ancient; sense of immense, hidden power.
 
-## Scale Cues and Environmental Anchors
-- Wall thickness: 150 feet (massive industrial scale)
-- Door thickness: 20 feet (imposing entryway)
-- Glass roof coverage: five feet thick (protective overhead)
-- Guardian quarters as interior anchor point
-- Ninth ray production area as functional anchor
+**Scale and Anchors:** Colossal scale; radium pumps; central ninth-ray generator; thought-wave locks.
 
-## Descriptive Noun Phrases for Render Prompts
-- "massive industrial facility with telepathic door manipulation"
-- "old Martian guardian quarters inside atmosphere factory"
-- "ninth ray production chamber with scintillating energy"
-- "thick glass roof covering five feet thick"
-- "moon-lit interior space with telepathic activation waves"
+**Prompt Phrases:** massive concrete factory, industrial atmosphere plant, ninth ray machinery, radium pumps, high-tech ancient facility, automated heavy doors.

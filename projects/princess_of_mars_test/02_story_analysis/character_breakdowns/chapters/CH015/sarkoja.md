@@ -1,12 +1,11 @@
-# Sarkoja - Chapter XV
+# Sarkoja
+**Role:** Referenced Character
 
-**Display Name:** Sarkoja  
-**Chapter Role:** Antagonist, referenced through suspicion context  
-**Physical Presence:** Not physically present in this chapter  
-**Physical Description:** Not provided in this chapter; only known through backstory context  
-**Costume/Silhouette:** Not described beyond suspicion context  
-**Continuity-Critical Traits:** Suspects identity of Sola's father; knows something about Sola's origin but hasn't exposed her yet; currently cruellest of the cruel; responsible for Sola's mother's death by torture; awaiting opportunity to crush ambition  
-**Uncertainty Notes:** Not physically present in this chapter; only referenced through suspicion and backstory context
+**Status:** Referenced
+
+**Description:** The individual who discovered the secret relationship between Sola's mother and her father.
+
+**Prompt Phrases:** Discoverer, antagonist figure.
 
 # Aliases
 
@@ -26,10 +25,10 @@ false
 
 # Manual Description Input Required
 
-Yes
+No
 
 
 
 # Manual Description Reason
 
-Only referenced in context of suspicion about Sola's origin; not physically present in this chapter; no physical description provided
+None

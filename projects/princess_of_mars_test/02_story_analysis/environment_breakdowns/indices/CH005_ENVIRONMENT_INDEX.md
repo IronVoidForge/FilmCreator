@@ -1,15 +1,7 @@
-# Environment Index - Chapter V
+# Environment Index
 
-## Primary Environments
-
-| Asset ID | Environment Name | Role | Key Features |
-|----------|------------------|------|--------------|
-| room_interior | Sola's Chamber | Primary Setting | Silk/fur linings, nature murals, food delivery area |
-| martian_city_street | Deserted Martian Street | Transit Setting | Open pathways, city edge boundary |
-| building_overlooking_valley | Valley Observation Building | Secondary Setting | 30ft window sill, valley view |
-
-## Environment Categories
-
-- **Captivity Spaces**: Room interiors with guardian oversight
-- **Transit Zones**: Streets and pathways for movement/escape
-- **Observation Points**: Elevated structures overlooking terrain
+| Asset ID | Description | Role |
+| :--- | :--- | :--- |
+| captive_chamber_murals | A decorated room featuring Martian landscape murals. | Primary |
+| deserted_martian_cityscape | An empty, urban street at the edge of a city. | Transit |
+| overlooking_building_interior | A high-altitude building interior with large windows. | Secondary |

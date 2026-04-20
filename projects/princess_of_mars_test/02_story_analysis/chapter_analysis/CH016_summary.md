@@ -1,9 +1,3 @@
-**Arrival at Thark:** Journey complete (20 days). Arrival at city (30 days after advent on Barsoom). Entry into plaza receives formal greetings; interest aroused by captives.
-**Quarters Assigned:** John Carter assigned a large building near the plaza, architecture grander than Korad. Warriors occupy buildings based on chieftain retinues or scattered sections.
-**Reconciliation Attempt:** John Carter visits Dejah Thoris's room. Confesses love ("I am yours"). She accepts his service but remains guarded regarding her heart.
-**Threat Revealed:** Sola reports Sarkoja plans to throw them to calots in arena games.
-**Escape Plan Formulated:** Decide to escape that night. Map drawn on marble floor by Dejah Thoris showing waterways and cities. Route chosen: northern waterway to avoid suspicion.
-**Execution Begins:** John Carter saddles two thoats, leaves city alone at night via southern boundary.
-**Discovery of Plan:** Warriors discover plan (hear him leaving). Plan compromised.
-**Return to Quarters:** John Carter hides animals in courtyard of a building, returns to Dejah Thoris's quarters via rooftops/courts.
-**Climax:** Overhears chieftain ordering warriors to capture John Carter when he returns. Chieftain confirms Sarkoja has secured Dejah Thoris ("safe in the arms of Tal Hajus").
+After a twenty-day journey across Martian sea bottoms and cultivated lands, John Carter and Dejah Thoris arrive at the ancient city of Thark, the stronghold of the green Tharks ruled by Tal Hajus. Upon settling into their quarters, John Carter confesses his absolute devotion to Dejah Thoris and enlists her help in planning an escape. They attempt to persuade Sola to join them, promising her sanctuary among the red men of Helium, but she expresses deep skepticism regarding the safety of their route. Using a diamond to map out waterways on a marble floor, the group decides on a northern route to bypass Thark territory.
+
+The escape is set for that night, but as John Carter prepares his thoats and moves toward the rendezvous point, he realizes the plan has been compromised after overhearing mounted warriors discussing their intentions. While maneuvering through the city to find the women, Carter climbs into Dejah Thoris's quarters and overhears a Thark chieftain instructing warriors to ambush him and imprison him in the vaults for Tal Hajus. He also learns that Sola has already been taken into custody.

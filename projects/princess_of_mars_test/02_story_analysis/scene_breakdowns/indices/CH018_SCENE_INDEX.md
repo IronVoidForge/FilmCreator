@@ -1,5 +1,6 @@
-SC001 - Carter regains consciousness in Warhoon room, meets ancient female and Dak Kova
-SC002 - Carter brought before Jeddak Bar Comas for combat at great games
-SC003 - Battle between Bar Comas and Dak Kova, Bar Comas defeated and killed
-SC004 - Decision to abandon Thark raid expedition, warriors turn back to Warhoon
-SC005 - Carter imprisoned in dungeon, kills jailer with chain, obtains escape keys
+* [SC001](#sc001) - Awakening and Transport
+* [SC002](#sc002) - The Duel of the Jeddaks
+* [SC003](#sc003) - The March to Warhoon
+* [SC004](#sc004) - Imprisonment in the Dark
+* [SC005](#sc005) - The Kill and the Keys
+* [SC006](#sc006) - Eyes in the Shadows

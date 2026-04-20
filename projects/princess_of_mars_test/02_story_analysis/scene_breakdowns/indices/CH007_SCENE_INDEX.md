@@ -1,5 +1,4 @@
-SC001|Procession Setup and Movement|Sola escorts narrator to plaza, community harnesses animals to chariots, procession moves in single file through warriors at head and rear. Narrator dragged into empty chariot, proceeds to incubator location.
-SC002|Incubator Hatching Ceremony|Eggs hatch after five-year period, young Martians (3-4 feet tall) released, Tars Tarkas explains hatching to Lorquas Ptomel, narrator performs leap over parked chariots for entertainment.
-SC003|Child-Raising Gauntlet Ritual|Women and children form two solid walls leading out through chariots, young Martians run gauntlet length, captured one at a time by women or older children, last in line captures first to reach end.
-SC004|Societal Explanation of Martian Parenting|Narrator learns Martian child-rearing involves teaching weapons and language from infancy, no parental love exists, children are communal property, deformed/defective young are shot, birth rate regulated to offset death on dying planet.
-SC005|Training Progression and Abilities Development|Sola cares for narrator and young Martian prize (male, 4 feet tall), narrator masters walking under Martian conditions, learns language in a week, develops telepathic powers, unique advantage: cannot be read by others' minds.
+* [SC001](#sc001) - The Grand Procession to the Dead Sea
+* [SC002](#sc002) - The Hatching Ceremony at the Incubator
+* [SC003](#sc003) - The Brutal Reality of Martian Upbringing
+* [SC004](#sc004) - Tutelage and Telepathic Training

@@ -1,3 +1,4 @@
-SC001 | The Arrival and Watch | Setup | Upper floor building, sky | Narrator (I), Sola, Woola | Anticipation -> Alertness
-SC002 | The Battle and Capture | Escalation | Sky, ship debris | Narrator (I), Sola, Woola, Martians | Alertness -> Shock
-SC003 | The Prisoner and the Sign | Aftermath/Reveal | City street, building interior | Narrator (I), Sola, Woola, Martians, Prisoner | Shock -> Regret
+1. [SC001: The Aerial Assault](#sc001)
+2. [SC002: The Spoils of War](#sc002)
+3. [SC003: The Empathic Observer](#sc003)
+4. [SC004: The Silent Plea](#sc004)

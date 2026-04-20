@@ -1,36 +1,15 @@
-# Sarkoja - Chapter XIV
+# Sarkoja
+**Role:** Antagonist
 
-**Display Name:** Sarkoja  
-**Chapter Role:** Attempted attacker, dagger wielder  
-**Physical Presence:** Present on chariot  
+**Presence:** Physically Present
 
-**Physical Description (Supported by Source):**
-- On chariot during fight scene
-- Dagger weapon present
-- Attempts to stab Dejah
+**Description:** A hostile figure who directs intense hatred toward Carter. Uses a mirror to catch sunlight to blind opponents during combat.
 
-**Costume & Silhouette:**
-- Warrior attire (general designation)
-- Dagger at ready position
-- No detailed costume or body characteristics documented
-
-**Continuity-Critical Traits:**
-- Attempts to stab Dejah with dagger
-- Intervention by Sola prevents successful attack
-- Present during chariot journey to Thark
-
-**Render-Facing Prompt Notes:**
-"Sarkoja on chariot, dagger at ready position, attempting to stab Dejah, warrior attire"
-
-**Uncertainty Notes:**
-- Physical features beyond weapon type not documented
-- Costume details limited to general warrior designation
-- Facial characteristics and body build unknown
-- Cannot support dependable image generation without additional visual specification
+**Prompt Phrases:** Hostile warrior, using reflective mirror for blinding, aggressive stance.
 
 # Aliases
 
--
+None
 
 
 
@@ -42,7 +21,7 @@ sarkoja
 
 # Fully Identified
 
-false
+true
 
 # Manual Description Input Required
 

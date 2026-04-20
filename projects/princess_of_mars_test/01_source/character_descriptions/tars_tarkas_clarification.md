@@ -4,10 +4,10 @@
 tars_tarkas
 
 # Why This Needs Clarification
-Title used instead of specific name; need to confirm if character has a proper name (e.g., Thak).
+Character is referenced but not visually described in this chapter.
 
 # Question
-Does this chieftain have a specific name (e.g., Thak) or is this a generic role?
+What are Tars Tarkas's physical characteristics and appearance?
 
 # Guidance
 - answer briefly and concretely

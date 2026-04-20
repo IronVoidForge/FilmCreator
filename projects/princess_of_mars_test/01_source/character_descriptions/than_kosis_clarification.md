@@ -4,10 +4,15 @@
 than_kosis
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Physical appearance unknown from text.
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+What does the Jeddak of Zodanga look like?
+
+# Candidate Matches
+- apache_warriors (score 10; chapters: CH002; aliases: -)
+- ape_creature_1 (score 10; chapters: CH006; aliases: -)
+- ape_creature_2 (score 10; chapters: CH006; aliases: -)
 
 # Guidance
 - answer briefly and concretely

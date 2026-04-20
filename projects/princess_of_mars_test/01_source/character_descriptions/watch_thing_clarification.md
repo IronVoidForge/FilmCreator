@@ -4,10 +4,10 @@
 watch_thing
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Needs more detail for consistent rendering of the creature's skin/fur and limb structure.
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+What is the color, texture (fur vs scales), and specific number of legs for the watch-thing?
 
 # Guidance
 - answer briefly and concretely

@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-set "FILMCREATOR_ROOT=C:\FilmCreator"
+call "%~dp0..\..\_shared\resolve_filmcreator_root.bat" "%~dp0" || exit /b 1
 set "PROJECT_SLUG=pilot_scene"
 set "SCENE_ID=SC001"
 set "CLIP_ID=CL001"
@@ -10,8 +10,8 @@ set "PROMPT_FILE=projects/pilot_scene/03_prompt_packages/cut_motion/SC001/CL001/
 set "VIDEO_DIR=projects/pilot_scene/05_scenes/SC001/clips/CL001/video"
 set "CLIP_STATE=projects/pilot_scene/05_scenes/SC001/clips/CL001/clip_state.json"
 set "FILMCREATOR_COMFY_BASE_URL=http://127.0.0.1:8191"
-set "FILMCREATOR_COMFY_INPUT_DIR=C:\FilmCreator\.comfy_video\input"
-set "FILMCREATOR_COMFY_OUTPUT_DIR=C:\FilmCreator\.comfy_video\output"
+set "FILMCREATOR_COMFY_INPUT_DIR=%FILMCREATOR_ROOT%\.comfy_video\input"
+set "FILMCREATOR_COMFY_OUTPUT_DIR=%FILMCREATOR_ROOT%\.comfy_video\output"
 set "FILMCREATOR_COMFY_TIMEOUT_SECONDS=7200"
 set "PLAN_JSON=%TEMP%\filmcreator_cut_motion_plan_%RANDOM%.json"
 set "RUN_JSON=%TEMP%\filmcreator_cut_motion_run_%RANDOM%.json"

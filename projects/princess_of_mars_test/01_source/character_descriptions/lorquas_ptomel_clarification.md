@@ -4,10 +4,10 @@
 lorquas_ptomel
 
 # Why This Needs Clarification
-Character may already exist under another name or is too weakly identified in this chapter to confirm stable identity across reruns.
+Is this a specific named character or a generic Thark leader?
 
 # Question
-Is Lorquas Ptomel a distinct character from other chieftains mentioned, and what are his physical characteristics?
+Does the chieftain have a name or unique visual identifiers?
 
 # Guidance
 - answer briefly and concretely

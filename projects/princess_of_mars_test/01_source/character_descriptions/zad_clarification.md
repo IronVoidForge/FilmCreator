@@ -4,10 +4,10 @@
 zad
 
 # Why This Needs Clarification
-Character identified only by name "Zad" with minimal physical attributes. Green Martian warrior designation present but insufficient for complete character rendering.
+Identity and appearance unknown.
 
 # Question
-What are Zad's specific physical features (height, build, facial characteristics)? What costume details beyond green Martian warrior attire? Any distinctive markings or accessories?
+What is Zad's physical appearance and affiliation?
 
 # Guidance
 - answer briefly and concretely

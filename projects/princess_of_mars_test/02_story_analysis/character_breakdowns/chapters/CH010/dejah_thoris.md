@@ -1,15 +1,17 @@
 # Dejah Thoris
+**Role:** Captive Princess / Orator
 
-**Chapter Role:** Princess of Helium / Pleader for Peace  
-**Physical Presence:** Present in Audience Chamber; receives injuries from young warrior's attack  
-**Physical Description:** Princess of Helium; wears cape with silk mentioned during scene. Nosebleed injury noted after combat intervention.  
-**Costume/Silhouette:** Cape with silk material; Thark chieftain audience chamber attire.  
-**Continuity-Critical Traits:** Name revealed as "Dejah Thoris" from Helium. Scientific expedition background explained. Pleads for peace between Red Men (Martians) and Green Men (Tharks). Status: prisoner transitioning to protected person under John Carter's protection.  
-**Render-Facing Prompt Noun Phrases:** princess of helium, cape with silk, scientific expedition background, pleader for peace, nosebleed injury, protected by john carter.
+**Status:** Physically Present
+
+**Physical Description:** A princess of the Therns/Martians; delivers a powerful, moving speech.
+
+**Costume/Silhouette:** Captive status implied.
+
+**Prompt Phrases:** Martian princess, regal presence, orator, captive.
 
 # Aliases
 
--
+Princess Dejah Thoris
 
 
 

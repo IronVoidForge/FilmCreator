@@ -1,26 +1,17 @@
 # John Carter
+**Role:** Protagonist / Warrior
 
-## Chapter Role
-Protagonist / Chieftain of Tharks.
+**Status:** Physically Present
 
-## Physical Presence
-Referenced and Present (Stationed in passage, leaves post to confront Dejah Thoris).
+**Physical Description:** Possesses extraordinary strength and skill; capable of leaping from high balconies.
 
-## Physical Description
-No specific physical description provided in the chapter text.
+**Costume/Traits:** Wearing unfamiliar armor (not recognized by Dejah Thoris initially).
 
-## Costume & Silhouette
-Wears attire consistent with a chieftain; carries a long-sword.
-
-## Continuity Traits
-Identifies himself as John Carter to Dejah Thoris.
-
-## Uncertainty Notes
-Physical appearance details (hair, eyes, build) are missing from the source text and require manual description for reliable image generation.
+**Prompt Phrases:** Strong human warrior, agile combatant, wearing unfamiliar heavy armor, superhuman physical capabilities.
 
 # Aliases
 
-None
+Carter
 
 
 
@@ -36,10 +27,10 @@ true
 
 # Manual Description Input Required
 
-Yes
+No
 
 
 
 # Manual Description Reason
 
-No physical description (hair, eyes, build) provided in the chapter text to support image generation.
+None

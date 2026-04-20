@@ -4,10 +4,15 @@
 tardos_mors
 
 # Why This Needs Clarification
-Need to establish Jeddak of Helium's physical appearance for consistent character representation across future chapters and media.
+Needs visual details for character model.
 
 # Question
-What does the Jeddak of Helium (Tardos Mors) look like? Please describe his physical features, clothing, and any distinctive visual characteristics.
+What is the physical appearance and age of Tardos Mors?
+
+# Candidate Matches
+- apache_warriors (score 10; chapters: CH002; aliases: -)
+- ape_creature_1 (score 10; chapters: CH006; aliases: -)
+- ape_creature_2 (score 10; chapters: CH006; aliases: -)
 
 # Guidance
 - answer briefly and concretely

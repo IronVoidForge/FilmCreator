@@ -1,3 +1,2 @@
-SC001 | Audience Chamber - Interrogation and Warning
-SC002 | Plaza & Building Exterior - Quarters Offered
-SC003 | Third Floor Interior - Retinue Arrival, Loot, Room Selection, Cultural Exposition
+* [SC001](#sc001) - The Warning of Lorquas Ptomel
+* [SC002](#sc002) - Settlement and Spoils

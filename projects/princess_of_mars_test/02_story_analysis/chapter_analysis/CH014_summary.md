@@ -1,19 +1,3 @@
-# Chapter XIV: A Duel to the Death
+John Carter struggles with his unspoken feelings for Dejah Thoris, fearing that a confession might burden her further; however, a misunderstanding leads to a moment of tension where Dejah withdraws from him in silent dignity. As the group prepares to depart for Thark, Carter protests the heavy chains Sarkoja has placed on Dejah's chariot, but Tars Tarkas defends it as a security measure, though he later shows a hint of compassion by unfastening her fetters during a campout. Amidst this, Carter notes the intense hatred directed toward him by Sarkoja and the warrior Zad.
 
-## Plot Summary
-John Carter reflects on his love for Dejah Thoris and her rejection, fearing he has taken advantage of her helplessness. They travel in chariots towards Thark; Dejah is chained by one ankle to her vehicle. Carter fights a warrior named Zad who strikes him with a long-sword during a halt. During the fight, Dejah throws a mirror that blinds Carter at a crucial moment. Sarkoja attempts to stab Dejah, but Sola intervenes and gets stabbed. Carter is wounded in the shoulder and chest by Zad's sword thrust as the chapter ends.
-
-## Key Scenes for Decomposition
-1. **Internal Conflict:** Carter meditating on his love and Dejah's rejection (silks/furs, moonlight).
-2. **Journey to Thark:** Chariot travel, manacles/chains, Tars Tarkas' reasoning on security.
-3. **Combat with Zad:** Crowd surrounding the fight, weapon matching (long-sword vs long-sword), endurance and agility.
-4. **Interruption by Dejah/Sola/Sarkoja:** Mirror thrown, Sarkoja's dagger aimed, Sola shielding Dejah, Carter blinded.
-5. **Climax of Fight:** Carter wounded in chest, dizziness, blacking out.
-
-## Visual Continuity Facts (Chapter Specific)
-- **Chariot Interior:** Rearranging silks and furs, heavy chains on ankle, massive spring lock manacles.
-- **Weapons:** Long-swords (green Martians), short-swords (Carter), hatchets, daggers.
-- **Lighting:** Blinding flash of light from mirror, moonlit skies, sunlight in plaza.
-- **Attire:** Silks from shoulders, riding cloths on thoats, furs.
-- **Injuries:** Wound to left shoulder, sharp point at breast, dizziness/blackout.
-- **Characters Present:** Dejah Thoris, Sola, Sarkoja (on chariot), Zad (fighting Carter).
+The tension escalates when Dejah Thoris expresses her contempt for Carter through Sola, leaving Carter feeling profoundly homesick for Earth. During the march toward Thark, the party destroys an incubator belonging to the green men of Warhoon. The journey takes a violent turn during a rest halt when Zad provokes Carter into a formal duel. As they fight, Sarkoja uses a mirror to catch the sun and blind Carter, attempting to aid Zad in a killing blow. In the ensuing chaos, Sola heroically leaps to shield Dejah Thoris from Sarkoja's dagger, but the distraction allows Zad to land a fatal thrust in Carter's chest, leaving him fading into unconsciousness.

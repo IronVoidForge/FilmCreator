@@ -1,29 +1,15 @@
 # Dejah Thoris
+**Role:** Missing Princess
 
-**Display Name:** Dejah Thoris  
-**Chapter Role:** Referenced Character (Believed Dead)  
-**Presence Status:** Referenced Only  
+**Presence:** Referenced (Captive)
 
-**Physical Description (Supported by Source):**  
-Not specified in the provided chapter summary. No physical attributes are described.
+**Description:** The Princess of Helium, currently rumored to be held captive by Prince Sab Than.
 
-**Costume & Silhouette:**  
-Not specified in the provided chapter summary.
-
-**Continuity-Critical Traits:**  
-- Believed dead by Zodangans but not confirmed.
-- Subject of news report John Carter intends to deliver to Helium.
-
-**Descriptive Noun Phrases for Render-Facing Prompts:**  
-- High-status Martian woman (implied by name recognition).
-- Central figure in John Carter's narrative arc.
-
-**Uncertainty Notes:**  
-Physical attributes are unknown and cannot be reliably inferred from the source text. Image generation will require manual description input to ensure accuracy.
+**Prompting Phrases:** Martian royalty, missing princess.
 
 # Aliases
 
-None
+Princess Dejah Thoris
 
 
 
@@ -35,14 +21,14 @@ dejah_thoris
 
 # Fully Identified
 
-true
+false
 
 # Manual Description Input Required
 
-Yes
+No
 
 
 
 # Manual Description Reason
 
-The chapter summary references Dejah Thoris's fate but does not provide specific physical attributes.
+None

@@ -5,6 +5,9 @@ from dataclasses import dataclass
 from pathlib import Path
 
 
+DEFAULT_LLM_MODEL = "google_gemma-4-26b-a4b-it"
+
+
 @dataclass(frozen=True)
 class RuntimeSettings:
     comfy_base_url: str
@@ -27,6 +30,6 @@ def load_runtime_settings() -> RuntimeSettings:
         comfy_timeout_seconds=float(os.environ.get("FILMCREATOR_COMFY_TIMEOUT_SECONDS", "1800.0")),
         keep_staged_files=os.environ.get("FILMCREATOR_KEEP_STAGED_FILES", "").lower() in {"1", "true", "yes"},
         lmstudio_base_url=os.environ.get("FILMCREATOR_LMSTUDIO_BASE_URL", "http://127.0.0.1:1234/v1").rstrip("/"),
-        lmstudio_model=os.environ.get("FILMCREATOR_LMSTUDIO_MODEL") or None,
+        lmstudio_model=os.environ.get("FILMCREATOR_LMSTUDIO_MODEL") or DEFAULT_LLM_MODEL,
         lmstudio_timeout_seconds=float(os.environ.get("FILMCREATOR_LMSTUDIO_TIMEOUT_SECONDS", "120.0")),
     )

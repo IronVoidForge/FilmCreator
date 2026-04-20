@@ -1,22 +1,20 @@
 # Woola
+**Role:** Companion / Pet
 
-**Chapter Role:** Hound / Companion  
-**Presence:** Physically Present  
+**Status:** Physically Present
 
-## Physical Description
-*   **Source Support:** Identified as a hound.  
-*   **Known Traits:** Canine species.  
+**Physical Description:** 
+A Martian hound that follows the protagonist.
 
-## Costume & Silhouette
-*   **Source Support:** None provided.  
-*   **Continuity Notes:** Standard dog anatomy (inferred).  
+**Costume/Silhouette:** 
+Unknown.
 
-## Uncertainty Notes
-> **Critical Missing Detail:** Specific breed, size, coat color, or markings are not described in this chapter. For image generation, a generic hound form must be assumed or clarified based on broader story context outside this specific summary.
+**Uncertainty Notes:** 
+Visual appearance is limited to species designation; specific morphology is unknown.
 
 # Aliases
 
-None
+Martian hound
 
 
 
@@ -28,7 +26,7 @@ woola
 
 # Fully Identified
 
-true
+false
 
 # Manual Description Input Required
 

@@ -1,39 +1,19 @@
-# Sola - Character File
+# Sola
+**Role:** Compassionate Martian observer
 
-## Display Name
-Sola
+**Status:** Physically Present
 
-## Chapter Role
-Young woman/Martian, protagonist's friend
+**Physical Description:** A Martian woman who displays compassion and solicitude toward the protagonist.
 
-## Physical Presence
-Appears in doorway during victory celebration (Scene 4) and grasps protagonist by arm (Scene 6)
+**Costume/Silhouette:** Unknown.
 
-## Physical Description
-Limited details provided in chapter summary. Identified as a young woman but no specific physical features like height, build, or distinctive marks are mentioned in the source material.
+**Descriptive Noun Phrases:** Compassionate Martian woman, caring observer.
 
-## Costume and Silhouette
-No costume details provided in chapter summary. Silhouette not described beyond general human form implied by context of Mars setting.
-
-## Continuity-Critical Traits
-- Sober with apparent solicitude unlike others whose faces were twisted in laughter (Scene 4)
-- Rushes to examine protagonist's body for wounds (Scene 4)
-- Grasps protagonist tightly by the arm (Scene 6)
-- Represents protagonist's two friends on Mars along with the beast (Conclusion)
-
-## Descriptive Noun Phrases for Render-Facing Prompts
-- "young woman showing concern"
-- "Martian with sober demeanor"
-- "figure examining wounds with care"
-- "friend grasping arm tightly"
-- "young woman among laughing Martians"
-
-## Uncertainty Notes
-Physical appearance details are uncertain due to limited description in chapter summary. Height, build, hair color, eye color, and distinctive marks cannot be reliably determined from source material. Costume and accessories not described beyond general context of Mars setting.
+**Uncertainty Notes:** No physical or costume details are present in the text.
 
 # Aliases
 
-"young woman", "Martian woman"
+Martian woman
 
 
 
@@ -45,14 +25,14 @@ sola
 
 # Fully Identified
 
-true
+false
 
 # Manual Description Input Required
 
-Yes
+No
 
 
 
 # Manual Description Reason
 
-"Chapter summary only mentions Sola as a young woman with no specific physical features like height, build, or distinctive marks"
+None

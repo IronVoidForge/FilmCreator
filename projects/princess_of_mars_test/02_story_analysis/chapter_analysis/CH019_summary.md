@@ -1,21 +1,15 @@
-# Chapter Summary: CH019 - Battling in the Arena
+**Setting:** A subterranean amphitheater within a ruined green Martian city; later, the hills east of the city.
 
-**Visual Continuity Facts:**
-- **Dungeon/Cell:** Dark environment; keys missing from dead jailer's body.
-- **Amphitheater:** Excavated below ground surface, filled with debris, holds 20,000 Warhoons.
-- **Arena:** Immense, uneven, unkempt, piled with building stone to prevent escape. Cages at ends holding victims.
-- **Audience:** Seating space occupied, Dak Kova and chieftains on raised platform.
-- **Victims:** Green Martian females, calots (wild dogs), mad zitidars, green warriors, women of other hordes, wild beasts.
+**Characters:**
+- **John Carter:** A prisoner of the Warhoon, fighting for survival in the arena.
+- **Kantos Kan:** A padwar (lieutenant) from Helium and a fellow prisoner; becomes a close ally to Carter.
+- **Dak Kova:** The leader/chieftain of the Warhoon horde.
+- **Warhoon Horde:** A bloodthirsty green Martian community hosting gladiatorial games.
 
-**Story Progression:**
-1. Carter regains composure, realizes keys are gone, Dejah Thoris taken to lair.
-2. No food for two days, then new messenger.
-3. Kantos Kan arrives as new prisoner (red Martian/Heliumite). They exchange greetings and stories.
-4. Kantos details his escape from Zodanga after the defeat of battleships.
-5. Caged together in amphitheater for games.
-6. Games begin: Green females vs calots, then mad zitidar, etc.
-7. Carter fights men/beasts easily with long-sword.
-8. Final three left: Green warrior, Kantos Kan, Carter.
-9. Kantos kills green warrior with thrown sword.
-10. Carter and Kantos fight to death (fake out). Carter survives in darkness.
-11. Carter escapes stealthily to top of amphitheater, reaches hills east of city.
+**Events:**
+- **Loss of Keys:** After being left in darkness, John Carter realizes his jailer's keys have been stolen by creatures from the nearby lair.
+- **Meeting Kantos Kan:** Carter meets a fellow prisoner, Kantos Kan of Helium. Kan provides intelligence regarding Dejah Thoris, noting that she and Sola likely escaped into the hills near a waterway. He also details the failed search efforts by Helium's fleets.
+- **The Gladiatorial Games:** The prisoners are taken to an immense, excavated amphitheater for a ten-day tournament. The games involve pitting humans, green warriors, and ferocious Martian beasts against one another until only one victor remains.
+- **Arena Combat:** Carter survives multiple bouts against men and beasts using his superior strength and agility. Kantos Kan survives by using a specialized long-distance sword throw to kill a massive sixteen-foot northern warrior.
+- **The Escape Plan:** As the final two combatants, Carter and Kantos Kan conspire to fake Carter's death. Under the cover of darkness, Kantos Kan performs a staged killing blow that fails to strike a vital organ. 
+- **Escape:** Believing Carter dead, the crowd disperses. Carter crawls from the arena and successfully reaches the hills east of the city to begin his escape.

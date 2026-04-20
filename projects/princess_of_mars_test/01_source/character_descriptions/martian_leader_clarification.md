@@ -4,10 +4,10 @@
 martian_leader
 
 # Why This Needs Clarification
-Character lacks stable identification for image generation purposes.
+Needs distinction from standard warriors to ensure unique character design.
 
 # Question
-What are the leader's approximate height, build, skin tone, hair color, facial features, and any distinguishing marks or accessories beyond the metal armlet?
+Does the leader have unique markings, different colored skin/eyes, or specific armor that distinguishes him from the other twenty warriors?
 
 # Guidance
 - answer briefly and concretely

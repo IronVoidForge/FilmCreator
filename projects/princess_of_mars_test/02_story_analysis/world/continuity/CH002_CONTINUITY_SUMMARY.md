@@ -5,24 +5,22 @@
 - CH002_SC002
 - CH002_SC003
 - CH002_SC004
-- CH002_SC005
 
 ## Known Canonical Characters
-- dead_friend
+- deceased_friend
+- james_k_powell
 - john_carter
-- mars
-- powell
+- protagonist
 
 ## Unresolved / Provisional Characters
-- narrator
+- None
 
 ## Known Canonical Environments
-- apache_tepees
-- arizona_exterior_night
-- arizona_hills
-- cave_chamber
-- cave_interior
-- heavens_above_landscape
+- apache_plateau_camp
+- arizona_mountain_cave
+- arizona_mountain_quartz_vein
+- cliffside_cave_system
+- rocky_gorge_nightscape
 
 ## Registry Artifacts
 - projects/princess_of_mars_test/02_story_analysis/world/CHARACTER_REGISTRY.json

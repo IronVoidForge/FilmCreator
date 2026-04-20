@@ -1,15 +1,19 @@
 # Tars Tarkas
+**Role:** Thark Warrior / Authority figure
 
-**Chapter Role:** Chieftain / Rules Authority  
-**Physical Presence:** Present in Audience Chamber with Lorquas Ptomel; explains rules to John Carter  
-**Physical Description:** Limited description available. Identified as chieftain who explains prisoner and chieftain status rules.  
-**Costume/Silhouette:** Thark chieftain regalia/trappings mentioned in general scene notes.  
-**Continuity-Critical Traits:** Explains rules regarding prisoners and chieftain status to John Carter after combat intervention. Part of ruling authority in Audience Chamber.  
-**Render-Facing Prompt Noun Phrases:** thark chieftain, explains prisoner rules, explains chieftain status, audience chamber authority, regalia/trappings.
+**Status:** Physically Present
+
+**Physical Description:** A Thark warrior moved by Dejah Thoris's speech; questions Carter's mastery of language.
+
+**Costume/Silhouette:** Unknown.
+
+**Prompt Phrases:** Thark warrior, imposing presence, Martian.
+
+**Uncertainty Note:** No visual details provided in the text.
 
 # Aliases
 
--
+None
 
 
 

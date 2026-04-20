@@ -1,25 +1,11 @@
 # Woola
+**Role:** Companion
 
-**Display Name:** Woola  
-**Chapter Role:** Companion Animal  
-**Presence Status:** Referenced (Separated before city entry)  
+**Presence:** Physically Present (referenced as separating from Carter)
 
-**Physical Description (Supported by Source):**  
-Not specified in the provided chapter summary. No physical attributes are described.
+**Description:** A companion to John Carter who stays behind to avoid detection during the infiltration of Zodanga.
 
-**Costume & Silhouette:**  
-Not specified in the provided chapter summary.
-
-**Continuity-Critical Traits:**  
-- Not domesticated by red men.
-- Separated from John Carter before entering Zodanga to prevent unwelcome attention.
-
-**Descriptive Noun Phrases for Render-Facing Prompts:**  
-- Martian companion animal.
-- Non-domesticated creature of the Ptor brothers' party.
-
-**Uncertainty Notes:**  
-Species and appearance are unknown and cannot be reliably inferred from the source text. Image generation will require manual description input to ensure accuracy.
+**Prompting Phrases:** Loyal creature, Barsoomian animal.
 
 # Aliases
 
@@ -39,10 +25,10 @@ true
 
 # Manual Description Input Required
 
-Yes
+No
 
 
 
 # Manual Description Reason
 
-The chapter summary references Woola but does not provide specific physical attributes like species, size, or appearance details.
+None

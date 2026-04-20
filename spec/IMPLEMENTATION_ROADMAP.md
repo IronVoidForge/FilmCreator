@@ -27,6 +27,9 @@ Ship a local-first, shot-oriented pipeline that can:
 
 ## Current Validated Checkpoint
 
+- The latest full `princess_of_mars_test` multi-chapter run completed `28/28` chapters with `0` failures.
+- The current default LM Studio model is `google_gemma-4-26b-a4b-it`.
+- The pipeline is materially more stable than the earlier Qwen run, but slower and still sensitive to context-window size on later chapters.
 - A clip-scoped `keyframe` batch can render successfully through the clean Comfy path.
 - `RUN_0001` produced four clip-local keyframe candidates in:
   - `projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/`

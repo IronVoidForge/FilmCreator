@@ -1,7 +1,9 @@
-# Zodanga Chapter Character Index
+# Character Index
 
-- **John Carter**: Protagonist, Air Scout, recipient of honors.
-- **Woola**: Companion animal, separated before city entry.
-- **Kantos Kan**: City official, air scout instructor.
-- **Dejah Thoris**: Referenced as believed dead.
-- **Jeddak Than Kosis**: Jeddak, awards honors to Carter.
+- [John Carter](#john-carter)
+- [Woola](#woola)
+- [Dejah Thoris](#dejah-thoris)
+- [Kantos Kan](#kantos-kan)
+- [Prince Sab Than](#prince-sab-than)
+- [Red Martian Scout](#red-martian-scout)
+- [Than Kosis](#than-kosis)

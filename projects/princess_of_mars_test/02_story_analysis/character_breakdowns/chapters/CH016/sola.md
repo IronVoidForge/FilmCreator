@@ -1,12 +1,15 @@
-# Sola - Chapter 016
+# Sola
+**Role:** Potential Escapee / Prisoner
 
-**Display Name:** Sola  
-**Chapter Role:** Reporter of Sarkoja's plan  
-**Physical Presence:** Referenced in threat revelation; physical presence uncertain (may be observer or messenger).  
-**Physical Description:** Not provided in source material. Actions indicate ability to report information about Sarkoja's plans.  
-**Costume/Silhouette:** No specific costume details available. Silhouette inferred from role as informant within city context.  
-**Continuity-Critical Traits:** Associated with threat intelligence regarding calots and arena games; linked to Sarkoja's actions.  
-**Uncertainty Notes:** Physical appearance, height, build, and specific attire are unknown. Role may be observer or messenger; visual markers not provided for later image generation.
+**Status:** Physically Present (later captured)
+
+**Physical Description:** (Specific visual details not provided in this chapter text).
+
+**Costume/Silhouette:** Resident of Thark.
+
+**Prompt Phrases:** Female, red woman, skeptic.
+
+**Uncertainty Notes:** Visual description is missing from the text.
 
 # Aliases
 
@@ -26,10 +29,10 @@ true
 
 # Manual Description Input Required
 
-Yes
+No
 
 
 
 # Manual Description Reason
 
-No physical description provided in chapter summary; only reporting action available.
+None

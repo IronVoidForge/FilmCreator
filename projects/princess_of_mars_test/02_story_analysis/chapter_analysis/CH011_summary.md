@@ -1,6 +1,17 @@
-**Scene 1: Arrival & Threat.** John Carter arrives with Dejah Thoris and Sola to new quarters near the audience chamber. He waves away Sarkoja's guards and threatens her death if she harms Dejah again (threat ineffective on Mars).
-**Scene 2: Hierarchy Discussion.** Sola explains Thark chieftain ranks to John, noting he is currently eleventh. She mentions Tars Tarkas's rank and the possibility of John becoming first by killing Lorquas Ptomel.
-**Scene 3: New Quarters Tour.** They inspect a building with ancient Martians' frescoes depicting fair-haired humans. Dejah Thoris admires the art; Sola does not notice. The room has swinging metal beds and gold chains.
-**Scene 4: Origin Debate.** Dejah Thoris questions John's claim of being from Earth (Virginia). She explains Barsoomian viewing technology that shows Earth clearly. John explains he is from another world (Earth) and describes the planet.
-**Scene 5: Martian History.** Discussion on the three great Martian races (fair-haired, red, dark/black) and their alliance due to drying seas. Dejah Thoris relates legends of the lost fair-haired race.
-**Ending:** A messenger summons John Carter to Lorquas Ptomel in the audience chamber.
+**Setting:**
+A pretentious, ancient building near the audience chamber in the city of Korad, featuring elaborate architecture and frescoes depicting an extinct, fair-skinned race of Martians.
+
+**Characters:**
+* **John Carter:** An Earthman and rising Thark chieftain.
+* **Dejah Thoris:** A princess of the red Martians; she is fascinated by ancient history and develops a deep trust in Carter.
+* **Sola:** A female Thark who acts as a guardian for both Carter and Dejah Thoris.
+* **Sarkoja:** A male Thark who harbors ill will toward Carter and Dejah Thoris.
+* **Lorquas Ptomel:** The high-ranking chieftain of the Tharks.
+* **Tars Tarkas:** A prominent Thark warrior.
+
+**Events:**
+* **Relocation:** After John Carter threatens Sarkoja to protect Dejah Thoris, he arranges for Sola to take Dejah Thoris to more secure, luxurious quarters in an ancient building.
+* **Social Standing:** Sola informs Carter that his prowess has earned him the rank of eleventh among the Thark chieftains, noting that only Lorquas Ptomel ranks higher.
+* **The Revelation:** In their new quarters, Dejah Thoris questions Carter's origins. Carter reveals he is from Earth (the planet Mars in his world). Despite the impossibility of his claim, Dejah Thoris chooses to believe him based on her intuition and his perceived honesty.
+* **Martian Lore & Technology:** Dejah Thoris explains that Martians can observe other planets via advanced telescopic imaging technology. She also provides a history lesson on the ancient, fair-haired Martians who preceded the current red race, explaining how environmental changes forced different races to merge or compete.
+* **Summons:** The peaceful conversation is interrupted by a messenger delivering a summons from Lorquas Ptomel, requiring Carter's immediate presence at the audience chamber.

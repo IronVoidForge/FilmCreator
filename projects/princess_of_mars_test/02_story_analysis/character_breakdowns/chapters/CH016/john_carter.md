@@ -1,16 +1,19 @@
-# John Carter - Chapter 016
+# John Carter
+**Role:** Protagonist / Escape Planner
 
-**Display Name:** John Carter  
-**Chapter Role:** Protagonist; assigned quarters, visits Dejah Thoris, escapes, returns  
-**Physical Presence:** Physically present throughout chapter (assigned building, courtyard, rooftops)  
-**Physical Description:** Not provided in source material. Actions indicate male figure capable of saddling thoats and navigating city architecture.  
-**Costume/Silhouette:** No specific costume details available. Silhouette inferred from ability to move through grand buildings and navigate waterways via map.  
-**Continuity-Critical Traits:** Central figure in escape plan; known by warriors and chieftain; associated with Dejah Thoris's quarters.  
-**Uncertainty Notes:** Physical appearance, height, build, and specific attire are unknown. No visual markers provided for later image generation.
+**Status:** Physically Present
+
+**Physical Description:** (Specific visual details not provided in this chapter text, though established as a human/red man).
+
+**Costume/Silhouette:** Preparing thoats for travel.
+
+**Prompt Phrases:** Human male, red man, warrior, strategist.
+
+**Uncertainty Notes:** Chapter focuses on his actions and dialogue rather than physical appearance.
 
 # Aliases
 
-None
+Carter
 
 
 
@@ -26,10 +29,10 @@ true
 
 # Manual Description Input Required
 
-Yes
+No
 
 
 
 # Manual Description Reason
 
-No physical description provided in chapter summary; only actions and dialogue context available.
+None

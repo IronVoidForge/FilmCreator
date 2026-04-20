@@ -1,18 +1,16 @@
 # Sola
+**Role:** Companion to the Protagonist
 
-**Chapter Role:** Companion / Warrior (Contextual)  
-**Presence:** Referenced / Present  
+**Status:** Physically Present
 
-## Physical Description
-*   **Source Support:** None provided in this chapter summary.  
-*   **Known Traits:** Named character associated with the procession/fleet.  
+**Physical Description:** 
+Identified as a green Martian. No further details on facial structure, build, or specific shade of green are provided.
 
-## Costume & Silhouette
-*   **Source Support:** None provided.  
-*   **Continuity Notes:** Likely wearing attire consistent with city dwellers or warriors (inferred from context).  
+**Costume/Silhouette:** 
+Unknown.
 
-## Uncertainty Notes
-> **Critical Missing Detail:** Sola's physical appearance is not described in this chapter. For image generation, a default form must be assumed or clarified based on broader story context outside this specific summary.
+**Uncertainty Notes:** 
+Visuals are limited to species type; requires more detail for consistent rendering.
 
 # Aliases
 
@@ -28,14 +26,14 @@ sola
 
 # Fully Identified
 
-true
+false
 
 # Manual Description Input Required
 
-Yes
+No
 
 
 
 # Manual Description Reason
 
-The character is named in the visual continuity facts but no physical description or visual traits are provided in this chapter summary.
+None
