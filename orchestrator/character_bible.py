@@ -13,6 +13,7 @@ from .character_bible_models import (
 )
 from .character_bible_writer import (
     write_character_bible_index,
+    write_character_bible_review_index,
     write_character_bible_markdown,
     write_character_review_queue_markdown,
 )
@@ -191,6 +192,27 @@ def _merge_with_existing(new: dict[str, Any], existing: dict | None, metadata: C
     return merged
 
 
+def _load_registry_for_synthesis(project_dir: Path, project_slug: str) -> tuple[dict[str, Any], Path]:
+    refined_path = project_dir / "02_story_analysis" / "world" / "refinement" / "CHARACTER_REGISTRY_GLOBAL_REFINED.json"
+    canonical_path = global_character_registry_path(project_slug)
+
+    if refined_path.exists():
+        return (read_json(refined_path), refined_path)
+    if canonical_path.exists():
+        return (read_json(canonical_path), canonical_path)
+    return ({}, canonical_path)
+
+
+def _is_film_facing_character(entry: dict[str, Any], bible: CharacterBible | None = None) -> bool:
+    if entry.get("status") != "canonical":
+        return False
+    if entry.get("entity_kind") != "individual":
+        return False
+    if bible is not None and bible.unresolved_ambiguities:
+        return False
+    return True
+
+
 def _write_json_and_markdown(base_path: Path, bible: CharacterBible) -> None:
     write_json(base_path.with_suffix(".json"), bible.to_dict())
     write_character_bible_markdown(base_path.with_suffix(".md"), bible)
@@ -204,8 +226,7 @@ def run_character_bible_synthesis(
 ) -> CharacterBibleSynthesisSummary:
     project_dir = create_project(project_slug)
 
-    registry_path = global_character_registry_path(project_slug)
-    registry = read_json(registry_path) if registry_path.exists() else {}
+    registry, registry_path = _load_registry_for_synthesis(project_dir, project_slug)
 
     output_dir = project_dir / "02_story_analysis" / "bibles" / "characters"
     review_dir = output_dir / "review"
@@ -219,6 +240,7 @@ def run_character_bible_synthesis(
     written_files: list[str] = []
     warnings: list[str] = []
     bible_records: list[CharacterBible] = []
+    review_records: list[CharacterBible] = []
 
     for char_id, entry in registry.items():
         fp = _fingerprint(entry)
@@ -230,30 +252,31 @@ def run_character_bible_synthesis(
             old_meta = existing.get("metadata") or {}
             if old_meta.get("source_fingerprint") == fp:
                 reused += 1
-                bible_records.append(
-                    CharacterBible(
-                        character_id=existing.get("character_id", char_id),
-                        display_name=existing.get("display_name", char_id),
-                        aliases=existing.get("aliases", []),
-                        status=existing.get("status", "canonical"),
-                        entity_kind=existing.get("entity_kind", "individual"),
-                        first_seen_chapter=existing.get("first_seen_chapter"),
-                        last_seen_chapter=existing.get("last_seen_chapter"),
-                        chapter_mentions=existing.get("chapter_mentions", []),
-                        stable_visual_summary=existing.get("stable_visual_summary", ""),
-                        physical_traits=existing.get("physical_traits", []),
-                        costume_signature=existing.get("costume_signature", ""),
-                        personality=existing.get("personality", ""),
-                        role=existing.get("role", ""),
-                        voice_notes=existing.get("voice_notes", ""),
-                        relationship_notes=existing.get("relationship_notes", []),
-                        continuity_constraints=existing.get("continuity_constraints", []),
-                        unresolved_ambiguities=existing.get("unresolved_ambiguities", []),
-                        evidence_refs=existing.get("evidence_refs", []),
-                        evidence_summary=existing.get("evidence_summary", []),
-                        metadata=metadata,
-                    )
+                bible = CharacterBible(
+                    character_id=existing.get("character_id", char_id),
+                    display_name=existing.get("display_name", char_id),
+                    aliases=existing.get("aliases", []),
+                    status=existing.get("status", "canonical"),
+                    entity_kind=existing.get("entity_kind", "individual"),
+                    first_seen_chapter=existing.get("first_seen_chapter"),
+                    last_seen_chapter=existing.get("last_seen_chapter"),
+                    chapter_mentions=existing.get("chapter_mentions", []),
+                    stable_visual_summary=existing.get("stable_visual_summary", ""),
+                    physical_traits=existing.get("physical_traits", []),
+                    costume_signature=existing.get("costume_signature", ""),
+                    personality=existing.get("personality", ""),
+                    role=existing.get("role", ""),
+                    voice_notes=existing.get("voice_notes", ""),
+                    relationship_notes=existing.get("relationship_notes", []),
+                    continuity_constraints=existing.get("continuity_constraints", []),
+                    unresolved_ambiguities=existing.get("unresolved_ambiguities", []),
+                    evidence_refs=existing.get("evidence_refs", []),
+                    evidence_summary=existing.get("evidence_summary", []),
+                    metadata=metadata,
                 )
+                bible_records.append(bible)
+                if not _is_film_facing_character(entry, bible):
+                    review_records.append(bible)
                 continue
 
             if old_meta.get("status") == "locked":
@@ -315,6 +338,9 @@ def run_character_bible_synthesis(
         synthesized += 1
         bible_records.append(bible)
 
+        if not _is_film_facing_character(entry, bible):
+            review_records.append(bible)
+
         if bible.unresolved_ambiguities:
             review_queue.append(
                 {
@@ -325,10 +351,16 @@ def run_character_bible_synthesis(
 
     write_json(review_dir / "CHARACTER_BIBLE_REVIEW_QUEUE.json", review_queue)
     write_character_review_queue_markdown(review_dir / "CHARACTER_BIBLE_REVIEW_QUEUE.md", review_queue)
-    write_character_bible_index(output_dir / "CHARACTER_BIBLE_INDEX.md", bible_records)
+    main_records = [record for record in bible_records if _is_film_facing_character(entry=registry.get(record.character_id, {}), bible=record)]
+    write_character_bible_index(output_dir / "CHARACTER_BIBLE_INDEX.md", main_records)
+    write_character_bible_review_index(output_dir / "CHARACTER_BIBLE_REVIEW_INDEX.md", review_records)
     write_json(
         output_dir / "CHARACTER_BIBLE_INDEX.json",
-        [record.to_dict() for record in sorted(bible_records, key=lambda item: item.character_id)],
+        [record.to_dict() for record in sorted(main_records, key=lambda item: item.character_id)],
+    )
+    write_json(
+        output_dir / "CHARACTER_BIBLE_REVIEW_INDEX.json",
+        [record.to_dict() for record in sorted(review_records, key=lambda item: item.character_id)],
     )
 
     written_files.extend(
@@ -337,6 +369,8 @@ def run_character_bible_synthesis(
             str(review_dir / "CHARACTER_BIBLE_REVIEW_QUEUE.md"),
             str(output_dir / "CHARACTER_BIBLE_INDEX.md"),
             str(output_dir / "CHARACTER_BIBLE_INDEX.json"),
+            str(output_dir / "CHARACTER_BIBLE_REVIEW_INDEX.md"),
+            str(output_dir / "CHARACTER_BIBLE_REVIEW_INDEX.json"),
         ]
     )
 

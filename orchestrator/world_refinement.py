@@ -148,6 +148,10 @@ class WorldIdentityRefiner:
         self.environment_registry_path = global_environment_registry_path(project_slug)
         self.character_directory_path = global_character_directory_path(project_slug)
         self.environment_directory_path = global_environment_directory_path(project_slug)
+        self.refined_character_registry_path = self.refinement_dir / "CHARACTER_REGISTRY_GLOBAL_REFINED.json"
+        self.refined_environment_registry_path = self.refinement_dir / "ENVIRONMENT_REGISTRY_GLOBAL_REFINED.json"
+        self.refined_character_directory_path = self.refinement_dir / "CHARACTER_DIRECTORY_REFINED.json"
+        self.refined_environment_directory_path = self.refinement_dir / "ENVIRONMENT_DIRECTORY_REFINED.json"
 
         self.character_registry = self._load_json(self.character_registry_path)
         self.environment_registry = self._load_json(self.environment_registry_path)
@@ -188,11 +192,11 @@ class WorldIdentityRefiner:
                 if self._apply_decision(decision, warnings=warnings):
                     applied_count += 1
 
-            self._write_json(self.character_registry_path, self.character_registry)
-            self._write_json(self.environment_registry_path, self.environment_registry)
+            self._write_json(self.refined_character_registry_path, self.character_registry)
+            self._write_json(self.refined_environment_registry_path, self.environment_registry)
             self._rebuild_directories()
-            self._write_json(self.character_directory_path, self.character_directory)
-            self._write_json(self.environment_directory_path, self.environment_directory)
+            self._write_json(self.refined_character_directory_path, self.character_directory)
+            self._write_json(self.refined_environment_directory_path, self.environment_directory)
 
         candidates_path = self.refinement_dir / "REFINEMENT_CANDIDATES.json"
         decisions_path = self.refinement_dir / "REFINEMENT_DECISIONS.json"
@@ -219,10 +223,10 @@ class WorldIdentityRefiner:
                 ]
                 + (
                     [
-                        repo_relative(self.character_registry_path),
-                        repo_relative(self.environment_registry_path),
-                        repo_relative(self.character_directory_path),
-                        repo_relative(self.environment_directory_path),
+                        repo_relative(self.refined_character_registry_path),
+                        repo_relative(self.refined_environment_registry_path),
+                        repo_relative(self.refined_character_directory_path),
+                        repo_relative(self.refined_environment_directory_path),
                     ]
                     if apply_changes
                     else []
@@ -243,10 +247,10 @@ class WorldIdentityRefiner:
         if apply_changes:
             written_files.extend(
                 [
-                    repo_relative(self.character_registry_path),
-                    repo_relative(self.environment_registry_path),
-                    repo_relative(self.character_directory_path),
-                    repo_relative(self.environment_directory_path),
+                    repo_relative(self.refined_character_registry_path),
+                    repo_relative(self.refined_environment_registry_path),
+                    repo_relative(self.refined_character_directory_path),
+                    repo_relative(self.refined_environment_directory_path),
                 ]
             )
 

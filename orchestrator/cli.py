@@ -42,7 +42,7 @@ def main() -> None:
             use_llm=not args.no_llm,
             apply_merge=args.apply,
         )
-        print(json.dumps(result, indent=2))
+        print(json.dumps(result.to_dict(), indent=2))
 
 
 if __name__ == "__main__":

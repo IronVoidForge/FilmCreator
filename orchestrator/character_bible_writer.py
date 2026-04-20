@@ -69,9 +69,30 @@ def write_character_bible_index(index_path: Path, records: list[CharacterBible])
     lines = ["# Character Bible Index", ""]
     for record in sorted(records, key=lambda item: item.character_id):
         lines.append(
-            f"- `{record.character_id}` — {record.display_name} "
+            f"- `{record.character_id}` â€” {record.display_name} "
             f"(status={record.status}, mentions={len(record.chapter_mentions)}, ambiguities={len(record.unresolved_ambiguities)})"
         )
+    index_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def write_character_bible_review_index(index_path: Path, records: list[CharacterBible]) -> None:
+    lines = ["# Character Bible Review Index", ""]
+    if not records:
+        lines.append("- No review entries.")
+        index_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        return
+
+    for record in sorted(records, key=lambda item: item.character_id):
+        flags: list[str] = []
+        if record.status != "canonical":
+            flags.append(f"status={record.status}")
+        if record.entity_kind != "individual":
+            flags.append(f"entity_kind={record.entity_kind}")
+        if record.unresolved_ambiguities:
+            flags.append(f"ambiguities={len(record.unresolved_ambiguities)}")
+        flag_text = ", ".join(flags) if flags else "review"
+        lines.append(f"- `{record.character_id}` â€” {record.display_name} ({flag_text})")
+
     index_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
