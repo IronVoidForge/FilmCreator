@@ -5,7 +5,7 @@ import json
 
 from .authoring import lmstudio_check, write_prompts
 from .batch_runner import plan_prompt_batch, run_prompt_batch
-from .book_authoring import refine_world
+from .book_authoring import refine_world, retry_failed_chapters
 from .registry_loader import get_workflow
 from .review_tools import interactive_review_and_promote_batch, review_candidates_summary
 from .runner import run_still
@@ -174,6 +174,17 @@ def build_parser() -> argparse.ArgumentParser:
     refine_world_cmd.add_argument("--no-llm", action="store_true", help="Skip LM Studio classification and flag candidates for review")
     refine_world_cmd.add_argument("--no-apply", action="store_true", help="Write the refinement plan without mutating registries")
 
+    retry_failed_chapters_cmd = subparsers.add_parser(
+        "retry-failed-chapters",
+        help="Retry only the chapters that failed in the latest resilient book run",
+    )
+    retry_failed_chapters_cmd.add_argument("project_slug")
+    retry_failed_chapters_cmd.add_argument(
+        "--fail-fast",
+        action="store_true",
+        help="Stop on the first chapter failure instead of continuing through the retry set",
+    )
+
     authoring_checkpoint_cmd = subparsers.add_parser(
         "authoring-checkpoint",
         help="Run the full pre-SQL authoring checkpoint for one chapter and the first planned scene",
@@ -334,6 +345,14 @@ def main() -> None:
             apply_changes=not args.no_apply,
         )
         print(json.dumps(summary, indent=2))
+        return
+
+    if args.command == "retry-failed-chapters":
+        summary = retry_failed_chapters(
+            project_slug=args.project_slug,
+            fail_fast=args.fail_fast,
+        )
+        print(json.dumps(summary.to_dict(), indent=2))
         return
 
     if args.command == "authoring-checkpoint":
