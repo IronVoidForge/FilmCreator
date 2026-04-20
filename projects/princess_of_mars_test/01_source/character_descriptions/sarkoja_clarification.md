@@ -4,10 +4,10 @@
 sarkoja
 
 # Why This Needs Clarification
-Character identified only by name "Sarkoja" with minimal physical attributes. Attempted stabbing action present but insufficient for complete character rendering.
+The character is not fully identified from this chapter alone.
 
 # Question
-What are Sarkoja's specific physical features (height, build, facial characteristics)? What costume details beyond general warrior attire? Any distinctive markings or accessories?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

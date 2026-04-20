@@ -1,0 +1,71 @@
+# CH006 Continuity Summary
+
+## Scene Order
+- CH006_SC001
+- CH006_SC002
+- CH006_SC003
+- CH006_SC004
+- CH006_SC005
+
+## Known Canonical Characters
+- bull_ape
+- carters_claim_guardian
+- carters_life_story
+- carters_story_documenter
+- carters_story_writer
+- cave_explorer
+- cave_reconnoiter
+- death_survivor
+- death_twice_survivor
+- dog
+- gold_claim_guard
+- gold_discovery_1865
+- john_carter
+- martian_guard
+- powells_dead_body
+- principal_chieftain
+- second_ape
+- sola
+- story_narrator_voice
+- tars_tarkas
+- ten_legged_creature
+- ten_year_cave_dweller
+- ten_year_stay_initiator
+- watch_thing
+
+## Unresolved / Provisional Characters
+- captain_powell
+- narrator
+- narrator_conscious_entity
+- narrator_entity
+
+## Known Canonical Environments
+- apache_campsite
+- apache_warrior_encampment_area
+- arizona_quartz_vein_location
+- canyon_floor_terrain
+- cave_entrance_archway
+- cave_interior_chambers
+- cave_sleeping_area
+- cave_ventilation_shafts
+- chieftain_rostrum_audience_chamber
+- defile_escape_pathway
+- desert_approach_terrain
+- desert_outskirts
+- large_cave
+- mars_bull_ape_territory
+- martian_plaza_building_complex
+- martian_surface_valley
+- martian_warrior_encampment
+- mining_claim_markers
+- mining_equipment_storage
+- mountain_foot_gorge_location
+- open_valley_ruined_city_location
+- powder_cache_location
+- quartz_vein_excavation_site
+- solas_quarters_mural_chamber
+- trail_defile
+
+## Registry Artifacts
+- projects/princess_of_mars_test/02_story_analysis/world/CHARACTER_REGISTRY.json
+- projects/princess_of_mars_test/02_story_analysis/world/ENVIRONMENT_REGISTRY.json

@@ -4,10 +4,10 @@
 ten_legged_creature
 
 # Why This Needs Clarification
-Creature may be new character or variant; needs clarification on identity and species
+Needs identity clarification for consistent image generation.
 
 # Question
-Is the ten-legged creature a new character type, and what is its full species classification?
+What is the ten-legged creature's physical form and origin?
 
 # Guidance
 - answer briefly and concretely

@@ -4,10 +4,10 @@
 sola
 
 # Why This Needs Clarification
-Character identified only by name "Sola" with minimal physical attributes. Shielding action present but insufficient for complete character rendering.
+Needs identity clarification for image generation.
 
 # Question
-What are Sola's specific physical features (height, build, facial characteristics)? What costume details beyond general warrior attire? Any distinctive markings or accessories?
+What is Sola's physical form and origin?
 
 # Guidance
 - answer briefly and concretely

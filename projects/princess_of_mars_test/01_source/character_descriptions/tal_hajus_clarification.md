@@ -4,10 +4,10 @@
 tal_hajus
 
 # Why This Needs Clarification
-The character record indicates clarification is needed, but LM Studio did not supply a reason.
+Needs identity clarification.
 
 # Question
-Is Tal Hajus a new character introduction or an established authority figure with prior visual details?
+What is Tal Hajus's role and relationship to John Carter?
 
 # Guidance
 - answer briefly and concretely

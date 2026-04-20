@@ -4,10 +4,10 @@
 kantos_kan
 
 # Why This Needs Clarification
-Character is mentioned but not physically present; needs clarification about current appearance and condition
+Needs identity clarification for image generation.
 
 # Question
-What is Kantos Kan's current physical appearance and condition? Is he still alive and where is he located?
+What is Kantos Kan's physical form and origin?
 
 # Guidance
 - answer briefly and concretely

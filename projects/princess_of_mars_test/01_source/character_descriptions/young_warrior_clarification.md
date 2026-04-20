@@ -4,10 +4,10 @@
 young_warrior
 
 # Why This Needs Clarification
-Character may already exist under another name or is too weakly identified in this chapter to confirm stable identity across reruns.
+The character is not fully identified from this chapter alone.
 
 # Question
-Is the young warrior a distinct character from other warriors mentioned, and what are his physical characteristics?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

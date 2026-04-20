@@ -4,10 +4,10 @@
 warhoons
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Needs identity clarification for accurate image generation and character consistency.
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+What are the physical appearances, attire, and positioning of Warhoon warriors during the battle with John Carter's craft?
 
 # Guidance
 - answer briefly and concretely

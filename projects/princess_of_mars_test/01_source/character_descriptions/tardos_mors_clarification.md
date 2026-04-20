@@ -4,10 +4,10 @@
 tardos_mors
 
 # Why This Needs Clarification
-Need to establish Jeddak of Helium's physical appearance for consistent character representation across future chapters and media.
+The character is not fully identified from this chapter alone.
 
 # Question
-What does the Jeddak of Helium (Tardos Mors) look like? Please describe his physical features, clothing, and any distinctive visual characteristics.
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

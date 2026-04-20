@@ -4,10 +4,10 @@
 dejah_thoris
 
 # Why This Needs Clarification
-Character is mentioned but not physically present; needs clarification about current appearance and condition while held captive
+Needs identity clarification for image generation.
 
 # Question
-What is Dejah Thoris's current physical appearance and condition while held captive by Zodanga?
+What is Dejah Thoris's physical form and appearance?
 
 # Guidance
 - answer briefly and concretely

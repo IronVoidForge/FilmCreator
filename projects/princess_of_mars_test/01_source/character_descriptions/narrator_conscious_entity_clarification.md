@@ -4,7 +4,7 @@
 narrator_conscious_entity
 
 # Why This Needs Clarification
-Needs identity clarification.
+Needs identity clarification for image generation.
 
 # Question
 What is the protagonist's physical form and origin?

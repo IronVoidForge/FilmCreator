@@ -1,0 +1,117 @@
+# CH014 Continuity Summary
+
+## Scene Order
+- CH014_SC001
+- CH014_SC002
+- CH014_SC003
+
+## Known Canonical Characters
+- bull_ape
+- carters_claim_guardian
+- carters_life_story
+- carters_story_documenter
+- carters_story_writer
+- cave_explorer
+- cave_reconnoiter
+- community_members
+- death_survivor
+- death_twice_survivor
+- dejah_thoris
+- dog
+- earth_girl
+- gold_claim_guard
+- gold_discovery_1865
+- john_carter
+- lorquas_ptomel
+- martian_guard
+- powells_dead_body
+- principal_chieftain
+- sarkoja
+- second_ape
+- sola
+- story_narrator_voice
+- tal_hajus
+- tars_tarkas
+- ten_legged_creature
+- ten_year_cave_dweller
+- ten_year_stay_initiator
+- watch_thing
+- woola
+- young_warrior
+- zad
+
+## Unresolved / Provisional Characters
+- captain_powell
+- narrator
+- narrator_conscious_entity
+- narrator_entity
+
+## Known Canonical Environments
+- apache_campsite
+- apache_warrior_encampment_area
+- arizona_quartz_vein_location
+- audience_chamber
+- barsoom_city_limits_outside
+- battlefield_arena
+- canyon_floor_terrain
+- cave_entrance_archway
+- cave_interior_chambers
+- cave_sleeping_area
+- cave_ventilation_shafts
+- chieftain_rostrum_audience_chamber
+- defile_escape_pathway
+- desert_approach_terrain
+- desert_outskirts
+- gauntlet_release_area_location
+- green_martian_city_battle_aftermath_zone
+- green_martian_city_battle_viewpoint
+- green_martian_city_buildings
+- green_martian_city_captured_ship_location
+- green_martian_city_enemy_fleet_approach_zone
+- green_martian_city_interior_containment
+- green_martian_city_plaza_open_ground
+- green_martian_city_prisoner_capture_zone
+- green_martian_city_prisoner_dejection_zone
+- green_martian_city_prisoner_drag_zone
+- green_martian_city_prisoner_earthly_woman_zone
+- green_martian_city_prisoner_eye_contact_zone
+- green_martian_city_prisoner_fate_zone
+- green_martian_city_prisoner_hope_dejection_zone
+- green_martian_city_prisoner_hope_zone
+- green_martian_city_prisoner_loot_zone
+- green_martian_city_prisoner_narrator_connection_zone
+- green_martian_city_prisoner_signal_zone
+- green_martian_city_prisoner_towing_zone
+- green_martian_city_prisoner_transport
+- green_martian_city_upper_floor_observation
+- incubator_chamber_location
+- incubator_observation_deck_location
+- korad_city
+- large_cave
+- march_route
+- mars_bull_ape_territory
+- mars_community_gathering_space_location
+- martian_plains_battlefield
+- martian_plaza_building_complex
+- martian_surface_valley
+- martian_valley_hills
+- martian_warrior_encampment
+- mining_claim_markers
+- mining_equipment_storage
+- mountain_foot_gorge_location
+- open_valley_ruined_city_location
+- powder_cache_location
+- prison_cell_location
+- quartz_vein_excavation_site
+- settlement_quarters_location
+- solas_quarters_mural_chamber
+- thark_audience_chamber
+- thark_city
+- thark_plaza
+- trail_defile
+- training_ground_location
+- training_grounds_location
+
+## Registry Artifacts
+- projects/princess_of_mars_test/02_story_analysis/world/CHARACTER_REGISTRY.json
+- projects/princess_of_mars_test/02_story_analysis/world/ENVIRONMENT_REGISTRY.json

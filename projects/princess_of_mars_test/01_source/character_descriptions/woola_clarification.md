@@ -4,10 +4,10 @@
 woola
 
 # Why This Needs Clarification
-Character name provided but lacks stable identification details; may exist under alternate names or be too weakly identified for consistent rendering
+The character is not fully identified from this chapter alone.
 
 # Question
-What are Woola's physical features, height, build, and facial characteristics?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

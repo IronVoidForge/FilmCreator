@@ -4,10 +4,10 @@
 dak_kova
 
 # Why This Needs Clarification
-Character may already exist under established name from earlier chapters; needs verification of current identification status
+Needs identity clarification.
 
 # Question
-Is Dak Kova's physical appearance consistent with prior chapter documentation, or does this chapter require new descriptive details?
+What is Dak Kova's physical form and origin?
 
 # Guidance
 - answer briefly and concretely

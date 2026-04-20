@@ -4,10 +4,10 @@
 john_carter
 
 # Why This Needs Clarification
-Needs identity clarification for consistent image generation.
+Needs identity clarification.
 
 # Question
-What is John Carter's physical form and origin story?
+What is the protagonist's physical form and origin?
 
 # Guidance
 - answer briefly and concretely
