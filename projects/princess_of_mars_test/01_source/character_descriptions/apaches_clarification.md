@@ -4,10 +4,10 @@
 apaches
 
 # Why This Needs Clarification
-Apaches mentioned as collective group without individual identification. May need clarification on whether to treat as single character entity or multiple individual characters for rendering purposes.
+Needs identity clarification for image generation of group members.
 
 # Question
-Should Apaches be treated as a single collective character entity or broken into individual warrior characters for image generation?
+What are the physical characteristics and attire of Apache warriors in this historical setting?
 
 # Guidance
 - answer briefly and concretely

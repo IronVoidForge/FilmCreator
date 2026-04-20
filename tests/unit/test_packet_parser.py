@@ -133,6 +133,38 @@ def test_extract_character_records_from_index_markdown_salvages_heading_blocks()
     assert records[1].fields["asset_id"] == "apache_warriors"
 
 
+def test_extract_environment_records_from_index_markdown_salvages_heading_blocks() -> None:
+    markdown = "\n".join(
+        [
+            "# Environment Index: Arizona Gold Rush & Apache Attack Sequence",
+            "",
+            "## arizona_quartz_vein_location",
+            "**Role:** Primary Setting",
+            "**Geography:** Desert mountain terrain with exposed gold-bearing quartz outcrop",
+            "**Lighting:** Winter daylight, cold blue tones on rock faces",
+            "**Atmosphere:** Tense anticipation, mining claim territory",
+            "**Scale:** Medium-scale ore deposit, open-air excavation site",
+            "**Anchors:** Quartz vein face, mining tools, winter snow patches",
+            "",
+            "## apache_camp_tepees",
+            "**Role:** Secondary/Transit Setting",
+            "**Geography:** Apache encampment with traditional tepee structures",
+            "**Lighting:** Dusk/dawn transition, firelight glow from tepee openings",
+            "**Atmosphere:** Hostile confrontation, war party gathering",
+            "**Scale:** Medium camp size, multiple tepees clustered together",
+            "**Anchors:** Tepee poles, smoke rising from fires, warrior formations",
+        ]
+    )
+
+    records = packet_parser.extract_environment_records_from_index_markdown(markdown)
+
+    assert len(records) == 2
+    assert records[0].fields["type"] == "environment"
+    assert records[0].fields["asset_id"] == "arizona_quartz_vein_location"
+    assert records[0].sections["markdown"].startswith("## arizona_quartz_vein_location")
+    assert records[1].fields["asset_id"] == "apache_camp_tepees"
+
+
 def test_validate_scene_decomposition_warns_on_two_scenes_and_rejects_empty() -> None:
     scene_records = [
         packet_parser.PacketRecord(

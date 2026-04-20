@@ -347,7 +347,10 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
     active_clarification_requests: dict[str, tuple[str, str]] = {}
     usable_character_count = 0
     character_breakdown_dir = _chapter_character_breakdown_dir(project_dir=project_dir, chapter_id=chapter_source.chapter_id)
-    character_records = _require_packet_records(character_packet, record_type="character")
+    try:
+        character_records = _require_packet_records(character_packet, record_type="character")
+    except LMStudioError:
+        character_records = []
     if not character_records:
         character_records = _extract_character_records_from_index_markdown(character_index_markdown)
 
@@ -451,7 +454,14 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
     written_files.append(repo_relative(_legacy_environment_index_path(project_dir=project_dir)))
 
     environment_breakdown_dir = _chapter_environment_breakdown_dir(project_dir=project_dir, chapter_id=chapter_source.chapter_id)
-    for raw_environment in _require_packet_records(environment_packet, record_type="environment"):
+    try:
+        environment_records = _require_packet_records(environment_packet, record_type="environment")
+    except LMStudioError:
+        environment_records = []
+    if not environment_records:
+        environment_records = _extract_environment_records_from_index_markdown(environment_index_markdown)
+
+    for raw_environment in environment_records:
         asset_id = _normalize_asset_id(_require_record_field(raw_environment, "asset_id"), fallback_prefix="environment")
         filename = f"{asset_id}.md"
         markdown = _require_record_section(raw_environment, "markdown")
@@ -1891,6 +1901,7 @@ _require_single_packet_record = authoring_packets.require_single_packet_record
 _require_record_field = authoring_packets.require_record_field
 _require_record_section = authoring_packets.require_record_section
 _extract_character_records_from_index_markdown = authoring_packets.extract_character_records_from_index_markdown
+_extract_environment_records_from_index_markdown = authoring_packets.extract_environment_records_from_index_markdown
 _validate_scene_decomposition = authoring_packets.validate_scene_decomposition
 _extract_clip_beat_refs = authoring_packets.extract_clip_beat_refs
 _scene_allows_single_clip = authoring_packets.scene_allows_single_clip

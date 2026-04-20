@@ -300,6 +300,46 @@ def extract_character_records_from_index_markdown(markdown: str) -> list[PacketR
     return records
 
 
+def extract_environment_records_from_index_markdown(markdown: str) -> list[PacketRecord]:
+    records: list[PacketRecord] = []
+    lines = markdown.splitlines()
+    current_title: str | None = None
+    current_lines: list[str] = []
+
+    def flush() -> None:
+        nonlocal current_title, current_lines
+        if current_title is None:
+            return
+        fields: dict[str, str] = {
+            "type": "environment",
+            "asset_id": normalize_asset_id(current_title, fallback_prefix="environment"),
+        }
+        for line in current_lines:
+            key, value = parse_markdown_bullet_key_value(line)
+            if key:
+                fields[key] = value
+        if not fields.get("asset_id"):
+            fields["asset_id"] = normalize_asset_id(current_title, fallback_prefix="environment")
+        sections = {
+            "markdown": "\n".join([f"## {current_title}", *current_lines]).strip(),
+        }
+        records.append(PacketRecord(fields=fields, sections=sections))
+        current_title = None
+        current_lines = []
+
+    for line in lines:
+        match = INDEX_ENTRY_PATTERN.fullmatch(line.strip())
+        if match:
+            flush()
+            current_title = match.group(1).strip()
+            current_lines = []
+            continue
+        if current_title is not None:
+            current_lines.append(line)
+    flush()
+    return records
+
+
 def validate_scene_decomposition(*, chapter_id: str, scene_records: list[PacketRecord]) -> list[str]:
     warnings: list[str] = []
     if not scene_records:

@@ -1,0 +1,1 @@
+The narrator wakes paralyzed in a cave. Native Americans approach but flee from an unseen entity behind him. After hours of silence, he regains movement and discovers his body is dead while he is alive. He escapes the cave into the Arizona night. He sees Mars and is drawn into space.

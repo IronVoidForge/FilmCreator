@@ -4,10 +4,10 @@
 john_carter
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Needs identity clarification for image generation.
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+What is John Carter's physical form and origin?
 
 # Guidance
 - answer briefly and concretely
