@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_MANUAL_PLACEHOLDER -->
 
 # Asset ID
-john_carter
+lorquas_ptomel
 
 # Purpose
 Paste a stable manual visual description for this character so later shared reference generation can use it.
 
 # Why This Is Needed
-The chapter summary provides no physical description of John Carter, only his actions and dialogue. Visual continuity notes are absent.
+The chapter summary mentions "great, hideous eyes" but lacks full physical description. Visual continuity notes are absent for other features.
 
 # Guidance
 - describe face, hair, body type, age impression, silhouette, skin tone, costume logic, and any continuity-critical marks

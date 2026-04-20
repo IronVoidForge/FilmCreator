@@ -7,7 +7,7 @@ tars_tarkas
 Paste a stable manual visual description for this character so later shared reference generation can use it.
 
 # Why This Is Needed
-"Chapter summary identifies Tars Tarkas as warrior but provides no physical appearance, height, build, or distinctive features for image generation"
+The chapter summary provides no physical description of Tars Tarkas, only his demeanor and actions. Visual continuity notes are absent for other features.
 
 # Guidance
 - describe face, hair, body type, age impression, silhouette, skin tone, costume logic, and any continuity-critical marks
