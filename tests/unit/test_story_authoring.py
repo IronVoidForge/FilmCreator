@@ -309,6 +309,116 @@ class _FakeAuthoringLMStudioClient:
         )
 
 
+class _ChunkFallbackAuthoringLMStudioClient(_FakeAuthoringLMStudioClient):
+    def chat_completion_result(
+        self,
+        *,
+        system_prompt: str,
+        user_prompt: str,
+        temperature: float = 0.2,
+        model: str | None = None,
+    ) -> LMStudioChatResult:
+        if "task: character_extraction" in user_prompt and "Fallback extraction chunk" not in user_prompt:
+            return LMStudioChatResult(
+                status="transport_error",
+                model=model or "test-local-model",
+                payload=None,
+                text="",
+                error_message="Timed out waiting for LM Studio at http://127.0.0.1:1234/v1/chat/completions",
+            )
+
+        if "task: character_extraction" in user_prompt and "Fallback extraction chunk 1/2" in user_prompt:
+            return LMStudioChatResult(
+                status="success",
+                model=model or "test-local-model",
+                payload={},
+                text=_packet(
+                    task="character_extraction",
+                    sections={
+                        "character_index_markdown": "\n".join(
+                            [
+                                "# Character Index - CH001",
+                                "",
+                                "## Visible Characters",
+                                "",
+                                "| Asset ID | Canonical Character ID | Aliases | Fully Identified | Manual Description Required | Clarification Required | Description |",
+                                "|---|---|---|---|---|---|---|",
+                                "| john_carter | CH001 John Carter | - | true | false | false | Officer and narrator in the opening half of the chapter |",
+                            ]
+                        ),
+                    },
+                    records=[
+                        _record(
+                            record_type="character",
+                            fields={
+                                "asset_id": "john_carter",
+                                "canonical_character_id": "CH001 John Carter",
+                                "aliases": "-",
+                                "is_fully_identified": "true",
+                                "manual_description_required": "false",
+                                "manual_description_reason": "",
+                                "clarification_required": "false",
+                                "clarification_reason": "",
+                                "clarification_question": "",
+                            },
+                            sections={
+                                "markdown": "# John Carter\nOpening half character record.\n",
+                            },
+                        )
+                    ],
+                ),
+            )
+
+        if "task: character_extraction" in user_prompt and "Fallback extraction chunk 2/2" in user_prompt:
+            return LMStudioChatResult(
+                status="success",
+                model=model or "test-local-model",
+                payload={},
+                text=_packet(
+                    task="character_extraction",
+                    sections={
+                        "character_index_markdown": "\n".join(
+                            [
+                                "# Character Index - CH001",
+                                "",
+                                "## Visible Characters",
+                                "",
+                                "| Asset ID | Canonical Character ID | Aliases | Fully Identified | Manual Description Required | Clarification Required | Description |",
+                                "|---|---|---|---|---|---|---|",
+                                "| dejah_thoris | CH001 Dejah Thoris | - | true | true | false | Captive princess introduced later in the chapter |",
+                            ]
+                        ),
+                    },
+                    records=[
+                        _record(
+                            record_type="character",
+                            fields={
+                                "asset_id": "dejah_thoris",
+                                "canonical_character_id": "CH001 Dejah Thoris",
+                                "aliases": "-",
+                                "is_fully_identified": "true",
+                                "manual_description_required": "true",
+                                "manual_description_reason": "Fallback chunk saw only partial physical detail.",
+                                "clarification_required": "false",
+                                "clarification_reason": "",
+                                "clarification_question": "",
+                            },
+                            sections={
+                                "markdown": "# Dejah Thoris\nLater half character record.\n",
+                            },
+                        )
+                    ],
+                ),
+            )
+
+        return super().chat_completion_result(
+            system_prompt=system_prompt,
+            user_prompt=user_prompt,
+            temperature=temperature,
+            model=model,
+        )
+
+
 def test_authoring_checkpoint_writes_analysis_planning_and_manual_character_placeholders(
     tmp_path: Path, monkeypatch
 ) -> None:
@@ -527,3 +637,56 @@ def test_scene_decomposition_validator_warns_on_two_scenes_and_rejects_empty() -
         assert "no usable scenes" in str(exc)
     else:
         raise AssertionError("Expected empty scene decomposition to fail validation.")
+
+
+def test_analyze_chapter_falls_back_to_chunked_character_extraction_on_timeout(
+    tmp_path: Path, monkeypatch
+) -> None:
+    projects_root = tmp_path / "projects"
+
+    monkeypatch.setattr(common_module, "ROOT", tmp_path)
+    monkeypatch.setattr(common_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(scaffold_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(scaffold_module, "ROOT", tmp_path)
+    monkeypatch.setattr(scaffold_module, "TEMPLATES_ROOT", REAL_TEMPLATES_ROOT)
+    monkeypatch.setattr(scaffold_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(state_module, "PROJECTS_ROOT", projects_root)
+    monkeypatch.setattr(state_module, "ROOT", tmp_path)
+    monkeypatch.setattr(state_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(authoring_module, "ROOT", tmp_path)
+    monkeypatch.setattr(authoring_module, "LMStudioClient", _ChunkFallbackAuthoringLMStudioClient)
+    monkeypatch.setattr(authoring_module, "load_runtime_settings", lambda: object())
+    monkeypatch.setattr(authoring_module, "repo_relative", lambda path: path.relative_to(tmp_path).as_posix())
+    monkeypatch.setattr(story_authoring_module, "LMStudioClient", _ChunkFallbackAuthoringLMStudioClient)
+    monkeypatch.setattr(story_authoring_module, "load_runtime_settings", lambda: object())
+
+    scaffold_module.create_project("demo")
+
+    chapter_path = projects_root / "demo" / "01_source" / "chapters" / "CH001_demo.md"
+    chapter_path.write_text(
+        "\n".join(
+            [
+                "# Title",
+                "Demo Chapter",
+                "",
+                "# Chapter",
+                "CH001",
+                "",
+                "# Text",
+                "A damaged vessel drifts above an abandoned city while a captive is discovered.",
+                "",
+                "The second half of the chapter adds a new character and a clearer setting shift.",
+                "",
+                "Another paragraph gives enough material for the chunked fallback to split cleanly.",
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    summary = story_authoring_module.analyze_chapter(project_slug="demo", chapter="CH001_demo.md")
+
+    assert summary.chapter_id == "CH001"
+    assert summary.canonical_character_ids
+    assert (projects_root / "demo" / "02_story_analysis" / "character_breakdowns" / "chapters" / "CH001" / "john_carter.md").exists()
+    assert (projects_root / "demo" / "02_story_analysis" / "character_breakdowns" / "chapters" / "CH001" / "dejah_thoris.md").exists()

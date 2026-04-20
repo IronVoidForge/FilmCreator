@@ -318,23 +318,19 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
     _write_text(chapter_summary_path, chapter_summary_markdown)
     written_files.extend([repo_relative(project_summary_path), repo_relative(chapter_summary_path)])
 
-    character_packet = _call_packet_task(
+    character_packet, character_fallback_warnings = _call_record_extraction_with_chunked_fallback(
         client=client,
         project_dir=project_dir,
+        project_slug=project_slug,
+        chapter_source=chapter_source,
+        chapter_summary_markdown=chapter_summary_markdown,
         task_name="character_extraction",
-        system_prompt=authoring_prompts.analysis_system_prompt(),
-        user_prompt=authoring_prompts.character_extraction_user_prompt(
-            project_slug=project_slug,
-            chapter_source=chapter_source,
-            chapter_summary=chapter_summary_markdown,
-        ),
-        degraded_user_prompt=authoring_prompts.character_extraction_user_prompt(
-            project_slug=project_slug,
-            chapter_source=chapter_source,
-            chapter_summary=chapter_summary_markdown,
-            degraded=True,
-        ),
+        record_type="character",
+        index_section_name="character_index_markdown",
+        prompt_builder=authoring_prompts.character_extraction_user_prompt,
+        degraded_prompt_builder=authoring_prompts.character_extraction_user_prompt,
     )
+    warnings.extend(character_fallback_warnings)
     character_index_markdown = _require_packet_section(character_packet, "character_index_markdown")
     character_index_path = _chapter_character_index_path(project_dir=project_dir, chapter_id=chapter_source.chapter_id)
     _write_text(character_index_path, character_index_markdown)
@@ -429,23 +425,19 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
     written_files.extend(repo_relative(path) for path in manual_placeholder_paths)
     written_files.extend(repo_relative(path) for path in clarification_placeholder_paths)
 
-    environment_packet = _call_packet_task(
+    environment_packet, environment_fallback_warnings = _call_record_extraction_with_chunked_fallback(
         client=client,
         project_dir=project_dir,
+        project_slug=project_slug,
+        chapter_source=chapter_source,
+        chapter_summary_markdown=chapter_summary_markdown,
         task_name="environment_extraction",
-        system_prompt=authoring_prompts.analysis_system_prompt(),
-        user_prompt=authoring_prompts.environment_extraction_user_prompt(
-            project_slug=project_slug,
-            chapter_source=chapter_source,
-            chapter_summary=chapter_summary_markdown,
-        ),
-        degraded_user_prompt=authoring_prompts.environment_extraction_user_prompt(
-            project_slug=project_slug,
-            chapter_source=chapter_source,
-            chapter_summary=chapter_summary_markdown,
-            degraded=True,
-        ),
+        record_type="environment",
+        index_section_name="environment_index_markdown",
+        prompt_builder=authoring_prompts.environment_extraction_user_prompt,
+        degraded_prompt_builder=authoring_prompts.environment_extraction_user_prompt,
     )
+    warnings.extend(environment_fallback_warnings)
     environment_index_markdown = _require_packet_section(environment_packet, "environment_index_markdown")
     environment_index_path = _chapter_environment_index_path(project_dir=project_dir, chapter_id=chapter_source.chapter_id)
     _write_text(environment_index_path, environment_index_markdown)
@@ -1318,6 +1310,168 @@ def _call_packet_task(*, client: LMStudioClient, project_dir: Path, task_name: s
     raise LMStudioError(f"Authoring task '{task_name}' failed after retries. Failure artifact: {repo_relative(failure_path)}")
 
 
+def _call_record_extraction_with_chunked_fallback(
+    *,
+    client: LMStudioClient,
+    project_dir: Path,
+    project_slug: str,
+    chapter_source: _ChapterSource,
+    chapter_summary_markdown: str,
+    task_name: str,
+    record_type: str,
+    index_section_name: str,
+    prompt_builder,
+    degraded_prompt_builder,
+) -> tuple[_PacketDocument, list[str]]:
+    warnings: list[str] = []
+    full_packet: _PacketDocument | None = None
+    try:
+        full_packet = _call_packet_task(
+            client=client,
+            project_dir=project_dir,
+            task_name=task_name,
+            system_prompt=authoring_prompts.analysis_system_prompt(),
+            user_prompt=prompt_builder(
+                project_slug=project_slug,
+                chapter_source=chapter_source,
+                chapter_summary=chapter_summary_markdown,
+            ),
+            degraded_user_prompt=degraded_prompt_builder(
+                project_slug=project_slug,
+                chapter_source=chapter_source,
+                chapter_summary=chapter_summary_markdown,
+                degraded=True,
+            ),
+        )
+    except LMStudioError as exc:
+        warnings.append(f"{task_name} full chapter pass failed: {exc}")
+    else:
+        full_records, full_record_warnings, full_index_markdown = _extract_usable_records_from_packet(
+            packet=full_packet,
+            record_type=record_type,
+            index_section_name=index_section_name,
+        )
+        warnings.extend(full_record_warnings)
+        if full_records:
+            if not full_index_markdown.strip():
+                full_index_markdown = _synthesize_record_index_markdown(
+                    chapter_id=chapter_source.chapter_id,
+                    record_type=record_type,
+                    records=full_records,
+                )
+                warnings.append(
+                    f"{task_name} full chapter pass omitted {index_section_name}; synthesized an index from explicit records."
+                )
+            return (
+                _PacketDocument(
+                    metadata=dict(full_packet.metadata),
+                    sections={index_section_name: full_index_markdown},
+                    records=full_records,
+                ),
+                warnings,
+            )
+        warnings.append(
+            f"{task_name} returned no usable {record_type} records on the full chapter pass; retrying with overlapping half-chapter chunks."
+        )
+
+    chunk_texts = _split_text_into_fallback_chunks(chapter_source.full_markdown)
+    merged_records_by_asset_id: dict[str, _PacketRecord] = {}
+    merged_sections_by_asset_id: dict[str, list[str]] = {}
+    chunk_successes = 0
+
+    for chunk_index, chunk_text in enumerate(chunk_texts, start=1):
+        chunk_prompt = "\n\n".join(
+            [
+                f"Fallback extraction chunk {chunk_index}/{len(chunk_texts)} for {task_name}.",
+                "Use only the chapter excerpt below for this pass.",
+                chunk_text,
+            ]
+        )
+        try:
+            chunk_packet = _call_packet_task(
+                client=client,
+                project_dir=project_dir,
+                task_name=task_name,
+                system_prompt=authoring_prompts.analysis_system_prompt(),
+                user_prompt=prompt_builder(
+                    project_slug=project_slug,
+                    chapter_source=chapter_source,
+                    chapter_summary=chunk_prompt,
+                ),
+                degraded_user_prompt=degraded_prompt_builder(
+                    project_slug=project_slug,
+                    chapter_source=chapter_source,
+                    chapter_summary=chunk_prompt,
+                    degraded=True,
+                ),
+            )
+        except LMStudioError as exc:
+            warnings.append(f"{task_name} chunk {chunk_index}/{len(chunk_texts)} failed: {exc}")
+            continue
+
+        chunk_records, chunk_warnings, chunk_index_markdown = _extract_usable_records_from_packet(
+            packet=chunk_packet,
+            record_type=record_type,
+            index_section_name=index_section_name,
+        )
+        warnings.extend(chunk_warnings)
+        if chunk_records:
+            chunk_successes += 1
+        for record in chunk_records:
+            asset_id = _normalize_asset_id(_require_record_field(record, "asset_id"), fallback_prefix=record_type)
+            if asset_id not in merged_records_by_asset_id:
+                merged_records_by_asset_id[asset_id] = record
+                merged_sections_by_asset_id[asset_id] = [record.sections.get("markdown", "").strip()]
+                continue
+            merged_records_by_asset_id[asset_id] = _merge_record_entries(
+                merged_records_by_asset_id[asset_id],
+                record,
+                record_type=record_type,
+            )
+            if record.sections.get("markdown", "").strip():
+                merged_sections_by_asset_id.setdefault(asset_id, [])
+                merged_sections_by_asset_id[asset_id].append(record.sections["markdown"].strip())
+        if not chunk_records:
+            warnings.append(
+                f"{task_name} chunk {chunk_index}/{len(chunk_texts)} produced no usable {record_type} records after validation."
+            )
+
+    merged_records = []
+    for asset_id, record in merged_records_by_asset_id.items():
+        merged_markdown_parts = []
+        for markdown_part in merged_sections_by_asset_id.get(asset_id, []):
+            if markdown_part and markdown_part not in merged_markdown_parts:
+                merged_markdown_parts.append(markdown_part)
+        merged_sections = dict(record.sections)
+        if merged_markdown_parts:
+            merged_sections["markdown"] = "\n\n---\n\n".join(merged_markdown_parts).strip()
+        merged_records.append(_PacketRecord(fields=record.fields, sections=merged_sections))
+
+    if not merged_records:
+        failure_reason = f"{task_name} could not recover any usable {record_type} records from chunked fallback."
+        warnings.append(failure_reason)
+        if full_packet is None:
+            raise LMStudioError(failure_reason)
+        raise LMStudioError(failure_reason)
+
+    synthesized_index_markdown = _synthesize_record_index_markdown(
+        chapter_id=chapter_source.chapter_id,
+        record_type=record_type,
+        records=merged_records,
+    )
+    warnings.append(
+        f"{task_name} recovered {len(merged_records)} usable {record_type} record(s) across {chunk_successes} successful chunk pass(es)."
+    )
+    return (
+        _PacketDocument(
+            metadata={"task": task_name, "version": PACKET_VERSION, "source_mode": "chunked_fallback"},
+            sections={index_section_name: synthesized_index_markdown},
+            records=merged_records,
+        ),
+        warnings,
+    )
+
+
 def _chat_completion_result(
     *,
     client: LMStudioClient,
@@ -1343,6 +1497,162 @@ def _chat_completion_result(
         error_message=None,
         is_success=True,
     )
+
+
+def _extract_usable_records_from_packet(
+    *,
+    packet: _PacketDocument,
+    record_type: str,
+    index_section_name: str,
+) -> tuple[list[_PacketRecord], list[str], str]:
+    warnings: list[str] = []
+    try:
+        records = _require_packet_records(packet, record_type=record_type)
+    except LMStudioError:
+        records = []
+    try:
+        index_markdown = _require_packet_section(packet, index_section_name)
+    except LMStudioError:
+        index_markdown = ""
+    if records:
+        return records, warnings, index_markdown
+    if record_type == "character":
+        records = _extract_character_records_from_index_markdown(index_markdown)
+    elif record_type == "environment":
+        records = _extract_environment_records_from_index_markdown(index_markdown)
+    else:
+        records = []
+    if records:
+        warnings.append(
+            f"Recovered {len(records)} usable {record_type} record(s) from {index_section_name} salvage output."
+        )
+    return records, warnings, index_markdown
+
+
+def _split_text_into_fallback_chunks(text: str) -> list[str]:
+    normalized_text = text.strip()
+    if not normalized_text:
+        return [normalized_text]
+    lines = normalized_text.splitlines()
+    if len(lines) < 8:
+        midpoint = max(1, len(normalized_text) // 2)
+        first = normalized_text[: midpoint + 1].strip()
+        second = normalized_text[max(0, midpoint - 1) :].strip()
+        chunks = [chunk for chunk in (first, second) if chunk]
+        return chunks or [normalized_text]
+    midpoint = max(1, len(lines) // 2)
+    overlap = min(3, max(1, midpoint // 8))
+    first = "\n".join(lines[: midpoint + overlap]).strip()
+    second = "\n".join(lines[max(0, midpoint - overlap) :]).strip()
+    chunks = [chunk for chunk in (first, second) if chunk]
+    return chunks or [normalized_text]
+
+
+def _merge_record_entries(base: _PacketRecord, incoming: _PacketRecord, *, record_type: str) -> _PacketRecord:
+    fields = dict(base.fields)
+    for key, value in incoming.fields.items():
+        incoming_value = value.strip()
+        if not incoming_value:
+            continue
+        existing_value = fields.get(key, "").strip()
+        if not existing_value:
+            fields[key] = incoming_value
+            continue
+        if key in {"aliases", "clarification_reason", "clarification_question", "manual_description_reason", "description", "role"}:
+            fields[key] = _merge_text_values(existing_value, incoming_value)
+            continue
+        if key in {"manual_description_required", "clarification_required"}:
+            fields[key] = "true" if _parse_packet_bool(existing_value) or _parse_packet_bool(incoming_value) else "false"
+            continue
+        if key in {"canonical_character_id"}:
+            if len(incoming_value) > len(existing_value):
+                fields[key] = incoming_value
+            continue
+        if len(incoming_value) > len(existing_value):
+            fields[key] = incoming_value
+
+    sections = dict(base.sections)
+    base_markdown = sections.get("markdown", "").strip()
+    incoming_markdown = incoming.sections.get("markdown", "").strip()
+    if incoming_markdown and incoming_markdown not in base_markdown:
+        sections["markdown"] = _merge_markdown_blocks(base_markdown, incoming_markdown, record_type=record_type)
+    return _PacketRecord(fields=fields, sections=sections)
+
+
+def _merge_text_values(existing: str, incoming: str) -> str:
+    values: list[str] = []
+    for value in (existing, incoming):
+        normalized = value.strip()
+        if normalized and normalized not in values:
+            values.append(normalized)
+    return "\n".join(values)
+
+
+def _merge_markdown_blocks(existing: str, incoming: str, *, record_type: str) -> str:
+    parts: list[str] = []
+    for block in (existing.strip(), incoming.strip()):
+        if block and block not in parts:
+            parts.append(block)
+    if not parts:
+        return ""
+    if len(parts) == 1:
+        return parts[0]
+    heading = "# Character Merge" if record_type == "character" else "# Environment Merge" if record_type == "environment" else "# Record Merge"
+    return "\n\n".join([heading, *[f"## Chunk {index + 1}\n{part}" for index, part in enumerate(parts)]])
+
+
+def _synthesize_record_index_markdown(*, chapter_id: str, record_type: str, records: list[_PacketRecord]) -> str:
+    if record_type == "character":
+        lines = [
+            f"# Character Index - {chapter_id}",
+            "",
+            "## Visible Characters",
+            "",
+            "| Asset ID | Canonical Character ID | Aliases | Fully Identified | Manual Description Required | Clarification Required | Description |",
+            "|---|---|---|---|---|---|---|",
+        ]
+        for record in records:
+            fields = record.fields
+            lines.append(
+                "| {asset_id} | {canonical} | {aliases} | {identified} | {manual} | {clarify} | {description} |".format(
+                    asset_id=_markdown_table_cell(fields.get("asset_id", "")),
+                    canonical=_markdown_table_cell(fields.get("canonical_character_id", "")),
+                    aliases=_markdown_table_cell(fields.get("aliases", "")),
+                    identified=_markdown_table_cell(fields.get("is_fully_identified", "")),
+                    manual=_markdown_table_cell(fields.get("manual_description_required", "")),
+                    clarify=_markdown_table_cell(fields.get("clarification_required", "")),
+                    description=_markdown_table_cell(fields.get("description", "")),
+                )
+            )
+        return "\n".join(lines)
+    lines = [
+        f"# Environment Index - {chapter_id}",
+        "",
+        "## Visible Environments",
+        "",
+        "| Asset ID | Role | Geography | Lighting | Atmosphere | Scale | Anchors | Description |",
+        "|---|---|---|---|---|---|---|---|",
+    ]
+    for record in records:
+        fields = record.fields
+        lines.append(
+            "| {asset_id} | {role} | {geography} | {lighting} | {atmosphere} | {scale} | {anchors} | {description} |".format(
+                asset_id=_markdown_table_cell(fields.get("asset_id", "")),
+                role=_markdown_table_cell(fields.get("role", "")),
+                geography=_markdown_table_cell(fields.get("geography", "")),
+                lighting=_markdown_table_cell(fields.get("lighting", "")),
+                atmosphere=_markdown_table_cell(fields.get("atmosphere", "")),
+                scale=_markdown_table_cell(fields.get("scale", "")),
+                anchors=_markdown_table_cell(fields.get("anchors", "")),
+                description=_markdown_table_cell(fields.get("description", "")),
+            )
+        )
+    return "\n".join(lines)
+
+
+def _markdown_table_cell(value: str) -> str:
+    normalized = value.replace("|", r"\|").replace("\n", " ").strip()
+    return normalized or "-"
 
 
 def _structured_prompt_draft(record: _PacketRecord, *, asset_id: str, asset_type: str) -> _StructuredPromptDraft:

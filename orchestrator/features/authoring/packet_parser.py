@@ -20,6 +20,8 @@ PREFERRED_SCENE_COUNT = 3
 THIN_SCENE_MARKDOWN_THRESHOLD = 240
 HEADING_PATTERN = re.compile(r"(?m)^# ([^\r\n]+)\s*$")
 INDEX_ENTRY_PATTERN = re.compile(r"(?m)^## ([^\r\n]+)\s*$")
+MARKDOWN_TABLE_ROW_PATTERN = re.compile(r"^\|(.+)\|$")
+MARKDOWN_TABLE_SEPARATOR_PATTERN = re.compile(r"^\|(?:\s*:?-{3,}:?\s*\|)+\s*$")
 CHAPTER_ID_PATTERN = re.compile(r"\b(CH\d{3})\b", re.IGNORECASE)
 IMPLICIT_MARKDOWN_FIELD_PATTERN = re.compile(r"^[a-z0-9_]+_markdown:\s*$", re.IGNORECASE)
 TOP_LEVEL_FIELD_PATTERN = re.compile(r"^[a-z0-9_]+:\s*$", re.IGNORECASE)
@@ -263,46 +265,49 @@ def require_record_section(record: PacketRecord, section_name: str, *, allow_emp
 
 
 def extract_character_records_from_index_markdown(markdown: str) -> list[PacketRecord]:
-    records: list[PacketRecord] = []
-    lines = markdown.splitlines()
-    current_title: str | None = None
-    current_lines: list[str] = []
-
-    def flush() -> None:
-        nonlocal current_title, current_lines
-        if current_title is None:
-            return
-        fields: dict[str, str] = {
-            "type": "character",
-            "asset_id": normalize_asset_id(current_title, fallback_prefix="character"),
-        }
-        for line in current_lines:
-            key, value = parse_markdown_bullet_key_value(line)
-            if key:
-                fields[key] = value
-        if not fields.get("asset_id"):
-            fields["asset_id"] = normalize_asset_id(current_title, fallback_prefix="character")
-        sections = {
-            "markdown": "\n".join([f"## {current_title}", *current_lines]).strip(),
-        }
-        records.append(PacketRecord(fields=fields, sections=sections))
-        current_title = None
-        current_lines = []
-
-    for line in lines:
-        match = INDEX_ENTRY_PATTERN.fullmatch(line.strip())
-        if match:
-            flush()
-            current_title = match.group(1).strip()
-            current_lines = []
-            continue
-        if current_title is not None:
-            current_lines.append(line)
-    flush()
-    return records
+    records = _extract_table_records(
+        markdown,
+        record_type="character",
+        fallback_prefix="character",
+        column_aliases={
+            "asset_id": "asset_id",
+            "canonical_character_id": "canonical_character_id",
+            "canonical_character": "canonical_character_id",
+            "aliases": "aliases",
+            "fully_identified": "is_fully_identified",
+            "is_fully_identified": "is_fully_identified",
+            "description": "description",
+        },
+        default_section_title="Character Index",
+    )
+    if records:
+        return records
+    return _extract_heading_block_records(markdown, record_type="character", fallback_prefix="character")
 
 
 def extract_environment_records_from_index_markdown(markdown: str) -> list[PacketRecord]:
+    records = _extract_table_records(
+        markdown,
+        record_type="environment",
+        fallback_prefix="environment",
+        column_aliases={
+            "asset_id": "asset_id",
+            "role": "role",
+            "geography": "geography",
+            "lighting": "lighting",
+            "atmosphere": "atmosphere",
+            "scale": "scale",
+            "anchors": "anchors",
+            "description": "description",
+        },
+        default_section_title="Environment Index",
+    )
+    if records:
+        return records
+    return _extract_heading_block_records(markdown, record_type="environment", fallback_prefix="environment")
+
+
+def _extract_heading_block_records(markdown: str, *, record_type: str, fallback_prefix: str) -> list[PacketRecord]:
     records: list[PacketRecord] = []
     lines = markdown.splitlines()
     current_title: str | None = None
@@ -312,19 +317,25 @@ def extract_environment_records_from_index_markdown(markdown: str) -> list[Packe
         nonlocal current_title, current_lines
         if current_title is None:
             return
+        if _looks_like_generic_index_heading(current_title):
+            current_title = None
+            current_lines = []
+            return
         fields: dict[str, str] = {
-            "type": "environment",
-            "asset_id": normalize_asset_id(current_title, fallback_prefix="environment"),
+            "type": record_type,
+            "asset_id": normalize_asset_id(current_title, fallback_prefix=fallback_prefix),
         }
         for line in current_lines:
             key, value = parse_markdown_bullet_key_value(line)
             if key:
                 fields[key] = value
         if not fields.get("asset_id"):
-            fields["asset_id"] = normalize_asset_id(current_title, fallback_prefix="environment")
-        sections = {
-            "markdown": "\n".join([f"## {current_title}", *current_lines]).strip(),
-        }
+            fields["asset_id"] = normalize_asset_id(current_title, fallback_prefix=fallback_prefix)
+        if record_type == "character":
+            _hydrate_salvaged_character_fields(fields)
+        elif record_type == "environment":
+            _hydrate_salvaged_environment_fields(fields)
+        sections = {"markdown": _build_salvaged_markdown(record_type=record_type, title=current_title, fields=fields, raw_lines=current_lines, heading_level=2)}
         records.append(PacketRecord(fields=fields, sections=sections))
         current_title = None
         current_lines = []
@@ -340,6 +351,148 @@ def extract_environment_records_from_index_markdown(markdown: str) -> list[Packe
             current_lines.append(line)
     flush()
     return records
+
+
+def _extract_table_records(
+    markdown: str,
+    *,
+    record_type: str,
+    fallback_prefix: str,
+    column_aliases: dict[str, str],
+    default_section_title: str,
+) -> list[PacketRecord]:
+    lines = markdown.splitlines()
+    records: list[PacketRecord] = []
+    index = 0
+    while index < len(lines):
+        stripped = lines[index].strip()
+        if not MARKDOWN_TABLE_ROW_PATTERN.fullmatch(stripped):
+            index += 1
+            continue
+        if index + 1 >= len(lines) or not MARKDOWN_TABLE_SEPARATOR_PATTERN.fullmatch(lines[index + 1].strip()):
+            index += 1
+            continue
+        header_cells = _split_markdown_table_row(stripped)
+        normalized_headers = [re.sub(r"[^a-z0-9]+", "_", cell.strip().lower()).strip("_") for cell in header_cells]
+        row_index = index + 2
+        while row_index < len(lines):
+            row_line = lines[row_index].strip()
+            if not MARKDOWN_TABLE_ROW_PATTERN.fullmatch(row_line):
+                break
+            row_cells = _split_markdown_table_row(row_line)
+            if len(row_cells) != len(normalized_headers):
+                row_index += 1
+                continue
+            row_map: dict[str, str] = {}
+            for header, cell in zip(normalized_headers, row_cells):
+                mapped = column_aliases.get(header)
+                if mapped:
+                    row_map[mapped] = cell.strip()
+            asset_id = row_map.get("asset_id", "")
+            if not asset_id:
+                asset_id = normalize_asset_id(row_map.get("canonical_character_id", "") or row_map.get("description", "") or fallback_prefix, fallback_prefix=fallback_prefix)
+            fields: dict[str, str] = {"type": record_type, "asset_id": asset_id}
+            fields.update(row_map)
+            if record_type == "character":
+                _hydrate_salvaged_character_fields(fields)
+            elif record_type == "environment":
+                _hydrate_salvaged_environment_fields(fields)
+            title = row_map.get("canonical_character_id") or row_map.get("description") or row_map.get("asset_id") or default_section_title
+            sections = {"markdown": _build_salvaged_markdown(record_type=record_type, title=title, fields=fields, raw_lines=[row_line], heading_level=1)}
+            records.append(PacketRecord(fields=fields, sections=sections))
+            row_index += 1
+        index = row_index
+    return records
+
+
+def _split_markdown_table_row(line: str) -> list[str]:
+    cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+    return cells
+
+
+def _hydrate_salvaged_character_fields(fields: dict[str, str]) -> None:
+    description = fields.get("description", "").strip()
+    fully_identified = fields.get("is_fully_identified", "").strip().lower()
+    if not fields.get("canonical_character_id"):
+        fields["canonical_character_id"] = fields.get("asset_id", "")
+    if not fields.get("aliases"):
+        fields["aliases"] = "-"
+    if not fields.get("is_fully_identified"):
+        fields["is_fully_identified"] = "false"
+    if not fields.get("manual_description_required"):
+        fields["manual_description_required"] = "true" if _character_description_needs_manual_followup(description, fully_identified) else "false"
+    if not fields.get("manual_description_reason"):
+        fields["manual_description_reason"] = _character_manual_description_reason(description)
+    if not fields.get("clarification_required"):
+        fields["clarification_required"] = "false"
+    fields.setdefault("clarification_reason", "")
+    fields.setdefault("clarification_question", "")
+
+
+def _hydrate_salvaged_environment_fields(fields: dict[str, str]) -> None:
+    if not fields.get("aliases"):
+        fields["aliases"] = "-"
+    fields.setdefault("role", fields.get("description", ""))
+    fields.setdefault("description", fields.get("description", ""))
+
+
+def _character_description_needs_manual_followup(description: str, fully_identified: str) -> bool:
+    normalized = description.lower().strip()
+    if fully_identified in {"false", "no", "0"}:
+        return True
+    if len(normalized) < 60:
+        return True
+    return any(term in normalized for term in ["referenced only", "uncertain", "unknown", "no physical", "sparse"])
+
+
+def _character_manual_description_reason(description: str) -> str:
+    normalized = description.strip()
+    if not normalized:
+        return "The salvaged index summary did not provide enough physical description for dependable image generation."
+    return f"The salvaged index summary only provides: {normalized[:180]}"
+
+
+def _build_salvaged_markdown(*, record_type: str, title: str, fields: dict[str, str], raw_lines: list[str], heading_level: int) -> str:
+    heading_prefix = "#" * max(1, min(heading_level, 6))
+    display_title = title.strip() or "Salvaged Entry"
+    lines = [f"{heading_prefix} {display_title}"]
+    if record_type == "character":
+        lines.extend(
+            [
+                "",
+                f"**Chapter Role:** {fields.get('description', '').strip() or 'Index summary'}",
+                f"**Canonical Character ID:** {fields.get('canonical_character_id', '').strip() or fields.get('asset_id', '').strip()}",
+                f"**Aliases:** {fields.get('aliases', '').strip() or '-'}",
+                f"**Identification Status:** {fields.get('is_fully_identified', '').strip() or 'false'}",
+                f"**Description:** {fields.get('description', '').strip() or 'See salvaged index summary.'}",
+                "**Uncertainty Notes:** Salvaged from index output because explicit record wrappers were missing.",
+            ]
+        )
+    else:
+        lines.extend(
+            [
+                "",
+                f"**Role:** {fields.get('role', '').strip() or 'Index summary'}",
+                f"**Description:** {fields.get('description', '').strip() or 'See salvaged index summary.'}",
+                "**Uncertainty Notes:** Salvaged from index output because explicit record wrappers were missing.",
+            ]
+        )
+    if raw_lines:
+        lines.extend(["", "**Salvage Source:**", *[f"- {line.strip()}" for line in raw_lines if line.strip()]])
+    return "\n".join(lines).strip()
+
+
+def _looks_like_generic_index_heading(title: str) -> bool:
+    normalized = re.sub(r"[^a-z0-9]+", " ", title.lower()).strip()
+    return normalized in {
+        "visible characters",
+        "character records",
+        "environment index",
+        "visible environments",
+        "scene index",
+        "beat index",
+        "clip roster",
+    }
 
 
 def validate_scene_decomposition(*, chapter_id: str, scene_records: list[PacketRecord]) -> list[str]:

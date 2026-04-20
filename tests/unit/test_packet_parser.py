@@ -154,6 +154,31 @@ def test_extract_character_records_from_index_markdown_salvages_heading_blocks()
     assert records[1].fields["asset_id"] == "apache_warriors"
 
 
+def test_extract_character_records_from_index_markdown_salvages_tables() -> None:
+    markdown = "\n".join(
+        [
+            "# Character Index - CH028",
+            "",
+            "## Visible Characters",
+            "",
+            "| Asset ID | Canonical Character ID | Aliases | Fully Identified | Description |",
+            "|----------|------------------------|---------|------------------|-------------|",
+            "| protagonist | CH002 Protagonist | Narrator, Conscious Entity | false | Awakens in Arizona cave after 10 years on Mars |",
+            "| mummified_woman | CH003 Mummified Woman | - | true | Discovered inside cave as mummified woman |",
+        ]
+    )
+
+    records = packet_parser.extract_character_records_from_index_markdown(markdown)
+
+    assert len(records) == 2
+    assert records[0].fields["asset_id"] == "protagonist"
+    assert records[0].fields["canonical_character_id"] == "CH002 Protagonist"
+    assert records[0].fields["is_fully_identified"] == "false"
+    assert "Arizona cave" in records[0].fields["description"]
+    assert records[0].sections["markdown"].startswith("# CH002 Protagonist")
+    assert records[1].fields["asset_id"] == "mummified_woman"
+
+
 def test_extract_environment_records_from_index_markdown_salvages_heading_blocks() -> None:
     markdown = "\n".join(
         [
