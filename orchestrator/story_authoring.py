@@ -20,6 +20,7 @@ from .features.authoring import shared_prompts as authoring_prompts
 from .features.authoring import packet_parser as authoring_packets
 from .book_librarian import chapter_text, get_paragraph_window, search_chapter_context
 from .character_match import find_character_match_candidates
+from .environment_match import EnvironmentMatchCandidate, find_environment_match_candidates
 from .features.world.global_helpers import is_generic_character_label
 from .world_registry import (
     character_registry_path,
@@ -68,14 +69,52 @@ class CharacterClarificationRequest:
     source_path: str
     reason: str
     question: str
+    candidate_summaries: tuple[str, ...] = ()
 
     def to_dict(self) -> dict[str, str]:
-        return {
+        payload = {
             "asset_id": self.asset_id,
             "source_path": self.source_path,
             "reason": self.reason,
             "question": self.question,
         }
+        if self.candidate_summaries:
+            payload["candidate_summaries"] = list(self.candidate_summaries)
+        return payload
+
+
+@dataclass(frozen=True)
+class CharacterClarificationDetails:
+    reason: str
+    question: str
+    candidate_summaries: tuple[str, ...] = ()
+
+
+@dataclass(frozen=True)
+class EnvironmentClarificationRequest:
+    asset_id: str
+    source_path: str
+    reason: str
+    question: str
+    candidate_summaries: tuple[str, ...] = ()
+
+    def to_dict(self) -> dict[str, object]:
+        payload: dict[str, object] = {
+            "asset_id": self.asset_id,
+            "source_path": self.source_path,
+            "reason": self.reason,
+            "question": self.question,
+        }
+        if self.candidate_summaries:
+            payload["candidate_summaries"] = list(self.candidate_summaries)
+        return payload
+
+
+@dataclass(frozen=True)
+class EnvironmentClarificationDetails:
+    reason: str
+    question: str
+    candidate_summaries: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -302,6 +341,7 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
     written_files: list[str] = []
     manual_requests: list[ManualCharacterDescriptionRequest] = []
     clarification_requests: list[CharacterClarificationRequest] = []
+    environment_clarification_requests: list[EnvironmentClarificationRequest] = []
     warnings: list[str] = []
 
     summary_packet, summary_warnings = _call_chapter_summary_with_chunked_fallback(
@@ -342,7 +382,7 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
 
     canonical_lookup = _existing_character_lookup(project_dir=project_dir)
     active_manual_description_requests: dict[str, str] = {}
-    active_clarification_requests: dict[str, tuple[str, str]] = {}
+    active_clarification_requests: dict[str, CharacterClarificationRequest] = {}
     usable_character_count = 0
     character_breakdown_dir = _chapter_character_breakdown_dir(project_dir=project_dir, chapter_id=chapter_source.chapter_id)
     try:
@@ -387,8 +427,8 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
 
         if inferred_clarification is not None and not clarification_required:
             clarification_required = True
-            clarification_reason = inferred_clarification[0]
-            clarification_question = inferred_clarification[1]
+            clarification_reason = inferred_clarification.reason
+            clarification_question = inferred_clarification.question
             warnings.append(f"Auto-generated clarification request for character '{resolved_asset_id}'.")
 
         if clarification_required:
@@ -416,8 +456,15 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
 
         if clarification_required:
             clarification_path = _character_clarification_path(project_dir=project_dir, asset_id=resolved_asset_id)
-            active_clarification_requests[resolved_asset_id] = (clarification_reason, clarification_question)
-            clarification_requests.append(CharacterClarificationRequest(asset_id=resolved_asset_id, source_path=repo_relative(clarification_path), reason=clarification_reason, question=clarification_question))
+            clarification_request = CharacterClarificationRequest(
+                asset_id=resolved_asset_id,
+                source_path=repo_relative(clarification_path),
+                reason=clarification_reason,
+                question=clarification_question,
+                candidate_summaries=inferred_clarification.candidate_summaries if inferred_clarification is not None else (),
+            )
+            active_clarification_requests[resolved_asset_id] = clarification_request
+            clarification_requests.append(clarification_request)
         usable_character_count += 1
 
     if usable_character_count == 0:
@@ -449,6 +496,7 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
     written_files.append(repo_relative(_legacy_environment_index_path(project_dir=project_dir)))
 
     environment_breakdown_dir = _chapter_environment_breakdown_dir(project_dir=project_dir, chapter_id=chapter_source.chapter_id)
+    active_environment_clarification_requests: dict[str, EnvironmentClarificationRequest] = {}
     try:
         environment_records = _require_packet_records(environment_packet, record_type="environment")
     except LMStudioError:
@@ -460,9 +508,33 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
         asset_id = _normalize_asset_id(_require_record_field(raw_environment, "asset_id"), fallback_prefix="environment")
         filename = f"{asset_id}.md"
         markdown = _require_record_section(raw_environment, "markdown")
+        environment_candidates = find_environment_match_candidates(
+            project_slug=project_slug,
+            asset_id=asset_id,
+            markdown=markdown,
+            top_n=3,
+        )
+        environment_clarification = _resolve_environment_clarification(
+            asset_id=asset_id,
+            candidates=environment_candidates,
+        )
+        if environment_clarification is not None:
+            clarification_path = _environment_clarification_path(project_dir=project_dir, asset_id=asset_id)
+            environment_clarification_request = EnvironmentClarificationRequest(
+                asset_id=asset_id,
+                source_path=repo_relative(clarification_path),
+                reason=environment_clarification.reason,
+                question=environment_clarification.question,
+                candidate_summaries=environment_clarification.candidate_summaries,
+            )
+            active_environment_clarification_requests[asset_id] = environment_clarification_request
+            environment_clarification_requests.append(environment_clarification_request)
         environment_path = environment_breakdown_dir / filename
         _write_text(environment_path, markdown)
         written_files.append(repo_relative(environment_path))
+
+    environment_clarification_placeholder_paths = _reconcile_environment_clarification_placeholders(project_dir=project_dir, active_requests=active_environment_clarification_requests)
+    written_files.extend(repo_relative(path) for path in environment_clarification_placeholder_paths)
 
     _prune_markdown_dir(project_dir / "02_story_analysis" / "character_breakdowns", keep_names={"CHARACTER_INDEX.md", "README.md"})
     _prune_markdown_dir(project_dir / "02_story_analysis" / "environment_breakdowns", keep_names={"ENVIRONMENT_INDEX.md", "README.md"})
@@ -1069,7 +1141,7 @@ def _print_saved_artifacts(header: str, paths: list[str]) -> None:
         print(f"  - {path}")
 
 
-def _resolve_character_identity(*, project_slug: str, asset_id: str, canonical_character_id: str, aliases: str, markdown: str, canonical_lookup: dict[str, str]) -> tuple[str, tuple[str, str] | None]:
+def _resolve_character_identity(*, project_slug: str, asset_id: str, canonical_character_id: str, aliases: str, markdown: str, canonical_lookup: dict[str, str]) -> tuple[str, CharacterClarificationDetails | None]:
     candidates = [asset_id]
     if canonical_character_id:
         candidates.append(_normalize_alias(canonical_character_id))
@@ -1108,17 +1180,44 @@ def _resolve_character_identity(*, project_slug: str, asset_id: str, canonical_c
                 "Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, "
                 "or keep this as a new canonical character?"
             )
-            return asset_id, (reason, question)
+            return asset_id, CharacterClarificationDetails(reason=reason, question=question, candidate_summaries=tuple(candidate_lines))
     generic_labels = {"narrator", "captain", "captive", "guard", "woman", "man", "girl", "boy", "hound"}
     if any(label in asset_id for label in generic_labels):
         question = "This character is named or role-labeled but not fully identified. Can you find a stronger canonical identity from another chapter, or should FilmCreator keep this as a scene-local provisional character?"
-        return asset_id, ("The extracted character id appears generic or role-based rather than clearly canonical.", question)
+        return asset_id, CharacterClarificationDetails(reason="The extracted character id appears generic or role-based rather than clearly canonical.", question=question)
     sections = _split_sections(markdown)
     description_blob = "\n".join(sections.values()).lower()
     if "no physical description" in description_blob or "uncertain" in description_blob:
         question = "This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?"
-        return asset_id, ("The character is not fully identified from this chapter alone.", question)
+        return asset_id, CharacterClarificationDetails(reason="The character is not fully identified from this chapter alone.", question=question)
     return asset_id, None
+
+
+def _resolve_environment_clarification(*, asset_id: str, candidates: list[EnvironmentMatchCandidate]) -> EnvironmentClarificationDetails | None:
+    if not candidates:
+        return None
+    top_candidate = candidates[0]
+    second_score = candidates[1].score if len(candidates) > 1 else 0
+    strong_unique_match = top_candidate.score >= 70 and top_candidate.score - second_score >= 10
+    if strong_unique_match:
+        return None
+    if top_candidate.score < 40 and not second_score:
+        return None
+    candidate_lines = []
+    for candidate in candidates[:3]:
+        chapter_texts = ", ".join(candidate.source_chapters[:2]) or "no source chapter"
+        snippet = candidate.context_snippets[0] if candidate.context_snippets else ""
+        snippet_text = f" Example context: {snippet}" if snippet else ""
+        candidate_lines.append(
+            f"- {candidate.canonical_id} (score {candidate.score}; chapters: {chapter_texts}; aliases: {', '.join(candidate.aliases[:4]) or '-'}){snippet_text}"
+        )
+    reason = "Potential existing environment matches detected:\n" + "\n".join(candidate_lines)
+    question = (
+        "This environment may match one of the existing canonical settings above. "
+        "Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, "
+        "or keep this as a new canonical environment?"
+    )
+    return EnvironmentClarificationDetails(reason=reason, question=question, candidate_summaries=tuple(candidate_lines))
 
 
 def _extract_scene_decomposition_outputs(
@@ -1555,6 +1654,12 @@ def _repair_record_extraction_packet(
     existing_index_markdown: str,
 ) -> tuple[_PacketDocument | None, list[str]]:
     warnings: list[str] = []
+    candidate_summaries = _record_repair_candidate_summaries(
+        project_slug=project_slug,
+        chapter_id=chapter_source.chapter_id,
+        record_type=record_type,
+        existing_index_markdown=existing_index_markdown,
+    )
     repair_prompt = _record_extraction_repair_prompt(
         project_slug=project_slug,
         chapter_id=chapter_source.chapter_id,
@@ -1564,6 +1669,7 @@ def _repair_record_extraction_packet(
         index_section_name=index_section_name,
         existing_index_markdown=existing_index_markdown,
         chapter_markdown=chapter_source.full_markdown,
+        candidate_summaries=candidate_summaries,
     )
     try:
         repair_packet = _call_packet_task(
@@ -1581,6 +1687,7 @@ def _repair_record_extraction_packet(
                 index_section_name=index_section_name,
                 existing_index_markdown=existing_index_markdown,
                 chapter_markdown=chapter_source.full_markdown,
+                candidate_summaries=candidate_summaries,
                 degraded=True,
             ),
         )
@@ -1936,6 +2043,7 @@ def _record_extraction_repair_prompt(
     index_section_name: str,
     existing_index_markdown: str,
     chapter_markdown: str,
+    candidate_summaries: list[str] | None = None,
     degraded: bool = False,
 ) -> str:
     try:
@@ -1960,6 +2068,7 @@ def _record_extraction_repair_prompt(
             "- preserve the existing index markdown if possible",
         ]
     existing_index_text = existing_index_markdown.strip() or "(missing)"
+    candidate_summary_text = "\n".join(candidate_summaries or []).strip()
     return "\n\n".join(
         [
             f"Project slug: {project_slug}",
@@ -1969,6 +2078,7 @@ def _record_extraction_repair_prompt(
             "",
             "Existing index markdown from the prior packet:",
             existing_index_text,
+            *( ["", "Candidate matches from the existing index markdown:", candidate_summary_text] if candidate_summary_text else [] ),
             "",
             "Requirements:",
             *requirements,
@@ -1980,6 +2090,54 @@ def _record_extraction_repair_prompt(
             chapter_body,
         ]
     )
+
+
+def _record_repair_candidate_summaries(
+    *,
+    project_slug: str,
+    chapter_id: str,
+    record_type: str,
+    existing_index_markdown: str,
+) -> list[str]:
+    if not existing_index_markdown.strip():
+        return []
+    if record_type == "character":
+        records = _extract_character_records_from_index_markdown(existing_index_markdown)
+        finder = find_character_match_candidates
+    elif record_type == "environment":
+        records = _extract_environment_records_from_index_markdown(existing_index_markdown)
+        finder = find_environment_match_candidates
+    else:
+        records = _extract_scene_records_from_index_markdown(existing_index_markdown)
+        finder = None
+    if not records:
+        return []
+
+    summaries: list[str] = []
+    for record in records[:3]:
+        try:
+            asset_id = _normalize_asset_id(_require_record_field(record, "asset_id"), fallback_prefix=record_type)
+            markdown = _require_record_section(record, "markdown")
+        except LMStudioError:
+            continue
+        if finder is None:
+            continue
+        candidates = finder(
+            project_slug=project_slug,
+            asset_id=asset_id,
+            markdown=markdown,
+            top_n=2,
+        )
+        if not candidates:
+            continue
+        summaries.append(f"## {asset_id}")
+        for candidate in candidates:
+            snippet = candidate.context_snippets[0] if candidate.context_snippets else ""
+            snippet_text = f" Example context: {snippet}" if snippet else ""
+            summaries.append(
+                f"- {candidate.canonical_id} (score {candidate.score}; chapters: {', '.join(candidate.source_chapters[:2]) or 'no source chapter'}; aliases: {', '.join(candidate.aliases[:4]) or '-'}){snippet_text}"
+            )
+    return summaries
 
 
 def _chapter_summary_synthesis_prompt(*, project_slug: str, chapter_id: str, chunk_packets: list[_PacketDocument], degraded: bool = False) -> str:
@@ -2218,8 +2376,68 @@ def _manual_character_description_placeholder(*, asset_id: str, reason: str) -> 
     return "\n".join([MANUAL_PLACEHOLDER_MARKER, "", "# Asset ID", asset_id, "", "# Purpose", "Paste a stable manual visual description for this character so later shared reference generation can use it.", "", "# Why This Is Needed", reason, "", "# Guidance", "- describe face, hair, body type, age impression, silhouette, skin tone, costume logic, and any continuity-critical marks", "- prefer visible facts over backstory", "- if multiple looks exist, describe the default look for this chapter", "", "# Manual Description", ""])
 
 
-def _character_clarification_placeholder(*, asset_id: str, reason: str, question: str) -> str:
-    return "\n".join([CLARIFICATION_PLACEHOLDER_MARKER, "", "# Asset ID", asset_id, "", "# Why This Needs Clarification", reason, "", "# Question", question, "", "# Guidance", "- answer briefly and concretely", "- if another chapter already describes the character, note that source chapter", "- if the character is never described well, say whether FilmCreator should generate a reusable film-wide default description", "", "# Clarification Response", ""])
+def _character_clarification_placeholder(*, asset_id: str, reason: str, question: str, candidate_summaries: tuple[str, ...] = ()) -> str:
+    lines = [
+        CLARIFICATION_PLACEHOLDER_MARKER,
+        "",
+        "# Asset ID",
+        asset_id,
+        "",
+        "# Why This Needs Clarification",
+        reason,
+        "",
+        "# Question",
+        question,
+    ]
+    if candidate_summaries:
+        lines.extend([
+            "",
+            "# Candidate Matches",
+            *candidate_summaries,
+        ])
+    lines.extend([
+        "",
+        "# Guidance",
+        "- answer briefly and concretely",
+        "- if another chapter already describes the character, note that source chapter",
+        "- if the character is never described well, say whether FilmCreator should generate a reusable film-wide default description",
+        "",
+        "# Clarification Response",
+        "",
+    ])
+    return "\n".join(lines)
+
+
+def _environment_clarification_placeholder(*, asset_id: str, reason: str, question: str, candidate_summaries: tuple[str, ...] = ()) -> str:
+    lines = [
+        CLARIFICATION_PLACEHOLDER_MARKER,
+        "",
+        "# Asset ID",
+        asset_id,
+        "",
+        "# Why This Needs Clarification",
+        reason,
+        "",
+        "# Question",
+        question,
+    ]
+    if candidate_summaries:
+        lines.extend([
+            "",
+            "# Candidate Matches",
+            *candidate_summaries,
+        ])
+    lines.extend([
+        "",
+        "# Guidance",
+        "- answer briefly and concretely",
+        "- if another chapter already describes the setting, note that source chapter",
+        "- if the environment is broader than the current chapter's label, say whether FilmCreator should keep it as a reusable canonical setting or split it into narrower sub-locations",
+        "",
+        "# Clarification Response",
+        "",
+    ])
+    return "\n".join(lines)
 
 
 def _manual_description_path(*, project_dir: Path, asset_id: str) -> Path:
@@ -2228,6 +2446,10 @@ def _manual_description_path(*, project_dir: Path, asset_id: str) -> Path:
 
 def _character_clarification_path(*, project_dir: Path, asset_id: str) -> Path:
     return project_dir / "01_source" / "character_descriptions" / f"{asset_id}_clarification.md"
+
+
+def _environment_clarification_path(*, project_dir: Path, asset_id: str) -> Path:
+    return project_dir / "01_source" / "environment_descriptions" / f"{asset_id}_clarification.md"
 
 
 def _reconcile_manual_character_description_placeholders(*, project_dir: Path, active_requests: dict[str, str]) -> list[Path]:
@@ -2255,15 +2477,41 @@ def _reconcile_manual_character_description_placeholders(*, project_dir: Path, a
     return written_paths
 
 
-def _reconcile_character_clarification_placeholders(*, project_dir: Path, active_requests: dict[str, tuple[str, str]]) -> list[Path]:
+def _reconcile_character_clarification_placeholders(*, project_dir: Path, active_requests: dict[str, CharacterClarificationRequest]) -> list[Path]:
     clarification_dir = project_dir / "01_source" / "character_descriptions"
     ensure_dir(clarification_dir)
     written_paths: list[Path] = []
-    for asset_id, (reason, question) in active_requests.items():
+    for asset_id, request in active_requests.items():
         path = _character_clarification_path(project_dir=project_dir, asset_id=asset_id)
         if path.exists() and _clarification_has_user_content(path):
             continue
-        content = _character_clarification_placeholder(asset_id=asset_id, reason=reason, question=question)
+        content = _character_clarification_placeholder(
+            asset_id=asset_id,
+            reason=request.reason,
+            question=request.question,
+            candidate_summaries=request.candidate_summaries,
+        )
+        if path.exists() and path.read_text(encoding="utf-8") == content:
+            continue
+        _write_text(path, content)
+        written_paths.append(path)
+    return written_paths
+
+
+def _reconcile_environment_clarification_placeholders(*, project_dir: Path, active_requests: dict[str, EnvironmentClarificationRequest]) -> list[Path]:
+    clarification_dir = project_dir / "01_source" / "environment_descriptions"
+    ensure_dir(clarification_dir)
+    written_paths: list[Path] = []
+    for asset_id, request in active_requests.items():
+        path = _environment_clarification_path(project_dir=project_dir, asset_id=asset_id)
+        if path.exists() and _clarification_has_user_content(path):
+            continue
+        content = _environment_clarification_placeholder(
+            asset_id=asset_id,
+            reason=request.reason,
+            question=request.question,
+            candidate_summaries=request.candidate_summaries,
+        )
         if path.exists() and path.read_text(encoding="utf-8") == content:
             continue
         _write_text(path, content)

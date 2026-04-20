@@ -1176,3 +1176,37 @@ def test_analyze_chapter_falls_back_to_chunked_character_extraction_on_timeout(
     assert summary.canonical_character_ids
     assert (projects_root / "demo" / "02_story_analysis" / "character_breakdowns" / "chapters" / "CH001" / "john_carter.md").exists()
     assert (projects_root / "demo" / "02_story_analysis" / "character_breakdowns" / "chapters" / "CH001" / "dejah_thoris.md").exists()
+
+
+def test_character_clarification_placeholder_includes_candidate_comparison_block() -> None:
+    text = story_authoring_module._character_clarification_placeholder(
+        asset_id="john_carter",
+        reason="Potential existing identity matches detected:",
+        question="Should this merge into an existing canonical character?",
+        candidate_summaries=(
+            "- john_carter (score 93; chapters: CH001, CH004; aliases: Carter) Example context: Carter is described as a veteran commander.",
+            "- captain_carter (score 74; chapters: CH009; aliases: Captain Carter) Example context: The captain speaks with Carter's voice and mannerisms.",
+        ),
+    )
+
+    assert "# Candidate Matches" in text
+    assert "john_carter (score 93" in text
+    assert "captain_carter (score 74" in text
+    assert "# Clarification Response" in text
+
+
+def test_environment_clarification_placeholder_includes_candidate_comparison_block() -> None:
+    text = story_authoring_module._environment_clarification_placeholder(
+        asset_id="city_plaza",
+        reason="Potential existing environment matches detected:",
+        question="Should this merge into an existing canonical environment?",
+        candidate_summaries=(
+            "- city_plaza (score 91; chapters: CH001, CH004; aliases: plaza) Example context: The plaza is described as a dry open ground framed by buildings.",
+            "- deserted_city_buildings (score 72; chapters: CH002; aliases: city_ruins) Example context: The ruined city includes the same plaza-like open ground.",
+        ),
+    )
+
+    assert "# Candidate Matches" in text
+    assert "city_plaza (score 91" in text
+    assert "deserted_city_buildings (score 72" in text
+    assert "# Clarification Response" in text
