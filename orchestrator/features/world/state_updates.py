@@ -2,41 +2,35 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from .core.paths import repo_relative
-from .features.world.global_helpers import (
-    append_alias_history as _append_alias_history,
-    append_description_layer as _append_description_layer,
-    append_resolution_history as _append_resolution_history,
-    append_source_history as _append_source_history,
+from ...core.paths import repo_relative
+from ...story_authoring import StoryAnalysisSummary
+from .global_helpers import (
+    append_alias_history,
+    append_description_layer,
+    append_resolution_history,
+    append_source_history,
     chapter_local_character_registry_path,
     chapter_local_environment_registry_path,
-    chapter_lte as _chapter_lte,
-    chapter_sort_key as _chapter_sort_key,
-    empty_character_entry as _empty_character_entry,
-    empty_environment_entry as _empty_environment_entry,
-    ensure_character_entry_defaults as _ensure_character_entry_defaults,
-    ensure_environment_entry_defaults as _ensure_environment_entry_defaults,
+    chapter_lte,
+    empty_character_entry,
+    empty_environment_entry,
+    ensure_character_entry_defaults,
+    ensure_environment_entry_defaults,
     global_character_directory_path,
     global_character_registry_path,
     global_environment_directory_path,
     global_environment_registry_path,
-    global_world_dir,
-    is_generic_character_label as _is_generic_character_label,
-    load_chapter_registry as _load_chapter_registry,
-    load_json as _load_json,
-    load_world_snapshot,
-    normalize_alias_token as _normalize_alias_token,
-    repo_root_from_project_dir as _repo_root_from_project_dir,
-    utc_now_iso as _utc_now_iso,
-    update_json as _write_json,
+    load_chapter_registry,
+    load_json,
+    normalize_alias_token,
+    repo_root_from_project_dir,
+    utc_now_iso,
+    update_json,
     world_failure_log_path,
     world_snapshot_path,
-    world_snapshots_dir,
     world_sequence_state_path,
 )
-from .features.world import state_updates as _world_state_updates
-from .scaffold import create_project
-from .story_authoring import StoryAnalysisSummary
+from ...scaffold import create_project
 
 
 def _assert_registry_is_chapter_local(*, registry: dict, chapter_id: str, entity_type: str) -> None:
@@ -52,207 +46,6 @@ def _assert_registry_is_chapter_local(*, registry: dict, chapter_id: str, entity
             )
 
 
-def _normalize_alias_token(value: str) -> str:
-    normalized = re.sub(r"[^a-z0-9]+", "_", value.strip().lower()).strip("_")
-    normalized = re.sub(r"^the_", "", normalized)
-    return normalized
-
-
-def _is_generic_character_label(value: str) -> bool:
-    normalized = _normalize_alias_token(value)
-    return normalized in _GENERIC_CHARACTER_LABELS or any(
-        token in normalized.split("_")
-        for token in {"narrator", "prisoner", "captive", "guard", "companion", "warrior", "chieftain", "martian"}
-    )
-
-
-def _utc_now_iso() -> str:
-    return datetime.now(timezone.utc).isoformat()
-
-
-def _chapter_sort_key(chapter_id: str) -> int:
-    match = _CHAPTER_ID_RE.fullmatch(chapter_id.strip())
-    if not match:
-        raise ValueError(f"Invalid chapter id: {chapter_id}")
-    return int(match.group(1))
-
-
-def _chapter_lte(left: str, right: str) -> bool:
-    return _chapter_sort_key(left) <= _chapter_sort_key(right)
-
-
-def _empty_character_entry(*, canonical_id: str, entry: dict, chapter_id: str) -> dict:
-    return {
-        "canonical_id": canonical_id,
-        "display_name": entry.get("display_name", canonical_id),
-        "status": entry.get("status", "canonical"),
-        "entity_kind": entry.get("entity_kind", "individual"),
-        "aliases": [],
-        "alias_history": [],
-        "first_seen_chapter": chapter_id,
-        "last_seen_chapter": chapter_id,
-        "chapter_mentions": [],
-        "sources": [],
-        "source_history": [],
-        "open_questions": [],
-        "resolution_reason": entry.get("resolution_reason", ""),
-        "resolved_to": None,
-        "resolution_history": [],
-        "description_layers": {
-            "initial_extracted": [],
-            "stable_canonical": [],
-            "chapter_specific": {},
-        },
-    }
-
-
-def _empty_environment_entry(*, canonical_id: str, entry: dict, chapter_id: str) -> dict:
-    return {
-        "canonical_id": canonical_id,
-        "display_name": entry.get("display_name", canonical_id),
-        "status": entry.get("status", "canonical"),
-        "entity_kind": entry.get("entity_kind", "environment"),
-        "aliases": [],
-        "alias_history": [],
-        "parent_environment_id": entry.get("parent_environment_id"),
-        "children": [],
-        "first_seen_chapter": chapter_id,
-        "last_seen_chapter": chapter_id,
-        "chapter_mentions": [],
-        "sources": [],
-        "source_history": [],
-        "state_notes": [],
-        "description_layers": {
-            "initial_extracted": [],
-            "stable_canonical": [],
-            "chapter_specific": {},
-        },
-    }
-
-
-def _ensure_character_entry_defaults(entry: dict, *, chapter_id: str) -> dict:
-    entry.setdefault("display_name", entry.get("canonical_id", ""))
-    entry.setdefault("status", "canonical")
-    entry.setdefault("entity_kind", "individual")
-    entry.setdefault("aliases", [])
-    entry.setdefault("alias_history", [])
-    entry.setdefault("first_seen_chapter", chapter_id)
-    entry.setdefault("last_seen_chapter", chapter_id)
-    entry.setdefault("chapter_mentions", [])
-    entry.setdefault("sources", [])
-    entry.setdefault("source_history", [])
-    entry.setdefault("open_questions", [])
-    entry.setdefault("resolution_reason", "")
-    entry.setdefault("resolved_to", None)
-    entry.setdefault("resolution_history", [])
-    entry.setdefault(
-        "description_layers",
-        {
-            "initial_extracted": [],
-            "stable_canonical": [],
-            "chapter_specific": {},
-        },
-    )
-    entry["description_layers"].setdefault("initial_extracted", [])
-    entry["description_layers"].setdefault("stable_canonical", [])
-    entry["description_layers"].setdefault("chapter_specific", {})
-    return entry
-
-
-def _ensure_environment_entry_defaults(entry: dict, *, chapter_id: str) -> dict:
-    entry.setdefault("display_name", entry.get("canonical_id", ""))
-    entry.setdefault("status", "canonical")
-    entry.setdefault("entity_kind", "environment")
-    entry.setdefault("aliases", [])
-    entry.setdefault("alias_history", [])
-    entry.setdefault("parent_environment_id", None)
-    entry.setdefault("children", [])
-    entry.setdefault("first_seen_chapter", chapter_id)
-    entry.setdefault("last_seen_chapter", chapter_id)
-    entry.setdefault("chapter_mentions", [])
-    entry.setdefault("sources", [])
-    entry.setdefault("source_history", [])
-    entry.setdefault("state_notes", [])
-    entry.setdefault(
-        "description_layers",
-        {
-            "initial_extracted": [],
-            "stable_canonical": [],
-            "chapter_specific": {},
-        },
-    )
-    entry["description_layers"].setdefault("initial_extracted", [])
-    entry["description_layers"].setdefault("stable_canonical", [])
-    entry["description_layers"].setdefault("chapter_specific", {})
-    return entry
-
-
-def _append_alias_history(entry: dict, *, alias: str, chapter_id: str, source: str) -> None:
-    normalized_alias = _normalize_alias_token(alias)
-    if not normalized_alias:
-        return
-    if normalized_alias not in entry["aliases"]:
-        entry["aliases"].append(normalized_alias)
-    history_item = {
-        "chapter_id": chapter_id,
-        "alias": normalized_alias,
-        "source": source,
-    }
-    if history_item not in entry["alias_history"]:
-        entry["alias_history"].append(history_item)
-
-
-def _append_source_history(entry: dict, *, chapter_id: str, source_path: str, record_kind: str) -> None:
-    if source_path not in entry["sources"]:
-        entry["sources"].append(source_path)
-    history_item = {
-        "chapter_id": chapter_id,
-        "source_path": source_path,
-        "record_kind": record_kind,
-    }
-    if history_item not in entry["source_history"]:
-        entry["source_history"].append(history_item)
-
-
-def _append_description_layer(entry: dict, *, chapter_id: str, summary: str, source_path: str) -> None:
-    if not summary:
-        return
-    initial_item = {
-        "chapter_id": chapter_id,
-        "summary": summary,
-        "source": source_path,
-    }
-    if initial_item not in entry["description_layers"]["initial_extracted"]:
-        entry["description_layers"]["initial_extracted"].append(initial_item)
-    chapter_bucket = entry["description_layers"]["chapter_specific"].setdefault(chapter_id, [])
-    if summary not in chapter_bucket:
-        chapter_bucket.append(summary)
-    if summary not in entry["description_layers"]["stable_canonical"] and not _is_generic_character_label(entry["canonical_id"]):
-        entry["description_layers"]["stable_canonical"].append(summary)
-
-
-def _append_resolution_history(entry: dict, *, chapter_id: str, action: str, reason: str, target: str | None = None) -> None:
-    item = {
-        "chapter_id": chapter_id,
-        "action": action,
-        "reason": reason,
-        "timestamp_utc": _utc_now_iso(),
-    }
-    if target:
-        item["target"] = target
-    entry["resolution_history"].append(item)
-
-
-def _entry_match_tokens(entry: dict) -> set[str]:
-    tokens = {
-        _normalize_alias_token(entry.get("canonical_id", "")),
-        _normalize_alias_token(entry.get("display_name", "")),
-    }
-    for alias in entry.get("aliases", []):
-        tokens.add(_normalize_alias_token(alias))
-    return {token for token in tokens if token}
-
-
 def _find_character_merge_target(global_registry: dict[str, dict], local_entry: dict) -> str | None:
     local_id = local_entry.get("canonical_id", "")
     local_tokens = _entry_match_tokens(local_entry)
@@ -266,14 +59,55 @@ def _find_character_merge_target(global_registry: dict[str, dict], local_entry: 
             return candidate_id
 
     if local_generic:
-        normalized_local = _normalize_alias_token(local_id)
+        normalized_local = normalize_alias_token(local_id)
         for candidate_id, candidate_entry in global_registry.items():
-            if _normalize_alias_token(candidate_id) == normalized_local:
+            if normalize_alias_token(candidate_id) == normalized_local:
                 return candidate_id
-            if _is_generic_character_label(candidate_id) and _normalize_alias_token(candidate_entry.get("display_name", "")) == normalized_local:
+            if _is_generic_character_label(candidate_id) and normalize_alias_token(candidate_entry.get("display_name", "")) == normalized_local:
                 return candidate_id
 
     return None
+
+
+def _entry_match_tokens(entry: dict) -> set[str]:
+    tokens = {
+        normalize_alias_token(entry.get("canonical_id", "")),
+        normalize_alias_token(entry.get("display_name", "")),
+    }
+    for alias in entry.get("aliases", []):
+        tokens.add(normalize_alias_token(alias))
+    return {token for token in tokens if token}
+
+
+def _is_generic_character_label(value: str) -> bool:
+    normalized = normalize_alias_token(value)
+    generic_labels = {
+        "narrator",
+        "the_narrator",
+        "protagonist",
+        "companion",
+        "unknown_companion",
+        "friend_body",
+        "prisoner",
+        "human_female_prisoner",
+        "captive",
+        "guard",
+        "chieftain",
+        "martian",
+        "martian_leader",
+        "young_warrior",
+        "watch_dog",
+        "watch_thing",
+        "warrior",
+        "woman",
+        "man",
+        "girl",
+        "boy",
+    }
+    return normalized in generic_labels or any(
+        token in normalized.split("_")
+        for token in {"narrator", "prisoner", "captive", "guard", "companion", "warrior", "chieftain", "martian"}
+    )
 
 
 def _resolve_provisional_into(
@@ -287,10 +121,10 @@ def _resolve_provisional_into(
     provisional_entry = global_registry.get(provisional_id)
     if provisional_entry is None:
         return
-    provisional_entry = _ensure_character_entry_defaults(provisional_entry, chapter_id=chapter_id)
+    provisional_entry = ensure_character_entry_defaults(provisional_entry, chapter_id=chapter_id)
     provisional_entry["status"] = "resolved_into"
     provisional_entry["resolved_to"] = canonical_id
-    _append_resolution_history(
+    append_resolution_history(
         provisional_entry,
         chapter_id=chapter_id,
         action="resolved_into",
@@ -319,19 +153,19 @@ def _filter_history_by_chapter(items: list[dict], *, chapter_cutoff: str) -> lis
     filtered: list[dict] = []
     for item in items:
         item_chapter = str(item.get("chapter_id", "")).strip()
-        if item_chapter and _chapter_lte(item_chapter, chapter_cutoff):
+        if item_chapter and chapter_lte(item_chapter, chapter_cutoff):
             filtered.append(item)
     return filtered
 
 
 def _character_entry_visible_by_chapter(entry: dict, *, chapter_cutoff: str) -> bool:
     first_seen = str(entry.get("first_seen_chapter", "")).strip()
-    return bool(first_seen) and _chapter_lte(first_seen, chapter_cutoff)
+    return bool(first_seen) and chapter_lte(first_seen, chapter_cutoff)
 
 
 def _environment_entry_visible_by_chapter(entry: dict, *, chapter_cutoff: str) -> bool:
     first_seen = str(entry.get("first_seen_chapter", "")).strip()
-    return bool(first_seen) and _chapter_lte(first_seen, chapter_cutoff)
+    return bool(first_seen) and chapter_lte(first_seen, chapter_cutoff)
 
 
 def _project_character_snapshot_entry(entry: dict, *, chapter_cutoff: str) -> dict:
@@ -351,7 +185,7 @@ def _project_character_snapshot_entry(entry: dict, *, chapter_cutoff: str) -> di
         "chapter_mentions": [
             chapter_id
             for chapter_id in entry.get("chapter_mentions", [])
-            if _chapter_lte(chapter_id, chapter_cutoff)
+            if chapter_lte(chapter_id, chapter_cutoff)
         ],
         "resolved_to": entry.get("resolved_to"),
         "resolution_history": _filter_history_by_chapter(entry.get("resolution_history", []), chapter_cutoff=chapter_cutoff),
@@ -360,13 +194,13 @@ def _project_character_snapshot_entry(entry: dict, *, chapter_cutoff: str) -> di
             "initial_extracted": [
                 item
                 for item in description_layers.get("initial_extracted", [])
-                if str(item.get("chapter_id", "")).strip() and _chapter_lte(str(item.get("chapter_id", "")).strip(), chapter_cutoff)
+                if str(item.get("chapter_id", "")).strip() and chapter_lte(str(item.get("chapter_id", "")).strip(), chapter_cutoff)
             ],
             "stable_canonical": description_layers.get("stable_canonical", []),
             "chapter_specific": {
                 chapter_id: values
                 for chapter_id, values in description_layers.get("chapter_specific", {}).items()
-                if _chapter_lte(chapter_id, chapter_cutoff)
+                if chapter_lte(chapter_id, chapter_cutoff)
             },
         },
     }
@@ -391,20 +225,20 @@ def _project_environment_snapshot_entry(entry: dict, *, chapter_cutoff: str) -> 
         "chapter_mentions": [
             chapter_id
             for chapter_id in entry.get("chapter_mentions", [])
-            if _chapter_lte(chapter_id, chapter_cutoff)
+            if chapter_lte(chapter_id, chapter_cutoff)
         ],
         "source_history": _filter_history_by_chapter(entry.get("source_history", []), chapter_cutoff=chapter_cutoff),
         "description_layers": {
             "initial_extracted": [
                 item
                 for item in description_layers.get("initial_extracted", [])
-                if str(item.get("chapter_id", "")).strip() and _chapter_lte(str(item.get("chapter_id", "")).strip(), chapter_cutoff)
+                if str(item.get("chapter_id", "")).strip() and chapter_lte(str(item.get("chapter_id", "")).strip(), chapter_cutoff)
             ],
             "stable_canonical": description_layers.get("stable_canonical", []),
             "chapter_specific": {
                 chapter_id: values
                 for chapter_id, values in description_layers.get("chapter_specific", {}).items()
-                if _chapter_lte(chapter_id, chapter_cutoff)
+                if chapter_lte(chapter_id, chapter_cutoff)
             },
         },
     }
@@ -413,20 +247,20 @@ def _project_environment_snapshot_entry(entry: dict, *, chapter_cutoff: str) -> 
 def validate_snapshot_provenance(snapshot: dict, *, chapter_id: str) -> None:
     for entry in snapshot.get("character_entries", []):
         first_seen = str(entry.get("first_seen_chapter", "")).strip()
-        if first_seen and not _chapter_lte(first_seen, chapter_id):
+        if first_seen and not chapter_lte(first_seen, chapter_id):
             raise ValueError(
                 f"Snapshot {chapter_id} includes future character '{entry.get('canonical_id')}' first seen in {first_seen}."
             )
     for entry in snapshot.get("environment_entries", []):
         first_seen = str(entry.get("first_seen_chapter", "")).strip()
-        if first_seen and not _chapter_lte(first_seen, chapter_id):
+        if first_seen and not chapter_lte(first_seen, chapter_id):
             raise ValueError(
                 f"Snapshot {chapter_id} includes future environment '{entry.get('canonical_id')}' first seen in {first_seen}."
             )
 
 
 def update_global_character_state(*, project_slug: str, analysis: StoryAnalysisSummary) -> tuple[str, str]:
-    local_registry = _load_chapter_registry(
+    local_registry = load_chapter_registry(
         chapter_local_character_registry_path(
             project_slug=project_slug,
             chapter_id=analysis.chapter_id,
@@ -435,26 +269,26 @@ def update_global_character_state(*, project_slug: str, analysis: StoryAnalysisS
     _assert_registry_is_chapter_local(registry=local_registry, chapter_id=analysis.chapter_id, entity_type="Character")
     global_registry_path = global_character_registry_path(project_slug)
     directory_path = global_character_directory_path(project_slug)
-    global_registry = _load_json(global_registry_path, {})
-    directory = _load_json(directory_path, {})
+    global_registry = load_json(global_registry_path, {})
+    directory = load_json(directory_path, {})
 
     for local_id, entry in sorted(local_registry.items()):
         target_id = _find_character_merge_target(global_registry, entry) or local_id
 
         if target_id not in global_registry:
-            global_registry[target_id] = _empty_character_entry(
+            global_registry[target_id] = empty_character_entry(
                 canonical_id=target_id,
                 entry=entry,
                 chapter_id=analysis.chapter_id,
             )
-            _append_resolution_history(
+            append_resolution_history(
                 global_registry[target_id],
                 chapter_id=analysis.chapter_id,
                 action="created_as_provisional" if entry.get("status") == "provisional" else "created_as_canonical",
                 reason=entry.get("resolution_reason", "Initial global registry creation from chapter-local registry."),
             )
 
-        global_entry = _ensure_character_entry_defaults(global_registry[target_id], chapter_id=analysis.chapter_id)
+        global_entry = ensure_character_entry_defaults(global_registry[target_id], chapter_id=analysis.chapter_id)
         global_entry["display_name"] = entry.get("display_name", global_entry["display_name"])
         if global_entry.get("status") != "resolved_into":
             local_status = entry.get("status", global_entry["status"])
@@ -468,27 +302,27 @@ def update_global_character_state(*, project_slug: str, analysis: StoryAnalysisS
         if analysis.chapter_id not in global_entry["chapter_mentions"]:
             global_entry["chapter_mentions"].append(analysis.chapter_id)
 
-        _append_alias_history(
+        append_alias_history(
             global_entry,
             alias=local_id,
             chapter_id=analysis.chapter_id,
             source=entry.get("sources", [analysis.chapter_path])[0] if entry.get("sources") else analysis.chapter_path,
         )
         for alias in entry.get("aliases", []):
-            _append_alias_history(
+            append_alias_history(
                 global_entry,
                 alias=alias,
                 chapter_id=analysis.chapter_id,
                 source=entry.get("sources", [analysis.chapter_path])[0] if entry.get("sources") else analysis.chapter_path,
             )
         for source in entry.get("sources", []):
-            _append_source_history(
+            append_source_history(
                 global_entry,
                 chapter_id=analysis.chapter_id,
                 source_path=source,
                 record_kind="chapter_local_character_breakdown",
             )
-            _append_description_layer(
+            append_description_layer(
                 global_entry,
                 chapter_id=analysis.chapter_id,
                 summary=entry.get("resolution_reason", ""),
@@ -499,12 +333,12 @@ def update_global_character_state(*, project_slug: str, analysis: StoryAnalysisS
 
         if target_id != local_id:
             if local_id not in global_registry:
-                global_registry[local_id] = _empty_character_entry(
+                global_registry[local_id] = empty_character_entry(
                     canonical_id=local_id,
                     entry=entry,
                     chapter_id=analysis.chapter_id,
                 )
-            local_history_entry = _ensure_character_entry_defaults(global_registry[local_id], chapter_id=analysis.chapter_id)
+            local_history_entry = ensure_character_entry_defaults(global_registry[local_id], chapter_id=analysis.chapter_id)
             local_history_entry["display_name"] = entry.get("display_name", local_history_entry["display_name"])
             local_history_entry["entity_kind"] = entry.get("entity_kind", local_history_entry["entity_kind"])
             local_history_entry["resolution_reason"] = entry.get("resolution_reason", local_history_entry.get("resolution_reason", ""))
@@ -512,26 +346,26 @@ def update_global_character_state(*, project_slug: str, analysis: StoryAnalysisS
             if analysis.chapter_id not in local_history_entry["chapter_mentions"]:
                 local_history_entry["chapter_mentions"].append(analysis.chapter_id)
             for source in entry.get("sources", []):
-                _append_source_history(
+                append_source_history(
                     local_history_entry,
                     chapter_id=analysis.chapter_id,
                     source_path=source,
                     record_kind="chapter_local_character_breakdown",
                 )
-                _append_description_layer(
+                append_description_layer(
                     local_history_entry,
                     chapter_id=analysis.chapter_id,
                     summary=entry.get("resolution_reason", ""),
                     source_path=source,
                 )
-            _append_alias_history(
+            append_alias_history(
                 local_history_entry,
                 alias=local_id,
                 chapter_id=analysis.chapter_id,
                 source=entry.get("sources", [analysis.chapter_path])[0] if entry.get("sources") else analysis.chapter_path,
             )
             for alias in entry.get("aliases", []):
-                _append_alias_history(
+                append_alias_history(
                     local_history_entry,
                     alias=alias,
                     chapter_id=analysis.chapter_id,
@@ -559,13 +393,13 @@ def update_global_character_state(*, project_slug: str, analysis: StoryAnalysisS
             "resolved_to": global_entry.get("resolved_to"),
         }
 
-    _write_json(global_registry_path, global_registry)
-    _write_json(directory_path, directory)
+    update_json(global_registry_path, global_registry)
+    update_json(directory_path, directory)
     return repo_relative(global_registry_path), repo_relative(directory_path)
 
 
 def update_global_environment_state(*, project_slug: str, analysis: StoryAnalysisSummary) -> tuple[str, str]:
-    local_registry = _load_chapter_registry(
+    local_registry = load_chapter_registry(
         chapter_local_environment_registry_path(
             project_slug=project_slug,
             chapter_id=analysis.chapter_id,
@@ -574,15 +408,15 @@ def update_global_environment_state(*, project_slug: str, analysis: StoryAnalysi
     _assert_registry_is_chapter_local(registry=local_registry, chapter_id=analysis.chapter_id, entity_type="Environment")
     global_registry_path = global_environment_registry_path(project_slug)
     directory_path = global_environment_directory_path(project_slug)
-    global_registry = _load_json(global_registry_path, {})
-    directory = _load_json(directory_path, {})
+    global_registry = load_json(global_registry_path, {})
+    directory = load_json(directory_path, {})
 
     for canonical_id, entry in sorted(local_registry.items()):
         global_entry = global_registry.get(
             canonical_id,
-            _empty_environment_entry(canonical_id=canonical_id, entry=entry, chapter_id=analysis.chapter_id),
+            empty_environment_entry(canonical_id=canonical_id, entry=entry, chapter_id=analysis.chapter_id),
         )
-        global_entry = _ensure_environment_entry_defaults(global_entry, chapter_id=analysis.chapter_id)
+        global_entry = ensure_environment_entry_defaults(global_entry, chapter_id=analysis.chapter_id)
         global_entry["status"] = entry.get("status", global_entry["status"])
         global_entry["entity_kind"] = entry.get("entity_kind", global_entry["entity_kind"])
         global_entry["display_name"] = entry.get("display_name", global_entry["display_name"])
@@ -591,7 +425,7 @@ def update_global_environment_state(*, project_slug: str, analysis: StoryAnalysi
         if analysis.chapter_id not in global_entry["chapter_mentions"]:
             global_entry["chapter_mentions"].append(analysis.chapter_id)
         for alias in entry.get("aliases", []):
-            normalized_alias = _normalize_alias_token(alias)
+            normalized_alias = normalize_alias_token(alias)
             if normalized_alias and normalized_alias not in global_entry["aliases"]:
                 global_entry["aliases"].append(normalized_alias)
                 global_entry["alias_history"].append(
@@ -602,13 +436,13 @@ def update_global_environment_state(*, project_slug: str, analysis: StoryAnalysi
                     }
                 )
         for source in entry.get("sources", []):
-            _append_source_history(
+            append_source_history(
                 global_entry,
                 chapter_id=analysis.chapter_id,
                 source_path=source,
                 record_kind="chapter_local_environment_breakdown",
             )
-            _append_description_layer(
+            append_description_layer(
                 global_entry,
                 chapter_id=analysis.chapter_id,
                 summary=entry.get("resolution_reason", ""),
@@ -629,8 +463,8 @@ def update_global_environment_state(*, project_slug: str, analysis: StoryAnalysi
             "last_seen_chapter": global_entry["last_seen_chapter"],
         }
 
-    _write_json(global_registry_path, global_registry)
-    _write_json(directory_path, directory)
+    update_json(global_registry_path, global_registry)
+    update_json(directory_path, directory)
     return repo_relative(global_registry_path), repo_relative(directory_path)
 
 
@@ -644,13 +478,13 @@ def write_chapter_world_snapshot(
     global_environment_directory_relpath: str,
 ) -> str:
     project_dir = create_project(project_slug)
-    repo_root = _repo_root_from_project_dir(project_dir)
+    repo_root = repo_root_from_project_dir(project_dir)
 
     global_character_registry_path = repo_root / global_character_registry_relpath
     global_environment_registry_path = repo_root / global_environment_registry_relpath
 
-    global_character_registry = _load_json(global_character_registry_path, {})
-    global_environment_registry = _load_json(global_environment_registry_path, {})
+    global_character_registry = load_json(global_character_registry_path, {})
+    global_environment_registry = load_json(global_environment_registry_path, {})
 
     print(f"[authoring] Snapshot build for {analysis.chapter_id}:")
     print(f"[authoring]   repo_root: {repo_root}")
@@ -759,11 +593,11 @@ def write_chapter_world_snapshot(
         "global_environment_directory_path": global_environment_directory_relpath,
         "global_character_registry_path": global_character_registry_relpath,
         "global_environment_registry_path": global_environment_registry_relpath,
-        "generated_at_utc": _utc_now_iso(),
+        "generated_at_utc": utc_now_iso(),
     }
     validate_snapshot_provenance(snapshot, chapter_id=analysis.chapter_id)
     path = world_snapshot_path(project_slug, analysis.chapter_id)
-    _write_json(path, snapshot)
+    update_json(path, snapshot)
     return repo_relative(path)
 
 
@@ -777,7 +611,7 @@ def append_world_failure(
     failure_artifact_path: str | None,
 ) -> str:
     path = world_failure_log_path(project_slug)
-    failures = _load_json(path, [])
+    failures = load_json(path, [])
     failures.append(
         {
             "chapter_id": chapter_id,
@@ -785,10 +619,10 @@ def append_world_failure(
             "stage": stage,
             "error": error,
             "failure_artifact_path": failure_artifact_path or "",
-            "timestamp_utc": _utc_now_iso(),
+            "timestamp_utc": utc_now_iso(),
         }
     )
-    _write_json(path, failures)
+    update_json(path, failures)
     return repo_relative(path)
 
 
@@ -797,14 +631,7 @@ def update_world_sequence_state(*, project_slug: str, succeeded_chapter_ids: lis
     payload = {
         "processed_chapters": succeeded_chapter_ids,
         "failed_chapters": failed_chapter_ids,
-        "updated_at_utc": _utc_now_iso(),
+        "updated_at_utc": utc_now_iso(),
     }
-    _write_json(path, payload)
+    update_json(path, payload)
     return repo_relative(path)
-
-
-update_global_character_state = _world_state_updates.update_global_character_state
-update_global_environment_state = _world_state_updates.update_global_environment_state
-write_chapter_world_snapshot = _world_state_updates.write_chapter_world_snapshot
-append_world_failure = _world_state_updates.append_world_failure
-update_world_sequence_state = _world_state_updates.update_world_sequence_state
