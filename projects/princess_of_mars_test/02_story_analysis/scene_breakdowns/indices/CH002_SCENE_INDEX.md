@@ -1,6 +1,4 @@
-# Scene Index
-
-1. [SC001: The Paralysis](#sc001)
-2. [SC002: The Terror in the Cave](#sc002)
-3. [SC003: The Metamorphosis](#sc003)
-4. [SC004: The Cosmic Pull](#sc004)
+- [SC001](#sc001) - The Paralysis and the Apache Terror
+- [SC002](#sc002) - The Metamorphosis Discovery
+- [SC003](#sc003) - Flight into the Night
+- [SC004](#sc004) - The Call of Mars

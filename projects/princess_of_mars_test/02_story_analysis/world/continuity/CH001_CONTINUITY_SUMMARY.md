@@ -15,9 +15,9 @@
 - None
 
 ## Known Canonical Environments
-- ancient_cave_chamber
-- apache_camp_plateau
-- arizona_mountains_hills
+- apache_plateau_camp
+- arizona_mountain_quartz_vein
+- cliffside_cave_system
 
 ## Registry Artifacts
 - projects/princess_of_mars_test/02_story_analysis/world/CHARACTER_REGISTRY.json

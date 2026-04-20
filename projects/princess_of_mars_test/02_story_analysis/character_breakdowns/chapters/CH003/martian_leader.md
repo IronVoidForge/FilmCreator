@@ -1,18 +1,23 @@
-# Martian Leader
+# The Leader
+**Role:** Supporting Character / Diplomat
 
-**Role:** Head of the hunting party and diplomat.
+**Status:** Physically Present
 
-**Presence:** Physically present.
+**Physical Description:** 
+A Martian warrior (15ft tall, olive/green skin, red eyes, multi-limbed). He carries a forty-foot spear but later approaches the protagonist unarmed to offer peace.
 
-**Physical Description:** A member of the Martian warrior group (15ft tall, multiple arms, red eyes). He approaches the protagonist unarmed to offer a gesture of peace.
+**Costume/Silhouette:** 
+Carries a massive forty-foot spear; carries a metal armlet used as a peace offering.
 
-**Costume/Equipment:** Carries a metal armlet as a diplomatic gift.
+**Descriptive Noun Phrases:** 
+Spear-wielding Martian leader, olive-skinned diplomat, large multi-limbed commander.
 
-**Uncertainty Notes:** It is unclear if he possesses any unique visual identifiers or armor that distinguishes him from the other warriors.
+**Uncertainty Notes:** 
+Visual distinction from the general warrior class is not established in text.
 
 # Aliases
 
-None
+The Leader
 
 
 

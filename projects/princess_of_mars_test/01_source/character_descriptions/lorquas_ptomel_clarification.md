@@ -4,10 +4,10 @@
 lorquas_ptomel
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Physical appearance is unknown.
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+What does Lorquas Ptomel look like?
 
 # Guidance
 - answer briefly and concretely

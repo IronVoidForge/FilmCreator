@@ -1,24 +1,21 @@
 # Apache Warriors
-
-**Role:** Scouts
+**Role:** Minor Characters / Antagonistic Presence (Fleeing)
 
 **Presence:** Physically present (approaching the cave).
 
 **Physical Description:** 
-Identified as Apache warriors/scouts. No specific facial features or physical builds are provided.
+- Group of warriors.
+- React with terror to a mysterious moaning sound.
 
-**Costume/Silhouette:** 
-No costume details or silhouettes are mentioned.
+**Costume/Silhouette:** Unknown.
 
-**Prompt Phrases:** 
-Apache scouts, group of warriors approaching a cave ledge, fleeing in terror.
+**Prompting Nouns:** Apache warriors, group of men, fleeing in panic.
 
-**Uncertainty Notes:** 
-Visuals for clothing, weaponry, and specific ethnic features are missing from the source text.
+**Uncertainty Notes:** Specific attire or physical characteristics are not detailed beyond their tribal identity.
 
 # Aliases
 
-Scouts
+Warriors
 
 
 
@@ -30,7 +27,7 @@ apache_warriors
 
 # Fully Identified
 
-true
+false
 
 # Manual Description Input Required
 

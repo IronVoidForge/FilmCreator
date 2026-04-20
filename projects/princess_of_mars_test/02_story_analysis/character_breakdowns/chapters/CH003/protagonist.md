@@ -1,12 +1,19 @@
 # Protagonist
+**Role:** Central Character / Survivor
 
-**Role:** Earthman explorer/survivor.
+**Status:** Physically Present
 
-**Presence:** Physically present.
+**Physical Description:** 
+An Earthman. Currently naked and unarmed. Exhibits extreme agility and leaping ability due to the low Martian gravity.
 
-**Physical Description:** An Earthman appearing naked and unarmed. He exhibits superhuman agility and an uncontrolled leaping ability due to the low Martian gravity.
+**Costume/Silhouette:** 
+Naked; no clothing or equipment mentioned in this chapter.
 
-**Uncertainty Notes:** Facial features, hair, and specific body type are currently unknown.
+**Descriptive Noun Phrases:** 
+Naked Earthman, agile survivor, low-gravity leaper.
+
+**Uncertainty Notes:** 
+Complete lack of facial features, hair, or body composition details.
 
 # Aliases
 

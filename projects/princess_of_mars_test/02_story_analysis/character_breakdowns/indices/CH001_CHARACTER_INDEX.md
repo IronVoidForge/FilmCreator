@@ -1,2 +1,4 @@
+# Character Index
+
 - [John Carter](#john-carter)
-- [James K. Powell](#james-k-powell)
+- [Captain James K. Powell](#captain-james-k-powell)

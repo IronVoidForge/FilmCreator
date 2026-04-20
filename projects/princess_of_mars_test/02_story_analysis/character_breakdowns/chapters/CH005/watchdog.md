@@ -1,16 +1,17 @@
-# Watchdog
+# The Watch Dog
+**Role:** Guard / Predator
 
-**Role:** Guard and hunter.
+**Status:** Physically Present
 
-**Presence:** Physically present.
+**Physical Description:** A ferocious Martian beast with short legs but incredible speed.
 
-**Description:** A ferocious, incredibly fast, and loyal Martian beast used for hunting and protection.
+**Costume/Traits:** Aggressive temperament; used for guarding and hunting.
 
-**Uncertainty Notes:** While its behavior (ferocity/speed) is known, its visual appearance is completely unknown.
+**Prompt Phrases:** Ferocious Martian beast, short-legged, extremely fast, predatory animal, aggressive hunter.
 
 # Aliases
 
-[]
+Ferocious beast, Guarding Martian beast
 
 
 
@@ -22,7 +23,7 @@ watchdog
 
 # Fully Identified
 
-false
+true
 
 # Manual Description Input Required
 

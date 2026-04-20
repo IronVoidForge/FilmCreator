@@ -1,17 +1,20 @@
-**Setting:** A chamber within a Martian building, near a window overlooking a plaza.
+**Setting:** An interior chamber within a Martian building, overlooking a plaza.
 
 **Characters:**
-* **The Narrator:** An Earthman who uses both primitive weapons and Earthly boxing tactics to survive.
-* **The Watch-thing:** The narrator's loyal, multi-legged, monstrous pet/guardian.
-* **The Ape-creatures:** Two massive (10-15ft tall), four-armed, gorilla-like beings with high physical strength.
-* **Tars Tarkas:** A Martian warrior who observes the narrator's combat.
-* **Sola:** A Martian woman who shows compassion and concern for the narrator.
-* **Martian Warriors:** A group of onlookers who value physical prowess and witness the fight.
+- **The Protagonist:** An Earthman fighting for survival.
+- **The Watch-thing:** The protagonist's loyal, multi-legged, beast-like guardian.
+- **The Ape-creatures:** Two massive, ten-to-fifteen-foot tall, four-armed creatures resembling gorillas.
+- **Tars Tarkas:** A Martian warrior who respects physical prowess.
+- **Sola:** A Martian woman who shows compassion and solicitude toward the protagonist.
+- **Martian Warriors:** A group of warriors observing the combat.
 
 **Events:**
-1. **The Initial Capture:** The narrator is pinned to the ground by one of the massive, ape-like creatures while its mate approaches with a stone cudgel to kill him.
-2. **The First Battle:** The narrator's "watch-thing" attacks the second ape to save the narrator. A brutal struggle ensues between the two beasts; the watch-thing is severely wounded and nearly choked to death by the ape's immense strength.
-3. **The Narrator's Intervention:** Driven by loyalty to his pet, the narrator uses a fallen cudgel to crush the skull of the first ape. 
-4. **The Second Battle:** The mate of the deceased ape returns in a rage. The narrator initially considers fleeing but chooses to stay and defend his wounded beast. Using Earthly boxing techniques—specifically punches to the chin and stomach—the narrator manages to knock the creature off balance and finish it with the cudgel.
-5. **The Arrival of Allies:** Tars Tarkas, Sola, and a group of warriors arrive, having witnessed the fight. They are impressed by the narrator's combat skill, though their reaction is rooted more in admiration of his strength than true friendship.
-6. **An Act of Compassion:** A Martian warrior attempts to execute the wounded watch-thing with a pistol. The narrator intervenes, physically stopping the warrior's arm and preventing the shot. This act of mercy confuses the Martians but solidifies the narrator's bond with both Sola and his loyal beast.
+- The protagonist is pinned by one massive ape-creature while its mate approaches with a stone cudgel to kill him.
+- The protagonist's "watch-thing" intervenes, engaging the second ape in a brutal, life-or-death struggle.
+- As the watch-thing begins to lose the fight due to the ape's superior strength, the protagonist seizes the fallen cudgel and kills the first ape by crushing its skull.
+- The second ape, enraged by its mate's death, charges the protagonist. Despite the overwhelming odds, the protagonist stays to defend his dying watch-thing.
+- Using earthly combat tactics (striking the chin and stomach), the protagonist incapacitates the second ape and kills it with the cudgel.
+- Tars Tarkas, Sola, and a group of warriors arrive, having witnessed the fight. They applaud the protagonist's bravery, viewing his combat as a display of high status.
+- While Sola shows genuine concern for the protagonist's well-being, the other Martians laugh at the spectacle.
+- A Martian warrior attempts to execute the wounded watch-thing; the protagonist intervenes by striking the warrior's arm, preventing the shot.
+- Tars Tarkas allows the protagonist to keep his beast, and the protagonist departs into the plaza with Sola and his loyal creature.

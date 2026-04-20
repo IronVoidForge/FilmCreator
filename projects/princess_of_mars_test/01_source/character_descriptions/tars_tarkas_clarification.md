@@ -4,10 +4,10 @@
 tars_tarkas
 
 # Why This Needs Clarification
-Needs visual identification for rendering.
+Physical appearance is unknown.
 
 # Question
-What does Tars Tarkas look like physically, and what is his Martian attire?
+What does Tars Tarkas look like?
 
 # Guidance
 - answer briefly and concretely

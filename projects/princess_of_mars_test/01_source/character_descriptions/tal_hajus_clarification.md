@@ -4,10 +4,15 @@
 tal_hajus
 
 # Why This Needs Clarification
-Needs identity clarification.
+Character identity is unclear (could be a person or place, though context implies a destination/entity).
 
 # Question
-What is Tal Hajus's role and relationship to John Carter?
+Is Tal Hajus a person or a location?
+
+# Candidate Matches
+- apache_warriors (score 10; chapters: CH002; aliases: -)
+- ape_creature_1 (score 10; chapters: CH006; aliases: -)
+- ape_creature_2 (score 10; chapters: CH006; aliases: -)
 
 # Guidance
 - answer briefly and concretely

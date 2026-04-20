@@ -4,10 +4,10 @@
 protagonist
 
 # Why This Needs Clarification
-Needs visual identification for character design.
+Needs physical description for consistent rendering.
 
 # Question
-What is the protagonist's physical appearance, age, and attire?
+What is the protagonist's hair color, eye color, build, and facial features?
 
 # Guidance
 - answer briefly and concretely

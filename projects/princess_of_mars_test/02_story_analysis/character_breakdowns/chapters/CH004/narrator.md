@@ -1,13 +1,14 @@
 # Narrator
-
-**Role:** Protagonist / Observer  
-**Presence:** Physically present  
-**Physical Description:** Demonstrates significant physical strength through jumping ("sak") and combat.  
-**Uncertainty Notes:** No visual details regarding species, size, or clothing are provided in this chapter.
+**Role:** Protagonist / Captive
+**Presence:** Physically Present
+**Physical Description:** A human male. Demonstrates high agility and strength relative to his size, capable of a 150-foot leap (sakk). Appears physically small/inadequate compared to the Martian species.
+**Costume/Silhouette:** Not explicitly described; likely captive attire.
+**Prompt Phrases:** Human male, agile, small stature relative to Martians, performing massive leaps.
+**Uncertainty Notes:** Specific facial features and clothing are unknown.
 
 # Aliases
 
-Protagonist
+Human, Captive
 
 
 
@@ -19,7 +20,7 @@ narrator
 
 # Fully Identified
 
-false
+true
 
 # Manual Description Input Required
 

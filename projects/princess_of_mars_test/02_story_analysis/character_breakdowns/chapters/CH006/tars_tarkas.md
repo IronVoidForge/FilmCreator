@@ -1,12 +1,15 @@
 # Tars Tarkas
+**Role:** Martian observer / Leader figure
 
-**Role:** Observer / Ally
+**Status:** Physically Present
 
-**Presence:** Physically present.
+**Physical Description:** A Martian warrior who values physical prowess and bravery. He shows respect to the protagonist's combat skills.
 
-**Description:** A Martian warrior who observes the narrator's combat prowess.
+**Costume/Silhouette:** Unknown.
 
-**Uncertainty Notes:** Physical appearance and specific gear are unknown.
+**Descriptive Noun Phrases:** Respected Martian warrior, combat observer.
+
+**Uncertainty Notes:** No visual details provided for his specific appearance or attire.
 
 # Aliases
 

@@ -4,18 +4,21 @@
 - CH006_SC001
 - CH006_SC002
 - CH006_SC003
+- CH006_SC004
 
 ## Known Canonical Characters
-- ape_creature
-- ape_like_creature
-- chieftain
+- ape_creature_1
+- ape_creature_2
+- colossal_creature
+- deceased_friend
 - james_k_powell
 - john_carter
+- martian_leader
+- martian_mounts
 - protagonist
 - sola
 - tars_tarkas
-- ten_legged_creature
-- unseen_horror
+- the_chieftain
 - watch_thing
 - watchdog
 
@@ -23,19 +26,21 @@
 - narrator
 
 ## Known Canonical Environments
-- ancient_cave_chamber
-- ancient_city_plateau
-- apache_camp_plateau
+- ancient_martian_city
+- apache_plateau_camp
 - arizona_mountain_cave
-- arizona_mountains_hills
-- cosmic_void_mars_transit
-- high_building_ledge
-- marble_audience_hall
-- martian_chamber
-- martian_city_streets
+- arizona_mountain_quartz_vein
+- captive_chamber_murals
+- chieftain_audience_chamber
+- circular_moss_basin
+- cliffside_cave_system
+- deserted_martian_cityscape
+- martian_distant_hills
+- martian_interior_chamber
 - martian_plaza
-- martian_sleeping_chambers
-- prisoners_chamber
+- overlooking_building_interior
+- rocky_gorge_nightscape
+- solas_sleeping_chamber
 
 ## Registry Artifacts
 - projects/princess_of_mars_test/02_story_analysis/world/CHARACTER_REGISTRY.json

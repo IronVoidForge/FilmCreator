@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 
-DEFAULT_LLM_MODEL = "google/gemma-4-26b-a4b"
+DEFAULT_LLM_MODEL = "google_gemma-4-26b-a4b-it"
 
 
 @dataclass(frozen=True)

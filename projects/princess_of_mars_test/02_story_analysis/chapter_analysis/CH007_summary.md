@@ -1,17 +1,15 @@
-### Setting
-The chapter takes place across several Martian locations: the bustling plaza of a green Martian community, a massive procession traveling through valleys and hills, the desolate dead sea bottom, and a remote, high-security incubator site.
+**Events:**
+The protagonist accompanies Sola and a massive military cavalcade—consisting of two hundred decorated chariots drawn by enormous beasts—to a remote incubator located on a dead sea bottom. Upon arrival, the chieftain Lorquas Ptomel and Tars Tarkas oversee the hatching process. The protagonist demonstrates his physical prowess by leaping over parked chariots to impress the leaders. As the young Martians emerge from the incubator, they are captured in a ritualistic gauntlet formed by women and youths. The protagonist observes the cold, utilitarian nature of Martian child-rearing: offspring are communal, raised by foster mothers to be warriors, and any defective specimens are promptly killed. Following the ceremony, the community returns to their territory, and the protagonist spends time under Sola's tutelage, learning the language and honing his telepathic skills.
 
-### Characters
-* **The Narrator:** An Earthman learning to navigate Martian gravity and telepathic communication; possesses a unique mental immunity to Martian telepathy.
-* **Sola:** A Martian female who serves as the narrator's guide and foster mother to a newly hatched Martian.
-* **Tars Tarkas:** A prominent Martian warrior/chief.
-* **Lorquance Ptomel, Jed:** An enormous and powerful Martian chieftain.
-* **The Green Martians:** A community of warriors, women, and children characterized by their telepathic abilities and a culture of extreme survivalism.
+**Characters:**
+* **Protagonist:** An Earthman who has mastered Martian walking and is rapidly learning the language and telepathy; he discovers his mind is unreadable by Martians.
+* **Sola:** A female Martian who acts as a guide and foster mother to a newly hatched male Martian, while also caring for the protagonist.
+* **Tars Tarkas:** A Martian warrior/leader who interacts with the protagonist.
+* **Lorquas Ptomel (Jed):** An enormous chieftain who oversees the incubator ceremony.
+* **The Young Martian:** A physically perfect, four-foot-tall male captured by Sola; he becomes a rival to the protagonist in their shared education.
 
-### Key Events
-* **The Great Harnessing:** The narrator witnesses the massive undertaking of harnessing enormous, mastodon-like animals to highly decorated, three-wheeled chariots for a great procession.
-* **The Procession to the Incubator:** A large military-style cavalcade, including hundreds of warriors and outriders, travels to a remote incubator to witness a hatching event.
-* **The Demonstration of Prowess:** To impress the Chieftain Lorquas Ptomel, the narrator performs a feat of incredible leaping, jumping over the parked chariots.
-* **The Hatching Ritual:** The narrator observes the chaotic and ritualistic "capture" of newly hatched Martians as they emerge from an incubator and run through a gauntlet formed by women and children.
-* **Martian Child-Rearing Customs:** The narrative explains the brutal Martian system of communal child-rearing, where offspring are raised for warfare and physical perfection, with any "defective" specimens promptly culled.
-* **Telepathic Training:** Back at the city, Sola begins training the narrator in the Martian language and telepathy; during this process, it is revealed that while the narrator can receive telepathic messages, his own mind remains completely shielded from Martian intrusion.
+**Settings:**
+* **The Plaza:** The central hub of the Martian community where chariots are harnessed.
+* **The Dead Sea Bottom:** A level expanse where the incubator is located and where the hatching ceremony takes place.
+* **The Incubator:** A remote, specialized structure used to hatch eggs via solar rays after a five-year incubation period.
+* **The Dead City:** The location where the protagonist resides during his periods of idleness and education.

@@ -1,16 +1,20 @@
-# James K. Powell
+# Captain James K. Powell
 
-**Role:** Mining Engineer; Partner to John Carter.
+**Role:** Supporting Character (Deceased)
 
-**Presence:** Referenced (Deceased).
+**Presence:** Physically Present (deceased)
 
-**Physical Description:** No visual description available in the text.
+**Physical Description:** A mining engineer and former Confederate officer; friend and partner to John Carter.
 
-**Uncertainty Notes:** Character is deceased within the chapter; no physical traits are established for visual continuity.
+**Costume/Silhouette:** Mid-19th century attire consistent with a mining engineer/officer.
+
+**Descriptive Noun Phrases:** Mining engineer, deceased Confederate officer, prospecting partner.
+
+**Uncertainty Notes:** Specific physical appearance is not described beyond his profession and rank.
 
 # Aliases
 
-Captain Powell, Powell
+Captain Powell
 
 
 
@@ -22,7 +26,7 @@ james_k_powell
 
 # Fully Identified
 
-false
+true
 
 # Manual Description Input Required
 

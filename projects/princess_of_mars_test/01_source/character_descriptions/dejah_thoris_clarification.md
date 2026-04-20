@@ -4,10 +4,18 @@
 dejah_thoris
 
 # Why This Needs Clarification
-Needs identity clarification for image generation.
+Potential existing identity matches detected:
+- apache_warriors (score 10; chapters: CH002; aliases: -)
+- ape_creature_1 (score 10; chapters: CH006; aliases: -)
+- ape_creature_2 (score 10; chapters: CH006; aliases: -)
 
 # Question
-What is Dejah Thoris's physical form and appearance?
+This character may match one of the existing canonical identities above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical character?
+
+# Candidate Matches
+- apache_warriors (score 10; chapters: CH002; aliases: -)
+- ape_creature_1 (score 10; chapters: CH006; aliases: -)
+- ape_creature_2 (score 10; chapters: CH006; aliases: -)
 
 # Guidance
 - answer briefly and concretely

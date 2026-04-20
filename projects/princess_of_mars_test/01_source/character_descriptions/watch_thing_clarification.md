@@ -4,10 +4,10 @@
 watch_thing
 
 # Why This Needs Clarification
-Needs identity clarification regarding physical form and origin.
+Needs more detail for consistent rendering of the creature's skin/fur and limb structure.
 
 # Question
-What is the Watch-thing's physical form and relationship to narrator?
+What is the color, texture (fur vs scales), and specific number of legs for the watch-thing?
 
 # Guidance
 - answer briefly and concretely

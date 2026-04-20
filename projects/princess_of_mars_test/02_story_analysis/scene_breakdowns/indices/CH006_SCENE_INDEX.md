@@ -1,3 +1,4 @@
-* [SC001](#sc001) - The First Battle: The Watch-thing's Sacrifice
-* [SC00            02](#sc002) - The Earthman's Combat: Boxing and the Cudgel
-* [SC003](#sc003) - The Aftermath: A Stand for Mercy
+- [SC001](#sc001) - The Ape Ambush and the Watch-thing's Intervention
+- [SC002](#sc002) - The Protagonist's Counter-strike and the Second Duel
+- [SC003](#sc003) - The Arrival of the Martians and Social Recognition
+- [SC004](#sc004) - Defending the Watch-thing and Departure

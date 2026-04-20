@@ -1,16 +1,19 @@
 # Martian Warriors
+**Role:** Observers / Crowd
 
-**Role:** Onlookers / Witnesses
+**Status:** Physically Present
 
-**Presence:** Physically present (group).
+**Physical Description:** A group of Martians who observe the combat, some laughing at the spectacle and others applauding.
 
-**Description:** A group of Martians who witness the fight and value physical prowess. One warrior attempts to execute the wounded watch-thing with a pistol.
+**Costume/Silhouette:** Unknown.
 
-**Uncertainty Notes:** Specifics on their numbers, armor, or weaponry (beyond the pistol) are not detailed.
+**Descriptive Noun Phrases:** Group of Martian warriors, observing crowd.
+
+**Uncertainty Notes:** No specific visual details for the group or their equipment.
 
 # Aliases
 
-onlookers
+Group of warriors
 
 
 

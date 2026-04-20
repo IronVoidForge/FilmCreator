@@ -4,10 +4,10 @@
 martian_leader
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Needs distinction from standard warriors to ensure unique character design.
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+Does the leader have unique markings, different colored skin/eyes, or specific armor that distinguishes him from the other twenty warriors?
 
 # Guidance
 - answer briefly and concretely

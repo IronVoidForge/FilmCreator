@@ -1,5 +1,5 @@
 # Environment Index
 
-- [ancient_city_plateau](#ancient_city_plateau)
-- [marble_audience_hall](#marble_audience_hall)
-- [martian_sleeping_chambers](#martian_sleeping_chambers)
+- [ancient_martian_city](#ancient_martian_city)
+- [chieftain_audience_chamber](#chieftain_audience_chamber)
+- [solas_sleeping_chamber](#solas_sleeping_chamber)

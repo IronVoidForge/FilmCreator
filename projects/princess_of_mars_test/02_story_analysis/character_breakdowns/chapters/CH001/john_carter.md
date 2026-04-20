@@ -1,18 +1,20 @@
 # John Carter
 
-**Role:** Protagonist; Former Confederate Cavalry Captain.
+**Role:** Protagonist
 
-**Presence:** Physically present in Chapter 1.
+**Presence:** Physically Present
 
-**Physical Description:** A veteran of the Sioux wars; characterized by a strong sense of duty.
+**Physical Description:** A former Confederate cavalry officer and soldier of fortune. Characterized by extreme physical resilience and an instinctive sense of duty.
 
-**Costume & Silhouette:** Implied mid-19th century cavalry attire (Confederate era).
+**Costume/Silhouette:** Likely wearing mid-19th century frontier/cavalry attire suitable for prospecting and combat in the Arizona mountains.
 
-**Uncertainty Notes:** No specific facial features, eye color, hair texture, or precise physical build are provided in the text.
+**Descriptive Noun Phrases:** Former Confederate officer, resilient frontiersman, armed prospector, cavalry soldier.
+
+**Uncertainty Notes:** Specific facial features or exact clothing colors are not detailed in this chapter.
 
 # Aliases
 
-Captain Jack Carter, Captain Carter
+Captain Jack Carter
 
 
 
@@ -24,7 +26,7 @@ john_carter
 
 # Fully Identified
 
-false
+true
 
 # Manual Description Input Required
 

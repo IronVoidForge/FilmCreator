@@ -1,3 +1,5 @@
-* [SC001](#sc001) - The Solitary Watch
-* [SC002](#sc002) - The Pursuit through the Streets
-* [AS003](#sc003) - The Window Ambush
+* [SC001](#sc001) - Captivity and Observation
+* [SC002](#sc002) - Sola's Care
+* [SC003](#sc003) - The Escape Attempt
+* [SC004](#sc004) - The Chase and Leap
+* [SC005](#sc005) - The Colossal Encounter

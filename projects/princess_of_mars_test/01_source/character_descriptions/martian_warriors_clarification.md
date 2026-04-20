@@ -4,10 +4,10 @@
 martian_warriors
 
 # Why This Needs Clarification
-Visuals for the group/uniforms are missing.
+General aesthetic for the warrior class is needed.
 
 # Question
-What is the standard appearance or armor of the Martian warriors?
+What is the standard appearance and armor of the Martian warrior class?
 
 # Guidance
 - answer briefly and concretely

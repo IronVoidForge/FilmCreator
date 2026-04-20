@@ -1,5 +1,5 @@
-# Character Index
+# Character Index - CH002
 
-* [narrator](narrator)
-* [apache_warriors](apache_warriors)
-* [unseen_horror](unseen_horror)
+- [Protagonist](#protagonist)
+- [Apache Warriors](#apache-warriors)
+- [Deceased Friend](#deceased-friend)

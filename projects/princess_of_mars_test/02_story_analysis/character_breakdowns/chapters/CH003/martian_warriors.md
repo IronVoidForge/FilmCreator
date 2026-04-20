@@ -1,16 +1,23 @@
 # Martian Warriors
+**Role:** Supporting Group / Antagonists turned Curious Observers
 
-**Role:** A group of twenty hunters.
+**Status:** Physically Present
 
-**Presence:** Physically present.
+**Physical Description:** 
+Large humanoids, approximately 15 feet tall. They possess olive or green skin and red eyes. They are multi-limbed.
 
-**Physical Description:** Massive beings, approximately 15 feet tall, featuring multiple arms and red eyes. They ride large, four-legged, multi-limbed mounts.
+**Costume/Silhouette:** 
+Highly skilled warriors; equipped with advanced long-range rifles.
 
-**Costume/Equipment:** Heavily armed with long spears and advanced long-range rifles.
+**Descriptive Noun Phrases:** 
+15ft olive-skinned humanoids, red-eyed Martians, multi-limbed warriors, large green humanoids.
+
+**Uncertainty Notes:** 
+Specific clothing/armor details are not provided beyond their weaponry.
 
 # Aliases
 
-Martian hunting party
+Martians
 
 
 

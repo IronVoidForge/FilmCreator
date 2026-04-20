@@ -1,18 +1,19 @@
 # The Watch-thing
+**Role:** Protagonist's guardian
 
-**Role:** Loyal Pet / Guardian
+**Status:** Physically Present (Wounded)
 
-**Presence:** Physically present.
+**Physical Description:** A multi-legged, beast-like creature. It is capable of engaging massive creatures in brutal combat.
 
-**Description:** A multi-legged, monstrous creature. 
+**Costume/Silhouette:** Multi-legged beast silhouette.
 
-**Continuity Notes:** Severely wounded during the struggle with the ape-creature; nearly choked to death.
+**Descriptive Noun Phrases:** Multi-legged guardian, loyal beast, wounded Martian pet.
 
-**Prompt Phrases:** Multi-legged monster, alien pet, wounded beast.
+**Uncertainty Notes:** Specific biological details (scales, fur, color) are not specified.
 
 # Aliases
 
-pet, guardian
+Beast, Guardian, Loyal creature
 
 
 
@@ -24,7 +25,7 @@ watch_thing
 
 # Fully Identified
 
-true
+false
 
 # Manual Description Input Required
 
@@ -34,4 +35,4 @@ No
 
 # Manual Description Reason
 
-""
+None

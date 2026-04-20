@@ -1,16 +1,17 @@
 # Sola
+**Role:** Caretaker / Sympathetic Martian
 
-**Role:** Martian female; provider of care/kindness.
+**Status:** Physically Present
 
-**Presence:** Referenced (leaves the protagonist at the start of the chapter).
+**Physical Description:** A female Martian; described as kind and sympathetic. No specific visual traits provided.
 
-**Description:** A Martian female characterized by her kindness, sympathy, and care toward the protagonist.
+**Costume/Traits:** Provides furs and food to the protagonist.
 
-**Uncertainty Notes:** No visual or biological details are provided beyond her species and temperament.
+**Prompt Phrases:** Female Martian, kind expression, sympathetic, caretaker.
 
 # Aliases
 
-[]
+Kind Martian, Sympathetic female
 
 
 

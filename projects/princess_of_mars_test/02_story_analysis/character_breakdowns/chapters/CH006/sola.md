@@ -1,12 +1,15 @@
 # Sola
+**Role:** Compassionate Martian observer
 
-**Role:** Ally / Compassionate Observer
+**Status:** Physically Present
 
-**Presence:** Physically present.
+**Physical Description:** A Martian woman who displays compassion and solicitude toward the protagonist.
 
-**Description:** A Martian woman who exhibits compassion and concern for the narrator.
+**Costume/Silhouette:** Unknown.
 
-**Uncertainty Notes:** Physical appearance and costume are unstated.
+**Descriptive Noun Phrases:** Compassionate Martian woman, caring observer.
+
+**Uncertainty Notes:** No physical or costume details are present in the text.
 
 # Aliases
 

@@ -1,4 +1,6 @@
-* [Protagonist](#protagonist)
-* [Martian Warriors](#martian-warriors)
-* [Martian Leader](#martian-leader)
-* [Hatchlings](#hatchlings)
+# Character Index - CH003
+
+- [Protagonist](#protagonist)
+- [Martian Warriors](#martian-warriors)
+- [The Leader](#the-leader)
+- [Martian Mounts](#martian-mounts)

@@ -1,11 +1,11 @@
 # Martian Plaza
 
-**Role:** Secondary setting (visible through chamber windows).
+**Role:** Transit setting / Secondary background.
 
-**Architecture or Geography:** Open-air public square or plaza adjacent to the primary building.
+**Architecture or Geography:** An expansive open-air public space situated immediately outside the interior chambers.
 
-**Lighting and Atmosphere Cues:** Bright, exposed, and communal; atmosphere of observation and gathering for Martian onlookers.
+**Lighting and Atmosphere Cues:** Bright, exposed Martian sky; wide-open vistas; sense of scale and communal gathering.
 
-**Scale Cues and Recurring Environmental Anchors:** Expansive outdoor space; serves as a wide assembly ground for groups of Martian warriors.
+**Scale Cues and Recurring Environmental Anchors:** Vast horizontal expanse; transition point between indoor structures and the wider Martian landscape.
 
-**Useful Descriptive Noun Phrases:** Wide plaza, Martian courtyard, assembly square, exterior viewing area.
+**Descriptive Noun Phrases:** Expansive Martian plaza, sun-drenched public square, open planetary courtyard, vast stone-paved expanse.

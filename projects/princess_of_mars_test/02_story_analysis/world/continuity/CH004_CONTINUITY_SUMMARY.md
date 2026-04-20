@@ -4,28 +4,33 @@
 - CH004_SC001
 - CH004_SC002
 - CH004_SC003
+- CH004_SC004
 
 ## Known Canonical Characters
-- chieftain
+- deceased_friend
 - james_k_powell
 - john_carter
+- martian_leader
+- martian_mounts
+- protagonist
 - sola
 - tars_tarkas
-- ten_legged_creature
-- unseen_horror
+- the_chieftain
 
 ## Unresolved / Provisional Characters
 - narrator
 
 ## Known Canonical Environments
-- ancient_cave_chamber
-- ancient_city_plateau
-- apache_camp_plateau
+- ancient_martian_city
+- apache_plateau_camp
 - arizona_mountain_cave
-- arizona_mountains_hills
-- cosmic_void_mars_transit
-- marble_audience_hall
-- martian_sleeping_chambers
+- arizona_mountain_quartz_vein
+- chieftain_audience_chamber
+- circular_moss_basin
+- cliffside_cave_system
+- martian_distant_hills
+- rocky_gorge_nightscape
+- solas_sleeping_chamber
 
 ## Registry Artifacts
 - projects/princess_of_mars_test/02_story_analysis/world/CHARACTER_REGISTRY.json

@@ -4,10 +4,10 @@
 sola
 
 # Why This Needs Clarification
-Needs visual identification for rendering.
+Physical appearance is unknown.
 
 # Question
-What are Sola's physical features and what is she wearing?
+What does Sola look like?
 
 # Guidance
 - answer briefly and concretely

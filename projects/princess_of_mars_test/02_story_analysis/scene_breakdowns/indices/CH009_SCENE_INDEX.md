@@ -1,0 +1,4 @@
+- [SC001](#sc001) Training and Adaptation on Mars
+- [SC002](#sc002) The Language of the Captive
+- [SC003](#sc003) Eavesdropping in the Sleeping Quarters
+- [SC004](#sc004) Conflict of Ideology: Sola vs. Sarkoja

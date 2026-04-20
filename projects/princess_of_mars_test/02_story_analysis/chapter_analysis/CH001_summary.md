@@ -1,18 +1,14 @@
-### Summary
-Following the end of the Civil War, Captain John Carter and Captain James K. Powell discover a massive gold vein in the Arizona mountains. When Powell leaves to secure mining machinery, Carter witnesses suspicious movement on the trail and suspects an Apache ambush. Driven by a sense of duty, Carter pursues the trail, discovers a large Apache camp, and launches a solo charge that scatters the warriors. However, the raid reveals that Powell has been killed by arrows. In a desperate attempt to escape the pursuing Apache party, Carter flees into the mountains, eventually stumbling upon a large, ancient cave. Upon entering the cave to scout, an inexplicable and overwhelming drowsiness overcomes him.
+**Setting:** The Arizona hills and mountains; specifically a remote gold-bearing quartz vein, a high plateau filled with Apache tepees, and a large, mysterious cave near a cliffside trail.
 
-### Characters
-* **John Carter (Captain Jack Carter):** A former Confederate cavalry captain and veteran of the Sioux wars; a man driven by duty who possesses mysterious knowledge regarding Mars.
-* **Captain James K. Powell:** A mining engineer and Carter's partner in prospecting; killed during an Apache ambush.
+**Characters:**
+* **John Carter (Captain Jack Carter):** A former Confederate cavalry officer and soldier of fortune. He is characterized by an instinctive sense of duty and a physical resilience that borders on the supernatural.
+* **Captain James K. Powell:** A mining engineer and fellow Confederate officer; Carter's friend and partner in prospecting.
 
-### Settings
-* **Arizona Mountains/Hills:** The rugged, desolate landscape where the gold mine is located and where the pursuit takes place.
-* **The Apache Camp:** A large plateau filled with hundreds of tepees and warriors.
-* **The Cave:** A large, ancient-looking chamber found at the end of a high cliff trail, characterized by a smooth floor and mysterious shadows.
-
-### Key Events
-* **The Discovery:** Carter and Powell locate a million-dollar gold vein in 1865.
-* **The Ambush:** Carter observes suspicious tracks and pursues what he believes is an attack on Powell.
-* **The Charge:** Carter singlehandedly attacks the Apache camp, causing a rout.
-* **The Death of Powell:** Carter finds his friend dead from arrow wounds.
-* **The Flight and the Cave:** While fleeing pursuit, Carter enters a mysterious cave and falls into a sudden, deep sleep.
+**Events:**
+* **The Discovery:** Carter and Powell locate a massive gold vein in the Arizona mountains in 1865.
+* **The Departure:** Powell departs to fetch machinery, leaving Carter to guard the claim.
+* **The Pursuit:** Noticing suspicious movement in the valley, Carter tracks what he believes to be an Apache raiding party. He discovers signs of a struggle and follows the trail through the night.
+* **The Skirmish:** Carter stumbles upon a large Apache camp on a plateau. He launches a sudden, aggressive charge with his revolvers, causing the warriors to scatter in confusion.
+* **The Aftermath:** Amidst the chaos, Carter finds Powell dead, riddled with arrows. He retrieves the body and flees the pursuing warriors.
+* **The Cave:** While attempting to evade capture, Carter's horse leads him to a large cave at the end of a cliffside trail. After confirming Powell is deceased, Carter enters the cave to scout it. 
+* **The Collapse:** Inside the cave, Carter experiences an overwhelming, unnatural drowsiness and loses consciousness on the floor.

@@ -1,16 +1,17 @@
 # Protagonist
+**Role:** Captive / Adventurer
 
-**Role:** Human captive and escapee.
+**Status:** Physically Present
 
-**Presence:** Physically present.
+**Physical Description:** A human male described as physically agile and capable of high leaps ("a jumper").
 
-**Description:** A human with exceptional jumping abilities and an adventurous spirit.
+**Costume/Traits:** Not explicitly detailed in this chapter, but possesses high mobility.
 
-**Uncertainty Notes:** Physical phenotype, clothing, and facial features are entirely unstated in this chapter.
+**Prompt Phrases:** Human male, athletic build, agile, jumper, escaping predator.
 
 # Aliases
 
-[]
+Human male, Jumper
 
 
 
@@ -22,7 +23,7 @@ protagonist
 
 # Fully Identified
 
-false
+true
 
 # Manual Description Input Required
 

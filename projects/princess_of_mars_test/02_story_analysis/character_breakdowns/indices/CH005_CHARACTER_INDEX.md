@@ -1,4 +1,6 @@
-* [Protagonist](#protagonist)
-* [Sola](#sola)
-* [Watchdog](#watchdog)
-* [Ape-like Creature](#ape-like-creature)
+# Character Index
+
+- [Protagonist](#protagonist)
+- [Sola](#sola)
+- [The Watch Dog](#the-watch-dog)
+- [The Colossal Creature](#the-colossal-creature)
