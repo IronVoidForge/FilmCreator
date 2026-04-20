@@ -1,178 +1,231 @@
-# Multi-Chapter World Model Migration Plan
+# Multi-Chapter World Model Plan (Updated)
 
 ## Goal
 
-Transition FilmCreator from single-chapter analysis to a persistent, evolving, searchable story-world system while preserving:
+Evolve FilmCreator from chapter-level analysis into a persistent, synthesis-driven story world that supports:
 
-- Markdown-first authoring
-- tagged packet LLM outputs
-- forgiving local parsers
-- auditability and debuggability
+- canonical characters and environments
+- continuity-aware scene contracts
+- downstream shot and production generation
+- non-destructive iteration across full books
 
 ---
 
 ## Core Principles
 
-- Do NOT overwrite character data — evolve it
-- Preserve uncertainty instead of hallucinating
-- Track identity, not just mentions
-- Separate canonical facts from contextual states
-- All LLM outputs are tagged Markdown packets
+- Do NOT overwrite — always evolve
+- Preserve uncertainty instead of forcing incorrect merges
+- Separate identity from description
+- Separate canonical truth from contextual state
+- Track evidence and revisions
 - All structure is derived locally (Markdown → JSON → optional DB)
+- Synthesis stages must be explainable and auditable
 
 ---
 
-## Phase B Foundation (NEW)
+## Current Reality (Post-Refactor)
 
-Before multi-chapter world modeling begins, Phase B establishes:
+The system now reliably produces:
 
-- canonical character registry
-- canonical environment registry
-- provisional identity handling
-- chapter-level continuity state
+- chapter summaries
+- character and environment extraction
+- scene decomposition
+- global and local registries
+- chapter continuity state and summaries
+- resilient book-level runs with failure isolation
 
-These artifacts live under:
+This is no longer the problem space.
+
+The problem space is now:
+
+→ turning this data into stable, reusable production assets
+
+---
+
+## Foundational Layer (Already in Place)
+
+### Canonical Identity (Phase B)
+
+Artifacts:
 
 ```
 02_story_analysis/world/
 ```
 
-They are the required foundation for all later multi-chapter logic.
+Includes:
 
-Current status:
+- CHARACTER_REGISTRY.json
+- ENVIRONMENT_REGISTRY.json
+- chapter-local registries
+- continuity state files
 
-- The canonical character and environment registries are in use.
-- Chapter continuity summaries and world snapshots are being written per chapter.
-- The latest full `princess_of_mars_test` run completed `28/28` chapters with `0` failures using the Gemma 4 IT model and the repair-first retry policy.
-- The remaining improvement work is mostly about speed and context-window headroom, not basic correctness.
-
----
-
-## Resilient Run Orchestration
-
-Book-level chapter analysis is now continue-on-failure by default.
-
-The manifest run writes:
-
-- `02_story_analysis/runs/BOOK_RUN_latest.json`
-- `02_story_analysis/runs/BOOK_RUN_<timestamp>.json`
-- `02_story_analysis/runs/failed_chapters.json`
-- `02_story_analysis/runs/FAILED_CHAPTERS_REPORT.md`
-
-The latest failed-chapter list can be retried without rerunning the full manifest.
+This is the required base for all synthesis work.
 
 ---
 
-## Phase 0 – Full Book Ingestion
+## World Model Evolution Path
 
-### Goal
+### Stage 1 – Evidence Accumulation (complete enough)
 
-Convert a raw full book into clean chapter source files.
+- extraction from chapters
+- accumulation in registries
+- continuity tracking
 
-### Outputs
+### Stage 2 – Identity Refinement (partially complete)
 
-```
-01_source/book/raw_book.txt
-01_source/book/book_manifest.md
-01_source/chapters/CH001.md
-```
+- duplicate detection
+- alias resolution
+- provisional identity handling
 
----
+This remains a standalone batch step and should not be fused into ingest.
 
-## Phase 1 – Persistent World State (Built on Phase B)
+### Stage 3 – Canonical Synthesis (NEW PRIMARY FOCUS)
 
-### Character Registry
+#### Character Bible Synthesis
 
-Each character becomes persistent:
+- merge all evidence into canonical character representations
+- preserve uncertainty and conflicting descriptions
+- produce stable visual and narrative contracts
 
-- canonical_id
-- aliases
-- first_seen_chapter
-- last_seen_chapter
-- status (canonical vs provisional)
-- resolution_reason
+#### Environment Bible Synthesis
 
-### Environment Registry
+- merge location evidence
+- define spatial, visual, and mood consistency
+- support reuse across scenes
 
-- canonical_id
-- aliases
-- state notes
+Outputs become the canonical world layer.
 
 ---
 
-## Phase 2 – Layered Descriptions
+### Stage 4 – Scene Production Contracts
 
-### Description Layers
+Scenes become production-ready units:
 
-- innate (always true)
-- chapter_specific
-- forward_from
+- narrative purpose
+- emotional beats
+- required characters
+- required environments
+- continuity constraints
 
----
-
-## Phase 3 – Confidence and Clarification
-
-### Features
-
-- confidence scoring
-- unresolved character tracking
-- deferred clarification
+This stage bridges analysis → filmmaking.
 
 ---
 
-## Phase 4 – Revision + Retcon Handling
+### Stage 5 – Shot-Level World Interaction
 
-### Features
+Shots reference world state:
 
-- revision log
-- contradiction detection
+- character bibles
+- environment bibles
+- continuity state
 
----
-
-## Phase 5 – Timeline Awareness
-
-### Features
-
-- character evolution timeline
-- environment state timeline
-- scene-state snapshots
+Shots become the first fully generation-ready units.
 
 ---
 
-## Phase 6 – Environment Continuity
+### Stage 6 – Timeline and State Evolution
 
-### Features
+Add temporal awareness:
 
-- persistent environment registry
-- evolving state (damage, time, weather)
+- character evolution
+- environment changes
+- scene state transitions
 
----
-
-## Phase 7 – Prompt Integration
-
-### Features
-
-- prompts reference snapshot state
-- no forward contamination
+This supports long-form coherence.
 
 ---
 
-## SQLite Migration (Final Phase)
+### Stage 7 – Production Asset Integration
 
-### When to Start
+World model feeds:
 
-ONLY after:
-
-- multi-chapter system works
-- schemas stabilize
+- character sheets
+- environment references
+- keyframes
+- video generation
 
 ---
 
-## End State
+## Artifact Layers
 
-A system that:
+The world model should be thought of as layered:
 
-- parses entire books
-- builds persistent characters and environments
-- evolves them over time
-- generates scenes from correct historical state
+1. raw extraction (chapter-level)
+2. registries (identity accumulation)
+3. refined identities (post-pass)
+4. synthesized bibles (canonical layer)
+5. scene contracts (contextual layer)
+6. shot packages (generation layer)
+
+Each layer builds on the previous one and should not overwrite it.
+
+---
+
+## Persistence Strategy
+
+### File-First (Current)
+
+- Markdown for review
+- JSON for contracts
+- media for outputs
+
+### Future SQLite Layer
+
+Only after stabilization:
+
+- read-optimized
+- file-synced
+- non-destructive
+
+---
+
+## Key Design Constraints
+
+### Non-destructive evolution
+
+Later chapters must:
+
+- add detail
+- refine understanding
+- never erase prior evidence
+
+### Snapshot correctness
+
+Each scene must:
+
+- reference only valid past state
+- avoid forward contamination
+
+### Explainability
+
+Every synthesized element should be traceable back to:
+
+- chapters
+- scenes
+- specific evidence
+
+---
+
+## End State Vision
+
+A system that can:
+
+- ingest full books
+- build evolving world models
+- synthesize production-ready character and environment bibles
+- generate scene and shot contracts
+- drive full audiovisual generation pipelines
+- preserve and reuse work across iterative runs
+
+---
+
+## What This Enables Next
+
+With this model in place, FilmCreator becomes:
+
+- a production planning system, not just an analysis tool
+- a reusable world builder across chapters
+- a stable foundation for consistent visual generation
+
+The next steps are not about ingest.
+They are about synthesis, contracts, and production.
