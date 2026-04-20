@@ -5,6 +5,7 @@ import time
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
+from types import SimpleNamespace
 from typing import Iterable
 
 from .core.json_io import read_json
@@ -513,9 +514,11 @@ def _write_prompt_target_with_retries(
         if kind != "normal":
             reason = warnings[-1] if warnings else "prior attempt failed"
             print(f"[authoring] Retrying {scene_id}/{clip_id} {target.stage} with {kind} because {reason}")
-        result = client.chat_completion_result(
+        result = _chat_completion_result(
+            client=client,
             system_prompt=system_prompt,
             user_prompt=user_prompt,
+            temperature=0.2,
         )
         latest_log_path = _write_prompt_exchange_log(
             project_slug=project_slug,
@@ -553,6 +556,33 @@ def _write_prompt_target_with_retries(
             response="",
         )
     return None, warnings, latest_log_path, time.perf_counter() - target_started
+
+
+def _chat_completion_result(
+    *,
+    client: LMStudioClient,
+    system_prompt: str,
+    user_prompt: str,
+    temperature: float,
+) -> object:
+    if hasattr(client, "chat_completion_result"):
+        return client.chat_completion_result(
+            system_prompt=system_prompt,
+            user_prompt=user_prompt,
+            temperature=temperature,
+        )
+
+    text = client.chat_completion(
+        system_prompt=system_prompt,
+        user_prompt=user_prompt,
+        temperature=temperature,
+    )
+    return SimpleNamespace(
+        status="success",
+        text=text,
+        error_message=None,
+        is_success=True,
+    )
 
 
 def _write_prompt_exchange_log(

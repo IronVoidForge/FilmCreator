@@ -25,21 +25,43 @@ class _FakeLMStudioClient:
     ) -> str:
         assert temperature == 0.2
         assert model is None
-        assert "## Clip Plan" in user_prompt
         stage_line = next(line for line in system_prompt.splitlines() if line.startswith("Target stage: "))
         stage = stage_line.split(": ", 1)[1]
-        payload = {
-            "purpose": f"{stage} purpose",
-            "positive_prompt": f"{stage} positive prompt",
-            "negative_prompt": f"{stage} negative prompt",
-            "inputs": {
-                "duration_seconds": "5",
-                "batch_role": "",
-            },
-            "continuity_notes": [f"{stage} continuity note"],
-            "repair_notes": [f"{stage} repair note"],
-        }
-        return json.dumps(payload)
+        assert "First line must be [[FILMCREATOR_PACKET]]" in user_prompt
+        lines = [
+            "[[FILMCREATOR_PACKET]]",
+            "task: clip_prompt",
+            f"stage: {stage}",
+            "version: 1",
+            "",
+            "[[SECTION purpose]]",
+            f"{stage} purpose",
+            "[[/SECTION]]",
+            "",
+            "[[SECTION positive_prompt]]",
+            f"{stage} positive prompt",
+            "[[/SECTION]]",
+            "",
+            "[[SECTION negative_prompt]]",
+            f"{stage} negative prompt",
+            "[[/SECTION]]",
+            "",
+            "[[SECTION inputs_markdown]]",
+            "- duration_seconds: 5",
+            "- batch_role: ",
+            "[[/SECTION]]",
+            "",
+            "[[SECTION continuity_notes_markdown]]",
+            f"- {stage} continuity note",
+            "[[/SECTION]]",
+            "",
+            "[[SECTION repair_notes_markdown]]",
+            f"- {stage} repair note",
+            "[[/SECTION]]",
+            "",
+            "[[/FILMCREATOR_PACKET]]",
+        ]
+        return "\n".join(lines)
 
 
 def test_write_prompts_writes_canonical_files_and_updates_clip_state(tmp_path: Path, monkeypatch) -> None:

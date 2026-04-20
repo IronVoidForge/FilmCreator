@@ -7,6 +7,7 @@ import unicodedata
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
+from types import SimpleNamespace
 
 from .authoring import PromptWriteSummary, write_prompts
 from .core.paths import ensure_dir, repo_relative
@@ -15,6 +16,7 @@ from .lmstudio_client import LMStudioClient, LMStudioError
 from .prompt_package import PromptPackage, write_prompt_package
 from .scaffold import create_clip, create_project, create_scene
 from .settings import load_runtime_settings
+from .features.authoring import shared_prompts as authoring_prompts
 from .world_registry import (
     character_registry_path,
     environment_registry_path,
@@ -302,9 +304,9 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
         client=client,
         project_dir=project_dir,
         task_name="chapter_summary",
-        system_prompt=_analysis_system_prompt(),
-        user_prompt=_chapter_summary_user_prompt(project_slug, chapter_source),
-        degraded_user_prompt=_chapter_summary_user_prompt(project_slug, chapter_source, degraded=True),
+        system_prompt=authoring_prompts.analysis_system_prompt(),
+        user_prompt=authoring_prompts.chapter_summary_user_prompt(project_slug, chapter_source),
+        degraded_user_prompt=authoring_prompts.chapter_summary_user_prompt(project_slug, chapter_source, degraded=True),
     )
     project_summary_markdown = _require_packet_section(summary_packet, "project_summary_markdown")
     chapter_summary_markdown = _require_packet_section(summary_packet, "chapter_summary_markdown")
@@ -319,13 +321,13 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
         client=client,
         project_dir=project_dir,
         task_name="character_extraction",
-        system_prompt=_analysis_system_prompt(),
-        user_prompt=_character_extraction_user_prompt(
+        system_prompt=authoring_prompts.analysis_system_prompt(),
+        user_prompt=authoring_prompts.character_extraction_user_prompt(
             project_slug=project_slug,
             chapter_source=chapter_source,
             chapter_summary=chapter_summary_markdown,
         ),
-        degraded_user_prompt=_character_extraction_user_prompt(
+        degraded_user_prompt=authoring_prompts.character_extraction_user_prompt(
             project_slug=project_slug,
             chapter_source=chapter_source,
             chapter_summary=chapter_summary_markdown,
@@ -424,13 +426,13 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
         client=client,
         project_dir=project_dir,
         task_name="environment_extraction",
-        system_prompt=_analysis_system_prompt(),
-        user_prompt=_environment_extraction_user_prompt(
+        system_prompt=authoring_prompts.analysis_system_prompt(),
+        user_prompt=authoring_prompts.environment_extraction_user_prompt(
             project_slug=project_slug,
             chapter_source=chapter_source,
             chapter_summary=chapter_summary_markdown,
         ),
-        degraded_user_prompt=_environment_extraction_user_prompt(
+        degraded_user_prompt=authoring_prompts.environment_extraction_user_prompt(
             project_slug=project_slug,
             chapter_source=chapter_source,
             chapter_summary=chapter_summary_markdown,
@@ -453,17 +455,20 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
         _write_text(environment_path, markdown)
         written_files.append(repo_relative(environment_path))
 
+    _prune_markdown_dir(project_dir / "02_story_analysis" / "character_breakdowns", keep_names={"CHARACTER_INDEX.md", "README.md"})
+    _prune_markdown_dir(project_dir / "02_story_analysis" / "environment_breakdowns", keep_names={"ENVIRONMENT_INDEX.md", "README.md"})
+
     scene_packet = _call_packet_task(
         client=client,
         project_dir=project_dir,
         task_name="scene_decomposition",
-        system_prompt=_analysis_system_prompt(),
-        user_prompt=_scene_decomposition_user_prompt(
+        system_prompt=authoring_prompts.analysis_system_prompt(),
+        user_prompt=authoring_prompts.scene_decomposition_user_prompt(
             project_slug=project_slug,
             chapter_id=chapter_source.chapter_id,
             chapter_summary=chapter_summary_markdown,
         ),
-        degraded_user_prompt=_scene_decomposition_user_prompt(
+        degraded_user_prompt=authoring_prompts.scene_decomposition_user_prompt(
             project_slug=project_slug,
             chapter_id=chapter_source.chapter_id,
             chapter_summary=chapter_summary_markdown,
@@ -599,9 +604,9 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
         client=client,
         project_dir=project_dir,
         task_name="scene_beats",
-        system_prompt=_analysis_system_prompt(),
-        user_prompt=_scene_beats_user_prompt(project_slug=project_slug, scene_id=scene_id, scene_markdown=_scene_brief_markdown(scene_path)),
-        degraded_user_prompt=_scene_beats_user_prompt(project_slug=project_slug, scene_id=scene_id, scene_markdown=_scene_brief_markdown(scene_path), degraded=True),
+        system_prompt=authoring_prompts.analysis_system_prompt(),
+        user_prompt=authoring_prompts.scene_beats_user_prompt(project_slug=project_slug, scene_id=scene_id, scene_markdown=authoring_prompts.scene_brief_markdown(scene_path)),
+        degraded_user_prompt=authoring_prompts.scene_beats_user_prompt(project_slug=project_slug, scene_id=scene_id, scene_markdown=authoring_prompts.scene_brief_markdown(scene_path), degraded=True),
     )
     updated_scene_markdown = _require_packet_section(beat_packet, "updated_scene_markdown")
     beat_index_markdown = _require_packet_section(beat_packet, "beat_index_markdown")
@@ -623,7 +628,7 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
     clip_dir = project_dir / "02_story_analysis" / "clip_plans" / scene_id
     ensure_dir(clip_dir)
     _prune_markdown_dir(clip_dir, keep_names=set())
-    scene_markdown_for_validation = _scene_brief_markdown(scene_path)
+    scene_markdown_for_validation = authoring_prompts.scene_brief_markdown(scene_path)
 
     clip_attempt_specs = [
         {"label": "normal", "scene_markdown": scene_markdown_for_validation, "degraded": False},
@@ -643,9 +648,9 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
             client=client,
             project_dir=project_dir,
             task_name="clip_planning",
-            system_prompt=_analysis_system_prompt(),
-            user_prompt=_clip_planning_user_prompt(project_slug=project_slug, scene_id=scene_id, scene_markdown=attempt["scene_markdown"], beat_index_path=beat_index_path, degraded=attempt["degraded"]),
-            degraded_user_prompt=_clip_planning_user_prompt(project_slug=project_slug, scene_id=scene_id, scene_markdown=attempt["scene_markdown"], beat_index_path=beat_index_path, degraded=True),
+            system_prompt=authoring_prompts.analysis_system_prompt(),
+            user_prompt=authoring_prompts.clip_planning_user_prompt(project_slug=project_slug, scene_id=scene_id, scene_markdown=attempt["scene_markdown"], beat_index_path=beat_index_path, degraded=attempt["degraded"]),
+            degraded_user_prompt=authoring_prompts.clip_planning_user_prompt(project_slug=project_slug, scene_id=scene_id, scene_markdown=attempt["scene_markdown"], beat_index_path=beat_index_path, degraded=True),
         )
         clip_roster_markdown = _require_packet_section(clip_packet, "clip_roster_markdown")
         clip_roster_path = clip_dir / f"{scene_id}_clip_roster.md"
@@ -715,7 +720,19 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
     warnings.extend(accepted_clip_warnings)
     clip_ids = accepted_clip_ids
 
-    _print_saved_artifacts(f"[authoring] Saved scene planning artifacts for {scene_id}:", [repo_relative(scene_path), repo_relative(beat_index_path), repo_relative(clip_dir / f"{scene_id}_clip_roster.md")])
+    legacy_scene_path = project_dir / "02_story_analysis" / "scene_breakdowns" / f"{scene_id}.md"
+    if legacy_scene_path != scene_path:
+        _write_text(legacy_scene_path, updated_scene_markdown)
+        written_files.append(repo_relative(legacy_scene_path))
+
+    stale_scene_path = project_dir / "02_story_analysis" / "scene_breakdowns" / f"{scene_id}_airship_attack_and_captive_reveal.md"
+    if stale_scene_path.exists():
+        stale_scene_path.unlink()
+
+    _print_saved_artifacts(
+        f"[authoring] Saved scene planning artifacts for {scene_id}:",
+        [repo_relative(scene_path), repo_relative(beat_index_path), repo_relative(clip_dir / f"{scene_id}_clip_roster.md")],
+    )
     print(f"[authoring] Planned {len(clip_ids)} clips for {scene_id}: {', '.join(clip_ids)}")
     elapsed = time.perf_counter() - started
     print(f"[authoring] Finished scene planning for {scene_id} in {elapsed:.1f}s")
@@ -773,9 +790,9 @@ def write_shared_prompts(*, project_slug: str) -> SharedPromptSummary:
                 client=client,
                 project_dir=project_dir,
                 task_name="character_shared_prompts",
-                system_prompt=_analysis_system_prompt(),
-                user_prompt=_character_shared_prompt_user_prompt(project_slug=project_slug, asset_id=asset_id, character_breakdown_path=character_breakdown_path, manual_description_path=manual_description_path),
-                degraded_user_prompt=_character_shared_prompt_user_prompt(project_slug=project_slug, asset_id=asset_id, character_breakdown_path=character_breakdown_path, manual_description_path=manual_description_path, degraded=True),
+                system_prompt=authoring_prompts.analysis_system_prompt(),
+                user_prompt=authoring_prompts.character_shared_prompt_user_prompt(project_slug=project_slug, asset_id=asset_id, character_breakdown_path=character_breakdown_path, manual_description_path=manual_description_path),
+                degraded_user_prompt=authoring_prompts.character_shared_prompt_user_prompt(project_slug=project_slug, asset_id=asset_id, character_breakdown_path=character_breakdown_path, manual_description_path=manual_description_path, degraded=True),
             )
             raw_prompt = _require_single_packet_record(character_packet, record_type="character_prompt")
             record_asset_id = _normalize_asset_id(_require_record_field(raw_prompt, "asset_id"), fallback_prefix="character")
@@ -785,6 +802,9 @@ def write_shared_prompts(*, project_slug: str) -> SharedPromptSummary:
             warnings.extend(f"{asset_id}: {warning}" for warning in draft.warnings)
             prompt_path = project_dir / "03_prompt_packages" / "characters" / asset_id / f"{asset_id}_ref_prompt.md"
             sources = [repo_relative(character_index_path), repo_relative(character_breakdown_path)]
+            legacy_character_source = project_dir / "02_story_analysis" / "character_breakdowns" / f"{asset_id}.md"
+            if legacy_character_source != character_breakdown_path:
+                sources.append(repo_relative(legacy_character_source))
             if manual_description_path.exists():
                 sources.append(repo_relative(manual_description_path))
             write_prompt_package(prompt_path, _build_prompt_package(path=prompt_path, title=f"{asset_id} Character Reference Prompt", prompt_id=f"{asset_id}_ref_prompt", workflow_type="still.t2i.klein.distilled", draft=draft, sources=sources))
@@ -800,9 +820,9 @@ def write_shared_prompts(*, project_slug: str) -> SharedPromptSummary:
                 client=client,
                 project_dir=project_dir,
                 task_name="environment_shared_prompts",
-                system_prompt=_analysis_system_prompt(),
-                user_prompt=_environment_shared_prompt_user_prompt(project_slug=project_slug, asset_id=asset_id, environment_breakdown_path=environment_breakdown_path),
-                degraded_user_prompt=_environment_shared_prompt_user_prompt(project_slug=project_slug, asset_id=asset_id, environment_breakdown_path=environment_breakdown_path, degraded=True),
+                system_prompt=authoring_prompts.analysis_system_prompt(),
+                user_prompt=authoring_prompts.environment_shared_prompt_user_prompt(project_slug=project_slug, asset_id=asset_id, environment_breakdown_path=environment_breakdown_path),
+                degraded_user_prompt=authoring_prompts.environment_shared_prompt_user_prompt(project_slug=project_slug, asset_id=asset_id, environment_breakdown_path=environment_breakdown_path, degraded=True),
             )
             raw_prompt = _require_single_packet_record(environment_packet, record_type="environment_prompt")
             record_asset_id = _normalize_asset_id(_require_record_field(raw_prompt, "asset_id"), fallback_prefix="environment")
@@ -812,6 +832,9 @@ def write_shared_prompts(*, project_slug: str) -> SharedPromptSummary:
             warnings.extend(f"{asset_id}: {warning}" for warning in draft.warnings)
             prompt_path = project_dir / "03_prompt_packages" / "environments" / asset_id / f"{asset_id}_ref_prompt.md"
             sources = [repo_relative(environment_index_path), repo_relative(environment_breakdown_path)]
+            legacy_environment_source = project_dir / "02_story_analysis" / "environment_breakdowns" / f"{asset_id}.md"
+            if legacy_environment_source != environment_breakdown_path:
+                sources.append(repo_relative(legacy_environment_source))
             write_prompt_package(prompt_path, _build_prompt_package(path=prompt_path, title=f"{asset_id} Environment Reference Prompt", prompt_id=f"{asset_id}_ref_prompt", workflow_type="still.t2i.klein.distilled", draft=draft, sources=sources))
             written_files.append(repo_relative(prompt_path))
         except LMStudioError as exc:
@@ -1265,7 +1288,7 @@ def _call_packet_task(*, client: LMStudioClient, project_dir: Path, task_name: s
     for kind, active_user_prompt in [("normal", user_prompt), ("same_prompt_retry", user_prompt), ("degraded_retry", degraded_user_prompt)]:
         if kind != "normal":
             print(f"[authoring] Task {task_name} retrying with {kind}...")
-        result = client.chat_completion_result(system_prompt=system_prompt, user_prompt=active_user_prompt, temperature=0.2)
+        result = _chat_completion_result(client=client, system_prompt=system_prompt, user_prompt=active_user_prompt, temperature=0.2)
         log_path = _write_authoring_exchange_log(project_dir=project_dir, task_name=task_name, system_prompt=system_prompt, user_prompt=active_user_prompt, response=result.text)
         if result.is_success:
             try:
@@ -1279,6 +1302,33 @@ def _call_packet_task(*, client: LMStudioClient, project_dir: Path, task_name: s
         attempts.append(_TaskAttempt(kind=kind, status=result.status, log_path=repo_relative(log_path), message=result.error_message or "Unspecified LM Studio authoring failure."))
     failure_path = _write_authoring_failure_artifact(project_dir=project_dir, task_name=task_name, asset_id=None, reason="; ".join(f"{attempt.kind}:{attempt.status}:{attempt.message}" for attempt in attempts))
     raise LMStudioError(f"Authoring task '{task_name}' failed after retries. Failure artifact: {repo_relative(failure_path)}")
+
+
+def _chat_completion_result(
+    *,
+    client: LMStudioClient,
+    system_prompt: str,
+    user_prompt: str,
+    temperature: float,
+) -> object:
+    if hasattr(client, "chat_completion_result"):
+        return client.chat_completion_result(
+            system_prompt=system_prompt,
+            user_prompt=user_prompt,
+            temperature=temperature,
+        )
+
+    text = client.chat_completion(
+        system_prompt=system_prompt,
+        user_prompt=user_prompt,
+        temperature=temperature,
+    )
+    return SimpleNamespace(
+        status="success",
+        text=text,
+        error_message=None,
+        is_success=True,
+    )
 
 
 def _structured_prompt_draft(record: _PacketRecord, *, asset_id: str, asset_type: str) -> _StructuredPromptDraft:

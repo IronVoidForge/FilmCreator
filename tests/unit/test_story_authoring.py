@@ -189,6 +189,10 @@ class _FakeAuthoringLMStudioClient:
             )
 
         if "task: clip_planning" in user_prompt:
+            degraded_retry = "Repair Instruction" in user_prompt
+            clip_two_inputs = "- beat_id: BT003\n"
+            if degraded_retry:
+                clip_two_inputs = "- beat_id: BT002\n- beat_id: BT003\n"
             return _packet(
                 task="clip_planning",
                 sections={
@@ -206,7 +210,9 @@ class _FakeAuthoringLMStudioClient:
                         record_type="clip",
                         fields={"clip_id": "CL002"},
                         sections={
-                            "markdown": "# Title\nSC001 CL002 Clip Plan\n\n# ID\nSC001_CL002\n\n# Purpose\nReveal the captive and the exchanged look.\n\n# Inputs\n- beat_id: BT003\n- duration_seconds: 5\n- composition_type: reaction\n- continuity_mode: cutaway\n- starting_keyframe_strategy: scene_refs_to_keyframe\n- dependency_policy: independent\n- visible_character_assets: john_carter,dejah_thoris\n- required_refs: image_1,image_2\n- optional_refs: image_3,image_4\n\n# Output Targets\n- SC001_CL002_KF01_v001.png\n- SC001_CL002_MV01_v001.mp4\n",
+                            "markdown": "# Title\nSC001 CL002 Clip Plan\n\n# ID\nSC001_CL002\n\n# Purpose\nReveal the captive and the exchanged look.\n\n# Inputs\n"
+                            + clip_two_inputs
+                            + "- duration_seconds: 5\n- composition_type: reaction\n- continuity_mode: cutaway\n- starting_keyframe_strategy: scene_refs_to_keyframe\n- dependency_policy: independent\n- visible_character_assets: john_carter,dejah_thoris\n- required_refs: image_1,image_2\n- optional_refs: image_3,image_4\n\n# Output Targets\n- SC001_CL002_KF01_v001.png\n- SC001_CL002_MV01_v001.mp4\n",
                         },
                     ),
                 ],
