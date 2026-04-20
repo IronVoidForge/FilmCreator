@@ -1,7 +1,7 @@
 <!-- FILMCREATOR_MANUAL_PLACEHOLDER -->
 
 # Asset ID
-tars_tarkas
+lorquas_ptomel
 
 # Purpose
 Paste a stable manual visual description for this character so later shared reference generation can use it.

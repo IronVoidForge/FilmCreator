@@ -4,10 +4,10 @@
 woola
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Character is weakly identified - only referenced at chapter's conclusion without prior introduction or detailed description. May already exist under another name or be too weakly identified for reliable continuity.
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+Is Woola a previously established character with known physical attributes, or should this be treated as a new character requiring full manual description?
 
 # Guidance
 - answer briefly and concretely
