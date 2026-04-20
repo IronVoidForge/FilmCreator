@@ -4,10 +4,10 @@
 powell
 
 # Why This Needs Clarification
-Character is deceased companion but lacks stable identification for image generation. Need physical description, distinguishing features, and visual continuity notes before collapse.
+The character is not fully identified from this chapter alone.
 
 # Question
-What are Powell's physical characteristics (age appearance, build, facial features, hair, eyes)? What clothing or gear does he wear? Are there any distinctive marks or accessories?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

@@ -77,6 +77,11 @@ def chapter_local_environment_registry_path(*, project_slug: str, chapter_id: st
     return project_dir / "02_story_analysis" / "world" / "local" / f"{chapter_id}_ENVIRONMENT_REGISTRY.json"
 
 
+def _repo_root_from_project_dir(project_dir: Path) -> Path:
+    # project_dir is .../<repo_root>/projects/<project_slug>
+    return project_dir.parent.parent
+
+
 def world_sequence_state_path(project_slug: str) -> Path:
     return global_world_dir(project_slug) / "WORLD_SEQUENCE_STATE.json"
 
@@ -713,8 +718,22 @@ def write_chapter_world_snapshot(
     global_environment_directory_relpath: str,
 ) -> str:
     project_dir = create_project(project_slug)
-    global_character_registry = _load_json(project_dir.parent / global_character_registry_relpath, {})
-    global_environment_registry = _load_json(project_dir.parent / global_environment_registry_relpath, {})
+    repo_root = _repo_root_from_project_dir(project_dir)
+
+    global_character_registry_path = repo_root / global_character_registry_relpath
+    global_environment_registry_path = repo_root / global_environment_registry_relpath
+
+    global_character_registry = _load_json(global_character_registry_path, {})
+    global_environment_registry = _load_json(global_environment_registry_path, {})
+
+    print(f"[authoring] Snapshot build for {analysis.chapter_id}:")
+    print(f"[authoring]   repo_root: {repo_root}")
+    print(f"[authoring]   global_character_registry_path: {global_character_registry_path}")
+    print(f"[authoring]   global_environment_registry_path: {global_environment_registry_path}")
+    print(f"[authoring]   global_character_registry_exists: {global_character_registry_path.exists()}")
+    print(f"[authoring]   global_environment_registry_exists: {global_environment_registry_path.exists()}")
+    print(f"[authoring]   loaded_global_character_entries: {len(global_character_registry)}")
+    print(f"[authoring]   loaded_global_environment_entries: {len(global_environment_registry)}")
 
     visible_characters = {
         canonical_id: entry
@@ -726,6 +745,8 @@ def write_chapter_world_snapshot(
         for canonical_id, entry in global_environment_registry.items()
         if _environment_entry_visible_by_chapter(entry, chapter_cutoff=analysis.chapter_id)
     }
+    print(f"[authoring]   visible_character_entries_for_{analysis.chapter_id}: {len(visible_characters)}")
+    print(f"[authoring]   visible_environment_entries_for_{analysis.chapter_id}: {len(visible_environments)}")
 
     character_entries = [
         _project_character_snapshot_entry(entry, chapter_cutoff=analysis.chapter_id)
@@ -735,13 +756,49 @@ def write_chapter_world_snapshot(
         _project_environment_snapshot_entry(entry, chapter_cutoff=analysis.chapter_id)
         for _, entry in sorted(visible_environments.items())
     ]
+    print(f"[authoring]   projected_character_entries_for_{analysis.chapter_id}: {len(character_entries)}")
+    print(f"[authoring]   projected_environment_entries_for_{analysis.chapter_id}: {len(environment_entries)}")
+    if not character_entries and global_character_registry:
+        print(f"[authoring]   WARNING: Snapshot {analysis.chapter_id} projected zero character entries.")
+        for canonical_id, entry in sorted(global_character_registry.items()):
+            print(
+                "[authoring]     character candidate:",
+                canonical_id,
+                "first_seen=",
+                entry.get("first_seen_chapter"),
+                "last_seen=",
+                entry.get("last_seen_chapter"),
+                "chapter_mentions=",
+                entry.get("chapter_mentions", []),
+            )
+    if not environment_entries and global_environment_registry:
+        print(f"[authoring]   WARNING: Snapshot {analysis.chapter_id} projected zero environment entries.")
+        for canonical_id, entry in sorted(global_environment_registry.items()):
+            print(
+                "[authoring]     environment candidate:",
+                canonical_id,
+                "first_seen=",
+                entry.get("first_seen_chapter"),
+                "last_seen=",
+                entry.get("last_seen_chapter"),
+                "chapter_mentions=",
+                entry.get("chapter_mentions", []),
+            )
     if global_character_registry and not character_entries:
         raise ValueError(
-            f"Snapshot {analysis.chapter_id} projected zero character entries even though the global character registry is non-empty."
+            f"Snapshot {analysis.chapter_id} projected zero character entries even though the global character registry is non-empty. "
+            f"Loaded global characters={len(global_character_registry)}, "
+            f"loaded global environments={len(global_environment_registry)}, "
+            f"visible characters={len(visible_characters)}, "
+            f"visible environments={len(visible_environments)}."
         )
     if global_environment_registry and not environment_entries:
         raise ValueError(
-            f"Snapshot {analysis.chapter_id} projected zero environment entries even though the global environment registry is non-empty."
+            f"Snapshot {analysis.chapter_id} projected zero environment entries even though the global environment registry is non-empty. "
+            f"Loaded global characters={len(global_character_registry)}, "
+            f"loaded global environments={len(global_environment_registry)}, "
+            f"visible characters={len(visible_characters)}, "
+            f"visible environments={len(visible_environments)}."
         )
 
     known_characters = [

@@ -4,10 +4,10 @@
 lorquas_ptomel_ch008
 
 # Why This Needs Clarification
-Named character lacks established physical appearance beyond name reference
+The character is not fully identified from this chapter alone.
 
 # Question
-What are Lorquas Ptomel's physical characteristics (age, build, hair color, skin tone, distinguishing features)?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

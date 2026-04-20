@@ -1,33 +1,35 @@
-# John Carter
+# john_carter.md
 
-**Display Name:** John Carter  
-**Chapter Role:** Protagonist / Civil War veteran / Gold miner partner  
+## Display Name
+John Carter
 
-**Physical Presence:** Referenced throughout chapter (reflects on ageless existence, guards claim, discovers tracks, chases Apaches, retrieves corpse)  
+## Chapter Role
+Protagonist, survivor of Arizona cave entry sequence
 
-**Physical Description:** None provided in source material. Character is only identified by name and narrative role.  
+## Physical Presence
+Physically present throughout chapter; alone after friend Powell's departure
 
-**Costume/Silhouette:** Unknown - no visual details available for image generation.  
+## Physical Description
+No physical description available in source material. Character is armed with two Colt revolvers, carbine, and cartridge belts.
 
-**Continuity-Critical Traits:** 
-- Ageless existence (reflects on having died twice)
-- Civil War past
-- Partnership with Captain Powell to mine gold in Arizona
-- Guardian of the claim while Powell leaves for supplies
+## Costume & Silhouette
+Military-style attire implied by weapon configuration (Colt revolvers, carbine). No specific costume details provided.
 
-**Uncertainty Notes:** 
-- No physical description supports dependable later image generation
-- Manual description required before character can be rendered visually
-- Character is fully identified by name and role but lacks visual continuity markers
+## Continuity-Critical Traits
+- Holds Powell's body on saddle during escape sequence
+- Eventually collapses inside cave from exhaustion
+- Single-handedly charges warrior army shooting rapidly and whooping
+- Pursued by Indians but reaches shadows of surrounding peaks
 
-**Useful Descriptive Noun Phrases:** 
-- "Ageless protagonist reflecting on mortality"
-- "Civil War veteran guarding gold claim in Arizona"
-- "Partner to Captain Powell in mining operations"
+## Render-Facing Prompt Notes
+Character is physically exhausted from long strenuous ride and fight/pursuit excitement. Mentally resolved to write chronicle of interesting periods of life and death. Currently unconscious or semi-conscious on cave floor.
+
+## Uncertainty Notes
+Physical appearance, facial features, hair color, eye color, height, weight, and age are not specified in source material. Any visual representation will require manual description specification for accurate rendering.
 
 # Aliases
 
-None
+Captain John Carter
 
 
 

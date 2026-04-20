@@ -4,10 +4,10 @@
 narrator
 
 # Why This Needs Clarification
-Character is unnamed POV figure with no established identity beyond narrative role
+"Character may exist under another name or identity not specified in chapter; insufficient identification for reliable image generation"
 
 # Question
-What are the narrator's physical characteristics (age, build, hair color, skin tone, distinguishing features)?
+"What is the narrator's physical appearance, age, and distinguishing features? Is this character a known entity from previous chapters?"
 
 # Guidance
 - answer briefly and concretely

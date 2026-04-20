@@ -4,10 +4,10 @@
 lorquas_ptomel
 
 # Why This Needs Clarification
-Character named as location owner but may exist under different name or be too weakly identified for reliable rendering
+The character is not fully identified from this chapter alone.
 
 # Question
-Is Lorquas Ptomel the same character who owns this audience chamber, or is this a title/location reference?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

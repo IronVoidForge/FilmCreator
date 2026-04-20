@@ -4,10 +4,10 @@
 colossal_ape
 
 # Why This Needs Clarification
-Character lacks a stable proper name in this text and may already exist under another canonical designation (e.g., specific Martian species or title).
+"Character may be a known entity from previous chapters or new; identification is weak and requires clarification for reliable image generation"
 
 # Question
-What is the canonical name or species designation for the "colossal ape-like creature" that appears at the end of Chapter V?
+"Is this creature a known entity from previous chapters? What are its specific physical dimensions, features, and distinguishing characteristics?"
 
 # Guidance
 - answer briefly and concretely

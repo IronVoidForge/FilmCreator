@@ -4,10 +4,10 @@
 sola
 
 # Why This Needs Clarification
-Character appears only once in chapter with minimal description. May already exist under another name or be too weakly identified for reliable character tracking.
+The character is not fully identified from this chapter alone.
 
 # Question
-Is Sola a previously established character from earlier chapters? If so, what is her canonical character ID and full physical description?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

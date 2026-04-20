@@ -4,10 +4,10 @@
 martian_leader
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Character lacks stable identification for image generation purposes.
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+What are the leader's approximate height, build, skin tone, hair color, facial features, and any distinguishing marks or accessories beyond the metal armlet?
 
 # Guidance
 - answer briefly and concretely

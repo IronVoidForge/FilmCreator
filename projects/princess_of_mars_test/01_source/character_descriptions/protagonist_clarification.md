@@ -4,10 +4,10 @@
 protagonist
 
 # Why This Needs Clarification
-Character might already exist under another name or is too weakly identified for dependable later image generation. No stable physical or visual description supports later render-facing prompt writing.
+Character lacks stable identification for image generation purposes.
 
 # Question
-What is the protagonist's canonical name and what are their key physical characteristics (appearance, clothing, distinguishing features)?
+What are the protagonist's approximate height, build, hair color, and any distinguishing physical features?
 
 # Guidance
 - answer briefly and concretely

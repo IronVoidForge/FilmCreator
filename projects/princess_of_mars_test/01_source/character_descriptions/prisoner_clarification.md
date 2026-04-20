@@ -4,10 +4,10 @@
 prisoner
 
 # Why This Needs Clarification
-The character record indicates clarification is needed, but LM Studio did not supply a reason.
+Character is referred to only by role or color, not a personal name.
 
 # Question
-What is the specific name or identity of the prisoner mentioned in the sleeping quarters?
+Does the prisoner have a specific name in the source material?
 
 # Guidance
 - answer briefly and concretely

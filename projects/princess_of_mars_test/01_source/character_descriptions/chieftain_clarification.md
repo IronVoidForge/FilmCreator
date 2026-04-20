@@ -4,10 +4,10 @@
 chieftain
 
 # Why This Needs Clarification
-Character may exist under different name or be too weakly identified; needs clarification on identity
+Character is unnamed in source material; may already exist under another name or be too weakly identified for reliable visual continuity work.
 
 # Question
-Is the Chieftain a separate character from Tars Tarkas, and what is their physical description?
+Does the chieftain have a personal name not mentioned in this chapter, or should we document him as "Chieftain" only?
 
 # Guidance
 - answer briefly and concretely

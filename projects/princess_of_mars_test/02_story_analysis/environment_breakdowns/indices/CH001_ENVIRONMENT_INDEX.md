@@ -1,29 +1,16 @@
-# Environment Index - CH001
+# Environment Index - CH001 Arizona Cave Entry
 
-## Arizona Hills
-- Role: Primary setting for Carter's reflection and opening sequence
-- Geography: Mountainside trail, hog backs, plateaus
-- Lighting: Clear morning light transitioning to moonlight during chase
-- Atmosphere: Desert landscape with burros, horses, Colt revolvers visible
-- Scale: Large open terrain with rocky defiles leading to cave
+## Environment Families Identified
 
-## Valley
-- Role: Transit setting during Apache chase sequence
-- Geography: Valley floor with hog backs and plateaus surrounding
-- Lighting: Daylight shifting to moonlight during pursuit
-- Atmosphere: Open desert valley with Apache tepees clustered around central object
-- Scale: Medium-sized valley with rocky defile entrance
+| Asset ID | Role | Primary Geography | Lighting/Atmosphere | Scale Cues |
+|----------|------|-------------------|---------------------|------------|
+| arizona_hills_chase | primary | rocky terrain with hog backs and plateaus | Arizona moonlight, clear beautiful mornings, sharp dawn without warning | mountainside descent, open plateau near summit pass |
+| apache_camp_plateau | secondary | open plateau near summit pass | Arizona moonlight throughout chase sequence | half a thousand red warriors clustered around object at camp center |
+| cave_entrance_mouth | transit | mouth of large cave (four feet height, three to four feet wide) | morning daylight at cave entrance | four feet height, three to four feet wide opening |
+| cave_interior_chamber | primary | large chamber possibly hundred feet diameter, thirty or forty feet height | back lost in dense shadow, Arizona moonlight fading | smooth well-worn floor, evidence of remote habitation |
 
-## Cave
-- Role: Primary setting for chapter conclusion
-- Geography: Large cave entrance (four feet high), cave floor
-- Lighting: Interior cave lighting, dim natural light
-- Atmosphere: Fatigue-inducing interior space, Powell's body present
-- Scale: Interior cave space with floor area for resting
+## Environment Roles Summary
 
-## Apache Camp
-- Role: Secondary setting discovered during chase
-- Geography: Clustered tepees around central object
-- Lighting: Daylight/moonlight depending on chase timing
-- Atmosphere: Hostile camp environment, warriors surrounding Powell's corpse
-- Scale: Medium-sized encampment with multiple structures
+- **Primary Settings:** arizona_hills_chase, cave_interior_chamber
+- **Secondary Settings:** apache_camp_plateau  
+- **Transit Settings:** cave_entrance_mouth
