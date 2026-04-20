@@ -1,0 +1,5 @@
+- [SC001](#sc001) - Internal Conflict and Misunderstanding
+- [SC002](#sc002) - Departure Preparations and Tensions
+- [SC003](#sc003) - The March and the Incubator
+- [SC004](#sc004) - The Duel Provocation
+- [SC005](#sc005) - The Ambush and Fatal Blow

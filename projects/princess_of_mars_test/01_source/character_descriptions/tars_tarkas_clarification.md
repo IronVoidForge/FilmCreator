@@ -4,10 +4,10 @@
 tars_tarkas
 
 # Why This Needs Clarification
-Physical appearance is unknown.
+Character is referenced but not visually described in this chapter.
 
 # Question
-What does Tars Tarkas look like?
+What are Tars Tarkas's physical characteristics and appearance?
 
 # Guidance
 - answer briefly and concretely

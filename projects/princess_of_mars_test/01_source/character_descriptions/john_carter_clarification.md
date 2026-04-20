@@ -4,10 +4,10 @@
 john_carter
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Physical appearance is not detailed in the summary.
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+What are John Carter's specific physical traits and current attire?
 
 # Guidance
 - answer briefly and concretely

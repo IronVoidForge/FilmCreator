@@ -4,15 +4,10 @@
 tal_hajus
 
 # Why This Needs Clarification
-Character identity is unclear (could be a person or place, though context implies a destination/entity).
+Identity and appearance are not established in this chapter.
 
 # Question
-Is Tal Hajus a person or a location?
-
-# Candidate Matches
-- apache_warriors (score 10; chapters: CH002; aliases: -)
-- ape_creature_1 (score 10; chapters: CH006; aliases: -)
-- ape_creature_2 (score 10; chapters: CH006; aliases: -)
+What is Tal Hajus's physical appearance and relationship to the court?
 
 # Guidance
 - answer briefly and concretely

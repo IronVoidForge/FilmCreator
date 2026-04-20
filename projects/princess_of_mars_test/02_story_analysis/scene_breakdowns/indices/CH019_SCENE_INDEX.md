@@ -1,0 +1,5 @@
+- [SC001](#sc001) - The Dark Cell and the Stolen Keys
+- [SC002](#sc002) - Meeting Kantos Kan
+- [SC003](#sc003) - The Gladiatorial Games Begin
+- [SC004](#sc004) - Combat in the Arena
+- [SC005](#sc005) - The Staged Death and Escape

@@ -4,16 +4,10 @@
 deceased_friend
 
 # Why This Needs Clarification
-Potential existing identity matches detected:
-- james_k_powell (score 10; chapters: CH001; aliases: -)
-- john_carter (score 10; chapters: CH001; aliases: -)
+No visual information provided.
 
 # Question
-This character may match one of the existing canonical identities above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical character?
-
-# Candidate Matches
-- james_k_powell (score 10; chapters: CH001; aliases: -)
-- john_carter (score 10; chapters: CH001; aliases: -)
+What species or physical form does this creature take?
 
 # Guidance
 - answer briefly and concretely

@@ -4,10 +4,10 @@
 protagonist
 
 # Why This Needs Clarification
-Needs physical description for consistent rendering.
+Identity and physical features are unknown.
 
 # Question
-What is the protagonist's hair color, eye color, build, and facial features?
+What is the protagonist's specific physical appearance and facial features?
 
 # Guidance
 - answer briefly and concretely

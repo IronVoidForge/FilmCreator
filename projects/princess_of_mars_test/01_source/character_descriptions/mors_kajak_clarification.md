@@ -4,10 +4,15 @@
 mors_kajak
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Needs visual details for character model.
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+What is the physical appearance of Mors Kajak?
+
+# Candidate Matches
+- apache_warriors (score 10; chapters: CH002; aliases: -)
+- ape_creature_1 (score 10; chapters: CH006; aliases: -)
+- ape_creature_2 (score 10; chapters: CH006; aliases: -)
 
 # Guidance
 - answer briefly and concretely

@@ -4,10 +4,10 @@
 kantos_kan
 
 # Why This Needs Clarification
-Needs identity clarification for image generation.
+Needs visual details for character model.
 
 # Question
-What is Kantos Kan's physical form and origin?
+What is the physical appearance of Kantos Kan?
 
 # Guidance
 - answer briefly and concretely

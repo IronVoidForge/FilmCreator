@@ -4,10 +4,10 @@
 dak_kova
 
 # Why This Needs Clarification
-Needs identity clarification.
+Physical appearance and stature are unknown.
 
 # Question
-What is Dak Kova's physical form and origin?
+What is Dak Kova's physical appearance and what does his Warhoon chieftain attire look like?
 
 # Guidance
 - answer briefly and concretely

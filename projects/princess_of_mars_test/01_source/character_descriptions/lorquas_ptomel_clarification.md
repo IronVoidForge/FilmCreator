@@ -4,10 +4,10 @@
 lorquas_ptomel
 
 # Why This Needs Clarification
-Physical appearance is unknown.
+Is this a specific named character or a generic Thark leader?
 
 # Question
-What does Lorquas Ptomel look like?
+Does the chieftain have a name or unique visual identifiers?
 
 # Guidance
 - answer briefly and concretely
