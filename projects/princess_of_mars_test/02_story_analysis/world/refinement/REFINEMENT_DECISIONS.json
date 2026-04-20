@@ -5,13 +5,13 @@
       "narrator",
       "narrator_ch003"
     ],
-    "action": "flag_for_human_review",
-    "target_id": null,
+    "action": "merge_into_existing",
+    "target_id": "narrator",
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
-    "confidence": "low",
-    "requires_human_review": true
+    "reason": "chapter variant merged into canonical narrator identity",
+    "confidence": "high",
+    "requires_human_review": false
   },
   {
     "entity_type": "character",
@@ -23,7 +23,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Both entities are provisional roles with weak/generic names and minimal evidence; ambiguous whether separate characters or naming variants; requires human review to determine canonical identity",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -37,7 +37,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Both IDs are weak/generic character names with entity kind drift (individual vs provisional_role); requires human judgment on identity refinement approach",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -51,7 +51,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind drift between group and provisional_role requires expert judgment; both IDs are weak/generic character names with no clear merge target",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -65,7 +65,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind drift between group (apache_warriors) and individual (protagonist) canonical entities; weak/generic IDs require human review to resolve conflict",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -75,13 +75,13 @@
       "apache_warriors",
       "watch_dog"
     ],
-    "action": "flag_for_human_review",
+    "action": "keep_separate",
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
-    "confidence": "low",
-    "requires_human_review": true
+    "reason": "Two distinct entities with different entity kinds (group vs individual); no valid merge rationale; entity kind drift indicates separate treatment required",
+    "confidence": "high",
+    "requires_human_review": false
   },
   {
     "entity_type": "character",
@@ -93,7 +93,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Both IDs are weak/generic names with entity kind drift (individual vs provisional_role); requires human judgment on proper naming and identity resolution",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -103,13 +103,13 @@
       "bar_comas",
       "narrator"
     ],
-    "action": "flag_for_human_review",
+    "action": "keep_separate",
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
-    "confidence": "low",
-    "requires_human_review": true
+    "reason": "Clear entity kind distinction between individual (bar_comas) and provisional_role (narrator); both maintain separate canonical identities with different first appearances",
+    "confidence": "high",
+    "requires_human_review": false
   },
   {
     "entity_type": "character",
@@ -121,7 +121,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Both entities have canonical status with no competing aliases; variant detection reason unclear - needs human review to determine if separate characters or variants",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -135,7 +135,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind drift between individual and provisional_role requires human review; both names are weak/generic character identifiers",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -145,13 +145,13 @@
       "bull_ape_mate",
       "narrator"
     ],
-    "action": "flag_for_human_review",
+    "action": "keep_separate",
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
-    "confidence": "low",
-    "requires_human_review": true
+    "reason": "bull_ape_mate is canonical individual entity; narrator is provisional role - distinct statuses and kinds warrant separation",
+    "confidence": "medium",
+    "requires_human_review": false
   },
   {
     "entity_type": "character",
@@ -159,12 +159,12 @@
       "carter_human",
       "narrator"
     ],
-    "action": "flag_for_human_review",
+    "action": "keep_separate",
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
-    "confidence": "low",
+    "reason": "Entity kind drift between individual and provisional_role; different chapter appearances (CH002 vs CH004) suggest distinct characters requiring human review to confirm",
+    "confidence": "medium",
     "requires_human_review": true
   },
   {
@@ -177,7 +177,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind drift between individual and provisional_role; narrator is generic term requiring proper naming; chieftain_martian canonical status unclear for merge decision",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -187,13 +187,13 @@
       "dak_kova",
       "narrator"
     ],
-    "action": "flag_for_human_review",
+    "action": "keep_separate",
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
-    "confidence": "low",
-    "requires_human_review": true
+    "reason": "Left entity is established individual character with stable canonical descriptions; right entity is provisional role with single mention - distinct entity kinds warrant separation",
+    "confidence": "medium",
+    "requires_human_review": false
   },
   {
     "entity_type": "character",
@@ -205,7 +205,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind drift between individual and provisional_role requires clarification on whether to merge or keep separate; conflicting canonical/provisional status needs human judgment",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -219,7 +219,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind drift between individual and provisional_role; generic narrator ID needs review to determine if merge, rename, or keep separate",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -229,13 +229,13 @@
       "hatching_creature_ch003",
       "narrator"
     ],
-    "action": "flag_for_human_review",
-    "target_id": null,
+    "action": "merge_into_existing",
+    "target_id": "hatching_creature_ch003",
     "new_canonical_id": null,
-    "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
-    "confidence": "low",
-    "requires_human_review": true
+    "new_entity_kind": "individual",
+    "reason": "Merge provisional narrator role into canonical hatching creature individual entity to resolve entity kind drift and consolidate weak/generic names",
+    "confidence": "medium",
+    "requires_human_review": false
   },
   {
     "entity_type": "character",
@@ -243,13 +243,13 @@
       "jeddak_than_kosis",
       "narrator"
     ],
-    "action": "flag_for_human_review",
+    "action": "keep_separate",
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
-    "confidence": "low",
-    "requires_human_review": true
+    "reason": "Entity kind drift detected between individual and provisional_role; keeping separate maintains clarity as one is canonical character and other is provisional role",
+    "confidence": "medium",
+    "requires_human_review": false
   },
   {
     "entity_type": "character",
@@ -261,7 +261,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind drift between individual and provisional_role requires clarification; narrator appears only once while john_carter is well-established canonical character",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -275,7 +275,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind drift between individual and provisional_role requires clarification; narrator is minimal presence while kantos_kan is well-established",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -285,13 +285,13 @@
       "lorquas_ptomel",
       "lorquas_ptomel_jed"
     ],
-    "action": "flag_for_human_review",
-    "target_id": null,
+    "action": "merge_into_existing",
+    "target_id": "lorquas_ptomel",
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
-    "confidence": "low",
-    "requires_human_review": true
+    "reason": "Multiple chapter mentions and higher source count indicate left entity is primary; right entity appears to be variant with single chapter mention",
+    "confidence": "medium",
+    "requires_human_review": false
   },
   {
     "entity_type": "character",
@@ -303,7 +303,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind drift detected between individual and provisional_role; narrator is a weak/generic name with no stable canonical descriptions; unclear if this should be treated as a character or narrative role",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -313,12 +313,12 @@
       "lorquas_ptomel_jed",
       "narrator"
     ],
-    "action": "flag_for_human_review",
-    "target_id": null,
-    "new_canonical_id": null,
-    "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
-    "confidence": "low",
+    "action": "merge_into_existing",
+    "target_id": "lorquas_ptomel_jed",
+    "new_canonical_id": "lorquas_ptomel_jed",
+    "new_entity_kind": "individual",
+    "reason": "Merge generic 'narrator' provisional role into actual character entity; keep canonical individual ID",
+    "confidence": "medium",
     "requires_human_review": true
   },
   {
@@ -331,7 +331,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Both IDs are weak/generic names with entity kind drift (individual vs provisional_role); requires human review to determine proper character identity and naming convention",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -345,7 +345,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "entity kind mismatch (individual vs provisional_role) requires human judgment on whether these represent the same entity or distinct entities; heuristic score of 4 indicates classification uncertainty",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -359,7 +359,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind drift (individual vs provisional_role) with weak/generic names requires manual resolution to determine proper canonical identity and naming convention",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -369,13 +369,13 @@
       "narrator",
       "nell"
     ],
-    "action": "flag_for_human_review",
+    "action": "keep_separate",
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
-    "confidence": "low",
-    "requires_human_review": true
+    "reason": "Two distinct characters appearing in different chapters (CH002 vs CH009) with different entity kinds (provisional_role vs individual) should remain separate",
+    "confidence": "medium",
+    "requires_human_review": false
   },
   {
     "entity_type": "character",
@@ -387,7 +387,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Generic weak name 'narrator' with provisional_role kind vs canonical individual; entity kind drift requires clarification on whether these are separate entities or need renaming/merging",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -397,13 +397,13 @@
       "narrator",
       "powell"
     ],
-    "action": "flag_for_human_review",
-    "target_id": null,
+    "action": "merge_into_existing",
+    "target_id": "powell",
     "new_canonical_id": null,
-    "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
-    "confidence": "low",
-    "requires_human_review": true
+    "new_entity_kind": "individual",
+    "reason": "Merge provisional narrator role into canonical individual powell; entity kind drift resolved with stable descriptions present",
+    "confidence": "medium",
+    "requires_human_review": false
   },
   {
     "entity_type": "character",
@@ -415,7 +415,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind drift between provisional_role and individual; generic IDs require expert determination on consolidation strategy",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -429,7 +429,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Two generic character names with entity kind drift (provisional_role vs individual); requires human review to determine if same or different entities",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -443,7 +443,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind drift detected between provisional_role and individual; narrator is a generic weak ID requiring human review to determine if it should be merged, renamed, or kept separate",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -457,7 +457,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind mismatch (provisional_role vs individual) with different appearance patterns; need to determine if these represent the same character or distinct entities",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -467,13 +467,13 @@
       "narrator",
       "sola"
     ],
-    "action": "flag_for_human_review",
-    "target_id": null,
+    "action": "merge_into_existing",
+    "target_id": "sola",
     "new_canonical_id": null,
-    "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
-    "confidence": "low",
-    "requires_human_review": true
+    "new_entity_kind": "individual",
+    "reason": "narrator is a weak/generic provisional name that should be merged into the established character sola which has stable canonical descriptions across multiple chapters",
+    "confidence": "medium",
+    "requires_human_review": false
   },
   {
     "entity_type": "character",
@@ -481,13 +481,13 @@
       "narrator",
       "tal_hajus"
     ],
-    "action": "flag_for_human_review",
+    "action": "keep_separate",
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
-    "confidence": "low",
-    "requires_human_review": true
+    "reason": "Evidence shows distinct entity kinds (provisional_role vs individual) and different appearance patterns; narrator is weak/provisional while tal_hajus is strong/canonical",
+    "confidence": "high",
+    "requires_human_review": false
   },
   {
     "entity_type": "character",
@@ -495,13 +495,13 @@
       "narrator",
       "tars_tarkas"
     ],
-    "action": "flag_for_human_review",
+    "action": "keep_separate",
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
-    "confidence": "low",
-    "requires_human_review": true
+    "reason": "These are distinct entities: narrator is a provisional role with single mention, tars_tarkas is an established individual character with 9 chapter mentions and stable descriptions",
+    "confidence": "high",
+    "requires_human_review": false
   },
   {
     "entity_type": "character",
@@ -513,7 +513,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind drift between provisional_role and individual; weak generic names require clarification before merging or renaming",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -527,7 +527,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Generic character names with entity kind drift detected; needs human review to determine if merge or rename is appropriate",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -537,13 +537,13 @@
       "narrator",
       "warrior_martian"
     ],
-    "action": "flag_for_human_review",
+    "action": "keep_separate",
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
-    "confidence": "low",
-    "requires_human_review": true
+    "reason": "Two distinct characters with different entity kinds (provisional_role vs individual) and appearing in separate chapters; no merge needed",
+    "confidence": "medium",
+    "requires_human_review": false
   },
   {
     "entity_type": "character",
@@ -555,7 +555,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Both IDs are weak/generic character names with entity kind drift (provisional_role vs group); requires human review for proper naming and classification",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -569,7 +569,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind drift (provisional_role vs individual) combined with weak/generic character names requires human judgment to determine if these represent distinct characters or need consolidation",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -583,7 +583,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "LLM classification failed: LM Studio returned an empty chat completion.",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -593,13 +593,13 @@
       "narrator",
       "woola"
     ],
-    "action": "flag_for_human_review",
+    "action": "keep_separate",
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
-    "confidence": "low",
-    "requires_human_review": true
+    "reason": "Two distinct entities with different entity kinds; narrator is a provisional role appearing in CH002 only, woola is an individual character appearing across multiple chapters (CH008-CH024) with stable canonical descriptions",
+    "confidence": "medium",
+    "requires_human_review": false
   },
   {
     "entity_type": "character",
@@ -611,7 +611,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind drift between provisional_role and group; narrator lacks stable descriptions; insufficient data to confidently merge or rename without human context",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -625,7 +625,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind drift between provisional_role and individual requires careful review; both IDs are generic/weak names",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -639,7 +639,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Weak narrator name requires human review to determine if renaming or merging is needed; entity kind drift detected between provisional_role and individual",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -653,7 +653,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind drift detected between provisional_role and individual; weak/generic character names require human review to determine merge vs separate strategy",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -667,7 +667,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Both IDs are weak/generic (narrator_ch003 is system-generated; watch_dog is generic); entity kind drift between provisional_role and individual; limited story presence (1 chapter each) requires human judgment on merge vs rename",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -681,7 +681,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "weak/generic names with entity kind drift (provisional_role vs individual); uncertain if same character",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -695,7 +695,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Generic names with entity kind drift; unclear if merge or rename needed",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -705,13 +705,13 @@
       "protagonist",
       "warriors_group"
     ],
-    "action": "flag_for_human_review",
+    "action": "keep_separate",
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
-    "confidence": "low",
-    "requires_human_review": true
+    "reason": "Two distinct entity types detected (individual vs group); no merge justification; keep as separate character entities",
+    "confidence": "medium",
+    "requires_human_review": false
   },
   {
     "entity_type": "character",
@@ -723,7 +723,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind drift detected between individual character and group entity; generic names require human review to determine proper handling",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -737,7 +737,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind drift between individual and group requires human review; both marked canonical with conflicting entity kinds",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -751,7 +751,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind conflict between group and individual character types detected; requires manual resolution to determine if merge or separate handling is appropriate",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -765,7 +765,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind drift between individual and group requires clarification; both IDs claim canonical status with conflicting entity kinds",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -779,7 +779,7 @@
     "target_id": null,
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
+    "reason": "Entity kind drift detected (individual vs group) with weak/generic names; requires expert review to determine proper consolidation strategy",
     "confidence": "low",
     "requires_human_review": true
   },
@@ -789,12 +789,12 @@
       "plaza",
       "plaza_destination"
     ],
-    "action": "flag_for_human_review",
-    "target_id": null,
+    "action": "merge_into_existing",
+    "target_id": "plaza",
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "LLM disabled for this refinement run.",
-    "confidence": "low",
-    "requires_human_review": true
+    "reason": "Left entity has multiple chapter mentions (CH007-CH012) vs right entity single mention (CH006); merge less established variant into canonical one",
+    "confidence": "medium",
+    "requires_human_review": false
   }
 ]

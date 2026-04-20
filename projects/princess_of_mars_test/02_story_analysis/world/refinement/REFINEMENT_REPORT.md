@@ -1,123 +1,127 @@
 # World Refinement Report
 
 - project_slug: princess_of_mars_test
-- generated_at_utc: 2026-04-20T04:18:55.900533+00:00
+- generated_at_utc: 2026-04-20T04:30:42.936054+00:00
 - candidate_count: 57
 - decision_count: 57
 
 ## Decisions
 
-- character ['narrator', 'narrator_ch003'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+- character ['narrator', 'narrator_ch003'] -> merge_into_existing (target=narrator, new_id=, new_kind=, confidence=high, human_review=False)
+  - reason: chapter variant merged into canonical narrator identity
 - character ['narrator', 'narrator_i'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Both entities are provisional roles with weak/generic names and minimal evidence; ambiguous whether separate characters or naming variants; requires human review to determine canonical identity
 - character ['ancient_female', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Both IDs are weak/generic character names with entity kind drift (individual vs provisional_role); requires human judgment on identity refinement approach
 - character ['apache_warriors', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind drift between group and provisional_role requires expert judgment; both IDs are weak/generic character names with no clear merge target
 - character ['apache_warriors', 'protagonist'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
-- character ['apache_warriors', 'watch_dog'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind drift between group (apache_warriors) and individual (protagonist) canonical entities; weak/generic IDs require human review to resolve conflict
+- character ['apache_warriors', 'watch_dog'] -> keep_separate (target=, new_id=, new_kind=, confidence=high, human_review=False)
+  - reason: Two distinct entities with different entity kinds (group vs individual); no valid merge rationale; entity kind drift indicates separate treatment required
 - character ['ape_like_creature', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
-- character ['bar_comas', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Both IDs are weak/generic names with entity kind drift (individual vs provisional_role); requires human judgment on proper naming and identity resolution
+- character ['bar_comas', 'narrator'] -> keep_separate (target=, new_id=, new_kind=, confidence=high, human_review=False)
+  - reason: Clear entity kind distinction between individual (bar_comas) and provisional_role (narrator); both maintain separate canonical identities with different first appearances
 - character ['bull_ape', 'bull_ape_mate'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Both entities have canonical status with no competing aliases; variant detection reason unclear - needs human review to determine if separate characters or variants
 - character ['bull_ape', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
-- character ['bull_ape_mate', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
-- character ['carter_human', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind drift between individual and provisional_role requires human review; both names are weak/generic character identifiers
+- character ['bull_ape_mate', 'narrator'] -> keep_separate (target=, new_id=, new_kind=, confidence=medium, human_review=False)
+  - reason: bull_ape_mate is canonical individual entity; narrator is provisional role - distinct statuses and kinds warrant separation
+- character ['carter_human', 'narrator'] -> keep_separate (target=, new_id=, new_kind=, confidence=medium, human_review=True)
+  - reason: Entity kind drift between individual and provisional_role; different chapter appearances (CH002 vs CH004) suggest distinct characters requiring human review to confirm
 - character ['chieftain_martian', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
-- character ['dak_kova', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind drift between individual and provisional_role; narrator is generic term requiring proper naming; chieftain_martian canonical status unclear for merge decision
+- character ['dak_kova', 'narrator'] -> keep_separate (target=, new_id=, new_kind=, confidence=medium, human_review=False)
+  - reason: Left entity is established individual character with stable canonical descriptions; right entity is provisional role with single mention - distinct entity kinds warrant separation
 - character ['dead_friend', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind drift between individual and provisional_role requires clarification on whether to merge or keep separate; conflicting canonical/provisional status needs human judgment
 - character ['dejah_thoris', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
-- character ['hatching_creature_ch003', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
-- character ['jeddak_than_kosis', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind drift between individual and provisional_role; generic narrator ID needs review to determine if merge, rename, or keep separate
+- character ['hatching_creature_ch003', 'narrator'] -> merge_into_existing (target=hatching_creature_ch003, new_id=, new_kind=individual, confidence=medium, human_review=False)
+  - reason: Merge provisional narrator role into canonical hatching creature individual entity to resolve entity kind drift and consolidate weak/generic names
+- character ['jeddak_than_kosis', 'narrator'] -> keep_separate (target=, new_id=, new_kind=, confidence=medium, human_review=False)
+  - reason: Entity kind drift detected between individual and provisional_role; keeping separate maintains clarity as one is canonical character and other is provisional role
 - character ['john_carter', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind drift between individual and provisional_role requires clarification; narrator appears only once while john_carter is well-established canonical character
 - character ['kantos_kan', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
-- character ['lorquas_ptomel', 'lorquas_ptomel_jed'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind drift between individual and provisional_role requires clarification; narrator is minimal presence while kantos_kan is well-established
+- character ['lorquas_ptomel', 'lorquas_ptomel_jed'] -> merge_into_existing (target=lorquas_ptomel, new_id=, new_kind=, confidence=medium, human_review=False)
+  - reason: Multiple chapter mentions and higher source count indicate left entity is primary; right entity appears to be variant with single chapter mention
 - character ['lorquas_ptomel', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
-- character ['lorquas_ptomel_jed', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind drift detected between individual and provisional_role; narrator is a weak/generic name with no stable canonical descriptions; unclear if this should be treated as a character or narrative role
+- character ['lorquas_ptomel_jed', 'narrator'] -> merge_into_existing (target=lorquas_ptomel_jed, new_id=lorquas_ptomel_jed, new_kind=individual, confidence=medium, human_review=True)
+  - reason: Merge generic 'narrator' provisional role into actual character entity; keep canonical individual ID
 - character ['mars', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Both IDs are weak/generic names with entity kind drift (individual vs provisional_role); requires human review to determine proper character identity and naming convention
 - character ['martian_leader_ch003', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: entity kind mismatch (individual vs provisional_role) requires human judgment on whether these represent the same entity or distinct entities; heuristic score of 4 indicates classification uncertainty
 - character ['martian_soldier_ch003', 'narrator'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
-- character ['narrator', 'nell'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind drift (individual vs provisional_role) with weak/generic names requires manual resolution to determine proper canonical identity and naming convention
+- character ['narrator', 'nell'] -> keep_separate (target=, new_id=, new_kind=, confidence=medium, human_review=False)
+  - reason: Two distinct characters appearing in different chapters (CH002 vs CH009) with different entity kinds (provisional_role vs individual) should remain separate
 - character ['narrator', 'old_martian_guardian'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
-- character ['narrator', 'powell'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Generic weak name 'narrator' with provisional_role kind vs canonical individual; entity kind drift requires clarification on whether these are separate entities or need renaming/merging
+- character ['narrator', 'powell'] -> merge_into_existing (target=powell, new_id=, new_kind=individual, confidence=medium, human_review=False)
+  - reason: Merge provisional narrator role into canonical individual powell; entity kind drift resolved with stable descriptions present
 - character ['narrator', 'prisoner_human_female'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind drift between provisional_role and individual; generic IDs require expert determination on consolidation strategy
 - character ['narrator', 'protagonist'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Two generic character names with entity kind drift (provisional_role vs individual); requires human review to determine if same or different entities
 - character ['narrator', 'sab_than'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind drift detected between provisional_role and individual; narrator is a generic weak ID requiring human review to determine if it should be merged, renamed, or kept separate
 - character ['narrator', 'sarkoja'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
-- character ['narrator', 'sola'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
-- character ['narrator', 'tal_hajus'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
-- character ['narrator', 'tars_tarkas'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind mismatch (provisional_role vs individual) with different appearance patterns; need to determine if these represent the same character or distinct entities
+- character ['narrator', 'sola'] -> merge_into_existing (target=sola, new_id=, new_kind=individual, confidence=medium, human_review=False)
+  - reason: narrator is a weak/generic provisional name that should be merged into the established character sola which has stable canonical descriptions across multiple chapters
+- character ['narrator', 'tal_hajus'] -> keep_separate (target=, new_id=, new_kind=, confidence=high, human_review=False)
+  - reason: Evidence shows distinct entity kinds (provisional_role vs individual) and different appearance patterns; narrator is weak/provisional while tal_hajus is strong/canonical
+- character ['narrator', 'tars_tarkas'] -> keep_separate (target=, new_id=, new_kind=, confidence=high, human_review=False)
+  - reason: These are distinct entities: narrator is a provisional role with single mention, tars_tarkas is an established individual character with 9 chapter mentions and stable descriptions
 - character ['narrator', 'than_kosis'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind drift between provisional_role and individual; weak generic names require clarification before merging or renaming
 - character ['narrator', 'the_prisoner'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
-- character ['narrator', 'warrior_martian'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Generic character names with entity kind drift detected; needs human review to determine if merge or rename is appropriate
+- character ['narrator', 'warrior_martian'] -> keep_separate (target=, new_id=, new_kind=, confidence=medium, human_review=False)
+  - reason: Two distinct characters with different entity kinds (provisional_role vs individual) and appearing in separate chapters; no merge needed
 - character ['narrator', 'warriors_group'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Both IDs are weak/generic character names with entity kind drift (provisional_role vs group); requires human review for proper naming and classification
 - character ['narrator', 'watch_dog'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind drift (provisional_role vs individual) combined with weak/generic character names requires human judgment to determine if these represent distinct characters or need consolidation
 - character ['narrator', 'women_children_group'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
-- character ['narrator', 'woola'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: LLM classification failed: LM Studio returned an empty chat completion.
+- character ['narrator', 'woola'] -> keep_separate (target=, new_id=, new_kind=, confidence=medium, human_review=False)
+  - reason: Two distinct entities with different entity kinds; narrator is a provisional role appearing in CH002 only, woola is an individual character appearing across multiple chapters (CH008-CH024) with stable canonical descriptions
 - character ['narrator', 'young_martians'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind drift between provisional_role and group; narrator lacks stable descriptions; insufficient data to confidently merge or rename without human context
 - character ['narrator', 'young_warrior'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind drift between provisional_role and individual requires careful review; both IDs are generic/weak names
 - character ['narrator', 'zad'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Weak narrator name requires human review to determine if renaming or merging is needed; entity kind drift detected between provisional_role and individual
 - character ['narrator_ch003', 'protagonist'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind drift detected between provisional_role and individual; weak/generic character names require human review to determine merge vs separate strategy
 - character ['narrator_ch003', 'watch_dog'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Both IDs are weak/generic (narrator_ch003 is system-generated; watch_dog is generic); entity kind drift between provisional_role and individual; limited story presence (1 chapter each) requires human judgment on merge vs rename
 - character ['narrator_i', 'protagonist'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: weak/generic names with entity kind drift (provisional_role vs individual); uncertain if same character
 - character ['narrator_i', 'watch_dog'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
-- character ['protagonist', 'warriors_group'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Generic names with entity kind drift; unclear if merge or rename needed
+- character ['protagonist', 'warriors_group'] -> keep_separate (target=, new_id=, new_kind=, confidence=medium, human_review=False)
+  - reason: Two distinct entity types detected (individual vs group); no merge justification; keep as separate character entities
 - character ['protagonist', 'women_children_group'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind drift detected between individual character and group entity; generic names require human review to determine proper handling
 - character ['protagonist', 'young_martians'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind drift between individual and group requires human review; both marked canonical with conflicting entity kinds
 - character ['warriors_group', 'watch_dog'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind conflict between group and individual character types detected; requires manual resolution to determine if merge or separate handling is appropriate
 - character ['watch_dog', 'women_children_group'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind drift between individual and group requires clarification; both IDs claim canonical status with conflicting entity kinds
 - character ['watch_dog', 'young_martians'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
-- environment ['plaza', 'plaza_destination'] -> flag_for_human_review (target=, new_id=, new_kind=, confidence=low, human_review=True)
-  - reason: LLM disabled for this refinement run.
+  - reason: Entity kind drift detected (individual vs group) with weak/generic names; requires expert review to determine proper consolidation strategy
+- environment ['plaza', 'plaza_destination'] -> merge_into_existing (target=plaza, new_id=, new_kind=, confidence=medium, human_review=False)
+  - reason: Left entity has multiple chapter mentions (CH007-CH012) vs right entity single mention (CH006); merge less established variant into canonical one
+
+## Warnings
+
+- LLM classification failed for ['narrator', 'women_children_group']: LM Studio returned an empty chat completion.. Falling back to human review.
