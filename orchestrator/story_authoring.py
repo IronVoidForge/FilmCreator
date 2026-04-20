@@ -1520,6 +1520,8 @@ def _extract_usable_records_from_packet(
         records = _extract_character_records_from_index_markdown(index_markdown)
     elif record_type == "environment":
         records = _extract_environment_records_from_index_markdown(index_markdown)
+    elif record_type == "scene":
+        records = _extract_scene_records_from_index_markdown(index_markdown)
     else:
         records = []
     if records:

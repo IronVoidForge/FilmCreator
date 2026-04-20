@@ -307,6 +307,84 @@ def extract_environment_records_from_index_markdown(markdown: str) -> list[Packe
     return _extract_heading_block_records(markdown, record_type="environment", fallback_prefix="environment")
 
 
+def extract_scene_records_from_index_markdown(markdown: str) -> list[PacketRecord]:
+    records = _extract_table_records(
+        markdown,
+        record_type="scene",
+        fallback_prefix="scene",
+        column_aliases={
+            "scene_id": "scene_id",
+            "summary": "summary",
+            "scene_summary": "summary",
+            "purpose": "purpose",
+            "scene_purpose": "purpose",
+            "description": "summary",
+            "emotional_shift": "summary",
+        },
+        default_section_title="Scene Index",
+    )
+    if records:
+        return records
+    return _extract_scene_heading_or_bullet_records(markdown)
+
+
+def _extract_scene_heading_or_bullet_records(markdown: str) -> list[PacketRecord]:
+    records: list[PacketRecord] = []
+    lines = markdown.splitlines()
+    current_scene_id: str | None = None
+    current_lines: list[str] = []
+
+    def flush() -> None:
+        nonlocal current_scene_id, current_lines
+        if current_scene_id is None:
+            return
+        fields: dict[str, str] = {
+            "type": "scene",
+            "scene_id": normalize_scene_id(current_scene_id),
+        }
+        summary = "\n".join(line.strip() for line in current_lines if line.strip()).strip()
+        if summary:
+            fields["summary"] = summary
+        sections = {
+            "markdown": _build_salvaged_markdown(
+                record_type="scene",
+                title=current_scene_id,
+                fields=fields,
+                raw_lines=current_lines,
+                heading_level=2,
+            )
+        }
+        records.append(PacketRecord(fields=fields, sections=sections))
+        current_scene_id = None
+        current_lines = []
+
+    for line in lines:
+        stripped = line.strip()
+        if not stripped:
+            if current_scene_id is not None:
+                current_lines.append(line)
+            continue
+        heading_match = re.fullmatch(r"#+\s*(SC\d{3})\s*$", stripped, re.IGNORECASE)
+        if heading_match:
+            flush()
+            current_scene_id = heading_match.group(1).upper()
+            current_lines = []
+            continue
+        bullet_match = re.fullmatch(r"(?:[-*]\s+)?(?:\*\*)?(SC\d{3})(?:\*\*)?(?:\s*[:\-–]\s*(.+))?", stripped, re.IGNORECASE)
+        if bullet_match:
+            flush()
+            current_scene_id = bullet_match.group(1).upper()
+            current_lines = []
+            summary = bullet_match.group(2) or ""
+            if summary:
+                current_lines.append(summary.strip())
+            continue
+        if current_scene_id is not None:
+            current_lines.append(line)
+    flush()
+    return records
+
+
 def _extract_heading_block_records(markdown: str, *, record_type: str, fallback_prefix: str) -> list[PacketRecord]:
     records: list[PacketRecord] = []
     lines = markdown.splitlines()

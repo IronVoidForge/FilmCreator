@@ -211,6 +211,26 @@ def test_extract_environment_records_from_index_markdown_salvages_heading_blocks
     assert records[1].fields["asset_id"] == "apache_camp_tepees"
 
 
+def test_extract_scene_records_from_index_markdown_salvages_bullet_entries() -> None:
+    markdown = "\n".join(
+        [
+            "# Scene Index",
+            "",
+            "- **SC001**: Naval Victory and air battle.",
+            "- **SC002**: Princess boarding and hero acclaim.",
+            "- **SC003**: Land campaign and victory.",
+        ]
+    )
+
+    records = packet_parser.extract_scene_records_from_index_markdown(markdown)
+
+    assert len(records) == 3
+    assert records[0].fields["type"] == "scene"
+    assert records[0].fields["scene_id"] == "SC001"
+    assert "Naval Victory" in records[0].sections["markdown"]
+    assert records[1].fields["scene_id"] == "SC002"
+
+
 def test_validate_scene_decomposition_warns_on_two_scenes_and_rejects_empty() -> None:
     scene_records = [
         packet_parser.PacketRecord(
