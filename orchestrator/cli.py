@@ -5,6 +5,7 @@ import json
 
 from .authoring import lmstudio_check, write_prompts
 from .batch_runner import plan_prompt_batch, run_prompt_batch
+from .book_authoring import refine_world
 from .registry_loader import get_workflow
 from .review_tools import interactive_review_and_promote_batch, review_candidates_summary
 from .runner import run_still
@@ -165,6 +166,14 @@ def build_parser() -> argparse.ArgumentParser:
     )
     write_shared_prompts_cmd.add_argument("project_slug")
 
+    refine_world_cmd = subparsers.add_parser(
+        "refine-world",
+        help="Run the post-ingest world identity refinement pass",
+    )
+    refine_world_cmd.add_argument("project_slug")
+    refine_world_cmd.add_argument("--no-llm", action="store_true", help="Skip LM Studio classification and flag candidates for review")
+    refine_world_cmd.add_argument("--no-apply", action="store_true", help="Write the refinement plan without mutating registries")
+
     authoring_checkpoint_cmd = subparsers.add_parser(
         "authoring-checkpoint",
         help="Run the full pre-SQL authoring checkpoint for one chapter and the first planned scene",
@@ -316,6 +325,15 @@ def main() -> None:
     if args.command == "write-shared-prompts":
         summary = write_shared_prompts(project_slug=args.project_slug)
         print(json.dumps(summary.to_dict(), indent=2))
+        return
+
+    if args.command == "refine-world":
+        summary = refine_world(
+            args.project_slug,
+            use_llm=not args.no_llm,
+            apply_changes=not args.no_apply,
+        )
+        print(json.dumps(summary, indent=2))
         return
 
     if args.command == "authoring-checkpoint":

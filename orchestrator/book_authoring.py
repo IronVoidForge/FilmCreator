@@ -17,6 +17,7 @@ from .world_global import (
     write_chapter_world_snapshot,
     update_world_sequence_state,
 )
+from .world_refinement import refine_world_identities
 
 
 @dataclass(frozen=True)
@@ -177,6 +178,15 @@ def analyze_book(*, project_slug: str, continue_on_error: bool = False) -> BookA
         chapters=chapter_summaries,
         failures=failures,
     )
+
+
+def refine_world(project_slug: str, *, use_llm: bool = True, apply_changes: bool = True) -> dict[str, object]:
+    summary = refine_world_identities(
+        project_slug=project_slug,
+        use_llm=use_llm,
+        apply_changes=apply_changes,
+    )
+    return summary.to_dict()
 
 
 def _read_manifest_chapter_paths(*, project_dir: Path, manifest_path: Path) -> list[Path]:
