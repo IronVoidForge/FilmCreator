@@ -301,14 +301,13 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
     clarification_requests: list[CharacterClarificationRequest] = []
     warnings: list[str] = []
 
-    summary_packet = _call_packet_task(
+    summary_packet, summary_warnings = _call_chapter_summary_with_chunked_fallback(
         client=client,
         project_dir=project_dir,
-        task_name="chapter_summary",
-        system_prompt=authoring_prompts.analysis_system_prompt(),
-        user_prompt=authoring_prompts.chapter_summary_user_prompt(project_slug, chapter_source),
-        degraded_user_prompt=authoring_prompts.chapter_summary_user_prompt(project_slug, chapter_source, degraded=True),
+        project_slug=project_slug,
+        chapter_source=chapter_source,
     )
+    warnings.extend(summary_warnings)
     project_summary_markdown = _require_packet_section(summary_packet, "project_summary_markdown")
     chapter_summary_markdown = _require_packet_section(summary_packet, "chapter_summary_markdown")
 
@@ -1472,6 +1471,143 @@ def _call_record_extraction_with_chunked_fallback(
     )
 
 
+def _call_chapter_summary_with_chunked_fallback(
+    *,
+    client: LMStudioClient,
+    project_dir: Path,
+    project_slug: str,
+    chapter_source: _ChapterSource,
+) -> tuple[_PacketDocument, list[str]]:
+    warnings: list[str] = []
+    full_packet: _PacketDocument | None = None
+    try:
+        full_packet = _call_packet_task(
+            client=client,
+            project_dir=project_dir,
+            task_name="chapter_summary",
+            system_prompt=authoring_prompts.analysis_system_prompt(),
+            user_prompt=authoring_prompts.chapter_summary_user_prompt(project_slug, chapter_source),
+            degraded_user_prompt=authoring_prompts.chapter_summary_user_prompt(project_slug, chapter_source, degraded=True),
+        )
+    except LMStudioError as exc:
+        warnings.append(f"chapter_summary full chapter pass failed: {exc}")
+    else:
+        try:
+            project_summary_markdown = _require_packet_section(full_packet, "project_summary_markdown")
+            chapter_summary_markdown = _require_packet_section(full_packet, "chapter_summary_markdown")
+        except LMStudioError as exc:
+            warnings.append(f"chapter_summary full chapter pass was missing required summary sections: {exc}")
+        else:
+            return (
+                _PacketDocument(
+                    metadata=dict(full_packet.metadata),
+                    sections={
+                        "project_summary_markdown": project_summary_markdown,
+                        "chapter_summary_markdown": chapter_summary_markdown,
+                    },
+                    records=full_packet.records,
+                ),
+                warnings,
+            )
+
+    chunk_texts = _split_text_into_fallback_chunks(chapter_source.full_markdown)
+    chunk_packets: list[_PacketDocument] = []
+    for chunk_index, chunk_text in enumerate(chunk_texts, start=1):
+        chunk_label = f"{chunk_index}/{len(chunk_texts)}"
+        try:
+            chunk_packet = _call_packet_task(
+                client=client,
+                project_dir=project_dir,
+                task_name="chapter_summary",
+                system_prompt=authoring_prompts.analysis_system_prompt(),
+                user_prompt=_chapter_summary_chunk_prompt(
+                    project_slug=project_slug,
+                    chapter_id=chapter_source.chapter_id,
+                    chunk_label=chunk_label,
+                    chunk_markdown=chunk_text,
+                ),
+                degraded_user_prompt=_chapter_summary_chunk_prompt(
+                    project_slug=project_slug,
+                    chapter_id=chapter_source.chapter_id,
+                    chunk_label=chunk_label,
+                    chunk_markdown=chunk_text,
+                    degraded=True,
+                ),
+            )
+        except LMStudioError as exc:
+            warnings.append(f"chapter_summary chunk {chunk_label} failed: {exc}")
+            continue
+
+        try:
+            _require_packet_section(chunk_packet, "project_summary_markdown")
+            _require_packet_section(chunk_packet, "chapter_summary_markdown")
+        except LMStudioError as exc:
+            warnings.append(f"chapter_summary chunk {chunk_label} missing summary sections: {exc}")
+            continue
+        chunk_packets.append(chunk_packet)
+
+    if not chunk_packets:
+        failure_reason = "chapter_summary could not recover any usable summary packets from chunked fallback."
+        warnings.append(failure_reason)
+        raise LMStudioError(failure_reason)
+
+    try:
+        synthesis_packet = _call_packet_task(
+            client=client,
+            project_dir=project_dir,
+            task_name="chapter_summary",
+            system_prompt=authoring_prompts.analysis_system_prompt(),
+            user_prompt=_chapter_summary_synthesis_prompt(
+                project_slug=project_slug,
+                chapter_id=chapter_source.chapter_id,
+                chunk_packets=chunk_packets,
+            ),
+            degraded_user_prompt=_chapter_summary_synthesis_prompt(
+                project_slug=project_slug,
+                chapter_id=chapter_source.chapter_id,
+                chunk_packets=chunk_packets,
+                degraded=True,
+            ),
+        )
+        project_summary_markdown = _require_packet_section(synthesis_packet, "project_summary_markdown")
+        chapter_summary_markdown = _require_packet_section(synthesis_packet, "chapter_summary_markdown")
+        warnings.append(
+            f"chapter_summary recovered from {len(chunk_packets)} chunk summary packet(s) and synthesized a final summary."
+        )
+        return (
+            _PacketDocument(
+                metadata=dict(synthesis_packet.metadata),
+                sections={
+                    "project_summary_markdown": project_summary_markdown,
+                    "chapter_summary_markdown": chapter_summary_markdown,
+                },
+                records=synthesis_packet.records,
+            ),
+            warnings,
+        )
+    except LMStudioError as exc:
+        warnings.append(f"chapter_summary synthesis pass failed: {exc}; falling back to deterministic chunk merge.")
+        merged_project_summary = _merge_summary_texts(
+            title="Project Summary",
+            texts=[_require_packet_section(packet, "project_summary_markdown") for packet in chunk_packets],
+        )
+        merged_chapter_summary = _merge_summary_texts(
+            title="Chapter Summary",
+            texts=[_require_packet_section(packet, "chapter_summary_markdown") for packet in chunk_packets],
+        )
+        return (
+            _PacketDocument(
+                metadata={"task": "chapter_summary", "version": PACKET_VERSION, "source_mode": "chunked_merge"},
+                sections={
+                    "project_summary_markdown": merged_project_summary,
+                    "chapter_summary_markdown": merged_chapter_summary,
+                },
+                records=[],
+            ),
+            warnings,
+        )
+
+
 def _chat_completion_result(
     *,
     client: LMStudioClient,
@@ -1497,6 +1633,91 @@ def _chat_completion_result(
         error_message=None,
         is_success=True,
     )
+
+
+def _chapter_summary_chunk_prompt(*, project_slug: str, chapter_id: str, chunk_label: str, chunk_markdown: str, degraded: bool = False) -> str:
+    requirements = [
+        f"- this is only chunk {chunk_label} of the chapter source",
+        "- summarize only the information present in this chunk",
+        "- keep the project summary reusable across chapters",
+        "- keep the chapter summary focused on events, characters, and settings present in this chunk",
+    ]
+    if degraded:
+        requirements = [
+            f"- this is only chunk {chunk_label} of the chapter source",
+            "- keep both summaries concise but useful",
+            "- preserve major events and named entities from this chunk",
+        ]
+    return "\n\n".join(
+        [
+            f"Project slug: {project_slug}",
+            f"Chapter id: {chapter_id}",
+            "Task: write project summary plus chapter summary for later scene extraction.",
+            _packet_contract_block(task_name="chapter_summary", section_names=["project_summary_markdown", "chapter_summary_markdown"]),
+            "",
+            f"Chunk label: {chunk_label}",
+            "Requirements:",
+            *requirements,
+            "",
+            "Chapter source markdown:",
+            chunk_markdown,
+        ]
+    )
+
+
+def _chapter_summary_synthesis_prompt(*, project_slug: str, chapter_id: str, chunk_packets: list[_PacketDocument], degraded: bool = False) -> str:
+    project_sections = [
+        _require_packet_section(packet, "project_summary_markdown")
+        for packet in chunk_packets
+    ]
+    chapter_sections = [
+        _require_packet_section(packet, "chapter_summary_markdown")
+        for packet in chunk_packets
+    ]
+    requirements = [
+        "- merge the partial summaries into one coherent reusable project summary",
+        "- merge the partial chapter summaries into one coherent chapter summary",
+        "- do not mention that the summaries came from chunks",
+        "- keep the result grounded and concise",
+    ]
+    if degraded:
+        requirements = [
+            "- keep the merged summaries concise",
+            "- preserve named entities and major events",
+        ]
+    return "\n\n".join(
+        [
+            f"Project slug: {project_slug}",
+            f"Chapter id: {chapter_id}",
+            "Task: combine partial chapter summaries into one final project summary and chapter summary.",
+            _packet_contract_block(task_name="chapter_summary", section_names=["project_summary_markdown", "chapter_summary_markdown"]),
+            "",
+            "Requirements:",
+            *requirements,
+            "",
+            "Partial project summaries:",
+            *[f"## Chunk {index + 1}\n{section}" for index, section in enumerate(project_sections)],
+            "",
+            "Partial chapter summaries:",
+            *[f"## Chunk {index + 1}\n{section}" for index, section in enumerate(chapter_sections)],
+        ]
+    )
+
+
+def _merge_summary_texts(*, title: str, texts: list[str]) -> str:
+    parts: list[str] = []
+    for text in texts:
+        normalized = text.strip()
+        if normalized and normalized not in parts:
+            parts.append(normalized)
+    if not parts:
+        return f"# {title}\n"
+    if len(parts) == 1:
+        return parts[0]
+    lines = [f"# {title}"]
+    for index, part in enumerate(parts, start=1):
+        lines.extend(["", f"## Chunk {index}", part])
+    return "\n".join(lines).strip()
 
 
 def _extract_usable_records_from_packet(
