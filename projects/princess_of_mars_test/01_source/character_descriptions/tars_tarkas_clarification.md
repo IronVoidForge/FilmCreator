@@ -4,10 +4,10 @@
 tars_tarkas
 
 # Why This Needs Clarification
-Character may already exist under another name or is too weakly identified in this chapter to confirm stable identity across reruns.
+Title used instead of specific name; need to confirm if character has a proper name (e.g., Thak).
 
 # Question
-Is Tars Tarkas a distinct character from other chieftains mentioned, and what are his physical characteristics?
+Does this chieftain have a specific name (e.g., Thak) or is this a generic role?
 
 # Guidance
 - answer briefly and concretely

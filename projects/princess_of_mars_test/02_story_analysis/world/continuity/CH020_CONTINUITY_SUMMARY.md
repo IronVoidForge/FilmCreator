@@ -1,0 +1,118 @@
+# CH020 Continuity Summary
+
+## Scene Order
+- CH020_SC001
+- CH020_SC002
+- CH020_SC003
+- CH020_SC004
+- CH020_SC005
+- CH020_SC006
+
+## Known Canonical Characters
+- ancient_female
+- ape_like_creature
+- bar_comas
+- bull_ape
+- bull_ape_mate
+- carter_human
+- chieftain_martian
+- dak_kova
+- dead_friend
+- dejah_thoris
+- hatching_creature_ch003
+- john_carter
+- kantos_kan
+- lorquas_ptomel
+- lorquas_ptomel_jed
+- mars
+- martian_leader_ch003
+- martian_soldier_ch003
+- nell
+- old_martian_guardian
+- powell
+- prisoner_human_female
+- protagonist
+- sarkoja
+- sola
+- tal_hajus
+- tars_tarkas
+- the_prisoner
+- warrior_martian
+- watch_dog
+- woola
+- young_warrior
+- zad
+
+## Unresolved / Provisional Characters
+- narrator
+- narrator_ch003
+- narrator_i
+
+## Known Canonical Environments
+- amphitheater
+- apache_tepees
+- arena
+- arizona_exterior_night
+- arizona_hills
+- atmosphere_factory
+- audience_chamber
+- audience_seating
+- building_overlooking_valley
+- building_three_floors
+- building_upper_floor_window
+- caravan_landscape
+- cave_chamber
+- cave_interior
+- ceremonial_grounds
+- chariot_interior
+- chieftain_palace_interior
+- circular_basin_incubator
+- city_interior
+- city_limits
+- combat_plaza
+- court_view_from_building
+- dead_sea_bottom
+- doorway_entrance
+- dungeon_cell
+- dungeon_imprisonment_cell
+- eastern_hills
+- games_exhibition_area
+- great_avenue_to_plaza_east
+- heavens_above_landscape
+- hills
+- incubator_enclosure
+- interior_combat_space
+- journey_path
+- lorquas_ptomel_city_courtyard_plaza
+- martian_city_street
+- martian_hills_landscape
+- martian_ruined_city_exterior
+- mossy_waste_desert
+- new_quarters
+- night_camp
+- night_gathering_room
+- plaza
+- plaza_destination
+- recovery_camp
+- room_interior
+- small_room_cell
+- sola_sleeping_quarters
+- southern_hills
+- streets_near_plaza
+- tal_hajus_chamber
+- thark_arena_destination
+- thark_carter_quarters
+- thark_city_courtyard
+- thark_city_plaza
+- thark_courtyard_zone
+- thark_dejah_quarters
+- thark_rooftop_network
+- training_plaza
+- valley_overlook
+- warhoon_arena_battle_ground
+- window_structure
+- zodanga_farm_territory
+
+## Registry Artifacts
+- projects/princess_of_mars_test/02_story_analysis/world/CHARACTER_REGISTRY.json
+- projects/princess_of_mars_test/02_story_analysis/world/ENVIRONMENT_REGISTRY.json

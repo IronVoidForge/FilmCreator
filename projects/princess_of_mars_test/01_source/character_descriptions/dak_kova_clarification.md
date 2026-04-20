@@ -4,10 +4,10 @@
 dak_kova
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Character may already exist under established name from earlier chapters; needs verification of current identification status
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+Is Dak Kova's physical appearance consistent with prior chapter documentation, or does this chapter require new descriptive details?
 
 # Guidance
 - answer briefly and concretely

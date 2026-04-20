@@ -4,10 +4,10 @@
 zad
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Character identified only by name "Zad" with minimal physical attributes. Green Martian warrior designation present but insufficient for complete character rendering.
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+What are Zad's specific physical features (height, build, facial characteristics)? What costume details beyond green Martian warrior attire? Any distinctive markings or accessories?
 
 # Guidance
 - answer briefly and concretely

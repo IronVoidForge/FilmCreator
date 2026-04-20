@@ -4,10 +4,10 @@
 than_kosis
 
 # Why This Needs Clarification
-Character identified only as "father" without full name or stable identification; insufficient visual markers for later image generation.
+The character is not fully identified from this chapter alone.
 
 # Question
-What is the full name of Than Kosis and what are his physical features, age range, and costume elements during the throne room ceremony?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

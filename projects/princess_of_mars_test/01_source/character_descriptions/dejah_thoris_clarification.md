@@ -4,10 +4,10 @@
 dejah_thoris
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Character is mentioned but not physically present; needs clarification about current appearance and condition while held captive
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+What is Dejah Thoris's current physical appearance and condition while held captive by Zodanga?
 
 # Guidance
 - answer briefly and concretely

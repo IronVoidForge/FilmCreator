@@ -4,10 +4,10 @@
 sola
 
 # Why This Needs Clarification
-Character exists in narrative but lacks stable identification through physical description. May already exist under another name or be too weakly identified for reliable rendering.
+Character identified only by name "Sola" with minimal physical attributes. Shielding action present but insufficient for complete character rendering.
 
 # Question
-What are Sola's physical appearance details (height, build, hair color, eye color, distinctive features) and what role does she play in the narrator's journey?
+What are Sola's specific physical features (height, build, facial characteristics)? What costume details beyond general warrior attire? Any distinctive markings or accessories?
 
 # Guidance
 - answer briefly and concretely

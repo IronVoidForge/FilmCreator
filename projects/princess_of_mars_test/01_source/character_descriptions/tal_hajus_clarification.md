@@ -4,10 +4,10 @@
 tal_hajus
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+The character record indicates clarification is needed, but LM Studio did not supply a reason.
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+Is Tal Hajus a new character introduction or an established authority figure with prior visual details?
 
 # Guidance
 - answer briefly and concretely

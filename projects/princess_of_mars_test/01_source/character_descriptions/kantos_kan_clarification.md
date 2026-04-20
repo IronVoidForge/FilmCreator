@@ -4,10 +4,10 @@
 kantos_kan
 
 # Why This Needs Clarification
-Character identified only by name without full physical description or stable identification markers; insufficient visual information for later image generation.
+Character is mentioned but not physically present; needs clarification about current appearance and condition
 
 # Question
-What are Kantos Kan's physical features, age range, and costume elements during the resolution scene and dungeon rescue sequence?
+What is Kantos Kan's current physical appearance and condition? Is he still alive and where is he located?
 
 # Guidance
 - answer briefly and concretely

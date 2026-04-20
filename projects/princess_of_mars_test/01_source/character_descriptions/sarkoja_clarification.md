@@ -4,10 +4,10 @@
 sarkoja
 
 # Why This Needs Clarification
-Character may already exist under another name or is too weakly identified in this chapter to confirm stable identity across reruns.
+Character identified only by name "Sarkoja" with minimal physical attributes. Attempted stabbing action present but insufficient for complete character rendering.
 
 # Question
-Is Sarkoja present in this chapter's scenes, and what are her physical characteristics?
+What are Sarkoja's specific physical features (height, build, facial characteristics)? What costume details beyond general warrior attire? Any distinctive markings or accessories?
 
 # Guidance
 - answer briefly and concretely
