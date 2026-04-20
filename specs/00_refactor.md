@@ -89,7 +89,7 @@ For the large current files, the target is to split them into smaller files in t
 | `orchestrator/workflow_patcher.py` | 253 | 180-260 | Can remain a single utility module unless new patching formats grow. |
 | `orchestrator/lmstudio_client.py` | 247 | 180-260 | Keep as one adapter unless transport behavior expands. |
 | `orchestrator/review_tools.py` | 231 | 120-220 per file | Split review catalog, service, and interactive flow. |
-| `orchestrator/book_authoring.py` | 174 | 120-200 per file | Can be split or kept as a small orchestration module. |
+| `orchestrator/book_authoring.py` | 727 | 150-300 per file | Now includes resilient book-run tracking, failed-chapter retry, and refinement entrypoints; should be split once the new batch flow settles. |
 | `orchestrator/prompt_package.py` | 159 | 120-200 | Fine as a compact parser/serializer. |
 | `orchestrator/book_ingest.py` | 136 | 100-180 | Fine as a compact ingestion helper. |
 | `orchestrator/comfy_client.py` | 132 | 100-180 | Keep as a single adapter. |
@@ -301,15 +301,20 @@ These are worthwhile, but they should come after the major workflow modules are 
   - `BookIngestor`
   - `BookAnalysisOrchestrator`
   - `BookChapterPipeline`
+  - `BookRunSummary`
+  - `ChapterRunResult`
+  - `FailedChapterRetryService`
 
 Suggested file split:
 
 - `orchestrator/features/book/ingest.py`
 - `orchestrator/features/book/analysis.py`
+- `orchestrator/features/book/recovery.py`
 
 Notes:
 
 - This is a good final step because it becomes much simpler once authoring and world state are modular.
+- The book-analysis module now also owns resilient manifest runs, failed-chapter artifacts, and retry-only recovery, so that behavior should stay stable before extracting more files.
 
 #### 10. Split `orchestrator/common.py`
 

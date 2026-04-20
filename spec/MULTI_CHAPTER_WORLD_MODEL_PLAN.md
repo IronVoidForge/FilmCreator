@@ -41,6 +41,21 @@ They are the required foundation for all later multi-chapter logic.
 
 ---
 
+## Resilient Run Orchestration
+
+Book-level chapter analysis is now continue-on-failure by default.
+
+The manifest run writes:
+
+- `02_story_analysis/runs/BOOK_RUN_latest.json`
+- `02_story_analysis/runs/BOOK_RUN_<timestamp>.json`
+- `02_story_analysis/runs/failed_chapters.json`
+- `02_story_analysis/runs/FAILED_CHAPTERS_REPORT.md`
+
+The latest failed-chapter list can be retried without rerunning the full manifest.
+
+---
+
 ## Phase 0 – Full Book Ingestion
 
 ### Goal

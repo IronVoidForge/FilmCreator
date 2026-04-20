@@ -36,6 +36,7 @@ This folder breaks the project into numbered implementation chunks by feature an
 - `4.2` ComfyUI client and workflow patching
 - `4.3` output routing, logging, and manifests
 - `4.4` automated testing and CI strategy
+- `4.5` resilient chapter batch orchestration and run recovery
 - `5.1` story analysis outputs
 - `5.2` clip plan generation
 - `5.3` prompt writer integration
@@ -72,7 +73,7 @@ Phase A is now structurally in place:
 
 - chapter-scoped scene ids
 - chapter -> scene -> clip/shot cascade entrypoints
-- resilient chapter analysis and scene planning
+- resilient chapter analysis, chapter-batch run tracking, and scene planning
 - packetized prompt writing and shared prompt generation
 
 Phase B is now focused on:
@@ -81,3 +82,4 @@ Phase B is now focused on:
 - canonical environment identity
 - chapter continuity state
 - chapter storyboard artifacts
+- post-ingest world refinement for safe duplicate/name/type cleanup

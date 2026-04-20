@@ -98,6 +98,11 @@
   - evidence: unit coverage now includes prompt parsing, review-candidate discovery, review-and-promotion helpers, state normalization, scaffold promotion, workflow patching, LM Studio client discovery, and authoring packet parsing/file generation
   - next validation: expand from unit coverage into launcher-level or smoke-test coverage
 
+- `4.5` resilient chapter batch orchestration and run recovery
+  - status: `validated`
+  - evidence: `analyze_book` now continues after per-chapter failures by default, writes `BOOK_RUN_latest.json`, `BOOK_RUN_<timestamp>.json`, `failed_chapters.json`, and `FAILED_CHAPTERS_REPORT.md`, and exposes `retry-failed-chapters` for rerunning only the latest failed chapters
+  - next validation: run a real manifest with one injected chapter failure, confirm later chapters still complete, then retry the failed chapters from the saved run artifacts
+
 - `5.1` story analysis outputs
   - status: `validated`
   - evidence: the authoring path now has a packetized Markdown contract, per-task LM Studio logging, malformed-character tolerance, manual-description placeholder reconciliation, and live chapter analysis plus four-scene decomposition for `princess_of_mars_test` Chapter VIII

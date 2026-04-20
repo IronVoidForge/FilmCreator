@@ -50,6 +50,7 @@ Ship a local-first, shot-oriented pipeline that can:
 - Chapter-based authoring for `princess_of_mars_test` is live and substantially more resilient than the original strict-JSON version.
 - Chapter-scoped scene ids such as `CH008_SC001` are now live in the authoring outputs.
 - Scene-level authoring and chapter-level authoring cascade functions exist.
+- Book-level chapter batches now continue after per-chapter failures, write run summaries and failed-chapter artifacts, and support retrying only the latest failed chapters.
 
 ## Current Project Status
 
@@ -57,6 +58,7 @@ Ship a local-first, shot-oriented pipeline that can:
 - Shared character/environment prompt writing is running one asset per LM Studio call.
 - Clip/shot prompt writing has been migrated to tagged Markdown packet output with local parsing.
 - Scene planning is now tolerant of several non-canonical clip-id formats and duplicate post-normalization collisions.
+- The multi-chapter book-run layer now records resilient run state under `02_story_analysis/runs/` and keeps the failure log inspectable without stopping the manifest run.
 - The project is still intentionally file-first; SQLite remains deferred until the world model is stable enough to avoid churn.
 - Phase B.1 has started with canonical character/environment registry scaffolding.
 
@@ -67,6 +69,7 @@ Ship a local-first, shot-oriented pipeline that can:
 - Scene-to-scene continuity inheritance is not yet active.
 - The SQLite relational layer is still a future migration, not a current implementation target.
 - Multi-chapter world state should build on top of canonical identity and chapter continuity, not replace them.
+- Post-ingest identity refinement is now a separate batch step and should stay separate from chapter ingest.
 
 ## Agreed Sequencing From Here
 
