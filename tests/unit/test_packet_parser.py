@@ -94,6 +94,45 @@ def test_parse_packet_document_infers_missing_task_and_version_when_sections_are
     assert packet.sections["chapter_summary_markdown"] == "# Chapter Summary"
 
 
+def test_extract_character_records_from_index_markdown_salvages_heading_blocks() -> None:
+    markdown = "\n".join(
+        [
+            "# Character Index - Chapter II",
+            "",
+            "## protagonist",
+            "- **Asset ID:** protagonist",
+            "- **Canonical Character ID:** CH002 Protagonist",
+            "- **Aliases:** Narrator, Conscious Entity",
+            "- **Is Fully Identified:** false",
+            "- **Manual Description Required:** true",
+            "- **Manual Description Reason:** Sparse visual detail.",
+            "- **Clarification Required:** true",
+            "- **Clarification Reason:** Needs identity clarification.",
+            "- **Clarification Question:** What is the protagonist?",
+            "",
+            "## apache_warriors",
+            "- **Asset ID:** apache_warriors",
+            "- **Canonical Character ID:** CH002 Apache Warriors",
+            "- **Aliases:** Apache Tribe Members",
+            "- **Is Fully Identified:** false",
+            "- **Manual Description Required:** true",
+            "- **Manual Description Reason:** Sparse visual detail.",
+            "- **Clarification Required:** true",
+            "- **Clarification Reason:** Needs identity clarification.",
+            "- **Clarification Question:** What do they look like?",
+        ]
+    )
+
+    records = packet_parser.extract_character_records_from_index_markdown(markdown)
+
+    assert len(records) == 2
+    assert records[0].fields["type"] == "character"
+    assert records[0].fields["asset_id"] == "protagonist"
+    assert records[0].fields["canonical_character_id"] == "CH002 Protagonist"
+    assert records[0].sections["markdown"].startswith("## protagonist")
+    assert records[1].fields["asset_id"] == "apache_warriors"
+
+
 def test_validate_scene_decomposition_warns_on_two_scenes_and_rejects_empty() -> None:
     scene_records = [
         packet_parser.PacketRecord(
