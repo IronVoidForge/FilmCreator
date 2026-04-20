@@ -2,337 +2,403 @@
 
 ## Goal
 
-Ship a local-first, shot-oriented pipeline that can:
+Ship a local-first, reviewable, resumable film pipeline that can:
 
-1. analyze a chapter into an ordered scene list,
-2. author every scene in that chapter into shots and prompt packages,
-3. render review batches for each internal clip/shot unit without hand-editing workflow JSONs,
-4. record review decisions and approvals in state,
-5. generate motion from approved keyframes,
-6. evolve cleanly into a persistent multi-chapter world model without discarding the file-first workflow.
+1. ingest a book into stable chapter, scene, and world-state artifacts,
+2. synthesize canonical character and environment bibles from accumulated evidence,
+3. generate continuity-aware scene production contracts,
+4. derive ordered shot packages and prompt-ready shot plans,
+5. layer dialogue, timing, and edit-aware sequencing on top of shot structure,
+6. drive downstream image, audio, and video generation from approved structured contracts,
+7. preserve user-reviewed work through non-destructive reruns and dependency-aware rebuilds.
+
+## Current State
+
+- `main` and `origin/main` are synced at commit `db5cf7be57d4656ee271e4592a28b0fa7959ec95`.
+- The refactor branch has effectively become `main`.
+- The active spec tree now lives under `spec/`.
+- The latest full `princess_of_mars_test` run completed `28/28` chapters with `0` failures.
+- Multi-chapter authoring now produces stable analysis artifacts, world registries, continuity state, and run-level failure/retry tracking.
+- The librarian/index layer exists and can now serve as the retrieval backbone for synthesis stages.
+- Repair-first retries and chunk fallback are active and materially improved authoring stability.
 
 ## Working Principles
 
-- Local generation is the product core.
-- LM Studio and ComfyUI are separate phases on VRAM-constrained hardware.
-- User-facing language should prefer `shot`, while internal implementation may continue using `clip_id` until a later refactor.
-- Previous-shot video last frame is an optional continuity tool, not the universal default next-shot source.
-- Every generated stage is batch-first and review-gated.
-- The next stage only advances from one approved primary candidate.
-- Overnight runs are stage-bounded. Human review remains the boundary between stage families unless we later add an explicit auto-advance mode.
-- Optional post-keyframe identity-consistency and anatomy-repair assists should plug in as corrective still passes, not as hidden replacements for the base keyframe stage.
-- All LLM output must be tagged Markdown packets, never strict raw JSON.
-- All rigid JSON structures must be produced by local forgiving parsers.
-- The system remains file-first until the multi-chapter world model stabilizes enough to justify SQLite.
+- Local generation remains the product core.
+- The system is file-first until data semantics stabilize enough to justify a relational sync layer.
+- Markdown remains the primary human review surface; JSON remains the machine contract surface.
+- All LLM output remains tagged Markdown packet output or packet-compatible text parsed locally.
+- Forgiving local parsers remain the authority for rigid structure.
+- Every major phase must be reviewable before expensive downstream generation.
+- Human approval and locking are first-class workflow concepts, not afterthoughts.
+- Reruns must be non-destructive by default.
+- Existing valid artifacts should be reviewed/reused when current, marked stale when outdated, and regenerated only when necessary.
+- Characters and environments are special incremental assets: later chapters may add evidence, so these artifacts must support evolving synthesis rather than naive overwrite.
+- New implementation work should prefer small, composable modules rather than further bloating the large authoring files.
 
-## Current Validated Checkpoint
+## What Is Complete Enough To Build On
 
-- The latest full `princess_of_mars_test` multi-chapter run completed `28/28` chapters with `0` failures.
-- The current default LM Studio model is `google_gemma-4-26b-a4b-it`.
-- The pipeline is materially more stable than the earlier Qwen run, but slower and still sensitive to context-window size on later chapters.
-- A clip-scoped `keyframe` batch can render successfully through the clean Comfy path.
-- `RUN_0001` produced four clip-local keyframe candidates in:
-  - `projects/pilot_scene/05_scenes/SC001/clips/CL001/stills/keyframes/`
-- A short-cut `cut_motion` batch can also render successfully from the approved keyframe.
-- `RUN_0040` produced four clip-local short video candidates in:
-  - `projects/pilot_scene/05_scenes/SC001/clips/CL001/video/`
-- The orchestrator can now:
-  - scaffold clip folders and prompt packages,
-  - generate 4 style-profile prompt variants,
-  - patch the canonical four-ref still workflow,
-  - patch the primary Wan 5B short-cut motion workflow,
-  - submit live still and short-motion render jobs,
-  - route still and video outputs into canonical clip folders,
-  - record batch manifests with per-candidate metadata,
-  - record top 2 and chosen primary review results for keyframes,
-  - promote the chosen keyframe into `approved_keyframe`,
-  - update `clip_state.json` so continuity resolves from the approved keyframe,
-  - review and approve short-cut motion batches through the manifest-backed review helper,
-  - promote the chosen video into `approved_video`,
-  - extract `approved_video_last_frame` into the canonical clip still hierarchy.
-- Chapter-based authoring for `princess_of_mars_test` is live and substantially more resilient than the original strict-JSON version.
-- Chapter-scoped scene ids such as `CH008_SC001` are now live in the authoring outputs.
-- Scene-level authoring and chapter-level authoring cascade functions exist.
-- Book-level chapter batches now continue after per-chapter failures, write run summaries and failed-chapter artifacts, and support retrying only the latest failed chapters.
+### Phase 1 – Ingest and World Extraction (complete enough)
 
-## Current Project Status
+The project now has a working ingest and extraction foundation:
 
-- `analyze-chapter` and `plan-scene` are working and now have live task timing output.
-- Shared character/environment prompt writing is running one asset per LM Studio call.
-- Clip/shot prompt writing has been migrated to tagged Markdown packet output with local parsing.
-- Scene planning is now tolerant of several non-canonical clip-id formats and duplicate post-normalization collisions.
-- The multi-chapter book-run layer now records resilient run state under `02_story_analysis/runs/` and keeps the failure log inspectable without stopping the manifest run.
-- The project is still intentionally file-first; SQLite remains deferred until the world model is stable enough to avoid churn.
-- Phase B.1 has started with canonical character/environment registry scaffolding.
+- chapter summaries
+- chapter-scoped character, environment, and scene breakdowns
+- canonical/global registries
+- chapter-local registries
+- world snapshots
+- continuity summaries and state files
+- resilient book-run orchestration
+- failed-chapter retry support
+- book librarian/index artifacts
 
-## Current Risks And Known Gaps
+This phase is no longer the main bottleneck.
 
-- Canonical identity is not yet fully integrated back into chapter authoring outputs.
-- Shared prompt generation still needs to prefer canonical assets where available.
-- Scene-to-scene continuity inheritance is not yet active.
-- The SQLite relational layer is still a future migration, not a current implementation target.
-- Multi-chapter world state should build on top of canonical identity and chapter continuity, not replace them.
-- Post-ingest identity refinement is now a separate batch step and should stay separate from chapter ingest.
+## What Is Partially Complete But Not The Final Target
 
-## Agreed Sequencing From Here
+### Identity refinement foundation
 
-This is the authoritative order we want to follow.
+Identity refinement now exists as a separate post-pass concern and should remain separate from chapter ingest. However, it is not yet the final production-facing identity layer until refinement results are consistently reflected in later synthesis and planning phases.
 
-### Stage A – Structural Authoring Backbone (complete enough to build on)
+### Review and recovery operations
 
-#### Result
+The pipeline can recover from many malformed or partial LLM outputs, and book-level failures are no longer all-or-nothing. This is sufficient to move on, though future quality tooling should still improve targeted rework and review ergonomics.
 
-The current `princess_of_mars_test` checkpoint now has a real structural backbone:
+## Current Active Direction
 
-- chapter-scoped scene ids
-- resilient packet parsing and retries
-- scene-level planning and prompt writing
-- chapter-level scene cascade entrypoints
-- bounded malformed-record handling
+The project has moved from analysis hardening into **canonical synthesis and production contracts**.
 
-#### Remaining A-adjacent work
+The next major work is no longer “make chapter analysis run.”
+The next major work is “turn stable analysis into film-usable, reviewable, non-destructive production assets.”
 
-- stable launcher/CLI coverage for chapter-wide scene authoring
-- final operator-facing terminology cleanup (`clip` -> `shot`)
+## Authoritative Phase Order From Here
 
-### Stage B – Canonical Identity And Continuity
+### Phase 7 – Character Bible Synthesis
 
 #### Goal
 
-Add the first true film-memory layer to the authoring system.
+Turn registry-level character identity and evidence into stable, film-usable canonical character bibles.
 
-#### Stage B.1 – Canonical identity registries
+#### Inputs
 
-##### Scope
+- global character registry
+- chapter-local character registries
+- chapter character breakdowns
+- continuity snapshots and summaries
+- refinement decisions
+- librarian retrieval of all supporting mentions
+- existing character bible if present
+- manual overrides / locked fields if present
 
-- canonical character registry
-- canonical environment registry
-- provisional identity support
-- alias resolution
-- post-analysis registry resolution pass
-- shared prompt writing preference for canonical assets where available
+#### Outputs
 
-##### Deliverables
+- per-character markdown bibles
+- per-character JSON contracts
+- character bible index
+- character review queue
+- revision history and evidence references
 
-- `02_story_analysis/world/CHARACTER_REGISTRY.json`
-- `02_story_analysis/world/ENVIRONMENT_REGISTRY.json`
-- canonical/provisional status in authoring summaries
-- chapter analysis hooks that write registry artifacts automatically
+#### Why It Is Next
 
-##### Verification
+Character identity is already strong enough for synthesis, and downstream scene and shot planning improve dramatically once canonical character contracts exist.
 
-- obviously duplicated character aliases are merged into one canonical asset
-- generic role labels remain provisional unless explicitly resolved
-- environment families can be reused without uncontrolled duplication
-- shared prompt writing can prefer canonical source sets
-
-#### Stage B.2 – Scene-to-scene continuity inheritance
-
-##### Scope
-
-- chapter continuity state file
-- per-scene continuity update pass
-- continuity summary fed into later scene planning and shot prompt writing
-
-##### Deliverables
-
-- `02_story_analysis/world/CH###_STATE.json`
-- `02_story_analysis/world/CH###_CONTINUITY_SUMMARY.md`
-- scene planning prompts that inherit prior-scene state
-
-##### Verification
-
-- later scenes preserve prior events, emotional state, and environmental changes
-- state is auditable and scene-bounded
-- continuity prompts stay concise enough to remain useful
-
-#### Stage B.3 – Chapter storyboard artifact
-
-##### Scope
-
-- chapter-wide storyboard markdown and json summary
-- ordered scenes
-- ordered shots per scene
-- estimated durations and continuity notes
-
-##### Deliverables
-
-- `02_story_analysis/storyboards/CH###_storyboard.md`
-- `02_story_analysis/storyboards/CH###_storyboard.json`
-
-##### Verification
-
-- one file can summarize the whole chapter before rendering begins
-- scene and shot timing is reviewable without opening every clip file manually
-
-### Stage C – Output Review / Rework Layer
+### Phase 8 – Environment Bible Synthesis
 
 #### Goal
 
-Add quality control after structural stability and canonical identity are in place.
+Turn fragmented environment evidence into stable, reusable, film-usable canonical environment bibles.
 
-#### Planned Capabilities
+#### Inputs
 
-- reviewer pass for character roster quality
-- reviewer pass for scene/shot planning quality
-- targeted rework for weak outputs
-- automated retry reasons plus optional reviewer explanation
+- global environment registry
+- chapter-local environment registries
+- environment breakdowns
+- continuity snapshots and summaries
+- scene references
+- refinement decisions
+- existing environment bible if present
+- manual overrides / locked fields if present
 
-### Stage D – File-First Multi-Chapter World Model
+#### Outputs
 
-#### Goal
+- per-environment markdown bibles
+- per-environment JSON contracts
+- environment bible index
+- environment review queue
+- hierarchy-aware continuity notes
 
-Support ingestion of a full book and chapter-by-chapter world updates while remaining file-first.
+#### Why It Follows Phase 7
 
-#### Why It Now Starts Later Than B
+Scenes and shots need stable people and stable places before they can become production-ready contracts.
 
-- canonical identity and chapter continuity are prerequisites
-- the world model should build on stable character and environment entities
-
-### Stage E – Revision / Timeline / Snapshot Layer
-
-#### Goal
-
-Support long-form continuity and future scene generation from time-correct state.
-
-### Stage F – SQLite Migration
-
-#### Goal
-
-Add a queryable relational layer **after** file-first world semantics are stable.
-
-## Database Implementation Timing
-
-- SQLite should be implemented only after the world model semantics are stable enough to deserve schema permanence.
-- The first SQLite release should be:
-  - per-project
-  - SQLite
-  - file-synced
-  - read-mostly
-- Markdown, JSON, and media files remain canonical artifacts in the first database release.
-- SQLite should accelerate querying and reporting, not replace the file-first authoring system prematurely.
-
-## Near-Term Verification Matrix
-
-### Verification Group 1 – Chapter Authoring Stability
-
-- chapter analysis completes without uncaught exception
-- scene planning completes for scoped scenes
-- scene prompt writing completes for planned scenes
-- warnings/failures remain bounded and inspectable
-
-### Verification Group 2 – Shot Planning Robustness
-
-- non-canonical clip ids are normalized or skipped with warnings
-- duplicate normalized ids do not corrupt outputs
-- planned shots stay reviewable and duration-targeted
-
-### Verification Group 3 – Identity Resolution Robustness
-
-- canonical registries are written deterministically
-- provisional identities remain explicit instead of forcing bad merges
-- shared prompt writing can prefer canonical assets when available
-
-### Verification Group 4 – Logging / Debuggability
-
-- every LM Studio call logs start and finish
-- retries log a reason
-- durations are visible
-- relevant log files exist on disk
-
-## End-To-End Delivery Plan
-
-### Phase 0: Stabilize The Validated Keyframe Batch
+### Phase 9 – Scene Production Contracts
 
 #### Goal
 
-Turn the first successful keyframe render into a clean, repeatable baseline.
+Turn scene analysis into continuity-aware production contracts that can drive storyboards, shot planning, and downstream generation.
 
-### Phase 1: Review And Approved Keyframe Handoff
+#### Inputs
 
-#### Goal
+- scene decomposition outputs
+- chapter summaries
+- chapter continuity state
+- character bibles
+- environment bibles
+- librarian retrieval
+- legacy beat/clip planning artifacts when useful as import seeds
 
-Make the first real human approval step complete and reproducible.
+#### Outputs
 
-### Phase 2: Still-Fix Loop
+- per-scene markdown contracts
+- per-scene JSON contracts
+- scene reference bundles
+- chapter storyboard artifacts
 
-#### Goal
+#### Why This Is The Bridge Phase
 
-Support corrective still batches after keyframe review.
+This is the point where FilmCreator stops being “mostly analysis” and becomes a system that can hand structured scene intent to downstream filmmaking steps.
 
-### Phase 3: Short-Cut Motion Smoke Path
-
-#### Goal
-
-Prove one approved keyframe can drive one normal movie-cut video generation without chained follow-on segments.
-
-### Phase 4: Video Review And Last-Frame Continuity Handoff
-
-#### Goal
-
-Close the loop between motion generation and continuity state.
-
-### Phase 5: LM Studio Authoring Integration
+### Phase 10 – Shot Planning and Shot Packages
 
 #### Goal
 
-Automate planning and prompt writing without changing the runner contract.
+Convert scene contracts into ordered shot plans and generation-facing shot packages.
 
-#### Current Implementation Note
+#### Inputs
 
-- `lmstudio-check` is implemented.
-- `write-prompts` is implemented for clip-local prompt families.
-- chapter-based authoring is active.
-- scene-level and chapter-level cascade functions now exist.
-- the current next priority is Phase B canonical identity integration and then continuity inheritance.
+- scene contracts
+- character bibles
+- environment bibles
+- continuity state
+- reusable legacy clip-plan scaffolding where compatible
+- style guidance / generation profiles when available
 
-### Phase 5.1: Chapter-Based Authoring Pilot
+#### Outputs
 
-#### Goal
+- shot plans
+- shot roster summaries
+- shot JSON packages
+- shot prompt packages
+- shot reference bundles
 
-Prove the authoring pipeline on a real public-domain chapter before any database migration.
+#### Important Implementation Note
 
-#### Current Reality
+Legacy clip planning should be adapted, not blindly reused as the final architecture. Compatibility adapters are preferred over embedding new logic back into legacy planning code.
 
-- Chapter VIII of `princess_of_mars_test` has live chapter analysis, four-scene decomposition, scoped scene ids, Scene 1 beat/shot planning, and full prompt writing.
-- chapter-wide cascade authoring is now the next practical validation layer.
-
-### Phase 5.5: SQLite Relational Layer
-
-#### Goal
-
-Add a queryable local relational layer after authoring, canonical identity, and world-model concepts have stabilized.
-
-### Phase 6: Scene-Wide Planning
+### Phase 11 – Dialogue, Timing, and Edit-Aware Sequencing
 
 #### Goal
 
-Prepare an entire scene in one authoring pass before any rendering begins.
+Add temporal coherence so scenes and shots can support dialogue, audio binding, pacing, and later video assembly.
 
-#### Current Reality
+#### Inputs
 
-- Scene-wide authoring is now structurally available through the scene authoring function and chapter authoring cascade branch work.
-- the next missing layer is continuity-aware scene planning, not basic scene planning existence.
+- scene contracts
+- shot packages
+- continuity state
+- chapter summaries
+- dialogue extraction or inferred dialogue events
+- any existing audio placeholders
 
-### Phase 7: Overnight Scene Batch Rendering
+#### Outputs
 
-#### Goal
+- dialogue event maps
+- scene dialogue maps
+- shot-to-dialogue mappings
+- chapter edit timelines
+- audio binding placeholders
 
-Render a full scene in unattended overnight passes without skipping required human review gates.
+#### Why This Matters
 
-### Phase 8: Cross-Cut Continuity And Batch Video Completion
+Without this phase, the system can produce good-looking static structure but not coherent audiovisual sequences.
 
-#### Goal
+### Phase 12 – Character Sheet Generation and Approval (lighter planning for now)
 
-Make scene-wide cut progression robust enough for longer unattended runs.
+- multi-angle character sheets
+- expression and pose variants
+- approval/lock workflow for downstream use
+
+### Phase 13 – Environment Reference Generation and Approval
+
+- establishing views
+- key sub-locations
+- lighting and mood variants
+- approval/lock workflow
+
+### Phase 14 – Scene and Shot Keyframe Generation
+
+- keyframes driven by approved refs plus scene/shot contracts
+- reviewable visual candidate batches
+
+### Phase 15 – Audio Generation or Recording Integration
+
+- recorded or synthetic dialogue
+- ambience and music placeholders
+- asset registry linkage
+
+### Phase 16 – Video Generation and Assembly
+
+- shot video generation
+- scene assembly
+- preview exports
+
+### Phase 17 – Review, Lock, and Regenerate Workflow
+
+- approve assets
+- lock approved artifacts
+- selectively regenerate downstream dependents
+- preserve reviewed work across reruns
+
+## Natural Review Breakpoints
+
+These are intended user review boundaries and should remain explicit in both implementation and UX.
+
+1. After ingest and chapter analysis
+2. After character and environment bible synthesis
+3. After scene production contracts and storyboard generation
+4. After shot planning
+5. After dialogue and timing timeline generation
+6. After character and environment reference approvals
+7. After keyframe approvals
+8. After audio approval
+9. After video assembly preview
+
+## Cross-Cutting Requirements
+
+### Artifact lifecycle
+
+Every artifact should support a lifecycle model such as:
+
+- missing
+- generated
+- reviewed
+- approved
+- stale
+- superseded
+- locked
+
+### Dependency-aware rebuilds
+
+Every artifact should track upstream dependencies so reruns can choose between:
+
+- review existing
+- reuse current
+- rebuild stale
+- force regenerate
+
+### Non-destructive reruns
+
+The pipeline must not blindly overwrite valid outputs.
+
+Default behavior should prefer:
+
+- synthesize missing only
+- rebuild stale only
+- retry failed only
+- review existing only
+
+### Evidence preservation
+
+Synthesis stages must preserve:
+
+- source evidence references
+- unresolved ambiguities
+- revision history
+- manual overrides
+
+### Human approval and locking
+
+Approvals must be explicit. User-reviewed artifacts must survive reruns unless the user explicitly requests a forced regeneration path.
+
+## Suggested Supporting Features
+
+These are not phase blockers, but they are strongly recommended additions to improve user-facing robustness.
+
+### Style bible
+
+A project-level style guide defining:
+
+- visual tone
+- palette
+- realism/stylization level
+- camera defaults
+- composition defaults
+- rendering consistency rules
+
+### Generation profiles
+
+Named profiles such as:
+
+- storyboard
+- cinematic
+- speed
+- consistency-first
+- final-quality
+
+### Staleness dashboard
+
+A report showing:
+
+- current artifacts
+- stale artifacts
+- locked artifacts
+- downstream impact
+
+### Dependency graph explorer
+
+Useful for selective rebuilds, review impact tracing, and debugging downstream regeneration.
+
+### Review queues
+
+Queue artifacts for:
+
+- unresolved characters
+- unresolved environments
+- weak scene contracts
+- weak shot plans
+- timing conflicts
+- asset approval needs
+
+## Implementation Guidance
+
+### New code should prefer new modules
+
+The next stages should add focused modules for:
+
+- character bible synthesis
+- environment bible synthesis
+- scene contracts
+- shot planning
+- dialogue timeline
+- lifecycle / dependency / staleness management
+
+Do not continue expanding `story_authoring.py` or `world_registry.py` as catch-all implementation files.
+
+### Existing code should be adapted through interfaces
+
+When older beat/clip planning logic is still useful, wrap it through compatibility adapters rather than folding new architecture back into old assumptions.
 
 ## Recommended Build Order From Here
 
-1. Finish Phase B.1 registry integration into chapter authoring.
-2. Add Phase B.2 scene-to-scene continuity inheritance.
-3. Add chapter storyboard generation.
-4. Add reviewer / rework support for weak but syntactically valid outputs.
-5. Then begin file-first multi-chapter ingest and broader world-state migration.
-6. Add revision, contradiction, and snapshot tooling.
-7. Only after those stabilize, implement the SQLite read-side sync layer.
-8. Continue motion-path and batch-render improvements on top of the stabilized authoring foundation.
+1. Add cross-cutting artifact lifecycle, dependency, and review specs.
+2. Implement Phase 7 character bible synthesis.
+3. Implement Phase 8 environment bible synthesis.
+4. Implement Phase 9 scene production contracts and chapter storyboard outputs.
+5. Implement Phase 10 shot planning and shot packages.
+6. Implement Phase 11 dialogue, timing, and edit-aware sequencing.
+7. Then move into production asset generation phases 12–17.
+
+## Database Timing
+
+SQLite should remain deferred until:
+
+- phase 7–11 contracts stabilize,
+- lifecycle and dependency semantics stabilize,
+- the file-first artifacts are mature enough to sync rather than speculate.
+
+The first SQLite release should remain:
+
+- per-project
+- file-synced
+- read-mostly
+- optimized for querying and reporting rather than replacing canonical file artifacts.
