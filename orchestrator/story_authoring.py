@@ -9,7 +9,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .authoring import PromptWriteSummary, write_prompts
-from .common import ensure_dir, repo_relative, validate_clip_id, validate_scene_id
+from .core.paths import ensure_dir, repo_relative
+from .core.validation import validate_clip_id, validate_scene_id
 from .lmstudio_client import LMStudioClient, LMStudioError
 from .prompt_package import PromptPackage, write_prompt_package
 from .scaffold import create_clip, create_project, create_scene

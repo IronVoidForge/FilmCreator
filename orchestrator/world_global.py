@@ -5,7 +5,8 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-from .common import ensure_dir, repo_relative
+from .core.json_io import read_json, write_json
+from .core.paths import ensure_dir, repo_relative
 from .scaffold import create_project
 from .story_authoring import StoryAnalysisSummary
 
@@ -101,12 +102,11 @@ def load_world_snapshot(*, project_slug: str, chapter_id: str) -> dict:
 def _load_json(path: Path, default: object) -> object:
     if not path.exists():
         return default
-    return json.loads(path.read_text(encoding="utf-8"))
+    return read_json(path)
 
 
 def _write_json(path: Path, data: object) -> None:
-    ensure_dir(path.parent)
-    path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+    write_json(path, data)
 
 
 def _load_chapter_registry(path: Path) -> dict:

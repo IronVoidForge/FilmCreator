@@ -7,7 +7,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable
 
-from .common import ROOT, read_json, repo_relative
+from .core.json_io import read_json
+from .core.paths import ROOT, repo_relative
 from .lmstudio_client import LMStudioCheckSummary, LMStudioClient, LMStudioError
 from .prompt_package import PromptPackage, parse_prompt_package, write_prompt_package
 from .scaffold import create_clip, create_scene

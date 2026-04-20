@@ -4,7 +4,7 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 
-from .common import ensure_dir, repo_relative
+from .core.paths import ensure_dir, repo_relative
 from .scaffold import create_project
 
 

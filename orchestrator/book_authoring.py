@@ -7,7 +7,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from .common import ensure_dir, read_json, repo_relative
+from .core.json_io import read_json, write_json
+from .core.paths import ensure_dir, repo_relative
 from .scaffold import create_project
 from .story_authoring import analyze_chapter, build_chapter_continuity
 from .world_global import (
@@ -723,5 +724,4 @@ def _read_manifest_chapter_paths(*, project_dir: Path, manifest_path: Path) -> l
 
 
 def _write_json(path: Path, data: object) -> None:
-    ensure_dir(path.parent)
-    path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+    write_json(path, data)
