@@ -347,8 +347,11 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
     active_clarification_requests: dict[str, tuple[str, str]] = {}
     usable_character_count = 0
     character_breakdown_dir = _chapter_character_breakdown_dir(project_dir=project_dir, chapter_id=chapter_source.chapter_id)
+    character_records = _require_packet_records(character_packet, record_type="character")
+    if not character_records:
+        character_records = _extract_character_records_from_index_markdown(character_index_markdown)
 
-    for index, raw_character in enumerate(_require_packet_records(character_packet, record_type="character"), start=1):
+    for index, raw_character in enumerate(character_records, start=1):
         try:
             asset_id = _normalize_asset_id(_require_record_field(raw_character, "asset_id"), fallback_prefix="character")
             markdown = _require_record_section(raw_character, "markdown")
@@ -1887,6 +1890,7 @@ _require_packet_records = authoring_packets.require_packet_records
 _require_single_packet_record = authoring_packets.require_single_packet_record
 _require_record_field = authoring_packets.require_record_field
 _require_record_section = authoring_packets.require_record_section
+_extract_character_records_from_index_markdown = authoring_packets.extract_character_records_from_index_markdown
 _validate_scene_decomposition = authoring_packets.validate_scene_decomposition
 _extract_clip_beat_refs = authoring_packets.extract_clip_beat_refs
 _scene_allows_single_clip = authoring_packets.scene_allows_single_clip

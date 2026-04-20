@@ -1,4 +1,0 @@
-- SC001: Powell's Departure
-- SC002: Carter Tracks the Trail
-- SC003: Discovery in the Cave
-- SC004: Aftermath/Exhaustion

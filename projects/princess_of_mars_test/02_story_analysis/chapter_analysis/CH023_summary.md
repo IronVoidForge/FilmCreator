@@ -1,7 +1,0 @@
-**Scene 1: Infiltration & Warning.** Carter enters Kantos Kan's room in Zodanga without detection. He informs Kan that Dejah Thoris has promised her hand to Sab Than. Kan reacts with dismay, declaring the alliance impossible for Helium lovers.
-**Scene 2: The Plan.** Kan pledges his sword to kill Sab Than for Dejah Thoris and Helium. Carter agrees to go to Helium while Kan attempts the assassination at the palace.
-**Scene 3: Roof Access.** Carter climbs the barracks building using ornamental ledges. He swings up to the roof using a leather strap with a hook, risking a fall from a thousand feet. He neutralizes the sentry by throwing him over the edge and binding him there.
-**Scene 4: Machine Retrieval & Takeoff.** Carter retrieves his machine and Kan's machine from the sheds. They take off together towards the palace route.
-**Scene 5: Pursuit & Crash.** Zodanga air scouts pursue them. Carter uses Helium gearing tricks to increase speed but is hit by a shot from a cruiser. The craft suffers concussion damage and plunges downward.
-**Scene 6: Navigation Loss.** After recovering near the ground, Carter's compass and speedometer are destroyed by the projectile fragment. He flies blindly for nearly six hours.
-**Scene 7: Wrong City Realization.** Morning finds him over a vast expanse of dead sea bottom. He approaches a city but realizes it is not Helium due to its lack of twin towers (scarlet and yellow). He must correct his course southeast.

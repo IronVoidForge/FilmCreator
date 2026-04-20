@@ -19,6 +19,7 @@ PACKET_VERSION = "1"
 PREFERRED_SCENE_COUNT = 3
 THIN_SCENE_MARKDOWN_THRESHOLD = 240
 HEADING_PATTERN = re.compile(r"(?m)^# ([^\r\n]+)\s*$")
+INDEX_ENTRY_PATTERN = re.compile(r"(?m)^## ([^\r\n]+)\s*$")
 CHAPTER_ID_PATTERN = re.compile(r"\b(CH\d{3})\b", re.IGNORECASE)
 IMPLICIT_MARKDOWN_FIELD_PATTERN = re.compile(r"^[a-z0-9_]+_markdown:\s*$", re.IGNORECASE)
 TOP_LEVEL_FIELD_PATTERN = re.compile(r"^[a-z0-9_]+:\s*$", re.IGNORECASE)
@@ -259,6 +260,46 @@ def require_record_section(record: PacketRecord, section_name: str, *, allow_emp
     return value
 
 
+def extract_character_records_from_index_markdown(markdown: str) -> list[PacketRecord]:
+    records: list[PacketRecord] = []
+    lines = markdown.splitlines()
+    current_title: str | None = None
+    current_lines: list[str] = []
+
+    def flush() -> None:
+        nonlocal current_title, current_lines
+        if current_title is None:
+            return
+        fields: dict[str, str] = {
+            "type": "character",
+            "asset_id": normalize_asset_id(current_title),
+        }
+        for line in current_lines:
+            key, value = parse_markdown_bullet_key_value(line)
+            if key:
+                fields[key] = value
+        if not fields.get("asset_id"):
+            fields["asset_id"] = normalize_asset_id(current_title)
+        sections = {
+            "markdown": "\n".join([f"## {current_title}", *current_lines]).strip(),
+        }
+        records.append(PacketRecord(fields=fields, sections=sections))
+        current_title = None
+        current_lines = []
+
+    for line in lines:
+        match = INDEX_ENTRY_PATTERN.fullmatch(line.strip())
+        if match:
+            flush()
+            current_title = match.group(1).strip()
+            current_lines = []
+            continue
+        if current_title is not None:
+            current_lines.append(line)
+    flush()
+    return records
+
+
 def validate_scene_decomposition(*, chapter_id: str, scene_records: list[PacketRecord]) -> list[str]:
     warnings: list[str] = []
     if not scene_records:
@@ -366,6 +407,18 @@ def parse_packet_bool(value: str) -> bool:
     if normalized in {"false", "no", "0"}:
         return False
     raise LMStudioError(f"Expected boolean packet field but got '{value}'.")
+
+
+def parse_markdown_bullet_key_value(line: str) -> tuple[str, str]:
+    stripped = line.strip()
+    if stripped.startswith(("- ", "* ")):
+        stripped = stripped[2:].strip()
+    stripped = re.sub(r"^\*\*(.+?)\*\*:\s*", r"\1: ", stripped)
+    if ":" not in stripped:
+        return "", ""
+    key, value = stripped.split(":", 1)
+    normalized_key = re.sub(r"[^a-z0-9]+", "_", key.strip().lower()).strip("_")
+    return normalized_key, value.strip()
 
 
 def parse_markdown_key_value_items(markdown: str, *, asset_id: str, asset_type: str) -> ParsedInputsMarkdown:

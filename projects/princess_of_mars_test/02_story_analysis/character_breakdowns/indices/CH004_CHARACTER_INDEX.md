@@ -1,25 +1,65 @@
-# Character Index - CH004
-## Carter (Human)
-- **Role:** Protagonist, Human visitor from Earth.
-- **Status:** Physically present in the scene.
-- **Notes:** Actions described include arriving at foot of mountains and jumping 150 feet ("sak"). No specific physical attributes provided in text.
+# Character Index - Chapter IV
 
-## Chieftain (Martian)
-- **Role:** Martian Leader, Head of the City.
-- **Status:** Physically present in the Audience Chamber.
-- **Notes:** General appearance described as naked with ornaments. Specific physical details for the Chieftain are not provided in the text summary.
+## John Carter
+**Asset ID:** john_carter  
+**Canonical Character ID:** john_carter  
+**Aliases:** none  
+**Is Fully Identified:** true  
+**Manual Description Required:** false  
+**Clarification Required:** false  
 
-## Tars Tarkas (Vice-Chieftain)
-- **Role:** Vice-Chieftain, Escort to Carter.
-- **Status:** Physically present, escorts Carter.
-- **Notes:** Identified by name and title. General appearance described as naked with ornaments. Specific physical details not provided in text summary.
+**Role:** Protagonist traveling from dead sea to Zodanga mountain city on Mars. Enters Zodanga where he is surrounded by intrigued Martians. Performs physical feats like jumping ("sak") and fighting which impress the Martians despite their unusual sense of humor regarding violence.
 
-## Sola (Young Female Martian)
-- **Role:** Young Female Martian, Companion to Carter.
-- **Status:** Physically present, sent by Tars Tarkas.
-- **Notes:** Height (~8 feet tall) and skin color (light olive-green) noted. Specific facial features or ornaments not detailed in text summary.
+---
 
-## Warrior (Unnamed Martian)
-- **Role:** Martian Combatant, Bully to Carter.
-- **Status:** Physically present during combat demonstration.
-- **Notes:** Referred to only as "a warrior". No specific physical details provided in text summary. Unnamed character requiring clarification.
+## Tars Tarkas
+**Asset ID:** tars_tarkas  
+**Canonical Character ID:** tars_tarkas  
+**Aliases:** vice-chieftain  
+**Is Fully Identified:** true  
+**Manual Description Required:** false  
+**Clarification Required:** false  
+
+**Role:** Martian vice-chieftain who brings Carter before the chief. Key figure in establishing Zodanga setting and cultural differences between Carter and Martians.
+
+---
+
+## The Chief
+**Asset ID:** martian_chief  
+**Canonical Character ID:** martian_chief  
+**Aliases:** none  
+**Is Fully Identified:** false  
+**Manual Description Required:** true  
+**Clarification Required:** true  
+
+**Role:** Leader of Martians, brought before whom Carter is taken. Not named in chapter material.
+
+---
+
+## Sola
+**Asset ID:** sola  
+**Canonical Character ID:** sola  
+**Aliases:** female Martian  
+**Is Fully Identified:** true  
+**Manual Description Required:** false  
+**Clarification Required:** false  
+
+**Role:** Female Martian who Carter meets in the chamber where he is taken. Key character establishing cultural differences between Carter and Martians.
+
+---
+
+## Ten-Legged Creature
+**Asset ID:** ten_legged_creature  
+**Canonical Character ID:** ten_legged_creature  
+**Aliases:** none  
+**Is Fully Identified:** false  
+**Manual Description Required:** true  
+**Clarification Required:** true  
+
+**Role:** Observed by Carter in the chamber. Not named or described with physical details in chapter material.
+
+---
+
+## Clarification Questions
+1. **For The Chief:** What are the physical appearance and distinguishing features of the Martian chief? Is there any known name or title beyond "chief"?  
+2. **For Ten-Legged Creature:** What is the species, size, coloration, and other physical characteristics of the ten-legged creature observed by Carter?
