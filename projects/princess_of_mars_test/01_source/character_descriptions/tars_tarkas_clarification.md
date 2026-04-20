@@ -4,10 +4,10 @@
 tars_tarkas
 
 # Why This Needs Clarification
-Needs identity clarification for consistent image generation.
+Needs visual identification for rendering.
 
 # Question
-What is Tars Tarkas's physical form and origin?
+What does Tars Tarkas look like physically, and what is his Martian attire?
 
 # Guidance
 - answer briefly and concretely

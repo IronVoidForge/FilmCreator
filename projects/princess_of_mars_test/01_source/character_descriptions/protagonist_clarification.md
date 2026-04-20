@@ -4,10 +4,10 @@
 protagonist
 
 # Why This Needs Clarification
-Needs identity clarification regarding physical form and origin.
+Needs visual identification for character design.
 
 # Question
-What is the protagonist's physical form and origin?
+What is the protagonist's physical appearance, age, and attire?
 
 # Guidance
 - answer briefly and concretely

@@ -4,10 +4,10 @@
 chieftain
 
 # Why This Needs Clarification
-Character is unnamed in source material; may already exist under another name or be too weakly identified for reliable visual continuity work.
+The character is not fully identified from this chapter alone.
 
 # Question
-Does the chieftain have a personal name not mentioned in this chapter, or should we document him as "Chieftain" only?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

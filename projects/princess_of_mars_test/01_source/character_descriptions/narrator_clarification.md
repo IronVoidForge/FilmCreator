@@ -4,10 +4,10 @@
 narrator
 
 # Why This Needs Clarification
-Needs identity clarification.
+Physical appearance and attire are unknown.
 
 # Question
-What is the narrator's physical form and origin?
+What is the narrator's physical build, facial features, and what is he wearing?
 
 # Guidance
 - answer briefly and concretely

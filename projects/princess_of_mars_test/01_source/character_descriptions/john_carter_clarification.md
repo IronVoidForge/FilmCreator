@@ -4,10 +4,10 @@
 john_carter
 
 # Why This Needs Clarification
-Needs identity clarification.
+The character is not fully identified from this chapter alone.
 
 # Question
-What is the protagonist's physical form and origin?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

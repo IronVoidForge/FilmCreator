@@ -4,10 +4,10 @@
 sola
 
 # Why This Needs Clarification
-Needs identity clarification for image generation.
+Needs visual identification for rendering.
 
 # Question
-What is Sola's physical form and origin?
+What are Sola's physical features and what is she wearing?
 
 # Guidance
 - answer briefly and concretely

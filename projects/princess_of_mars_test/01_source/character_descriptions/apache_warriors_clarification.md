@@ -4,10 +4,16 @@
 apache_warriors
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Potential existing identity matches detected:
+- james_k_powell (score 10; chapters: CH001; aliases: -)
+- john_carter (score 10; chapters: CH001; aliases: -)
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+This character may match one of the existing canonical identities above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical character?
+
+# Candidate Matches
+- james_k_powell (score 10; chapters: CH001; aliases: -)
+- john_carter (score 10; chapters: CH001; aliases: -)
 
 # Guidance
 - answer briefly and concretely
