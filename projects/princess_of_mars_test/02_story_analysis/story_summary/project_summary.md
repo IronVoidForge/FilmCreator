@@ -1,1 +1,0 @@
-This narrative follows a protagonist who experiences a mysterious paralysis and metamorphosis in the Arizona wilderness, leading to an encounter with celestial bodies and space travel. The story explores themes of fear, transformation, and the unknown. It features Native American characters and celestial bodies like Mars.
