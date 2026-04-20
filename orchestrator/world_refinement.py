@@ -769,7 +769,7 @@ class WorldIdentityRefiner:
                     entity_type=decision.entity_type,
                     reason=decision.reason,
                 )
-                self._replace_references_in_registry(
+                self._replace_cross_references(
                     registry,
                     old_id=subject_id,
                     new_id=target_id,
@@ -789,7 +789,7 @@ class WorldIdentityRefiner:
                 reason=decision.reason,
             )
             if changed:
-                self._replace_references_in_registry(
+                self._replace_cross_references(
                     registry,
                     old_id=subject_id,
                     new_id=new_id,
@@ -963,7 +963,7 @@ class WorldIdentityRefiner:
         registry[new_id] = entry
         return True
 
-    def _replace_references_in_registry(
+    def _replace_cross_references(
         self,
         registry: dict,
         *,
@@ -973,21 +973,15 @@ class WorldIdentityRefiner:
     ) -> None:
         for entry_id, entry in registry.items():
             if entity_type == "character":
-                resolved_to = entry.get("resolved_to")
-                if resolved_to == old_id:
+                if entry.get("resolved_to") == old_id:
                     entry["resolved_to"] = new_id
             else:
-                parent_id = entry.get("parent_environment_id")
-                if parent_id == old_id:
+                if entry.get("parent_environment_id") == old_id:
                     entry["parent_environment_id"] = new_id
                 children = entry.get("children", [])
                 updated_children = [new_id if child == old_id else child for child in children]
                 if updated_children != children:
                     entry["children"] = updated_children
-
-            if entry_id == new_id:
-                continue
-            self._append_alias_record(entry, alias=old_id)
 
     def _append_alias_record(self, entry: dict, *, alias: str) -> None:
         normalized = self._normalize_token(alias)

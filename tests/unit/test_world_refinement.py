@@ -90,11 +90,13 @@ def test_refine_world_applies_safe_merge_and_preserves_provenance(tmp_path, monk
 
     target = _seed_character_entry(canonical_id="woola", display_name="woola", chapter_id="CH004")
     subject = _seed_character_entry(canonical_id="woola_ch008", display_name="woola", chapter_id="CH008")
+    unrelated = _seed_character_entry(canonical_id="john_carter", display_name="john_carter", chapter_id="CH001")
     target["aliases"] = ["woola"]
     subject["aliases"] = ["woola_ch008"]
     character_registry = {
         "woola": target,
         "woola_ch008": subject,
+        "john_carter": unrelated,
     }
     _write_json(global_dir / "CHARACTER_REGISTRY_GLOBAL.json", character_registry)
     _write_json(global_dir / "ENVIRONMENT_REGISTRY_GLOBAL.json", {})
@@ -156,6 +158,7 @@ def test_refine_world_applies_safe_merge_and_preserves_provenance(tmp_path, monk
     assert "woola_ch008" in updated_registry["woola"]["aliases"]
     assert updated_registry["woola_ch008"]["status"] == "resolved_into"
     assert updated_registry["woola_ch008"]["resolved_to"] == "woola"
+    assert updated_registry["john_carter"]["aliases"] == ["john_carter"]
     assert updated_directory["woola"]["canonical_id"] == "woola"
     assert updated_directory["woola_ch008"]["resolved_to"] == "woola"
 
