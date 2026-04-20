@@ -70,6 +70,30 @@ def test_parse_packet_document_accepts_implicit_markdown_sections() -> None:
     assert packet.metadata["chapter_summary_markdown"].startswith("# Chapter Summary")
 
 
+def test_parse_packet_document_infers_missing_task_and_version_when_sections_are_present() -> None:
+    response = "\n".join(
+        [
+            "[[FILMCREATOR_PACKET]]",
+            "project_summary_markdown:",
+            "[[SECTION project_summary_markdown]]",
+            "# Project Summary",
+            "[[/SECTION]]",
+            "chapter_summary_markdown:",
+            "[[SECTION chapter_summary_markdown]]",
+            "# Chapter Summary",
+            "[[/SECTION]]",
+            "[[/FILMCREATOR_PACKET]]",
+        ]
+    )
+
+    packet = packet_parser.parse_packet_document(response, expected_task="chapter_summary")
+
+    assert packet.metadata["task"] == "chapter_summary"
+    assert packet.metadata["version"] == "1"
+    assert packet.sections["project_summary_markdown"] == "# Project Summary"
+    assert packet.sections["chapter_summary_markdown"] == "# Chapter Summary"
+
+
 def test_validate_scene_decomposition_warns_on_two_scenes_and_rejects_empty() -> None:
     scene_records = [
         packet_parser.PacketRecord(

@@ -51,11 +51,15 @@ def parse_packet_document(response: str, *, expected_task: str | None = None) ->
     packet = parse_packet_body(packet_body)
     if expected_task is not None:
         actual_task = packet.metadata.get("task", "")
-        if actual_task != expected_task:
+        if actual_task and actual_task != expected_task:
             raise LMStudioError(f"LM Studio returned packet task '{actual_task or '(missing)'}' but expected '{expected_task}'.")
+        if not actual_task:
+            packet.metadata["task"] = expected_task
     version = packet.metadata.get("version", "")
-    if version != PACKET_VERSION:
+    if version and version != PACKET_VERSION:
         raise LMStudioError(f"LM Studio returned packet version '{version or '(missing)'}' but expected '{PACKET_VERSION}'.")
+    if not version:
+        packet.metadata["version"] = PACKET_VERSION
     return packet
 
 
