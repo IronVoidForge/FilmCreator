@@ -490,3 +490,34 @@ def test_packet_parser_accepts_missing_record_closers() -> None:
     assert packet.records[0].fields["scene_id"] == "SC001"
     assert packet.records[0].sections["markdown"].startswith("# SC001")
     assert packet.records[1].fields["scene_id"] == "SC002"
+
+
+def test_scene_decomposition_validator_warns_on_two_scenes_and_rejects_empty() -> None:
+    scene_records = [
+        story_authoring_module._PacketRecord(
+            fields={"scene_id": "SC001"},
+            sections={
+                "markdown": "# SC001\nScene one setup.\n[[SECTION Scene Summary]]\nSetup only.\n[[/SECTION]]",
+            },
+        ),
+        story_authoring_module._PacketRecord(
+            fields={"scene_id": "SC002"},
+            sections={
+                "markdown": "# SC002\nScene two aftermath.\n[[SECTION Scene Summary]]\nAftermath.\n[[/SECTION]]",
+            },
+        ),
+    ]
+
+    warnings = story_authoring_module._validate_scene_decomposition(
+        chapter_id="CH013",
+        scene_records=scene_records,
+    )
+
+    assert any("preferred minimum is 3" in warning for warning in warnings)
+
+    try:
+        story_authoring_module._validate_scene_decomposition(chapter_id="CH013", scene_records=[])
+    except story_authoring_module.LMStudioError as exc:
+        assert "no usable scenes" in str(exc)
+    else:
+        raise AssertionError("Expected empty scene decomposition to fail validation.")

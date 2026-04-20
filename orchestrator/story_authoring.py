@@ -37,6 +37,8 @@ SECTION_END_TAG = "[[/SECTION]]"
 PACKET_VERSION = "1"
 MANUAL_PLACEHOLDER_MARKER = "<!-- FILMCREATOR_MANUAL_PLACEHOLDER -->"
 CLARIFICATION_PLACEHOLDER_MARKER = "<!-- FILMCREATOR_CHARACTER_CLARIFICATION -->"
+PREFERRED_SCENE_COUNT = 3
+THIN_SCENE_MARKDOWN_THRESHOLD = 240
 
 
 @dataclass(frozen=True)
@@ -1561,17 +1563,46 @@ def _require_record_section(record: _PacketRecord, section_name: str, *, allow_e
 
 def _validate_scene_decomposition(*, chapter_id: str, scene_records: list[_PacketRecord]) -> list[str]:
     warnings: list[str] = []
-    if len(scene_records) < 3:
-        raise LMStudioError(f"Scene decomposition for {chapter_id} returned only {len(scene_records)} scenes; minimum expected is 3.")
+    if not scene_records:
+        raise LMStudioError(f"Scene decomposition for {chapter_id} returned no usable scenes.")
+
+    if len(scene_records) < PREFERRED_SCENE_COUNT:
+        warnings.append(
+            f"Scene decomposition for {chapter_id} returned only {len(scene_records)} scenes; preferred minimum is {PREFERRED_SCENE_COUNT}."
+        )
+
     emotional_shifts: list[str] = []
+    thin_scene_count = 0
+    normalized_summaries: list[str] = []
     for record in scene_records:
-        normalized = _require_record_section(record, "markdown").lower()
+        markdown = _require_record_section(record, "markdown")
+        normalized = markdown.lower()
+        summary = _scene_record_summary_line(markdown)
+        normalized_summaries.append(re.sub(r"[^a-z0-9]+", " ", summary.lower()).strip())
+        if len(normalized.strip()) < THIN_SCENE_MARKDOWN_THRESHOLD:
+            thin_scene_count += 1
         if "aftermath" in normalized or "payoff" in normalized or "helplessness" in normalized or "reveal" in normalized:
             emotional_shifts.append("aftermath")
         if "battle" in normalized or "attack" in normalized or "destruction" in normalized or "boarding" in normalized:
             emotional_shifts.append("action")
         if "introduce" in normalized or "setup" in normalized or "return" in normalized or "arrival" in normalized:
             emotional_shifts.append("setup")
+
+    if thin_scene_count:
+        warnings.append(
+            f"Scene decomposition for {chapter_id} has {thin_scene_count} thin scene markdown block(s) below the preferred detail threshold."
+        )
+
+    if len(scene_records) <= 2 and len({summary for summary in normalized_summaries if summary}) <= 1:
+        warnings.append(
+            f"Scene decomposition for {chapter_id} may be repetitive: the scene summaries are too similar across the small scene set."
+        )
+
+    if len(scene_records) <= 2 and not {"action", "aftermath", "setup"} & set(emotional_shifts):
+        warnings.append(
+            f"Scene decomposition for {chapter_id} has only {len(scene_records)} scenes and no strong transition markers; review the split for possible collapse."
+        )
+
     if "action" in emotional_shifts and "aftermath" not in emotional_shifts:
         warnings.append("Scene decomposition may have collapsed aftermath/reveal material into action scenes; no aftermath-like scene language detected.")
     return warnings
