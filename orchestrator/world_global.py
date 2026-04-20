@@ -8,7 +8,6 @@ from pathlib import Path
 from .common import ensure_dir, repo_relative
 from .scaffold import create_project
 from .story_authoring import StoryAnalysisSummary
-from .world_registry import character_registry_path, environment_registry_path
 
 
 _GENERIC_CHARACTER_LABELS = {
@@ -68,6 +67,16 @@ def global_environment_registry_path(project_slug: str) -> Path:
     return global_world_dir(project_slug) / "ENVIRONMENT_REGISTRY_GLOBAL.json"
 
 
+def chapter_local_character_registry_path(*, project_slug: str, chapter_id: str) -> Path:
+    project_dir = create_project(project_slug)
+    return project_dir / "02_story_analysis" / "world" / "local" / f"{chapter_id}_CHARACTER_REGISTRY.json"
+
+
+def chapter_local_environment_registry_path(*, project_slug: str, chapter_id: str) -> Path:
+    project_dir = create_project(project_slug)
+    return project_dir / "02_story_analysis" / "world" / "local" / f"{chapter_id}_ENVIRONMENT_REGISTRY.json"
+
+
 def world_sequence_state_path(project_slug: str) -> Path:
     return global_world_dir(project_slug) / "WORLD_SEQUENCE_STATE.json"
 
@@ -97,6 +106,19 @@ def _write_json(path: Path, data: object) -> None:
 
 def _load_chapter_registry(path: Path) -> dict:
     return _load_json(path, {}) if path.exists() else {}
+
+
+def _assert_registry_is_chapter_local(*, registry: dict, chapter_id: str, entity_type: str) -> None:
+    expected_chapter_fragment = f"/chapters/{chapter_id}/"
+    expected_prefix_fragment = f"/{chapter_id}_"
+    for entry_id, entry in registry.items():
+        for source in entry.get("sources", []):
+            normalized = str(source).replace("\\", "/")
+            if expected_chapter_fragment in normalized or expected_prefix_fragment in normalized:
+                continue
+            raise ValueError(
+                f"{entity_type} registry entry '{entry_id}' contains non-local source '{source}' for chapter {chapter_id}."
+            )
 
 
 def _normalize_alias_token(value: str) -> str:
@@ -473,7 +495,13 @@ def validate_snapshot_provenance(snapshot: dict, *, chapter_id: str) -> None:
 
 
 def update_global_character_state(*, project_slug: str, analysis: StoryAnalysisSummary) -> tuple[str, str]:
-    local_registry = _load_chapter_registry(character_registry_path(project_slug))
+    local_registry = _load_chapter_registry(
+        chapter_local_character_registry_path(
+            project_slug=project_slug,
+            chapter_id=analysis.chapter_id,
+        )
+    )
+    _assert_registry_is_chapter_local(registry=local_registry, chapter_id=analysis.chapter_id, entity_type="Character")
     global_registry_path = global_character_registry_path(project_slug)
     directory_path = global_character_directory_path(project_slug)
     global_registry = _load_json(global_registry_path, {})
@@ -606,7 +634,13 @@ def update_global_character_state(*, project_slug: str, analysis: StoryAnalysisS
 
 
 def update_global_environment_state(*, project_slug: str, analysis: StoryAnalysisSummary) -> tuple[str, str]:
-    local_registry = _load_chapter_registry(environment_registry_path(project_slug))
+    local_registry = _load_chapter_registry(
+        chapter_local_environment_registry_path(
+            project_slug=project_slug,
+            chapter_id=analysis.chapter_id,
+        )
+    )
+    _assert_registry_is_chapter_local(registry=local_registry, chapter_id=analysis.chapter_id, entity_type="Environment")
     global_registry_path = global_environment_registry_path(project_slug)
     directory_path = global_environment_directory_path(project_slug)
     global_registry = _load_json(global_registry_path, {})
@@ -701,6 +735,14 @@ def write_chapter_world_snapshot(
         _project_environment_snapshot_entry(entry, chapter_cutoff=analysis.chapter_id)
         for _, entry in sorted(visible_environments.items())
     ]
+    if global_character_registry and not character_entries:
+        raise ValueError(
+            f"Snapshot {analysis.chapter_id} projected zero character entries even though the global character registry is non-empty."
+        )
+    if global_environment_registry and not environment_entries:
+        raise ValueError(
+            f"Snapshot {analysis.chapter_id} projected zero environment entries even though the global environment registry is non-empty."
+        )
 
     known_characters = [
         entry["canonical_id"]

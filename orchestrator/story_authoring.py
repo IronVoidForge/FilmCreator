@@ -512,11 +512,35 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
 
     character_breakdowns = sorted(path for path in character_breakdown_dir.glob("*.md") if path.name != "README.md")
     environment_breakdowns = sorted(path for path in environment_breakdown_dir.glob("*.md") if path.name != "README.md")
-    character_registry = resolve_character_registry(project_slug, character_breakdowns)
-    environment_registry = resolve_environment_registry(project_slug, environment_breakdowns)
+    _shared_character_registry = resolve_character_registry(project_slug, character_breakdowns)
+    _shared_environment_registry = resolve_environment_registry(project_slug, environment_breakdowns)
+    character_registry = resolve_character_registry(
+        project_slug,
+        character_breakdowns,
+        load_existing=False,
+        write_output=False,
+    )
+    environment_registry = resolve_environment_registry(
+        project_slug,
+        environment_breakdowns,
+        load_existing=False,
+        write_output=False,
+    )
     canonical_character_ids, provisional_character_ids = summarize_registry_status(character_registry)
     canonical_environment_ids, provisional_environment_ids = summarize_registry_status(environment_registry)
+    chapter_character_registry_path = _chapter_local_character_registry_path(
+        project_dir=project_dir,
+        chapter_id=chapter_source.chapter_id,
+    )
+    chapter_environment_registry_path = _chapter_local_environment_registry_path(
+        project_dir=project_dir,
+        chapter_id=chapter_source.chapter_id,
+    )
+    _write_text(chapter_character_registry_path, json.dumps(character_registry, indent=2))
+    _write_text(chapter_environment_registry_path, json.dumps(environment_registry, indent=2))
     world_registry_paths = [repo_relative(character_registry_path(project_slug)), repo_relative(environment_registry_path(project_slug))]
+    written_files.append(repo_relative(chapter_character_registry_path))
+    written_files.append(repo_relative(chapter_environment_registry_path))
     written_files.extend(world_registry_paths)
 
     key_artifacts: list[str] = [
@@ -525,6 +549,8 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
         repo_relative(character_index_path),
         repo_relative(environment_index_path),
         repo_relative(scene_index_path),
+        repo_relative(chapter_character_registry_path),
+        repo_relative(chapter_environment_registry_path),
         *world_registry_paths,
     ]
     _print_saved_artifacts("[authoring] Saved chapter analysis artifacts:", key_artifacts)
@@ -898,6 +924,14 @@ def _chapter_character_index_path(*, project_dir: Path, chapter_id: str) -> Path
 
 def _chapter_environment_index_path(*, project_dir: Path, chapter_id: str) -> Path:
     return project_dir / "02_story_analysis" / "environment_breakdowns" / "indices" / f"{chapter_id}_ENVIRONMENT_INDEX.md"
+
+
+def _chapter_local_character_registry_path(*, project_dir: Path, chapter_id: str) -> Path:
+    return project_dir / "02_story_analysis" / "world" / "local" / f"{chapter_id}_CHARACTER_REGISTRY.json"
+
+
+def _chapter_local_environment_registry_path(*, project_dir: Path, chapter_id: str) -> Path:
+    return project_dir / "02_story_analysis" / "world" / "local" / f"{chapter_id}_ENVIRONMENT_REGISTRY.json"
 
 
 def _chapter_scene_index_path(*, project_dir: Path, chapter_id: str) -> Path:

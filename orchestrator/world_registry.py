@@ -117,9 +117,15 @@ def _environment_resolution(asset_id: str) -> tuple[str, str, str, str, str | No
     return canonical_id, status, entity_kind, "Environment currently kept under extracted canonical id.", parent_environment_id
 
 
-def resolve_character_registry(project_slug: str, character_files: list[Path]) -> dict:
+def resolve_character_registry(
+    project_slug: str,
+    character_files: list[Path],
+    *,
+    load_existing: bool = True,
+    write_output: bool = True,
+) -> dict:
     path = character_registry_path(project_slug)
-    registry = _load_json(path)
+    registry = _load_json(path) if load_existing else {}
 
     for file in _iter_character_files(character_files):
         asset_id = file.stem
@@ -151,13 +157,20 @@ def resolve_character_registry(project_slug: str, character_files: list[Path]) -
             entry["sources"].append(rel_path)
         registry[canonical_id] = entry
 
-    _write_json(path, registry)
+    if write_output:
+        _write_json(path, registry)
     return registry
 
 
-def resolve_environment_registry(project_slug: str, env_files: list[Path]) -> dict:
+def resolve_environment_registry(
+    project_slug: str,
+    env_files: list[Path],
+    *,
+    load_existing: bool = True,
+    write_output: bool = True,
+) -> dict:
     path = environment_registry_path(project_slug)
-    registry = _load_json(path)
+    registry = _load_json(path) if load_existing else {}
 
     for file in _iter_environment_files(env_files):
         asset_id = file.stem
@@ -210,7 +223,8 @@ def resolve_environment_registry(project_slug: str, env_files: list[Path]) -> di
                 parent["children"].append(canonical_id)
             registry[parent_environment_id] = parent
 
-    _write_json(path, registry)
+    if write_output:
+        _write_json(path, registry)
     return registry
 
 

@@ -8,6 +8,8 @@ from .common import repo_relative
 from .scaffold import create_project
 from .story_authoring import analyze_chapter, build_chapter_continuity
 from .world_global import (
+    chapter_local_character_registry_path,
+    chapter_local_environment_registry_path,
     append_world_failure,
     load_world_snapshot,
     update_global_character_state,
@@ -102,6 +104,21 @@ def analyze_book(*, project_slug: str, continue_on_error: bool = False) -> BookA
                 global_environment_directory_relpath=env_dir_rel,
             )
             snapshot_data = load_world_snapshot(project_slug=project_slug, chapter_id=analysis.chapter_id)
+            if not snapshot_data.get("character_entries") and not snapshot_data.get("environment_entries"):
+                chapter_character_registry = chapter_local_character_registry_path(
+                    project_slug=project_slug,
+                    chapter_id=analysis.chapter_id,
+                )
+                chapter_environment_registry = chapter_local_environment_registry_path(
+                    project_slug=project_slug,
+                    chapter_id=analysis.chapter_id,
+                )
+                chapter_character_registry_data = json.loads(chapter_character_registry.read_text(encoding="utf-8")) if chapter_character_registry.exists() else {}
+                chapter_environment_registry_data = json.loads(chapter_environment_registry.read_text(encoding="utf-8")) if chapter_environment_registry.exists() else {}
+                if chapter_character_registry_data or chapter_environment_registry_data:
+                    raise ValueError(
+                        f"Chapter {analysis.chapter_id} produced an empty snapshot despite local registry artifacts existing."
+                    )
             continuity = build_chapter_continuity(
                 project_slug=project_slug,
                 analysis=analysis,
