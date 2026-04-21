@@ -611,22 +611,6 @@ class WorldIdentityRefiner:
         return bool(_MAIN_SUFFIX_RE.search(value))
 
     def _classify_candidate_with_llm(self, candidate: RefinementCandidate) -> RefinementDecision:
-        placeholder_target = self._special_placeholder_target(candidate)
-        if placeholder_target:
-            return RefinementDecision(
-                entity_type=candidate.entity_type,
-                subject_ids=candidate.subject_ids,
-                action="merge_into_existing",
-                target_id=placeholder_target,
-                new_canonical_id=None,
-                new_entity_kind=None,
-                reason=(
-                    "deterministic placeholder resolution: "
-                    f"{candidate.subject_ids} -> {placeholder_target}"
-                ),
-                confidence="high",
-                requires_human_review=False,
-            )
         client = self._get_client()
         system_prompt = (
             "You are FilmCreator's world-identity refinement classifier. "
@@ -660,15 +644,6 @@ class WorldIdentityRefiner:
                 return self._force_human_review(candidate, str(exc))
 
         raise LMStudioError(str(last_error) if last_error else "LM Studio returned an unusable response.")
-
-    def _special_placeholder_target(self, candidate: RefinementCandidate) -> str | None:
-        if candidate.entity_type != "character":
-            return None
-        subject_set = set(candidate.subject_ids)
-        for placeholder_id, target_id in _PLACEHOLDER_CHARACTER_TARGETS.items():
-            if placeholder_id in subject_set and target_id in subject_set:
-                return target_id
-        return None
 
     def _build_classification_prompt(self, candidate: RefinementCandidate, *, compact: bool) -> str:
         allowed_actions = [
