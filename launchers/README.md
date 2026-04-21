@@ -66,6 +66,8 @@ The launcher tree is now grouped by workflow so the root stays readable:
   - runs the multi-chapter analysis pass
 - `multi_chapter\run_full_book_to_prompt_pipeline.bat`
   - runs the full book-to-prompt pipeline from chapter summaries through prompt preparation
+- `multi_chapter\run_full_book_to_prompt_pipeline_resume.bat`
+  - retries failed book-analysis chapters and resumes from the last partial chapter before running the full pipeline
 - `multi_chapter\test_phase_b1_resolution.bat`
   - runs the Phase B1 identity and environment resolution helper
 
