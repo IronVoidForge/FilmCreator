@@ -4,10 +4,10 @@
 martian_warrior
 
 # Why This Needs Clarification
-Multiple unnamed warrior figures with group-level appearance but no established individual identities or detailed physical characteristics
+Needs visual identification for historical context.
 
 # Question
-What are the specific physical characteristics of individual Martian warriors (age range, build variations, hair color, skin tone details, distinguishing features)?
+What were the specific physical features of Sola's mother?
 
 # Guidance
 - answer briefly and concretely

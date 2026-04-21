@@ -1,0 +1,4 @@
+- [SC001](#sc001) - The Struggle and the Watch-thing's Sacrifice
+- [SC002](#sc002) - Earthly Combat: Defeating the Mate
+- [SC003](#sc003) - Recognition and Sola's Empathy
+- [SC004](#sc004) - The Final Stand for the Guardian

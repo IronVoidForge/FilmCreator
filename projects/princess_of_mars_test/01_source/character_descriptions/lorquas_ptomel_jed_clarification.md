@@ -4,10 +4,18 @@
 lorquas_ptomel_jed
 
 # Why This Needs Clarification
-Character exists in narrative but lacks stable identification through physical description. May already exist under another name or be too weakly identified for reliable rendering.
+Potential existing identity matches detected:
+- apache_warriors (score 10; chapters: CH002, CH001; aliases: -)
+- ape_man_1 (score 10; chapters: CH006; aliases: -)
+- ape_man_2 (score 10; chapters: CH006; aliases: -)
 
 # Question
-What are Lorquas Ptomel Jed's physical appearance details (height, build, hair color, eye color, distinctive features) and what specific chieftain responsibilities does he hold?
+This character may match one of the existing canonical identities above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical character?
+
+# Candidate Matches
+- apache_warriors (score 10; chapters: CH002, CH001; aliases: -)
+- ape_man_1 (score 10; chapters: CH006; aliases: -)
+- ape_man_2 (score 10; chapters: CH006; aliases: -)
 
 # Guidance
 - answer briefly and concretely

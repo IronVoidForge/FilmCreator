@@ -1,0 +1,3 @@
+- [SC001](#sc001) - Carter secures Dejah Thoris's safety and confronts Sarkoja.
+- [SC002](#sc002) - Transition to the ancient quarters and the revelation of Earth.
+- [SC003](#sc003) - The messenger arrives with a summons from Lorquas Ptomel.

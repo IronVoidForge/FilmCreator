@@ -4,10 +4,10 @@
 sarkoja
 
 # Why This Needs Clarification
-Physical appearance and specific Thark sub-type unknown.
+Needs visual identification.
 
 # Question
-What is Sarkoja's physical appearance and role within the palace?
+What does Sarkoja look like?
 
 # Guidance
 - answer briefly and concretely

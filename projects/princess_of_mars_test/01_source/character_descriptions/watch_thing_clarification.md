@@ -4,10 +4,13 @@
 watch_thing
 
 # Why This Needs Clarification
-Needs more detail for consistent rendering of the creature's skin/fur and limb structure.
+Needs detailed biological description for rendering.
 
 # Question
-What is the color, texture (fur vs scales), and specific number of legs for the watch-thing?
+What is the specific number of legs, the texture of its skin/fur, and its overall size relative to the protagonist?
+
+# Candidate Matches
+- watch_thing (score 176; chapters: CH006; aliases: -)
 
 # Guidance
 - answer briefly and concretely

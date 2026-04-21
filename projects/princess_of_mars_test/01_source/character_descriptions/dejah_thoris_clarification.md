@@ -4,10 +4,10 @@
 dejah_thoris
 
 # Why This Needs Clarification
-No visual data available for character design.
+Visual appearance and specific attire unknown.
 
 # Question
-What are the physical characteristics and attire of Dejah Thoris?
+What is the physical appearance of Dejah Thoris?
 
 # Guidance
 - answer briefly and concretely

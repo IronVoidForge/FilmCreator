@@ -4,10 +4,10 @@
 protagonist
 
 # Why This Needs Clarification
-Identity and physical features are unknown.
+Need to establish baseline physical traits before the Red Martian disguise is applied.
 
 # Question
-What is the protagonist's specific physical appearance and facial features?
+What are the protagonist's specific Earth-based physical characteristics (height, build, hair/eye color) prior to his disguise?
 
 # Guidance
 - answer briefly and concretely

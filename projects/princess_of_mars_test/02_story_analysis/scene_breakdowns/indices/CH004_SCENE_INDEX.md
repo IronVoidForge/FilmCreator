@@ -1,0 +1,5 @@
+* [SC001: Arrival at the Ancient City](#sc001)
+* [SC002: The Audience with the Chieftain](#sc002)
+* [SC003: The Demonstration of Strength and Sak](#sc003)
+* [SC004: Sustenance and Introduction to Sola](#sc004)
+* [SC005: The Sleeping Chamber and the Creature](#sc005)

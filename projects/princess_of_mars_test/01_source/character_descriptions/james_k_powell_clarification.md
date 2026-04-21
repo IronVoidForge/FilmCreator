@@ -4,10 +4,10 @@
 james_k_powell
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Needs visual identification to distinguish him from Carter.
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+What does Captain James K. Powell look like?
 
 # Guidance
 - answer briefly and concretely

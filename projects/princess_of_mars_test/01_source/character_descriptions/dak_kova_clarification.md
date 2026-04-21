@@ -4,10 +4,15 @@
 dak_kova
 
 # Why This Needs Clarification
-Physical appearance and stature are unknown.
+Needs visual identification to distinguish from general horde members.
 
 # Question
-What is Dak Kova's physical appearance and what does his Warhoon chieftain attire look like?
+What is Dak Kova's physical appearance and distinctive attire?
+
+# Candidate Matches
+- apache_warriors (score 10; chapters: CH002, CH001; aliases: -)
+- ape_man_1 (score 10; chapters: CH006; aliases: -)
+- ape_man_2 (score 10; chapters: CH006; aliases: -)
 
 # Guidance
 - answer briefly and concretely

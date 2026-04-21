@@ -1,0 +1,5 @@
+- [SC001](#sc001) - The Approach of the Gray Fleet
+- [SC002](#sc002) - The Battle for the City
+- [SC003](#sc003) - Scavenging and the Funeral Pyre
+- [SC004](#sc004) - The Melancholy Observer
+- [SC005](#sc005) - The Encounter with the Prisoner

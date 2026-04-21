@@ -1,0 +1,107 @@
+# CH019 Continuity Summary
+
+## Scene Order
+- CH019_SC001
+- CH019_SC002
+- CH019_SC003
+- CH019_SC004
+- CH019_SC005
+
+## Known Canonical Characters
+- ape_man_1
+- ape_man_2
+- bull_ape
+- bull_ape_mate
+- chieftain
+- colossal_ape_creature
+- dak_kova
+- dead_friend
+- dejah_thoris
+- female_prisoner
+- former_self
+- james_k_powell
+- john_carter
+- kantos_kan
+- lorquas_ptomel
+- lorquas_ptomel_jed
+- martian_leader
+- martian_mounts
+- martian_warrior
+- martian_warrior_leader
+- protagonist
+- red_martian_prisoner
+- red_prisoner
+- sarkoja
+- sola
+- tal_hajus
+- tars_tarkas
+- the_colossal_creature
+- the_prisoner
+- the_watch_dog
+- warhoon_horde
+- watch_thing
+- watchdog
+- young_martian
+
+## Unresolved / Provisional Characters
+- None
+
+## Known Canonical Environments
+- ancient_cliffside_cave
+- ancient_luxurious_quarters
+- ancient_martian_city_plaza
+- ancient_sea_bottom
+- ancient_tableland_city
+- apache_plateau_camp
+- arizona_gold_vein_claim
+- arizona_mountain_cave
+- arizona_mountain_cave_ledge
+- arizona_mountain_mining_site
+- audience_chamber
+- captive_chamber_murals
+- caravan_camp_landscape
+- carters_apartment_quarters
+- circular_moss_basin
+- city_of_thark
+- communal_sleeping_quarters
+- dead_city_interior
+- dead_city_plaza
+- dead_sea_bottom
+- dead_sea_bottom_incubator
+- deep_space_void
+- deserted_martian_city
+- eastern_martian_hills
+- grand_audience_chamber
+- green_martian_city
+- lorquas_ptomel_city_plazas
+- marble_audience_chamber
+- martian_arid_territory
+- martian_avenues
+- martian_city_outskirts
+- martian_city_plaza
+- martian_city_streets
+- martian_distant_hills
+- martian_interior_chamber
+- martian_night_expanse
+- martian_plaza
+- martian_plaza_city
+- martian_sleeping_chamber
+- martian_sleeping_quarters
+- martian_valley_battlefield
+- martian_valley_skyline
+- martian_wilderness_corridor
+- mossy_waste
+- remote_incubator_complex
+- rocky_gorge_canyon
+- thark_audience_chamber
+- thark_city_plaza
+- thark_plaza_quarters
+- thark_residential_quarters
+- thark_settlement_plaza
+- valley_overlook_exterior
+- vast_cosmic_void
+- warhoon_subterranean_amphitheater
+
+## Registry Artifacts
+- projects/princess_of_mars_test/02_story_analysis/world/CHARACTER_REGISTRY.json
+- projects/princess_of_mars_test/02_story_analysis/world/ENVIRONMENT_REGISTRY.json

@@ -4,10 +4,10 @@
 sola
 
 # Why This Needs Clarification
-Character is referenced but not visually described in this chapter.
+Physical appearance is unknown.
 
 # Question
-What are Sola's physical characteristics and appearance?
+What are Sola's physical characteristics and attire?
 
 # Guidance
 - answer briefly and concretely

@@ -4,10 +4,10 @@
 tars_tarkas
 
 # Why This Needs Clarification
-Character is referenced but not visually described in this chapter.
+Physical appearance and Thark morphology unknown.
 
 # Question
-What are Tars Tarkas's physical characteristics and appearance?
+What is the visual appearance of Tars Tarkas?
 
 # Guidance
 - answer briefly and concretely

@@ -4,10 +4,10 @@
 red_prisoner
 
 # Why This Needs Clarification
-Needs specific physical description of the "Red" Martian phenotype.
+Needs visual identification for a captive character.
 
 # Question
-What are the defining visual characteristics of a "Red" Martian woman?
+What are the specific physical characteristics of the Red prisoner (hair, skin color, etc.)?
 
 # Guidance
 - answer briefly and concretely

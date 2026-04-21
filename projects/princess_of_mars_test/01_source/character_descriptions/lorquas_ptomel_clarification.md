@@ -4,10 +4,10 @@
 lorquas_ptomel
 
 # Why This Needs Clarification
-Is this a specific named character or a generic Thark leader?
+Needs visual identity to distinguish from other Tharks.
 
 # Question
-Does the chieftain have a name or unique visual identifiers?
+What are the physical characteristics and distinguishing features of the Thark Chieftain?
 
 # Guidance
 - answer briefly and concretely

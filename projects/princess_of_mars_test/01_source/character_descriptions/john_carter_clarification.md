@@ -4,10 +4,10 @@
 john_carter
 
 # Why This Needs Clarification
-Physical appearance is not detailed in the summary.
+Needs specific physical traits for consistent character design across different time periods (elderly vs. younger soldier).
 
 # Question
-What are John Carter's specific physical traits and current attire?
+What are John Carter's specific facial features, hair color, and build during his younger years in Arizona?
 
 # Guidance
 - answer briefly and concretely

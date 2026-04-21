@@ -4,10 +4,10 @@
 tal_hajus
 
 # Why This Needs Clarification
-Identity and appearance are not established in this chapter.
+Needs visual identification.
 
 # Question
-What is Tal Hajus's physical appearance and relationship to the court?
+What are the physical characteristics of Tal Hajus?
 
 # Guidance
 - answer briefly and concretely

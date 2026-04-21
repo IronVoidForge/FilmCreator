@@ -4,10 +4,14 @@
 the_chieftain
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Potential existing identity matches detected:
+- chieftain (score 176; chapters: CH004; aliases: -) Example context: CH004 14-16: What struck me as most remarkable about this assemblage and the hall in which they were congregated was the fact that the creatures were entirely out of proportion to the desks, ch...
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+This character may match one of the existing canonical identities above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical character?
+
+# Candidate Matches
+- chieftain (score 176; chapters: CH004; aliases: -) Example context: CH004 14-16: What struck me as most remarkable about this assemblage and the hall in which they were congregated was the fact that the creatures were entirely out of proportion to the desks, ch...
 
 # Guidance
 - answer briefly and concretely

@@ -4,10 +4,18 @@
 dead_friend
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Potential existing identity matches detected:
+- apache_warriors (score 10; chapters: CH002, CH001; aliases: -) Example context: CH002 9-11: Several times I thought I heard faint sounds behind me as of somebody moving cautiously, but eventually even these ceased, and I was left to the contemplation of my position withou...
+- former_self (score 10; chapters: CH002; aliases: -) Example context: CH002 9-11: Several times I thought I heard faint sounds behind me as of somebody moving cautiously, but eventually even these ceased, and I was left to the contemplation of my position withou...
+- james_k_powell (score 10; chapters: CH001; aliases: -)
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+This character may match one of the existing canonical identities above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical character?
+
+# Candidate Matches
+- apache_warriors (score 10; chapters: CH002, CH001; aliases: -) Example context: CH002 9-11: Several times I thought I heard faint sounds behind me as of somebody moving cautiously, but eventually even these ceased, and I was left to the contemplation of my position withou...
+- former_self (score 10; chapters: CH002; aliases: -) Example context: CH002 9-11: Several times I thought I heard faint sounds behind me as of somebody moving cautiously, but eventually even these ceased, and I was left to the contemplation of my position withou...
+- james_k_powell (score 10; chapters: CH001; aliases: -)
 
 # Guidance
 - answer briefly and concretely

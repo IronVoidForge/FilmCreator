@@ -1,0 +1,6 @@
+- [SC001](#sc001) - The Gift of Arms
+- [SC002](#sc002) - Training and Social Observation
+- [SC003](#sc003) - Linguistic Mastery and Eavesdropping
+- [SC004](#sc004) - The Fate of the Red Prisoner
+- [SC005](#sc005) - Ideological Conflict: Sola vs. Sarkoja
+- [SC006](#sc006) - Resolution and Planning

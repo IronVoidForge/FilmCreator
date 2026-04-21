@@ -5,17 +5,17 @@ arizona_mountain_cave
 
 # Why This Needs Clarification
 Potential existing environment matches detected:
+- ancient_cliffside_cave (score 8; chapters: CH001; aliases: -)
 - apache_plateau_camp (score 8; chapters: CH001; aliases: -)
-- arizona_mountain_quartz_vein (score 8; chapters: CH001; aliases: -)
-- cliffside_cave_system (score 8; chapters: CH001; aliases: -)
+- arizona_gold_vein_claim (score 8; chapters: CH001; aliases: -)
 
 # Question
 This environment may match one of the existing canonical settings above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical environment?
 
 # Candidate Matches
+- ancient_cliffside_cave (score 8; chapters: CH001; aliases: -)
 - apache_plateau_camp (score 8; chapters: CH001; aliases: -)
-- arizona_mountain_quartz_vein (score 8; chapters: CH001; aliases: -)
-- cliffside_cave_system (score 8; chapters: CH001; aliases: -)
+- arizona_gold_vein_claim (score 8; chapters: CH001; aliases: -)
 
 # Guidance
 - answer briefly and concretely
