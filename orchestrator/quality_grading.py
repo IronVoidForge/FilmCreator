@@ -153,6 +153,7 @@ class QualityGradeRecord:
     artifact_path: str
     markdown_path: str = ""
     source_fingerprint: str = ""
+    quality_score_10: int = 0
     grade_band: str = "F"
     completeness_score: int = 0
     evidence_support_score: int = 0
@@ -179,6 +180,7 @@ class QualityGradeRecord:
             "artifact_path": self.artifact_path,
             "markdown_path": self.markdown_path,
             "source_fingerprint": self.source_fingerprint,
+            "quality_score_10": self.quality_score_10,
             "grade_band": self.grade_band,
             "completeness_score": self.completeness_score,
             "evidence_support_score": self.evidence_support_score,
@@ -204,6 +206,7 @@ class QualityFamilySummary:
     entity_type: str
     title: str
     count: int
+    average_quality_score_10: int
     average_completeness: int
     average_evidence_support: int
     average_consistency: int
@@ -218,6 +221,7 @@ class QualityFamilySummary:
             "entity_type": self.entity_type,
             "title": self.title,
             "count": self.count,
+            "average_quality_score_10": self.average_quality_score_10,
             "average_completeness": self.average_completeness,
             "average_evidence_support": self.average_evidence_support,
             "average_consistency": self.average_consistency,
@@ -385,6 +389,12 @@ def _band_from_score(score: int) -> str:
     return "F"
 
 
+def _score_10_from_score(score: int) -> int:
+    if score <= 0:
+        return 0
+    return max(1, min(10, round(score / 10)))
+
+
 def _grader_character(payload: dict[str, Any]) -> tuple[int, int, int, int, int, list[str]]:
     completeness = _weighted_presence(
         payload,
@@ -423,6 +433,50 @@ def _grader_character(payload: dict[str, Any]) -> tuple[int, int, int, int, int,
     if len(payload.get("unresolved_ambiguities", [])) > 0:
         notes.append(f"{len(payload.get('unresolved_ambiguities', []))} unresolved ambiguities")
     return completeness, evidence_support, consistency, prompt_readiness, inference_load, notes
+
+
+def _focus_fields_from_notes(family: str, notes: list[str]) -> list[str]:
+    mapping = {
+        "character_bible": {
+            "stable_visual_summary": "stable_visual_summary is unresolved",
+            "costume_signature": "costume_signature is thin",
+            "physical_traits": "physical_traits are thin",
+            "personality": "personality is thin",
+            "voice_notes": "voice_notes are thin",
+            "relationship_notes": "relationship_notes are thin",
+        },
+        "environment_bible": {
+            "visual_summary": "visual_summary is unresolved",
+            "layout_notes": "layout_notes are thin",
+            "lighting": "lighting is thin",
+            "mood": "mood is thin",
+        },
+        "scene_contract": {
+            "production_intent": "production_intent is thin",
+            "summary": "summary is thin",
+            "unresolved_questions": "unresolved questions present",
+        },
+        "shot_package": {
+            "environment": "environment resolution is thin",
+            "prompt_seed": "prompt_seed is thin",
+            "target_seconds": "target_seconds missing",
+        },
+        "descriptor": {
+            "generated_field_values": "generated fields remain thin",
+            "field_values": "descriptor is incomplete",
+        },
+        "prompt_package": {
+            "source_artifact_ids": "reference ids are missing",
+            "reference_asset_ids": "reference ids are missing",
+            "unknown": "placeholder language present",
+        },
+    }
+    field_map = mapping.get(family, {})
+    focus = []
+    for field_name, needle in field_map.items():
+        if any(needle in note for note in notes):
+            focus.append(field_name)
+    return sorted(dict.fromkeys(focus))
 
 
 def _grader_environment(payload: dict[str, Any]) -> tuple[int, int, int, int, int, list[str]]:
@@ -697,9 +751,10 @@ def _make_grade_record(
         evidence_refs = []
 
     average = round((completeness + evidence_support + consistency + prompt_readiness + (100 - inference_load)) / 5)
+    quality_score_10 = _score_10_from_score(average)
     grade_band = _band_from_score(average)
     locked = _has_locked_fields(payload) if isinstance(payload, dict) else False
-    rerun_recommended = not locked and grade_band in {"C", "D", "F"}
+    rerun_recommended = not locked and quality_score_10 <= 6
     review_status = "locked" if locked else ("rerun" if rerun_recommended else "ok")
     reason_bits = list(notes)
     if grade_band == "C":
@@ -717,6 +772,7 @@ def _make_grade_record(
         artifact_path=str(artifact_path),
         markdown_path=str(markdown_path) if markdown_path else "",
         source_fingerprint=fingerprint,
+        quality_score_10=quality_score_10,
         grade_band=grade_band,
         completeness_score=completeness,
         evidence_support_score=evidence_support,
@@ -746,21 +802,21 @@ def _render_grade_index_markdown(summary: QualityGradingSummary) -> str:
     lines.append("")
     lines.append("## Family Summary")
     lines.append("")
-    lines.append("| Family | Count | Avg Comp | Avg Evidence | Avg Consistency | Avg Prompt | Avg Inference | Reruns |")
-    lines.append("| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |")
+    lines.append("| Family | Count | Avg Score | Avg Comp | Avg Evidence | Avg Consistency | Avg Prompt | Avg Inference | Reruns |")
+    lines.append("| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |")
     for family in sorted(summary.family_summaries, key=lambda item: item.family):
         lines.append(
-            f"| {family.title} | {family.count} | {family.average_completeness} | {family.average_evidence_support} | {family.average_consistency} | {family.average_prompt_readiness} | {family.average_inference_load} | {family.rerun_count} |"
+            f"| {family.title} | {family.count} | {family.average_quality_score_10} | {family.average_completeness} | {family.average_evidence_support} | {family.average_consistency} | {family.average_prompt_readiness} | {family.average_inference_load} | {family.rerun_count} |"
         )
     lines.append("")
     lines.append("## Top Records")
     lines.append("")
-    lines.append("| Grade | Family | Artifact | Comp | Evidence | Prompt | Inference | Rerun | Notes |")
-    lines.append("| --- | --- | --- | ---: | ---: | ---: | ---: | --- | --- |")
-    for record in sorted(summary.records, key=lambda item: (item.grade_band, item.completeness_score, item.evidence_support_score), reverse=True):
+    lines.append("| Score | Grade | Family | Artifact | Comp | Evidence | Prompt | Inference | Rerun | Notes |")
+    lines.append("| ---: | --- | --- | --- | ---: | ---: | ---: | ---: | --- | --- |")
+    for record in sorted(summary.records, key=lambda item: (item.quality_score_10, item.completeness_score, item.evidence_support_score), reverse=True):
         notes = _summarize_notes(record.notes or record.rerun_reason)
         lines.append(
-            f"| {record.grade_band} | {record.family} | {record.artifact_id} | {record.completeness_score} | {record.evidence_support_score} | {record.prompt_readiness_score} | {record.inference_load_score} | {record.rerun_stage or '-'} | {notes or '-'} |"
+            f"| {record.quality_score_10} | {record.grade_band} | {record.family} | {record.artifact_id} | {record.completeness_score} | {record.evidence_support_score} | {record.prompt_readiness_score} | {record.inference_load_score} | {record.rerun_stage or '-'} | {notes or '-'} |"
         )
     return "\n".join(lines) + "\n"
 
@@ -795,6 +851,7 @@ def _family_summary(records: list[QualityGradeRecord], spec: _FamilySpec) -> Qua
             entity_type=spec.entity_type,
             title=spec.title,
             count=0,
+            average_quality_score_10=0,
             average_completeness=0,
             average_evidence_support=0,
             average_consistency=0,
@@ -811,6 +868,7 @@ def _family_summary(records: list[QualityGradeRecord], spec: _FamilySpec) -> Qua
         entity_type=spec.entity_type,
         title=spec.title,
         count=count,
+        average_quality_score_10=round(sum(record.quality_score_10 for record in family_records) / count),
         average_completeness=round(sum(record.completeness_score for record in family_records) / count),
         average_evidence_support=round(sum(record.evidence_support_score for record in family_records) / count),
         average_consistency=round(sum(record.consistency_score for record in family_records) / count),
@@ -823,7 +881,7 @@ def _family_summary(records: list[QualityGradeRecord], spec: _FamilySpec) -> Qua
 
 def _build_rerun_queue(records: list[QualityGradeRecord]) -> list[dict[str, Any]]:
     rerun_queue = []
-    for record in sorted([item for item in records if item.rerun_recommended], key=lambda item: (item.grade_band, item.completeness_score, item.evidence_support_score)):
+    for record in sorted([item for item in records if item.rerun_recommended], key=lambda item: (item.quality_score_10, item.completeness_score, item.evidence_support_score)):
         rerun_queue.append(
             {
                 "family": record.family,
@@ -832,6 +890,7 @@ def _build_rerun_queue(records: list[QualityGradeRecord]) -> list[dict[str, Any]
                 "display_name": record.display_name,
                 "artifact_path": record.artifact_path,
                 "markdown_path": record.markdown_path,
+                "quality_score_10": record.quality_score_10,
                 "grade_band": record.grade_band,
                 "completeness_score": record.completeness_score,
                 "evidence_support_score": record.evidence_support_score,
@@ -841,6 +900,7 @@ def _build_rerun_queue(records: list[QualityGradeRecord]) -> list[dict[str, Any]
                 "rerun_stage": record.rerun_stage,
                 "rerun_scope": record.rerun_scope,
                 "reason": record.rerun_reason,
+                "focus_fields": _focus_fields_from_notes(record.family, record.rerun_reason),
                 "dependency_refs": record.dependency_refs,
                 "lock_status": record.lock_status,
             }
