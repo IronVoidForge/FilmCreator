@@ -1,0 +1,46 @@
+# Environment Bible: thark_city_settlement
+
+- environment_id: `thark_city_settlement`
+- status: `canonical`
+- entity_kind: `city`
+- first_seen_chapter: `CH017`
+- last_seen_chapter: `CH024`
+
+## Identity
+
+- display_name: thark_city_settlement
+- environment_type: Primary Setting (Conflict/Infiltration/Political)
+- chapter_mentions: CH017, CH024
+
+## Visual Bible
+
+A massive, fortified Martian settlement serving as the seat of power for the Green Martian Tharks. The architecture is characterized by multi-story brutalist structures, including circular stone halls and raised combat platforms designed for martial governance and council gatherings.
+
+- layout_notes: Massive scale featuring large halls, elevated platforms, and high walls.
+- lighting: Harsh and oppressive; defined by deep shadows cast by high walls and looming fortifications of stone or metal.
+- mood: Intimidating, harsh, and oppressive.
+- recurring_elements: Multi-story brutalist architecture, Circular stone halls, Raised combat platforms, Stone or metal fortifications
+
+## Continuity
+
+- constraints: Must emphasize the height and strength of Thark inhabitants through scale., Design must support martial governance and political council functions.
+- unresolved_ambiguities: Specific material composition (exact ratio of stone vs. metal) is not defined beyond "stone or metal fortifications."
+
+## Evidence Summary
+
+- Environment currently kept under extracted canonical id.
+- Role: Primary (Conflict/Infiltration)
+- Lighting: Harsh, oppressive, and intimidating; characterized by the shadows of high walls and the looming presence of stone or metal fortifications.
+- Atmosphere: Harsh, oppressive, and intimidating; characterized by the shadows of high walls and the looming presence of stone or metal fortifications.
+- Scale: Massive scale; large halls and elevated platforms that emphasize the height and strength of the Thark inhabitants.
+- Prompt Phrases: fortified Martian city, circular stone halls, raised combat platforms, multi-story brutalist architecture, Thark settlement.
+- Role: Primary Setting (Political)
+- Geography: The seat of power for the Green Martian Tharks; a structured settlement designed for martial governance and council gatherings.
+
+## Metadata
+
+- artifact_id: `ENV_thark_city_settlement`
+- status: `generated`
+- source_fingerprint: `243064d72989fd22847f32ff1d8b2a00c1be18db`
+- created_at_utc: `2026-04-21T21:29:52.317246+00:00`
+- updated_at_utc: `2026-04-21T21:29:52.317246+00:00`
