@@ -3,7 +3,7 @@
 - chapter_title: `CHAPTER XXIII`
 - event_count: `21`
 - explicit_delivery_count: `15`
-- review_count: `12`
+- review_count: `13`
 
 ## Events
 
@@ -309,9 +309,10 @@
 - `CH023_DLG004`: speaker unresolved
 - `CH023_DLG007`: speaker unresolved, delivery inferred from structure only
 - `CH023_DLG008`: speaker unresolved
-- `CH023_DLG009`: speaker unresolved, delivery inferred from structure only
+- `CH023_DLG009`: delivery_inferred_from_structure_only, speaker unresolved
 - `CH023_DLG010`: speaker unresolved, delivery inferred from structure only
-- `CH023_DLG016`: speaker unresolved, delivery inferred from structure only
-- `CH023_DLG017`: speaker unresolved, delivery inferred from structure only
+- `CH023_DLG013`: delivery_inferred_from_structure_only
+- `CH023_DLG016`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH023_DLG017`: delivery_inferred_from_structure_only, speaker unresolved
 - `CH023_DLG018`: speaker unresolved
 - `CH023_DLG020`: speaker unresolved

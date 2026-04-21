@@ -3,7 +3,7 @@
 - chapter_title: `CHAPTER XIV`
 - event_count: `33`
 - explicit_delivery_count: `19`
-- review_count: `11`
+- review_count: `19`
 
 ## Events
 
@@ -472,13 +472,21 @@
 ## Review
 
 - `CH014_DLG008`: speaker unresolved
-- `CH014_DLG009`: speaker unresolved, delivery inferred from structure only
+- `CH014_DLG009`: delivery_inferred_from_structure_only, speaker unresolved
 - `CH014_DLG010`: speaker unresolved
-- `CH014_DLG016`: speaker unresolved, delivery inferred from structure only
+- `CH014_DLG011`: delivery_inferred_from_structure_only
+- `CH014_DLG012`: delivery_inferred_from_structure_only
+- `CH014_DLG013`: delivery_inferred_from_structure_only
+- `CH014_DLG015`: delivery_inferred_from_structure_only
+- `CH014_DLG016`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH014_DLG017`: delivery_inferred_from_structure_only
 - `CH014_DLG019`: speaker unresolved
 - `CH014_DLG020`: speaker unresolved
-- `CH014_DLG022`: speaker unresolved, delivery inferred from structure only
-- `CH014_DLG024`: speaker unresolved, delivery inferred from structure only
-- `CH014_DLG028`: speaker unresolved, delivery inferred from structure only
-- `CH014_DLG030`: speaker unresolved, delivery inferred from structure only
+- `CH014_DLG022`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH014_DLG023`: delivery_inferred_from_structure_only
+- `CH014_DLG024`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH014_DLG025`: delivery_inferred_from_structure_only
+- `CH014_DLG028`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH014_DLG030`: delivery_inferred_from_structure_only, speaker unresolved
 - `CH014_DLG032`: speaker unresolved
+- `CH014_DLG033`: delivery_inferred_from_structure_only

@@ -206,16 +206,16 @@
 ## Review
 
 - `CH020_DLG001`: speaker unresolved
-- `CH020_DLG002`: speaker unresolved, delivery inferred from structure only
-- `CH020_DLG003`: speaker unresolved, delivery inferred from structure only
-- `CH020_DLG004`: speaker unresolved, delivery inferred from structure only
+- `CH020_DLG002`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH020_DLG003`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH020_DLG004`: delivery_inferred_from_structure_only, speaker unresolved
 - `CH020_DLG005`: speaker unresolved
-- `CH020_DLG006`: speaker unresolved, delivery inferred from structure only
-- `CH020_DLG007`: speaker unresolved, delivery inferred from structure only
-- `CH020_DLG008`: speaker unresolved, delivery inferred from structure only
-- `CH020_DLG009`: speaker unresolved, delivery inferred from structure only
+- `CH020_DLG006`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH020_DLG007`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH020_DLG008`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH020_DLG009`: delivery_inferred_from_structure_only, speaker unresolved
 - `CH020_DLG010`: speaker unresolved
-- `CH020_DLG011`: speaker unresolved, delivery inferred from structure only
-- `CH020_DLG012`: speaker unresolved, delivery inferred from structure only
-- `CH020_DLG013`: speaker unresolved, delivery inferred from structure only
+- `CH020_DLG011`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH020_DLG012`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH020_DLG013`: delivery_inferred_from_structure_only, speaker unresolved
 - `CH020_DLG014`: speaker unresolved

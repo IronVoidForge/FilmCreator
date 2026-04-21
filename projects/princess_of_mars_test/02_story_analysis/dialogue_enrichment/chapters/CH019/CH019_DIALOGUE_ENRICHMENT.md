@@ -80,7 +80,7 @@
 ## Review
 
 - `CH019_DLG001`: speaker unresolved
-- `CH019_DLG002`: speaker unresolved, delivery inferred from structure only
-- `CH019_DLG003`: speaker unresolved, delivery inferred from structure only
-- `CH019_DLG004`: speaker unresolved, delivery inferred from structure only
-- `CH019_DLG005`: speaker unresolved, delivery inferred from structure only
+- `CH019_DLG002`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH019_DLG003`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH019_DLG004`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH019_DLG005`: delivery_inferred_from_structure_only, speaker unresolved

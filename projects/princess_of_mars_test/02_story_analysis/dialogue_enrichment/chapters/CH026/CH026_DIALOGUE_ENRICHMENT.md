@@ -3,7 +3,7 @@
 - chapter_title: `CHAPTER XXVI`
 - event_count: `10`
 - explicit_delivery_count: `2`
-- review_count: `5`
+- review_count: `7`
 
 ## Events
 
@@ -149,8 +149,10 @@
 
 ## Review
 
-- `CH026_DLG005`: speaker unresolved, delivery inferred from structure only
-- `CH026_DLG006`: speaker unresolved, delivery inferred from structure only
-- `CH026_DLG007`: speaker unresolved, delivery inferred from structure only
-- `CH026_DLG008`: speaker unresolved, delivery inferred from structure only
+- `CH026_DLG001`: delivery_inferred_from_structure_only
+- `CH026_DLG002`: delivery_inferred_from_structure_only
+- `CH026_DLG005`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH026_DLG006`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH026_DLG007`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH026_DLG008`: delivery_inferred_from_structure_only, speaker unresolved
 - `CH026_DLG009`: speaker unresolved

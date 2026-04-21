@@ -261,7 +261,7 @@
 
 ## Review
 
-- `CH027_DLG001`: speaker unresolved, delivery inferred from structure only
+- `CH027_DLG001`: delivery_inferred_from_structure_only, speaker unresolved
 - `CH027_DLG002`: speaker unresolved
 - `CH027_DLG003`: speaker unresolved, delivery inferred from structure only
 - `CH027_DLG005`: speaker unresolved, delivery inferred from structure only

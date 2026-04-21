@@ -3,7 +3,7 @@
 - chapter_title: `CHAPTER XIII`
 - event_count: `24`
 - explicit_delivery_count: `11`
-- review_count: `4`
+- review_count: `13`
 
 ## Events
 
@@ -345,7 +345,16 @@
 
 ## Review
 
-- `CH013_DLG004`: speaker unresolved, delivery inferred from structure only
-- `CH013_DLG009`: speaker unresolved, delivery inferred from structure only
+- `CH013_DLG004`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH013_DLG005`: delivery_inferred_from_structure_only
+- `CH013_DLG006`: delivery_inferred_from_structure_only
+- `CH013_DLG007`: delivery_inferred_from_structure_only
+- `CH013_DLG008`: delivery_inferred_from_structure_only
+- `CH013_DLG009`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH013_DLG013`: delivery_inferred_from_structure_only
+- `CH013_DLG015`: delivery_inferred_from_structure_only
 - `CH013_DLG016`: speaker unresolved
-- `CH013_DLG017`: speaker unresolved, delivery inferred from structure only
+- `CH013_DLG017`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH013_DLG019`: delivery_inferred_from_structure_only
+- `CH013_DLG021`: delivery_inferred_from_structure_only
+- `CH013_DLG022`: delivery_inferred_from_structure_only

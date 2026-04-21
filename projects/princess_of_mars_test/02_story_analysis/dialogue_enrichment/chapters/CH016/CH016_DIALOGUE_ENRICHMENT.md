@@ -3,7 +3,7 @@
 - chapter_title: `CHAPTER XVI`
 - event_count: `30`
 - explicit_delivery_count: `21`
-- review_count: `8`
+- review_count: `15`
 
 ## Events
 
@@ -431,9 +431,16 @@
 
 - `CH016_DLG001`: speaker unresolved
 - `CH016_DLG002`: speaker unresolved
+- `CH016_DLG003`: delivery_inferred_from_structure_only
+- `CH016_DLG004`: delivery_inferred_from_structure_only
 - `CH016_DLG005`: speaker unresolved
 - `CH016_DLG008`: speaker unresolved
-- `CH016_DLG009`: speaker unresolved, delivery inferred from structure only
+- `CH016_DLG009`: delivery_inferred_from_structure_only, speaker unresolved
 - `CH016_DLG012`: speaker unresolved
-- `CH016_DLG013`: speaker unresolved, delivery inferred from structure only
+- `CH016_DLG013`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH016_DLG014`: delivery_inferred_from_structure_only
+- `CH016_DLG022`: delivery_inferred_from_structure_only
+- `CH016_DLG024`: delivery_inferred_from_structure_only
+- `CH016_DLG025`: delivery_inferred_from_structure_only
+- `CH016_DLG029`: delivery_inferred_from_structure_only
 - `CH016_DLG030`: speaker unresolved

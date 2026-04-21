@@ -27,6 +27,15 @@ SPEECH_VERB_CUES = {
     "fearful": ("fear", "afraid", "danger", "death", "terrible", "panic"),
 }
 
+BOILERPLATE_CUES = (
+    "project gutenberg",
+    "literary archive foundation",
+    "electronic work",
+    "license",
+    "terms of this agreement",
+    "public domain",
+)
+
 
 @dataclass(frozen=True)
 class DialogueEnrichmentSummary:
@@ -79,8 +88,26 @@ def _contains_any(text: str, phrases: tuple[str, ...]) -> bool:
     return any(phrase in lowered for phrase in phrases)
 
 
+def _is_boilerplate_dialogue(dialogue_text: str, source_excerpt: str) -> bool:
+    combined = f"{dialogue_text} {source_excerpt}".lower()
+    return _contains_any(combined, BOILERPLATE_CUES)
+
+
 def _infer_delivery_profile(dialogue_text: str, source_excerpt: str, speaker_label: str) -> dict[str, Any]:
     combined = f"{dialogue_text} {source_excerpt} {speaker_label}".lower()
+
+    if _is_boilerplate_dialogue(dialogue_text, source_excerpt):
+        return {
+            "delivery_style": "",
+            "voice_quality": "",
+            "emotion": "",
+            "volume": "",
+            "tempo": "",
+            "delivery_note": "Excluded boilerplate text from dialogue delivery analysis.",
+            "confidence": 0.0,
+            "evidence_cues": ["boilerplate"],
+            "review_flags": ["excluded_boilerplate_text"],
+        }
 
     style = "replied"
     if _contains_any(combined, SPEECH_VERB_CUES["whispered"]):
@@ -200,13 +227,14 @@ def _render_event_lines(event: dict[str, Any]) -> list[str]:
         f"  - speaker: `{speaker.get('display_name') or speaker.get('speaker_label') or 'unresolved'}`",
         f"  - scene_id: `{event.get('scene_id', '') or 'unbound'}`",
         f"  - shot_id: `{event.get('shot_id', '') or 'unbound'}`",
-        f"  - delivery_style: `{delivery.get('delivery_style', 'unknown')}`",
-        f"  - voice_quality: `{delivery.get('voice_quality', 'unknown')}`",
-        f"  - emotion: `{delivery.get('emotion', 'unknown')}`",
-        f"  - volume: `{delivery.get('volume', 'unknown')}`",
-        f"  - tempo: `{delivery.get('tempo', 'unknown')}`",
-        f"  - confidence: `{delivery.get('confidence', 0.0)}`",
     ]
+    for key in ("delivery_style", "voice_quality", "emotion", "volume", "tempo"):
+        value = str(delivery.get(key, "")).strip()
+        if value:
+            lines.append(f"  - {key}: `{value}`")
+    confidence = delivery.get("confidence")
+    if confidence not in {None, "", 0, 0.0}:
+        lines.append(f"  - confidence: `{confidence}`")
     note = str(delivery.get("delivery_note", "")).strip()
     if note:
         lines.append(f"  - note: {note}")
@@ -329,10 +357,17 @@ def run_dialogue_enrichment(
             }
             enriched_events.append(enriched_event)
             total_events += 1
-            if delivery_profile["delivery_style"] != "replied":
+            if delivery_profile.get("delivery_style") and delivery_profile["delivery_style"] != "replied":
                 explicit_delivery_count += 1
-            if speaker_label.lower() == "unresolved" or "Project Gutenberg" in dialogue_text:
-                issues = ["speaker unresolved" if speaker_label.lower() == "unresolved" else "false-positive boilerplate dialogue"]
+            if delivery_profile.get("review_flags"):
+                issues = list(delivery_profile["review_flags"])
+                if speaker_label.lower() == "unresolved":
+                    issues.append("speaker unresolved")
+                review_item = {"dialogue_id": dialogue_id, "issues": issues}
+                chapter_review_items.append(review_item)
+                review_queue.append(review_item)
+            elif speaker_label.lower() == "unresolved":
+                issues = ["speaker unresolved"]
                 if delivery_profile["delivery_style"] == "replied":
                     issues.append("delivery inferred from structure only")
                 review_item = {"dialogue_id": dialogue_id, "issues": issues}

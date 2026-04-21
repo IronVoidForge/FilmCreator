@@ -3,7 +3,7 @@
 - chapter_title: `CHAPTER XV`
 - event_count: `19`
 - explicit_delivery_count: `12`
-- review_count: `2`
+- review_count: `7`
 
 ## Events
 
@@ -275,5 +275,10 @@
 
 ## Review
 
+- `CH015_DLG002`: delivery_inferred_from_structure_only
+- `CH015_DLG003`: delivery_inferred_from_structure_only
+- `CH015_DLG012`: delivery_inferred_from_structure_only
+- `CH015_DLG013`: delivery_inferred_from_structure_only
 - `CH015_DLG015`: speaker unresolved
+- `CH015_DLG017`: delivery_inferred_from_structure_only
 - `CH015_DLG019`: speaker unresolved

@@ -3,7 +3,7 @@
 - chapter_title: `CHAPTER IX`
 - event_count: `9`
 - explicit_delivery_count: `8`
-- review_count: `3`
+- review_count: `4`
 
 ## Events
 
@@ -136,5 +136,6 @@
 ## Review
 
 - `CH009_DLG002`: speaker unresolved
+- `CH009_DLG003`: delivery_inferred_from_structure_only
 - `CH009_DLG006`: speaker unresolved
 - `CH009_DLG007`: speaker unresolved

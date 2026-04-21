@@ -3,7 +3,7 @@
 - chapter_title: `CHAPTER XII`
 - event_count: `11`
 - explicit_delivery_count: `9`
-- review_count: `5`
+- review_count: `6`
 
 ## Events
 
@@ -164,7 +164,8 @@
 ## Review
 
 - `CH012_DLG001`: speaker unresolved
+- `CH012_DLG002`: delivery_inferred_from_structure_only
 - `CH012_DLG003`: speaker unresolved
 - `CH012_DLG004`: speaker unresolved
-- `CH012_DLG009`: speaker unresolved, delivery inferred from structure only
+- `CH012_DLG009`: delivery_inferred_from_structure_only, speaker unresolved
 - `CH012_DLG010`: speaker unresolved

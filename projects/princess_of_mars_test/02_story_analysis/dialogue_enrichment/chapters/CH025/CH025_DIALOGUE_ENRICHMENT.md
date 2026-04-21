@@ -163,5 +163,5 @@
 
 ## Review
 
-- `CH025_DLG003`: speaker unresolved, delivery inferred from structure only
-- `CH025_DLG008`: speaker unresolved, delivery inferred from structure only
+- `CH025_DLG003`: delivery_inferred_from_structure_only, speaker unresolved
+- `CH025_DLG008`: delivery_inferred_from_structure_only, speaker unresolved

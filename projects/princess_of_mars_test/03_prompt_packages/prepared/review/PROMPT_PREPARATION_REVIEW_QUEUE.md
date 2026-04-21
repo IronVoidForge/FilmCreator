@@ -1,3 +1,192 @@
 # Prompt Preparation Review Queue
 
-- No review items.
+- `apache_warriors`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `bull_ape_mate`
+  - Character status=resolved_into entity_kind=individual.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `green_martian_warriors`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `green_martians`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `guardsmen`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `lorquas_ptomel_jed`
+  - Character status=resolved_into entity_kind=individual.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `martian_warrior_leader`
+  - Character status=resolved_into entity_kind=individual.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `martian_warriors`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `ptor_family`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `tardos_mors`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `the_chieftain`
+  - Character status=resolved_into entity_kind=individual.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `ancient_martian_city_plaza`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `ancient_tableland_city`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `arizona_mountain_cave_ledge`
+  - Environment status=resolved_into entity_kind=environment.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `caravan_camp_southern_hills`
+  - Environment status=canonical entity_kind=landform.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `city_of_helium_procession_route`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `city_of_thark`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `dead_city_interior`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `dead_city_plaza`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `deserted_martian_city`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `eastern_martian_hills`
+  - Environment status=canonical entity_kind=landform.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `green_martian_city`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `heliumite_flagship_interior`
+  - Environment status=canonical entity_kind=sub_location.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `lorquas_ptomel_city_plazas`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `martian_city_outskirts`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `martian_city_plaza`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `martian_city_streets`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `martian_distant_hills`
+  - Environment status=canonical entity_kind=landform.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `martian_interior_chamber`
+  - Environment status=canonical entity_kind=sub_location.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `martian_plaza`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `martian_plaza_city`
+  - Environment status=resolved_into entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `mossy_waste_expanse`
+  - Environment status=resolved_into entity_kind=environment.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `thark_city_plaza`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `thark_city_quarters`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `thark_city_settlement`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `thark_plaza_quarters`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `thark_settlement_plaza`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `warhoon_city`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `zodanga_central_plaza`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `zodanga_cityscape`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `zodanga_palace_interior`
+  - Environment status=canonical entity_kind=sub_location.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `zodanga_walled_city`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `CH012_SC001_SH001_primary_keyframe_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH012_SC001_SH001_alternate_angle_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH012_SC001_SH001_zoom_variant_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH012_SC001_SH001_consistency_repair_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH012_SC001_SH002_primary_keyframe_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH012_SC001_SH002_alternate_angle_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH012_SC001_SH002_zoom_variant_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH012_SC001_SH002_consistency_repair_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH012_SC001_SH003_primary_keyframe_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH012_SC001_SH003_alternate_angle_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH012_SC001_SH003_zoom_variant_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH012_SC001_SH003_consistency_repair_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH012_SC001_SH004_primary_keyframe_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH012_SC001_SH004_alternate_angle_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH012_SC001_SH004_zoom_variant_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH012_SC001_SH004_consistency_repair_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH012_SC001_SH005_primary_keyframe_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH012_SC001_SH005_alternate_angle_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH012_SC001_SH005_zoom_variant_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH012_SC001_SH005_consistency_repair_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH014_SC003_SH001_primary_keyframe_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH014_SC003_SH001_alternate_angle_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH014_SC003_SH001_zoom_variant_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH014_SC003_SH001_consistency_repair_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH014_SC003_SH002_primary_keyframe_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH014_SC003_SH002_alternate_angle_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH014_SC003_SH002_zoom_variant_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH014_SC003_SH002_consistency_repair_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH014_SC003_SH003_primary_keyframe_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH014_SC003_SH003_alternate_angle_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH014_SC003_SH003_zoom_variant_prompt`
+  - Environment descriptor is unresolved or thin.
+- `CH014_SC003_SH003_consistency_repair_prompt`
+  - Environment descriptor is unresolved or thin.
