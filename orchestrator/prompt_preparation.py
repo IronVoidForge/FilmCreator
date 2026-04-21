@@ -809,7 +809,7 @@ def _write_review_queue(path: Path, queue: list[dict[str, Any]], *, title: str) 
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def run_prompt_preparation(project_slug: str, *, force: bool = False) -> PromptPreparationSummary:
+def run_prompt_preparation(project_slug: str, *, force: bool = False, limit: int | None = None) -> PromptPreparationSummary:
     project_dir = create_project(project_slug)
     root = project_dir / PROMPT_PREP_ROOT
     review_root = root / "review"
@@ -832,9 +832,13 @@ def run_prompt_preparation(project_slug: str, *, force: bool = False) -> PromptP
     total_entries = 0
     synthesized_count = 0
     reused_count = 0
+    processed_packages = 0
+    stop_processing = False
 
     # Character reference bundles.
     for bible in sorted(character_bibles.values(), key=lambda item: str(item.get("character_id", ""))):
+        if stop_processing:
+            break
         total_entries += 1
         if not _is_film_facing_character_entry(bible, bible):
             review_queue.append(
@@ -852,6 +856,8 @@ def run_prompt_preparation(project_slug: str, *, force: bool = False) -> PromptP
             )
             continue
         for variant in CHARACTER_VARIANTS:
+            if stop_processing:
+                break
             descriptor = character_descriptors.get(str(bible.get("character_id", "")).strip().lower())
             package, package_path, sources = _package_for_character(project_dir=project_dir, bible=bible, descriptor=descriptor, variant=variant)
             if _write_prompt_package_if_changed(package_path, package, force=force):
@@ -859,6 +865,7 @@ def run_prompt_preparation(project_slug: str, *, force: bool = False) -> PromptP
                 written_files.append(str(package_path))
             else:
                 reused_count += 1
+            processed_packages += 1
             index_records.append(
                 {
                     "prompt_id": package.prompt_id,
@@ -871,9 +878,14 @@ def run_prompt_preparation(project_slug: str, *, force: bool = False) -> PromptP
                     "source_fingerprint": _fingerprint(sources),
                 }
             )
+            if limit is not None and processed_packages >= limit:
+                stop_processing = True
+                break
 
     # Environment reference bundles.
     for bible in sorted(environment_bibles.values(), key=lambda item: str(item.get("environment_id", ""))):
+        if stop_processing:
+            break
         total_entries += 1
         if not _is_film_facing_environment_entry(bible, bible):
             review_queue.append(
@@ -891,6 +903,8 @@ def run_prompt_preparation(project_slug: str, *, force: bool = False) -> PromptP
             )
             continue
         for variant in ENVIRONMENT_VARIANTS:
+            if stop_processing:
+                break
             descriptor = environment_descriptors.get(str(bible.get("environment_id", "")).strip().lower())
             package, package_path, sources = _package_for_environment(project_dir=project_dir, bible=bible, descriptor=descriptor, variant=variant)
             if _write_prompt_package_if_changed(package_path, package, force=force):
@@ -898,6 +912,7 @@ def run_prompt_preparation(project_slug: str, *, force: bool = False) -> PromptP
                 written_files.append(str(package_path))
             else:
                 reused_count += 1
+            processed_packages += 1
             index_records.append(
                 {
                     "prompt_id": package.prompt_id,
@@ -910,9 +925,14 @@ def run_prompt_preparation(project_slug: str, *, force: bool = False) -> PromptP
                     "source_fingerprint": _fingerprint(sources),
                 }
             )
+            if limit is not None and processed_packages >= limit:
+                stop_processing = True
+                break
 
     # Shot prompt bundles.
     for shot in shot_packages:
+        if stop_processing:
+            break
         total_entries += 1
         scene_id = str(shot.get("scene_id", "")).strip().upper()
         shot_id = str(shot.get("shot_id", "")).strip().upper()
@@ -922,6 +942,8 @@ def run_prompt_preparation(project_slug: str, *, force: bool = False) -> PromptP
         scene_descriptor = scene_descriptors.get(scene_id.lower())
         shot_descriptor = shot_descriptors.get(f"{scene_id.lower()}_{shot_id.lower()}")
         for variant in SHOT_VARIANTS:
+            if stop_processing:
+                break
             package, package_path, sources, review_notes = _package_for_shot(
                 project_dir=project_dir,
                 scene_contract=scene_contract,
@@ -939,6 +961,7 @@ def run_prompt_preparation(project_slug: str, *, force: bool = False) -> PromptP
                 written_files.append(str(package_path))
             else:
                 reused_count += 1
+            processed_packages += 1
             index_records.append(
                 {
                     "prompt_id": package.prompt_id,
@@ -962,6 +985,11 @@ def run_prompt_preparation(project_slug: str, *, force: bool = False) -> PromptP
                         "issues": review_notes,
                     }
                 )
+            if limit is not None and processed_packages >= limit:
+                stop_processing = True
+                break
+        if stop_processing:
+            break
 
     index_path = root / "PROMPT_PREPARATION_INDEX.md"
     index_json = root / "PROMPT_PREPARATION_INDEX.json"

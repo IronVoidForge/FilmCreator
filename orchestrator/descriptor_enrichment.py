@@ -2076,6 +2076,7 @@ def run_descriptor_enrichment(
     *,
     use_llm: bool = True,
     force: bool = False,
+    limit: int | None = None,
 ) -> DescriptorEnrichmentSummary:
     project_dir = create_project(project_slug)
     output_root = _descriptor_root(project_dir)
@@ -2102,6 +2103,8 @@ def run_descriptor_enrichment(
     warnings: list[str] = []
     synthesized = 0
     reused = 0
+    processed = 0
+    stop_processing = False
 
     def maybe_reuse(base_path: Path, fp: str, builder: Callable[[], DescriptorRecord], *, force: bool) -> DescriptorRecord:
         nonlocal reused, synthesized
@@ -2125,6 +2128,8 @@ def run_descriptor_enrichment(
         return record
 
     for char_id, bible in character_bibles.items():
+        if stop_processing:
+            break
         source_entry = character_bibles.get(char_id, bible)
         fp = _fingerprint({"bible": bible, "scene_mentions": character_scene_map.get(char_id, []), "shot_mentions": character_shot_map.get(char_id, []), "kind": "character"})
         base_path = output_root / "characters" / char_id
@@ -2143,11 +2148,16 @@ def run_descriptor_enrichment(
 
         record = maybe_reuse(base_path, fp, build_character, force=force)
         records.append(record)
+        processed += 1
+        if limit is not None and processed >= limit:
+            stop_processing = True
         if record.status != "canonical" or record.review_flags:
             review_records.append(record)
             review_queue.append({"descriptor_id": record.descriptor_id, "entity_type": record.entity_type, "issues": _descriptor_review_issues(record)})
 
     for env_id, bible in environment_bibles.items():
+        if stop_processing:
+            break
         source_entry = environment_bibles.get(env_id, bible)
         fp = _fingerprint({"bible": bible, "scene_mentions": environment_scene_map.get(env_id, []), "shot_mentions": environment_shot_map.get(env_id, []), "kind": "environment"})
         base_path = output_root / "environments" / env_id
@@ -2166,11 +2176,16 @@ def run_descriptor_enrichment(
 
         record = maybe_reuse(base_path, fp, build_environment, force=force)
         records.append(record)
+        processed += 1
+        if limit is not None and processed >= limit:
+            stop_processing = True
         if record.status != "canonical" or record.review_flags:
             review_records.append(record)
             review_queue.append({"descriptor_id": record.descriptor_id, "entity_type": record.entity_type, "issues": _descriptor_review_issues(record)})
 
     for scene_id, contract in scene_contracts.items():
+        if stop_processing:
+            break
         fp = _fingerprint({"scene": contract, "kind": "scene"})
         base_path = output_root / "scenes" / scene_id
         shot_mentions = [f"{str(shot.get('scene_id', '')).strip().upper()}/{str(shot.get('shot_id', '')).strip().upper()}" for shot in shot_packages if str(shot.get("scene_id", "")).strip().upper() == scene_id and str(shot.get("shot_id", "")).strip()]
@@ -2180,11 +2195,16 @@ def run_descriptor_enrichment(
 
         record = maybe_reuse(base_path, fp, build_scene, force=force)
         records.append(record)
+        processed += 1
+        if limit is not None and processed >= limit:
+            stop_processing = True
         if record.review_flags:
             review_records.append(record)
             review_queue.append({"descriptor_id": record.descriptor_id, "entity_type": record.entity_type, "issues": _descriptor_review_issues(record)})
 
     for shot in shot_packages:
+        if stop_processing:
+            break
         scene_id = str(shot.get("scene_id", "")).strip().upper()
         shot_id = str(shot.get("shot_id", "")).strip().upper()
         if not scene_id or not shot_id:
@@ -2199,11 +2219,18 @@ def run_descriptor_enrichment(
 
         record = maybe_reuse(base_path, fp, build_shot, force=force)
         records.append(record)
+        processed += 1
+        if limit is not None and processed >= limit:
+            stop_processing = True
         if record.review_flags:
             review_records.append(record)
             review_queue.append({"descriptor_id": record.descriptor_id, "entity_type": record.entity_type, "issues": _descriptor_review_issues(record)})
+        if stop_processing:
+            break
 
     for item_id, candidate in key_item_candidates.items():
+        if stop_processing:
+            break
         fp = _fingerprint({"candidate": candidate, "kind": "key_item"})
         base_path = output_root / "key_items" / item_id
 
@@ -2212,6 +2239,9 @@ def run_descriptor_enrichment(
 
         record = maybe_reuse(base_path, fp, build_item, force=force)
         records.append(record)
+        processed += 1
+        if limit is not None and processed >= limit:
+            stop_processing = True
         if record.review_flags:
             review_records.append(record)
             review_queue.append({"descriptor_id": record.descriptor_id, "entity_type": record.entity_type, "issues": _descriptor_review_issues(record)})

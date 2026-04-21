@@ -38,5 +38,5 @@
 - artifact_id: `DESC_CHAR_assistant_keeper_assassin`
 - status: `generated`
 - source_fingerprint: `caa56b65adca7fce4ada784e33e7908cd5313f68`
-- created_at_utc: `2026-04-21T05:22:13.151263+00:00`
-- updated_at_utc: `2026-04-21T05:22:13.151263+00:00`
+- created_at_utc: `2026-04-21T05:32:24.670417+00:00`
+- updated_at_utc: `2026-04-21T05:32:24.670417+00:00`

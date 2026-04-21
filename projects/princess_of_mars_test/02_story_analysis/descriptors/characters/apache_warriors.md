@@ -38,5 +38,5 @@
 - artifact_id: `DESC_CHAR_apache_warriors`
 - status: `generated`
 - source_fingerprint: `6e216db394b61d358e159c4f0ae60227a1553e25`
-- created_at_utc: `2026-04-21T05:22:13.065724+00:00`
-- updated_at_utc: `2026-04-21T05:22:13.065724+00:00`
+- created_at_utc: `2026-04-21T05:31:58.763098+00:00`
+- updated_at_utc: `2026-04-21T05:31:58.763098+00:00`

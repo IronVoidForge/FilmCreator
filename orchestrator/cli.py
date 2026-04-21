@@ -44,11 +44,13 @@ def build_parser() -> argparse.ArgumentParser:
     pp = subparsers.add_parser("synthesize-prompt-preparation")
     pp.add_argument("project_slug")
     pp.add_argument("--force", action="store_true")
+    pp.add_argument("--limit", type=int, default=None)
 
     de = subparsers.add_parser("synthesize-descriptor-enrichment")
     de.add_argument("project_slug")
     de.add_argument("--no-llm", action="store_true")
     de.add_argument("--force", action="store_true")
+    de.add_argument("--limit", type=int, default=None)
 
     ce = subparsers.add_parser("clear-descriptor-artifacts")
     ce.add_argument("project_slug")
@@ -109,6 +111,7 @@ def main() -> None:
         summary = run_prompt_preparation(
             args.project_slug,
             force=args.force,
+            limit=args.limit,
         )
         print(json.dumps(summary.to_dict(), indent=2))
 
@@ -117,6 +120,7 @@ def main() -> None:
             args.project_slug,
             use_llm=not args.no_llm,
             force=args.force,
+            limit=args.limit,
         )
         print(json.dumps(summary.to_dict(), indent=2))
 

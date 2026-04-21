@@ -38,5 +38,5 @@
 - artifact_id: `DESC_CHAR_invisible_host`
 - status: `generated`
 - source_fingerprint: `19facdf30a145add9a65a5b771d777a5c329735e`
-- created_at_utc: `2026-04-21T05:22:13.417420+00:00`
-- updated_at_utc: `2026-04-21T05:22:13.417420+00:00`
+- created_at_utc: `2026-04-21T05:33:13.413306+00:00`
+- updated_at_utc: `2026-04-21T05:33:13.413306+00:00`

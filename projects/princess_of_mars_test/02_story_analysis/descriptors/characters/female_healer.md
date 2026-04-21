@@ -38,5 +38,5 @@
 - artifact_id: `DESC_CHAR_female_healer`
 - status: `generated`
 - source_fingerprint: `2a0f72e7788fa8855a58950f4dc21da690b331db`
-- created_at_utc: `2026-04-21T05:22:13.361371+00:00`
-- updated_at_utc: `2026-04-21T05:22:13.361371+00:00`
+- created_at_utc: `2026-04-21T05:33:00.173465+00:00`
+- updated_at_utc: `2026-04-21T05:33:00.173962+00:00`

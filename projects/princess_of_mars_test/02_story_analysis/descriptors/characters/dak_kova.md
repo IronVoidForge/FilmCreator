@@ -39,5 +39,5 @@
 - artifact_id: `DESC_CHAR_dak_kova`
 - status: `generated`
 - source_fingerprint: `f48b61923c0c4407e7abb60027dfaff994f1610c`
-- created_at_utc: `2026-04-21T05:22:13.220789+00:00`
-- updated_at_utc: `2026-04-21T05:22:13.220789+00:00`
+- created_at_utc: `2026-04-21T05:32:38.752987+00:00`
+- updated_at_utc: `2026-04-21T05:32:38.752987+00:00`

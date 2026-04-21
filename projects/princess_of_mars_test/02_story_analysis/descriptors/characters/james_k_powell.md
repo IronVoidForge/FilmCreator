@@ -38,5 +38,5 @@
 - artifact_id: `DESC_CHAR_james_k_powell`
 - status: `generated`
 - source_fingerprint: `d03a4e01cf28deca32853c6c684bafe829cd9744`
-- created_at_utc: `2026-04-21T05:22:13.444940+00:00`
-- updated_at_utc: `2026-04-21T05:22:13.444940+00:00`
+- created_at_utc: `2026-04-21T05:33:20.233555+00:00`
+- updated_at_utc: `2026-04-21T05:33:20.233555+00:00`

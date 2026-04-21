@@ -38,5 +38,5 @@
 - artifact_id: `DESC_CHAR_green_martian_women_group`
 - status: `generated`
 - source_fingerprint: `128c8f3eac719e344d9470f45736b8bcb76841fd`
-- created_at_utc: `2026-04-21T05:22:13.389390+00:00`
-- updated_at_utc: `2026-04-21T05:22:13.389390+00:00`
+- created_at_utc: `2026-04-21T05:33:07.258459+00:00`
+- updated_at_utc: `2026-04-21T05:33:07.258459+00:00`
