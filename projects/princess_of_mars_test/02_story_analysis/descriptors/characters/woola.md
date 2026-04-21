@@ -5,10 +5,8 @@
 - status: `canonical`
 - entity_type: `character`
 
-## Structured Fields
+## Supported Fields
 
-- age_range: unknown
-- build: unknown
 - chapter_mentions:
   - CH008
   - CH010
@@ -17,23 +15,13 @@
   - CH021
   - CH024
   - CH027
-- costume_materials: unknown
-- costume_signature: unknown
 - entity_kind: individual
-- expression_tendency: unknown
-- eye_color: unknown
-- face_shape: unknown
-- facial_hair: unknown
-- hair_color: unknown
-- hair_style: unknown
-- height: unknown
 - physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
-- posture: unknown
 - role: individual
-- sex: unknown
 - silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
-- skin_tone: unknown
-- voice_or_presence_notes: unknown
+
+## Generated Fields
+
 
 ## Coverage
 
@@ -62,5 +50,5 @@
 - artifact_id: `DESC_CHAR_woola`
 - status: `generated`
 - source_fingerprint: `df43d87e81afc25bd237274d3b00b7a58da4802f`
-- created_at_utc: `2026-04-21T04:35:12.983790+00:00`
-- updated_at_utc: `2026-04-21T04:35:12.983790+00:00`
+- created_at_utc: `2026-04-21T05:20:51.777985+00:00`
+- updated_at_utc: `2026-04-21T05:20:51.777985+00:00`

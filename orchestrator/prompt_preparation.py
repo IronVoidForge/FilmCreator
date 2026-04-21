@@ -137,15 +137,20 @@ def _looks_like_metadata_summary(text: str) -> bool:
 
 def _record_descriptor_phrases(record: dict[str, Any], keys: list[str], *, strip_terms: list[str] | None = None) -> list[str]:
     parts: list[str] = []
+    supported_values = record.get("supported_field_values", {}) if isinstance(record.get("supported_field_values"), dict) else {}
+    generated_values = record.get("generated_field_values", {}) if isinstance(record.get("generated_field_values"), dict) else {}
     field_values = record.get("field_values", {}) if isinstance(record.get("field_values"), dict) else {}
-    for key in keys:
-        value = field_values.get(key)
+
+    def collect_values(source: dict[str, Any], key: str) -> list[Any]:
+        value = source.get(key)
         if isinstance(value, list):
-            values = [item for item in value if isinstance(item, str) and item.strip()]
-        elif isinstance(value, str) and value.strip():
-            values = [value.strip()]
-        else:
-            continue
+            return [item for item in value if isinstance(item, str) and item.strip()]
+        if isinstance(value, str) and value.strip():
+            return [value.strip()]
+        return []
+
+    for key in keys:
+        values = collect_values(supported_values, key) or collect_values(generated_values, key) or collect_values(field_values, key)
         for item in values:
             cleaned = _strip_terms(item, strip_terms or [])
             if cleaned and cleaned.strip().lower() not in {"unknown", "none", "(none)", "n/a"} and not _looks_like_metadata_summary(cleaned):

@@ -5,7 +5,10 @@
 - status: `canonical`
 - entity_type: `key_item`
 
-## Structured Fields
+## Supported Fields
+
+
+## Generated Fields
 
 - chapter_mentions:
   - CH001
@@ -18,19 +21,11 @@
   - CH024
   - CH025
   - CH027
-- color_palette: unknown
-- condition_or_wear: unknown
-- holder_or_user_notes: unknown
 - iconic_features:
   - Detail composition centered on the key physical action or prop inside Arizona hills/valleys.
   - le visual object or gesture. Detail composition centered on the key physical action or prop inside Arizona hills/valleys. Cast: john_carter. Enviro
   - Detail composition centered on the key physical action or prop inside Escalation and the decision to risk freedom..
 - item_kind: key
-- materials: unknown
-- ornamentation: unknown
-- scale: unknown
-- shape: unknown
-- symbolic_role: unknown
 
 ## Coverage
 
@@ -75,5 +70,5 @@
 - artifact_id: `DESC_ITEM_the_key`
 - status: `generated`
 - source_fingerprint: `e5f3d0c3ecebe2d626b9ff4aa9c6cec211713986`
-- created_at_utc: `2026-04-21T04:27:13.478046+00:00`
-- updated_at_utc: `2026-04-21T04:27:13.478046+00:00`
+- created_at_utc: `2026-04-21T05:20:54.065600+00:00`
+- updated_at_utc: `2026-04-21T05:20:54.065600+00:00`

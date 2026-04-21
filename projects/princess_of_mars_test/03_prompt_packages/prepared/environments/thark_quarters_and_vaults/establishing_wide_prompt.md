@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, wide establishing reference with clear horizon, depth, and geography, Human-scale (or Thark-scale) rooms, recurring anchors include marble floors used for tactical planning and heavy stone doors/vault entrances., dim stone interior, marble floor chambers, clear spatial layout, reada...
+Film environment reference sheet, wide establishing reference with clear horizon, depth, and geography, Human-scale (or Thark-scale) rooms, recurring anchors include marble floors used for tactical planning and heavy stone doors/vault entrances., Dimly lit, claustrophobic, and secretive. The atmosphere shifts from t...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

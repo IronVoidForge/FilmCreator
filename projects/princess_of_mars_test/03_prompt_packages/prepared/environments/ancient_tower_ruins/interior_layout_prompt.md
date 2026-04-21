@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, clear interior layout with readable pathways, structure, and scale, A secluded, ancient stone tower used for concealment, isolated from the main Thark settlements., ancient stone tower, secluded Martian ruins, clear spatial layout, readable anchors and depth cues, no characters, no...
+Film environment reference sheet, clear interior layout with readable pathways, structure, and scale, A secluded, ancient stone tower used for concealment, isolated from the main Thark settlements., Unknown, ancient stone tower, clear spatial layout, readable anchors and depth cues, no characters, no text, no waterm...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

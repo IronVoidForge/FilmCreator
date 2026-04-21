@@ -5,22 +5,15 @@
 - status: `canonical`
 - entity_type: `environment`
 
-## Structured Fields
+## Supported Fields
 
-- architecture: unknown
 - chapter_mentions:
   - CH006
-- depth_cues: unknown
 - environment_type: Primary setting (combat arena).
-- foreground_midground_background: unknown
-- geography: unknown
 - layout: No layout notes available.
-- lighting: Unknown
-- materials: unknown
-- mood: Unknown
-- pathways: unknown
-- scale: unknown
-- weather_or_atmosphere: unknown
+
+## Generated Fields
+
 
 ## Coverage
 
@@ -47,5 +40,5 @@
 - artifact_id: `DESC_ENV_martian_interior_chamber`
 - status: `generated`
 - source_fingerprint: `52f40db991050c191f0f106cd00915f9d63f4a19`
-- created_at_utc: `2026-04-21T04:40:40.640471+00:00`
-- updated_at_utc: `2026-04-21T04:40:40.640471+00:00`
+- created_at_utc: `2026-04-21T05:20:52.567205+00:00`
+- updated_at_utc: `2026-04-21T05:20:52.567205+00:00`

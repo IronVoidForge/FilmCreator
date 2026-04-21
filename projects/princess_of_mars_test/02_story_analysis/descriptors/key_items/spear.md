@@ -5,23 +5,18 @@
 - status: `canonical`
 - entity_type: `key_item`
 
-## Structured Fields
+## Supported Fields
+
+
+## Generated Fields
 
 - chapter_mentions:
   - CH003
-- color_palette: unknown
-- condition_or_wear: unknown
-- holder_or_user_notes: unknown
 - iconic_features:
   - protagonist. The leader nearly kills him with a forty-foot spear, but the protagonist uses the low gravity to perform a massive thirty-foot leap
   - The leader nearly kills him with a forty-foot spear, but the protagonist uses the low gravity to perform a massive thirty-foot leap
   - Medium 2: The leader nearly kills him with a forty-foot spear...
 - item_kind: spear
-- materials: unknown
-- ornamentation: unknown
-- scale: unknown
-- shape: unknown
-- symbolic_role: unknown
 
 ## Coverage
 
@@ -45,5 +40,5 @@
 - artifact_id: `DESC_ITEM_spear`
 - status: `generated`
 - source_fingerprint: `70e0b35159f54e84e139994ade8975f8a2d6015e`
-- created_at_utc: `2026-04-21T04:27:13.472528+00:00`
-- updated_at_utc: `2026-04-21T04:27:13.472528+00:00`
+- created_at_utc: `2026-04-21T05:20:54.060083+00:00`
+- updated_at_utc: `2026-04-21T05:20:54.060083+00:00`

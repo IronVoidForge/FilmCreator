@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, wide establishing reference with clear horizon, depth, and geography, A vast, undulating expanse of a dried Martian seabed, characterized by thick layers of organic growth., moss-covered sea bed, ancient dried ocean floor, undulating organic textures, clear spatial layout, readable...
+Film environment reference sheet, wide establishing reference with clear horizon, depth, and geography, A vast, undulating expanse of a dried Martian seabed, characterized by thick layers of organic growth., Unknown, moss-covered sea bed, ancient dried ocean floor, clear spatial layout, readable anchors and depth cu...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, medium spatial view showing foreground, midground, and background relationships, Vertical scale defined by balcony heights and the drop to the ground below, recurring anchors include stone railings and palace exterior walls., high palace balconies, dark exterior grounds, clear spati...
+Film environment reference sheet, medium spatial view showing foreground, midground, and background relationships, Vertical scale defined by balcony heights and the drop to the ground below, recurring anchors include stone railings and palace exterior walls., Transitioning from twilight to darkness, shadows are deep...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

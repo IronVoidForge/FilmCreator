@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. unknown. Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: . Environment: described environment with stable spatial continuity. Keep continuity exact across costume, silhouette, lighting, and spatial relationships.. Avoid proper nouns in the prompt body unless text...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Stage with clear narrative intent, stable cast blocking, and continuity-aware coverage.. Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: . Environment: described environment with stable spatial continuity. Keep continuity exact across costume, silhouette, lighting...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

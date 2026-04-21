@@ -5,9 +5,8 @@
 - status: `canonical`
 - entity_type: `environment`
 
-## Structured Fields
+## Supported Fields
 
-- architecture: unknown
 - camera_friendly_landmarks:
   - martial palace hall
   - council chamber
@@ -16,23 +15,19 @@
   - ceremonial combat arena.
 - chapter_mentions:
   - CH024
-- depth_cues: unknown
 - environment_type: Primary / Political Setting
-- foreground_midground_background: unknown
-- geography: unknown
 - layout: Formal assembly hall within the Thark stronghold; structured for council proceedings and judicial duels.
 - lighting: Somber, high-tension, authoritative; heavy atmosphere of political peril and judgment.
-- materials: unknown
 - mood: Somber, high-tension, authoritative; heavy atmosphere of political peril and judgment.
-- pathways: unknown
 - recurring_anchors:
   - martial palace hall
   - council chamber
   - stone assembly room
   - tense political setting
   - ceremonial combat arena.
-- scale: unknown
-- weather_or_atmosphere: unknown
+
+## Generated Fields
+
 
 ## Coverage
 
@@ -60,5 +55,5 @@
 - artifact_id: `DESC_ENV_thark_palace_council_chamber`
 - status: `generated`
 - source_fingerprint: `558145eeb091f9529d72d187073931b3997e71a9`
-- created_at_utc: `2026-04-21T04:43:38.429345+00:00`
-- updated_at_utc: `2026-04-21T04:43:38.429345+00:00`
+- created_at_utc: `2026-04-21T05:20:53.048176+00:00`
+- updated_at_utc: `2026-04-21T05:20:53.048176+00:00`

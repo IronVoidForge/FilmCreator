@@ -5,9 +5,8 @@
 - status: `canonical`
 - entity_type: `environment`
 
-## Structured Fields
+## Supported Fields
 
-- architecture: unknown
 - camera_friendly_landmarks:
   - Desolate Martian wasteland
   - rugged red terrain
@@ -17,15 +16,8 @@
   - arid Barsoomian landscape.
 - chapter_mentions:
   - CH014
-- depth_cues: unknown
 - environment_type: Transit Setting
-- foreground_midground_background: unknown
-- geography: unknown
 - layout: Rugged, desolate terrain characteristic of the Barsoomian wilderness; uneven ground suitable for heavy chariot movement and marching parties.
-- lighting: Unknown
-- materials: unknown
-- mood: Unknown
-- pathways: unknown
 - recurring_anchors:
   - Desolate Martian wasteland
   - rugged red terrain
@@ -33,8 +25,9 @@
   - dusty horizon
   - wide-angle wilderness
   - arid Barsoomian landscape.
-- scale: unknown
-- weather_or_atmosphere: unknown
+
+## Generated Fields
+
 
 ## Coverage
 
@@ -62,5 +55,5 @@
 - artifact_id: `DESC_ENV_martian_march_route`
 - status: `generated`
 - source_fingerprint: `d3bae7d85210066e18fb731d1f00eadcbe524d74`
-- created_at_utc: `2026-04-21T04:40:49.400674+00:00`
-- updated_at_utc: `2026-04-21T04:40:49.400674+00:00`
+- created_at_utc: `2026-04-21T05:20:52.585228+00:00`
+- updated_at_utc: `2026-04-21T05:20:52.585228+00:00`

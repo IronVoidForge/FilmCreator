@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, medium spatial view showing foreground, midground, and background relationships, Rugged, remote Arizona hills and mountains, characterized by rocky outcrops and exposed mineral deposits., remote Arizona mountains, gold-bearing quartz vein, clear spatial layout, readable anchors and...
+Film environment reference sheet, medium spatial view showing foreground, midground, and background relationships, Rugged, remote Arizona hills and mountains, characterized by rocky outcrops and exposed mineral deposits., Harsh, high-desert sunlight, dry, dusty air, clear spatial layout, readable anchors and depth c...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

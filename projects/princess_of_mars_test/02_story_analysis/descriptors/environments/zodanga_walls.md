@@ -5,9 +5,8 @@
 - status: `canonical`
 - entity_type: `environment`
 
-## Structured Fields
+## Supported Fields
 
-- architecture: unknown
 - camera_friendly_landmarks:
   - colossal city walls
   - carborundum fortifications
@@ -16,23 +15,19 @@
   - steep scaling surfaces.
 - chapter_mentions:
   - CH024
-- depth_cues: unknown
 - environment_type: Transit / Infiltration Setting
-- foreground_midground_background: unknown
-- geography: unknown
 - layout: Massive, imposing defensive fortifications; carborundum-based construction.
 - lighting: Nighttime setting; shadows and moonlight; high-stakes stealth atmosphere.
-- materials: unknown
 - mood: Nighttime setting; shadows and moonlight; high-stakes stealth atmosphere.
-- pathways: unknown
 - recurring_anchors:
   - colossal city walls
   - carborundum fortifications
   - night infiltration
   - massive defensive ramparts
   - steep scaling surfaces.
-- scale: unknown
-- weather_or_atmosphere: unknown
+
+## Generated Fields
+
 
 ## Coverage
 
@@ -60,5 +55,5 @@
 - artifact_id: `DESC_ENV_zodanga_walls`
 - status: `generated`
 - source_fingerprint: `8c6352f41607f6aa675588b5527ef7d752da58ff`
-- created_at_utc: `2026-04-21T04:45:59.002851+00:00`
-- updated_at_utc: `2026-04-21T04:45:59.002851+00:00`
+- created_at_utc: `2026-04-21T05:20:53.352427+00:00`
+- updated_at_utc: `2026-04-21T05:20:53.352427+00:00`

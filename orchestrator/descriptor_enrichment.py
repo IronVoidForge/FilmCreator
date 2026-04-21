@@ -2,7 +2,10 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
+import shutil
+import stat
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
@@ -24,8 +27,8 @@ SCENE_ENTITY_TYPE = "scene"
 SHOT_ENTITY_TYPE = "shot"
 KEY_ITEM_ENTITY_TYPE = "key_item"
 
-EXPLICIT_ORIGINS = {"bible", "contract", "shot_package", "scene_contract", "registry_entry", "book_index"}
-INFERRED_ORIGINS = {"llm", "heuristic", "book_window"}
+EXPLICIT_ORIGINS = {"bible", "contract", "shot_package", "scene_contract", "registry_entry", "book_index", "llm_supported"}
+INFERRED_ORIGINS = {"llm", "llm_generated", "heuristic", "book_window"}
 
 CHARACTER_FIELD_ORDER = [
     "sex",
@@ -191,10 +194,20 @@ class DescriptorRecord:
     entity_type: str
     status: str = "canonical"
     field_values: dict[str, Any] = field(default_factory=dict)
+    supported_field_values: dict[str, Any] = field(default_factory=dict)
+    generated_field_values: dict[str, Any] = field(default_factory=dict)
     field_states: dict[str, str] = field(default_factory=dict)
+    supported_field_states: dict[str, str] = field(default_factory=dict)
+    generated_field_states: dict[str, str] = field(default_factory=dict)
     field_sources: dict[str, list[dict[str, Any]]] = field(default_factory=dict)
+    supported_field_sources: dict[str, list[dict[str, Any]]] = field(default_factory=dict)
+    generated_field_sources: dict[str, list[dict[str, Any]]] = field(default_factory=dict)
     field_confidence: dict[str, str] = field(default_factory=dict)
+    supported_field_confidence: dict[str, str] = field(default_factory=dict)
+    generated_field_confidence: dict[str, str] = field(default_factory=dict)
     field_origin: dict[str, str] = field(default_factory=dict)
+    supported_field_origin: dict[str, str] = field(default_factory=dict)
+    generated_field_origin: dict[str, str] = field(default_factory=dict)
     chapter_mentions: list[str] = field(default_factory=list)
     scene_mentions: list[str] = field(default_factory=list)
     shot_mentions: list[str] = field(default_factory=list)
@@ -213,10 +226,20 @@ class DescriptorRecord:
             "entity_type": self.entity_type,
             "status": self.status,
             "field_values": self.field_values,
+            "supported_field_values": self.supported_field_values,
+            "generated_field_values": self.generated_field_values,
             "field_states": self.field_states,
+            "supported_field_states": self.supported_field_states,
+            "generated_field_states": self.generated_field_states,
             "field_sources": self.field_sources,
+            "supported_field_sources": self.supported_field_sources,
+            "generated_field_sources": self.generated_field_sources,
             "field_confidence": self.field_confidence,
+            "supported_field_confidence": self.supported_field_confidence,
+            "generated_field_confidence": self.generated_field_confidence,
             "field_origin": self.field_origin,
+            "supported_field_origin": self.supported_field_origin,
+            "generated_field_origin": self.generated_field_origin,
             "chapter_mentions": self.chapter_mentions,
             "scene_mentions": self.scene_mentions,
             "shot_mentions": self.shot_mentions,
@@ -504,11 +527,25 @@ def _write_descriptor_markdown(path: Path, record: DescriptorRecord) -> None:
         f"- status: `{record.status}`",
         f"- entity_type: `{record.entity_type}`",
         "",
-        "## Structured Fields",
+        "## Supported Fields",
         "",
     ]
-    for field_name in sorted(record.field_values.keys()):
-        value = record.field_values[field_name]
+    for field_name in sorted(record.supported_field_values.keys()):
+        value = record.supported_field_values[field_name]
+        if isinstance(value, list):
+            if not value:
+                continue
+            lines.append(f"- {field_name}:")
+            for item in value:
+                lines.append(f"  - {item}")
+        else:
+            value_str = str(value).strip()
+            if value_str:
+                lines.append(f"- {field_name}: {value_str}")
+
+    lines.extend(["", "## Generated Fields", ""])
+    for field_name in sorted(record.generated_field_values.keys()):
+        value = record.generated_field_values[field_name]
         if isinstance(value, list):
             if not value:
                 continue
@@ -583,10 +620,18 @@ def _write_review_queue(path: Path, queue: list[dict[str, Any]], *, title: str) 
     if not queue:
         lines.append("- No review items.")
     else:
+        grouped: dict[str, list[dict[str, Any]]] = {}
         for item in queue:
-            lines.append(f"- `{item.get('descriptor_id', '')}`")
-            for issue in item.get("issues", []):
-                lines.append(f"  - {issue}")
+            prefix = str(item.get("entity_type", "other")).strip().lower() or "other"
+            grouped.setdefault(prefix, []).append(item)
+        for group_name in sorted(grouped.keys()):
+            lines.append(f"## {group_name.title()}")
+            lines.append("")
+            for item in grouped[group_name]:
+                lines.append(f"- `{item.get('descriptor_id', '')}`")
+                for issue in item.get("issues", []):
+                    lines.append(f"  - {issue}")
+            lines.append("")
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
@@ -647,6 +692,81 @@ def _add_field(
         field_sources.setdefault(key, []).append(source_ref)
     if state == "inferred":
         inferred_fields.append(key)
+
+
+def _split_descriptor_field_views(
+    field_values: dict[str, Any],
+    field_origin: dict[str, str],
+    field_states: dict[str, str],
+    field_confidence: dict[str, str],
+    field_sources: dict[str, list[dict[str, Any]]],
+) -> tuple[
+    dict[str, Any],
+    dict[str, Any],
+    dict[str, str],
+    dict[str, str],
+    dict[str, list[dict[str, Any]]],
+    dict[str, list[dict[str, Any]]],
+    dict[str, str],
+    dict[str, str],
+    dict[str, str],
+    dict[str, str],
+]:
+    supported_values: dict[str, Any] = {}
+    generated_values: dict[str, Any] = {}
+    supported_states: dict[str, str] = {}
+    generated_states: dict[str, str] = {}
+    supported_sources: dict[str, list[dict[str, Any]]] = {}
+    generated_sources: dict[str, list[dict[str, Any]]] = {}
+    supported_confidence: dict[str, str] = {}
+    generated_confidence: dict[str, str] = {}
+    supported_origin: dict[str, str] = {}
+    generated_origin: dict[str, str] = {}
+
+    for key, value in field_values.items():
+        origin = field_origin.get(key, "fallback")
+        state = field_states.get(key, _descriptor_field_state(origin, value))
+        confidence = field_confidence.get(key, _descriptor_field_confidence(state, value))
+        sources = field_sources.get(key, [])
+        if value is None or state == "unknown":
+            continue
+        if origin in EXPLICIT_ORIGINS and state == "explicit":
+            supported_values[key] = value
+            supported_states[key] = state
+            supported_sources[key] = sources
+            supported_confidence[key] = confidence
+            supported_origin[key] = origin
+        elif origin in INFERRED_ORIGINS or origin == "heuristic":
+            generated_values[key] = value
+            generated_states[key] = state
+            generated_sources[key] = sources
+            generated_confidence[key] = confidence
+            generated_origin[key] = origin
+        elif state in {"explicit", "inferred", "review_needed"}:
+            supported_values[key] = value
+            supported_states[key] = state
+            supported_sources[key] = sources
+            supported_confidence[key] = confidence
+            supported_origin[key] = origin
+        else:
+            generated_values[key] = value
+            generated_states[key] = state
+            generated_sources[key] = sources
+            generated_confidence[key] = confidence
+            generated_origin[key] = origin
+
+    return (
+        supported_values,
+        generated_values,
+        supported_states,
+        generated_states,
+        supported_sources,
+        generated_sources,
+        supported_confidence,
+        generated_confidence,
+        supported_origin,
+        generated_origin,
+    )
 
 
 def _chapter_id_from_path(source_path: str) -> str:
@@ -1114,7 +1234,10 @@ def _llm_refine_descriptor(
     system = (
         "You are a descriptor enrichment system for a film pipeline. "
         "Use only the provided evidence. Prefer compact structured markdown. "
-        "Do not invent unsupported details. Return one tagged FilmCreator markdown packet only. "
+        "If evidence directly supports a detail, put it in supported fields. "
+        "If you make a careful visual choice to complete the canon, put it in generated fields. "
+        "Do not leave everything as unknown if the evidence and stable context support a reasonable decision, "
+        "but do not put inferred detail in supported fields. Return one tagged FilmCreator markdown packet only. "
         "Do not return JSON."
     )
 
@@ -1123,7 +1246,9 @@ def _llm_refine_descriptor(
 Enrich the following {entity_type} descriptor using the evidence provided.
 
 Keep the output compact. Favor structured fields over prose.
-If a field is not supported, mark it as unknown or review_needed rather than inventing detail.
+Use the book, registry, and existing contract evidence for supported fields.
+Use careful inference for generated fields when the text does not spell out a visual detail but the canon is still clear.
+If you genuinely cannot determine a field, mark it as unknown and add a review flag.
 
 DESCRIPTOR:
 {json.dumps({
@@ -1154,8 +1279,15 @@ display_name: {display_name}
 entity_type: {entity_type}
 status: {status}
 
-[[SECTION fields_markdown]]
-field_name: field value
+[[SECTION supported_fields_markdown]]
+field_name: supported field value
+field_name:
+- list item 1
+- list item 2
+[[/SECTION]]
+
+[[SECTION generated_fields_markdown]]
+field_name: generated field value
 field_name:
 - list item 1
 - list item 2
@@ -1192,16 +1324,28 @@ inferred_fields:
         if not packet.records:
             return None
         record = packet.records[0]
-        fields_scalars, fields_lists, fields_freeform = _parse_markdown_section(_section_text(packet, "fields_markdown"))
+        supported_scalars, supported_lists, supported_freeform = _parse_markdown_section(_section_text(packet, "supported_fields_markdown"))
+        generated_scalars, generated_lists, generated_freeform = _parse_markdown_section(_section_text(packet, "generated_fields_markdown"))
         coverage_scalars, coverage_lists, coverage_freeform = _parse_markdown_section(_section_text(packet, "coverage_markdown"))
         review_scalars, review_lists, review_freeform = _parse_markdown_section(_section_text(packet, "review_markdown"))
         evidence_scalars, evidence_lists, evidence_freeform = _parse_markdown_section(_section_text(packet, "evidence_markdown"))
-        merged: dict[str, Any] = {}
+        supported: dict[str, Any] = {}
+        generated: dict[str, Any] = {}
         for field in desired_fields:
-            if field in fields_lists and fields_lists[field]:
-                merged[field] = fields_lists[field]
-            elif field in fields_scalars and fields_scalars[field]:
-                merged[field] = fields_scalars[field]
+            if field in supported_lists and supported_lists[field]:
+                supported[field] = supported_lists[field]
+            elif field in supported_scalars and supported_scalars[field]:
+                supported[field] = supported_scalars[field]
+            if field in generated_lists and generated_lists[field]:
+                generated[field] = generated_lists[field]
+            elif field in generated_scalars and generated_scalars[field]:
+                generated[field] = generated_scalars[field]
+        merged: dict[str, Any] = {}
+        merged.update(supported)
+        for key, value in generated.items():
+            merged.setdefault(key, value)
+        merged["supported_field_values"] = supported
+        merged["generated_field_values"] = generated
         merged["chapter_mentions"] = _coerce_string_list(coverage_lists.get("chapter_mentions"), coverage_scalars.get("chapter_mentions"))
         merged["scene_mentions"] = _coerce_string_list(coverage_lists.get("scene_mentions"), coverage_scalars.get("scene_mentions"))
         merged["shot_mentions"] = _coerce_string_list(coverage_lists.get("shot_mentions"), coverage_scalars.get("shot_mentions"))
@@ -1244,6 +1388,18 @@ def _finalize_descriptor(
             state = "unknown"
         field_states[key] = state
         field_confidence[key] = _descriptor_field_confidence(state, value)
+    (
+        supported_field_values,
+        generated_field_values,
+        supported_field_states,
+        generated_field_states,
+        supported_field_sources,
+        generated_field_sources,
+        supported_field_confidence,
+        generated_field_confidence,
+        supported_field_origin,
+        generated_field_origin,
+    ) = _split_descriptor_field_views(field_values, field_origin, field_states, field_confidence, field_sources)
     return DescriptorRecord(
         descriptor_id=descriptor_id,
         canonical_id=canonical_id,
@@ -1251,10 +1407,20 @@ def _finalize_descriptor(
         entity_type=entity_type,
         status=status,
         field_values=field_values,
+        supported_field_values=supported_field_values,
+        generated_field_values=generated_field_values,
         field_states=field_states,
+        supported_field_states=supported_field_states,
+        generated_field_states=generated_field_states,
         field_sources=field_sources,
+        supported_field_sources=supported_field_sources,
+        generated_field_sources=generated_field_sources,
         field_confidence=field_confidence,
+        supported_field_confidence=supported_field_confidence,
+        generated_field_confidence=generated_field_confidence,
         field_origin=field_origin,
+        supported_field_origin=supported_field_origin,
+        generated_field_origin=generated_field_origin,
         chapter_mentions=_ordered_unique(chapter_mentions),
         scene_mentions=_ordered_unique(scene_mentions),
         shot_mentions=_ordered_unique(shot_mentions),
@@ -1338,11 +1504,14 @@ def _base_character_descriptor(
         )
 
     if llm_payload:
-        for field_name in CHARACTER_FIELD_ORDER:
-            value = llm_payload.get(field_name)
+        for field_name, value in (llm_payload.get("supported_field_values") or {}).items():
             if value:
                 base_fields[field_name] = value
-                field_origin[field_name] = "llm"
+                field_origin[field_name] = "llm_supported"
+        for field_name, value in (llm_payload.get("generated_field_values") or {}).items():
+            if value:
+                base_fields[field_name] = value
+                field_origin[field_name] = "llm_generated"
                 if field_name not in inferred_fields:
                     inferred_fields.append(field_name)
         if llm_payload.get("chapter_mentions"):
@@ -1442,11 +1611,14 @@ def _base_environment_descriptor(
         )
 
     if llm_payload:
-        for field_name in ENVIRONMENT_FIELD_ORDER:
-            value = llm_payload.get(field_name)
+        for field_name, value in (llm_payload.get("supported_field_values") or {}).items():
             if value:
                 base_fields[field_name] = value
-                field_origin[field_name] = "llm"
+                field_origin[field_name] = "llm_supported"
+        for field_name, value in (llm_payload.get("generated_field_values") or {}).items():
+            if value:
+                base_fields[field_name] = value
+                field_origin[field_name] = "llm_generated"
                 if field_name not in inferred_fields:
                     inferred_fields.append(field_name)
         if llm_payload.get("chapter_mentions"):
@@ -1534,11 +1706,14 @@ def _base_scene_descriptor(
             desired_fields=SCENE_FIELD_ORDER,
         )
         if llm_payload:
-            for field_name in SCENE_FIELD_ORDER:
-                value = llm_payload.get(field_name)
+            for field_name, value in (llm_payload.get("supported_field_values") or {}).items():
                 if value:
                     base_fields[field_name] = value
-                    field_origin[field_name] = "llm"
+                    field_origin[field_name] = "llm_supported"
+            for field_name, value in (llm_payload.get("generated_field_values") or {}).items():
+                if value:
+                    base_fields[field_name] = value
+                    field_origin[field_name] = "llm_generated"
                     if field_name not in inferred_fields:
                         inferred_fields.append(field_name)
             if llm_payload.get("chapter_mentions"):
@@ -1642,11 +1817,14 @@ def _base_shot_descriptor(
             desired_fields=SHOT_FIELD_ORDER,
         )
         if llm_payload:
-            for field_name in SHOT_FIELD_ORDER:
-                value = llm_payload.get(field_name)
+            for field_name, value in (llm_payload.get("supported_field_values") or {}).items():
                 if value:
                     base_fields[field_name] = value
-                    field_origin[field_name] = "llm"
+                    field_origin[field_name] = "llm_supported"
+            for field_name, value in (llm_payload.get("generated_field_values") or {}).items():
+                if value:
+                    base_fields[field_name] = value
+                    field_origin[field_name] = "llm_generated"
                     if field_name not in inferred_fields:
                         inferred_fields.append(field_name)
             if llm_payload.get("chapter_mentions"):
@@ -1743,11 +1921,14 @@ def _base_key_item_descriptor(
             desired_fields=KEY_ITEM_FIELD_ORDER,
         )
         if llm_payload:
-            for field_name in KEY_ITEM_FIELD_ORDER:
-                value = llm_payload.get(field_name)
+            for field_name, value in (llm_payload.get("supported_field_values") or {}).items():
                 if value:
                     base_fields[field_name] = value
-                    field_origin[field_name] = "llm"
+                    field_origin[field_name] = "llm_supported"
+            for field_name, value in (llm_payload.get("generated_field_values") or {}).items():
+                if value:
+                    base_fields[field_name] = value
+                    field_origin[field_name] = "llm_generated"
                     if field_name not in inferred_fields:
                         inferred_fields.append(field_name)
             if llm_payload.get("chapter_mentions"):
@@ -1819,10 +2000,20 @@ def _descriptor_from_existing(existing: dict[str, Any], metadata: DescriptorMeta
         entity_type=str(existing.get("entity_type", "")),
         status=str(existing.get("status", "canonical")),
         field_values=existing.get("field_values", {}),
+        supported_field_values=existing.get("supported_field_values", {}),
+        generated_field_values=existing.get("generated_field_values", {}),
         field_states=existing.get("field_states", {}),
+        supported_field_states=existing.get("supported_field_states", {}),
+        generated_field_states=existing.get("generated_field_states", {}),
         field_sources=existing.get("field_sources", {}),
+        supported_field_sources=existing.get("supported_field_sources", {}),
+        generated_field_sources=existing.get("generated_field_sources", {}),
         field_confidence=existing.get("field_confidence", {}),
+        supported_field_confidence=existing.get("supported_field_confidence", {}),
+        generated_field_confidence=existing.get("generated_field_confidence", {}),
         field_origin=existing.get("field_origin", {}),
+        supported_field_origin=existing.get("supported_field_origin", {}),
+        generated_field_origin=existing.get("generated_field_origin", {}),
         chapter_mentions=existing.get("chapter_mentions", []),
         scene_mentions=existing.get("scene_mentions", []),
         shot_mentions=existing.get("shot_mentions", []),
@@ -1929,7 +2120,7 @@ def run_descriptor_enrichment(
         records.append(record)
         if record.status != "canonical" or record.review_flags:
             review_records.append(record)
-            review_queue.append({"descriptor_id": record.descriptor_id, "issues": _descriptor_review_issues(record)})
+            review_queue.append({"descriptor_id": record.descriptor_id, "entity_type": record.entity_type, "issues": _descriptor_review_issues(record)})
 
     for env_id, bible in environment_bibles.items():
         source_entry = environment_bibles.get(env_id, bible)
@@ -1952,7 +2143,7 @@ def run_descriptor_enrichment(
         records.append(record)
         if record.status != "canonical" or record.review_flags:
             review_records.append(record)
-            review_queue.append({"descriptor_id": record.descriptor_id, "issues": _descriptor_review_issues(record)})
+            review_queue.append({"descriptor_id": record.descriptor_id, "entity_type": record.entity_type, "issues": _descriptor_review_issues(record)})
 
     for scene_id, contract in scene_contracts.items():
         fp = _fingerprint({"scene": contract, "kind": "scene"})
@@ -1966,7 +2157,7 @@ def run_descriptor_enrichment(
         records.append(record)
         if record.review_flags:
             review_records.append(record)
-            review_queue.append({"descriptor_id": record.descriptor_id, "issues": _descriptor_review_issues(record)})
+            review_queue.append({"descriptor_id": record.descriptor_id, "entity_type": record.entity_type, "issues": _descriptor_review_issues(record)})
 
     for shot in shot_packages:
         scene_id = str(shot.get("scene_id", "")).strip().upper()
@@ -1985,7 +2176,7 @@ def run_descriptor_enrichment(
         records.append(record)
         if record.review_flags:
             review_records.append(record)
-            review_queue.append({"descriptor_id": record.descriptor_id, "issues": _descriptor_review_issues(record)})
+            review_queue.append({"descriptor_id": record.descriptor_id, "entity_type": record.entity_type, "issues": _descriptor_review_issues(record)})
 
     for item_id, candidate in key_item_candidates.items():
         fp = _fingerprint({"candidate": candidate, "kind": "key_item"})
@@ -1998,7 +2189,7 @@ def run_descriptor_enrichment(
         records.append(record)
         if record.review_flags:
             review_records.append(record)
-            review_queue.append({"descriptor_id": record.descriptor_id, "issues": _descriptor_review_issues(record)})
+            review_queue.append({"descriptor_id": record.descriptor_id, "entity_type": record.entity_type, "issues": _descriptor_review_issues(record)})
 
     review_queue_path = review_dir / "DESCRIPTOR_REVIEW_QUEUE.md"
     review_queue_json = review_dir / "DESCRIPTOR_REVIEW_QUEUE.json"
@@ -2024,5 +2215,61 @@ def run_descriptor_enrichment(
         reused_count=reused,
         review_queue_count=len(review_queue),
         written_files=written_files,
+        warnings=warnings,
+    )
+
+
+@dataclass(frozen=True)
+class DescriptorResetSummary:
+    project_slug: str
+    removed_paths: list[str]
+    warnings: list[str]
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "project_slug": self.project_slug,
+            "removed_paths": self.removed_paths,
+            "warnings": self.warnings,
+        }
+
+
+def clear_descriptor_artifacts(
+    project_slug: str,
+    *,
+    include_prompt_packages: bool = True,
+) -> DescriptorResetSummary:
+    project_dir = create_project(project_slug)
+    project_root = project_dir.resolve()
+    removed_paths: list[str] = []
+    warnings: list[str] = []
+
+    targets = [
+        project_dir / "02_story_analysis" / "descriptors",
+    ]
+    if include_prompt_packages:
+        targets.append(project_dir / "03_prompt_packages" / "prepared")
+
+    def on_rm_error(func: Callable[..., Any], path: str, exc_info: tuple[Any, Any, Any]) -> None:
+        try:
+            os.chmod(path, stat.S_IWRITE)
+            func(path)
+        except Exception as exc:
+            warnings.append(f"Failed to remove {path}: {exc}")
+
+    for target in targets:
+        resolved = target.resolve()
+        if project_root not in resolved.parents and resolved != project_root:
+            warnings.append(f"Skipped unsafe target: {resolved}")
+            continue
+        if target.exists():
+            shutil.rmtree(target, onerror=on_rm_error)
+            if not target.exists():
+                removed_paths.append(str(target))
+            else:
+                warnings.append(f"Target still exists after cleanup attempt: {target}")
+
+    return DescriptorResetSummary(
+        project_slug=project_slug,
+        removed_paths=removed_paths,
         warnings=warnings,
     )

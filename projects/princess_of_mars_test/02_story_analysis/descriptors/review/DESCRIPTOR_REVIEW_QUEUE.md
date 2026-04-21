@@ -1,5 +1,7 @@
 # Descriptor Review Queue
 
+## Character
+
 - `DESC_CHAR_apache_warriors`
   - low_confidence_visual_fields
   - sex_unresolved
@@ -148,6 +150,9 @@
 - `DESC_CHAR_zodangan_sentry`
   - low_confidence_visual_fields
   - sex_unresolved
+
+## Environment
+
 - `DESC_ENV_aerial_battle_skyline`
   - low_confidence_spatial_fields
 - `DESC_ENV_aerial_naval_battlefield`
@@ -220,3 +225,4 @@
   - low_confidence_spatial_fields
 - `DESC_ENV_zodanga_palace_quarters`
   - low_confidence_spatial_fields
+

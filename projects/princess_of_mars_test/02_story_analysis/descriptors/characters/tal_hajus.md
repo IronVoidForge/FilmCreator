@@ -5,10 +5,8 @@
 - status: `canonical`
 - entity_type: `character`
 
-## Structured Fields
+## Supported Fields
 
-- age_range: unknown
-- build: unknown
 - chapter_mentions:
   - CH010
   - CH015
@@ -17,23 +15,13 @@
   - CH018
   - CH022
   - CH024
-- costume_materials: unknown
-- costume_signature: unknown
 - entity_kind: individual
-- expression_tendency: unknown
-- eye_color: unknown
-- face_shape: unknown
-- facial_hair: unknown
-- hair_color: unknown
-- hair_style: unknown
-- height: unknown
 - physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
-- posture: unknown
 - role: individual
-- sex: unknown
 - silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
-- skin_tone: unknown
-- voice_or_presence_notes: unknown
+
+## Generated Fields
+
 
 ## Coverage
 
@@ -59,5 +47,5 @@
 - artifact_id: `DESC_CHAR_tal_hajus`
 - status: `generated`
 - source_fingerprint: `1c216536aaaf26bc9b726afd36753c4a4e1061fc`
-- created_at_utc: `2026-04-21T04:33:23.020321+00:00`
-- updated_at_utc: `2026-04-21T04:33:23.020321+00:00`
+- created_at_utc: `2026-04-21T05:20:51.302624+00:00`
+- updated_at_utc: `2026-04-21T05:20:51.302624+00:00`

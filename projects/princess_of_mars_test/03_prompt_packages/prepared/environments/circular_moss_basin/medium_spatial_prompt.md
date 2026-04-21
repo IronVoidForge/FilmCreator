@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, medium spatial view showing foreground, midground, and background relationships, The low-walled incubator serves as a central anchor, scale is defined by the massive size of the hatched Martian young and the height of the glass enclosure., yellowish mossy terrain, circular basin, cl...
+Film environment reference sheet, medium spatial view showing foreground, midground, and background relationships, The low-walled incubator serves as a central anchor, scale is defined by the massive size of the hatched Martian young and the height of the glass enclosure., Bright, direct Martian sunlight filtered th...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

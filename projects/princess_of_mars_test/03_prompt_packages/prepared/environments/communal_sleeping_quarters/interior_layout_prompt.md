@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, clear interior layout with readable pathways, structure, and scale, Medium scale, crowded/dense occupancy, anchored by sleeping mats, personal belongings, and shared domestic spaces., communal dormitory, clear spatial layout, readable anchors and depth cues, no characters, no text,...
+Film environment reference sheet, clear interior layout with readable pathways, structure, and scale, Medium scale, crowded/dense occupancy, anchored by sleeping mats, personal belongings, and shared domestic spaces., Dimly lit at night, clear spatial layout, readable anchors and depth cues, no characters, no text,...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

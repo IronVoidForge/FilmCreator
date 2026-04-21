@@ -5,9 +5,8 @@
 - status: `canonical`
 - entity_type: `environment`
 
-## Structured Fields
+## Supported Fields
 
-- architecture: unknown
 - camera_friendly_landmarks:
   - Martian mountain pass
   - rocky canyon entrance
@@ -15,22 +14,18 @@
   - narrow transit corridor.
 - chapter_mentions:
   - CH017
-- depth_cues: unknown
 - environment_type: Secondary (Conflict/Ambush)
-- foreground_midground_background: unknown
-- geography: unknown
 - layout: Narrow mountain pass, rocky ridges, vantage points for mounted warriors.
 - lighting: High contrast, shadows from cliffs, sudden emergence of large groups.
-- materials: unknown
 - mood: High contrast, shadows from cliffs, sudden emergence of large groups.
-- pathways: unknown
 - recurring_anchors:
   - Martian mountain pass
   - rocky canyon entrance
   - rugged cliffside
   - narrow transit corridor.
-- scale: unknown
-- weather_or_atmosphere: unknown
+
+## Generated Fields
+
 
 ## Coverage
 
@@ -58,5 +53,5 @@
 - artifact_id: `DESC_ENV_mountain_pass_threshold`
 - status: `generated`
 - source_fingerprint: `7f99011fd1e1fce90e2fbc717cd4b49ed94a9160`
-- created_at_utc: `2026-04-21T04:42:07.767667+00:00`
-- updated_at_utc: `2026-04-21T04:42:07.767667+00:00`
+- created_at_utc: `2026-04-21T05:20:52.842463+00:00`
+- updated_at_utc: `2026-04-21T05:20:52.842463+00:00`

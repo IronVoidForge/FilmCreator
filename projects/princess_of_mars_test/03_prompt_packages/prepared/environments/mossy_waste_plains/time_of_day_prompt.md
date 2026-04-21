@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, same place rendered at a different time of day while preserving canon, Endless horizon, featureless terrain, absence of water sources., Vast mossy waste, trackless Martian plains, desolate landscape, clear spatial layout, readable anchors and depth cues, no characters, no text, no w...
+Film environment reference sheet, same place rendered at a different time of day while preserving canon, Endless horizon, featureless terrain, absence of water sources., Harsh, exposed, desolate, sense of extreme exhaustion and heat., Vast mossy waste, trackless Martian plains, clear spatial layout, readable anchors...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

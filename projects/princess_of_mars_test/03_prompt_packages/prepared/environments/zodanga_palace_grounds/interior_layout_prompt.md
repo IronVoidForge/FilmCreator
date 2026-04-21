@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, clear interior layout with readable pathways, structure, and scale, Vertical scale defined by balcony heights and the drop to the ground below, recurring anchors include stone railings and palace exterior walls., high palace balconies, dark exterior grounds, clear spatial layout, re...
+Film environment reference sheet, clear interior layout with readable pathways, structure, and scale, Vertical scale defined by balcony heights and the drop to the ground below, recurring anchors include stone railings and palace exterior walls., Transitioning from twilight to darkness, shadows are deep and provide...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

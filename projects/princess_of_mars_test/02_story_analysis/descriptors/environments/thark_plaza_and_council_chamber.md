@@ -5,9 +5,8 @@
 - status: `canonical`
 - entity_type: `environment`
 
-## Structured Fields
+## Supported Fields
 
-- architecture: unknown
 - camera_friendly_landmarks:
   - Thark council chamber
   - Martian plaza
@@ -17,15 +16,8 @@
   - tense political arena.
 - chapter_mentions:
   - CH010
-- depth_cues: unknown
 - environment_type: Primary Setting
-- foreground_midground_background: unknown
-- geography: unknown
 - layout: No layout notes available.
-- lighting: Unknown
-- materials: unknown
-- mood: Unknown
-- pathways: unknown
 - recurring_anchors:
   - Thark council chamber
   - Martian plaza
@@ -33,8 +25,9 @@
   - warrior assembly hall
   - ceremonial stone structures
   - tense political arena.
-- scale: unknown
-- weather_or_atmosphere: unknown
+
+## Generated Fields
+
 
 ## Coverage
 
@@ -62,5 +55,5 @@
 - artifact_id: `DESC_ENV_thark_plaza_and_council_chamber`
 - status: `generated`
 - source_fingerprint: `2642d0b9ab2fd2ee8355e9e5b05982665b67db3a`
-- created_at_utc: `2026-04-21T04:43:46.429071+00:00`
-- updated_at_utc: `2026-04-21T04:43:46.429071+00:00`
+- created_at_utc: `2026-04-21T05:20:53.064690+00:00`
+- updated_at_utc: `2026-04-21T05:20:53.064690+00:00`

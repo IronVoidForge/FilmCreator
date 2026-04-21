@@ -5,30 +5,18 @@
 - status: `canonical`
 - entity_type: `character`
 
-## Structured Fields
+## Supported Fields
 
-- age_range: unknown
-- build: unknown
 - chapter_mentions:
   - CH014
   - CH015
-- costume_materials: unknown
-- costume_signature: unknown
 - entity_kind: individual
-- expression_tendency: unknown
-- eye_color: unknown
-- face_shape: unknown
-- facial_hair: unknown
-- hair_color: unknown
-- hair_style: unknown
-- height: unknown
 - physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
-- posture: unknown
 - role: individual
-- sex: unknown
 - silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
-- skin_tone: unknown
-- voice_or_presence_notes: unknown
+
+## Generated Fields
+
 
 ## Coverage
 
@@ -57,5 +45,5 @@
 - artifact_id: `DESC_CHAR_zad`
 - status: `generated`
 - source_fingerprint: `8b31114cbcd38ddf19c74bf58a8ef532f30aa007`
-- created_at_utc: `2026-04-21T04:35:39.629833+00:00`
-- updated_at_utc: `2026-04-21T04:35:39.629833+00:00`
+- created_at_utc: `2026-04-21T05:20:51.892568+00:00`
+- updated_at_utc: `2026-04-21T05:20:51.892568+00:00`

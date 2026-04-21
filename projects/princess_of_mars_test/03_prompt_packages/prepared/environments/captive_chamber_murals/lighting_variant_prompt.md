@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, lighting variant preserving spatial layout while changing illumination, Murals serve as the primary visual anchor, scale is intimate and enclosed., decorated captive chamber, large-scale Martian landscape murals, clear spatial layout, readable anchors and depth cues, no characters,...
+Film environment reference sheet, lighting variant preserving spatial layout while changing illumination, Murals serve as the primary visual anchor, scale is intimate and enclosed., Dimly lit interior, atmosphere shifts from warmth provided by furs to the implied extreme cold of the Martian night., clear spatial lay...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

@@ -5,29 +5,17 @@
 - status: `canonical`
 - entity_type: `character`
 
-## Structured Fields
+## Supported Fields
 
-- age_range: unknown
-- build: unknown
 - chapter_mentions:
   - CH017
-- costume_materials: unknown
-- costume_signature: unknown
 - entity_kind: group
-- expression_tendency: unknown
-- eye_color: unknown
-- face_shape: unknown
-- facial_hair: unknown
-- hair_color: unknown
-- hair_style: unknown
-- height: unknown
 - physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Detected plural/group-like character asset.
-- posture: unknown
 - role: group
-- sex: unknown
 - silhouette_notes: No competing canonical alias detected; kept extracted asset id. Detected plural/group-like character asset.
-- skin_tone: unknown
-- voice_or_presence_notes: unknown
+
+## Generated Fields
+
 
 ## Coverage
 
@@ -53,5 +41,5 @@
 - artifact_id: `DESC_CHAR_thark_warriors`
 - status: `generated`
 - source_fingerprint: `7a28e5e080e39179a840f21386ab7d1dcc8b671e`
-- created_at_utc: `2026-04-21T04:34:00.479407+00:00`
-- updated_at_utc: `2026-04-21T04:34:00.479407+00:00`
+- created_at_utc: `2026-04-21T05:20:51.479779+00:00`
+- updated_at_utc: `2026-04-21T05:20:51.479779+00:00`

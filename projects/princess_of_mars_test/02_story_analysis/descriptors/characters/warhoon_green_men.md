@@ -5,29 +5,17 @@
 - status: `canonical`
 - entity_type: `character`
 
-## Structured Fields
+## Supported Fields
 
-- age_range: unknown
-- build: unknown
 - chapter_mentions:
   - CH014
-- costume_materials: unknown
-- costume_signature: unknown
 - entity_kind: group
-- expression_tendency: unknown
-- eye_color: unknown
-- face_shape: unknown
-- facial_hair: unknown
-- hair_color: unknown
-- hair_style: unknown
-- height: unknown
 - physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character markdown describes a group entity.
-- posture: unknown
 - role: group
-- sex: unknown
 - silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character markdown describes a group entity.
-- skin_tone: unknown
-- voice_or_presence_notes: unknown
+
+## Generated Fields
+
 
 ## Coverage
 
@@ -53,5 +41,5 @@
 - artifact_id: `DESC_CHAR_warhoon_green_men`
 - status: `generated`
 - source_fingerprint: `5156c753f6589c4b09d1812240ed2d2370859272`
-- created_at_utc: `2026-04-21T04:34:27.311844+00:00`
-- updated_at_utc: `2026-04-21T04:34:27.311844+00:00`
+- created_at_utc: `2026-04-21T05:20:51.567850+00:00`
+- updated_at_utc: `2026-04-21T05:20:51.567850+00:00`

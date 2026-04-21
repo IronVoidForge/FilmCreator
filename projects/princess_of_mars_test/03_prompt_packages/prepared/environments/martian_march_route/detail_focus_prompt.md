@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, detail-focused view on a recurring anchor or landmark, Rugged, desolate terrain characteristic of the Barsoomian wilderness, uneven ground suitable for heavy chariot movement and marching parties., Desolate Martian wasteland, rugged red terrain, clear spatial layout, readable anchor...
+Film environment reference sheet, detail-focused view on a recurring anchor or landmark, Rugged, desolate terrain characteristic of the Barsoomian wilderness, uneven ground suitable for heavy chariot movement and marching parties., Unknown, Desolate Martian wasteland, clear spatial layout, readable anchors and depth...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

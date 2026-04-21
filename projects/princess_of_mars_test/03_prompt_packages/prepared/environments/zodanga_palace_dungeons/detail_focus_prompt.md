@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, detail-focused view on a recurring anchor or landmark, Tight, enclosed spaces, recurring anchors include cell bars, heavy jailer keys, and stone masonry., Labyrinthine subterranean dungeons, dark stone corridors, clear spatial layout, readable anchors and depth cues, no characters,...
+Film environment reference sheet, detail-focused view on a recurring anchor or landmark, Tight, enclosed spaces, recurring anchors include cell bars, heavy jailer keys, and stone masonry., Dim, claustrophobic, and oppressive. Low-light environment with shadows cast by torchlight or minimal light shafts., Labyrinthin...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

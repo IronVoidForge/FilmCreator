@@ -5,9 +5,8 @@
 - status: `canonical`
 - entity_type: `environment`
 
-## Structured Fields
+## Supported Fields
 
-- architecture: unknown
 - camera_friendly_landmarks:
   - underground water conduits
   - polar ice cap runoff
@@ -16,23 +15,17 @@
   - vast subterranean pipes.
 - chapter_mentions:
   - CH021
-- depth_cues: unknown
 - environment_type: Transit / Secondary Setting
-- foreground_midground_background: unknown
-- geography: unknown
 - layout: Vast underground conduit networks connecting polar ice caps to arid regions; advanced hydraulic infrastructure.
-- lighting: Unknown
-- materials: unknown
-- mood: Unknown
-- pathways: unknown
 - recurring_anchors:
   - underground water conduits
   - polar ice cap runoff
   - advanced Martian irrigation
   - hydraulic infrastructure
   - vast subterranean pipes.
-- scale: unknown
-- weather_or_atmosphere: unknown
+
+## Generated Fields
+
 
 ## Coverage
 
@@ -60,5 +53,5 @@
 - artifact_id: `DESC_ENV_barsoomian_irrigation_conduits`
 - status: `generated`
 - source_fingerprint: `bab5cae3acae0d3f3c7d95bff78ed8445c034d14`
-- created_at_utc: `2026-04-21T04:37:44.267871+00:00`
-- updated_at_utc: `2026-04-21T04:37:44.267871+00:00`
+- created_at_utc: `2026-04-21T05:20:52.167826+00:00`
+- updated_at_utc: `2026-04-21T05:20:52.167826+00:00`

@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, exterior geography view with readable terrain and boundaries, Vast underground conduit networks connecting polar ice caps to arid regions, advanced hydraulic infrastructure., underground water conduits, polar ice cap runoff, clear spatial layout, readable anchors and depth cues, no...
+Film environment reference sheet, exterior geography view with readable terrain and boundaries, Vast underground conduit networks connecting polar ice caps to arid regions, advanced hydraulic infrastructure., Unknown, underground water conduits, clear spatial layout, readable anchors and depth cues, no characters, n...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

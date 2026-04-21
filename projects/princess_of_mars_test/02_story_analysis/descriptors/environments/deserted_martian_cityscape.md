@@ -5,9 +5,8 @@
 - status: `canonical`
 - entity_type: `environment`
 
-## Structured Fields
+## Supported Fields
 
-- architecture: unknown
 - camera_friendly_landmarks:
   - deserted Martian street
   - empty urban canyon
@@ -17,15 +16,10 @@
   - high-contrast shadows.
 - chapter_mentions:
   - CH005
-- depth_cues: unknown
 - environment_type: Transit setting for action and evasion.
-- foreground_midground_background: unknown
-- geography: unknown
 - layout: Wide urban corridors; transition from built structures to the edge of the city.
 - lighting: Harsh lighting dictated by thin atmosphere; extreme temperature fluctuations; desolate and quiet.
-- materials: unknown
 - mood: Harsh lighting dictated by thin atmosphere; extreme temperature fluctuations; desolate and quiet.
-- pathways: unknown
 - recurring_anchors:
   - deserted Martian street
   - empty urban canyon
@@ -33,8 +27,9 @@
   - desolate cityscape
   - outskirts of a Martian colony
   - high-contrast shadows.
-- scale: unknown
-- weather_or_atmosphere: unknown
+
+## Generated Fields
+
 
 ## Coverage
 
@@ -62,5 +57,5 @@
 - artifact_id: `DESC_ENV_deserted_martian_cityscape`
 - status: `generated`
 - source_fingerprint: `2a17847cf485405c14f0ac71ae116f1bd3fc37e4`
-- created_at_utc: `2026-04-21T04:39:42.315434+00:00`
-- updated_at_utc: `2026-04-21T04:39:42.315434+00:00`
+- created_at_utc: `2026-04-21T05:20:52.390529+00:00`
+- updated_at_utc: `2026-04-21T05:20:52.390529+00:00`

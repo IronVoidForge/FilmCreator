@@ -5,9 +5,8 @@
 - status: `canonical`
 - entity_type: `environment`
 
-## Structured Fields
+## Supported Fields
 
-- architecture: unknown
 - camera_friendly_landmarks:
   - Barsoomian night sky
   - dual moonlit horizon
@@ -16,23 +15,19 @@
   - silver lunar glow.
 - chapter_mentions:
   - CH013
-- depth_cues: unknown
 - environment_type: Secondary/Atmospheric setting for romantic and transit scenes.
-- foreground_midground_background: unknown
-- geography: unknown
 - layout: Wide horizons; celestial dominance of the twin moons; distant silhouettes of Martian landmarks.
 - lighting: Deep nocturnal hues; silver and pale light from two distinct moons; vast, silent atmosphere; sense of immense scale and isolation.
-- materials: unknown
 - mood: Deep nocturnal hues; silver and pale light from two distinct moons; vast, silent atmosphere; sense of immense scale and isolation.
-- pathways: unknown
 - recurring_anchors:
   - Barsoomian night sky
   - dual moonlit horizon
   - vast Martian desert plains
   - nocturnal alien landscape
   - silver lunar glow.
-- scale: unknown
-- weather_or_atmosphere: unknown
+
+## Generated Fields
+
 
 ## Coverage
 
@@ -60,5 +55,5 @@
 - artifact_id: `DESC_ENV_martian_night_landscape`
 - status: `generated`
 - source_fingerprint: `358e96a0b520ade668c6558935a0bbf8bbee9959`
-- created_at_utc: `2026-04-21T04:40:59.902378+00:00`
-- updated_at_utc: `2026-04-21T04:40:59.902378+00:00`
+- created_at_utc: `2026-04-21T05:20:52.603742+00:00`
+- updated_at_utc: `2026-04-21T05:20:52.603742+00:00`

@@ -5,9 +5,8 @@
 - status: `canonical`
 - entity_type: `environment`
 
-## Structured Fields
+## Supported Fields
 
-- architecture: unknown
 - camera_friendly_landmarks:
   - Decorated Martian living quarters
   - intimate stone chamber
@@ -16,23 +15,19 @@
   - ornate sleeping area.
 - chapter_mentions:
   - CH004
-- depth_cues: unknown
 - environment_type: Secondary Setting
-- foreground_midground_background: unknown
-- geography: unknown
 - layout: Decorated walls; sleeping areas; presence of small, exotic Martian fauna (ten-legged frog-like creatures).
 - lighting: Domesticated yet alien; softer lighting compared to the plazas; sense of shelter and respite.
-- materials: unknown
 - mood: Domesticated yet alien; softer lighting compared to the plazas; sense of shelter and respite.
-- pathways: unknown
 - recurring_anchors:
   - Decorated Martian living quarters
   - intimate stone chamber
   - alien domestic interior
   - soft light
   - ornate sleeping area.
-- scale: unknown
-- weather_or_atmosphere: unknown
+
+## Generated Fields
+
 
 ## Coverage
 
@@ -60,5 +55,5 @@
 - artifact_id: `DESC_ENV_solas_sleeping_chamber`
 - status: `generated`
 - source_fingerprint: `8569729790e7bc9830f15685bc7dbb433090416a`
-- created_at_utc: `2026-04-21T04:43:01.478310+00:00`
-- updated_at_utc: `2026-04-21T04:43:01.478310+00:00`
+- created_at_utc: `2026-04-21T05:20:52.974108+00:00`
+- updated_at_utc: `2026-04-21T05:20:52.974108+00:00`

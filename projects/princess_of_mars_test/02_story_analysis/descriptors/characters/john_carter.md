@@ -5,10 +5,8 @@
 - status: `canonical`
 - entity_type: `character`
 
-## Structured Fields
+## Supported Fields
 
-- age_range: unknown
-- build: unknown
 - chapter_mentions:
   - CH001
   - CH010
@@ -26,23 +24,13 @@
   - CH025
   - CH026
   - CH027
-- costume_materials: unknown
-- costume_signature: unknown
 - entity_kind: individual
-- expression_tendency: unknown
-- eye_color: unknown
-- face_shape: unknown
-- facial_hair: unknown
-- hair_color: unknown
-- hair_style: unknown
-- height: unknown
 - physical_presence_notes: Resolved known Carter alias to john_carter.
-- posture: unknown
 - role: individual
-- sex: unknown
 - silhouette_notes: Resolved known Carter alias to john_carter.
-- skin_tone: unknown
-- voice_or_presence_notes: unknown
+
+## Generated Fields
+
 
 ## Coverage
 
@@ -68,5 +56,5 @@
 - artifact_id: `DESC_CHAR_john_carter`
 - status: `generated`
 - source_fingerprint: `5c897aa39e73e56e2454d85bdb3db52a882efa1f`
-- created_at_utc: `2026-04-21T04:30:10.960088+00:00`
-- updated_at_utc: `2026-04-21T04:30:10.960088+00:00`
+- created_at_utc: `2026-04-21T05:20:50.240142+00:00`
+- updated_at_utc: `2026-04-21T05:20:50.240142+00:00`

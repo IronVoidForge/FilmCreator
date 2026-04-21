@@ -5,25 +5,20 @@
 - status: `canonical`
 - entity_type: `key_item`
 
-## Structured Fields
+## Supported Fields
+
+
+## Generated Fields
 
 - chapter_mentions:
   - CH007
   - CH018
   - CH023
-- color_palette: unknown
-- condition_or_wear: unknown
-- holder_or_user_notes: unknown
 - iconic_features:
   - Introduce key Martian leaders and demonstrate the protagonist's physical capability within th
   - H007_SC002 - chapter_id: `CH007` - scene_title: `Introduce key Martian leaders and demonstrate the protagonist's physi...` ## Production Inte
   - he protagonist's physi...` ## Production Intent Introduce key Martian leaders and demonstrate the protagonist's physical capability within th
 - item_kind: key
-- materials: unknown
-- ornamentation: unknown
-- scale: unknown
-- shape: unknown
-- symbolic_role: unknown
 
 ## Coverage
 
@@ -50,5 +45,5 @@
 - artifact_id: `DESC_ITEM_key`
 - status: `generated`
 - source_fingerprint: `d319cccd5c40c64e4813bf25136c22efcbdc31e8`
-- created_at_utc: `2026-04-21T04:27:13.474034+00:00`
-- updated_at_utc: `2026-04-21T04:27:13.474034+00:00`
+- created_at_utc: `2026-04-21T05:20:54.061087+00:00`
+- updated_at_utc: `2026-04-21T05:20:54.061087+00:00`

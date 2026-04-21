@@ -5,26 +5,21 @@
 - status: `canonical`
 - entity_type: `environment`
 
-## Structured Fields
+## Supported Fields
 
-- architecture: unknown
 - camera_friendly_landmarks:
   - **
 - chapter_mentions:
   - CH011
-- depth_cues: unknown
 - environment_type: Primary / Secondary Setting
-- foreground_midground_background: unknown
-- geography: unknown
 - layout: **
 - lighting: **
-- materials: unknown
 - mood: **
-- pathways: unknown
 - recurring_anchors:
   - **
-- scale: unknown
-- weather_or_atmosphere: unknown
+
+## Generated Fields
+
 
 ## Coverage
 
@@ -49,5 +44,5 @@
 - artifact_id: `DESC_ENV_ancient_korad_quarters`
 - status: `generated`
 - source_fingerprint: `367a8e6bf0d8b9dcfa6c8142a2cce91e5a6cba7e`
-- created_at_utc: `2026-04-21T04:36:21.190886+00:00`
-- updated_at_utc: `2026-04-21T04:36:21.190886+00:00`
+- created_at_utc: `2026-04-21T05:20:52.008691+00:00`
+- updated_at_utc: `2026-04-21T05:20:52.008691+00:00`

@@ -5,29 +5,17 @@
 - status: `canonical`
 - entity_type: `character`
 
-## Structured Fields
+## Supported Fields
 
-- age_range: unknown
-- build: unknown
 - chapter_mentions:
   - CH019
-- costume_materials: unknown
-- costume_signature: unknown
 - entity_kind: group
-- expression_tendency: unknown
-- eye_color: unknown
-- face_shape: unknown
-- facial_hair: unknown
-- hair_color: unknown
-- hair_style: unknown
-- height: unknown
 - physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character markdown describes a group entity.
-- posture: unknown
 - role: group
-- sex: unknown
 - silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character markdown describes a group entity.
-- skin_tone: unknown
-- voice_or_presence_notes: unknown
+
+## Generated Fields
+
 
 ## Coverage
 
@@ -53,5 +41,5 @@
 - artifact_id: `DESC_CHAR_warhoon_horde`
 - status: `generated`
 - source_fingerprint: `79b292c750e02e6dd35caa064fb4c295ff55ad46`
-- created_at_utc: `2026-04-21T04:34:36.228526+00:00`
-- updated_at_utc: `2026-04-21T04:34:36.228526+00:00`
+- created_at_utc: `2026-04-21T05:20:51.590857+00:00`
+- updated_at_utc: `2026-04-21T05:20:51.590857+00:00`
