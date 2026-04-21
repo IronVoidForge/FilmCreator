@@ -74,6 +74,7 @@ A shot owns:
 - alternate angle / zoom bundles
 - prompt-prep variants
 - shot-specific review records
+- explicit shot lineage links to the previous and next shot within the same scene
 
 ### Clip
 
@@ -157,6 +158,14 @@ This is especially important for:
 - alternate-angle prompts
 - image-to-image repair prompts
 
+Shot prompt bundles should also preserve adjacent-shot lineage explicitly:
+
+- previous shot id
+- current shot id
+- next shot id
+
+That lets the generation workflow traverse the scene tree without needing direct image-path references in the prompt text.
+
 ---
 
 ## Dialogue Ownership Rules
@@ -202,4 +211,3 @@ Examples:
 - clips own dialogue bindings and motion records
 - prompts are linked to owners and subjects without a spaghetti of direct foreign keys
 - database traversal remains obvious and queryable
-

@@ -768,6 +768,13 @@ def _package_for_shot(
             "scene_id": scene_id,
             "chapter_id": chapter_id,
             "shot_type": shot_type,
+            "previous_shot_id": str(shot.get("previous_shot_id", "")).strip().upper() or "(none)",
+            "next_shot_id": str(shot.get("next_shot_id", "")).strip().upper() or "(none)",
+            "shot_lineage_ids": _listify(
+                str(shot.get("previous_shot_id", "")).strip().upper(),
+                shot_id,
+                str(shot.get("next_shot_id", "")).strip().upper(),
+            ),
             "camera_description": camera_description,
             "composition": composition_hint,
             "prompt_family": "shot_prompt",

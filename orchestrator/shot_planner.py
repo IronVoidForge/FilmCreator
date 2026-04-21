@@ -77,6 +77,8 @@ class ShotPackage:
     shot_type: str
     camera_description: str
     composition: str
+    previous_shot_id: str = ""
+    next_shot_id: str = ""
     characters_in_frame: list[ShotReference] = field(default_factory=list)
     environment: ShotReference | None = None
     beat_ids: list[str] = field(default_factory=list)
@@ -93,6 +95,8 @@ class ShotPackage:
             "scene_id": self.scene_id,
             "chapter_id": self.chapter_id,
             "shot_order": self.shot_order,
+            "previous_shot_id": self.previous_shot_id,
+            "next_shot_id": self.next_shot_id,
             "shot_title": self.shot_title,
             "shot_type": self.shot_type,
             "camera_description": self.camera_description,
@@ -837,6 +841,8 @@ def _render_shot_package_markdown(package: ShotPackage) -> str:
         f"- scene_id: `{package.scene_id}`",
         f"- chapter_id: `{package.chapter_id}`",
         f"- shot_order: `{package.shot_order}`",
+        f"- previous_shot_id: `{package.previous_shot_id or '(none)'}`",
+        f"- next_shot_id: `{package.next_shot_id or '(none)'}`",
         f"- shot_type: `{package.shot_type}`",
         "",
         "## Camera",
@@ -903,6 +909,13 @@ def _write_shot_package_files(base_path: Path, package: ShotPackage) -> None:
     base_path.with_suffix(".md").write_text(_render_shot_package_markdown(package), encoding="utf-8")
 
 
+def _apply_shot_lineage(records: list[ShotPackage]) -> None:
+    ordered = sorted(records, key=lambda item: item.shot_order)
+    for index, record in enumerate(ordered):
+        record.previous_shot_id = ordered[index - 1].shot_id if index > 0 else ""
+        record.next_shot_id = ordered[index + 1].shot_id if index + 1 < len(ordered) else ""
+
+
 def _render_scene_shot_index(records: list[ShotPackage]) -> str:
     lines = ["# Shot Index", ""]
     if not records:
@@ -912,7 +925,8 @@ def _render_scene_shot_index(records: list[ShotPackage]) -> str:
         env_name = record.environment.display_name if record.environment else "(none)"
         lines.append(
             f"- `{record.shot_id}` - {record.shot_title} "
-            f"(type={record.shot_type}, beat_ids={', '.join(record.beat_ids) or '(none)'}, cast={len(record.characters_in_frame)}, env={env_name})"
+            f"(type={record.shot_type}, beat_ids={', '.join(record.beat_ids) or '(none)'}, cast={len(record.characters_in_frame)}, env={env_name}, "
+            f"prev={record.previous_shot_id or '(none)'}, next={record.next_shot_id or '(none)'})"
         )
     return "\n".join(lines) + "\n"
 
@@ -925,7 +939,8 @@ def _render_shot_package_index(records: list[ShotPackage]) -> str:
     for record in sorted(records, key=lambda item: (item.scene_id, item.shot_order, item.shot_id)):
         lines.append(
             f"- `{record.scene_id}/{record.shot_id}` - {record.shot_title} "
-            f"(type={record.shot_type}, cast={len(record.characters_in_frame)}, env={record.environment.display_name if record.environment else '(none)'})"
+            f"(type={record.shot_type}, cast={len(record.characters_in_frame)}, env={record.environment.display_name if record.environment else '(none)'}, "
+            f"prev={record.previous_shot_id or '(none)'}, next={record.next_shot_id or '(none)'})"
         )
     return "\n".join(lines) + "\n"
 
@@ -1173,6 +1188,11 @@ def run_shot_planning(
                 review_records.append(package)
                 scene_review_shots.append(package)
                 _append_shot_review_item(review_queue, package)
+
+        _apply_shot_lineage(scene_shots)
+        for package in scene_shots:
+            base_path = scene_dir / package.shot_id / package.shot_id
+            _write_shot_package_files(base_path, package)
 
         scene_index_path = scene_dir / "SHOT_INDEX.md"
         write_json(scene_dir / "SHOT_INDEX.json", [package.to_dict() for package in sorted(scene_shots, key=lambda item: item.shot_order)])

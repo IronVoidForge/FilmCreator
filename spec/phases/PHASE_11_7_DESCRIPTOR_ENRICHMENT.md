@@ -125,6 +125,7 @@ Every entity type can use these primitives where relevant:
 - keep camera, composition, and continuity separate from identity traits
 - keep negative constraints separate from positive descriptors
 - keep source metadata separate from render-facing prompt text
+- treat generated visual fields as real best-effort canon, not as empty placeholders, whenever a reasonable book-compatible choice exists
 
 ### What Should Be Asked Earlier Versus Later
 
@@ -467,6 +468,8 @@ Shot descriptors should capture the exact framing and movement facts that matter
 - shot_id
 - shot_title
 - shot_type
+- previous_shot_id
+- next_shot_id
 
 ### Camera Structure
 
@@ -522,6 +525,7 @@ Shot descriptors should capture the exact framing and movement facts that matter
 - use shot_type, angle, framing, and motion to seed the prompt family
 - keep the prompt compact, but do not omit the camera facts that define the shot
 - keep character and environment descriptors tied to their canonical ids
+- keep previous/current/next shot lineage explicit so later workflows can traverse the scene sequence without needing direct image paths
 - if a shot is missing a solid environment or subject descriptor, flag it for review instead of inventing a complete scene
 
 ### Optional Scene Image-Gen Detail Fields

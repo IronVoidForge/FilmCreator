@@ -86,6 +86,8 @@ SCENE_FIELD_ORDER = [
 
 SHOT_FIELD_ORDER = [
     "shot_type",
+    "previous_shot_id",
+    "next_shot_id",
     "angle",
     "framing",
     "lens_family",
@@ -1262,6 +1264,7 @@ def _llm_refine_descriptor(
         "If you make a careful visual choice to complete the canon, put it in generated fields. "
         "Never place inferred detail in supported fields. "
         "For generated fields, prefer a best-effort visual decision over unknown when canon and evidence make a reasonable choice. "
+        "Do not leave generated visual fields empty when a reasonable canon-compatible choice can be made. "
         "Return one tagged FilmCreator markdown packet only. "
         "Do not return JSON."
     )
@@ -1273,7 +1276,7 @@ Enrich the following {entity_type} descriptor using the evidence provided.
 Keep the output compact. Favor structured fields over prose.
 Use the book, registry, and existing contract evidence for supported fields.
 Use careful inference for generated fields when the text does not spell out a visual detail but the canon is still clear.
-For generated fields, make a best-effort visual decision from the book evidence and stable context instead of using unknown whenever the canon supports a reasonable choice. Put those values in generated_fields_markdown, keep supported_fields_markdown strictly book-backed, and use review flags for anything still low-confidence or questionable.
+For generated fields, make a best-effort visual decision from the book evidence and stable context instead of using unknown whenever the canon supports a reasonable choice. Do not leave generated visual fields empty if you can make a canon-compatible choice. Put those values in generated_fields_markdown, keep supported_fields_markdown strictly book-backed, and use review flags for anything still low-confidence or questionable.
 
 DESCRIPTOR:
 {json.dumps({
@@ -1799,6 +1802,8 @@ def _base_shot_descriptor(
     character_refs = shot.get("characters_in_frame", []) if isinstance(shot.get("characters_in_frame"), list) else []
 
     set_field("shot_type", shot.get("shot_type") or "medium", origin="shot_package")
+    set_field("previous_shot_id", str(shot.get("previous_shot_id", "")).strip().upper() or "none", origin="shot_package")
+    set_field("next_shot_id", str(shot.get("next_shot_id", "")).strip().upper() or "none", origin="shot_package")
     set_field("angle", shot.get("shot_type") or "medium", origin="shot_package")
     set_field("framing", shot.get("composition") or "Readable composition.", origin="shot_package")
     set_field("lens_family", "neutral_reference", origin="fallback")
