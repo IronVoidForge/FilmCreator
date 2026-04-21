@@ -168,9 +168,9 @@ The latest validated state is:
 - next validation: keep tuning the scene reference resolution and bridge the contracts into shot planning inputs
 
 ### Phase 10 – Shot Planning and Shot Packages
-- status: `planned`
-- evidence: legacy clip planning and prompt writing provide reusable structural precedent but not the final architecture
-- next validation: emit ordered shot packages, prompt bundles, and reference bundles driven by scene contracts and canonical bibles
+- status: `validated`
+- evidence: `synthesize-shot-packages` runs end to end, writes per-shot JSON/markdown packages, and produces shot indexes plus review queues for the full `princess_of_mars_test` run
+- next validation: tighten shot-to-dialogue and edit-aware sequencing on top of the new shot contract layer
 
 ### Phase 11 – Dialogue, Timing, and Edit-Aware Sequencing
 - status: `planned`

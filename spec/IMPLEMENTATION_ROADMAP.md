@@ -169,6 +169,10 @@ This is the point where FilmCreator stops being “mostly analysis” and become
 
 Convert scene contracts into ordered shot plans and generation-facing shot packages.
 
+- status: `validated`
+- evidence: `synthesize-shot-packages` runs end to end, writes per-shot JSON/markdown packages, and produces shot indexes plus review queues for the full `princess_of_mars_test` run
+- next validation: tighten shot-to-dialogue and edit-aware sequencing on top of the new shot contract layer
+
 #### Inputs
 
 - scene contracts

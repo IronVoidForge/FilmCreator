@@ -7,6 +7,7 @@ from .character_bible import run_character_bible_synthesis
 from .environment_bible import run_environment_bible_synthesis
 from .identity_refinement import run_identity_refinement
 from .scene_contracts import run_scene_contract_synthesis
+from .shot_planner import run_shot_planning
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -27,6 +28,11 @@ def build_parser() -> argparse.ArgumentParser:
     sc.add_argument("project_slug")
     sc.add_argument("--no-llm", action="store_true")
     sc.add_argument("--force", action="store_true")
+
+    sp = subparsers.add_parser("synthesize-shot-packages")
+    sp.add_argument("project_slug")
+    sp.add_argument("--no-llm", action="store_true")
+    sp.add_argument("--force", action="store_true")
 
     r = subparsers.add_parser("refine-identities")
     r.add_argument("project_slug")
@@ -58,6 +64,14 @@ def main() -> None:
 
     elif args.command == "synthesize-scene-contracts":
         summary = run_scene_contract_synthesis(
+            args.project_slug,
+            use_llm=not args.no_llm,
+            force=args.force,
+        )
+        print(json.dumps(summary.to_dict(), indent=2))
+
+    elif args.command == "synthesize-shot-packages":
+        summary = run_shot_planning(
             args.project_slug,
             use_llm=not args.no_llm,
             force=args.force,
