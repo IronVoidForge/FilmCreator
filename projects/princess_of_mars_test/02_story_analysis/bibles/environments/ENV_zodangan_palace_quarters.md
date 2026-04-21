@@ -1,0 +1,46 @@
+# Environment Bible: zodangan_palace_quarters
+
+- environment_id: `zodangan_palace_quarters`
+- status: `canonical`
+- entity_kind: `environment`
+- first_seen_chapter: `CH021`
+- last_seen_chapter: `CH021`
+
+## Identity
+
+- display_name: zodangan_palace_quarters
+- environment_type: Primary Setting / Interior Residential Quarters
+- chapter_mentions: CH021
+
+## Visual Bible
+
+The Zodangan palace quarters consist of large-scale, high-status palatial living spaces located within the royal palace of Than Kosis. The architecture is characterized by high ceilings and a sense of prestige, reflecting its proximity to the seat of power. The design follows high-status Martian architectural styles.
+
+- layout_notes: Large-scale rooms with high ceilings; situated within the royal palace of Than Kosis.
+- lighting: Controlled interior lighting designed to maintain a regal atmosphere.
+- mood: Regal, secure, and prestigious.
+- recurring_elements: High-status Martian architecture, Large-scale palatial rooms
+
+## Continuity
+
+- constraints: Must maintain a sense of security and prestige, Lighting must remain controlled to support the regal atmosphere
+- unresolved_ambiguities: Specific architectural materials or decorative motifs are not defined., Exact layout/floor plan of the quarters is unknown.
+
+## Evidence Summary
+
+- Environment currently kept under extracted canonical id.
+- Role: Primary Setting
+- Geography: Interior residential quarters located within the royal palace of Than Kosis.
+- Lighting: Regal, high-status atmosphere; controlled interior lighting; secure and prestigious environment.
+- Atmosphere: Regal, high-status atmosphere; controlled interior lighting; secure and prestigious environment.
+- Scale: Large-scale palatial rooms; high ceilings; proximity to the seat of power.
+- Prompt Phrases: Royal palace interiors, Zodangan noble quarters, palatial living spaces, high-status Martian architecture.
+- [CH021] CHAPTER XXI (book index hit)
+
+## Metadata
+
+- artifact_id: `ENV_zodangan_palace_quarters`
+- status: `generated`
+- source_fingerprint: `bbf8363cceb04878f9607c0a9db0cc3f9f7fe8a8`
+- created_at_utc: `2026-04-21T23:11:52.253029+00:00`
+- updated_at_utc: `2026-04-21T23:11:52.253029+00:00`
