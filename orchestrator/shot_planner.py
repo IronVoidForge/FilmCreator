@@ -1010,14 +1010,17 @@ def run_shot_planning(
     warnings: list[str] = []
     shot_records: list[ShotPackage] = []
     review_records: list[ShotPackage] = []
+    total_scenes = len(scene_contract_files)
 
-    for scene_contract_path in scene_contract_files:
+    for scene_index, scene_contract_path in enumerate(scene_contract_files, start=1):
+        scene_started_at = time.perf_counter()
         scene_contract = _load_json_file(scene_contract_path)
         scene_id = str(scene_contract.get("scene_id", "")).strip().upper() or scene_contract_path.stem.upper()
         chapter_id = str(scene_contract.get("chapter_id", "")).strip().upper() or _chapter_id_from_scene_id(scene_id)
         scene_title = _scene_contract_to_scene_title(scene_contract)
         scene_dir = output_root / chapter_id / scene_id
         scene_dir.mkdir(parents=True, exist_ok=True)
+        print(f"[shot-planner] {scene_index}/{total_scenes} starting {scene_id}...")
 
         shot_blueprints = _build_shot_blueprints(scene_contract, project_dir)
         evidence = _load_shot_planning_evidence(
@@ -1030,11 +1033,14 @@ def run_shot_planning(
         scene_shots: list[ShotPackage] = []
         scene_review_shots: list[ShotPackage] = []
         scene_written_files: list[str] = []
+        total_shots = len(shot_blueprints)
 
-        for blueprint in shot_blueprints:
+        for shot_index, blueprint in enumerate(shot_blueprints, start=1):
             shot_id = str(blueprint.get("shot_id", "")).strip().upper()
             if not shot_id:
                 continue
+            shot_started_at = time.perf_counter()
+            print(f"[shot-planner] {scene_index}/{total_scenes} {shot_index}/{total_shots} starting {scene_id}/{shot_id}...")
             base_path = scene_dir / shot_id
             existing = read_json(base_path.with_suffix(".json")) if base_path.with_suffix(".json").exists() else None
             metadata = _shot_package_metadata(existing, artifact_id=f"{scene_id}_{shot_id}_SHOT_PACKAGE", fp=fp)
@@ -1050,6 +1056,8 @@ def run_shot_planning(
                         review_records.append(package)
                         scene_review_shots.append(package)
                         _append_shot_review_item(review_queue, package)
+                    elapsed = round(time.perf_counter() - shot_started_at, 1)
+                    print(f"[shot-planner] {scene_index}/{total_scenes} {shot_index}/{total_shots} finished {scene_id}/{shot_id} (reused) in {elapsed}s")
                     continue
 
                 if old_meta.get("status") == "locked":
@@ -1057,6 +1065,8 @@ def run_shot_planning(
                     existing["metadata"]["status"] = "stale"
                     write_json(base_path.with_suffix(".json"), existing)
                     warnings.append(f"Locked shot package became stale and was not regenerated: {scene_id}/{shot_id}")
+                    elapsed = round(time.perf_counter() - shot_started_at, 1)
+                    print(f"[shot-planner] {scene_index}/{total_scenes} {shot_index}/{total_shots} finished {scene_id}/{shot_id} (stale locked) in {elapsed}s")
                     continue
 
             synthesized_payload = _llm_synthesis(
@@ -1189,6 +1199,10 @@ def run_shot_planning(
                 scene_review_shots.append(package)
                 _append_shot_review_item(review_queue, package)
 
+            elapsed = round(time.perf_counter() - shot_started_at, 1)
+            mode = "synthesized" if synthesized_payload else "generated"
+            print(f"[shot-planner] {scene_index}/{total_scenes} {shot_index}/{total_shots} finished {scene_id}/{shot_id} ({mode}) in {elapsed}s")
+
         _apply_shot_lineage(scene_shots)
         for package in scene_shots:
             base_path = scene_dir / package.shot_id / package.shot_id
@@ -1202,6 +1216,9 @@ def run_shot_planning(
             review_path = scene_dir / "SHOT_REVIEW_INDEX.md"
             review_path.write_text(_render_scene_shot_index(scene_review_shots), encoding="utf-8")
             written_files.append(str(review_path))
+
+        scene_elapsed = round(time.perf_counter() - scene_started_at, 1)
+        print(f"[shot-planner] {scene_index}/{total_scenes} finished {scene_id} in {scene_elapsed}s")
 
     write_json(review_dir / "SHOT_PACKAGE_REVIEW_QUEUE.json", review_queue)
     (review_dir / "SHOT_PACKAGE_REVIEW_QUEUE.md").write_text(_render_review_queue_markdown(review_queue), encoding="utf-8")

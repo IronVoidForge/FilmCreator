@@ -755,8 +755,11 @@ def run_environment_bible_synthesis(
     warnings: list[str] = []
     bible_records: list[EnvironmentBible] = []
     review_records: list[EnvironmentBible] = []
+    total_entries = len(registry)
 
-    for env_id, entry in registry.items():
+    for index, (env_id, entry) in enumerate(registry.items(), start=1):
+        started_at = time.perf_counter()
+        print(f"[environment-bible] {index}/{total_entries} starting {env_id}...")
         fp = _fingerprint(entry)
         base_path = output_dir / f"ENV_{env_id}"
         existing = read_json(base_path.with_suffix(".json")) if base_path.with_suffix(".json").exists() else None
@@ -789,6 +792,8 @@ def run_environment_bible_synthesis(
                 bible_records.append(bible)
                 if not _is_film_facing_environment(entry, bible) or bible.unresolved_ambiguities:
                     review_records.append(bible)
+                elapsed = round(time.perf_counter() - started_at, 1)
+                print(f"[environment-bible] {index}/{total_entries} finished {env_id} (reused) in {elapsed}s")
                 continue
 
             if old_meta.get("status") == "locked":
@@ -796,6 +801,8 @@ def run_environment_bible_synthesis(
                 existing["metadata"]["status"] = "stale"
                 write_json(base_path.with_suffix(".json"), existing)
                 warnings.append(f"Locked environment bible became stale and was not regenerated: {env_id}")
+                elapsed = round(time.perf_counter() - started_at, 1)
+                print(f"[environment-bible] {index}/{total_entries} finished {env_id} (stale locked) in {elapsed}s")
                 continue
 
         evidence_summary, evidence_refs, parsed_sources = _collect_evidence(project_slug, entry)
@@ -858,6 +865,10 @@ def run_environment_bible_synthesis(
                     "issues": bible.unresolved_ambiguities,
                 }
             )
+
+        elapsed = round(time.perf_counter() - started_at, 1)
+        mode = "synthesized" if synthesized_payload else "generated"
+        print(f"[environment-bible] {index}/{total_entries} finished {env_id} ({mode}) in {elapsed}s")
 
     write_json(review_dir / "ENVIRONMENT_BIBLE_REVIEW_QUEUE.json", review_queue)
     write_environment_review_queue_markdown(review_dir / "ENVIRONMENT_BIBLE_REVIEW_QUEUE.md", review_queue)
