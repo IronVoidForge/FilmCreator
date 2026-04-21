@@ -187,6 +187,11 @@ The latest validated state is:
 - evidence: recurring story-significant items need their own canonical index so artifacts like rings, swords, armor sets, and other unique props can stay visually and narratively consistent
 - next validation: produce a stable item registry with chapter mentions, visual summaries, and reference-sheet eligibility flags
 
+### Phase 11.7 â€“ Descriptor Enrichment and Reference Coverage
+- status: `planned`
+- evidence: the project now has canonical bibles, prompt preparation, and book-index retrieval, so a structured descriptor layer can consolidate evidence-grounded traits and reference coverage without re-asking the same questions
+- next validation: produce structured descriptor profiles with confidence, provenance, and coverage maps for characters, environments, scenes, and key items
+
 ## Cross-Cutting Work Newly Required
 
 ### Artifact lifecycle and reuse

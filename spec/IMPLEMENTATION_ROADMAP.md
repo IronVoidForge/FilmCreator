@@ -301,6 +301,42 @@ Validated.
 - writes shot-level dialogue notes and review queues
 - preserves unresolved dialogue instead of carrying forward false speakers
 
+### Phase 11.7 – Descriptor Enrichment and Reference Coverage
+
+#### Goal
+
+Turn canonical entities into structured, evidence-grounded descriptor profiles so later prompt preparation can reuse stable visual and scene detail without repeatedly asking the LLM to rediscover it.
+
+#### Inputs
+
+- chapter extraction outputs
+- book index and paragraph windows
+- character bibles
+- environment bibles
+- scene contracts
+- shot packages
+- key-item registry entries when available
+- continuity notes and review queues
+- librarian retrieval helpers
+
+#### Outputs
+
+- structured character descriptor profiles
+- structured environment descriptor profiles
+- structured scene descriptor profiles
+- structured key-item descriptor profiles
+- reference coverage maps
+- field-level confidence and provenance records
+- review queues for thin or uncertain fields
+
+#### Why This Phase Is Needed
+
+The project already knows the canon and can prepare prompt bundles. This phase adds a reusable descriptor layer so those prompt bundles can be driven by structured fields instead of repeatedly rediscovering the same facts from prose summaries.
+
+#### Current Status
+
+Planned.
+
 ### Phase 12 – Character Sheet Generation and Approval (lighter planning for now)
 
 - multi-angle character sheets
@@ -481,13 +517,14 @@ When older beat/clip planning logic is still useful, wrap it through compatibili
 6. Implement Phase 11 dialogue, timing, and edit-aware sequencing.
 7. Implement Phase 11.5 prompt preparation and reference pack assembly.
 8. Implement Phase 11.6 key item index and reference pack assembly.
-9. Then move into production asset generation phases 12-17.
+9. Implement Phase 11.7 descriptor enrichment and reference coverage.
+10. Then move into production asset generation phases 12-17.
 
 ## Database Timing
 
 SQLite should remain deferred until:
 
-- phase 7-11.6 contracts stabilize,
+- phase 7-11.7 contracts stabilize,
 - lifecycle and dependency semantics stabilize,
 - the file-first artifacts are mature enough to sync rather than speculate.
 
