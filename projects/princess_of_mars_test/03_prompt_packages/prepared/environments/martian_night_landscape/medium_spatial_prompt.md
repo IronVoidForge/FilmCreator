@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, medium spatial view showing foreground, midground, and background relationships, Wide horizons, celestial dominance of the twin moons, distant silhouettes of Martian landmarks., Deep nocturnal hues, clear spatial layout, readable anchors and depth cues, no characters, no text, no wa...
+Film environment reference sheet, medium spatial view showing foreground, midground, and background relationships, Wide horizons, celestial dominance of the twin moons, distant silhouettes of Martian landmarks., Barsoomian night sky, clear spatial layout, readable anchors and depth cues, no characters, no text, no w...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

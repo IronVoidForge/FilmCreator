@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Tighter zoom with the same beat and preserved continuity.. Terror $\rightarrow$ Adrenaline/Survival Instinct. **Likely Visual Coverage Families:** - Rapid pans and tracking shots of the charging m.... Active camera with tracking energy and clear spatial orientation.. tighter framing on the same moment. Characters: . Environment: described environment with stable spatial continuity. Keep continuit...
+Film shot prompt. Tighter zoom with the same beat and preserved continuity.. Terror $\rightarrow$ Adrenaline/Survival Instinct. **Likely Visual Coverage Families:** - Rapid pans and tracking shots of the charging m.... Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with crossing the frame and maintaining readable movement.. Characters: . Environment: described environment...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH003
 - shot_type: action
 - camera_description: Active camera with tracking energy and clear spatial orientation.
-- composition: tighter framing on the same moment
+- composition: Dynamic composition in Create high-stakes tension and demonstrate the protagonist's unique a... with scene_character crossing the frame and maintaining readable movement.
 - prompt_family: shot_prompt
 
 # Continuity Notes

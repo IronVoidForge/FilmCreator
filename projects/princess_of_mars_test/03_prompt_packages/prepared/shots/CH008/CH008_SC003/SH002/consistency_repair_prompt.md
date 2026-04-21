@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Observation $\rightarrow$ Melancholy/Empathy. **Likely Visual Coverage Families:** - Close-ups of the protagonist's face (Emotional react.... Active camera with tracking energy and clear spatial orientation.. continuity-preserving framing with exact pose and costume locks. Characters: . Environment: describ...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Observation $\rightarrow$ Melancholy/Empathy. **Likely Visual Coverage Families:** - Close-ups of the protagonist's face (Emotional react.... Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with crossing the frame and maintaining readable movement.. Characters: . En...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH008
 - shot_type: action
 - camera_description: Active camera with tracking energy and clear spatial orientation.
-- composition: continuity-preserving framing with exact pose and costume locks
+- composition: Dynamic composition in Internalize the cost of war through the protagonist's perspective. with scene_character crossing the frame and maintaining readable movement.
 - prompt_family: shot_prompt
 
 # Continuity Notes

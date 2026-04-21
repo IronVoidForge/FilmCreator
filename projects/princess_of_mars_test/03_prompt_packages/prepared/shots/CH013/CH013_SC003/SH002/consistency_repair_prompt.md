@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. From quiet companionship to deep romantic epiphany. **Likely Visual Coverage Families:** - Low-light/Moonlit wide shots of the couple wal.... Stable medium framing that keeps action and character readable.. continuity-preserving framing with exact pose and costume locks. Characters: described character with...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. From quiet companionship to deep romantic epiphany. **Likely Visual Coverage Families:** - Low-light/Moonlit wide shots of the couple wal.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring, .. Characters: described character with stable costume and...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH013
 - shot_type: medium
 - camera_description: Stable medium framing that keeps action and character readable.
-- composition: continuity-preserving framing with exact pose and costume locks
+- composition: Readable medium composition in An avenue or walkway in the Thark city under the night sky/two moons featuring john_carter, dejah_thoris.
 - prompt_family: shot_prompt
 
 # Continuity Notes

@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Tighter zoom with the same beat and preserved continuity.. Tension and growing dread. **Likely Visual Coverage Families:** - Low-light shots of the sleeping quarters. - Close-ups of the protagonis.... Shoulder-level conversational framing with visible foreground presence.. tighter framing on the same moment. Characters: . Environment: described environment with stable spatial continuity. Keep con...
+Film shot prompt. Tighter zoom with the same beat and preserved continuity.. Tension and growing dread. **Likely Visual Coverage Families:** - Low-light shots of the sleeping quarters. - Close-ups of the protagonis.... Shoulder-level conversational framing with visible foreground presence.. Over-the-shoulder composition in with sharing the frame for dialogue or tension.. Characters: . Environment: described enviro...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH009
 - shot_type: over_the_shoulder
 - camera_description: Shoulder-level conversational framing with visible foreground presence.
-- composition: tighter framing on the same moment
+- composition: Over-the-shoulder composition in To deliver critical plot information via eavesdropping and raise the... with scene_character sharing the frame for dialogue or tension.
 - prompt_family: shot_prompt
 
 # Continuity Notes

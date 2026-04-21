@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Contentment/Peace $\rightarrow$ Panic/Urgency. **Likely Visual Coverage Families:** - Warm, golden-hued close-ups of the incubator and th.... Tight detail framing focused on a single visual object or gesture.. continuity-preserving framing with exact pose and costume locks. Characters: described character w...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Contentment/Peace $\rightarrow$ Panic/Urgency. **Likely Visual Coverage Families:** - Warm, golden-hued close-ups of the incubator and th.... Tight detail framing focused on a single visual object or gesture.. Detail composition centered on the key physical action or prop inside .. Characters: described cha...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH027
 - shot_type: insert_detail
 - camera_description: Tight detail framing focused on a single visual object or gesture.
-- composition: continuity-preserving framing with exact pose and costume locks
+- composition: Detail composition centered on the key physical action or prop inside The Palace in Helium (Rooftop Shrine/Sunken Garden).
 - prompt_family: shot_prompt
 
 # Continuity Notes

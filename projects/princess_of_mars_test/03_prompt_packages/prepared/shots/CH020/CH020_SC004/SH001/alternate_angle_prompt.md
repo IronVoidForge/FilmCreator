@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Dread $\rightarrow$ Panic $\rightarrow$ Intense Focus/Action $\rightarrow$ Relief.. Active camera with tracking energy and clear spatial orientation.. shifted perspective with preserved subject spacing. Characters: described character with stable costume and silhouette. Environment: described environment with stable spatial continuity....
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Dread $\rightarrow$ Panic $\rightarrow$ Intense Focus/Action $\rightarrow$ Relief.. Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with, crossing the frame and maintaining readable movement.. Characters: described character with stable costume and silhouette. Environment: described environment...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH020
 - shot_type: action
 - camera_description: Active camera with tracking energy and clear spatial orientation.
-- composition: shifted perspective with preserved subject spacing
+- composition: Dynamic composition in Interior of the Atmosphere Factory (escape corridors/locks) with protagonist, woola crossing the frame and maintaining readable movement.
 - prompt_family: shot_prompt
 
 # Continuity Notes

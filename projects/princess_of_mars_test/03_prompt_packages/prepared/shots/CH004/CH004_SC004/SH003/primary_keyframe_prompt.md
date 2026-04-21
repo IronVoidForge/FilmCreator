@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Exhaustion/Hunger $\rightarrow$ Relief/Curiosity. **Likely Visual Coverage Families:** * Medium shots of the non-verbal communication bet.... Stable medium framing that keeps action and character readable.. balanced framing with clear spatial separation. Characters: . Environment: described environment with stable spatial co...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Exhaustion/Hunger $\rightarrow$ Relief/Curiosity. **Likely Visual Coverage Families:** * Medium shots of the non-verbal communication bet.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: . Environment: described environment with stable spatial contin...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH004
 - shot_type: medium
 - camera_description: Stable medium framing that keeps action and character readable.
-- composition: balanced framing with clear spatial separation
+- composition: Readable medium composition in Transition the Narrator to a period of rest and introduce his primary... featuring scene_character.
 - prompt_family: shot_prompt
 
 # Continuity Notes

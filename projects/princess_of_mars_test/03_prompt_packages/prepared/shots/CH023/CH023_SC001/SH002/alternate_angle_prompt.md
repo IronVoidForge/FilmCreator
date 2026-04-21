@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. From tension/secrecy to righteous fury and resolve. **Likely Visual Coverage Families:** - Tight medium shots for intimate dialogue. - Cl.... Shoulder-level conversational framing with visible foreground presence.. shifted perspective with preserved subject spacing. Characters: described character with stable costume and silhouette. En...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. From tension/secrecy to righteous fury and resolve. **Likely Visual Coverage Families:** - Tight medium shots for intimate dialogue. - Cl.... Shoulder-level conversational framing with visible foreground presence.. Over-the-shoulder composition in with, sharing the frame for dialogue or tension.. Characters: described character with st...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH023
 - shot_type: over_the_shoulder
 - camera_description: Shoulder-level conversational framing with visible foreground presence.
-- composition: shifted perspective with preserved subject spacing
+- composition: Over-the-shoulder composition in Kantos Kan's private quarters (Zodanga) with john_carter, kantos_kan sharing the frame for dialogue or tension.
 - prompt_family: shot_prompt
 
 # Continuity Notes

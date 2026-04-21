@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Wonder (at technology) $\rightarrow$ Tension (political discourse).. Wide establishing frame with a steady or lightly drifting camera.. shifted perspective with preserved subject spacing. Characters: described character with stable costume and silhouette. Environment: described environment with stable spatial continuity. Keep continuit...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Wonder (at technology) $\rightarrow$ Tension (political discourse).. Wide establishing frame with a steady or lightly drifting camera.. Wide composition across with placed for immediate spatial orientation.. Characters: described character with stable costume and silhouette. Environment: described environment with stable spatial contin...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH021
 - shot_type: establishing_wide
 - camera_description: Wide establishing frame with a steady or lightly drifting camera.
-- composition: shifted perspective with preserved subject spacing
+- composition: Wide composition across The Barsoomian plains/deserts with john_carter placed for immediate spatial orientation.
 - prompt_family: shot_prompt
 
 # Continuity Notes

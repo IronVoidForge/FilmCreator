@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Vigilance $\rightarrow$ Growing Tension/Urgency.. Wide establishing frame with a steady or lightly drifting camera.. balanced framing with clear spatial separation. Characters: described character with stable costume and silhouette. Environment: described environment with stable spatial continuity. Keep continuity exact acro...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Vigilance $\rightarrow$ Growing Tension/Urgency.. Wide establishing frame with a steady or lightly drifting camera.. Wide composition across with placed for immediate spatial orientation.. Characters: described character with stable costume and silhouette. Environment: described environment with stable spatial continuity. Ke...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH001
 - shot_type: establishing_wide
 - camera_description: Wide establishing frame with a steady or lightly drifting camera.
-- composition: balanced framing with clear spatial separation
+- composition: Wide composition across Arizona hills/valleys with john_carter placed for immediate spatial orientation.
 - prompt_family: shot_prompt
 
 # Continuity Notes

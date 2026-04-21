@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, clear interior layout with readable pathways, structure, and scale, Formal assembly hall within the Thark stronghold, structured for council proceedings and judicial duels., Somber, high-tension, authoritative, heavy atmosphere of political peril and judgment., clear spatial layout,...
+Film environment reference sheet, clear interior layout with readable pathways, structure, and scale, Formal assembly hall within the Thark stronghold, structured for council proceedings and judicial duels., martial palace hall, council chamber, clear spatial layout, readable anchors and depth cues, no characters, n...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

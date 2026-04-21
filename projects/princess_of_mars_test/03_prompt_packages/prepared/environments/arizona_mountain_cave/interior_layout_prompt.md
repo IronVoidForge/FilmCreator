@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, clear interior layout with readable pathways, structure, and scale, Enclosed cave walls, a specific ledge where a body lies, a sense of claustrophobia contrasted by the vastness of the unseen darkness behind the protagonist., Thick, pungent, mysterious vapors clinging to the ground,...
+Film environment reference sheet, clear interior layout with readable pathways, structure, and scale, Enclosed cave walls, a specific ledge where a body lies, a sense of claustrophobia contrasted by the vastness of the unseen darkness behind the protagonist., dark mountain cavern, clear spatial layout, readable anch...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

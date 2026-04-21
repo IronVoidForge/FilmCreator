@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Tighter zoom with the same beat and preserved continuity.. Confusion/Pain $\rightarrow$ Dread/Disorientation. **Likely Visual Coverage Families:** - Extreme close-ups of eyes opening/pain. - Wide.... Stable medium framing that keeps action and character readable.. tighter framing on the same moment. Characters: described character with stable costume and silhouette. Environment: described environ...
+Film shot prompt. Tighter zoom with the same beat and preserved continuity.. Confusion/Pain $\rightarrow$ Dread/Disorientation. **Likely Visual Coverage Families:** - Extreme close-ups of eyes opening/pain. - Wide.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: described character with stable costume and silhouette. Environment: described...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH018
 - shot_type: medium
 - camera_description: Stable medium framing that keeps action and character readable.
-- composition: tighter framing on the same moment
+- composition: Readable medium composition in Small medical room featuring protagonist.
 - prompt_family: shot_prompt
 
 # Continuity Notes

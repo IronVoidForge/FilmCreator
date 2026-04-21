@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Tighter zoom with the same beat and preserved continuity.. From disorientation to disciplined determination. **Likely Visual Coverage Families:** - Wide shots of training drills and weapon handlin.... Stable medium framing that keeps action and character readable.. tighter framing on the same moment. Characters: . Environment: described environment with stable spatial continuity. Keep continuity...
+Film shot prompt. Tighter zoom with the same beat and preserved continuity.. From disorientation to disciplined determination. **Likely Visual Coverage Families:** - Wide shots of training drills and weapon handlin.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: . Environment: described environment with stable spatial continuity. Keep con...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH009
 - shot_type: medium
 - camera_description: Stable medium framing that keeps action and character readable.
-- composition: tighter framing on the same moment
+- composition: Readable medium composition in Establish the protagonist's rapid adaptation to Martian culture and h... featuring scene_character.
 - prompt_family: shot_prompt
 
 # Continuity Notes

@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. From struggle/tension to wonder and social validation. **Likely Visual Coverage Families:** - Wide shots of the Martian cityscape/trainin.... Controlled closing frame that lands the consequence of the beat.. shifted perspective with preserved subject spacing. Characters: described character with stable costume and silhouette. Environme...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. From struggle/tension to wonder and social validation. **Likely Visual Coverage Families:** - Wide shots of the Martian cityscape/trainin.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of his success earns him respect from the community and a gold anklet rewa...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH013
 - shot_type: closing_reaction
 - camera_description: Controlled closing frame that lands the consequence of the beat.
-- composition: shifted perspective with preserved subject spacing
+- composition: Closing composition in The city of the Tharks (plazas/stables area) that emphasizes the consequence of his success earns him respect from the community and a gold anklet reward from lorquas ptomel..
 - prompt_family: shot_prompt
 
 # Continuity Notes

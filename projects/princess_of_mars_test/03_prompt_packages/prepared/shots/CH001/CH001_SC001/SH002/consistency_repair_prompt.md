@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Excitement/Triumph $\rightarrow$ Solitude/Anticipation.. Stable medium framing that keeps action and character readable.. continuity-preserving framing with exact pose and costume locks. Characters: described character with stable costume and silhouette, . Environment: described environment with stable spat...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Excitement/Triumph $\rightarrow$ Solitude/Anticipation.. Stable medium framing that keeps action and character readable.. Readable medium composition in featuring, .. Characters: described character with stable costume and silhouette, . Environment: described environment with stable spatial continuity. Keep...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH001
 - shot_type: medium
 - camera_description: Stable medium framing that keeps action and character readable.
-- composition: continuity-preserving framing with exact pose and costume locks
+- composition: Readable medium composition in Remote gold-bearing quartz vein featuring john_carter, Captain James K. Powell.
 - prompt_family: shot_prompt
 
 # Continuity Notes

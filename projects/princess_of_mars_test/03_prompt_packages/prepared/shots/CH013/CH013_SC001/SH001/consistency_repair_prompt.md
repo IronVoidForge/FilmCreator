@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. From struggle/tension to wonder and social validation. **Likely Visual Coverage Families:** - Wide shots of the Martian cityscape/trainin.... Active camera with tracking energy and clear spatial orientation.. continuity-preserving framing with exact pose and costume locks. Characters: described character wi...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. From struggle/tension to wonder and social validation. **Likely Visual Coverage Families:** - Wide shots of the Martian cityscape/trainin.... Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with crossing the frame and maintaining readable movement.. Characters: desc...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH013
 - shot_type: action
 - camera_description: Active camera with tracking energy and clear spatial orientation.
-- composition: continuity-preserving framing with exact pose and costume locks
+- composition: Dynamic composition in The city of the Tharks (plazas/stables area) with john_carter crossing the frame and maintaining readable movement.
 - prompt_family: shot_prompt
 
 # Continuity Notes

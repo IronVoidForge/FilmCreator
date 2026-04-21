@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Terror $\rightarrow$ Despair/Grief. **Likely Visual Coverage Families:** - Low-light, suffocating atmosphere shots. - Close-ups of labore.... Controlled closing frame that lands the consequence of the beat.. balanced framing with clear spatial separation. Characters: described character with stable costume and silhouette. En...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Terror $\rightarrow$ Despair/Grief. **Likely Visual Coverage Families:** - Low-light, suffocating atmosphere shots. - Close-ups of labore.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of falls into a coma near the incubator, leaving alone in his d...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH027
 - shot_type: closing_reaction
 - camera_description: Controlled closing frame that lands the consequence of the beat.
-- composition: balanced framing with clear spatial separation
+- composition: Closing composition in The Sunken Garden (Helium) that emphasizes the consequence of dejah thoris falls into a coma near the incubator, leaving john carter alone in his desperation..
 - prompt_family: shot_prompt
 
 # Continuity Notes

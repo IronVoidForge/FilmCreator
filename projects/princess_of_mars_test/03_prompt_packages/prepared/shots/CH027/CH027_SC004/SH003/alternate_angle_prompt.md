@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Intense Concentration $\rightarrow$ Relief $\rightarrow$ Physical Collapse. **Likely Visual Coverage Families:** - Wide shots of the mass.... Controlled closing frame that lands the consequence of the beat.. shifted perspective with preserved subject spacing. Characters: described character with stable costume and silhouette. Environme...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Intense Concentration $\rightarrow$ Relief $\rightarrow$ Physical Collapse. **Likely Visual Coverage Families:** - Wide shots of the mass.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of land the scene consequence or transition cleanly... Characters: describ...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH027
 - shot_type: closing_reaction
 - camera_description: Controlled closing frame that lands the consequence of the beat.
-- composition: shifted perspective with preserved subject spacing
+- composition: Closing composition in The Atmosphere Plant (Interior/Exterior) that emphasizes the consequence of land the scene consequence or transition cleanly..
 - prompt_family: shot_prompt
 
 # Continuity Notes

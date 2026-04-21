@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, exterior geography view with readable terrain and boundaries, No layout notes available., Unknown, vast Martian plains, rugged desert landscape, clear spatial layout, readable anchors and depth cues, no characters, no text, no watermark.
+Film environment reference sheet, exterior geography view with readable terrain and boundaries, No layout notes available., vast Martian plains, rugged desert landscape, sweeping horizons, clear spatial layout, readable anchors and depth cues, no characters, no text, no watermark.
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

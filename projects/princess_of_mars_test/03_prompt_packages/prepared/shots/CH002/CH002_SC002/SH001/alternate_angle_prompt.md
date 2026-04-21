@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Struggle $\rightarrow$ Shock/Existential Horror **Likely Visual Coverage Families:** - Macro shots (The physical body's features) - POV s.... Close framing that isolates reaction and emotional emphasis.. shifted perspective with preserved subject spacing. Characters: . Environment: described environment with stable spatial continuity....
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Struggle $\rightarrow$ Shock/Existential Horror **Likely Visual Coverage Families:** - Macro shots (The physical body's features) - POV s.... Close framing that isolates reaction and emotional emphasis.. Intimate composition that isolates against to capture the beat's emotional turn.. Characters: . Environment: described environment wi...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH002
 - shot_type: reaction_closeup
 - camera_description: Close framing that isolates reaction and emotional emphasis.
-- composition: shifted perspective with preserved subject spacing
+- composition: Intimate composition that isolates scene_character against Execute the supernatural reveal of the protagonist's dual existence. to capture the beat's emotional turn.
 - prompt_family: shot_prompt
 
 # Continuity Notes

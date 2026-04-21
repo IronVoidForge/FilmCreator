@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Vulnerability $\rightarrow$ Terror/Panic **Likely Visual Coverage Families:** - Extreme Close-ups (Protagonist's eyes/face to convey para.... Controlled closing frame that lands the consequence of the beat.. continuity-preserving framing with exact pose and costume locks. Characters: . Environment: describe...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Vulnerability $\rightarrow$ Terror/Panic **Likely Visual Coverage Families:** - Extreme Close-ups (Protagonist's eyes/face to convey para.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of **participating characters:** - the protag...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH002
 - shot_type: closing_reaction
 - camera_description: Controlled closing frame that lands the consequence of the beat.
-- composition: continuity-preserving framing with exact pose and costume locks
+- composition: Closing composition in Establish the protagonist's vulnerability and the supernatural threat... that emphasizes the consequence of **participating characters:**
 - prompt_family: shot_prompt
 
 # Continuity Notes

@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Determination $\rightarrow$ Heightened Anxiety. **Likely Visual Coverage Families:** - POV shots of the exit/Watch Dog - Tight close-ups.... Tight detail framing focused on a single visual object or gesture.. balanced framing with clear spatial separation. Characters: . Environment: described environment with stable spatial...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Determination $\rightarrow$ Heightened Anxiety. **Likely Visual Coverage Families:** - POV shots of the exit/Watch Dog - Tight close-ups.... Tight detail framing focused on a single visual object or gesture.. Detail composition centered on the key physical action or prop inside .. Characters: . Environment: described environ...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH005
 - shot_type: insert_detail
 - camera_description: Tight detail framing focused on a single visual object or gesture.
-- composition: balanced framing with clear spatial separation
+- composition: Detail composition centered on the key physical action or prop inside Escalation and the decision to risk freedom..
 - prompt_family: shot_prompt
 
 # Continuity Notes

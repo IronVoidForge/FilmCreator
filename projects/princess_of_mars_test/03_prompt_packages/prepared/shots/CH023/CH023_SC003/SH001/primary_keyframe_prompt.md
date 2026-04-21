@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. From adrenaline-fueled combat to sudden shock and disorientation. **Likely Visual Coverage Families:** - Wide aerial shots of the chase..... Stable medium framing that keeps action and character readable.. balanced framing with clear spatial separation. Characters: described character with stable costume and silhouette. Envi...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. From adrenaline-fueled combat to sudden shock and disorientation. **Likely Visual Coverage Families:** - Wide aerial shots of the chase..... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: described character with stable costume and silhouette. Environm...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH023
 - shot_type: medium
 - camera_description: Stable medium framing that keeps action and character readable.
-- composition: balanced framing with clear spatial separation
+- composition: Readable medium composition in The Martian sky featuring kantos_kan.
 - prompt_family: shot_prompt
 
 # Continuity Notes

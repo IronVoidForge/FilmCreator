@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Confusion $\rightarrow$ Disorientation/Physical Shock. **Likely Visual Coverage Families:** - Wide shots of the vast Martian landscape to.... Stable medium framing that keeps action and character readable.. continuity-preserving framing with exact pose and costume locks. Characters: . Environment: described...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Confusion $\rightarrow$ Disorientation/Physical Shock. **Likely Visual Coverage Families:** - Wide shots of the vast Martian landscape to.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: . Environment: described environment with sta...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH003
 - shot_type: medium
 - camera_description: Stable medium framing that keeps action and character readable.
-- composition: continuity-preserving framing with exact pose and costume locks
+- composition: Readable medium composition in Establish the protagonist's disorientation and the physical reality o... featuring scene_character.
 - prompt_family: shot_prompt
 
 # Continuity Notes

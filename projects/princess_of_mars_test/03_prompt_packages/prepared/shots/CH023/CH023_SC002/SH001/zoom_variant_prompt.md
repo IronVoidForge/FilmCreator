@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Tighter zoom with the same beat and preserved continuity.. From high-stakes physical exertion to calculated stealth/triumph. **Likely Visual Coverage Families:** - Wide shots for the scale of the.... Stable medium framing that keeps action and character readable.. tighter framing on the same moment. Characters: described character with stable costume and silhouette. Environment: described environ...
+Film shot prompt. Tighter zoom with the same beat and preserved continuity.. From high-stakes physical exertion to calculated stealth/triumph. **Likely Visual Coverage Families:** - Wide shots for the scale of the.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring, .. Characters: described character with stable costume and silhouette. Environment: describe...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH023
 - shot_type: medium
 - camera_description: Stable medium framing that keeps action and character readable.
-- composition: tighter framing on the same moment
+- composition: Readable medium composition in Exterior walls of the Zodangan barracks featuring john_carter, zodangan_sentry.
 - prompt_family: shot_prompt
 
 # Continuity Notes

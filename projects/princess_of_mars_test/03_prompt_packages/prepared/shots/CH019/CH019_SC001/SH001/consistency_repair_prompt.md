@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Confusion $\rightarrow$ Realization of helplessness. **Likely Visual Coverage Families:** - Extreme close-ups (eyes, hands in dark) - Low.... Close framing that isolates reaction and emotional emphasis.. continuity-preserving framing with exact pose and costume locks. Characters: . Environment: described en...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Confusion $\rightarrow$ Realization of helplessness. **Likely Visual Coverage Families:** - Extreme close-ups (eyes, hands in dark) - Low.... Close framing that isolates reaction and emotional emphasis.. Intimate composition that isolates against to capture the beat's emotional turn.. Characters: . Environm...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH019
 - shot_type: reaction_closeup
 - camera_description: Close framing that isolates reaction and emotional emphasis.
-- composition: continuity-preserving framing with exact pose and costume locks
+- composition: Intimate composition that isolates scene_character against Establish the dire situation and the loss of agency. to capture the beat's emotional turn.
 - prompt_family: shot_prompt
 
 # Continuity Notes

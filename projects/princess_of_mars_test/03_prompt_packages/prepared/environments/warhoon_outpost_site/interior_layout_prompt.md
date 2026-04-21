@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, clear interior layout with readable pathways, structure, and scale, A localized site within the march route, containing remnants of Green Man technology., Unknown, Green man encampment, destroyed incubator, clear spatial layout, readable anchors and depth cues, no characters, no tex...
+Film environment reference sheet, clear interior layout with readable pathways, structure, and scale, A localized site within the march route, containing remnants of Green Man technology., Green man encampment, destroyed incubator, primitive alien technology, clear spatial layout, readable anchors and depth cues, no...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

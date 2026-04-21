@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Intense Concentration $\rightarrow$ Relief $\rightarrow$ Physical Collapse. **Likely Visual Coverage Families:** - Wide shots of the mass.... Tight detail framing focused on a single visual object or gesture.. shifted perspective with preserved subject spacing. Characters: described character with stable costume and silhouette. Environ...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Intense Concentration $\rightarrow$ Relief $\rightarrow$ Physical Collapse. **Likely Visual Coverage Families:** - Wide shots of the mass.... Tight detail framing focused on a single visual object or gesture.. Detail composition centered on the key physical action or prop inside .. Characters: described character with stable costume an...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH027
 - shot_type: insert_detail
 - camera_description: Tight detail framing focused on a single visual object or gesture.
-- composition: shifted perspective with preserved subject spacing
+- composition: Detail composition centered on the key physical action or prop inside The Atmosphere Plant (Interior/Exterior).
 - prompt_family: shot_prompt
 
 # Continuity Notes

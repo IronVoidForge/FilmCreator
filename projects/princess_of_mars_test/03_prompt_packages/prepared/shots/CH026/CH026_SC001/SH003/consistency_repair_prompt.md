@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Tension $\rightarrow$ Chaotic Violence $\rightarrow$ Grim Triumph.. Controlled closing frame that lands the consequence of the beat.. continuity-preserving framing with exact pose and costume locks. Characters: described character with stable costume and silhouette. Environment: described environment with s...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Tension $\rightarrow$ Chaotic Violence $\rightarrow$ Grim Triumph.. Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of the zodangans are decisively defeated, ending in the ritualistic suicide of their commanders... Characters: describe...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH026
 - shot_type: closing_reaction
 - camera_description: Controlled closing frame that lands the consequence of the beat.
-- composition: continuity-preserving framing with exact pose and costume locks
+- composition: Closing composition in The Martian Skies / Aerial Naval Theater that emphasizes the consequence of the zodangans are decisively defeated, ending in the ritualistic suicide of their commanders..
 - prompt_family: shot_prompt
 
 # Continuity Notes

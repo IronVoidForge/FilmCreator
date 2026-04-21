@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Tighter zoom with the same beat and preserved continuity.. Peace $\rightarrow$ Sudden Alarm $\rightarrow$ Intense Combat Tension. **Likely Visual Coverage Families:** - Wide shots of the approachi.... Wide establishing frame with a steady or lightly drifting camera.. tighter framing on the same moment. Characters: . Environment: described environment with stable spatial continuity. Keep continuit...
+Film shot prompt. Tighter zoom with the same beat and preserved continuity.. Peace $\rightarrow$ Sudden Alarm $\rightarrow$ Intense Combat Tension. **Likely Visual Coverage Families:** - Wide shots of the approachi.... Wide establishing frame with a steady or lightly drifting camera.. Wide composition across with placed for immediate spatial orientation.. Characters: . Environment: described environment with stabl...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH008
 - shot_type: establishing_wide
 - camera_description: Wide establishing frame with a steady or lightly drifting camera.
-- composition: tighter framing on the same moment
+- composition: Wide composition across Establish the sudden escalation from peace to high-stakes aerial combat. with scene_character placed for immediate spatial orientation.
 - prompt_family: shot_prompt
 
 # Continuity Notes

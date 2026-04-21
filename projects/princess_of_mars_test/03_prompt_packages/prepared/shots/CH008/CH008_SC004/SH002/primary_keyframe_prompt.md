@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Curiosity $\rightarrow$ Tension/Connection $\rightarrow$ Regret/Dejection. **Likely Visual Coverage Families:** - Eye-contact close-ups (.... Close framing that isolates reaction and emotional emphasis.. balanced framing with clear spatial separation. Characters: . Environment: described environment with stable spatial conti...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Curiosity $\rightarrow$ Tension/Connection $\rightarrow$ Regret/Dejection. **Likely Visual Coverage Families:** - Eye-contact close-ups (.... Close framing that isolates reaction and emotional emphasis.. Intimate composition that isolates against to capture the beat's emotional turn.. Characters: . Environment: described env...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH008
 - shot_type: reaction_closeup
 - camera_description: Close framing that isolates reaction and emotional emphasis.
-- composition: balanced framing with clear spatial separation
+- composition: Intimate composition that isolates scene_character against Introduce a new character and create a moment of missed connection/dr... to capture the beat's emotional turn.
 - prompt_family: shot_prompt
 
 # Continuity Notes

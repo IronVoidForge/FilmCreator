@@ -81,6 +81,13 @@ def _compact(text: str, *, limit: int = 220) -> str:
     return collapsed[: limit - 3].rstrip() + "..."
 
 
+def _first_nonempty(*values: object, fallback: str = "") -> str:
+    for value in values:
+        if isinstance(value, str) and value.strip():
+            return value.strip()
+    return fallback
+
+
 def _normalize_term(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", value.strip().lower()).strip()
 
@@ -126,6 +133,30 @@ def _looks_like_metadata_summary(text: str) -> bool:
         "alias detected",
     ]
     return any(marker in normalized for marker in metadata_markers)
+
+
+def _record_descriptor_phrases(record: dict[str, Any], keys: list[str], *, strip_terms: list[str] | None = None) -> list[str]:
+    parts: list[str] = []
+    field_values = record.get("field_values", {}) if isinstance(record.get("field_values"), dict) else {}
+    for key in keys:
+        value = field_values.get(key)
+        if isinstance(value, list):
+            values = [item for item in value if isinstance(item, str) and item.strip()]
+        elif isinstance(value, str) and value.strip():
+            values = [value.strip()]
+        else:
+            continue
+        for item in values:
+            cleaned = _strip_terms(item, strip_terms or [])
+            if cleaned and cleaned.strip().lower() not in {"unknown", "none", "(none)", "n/a"} and not _looks_like_metadata_summary(cleaned):
+                parts.extend(_descriptor_phrases(cleaned))
+    deduped: list[str] = []
+    seen: set[str] = set()
+    for item in parts:
+        if item not in seen:
+            seen.add(item)
+            deduped.append(item)
+    return deduped
 
 
 def _prompt_package_exists_with_same_content(path: Path, content: str) -> bool:
@@ -179,6 +210,21 @@ def _shot_index_paths(project_dir: Path) -> list[Path]:
     return sorted(path for path in root.glob("CH*/CH*_SC*/SHOT_INDEX.json") if path.is_file())
 
 
+def _descriptor_paths(project_dir: Path, kind: str) -> list[Path]:
+    root = project_dir / "02_story_analysis" / "descriptors"
+    if not root.exists():
+        return []
+    if kind == "character":
+        return sorted(path for path in (root / "characters").glob("*.json") if path.is_file())
+    if kind == "environment":
+        return sorted(path for path in (root / "environments").glob("*.json") if path.is_file())
+    if kind == "scene":
+        return sorted(path for path in (root / "scenes").glob("*.json") if path.is_file())
+    if kind == "shot":
+        return sorted(path for path in (root / "shots").glob("CH*/CH*_SC*/SH*.json") if path.is_file())
+    return []
+
+
 def _load_character_bibles(project_dir: Path) -> dict[str, dict[str, Any]]:
     records: dict[str, dict[str, Any]] = {}
     for path in _character_bible_paths(project_dir):
@@ -228,6 +274,18 @@ def _load_shot_packages(project_dir: Path) -> list[dict[str, Any]]:
     return shots
 
 
+def _load_descriptor_records(project_dir: Path, kind: str) -> dict[str, dict[str, Any]]:
+    records: dict[str, dict[str, Any]] = {}
+    for path in _descriptor_paths(project_dir, kind):
+        payload = read_json(path)
+        if not isinstance(payload, dict):
+            continue
+        canonical_id = str(payload.get("canonical_id", "")).strip().lower()
+        if canonical_id:
+            records[canonical_id] = payload
+    return records
+
+
 def _is_film_facing_character_entry(entry: dict[str, Any], bible: dict[str, Any]) -> bool:
     return _is_film_facing_character(entry, bible) and str(bible.get("status", "canonical")).strip() == "canonical"
 
@@ -236,8 +294,37 @@ def _is_film_facing_environment_entry(entry: dict[str, Any], bible: dict[str, An
     return _is_film_facing_environment(entry, bible) and str(bible.get("status", "canonical")).strip() == "canonical"
 
 
-def _character_descriptor(bible: dict[str, Any]) -> str:
+def _character_descriptor(bible: dict[str, Any], descriptor: dict[str, Any] | None = None) -> str:
     parts: list[str] = []
+    if descriptor:
+        parts.extend(
+            _record_descriptor_phrases(
+                descriptor,
+                [
+                    "sex",
+                    "age_range",
+                    "height",
+                    "build",
+                    "skin_tone",
+                    "hair_color",
+                    "hair_style",
+                    "eye_color",
+                    "face_shape",
+                    "facial_hair",
+                    "distinctive_features",
+                    "costume_layers",
+                    "costume_materials",
+                    "costume_signature",
+                    "silhouette_notes",
+                    "recurring_accessories",
+                    "posture",
+                    "expression_tendency",
+                    "physical_presence_notes",
+                    "voice_or_presence_notes",
+                ],
+                strip_terms=[str(bible.get("display_name", "")), str(bible.get("character_id", "")), *[str(alias) for alias in bible.get("aliases", []) if isinstance(alias, str)]],
+            )
+        )
     for value in [*bible.get("physical_traits", []), bible.get("costume_signature", "")]:
         if isinstance(value, str) and value.strip():
             cleaned = _strip_terms(
@@ -266,8 +353,30 @@ def _character_descriptor(bible: dict[str, Any]) -> str:
     return _compact(", ".join(deduped[:4]), limit=240)
 
 
-def _environment_descriptor(bible: dict[str, Any]) -> str:
+def _environment_descriptor(bible: dict[str, Any], descriptor: dict[str, Any] | None = None) -> str:
     parts: list[str] = []
+    if descriptor:
+        parts.extend(
+            _record_descriptor_phrases(
+                descriptor,
+                [
+                    "layout",
+                    "scale",
+                    "geography",
+                    "architecture",
+                    "pathways",
+                    "camera_friendly_landmarks",
+                    "materials",
+                    "lighting",
+                    "mood",
+                    "weather_or_atmosphere",
+                    "recurring_anchors",
+                    "foreground_midground_background",
+                    "depth_cues",
+                ],
+                strip_terms=[str(bible.get("display_name", "")), str(bible.get("environment_id", ""))],
+            )
+        )
     for value in [
         bible.get("layout_notes", ""),
         bible.get("lighting", ""),
@@ -295,15 +404,20 @@ def _environment_descriptor(bible: dict[str, Any]) -> str:
     return _compact(", ".join(deduped[:4]), limit=240)
 
 
-def _shot_character_descriptors(shot: dict[str, Any], character_bibles: dict[str, dict[str, Any]]) -> list[str]:
+def _shot_character_descriptors(
+    shot: dict[str, Any],
+    character_bibles: dict[str, dict[str, Any]],
+    character_descriptors: dict[str, dict[str, Any]] | None = None,
+) -> list[str]:
     descriptors: list[str] = []
     for ref in shot.get("characters_in_frame", []):
         if not isinstance(ref, dict):
             continue
         canonical_id = str(ref.get("canonical_id", "")).strip().lower()
         bible = character_bibles.get(canonical_id)
+        descriptor = (character_descriptors or {}).get(canonical_id)
         if bible:
-            descriptors.append(_character_descriptor(bible))
+            descriptors.append(_character_descriptor(bible, descriptor))
         else:
             label = str(ref.get("label", "")).strip()
             descriptors.append(_compact(_strip_terms(label or "supporting character", [label]), limit=80))
@@ -318,13 +432,18 @@ def _shot_character_descriptors(shot: dict[str, Any], character_bibles: dict[str
     return deduped[:3]
 
 
-def _shot_environment_descriptor(shot: dict[str, Any], environment_bibles: dict[str, dict[str, Any]]) -> str:
+def _shot_environment_descriptor(
+    shot: dict[str, Any],
+    environment_bibles: dict[str, dict[str, Any]],
+    environment_descriptors: dict[str, dict[str, Any]] | None = None,
+) -> str:
     env = shot.get("environment")
     if isinstance(env, dict):
         canonical_id = str(env.get("canonical_id", "")).strip().lower()
         bible = environment_bibles.get(canonical_id)
+        descriptor = (environment_descriptors or {}).get(canonical_id)
         if bible:
-            return _environment_descriptor(bible)
+            return _environment_descriptor(bible, descriptor)
         label = str(env.get("label", "")).strip()
         if label:
             cleaned = _compact(
@@ -371,16 +490,17 @@ def _package_for_character(
     *,
     project_dir: Path,
     bible: dict[str, Any],
+    descriptor: dict[str, Any] | None,
     variant: tuple[str, str, str],
 ) -> tuple[PromptPackage, Path, list[str]]:
     variant_key, variant_title, variant_hint = variant
     character_id = str(bible.get("character_id", "")).strip().lower()
     display_name = str(bible.get("display_name", character_id)).strip() or character_id
-    descriptor = _character_descriptor(bible)
+    descriptor_text = _character_descriptor(bible, descriptor)
     title = f"{display_name} Character Reference - {variant_title}"
     prompt_id = f"{character_id}_{variant_key}_prompt"
     positive_prompt = _compact(
-        f"Film character reference sheet, {variant_hint}, {descriptor}, clean neutral studio background, clear silhouette, consistent costume layers, consistent facial structure, no narrative action, no text, no watermark.",
+        f"Film character reference sheet, {variant_hint}, {descriptor_text}, clean neutral studio background, clear silhouette, consistent costume layers, consistent facial structure, no narrative action, no text, no watermark.",
         limit=320,
     )
     package_path = project_dir / PROMPT_PREP_ROOT / "characters" / character_id / f"{variant_key}_prompt.md"
@@ -427,16 +547,17 @@ def _package_for_environment(
     *,
     project_dir: Path,
     bible: dict[str, Any],
+    descriptor: dict[str, Any] | None,
     variant: tuple[str, str, str],
 ) -> tuple[PromptPackage, Path, list[str]]:
     variant_key, variant_title, variant_hint = variant
     environment_id = str(bible.get("environment_id", "")).strip().lower()
     display_name = str(bible.get("display_name", environment_id)).strip() or environment_id
-    descriptor = _environment_descriptor(bible)
+    descriptor_text = _environment_descriptor(bible, descriptor)
     title = f"{display_name} Environment Reference - {variant_title}"
     prompt_id = f"{environment_id}_{variant_key}_prompt"
     positive_prompt = _compact(
-        f"Film environment reference sheet, {variant_hint}, {descriptor}, clear spatial layout, readable anchors and depth cues, no characters, no text, no watermark.",
+        f"Film environment reference sheet, {variant_hint}, {descriptor_text}, clear spatial layout, readable anchors and depth cues, no characters, no text, no watermark.",
         limit=320,
     )
     package_path = project_dir / PROMPT_PREP_ROOT / "environments" / environment_id / f"{variant_key}_prompt.md"
@@ -487,6 +608,10 @@ def _package_for_shot(
     variant: tuple[str, str, str],
     character_bibles: dict[str, dict[str, Any]],
     environment_bibles: dict[str, dict[str, Any]],
+    scene_descriptor: dict[str, Any] | None = None,
+    shot_descriptor: dict[str, Any] | None = None,
+    character_descriptors: dict[str, dict[str, Any]] | None = None,
+    environment_descriptors: dict[str, dict[str, Any]] | None = None,
 ) -> tuple[PromptPackage, Path, list[str], list[str]]:
     variant_key, variant_title, variant_hint = variant
     scene_id = str(shot.get("scene_id", "")).strip().upper()
@@ -495,9 +620,14 @@ def _package_for_shot(
     shot_type = str(shot.get("shot_type", "")).strip() or "shot"
     shot_title = str(shot.get("shot_title", "")).strip() or shot_id
     scene_title = str(scene_contract.get("scene_title", "")).strip() or scene_id
-    scene_arc = str(scene_contract.get("emotional_arc", "")).strip()
-    characters = _shot_character_descriptors(shot, character_bibles)
-    environment_descriptor = _shot_environment_descriptor(shot, environment_bibles)
+    scene_descriptor_values = (scene_descriptor or {}).get("field_values", {}) if isinstance((scene_descriptor or {}).get("field_values", {}), dict) else {}
+    shot_descriptor_values = (shot_descriptor or {}).get("field_values", {}) if isinstance((shot_descriptor or {}).get("field_values", {}), dict) else {}
+    scene_arc = _first_nonempty(
+        scene_descriptor_values.get("emotional_beat", ""),
+        str(scene_contract.get("emotional_arc", "")).strip(),
+    )
+    characters = _shot_character_descriptors(shot, character_bibles, character_descriptors)
+    environment_descriptor = _shot_environment_descriptor(shot, environment_bibles, environment_descriptors)
     strip_terms: list[str] = [scene_id, scene_title, shot_id, str(shot.get("shot_title", "")).strip()]
     for ref in shot.get("characters_in_frame", []):
         if not isinstance(ref, dict):
@@ -526,13 +656,29 @@ def _package_for_shot(
                 for value in [bible.get("display_name", ""), bible.get("environment_id", "")]
                 if isinstance(value, str) and str(value).strip()
             )
-    camera_description = _compact(_strip_terms(str(shot.get("camera_description", "")), strip_terms), limit=180)
-    composition_hint = {
-        "primary_keyframe": "balanced framing with clear spatial separation",
-        "alternate_angle": "shifted perspective with preserved subject spacing",
-        "zoom_variant": "tighter framing on the same moment",
-        "consistency_repair": "continuity-preserving framing with exact pose and costume locks",
-    }.get(variant_key, variant_hint)
+    camera_description = _compact(
+        _strip_terms(
+            _first_nonempty(
+                shot_descriptor_values.get("camera_motion", ""),
+                shot_descriptor_values.get("perspective_notes", ""),
+                shot.get("camera_description", ""),
+                fallback="",
+            ),
+            strip_terms,
+        ),
+        limit=180,
+    )
+    composition_hint = _first_nonempty(
+        shot_descriptor_values.get("framing", ""),
+        shot_descriptor_values.get("spatial_continuity", ""),
+        shot.get("composition", ""),
+        fallback={
+            "primary_keyframe": "balanced framing with clear spatial separation",
+            "alternate_angle": "shifted perspective with preserved subject spacing",
+            "zoom_variant": "tighter framing on the same moment",
+            "consistency_repair": "continuity-preserving framing with exact pose and costume locks",
+        }.get(variant_key, variant_hint),
+    )
     continuity = _coerce_bullets(shot.get("continuity_constraints", []), scene_contract.get("continuity_constraints", []))
     variant_camera = {
         "primary_keyframe": "Primary keyframe with balanced composition and clear subject placement.",
@@ -547,7 +693,7 @@ def _package_for_shot(
         variant_camera,
         _compact(_strip_terms(scene_arc or scene_contract.get("production_intent", "") or scene_title, strip_terms), limit=140),
         camera_description,
-        composition_hint,
+        _compact(_strip_terms(composition_hint, strip_terms), limit=160),
         f"Characters: {', '.join(characters)}",
         f"Environment: {environment_descriptor}",
         "Keep continuity exact across costume, silhouette, lighting, and spatial relationships.",
@@ -669,6 +815,10 @@ def run_prompt_preparation(project_slug: str, *, force: bool = False) -> PromptP
     environment_bibles = _load_environment_bibles(project_dir)
     scene_contracts = _load_scene_contracts(project_dir)
     shot_packages = _load_shot_packages(project_dir)
+    character_descriptors = _load_descriptor_records(project_dir, "character")
+    environment_descriptors = _load_descriptor_records(project_dir, "environment")
+    scene_descriptors = _load_descriptor_records(project_dir, "scene")
+    shot_descriptors = _load_descriptor_records(project_dir, "shot")
 
     written_files: list[str] = []
     warnings: list[str] = []
@@ -697,7 +847,8 @@ def run_prompt_preparation(project_slug: str, *, force: bool = False) -> PromptP
             )
             continue
         for variant in CHARACTER_VARIANTS:
-            package, package_path, sources = _package_for_character(project_dir=project_dir, bible=bible, variant=variant)
+            descriptor = character_descriptors.get(str(bible.get("character_id", "")).strip().lower())
+            package, package_path, sources = _package_for_character(project_dir=project_dir, bible=bible, descriptor=descriptor, variant=variant)
             if _write_prompt_package_if_changed(package_path, package, force=force):
                 synthesized_count += 1
                 written_files.append(str(package_path))
@@ -735,7 +886,8 @@ def run_prompt_preparation(project_slug: str, *, force: bool = False) -> PromptP
             )
             continue
         for variant in ENVIRONMENT_VARIANTS:
-            package, package_path, sources = _package_for_environment(project_dir=project_dir, bible=bible, variant=variant)
+            descriptor = environment_descriptors.get(str(bible.get("environment_id", "")).strip().lower())
+            package, package_path, sources = _package_for_environment(project_dir=project_dir, bible=bible, descriptor=descriptor, variant=variant)
             if _write_prompt_package_if_changed(package_path, package, force=force):
                 synthesized_count += 1
                 written_files.append(str(package_path))
@@ -762,6 +914,8 @@ def run_prompt_preparation(project_slug: str, *, force: bool = False) -> PromptP
         if not scene_id or not shot_id:
             continue
         scene_contract = scene_contracts.get(scene_id, {})
+        scene_descriptor = scene_descriptors.get(scene_id.lower())
+        shot_descriptor = shot_descriptors.get(f"{scene_id.lower()}_{shot_id.lower()}")
         for variant in SHOT_VARIANTS:
             package, package_path, sources, review_notes = _package_for_shot(
                 project_dir=project_dir,
@@ -770,6 +924,10 @@ def run_prompt_preparation(project_slug: str, *, force: bool = False) -> PromptP
                 variant=variant,
                 character_bibles=character_bibles,
                 environment_bibles=environment_bibles,
+                scene_descriptor=scene_descriptor,
+                shot_descriptor=shot_descriptor,
+                character_descriptors=character_descriptors,
+                environment_descriptors=environment_descriptors,
             )
             if _write_prompt_package_if_changed(package_path, package, force=force):
                 synthesized_count += 1

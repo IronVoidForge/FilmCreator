@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Oppression to Defiance to Violent Resolution.. Wide establishing frame with a steady or lightly drifting camera.. balanced framing with clear spatial separation. Characters: described character with stable costume and silhouette. Environment: Formal assembly hall within the Thark stronghold, structured for council proceeding...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Oppression to Defiance to Violent Resolution.. Wide establishing frame with a steady or lightly drifting camera.. Wide composition across with placed for immediate spatial orientation.. Characters: described character with stable costume and silhouette. Environment: Formal assembly hall within the Thark stronghold, structure...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH024
 - shot_type: establishing_wide
 - camera_description: Wide establishing frame with a steady or lightly drifting camera.
-- composition: balanced framing with clear spatial separation
+- composition: Wide composition across thark_palace_council_chamber with tal_hajus placed for immediate spatial orientation.
 - prompt_family: shot_prompt
 
 # Continuity Notes

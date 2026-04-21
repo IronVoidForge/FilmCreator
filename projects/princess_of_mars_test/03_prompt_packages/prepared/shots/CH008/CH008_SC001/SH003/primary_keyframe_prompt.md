@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Peace $\rightarrow$ Sudden Alarm $\rightarrow$ Intense Combat Tension. **Likely Visual Coverage Families:** - Wide shots of the approachi.... Controlled closing frame that lands the consequence of the beat.. balanced framing with clear spatial separation. Characters: . Environment: described environment with stable spatial c...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Peace $\rightarrow$ Sudden Alarm $\rightarrow$ Intense Combat Tension. **Likely Visual Coverage Families:** - Wide shots of the approachi.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of **participating characters:** - the protagonist - sola - gre...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH008
 - shot_type: closing_reaction
 - camera_description: Controlled closing frame that lands the consequence of the beat.
-- composition: balanced framing with clear spatial separation
+- composition: Closing composition in Establish the sudden escalation from peace to high-stakes aerial combat. that emphasizes the consequence of **participating characters:**
 - prompt_family: shot_prompt
 
 # Continuity Notes

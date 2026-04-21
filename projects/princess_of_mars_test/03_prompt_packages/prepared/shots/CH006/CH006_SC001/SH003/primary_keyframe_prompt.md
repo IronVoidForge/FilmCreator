@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Terror $\rightarrow$ Desperation $\rightarrow$ Violent Escalation. **Likely Visual Coverage Families:** - Tight close-ups on the protagon.... Active camera with tracking energy and clear spatial orientation.. balanced framing with clear spatial separation. Characters: . Environment: described environment with stable spatial...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Terror $\rightarrow$ Desperation $\rightarrow$ Violent Escalation. **Likely Visual Coverage Families:** - Tight close-ups on the protagon.... Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with crossing the frame and maintaining readable movement.. Characters: . Environment: describ...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH006
 - shot_type: action
 - camera_description: Active camera with tracking energy and clear spatial orientation.
-- composition: balanced framing with clear spatial separation
+- composition: Dynamic composition in Interior chamber/area overlooking a plaza with scene_character crossing the frame and maintaining readable movement.
 - prompt_family: shot_prompt
 
 # Continuity Notes

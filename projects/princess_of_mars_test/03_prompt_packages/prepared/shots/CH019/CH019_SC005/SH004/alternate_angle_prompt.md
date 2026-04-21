@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. High Tension $\rightarrow$ Relief $\rightarrow$ Determination. **Likely Visual Coverage Families:** - Close-ups on the "killing" blow - L.... Controlled closing frame that lands the consequence of the beat.. shifted perspective with preserved subject spacing. Characters: . Environment: described environment with stable spatial continui...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. High Tension $\rightarrow$ Relief $\rightarrow$ Determination. **Likely Visual Coverage Families:** - Close-ups on the "killing" blow - L.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of **participating characters:** - john carter - kantos kan - warhoon hord...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH019
 - shot_type: closing_reaction
 - camera_description: Controlled closing frame that lands the consequence of the beat.
-- composition: shifted perspective with preserved subject spacing
+- composition: Closing composition in Execute the climax and transition to the next narrative phase. that emphasizes the consequence of **participating characters:**
 - prompt_family: shot_prompt
 
 # Continuity Notes

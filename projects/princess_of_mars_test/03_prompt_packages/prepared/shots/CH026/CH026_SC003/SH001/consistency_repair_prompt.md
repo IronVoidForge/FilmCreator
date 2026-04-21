@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Determination $\rightarrow$ High-Stakes Combat $\rightarrow$ Decisive Victory.. Wide establishing frame with a steady or lightly drifting camera.. continuity-preserving framing with exact pose and costume locks. Characters: described character with stable costume and silhouette. Environment: described envir...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Determination $\rightarrow$ High-Stakes Combat $\rightarrow$ Decisive Victory.. Wide establishing frame with a steady or lightly drifting camera.. Wide composition across with, placed for immediate spatial orientation.. Characters: described character with stable costume and silhouette. Environment: describ...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH026
 - shot_type: establishing_wide
 - camera_description: Wide establishing frame with a steady or lightly drifting camera.
-- composition: continuity-preserving framing with exact pose and costume locks
+- composition: Wide composition across The Plains near Helium with tars_tarkas, thark_warriors placed for immediate spatial orientation.
 - prompt_family: shot_prompt
 
 # Continuity Notes

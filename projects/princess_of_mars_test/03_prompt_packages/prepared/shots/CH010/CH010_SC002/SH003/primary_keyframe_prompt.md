@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Curiosity/Observation to heightened political tension.. Shoulder-level conversational framing with visible foreground presence.. balanced framing with clear spatial separation. Characters: described character with stable costume and silhouette. Environment: described environment with stable spatial continuity. Keep continuit...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Curiosity/Observation to heightened political tension.. Shoulder-level conversational framing with visible foreground presence.. Over-the-shoulder composition in with, sharing the frame for dialogue or tension.. Characters: described character with stable costume and silhouette. Environment: described environment with stable...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH010
 - shot_type: over_the_shoulder
 - camera_description: Shoulder-level conversational framing with visible foreground presence.
-- composition: balanced framing with clear spatial separation
+- composition: Over-the-shoulder composition in The City Plaza / Council area with john_carter, dejah_thoris sharing the frame for dialogue or tension.
 - prompt_family: shot_prompt
 
 # Continuity Notes

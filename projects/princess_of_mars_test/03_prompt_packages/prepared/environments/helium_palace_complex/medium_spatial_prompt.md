@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, medium spatial view showing foreground, midground, and background relationships, Large-scale royal living quarters, the sunken garden serves as a focal point for the family's final moments, the golden incubator acts as a central visual anchor., Initially bright and prosperous, clear...
+Film environment reference sheet, medium spatial view showing foreground, midground, and background relationships, Large-scale royal living quarters, the sunken garden serves as a focal point for the family's final moments, the golden incubator acts as a central visual anchor., Martian palace architecture, clear spa...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Stage with clear narrative intent, stable cast blocking, and continuity-aware coverage.. Wide establishing frame with a steady or lightly drifting camera.. continuity-preserving framing with exact pose and costume locks. Characters: . Environment: described environment with stable spatial continuity. Keep c...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. unknown. Wide establishing frame with a steady or lightly drifting camera.. Wide composition across with placed for immediate spatial orientation.. Characters: . Environment: described environment with stable spatial continuity. Keep continuity exact across costume, silhouette, lighting, and spatial relatio...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH012
 - shot_type: establishing_wide
 - camera_description: Wide establishing frame with a steady or lightly drifting camera.
-- composition: continuity-preserving framing with exact pose and costume locks
+- composition: Wide composition across CH012_SC002 with scene_character placed for immediate spatial orientation.
 - prompt_family: shot_prompt
 
 # Continuity Notes

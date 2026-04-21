@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Desperation $\rightarrow$ Violent aggression/Adrenaline.. Tight detail framing focused on a single visual object or gesture.. balanced framing with clear spatial separation. Characters: described character with stable costume and silhouette. Environment: described environment with stable spatial continuity. Keep continuity e...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Desperation $\rightarrow$ Violent aggression/Adrenaline.. Tight detail framing focused on a single visual object or gesture.. Detail composition centered on the key physical action or prop inside .. Characters: described character with stable costume and silhouette. Environment: described environment with stable spatial cont...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH022
 - shot_type: insert_detail
 - camera_description: Tight detail framing focused on a single visual object or gesture.
-- composition: balanced framing with clear spatial separation
+- composition: Detail composition centered on the key physical action or prop inside Palace corridors.
 - prompt_family: shot_prompt
 
 # Continuity Notes

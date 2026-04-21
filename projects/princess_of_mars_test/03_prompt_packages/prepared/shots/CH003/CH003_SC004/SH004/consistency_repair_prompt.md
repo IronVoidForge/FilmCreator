@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Tension $\rightarrow$ Relief/Wonder/Acceptance. **Likely Visual Coverage Families:** - Close-ups of the hand-off (the armlet). - Medium s.... Controlled closing frame that lands the consequence of the beat.. continuity-preserving framing with exact pose and costume locks. Characters: . Environment: describe...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Tension $\rightarrow$ Relief/Wonder/Acceptance. **Likely Visual Coverage Families:** - Close-ups of the hand-off (the armlet). - Medium s.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of **participating characters:** - the protag...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH003
 - shot_type: closing_reaction
 - camera_description: Controlled closing frame that lands the consequence of the beat.
-- composition: continuity-preserving framing with exact pose and costume locks
+- composition: Closing composition in Resolve the conflict through non-verbal communication and transition... that emphasizes the consequence of **participating characters:**
 - prompt_family: shot_prompt
 
 # Continuity Notes

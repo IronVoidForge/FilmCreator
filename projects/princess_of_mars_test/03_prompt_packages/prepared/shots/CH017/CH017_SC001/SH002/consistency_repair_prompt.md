@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Tension/Dread $\rightarrow$ Action/Adrenaline $\rightarrow$ Relief/Urgency.. Active camera with tracking energy and clear spatial orientation.. continuity-preserving framing with exact pose and costume locks. Characters: described character with stable costume and silhouette. Environment: described environm...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Tension/Dread $\rightarrow$ Action/Adrenaline $\rightarrow$ Relief/Urgency.. Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with, crossing the frame and maintaining readable movement.. Characters: described character with stable costume and silhouette. Environment:...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH017
 - shot_type: action
 - camera_description: Active camera with tracking energy and clear spatial orientation.
-- composition: continuity-preserving framing with exact pose and costume locks
+- composition: Dynamic composition in The interior of the Jeddak's palace/chambers in Thark with protagonist, dejah_thoris crossing the frame and maintaining readable movement.
 - prompt_family: shot_prompt
 
 # Continuity Notes

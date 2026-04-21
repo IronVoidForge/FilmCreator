@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, medium spatial view showing foreground, midground, and background relationships, Large-scale imperial architecture, recurring anchors include the ceremonial golden chains and the large glass windows/apertures., Brilliantly illuminated, high-contrast lighting suitable for dramatic ce...
+Film environment reference sheet, medium spatial view showing foreground, midground, and background relationships, Large-scale imperial architecture, recurring anchors include the ceremonial golden chains and the large glass windows/apertures., Grand Zodangan audience chamber, brilliant ceremonial illumination, clea...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

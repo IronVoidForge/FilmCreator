@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. From disorientation to disciplined determination. **Likely Visual Coverage Families:** - Wide shots of training drills and weapon handlin.... Tight detail framing focused on a single visual object or gesture.. shifted perspective with preserved subject spacing. Characters: . Environment: described environment with stable spatial contin...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. From disorientation to disciplined determination. **Likely Visual Coverage Families:** - Wide shots of training drills and weapon handlin.... Tight detail framing focused on a single visual object or gesture.. Detail composition centered on the key physical action or prop inside .. Characters: . Environment: described environment with...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH009
 - shot_type: insert_detail
 - camera_description: Tight detail framing focused on a single visual object or gesture.
-- composition: shifted perspective with preserved subject spacing
+- composition: Detail composition centered on the key physical action or prop inside Establish the protagonist's rapid adaptation to Martian culture and h....
 - prompt_family: shot_prompt
 
 # Continuity Notes

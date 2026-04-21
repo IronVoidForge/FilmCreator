@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Suspense $\rightarrow$ Explosive Action/Chaos.. Active camera with tracking energy and clear spatial orientation.. shifted perspective with preserved subject spacing. Characters: described character with stable costume and silhouette. Environment: described environment with stable spatial continuity. Keep continuity exact across costum...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Suspense $\rightarrow$ Explosive Action/Chaos.. Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with, crossing the frame and maintaining readable movement.. Characters: described character with stable costume and silhouette. Environment: described environment with stable spatial continuity. Kee...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH001
 - shot_type: action
 - camera_description: Active camera with tracking energy and clear spatial orientation.
-- composition: shifted perspective with preserved subject spacing
+- composition: Dynamic composition in High plateau with Apache tepees with john_carter, apache_warriors crossing the frame and maintaining readable movement.
 - prompt_family: shot_prompt
 
 # Continuity Notes

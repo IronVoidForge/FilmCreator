@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Tighter zoom with the same beat and preserved continuity.. Curiosity $\rightarrow$ Disbelief $\rightarrow$ Deepened Trust. **Likely Visual Coverage Families:** - Tight close-ups on faces to captur.... Controlled closing frame that lands the consequence of the beat.. tighter framing on the same moment. Characters: described character with stable costume and silhouette. Environment: described envir...
+Film shot prompt. Tighter zoom with the same beat and preserved continuity.. Curiosity $\rightarrow$ Disbelief $\rightarrow$ Deepened Trust. **Likely Visual Coverage Families:** - Tight close-ups on faces to captur.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of though the concept is alien to her, relies on her intuition and carter's s...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH011
 - shot_type: closing_reaction
 - camera_description: Controlled closing frame that lands the consequence of the beat.
-- composition: tighter framing on the same moment
+- composition: Closing composition in The luxurious ancient quarters that emphasizes the consequence of though the concept is alien to her, dejah thoris relies on her intuition and carter's sincerity to accept his truth..
 - prompt_family: shot_prompt
 
 # Continuity Notes

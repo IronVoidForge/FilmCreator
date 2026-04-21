@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Tighter zoom with the same beat and preserved continuity.. Desperation/Exhaustion $\rightarrow$ Terror (during beast attacks) $\rightarrow$ Relief/Survival.. Active camera with tracking energy and clear spatial orientation.. tighter framing on the same moment. Characters: described character with stable costume and silhouette. Environment: described environment with stable spatial continuity. Kee...
+Film shot prompt. Tighter zoom with the same beat and preserved continuity.. Desperation/Exhaustion $\rightarrow$ Terror (during beast attacks) $\rightarrow$ Relief/Survival.. Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with, crossing the frame and maintaining readable movement.. Characters: described character with stable costume and silhouette. Environment: described...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH020
 - shot_type: action
 - camera_description: Active camera with tracking energy and clear spatial orientation.
-- composition: tighter framing on the same moment
+- composition: Dynamic composition in The Martian Wilderness (desolate, dangerous terrain) with protagonist, woola crossing the frame and maintaining readable movement.
 - prompt_family: shot_prompt
 
 # Continuity Notes

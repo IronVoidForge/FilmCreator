@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Conflict/Hostility shifting to the protagonist's resolve/planning. **Likely Visual Coverage Families:** - Medium shots of the argument be.... Active camera with tracking energy and clear spatial orientation.. continuity-preserving framing with exact pose and costume locks. Characters: . Environment: describ...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Conflict/Hostility shifting to the protagonist's resolve/planning. **Likely Visual Coverage Families:** - Medium shots of the argument be.... Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with crossing the frame and maintaining readable movement.. Characters: . En...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH009
 - shot_type: action
 - camera_description: Active camera with tracking energy and clear spatial orientation.
-- composition: continuity-preserving framing with exact pose and costume locks
+- composition: Dynamic composition in To characterize Sola through conflict and establish the protagonist's... with scene_character crossing the frame and maintaining readable movement.
 - prompt_family: shot_prompt
 
 # Continuity Notes

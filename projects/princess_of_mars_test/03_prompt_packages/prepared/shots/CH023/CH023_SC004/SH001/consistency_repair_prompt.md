@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. From exhaustion to growing dread and uncertainty. **Likely Visual Coverage Families:** - Extreme wide shots showing the vast, lonely land.... Close framing that isolates reaction and emotional emphasis.. continuity-preserving framing with exact pose and costume locks. Characters: described character with st...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. From exhaustion to growing dread and uncertainty. **Likely Visual Coverage Families:** - Extreme wide shots showing the vast, lonely land.... Close framing that isolates reaction and emotional emphasis.. Intimate composition that isolates against to capture the beat's emotional turn.. Characters: described...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH023
 - shot_type: reaction_closeup
 - camera_description: Close framing that isolates reaction and emotional emphasis.
-- composition: continuity-preserving framing with exact pose and costume locks
+- composition: Intimate composition that isolates john_carter against High altitude/Cockpit to capture the beat's emotional turn.
 - prompt_family: shot_prompt
 
 # Continuity Notes

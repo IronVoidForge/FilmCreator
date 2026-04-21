@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Anticipation $\rightarrow$ Triumph/Awe. **Likely Visual Coverage Families:** * Wide shots to capture the full arc of the 150-foot leap. *.... Active camera with tracking energy and clear spatial orientation.. shifted perspective with preserved subject spacing. Characters: . Environment: described environment with stable spatial continu...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Anticipation $\rightarrow$ Triumph/Awe. **Likely Visual Coverage Families:** * Wide shots to capture the full arc of the 150-foot leap. *.... Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with crossing the frame and maintaining readable movement.. Characters: . Environment: described environm...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH004
 - shot_type: action
 - camera_description: Active camera with tracking energy and clear spatial orientation.
-- composition: shifted perspective with preserved subject spacing
+- composition: Dynamic composition in Demonstrate the Narrator's physical prowess and ability to command re... with scene_character crossing the frame and maintaining readable movement.
 - prompt_family: shot_prompt
 
 # Continuity Notes

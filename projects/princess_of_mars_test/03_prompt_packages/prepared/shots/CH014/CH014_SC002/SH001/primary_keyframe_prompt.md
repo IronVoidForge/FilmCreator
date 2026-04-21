@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Protest/Conflict $\rightarrow$ Quiet Compassion $\rightarrow$ Growing Dread.. Wide establishing frame with a steady or lightly drifting camera.. balanced framing with clear spatial separation. Characters: described character with stable costume and silhouette. Environment: described environment with stable spatial continuity...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Protest/Conflict $\rightarrow$ Quiet Compassion $\rightarrow$ Growing Dread.. Wide establishing frame with a steady or lightly drifting camera.. Wide composition across with, placed for immediate spatial orientation.. Characters: described character with stable costume and silhouette. Environment: described environment with...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,7 +37,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH014
 - shot_type: establishing_wide
 - camera_description: Wide establishing frame with a steady or lightly drifting camera.
-- composition: balanced framing with clear spatial separation
+- composition: Wide composition across Camp/Chariot staging area with john_carter, dejah_thoris, tars_tarkas placed for immediate spatial orientation.
 - prompt_family: shot_prompt
 
 # Continuity Notes
