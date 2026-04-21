@@ -53,5 +53,5 @@
 - artifact_id: `DESC_ENV_ancient_tower_ruins`
 - status: `generated`
 - source_fingerprint: `8ca685b2a0595cda610d8052b4098b931d7fdccb`
-- created_at_utc: `2026-04-21T05:20:52.045250+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.045250+00:00`
+- created_at_utc: `2026-04-21T05:22:15.305839+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.305839+00:00`

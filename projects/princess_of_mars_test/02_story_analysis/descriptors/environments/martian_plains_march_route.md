@@ -35,7 +35,6 @@
 
 ## Evidence Summary
 
-- Environment currently kept under extracted canonical id.
 - No layout notes available.
 - Unknown
 - vast Martian plains
@@ -43,6 +42,7 @@
 - sweeping horizons
 - dust clouds from marching armies
 - wide open sky.
+- Transit setting (military procession)
 
 ## Review
 
@@ -52,6 +52,6 @@
 
 - artifact_id: `DESC_ENV_martian_plains_march_route`
 - status: `generated`
-- source_fingerprint: `fb66266acd5a0e6ffc36f785911400332d4cb3e1`
-- created_at_utc: `2026-04-21T05:20:52.622259+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.622259+00:00`
+- source_fingerprint: `8f10b9e5bb3e762bcbcae93ac03ef1d0373284a2`
+- created_at_utc: `2026-04-21T05:22:15.988373+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.988373+00:00`

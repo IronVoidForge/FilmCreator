@@ -53,5 +53,5 @@
 - artifact_id: `DESC_ENV_barsoomian_irrigation_conduits`
 - status: `generated`
 - source_fingerprint: `bab5cae3acae0d3f3c7d95bff78ed8445c034d14`
-- created_at_utc: `2026-04-21T05:20:52.167826+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.167826+00:00`
+- created_at_utc: `2026-04-21T05:22:15.455940+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.455940+00:00`

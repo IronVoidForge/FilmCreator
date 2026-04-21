@@ -10,9 +10,7 @@
 - chapter_mentions:
   - CH018
 - entity_kind: individual
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - role: individual
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 ## Generated Fields
 
@@ -25,7 +23,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - individual
 - [CH003] CHAPTER III (book index hit)
 - [CH005] CHAPTER V (book index hit)
@@ -40,6 +37,6 @@
 
 - artifact_id: `DESC_CHAR_female_healer`
 - status: `generated`
-- source_fingerprint: `ce55f79767356cae7d8c4831d7fd58ad5d1f93a0`
-- created_at_utc: `2026-04-21T05:20:50.096525+00:00`
-- updated_at_utc: `2026-04-21T05:20:50.096525+00:00`
+- source_fingerprint: `2a0f72e7788fa8855a58950f4dc21da690b331db`
+- created_at_utc: `2026-04-21T05:22:13.361371+00:00`
+- updated_at_utc: `2026-04-21T05:22:13.361371+00:00`

@@ -35,7 +35,6 @@
 
 ## Evidence Summary
 
-- Environment currently kept under extracted canonical id.
 - No layout notes available.
 - Unknown
 - Martial audience chamber
@@ -43,6 +42,7 @@
 - imposing stone architecture
 - formal confrontation setting
 - austere ceremonial space.
+- Primary (Ceremonial/Political)
 
 ## Review
 
@@ -52,6 +52,6 @@
 
 - artifact_id: `DESC_ENV_tharkian_audience_chamber`
 - status: `generated`
-- source_fingerprint: `2f7227e9b7e5bbf773ffc8a2bca6fe3079606326`
-- created_at_utc: `2026-04-21T05:20:53.100212+00:00`
-- updated_at_utc: `2026-04-21T05:20:53.100212+00:00`
+- source_fingerprint: `94e89f50437da4cea5ddfba8b15a62c969dd4327`
+- created_at_utc: `2026-04-21T05:22:16.523833+00:00`
+- updated_at_utc: `2026-04-21T05:22:16.523833+00:00`

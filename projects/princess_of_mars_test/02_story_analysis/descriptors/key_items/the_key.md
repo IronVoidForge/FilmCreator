@@ -70,5 +70,5 @@
 - artifact_id: `DESC_ITEM_the_key`
 - status: `generated`
 - source_fingerprint: `e5f3d0c3ecebe2d626b9ff4aa9c6cec211713986`
-- created_at_utc: `2026-04-21T05:20:54.065600+00:00`
-- updated_at_utc: `2026-04-21T05:20:54.065600+00:00`
+- created_at_utc: `2026-04-21T05:22:19.787439+00:00`
+- updated_at_utc: `2026-04-21T05:22:19.787439+00:00`

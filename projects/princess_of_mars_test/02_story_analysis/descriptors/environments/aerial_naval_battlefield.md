@@ -39,5 +39,5 @@
 - artifact_id: `DESC_ENV_aerial_naval_battlefield`
 - status: `generated`
 - source_fingerprint: `85daa634e9c869b8b164d06fb9139baeac2bdded`
-- created_at_utc: `2026-04-21T05:20:51.967155+00:00`
-- updated_at_utc: `2026-04-21T05:20:51.967155+00:00`
+- created_at_utc: `2026-04-21T05:22:15.214778+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.214778+00:00`

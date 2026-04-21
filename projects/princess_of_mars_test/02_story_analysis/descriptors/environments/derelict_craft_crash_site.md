@@ -35,7 +35,6 @@
 
 ## Evidence Summary
 
-- Environment currently kept under extracted canonical id.
 - No layout notes available.
 - Unknown
 - Burning spaceship wreckage
@@ -43,6 +42,7 @@
 - smoldering metal hull
 - glowing funeral pyre
 - debris-strewn terrain.
+- Secondary setting.
 
 ## Review
 
@@ -52,6 +52,6 @@
 
 - artifact_id: `DESC_ENV_derelict_craft_crash_site`
 - status: `generated`
-- source_fingerprint: `97f24ba3431cebb9d575e4fc0f036d054adda108`
-- created_at_utc: `2026-04-21T05:20:52.357506+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.357506+00:00`
+- source_fingerprint: `60a8201b06d622e1db0ddc04f02adef27927c956`
+- created_at_utc: `2026-04-21T05:22:15.689141+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.689141+00:00`

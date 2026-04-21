@@ -10,9 +10,7 @@
 - chapter_mentions:
   - CH008
 - entity_kind: individual
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - role: individual
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 ## Generated Fields
 
@@ -25,7 +23,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - individual
 - [CH003] CHAPTER III (book index hit)
 - [CH009] CHAPTER IX (book index hit)
@@ -40,6 +37,6 @@
 
 - artifact_id: `DESC_CHAR_the_prisoner`
 - status: `generated`
-- source_fingerprint: `560fe2c20cf9890307cc63a5a5f16c5c0072554b`
-- created_at_utc: `2026-04-21T05:20:51.542830+00:00`
-- updated_at_utc: `2026-04-21T05:20:51.542830+00:00`
+- source_fingerprint: `581ef1dee7ba18f2d8bdf8ac8a31a75d5530ba3b`
+- created_at_utc: `2026-04-21T05:22:14.750363+00:00`
+- updated_at_utc: `2026-04-21T05:22:14.750363+00:00`

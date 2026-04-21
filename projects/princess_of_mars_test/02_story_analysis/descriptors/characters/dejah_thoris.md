@@ -25,9 +25,7 @@
   - CH027
   - CH028
 - entity_kind: individual
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - role: individual
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 ## Generated Fields
 
@@ -40,7 +38,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - individual
 - [CH013] CHAPTER XIII (book index hit)
 - [CH015] CHAPTER XV (book index hit)
@@ -55,6 +52,6 @@
 
 - artifact_id: `DESC_CHAR_dejah_thoris`
 - status: `generated`
-- source_fingerprint: `523d1220c0d9f959bd09122c77b5b17d9c462eb1`
-- created_at_utc: `2026-04-21T05:20:50.061984+00:00`
-- updated_at_utc: `2026-04-21T05:20:50.061984+00:00`
+- source_fingerprint: `b3424c3adfb59d09d1bcfed3423a84dd302b96a4`
+- created_at_utc: `2026-04-21T05:22:13.332355+00:00`
+- updated_at_utc: `2026-04-21T05:22:13.332355+00:00`

@@ -23,7 +23,6 @@
 
 ## Evidence Summary
 
-- Environment currently kept under extracted canonical id.
 - No layout notes available.
 - Unknown
 - Primary / Secondary setting
@@ -39,6 +38,6 @@
 
 - artifact_id: `DESC_ENV_zodanga_barracks_and_streets`
 - status: `generated`
-- source_fingerprint: `64cce2cf0c62122c7bf1506c0ab108b968374c64`
-- created_at_utc: `2026-04-21T05:20:53.221822+00:00`
-- updated_at_utc: `2026-04-21T05:20:53.221822+00:00`
+- source_fingerprint: `531cbd0ddaaa9685f6f0fb9e899c16854e314b8a`
+- created_at_utc: `2026-04-21T05:22:16.666959+00:00`
+- updated_at_utc: `2026-04-21T05:22:16.666959+00:00`

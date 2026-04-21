@@ -53,5 +53,5 @@
 - artifact_id: `DESC_ENV_arizona_ledge_overlook`
 - status: `generated`
 - source_fingerprint: `7aa0471188d5a4002a356204d5642f7e89bbd046`
-- created_at_utc: `2026-04-21T05:20:52.081782+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.081782+00:00`
+- created_at_utc: `2026-04-21T05:22:15.349365+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.349866+00:00`

@@ -10,9 +10,7 @@
 - chapter_mentions:
   - CH002
 - entity_kind: group
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Detected plural/group-like character asset.
 - role: group
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Detected plural/group-like character asset.
 
 ## Generated Fields
 
@@ -25,7 +23,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Detected plural/group-like character asset.
 - group
 - [CH001] CHAPTER I (book index hit)
 - [CH003] CHAPTER III (book index hit)
@@ -40,6 +37,6 @@
 
 - artifact_id: `DESC_CHAR_apache_warriors`
 - status: `generated`
-- source_fingerprint: `22e1d5712e3001a4c9af5dd644e87e74ed1f4b6f`
-- created_at_utc: `2026-04-21T05:20:49.808259+00:00`
-- updated_at_utc: `2026-04-21T05:20:49.808259+00:00`
+- source_fingerprint: `6e216db394b61d358e159c4f0ae60227a1553e25`
+- created_at_utc: `2026-04-21T05:22:13.065724+00:00`
+- updated_at_utc: `2026-04-21T05:22:13.065724+00:00`

@@ -10,9 +10,7 @@
 - chapter_mentions:
   - CH023
 - entity_kind: individual
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - role: individual
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 ## Generated Fields
 
@@ -25,7 +23,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - individual
 - [CH003] CHAPTER III (book index hit)
 - [CH020] CHAPTER XX (book index hit)
@@ -40,6 +37,6 @@
 
 - artifact_id: `DESC_CHAR_zodangan_sentry`
 - status: `generated`
-- source_fingerprint: `65caddb3324bd9b39766fd62c165f5fc621aa9c3`
-- created_at_utc: `2026-04-21T05:20:51.917602+00:00`
-- updated_at_utc: `2026-04-21T05:20:51.917602+00:00`
+- source_fingerprint: `a60a6756175791afc67d2e8747aaae5ae67be35e`
+- created_at_utc: `2026-04-21T05:22:15.159756+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.159756+00:00`

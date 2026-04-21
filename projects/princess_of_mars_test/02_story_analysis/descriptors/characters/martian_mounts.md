@@ -10,9 +10,7 @@
 - chapter_mentions:
   - CH003
 - entity_kind: individual
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - role: individual
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 ## Generated Fields
 
@@ -25,7 +23,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - individual
 - [CH003] CHAPTER III (book index hit)
 - [CH005] CHAPTER V (book index hit)
@@ -40,6 +37,6 @@
 
 - artifact_id: `DESC_CHAR_martian_mounts`
 - status: `generated`
-- source_fingerprint: `dd696d3c85ed8ba9c029c8dd0c17e80b5bc94e16`
-- created_at_utc: `2026-04-21T05:20:50.443323+00:00`
-- updated_at_utc: `2026-04-21T05:20:50.443323+00:00`
+- source_fingerprint: `8e9c1eb758acea1334e197f24da39cc4e94082c1`
+- created_at_utc: `2026-04-21T05:22:13.702657+00:00`
+- updated_at_utc: `2026-04-21T05:22:13.702657+00:00`

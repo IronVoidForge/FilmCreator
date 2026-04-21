@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, clear interior layout with readable pathways, structure, and scale, A high, expansive plateau overlooking a valley, open terrain suitable for large encampments., Nighttime/Twilight, shadows cast by campfires, clear spatial layout, readable anchors and depth cues, no characters, no t...
+Film environment reference sheet, clear interior layout with readable pathways, structure, and scale, A high, expansive plateau overlooking a valley, open terrain suitable for large encampments., high desert plateau, Apache tepee encampment, clear spatial layout, readable anchors and depth cues, no characters, no te...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

@@ -23,9 +23,7 @@
   - CH017
   - CH027
 - entity_kind: individual
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - role: individual
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 ## Generated Fields
 
@@ -38,7 +36,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - individual
 - [CH004 p26-p28] Tars Tarkas and the chief exchanged a few words, and the former, calling to a young female among the throng, gave her some instructions and motioned me to accompany her. I grasped ...
 - [CH004 p28-p29] The room was well lighted by a number of large windows and was beautifully decorated with mural paintings and mosaics, but upon all there seemed to rest that indefinable touch of t...
@@ -46,6 +43,7 @@
 - [CH005 p3-p5] This was my first experience with a Martian watch dog, but it was destined not to be my last, for this fellow guarded me carefully during the time I remained a captive among these ...
 - [CH006 p14-p16] Again, as on the preceding day, I had recourse to earthly tactics, and swinging my right fist full upon the point of his chin I followed it with a smashing left to the pit of his s...
 - [CH006 p15-p17] As I delivered the blow a low laugh rang out behind me, and, turning, I beheld Tars Tarkas, Sola, and three or four warriors standing in the doorway of the chamber. As my eyes met ...
+- [CH007 p1-p3] CHILD-RAISING ON MARS After a breakfast, which was an exact replica of the meal of the preceding day and an index of practically every meal which followed while I was with the gree...
 
 ## Review
 
@@ -56,6 +54,6 @@
 
 - artifact_id: `DESC_CHAR_sola`
 - status: `generated`
-- source_fingerprint: `9a20532fbd779efda107e237ab927dcc99c25360`
-- created_at_utc: `2026-04-21T05:20:51.175020+00:00`
-- updated_at_utc: `2026-04-21T05:20:51.175520+00:00`
+- source_fingerprint: `01743fe85da3c7a411a6bf66d59ea997e3a96ce2`
+- created_at_utc: `2026-04-21T05:22:14.390084+00:00`
+- updated_at_utc: `2026-04-21T05:22:14.390084+00:00`

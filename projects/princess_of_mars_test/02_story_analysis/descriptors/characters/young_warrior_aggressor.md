@@ -10,9 +10,7 @@
 - chapter_mentions:
   - CH010
 - entity_kind: individual
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - role: individual
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 ## Generated Fields
 
@@ -25,7 +23,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - individual
 - [CH003] CHAPTER III (book index hit)
 - [CH009] CHAPTER IX (book index hit)
@@ -40,6 +37,6 @@
 
 - artifact_id: `DESC_CHAR_young_warrior_aggressor`
 - status: `generated`
-- source_fingerprint: `b65052f88b2f63db6830cca8365e9a6e8450c161`
-- created_at_utc: `2026-04-21T05:20:51.826005+00:00`
-- updated_at_utc: `2026-04-21T05:20:51.826005+00:00`
+- source_fingerprint: `0b949f9e7cc8f22df92ac82a542ece5d4a7b0462`
+- created_at_utc: `2026-04-21T05:22:15.060165+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.060165+00:00`

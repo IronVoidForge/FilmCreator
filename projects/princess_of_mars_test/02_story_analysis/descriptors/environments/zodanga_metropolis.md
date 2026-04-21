@@ -37,7 +37,6 @@
 
 ## Evidence Summary
 
-- Environment currently kept under extracted canonical id.
 - No layout notes available.
 - Unknown
 - walled city
@@ -45,6 +44,7 @@
 - Zodangan metropolis
 - central plaza
 - massive fortifications
+- ancient Martian urban center.
 
 ## Review
 
@@ -54,6 +54,6 @@
 
 - artifact_id: `DESC_ENV_zodanga_metropolis`
 - status: `generated`
-- source_fingerprint: `5f9a926e8677936ebc537fa1565338bd4fc2d76d`
-- created_at_utc: `2026-04-21T05:20:53.238833+00:00`
-- updated_at_utc: `2026-04-21T05:20:53.238833+00:00`
+- source_fingerprint: `e3b7d8016931032c0e2cd1e05a628a62bef9d7bb`
+- created_at_utc: `2026-04-21T05:22:16.687468+00:00`
+- updated_at_utc: `2026-04-21T05:22:16.687468+00:00`

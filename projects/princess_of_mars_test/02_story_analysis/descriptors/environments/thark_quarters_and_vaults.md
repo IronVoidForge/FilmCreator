@@ -55,5 +55,5 @@
 - artifact_id: `DESC_ENV_thark_quarters_and_vaults`
 - status: `generated`
 - source_fingerprint: `4c07ca4ccfbefa19eee8b6765eadd862650c9019`
-- created_at_utc: `2026-04-21T05:20:53.082200+00:00`
-- updated_at_utc: `2026-04-21T05:20:53.082200+00:00`
+- created_at_utc: `2026-04-21T05:22:16.502812+00:00`
+- updated_at_utc: `2026-04-21T05:22:16.502812+00:00`

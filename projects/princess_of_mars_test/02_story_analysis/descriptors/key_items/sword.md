@@ -37,5 +37,5 @@
 - artifact_id: `DESC_ITEM_sword`
 - status: `generated`
 - source_fingerprint: `f2d6cfce10780205f05e33653e24230776c03abc`
-- created_at_utc: `2026-04-21T05:20:54.063101+00:00`
-- updated_at_utc: `2026-04-21T05:20:54.063101+00:00`
+- created_at_utc: `2026-04-21T05:22:19.776929+00:00`
+- updated_at_utc: `2026-04-21T05:22:19.776929+00:00`

@@ -57,5 +57,5 @@
 - artifact_id: `DESC_ENV_arizona_mountain_cave`
 - status: `generated`
 - source_fingerprint: `7b3afb04f5492dc9dc470b436f5cfa60269d3c65`
-- created_at_utc: `2026-04-21T05:20:52.099292+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.099292+00:00`
+- created_at_utc: `2026-04-21T05:22:15.370872+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.370872+00:00`

@@ -35,7 +35,6 @@
 
 ## Evidence Summary
 
-- Environment currently kept under extracted canonical id.
 - No layout notes available.
 - Unknown
 - ruined Martian city
@@ -43,6 +42,7 @@
 - shadowed urban ruins
 - repurposed archaeological site
 - quiet scholar's quarters.
+- Secondary residential and educational setting.
 
 ## Review
 
@@ -52,6 +52,6 @@
 
 - artifact_id: `DESC_ENV_dead_city_quarters`
 - status: `generated`
-- source_fingerprint: `efd7a51e8f3490767ae1642df72578af0bd08ff5`
-- created_at_utc: `2026-04-21T05:20:52.324960+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.324960+00:00`
+- source_fingerprint: `5e85f856bb654c8d7a1b09825e66075ab727bcd6`
+- created_at_utc: `2026-04-21T05:22:15.648117+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.648117+00:00`

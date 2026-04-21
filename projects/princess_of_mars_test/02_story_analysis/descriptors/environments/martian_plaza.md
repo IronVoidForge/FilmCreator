@@ -24,7 +24,6 @@
 
 ## Evidence Summary
 
-- Environment currently kept under extracted canonical id.
 - No layout notes available.
 - Unknown
 - Transit setting / Secondary background.
@@ -40,6 +39,6 @@
 
 - artifact_id: `DESC_ENV_martian_plaza`
 - status: `generated`
-- source_fingerprint: `5d476454656f670bb6ada6cea1392155acdc07a6`
-- created_at_utc: `2026-04-21T05:20:52.687826+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.687826+00:00`
+- source_fingerprint: `a49283e496470572979ec309dda069de103fd7fc`
+- created_at_utc: `2026-04-21T05:22:16.050435+00:00`
+- updated_at_utc: `2026-04-21T05:22:16.050435+00:00`

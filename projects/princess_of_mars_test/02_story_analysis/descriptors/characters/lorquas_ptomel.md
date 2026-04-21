@@ -15,9 +15,7 @@
   - CH013
   - CH016
 - entity_kind: individual
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - role: individual
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 ## Generated Fields
 
@@ -30,7 +28,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - individual
 - [CH009] CHAPTER IX (book index hit)
 - [CH013] CHAPTER XIII (book index hit)
@@ -45,6 +42,6 @@
 
 - artifact_id: `DESC_CHAR_lorquas_ptomel`
 - status: `generated`
-- source_fingerprint: `b1fcd1eecadffce8aaaefc032d5bb4b99e6d35fc`
-- created_at_utc: `2026-04-21T05:20:50.388286+00:00`
-- updated_at_utc: `2026-04-21T05:20:50.388286+00:00`
+- source_fingerprint: `8e012ad78a2d8940d85bad1dfba2609e3dc8b157`
+- created_at_utc: `2026-04-21T05:22:13.647123+00:00`
+- updated_at_utc: `2026-04-21T05:22:13.647123+00:00`

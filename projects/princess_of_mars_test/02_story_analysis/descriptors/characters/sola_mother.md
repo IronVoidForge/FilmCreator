@@ -10,9 +10,7 @@
 - chapter_mentions:
   - CH015
 - entity_kind: individual
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - role: individual
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 ## Generated Fields
 
@@ -25,7 +23,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - individual
 - [CH015] CHAPTER XV (book index hit)
 - [CH003] CHAPTER III (book index hit)
@@ -40,6 +37,6 @@
 
 - artifact_id: `DESC_CHAR_sola_mother`
 - status: `generated`
-- source_fingerprint: `b0ab61a74f5ba9556916732d9e2491abe7f62540`
-- created_at_utc: `2026-04-21T05:20:51.206544+00:00`
-- updated_at_utc: `2026-04-21T05:20:51.206544+00:00`
+- source_fingerprint: `e49eaf615759e70b52a24846dbf35de80df01c50`
+- created_at_utc: `2026-04-21T05:22:14.418110+00:00`
+- updated_at_utc: `2026-04-21T05:22:14.418110+00:00`

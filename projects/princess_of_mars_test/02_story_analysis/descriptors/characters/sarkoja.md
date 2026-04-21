@@ -16,9 +16,7 @@
   - CH015
   - CH024
 - entity_kind: individual
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - role: individual
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 ## Generated Fields
 
@@ -31,7 +29,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - individual
 - [CH009 p11-p13] On the night following the prisoner’s visit to the audience chamber the conversation finally fell upon this subject, and I was all ears on the instant. I had feared to question Sol...
 - [CH009 p13-p15] “When,” asked one of the women, “will we enjoy the death throes of the red one? or does Lorquas Ptomel, Jed, intend holding her for ransom?” “They have decided to carry her with us...
@@ -39,6 +36,7 @@
 - [CH011 p1-p3] WITH DEJAH THORIS As we reached the open the two female guards who had been detailed to watch over Dejah Thoris hurried up and made as though to assume custody of her once more. Th...
 - [CH011 p2-p4] As we reached the open the two female guards who had been detailed to watch over Dejah Thoris hurried up and made as though to assume custody of her once more. The poor child shran...
 - [CH012 p7-p9] “As a matter of justice I must warn you that we only await one of these two excuses for ridding ourselves of so great a responsibility. The safe delivery of the red girl to Tal Haj...
+- [CH012 p8-p10] Turning, I left the audience chamber. So this was the beginning of Sarkoja’s persecution! I knew that none other could be responsible for this report which had reached the ears of ...
 
 ## Review
 
@@ -49,6 +47,6 @@
 
 - artifact_id: `DESC_CHAR_sarkoja`
 - status: `generated`
-- source_fingerprint: `794349d54efdb4aa1c0ade9fec3df6bc000bd631`
-- created_at_utc: `2026-04-21T05:20:51.019863+00:00`
-- updated_at_utc: `2026-04-21T05:20:51.019863+00:00`
+- source_fingerprint: `2b18ebbbbd3a629bb78b3216d31545ebffbda28f`
+- created_at_utc: `2026-04-21T05:22:14.259990+00:00`
+- updated_at_utc: `2026-04-21T05:22:14.259990+00:00`

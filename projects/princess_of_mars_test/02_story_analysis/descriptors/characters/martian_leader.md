@@ -10,9 +10,7 @@
 - chapter_mentions:
   - CH003
 - entity_kind: individual
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - role: individual
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 ## Generated Fields
 
@@ -25,7 +23,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - individual
 - [CH003] CHAPTER III (book index hit)
 - [CH004] CHAPTER IV (book index hit)
@@ -40,6 +37,6 @@
 
 - artifact_id: `DESC_CHAR_martian_leader`
 - status: `generated`
-- source_fingerprint: `4da60693238b2e13e50ef6e00fea4f83eb87eac0`
-- created_at_utc: `2026-04-21T05:20:50.418314+00:00`
-- updated_at_utc: `2026-04-21T05:20:50.418314+00:00`
+- source_fingerprint: `5d84eedd86910f43ad9f972a5f406777df1b52d9`
+- created_at_utc: `2026-04-21T05:22:13.674136+00:00`
+- updated_at_utc: `2026-04-21T05:22:13.674136+00:00`

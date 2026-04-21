@@ -23,7 +23,6 @@
 
 ## Evidence Summary
 
-- Environment currently kept under extracted canonical id.
 - No layout notes available.
 - Unknown
 - Transit setting
@@ -39,6 +38,6 @@
 
 - artifact_id: `DESC_ENV_martian_sky_and_dead_sea_bottom`
 - status: `generated`
-- source_fingerprint: `4708d04b52a8a2d918bfd3464b7d1bab2bf2e96e`
-- created_at_utc: `2026-04-21T05:20:52.725366+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.725366+00:00`
+- source_fingerprint: `83f95cf086ee987817ed443af7f15c24a4058aa4`
+- created_at_utc: `2026-04-21T05:22:16.089463+00:00`
+- updated_at_utc: `2026-04-21T05:22:16.089463+00:00`

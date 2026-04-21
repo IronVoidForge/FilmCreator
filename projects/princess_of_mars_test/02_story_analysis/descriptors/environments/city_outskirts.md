@@ -53,5 +53,5 @@
 - artifact_id: `DESC_ENV_city_outskirts`
 - status: `generated`
 - source_fingerprint: `060148433aa0039b07ac6323b3e38351d97b3519`
-- created_at_utc: `2026-04-21T05:20:52.255397+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.255397+00:00`
+- created_at_utc: `2026-04-21T05:22:15.564033+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.564033+00:00`

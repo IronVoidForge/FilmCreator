@@ -10,9 +10,7 @@
 - chapter_mentions:
   - CH021
 - entity_kind: individual
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - role: individual
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 ## Generated Fields
 
@@ -25,7 +23,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - individual
 - [CH003] CHAPTER III (book index hit)
 - [CH005] CHAPTER V (book index hit)
@@ -40,6 +37,6 @@
 
 - artifact_id: `DESC_CHAR_red_martian_scout`
 - status: `generated`
-- source_fingerprint: `2aa7f9c7f675d62dc44fcea002cbfd7cbf4f5910`
-- created_at_utc: `2026-04-21T05:20:50.756603+00:00`
-- updated_at_utc: `2026-04-21T05:20:50.756603+00:00`
+- source_fingerprint: `580c7a92d5ad552ff8ba47eb4202918228869426`
+- created_at_utc: `2026-04-21T05:22:14.015824+00:00`
+- updated_at_utc: `2026-04-21T05:22:14.015824+00:00`

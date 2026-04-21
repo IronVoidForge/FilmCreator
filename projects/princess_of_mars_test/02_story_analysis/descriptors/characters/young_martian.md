@@ -10,9 +10,7 @@
 - chapter_mentions:
   - CH007
 - entity_kind: individual
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - role: individual
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 ## Generated Fields
 
@@ -25,7 +23,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - individual
 - [CH003] CHAPTER III (book index hit)
 - [CH009] CHAPTER IX (book index hit)
@@ -40,6 +37,6 @@
 
 - artifact_id: `DESC_CHAR_young_martian`
 - status: `generated`
-- source_fingerprint: `b5df18765a084d22a569cbe7e36f6719b0cc35e7`
-- created_at_utc: `2026-04-21T05:20:51.801497+00:00`
-- updated_at_utc: `2026-04-21T05:20:51.801497+00:00`
+- source_fingerprint: `60a035cfda34c48757ed82d90480aebcc6603436`
+- created_at_utc: `2026-04-21T05:22:15.033142+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.033142+00:00`

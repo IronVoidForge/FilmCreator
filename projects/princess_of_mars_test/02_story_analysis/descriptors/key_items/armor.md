@@ -35,5 +35,5 @@
 - artifact_id: `DESC_ITEM_armor`
 - status: `generated`
 - source_fingerprint: `a245b94671d408105618f1bc5ce796ec93aa0b7f`
-- created_at_utc: `2026-04-21T05:20:54.064100+00:00`
-- updated_at_utc: `2026-04-21T05:20:54.064100+00:00`
+- created_at_utc: `2026-04-21T05:22:19.781939+00:00`
+- updated_at_utc: `2026-04-21T05:22:19.781939+00:00`

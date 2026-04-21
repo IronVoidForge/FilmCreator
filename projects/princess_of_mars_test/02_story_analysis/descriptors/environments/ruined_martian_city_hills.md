@@ -39,7 +39,6 @@
 
 ## Evidence Summary
 
-- Environment currently kept under extracted canonical id.
 - No layout notes available.
 - Unknown
 - Rugged Martian hills
@@ -47,6 +46,7 @@
 - rocky terrain
 - proximity to waterways
 - desolate landscape
+- twilight atmosphere
 
 ## Review
 
@@ -56,6 +56,6 @@
 
 - artifact_id: `DESC_ENV_ruined_martian_city_hills`
 - status: `generated`
-- source_fingerprint: `d8f1be644e3c8c5d533bc40e96363176768c7859`
-- created_at_utc: `2026-04-21T05:20:52.956094+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.956094+00:00`
+- source_fingerprint: `1355d5f5fdee676b0d009ea60e8370624f2be597`
+- created_at_utc: `2026-04-21T05:22:16.354683+00:00`
+- updated_at_utc: `2026-04-21T05:22:16.354683+00:00`

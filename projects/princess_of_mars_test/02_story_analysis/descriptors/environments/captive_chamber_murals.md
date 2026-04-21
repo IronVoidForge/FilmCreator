@@ -57,5 +57,5 @@
 - artifact_id: `DESC_ENV_captive_chamber_murals`
 - status: `generated`
 - source_fingerprint: `a65dc655b3994abaead1e36aa1f795377e8f1d36`
-- created_at_utc: `2026-04-21T05:20:52.185334+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.185334+00:00`
+- created_at_utc: `2026-04-21T05:22:15.477978+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.477978+00:00`

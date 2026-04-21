@@ -37,7 +37,6 @@
 
 ## Evidence Summary
 
-- Environment currently kept under extracted canonical id.
 - No layout notes available.
 - Unknown
 - Thark council chamber
@@ -45,6 +44,7 @@
 - brutalist alien architecture
 - warrior assembly hall
 - ceremonial stone structures
+- tense political arena.
 
 ## Review
 
@@ -54,6 +54,6 @@
 
 - artifact_id: `DESC_ENV_thark_plaza_and_council_chamber`
 - status: `generated`
-- source_fingerprint: `2642d0b9ab2fd2ee8355e9e5b05982665b67db3a`
-- created_at_utc: `2026-04-21T05:20:53.064690+00:00`
-- updated_at_utc: `2026-04-21T05:20:53.064690+00:00`
+- source_fingerprint: `5d964e3f7a396b29ec14e011e37faa3f7d9a1a2c`
+- created_at_utc: `2026-04-21T05:22:16.481797+00:00`
+- updated_at_utc: `2026-04-21T05:22:16.481797+00:00`

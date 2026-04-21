@@ -53,5 +53,5 @@
 - artifact_id: `DESC_ENV_warhoon_outpost_site`
 - status: `generated`
 - source_fingerprint: `6d52a0e3c125ac12ce99eb41672fd7ee55c9478c`
-- created_at_utc: `2026-04-21T05:20:53.168263+00:00`
-- updated_at_utc: `2026-04-21T05:20:53.168263+00:00`
+- created_at_utc: `2026-04-21T05:22:16.607399+00:00`
+- updated_at_utc: `2026-04-21T05:22:16.607399+00:00`

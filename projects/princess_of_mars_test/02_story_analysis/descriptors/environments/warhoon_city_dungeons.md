@@ -37,7 +37,6 @@
 
 ## Evidence Summary
 
-- Environment currently kept under extracted canonical id.
 - No layout notes available.
 - Unknown
 - pitch-black dungeon
@@ -45,6 +44,7 @@
 - heavy iron chains
 - claustrophobic underground chamber
 - gleaming eyes in darkness
+- damp stone walls.
 
 ## Review
 
@@ -54,6 +54,6 @@
 
 - artifact_id: `DESC_ENV_warhoon_city_dungeons`
 - status: `generated`
-- source_fingerprint: `0d1683353843f35199fe904333fe8024f361e761`
-- created_at_utc: `2026-04-21T05:20:53.133734+00:00`
-- updated_at_utc: `2026-04-21T05:20:53.133734+00:00`
+- source_fingerprint: `d46f2245384445156edfb5d5d6757455316996d0`
+- created_at_utc: `2026-04-21T05:22:16.565866+00:00`
+- updated_at_utc: `2026-04-21T05:22:16.565866+00:00`

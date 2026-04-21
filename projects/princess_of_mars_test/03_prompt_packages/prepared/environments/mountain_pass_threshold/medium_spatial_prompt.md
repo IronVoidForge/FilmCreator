@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, medium spatial view showing foreground, midground, and background relationships, Narrow mountain pass, rocky ridges, vantage points for mounted warriors., High contrast, shadows from cliffs, sudden emergence of large groups., Martian mountain pass, rocky canyon entrance, clear spati...
+Film environment reference sheet, medium spatial view showing foreground, midground, and background relationships, Narrow mountain pass, rocky ridges, vantage points for mounted warriors., Martian mountain pass, rocky canyon entrance, rugged cliffside, clear spatial layout, readable anchors and depth cues, no charac...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

@@ -53,5 +53,5 @@
 - artifact_id: `DESC_ENV_dead_sea_bottom_basin`
 - status: `generated`
 - source_fingerprint: `7265cbca7842e160ba50274bfddbc7102b3f9e56`
-- created_at_utc: `2026-04-21T05:20:52.341474+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.341474+00:00`
+- created_at_utc: `2026-04-21T05:22:15.669130+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.669130+00:00`

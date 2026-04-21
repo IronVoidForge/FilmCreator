@@ -13,9 +13,7 @@
   - CH006
   - CH008
 - entity_kind: group
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Detected plural/group-like character asset.
 - role: group
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Detected plural/group-like character asset.
 
 ## Generated Fields
 
@@ -28,7 +26,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Detected plural/group-like character asset.
 - group
 - [CH003] CHAPTER III (book index hit)
 - [CH013] CHAPTER XIII (book index hit)
@@ -43,6 +40,6 @@
 
 - artifact_id: `DESC_CHAR_martian_warriors`
 - status: `generated`
-- source_fingerprint: `99cea3c30ea8c5dd99aa0a37663e57f6b57e21ff`
-- created_at_utc: `2026-04-21T05:20:50.507371+00:00`
-- updated_at_utc: `2026-04-21T05:20:50.507371+00:00`
+- source_fingerprint: `7fff2cb910fa0107a16e7f79f1ceb57242ed0cbd`
+- created_at_utc: `2026-04-21T05:22:13.768722+00:00`
+- updated_at_utc: `2026-04-21T05:22:13.768722+00:00`

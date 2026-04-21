@@ -302,6 +302,30 @@ def _compact(text: str, *, limit: int = 220) -> str:
     return collapsed[: limit - 3].rstrip() + "..."
 
 
+def _looks_like_metadata_summary(text: str) -> bool:
+    normalized = " ".join(text.lower().split())
+    metadata_markers = [
+        "resolved known",
+        "no competing canonical alias",
+        "kept extracted asset id",
+        "canonical id",
+        "extracted asset id",
+        "singular individual entity",
+        "registry fallback",
+        "alias detected",
+    ]
+    return any(marker in normalized for marker in metadata_markers)
+
+
+def _clean_visual_summary(text: Any, *, fallback: str = "unknown", limit: int = 220) -> str:
+    if not isinstance(text, str):
+        return fallback
+    cleaned = _normalize_text(text)
+    if not cleaned or _looks_like_metadata_summary(cleaned):
+        return fallback
+    return _compact(cleaned, limit=limit)
+
+
 def _first_nonempty(*values: object, fallback: str = "") -> str:
     for value in values:
         if isinstance(value, str) and value.strip():
@@ -859,9 +883,9 @@ def _collect_character_evidence(
     ]:
         if isinstance(value, list):
             for item in value:
-                if isinstance(item, str) and item.strip():
+                if isinstance(item, str) and item.strip() and not _looks_like_metadata_summary(item):
                     add_line(item, {"source": "character_bible", "chapter_id": None, "source_path": None})
-        elif isinstance(value, str) and value.strip():
+        elif isinstance(value, str) and value.strip() and not _looks_like_metadata_summary(value):
             add_line(value, {"source": "character_bible", "chapter_id": None, "source_path": None})
 
     desc_layers = entry.get("description_layers", {})
@@ -962,9 +986,9 @@ def _collect_environment_evidence(
     ]:
         if isinstance(value, list):
             for item in value:
-                if isinstance(item, str) and item.strip():
+                if isinstance(item, str) and item.strip() and not _looks_like_metadata_summary(item):
                     add_line(item, {"source": "environment_bible", "chapter_id": None, "source_path": None})
-        elif isinstance(value, str) and value.strip():
+        elif isinstance(value, str) and value.strip() and not _looks_like_metadata_summary(value):
             add_line(value, {"source": "environment_bible", "chapter_id": None, "source_path": None})
 
     desc_layers = entry.get("description_layers", {})
@@ -1236,8 +1260,9 @@ def _llm_refine_descriptor(
         "Use only the provided evidence. Prefer compact structured markdown. "
         "If evidence directly supports a detail, put it in supported fields. "
         "If you make a careful visual choice to complete the canon, put it in generated fields. "
-        "Do not leave everything as unknown if the evidence and stable context support a reasonable decision, "
-        "but do not put inferred detail in supported fields. Return one tagged FilmCreator markdown packet only. "
+        "Never place inferred detail in supported fields. "
+        "For generated fields, prefer a best-effort visual decision over unknown when canon and evidence make a reasonable choice. "
+        "Return one tagged FilmCreator markdown packet only. "
         "Do not return JSON."
     )
 
@@ -1248,7 +1273,7 @@ Enrich the following {entity_type} descriptor using the evidence provided.
 Keep the output compact. Favor structured fields over prose.
 Use the book, registry, and existing contract evidence for supported fields.
 Use careful inference for generated fields when the text does not spell out a visual detail but the canon is still clear.
-If you genuinely cannot determine a field, mark it as unknown and add a review flag.
+For generated fields, make a best-effort visual decision from the book evidence and stable context instead of using unknown whenever the canon supports a reasonable choice. Put those values in generated_fields_markdown, keep supported_fields_markdown strictly book-backed, and use review flags for anything still low-confidence or questionable.
 
 DESCRIPTOR:
 {json.dumps({
@@ -1482,12 +1507,12 @@ def _base_character_descriptor(
     set_field("costume_layers", _coerce_string_list(bible.get("costume_signature", "")), origin="bible")
     set_field("costume_materials", "unknown", origin="fallback")
     set_field("costume_signature", bible.get("costume_signature") or "unknown", origin="bible")
-    set_field("silhouette_notes", _compact(str(bible.get("stable_visual_summary", "")) or "stable silhouette", limit=220), origin="bible")
+    set_field("silhouette_notes", _clean_visual_summary(bible.get("stable_visual_summary"), fallback="unknown"), origin="bible")
     set_field("recurring_accessories", _coerce_string_list(bible.get("relationship_notes", [])), origin="bible")
     set_field("posture", "unknown", origin="fallback")
     set_field("expression_tendency", "unknown", origin="fallback")
-    set_field("physical_presence_notes", _compact(str(bible.get("stable_visual_summary", "")) or "no stable physical presence notes", limit=220), origin="bible")
-    set_field("voice_or_presence_notes", bible.get("voice_notes") or "unknown", origin="bible")
+    set_field("physical_presence_notes", _clean_visual_summary(bible.get("stable_visual_summary"), fallback="unknown"), origin="bible")
+    set_field("voice_or_presence_notes", _clean_visual_summary(bible.get("voice_notes"), fallback="unknown"), origin="bible")
     set_field("chapter_mentions", _coerce_string_list(entry.get("chapter_mentions", [])), origin="registry_entry")
 
     llm_payload = None

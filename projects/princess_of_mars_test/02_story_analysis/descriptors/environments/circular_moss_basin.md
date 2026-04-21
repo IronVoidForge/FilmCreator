@@ -57,5 +57,5 @@
 - artifact_id: `DESC_ENV_circular_moss_basin`
 - status: `generated`
 - source_fingerprint: `3b25dabf9c0b7bda6b87674695b7e2604d190608`
-- created_at_utc: `2026-04-21T05:20:52.219358+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.219358+00:00`
+- created_at_utc: `2026-04-21T05:22:15.520003+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.520003+00:00`

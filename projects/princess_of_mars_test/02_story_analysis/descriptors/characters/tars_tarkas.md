@@ -22,9 +22,7 @@
   - CH026
   - CH027
 - entity_kind: individual
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - role: individual
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 ## Generated Fields
 
@@ -37,7 +35,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - individual
 - [CH013] CHAPTER XIII (book index hit)
 - [CH015] CHAPTER XV (book index hit)
@@ -52,6 +49,6 @@
 
 - artifact_id: `DESC_CHAR_tars_tarkas`
 - status: `generated`
-- source_fingerprint: `0e18366b3aa6b6dfa49066c05728ee943da464b0`
-- created_at_utc: `2026-04-21T05:20:51.405705+00:00`
-- updated_at_utc: `2026-04-21T05:20:51.405705+00:00`
+- source_fingerprint: `3f8835dde28a69323714065b570ea3ebe2619e60`
+- created_at_utc: `2026-04-21T05:22:14.614747+00:00`
+- updated_at_utc: `2026-04-21T05:22:14.614747+00:00`

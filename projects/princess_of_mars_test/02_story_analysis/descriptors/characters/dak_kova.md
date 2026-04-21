@@ -11,9 +11,7 @@
   - CH018
   - CH019
 - entity_kind: individual
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - role: individual
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 ## Generated Fields
 
@@ -26,7 +24,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - individual
 - [CH003] CHAPTER III (book index hit)
 - [CH013] CHAPTER XIII (book index hit)
@@ -41,6 +38,6 @@
 
 - artifact_id: `DESC_CHAR_dak_kova`
 - status: `generated`
-- source_fingerprint: `fe86b337ca6864430de8df77ccfb8b8ef14b1689`
-- created_at_utc: `2026-04-21T05:20:49.947900+00:00`
-- updated_at_utc: `2026-04-21T05:20:49.947900+00:00`
+- source_fingerprint: `f48b61923c0c4407e7abb60027dfaff994f1610c`
+- created_at_utc: `2026-04-21T05:22:13.220789+00:00`
+- updated_at_utc: `2026-04-21T05:22:13.220789+00:00`

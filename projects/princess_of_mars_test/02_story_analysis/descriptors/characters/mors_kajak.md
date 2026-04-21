@@ -10,9 +10,7 @@
 - chapter_mentions:
   - CH026
 - entity_kind: individual
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - role: individual
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 ## Generated Fields
 
@@ -25,7 +23,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - individual
 - [CH013] CHAPTER XIII (book index hit)
 - [CH026] CHAPTER XXVI (book index hit)
@@ -40,6 +37,6 @@
 
 - artifact_id: `DESC_CHAR_mors_kajak`
 - status: `generated`
-- source_fingerprint: `4fdee3c51064557bb4b1284ac451186282736438`
-- created_at_utc: `2026-04-21T05:20:50.533397+00:00`
-- updated_at_utc: `2026-04-21T05:20:50.533397+00:00`
+- source_fingerprint: `238942e40cb7eca25bc76e5d4cb46ae19e408a69`
+- created_at_utc: `2026-04-21T05:22:13.796734+00:00`
+- updated_at_utc: `2026-04-21T05:22:13.796734+00:00`

@@ -55,5 +55,5 @@
 - artifact_id: `DESC_ENV_martian_distant_hills`
 - status: `generated`
 - source_fingerprint: `969ca51d8f842d3ed34bba73372bca952da829cb`
-- created_at_utc: `2026-04-21T05:20:52.530160+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.530160+00:00`
+- created_at_utc: `2026-04-21T05:22:15.887294+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.887294+00:00`

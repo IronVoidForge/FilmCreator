@@ -57,5 +57,5 @@
 - artifact_id: `DESC_ENV_ancient_dead_city_battlefield`
 - status: `generated`
 - source_fingerprint: `530d5ec2398a4bec19c1f7e0a9ae867e35c9a352`
-- created_at_utc: `2026-04-21T05:20:51.986175+00:00`
-- updated_at_utc: `2026-04-21T05:20:51.986175+00:00`
+- created_at_utc: `2026-04-21T05:22:15.236792+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.236792+00:00`

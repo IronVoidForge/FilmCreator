@@ -10,9 +10,7 @@
 - chapter_mentions:
   - CH006
 - entity_kind: individual
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - role: individual
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 ## Generated Fields
 
@@ -25,7 +23,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - individual
 - [CH003] CHAPTER III (book index hit)
 - [CH005] CHAPTER V (book index hit)
@@ -40,6 +37,6 @@
 
 - artifact_id: `DESC_CHAR_watch_thing`
 - status: `generated`
-- source_fingerprint: `3c81506fbe0fc451ebd8d227832a1ec235ca98a1`
-- created_at_utc: `2026-04-21T05:20:51.636378+00:00`
-- updated_at_utc: `2026-04-21T05:20:51.636378+00:00`
+- source_fingerprint: `ced792674be56359343066dc140054f50508322a`
+- created_at_utc: `2026-04-21T05:22:14.859951+00:00`
+- updated_at_utc: `2026-04-21T05:22:14.859951+00:00`

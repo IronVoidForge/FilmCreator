@@ -37,7 +37,6 @@
 
 ## Evidence Summary
 
-- Environment currently kept under extracted canonical id.
 - No layout notes available.
 - Unknown
 - Winding stone corridors
@@ -45,6 +44,7 @@
 - overgrown central plaza
 - ancient fountains and statuary
 - decaying martial civilization
+- Tharkian residential architecture.
 
 ## Review
 
@@ -54,6 +54,6 @@
 
 - artifact_id: `DESC_ENV_tharkian_residential_complex`
 - status: `generated`
-- source_fingerprint: `b464c53fd77aa9dafd7faf6ff18e36b1cc5ff65a`
-- created_at_utc: `2026-04-21T05:20:53.116726+00:00`
-- updated_at_utc: `2026-04-21T05:20:53.116726+00:00`
+- source_fingerprint: `ba7814387a4ac712c65aab69a435455305a51bd9`
+- created_at_utc: `2026-04-21T05:22:16.545356+00:00`
+- updated_at_utc: `2026-04-21T05:22:16.545356+00:00`

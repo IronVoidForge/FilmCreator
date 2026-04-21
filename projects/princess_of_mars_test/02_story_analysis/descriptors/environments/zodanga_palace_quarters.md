@@ -35,7 +35,6 @@
 
 ## Evidence Summary
 
-- Environment currently kept under extracted canonical id.
 - No layout notes available.
 - Unknown
 - Zodangan palace interior
@@ -43,6 +42,7 @@
 - padwar residence
 - ornate Martian architecture
 - prestigious palace chambers.
+- Primary Setting (Interior)
 
 ## Review
 
@@ -52,6 +52,6 @@
 
 - artifact_id: `DESC_ENV_zodanga_palace_quarters`
 - status: `generated`
-- source_fingerprint: `97887ae458f64b69975f36c3433963f216d2edd0`
-- created_at_utc: `2026-04-21T05:20:53.334912+00:00`
-- updated_at_utc: `2026-04-21T05:20:53.334912+00:00`
+- source_fingerprint: `cd0ac307d7d4c130fe409c9c1efd5a910c611591`
+- created_at_utc: `2026-04-21T05:22:16.801554+00:00`
+- updated_at_utc: `2026-04-21T05:22:16.801554+00:00`

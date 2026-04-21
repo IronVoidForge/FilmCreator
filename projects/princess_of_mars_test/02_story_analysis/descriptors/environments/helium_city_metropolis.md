@@ -23,7 +23,6 @@
 
 ## Evidence Summary
 
-- Environment currently kept under extracted canonical id.
 - No layout notes available.
 - Unknown
 - Primary (Social/Ceremonial Setting)
@@ -39,6 +38,6 @@
 
 - artifact_id: `DESC_ENV_helium_city_metropolis`
 - status: `generated`
-- source_fingerprint: `6140d7f39bdc8a2bf9949bd752cd2b68f58262b7`
-- created_at_utc: `2026-04-21T05:20:52.430567+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.430567+00:00`
+- source_fingerprint: `7f9b2f0a7299ad1d3e08f756c2e14c7dbf85ac8d`
+- created_at_utc: `2026-04-21T05:22:15.769200+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.769200+00:00`

@@ -35,7 +35,6 @@
 
 ## Evidence Summary
 
-- Environment currently kept under extracted canonical id.
 - No layout notes available.
 - Unknown
 - solar-ray incubator
@@ -43,6 +42,7 @@
 - concentrated sunlight chamber
 - ancient biological facility
 - sun-focused stone structure.
+- Primary functional setting.
 
 ## Review
 
@@ -52,6 +52,6 @@
 
 - artifact_id: `DESC_ENV_incubator_structure`
 - status: `generated`
-- source_fingerprint: `fd400dec75feaf3cae4c704b3459f8953b3e5dc7`
-- created_at_utc: `2026-04-21T05:20:52.512645+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.512645+00:00`
+- source_fingerprint: `f96b74dbf6c79cb60f171136873ca8270e580830`
+- created_at_utc: `2026-04-21T05:22:15.866283+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.866283+00:00`

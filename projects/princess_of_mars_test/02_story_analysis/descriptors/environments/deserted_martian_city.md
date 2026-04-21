@@ -35,7 +35,6 @@
 
 ## Evidence Summary
 
-- Environment currently kept under extracted canonical id.
 - No layout notes available.
 - Unknown
 - Desolate Martian urban sprawl
@@ -43,6 +42,7 @@
 - high-altitude vantage points
 - central city plaza
 - dusty Martian cityscape.
+- Primary setting.
 
 ## Review
 
@@ -52,6 +52,6 @@
 
 - artifact_id: `DESC_ENV_deserted_martian_city`
 - status: `generated`
-- source_fingerprint: `ef952ee32c5a7905f4f62b48ee389c38e3a495fe`
-- created_at_utc: `2026-04-21T05:20:52.373515+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.373515+00:00`
+- source_fingerprint: `3697c4ea65d8ab964a664bfcd498f0edeea4f406`
+- created_at_utc: `2026-04-21T05:22:15.709166+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.709166+00:00`

@@ -53,5 +53,5 @@
 - artifact_id: `DESC_ENV_hudson_river_study`
 - status: `generated`
 - source_fingerprint: `bc9534feea28623ba76022340864ef988248fa09`
-- created_at_utc: `2026-04-21T05:20:52.495125+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.495125+00:00`
+- created_at_utc: `2026-04-21T05:22:15.845772+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.845772+00:00`

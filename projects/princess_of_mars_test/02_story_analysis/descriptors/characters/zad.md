@@ -11,9 +11,7 @@
   - CH014
   - CH015
 - entity_kind: individual
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - role: individual
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 ## Generated Fields
 
@@ -26,7 +24,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - individual
 - [CH014 p37-p39] As I was approaching Dejah Thoris’ chariot I passed Sarkoja, and the black, venomous look she accorded me was the sweetest balm I had felt for many hours. Lord, how she hated me! I...
 - [CH014 p38-p40] A few moments later I saw her deep in conversation with a warrior named Zad; a big, hulking, powerful brute, but one who had never made a kill among his own chieftains, and so was ...
@@ -44,6 +41,6 @@
 
 - artifact_id: `DESC_CHAR_zad`
 - status: `generated`
-- source_fingerprint: `8b31114cbcd38ddf19c74bf58a8ef532f30aa007`
-- created_at_utc: `2026-04-21T05:20:51.892568+00:00`
-- updated_at_utc: `2026-04-21T05:20:51.892568+00:00`
+- source_fingerprint: `bcdf25f9b94bd19fe8fc02558f2037466514434f`
+- created_at_utc: `2026-04-21T05:22:15.126229+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.126229+00:00`

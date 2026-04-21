@@ -55,5 +55,5 @@
 - artifact_id: `DESC_ENV_thark_palace_council_chamber`
 - status: `generated`
 - source_fingerprint: `558145eeb091f9529d72d187073931b3997e71a9`
-- created_at_utc: `2026-04-21T05:20:53.048176+00:00`
-- updated_at_utc: `2026-04-21T05:20:53.048176+00:00`
+- created_at_utc: `2026-04-21T05:22:16.460784+00:00`
+- updated_at_utc: `2026-04-21T05:22:16.460784+00:00`

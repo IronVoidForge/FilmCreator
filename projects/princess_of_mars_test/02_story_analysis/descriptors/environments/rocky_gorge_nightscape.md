@@ -57,5 +57,5 @@
 - artifact_id: `DESC_ENV_rocky_gorge_nightscape`
 - status: `generated`
 - source_fingerprint: `e73cd3c096879123ced7c60138d6c4b6b998a08a`
-- created_at_utc: `2026-04-21T05:20:52.938576+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.938576+00:00`
+- created_at_utc: `2026-04-21T05:22:16.333673+00:00`
+- updated_at_utc: `2026-04-21T05:22:16.333673+00:00`

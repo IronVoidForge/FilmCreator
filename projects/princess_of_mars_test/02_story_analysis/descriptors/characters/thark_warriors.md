@@ -10,9 +10,7 @@
 - chapter_mentions:
   - CH017
 - entity_kind: group
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Detected plural/group-like character asset.
 - role: group
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Detected plural/group-like character asset.
 
 ## Generated Fields
 
@@ -25,7 +23,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Detected plural/group-like character asset.
 - group
 - [CH013] CHAPTER XIII (book index hit)
 - [CH016] CHAPTER XVI (book index hit)
@@ -40,6 +37,6 @@
 
 - artifact_id: `DESC_CHAR_thark_warriors`
 - status: `generated`
-- source_fingerprint: `7a28e5e080e39179a840f21386ab7d1dcc8b671e`
-- created_at_utc: `2026-04-21T05:20:51.479779+00:00`
-- updated_at_utc: `2026-04-21T05:20:51.479779+00:00`
+- source_fingerprint: `aaf5de528957620eb3191affcf6ff876680550cd`
+- created_at_utc: `2026-04-21T05:22:14.696318+00:00`
+- updated_at_utc: `2026-04-21T05:22:14.696318+00:00`

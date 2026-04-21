@@ -53,5 +53,5 @@
 - artifact_id: `DESC_ENV_moss_covered_sea_bottom`
 - status: `generated`
 - source_fingerprint: `f829a2408df8999e39d8a456fbf64ed7d3406820`
-- created_at_utc: `2026-04-21T05:20:52.778415+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.778415+00:00`
+- created_at_utc: `2026-04-21T05:22:16.151517+00:00`
+- updated_at_utc: `2026-04-21T05:22:16.151517+00:00`

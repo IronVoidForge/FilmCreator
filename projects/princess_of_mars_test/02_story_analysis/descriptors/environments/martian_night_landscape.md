@@ -55,5 +55,5 @@
 - artifact_id: `DESC_ENV_martian_night_landscape`
 - status: `generated`
 - source_fingerprint: `358e96a0b520ade668c6558935a0bbf8bbee9959`
-- created_at_utc: `2026-04-21T05:20:52.603742+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.603742+00:00`
+- created_at_utc: `2026-04-21T05:22:15.967361+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.967361+00:00`

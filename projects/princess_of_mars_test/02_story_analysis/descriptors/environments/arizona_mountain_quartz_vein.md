@@ -57,5 +57,5 @@
 - artifact_id: `DESC_ENV_arizona_mountain_quartz_vein`
 - status: `generated`
 - source_fingerprint: `2180b108ab580102bad7f87f576318482ab5714a`
-- created_at_utc: `2026-04-21T05:20:52.116805+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.116805+00:00`
+- created_at_utc: `2026-04-21T05:22:15.391886+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.392389+00:00`

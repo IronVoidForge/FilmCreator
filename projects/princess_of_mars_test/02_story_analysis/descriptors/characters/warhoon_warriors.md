@@ -10,9 +10,7 @@
 - chapter_mentions:
   - CH018
 - entity_kind: group
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Detected plural/group-like character asset.
 - role: group
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Detected plural/group-like character asset.
 
 ## Generated Fields
 
@@ -25,7 +23,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Detected plural/group-like character asset.
 - group
 - [CH022] CHAPTER XXII (book index hit)
 - [CH024] CHAPTER XXIV (book index hit)
@@ -40,6 +37,6 @@
 
 - artifact_id: `DESC_CHAR_warhoon_warriors`
 - status: `generated`
-- source_fingerprint: `2ff39e8a8fb06cc9e5d63d8b73373c5abe8dbb2b`
-- created_at_utc: `2026-04-21T05:20:51.613874+00:00`
-- updated_at_utc: `2026-04-21T05:20:51.613874+00:00`
+- source_fingerprint: `aff2490d731ed39727bc661510d833fb3f1c6a7e`
+- created_at_utc: `2026-04-21T05:22:14.833428+00:00`
+- updated_at_utc: `2026-04-21T05:22:14.833428+00:00`

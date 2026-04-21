@@ -55,5 +55,5 @@
 - artifact_id: `DESC_ENV_solas_sleeping_chamber`
 - status: `generated`
 - source_fingerprint: `8569729790e7bc9830f15685bc7dbb433090416a`
-- created_at_utc: `2026-04-21T05:20:52.974108+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.974108+00:00`
+- created_at_utc: `2026-04-21T05:22:16.375202+00:00`
+- updated_at_utc: `2026-04-21T05:22:16.375202+00:00`

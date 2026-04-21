@@ -35,7 +35,6 @@
 
 ## Evidence Summary
 
-- Environment currently kept under extracted canonical id.
 - No layout notes available.
 - Unknown
 - small stone room
@@ -43,6 +42,7 @@
 - dim torchlight
 - primitive medical tools
 - cramped interior.
+- Secondary setting (initial recovery)
 
 ## Review
 
@@ -52,6 +52,6 @@
 
 - artifact_id: `DESC_ENV_warhoon_medical_room`
 - status: `generated`
-- source_fingerprint: `5ec9ece7b8f4162bbc211a46b5d3047f30de1172`
-- created_at_utc: `2026-04-21T05:20:53.150748+00:00`
-- updated_at_utc: `2026-04-21T05:20:53.150748+00:00`
+- source_fingerprint: `7fa4e284c4ca112a4197d1fd92154f6a8dc05666`
+- created_at_utc: `2026-04-21T05:22:16.585882+00:00`
+- updated_at_utc: `2026-04-21T05:22:16.585882+00:00`

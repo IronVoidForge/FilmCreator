@@ -25,9 +25,7 @@
   - CH026
   - CH027
 - entity_kind: individual
-- physical_presence_notes: Resolved known Carter alias to john_carter.
 - role: individual
-- silhouette_notes: Resolved known Carter alias to john_carter.
 
 ## Generated Fields
 
@@ -40,7 +38,6 @@
 
 ## Evidence Summary
 
-- Resolved known Carter alias to john_carter.
 - individual
 - [CH001] CHAPTER I (book index hit)
 - [CH012] CHAPTER XII (book index hit)
@@ -55,6 +52,6 @@
 
 - artifact_id: `DESC_CHAR_john_carter`
 - status: `generated`
-- source_fingerprint: `5c897aa39e73e56e2454d85bdb3db52a882efa1f`
-- created_at_utc: `2026-04-21T05:20:50.240142+00:00`
-- updated_at_utc: `2026-04-21T05:20:50.240142+00:00`
+- source_fingerprint: `1592aec1289d16499dffcc8fefc15c802c58e1c6`
+- created_at_utc: `2026-04-21T05:22:13.512500+00:00`
+- updated_at_utc: `2026-04-21T05:22:13.512500+00:00`

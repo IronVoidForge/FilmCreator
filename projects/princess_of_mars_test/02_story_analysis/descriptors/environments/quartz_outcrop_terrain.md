@@ -53,5 +53,5 @@
 - artifact_id: `DESC_ENV_quartz_outcrop_terrain`
 - status: `generated`
 - source_fingerprint: `1c4fbdb1d1b24d7143bffc1e8d5b5576334dd5ca`
-- created_at_utc: `2026-04-21T05:20:52.903034+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.903034+00:00`
+- created_at_utc: `2026-04-21T05:22:16.291641+00:00`
+- updated_at_utc: `2026-04-21T05:22:16.291641+00:00`

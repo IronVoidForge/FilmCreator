@@ -55,5 +55,5 @@
 - artifact_id: `DESC_ENV_mossy_waste_plains`
 - status: `generated`
 - source_fingerprint: `ace6b0d1f12419551657089256669527ada3433a`
-- created_at_utc: `2026-04-21T05:20:52.798438+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.798438+00:00`
+- created_at_utc: `2026-04-21T05:22:16.173038+00:00`
+- updated_at_utc: `2026-04-21T05:22:16.173038+00:00`

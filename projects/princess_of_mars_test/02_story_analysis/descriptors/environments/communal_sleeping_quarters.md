@@ -55,5 +55,5 @@
 - artifact_id: `DESC_ENV_communal_sleeping_quarters`
 - status: `generated`
 - source_fingerprint: `6caf5c2636d339f28e4f3d438781fe22b7cafd04`
-- created_at_utc: `2026-04-21T05:20:52.290922+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.290922+00:00`
+- created_at_utc: `2026-04-21T05:22:15.607066+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.607066+00:00`

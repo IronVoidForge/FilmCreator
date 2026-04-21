@@ -11,9 +11,7 @@
   - CH026
   - CH027
 - entity_kind: individual
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - role: individual
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 
 ## Generated Fields
 
@@ -26,7 +24,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Character appears to be a singular individual entity.
 - individual
 - [CH013] CHAPTER XIII (book index hit)
 - [CH026] CHAPTER XXVI (book index hit)
@@ -41,6 +38,6 @@
 
 - artifact_id: `DESC_CHAR_tardos_mors`
 - status: `generated`
-- source_fingerprint: `2a9a218bb8c48eb00cb21bbae14e0ba6a98d4f38`
-- created_at_utc: `2026-04-21T05:20:51.339647+00:00`
-- updated_at_utc: `2026-04-21T05:20:51.339647+00:00`
+- source_fingerprint: `320a35df0df49f744bf64f7c80a9125d497cf8bf`
+- created_at_utc: `2026-04-21T05:22:14.550205+00:00`
+- updated_at_utc: `2026-04-21T05:22:14.550205+00:00`

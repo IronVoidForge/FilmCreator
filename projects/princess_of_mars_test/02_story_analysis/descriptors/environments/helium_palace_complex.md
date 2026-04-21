@@ -59,5 +59,5 @@
 - artifact_id: `DESC_ENV_helium_palace_complex`
 - status: `generated`
 - source_fingerprint: `1b23ee82c7eac37e824e2beec498a84195c9226f`
-- created_at_utc: `2026-04-21T05:20:52.447588+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.447588+00:00`
+- created_at_utc: `2026-04-21T05:22:15.790713+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.790713+00:00`

@@ -10,9 +10,7 @@
 - chapter_mentions:
   - CH009
 - entity_kind: group
-- physical_presence_notes: No competing canonical alias detected; kept extracted asset id. Character markdown describes a group entity.
 - role: group
-- silhouette_notes: No competing canonical alias detected; kept extracted asset id. Character markdown describes a group entity.
 
 ## Generated Fields
 
@@ -25,7 +23,6 @@
 
 ## Evidence Summary
 
-- No competing canonical alias detected; kept extracted asset id. Character markdown describes a group entity.
 - group
 - [CH013] CHAPTER XIII (book index hit)
 - [CH022] CHAPTER XXII (book index hit)
@@ -40,6 +37,6 @@
 
 - artifact_id: `DESC_CHAR_green_martian_women_group`
 - status: `generated`
-- source_fingerprint: `3c398ecdb1451bee07963bc7bd19bba5c5ecae67`
-- created_at_utc: `2026-04-21T05:20:50.125551+00:00`
-- updated_at_utc: `2026-04-21T05:20:50.125551+00:00`
+- source_fingerprint: `128c8f3eac719e344d9470f45736b8bcb76841fd`
+- created_at_utc: `2026-04-21T05:22:13.389390+00:00`
+- updated_at_utc: `2026-04-21T05:22:13.389390+00:00`

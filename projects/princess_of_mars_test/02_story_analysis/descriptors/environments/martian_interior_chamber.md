@@ -23,7 +23,6 @@
 
 ## Evidence Summary
 
-- Environment currently kept under extracted canonical id.
 - No layout notes available.
 - Unknown
 - Primary setting (combat arena).
@@ -39,6 +38,6 @@
 
 - artifact_id: `DESC_ENV_martian_interior_chamber`
 - status: `generated`
-- source_fingerprint: `52f40db991050c191f0f106cd00915f9d63f4a19`
-- created_at_utc: `2026-04-21T05:20:52.567205+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.567205+00:00`
+- source_fingerprint: `16fb6652596ecb180acc4b9287ad6696e5494b2e`
+- created_at_utc: `2026-04-21T05:22:15.924329+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.924329+00:00`

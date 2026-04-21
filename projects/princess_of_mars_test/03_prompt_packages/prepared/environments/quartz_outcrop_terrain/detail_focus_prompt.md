@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, detail-focused view on a recurring anchor or landmark, Sharp quartz protrusions, jagged rock formations., Glinting surfaces, uneven ground, treacherous footing., Jagged quartz outcrops, crystalline rock fragments, clear spatial layout, readable anchors and depth cues, no characters,...
+Film environment reference sheet, detail-focused view on a recurring anchor or landmark, Sharp quartz protrusions, jagged rock formations., Jagged quartz outcrops, crystalline rock fragments, uneven Martian terrain, clear spatial layout, readable anchors and depth cues, no characters, no text, no watermark.
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

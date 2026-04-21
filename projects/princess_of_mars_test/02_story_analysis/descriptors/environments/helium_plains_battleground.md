@@ -39,5 +39,5 @@
 - artifact_id: `DESC_ENV_helium_plains_battleground`
 - status: `generated`
 - source_fingerprint: `e2a66d6dfc72a881b08affe115282b42f1fb690b`
-- created_at_utc: `2026-04-21T05:20:52.477614+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.477614+00:00`
+- created_at_utc: `2026-04-21T05:22:15.824246+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.824246+00:00`

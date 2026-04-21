@@ -55,5 +55,5 @@
 - artifact_id: `DESC_ENV_martian_march_route`
 - status: `generated`
 - source_fingerprint: `d3bae7d85210066e18fb731d1f00eadcbe524d74`
-- created_at_utc: `2026-04-21T05:20:52.585228+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.585228+00:00`
+- created_at_utc: `2026-04-21T05:22:15.945848+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.945848+00:00`

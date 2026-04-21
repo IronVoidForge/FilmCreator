@@ -55,5 +55,5 @@
 - artifact_id: `DESC_ENV_thark_city_interior`
 - status: `generated`
 - source_fingerprint: `c80136f978d923e4cadb115372479c7b77bc8942`
-- created_at_utc: `2026-04-21T05:20:53.008638+00:00`
-- updated_at_utc: `2026-04-21T05:20:53.008638+00:00`
+- created_at_utc: `2026-04-21T05:22:16.417248+00:00`
+- updated_at_utc: `2026-04-21T05:22:16.417248+00:00`

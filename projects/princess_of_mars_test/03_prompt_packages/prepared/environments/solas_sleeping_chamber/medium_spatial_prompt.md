@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film environment reference sheet, medium spatial view showing foreground, midground, and background relationships, Decorated walls, sleeping areas, presence of small, exotic Martian fauna (ten-legged frog-like creatures)., Domesticated yet alien, clear spatial layout, readable anchors and depth cues, no characters,...
+Film environment reference sheet, medium spatial view showing foreground, midground, and background relationships, Decorated walls, sleeping areas, presence of small, exotic Martian fauna (ten-legged frog-like creatures)., Decorated Martian living quarters, clear spatial layout, readable anchors and depth cues, no c...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

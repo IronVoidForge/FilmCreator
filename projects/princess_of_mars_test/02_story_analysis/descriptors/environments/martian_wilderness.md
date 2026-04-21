@@ -55,5 +55,5 @@
 - artifact_id: `DESC_ENV_martian_wilderness`
 - status: `generated`
 - source_fingerprint: `d522a37ebecd2ad0f1a6f90423c99fcef6fae898`
-- created_at_utc: `2026-04-21T05:20:52.760896+00:00`
-- updated_at_utc: `2026-04-21T05:20:52.760896+00:00`
+- created_at_utc: `2026-04-21T05:22:16.131007+00:00`
+- updated_at_utc: `2026-04-21T05:22:16.131007+00:00`

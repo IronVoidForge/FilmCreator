@@ -35,7 +35,6 @@
 
 ## Evidence Summary
 
-- Environment currently kept under extracted canonical id.
 - No layout notes available.
 - Unknown
 - Martian sky battle
@@ -43,6 +42,7 @@
 - streaks of projectile fire
 - high-altitude combat
 - drifting derelict ships.
+- Secondary setting / Transit.
 
 ## Review
 
@@ -52,6 +52,6 @@
 
 - artifact_id: `DESC_ENV_aerial_battle_skyline`
 - status: `generated`
-- source_fingerprint: `8e46c81546942a70cc17500910e77ff46a7858d5`
-- created_at_utc: `2026-04-21T05:20:51.935619+00:00`
-- updated_at_utc: `2026-04-21T05:20:51.935619+00:00`
+- source_fingerprint: `5806b2dca6963cbde3dfa14b450f02e57676dd23`
+- created_at_utc: `2026-04-21T05:22:15.181266+00:00`
+- updated_at_utc: `2026-04-21T05:22:15.181266+00:00`
