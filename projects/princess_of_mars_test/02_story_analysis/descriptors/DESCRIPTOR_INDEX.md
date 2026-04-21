@@ -1,3 +1,0 @@
-# Descriptor Index
-
-- No entries.

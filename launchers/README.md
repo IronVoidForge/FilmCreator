@@ -14,6 +14,7 @@ The launcher tree is now grouped by workflow so the root stays readable:
   - the video-focused ComfyUI runtime and its cut-motion workflow
 - `multi_chapter/`
   - ingest, book-level, and Phase B1 multi-chapter helpers
+  - book-to-prompt end-to-end pipeline launcher
 
 ## Authoring
 
@@ -63,6 +64,8 @@ The launcher tree is now grouped by workflow so the root stays readable:
   - reads `book_input.txt`, writes the raw book file, and splits chapters
 - `multi_chapter\test_multi_chapter_full_run.bat`
   - runs the multi-chapter analysis pass
+- `multi_chapter\run_full_book_to_prompt_pipeline.bat`
+  - runs the full book-to-prompt pipeline from chapter summaries through prompt preparation
 - `multi_chapter\test_phase_b1_resolution.bat`
   - runs the Phase B1 identity and environment resolution helper
 
