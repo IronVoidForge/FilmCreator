@@ -1,0 +1,89 @@
+# Prompt Preparation Review Queue
+
+- `apache_warriors`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `green_martian_women_group`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `martian_warriors`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `narrator`
+  - Character status=provisional entity_kind=provisional_role.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `red_martians`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `thark_warriors`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `warhoon_green_men`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `warhoon_horde`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `warhoon_warriors`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `ancient_dead_city_battlefield`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `ancient_martian_city`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `city_of_thark`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `city_outskirts`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `dark_cave_interior`
+  - Environment status=canonical entity_kind=sub_location.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `dead_city_quarters`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `deserted_martian_city`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `deserted_martian_cityscape`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `helium_city_metropolis`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `martian_distant_hills`
+  - Environment status=canonical entity_kind=landform.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `martian_interior_chamber`
+  - Environment status=canonical entity_kind=sub_location.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `martian_plaza`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `martian_training_plaza`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `overlooking_building_interior`
+  - Environment status=canonical entity_kind=building.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `ruined_martian_city_hills`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `thark_city_interior`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `thark_city_plazas_and_avenues`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `thark_plaza_and_council_chamber`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `warhoon_city_dungeons`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `zodanga_palace_interior`
+  - Environment status=canonical entity_kind=sub_location.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.

@@ -178,8 +178,8 @@ The latest validated state is:
 - next validation: tighten dialogue heuristics for ambiguous narration and broaden prompt-prep / key-item layering
 
 ### Phase 11.5 â€“ Prompt Preparation and Reference Pack Assembly
-- status: `planned`
-- evidence: stable character bibles, environment bibles, scene contracts, and shot packages already exist, so a dedicated prompt-prep bridge can now fan out compact generation bundles without re-deriving prompt structure elsewhere
+- status: `validated`
+- evidence: stable character bibles, environment bibles, scene contracts, and shot packages already exist, and the prompt-prep bridge now fans out compact generation bundles without re-deriving prompt structure elsewhere
 - next validation: produce reusable prompt bundles for character reference sheets, environment reference sheets, and shot-level production prompts, including angle and image-to-image consistency variants
 
 ### Phase 11.6 â€“ Key Item Index and Reference Pack Assembly

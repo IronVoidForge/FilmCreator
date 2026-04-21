@@ -1,0 +1,59 @@
+# Title
+SH001 Shot Prompt - Consistency Repair
+
+# ID
+CH023_SC004_SH001_consistency_repair_prompt
+
+# Purpose
+Prepare a compact shot prompt for enhancer-safe generation.
+
+# Workflow Type
+still.scene_build.four_ref.klein.distilled
+
+# Positive Prompt
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. From exhaustion to growing dread and uncertainty. **Likely Visual Coverage Families:** - Extreme wide shots showing the vast, lonely land.... Close framing that isolates reaction and emotional emphasis.. continuity-preserving framing with exact pose and costume locks. Characters: described character with st...
+
+# Negative Prompt
+text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
+
+# Inputs
+- subject_kind: shot
+- subject_id: SH001
+- source_artifact_ids: CH023_SC004; SHOT_INDEX; DIALOGUE; john_carter
+- reference_mode: shot_prompt_bundle
+- variant_name: consistency_repair
+- lens_family: neutral_reference
+- composition_lock: preserve canonical identity and framing rules
+- trait_lock: preserve stable visual canon
+- image_to_image_source: 
+- change_budget: preserve scene continuity and shot intent
+- reuse_policy: reuse canonical shot contract canon
+- variant_policy: consistency_repair
+- review_notes: 
+- prompt_enhancer_mode: comfyui_text_prompt_enhancer
+- prompt_enhancer_profile: shot_reference
+- target_models: qwen_image; flux; z_image
+- scene_id: CH023_SC004
+- chapter_id: CH023
+- shot_type: reaction_closeup
+- camera_description: Close framing that isolates reaction and emotional emphasis.
+- composition: continuity-preserving framing with exact pose and costume locks
+- prompt_family: shot_prompt
+
+# Continuity Notes
+- Scene: CH023_SC004 / Establish a sense of isolation and the "ticking clock" of being lost..
+- Variant: Consistency Repair.
+- Time elapsed (6 hours)
+- visual appearance of the passing cities vs. the missing Helium towers.
+- After six hours of flight
+- Carter realizes he is lost in the vastness of Mars. He passes several cities but cannot find Helium because he lacks the visual landmark of its twin scarlet and yellow towers.
+- Resolve High altitude/Cockpit -> High altitude/Cockpit
+- Resolve passing over various Martian cities -> passing over various Martian cities
+- Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
+
+# Repair Notes
+
+# Sources
+- C:\FilmCreator_MC\projects\princess_of_mars_test\02_story_analysis\contracts\scenes\CH023\CH023_SC004.json
+- C:\FilmCreator_MC\projects\princess_of_mars_test\02_story_analysis\contracts\shots\CH023\CH023_SC004\SHOT_INDEX.json
+- C:\FilmCreator_MC\projects\princess_of_mars_test\02_story_analysis\contracts\shots\CH023\CH023_SC004\SH001\DIALOGUE.json

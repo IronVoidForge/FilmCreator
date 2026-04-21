@@ -186,5 +186,5 @@ Potential launcher:
 
 ## Status
 
-- `planned`
-- evidence: stable bibles, scene contracts, shot packages, and prompt-package parsing already exist, so this bridge layer can now be added cleanly
+- `validated`
+- evidence: stable bibles, scene contracts, shot packages, and prompt-package parsing already exist, and the prompt-prep layer now produces compact prompt bundles with enhancer-safe base text

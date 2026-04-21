@@ -7,6 +7,7 @@ from .character_bible import run_character_bible_synthesis
 from .dialogue_timeline import run_dialogue_timeline
 from .environment_bible import run_environment_bible_synthesis
 from .identity_refinement import run_identity_refinement
+from .prompt_preparation import run_prompt_preparation
 from .scene_contracts import run_scene_contract_synthesis
 from .shot_planner import run_shot_planning
 
@@ -38,6 +39,10 @@ def build_parser() -> argparse.ArgumentParser:
     dt = subparsers.add_parser("synthesize-dialogue-timeline")
     dt.add_argument("project_slug")
     dt.add_argument("--force", action="store_true")
+
+    pp = subparsers.add_parser("synthesize-prompt-preparation")
+    pp.add_argument("project_slug")
+    pp.add_argument("--force", action="store_true")
 
     r = subparsers.add_parser("refine-identities")
     r.add_argument("project_slug")
@@ -85,6 +90,13 @@ def main() -> None:
 
     elif args.command == "synthesize-dialogue-timeline":
         summary = run_dialogue_timeline(
+            args.project_slug,
+            force=args.force,
+        )
+        print(json.dumps(summary.to_dict(), indent=2))
+
+    elif args.command == "synthesize-prompt-preparation":
+        summary = run_prompt_preparation(
             args.project_slug,
             force=args.force,
         )
