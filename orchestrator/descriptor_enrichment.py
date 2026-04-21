@@ -6,6 +6,7 @@ import os
 import re
 import shutil
 import stat
+import time
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
@@ -2129,6 +2130,11 @@ def run_descriptor_enrichment(
     shot_packages = _load_shot_packages(project_dir)
     character_scene_map, character_shot_map, environment_scene_map, environment_shot_map = _build_reference_maps(scene_contracts, shot_packages)
     key_item_candidates = _collect_key_item_candidates(scene_contracts, shot_packages)
+    character_total = len(character_bibles)
+    environment_total = len(environment_bibles)
+    scene_total = len(scene_contracts)
+    shot_total = len(shot_packages)
+    key_item_total = len(key_item_candidates)
 
     records: list[DescriptorRecord] = []
     review_records: list[DescriptorRecord] = []
@@ -2169,12 +2175,23 @@ def run_descriptor_enrichment(
         written_files.extend([str(base_path.with_suffix(".json")), str(base_path.with_suffix(".md"))])
         return record
 
+    def log_start(label: str, index: int, total: int, entity_id: str) -> None:
+        print(f"[descriptor] {label} {index}/{total} starting {entity_id}...")
+
+    def log_finish(label: str, index: int, total: int, entity_id: str, started_at: float) -> None:
+        elapsed = round(time.perf_counter() - started_at, 1)
+        print(f"[descriptor] {label} {index}/{total} finished {entity_id} in {elapsed}s")
+
     if not selected_types or CHARACTER_ENTITY_TYPE in selected_types:
+        character_index = 0
         for char_id, bible in character_bibles.items():
             if stop_processing:
                 break
             if not matches_entity_id(char_id, f"char_{char_id}", f"desc_char_{char_id}"):
                 continue
+            character_index += 1
+            started_at = time.perf_counter()
+            log_start("character", character_index, character_total, char_id)
             source_entry = character_bibles.get(char_id, bible)
             fp = _fingerprint({"bible": bible, "scene_mentions": character_scene_map.get(char_id, []), "shot_mentions": character_shot_map.get(char_id, []), "kind": "character"})
             base_path = output_root / "characters" / char_id
@@ -2193,6 +2210,7 @@ def run_descriptor_enrichment(
 
             record = maybe_reuse(base_path, fp, build_character, force=force)
             records.append(record)
+            log_finish("character", character_index, character_total, char_id, started_at)
             processed += 1
             if limit is not None and processed >= limit:
                 stop_processing = True
@@ -2201,11 +2219,15 @@ def run_descriptor_enrichment(
                 review_queue.append({"descriptor_id": record.descriptor_id, "entity_type": record.entity_type, "issues": _descriptor_review_issues(record)})
 
     if not selected_types or ENVIRONMENT_ENTITY_TYPE in selected_types:
+        environment_index = 0
         for env_id, bible in environment_bibles.items():
             if stop_processing:
                 break
             if not matches_entity_id(env_id, f"env_{env_id}", f"desc_env_{env_id}"):
                 continue
+            environment_index += 1
+            started_at = time.perf_counter()
+            log_start("environment", environment_index, environment_total, env_id)
             source_entry = environment_bibles.get(env_id, bible)
             fp = _fingerprint({"bible": bible, "scene_mentions": environment_scene_map.get(env_id, []), "shot_mentions": environment_shot_map.get(env_id, []), "kind": "environment"})
             base_path = output_root / "environments" / env_id
@@ -2224,6 +2246,7 @@ def run_descriptor_enrichment(
 
             record = maybe_reuse(base_path, fp, build_environment, force=force)
             records.append(record)
+            log_finish("environment", environment_index, environment_total, env_id, started_at)
             processed += 1
             if limit is not None and processed >= limit:
                 stop_processing = True
@@ -2232,11 +2255,15 @@ def run_descriptor_enrichment(
                 review_queue.append({"descriptor_id": record.descriptor_id, "entity_type": record.entity_type, "issues": _descriptor_review_issues(record)})
 
     if not selected_types or SCENE_ENTITY_TYPE in selected_types:
+        scene_index = 0
         for scene_id, contract in scene_contracts.items():
             if stop_processing:
                 break
             if not matches_entity_id(scene_id, scene_id.lower(), f"desc_{scene_id.lower()}"):
                 continue
+            scene_index += 1
+            started_at = time.perf_counter()
+            log_start("scene", scene_index, scene_total, scene_id)
             fp = _fingerprint({"scene": contract, "kind": "scene"})
             base_path = output_root / "scenes" / scene_id
             shot_mentions = [f"{str(shot.get('scene_id', '')).strip().upper()}/{str(shot.get('shot_id', '')).strip().upper()}" for shot in shot_packages if str(shot.get("scene_id", "")).strip().upper() == scene_id and str(shot.get("shot_id", "")).strip()]
@@ -2246,6 +2273,7 @@ def run_descriptor_enrichment(
 
             record = maybe_reuse(base_path, fp, build_scene, force=force)
             records.append(record)
+            log_finish("scene", scene_index, scene_total, scene_id, started_at)
             processed += 1
             if limit is not None and processed >= limit:
                 stop_processing = True
@@ -2254,6 +2282,7 @@ def run_descriptor_enrichment(
                 review_queue.append({"descriptor_id": record.descriptor_id, "entity_type": record.entity_type, "issues": _descriptor_review_issues(record)})
 
     if not selected_types or SHOT_ENTITY_TYPE in selected_types:
+        shot_index = 0
         for shot in shot_packages:
             if stop_processing:
                 break
@@ -2263,6 +2292,9 @@ def run_descriptor_enrichment(
                 continue
             if not matches_entity_id(shot_id, f"{scene_id}/{shot_id}", f"{scene_id}_{shot_id}", f"desc_{scene_id}_{shot_id}"):
                 continue
+            shot_index += 1
+            started_at = time.perf_counter()
+            log_start("shot", shot_index, shot_total, f"{scene_id}/{shot_id}")
             scene_contract = scene_contracts.get(scene_id, {})
             fp = _fingerprint({"shot": shot, "scene": scene_contract, "kind": "shot"})
             chapter_id = scene_id[:5]
@@ -2273,6 +2305,7 @@ def run_descriptor_enrichment(
 
             record = maybe_reuse(base_path, fp, build_shot, force=force)
             records.append(record)
+            log_finish("shot", shot_index, shot_total, f"{scene_id}/{shot_id}", started_at)
             processed += 1
             if limit is not None and processed >= limit:
                 stop_processing = True
@@ -2283,11 +2316,15 @@ def run_descriptor_enrichment(
                 break
 
     if not selected_types or KEY_ITEM_ENTITY_TYPE in selected_types:
+        key_item_index = 0
         for item_id, candidate in key_item_candidates.items():
             if stop_processing:
                 break
             if not matches_entity_id(item_id, f"item_{item_id}", f"desc_item_{item_id}"):
                 continue
+            key_item_index += 1
+            started_at = time.perf_counter()
+            log_start("key_item", key_item_index, key_item_total, item_id)
             fp = _fingerprint({"candidate": candidate, "kind": "key_item"})
             base_path = output_root / "key_items" / item_id
 
@@ -2296,6 +2333,7 @@ def run_descriptor_enrichment(
 
             record = maybe_reuse(base_path, fp, build_item, force=force)
             records.append(record)
+            log_finish("key_item", key_item_index, key_item_total, item_id, started_at)
             processed += 1
             if limit is not None and processed >= limit:
                 stop_processing = True
