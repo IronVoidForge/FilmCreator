@@ -692,6 +692,17 @@ def _descriptor_field_confidence(state: str, value: Any) -> str:
     return "low"
 
 
+def _descriptor_value_is_unknown(value: Any) -> bool:
+    if value is None:
+        return True
+    if isinstance(value, str):
+        normalized = value.strip().lower()
+        return not normalized or normalized in {"unknown", "none", "(none)", "n/a"}
+    if isinstance(value, list):
+        return not any(str(item).strip() for item in value)
+    return False
+
+
 def _add_field(
     field_values: dict[str, Any],
     field_states: dict[str, str],
@@ -1392,6 +1403,176 @@ inferred_fields:
         return None
 
 
+def _llm_complete_generated_fields(
+    *,
+    entity_type: str,
+    descriptor_id: str,
+    canonical_id: str,
+    display_name: str,
+    status: str,
+    base_fields: dict[str, Any],
+    evidence_summary: list[str],
+    missing_fields: list[str],
+) -> dict[str, Any] | None:
+    if not missing_fields:
+        return None
+    settings = load_runtime_settings()
+    client = LMStudioClient(settings)
+
+    system = (
+        "You are a descriptor completion system for a film pipeline. "
+        "Use only the provided evidence and current descriptor context. "
+        "Your job is to fill only the missing generated fields with a canon-compatible best-effort choice. "
+        "Do not modify supported fields. "
+        "If a field is still uncertain, make the best plausible visual choice rather than leaving it unknown. "
+        "Return one tagged FilmCreator markdown packet only. "
+        "Do not return JSON."
+    )
+
+    missing_field_lines = "\n".join(f"- {field}" for field in missing_fields)
+    user = f"""
+Complete the following missing generated fields for this {entity_type} descriptor.
+
+Do not change any supported fields. Only fill the listed missing generated fields.
+Use the current descriptor context and evidence to make a best-effort canon-compatible choice.
+If a field is still ambiguous, choose the most plausible stable value rather than unknown.
+
+DESCRIPTOR:
+{json.dumps({
+    "descriptor_id": descriptor_id,
+    "canonical_id": canonical_id,
+    "display_name": display_name,
+    "entity_type": entity_type,
+    "status": status,
+    "base_fields": base_fields,
+}, indent=2, ensure_ascii=False)}
+
+EVIDENCE:
+{json.dumps(evidence_summary, indent=2, ensure_ascii=False)}
+
+Missing generated fields:
+{missing_field_lines}
+
+Return exactly one FilmCreator packet:
+[[FILMCREATOR_PACKET]]
+task: descriptor_generated_completion
+version: 1
+
+[[FILMCREATOR_RECORD]]
+type: descriptor
+artifact_id: {descriptor_id}
+canonical_id: {canonical_id}
+display_name: {display_name}
+entity_type: {entity_type}
+status: {status}
+
+[[SECTION generated_fields_markdown]]
+field_name: generated field value
+field_name:
+- list item 1
+- list item 2
+[[/SECTION]]
+
+[[SECTION review_markdown]]
+review_flags:
+- low_confidence_field
+inferred_fields:
+- field_name
+[[/SECTION]]
+
+[[SECTION evidence_markdown]]
+- evidence line 1
+- evidence line 2
+[[/SECTION]]
+
+[[/FILMCREATOR_RECORD]]
+[[/FILMCREATOR_PACKET]]
+"""
+
+    try:
+        response = client.chat_completion(system_prompt=system, user_prompt=user, temperature=0.1)
+        packet = parse_packet_document(response, expected_task="descriptor_generated_completion")
+        if not packet.records:
+            return None
+        record = packet.records[0]
+        generated_scalars, generated_lists, generated_freeform = _parse_markdown_section(_section_text(packet, "generated_fields_markdown"))
+        review_scalars, review_lists, review_freeform = _parse_markdown_section(_section_text(packet, "review_markdown"))
+        evidence_scalars, evidence_lists, evidence_freeform = _parse_markdown_section(_section_text(packet, "evidence_markdown"))
+        generated: dict[str, Any] = {}
+        for field in missing_fields:
+            if field in generated_lists and generated_lists[field]:
+                generated[field] = generated_lists[field]
+            elif field in generated_scalars and generated_scalars[field]:
+                generated[field] = generated_scalars[field]
+        return {
+            "generated_field_values": generated,
+            "review_flags": _coerce_string_list(review_lists.get("review_flags"), review_scalars.get("review_flags"), review_freeform),
+            "inferred_fields": _coerce_string_list(review_lists.get("inferred_fields"), review_scalars.get("inferred_fields")),
+            "evidence_summary": _coerce_string_list(evidence_lists.get("evidence_markdown"), evidence_scalars.get("evidence_markdown")) or list(evidence_freeform),
+        }
+    except Exception:
+        return None
+
+
+def _best_effort_generated_value(entity_type: str, field_name: str, current_value: Any) -> Any:
+    label = field_name.replace("_", " ")
+    text = f"canon-compatible best-effort {entity_type} {label}"
+    if isinstance(current_value, list):
+        return [text]
+    return text
+
+
+def _complete_missing_generated_fields(
+    *,
+    entity_type: str,
+    descriptor_id: str,
+    canonical_id: str,
+    display_name: str,
+    status: str,
+    base_fields: dict[str, Any],
+    field_origin: dict[str, str],
+    evidence_summary: list[str],
+    review_flags: list[str],
+    inferred_fields: list[str],
+) -> None:
+    missing_fields = [
+        field_name
+        for field_name, origin in field_origin.items()
+        if origin not in EXPLICIT_ORIGINS and _descriptor_value_is_unknown(base_fields.get(field_name))
+    ]
+    if not missing_fields:
+        return
+
+    llm_payload = _llm_complete_generated_fields(
+        entity_type=entity_type,
+        descriptor_id=descriptor_id,
+        canonical_id=canonical_id,
+        display_name=display_name,
+        status=status,
+        base_fields=base_fields,
+        evidence_summary=evidence_summary,
+        missing_fields=missing_fields,
+    )
+
+    if llm_payload:
+        for field_name, value in (llm_payload.get("generated_field_values") or {}).items():
+            if value and field_name in missing_fields:
+                base_fields[field_name] = value
+                field_origin[field_name] = "llm_generated"
+                if field_name not in inferred_fields:
+                    inferred_fields.append(field_name)
+        review_flags.extend(llm_payload.get("review_flags", []))
+        evidence_summary[:] = _coerce_string_list(llm_payload.get("evidence_summary", []), evidence_summary)
+
+    for field_name in missing_fields:
+        if _descriptor_value_is_unknown(base_fields.get(field_name)):
+            base_fields[field_name] = _best_effort_generated_value(entity_type, field_name, base_fields.get(field_name))
+            field_origin[field_name] = "llm_generated"
+            if field_name not in inferred_fields:
+                inferred_fields.append(field_name)
+            review_flags.append(f"generated_field_placeholder_{field_name}")
+
+
 def _finalize_descriptor(
     *,
     descriptor_id: str,
@@ -1576,6 +1757,19 @@ def _base_character_descriptor(
         evidence_summary = _coerce_string_list(llm_payload.get("evidence_summary", []), evidence_summary)
         related_assets = []
 
+    _complete_missing_generated_fields(
+        entity_type=CHARACTER_ENTITY_TYPE,
+        descriptor_id=f"DESC_CHAR_{char_id}",
+        canonical_id=char_id,
+        display_name=bible.get("display_name") or entry.get("display_name") or char_id,
+        status=entry.get("status", "canonical"),
+        base_fields=base_fields,
+        field_origin=field_origin,
+        evidence_summary=evidence_summary,
+        review_flags=review_flags,
+        inferred_fields=inferred_fields,
+    )
+
     if not evidence_summary:
         evidence_summary = ["No usable evidence lines were collected."]
 
@@ -1682,6 +1876,19 @@ def _base_environment_descriptor(
         review_flags.extend(llm_payload.get("review_flags", []))
         evidence_summary = _coerce_string_list(llm_payload.get("evidence_summary", []), evidence_summary)
 
+    _complete_missing_generated_fields(
+        entity_type=ENVIRONMENT_ENTITY_TYPE,
+        descriptor_id=f"DESC_ENV_{env_id}",
+        canonical_id=env_id,
+        display_name=bible.get("display_name") or entry.get("display_name") or env_id,
+        status=entry.get("status", "canonical"),
+        base_fields=base_fields,
+        field_origin=field_origin,
+        evidence_summary=evidence_summary,
+        review_flags=review_flags,
+        inferred_fields=inferred_fields,
+    )
+
     if "unknown" in {str(base_fields.get("layout", "")).lower(), str(base_fields.get("lighting", "")).lower(), str(base_fields.get("mood", "")).lower()}:
         review_flags.append("low_confidence_spatial_fields")
 
@@ -1776,6 +1983,19 @@ def _base_scene_descriptor(
                 base_fields["chapter_mentions"] = llm_payload["chapter_mentions"]
             review_flags.extend(llm_payload.get("review_flags", []))
             evidence_summary = _coerce_string_list(llm_payload.get("evidence_summary", []), evidence_summary)
+
+    _complete_missing_generated_fields(
+        entity_type=SCENE_ENTITY_TYPE,
+        descriptor_id=f"DESC_{scene_id}",
+        canonical_id=scene_id,
+        display_name=scene_contract.get("scene_title") or scene_id,
+        status=scene_contract.get("metadata", {}).get("status", "generated") if isinstance(scene_contract.get("metadata"), dict) else "generated",
+        base_fields=base_fields,
+        field_origin=field_origin,
+        evidence_summary=evidence_summary,
+        review_flags=review_flags,
+        inferred_fields=inferred_fields,
+    )
 
     if not evidence_summary:
         evidence_summary = ["No usable evidence lines were collected."]
@@ -1894,6 +2114,19 @@ def _base_shot_descriptor(
             review_flags.extend(llm_payload.get("review_flags", []))
             evidence_summary = _coerce_string_list(llm_payload.get("evidence_summary", []), evidence_summary)
 
+    _complete_missing_generated_fields(
+        entity_type=SHOT_ENTITY_TYPE,
+        descriptor_id=f"DESC_{scene_id}_{shot_id}",
+        canonical_id=f"{scene_id}_{shot_id}",
+        display_name=shot.get("shot_title") or shot_id,
+        status="generated",
+        base_fields=base_fields,
+        field_origin=field_origin,
+        evidence_summary=evidence_summary,
+        review_flags=review_flags,
+        inferred_fields=inferred_fields,
+    )
+
     if "unknown" in {str(base_fields.get("environment_label", "")).lower(), str(base_fields.get("primary_subject", "")).lower()}:
         review_flags.append("thin_shot_subject_context")
     metadata = DescriptorMetadata(
@@ -1993,6 +2226,19 @@ def _base_key_item_descriptor(
                 base_fields["chapter_mentions"] = llm_payload["chapter_mentions"]
             review_flags.extend(llm_payload.get("review_flags", []))
             evidence_summary = _coerce_string_list(llm_payload.get("evidence_summary", []), evidence_summary)
+
+    _complete_missing_generated_fields(
+        entity_type=KEY_ITEM_ENTITY_TYPE,
+        descriptor_id=f"DESC_ITEM_{item_id}",
+        canonical_id=item_id,
+        display_name=candidate.get("display_name") or item_id,
+        status=candidate.get("status", "canonical"),
+        base_fields=base_fields,
+        field_origin=field_origin,
+        evidence_summary=evidence_summary,
+        review_flags=review_flags,
+        inferred_fields=inferred_fields,
+    )
 
     metadata = DescriptorMetadata(
         artifact_id=f"DESC_ITEM_{item_id}",
