@@ -1,1 +1,0 @@
-A science fiction epic following a man's journey from Earth to Mars and his subsequent experiences on the Red Planet. The narrative explores themes of interplanetary travel, lost love, and the profound connection between worlds.

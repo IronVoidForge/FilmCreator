@@ -1,3 +1,0 @@
-- [SC001](#sc001) The Cave of Horrors
-- [SC002](#sc002) The Ledge of Realization
-- [SC003](#sc003) Twenty Years Later: The Vision

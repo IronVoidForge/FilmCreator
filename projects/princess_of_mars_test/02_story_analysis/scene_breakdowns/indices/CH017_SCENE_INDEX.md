@@ -1,5 +1,0 @@
-- [SC001](#sc001) The Infiltration and Rescue
-- [SC002](#sc002) Flight into the Mossy Waste
-- [SC003](#sc003) The Exhausting Trek and Woola's Arrival
-- [SC004](#sc004) The Thark Ambush
-- [SC005](#sc005) The Last Stand and Capture

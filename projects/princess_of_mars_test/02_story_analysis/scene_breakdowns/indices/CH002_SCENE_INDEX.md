@@ -1,4 +1,0 @@
-- [SC001](#sc001) - The Paralysis and the Apache Terror
-- [SC002](#sc002) - The Metamorphosis Discovery
-- [SC003](#sc003) - Flight into the Night
-- [SC004](#sc004) - The Call of Mars

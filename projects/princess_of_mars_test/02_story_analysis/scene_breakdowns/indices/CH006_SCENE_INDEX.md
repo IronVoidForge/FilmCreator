@@ -1,4 +1,0 @@
-- [SC001](#sc001) - The Ape Ambush and the Watch-thing's Intervention
-- [SC002](#sc002) - The Protagonist's Counter-strike and the Second Duel
-- [SC003](#sc003) - The Arrival of the Martians and Social Recognition
-- [SC004](#sc004) - Defending the Watch-thing and Departure

@@ -1,6 +1,0 @@
-- [SC001](#sc001) - Morning exploration and bonding with Woola.
-- [SC002](#sc002) - Observation of the captive Princess and eavesdropping on the Council.
-- [SC003](#sc003) - Dejah Thoris's speech to the Thark Council.
-- [SC004](#sc004) - The assault on Dejah Thoris and Carter's violent intervention.
-- [SC005](#sc005) - Aftermath: Chieftaincy, revelation, and confrontation with Tars Tarkas.
-- [SC006](#sc006) - Departure from the chamber.
