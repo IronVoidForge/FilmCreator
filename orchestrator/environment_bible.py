@@ -548,6 +548,185 @@ def _parse_environment_bible_packet(text: str, entry: dict[str, Any]) -> dict[st
     }
 
 
+_ENVIRONMENT_PATCHABLE_SCALAR_FIELDS = {
+    "display_name",
+    "environment_type",
+    "visual_summary",
+    "layout_notes",
+    "lighting",
+    "mood",
+}
+
+_ENVIRONMENT_PATCHABLE_LIST_FIELDS = {
+    "recurring_elements",
+    "constraints",
+    "unresolved_ambiguities",
+    "chapter_mentions",
+}
+
+
+def _apply_locked_and_manual_overrides(merged: dict[str, Any], existing: dict | None, metadata: EnvironmentBibleMetadata) -> dict[str, Any]:
+    if existing:
+        for field_name, locked in metadata.locked_fields.items():
+            if locked and field_name in existing:
+                merged[field_name] = existing[field_name]
+
+    for field_name, value in metadata.manual_overrides.items():
+        merged[field_name] = value
+
+    return merged
+
+
+def _environment_patch_prompt(entry: dict[str, Any], existing: dict[str, Any], evidence_summary: list[str], focus_fields: list[str]) -> str:
+    list_fields = sorted(field for field in focus_fields if field in _ENVIRONMENT_PATCHABLE_LIST_FIELDS)
+    scalar_fields = sorted(field for field in focus_fields if field in _ENVIRONMENT_PATCHABLE_SCALAR_FIELDS and field not in _ENVIRONMENT_PATCHABLE_LIST_FIELDS)
+    field_lines: list[str] = []
+    for field_name in scalar_fields:
+        field_lines.append(f"{field_name}: <updated value or omit if unchanged>")
+    for field_name in list_fields:
+        field_lines.append(f"{field_name}:")
+        field_lines.append("- updated item 1")
+        field_lines.append("- updated item 2")
+
+    current_artifact = {
+        key: existing.get(key)
+        for key in [
+            "display_name",
+            "environment_type",
+            "visual_summary",
+            "layout_notes",
+            "lighting",
+            "mood",
+            "recurring_elements",
+            "constraints",
+            "unresolved_ambiguities",
+            "chapter_mentions",
+        ]
+    }
+
+    return f"""
+Patch the provided environment bible by updating only the requested weak fields.
+
+RULES:
+- Preserve every field that is not explicitly requested.
+- Do not rewrite the whole artifact.
+- If a field cannot be improved, omit it.
+- Keep existing good information intact.
+- Use only the provided evidence and current artifact context.
+
+ENTRY:
+{json.dumps(entry, indent=2, ensure_ascii=False)}
+
+CURRENT_ARTIFACT:
+{json.dumps(current_artifact, indent=2, ensure_ascii=False)}
+
+EVIDENCE:
+{json.dumps(evidence_summary, indent=2, ensure_ascii=False)}
+
+FIELDS_TO_UPDATE:
+{json.dumps(focus_fields, indent=2, ensure_ascii=False)}
+
+Return exactly one FilmCreator packet in this structure:
+[[FILMCREATOR_PACKET]]
+task: environment_bible_patch
+version: 1
+
+[[FILMCREATOR_RECORD]]
+type: environment_bible
+artifact_id: ENV_{entry.get("canonical_id") or entry.get("display_name") or ""}
+environment_id: {entry.get("canonical_id") or entry.get("display_name") or ""}
+status: {entry.get("status", "canonical")}
+entity_kind: {entry.get("entity_kind", "environment")}
+
+[[SECTION patch_markdown]]
+{chr(10).join(field_lines) if field_lines else "(no changes requested)"}
+[[/SECTION]]
+
+[[/FILMCREATOR_RECORD]]
+[[/FILMCREATOR_PACKET]]
+"""
+
+
+def _parse_environment_patch_packet(text: str, entry: dict[str, Any], focus_fields: list[str]) -> dict[str, Any]:
+    packet = parse_packet_document(text, expected_task="environment_bible_patch")
+    if not packet.records:
+        raise ValueError("LLM response did not contain an environment bible patch record.")
+
+    record = packet.records[0]
+    sections = record.sections
+    scalars, lists, freeform = _parse_bible_markdown_section(sections.get("patch_markdown", ""))
+
+    patch: dict[str, Any] = {}
+    for field_name in focus_fields:
+        if field_name in _ENVIRONMENT_PATCHABLE_LIST_FIELDS:
+            values = _coerce_string_list(lists.get(field_name), scalars.get(field_name))
+            if values:
+                patch[field_name] = values
+            continue
+        if field_name in _ENVIRONMENT_PATCHABLE_SCALAR_FIELDS:
+            value = _first_nonempty(scalars.get(field_name), fallback="")
+            if not value and freeform and field_name == "visual_summary":
+                value = freeform[0]
+            if value and value.lower() not in {"unknown", "none", "(none)", "n/a"}:
+                patch[field_name] = value
+
+    display_name = _first_nonempty(
+        scalars.get("display_name"),
+        record.fields.get("display_name"),
+        entry.get("display_name"),
+        entry.get("canonical_id"),
+        fallback=str(entry.get("canonical_id") or ""),
+    )
+    if display_name:
+        patch["display_name"] = display_name
+
+    return patch
+
+
+def _apply_environment_patch(existing: dict[str, Any], patch: dict[str, Any], metadata: EnvironmentBibleMetadata, focus_fields: list[str]) -> dict[str, Any]:
+    merged = dict(existing)
+    for field_name in focus_fields:
+        if field_name not in patch:
+            continue
+        value = patch[field_name]
+        if field_name in _ENVIRONMENT_PATCHABLE_LIST_FIELDS:
+            if isinstance(value, list) and value:
+                merged[field_name] = value
+            elif isinstance(value, str):
+                coerced = _coerce_string_list(value)
+                if coerced:
+                    merged[field_name] = coerced
+            continue
+        if isinstance(value, str) and value.strip() and value.strip().lower() not in {"unknown", "none", "(none)", "n/a"}:
+            merged[field_name] = value.strip()
+
+    return _apply_locked_and_manual_overrides(merged, existing, metadata)
+
+
+def _llm_patch_synthesis(entry: dict[str, Any], existing: dict[str, Any], evidence_summary: list[str], focus_fields: list[str]) -> dict[str, Any] | None:
+    if not focus_fields:
+        return None
+
+    settings = load_runtime_settings()
+    client = LMStudioClient(settings)
+
+    system = (
+        "You are a film environment bible patching system. "
+        "Only update the requested weak fields. "
+        "Preserve existing good fields exactly. "
+        "Use only the provided evidence and artifact context. "
+        "Return one tagged FilmCreator markdown packet only. "
+        "Do not return JSON."
+    )
+    user = _environment_patch_prompt(entry, existing, evidence_summary, focus_fields)
+
+    try:
+        text = client.chat_completion(system_prompt=system, user_prompt=user, temperature=0.1)
+        return _parse_environment_patch_packet(text, entry, focus_fields)
+    except Exception:
+        return None
+
+
 def _parse_bible_markdown_section(section_text: str) -> tuple[dict[str, str], dict[str, list[str]], list[str]]:
     scalars: dict[str, str] = {}
     lists: dict[str, list[str]] = {}
@@ -904,6 +1083,183 @@ def run_environment_bible_synthesis(
         total_registry_entries=len(registry),
         synthesized_count=synthesized,
         reused_count=reused,
+        stale_locked_count=stale_locked,
+        review_queue_count=len(review_queue),
+        written_files=written_files,
+        warnings=warnings,
+    )
+
+
+def run_environment_bible_patch_reruns(
+    project_slug: str,
+    queue_items: list[dict[str, Any]],
+    *,
+    use_llm: bool = True,
+) -> EnvironmentBibleSynthesisSummary:
+    project_dir = create_project(project_slug)
+    registry, _registry_path = _load_registry_for_synthesis(project_dir, project_slug)
+
+    output_dir = project_dir / "02_story_analysis" / "bibles" / "environments"
+    review_dir = output_dir / "review"
+    output_dir.mkdir(parents=True, exist_ok=True)
+    review_dir.mkdir(parents=True, exist_ok=True)
+
+    patched = 0
+    skipped = 0
+    stale_locked = 0
+    review_queue: list[dict[str, Any]] = []
+    written_files: list[str] = []
+    warnings: list[str] = []
+    bible_records: list[EnvironmentBible] = []
+    review_records: list[EnvironmentBible] = []
+
+    env_items = [item for item in queue_items if str(item.get("family", "")).strip() == "environment_bible"]
+    total_items = len(env_items)
+
+    for index, item in enumerate(env_items, start=1):
+        env_id = str(item.get("artifact_id") or item.get("display_name") or "").strip()
+        focus_fields = [str(field).strip() for field in item.get("focus_fields", []) if str(field).strip() in _ENVIRONMENT_PATCHABLE_SCALAR_FIELDS or str(field).strip() in _ENVIRONMENT_PATCHABLE_LIST_FIELDS]
+        if not env_id or not focus_fields:
+            skipped += 1
+            continue
+
+        started_at = time.perf_counter()
+        print(f"[environment-bible] patch {index}/{total_items} starting {env_id} ({', '.join(focus_fields)})...")
+        entry = registry.get(env_id)
+        if not isinstance(entry, dict):
+            warnings.append(f"Environment registry entry not found for patch rerun: {env_id}")
+            skipped += 1
+            elapsed = round(time.perf_counter() - started_at, 1)
+            print(f"[environment-bible] patch {index}/{total_items} finished {env_id} (missing registry entry) in {elapsed}s")
+            continue
+
+        fp = _fingerprint(entry)
+        base_path = output_dir / f"ENV_{env_id}"
+        existing = read_json(base_path.with_suffix(".json")) if base_path.with_suffix(".json").exists() else None
+        if not isinstance(existing, dict):
+            warnings.append(f"Environment bible missing for patch rerun: {env_id}")
+            skipped += 1
+            elapsed = round(time.perf_counter() - started_at, 1)
+            print(f"[environment-bible] patch {index}/{total_items} finished {env_id} (missing bible) in {elapsed}s")
+            continue
+
+        old_meta = existing.get("metadata") or {}
+        if old_meta.get("status") == "locked":
+            stale_locked += 1
+            existing["metadata"]["status"] = "stale"
+            write_json(base_path.with_suffix(".json"), existing)
+            warnings.append(f"Locked environment bible became stale and was not patched: {env_id}")
+            elapsed = round(time.perf_counter() - started_at, 1)
+            print(f"[environment-bible] patch {index}/{total_items} finished {env_id} (stale locked) in {elapsed}s")
+            continue
+
+        metadata = _load_existing_metadata(existing, artifact_id=f"ENV_{env_id}", fp=fp)
+        evidence_summary, evidence_refs, parsed_sources = _collect_evidence(project_slug, entry)
+        patch_payload = _llm_patch_synthesis(entry, existing, evidence_summary, focus_fields) if use_llm else None
+        if not patch_payload:
+            patch_payload = {}
+            if use_llm:
+                warnings.append(f"LLM patch synthesis failed or returned invalid output for {env_id}; existing values were preserved.")
+
+        merged = _apply_environment_patch(existing, patch_payload, metadata, focus_fields)
+        existing_evidence_summary = existing.get("evidence_summary", [])
+        existing_evidence_refs = existing.get("evidence_refs", [])
+        merged_evidence_summary = _coerce_string_list(existing_evidence_summary, evidence_summary)
+        merged_evidence_refs: list[dict[str, Any]] = []
+        seen_ref_keys: set[str] = set()
+        for ref in [*existing_evidence_refs, *evidence_refs]:
+            if not isinstance(ref, dict):
+                continue
+            ref_key = json.dumps(ref, sort_keys=True, ensure_ascii=False)
+            if ref_key in seen_ref_keys:
+                continue
+            seen_ref_keys.add(ref_key)
+            merged_evidence_refs.append(ref)
+
+        metadata.upstream_dependencies = [
+            {
+                "dependency_type": "environment_registry_entry",
+                "dependency_id": env_id,
+                "version": fp,
+            }
+        ]
+        metadata.revision_history.append(
+            {
+                "timestamp_utc": _utc_now(),
+                "action": "patched_fields",
+                "source_fingerprint": fp,
+                "patched_fields": focus_fields,
+            }
+        )
+
+        bible = EnvironmentBible(
+            environment_id=env_id,
+            display_name=merged.get("display_name") or entry.get("display_name") or env_id,
+            environment_type=merged.get("environment_type") or entry.get("entity_kind", "environment"),
+            status=entry.get("status", "canonical"),
+            entity_kind=entry.get("entity_kind", "environment"),
+            first_seen_chapter=merged.get("first_seen_chapter") or entry.get("first_seen_chapter"),
+            last_seen_chapter=merged.get("last_seen_chapter") or entry.get("last_seen_chapter"),
+            chapter_mentions=merged.get("chapter_mentions") if isinstance(merged.get("chapter_mentions"), list) else entry.get("chapter_mentions", []),
+            visual_summary=merged.get("visual_summary", ""),
+            layout_notes=merged.get("layout_notes", ""),
+            lighting=merged.get("lighting", ""),
+            mood=merged.get("mood", ""),
+            recurring_elements=merged.get("recurring_elements", []),
+            constraints=merged.get("constraints", []),
+            unresolved_ambiguities=merged.get("unresolved_ambiguities", []),
+            evidence_refs=merged_evidence_refs or existing_evidence_refs,
+            evidence_summary=merged_evidence_summary or existing_evidence_summary,
+            metadata=metadata,
+        )
+
+        _write_json_and_markdown(base_path, bible)
+        written_files.extend([str(base_path.with_suffix(".json")), str(base_path.with_suffix(".md"))])
+        patched += 1
+        bible_records.append(bible)
+
+        if not _is_film_facing_environment(entry, bible) or bible.unresolved_ambiguities:
+            review_records.append(bible)
+        if bible.unresolved_ambiguities:
+            review_queue.append({"environment_id": env_id, "issues": bible.unresolved_ambiguities})
+
+        elapsed = round(time.perf_counter() - started_at, 1)
+        print(f"[environment-bible] patch {index}/{total_items} finished {env_id} (patched) in {elapsed}s")
+
+    write_json(review_dir / "ENVIRONMENT_BIBLE_REVIEW_QUEUE.json", review_queue)
+    write_environment_review_queue_markdown(review_dir / "ENVIRONMENT_BIBLE_REVIEW_QUEUE.md", review_queue)
+    main_records = [
+        record
+        for record in bible_records
+        if _is_film_facing_environment(entry=registry.get(record.environment_id, {}), bible=record)
+    ]
+    write_environment_bible_index(output_dir / "ENVIRONMENT_BIBLE_INDEX.md", main_records)
+    write_environment_bible_review_index(output_dir / "ENVIRONMENT_BIBLE_REVIEW_INDEX.md", review_records)
+    write_json(
+        output_dir / "ENVIRONMENT_BIBLE_INDEX.json",
+        [record.to_dict() for record in sorted(main_records, key=lambda item: item.environment_id)],
+    )
+    write_json(
+        output_dir / "ENVIRONMENT_BIBLE_REVIEW_INDEX.json",
+        [record.to_dict() for record in sorted(review_records, key=lambda item: item.environment_id)],
+    )
+
+    written_files.extend(
+        [
+            str(review_dir / "ENVIRONMENT_BIBLE_REVIEW_QUEUE.json"),
+            str(review_dir / "ENVIRONMENT_BIBLE_REVIEW_QUEUE.md"),
+            str(output_dir / "ENVIRONMENT_BIBLE_INDEX.md"),
+            str(output_dir / "ENVIRONMENT_BIBLE_INDEX.json"),
+            str(output_dir / "ENVIRONMENT_BIBLE_REVIEW_INDEX.md"),
+            str(output_dir / "ENVIRONMENT_BIBLE_REVIEW_INDEX.json"),
+        ]
+    )
+
+    return EnvironmentBibleSynthesisSummary(
+        project_slug=project_slug,
+        total_registry_entries=len(registry),
+        synthesized_count=patched,
+        reused_count=skipped,
         stale_locked_count=stale_locked,
         review_queue_count=len(review_queue),
         written_files=written_files,

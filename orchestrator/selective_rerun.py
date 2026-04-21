@@ -1,14 +1,14 @@
 from __future__ import annotations
 
 import json
-import subprocess
-import sys
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 from .core.json_io import read_json
+from .character_bible import run_character_bible_patch_reruns
+from .environment_bible import run_environment_bible_patch_reruns
 from .scaffold import create_project
 
 
@@ -24,6 +24,11 @@ STAGE_COMMANDS: dict[str, list[str]] = {
     "synthesize-dialogue-timeline": ["synthesize-dialogue-timeline"],
     "synthesize-descriptor-enrichment": ["synthesize-descriptor-enrichment"],
     "synthesize-prompt-preparation": ["synthesize-prompt-preparation"],
+}
+
+PATCHABLE_FAMILY_DISPATCH = {
+    "character_bible": run_character_bible_patch_reruns,
+    "environment_bible": run_environment_bible_patch_reruns,
 }
 
 
@@ -81,6 +86,30 @@ def _planned_stages(queue: list[dict[str, Any]]) -> list[str]:
     return stages
 
 
+def _group_queue_by_family(queue: list[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
+    grouped: dict[str, list[dict[str, Any]]] = {}
+    for item in queue:
+        family = str(item.get("family", "")).strip()
+        if not family:
+            continue
+        grouped.setdefault(family, []).append(item)
+    return grouped
+
+
+def _group_families_by_stage(grouped_by_family: dict[str, list[dict[str, Any]]]) -> dict[str, list[str]]:
+    stage_map: dict[str, list[str]] = {}
+    for family, items in grouped_by_family.items():
+        stage = ""
+        for item in items:
+            stage = str(item.get("rerun_stage", "")).strip()
+            if stage:
+                break
+        if not stage:
+            continue
+        stage_map.setdefault(stage, []).append(family)
+    return stage_map
+
+
 def run_selective_reruns(
     project_slug: str,
     *,
@@ -97,10 +126,23 @@ def run_selective_reruns(
         warnings.append("Quality rerun queue is empty or missing.")
 
     if execute and planned:
+        grouped = _group_queue_by_family(queue)
+        families_by_stage = _group_families_by_stage(grouped)
         for stage in planned:
-            command = [sys.executable, "-m", "orchestrator", STAGE_COMMANDS[stage][0], project_slug, "--force"]
-            subprocess.run(command, check=True)
-            executed.append(stage)
+            families_for_stage = families_by_stage.get(stage, [])
+            supported_families = [family for family in families_for_stage if family in PATCHABLE_FAMILY_DISPATCH]
+            unsupported_families = [family for family in families_for_stage if family not in PATCHABLE_FAMILY_DISPATCH]
+
+            for family in supported_families:
+                dispatcher = PATCHABLE_FAMILY_DISPATCH[family]
+                dispatcher(project_slug, grouped.get(family, []))
+                if stage not in executed:
+                    executed.append(stage)
+
+            if unsupported_families:
+                warnings.append(
+                    f"Skipped unsupported rerun families for stage {stage}: {', '.join(sorted(set(unsupported_families)))}"
+                )
 
     summary = SelectiveRerunSummary(
         project_slug=project_slug,

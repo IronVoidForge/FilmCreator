@@ -194,7 +194,7 @@ The latest validated state is:
 
 ### Phase 11.8 – Quality Grading and Selective Reruns
 - status: `implemented`
-- evidence: the `grade-artifacts` command now scans synthesis outputs, scores them, and writes project-level grade and rerun queue artifacts without mutating the source outputs
+- evidence: the `grade-artifacts` command now scans synthesis outputs, scores them, and writes project-level grade and rerun queue artifacts without mutating the source outputs; the rerun queue now carries `focus_fields` so supported reruns can patch only weak fields instead of rewriting strong ones
 - next validation: produce artifact grades, rerun manifests, and dependency-aware selective rebuild plans for low-scoring items
 
 ## Cross-Cutting Work Newly Required

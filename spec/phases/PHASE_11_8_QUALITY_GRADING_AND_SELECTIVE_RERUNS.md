@@ -4,6 +4,13 @@
 
 Grade all synthesis outputs for completeness, evidence support, prompt readiness, and inference load, then produce selective rerun manifests for the lowest quality items instead of rerunning the whole project.
 
+When a rerun is recommended, prefer patch-style regeneration:
+
+- keep the existing artifact as the base
+- update only the weak fields called out by the grader
+- preserve fields that already passed review or are clearly strong
+- emit field-targeted rerun instructions alongside the family-level rerun scope
+
 ---
 
 ## Why This Phase Exists
@@ -163,6 +170,8 @@ The rerun manifest should identify:
 - reason for rerun
 - suggested rerun stage
 - dependency fan-out
+- weak fields to patch first
+- whether the rerun should be patch-style or full-family
 
 ---
 
@@ -228,6 +237,8 @@ The rerun manifest should support more than one level of rebuild:
 - dependent prompt bundle only
 
 This allows the pipeline to rerun the minimum needed surface area.
+
+For supported families, the rerun executor should patch only the fields listed in the queue entry's `focus_fields` and leave the rest of the artifact unchanged.
 
 ---
 

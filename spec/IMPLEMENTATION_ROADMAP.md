@@ -342,6 +342,7 @@ Planned.
 #### Goal
 
 Grade synthesis and prompt outputs for completeness, evidence support, prompt readiness, and inference load, then emit selective rerun plans for the weakest artifacts instead of rerunning the full project.
+Where possible, reruns should patch only the weak fields instead of rebuilding already-good data.
 
 #### Inputs
 
