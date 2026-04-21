@@ -60,5 +60,5 @@
 - artifact_id: `DESC_ENV_zodanga_palace_quarters`
 - status: `generated`
 - source_fingerprint: `97887ae458f64b69975f36c3433963f216d2edd0`
-- created_at_utc: `2026-04-21T04:27:12.707158+00:00`
-- updated_at_utc: `2026-04-21T04:27:12.707158+00:00`
+- created_at_utc: `2026-04-21T04:45:50.316684+00:00`
+- updated_at_utc: `2026-04-21T04:45:50.316684+00:00`
