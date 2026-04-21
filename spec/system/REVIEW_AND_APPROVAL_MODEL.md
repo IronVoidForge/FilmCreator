@@ -46,10 +46,11 @@ Recommended breakpoints:
 3. After scene contract generation
 4. After shot planning
 5. After dialogue timeline generation
-6. After character and environment reference generation
-7. After keyframe generation
-8. After audio generation
-9. After video assembly
+6. After prompt-preparation and reference-pack generation
+7. After character, environment, and key-item reference generation
+8. After keyframe generation
+9. After audio generation
+10. After video assembly
 
 ---
 
@@ -72,6 +73,7 @@ Suggested locations:
 ```text
 projects/<project_slug>/reviews/character_queue.json
 projects/<project_slug>/reviews/environment_queue.json
+projects/<project_slug>/reviews/key_item_queue.json
 projects/<project_slug>/reviews/scene_queue.json
 projects/<project_slug>/reviews/shot_queue.json
 projects/<project_slug>/reviews/audio_queue.json

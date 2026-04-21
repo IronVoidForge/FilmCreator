@@ -51,10 +51,13 @@ Common types:
 - chapter summary
 - character registry entry
 - environment registry entry
+- key item registry entry
 - character bible
 - environment bible
 - scene contract
+- shot
 - shot package
+- dialogue binding
 - dialogue timeline
 
 ---
@@ -114,3 +117,4 @@ orchestrator/staleness.py
 
 - Changing one upstream artifact marks downstream artifacts stale
 - Rebuild-stale mode regenerates only affected artifacts
+
