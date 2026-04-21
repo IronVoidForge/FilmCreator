@@ -2,7 +2,7 @@
 
 ## Goal
 
-Add temporal structure and dialogue alignment to shot sequences.
+Add temporal structure and dialogue alignment to shot sequences, and carry extracted dialogue into clip-level artifacts for downstream assembly.
 
 ---
 
@@ -10,6 +10,8 @@ Add temporal structure and dialogue alignment to shot sequences.
 
 - shot packages
 - scene contracts
+- chapter analysis outputs
+- dialogue-bearing scene or clip notes when available
 
 ---
 
@@ -17,6 +19,9 @@ Add temporal structure and dialogue alignment to shot sequences.
 
 - dialogue_timeline.json
 - edit_timeline.json
+- clip dialogue notes
+- shot-to-dialogue bindings
+- clip-level dialogue text or excerpt artifacts
 
 ---
 
@@ -28,6 +33,8 @@ Add temporal structure and dialogue alignment to shot sequences.
 - text
 - shot_id
 - timing_estimate
+- clip_id
+- dialogue_source_ref
 
 ### Timeline
 

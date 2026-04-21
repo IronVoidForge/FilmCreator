@@ -194,6 +194,75 @@ Convert scene contracts into ordered shot plans and generation-facing shot packa
 
 Legacy clip planning should be adapted, not blindly reused as the final architecture. Compatibility adapters are preferred over embedding new logic back into legacy planning code.
 
+### Phase 11.5 â€“ Prompt Preparation and Reference Pack Assembly
+
+#### Goal
+
+Turn canonical bibles, scene contracts, and shot packages into compact, generation-ready prompt bundles for reference-sheet creation and later production prompts.
+
+#### Inputs
+
+- character bibles
+- environment bibles
+- scene contracts
+- shot packages
+- continuity state
+- style profiles and generation presets
+- existing prompt-package schema helpers
+- existing shared prompt draft builders
+
+#### Outputs
+
+- per-character reference prompt bundles
+- per-environment reference prompt bundles
+- per-shot production prompt bundles
+- angle and zoom variant bundles
+- image-to-image consistency bundles
+- prompt package indexes
+- prompt review queues
+
+#### Why This Phase Is Needed
+
+The project already knows what the canon is. This phase prepares the prompt families that downstream generation stages can consume without re-deriving prompt structure in multiple places.
+
+#### Current Status
+
+Planned.
+
+### Phase 11.6 â€“ Key Item Index and Reference Pack Assembly
+
+#### Goal
+
+Identify, consolidate, and describe story-significant items that need continuity tracking or future reference-sheet generation.
+
+#### Inputs
+
+- chapter analysis outputs
+- scene contracts
+- shot packages
+- character and environment bibles where items are mentioned
+- continuity summaries
+- librarian retrieval
+- existing prop / item mentions in markdown sources
+
+#### Outputs
+
+- key item registry
+- per-item markdown reference notes
+- per-item JSON contracts
+- key item index
+- key item review queue
+- chapter mention links
+- reference-sheet eligibility flags
+
+#### Why This Phase Is Needed
+
+Some artifacts are neither characters nor environments but still behave like canonical assets. They need their own layer so they can stay visually consistent and can later feed prompt-preparation and reference-sheet work.
+
+#### Current Status
+
+Planned.
+
 ### Phase 11 – Dialogue, Timing, and Edit-Aware Sequencing
 
 #### Goal
@@ -226,6 +295,7 @@ Without this phase, the system can produce good-looking static structure but not
 - multi-angle character sheets
 - expression and pose variants
 - approval/lock workflow for downstream use
+- consumes prompt-preparation bundles from Phase 11.5
 
 ### Phase 13 – Environment Reference Generation and Approval
 
@@ -233,11 +303,13 @@ Without this phase, the system can produce good-looking static structure but not
 - key sub-locations
 - lighting and mood variants
 - approval/lock workflow
+- consumes prompt-preparation bundles from Phase 11.5
 
 ### Phase 14 – Scene and Shot Keyframe Generation
 
 - keyframes driven by approved refs plus scene/shot contracts
 - reviewable visual candidate batches
+- prompt bundles should come from the prompt-preparation layer rather than ad hoc rewriting
 
 ### Phase 15 – Audio Generation or Recording Integration
 
@@ -267,10 +339,11 @@ These are intended user review boundaries and should remain explicit in both imp
 3. After scene production contracts and storyboard generation
 4. After shot planning
 5. After dialogue and timing timeline generation
-6. After character and environment reference approvals
-7. After keyframe approvals
-8. After audio approval
-9. After video assembly preview
+6. After prompt-preparation and reference-pack generation
+7. After character and environment reference approvals
+8. After keyframe approvals
+9. After audio approval
+10. After video assembly preview
 
 ## Cross-Cutting Requirements
 
@@ -395,13 +468,15 @@ When older beat/clip planning logic is still useful, wrap it through compatibili
 4. Phase 9 scene production contracts and chapter storyboard outputs are implemented and runnable.
 5. Implement Phase 10 shot planning and shot packages.
 6. Implement Phase 11 dialogue, timing, and edit-aware sequencing.
-7. Then move into production asset generation phases 12–17.
+7. Implement Phase 11.5 prompt preparation and reference pack assembly.
+8. Implement Phase 11.6 key item index and reference pack assembly.
+9. Then move into production asset generation phases 12-17.
 
 ## Database Timing
 
 SQLite should remain deferred until:
 
-- phase 7–11 contracts stabilize,
+- phase 7-11.6 contracts stabilize,
 - lifecycle and dependency semantics stabilize,
 - the file-first artifacts are mature enough to sync rather than speculate.
 
@@ -411,3 +486,4 @@ The first SQLite release should remain:
 - file-synced
 - read-mostly
 - optimized for querying and reporting rather than replacing canonical file artifacts.
+

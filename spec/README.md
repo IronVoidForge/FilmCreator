@@ -87,4 +87,6 @@ Phase B is now focused on:
 - canonical environment identity
 - chapter continuity state
 - chapter storyboard artifacts
+- prompt-preparation bridge assets
+- key item catalog and reference assets
 - post-ingest world refinement for safe duplicate/name/type cleanup

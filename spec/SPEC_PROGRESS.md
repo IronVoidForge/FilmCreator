@@ -177,6 +177,16 @@ The latest validated state is:
 - evidence: continuity and shot planning foundations now make a formal timing layer feasible
 - next validation: produce dialogue maps, shot-to-dialogue bindings, and chapter edit timeline artifacts
 
+### Phase 11.5 â€“ Prompt Preparation and Reference Pack Assembly
+- status: `planned`
+- evidence: stable character bibles, environment bibles, scene contracts, and shot packages already exist, so a dedicated prompt-prep bridge can now fan out compact generation bundles without re-deriving prompt structure elsewhere
+- next validation: produce reusable prompt bundles for character reference sheets, environment reference sheets, and shot-level production prompts, including angle and image-to-image consistency variants
+
+### Phase 11.6 â€“ Key Item Index and Reference Pack Assembly
+- status: `planned`
+- evidence: recurring story-significant items need their own canonical index so artifacts like rings, swords, armor sets, and other unique props can stay visually and narratively consistent
+- next validation: produce a stable item registry with chapter mentions, visual summaries, and reference-sheet eligibility flags
+
 ## Cross-Cutting Work Newly Required
 
 ### Artifact lifecycle and reuse
