@@ -163,9 +163,9 @@ The latest validated state is:
 - next validation: produce canonical environment bibles with hierarchy rules, evidence refs, revision history, and review queues
 
 ### Phase 9 – Scene Production Contracts
-- status: `planned`
-- evidence: scene decomposition, continuity, and future bible inputs now define the required upstream structure
-- next validation: build scene contract and chapter storyboard artifacts that bridge analysis into production planning
+- status: `validated`
+- evidence: `synthesize-scene-contracts` runs end to end, writes per-scene JSON/markdown contracts, and produces scene review queues and indexes for the full `princess_of_mars_test` book run
+- next validation: keep tuning the scene reference resolution and bridge the contracts into shot planning inputs
 
 ### Phase 10 – Shot Planning and Shot Packages
 - status: `planned`

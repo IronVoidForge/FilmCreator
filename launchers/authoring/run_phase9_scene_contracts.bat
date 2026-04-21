@@ -1,0 +1,68 @@
+@echo off
+setlocal
+
+call "%~dp0..\_shared\resolve_filmcreator_root.bat"
+if errorlevel 1 goto :fail
+
+pushd "%FILMCREATOR_ROOT%" >nul
+
+echo.
+echo ========================================
+echo FilmCreator Phase 9 Scene Contract Launcher
+echo ========================================
+echo.
+set /p PROJECT_SLUG=Project slug [princess_of_mars_test]: 
+if "%PROJECT_SLUG%"=="" set "PROJECT_SLUG=princess_of_mars_test"
+
+echo.
+echo Project slug: %PROJECT_SLUG%
+echo Repo root: %FILMCREATOR_ROOT%
+echo.
+echo This launcher will run:
+echo   1. scene contract synthesis
+echo   2. pause for review
+echo   3. forced scene contract synthesis refresh
+echo.
+pause
+
+echo.
+echo [1/2] Running scene contract synthesis...
+python -m orchestrator synthesize-scene-contracts %PROJECT_SLUG%
+if errorlevel 1 goto :fail
+
+echo.
+echo Review checkpoint 1
+echo Check these outputs before continuing:
+echo   projects\%PROJECT_SLUG%\02_story_analysis\contracts\scenes\SCENE_CONTRACT_INDEX.md
+echo   projects\%PROJECT_SLUG%\02_story_analysis\contracts\scenes\SCENE_CONTRACT_REVIEW_INDEX.md
+echo   projects\%PROJECT_SLUG%\02_story_analysis\contracts\scenes\review\SCENE_CONTRACT_REVIEW_QUEUE.md
+echo   projects\%PROJECT_SLUG%\02_story_analysis\contracts\scenes\CH*\CH*_SC*.md
+echo.
+pause
+
+echo.
+echo [2/2] Running forced scene contract synthesis refresh...
+python -m orchestrator synthesize-scene-contracts %PROJECT_SLUG% --force
+if errorlevel 1 goto :fail
+
+echo.
+echo Final review checkpoint
+echo Recommended files to inspect:
+echo   projects\%PROJECT_SLUG%\02_story_analysis\contracts\scenes\SCENE_CONTRACT_INDEX.md
+echo   projects\%PROJECT_SLUG%\02_story_analysis\contracts\scenes\SCENE_CONTRACT_REVIEW_INDEX.md
+echo   projects\%PROJECT_SLUG%\02_story_analysis\contracts\scenes\CH024\CH024_SC001.md
+echo.
+echo Phase 9 scene contract launcher complete.
+goto :done
+
+:fail
+echo.
+echo Phase 9 scene contract launcher failed.
+popd >nul
+exit /b 1
+
+:done
+popd >nul
+echo.
+pause
+exit /b 0

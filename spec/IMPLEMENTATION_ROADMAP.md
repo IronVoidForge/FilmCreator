@@ -386,9 +386,9 @@ When older beat/clip planning logic is still useful, wrap it through compatibili
 ## Recommended Build Order From Here
 
 1. Add cross-cutting artifact lifecycle, dependency, and review specs.
-2. Implement Phase 7 character bible synthesis.
-3. Implement Phase 8 environment bible synthesis.
-4. Implement Phase 9 scene production contracts and chapter storyboard outputs.
+2. Phase 7 character bible synthesis is implemented and runnable.
+3. Phase 8 environment bible synthesis is implemented and runnable.
+4. Phase 9 scene production contracts and chapter storyboard outputs are implemented and runnable.
 5. Implement Phase 10 shot planning and shot packages.
 6. Implement Phase 11 dialogue, timing, and edit-aware sequencing.
 7. Then move into production asset generation phases 12–17.

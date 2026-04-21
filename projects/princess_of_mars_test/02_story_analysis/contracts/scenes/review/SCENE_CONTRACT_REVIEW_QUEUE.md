@@ -1,0 +1,236 @@
+# Scene Contract Review Queue
+
+- `CH001_SC001`
+  - Resolve Captain James K. Powell -> Captain James K. Powell
+  - Resolve Remote gold-bearing quartz vein -> Remote gold-bearing quartz vein
+  - Resolve Arizona mountains -> Arizona mountains
+- `CH001_SC002`
+  - Resolve Arizona hills/valleys -> Arizona hills/valleys
+  - Resolve Nighttime wilderness -> Nighttime wilderness
+- `CH001_SC003`
+  - Resolve High plateau with Apache tepees -> High plateau with Apache tepees
+- `CH001_SC004`
+  - Resolve Captain James K. Powell (deceased) -> Captain James K. Powell (deceased)
+  - Resolve The plateau/skirmish site -> The plateau/skirmish site
+- `CH001_SC005`
+  - Resolve Captain James K. Powell (body) -> Captain James K. Powell (body)
+  - Resolve Cliffside trail -> Cliffside trail
+  - Resolve Large mysterious cave -> Large mysterious cave
+- `CH006_SC001`
+  - Resolve Interior chamber/area overlooking a plaza -> Interior chamber/area overlooking a plaza
+- `CH006_SC002`
+  - Resolve Interior chamber/area overlooking a plaza -> Interior chamber/area overlooking a plaza
+- `CH006_SC003`
+  - Resolve Interior chamber/area overlooking a plaza -> Interior chamber/area overlooking a plaza
+- `CH006_SC004`
+  - Resolve Interior chamber transitioning to the Plaza -> Interior chamber transitioning to the Plaza
+- `CH007_SC001`
+  - Resolve The Plaza (departure) -> The Plaza (departure)
+  - Resolve Martian Wilderness/Plains -> Martian Wilderness/Plains
+- `CH007_SC002`
+  - Resolve Martian Youths/Women -> Martian Youths/Women
+  - Resolve The Dead Sea Bottom -> The Dead Sea Bottom
+  - Resolve The Incubator -> The Incubator
+- `CH007_SC003`
+  - Resolve Newly Hatched Martians -> Newly Hatched Martians
+  - Resolve Martian Women/Youths -> Martian Women/Youths
+  - Resolve The Dead Sea Bottom (near the incubator) -> The Dead Sea Bottom (near the incubator)
+- `CH007_SC004`
+  - Resolve The Dead City -> The Dead City
+- `CH010_SC001`
+  - Resolve Outskirts of the Thark city -> Outskirts of the Thark city
+- `CH010_SC002`
+  - Resolve Thark Council members -> Thark Council members
+  - Resolve The City Plaza / Council area -> The City Plaza / Council area
+- `CH010_SC003`
+  - Resolve Thark Council members -> Thark Council members
+  - Resolve The Council Chamber/Plaza -> The Council Chamber/Plaza
+- `CH010_SC004`
+  - Resolve Young Thark Warrior -> Young Thark Warrior
+  - Resolve The Council Chamber/Plaza -> The Council Chamber/Plaza
+- `CH010_SC005`
+  - Resolve The Council Chamber/Plaza -> The Council Chamber/Plaza
+- `CH010_SC006`
+  - Resolve Exit of the Council Chamber -> Exit of the Council Chamber
+- `CH011_SC001`
+  - Resolve Ancient building near the audience chamber (Korad) -> Ancient building near the audience chamber (Korad)
+  - Resolve luxurious quarters featuring ancient frescoes -> luxurious quarters featuring ancient frescoes
+- `CH011_SC002`
+  - Resolve The luxurious ancient quarters -> The luxurious ancient quarters
+- `CH011_SC003`
+  - Resolve The luxurious ancient quarters (amidst frescoes of the ancient race) -> The luxurious ancient quarters (amidst frescoes of the ancient race)
+- `CH011_SC004`
+  - Resolve Messenger -> Messenger
+  - Resolve The luxurious ancient quarters -> The luxurious ancient quarters
+- `CH013_SC001`
+  - Resolve various Tharks -> various Tharks
+  - Resolve The city of the Tharks (plazas/stables area) -> The city of the Tharks (plazas/stables area)
+- `CH013_SC002`
+  - Resolve A working area/plaza within the Thark city -> A working area/plaza within the Thark city
+- `CH013_SC003`
+  - Resolve An avenue or walkway in the Thark city under the night sky/two moons -> An avenue or walkway in the Thark city under the night sky/two moons
+- `CH014_SC001`
+  - Resolve Camp/Living quarters -> Camp/Living quarters
+- `CH014_SC002`
+  - Resolve Camp/Chariot staging area -> Camp/Chariot staging area
+- `CH014_SC003`
+  - Resolve Green Men (Warhoon) -> Green Men (Warhoon)
+  - Resolve Barsoomian wilderness/Marching route -> Barsoomian wilderness/Marching route
+- `CH014_SC004`
+  - Resolve Rest camp/Open terrain -> Rest camp/Open terrain
+- `CH014_SC005`
+  - Resolve Duel site/Camp area -> Duel site/Camp area
+- `CH017_SC001`
+  - Resolve Tal Hajus (unconscious) -> Tal Hajus (unconscious)
+  - Resolve The interior of the Jeddak's palace/chambers in Thark -> The interior of the Jeddak's palace/chambers in Thark
+  - Resolve city rooftops/windows -> city rooftops/windows
+- `CH017_SC002`
+  - Resolve The Mossy Waste (vast, trackless, desolate) -> The Mossy Waste (vast, trackless, desolate)
+- `CH017_SC003`
+  - Resolve Woola (the hound) -> Woola (the hound)
+  - Resolve The Mossy Waste -> The Mossy Waste
+- `CH017_SC004`
+  - Resolve Thark Warriors/Chieftain -> Thark Warriors/Chieftain
+  - Resolve The Mossy Waste near a mountain pass -> The Mossy Waste near a mountain pass
+- `CH017_SC005`
+  - Resolve The Mossy Waste -> The Mossy Waste
+- `CH018_SC001`
+  - Resolve Small medical room -> Small medical room
+  - Resolve Martian plains (during the march) -> Martian plains (during the march)
+- `CH018_SC002`
+  - Resolve Protagonist (observer) -> Protagonist (observer)
+  - Resolve Bar Comas -> Bar Comas
+  - Resolve Open Martian plains (military camp/march area) -> Open Martian plains (military camp/march area)
+- `CH018_SC003`
+  - Resolve various Warhoon Warriors -> various Warhoon Warriors
+  - Resolve Martian plains (moving towards Warhoon) -> Martian plains (moving towards Warhoon)
+- `CH018_SC004`
+  - Resolve Dark -> Dark
+  - Resolve claustrophobic dungeon -> claustrophobic dungeon
+- `CH018_SC005`
+  - Resolve Jailer/Food Deliverer -> Jailer/Food Deliverer
+  - Resolve Dark dungeon -> Dark dungeon
+- `CH018_SC006`
+  - Resolve Unseen Entities (Eyes in the dark) -> Unseen Entities (Eyes in the dark)
+  - Resolve Dark dungeon -> Dark dungeon
+- `CH020_SC001`
+  - Resolve The Martian Wilderness (desolate, dangerous terrain) -> The Martian Wilderness (desolate, dangerous terrain)
+- `CH020_SC002`
+  - Resolve Exterior of the Atmosphere Factory -> Exterior of the Atmosphere Factory
+  - Resolve Automated Entryway -> Automated Entryway
+- `CH020_SC003`
+  - Resolve Interior of the Atmosphere Factory (industrial, ancient, high-tech) -> Interior of the Atmosphere Factory (industrial, ancient, high-tech)
+- `CH020_SC004`
+  - Resolve Interior of the Atmosphere Factory (escape corridors/locks) -> Interior of the Atmosphere Factory (escape corridors/locks)
+- `CH020_SC005`
+  - Resolve Red Martian Home (elevated structure on a metal shaft) -> Red Martian Home (elevated structure on a metal shaft)
+- `CH021_SC001`
+  - Resolve Zodangan Nobility (unnamed) -> Zodangan Nobility (unnamed)
+  - Resolve The Barsoomian plains/deserts -> The Barsoomian plains/deserts
+  - Resolve near irrigation conduits -> near irrigation conduits
+- `CH021_SC002`
+  - Resolve Woola (briefly) -> Woola (briefly)
+  - Resolve The walls/gates of Zodanga -> The walls/gates of Zodanga
+  - Resolve urban streets -> urban streets
+- `CH021_SC003`
+  - Resolve Central Plaza of Zodanga -> Central Plaza of Zodanga
+- `CH021_SC004`
+  - Resolve Air-scout instructors (background) -> Air-scout instructors (background)
+  - Resolve Flight training grounds/Airspace above Zodanga -> Flight training grounds/Airspace above Zodanga
+- `CH021_SC005`
+  - Resolve Green Warriors -> Green Warriors
+  - Resolve Mid-air/Sky above Barsoom -> Mid-air/Sky above Barsoom
+- `CH021_SC006`
+  - Resolve Military/Ceremonial crowd -> Military/Ceremonial crowd
+  - Resolve Zodangan Palace/Ceremonial Grounds -> Zodangan Palace/Ceremonial Grounds
+- `CH022_SC001`
+  - Resolve John Carter (observer) -> John Carter (observer)
+  - Resolve Jeddak Than Kosis -> Jeddak Than Kosis
+  - Resolve Hidden passage/observation niche -> Hidden passage/observation niche
+  - Resolve Tapestried apartment of Jeddak Than Kosis -> Tapestried apartment of Jeddak Than Kosis
+- `CH022_SC002`
+  - Resolve Four Guards -> Four Guards
+  - Resolve Palace corridors -> Palace corridors
+- `CH022_SC003`
+  - Resolve Palace corridor/Antechamber area -> Palace corridor/Antechamber area
+- `CH022_SC004`
+  - Resolve Palace corridor/Private area -> Palace corridor/Private area
+- `CH022_SC005`
+  - Resolve John Carter (hidden) -> John Carter (hidden)
+  - Resolve Guards (off-screen/background) -> Guards (off-screen/background)
+  - Resolve Jeddak Than Kosis -> Jeddak Than Kosis
+  - Resolve Notan (the psychologist) -> Notan (the psychologist)
+  - Resolve Labyrinthine palace corridors -> Labyrinthine palace corridors
+  - Resolve Great Hall (adjacent) -> Great Hall (adjacent)
+- `CH022_SC006`
+  - Resolve Palace balcony -> Palace balcony
+  - Resolve Exterior palace grounds (night) -> Exterior palace grounds (night)
+- `CH023_SC001`
+  - Resolve Kantos Kan's private quarters (Zodanga) -> Kantos Kan's private quarters (Zodanga)
+- `CH023_SC002`
+  - Resolve Exterior walls of the Zodangan barracks -> Exterior walls of the Zodangan barracks
+  - Resolve the rooftop -> the rooftop
+- `CH023_SC003`
+  - Resolve Zodangan Patrol pilots -> Zodangan Patrol pilots
+  - Resolve The Martian sky -> The Martian sky
+  - Resolve above the Zodangan landscape -> above the Zodangan landscape
+- `CH023_SC004`
+  - Resolve High altitude/Cockpit -> High altitude/Cockpit
+  - Resolve passing over various Martian cities -> passing over various Martian cities
+- `CH024_SC001`
+  - Resolve Ancient dead city (aerial/battlefield) -> Ancient dead city (aerial/battlefield)
+  - Resolve combat zone -> combat zone
+- `CH024_SC002`
+  - Resolve Thark settlement -> Thark settlement
+  - Resolve paths leading to the palace -> paths leading to the palace
+- `CH024_SC003`
+  - Resolve Thark Council members -> Thark Council members
+- `CH024_SC004`
+  - Resolve The Thark Palace/Assembly area -> The Thark Palace/Assembly area
+- `CH024_SC005`
+  - Resolve Thark Army -> Thark Army
+  - Resolve Martian plains/wilderness at night -> Martian plains/wilderness at night
+- `CH024_SC006`
+  - Resolve Infiltration Team -> Infiltration Team
+  - Resolve The exterior walls of Zodanga (Carborundum) -> The exterior walls of Zodanga (Carborundum)
+- `CH024_SC007`
+  - Resolve Infiltration Team -> Infiltration Team
+  - Resolve Detachment Leaders -> Detachment Leaders
+  - Resolve Zodanga (atop walls/near gates) -> Zodanga (atop walls/near gates)
+- `CH025_SC001`
+  - Resolve Palace Gates -> Palace Gates
+  - Resolve Zodanga Palace Gardens -> Zodanga Palace Gardens
+- `CH025_SC002`
+  - Resolve Zodanga Audience Chamber (Brilliantly illuminated) -> Zodanga Audience Chamber (Brilliantly illuminated)
+- `CH025_SC003`
+  - Resolve Zodangan Guards -> Zodangan Guards
+  - Resolve Zodanga Audience Chamber -> Zodanga Audience Chamber
+- `CH025_SC004`
+  - Resolve Zodangan Jailers (defeated) -> Zodangan Jailers (defeated)
+  - Resolve Zodanga Dungeons (Labyrinthine/Dark) -> Zodanga Dungeons (Labyrinthine/Dark)
+- `CH025_SC005`
+  - Resolve Palace (Interior/Quiet corner) -> Palace (Interior/Quiet corner)
+- `CH026_SC001`
+  - Resolve John Carter (implied/observing) -> John Carter (implied/observing)
+  - Resolve Zodangan Commanders -> Zodangan Commanders
+  - Resolve The Martian Skies / Aerial Naval Theater -> The Martian Skies / Aerial Naval Theater
+- `CH026_SC002`
+  - Resolve Heliumite Officers -> Heliumite Officers
+  - Resolve The Heliumite Flagship / Helium Harbor/Docking area -> The Heliumite Flagship / Helium Harbor/Docking area
+- `CH026_SC003`
+  - Resolve Heliumite Reinforcements -> Heliumite Reinforcements
+  - Resolve Zodangan Ground Forces -> Zodangan Ground Forces
+  - Resolve The Plains near Helium -> The Plains near Helium
+- `CH026_SC004`
+  - Resolve Heliumite Citizens -> Heliumite Citizens
+  - Resolve The streets/palace of Helium (Greater City) -> The streets/palace of Helium (Greater City)
+- `CH027_SC001`
+  - Resolve Dispatch Bearer -> Dispatch Bearer
+  - Resolve The Palace in Helium (Rooftop Shrine/Sunken Garden) -> The Palace in Helium (Rooftop Shrine/Sunken Garden)
+- `CH027_SC002`
+  - Resolve The Sunken Garden (Helium) -> The Sunken Garden (Helium)
+- `CH027_SC003`
+  - Resolve Palace/Hangar area -> Palace/Hangar area
+  - Resolve The sky above Barsoom -> The sky above Barsoom
+- `CH027_SC004`
+  - Resolve The Atmosphere Plant (Interior/Exterior) -> The Atmosphere Plant (Interior/Exterior)

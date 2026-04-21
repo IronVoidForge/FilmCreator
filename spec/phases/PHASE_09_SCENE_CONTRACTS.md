@@ -18,6 +18,8 @@ Convert scenes into structured production-ready contracts.
 
 - scene_contract.json
 - storyboard markdown
+- scene contract index + review index
+- scene review queue
 
 ---
 
@@ -45,3 +47,8 @@ orchestrator/scene_contracts.py
 
 - scenes clearly define production intent
 - scenes bridge narrative to shot planning
+- scene contracts are reusable as upstream input for shot planning
+
+## Status
+
+- validated via full `princess_of_mars_test` synthesis run

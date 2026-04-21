@@ -6,6 +6,7 @@ import json
 from .character_bible import run_character_bible_synthesis
 from .environment_bible import run_environment_bible_synthesis
 from .identity_refinement import run_identity_refinement
+from .scene_contracts import run_scene_contract_synthesis
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -21,6 +22,11 @@ def build_parser() -> argparse.ArgumentParser:
     e.add_argument("project_slug")
     e.add_argument("--no-llm", action="store_true")
     e.add_argument("--force", action="store_true")
+
+    sc = subparsers.add_parser("synthesize-scene-contracts")
+    sc.add_argument("project_slug")
+    sc.add_argument("--no-llm", action="store_true")
+    sc.add_argument("--force", action="store_true")
 
     r = subparsers.add_parser("refine-identities")
     r.add_argument("project_slug")
@@ -44,6 +50,14 @@ def main() -> None:
 
     elif args.command == "synthesize-environment-bibles":
         summary = run_environment_bible_synthesis(
+            args.project_slug,
+            use_llm=not args.no_llm,
+            force=args.force,
+        )
+        print(json.dumps(summary.to_dict(), indent=2))
+
+    elif args.command == "synthesize-scene-contracts":
+        summary = run_scene_contract_synthesis(
             args.project_slug,
             use_llm=not args.no_llm,
             force=args.force,
