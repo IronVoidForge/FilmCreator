@@ -77,6 +77,7 @@ class ShotPackage:
     shot_type: str
     camera_description: str
     composition: str
+    target_seconds: float = 5.0
     previous_shot_id: str = ""
     next_shot_id: str = ""
     characters_in_frame: list[ShotReference] = field(default_factory=list)
@@ -101,6 +102,7 @@ class ShotPackage:
             "shot_type": self.shot_type,
             "camera_description": self.camera_description,
             "composition": self.composition,
+            "target_seconds": self.target_seconds,
             "characters_in_frame": [item.to_dict() for item in self.characters_in_frame],
             "environment": self.environment.to_dict() if self.environment else None,
             "beat_ids": self.beat_ids,
@@ -162,6 +164,22 @@ def _first_nonempty(*values: object, fallback: str = "") -> str:
     return fallback
 
 
+def _coerce_float(*values: object, fallback: float = 0.0) -> float:
+    for value in values:
+        if value is None:
+            continue
+        try:
+            if isinstance(value, str):
+                stripped = value.strip()
+                if not stripped:
+                    continue
+                return float(stripped)
+            return float(value)
+        except (TypeError, ValueError):
+            continue
+    return fallback
+
+
 def _clean_label(value: object, *, fallback: str) -> str:
     if isinstance(value, str):
         cleaned = value.strip()
@@ -196,6 +214,32 @@ def _coerce_string_list(*values: object) -> list[str]:
             seen.add(item)
             deduped.append(item)
     return deduped
+
+
+def _estimate_shot_seconds(shot_type: str, shot_order: int, total_shots: int) -> float:
+    shot_type_normalized = (shot_type or "").strip().lower()
+    if shot_type_normalized in {"establishing", "wide", "opening"}:
+        seconds = 6.0
+    elif shot_type_normalized in {"closeup", "close-up", "reaction", "closing_reaction"}:
+        seconds = 4.5
+    elif shot_type_normalized in {"tracking", "moving", "action", "dynamic"}:
+        seconds = 5.5
+    elif shot_type_normalized in {"generic", "shot"}:
+        seconds = 5.0
+    else:
+        seconds = 5.0
+
+    if total_shots <= 3:
+        seconds += 0.3
+    elif total_shots >= 6:
+        seconds -= 0.2
+
+    if shot_order == 1:
+        seconds += 0.2
+    elif shot_order == total_shots:
+        seconds -= 0.2
+
+    return max(4.0, min(10.0, round(seconds, 1)))
 
 
 def _parse_markdown_section(section_text: str) -> tuple[dict[str, str], dict[str, list[str]], list[str]]:
@@ -752,6 +796,7 @@ shot_notes: <optional short note>
                     "continuity_constraints": _coerce_string_list(lists.get("continuity_constraints"), scalars.get("continuity_constraints")),
                     "prompt_seed": _first_nonempty(scalars.get("prompt_seed"), freeform[0] if freeform else None, fallback=""),
                     "shot_notes": _first_nonempty(scalars.get("shot_notes"), fallback=""),
+                    "target_seconds": _coerce_float(scalars.get("target_seconds"), scalars.get("estimated_seconds"), fallback=0.0) or None,
                 }
             )
         if not records:
@@ -769,6 +814,7 @@ def _parse_shot_plan_blueprint(payload: dict[str, Any]) -> dict[str, Any]:
         "shot_type": str(payload.get("shot_type", "")),
         "camera_description": str(payload.get("camera_description", "")),
         "composition": str(payload.get("composition", "")),
+        "target_seconds": _coerce_float(payload.get("target_seconds"), payload.get("estimated_seconds"), fallback=0.0) or None,
         "beat_ids": _coerce_string_list(payload.get("beat_ids", [])),
         "characters_in_frame": [item for item in payload.get("characters_in_frame", []) if isinstance(item, dict)],
         "environment": payload.get("environment", {}) if isinstance(payload.get("environment"), dict) else {},
@@ -844,6 +890,7 @@ def _render_shot_package_markdown(package: ShotPackage) -> str:
         f"- previous_shot_id: `{package.previous_shot_id or '(none)'}`",
         f"- next_shot_id: `{package.next_shot_id or '(none)'}`",
         f"- shot_type: `{package.shot_type}`",
+        f"- target_seconds: `{package.target_seconds}`",
         "",
         "## Camera",
         "",
@@ -925,7 +972,7 @@ def _render_scene_shot_index(records: list[ShotPackage]) -> str:
         env_name = record.environment.display_name if record.environment else "(none)"
         lines.append(
             f"- `{record.shot_id}` - {record.shot_title} "
-            f"(type={record.shot_type}, beat_ids={', '.join(record.beat_ids) or '(none)'}, cast={len(record.characters_in_frame)}, env={env_name}, "
+            f"(type={record.shot_type}, target={record.target_seconds:.1f}s, beat_ids={', '.join(record.beat_ids) or '(none)'}, cast={len(record.characters_in_frame)}, env={env_name}, "
             f"prev={record.previous_shot_id or '(none)'}, next={record.next_shot_id or '(none)'})"
         )
     return "\n".join(lines) + "\n"
@@ -939,7 +986,7 @@ def _render_shot_package_index(records: list[ShotPackage]) -> str:
     for record in sorted(records, key=lambda item: (item.scene_id, item.shot_order, item.shot_id)):
         lines.append(
             f"- `{record.scene_id}/{record.shot_id}` - {record.shot_title} "
-            f"(type={record.shot_type}, cast={len(record.characters_in_frame)}, env={record.environment.display_name if record.environment else '(none)'}, "
+            f"(type={record.shot_type}, target={record.target_seconds:.1f}s, cast={len(record.characters_in_frame)}, env={record.environment.display_name if record.environment else '(none)'}, "
             f"prev={record.previous_shot_id or '(none)'}, next={record.next_shot_id or '(none)'})"
         )
     return "\n".join(lines) + "\n"
@@ -961,6 +1008,7 @@ def _render_shot_package_review_index(records: list[ShotPackage]) -> str:
             flags.append(f"shot_type={record.shot_type}")
         if not record.prompt_seed or len(record.prompt_seed) < 40:
             flags.append("thin_prompt")
+        flags.append(f"target={record.target_seconds:.1f}s")
         lines.append(f"- `{record.scene_id}/{record.shot_id}` - {record.shot_title} ({', '.join(flags) if flags else 'review'})")
     return "\n".join(lines) + "\n"
 
@@ -1041,6 +1089,7 @@ def run_shot_planning(
                 continue
             shot_started_at = time.perf_counter()
             print(f"[shot-planner] {scene_index}/{total_scenes} {shot_index}/{total_shots} starting {scene_id}/{shot_id}...")
+            estimated_seconds = _estimate_shot_seconds(str(blueprint.get("shot_type", "")), shot_index, total_shots)
             base_path = scene_dir / shot_id
             existing = read_json(base_path.with_suffix(".json")) if base_path.with_suffix(".json").exists() else None
             metadata = _shot_package_metadata(existing, artifact_id=f"{scene_id}_{shot_id}_SHOT_PACKAGE", fp=fp)
@@ -1155,6 +1204,7 @@ def run_shot_planning(
                 shot_type=_first_nonempty(merged.get("shot_type"), fallback="medium"),
                 camera_description=_first_nonempty(merged.get("camera_description"), fallback="Stable readable framing."),
                 composition=_first_nonempty(merged.get("composition"), fallback="Readable composition."),
+                target_seconds=_coerce_float(merged.get("target_seconds"), estimated_seconds, fallback=estimated_seconds or 5.0),
                 characters_in_frame=character_refs,
                 environment=environment_ref,
                 beat_ids=_coerce_string_list(merged.get("beat_ids", [])) or [shot_id.replace("SH", "BT")],
@@ -1270,6 +1320,7 @@ def _package_from_existing(existing: dict[str, Any], metadata: ShotPackageMetada
         shot_type=str(existing.get("shot_type", "")),
         camera_description=str(existing.get("camera_description", "")),
         composition=str(existing.get("composition", "")),
+        target_seconds=_coerce_float(existing.get("target_seconds"), fallback=5.0),
         characters_in_frame=[ShotReference(**item) for item in existing.get("characters_in_frame", []) if isinstance(item, dict)],
         environment=ShotReference(**environment_payload) if environment_payload else None,
         beat_ids=_coerce_string_list(existing.get("beat_ids", [])),
