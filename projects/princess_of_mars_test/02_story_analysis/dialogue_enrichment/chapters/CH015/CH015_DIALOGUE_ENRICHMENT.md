@@ -1,0 +1,279 @@
+# Dialogue Enrichment: CH015
+
+- chapter_title: `CHAPTER XV`
+- event_count: `19`
+- explicit_delivery_count: `12`
+- review_count: `2`
+
+## Events
+
+- `CH015_DLG001`
+  - speaker: `john_carter`
+  - scene_id: `CH015_SC001`
+  - shot_id: `SH001`
+  - delivery_style: `asked`
+  - voice_quality: `inquiring`
+  - emotion: `neutral`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.87`
+  - note: asked delivery with inquiring voice quality, neutral emotion, medium volume, and steady tempo.
+  - cues:
+    - asked
+
+- `CH015_DLG002`
+  - speaker: `dejah_thoris`
+  - scene_id: `CH015_SC001`
+  - shot_id: `SH001`
+  - delivery_style: `replied`
+  - voice_quality: `neutral`
+  - emotion: `neutral`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.65`
+  - note: replied delivery with neutral voice quality, neutral emotion, medium volume, and steady tempo.
+  - cues:
+    - answered
+
+- `CH015_DLG003`
+  - speaker: `dejah_thoris`
+  - scene_id: `CH015_SC001`
+  - shot_id: `SH001`
+  - delivery_style: `replied`
+  - voice_quality: `neutral`
+  - emotion: `neutral`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.65`
+  - note: replied delivery with neutral voice quality, neutral emotion, medium volume, and steady tempo.
+  - cues:
+    - answered
+
+- `CH015_DLG004`
+  - speaker: `john_carter`
+  - scene_id: `CH015_SC001`
+  - shot_id: `SH001`
+  - delivery_style: `asked`
+  - voice_quality: `inquiring`
+  - emotion: `neutral`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.84`
+  - note: asked delivery with inquiring voice quality, neutral emotion, medium volume, and steady tempo.
+  - cues:
+    - source_context
+
+- `CH015_DLG005`
+  - speaker: `sola`
+  - scene_id: `CH015_SC001`
+  - shot_id: `SH002`
+  - delivery_style: `defiant`
+  - voice_quality: `hard`
+  - emotion: `defiant`
+  - volume: `medium`
+  - tempo: `brisk`
+  - confidence: `0.91`
+  - note: defiant delivery with hard voice quality, defiant emotion, medium volume, and brisk tempo.
+  - cues:
+    - source_context
+
+- `CH015_DLG006`
+  - speaker: `john_carter`
+  - scene_id: `CH015_SC001`
+  - shot_id: `SH002`
+  - delivery_style: `replied`
+  - voice_quality: `neutral`
+  - emotion: `angry`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.73`
+  - note: replied delivery with neutral voice quality, angry emotion, medium volume, and steady tempo.
+  - cues:
+    - source_context
+
+- `CH015_DLG007`
+  - speaker: `dejah_thoris`
+  - scene_id: `CH015_SC001`
+  - shot_id: `SH002`
+  - delivery_style: `replied`
+  - voice_quality: `neutral`
+  - emotion: `angry`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.7`
+  - note: replied delivery with neutral voice quality, angry emotion, medium volume, and steady tempo.
+  - cues:
+    - source_context
+
+- `CH015_DLG008`
+  - speaker: `john_carter`
+  - scene_id: `CH015_SC001`
+  - shot_id: `SH003`
+  - delivery_style: `shouted`
+  - voice_quality: `forceful`
+  - emotion: `neutral`
+  - volume: `high`
+  - tempo: `fast`
+  - confidence: `0.87`
+  - note: shouted delivery with forceful voice quality, neutral emotion, high volume, and fast tempo.
+  - cues:
+    - source_context
+
+- `CH015_DLG009`
+  - speaker: `john_carter`
+  - scene_id: `CH015_SC001`
+  - shot_id: `SH003`
+  - delivery_style: `shouted`
+  - voice_quality: `forceful`
+  - emotion: `neutral`
+  - volume: `high`
+  - tempo: `fast`
+  - confidence: `0.8`
+  - note: shouted delivery with forceful voice quality, neutral emotion, high volume, and fast tempo.
+  - cues:
+    - source_context
+
+- `CH015_DLG010`
+  - speaker: `john_carter`
+  - scene_id: `CH015_SC001`
+  - shot_id: `SH003`
+  - delivery_style: `defiant`
+  - voice_quality: `hard`
+  - emotion: `defiant`
+  - volume: `medium`
+  - tempo: `brisk`
+  - confidence: `0.91`
+  - note: defiant delivery with hard voice quality, defiant emotion, medium volume, and brisk tempo.
+  - cues:
+    - source_context
+
+- `CH015_DLG011`
+  - speaker: `john_carter`
+  - scene_id: `CH015_SC001`
+  - shot_id: `SH004`
+  - delivery_style: `urgent`
+  - voice_quality: `pressured`
+  - emotion: `defiant`
+  - volume: `medium`
+  - tempo: `fast`
+  - confidence: `0.88`
+  - note: urgent delivery with pressured voice quality, defiant emotion, medium volume, and fast tempo.
+  - cues:
+    - source_context
+
+- `CH015_DLG012`
+  - speaker: `john_carter`
+  - scene_id: `CH015_SC001`
+  - shot_id: `SH004`
+  - delivery_style: `replied`
+  - voice_quality: `neutral`
+  - emotion: `neutral`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.65`
+  - note: replied delivery with neutral voice quality, neutral emotion, medium volume, and steady tempo.
+  - cues:
+    - source_context
+
+- `CH015_DLG013`
+  - speaker: `john_carter`
+  - scene_id: `CH015_SC001`
+  - shot_id: `SH004`
+  - delivery_style: `replied`
+  - voice_quality: `neutral`
+  - emotion: `neutral`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.62`
+  - note: replied delivery with neutral voice quality, neutral emotion, medium volume, and steady tempo.
+  - cues:
+    - source_context
+
+- `CH015_DLG014`
+  - speaker: `john_carter`
+  - scene_id: `CH015_SC002`
+  - shot_id: `SH001`
+  - delivery_style: `urgent`
+  - voice_quality: `pressured`
+  - emotion: `tender`
+  - volume: `medium`
+  - tempo: `fast`
+  - confidence: `0.91`
+  - note: urgent delivery with pressured voice quality, tender emotion, medium volume, and fast tempo.
+  - cues:
+    - source_context
+
+- `CH015_DLG015`
+  - speaker: `unresolved`
+  - scene_id: `CH015_SC003`
+  - shot_id: `SH001`
+  - delivery_style: `defiant`
+  - voice_quality: `hard`
+  - emotion: `tender`
+  - volume: `medium`
+  - tempo: `brisk`
+  - confidence: `0.88`
+  - note: defiant delivery with hard voice quality, tender emotion, medium volume, and brisk tempo.
+  - cues:
+    - source_context
+
+- `CH015_DLG016`
+  - speaker: `john_carter`
+  - scene_id: `CH015_SC003`
+  - shot_id: `SH001`
+  - delivery_style: `asked`
+  - voice_quality: `inquiring`
+  - emotion: `neutral`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.84`
+  - note: asked delivery with inquiring voice quality, neutral emotion, medium volume, and steady tempo.
+  - cues:
+    - asked
+
+- `CH015_DLG017`
+  - speaker: `john_carter`
+  - scene_id: `CH015_SC003`
+  - shot_id: `SH002`
+  - delivery_style: `replied`
+  - voice_quality: `neutral`
+  - emotion: `neutral`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.65`
+  - note: replied delivery with neutral voice quality, neutral emotion, medium volume, and steady tempo.
+  - cues:
+    - replied
+
+- `CH015_DLG018`
+  - speaker: `dejah_thoris`
+  - scene_id: `CH015_SC003`
+  - shot_id: `SH002`
+  - delivery_style: `fearful`
+  - voice_quality: `tense`
+  - emotion: `tender`
+  - volume: `low`
+  - tempo: `slow`
+  - confidence: `0.88`
+  - note: fearful delivery with tense voice quality, tender emotion, low volume, and slow tempo.
+  - cues:
+    - replied
+
+- `CH015_DLG019`
+  - speaker: `unresolved`
+  - scene_id: `CH015_SC003`
+  - shot_id: `SH003`
+  - delivery_style: `stern`
+  - voice_quality: `gruff`
+  - emotion: `somber`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.88`
+  - note: stern delivery with gruff voice quality, somber emotion, medium volume, and steady tempo.
+  - cues:
+    - source_context
+
+## Review
+
+- `CH015_DLG015`: speaker unresolved
+- `CH015_DLG019`: speaker unresolved

@@ -1,0 +1,317 @@
+# Dialogue Enrichment: CH023
+
+- chapter_title: `CHAPTER XXIII`
+- event_count: `21`
+- explicit_delivery_count: `15`
+- review_count: `12`
+
+## Events
+
+- `CH023_DLG001`
+  - speaker: `unresolved`
+  - scene_id: `CH023_SC001`
+  - shot_id: `SH001`
+  - delivery_style: `shouted`
+  - voice_quality: `forceful`
+  - emotion: `tender`
+  - volume: `high`
+  - tempo: `fast`
+  - confidence: `0.91`
+  - note: shouted delivery with forceful voice quality, tender emotion, high volume, and fast tempo.
+  - cues:
+    - source_context
+
+- `CH023_DLG002`
+  - speaker: `unresolved`
+  - scene_id: `CH023_SC001`
+  - shot_id: `SH001`
+  - delivery_style: `shouted`
+  - voice_quality: `forceful`
+  - emotion: `tender`
+  - volume: `high`
+  - tempo: `fast`
+  - confidence: `0.88`
+  - note: shouted delivery with forceful voice quality, tender emotion, high volume, and fast tempo.
+  - cues:
+    - source_context
+
+- `CH023_DLG003`
+  - speaker: `unresolved`
+  - scene_id: `CH023_SC001`
+  - shot_id: `SH002`
+  - delivery_style: `asked`
+  - voice_quality: `inquiring`
+  - emotion: `neutral`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.87`
+  - note: asked delivery with inquiring voice quality, neutral emotion, medium volume, and steady tempo.
+  - cues:
+    - source_context
+
+- `CH023_DLG004`
+  - speaker: `unresolved`
+  - scene_id: `CH023_SC001`
+  - shot_id: `SH002`
+  - delivery_style: `asked`
+  - voice_quality: `inquiring`
+  - emotion: `neutral`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.84`
+  - note: asked delivery with inquiring voice quality, neutral emotion, medium volume, and steady tempo.
+  - cues:
+    - source_context
+
+- `CH023_DLG005`
+  - speaker: `john_carter`
+  - scene_id: `CH023_SC001`
+  - shot_id: `SH003`
+  - delivery_style: `whispered`
+  - voice_quality: `soft`
+  - emotion: `neutral`
+  - volume: `low`
+  - tempo: `slow`
+  - confidence: `0.8`
+  - note: whispered delivery with soft voice quality, neutral emotion, low volume, and slow tempo.
+  - cues:
+    - answered
+
+- `CH023_DLG006`
+  - speaker: `john_carter`
+  - scene_id: `CH023_SC001`
+  - shot_id: `SH003`
+  - delivery_style: `whispered`
+  - voice_quality: `soft`
+  - emotion: `neutral`
+  - volume: `low`
+  - tempo: `slow`
+  - confidence: `0.8`
+  - note: whispered delivery with soft voice quality, neutral emotion, low volume, and slow tempo.
+  - cues:
+    - answered
+
+- `CH023_DLG007`
+  - speaker: `unresolved`
+  - scene_id: `CH023_SC001`
+  - shot_id: `SH004`
+  - delivery_style: `replied`
+  - voice_quality: `neutral`
+  - emotion: `tender`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.77`
+  - note: replied delivery with neutral voice quality, tender emotion, medium volume, and steady tempo.
+  - cues:
+    - source_context
+
+- `CH023_DLG008`
+  - speaker: `unresolved`
+  - scene_id: `CH023_SC001`
+  - shot_id: `SH004`
+  - delivery_style: `asked`
+  - voice_quality: `inquiring`
+  - emotion: `tender`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.95`
+  - note: asked delivery with inquiring voice quality, tender emotion, medium volume, and steady tempo.
+  - cues:
+    - source_context
+
+- `CH023_DLG009`
+  - speaker: `unresolved`
+  - scene_id: `CH023_SC002`
+  - shot_id: `SH001`
+  - delivery_style: `replied`
+  - voice_quality: `neutral`
+  - emotion: `neutral`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.62`
+  - note: replied delivery with neutral voice quality, neutral emotion, medium volume, and steady tempo.
+  - cues:
+    - source_context
+
+- `CH023_DLG010`
+  - speaker: `unresolved`
+  - scene_id: `CH023_SC002`
+  - shot_id: `SH001`
+  - delivery_style: `replied`
+  - voice_quality: `neutral`
+  - emotion: `tender`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.7`
+  - note: replied delivery with neutral voice quality, tender emotion, medium volume, and steady tempo.
+  - cues:
+    - source_context
+
+- `CH023_DLG011`
+  - speaker: `john_carter`
+  - scene_id: `CH023_SC002`
+  - shot_id: `SH001`
+  - delivery_style: `asked`
+  - voice_quality: `inquiring`
+  - emotion: `neutral`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.87`
+  - note: asked delivery with inquiring voice quality, neutral emotion, medium volume, and steady tempo.
+  - cues:
+    - asked
+
+- `CH023_DLG012`
+  - speaker: `john_carter`
+  - scene_id: `CH023_SC002`
+  - shot_id: `SH002`
+  - delivery_style: `asked`
+  - voice_quality: `inquiring`
+  - emotion: `neutral`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.8`
+  - note: asked delivery with inquiring voice quality, neutral emotion, medium volume, and steady tempo.
+  - cues:
+    - asked
+
+- `CH023_DLG013`
+  - speaker: `john_carter`
+  - scene_id: `CH023_SC002`
+  - shot_id: `SH002`
+  - delivery_style: `replied`
+  - voice_quality: `neutral`
+  - emotion: `neutral`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.62`
+  - note: replied delivery with neutral voice quality, neutral emotion, medium volume, and steady tempo.
+  - cues:
+    - source_context
+
+- `CH023_DLG014`
+  - speaker: `john_carter`
+  - scene_id: `CH023_SC002`
+  - shot_id: `SH003`
+  - delivery_style: `asked`
+  - voice_quality: `inquiring`
+  - emotion: `neutral`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.84`
+  - note: asked delivery with inquiring voice quality, neutral emotion, medium volume, and steady tempo.
+  - cues:
+    - source_context
+
+- `CH023_DLG015`
+  - speaker: `john_carter`
+  - scene_id: `CH023_SC002`
+  - shot_id: `SH003`
+  - delivery_style: `asked`
+  - voice_quality: `inquiring`
+  - emotion: `neutral`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.84`
+  - note: asked delivery with inquiring voice quality, neutral emotion, medium volume, and steady tempo.
+  - cues:
+    - asked
+
+- `CH023_DLG016`
+  - speaker: `unresolved`
+  - scene_id: `CH023_SC002`
+  - shot_id: `SH004`
+  - delivery_style: `replied`
+  - voice_quality: `neutral`
+  - emotion: `neutral`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.62`
+  - note: replied delivery with neutral voice quality, neutral emotion, medium volume, and steady tempo.
+  - cues:
+    - source_context
+
+- `CH023_DLG017`
+  - speaker: `unresolved`
+  - scene_id: `CH023_SC002`
+  - shot_id: `SH004`
+  - delivery_style: `replied`
+  - voice_quality: `neutral`
+  - emotion: `neutral`
+  - volume: `medium`
+  - tempo: `steady`
+  - confidence: `0.62`
+  - note: replied delivery with neutral voice quality, neutral emotion, medium volume, and steady tempo.
+  - cues:
+    - source_context
+
+- `CH023_DLG018`
+  - speaker: `unresolved`
+  - scene_id: `CH023_SC003`
+  - shot_id: `SH001`
+  - delivery_style: `shouted`
+  - voice_quality: `forceful`
+  - emotion: `neutral`
+  - volume: `high`
+  - tempo: `fast`
+  - confidence: `0.87`
+  - note: shouted delivery with forceful voice quality, neutral emotion, high volume, and fast tempo.
+  - cues:
+    - cried
+
+- `CH023_DLG019`
+  - speaker: `john_carter`
+  - scene_id: `CH023_SC003`
+  - shot_id: `SH002`
+  - delivery_style: `whispered`
+  - voice_quality: `soft`
+  - emotion: `neutral`
+  - volume: `low`
+  - tempo: `slow`
+  - confidence: `0.8`
+  - note: whispered delivery with soft voice quality, neutral emotion, low volume, and slow tempo.
+  - cues:
+    - replied
+
+- `CH023_DLG020`
+  - speaker: `unresolved`
+  - scene_id: `CH023_SC003`
+  - shot_id: `SH004`
+  - delivery_style: `urgent`
+  - voice_quality: `pressured`
+  - emotion: `neutral`
+  - volume: `medium`
+  - tempo: `fast`
+  - confidence: `0.8`
+  - note: urgent delivery with pressured voice quality, neutral emotion, medium volume, and fast tempo.
+  - cues:
+    - source_context
+
+- `CH023_DLG021`
+  - speaker: `john_carter`
+  - scene_id: `CH023_SC003`
+  - shot_id: `SH005`
+  - delivery_style: `whispered`
+  - voice_quality: `soft`
+  - emotion: `neutral`
+  - volume: `low`
+  - tempo: `slow`
+  - confidence: `0.8`
+  - note: whispered delivery with soft voice quality, neutral emotion, low volume, and slow tempo.
+  - cues:
+    - answered
+
+## Review
+
+- `CH023_DLG001`: speaker unresolved
+- `CH023_DLG002`: speaker unresolved
+- `CH023_DLG003`: speaker unresolved
+- `CH023_DLG004`: speaker unresolved
+- `CH023_DLG007`: speaker unresolved, delivery inferred from structure only
+- `CH023_DLG008`: speaker unresolved
+- `CH023_DLG009`: speaker unresolved, delivery inferred from structure only
+- `CH023_DLG010`: speaker unresolved, delivery inferred from structure only
+- `CH023_DLG016`: speaker unresolved, delivery inferred from structure only
+- `CH023_DLG017`: speaker unresolved, delivery inferred from structure only
+- `CH023_DLG018`: speaker unresolved
+- `CH023_DLG020`: speaker unresolved

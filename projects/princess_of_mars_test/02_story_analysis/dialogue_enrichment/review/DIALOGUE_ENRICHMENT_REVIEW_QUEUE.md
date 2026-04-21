@@ -1,0 +1,405 @@
+# Dialogue Enrichment Review Queue
+
+- `CH004_DLG001`
+  - speaker unresolved
+- `CH004_DLG002`
+  - speaker unresolved
+- `CH004_DLG003`
+  - speaker unresolved
+- `CH004_DLG004`
+  - speaker unresolved
+- `CH007_DLG001`
+  - speaker unresolved
+- `CH009_DLG002`
+  - speaker unresolved
+- `CH009_DLG006`
+  - speaker unresolved
+- `CH009_DLG007`
+  - speaker unresolved
+- `CH010_DLG003`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH010_DLG004`
+  - speaker unresolved
+- `CH010_DLG007`
+  - speaker unresolved
+- `CH010_DLG008`
+  - speaker unresolved
+- `CH010_DLG011`
+  - speaker unresolved
+- `CH010_DLG012`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH010_DLG013`
+  - speaker unresolved
+- `CH010_DLG016`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH010_DLG019`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH010_DLG020`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH010_DLG021`
+  - speaker unresolved
+- `CH012_DLG001`
+  - speaker unresolved
+- `CH012_DLG003`
+  - speaker unresolved
+- `CH012_DLG004`
+  - speaker unresolved
+- `CH012_DLG009`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH012_DLG010`
+  - speaker unresolved
+- `CH013_DLG004`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH013_DLG009`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH013_DLG016`
+  - speaker unresolved
+- `CH013_DLG017`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH014_DLG008`
+  - speaker unresolved
+- `CH014_DLG009`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH014_DLG010`
+  - speaker unresolved
+- `CH014_DLG016`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH014_DLG019`
+  - speaker unresolved
+- `CH014_DLG020`
+  - speaker unresolved
+- `CH014_DLG022`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH014_DLG024`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH014_DLG028`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH014_DLG030`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH014_DLG032`
+  - speaker unresolved
+- `CH015_DLG015`
+  - speaker unresolved
+- `CH015_DLG019`
+  - speaker unresolved
+- `CH016_DLG001`
+  - speaker unresolved
+- `CH016_DLG002`
+  - speaker unresolved
+- `CH016_DLG005`
+  - speaker unresolved
+- `CH016_DLG008`
+  - speaker unresolved
+- `CH016_DLG009`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH016_DLG012`
+  - speaker unresolved
+- `CH016_DLG013`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH016_DLG030`
+  - speaker unresolved
+- `CH017_DLG001`
+  - speaker unresolved
+- `CH017_DLG008`
+  - speaker unresolved
+- `CH018_DLG001`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH018_DLG002`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH018_DLG003`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH018_DLG004`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH018_DLG005`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH018_DLG006`
+  - speaker unresolved
+- `CH018_DLG007`
+  - speaker unresolved
+- `CH019_DLG001`
+  - speaker unresolved
+- `CH019_DLG002`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH019_DLG003`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH019_DLG004`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH019_DLG005`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH020_DLG001`
+  - speaker unresolved
+- `CH020_DLG002`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH020_DLG003`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH020_DLG004`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH020_DLG005`
+  - speaker unresolved
+- `CH020_DLG006`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH020_DLG007`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH020_DLG008`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH020_DLG009`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH020_DLG010`
+  - speaker unresolved
+- `CH020_DLG011`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH020_DLG012`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH020_DLG013`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH020_DLG014`
+  - speaker unresolved
+- `CH021_DLG001`
+  - speaker unresolved
+- `CH021_DLG002`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH021_DLG003`
+  - speaker unresolved
+- `CH021_DLG004`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH021_DLG006`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH021_DLG007`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH021_DLG008`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH021_DLG010`
+  - speaker unresolved
+- `CH021_DLG015`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH021_DLG016`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH021_DLG017`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH021_DLG018`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH021_DLG019`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH021_DLG020`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH022_DLG001`
+  - speaker unresolved
+- `CH022_DLG002`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH022_DLG006`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH022_DLG008`
+  - speaker unresolved
+- `CH022_DLG013`
+  - speaker unresolved
+- `CH022_DLG014`
+  - speaker unresolved
+- `CH022_DLG031`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH022_DLG032`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH022_DLG033`
+  - speaker unresolved
+- `CH022_DLG034`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH022_DLG044`
+  - speaker unresolved
+- `CH022_DLG047`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH022_DLG048`
+  - speaker unresolved
+- `CH022_DLG049`
+  - speaker unresolved
+- `CH022_DLG050`
+  - speaker unresolved
+- `CH022_DLG051`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH022_DLG052`
+  - speaker unresolved
+- `CH022_DLG058`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH022_DLG059`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH022_DLG060`
+  - speaker unresolved
+- `CH022_DLG061`
+  - speaker unresolved
+- `CH022_DLG063`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH023_DLG001`
+  - speaker unresolved
+- `CH023_DLG002`
+  - speaker unresolved
+- `CH023_DLG003`
+  - speaker unresolved
+- `CH023_DLG004`
+  - speaker unresolved
+- `CH023_DLG007`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH023_DLG008`
+  - speaker unresolved
+- `CH023_DLG009`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH023_DLG010`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH023_DLG016`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH023_DLG017`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH023_DLG018`
+  - speaker unresolved
+- `CH023_DLG020`
+  - speaker unresolved
+- `CH024_DLG001`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH024_DLG006`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH024_DLG007`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH024_DLG011`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH024_DLG015`
+  - speaker unresolved
+- `CH024_DLG019`
+  - speaker unresolved
+- `CH024_DLG020`
+  - speaker unresolved
+- `CH024_DLG023`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH024_DLG024`
+  - speaker unresolved
+- `CH024_DLG026`
+  - speaker unresolved
+- `CH025_DLG003`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH025_DLG008`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH026_DLG005`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH026_DLG006`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH026_DLG007`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH026_DLG008`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH026_DLG009`
+  - speaker unresolved
+- `CH027_DLG001`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH027_DLG002`
+  - speaker unresolved
+- `CH027_DLG003`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH027_DLG005`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH027_DLG008`
+  - speaker unresolved
+- `CH027_DLG013`
+  - speaker unresolved
+- `CH028_DLG001`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH028_DLG002`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH028_DLG003`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH028_DLG004`
+  - speaker unresolved
+- `CH028_DLG005`
+  - speaker unresolved
+- `CH028_DLG006`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH028_DLG007`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH028_DLG008`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH028_DLG009`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH028_DLG010`
+  - speaker unresolved
+  - delivery inferred from structure only
+- `CH028_DLG011`
+  - speaker unresolved
+  - delivery inferred from structure only

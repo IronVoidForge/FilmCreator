@@ -72,6 +72,10 @@ The launcher tree is now grouped by workflow so the root stays readable:
   - grades synthesis outputs and writes the selective rerun queue without mutating the source artifacts
 - `multi_chapter\run_quality_rerun_queue.bat`
   - previews the graded rerun queue and optionally executes queued family reruns after confirmation
+- `multi_chapter\run_dialogue_enrichment.bat`
+  - enriches dialogue delivery metadata for the existing dialogue timeline
+- `multi_chapter\clear_downstream_artifacts.bat`
+  - removes downstream synthesis artifacts while preserving story analysis and chapter summaries
 - `multi_chapter\test_phase_b1_resolution.bat`
   - runs the Phase B1 identity and environment resolution helper
 

@@ -5,6 +5,7 @@ import json
 
 from .character_bible import run_character_bible_synthesis
 from .descriptor_enrichment import clear_descriptor_artifacts, run_descriptor_enrichment
+from .dialogue_enrichment import run_dialogue_enrichment
 from .dialogue_timeline import run_dialogue_timeline
 from .environment_bible import run_environment_bible_synthesis
 from .identity_refinement import run_identity_refinement
@@ -42,6 +43,10 @@ def build_parser() -> argparse.ArgumentParser:
     dt = subparsers.add_parser("synthesize-dialogue-timeline")
     dt.add_argument("project_slug")
     dt.add_argument("--force", action="store_true")
+
+    dext = subparsers.add_parser("synthesize-dialogue-enrichment")
+    dext.add_argument("project_slug")
+    dext.add_argument("--force", action="store_true")
 
     pp = subparsers.add_parser("synthesize-prompt-preparation")
     pp.add_argument("project_slug")
@@ -145,6 +150,13 @@ def main() -> None:
 
     elif args.command == "synthesize-dialogue-timeline":
         summary = run_dialogue_timeline(
+            args.project_slug,
+            force=args.force,
+        )
+        print(json.dumps(summary.to_dict(), indent=2))
+
+    elif args.command == "synthesize-dialogue-enrichment":
+        summary = run_dialogue_enrichment(
             args.project_slug,
             force=args.force,
         )
