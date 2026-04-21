@@ -173,9 +173,9 @@ The latest validated state is:
 - next validation: tighten shot-to-dialogue and edit-aware sequencing on top of the new shot contract layer
 
 ### Phase 11 – Dialogue, Timing, and Edit-Aware Sequencing
-- status: `planned`
-- evidence: continuity and shot planning foundations now make a formal timing layer feasible
-- next validation: produce dialogue maps, shot-to-dialogue bindings, and chapter edit timeline artifacts
+- status: `validated`
+- evidence: `synthesize-dialogue-timeline` runs end to end, writes project/chapter dialogue timelines, shot dialogue notes, and review queues, and preserves unresolved dialogue rather than carrying forward false speakers
+- next validation: tighten dialogue heuristics for ambiguous narration and broaden prompt-prep / key-item layering
 
 ### Phase 11.5 â€“ Prompt Preparation and Reference Pack Assembly
 - status: `planned`

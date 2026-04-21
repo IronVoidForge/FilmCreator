@@ -4,6 +4,7 @@ import argparse
 import json
 
 from .character_bible import run_character_bible_synthesis
+from .dialogue_timeline import run_dialogue_timeline
 from .environment_bible import run_environment_bible_synthesis
 from .identity_refinement import run_identity_refinement
 from .scene_contracts import run_scene_contract_synthesis
@@ -33,6 +34,10 @@ def build_parser() -> argparse.ArgumentParser:
     sp.add_argument("project_slug")
     sp.add_argument("--no-llm", action="store_true")
     sp.add_argument("--force", action="store_true")
+
+    dt = subparsers.add_parser("synthesize-dialogue-timeline")
+    dt.add_argument("project_slug")
+    dt.add_argument("--force", action="store_true")
 
     r = subparsers.add_parser("refine-identities")
     r.add_argument("project_slug")
@@ -74,6 +79,13 @@ def main() -> None:
         summary = run_shot_planning(
             args.project_slug,
             use_llm=not args.no_llm,
+            force=args.force,
+        )
+        print(json.dumps(summary.to_dict(), indent=2))
+
+    elif args.command == "synthesize-dialogue-timeline":
+        summary = run_dialogue_timeline(
+            args.project_slug,
             force=args.force,
         )
         print(json.dumps(summary.to_dict(), indent=2))

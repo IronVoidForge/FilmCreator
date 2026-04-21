@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -26,7 +27,14 @@ def book_index_path(project_slug: str) -> Path:
 
 
 def load_book_index(project_slug: str) -> dict:
-    return load_json(book_index_path(project_slug), {})
+    index_path = book_index_path(project_slug)
+    if index_path.exists():
+        return load_json(index_path, {})
+    fallback = _build_book_index_from_chapters(project_slug)
+    if fallback:
+        index_path.parent.mkdir(parents=True, exist_ok=True)
+        index_path.write_text(json.dumps(fallback, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    return fallback
 
 
 def get_chapter_entry(project_slug: str, chapter_id: str) -> dict | None:
@@ -212,3 +220,70 @@ def _extract_text_section(markdown: str) -> str:
 def _paragraph_preview(text: str, *, limit: int = 180) -> str:
     collapsed = " ".join(text.split())
     return collapsed[:limit] + ("..." if len(collapsed) > limit else "")
+
+
+def _build_book_index_from_chapters(project_slug: str) -> dict:
+    project_dir = create_project(project_slug)
+    chapter_dir = project_dir / "01_source" / "chapters"
+    if not chapter_dir.exists():
+        return {}
+
+    chapter_paths = sorted(path for path in chapter_dir.glob("CH*.md") if path.is_file())
+    chapters: list[dict[str, object]] = []
+    for chapter_path in chapter_paths:
+        chapter_id = chapter_path.stem[:5].upper()
+        markdown = chapter_path.read_text(encoding="utf-8")
+        text = _extract_text_section(markdown)
+        title = _extract_title(markdown) or chapter_id
+        paragraphs = _index_paragraphs(text)
+        chapters.append(
+            {
+                "chapter_id": chapter_id,
+                "title": title,
+                "chapter_path": str(chapter_path),
+                "paragraph_count": len(paragraphs),
+                "paragraphs": paragraphs,
+            }
+        )
+
+    if not chapters:
+        return {}
+
+    return {
+        "project_slug": project_slug,
+        "source_name": "chapter_files_fallback",
+        "chapter_count": len(chapters),
+        "chapters": chapters,
+    }
+
+
+def _extract_title(markdown: str) -> str:
+    lines = markdown.splitlines()
+    title_line = ""
+    for index, line in enumerate(lines):
+        if line.strip().lower() == "# title" and index + 1 < len(lines):
+            title_line = lines[index + 1].strip()
+            break
+    return title_line
+
+
+def _index_paragraphs(text: str) -> list[dict[str, object]]:
+    paragraphs: list[dict[str, object]] = []
+    cursor = 0
+    for paragraph_index, paragraph in enumerate(_split_paragraphs(text), start=1):
+        if not paragraph.strip():
+            continue
+        start = text.find(paragraph, cursor)
+        if start < 0:
+            start = cursor
+        end = start + len(paragraph)
+        cursor = end
+        paragraphs.append(
+            {
+                "paragraph_index": paragraph_index,
+                "char_start": start,
+                "char_end": end,
+                "preview": _paragraph_preview(paragraph),
+            }
+        )
+    return paragraphs

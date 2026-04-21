@@ -4,6 +4,10 @@
 
 Add temporal structure and dialogue alignment to shot sequences, and carry extracted dialogue into clip-level artifacts for downstream assembly.
 
+## Current Status
+
+Validated. The dialogue timeline layer runs end to end, writes chapter and project timeline artifacts, and prefers unresolved dialogue over false carry-forward attribution.
+
 ---
 
 ## Inputs

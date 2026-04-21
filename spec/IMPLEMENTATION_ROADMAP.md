@@ -227,7 +227,7 @@ The project already knows what the canon is. This phase prepares the prompt fami
 
 #### Current Status
 
-Planned.
+Validated.
 
 ### Phase 11.6 â€“ Key Item Index and Reference Pack Assembly
 
@@ -289,6 +289,17 @@ Add temporal coherence so scenes and shots can support dialogue, audio binding, 
 #### Why This Matters
 
 Without this phase, the system can produce good-looking static structure but not coherent audiovisual sequences.
+
+#### Current Status
+
+Validated.
+
+#### Evidence
+
+- `synthesize-dialogue-timeline` runs end to end
+- writes project/chapter dialogue timelines
+- writes shot-level dialogue notes and review queues
+- preserves unresolved dialogue instead of carrying forward false speakers
 
 ### Phase 12 – Character Sheet Generation and Approval (lighter planning for now)
 
