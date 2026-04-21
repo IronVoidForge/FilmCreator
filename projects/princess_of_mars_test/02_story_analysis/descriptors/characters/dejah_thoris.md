@@ -53,5 +53,5 @@
 - artifact_id: `DESC_CHAR_dejah_thoris`
 - status: `generated`
 - source_fingerprint: `b3424c3adfb59d09d1bcfed3423a84dd302b96a4`
-- created_at_utc: `2026-04-21T06:07:55.445592+00:00`
-- updated_at_utc: `2026-04-21T06:07:55.445592+00:00`
+- created_at_utc: `2026-04-21T06:17:35.639611+00:00`
+- updated_at_utc: `2026-04-21T06:17:35.639611+00:00`
