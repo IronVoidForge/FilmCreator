@@ -40,5 +40,5 @@
 - artifact_id: `DESC_ITEM_spear`
 - status: `generated`
 - source_fingerprint: `70e0b35159f54e84e139994ade8975f8a2d6015e`
-- created_at_utc: `2026-04-21T05:22:19.761921+00:00`
-- updated_at_utc: `2026-04-21T05:22:19.761921+00:00`
+- created_at_utc: `2026-04-21T05:47:10.023394+00:00`
+- updated_at_utc: `2026-04-21T05:47:10.023394+00:00`

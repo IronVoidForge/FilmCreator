@@ -38,5 +38,5 @@
 - artifact_id: `DESC_CHAR_ape_creature_1`
 - status: `generated`
 - source_fingerprint: `49da16873e3f9a3d87884019748a33745cc3fcd1`
-- created_at_utc: `2026-04-21T05:32:07.403675+00:00`
-- updated_at_utc: `2026-04-21T05:32:07.403675+00:00`
+- created_at_utc: `2026-04-21T05:46:28.837322+00:00`
+- updated_at_utc: `2026-04-21T05:46:28.837322+00:00`

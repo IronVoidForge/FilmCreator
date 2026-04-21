@@ -135,6 +135,21 @@ def _looks_like_metadata_summary(text: str) -> bool:
     return any(marker in normalized for marker in metadata_markers)
 
 
+def _looks_like_placeholder_text(text: str) -> bool:
+    normalized = " ".join(text.lower().split())
+    placeholder_markers = [
+        "no layout notes available",
+        "no lighting notes available",
+        "no scene summary available",
+        "no shot notes available",
+        "unknown",
+        "n/a",
+        "(none)",
+        "none",
+    ]
+    return any(marker in normalized for marker in placeholder_markers)
+
+
 def _record_descriptor_phrases(record: dict[str, Any], keys: list[str], *, strip_terms: list[str] | None = None) -> list[str]:
     parts: list[str] = []
     supported_values = record.get("supported_field_values", {}) if isinstance(record.get("supported_field_values"), dict) else {}
@@ -153,7 +168,7 @@ def _record_descriptor_phrases(record: dict[str, Any], keys: list[str], *, strip
         values = collect_values(supported_values, key) or collect_values(generated_values, key) or collect_values(field_values, key)
         for item in values:
             cleaned = _strip_terms(item, strip_terms or [])
-            if cleaned and cleaned.strip().lower() not in {"unknown", "none", "(none)", "n/a"} and not _looks_like_metadata_summary(cleaned):
+            if cleaned and not _looks_like_placeholder_text(cleaned) and not _looks_like_metadata_summary(cleaned):
                 parts.extend(_descriptor_phrases(cleaned))
     deduped: list[str] = []
     seen: set[str] = set()
@@ -722,13 +737,32 @@ def _package_for_shot(
     inputs = _base_inputs(
         subject_kind="shot",
         subject_id=shot_id,
-        source_artifact_ids=[artifact for artifact in source_artifact_ids if artifact],
+        source_artifact_ids=[artifact for artifact in source_artifact_ids if artifact and artifact.lower() != "none"],
         reference_mode="shot_prompt_bundle",
         variant_name=variant_key,
         prompt_enhancer_profile="shot_reference",
         change_budget="preserve scene continuity and shot intent",
         reuse_policy="reuse canonical shot contract canon",
     )
+    reference_asset_ids: list[str] = []
+    reference_asset_ids.extend(
+        str(ref.get("canonical_id", "")).strip()
+        for ref in shot.get("characters_in_frame", [])
+        if isinstance(ref, dict) and str(ref.get("canonical_id", "")).strip() and str(ref.get("canonical_id", "")).strip().lower() != "none"
+    )
+    if isinstance(env_ref, dict):
+        env_id = str(env_ref.get("canonical_id", "")).strip()
+        if env_id and env_id.lower() != "none":
+            reference_asset_ids.append(env_id)
+    if scene_descriptor:
+        scene_descriptor_id = str(scene_descriptor.get("descriptor_id", "")).strip()
+        if scene_descriptor_id:
+            reference_asset_ids.append(scene_descriptor_id)
+    if shot_descriptor:
+        shot_descriptor_id = str(shot_descriptor.get("descriptor_id", "")).strip()
+        if shot_descriptor_id:
+            reference_asset_ids.append(shot_descriptor_id)
+    reference_asset_ids = list(dict.fromkeys(reference_asset_ids))
     inputs.update(
         {
             "scene_id": scene_id,
@@ -737,6 +771,8 @@ def _package_for_shot(
             "camera_description": camera_description,
             "composition": composition_hint,
             "prompt_family": "shot_prompt",
+            "reference_asset_ids": "; ".join(reference_asset_ids),
+            "reference_asset_types": "character; environment; scene_descriptor; shot_descriptor",
         }
     )
     package = PromptPackage(

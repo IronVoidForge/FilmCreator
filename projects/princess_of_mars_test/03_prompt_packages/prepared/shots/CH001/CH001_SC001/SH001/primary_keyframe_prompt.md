@@ -19,7 +19,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 # Inputs
 - subject_kind: shot
 - subject_id: SH001
-- source_artifact_ids: CH001_SC001; SHOT_INDEX; DIALOGUE; john_carter; None
+- source_artifact_ids: CH001_SC001; SHOT_INDEX; DIALOGUE; john_carter
 - reference_mode: shot_prompt_bundle
 - variant_name: primary_keyframe
 - lens_family: neutral_reference
@@ -39,6 +39,8 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - camera_description: Wide establishing frame with a steady or lightly drifting camera.
 - composition: Wide composition across Remote gold-bearing quartz vein with john_carter placed for immediate spatial orientation.
 - prompt_family: shot_prompt
+- reference_asset_ids: john_carter; DESC_CH001_SC001; DESC_CH001_SC001_SH001
+- reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
 - Scene: CH001_SC001 / Establish the setting, the stakes (the gold vein), and the inciting i....

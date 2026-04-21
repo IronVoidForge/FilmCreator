@@ -55,5 +55,5 @@
 - artifact_id: `DESC_ENV_apache_plateau_camp`
 - status: `generated`
 - source_fingerprint: `ad11a78e0f20afa29b6738bd08a7a4b7f01149d8`
-- created_at_utc: `2026-04-21T05:22:15.327860+00:00`
-- updated_at_utc: `2026-04-21T05:22:15.327860+00:00`
+- created_at_utc: `2026-04-21T05:40:54.589956+00:00`
+- updated_at_utc: `2026-04-21T05:40:54.589956+00:00`

@@ -59,5 +59,5 @@
 - artifact_id: `DESC_ENV_ancient_martian_city`
 - status: `generated`
 - source_fingerprint: `5ca2949ba612a1785527e28fe7a34e107f952b60`
-- created_at_utc: `2026-04-21T05:22:15.284326+00:00`
-- updated_at_utc: `2026-04-21T05:22:15.284326+00:00`
+- created_at_utc: `2026-04-21T05:40:31.177116+00:00`
+- updated_at_utc: `2026-04-21T05:40:31.177116+00:00`
