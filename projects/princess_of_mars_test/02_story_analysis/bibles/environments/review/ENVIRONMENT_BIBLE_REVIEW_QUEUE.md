@@ -1,0 +1,245 @@
+# Environment Bible Review Queue
+
+- `ancient_cliffside_cave`
+  - Specific geological composition beyond limestone is unstated.
+  - Exact dimensions of the "massive" chamber are undefined.
+- `apache_plateau_camp`
+  - Specific settlement architecture or material composition is not defined.
+- `arizona_mountain_mining_site`
+  - Visual characteristics, layout, lighting, and mood are entirely undocumented in the provided evidence.
+- `arizona_mountain_cave_ledge`
+  - Specific physical characteristics of the ledge are not defined in current evidence.
+  - Visual relationship between the ledge and the broader cave interior is unstated.
+- `vast_cosmic_void`
+  - Visual characteristics and spatial properties are currently undefined in the provided evidence.
+- `arizona_gold_vein_claim`
+  - Specific coordinates or exact location within the Arizona hills are not defined.
+- `circular_moss_basin`
+  - Specific biological characteristics of the hatching organisms are not detailed.
+  - Exact dimensions of the "low walls" relative to the basin are unspecified.
+  - [[/SECTION]
+- `martian_distant_hills`
+  - Specific geological composition or color palette of the hills is not defined beyond "Martian" and "desert topography."
+- `arizona_mountain_cave`
+  - Specific nature/origin of the "unseen, moaning sound"
+  - Exact composition or source of the pungent vapor
+- `deep_space_void`
+  - Specific visual properties of the "metaphysical transport" aspect are undefined.
+- `rocky_gorge_canyon`
+  - Specific geological composition of the gorge beyond "rocky" is unstated.
+  - Precise spatial relationship between the cliffs and the observer's position is not defined.
+- `ancient_tableland_city`
+  - Visual characteristics, layout, lighting, and mood are entirely undefined in the provided evidence.
+- `marble_audience_chamber`
+  - Visual characteristics, layout, and lighting are currently undefined in the provided source material.
+- `martian_sleeping_quarters`
+  - Visual characteristics, layout, and lighting are currently undefined in the provided evidence.
+- `captive_chamber_murals`
+  - Specific dimensions or exact layout of the cell are not defined.
+  - The specific source or medium of the "controlled indoor lighting" is unknown.
+- `martian_city_outskirts`
+  - Visual characteristics, layout, and atmospheric qualities are entirely undefined in the current evidence.
+- `ancient_martian_city_plaza`
+  - Specific architectural styles beyond "gold-trimmed" and "marble" are undefined.
+  - Precise layout of the "distant ruins" relative to the plaza center is unstated.
+- `grand_audience_chamber`
+  - Specific material composition beyond "marble" is unstated.
+  - Exact dimensions or floor plan layout are not provided.
+- `martian_sleeping_chamber`
+  - Specific architectural dimensions or floor plan are unstated.
+  - Exact nature of the "decorated surfaces" (patterns, materials, or motifs) is undefined.
+- `martian_interior_chamber`
+  - Specific number and placement of structural openings (affects lighting)
+  - Exact dimensions beyond the capacity for large creatures
+- `martian_city_streets`
+  - Specific architectural style or material of building facades is not defined.
+- `valley_overlook_exterior`
+  - Specific architectural details of the high-altitude building are not defined.
+- `dead_sea_bottom`
+  - Visual characteristics, layout, and atmosphere are currently undefined in the provided evidence.
+- `martian_arid_territory`
+  - Lack of descriptive data regarding topography, color palette, or atmospheric conditions.
+  - Specific spatial layout is currently unestablished.
+- `martian_plaza_city`
+  - Visual characteristics and architectural style are entirely undocumented.
+  - The environment has been flagged for resolution into a preferred canonical target: martian_plaza.
+- `remote_incubator_complex`
+  - Visual identity and physical layout are completely undefined in current evidence.
+- `martian_city_plaza`
+  - Specific architectural style or material composition is not defined.
+  - Exact spatial relationship between the "enclosed chamber" and the plaza boundaries is unstated.
+- `deserted_martian_city`
+  - Specific architectural style of the "abandoned martian architecture" is not detailed beyond stone ruins.
+- `martian_valley_skyline`
+  - Visual characteristics, layout, and lighting are entirely undocumented in the current source.
+- `dead_city_interior`
+  - Specific layout of domestic vs. instructional quarters is not detailed.
+  - Exact extent of the "ruined" state (degree of decay) is unspecified.
+- `dead_city_plaza`
+  - Specific architectural details of the "ancient stone" are not defined.
+  - Exact boundaries of the "ruined" state versus functional assembly areas are unspecified.
+  - [[/SECTION]
+- `dead_sea_bottom_incubator`
+  - Specific architectural details of the "subterranean egg vaults" are not defined.
+  - The exact nature of the "enormous beasts of burden" is unspecified.
+- `communal_sleeping_quarters`
+  - Specific architectural dimensions or structural materials are unstated.
+  - Exact ratio of inhabitants to animals is unknown.
+- `martian_plaza`
+  - Specific architectural boundaries or perimeter structures are not defined.
+  - Exact dimensions of the "large open expanse" are unspecified.
+- `martian_valley_battlefield`
+  - Specific topographical features beyond sweeping hills and the desert basin are unstated.
+  - Exact duration or location of the "massive floating funeral pyre" relative to the valley floor is not defined.
+- `ancient_luxurious_quarters`
+  - Visual identity, layout, and specific material composition are entirely undefined in current evidence.
+- `audience_chamber`
+  - Visual characteristics, layout, and atmosphere are entirely undocumented in the provided evidence.
+- `thark_audience_chamber`
+  - Specific architectural details beyond "stern stone" are unstated.
+  - Exact dimensions or specific layout of the retinue area are unknown.
+- `thark_residential_quarters`
+  - Visual characteristics, layout, and atmosphere are entirely undocumented in the provided evidence.
+- `thark_settlement_plaza`
+  - Visual characteristics, layout, and atmosphere are currently undefined in the provided evidence.
+- `green_martian_city`
+  - Visual characteristics, layout, and atmosphere of the city are undocumented.
+- `martian_avenues`
+  - Visual characteristics, layout, and atmosphere are entirely undefined in the current evidence.
+- `ancient_sea_bottom`
+  - Visual characteristics, layout, and lighting are currently undefined in the provided evidence.
+- `caravan_camp_landscape`
+  - Visual characteristics, layout, and lighting are entirely undocumented in the current evidence.
+- `city_of_thark`
+  - Physical appearance, scale, and architectural style of the city are entirely undocumented in the provided evidence.
+- `martian_wilderness_corridor`
+  - Visual characteristics and spatial layout are currently undefined in the provided evidence.
+- `thark_plaza_quarters`
+  - Visual characteristics, layout, and atmospheric qualities are entirely undocumented in the current evidence.
+- `carters_apartment_quarters`
+  - Specific architectural layout of the third-floor unit is not detailed.
+  - Exact nature of the "communal" aspect (presence of retinues vs. shared space) is implied but not spatially defined.
+- `thark_city_plaza`
+  - Specific spatial relationship between the plaza and surrounding Thark city streets is not detailed.
+  - Exact degree of "overgrowth" or vegetation type is unspecified.
+- `mossy_waste`
+  - Specific composition of the "mossy" material is not defined.
+- `lorquas_ptomel_city_plazas`
+  - Specific architectural style of Thark structures is not detailed beyond "Thark architecture."
+  - Exact layout of the radium processing stations within the plaza is unspecified.
+- `martian_night_expanse`
+  - Specific topographical features of the desert plains beyond "vastness" are undefined.
+- `eastern_martian_hills`
+  - Specific geological composition beyond "rocky" is unstated.
+  - Exact time of day or specific sky color is not defined, only the transition to "natural Martian sky."
+  - [[/SECTION]
+- `warhoon_subterranean_amphitheater`
+  - Specific architectural details of the "ancient ruined Martian city" are not defined beyond being the location.
+  - Exact light sources (beyond implied torchlight) are unspecified.
+- `thark_expedition_march_route`
+  - Lack of physical or atmospheric descriptors in provided documentation.
+  - Visual identity and terrain characteristics are currently undefined.
+- `warhoon_incubator_site`
+  - Physical appearance and layout of the site are currently undocumented.
+  - Specific atmospheric or lighting qualities are unknown.
+- `atmosphere_factory`
+  - Specific spatial configuration of the vast interior halls is not detailed.
+- `barsoomian_wilderness`
+  - Specific nature of "strange biological anomalies" is undefined.
+  - Exact boundaries of wild beast territories are unspecified.
+- `ptor_farmstead`
+  - Specific architectural materials beyond "metal shaft" are undefined.
+  - Exact geographic boundaries of the settlement are not specified.
+- `caravan_camp_southern_hills`
+  - Specific layout of chariot placement within the camp is not defined.
+  - Exact topographical relationship between the hills and the "mossy sea bottom" remains visually undefined beyond being a boundary.
+- `mossy_sea_bottom`
+  - Specific lighting conditions or atmospheric visibility are not defined.
+  - Exact geological composition beneath the moss is unknown.
+- `martian_agricultural_tracts`
+  - Specific visual nature of "refined" flora and fauna is not detailed.
+  - Exact extent of surface modifications for conduit access is unspecified.
+- `zodanga_central_plaza`
+  - Specific architectural style or materials of the high-raised buildings are not defined.
+  - Exact dimensions or boundaries of the square are unspecified.
+- `zodanga_cityscape`
+  - Specific material composition of walls (stone vs. metal) is not definitively settled.
+- `zodangan_palace_quarters`
+  - Specific architectural materials or decorative motifs are not defined.
+  - Exact layout/floor plan of the quarters is unknown.
+- `jeddak_vaults_and_quarters`
+  - Specific architectural style or material composition is unstated.
+  - Internal layout and relationship between vaults and quarters are undefined.
+- `martian_sea_bottoms_and_canals`
+  - Specific visual characteristics of the sea bottoms and canals are currently unrecorded.
+  - Detailed atmospheric or lighting conditions are unknown.
+- `thark_city_quarters`
+  - Specific visual characteristics of the city quarters are currently undocumented.
+  - Spatial layout and architectural style are unknown.
+- `mossy_waste_expanse`
+  - Specific biological composition of the "moss" is undefined.
+  - Exact atmospheric composition beyond being "arid" is unspecified.
+- `thark_city_settlement`
+  - Specific material composition (exact ratio of stone vs. metal) is not fully defined.
+- `rugged_low_mountains`
+  - Specific geological composition beyond "rocky" is unstated.
+- `subterranean_dungeon`
+  - Lack of physical/visual descriptors for the dungeon architecture or contents.
+  - Specific spatial layout and lighting conditions are unrecorded.
+- `warhoon_city`
+  - Lack of descriptive detail regarding the city's physical appearance, architecture, or scale.
+  - Visual identity is currently held under extracted canonical ID without supporting metadata.
+- `warhoon_mobile_camp`
+  - Specific visual characteristics of the camp are currently unrecorded.
+  - The physical nature of the "mobile" aspect (e.g., vehicles, beasts, or walking structures) is unknown.
+- `zodanga_palace_interior`
+  - Specific lighting, atmosphere, and scale are currently unrecorded.
+  - Visual identity of the palace interior is undefined.
+- `dead_sea_bottom_expanse`
+  - Specific composition or architecture of the distant city clusters.
+  - Exact geological features of the "dead sea bottom" beyond being a barren expanse.
+- `martian_sky_aerial_corridors`
+  - Specific architectural or structural details of the "aerial corridors" are not defined beyond their role as transit paths.
+- `zodanga_urban_complex`
+  - Specific layout of the dense cityscape is not detailed beyond verticality and barracks.
+- `battlefield_plains`
+  - Specific visual nature of the "scars" on the terrain is undefined.
+  - Exact distance or orientation to the ancient dead city ruins is unspecified.
+- `zodanga_walled_city`
+  - Specific internal street layouts or district configurations are unstated.
+  - Visual properties of the "carborundum" material (texture, color, reflectivity) are not detailed.
+- `zodanga_audience_chamber`
+  - Specific architectural details of the throne or dais beyond their presence.
+  - Exact nature of the "golden ceremonial chains" (functional vs. decorative).
+- `zodanga_dungeons`
+  - Specific layout of the labyrinthine paths is not detailed.
+- `aerial_battlefield_mars`
+  - Specific visual properties of the Martian sky (color/clarity) are not defined.
+  - Exact atmospheric conditions or visibility limits due to smoke are unstated.
+- `city_of_helium_procession_route`
+  - Specific architectural style or material details of the "Heliumite" structures are not defined.
+  - Exact spatial relationship between the streets and the plaza is unconfirmed.
+- `heliumite_flagship_interior`
+  - Specific architectural dimensions or layout details are not provided.
+  - Lighting conditions are unstated.
+- `zodangan_land_camps`
+  - Specific layout of the fortifications is not detailed.
+  - Exact visual state of the "besieged" vs "retreating" forces' camps is undefined.
+- `atmosphere_plant_complex`
+  - Visual characteristics of the plant complex are currently undefined.
+  - Spatial layout and internal architecture are unknown.
+- `barsoomian_sky_transit`
+  - Specific visual characteristics of the transit medium or vehicle are unstated.
+  - Spatial dimensions and internal layout are unknown.
+- `helium_palace_gardens`
+  - Lack of descriptive visual data regarding the physical appearance or layout of the gardens.
+  - Specific nature of the "crisis" setting is not defined.
+- `arizona_cave_system`
+  - Specific visual characteristics of the cave system are currently undocumented.
+  - Spatial layout and scale are unknown.
+- `arizona_desert_landscape`
+  - Specific visual characteristics of the landscape are currently undocumented.
+  - The exact nature of its role in CH001 and CH002 relative to CH028 is unstated.
+- `hudson_river_study`
+  - Specific visual characteristics of the environment are currently undocumented.
+  - Spatial layout and lighting conditions are unknown.
