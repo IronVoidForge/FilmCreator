@@ -51,6 +51,7 @@ def build_parser() -> argparse.ArgumentParser:
         choices=["character", "environment", "scene", "shot"],
         dest="entity_types",
     )
+    pp.add_argument("--entity-id", action="append", dest="entity_ids")
 
     de = subparsers.add_parser("synthesize-descriptor-enrichment")
     de.add_argument("project_slug")
@@ -63,6 +64,7 @@ def build_parser() -> argparse.ArgumentParser:
         choices=["character", "environment", "scene", "shot", "key_item"],
         dest="entity_types",
     )
+    de.add_argument("--entity-id", action="append", dest="entity_ids")
 
     ce = subparsers.add_parser("clear-descriptor-artifacts")
     ce.add_argument("project_slug")
@@ -125,6 +127,7 @@ def main() -> None:
             force=args.force,
             limit=args.limit,
             entity_types=args.entity_types,
+            entity_ids=args.entity_ids,
         )
         print(json.dumps(summary.to_dict(), indent=2))
 
@@ -135,6 +138,7 @@ def main() -> None:
             force=args.force,
             limit=args.limit,
             entity_types=args.entity_types,
+            entity_ids=args.entity_ids,
         )
         print(json.dumps(summary.to_dict(), indent=2))
 

@@ -851,6 +851,7 @@ def run_prompt_preparation(
     force: bool = False,
     limit: int | None = None,
     entity_types: list[str] | None = None,
+    entity_ids: list[str] | None = None,
 ) -> PromptPreparationSummary:
     project_dir = create_project(project_slug)
     root = project_dir / PROMPT_PREP_ROOT
@@ -877,12 +878,22 @@ def run_prompt_preparation(
     processed_packages = 0
     stop_processing = False
     selected_types = set(entity_types or [])
+    selected_ids = {str(item).strip().lower() for item in (entity_ids or []) if str(item).strip()}
+
+    def matches_entity_id(*candidates: str) -> bool:
+        if not selected_ids:
+            return True
+        normalized = {str(candidate).strip().lower() for candidate in candidates if str(candidate).strip()}
+        return bool(normalized & selected_ids)
 
     # Character reference bundles.
     if not selected_types or "character" in selected_types:
         for bible in sorted(character_bibles.values(), key=lambda item: str(item.get("character_id", ""))):
             if stop_processing:
                 break
+            char_id = str(bible.get("character_id", "")).strip().lower()
+            if not matches_entity_id(char_id, f"char_{char_id}", f"desc_char_{char_id}"):
+                continue
             total_entries += 1
             if not _is_film_facing_character_entry(bible, bible):
                 review_queue.append(
@@ -931,6 +942,9 @@ def run_prompt_preparation(
         for bible in sorted(environment_bibles.values(), key=lambda item: str(item.get("environment_id", ""))):
             if stop_processing:
                 break
+            env_id = str(bible.get("environment_id", "")).strip().lower()
+            if not matches_entity_id(env_id, f"env_{env_id}", f"desc_env_{env_id}"):
+                continue
             total_entries += 1
             if not _is_film_facing_environment_entry(bible, bible):
                 review_queue.append(
@@ -983,6 +997,8 @@ def run_prompt_preparation(
             scene_id = str(shot.get("scene_id", "")).strip().upper()
             shot_id = str(shot.get("shot_id", "")).strip().upper()
             if not scene_id or not shot_id:
+                continue
+            if not matches_entity_id(shot_id, f"{scene_id}/{shot_id}", f"{scene_id}_{shot_id}"):
                 continue
             scene_contract = scene_contracts.get(scene_id, {})
             scene_descriptor = scene_descriptors.get(scene_id.lower())

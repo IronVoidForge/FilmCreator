@@ -2078,6 +2078,7 @@ def run_descriptor_enrichment(
     force: bool = False,
     limit: int | None = None,
     entity_types: list[str] | None = None,
+    entity_ids: list[str] | None = None,
 ) -> DescriptorEnrichmentSummary:
     project_dir = create_project(project_slug)
     output_root = _descriptor_root(project_dir)
@@ -2107,6 +2108,13 @@ def run_descriptor_enrichment(
     processed = 0
     stop_processing = False
     selected_types = set(entity_types or [])
+    selected_ids = {str(item).strip().lower() for item in (entity_ids or []) if str(item).strip()}
+
+    def matches_entity_id(*candidates: str) -> bool:
+        if not selected_ids:
+            return True
+        normalized = {str(candidate).strip().lower() for candidate in candidates if str(candidate).strip()}
+        return bool(normalized & selected_ids)
 
     def maybe_reuse(base_path: Path, fp: str, builder: Callable[[], DescriptorRecord], *, force: bool) -> DescriptorRecord:
         nonlocal reused, synthesized
@@ -2133,6 +2141,8 @@ def run_descriptor_enrichment(
         for char_id, bible in character_bibles.items():
             if stop_processing:
                 break
+            if not matches_entity_id(char_id, f"char_{char_id}", f"desc_char_{char_id}"):
+                continue
             source_entry = character_bibles.get(char_id, bible)
             fp = _fingerprint({"bible": bible, "scene_mentions": character_scene_map.get(char_id, []), "shot_mentions": character_shot_map.get(char_id, []), "kind": "character"})
             base_path = output_root / "characters" / char_id
@@ -2162,6 +2172,8 @@ def run_descriptor_enrichment(
         for env_id, bible in environment_bibles.items():
             if stop_processing:
                 break
+            if not matches_entity_id(env_id, f"env_{env_id}", f"desc_env_{env_id}"):
+                continue
             source_entry = environment_bibles.get(env_id, bible)
             fp = _fingerprint({"bible": bible, "scene_mentions": environment_scene_map.get(env_id, []), "shot_mentions": environment_shot_map.get(env_id, []), "kind": "environment"})
             base_path = output_root / "environments" / env_id
@@ -2191,6 +2203,8 @@ def run_descriptor_enrichment(
         for scene_id, contract in scene_contracts.items():
             if stop_processing:
                 break
+            if not matches_entity_id(scene_id, scene_id.lower(), f"desc_{scene_id.lower()}"):
+                continue
             fp = _fingerprint({"scene": contract, "kind": "scene"})
             base_path = output_root / "scenes" / scene_id
             shot_mentions = [f"{str(shot.get('scene_id', '')).strip().upper()}/{str(shot.get('shot_id', '')).strip().upper()}" for shot in shot_packages if str(shot.get("scene_id", "")).strip().upper() == scene_id and str(shot.get("shot_id", "")).strip()]
@@ -2215,6 +2229,8 @@ def run_descriptor_enrichment(
             shot_id = str(shot.get("shot_id", "")).strip().upper()
             if not scene_id or not shot_id:
                 continue
+            if not matches_entity_id(shot_id, f"{scene_id}/{shot_id}", f"{scene_id}_{shot_id}", f"desc_{scene_id}_{shot_id}"):
+                continue
             scene_contract = scene_contracts.get(scene_id, {})
             fp = _fingerprint({"shot": shot, "scene": scene_contract, "kind": "shot"})
             chapter_id = scene_id[:5]
@@ -2238,6 +2254,8 @@ def run_descriptor_enrichment(
         for item_id, candidate in key_item_candidates.items():
             if stop_processing:
                 break
+            if not matches_entity_id(item_id, f"item_{item_id}", f"desc_item_{item_id}"):
+                continue
             fp = _fingerprint({"candidate": candidate, "kind": "key_item"})
             base_path = output_root / "key_items" / item_id
 
