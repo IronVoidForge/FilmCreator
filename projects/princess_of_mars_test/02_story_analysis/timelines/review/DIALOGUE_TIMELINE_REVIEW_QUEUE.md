@@ -1,0 +1,584 @@
+# Dialogue Timeline Review Queue
+
+- `CH004_DLG001`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH004:p024:q01
+- `CH004_DLG002`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH004:p024:q02
+- `CH004_DLG003`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH004:p024:q03
+- `CH004_DLG004`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH004:p025:q01
+- `CH007_DLG001`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH007:p010:q01
+- `CH009_DLG001`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH009:p013:q01
+- `CH009_DLG002`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH009:p013:q02
+- `CH009_DLG003`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH009:p014:q01
+- `CH009_DLG004`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH009:p015:q01
+- `CH009_DLG005`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH009:p015:q02
+- `CH009_DLG006`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH009:p017:q01
+- `CH009_DLG007`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH009:p017:q02
+- `CH009_DLG008`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH009:p018:q01
+- `CH009_DLG009`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH009:p018:q02
+- `CH010_DLG001`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH010:p003:q01
+- `CH010_DLG003`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH010:p019:q01
+- `CH010_DLG004`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH010:p020:q01
+- `CH010_DLG005`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH010:p021:q01
+- `CH010_DLG006`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH010:p022:q01
+- `CH010_DLG007`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH010:p023:q01
+- `CH010_DLG008`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH010:p033:q01
+- `CH010_DLG009`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH010:p034:q01
+- `CH010_DLG010`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH010:p034:q02
+- `CH010_DLG011`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH010:p035:q01
+- `CH011_DLG001`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH011:p006:q01
+- `CH011_DLG002`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH011:p006:q02
+- `CH011_DLG003`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH011:p007:q01
+- `CH011_DLG004`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH011:p008:q01
+- `CH011_DLG005`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH011:p014:q01
+- `CH011_DLG006`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH011:p015:q01
+- `CH011_DLG007`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH011:p015:q02
+- `CH011_DLG008`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH011:p016:q01
+- `CH011_DLG009`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH011:p017:q01
+- `CH011_DLG010`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH011:p017:q02
+- `CH012_DLG001`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH012:p004:q01
+- `CH012_DLG002`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH012:p005:q01
+- `CH012_DLG003`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH012:p007:q01
+- `CH012_DLG004`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH012:p014:q01
+- `CH012_DLG005`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH012:p015:q01
+- `CH012_DLG006`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH012:p015:q02
+- `CH012_DLG007`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH012:p015:q03
+- `CH012_DLG008`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH012:p016:q01
+- `CH012_DLG009`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH012:p017:q01
+- `CH012_DLG010`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH012:p018:q01
+- `CH013_DLG001`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH013:p008:q01
+- `CH013_DLG002`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH013:p009:q01
+- `CH013_DLG003`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH013:p009:q02
+- `CH013_DLG004`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH013:p010:q01
+- `CH013_DLG005`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH013:p016:q01
+- `CH013_DLG006`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH013:p016:q02
+- `CH013_DLG007`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH013:p017:q01
+- `CH013_DLG008`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH013:p017:q02
+- `CH013_DLG009`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH013:p019:q01
+- `CH013_DLG010`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH013:p020:q01
+- `CH014_DLG001`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH014:p003:q01
+- `CH014_DLG002`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH014:p003:q02
+- `CH014_DLG003`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH014:p004:q01
+- `CH014_DLG004`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH014:p004:q02
+- `CH014_DLG005`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH014:p005:q01
+- `CH014_DLG006`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH014:p006:q01
+- `CH014_DLG007`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH014:p006:q02
+- `CH014_DLG008`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH014:p007:q01
+- `CH014_DLG009`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH014:p008:q01
+- `CH014_DLG010`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH014:p009:q01
+- `CH015_DLG001`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH015:p007:q01
+- `CH015_DLG002`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH015:p008:q01
+- `CH015_DLG003`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH015:p008:q02
+- `CH015_DLG004`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH015:p009:q01
+- `CH015_DLG005`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH015:p010:q01
+- `CH015_DLG006`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH015:p011:q01
+- `CH015_DLG007`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH015:p011:q02
+- `CH015_DLG008`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH015:p012:q01
+- `CH015_DLG009`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH015:p012:q02
+- `CH015_DLG010`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH015:p013:q01
+- `CH016_DLG001`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH016:p012:q01
+- `CH016_DLG002`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH016:p013:q01
+- `CH016_DLG003`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH016:p015:q01
+- `CH016_DLG004`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH016:p015:q02
+- `CH016_DLG005`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH016:p016:q01
+- `CH016_DLG006`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH016:p018:q01
+- `CH016_DLG007`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH016:p018:q02
+- `CH016_DLG008`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH016:p019:q01
+- `CH016_DLG009`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH016:p020:q01
+- `CH016_DLG010`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH016:p022:q01
+- `CH017_DLG001`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH017:p009:q01
+- `CH017_DLG002`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH017:p015:q01
+- `CH017_DLG003`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH017:p015:q02
+- `CH017_DLG004`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH017:p027:q01
+- `CH017_DLG005`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH017:p027:q02
+- `CH017_DLG006`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH017:p028:q01
+- `CH017_DLG007`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH017:p028:q02
+- `CH017_DLG008`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH017:p029:q01
+- `CH017_DLG009`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH017:p030:q01
+- `CH018_DLG001`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH018:p005:q01
+- `CH018_DLG002`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH018:p006:q01
+- `CH018_DLG003`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH018:p006:q02
+- `CH018_DLG004`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH018:p015:q01
+- `CH018_DLG005`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH018:p016:q01
+- `CH018_DLG006`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH018:p017:q01
+- `CH018_DLG007`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH018:p017:q02
+- `CH019_DLG001`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH019:p005:q01
+- `CH019_DLG002`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH019:p006:q01
+- `CH019_DLG003`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH019:p007:q01
+- `CH019_DLG004`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH019:p007:q02
+- `CH019_DLG005`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH019:p009:q01
+- `CH020_DLG001`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH020:p011:q01
+- `CH020_DLG002`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH020:p012:q01
+- `CH020_DLG003`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH020:p015:q01
+- `CH020_DLG004`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH020:p015:q02
+- `CH020_DLG005`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH020:p016:q01
+- `CH020_DLG006`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH020:p017:q01
+- `CH020_DLG007`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH020:p031:q01
+- `CH020_DLG008`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH020:p032:q01
+- `CH020_DLG009`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH020:p032:q02
+- `CH020_DLG010`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH020:p033:q01
+- `CH021_DLG001`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH021:p007:q01
+- `CH021_DLG002`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH021:p008:q01
+- `CH021_DLG003`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH021:p009:q01
+- `CH021_DLG004`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH021:p010:q01
+- `CH021_DLG005`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH021:p011:q01
+- `CH021_DLG006`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH021:p012:q01
+- `CH021_DLG007`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH021:p012:q02
+- `CH021_DLG008`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH021:p021:q01
+- `CH021_DLG009`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH021:p023:q01
+- `CH021_DLG010`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH021:p024:q01
+- `CH022_DLG001`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH022:p009:q01
+- `CH022_DLG002`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH022:p011:q01
+- `CH022_DLG003`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH022:p012:q01
+- `CH022_DLG004`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH022:p012:q02
+- `CH022_DLG005`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH022:p013:q01
+- `CH022_DLG006`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH022:p013:q02
+- `CH022_DLG007`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH022:p014:q01
+- `CH022_DLG008`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH022:p014:q02
+- `CH022_DLG009`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH022:p015:q01
+- `CH022_DLG010`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH022:p015:q02
+- `CH023_DLG001`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH023:p005:q01
+- `CH023_DLG002`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH023:p005:q02
+- `CH023_DLG003`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH023:p006:q01
+- `CH023_DLG004`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH023:p006:q02
+- `CH023_DLG005`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH023:p007:q01
+- `CH023_DLG006`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH023:p007:q02
+- `CH023_DLG007`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH023:p009:q01
+- `CH023_DLG008`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH023:p009:q02
+- `CH023_DLG009`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH023:p010:q01
+- `CH023_DLG010`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH023:p012:q01
+- `CH024_DLG001`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH024:p007:q01
+- `CH024_DLG002`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH024:p012:q01
+- `CH024_DLG003`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH024:p012:q02
+- `CH024_DLG004`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH024:p013:q01
+- `CH024_DLG005`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH024:p014:q01
+- `CH024_DLG006`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH024:p014:q02
+- `CH024_DLG007`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH024:p015:q01
+- `CH024_DLG008`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH024:p020:q01
+- `CH024_DLG009`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH024:p020:q02
+- `CH024_DLG010`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH024:p023:q01
+- `CH025_DLG001`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH025:p010:q01
+- `CH025_DLG002`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH025:p010:q02
+- `CH025_DLG003`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH025:p016:q01
+- `CH025_DLG004`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH025:p028:q01
+- `CH025_DLG005`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH025:p028:q02
+- `CH025_DLG006`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH025:p029:q01
+- `CH025_DLG007`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH025:p029:q02
+- `CH025_DLG008`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH025:p031:q01
+- `CH025_DLG009`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH025:p032:q01
+- `CH025_DLG010`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH025:p032:q02
+- `CH026_DLG002`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH026:p020:q02
+- `CH026_DLG003`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH026:p022:q01
+- `CH026_DLG004`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH026:p022:q02
+- `CH026_DLG005`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH026:p042:q01
+- `CH026_DLG006`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH026:p042:q02
+- `CH026_DLG007`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH026:p043:q01
+- `CH026_DLG008`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH026:p043:q02
+- `CH026_DLG009`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH026:p046:q01
+- `CH026_DLG010`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH026:p046:q02
+- `CH027_DLG001`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH027:p012:q01
+- `CH027_DLG002`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH027:p014:q01
+- `CH027_DLG003`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH027:p015:q01
+- `CH027_DLG004`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH027:p015:q02
+- `CH027_DLG005`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH027:p017:q01
+- `CH027_DLG006`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH027:p020:q01
+- `CH027_DLG007`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH027:p020:q02
+- `CH027_DLG008`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH027:p026:q01
+- `CH027_DLG009`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH027:p030:q01
+- `CH027_DLG010`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH027:p030:q02
+- `CH028_DLG001`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH028:p023:q01
+- `CH028_DLG002`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH028:p026:q01
+- `CH028_DLG003`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH028:p027:q01
+- `CH028_DLG004`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH028:p030:q01
+- `CH028_DLG005`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH028:p030:q02
+- `CH028_DLG006`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH028:p032:q01
+- `CH028_DLG007`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH028:p036:q01
+- `CH028_DLG008`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH028:p036:q02
+- `CH028_DLG009`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH028:p039:q01
+- `CH028_DLG010`
+  - Speaker unresolved from chapter source context.
+  - Source reference: CH028:p045:q01

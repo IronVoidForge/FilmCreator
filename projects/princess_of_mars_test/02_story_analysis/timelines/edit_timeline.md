@@ -1,0 +1,228 @@
+# Edit Timeline
+
+- project_slug: `princess_of_mars_test`
+- chapters: `28`
+
+## CH001
+
+- chapter_title: CHAPTER I
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH002
+
+- chapter_title: CHAPTER II
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH003
+
+- chapter_title: CHAPTER III
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH004
+
+- chapter_title: CHAPTER IV
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH005
+
+- chapter_title: CHAPTER V
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH006
+
+- chapter_title: CHAPTER VI
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH007
+
+- chapter_title: CHAPTER VII
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH008
+
+- chapter_title: CHAPTER VIII
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH009
+
+- chapter_title: CHAPTER IX
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH010
+
+- chapter_title: CHAPTER X
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH011
+
+- chapter_title: CHAPTER XI
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH012
+
+- chapter_title: CHAPTER XII
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH013
+
+- chapter_title: CHAPTER XIII
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH014
+
+- chapter_title: CHAPTER XIV
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH015
+
+- chapter_title: CHAPTER XV
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH016
+
+- chapter_title: CHAPTER XVI
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH017
+
+- chapter_title: CHAPTER XVII
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH018
+
+- chapter_title: CHAPTER XVIII
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH019
+
+- chapter_title: CHAPTER XIX
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH020
+
+- chapter_title: CHAPTER XX
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH021
+
+- chapter_title: CHAPTER XXI
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH022
+
+- chapter_title: CHAPTER XXII
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH023
+
+- chapter_title: CHAPTER XXIII
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH024
+
+- chapter_title: CHAPTER XXIV
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH025
+
+- chapter_title: CHAPTER XXV
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH026
+
+- chapter_title: CHAPTER XXVI
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH027
+
+- chapter_title: CHAPTER XXVII
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note: 
+
+## CH028
+
+- chapter_title: CHAPTER XXVIII
+- scene_count: `0`
+- dialogue_events: `0`
+- estimated_duration_seconds: `10`
+- transition_note:
