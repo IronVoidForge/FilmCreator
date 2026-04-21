@@ -321,6 +321,11 @@ def _character_descriptor(bible: dict[str, Any], descriptor: dict[str, Any] | No
             _record_descriptor_phrases(
                 descriptor,
                 [
+                    "identity_baseline",
+                    "age_presence",
+                    "physical_build",
+                    "origin_or_historical_context",
+                    "movement_language",
                     "sex",
                     "age_range",
                     "height",
@@ -341,6 +346,7 @@ def _character_descriptor(bible: dict[str, Any], descriptor: dict[str, Any] | No
                     "expression_tendency",
                     "physical_presence_notes",
                     "voice_or_presence_notes",
+                    "state_variants",
                 ],
                 strip_terms=[str(bible.get("display_name", "")), str(bible.get("character_id", "")), *[str(alias) for alias in bible.get("aliases", []) if isinstance(alias, str)]],
             )
@@ -362,6 +368,21 @@ def _character_descriptor(bible: dict[str, Any], descriptor: dict[str, Any] | No
             )
             if cleaned:
                 parts.extend(_descriptor_phrases(cleaned))
+    for value in [
+        bible.get("identity_baseline", ""),
+        bible.get("age_presence", ""),
+        bible.get("physical_build", ""),
+        bible.get("origin_or_historical_context", ""),
+        bible.get("movement_language", ""),
+    ]:
+        if isinstance(value, str) and value.strip():
+            cleaned = _strip_terms(
+                value.strip(),
+                [str(bible.get("display_name", "")), str(bible.get("character_id", "")), *[str(alias) for alias in bible.get("aliases", []) if isinstance(alias, str)]],
+            )
+            if cleaned:
+                parts.extend(_descriptor_phrases(cleaned))
+    parts.extend(_coerce_bullets(bible.get("state_variants", [])))
     deduped: list[str] = []
     seen: set[str] = set()
     for item in parts:

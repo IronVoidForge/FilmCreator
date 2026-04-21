@@ -43,9 +43,16 @@ class CharacterBible:
     last_seen_chapter: str | None = None
     chapter_mentions: list[str] = field(default_factory=list)
 
+    identity_baseline: str = ""
+    age_presence: str = ""
+    physical_build: str = ""
+    origin_or_historical_context: str = ""
+    movement_language: str = ""
     stable_visual_summary: str = ""
     physical_traits: list[str] = field(default_factory=list)
     costume_signature: str = ""
+    distinguishing_features: list[str] = field(default_factory=list)
+    state_variants: list[str] = field(default_factory=list)
 
     personality: str = ""
     role: str = ""
@@ -69,9 +76,16 @@ class CharacterBible:
             "first_seen_chapter": self.first_seen_chapter,
             "last_seen_chapter": self.last_seen_chapter,
             "chapter_mentions": self.chapter_mentions,
+            "identity_baseline": self.identity_baseline,
+            "age_presence": self.age_presence,
+            "physical_build": self.physical_build,
+            "origin_or_historical_context": self.origin_or_historical_context,
+            "movement_language": self.movement_language,
             "stable_visual_summary": self.stable_visual_summary,
             "physical_traits": self.physical_traits,
             "costume_signature": self.costume_signature,
+            "distinguishing_features": self.distinguishing_features,
+            "state_variants": self.state_variants,
             "personality": self.personality,
             "role": self.role,
             "voice_notes": self.voice_notes,

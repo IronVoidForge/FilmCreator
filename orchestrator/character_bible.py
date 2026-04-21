@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -19,6 +20,7 @@ from .character_bible_writer import (
     write_character_review_queue_markdown,
 )
 from .core.json_io import read_json, write_json
+from .core.paths import ROOT
 from .book_librarian import search_book_index, search_chapter_context
 from .lmstudio_client import LMStudioClient
 from .settings import load_runtime_settings
@@ -34,6 +36,81 @@ def _utc_now() -> str:
 def _fingerprint(data: Any) -> str:
     raw = json.dumps(data, sort_keys=True, ensure_ascii=False)
     return hashlib.sha1(raw.encode("utf-8")).hexdigest()
+
+
+def _extract_labelled_block(text: str, label: str) -> str:
+    pattern = re.compile(rf"^\*\*{re.escape(label)}:\*\*\s*(.*)$", re.IGNORECASE)
+    lines = text.splitlines()
+    for index, raw_line in enumerate(lines):
+        match = pattern.match(raw_line.strip())
+        if not match:
+            continue
+        inline = match.group(1).strip()
+        if inline:
+            return inline
+        block: list[str] = []
+        for follow in lines[index + 1 :]:
+            stripped = follow.strip()
+            if not stripped:
+                if block:
+                    break
+                continue
+            if stripped.startswith("#") or stripped.startswith("**"):
+                break
+            block.append(stripped)
+        if block:
+            return " ".join(block)
+    return ""
+
+
+def _collect_character_breakdown_snippets(entry: dict[str, Any]) -> list[tuple[str, dict[str, Any]]]:
+    snippets: list[tuple[str, dict[str, Any]]] = []
+    seen_paths: set[str] = set()
+    source_paths: list[str] = []
+    for source in entry.get("sources", []) or []:
+        if isinstance(source, str) and source.strip():
+            source_paths.append(source.strip())
+    for source_history in entry.get("source_history", []) or []:
+        if isinstance(source_history, dict):
+            source_path = str(source_history.get("source_path", "")).strip()
+            if source_path:
+                source_paths.append(source_path)
+
+    for source_path in source_paths:
+        if source_path in seen_paths:
+            continue
+        seen_paths.add(source_path)
+        path = Path(source_path)
+        if not path.is_absolute():
+            path = ROOT / path
+        if not path.exists() or path.suffix.lower() != ".md":
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except Exception:
+            continue
+        for label in [
+            "Physical Description",
+            "Costume/Silhouette",
+            "Prompt Phrases",
+            "Manual Description Input Required",
+            "Manual Description Reason",
+        ]:
+            snippet = _extract_labelled_block(text, label)
+            if snippet:
+                snippets.append(
+                    (
+                        f"[source:{path.as_posix()}] {label}: {_compact_snippet(snippet, limit=220)}",
+                        {
+                            "source": "chapter_breakdown",
+                            "chapter_id": entry.get("first_seen_chapter") or (entry.get("chapter_mentions") or [None])[0],
+                            "source_path": path.as_posix(),
+                        },
+                    )
+                )
+        if len(snippets) >= 8:
+            break
+    return snippets[:8]
 
 
 def _collect_evidence(project_slug: str, entry: dict) -> tuple[list[str], list[dict[str, Any]]]:
@@ -68,6 +145,9 @@ def _collect_evidence(project_slug: str, entry: dict) -> tuple[list[str], list[d
                 add_line(summary, {"source": "registry_initial_extracted", "chapter_id": item.get("chapter_id"), "source_path": item.get("source_path")})
         elif isinstance(item, str):
             add_line(item, {"source": "registry_initial_extracted", "chapter_id": None, "source_path": None})
+
+    for snippet, ref in _collect_character_breakdown_snippets(entry):
+        add_line(snippet, ref)
 
     chapter_mentions = [str(chapter_id) for chapter_id in entry.get("chapter_mentions", []) if isinstance(chapter_id, str)]
     query_terms = _evidence_query_terms(entry)
@@ -122,9 +202,16 @@ def _deterministic_synthesis(entry: dict, evidence_summary: list[str]) -> dict[s
     unresolved = list(entry.get("open_questions", []))
     return {
         "display_name": entry.get("display_name") or entry.get("canonical_id"),
+        "identity_baseline": _first_nonempty(visual_lines[0] if visual_lines else None, fallback="unknown"),
+        "age_presence": "unknown",
+        "physical_build": "unknown",
+        "origin_or_historical_context": "unknown",
+        "movement_language": "unknown",
         "stable_visual_summary": " ".join(visual_lines) if visual_lines else "",
         "physical_traits": [],
         "costume_signature": "",
+        "distinguishing_features": [],
+        "state_variants": [],
         "personality": "",
         "role": entry.get("entity_kind", "character"),
         "voice_notes": "",
@@ -153,6 +240,20 @@ PRIORITIES:
 2. grounded, non-hallucinated summary
 3. concise film-usable language
 4. preserve unresolved ambiguity when evidence is weak
+
+BUCKET RULES:
+- identity_baseline: who the character is in visually stable terms, not a biography dump
+- age_presence: broad visual age read or stage of life
+- physical_build: body type, frame, mass, and proportions
+- origin_or_historical_context: any setting or era cues that affect appearance
+- movement_language: how the character carries themselves or moves when visible on screen
+- costume_signature: the compact clothing or armor phrase that should stay stable
+- distinguishing_features: scars, marks, unusual anatomy, or repeatable identifiers
+- state_variants: distinct visual states worth preserving, such as clothed, armed, wounded, naked, ceremonial, or battle-ready
+- stable_visual_summary: one grounded paragraph that fuses the buckets above into a film-usable read
+- physical_traits: short supporting visual traits that do not fit the other buckets
+- use unknown only when the book and evidence truly do not support a stable choice
+- if a detail is inferable but not explicitly stated, place it in a generated or inferred bucket rather than leaving the whole field empty
 
 ENTRY:
 {json.dumps(entry, indent=2, ensure_ascii=False)}
@@ -183,11 +284,22 @@ chapter_mentions:
 [[/SECTION]]
 
 [[SECTION visual_markdown]]
+identity_baseline: <short stable identity read or unknown>
+age_presence: <broad visual age read or unknown>
+physical_build: <body type/frame read or unknown>
+origin_or_historical_context: <setting or era cue or unknown>
+movement_language: <movement or posture read or unknown>
+costume_signature: <short costume note or unknown>
+distinguishing_features:
+- feature 1
+- feature 2
+state_variants:
+- variant 1
+- variant 2
 stable_visual_summary: <one grounded paragraph>
 physical_traits:
 - trait 1
 - trait 2
-costume_signature: <short costume note or unknown>
 [[/SECTION]]
 
 [[SECTION behavioral_markdown]]
@@ -249,7 +361,14 @@ def _parse_character_bible_packet(text: str, entry: dict[str, Any]) -> dict[str,
 
     aliases = _coerce_string_list(identity_lists.get("aliases"), identity_scalars.get("aliases"))
     chapter_mentions = _coerce_string_list(identity_lists.get("chapter_mentions"), identity_scalars.get("chapter_mentions"))
+    identity_baseline = _first_nonempty(visual_scalars.get("identity_baseline"), fallback="unknown")
+    age_presence = _first_nonempty(visual_scalars.get("age_presence"), fallback="unknown")
+    physical_build = _first_nonempty(visual_scalars.get("physical_build"), fallback="unknown")
+    origin_or_historical_context = _first_nonempty(visual_scalars.get("origin_or_historical_context"), fallback="unknown")
+    movement_language = _first_nonempty(visual_scalars.get("movement_language"), fallback="unknown")
     physical_traits = _coerce_string_list(visual_lists.get("physical_traits"), visual_scalars.get("physical_traits"))
+    distinguishing_features = _coerce_string_list(visual_lists.get("distinguishing_features"), visual_scalars.get("distinguishing_features"))
+    state_variants = _coerce_string_list(visual_lists.get("state_variants"), visual_scalars.get("state_variants"))
     relationship_notes = _coerce_string_list(behavioral_lists.get("relationship_notes"), behavioral_scalars.get("relationship_notes"))
     continuity_constraints = _coerce_string_list(continuity_lists.get("continuity_constraints"), continuity_scalars.get("continuity_constraints"))
     unresolved_ambiguities = _coerce_string_list(continuity_lists.get("unresolved_ambiguities"), continuity_scalars.get("unresolved_ambiguities"))
@@ -273,9 +392,16 @@ def _parse_character_bible_packet(text: str, entry: dict[str, Any]) -> dict[str,
 
     return {
         "display_name": display_name,
+        "identity_baseline": identity_baseline,
+        "age_presence": age_presence,
+        "physical_build": physical_build,
+        "origin_or_historical_context": origin_or_historical_context,
+        "movement_language": movement_language,
         "stable_visual_summary": stable_visual_summary,
         "physical_traits": physical_traits,
         "costume_signature": costume_signature,
+        "distinguishing_features": distinguishing_features,
+        "state_variants": state_variants,
         "personality": personality,
         "role": role,
         "voice_notes": voice_notes,
@@ -479,9 +605,16 @@ def run_character_bible_synthesis(
                     first_seen_chapter=existing.get("first_seen_chapter"),
                     last_seen_chapter=existing.get("last_seen_chapter"),
                     chapter_mentions=existing.get("chapter_mentions", []),
+                    identity_baseline=existing.get("identity_baseline", ""),
+                    age_presence=existing.get("age_presence", ""),
+                    physical_build=existing.get("physical_build", ""),
+                    origin_or_historical_context=existing.get("origin_or_historical_context", ""),
+                    movement_language=existing.get("movement_language", ""),
                     stable_visual_summary=existing.get("stable_visual_summary", ""),
                     physical_traits=existing.get("physical_traits", []),
                     costume_signature=existing.get("costume_signature", ""),
+                    distinguishing_features=existing.get("distinguishing_features", []),
+                    state_variants=existing.get("state_variants", []),
                     personality=existing.get("personality", ""),
                     role=existing.get("role", ""),
                     voice_notes=existing.get("voice_notes", ""),
@@ -541,9 +674,16 @@ def run_character_bible_synthesis(
             first_seen_chapter=entry.get("first_seen_chapter"),
             last_seen_chapter=entry.get("last_seen_chapter"),
             chapter_mentions=entry.get("chapter_mentions", []),
+            identity_baseline=merged.get("identity_baseline", ""),
+            age_presence=merged.get("age_presence", ""),
+            physical_build=merged.get("physical_build", ""),
+            origin_or_historical_context=merged.get("origin_or_historical_context", ""),
+            movement_language=merged.get("movement_language", ""),
             stable_visual_summary=merged.get("stable_visual_summary", ""),
             physical_traits=merged.get("physical_traits", []),
             costume_signature=merged.get("costume_signature", ""),
+            distinguishing_features=merged.get("distinguishing_features", []),
+            state_variants=merged.get("state_variants", []),
             personality=merged.get("personality", ""),
             role=merged.get("role", ""),
             voice_notes=merged.get("voice_notes", ""),

@@ -151,6 +151,8 @@ This phase should ask for or infer:
 - item construction and visual identity
 - scene-level action and camera intent
 
+Unsupported but canon-compatible character detail should be tagged as `generated` rather than mixed into the supported bucket.
+
 This phase should not re-ask:
 
 - whether the thing exists
@@ -236,6 +238,29 @@ The character layer should be structured enough that later prompt generation can
 - face_shape
 - facial_hair
 - distinctive_features
+
+### Character Bucket Template
+
+Use these broader buckets when the detail does not fit neatly into hair, eye, or face fields:
+
+- `identity_baseline`: the stable visual identity in one short phrase
+- `age_presence`: the broad age read or life-stage read
+- `physical_build`: body type, frame, and mass distribution
+- `origin_or_historical_context`: era, culture, or setting cues that affect appearance
+- `movement_language`: how the character moves, carries weight, or reads in motion
+- `costume_signature`: the compact stable costume phrase that should survive across prompts
+- `distinguishing_features`: scars, marks, odd anatomy, or repeatable identifiers
+- `state_variants`: distinct visual states worth keeping separate, such as clothed, armed, wounded, ceremonial, or battle-ready
+- `stable_visual_summary`: one grounded paragraph that fuses the buckets above into a film-usable read
+- `physical_traits`: supporting visual traits that do not fit the broader buckets
+
+Recommended writing pattern:
+
+- fill the broad buckets first
+- put exact facial / surface details into the narrower fields when they are actually supported
+- put repeated appearance changes into `state_variants`
+- avoid leaving broad buckets blank if the source supports a reasonable best-effort canon choice
+- keep the prompt one structured pass rather than splitting each bucket into separate model calls
 
 ### Character Field Contract
 

@@ -42,6 +42,12 @@ CHARACTER_FIELD_ORDER = [
     "face_shape",
     "facial_hair",
     "distinctive_features",
+    "identity_baseline",
+    "age_presence",
+    "physical_build",
+    "origin_or_historical_context",
+    "movement_language",
+    "state_variants",
     "costume_layers",
     "costume_materials",
     "costume_signature",
@@ -1506,15 +1512,36 @@ def _base_character_descriptor(
     set_field("eye_color", "unknown", origin="fallback")
     set_field("face_shape", "unknown", origin="fallback")
     set_field("facial_hair", "unknown", origin="fallback")
-    set_field("distinctive_features", _coerce_string_list(bible.get("physical_traits", [])), origin="bible")
+    set_field("distinctive_features", _coerce_string_list(bible.get("distinguishing_features", []), bible.get("physical_traits", [])), origin="bible")
+    set_field("identity_baseline", _clean_visual_summary(bible.get("identity_baseline"), fallback="unknown"), origin="bible")
+    set_field("age_presence", _clean_visual_summary(bible.get("age_presence"), fallback="unknown"), origin="bible")
+    set_field("physical_build", _clean_visual_summary(bible.get("physical_build"), fallback="unknown"), origin="bible")
+    set_field("origin_or_historical_context", _clean_visual_summary(bible.get("origin_or_historical_context"), fallback="unknown"), origin="bible")
+    set_field("movement_language", _clean_visual_summary(bible.get("movement_language"), fallback="unknown"), origin="bible")
+    set_field("state_variants", _coerce_string_list(bible.get("state_variants", [])), origin="bible")
     set_field("costume_layers", _coerce_string_list(bible.get("costume_signature", "")), origin="bible")
     set_field("costume_materials", "unknown", origin="fallback")
     set_field("costume_signature", bible.get("costume_signature") or "unknown", origin="bible")
-    set_field("silhouette_notes", _clean_visual_summary(bible.get("stable_visual_summary"), fallback="unknown"), origin="bible")
+    set_field("silhouette_notes", _clean_visual_summary(" ".join(_coerce_string_list(bible.get("costume_signature", ""), bible.get("physical_build", ""), bible.get("identity_baseline", ""))), fallback="unknown"), origin="bible")
     set_field("recurring_accessories", _coerce_string_list(bible.get("relationship_notes", [])), origin="bible")
     set_field("posture", "unknown", origin="fallback")
     set_field("expression_tendency", "unknown", origin="fallback")
-    set_field("physical_presence_notes", _clean_visual_summary(bible.get("stable_visual_summary"), fallback="unknown"), origin="bible")
+    set_field(
+        "physical_presence_notes",
+        _clean_visual_summary(
+            " ".join(
+                [
+                    str(bible.get("identity_baseline", "")),
+                    str(bible.get("age_presence", "")),
+                    str(bible.get("physical_build", "")),
+                    str(bible.get("movement_language", "")),
+                    str(bible.get("stable_visual_summary", "")),
+                ]
+            ),
+            fallback="unknown",
+        ),
+        origin="bible",
+    )
     set_field("voice_or_presence_notes", _clean_visual_summary(bible.get("voice_notes"), fallback="unknown"), origin="bible")
     set_field("chapter_mentions", _coerce_string_list(entry.get("chapter_mentions", [])), origin="registry_entry")
 
