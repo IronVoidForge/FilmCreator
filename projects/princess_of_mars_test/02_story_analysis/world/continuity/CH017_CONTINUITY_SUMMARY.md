@@ -96,6 +96,7 @@
 - mossy_waste_expanse
 - remote_incubator_complex
 - rocky_gorge_canyon
+- rugged_low_mountains
 - thark_audience_chamber
 - thark_city_plaza
 - thark_city_quarters

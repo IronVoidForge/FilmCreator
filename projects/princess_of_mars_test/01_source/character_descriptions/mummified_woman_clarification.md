@@ -4,10 +4,18 @@
 mummified_woman
 
 # Why This Needs Clarification
-The extracted character id appears generic or role-based rather than clearly canonical.
+Potential existing identity matches detected:
+- apache_warriors (score 10; chapters: CH002, CH001; aliases: -)
+- ape_man_1 (score 10; chapters: CH006; aliases: -)
+- ape_man_2 (score 10; chapters: CH006; aliases: -)
 
 # Question
-This character is named or role-labeled but not fully identified. Can you find a stronger canonical identity from another chapter, or should FilmCreator keep this as a scene-local provisional character?
+This character may match one of the existing canonical identities above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical character?
+
+# Candidate Matches
+- apache_warriors (score 10; chapters: CH002, CH001; aliases: -)
+- ape_man_1 (score 10; chapters: CH006; aliases: -)
+- ape_man_2 (score 10; chapters: CH006; aliases: -)
 
 # Guidance
 - answer briefly and concretely

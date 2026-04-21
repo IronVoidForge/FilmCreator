@@ -5,6 +5,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+import time
 
 from .character_bible_models import (
     CharacterBible,
@@ -454,7 +455,12 @@ def run_character_bible_synthesis(
     bible_records: list[CharacterBible] = []
     review_records: list[CharacterBible] = []
 
-    for char_id, entry in registry.items():
+    registry_items = list(registry.items())
+    total_entries = len(registry_items)
+
+    for index, (char_id, entry) in enumerate(registry_items, start=1):
+        started_at = time.perf_counter()
+        print(f"[character-bible] {index}/{total_entries} starting {char_id}...")
         fp = _fingerprint(entry)
         base_path = output_dir / f"CHAR_{char_id}"
         existing = read_json(base_path.with_suffix(".json")) if base_path.with_suffix(".json").exists() else None
@@ -489,6 +495,8 @@ def run_character_bible_synthesis(
                 bible_records.append(bible)
                 if not _is_film_facing_character(entry, bible) or bible.unresolved_ambiguities:
                     review_records.append(bible)
+                elapsed = round(time.perf_counter() - started_at, 1)
+                print(f"[character-bible] {index}/{total_entries} finished {char_id} (reused) in {elapsed}s")
                 continue
 
             if old_meta.get("status") == "locked":
@@ -496,6 +504,8 @@ def run_character_bible_synthesis(
                 existing["metadata"]["status"] = "stale"
                 write_json(base_path.with_suffix(".json"), existing)
                 warnings.append(f"Locked character bible became stale and was not regenerated: {char_id}")
+                elapsed = round(time.perf_counter() - started_at, 1)
+                print(f"[character-bible] {index}/{total_entries} finished {char_id} (stale locked) in {elapsed}s")
                 continue
 
         evidence_summary, evidence_refs = _collect_evidence(project_slug, entry)
@@ -560,6 +570,10 @@ def run_character_bible_synthesis(
                     "issues": bible.unresolved_ambiguities,
                 }
             )
+
+        elapsed = round(time.perf_counter() - started_at, 1)
+        mode = "synthesized" if synthesized_payload else "generated"
+        print(f"[character-bible] {index}/{total_entries} finished {char_id} ({mode}) in {elapsed}s")
 
     write_json(review_dir / "CHARACTER_BIBLE_REVIEW_QUEUE.json", review_queue)
     write_character_review_queue_markdown(review_dir / "CHARACTER_BIBLE_REVIEW_QUEUE.md", review_queue)

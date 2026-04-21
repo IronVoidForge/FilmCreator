@@ -1,11 +1,11 @@
 # Mossy Waste Expanse
 
-**Role:** Secondary (Transit/Peril Setting)
+**Role:** Secondary (Transit/Survival)
 
-**Architecture & Geography:** A vast, trackless expanse of terrain located between Thark and Helium. The landscape is characterized by low mountains and a lack of visible waterways, making it a desolate trek.
+**Architecture & Geography:** A vast, trackless, and desolate expanse. The terrain is characterized by a lack of waterways and a pervasive covering of moss-like vegetation.
 
-**Lighting & Atmosphere:** Desolate, exposed, and punishing. The environment feels endless and provides little cover, contributing to the sense of being lost and vulnerable.
+**Lighting & Atmosphere:** Desolate, grueling, and exposed; an environment of extreme hardship with no natural shelter or shade.
 
-**Scale & Anchors:** Vast horizons; rolling low mountains; sparse vegetation; trackless terrain.
+**Scale & Anchors:** Infinite horizon; a two-hundred-mile stretch of featureless, mossy terrain that offers no landmarks for navigation.
 
-**Prompt Phrases:** Trackless mossy waste, desolate Martian landscape, low mountain silhouettes, arid expanse, vast barren plains.
+**Prompt Phrases:** vast trackless waste, endless mossy plains, desolate Martian landscape, arid mossy expanse, barren wasteland.

@@ -1,15 +1,15 @@
 # Woola
 **Role:** Companion / Animal
 
-**Status:** Physically Present
+**Status:** Physically Present (referenced/tracking)
 
-**Description:** John Carter's faithful Martian hound. He tracks the party through the mossy waste.
+**Description:** A faithful Martian hound that tracks the party through the mossy waste.
 
-**Prompt Phrases:** Martian hound, loyal animal, tracking through wasteland.
+**Prompt Phrases:** Large Martian hound, loyal beast, tracking animal.
 
 # Aliases
 
-Martian Hound
+Martian hound
 
 
 

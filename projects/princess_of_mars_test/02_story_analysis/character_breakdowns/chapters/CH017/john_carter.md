@@ -1,15 +1,15 @@
 # John Carter
-**Role:** Protagonist / Hero
+**Role:** Protagonist / Heroic Warrior
 
 **Status:** Physically Present
 
-**Description:** A human capable of superhuman leaps. Uses a Martian rifle for combat. Acts as the primary protector of Dejah Thoris and Sola.
+**Description:** A heroic and selfless warrior capable of extreme physical feats, including acrobatic maneuvers to evade large groups. He utilizes a Martian rifle and swords for combat.
 
-**Prompt Phrases:** Human male, heroic stance, wielding Martian rifle, performing superhuman leaps.
+**Prompt Phrases:** Heroic human warrior, tactical fighter, agile acrobat, wielding Martian rifle.
 
 # Aliases
 
-Protagonist, Hero
+Carter
 
 
 

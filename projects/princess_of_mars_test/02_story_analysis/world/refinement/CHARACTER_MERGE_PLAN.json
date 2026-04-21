@@ -39,7 +39,7 @@
       "target_id": "lorquas_ptomel",
       "new_canonical_id": null,
       "new_entity_kind": null,
-      "reason": "detected chapter suffix variant; merging secondary ID into higher ranked canonical entity",
+      "reason": "detected chapter suffix variant; merging secondary ID into primary canonical entity",
       "confidence": "high"
     },
     {
@@ -73,20 +73,6 @@
     {
       "entity_type": "environment",
       "action": "merge_into_existing",
-      "canonical_id": "dead_sea_bottom",
-      "subject_ids": [
-        "dead_sea_bottom",
-        "dead_sea_bottom_incubator"
-      ],
-      "target_id": "dead_sea_bottom",
-      "new_canonical_id": null,
-      "new_entity_kind": null,
-      "reason": "dead_sea_bottom_incubator is identified as a chapter suffix/variant of dead_sea_bottom",
-      "confidence": "high"
-    },
-    {
-      "entity_type": "environment",
-      "action": "merge_into_existing",
       "canonical_id": "martian_plaza",
       "subject_ids": [
         "martian_plaza",
@@ -113,5 +99,16 @@
       "confidence": "high"
     }
   ],
-  "review": []
+  "review": [
+    {
+      "entity_type": "environment",
+      "subject_ids": [
+        "dead_sea_bottom",
+        "dead_sea_bottom_expanse",
+        "dead_sea_bottom_incubator"
+      ],
+      "reason": "Decision subject ids did not match candidate ids.",
+      "confidence": "low"
+    }
+  ]
 }

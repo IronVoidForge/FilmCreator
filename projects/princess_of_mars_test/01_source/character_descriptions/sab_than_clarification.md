@@ -4,10 +4,10 @@
 sab_than
 
 # Why This Needs Clarification
-Character is only referenced in dialogue and plot context.
+Needs visual identification for character design.
 
 # Question
-What is the physical appearance and regalia of Sab Than?
+What is Sab Than's physical appearance and attire?
 
 # Guidance
 - answer briefly and concretely

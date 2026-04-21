@@ -1,16 +1,17 @@
 **Events:**
-John Carter infiltrates the city of Thark to rescue Dejah Thoris from the clutches of the Thark Jeddak, Tal Hajus. After witnessing Tal Hajus's cruel intentions and his plan to torture the Princess, Carter intervenes, knocking the Jeddak unconscious with a single blow. Carter, Dejah Thoris, and Sola escape the city on thoats, heading northeast across a mossy waste toward Helium. 
+John Carter infiltrates the city of Thark to rescue Dejah Thoris from the clutches of the beastly Jeddak, Tal Hajus. After witnessing Tal Hajus threaten Dejah with prolonged torture and sexual violation, Carter intervenes. Instead of using his sword, he knocks the Jeddak unconscious with a single blow, allowing him to spirit Dejah Thoris and her companion Sola away from the city.
 
-The journey becomes perilous as the party runs out of food and water, eventually becoming lost. During their trek, they are joined by John Carter's faithful hound, Woola. After one of their thoats collapses from exhaustion, the group is spotted by a Thark scouting party. A chieftain discovers them with a fieldglass and charges toward them. To ensure the escape of Dejah Thoris and Sola, Carter uses his Martian rifle to kill the charging chieftain and then stays behind to provide cover fire against a massive force of Thark warriors. After exhausting his ammunition, Carter attempts to flee using superhuman leaps but is eventually overtaken and beaten into unconsciousness by the pursuing warriors.
+The escape turns into a grueling trek across a two-hundred-mile mossy waste toward Helium. The party suffers from extreme exhaustion, hunger, and thirst; one of their thoats collapses from fatigue, forcing Carter, Sola, and Dejah to continue on foot or with a single animal. During their journey, they are spotted by a Thark chieftain scanning the area with a fieldglass. To ensure the women's escape, Carter uses his Martian rifle to kill the charging chieftain and then stays behind to provide cover fire against a massive force of nearly a thousand warriors. After exhausting his ammunition, Carter attempts to lead the warriors away through acrobatic maneuvers but is eventually overtaken and beaten into unconsciousness.
 
 **Characters:**
-* **John Carter:** The protagonist; heroically rescues Dejah Thoris and sacrifices his safety to ensure her escape.
-* **Dejah Thoris:** Princess of Helium; maintains her dignity even in captivity and expresses profound love for Carter during their escape.
-* **Sola:** Dejah Thoris's companion; assists in the escape and helps manage the thoat.
-* **Tal Hajus:** The cruel and bestial Jeddak of the Tharks; defeated by Carter.
-* **Tars Tarkas:** A Thark chieftain who watches the scene with silent loathing for Tal Hajus.
-* **Woola:** John Carter's loyal Martian hound who tracks the party through the waste.
+* **John Carter:** The protagonist; heroic and selfless; uses tactical thinking and superior weaponry to protect Dejah Thoris.
+* **Dejah Thoris:** Princess of Helium; maintains her royal dignity even in the face of terror; expresses profound love for Carter during the escape.
+* **Sola:** Dejah Thoris's companion; assists in the escape and helps manage the fleeing thoat.
+* **Tal Hajus:** The villainous, bestial Jeddak of the Tharks; characterized by cruelty and animalistic passions.
+* **Tars Tarkas:** A Thark warrior who watches the scene with silent loathing for Tal Hajus, though he does not intervene.
+* **Woola:** Carter's faithful Martian hound, who tracks the party through the waste.
 
 **Settings:**
-* **The City of Thark:** A fortified settlement inhabited by the green-skinned Tharks, featuring large circular halls and high platforms.
-* **The Mossy Waste:** A vast, trackless, and dangerous expanse between Thark and Helium, characterized by a lack of waterways and low mountains.
+* **The City of Thark:** A fortified settlement featuring large circular halls, raised platforms, and multi-story buildings.
+* **The Mossy Waste:** A vast, trackless, and desolate expanse between Thark and Helium, characterized by a lack of waterways and extreme environmental hardship.
+* **The Low Mountains/Hills:** A rugged terrain toward the end of the chapter that provides both potential landmarks and dangerous ravines for pursuit.

@@ -1,5 +1,20 @@
 [
   {
+    "entity_type": "environment",
+    "subject_ids": [
+      "dead_sea_bottom",
+      "dead_sea_bottom_expanse",
+      "dead_sea_bottom_incubator"
+    ],
+    "action": "flag_for_human_review",
+    "target_id": null,
+    "new_canonical_id": null,
+    "new_entity_kind": null,
+    "reason": "Decision subject ids did not match candidate ids.",
+    "confidence": "low",
+    "requires_human_review": true
+  },
+  {
     "entity_type": "character",
     "subject_ids": [
       "chieftain",
@@ -37,7 +52,7 @@
     "target_id": "lorquas_ptomel",
     "new_canonical_id": null,
     "new_entity_kind": null,
-    "reason": "detected chapter suffix variant; merging secondary ID into higher ranked canonical entity",
+    "reason": "detected chapter suffix variant; merging secondary ID into primary canonical entity",
     "confidence": "high",
     "requires_human_review": false
   },
@@ -66,20 +81,6 @@
     "new_canonical_id": null,
     "new_entity_kind": null,
     "reason": "arizona_mountain_cave_ledge is identified as a chapter suffix/variant of the parent environment",
-    "confidence": "high",
-    "requires_human_review": false
-  },
-  {
-    "entity_type": "environment",
-    "subject_ids": [
-      "dead_sea_bottom",
-      "dead_sea_bottom_incubator"
-    ],
-    "action": "merge_into_existing",
-    "target_id": "dead_sea_bottom",
-    "new_canonical_id": null,
-    "new_entity_kind": null,
-    "reason": "dead_sea_bottom_incubator is identified as a chapter suffix/variant of dead_sea_bottom",
     "confidence": "high",
     "requires_human_review": false
   },

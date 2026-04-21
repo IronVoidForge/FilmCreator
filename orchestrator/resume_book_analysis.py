@@ -10,7 +10,6 @@ from .book_authoring import (
     _chapter_id_from_path,
     _read_manifest_chapter_paths,
     analyze_book,
-    retry_failed_chapters,
 )
 
 
@@ -25,6 +24,7 @@ def build_resume_plan(project_slug: str) -> dict[str, Any]:
     failed_path = project_dir / "02_story_analysis" / "runs" / "failed_chapters.json"
 
     manifest_chapter_ids: list[str] = []
+    manifest_chapter_paths: list[Path] = []
     if manifest_path.exists():
         manifest_chapter_paths = _read_manifest_chapter_paths(project_dir=project_dir, manifest_path=manifest_path)
         manifest_chapter_ids = [_chapter_id_from_path(path) for path in manifest_chapter_paths]
@@ -38,10 +38,19 @@ def build_resume_plan(project_slug: str) -> dict[str, Any]:
         }
     )
     failed_chapter_ids = _load_failed_chapter_ids(failed_path)
+    retry_failed_chapter_ids = [chapter_id for chapter_id in failed_chapter_ids if chapter_id not in completed_chapter_ids]
     resume_chapter_ids = _build_resume_chapter_ids(
         manifest_chapter_ids=manifest_chapter_ids,
         completed_chapter_ids=completed_chapter_ids,
         current_chapter_id=current_chapter_id,
+    )
+    retry_failed_chapter_paths = _select_manifest_chapter_paths(
+        manifest_chapter_paths=manifest_chapter_paths,
+        resume_chapter_ids=retry_failed_chapter_ids,
+    )
+    resume_chapter_paths = _select_manifest_chapter_paths(
+        manifest_chapter_paths=manifest_chapter_paths,
+        resume_chapter_ids=resume_chapter_ids,
     )
 
     return {
@@ -55,31 +64,36 @@ def build_resume_plan(project_slug: str) -> dict[str, Any]:
         "manifest_chapter_ids": manifest_chapter_ids,
         "completed_chapter_ids": completed_chapter_ids,
         "failed_chapter_ids": failed_chapter_ids,
+        "retry_failed_chapter_ids": retry_failed_chapter_ids,
+        "retry_failed_chapter_paths": [str(path) for path in retry_failed_chapter_paths],
         "resume_chapter_ids": resume_chapter_ids,
+        "resume_chapter_paths": [str(path) for path in resume_chapter_paths],
     }
 
 
 def run_resume_book_analysis(*, project_slug: str, fail_fast: bool = False) -> dict[str, Any]:
     initial_plan = build_resume_plan(project_slug)
-    retry_summary = None
     resumed_summary = None
 
-    failed_path = Path(initial_plan["failed_path"])
-    if failed_path.exists():
-        retry_summary = retry_failed_chapters(project_slug=project_slug, fail_fast=fail_fast)
+    retry_failed_chapter_paths = [str(path) for path in _plan_retry_paths(initial_plan)]
+    if retry_failed_chapter_paths:
+        analyze_book(
+            project_slug=project_slug,
+            chapters=retry_failed_chapter_paths,
+            fail_fast=fail_fast,
+        )
 
     refreshed_plan = build_resume_plan(project_slug)
-    resume_chapter_ids = list(refreshed_plan["resume_chapter_ids"])
-    if resume_chapter_ids:
+    resume_chapter_paths = [str(path) for path in _plan_resume_paths(refreshed_plan)]
+    if resume_chapter_paths:
         resumed_summary = analyze_book(
             project_slug=project_slug,
-            chapters=resume_chapter_ids,
+            chapters=resume_chapter_paths,
             fail_fast=fail_fast,
         )
 
     return {
         "project_slug": project_slug,
-        "retry_failed_chapters": retry_summary.to_dict() if retry_summary is not None else None,
         "resume_plan": refreshed_plan,
         "resumed_book_analysis": resumed_summary.to_dict() if resumed_summary is not None else None,
     }
@@ -100,14 +114,36 @@ def _build_resume_chapter_ids(
             start_index = manifest.index(current_chapter_id)
             resumed: list[str] = []
             for chapter_id in manifest[start_index:]:
-                if chapter_id == current_chapter_id:
-                    resumed.append(chapter_id)
-                    continue
                 if chapter_id not in completed:
                     resumed.append(chapter_id)
             return resumed
 
     return [chapter_id for chapter_id in manifest if chapter_id not in completed]
+
+
+def _select_manifest_chapter_paths(*, manifest_chapter_paths: list[Path], resume_chapter_ids: list[str]) -> list[Path]:
+    wanted = {chapter_id.upper() for chapter_id in resume_chapter_ids}
+    result: list[Path] = []
+    for path in manifest_chapter_paths:
+        if _chapter_id_from_path(path) in wanted:
+            result.append(path)
+    return result
+
+
+def _plan_resume_paths(plan: dict[str, Any]) -> list[Path]:
+    raw_paths = plan.get("resume_chapter_paths", [])
+    result: list[Path] = []
+    for raw_path in raw_paths if isinstance(raw_paths, list) else []:
+        result.append(Path(str(raw_path)))
+    return result
+
+
+def _plan_retry_paths(plan: dict[str, Any]) -> list[Path]:
+    raw_paths = plan.get("retry_failed_chapter_paths", [])
+    result: list[Path] = []
+    for raw_path in raw_paths if isinstance(raw_paths, list) else []:
+        result.append(Path(str(raw_path)))
+    return result
 
 
 def _load_failed_chapter_ids(path: Path) -> list[str]:

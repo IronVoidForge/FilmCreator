@@ -4,10 +4,10 @@
 dejah_thoris
 
 # Why This Needs Clarification
-Visual appearance and specific attire unknown.
+Physical appearance is not detailed in the text.
 
 # Question
-What is the physical appearance of Dejah Thoris?
+What are the canonical physical characteristics of Dejah Thoris (hair color, eye color, build)?
 
 # Guidance
 - answer briefly and concretely

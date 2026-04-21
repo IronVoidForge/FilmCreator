@@ -4,15 +4,18 @@
 tardos_mors
 
 # Why This Needs Clarification
-Needs visual details for character model.
+Potential existing identity matches detected:
+- apache_warriors (score 10; chapters: CH002, CH001; aliases: -)
+- ape_man_1 (score 10; chapters: CH006; aliases: -)
+- ape_man_2 (score 10; chapters: CH006; aliases: -)
 
 # Question
-What is the physical appearance and age of Tardos Mors?
+This character may match one of the existing canonical identities above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical character?
 
 # Candidate Matches
-- apache_warriors (score 10; chapters: CH002; aliases: -)
-- ape_creature_1 (score 10; chapters: CH006; aliases: -)
-- ape_creature_2 (score 10; chapters: CH006; aliases: -)
+- apache_warriors (score 10; chapters: CH002, CH001; aliases: -)
+- ape_man_1 (score 10; chapters: CH006; aliases: -)
+- ape_man_2 (score 10; chapters: CH006; aliases: -)
 
 # Guidance
 - answer briefly and concretely

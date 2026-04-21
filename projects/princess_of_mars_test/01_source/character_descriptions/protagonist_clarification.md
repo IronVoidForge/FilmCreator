@@ -4,10 +4,10 @@
 protagonist
 
 # Why This Needs Clarification
-Need to establish baseline physical traits before the Red Martian disguise is applied.
+Identity and physical traits need establishment for visual consistency.
 
 # Question
-What are the protagonist's specific Earth-based physical characteristics (height, build, hair/eye color) prior to his disguise?
+What is the protagonist's physical build, hair color, eye color, and typical attire?
 
 # Guidance
 - answer briefly and concretely

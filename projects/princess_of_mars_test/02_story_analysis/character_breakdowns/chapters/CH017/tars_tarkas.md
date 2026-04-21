@@ -1,15 +1,15 @@
 # Tars Tarkas
-**Role:** Thark Chieftain
+**Role:** Thark Warrior
 
-**Status:** Physically Present (referenced)
+**Status:** Physically Present (witness)
 
-**Description:** A Thark leader who observes the actions of Tal Hajus with silent loathing.
+**Description:** A Thark warrior who observes the actions of Tal Hajus with silent loathing.
 
-**Prompt Phrases:** Green-skinned Thark, chieftain, observing from distance.
+**Prompt Phrases:** Thark warrior, silent observer, Martian green man.
 
 # Aliases
 
-Thark Chieftain
+None
 
 
 

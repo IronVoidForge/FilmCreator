@@ -3,9 +3,9 @@
 
 **Status:** Physically Present
 
-**Description:** An assistant and companion to the Princess, helping manage the thoat during their flight across the mossy waste.
+**Description:** An assistant and companion to the Princess, involved in managing the escape and the thoat during the trek across the mossy waste.
 
-**Prompt Phrases:** Female companion, assisting with thoat, traveling through mossy waste.
+**Prompt Phrases:** Female Martian companion, traveling party member.
 
 # Aliases
 

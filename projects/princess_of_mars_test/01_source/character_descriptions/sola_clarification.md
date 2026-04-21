@@ -4,10 +4,10 @@
 sola
 
 # Why This Needs Clarification
-Physical appearance is unknown.
+Character is only referenced via context of a past event.
 
 # Question
-What are Sola's physical characteristics and attire?
+What are Sola's visual characteristics and current status?
 
 # Guidance
 - answer briefly and concretely

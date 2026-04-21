@@ -1,11 +1,11 @@
 # Dejah Thoris
-**Role:** Princess of Helium
+**Role:** Princess of Helium / Love Interest
 
 **Status:** Physically Present
 
-**Description:** A royal figure who maintains her dignity even when held captive by the Tharks. She is a central figure in the escape from Thark.
+**Description:** A royal figure who maintains her dignity even under extreme duress and terror. She is a central figure in the escape from Thark.
 
-**Prompt Phrases:** Royal female, dignified expression, escaping on a thoat.
+**Prompt Phrases:** Royal Martian princess, dignified noblewoman, elegant silhouette.
 
 # Aliases
 

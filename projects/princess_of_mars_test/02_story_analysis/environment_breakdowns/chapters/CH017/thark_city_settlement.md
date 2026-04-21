@@ -1,11 +1,11 @@
 # Thark City Settlement
 
-**Role:** Primary (Conflict/Infiltration Setting)
+**Role:** Primary (Conflict/Infiltration)
 
-**Architecture & Geography:** A fortified settlement characterized by large circular halls and elevated high platforms. The structure is built for the physiology of the green-skinned Tharks, emphasizing verticality and communal gathering spaces.
+**Architecture & Geography:** A fortified Martian settlement featuring large circular halls, raised platforms, and multi-story structures. The layout is designed for a non-humanoid, martial species.
 
-**Lighting & Atmosphere:** Harsh, imposing, and oppressive. The atmosphere is defined by the presence of the Jeddak's court and the tension of captivity.
+**Lighting & Atmosphere:** Harsh, oppressive, and intimidating; characterized by the shadows of high walls and the looming presence of stone or metal fortifications.
 
-**Scale & Anchors:** Large-scale circular architecture; high platforms overlooking central halls; fortified perimeter walls.
+**Scale & Anchors:** Massive scale; large halls and elevated platforms that emphasize the height and strength of the Thark inhabitants.
 
-**Prompt Phrases:** Fortified Thark settlement, large circular stone halls, elevated viewing platforms, green-skinned warrior architecture, imposing Martian city.
+**Prompt Phrases:** fortified Martian city, circular stone halls, raised combat platforms, multi-story brutalist architecture, Thark settlement.

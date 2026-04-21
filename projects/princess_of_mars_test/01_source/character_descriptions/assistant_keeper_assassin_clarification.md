@@ -10,9 +10,9 @@ Identity and appearance are unknown.
 What does the assassin look like?
 
 # Candidate Matches
-- apache_warriors (score 10; chapters: CH002; aliases: -)
-- ape_creature_1 (score 10; chapters: CH006; aliases: -)
-- ape_creature_2 (score 10; chapters: CH006; aliases: -)
+- apache_warriors (score 10; chapters: CH002, CH001; aliases: -)
+- ape_man_1 (score 10; chapters: CH006; aliases: -)
+- ape_man_2 (score 10; chapters: CH006; aliases: -)
 
 # Guidance
 - answer briefly and concretely

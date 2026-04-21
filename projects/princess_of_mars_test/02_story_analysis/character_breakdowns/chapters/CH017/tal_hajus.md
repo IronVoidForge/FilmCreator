@@ -1,15 +1,15 @@
 # Tal Hajus
-**Role:** Antagonist / Jeddak of the Tharks
+**Role:** Villain / Antagonist
 
-**Status:** Physically Present (referenced/defeated)
+**Status:** Physically Present (referenced/seen)
 
-**Description:** A cruel and bestial leader of the Tharks. He is characterized by his malicious intentions toward Dejah Thoris.
+**Description:** A beastly and cruel Jeddak of the Tharks. Characterized by animalistic passions and a penchant for cruelty and torture.
 
-**Prompt Phrases:** Bestial Thark, cruel leader, green-skinned warrior, Jeddak.
+**Prompt Phrases:** Bestial Thark leader, cruel Jeddak, monstrous Martian warrior.
 
 # Aliases
 
-Jeddak of the Tharks
+Jeddak of the Tharks, The Beastly Jeddak
 
 
 

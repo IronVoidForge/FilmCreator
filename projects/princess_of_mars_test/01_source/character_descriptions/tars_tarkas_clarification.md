@@ -4,10 +4,10 @@
 tars_tarkas
 
 # Why This Needs Clarification
-Physical appearance and Thark morphology unknown.
+Character is referenced via historical/political context rather than active presence.
 
 # Question
-What is the visual appearance of Tars Tarkas?
+Can you confirm Tars Tarkas's current visual state or location?
 
 # Guidance
 - answer briefly and concretely

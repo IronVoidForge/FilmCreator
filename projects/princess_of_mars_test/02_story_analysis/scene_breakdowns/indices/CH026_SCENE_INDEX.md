@@ -1,0 +1,5 @@
+- [SC001](#sc001) - The Aerial Battle for Helium
+- [SC002](#sc002) - The Zodangan Surrender and Aftermath
+- [SC003](#sc003) - Dejah Thoris's Arrival in Helium
+- [SC004](#sc004) - The Land Campaign: Crushing the Resistance
+- [SC005](#sc005) - Triumphal Procession and the Historic Alliance
