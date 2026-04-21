@@ -8,6 +8,8 @@ from .descriptor_enrichment import clear_descriptor_artifacts, run_descriptor_en
 from .dialogue_timeline import run_dialogue_timeline
 from .environment_bible import run_environment_bible_synthesis
 from .identity_refinement import run_identity_refinement
+from .quality_grading import run_quality_grading
+from .selective_rerun import run_selective_reruns
 from .prompt_preparation import run_prompt_preparation
 from .scene_contracts import run_scene_contract_synthesis
 from .shot_planner import run_shot_planning
@@ -65,6 +67,33 @@ def build_parser() -> argparse.ArgumentParser:
         dest="entity_types",
     )
     de.add_argument("--entity-id", action="append", dest="entity_ids")
+
+    qg = subparsers.add_parser("grade-artifacts")
+    qg.add_argument("project_slug")
+    qg.add_argument(
+        "--family",
+        action="append",
+        choices=[
+            "character",
+            "environment",
+            "scene",
+            "shot",
+            "dialogue",
+            "descriptor",
+            "prompt",
+            "character_bible",
+            "environment_bible",
+            "scene_contract",
+            "shot_package",
+            "dialogue_timeline",
+            "prompt_package",
+        ],
+        dest="families",
+    )
+
+    rr = subparsers.add_parser("rerun-quality-artifacts")
+    rr.add_argument("project_slug")
+    rr.add_argument("--execute", action="store_true")
 
     ce = subparsers.add_parser("clear-descriptor-artifacts")
     ce.add_argument("project_slug")
@@ -146,6 +175,20 @@ def main() -> None:
         summary = clear_descriptor_artifacts(
             args.project_slug,
             include_prompt_packages=not args.keep_prompts,
+        )
+        print(json.dumps(summary.to_dict(), indent=2))
+
+    elif args.command == "grade-artifacts":
+        summary = run_quality_grading(
+            args.project_slug,
+            families=args.families,
+        )
+        print(json.dumps(summary.to_dict(), indent=2))
+
+    elif args.command == "rerun-quality-artifacts":
+        summary = run_selective_reruns(
+            args.project_slug,
+            execute=args.execute,
         )
         print(json.dumps(summary.to_dict(), indent=2))
 

@@ -261,7 +261,7 @@ Some artifacts are neither characters nor environments but still behave like can
 
 #### Current Status
 
-Planned.
+Implemented.
 
 ### Phase 11 – Dialogue, Timing, and Edit-Aware Sequencing
 
@@ -332,6 +332,40 @@ Turn canonical entities into structured, evidence-grounded descriptor profiles s
 #### Why This Phase Is Needed
 
 The project already knows the canon and can prepare prompt bundles. This phase adds a reusable descriptor layer so those prompt bundles can be driven by structured fields instead of repeatedly rediscovering the same facts from prose summaries.
+
+#### Current Status
+
+Planned.
+
+### Phase 11.8 – Quality Grading and Selective Reruns
+
+#### Goal
+
+Grade synthesis and prompt outputs for completeness, evidence support, prompt readiness, and inference load, then emit selective rerun plans for the weakest artifacts instead of rerunning the full project.
+
+#### Inputs
+
+- canonical bibles
+- scene contracts
+- shot packages
+- dialogue timelines
+- descriptor records
+- prompt bundles
+- review queues
+- provenance and dependency metadata
+
+#### Outputs
+
+- per-artifact grade records
+- family-level quality summaries
+- low-grade review queues
+- selective rerun manifests
+- dependency-aware rebuild notes
+- grade history for trend comparison
+
+#### Why This Phase Is Needed
+
+The pipeline now produces enough structured output that a later QA pass can judge whether an artifact is complete enough to keep or weak enough to rerun. This keeps reruns focused on the low-quality subset instead of turning every improvement into a full rebuild.
 
 #### Current Status
 
@@ -518,13 +552,14 @@ When older beat/clip planning logic is still useful, wrap it through compatibili
 7. Implement Phase 11.5 prompt preparation and reference pack assembly.
 8. Implement Phase 11.6 key item index and reference pack assembly.
 9. Implement Phase 11.7 descriptor enrichment and reference coverage.
-10. Then move into production asset generation phases 12-17.
+10. Implement Phase 11.8 quality grading and selective reruns.
+11. Then move into production asset generation phases 12-17.
 
 ## Database Timing
 
 SQLite should remain deferred until:
 
-- phase 7-11.7 contracts stabilize,
+- phase 7-11.8 contracts stabilize,
 - lifecycle and dependency semantics stabilize,
 - the file-first artifacts are mature enough to sync rather than speculate.
 

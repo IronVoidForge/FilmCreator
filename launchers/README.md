@@ -68,6 +68,10 @@ The launcher tree is now grouped by workflow so the root stays readable:
   - runs the full book-to-prompt pipeline from chapter summaries through prompt preparation
 - `multi_chapter\run_full_book_to_prompt_pipeline_resume.bat`
   - retries failed book-analysis chapters and resumes from the last partial chapter before running the full pipeline
+- `multi_chapter\run_quality_grading_and_selective_reruns.bat`
+  - grades synthesis outputs and writes the selective rerun queue without mutating the source artifacts
+- `multi_chapter\run_quality_rerun_queue.bat`
+  - previews the graded rerun queue and optionally executes queued family reruns after confirmation
 - `multi_chapter\test_phase_b1_resolution.bat`
   - runs the Phase B1 identity and environment resolution helper
 

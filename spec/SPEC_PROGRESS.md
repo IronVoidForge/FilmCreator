@@ -192,6 +192,11 @@ The latest validated state is:
 - evidence: the project now has canonical bibles, prompt preparation, and book-index retrieval, so a structured descriptor layer can consolidate evidence-grounded traits and reference coverage without re-asking the same questions
 - next validation: produce structured descriptor profiles with confidence, provenance, and coverage maps for characters, environments, scenes, and key items
 
+### Phase 11.8 – Quality Grading and Selective Reruns
+- status: `implemented`
+- evidence: the `grade-artifacts` command now scans synthesis outputs, scores them, and writes project-level grade and rerun queue artifacts without mutating the source outputs
+- next validation: produce artifact grades, rerun manifests, and dependency-aware selective rebuild plans for low-scoring items
+
 ## Cross-Cutting Work Newly Required
 
 ### Artifact lifecycle and reuse
@@ -201,7 +206,7 @@ The latest validated state is:
 
 ### Dependency graph and staleness
 - status: `planned`
-- evidence: future phases 7–11 require selective rebuilds based on upstream changes
+- evidence: future phases 7–11.8 require selective rebuilds based on upstream changes
 - next validation: define dependency tracking and stale propagation rules
 
 ### Review and approval model
