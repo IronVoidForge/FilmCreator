@@ -37,54 +37,98 @@ echo.
 
 echo.
 echo [1/10] Checking LM Studio connectivity...
-call :run_step "LM Studio connectivity" python -m orchestrator lmstudio-check
+set "STEP_LABEL=LM Studio connectivity"
+call :step_begin
+python -c "from json import dumps; from orchestrator.settings import load_runtime_settings; from orchestrator.lmstudio_client import LMStudioClient; settings=load_runtime_settings(); client=LMStudioClient(settings); print(dumps(client.check().to_dict(), indent=2))"
+if errorlevel 1 goto :fail
+call :step_end
 if errorlevel 1 goto :fail
 
 echo.
 echo [2/10] Running multi-chapter analysis from the manifest...
-call :run_step "Multi-chapter analysis" python -c "from orchestrator.book_authoring import analyze_book; import json; summary = analyze_book(project_slug='%PROJECT_SLUG%'); print(json.dumps(summary.to_dict(), indent=2))"
+set "STEP_LABEL=Multi-chapter analysis"
+call :step_begin
+python -c "from orchestrator.book_authoring import analyze_book; import json; summary = analyze_book(project_slug='%PROJECT_SLUG%'); print(json.dumps(summary.to_dict(), indent=2))"
+if errorlevel 1 goto :fail
+call :step_end
 if errorlevel 1 goto :fail
 
 echo.
 echo [3/10] Building identity refinement plan...
-call :run_step "Identity refinement plan" python -m orchestrator refine-identities %PROJECT_SLUG%
+set "STEP_LABEL=Identity refinement plan"
+call :step_begin
+python -m orchestrator refine-identities %PROJECT_SLUG%
+if errorlevel 1 goto :fail
+call :step_end
 if errorlevel 1 goto :fail
 
 echo.
 echo [4/10] Applying identity refinement merges...
-call :run_step "Identity refinement apply" python -m orchestrator refine-identities %PROJECT_SLUG% --apply
+set "STEP_LABEL=Identity refinement apply"
+call :step_begin
+python -m orchestrator refine-identities %PROJECT_SLUG% --apply
+if errorlevel 1 goto :fail
+call :step_end
 if errorlevel 1 goto :fail
 
 echo.
 echo [5/10] Running character bible synthesis...
-call :run_step "Character bible synthesis" python -m orchestrator synthesize-character-bibles %PROJECT_SLUG% --force
+set "STEP_LABEL=Character bible synthesis"
+call :step_begin
+python -m orchestrator synthesize-character-bibles %PROJECT_SLUG% --force
+if errorlevel 1 goto :fail
+call :step_end
 if errorlevel 1 goto :fail
 
 echo.
 echo [6/10] Running environment bible synthesis...
-call :run_step "Environment bible synthesis" python -m orchestrator synthesize-environment-bibles %PROJECT_SLUG% --force
+set "STEP_LABEL=Environment bible synthesis"
+call :step_begin
+python -m orchestrator synthesize-environment-bibles %PROJECT_SLUG% --force
+if errorlevel 1 goto :fail
+call :step_end
 if errorlevel 1 goto :fail
 
 echo.
 echo [7/10] Running scene contract synthesis...
-call :run_step "Scene contract synthesis" python -m orchestrator synthesize-scene-contracts %PROJECT_SLUG% --force
+set "STEP_LABEL=Scene contract synthesis"
+call :step_begin
+python -m orchestrator synthesize-scene-contracts %PROJECT_SLUG% --force
+if errorlevel 1 goto :fail
+call :step_end
 if errorlevel 1 goto :fail
 
 echo.
 echo [8/10] Running shot package synthesis...
-call :run_step "Shot package synthesis" python -m orchestrator synthesize-shot-packages %PROJECT_SLUG% --force
+set "STEP_LABEL=Shot package synthesis"
+call :step_begin
+python -m orchestrator synthesize-shot-packages %PROJECT_SLUG% --force
+if errorlevel 1 goto :fail
+call :step_end
 if errorlevel 1 goto :fail
 
 echo.
 echo [9/10] Running dialogue timeline synthesis...
-call :run_step "Dialogue timeline synthesis" python -m orchestrator synthesize-dialogue-timeline %PROJECT_SLUG% --force
+set "STEP_LABEL=Dialogue timeline synthesis"
+call :step_begin
+python -m orchestrator synthesize-dialogue-timeline %PROJECT_SLUG% --force
+if errorlevel 1 goto :fail
+call :step_end
 if errorlevel 1 goto :fail
 
 echo.
 echo [10/10] Running descriptor enrichment and prompt preparation...
-call :run_step "Descriptor enrichment" python -m orchestrator synthesize-descriptor-enrichment %PROJECT_SLUG% --force
+set "STEP_LABEL=Descriptor enrichment"
+call :step_begin
+python -m orchestrator synthesize-descriptor-enrichment %PROJECT_SLUG% --force
 if errorlevel 1 goto :fail
-call :run_step "Prompt preparation" python -m orchestrator synthesize-prompt-preparation %PROJECT_SLUG% --force
+call :step_end
+if errorlevel 1 goto :fail
+set "STEP_LABEL=Prompt preparation"
+call :step_begin
+python -m orchestrator synthesize-prompt-preparation %PROJECT_SLUG% --force
+if errorlevel 1 goto :fail
+call :step_end
 if errorlevel 1 goto :fail
 
 echo.
@@ -96,18 +140,23 @@ echo.
 echo Full book-to-prompt pipeline complete.
 goto :done
 
-:run_step
+:step_begin
 setlocal EnableExtensions EnableDelayedExpansion
-set "STEP_LABEL=%~1"
-shift
-set "STEP_CMD=%*"
+for /f %%I in ('powershell -NoProfile -Command "[DateTime]::UtcNow.ToString(\"o\")"') do set "STEP_START=%%I"
 echo [timing] !STEP_LABEL! starting...
-powershell -NoProfile -Command "$sw=[Diagnostics.Stopwatch]::StartNew(); & cmd /c %STEP_CMD%; $code=$LASTEXITCODE; $sw.Stop(); Write-Host ('[timing] %STEP_LABEL%: {0:n1}s' -f $sw.Elapsed.TotalSeconds); exit $code"
-endlocal & exit /b %errorlevel%
+endlocal & set "STEP_START=%STEP_START%" & exit /b 0
+
+:step_end
+setlocal EnableExtensions EnableDelayedExpansion
+for /f %%I in ('powershell -NoProfile -Command "[DateTime]::UtcNow.ToString(\"o\")"') do set "STEP_END=%%I"
+for /f %%I in ('powershell -NoProfile -Command "$s=[datetime]::Parse(\"%STEP_START%\"); $e=[datetime]::Parse(\"%STEP_END%\"); [math]::Round(($e-$s).TotalSeconds,1)"') do set "STEP_SECONDS=%%I"
+echo [timing] !STEP_LABEL!: !STEP_SECONDS!s
+endlocal & exit /b 0
 
 :fail
 echo.
 echo Full book-to-prompt pipeline failed.
+pause
 popd >nul
 exit /b 1
 
