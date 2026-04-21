@@ -45,12 +45,24 @@ def build_parser() -> argparse.ArgumentParser:
     pp.add_argument("project_slug")
     pp.add_argument("--force", action="store_true")
     pp.add_argument("--limit", type=int, default=None)
+    pp.add_argument(
+        "--entity-type",
+        action="append",
+        choices=["character", "environment", "scene", "shot"],
+        dest="entity_types",
+    )
 
     de = subparsers.add_parser("synthesize-descriptor-enrichment")
     de.add_argument("project_slug")
     de.add_argument("--no-llm", action="store_true")
     de.add_argument("--force", action="store_true")
     de.add_argument("--limit", type=int, default=None)
+    de.add_argument(
+        "--entity-type",
+        action="append",
+        choices=["character", "environment", "scene", "shot", "key_item"],
+        dest="entity_types",
+    )
 
     ce = subparsers.add_parser("clear-descriptor-artifacts")
     ce.add_argument("project_slug")
@@ -112,6 +124,7 @@ def main() -> None:
             args.project_slug,
             force=args.force,
             limit=args.limit,
+            entity_types=args.entity_types,
         )
         print(json.dumps(summary.to_dict(), indent=2))
 
@@ -121,6 +134,7 @@ def main() -> None:
             use_llm=not args.no_llm,
             force=args.force,
             limit=args.limit,
+            entity_types=args.entity_types,
         )
         print(json.dumps(summary.to_dict(), indent=2))
 

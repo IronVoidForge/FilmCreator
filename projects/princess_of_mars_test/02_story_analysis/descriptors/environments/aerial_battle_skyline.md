@@ -53,5 +53,5 @@
 - artifact_id: `DESC_ENV_aerial_battle_skyline`
 - status: `generated`
 - source_fingerprint: `5806b2dca6963cbde3dfa14b450f02e57676dd23`
-- created_at_utc: `2026-04-21T05:22:15.181266+00:00`
-- updated_at_utc: `2026-04-21T05:22:15.181266+00:00`
+- created_at_utc: `2026-04-21T05:39:47.092338+00:00`
+- updated_at_utc: `2026-04-21T05:39:47.092338+00:00`

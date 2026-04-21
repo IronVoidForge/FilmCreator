@@ -809,7 +809,13 @@ def _write_review_queue(path: Path, queue: list[dict[str, Any]], *, title: str) 
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def run_prompt_preparation(project_slug: str, *, force: bool = False, limit: int | None = None) -> PromptPreparationSummary:
+def run_prompt_preparation(
+    project_slug: str,
+    *,
+    force: bool = False,
+    limit: int | None = None,
+    entity_types: list[str] | None = None,
+) -> PromptPreparationSummary:
     project_dir = create_project(project_slug)
     root = project_dir / PROMPT_PREP_ROOT
     review_root = root / "review"
@@ -834,162 +840,166 @@ def run_prompt_preparation(project_slug: str, *, force: bool = False, limit: int
     reused_count = 0
     processed_packages = 0
     stop_processing = False
+    selected_types = set(entity_types or [])
 
     # Character reference bundles.
-    for bible in sorted(character_bibles.values(), key=lambda item: str(item.get("character_id", ""))):
-        if stop_processing:
-            break
-        total_entries += 1
-        if not _is_film_facing_character_entry(bible, bible):
-            review_queue.append(
-                {
-                    "prompt_id": str(bible.get("character_id", "")),
-                    "subject_kind": "character",
-                    "subject_id": str(bible.get("character_id", "")),
-                    "variant_name": "review",
-                    "title": f"{bible.get('display_name', bible.get('character_id', 'character'))} Character Reference Review",
-                    "issues": [
-                        f"Character status={bible.get('status', 'unknown')} entity_kind={bible.get('entity_kind', 'unknown')}.",
-                        "Kept out of the main prompt-prep index because it is not a canonical film-facing individual.",
-                    ],
-                }
-            )
-            continue
-        for variant in CHARACTER_VARIANTS:
+    if not selected_types or "character" in selected_types:
+        for bible in sorted(character_bibles.values(), key=lambda item: str(item.get("character_id", ""))):
             if stop_processing:
                 break
-            descriptor = character_descriptors.get(str(bible.get("character_id", "")).strip().lower())
-            package, package_path, sources = _package_for_character(project_dir=project_dir, bible=bible, descriptor=descriptor, variant=variant)
-            if _write_prompt_package_if_changed(package_path, package, force=force):
-                synthesized_count += 1
-                written_files.append(str(package_path))
-            else:
-                reused_count += 1
-            processed_packages += 1
-            index_records.append(
-                {
-                    "prompt_id": package.prompt_id,
-                    "title": package.title,
-                    "subject_kind": "character",
-                    "subject_id": package.inputs.get("subject_id", ""),
-                    "variant_name": package.inputs.get("variant_name", ""),
-                    "status": "canonical",
-                    "path": str(package_path),
-                    "source_fingerprint": _fingerprint(sources),
-                }
-            )
-            if limit is not None and processed_packages >= limit:
-                stop_processing = True
-                break
-
-    # Environment reference bundles.
-    for bible in sorted(environment_bibles.values(), key=lambda item: str(item.get("environment_id", ""))):
-        if stop_processing:
-            break
-        total_entries += 1
-        if not _is_film_facing_environment_entry(bible, bible):
-            review_queue.append(
-                {
-                    "prompt_id": str(bible.get("environment_id", "")),
-                    "subject_kind": "environment",
-                    "subject_id": str(bible.get("environment_id", "")),
-                    "variant_name": "review",
-                    "title": f"{bible.get('display_name', bible.get('environment_id', 'environment'))} Environment Reference Review",
-                    "issues": [
-                        f"Environment status={bible.get('status', 'unknown')} entity_kind={bible.get('entity_kind', 'unknown')}.",
-                        "Kept out of the main prompt-prep index because it is not a canonical film-facing environment.",
-                    ],
-                }
-            )
-            continue
-        for variant in ENVIRONMENT_VARIANTS:
-            if stop_processing:
-                break
-            descriptor = environment_descriptors.get(str(bible.get("environment_id", "")).strip().lower())
-            package, package_path, sources = _package_for_environment(project_dir=project_dir, bible=bible, descriptor=descriptor, variant=variant)
-            if _write_prompt_package_if_changed(package_path, package, force=force):
-                synthesized_count += 1
-                written_files.append(str(package_path))
-            else:
-                reused_count += 1
-            processed_packages += 1
-            index_records.append(
-                {
-                    "prompt_id": package.prompt_id,
-                    "title": package.title,
-                    "subject_kind": "environment",
-                    "subject_id": package.inputs.get("subject_id", ""),
-                    "variant_name": package.inputs.get("variant_name", ""),
-                    "status": "canonical",
-                    "path": str(package_path),
-                    "source_fingerprint": _fingerprint(sources),
-                }
-            )
-            if limit is not None and processed_packages >= limit:
-                stop_processing = True
-                break
-
-    # Shot prompt bundles.
-    for shot in shot_packages:
-        if stop_processing:
-            break
-        total_entries += 1
-        scene_id = str(shot.get("scene_id", "")).strip().upper()
-        shot_id = str(shot.get("shot_id", "")).strip().upper()
-        if not scene_id or not shot_id:
-            continue
-        scene_contract = scene_contracts.get(scene_id, {})
-        scene_descriptor = scene_descriptors.get(scene_id.lower())
-        shot_descriptor = shot_descriptors.get(f"{scene_id.lower()}_{shot_id.lower()}")
-        for variant in SHOT_VARIANTS:
-            if stop_processing:
-                break
-            package, package_path, sources, review_notes = _package_for_shot(
-                project_dir=project_dir,
-                scene_contract=scene_contract,
-                shot=shot,
-                variant=variant,
-                character_bibles=character_bibles,
-                environment_bibles=environment_bibles,
-                scene_descriptor=scene_descriptor,
-                shot_descriptor=shot_descriptor,
-                character_descriptors=character_descriptors,
-                environment_descriptors=environment_descriptors,
-            )
-            if _write_prompt_package_if_changed(package_path, package, force=force):
-                synthesized_count += 1
-                written_files.append(str(package_path))
-            else:
-                reused_count += 1
-            processed_packages += 1
-            index_records.append(
-                {
-                    "prompt_id": package.prompt_id,
-                    "title": package.title,
-                    "subject_kind": "shot",
-                    "subject_id": package.inputs.get("subject_id", ""),
-                    "variant_name": package.inputs.get("variant_name", ""),
-                    "status": "generated" if not review_notes else "review",
-                    "path": str(package_path),
-                    "source_fingerprint": _fingerprint(sources),
-                }
-            )
-            if review_notes:
+            total_entries += 1
+            if not _is_film_facing_character_entry(bible, bible):
                 review_queue.append(
                     {
+                        "prompt_id": str(bible.get("character_id", "")),
+                        "subject_kind": "character",
+                        "subject_id": str(bible.get("character_id", "")),
+                        "variant_name": "review",
+                        "title": f"{bible.get('display_name', bible.get('character_id', 'character'))} Character Reference Review",
+                        "issues": [
+                            f"Character status={bible.get('status', 'unknown')} entity_kind={bible.get('entity_kind', 'unknown')}.",
+                            "Kept out of the main prompt-prep index because it is not a canonical film-facing individual.",
+                        ],
+                    }
+                )
+                continue
+            for variant in CHARACTER_VARIANTS:
+                if stop_processing:
+                    break
+                descriptor = character_descriptors.get(str(bible.get("character_id", "")).strip().lower())
+                package, package_path, sources = _package_for_character(project_dir=project_dir, bible=bible, descriptor=descriptor, variant=variant)
+                if _write_prompt_package_if_changed(package_path, package, force=force):
+                    synthesized_count += 1
+                    written_files.append(str(package_path))
+                else:
+                    reused_count += 1
+                processed_packages += 1
+                index_records.append(
+                    {
                         "prompt_id": package.prompt_id,
+                        "title": package.title,
+                        "subject_kind": "character",
+                        "subject_id": package.inputs.get("subject_id", ""),
+                        "variant_name": package.inputs.get("variant_name", ""),
+                        "status": "canonical",
+                        "path": str(package_path),
+                        "source_fingerprint": _fingerprint(sources),
+                    }
+                )
+                if limit is not None and processed_packages >= limit:
+                    stop_processing = True
+                    break
+
+    # Environment reference bundles.
+    if not selected_types or "environment" in selected_types:
+        for bible in sorted(environment_bibles.values(), key=lambda item: str(item.get("environment_id", ""))):
+            if stop_processing:
+                break
+            total_entries += 1
+            if not _is_film_facing_environment_entry(bible, bible):
+                review_queue.append(
+                    {
+                        "prompt_id": str(bible.get("environment_id", "")),
+                        "subject_kind": "environment",
+                        "subject_id": str(bible.get("environment_id", "")),
+                        "variant_name": "review",
+                        "title": f"{bible.get('display_name', bible.get('environment_id', 'environment'))} Environment Reference Review",
+                        "issues": [
+                            f"Environment status={bible.get('status', 'unknown')} entity_kind={bible.get('entity_kind', 'unknown')}.",
+                            "Kept out of the main prompt-prep index because it is not a canonical film-facing environment.",
+                        ],
+                    }
+                )
+                continue
+            for variant in ENVIRONMENT_VARIANTS:
+                if stop_processing:
+                    break
+                descriptor = environment_descriptors.get(str(bible.get("environment_id", "")).strip().lower())
+                package, package_path, sources = _package_for_environment(project_dir=project_dir, bible=bible, descriptor=descriptor, variant=variant)
+                if _write_prompt_package_if_changed(package_path, package, force=force):
+                    synthesized_count += 1
+                    written_files.append(str(package_path))
+                else:
+                    reused_count += 1
+                processed_packages += 1
+                index_records.append(
+                    {
+                        "prompt_id": package.prompt_id,
+                        "title": package.title,
+                        "subject_kind": "environment",
+                        "subject_id": package.inputs.get("subject_id", ""),
+                        "variant_name": package.inputs.get("variant_name", ""),
+                        "status": "canonical",
+                        "path": str(package_path),
+                        "source_fingerprint": _fingerprint(sources),
+                    }
+                )
+                if limit is not None and processed_packages >= limit:
+                    stop_processing = True
+                    break
+
+    # Shot prompt bundles.
+    if not selected_types or "shot" in selected_types:
+        for shot in shot_packages:
+            if stop_processing:
+                break
+            total_entries += 1
+            scene_id = str(shot.get("scene_id", "")).strip().upper()
+            shot_id = str(shot.get("shot_id", "")).strip().upper()
+            if not scene_id or not shot_id:
+                continue
+            scene_contract = scene_contracts.get(scene_id, {})
+            scene_descriptor = scene_descriptors.get(scene_id.lower())
+            shot_descriptor = shot_descriptors.get(f"{scene_id.lower()}_{shot_id.lower()}")
+            for variant in SHOT_VARIANTS:
+                if stop_processing:
+                    break
+                package, package_path, sources, review_notes = _package_for_shot(
+                    project_dir=project_dir,
+                    scene_contract=scene_contract,
+                    shot=shot,
+                    variant=variant,
+                    character_bibles=character_bibles,
+                    environment_bibles=environment_bibles,
+                    scene_descriptor=scene_descriptor,
+                    shot_descriptor=shot_descriptor,
+                    character_descriptors=character_descriptors,
+                    environment_descriptors=environment_descriptors,
+                )
+                if _write_prompt_package_if_changed(package_path, package, force=force):
+                    synthesized_count += 1
+                    written_files.append(str(package_path))
+                else:
+                    reused_count += 1
+                processed_packages += 1
+                index_records.append(
+                    {
+                        "prompt_id": package.prompt_id,
+                        "title": package.title,
                         "subject_kind": "shot",
                         "subject_id": package.inputs.get("subject_id", ""),
                         "variant_name": package.inputs.get("variant_name", ""),
-                        "title": package.title,
-                        "issues": review_notes,
+                        "status": "generated" if not review_notes else "review",
+                        "path": str(package_path),
+                        "source_fingerprint": _fingerprint(sources),
                     }
                 )
-            if limit is not None and processed_packages >= limit:
-                stop_processing = True
+                if review_notes:
+                    review_queue.append(
+                        {
+                            "prompt_id": package.prompt_id,
+                            "subject_kind": "shot",
+                            "subject_id": package.inputs.get("subject_id", ""),
+                            "variant_name": package.inputs.get("variant_name", ""),
+                            "title": package.title,
+                            "issues": review_notes,
+                        }
+                    )
+                if limit is not None and processed_packages >= limit:
+                    stop_processing = True
+                    break
+            if stop_processing:
                 break
-        if stop_processing:
-            break
 
     index_path = root / "PROMPT_PREPARATION_INDEX.md"
     index_json = root / "PROMPT_PREPARATION_INDEX.json"

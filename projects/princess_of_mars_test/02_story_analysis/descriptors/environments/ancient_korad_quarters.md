@@ -44,5 +44,5 @@
 - artifact_id: `DESC_ENV_ancient_korad_quarters`
 - status: `generated`
 - source_fingerprint: `367a8e6bf0d8b9dcfa6c8142a2cce91e5a6cba7e`
-- created_at_utc: `2026-04-21T05:22:15.263315+00:00`
-- updated_at_utc: `2026-04-21T05:22:15.263315+00:00`
+- created_at_utc: `2026-04-21T05:40:18.586794+00:00`
+- updated_at_utc: `2026-04-21T05:40:18.586794+00:00`
