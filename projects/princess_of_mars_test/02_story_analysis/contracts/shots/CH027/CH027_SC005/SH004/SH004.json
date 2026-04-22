@@ -5,7 +5,7 @@
   "shot_order": 4,
   "previous_shot_id": "SH003",
   "next_shot_id": "",
-  "shot_title": "Insert Detail 4: John collapses due to oxygen deprivation as relief...",
+  "shot_title": "Insert Detail 4: John collapses from oxygen deprivation as the crisi...",
   "shot_type": "insert_detail",
   "camera_description": "Tight detail framing focused on a single visual object or gesture.",
   "composition": "Detail composition centered on the key physical action or prop inside The Atmosphere Plant (interior/exterior).",
@@ -24,12 +24,12 @@
   ],
   "environment": {
     "label": "The Atmosphere Plant (interior/exterior)",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "The Atmosphere Plant (interior/exterior)",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
@@ -37,11 +37,11 @@
   ],
   "continuity_constraints": [
     "Mechanical state progression (doors unlocking -> pumps restarting)",
-    "John Carter's physiological deterioration (asphyxiation/exhaustion levels)",
-    "John collapses due to oxygen deprivation as relief begins."
+    "John Carter's physical condition (asphyxiation/exhaustion levels)",
+    "John collapses from oxygen deprivation as the crisis resolves."
   ],
-  "prompt_seed": "Insert Detail 4: John collapses due to oxygen deprivation as relief.... insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside The Atmosphere Plant (interior/exterior). Cast: john_carter. Environment: The Atmosphere Plant (interior/exterior).",
-  "shot_notes": "John collapses due to oxygen deprivation as relief begins.",
+  "prompt_seed": "Insert Detail 4: John collapses from oxygen deprivation as the crisi.... insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside The Atmosphere Plant (interior/exterior). Cast: john_carter. Environment: The Atmosphere Plant (interior/exterior).",
+  "shot_notes": "John collapses from oxygen deprivation as the crisis resolves.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -99,7 +99,7 @@
     }
   ],
   "evidence_summary": [
-    "The sequence must visually communicate the extreme physical toll of oxygen deprivation on John Carter while simultaneously conveying the immense scale and mechanical power of the Atmosphere Plant. Success relies on the synchronization of mental effort (thou...",
+    "The sequence must visually communicate the extreme physical toll of atmospheric thinning and the immense mental strain required to manipulate Martian technology. Success relies on the mechanical progression of the plant's systems (doors/pumps) synchronized...",
     "John Carter arrives at the Atmosphere Plant, finding a graveyard of workers. He uses his mental thought waves to unlock the three great doors and commands a survivor to restart the pumps before he collapses from oxygen deprivation.",
     "High Tension $\\rightarrow$ Exhausted Relief.",
     "Close-ups of \"thought wave\" mental effort",
@@ -111,19 +111,24 @@
     "artifact_id": "CH027_SC005_SH004_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "0e564368e2fb9f22add99c85d622ba264f3056ac",
+    "source_fingerprint": "8605f3c7a5b6aa54428bb848794dc5f3a0f6048d",
     "created_at_utc": "2026-04-22T03:57:04.143429+00:00",
-    "updated_at_utc": "2026-04-22T03:57:04.143429+00:00",
+    "updated_at_utc": "2026-04-22T16:08:35.746685+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH027_SC005",
-        "version": "a3aa6fb6d83fdd4dea510de962e91eb0fd04ecc4"
+        "version": "9bba98d4d207e5be6af625915c200fcc13b145d2"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH027_SC005",
+        "version": "96ac61d77184522c2c56aa63bc955963c6f39944"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH027_SC005",
-        "version": "85dc9c83b3c540feffda729ae096e549f42696e7"
+        "version": "9a24cf3013787ec0b4becb1cef36aa7e197cb613"
       }
     ],
     "locked_fields": {},
@@ -133,6 +138,11 @@
         "timestamp_utc": "2026-04-22T03:57:27.950069+00:00",
         "action": "synthesized",
         "source_fingerprint": "0e564368e2fb9f22add99c85d622ba264f3056ac"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:08:56.553722+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "8605f3c7a5b6aa54428bb848794dc5f3a0f6048d"
       }
     ]
   }

@@ -24,12 +24,12 @@
   ],
   "environment": {
     "label": "The Atmosphere Plant (interior/exterior)",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "The Atmosphere Plant (interior/exterior)",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
@@ -37,7 +37,7 @@
   ],
   "continuity_constraints": [
     "Mechanical state progression (doors unlocking -> pumps restarting)",
-    "John Carter's physiological deterioration (asphyxiation/exhaustion levels)",
+    "John Carter's physical condition (asphyxiation/exhaustion levels)",
     "John Carter arrives at the Atmosphere Plant and discovers the graveyard of workers."
   ],
   "prompt_seed": "Establishing Wide 1: John Carter arrives at the Atmosphere Plant and dis.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across The Atmosphere Plant (interior/exterior) with john_carter placed for immediate spatial orientation. Cast: john_carter. Environment: The Atmosphere Plant (interior/exterior).",
@@ -99,7 +99,7 @@
     }
   ],
   "evidence_summary": [
-    "The sequence must visually communicate the extreme physical toll of oxygen deprivation on John Carter while simultaneously conveying the immense scale and mechanical power of the Atmosphere Plant. Success relies on the synchronization of mental effort (thou...",
+    "The sequence must visually communicate the extreme physical toll of atmospheric thinning and the immense mental strain required to manipulate Martian technology. Success relies on the mechanical progression of the plant's systems (doors/pumps) synchronized...",
     "John Carter arrives at the Atmosphere Plant, finding a graveyard of workers. He uses his mental thought waves to unlock the three great doors and commands a survivor to restart the pumps before he collapses from oxygen deprivation.",
     "High Tension $\\rightarrow$ Exhausted Relief.",
     "Close-ups of \"thought wave\" mental effort",
@@ -111,19 +111,24 @@
     "artifact_id": "CH027_SC005_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "0e564368e2fb9f22add99c85d622ba264f3056ac",
+    "source_fingerprint": "8605f3c7a5b6aa54428bb848794dc5f3a0f6048d",
     "created_at_utc": "2026-04-22T03:55:42.538882+00:00",
-    "updated_at_utc": "2026-04-22T03:55:42.538882+00:00",
+    "updated_at_utc": "2026-04-22T16:07:23.007361+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH027_SC005",
-        "version": "a3aa6fb6d83fdd4dea510de962e91eb0fd04ecc4"
+        "version": "9bba98d4d207e5be6af625915c200fcc13b145d2"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH027_SC005",
+        "version": "96ac61d77184522c2c56aa63bc955963c6f39944"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH027_SC005",
-        "version": "85dc9c83b3c540feffda729ae096e549f42696e7"
+        "version": "9a24cf3013787ec0b4becb1cef36aa7e197cb613"
       }
     ],
     "locked_fields": {},
@@ -133,6 +138,11 @@
         "timestamp_utc": "2026-04-22T03:56:15.497118+00:00",
         "action": "synthesized",
         "source_fingerprint": "0e564368e2fb9f22add99c85d622ba264f3056ac"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:07:52.415378+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "8605f3c7a5b6aa54428bb848794dc5f3a0f6048d"
       }
     ]
   }

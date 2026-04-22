@@ -5,10 +5,10 @@
   "shot_order": 1,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Insert Detail 1: John Carter awakens",
-  "shot_type": "insert_detail",
-  "camera_description": "Tight detail framing focused on a single visual object or gesture.",
-  "composition": "Detail composition centered on the key physical action or prop inside SC001.",
+  "shot_title": "Medium 1: John Carter awakens",
+  "shot_type": "medium",
+  "camera_description": "Stable medium framing that keeps action and character readable.",
+  "composition": "Readable medium composition in SC001 featuring scene_character.",
   "target_seconds": 5.2,
   "characters_in_frame": [
     {
@@ -24,7 +24,7 @@
   ],
   "environment": {
     "label": "scene_environment",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "SC001",
     "status": "review",
     "entity_kind": "environment",
@@ -40,7 +40,7 @@
     "Lighting levels: Cave darkness vs. charcoal burner glow",
     "John Carter awakens in the dark Arizona cave, experiencing disorientation."
   ],
-  "prompt_seed": "Insert Detail 1: John Carter awakens in the dark Arizona cave, exper.... insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside SC001. Cast: scene_character. Environment: SC001. Beat: John Carter awakens in the dark Ariz...",
+  "prompt_seed": "Medium 1: John Carter awakens in the dark Arizona cave, exper.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in SC001 featuring scene_character. Cast: scene_character. Environment: SC001. Beat: John Carter awakens in the dark Arizona cave, experiencing disorie...",
   "shot_notes": "John Carter awakens in the dark Arizona cave, experiencing disorientation.",
   "evidence_refs": [
     {
@@ -84,30 +84,35 @@
     }
   ],
   "evidence_summary": [
-    "Establish the protagonist's disorientation and the eerie, primal setting of his arrival on Earth through a transition from sensory confusion to visceral horror. The lighting must balance the deep darkness of the Arizona cave with the localized glow of a cha...",
+    "Establish the protagonist's disorientation and the eerie, primal setting of his arrival on Earth through a transition from sensory confusion to visceral horror. The lighting must balance the deep shadows of the cave with the specific glow of the charcoal bu...",
     "John Carter awakens in a dark Arizona cave, confused by his stiff clothing. He discovers the macabre sight of a mummified woman near a charcoal burner with green powder, surrounded by hanging human skeletons. **Participating Characters:** - John Carter **Pa...",
     "Confusion $\\rightarrow$ Horror/Dread **Likely Visual Coverage Families:** - Extreme close-ups of eyes/breathing (disorientation) - Low-angle medium shots of the mummified figure and skeletons (horror) - Macro shots of...",
     "Extreme close-ups (eyes/breathing) for disorientation",
     "Low-angle medium shots (mummified figure/skeletons) for horror",
-    "Macro shots (green powder/charcoal burner) for detail"
+    "Macro shots (green powder/charcoal burner)"
   ],
   "metadata": {
     "artifact_id": "CH028_SC001_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "e04890937c674358fbf15df57bdafe36b6ea495d",
+    "source_fingerprint": "18e14797572bf6e0e5cf8056d0d3ed64efc2d8c9",
     "created_at_utc": "2026-04-22T03:57:27.965629+00:00",
-    "updated_at_utc": "2026-04-22T03:57:27.965629+00:00",
+    "updated_at_utc": "2026-04-22T16:08:56.581210+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH028_SC001",
-        "version": "f8b582b1c18090908d528ab92965fb0f7bee260c"
+        "version": "bec0ce1a29c20d15cc44929fb5fdb2bac1392ec4"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH028_SC001",
+        "version": "242798be04f477ddc123934d14a5d217338cce20"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH028_SC001",
-        "version": "ff8838b2bb6f1b507c4765d0216258634cefa956"
+        "version": "cc1522703c67144c0d5cae7acb6a9adba5a26bd0"
       }
     ],
     "locked_fields": {},
@@ -117,6 +122,11 @@
         "timestamp_utc": "2026-04-22T03:57:57.629949+00:00",
         "action": "synthesized",
         "source_fingerprint": "e04890937c674358fbf15df57bdafe36b6ea495d"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:09:23.266130+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "18e14797572bf6e0e5cf8056d0d3ed64efc2d8c9"
       }
     ]
   }
