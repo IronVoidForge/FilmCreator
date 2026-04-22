@@ -1,0 +1,1770 @@
+# Descriptor Review Queue
+
+## Character
+
+- `DESC_CHAR_apache_warriors`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_ape_man_1`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_ape_man_2`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_bull_ape`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_bull_ape_mate`
+  - status=resolved_into
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_chieftain`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_colossal_ape_creature`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_dead_friend`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_former_self`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_green_martians`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_james_k_powell`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_john_carter`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_martian_leader`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_martian_mounts`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_martian_warrior`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_martian_warrior_leader`
+  - status=resolved_into
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_martian_warriors`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_protagonist`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_sola`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_tars_tarkas`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_the_chieftain`
+  - status=resolved_into
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_the_colossal_creature`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_the_watch_dog`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_watch_thing`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+- `DESC_CHAR_watchdog`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+  - sex_unresolved
+
+## Environment
+
+- `DESC_ENV_ancient_cliffside_cave`
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+- `DESC_ENV_ancient_martian_city_plaza`
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+- `DESC_ENV_ancient_tableland_city`
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+- `DESC_ENV_apache_plateau_camp`
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+- `DESC_ENV_arizona_gold_vein_claim`
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+- `DESC_ENV_arizona_mountain_cave`
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+- `DESC_ENV_arizona_mountain_cave_ledge`
+  - status=resolved_into
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+  - low_confidence_spatial_fields
+- `DESC_ENV_arizona_mountain_mining_site`
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+- `DESC_ENV_captive_chamber_murals`
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+- `DESC_ENV_circular_moss_basin`
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+- `DESC_ENV_deep_space_void`
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+- `DESC_ENV_grand_audience_chamber`
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+- `DESC_ENV_marble_audience_chamber`
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+- `DESC_ENV_martian_city_outskirts`
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+- `DESC_ENV_martian_city_plaza`
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+- `DESC_ENV_martian_city_streets`
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+- `DESC_ENV_martian_distant_hills`
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+- `DESC_ENV_martian_interior_chamber`
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+- `DESC_ENV_martian_sleeping_chamber`
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+- `DESC_ENV_martian_sleeping_quarters`
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+- `DESC_ENV_rocky_gorge_canyon`
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+- `DESC_ENV_valley_overlook_exterior`
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+- `DESC_ENV_vast_cosmic_void`
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_geography
+  - generated_field_placeholder_architecture
+  - generated_field_placeholder_pathways
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_weather_or_atmosphere
+  - generated_field_placeholder_foreground_midground_background
+  - generated_field_placeholder_depth_cues
+
+## Key_Item
+
+- `DESC_ITEM_spear`
+  - generated_field_placeholder_shape
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_color_palette
+  - generated_field_placeholder_ornamentation
+  - generated_field_placeholder_condition_or_wear
+  - generated_field_placeholder_holder_or_user_notes
+  - generated_field_placeholder_symbolic_role
+- `DESC_ITEM_the_spear`
+  - generated_field_placeholder_shape
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_color_palette
+  - generated_field_placeholder_ornamentation
+  - generated_field_placeholder_condition_or_wear
+  - generated_field_placeholder_holder_or_user_notes
+  - generated_field_placeholder_symbolic_role
+- `DESC_ITEM_key`
+  - generated_field_placeholder_shape
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_color_palette
+  - generated_field_placeholder_ornamentation
+  - generated_field_placeholder_condition_or_wear
+  - generated_field_placeholder_holder_or_user_notes
+  - generated_field_placeholder_symbolic_role
+- `DESC_ITEM_the_key`
+  - generated_field_placeholder_shape
+  - generated_field_placeholder_scale
+  - generated_field_placeholder_materials
+  - generated_field_placeholder_color_palette
+  - generated_field_placeholder_ornamentation
+  - generated_field_placeholder_condition_or_wear
+  - generated_field_placeholder_holder_or_user_notes
+  - generated_field_placeholder_symbolic_role
+
+## Scene
+
+- `DESC_CH001_SC001`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH001_SC002`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH001_SC003`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH001_SC004`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH001_SC005`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH002_SC001`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH002_SC002`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH002_SC003`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH002_SC004`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH002_SC005`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH003_SC001`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH003_SC002`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH003_SC003`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH003_SC004`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH003_SC005`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH004_SC001`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH004_SC002`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH004_SC003`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH004_SC004`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH004_SC005`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH005_SC001`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH005_SC002`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH005_SC003`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH005_SC004`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH006_SC001`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH006_SC002`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH006_SC003`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+- `DESC_CH006_SC004`
+  - generated_field_placeholder_key_items
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+  - generated_field_placeholder_dialogue_relevance
+
+## Shot
+
+- `DESC_CH001_SC001_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH001_SC001_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH001_SC001_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH001_SC002_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH001_SC002_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH001_SC002_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH001_SC003_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH001_SC003_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH001_SC003_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH001_SC003_SH004`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH001_SC004_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH001_SC004_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH001_SC004_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH001_SC004_SH004`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH001_SC005_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH001_SC005_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH001_SC005_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH001_SC005_SH004`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH001_SC005_SH005`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH002_SC001_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH002_SC001_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH002_SC001_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH002_SC002_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH002_SC002_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH002_SC002_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH002_SC002_SH004`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH002_SC002_SH005`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH002_SC003_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH002_SC003_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH002_SC003_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH002_SC004_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH002_SC004_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH002_SC004_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH002_SC005_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH002_SC005_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH002_SC005_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH002_SC005_SH004`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH003_SC001_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH003_SC001_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH003_SC001_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH003_SC002_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH003_SC002_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH003_SC002_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH003_SC003_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH003_SC003_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH003_SC003_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH003_SC004_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH003_SC004_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH003_SC004_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH003_SC004_SH004`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH003_SC005_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH003_SC005_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH003_SC005_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH003_SC005_SH004`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH003_SC005_SH005`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH004_SC001_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH004_SC001_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH004_SC001_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH004_SC002_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH004_SC002_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH004_SC002_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH004_SC002_SH004`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH004_SC003_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH004_SC003_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH004_SC003_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH004_SC003_SH004`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH004_SC003_SH005`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH004_SC004_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH004_SC004_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH004_SC004_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH004_SC004_SH004`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH004_SC005_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH004_SC005_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH004_SC005_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH005_SC001_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH005_SC001_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH005_SC001_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH005_SC001_SH004`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH005_SC002_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH005_SC002_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH005_SC002_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH005_SC003_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH005_SC003_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH005_SC003_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH005_SC003_SH004`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH005_SC004_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH005_SC004_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH005_SC004_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH005_SC004_SH004`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH006_SC001_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH006_SC001_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH006_SC001_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH006_SC001_SH004`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH006_SC002_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH006_SC002_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH006_SC002_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH006_SC002_SH004`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH006_SC002_SH005`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH006_SC003_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH006_SC003_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH006_SC003_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH006_SC004_SH001`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH006_SC004_SH002`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+- `DESC_CH006_SC004_SH003`
+  - generated_field_placeholder_subject_positions
+  - generated_field_placeholder_pose_notes
+  - generated_field_placeholder_gaze_direction
+  - generated_field_placeholder_background_layers
+  - generated_field_placeholder_foreground_elements
+  - generated_field_placeholder_midground_elements
+  - generated_field_placeholder_depth_cues
+  - generated_field_placeholder_start_state
+  - generated_field_placeholder_end_state
+

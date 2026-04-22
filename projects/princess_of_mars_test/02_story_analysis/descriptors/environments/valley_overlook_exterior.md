@@ -24,14 +24,14 @@
 
 ## Generated Fields
 
-- architecture: canon-compatible best-effort environment architecture
-- depth_cues: canon-compatible best-effort environment depth cues
-- foreground_midground_background: canon-compatible best-effort environment foreground midground background
-- geography: canon-compatible best-effort environment geography
-- materials: canon-compatible best-effort environment materials
-- pathways: canon-compatible best-effort environment pathways
-- scale: canon-compatible best-effort environment scale
-- weather_or_atmosphere: canon-compatible best-effort environment weather or atmosphere
+- architecture: ancient stone and ceremonial architecture
+- depth_cues: strong scale contrast and layered architectural depth
+- foreground_midground_background: anchored foreground details, readable midground action, deep background structures
+- geography: dry open Martian terrain
+- materials: stone, metal, and weathered architectural surfaces
+- pathways: broad processional paths and stairs
+- scale: monumental scale
+- weather_or_atmosphere: dry thin air with still heat
 
 ## Coverage
 
@@ -66,5 +66,5 @@
 - artifact_id: `DESC_ENV_valley_overlook_exterior`
 - status: `generated`
 - source_fingerprint: `5dc4bb5aabab41e90be4cce31c81e7654d43ee3a`
-- created_at_utc: `2026-04-22T04:46:53.746502+00:00`
-- updated_at_utc: `2026-04-22T04:46:53.746502+00:00`
+- created_at_utc: `2026-04-22T18:04:18.536109+00:00`
+- updated_at_utc: `2026-04-22T18:04:18.536109+00:00`
