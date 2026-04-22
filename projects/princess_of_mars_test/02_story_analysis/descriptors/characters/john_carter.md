@@ -35,33 +35,33 @@
 - entity_kind: individual
 - identity_baseline: Human male, Earthling, former Confederate cavalry officer and soldier of fortune.
 - origin_or_historical_context: 1860s American frontier/Confederate military background; transitioned to Martian setting.
-- physical_presence_notes: Human male, Earthling, former Confederate cavalry officer and soldier of fortune. Elderly (in framing narrative) / unknown (active warrior state). heavy creature musculature and nonhuman anatomy bestial, weighty movem...
+- physical_presence_notes: Human male, Earthling, former Confederate cavalry officer and soldier of fortune. Elderly (in framing narrative) / unknown (active warrior state). lean but durable soldier's frame economical military movement with con...
 - recurring_accessories:
   - capable of taming Martian thoats
 - role: Former Confederate cavalry officer, soldier of fortune, warrior.
-- silhouette_notes: Mid-19th century cavalry attire or Martian spoils (silks and furs). heavy creature musculature and nonhuman anatomy Human male, Earthling, former Confederate cavalry officer and soldier of fortune.
+- silhouette_notes: Mid-19th century cavalry attire or Martian spoils (silks and furs). lean but durable soldier's frame Human male, Earthling, former Confederate cavalry officer and soldier of fortune.
 - state_variants:
   - 1860s frontiersman/cavalry officer (Confederate military attire)
   - Martian warrior (wearing silks and furs from defeated chieftains)
 
 ## Generated Fields
 
-- age_range: adult creature
-- build: powerful muscular animal build
-- costume_materials: natural hide, harness, or no costume materials
-- expression_tendency: feral or alert animal focus
-- eye_color: animal eyes with a predatory alertness
-- face_shape: animal skull structure with species-specific proportions
-- facial_hair: not applicable
-- hair_color: hide, fur, or mane coloring matched to the species
-- hair_style: natural animal coat or mane
-- height: large creature scale
-- movement_language: bestial, weighty movement with sudden bursts of force
-- physical_build: heavy creature musculature and nonhuman anatomy
-- posture: animal stance ready to spring or charge
-- sex: animal sex not visually emphasized
-- skin_tone: species-specific hide or fur coloration
-- voice_or_presence_notes: presence reads as dangerous, loud, and primal
+- age_range: adult
+- build: lean battle-tested human build
+- costume_materials: worn cloth, leather, cavalry gear, and salvaged materials
+- expression_tendency: steady, capable, restrained intensity
+- eye_color: dark steady eyes
+- face_shape: weathered angular face
+- facial_hair: clean-shaven or short field stubble
+- hair_color: dark sun-faded hair
+- hair_style: short practical frontier cut
+- height: tall frontier-soldier stature
+- movement_language: economical military movement with confident balance
+- physical_build: lean but durable soldier's frame
+- posture: upright, self-possessed, and ready
+- sex: male
+- skin_tone: sun-weathered human skin
+- voice_or_presence_notes: presence reads as direct, capable, and frontier-hardened
 
 ## Coverage
 
@@ -81,27 +81,12 @@
 
 ## Review
 
-- generated_field_placeholder_sex
-- generated_field_placeholder_age_range
-- generated_field_placeholder_height
-- generated_field_placeholder_build
-- generated_field_placeholder_skin_tone
-- generated_field_placeholder_hair_color
-- generated_field_placeholder_hair_style
-- generated_field_placeholder_eye_color
-- generated_field_placeholder_face_shape
-- generated_field_placeholder_facial_hair
-- generated_field_placeholder_physical_build
-- generated_field_placeholder_movement_language
-- generated_field_placeholder_costume_materials
-- generated_field_placeholder_posture
-- generated_field_placeholder_expression_tendency
-- generated_field_placeholder_voice_or_presence_notes
+- (none)
 
 ## Metadata
 
 - artifact_id: `DESC_CHAR_john_carter`
 - status: `generated`
 - source_fingerprint: `35796161e955bafa01cfa4944a8a19939ad1d921`
-- created_at_utc: `2026-04-22T21:42:45.702115+00:00`
-- updated_at_utc: `2026-04-22T21:42:45.702115+00:00`
+- created_at_utc: `2026-04-22T22:16:59.946939+00:00`
+- updated_at_utc: `2026-04-22T22:16:59.946939+00:00`

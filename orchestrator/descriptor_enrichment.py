@@ -1007,12 +1007,20 @@ def _write_review_queue(path: Path, queue: list[dict[str, Any]], *, title: str) 
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def _descriptor_field_state(origin: str, value: Any) -> str:
+def _field_accepts_none_value(field_name: str | None) -> bool:
+    normalized = (field_name or "").strip().lower()
+    return normalized in {"facial_hair"}
+
+
+def _descriptor_field_state(origin: str, value: Any, *, field_name: str | None = None) -> str:
     if value is None:
         return "unknown"
     if isinstance(value, str):
         normalized = value.strip().lower()
-        if not normalized or normalized in {"unknown", "none", "(none)", "n/a"}:
+        missing_tokens = {"unknown", "(none)", "n/a"}
+        if not normalized or normalized in missing_tokens:
+            return "unknown"
+        if normalized == "none" and not _field_accepts_none_value(field_name):
             return "unknown"
     if origin in EXPLICIT_ORIGINS:
         return "explicit"
@@ -1031,12 +1039,17 @@ def _descriptor_field_confidence(state: str, value: Any) -> str:
     return "low"
 
 
-def _descriptor_value_is_unknown(value: Any) -> bool:
+def _descriptor_value_is_unknown(value: Any, *, field_name: str | None = None) -> bool:
     if value is None:
         return True
     if isinstance(value, str):
         normalized = value.strip().lower()
-        return not normalized or normalized in {"unknown", "none", "(none)", "n/a"}
+        missing_tokens = {"unknown", "(none)", "n/a"}
+        if not normalized or normalized in missing_tokens:
+            return True
+        if normalized == "none":
+            return not _field_accepts_none_value(field_name)
+        return False
     if isinstance(value, list):
         return not any(str(item).strip() for item in value)
     return False
@@ -1067,7 +1080,7 @@ def _add_field(
         if not value:
             return
     field_values[key] = value
-    state = _descriptor_field_state(origin, value)
+    state = _descriptor_field_state(origin, value, field_name=key)
     field_states[key] = state
     field_confidence[key] = _descriptor_field_confidence(state, value)
     field_origin[key] = origin
@@ -1108,7 +1121,7 @@ def _split_descriptor_field_views(
 
     for key, value in field_values.items():
         origin = field_origin.get(key, "fallback")
-        state = field_states.get(key, _descriptor_field_state(origin, value))
+        state = field_states.get(key, _descriptor_field_state(origin, value, field_name=key))
         confidence = field_confidence.get(key, _descriptor_field_confidence(state, value))
         sources = field_sources.get(key, [])
         if value is None or state == "unknown":
@@ -2026,7 +2039,7 @@ def _complete_missing_generated_fields(
         evidence_summary[:] = _coerce_string_list(llm_payload.get("evidence_summary", []), evidence_summary)
 
     for field_name in missing_fields:
-        if _descriptor_value_is_unknown(base_fields.get(field_name)):
+        if _descriptor_value_is_unknown(base_fields.get(field_name), field_name=field_name):
             base_fields[field_name] = _best_effort_generated_value(
                 entity_type,
                 field_name,
@@ -2039,7 +2052,7 @@ def _complete_missing_generated_fields(
             field_origin[field_name] = "llm_generated"
             if field_name not in inferred_fields:
                 inferred_fields.append(field_name)
-        if _descriptor_value_is_unknown(base_fields.get(field_name)) or (
+        if _descriptor_value_is_unknown(base_fields.get(field_name), field_name=field_name) or (
             entity_type == CHARACTER_ENTITY_TYPE and _looks_like_generic_character_bundle(base_fields.get(field_name))
         ):
             review_flags.append(f"generated_field_placeholder_{field_name}")
@@ -2104,7 +2117,7 @@ def _finalize_descriptor(
     field_confidence: dict[str, str] = {}
     for key, value in field_values.items():
         origin = field_origin.get(key, "fallback")
-        state = _descriptor_field_state(origin, value)
+        state = _descriptor_field_state(origin, value, field_name=key)
         if key in inferred_fields and state == "explicit":
             state = "inferred"
         if value is None or state == "unknown":

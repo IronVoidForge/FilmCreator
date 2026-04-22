@@ -69,26 +69,12 @@
 
 ## Review
 
-- generated_field_placeholder_sex
-- generated_field_placeholder_age_range
-- generated_field_placeholder_height
-- generated_field_placeholder_build
-- generated_field_placeholder_skin_tone
-- generated_field_placeholder_hair_color
-- generated_field_placeholder_hair_style
-- generated_field_placeholder_eye_color
-- generated_field_placeholder_face_shape
-- generated_field_placeholder_facial_hair
-- generated_field_placeholder_age_presence
-- generated_field_placeholder_costume_materials
-- generated_field_placeholder_posture
-- generated_field_placeholder_expression_tendency
-- generated_field_placeholder_voice_or_presence_notes
+- (none)
 
 ## Metadata
 
 - artifact_id: `DESC_CHAR_lorquas_ptomel`
 - status: `generated`
 - source_fingerprint: `a8144b8c592c1a887a7f34679f5c107ee1b367ec`
-- created_at_utc: `2026-04-22T21:43:10.915300+00:00`
-- updated_at_utc: `2026-04-22T21:43:10.915300+00:00`
+- created_at_utc: `2026-04-22T22:17:26.717557+00:00`
+- updated_at_utc: `2026-04-22T22:17:26.717557+00:00`
