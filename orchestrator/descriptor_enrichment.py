@@ -548,6 +548,84 @@ def _character_specific_generated_default(
     return None
 
 
+def _looks_like_generic_character_bundle(value: Any) -> bool:
+    if not isinstance(value, str):
+        return False
+    normalized = _normalize_text(value).lower()
+    generic_values = {
+        "average-tall",
+        "lean athletic build",
+        "weathered light-to-medium skin",
+        "dark brown",
+        "practical short hair",
+        "dark eyes",
+        "angular face",
+        "clean-shaven or light stubble",
+        "worn cloth, leather, and practical field materials",
+        "upright and ready",
+        "focused and self-controlled",
+        "canon-compatible best-effort character height",
+        "canon-compatible best-effort character build",
+        "canon-compatible best-effort character skin tone",
+        "canon-compatible best-effort character hair color",
+        "canon-compatible best-effort character hair style",
+        "canon-compatible best-effort character eye color",
+        "canon-compatible best-effort character face shape",
+        "canon-compatible best-effort character facial hair",
+        "canon-compatible best-effort character costume materials",
+        "canon-compatible best-effort character posture",
+        "canon-compatible best-effort character expression tendency",
+    }
+    return normalized in generic_values
+
+
+def _rewrite_character_generated_fields(
+    generated_fields: dict[str, Any],
+    *,
+    base_fields: dict[str, Any],
+    evidence_summary: list[str],
+    canonical_id: str,
+    display_name: str,
+) -> tuple[dict[str, Any], list[str]]:
+    profile = _character_profile(base_fields, evidence_summary, canonical_id, display_name)
+    rewritten = dict(generated_fields)
+    rewrite_flags: list[str] = []
+
+    def replace(field_name: str, reason: str) -> None:
+        rewritten[field_name] = _character_specific_generated_default(
+            field_name,
+            base_fields={**base_fields, **rewritten},
+            evidence_summary=evidence_summary,
+            canonical_id=canonical_id,
+            display_name=display_name,
+        ) or _best_effort_generated_value(
+            CHARACTER_ENTITY_TYPE,
+            field_name,
+            rewritten.get(field_name),
+            base_fields={**base_fields, **rewritten},
+            evidence_summary=evidence_summary,
+            canonical_id=canonical_id,
+            display_name=display_name,
+        )
+        rewrite_flags.append(reason)
+
+    for field_name, value in list(rewritten.items()):
+        if _looks_like_generic_character_bundle(value):
+            replace(field_name, f"character_generated_field_rewritten_{field_name}")
+            continue
+        normalized = _normalize_text(str(value)).lower() if isinstance(value, str) else ""
+        if profile["is_feminine_coded"] and field_name == "facial_hair" and any(token in normalized for token in ["stubble", "beard", "mustache", "moustache"]):
+            replace(field_name, "character_gender_contradiction_rewritten")
+        elif profile["is_green_martian"] and field_name in {"skin_tone", "hair_color", "hair_style", "facial_hair"}:
+            if any(token in normalized for token in ["light-to-medium", "dark brown", "short hair", "stubble", "clean-shaven"]):
+                replace(field_name, f"character_species_contradiction_rewritten_{field_name}")
+        elif profile["is_creature"] and field_name in {"hair_style", "face_shape", "facial_hair", "skin_tone", "hair_color"}:
+            if any(token in normalized for token in ["short hair", "angular face", "clean-shaven", "stubble", "dark brown", "light-to-medium"]):
+                replace(field_name, f"character_creature_contradiction_rewritten_{field_name}")
+
+    return rewritten, _ordered_unique(rewrite_flags)
+
+
 def _load_json_file(path: Path) -> dict[str, Any]:
     payload = read_json(path)
     return payload if isinstance(payload, dict) else {}
@@ -1849,7 +1927,17 @@ def _complete_missing_generated_fields(
     )
 
     if llm_payload:
-        for field_name, value in (llm_payload.get("generated_field_values") or {}).items():
+        generated_field_values = dict(llm_payload.get("generated_field_values") or {})
+        if entity_type == CHARACTER_ENTITY_TYPE and generated_field_values:
+            generated_field_values, rewrite_flags = _rewrite_character_generated_fields(
+                generated_field_values,
+                base_fields=base_fields,
+                evidence_summary=evidence_summary,
+                canonical_id=canonical_id,
+                display_name=display_name,
+            )
+            review_flags.extend(rewrite_flags)
+        for field_name, value in generated_field_values.items():
             if value and field_name in missing_fields:
                 base_fields[field_name] = value
                 field_origin[field_name] = "llm_generated"

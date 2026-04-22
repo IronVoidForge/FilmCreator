@@ -82,6 +82,22 @@ class ShotPackage:
     target_seconds: float = 5.0
     previous_shot_id: str = ""
     next_shot_id: str = ""
+    primary_subject: str = ""
+    secondary_subjects: list[str] = field(default_factory=list)
+    start_state: str = ""
+    end_state: str = ""
+    action_during_shot: str = ""
+    action_continues_from: str = ""
+    action_hands_off_to: str = ""
+    subject_blocking: list[str] = field(default_factory=list)
+    camera_relative_positions: list[str] = field(default_factory=list)
+    gaze_directions: list[str] = field(default_factory=list)
+    environment_subzone: str = ""
+    key_visible_environment_features: list[str] = field(default_factory=list)
+    continuity_from_previous_shot: str = ""
+    continuity_to_next_shot: str = ""
+    pose_anchor_frame: str = ""
+    pose_end_frame: str = ""
     characters_in_frame: list[ShotReference] = field(default_factory=list)
     environment: ShotReference | None = None
     beat_ids: list[str] = field(default_factory=list)
@@ -100,6 +116,22 @@ class ShotPackage:
             "shot_order": self.shot_order,
             "previous_shot_id": self.previous_shot_id,
             "next_shot_id": self.next_shot_id,
+            "primary_subject": self.primary_subject,
+            "secondary_subjects": self.secondary_subjects,
+            "start_state": self.start_state,
+            "end_state": self.end_state,
+            "action_during_shot": self.action_during_shot,
+            "action_continues_from": self.action_continues_from,
+            "action_hands_off_to": self.action_hands_off_to,
+            "subject_blocking": self.subject_blocking,
+            "camera_relative_positions": self.camera_relative_positions,
+            "gaze_directions": self.gaze_directions,
+            "environment_subzone": self.environment_subzone,
+            "key_visible_environment_features": self.key_visible_environment_features,
+            "continuity_from_previous_shot": self.continuity_from_previous_shot,
+            "continuity_to_next_shot": self.continuity_to_next_shot,
+            "pose_anchor_frame": self.pose_anchor_frame,
+            "pose_end_frame": self.pose_end_frame,
             "shot_title": self.shot_title,
             "shot_type": self.shot_type,
             "camera_description": self.camera_description,
@@ -608,6 +640,59 @@ def _prompt_seed(
     )
 
 
+def _coerce_scene_beat(raw_beat: dict[str, Any], beat_summary: str) -> dict[str, Any]:
+    return {
+        "summary": beat_summary,
+        "action_start": _first_nonempty(str(raw_beat.get("action_start", "")), str(raw_beat.get("start", "")), fallback=beat_summary),
+        "action_end": _first_nonempty(str(raw_beat.get("action_end", "")), str(raw_beat.get("end", "")), fallback=beat_summary),
+        "active_subjects": _coerce_string_list(raw_beat.get("active_subjects", [])),
+        "passive_subjects": _coerce_string_list(raw_beat.get("passive_subjects", [])),
+        "spatial_context": _first_nonempty(str(raw_beat.get("spatial_context", "")), str(raw_beat.get("continuity_focus", "")), fallback=""),
+        "blocking_hint": _first_nonempty(str(raw_beat.get("blocking_hint", "")), str(raw_beat.get("coverage_hint", "")), fallback=""),
+        "environment_subzone": _first_nonempty(str(raw_beat.get("environment_subzone", "")), fallback=""),
+        "coverage_priority": _first_nonempty(str(raw_beat.get("coverage_priority", "")), fallback=""),
+        "handoff_to_next": _first_nonempty(str(raw_beat.get("handoff_to_next", "")), fallback=""),
+    }
+
+
+def _shot_subject_blocking(scene_contract: dict[str, Any], beat_payload: dict[str, Any], characters: list[ShotReference]) -> list[str]:
+    blocking: list[str] = []
+    if beat_payload.get("blocking_hint"):
+        blocking.append(str(beat_payload["blocking_hint"]))
+    if beat_payload.get("spatial_context"):
+        blocking.append(str(beat_payload["spatial_context"]))
+    for ref in characters[:3]:
+        label = ref.display_name or ref.label
+        if label:
+            blocking.append(f"{label} remains readable within the active playing space.")
+    return _ordered_unique([item for item in blocking if item])[:4]
+
+
+def _camera_relative_positions(characters: list[ShotReference], environment: ShotReference, beat_payload: dict[str, Any]) -> list[str]:
+    positions: list[str] = []
+    subzone = str(beat_payload.get("environment_subzone", "")).strip()
+    if subzone:
+        positions.append(f"Camera anchors the action inside the {subzone}.")
+    env_name = environment.display_name or environment.label
+    if env_name:
+        positions.append(f"Background depth should keep {env_name} legible as the location anchor.")
+    for index, ref in enumerate(characters[:2], start=1):
+        label = ref.display_name or ref.label
+        positions.append(f"Subject {index}: {label} remains visually readable against the environment scale.")
+    return positions[:4]
+
+
+def _visible_environment_features(environment: ShotReference, beat_payload: dict[str, Any]) -> list[str]:
+    features: list[str] = []
+    subzone = str(beat_payload.get("environment_subzone", "")).strip()
+    if subzone:
+        features.append(subzone)
+    notes = str(environment.notes or "").strip()
+    if notes:
+        features.append(_compact_snippet(notes, limit=120))
+    return _ordered_unique([item for item in features if item])[:3]
+
+
 def _shot_title_from_beat(shot_type: str, beat_summary: str, shot_order: int) -> str:
     snippet = _compact_snippet(beat_summary, limit=54)
     if snippet:
@@ -620,9 +705,22 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
     if not isinstance(beats, list) or not beats:
         beats = [{"beat_id": "BT001", "summary": scene_contract.get("summary", "") or scene_contract.get("production_intent", "") or scene_contract.get("scene_title", "")}]
     blueprints: list[dict[str, Any]] = []
+    previous_end_state = _first_nonempty(str(scene_contract.get("scene_start_state", "")), str(scene_contract.get("summary", "")), fallback="")
     for index, raw_beat in enumerate(beats, start=1):
         beat_id = f"BT{index:03d}"
         beat_summary = ""
+        beat_payload: dict[str, Any] = {
+            "summary": "",
+            "action_start": "",
+            "action_end": "",
+            "active_subjects": [],
+            "passive_subjects": [],
+            "spatial_context": "",
+            "blocking_hint": "",
+            "environment_subzone": "",
+            "coverage_priority": "",
+            "handoff_to_next": "",
+        }
         if isinstance(raw_beat, dict):
             beat_id = str(raw_beat.get("beat_id", beat_id)).strip().upper() or beat_id
             beat_summary = _first_nonempty(
@@ -630,8 +728,12 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
                 str(raw_beat.get("markdown", "")),
                 fallback="",
             )
+            beat_payload = _coerce_scene_beat(raw_beat, beat_summary)
         elif isinstance(raw_beat, str):
             beat_summary = raw_beat.strip()
+            beat_payload["summary"] = beat_summary
+            beat_payload["action_start"] = beat_summary
+            beat_payload["action_end"] = beat_summary
         environment = _select_environment_ref(scene_contract, project_dir, scene_binding=scene_binding, beat_id=beat_id)
         shot_type = _shot_type_from_beat(scene_contract, beat_summary, index)
         characters = _selected_characters(scene_contract, project_dir, beat_summary, index, scene_binding=scene_binding)
@@ -652,11 +754,36 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
             beat_summary,
             scene_contract.get("unresolved_questions", []),
         )
+        primary_subject = beat_payload["active_subjects"][0] if beat_payload["active_subjects"] else (_first_nonempty(characters[0].display_name if characters else "", characters[0].label if characters else "", fallback="scene subject"))
+        start_state = _first_nonempty(str(beat_payload.get("action_start", "")), previous_end_state, beat_summary, fallback=beat_summary)
+        end_state = _first_nonempty(str(beat_payload.get("action_end", "")), beat_summary, fallback=start_state)
+        action_continues_from = previous_end_state if index > 1 else _first_nonempty(str(scene_contract.get("scene_start_state", "")), beat_summary, fallback="")
+        action_hands_off_to = _first_nonempty(str(beat_payload.get("handoff_to_next", "")), end_state, fallback="")
+        subject_blocking = _shot_subject_blocking(scene_contract, beat_payload, characters)
+        camera_positions = _camera_relative_positions(characters, environment, beat_payload)
+        subzone = _first_nonempty(str(beat_payload.get("environment_subzone", "")), *scene_contract.get("environment_subzones", []), fallback="")
+        visible_environment_features = _visible_environment_features(environment, beat_payload)
         blueprints.append(
             {
                 "shot_id": f"SH{index:03d}",
                 "shot_order": index,
                 "beat_ids": [beat_id],
+                "primary_subject": primary_subject,
+                "secondary_subjects": beat_payload.get("passive_subjects", []),
+                "start_state": start_state,
+                "end_state": end_state,
+                "action_during_shot": beat_summary,
+                "action_continues_from": action_continues_from,
+                "action_hands_off_to": action_hands_off_to,
+                "subject_blocking": subject_blocking,
+                "camera_relative_positions": camera_positions,
+                "gaze_directions": [f"{primary_subject} focuses toward the active scene action."] if primary_subject else [],
+                "environment_subzone": subzone,
+                "key_visible_environment_features": visible_environment_features,
+                "continuity_from_previous_shot": action_continues_from,
+                "continuity_to_next_shot": action_hands_off_to,
+                "pose_anchor_frame": start_state,
+                "pose_end_frame": end_state,
                 "shot_title": shot_title,
                 "shot_type": shot_type,
                 "camera_description": camera_description,
@@ -668,6 +795,7 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
                 "shot_notes": _compact_snippet(beat_summary or scene_contract.get("summary", ""), limit=220),
             }
         )
+        previous_end_state = end_state
     return blueprints
 
 
@@ -748,8 +876,13 @@ def _load_shot_planning_evidence(
         _compact_snippet(str(scene_contract.get("production_intent", "")), limit=260),
         _compact_snippet(str(scene_contract.get("summary", "")), limit=260),
         _compact_snippet(str(scene_contract.get("emotional_arc", "")), limit=220),
+        _compact_snippet(str(scene_contract.get("scene_start_state", "")), limit=220),
+        _compact_snippet(str(scene_contract.get("scene_end_state", "")), limit=220),
+        _compact_snippet(str(scene_contract.get("dominant_action_line", "")), limit=220),
         *[_compact_snippet(str(item), limit=220) for item in _coerce_string_list(scene_contract.get("visual_coverage_families", []))[:4]],
         *[_compact_snippet(str(item), limit=220) for item in _coerce_string_list(scene_contract.get("continuity_constraints", []))[:4]],
+        *[_compact_snippet(str(item), limit=220) for item in _coerce_string_list(scene_contract.get("scene_spatial_layout", []))[:3]],
+        *[_compact_snippet(str(item), limit=220) for item in _coerce_string_list(scene_contract.get("character_spatial_map", []))[:3]],
     ]
     scene_evidence = [item for item in scene_evidence if item]
 
@@ -793,6 +926,7 @@ PRIORITIES:
 2. tighten camera and composition language
 3. keep each shot compact and production-usable
 4. preserve continuity constraints and character/environment grounding
+5. make start state, end state, blocking, and action handoff explicit enough to stage a frame
 
 PROJECT:
 {project_slug}
@@ -832,6 +966,15 @@ shot_title: <short shot title>
 shot_order: 1
 beat_ids:
 - BT001
+primary_subject: <main subject driving the shot>
+secondary_subjects:
+- subject 2
+- subject 3
+start_state: <explicit visual/action state at the start of the shot>
+end_state: <explicit visual/action state at the end of the shot>
+action_during_shot: <what the shot is actively covering>
+action_continues_from: <what visual/action state this inherits>
+action_hands_off_to: <what the next shot should inherit>
 shot_type: <shot type>
 camera_description: <camera note>
 composition: <composition note>
@@ -839,6 +982,20 @@ characters_in_frame:
 - john_carter
 - tars_tarkas
 environment: <environment reference or label>
+environment_subzone: <specific playable subzone inside the environment>
+subject_blocking:
+- character placement note
+- staging note
+camera_relative_positions:
+- camera/subject relation note
+gaze_directions:
+- eyeline note
+key_visible_environment_features:
+- visible set anchor
+continuity_from_previous_shot: <specific state inherited from previous shot or scene start>
+continuity_to_next_shot: <specific state handed off to the next shot>
+pose_anchor_frame: <clear pose description for image generation>
+pose_end_frame: <clear ending pose description for continuity>
 continuity_constraints:
 - constraint 1
 - constraint 2
@@ -865,12 +1022,28 @@ shot_notes: <optional short note>
                     "shot_id": _first_nonempty(record.fields.get("shot_id"), fallback=""),
                     "shot_order": int(record.fields.get("shot_order", "0") or "0") if str(record.fields.get("shot_order", "")).isdigit() else None,
                     "beat_ids": _coerce_string_list(lists.get("beat_ids"), scalars.get("beat_ids")),
+                    "primary_subject": _first_nonempty(scalars.get("primary_subject"), fallback=""),
+                    "secondary_subjects": _coerce_string_list(lists.get("secondary_subjects"), scalars.get("secondary_subjects")),
+                    "start_state": _first_nonempty(scalars.get("start_state"), fallback=""),
+                    "end_state": _first_nonempty(scalars.get("end_state"), fallback=""),
+                    "action_during_shot": _first_nonempty(scalars.get("action_during_shot"), fallback=""),
+                    "action_continues_from": _first_nonempty(scalars.get("action_continues_from"), fallback=""),
+                    "action_hands_off_to": _first_nonempty(scalars.get("action_hands_off_to"), fallback=""),
                     "shot_title": _first_nonempty(scalars.get("shot_title"), fallback=""),
                     "shot_type": _first_nonempty(scalars.get("shot_type"), fallback=""),
                     "camera_description": _first_nonempty(scalars.get("camera_description"), fallback=""),
                     "composition": _first_nonempty(scalars.get("composition"), fallback=""),
                     "characters_in_frame": _coerce_string_list(lists.get("characters_in_frame"), scalars.get("characters_in_frame")),
                     "environment": _first_nonempty(scalars.get("environment"), fallback=""),
+                    "environment_subzone": _first_nonempty(scalars.get("environment_subzone"), fallback=""),
+                    "subject_blocking": _coerce_string_list(lists.get("subject_blocking"), scalars.get("subject_blocking")),
+                    "camera_relative_positions": _coerce_string_list(lists.get("camera_relative_positions"), scalars.get("camera_relative_positions")),
+                    "gaze_directions": _coerce_string_list(lists.get("gaze_directions"), scalars.get("gaze_directions")),
+                    "key_visible_environment_features": _coerce_string_list(lists.get("key_visible_environment_features"), scalars.get("key_visible_environment_features")),
+                    "continuity_from_previous_shot": _first_nonempty(scalars.get("continuity_from_previous_shot"), fallback=""),
+                    "continuity_to_next_shot": _first_nonempty(scalars.get("continuity_to_next_shot"), fallback=""),
+                    "pose_anchor_frame": _first_nonempty(scalars.get("pose_anchor_frame"), fallback=""),
+                    "pose_end_frame": _first_nonempty(scalars.get("pose_end_frame"), fallback=""),
                     "continuity_constraints": _coerce_string_list(lists.get("continuity_constraints"), scalars.get("continuity_constraints")),
                     "prompt_seed": _first_nonempty(scalars.get("prompt_seed"), freeform[0] if freeform else None, fallback=""),
                     "shot_notes": _first_nonempty(scalars.get("shot_notes"), fallback=""),
@@ -888,12 +1061,28 @@ def _parse_shot_plan_blueprint(payload: dict[str, Any]) -> dict[str, Any]:
     return {
         "shot_id": str(payload.get("shot_id", "")),
         "shot_order": int(payload.get("shot_order", 0) or 0),
+        "primary_subject": str(payload.get("primary_subject", "")),
+        "secondary_subjects": _coerce_string_list(payload.get("secondary_subjects", [])),
+        "start_state": str(payload.get("start_state", "")),
+        "end_state": str(payload.get("end_state", "")),
+        "action_during_shot": str(payload.get("action_during_shot", "")),
+        "action_continues_from": str(payload.get("action_continues_from", "")),
+        "action_hands_off_to": str(payload.get("action_hands_off_to", "")),
         "shot_title": str(payload.get("shot_title", "")),
         "shot_type": str(payload.get("shot_type", "")),
         "camera_description": str(payload.get("camera_description", "")),
         "composition": str(payload.get("composition", "")),
         "target_seconds": _coerce_float(payload.get("target_seconds"), payload.get("estimated_seconds"), fallback=0.0) or None,
         "beat_ids": _coerce_string_list(payload.get("beat_ids", [])),
+        "subject_blocking": _coerce_string_list(payload.get("subject_blocking", [])),
+        "camera_relative_positions": _coerce_string_list(payload.get("camera_relative_positions", [])),
+        "gaze_directions": _coerce_string_list(payload.get("gaze_directions", [])),
+        "environment_subzone": str(payload.get("environment_subzone", "")),
+        "key_visible_environment_features": _coerce_string_list(payload.get("key_visible_environment_features", [])),
+        "continuity_from_previous_shot": str(payload.get("continuity_from_previous_shot", "")),
+        "continuity_to_next_shot": str(payload.get("continuity_to_next_shot", "")),
+        "pose_anchor_frame": str(payload.get("pose_anchor_frame", "")),
+        "pose_end_frame": str(payload.get("pose_end_frame", "")),
         "characters_in_frame": [item for item in payload.get("characters_in_frame", []) if isinstance(item, dict)],
         "environment": payload.get("environment", {}) if isinstance(payload.get("environment"), dict) else {},
         "continuity_constraints": _coerce_string_list(payload.get("continuity_constraints", [])),
@@ -978,9 +1167,45 @@ def _render_shot_package_markdown(package: ShotPackage) -> str:
         "",
         package.composition or "(none)",
         "",
-        "## Characters",
+        "## Action State",
+        "",
+        f"- primary_subject: {package.primary_subject or '(none)'}",
+        f"- start_state: {package.start_state or '(none)'}",
+        f"- end_state: {package.end_state or '(none)'}",
+        f"- action_during_shot: {package.action_during_shot or '(none)'}",
+        f"- action_continues_from: {package.action_continues_from or '(none)'}",
+        f"- action_hands_off_to: {package.action_hands_off_to or '(none)'}",
+        "",
+        "## Blocking",
         "",
     ]
+    if package.subject_blocking:
+        lines.extend([f"- {item}" for item in package.subject_blocking])
+    else:
+        lines.append("- (none)")
+    lines.extend(
+        [
+            "",
+            "## Camera Relation",
+            "",
+        ]
+    )
+    if package.camera_relative_positions:
+        lines.extend([f"- {item}" for item in package.camera_relative_positions])
+    else:
+        lines.append("- (none)")
+    lines.extend(
+        [
+            "",
+            "## Posing",
+            "",
+            f"- pose_anchor_frame: {package.pose_anchor_frame or '(none)' }",
+            f"- pose_end_frame: {package.pose_end_frame or '(none)' }",
+            "",
+        "## Characters",
+        "",
+        ]
+    )
     if characters:
         lines.extend([f"- {ref.display_name or ref.label} (`{ref.canonical_id or ref.label}`)" for ref in characters])
     else:
@@ -991,6 +1216,7 @@ def _render_shot_package_markdown(package: ShotPackage) -> str:
             "## Environment",
             "",
             f"- {environment.display_name or environment.label} (`{environment.canonical_id or environment.label}`)",
+            f"- subzone: {package.environment_subzone or '(none)' }",
             "",
             "## Continuity",
             "",
@@ -1251,6 +1477,30 @@ def run_shot_planning(
                 blueprint_payload["shot_title"] = str(blueprint.get("shot_title", ""))
             if not blueprint_payload.get("shot_type"):
                 blueprint_payload["shot_type"] = str(blueprint.get("shot_type", "medium"))
+            for key in [
+                "primary_subject",
+                "start_state",
+                "end_state",
+                "action_during_shot",
+                "action_continues_from",
+                "action_hands_off_to",
+                "environment_subzone",
+                "continuity_from_previous_shot",
+                "continuity_to_next_shot",
+                "pose_anchor_frame",
+                "pose_end_frame",
+            ]:
+                if not blueprint_payload.get(key):
+                    blueprint_payload[key] = str(blueprint.get(key, ""))
+            for key in [
+                "secondary_subjects",
+                "subject_blocking",
+                "camera_relative_positions",
+                "gaze_directions",
+                "key_visible_environment_features",
+            ]:
+                if not blueprint_payload.get(key):
+                    blueprint_payload[key] = _coerce_string_list(blueprint.get(key, []))
             if not blueprint_payload.get("camera_description"):
                 blueprint_payload["camera_description"] = str(blueprint.get("camera_description", ""))
             if not blueprint_payload.get("composition"):
@@ -1323,11 +1573,27 @@ def run_shot_planning(
                 scene_id=scene_id,
                 chapter_id=chapter_id,
                 shot_order=int(merged.get("shot_order", len(scene_shots) + 1) or len(scene_shots) + 1),
+                primary_subject=_first_nonempty(merged.get("primary_subject"), fallback=""),
+                secondary_subjects=_coerce_string_list(merged.get("secondary_subjects", [])),
+                start_state=_first_nonempty(merged.get("start_state"), fallback=""),
+                end_state=_first_nonempty(merged.get("end_state"), fallback=""),
+                action_during_shot=_first_nonempty(merged.get("action_during_shot"), fallback=""),
+                action_continues_from=_first_nonempty(merged.get("action_continues_from"), fallback=""),
+                action_hands_off_to=_first_nonempty(merged.get("action_hands_off_to"), fallback=""),
                 shot_title=_first_nonempty(merged.get("shot_title"), fallback=f"{scene_title} {shot_id}"),
                 shot_type=_first_nonempty(merged.get("shot_type"), fallback="medium"),
                 camera_description=_first_nonempty(merged.get("camera_description"), fallback="Stable readable framing."),
                 composition=_first_nonempty(merged.get("composition"), fallback="Readable composition."),
                 target_seconds=_coerce_float(merged.get("target_seconds"), estimated_seconds, fallback=estimated_seconds or 5.0),
+                subject_blocking=_coerce_string_list(merged.get("subject_blocking", [])),
+                camera_relative_positions=_coerce_string_list(merged.get("camera_relative_positions", [])),
+                gaze_directions=_coerce_string_list(merged.get("gaze_directions", [])),
+                environment_subzone=_first_nonempty(merged.get("environment_subzone"), fallback=""),
+                key_visible_environment_features=_coerce_string_list(merged.get("key_visible_environment_features", [])),
+                continuity_from_previous_shot=_first_nonempty(merged.get("continuity_from_previous_shot"), fallback=""),
+                continuity_to_next_shot=_first_nonempty(merged.get("continuity_to_next_shot"), fallback=""),
+                pose_anchor_frame=_first_nonempty(merged.get("pose_anchor_frame"), fallback=""),
+                pose_end_frame=_first_nonempty(merged.get("pose_end_frame"), fallback=""),
                 characters_in_frame=character_refs,
                 environment=environment_ref,
                 beat_ids=_coerce_string_list(merged.get("beat_ids", [])) or [shot_id.replace("SH", "BT")],
@@ -1353,10 +1619,20 @@ def run_shot_planning(
                 shot_title=package.shot_title,
                 shot_type=package.shot_type,
                 camera_description=package.camera_description,
-                composition=package.composition,
+                composition=" ".join(
+                    item
+                    for item in [
+                        package.composition,
+                        package.start_state,
+                        package.end_state,
+                        " ".join(package.subject_blocking),
+                        package.environment_subzone,
+                    ]
+                    if item
+                ),
                 characters=package.characters_in_frame,
                 environment=package.environment or environment_ref,
-                beat_summary=_first_nonempty(scene_contract.get("summary", ""), scene_contract.get("production_intent", ""), fallback=""),
+                beat_summary=" ".join(item for item in [package.action_during_shot, package.continuity_to_next_shot] if item) or _first_nonempty(scene_contract.get("summary", ""), scene_contract.get("production_intent", ""), fallback=""),
             )
             package.shot_notes = package.shot_notes or _compact_snippet(str(scene_contract.get("summary", "")), limit=220)
 
@@ -1451,11 +1727,27 @@ def _package_from_existing(existing: dict[str, Any], metadata: ShotPackageMetada
         scene_id=str(existing.get("scene_id", "")),
         chapter_id=str(existing.get("chapter_id", "")),
         shot_order=int(existing.get("shot_order", 0) or 0),
+        primary_subject=str(existing.get("primary_subject", "")),
+        secondary_subjects=_coerce_string_list(existing.get("secondary_subjects", [])),
+        start_state=str(existing.get("start_state", "")),
+        end_state=str(existing.get("end_state", "")),
+        action_during_shot=str(existing.get("action_during_shot", "")),
+        action_continues_from=str(existing.get("action_continues_from", "")),
+        action_hands_off_to=str(existing.get("action_hands_off_to", "")),
         shot_title=str(existing.get("shot_title", "")),
         shot_type=str(existing.get("shot_type", "")),
         camera_description=str(existing.get("camera_description", "")),
         composition=str(existing.get("composition", "")),
         target_seconds=_coerce_float(existing.get("target_seconds"), fallback=5.0),
+        subject_blocking=_coerce_string_list(existing.get("subject_blocking", [])),
+        camera_relative_positions=_coerce_string_list(existing.get("camera_relative_positions", [])),
+        gaze_directions=_coerce_string_list(existing.get("gaze_directions", [])),
+        environment_subzone=str(existing.get("environment_subzone", "")),
+        key_visible_environment_features=_coerce_string_list(existing.get("key_visible_environment_features", [])),
+        continuity_from_previous_shot=str(existing.get("continuity_from_previous_shot", "")),
+        continuity_to_next_shot=str(existing.get("continuity_to_next_shot", "")),
+        pose_anchor_frame=str(existing.get("pose_anchor_frame", "")),
+        pose_end_frame=str(existing.get("pose_end_frame", "")),
         characters_in_frame=[ShotReference(**item) for item in existing.get("characters_in_frame", []) if isinstance(item, dict)],
         environment=ShotReference(
             label=str(environment_payload.get("label", "environment")),
@@ -1488,6 +1780,14 @@ def _append_shot_review_item(queue: list[dict[str, Any]], package: ShotPackage) 
         issues.append(f"Shot type is generic: {package.shot_type}.")
     if not package.prompt_seed or len(package.prompt_seed) < 40:
         issues.append("Prompt seed is thin.")
+    if not package.start_state or not package.end_state:
+        issues.append("Missing explicit start/end state.")
+    if not package.action_during_shot:
+        issues.append("Missing explicit action during shot.")
+    if not package.subject_blocking:
+        issues.append("Missing subject blocking.")
+    if not package.environment_subzone:
+        issues.append("Missing environment subzone.")
     queue.append(
         {
             "shot_id": package.shot_id,

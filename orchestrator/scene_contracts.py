@@ -79,16 +79,34 @@ class SceneBeat:
     beat_id: str
     summary: str
     purpose: str = ""
+    action_start: str = ""
+    action_end: str = ""
+    active_subjects: list[str] = field(default_factory=list)
+    passive_subjects: list[str] = field(default_factory=list)
+    spatial_context: str = ""
+    blocking_hint: str = ""
+    environment_subzone: str = ""
     continuity_focus: str = ""
     coverage_hint: str = ""
+    coverage_priority: str = ""
+    handoff_to_next: str = ""
 
     def to_dict(self) -> dict[str, Any]:
         return {
             "beat_id": self.beat_id,
             "summary": self.summary,
             "purpose": self.purpose,
+            "action_start": self.action_start,
+            "action_end": self.action_end,
+            "active_subjects": self.active_subjects,
+            "passive_subjects": self.passive_subjects,
+            "spatial_context": self.spatial_context,
+            "blocking_hint": self.blocking_hint,
+            "environment_subzone": self.environment_subzone,
             "continuity_focus": self.continuity_focus,
             "coverage_hint": self.coverage_hint,
+            "coverage_priority": self.coverage_priority,
+            "handoff_to_next": self.handoff_to_next,
         }
 
 
@@ -101,6 +119,15 @@ class SceneContract:
     summary: str
     emotional_arc: str
     production_intent: str
+    scene_start_state: str = ""
+    scene_end_state: str = ""
+    dominant_action_line: str = ""
+    scene_spatial_layout: list[str] = field(default_factory=list)
+    character_spatial_map: list[str] = field(default_factory=list)
+    environment_subzones: list[str] = field(default_factory=list)
+    entry_vectors: list[str] = field(default_factory=list)
+    exit_vectors: list[str] = field(default_factory=list)
+    beat_transition_map: list[str] = field(default_factory=list)
     characters_required: list[SceneReference] = field(default_factory=list)
     environments_required: list[SceneReference] = field(default_factory=list)
     continuity_constraints: list[str] = field(default_factory=list)
@@ -121,6 +148,15 @@ class SceneContract:
             "summary": self.summary,
             "emotional_arc": self.emotional_arc,
             "production_intent": self.production_intent,
+            "scene_start_state": self.scene_start_state,
+            "scene_end_state": self.scene_end_state,
+            "dominant_action_line": self.dominant_action_line,
+            "scene_spatial_layout": self.scene_spatial_layout,
+            "character_spatial_map": self.character_spatial_map,
+            "environment_subzones": self.environment_subzones,
+            "entry_vectors": self.entry_vectors,
+            "exit_vectors": self.exit_vectors,
+            "beat_transition_map": self.beat_transition_map,
             "characters_required": [item.to_dict() for item in self.characters_required],
             "environments_required": [item.to_dict() for item in self.environments_required],
             "continuity_constraints": self.continuity_constraints,
@@ -598,23 +634,61 @@ def _derive_beats(
                     beat_id=f"BT{index:03d}",
                     summary=sentence,
                     purpose=purpose if index == 1 else "",
+                    action_start=sentence if index == 1 else f"Continue from prior beat: {sentences[index - 2]}",
+                    action_end=sentences[index] if index < len(sentences) else sentence,
+                    spatial_context=continuity_constraints[min(index - 1, len(continuity_constraints) - 1)] if continuity_constraints else "",
+                    blocking_hint=coverage_families[min(index - 1, len(coverage_families) - 1)] if coverage_families else "",
+                    environment_subzone="primary scene playing area",
                     continuity_focus=continuity_constraints[min(index - 1, len(continuity_constraints) - 1)] if continuity_constraints else "",
                     coverage_hint=coverage_families[min(index - 1, len(coverage_families) - 1)] if coverage_families else "",
+                    coverage_priority="primary story beat",
+                    handoff_to_next=sentences[index] if index < len(sentences) else "",
                 )
             )
         return beats
 
     if summary:
-        beats.append(SceneBeat(beat_id="BT001", summary=summary, purpose=purpose, continuity_focus=continuity_constraints[0] if continuity_constraints else "", coverage_hint=coverage_families[0] if coverage_families else ""))
+        beats.append(SceneBeat(beat_id="BT001", summary=summary, purpose=purpose, action_start=summary, action_end=summary, spatial_context=continuity_constraints[0] if continuity_constraints else "", blocking_hint=coverage_families[0] if coverage_families else "", environment_subzone="primary scene playing area", continuity_focus=continuity_constraints[0] if continuity_constraints else "", coverage_hint=coverage_families[0] if coverage_families else "", coverage_priority="primary story beat"))
     if emotional_arc:
-        beats.append(SceneBeat(beat_id="BT002", summary=f"Carry the emotional arc through: {emotional_arc}.", continuity_focus=continuity_constraints[1] if len(continuity_constraints) > 1 else "", coverage_hint=coverage_families[1] if len(coverage_families) > 1 else ""))
+        beats.append(SceneBeat(beat_id="BT002", summary=f"Carry the emotional arc through: {emotional_arc}.", action_start="Continue the established scene action.", action_end=f"Land the emotional shift: {emotional_arc}.", spatial_context=continuity_constraints[1] if len(continuity_constraints) > 1 else "", blocking_hint=coverage_families[1] if len(coverage_families) > 1 else "", environment_subzone="primary scene playing area", continuity_focus=continuity_constraints[1] if len(continuity_constraints) > 1 else "", coverage_hint=coverage_families[1] if len(coverage_families) > 1 else "", coverage_priority="emotional transition"))
     if not beats:
-        beats.append(SceneBeat(beat_id="BT001", summary=f"Establish the production intent for {scene_id}.", purpose=purpose))
+        beats.append(SceneBeat(beat_id="BT001", summary=f"Establish the production intent for {scene_id}.", purpose=purpose, action_start="Scene opens in the established location.", action_end="Primary scene business becomes readable.", environment_subzone="primary scene playing area", coverage_priority="establishing beat"))
     if len(beats) == 1:
-        beats.append(SceneBeat(beat_id="BT002", summary="Escalate the scene tension and staging clearly.", continuity_focus=continuity_constraints[0] if continuity_constraints else "", coverage_hint=coverage_families[0] if coverage_families else ""))
+        beats.append(SceneBeat(beat_id="BT002", summary="Escalate the scene tension and staging clearly.", action_start="Continue from the opening scene condition.", action_end="Escalation becomes visually explicit.", spatial_context=continuity_constraints[0] if continuity_constraints else "", blocking_hint=coverage_families[0] if coverage_families else "", environment_subzone="primary scene playing area", continuity_focus=continuity_constraints[0] if continuity_constraints else "", coverage_hint=coverage_families[0] if coverage_families else "", coverage_priority="escalation beat"))
     if len(beats) == 2:
-        beats.append(SceneBeat(beat_id="BT003", summary="Land the scene consequence or transition cleanly.", continuity_focus=continuity_constraints[-1] if continuity_constraints else "", coverage_hint=coverage_families[-1] if coverage_families else ""))
+        beats.append(SceneBeat(beat_id="BT003", summary="Land the scene consequence or transition cleanly.", action_start="Continue the established scene action toward consequence.", action_end="Arrive at the scene's transition point.", spatial_context=continuity_constraints[-1] if continuity_constraints else "", blocking_hint=coverage_families[-1] if coverage_families else "", environment_subzone="primary scene playing area", continuity_focus=continuity_constraints[-1] if continuity_constraints else "", coverage_hint=coverage_families[-1] if coverage_families else "", coverage_priority="transition beat"))
     return beats[:4]
+
+
+def _derive_scene_staging(
+    *,
+    scene_id: str,
+    summary: str,
+    purpose: str,
+    emotional_arc: str,
+    continuity_constraints: list[str],
+    beats: list[SceneBeat],
+) -> dict[str, Any]:
+    scene_start_state = _first_nonempty(summary, purpose, fallback=f"{scene_id} opens with the primary dramatic situation already in motion.")
+    scene_end_state = _first_nonempty(beats[-1].action_end if beats else "", emotional_arc, fallback="The scene resolves into the next dramatic transition point.")
+    dominant_action_line = _first_nonempty(summary, purpose, fallback="Scene action advances the chapter's immediate dramatic objective.")
+    scene_spatial_layout = continuity_constraints[:3] or ["Use the established environment scale and architecture to anchor subject placement."]
+    character_spatial_map = ["Primary subject placement should remain readable against the main environment anchor."]
+    environment_subzones = ["primary scene playing area"]
+    entry_vectors = ["Subjects inherit entry logic from the prior scene or chapter transition."]
+    exit_vectors = ["Subjects exit or hand off toward the next story beat."]
+    beat_transition_map = [f"{beat.beat_id}: {beat.action_start or beat.summary} -> {beat.action_end or beat.summary}" for beat in beats]
+    return {
+        "scene_start_state": scene_start_state,
+        "scene_end_state": scene_end_state,
+        "dominant_action_line": dominant_action_line,
+        "scene_spatial_layout": scene_spatial_layout,
+        "character_spatial_map": character_spatial_map,
+        "environment_subzones": environment_subzones,
+        "entry_vectors": entry_vectors,
+        "exit_vectors": exit_vectors,
+        "beat_transition_map": beat_transition_map,
+    }
 
 
 def _synthesize_storyboard_markdown(contract: SceneContract) -> str:
@@ -641,9 +715,43 @@ def _synthesize_storyboard_markdown(contract: SceneContract) -> str:
         "",
         contract.emotional_arc or "(none)",
         "",
-        "## Required Cast",
+        "## Scene Start State",
+        "",
+        contract.scene_start_state or "(none)",
+        "",
+        "## Scene End State",
+        "",
+        contract.scene_end_state or "(none)",
+        "",
+        "## Dominant Action Line",
+        "",
+        contract.dominant_action_line or "(none)",
+        "",
+        "## Scene Spatial Layout",
         "",
     ]
+    if contract.scene_spatial_layout:
+        lines.extend([f"- {item}" for item in contract.scene_spatial_layout])
+    else:
+        lines.append("- (none)")
+
+    lines.extend(["", "## Character Spatial Map", ""])
+    if contract.character_spatial_map:
+        lines.extend([f"- {item}" for item in contract.character_spatial_map])
+    else:
+        lines.append("- (none)")
+
+    lines.extend(["", "## Environment Subzones", ""])
+    if contract.environment_subzones:
+        lines.extend([f"- {item}" for item in contract.environment_subzones])
+    else:
+        lines.append("- (none)")
+
+    lines.extend([
+        "",
+        "## Required Cast",
+        "",
+    ])
     if contract.characters_required:
         for ref in contract.characters_required:
             display = _first_nonempty(ref.display_name, ref.label, fallback=ref.canonical_id or ref.label)
@@ -690,10 +798,24 @@ def _synthesize_storyboard_markdown(contract: SceneContract) -> str:
         bits = [beat.summary]
         if beat.purpose:
             bits.append(f"purpose: {beat.purpose}")
+        if beat.action_start:
+            bits.append(f"start: {beat.action_start}")
+        if beat.action_end:
+            bits.append(f"end: {beat.action_end}")
+        if beat.spatial_context:
+            bits.append(f"space: {beat.spatial_context}")
+        if beat.blocking_hint:
+            bits.append(f"blocking: {beat.blocking_hint}")
+        if beat.environment_subzone:
+            bits.append(f"subzone: {beat.environment_subzone}")
         if beat.continuity_focus:
             bits.append(f"continuity: {beat.continuity_focus}")
         if beat.coverage_hint:
             bits.append(f"coverage: {beat.coverage_hint}")
+        if beat.coverage_priority:
+            bits.append(f"priority: {beat.coverage_priority}")
+        if beat.handoff_to_next:
+            bits.append(f"handoff: {beat.handoff_to_next}")
         lines.append(f"- {beat.beat_id}: " + " | ".join(bits))
     if not contract.beat_list:
         lines.append("- (none)")
@@ -711,14 +833,15 @@ def _synthesize_storyboard_markdown(contract: SceneContract) -> str:
     return "\n".join(lines).strip() + "\n"
 
 
-def _parse_scene_contract_packet(text: str, scene_id: str, chapter_id: str, fallback: dict[str, str]) -> dict[str, str]:
+def _parse_scene_contract_packet(text: str, scene_id: str, chapter_id: str, fallback: dict[str, Any]) -> dict[str, Any]:
     packet = parse_packet_document(text, expected_task="scene_contract_synthesis")
     if not packet.records:
         raise ValueError("Scene contract response did not contain a scene contract record.")
     record = packet.records[0]
     sections = record.sections
     production_scalars, production_lists, production_freeform = _parse_section_markdown(sections.get("production_markdown", ""))
-    beat_scalars, beat_lists, beat_freeform = _parse_section_markdown(sections.get("beat_markdown", ""))
+    _, beat_lists, beat_freeform = _parse_section_markdown(sections.get("beat_markdown", ""))
+    staging_scalars, staging_lists, _ = _parse_section_markdown(sections.get("scene_staging_markdown", ""))
     storyboard_text = sections.get("storyboard_markdown", "").strip()
     if not storyboard_text:
         storyboard_text = sections.get("markdown", "").strip()
@@ -738,6 +861,15 @@ def _parse_scene_contract_packet(text: str, scene_id: str, chapter_id: str, fall
         "beat_overrides": beat_lists.get("beat_list", []) or beat_freeform,
         "continuity_overrides": production_lists.get("continuity_constraints", []),
         "coverage_overrides": production_lists.get("visual_coverage_families", []),
+        "scene_start_state": _first_nonempty(staging_scalars.get("scene_start_state"), fallback.get("scene_start_state"), fallback=""),
+        "scene_end_state": _first_nonempty(staging_scalars.get("scene_end_state"), fallback.get("scene_end_state"), fallback=""),
+        "dominant_action_line": _first_nonempty(staging_scalars.get("dominant_action_line"), fallback.get("dominant_action_line"), fallback=""),
+        "scene_spatial_layout": staging_lists.get("scene_spatial_layout", []) or list(fallback.get("scene_spatial_layout", [])),
+        "character_spatial_map": staging_lists.get("character_spatial_map", []) or list(fallback.get("character_spatial_map", [])),
+        "environment_subzones": staging_lists.get("environment_subzones", []) or list(fallback.get("environment_subzones", [])),
+        "entry_vectors": staging_lists.get("entry_vectors", []) or list(fallback.get("entry_vectors", [])),
+        "exit_vectors": staging_lists.get("exit_vectors", []) or list(fallback.get("exit_vectors", [])),
+        "beat_transition_map": staging_lists.get("beat_transition_map", []) or list(fallback.get("beat_transition_map", [])),
     }
 
 
@@ -880,6 +1012,14 @@ def _build_deterministic_payload(
         continuity_constraints=continuity_constraints,
         coverage_families=coverage_families,
     )
+    scene_staging = _derive_scene_staging(
+        scene_id=scene_id,
+        summary=summary,
+        purpose=purpose,
+        emotional_arc=emotional_arc,
+        continuity_constraints=continuity_constraints,
+        beats=beats,
+    )
     production_intent = _first_nonempty(
         purpose,
         f"Stage {scene_id} with clear narrative intent, stable cast blocking, and continuity-aware coverage.",
@@ -905,10 +1045,11 @@ def _build_deterministic_payload(
         "scene_title": scene_title,
         "production_intent": production_intent,
         "storyboard_markdown": storyboard_markdown,
-        "beat_overrides": [beat.summary for beat in beats],
+        "beat_overrides": [beat.to_dict() for beat in beats],
         "continuity_overrides": continuity_constraints,
         "coverage_overrides": coverage_families,
         "beats": beats,
+        **scene_staging,
         "character_refs": character_refs,
         "environment_refs": environment_refs,
         "evidence_summary": evidence_summary,
@@ -1008,6 +1149,15 @@ def run_scene_contract_synthesis(
                 summary=existing.get("summary", scene_fields.get("scene_summary", "")),
                 emotional_arc=existing.get("emotional_arc", scene_fields.get("dominant_emotional_shift", "")),
                 production_intent=existing.get("production_intent", ""),
+                scene_start_state=existing.get("scene_start_state", ""),
+                scene_end_state=existing.get("scene_end_state", ""),
+                dominant_action_line=existing.get("dominant_action_line", ""),
+                scene_spatial_layout=existing.get("scene_spatial_layout", []),
+                character_spatial_map=existing.get("character_spatial_map", []),
+                environment_subzones=existing.get("environment_subzones", []),
+                entry_vectors=existing.get("entry_vectors", []),
+                exit_vectors=existing.get("exit_vectors", []),
+                beat_transition_map=existing.get("beat_transition_map", []),
                 characters_required=[SceneReference(**item) for item in existing.get("characters_required", []) if isinstance(item, dict)],
                 environments_required=[SceneReference(**item) for item in existing.get("environments_required", []) if isinstance(item, dict)],
                 continuity_constraints=existing.get("continuity_constraints", []),
@@ -1036,6 +1186,15 @@ def run_scene_contract_synthesis(
                     summary=existing.get("summary", scene_fields.get("scene_summary", "")),
                     emotional_arc=existing.get("emotional_arc", scene_fields.get("dominant_emotional_shift", "")),
                     production_intent=existing.get("production_intent", ""),
+                    scene_start_state=existing.get("scene_start_state", ""),
+                    scene_end_state=existing.get("scene_end_state", ""),
+                    dominant_action_line=existing.get("dominant_action_line", ""),
+                    scene_spatial_layout=existing.get("scene_spatial_layout", []),
+                    character_spatial_map=existing.get("character_spatial_map", []),
+                    environment_subzones=existing.get("environment_subzones", []),
+                    entry_vectors=existing.get("entry_vectors", []),
+                    exit_vectors=existing.get("exit_vectors", []),
+                    beat_transition_map=existing.get("beat_transition_map", []),
                     characters_required=[SceneReference(**item) for item in existing.get("characters_required", []) if isinstance(item, dict)],
                     environments_required=[SceneReference(**item) for item in existing.get("environments_required", []) if isinstance(item, dict)],
                     continuity_constraints=existing.get("continuity_constraints", []),
@@ -1093,6 +1252,15 @@ def run_scene_contract_synthesis(
         coverage_families = _coerce_string_list(merged.get("coverage_overrides", [])) or _split_list_value(scene_fields.get("likely_visual_coverage_families", ""))
         production_intent = _first_nonempty(merged.get("production_intent"), fallback_payload["production_intent"], fallback="")
         storyboard_markdown = _first_nonempty(merged.get("storyboard_markdown"), fallback_payload["storyboard_markdown"], fallback="")
+        scene_start_state = _first_nonempty(merged.get("scene_start_state"), fallback_payload.get("scene_start_state"), fallback="")
+        scene_end_state = _first_nonempty(merged.get("scene_end_state"), fallback_payload.get("scene_end_state"), fallback="")
+        dominant_action_line = _first_nonempty(merged.get("dominant_action_line"), fallback_payload.get("dominant_action_line"), fallback="")
+        scene_spatial_layout = _coerce_string_list(merged.get("scene_spatial_layout", [])) or list(fallback_payload.get("scene_spatial_layout", []))
+        character_spatial_map = _coerce_string_list(merged.get("character_spatial_map", [])) or list(fallback_payload.get("character_spatial_map", []))
+        environment_subzones = _coerce_string_list(merged.get("environment_subzones", [])) or list(fallback_payload.get("environment_subzones", []))
+        entry_vectors = _coerce_string_list(merged.get("entry_vectors", [])) or list(fallback_payload.get("entry_vectors", []))
+        exit_vectors = _coerce_string_list(merged.get("exit_vectors", [])) or list(fallback_payload.get("exit_vectors", []))
+        beat_transition_map = _coerce_string_list(merged.get("beat_transition_map", [])) or list(fallback_payload.get("beat_transition_map", []))
 
         metadata.upstream_dependencies = [
             {
@@ -1127,6 +1295,15 @@ def run_scene_contract_synthesis(
             summary=scene_fields.get("scene_summary", ""),
             emotional_arc=scene_fields.get("dominant_emotional_shift", ""),
             production_intent=production_intent,
+            scene_start_state=scene_start_state,
+            scene_end_state=scene_end_state,
+            dominant_action_line=dominant_action_line,
+            scene_spatial_layout=scene_spatial_layout,
+            character_spatial_map=character_spatial_map,
+            environment_subzones=environment_subzones,
+            entry_vectors=entry_vectors,
+            exit_vectors=exit_vectors,
+            beat_transition_map=beat_transition_map,
             characters_required=character_refs,
             environments_required=environment_refs,
             continuity_constraints=continuity_constraints,
@@ -1217,13 +1394,52 @@ def _coerce_beats(raw_beats: Any, *, scene_id: str, fallback_beats: list[SceneBe
                         beat_id=beat_id,
                         summary=_first_nonempty(item.get("summary"), item.get("markdown"), fallback=""),
                         purpose=_first_nonempty(item.get("purpose"), fallback=""),
+                        action_start=_first_nonempty(item.get("action_start"), item.get("start"), fallback=""),
+                        action_end=_first_nonempty(item.get("action_end"), item.get("end"), fallback=""),
+                        active_subjects=_coerce_string_list(item.get("active_subjects", [])),
+                        passive_subjects=_coerce_string_list(item.get("passive_subjects", [])),
+                        spatial_context=_first_nonempty(item.get("spatial_context"), item.get("space"), fallback=""),
+                        blocking_hint=_first_nonempty(item.get("blocking_hint"), item.get("blocking"), fallback=""),
+                        environment_subzone=_first_nonempty(item.get("environment_subzone"), item.get("subzone"), fallback=""),
                         continuity_focus=_first_nonempty(item.get("continuity_focus"), item.get("continuity"), fallback=""),
                         coverage_hint=_first_nonempty(item.get("coverage_hint"), fallback=""),
+                        coverage_priority=_first_nonempty(item.get("coverage_priority"), item.get("priority"), fallback=""),
+                        handoff_to_next=_first_nonempty(item.get("handoff_to_next"), item.get("handoff"), fallback=""),
                     )
                 )
             elif isinstance(item, str):
-                summary = re.sub(r"^\s*BT\d{3}\s*:\s*", "", item).strip()
-                beats.append(SceneBeat(beat_id=f"BT{index:03d}", summary=summary or item.strip()))
+                beat_id = f"BT{index:03d}"
+                raw = item.strip()
+                match = re.match(r"^\s*(BT\d{3})\s*:\s*(.*)$", raw, re.IGNORECASE)
+                if match:
+                    beat_id = match.group(1).upper()
+                    raw = match.group(2).strip()
+                chunks = [chunk.strip() for chunk in raw.split("||") if chunk.strip()]
+                summary = chunks[0] if chunks else raw
+                fields: dict[str, str] = {}
+                for chunk in chunks[1:]:
+                    if "=" not in chunk:
+                        continue
+                    key, value = chunk.split("=", 1)
+                    fields[_normalize_key(key)] = value.strip()
+                beats.append(
+                    SceneBeat(
+                        beat_id=beat_id,
+                        summary=summary or item.strip(),
+                        purpose=_first_nonempty(fields.get("purpose"), fallback=""),
+                        action_start=_first_nonempty(fields.get("action_start"), fields.get("start"), fallback=""),
+                        action_end=_first_nonempty(fields.get("action_end"), fields.get("end"), fallback=""),
+                        active_subjects=_coerce_string_list(fields.get("active_subjects", "")),
+                        passive_subjects=_coerce_string_list(fields.get("passive_subjects", "")),
+                        spatial_context=_first_nonempty(fields.get("spatial_context"), fields.get("space"), fallback=""),
+                        blocking_hint=_first_nonempty(fields.get("blocking_hint"), fields.get("blocking"), fallback=""),
+                        environment_subzone=_first_nonempty(fields.get("environment_subzone"), fields.get("subzone"), fallback=""),
+                        continuity_focus=_first_nonempty(fields.get("continuity_focus"), fields.get("continuity"), fallback=""),
+                        coverage_hint=_first_nonempty(fields.get("coverage_hint"), fields.get("coverage"), fallback=""),
+                        coverage_priority=_first_nonempty(fields.get("coverage_priority"), fields.get("priority"), fallback=""),
+                        handoff_to_next=_first_nonempty(fields.get("handoff_to_next"), fields.get("handoff"), fallback=""),
+                    )
+                )
     if beats:
         return beats
     return fallback_beats
@@ -1340,11 +1556,33 @@ continuity_constraints:
 - constraint 2
 [[/SECTION]]
 
+[[SECTION scene_staging_markdown]]
+scene_start_state: <how the scene begins visually and dramatically>
+scene_end_state: <how the scene ends visually and dramatically>
+dominant_action_line: <main action thread of the scene>
+scene_spatial_layout:
+- layout note 1
+- layout note 2
+character_spatial_map:
+- subject placement note 1
+- subject placement note 2
+environment_subzones:
+- subzone 1
+- subzone 2
+entry_vectors:
+- entry path 1
+exit_vectors:
+- exit path 1
+beat_transition_map:
+- BT001 -> BT002: <transition>
+- BT002 -> BT003: <transition>
+[[/SECTION]]
+
 [[SECTION beat_markdown]]
 beat_list:
-- BT001: <beat 1>
-- BT002: <beat 2>
-- BT003: <beat 3>
+- BT001: <summary> || action_start=<how the beat begins> || action_end=<how the beat ends> || active_subjects=<subject A, subject B> || passive_subjects=<subject C> || spatial_context=<where the action happens> || blocking_hint=<where people are staged> || environment_subzone=<specific subzone> || continuity=<continuity focus> || coverage=<coverage hint> || priority=<coverage priority> || handoff=<what the next beat inherits>
+- BT002: <summary> || action_start=<...> || action_end=<...> || active_subjects=<...> || passive_subjects=<...> || spatial_context=<...> || blocking_hint=<...> || environment_subzone=<...> || continuity=<...> || coverage=<...> || priority=<...> || handoff=<...>
+- BT003: <summary> || action_start=<...> || action_end=<...> || active_subjects=<...> || passive_subjects=<...> || spatial_context=<...> || blocking_hint=<...> || environment_subzone=<...> || continuity=<...> || coverage=<...> || priority=<...> || handoff=<...>
 [[/SECTION]]
 
 [[SECTION storyboard_markdown]]
@@ -1373,7 +1611,8 @@ beat_list:
             return None
         record = packet.records[0]
         production_scalars, production_lists, production_freeform = _parse_section_markdown(record.sections.get("production_markdown", ""))
-        beat_scalars, beat_lists, beat_freeform = _parse_section_markdown(record.sections.get("beat_markdown", ""))
+        _, beat_lists, beat_freeform = _parse_section_markdown(record.sections.get("beat_markdown", ""))
+        staging_scalars, staging_lists, _ = _parse_section_markdown(record.sections.get("scene_staging_markdown", ""))
         storyboard_markdown = record.sections.get("storyboard_markdown", "").strip()
         return {
             "scene_title": _first_nonempty(production_scalars.get("scene_title"), fallback=scene_fields.get("scene_title", scene_id)),
@@ -1386,6 +1625,15 @@ beat_list:
             "beat_overrides": beat_lists.get("beat_list", []) or beat_freeform,
             "continuity_overrides": production_lists.get("continuity_constraints", []),
             "coverage_overrides": production_lists.get("visual_coverage_families", []),
+            "scene_start_state": _first_nonempty(staging_scalars.get("scene_start_state"), fallback=fallback_payload.get("scene_start_state", "")),
+            "scene_end_state": _first_nonempty(staging_scalars.get("scene_end_state"), fallback=fallback_payload.get("scene_end_state", "")),
+            "dominant_action_line": _first_nonempty(staging_scalars.get("dominant_action_line"), fallback=fallback_payload.get("dominant_action_line", "")),
+            "scene_spatial_layout": staging_lists.get("scene_spatial_layout", []) or list(fallback_payload.get("scene_spatial_layout", [])),
+            "character_spatial_map": staging_lists.get("character_spatial_map", []) or list(fallback_payload.get("character_spatial_map", [])),
+            "environment_subzones": staging_lists.get("environment_subzones", []) or list(fallback_payload.get("environment_subzones", [])),
+            "entry_vectors": staging_lists.get("entry_vectors", []) or list(fallback_payload.get("entry_vectors", [])),
+            "exit_vectors": staging_lists.get("exit_vectors", []) or list(fallback_payload.get("exit_vectors", [])),
+            "beat_transition_map": staging_lists.get("beat_transition_map", []) or list(fallback_payload.get("beat_transition_map", [])),
         }
     except Exception:
         return None
