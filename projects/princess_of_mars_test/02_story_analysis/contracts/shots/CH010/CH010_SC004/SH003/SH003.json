@@ -5,10 +5,10 @@
   "shot_order": 3,
   "previous_shot_id": "SH002",
   "next_shot_id": "",
-  "shot_title": "Action 3: Carter asserts his moral code and declares his inte...",
+  "shot_title": "Carter's moral declaration",
   "shot_type": "action",
   "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-  "composition": "Dynamic composition in The interior audience chamber with john_carter, tars_tarkas crossing the frame and maintaining readable movement.",
+  "composition": "Dynamic composition in The interior audience chamber with john_carter, tars_tarkas crossing the frame.",
   "target_seconds": 5.6,
   "characters_in_frame": [
     {
@@ -34,22 +34,21 @@
   ],
   "environment": {
     "label": "The interior audience chamber",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "The interior audience chamber",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
     "BT003"
   ],
   "continuity_constraints": [
-    "Carter must maintain a post-combat state: sweat, blood, and disheveled clothing.",
-    "Carter asserts his moral code and declares his intent to protect Dejah Thoris."
+    "Carter's physical state (sweat, blood, disheveled clothing) must reflect immediate post-fight condition."
   ],
-  "prompt_seed": "Action 3: Carter asserts his moral code and declares his inte.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in The interior audience chamber with john_carter, tars_tarkas crossing the frame and maintaining readable movement. Cast: john_carter, tars_tarkas. Environment: The interior audience chamber.",
+  "prompt_seed": "Action 3: Carter asserts his moral code and declares his intent to protect Dejah Thoris. action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in The interior audience chamber with john_carter, tars_tarkas crossing the frame. Cast: john_carter, tars_tarkas. Environment: The interior audience chamber.",
   "shot_notes": "Carter asserts his moral code and declares his intent to protect Dejah Thoris.",
   "evidence_refs": [
     {
@@ -108,12 +107,12 @@
     }
   ],
   "evidence_summary": [
-    "The scene must transition the narrative from physical combat to political negotiation. It focuses on the formal recognition of John Carter's new status as a chieftain through his spoils of war, establishing a shift in social hierarchy within the Thark cultu...",
+    "The scene must transition the narrative from physical combat to political maneuvering. It establishes John Carter's elevated social status through his acquisition of war spoils and defines his moral friction with Thark culture. The atmosphere should shift f...",
     "In the aftermath of the fight, Carter is recognized as a chieftain by virtue of the spoils of war. Tars Tarkas confronts him, questioning his language skills and his \"unprecedented temerity.\" Carter asserts his moral code, declaring his intent to protect De...",
     "From the adrenaline of combat to heavy, political/social tension and resolve. **Likely Visual Coverage Families:** - Two-shots between Carter and Tars Tarkas. - Close-ups on Carter's face during his declaration. - Rea...",
-    "Two-shots (Carter and Tars Tarkas)",
-    "Close-ups (Carter's declaration)",
-    "Reaction shots (Thark Council)",
+    "Two-shots between Carter and Tars Tarkas",
+    "Close-ups on Carter during his declaration",
+    "Reaction shots from the Thark Council",
     "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in...",
     "tars_tarkas | Tars Tarkas is a prominent Thark warrior and leader characterized by green skin. He carries himself with a professional demeanor, embodying the strength and combat skill valued by his Martian culture. His appearance is defined by standard Mart...",
     "lorquas_ptomel | An enormous green Martian of the Thark race, Lorquas Ptomel carries the imposing presence of a high-ranking chieftain and warrior leader. He possesses a stern demeanor and an authoritative silhouette, typically clad in Thark warrior attire...."
@@ -122,19 +121,24 @@
     "artifact_id": "CH010_SC004_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "c9a8156401332789a83d89a5720321b16eb038a0",
+    "source_fingerprint": "099167758aab4faae8bb23e3ff42a1ecca06c363",
     "created_at_utc": "2026-04-22T01:32:49.019584+00:00",
-    "updated_at_utc": "2026-04-22T01:32:49.019584+00:00",
+    "updated_at_utc": "2026-04-22T07:56:53.143036+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH010_SC004",
-        "version": "4d06fa62fca84750f88191ab180132457373f947"
+        "version": "008d3b289dd165d31fda4204245ecd42ebe5e152"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH010_SC004",
+        "version": "06ba72271df6cbf337c123303750b641b8eaccbb"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH010_SC004",
-        "version": "27b0d0f3db4fc290ba02754feb2d0b0da8bd7105"
+        "version": "f33e8991980bd92d133d441877cacc9b9af37a1e"
       }
     ],
     "locked_fields": {},
@@ -144,6 +148,11 @@
         "timestamp_utc": "2026-04-22T01:33:16.333369+00:00",
         "action": "synthesized",
         "source_fingerprint": "c9a8156401332789a83d89a5720321b16eb038a0"
+      },
+      {
+        "timestamp_utc": "2026-04-22T07:57:10.625612+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "099167758aab4faae8bb23e3ff42a1ecca06c363"
       }
     ]
   }

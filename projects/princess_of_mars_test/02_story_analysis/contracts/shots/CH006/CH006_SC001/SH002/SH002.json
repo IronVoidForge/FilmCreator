@@ -5,7 +5,7 @@
   "shot_order": 2,
   "previous_shot_id": "SH001",
   "next_shot_id": "SH003",
-  "shot_title": "Insert Detail 2: The Bull Ape's mate approaches with a stone cudgel...",
+  "shot_title": "Insert Detail 2: The Bull Ape's mate approaches, armed with a stone...",
   "shot_type": "insert_detail",
   "camera_description": "Tight detail framing focused on a single visual object or gesture.",
   "composition": "Detail composition centered on the key physical action or prop inside Interior chamber.",
@@ -24,12 +24,12 @@
   ],
   "environment": {
     "label": "Interior chamber",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "Interior chamber",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
@@ -38,13 +38,10 @@
   "continuity_constraints": [
     "Bull Ape limb positioning during pinning",
     "Location of the stone cudgel",
-    "Physical injury state of the Watch-thing post-combat",
-    "The Bull Ape's mate approaches with a stone cudgel to deliver a finishing blow.",
-    "Resolve Interior chamber -> Interior chamber",
-    "Resolve Martian city building -> Martian city building"
+    "Physical injury state of the Watch-thing post-combat"
   ],
-  "prompt_seed": "Insert Detail 2: The Bull Ape's mate approaches with a stone cudgel.... insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside Interior chamber. Cast: scene_character. Environment: Interior chamber. Beat: The Bull Ape's mate approaches with a stone cudgel to deliver a finishing blow.",
-  "shot_notes": "The Bull Ape's mate approaches with a stone cudgel to deliver a finishing blow.",
+  "prompt_seed": "Insert Detail 2: The Bull Ape's mate approaches, armed with a stone.... insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside Interior chamber. Cast: scene_character. Environment: Interior chamber. Beat: BT002.",
+  "shot_notes": "The Bull Ape's mate approaches, armed with a stone cudgel, to finish the Protagonist.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -92,7 +89,7 @@
     }
   ],
   "evidence_summary": [
-    "Execute a high-stakes creature combat sequence within an interior Martian chamber. The scene requires precise coordination between the Bull Ape performers/animatronics and the Watch-thing to manage physical contact, limb positioning, and the kinetic movemen...",
+    "Execute a high-stakes combat sequence involving heavy creature interaction and physical struggle. The scene requires precise coordination between the Bull Ape performers/animatronics and the Watch-thing to manage the transition from a pinned protagonist to...",
     "The protagonist is pinned by a massive Bull Ape. As its mate approaches with a stone cudgel to finish him, the Watch-thing leaps into the fray, engaging the mate in a brutal struggle to buy the protagonist time. **Participating Characters:** - The Protagoni...",
     "Terror $\\rightarrow$ Desperation $\\rightarrow$ Fierce Loyalty. **Likely Visual Coverage Families:** - Tight close-ups on the protagonist's struggle/pinned position. - Wide shots of the Watch-thing's intervention. - Ha...",
     "Tight close-ups (Protagonist struggle/pinned position)",
@@ -103,19 +100,24 @@
     "artifact_id": "CH006_SC001_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "8bfbcac44e863d33975853f2f489b971dbcad594",
+    "source_fingerprint": "81101a971928297e1d7231c5bb6381b532164b97",
     "created_at_utc": "2026-04-22T00:50:12.478105+00:00",
-    "updated_at_utc": "2026-04-22T00:50:12.478105+00:00",
+    "updated_at_utc": "2026-04-22T07:25:14.777082+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH006_SC001",
-        "version": "4cdc9beedce0cd48a8124d981e8bda86bf8f0d90"
+        "version": "0ab97414e1c11a51c7e406b233ead196944c498c"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH006_SC001",
+        "version": "5dd57aa7656b5a5a783a3e89126df3d335893504"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH006_SC001",
-        "version": "e33577a9e76f4286a34bbad6c71f01218f8899ac"
+        "version": "67bbf9071fca784486443f7433d7404d9985339a"
       }
     ],
     "locked_fields": {},
@@ -125,6 +127,11 @@
         "timestamp_utc": "2026-04-22T00:50:48.685645+00:00",
         "action": "synthesized",
         "source_fingerprint": "8bfbcac44e863d33975853f2f489b971dbcad594"
+      },
+      {
+        "timestamp_utc": "2026-04-22T07:25:36.833420+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "81101a971928297e1d7231c5bb6381b532164b97"
       }
     ]
   }

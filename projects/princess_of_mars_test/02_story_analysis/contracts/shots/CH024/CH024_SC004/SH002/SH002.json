@@ -24,19 +24,19 @@
   ],
   "environment": {
     "label": "Thark (Council Chamber)",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "Thark (Council Chamber)",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
     "BT002"
   ],
   "continuity_constraints": [
-    "Physical state (wounds/exhaustion) of the duelists (tars_tarkas and tal_hajus)",
+    "Physical state/damage of the duelists (tars_tarkas and tal_hajus)",
     "Shifting hierarchy and seating arrangements within the chamber",
     "A sanctioned duel is established between Tars Tarkas and Tal Hajus."
   ],
@@ -112,19 +112,24 @@
     "artifact_id": "CH024_SC004_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "4c2c57d6a12004adea42d23836e4ed10b8f564ab",
+    "source_fingerprint": "971c926c9d4c8cd9b60463dbfbda6648057bde2f",
     "created_at_utc": "2026-04-22T03:23:07.588403+00:00",
-    "updated_at_utc": "2026-04-22T03:23:07.588403+00:00",
+    "updated_at_utc": "2026-04-22T15:42:07.986630+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH024_SC004",
-        "version": "a3c73a27e118f157db922fc1af94094dfe6ef1c5"
+        "version": "04915eb7cf538d1aa806ca1691c503dbaba307f7"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH024_SC004",
+        "version": "5365247b9eca19a8b07a5b11e721ed16a394415d"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH024_SC004",
-        "version": "c5a4db2196a935fa94998d7b164e3d3dd159268c"
+        "version": "f474d244f20c5c8462ab748471678fa81ba16de9"
       }
     ],
     "locked_fields": {},
@@ -134,6 +139,11 @@
         "timestamp_utc": "2026-04-22T03:23:37.529424+00:00",
         "action": "synthesized",
         "source_fingerprint": "4c2c57d6a12004adea42d23836e4ed10b8f564ab"
+      },
+      {
+        "timestamp_utc": "2026-04-22T15:42:28.670559+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "971c926c9d4c8cd9b60463dbfbda6648057bde2f"
       }
     ]
   }

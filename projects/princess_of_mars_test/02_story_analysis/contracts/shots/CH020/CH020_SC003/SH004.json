@@ -5,10 +5,10 @@
   "shot_order": 4,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Closing Reaction 4: exit from factory into the Wilderness.",
+  "shot_title": "Closing Reaction 4: protagonist and woola exit the factory into the Wil...",
   "shot_type": "closing_reaction",
   "camera_description": "Controlled closing frame that lands the consequence of the beat.",
-  "composition": "Closing composition in Atmosphere Factory (Locks/Exits) that emphasizes the consequence of exit from factory into the wilderness..",
+  "composition": "Closing composition in barsoomian_wilderness that emphasizes the consequence of protagonist and woola exit the factory into the wilderness..",
   "target_seconds": 4.3,
   "characters_in_frame": [
     {
@@ -20,27 +20,17 @@
       "resolution_score": 176,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
       "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
-    },
-    {
-      "label": "Woola",
-      "canonical_id": "woola",
-      "display_name": "woola",
-      "status": "canonical",
-      "entity_kind": "individual",
-      "resolution_score": 186,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH008/woola.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'woola'"
     }
   ],
   "environment": {
-    "label": "Atmosphere Factory (Locks/Exits)",
-    "canonical_id": "None",
-    "display_name": "Atmosphere Factory (Locks/Exits)",
-    "status": "review",
+    "label": "Barsoomian Wilderness",
+    "canonical_id": "barsoomian_wilderness",
+    "display_name": "barsoomian_wilderness",
+    "status": "canonical",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "resolution_score": 183,
+    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH020/barsoomian_wilderness.md",
+    "notes": "asset id exactly matches canonical id | query matches alias 'barsoomian_wilderness'"
   },
   "beat_ids": [
     "BT004"
@@ -48,10 +38,10 @@
   "continuity_constraints": [
     "Consistency of \"mental\" visual representation/effects",
     "Speed and pacing of movement through the facility",
-    "exit from factory into the Wilderness."
+    "protagonist and woola exit the factory into the Wilderness."
   ],
-  "prompt_seed": "Closing Reaction 4: exit from factory into the Wilderness.. closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in Atmosphere Factory (Locks/Exits) that emphasizes the consequence of exit from factory into the wilderness.. Cast: protagonist, woola. Environment: Atmo...",
-  "shot_notes": "exit from factory into the Wilderness.",
+  "prompt_seed": "Closing Reaction 4: protagonist and woola exit the factory into the Wil.... closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in barsoomian_wilderness that emphasizes the consequence of protagonist and woola exit the factory into the wilderness.. Cast: protagonist...",
+  "shot_notes": "protagonist and woola exit the factory into the Wilderness.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -109,32 +99,38 @@
     }
   ],
   "evidence_summary": [
-    "The scene focuses on the protagonist utilizing newly acquired mental abilities to mimic thought-waves, allowing him to bypass mechanical or electronic locks within the Atmosphere Factory. The sequence must transition from high-tension mental exertion to a h...",
+    "The scene focuses on the protagonist utilizing newfound mental abilities to mimic thought-waves, allowing him to bypass mechanical or electronic locks within the Atmosphere Factory. The sequence must transition from high-tension mental exertion to a high-ve...",
     "Using his ability to mimic specific thought-waves, the protagonist bypasses the facility's locks and escapes the factory with Woola.",
     "Tension $\\rightarrow$ Relief/Escape.",
     "Tight close-ups on protagonist's eyes/face (mental exertion)",
     "Rapid movement shots (escape sequence)",
     "Wide shots (exiting into the wild)",
     "protagonist | An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeless\" physic...",
-    "woola | Woola is a large Martian hound characterized by a beastly, canine-like silhouette. The most defining visual identifier is the presence of multiple tusks protruding from its mouth. As a calot, it possesses a massive frame suitable for acting as a pro..."
+    "woola | Woola is a large Martian hound characterized by a beastly, canine-like silhouette. The most defining visual identifier is the presence of multiple tusks protruding from its mouth. As a calot, it possesses a massive frame suitable for acting as a pro...",
+    "barsoomian_wilderness | A vast, desolate Martian wasteland characterized by rugged terrain and expansive horizons. The landscape consists of arid plains and unpredictable terrain shifts, populated by predatory fauna and strange biological anomalies. | Expan..."
   ],
   "metadata": {
     "artifact_id": "CH020_SC003_SH004_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "8f0b90a15f8189c26812cb9a6f29075db4960133",
+    "source_fingerprint": "905cc6b6803769fce041af9afc47fd3fe45d2f63",
     "created_at_utc": "2026-04-22T02:45:03.069902+00:00",
-    "updated_at_utc": "2026-04-22T02:45:03.069902+00:00",
+    "updated_at_utc": "2026-04-22T09:02:32.092482+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH020_SC003",
-        "version": "1c64c921edeec82c5f5d14b19f332d3ea4788a54"
+        "version": "869ec627e168ae5bbbaec7c2684ca7576516ae75"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH020_SC003",
+        "version": "a79e102b11a8a80fd5bf561fe0a91ee775856603"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH020_SC003",
-        "version": "60ca82dd532c1b0bce07fcba4f9619fbc17129d8"
+        "version": "86312eb1e6832755d75afa54e67f2bf160fb7ea1"
       }
     ],
     "locked_fields": {},
@@ -144,6 +140,11 @@
         "timestamp_utc": "2026-04-22T02:45:25.534718+00:00",
         "action": "synthesized",
         "source_fingerprint": "8f0b90a15f8189c26812cb9a6f29075db4960133"
+      },
+      {
+        "timestamp_utc": "2026-04-22T09:02:54.563886+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "905cc6b6803769fce041af9afc47fd3fe45d2f63"
       }
     ]
   }

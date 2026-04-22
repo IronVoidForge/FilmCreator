@@ -5,7 +5,7 @@
   "shot_order": 2,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Medium 2: The protagonist reaches the window, achieving a mom...",
+  "shot_title": "Medium 2: The protagonist reaches the window, momentarily ach...",
   "shot_type": "medium",
   "camera_description": "Stable medium framing that keeps action and character readable.",
   "composition": "Readable medium composition in Exterior building/alleyway featuring protagonist.",
@@ -24,26 +24,25 @@
   ],
   "environment": {
     "label": "Exterior building/alleyway",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "Exterior building/alleyway",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
     "BT002"
   ],
   "continuity_constraints": [
-    "Window height must remain consistent at thirty feet",
-    "Physical contact point between protagonist and the_colossal_creature",
-    "Lighting shift from city streets to the creature's lair",
-    "The protagonist reaches the window",
-    "achieving a momentary sense of safety/escape."
+    "Window height (30 feet above ground)",
+    "Physical contact point between protagonist and creature",
+    "Lighting shift from city streets to creature's lair",
+    "The protagonist reaches the window, momentarily achieving safety/hope."
   ],
-  "prompt_seed": "Medium 2: The protagonist reaches the window, achieving a mom.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in Exterior building/alleyway featuring protagonist. Cast: protagonist. Environment: Exterior building/alleyway. Beat: The protagonist reaches the wind...",
-  "shot_notes": "The protagonist reaches the window, achieving a momentary sense of safety/escape.",
+  "prompt_seed": "Medium 2: The protagonist reaches the window, momentarily ach.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in Exterior building/alleyway featuring protagonist. Cast: protagonist. Environment: Exterior building/alleyway. Beat: The protagonist reaches the wind...",
+  "shot_notes": "The protagonist reaches the window, momentarily achieving safety/hope.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -101,31 +100,36 @@
     }
   ],
   "evidence_summary": [
-    "The sequence requires high-action choreography involving a vertical leap to a window thirty feet above ground level, utilizing the protagonist's extreme agility and low-gravity capabilities. The climax demands a seamless transition from an exterior chase to...",
+    "The sequence requires high-action choreography leveraging the protagonist's extreme agility and low-gravity leaping capabilities. The transition must manage a sudden shift from an exterior city street environment to a dark, enclosed interior lair, necessita...",
     "In a desperate move to evade the dog, the protagonist leaps toward a window thirty feet above the ground. Just as he reaches safety, he is intercepted by a massive, white, hairless, ape-like creature that grabs him and drags him away.",
     "Hope (of escape) $\\rightarrow$ Terror/Shock. **Likely Visual Coverage Families:** - Slow-motion capture of the high jump. - Extreme close-up of the protagonist's face during the grab. - Large-scale shots to show the s...",
-    "Slow-motion capture of the high jump",
+    "Slow-motion capture of high jump",
     "Extreme close-up of protagonist's face during grab",
-    "Large-scale shots for size differential (human vs. creature)",
+    "Large-scale shots for size differential",
     "protagonist | An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeless\" physic..."
   ],
   "metadata": {
     "artifact_id": "CH005_SC004_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "f20241a523bddbf468c87d30dd772683bebe7f36",
+    "source_fingerprint": "b3813d0c9b0f3e198142adc9e32a617045443993",
     "created_at_utc": "2026-04-22T00:47:47.539129+00:00",
-    "updated_at_utc": "2026-04-22T00:47:47.539129+00:00",
+    "updated_at_utc": "2026-04-22T07:23:35.037884+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH005_SC004",
-        "version": "1e190674103ad77a02280e22f53396d716abed0d"
+        "version": "71d5035eaa2171b8542b648db75db1b03186e2c0"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH005_SC004",
+        "version": "57ffddab7cd43950862e006f215a9319607d1a96"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH005_SC004",
-        "version": "0d00cab09322cfd53c85e415b3325017a4fa14f5"
+        "version": "5770e527d6a44985d2b174765fc6e6c41f8d7f2d"
       }
     ],
     "locked_fields": {},
@@ -135,6 +139,11 @@
         "timestamp_utc": "2026-04-22T00:48:22.471898+00:00",
         "action": "synthesized",
         "source_fingerprint": "f20241a523bddbf468c87d30dd772683bebe7f36"
+      },
+      {
+        "timestamp_utc": "2026-04-22T07:23:58.383751+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "b3813d0c9b0f3e198142adc9e32a617045443993"
       }
     ]
   }

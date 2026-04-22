@@ -24,7 +24,7 @@
   ],
   "environment": {
     "label": "scene_environment",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "SC004",
     "status": "review",
     "entity_kind": "environment",
@@ -36,10 +36,12 @@
     "BT003"
   ],
   "continuity_constraints": [
-    "Carter and Kan exchange eye contact to signal the deceptive plan."
+    "Blade angle and placement during the fake kill",
+    "Blood splatter differentiation (real vs. fake)",
+    "Carter and Kan exchange eye contact to initiate the deception plan."
   ],
-  "prompt_seed": "Action 3: Carter and Kan exchange eye contact to signal the d.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in SC004 with scene_character crossing the frame and maintaining readable movement. Cast: scene_character. Environment: SC004. Beat: Carter and Kan exchange...",
-  "shot_notes": "Carter and Kan exchange eye contact to signal the deceptive plan.",
+  "prompt_seed": "Action 3: Carter and Kan exchange eye contact to initiate the.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in SC004 with scene_character crossing the frame and maintaining readable movement. Cast: scene_character. Environment: SC004. Beat: Carter and Kan exchange...",
+  "shot_notes": "Carter and Kan exchange eye contact to initiate the deception plan.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -87,30 +89,35 @@
     }
   ],
   "evidence_summary": [
-    "Execute a high-stakes combat sequence transitioning into a coordinated deception. The scene requires precise choreography to manage the transition from a three-way duel to a staged death, necessitating tight coordination between the actors playing Carter an...",
+    "Execute a high-stakes combat climax involving three fighters in a subterranean amphitheater. The sequence must transition from intense physical combat to a coordinated deception, requiring precise choreography for the \"fatal\" blow and careful management of...",
     "The final duel between Carter, Kantos Kan, and a massive northern warrior. Kan kills the giant using specialized technique. To avoid fighting each other for freedom, Carter and Kan stage Carter's death; Kan \"kills\" him, wins his freedom, and leaves Carter f...",
     "High Tension $\\rightarrow$ Deception $\\rightarrow$ Relief (for the characters). **Likely Visual Coverage Families:** - Tight, fast-paced combat coverage. - Slow-motion for the \"fatal\" blow. - Close-ups on the eyes of...",
     "Tight, fast-paced combat coverage",
     "Slow-motion for the \"fatal\" blow",
-    "Close-ups on eyes (Carter/Kan signaling)"
+    "Close-ups on eyes (Carter/Kan) to signal deception"
   ],
   "metadata": {
     "artifact_id": "CH019_SC004_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "fb0e6cff0142ea36b0d0fb0bc69b48c4fb4af697",
+    "source_fingerprint": "b67260d3b8512948404f971664099440bc3c900a",
     "created_at_utc": "2026-04-22T02:38:58.787888+00:00",
-    "updated_at_utc": "2026-04-22T02:38:58.787888+00:00",
+    "updated_at_utc": "2026-04-22T08:55:38.841496+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH019_SC004",
-        "version": "67b9030f2f0333250743255d0b312794f2b58e17"
+        "version": "c7e6db78db5edd81110fca47288a80ad46d0a2e5"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH019_SC004",
+        "version": "c88d53ea961e7a4140edfa1fad8a360a0077209d"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH019_SC004",
-        "version": "cdc681f273f4dc36021f4cab1a1a53f86c39c6fc"
+        "version": "682490e503a3e61c812773572f6577862e834192"
       }
     ],
     "locked_fields": {},
@@ -120,6 +127,11 @@
         "timestamp_utc": "2026-04-22T02:39:24.875393+00:00",
         "action": "synthesized",
         "source_fingerprint": "fb0e6cff0142ea36b0d0fb0bc69b48c4fb4af697"
+      },
+      {
+        "timestamp_utc": "2026-04-22T08:56:05.963507+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "b67260d3b8512948404f971664099440bc3c900a"
       }
     ]
   }

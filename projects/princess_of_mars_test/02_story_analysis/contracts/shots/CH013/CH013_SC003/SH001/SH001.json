@@ -34,23 +34,23 @@
   ],
   "environment": {
     "label": "A private area within Lorquas Ptomel",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "A private area within Lorquas Ptomel",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
     "BT001"
   ],
   "continuity_constraints": [
-    "Presence/absence of Sola (must be cleared for private moment).",
-    "Physical state of Dejah Thoris (signs of recent labor/mixing explosives)."
+    "Sola presence/absence transition (orchestrated departure)",
+    "Physical state of Dejah Thoris (signs of recent labor/mixing explosives)"
   ],
-  "prompt_seed": "Action 1: Carter orchestrates the departure of Sola to secure.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in A private area within Lorquas Ptomel with john_carter, dejah_thoris crossing the frame and maintaining readable movement. Cast: john_carter, dejah_thoris....",
-  "shot_notes": "Carter orchestrates the departure of Sola to secure privacy with Dejah.",
+  "prompt_seed": "Action 1: Carter orchestrates the departure of Sola to secure privacy. action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in A private area within Lorquas Ptomel with john_carter, dejah_thoris crossing the frame and maintaining readable movement. Cast: john_carter, dejah_thoris.",
+  "shot_notes": "Carter orchestrates the departure of Sola to secure privacy.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -108,12 +108,12 @@
     }
   ],
   "evidence_summary": [
-    "Establish a private, intimate setting within Lorquas Ptomel to facilitate character development and technical exposition. The scene requires careful management of the transition from a group dynamic (including Sola) to an isolated two-shot between Carter an...",
+    "Establish a private, intimate setting within Lorquas Ptomel to facilitate both romantic development and technical exposition. The scene requires careful management of character presence to transition from a group dynamic to an isolated dialogue between Cart...",
     "Carter orchestrates a private moment with Dejah Thoris by sending Sola away. Dejah reveals how the Thark women have been attempting to isolate them by forcing her into labor, specifically mixing radium-based explosives. She explains the nature of these proj...",
     "From tactical/frustrated (discussing the women's interference) to intellectual/informative (explaining the explosives). **Likely Visual Coverage Families:** - Two-shots of Carter and Dejah in conversation. - Close-ups...",
-    "Two-shots of Carter and Dejah in conversation.",
-    "Close-ups on Dejah explaining radium explosive mechanics.",
-    "Reaction shots from Carter regarding Thark women's tactics.",
+    "Two-shots of Carter and Dejah in conversation",
+    "Close-ups on Dejah explaining radium explosive mechanics",
+    "Reaction shots from Carter regarding Thark women's tactics",
     "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in...",
     "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b..."
   ],
@@ -121,19 +121,24 @@
     "artifact_id": "CH013_SC003_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "b938c0ad301ebaedb196d7e29523c989cbad79e2",
+    "source_fingerprint": "332c3f66589e6d879e8ed5717e4b8fa20bca74f3",
     "created_at_utc": "2026-04-22T01:49:39.393013+00:00",
-    "updated_at_utc": "2026-04-22T01:49:39.393013+00:00",
+    "updated_at_utc": "2026-04-22T08:08:17.226954+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH013_SC003",
-        "version": "8a9bfec5a82caa76ae07e3c9736df6fbfa07667b"
+        "version": "a1460d5ce34c05f78281aa64f100b96162268a28"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH013_SC003",
+        "version": "91d714f721ae974bc679b676169ee2a8a538dc22"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH013_SC003",
-        "version": "20e19c22769014177bdf031a3d45e1cf1d8425b8"
+        "version": "d3b77fead47854dd782fbf76f3b0544781e1dfd2"
       }
     ],
     "locked_fields": {},
@@ -143,6 +148,11 @@
         "timestamp_utc": "2026-04-22T01:50:20.327353+00:00",
         "action": "synthesized",
         "source_fingerprint": "b938c0ad301ebaedb196d7e29523c989cbad79e2"
+      },
+      {
+        "timestamp_utc": "2026-04-22T08:08:51.178056+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "332c3f66589e6d879e8ed5717e4b8fa20bca74f3"
       }
     ]
   }

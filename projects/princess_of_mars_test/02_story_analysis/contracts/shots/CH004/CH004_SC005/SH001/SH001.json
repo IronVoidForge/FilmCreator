@@ -8,7 +8,7 @@
   "shot_title": "Medium 1: Sola leads the Narrator into the decorated sleeping...",
   "shot_type": "medium",
   "camera_description": "Stable medium framing that keeps action and character readable.",
-  "composition": "Readable medium composition in Decorated Sleeping Chamber featuring The Narrator.",
+  "composition": "Readable medium composition in grand_audience_chamber featuring The Narrator.",
   "target_seconds": 5.5,
   "characters_in_frame": [
     {
@@ -23,14 +23,14 @@
     }
   ],
   "environment": {
-    "label": "Decorated Sleeping Chamber",
-    "canonical_id": "None",
-    "display_name": "Decorated Sleeping Chamber",
-    "status": "review",
+    "label": "Grand Audience Chamber",
+    "canonical_id": "grand_audience_chamber",
+    "display_name": "grand_audience_chamber",
+    "status": "canonical",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "resolution_score": 183,
+    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH004/grand_audience_chamber.md",
+    "notes": "asset id exactly matches canonical id | query matches alias 'grand_audience_chamber'"
   },
   "beat_ids": [
     "BT001"
@@ -40,7 +40,7 @@
     "Consistent light levels within the Decorated Sleeping Chamber",
     "Sola leads the Narrator into the decorated sleeping chamber."
   ],
-  "prompt_seed": "Medium 1: Sola leads the Narrator into the decorated sleeping.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in Decorated Sleeping Chamber featuring The Narrator. Cast: The Narrator. Environment: Decorated Sleeping Chamber. Beat: Sola leads the Narrator into t...",
+  "prompt_seed": "Medium 1: Sola leads the Narrator into the decorated sleeping.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in grand_audience_chamber featuring The Narrator. Cast: The Narrator. Environment: grand_audience_chamber. Beat: Sola leads the Narrator into the decor...",
   "shot_notes": "Sola leads the Narrator into the decorated sleeping chamber.",
   "evidence_refs": [
     {
@@ -94,30 +94,36 @@
     }
   ],
   "evidence_summary": [
-    "Establish a moment of respite within the ancient, oversized Martian city while grounding the alien setting through the introduction of local fauna. The scene requires low-key lighting to simulate a nighttime rest setting and must emphasize the uncanny natur...",
+    "Establish a moment of respite within the ancient, oversized Martian city architecture. The scene must ground the alien setting by introducing local fauna through a controlled encounter in a low-key lighting environment, transitioning from the exhaustion of...",
     "Sola leads the Narrator to a decorated sleeping chamber. Inside, the Narrator encounters a strange, ten-legged Martian creature with a frog-like head and tusks.",
     "Fatigue $\\rightarrow$ Curiosity/Uncanniness. **Likely Visual Coverage Families:** * Medium shots of the chamber's decor. * Close-ups on the strange creature to emphasize its alien features. * Low-key lighting to sugge...",
     "Medium shots of the chamber's decor",
     "Close-ups on the Small Martian Creature (alien features)",
-    "Low-key lighting setups for nighttime/rest atmosphere"
+    "Low-key lighting setups for nighttime/rest setting",
+    "grand_audience_chamber | A cavernous, ceremonial hall characterized by oversized marble architecture and monumental scale. The interior features high vaulted ceilings and disproportionate furniture that emphasizes a sense of ancient weight. A central dais s..."
   ],
   "metadata": {
     "artifact_id": "CH004_SC005_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "df7bcdae66308b3ab006eeaba37693cb28b00483",
+    "source_fingerprint": "319da1ab530d529dd5127db3001fd259f61b2d68",
     "created_at_utc": "2026-04-22T00:39:37.923081+00:00",
-    "updated_at_utc": "2026-04-22T00:39:37.923081+00:00",
+    "updated_at_utc": "2026-04-22T07:18:20.531148+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH004_SC005",
-        "version": "2251eaf12040216244727188bc300a9f6ec2e133"
+        "version": "484de94a1947af392ae76d7e456c340d2a8e950a"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH004_SC005",
+        "version": "84f8b171354e017f0e0f0f8768ad407141d80cc1"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH004_SC005",
-        "version": "5ca17200b5e3d16c2fc7471b6e41b852f29926e5"
+        "version": "d9c1879b20c7103d134fb9b7ee610f0b225b6bfe"
       }
     ],
     "locked_fields": {},
@@ -127,6 +133,11 @@
         "timestamp_utc": "2026-04-22T00:40:10.136867+00:00",
         "action": "synthesized",
         "source_fingerprint": "df7bcdae66308b3ab006eeaba37693cb28b00483"
+      },
+      {
+        "timestamp_utc": "2026-04-22T07:18:45.948327+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "319da1ab530d529dd5127db3001fd259f61b2d68"
       }
     ]
   }

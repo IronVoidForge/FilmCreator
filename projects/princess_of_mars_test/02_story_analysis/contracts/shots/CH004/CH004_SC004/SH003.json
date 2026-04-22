@@ -5,10 +5,10 @@
   "shot_order": 3,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Action 3: Sola begins the process of providing sustenance to...",
+  "shot_title": "Sola provides sustenance",
   "shot_type": "action",
   "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-  "composition": "Dynamic composition in Transition from Audience Chamber to corridors/private quarters with The Narrator crossing the frame and maintaining readable movement.",
+  "composition": "Dynamic composition in grand_audience_chamber with The Narrator crossing the frame and maintaining readable movement.",
   "target_seconds": 5.6,
   "characters_in_frame": [
     {
@@ -23,14 +23,14 @@
     }
   ],
   "environment": {
-    "label": "Transition from Audience Chamber to corridors/private quarters",
-    "canonical_id": "None",
-    "display_name": "Transition from Audience Chamber to corridors/private quarters",
-    "status": "review",
+    "label": "Grand Audience Chamber",
+    "canonical_id": "grand_audience_chamber",
+    "display_name": "grand_audience_chamber",
+    "status": "canonical",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "resolution_score": 183,
+    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH004/grand_audience_chamber.md",
+    "notes": "asset id exactly matches canonical id | query matches alias 'grand_audience_chamber'"
   },
   "beat_ids": [
     "BT003"
@@ -39,7 +39,7 @@
     "The Narrator's physical state (hunger/fatigue levels)",
     "Sola's height relative to The Narrator"
   ],
-  "prompt_seed": "Action 3: Sola begins the process of providing sustenance to.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in Transition from Audience Chamber to corridors/private quarters with The Narrator crossing the frame and maintaining readable movement. Cast: The Narrator....",
+  "prompt_seed": "Action 3: Sola begins the process of providing sustenance to.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in grand_audience_chamber with The Narrator crossing the frame and maintaining readable movement. Cast: The Narrator. Environment: grand_audience_chamber.",
   "shot_notes": "Sola begins the process of providing sustenance to The Narrator.",
   "evidence_refs": [
     {
@@ -98,31 +98,37 @@
     }
   ],
   "evidence_summary": [
-    "The scene must facilitate a shift in tone from the public spectacle of the Audience Chamber to the intimate, private setting of the corridors/quarters. Focus on the transition of care for The Narrator, moving from high-tension negotiation to the relief prov...",
+    "The scene must facilitate a shift in scale and tone, moving from the grandiosity of the public Audience Chamber to the intimate, functional atmosphere of private quarters. Focus on the transition of care for The Narrator, establishing Sola as a primary care...",
     "The Narrator refuses further performance until his hunger is addressed. Tars Tarkas assigns Sola to look after him. Sola begins the process of providing sustenance.",
     "Tension $\\rightarrow$ Relief/Exhaustion. **Likely Visual Coverage Families:** * Medium shots of the interaction between Tars Tarkas and Sola. * Over-the-shoulder (OTS) shots during the negotiation for food.",
-    "Medium shots of interaction between tars_tarkas and sola",
-    "Over-the-shoulder (OTS) shots during food negotiation",
+    "Medium shots of the interaction between tars_tarkas and sola",
+    "Over-the-shoulder (OTS) shots during the negotiation for food",
     "The Narrator's physical state (hunger/fatigue levels)",
-    "tars_tarkas | Tars Tarkas is a prominent Thark warrior and leader characterized by green skin. He carries himself with a professional demeanor, embodying the strength and combat skill valued by his Martian culture. His appearance is defined by standard Mart..."
+    "tars_tarkas | Tars Tarkas is a prominent Thark warrior and leader characterized by green skin. He carries himself with a professional demeanor, embodying the strength and combat skill valued by his Martian culture. His appearance is defined by standard Mart...",
+    "grand_audience_chamber | A cavernous, ceremonial hall characterized by oversized marble architecture and monumental scale. The interior features high vaulted ceilings and disproportionate furniture that emphasizes a sense of ancient weight. A central dais s..."
   ],
   "metadata": {
     "artifact_id": "CH004_SC004_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "0568a8d21506eba27cc6561688921218df59ec4a",
+    "source_fingerprint": "cc89cf9bda0cbd60399f892a28c3d1aecfe82fbf",
     "created_at_utc": "2026-04-22T00:39:12.258518+00:00",
-    "updated_at_utc": "2026-04-22T00:39:12.258518+00:00",
+    "updated_at_utc": "2026-04-22T07:18:04.281457+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH004_SC004",
-        "version": "e1b12701f960d9b9c4cb1e5835bd9b9e6c3bfc4e"
+        "version": "12c67150877c70370c35cce1bd2957db45aa04ed"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH004_SC004",
+        "version": "f8c403792ad7937bdb58e0c541069332d01e06cc"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH004_SC004",
-        "version": "2bc7441a1d2b1ac181be215a64a3d7666f2fbc25"
+        "version": "e913c4134d787ebb94dd5340692db58916983dae"
       }
     ],
     "locked_fields": {},
@@ -132,6 +138,11 @@
         "timestamp_utc": "2026-04-22T00:39:37.907257+00:00",
         "action": "synthesized",
         "source_fingerprint": "0568a8d21506eba27cc6561688921218df59ec4a"
+      },
+      {
+        "timestamp_utc": "2026-04-22T07:18:20.510277+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "cc89cf9bda0cbd60399f892a28c3d1aecfe82fbf"
       }
     ]
   }

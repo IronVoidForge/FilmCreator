@@ -24,12 +24,12 @@
   ],
   "environment": {
     "label": "Thark (City)",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "Thark (City)",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
@@ -97,7 +97,7 @@
     }
   ],
   "evidence_summary": [
-    "The scene must visually communicate the transition of John Carter from a survivor to a leader by staging his proposal against the backdrop of an immense Thark military force. The scale of the 150,000 warriors is the primary production challenge, requiring c...",
+    "The scene must visually communicate the transition of John Carter from a survivor to a leader by staging a massive mobilization. The scale of the Thark army (150,000 warriors) is the primary production challenge and must be established through layered wide...",
     "Now a chieftain, John Carter proposes an ambitious raid on Zodanga to rescue Dejah Thoris. The Thark hordes enthusiastically commit to the cause, amassing a massive army of 150,000 warriors.",
     "Determination $\\rightarrow$ Collective Zeal.",
     "Wide shots of the gathering masses",
@@ -110,19 +110,24 @@
     "artifact_id": "CH024_SC005_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "f640987ce9479f1d04f2d27f246ce0346b1945b7",
+    "source_fingerprint": "eceb5169a469b6c69629e2d2a2ec266dd2fa7112",
     "created_at_utc": "2026-04-22T03:25:31.775530+00:00",
-    "updated_at_utc": "2026-04-22T03:25:31.775530+00:00",
+    "updated_at_utc": "2026-04-22T15:43:32.545526+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH024_SC005",
-        "version": "661cc1a950e3ef8dc72eb33e91fad8366c9ec5bd"
+        "version": "8325271a81f21f70ec7620775acfb91b67d9e6eb"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH024_SC005",
+        "version": "a8d7e4104fb364be4d0c075eafe48ec312bece21"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH024_SC005",
-        "version": "dd84d640ab0bf2b37dacc08dc2b6253a908db55a"
+        "version": "0cf328c225ad45c86f99f4cb494437a2b48e714f"
       }
     ],
     "locked_fields": {},
@@ -132,6 +137,11 @@
         "timestamp_utc": "2026-04-22T03:25:48.856910+00:00",
         "action": "synthesized",
         "source_fingerprint": "f640987ce9479f1d04f2d27f246ce0346b1945b7"
+      },
+      {
+        "timestamp_utc": "2026-04-22T15:43:47.106022+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "eceb5169a469b6c69629e2d2a2ec266dd2fa7112"
       }
     ]
   }

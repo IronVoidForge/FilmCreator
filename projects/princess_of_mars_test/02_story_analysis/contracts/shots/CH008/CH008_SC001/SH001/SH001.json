@@ -24,12 +24,12 @@
   ],
   "environment": {
     "label": "Deserted Martian City / Valley overlook",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "Deserted Martian City / Valley overlook",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
@@ -37,7 +37,7 @@
   ],
   "continuity_constraints": [
     "Precise positioning of protagonist relative to the city exit",
-    "Synchronized timing of airship appearance in the sky with Martian retreat"
+    "Synchronized timing of airship descent in the sky with Martian retreat"
   ],
   "prompt_seed": "Establishing Wide 1: Protagonist and sola prepare for departure from the.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across Deserted Martian City / Valley overlook with protagonist placed for immediate spatial orientation. Cast: protagonist. Environment: Deserted Martian City / Valley overlook.",
   "shot_notes": "Protagonist and sola prepare for departure from the deserted Martian city.",
@@ -111,19 +111,24 @@
     "artifact_id": "CH008_SC001_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "b1cfeb716c7462b54dbb86e14e7375d4fa854ef2",
+    "source_fingerprint": "04799dbd75e6759f647c5f923d454a979c142819",
     "created_at_utc": "2026-04-22T01:06:12.501562+00:00",
-    "updated_at_utc": "2026-04-22T01:06:12.501562+00:00",
+    "updated_at_utc": "2026-04-22T07:38:11.871341+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH008_SC001",
-        "version": "93fe615599a00b6cfe17f314b74a3a4cf5b9abff"
+        "version": "eb260de97bc8a94d13f7b77c2059c17db850d7ae"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH008_SC001",
+        "version": "cacd49caedafc24fa42d9f75c8fdb745b99c2863"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH008_SC001",
-        "version": "14b13758720667fabc8ba489ebde7896b469a59e"
+        "version": "ca31ddd3639c54f2941432a4fde94835fd5931b5"
       }
     ],
     "locked_fields": {},
@@ -133,6 +138,11 @@
         "timestamp_utc": "2026-04-22T01:06:41.317488+00:00",
         "action": "synthesized",
         "source_fingerprint": "b1cfeb716c7462b54dbb86e14e7375d4fa854ef2"
+      },
+      {
+        "timestamp_utc": "2026-04-22T07:38:35.865963+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "04799dbd75e6759f647c5f923d454a979c142819"
       }
     ]
   }

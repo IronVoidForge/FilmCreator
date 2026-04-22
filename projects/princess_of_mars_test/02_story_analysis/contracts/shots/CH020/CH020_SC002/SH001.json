@@ -5,10 +5,10 @@
   "shot_order": 1,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Establishing Wide 1: The protagonist meets the elderly Martian caretaker...",
+  "shot_title": "Establishing Wide 1: The protagonist meets the caretaker",
   "shot_type": "establishing_wide",
   "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across Interior Atmosphere Factory with protagonist placed for immediate spatial orientation.",
+  "composition": "Wide composition across barsoomian_wilderness with protagonist placed for immediate spatial orientation.",
   "target_seconds": 5.2,
   "characters_in_frame": [
     {
@@ -23,14 +23,14 @@
     }
   ],
   "environment": {
-    "label": "Interior Atmosphere Factory",
-    "canonical_id": "None",
-    "display_name": "Interior Atmosphere Factory",
-    "status": "review",
+    "label": "Barsoomian Wilderness",
+    "canonical_id": "barsoomian_wilderness",
+    "display_name": "barsoomian_wilderness",
+    "status": "canonical",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "resolution_score": 183,
+    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH020/barsoomian_wilderness.md",
+    "notes": "asset id exactly matches canonical id | query matches alias 'barsoomian_wilderness'"
   },
   "beat_ids": [
     "BT001"
@@ -40,8 +40,8 @@
     "Industrial lighting consistency within the factory setting",
     "Resolve Interior Atmosphere Factory -> Interior Atmosphere Factory"
   ],
-  "prompt_seed": "Establishing Wide 1: The protagonist meets the elderly Martian caretaker.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across Interior Atmosphere Factory with protagonist placed for immediate spatial orientation. Cast: protagonist. Environment: Interior Atm...",
-  "shot_notes": "The protagonist meets the elderly Martian caretaker within the facility.",
+  "prompt_seed": "Establishing Wide 1: The protagonist meets the elderly Martian caretaker.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across barsoomian_wilderness with protagonist placed for immediate spatial orientation. Cast: protagonist. Environment: barsoomian_wildern...",
+  "shot_notes": "The protagonist meets the elderly Martian caretaker within the factory.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -106,25 +106,31 @@
     "Extreme close-ups (telepathic revelations)",
     "Wide/Establishing shots (massive machinery)",
     "protagonist | An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeless\" physic...",
-    "caretaker | An elderly Martian with a desiccated, \"dried-up\" physical appearance. His silhouette reflects a life of long-term seclusion within the Atmosphere Factory, suggesting worn or utilitarian clothing consistent with isolation. He possesses a thin, ag..."
+    "caretaker | An elderly Martian with a desiccated, \"dried-up\" physical appearance. His silhouette reflects a life of long-term seclusion within the Atmosphere Factory, suggesting worn or utilitarian clothing consistent with isolation. He possesses a thin, ag...",
+    "barsoomian_wilderness | A vast, desolate Martian wasteland characterized by rugged terrain and expansive horizons. The landscape consists of arid plains and unpredictable terrain shifts, populated by predatory fauna and strange biological anomalies. | Expan..."
   ],
   "metadata": {
     "artifact_id": "CH020_SC002_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "a6e204f23ec4f84f5c85c2a99e66e7daae243b1c",
+    "source_fingerprint": "6aa4ad4cea73e1b5478a9bf4a54751f2f4e9bd11",
     "created_at_utc": "2026-04-22T02:42:12.581004+00:00",
-    "updated_at_utc": "2026-04-22T02:42:12.581004+00:00",
+    "updated_at_utc": "2026-04-22T08:59:35.827688+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH020_SC002",
-        "version": "88ed056436cd795875313ceee85e2fe817a8b977"
+        "version": "9a69716c8500fdaa88533962ae197483dadce12f"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH020_SC002",
+        "version": "3877c2e67a7600af3b6fa2b10bcf281ddc6d95fd"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH020_SC002",
-        "version": "ada52b10008d27d27e4a6d211b68bbca8b137fdd"
+        "version": "be90287a850776ae95a0b2a4a9cc67befa0aa4b2"
       }
     ],
     "locked_fields": {},
@@ -134,6 +140,11 @@
         "timestamp_utc": "2026-04-22T02:42:42.244050+00:00",
         "action": "synthesized",
         "source_fingerprint": "a6e204f23ec4f84f5c85c2a99e66e7daae243b1c"
+      },
+      {
+        "timestamp_utc": "2026-04-22T09:00:06.380214+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "6aa4ad4cea73e1b5478a9bf4a54751f2f4e9bd11"
       }
     ]
   }

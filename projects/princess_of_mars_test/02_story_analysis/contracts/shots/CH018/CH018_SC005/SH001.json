@@ -7,7 +7,7 @@
   "next_shot_id": "",
   "shot_title": "Medium 1: Protagonist Regains Composure",
   "shot_type": "medium",
-  "camera_description": "Stable medium framing.",
+  "camera_description": "Stable medium framing that keeps action and character readable.",
   "composition": "Readable medium composition in SC005 featuring scene_character.",
   "target_seconds": 5.5,
   "characters_in_frame": [
@@ -24,7 +24,7 @@
   ],
   "environment": {
     "label": "scene_environment",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "SC005",
     "status": "review",
     "entity_kind": "environment",
@@ -36,11 +36,11 @@
     "BT001"
   ],
   "continuity_constraints": [
-    "Precise tracking of the position and number of the glowing eyes",
-    "The Protagonist regains his composure following the killing."
+    "Protagonist's physical state post-killing/escape attempt",
+    "The protagonist regains composure following the recent killing."
   ],
-  "prompt_seed": "Medium 1: The Protagonist regains his composure following the.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in SC005 featuring scene_character. Cast: scene_character. Environment: SC005. Beat: The Protagonist regains his composure following the killing.",
-  "shot_notes": "The Protagonist regains his composure following the killing.",
+  "prompt_seed": "Medium 1: The protagonist regains composure following the rec.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in SC005 featuring scene_character. Cast: scene_character. Environment: SC005. Beat: The protagonist regains composure following the recent killing.",
+  "shot_notes": "The protagonist regains composure following the recent killing.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -83,30 +83,35 @@
     }
   ],
   "evidence_summary": [
-    "The scene focuses on the transition from post-combat recovery to psychological terror. Lighting must facilitate a high-contrast environment where the darkness is absolute, allowing for the controlled reveal of supernatural elements via glowing eyes. The pro...",
+    "The scene focuses on the transition from a moment of post-combat recovery to sudden supernatural tension. Lighting must support high-contrast darkness to facilitate the reveal of glowing eyes, utilizing shallow depth of field to maintain focus on the protag...",
     "As the protagonist regains his composure after the killing, he is confronted by several pairs of glowing eyes watching him from the darkness before they retreat. **Participating Characters:** - The Protagonist - Mysterious Entities (Eyes only) **Participati...",
     "Relief/Sanity $\\rightarrow$ Paranoia/Dread. **Likely Visual Coverage Families:** - Extreme close-ups of the glowing eyes in the blackness. - Shallow depth of field to isolate the protagonist's face. - Slow pans into t...",
-    "Extreme close-ups of the glowing eyes in the blackness",
-    "Shallow depth of field to isolate the protagonist's face",
-    "Slow pans into the darkness"
+    "Extreme close-ups of glowing eyes in blackness",
+    "Shallow depth of field (protagonist face isolation)",
+    "Slow pans into darkness"
   ],
   "metadata": {
     "artifact_id": "CH018_SC005_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "8e5ea7fa60a2ab47b4a08defe6a4aebd41e24fbe",
+    "source_fingerprint": "bf4d97a05920e9c691609170fd626a677a2da0b0",
     "created_at_utc": "2026-04-22T02:32:02.502552+00:00",
-    "updated_at_utc": "2026-04-22T02:32:02.502552+00:00",
+    "updated_at_utc": "2026-04-22T08:50:02.081527+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH018_SC005",
-        "version": "3749d7b93bb9621d709b0f601fe87febd2836bef"
+        "version": "bd43e824e5e29a741d992793797bd23a9b8532f8"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH018_SC005",
+        "version": "79762350b1a03c663fddf8ac539e3a2b512cbfc5"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH018_SC005",
-        "version": "049cdd0060b1aedacf47b5e4a9805e18a13eafbb"
+        "version": "fbed520c355e395f18a1559a8ce10709b920cd14"
       }
     ],
     "locked_fields": {},
@@ -116,6 +121,11 @@
         "timestamp_utc": "2026-04-22T02:32:24.427927+00:00",
         "action": "synthesized",
         "source_fingerprint": "8e5ea7fa60a2ab47b4a08defe6a4aebd41e24fbe"
+      },
+      {
+        "timestamp_utc": "2026-04-22T08:50:24.884878+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "bf4d97a05920e9c691609170fd626a677a2da0b0"
       }
     ]
   }

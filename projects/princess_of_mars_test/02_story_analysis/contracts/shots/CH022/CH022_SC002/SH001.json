@@ -24,12 +24,12 @@
   ],
   "environment": {
     "label": "Palace corridors/Antechambers",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "Palace corridors/Antechambers",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
@@ -37,7 +37,7 @@
   ],
   "continuity_constraints": [
     "Blood splatter patterns",
-    "Weapon positions",
+    "Weapon positions/placement",
     "Incremental count of fallen guards in frame",
     "Carter abandons his post",
     "driven by desperation following Dejah's declaration."
@@ -96,31 +96,36 @@
     }
   ],
   "evidence_summary": [
-    "The scene requires a high-intensity combat sequence designed to showcase the martial prowess of john_carter. The choreography must transition from a character-driven moment of emotional distress into a prolonged, brutal physical confrontation against four Z...",
+    "The sequence must execute a high-intensity combat choreography that transitions from Carter's emotional desperation to focused martial rage. The fight is a prolonged, brutal engagement designed to showcase the protagonist's superior combat capabilities agai...",
     "Distraught by Dejah's declaration, Carter abandons his post to find her. He is intercepted in an antechamber by four Zodangan guardsmen. A brutal twenty-minute combat ensues, resulting in the death of all four guards.",
     "Desperation $\\rightarrow$ Rage/Combat Intensity. **Likely Visual Coverage Families:** - Wide shots to establish the geography of the fight. - Handheld/Dynamic shots for the combat choreography. - Close-ups on weapons...",
-    "Wide shots (geography of fight)",
-    "Handheld/Dynamic shots (combat choreography)",
-    "Close-ups (weapons and physical struggle)",
+    "Wide shots (Geography of fight)",
+    "Handheld/Dynamic shots (Choreography)",
+    "Close-ups (Weapons and physical struggle)",
     "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in..."
   ],
   "metadata": {
     "artifact_id": "CH022_SC002_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "131a2303f8c66f9cfa3bd5e9b9560cc3a2bc808b",
+    "source_fingerprint": "56b214e6b34a7674803e5ba8337368f499d271bd",
     "created_at_utc": "2026-04-22T03:01:58.858433+00:00",
-    "updated_at_utc": "2026-04-22T03:01:58.858433+00:00",
+    "updated_at_utc": "2026-04-22T09:18:28.820534+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH022_SC002",
-        "version": "5fd5d3578f89f0f7eb2d50369dbaa79a405fc8d5"
+        "version": "b049f08428c99c040f41ff04ea55c4128a5f3059"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH022_SC002",
+        "version": "530343ca19480be0e97543eceac8724bbe2733f5"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH022_SC002",
-        "version": "7418b1c7d92821d14b86eedb9752074dd3318719"
+        "version": "337de2549d4f7e6aea69e0d25a60eace29f289bd"
       }
     ],
     "locked_fields": {},
@@ -130,6 +135,11 @@
         "timestamp_utc": "2026-04-22T03:02:29.458883+00:00",
         "action": "synthesized",
         "source_fingerprint": "131a2303f8c66f9cfa3bd5e9b9560cc3a2bc808b"
+      },
+      {
+        "timestamp_utc": "2026-04-22T09:19:00.086146+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "56b214e6b34a7674803e5ba8337368f499d271bd"
       }
     ]
   }

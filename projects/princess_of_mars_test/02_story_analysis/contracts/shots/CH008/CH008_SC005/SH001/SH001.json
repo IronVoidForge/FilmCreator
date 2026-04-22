@@ -24,12 +24,12 @@
   ],
   "environment": {
     "label": "City Plaza",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "City Plaza",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
@@ -37,11 +37,10 @@
   ],
   "continuity_constraints": [
     "The specific hand gesture used by the_prisoner",
-    "Physical distance between protagonist and the_prisoner during the exchange",
-    "protagonist returns to City Plaza and spots the_prisoner (copper-skinned) being escorted."
+    "Physical distance between protagonist and the_prisoner during exchange"
   ],
   "prompt_seed": "Action 1: protagonist returns to City Plaza and spots the_pri.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in City Plaza with protagonist crossing the frame and maintaining readable movement. Cast: protagonist. Environment: City Plaza. Beat: protagonist returns to...",
-  "shot_notes": "protagonist returns to City Plaza and spots the_prisoner (copper-skinned) being escorted.",
+  "shot_notes": "protagonist returns to City Plaza and spots the_prisoner (copper-skinned) being escorted by Green Martian Warriors (escorting).",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -99,7 +98,7 @@
     }
   ],
   "evidence_summary": [
-    "Establish a new character through a moment of dramatic irony and cultural misunderstanding. The scene relies on the visual communication of a silent plea from the_prisoner, which is misinterpreted by the protagonist due to his lack of knowledge regarding Ma...",
+    "Establish a new character through a moment of dramatic irony and cultural misunderstanding. The scene relies on the visual communication of a silent plea from the_prisoner to the protagonist, which is ultimately misinterpreted due to the protagonist's lack...",
     "Returning to the plaza, the protagonist sees a beautiful, copper-skinned female prisoner from the airship. She makes a silent plea for help, but due to his lack of understanding of Martian customs, he fails to respond, leading her to view him with contempt...",
     "Curiosity $\\rightarrow$ Hope $\\rightarrow$ Dejection/Contempt.",
     "Eye-level medium shots of the_prisoner",
@@ -112,19 +111,24 @@
     "artifact_id": "CH008_SC005_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "a71ed2aff8f107961f772090b0f4af389a81d2bc",
+    "source_fingerprint": "1181e4cb9ec3ea0d467765c510f46854ee049903",
     "created_at_utc": "2026-04-22T01:13:29.579272+00:00",
-    "updated_at_utc": "2026-04-22T01:13:29.579272+00:00",
+    "updated_at_utc": "2026-04-22T07:43:33.447929+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH008_SC005",
-        "version": "b78f71535863ec88574b020dcd91a69e7b375e3a"
+        "version": "809db75c7ca5a14b8980647492b6f5fb3c3724a5"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH008_SC005",
+        "version": "a85f312e4d2d2cd5a131d0bcfd69541417afd108"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH008_SC005",
-        "version": "186fdd207ac64e4c81c5b89df0621b7946dcf12f"
+        "version": "df0163e77a768aee69c0f442d2fe708b2cb2f6ca"
       }
     ],
     "locked_fields": {},
@@ -134,6 +138,11 @@
         "timestamp_utc": "2026-04-22T01:14:06.796439+00:00",
         "action": "synthesized",
         "source_fingerprint": "a71ed2aff8f107961f772090b0f4af389a81d2bc"
+      },
+      {
+        "timestamp_utc": "2026-04-22T07:44:03.203284+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "1181e4cb9ec3ea0d467765c510f46854ee049903"
       }
     ]
   }

@@ -5,7 +5,7 @@
   "shot_order": 2,
   "previous_shot_id": "SH001",
   "next_shot_id": "SH003",
-  "shot_title": "Medium 2: The protagonist attempts to move",
+  "shot_title": "Medium 2: Attempting Movement",
   "shot_type": "medium",
   "camera_description": "Stable medium framing that keeps action and character readable.",
   "composition": "Readable medium composition in A circular basin on Mars covered in yellowish featuring protagonist.",
@@ -24,12 +24,12 @@
   ],
   "environment": {
     "label": "A circular basin on Mars covered in yellowish",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "A circular basin on Mars covered in yellowish",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
@@ -106,19 +106,24 @@
     "artifact_id": "CH003_SC001_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "03869bf7cf771a08158fb295856f38c1fc442d38",
+    "source_fingerprint": "cd16cc6264e2b831e7b837865d4d5025e55e4857",
     "created_at_utc": "2026-04-22T00:19:26.918448+00:00",
-    "updated_at_utc": "2026-04-22T00:19:26.918448+00:00",
+    "updated_at_utc": "2026-04-22T07:04:28.240714+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH003_SC001",
-        "version": "eccb171afa25a2899f219e06d35b7db3cb6e3737"
+        "version": "4aa3965fb7dd3b00acce30f4dd39631bc46ffbef"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH003_SC001",
+        "version": "e023d296e0cb615768ea8b8cd1dbff5a18d9a2f1"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH003_SC001",
-        "version": "2c99670cae35155fae1081e01cdd58bd5b75c61c"
+        "version": "205820fa9d8a2325ba4c19754a30dd80026ef0fd"
       }
     ],
     "locked_fields": {},
@@ -128,6 +133,11 @@
         "timestamp_utc": "2026-04-22T00:19:51.509425+00:00",
         "action": "synthesized",
         "source_fingerprint": "03869bf7cf771a08158fb295856f38c1fc442d38"
+      },
+      {
+        "timestamp_utc": "2026-04-22T07:04:44.998248+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "cd16cc6264e2b831e7b837865d4d5025e55e4857"
       }
     ]
   }

@@ -5,7 +5,7 @@
   "shot_order": 1,
   "previous_shot_id": "",
   "next_shot_id": "SH002",
-  "shot_title": "Action 1: The protagonist approaches and explores the glass-r...",
+  "shot_title": "Action 1: The protagonist approaches and explores the glass-roofed incubator enclosure.",
   "shot_type": "action",
   "camera_description": "Active camera with tracking energy and clear spatial orientation.",
   "composition": "Dynamic composition in The glass-roofed incubator enclosure with protagonist crossing the frame and maintaining readable movement.",
@@ -24,21 +24,20 @@
   ],
   "environment": {
     "label": "The glass-roofed incubator enclosure",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "The glass-roofed incubator enclosure",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
     "BT001"
   ],
   "continuity_constraints": [
-    "Hatchling movement patterns (consistency in grotesque locomotion)",
-    "Lighting shifts through the glass roof",
-    "The protagonist approaches and explores the glass-roofed incubator enclosure."
+    "Movement patterns of the multi-limbed hatchlings",
+    "Lighting consistency through the glass roof"
   ],
   "prompt_seed": "Action 1: The protagonist approaches and explores the glass-r.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in The glass-roofed incubator enclosure with protagonist crossing the frame and maintaining readable movement. Cast: protagonist. Environment: The glass-roof...",
   "shot_notes": "The protagonist approaches and explores the glass-roofed incubator enclosure.",
@@ -94,11 +93,11 @@
     }
   ],
   "evidence_summary": [
-    "Establish the biological reality of Martian life through a discovery within a controlled environment. The scene must balance the wonder of new life with the visceral horror of its grotesque morphology, utilizing macro photography and POV perspectives to bri...",
+    "Establish the biological reality of Martian life through a discovery within a controlled environment. The scene must balance the wonder of new life with the visceral horror of its grotesque morphology, utilizing macro photography and specific lighting to em...",
     "The protagonist explores a nearby glass-roofed enclosure (an incubator) and finds large white eggs alongside grotesque, multi-limbed young Martians that have already hatched.",
     "Curiosity $\\rightarrow$ Horror/Awe. **Likely Visual Coverage Families:** - Macro shots of the eggs and the multi-limbed hatchlings. - POV shots from the protagonist looking through the glass. - Medium shots of his rea...",
     "Macro shots of eggs and multi-limbed hatchlings",
-    "POV shots through the glass enclosure",
+    "POV shots through the glass roof/enclosure",
     "Medium shots of protagonist reaction",
     "protagonist | An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeless\" physic..."
   ],
@@ -106,19 +105,24 @@
     "artifact_id": "CH003_SC002_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "9a8395dcfcfa5bc23d72653c50cb83d182923496",
+    "source_fingerprint": "2dec92db38e88418ca0148a1efd479d31a561082",
     "created_at_utc": "2026-04-22T00:20:16.116874+00:00",
-    "updated_at_utc": "2026-04-22T00:20:16.116874+00:00",
+    "updated_at_utc": "2026-04-22T07:05:01.747286+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH003_SC002",
-        "version": "fdf7a815cc380c8ca18cb15b28a3b4de350621b6"
+        "version": "0b60cf010178628effd8a3e7135c3a878856523d"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH003_SC002",
+        "version": "b2870a51dc6657821389f7a75470f88a22614eb5"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH003_SC002",
-        "version": "449e06a9d41c7f7b09c1a07b7107f78118967c28"
+        "version": "90e34b225d0870d4230f772b11c80d3e64f57b10"
       }
     ],
     "locked_fields": {},
@@ -128,6 +132,11 @@
         "timestamp_utc": "2026-04-22T00:20:45.208805+00:00",
         "action": "synthesized",
         "source_fingerprint": "9a8395dcfcfa5bc23d72653c50cb83d182923496"
+      },
+      {
+        "timestamp_utc": "2026-04-22T07:05:24.732843+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "2dec92db38e88418ca0148a1efd479d31a561082"
       }
     ]
   }

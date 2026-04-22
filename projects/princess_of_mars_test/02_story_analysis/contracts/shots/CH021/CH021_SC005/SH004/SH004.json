@@ -5,7 +5,7 @@
   "shot_order": 4,
   "previous_shot_id": "SH003",
   "next_shot_id": "SH005",
-  "shot_title": "Action 4: Carter engages and kills the three Green Martian wa...",
+  "shot_title": "Action 4: Killing the warriors",
   "shot_type": "action",
   "camera_description": "Active camera with tracking energy and clear spatial orientation.",
   "composition": "Dynamic composition in The Martian sky/aerial combat zone with Three Green Martian Warriors crossing the frame and maintaining readable movement.",
@@ -24,12 +24,12 @@
   ],
   "environment": {
     "label": "The Martian sky/aerial combat zone",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "The Martian sky/aerial combat zone",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
@@ -39,8 +39,8 @@
     "Precise flight trajectories for all airborne entities",
     "Physical state/damage to airships post-combat"
   ],
-  "prompt_seed": "Action 4: Carter engages and kills the three Green Martian wa.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in The Martian sky/aerial combat zone with Three Green Martian Warriors crossing the frame and maintaining readable movement. Cast: Three Green Martian Warriors. Environment: The Martian sky/aerial combat zone.",
-  "shot_notes": "Carter engages and kills the three Green Martian warriors.",
+  "prompt_seed": "Action 4: Carter kills the three Green Martian warriors.. action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in The Martian sky/aerial combat zone with Three Green Martian Warriors crossing the frame and maintaining readable movement. Cast: Three Green Martian Warriors. Env...",
+  "shot_notes": "Carter kills the three Green Martian warriors.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -98,7 +98,7 @@
     }
   ],
   "evidence_summary": [
-    "Execute a high-stakes aerial combat sequence that establishes John Carter's superhuman capabilities. The scene requires precise coordination of flight trajectories and mid-air combat choreography to transition from a tense hunt into a violent, heroic interv...",
+    "Execute a high-stakes aerial combat sequence that establishes John Carter's superhuman capabilities and heroic nature. The scene requires precise coordination of flight trajectories to manage the mid-air intervention between Carter, the Zodangan scout, and...",
     "During a solo flight, Carter encounters a Zodangan scout (a cousin of the Jeddak) being hunted by three Green Martian warriors. Carter intervenes in mid-air, kills the warriors, and saves the scout.",
     "Tension $\\rightarrow$ High Action $\\rightarrow$ Relief.",
     "Dynamic aerial shots",
@@ -111,19 +111,24 @@
     "artifact_id": "CH021_SC005_SH004_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "f4e4329d66fee9ee3fa381c827f9b2ceb15a39bc",
+    "source_fingerprint": "6f2674c399c08663d06793338df33434efe0d46f",
     "created_at_utc": "2026-04-22T02:56:31.265188+00:00",
-    "updated_at_utc": "2026-04-22T02:56:31.265188+00:00",
+    "updated_at_utc": "2026-04-22T09:13:13.976920+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH021_SC005",
-        "version": "c358c137afb999e6ffb6cb8576a35f7acc72ab78"
+        "version": "5bd6d5e3b614b956530031d81967731b6bfcf274"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH021_SC005",
+        "version": "59b3469c7e2cdf8a0289591f58e28a3c41295f47"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH021_SC005",
-        "version": "2493b0bfd8b1fa9756b0e88024d61e238235f89a"
+        "version": "c0c1679b57fb2569f42ce74cba9986b541030562"
       }
     ],
     "locked_fields": {},
@@ -133,6 +138,11 @@
         "timestamp_utc": "2026-04-22T02:56:58.573399+00:00",
         "action": "synthesized",
         "source_fingerprint": "f4e4329d66fee9ee3fa381c827f9b2ceb15a39bc"
+      },
+      {
+        "timestamp_utc": "2026-04-22T09:13:40.256733+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "6f2674c399c08663d06793338df33434efe0d46f"
       }
     ]
   }

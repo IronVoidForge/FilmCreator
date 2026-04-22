@@ -5,10 +5,10 @@
   "shot_order": 3,
   "previous_shot_id": "SH002",
   "next_shot_id": "SH004",
-  "shot_title": "Action 3: Thark Warriors and Heliumite Sailors react to the m...",
+  "shot_title": "Action 3: Victors (Thark Warriors/Heliumite Sailors) react to...",
   "shot_type": "action",
   "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-  "composition": "Dynamic composition in The wreckage-strewn skies near Helium with Thark Warriors crossing the frame and maintaining readable movement.",
+  "composition": "Dynamic composition in The wreckage-strewn skies near Helium with Thark Warriors, Heliumite Sailors crossing the frame and maintaining readable movement.",
   "target_seconds": 5.5,
   "characters_in_frame": [
     {
@@ -20,27 +20,37 @@
       "resolution_score": 10,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
       "notes": "apache_warriors | source context shares query language"
+    },
+    {
+      "label": "Heliumite Sailors",
+      "canonical_id": null,
+      "display_name": "Heliumite Sailors",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 10,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
+      "notes": "apache_warriors | source context shares query language"
     }
   ],
   "environment": {
     "label": "The wreckage-strewn skies near Helium",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "The wreckage-strewn skies near Helium",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
     "BT003"
   ],
   "continuity_constraints": [
-    "Precise timing of the leaps relative to the cessation of fire",
-    "Thark Warriors and Heliumite Sailors react to the mass suicide/ritual."
+    "Precise timing of leaps relative to the cessation of fire",
+    "Victors (Thark Warriors/Heliumite Sailors) react to the grim spectacle of the falling commanders."
   ],
-  "prompt_seed": "Action 3: Thark Warriors and Heliumite Sailors react to the m.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in The wreckage-strewn skies near Helium with Thark Warriors crossing the frame and maintaining readable movement. Cast: Thark Warriors. Environment: The wre...",
-  "shot_notes": "Thark Warriors and Heliumite Sailors react to the mass suicide/ritual.",
+  "prompt_seed": "Action 3: Victors (Thark Warriors/Heliumite Sailors) react to.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in The wreckage-strewn skies near Helium with Thark Warriors, Heliumite Sailors crossing the frame and maintaining readable movement. Cast: Thark Warriors, H...",
+  "shot_notes": "Victors (Thark Warriors/Heliumite Sailors) react to the grim spectacle of the falling commanders.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -104,19 +114,24 @@
     "artifact_id": "CH026_SC002_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "a7e4729bd774d0967926c68c9f4b9da1cb611c6e",
+    "source_fingerprint": "e2d6895eaab043d9d00eb49d8e82bab7aad38fee",
     "created_at_utc": "2026-04-22T03:42:33.308927+00:00",
-    "updated_at_utc": "2026-04-22T03:42:33.308927+00:00",
+    "updated_at_utc": "2026-04-22T15:56:22.678789+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH026_SC002",
-        "version": "edadd4a8946ba33c2914d2844de5d4363db66978"
+        "version": "bfb920edacd13e6c2c86c3b9079c822f2b82ecd2"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH026_SC002",
+        "version": "9e746685d64e5dedad88acad4e5750eeb60bbb67"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH026_SC002",
-        "version": "94df62ba5acf7812e7bccfb0b84bf73ebcfa26b8"
+        "version": "128f709cad77d73539eeb01d089a6bece5046425"
       }
     ],
     "locked_fields": {},
@@ -126,6 +141,11 @@
         "timestamp_utc": "2026-04-22T03:42:56.799182+00:00",
         "action": "synthesized",
         "source_fingerprint": "a7e4729bd774d0967926c68c9f4b9da1cb611c6e"
+      },
+      {
+        "timestamp_utc": "2026-04-22T15:56:43.021512+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "e2d6895eaab043d9d00eb49d8e82bab7aad38fee"
       }
     ]
   }

@@ -6,9 +6,9 @@
     "shot_order": 1,
     "previous_shot_id": "",
     "next_shot_id": "SH002",
-    "shot_title": "Medium 1: Protagonist observes destruction",
+    "shot_title": "Medium 1: Protagonist observes the destruction and the drifti...",
     "shot_type": "medium",
-    "camera_description": "Stable medium framing.",
+    "camera_description": "Stable medium framing that keeps action and character readable.",
     "composition": "Readable medium composition in City overlook/window featuring protagonist.",
     "target_seconds": 5.5,
     "characters_in_frame": [
@@ -25,23 +25,23 @@
     ],
     "environment": {
       "label": "City overlook/window",
-      "canonical_id": "None",
+      "canonical_id": null,
       "display_name": "City overlook/window",
       "status": "review",
       "entity_kind": "environment",
-      "resolution_score": null,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+      "resolution_score": 8,
+      "source_path": "",
       "notes": "aerial_battlefield_mars | source context shares query language"
     },
     "beat_ids": [
       "BT001"
     ],
     "continuity_constraints": [
-      "Lighting from the distant funeral pyre must reflect accurately on the protagonist's face.",
-      "Protagonist observes the destruction and the funeral pyre from the city overlook/window."
+      "Lighting from the distant funeral pyre reflecting on the protagonist's face.",
+      "Protagonist observes the destruction and the drifting fire of the funeral pyre."
     ],
-    "prompt_seed": "Medium 1: Protagonist observes the destruction and the funera.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in City overlook/window featuring protagonist. Cast: protagonist. Environment: City overlook/window. Beat: Protagonist observes the destruction and the...",
-    "shot_notes": "Protagonist observes the destruction and the funeral pyre from the city overlook/window.",
+    "prompt_seed": "Medium 1: Protagonist observes the destruction and the drifti.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in City overlook/window featuring protagonist. Cast: protagonist. Environment: City overlook/window. Beat: Protagonist observes the destruction and the...",
+    "shot_notes": "Protagonist observes the destruction and the drifting fire of the funeral pyre.",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -99,7 +99,7 @@
       }
     ],
     "evidence_summary": [
-      "The scene focuses on the internal emotional state of the protagonist as they observe the aftermath of combat. The visual language must transition from the scale of destruction to the intimate, isolated experience of the character, utilizing light from the f...",
+      "The scene focuses on the internal psychological state of the protagonist as they witness the aftermath of conflict. The visual language must transition from the scale of destruction to the intimate, isolated experience of the character, utilizing light from...",
       "Watching the destruction and the funeral pyre, the protagonist experiences a profound sense of melancholy and empathy for the defeated crew of the airships.",
       "Victory $\\rightarrow$ Melancholy/Empathy.",
       "Close-ups on the protagonist's face",
@@ -111,19 +111,24 @@
       "artifact_id": "CH008_SC004_SH001_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "9b6cb615518827eba758ed9b10149638b558bea1",
+      "source_fingerprint": "0234b347fdbf6b8d048dddf3c705d451a15a6cf0",
       "created_at_utc": "2026-04-22T01:12:14.635861+00:00",
-      "updated_at_utc": "2026-04-22T01:12:14.635861+00:00",
+      "updated_at_utc": "2026-04-22T07:42:34.540346+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH008_SC004",
-          "version": "bda386134d984c520e5075536d88aa3eaeb09c57"
+          "version": "0fb1986f35e87ca323c3a44aee6c227eeaec6f88"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH008_SC004",
+          "version": "f608f6fafcb9b1ad737eb92de469bcdd2586989e"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH008_SC004",
-          "version": "f3c351a2d3e7693b09dcc8f3b4e8f1b2c79706b8"
+          "version": "2293291e28179eadc70088964851d6ac85dd2b58"
         }
       ],
       "locked_fields": {},
@@ -133,6 +138,11 @@
           "timestamp_utc": "2026-04-22T01:12:42.451168+00:00",
           "action": "synthesized",
           "source_fingerprint": "9b6cb615518827eba758ed9b10149638b558bea1"
+        },
+        {
+          "timestamp_utc": "2026-04-22T07:42:57.839916+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "0234b347fdbf6b8d048dddf3c705d451a15a6cf0"
         }
       ]
     }
@@ -144,11 +154,11 @@
     "shot_order": 2,
     "previous_shot_id": "SH001",
     "next_shot_id": "SH003",
-    "shot_title": "Medium 2: POV of drifting fire",
-    "shot_type": "medium",
-    "camera_description": "Stable medium framing.",
-    "composition": "Readable medium composition in City overlook/window featuring protagonist, Sola (presence).",
-    "target_seconds": 5.3,
+    "shot_title": "Action 2: Shift in perspective to the protagonist's internal...",
+    "shot_type": "action",
+    "camera_description": "Active camera with tracking energy and clear spatial orientation.",
+    "composition": "Dynamic composition in City overlook/window with protagonist crossing the frame and maintaining readable movement.",
+    "target_seconds": 5.8,
     "characters_in_frame": [
       {
         "label": "The Protagonist",
@@ -159,37 +169,29 @@
         "resolution_score": 176,
         "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
         "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
-      },
-      {
-        "label": "Sola (presence)",
-        "canonical_id": null,
-        "display_name": "Sola (presence)",
-        "status": "review",
-        "entity_kind": "individual",
-        "resolution_score": 16,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
-        "notes": "sola | token overlap: ['sola'] | source context shares query language"
       }
     ],
     "environment": {
       "label": "City overlook/window",
-      "canonical_id": "None",
+      "canonical_id": null,
       "display_name": "City overlook/window",
       "status": "review",
       "entity_kind": "environment",
-      "resolution_score": null,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+      "resolution_score": 8,
+      "source_path": "",
       "notes": "aerial_battlefield_mars | source context shares query language"
     },
     "beat_ids": [
       "BT002"
     ],
     "continuity_constraints": [
-      "Lighting from the distant funeral pyre must reflect accurately on the protagonist's face.",
-      "POV of the drifting fire from the airship wreckage."
+      "Lighting from the distant funeral pyre reflecting on the protagonist's face.",
+      "Shift in perspective to the protagonist's internal reaction (melancholy/empathy).",
+      "Resolve Sola (presence) -> Sola (presence)",
+      "Resolve City overlook/window -> City overlook/window"
     ],
-    "prompt_seed": "Medium 2: POV of the drifting fire from the airship wreckage.. medium. Stable medium framing that keeps action and character readable. Readable medium composition in City overlook/window featuring protagonist, Sola (presence). Cast: protagonist, Sola (presence). Environment: City overlook/window. Beat: POV of the dr...",
-    "shot_notes": "POV of the drifting fire from the airship wreckage.",
+    "prompt_seed": "Action 2: Shift in perspective to the protagonist's internal.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in City overlook/window with protagonist crossing the frame and maintaining readable movement. Cast: protagonist. Environment: City overlook/window. Beat: Shi...",
+    "shot_notes": "Shift in perspective to the protagonist's internal reaction (melancholy/empathy).",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -247,7 +249,7 @@
       }
     ],
     "evidence_summary": [
-      "The scene focuses on the internal emotional state of the protagonist as they observe the aftermath of combat. The visual language must transition from the scale of destruction to the intimate, isolated experience of the character, utilizing light from the f...",
+      "The scene focuses on the internal psychological state of the protagonist as they witness the aftermath of conflict. The visual language must transition from the scale of destruction to the intimate, isolated experience of the character, utilizing light from...",
       "Watching the destruction and the funeral pyre, the protagonist experiences a profound sense of melancholy and empathy for the defeated crew of the airships.",
       "Victory $\\rightarrow$ Melancholy/Empathy.",
       "Close-ups on the protagonist's face",
@@ -259,19 +261,24 @@
       "artifact_id": "CH008_SC004_SH002_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "9b6cb615518827eba758ed9b10149638b558bea1",
+      "source_fingerprint": "0234b347fdbf6b8d048dddf3c705d451a15a6cf0",
       "created_at_utc": "2026-04-22T01:12:42.452170+00:00",
-      "updated_at_utc": "2026-04-22T01:12:42.452170+00:00",
+      "updated_at_utc": "2026-04-22T07:42:57.846915+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH008_SC004",
-          "version": "bda386134d984c520e5075536d88aa3eaeb09c57"
+          "version": "0fb1986f35e87ca323c3a44aee6c227eeaec6f88"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH008_SC004",
+          "version": "f608f6fafcb9b1ad737eb92de469bcdd2586989e"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH008_SC004",
-          "version": "f3c351a2d3e7693b09dcc8f3b4e8f1b2c79706b8"
+          "version": "2293291e28179eadc70088964851d6ac85dd2b58"
         }
       ],
       "locked_fields": {},
@@ -281,6 +288,11 @@
           "timestamp_utc": "2026-04-22T01:13:05.969794+00:00",
           "action": "synthesized",
           "source_fingerprint": "9b6cb615518827eba758ed9b10149638b558bea1"
+        },
+        {
+          "timestamp_utc": "2026-04-22T07:43:15.638006+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "0234b347fdbf6b8d048dddf3c705d451a15a6cf0"
         }
       ]
     }
@@ -292,10 +304,10 @@
     "shot_order": 3,
     "previous_shot_id": "SH002",
     "next_shot_id": "",
-    "shot_title": "Closing Reaction 3: Internal shift",
+    "shot_title": "Closing Reaction 3: Reflection on the defeated crew of the airships thr...",
     "shot_type": "closing_reaction",
-    "camera_description": "Controlled closing frame.",
-    "composition": "Closing composition in City overlook/window emphasizing melancholy and empathy for the defeated crew.",
+    "camera_description": "Controlled closing frame that lands the consequence of the beat.",
+    "composition": "Closing composition in City overlook/window that emphasizes the consequence of reflection on the defeated crew of the airships through visual observation..",
     "target_seconds": 4.6,
     "characters_in_frame": [
       {
@@ -311,23 +323,25 @@
     ],
     "environment": {
       "label": "City overlook/window",
-      "canonical_id": "None",
+      "canonical_id": null,
       "display_name": "City overlook/window",
       "status": "review",
       "entity_kind": "environment",
-      "resolution_score": null,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+      "resolution_score": 8,
+      "source_path": "",
       "notes": "aerial_battlefield_mars | source context shares query language"
     },
     "beat_ids": [
       "BT003"
     ],
     "continuity_constraints": [
-      "Lighting from the distant funeral pyre must reflect accurately on the protagonist's face.",
-      "Internal shift as protagonist experiences melancholy and empathy for the defeated crew."
+      "Lighting from the distant funeral pyre reflecting on the protagonist's face.",
+      "Reflection on the defeated crew of the airships through visual observation.",
+      "Resolve Sola (presence) -> Sola (presence)",
+      "Resolve City overlook/window -> City overlook/window"
     ],
-    "prompt_seed": "Closing Reaction 3: Internal shift as protagonist experiences melanchol.... closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in City overlook/window that emphasizes the consequence of internal shift as protagonist experiences melancholy and empathy for the defeat...",
-    "shot_notes": "Internal shift as protagonist experiences melancholy and empathy for the defeated crew.",
+    "prompt_seed": "Closing Reaction 3: Reflection on the defeated crew of the airships thr.... closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in City overlook/window that emphasizes the consequence of reflection on the defeated crew of the airships through visual observation.. Ca...",
+    "shot_notes": "Reflection on the defeated crew of the airships through visual observation.",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -385,7 +399,7 @@
       }
     ],
     "evidence_summary": [
-      "The scene focuses on the internal emotional state of the protagonist as they observe the aftermath of combat. The visual language must transition from the scale of destruction to the intimate, isolated experience of the character, utilizing light from the f...",
+      "The scene focuses on the internal psychological state of the protagonist as they witness the aftermath of conflict. The visual language must transition from the scale of destruction to the intimate, isolated experience of the character, utilizing light from...",
       "Watching the destruction and the funeral pyre, the protagonist experiences a profound sense of melancholy and empathy for the defeated crew of the airships.",
       "Victory $\\rightarrow$ Melancholy/Empathy.",
       "Close-ups on the protagonist's face",
@@ -397,19 +411,24 @@
       "artifact_id": "CH008_SC004_SH003_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "9b6cb615518827eba758ed9b10149638b558bea1",
+      "source_fingerprint": "0234b347fdbf6b8d048dddf3c705d451a15a6cf0",
       "created_at_utc": "2026-04-22T01:13:05.972146+00:00",
-      "updated_at_utc": "2026-04-22T01:13:05.972146+00:00",
+      "updated_at_utc": "2026-04-22T07:43:15.645008+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH008_SC004",
-          "version": "bda386134d984c520e5075536d88aa3eaeb09c57"
+          "version": "0fb1986f35e87ca323c3a44aee6c227eeaec6f88"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH008_SC004",
+          "version": "f608f6fafcb9b1ad737eb92de469bcdd2586989e"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH008_SC004",
-          "version": "f3c351a2d3e7693b09dcc8f3b4e8f1b2c79706b8"
+          "version": "2293291e28179eadc70088964851d6ac85dd2b58"
         }
       ],
       "locked_fields": {},
@@ -419,6 +438,11 @@
           "timestamp_utc": "2026-04-22T01:13:29.538542+00:00",
           "action": "synthesized",
           "source_fingerprint": "9b6cb615518827eba758ed9b10149638b558bea1"
+        },
+        {
+          "timestamp_utc": "2026-04-22T07:43:33.420900+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "0234b347fdbf6b8d048dddf3c705d451a15a6cf0"
         }
       ]
     }

@@ -5,11 +5,11 @@
   "shot_order": 2,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Medium 2: Passage of Years",
+  "shot_title": "Medium 2: Happiness Vignette",
   "shot_type": "medium",
   "camera_description": "Stable medium framing that keeps action and character readable.",
-  "composition": "Readable medium composition in The Palace of Helium featuring john_carter, dejah_thoris.",
-  "target_seconds": 5.0,
+  "composition": "Readable medium composition in The Palace of Helium featuring john_carter.",
+  "target_seconds": 5.3,
   "characters_in_frame": [
     {
       "label": "John Carter",
@@ -20,37 +20,27 @@
       "resolution_score": 186,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
       "notes": "asset id exactly matches canonical id | query matches alias 'john_carter'"
-    },
-    {
-      "label": "Dejah Thoris",
-      "canonical_id": "dejah_thoris",
-      "display_name": "dejah_thoris",
-      "status": "canonical",
-      "entity_kind": "individual",
-      "resolution_score": 186,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH010/dejah_thoris.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'dejah_thoris'"
     }
   ],
   "environment": {
     "label": "The Palace of Helium",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "The Palace of Helium",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
     "BT002"
   ],
   "continuity_constraints": [
-    "Aging and passage of time indicators (clothing, hair, or subtle physical changes)",
-    "Visual progression showing the passage of years through changing attire and environments."
+    "Aging/passage of time indicators (clothing, hair, or subtle physical changes)",
+    "Progression of pregnancy/anticipation of child"
   ],
-  "prompt_seed": "Medium 2: Visual progression showing the passage of years thr.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in The Palace of Helium featuring john_carter, dejah_thoris. Cast: john_carter, dejah_thoris. Environment: The Palace of Helium. Beat: Visual progressi...",
-  "shot_notes": "Visual progression showing the passage of years through changing attire and environments.",
+  "prompt_seed": "Medium 2: Visual vignettes of John Carter and Dejah Thoris sharing moments of happiness. medium. Stable medium framing that keeps action and character readable. Readable medium composition in The Palace of Helium featuring john_carter.",
+  "shot_notes": "Visual vignettes of John Carter and Dejah Thoris sharing moments of happiness within The Palace of Helium.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -108,12 +98,12 @@
     }
   ],
   "evidence_summary": [
-    "This sequence functions as a montage/period piece designed to establish the height of prosperity and peace following the Thark-Helium treaty. The production must convey a sense of long-term stability and domestic happiness through visual cues of time passin...",
+    "This sequence functions as a montage/period piece designed to establish the height of prosperity and peace following the Thark-Helium treaty. The visual language must emphasize stability, warmth, and domestic contentment through soft lighting and lush envir...",
     "A montage or period sequence showing the years of prosperity following the Thark-Helium peace, focusing on John Carter and Dejah Thoris's happiness and the anticipation of their child.",
     "Peace/Contentment $\\rightarrow$ Tranquility.",
     "Wide establishing shots of a prosperous Helium",
     "Intimate medium close-ups of the couple",
-    "Soft, warm lighting palettes",
+    "Soft, warm lighting profiles",
     "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in...",
     "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b..."
   ],
@@ -121,19 +111,24 @@
     "artifact_id": "CH027_SC001_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "a52ec09998dbaa9993bf1b874852373fa97696c5",
+    "source_fingerprint": "b1ea336715cb36665845006b4b2429960d47923e",
     "created_at_utc": "2026-04-22T03:50:17.297603+00:00",
-    "updated_at_utc": "2026-04-22T03:50:17.297603+00:00",
+    "updated_at_utc": "2026-04-22T16:02:31.876455+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH027_SC001",
-        "version": "f90d4b49136343b4a40fdeb8f7c9ee8a1d0da63f"
+        "version": "7bbf99bbbba7861b2baad402a9c796d512441534"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH027_SC001",
+        "version": "56184408c8be17c7b55d1479be7e8efffcd5516e"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH027_SC001",
-        "version": "e98d696c292db5c76a4815079d6f72fe610c0856"
+        "version": "756e165cfde749015154ff309a7ad2200c7f2008"
       }
     ],
     "locked_fields": {},
@@ -143,6 +138,11 @@
         "timestamp_utc": "2026-04-22T03:50:40.094124+00:00",
         "action": "synthesized",
         "source_fingerprint": "a52ec09998dbaa9993bf1b874852373fa97696c5"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:02:45.352778+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "b1ea336715cb36665845006b4b2429960d47923e"
       }
     ]
   }

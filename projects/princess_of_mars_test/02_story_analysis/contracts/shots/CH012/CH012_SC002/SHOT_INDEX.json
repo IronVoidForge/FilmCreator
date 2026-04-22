@@ -9,8 +9,8 @@
     "shot_title": "Establishing Wide 1: Carter exits the Audience Chamber",
     "shot_type": "establishing_wide",
     "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-    "composition": "Wide composition across Transitioning from the Audience Chamber to the city streets/plaza with John Carter (Internal monologue/Realization) placed for immediate spatial orientation.",
-    "target_seconds": 5.2,
+    "composition": "Wide composition across audience_chamber with John Carter (Internal monologue/Realization) placed for immediate spatial orientation.",
+    "target_seconds": 5.5,
     "characters_in_frame": [
       {
         "label": "John Carter (Internal monologue/Realization)",
@@ -24,14 +24,14 @@
       }
     ],
     "environment": {
-      "label": "Transitioning from the Audience Chamber to the city streets/plaza",
-      "canonical_id": "None",
-      "display_name": "Transitioning from the Audience Chamber to the city streets/plaza",
-      "status": "review",
+      "label": "The Audience Chamber",
+      "canonical_id": "audience_chamber",
+      "display_name": "audience_chamber",
+      "status": "canonical",
       "entity_kind": "environment",
-      "resolution_score": null,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "resolution_score": 183,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH011/audience_chamber.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'audience_chamber'"
     },
     "beat_ids": [
       "BT001"
@@ -41,7 +41,7 @@
       "Seamless transition from Audience Chamber to city streets/plaza",
       "Carter exits the Audience Chamber following his meeting with Lorquas Ptomel."
     ],
-    "prompt_seed": "Establishing Wide 1: Carter exits the Audience Chamber following his mee.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across Transitioning from the Audience Chamber to the city streets/plaza with John Carter (Internal monologue/Realization) placed for imme...",
+    "prompt_seed": "Establishing Wide 1: Carter exits the Audience Chamber following his mee.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across audience_chamber with John Carter (Internal monologue/Realization) placed for immediate spatial orientation.",
     "shot_notes": "Carter exits the Audience Chamber following his meeting with Lorquas Ptomel.",
     "evidence_refs": [
       {
@@ -90,30 +90,36 @@
       }
     ],
     "evidence_summary": [
-      "The scene must capture the psychological shift of John Carter as he processes the betrayal by Sarkoja. The direction should emphasize his transition from the formal tension of the Audience Chamber to the vulnerability of being watched within the public Thar...",
+      "The scene must capture the psychological shift of John Carter as he processes the betrayal by Sarkoja. The direction should emphasize his transition from the formal tension of the Audience Chamber to the vulnerability of the public city streets, using the e...",
       "Following the audience, Carter realizes that Sarkoja has been spying on him and reporting his intentions to the Thark leadership. This realization of being watched and undermined by a high-ranking female Thark intensifies his resolve to execute an escape be...",
       "From tension to focused, desperate determination. **Likely Visual Coverage Families:** * Tight close-ups on Carter's eyes/face to convey internal realization. * Wide shots of the Thark city to emphasize his isolation...",
-      "Tight close-ups (Eyes/Face) for internal realization",
-      "Wide shots (Thark City) to emphasize isolation and surveillance",
-      "Precise timing of the realization relative to Carter's physical movement through the city"
+      "Tight close-ups (eyes/face) for internal realization",
+      "Wide shots of Thark city to emphasize isolation/surveillance",
+      "Precise timing of the realization relative to Carter's physical movement through the city",
+      "audience_chamber | No descriptive visual data is currently available for this environment. | Unknown. | Unknown. | Unknown."
     ],
     "metadata": {
       "artifact_id": "CH012_SC002_SH001_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "726f7c847e6373d808f0d614ef6ba7ba31266ee7",
+      "source_fingerprint": "63307b25f6aeb31c5f780498af964240a51cd2b7",
       "created_at_utc": "2026-04-22T01:38:27.121850+00:00",
-      "updated_at_utc": "2026-04-22T01:38:27.121850+00:00",
+      "updated_at_utc": "2026-04-22T08:00:54.052095+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH012_SC002",
-          "version": "a92cf36728c353675e0a071597c4e6f3eaea3215"
+          "version": "f3bf4410eaa7a8b6f4b1a640d46527afd1ce8f64"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH012_SC002",
+          "version": "f4734665b6a013f370489fbe806518e71bec920e"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH012_SC002",
-          "version": "f968dd923151a6eba63dc1997047328ec3df754b"
+          "version": "91e6b398e8cf60e1f089f57f4e2ebe7d1190358d"
         }
       ],
       "locked_fields": {},
@@ -123,6 +129,11 @@
           "timestamp_utc": "2026-04-22T01:39:09.905450+00:00",
           "action": "synthesized",
           "source_fingerprint": "726f7c847e6373d808f0d614ef6ba7ba31266ee7"
+        },
+        {
+          "timestamp_utc": "2026-04-22T08:01:19.825550+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "63307b25f6aeb31c5f780498af964240a51cd2b7"
         }
       ]
     }
@@ -134,11 +145,11 @@
     "shot_order": 2,
     "previous_shot_id": "SH001",
     "next_shot_id": "SH003",
-    "shot_title": "Reaction Closeup 2: Carter's realization",
+    "shot_title": "Reaction Closeup 2: Carter's realization in the city",
     "shot_type": "reaction_closeup",
     "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-    "composition": "Intimate composition that isolates John Carter (Internal monologue/Realization) against Transitioning from the Audience Chamber to the city streets/plaza to capture the beat's emotional turn.",
-    "target_seconds": 5.0,
+    "composition": "Intimate composition that isolates John Carter (Internal monologue/Realization) against audience_chamber to capture the beat's emotional turn.",
+    "target_seconds": 5.3,
     "characters_in_frame": [
       {
         "label": "John Carter (Internal monologue/Realization)",
@@ -152,14 +163,14 @@
       }
     ],
     "environment": {
-      "label": "Transitioning from the Audience Chamber to the city streets/plaza",
-      "canonical_id": "None",
-      "display_name": "Transitioning from the Audience Chamber to the city streets/plaza",
-      "status": "review",
+      "label": "The Audience Chamber",
+      "canonical_id": "audience_chamber",
+      "display_name": "audience_chamber",
+      "status": "canonical",
       "entity_kind": "environment",
-      "resolution_score": null,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "resolution_score": 183,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH011/audience_chamber.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'audience_chamber'"
     },
     "beat_ids": [
       "BT002"
@@ -167,9 +178,10 @@
     "continuity_constraints": [
       "Precise timing of the realization relative to Carter's physical movement through the city",
       "Seamless transition from Audience Chamber to city streets/plaza",
-      "As Carter moves through the city streets/plaza, he realizes Sarkoja has been spying on him and reporting to Thark leadership."
+      "As Carter moves through the city streets/plaza",
+      "he realizes Sarkoja has been spying on him and reporting to Thark leadership."
     ],
-    "prompt_seed": "Reaction Closeup 2: As Carter moves through the city streets/plaza, he.... reaction_closeup. Close framing that isolates reaction and emotional emphasis. Intimate composition that isolates John Carter (Internal monologue/Realization) against Transitioning from the Audience Chamber to the city streets/plaza to captur...",
+    "prompt_seed": "Reaction Closeup 2: As Carter moves through the city streets/plaza, he.... reaction_closeup. Close framing that isolates reaction and emotional emphasis. Intimate composition that isolates John Carter (Internal monologue/Realization) against audience_chamber to capture the beat's emotional turn.",
     "shot_notes": "As Carter moves through the city streets/plaza, he realizes Sarkoja has been spying on him and reporting to Thark leadership.",
     "evidence_refs": [
       {
@@ -218,30 +230,36 @@
       }
     ],
     "evidence_summary": [
-      "The scene must capture the psychological shift of John Carter as he processes the betrayal by Sarkoja. The direction should emphasize his transition from the formal tension of the Audience Chamber to the vulnerability of being watched within the public Thar...",
+      "The scene must capture the psychological shift of John Carter as he processes the betrayal by Sarkoja. The direction should emphasize his transition from the formal tension of the Audience Chamber to the vulnerability of the public city streets, using the e...",
       "Following the audience, Carter realizes that Sarkoja has been spying on him and reporting his intentions to the Thark leadership. This realization of being watched and undermined by a high-ranking female Thark intensifies his resolve to execute an escape be...",
       "From tension to focused, desperate determination. **Likely Visual Coverage Families:** * Tight close-ups on Carter's eyes/face to convey internal realization. * Wide shots of the Thark city to emphasize his isolation...",
-      "Tight close-ups (Eyes/Face) for internal realization",
-      "Wide shots (Thark City) to emphasize isolation and surveillance",
-      "Precise timing of the realization relative to Carter's physical movement through the city"
+      "Tight close-ups (eyes/face) for internal realization",
+      "Wide shots of Thark city to emphasize isolation/surveillance",
+      "Precise timing of the realization relative to Carter's physical movement through the city",
+      "audience_chamber | No descriptive visual data is currently available for this environment. | Unknown. | Unknown. | Unknown."
     ],
     "metadata": {
       "artifact_id": "CH012_SC002_SH002_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "726f7c847e6373d808f0d614ef6ba7ba31266ee7",
+      "source_fingerprint": "63307b25f6aeb31c5f780498af964240a51cd2b7",
       "created_at_utc": "2026-04-22T01:39:09.906955+00:00",
-      "updated_at_utc": "2026-04-22T01:39:09.906955+00:00",
+      "updated_at_utc": "2026-04-22T08:01:19.836551+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH012_SC002",
-          "version": "a92cf36728c353675e0a071597c4e6f3eaea3215"
+          "version": "f3bf4410eaa7a8b6f4b1a640d46527afd1ce8f64"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH012_SC002",
+          "version": "f4734665b6a013f370489fbe806518e71bec920e"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH012_SC002",
-          "version": "f968dd923151a6eba63dc1997047328ec3df754b"
+          "version": "91e6b398e8cf60e1f089f57f4e2ebe7d1190358d"
         }
       ],
       "locked_fields": {},
@@ -251,6 +269,11 @@
           "timestamp_utc": "2026-04-22T01:39:46.091264+00:00",
           "action": "synthesized",
           "source_fingerprint": "726f7c847e6373d808f0d614ef6ba7ba31266ee7"
+        },
+        {
+          "timestamp_utc": "2026-04-22T08:01:38.034357+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "63307b25f6aeb31c5f780498af964240a51cd2b7"
         }
       ]
     }
@@ -261,12 +284,12 @@
     "chapter_id": "CH012",
     "shot_order": 3,
     "previous_shot_id": "SH002",
-    "next_shot_id": "SH004",
-    "shot_title": "Medium 3: Intensified resolve",
-    "shot_type": "medium",
-    "camera_description": "Stable medium framing that keeps action and character readable.",
-    "composition": "Readable medium composition in Transitioning from the Audience Chamber to the city streets/plaza featuring John Carter (Internal monologue/Realization).",
-    "target_seconds": 5.0,
+    "next_shot_id": "",
+    "shot_title": "Insert Detail 3: Shift to determination",
+    "shot_type": "insert_detail",
+    "camera_description": "Tight detail framing focused on a single visual object or gesture.",
+    "composition": "Detail composition centered on the key physical action or prop inside audience_chamber.",
+    "target_seconds": 5.1,
     "characters_in_frame": [
       {
         "label": "John Carter (Internal monologue/Realization)",
@@ -280,14 +303,14 @@
       }
     ],
     "environment": {
-      "label": "Transitioning from the Audience Chamber to the city streets/plaza",
-      "canonical_id": "None",
-      "display_name": "Transitioning from the Audience Chamber to the city streets/plaza",
-      "status": "review",
+      "label": "The Audience Chamber",
+      "canonical_id": "audience_chamber",
+      "display_name": "audience_chamber",
+      "status": "canonical",
       "entity_kind": "environment",
-      "resolution_score": null,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "resolution_score": 183,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH011/audience_chamber.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'audience_chamber'"
     },
     "beat_ids": [
       "BT003"
@@ -295,10 +318,10 @@
     "continuity_constraints": [
       "Precise timing of the realization relative to Carter's physical movement through the city",
       "Seamless transition from Audience Chamber to city streets/plaza",
-      "The realization of being undermined by a high-ranking female Thark intensifies his resolve."
+      "The realization of being undermined by a high-ranking female Thark triggers a shift into desperate determination to escape before Dejah Thoris is handed over to Tal Hajus."
     ],
-    "prompt_seed": "Medium 3: The realization of being undermined by a high-ranki.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in Transitioning from the Audience Chamber to the city streets/plaza featuring John Carter (Internal monologue/Realization). Cast: John Carter (Interna...",
-    "shot_notes": "The realization of being undermined by a high-ranking female Thark intensifies his resolve.",
+    "prompt_seed": "Insert Detail 3: The realization of being undermined by a high-ranki.... insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside audience_chamber.",
+    "shot_notes": "The realization of being undermined by a high-ranking female Thark triggers a shift into desperate determination to escape before Dejah Thoris is handed over to Tal Hajus.",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -346,30 +369,36 @@
       }
     ],
     "evidence_summary": [
-      "The scene must capture the psychological shift of John Carter as he processes the betrayal by Sarkoja. The direction should emphasize his transition from the formal tension of the Audience Chamber to the vulnerability of being watched within the public Thar...",
+      "The scene must capture the psychological shift of John Carter as he processes the betrayal by Sarkoja. The direction should emphasize his transition from the formal tension of the Audience Chamber to the vulnerability of the public city streets, using the e...",
       "Following the audience, Carter realizes that Sarkoja has been spying on him and reporting his intentions to the Thark leadership. This realization of being watched and undermined by a high-ranking female Thark intensifies his resolve to execute an escape be...",
       "From tension to focused, desperate determination. **Likely Visual Coverage Families:** * Tight close-ups on Carter's eyes/face to convey internal realization. * Wide shots of the Thark city to emphasize his isolation...",
-      "Tight close-ups (Eyes/Face) for internal realization",
-      "Wide shots (Thark City) to emphasize isolation and surveillance",
-      "Precise timing of the realization relative to Carter's physical movement through the city"
+      "Tight close-ups (eyes/face) for internal realization",
+      "Wide shots of Thark city to emphasize isolation/surveillance",
+      "Precise timing of the realization relative to Carter's physical movement through the city",
+      "audience_chamber | No descriptive visual data is currently available for this environment. | Unknown. | Unknown. | Unknown."
     ],
     "metadata": {
       "artifact_id": "CH012_SC002_SH003_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "726f7c847e6373d808f0d614ef6ba7ba31266ee7",
+      "source_fingerprint": "63307b25f6aeb31c5f780498af964240a51cd2b7",
       "created_at_utc": "2026-04-22T01:39:46.093270+00:00",
-      "updated_at_utc": "2026-04-22T01:39:46.093270+00:00",
+      "updated_at_utc": "2026-04-22T08:01:38.042357+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH012_SC002",
-          "version": "a92cf36728c353675e0a071597c4e6f3eaea3215"
+          "version": "f3bf4410eaa7a8b6f4b1a640d46527afd1ce8f64"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH012_SC002",
+          "version": "f4734665b6a013f370489fbe806518e71bec920e"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH012_SC002",
-          "version": "f968dd923151a6eba63dc1997047328ec3df754b"
+          "version": "91e6b398e8cf60e1f089f57f4e2ebe7d1190358d"
         }
       ],
       "locked_fields": {},
@@ -379,134 +408,11 @@
           "timestamp_utc": "2026-04-22T01:40:22.214363+00:00",
           "action": "synthesized",
           "source_fingerprint": "726f7c847e6373d808f0d614ef6ba7ba31266ee7"
-        }
-      ]
-    }
-  },
-  {
-    "shot_id": "SH004",
-    "scene_id": "CH012_SC002",
-    "chapter_id": "CH012",
-    "shot_order": 4,
-    "previous_shot_id": "SH003",
-    "next_shot_id": "",
-    "shot_title": "Insert Detail 4: Commitment to escape",
-    "shot_type": "insert_detail",
-    "camera_description": "Tight detail framing focused on a single visual object or gesture.",
-    "composition": "Detail composition centered on the key physical action or prop inside Transitioning from the Audience Chamber to the city streets/plaza.",
-    "target_seconds": 4.8,
-    "characters_in_frame": [
-      {
-        "label": "John Carter (Internal monologue/Realization)",
-        "canonical_id": null,
-        "display_name": "John Carter (Internal monologue/Realization)",
-        "status": "review",
-        "entity_kind": "individual",
-        "resolution_score": 16,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH009/sarkoja.md",
-        "notes": "sarkoja | token overlap: ['sarkoja'] | source context shares query language"
-      }
-    ],
-    "environment": {
-      "label": "Transitioning from the Audience Chamber to the city streets/plaza",
-      "canonical_id": "None",
-      "display_name": "Transitioning from the Audience Chamber to the city streets/plaza",
-      "status": "review",
-      "entity_kind": "environment",
-      "resolution_score": null,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
-    },
-    "beat_ids": [
-      "BT004"
-    ],
-    "continuity_constraints": [
-      "Precise timing of the realization relative to Carter's physical movement through the city",
-      "Seamless transition from Audience Chamber to city streets/plaza",
-      "Carter commits to executing an escape to prevent Dejah Thoris from being handed over to Tal Hajus."
-    ],
-    "prompt_seed": "Insert Detail 4: Carter commits to executing an escape to prevent De.... insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside Transitioning from the Audience Chamber to the city streets/plaza. Cast: John Carter (Intern...",
-    "shot_notes": "Carter commits to executing an escape to prevent Dejah Thoris from being handed over to Tal Hajus.",
-    "evidence_refs": [
-      {
-        "source": "scene_contract",
-        "scene_id": "CH012_SC002"
-      },
-      {
-        "source": "scene_breakdown",
-        "chapter_id": "CH012",
-        "scene_id": "CH012_SC002"
-      },
-      {
-        "source": "scene_breakdown",
-        "chapter_id": "CH012",
-        "scene_id": "CH012_SC002"
-      },
-      {
-        "source": "scene_breakdown",
-        "chapter_id": "CH012",
-        "scene_id": "CH012_SC002"
-      },
-      {
-        "source": "scene_breakdown",
-        "chapter_id": "CH012",
-        "scene_id": "CH012_SC002"
-      },
-      {
-        "source": "chapter_summary",
-        "chapter_id": "CH012",
-        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
-      },
-      {
-        "source": "book_index",
-        "chapter_id": "CH011",
-        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH011_chapter_xi.md"
-      },
-      {
-        "source": "book_index",
-        "chapter_id": "CH012",
-        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH012_chapter_xii.md"
-      },
-      {
-        "source": "book_index",
-        "chapter_id": "CH016",
-        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH016_chapter_xvi.md"
-      }
-    ],
-    "evidence_summary": [
-      "The scene must capture the psychological shift of John Carter as he processes the betrayal by Sarkoja. The direction should emphasize his transition from the formal tension of the Audience Chamber to the vulnerability of being watched within the public Thar...",
-      "Following the audience, Carter realizes that Sarkoja has been spying on him and reporting his intentions to the Thark leadership. This realization of being watched and undermined by a high-ranking female Thark intensifies his resolve to execute an escape be...",
-      "From tension to focused, desperate determination. **Likely Visual Coverage Families:** * Tight close-ups on Carter's eyes/face to convey internal realization. * Wide shots of the Thark city to emphasize his isolation...",
-      "Tight close-ups (Eyes/Face) for internal realization",
-      "Wide shots (Thark City) to emphasize isolation and surveillance",
-      "Precise timing of the realization relative to Carter's physical movement through the city"
-    ],
-    "metadata": {
-      "artifact_id": "CH012_SC002_SH004_SHOT_PACKAGE",
-      "artifact_type": "shot_package",
-      "status": "generated",
-      "source_fingerprint": "726f7c847e6373d808f0d614ef6ba7ba31266ee7",
-      "created_at_utc": "2026-04-22T01:40:22.215866+00:00",
-      "updated_at_utc": "2026-04-22T01:40:22.215866+00:00",
-      "upstream_dependencies": [
-        {
-          "dependency_type": "scene_contract",
-          "dependency_id": "CH012_SC002",
-          "version": "a92cf36728c353675e0a071597c4e6f3eaea3215"
         },
         {
-          "dependency_type": "shot_blueprints",
-          "dependency_id": "CH012_SC002",
-          "version": "f968dd923151a6eba63dc1997047328ec3df754b"
-        }
-      ],
-      "locked_fields": {},
-      "manual_overrides": {},
-      "revision_history": [
-        {
-          "timestamp_utc": "2026-04-22T01:40:58.316833+00:00",
+          "timestamp_utc": "2026-04-22T08:01:56.260241+00:00",
           "action": "synthesized",
-          "source_fingerprint": "726f7c847e6373d808f0d614ef6ba7ba31266ee7"
+          "source_fingerprint": "63307b25f6aeb31c5f780498af964240a51cd2b7"
         }
       ]
     }

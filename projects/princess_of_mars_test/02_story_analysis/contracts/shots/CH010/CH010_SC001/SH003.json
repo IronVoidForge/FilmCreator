@@ -5,11 +5,11 @@
   "shot_order": 3,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Insert Detail 3: Carter uses affection",
-  "shot_type": "insert_detail",
-  "camera_description": "Tight detail framing focused on a single visual object or gesture.",
-  "composition": "Detail composition centered on the key physical action or prop inside Outskirts of the Thark city (low hills/ravines).",
-  "target_seconds": 5.0,
+  "shot_title": "Action 3: The interaction results in a deep, unspoken underst...",
+  "shot_type": "action",
+  "camera_description": "Active camera with tracking energy and clear spatial orientation.",
+  "composition": "Dynamic composition in Outskirts of the Thark city (low hills/ravines) with john_carter, woola crossing the frame and maintaining readable movement.",
+  "target_seconds": 5.6,
   "characters_in_frame": [
     {
       "label": "John Carter",
@@ -34,12 +34,12 @@
   ],
   "environment": {
     "label": "Outskirts of the Thark city (low hills/ravines)",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "Outskirts of the Thark city (low hills/ravines)",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
@@ -47,10 +47,11 @@
   ],
   "continuity_constraints": [
     "Lighting/Time of Day (Early Morning)",
-    "Woola's physical positioning relative to Carter"
+    "Woola's physical positioning relative to Carter",
+    "The interaction results in a deep unspoken understanding and solidified loyalty between man and beast."
   ],
-  "prompt_seed": "Insert Detail 3: Carter uses affection to interact with the beast.. insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside Outskirts of the Thark city (low hills/ravines). Cast: john_carter, woola. Environment: Outskirts...",
-  "shot_notes": "Carter uses affection to interact with the beast.",
+  "prompt_seed": "Action 3: The interaction results in a deep, unspoken underst.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in Outskirts of the Thark city (low hills/ravines) with john_carter, woola crossing the frame and maintaining readable movement. Cast: john_carter, woola. En...",
+  "shot_notes": "The interaction results in a deep, unspoken understanding and solidified loyalty between man and beast.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -108,7 +109,7 @@
     }
   ],
   "evidence_summary": [
-    "Establish a non-verbal, emotional bond between John Carter and Woola through affection rather than command. The scene requires careful management of the early morning lighting to maintain atmosphere while managing the physical proximity and interaction betw...",
+    "Establish a non-verbal, emotional bond between John Carter and Woola through affection rather than command. The scene requires careful management of the early morning lighting to maintain atmosphere and precise coordination of character positioning to ensur...",
     "Early in the morning, on the outskirts of the Thark city, John Carter tests his connection with Woola. Instead of using commands, he uses affection to solidify their bond, resulting in a deep, unspoken understanding between man and beast.",
     "From testing/uncertainty to profound mutual connection/loyalty. **Likely Visual Coverage Families:** - Close-ups on Carter's face and hands. - Extreme close-ups on Woola's eyes and expressions. - Wide shots of the Mar...",
     "Close-ups on Carter's face and hands",
@@ -121,19 +122,24 @@
     "artifact_id": "CH010_SC001_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "6c4c55b66090e2f3ce19547e041493da8a7ee3aa",
+    "source_fingerprint": "5ba8c84b2c905c2b31d5fa91034eca68dde2be74",
     "created_at_utc": "2026-04-22T01:25:46.224723+00:00",
-    "updated_at_utc": "2026-04-22T01:25:46.224723+00:00",
+    "updated_at_utc": "2026-04-22T07:51:38.251636+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH010_SC001",
-        "version": "6971fa71443859ad8d64c04c5ead3dee0cdbfdfe"
+        "version": "024e3eb69641abc9a791ce9defd33bf996363d13"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH010_SC001",
+        "version": "2dd6ca2cbd962e91e7ae7b2a71f7bf6baf11cda6"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH010_SC001",
-        "version": "cfddf748d127e8e5fde96951872c47308904d1f8"
+        "version": "77d4d4ea45f3b7a57fe6bcde7e3fd23b8b9456fb"
       }
     ],
     "locked_fields": {},
@@ -143,6 +149,11 @@
         "timestamp_utc": "2026-04-22T01:26:19.980262+00:00",
         "action": "synthesized",
         "source_fingerprint": "6c4c55b66090e2f3ce19547e041493da8a7ee3aa"
+      },
+      {
+        "timestamp_utc": "2026-04-22T07:51:57.063262+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "5ba8c84b2c905c2b31d5fa91034eca68dde2be74"
       }
     ]
   }

@@ -5,31 +5,41 @@
   "shot_order": 3,
   "previous_shot_id": "SH002",
   "next_shot_id": "SH004",
-  "shot_title": "Action 3: Carter stays behind to hold off a force of nearly a...",
+  "shot_title": "Action 3: Carter makes the decision to stay behind",
   "shot_type": "action",
   "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-  "composition": "Dynamic composition in The Mossy Waste / Low Mountains with Thark Warriors crossing the frame and maintaining readable movement.",
+  "composition": "Dynamic composition in The Mossy Waste / Low Mountains with john_carter, dejah_thoris crossing the frame and maintaining readable movement.",
   "target_seconds": 5.5,
   "characters_in_frame": [
     {
-      "label": "Thark Warriors",
-      "canonical_id": null,
-      "display_name": "Thark Warriors",
-      "status": "review",
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 16,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
-      "notes": "sola | token overlap: ['sola'] | source context shares query language"
+      "resolution_score": 186,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'john_carter'"
+    },
+    {
+      "label": "Dejah Thoris",
+      "canonical_id": "dejah_thoris",
+      "display_name": "dejah_thoris",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH010/dejah_thoris.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'dejah_thoris'"
     }
   ],
   "environment": {
     "label": "The Mossy Waste / Low Mountains",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "The Mossy Waste / Low Mountains",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
@@ -38,10 +48,11 @@
   "continuity_constraints": [
     "Precise tracking of rifle ammunition depletion/count",
     "Maintaining consistent spatial distance between Carter and the fleeing women (Dejah Thoris, Sola)",
-    "Carter stays behind to hold off a force of nearly a thousand Thark warriors."
+    "Carter makes the decision to stay behind",
+    "transitioning from panic to heroic resolve."
   ],
-  "prompt_seed": "Action 3: Carter stays behind to hold off a force of nearly a.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in The Mossy Waste / Low Mountains with Thark Warriors crossing the frame and maintaining readable movement. Cast: Thark Warriors. Environment: The Mossy Was...",
-  "shot_notes": "Carter stays behind to hold off a force of nearly a thousand Thark warriors.",
+  "prompt_seed": "Action 3: Carter makes the decision to stay behind, transitio.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in The Mossy Waste / Low Mountains with john_carter, dejah_thoris crossing the frame and maintaining readable movement. Cast: john_carter, dejah_thoris. Envi...",
+  "shot_notes": "Carter makes the decision to stay behind, transitioning from panic to heroic resolve.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -99,7 +110,7 @@
     }
   ],
   "evidence_summary": [
-    "Execute a high-scale climactic action set-piece centered on John Carter's tactical combat and self-sacrifice. The sequence requires managing large-scale crowd elements (Thark horde) alongside precise, high-action choreography involving rifle fire and acroba...",
+    "Execute a high-scale climactic action set-piece centered on John Carter's self-sacrifice. The sequence requires managing large-scale crowd elements (nearly a thousand Thark warriors) against a singular protagonist, utilizing acrobatic movement and tactical...",
     "A Thark chieftain spots the group with a fieldglass. Carter kills the chieftain with his rifle to protect the women, then stays behind to hold off a massive force of nearly a thousand warriors, using his ammunition and acrobatic skills to buy them time.",
     "Panic $\\rightarrow$ Heroic Resolve $\\rightarrow$ Intense Combat Tension. **Likely Visual Coverage Families:** - Long shots of the approaching Thark horde. - POV through the fieldglass. - High-action coverage of rifle...",
     "Long shots of the approaching Thark horde",
@@ -112,19 +123,24 @@
     "artifact_id": "CH017_SC003_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "a36bd766a3777a201f0ed3e9f0a75ab5ad4bf853",
+    "source_fingerprint": "a000e7d26929d8ee275e015aea5ee2bac1790de3",
     "created_at_utc": "2026-04-22T02:23:05.169157+00:00",
-    "updated_at_utc": "2026-04-22T02:23:05.169157+00:00",
+    "updated_at_utc": "2026-04-22T08:40:22.101323+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH017_SC003",
-        "version": "3109359e53db926bd154c2c39c9b14d52429e3ad"
+        "version": "fa59faaf0af0681fba3e5268db73654c811abfd5"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH017_SC003",
+        "version": "c46322756522e67b0172b0f3d8347c22c5e08816"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH017_SC003",
-        "version": "ff9b42e048339d673a9429914f56ae4f81705542"
+        "version": "3354020e8b661ed2dcec34bc6f7b8c7a0b1b4602"
       }
     ],
     "locked_fields": {},
@@ -134,6 +150,11 @@
         "timestamp_utc": "2026-04-22T02:23:29.795051+00:00",
         "action": "synthesized",
         "source_fingerprint": "a36bd766a3777a201f0ed3e9f0a75ab5ad4bf853"
+      },
+      {
+        "timestamp_utc": "2026-04-22T08:40:52.780624+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "a000e7d26929d8ee275e015aea5ee2bac1790de3"
       }
     ]
   }

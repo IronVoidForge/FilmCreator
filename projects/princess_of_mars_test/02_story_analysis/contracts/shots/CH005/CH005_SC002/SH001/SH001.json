@@ -24,26 +24,24 @@
   ],
   "environment": {
     "label": "Captive's chamber",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "Captive's chamber",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
     "BT001"
   ],
   "continuity_constraints": [
-    "Physical distance between protagonist and the_watch_dog.",
-    "Direction of the chase sequence.",
-    "protagonist attempts to leave the Captive's chamber to test his limits and captor capabilities.",
-    "Resolve Captive's chamber -> Captive's chamber",
-    "Resolve immediate hallway/threshold -> immediate hallway/threshold"
+    "Physical distance between protagonist and the_watch_dog",
+    "Direction of the chase",
+    "protagonist attempts to leave the Captive's chamber to test his limits."
   ],
   "prompt_seed": "Insert Detail 1: protagonist attempts to leave the Captive's chamber.... insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside Captive's chamber. Cast: protagonist. Environment: Captive's chamber. Beat: protagonist atte...",
-  "shot_notes": "protagonist attempts to leave the Captive's chamber to test his limits and captor capabilities.",
+  "shot_notes": "protagonist attempts to leave the Captive's chamber to test his limits.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -101,12 +99,12 @@
     }
   ],
   "evidence_summary": [
-    "The scene must establish the physical threat and high-speed capabilities of the Martian guard beast through a transition from controlled testing to uncontrolled survival. Movement should emphasize the protagonist's agility against the rapid, intelligent pur...",
+    "The scene must establish the physical threat posed by the Martian guard beast through a high-stakes pursuit. The protagonist's extreme agility and high-leaping capabilities should be contrasted against the rapid, intelligent movement of the short-legged Wat...",
     "Seeking to test his limits and the capabilities of his captors, the protagonist attempts to leave his room. He quickly realizes that the short-legged Watch Dog is incredibly fast and intelligent, turning a test into a survival situation.",
     "Determination $\\rightarrow$ Alarm/Panic. **Likely Visual Coverage Families:** - Low-angle shots of the Watch Dog to emphasize speed. - Handheld/shaky cam for the protagonist's movement. - Tracking shots following the...",
-    "Low-angle shots of the_watch_dog to emphasize speed.",
-    "Handheld/shaky cam for protagonist movement.",
-    "Tracking shots following the dog's rapid approach.",
+    "Low-angle shots of the_watch_dog (emphasizing speed)",
+    "Handheld/shaky cam (protagonist movement)",
+    "Tracking shots (following rapid approach)",
     "protagonist | An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeless\" physic...",
     "the_watch_dog | No visual data is available for this character in the provided evidence. A stable visual identity cannot be established at this time. | unknown | unknown"
   ],
@@ -114,19 +112,24 @@
     "artifact_id": "CH005_SC002_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "71fd2c18daab0f6116f1b1f3336fabe7efdee7d5",
+    "source_fingerprint": "31aa3afa559c8d9b13b4a2d21ca3fcc1a153f4ba",
     "created_at_utc": "2026-04-22T00:43:12.165925+00:00",
-    "updated_at_utc": "2026-04-22T00:43:12.165925+00:00",
+    "updated_at_utc": "2026-04-22T07:20:19.432927+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH005_SC002",
-        "version": "c1eaf8de0d7c5221503075d0ff1e5b5fcca65dc4"
+        "version": "ecacc5ce36c12a21f443c0ba18a0c06c5168180b"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH005_SC002",
+        "version": "b32db945d82431a4acc648ec1e1520e641dff54b"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH005_SC002",
-        "version": "ad7cdeea6e97f934e3e31d774b56f6d9cbb85759"
+        "version": "f8386cd9134e70ed25bf3b5ba68ab67a79018a7f"
       }
     ],
     "locked_fields": {},
@@ -136,6 +139,11 @@
         "timestamp_utc": "2026-04-22T00:43:44.167312+00:00",
         "action": "synthesized",
         "source_fingerprint": "71fd2c18daab0f6116f1b1f3336fabe7efdee7d5"
+      },
+      {
+        "timestamp_utc": "2026-04-22T07:20:45.062284+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "31aa3afa559c8d9b13b4a2d21ca3fcc1a153f4ba"
       }
     ]
   }

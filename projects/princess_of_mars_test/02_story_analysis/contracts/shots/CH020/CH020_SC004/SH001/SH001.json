@@ -5,11 +5,11 @@
   "shot_order": 1,
   "previous_shot_id": "",
   "next_shot_id": "SH002",
-  "shot_title": "Establishing Wide 1: Arrival at the Ptor Farm",
+  "shot_title": "Establishing Wide 1: Arrival at Ptor Farm",
   "shot_type": "establishing_wide",
   "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across The Ptor Farm (Raised homes on metal shafts) with protagonist, woola placed for immediate spatial orientation.",
-  "target_seconds": 5.2,
+  "composition": "Wide composition across barsoomian_wilderness with protagonist, woola placed for immediate spatial orientation.",
+  "target_seconds": 5.5,
   "characters_in_frame": [
     {
       "label": "The Protagonist",
@@ -33,14 +33,14 @@
     }
   ],
   "environment": {
-    "label": "The Ptor Farm (Raised homes on metal shafts)",
-    "canonical_id": "None",
-    "display_name": "The Ptor Farm (Raised homes on metal shafts)",
-    "status": "review",
+    "label": "Barsoomian Wilderness",
+    "canonical_id": "barsoomian_wilderness",
+    "display_name": "barsoomian_wilderness",
+    "status": "canonical",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "resolution_score": 183,
+    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH020/barsoomian_wilderness.md",
+    "notes": "asset id exactly matches canonical id | query matches alias 'barsoomian_wilderness'"
   },
   "beat_ids": [
     "BT001"
@@ -49,8 +49,8 @@
     "Protagonist cleanliness levels (transitioning from wild to guest)",
     "Food and prop placement on the table"
   ],
-  "prompt_seed": "Establishing Wide 1: Arrival at the massive At... [Farm] featuring uniqu.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across The Ptor Farm (Raised homes on metal shafts) with protagonist, woola placed for immediate spatial orientation. Cast: protagonist, woola.",
-  "shot_notes": "Arrival at the massive At... [Farm] featuring unique raised architecture.",
+  "prompt_seed": "Establishing Wide 1: Arrival at the Ptor Farm; wide shots establishing t.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across barsoomian_wilderness with protagonist, woola placed for immediate spatial orientation. Cast: protagonist, woola. Environment: bars...",
+  "shot_notes": "Arrival at the Ptor Farm; wide shots establishing the unique architecture of raised homes on metal shafts.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -108,32 +108,38 @@
     }
   ],
   "evidence_summary": [
-    "Establish the Red Martian culture through hospitality and provide a necessary narrative pause for the protagonist. The scene must contrast the previous two weeks of wilderness survival/wild beast attacks with a sense of domestic stability, utilizing warm li...",
+    "Establish the Red Martian culture through hospitality and provide a necessary narrative pause for the protagonist. The scene must contrast the previous two weeks of wilderness survival (wild beasts, wandering) with the structured, warm environment of the Pt...",
     "The protagonist and Woola encounter a group of hospitable Red Martian government officers at a farm. They are fed and given rest.",
     "Desperation $\\rightarrow$ Safety/Comfort.",
     "Warmly lit interior shots",
     "Medium shots of meal/interaction",
-    "Wide shots of raised farm architecture",
+    "Wide shots of raised architecture (metal shafts)",
     "protagonist | An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeless\" physic...",
-    "woola | Woola is a large Martian hound characterized by a beastly, canine-like silhouette. The most defining visual identifier is the presence of multiple tusks protruding from its mouth. As a calot, it possesses a massive frame suitable for acting as a pro..."
+    "woola | Woola is a large Martian hound characterized by a beastly, canine-like silhouette. The most defining visual identifier is the presence of multiple tusks protruding from its mouth. As a calot, it possesses a massive frame suitable for acting as a pro...",
+    "barsoomian_wilderness | A vast, desolate Martian wasteland characterized by rugged terrain and expansive horizons. The landscape consists of arid plains and unpredictable terrain shifts, populated by predatory fauna and strange biological anomalies. | Expan..."
   ],
   "metadata": {
     "artifact_id": "CH020_SC004_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "b6076242239d5ceb3c30cdb35feeea88d07b467e",
+    "source_fingerprint": "6d59832a525ac29c646de80fdf94293f97556f0c",
     "created_at_utc": "2026-04-22T02:45:25.551740+00:00",
-    "updated_at_utc": "2026-04-22T02:45:25.551740+00:00",
+    "updated_at_utc": "2026-04-22T09:02:54.589721+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH020_SC004",
-        "version": "6d5b83e250c4fe12bb469004ccaac18d089e34d2"
+        "version": "1a15612e74e9c920fea8c29a1ec7564a89a9777c"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH020_SC004",
+        "version": "0f5c90bd428ffd1187c7beef5b8b460d399cf0af"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH020_SC004",
-        "version": "12b5afe31e3a3715c698c21dd94a01e4c3c2e365"
+        "version": "26866b62fb3f4218caaee06c115ca7549c9a6c98"
       }
     ],
     "locked_fields": {},
@@ -143,6 +149,11 @@
         "timestamp_utc": "2026-04-22T02:45:56.909617+00:00",
         "action": "synthesized",
         "source_fingerprint": "b6076242239d5ceb3c30cdb35feeea88d07b467e"
+      },
+      {
+        "timestamp_utc": "2026-04-22T09:03:19.585867+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "6d59832a525ac29c646de80fdf94293f97556f0c"
       }
     ]
   }

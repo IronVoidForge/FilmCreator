@@ -5,10 +5,10 @@
   "shot_order": 4,
   "previous_shot_id": "SH003",
   "next_shot_id": "",
-  "shot_title": "Action 4: The chase transitions from high-adrenaline movement...",
+  "shot_title": "Action 4: The protagonist's physical exertion shifts into a s...",
   "shot_type": "action",
   "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-  "composition": "Dynamic composition in Deserted Martian city streets with protagonist, the_watch_dog crossing the frame and maintaining readable movement.",
+  "composition": "Dynamic composition in Deserted Martian city streets with protagonist crossing the frame and maintaining readable movement.",
   "target_seconds": 5.3,
   "characters_in_frame": [
     {
@@ -20,26 +20,16 @@
       "resolution_score": 176,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
       "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
-    },
-    {
-      "label": "The Watch Dog",
-      "canonical_id": "the_watch_dog",
-      "display_name": "the_watch_dog",
-      "status": "canonical",
-      "entity_kind": "individual",
-      "resolution_score": 176,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/the_watch_dog.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'watch_dog'"
     }
   ],
   "environment": {
     "label": "Deserted Martian city streets",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "Deserted Martian city streets",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
@@ -47,11 +37,11 @@
   ],
   "continuity_constraints": [
     "Precise height and distance measurements for all jumps to maintain physical logic",
-    "Strict timing of the_watch_dog arrival at specific street corners relative to protagonist position",
-    "The chase transitions from high-adrenaline movement to a state of desperation as the gap narrows."
+    "Strict timing of the_watch_dog's arrival at specific street corners relative to protagonist position",
+    "The protagonist's physical exertion shifts into a state of desperation as the chase continues."
   ],
-  "prompt_seed": "Action 4: The chase transitions from high-adrenaline movement.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in Deserted Martian city streets with protagonist, the_watch_dog crossing the frame and maintaining readable movement. Cast: protagonist, the_watch_dog. Envi...",
-  "shot_notes": "The chase transitions from high-adrenaline movement to a state of desperation as the gap narrows.",
+  "prompt_seed": "Action 4: The protagonist's physical exertion shifts into a s.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in Deserted Martian city streets with protagonist crossing the frame and maintaining readable movement. Cast: protagonist. Environment: Deserted Martian city...",
+  "shot_notes": "The protagonist's physical exertion shifts into a state of desperation as the chase continues.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -122,19 +112,24 @@
     "artifact_id": "CH005_SC003_SH004_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "4d15301109fd39816a3965111c57f07315015069",
+    "source_fingerprint": "c3768dcd5bbfd606d879184d1707a030c15cf376",
     "created_at_utc": "2026-04-22T00:46:33.069974+00:00",
-    "updated_at_utc": "2026-04-22T00:46:33.069974+00:00",
+    "updated_at_utc": "2026-04-22T07:22:39.096628+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH005_SC003",
-        "version": "cab82d070bea26ab2cc5f3d06cb802dcd7d4ad69"
+        "version": "bba7b50a36e145fff6bd90accf7736d35bd43009"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH005_SC003",
+        "version": "7b2f94b3fe7b6bed7dfe97afcfbfc4d13eedb9ea"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH005_SC003",
-        "version": "76ee00dc5fdff7b7823ea1476fb0fa28504e8752"
+        "version": "fe986808a941304d72e20f5409a97cf065f24035"
       }
     ],
     "locked_fields": {},
@@ -144,6 +139,11 @@
         "timestamp_utc": "2026-04-22T00:47:08.036976+00:00",
         "action": "synthesized",
         "source_fingerprint": "4d15301109fd39816a3965111c57f07315015069"
+      },
+      {
+        "timestamp_utc": "2026-04-22T07:23:02.735640+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "c3768dcd5bbfd606d879184d1707a030c15cf376"
       }
     ]
   }

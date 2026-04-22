@@ -24,12 +24,12 @@
   ],
   "environment": {
     "label": "Interior chamber leading out to a Plaza",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "Interior chamber leading out to a Plaza",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
@@ -38,9 +38,10 @@
   "continuity_constraints": [
     "Physical state/mobility of the wounded Watch-thing",
     "Lighting transition from interior chamber to exterior Martian light",
-    "The Martian Warrior attempts to execute the wounded Watch-thing."
+    "The Martian Warrior attempts to execute the wounded Watch-thing.",
+    "Resolve Interior chamber leading out to a Plaza -> Interior chamber leading out to a Plaza"
   ],
-  "prompt_seed": "Establishing Wide 1: The Martian Warrior attempts to execute the wounded.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across Interior chamber leading out to a Plaza with scene_character placed for immediate spatial orientation. Cast: scene_character. Environment: Interior chamber...",
+  "prompt_seed": "Establishing Wide 1: The Martian Warrior attempts to execute the wounded.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across Interior chamber leading out to a Plaza with scene_character placed for immediate spatial orientation. Cast: scene_character. Environment: Interior chambe...",
   "shot_notes": "The Martian Warrior attempts to execute the wounded Watch-thing.",
   "evidence_refs": [
     {
@@ -89,7 +90,7 @@
     }
   ],
   "evidence_summary": [
-    "The scene requires a high-tension physical confrontation within an interior chamber that transitions into a group exit. Focus must be placed on the protagonist's physical intervention against the Martian Warrior and the subsequent movement of the party from...",
+    "The scene requires a high-tension physical confrontation within an interior chamber that transitions into a wide, atmospheric exit. Focus must be placed on the visceral impact of the protagonist's strike and the subsequent movement from controlled interior...",
     "A warrior attempts to execute the wounded Watch-thing. The protagonist intervenes physically, striking the warrior to protect his beast. He then departs the building with Sola and his guardian, having secured allies. **Participating Characters:** - The Prot...",
     "Tension $\\rightarrow$ Defiance $\\rightarrow$ Somber relief/Resolution. **Likely Visual Coverage Families:** - Close-up on the protagonist's hand/strike against the warrior. - Wide shot of the group exiting into the pl...",
     "Close-up on the protagonist's hand/strike against the warrior",
@@ -100,19 +101,24 @@
     "artifact_id": "CH006_SC004_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "de74707a81b3549b3ce94eb8a4d2aac90d0216ff",
+    "source_fingerprint": "44181fa7e319c9a65b9916c5472e72229e285d7a",
     "created_at_utc": "2026-04-22T00:56:40.151034+00:00",
-    "updated_at_utc": "2026-04-22T00:56:40.151034+00:00",
+    "updated_at_utc": "2026-04-22T07:29:44.156559+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH006_SC004",
-        "version": "8d6ee111e5c1a1991fa615c89f1f73390ed62801"
+        "version": "e028b1f64307fc6aecd32ae9e98fc6e31e361dcc"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH006_SC004",
+        "version": "0b1f0c2c889b475355b49773991ebfbf8e3f651a"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH006_SC004",
-        "version": "f21a31fd8916f090dc28b79fae9661431d3a4725"
+        "version": "4ccc403c11c3e6a675eaba6c26cf080bc8138522"
       }
     ],
     "locked_fields": {},
@@ -122,6 +128,11 @@
         "timestamp_utc": "2026-04-22T00:57:11.062257+00:00",
         "action": "synthesized",
         "source_fingerprint": "de74707a81b3549b3ce94eb8a4d2aac90d0216ff"
+      },
+      {
+        "timestamp_utc": "2026-04-22T07:30:09.026083+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "44181fa7e319c9a65b9916c5472e72229e285d7a"
       }
     ]
   }

@@ -5,10 +5,10 @@
   "shot_order": 1,
   "previous_shot_id": "",
   "next_shot_id": "SH002",
-  "shot_title": "Establishing Wide 1: Carter recovers from his staged death",
+  "shot_title": "Establishing Wide 1: Carter recovers",
   "shot_type": "establishing_wide",
   "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across arena perimeter with John Carter placed for immediate spatial orientation.",
+  "composition": "Wide composition across arena perimeter with John Carter placed for spatial orientation.",
   "target_seconds": 5.5,
   "characters_in_frame": [
     {
@@ -24,7 +24,7 @@
   ],
   "environment": {
     "label": "scene_environment",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "SC005",
     "status": "review",
     "entity_kind": "environment",
@@ -40,7 +40,7 @@
     "Physical state of Carter (injuries from the duel)",
     "Carter recovers from his staged death under cover of darkness at the arena perimeter."
   ],
-  "prompt_seed": "Establishing Wide 1: Carter recovers from his staged death under cover o.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across SC005 with scene_character placed for immediate spatial orientation. Cast: John Carter. Environment: Arena perimeter. Beat: Carter recove...",
+  "prompt_seed": "Establishing Wide 1: Carter recovers from his staged death under cover o.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across SC005 with scene_character placed for immediate spatial orientation. Cast: john_carter. Environment: Arena perimeter. Beat: Carter recove...",
   "shot_notes": "Carter recovers from his staged death under cover of darkness at the arena perimeter.",
   "evidence_refs": [
     {
@@ -89,7 +89,7 @@
     }
   ],
   "evidence_summary": [
-    "Establish the immediate aftermath of Carter's staged death by capturing his physical recovery and subsequent movement from the arena perimeter toward the eastern hills. The sequence must manage a temporal lighting shift from darkness to dawn while maintaini...",
+    "Establish the immediate aftermath of Carter's staged death by capturing his physical recovery and subsequent movement from the arena perimeter toward the eastern hills. The sequence must manage a lighting transition from deep night to dawn while maintaining...",
     "Under the cover of darkness, Carter recovers from his staged death and makes his escape from the arena, heading toward the eastern hills. **Participating Characters:** - John Carter **Participating Environments:** - Arena perimeter/Darkness - The hills east...",
     "Exhaustion $\\rightarrow$ Determination. **Likely Visual Coverage Families:** - Low-light, silhouette shots. - Tracking shots following Carter's movement through the terrain. - Wide landscape shots of the eastern hills...",
     "Low-light, silhouette shots",
@@ -100,19 +100,24 @@
     "artifact_id": "CH019_SC005_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "ba229a44afc4274d4ccb72129c5fd8034c4123df",
+    "source_fingerprint": "b2b26a32d5100fda5d1327420c495ad54e973ffe",
     "created_at_utc": "2026-04-22T02:40:17.071282+00:00",
-    "updated_at_utc": "2026-04-22T02:40:17.071282+00:00",
+    "updated_at_utc": "2026-04-22T08:57:00.372861+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH019_SC005",
-        "version": "aa3b7f79a6f5e345440b0d151042e094f183dd7a"
+        "version": "10db6439d95e3fee5e9a6061994ed765e3abb2f8"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH019_SC005",
+        "version": "353674384ae210a55e6d4f5aa8e02735ee6039f5"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH019_SC005",
-        "version": "7dca6609cd67f85a62c17a30180f842777517d5c"
+        "version": "4a5b41400efb28a592d24d145248f32a1e069636"
       }
     ],
     "locked_fields": {},
@@ -122,6 +127,11 @@
         "timestamp_utc": "2026-04-22T02:40:39.922610+00:00",
         "action": "synthesized",
         "source_fingerprint": "ba229a44afc4274d4ccb72129c5fd8034c4123df"
+      },
+      {
+        "timestamp_utc": "2026-04-22T08:57:23.458232+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "b2b26a32d5100fda5d1327420c495ad54e973ffe"
       }
     ]
   }

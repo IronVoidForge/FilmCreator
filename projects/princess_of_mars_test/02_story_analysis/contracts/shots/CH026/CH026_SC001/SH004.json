@@ -5,7 +5,7 @@
   "shot_order": 4,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Medium 4: Heliumite navy arrives",
+  "shot_title": "Medium 4: The Heliumite navy arrives on the scene.",
   "shot_type": "medium",
   "camera_description": "Stable medium framing that keeps action and character readable.",
   "composition": "Readable medium composition in The skies above the approach to Helium featuring tars_tarkas, kantos_kan.",
@@ -34,21 +34,21 @@
   ],
   "environment": {
     "label": "The skies above the approach to Helium",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "The skies above the approach to Helium",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
     "BT004"
   ],
   "continuity_constraints": [
-    "Precise vessel positions in the sky during dogfights",
-    "Tracking the number of ships remaining for each faction",
-    "Weaponry and ammunition usage/depletion during combat",
+    "Vessel positions in the sky relative to fleets",
+    "Running count of ships remaining during battle",
+    "Weaponry and ammunition usage/depletion during dogfights",
     "The Heliumite navy arrives on the scene."
   ],
   "prompt_seed": "Medium 4: The Heliumite navy arrives on the scene.. medium. Stable medium framing that keeps action and character readable. Readable medium composition in The skies above the approach to Helium featuring tars_tarkas, kantos_kan. Cast: tars_tarkas, kantos_kan. Environment: The skies above the approach to Helium. Beat...",
@@ -110,7 +110,7 @@
     }
   ],
   "evidence_summary": [
-    "The scene must visually communicate the massive scale of the aerial conflict through coordinated fleet movements. It requires high-intensity combat choreography that highlights the specific marksmanship capabilities of the Tharks and the tactical arrival of...",
+    "The scene requires a large-scale aerial combat sequence involving multiple vessel types. Production must coordinate the movement of Thark and Zodangan fleets to establish scale, transitioning from a tense interception to high-intensity dogfighting, and conc...",
     "Tars Tarkas and Kantos Kan lead a fleet toward Helium, only to intercept a Zodangan siege force. A massive aerial battle erupts, characterized by Thark marksmanship and the arrival of the Heliumite navy, turning the tide against the Zodangans.",
     "Tension $\\rightarrow$ Chaos/Action $\\rightarrow$ Triumph.",
     "Wide shots of fleet movements",
@@ -123,19 +123,24 @@
     "artifact_id": "CH026_SC001_SH004_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "38073d0dc1e194eeb7430f6754eef1923e33435d",
+    "source_fingerprint": "6c0856a9e7f1373786164ba6ee3792a503f541ef",
     "created_at_utc": "2026-04-22T03:40:34.268906+00:00",
-    "updated_at_utc": "2026-04-22T03:40:34.268906+00:00",
+    "updated_at_utc": "2026-04-22T15:54:40.404630+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH026_SC001",
-        "version": "c6ee3e42b77ac504eb01b9c96873f1e837148d89"
+        "version": "197bba5b2aa5dea8bb44e948377e4d8cc1e646a2"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH026_SC001",
+        "version": "16bbfa25e1a2cc8aec96e88b526cc94c601e9036"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH026_SC001",
-        "version": "b07a6be63be7480088e2e228216b0a7738cdf53a"
+        "version": "f3359e5660469d87f684b0927888915914b49382"
       }
     ],
     "locked_fields": {},
@@ -145,6 +150,11 @@
         "timestamp_utc": "2026-04-22T03:41:05.760589+00:00",
         "action": "synthesized",
         "source_fingerprint": "38073d0dc1e194eeb7430f6754eef1923e33435d"
+      },
+      {
+        "timestamp_utc": "2026-04-22T15:55:07.156408+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "6c0856a9e7f1373786164ba6ee3792a503f541ef"
       }
     ]
   }

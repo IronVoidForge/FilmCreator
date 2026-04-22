@@ -4,12 +4,12 @@
   "chapter_id": "CH027",
   "shot_order": 3,
   "previous_shot_id": "SH002",
-  "next_shot_id": "",
-  "shot_title": "Physical sensation of thinning air",
+  "next_shot_id": "SH004",
+  "shot_title": "Action 3: Engine Stopped Panic",
   "shot_type": "action",
   "camera_description": "Active camera with tracking energy and clear spatial orientation.",
   "composition": "Dynamic composition in The Palace of Helium with john_carter, tardos_mors crossing the frame and maintaining readable movement.",
-  "target_seconds": 5.6,
+  "target_seconds": 5.5,
   "characters_in_frame": [
     {
       "label": "John Carter",
@@ -34,12 +34,12 @@
   ],
   "environment": {
     "label": "The Palace of Helium",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "The Palace of Helium",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
@@ -47,10 +47,10 @@
   ],
   "continuity_constraints": [
     "Atmospheric visual cues (haze, light refraction changes)",
-    "The physical sensation of thinning air begins to affect the population in the streets."
+    "News spreads that the engine has stopped, triggering immediate panic."
   ],
-  "prompt_seed": "Action 3: The physical sensation of thinning air begins to af.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in The Palace of Helium with john_carter, tardos_mors crossing the frame and maintaining readable movement. Cast: john_carter, tardos_mors. Environment: The...",
-  "shot_notes": "The physical sensation of thinning air begins to affect the population in the streets.",
+  "prompt_seed": "Action 3: News spreads that the engine has stopped, triggerin.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in The Palace of Helium with john_carter, tardos_mors crossing the frame and maintaining readable movement. Cast: john_carter, tardos_mors. Environment: The Palace of Helium.",
+  "shot_notes": "News spreads that the engine has stopped, triggering immediate panic.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -108,12 +108,12 @@
     }
   ],
   "evidence_summary": [
-    "Establish the sudden transition from planetary peace to a state of atmospheric crisis. The scene must communicate the gravity of the murder of the atmosphere plant keeper and the mechanical failure of the engine through both news delivery and the physical o...",
+    "Establish the sudden transition from planetary peace to an existential crisis. The scene must visually and rhythmically communicate the physical sensation of atmospheric thinning through character reactions and environmental shifts, moving from stable palac...",
     "News reaches the palace that the keeper of the atmosphere plant has been murdered and the engine has stopped. The physical sensation of the air thinning begins to affect the population.",
     "Peace $\\rightarrow$ Panic/Urgency.",
     "Rapid cuts to heighten tension",
-    "Handheld camera movement",
-    "Reaction shots (gasping, skyward gazes)",
+    "Handheld camera movement for kinetic energy",
+    "Reaction shots (gasping, looking at sky)",
     "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in...",
     "tardos_mors | A Martian ruler and Jeddak of Helium, appearing as an elder statesman. The character is defined by grand royal regalia and ceremonial attire consistent with the Heliumite throne. He is visually associated with the leadership of the Heliumite p..."
   ],
@@ -121,19 +121,24 @@
     "artifact_id": "CH027_SC002_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "ee499de06c302baf035dbafdde3aa051ff54b6f9",
+    "source_fingerprint": "6629cf8c22c2785771af00f708ce3904aefa0a5f",
     "created_at_utc": "2026-04-22T03:52:09.181072+00:00",
-    "updated_at_utc": "2026-04-22T03:52:09.181072+00:00",
+    "updated_at_utc": "2026-04-22T16:03:47.474340+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH027_SC002",
-        "version": "8dc1028df980f98942048f8efd21c3cdf5b42b5a"
+        "version": "737ba809f37be67cf14166ee9f865a18076db7d0"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH027_SC002",
+        "version": "f60f307123c8fbad5a17eed63055d1380f5470ea"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH027_SC002",
-        "version": "7217ed4cea386f36286015a6f349110131552266"
+        "version": "32015f9669dddd583364ae91872ac3b3c8d232a2"
       }
     ],
     "locked_fields": {},
@@ -143,6 +148,11 @@
         "timestamp_utc": "2026-04-22T03:52:26.697862+00:00",
         "action": "synthesized",
         "source_fingerprint": "ee499de06c302baf035dbafdde3aa051ff54b6f9"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:04:07.434651+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "6629cf8c22c2785771af00f708ce3904aefa0a5f"
       }
     ]
   }

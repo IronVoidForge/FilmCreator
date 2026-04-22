@@ -5,9 +5,9 @@
   "shot_order": 1,
   "previous_shot_id": "",
   "next_shot_id": "SH002",
-  "shot_title": "Medium 1: Protagonist observes destruction",
+  "shot_title": "Medium 1: Protagonist observes the destruction and the drifti...",
   "shot_type": "medium",
-  "camera_description": "Stable medium framing.",
+  "camera_description": "Stable medium framing that keeps action and character readable.",
   "composition": "Readable medium composition in City overlook/window featuring protagonist.",
   "target_seconds": 5.5,
   "characters_in_frame": [
@@ -24,23 +24,23 @@
   ],
   "environment": {
     "label": "City overlook/window",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "City overlook/window",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
     "BT001"
   ],
   "continuity_constraints": [
-    "Lighting from the distant funeral pyre must reflect accurately on the protagonist's face.",
-    "Protagonist observes the destruction and the funeral pyre from the city overlook/window."
+    "Lighting from the distant funeral pyre reflecting on the protagonist's face.",
+    "Protagonist observes the destruction and the drifting fire of the funeral pyre."
   ],
-  "prompt_seed": "Medium 1: Protagonist observes the destruction and the funera.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in City overlook/window featuring protagonist. Cast: protagonist. Environment: City overlook/window. Beat: Protagonist observes the destruction and the...",
-  "shot_notes": "Protagonist observes the destruction and the funeral pyre from the city overlook/window.",
+  "prompt_seed": "Medium 1: Protagonist observes the destruction and the drifti.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in City overlook/window featuring protagonist. Cast: protagonist. Environment: City overlook/window. Beat: Protagonist observes the destruction and the...",
+  "shot_notes": "Protagonist observes the destruction and the drifting fire of the funeral pyre.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -98,7 +98,7 @@
     }
   ],
   "evidence_summary": [
-    "The scene focuses on the internal emotional state of the protagonist as they observe the aftermath of combat. The visual language must transition from the scale of destruction to the intimate, isolated experience of the character, utilizing light from the f...",
+    "The scene focuses on the internal psychological state of the protagonist as they witness the aftermath of conflict. The visual language must transition from the scale of destruction to the intimate, isolated experience of the character, utilizing light from...",
     "Watching the destruction and the funeral pyre, the protagonist experiences a profound sense of melancholy and empathy for the defeated crew of the airships.",
     "Victory $\\rightarrow$ Melancholy/Empathy.",
     "Close-ups on the protagonist's face",
@@ -110,19 +110,24 @@
     "artifact_id": "CH008_SC004_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "9b6cb615518827eba758ed9b10149638b558bea1",
+    "source_fingerprint": "0234b347fdbf6b8d048dddf3c705d451a15a6cf0",
     "created_at_utc": "2026-04-22T01:12:14.635861+00:00",
-    "updated_at_utc": "2026-04-22T01:12:14.635861+00:00",
+    "updated_at_utc": "2026-04-22T07:42:34.540346+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH008_SC004",
-        "version": "bda386134d984c520e5075536d88aa3eaeb09c57"
+        "version": "0fb1986f35e87ca323c3a44aee6c227eeaec6f88"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH008_SC004",
+        "version": "f608f6fafcb9b1ad737eb92de469bcdd2586989e"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH008_SC004",
-        "version": "f3c351a2d3e7693b09dcc8f3b4e8f1b2c79706b8"
+        "version": "2293291e28179eadc70088964851d6ac85dd2b58"
       }
     ],
     "locked_fields": {},
@@ -132,6 +137,11 @@
         "timestamp_utc": "2026-04-22T01:12:42.451168+00:00",
         "action": "synthesized",
         "source_fingerprint": "9b6cb615518827eba758ed9b10149638b558bea1"
+      },
+      {
+        "timestamp_utc": "2026-04-22T07:42:57.839916+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "0234b347fdbf6b8d048dddf3c705d451a15a6cf0"
       }
     ]
   }

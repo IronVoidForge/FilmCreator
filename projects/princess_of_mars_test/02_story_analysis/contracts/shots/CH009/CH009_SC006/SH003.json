@@ -5,10 +5,10 @@
   "shot_order": 3,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Closing Reaction 3: Resolution to confide in Sola to facilitate a joint...",
+  "shot_title": "Closing Reaction 3: Resolution to confide in Sola",
   "shot_type": "closing_reaction",
   "camera_description": "Controlled closing frame that lands the consequence of the beat.",
-  "composition": "Closing composition in The Sleeping Quarters (Night) that emphasizes the consequence of resolution to confide in sola to facilitate a joint escape plan..",
+  "composition": "Closing composition in The Sleeping Quarters (Night) that emphasizes the consequence of resolution to confide in sola to plan a joint escape..",
   "target_seconds": 4.6,
   "characters_in_frame": [
     {
@@ -24,12 +24,12 @@
   ],
   "environment": {
     "label": "The Sleeping Quarters (Night)",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "The Sleeping Quarters (Night)",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
@@ -37,11 +37,11 @@
   ],
   "continuity_constraints": [
     "Lighting must match SC005 transition",
-    "Character positioning must remain consistent with SC005",
-    "Resolution to confide in Sola to facilitate a joint escape plan."
+    "Character positioning relative to SC005",
+    "Resolution to confide in Sola to plan a joint escape."
   ],
-  "prompt_seed": "Closing Reaction 3: Resolution to confide in Sola to facilitate a joint.... closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in The Sleeping Quarters (Night) that emphasizes the consequence of resolution to confide in sola to facilitate a joint escape plan.. Cast...",
-  "shot_notes": "Resolution to confide in Sola to facilitate a joint escape plan.",
+  "prompt_seed": "Closing Reaction 3: Resolution to confide in Sola to plan a joint escape.. closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in The Sleeping Quarters (Night) that emphasizes the consequence of resolution to confide in sola to plan a joint escape.. Cast: protagonis...",
+  "shot_notes": "Resolution to confide in Sola to plan a joint escape.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -99,11 +99,11 @@
     }
   ],
   "evidence_summary": [
-    "Following the preceding argument, the scene focuses on the protagonist's internal transition from chaos to a state of calculated resolve. The performance must convey a shift toward long-term planning as he decides to involve Sola in an escape strategy.",
+    "Following the preceding argument, the scene focuses on the protagonist's internal transition from chaos to a state of calculated resolve. The performance must convey a shift toward long-term strategic thinking as he contemplates his next move regarding Sola...",
     "In the aftermath of the argument, the protagonist resolves to eventually confide in Sola so they can work together to plan an escape.",
     "Conflict/Chaos $\\rightarrow$ Calculated Resolve.",
     "Close-up on the protagonist's eyes",
-    "Slow pull-back showing isolation and contemplation",
+    "Slow pull-back to show isolation/contemplation",
     "Lighting must match SC005 transition",
     "protagonist | An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeless\" physic..."
   ],
@@ -111,19 +111,24 @@
     "artifact_id": "CH009_SC006_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "a6a606b8534878f00859ae415f84e78950afb0ab",
+    "source_fingerprint": "937374499ca997a6d8fb2ba16ff9c9706b8c78d7",
     "created_at_utc": "2026-04-22T01:24:06.768854+00:00",
-    "updated_at_utc": "2026-04-22T01:24:06.768854+00:00",
+    "updated_at_utc": "2026-04-22T07:50:36.172034+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH009_SC006",
-        "version": "be20ee4aed3f924d83b0987ecc44776f195aa27c"
+        "version": "4b81b228c8cb626d11301501a216d7e32a0342fe"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH009_SC006",
+        "version": "a014d990508d139db772f713b031a06bb625bb8d"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH009_SC006",
-        "version": "07fec4c311d7c81a9e4d60640499b72621fd88f2"
+        "version": "554b7803caa00477559d72e0bd86ab1b944efe08"
       }
     ],
     "locked_fields": {},
@@ -133,6 +138,11 @@
         "timestamp_utc": "2026-04-22T01:24:31.123097+00:00",
         "action": "synthesized",
         "source_fingerprint": "a6a606b8534878f00859ae415f84e78950afb0ab"
+      },
+      {
+        "timestamp_utc": "2026-04-22T07:50:52.453432+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "937374499ca997a6d8fb2ba16ff9c9706b8c78d7"
       }
     ]
   }

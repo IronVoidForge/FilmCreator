@@ -4,12 +4,12 @@
   "chapter_id": "CH013",
   "shot_order": 4,
   "previous_shot_id": "SH003",
-  "next_shot_id": "",
-  "shot_title": "Closing Reaction 4: Scale of Departure",
-  "shot_type": "closing_reaction",
-  "camera_description": "Controlled closing frame that lands the consequence of the beat.",
-  "composition": "Closing composition in Lorquas Ptomel that emphasizes the scale of the community preparing for departure as day transitions to night.",
-  "target_seconds": 4.3,
+  "next_shot_id": "SH005",
+  "shot_title": "Medium 4: Mounting thoats",
+  "shot_type": "medium",
+  "camera_description": "Stable medium framing that keeps action and character readable.",
+  "composition": "Readable medium composition in Lorquas Ptomel featuring john_carter, various Thark citizens/warriors.",
+  "target_seconds": 5.0,
   "characters_in_frame": [
     {
       "label": "John Carter",
@@ -20,27 +20,37 @@
       "resolution_score": 186,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
       "notes": "asset id exactly matches canonical id | query matches alias 'john_carter'"
+    },
+    {
+      "label": "various Thark citizens/warriors",
+      "canonical_id": null,
+      "display_name": "various Thark citizens/warriors",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 10,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
+      "notes": "apache_warriors | source context shares query language"
     }
   ],
   "environment": {
     "label": "Lorquas Ptomel",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "Lorquas Ptomel",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
     "BT004"
   ],
   "continuity_constraints": [
-    "Equipment and supply levels must reflect active depletion/packing",
+    "Equipment and supply levels must remain consistent across montage beats",
     "Time of day progression (transitioning toward night under two moons)"
   ],
-  "prompt_seed": "Closing Reaction 4: Wide shots establishing the scale of the community.... closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in Lorquas Ptomel that emphasizes the consequence of wide shots establishing the scale of the community preparing for departure as day tran...",
-  "shot_notes": "Wide shots establishing the scale of the community preparing for departure as day transitions to night.",
+  "prompt_seed": "Medium 4: Mounting of thoats in preparation for the march.. medium. Stable medium framing that keeps action and character readable. Readable medium composition in Lorquas Ptomel featuring john_carter, various Thark citizens/warriors.",
+  "shot_notes": "Mounting of thoats in preparation for the march.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -93,31 +103,36 @@
     }
   ],
   "evidence_summary": [
-    "The production must execute a logistical montage that captures the transition from seven days of training to active mobilization. Focus on the scale of community movement and the organized chaos of packing supplies and mounting thoats within Lorquas Ptomel.",
+    "The production must execute a logistical montage depicting the transition from a seven-day training period to active mobilization. Focus is on the organized movement of a community preparing for a march, utilizing wide shots of the city and close-up details...",
     "After seven days of preparation and training, the community begins the logistical process of packing and preparing for the march toward Thark.",
     "From routine training to focused anticipation/readiness. **Likely Visual Coverage Families:** - Montage of movement: packing supplies, mounting thoats, moving crowds. - Wide shots of the community preparing for depart...",
     "Montage of movement (packing supplies, mounting thoats, moving crowds)",
     "Wide shots of community departure preparation",
-    "Equipment and supply levels must reflect active depletion/packing",
+    "Equipment and supply levels must remain consistent across montage beats",
     "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in..."
   ],
   "metadata": {
     "artifact_id": "CH013_SC002_SH004_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "ff7b2b37e60a03ad01d34f890a838ac5ddc92679",
+    "source_fingerprint": "862cb376dddb6884a9fd9df09b0770c969f125c2",
     "created_at_utc": "2026-04-22T01:49:06.748023+00:00",
-    "updated_at_utc": "2026-04-22T01:49:06.748023+00:00",
+    "updated_at_utc": "2026-04-22T08:07:24.866597+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH013_SC002",
-        "version": "b68a0733f3c9e846aaed103781fa581c14cc4a21"
+        "version": "4544e8dd5be0f1184c79656fb546faf1f5203286"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH013_SC002",
+        "version": "93c0be19cb8c9f57cb26490bd3af9af2f63163bf"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH013_SC002",
-        "version": "0fc008543fbae6ad07338533b5460a35c44912cb"
+        "version": "a971f62e640122d4a11de7c4aef2a0f37d25d72f"
       }
     ],
     "locked_fields": {},
@@ -127,6 +142,11 @@
         "timestamp_utc": "2026-04-22T01:49:39.364165+00:00",
         "action": "synthesized",
         "source_fingerprint": "ff7b2b37e60a03ad01d34f890a838ac5ddc92679"
+      },
+      {
+        "timestamp_utc": "2026-04-22T08:07:51.038283+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "862cb376dddb6884a9fd9df09b0770c969f125c2"
       }
     ]
   }

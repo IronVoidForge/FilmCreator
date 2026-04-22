@@ -24,12 +24,12 @@
   ],
   "environment": {
     "label": "Dejah Thoris's quarters",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "Dejah Thoris's quarters",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
@@ -111,19 +111,24 @@
     "artifact_id": "CH016_SC003_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "79a60274ae78e09b023e992435430712d4aba127",
+    "source_fingerprint": "30d011f8b87caf7d3d619a6c4c3cca08acd1df93",
     "created_at_utc": "2026-04-22T02:10:59.180061+00:00",
-    "updated_at_utc": "2026-04-22T02:10:59.180061+00:00",
+    "updated_at_utc": "2026-04-22T08:28:01.788968+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH016_SC003",
-        "version": "7f1f47cdf5dff584a3cc4e7cd532436e26d1db0a"
+        "version": "67483cf829771355aca4d31131f2e3368fa194e3"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH016_SC003",
+        "version": "76f047ff30ac5982405dd76ffabd5ee6ce54036c"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH016_SC003",
-        "version": "9c155a9e52061e590d7defdca77f23b31f20b7f0"
+        "version": "005805270c0cc306423d979029ae45a63ab9313c"
       }
     ],
     "locked_fields": {},
@@ -133,6 +138,11 @@
         "timestamp_utc": "2026-04-22T02:11:16.715054+00:00",
         "action": "synthesized",
         "source_fingerprint": "79a60274ae78e09b023e992435430712d4aba127"
+      },
+      {
+        "timestamp_utc": "2026-04-22T08:28:19.271657+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "30d011f8b87caf7d3d619a6c4c3cca08acd1df93"
       }
     ]
   }

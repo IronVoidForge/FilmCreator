@@ -6,10 +6,10 @@
     "shot_order": 1,
     "previous_shot_id": "",
     "next_shot_id": "SH002",
-    "shot_title": "Establishing Wide 1: The grand triumphal procession enters Helium, movin...",
+    "shot_title": "Establishing Wide 1: The grand triumphal procession enters Helium.",
     "shot_type": "establishing_wide",
     "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-    "composition": "Wide composition across The streets and palace of Helium with john_carter, tars_tarkas, dejah_thoris placed for immediate spatial orientation.",
+    "composition": "Wide composition across zodangan_land_camps with john_carter, tars_tarkas, dejah_thoris placed for immediate spatial orientation.",
     "target_seconds": 5.2,
     "characters_in_frame": [
       {
@@ -44,28 +44,28 @@
       }
     ],
     "environment": {
-      "label": "The streets and palace of Helium",
-      "canonical_id": "None",
-      "display_name": "The streets and palace of Helium",
-      "status": "review",
+      "label": "Zodangan land camps",
+      "canonical_id": "zodangan_land_camps",
+      "display_name": "zodangan_land_camps",
+      "status": "canonical",
       "entity_kind": "environment",
-      "resolution_score": null,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "resolution_score": 183,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/zodangan_land_camps.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'zodangan_land_camps'"
     },
     "beat_ids": [
       "BT001"
     ],
     "continuity_constraints": [
       "Costume/Armor cleanliness (post-battle state)",
-      "Specific order of the procession members",
-      "The grand triumphal procession enters Helium",
-      "moving through the streets.",
+      "Specific order of the procession",
+      "The grand triumphal procession enters Helium.",
       "Resolve Tardos Mors (Jeddak of Helium) -> Tardos Mors (Jeddak of Helium)",
-      "Resolve Thark Leaders -> Thark Leaders"
+      "Resolve Thark Leaders -> Thark Leaders",
+      "Resolve Heliumite Citizens -> Heliumite Citizens"
     ],
-    "prompt_seed": "Establishing Wide 1: The grand triumphal procession enters Helium, movin.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across The streets and palace of Helium with john_carter, tars_tarkas, dejah_thoris placed for immediate spatial orientation. Cast: john_c...",
-    "shot_notes": "The grand triumphal procession enters Helium, moving through the streets.",
+    "prompt_seed": "Establishing Wide 1: The grand triumphal procession enters Helium.. establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across zodangan_land_camps with john_carter, tars_tarkas, dejah_thoris placed for immediate spatial orientation. Cast: john_carter, tars_tarkas, de...",
+    "shot_notes": "The grand triumphal procession enters Helium.",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -131,25 +131,31 @@
       "Close-ups of the royal family's embrace",
       "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in...",
       "tars_tarkas | Tars Tarkas is a prominent Thark warrior and leader characterized by green skin. He carries himself with a professional demeanor, embodying the strength and combat skill valued by his Martian culture. His appearance is defined by standard Mart...",
-      "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b..."
+      "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b...",
+      "zodangan_land_camps | Ground-level encampments situated across rugged Martian terrain and dusty plains. The landscape is characterized by crumbling military fortifications and serves as a chaotic site for ground skirmishes, occupied by retreating or besiege..."
     ],
     "metadata": {
       "artifact_id": "CH026_SC005_SH001_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "0d9546513afd74036faa0df9630987098c9938b2",
+      "source_fingerprint": "833ad3d3a38c700bdb76c31a0f849949ef8b955e",
       "created_at_utc": "2026-04-22T03:47:48.994925+00:00",
-      "updated_at_utc": "2026-04-22T03:47:48.994925+00:00",
+      "updated_at_utc": "2026-04-22T16:00:25.211155+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH026_SC005",
-          "version": "13b183a852dfb0962f9d8f6d01ddd823e9ac3e1c"
+          "version": "0897b9bdc1f1604d16d9bf16184f59a2cb3ef7eb"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH026_SC005",
+          "version": "5c432826f8fc45b2306d70132c566c0d73e81d03"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH026_SC005",
-          "version": "7627f2f7aed71f661ad3c7cc271af7cf53c80751"
+          "version": "b029dbb580c3cbd65cae0b2e81c54d6c4d0c6c48"
         }
       ],
       "locked_fields": {},
@@ -159,6 +165,11 @@
           "timestamp_utc": "2026-04-22T03:48:25.793062+00:00",
           "action": "synthesized",
           "source_fingerprint": "0d9546513afd74036faa0df9630987098c9938b2"
+        },
+        {
+          "timestamp_utc": "2026-04-22T16:01:00.410752+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "833ad3d3a38c700bdb76c31a0f849949ef8b955e"
         }
       ]
     }
@@ -170,10 +181,10 @@
     "shot_order": 2,
     "previous_shot_id": "SH001",
     "next_shot_id": "SH003",
-    "shot_title": "Medium 2: Carter, Tars Tarkas, and Thark leaders are formally...",
+    "shot_title": "Medium 2: Carter, Tars Tarkas, and Thark leaders are received...",
     "shot_type": "medium",
     "camera_description": "Stable medium framing that keeps action and character readable.",
-    "composition": "Readable medium composition in The streets and palace of Helium featuring tars_tarkas, Thark Leaders.",
+    "composition": "Readable medium composition in zodangan_land_camps featuring tars_tarkas, Thark Leaders.",
     "target_seconds": 5.0,
     "characters_in_frame": [
       {
@@ -198,28 +209,26 @@
       }
     ],
     "environment": {
-      "label": "The streets and palace of Helium",
-      "canonical_id": "None",
-      "display_name": "The streets and palace of Helium",
-      "status": "review",
+      "label": "Zodangan land camps",
+      "canonical_id": "zodangan_land_camps",
+      "display_name": "zodangan_land_camps",
+      "status": "canonical",
       "entity_kind": "environment",
-      "resolution_score": null,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "resolution_score": 183,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/zodangan_land_camps.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'zodangan_land_camps'"
     },
     "beat_ids": [
       "BT002"
     ],
     "continuity_constraints": [
       "Costume/Armor cleanliness (post-battle state)",
-      "Specific order of the procession members",
-      "Carter",
-      "Tars Tarkas",
-      "and Thark leaders are formally received by Jeddak Tardos Mors.",
+      "Specific order of the procession",
+      "Carter, Tars Tarkas, and Thark leaders are received by Jeddak Tardos Mors.",
       "Resolve Tardos Mors (Jeddak of Helium) -> Tardos Mors (Jeddak of Helium)"
     ],
-    "prompt_seed": "Medium 2: Carter, Tars Tarkas, and Thark leaders are formally.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in The streets and palace of Helium featuring tars_tarkas, Thark Leaders. Cast: tars_tarkas, Thark Leaders. Environment: The streets and palace of Heli...",
-    "shot_notes": "Carter, Tars Tarkas, and Thark leaders are formally received by Jeddak Tardos Mors.",
+    "prompt_seed": "Medium 2: Carter, Tars Tarkas, and Thark leaders are received.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in zodangan_land_camps featuring tars_tarkas, Thark Leaders. Cast: tars_tarkas, Thark Leaders. Environment: zodangan_land_camps. Beat: Carter, Tars Tar...",
+    "shot_notes": "Carter, Tars Tarkas, and Thark leaders are received by Jeddak Tardos Mors.",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -285,25 +294,31 @@
       "Close-ups of the royal family's embrace",
       "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in...",
       "tars_tarkas | Tars Tarkas is a prominent Thark warrior and leader characterized by green skin. He carries himself with a professional demeanor, embodying the strength and combat skill valued by his Martian culture. His appearance is defined by standard Mart...",
-      "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b..."
+      "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b...",
+      "zodangan_land_camps | Ground-level encampments situated across rugged Martian terrain and dusty plains. The landscape is characterized by crumbling military fortifications and serves as a chaotic site for ground skirmishes, occupied by retreating or besiege..."
     ],
     "metadata": {
       "artifact_id": "CH026_SC005_SH002_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "0d9546513afd74036faa0df9630987098c9938b2",
+      "source_fingerprint": "833ad3d3a38c700bdb76c31a0f849949ef8b955e",
       "created_at_utc": "2026-04-22T03:48:25.794563+00:00",
-      "updated_at_utc": "2026-04-22T03:48:25.794563+00:00",
+      "updated_at_utc": "2026-04-22T16:01:00.418253+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH026_SC005",
-          "version": "13b183a852dfb0962f9d8f6d01ddd823e9ac3e1c"
+          "version": "0897b9bdc1f1604d16d9bf16184f59a2cb3ef7eb"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH026_SC005",
+          "version": "5c432826f8fc45b2306d70132c566c0d73e81d03"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH026_SC005",
-          "version": "7627f2f7aed71f661ad3c7cc271af7cf53c80751"
+          "version": "b029dbb580c3cbd65cae0b2e81c54d6c4d0c6c48"
         }
       ],
       "locked_fields": {},
@@ -313,6 +328,11 @@
           "timestamp_utc": "2026-04-22T03:48:52.334751+00:00",
           "action": "synthesized",
           "source_fingerprint": "0d9546513afd74036faa0df9630987098c9938b2"
+        },
+        {
+          "timestamp_utc": "2026-04-22T16:01:23.787479+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "833ad3d3a38c700bdb76c31a0f849949ef8b955e"
         }
       ]
     }
@@ -324,10 +344,10 @@
     "shot_order": 3,
     "previous_shot_id": "SH002",
     "next_shot_id": "SH004",
-    "shot_title": "Action 3: The political alliance between the factions is form...",
+    "shot_title": "Action 3: The alliance between the factions is formally estab...",
     "shot_type": "action",
     "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-    "composition": "Dynamic composition in The streets and palace of Helium with john_carter, tars_tarkas crossing the frame and maintaining readable movement.",
+    "composition": "Dynamic composition in zodangan_land_camps with john_carter, tars_tarkas crossing the frame and maintaining readable movement.",
     "target_seconds": 5.5,
     "characters_in_frame": [
       {
@@ -352,28 +372,28 @@
       }
     ],
     "environment": {
-      "label": "The streets and palace of Helium",
-      "canonical_id": "None",
-      "display_name": "The streets and palace of Helium",
-      "status": "review",
+      "label": "Zodangan land camps",
+      "canonical_id": "zodangan_land_camps",
+      "display_name": "zodangan_land_camps",
+      "status": "canonical",
       "entity_kind": "environment",
-      "resolution_score": null,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "resolution_score": 183,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/zodangan_land_camps.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'zodangan_land_camps'"
     },
     "beat_ids": [
       "BT003"
     ],
     "continuity_constraints": [
       "Costume/Armor cleanliness (post-battle state)",
-      "Specific order of the procession members",
-      "The political alliance between the factions is formalized.",
+      "Specific order of the procession",
+      "The alliance between the factions is formally established.",
       "Resolve Tardos Mors (Jeddak of Helium) -> Tardos Mors (Jeddak of Helium)",
       "Resolve Thark Leaders -> Thark Leaders",
       "Resolve Heliumite Citizens -> Heliumite Citizens"
     ],
-    "prompt_seed": "Action 3: The political alliance between the factions is form.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in The streets and palace of Helium with john_carter, tars_tarkas crossing the frame and maintaining readable movement. Cast: john_carter, tars_tarkas. Envir...",
-    "shot_notes": "The political alliance between the factions is formalized.",
+    "prompt_seed": "Action 3: The alliance between the factions is formally estab.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in zodangan_land_camps with john_carter, tars_tarkas crossing the frame and maintaining readable movement. Cast: john_carter, tars_tarkas. Environment: zodan...",
+    "shot_notes": "The alliance between the factions is formally established.",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -439,25 +459,31 @@
       "Close-ups of the royal family's embrace",
       "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in...",
       "tars_tarkas | Tars Tarkas is a prominent Thark warrior and leader characterized by green skin. He carries himself with a professional demeanor, embodying the strength and combat skill valued by his Martian culture. His appearance is defined by standard Mart...",
-      "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b..."
+      "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b...",
+      "zodangan_land_camps | Ground-level encampments situated across rugged Martian terrain and dusty plains. The landscape is characterized by crumbling military fortifications and serves as a chaotic site for ground skirmishes, occupied by retreating or besiege..."
     ],
     "metadata": {
       "artifact_id": "CH026_SC005_SH003_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "0d9546513afd74036faa0df9630987098c9938b2",
+      "source_fingerprint": "833ad3d3a38c700bdb76c31a0f849949ef8b955e",
       "created_at_utc": "2026-04-22T03:48:52.336751+00:00",
-      "updated_at_utc": "2026-04-22T03:48:52.336751+00:00",
+      "updated_at_utc": "2026-04-22T16:01:23.797979+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH026_SC005",
-          "version": "13b183a852dfb0962f9d8f6d01ddd823e9ac3e1c"
+          "version": "0897b9bdc1f1604d16d9bf16184f59a2cb3ef7eb"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH026_SC005",
+          "version": "5c432826f8fc45b2306d70132c566c0d73e81d03"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH026_SC005",
-          "version": "7627f2f7aed71f661ad3c7cc271af7cf53c80751"
+          "version": "b029dbb580c3cbd65cae0b2e81c54d6c4d0c6c48"
         }
       ],
       "locked_fields": {},
@@ -467,6 +493,11 @@
           "timestamp_utc": "2026-04-22T03:49:18.945100+00:00",
           "action": "synthesized",
           "source_fingerprint": "0d9546513afd74036faa0df9630987098c9938b2"
+        },
+        {
+          "timestamp_utc": "2026-04-22T16:01:47.149875+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "833ad3d3a38c700bdb76c31a0f849949ef8b955e"
         }
       ]
     }
@@ -478,10 +509,10 @@
     "shot_order": 4,
     "previous_shot_id": "SH003",
     "next_shot_id": "",
-    "shot_title": "Closing Reaction 4: The royal family embraces John Carter, recognizing...",
+    "shot_title": "Closing Reaction 4: The royal family embraces John Carter as a savior.",
     "shot_type": "closing_reaction",
     "camera_description": "Controlled closing frame that lands the consequence of the beat.",
-    "composition": "Closing composition in The streets and palace of Helium that emphasizes the consequence of the royal family embraces john carter, recognizing him as a savior..",
+    "composition": "Closing composition in zodangan_land_camps that emphasizes the consequence of the royal family embraces john carter as a savior..",
     "target_seconds": 4.3,
     "characters_in_frame": [
       {
@@ -496,28 +527,28 @@
       }
     ],
     "environment": {
-      "label": "The streets and palace of Helium",
-      "canonical_id": "None",
-      "display_name": "The streets and palace of Helium",
-      "status": "review",
+      "label": "Zodangan land camps",
+      "canonical_id": "zodangan_land_camps",
+      "display_name": "zodangan_land_camps",
+      "status": "canonical",
       "entity_kind": "environment",
-      "resolution_score": null,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "resolution_score": 183,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/zodangan_land_camps.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'zodangan_land_camps'"
     },
     "beat_ids": [
       "BT004"
     ],
     "continuity_constraints": [
       "Costume/Armor cleanliness (post-battle state)",
-      "Specific order of the procession members",
-      "The royal family embraces John Carter",
-      "recognizing him as a savior.",
+      "Specific order of the procession",
+      "The royal family embraces John Carter as a savior.",
       "Resolve Tardos Mors (Jeddak of Helium) -> Tardos Mors (Jeddak of Helium)",
-      "Resolve Thark Leaders -> Thark Leaders"
+      "Resolve Thark Leaders -> Thark Leaders",
+      "Resolve Heliumite Citizens -> Heliumite Citizens"
     ],
-    "prompt_seed": "Closing Reaction 4: The royal family embraces John Carter, recognizing.... closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in The streets and palace of Helium that emphasizes the consequence of the royal family embraces john carter, recognizing him as a savior.....",
-    "shot_notes": "The royal family embraces John Carter, recognizing him as a savior.",
+    "prompt_seed": "Closing Reaction 4: The royal family embraces John Carter as a savior.. closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in zodangan_land_camps that emphasizes the consequence of the royal family embraces john carter as a savior.. Cast: john_carter. Environment:...",
+    "shot_notes": "The royal family embraces John Carter as a savior.",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -583,25 +614,31 @@
       "Close-ups of the royal family's embrace",
       "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in...",
       "tars_tarkas | Tars Tarkas is a prominent Thark warrior and leader characterized by green skin. He carries himself with a professional demeanor, embodying the strength and combat skill valued by his Martian culture. His appearance is defined by standard Mart...",
-      "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b..."
+      "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b...",
+      "zodangan_land_camps | Ground-level encampments situated across rugged Martian terrain and dusty plains. The landscape is characterized by crumbling military fortifications and serves as a chaotic site for ground skirmishes, occupied by retreating or besiege..."
     ],
     "metadata": {
       "artifact_id": "CH026_SC005_SH004_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "0d9546513afd74036faa0df9630987098c9938b2",
+      "source_fingerprint": "833ad3d3a38c700bdb76c31a0f849949ef8b955e",
       "created_at_utc": "2026-04-22T03:49:18.946598+00:00",
-      "updated_at_utc": "2026-04-22T03:49:18.946598+00:00",
+      "updated_at_utc": "2026-04-22T16:01:47.157386+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH026_SC005",
-          "version": "13b183a852dfb0962f9d8f6d01ddd823e9ac3e1c"
+          "version": "0897b9bdc1f1604d16d9bf16184f59a2cb3ef7eb"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH026_SC005",
+          "version": "5c432826f8fc45b2306d70132c566c0d73e81d03"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH026_SC005",
-          "version": "7627f2f7aed71f661ad3c7cc271af7cf53c80751"
+          "version": "b029dbb580c3cbd65cae0b2e81c54d6c4d0c6c48"
         }
       ],
       "locked_fields": {},
@@ -611,6 +648,11 @@
           "timestamp_utc": "2026-04-22T03:49:45.490310+00:00",
           "action": "synthesized",
           "source_fingerprint": "0d9546513afd74036faa0df9630987098c9938b2"
+        },
+        {
+          "timestamp_utc": "2026-04-22T16:02:10.626560+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "833ad3d3a38c700bdb76c31a0f849949ef8b955e"
         }
       ]
     }

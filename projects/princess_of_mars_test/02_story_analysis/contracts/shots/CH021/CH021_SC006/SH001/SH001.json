@@ -5,7 +5,7 @@
   "shot_order": 1,
   "previous_shot_id": "",
   "next_shot_id": "SH002",
-  "shot_title": "Establishing Wide 1: Carter and the zodangan_scout arrive at the walled...",
+  "shot_title": "Establishing Wide 1: Carter and Scout Arrival",
   "shot_type": "establishing_wide",
   "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
   "composition": "Wide composition across Zodanga Central Plaza (ceremonial setting) with Zodangan Scout placed for immediate spatial orientation.",
@@ -24,24 +24,23 @@
   ],
   "environment": {
     "label": "Zodanga Central Plaza (ceremonial setting)",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "Zodanga Central Plaza (ceremonial setting)",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
     "BT001"
   ],
   "continuity_constraints": [
-    "Carter's new uniform or insignia must be clearly established/visible",
-    "Presence and condition of the rescued zodangan_scout",
-    "Carter and the zodangan_scout arrive at the walled city of Zodanga."
+    "Carter's new uniform or insignia must be clearly established",
+    "Presence of the rescued scout must be maintained during arrival/ceremony"
   ],
-  "prompt_seed": "Establishing Wide 1: Carter and the zodangan_scout arrive at the walled.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across Zodanga Central Plaza (ceremonial setting) with Zodangan Scout placed for immediate spatial orientation. Cast: Zodangan Scout. Envir...",
-  "shot_notes": "Carter and the zodangan_scout arrive at the walled city of Zodanga.",
+  "prompt_seed": "Establishing Wide 1: Carter and the Zodangan Scout arrive at the walled.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across Zodanga Central Plaza (ceremonial setting) with Zodangan Scout placed for immediate spatial orientation. Cast: Zodangan Scout.",
+  "shot_notes": "Carter and the Zodangan Scout arrive at the walled city of Zodanga.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -99,7 +98,7 @@
     }
   ],
   "evidence_summary": [
-    "Establish the formal elevation of John Carter's social and military status through a large-scale ceremonial event. The scene must transition from the tension of arrival to a sense of grand triumph, utilizing the scale of the Zodanga Central Plaza to validat...",
+    "Establish the formal elevation of John Carter's social standing through a large-scale military ceremony. The scene must transition from the tension of arrival to a sense of grand triumph, utilizing the scale of the Zodanga Central Plaza to validate Carter's...",
     "Carter and the scout return to the city. In a massive military ceremony in the central plaza, Jeddak Than Kosis publicly honors Carter for his bravery, appointing him a *padwar* of The Guards and granting him quarters in the palace.",
     "Tension $\\rightarrow$ Triumph/Grandeur.",
     "Wide shots of the massive ceremony",
@@ -113,19 +112,24 @@
     "artifact_id": "CH021_SC006_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "9376288ff0bacc5ee5d2edc527fef3847de87992",
+    "source_fingerprint": "987e0e886d84c6cb4370bfd2383f0067b42377b1",
     "created_at_utc": "2026-04-22T02:57:25.953038+00:00",
-    "updated_at_utc": "2026-04-22T02:57:25.953038+00:00",
+    "updated_at_utc": "2026-04-22T09:14:04.953957+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH021_SC006",
-        "version": "acf4c2d082816cc2d88b76e945e9184b37757852"
+        "version": "a677f6f02ce6d1689683ee415cf1dd5f6b9519c7"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH021_SC006",
+        "version": "05d93acc08d91a6e7c31e60fbb4457a4a0dc86f3"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH021_SC006",
-        "version": "701bc1274734792d5807dac873415d870a293aac"
+        "version": "7c3a4e58d0c11f33756cb87d76255d3f9b04bd8a"
       }
     ],
     "locked_fields": {},
@@ -135,6 +139,11 @@
         "timestamp_utc": "2026-04-22T02:58:07.478409+00:00",
         "action": "synthesized",
         "source_fingerprint": "9376288ff0bacc5ee5d2edc527fef3847de87992"
+      },
+      {
+        "timestamp_utc": "2026-04-22T09:14:46.144928+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "987e0e886d84c6cb4370bfd2383f0067b42377b1"
       }
     ]
   }

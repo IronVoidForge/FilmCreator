@@ -5,7 +5,7 @@
   "shot_order": 2,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Insert Detail 2: Incubator Destruction",
+  "shot_title": "Insert Detail 2: Tactical movement or environmental displacement res...",
   "shot_type": "insert_detail",
   "camera_description": "Tight detail framing focused on a single visual object or gesture.",
   "composition": "Detail composition centered on the key physical action or prop inside warhoon_incubator_site.",
@@ -28,7 +28,7 @@
     "display_name": "warhoon_incubator_site",
     "status": "canonical",
     "entity_kind": "environment",
-    "resolution_score": null,
+    "resolution_score": 183,
     "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH014/warhoon_incubator_site.md",
     "notes": "asset id exactly matches canonical id | query matches alias 'warhoon_incubator_site'"
   },
@@ -37,10 +37,11 @@
   ],
   "continuity_constraints": [
     "Precise state tracking of the incubator (intact vs. destroyed)",
-    "Visual presence and integrity of small green Martian eggs before/after impact"
+    "Visual presence and integrity of the small green Martian eggs before/after impact",
+    "Tactical movement or environmental displacement results in the destruction of the incubator."
   ],
-  "prompt_seed": "Insert Detail 2: Tactical movement or necessity leads to the physica.... insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside warhoon_incubator_site. Cast: Thark expeditionary force (background/ensemble). Environment:...",
-  "shot_notes": "Tactical movement or necessity leads to the physical destruction of the incubator.",
+  "prompt_seed": "Insert Detail 2: Tactical movement or environmental displacement res.... insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside warhoon_incubator_site. Cast: Thark expeditionary force (background/ensemble). Environment:...",
+  "shot_notes": "Tactical movement or environmental displacement results in the destruction of the incubator.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -98,10 +99,10 @@
     }
   ],
   "evidence_summary": [
-    "The scene must execute a transition from a neutral march to a moment of visceral, destructive action. The focus is on the physical destruction of the Warhoon incubator site and its small green Martian eggs to demonstrate the ruthlessness of the Thark expedi...",
+    "The sequence must execute a transition from a neutral march to a moment of visceral, chaotic destruction. The focus is on the mechanical or tactical movement of the Thark expeditionary force as they inadvertently or intentionally destroy a Warhoon incubator...",
     "The party encounters a Warhoon incubator site. In the course of their movement or tactical necessity, the incubator is destroyed, resulting in the destruction of the small green Martian eggs.",
     "Neutral $\\rightarrow$ Visceral/Destructive.",
-    "Close-ups of the eggs",
+    "Close-ups of the small green Martian eggs",
     "Wide shots of the destruction",
     "Handheld movement to emphasize chaos",
     "warhoon_incubator_site | No specific visual details are provided in the current evidence. The site functions as a secondary setting within the narrative. | Unknown. | Unknown. | Unknown."
@@ -110,19 +111,24 @@
     "artifact_id": "CH014_SC003_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "9da341724ef567d2620b8e379496643477319a0e",
+    "source_fingerprint": "a94090b96adf28edc7004ef65d3aafa0563a6a9b",
     "created_at_utc": "2026-04-22T01:57:20.871849+00:00",
-    "updated_at_utc": "2026-04-22T01:57:20.871849+00:00",
+    "updated_at_utc": "2026-04-22T08:14:12.486638+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH014_SC003",
-        "version": "87fab7e479af576644360ebf9a630aba0e59c1c2"
+        "version": "8dfa8b7f04d9952f440bff974416196a55b8a92c"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH014_SC003",
+        "version": "0512018c8deab219a901432e33a61a8a6ffad609"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH014_SC003",
-        "version": "b277eac3b36c339bb51209ecd6cd5849ec309495"
+        "version": "d6f96104d109b604cca99f245beb776f5d419b38"
       }
     ],
     "locked_fields": {},
@@ -132,6 +138,11 @@
         "timestamp_utc": "2026-04-22T01:57:38.234785+00:00",
         "action": "synthesized",
         "source_fingerprint": "9da341724ef567d2620b8e379496643477319a0e"
+      },
+      {
+        "timestamp_utc": "2026-04-22T08:14:31.003660+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "a94090b96adf28edc7004ef65d3aafa0563a6a9b"
       }
     ]
   }

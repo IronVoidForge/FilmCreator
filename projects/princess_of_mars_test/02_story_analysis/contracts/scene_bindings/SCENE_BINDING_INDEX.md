@@ -1,0 +1,130 @@
+# Scene Binding Index
+
+- `CH001_SC001` - mode=unresolved, env=Unspecified (Narrative framing space), cast=1, flags=2
+- `CH001_SC002` - mode=unresolved, env=Remote Arizona quartz vein/hills, cast=2, flags=2
+- `CH001_SC003` - mode=unresolved, env=Arizona hills/plateau, cast=2, flags=2
+- `CH001_SC004` - mode=unresolved, env=The trail/valley near the ambush site, cast=3, flags=2
+- `CH001_SC005` - mode=unresolved, env=High cliffside trail, cast=1, flags=2
+- `CH002_SC001` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH002_SC002` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH002_SC003` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH002_SC004` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH002_SC005` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH003_SC001` - mode=unresolved, env=A circular basin on Mars covered in yellowish, cast=1, flags=1
+- `CH003_SC002` - mode=unresolved, env=The glass-roofed incubator enclosure, cast=1, flags=1
+- `CH003_SC003` - mode=unresolved, env=The basin/vegetation area near the incubator, cast=2, flags=2
+- `CH003_SC004` - mode=unresolved, env=The basin/enclosure area, cast=2, flags=1
+- `CH003_SC005` - mode=unresolved, env=The basin/open landscape, cast=3, flags=2
+- `CH004_SC001` - mode=unresolved, env=Central Plaza of the Ancient City (Marble/Gold architecture, massive scale), cast=3, flags=2
+- `CH004_SC002` - mode=scene_level, env=grand_audience_chamber, cast=4, flags=1
+- `CH004_SC003` - mode=chapter_fallback, env=grand_audience_chamber, cast=5, flags=2
+- `CH004_SC004` - mode=chapter_fallback, env=grand_audience_chamber, cast=3, flags=2
+- `CH004_SC005` - mode=chapter_fallback, env=grand_audience_chamber, cast=3, flags=2
+- `CH005_SC001` - mode=unresolved, env=Captive's chamber (decorated with murals), cast=3, flags=2
+- `CH005_SC002` - mode=unresolved, env=Captive's chamber, cast=2, flags=1
+- `CH005_SC003` - mode=unresolved, env=Deserted Martian city streets, cast=2, flags=1
+- `CH005_SC004` - mode=unresolved, env=Exterior building/alleyway, cast=3, flags=2
+- `CH006_SC001` - mode=unresolved, env=Interior chamber, cast=0, flags=1
+- `CH006_SC002` - mode=unresolved, env=Interior chamber, cast=0, flags=1
+- `CH006_SC003` - mode=unresolved, env=Interior chamber/Plaza threshold, cast=0, flags=1
+- `CH006_SC004` - mode=unresolved, env=Interior chamber leading out to a Plaza, cast=0, flags=1
+- `CH007_SC001` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH007_SC002` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH007_SC003` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH007_SC004` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH008_SC001` - mode=unresolved, env=Deserted Martian City / Valley overlook, cast=3, flags=2
+- `CH008_SC002` - mode=unresolved, env=City buildings, cast=2, flags=2
+- `CH008_SC003` - mode=unresolved, env=City outskirts / Ground level near the impact site, cast=1, flags=1
+- `CH008_SC004` - mode=unresolved, env=City overlook/window, cast=2, flags=2
+- `CH008_SC005` - mode=unresolved, env=City Plaza, cast=3, flags=2
+- `CH009_SC001` - mode=unresolved, env=Exterior/Plaza area, cast=2, flags=1
+- `CH009_SC002` - mode=unresolved, env=The Plaza, cast=3, flags=2
+- `CH009_SC003` - mode=unresolved, env=The Sleeping Quarters, cast=1, flags=1
+- `CH009_SC004` - mode=unresolved, env=The Sleeping Quarters (Night), cast=3, flags=2
+- `CH009_SC005` - mode=unresolved, env=The Sleeping Quarters (Night), cast=2, flags=1
+- `CH009_SC006` - mode=unresolved, env=The Sleeping Quarters (Night), cast=1, flags=1
+- `CH010_SC001` - mode=unresolved, env=Outskirts of the Thark city (low hills/ravines), cast=2, flags=1
+- `CH010_SC002` - mode=unresolved, env=The interior audience chamber of Lorquas Ptomel, cast=5, flags=2
+- `CH010_SC003` - mode=unresolved, env=The interior audience chamber, cast=5, flags=2
+- `CH010_SC004` - mode=unresolved, env=The interior audience chamber, cast=4, flags=2
+- `CH010_SC005` - mode=unresolved, env=Exit of the audience chamber / Thark city streets, cast=3, flags=1
+- `CH012_SC001` - mode=scene_level, env=audience_chamber, cast=2, flags=0
+- `CH012_SC002` - mode=chapter_fallback, env=audience_chamber, cast=1, flags=2
+- `CH012_SC003` - mode=chapter_fallback, env=audience_chamber, cast=3, flags=2
+- `CH013_SC001` - mode=unresolved, env=The city of Lorquas Ptomel, cast=4, flags=2
+- `CH013_SC002` - mode=unresolved, env=Lorquas Ptomel, cast=2, flags=2
+- `CH013_SC003` - mode=unresolved, env=A private area within Lorquas Ptomel, cast=3, flags=2
+- `CH013_SC004` - mode=unresolved, env=The outskirts/plazas of Lorquas Ptomel under the Martian night sky, cast=2, flags=1
+- `CH014_SC001` - mode=unresolved, env=The outskirts of the Thark expeditionary camp, cast=2, flags=2
+- `CH014_SC002` - mode=unresolved, env=The marching column/trail, cast=4, flags=1
+- `CH014_SC003` - mode=scene_level, env=warhoon_incubator_site, cast=1, flags=1
+- `CH014_SC004` - mode=chapter_fallback, env=warhoon_incubator_site, cast=3, flags=2
+- `CH014_SC005` - mode=chapter_fallback, env=warhoon_incubator_site, cast=3, flags=1
+- `CH014_SC006` - mode=chapter_fallback, env=warhoon_incubator_site, cast=2, flags=1
+- `CH015_SC001` - mode=unresolved, env=The immediate vicinity of the duel site/recovery area, cast=3, flags=1
+- `CH015_SC002` - mode=scene_level, env=mossy_sea_bottom, cast=2, flags=1
+- `CH015_SC003` - mode=chapter_fallback, env=mossy_sea_bottom, cast=2, flags=1
+- `CH016_SC001` - mode=unresolved, env=Martian sea bottoms, cast=3, flags=1
+- `CH016_SC002` - mode=unresolved, env=The grand, cast=4, flags=2
+- `CH016_SC003` - mode=unresolved, env=Dejah Thoris's quarters, cast=2, flags=1
+- `CH016_SC004` - mode=unresolved, env=Dejah Thoris's quarters, cast=3, flags=1
+- `CH016_SC005` - mode=unresolved, env=Dejah Thoris's quarters (focusing on the marble floor), cast=3, flags=1
+- `CH016_SC006` - mode=unresolved, env=City outskirts, cast=3, flags=2
+- `CH017_SC001` - mode=unresolved, env=The City of Thark (circular halls/raised platforms), cast=5, flags=2
+- `CH017_SC002` - mode=unresolved, env=The Mossy Waste (desolate, trackless expanse), cast=3, flags=1
+- `CH017_SC003` - mode=unresolved, env=The Mossy Waste / Low Mountains, cast=5, flags=2
+- `CH017_SC004` - mode=unresolved, env=Rugged terrain/ravines near the Low Mountains, cast=2, flags=2
+- `CH018_SC001` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH018_SC002` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH018_SC003` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH018_SC004` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH018_SC005` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH019_SC001` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH019_SC002` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH019_SC003` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH019_SC004` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH019_SC005` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH020_SC001` - mode=scene_level, env=barsoomian_wilderness, cast=3, flags=1
+- `CH020_SC002` - mode=chapter_fallback, env=barsoomian_wilderness, cast=2, flags=1
+- `CH020_SC003` - mode=chapter_fallback, env=barsoomian_wilderness, cast=3, flags=2
+- `CH020_SC004` - mode=chapter_fallback, env=barsoomian_wilderness, cast=3, flags=2
+- `CH020_SC005` - mode=chapter_fallback, env=barsoomian_wilderness, cast=2, flags=1
+- `CH021_SC001` - mode=unresolved, env=Martian agricultural tracts (underground water conduits/refined flora), cast=2, flags=2
+- `CH021_SC002` - mode=unresolved, env=Gates of Zodanga (massive, walled city), cast=2, flags=1
+- `CH021_SC003` - mode=unresolved, env=Zodanga Central Plaza (high-raised residences), cast=2, flags=1
+- `CH021_SC004` - mode=unresolved, env=Zodangan air-fields/training grounds, cast=2, flags=2
+- `CH021_SC005` - mode=unresolved, env=The Martian sky/aerial combat zone, cast=3, flags=2
+- `CH021_SC006` - mode=unresolved, env=Zodanga Central Plaza (ceremonial setting), cast=4, flags=2
+- `CH022_SC001` - mode=unresolved, env=Private apartments of Jeddak Than Kosis, cast=4, flags=2
+- `CH022_SC002` - mode=unresolved, env=Palace corridors/Antechambers, cast=2, flags=2
+- `CH022_SC003` - mode=unresolved, env=Palace interior (near the antechamber/corridors), cast=2, flags=1
+- `CH022_SC004` - mode=unresolved, env=The Great Hall, cast=4, flags=2
+- `CH022_SC005` - mode=unresolved, env=Palace Balcony, cast=1, flags=1
+- `CH023_SC001` - mode=unresolved, env=Guarded quarters in Zodanga, cast=2, flags=1
+- `CH023_SC002` - mode=unresolved, env=The exterior/roof of the Zodanga Barracks, cast=2, flags=2
+- `CH023_SC003` - mode=unresolved, env=The Martian Sky, cast=3, flags=2
+- `CH023_SC004` - mode=unresolved, env=The Martian Sky (above the Dead Sea Bottom), cast=1, flags=1
+- `CH024_SC001` - mode=unresolved, env=The Battlefield (Plains near an ancient dead city), cast=3, flags=2
+- `CH024_SC002` - mode=unresolved, env=The Battlefield, cast=2, flags=1
+- `CH024_SC003` - mode=unresolved, env=Thark (City), cast=3, flags=1
+- `CH024_SC004` - mode=unresolved, env=Thark (Council Chamber), cast=5, flags=2
+- `CH024_SC005` - mode=unresolved, env=Thark (City), cast=3, flags=2
+- `CH024_SC006` - mode=unresolved, env=The Walls/Palace Grounds of Zodanga, cast=2, flags=2
+- `CH025_SC001` - mode=unresolved, env=The brilliantly illuminated Audience Chamber of the Palace of Zodanga, cast=5, flags=2
+- `CH025_SC002` - mode=unresolved, env=The Audience Chamber (now a battlefield), cast=7, flags=2
+- `CH025_SC003` - mode=unresolved, env=The dark, cast=3, flags=2
+- `CH025_SC004` - mode=unresolved, env=The Throne Room (post-battle), cast=2, flags=1
+- `CH026_SC001` - mode=unresolved, env=The skies above the approach to Helium, cast=4, flags=2
+- `CH026_SC002` - mode=unresolved, env=The wreckage-strewn skies near Helium, cast=3, flags=2
+- `CH026_SC003` - mode=unresolved, env=The deck of the Heliumite flagship, cast=3, flags=2
+- `CH026_SC004` - mode=scene_level, env=zodangan_land_camps, cast=5, flags=1
+- `CH026_SC005` - mode=chapter_fallback, env=zodangan_land_camps, cast=6, flags=2
+- `CH027_SC001` - mode=unresolved, env=The Palace of Helium, cast=2, flags=1
+- `CH027_SC002` - mode=unresolved, env=The Palace of Helium, cast=3, flags=2
+- `CH027_SC003` - mode=unresolved, env=A sunken garden in Helium, cast=3, flags=1
+- `CH027_SC004` - mode=unresolved, env=The Palace/Hangar, cast=1, flags=1
+- `CH027_SC005` - mode=unresolved, env=The Atmosphere Plant (interior/exterior), cast=2, flags=2
+- `CH028_SC001` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH028_SC002` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH028_SC003` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH028_SC004` - mode=unresolved, env=(none), cast=0, flags=1

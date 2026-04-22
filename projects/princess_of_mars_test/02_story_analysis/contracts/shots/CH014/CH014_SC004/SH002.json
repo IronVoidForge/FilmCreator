@@ -5,10 +5,10 @@
   "shot_order": 2,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Medium 2: The duel commences",
+  "shot_title": "Medium 2: The intense physical duel commences",
   "shot_type": "medium",
   "camera_description": "Stable medium framing that keeps action and character readable.",
-  "composition": "Readable medium composition in Open terrain near the march path featuring john_carter.",
+  "composition": "Readable medium composition in warhoon_incubator_site featuring john_carter.",
   "target_seconds": 5.0,
   "characters_in_frame": [
     {
@@ -23,14 +23,14 @@
     }
   ],
   "environment": {
-    "label": "Open terrain near the march path",
-    "canonical_id": "None",
-    "display_name": "Open terrain near the march path",
-    "status": "review",
+    "label": "Warhoon incubator site",
+    "canonical_id": "warhoon_incubator_site",
+    "display_name": "warhoon_incubator_site",
+    "status": "canonical",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "resolution_score": 183,
+    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH014/warhoon_incubator_site.md",
+    "notes": "asset id exactly matches canonical id | query matches alias 'warhoon_incubator_site'"
   },
   "beat_ids": [
     "BT002"
@@ -38,10 +38,10 @@
   "continuity_constraints": [
     "Sword positions during combat sequences",
     "Lighting angle for the mirror reflection to ensure blinding effect",
-    "The duel commences with intense, disciplined combat between Zad and John Carter."
+    "The intense physical duel commences between Zad and John Carter."
   ],
-  "prompt_seed": "Medium 2: The duel commences with intense, disciplined combat.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in Open terrain near the march path featuring john_carter. Cast: john_carter. Environment: Open terrain near the march path. Beat: The duel commences w...",
-  "shot_notes": "The duel commences with intense, disciplined combat between Zad and John Carter.",
+  "prompt_seed": "Medium 2: The intense physical duel commences between Zad and.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in warhoon_incubator_site featuring john_carter. Cast: john_carter. Environment: warhoon_incubator_site. Beat: The intense physical duel commences betw...",
+  "shot_notes": "The intense physical duel commences between Zad and John Carter.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -99,32 +99,38 @@
     }
   ],
   "evidence_summary": [
-    "Execute a high-stakes formal long-sword duel between Zad and John Carter, transitioning from disciplined combat to a chaotic disruption. The sequence requires precise coordination of swordplay and a controlled lighting event where Sarkoja uses a mirror to r...",
+    "Execute a high-stakes formal long-sword duel between Zad and John Carter in an open terrain setting. The sequence must transition from disciplined combat to sudden chaos via a controlled lighting interference (mirror flash) orchestrated by Sarkoja, requirin...",
     "Zad challenges John Carter to a formal long-sword duel. The fight is intense until Sarkoja uses a mirror to catch the sunlight, blinding John Carter and stripping him of his combat advantage.",
     "Competitive/Formal $\\rightarrow$ Disorientation/Panic.",
     "Wide shots of the duel",
-    "Extreme close-ups (eyes and mirror flash)",
-    "POV shots (John's blinded perspective)",
+    "Extreme close-ups on eyes and mirror flash",
+    "POV shots from John's blinded perspective",
     "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in...",
-    "Zad | Zad is a large, hulking, and powerful Martian warrior. He possesses a brute-like physical presence and is identified as a duelist capable of wielding a long-sword. | unknown | Described as a brute who has never made a kill among his own chieftains."
+    "Zad | Zad is a large, hulking, and powerful Martian warrior. He possesses a brute-like physical presence and is identified as a duelist capable of wielding a long-sword. | unknown | Described as a brute who has never made a kill among his own chieftains.",
+    "warhoon_incubator_site | No specific visual details are provided in the current evidence. The site functions as a secondary setting within the narrative. | Unknown. | Unknown. | Unknown."
   ],
   "metadata": {
     "artifact_id": "CH014_SC004_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "b18cddb6cc31c2baaaca4a067efc71c1a9c34810",
+    "source_fingerprint": "d9e3db3e7d1a97e9870c5d62d07d6e67a01b3067",
     "created_at_utc": "2026-04-22T01:58:26.786053+00:00",
-    "updated_at_utc": "2026-04-22T01:58:26.786053+00:00",
+    "updated_at_utc": "2026-04-22T08:15:23.150677+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH014_SC004",
-        "version": "f976a056c71835dc1a8aa4bd93179a28fcd8a3b0"
+        "version": "79326f7793cae29cd207e765832f53487bcd7e4f"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH014_SC004",
+        "version": "b2b16515d9abb722eb775a5f9ba61f004cf810d8"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH014_SC004",
-        "version": "7fc3cefe8bb58852003672ca8d0fa594c664154d"
+        "version": "82ed24a767fab89b52f18ccb6e4bedf6333bdc3a"
       }
     ],
     "locked_fields": {},
@@ -134,6 +140,11 @@
         "timestamp_utc": "2026-04-22T01:58:49.339846+00:00",
         "action": "synthesized",
         "source_fingerprint": "b18cddb6cc31c2baaaca4a067efc71c1a9c34810"
+      },
+      {
+        "timestamp_utc": "2026-04-22T08:15:45.873215+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d9e3db3e7d1a97e9870c5d62d07d6e67a01b3067"
       }
     ]
   }

@@ -5,12 +5,22 @@
   "shot_order": 1,
   "previous_shot_id": "",
   "next_shot_id": "SH002",
-  "shot_title": "Action 1: Carter observes Dejah Thoris being brought before t...",
+  "shot_title": "Carter observes proceedings",
   "shot_type": "action",
   "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-  "composition": "Dynamic composition in The interior audience chamber of Lorquas Ptomel with dejah_thoris crossing the frame and maintaining readable movement.",
-  "target_seconds": 6.0,
+  "composition": "Dynamic composition in The interior audience chamber of Lorquas Ptomel with john_carter, dejah_thoris, sarkoja crossing the frame and maintaining readable movement.",
+  "target_seconds": 5.7,
   "characters_in_frame": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'john_carter'"
+    },
     {
       "label": "Dejah Thoris",
       "canonical_id": "dejah_thoris",
@@ -20,28 +30,38 @@
       "resolution_score": 186,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH010/dejah_thoris.md",
       "notes": "asset id exactly matches canonical id | query matches alias 'dejah_thoris'"
+    },
+    {
+      "label": "Sarkoja",
+      "canonical_id": "sarkoja",
+      "display_name": "sarkoja",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH009/sarkoja.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'sarkoja'"
     }
   ],
   "environment": {
     "label": "The interior audience chamber of Lorquas Ptomel",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "The interior audience chamber of Lorquas Ptomel",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
     "BT001"
   ],
   "continuity_constraints": [
-    "Spatial relationship and placement of prisoners vs. guards",
+    "Spatial relationship/placement of prisoners vs. guards",
     "Scale and proportions of the audience chamber",
-    "Carter observes Dejah Thoris being brought before the Thark council from a distance/periphery."
+    "Carter observes from a distance or periphery"
   ],
-  "prompt_seed": "Action 1: Carter observes Dejah Thoris being brought before t.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in The interior audience chamber of Lorquas Ptomel with dejah_thoris crossing the frame and maintaining readable movement. Cast: dejah_thoris. Environment: T...",
-  "shot_notes": "Carter observes Dejah Thoris being brought before the Thark council from a distance/periphery.",
+  "prompt_seed": "Action 1: Carter observes the proceedings from a distance or.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in The interior audience chamber of Lorquas Ptomel with john_carter, dejah_thoris, sarkoja crossing the frame and maintaining readable movement.",
+  "shot_notes": "Carter observes the proceedings from a distance or periphery.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -99,12 +119,13 @@
     }
   ],
   "evidence_summary": [
-    "Establish the cultural brutality of the Tharks and the high-born dignity of Dejah Thoris through a tension-filled confrontation. The scene must contrast the rugged, observant presence of John Carter with the sophisticated, diplomatic plea of Dejah Thoris ag...",
+    "Establish the cultural brutality of the Thark society and define Dejah Thoris's character through her dignified response to captivity. The scene must utilize scale and perspective to contrast John Carter's peripheral observation with the centralized power o...",
     "Carter observes from a distance/periphery as Dejah Thoris is brought before the Thark council. He witnesses the cruelty of Sarkoja and hears Dejah Thoris deliver a sophisticated plea for peace and scientific cooperation to the uncivilized Green Martians.",
     "From observation/curiosity to growing indignation and tension. **Likely Visual Coverage Families:** - Medium shots of the council members. - Low-angle shots of the Thark leaders to emphasize power. - Close-ups on Deja...",
     "Medium shots of the council members",
     "Low-angle shots of Thark leaders (power emphasis)",
-    "Close-ups on Dejah Thoris (dignity/captivity focus)",
+    "Close-ups on Dejah Thoris (dignity/emotion)",
+    "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in...",
     "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b...",
     "sarkoja | Sarkoja is an older, hardened female Green Martian of the Thark people. She carries the visual weight of a high-ranking noble or spy, characterized by a calculating expression and adherence to strict cultural norms. Her appearance is defined by tr..."
   ],
@@ -112,19 +133,24 @@
     "artifact_id": "CH010_SC002_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "a1f49e0d928a3804cbf7bd34fdc5d0cd122a8e68",
+    "source_fingerprint": "d921cacfc0d24dfe44f2f0b2cd8aad9a5fd1cd0f",
     "created_at_utc": "2026-04-22T01:26:53.823195+00:00",
-    "updated_at_utc": "2026-04-22T01:26:53.823195+00:00",
+    "updated_at_utc": "2026-04-22T07:51:57.091517+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH010_SC002",
-        "version": "391bce091aef3b81b25ad729fbcfd49c9dcb28f6"
+        "version": "8641017416dc13d751e83dc3fa55fb4e0c5cb80c"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH010_SC002",
+        "version": "0fa8f51cba8aa44791c03896665ca6dcc8013a74"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH010_SC002",
-        "version": "cbcca68840fcdcc6ff859bf3c730c8d73abe9d82"
+        "version": "e66d8bacc7c607ad087767beeeb31624eec424fa"
       }
     ],
     "locked_fields": {},
@@ -134,6 +160,11 @@
         "timestamp_utc": "2026-04-22T01:27:25.621156+00:00",
         "action": "synthesized",
         "source_fingerprint": "a1f49e0d928a3804cbf7bd34fdc5d0cd122a8e68"
+      },
+      {
+        "timestamp_utc": "2026-04-22T07:52:29.756895+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d921cacfc0d24dfe44f2f0b2cd8aad9a5fd1cd0f"
       }
     ]
   }

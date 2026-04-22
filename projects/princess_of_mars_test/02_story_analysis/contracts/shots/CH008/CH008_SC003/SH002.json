@@ -5,7 +5,7 @@
   "shot_order": 2,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Medium 2: Deploying Grappling Hooks",
+  "shot_title": "Medium 2: Grappling Deployment",
   "shot_type": "medium",
   "camera_description": "Stable medium framing that keeps action and character readable.",
   "composition": "Readable medium composition in City outskirts / Ground level near the impact site featuring green_martian_warriors.",
@@ -24,12 +24,12 @@
   ],
   "environment": {
     "label": "City outskirts / Ground level near the impact site",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "City outskirts / Ground level near the impact site",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
@@ -37,10 +37,10 @@
   ],
   "continuity_constraints": [
     "The direction and speed of the drifting, burning vessel must remain consistent across shots.",
-    "Green martian warriors deploy grappling hooks to pull the vessel down."
+    "Green Martian Warriors deploy grappling hooks to pull the vessel down."
   ],
-  "prompt_seed": "Medium 2: Green martian warriors deploy grappling hooks to pu.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in City outskirts / Ground level near the impact site featuring green_martian_warriors. Cast: green_martian_warriors. Environment: City outskirts / Gro...",
-  "shot_notes": "Green martian warriors deploy grappling hooks to pull the vessel down.",
+  "prompt_seed": "Medium 2: Green Martian Warriors deploy grappling hooks to pu.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in City outskirts / Ground level near the impact site featuring green_martian_warriors. Cast: green_martian_warriors. Environment: City outskirts / Gro...",
+  "shot_notes": "Green Martian Warriors deploy grappling hooks to pull the vessel down.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -98,7 +98,7 @@
     }
   ],
   "evidence_summary": [
-    "The sequence must depict the transition from the chaotic aftermath of battle to a highly organized, ritualistic scavenging process. The focus is on the mechanical and methodical nature of the green martian warriors as they intercept a drifting vessel, strip...",
+    "The sequence must depict the transition from the chaotic aftermath of battle to a highly organized, ritualistic scavenging operation. The focus is on the mechanical and methodical nature of the green martian warriors as they intercept a drifting vessel, str...",
     "An unmanned, damaged ship drifts toward the city. The green warriors use grappling hooks to pull it down, loot it for supplies and weapons, and then set it on fire, creating a drifting funeral pyre.",
     "Chaos $\\rightarrow$ Methodical/Ruthless Efficiency.",
     "Wide shots of the grappling process",
@@ -110,19 +110,24 @@
     "artifact_id": "CH008_SC003_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "95d78ce0237c51ef76bf6ed15e9ad73076f1d91f",
+    "source_fingerprint": "05b21b958225396b2e30afb0f2baefd6e5c0157d",
     "created_at_utc": "2026-04-22T01:10:34.560637+00:00",
-    "updated_at_utc": "2026-04-22T01:10:34.560637+00:00",
+    "updated_at_utc": "2026-04-22T07:41:26.304798+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH008_SC003",
-        "version": "16dffbe2c08b962bafd2b12adcacf2ec6221695d"
+        "version": "7f46d1d8be5550f363927566a0ce0b1464c98109"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH008_SC003",
+        "version": "cb6a955e4c363652787b1d10bb9f9f02d89ae178"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH008_SC003",
-        "version": "5bf67aa7d7ee2c86fa3c917367e0365402960592"
+        "version": "8be098c7dc468bd6b4fecfbbb5151e901a745184"
       }
     ],
     "locked_fields": {},
@@ -132,6 +137,11 @@
         "timestamp_utc": "2026-04-22T01:11:07.942609+00:00",
         "action": "synthesized",
         "source_fingerprint": "95d78ce0237c51ef76bf6ed15e9ad73076f1d91f"
+      },
+      {
+        "timestamp_utc": "2026-04-22T07:41:49.085344+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "05b21b958225396b2e30afb0f2baefd6e5c0157d"
       }
     ]
   }

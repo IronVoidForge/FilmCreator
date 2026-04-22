@@ -24,12 +24,12 @@
   ],
   "environment": {
     "label": "The interior audience chamber",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "The interior audience chamber",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
@@ -114,19 +114,24 @@
     "artifact_id": "CH010_SC003_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "0f6e50a9fc2d60d967df2411b258b86f29c8f212",
+    "source_fingerprint": "6ec6669207dc94245c32091a3b6ad2af9cb47a50",
     "created_at_utc": "2026-04-22T01:29:06.242743+00:00",
-    "updated_at_utc": "2026-04-22T01:29:06.242743+00:00",
+    "updated_at_utc": "2026-04-22T07:54:17.667897+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH010_SC003",
-        "version": "f6713a03906ec6ad3a22390244ba51c345f89950"
+        "version": "de770ba7eb740f8bebdd56b957d86e7ad23ffbf5"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH010_SC003",
+        "version": "1cea5a4e1a19570a39c4a63dea1320c9af54eae1"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH010_SC003",
-        "version": "2d8dcec346b5d3bb2119805105fadfdbad4ccd13"
+        "version": "fb9de7f2dbd78c22ebb459ab7afe495b66240abd"
       }
     ],
     "locked_fields": {},
@@ -136,6 +141,11 @@
         "timestamp_utc": "2026-04-22T01:29:46.617632+00:00",
         "action": "synthesized",
         "source_fingerprint": "0f6e50a9fc2d60d967df2411b258b86f29c8f212"
+      },
+      {
+        "timestamp_utc": "2026-04-22T07:54:45.666028+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "6ec6669207dc94245c32091a3b6ad2af9cb47a50"
       }
     ]
   }

@@ -5,7 +5,7 @@
   "shot_order": 1,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Establishing Wide 1: Great Hall Chaos",
+  "shot_title": "Establishing Wide 1: The Great Hall Chaos",
   "shot_type": "establishing_wide",
   "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
   "composition": "Wide composition across The Great Hall with notan, than_kosis placed for immediate spatial orientation.",
@@ -34,23 +34,23 @@
   ],
   "environment": {
     "label": "The Great Hall",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "The Great Hall",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
     "BT001"
   ],
   "continuity_constraints": [
-    "Sound design transition (muffled voices from inside ornament vs. clear palace noise).",
-    "The Great Hall erupts into chaos following the discovery of the dead guards."
+    "Sound design: Muffled voices (inside ornament) vs. clear palace noise (outside).",
+    "The Great Hall erupts in chaos following the discovery of dead guards."
   ],
-  "prompt_seed": "Establishing Wide 1: The Great Hall erupts into chaos following the disc.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across The Great Hall with notan, than_kosis placed for immediate spatial orientation. Cast: notan, than_kosis. Environment: The Great Hal...",
-  "shot_notes": "The Great Hall erupts into chaos following the discovery of the dead guards.",
+  "prompt_seed": "Establishing Wide 1: The Great Hall erupts in chaos following the discov.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across The Great Hall with notan, than_kosis placed for immediate spatial orientation. Cast: notan, than_kosis. Environment: The Great Hall.",
+  "shot_notes": "The Great Hall erupts in chaos following the discovery of dead guards.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -108,7 +108,7 @@
     }
   ],
   "evidence_summary": [
-    "The scene must establish the scale of the palace chaos and the immediate threat to John Carter. Visuals should contrast the claustrophobic, macro perspective of Carter's confinement within a large hanging ornament against the expansive, high-stakes environm...",
+    "The scene must establish a sense of claustrophobic tension for Carter contrasted against the expansive, chaotic scale of the Great Hall. Production should focus on the auditory dichotomy between the muffled interior of the ornament and the loud, frantic atm...",
     "As the palace erupts in chaos over the dead guards, Carter hides inside a large hanging ornament in the Great Hall. From his hiding spot, he overhears Notan describing him as a superhuman stranger and hears Than Kosis ordering a massive manhunt.",
     "Tension $\\rightarrow$ Dread. **Likely Visual Coverage Families:** - Macro shots of Carter's eyes/face within the ornament. - Low-angle or wide shots of the Great Hall to show scale and chaos. - Over-the-shoulder shots...",
     "Macro shots of Carter's eyes/face within the ornament.",
@@ -121,19 +121,24 @@
     "artifact_id": "CH022_SC004_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "a1164490f9967b0cf0fa0967f2a6e43bffdfb005",
+    "source_fingerprint": "b01e3d774fc124573e9a55346d2f117dc236a7b9",
     "created_at_utc": "2026-04-22T03:06:11.536797+00:00",
-    "updated_at_utc": "2026-04-22T03:06:11.536797+00:00",
+    "updated_at_utc": "2026-04-22T15:28:54.140382+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH022_SC004",
-        "version": "ea15c386cba6be57983c55bd956ff05788b2faea"
+        "version": "5cac2d9b11f396f1d84b336fc971606e999753c1"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH022_SC004",
+        "version": "e82899e67f85d8bd3a2e572da2a1e03799895e4c"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH022_SC004",
-        "version": "261f01d2b3c0a87807e2d6aa43d59f5a224fbe17"
+        "version": "b38d0bb0c70bcb7f9b024420814101edd99128cc"
       }
     ],
     "locked_fields": {},
@@ -143,6 +148,11 @@
         "timestamp_utc": "2026-04-22T03:06:44.133812+00:00",
         "action": "synthesized",
         "source_fingerprint": "a1164490f9967b0cf0fa0967f2a6e43bffdfb005"
+      },
+      {
+        "timestamp_utc": "2026-04-22T15:29:22.962396+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "b01e3d774fc124573e9a55346d2f117dc236a7b9"
       }
     ]
   }

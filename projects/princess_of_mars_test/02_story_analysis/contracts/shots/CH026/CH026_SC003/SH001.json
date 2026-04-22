@@ -9,7 +9,7 @@
   "shot_type": "establishing_wide",
   "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
   "composition": "Wide composition across The deck of the Heliumite flagship with john_carter placed for immediate spatial orientation.",
-  "target_seconds": 5.2,
+  "target_seconds": 5.5,
   "characters_in_frame": [
     {
       "label": "John Carter",
@@ -24,12 +24,12 @@
   ],
   "environment": {
     "label": "The deck of the Heliumite flagship",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "The deck of the Heliumite flagship",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
@@ -37,10 +37,11 @@
   ],
   "continuity_constraints": [
     "Carter must maintain a battle-worn physical state.",
-    "Contrast Carter's rugged appearance against Dejah's appearance."
+    "Contrast Carter's rugged appearance against Dejah's appearance.",
+    "John Carter transfers Princess Dejah Thoris to the Heliumite flagship."
   ],
   "prompt_seed": "Establishing Wide 1: John Carter transfers Princess Dejah Thoris to the.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across The deck of the Heliumite flagship with john_carter placed for immediate spatial orientation. Cast: john_carter. Environment: The de...",
-  "shot_notes": "John Carter transfers Princess Dejah Thoris to the deck of the Heliumite flagship.",
+  "shot_notes": "John Carter transfers Princess Dejah Thoris to the Heliumite flagship.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -98,7 +99,7 @@
     }
   ],
   "evidence_summary": [
-    "The scene focuses on the transition of Princess Dejah Thoris from captivity to safety aboard the Heliumite flagship. The visual narrative must contrast the rugged, battle-worn state of John Carter with the celebratory atmosphere of the Heliumite crowd, culm...",
+    "The scene focuses on the transition of Princess Dejah Thoris from captivity to safety aboard the Heliumite flagship. The visual narrative must contrast the rugged, battle-worn state of John Carter with the celebratory atmosphere of the Heliumite citizens an...",
     "John Carter transfers Princess Dejah Thoris to the Heliumite flagship. She is greeted with immense celebration, where she publicly credits Carter for her rescue, cementing his reputation.",
     "Relief $\\rightarrow$ Jubilation/Gratitude.",
     "Medium two-shots (Carter/Dejah)",
@@ -110,19 +111,24 @@
     "artifact_id": "CH026_SC003_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "416fa8619c520895cebcfa85ee49222ba42bcea3",
+    "source_fingerprint": "5e2dc760bf5fd62a8fae5ee45999cb07c2298813",
     "created_at_utc": "2026-04-22T03:43:19.956823+00:00",
-    "updated_at_utc": "2026-04-22T03:43:19.956823+00:00",
+    "updated_at_utc": "2026-04-22T15:57:03.390413+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH026_SC003",
-        "version": "3b829f09dc6f6bbcb7f1cc36550d062d2a5c893c"
+        "version": "3a43f40ce0b58ae8da7bdde2d3f4e97d4a93a2aa"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH026_SC003",
+        "version": "e6cb80ea790e9823d9a57f1787cad90db3f527f4"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH026_SC003",
-        "version": "0dc267632532cdcaaf7ce663c35df060f82af965"
+        "version": "e8ad3644645302d27e06d14d07f3097f36315cfe"
       }
     ],
     "locked_fields": {},
@@ -132,6 +138,11 @@
         "timestamp_utc": "2026-04-22T03:43:51.619612+00:00",
         "action": "synthesized",
         "source_fingerprint": "416fa8619c520895cebcfa85ee49222ba42bcea3"
+      },
+      {
+        "timestamp_utc": "2026-04-22T15:57:27.123173+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "5e2dc760bf5fd62a8fae5ee45999cb07c2298813"
       }
     ]
   }
