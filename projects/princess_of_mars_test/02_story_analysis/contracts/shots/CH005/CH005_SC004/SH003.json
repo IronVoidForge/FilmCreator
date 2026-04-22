@@ -5,11 +5,11 @@
   "shot_order": 3,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Closing Reaction 3: Land the scene consequence or transition cleanly.",
-  "shot_type": "closing_reaction",
-  "camera_description": "Controlled closing frame that lands the consequence of the beat.",
-  "composition": "Closing composition in Exterior building/alleyway that emphasizes the consequence of land the scene consequence or transition cleanly..",
-  "target_seconds": 4.6,
+  "shot_title": "Medium 3: The_colossal_creature intercepts the protagonist at...",
+  "shot_type": "medium",
+  "camera_description": "Stable medium framing that keeps action and character readable.",
+  "composition": "Readable medium composition in Exterior building/alleyway featuring protagonist.",
+  "target_seconds": 5.0,
   "characters_in_frame": [
     {
       "label": "The Protagonist",
@@ -20,16 +20,6 @@
       "resolution_score": 176,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
       "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
-    },
-    {
-      "label": "The Colossal Creature",
-      "canonical_id": "the_colossal_creature",
-      "display_name": "the_colossal_creature",
-      "status": "canonical",
-      "entity_kind": "individual",
-      "resolution_score": 186,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/the_colossal_creature.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'colossal_creature'"
     }
   ],
   "environment": {
@@ -46,15 +36,13 @@
     "BT003"
   ],
   "continuity_constraints": [
-    "The height of the window",
-    "the physical contact point where the creature grabs the protagonist",
-    "lighting shift from city streets to the creature's lair.",
-    "Land the scene consequence or transition cleanly.",
-    "Resolve The Watch Dog (pursuing) -> The Watch Dog (pursuing)",
-    "Resolve Exterior building/alleyway -> Exterior building/alleyway"
+    "Window height must remain consistent at thirty feet",
+    "Physical contact point between protagonist and the_colossal_creature",
+    "Lighting shift from city streets to the creature's lair",
+    "The_colossal_creature intercepts the protagonist at the window threshold."
   ],
-  "prompt_seed": "Closing Reaction 3: Land the scene consequence or transition cleanly.. closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in Exterior building/alleyway that emphasizes the consequence of land the scene consequence or transition cleanly.. Cast: protagonist, the_colo...",
-  "shot_notes": "Land the scene consequence or transition cleanly.",
+  "prompt_seed": "Medium 3: The_colossal_creature intercepts the protagonist at.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in Exterior building/alleyway featuring protagonist. Cast: protagonist. Environment: Exterior building/alleyway. Beat: The_colossal_creature intercepts...",
+  "shot_notes": "The_colossal_creature intercepts the protagonist at the window threshold.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -112,37 +100,36 @@
     }
   ],
   "evidence_summary": [
-    "To provide a climax to the escape attempt and introduce a new, much larger threat.",
+    "The scene requires high-action choreography involving a vertical leap to a window thirty feet above ground level, utilizing the protagonist's extreme agility and low-gravity capabilities. The sequence must transition from an exterior pursuit by The Watch Do...",
     "In a desperate move to evade the dog, the protagonist leaps toward a window thirty feet above the ground. Just as he reaches safety, he is intercepted by a massive, white, hairless, ape-like creature that grabs him and drags him away.",
     "Hope (of escape) $\\rightarrow$ Terror/Shock. **Likely Visual Coverage Families:** - Slow-motion capture of the high jump. - Extreme close-up of the protagonist's face during the grab. - Large-scale shots to show the s...",
-    "The height of the window",
-    "the physical contact point where the creature grabs the protagonist",
-    "lighting shift from city streets to the creature's lair.",
-    "protagonist | An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeless\" physic...",
-    "the_colossal_creature | No visual data is available to establish a stable identity, physical build, or costume for this character. The entity is identified only by its designation as \"the_colossal_creature.\" | unknown | unknown"
+    "Slow-motion capture of the high jump",
+    "Extreme close-up of protagonist's face during grab",
+    "Large-scale shots for size differential (human vs. creature)",
+    "protagonist | An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeless\" physic..."
   ],
   "metadata": {
     "artifact_id": "CH005_SC004_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "e612b5f29503aeff193c55b9e4ff692ac530b139",
+    "source_fingerprint": "cd4be7860bc7618836c732f7ed8be5a672c9ed51",
     "created_at_utc": "2026-04-22T00:48:22.474393+00:00",
-    "updated_at_utc": "2026-04-22T16:30:38.813923+00:00",
+    "updated_at_utc": "2026-04-22T17:31:52.591183+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH005_SC004",
-        "version": "286d94d9c6e1fc2f5723e6e09e93a8d424ad1ab6"
+        "version": "ba0b9d227daf3bc5c81f0cdd2e3c7d7cdf4f17dc"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH005_SC004",
-        "version": "4fa7d8483b8202d5b5849139ae669100602c9f28"
+        "version": "65e505fab9e96577bf85ca893037514b4daaec0e"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH005_SC004",
-        "version": "ceeda0758148476c66ac5da78d9837756a5d94e4"
+        "version": "56ec22225052be40b5da0cd140d356df8a4e1aa6"
       }
     ],
     "locked_fields": {},
@@ -162,6 +149,11 @@
         "timestamp_utc": "2026-04-22T16:30:38.814423+00:00",
         "action": "synthesized",
         "source_fingerprint": "e612b5f29503aeff193c55b9e4ff692ac530b139"
+      },
+      {
+        "timestamp_utc": "2026-04-22T17:32:29.949385+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "cd4be7860bc7618836c732f7ed8be5a672c9ed51"
       }
     ]
   }

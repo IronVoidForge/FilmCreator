@@ -48,7 +48,7 @@
 
 - chapter_mentions: CH004
 - scene_mentions: CH004_SC002, CH004_SC003
-- shot_mentions: CH004_SC002/SH003, CH004_SC003/SH002, CH004_SC003/SH003
+- shot_mentions: CH004_SC003/SH003
 
 ## Evidence Summary
 
@@ -81,5 +81,5 @@
 - artifact_id: `DESC_CHAR_chieftain`
 - status: `generated`
 - source_fingerprint: `f07fa31e66e664171e4e6feee0d9d85a9fae56b2`
-- created_at_utc: `2026-04-22T16:32:09.268832+00:00`
-- updated_at_utc: `2026-04-22T16:32:09.268832+00:00`
+- created_at_utc: `2026-04-22T17:44:57.569576+00:00`
+- updated_at_utc: `2026-04-22T17:44:57.569576+00:00`

@@ -5,21 +5,21 @@
   "shot_order": 1,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Medium 1: The Narrator and Tars Tarkas arrive at a massive, a...",
-  "shot_type": "medium",
-  "camera_description": "Stable medium framing that keeps action and character readable.",
-  "composition": "Readable medium composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) featuring The Narrator.",
+  "shot_title": "Establishing Wide 1: Arrival at the massive, ancient city",
+  "shot_type": "establishing_wide",
+  "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
+  "composition": "Wide composition across Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) with tars_tarkas placed for immediate spatial orientation.",
   "target_seconds": 5.5,
   "characters_in_frame": [
     {
-      "label": "The Narrator",
-      "canonical_id": null,
-      "display_name": "The Narrator",
-      "status": "unresolved",
-      "entity_kind": "",
-      "resolution_score": null,
-      "source_path": "",
-      "notes": "No character candidate found."
+      "label": "Tars Tarkas",
+      "canonical_id": "tars_tarkas",
+      "display_name": "tars_tarkas",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'tars_tarkas'"
     }
   ],
   "environment": {
@@ -36,15 +36,12 @@
     "BT001"
   ],
   "continuity_constraints": [
-    "Scale of props/architecture relative to the Narrator",
-    "movement patterns of the Martian crowd.",
-    "The Narrator and Tars Tarkas arrive at a massive",
-    "ancient city built by a forgotten race. They enter a central plaza filled with hundreds of Martians",
-    "highlighting the narrator's smallness compared to the environment and its inhabitants.",
-    "Resolve The Narrator -> The Narrator"
+    "Scale of props and architecture relative to the Narrator",
+    "Movement patterns/flow of the Martian crowd",
+    "Arrival at the massive, ancient city near the dried-up Martian sea."
   ],
-  "prompt_seed": "Medium 1: The Narrator and Tars Tarkas arrive at a massive, a.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) featuring The Narrator. Cast: The Narrator. Environment: Central Plaza o...",
-  "shot_notes": "The Narrator and Tars Tarkas arrive at a massive, ancient city built by a forgotten race. They enter a central plaza filled with hundreds of Martians, highlighting the narrator's smallness compared to the environment...",
+  "prompt_seed": "Establishing Wide 1: Arrival at the massive, ancient city near the dried.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) with tars_tarkas placed for immediate spatial orientati...",
+  "shot_notes": "Arrival at the massive, ancient city near the dried-up Martian sea.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -97,35 +94,36 @@
     }
   ],
   "evidence_summary": [
-    "Establish the scale of the setting and the protagonist's status as a captive within an alien civilization.",
+    "The production must emphasize the overwhelming scale of the ancient city to visually communicate the Narrator's vulnerability and captive status. Use massive marble and gold architecture to dwarf the characters, utilizing extreme wide shots and low angles t...",
     "The Narrator and Tars Tarkas arrive at a massive, ancient city built by a forgotten race. They enter a central plaza filled with hundreds of Martians, highlighting the narrator's smallness compared to the environment and its inhabitants.",
     "Awe/Trepidation $\\rightarrow$ Alienation. **Likely Visual Coverage Families:** * Extreme Wide Shots (EWS) to establish the scale of the city vs. characters. * Low Angle shots looking up at Martians. * POV shots from t...",
-    "Scale of props/architecture relative to the Narrator",
-    "movement patterns of the Martian crowd.",
+    "Extreme Wide Shots (EWS) for scale establishment",
+    "Low Angle shots of Martians",
+    "POV shots from the Narrator's perspective",
     "tars_tarkas | Tars Tarkas is a prominent Thark warrior and leader characterized by green skin. He carries himself with a professional demeanor, embodying the strength and combat skill valued by his Martian culture. His appearance is defined by standard Mart..."
   ],
   "metadata": {
     "artifact_id": "CH004_SC001_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "f55b3e19b03d44009d0194e57f16d1c9904dfbc0",
+    "source_fingerprint": "490f714d413a721731a1063c4c3b4c7695ec47df",
     "created_at_utc": "2026-04-22T00:29:32.334748+00:00",
-    "updated_at_utc": "2026-04-22T16:30:38.358565+00:00",
+    "updated_at_utc": "2026-04-22T17:12:30.366662+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH004_SC001",
-        "version": "27a46577d90148e958cffab05af39ad128cd216c"
+        "version": "d62cca9ad4da0e3665af0569d53fcfbe599f90b1"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH004_SC001",
-        "version": "08cd6bebf9d3253d45285f4c60b72f9a628fa7f0"
+        "version": "641d50097be61415ba9a46720e08a09f6a52804c"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH004_SC001",
-        "version": "66ec7e88ecccc4297988f1dcea0d6b5256695648"
+        "version": "30851c58570cedbaeb373be22a61b142bb0d8c40"
       }
     ],
     "locked_fields": {},
@@ -145,6 +143,11 @@
         "timestamp_utc": "2026-04-22T16:30:38.359067+00:00",
         "action": "synthesized",
         "source_fingerprint": "f55b3e19b03d44009d0194e57f16d1c9904dfbc0"
+      },
+      {
+        "timestamp_utc": "2026-04-22T17:13:03.060879+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "490f714d413a721731a1063c4c3b4c7695ec47df"
       }
     ]
   }

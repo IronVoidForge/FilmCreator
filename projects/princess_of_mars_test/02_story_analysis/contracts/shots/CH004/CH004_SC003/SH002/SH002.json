@@ -5,31 +5,21 @@
   "shot_order": 2,
   "previous_shot_id": "SH001",
   "next_shot_id": "SH003",
-  "shot_title": "Medium 2: This act of defiance earns him unexpected respect.",
-  "shot_type": "medium",
-  "camera_description": "Stable medium framing that keeps action and character readable.",
-  "composition": "Readable medium composition in grand_audience_chamber featuring tars_tarkas, the_chieftain.",
-  "target_seconds": 5.3,
+  "shot_title": "Action 2: The Narrator strikes a Martian warrior, asserting p...",
+  "shot_type": "action",
+  "camera_description": "Active camera with tracking energy and clear spatial orientation.",
+  "composition": "Dynamic composition in grand_audience_chamber with The Narrator crossing the frame and maintaining readable movement.",
+  "target_seconds": 5.5,
   "characters_in_frame": [
     {
-      "label": "Tars Tarkas",
-      "canonical_id": "tars_tarkas",
-      "display_name": "tars_tarkas",
-      "status": "canonical",
+      "label": "The Narrator",
+      "canonical_id": null,
+      "display_name": "The Narrator",
+      "status": "review",
       "entity_kind": "individual",
-      "resolution_score": 186,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'tars_tarkas'"
-    },
-    {
-      "label": "The Chieftain",
-      "canonical_id": "chieftain",
-      "display_name": "the_chieftain",
-      "status": "canonical",
-      "entity_kind": "individual",
-      "resolution_score": 176,
+      "resolution_score": 6,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/chieftain.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'chieftain'"
+      "notes": "chieftain | token overlap: ['chieftain'] | generic role label reduces confidence"
     }
   ],
   "environment": {
@@ -46,15 +36,13 @@
     "BT002"
   ],
   "continuity_constraints": [
-    "The physics/trajectory of the jump",
-    "the physical contact during the fight sequence.",
-    "This act of defiance earns him unexpected respect.",
-    "Resolve The Narrator -> The Narrator",
-    "Resolve Martian Crowd -> Martian Crowd",
-    "Resolve Grand Audience Chamber / Plaza area -> Grand Audience Chamber / Plaza area"
+    "Physical contact precision during the fight sequence",
+    "Physics/trajectory consistency of the \"sak\" jump",
+    "The Narrator strikes a Martian warrior",
+    "asserting physical defiance."
   ],
-  "prompt_seed": "Medium 2: This act of defiance earns him unexpected respect.. medium. Stable medium framing that keeps action and character readable. Readable medium composition in grand_audience_chamber featuring tars_tarkas, the_chieftain. Cast: tars_tarkas, the_chieftain. Environment: grand_audience_chamber. Beat: This act of de...",
-  "shot_notes": "This act of defiance earns him unexpected respect.",
+  "prompt_seed": "Action 2: The Narrator strikes a Martian warrior, asserting p.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in grand_audience_chamber with The Narrator crossing the frame and maintaining readable movement. Cast: The Narrator. Environment: grand_audience_chamber. Be...",
+  "shot_notes": "The Narrator strikes a Martian warrior, asserting physical defiance.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -112,11 +100,12 @@
     }
   ],
   "evidence_summary": [
-    "Establish the Narrator's agency and his ability to command respect through violence/physicality.",
+    "The scene must demonstrate the Narrator's physical capability and agency within a hostile Martian social structure. Success relies on the visceral impact of the punch and the impressive scale/distance of the \"sak\" jump to justify the shift in crowd sentimen...",
     "After being mocked, the Narrator punches a Martian warrior. This act of defiance earns him unexpected respect. He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
     "Humiliation $\\rightarrow$ Defiance $\\rightarrow$ Triumph/Respect. **Likely Visual Coverage Families:** * Tight Close-ups (CU) on the punch and the impact. * Wide shots to capture the scale of the \"sak\" jump. * Reactio...",
-    "The physics/trajectory of the jump",
-    "the physical contact during the fight sequence.",
+    "Tight Close-ups (CU) on punch impact and physical contact",
+    "Wide shots for \"sak\" jump scale and trajectory",
+    "Reaction shots of Martian Crowd shifting from mockery to applause",
     "tars_tarkas | Tars Tarkas is a prominent Thark warrior and leader characterized by green skin. He carries himself with a professional demeanor, embodying the strength and combat skill valued by his Martian culture. His appearance is defined by standard Mart...",
     "the_chieftain | The Chieftain is a large-framed, green-skinned Martian whose physical presence is notably imposing and out of proportion to standard human-scale objects. As a leader within a martial society that prioritizes the rearing of \"hardiest specimen...",
     "grand_audience_chamber | A cavernous, ceremonial hall characterized by oversized marble architecture and monumental scale. The interior features high vaulted ceilings and disproportionate furniture that emphasizes a sense of ancient weight. A central dais s..."
@@ -125,24 +114,24 @@
     "artifact_id": "CH004_SC003_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "b2bd00275d0abb213be14cc6f3d74ca250380c48",
+    "source_fingerprint": "ad2002fd8585dcc08cd4547c4edf2761326e9efd",
     "created_at_utc": "2026-04-22T00:35:22.794392+00:00",
-    "updated_at_utc": "2026-04-22T16:30:38.479852+00:00",
+    "updated_at_utc": "2026-04-22T17:17:19.814727+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH004_SC003",
-        "version": "4c465c322bab9136bb9c586cafa6eb5ab7ce13ff"
+        "version": "bfe570f538075d592857ec45410ada358e1ff617"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH004_SC003",
-        "version": "55ee083591cd67867f31e346946995581abea080"
+        "version": "9f6fcb6c5784af2b41def1782d2c1df170cdc892"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH004_SC003",
-        "version": "f5a9fac6d241afbd8b74b2515c5aa7ed20c577ba"
+        "version": "a95b02fb06306d9c9c3aac73d28931318dd7d73f"
       }
     ],
     "locked_fields": {},
@@ -162,6 +151,11 @@
         "timestamp_utc": "2026-04-22T16:30:38.479852+00:00",
         "action": "synthesized",
         "source_fingerprint": "b2bd00275d0abb213be14cc6f3d74ca250380c48"
+      },
+      {
+        "timestamp_utc": "2026-04-22T17:18:04.487448+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "ad2002fd8585dcc08cd4547c4edf2761326e9efd"
       }
     ]
   }

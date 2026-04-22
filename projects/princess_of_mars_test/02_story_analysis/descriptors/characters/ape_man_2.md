@@ -69,5 +69,5 @@
 - artifact_id: `DESC_CHAR_ape_man_2`
 - status: `generated`
 - source_fingerprint: `cd35b78c679bd5f190b50b71fc494229219f876a`
-- created_at_utc: `2026-04-22T16:31:19.905193+00:00`
-- updated_at_utc: `2026-04-22T16:31:19.905193+00:00`
+- created_at_utc: `2026-04-22T17:43:32.469765+00:00`
+- updated_at_utc: `2026-04-22T17:43:32.469765+00:00`

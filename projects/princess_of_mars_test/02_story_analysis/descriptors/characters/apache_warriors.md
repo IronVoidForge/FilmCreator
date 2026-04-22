@@ -47,7 +47,7 @@
 
 - chapter_mentions: CH002, CH001
 - scene_mentions: CH001_SC003, CH001_SC004
-- shot_mentions: CH001_SC003/SH001, CH001_SC003/SH002, CH001_SC003/SH003, CH001_SC004/SH001, CH001_SC004/SH003
+- shot_mentions: CH001_SC003/SH001, CH001_SC003/SH002, CH001_SC003/SH003, CH001_SC003/SH004, CH001_SC004/SH001, CH001_SC004/SH004
 
 ## Evidence Summary
 
@@ -80,5 +80,5 @@
 - artifact_id: `DESC_CHAR_apache_warriors`
 - status: `generated`
 - source_fingerprint: `9c31545487c2fbda3f075250cf4701fc95665268`
-- created_at_utc: `2026-04-22T16:31:06.055171+00:00`
-- updated_at_utc: `2026-04-22T16:31:06.055171+00:00`
+- created_at_utc: `2026-04-22T17:42:39.448957+00:00`
+- updated_at_utc: `2026-04-22T17:42:39.448957+00:00`
