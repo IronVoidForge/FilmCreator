@@ -26,14 +26,14 @@
 
 ## Generated Fields
 
-- architecture: canon-compatible best-effort environment architecture
-- depth_cues: canon-compatible best-effort environment depth cues
-- foreground_midground_background: canon-compatible best-effort environment foreground midground background
-- geography: canon-compatible best-effort environment geography
-- materials: canon-compatible best-effort environment materials
-- pathways: canon-compatible best-effort environment pathways
-- scale: canon-compatible best-effort environment scale
-- weather_or_atmosphere: canon-compatible best-effort environment weather or atmosphere
+- architecture: ancient stone and ceremonial architecture
+- depth_cues: strong scale contrast and layered architectural depth
+- foreground_midground_background: anchored foreground details, readable midground action, deep background structures
+- geography: dry open Martian terrain
+- materials: stone, metal, and weathered architectural surfaces
+- pathways: broad processional paths and stairs
+- scale: monumental scale
+- weather_or_atmosphere: dry thin air with still heat
 
 ## Coverage
 
@@ -68,5 +68,5 @@
 - artifact_id: `DESC_ENV_circular_moss_basin`
 - status: `generated`
 - source_fingerprint: `ed30f8d13fd7d2dd633551d5cadae17969a0fd10`
-- created_at_utc: `2026-04-22T04:29:45.530022+00:00`
-- updated_at_utc: `2026-04-22T04:29:45.530022+00:00`
+- created_at_utc: `2026-04-22T17:58:48.547744+00:00`
+- updated_at_utc: `2026-04-22T17:58:48.547744+00:00`

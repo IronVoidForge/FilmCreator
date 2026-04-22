@@ -80,6 +80,8 @@ The active multi-chapter launcher set is now ordered by workflow stage:
   - reruns scene bindings plus all affected downstream stages without rerunning character/environment synthesis, with an optional chapter filter, and automatically resumes the latest interrupted matching run
 - `multi_chapter\22_run_dialogue_enrichment_only.bat`
   - enriches dialogue delivery metadata for the existing dialogue timeline
+- `multi_chapter\23_run_character_descriptor_spot_check.bat`
+  - reruns a small handpicked character descriptor validation set for quick quality review
 - `multi_chapter\30_run_quality_grading.bat`
   - grades synthesis outputs and writes the selective rerun queue without mutating the source artifacts
 - `multi_chapter\31_run_quality_rerun_queue.bat`

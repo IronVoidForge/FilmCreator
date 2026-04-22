@@ -70,5 +70,5 @@
 - artifact_id: `DESC_CHAR_former_self`
 - status: `generated`
 - source_fingerprint: `2b342491c02be2e125974106c83e95a4270b970f`
-- created_at_utc: `2026-04-22T16:32:51.333299+00:00`
-- updated_at_utc: `2026-04-22T16:32:51.333299+00:00`
+- created_at_utc: `2026-04-22T17:46:21.921871+00:00`
+- updated_at_utc: `2026-04-22T17:46:21.921871+00:00`

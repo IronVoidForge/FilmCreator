@@ -331,7 +331,12 @@ def _clean_visual_summary(text: Any, *, fallback: str = "unknown", limit: int = 
     if not isinstance(text, str):
         return fallback
     cleaned = _normalize_text(text)
-    if not cleaned or _looks_like_metadata_summary(cleaned):
+    normalized = cleaned.strip().lower()
+    if (
+        not cleaned
+        or _looks_like_metadata_summary(cleaned)
+        or normalized in {"unknown", "none", "(none)", "n/a", "[]", "[ ]", "null"}
+    ):
         return fallback
     return _compact(cleaned, limit=limit)
 
@@ -350,11 +355,11 @@ def _coerce_string_list(*values: object) -> list[str]:
             continue
         if isinstance(value, list):
             for item in value:
-                if isinstance(item, str) and item.strip() and item.strip().lower() not in {"none", "(none)", "n/a"}:
+                if isinstance(item, str) and item.strip() and item.strip().lower() not in {"none", "(none)", "n/a", "unknown", "[]", "[ ]", "null"}:
                     items.append(item.strip())
         elif isinstance(value, str):
             stripped = value.strip()
-            if not stripped or stripped.lower() in {"none", "(none)", "n/a"}:
+            if not stripped or stripped.lower() in {"none", "(none)", "n/a", "unknown", "[]", "[ ]", "null"}:
                 continue
             parts = [part.strip() for part in re.split(r",|\n|;", stripped) if part.strip()]
             items.extend(parts or [stripped])
@@ -365,6 +370,182 @@ def _coerce_string_list(*values: object) -> list[str]:
             seen.add(item)
             deduped.append(item)
     return deduped
+
+
+def _clean_fragment(value: object) -> str:
+    if not isinstance(value, str):
+        return ""
+    cleaned = _normalize_text(value)
+    normalized = cleaned.lower()
+    if not cleaned or normalized in {"unknown", "none", "(none)", "n/a", "[]", "[ ]", "null"}:
+        return ""
+    return cleaned
+
+
+def _join_visual_fragments(*values: object, fallback: str = "unknown", limit: int = 220) -> str:
+    parts: list[str] = []
+    seen: set[str] = set()
+    for value in values:
+        if isinstance(value, list):
+            candidates = value
+        else:
+            candidates = [value]
+        for candidate in candidates:
+            cleaned = _clean_fragment(candidate)
+            if not cleaned:
+                continue
+            lowered = cleaned.lower()
+            if lowered in seen:
+                continue
+            seen.add(lowered)
+            parts.append(cleaned)
+    if not parts:
+        return fallback
+    return _compact(" ".join(parts), limit=limit)
+
+
+def _character_profile(base_fields: dict[str, Any], evidence_summary: list[str], canonical_id: str, display_name: str) -> dict[str, bool]:
+    text_parts = [
+        canonical_id,
+        display_name,
+        str(base_fields.get("role", "")),
+        str(base_fields.get("identity_baseline", "")),
+        str(base_fields.get("origin_or_historical_context", "")),
+        str(base_fields.get("physical_build", "")),
+        str(base_fields.get("movement_language", "")),
+        " ".join(_coerce_string_list(base_fields.get("distinctive_features", []))),
+        " ".join(_coerce_string_list(base_fields.get("state_variants", []))),
+        " ".join(_coerce_string_list(base_fields.get("costume_layers", []))),
+        " ".join(evidence_summary),
+    ]
+    text = " ".join(_normalize_text(part).lower() for part in text_parts if isinstance(part, str) and part.strip())
+    return {
+        "is_green_martian": "green martian" in text or "thark" in text,
+        "is_red_martian": "red-skinned" in text or "red martian" in text or "helium" in text,
+        "is_nonhuman": any(token in text for token in ["martian", "thark", "warhoon", "barsoom"]) and "human male" not in text,
+        "is_creature": any(token in text for token in ["ape", "thoat", "calot", "watch dog", "watchdog", "creature", "beast", "mount"]),
+        "is_collective": any(token in text for token in ["warriors", "horde", "family", "guardsmen", "martians"]) or str(base_fields.get("entity_kind", "")).strip().lower() in {"collective", "group"},
+        "is_feminine_coded": any(token in text for token in ["princess", "noblewoman", "woman", "mother", "female", "her ", " she "]),
+        "is_masculine_coded": any(token in text for token in ["officer", "chieftain", "warrior", "man", "father", "male", "his ", " he "]),
+        "is_human": "human male" in text or "earthling" in text or "american frontier" in text,
+    }
+
+
+def _character_specific_generated_default(
+    field_name: str,
+    *,
+    base_fields: dict[str, Any],
+    evidence_summary: list[str],
+    canonical_id: str,
+    display_name: str,
+) -> Any:
+    profile = _character_profile(base_fields, evidence_summary, canonical_id, display_name)
+    if profile["is_collective"]:
+        collective_defaults = {
+            "height": "varied heights within a broad martial group",
+            "build": "varied but generally battle-hardened builds",
+            "skin_tone": "group-consistent skin tones matching their species and region",
+            "hair_color": "varied hair coloring where applicable",
+            "hair_style": "utilitarian grooming suited to the group role",
+            "eye_color": "varied but species-consistent eyes",
+            "face_shape": "varied face shapes across the group",
+            "facial_hair": "mixed or minimal facial hair across the group",
+            "costume_materials": "repeatable martial fabrics, leathers, and gear materials",
+            "posture": "disciplined group-ready posture",
+            "expression_tendency": "alert, battle-ready expressions",
+            "voice_or_presence_notes": "group presence reads as organized and formidable",
+            "physical_build": "group silhouette emphasizes numbers and hardiness",
+            "movement_language": "coordinated, military group movement",
+            "sex": "mixed or unspecified group",
+            "age_range": "adult fighting-age group",
+        }
+        if field_name in collective_defaults:
+            return collective_defaults[field_name]
+    if profile["is_creature"]:
+        creature_defaults = {
+            "height": "large creature scale",
+            "build": "powerful muscular animal build",
+            "skin_tone": "species-specific hide or fur coloration",
+            "hair_color": "hide, fur, or mane coloring matched to the species",
+            "hair_style": "natural animal coat or mane",
+            "eye_color": "animal eyes with a predatory alertness",
+            "face_shape": "animal skull structure with species-specific proportions",
+            "facial_hair": "not applicable",
+            "costume_materials": "natural hide, harness, or no costume materials",
+            "posture": "animal stance ready to spring or charge",
+            "expression_tendency": "feral or alert animal focus",
+            "voice_or_presence_notes": "presence reads as dangerous, loud, and primal",
+            "physical_build": "heavy creature musculature and nonhuman anatomy",
+            "movement_language": "bestial, weighty movement with sudden bursts of force",
+            "sex": "animal sex not visually emphasized",
+            "age_range": "adult creature",
+        }
+        if field_name in creature_defaults:
+            return creature_defaults[field_name]
+    if profile["is_green_martian"]:
+        green_defaults = {
+            "height": "towering over a human frame",
+            "build": "massive war-ready Martian build",
+            "skin_tone": "deep green skin",
+            "hair_color": "scalp mostly bare or minimally haired",
+            "hair_style": "minimal or tightly kept scalp hair",
+            "eye_color": "hard-set eyes adapted to a harsh martial life",
+            "face_shape": "severe planar Martian facial structure",
+            "facial_hair": "typically none",
+            "costume_materials": "hides, leather, metal fittings, and war gear",
+            "posture": "upright, dominant, and imposing",
+            "expression_tendency": "stern, martial self-command",
+            "voice_or_presence_notes": "presence reads as severe, disciplined, and intimidating",
+            "physical_build": "enormous frame built for combat and intimidation",
+            "movement_language": "deliberate, forceful movement with command authority",
+            "sex": "male-coded Thark warrior",
+            "age_range": "battle-hardened adult",
+        }
+        if field_name in green_defaults:
+            return green_defaults[field_name]
+    if profile["is_red_martian"] and profile["is_feminine_coded"]:
+        red_feminine_defaults = {
+            "height": "tall graceful humanoid stature",
+            "build": "slender noble athletic build",
+            "skin_tone": "clear red Martian skin",
+            "hair_color": "dark richly toned hair",
+            "hair_style": "long formal hair arranged with noble precision",
+            "eye_color": "dark expressive eyes",
+            "face_shape": "refined symmetrical features",
+            "facial_hair": "none",
+            "costume_materials": "fine silks, jewelry metals, and noble textiles",
+            "posture": "poised upright noble posture",
+            "expression_tendency": "composed, intelligent, emotionally lucid",
+            "voice_or_presence_notes": "presence reads as regal, intelligent, and emotionally resonant",
+            "physical_build": "elegant high-born silhouette",
+            "movement_language": "graceful controlled movement with courtly bearing",
+            "sex": "female",
+            "age_range": "young adult",
+        }
+        if field_name in red_feminine_defaults:
+            return red_feminine_defaults[field_name]
+    if profile["is_human"] and profile["is_masculine_coded"]:
+        human_defaults = {
+            "height": "tall frontier-soldier stature",
+            "build": "lean battle-tested human build",
+            "skin_tone": "sun-weathered human skin",
+            "hair_color": "dark sun-faded hair",
+            "hair_style": "short practical frontier cut",
+            "eye_color": "dark steady eyes",
+            "face_shape": "weathered angular face",
+            "facial_hair": "clean-shaven or short field stubble",
+            "costume_materials": "worn cloth, leather, cavalry gear, and salvaged materials",
+            "posture": "upright, self-possessed, and ready",
+            "expression_tendency": "steady, capable, restrained intensity",
+            "voice_or_presence_notes": "presence reads as direct, capable, and frontier-hardened",
+            "physical_build": "lean but durable soldier's frame",
+            "movement_language": "economical military movement with confident balance",
+            "sex": "male",
+            "age_range": "adult",
+        }
+        if field_name in human_defaults:
+            return human_defaults[field_name]
+    return None
 
 
 def _load_json_file(path: Path) -> dict[str, Any]:
@@ -1419,6 +1600,23 @@ def _llm_complete_generated_fields(
         return None
     settings = load_runtime_settings()
     client = LMStudioClient(settings)
+    character_profile_lines = ""
+    if entity_type == CHARACTER_ENTITY_TYPE:
+        profile = _character_profile(base_fields, evidence_summary, canonical_id, display_name)
+        profile_lines = []
+        if profile["is_green_martian"]:
+            profile_lines.append("- Species cue: green Martian / Thark. Do not default to generic human coloring, hair, or facial hair.")
+        if profile["is_red_martian"]:
+            profile_lines.append("- Species cue: red Martian. Use red Martian humanoid cues where supported by the canon.")
+        if profile["is_creature"]:
+            profile_lines.append("- Entity cue: creature/beast. Do not fill with human portrait assumptions.")
+        if profile["is_collective"]:
+            profile_lines.append("- Entity cue: collective/group. Avoid singular portrait assumptions.")
+        if profile["is_feminine_coded"]:
+            profile_lines.append("- Gender cue: feminine-coded. Do not emit masculine defaults like stubble or male-coded grooming.")
+        if profile["is_human"]:
+            profile_lines.append("- Identity cue: human/Earthling. Human military/frontier defaults are acceptable only if they match the canon.")
+        character_profile_lines = "\n".join(profile_lines)
 
     system = (
         "You are a descriptor completion system for a film pipeline. "
@@ -1428,6 +1626,8 @@ def _llm_complete_generated_fields(
         "If a field is still uncertain, make the best plausible stable visual choice rather than leaving it unknown. "
         "Never output placeholder phrases, meta descriptions, or labels such as 'canon-compatible best-effort', 'unknown', 'n/a', 'tbd', or 'to be determined'. "
         "Every generated field must contain a usable production-facing value. "
+        "Do not reuse a stock generic human bundle across unrelated characters. "
+        "Generated fields must reflect species, sex/gender cues, social role, and supported canon already present in the descriptor. "
         "Return one tagged FilmCreator markdown packet only. "
         "Do not return JSON."
     )
@@ -1451,6 +1651,9 @@ Good examples:
 - weathered bronze skin
 - close-cropped dark hair
 - vaulted marble hall with a raised central dais
+
+Character-specific constraints:
+{character_profile_lines or '- No extra character constraints.'}
 
 DESCRIPTOR:
 {json.dumps({
@@ -1529,7 +1732,26 @@ inferred_fields:
         return None
 
 
-def _best_effort_generated_value(entity_type: str, field_name: str, current_value: Any) -> Any:
+def _best_effort_generated_value(
+    entity_type: str,
+    field_name: str,
+    current_value: Any,
+    *,
+    base_fields: dict[str, Any] | None = None,
+    evidence_summary: list[str] | None = None,
+    canonical_id: str = "",
+    display_name: str = "",
+) -> Any:
+    if entity_type == CHARACTER_ENTITY_TYPE and base_fields is not None and evidence_summary is not None:
+        specific = _character_specific_generated_default(
+            field_name,
+            base_fields=base_fields,
+            evidence_summary=evidence_summary,
+            canonical_id=canonical_id,
+            display_name=display_name,
+        )
+        if specific is not None:
+            return specific
     defaults: dict[str, dict[str, Any]] = {
         "character": {
             "height": "average-tall",
@@ -1638,11 +1860,54 @@ def _complete_missing_generated_fields(
 
     for field_name in missing_fields:
         if _descriptor_value_is_unknown(base_fields.get(field_name)):
-            base_fields[field_name] = _best_effort_generated_value(entity_type, field_name, base_fields.get(field_name))
+            base_fields[field_name] = _best_effort_generated_value(
+                entity_type,
+                field_name,
+                base_fields.get(field_name),
+                base_fields=base_fields,
+                evidence_summary=evidence_summary,
+                canonical_id=canonical_id,
+                display_name=display_name,
+            )
             field_origin[field_name] = "llm_generated"
             if field_name not in inferred_fields:
                 inferred_fields.append(field_name)
             review_flags.append(f"generated_field_placeholder_{field_name}")
+
+
+def _sanitize_character_fields(base_fields: dict[str, Any], field_origin: dict[str, str]) -> None:
+    for field_name in ["recurring_accessories", "distinctive_features", "state_variants", "costume_layers", "aliases"]:
+        if field_name in base_fields:
+            cleaned = _coerce_string_list(base_fields.get(field_name, []))
+            if cleaned:
+                base_fields[field_name] = cleaned
+            else:
+                base_fields.pop(field_name, None)
+                field_origin.pop(field_name, None)
+
+    for field_name in ["identity_baseline", "age_presence", "physical_build", "origin_or_historical_context", "movement_language", "costume_signature", "voice_or_presence_notes"]:
+        if field_name in base_fields:
+            cleaned = _clean_visual_summary(base_fields.get(field_name), fallback="")
+            if cleaned:
+                base_fields[field_name] = cleaned
+            else:
+                base_fields[field_name] = "unknown"
+                field_origin[field_name] = "fallback"
+
+    base_fields["silhouette_notes"] = _join_visual_fragments(
+        base_fields.get("costume_signature", ""),
+        base_fields.get("physical_build", ""),
+        base_fields.get("identity_baseline", ""),
+        fallback="unknown",
+    )
+    base_fields["physical_presence_notes"] = _join_visual_fragments(
+        base_fields.get("identity_baseline", ""),
+        base_fields.get("age_presence", ""),
+        base_fields.get("physical_build", ""),
+        base_fields.get("movement_language", ""),
+        base_fields.get("voice_or_presence_notes", ""),
+        fallback="unknown",
+    )
 
 
 def _finalize_descriptor(
@@ -1753,8 +2018,8 @@ def _base_character_descriptor(
     def set_field(key: str, value: Any, *, origin: str, ref: dict[str, Any] | None = None) -> None:
         _add_field(base_fields, {}, {}, field_origin, field_sources, inferred_fields, key, value, origin=origin, source_ref=ref)
 
-    set_field("sex", bible.get("sex") or entry.get("sex") or "unknown", origin="bible")
-    set_field("age_range", bible.get("age_range") or entry.get("age_range") or "unknown", origin="bible")
+    set_field("sex", bible.get("sex") or entry.get("sex") or "unknown", origin="fallback" if not (bible.get("sex") or entry.get("sex")) else "bible")
+    set_field("age_range", bible.get("age_range") or entry.get("age_range") or "unknown", origin="fallback" if not (bible.get("age_range") or entry.get("age_range")) else "bible")
     set_field("role", bible.get("role") or entry.get("entity_kind") or "unknown", origin="bible")
     set_field("entity_kind", entry.get("entity_kind") or "individual", origin="registry_entry")
     set_field("aliases", _coerce_string_list(bible.get("aliases", []), entry.get("aliases", [])), origin="bible")
@@ -1768,35 +2033,31 @@ def _base_character_descriptor(
     set_field("facial_hair", "unknown", origin="fallback")
     set_field("distinctive_features", _coerce_string_list(bible.get("distinguishing_features", []), bible.get("physical_traits", [])), origin="bible")
     set_field("identity_baseline", _clean_visual_summary(bible.get("identity_baseline"), fallback="unknown"), origin="bible")
-    set_field("age_presence", _clean_visual_summary(bible.get("age_presence"), fallback="unknown"), origin="bible")
-    set_field("physical_build", _clean_visual_summary(bible.get("physical_build"), fallback="unknown"), origin="bible")
+    set_field("age_presence", _clean_visual_summary(bible.get("age_presence"), fallback="unknown"), origin="fallback" if not _clean_visual_summary(bible.get("age_presence"), fallback="") else "bible")
+    set_field("physical_build", _clean_visual_summary(bible.get("physical_build"), fallback="unknown"), origin="fallback" if not _clean_visual_summary(bible.get("physical_build"), fallback="") else "bible")
     set_field("origin_or_historical_context", _clean_visual_summary(bible.get("origin_or_historical_context"), fallback="unknown"), origin="bible")
-    set_field("movement_language", _clean_visual_summary(bible.get("movement_language"), fallback="unknown"), origin="bible")
+    set_field("movement_language", _clean_visual_summary(bible.get("movement_language"), fallback="unknown"), origin="fallback" if not _clean_visual_summary(bible.get("movement_language"), fallback="") else "bible")
     set_field("state_variants", _coerce_string_list(bible.get("state_variants", [])), origin="bible")
     set_field("costume_layers", _coerce_string_list(bible.get("costume_signature", "")), origin="bible")
     set_field("costume_materials", "unknown", origin="fallback")
-    set_field("costume_signature", bible.get("costume_signature") or "unknown", origin="bible")
-    set_field("silhouette_notes", _clean_visual_summary(" ".join(_coerce_string_list(bible.get("costume_signature", ""), bible.get("physical_build", ""), bible.get("identity_baseline", ""))), fallback="unknown"), origin="bible")
+    set_field("costume_signature", bible.get("costume_signature") or "unknown", origin="fallback" if not bible.get("costume_signature") else "bible")
+    set_field("silhouette_notes", _join_visual_fragments(bible.get("costume_signature", ""), bible.get("physical_build", ""), bible.get("identity_baseline", ""), fallback="unknown"), origin="bible")
     set_field("recurring_accessories", _coerce_string_list(bible.get("relationship_notes", [])), origin="bible")
     set_field("posture", "unknown", origin="fallback")
     set_field("expression_tendency", "unknown", origin="fallback")
     set_field(
         "physical_presence_notes",
-        _clean_visual_summary(
-            " ".join(
-                [
-                    str(bible.get("identity_baseline", "")),
-                    str(bible.get("age_presence", "")),
-                    str(bible.get("physical_build", "")),
-                    str(bible.get("movement_language", "")),
-                    str(bible.get("stable_visual_summary", "")),
-                ]
-            ),
+        _join_visual_fragments(
+            bible.get("identity_baseline", ""),
+            bible.get("age_presence", ""),
+            bible.get("physical_build", ""),
+            bible.get("movement_language", ""),
+            bible.get("stable_visual_summary", ""),
             fallback="unknown",
         ),
         origin="bible",
     )
-    set_field("voice_or_presence_notes", _clean_visual_summary(bible.get("voice_notes"), fallback="unknown"), origin="bible")
+    set_field("voice_or_presence_notes", _clean_visual_summary(bible.get("voice_notes"), fallback="unknown"), origin="fallback" if not _clean_visual_summary(bible.get("voice_notes"), fallback="") else "bible")
     set_field("chapter_mentions", _coerce_string_list(entry.get("chapter_mentions", [])), origin="registry_entry")
 
     llm_payload = None
@@ -1841,6 +2102,7 @@ def _base_character_descriptor(
         review_flags=review_flags,
         inferred_fields=inferred_fields,
     )
+    _sanitize_character_fields(base_fields, field_origin)
 
     if not evidence_summary:
         evidence_summary = ["No usable evidence lines were collected."]

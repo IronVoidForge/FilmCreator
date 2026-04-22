@@ -20,14 +20,14 @@
 
 ## Generated Fields
 
-- architecture: canon-compatible best-effort environment architecture
-- depth_cues: canon-compatible best-effort environment depth cues
-- foreground_midground_background: canon-compatible best-effort environment foreground midground background
-- geography: canon-compatible best-effort environment geography
-- materials: canon-compatible best-effort environment materials
-- pathways: canon-compatible best-effort environment pathways
-- scale: canon-compatible best-effort environment scale
-- weather_or_atmosphere: canon-compatible best-effort environment weather or atmosphere
+- architecture: ancient stone and ceremonial architecture
+- depth_cues: strong scale contrast and layered architectural depth
+- foreground_midground_background: anchored foreground details, readable midground action, deep background structures
+- geography: dry open Martian terrain
+- materials: stone, metal, and weathered architectural surfaces
+- pathways: broad processional paths and stairs
+- scale: monumental scale
+- weather_or_atmosphere: dry thin air with still heat
 
 ## Coverage
 
@@ -62,5 +62,5 @@
 - artifact_id: `DESC_ENV_ancient_tableland_city`
 - status: `generated`
 - source_fingerprint: `50df435a53383af3ad39df0338d3734a9318b0e5`
-- created_at_utc: `2026-04-22T04:24:10.041367+00:00`
-- updated_at_utc: `2026-04-22T04:24:10.041367+00:00`
+- created_at_utc: `2026-04-22T17:55:31.615870+00:00`
+- updated_at_utc: `2026-04-22T17:55:31.615870+00:00`

@@ -26,20 +26,20 @@
 
 ## Generated Fields
 
-- architecture: canon-compatible best-effort environment architecture
-- depth_cues: canon-compatible best-effort environment depth cues
-- foreground_midground_background: canon-compatible best-effort environment foreground midground background
-- geography: canon-compatible best-effort environment geography
-- materials: canon-compatible best-effort environment materials
-- pathways: canon-compatible best-effort environment pathways
-- scale: canon-compatible best-effort environment scale
-- weather_or_atmosphere: canon-compatible best-effort environment weather or atmosphere
+- architecture: ancient stone and ceremonial architecture
+- depth_cues: strong scale contrast and layered architectural depth
+- foreground_midground_background: anchored foreground details, readable midground action, deep background structures
+- geography: dry open Martian terrain
+- materials: stone, metal, and weathered architectural surfaces
+- pathways: broad processional paths and stairs
+- scale: monumental scale
+- weather_or_atmosphere: dry thin air with still heat
 
 ## Coverage
 
 - chapter_mentions: CH004
 - scene_mentions: CH004_SC002
-- shot_mentions: CH004_SC002/SH001, CH004_SC002/SH002, CH004_SC002/SH003, CH004_SC002/SH004
+- shot_mentions: CH004_SC002/SH001, CH004_SC002/SH002, CH004_SC002/SH003, CH004_SC002/SH004, CH004_SC003/SH001, CH004_SC003/SH002, CH004_SC003/SH003, CH004_SC003/SH004, CH004_SC003/SH005, CH004_SC004/SH001, CH004_SC004/SH002, CH004_SC004/SH003, CH004_SC004/SH004, CH004_SC005/SH001, CH004_SC005/SH002, CH004_SC005/SH003
 
 ## Evidence Summary
 
@@ -68,5 +68,5 @@
 - artifact_id: `DESC_ENV_grand_audience_chamber`
 - status: `generated`
 - source_fingerprint: `4374063c3c2548018deff95be9b817f74fde4c5d`
-- created_at_utc: `2026-04-22T04:33:44.801478+00:00`
-- updated_at_utc: `2026-04-22T04:33:44.801478+00:00`
+- created_at_utc: `2026-04-22T17:59:42.622529+00:00`
+- updated_at_utc: `2026-04-22T17:59:42.622529+00:00`

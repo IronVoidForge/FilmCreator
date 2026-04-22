@@ -22,17 +22,17 @@
 
 ## Generated Fields
 
-- build: canon-compatible best-effort character build
-- costume_materials: canon-compatible best-effort character costume materials
-- expression_tendency: canon-compatible best-effort character expression tendency
-- eye_color: canon-compatible best-effort character eye color
-- face_shape: canon-compatible best-effort character face shape
-- facial_hair: canon-compatible best-effort character facial hair
-- hair_color: canon-compatible best-effort character hair color
-- hair_style: canon-compatible best-effort character hair style
-- height: canon-compatible best-effort character height
-- posture: canon-compatible best-effort character posture
-- skin_tone: canon-compatible best-effort character skin tone
+- build: lean athletic build
+- costume_materials: worn cloth, leather, and practical field materials
+- expression_tendency: focused and self-controlled
+- eye_color: dark eyes
+- face_shape: angular face
+- facial_hair: clean-shaven or light stubble
+- hair_color: dark brown
+- hair_style: practical short hair
+- height: average-tall
+- posture: upright and ready
+- skin_tone: weathered light-to-medium skin
 
 ## Coverage
 
@@ -69,5 +69,5 @@
 - artifact_id: `DESC_CHAR_martian_mounts`
 - status: `generated`
 - source_fingerprint: `50e2d59b399967aea81f3b2fa44fa6d014ec205b`
-- created_at_utc: `2026-04-22T04:11:45.053252+00:00`
-- updated_at_utc: `2026-04-22T04:11:45.053252+00:00`
+- created_at_utc: `2026-04-22T17:48:51.265901+00:00`
+- updated_at_utc: `2026-04-22T17:48:51.265901+00:00`

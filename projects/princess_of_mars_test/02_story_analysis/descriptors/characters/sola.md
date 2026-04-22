@@ -42,23 +42,23 @@
 
 ## Generated Fields
 
-- build: canon-compatible best-effort character build
-- costume_materials: canon-compatible best-effort character costume materials
-- expression_tendency: canon-compatible best-effort character expression tendency
-- eye_color: canon-compatible best-effort character eye color
-- face_shape: canon-compatible best-effort character face shape
-- facial_hair: canon-compatible best-effort character facial hair
-- hair_color: canon-compatible best-effort character hair color
-- hair_style: canon-compatible best-effort character hair style
-- height: canon-compatible best-effort character height
-- posture: canon-compatible best-effort character posture
-- skin_tone: canon-compatible best-effort character skin tone
+- build: lean athletic build
+- costume_materials: worn cloth, leather, and practical field materials
+- expression_tendency: focused and self-controlled
+- eye_color: dark eyes
+- face_shape: angular face
+- facial_hair: clean-shaven or light stubble
+- hair_color: dark brown
+- hair_style: practical short hair
+- height: average-tall
+- posture: upright and ready
+- skin_tone: weathered light-to-medium skin
 
 ## Coverage
 
 - chapter_mentions: CH004, CH005, CH006, CH007, CH008, CH009, CH011, CH013, CH015, CH016, CH017, CH014, CH027
-- scene_mentions: CH004_SC004, CH004_SC005, CH005_SC001, CH008_SC001, CH009_SC002, CH009_SC005, CH014_SC005, CH015_SC001, CH015_SC003, CH016_SC001, CH016_SC002, CH016_SC004, CH016_SC005, CH017_SC001, CH017_SC002, CH017_SC003
-- shot_mentions: CH005_SC001/SH002, CH005_SC001/SH004, CH008_SC001/SH002, CH008_SC001/SH003, CH009_SC005/SH001, CH009_SC005/SH002, CH014_SC005/SH004, CH015_SC001/SH004, CH015_SC003/SH001, CH015_SC003/SH002, CH015_SC003/SH003, CH016_SC001/SH001, CH016_SC002/SH001, CH016_SC002/SH005, CH016_SC004/SH002, CH016_SC005/SH001, CH017_SC001/SH005, CH017_SC002/SH001, CH017_SC002/SH004
+- scene_mentions: CH004_SC004, CH004_SC005, CH005_SC001
+- shot_mentions: CH004_SC004/SH003, CH005_SC001/SH002, CH005_SC001/SH004
 
 ## Evidence Summary
 
@@ -91,5 +91,5 @@
 - artifact_id: `DESC_CHAR_sola`
 - status: `generated`
 - source_fingerprint: `f849eb00e025188644cecd6b12dcd7c833174bd3`
-- created_at_utc: `2026-04-22T04:16:00.688066+00:00`
-- updated_at_utc: `2026-04-22T04:16:00.688066+00:00`
+- created_at_utc: `2026-04-22T17:51:27.049596+00:00`
+- updated_at_utc: `2026-04-22T17:51:27.049596+00:00`

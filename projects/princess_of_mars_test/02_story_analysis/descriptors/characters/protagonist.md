@@ -38,23 +38,23 @@
 
 ## Generated Fields
 
-- build: canon-compatible best-effort character build
-- costume_materials: canon-compatible best-effort character costume materials
-- expression_tendency: canon-compatible best-effort character expression tendency
-- eye_color: canon-compatible best-effort character eye color
-- face_shape: canon-compatible best-effort character face shape
-- facial_hair: canon-compatible best-effort character facial hair
-- hair_color: canon-compatible best-effort character hair color
-- hair_style: canon-compatible best-effort character hair style
-- height: canon-compatible best-effort character height
-- posture: canon-compatible best-effort character posture
-- skin_tone: canon-compatible best-effort character skin tone
+- build: lean athletic build
+- costume_materials: worn cloth, leather, and practical field materials
+- expression_tendency: focused and self-controlled
+- eye_color: dark eyes
+- face_shape: angular face
+- facial_hair: clean-shaven or light stubble
+- hair_color: dark brown
+- hair_style: practical short hair
+- height: average-tall
+- posture: upright and ready
+- skin_tone: weathered light-to-medium skin
 
 ## Coverage
 
 - chapter_mentions: CH002, CH003, CH004, CH005, CH006, CH007, CH008, CH009, CH020, CH018
-- scene_mentions: CH003_SC001, CH003_SC002, CH003_SC003, CH003_SC004, CH003_SC005, CH005_SC001, CH005_SC002, CH005_SC003, CH005_SC004, CH008_SC001, CH008_SC004, CH008_SC005, CH009_SC001, CH009_SC002, CH009_SC003, CH009_SC006, CH020_SC001, CH020_SC002, CH020_SC003, CH020_SC004, CH020_SC005
-- shot_mentions: CH003_SC001/SH001, CH003_SC001/SH002, CH003_SC001/SH003, CH003_SC002/SH001, CH003_SC002/SH002, CH003_SC002/SH003, CH003_SC003/SH001, CH003_SC003/SH002, CH003_SC003/SH003, CH003_SC003/SH004, CH003_SC004/SH001, CH003_SC004/SH002, CH003_SC004/SH003, CH003_SC005/SH002, CH003_SC005/SH003, CH003_SC005/SH004, CH003_SC005/SH005, CH005_SC001/SH001, CH005_SC001/SH003, CH005_SC001/SH004, CH005_SC002/SH001, CH005_SC002/SH003, CH005_SC003/SH001, CH005_SC003/SH002, CH005_SC003/SH004, CH005_SC004/SH001, CH005_SC004/SH002, CH005_SC004/SH003, CH005_SC004/SH004, CH008_SC001/SH001, CH008_SC001/SH002, CH008_SC001/SH003, CH008_SC004/SH001, CH008_SC004/SH002, CH008_SC004/SH003, CH008_SC005/SH001, CH008_SC005/SH003, CH009_SC001/SH001, CH009_SC001/SH002, CH009_SC001/SH003, CH009_SC002/SH001, CH009_SC002/SH002, CH009_SC002/SH003, CH009_SC003/SH001, CH009_SC003/SH002, CH009_SC003/SH003, CH009_SC006/SH001, CH009_SC006/SH002, CH009_SC006/SH003, CH020_SC001/SH001, CH020_SC001/SH002, CH020_SC001/SH003, CH020_SC002/SH001, CH020_SC002/SH003, CH020_SC002/SH004, CH020_SC003/SH001, CH020_SC003/SH002, CH020_SC003/SH004, CH020_SC004/SH001, CH020_SC004/SH003, CH020_SC004/SH004, CH020_SC005/SH001, CH020_SC005/SH002, CH020_SC005/SH003, CH020_SC005/SH004
+- scene_mentions: CH003_SC001, CH003_SC002, CH003_SC003, CH003_SC004, CH003_SC005, CH005_SC001, CH005_SC002, CH005_SC003, CH005_SC004
+- shot_mentions: CH003_SC001/SH001, CH003_SC001/SH002, CH003_SC001/SH003, CH003_SC002/SH001, CH003_SC002/SH002, CH003_SC002/SH003, CH003_SC003/SH001, CH003_SC003/SH002, CH003_SC003/SH003, CH003_SC004/SH001, CH003_SC004/SH002, CH003_SC004/SH003, CH003_SC005/SH002, CH003_SC005/SH003, CH003_SC005/SH004, CH003_SC005/SH005, CH005_SC001/SH001, CH005_SC001/SH003, CH005_SC001/SH004, CH005_SC002/SH001, CH005_SC002/SH002, CH005_SC002/SH003, CH005_SC003/SH001, CH005_SC003/SH002, CH005_SC003/SH004, CH005_SC004/SH001, CH005_SC004/SH002, CH005_SC004/SH003, CH005_SC004/SH004
 
 ## Evidence Summary
 
@@ -87,5 +87,5 @@
 - artifact_id: `DESC_CHAR_protagonist`
 - status: `generated`
 - source_fingerprint: `86ddd6ef20749407dac5dfd5d1b97f9a850427e6`
-- created_at_utc: `2026-04-22T04:13:54.935693+00:00`
-- updated_at_utc: `2026-04-22T04:13:54.935693+00:00`
+- created_at_utc: `2026-04-22T17:50:57.153961+00:00`
+- updated_at_utc: `2026-04-22T17:50:57.153961+00:00`
