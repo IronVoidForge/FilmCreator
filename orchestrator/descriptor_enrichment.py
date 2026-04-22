@@ -404,30 +404,80 @@ def _join_visual_fragments(*values: object, fallback: str = "unknown", limit: in
     return _compact(" ".join(parts), limit=limit)
 
 
-def _character_profile(base_fields: dict[str, Any], evidence_summary: list[str], canonical_id: str, display_name: str) -> dict[str, bool]:
-    text_parts = [
+def _character_profile(base_fields: dict[str, Any], evidence_summary: list[str], canonical_id: str, display_name: str) -> dict[str, Any]:
+    hard_parts = [
         canonical_id,
         display_name,
+        str(base_fields.get("entity_kind", "")),
         str(base_fields.get("role", "")),
         str(base_fields.get("identity_baseline", "")),
         str(base_fields.get("origin_or_historical_context", "")),
         str(base_fields.get("physical_build", "")),
-        str(base_fields.get("movement_language", "")),
         " ".join(_coerce_string_list(base_fields.get("distinctive_features", []))),
+    ]
+    soft_parts = [
+        str(base_fields.get("movement_language", "")),
         " ".join(_coerce_string_list(base_fields.get("state_variants", []))),
         " ".join(_coerce_string_list(base_fields.get("costume_layers", []))),
         " ".join(evidence_summary),
     ]
-    text = " ".join(_normalize_text(part).lower() for part in text_parts if isinstance(part, str) and part.strip())
+    hard_text = " ".join(_normalize_text(part).lower() for part in hard_parts if isinstance(part, str) and part.strip())
+    soft_text = " ".join(_normalize_text(part).lower() for part in soft_parts if isinstance(part, str) and part.strip())
+    full_text = " ".join(part for part in [hard_text, soft_text] if part).strip()
+
+    entity_kind = str(base_fields.get("entity_kind", "")).strip().lower()
+    singular_named_role = any(token in hard_text for token in ["chieftain", "leader", "princess", "officer", "jeddak", "noblewoman"])
+    explicit_human = any(token in hard_text for token in ["human male", "human female", "earthling", "american frontier", "confederate", "john carter"])
+    explicit_creature = any(token in hard_text for token in ["calot", "ape", "hound", "watchdog", "watch dog", "creature", "beast", "thoat"])
+    explicit_creature_anatomy = any(token in full_text for token in ["four arms", "four-armed", "multiple tusks", "canine-like anatomy", "animal", "primate silhouette", "hound"])
+    explicit_green = "green martian" in hard_text or "thark" in hard_text or "green skin" in hard_text
+    explicit_red = "red-skinned" in hard_text or "red martian" in hard_text or "helium" in hard_text or "red skin" in hard_text
+    explicit_collective = entity_kind in {"collective", "group"} or canonical_id.strip().lower() in {"warriors", "guardsmen", "horde", "family", "court"}
+    feminine_coded = any(token in full_text for token in ["princess", "noblewoman", "woman", "mother", "female", " her ", " she "])
+    masculine_coded = any(token in full_text for token in ["officer", "chieftain", "warrior", "man", "father", "male", " his ", " he "])
+
+    if explicit_human:
+        resolved_profile_class = "human_individual"
+    elif explicit_collective:
+        resolved_profile_class = "collective_group"
+    elif entity_kind == "individual" and singular_named_role:
+        if explicit_green:
+            resolved_profile_class = "green_martian_individual"
+        elif explicit_red:
+            resolved_profile_class = "red_martian_individual"
+        else:
+            resolved_profile_class = "unknown_individual"
+    elif explicit_creature and explicit_creature_anatomy:
+        resolved_profile_class = "creature_individual"
+    elif explicit_green:
+        resolved_profile_class = "green_martian_individual"
+    elif explicit_red:
+        resolved_profile_class = "red_martian_individual"
+    elif entity_kind == "individual" and explicit_creature_anatomy and explicit_creature:
+        resolved_profile_class = "creature_individual"
+    else:
+        resolved_profile_class = "unknown_individual"
+
+    conflicts: list[str] = []
+    if explicit_human and (explicit_creature or explicit_creature_anatomy):
+        conflicts.append("profile_conflict_human_vs_creature")
+    if entity_kind == "individual" and explicit_collective:
+        conflicts.append("profile_conflict_individual_vs_collective")
+    if explicit_green and explicit_red:
+        conflicts.append("profile_conflict_green_vs_red_martian")
+
     return {
-        "is_green_martian": "green martian" in text or "thark" in text,
-        "is_red_martian": "red-skinned" in text or "red martian" in text or "helium" in text,
-        "is_nonhuman": any(token in text for token in ["martian", "thark", "warhoon", "barsoom"]) and "human male" not in text,
-        "is_creature": any(token in text for token in ["ape", "thoat", "calot", "watch dog", "watchdog", "creature", "beast", "mount"]),
-        "is_collective": any(token in text for token in ["warriors", "horde", "family", "guardsmen", "martians"]) or str(base_fields.get("entity_kind", "")).strip().lower() in {"collective", "group"},
-        "is_feminine_coded": any(token in text for token in ["princess", "noblewoman", "woman", "mother", "female", "her ", " she "]),
-        "is_masculine_coded": any(token in text for token in ["officer", "chieftain", "warrior", "man", "father", "male", "his ", " he "]),
-        "is_human": "human male" in text or "earthling" in text or "american frontier" in text,
+        "entity_kind": entity_kind,
+        "resolved_profile_class": resolved_profile_class,
+        "is_green_martian": resolved_profile_class == "green_martian_individual",
+        "is_red_martian": resolved_profile_class == "red_martian_individual",
+        "is_nonhuman": resolved_profile_class in {"green_martian_individual", "red_martian_individual", "creature_individual"},
+        "is_creature": resolved_profile_class == "creature_individual",
+        "is_collective": resolved_profile_class == "collective_group",
+        "is_feminine_coded": feminine_coded,
+        "is_masculine_coded": masculine_coded,
+        "is_human": resolved_profile_class == "human_individual",
+        "conflicts": conflicts,
     }
 
 
@@ -440,7 +490,8 @@ def _character_specific_generated_default(
     display_name: str,
 ) -> Any:
     profile = _character_profile(base_fields, evidence_summary, canonical_id, display_name)
-    if profile["is_collective"]:
+    profile_class = profile["resolved_profile_class"]
+    if profile_class == "collective_group":
         collective_defaults = {
             "height": "varied heights within a broad martial group",
             "build": "varied but generally battle-hardened builds",
@@ -461,7 +512,7 @@ def _character_specific_generated_default(
         }
         if field_name in collective_defaults:
             return collective_defaults[field_name]
-    if profile["is_creature"]:
+    if profile_class == "creature_individual":
         creature_defaults = {
             "height": "large creature scale",
             "build": "powerful muscular animal build",
@@ -482,7 +533,7 @@ def _character_specific_generated_default(
         }
         if field_name in creature_defaults:
             return creature_defaults[field_name]
-    if profile["is_green_martian"]:
+    if profile_class == "green_martian_individual":
         green_defaults = {
             "height": "towering over a human frame",
             "build": "massive war-ready Martian build",
@@ -503,7 +554,7 @@ def _character_specific_generated_default(
         }
         if field_name in green_defaults:
             return green_defaults[field_name]
-    if profile["is_red_martian"] and profile["is_feminine_coded"]:
+    if profile_class == "red_martian_individual" and profile["is_feminine_coded"]:
         red_feminine_defaults = {
             "height": "tall graceful humanoid stature",
             "build": "slender noble athletic build",
@@ -524,7 +575,7 @@ def _character_specific_generated_default(
         }
         if field_name in red_feminine_defaults:
             return red_feminine_defaults[field_name]
-    if profile["is_human"] and profile["is_masculine_coded"]:
+    if profile_class == "human_individual" and profile["is_masculine_coded"]:
         human_defaults = {
             "height": "tall frontier-soldier stature",
             "build": "lean battle-tested human build",
@@ -545,6 +596,27 @@ def _character_specific_generated_default(
         }
         if field_name in human_defaults:
             return human_defaults[field_name]
+    if profile_class == "human_individual" and profile["is_feminine_coded"]:
+        human_feminine_defaults = {
+            "height": "tall human stature",
+            "build": "slender capable human build",
+            "skin_tone": "human skin tone suited to the canon context",
+            "hair_color": "human hair color suited to the canon context",
+            "hair_style": "practical human hairstyle",
+            "eye_color": "steady human eyes",
+            "face_shape": "human facial structure",
+            "facial_hair": "none",
+            "costume_materials": "cloth, leather, and context-appropriate human materials",
+            "posture": "upright and self-possessed",
+            "expression_tendency": "composed and readable",
+            "voice_or_presence_notes": "presence reads as capable and grounded",
+            "physical_build": "capable human silhouette",
+            "movement_language": "controlled, intentional movement",
+            "sex": "female",
+            "age_range": "adult",
+        }
+        if field_name in human_feminine_defaults:
+            return human_feminine_defaults[field_name]
     return None
 
 
@@ -589,7 +661,7 @@ def _rewrite_character_generated_fields(
 ) -> tuple[dict[str, Any], list[str]]:
     profile = _character_profile(base_fields, evidence_summary, canonical_id, display_name)
     rewritten = dict(generated_fields)
-    rewrite_flags: list[str] = []
+    rewrite_flags: list[str] = list(profile.get("conflicts", []))
 
     def replace(field_name: str, reason: str) -> None:
         rewritten[field_name] = _character_specific_generated_default(
@@ -616,12 +688,19 @@ def _rewrite_character_generated_fields(
         normalized = _normalize_text(str(value)).lower() if isinstance(value, str) else ""
         if profile["is_feminine_coded"] and field_name == "facial_hair" and any(token in normalized for token in ["stubble", "beard", "mustache", "moustache"]):
             replace(field_name, "character_gender_contradiction_rewritten")
-        elif profile["is_green_martian"] and field_name in {"skin_tone", "hair_color", "hair_style", "facial_hair"}:
+        elif profile["resolved_profile_class"] == "green_martian_individual" and field_name in {"skin_tone", "hair_color", "hair_style", "facial_hair"}:
             if any(token in normalized for token in ["light-to-medium", "dark brown", "short hair", "stubble", "clean-shaven"]):
                 replace(field_name, f"character_species_contradiction_rewritten_{field_name}")
-        elif profile["is_creature"] and field_name in {"hair_style", "face_shape", "facial_hair", "skin_tone", "hair_color"}:
+        elif profile["resolved_profile_class"] == "creature_individual" and field_name in {"hair_style", "face_shape", "facial_hair", "skin_tone", "hair_color"}:
             if any(token in normalized for token in ["short hair", "angular face", "clean-shaven", "stubble", "dark brown", "light-to-medium"]):
                 replace(field_name, f"character_creature_contradiction_rewritten_{field_name}")
+        elif profile["resolved_profile_class"] == "human_individual" and field_name in {"sex", "age_range", "height", "build", "skin_tone", "hair_color", "hair_style", "eye_color", "face_shape", "facial_hair", "movement_language", "voice_or_presence_notes"}:
+            if any(token in normalized for token in ["animal", "beast", "hide", "fur", "mane", "predatory", "skull", "primal"]) or normalized == "not applicable":
+                replace(field_name, f"character_human_contradiction_rewritten_{field_name}")
+        elif profile["resolved_profile_class"] == "collective_group" and str(base_fields.get("entity_kind", "")).strip().lower() == "individual":
+            # A singular entity should not inherit collective outputs even if noisy evidence mentions groups.
+            if field_name in {"sex", "age_range", "height", "build", "movement_language", "voice_or_presence_notes"}:
+                replace(field_name, f"character_individual_vs_collective_rewritten_{field_name}")
 
     return rewritten, _ordered_unique(rewrite_flags)
 
@@ -1960,6 +2039,9 @@ def _complete_missing_generated_fields(
             field_origin[field_name] = "llm_generated"
             if field_name not in inferred_fields:
                 inferred_fields.append(field_name)
+        if _descriptor_value_is_unknown(base_fields.get(field_name)) or (
+            entity_type == CHARACTER_ENTITY_TYPE and _looks_like_generic_character_bundle(base_fields.get(field_name))
+        ):
             review_flags.append(f"generated_field_placeholder_{field_name}")
 
 

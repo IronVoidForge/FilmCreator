@@ -27,27 +27,29 @@
 - movement_language: Authoritative presence.
 - origin_or_historical_context: Thark/Martian setting.
 - physical_build: Enormous, powerful frame.
-- physical_presence_notes: Green Martian (Thark) chieftain and high-ranking leader. unknown Enormous, powerful frame. Authoritative presence. An enormous green Martian of the Thark race, Lorquas Ptomel carries the imposing presence of a high-ra...
-- recurring_accessories:
-  - unknown
+- physical_presence_notes: Green Martian (Thark) chieftain and high-ranking leader. readable production detail Enormous, powerful frame. Authoritative presence. presence reads as severe, disciplined, and intimidating
 - role: High-ranking Thark leader / Chieftain.
-- silhouette_notes: Thark warrior attire. Enormous powerful frame. Green Martian (Thark) chieftain and high-ranking leader.
+- silhouette_notes: Thark warrior attire. Enormous, powerful frame. Green Martian (Thark) chieftain and high-ranking leader.
 - state_variants:
   - Warrior leader / Chieftain
 
 ## Generated Fields
 
-- build: lean athletic build
-- costume_materials: worn cloth, leather, and practical field materials
-- expression_tendency: focused and self-controlled
-- eye_color: dark eyes
-- face_shape: angular face
-- facial_hair: clean-shaven or light stubble
-- hair_color: dark brown
-- hair_style: practical short hair
-- height: average-tall
-- posture: upright and ready
-- skin_tone: weathered light-to-medium skin
+- age_presence: readable production detail
+- age_range: battle-hardened adult
+- build: massive war-ready Martian build
+- costume_materials: hides, leather, metal fittings, and war gear
+- expression_tendency: stern, martial self-command
+- eye_color: hard-set eyes adapted to a harsh martial life
+- face_shape: severe planar Martian facial structure
+- facial_hair: typically none
+- hair_color: scalp mostly bare or minimally haired
+- hair_style: minimal or tightly kept scalp hair
+- height: towering over a human frame
+- posture: upright, dominant, and imposing
+- sex: male-coded Thark warrior
+- skin_tone: deep green skin
+- voice_or_presence_notes: presence reads as severe, disciplined, and intimidating
 
 ## Coverage
 
@@ -62,12 +64,13 @@
 - Thark warrior attire.
 - Stern, authoritative, and commanding.
 - High-ranking Thark leader / Chieftain.
-- unknown
 - [CH009] CHAPTER IX (book index hit)
 - [CH010] CHAPTER X (book index hit)
 
 ## Review
 
+- generated_field_placeholder_sex
+- generated_field_placeholder_age_range
 - generated_field_placeholder_height
 - generated_field_placeholder_build
 - generated_field_placeholder_skin_tone
@@ -76,15 +79,16 @@
 - generated_field_placeholder_eye_color
 - generated_field_placeholder_face_shape
 - generated_field_placeholder_facial_hair
+- generated_field_placeholder_age_presence
 - generated_field_placeholder_costume_materials
 - generated_field_placeholder_posture
 - generated_field_placeholder_expression_tendency
-- sex_unresolved
+- generated_field_placeholder_voice_or_presence_notes
 
 ## Metadata
 
 - artifact_id: `DESC_CHAR_lorquas_ptomel`
 - status: `generated`
-- source_fingerprint: `4fc840af39c817fa0923b25321428b683caddd3c`
-- created_at_utc: `2026-04-22T16:33:41.006992+00:00`
-- updated_at_utc: `2026-04-22T16:33:41.006992+00:00`
+- source_fingerprint: `a8144b8c592c1a887a7f34679f5c107ee1b367ec`
+- created_at_utc: `2026-04-22T21:43:10.915300+00:00`
+- updated_at_utc: `2026-04-22T21:43:10.915300+00:00`

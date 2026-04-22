@@ -1,11 +1,35 @@
 {
   "scene_id": "CH001_SC001",
   "chapter_id": "CH001",
-  "scene_title": "SC001",
+  "scene_title": "Establish the framing device and the protagonist's unique condition.",
   "purpose": "Establish the framing device and the protagonist's unique condition.",
   "summary": "An elderly John Carter introduces himself to the reader/audience, explaining his anomalous aging process and his decision to document his life story before he finally dies.",
   "emotional_arc": "Introspection / Solemnity.",
-  "production_intent": "The scene serves as a narrative framing device to introduce the protagonist's anomalous aging condition. The production must utilize soft lighting and intimate camera work to establish a reflective, solemn atmosphere that justifies the character's decision to document his life story.",
+  "production_intent": "Establish the framing device and the protagonist's unique condition.",
+  "scene_start_state": "An elderly John Carter introduces himself to the reader/audience, explaining his anomalous aging process and his decision to document his life story before he finally dies.",
+  "scene_end_state": "Arrive at the scene's transition point.",
+  "dominant_action_line": "An elderly John Carter introduces himself to the reader/audience, explaining his anomalous aging process and his decision to document his life story before he finally dies.",
+  "scene_spatial_layout": [
+    "Age of Carter (must remain consistent with \"elderly\" description)",
+    "tone of voice/delivery."
+  ],
+  "character_spatial_map": [
+    "Primary subject placement should remain readable against the main environment anchor."
+  ],
+  "environment_subzones": [
+    "primary scene playing area"
+  ],
+  "entry_vectors": [
+    "Subjects inherit entry logic from the prior scene or chapter transition."
+  ],
+  "exit_vectors": [
+    "Subjects exit or hand off toward the next story beat."
+  ],
+  "beat_transition_map": [
+    "BT001: An elderly John Carter introduces himself to the reader/audience, explaining his anomalous aging process and his decision to document his life story before he finally dies. -> An elderly John Carter introduces himself to the reader/audience, explaining his anomalous aging process and his decision to document his life story before he finally dies.",
+    "BT002: Continue the established scene action. -> Land the emotional shift: Introspection / Solemnity..",
+    "BT003: Continue the established scene action toward consequence. -> Arrive at the scene's transition point."
+  ],
   "characters_required": [
     {
       "label": "John Carter (Elderly)",
@@ -31,35 +55,62 @@
     }
   ],
   "continuity_constraints": [
-    "Consistency of Carter's elderly age/appearance",
-    "Stability of tone in voice and delivery"
+    "Age of Carter (must remain consistent with \"elderly\" description)",
+    "tone of voice/delivery."
   ],
   "visual_coverage_families": [
-    "Extreme close-ups (eyes/weathered skin)",
-    "Medium shots (seated position)",
-    "Soft lighting (memory/reflection aesthetic)"
+    "Extreme close-ups of eyes/weathered skin",
+    "medium shots of the elderly Carter in a seated position",
+    "soft lighting to suggest memory or reflection."
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "John Carter introduces himself directly to the audience.",
-      "purpose": "",
-      "continuity_focus": "",
-      "coverage_hint": ""
+      "summary": "An elderly John Carter introduces himself to the reader/audience, explaining his anomalous aging process and his decision to document his life story before he finally dies.",
+      "purpose": "Establish the framing device and the protagonist's unique condition.",
+      "action_start": "An elderly John Carter introduces himself to the reader/audience, explaining his anomalous aging process and his decision to document his life story before he finally dies.",
+      "action_end": "An elderly John Carter introduces himself to the reader/audience, explaining his anomalous aging process and his decision to document his life story before he finally dies.",
+      "active_subjects": [],
+      "passive_subjects": [],
+      "spatial_context": "Age of Carter (must remain consistent with \"elderly\" description)",
+      "blocking_hint": "Extreme close-ups of eyes/weathered skin",
+      "environment_subzone": "primary scene playing area",
+      "continuity_focus": "Age of Carter (must remain consistent with \"elderly\" description)",
+      "coverage_hint": "Extreme close-ups of eyes/weathered skin",
+      "coverage_priority": "primary story beat",
+      "handoff_to_next": ""
     },
     {
       "beat_id": "BT002",
-      "summary": "Explanation of his anomalous aging process.",
+      "summary": "Carry the emotional arc through: Introspection / Solemnity..",
       "purpose": "",
-      "continuity_focus": "",
-      "coverage_hint": ""
+      "action_start": "Continue the established scene action.",
+      "action_end": "Land the emotional shift: Introspection / Solemnity..",
+      "active_subjects": [],
+      "passive_subjects": [],
+      "spatial_context": "tone of voice/delivery.",
+      "blocking_hint": "medium shots of the elderly Carter in a seated position",
+      "environment_subzone": "primary scene playing area",
+      "continuity_focus": "tone of voice/delivery.",
+      "coverage_hint": "medium shots of the elderly Carter in a seated position",
+      "coverage_priority": "emotional transition",
+      "handoff_to_next": ""
     },
     {
       "beat_id": "BT003",
-      "summary": "Declaration of intent to document his life story before death.",
+      "summary": "Land the scene consequence or transition cleanly.",
       "purpose": "",
-      "continuity_focus": "",
-      "coverage_hint": ""
+      "action_start": "Continue the established scene action toward consequence.",
+      "action_end": "Arrive at the scene's transition point.",
+      "active_subjects": [],
+      "passive_subjects": [],
+      "spatial_context": "tone of voice/delivery.",
+      "blocking_hint": "soft lighting to suggest memory or reflection.",
+      "environment_subzone": "primary scene playing area",
+      "continuity_focus": "tone of voice/delivery.",
+      "coverage_hint": "soft lighting to suggest memory or reflection.",
+      "coverage_priority": "transition beat",
+      "handoff_to_next": ""
     }
   ],
   "unresolved_questions": [
@@ -124,14 +175,14 @@
     "[CH025] CHAPTER XXV (book index hit)",
     "[CH003] CHAPTER III (book index hit)"
   ],
-  "storyboard_markdown": "# Scene Contract: CH001_SC001\n\n## Production Intent\nThe scene serves as a narrative framing device to introduce the protagonist's anomalous aging condition. The production must utilize soft lighting and intimate camera work to establish a reflective, solemn atmosphere that justifies the character's decision to document his life story.\n\n## Required Cast\n- John Carter (Elderly)\n\n## Required Environments\n- Unspecified (Narrative framing space)\n\n## Continuity Constraints\n- Age of Carter: Must remain strictly consistent with \"elderly\" description throughout all coverage.\n- Performance: Tone of voice and delivery must maintain the established solemnity/introspection.\n\n## Beat List\n- BT001: John Carter introduces himself directly to the audience.\n- BT002: Explanation of his anomalous aging process.\n- BT003: Declaration of intent to document his life story before death.",
+  "storyboard_markdown": "# Scene Contract: CH001_SC001\n\n- chapter_id: `CH001`\n- scene_title: `Establish the framing device and the protagonist's unique condition.`\n\n## Production Intent\n\nEstablish the framing device and the protagonist's unique condition.\n\n## Storyboard\n\nAn elderly John Carter introduces himself to the reader/audience, explaining his anomalous aging process and his decision to document his life story before he finally dies.",
   "metadata": {
     "artifact_id": "CH001_SC001_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
     "source_fingerprint": "9bd668fa5329683f7e26b56b795c326d7646864b",
     "created_at_utc": "2026-04-21T23:17:11.047069+00:00",
-    "updated_at_utc": "2026-04-22T16:43:25.312014+00:00",
+    "updated_at_utc": "2026-04-22T21:43:58.304353+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -169,6 +220,11 @@
       },
       {
         "timestamp_utc": "2026-04-22T16:43:34.437425+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9bd668fa5329683f7e26b56b795c326d7646864b"
+      },
+      {
+        "timestamp_utc": "2026-04-22T21:44:23.776034+00:00",
         "action": "synthesized",
         "source_fingerprint": "9bd668fa5329683f7e26b56b795c326d7646864b"
       }

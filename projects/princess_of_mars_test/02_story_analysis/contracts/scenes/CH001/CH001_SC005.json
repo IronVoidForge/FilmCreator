@@ -1,11 +1,35 @@
 {
   "scene_id": "CH001_SC005",
   "chapter_id": "CH001",
-  "scene_title": "SC005",
+  "scene_title": "Transition the protagonist from the terrestrial world to the inciting...",
   "purpose": "Transition the protagonist from the terrestrial world to the inciting supernatural event.",
   "summary": "Carter's horse leads him to a narrow cave entrance on a high trail. After checking Powell, Carter enters the large, ancient chamber. Inside, he is overcome by an unnatural drowsiness and collapses into unconsciousness.",
   "emotional_arc": "Exhaustion $\\rightarrow$ Confusion $\\rightarrow$ Lethargy/Loss of consciousness.",
-  "production_intent": "Establish the transition from the terrestrial Arizona landscape to a supernatural inciting event. The sequence must manage a significant lighting shift from high-altitude exterior brightness to the dim, ancient atmosphere of the cave interior while executing a character collapse driven by unnatural lethargy.",
+  "production_intent": "Transition the protagonist from the terrestrial world to the inciting supernatural event.",
+  "scene_start_state": "Carter's horse leads him to a narrow cave entrance on a high trail. After checking Powell, Carter enters the large, ancient chamber. Inside, he is overcome by an unnatural drowsiness and collapses into unconsciousness.",
+  "scene_end_state": "Inside, he is overcome by an unnatural drowsiness and collapses into unconsciousness.",
+  "dominant_action_line": "Carter's horse leads him to a narrow cave entrance on a high trail. After checking Powell, Carter enters the large, ancient chamber. Inside, he is overcome by an unnatural drowsiness and collapses into unconsciousness.",
+  "scene_spatial_layout": [
+    "Lighting transition (from bright exterior to dark/dim cave)",
+    "the \"unnatural\" quality of the drowsiness (visual cues like heavy eyelids or blurred vision)."
+  ],
+  "character_spatial_map": [
+    "Primary subject placement should remain readable against the main environment anchor."
+  ],
+  "environment_subzones": [
+    "primary scene playing area"
+  ],
+  "entry_vectors": [
+    "Subjects inherit entry logic from the prior scene or chapter transition."
+  ],
+  "exit_vectors": [
+    "Subjects exit or hand off toward the next story beat."
+  ],
+  "beat_transition_map": [
+    "BT001: Carter's horse leads him to a narrow cave entrance on a high trail. -> After checking Powell, Carter enters the large, ancient chamber.",
+    "BT002: Continue from prior beat: Carter's horse leads him to a narrow cave entrance on a high trail. -> Inside, he is overcome by an unnatural drowsiness and collapses into unconsciousness.",
+    "BT003: Continue from prior beat: After checking Powell, Carter enters the large, ancient chamber. -> Inside, he is overcome by an unnatural drowsiness and collapses into unconsciousness."
+  ],
   "characters_required": [
     {
       "label": "John Carter (Younger)",
@@ -42,49 +66,62 @@
   ],
   "continuity_constraints": [
     "Lighting transition (from bright exterior to dark/dim cave)",
-    "Visual cues for unnatural drowsiness (heavy eyelids, blurred vision)"
+    "the \"unnatural\" quality of the drowsiness (visual cues like heavy eyelids or blurred vision)."
   ],
   "visual_coverage_families": [
     "Wide shots of the cave entrance on the cliff",
-    "Low-angle shots inside the chamber to emphasize scale",
-    "Close-ups of Carter's eyes drooping",
-    "Slow fade to black"
+    "low-angle shots inside the chamber to emphasize scale",
+    "close-ups of Carter's eyes drooping",
+    "slow fade to black."
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
       "summary": "Carter's horse leads him to a narrow cave entrance on a high trail.",
-      "purpose": "",
-      "continuity_focus": "",
-      "coverage_hint": ""
+      "purpose": "Transition the protagonist from the terrestrial world to the inciting supernatural event.",
+      "action_start": "Carter's horse leads him to a narrow cave entrance on a high trail.",
+      "action_end": "After checking Powell, Carter enters the large, ancient chamber.",
+      "active_subjects": [],
+      "passive_subjects": [],
+      "spatial_context": "Lighting transition (from bright exterior to dark/dim cave)",
+      "blocking_hint": "Wide shots of the cave entrance on the cliff",
+      "environment_subzone": "primary scene playing area",
+      "continuity_focus": "Lighting transition (from bright exterior to dark/dim cave)",
+      "coverage_hint": "Wide shots of the cave entrance on the cliff",
+      "coverage_priority": "primary story beat",
+      "handoff_to_next": "After checking Powell, Carter enters the large, ancient chamber."
     },
     {
       "beat_id": "BT002",
-      "summary": "Carter checks Powell.",
+      "summary": "After checking Powell, Carter enters the large, ancient chamber.",
       "purpose": "",
-      "continuity_focus": "",
-      "coverage_hint": ""
+      "action_start": "Continue from prior beat: Carter's horse leads him to a narrow cave entrance on a high trail.",
+      "action_end": "Inside, he is overcome by an unnatural drowsiness and collapses into unconsciousness.",
+      "active_subjects": [],
+      "passive_subjects": [],
+      "spatial_context": "the \"unnatural\" quality of the drowsiness (visual cues like heavy eyelids or blurred vision).",
+      "blocking_hint": "low-angle shots inside the chamber to emphasize scale",
+      "environment_subzone": "primary scene playing area",
+      "continuity_focus": "the \"unnatural\" quality of the drowsiness (visual cues like heavy eyelids or blurred vision).",
+      "coverage_hint": "low-angle shots inside the chamber to emphasize scale",
+      "coverage_priority": "primary story beat",
+      "handoff_to_next": "Inside, he is overcome by an unnatural drowsiness and collapses into unconsciousness."
     },
     {
       "beat_id": "BT003",
-      "summary": "Carter enters the large, ancient chamber.",
+      "summary": "Inside, he is overcome by an unnatural drowsiness and collapses into unconsciousness.",
       "purpose": "",
-      "continuity_focus": "",
-      "coverage_hint": ""
-    },
-    {
-      "beat_id": "BT004",
-      "summary": "Carter is overcome by unnatural drowsiness.",
-      "purpose": "",
-      "continuity_focus": "",
-      "coverage_hint": ""
-    },
-    {
-      "beat_id": "BT005",
-      "summary": "Carter collapses into unconsciousness.",
-      "purpose": "",
-      "continuity_focus": "",
-      "coverage_hint": ""
+      "action_start": "Continue from prior beat: After checking Powell, Carter enters the large, ancient chamber.",
+      "action_end": "Inside, he is overcome by an unnatural drowsiness and collapses into unconsciousness.",
+      "active_subjects": [],
+      "passive_subjects": [],
+      "spatial_context": "the \"unnatural\" quality of the drowsiness (visual cues like heavy eyelids or blurred vision).",
+      "blocking_hint": "close-ups of Carter's eyes drooping",
+      "environment_subzone": "primary scene playing area",
+      "continuity_focus": "the \"unnatural\" quality of the drowsiness (visual cues like heavy eyelids or blurred vision).",
+      "coverage_hint": "close-ups of Carter's eyes drooping",
+      "coverage_priority": "primary story beat",
+      "handoff_to_next": ""
     }
   ],
   "unresolved_questions": [
@@ -150,14 +187,14 @@
     "[CH016] CHAPTER XVI (book index hit)",
     "[CH010] CHAPTER X (book index hit)"
   ],
-  "storyboard_markdown": "# Scene Contract: CH001_SC005\n\n## Production Intent\nEstablish the transition from the terrestrial Arizona landscape to a supernatural inciting event. The sequence must manage a significant lighting shift from high-altitude exterior brightness to the dim, ancient atmosphere of the cave interior while executing a character collapse driven by unnatural lethargy.\n\n## Required Cast\n- John Carter (Younger)\n\n## Required Environments\n- High cliffside trail\n- Ancient Cave interior\n\n## Continuity Constraints\n- Lighting transition: Must manage the shift from bright exterior light to dark/dim cave lighting.\n- Physiological cues: Visual representation of \"unnatural\" drowsiness via heavy eyelids or blurred vision must be consistent during the collapse.\n\n## Beat List\n- BT001: Carter's horse leads him to a narrow cave entrance on a high trail.\n- BT002: Carter checks Powell.\n- BT003: Carter enters the large, ancient chamber.\n- BT004: Carter is overcome by unnatural drowsiness.\n- BT005: Carter collapses into unconsciousness.",
+  "storyboard_markdown": "# Scene Contract: CH001_SC005\n\n- chapter_id: `CH001`\n- scene_title: `Transition the protagonist from the terrestrial world to the inciting...`\n\n## Production Intent\n\nTransition the protagonist from the terrestrial world to the inciting supernatural event.\n\n## Storyboard\n\nCarter's horse leads him to a narrow cave entrance on a high trail. After checking Powell, Carter enters the large, ancient chamber. Inside, he is overcome by an unnatural drowsiness and collapses into unconsciousness.",
   "metadata": {
     "artifact_id": "CH001_SC005_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
     "source_fingerprint": "a823d838e7c0efa2457b0227c0e0f8af3126ef7c",
     "created_at_utc": "2026-04-21T23:18:24.217361+00:00",
-    "updated_at_utc": "2026-04-22T16:44:15.045907+00:00",
+    "updated_at_utc": "2026-04-22T21:45:59.680762+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -195,6 +232,11 @@
       },
       {
         "timestamp_utc": "2026-04-22T16:44:25.543022+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "a823d838e7c0efa2457b0227c0e0f8af3126ef7c"
+      },
+      {
+        "timestamp_utc": "2026-04-22T21:46:21.711973+00:00",
         "action": "synthesized",
         "source_fingerprint": "a823d838e7c0efa2457b0227c0e0f8af3126ef7c"
       }

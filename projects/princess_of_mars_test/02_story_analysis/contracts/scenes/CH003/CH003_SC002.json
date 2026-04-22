@@ -1,11 +1,35 @@
 {
   "scene_id": "CH003_SC002",
   "chapter_id": "CH003",
-  "scene_title": "SC002",
+  "scene_title": "Introduce the biological horror/wonder of Martian life.",
   "purpose": "Introduce the biological horror/wonder of Martian life.",
   "summary": "The protagonist explores a nearby glass-roofed enclosure (an incubator) and finds large white eggs alongside grotesque, multi-limbed young Martians that have already hatched.",
   "emotional_arc": "Curiosity $\\rightarrow$ Horror/Awe.\n\n**Likely Visual Coverage Families:**\n- Macro shots of the eggs and the multi-limbed hatchlings.\n- POV shots from the protagonist looking through the glass.\n- Medium shots of his reaction to the grotesque creatures.",
-  "production_intent": "Establish the biological reality of Martian life through a discovery within a controlled environment. The scene must balance the wonder of new life with the grotesque nature of multi-limbed organisms, utilizing macro photography and POV perspectives to bridge the gap between the protagonist's curiosity and his eventual horror/awe.",
+  "production_intent": "Introduce the biological horror/wonder of Martian life.",
+  "scene_start_state": "The protagonist explores a nearby glass-roofed enclosure (an incubator) and finds large white eggs alongside grotesque, multi-limbed young Martians that have already hatched.",
+  "scene_end_state": "Arrive at the scene's transition point.",
+  "dominant_action_line": "The protagonist explores a nearby glass-roofed enclosure (an incubator) and finds large white eggs alongside grotesque, multi-limbed young Martians that have already hatched.",
+  "scene_spatial_layout": [
+    "The movement patterns of the hatchlings",
+    "lighting through the glass roof."
+  ],
+  "character_spatial_map": [
+    "Primary subject placement should remain readable against the main environment anchor."
+  ],
+  "environment_subzones": [
+    "primary scene playing area"
+  ],
+  "entry_vectors": [
+    "Subjects inherit entry logic from the prior scene or chapter transition."
+  ],
+  "exit_vectors": [
+    "Subjects exit or hand off toward the next story beat."
+  ],
+  "beat_transition_map": [
+    "BT001: The protagonist explores a nearby glass-roofed enclosure (an incubator) and finds large white eggs alongside grotesque, multi-limbed young Martians that have already hatched. -> The protagonist explores a nearby glass-roofed enclosure (an incubator) and finds large white eggs alongside grotesque, multi-limbed young Martians that have already hatched.",
+    "BT002: Continue the established scene action. -> Land the emotional shift: Curiosity $\\rightarrow$ Horror/Awe.\n\n**Likely Visual Coverage Families:**\n- Macro shots of the eggs and the multi-limbed hatchlings.\n- POV shots from the protagonist looking through the glass.\n- Medium shots of his reaction to the grotesque creatures..",
+    "BT003: Continue the established scene action toward consequence. -> Arrive at the scene's transition point."
+  ],
   "characters_required": [
     {
       "label": "The Protagonist",
@@ -31,35 +55,58 @@
     }
   ],
   "continuity_constraints": [
-    "Hatchling movement patterns must remain consistent across takes.",
-    "Lighting consistency through the glass roof."
+    "The movement patterns of the hatchlings",
+    "lighting through the glass roof."
   ],
-  "visual_coverage_families": [
-    "Macro shots (eggs and multi-limbed hatchlings)",
-    "POV shots (looking through glass)",
-    "Medium shots (protagonist reaction)"
-  ],
+  "visual_coverage_families": [],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "protagonist approaches and explores the glass-roofed incubator enclosure.",
-      "purpose": "",
-      "continuity_focus": "",
-      "coverage_hint": ""
+      "summary": "The protagonist explores a nearby glass-roofed enclosure (an incubator) and finds large white eggs alongside grotesque, multi-limbed young Martians that have already hatched.",
+      "purpose": "Introduce the biological horror/wonder of Martian life.",
+      "action_start": "The protagonist explores a nearby glass-roofed enclosure (an incubator) and finds large white eggs alongside grotesque, multi-limbed young Martians that have already hatched.",
+      "action_end": "The protagonist explores a nearby glass-roofed enclosure (an incubator) and finds large white eggs alongside grotesque, multi-limbed young Martians that have already hatched.",
+      "active_subjects": [],
+      "passive_subjects": [],
+      "spatial_context": "The movement patterns of the hatchlings",
+      "blocking_hint": "",
+      "environment_subzone": "primary scene playing area",
+      "continuity_focus": "The movement patterns of the hatchlings",
+      "coverage_hint": "",
+      "coverage_priority": "primary story beat",
+      "handoff_to_next": ""
     },
     {
       "beat_id": "BT002",
-      "summary": "protagonist discovers large white eggs within the enclosure.",
+      "summary": "Carry the emotional arc through: Curiosity $\\rightarrow$ Horror/Awe.\n\n**Likely Visual Coverage Families:**\n- Macro shots of the eggs and the multi-limbed hatchlings.\n- POV shots from the protagonist looking through the glass.\n- Medium shots of his reaction to the grotesque creatures..",
       "purpose": "",
-      "continuity_focus": "",
-      "coverage_hint": ""
+      "action_start": "Continue the established scene action.",
+      "action_end": "Land the emotional shift: Curiosity $\\rightarrow$ Horror/Awe.\n\n**Likely Visual Coverage Families:**\n- Macro shots of the eggs and the multi-limbed hatchlings.\n- POV shots from the protagonist looking through the glass.\n- Medium shots of his reaction to the grotesque creatures..",
+      "active_subjects": [],
+      "passive_subjects": [],
+      "spatial_context": "lighting through the glass roof.",
+      "blocking_hint": "",
+      "environment_subzone": "primary scene playing area",
+      "continuity_focus": "lighting through the glass roof.",
+      "coverage_hint": "",
+      "coverage_priority": "emotional transition",
+      "handoff_to_next": ""
     },
     {
       "beat_id": "BT003",
-      "summary": "protagonist observes grotesque, multi-limbed young Martians that have already hatched.",
+      "summary": "Land the scene consequence or transition cleanly.",
       "purpose": "",
-      "continuity_focus": "",
-      "coverage_hint": ""
+      "action_start": "Continue the established scene action toward consequence.",
+      "action_end": "Arrive at the scene's transition point.",
+      "active_subjects": [],
+      "passive_subjects": [],
+      "spatial_context": "lighting through the glass roof.",
+      "blocking_hint": "",
+      "environment_subzone": "primary scene playing area",
+      "continuity_focus": "lighting through the glass roof.",
+      "coverage_hint": "",
+      "coverage_priority": "transition beat",
+      "handoff_to_next": ""
     }
   ],
   "unresolved_questions": [
@@ -123,14 +170,14 @@
     "[CH014] CHAPTER XIV (book index hit)",
     "Character protagonist: An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeles..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH003_SC002\n\n## Production Intent\nEstablish the biological reality of Martian life through a discovery within a controlled environment. The scene must balance the wonder of new life with the grotesque nature of multi-limbed organisms, utilizing macro photography and POV perspectives to bridge the gap between the protagonist's curiosity and his eventual horror/awe.\n\n## Required Cast\n- protagonist (Earthman; characterized by extreme agility)\n\n## Required Environments\n- The glass-roofed incubator enclosure (located within a circular basin on Mars covered in yellowish, moss-like vegetation)\n\n## Continuity Constraints\n- Hatchling movement patterns must remain consistent across takes.\n- Lighting consistency through the glass roof.\n\n## Beat List\n- BT001: protagonist approaches and explores the glass-roofed incubator enclosure.\n- BT002: protagonist discovers large white eggs within the enclosure.\n- BT003: protagonist observes grotesque, multi-limbed young Martians that have already hatched.",
+  "storyboard_markdown": "# Scene Contract: CH003_SC002\n\n- chapter_id: `CH003`\n- scene_title: `Introduce the biological horror/wonder of Martian life.`\n\n## Production Intent\n\nIntroduce the biological horror/wonder of Martian life.\n\n## Storyboard\n\nThe protagonist explores a nearby glass-roofed enclosure (an incubator) and finds large white eggs alongside grotesque, multi-limbed young Martians that have already hatched.",
   "metadata": {
     "artifact_id": "CH003_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
     "source_fingerprint": "8cff6e23b89da016c095f3e887224d28347be120",
     "created_at_utc": "2026-04-21T23:20:20.297052+00:00",
-    "updated_at_utc": "2026-04-22T16:45:29.412417+00:00",
+    "updated_at_utc": "2026-04-22T21:49:00.444301+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -168,6 +215,11 @@
       },
       {
         "timestamp_utc": "2026-04-22T16:45:39.528168+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "8cff6e23b89da016c095f3e887224d28347be120"
+      },
+      {
+        "timestamp_utc": "2026-04-22T21:49:27.605343+00:00",
         "action": "synthesized",
         "source_fingerprint": "8cff6e23b89da016c095f3e887224d28347be120"
       }
