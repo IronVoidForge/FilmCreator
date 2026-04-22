@@ -1,11 +1,35 @@
 {
   "scene_id": "CH004_SC003",
   "chapter_id": "CH004",
-  "scene_title": "SC003",
+  "scene_title": "Establish the Narrator's agency and his ability to command respect th...",
   "purpose": "Establish the Narrator's agency and his ability to command respect through violence/physicality.",
   "summary": "After being mocked, the Narrator punches a Martian warrior. This act of defiance earns him unexpected respect. He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
   "emotional_arc": "Humiliation $\\rightarrow$ Defiance $\\rightarrow$ Triumph/Respect.\n\n**Likely Visual Coverage Families:**\n* Tight Close-ups (CU) on the punch and the impact.\n* Wide shots to capture the scale of the \"sak\" jump.\n* Reaction shots from the crowd (shifting from mockery to applause).",
-  "production_intent": "The scene must demonstrate the Narrator's physical capability and agency within a hostile Martian social structure. Success relies on the visceral impact of the punch and the impressive scale/distance of the \"sak\" jump to justify the shift in crowd sentiment from mockery to respect.",
+  "production_intent": "Establish the Narrator's agency and his ability to command respect through violence/physicality.",
+  "scene_start_state": "After being mocked, the Narrator punches a Martian warrior. This act of defiance earns him unexpected respect. He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
+  "scene_end_state": "He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
+  "dominant_action_line": "After being mocked, the Narrator punches a Martian warrior. This act of defiance earns him unexpected respect. He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
+  "scene_spatial_layout": [
+    "The physics/trajectory of the jump",
+    "the physical contact during the fight sequence."
+  ],
+  "character_spatial_map": [
+    "Primary subject placement should remain readable against the main environment anchor."
+  ],
+  "environment_subzones": [
+    "primary scene playing area"
+  ],
+  "entry_vectors": [
+    "Subjects inherit entry logic from the prior scene or chapter transition."
+  ],
+  "exit_vectors": [
+    "Subjects exit or hand off toward the next story beat."
+  ],
+  "beat_transition_map": [
+    "BT001: After being mocked, the Narrator punches a Martian warrior. -> This act of defiance earns him unexpected respect.",
+    "BT002: Continue from prior beat: After being mocked, the Narrator punches a Martian warrior. -> He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
+    "BT003: Continue from prior beat: This act of defiance earns him unexpected respect. -> He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly."
+  ],
   "characters_required": [
     {
       "label": "The Narrator",
@@ -71,49 +95,58 @@
     }
   ],
   "continuity_constraints": [
-    "Physical contact precision during the fight sequence",
-    "Physics/trajectory consistency of the \"sak\" jump"
+    "The physics/trajectory of the jump",
+    "the physical contact during the fight sequence."
   ],
-  "visual_coverage_families": [
-    "Tight Close-ups (CU) on punch impact and physical contact",
-    "Wide shots for \"sak\" jump scale and trajectory",
-    "Reaction shots of Martian Crowd shifting from mockery to applause"
-  ],
+  "visual_coverage_families": [],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "The Narrator is subjected to mockery by the Martian assembly.",
-      "purpose": "",
-      "continuity_focus": "",
-      "coverage_hint": ""
+      "summary": "After being mocked, the Narrator punches a Martian warrior.",
+      "purpose": "Establish the Narrator's agency and his ability to command respect through violence/physicality.",
+      "action_start": "After being mocked, the Narrator punches a Martian warrior.",
+      "action_end": "This act of defiance earns him unexpected respect.",
+      "active_subjects": [],
+      "passive_subjects": [],
+      "spatial_context": "The physics/trajectory of the jump",
+      "blocking_hint": "",
+      "environment_subzone": "primary scene playing area",
+      "continuity_focus": "The physics/trajectory of the jump",
+      "coverage_hint": "",
+      "coverage_priority": "primary story beat",
+      "handoff_to_next": "This act of defiance earns him unexpected respect."
     },
     {
       "beat_id": "BT002",
-      "summary": "The Narrator strikes a Martian warrior, asserting physical defiance.",
+      "summary": "This act of defiance earns him unexpected respect.",
       "purpose": "",
-      "continuity_focus": "",
-      "coverage_hint": ""
+      "action_start": "Continue from prior beat: After being mocked, the Narrator punches a Martian warrior.",
+      "action_end": "He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
+      "active_subjects": [],
+      "passive_subjects": [],
+      "spatial_context": "the physical contact during the fight sequence.",
+      "blocking_hint": "",
+      "environment_subzone": "primary scene playing area",
+      "continuity_focus": "the physical contact during the fight sequence.",
+      "coverage_hint": "",
+      "coverage_priority": "primary story beat",
+      "handoff_to_next": "He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly."
     },
     {
       "beat_id": "BT003",
-      "summary": "The assembly reacts with unexpected respect following the strike.",
+      "summary": "He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
       "purpose": "",
-      "continuity_focus": "",
-      "coverage_hint": ""
-    },
-    {
-      "beat_id": "BT004",
-      "summary": "The Chieftain commands the Narrator to perform \"sak\" (jumping).",
-      "purpose": "",
-      "continuity_focus": "",
-      "coverage_hint": ""
-    },
-    {
-      "beat_id": "BT005",
-      "summary": "The Narrator executes an impressive jump, astounding the crowd.",
-      "purpose": "",
-      "continuity_focus": "",
-      "coverage_hint": ""
+      "action_start": "Continue from prior beat: This act of defiance earns him unexpected respect.",
+      "action_end": "He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
+      "active_subjects": [],
+      "passive_subjects": [],
+      "spatial_context": "the physical contact during the fight sequence.",
+      "blocking_hint": "",
+      "environment_subzone": "primary scene playing area",
+      "continuity_focus": "the physical contact during the fight sequence.",
+      "coverage_hint": "",
+      "coverage_priority": "primary story beat",
+      "handoff_to_next": ""
     }
   ],
   "unresolved_questions": [
@@ -185,14 +218,14 @@
     "Character tars_tarkas: Tars Tarkas is a prominent Thark warrior and leader characterized by green skin. He carries himself with a professional demeanor, embodying the strength and combat skill valued by his Martian culture. His appearance is defined by stan...",
     "Character chieftain: The Chieftain is a large-framed, green-skinned Martian whose physical presence is notably imposing and out of proportion to standard human-scale objects. As a leader within a martial society that prioritizes the rearing of \"hardiest spe..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH004_SC003\n\n## Production Intent\nThe scene must demonstrate the Narrator's physical capability and agency within a hostile Martian social structure. Success relies on the visceral impact of the punch and the impressive scale/distance of the \"sak\" jump to justify the shift in crowd sentiment from mockery to respect.\n\n## Required Cast\n- The Narrator\n- tars_tarkas (Green-skinned Thark warrior/leader)\n- chieftain (Large-framed, imposing green-skinned Martian)\n- martian_warrior\n- Martian Crowd\n\n## Required Environments\n- Grand Audience Chamber / Plaza area (Enormous ancient city with marble and gold architecture)\n\n## Continuity Constraints\n- Physical contact precision during the fight sequence.\n- Physics/trajectory consistency of the \"sak\" jump.\n\n## Beat List\n- BT001: The Narrator is subjected to mockery by the Martian assembly.\n- BT002: The Narrator strikes a Martian warrior, asserting physical defiance.\n- BT003: The assembly reacts with unexpected respect following the strike.\n- BT004: The Chieftain commands the Narrator to perform \"sak\" (jumping).\n- BT005: The Narrator executes an impressive jump, astounding the crowd.",
+  "storyboard_markdown": "# Scene Contract: CH004_SC003\n\n- chapter_id: `CH004`\n- scene_title: `Establish the Narrator's agency and his ability to command respect th...`\n\n## Production Intent\n\nEstablish the Narrator's agency and his ability to command respect through violence/physicality.\n\n## Storyboard\n\nAfter being mocked, the Narrator punches a Martian warrior. This act of defiance earns him unexpected respect. He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
   "metadata": {
     "artifact_id": "CH004_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
     "source_fingerprint": "116d38894ae5eebf12546851f8616cd5eb574235",
     "created_at_utc": "2026-04-21T23:22:13.826568+00:00",
-    "updated_at_utc": "2026-04-22T16:46:44.265540+00:00",
+    "updated_at_utc": "2026-04-22T21:51:59.417828+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -230,6 +263,11 @@
       },
       {
         "timestamp_utc": "2026-04-22T16:46:55.946579+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "116d38894ae5eebf12546851f8616cd5eb574235"
+      },
+      {
+        "timestamp_utc": "2026-04-22T21:52:26.592538+00:00",
         "action": "synthesized",
         "source_fingerprint": "116d38894ae5eebf12546851f8616cd5eb574235"
       }
