@@ -168,9 +168,9 @@ The latest validated state is:
 - next validation: make scene contracts selector-first, add future environment request output, and bridge the contracts into authoritative scene bindings
 
 ### Phase 9.5 - Scene Binding and Environment Selection
-- status: `planned`
-- evidence: current shot-planner drift shows the need for a binding authority between scenes and shots; scene contracts already expose the right raw ingredients to support this layer
-- next validation: produce per-scene binding artifacts that lock scene-level environment and cast decisions before shot planning
+- status: `implemented`
+- evidence: `synthesize-scene-bindings` now writes per-scene binding artifacts, review queues, and future-environment request files between scene contracts and shot planning
+- next validation: confirm shot packages consistently inherit scene-level environments and that chapter fallback only appears when scene-level canonical selection is truly unavailable
 
 ### Phase 10 - Shot Planning and Shot Packages
 - status: `validated`

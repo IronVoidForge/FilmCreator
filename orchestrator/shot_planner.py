@@ -288,6 +288,10 @@ def _scene_contract_root(project_dir: Path) -> Path:
     return project_dir / "02_story_analysis" / "contracts" / "scenes"
 
 
+def _scene_binding_root(project_dir: Path) -> Path:
+    return project_dir / "02_story_analysis" / "contracts" / "scene_bindings"
+
+
 def _shot_package_root(project_dir: Path) -> Path:
     return project_dir / "02_story_analysis" / "contracts" / "shots"
 
@@ -302,6 +306,16 @@ def _scene_contract_files(project_dir: Path) -> list[Path]:
 def _load_json_file(path: Path) -> dict[str, Any]:
     payload = read_json(path)
     return payload if isinstance(payload, dict) else {}
+
+
+def _scene_binding_path(project_dir: Path, scene_id: str) -> Path:
+    chapter_id = _chapter_id_from_scene_id(scene_id)
+    return _scene_binding_root(project_dir) / chapter_id / f"{scene_id}_BINDINGS.json"
+
+
+def _load_scene_binding(project_dir: Path, scene_id: str) -> dict[str, Any]:
+    path = _scene_binding_path(project_dir, scene_id)
+    return _load_json_file(path) if path.exists() else {}
 
 
 def _load_character_bible(project_dir: Path, canonical_id: str) -> dict[str, Any] | None:
@@ -353,7 +367,50 @@ def _find_ref_by_label(refs: list[dict[str, Any]], text: str) -> dict[str, Any] 
     return None
 
 
-def _select_environment_ref(scene_contract: dict[str, Any], project_dir: Path) -> ShotReference:
+def _binding_ref_to_shot_reference(raw_ref: dict[str, Any], project_dir: Path, *, kind: str) -> ShotReference:
+    canonical_id = _normalize_optional_canonical_id(raw_ref.get("canonical_id"))
+    if kind == "character":
+        bible = _load_character_bible(project_dir, canonical_id) if canonical_id else None
+        fallback_entity_kind = "individual"
+    else:
+        bible = _load_environment_bible(project_dir, canonical_id) if canonical_id else None
+        fallback_entity_kind = "environment"
+    source_path = str(raw_ref.get("source_path", ""))
+    if kind == "environment" and not canonical_id:
+        source_path = ""
+    return ShotReference(
+        label=str(raw_ref.get("label", canonical_id or "")),
+        canonical_id=canonical_id,
+        display_name=_first_nonempty(str((bible or {}).get("display_name", "")), str(raw_ref.get("display_name", "")), fallback=str(raw_ref.get("label", canonical_id or ""))),
+        status=str(raw_ref.get("status", (bible or {}).get("status", "review"))),
+        entity_kind=str(raw_ref.get("entity_kind", (bible or {}).get("entity_kind", fallback_entity_kind))),
+        resolution_score=int(raw_ref.get("resolution_score")) if str(raw_ref.get("resolution_score", "")).isdigit() else raw_ref.get("resolution_score"),
+        source_path=source_path,
+        notes=str(raw_ref.get("notes", "")),
+    )
+
+
+def _environment_override_for_beat(scene_binding: dict[str, Any], beat_id: str) -> dict[str, Any] | None:
+    overrides = scene_binding.get("beat_environment_overrides", [])
+    if not isinstance(overrides, list) or not beat_id:
+        return None
+    for item in overrides:
+        if not isinstance(item, dict):
+            continue
+        if str(item.get("beat_id", "")).strip().upper() == beat_id.upper() and isinstance(item.get("environment"), dict):
+            return item.get("environment")
+    return None
+
+
+def _select_environment_ref(scene_contract: dict[str, Any], project_dir: Path, scene_binding: dict[str, Any] | None = None, beat_id: str = "") -> ShotReference:
+    if isinstance(scene_binding, dict) and scene_binding:
+        override = _environment_override_for_beat(scene_binding, beat_id)
+        if isinstance(override, dict):
+            return _binding_ref_to_shot_reference(override, project_dir, kind="environment")
+        resolved_environment = scene_binding.get("resolved_environment")
+        if isinstance(resolved_environment, dict):
+            return _binding_ref_to_shot_reference(resolved_environment, project_dir, kind="environment")
+
     environment_refs = scene_contract.get("environments_required", [])
     if not isinstance(environment_refs, list) or not environment_refs:
         return ShotReference(
@@ -422,8 +479,16 @@ def _build_character_reference(project_dir: Path, raw_ref: dict[str, Any]) -> Sh
     )
 
 
-def _selected_characters(scene_contract: dict[str, Any], project_dir: Path, beat_summary: str, shot_order: int) -> list[ShotReference]:
+def _selected_characters(
+    scene_contract: dict[str, Any],
+    project_dir: Path,
+    beat_summary: str,
+    shot_order: int,
+    scene_binding: dict[str, Any] | None = None,
+) -> list[ShotReference]:
     raw_refs = scene_contract.get("characters_required", [])
+    if isinstance(scene_binding, dict) and isinstance(scene_binding.get("resolved_characters"), list) and scene_binding.get("resolved_characters"):
+        raw_refs = scene_binding.get("resolved_characters", [])
     if not isinstance(raw_refs, list):
         raw_refs = []
     references = [_build_character_reference(project_dir, raw_ref) for raw_ref in raw_refs if isinstance(raw_ref, dict)]
@@ -549,12 +614,10 @@ def _shot_title_from_beat(shot_type: str, beat_summary: str, shot_order: int) ->
     return f"{shot_type.replace('_', ' ').title()} {shot_order}"
 
 
-def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path) -> list[dict[str, Any]]:
+def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, scene_binding: dict[str, Any] | None = None) -> list[dict[str, Any]]:
     beats = scene_contract.get("beat_list", [])
     if not isinstance(beats, list) or not beats:
         beats = [{"beat_id": "BT001", "summary": scene_contract.get("summary", "") or scene_contract.get("production_intent", "") or scene_contract.get("scene_title", "")}]
-
-    environment = _select_environment_ref(scene_contract, project_dir)
     blueprints: list[dict[str, Any]] = []
     for index, raw_beat in enumerate(beats, start=1):
         beat_id = f"BT{index:03d}"
@@ -568,8 +631,9 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path) ->
             )
         elif isinstance(raw_beat, str):
             beat_summary = raw_beat.strip()
+        environment = _select_environment_ref(scene_contract, project_dir, scene_binding=scene_binding, beat_id=beat_id)
         shot_type = _shot_type_from_beat(scene_contract, beat_summary, index)
-        characters = _selected_characters(scene_contract, project_dir, beat_summary, index)
+        characters = _selected_characters(scene_contract, project_dir, beat_summary, index, scene_binding=scene_binding)
         camera_description = _camera_description(shot_type, beat_summary)
         composition = _composition_description(shot_type, characters, environment, beat_summary)
         shot_title = _shot_title_from_beat(shot_type, beat_summary, index)
@@ -610,6 +674,7 @@ def _load_shot_planning_evidence(
     *,
     project_dir: Path,
     scene_contract: dict[str, Any],
+    scene_binding: dict[str, Any] | None,
     shot_blueprints: list[dict[str, Any]],
 ) -> dict[str, Any]:
     character_refs = scene_contract.get("characters_required", [])
@@ -689,6 +754,7 @@ def _load_shot_planning_evidence(
 
     fingerprint_payload = {
         "scene_contract": scene_contract,
+        "scene_binding": scene_binding or {},
         "shot_blueprints": shot_blueprints,
         "character_fingerprints": _ordered_unique(character_fingerprints),
         "environment_fingerprints": _ordered_unique(environment_fingerprints),
@@ -1077,14 +1143,16 @@ def run_shot_planning(
         scene_id = str(scene_contract.get("scene_id", "")).strip().upper() or scene_contract_path.stem.upper()
         chapter_id = str(scene_contract.get("chapter_id", "")).strip().upper() or _chapter_id_from_scene_id(scene_id)
         scene_title = _scene_contract_to_scene_title(scene_contract)
+        scene_binding = _load_scene_binding(project_dir, scene_id)
         scene_dir = output_root / chapter_id / scene_id
         scene_dir.mkdir(parents=True, exist_ok=True)
         print(f"[shot-planner] {scene_index}/{total_scenes} starting {scene_id}...")
 
-        shot_blueprints = _build_shot_blueprints(scene_contract, project_dir)
+        shot_blueprints = _build_shot_blueprints(scene_contract, project_dir, scene_binding=scene_binding)
         evidence = _load_shot_planning_evidence(
             project_dir=project_dir,
             scene_contract=scene_contract,
+            scene_binding=scene_binding,
             shot_blueprints=shot_blueprints,
         )
         fp = _fingerprint(evidence["fingerprint_payload"])
@@ -1174,6 +1242,11 @@ def run_shot_planning(
                     "dependency_type": "scene_contract",
                     "dependency_id": scene_id,
                     "version": _fingerprint(scene_contract),
+                },
+                {
+                    "dependency_type": "scene_binding",
+                    "dependency_id": scene_id,
+                    "version": _fingerprint(scene_binding or {}),
                 },
                 {
                     "dependency_type": "shot_blueprints",

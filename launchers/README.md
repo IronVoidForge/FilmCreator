@@ -60,24 +60,28 @@ The launcher tree is now grouped by workflow so the root stays readable:
 
 ## Multi-Chapter
 
-- `multi_chapter\test_multi_chapter_ingest_setup.bat`
+The active multi-chapter launcher set is now ordered by workflow stage:
+
+- `multi_chapter\00_prepare_book_ingest.bat`
   - reads `book_input.txt`, writes the raw book file, and splits chapters
-- `multi_chapter\test_multi_chapter_full_run.bat`
-  - runs the multi-chapter analysis pass
-- `multi_chapter\run_full_book_to_prompt_pipeline.bat`
-  - runs the full book-to-prompt pipeline from chapter summaries through prompt preparation
-- `multi_chapter\run_full_book_to_prompt_pipeline_resume.bat`
-  - retries failed book-analysis chapters and resumes from the last partial chapter before running the full pipeline
-- `multi_chapter\run_quality_grading_and_selective_reruns.bat`
-  - grades synthesis outputs and writes the selective rerun queue without mutating the source artifacts
-- `multi_chapter\run_quality_rerun_queue.bat`
-  - previews the graded rerun queue and optionally executes queued family reruns after confirmation
-- `multi_chapter\run_dialogue_enrichment.bat`
-  - enriches dialogue delivery metadata for the existing dialogue timeline
-- `multi_chapter\clear_downstream_artifacts.bat`
+- `multi_chapter\01_reset_downstream_artifacts.bat`
   - removes downstream synthesis artifacts while preserving story analysis and chapter summaries
-- `multi_chapter\test_phase_b1_resolution.bat`
-  - runs the Phase B1 identity and environment resolution helper
+- `multi_chapter\10_run_full_book_pipeline_from_scratch.bat`
+  - runs the full book-to-prompt pipeline from chapter summaries through prompt preparation
+- `multi_chapter\11_resume_full_book_pipeline.bat`
+  - retries failed book-analysis chapters and resumes from the last partial chapter before running the full pipeline
+- `multi_chapter\20_run_scene_bindings_only.bat`
+  - resolves scene-level cast and environment bindings before shot planning
+- `multi_chapter\21_run_scene_bindings_and_downstream.bat`
+  - reruns scene bindings plus all affected downstream stages without rerunning character/environment synthesis
+- `multi_chapter\22_run_dialogue_enrichment_only.bat`
+  - enriches dialogue delivery metadata for the existing dialogue timeline
+- `multi_chapter\30_run_quality_grading.bat`
+  - grades synthesis outputs and writes the selective rerun queue without mutating the source artifacts
+- `multi_chapter\31_run_quality_rerun_queue.bat`
+  - previews the graded rerun queue and optionally executes queued family reruns after confirmation
+
+Legacy `test_*`, broad cleanup, and older duplicate multi-chapter launchers were removed because they were either superseded by the numbered workflow launchers or tied to outdated pipeline shapes.
 
 ## Current pilot assets
 
@@ -87,8 +91,9 @@ The launcher tree is now grouped by workflow so the root stays readable:
 
 ## Suggested flow
 
-1. Run `authoring\test_lmstudio_connectivity.bat`
-2. For chapter authoring, use the scripts under `authoring\princess_of_mars\`
-3. For render smoke tests, start with `render\clean_8190\start_render_terminals_clean_8190.bat`
-4. Then run the matching batch launcher in the same folder
-5. Use the review-and-approve launcher in that same runtime folder to validate the handoff
+1. Run `multi_chapter\00_prepare_book_ingest.bat` if the source book still needs ingest
+2. Use `multi_chapter\10_run_full_book_pipeline_from_scratch.bat` for a clean full build
+3. Use `multi_chapter\11_resume_full_book_pipeline.bat` to continue an interrupted full build
+4. Use `multi_chapter\21_run_scene_bindings_and_downstream.bat` when only scene bindings and later stages need refresh
+5. Use `multi_chapter\30_run_quality_grading.bat` after a run to inspect weak artifacts
+6. For render smoke tests, start with `render\clean_8190\start_render_terminals_clean_8190.bat`

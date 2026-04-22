@@ -5,7 +5,6 @@ call "%~dp0..\_shared\resolve_filmcreator_root.bat" "%~dp0" || goto :fail
 
 if not exist "%FILMCREATOR_ROOT%" (
     echo Missing FilmCreator root: %FILMCREATOR_ROOT%
-    pause
     exit /b 1
 )
 
@@ -17,32 +16,23 @@ if "%PROJECT_SLUG%"=="" set "PROJECT_SLUG=%DEFAULT_SLUG%"
 
 echo.
 echo ========================================
-echo FilmCreator Quality Grading and Selective Reruns
+echo FilmCreator Scene Binding Synthesis
 echo ========================================
 echo.
 echo Project slug: %PROJECT_SLUG%
 echo Repo root: %FILMCREATOR_ROOT%
 echo.
-echo This launcher will run:
-echo   1. quality grading
-echo   2. rerun queue writing
-echo.
 
-echo.
-echo [1/2] Running quality grading...
-python -m orchestrator grade-artifacts %PROJECT_SLUG%
+python -m orchestrator synthesize-scene-bindings %PROJECT_SLUG% --force
 if errorlevel 1 goto :fail
 
 echo.
-echo Quality grading complete.
-echo   projects\%PROJECT_SLUG%\02_story_analysis\grading\QUALITY_GRADE_INDEX.md
-echo   projects\%PROJECT_SLUG%\02_story_analysis\grading\review\QUALITY_RERUN_QUEUE.md
-echo.
+echo Scene binding synthesis complete.
 goto :done
 
 :fail
 echo.
-echo Quality grading failed.
+echo Scene binding synthesis failed.
 pause
 popd >nul
 exit /b 1

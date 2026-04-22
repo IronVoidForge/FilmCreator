@@ -13,6 +13,7 @@ from .quality_grading import run_quality_grading
 from .selective_rerun import run_selective_reruns
 from .prompt_preparation import run_prompt_preparation
 from .scene_contracts import run_scene_contract_synthesis
+from .scene_bindings import run_scene_binding_synthesis
 from .shot_planner import run_shot_planning
 
 
@@ -34,6 +35,10 @@ def build_parser() -> argparse.ArgumentParser:
     sc.add_argument("project_slug")
     sc.add_argument("--no-llm", action="store_true")
     sc.add_argument("--force", action="store_true")
+
+    sb = subparsers.add_parser("synthesize-scene-bindings")
+    sb.add_argument("project_slug")
+    sb.add_argument("--force", action="store_true")
 
     sp = subparsers.add_parser("synthesize-shot-packages")
     sp.add_argument("project_slug")
@@ -136,6 +141,13 @@ def main() -> None:
         summary = run_scene_contract_synthesis(
             args.project_slug,
             use_llm=not args.no_llm,
+            force=args.force,
+        )
+        print(json.dumps(summary.to_dict(), indent=2))
+
+    elif args.command == "synthesize-scene-bindings":
+        summary = run_scene_binding_synthesis(
+            args.project_slug,
             force=args.force,
         )
         print(json.dumps(summary.to_dict(), indent=2))

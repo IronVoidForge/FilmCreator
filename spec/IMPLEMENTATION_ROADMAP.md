@@ -401,7 +401,7 @@ The project already knows the canon and can prepare prompt bundles. This phase a
 
 #### Current Status
 
-Planned.
+Implemented in code. Next validation is to confirm the new binding artifacts reliably eliminate per-shot environment drift during full downstream runs.
 
 ### Phase 11.8 â€“ Quality Grading and Selective Reruns
 

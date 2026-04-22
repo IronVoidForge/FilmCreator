@@ -24,13 +24,13 @@ echo Repo root: %FILMCREATOR_ROOT%
 echo.
 echo This launcher will run:
 echo   1. LM Studio connectivity check
-echo   2. retry any recorded failed chapters
-echo   3. resume book analysis from the last partial chapter
-echo   4. identity refinement plan
-echo   5. identity refinement apply
-echo   6. character bible synthesis
-echo   7. environment bible synthesis
-echo   8. scene contract synthesis
+echo   2. retry any recorded failed chapters and resume book analysis
+echo   3. identity refinement plan
+echo   4. identity refinement apply
+echo   5. character bible synthesis
+echo   6. environment bible synthesis
+echo   7. scene contract synthesis
+echo   8. scene binding synthesis
 echo   9. shot package synthesis
 echo  10. dialogue timeline synthesis
 echo  11. descriptor enrichment
@@ -73,22 +73,27 @@ python -m orchestrator synthesize-scene-contracts %PROJECT_SLUG% --force
 if errorlevel 1 goto :fail
 
 echo.
-echo [8/12] Running shot package synthesis...
+echo [8/12] Running scene binding synthesis...
+python -m orchestrator synthesize-scene-bindings %PROJECT_SLUG% --force
+if errorlevel 1 goto :fail
+
+echo.
+echo [9/12] Running shot package synthesis...
 python -m orchestrator synthesize-shot-packages %PROJECT_SLUG% --force
 if errorlevel 1 goto :fail
 
 echo.
-echo [9/12] Running dialogue timeline synthesis...
+echo [10/12] Running dialogue timeline synthesis...
 python -m orchestrator synthesize-dialogue-timeline %PROJECT_SLUG% --force
 if errorlevel 1 goto :fail
 
 echo.
-echo [10/12] Running descriptor enrichment...
+echo [11/12] Running descriptor enrichment...
 python -m orchestrator synthesize-descriptor-enrichment %PROJECT_SLUG% --force
 if errorlevel 1 goto :fail
 
 echo.
-echo [11/12] Running prompt preparation...
+echo [12/12] Running prompt preparation...
 python -m orchestrator synthesize-prompt-preparation %PROJECT_SLUG% --force
 if errorlevel 1 goto :fail
 
