@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Any, Callable
 
 from .book_librarian import search_book_index, search_chapter_context
+from .chapter_selection import any_chapter_matches, chapter_matches, parse_chapter_selector
 from .core.json_io import read_json, write_json
 from .features.authoring.packet_parser import parse_packet_document
 from .lmstudio_client import LMStudioClient
@@ -2429,6 +2430,7 @@ def run_descriptor_enrichment(
     limit: int | None = None,
     entity_types: list[str] | None = None,
     entity_ids: list[str] | None = None,
+    chapters: str | None = None,
 ) -> DescriptorEnrichmentSummary:
     project_dir = create_project(project_slug)
     output_root = _descriptor_root(project_dir)
@@ -2445,6 +2447,18 @@ def run_descriptor_enrichment(
     environment_bibles = _load_environment_bibles(project_dir)
     scene_contracts = _load_scene_contracts(project_dir)
     shot_packages = _load_shot_packages(project_dir)
+    selected_chapters = set(parse_chapter_selector(chapters))
+    if selected_chapters:
+        scene_contracts = {
+            scene_id: contract
+            for scene_id, contract in scene_contracts.items()
+            if chapter_matches(str(contract.get("chapter_id", "") or scene_id[:5]), selected_chapters)
+        }
+        shot_packages = [
+            shot
+            for shot in shot_packages
+            if chapter_matches(str(shot.get("chapter_id", "") or str(shot.get("scene_id", ""))[:5]), selected_chapters)
+        ]
     character_scene_map, character_shot_map, environment_scene_map, environment_shot_map = _build_reference_maps(scene_contracts, shot_packages)
     key_item_candidates = _collect_key_item_candidates(scene_contracts, shot_packages)
     character_total = len(character_bibles)
@@ -2504,6 +2518,15 @@ def run_descriptor_enrichment(
         for char_id, bible in character_bibles.items():
             if stop_processing:
                 break
+            if selected_chapters and not any_chapter_matches(
+                _coerce_string_list(
+                    bible.get("chapter_mentions", []),
+                    character_scene_map.get(char_id, []),
+                    [item.split("/")[0] for item in character_shot_map.get(char_id, [])],
+                ),
+                selected_chapters,
+            ):
+                continue
             if not matches_entity_id(char_id, f"char_{char_id}", f"desc_char_{char_id}"):
                 continue
             character_index += 1
@@ -2540,6 +2563,15 @@ def run_descriptor_enrichment(
         for env_id, bible in environment_bibles.items():
             if stop_processing:
                 break
+            if selected_chapters and not any_chapter_matches(
+                _coerce_string_list(
+                    bible.get("chapter_mentions", []),
+                    environment_scene_map.get(env_id, []),
+                    [item.split("/")[0] for item in environment_shot_map.get(env_id, [])],
+                ),
+                selected_chapters,
+            ):
+                continue
             if not matches_entity_id(env_id, f"env_{env_id}", f"desc_env_{env_id}"):
                 continue
             environment_index += 1
@@ -2637,6 +2669,11 @@ def run_descriptor_enrichment(
         for item_id, candidate in key_item_candidates.items():
             if stop_processing:
                 break
+            if selected_chapters and not any_chapter_matches(
+                _coerce_string_list(candidate.get("chapter_mentions", [])),
+                selected_chapters,
+            ):
+                continue
             if not matches_entity_id(item_id, f"item_{item_id}", f"desc_item_{item_id}"):
                 continue
             key_item_index += 1

@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from .chapter_selection import chapter_matches, parse_chapter_selector
 from .core.json_io import read_json, write_json
 from .scaffold import create_project
 
@@ -496,9 +497,13 @@ def run_scene_binding_synthesis(
     project_slug: str,
     *,
     force: bool = False,
+    chapters: str | None = None,
 ) -> SceneBindingSummary:
     project_dir = create_project(project_slug)
-    scene_contract_files = _scene_contract_files(project_dir)
+    selected_chapters = set(parse_chapter_selector(chapters))
+    scene_contract_files = [
+        path for path in _scene_contract_files(project_dir) if chapter_matches(path.parent.name or path.stem[:5], selected_chapters)
+    ]
     output_root = _binding_root(project_dir)
     review_dir = output_root / "review"
     output_root.mkdir(parents=True, exist_ok=True)

@@ -13,6 +13,7 @@ pushd "%FILMCREATOR_ROOT%" >nul
 set "DEFAULT_SLUG=princess_of_mars_test"
 set /p PROJECT_SLUG=Project slug [%DEFAULT_SLUG%]:
 if "%PROJECT_SLUG%"=="" set "PROJECT_SLUG=%DEFAULT_SLUG%"
+set /p CHAPTERS=Chapters filter [all]:
 
 echo.
 echo ========================================
@@ -23,7 +24,10 @@ echo Project slug: %PROJECT_SLUG%
 echo Repo root: %FILMCREATOR_ROOT%
 echo.
 
-python -m orchestrator synthesize-scene-bindings %PROJECT_SLUG% --force
+set "CHAPTER_ARGS="
+if not "%CHAPTERS%"=="" set "CHAPTER_ARGS=--chapters %CHAPTERS%"
+
+python -m orchestrator synthesize-scene-bindings %PROJECT_SLUG% --force %CHAPTER_ARGS%
 if errorlevel 1 goto :fail
 
 echo.

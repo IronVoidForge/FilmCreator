@@ -35,19 +35,23 @@ def build_parser() -> argparse.ArgumentParser:
     sc.add_argument("project_slug")
     sc.add_argument("--no-llm", action="store_true")
     sc.add_argument("--force", action="store_true")
+    sc.add_argument("--chapters", type=str, default=None)
 
     sb = subparsers.add_parser("synthesize-scene-bindings")
     sb.add_argument("project_slug")
     sb.add_argument("--force", action="store_true")
+    sb.add_argument("--chapters", type=str, default=None)
 
     sp = subparsers.add_parser("synthesize-shot-packages")
     sp.add_argument("project_slug")
     sp.add_argument("--no-llm", action="store_true")
     sp.add_argument("--force", action="store_true")
+    sp.add_argument("--chapters", type=str, default=None)
 
     dt = subparsers.add_parser("synthesize-dialogue-timeline")
     dt.add_argument("project_slug")
     dt.add_argument("--force", action="store_true")
+    dt.add_argument("--chapters", type=str, default=None)
 
     dext = subparsers.add_parser("synthesize-dialogue-enrichment")
     dext.add_argument("project_slug")
@@ -64,6 +68,13 @@ def build_parser() -> argparse.ArgumentParser:
         dest="entity_types",
     )
     pp.add_argument("--entity-id", action="append", dest="entity_ids")
+    pp.add_argument("--chapters", type=str, default=None)
+    pp.add_argument(
+        "--shot-variant",
+        action="append",
+        choices=["primary_keyframe", "alternate_angle", "consistency_repair"],
+        dest="shot_variants",
+    )
 
     de = subparsers.add_parser("synthesize-descriptor-enrichment")
     de.add_argument("project_slug")
@@ -77,6 +88,7 @@ def build_parser() -> argparse.ArgumentParser:
         dest="entity_types",
     )
     de.add_argument("--entity-id", action="append", dest="entity_ids")
+    de.add_argument("--chapters", type=str, default=None)
 
     qg = subparsers.add_parser("grade-artifacts")
     qg.add_argument("project_slug")
@@ -142,6 +154,7 @@ def main() -> None:
             args.project_slug,
             use_llm=not args.no_llm,
             force=args.force,
+            chapters=args.chapters,
         )
         print(json.dumps(summary.to_dict(), indent=2))
 
@@ -149,6 +162,7 @@ def main() -> None:
         summary = run_scene_binding_synthesis(
             args.project_slug,
             force=args.force,
+            chapters=args.chapters,
         )
         print(json.dumps(summary.to_dict(), indent=2))
 
@@ -157,6 +171,7 @@ def main() -> None:
             args.project_slug,
             use_llm=not args.no_llm,
             force=args.force,
+            chapters=args.chapters,
         )
         print(json.dumps(summary.to_dict(), indent=2))
 
@@ -164,6 +179,7 @@ def main() -> None:
         summary = run_dialogue_timeline(
             args.project_slug,
             force=args.force,
+            chapters=args.chapters,
         )
         print(json.dumps(summary.to_dict(), indent=2))
 
@@ -181,6 +197,8 @@ def main() -> None:
             limit=args.limit,
             entity_types=args.entity_types,
             entity_ids=args.entity_ids,
+            chapters=args.chapters,
+            shot_variants=args.shot_variants,
         )
         print(json.dumps(summary.to_dict(), indent=2))
 
@@ -192,6 +210,7 @@ def main() -> None:
             limit=args.limit,
             entity_types=args.entity_types,
             entity_ids=args.entity_ids,
+            chapters=args.chapters,
         )
         print(json.dumps(summary.to_dict(), indent=2))
 

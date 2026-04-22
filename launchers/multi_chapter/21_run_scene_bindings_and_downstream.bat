@@ -13,6 +13,7 @@ pushd "%FILMCREATOR_ROOT%" >nul
 set "DEFAULT_SLUG=princess_of_mars_test"
 set /p PROJECT_SLUG=Project slug [%DEFAULT_SLUG%]:
 if "%PROJECT_SLUG%"=="" set "PROJECT_SLUG=%DEFAULT_SLUG%"
+set /p CHAPTERS=Chapters filter [all]:
 
 echo.
 echo ========================================
@@ -32,29 +33,32 @@ echo.
 echo Character and environment bibles are NOT rerun.
 echo.
 
+set "CHAPTER_ARGS="
+if not "%CHAPTERS%"=="" set "CHAPTER_ARGS=--chapters %CHAPTERS%"
+
 echo.
 echo [1/5] Running scene binding synthesis...
-python -m orchestrator synthesize-scene-bindings %PROJECT_SLUG% --force
+python -m orchestrator synthesize-scene-bindings %PROJECT_SLUG% --force %CHAPTER_ARGS%
 if errorlevel 1 goto :fail
 
 echo.
 echo [2/5] Running shot package synthesis...
-python -m orchestrator synthesize-shot-packages %PROJECT_SLUG% --force
+python -m orchestrator synthesize-shot-packages %PROJECT_SLUG% --force %CHAPTER_ARGS%
 if errorlevel 1 goto :fail
 
 echo.
 echo [3/5] Running dialogue timeline synthesis...
-python -m orchestrator synthesize-dialogue-timeline %PROJECT_SLUG% --force
+python -m orchestrator synthesize-dialogue-timeline %PROJECT_SLUG% --force %CHAPTER_ARGS%
 if errorlevel 1 goto :fail
 
 echo.
 echo [4/5] Running descriptor enrichment...
-python -m orchestrator synthesize-descriptor-enrichment %PROJECT_SLUG% --force
+python -m orchestrator synthesize-descriptor-enrichment %PROJECT_SLUG% --force %CHAPTER_ARGS%
 if errorlevel 1 goto :fail
 
 echo.
 echo [5/5] Running prompt preparation...
-python -m orchestrator synthesize-prompt-preparation %PROJECT_SLUG% --force
+python -m orchestrator synthesize-prompt-preparation %PROJECT_SLUG% --force %CHAPTER_ARGS%
 if errorlevel 1 goto :fail
 
 echo.

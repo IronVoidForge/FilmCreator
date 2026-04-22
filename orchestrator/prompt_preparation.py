@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any
 
 from .character_bible import _is_film_facing_character
+from .chapter_selection import any_chapter_matches, chapter_matches, parse_chapter_selector
 from .core.json_io import read_json, write_json
 from .environment_bible import _is_film_facing_environment
 from .prompt_package import PromptPackage, write_prompt_package
@@ -37,7 +38,6 @@ ENVIRONMENT_VARIANTS = [
 SHOT_VARIANTS = [
     ("primary_keyframe", "Primary Keyframe", "primary keyframe that matches the scene contract and shot intent"),
     ("alternate_angle", "Alternate Angle", "same moment from a different camera angle while preserving continuity"),
-    ("zoom_variant", "Tighter Zoom", "tighter zoom that keeps the same beat but brings the subjects closer"),
     ("consistency_repair", "Consistency Repair", "continuity repair pass that preserves pose, costume, and spatial relationships"),
 ]
 
@@ -880,6 +880,8 @@ def run_prompt_preparation(
     limit: int | None = None,
     entity_types: list[str] | None = None,
     entity_ids: list[str] | None = None,
+    chapters: str | None = None,
+    shot_variants: list[str] | None = None,
 ) -> PromptPreparationSummary:
     project_dir = create_project(project_slug)
     root = project_dir / PROMPT_PREP_ROOT
@@ -907,6 +909,20 @@ def run_prompt_preparation(
     stop_processing = False
     selected_types = set(entity_types or [])
     selected_ids = {str(item).strip().lower() for item in (entity_ids or []) if str(item).strip()}
+    selected_chapters = set(parse_chapter_selector(chapters))
+    selected_shot_variants = {str(item).strip().lower() for item in (shot_variants or []) if str(item).strip()}
+    allowed_shot_variants = [variant for variant in SHOT_VARIANTS if not selected_shot_variants or variant[0].lower() in selected_shot_variants]
+    if selected_chapters:
+        scene_contracts = {
+            scene_id: contract
+            for scene_id, contract in scene_contracts.items()
+            if chapter_matches(str(contract.get("chapter_id", "") or scene_id[:5]), selected_chapters)
+        }
+        shot_packages = [
+            shot
+            for shot in shot_packages
+            if chapter_matches(str(shot.get("chapter_id", "") or str(shot.get("scene_id", ""))[:5]), selected_chapters)
+        ]
 
     def matches_entity_id(*candidates: str) -> bool:
         if not selected_ids:
@@ -920,6 +936,11 @@ def run_prompt_preparation(
             if stop_processing:
                 break
             char_id = str(bible.get("character_id", "")).strip().lower()
+            if selected_chapters and not any_chapter_matches(
+                _coerce_bullets(bible.get("chapter_mentions", [])),
+                selected_chapters,
+            ):
+                continue
             if not matches_entity_id(char_id, f"char_{char_id}", f"desc_char_{char_id}"):
                 continue
             total_entries += 1
@@ -971,6 +992,11 @@ def run_prompt_preparation(
             if stop_processing:
                 break
             env_id = str(bible.get("environment_id", "")).strip().lower()
+            if selected_chapters and not any_chapter_matches(
+                _coerce_bullets(bible.get("chapter_mentions", [])),
+                selected_chapters,
+            ):
+                continue
             if not matches_entity_id(env_id, f"env_{env_id}", f"desc_env_{env_id}"):
                 continue
             total_entries += 1
@@ -1031,7 +1057,7 @@ def run_prompt_preparation(
             scene_contract = scene_contracts.get(scene_id, {})
             scene_descriptor = scene_descriptors.get(scene_id.lower())
             shot_descriptor = shot_descriptors.get(f"{scene_id.lower()}_{shot_id.lower()}")
-            for variant in SHOT_VARIANTS:
+            for variant in allowed_shot_variants:
                 if stop_processing:
                     break
                 package, package_path, sources, review_notes = _package_for_shot(

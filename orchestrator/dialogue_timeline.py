@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Any
 
 from .book_librarian import chapter_paragraphs, chapter_source_path, list_chapter_entries
+from .chapter_selection import chapter_matches, parse_chapter_selector
 from .core.json_io import read_json, write_json
 from .scaffold import create_project
 from .state import path_to_manifest_value
@@ -713,6 +714,7 @@ def run_dialogue_timeline(
     project_slug: str,
     *,
     force: bool = False,
+    chapters: str | None = None,
 ) -> DialogueTimelineSummary:
     project_dir = create_project(project_slug)
     timeline_root = project_dir / "02_story_analysis" / "timelines"
@@ -723,7 +725,8 @@ def run_dialogue_timeline(
     review_root.mkdir(parents=True, exist_ok=True)
 
     scene_contracts_by_chapter, shot_indexes_by_chapter = _load_scene_and_shot_maps(project_dir)
-    book_entries = list_chapter_entries(project_slug)
+    selected_chapters = set(parse_chapter_selector(chapters))
+    book_entries = [entry for entry in list_chapter_entries(project_slug) if chapter_matches(str(entry.get("chapter_id", "")), selected_chapters)]
     warnings: list[str] = []
     review_queue: list[dict[str, Any]] = []
     chapter_summaries: list[dict[str, Any]] = []

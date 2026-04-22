@@ -70,10 +70,12 @@ The active multi-chapter launcher set is now ordered by workflow stage:
   - runs the full book-to-prompt pipeline from chapter summaries through prompt preparation
 - `multi_chapter\11_resume_full_book_pipeline.bat`
   - retries failed book-analysis chapters and resumes from the last partial chapter before running the full pipeline
+- `multi_chapter\12_run_dev_slice_downstream_pipeline.bat`
+  - runs a chapter-slice downstream pipeline, defaulting to chapters `1-6`, without rerunning character/environment synthesis
 - `multi_chapter\20_run_scene_bindings_only.bat`
-  - resolves scene-level cast and environment bindings before shot planning
+  - resolves scene-level cast and environment bindings before shot planning, with an optional chapter filter
 - `multi_chapter\21_run_scene_bindings_and_downstream.bat`
-  - reruns scene bindings plus all affected downstream stages without rerunning character/environment synthesis
+  - reruns scene bindings plus all affected downstream stages without rerunning character/environment synthesis, with an optional chapter filter
 - `multi_chapter\22_run_dialogue_enrichment_only.bat`
   - enriches dialogue delivery metadata for the existing dialogue timeline
 - `multi_chapter\30_run_quality_grading.bat`
@@ -94,6 +96,7 @@ Legacy `test_*`, broad cleanup, and older duplicate multi-chapter launchers were
 1. Run `multi_chapter\00_prepare_book_ingest.bat` if the source book still needs ingest
 2. Use `multi_chapter\10_run_full_book_pipeline_from_scratch.bat` for a clean full build
 3. Use `multi_chapter\11_resume_full_book_pipeline.bat` to continue an interrupted full build
-4. Use `multi_chapter\21_run_scene_bindings_and_downstream.bat` when only scene bindings and later stages need refresh
-5. Use `multi_chapter\30_run_quality_grading.bat` after a run to inspect weak artifacts
-6. For render smoke tests, start with `render\clean_8190\start_render_terminals_clean_8190.bat`
+4. Use `multi_chapter\12_run_dev_slice_downstream_pipeline.bat` for fast iteration on a chapter subset
+5. Use `multi_chapter\21_run_scene_bindings_and_downstream.bat` when only scene bindings and later stages need refresh
+6. Use `multi_chapter\30_run_quality_grading.bat` after a run to inspect weak artifacts
+7. For render smoke tests, start with `render\clean_8190\start_render_terminals_clean_8190.bat`

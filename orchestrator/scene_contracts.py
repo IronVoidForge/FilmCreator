@@ -11,6 +11,7 @@ from typing import Any
 from .book_librarian import search_book_index, search_chapter_context
 from .character_bible import _is_film_facing_character  # reuse film-facing filtering
 from .character_match import find_character_match_candidates
+from .chapter_selection import chapter_matches, parse_chapter_selector
 from .core.json_io import read_json, write_json
 from .environment_bible import _is_film_facing_environment
 from .environment_match import find_environment_match_candidates
@@ -919,9 +920,11 @@ def run_scene_contract_synthesis(
     *,
     use_llm: bool = True,
     force: bool = False,
+    chapters: str | None = None,
 ) -> SceneContractSynthesisSummary:
     project_dir = create_project(project_slug)
-    scene_files = _scene_list(project_dir)
+    selected_chapters = set(parse_chapter_selector(chapters))
+    scene_files = [path for path in _scene_list(project_dir) if chapter_matches(path.parent.name or path.stem[:5], selected_chapters)]
 
     output_root = _scene_contract_root(project_dir)
     review_dir = output_root / "review"
