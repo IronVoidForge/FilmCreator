@@ -5,7 +5,7 @@
   "shot_order": 2,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Medium 2: Explanation of his anomalous aging process.",
+  "shot_title": "Medium 2: Explanation of aging process",
   "shot_type": "medium",
   "camera_description": "Stable medium framing that keeps action and character readable.",
   "composition": "Readable medium composition in Unspecified (Narrative framing space) featuring John Carter (Elderly).",
@@ -24,23 +24,22 @@
   ],
   "environment": {
     "label": "Unspecified (Narrative framing space)",
-    "canonical_id": "None",
+    "canonical_id": null,
     "display_name": "Unspecified (Narrative framing space)",
     "status": "review",
     "entity_kind": "environment",
-    "resolution_score": null,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
+    "resolution_score": 8,
+    "source_path": "",
     "notes": "aerial_battlefield_mars | source context shares query language"
   },
   "beat_ids": [
     "BT002"
   ],
   "continuity_constraints": [
-    "Consistent elderly age for John Carter",
-    "Controlled tone of voice and delivery",
-    "Explanation of his anomalous aging process."
+    "Character age consistency (must remain \"elderly\")",
+    "Vocal tone and delivery stability"
   ],
-  "prompt_seed": "Medium 2: Explanation of his anomalous aging process.. medium. Stable medium framing that keeps action and character readable. Readable medium composition in Unspecified (Narrative framing space) featuring John Carter (Elderly). Cast: John Carter (Elderly). Environment: Unspecified (Narrative framing space). Beat: E...",
+  "prompt_seed": "Medium 2: Explanation of his anomalous aging process. medium. Stable medium framing that keeps action and character readable. Readable medium composition in Unspecified (Narrative framing space) featuring John Carter (Elderly). Cast: John Carter (Elderly). Environment: Unspecified (Narrative framing space).",
   "shot_notes": "Explanation of his anomalous aging process.",
   "evidence_refs": [
     {
@@ -94,7 +93,7 @@
     }
   ],
   "evidence_summary": [
-    "The scene serves as a narrative framing device to introduce the protagonist's anomalous aging process. The production must utilize soft lighting and intimate camera work to establish a reflective, solemn atmosphere that justifies the character's decision to...",
+    "The scene serves as a direct address to the audience, utilizing soft lighting and intimate framing to establish the protagonist's anomalous aging process. The production must focus on the texture of the character's skin and eyes to visually communicate his...",
     "An elderly John Carter introduces himself to the reader/audience, explaining his anomalous aging process and his decision to document his life story before he finally dies.",
     "Introspection / Solemnity.",
     "Extreme close-ups (eyes/weathered skin)",
@@ -105,19 +104,24 @@
     "artifact_id": "CH001_SC001_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "06c2673ca943215e4d3d55bbbd324c5a28c6be52",
+    "source_fingerprint": "c23cebca0bb5e684b755feaa796bec29dfbd1480",
     "created_at_utc": "2026-04-21T23:56:51.261518+00:00",
-    "updated_at_utc": "2026-04-21T23:56:51.261518+00:00",
+    "updated_at_utc": "2026-04-22T06:48:51.074233+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH001_SC001",
-        "version": "db9fe8c7331f194be33b40ac1069d6f42e10e81b"
+        "version": "afa538b9c5944c0a1e973d120e59cc8f58c48a29"
+      },
+      {
+        "dependency_type": "scene_binding",
+        "dependency_id": "CH001_SC001",
+        "version": "32c356ed601c55dba5d997b217d3adcbcd7b969f"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH001_SC001",
-        "version": "392969d6e07d641684818277d3765f994ae702e7"
+        "version": "27753e23dcc25517ed6d3ee2bfd37e8919d2fbfb"
       }
     ],
     "locked_fields": {},
@@ -127,6 +131,11 @@
         "timestamp_utc": "2026-04-21T23:57:15.429639+00:00",
         "action": "synthesized",
         "source_fingerprint": "06c2673ca943215e4d3d55bbbd324c5a28c6be52"
+      },
+      {
+        "timestamp_utc": "2026-04-22T06:49:06.539957+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "c23cebca0bb5e684b755feaa796bec29dfbd1480"
       }
     ]
   }
