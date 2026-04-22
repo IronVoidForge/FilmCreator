@@ -1422,9 +1422,11 @@ def _llm_complete_generated_fields(
     system = (
         "You are a descriptor completion system for a film pipeline. "
         "Use only the provided evidence and current descriptor context. "
-        "Your job is to fill only the missing generated fields with a canon-compatible best-effort choice. "
+        "Your job is to fill only the missing generated fields with a concrete canon-compatible best-effort choice. "
         "Do not modify supported fields. "
-        "If a field is still uncertain, make the best plausible visual choice rather than leaving it unknown. "
+        "If a field is still uncertain, make the best plausible stable visual choice rather than leaving it unknown. "
+        "Never output placeholder phrases, meta descriptions, or labels such as 'canon-compatible best-effort', 'unknown', 'n/a', 'tbd', or 'to be determined'. "
+        "Every generated field must contain a usable production-facing value. "
         "Return one tagged FilmCreator markdown packet only. "
         "Do not return JSON."
     )
@@ -1436,6 +1438,18 @@ Complete the following missing generated fields for this {entity_type} descripto
 Do not change any supported fields. Only fill the listed missing generated fields.
 Use the current descriptor context and evidence to make a best-effort canon-compatible choice.
 If a field is still ambiguous, choose the most plausible stable value rather than unknown.
+Do not write placeholders or meta phrases.
+Bad examples:
+- canon-compatible best-effort character height
+- unknown
+- not specified
+- inferred value
+Good examples:
+- tall
+- lean athletic build
+- weathered bronze skin
+- close-cropped dark hair
+- vaulted marble hall with a raised central dais
 
 DESCRIPTOR:
 {json.dumps({
@@ -1515,11 +1529,68 @@ inferred_fields:
 
 
 def _best_effort_generated_value(entity_type: str, field_name: str, current_value: Any) -> Any:
-    label = field_name.replace("_", " ")
-    text = f"canon-compatible best-effort {entity_type} {label}"
+    defaults: dict[str, dict[str, Any]] = {
+        "character": {
+            "height": "average-tall",
+            "build": "lean athletic build",
+            "skin_tone": "weathered light-to-medium skin",
+            "hair_color": "dark brown",
+            "hair_style": "practical short hair",
+            "eye_color": "dark eyes",
+            "face_shape": "angular face",
+            "facial_hair": "clean-shaven or light stubble",
+            "costume_materials": "worn cloth, leather, and practical field materials",
+            "posture": "upright and ready",
+            "expression_tendency": "focused and self-controlled",
+            "voice_or_presence_notes": "firm, direct presence",
+            "physical_build": "lean athletic build",
+            "movement_language": "decisive, efficient movement",
+            "sex": "male",
+            "age_range": "adult",
+        },
+        "environment": {
+            "scale": "monumental scale",
+            "geography": "dry open Martian terrain",
+            "architecture": "ancient stone and ceremonial architecture",
+            "pathways": "broad processional paths and stairs",
+            "materials": "stone, metal, and weathered architectural surfaces",
+            "weather_or_atmosphere": "dry thin air with still heat",
+            "foreground_midground_background": "anchored foreground details, readable midground action, deep background structures",
+            "depth_cues": "strong scale contrast and layered architectural depth",
+        },
+        "scene": {
+            "key_items": ["weapons", "costume details", "set dressing"],
+            "start_state": "scene opens in active continuity",
+            "end_state": "scene resolves into the next narrative beat",
+            "dialogue_relevance": "dialogue supports scene intent and continuity",
+        },
+        "shot": {
+            "subject_positions": "primary subject centered with readable eyeline and spacing",
+            "pose_notes": "clear readable pose with stable silhouette",
+            "gaze_direction": "focused toward the scene action",
+            "background_layers": "architectural and atmospheric background layers",
+            "foreground_elements": "framing foreground details that support depth",
+            "midground_elements": "midground action and spatial anchors",
+            "depth_cues": "clear foreground-to-background separation",
+            "start_state": "shot begins in visual continuity with the prior beat",
+            "end_state": "shot lands on a readable transition point",
+        },
+        "key_item": {
+            "shape": "clear iconic silhouette",
+            "scale": "handheld object scale",
+            "materials": "worked metal, leather, or carved material",
+            "surface_detail": "worn but readable surface detail",
+            "holder_or_user_notes": "used by the primary scene subject",
+            "symbolic_role": "continuity-significant story object",
+        },
+    }
+    entity_defaults = defaults.get(entity_type, {})
+    fallback = entity_defaults.get(field_name)
+    if fallback is not None:
+        return fallback
     if isinstance(current_value, list):
-        return [text]
-    return text
+        return ["readable production detail"]
+    return "readable production detail"
 
 
 def _complete_missing_generated_fields(

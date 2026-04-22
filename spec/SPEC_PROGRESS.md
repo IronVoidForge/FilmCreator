@@ -182,6 +182,11 @@ The latest validated state is:
 - evidence: `synthesize-dialogue-timeline` runs end to end, writes project/chapter dialogue timelines, shot dialogue notes, and review queues, and preserves unresolved dialogue rather than carrying forward false speakers
 - next validation: bind dialogue to scenes first, then map each line to primary/supporting shots and broaden prompt-prep / key-item layering
 
+### Phase 11.1 - Dialogue Second Pass Binding and Delivery
+- status: `planned`
+- evidence: the baseline dialogue layer already exists, but speaker attribution, delivery metadata, and scene-to-shot binding are still too weak to rely on without a narrow repair pass
+- next validation: patch unresolved speakers, assign primary/supporting shots, and add production-usable delivery fields without overwriting already-strong dialogue events
+
 ### Phase 11.5 - Prompt Preparation and Reference Pack Assembly
 - status: `validated`
 - evidence: stable character bibles, environment bibles, scene contracts, and shot packages already exist, and the prompt-prep bridge now fans out compact generation bundles without re-deriving prompt structure elsewhere

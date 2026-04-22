@@ -258,6 +258,33 @@ Turn canonical bibles, scene contracts, and shot packages into compact, generati
 - angle and zoom variant bundles
 - image-to-image consistency bundles
 - prompt package indexes
+
+### Phase 11.1 - Dialogue Second Pass Binding and Delivery
+
+#### Goal
+
+Run a focused second dialogue pass after baseline extraction to repair unresolved speakers, strengthen scene/shot binding, and add production-usable delivery metadata without rerunning the entire dialogue timeline.
+
+#### Inputs
+
+- baseline dialogue timeline
+- scene contracts
+- scene bindings
+- shot packages
+- chapter summaries
+- relevant character bibles
+- dialogue enrichment outputs when available
+
+#### Outputs
+
+- patched dialogue events
+- dialogue second-pass review queue
+- delivery and binding confidence updates
+- scene-level dialogue binding summaries
+
+#### Why It Matters
+
+The baseline dialogue pass is allowed to be conservative. This second pass is the repair layer that turns structurally valid dialogue extraction into a production-usable asset for later prompt prep and edit planning.
 - prompt review queues
 
 #### Why This Phase Is Needed
