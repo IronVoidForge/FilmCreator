@@ -318,6 +318,13 @@ def _load_environment_bible(project_dir: Path, canonical_id: str) -> dict[str, A
     return _load_json_file(path)
 
 
+def _normalize_optional_canonical_id(value: Any) -> str | None:
+    text = str(value or "").strip()
+    if not text or text.lower() in {"none", "null", "(none)"}:
+        return None
+    return text
+
+
 def _chapter_id_from_scene_id(scene_id: str) -> str:
     return scene_id[:5]
 
@@ -360,7 +367,7 @@ def _select_environment_ref(scene_contract: dict[str, Any], project_dir: Path) -
     for raw_ref in environment_refs:
         if not isinstance(raw_ref, dict):
             continue
-        canonical_id = str(raw_ref.get("canonical_id") or "").strip()
+        canonical_id = _normalize_optional_canonical_id(raw_ref.get("canonical_id")) or ""
         bible = _load_environment_bible(project_dir, canonical_id) if canonical_id else None
         status = str(raw_ref.get("status") or (bible or {}).get("status", "review"))
         entity_kind = str(raw_ref.get("entity_kind") or (bible or {}).get("entity_kind", "environment"))
@@ -377,15 +384,18 @@ def _select_environment_ref(scene_contract: dict[str, Any], project_dir: Path) -
 
     raw_ref = environment_refs[0]
     if isinstance(raw_ref, dict):
-        canonical_id = str(raw_ref.get("canonical_id") or "").strip() or None
+        canonical_id = _normalize_optional_canonical_id(raw_ref.get("canonical_id"))
         bible = _load_environment_bible(project_dir, canonical_id) if canonical_id else None
+        source_path = str(raw_ref.get("source_path", ""))
+        if canonical_id is None:
+            source_path = ""
         return ShotReference(
             label=str(raw_ref.get("label", "environment")),
             canonical_id=canonical_id,
             display_name=_first_nonempty(str((bible or {}).get("display_name", "")), str(raw_ref.get("display_name", "")), fallback=str(raw_ref.get("label", "environment"))),
             status=str(raw_ref.get("status", (bible or {}).get("status", "review"))),
             entity_kind=str(raw_ref.get("entity_kind", (bible or {}).get("entity_kind", "environment"))),
-            source_path=str(raw_ref.get("source_path", "")),
+            source_path=source_path,
             notes=str(raw_ref.get("notes", "")),
         )
 
@@ -1180,17 +1190,24 @@ def run_shot_planning(
             )
 
             environment_payload = merged.get("environment", {}) if isinstance(merged.get("environment"), dict) else {}
+            environment_canonical_id = str(environment_payload.get("canonical_id", "")).strip()
+            if environment_canonical_id.lower() in {"none", "null", "(none)"}:
+                environment_canonical_id = ""
+            environment_status = str(environment_payload.get("status", "review"))
+            environment_source_path = str(environment_payload.get("source_path", ""))
+            if not environment_canonical_id or environment_status != "canonical":
+                environment_source_path = ""
             environment_ref = ShotReference(
                 label=_clean_label(environment_payload.get("label"), fallback="environment"),
-                canonical_id=(str(environment_payload.get("canonical_id", "")).strip() or None),
+                canonical_id=(environment_canonical_id or None),
                 display_name=_clean_label(
                     environment_payload.get("display_name"),
                     fallback=_clean_label(environment_payload.get("label"), fallback="environment"),
                 ),
-                status=str(environment_payload.get("status", "review")),
+                status=environment_status,
                 entity_kind=str(environment_payload.get("entity_kind", "environment")),
                 resolution_score=environment_payload.get("resolution_score"),
-                source_path=str(environment_payload.get("source_path", "")),
+                source_path=environment_source_path,
                 notes=str(environment_payload.get("notes", "")),
             )
             character_payloads = merged.get("characters_in_frame", [])
@@ -1312,6 +1329,11 @@ def run_shot_planning(
 
 def _package_from_existing(existing: dict[str, Any], metadata: ShotPackageMetadata) -> ShotPackage:
     environment_payload = existing.get("environment", {}) if isinstance(existing.get("environment"), dict) else {}
+    environment_canonical_id = _normalize_optional_canonical_id(environment_payload.get("canonical_id"))
+    environment_status = str(environment_payload.get("status", "review"))
+    environment_source_path = str(environment_payload.get("source_path", ""))
+    if not environment_canonical_id or environment_status != "canonical":
+        environment_source_path = ""
     return ShotPackage(
         shot_id=str(existing.get("shot_id", "")),
         scene_id=str(existing.get("scene_id", "")),
@@ -1323,7 +1345,16 @@ def _package_from_existing(existing: dict[str, Any], metadata: ShotPackageMetada
         composition=str(existing.get("composition", "")),
         target_seconds=_coerce_float(existing.get("target_seconds"), fallback=5.0),
         characters_in_frame=[ShotReference(**item) for item in existing.get("characters_in_frame", []) if isinstance(item, dict)],
-        environment=ShotReference(**environment_payload) if environment_payload else None,
+        environment=ShotReference(
+            label=str(environment_payload.get("label", "environment")),
+            canonical_id=environment_canonical_id,
+            display_name=str(environment_payload.get("display_name", "")),
+            status=environment_status,
+            entity_kind=str(environment_payload.get("entity_kind", "environment")),
+            resolution_score=environment_payload.get("resolution_score"),
+            source_path=environment_source_path,
+            notes=str(environment_payload.get("notes", "")),
+        ) if environment_payload else None,
         beat_ids=_coerce_string_list(existing.get("beat_ids", [])),
         continuity_constraints=_coerce_string_list(existing.get("continuity_constraints", [])),
         prompt_seed=str(existing.get("prompt_seed", "")),
