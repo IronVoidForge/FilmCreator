@@ -6,7 +6,7 @@ import json
 from .character_bible import run_character_bible_synthesis
 from .descriptor_enrichment import clear_descriptor_artifacts, run_descriptor_enrichment
 from .dialogue_enrichment import run_dialogue_enrichment
-from .downstream_pipeline import run_downstream_pipeline
+from .downstream_pipeline import run_downstream_pipeline, summarize_downstream_run
 from .dialogue_timeline import run_dialogue_timeline
 from .environment_bible import run_environment_bible_synthesis
 from .identity_refinement import run_identity_refinement
@@ -152,6 +152,10 @@ def build_parser() -> argparse.ArgumentParser:
         dest="shot_variants",
     )
 
+    ds = subparsers.add_parser("summarize-downstream-run")
+    ds.add_argument("project_slug")
+    ds.add_argument("--pipeline-key", type=str, default="downstream_pipeline")
+
     return parser
 
 
@@ -278,6 +282,13 @@ def main() -> None:
             resume=not args.no_resume,
             use_llm=not args.no_llm,
             shot_variants=args.shot_variants,
+        )
+        print(json.dumps(summary.to_dict(), indent=2))
+
+    elif args.command == "summarize-downstream-run":
+        summary = summarize_downstream_run(
+            args.project_slug,
+            pipeline_key=args.pipeline_key,
         )
         print(json.dumps(summary.to_dict(), indent=2))
 

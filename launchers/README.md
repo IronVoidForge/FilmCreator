@@ -72,6 +72,8 @@ The active multi-chapter launcher set is now ordered by workflow stage:
   - retries failed book-analysis chapters and resumes from the last partial chapter before running the full pipeline
 - `multi_chapter\12_run_dev_slice_downstream_pipeline.bat`
   - runs a chapter-slice downstream pipeline, defaulting to chapters `1-6`, without rerunning character/environment synthesis, and automatically resumes the latest interrupted matching run
+- `multi_chapter\13_resume_latest_dev_slice_run.bat`
+  - shows the saved `dev_slice_downstream` run summary and resumes the latest matching interrupted dev-slice run
 - `multi_chapter\20_run_scene_bindings_only.bat`
   - resolves scene-level cast and environment bindings before shot planning, with an optional chapter filter
 - `multi_chapter\21_run_scene_bindings_and_downstream.bat`

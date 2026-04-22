@@ -9,7 +9,7 @@ def normalize_chapter_id(value: str | int | None) -> str | None:
     text = str(value).strip().upper()
     if not text:
         return None
-    match = re.fullmatch(r"CH?0*(\d{1,3})", text)
+    match = re.fullmatch(r"(?:CH)?0*(\d{1,3})", text)
     if match:
         return f"CH{int(match.group(1)):03d}"
     match = re.fullmatch(r"CH(\d{3})", text)
@@ -28,7 +28,7 @@ def parse_chapter_selector(selector: str | None) -> list[str]:
     seen: set[str] = set()
 
     for part in parts:
-        range_match = re.fullmatch(r"(CH?\d{1,3})-(CH?\d{1,3})", part)
+        range_match = re.fullmatch(r"((?:CH)?\d{1,3})-((?:CH)?\d{1,3})", part)
         if range_match:
             start = normalize_chapter_id(range_match.group(1))
             end = normalize_chapter_id(range_match.group(2))

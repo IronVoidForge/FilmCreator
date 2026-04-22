@@ -159,6 +159,21 @@ class DownstreamRunTracker:
         tracker._save()
         return tracker
 
+    @classmethod
+    def load_latest(
+        cls,
+        *,
+        project_slug: str,
+        pipeline_key: str,
+    ) -> "DownstreamRunTracker | None":
+        latest_path = _runs_dir(project_slug) / f"{pipeline_key}_latest.json"
+        if not latest_path.exists():
+            return None
+        payload = read_json(latest_path)
+        if not isinstance(payload, dict):
+            return None
+        return cls(payload)
+
     def _phase_payload(self, phase_name: str) -> dict[str, Any]:
         phases = self.payload.setdefault("phases", {})
         phase = phases.setdefault(

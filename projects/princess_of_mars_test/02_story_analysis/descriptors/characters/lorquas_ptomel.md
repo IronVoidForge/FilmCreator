@@ -37,23 +37,23 @@
 
 ## Generated Fields
 
-- build: canon-compatible best-effort character build
-- costume_materials: canon-compatible best-effort character costume materials
-- expression_tendency: canon-compatible best-effort character expression tendency
-- eye_color: canon-compatible best-effort character eye color
-- face_shape: canon-compatible best-effort character face shape
-- facial_hair: canon-compatible best-effort character facial hair
-- hair_color: canon-compatible best-effort character hair color
-- hair_style: canon-compatible best-effort character hair style
-- height: canon-compatible best-effort character height
-- posture: canon-compatible best-effort character posture
-- skin_tone: canon-compatible best-effort character skin tone
+- build: lean athletic build
+- costume_materials: worn cloth, leather, and practical field materials
+- expression_tendency: focused and self-controlled
+- eye_color: dark eyes
+- face_shape: angular face
+- facial_hair: clean-shaven or light stubble
+- hair_color: dark brown
+- hair_style: practical short hair
+- height: average-tall
+- posture: upright and ready
+- skin_tone: weathered light-to-medium skin
 
 ## Coverage
 
 - chapter_mentions: CH011, CH012, CH013, CH016, CH024, CH007
 - scene_mentions: CH010_SC002, CH010_SC004, CH012_SC001, CH013_SC001, CH024_SC004
-- shot_mentions: CH010_SC004/SH001, CH012_SC001/SH002, CH012_SC001/SH003, CH012_SC001/SH004, CH012_SC001/SH005, CH013_SC001/SH001
+- shot_mentions: CH012_SC001/SH002, CH012_SC001/SH003, CH012_SC001/SH004, CH013_SC001/SH004
 
 ## Evidence Summary
 
@@ -86,5 +86,5 @@
 - artifact_id: `DESC_CHAR_lorquas_ptomel`
 - status: `generated`
 - source_fingerprint: `4fc840af39c817fa0923b25321428b683caddd3c`
-- created_at_utc: `2026-04-22T04:10:46.525664+00:00`
-- updated_at_utc: `2026-04-22T04:10:46.525664+00:00`
+- created_at_utc: `2026-04-22T16:33:41.006992+00:00`
+- updated_at_utc: `2026-04-22T16:33:41.006992+00:00`

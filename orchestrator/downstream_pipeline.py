@@ -36,6 +36,32 @@ class DownstreamPipelineSummary:
         }
 
 
+@dataclass(frozen=True)
+class DownstreamRunStateSummary:
+    project_slug: str
+    pipeline_key: str
+    found: bool
+    run_id: str | None
+    status: str | None
+    current_phase: str | None
+    config: dict[str, Any]
+    phase_status: list[dict[str, Any]]
+    state_path: str | None
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "project_slug": self.project_slug,
+            "pipeline_key": self.pipeline_key,
+            "found": self.found,
+            "run_id": self.run_id,
+            "status": self.status,
+            "current_phase": self.current_phase,
+            "config": self.config,
+            "phase_status": self.phase_status,
+            "state_path": self.state_path,
+        }
+
+
 def run_downstream_pipeline(
     project_slug: str,
     *,
@@ -138,4 +164,52 @@ def run_downstream_pipeline(
         completed_phases=completed_phases,
         phase_summaries=phase_summaries,
         state_path=final_summary.state_path,
+    )
+
+
+def summarize_downstream_run(
+    project_slug: str,
+    *,
+    pipeline_key: str = "downstream_pipeline",
+) -> DownstreamRunStateSummary:
+    tracker = DownstreamRunTracker.load_latest(project_slug=project_slug, pipeline_key=pipeline_key)
+    if tracker is None:
+        return DownstreamRunStateSummary(
+            project_slug=project_slug,
+            pipeline_key=pipeline_key,
+            found=False,
+            run_id=None,
+            status=None,
+            current_phase=None,
+            config={},
+            phase_status=[],
+            state_path=None,
+        )
+
+    phase_status: list[dict[str, Any]] = []
+    for phase_name in DOWNSTREAM_PHASE_ORDER:
+        phase = tracker.payload.get("phases", {}).get(phase_name, {})
+        items = phase.get("items", {}) if isinstance(phase, dict) else {}
+        phase_status.append(
+            {
+                "phase": phase_name,
+                "status": phase.get("status"),
+                "total_items": phase.get("total_items"),
+                "completed_items": phase.get("completed_items"),
+                "recorded_items": len(items) if isinstance(items, dict) else 0,
+                "started_at_utc": phase.get("started_at_utc"),
+                "completed_at_utc": phase.get("completed_at_utc"),
+            }
+        )
+
+    return DownstreamRunStateSummary(
+        project_slug=project_slug,
+        pipeline_key=pipeline_key,
+        found=True,
+        run_id=tracker.run_id,
+        status=str(tracker.payload.get("status", "")).strip() or None,
+        current_phase=tracker.current_phase,
+        config=tracker.payload.get("config", {}) if isinstance(tracker.payload.get("config", {}), dict) else {},
+        phase_status=phase_status,
+        state_path=tracker.latest_path.as_posix(),
     )
