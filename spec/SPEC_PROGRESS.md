@@ -1,4 +1,4 @@
-# Spec Progress
+﻿# Spec Progress
 
 ## Current Project Status
 
@@ -53,7 +53,7 @@ The latest validated state is:
 ### 1.6 SQLite relational model
 - status: `planned`
 - evidence: SQLite remains deferred until the file-first production contracts stabilize
-- next validation: revisit only after phases 7–11 contracts and lifecycle semantics are stable
+- next validation: revisit only after phases 7â€“11 contracts and lifecycle semantics are stable
 
 ## Shared Asset Foundation
 
@@ -152,50 +152,60 @@ The latest validated state is:
 
 ## New Active Roadmap Phases
 
-### Phase 7 – Character Bible Synthesis
+### Phase 7 - Character Bible Synthesis
 - status: `planned`
 - evidence: upstream registries, refinement inputs, and librarian retrieval now exist to support this phase
 - next validation: produce canonical character bibles with evidence refs, revision history, locked fields, and review queues
 
-### Phase 8 – Environment Bible Synthesis
+### Phase 8 - Environment Bible Synthesis
 - status: `planned`
 - evidence: upstream registries, continuity state, and retrieval now exist to support this phase
 - next validation: produce canonical environment bibles with hierarchy rules, evidence refs, revision history, and review queues
 
-### Phase 9 – Scene Production Contracts
+### Phase 9 - Scene Production Contracts
 - status: `validated`
 - evidence: `synthesize-scene-contracts` runs end to end, writes per-scene JSON/markdown contracts, and produces scene review queues and indexes for the full `princess_of_mars_test` book run
-- next validation: keep tuning the scene reference resolution and bridge the contracts into shot planning inputs
+- next validation: make scene contracts selector-first, add future environment request output, and bridge the contracts into authoritative scene bindings
 
-### Phase 10 – Shot Planning and Shot Packages
+### Phase 9.5 - Scene Binding and Environment Selection
+- status: `planned`
+- evidence: current shot-planner drift shows the need for a binding authority between scenes and shots; scene contracts already expose the right raw ingredients to support this layer
+- next validation: produce per-scene binding artifacts that lock scene-level environment and cast decisions before shot planning
+
+### Phase 10 - Shot Planning and Shot Packages
 - status: `validated`
 - evidence: `synthesize-shot-packages` runs end to end, writes per-shot JSON/markdown packages, and produces shot indexes plus review queues for the full `princess_of_mars_test` run
-- next validation: tighten shot-to-dialogue and edit-aware sequencing on top of the new shot contract layer
+- next validation: inherit scene bindings, eliminate per-shot environment drift, and tighten shot-to-dialogue sequencing on top of the new shot contract layer
 
-### Phase 11 – Dialogue, Timing, and Edit-Aware Sequencing
+### Phase 11 - Dialogue, Timing, and Edit-Aware Sequencing
 - status: `validated`
 - evidence: `synthesize-dialogue-timeline` runs end to end, writes project/chapter dialogue timelines, shot dialogue notes, and review queues, and preserves unresolved dialogue rather than carrying forward false speakers
-- next validation: tighten dialogue heuristics for ambiguous narration and broaden prompt-prep / key-item layering
+- next validation: bind dialogue to scenes first, then map each line to primary/supporting shots and broaden prompt-prep / key-item layering
 
-### Phase 11.5 â€“ Prompt Preparation and Reference Pack Assembly
+### Phase 11.5 - Prompt Preparation and Reference Pack Assembly
 - status: `validated`
 - evidence: stable character bibles, environment bibles, scene contracts, and shot packages already exist, and the prompt-prep bridge now fans out compact generation bundles without re-deriving prompt structure elsewhere
 - next validation: produce reusable prompt bundles for character reference sheets, environment reference sheets, and shot-level production prompts, including angle and image-to-image consistency variants
 
-### Phase 11.6 â€“ Key Item Index and Reference Pack Assembly
+### Phase 11.6 - Key Item Index and Reference Pack Assembly
 - status: `planned`
 - evidence: recurring story-significant items need their own canonical index so artifacts like rings, swords, armor sets, and other unique props can stay visually and narratively consistent
 - next validation: produce a stable item registry with chapter mentions, visual summaries, and reference-sheet eligibility flags
 
-### Phase 11.7 â€“ Descriptor Enrichment and Reference Coverage
+### Phase 11.7 - Descriptor Enrichment and Reference Coverage
 - status: `planned`
 - evidence: the project now has canonical bibles, prompt preparation, and book-index retrieval, so a structured descriptor layer can consolidate evidence-grounded traits and reference coverage without re-asking the same questions
 - next validation: produce structured descriptor profiles with confidence, provenance, and coverage maps for characters, environments, scenes, and key items
 
-### Phase 11.8 – Quality Grading and Selective Reruns
+### Phase 11.8 - Quality Grading and Selective Reruns
 - status: `implemented`
 - evidence: the `grade-artifacts` command now scans synthesis outputs, scores them, and writes project-level grade and rerun queue artifacts without mutating the source outputs; the rerun queue now carries `focus_fields` so supported reruns can patch only weak fields instead of rewriting strong ones
 - next validation: produce artifact grades, rerun manifests, and dependency-aware selective rebuild plans for low-scoring items
+
+### Phase 11.9 - Quality Smoothing and Patch Repair
+- status: `planned`
+- evidence: the grading layer already emits `focus_fields`, which is the required contract for targeted smoothing without whole-family reruns
+- next validation: patch incomplete artifacts with narrow context packs and preserve prior strong fields
 
 ## Cross-Cutting Work Newly Required
 
@@ -206,10 +216,11 @@ The latest validated state is:
 
 ### Dependency graph and staleness
 - status: `planned`
-- evidence: future phases 7–11.8 require selective rebuilds based on upstream changes
+- evidence: future phases 7â€“11.8 require selective rebuilds based on upstream changes
 - next validation: define dependency tracking and stale propagation rules
 
 ### Review and approval model
 - status: `planned`
 - evidence: render review exists, but synthesis and contract layers now need a broader approval system
 - next validation: add review queues and approval states across bibles, scene contracts, shot packages, and later generated assets
+

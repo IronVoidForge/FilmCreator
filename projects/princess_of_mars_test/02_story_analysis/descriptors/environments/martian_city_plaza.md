@@ -1,0 +1,72 @@
+# Environment Descriptor: martian_city_plaza
+
+- descriptor_id: `DESC_ENV_martian_city_plaza`
+- canonical_id: `martian_city_plaza`
+- status: `canonical`
+- entity_type: `environment`
+
+## Supported Fields
+
+- camera_friendly_landmarks:
+  - Alien architecture
+  - Dusty Martian atmosphere
+  - Groups of Martian warriors
+  - Observing crowds
+- chapter_mentions:
+  - CH006
+- environment_type: Secondary/Transit setting; expansive urban gathering place.
+- layout: Expansive scale; functions as a transition point from enclosed chambers to the wider cityscape.
+- lighting: Open-air Martian atmosphere.
+- mood: Populated/Observational.
+- recurring_anchors:
+  - Alien architecture
+  - Dusty Martian atmosphere
+  - Groups of Martian warriors
+  - Observing crowds
+
+## Generated Fields
+
+- architecture: canon-compatible best-effort environment architecture
+- depth_cues: canon-compatible best-effort environment depth cues
+- foreground_midground_background: canon-compatible best-effort environment foreground midground background
+- geography: canon-compatible best-effort environment geography
+- materials: canon-compatible best-effort environment materials
+- pathways: canon-compatible best-effort environment pathways
+- scale: canon-compatible best-effort environment scale
+- weather_or_atmosphere: canon-compatible best-effort environment weather or atmosphere
+
+## Coverage
+
+- chapter_mentions: CH006
+- scene_mentions: (none)
+- shot_mentions: (none)
+
+## Evidence Summary
+
+- An expansive, open-air urban expanse characterized by alien architecture and a dusty Martian atmosphere. The plaza serves as a large-scale gathering place anchored by surrounding buildings and is populated by observing crowds and groups of Martian warriors.
+- Expansive scale; functions as a transition point from enclosed chambers to the wider cityscape.
+- Open-air Martian atmosphere.
+- Populated/Observational.
+- Alien architecture
+- Dusty Martian atmosphere
+- Groups of Martian warriors
+- Observing crowds
+
+## Review
+
+- generated_field_placeholder_scale
+- generated_field_placeholder_geography
+- generated_field_placeholder_architecture
+- generated_field_placeholder_pathways
+- generated_field_placeholder_materials
+- generated_field_placeholder_weather_or_atmosphere
+- generated_field_placeholder_foreground_midground_background
+- generated_field_placeholder_depth_cues
+
+## Metadata
+
+- artifact_id: `DESC_ENV_martian_city_plaza`
+- status: `generated`
+- source_fingerprint: `c6ed25eaeb37fcd2638a6eef8f9b770b0a910077`
+- created_at_utc: `2026-04-22T04:37:24.991163+00:00`
+- updated_at_utc: `2026-04-22T04:37:24.991163+00:00`

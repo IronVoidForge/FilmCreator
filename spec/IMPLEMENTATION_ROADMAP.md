@@ -1,4 +1,4 @@
-# FilmCreator Implementation Roadmap
+﻿# FilmCreator Implementation Roadmap
 
 ## Goal
 
@@ -39,7 +39,7 @@ Ship a local-first, reviewable, resumable film pipeline that can:
 
 ## What Is Complete Enough To Build On
 
-### Phase 1 – Ingest and World Extraction (complete enough)
+### Phase 1 â€“ Ingest and World Extraction (complete enough)
 
 The project now has a working ingest and extraction foundation:
 
@@ -69,12 +69,12 @@ The pipeline can recover from many malformed or partial LLM outputs, and book-le
 
 The project has moved from analysis hardening into **canonical synthesis and production contracts**.
 
-The next major work is no longer “make chapter analysis run.”
-The next major work is “turn stable analysis into film-usable, reviewable, non-destructive production assets.”
+The next major work is no longer â€œmake chapter analysis run.â€
+The next major work is â€œturn stable analysis into film-usable, reviewable, non-destructive production assets.â€
 
 ## Authoritative Phase Order From Here
 
-### Phase 7 – Character Bible Synthesis
+### Phase 7 â€“ Character Bible Synthesis
 
 #### Goal
 
@@ -103,7 +103,7 @@ Turn registry-level character identity and evidence into stable, film-usable can
 
 Character identity is already strong enough for synthesis, and downstream scene and shot planning improve dramatically once canonical character contracts exist.
 
-### Phase 8 – Environment Bible Synthesis
+### Phase 8 â€“ Environment Bible Synthesis
 
 #### Goal
 
@@ -136,7 +136,7 @@ Scenes and shots need stable people and stable places before they can become pro
 
 Implemented and runnable.
 
-### Phase 9 – Scene Production Contracts
+### Phase 9 â€“ Scene Production Contracts
 
 #### Goal
 
@@ -158,16 +158,50 @@ Turn scene analysis into continuity-aware production contracts that can drive st
 - per-scene JSON contracts
 - scene reference bundles
 - chapter storyboard artifacts
+- future environment request entries when indexed environments are insufficient
 
 #### Why This Is The Bridge Phase
 
-This is the point where FilmCreator stops being “mostly analysis” and becomes a system that can hand structured scene intent to downstream filmmaking steps.
+This is the point where FilmCreator stops being mostly analysis and becomes a system that can hand structured scene intent to downstream filmmaking steps.
 
-### Phase 10 – Shot Planning and Shot Packages
+#### Revision Direction
+
+Scene contracts should become selector-first:
+
+- choose cast from the character index
+- choose environments from the environment index
+- do not fabricate canonical ids
+- emit future environment requests when the library is insufficient
+
+### Phase 9.5 - Scene Binding and Environment Selection
 
 #### Goal
 
-Convert scene contracts into ordered shot plans and generation-facing shot packages.
+Normalize scene-level cast and environment bindings before shot planning so shots inherit stable decisions instead of guessing per-shot.
+
+#### Outputs
+
+- per-scene binding JSON
+- binding review queue
+- future environment request queue
+
+#### Why It Sits Here
+
+This is the handoff layer between scene planning and shot planning. It is the right place to decide whether a scene has:
+
+- one canonical environment
+- multiple beat-level environments
+- only a chapter-level fallback
+
+#### Current Status
+
+Planned.
+
+### Phase 10 â€“ Shot Planning and Shot Packages
+
+#### Goal
+
+Convert scene contracts and scene bindings into ordered shot plans and generation-facing shot packages.
 
 - status: `validated`
 - evidence: `synthesize-shot-packages` runs end to end, writes per-shot JSON/markdown packages, and produces shot indexes plus review queues for the full `princess_of_mars_test` run
@@ -176,6 +210,7 @@ Convert scene contracts into ordered shot plans and generation-facing shot packa
 #### Inputs
 
 - scene contracts
+- scene bindings
 - character bibles
 - environment bibles
 - continuity state
@@ -194,7 +229,11 @@ Convert scene contracts into ordered shot plans and generation-facing shot packa
 
 Legacy clip planning should be adapted, not blindly reused as the final architecture. Compatibility adapters are preferred over embedding new logic back into legacy planning code.
 
-### Phase 11.5 â€“ Prompt Preparation and Reference Pack Assembly
+#### Revision Direction
+
+Shot packages should inherit the scene-bound environment. A shot should only differ when the scene binding explicitly declares beat-level environment overrides.
+
+### Phase 11.5 Ã¢â‚¬â€œ Prompt Preparation and Reference Pack Assembly
 
 #### Goal
 
@@ -229,7 +268,7 @@ The project already knows what the canon is. This phase prepares the prompt fami
 
 Validated.
 
-### Phase 11.6 â€“ Key Item Index and Reference Pack Assembly
+### Phase 11.6 Ã¢â‚¬â€œ Key Item Index and Reference Pack Assembly
 
 #### Goal
 
@@ -263,7 +302,7 @@ Some artifacts are neither characters nor environments but still behave like can
 
 Implemented.
 
-### Phase 11 – Dialogue, Timing, and Edit-Aware Sequencing
+### Phase 11 â€“ Dialogue, Timing, and Edit-Aware Sequencing
 
 #### Goal
 
@@ -301,7 +340,7 @@ Validated.
 - writes shot-level dialogue notes and review queues
 - preserves unresolved dialogue instead of carrying forward false speakers
 
-### Phase 11.7 – Descriptor Enrichment and Reference Coverage
+### Phase 11.7 â€“ Descriptor Enrichment and Reference Coverage
 
 #### Goal
 
@@ -337,7 +376,7 @@ The project already knows the canon and can prepare prompt bundles. This phase a
 
 Planned.
 
-### Phase 11.8 – Quality Grading and Selective Reruns
+### Phase 11.8 â€“ Quality Grading and Selective Reruns
 
 #### Goal
 
@@ -372,14 +411,14 @@ The pipeline now produces enough structured output that a later QA pass can judg
 
 Planned.
 
-### Phase 12 – Character Sheet Generation and Approval (lighter planning for now)
+### Phase 12 â€“ Character Sheet Generation and Approval (lighter planning for now)
 
 - multi-angle character sheets
 - expression and pose variants
 - approval/lock workflow for downstream use
 - consumes prompt-preparation bundles from Phase 11.5
 
-### Phase 13 – Environment Reference Generation and Approval
+### Phase 13 â€“ Environment Reference Generation and Approval
 
 - establishing views
 - key sub-locations
@@ -387,25 +426,25 @@ Planned.
 - approval/lock workflow
 - consumes prompt-preparation bundles from Phase 11.5
 
-### Phase 14 – Scene and Shot Keyframe Generation
+### Phase 14 â€“ Scene and Shot Keyframe Generation
 
 - keyframes driven by approved refs plus scene/shot contracts
 - reviewable visual candidate batches
 - prompt bundles should come from the prompt-preparation layer rather than ad hoc rewriting
 
-### Phase 15 – Audio Generation or Recording Integration
+### Phase 15 â€“ Audio Generation or Recording Integration
 
 - recorded or synthetic dialogue
 - ambience and music placeholders
 - asset registry linkage
 
-### Phase 16 – Video Generation and Assembly
+### Phase 16 â€“ Video Generation and Assembly
 
 - shot video generation
 - scene assembly
 - preview exports
 
-### Phase 17 – Review, Lock, and Regenerate Workflow
+### Phase 17 â€“ Review, Lock, and Regenerate Workflow
 
 - approve assets
 - lock approved artifacts
@@ -570,4 +609,5 @@ The first SQLite release should remain:
 - file-synced
 - read-mostly
 - optimized for querying and reporting rather than replacing canonical file artifacts.
+
 
