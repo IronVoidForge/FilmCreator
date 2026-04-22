@@ -21,6 +21,8 @@ from .scaffold import create_project
 from .settings import load_runtime_settings
 from .world_global import global_character_registry_path, global_environment_registry_path
 
+SCENE_CONTRACT_SCHEMA_VERSION = "2026-04-22-scene-contracts-v2"
+
 
 @dataclass
 class SceneContractMetadata:
@@ -1117,6 +1119,7 @@ def run_scene_contract_synthesis(
         )
 
         fingerprint_payload = {
+            "schema_version": SCENE_CONTRACT_SCHEMA_VERSION,
             "scene_id": scene_id,
             "chapter_id": chapter_id,
             "scene_fields": scene_fields,

@@ -88,5 +88,5 @@
 - artifact_id: `DESC_CHAR_john_carter`
 - status: `generated`
 - source_fingerprint: `35796161e955bafa01cfa4944a8a19939ad1d921`
-- created_at_utc: `2026-04-22T22:16:59.946939+00:00`
-- updated_at_utc: `2026-04-22T22:16:59.946939+00:00`
+- created_at_utc: `2026-04-22T22:27:04.182077+00:00`
+- updated_at_utc: `2026-04-22T22:27:04.182077+00:00`

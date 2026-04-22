@@ -11,6 +11,8 @@ from .chapter_selection import chapter_matches, parse_chapter_selector
 from .core.json_io import read_json, write_json
 from .scaffold import create_project
 
+SCENE_BINDING_SCHEMA_VERSION = "2026-04-22-scene-bindings-v2"
+
 
 @dataclass
 class SceneBindingReference:
@@ -531,6 +533,7 @@ def run_scene_binding_synthesis(
         chapter_id = str(scene_contract.get("chapter_id", "")).strip().upper() or scene_id[:5]
         print(f"[scene-binding] {index}/{total_scenes} starting {scene_id}...")
         fingerprint_payload = {
+            "schema_version": SCENE_BINDING_SCHEMA_VERSION,
             "scene_contract": scene_contract,
             "chapter_fallback_environment": chapter_environment_cache.get(chapter_id).to_dict() if chapter_environment_cache.get(chapter_id) else None,
         }

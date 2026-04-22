@@ -20,6 +20,8 @@ from .lmstudio_client import LMStudioClient
 from .scaffold import create_project
 from .settings import load_runtime_settings
 
+DESCRIPTOR_ENRICHMENT_SCHEMA_VERSION = "2026-04-22-descriptor-enrichment-v3"
+
 
 DESCRIPTOR_ROOT = Path("02_story_analysis") / "descriptors"
 
@@ -2998,7 +3000,7 @@ def run_descriptor_enrichment(
             started_at = time.perf_counter()
             log_start("character", character_index, character_total, char_id)
             source_entry = character_bibles.get(char_id, bible)
-            fp = _fingerprint({"bible": bible, "scene_mentions": character_scene_map.get(char_id, []), "shot_mentions": character_shot_map.get(char_id, []), "kind": "character"})
+            fp = _fingerprint({"schema_version": DESCRIPTOR_ENRICHMENT_SCHEMA_VERSION, "bible": bible, "scene_mentions": character_scene_map.get(char_id, []), "shot_mentions": character_shot_map.get(char_id, []), "kind": "character"})
             base_path = output_root / "characters" / char_id
 
             def build_character() -> DescriptorRecord:
@@ -3043,7 +3045,7 @@ def run_descriptor_enrichment(
             started_at = time.perf_counter()
             log_start("environment", environment_index, environment_total, env_id)
             source_entry = environment_bibles.get(env_id, bible)
-            fp = _fingerprint({"bible": bible, "scene_mentions": environment_scene_map.get(env_id, []), "shot_mentions": environment_shot_map.get(env_id, []), "kind": "environment"})
+            fp = _fingerprint({"schema_version": DESCRIPTOR_ENRICHMENT_SCHEMA_VERSION, "bible": bible, "scene_mentions": environment_scene_map.get(env_id, []), "shot_mentions": environment_shot_map.get(env_id, []), "kind": "environment"})
             base_path = output_root / "environments" / env_id
 
             def build_environment() -> DescriptorRecord:
@@ -3078,7 +3080,7 @@ def run_descriptor_enrichment(
             scene_index += 1
             started_at = time.perf_counter()
             log_start("scene", scene_index, scene_total, scene_id)
-            fp = _fingerprint({"scene": contract, "kind": "scene"})
+            fp = _fingerprint({"schema_version": DESCRIPTOR_ENRICHMENT_SCHEMA_VERSION, "scene": contract, "kind": "scene"})
             base_path = output_root / "scenes" / scene_id
             shot_mentions = [f"{str(shot.get('scene_id', '')).strip().upper()}/{str(shot.get('shot_id', '')).strip().upper()}" for shot in shot_packages if str(shot.get("scene_id", "")).strip().upper() == scene_id and str(shot.get("shot_id", "")).strip()]
 
@@ -3110,7 +3112,7 @@ def run_descriptor_enrichment(
             started_at = time.perf_counter()
             log_start("shot", shot_index, shot_total, f"{scene_id}/{shot_id}")
             scene_contract = scene_contracts.get(scene_id, {})
-            fp = _fingerprint({"shot": shot, "scene": scene_contract, "kind": "shot"})
+            fp = _fingerprint({"schema_version": DESCRIPTOR_ENRICHMENT_SCHEMA_VERSION, "shot": shot, "scene": scene_contract, "kind": "shot"})
             chapter_id = scene_id[:5]
             base_path = output_root / "shots" / chapter_id / scene_id / shot_id
 
@@ -3144,7 +3146,7 @@ def run_descriptor_enrichment(
             key_item_index += 1
             started_at = time.perf_counter()
             log_start("key_item", key_item_index, key_item_total, item_id)
-            fp = _fingerprint({"candidate": candidate, "kind": "key_item"})
+            fp = _fingerprint({"schema_version": DESCRIPTOR_ENRICHMENT_SCHEMA_VERSION, "candidate": candidate, "kind": "key_item"})
             base_path = output_root / "key_items" / item_id
 
             def build_item() -> DescriptorRecord:

@@ -74,5 +74,5 @@
 - artifact_id: `DESC_CHAR_chieftain`
 - status: `generated`
 - source_fingerprint: `6e4730e5b299c256dbfc1e343c51638764b9088c`
-- created_at_utc: `2026-04-22T22:16:02.066722+00:00`
-- updated_at_utc: `2026-04-22T22:16:02.066722+00:00`
+- created_at_utc: `2026-04-22T22:26:08.611082+00:00`
+- updated_at_utc: `2026-04-22T22:26:08.611082+00:00`

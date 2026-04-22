@@ -5,21 +5,51 @@
   "shot_order": 3,
   "previous_shot_id": "SH002",
   "next_shot_id": "",
-  "shot_title": "Closing Reaction 3: Encounter with Martians",
+  "primary_subject": "tars_tarkas",
+  "secondary_subjects": [
+    "[]"
+  ],
+  "start_state": "Continue the established scene action toward consequence.",
+  "end_state": "Arrive at the scene's transition point.",
+  "action_during_shot": "Land the scene consequence or transition cleanly.",
+  "action_continues_from": "Land the emotional shift: Awe/Trepidation -> Alienation.",
+  "action_hands_off_to": "Arrive at the scene's transition point.",
+  "subject_blocking": [
+    "movement patterns of the Martian crowd.",
+    "tars_tarkas remains readable within the active playing space."
+  ],
+  "camera_relative_positions": [
+    "Camera anchors the action inside the primary scene playing area.",
+    "Background depth should keep Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) legible as the location anchor.",
+    "Subject 1: tars_tarkas remains visually readable against the environment scale."
+  ],
+  "gaze_directions": [
+    "tars_tarkas focuses toward the active scene action."
+  ],
+  "environment_subzone": "primary scene playing area",
+  "key_visible_environment_features": [
+    "primary scene playing area",
+    "aerial_battlefield_mars | source context shares query language"
+  ],
+  "continuity_from_previous_shot": "Land the emotional shift: Awe/Trepidation -> Alienation.",
+  "continuity_to_next_shot": "Arrive at the scene's transition point.",
+  "pose_anchor_frame": "Continue the established scene action toward consequence.",
+  "pose_end_frame": "Arrive at the scene's transition point.",
+  "shot_title": "Closing Reaction 3: Land the scene consequence or transition cleanly.",
   "shot_type": "closing_reaction",
   "camera_description": "Controlled closing frame that lands the consequence of the beat.",
-  "composition": "Closing composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) that emphasizes the consequence of encounter with hundreds of martians in the plaza, highlighting the narrator's smallness.",
+  "composition": "Closing composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) that emphasizes the consequence of land the scene consequence or transition cleanly.",
   "target_seconds": 4.6,
   "characters_in_frame": [
     {
-      "label": "The Narrator",
-      "canonical_id": null,
-      "display_name": "The Narrator",
-      "status": "unresolved",
-      "entity_kind": "",
-      "resolution_score": null,
-      "source_path": "",
-      "notes": "No character candidate found."
+      "label": "Tars Tarkas",
+      "canonical_id": "tars_tarkas",
+      "display_name": "tars_tarkas",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'tars_tarkas'"
     }
   ],
   "environment": {
@@ -36,13 +66,12 @@
     "BT003"
   ],
   "continuity_constraints": [
-    "Scale of props and architecture relative to the Narrator",
-    "Movement patterns/flow of the Martian crowd",
-    "Encounter with hundreds of Martians in the plaza",
-    "highlighting the Narrator's smallness."
+    "Scale of props/architecture relative to the Narrator",
+    "movement patterns of the Martian crowd.",
+    "Land the scene consequence or transition cleanly."
   ],
-  "prompt_seed": "Closing Reaction 3: Encounter with hundreds of Martians in the plaza, h.... closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) that emphasizes the consequence of encounter with hundreds...",
-  "shot_notes": "Encounter with hundreds of Martians in the plaza, highlighting the Narrator's smallness.",
+  "prompt_seed": "Closing Reaction 3: Land the scene consequence or transition cleanly.. closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) that emphasizes the consequence of land the scene consequence or...",
+  "shot_notes": "Land the scene consequence or transition cleanly.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -95,36 +124,36 @@
     }
   ],
   "evidence_summary": [
-    "The production must emphasize the overwhelming scale of the ancient city to visually communicate the Narrator's vulnerability and captive status. Use massive marble and gold architecture to dwarf the characters, utilizing extreme wide shots and low angles t...",
+    "Establish the scale of the setting and the protagonist's status as a captive within an alien civilization.",
     "The Narrator and Tars Tarkas arrive at a massive, ancient city built by a forgotten race. They enter a central plaza filled with hundreds of Martians, highlighting the narrator's smallness compared to the environment and its inhabitants.",
     "Awe/Trepidation $\\rightarrow$ Alienation. **Likely Visual Coverage Families:** * Extreme Wide Shots (EWS) to establish the scale of the city vs. characters. * Low Angle shots looking up at Martians. * POV shots from t...",
-    "Extreme Wide Shots (EWS) for scale establishment",
-    "Low Angle shots of Martians",
-    "POV shots from the Narrator's perspective",
+    "The Narrator and Tars Tarkas arrive at a massive, ancient city built by a forgotten race. They enter a central plaza filled with hundreds of Martians, highlighting the narrator's smallness compared to the environment...",
+    "Arrive at the scene's transition point.",
+    "The Narrator and Tars Tarkas arrive at a massive, ancient city built by a forgotten race. They enter a central plaza filled with hundreds of Martians, highlighting the narrator's smallness compared to the environment...",
     "tars_tarkas | Tars Tarkas is a prominent Thark warrior and leader characterized by green skin. He carries himself with a professional demeanor, embodying the strength and combat skill valued by his Martian culture. His appearance is defined by standard Mart..."
   ],
   "metadata": {
     "artifact_id": "CH004_SC001_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "490f714d413a721731a1063c4c3b4c7695ec47df",
+    "source_fingerprint": "db8f647fc0705b414368169bd52622f9badf45ef",
     "created_at_utc": "2026-04-22T00:30:50.213617+00:00",
-    "updated_at_utc": "2026-04-22T17:13:32.829112+00:00",
+    "updated_at_utc": "2026-04-22T23:24:02.726358+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH004_SC001",
-        "version": "d62cca9ad4da0e3665af0569d53fcfbe599f90b1"
+        "version": "b361788704ac4e6e60ecfe1bd6e7fd25335ae917"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH004_SC001",
-        "version": "641d50097be61415ba9a46720e08a09f6a52804c"
+        "version": "32dfee34a0c5f10b9a7e7d145f53888b7d5e1a55"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH004_SC001",
-        "version": "30851c58570cedbaeb373be22a61b142bb0d8c40"
+        "version": "6c0347ab7172c2054b87ab0a46c771ac1df02a8b"
       }
     ],
     "locked_fields": {},
@@ -149,6 +178,11 @@
         "timestamp_utc": "2026-04-22T17:14:01.928289+00:00",
         "action": "synthesized",
         "source_fingerprint": "490f714d413a721731a1063c4c3b4c7695ec47df"
+      },
+      {
+        "timestamp_utc": "2026-04-22T23:24:44.870936+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "db8f647fc0705b414368169bd52622f9badf45ef"
       }
     ]
   }

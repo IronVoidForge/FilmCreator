@@ -5,10 +5,37 @@
   "shot_order": 1,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Establishing Wide 1: Mental Willpower",
-  "shot_type": "establishing_wide",
-  "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across SC003 with scene_character placed for immediate spatial orientation.",
+  "primary_subject": "scene_character",
+  "secondary_subjects": [
+    "[]"
+  ],
+  "start_state": "The protagonist is paralyzed, undergoing intense mental struggle.",
+  "end_state": "The protagonist stands upright as his new, naked self.",
+  "action_during_shot": "The protagonist uses intense mental willpower to break the paralysis and begins to stand.",
+  "action_continues_from": "After hours of isolation, the protagonist uses intense mental willpower to break the paralysis.",
+  "action_hands_off_to": "Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, clothed body remains lying lifeless on the cave floor.",
+  "subject_blocking": [
+    "scene_character remains readable within the active playing space."
+  ],
+  "camera_relative_positions": [
+    "Camera anchors the action inside the primary scene playing area.",
+    "Background depth keeps the cave environment legible as the location anchor."
+  ],
+  "gaze_directions": [
+    "scene_character focuses toward the active scene action."
+  ],
+  "environment_subzone": "primary scene playing area",
+  "key_visible_environment_features": [
+    "primary scene playing area"
+  ],
+  "continuity_from_previous_shot": "After hours of isolation, the protagonist uses intense mental willpower to break the paralysis.",
+  "continuity_to_next_shot": "Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, clothed body remains lying lifeless on the cave floor.",
+  "pose_anchor_frame": "Protagonist in a state of paralyzed struggle.",
+  "pose_end_frame": "Protagonist standing upright as a naked figure.",
+  "shot_title": "Medium 1: Physical Struggle",
+  "shot_type": "medium",
+  "camera_description": "Stable medium framing that keeps action and character readable.",
+  "composition": "Readable medium composition featuring scene_character in the primary scene playing area.",
   "target_seconds": 5.5,
   "characters_in_frame": [
     {
@@ -25,7 +52,7 @@
   "environment": {
     "label": "scene_environment",
     "canonical_id": null,
-    "display_name": "SC003",
+    "display_name": "To execute the central supernatural twist and reveal the protagonist'...",
     "status": "review",
     "entity_kind": "environment",
     "resolution_score": null,
@@ -36,12 +63,11 @@
     "BT001"
   ],
   "continuity_constraints": [
-    "Exact spatial placement of the \"old\" body relative to the \"new\" self's standing position",
-    "Lighting consistency between the two versions of the character",
-    "The protagonist exerts intense mental willpower to break physical paralysis."
+    "After hours of isolation",
+    "intense mental willpower to break paralysis"
   ],
-  "prompt_seed": "Establishing Wide 1: The protagonist exerts intense mental willpower to.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across SC003 with scene_character placed for immediate spatial orientation. Cast: scene_character. Environment: SC003. Beat: The protagonis...",
-  "shot_notes": "The protagonist exerts intense mental willpower to break physical paralysis.",
+  "prompt_seed": "Medium 1: After hours of isolation, the protagonist uses intense mental willpower to break the paralysis. medium. Stable medium framing. Readable medium composition featuring scene_character. Environment: Interior Cave (Deep shadows).",
+  "shot_notes": "Focus on the physical effort of breaking paralysis.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -84,35 +110,35 @@
     }
   ],
   "evidence_summary": [
-    "The scene requires a high-precision dual-character setup to execute a supernatural metamorphosis. Production must manage the physical presence of two versions of the same actor (one clothed/lifeless, one naked/standing) within a deep-shadow cave environment...",
+    "To execute the central supernatural twist and reveal the protagonist's transformation.",
     "After hours of isolation, the protagonist uses intense mental willpower to break the paralysis. Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, clothed body remains lying lifeless on the ca...",
     "From intense mental struggle to profound shock and existential horror. **Likely Visual Coverage Families:** - Medium shots of the physical struggle/effort - Reveal shot: A wide or medium shot showing both the standing...",
-    "Medium shots of physical struggle/effort",
-    "Reveal shot (Wide/Medium) showing both standing naked figure and lying clothed body in one frame",
-    "Close-ups of the protagonist's face during realization"
+    "After hours of isolation, the protagonist uses intense mental willpower to break the paralysis. Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, cloth...",
+    "**Participating Characters:** - The Protagonist (The \"New\" Self) - The Protagonist (The \"Old\" Body) **Participating Environments:** - Interior Cave (Deep shadows)",
+    "After hours of isolation, the protagonist uses intense mental willpower to break the paralysis. Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, cloth..."
   ],
   "metadata": {
     "artifact_id": "CH002_SC003_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "8d5329f5eef20bf3db8f55b7bfd9eae139b76689",
+    "source_fingerprint": "99accd31b64a4f03f3b84cf2a094f251eb19aae1",
     "created_at_utc": "2026-04-22T00:12:55.828830+00:00",
-    "updated_at_utc": "2026-04-22T16:59:11.229904+00:00",
+    "updated_at_utc": "2026-04-22T23:05:52.073924+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH002_SC003",
-        "version": "a1e6022cd9d9f24de7b7099c2d0b3bde488b7fa7"
+        "version": "720812ebeb49126439e9603c467a4b4ac9715601"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH002_SC003",
-        "version": "c7578184ffcd5db3173500f181b369814c5c877a"
+        "version": "06d593db88cd938b86fd60242e347a5cc5ad8d9f"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH002_SC003",
-        "version": "48dd8297bee9b014f9ee2e62c7c4bdfa71bf253f"
+        "version": "875726d5ddf0e86ba9f3f0f70205f269095c6110"
       }
     ],
     "locked_fields": {},
@@ -137,6 +163,16 @@
         "timestamp_utc": "2026-04-22T16:59:33.204650+00:00",
         "action": "synthesized",
         "source_fingerprint": "8d5329f5eef20bf3db8f55b7bfd9eae139b76689"
+      },
+      {
+        "timestamp_utc": "2026-04-22T22:37:06.837749+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "3248d636b80a689eb7a1e0eedb49bf7fe26e13ee"
+      },
+      {
+        "timestamp_utc": "2026-04-22T23:06:36.284446+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "99accd31b64a4f03f3b84cf2a094f251eb19aae1"
       }
     ]
   }

@@ -15,6 +15,8 @@ from .scaffold import create_project
 from .state import path_to_manifest_value
 from .world_global import global_character_registry_path
 
+DIALOGUE_TIMELINE_SCHEMA_VERSION = "2026-04-22-dialogue-timeline-v1"
+
 
 MOJIBAKE_REPLACEMENTS = {
     "â€œ": '"',
@@ -758,7 +760,14 @@ def run_dialogue_timeline(
         shot_indexes = shot_indexes_by_chapter.get(chapter_id, {})
         chapter_json = chapter_path / f"{chapter_id}_DIALOGUE_TIMELINE.json"
         chapter_md = chapter_path / f"{chapter_id}_DIALOGUE_TIMELINE.md"
-        chapter_fp = _fingerprint([paragraph.get("text", "") for paragraph in paragraphs])
+        chapter_fp = _fingerprint(
+            {
+                "schema_version": DIALOGUE_TIMELINE_SCHEMA_VERSION,
+                "paragraphs": [paragraph.get("text", "") for paragraph in paragraphs],
+                "scene_contracts": scene_contracts,
+                "shot_indexes": shot_indexes,
+            }
+        )
         if run_tracker is not None and run_tracker.is_item_completed(phase_name, chapter_id, chapter_fp) and chapter_json.exists():
             existing_payload = read_json(chapter_json)
             if isinstance(existing_payload, dict):
@@ -921,7 +930,14 @@ def run_dialogue_timeline(
             "shot_count": sum(len(shot_indexes.get(str(scene.get('scene_id', '')).strip().upper(), [])) for scene in scene_contracts),
         }
         chapter_summaries.append(chapter_summary)
-        chapter_fp = _fingerprint([paragraph.get("text", "") for paragraph in paragraphs])
+        chapter_fp = _fingerprint(
+            {
+                "schema_version": DIALOGUE_TIMELINE_SCHEMA_VERSION,
+                "paragraphs": [paragraph.get("text", "") for paragraph in paragraphs],
+                "scene_contracts": scene_contracts,
+                "shot_indexes": shot_indexes,
+            }
+        )
 
         chapter_payload = {
             "project_slug": project_slug,

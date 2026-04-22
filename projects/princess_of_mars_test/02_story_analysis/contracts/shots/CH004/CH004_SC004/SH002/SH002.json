@@ -5,21 +5,51 @@
   "shot_order": 2,
   "previous_shot_id": "SH001",
   "next_shot_id": "SH003",
-  "shot_title": "Action 2: Tars Tarkas negotiates terms of care",
-  "shot_type": "action",
-  "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-  "composition": "Dynamic composition in grand_audience_chamber with The Narrator crossing the frame and maintaining readable movement.",
-  "target_seconds": 5.5,
+  "primary_subject": "tars_tarkas",
+  "secondary_subjects": [
+    "[]"
+  ],
+  "start_state": "Continue from prior beat: The Narrator refuses further performance until his hunger is addressed.",
+  "end_state": "Sola begins the process of providing sustenance.",
+  "action_during_shot": "Tars Tarkas assigns Sola to look after him.",
+  "action_continues_from": "Tars Tarkas assigns Sola to look after him.",
+  "action_hands_off_to": "Sola begins the process of providing sustenance.",
+  "subject_blocking": [
+    "Sola's height relative to the Narrator.",
+    "tars_tarkas remains readable within the active playing space."
+  ],
+  "camera_relative_positions": [
+    "Camera anchors the action inside the primary scene playing area.",
+    "Background depth should keep grand_audience_chamber legible as the location anchor.",
+    "Subject 1: tars_tarkas remains visually readable against the environment scale."
+  ],
+  "gaze_directions": [
+    "tars_tarkas focuses toward the active scene action."
+  ],
+  "environment_subzone": "primary scene playing area",
+  "key_visible_environment_features": [
+    "primary scene playing area",
+    "grand_audience_chamber architecture"
+  ],
+  "continuity_from_previous_shot": "Tars Tarkas assigns Sola to look after him.",
+  "continuity_to_next_shot": "Sola begins the process of providing sustenance.",
+  "pose_anchor_frame": "Continue from prior beat: The Narrator refuses further performance until his hunger is addressed.",
+  "pose_end_frame": "Sola begins the process of providing sustenance.",
+  "shot_title": "Medium 2: Tars Tarkas assigns Sola to look after him.",
+  "shot_type": "medium",
+  "camera_description": "Stable medium framing that keeps action and character readable.",
+  "composition": "Readable medium composition in grand_audience_chamber featuring tars_tarkas.",
+  "target_seconds": 5.3,
   "characters_in_frame": [
     {
-      "label": "The Narrator",
-      "canonical_id": null,
-      "display_name": "The Narrator",
-      "status": "review",
+      "label": "Tars Tarkas",
+      "canonical_id": "tars_tarkas",
+      "display_name": "tars_tarkas",
+      "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 6,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
-      "notes": "sola | token overlap: ['sola'] | generic role label reduces confidence"
+      "resolution_score": 186,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'tars_tarkas'"
     }
   ],
   "environment": {
@@ -36,11 +66,14 @@
     "BT002"
   ],
   "continuity_constraints": [
-    "The Narrator's physical state (hunger/fatigue levels)",
-    "Sola's height relative to the Narrator"
+    "The Narrator's physical state (hunger/fatigue)",
+    "Sola's height relative to the Narrator.",
+    "Tars Tarkas assigns Sola to look after him.",
+    "Resolve The Narrator -> The Narrator",
+    "Resolve Transition from Audience Chamber to corridors/private quarters -> Transition from Audience Chamber to corridors/private quarters"
   ],
-  "prompt_seed": "Action 2: Tars Tarkas negotiates the terms of care and assigns Sola to look after the Narrator. Active camera with tracking energy and clear spatial orientation. Dynamic composition in grand_audience_chamber with The Narrator crossing the frame and maintaining readable movement. Cast: The Narrator. Environment: grand_audience_chamber.",
-  "shot_notes": "Tars Tarkas negotiates the terms of care and assigns Sola to look after the Narrator.",
+  "prompt_seed": "Medium 2: Tars Tarkas assigns Sola to look after him.. medium. Stable medium framing that keeps action and character readable. Readable medium composition in grand_audience_chamber featuring tars_tarkas. Cast: tars_tarkas. Environment: grand_audience_chamber. Beat: Tars Tarkas assigns Sola to look after him.",
+  "shot_notes": "Tars Tarkas assigns Sola to look after him.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -98,12 +131,12 @@
     }
   ],
   "evidence_summary": [
-    "The scene must facilitate a shift in tone from the high-stakes public spectacle of the Audience Chamber to the intimate, quiet atmosphere of private care. Production should focus on the transition of power and responsibility from Tars Tarkas to Sola, ensuri...",
+    "Transition from public spectacle to private care and introduce a key supporting character.",
     "The Narrator refuses further performance until his hunger is addressed. Tars Tarkas assigns Sola to look after him. Sola begins the process of providing sustenance.",
     "Tension $\\rightarrow$ Relief/Exhaustion. **Likely Visual Coverage Families:** * Medium shots of the interaction between Tars Tarkas and Sola. * Over-the-shoulder (OTS) shots during the negotiation for food.",
-    "Medium shots of the interaction between Tars Tarkas and Sola.",
-    "Over-the-shoulder (OTS) shots during the negotiation for food.",
-    "The Narrator's physical state (hunger/fatigue levels).",
+    "The Narrator refuses further performance until his hunger is addressed. Tars Tarkas assigns Sola to look after him. Sola begins the process of providing sustenance.",
+    "Sola begins the process of providing sustenance.",
+    "The Narrator refuses further performance until his hunger is addressed. Tars Tarkas assigns Sola to look after him. Sola begins the process of providing sustenance.",
     "tars_tarkas | Tars Tarkas is a prominent Thark warrior and leader characterized by green skin. He carries himself with a professional demeanor, embodying the strength and combat skill valued by his Martian culture. His appearance is defined by standard Mart...",
     "sola | Sola is a female Green Martian, also identified as a Thark. Her visual identity is defined by her species' characteristic green coloring and traditional Green Martian attire. While specific physical proportions are not detailed, she is established as...",
     "grand_audience_chamber | A cavernous, ceremonial hall characterized by oversized marble architecture and monumental scale. The interior features high vaulted ceilings and disproportionate furniture that emphasizes a sense of ancient weight. A central dais s..."
@@ -112,24 +145,24 @@
     "artifact_id": "CH004_SC004_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "7c83b700a32f46999039111ede8db4cfcfb08b52",
+    "source_fingerprint": "f248ee8656584302d070a94489be3931beb4b245",
     "created_at_utc": "2026-04-22T00:38:46.664110+00:00",
-    "updated_at_utc": "2026-04-22T17:20:52.408166+00:00",
+    "updated_at_utc": "2026-04-22T23:30:10.156449+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH004_SC004",
-        "version": "5a6432e05d0c8ee9bb938605203cd215981a7bb4"
+        "version": "bc3f1eaf6e4d8eccc84c161b4b7cf9e336adb620"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH004_SC004",
-        "version": "cd8195cb72e05087852c9d21e6c0061c7ef51f65"
+        "version": "6db586cb23dc77d21bcdf698278c19da31a0a85f"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH004_SC004",
-        "version": "a1ebbd8817da19de81e02e3ce62713c62ad570b5"
+        "version": "cfcfdbfc32381f1a743b52eff87d7be13401db9e"
       }
     ],
     "locked_fields": {},
@@ -154,6 +187,11 @@
         "timestamp_utc": "2026-04-22T17:21:27.191001+00:00",
         "action": "synthesized",
         "source_fingerprint": "7c83b700a32f46999039111ede8db4cfcfb08b52"
+      },
+      {
+        "timestamp_utc": "2026-04-22T23:30:48.157754+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "f248ee8656584302d070a94489be3931beb4b245"
       }
     ]
   }

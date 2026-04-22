@@ -14,6 +14,8 @@ from .environment_bible import _is_film_facing_environment
 from .prompt_package import PromptPackage, write_prompt_package
 from .scaffold import create_project
 
+PROMPT_PREPARATION_SCHEMA_VERSION = "2026-04-22-prompt-preparation-v1"
+
 
 PROMPT_PREP_ROOT = Path("03_prompt_packages") / "prepared"
 CHARACTER_VARIANTS = [
@@ -983,7 +985,7 @@ def run_prompt_preparation(
                     break
                 descriptor = character_descriptors.get(str(bible.get("character_id", "")).strip().lower())
                 package, package_path, sources = _package_for_character(project_dir=project_dir, bible=bible, descriptor=descriptor, variant=variant)
-                fp = _fingerprint(sources)
+                fp = _fingerprint({"schema_version": PROMPT_PREPARATION_SCHEMA_VERSION, "sources": sources})
                 maybe_write_prompt(package_path, package, fp)
                 processed_packages += 1
                 index_records.append(
@@ -1036,7 +1038,7 @@ def run_prompt_preparation(
                     break
                 descriptor = environment_descriptors.get(str(bible.get("environment_id", "")).strip().lower())
                 package, package_path, sources = _package_for_environment(project_dir=project_dir, bible=bible, descriptor=descriptor, variant=variant)
-                fp = _fingerprint(sources)
+                fp = _fingerprint({"schema_version": PROMPT_PREPARATION_SCHEMA_VERSION, "sources": sources})
                 maybe_write_prompt(package_path, package, fp)
                 processed_packages += 1
                 index_records.append(
@@ -1085,7 +1087,7 @@ def run_prompt_preparation(
                     character_descriptors=character_descriptors,
                     environment_descriptors=environment_descriptors,
                 )
-                fp = _fingerprint(sources)
+                fp = _fingerprint({"schema_version": PROMPT_PREPARATION_SCHEMA_VERSION, "sources": sources})
                 maybe_write_prompt(package_path, package, fp)
                 processed_packages += 1
                 index_records.append(

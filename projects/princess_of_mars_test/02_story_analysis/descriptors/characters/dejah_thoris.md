@@ -48,6 +48,7 @@
 - expression_tendency: composed, intelligent, emotionally lucid
 - eye_color: dark expressive eyes
 - face_shape: refined symmetrical features
+- facial_hair: none
 - hair_color: dark richly toned hair
 - hair_style: long formal hair arranged with noble precision
 - height: tall graceful humanoid stature
@@ -75,12 +76,12 @@
 
 ## Review
 
-- generated_field_placeholder_facial_hair
+- (none)
 
 ## Metadata
 
 - artifact_id: `DESC_CHAR_dejah_thoris`
 - status: `generated`
 - source_fingerprint: `13ade4e0b97eed9465ff5cd6f6ad6578c61fb7dd`
-- created_at_utc: `2026-04-22T22:16:29.385836+00:00`
-- updated_at_utc: `2026-04-22T22:16:29.385836+00:00`
+- created_at_utc: `2026-04-22T22:26:34.159247+00:00`
+- updated_at_utc: `2026-04-22T22:26:34.159247+00:00`

@@ -16,6 +16,8 @@ from .lmstudio_client import LMStudioClient
 from .scaffold import create_project
 from .settings import load_runtime_settings
 
+SHOT_PLANNER_SCHEMA_VERSION = "2026-04-22-shot-planner-v2"
+
 
 @dataclass
 class ShotReference:
@@ -887,6 +889,7 @@ def _load_shot_planning_evidence(
     scene_evidence = [item for item in scene_evidence if item]
 
     fingerprint_payload = {
+        "schema_version": SHOT_PLANNER_SCHEMA_VERSION,
         "scene_contract": scene_contract,
         "scene_binding": scene_binding or {},
         "shot_blueprints": shot_blueprints,

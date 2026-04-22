@@ -1,5 +1,5 @@
 # Shot Index
 
-- `SH001` - Establishing Wide 1: Mental Willpower (type=establishing_wide, target=5.5s, beat_ids=BT001, cast=1, env=SC003, prev=(none), next=SH002)
-- `SH002` - Reaction Closeup 2: Standing Reveal (type=reaction_closeup, target=5.3s, beat_ids=BT002, cast=1, env=SC003, prev=SH001, next=SH003)
-- `SH003` - Reaction Closeup 3: Metamorphosis Realization (type=reaction_closeup, target=5.1s, beat_ids=BT003, cast=1, env=SC003, prev=SH002, next=(none))
+- `SH001` - Medium 1: Physical Struggle (type=medium, target=5.5s, beat_ids=BT001, cast=1, env=To execute the central supernatural twist and reveal the protagonist'..., prev=(none), next=SH002)
+- `SH002` - Reaction Closeup 2: Metamorphosis Realization (type=reaction_closeup, target=5.3s, beat_ids=BT002, cast=1, env=To execute the central supernatural twist and reveal the protagonist'..., prev=SH001, next=SH003)
+- `SH003` - Closing Reaction 3: The Reveal (type=closing_reaction, target=4.6s, beat_ids=BT003, cast=1, env=To execute the central supernatural twist and reveal the protagonist'..., prev=SH002, next=(none))

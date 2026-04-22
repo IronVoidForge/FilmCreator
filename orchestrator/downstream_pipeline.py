@@ -3,13 +3,13 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any
 
-from .descriptor_enrichment import run_descriptor_enrichment
-from .dialogue_timeline import run_dialogue_timeline
+from .descriptor_enrichment import DESCRIPTOR_ENRICHMENT_SCHEMA_VERSION, run_descriptor_enrichment
+from .dialogue_timeline import DIALOGUE_TIMELINE_SCHEMA_VERSION, run_dialogue_timeline
 from .downstream_run_state import DOWNSTREAM_PHASE_ORDER, DownstreamRunTracker
-from .prompt_preparation import run_prompt_preparation
-from .scene_bindings import run_scene_binding_synthesis
-from .scene_contracts import run_scene_contract_synthesis
-from .shot_planner import run_shot_planning
+from .prompt_preparation import PROMPT_PREPARATION_SCHEMA_VERSION, run_prompt_preparation
+from .scene_bindings import SCENE_BINDING_SCHEMA_VERSION, run_scene_binding_synthesis
+from .scene_contracts import SCENE_CONTRACT_SCHEMA_VERSION, run_scene_contract_synthesis
+from .shot_planner import SHOT_PLANNER_SCHEMA_VERSION, run_shot_planning
 
 
 @dataclass(frozen=True)
@@ -81,6 +81,14 @@ def run_downstream_pipeline(
         "start_phase": start_phase,
         "use_llm": use_llm,
         "shot_variants": list(shot_variants or []),
+        "stage_versions": {
+            "scene_contracts": SCENE_CONTRACT_SCHEMA_VERSION,
+            "scene_bindings": SCENE_BINDING_SCHEMA_VERSION,
+            "shot_packages": SHOT_PLANNER_SCHEMA_VERSION,
+            "dialogue_timeline": DIALOGUE_TIMELINE_SCHEMA_VERSION,
+            "descriptor_enrichment": DESCRIPTOR_ENRICHMENT_SCHEMA_VERSION,
+            "prompt_preparation": PROMPT_PREPARATION_SCHEMA_VERSION,
+        },
     }
     tracker = DownstreamRunTracker.start_or_resume(
         project_slug=project_slug,

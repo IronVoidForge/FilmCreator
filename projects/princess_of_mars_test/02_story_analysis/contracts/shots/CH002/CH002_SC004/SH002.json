@@ -5,10 +5,37 @@
   "shot_order": 2,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Medium 2: Frantic Flight",
+  "primary_subject": "scene_character",
+  "secondary_subjects": [
+    "[]"
+  ],
+  "start_state": "Protagonist is in mid-flight from the cave.",
+  "end_state": "Protagonist reaches a state of frantic urgency/flight under moonlight.",
+  "action_during_shot": "Carrying the emotional arc from shock to frantic urgency/flight through movement and high-contrast lighting.",
+  "action_continues_from": "The protagonist fleeing the cavern.",
+  "action_hands_off_to": "Protagonist arriving at the scene's transition point.",
+  "subject_blocking": [
+    "scene_character remains readable within the active playing space during movement."
+  ],
+  "camera_relative_positions": [
+    "Camera tracks the protagonist's movement.",
+    "High-contrast lighting transition from cave shadow to moonlight."
+  ],
+  "gaze_directions": [
+    "scene_character focuses toward the path of flight."
+  ],
+  "environment_subzone": "primary scene playing area",
+  "key_visible_environment_features": [
+    "Transition from Cave Interior to Arizona Mountain Landscape (Moonlight)"
+  ],
+  "continuity_from_previous_shot": "Protagonist fleeing the cavern and emerging into the night.",
+  "continuity_to_next_shot": "Protagonist in a state of frantic urgency/flight.",
+  "pose_anchor_frame": "Protagonist in mid-stride, transitioning from shadow to light.",
+  "pose_end_frame": "Protagonist exhibiting frantic urgency under moonlight.",
+  "shot_title": "Medium 2: Emotional Arc Shift",
   "shot_type": "medium",
-  "camera_description": "Stable medium framing that keeps action and character readable.",
-  "composition": "Readable medium composition in SC004 featuring scene_character.",
+  "camera_description": "Stable medium framing that keeps action and character readable; utilizes tracking to follow movement.",
+  "composition": "Readable medium composition featuring scene_character with high-contrast lighting (Dark cave vs. Moonlight).",
   "target_seconds": 5.3,
   "characters_in_frame": [
     {
@@ -25,7 +52,7 @@
   "environment": {
     "label": "scene_environment",
     "canonical_id": null,
-    "display_name": "SC004",
+    "display_name": "To transition the protagonist from the supernatural interior to the n...",
     "status": "review",
     "entity_kind": "environment",
     "resolution_score": null,
@@ -36,12 +63,12 @@
     "BT002"
   ],
   "continuity_constraints": [
-    "Protagonist's nudity and physical state across varying light levels",
-    "Driven by fear of an unknown presence",
-    "the protagonist begins a frantic flight from the cavern."
+    "Carry the emotional arc through: From shock to frantic urgency/flight.",
+    "High-contrast lighting (Dark cave vs. Moonlight)",
+    "The protagonist's nudity and physical state as he moves through different light levels"
   ],
-  "prompt_seed": "Medium 2: Driven by fear of an unknown presence, the protagon.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in SC004 featuring scene_character. Cast: scene_character. Environment: SC004. Beat: Driven by fear of an unknown presence, the protagonist begins a fr...",
-  "shot_notes": "Driven by fear of an unknown presence, the protagonist begins a frantic flight from the cavern.",
+  "prompt_seed": "Medium 2: Carry the emotional arc through: From shock to frantic urgency/flight. medium. Stable medium framing that keeps action and character readable. Readable medium composition featuring scene_character. Cast: scene_character. Environment: Transitioning from Cave to Moonlight.",
+  "shot_notes": "Emphasize high-contrast lighting and movement.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -84,35 +111,35 @@
     }
   ],
   "evidence_summary": [
-    "Execute a high-stakes transition of the protagonist from a dark, supernatural cave interior into the vast Arizona mountain landscape at night. The sequence must manage extreme lighting shifts from darkness to moonlight while maintaining the physical state a...",
+    "To transition the protagonist from the supernatural interior to the natural exterior.",
     "Driven by fear of whatever is in the dark cave, the protagonist flees the cavern and emerges into the Arizona night. **Participating Characters:** - The Protagonist **Participating Environments:** - Cave Interior (Transitioning) - Arizona Mountain Landscape...",
     "From shock to frantic urgency/flight. **Likely Visual Coverage Families:** - Tracking shots following the protagonist's movement - High-contrast lighting (Dark cave vs. Moonlight) - Wide shots of the character emergin...",
-    "Tracking shots following movement",
-    "High-contrast lighting (Dark cave vs. Moonlight)",
-    "Wide shots of character emerging into vast landscape"
+    "Driven by fear of whatever is in the dark cave, the protagonist flees the cavern and emerges into the Arizona night. **Participating Characters:** - The Protagonist **Participating Environments:** - Cave Interior (Tra...",
+    "Arrive at the scene's transition point.",
+    "Driven by fear of whatever is in the dark cave, the protagonist flees the cavern and emerges into the Arizona night. **Participating Characters:** - The Protagonist **Participating Environments:** - Cave Interior (Tra..."
   ],
   "metadata": {
     "artifact_id": "CH002_SC004_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "51815244c65d5e4ca5199b65a711050ac54cc3fc",
+    "source_fingerprint": "346207ecbd1ffd0225f15855d4fdab8ec6ffebcf",
     "created_at_utc": "2026-04-22T00:14:48.714966+00:00",
-    "updated_at_utc": "2026-04-22T17:00:24.925297+00:00",
+    "updated_at_utc": "2026-04-22T23:08:23.878910+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH002_SC004",
-        "version": "fa7dc2e06d3ea3e8d415fb2c438b9b9b4ef2c920"
+        "version": "288bd3dc182fa046d7cbd3b9b25cee61bb74b2bf"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH002_SC004",
-        "version": "13c960e65b100f3adcd07f8bea55209ae128b919"
+        "version": "f35677780159f7b158e4fc7b46e1f7e734260000"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH002_SC004",
-        "version": "b1d9f30cb8089d10a58d1de45e3c84da4d957ccf"
+        "version": "573dbfb8d6dada81b2092ef59050400e7b1a0cc4"
       }
     ],
     "locked_fields": {},
@@ -137,6 +164,11 @@
         "timestamp_utc": "2026-04-22T17:00:39.801148+00:00",
         "action": "synthesized",
         "source_fingerprint": "51815244c65d5e4ca5199b65a711050ac54cc3fc"
+      },
+      {
+        "timestamp_utc": "2026-04-22T23:08:55.807029+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "346207ecbd1ffd0225f15855d4fdab8ec6ffebcf"
       }
     ]
   }

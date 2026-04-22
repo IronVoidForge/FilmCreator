@@ -1,5 +1,5 @@
 # Shot Index
 
-- `SH001` - Establishing Wide 1: Shock in Cave (type=establishing_wide, target=5.5s, beat_ids=BT001, cast=1, env=SC004, prev=(none), next=SH002)
-- `SH002` - Medium 2: Frantic Flight (type=medium, target=5.3s, beat_ids=BT002, cast=1, env=SC004, prev=SH001, next=SH003)
-- `SH003` - Closing Reaction 3: Emergence into Moonlight (type=closing_reaction, target=4.6s, beat_ids=BT003, cast=1, env=SC004, prev=SH002, next=(none))
+- `SH001` - Medium 1: Protagonist Flees Cavern (type=medium, target=5.5s, beat_ids=BT001, cast=1, env=To transition the protagonist from the supernatural interior to the n..., prev=(none), next=SH002)
+- `SH002` - Medium 2: Emotional Arc Shift (type=medium, target=5.3s, beat_ids=BT002, cast=1, env=To transition the protagonist from the supernatural interior to the n..., prev=SH001, next=SH003)
+- `SH003` - Closing Reaction: Transition Point (type=closing_reaction, target=4.6s, beat_ids=BT003, cast=1, env=To transition the protagonist from the supernatural interior to the n..., prev=SH002, next=(none))
