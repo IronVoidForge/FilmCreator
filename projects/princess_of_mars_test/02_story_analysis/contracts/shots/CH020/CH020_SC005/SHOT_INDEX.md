@@ -1,6 +1,5 @@
 # Shot Index
 
-- `SH001` - Establishing Wide 1: Grooming Ritual (type=establishing_wide, target=5.2s, beat_ids=BT001, cast=2, env=barsoomian_wilderness, prev=(none), next=SH002)
-- `SH002` - Medium 2: Receiving Supplies (type=medium, target=5.0s, beat_ids=BT002, cast=1, env=barsoomian_wilderness, prev=SH001, next=SH003)
-- `SH003` - Medium 3: Military Advice (type=medium, target=5.0s, beat_ids=BT003, cast=1, env=barsoomian_wilderness, prev=SH002, next=SH004)
-- `SH004` - Closing Reaction 4: Departure (type=closing_reaction, target=4.3s, beat_ids=BT004, cast=1, env=barsoomian_wilderness, prev=SH003, next=(none))
+- `SH001` - Establishing Wide 1: The Ptor family disguises the protagonist with redd... (type=establishing_wide, target=5.5s, beat_ids=BT001, cast=1, env=barsoomian_wilderness, prev=(none), next=SH002)
+- `SH002` - Medium 2: Carry the emotional arc through: Gratitude $\righta... (type=medium, target=5.3s, beat_ids=BT002, cast=2, env=barsoomian_wilderness, prev=SH001, next=SH003)
+- `SH003` - Closing Reaction 3: Land the scene consequence or transition cleanly. (type=closing_reaction, target=4.6s, beat_ids=BT003, cast=2, env=barsoomian_wilderness, prev=SH002, next=(none))

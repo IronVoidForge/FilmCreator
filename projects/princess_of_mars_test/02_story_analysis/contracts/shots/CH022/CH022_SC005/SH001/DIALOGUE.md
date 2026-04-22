@@ -2,7 +2,7 @@
 
 - shot_id: `SH001`
 - scene_id: `CH022_SC005`
-- dialogue_events: `4`
+- dialogue_events: `5`
 
 ## CH022_DLG049
 
@@ -31,3 +31,10 @@
 - source_ref: `CH022:p066:q01`
 - clip_id: `CL001`
 - dialogue_text: The mind of the Princess of Helium whom I have examined and questioned was a blank to me, she has perfect control, and I could not read one iota of it. She said that she witnessed a portion of the encounter, and that when she looked there was but one man engaged with the guardsmen; a man whom she did not recognize as ever having seen.
+
+## CH022_DLG053
+
+- speaker: `john_carter`
+- source_ref: `CH022:p067:q01`
+- clip_id: `CL001`
+- dialogue_text: Where is my erstwhile savior?

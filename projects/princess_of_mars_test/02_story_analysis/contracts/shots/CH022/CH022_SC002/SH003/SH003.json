@@ -4,12 +4,12 @@
   "chapter_id": "CH022",
   "shot_order": 3,
   "previous_shot_id": "SH002",
-  "next_shot_id": "SH004",
-  "shot_title": "Action 3: Brutal combat sequence",
-  "shot_type": "action",
-  "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-  "composition": "Dynamic composition in Palace corridors/Antechambers with john_carter, Four Guardsmen crossing the frame and maintaining readable movement.",
-  "target_seconds": 5.5,
+  "next_shot_id": "",
+  "shot_title": "Closing Reaction 3: A brutal twenty-minute combat ensues, resulting in...",
+  "shot_type": "closing_reaction",
+  "camera_description": "Controlled closing frame that lands the consequence of the beat.",
+  "composition": "Closing composition in Palace corridors/Antechambers that emphasizes the consequence of a brutal twenty-minute combat ensues, resulting in the death of all four guards..",
+  "target_seconds": 4.6,
   "characters_in_frame": [
     {
       "label": "John Carter",
@@ -20,16 +20,6 @@
       "resolution_score": 186,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
       "notes": "asset id exactly matches canonical id | query matches alias 'john_carter'"
-    },
-    {
-      "label": "Four Guardsmen",
-      "canonical_id": null,
-      "display_name": "Four Guardsmen",
-      "status": "review",
-      "entity_kind": "individual",
-      "resolution_score": 16,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH022/guardsmen.md",
-      "notes": "guardsmen | token overlap: ['guardsmen'] | source context shares query language"
     }
   ],
   "environment": {
@@ -46,13 +36,15 @@
     "BT003"
   ],
   "continuity_constraints": [
-    "Blood splatter patterns",
-    "Weapon positions/placement",
-    "Incremental count of fallen guards in frame",
-    "A brutal twenty-minute combat sequence ensues between Carter and the four guards."
+    "Blood splatter",
+    "weapon positions",
+    "and the number of fallen guards in the frame.",
+    "A brutal twenty-minute combat ensues",
+    "resulting in the death of all four guards.",
+    "Resolve Four Guardsmen -> Four Guardsmen"
   ],
-  "prompt_seed": "Action 3: A brutal twenty-minute combat sequence ensues betwe.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in Palace corridors/Antechambers with john_carter, Four Guardsmen crossing the frame and maintaining readable movement. Cast: john_carter, Four Guardsmen. En...",
-  "shot_notes": "A brutal twenty-minute combat sequence ensues between Carter and the four guards.",
+  "prompt_seed": "Closing Reaction 3: A brutal twenty-minute combat ensues, resulting in.... closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in Palace corridors/Antechambers that emphasizes the consequence of a brutal twenty-minute combat ensues, resulting in the death of all fou...",
+  "shot_notes": "A brutal twenty-minute combat ensues, resulting in the death of all four guards.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -105,36 +97,36 @@
     }
   ],
   "evidence_summary": [
-    "The sequence must execute a high-intensity combat choreography that transitions from Carter's emotional desperation to focused martial rage. The fight is a prolonged, brutal engagement designed to showcase the protagonist's superior combat capabilities agai...",
+    "To demonstrate Carter's martial prowess and escalate the tension through violence.",
     "Distraught by Dejah's declaration, Carter abandons his post to find her. He is intercepted in an antechamber by four Zodangan guardsmen. A brutal twenty-minute combat ensues, resulting in the death of all four guards.",
     "Desperation $\\rightarrow$ Rage/Combat Intensity. **Likely Visual Coverage Families:** - Wide shots to establish the geography of the fight. - Handheld/Dynamic shots for the combat choreography. - Close-ups on weapons...",
-    "Wide shots (Geography of fight)",
-    "Handheld/Dynamic shots (Choreography)",
-    "Close-ups (Weapons and physical struggle)",
+    "Blood splatter",
+    "weapon positions",
+    "and the number of fallen guards in the frame.",
     "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in..."
   ],
   "metadata": {
     "artifact_id": "CH022_SC002_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "56b214e6b34a7674803e5ba8337368f499d271bd",
+    "source_fingerprint": "b9f263334ced06c8b3a7deed7a828c8dd2abbc73",
     "created_at_utc": "2026-04-22T03:02:51.722371+00:00",
-    "updated_at_utc": "2026-04-22T15:25:54.282793+00:00",
+    "updated_at_utc": "2026-04-22T16:30:43.025025+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH022_SC002",
-        "version": "b049f08428c99c040f41ff04ea55c4128a5f3059"
+        "version": "a994832b76cdb5601aeb7b37c77e8fb2567abc10"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH022_SC002",
-        "version": "530343ca19480be0e97543eceac8724bbe2733f5"
+        "version": "440f3ca5afd003ea7647edd8eec2472008a69d31"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH022_SC002",
-        "version": "337de2549d4f7e6aea69e0d25a60eace29f289bd"
+        "version": "9c63b1b54a90344366deeec905f3858e31320915"
       }
     ],
     "locked_fields": {},
@@ -149,6 +141,11 @@
         "timestamp_utc": "2026-04-22T15:26:14.516242+00:00",
         "action": "synthesized",
         "source_fingerprint": "56b214e6b34a7674803e5ba8337368f499d271bd"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:30:43.025025+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "b9f263334ced06c8b3a7deed7a828c8dd2abbc73"
       }
     ]
   }

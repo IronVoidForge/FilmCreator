@@ -5,22 +5,12 @@
   "shot_order": 3,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Insert Detail 3: Carter discovers a large Apache camp on the high pl...",
+  "shot_title": "Insert Detail 3: Land the scene consequence or transition cleanly.",
   "shot_type": "insert_detail",
   "camera_description": "Tight detail framing focused on a single visual object or gesture.",
   "composition": "Detail composition centered on the key physical action or prop inside Arizona hills/plateau.",
-  "target_seconds": 5.0,
+  "target_seconds": 5.1,
   "characters_in_frame": [
-    {
-      "label": "John Carter (Younger)",
-      "canonical_id": null,
-      "display_name": "John Carter (Younger)",
-      "status": "review",
-      "entity_kind": "individual",
-      "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
-    },
     {
       "label": "Apache Warriors",
       "canonical_id": "apache_warriors",
@@ -46,12 +36,15 @@
     "BT003"
   ],
   "continuity_constraints": [
-    "Tracking the specific number of apache_warriors present",
-    "Maintaining consistent direction of pursuit along the trail",
-    "Precise weapon handling (rifles/sidearms) during engagement"
+    "Number of warriors",
+    "direction of pursuit",
+    "weapon handling (rifles/sidearms).",
+    "Land the scene consequence or transition cleanly.",
+    "Resolve John Carter (Younger) -> John Carter (Younger)",
+    "Resolve Arizona hills/plateau -> Arizona hills/plateau"
   ],
-  "prompt_seed": "Insert Detail 3: Carter discovers a large Apache camp on the high pl.... insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside Arizona hills/plateau. Cast: John Carter (Younger), apache_warriors. Environment: Arizona hi...",
-  "shot_notes": "Carter discovers a large Apache camp on the high plateau.",
+  "prompt_seed": "Insert Detail 3: Land the scene consequence or transition cleanly.. insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside Arizona hills/plateau. Cast: apache_warriors. Environment: Arizona hills/plateau. Beat: Land the...",
+  "shot_notes": "Land the scene consequence or transition cleanly.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -109,36 +102,36 @@
     }
   ],
   "evidence_summary": [
-    "Establish the physical threat and primary conflict through a transition from stealthy observation to high-intensity combat. The sequence requires careful management of large group choreography for the apache_warriors and precise weapon handling for John Car...",
+    "Introduce the primary conflict and physical threat.",
     "Carter notices suspicious movement in the valley. Suspecting an ambush, he pursues the trail and discovers a large Apache camp on a plateau, leading to a chaotic skirmish.",
     "Suspicion $\\rightarrow$ Alertness $\\rightarrow$ Chaos/Adrenaline.",
-    "POV shots of movement in the valley",
-    "Wide shots of the Apache camp",
-    "Medium shots of Carter engaging in combat",
+    "Handheld/shaky cam for the skirmish",
+    "POV shots of the movement in the valley",
+    "wide shots of the Apache camp",
     "apache_warriors | A large group of hostile 19th-century indigenous warriors characterized by their traditional Apache attire. They function as a collective unit, primarily seen engaged in ambush tactics and active skirmishes while wielding arrows. | Traditi..."
   ],
   "metadata": {
     "artifact_id": "CH001_SC003_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "a7274aef9959ae105bf34d5891fa35b33ef73b2e",
+    "source_fingerprint": "efe7b1bea56d6b1a20fd7f1a89715846059b50aa",
     "created_at_utc": "2026-04-22T00:00:14.279536+00:00",
-    "updated_at_utc": "2026-04-22T06:51:16.797622+00:00",
+    "updated_at_utc": "2026-04-22T16:30:37.724634+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH001_SC003",
-        "version": "028cc76e14540d5c8ea53294cfa85b9b42022d39"
+        "version": "53088107314cb92a9ee355ae3268579dc4ba09d8"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH001_SC003",
-        "version": "3714c2faf5b49ae1145bbf0d388f7e0b777e004c"
+        "version": "a30c7bd89023856111f38b1cb5e6aa28d569a4c8"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH001_SC003",
-        "version": "d4bcd2ec84640d6e5f3e8feba7155abcfbd74338"
+        "version": "54dfa3fbd55fdc298f7a66f5f47a181473b486d0"
       }
     ],
     "locked_fields": {},
@@ -153,6 +146,11 @@
         "timestamp_utc": "2026-04-22T06:51:39.834492+00:00",
         "action": "synthesized",
         "source_fingerprint": "a7274aef9959ae105bf34d5891fa35b33ef73b2e"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:30:37.724634+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "efe7b1bea56d6b1a20fd7f1a89715846059b50aa"
       }
     ]
   }

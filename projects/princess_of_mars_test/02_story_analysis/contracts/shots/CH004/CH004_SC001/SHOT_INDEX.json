@@ -6,21 +6,21 @@
     "shot_order": 1,
     "previous_shot_id": "",
     "next_shot_id": "SH002",
-    "shot_title": "Establishing Wide 1: Arrival at the massive, ancient city near the dried...",
-    "shot_type": "establishing_wide",
-    "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-    "composition": "Wide composition across Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) with tars_tarkas placed for immediate spatial orientation.",
-    "target_seconds": 5.2,
+    "shot_title": "Medium 1: The Narrator and Tars Tarkas arrive at a massive, a...",
+    "shot_type": "medium",
+    "camera_description": "Stable medium framing that keeps action and character readable.",
+    "composition": "Readable medium composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) featuring The Narrator.",
+    "target_seconds": 5.5,
     "characters_in_frame": [
       {
-        "label": "Tars Tarkas",
-        "canonical_id": "tars_tarkas",
-        "display_name": "tars_tarkas",
-        "status": "canonical",
-        "entity_kind": "individual",
-        "resolution_score": 186,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'tars_tarkas'"
+        "label": "The Narrator",
+        "canonical_id": null,
+        "display_name": "The Narrator",
+        "status": "unresolved",
+        "entity_kind": "",
+        "resolution_score": null,
+        "source_path": "",
+        "notes": "No character candidate found."
       }
     ],
     "environment": {
@@ -37,12 +37,15 @@
       "BT001"
     ],
     "continuity_constraints": [
-      "Scale of props and architecture relative to the Narrator",
-      "Movement patterns/flow of the Martian crowd",
-      "Arrival at the massive, ancient city near the dried-up Martian sea."
+      "Scale of props/architecture relative to the Narrator",
+      "movement patterns of the Martian crowd.",
+      "The Narrator and Tars Tarkas arrive at a massive",
+      "ancient city built by a forgotten race. They enter a central plaza filled with hundreds of Martians",
+      "highlighting the narrator's smallness compared to the environment and its inhabitants.",
+      "Resolve The Narrator -> The Narrator"
     ],
-    "prompt_seed": "Establishing Wide 1: Arrival at the massive, ancient city near the dried.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) with tars_tarkas placed for immediate spatial orientati...",
-    "shot_notes": "Arrival at the massive, ancient city near the dried-up Martian sea.",
+    "prompt_seed": "Medium 1: The Narrator and Tars Tarkas arrive at a massive, a.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) featuring The Narrator. Cast: The Narrator. Environment: Central Plaza o...",
+    "shot_notes": "The Narrator and Tars Tarkas arrive at a massive, ancient city built by a forgotten race. They enter a central plaza filled with hundreds of Martians, highlighting the narrator's smallness compared to the environment...",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -95,36 +98,35 @@
       }
     ],
     "evidence_summary": [
-      "Utilize extreme scale and architectural grandeur to visually communicate the Narrator's vulnerability. The production must emphasize the contrast between the massive marble/gold structures of the ancient city and the smallness of the human protagonist, esta...",
+      "Establish the scale of the setting and the protagonist's status as a captive within an alien civilization.",
       "The Narrator and Tars Tarkas arrive at a massive, ancient city built by a forgotten race. They enter a central plaza filled with hundreds of Martians, highlighting the narrator's smallness compared to the environment and its inhabitants.",
       "Awe/Trepidation $\\rightarrow$ Alienation. **Likely Visual Coverage Families:** * Extreme Wide Shots (EWS) to establish the scale of the city vs. characters. * Low Angle shots looking up at Martians. * POV shots from t...",
-      "Extreme Wide Shots (EWS) for scale establishment",
-      "Low Angle shots of Martians",
-      "POV shots from Narrator's perspective",
+      "Scale of props/architecture relative to the Narrator",
+      "movement patterns of the Martian crowd.",
       "tars_tarkas | Tars Tarkas is a prominent Thark warrior and leader characterized by green skin. He carries himself with a professional demeanor, embodying the strength and combat skill valued by his Martian culture. His appearance is defined by standard Mart..."
     ],
     "metadata": {
       "artifact_id": "CH004_SC001_SH001_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "bd4d931a02ea565d3f2afe05140a8d6919873e72",
+      "source_fingerprint": "f55b3e19b03d44009d0194e57f16d1c9904dfbc0",
       "created_at_utc": "2026-04-22T00:29:32.334748+00:00",
-      "updated_at_utc": "2026-04-22T07:11:37.668026+00:00",
+      "updated_at_utc": "2026-04-22T16:30:38.358565+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH004_SC001",
-          "version": "4e1c19041154d42a803e03c13a54a5fe9b8de2b7"
+          "version": "27a46577d90148e958cffab05af39ad128cd216c"
         },
         {
           "dependency_type": "scene_binding",
           "dependency_id": "CH004_SC001",
-          "version": "7886c7e21ee04d0acd81036c41d7a666a8f34e04"
+          "version": "08cd6bebf9d3253d45285f4c60b72f9a628fa7f0"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH004_SC001",
-          "version": "1cf466b66b9c8dce01f39a30ec69252e8db46dbb"
+          "version": "66ec7e88ecccc4297988f1dcea0d6b5256695648"
         }
       ],
       "locked_fields": {},
@@ -139,6 +141,11 @@
           "timestamp_utc": "2026-04-22T07:12:11.487836+00:00",
           "action": "synthesized",
           "source_fingerprint": "bd4d931a02ea565d3f2afe05140a8d6919873e72"
+        },
+        {
+          "timestamp_utc": "2026-04-22T16:30:38.359067+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "f55b3e19b03d44009d0194e57f16d1c9904dfbc0"
         }
       ]
     }
@@ -150,11 +157,11 @@
     "shot_order": 2,
     "previous_shot_id": "SH001",
     "next_shot_id": "SH003",
-    "shot_title": "Medium 2: Entry into the central plaza featuring marble and g...",
+    "shot_title": "Medium 2: Carry the emotional arc through: Awe/Trepidation $\\...",
     "shot_type": "medium",
     "camera_description": "Stable medium framing that keeps action and character readable.",
-    "composition": "Readable medium composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) featuring The Narrator, tars_tarkas.",
-    "target_seconds": 5.0,
+    "composition": "Readable medium composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) featuring The Narrator.",
+    "target_seconds": 5.3,
     "characters_in_frame": [
       {
         "label": "The Narrator",
@@ -165,16 +172,6 @@
         "resolution_score": null,
         "source_path": "",
         "notes": "No character candidate found."
-      },
-      {
-        "label": "Tars Tarkas",
-        "canonical_id": "tars_tarkas",
-        "display_name": "tars_tarkas",
-        "status": "canonical",
-        "entity_kind": "individual",
-        "resolution_score": 186,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'tars_tarkas'"
       }
     ],
     "environment": {
@@ -191,12 +188,15 @@
       "BT002"
     ],
     "continuity_constraints": [
-      "Scale of props and architecture relative to the Narrator",
-      "Movement patterns/flow of the Martian crowd",
-      "Entry into the central plaza featuring marble and gold architecture."
+      "Scale of props/architecture relative to the Narrator",
+      "movement patterns of the Martian crowd.",
+      "Carry the emotional arc through: Awe/Trepidation $\\rightarrow$ Alienation.",
+      "**Likely Visual Coverage Families:**",
+      "* Extreme Wide Shots (EWS) to establish the scale of the city vs. characters.",
+      "* Low Angle shots looking up at Martians."
     ],
-    "prompt_seed": "Medium 2: Entry into the central plaza featuring marble and g.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) featuring The Narrator, tars_tarkas. Cast: The Narrator, tars_tarkas. En...",
-    "shot_notes": "Entry into the central plaza featuring marble and gold architecture.",
+    "prompt_seed": "Medium 2: Carry the emotional arc through: Awe/Trepidation $\\.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) featuring The Narrator. Cast: The Narrator. Environment: Central Plaza o...",
+    "shot_notes": "Carry the emotional arc through: Awe/Trepidation $\\rightarrow$ Alienation. **Likely Visual Coverage Families:** * Extreme Wide Shots (EWS) to establish the scale of the city vs. characters. * Low Angle shots looking u...",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -249,36 +249,35 @@
       }
     ],
     "evidence_summary": [
-      "Utilize extreme scale and architectural grandeur to visually communicate the Narrator's vulnerability. The production must emphasize the contrast between the massive marble/gold structures of the ancient city and the smallness of the human protagonist, esta...",
+      "Establish the scale of the setting and the protagonist's status as a captive within an alien civilization.",
       "The Narrator and Tars Tarkas arrive at a massive, ancient city built by a forgotten race. They enter a central plaza filled with hundreds of Martians, highlighting the narrator's smallness compared to the environment and its inhabitants.",
       "Awe/Trepidation $\\rightarrow$ Alienation. **Likely Visual Coverage Families:** * Extreme Wide Shots (EWS) to establish the scale of the city vs. characters. * Low Angle shots looking up at Martians. * POV shots from t...",
-      "Extreme Wide Shots (EWS) for scale establishment",
-      "Low Angle shots of Martians",
-      "POV shots from Narrator's perspective",
+      "Scale of props/architecture relative to the Narrator",
+      "movement patterns of the Martian crowd.",
       "tars_tarkas | Tars Tarkas is a prominent Thark warrior and leader characterized by green skin. He carries himself with a professional demeanor, embodying the strength and combat skill valued by his Martian culture. His appearance is defined by standard Mart..."
     ],
     "metadata": {
       "artifact_id": "CH004_SC001_SH002_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "bd4d931a02ea565d3f2afe05140a8d6919873e72",
+      "source_fingerprint": "f55b3e19b03d44009d0194e57f16d1c9904dfbc0",
       "created_at_utc": "2026-04-22T00:30:14.440435+00:00",
-      "updated_at_utc": "2026-04-22T07:12:11.495840+00:00",
+      "updated_at_utc": "2026-04-22T16:30:38.376480+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH004_SC001",
-          "version": "4e1c19041154d42a803e03c13a54a5fe9b8de2b7"
+          "version": "27a46577d90148e958cffab05af39ad128cd216c"
         },
         {
           "dependency_type": "scene_binding",
           "dependency_id": "CH004_SC001",
-          "version": "7886c7e21ee04d0acd81036c41d7a666a8f34e04"
+          "version": "08cd6bebf9d3253d45285f4c60b72f9a628fa7f0"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH004_SC001",
-          "version": "1cf466b66b9c8dce01f39a30ec69252e8db46dbb"
+          "version": "66ec7e88ecccc4297988f1dcea0d6b5256695648"
         }
       ],
       "locked_fields": {},
@@ -293,6 +292,11 @@
           "timestamp_utc": "2026-04-22T07:12:36.024701+00:00",
           "action": "synthesized",
           "source_fingerprint": "bd4d931a02ea565d3f2afe05140a8d6919873e72"
+        },
+        {
+          "timestamp_utc": "2026-04-22T16:30:38.376981+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "f55b3e19b03d44009d0194e57f16d1c9904dfbc0"
         }
       ]
     }
@@ -303,23 +307,13 @@
     "chapter_id": "CH004",
     "shot_order": 3,
     "previous_shot_id": "SH002",
-    "next_shot_id": "SH004",
-    "shot_title": "Medium 3: Visual encounter with hundreds of Martians in the p...",
-    "shot_type": "medium",
-    "camera_description": "Stable medium framing that keeps action and character readable.",
-    "composition": "Readable medium composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) featuring The Narrator, tars_tarkas.",
-    "target_seconds": 5.0,
+    "next_shot_id": "",
+    "shot_title": "Closing Reaction 3: Land the scene consequence or transition cleanly.",
+    "shot_type": "closing_reaction",
+    "camera_description": "Controlled closing frame that lands the consequence of the beat.",
+    "composition": "Closing composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) that emphasizes the consequence of land the scene consequence or transition cleanly..",
+    "target_seconds": 4.6,
     "characters_in_frame": [
-      {
-        "label": "The Narrator",
-        "canonical_id": null,
-        "display_name": "The Narrator",
-        "status": "unresolved",
-        "entity_kind": "",
-        "resolution_score": null,
-        "source_path": "",
-        "notes": "No character candidate found."
-      },
       {
         "label": "Tars Tarkas",
         "canonical_id": "tars_tarkas",
@@ -345,12 +339,15 @@
       "BT003"
     ],
     "continuity_constraints": [
-      "Scale of props and architecture relative to the Narrator",
-      "Movement patterns/flow of the Martian crowd",
-      "Visual encounter with hundreds of Martians in the plaza."
+      "Scale of props/architecture relative to the Narrator",
+      "movement patterns of the Martian crowd.",
+      "Land the scene consequence or transition cleanly.",
+      "Resolve The Narrator -> The Narrator",
+      "Resolve Various Martians (crowd) -> Various Martians (crowd)",
+      "Resolve Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) -> Central Plaza of the Ancient City (Marble/Gold architecture, massive scale)"
     ],
-    "prompt_seed": "Medium 3: Visual encounter with hundreds of Martians in the p.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) featuring The Narrator, tars_tarkas. Cast: The Narrator, tars_tarkas. En...",
-    "shot_notes": "Visual encounter with hundreds of Martians in the plaza.",
+    "prompt_seed": "Closing Reaction 3: Land the scene consequence or transition cleanly.. closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) that emphasizes the consequence of land the scene consequence or...",
+    "shot_notes": "Land the scene consequence or transition cleanly.",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -403,36 +400,35 @@
       }
     ],
     "evidence_summary": [
-      "Utilize extreme scale and architectural grandeur to visually communicate the Narrator's vulnerability. The production must emphasize the contrast between the massive marble/gold structures of the ancient city and the smallness of the human protagonist, esta...",
+      "Establish the scale of the setting and the protagonist's status as a captive within an alien civilization.",
       "The Narrator and Tars Tarkas arrive at a massive, ancient city built by a forgotten race. They enter a central plaza filled with hundreds of Martians, highlighting the narrator's smallness compared to the environment and its inhabitants.",
       "Awe/Trepidation $\\rightarrow$ Alienation. **Likely Visual Coverage Families:** * Extreme Wide Shots (EWS) to establish the scale of the city vs. characters. * Low Angle shots looking up at Martians. * POV shots from t...",
-      "Extreme Wide Shots (EWS) for scale establishment",
-      "Low Angle shots of Martians",
-      "POV shots from Narrator's perspective",
+      "Scale of props/architecture relative to the Narrator",
+      "movement patterns of the Martian crowd.",
       "tars_tarkas | Tars Tarkas is a prominent Thark warrior and leader characterized by green skin. He carries himself with a professional demeanor, embodying the strength and combat skill valued by his Martian culture. His appearance is defined by standard Mart..."
     ],
     "metadata": {
       "artifact_id": "CH004_SC001_SH003_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "bd4d931a02ea565d3f2afe05140a8d6919873e72",
+      "source_fingerprint": "f55b3e19b03d44009d0194e57f16d1c9904dfbc0",
       "created_at_utc": "2026-04-22T00:30:50.213617+00:00",
-      "updated_at_utc": "2026-04-22T07:12:36.031211+00:00",
+      "updated_at_utc": "2026-04-22T16:30:38.390786+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH004_SC001",
-          "version": "4e1c19041154d42a803e03c13a54a5fe9b8de2b7"
+          "version": "27a46577d90148e958cffab05af39ad128cd216c"
         },
         {
           "dependency_type": "scene_binding",
           "dependency_id": "CH004_SC001",
-          "version": "7886c7e21ee04d0acd81036c41d7a666a8f34e04"
+          "version": "08cd6bebf9d3253d45285f4c60b72f9a628fa7f0"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH004_SC001",
-          "version": "1cf466b66b9c8dce01f39a30ec69252e8db46dbb"
+          "version": "66ec7e88ecccc4297988f1dcea0d6b5256695648"
         }
       ],
       "locked_fields": {},
@@ -447,150 +443,11 @@
           "timestamp_utc": "2026-04-22T07:13:00.617598+00:00",
           "action": "synthesized",
           "source_fingerprint": "bd4d931a02ea565d3f2afe05140a8d6919873e72"
-        }
-      ]
-    }
-  },
-  {
-    "shot_id": "SH004",
-    "scene_id": "CH004_SC001",
-    "chapter_id": "CH004",
-    "shot_order": 4,
-    "previous_shot_id": "SH003",
-    "next_shot_id": "",
-    "shot_title": "Closing Reaction 4: Realization of scale and status as a captive within...",
-    "shot_type": "closing_reaction",
-    "camera_description": "Controlled closing frame that lands the consequence of the beat.",
-    "composition": "Closing composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) that emphasizes the consequence of realization of scale and status as a captive within the alien crowd..",
-    "target_seconds": 4.3,
-    "characters_in_frame": [
-      {
-        "label": "Tars Tarkas",
-        "canonical_id": "tars_tarkas",
-        "display_name": "tars_tarkas",
-        "status": "canonical",
-        "entity_kind": "individual",
-        "resolution_score": 186,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'tars_tarkas'"
-      }
-    ],
-    "environment": {
-      "label": "Central Plaza of the Ancient City (Marble/Gold architecture, massive scale)",
-      "canonical_id": null,
-      "display_name": "Central Plaza of the Ancient City (Marble/Gold architecture, massive scale)",
-      "status": "review",
-      "entity_kind": "environment",
-      "resolution_score": 8,
-      "source_path": "",
-      "notes": "aerial_battlefield_mars | source context shares query language"
-    },
-    "beat_ids": [
-      "BT004"
-    ],
-    "continuity_constraints": [
-      "Scale of props and architecture relative to the Narrator",
-      "Movement patterns/flow of the Martian crowd",
-      "Realization of scale and status as a captive within the alien crowd."
-    ],
-    "prompt_seed": "Closing Reaction 4: Realization of scale and status as a captive within.... closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) that emphasizes the consequence of realization of scale and...",
-    "shot_notes": "Realization of scale and status as a captive within the alien crowd.",
-    "evidence_refs": [
-      {
-        "source": "scene_contract",
-        "scene_id": "CH004_SC001"
-      },
-      {
-        "source": "scene_breakdown",
-        "chapter_id": "CH004",
-        "scene_id": "CH004_SC001"
-      },
-      {
-        "source": "scene_breakdown",
-        "chapter_id": "CH004",
-        "scene_id": "CH004_SC001"
-      },
-      {
-        "source": "scene_breakdown",
-        "chapter_id": "CH004",
-        "scene_id": "CH004_SC001"
-      },
-      {
-        "source": "scene_breakdown",
-        "chapter_id": "CH004",
-        "scene_id": "CH004_SC001"
-      },
-      {
-        "source": "chapter_summary",
-        "chapter_id": "CH004",
-        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
-      },
-      {
-        "source": "book_index",
-        "chapter_id": "CH011",
-        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH011_chapter_xi.md"
-      },
-      {
-        "source": "book_index",
-        "chapter_id": "CH012",
-        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH012_chapter_xii.md"
-      },
-      {
-        "source": "book_index",
-        "chapter_id": "CH016",
-        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH016_chapter_xvi.md"
-      },
-      {
-        "source": "character_bible",
-        "chapter_id": "CH004",
-        "canonical_id": "tars_tarkas"
-      }
-    ],
-    "evidence_summary": [
-      "Utilize extreme scale and architectural grandeur to visually communicate the Narrator's vulnerability. The production must emphasize the contrast between the massive marble/gold structures of the ancient city and the smallness of the human protagonist, esta...",
-      "The Narrator and Tars Tarkas arrive at a massive, ancient city built by a forgotten race. They enter a central plaza filled with hundreds of Martians, highlighting the narrator's smallness compared to the environment and its inhabitants.",
-      "Awe/Trepidation $\\rightarrow$ Alienation. **Likely Visual Coverage Families:** * Extreme Wide Shots (EWS) to establish the scale of the city vs. characters. * Low Angle shots looking up at Martians. * POV shots from t...",
-      "Extreme Wide Shots (EWS) for scale establishment",
-      "Low Angle shots of Martians",
-      "POV shots from Narrator's perspective",
-      "tars_tarkas | Tars Tarkas is a prominent Thark warrior and leader characterized by green skin. He carries himself with a professional demeanor, embodying the strength and combat skill valued by his Martian culture. His appearance is defined by standard Mart..."
-    ],
-    "metadata": {
-      "artifact_id": "CH004_SC001_SH004_SHOT_PACKAGE",
-      "artifact_type": "shot_package",
-      "status": "generated",
-      "source_fingerprint": "bd4d931a02ea565d3f2afe05140a8d6919873e72",
-      "created_at_utc": "2026-04-22T00:31:26.460382+00:00",
-      "updated_at_utc": "2026-04-22T07:13:00.625597+00:00",
-      "upstream_dependencies": [
-        {
-          "dependency_type": "scene_contract",
-          "dependency_id": "CH004_SC001",
-          "version": "4e1c19041154d42a803e03c13a54a5fe9b8de2b7"
         },
         {
-          "dependency_type": "scene_binding",
-          "dependency_id": "CH004_SC001",
-          "version": "7886c7e21ee04d0acd81036c41d7a666a8f34e04"
-        },
-        {
-          "dependency_type": "shot_blueprints",
-          "dependency_id": "CH004_SC001",
-          "version": "1cf466b66b9c8dce01f39a30ec69252e8db46dbb"
-        }
-      ],
-      "locked_fields": {},
-      "manual_overrides": {},
-      "revision_history": [
-        {
-          "timestamp_utc": "2026-04-22T00:32:02.742722+00:00",
+          "timestamp_utc": "2026-04-22T16:30:38.390786+00:00",
           "action": "synthesized",
-          "source_fingerprint": "9ab4b53dcfe9e80e0049556a5371a95a42921708"
-        },
-        {
-          "timestamp_utc": "2026-04-22T07:13:25.192492+00:00",
-          "action": "synthesized",
-          "source_fingerprint": "bd4d931a02ea565d3f2afe05140a8d6919873e72"
+          "source_fingerprint": "f55b3e19b03d44009d0194e57f16d1c9904dfbc0"
         }
       ]
     }

@@ -1,7 +1,5 @@
 # Shot Index
 
-- `SH001` - Establishing Wide 1: Carter conducts a solo flight through the Martian sky. (type=establishing_wide, target=5.2s, beat_ids=BT001, cast=2, env=The Martian sky/aerial combat zone, prev=(none), next=SH002)
-- `SH002` - Action 2: Carter encounters scout (type=action, target=5.5s, beat_ids=BT002, cast=1, env=The Martian sky/aerial combat zone, prev=SH001, next=SH003)
-- `SH003` - Action 3: Mid-air intervention (type=action, target=5.5s, beat_ids=BT003, cast=2, env=The Martian sky/aerial combat zone, prev=SH002, next=SH004)
-- `SH004` - Action 4: Killing the warriors (type=action, target=5.5s, beat_ids=BT004, cast=1, env=The Martian sky/aerial combat zone, prev=SH003, next=SH005)
-- `SH005` - Action 5: Carter saves scout (type=action, target=5.3s, beat_ids=BT005, cast=1, env=The Martian sky/aerial combat zone, prev=SH004, next=(none))
+- `SH001` - Establishing Wide 1: During a solo flight, Carter encounters a Zodangan... (type=establishing_wide, target=5.5s, beat_ids=BT001, cast=1, env=The Martian sky/aerial combat zone, prev=(none), next=SH002)
+- `SH002` - Action 2: Carry the emotional arc through: Tension $\rightarr... (type=action, target=5.8s, beat_ids=BT002, cast=2, env=The Martian sky/aerial combat zone, prev=SH001, next=SH003)
+- `SH003` - Action 3: Land the scene consequence or transition cleanly. (type=action, target=5.6s, beat_ids=BT003, cast=2, env=The Martian sky/aerial combat zone, prev=SH002, next=(none))

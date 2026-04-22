@@ -18,8 +18,8 @@
 - speaker: `john_carter`
 - source_ref: `CH026:p020:q02`
 - scene_id: `CH026_SC002`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: the man to whom Helium owes her princess as well as her victory today.
 - excerpt: "Lay your hands upon the shoulder of John Carter," she said to them, turning toward me, "the man to whom Helium owes her princess as well as her victory today."
 
@@ -38,8 +38,8 @@
 - speaker: `john_carter`
 - source_ref: `CH026:p022:q02`
 - scene_id: `CH026_SC003`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: and here he is; meet one of Barsoom's greatest soldiers and statesmen, Tars Tarkas, Jeddak of Thark.
 - excerpt: "You owe your thanks more to another man than to me," I said, "and here he is; meet one of Barsoom's greatest soldiers and statesmen, Tars Tarkas, Jeddak of Thark."
 
@@ -84,8 +84,8 @@
 - speaker: `unresolved`
 - source_ref: `CH026:p043:q02`
 - scene_id: `CH026_SC005`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: it has remained for a man of another world to teach the green warriors of Barsoom the meaning of friendship; to him we owe the fact that the hordes of Thark can understand you; that they can appreciate and reciprocate the sentiments so graciously expressed.
 - excerpt: "Jeddak of Helium," returned Tars Tarkas, "it has remained for a man of another world to teach the green warriors of Barsoom the meaning of friendship; to him we owe the fact that the hordes of Thark can understand you; that they can app...
 - review_notes:
@@ -108,7 +108,7 @@
 - speaker: `john_carter`
 - source_ref: `CH026:p046:q02`
 - scene_id: `CH026_SC005`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: that you are granted, gladly, and without one word of opposition, the most precious jewel in all Helium, yes, on all Barsoom, is sufficient earnest of my esteem.
 - excerpt: "Welcome, my son," he said; "that you are granted, gladly, and without one word of opposition, the most precious jewel in all Helium, yes, on all Barsoom, is sufficient earnest of my esteem."

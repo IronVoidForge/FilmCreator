@@ -5,21 +5,31 @@
   "shot_order": 2,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Medium 2: Passage of time is established via movement through...",
+  "shot_title": "Medium 2: Carry the emotional arc through: Exhaustion/Tension...",
   "shot_type": "medium",
   "camera_description": "Stable medium framing that keeps action and character readable.",
-  "composition": "Readable medium composition in Martian sea bottoms featuring sola.",
-  "target_seconds": 5.0,
+  "composition": "Readable medium composition in Martian sea bottoms featuring john_carter, dejah_thoris.",
+  "target_seconds": 5.3,
   "characters_in_frame": [
     {
-      "label": "Sola",
-      "canonical_id": "sola",
-      "display_name": "sola",
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
       "status": "canonical",
       "entity_kind": "individual",
       "resolution_score": 186,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'sola'"
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'john_carter'"
+    },
+    {
+      "label": "Dejah Thoris",
+      "canonical_id": "dejah_thoris",
+      "display_name": "dejah_thoris",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH010/dejah_thoris.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'dejah_thoris'"
     }
   ],
   "environment": {
@@ -36,13 +46,15 @@
     "BT002"
   ],
   "continuity_constraints": [
-    "Lighting levels must maintain night/darkness consistency",
-    "Character fatigue and disheveled appearance must progress",
-    "Equipment and clothing must show wear consistent with 20 days of travel",
-    "Passage of time is established via movement through canal networks and desolate landscapes."
+    "Lighting levels (night/darkness)",
+    "character fatigue/disheveled appearance",
+    "equipment/clothing wear over 20 days.",
+    "Carry the emotional arc through: Exhaustion/Tension $\\rightarrow$ Relief (at reaching safety) $\\rightarrow$ Apprehension (approaching the city)..",
+    "Resolve Martian sea bottoms -> Martian sea bottoms",
+    "Resolve canal networks -> canal networks"
   ],
-  "prompt_seed": "Medium 2: Passage of time is established via movement through.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in Martian sea bottoms featuring sola. Cast: sola. Environment: Martian sea bottoms. Beat: Passage of time is established via movement through canal ne...",
-  "shot_notes": "Passage of time is established via movement through canal networks and desolate landscapes.",
+  "prompt_seed": "Medium 2: Carry the emotional arc through: Exhaustion/Tension.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in Martian sea bottoms featuring john_carter, dejah_thoris. Cast: john_carter, dejah_thoris. Environment: Martian sea bottoms. Beat: Carry the emotiona...",
+  "shot_notes": "Carry the emotional arc through: Exhaustion/Tension $\\rightarrow$ Relief (at reaching safety) $\\rightarrow$ Apprehension (approaching the city)..",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -100,12 +112,12 @@
     }
   ],
   "evidence_summary": [
-    "The production must visually communicate a twenty-day period of continuous travel through varying Martian terrains. This requires a disciplined approach to character degradation and lighting consistency to convey the stealthy, nocturnal nature of their move...",
+    "Establish the passage of time, the difficulty of the journey, and the growing tension of being hunted.",
     "John Carter, Dejah Thoris, and Sola travel stealthily for twenty days across sea bottoms and canals, moving under the cover of darkness to evade Martian patrols.",
     "Exhaustion/Tension $\\rightarrow$ Relief (at reaching safety) $\\rightarrow$ Apprehension (approaching the city).",
     "Wide landscape shots of the Martian terrain",
-    "Medium tracking shots of the trio moving through shadows",
-    "Close-ups of weary faces",
+    "medium tracking shots of the trio moving through shadows",
+    "close-ups of weary faces.",
     "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in...",
     "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b...",
     "sola | Sola is a female Green Martian, also identified as a Thark. Her visual identity is defined by her species' characteristic green coloring and traditional Green Martian attire. While specific physical proportions are not detailed, she is established as..."
@@ -114,24 +126,24 @@
     "artifact_id": "CH016_SC001_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "c6d7c8202f7489a1289411b2d120d55ebaeea73d",
+    "source_fingerprint": "558c70cd3d1fb3d7175395241df8d333bab43d7b",
     "created_at_utc": "2026-04-22T02:06:34.433920+00:00",
-    "updated_at_utc": "2026-04-22T08:23:44.798399+00:00",
+    "updated_at_utc": "2026-04-22T16:30:41.149882+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH016_SC001",
-        "version": "42bb00751d7e3e0abdaff9a20828294084473c1e"
+        "version": "36e6ff92caa25635493fd716c375704fcd1f55ae"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH016_SC001",
-        "version": "5596af6886ae284627fa8a4fd32d975af3912091"
+        "version": "0ec64cc487a87c674c48181263421c7b5f0faf90"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH016_SC001",
-        "version": "ffe34b597048a104a44ff29152d584f05cc7a9d3"
+        "version": "a526a69468798f6669b3848261e18151658a051a"
       }
     ],
     "locked_fields": {},
@@ -146,6 +158,11 @@
         "timestamp_utc": "2026-04-22T08:24:08.789813+00:00",
         "action": "synthesized",
         "source_fingerprint": "c6d7c8202f7489a1289411b2d120d55ebaeea73d"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:30:41.149882+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "558c70cd3d1fb3d7175395241df8d333bab43d7b"
       }
     ]
   }

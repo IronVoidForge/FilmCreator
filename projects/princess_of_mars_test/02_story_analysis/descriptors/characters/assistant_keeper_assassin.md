@@ -23,17 +23,17 @@
 
 ## Generated Fields
 
-- build: canon-compatible best-effort character build
-- costume_materials: canon-compatible best-effort character costume materials
-- expression_tendency: canon-compatible best-effort character expression tendency
-- eye_color: canon-compatible best-effort character eye color
-- face_shape: canon-compatible best-effort character face shape
-- facial_hair: canon-compatible best-effort character facial hair
-- hair_color: canon-compatible best-effort character hair color
-- hair_style: canon-compatible best-effort character hair style
-- height: canon-compatible best-effort character height
-- posture: canon-compatible best-effort character posture
-- skin_tone: canon-compatible best-effort character skin tone
+- build: lean athletic build
+- costume_materials: worn cloth, leather, and practical field materials
+- expression_tendency: focused and self-controlled
+- eye_color: dark eyes
+- face_shape: angular face
+- facial_hair: clean-shaven or light stubble
+- hair_color: dark brown
+- hair_style: practical short hair
+- height: average-tall
+- posture: upright and ready
+- skin_tone: weathered light-to-medium skin
 
 ## Coverage
 
@@ -72,5 +72,5 @@
 - artifact_id: `DESC_CHAR_assistant_keeper_assassin`
 - status: `generated`
 - source_fingerprint: `69e54d29838c5a51a19e8e60ae41f16c25bdeaa4`
-- created_at_utc: `2026-04-22T04:04:04.032401+00:00`
-- updated_at_utc: `2026-04-22T04:04:04.032401+00:00`
+- created_at_utc: `2026-04-22T16:31:26.304910+00:00`
+- updated_at_utc: `2026-04-22T16:31:26.304910+00:00`

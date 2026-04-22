@@ -4,22 +4,22 @@
   "chapter_id": "CH027",
   "shot_order": 3,
   "previous_shot_id": "SH002",
-  "next_shot_id": "SH004",
-  "shot_title": "Insert Detail 3: John commands a surviving worker to restart the pumps.",
+  "next_shot_id": "",
+  "shot_title": "Insert Detail 3: Land the scene consequence or transition cleanly.",
   "shot_type": "insert_detail",
   "camera_description": "Tight detail framing focused on a single visual object or gesture.",
   "composition": "Detail composition centered on the key physical action or prop inside The Atmosphere Plant (interior/exterior).",
-  "target_seconds": 5.0,
+  "target_seconds": 5.1,
   "characters_in_frame": [
     {
-      "label": "Surviving Worker",
-      "canonical_id": null,
-      "display_name": "Surviving Worker",
-      "status": "review",
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
+      "resolution_score": 186,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'john_carter'"
     }
   ],
   "environment": {
@@ -36,12 +36,14 @@
     "BT003"
   ],
   "continuity_constraints": [
-    "Mechanical state progression (doors unlocking -> pumps restarting)",
-    "John Carter's physical condition (asphyxiation/exhaustion levels)",
-    "John commands a surviving worker to restart the pumps."
+    "The mechanical state of the plant (doors opening/pumps starting)",
+    "John's physical condition (exhaustion/asphyxiation).",
+    "Land the scene consequence or transition cleanly.",
+    "Resolve Surviving Worker -> Surviving Worker",
+    "Resolve The Atmosphere Plant (interior/exterior) -> The Atmosphere Plant (interior/exterior)"
   ],
-  "prompt_seed": "Insert Detail 3: John commands a surviving worker to restart the pumps.. insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside The Atmosphere Plant (interior/exterior). Cast: Surviving Worker. Environment: The Atmosphere Plant (interior/exterior).",
-  "shot_notes": "John commands a surviving worker to restart the pumps.",
+  "prompt_seed": "Insert Detail 3: Land the scene consequence or transition cleanly.. insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside The Atmosphere Plant (interior/exterior). Cast: john_carter. Environment: The Atmosphere Plant (i...",
+  "shot_notes": "Land the scene consequence or transition cleanly.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -99,36 +101,36 @@
     }
   ],
   "evidence_summary": [
-    "The sequence must visually communicate the extreme physical toll of atmospheric thinning and the immense mental strain required to manipulate Martian technology. Success relies on the mechanical progression of the plant's systems (doors/pumps) synchronized...",
+    "The climax and resolution of the immediate crisis.",
     "John Carter arrives at the Atmosphere Plant, finding a graveyard of workers. He uses his mental thought waves to unlock the three great doors and commands a survivor to restart the pumps before he collapses from oxygen deprivation.",
     "High Tension $\\rightarrow$ Exhausted Relief.",
-    "Close-ups of \"thought wave\" mental effort",
-    "Wide shots of massive doors opening",
-    "Shaky, handheld footage for physical collapse",
+    "Close-ups of the \"thought wave\" mental effort",
+    "wide shots of the massive doors opening",
+    "shaky",
     "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in..."
   ],
   "metadata": {
     "artifact_id": "CH027_SC005_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "8605f3c7a5b6aa54428bb848794dc5f3a0f6048d",
+    "source_fingerprint": "434090ef5375d2b2c2d8ecd7a037ccbe02e6a49e",
     "created_at_utc": "2026-04-22T03:56:39.812580+00:00",
-    "updated_at_utc": "2026-04-22T16:08:13.759070+00:00",
+    "updated_at_utc": "2026-04-22T16:30:44.671708+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH027_SC005",
-        "version": "9bba98d4d207e5be6af625915c200fcc13b145d2"
+        "version": "0e4d8dff71b6fcbd7dba64f22e20ab276b86ff37"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH027_SC005",
-        "version": "96ac61d77184522c2c56aa63bc955963c6f39944"
+        "version": "b08c67494b39946c95333f91572add5be85b0101"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH027_SC005",
-        "version": "9a24cf3013787ec0b4becb1cef36aa7e197cb613"
+        "version": "07f47e235456ad1a504a185a0e750533aa7fa704"
       }
     ],
     "locked_fields": {},
@@ -143,6 +145,11 @@
         "timestamp_utc": "2026-04-22T16:08:35.739186+00:00",
         "action": "synthesized",
         "source_fingerprint": "8605f3c7a5b6aa54428bb848794dc5f3a0f6048d"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:30:44.672208+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "434090ef5375d2b2c2d8ecd7a037ccbe02e6a49e"
       }
     ]
   }

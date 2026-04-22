@@ -2,21 +2,7 @@
 
 - shot_id: `SH003`
 - scene_id: `CH022_SC005`
-- dialogue_events: `4`
-
-## CH022_DLG057
-
-- speaker: `sab_than`
-- source_ref: `CH022:p068:q02`
-- clip_id: `CL003`
-- dialogue_text: Have him brought to me at once. What know you of him, cousin? It seemed strange to me now that I think upon it that there should have been such a fighting man in Zodanga, of whose name, even, we were ignorant before today. And his name too, John Carter, who ever heard of such a name upon Barsoom!
-
-## CH022_DLG058
-
-- speaker: `unresolved`
-- source_ref: `CH022:p070:q01`
-- clip_id: `CL003`
-- dialogue_text: Keep your eyes on this other one,
+- dialogue_events: `5`
 
 ## CH022_DLG059
 
@@ -31,3 +17,24 @@
 - source_ref: `CH022:p072:q01`
 - clip_id: `CL003`
 - dialogue_text: The likeness of every person who has entered or left the palace grounds today has been carefully examined,
+
+## CH022_DLG061
+
+- speaker: `unresolved`
+- source_ref: `CH022:p072:q02`
+- clip_id: `CL003`
+- dialogue_text: and not one approaches the likeness of this new padwar of the guards, other than that which was recorded of him at the time he entered.
+
+## CH022_DLG062
+
+- speaker: `dejah_thoris`
+- source_ref: `CH022:p073:q01`
+- clip_id: `CL003`
+- dialogue_text: Then we will have him shortly,
+
+## CH022_DLG063
+
+- speaker: `unresolved`
+- source_ref: `CH022:p073:q02`
+- clip_id: `CL003`
+- dialogue_text: and in the meanwhile we will repair to the apartments of the Princess of Helium and question her in regard to the affair. She may know more than she cared to divulge to you, Notan. Come.

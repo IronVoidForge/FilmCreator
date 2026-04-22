@@ -4,9 +4,9 @@
 - scene_id: `CH027_SC005`
 - dialogue_events: `1`
 
-## CH027_DLG017
+## CH027_DLG018
 
 - speaker: `john_carter`
-- source_ref: `CH027:p048:q01`
+- source_ref: `CH027:p048:q02`
 - clip_id: `CL003`
-- dialogue_text: After it,
+- dialogue_text: and if you reach the pump room turn loose all the pumps. It is the only chance Barsoom has to exist tomorrow!

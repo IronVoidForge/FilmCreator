@@ -4,9 +4,9 @@
 - scene_id: `CH027_SC004`
 - dialogue_events: `1`
 
-## CH027_DLG011
+## CH027_DLG012
 
 - speaker: `john_carter`
-- source_ref: `CH027:p032:q01`
+- source_ref: `CH027:p032:q02`
 - clip_id: `CL002`
-- dialogue_text: It shall not be, my princess,
+- dialogue_text: There is, there must be some way, and John Carter, who has fought his way through a strange world for love of you, will find it.

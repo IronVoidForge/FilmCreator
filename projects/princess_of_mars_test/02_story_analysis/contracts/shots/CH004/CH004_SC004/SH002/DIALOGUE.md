@@ -4,9 +4,9 @@
 - scene_id: `CH004_SC004`
 - dialogue_events: `1`
 
-## CH004_DLG003
+## CH004_DLG002
 
 - speaker: `unresolved`
-- source_ref: `CH004:p024:q03`
+- source_ref: `CH004:p024:q02`
 - clip_id: `CL002`
-- dialogue_text: sakked
+- dialogue_text: sak!

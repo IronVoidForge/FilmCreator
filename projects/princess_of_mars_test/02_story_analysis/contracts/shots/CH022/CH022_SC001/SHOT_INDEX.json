@@ -6,11 +6,11 @@
     "shot_order": 1,
     "previous_shot_id": "",
     "next_shot_id": "SH002",
-    "shot_title": "Action 1: John Carter observes the private chamber",
-    "shot_type": "action",
-    "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-    "composition": "Dynamic composition in Private apartments of Jeddak Than Kosis with than_kosis crossing the frame and maintaining readable movement.",
-    "target_seconds": 5.7,
+    "shot_title": "Medium 1: John Carter, hidden behind a tapestry while guardin...",
+    "shot_type": "medium",
+    "camera_description": "Stable medium framing that keeps action and character readable.",
+    "composition": "Readable medium composition in Private apartments of Jeddak Than Kosis featuring than_kosis, dejah_thoris, sab_than.",
+    "target_seconds": 5.5,
     "characters_in_frame": [
       {
         "label": "Than Kosis",
@@ -21,6 +21,26 @@
         "resolution_score": 186,
         "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH021/than_kosis.md",
         "notes": "asset id exactly matches canonical id | query matches alias 'than_kosis'"
+      },
+      {
+        "label": "Dejah Thoris",
+        "canonical_id": "dejah_thoris",
+        "display_name": "dejah_thoris",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH010/dejah_thoris.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'dejah_thoris'"
+      },
+      {
+        "label": "Sab Than",
+        "canonical_id": "sab_than",
+        "display_name": "sab_than",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH022/sab_than.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'sab_than'"
       }
     ],
     "environment": {
@@ -37,12 +57,15 @@
       "BT001"
     ],
     "continuity_constraints": [
-      "Carter's physical position relative to the tapestry must remain consistent with his concealment.",
-      "Carter's visibility/unvisibility to the royal party (Than Kosis, Sab Than, Dejah Thoris) must be strictly maintained.",
-      "John Carter observes the private chamber from his concealed position behind a tapestry while guarding Than Kosis."
+      "Carter's position relative to the tapestry and his visibility to the royal party.",
+      "John Carter",
+      "hidden behind a tapestry while guarding Jeddak Than Kosis",
+      "witnesses Dejah Thoris enter the private chamber. Instead of seeking him",
+      "she publicly pledges herself to Sab Than to maintain peace between their warring cities.",
+      "Resolve John Carter (observer) -> John Carter (observer)"
     ],
-    "prompt_seed": "Action 1: John Carter observes the private chamber from his c.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in Private apartments of Jeddak Than Kosis with than_kosis crossing the frame and maintaining readable movement. Cast: than_kosis. Environment: Private apart...",
-    "shot_notes": "John Carter observes the private chamber from his concealed position behind a tapestry while guarding Than Kosis.",
+    "prompt_seed": "Medium 1: John Carter, hidden behind a tapestry while guardin.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in Private apartments of Jeddak Than Kosis featuring than_kosis, dejah_thoris, sab_than. Cast: than_kosis, dejah_thoris, sab_than. Environment: Private...",
+    "shot_notes": "John Carter, hidden behind a tapestry while guarding Jeddak Than Kosis, witnesses Dejah Thoris enter the private chamber. Instead of seeking him, she publicly pledges herself to Sab Than to maintain peace between thei...",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -100,37 +123,36 @@
       }
     ],
     "evidence_summary": [
-      "The scene must establish the emotional inciting incident through a perspective-driven narrative. The camera must prioritize John Carter's voyeuristic vantage point from behind a tapestry to create a sense of isolation and helplessness as he witnesses Dejah...",
+      "To establish the emotional inciting incident and the betrayal of Carter's expectations.",
       "John Carter, hidden behind a tapestry while guarding Jeddak Than Kosis, witnesses Dejah Thoris enter the private chamber. Instead of seeking him, she publicly pledges herself to Sab Than to maintain peace between their warring cities.",
       "Hope/Anticipation $\\rightarrow$ Devastation/Betrayal. **Likely Visual Coverage Families:** - POV shots from behind the tapestry (Carter's perspective). - Medium shots of Dejah Thoris making her declaration. - Close-up...",
-      "POV shots from behind the tapestry (Carter's perspective)",
-      "Medium shots of Dejah Thoris making her declaration",
-      "Close-ups on Carter's reaction",
+      "Carter's position relative to the tapestry and his visibility to the royal party.",
       "than_kosis | Than Kosis is an elder male Martian ruler characterized by a commanding, authoritative presence. He is visually defined by his status as the Jeddak of Zodanga, typically appearing in regal, high-ranking noble regalia and royal garments that sig...",
-      "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b..."
+      "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b...",
+      "sab_than | Sab Than is a noble Martian youth and the son of Than Kosis. He carries the visual identity of a Zodangan royal, characterized by formal Zodangan attire ranging from standard princely garments to specific ceremonial groom clothing. While his exac..."
     ],
     "metadata": {
       "artifact_id": "CH022_SC001_SH001_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "c47fc7fe4cdaba8384ab6b7d37bb281feae170c1",
+      "source_fingerprint": "8e4cda65597fd2b9bca3b2a7a56d350aa4a8aa0e",
       "created_at_utc": "2026-04-22T03:00:11.722035+00:00",
-      "updated_at_utc": "2026-04-22T09:16:36.934988+00:00",
+      "updated_at_utc": "2026-04-22T16:30:42.936548+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH022_SC001",
-          "version": "3dd7ba9613a579affe59d7679267ab166c38c9d4"
+          "version": "1397795d2345eb14cf9ac213087a92b3e3500741"
         },
         {
           "dependency_type": "scene_binding",
           "dependency_id": "CH022_SC001",
-          "version": "c20084c34332469648186625ad76f69d2045429a"
+          "version": "bd5cc781842927fb988d3b47a15bd31bf179e8f4"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH022_SC001",
-          "version": "5ae4edcd594c7c354b622648da6a9be6554a41b6"
+          "version": "c7207c4a291028ba8d89367a555f0fc7a8a1c715"
         }
       ],
       "locked_fields": {},
@@ -145,6 +167,11 @@
           "timestamp_utc": "2026-04-22T09:17:12.128162+00:00",
           "action": "synthesized",
           "source_fingerprint": "c47fc7fe4cdaba8384ab6b7d37bb281feae170c1"
+        },
+        {
+          "timestamp_utc": "2026-04-22T16:30:42.937053+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "8e4cda65597fd2b9bca3b2a7a56d350aa4a8aa0e"
         }
       ]
     }
@@ -156,11 +183,11 @@
     "shot_order": 2,
     "previous_shot_id": "SH001",
     "next_shot_id": "SH003",
-    "shot_title": "Action 2: Dejah Thoris enters the private chamber",
+    "shot_title": "Action 2: Carry the emotional arc through: Hope/Anticipation...",
     "shot_type": "action",
     "camera_description": "Active camera with tracking energy and clear spatial orientation.",
     "composition": "Dynamic composition in Private apartments of Jeddak Than Kosis with dejah_thoris crossing the frame and maintaining readable movement.",
-    "target_seconds": 5.5,
+    "target_seconds": 5.8,
     "characters_in_frame": [
       {
         "label": "Dejah Thoris",
@@ -187,12 +214,15 @@
       "BT002"
     ],
     "continuity_constraints": [
-      "Carter's physical position relative to the tapestry must remain consistent with his concealment.",
-      "Carter's visibility/unvisibility to the royal party (Than Kosis, Sab Than, Dejah Thoris) must be strictly maintained.",
-      "Dejah Thoris enters the private chamber bypassing Carter's presence."
+      "Carter's position relative to the tapestry and his visibility to the royal party.",
+      "Carry the emotional arc through: Hope/Anticipation $\\rightarrow$ Devastation/Betrayal.",
+      "**Likely Visual Coverage Families:**",
+      "- POV shots from behind the tapestry (Carter's perspective).",
+      "- Medium shots of Dejah Thoris making her declaration.",
+      "- Close-ups on Carter's reaction to the news.."
     ],
-    "prompt_seed": "Action 2: Dejah Thoris enters the private chamber, bypassing.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in Private apartments of Jeddak Than Kosis with dejah_thoris crossing the frame and maintaining readable movement. Cast: dejah_thoris. Environment: Private ap...",
-    "shot_notes": "Dejah Thoris enters the private chamber, bypassing Carter's presence.",
+    "prompt_seed": "Action 2: Carry the emotional arc through: Hope/Anticipation.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in Private apartments of Jeddak Than Kosis with dejah_thoris crossing the frame and maintaining readable movement. Cast: dejah_thoris. Environment: Private ap...",
+    "shot_notes": "Carry the emotional arc through: Hope/Anticipation $\\rightarrow$ Devastation/Betrayal. **Likely Visual Coverage Families:** - POV shots from behind the tapestry (Carter's perspective). - Medium shots of Dejah Thoris m...",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -250,37 +280,36 @@
       }
     ],
     "evidence_summary": [
-      "The scene must establish the emotional inciting incident through a perspective-driven narrative. The camera must prioritize John Carter's voyeuristic vantage point from behind a tapestry to create a sense of isolation and helplessness as he witnesses Dejah...",
+      "To establish the emotional inciting incident and the betrayal of Carter's expectations.",
       "John Carter, hidden behind a tapestry while guarding Jeddak Than Kosis, witnesses Dejah Thoris enter the private chamber. Instead of seeking him, she publicly pledges herself to Sab Than to maintain peace between their warring cities.",
       "Hope/Anticipation $\\rightarrow$ Devastation/Betrayal. **Likely Visual Coverage Families:** - POV shots from behind the tapestry (Carter's perspective). - Medium shots of Dejah Thoris making her declaration. - Close-up...",
-      "POV shots from behind the tapestry (Carter's perspective)",
-      "Medium shots of Dejah Thoris making her declaration",
-      "Close-ups on Carter's reaction",
+      "Carter's position relative to the tapestry and his visibility to the royal party.",
       "than_kosis | Than Kosis is an elder male Martian ruler characterized by a commanding, authoritative presence. He is visually defined by his status as the Jeddak of Zodanga, typically appearing in regal, high-ranking noble regalia and royal garments that sig...",
-      "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b..."
+      "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b...",
+      "sab_than | Sab Than is a noble Martian youth and the son of Than Kosis. He carries the visual identity of a Zodangan royal, characterized by formal Zodangan attire ranging from standard princely garments to specific ceremonial groom clothing. While his exac..."
     ],
     "metadata": {
       "artifact_id": "CH022_SC001_SH002_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "c47fc7fe4cdaba8384ab6b7d37bb281feae170c1",
+      "source_fingerprint": "8e4cda65597fd2b9bca3b2a7a56d350aa4a8aa0e",
       "created_at_utc": "2026-04-22T03:00:45.694157+00:00",
-      "updated_at_utc": "2026-04-22T09:17:12.136172+00:00",
+      "updated_at_utc": "2026-04-22T16:30:42.952062+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH022_SC001",
-          "version": "3dd7ba9613a579affe59d7679267ab166c38c9d4"
+          "version": "1397795d2345eb14cf9ac213087a92b3e3500741"
         },
         {
           "dependency_type": "scene_binding",
           "dependency_id": "CH022_SC001",
-          "version": "c20084c34332469648186625ad76f69d2045429a"
+          "version": "bd5cc781842927fb988d3b47a15bd31bf179e8f4"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH022_SC001",
-          "version": "5ae4edcd594c7c354b622648da6a9be6554a41b6"
+          "version": "c7207c4a291028ba8d89367a555f0fc7a8a1c715"
         }
       ],
       "locked_fields": {},
@@ -295,6 +324,11 @@
           "timestamp_utc": "2026-04-22T09:17:37.691976+00:00",
           "action": "synthesized",
           "source_fingerprint": "c47fc7fe4cdaba8384ab6b7d37bb281feae170c1"
+        },
+        {
+          "timestamp_utc": "2026-04-22T16:30:42.952062+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "8e4cda65597fd2b9bca3b2a7a56d350aa4a8aa0e"
         }
       ]
     }
@@ -305,162 +339,12 @@
     "chapter_id": "CH022",
     "shot_order": 3,
     "previous_shot_id": "SH002",
-    "next_shot_id": "SH004",
-    "shot_title": "Action 3: Dejah Thoris pledges herself to Sab Than",
-    "shot_type": "action",
-    "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-    "composition": "Dynamic composition in Private apartments of Jeddak Than Kosis with dejah_thoris crossing the frame and maintaining readable movement.",
-    "target_seconds": 5.5,
-    "characters_in_frame": [
-      {
-        "label": "Dejah Thoris",
-        "canonical_id": "dejah_thoris",
-        "display_name": "dejah_thoris",
-        "status": "canonical",
-        "entity_kind": "individual",
-        "resolution_score": 186,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH010/dejah_thoris.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'dejah_thoris'"
-      }
-    ],
-    "environment": {
-      "label": "Private apartments of Jeddak Than Kosis",
-      "canonical_id": null,
-      "display_name": "Private apartments of Jeddak Than Kosis",
-      "status": "review",
-      "entity_kind": "environment",
-      "resolution_score": 8,
-      "source_path": "",
-      "notes": "aerial_battlefield_mars | source context shares query language"
-    },
-    "beat_ids": [
-      "BT003"
-    ],
-    "continuity_constraints": [
-      "Carter's physical position relative to the tapestry must remain consistent with his concealment.",
-      "Carter's visibility/unvisibility to the royal party (Than Kosis, Sab Than, Dejah Thoris) must be strictly maintained.",
-      "Dejah Thoris publicly pledges herself to Sab Than to secure peace between the warring cities."
-    ],
-    "prompt_seed": "Action 3: Dejah Thoris publicly pledges herself to Sab Than t.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in Private apartments of Jeddak Than Kosis with dejah_thoris crossing the frame and maintaining readable movement. Cast: dejah_thoris. Environment: Private a...",
-    "shot_notes": "Dejah Thoris publicly pledges herself to Sab Than to secure peace between the warring cities.",
-    "evidence_refs": [
-      {
-        "source": "scene_contract",
-        "scene_id": "CH022_SC001"
-      },
-      {
-        "source": "scene_breakdown",
-        "chapter_id": "CH022",
-        "scene_id": "CH022_SC001"
-      },
-      {
-        "source": "scene_breakdown",
-        "chapter_id": "CH022",
-        "scene_id": "CH022_SC001"
-      },
-      {
-        "source": "scene_breakdown",
-        "chapter_id": "CH022",
-        "scene_id": "CH022_SC001"
-      },
-      {
-        "source": "scene_breakdown",
-        "chapter_id": "CH022",
-        "scene_id": "CH022_SC001"
-      },
-      {
-        "source": "chapter_summary",
-        "chapter_id": "CH022",
-        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH022_summary.md"
-      },
-      {
-        "source": "book_index",
-        "chapter_id": "CH022",
-        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH022_chapter_xxii.md"
-      },
-      {
-        "source": "book_index",
-        "chapter_id": "CH015",
-        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH015_chapter_xv.md"
-      },
-      {
-        "source": "book_index",
-        "chapter_id": "CH021",
-        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
-      },
-      {
-        "source": "character_bible",
-        "chapter_id": "CH022",
-        "canonical_id": "dejah_thoris"
-      },
-      {
-        "source": "character_bible",
-        "chapter_id": "CH022",
-        "canonical_id": "than_kosis"
-      }
-    ],
-    "evidence_summary": [
-      "The scene must establish the emotional inciting incident through a perspective-driven narrative. The camera must prioritize John Carter's voyeuristic vantage point from behind a tapestry to create a sense of isolation and helplessness as he witnesses Dejah...",
-      "John Carter, hidden behind a tapestry while guarding Jeddak Than Kosis, witnesses Dejah Thoris enter the private chamber. Instead of seeking him, she publicly pledges herself to Sab Than to maintain peace between their warring cities.",
-      "Hope/Anticipation $\\rightarrow$ Devastation/Betrayal. **Likely Visual Coverage Families:** - POV shots from behind the tapestry (Carter's perspective). - Medium shots of Dejah Thoris making her declaration. - Close-up...",
-      "POV shots from behind the tapestry (Carter's perspective)",
-      "Medium shots of Dejah Thoris making her declaration",
-      "Close-ups on Carter's reaction",
-      "than_kosis | Than Kosis is an elder male Martian ruler characterized by a commanding, authoritative presence. He is visually defined by his status as the Jeddak of Zodanga, typically appearing in regal, high-ranking noble regalia and royal garments that sig...",
-      "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b..."
-    ],
-    "metadata": {
-      "artifact_id": "CH022_SC001_SH003_SHOT_PACKAGE",
-      "artifact_type": "shot_package",
-      "status": "generated",
-      "source_fingerprint": "c47fc7fe4cdaba8384ab6b7d37bb281feae170c1",
-      "created_at_utc": "2026-04-22T03:01:10.048155+00:00",
-      "updated_at_utc": "2026-04-22T09:17:37.698975+00:00",
-      "upstream_dependencies": [
-        {
-          "dependency_type": "scene_contract",
-          "dependency_id": "CH022_SC001",
-          "version": "3dd7ba9613a579affe59d7679267ab166c38c9d4"
-        },
-        {
-          "dependency_type": "scene_binding",
-          "dependency_id": "CH022_SC001",
-          "version": "c20084c34332469648186625ad76f69d2045429a"
-        },
-        {
-          "dependency_type": "shot_blueprints",
-          "dependency_id": "CH022_SC001",
-          "version": "5ae4edcd594c7c354b622648da6a9be6554a41b6"
-        }
-      ],
-      "locked_fields": {},
-      "manual_overrides": {},
-      "revision_history": [
-        {
-          "timestamp_utc": "2026-04-22T03:01:34.466473+00:00",
-          "action": "synthesized",
-          "source_fingerprint": "8340d18c5c53f25b30faa994be5f48b813923837"
-        },
-        {
-          "timestamp_utc": "2026-04-22T09:18:03.226705+00:00",
-          "action": "synthesized",
-          "source_fingerprint": "c47fc7fe4cdaba8384ab6b7d37bb281feae170c1"
-        }
-      ]
-    }
-  },
-  {
-    "shot_id": "SH004",
-    "scene_id": "CH022_SC001",
-    "chapter_id": "CH022",
-    "shot_order": 4,
-    "previous_shot_id": "SH003",
     "next_shot_id": "",
-    "shot_title": "Action 4: John Carter witnesses the declaration",
-    "shot_type": "action",
-    "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-    "composition": "Dynamic composition in Private apartments of Jeddak Than Kosis with dejah_thoris, than_kosis crossing the frame and maintaining readable movement.",
-    "target_seconds": 5.3,
+    "shot_title": "Closing Reaction 3: Land the scene consequence or transition cleanly.",
+    "shot_type": "closing_reaction",
+    "camera_description": "Controlled closing frame that lands the consequence of the beat.",
+    "composition": "Closing composition in Private apartments of Jeddak Than Kosis that emphasizes the consequence of land the scene consequence or transition cleanly..",
+    "target_seconds": 4.6,
     "characters_in_frame": [
       {
         "label": "Dejah Thoris",
@@ -494,15 +378,17 @@
       "notes": "aerial_battlefield_mars | source context shares query language"
     },
     "beat_ids": [
-      "BT004"
+      "BT003"
     ],
     "continuity_constraints": [
-      "Carter's physical position relative to the tapestry must remain consistent with his concealment.",
-      "Carter's visibility/unvisibility to the royal party (Than Kosis, Sab Than, Dejah Thoris) must be strictly maintained.",
-      "John Carter witnesses the declaration experiencing the shift from anticipation to devastation."
+      "Carter's position relative to the tapestry and his visibility to the royal party.",
+      "Land the scene consequence or transition cleanly.",
+      "Resolve John Carter (observer) -> John Carter (observer)",
+      "Resolve Private apartments of Jeddak Than Kosis -> Private apartments of Jeddak Than Kosis",
+      "Resolve interior palace -> interior palace"
     ],
-    "prompt_seed": "Action 4: John Carter witnesses the declaration, experiencing.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in Private apartments of Jeddak Than Kosis with dejah_thoris, than_kosis crossing the frame and maintaining readable movement. Cast: dejah_thoris, than_kosis...",
-    "shot_notes": "John Carter witnesses the declaration, experiencing the shift from anticipation to devastation.",
+    "prompt_seed": "Closing Reaction 3: Land the scene consequence or transition cleanly.. closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in Private apartments of Jeddak Than Kosis that emphasizes the consequence of land the scene consequence or transition cleanly.. Cast: dejah_th...",
+    "shot_notes": "Land the scene consequence or transition cleanly.",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -560,51 +446,55 @@
       }
     ],
     "evidence_summary": [
-      "The scene must establish the emotional inciting incident through a perspective-driven narrative. The camera must prioritize John Carter's voyeuristic vantage point from behind a tapestry to create a sense of isolation and helplessness as he witnesses Dejah...",
+      "To establish the emotional inciting incident and the betrayal of Carter's expectations.",
       "John Carter, hidden behind a tapestry while guarding Jeddak Than Kosis, witnesses Dejah Thoris enter the private chamber. Instead of seeking him, she publicly pledges herself to Sab Than to maintain peace between their warring cities.",
       "Hope/Anticipation $\\rightarrow$ Devastation/Betrayal. **Likely Visual Coverage Families:** - POV shots from behind the tapestry (Carter's perspective). - Medium shots of Dejah Thoris making her declaration. - Close-up...",
-      "POV shots from behind the tapestry (Carter's perspective)",
-      "Medium shots of Dejah Thoris making her declaration",
-      "Close-ups on Carter's reaction",
+      "Carter's position relative to the tapestry and his visibility to the royal party.",
       "than_kosis | Than Kosis is an elder male Martian ruler characterized by a commanding, authoritative presence. He is visually defined by his status as the Jeddak of Zodanga, typically appearing in regal, high-ranking noble regalia and royal garments that sig...",
-      "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b..."
+      "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b...",
+      "sab_than | Sab Than is a noble Martian youth and the son of Than Kosis. He carries the visual identity of a Zodangan royal, characterized by formal Zodangan attire ranging from standard princely garments to specific ceremonial groom clothing. While his exac..."
     ],
     "metadata": {
-      "artifact_id": "CH022_SC001_SH004_SHOT_PACKAGE",
+      "artifact_id": "CH022_SC001_SH003_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "c47fc7fe4cdaba8384ab6b7d37bb281feae170c1",
-      "created_at_utc": "2026-04-22T03:01:34.467973+00:00",
-      "updated_at_utc": "2026-04-22T09:18:03.233705+00:00",
+      "source_fingerprint": "8e4cda65597fd2b9bca3b2a7a56d350aa4a8aa0e",
+      "created_at_utc": "2026-04-22T03:01:10.048155+00:00",
+      "updated_at_utc": "2026-04-22T16:30:42.968020+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH022_SC001",
-          "version": "3dd7ba9613a579affe59d7679267ab166c38c9d4"
+          "version": "1397795d2345eb14cf9ac213087a92b3e3500741"
         },
         {
           "dependency_type": "scene_binding",
           "dependency_id": "CH022_SC001",
-          "version": "c20084c34332469648186625ad76f69d2045429a"
+          "version": "bd5cc781842927fb988d3b47a15bd31bf179e8f4"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH022_SC001",
-          "version": "5ae4edcd594c7c354b622648da6a9be6554a41b6"
+          "version": "c7207c4a291028ba8d89367a555f0fc7a8a1c715"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-22T03:01:58.842917+00:00",
+          "timestamp_utc": "2026-04-22T03:01:34.466473+00:00",
           "action": "synthesized",
           "source_fingerprint": "8340d18c5c53f25b30faa994be5f48b813923837"
         },
         {
-          "timestamp_utc": "2026-04-22T09:18:28.790106+00:00",
+          "timestamp_utc": "2026-04-22T09:18:03.226705+00:00",
           "action": "synthesized",
           "source_fingerprint": "c47fc7fe4cdaba8384ab6b7d37bb281feae170c1"
+        },
+        {
+          "timestamp_utc": "2026-04-22T16:30:42.968020+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "8e4cda65597fd2b9bca3b2a7a56d350aa4a8aa0e"
         }
       ]
     }

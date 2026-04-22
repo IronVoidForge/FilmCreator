@@ -4,9 +4,9 @@
 - scene_id: `CH025_SC002`
 - dialogue_events: `1`
 
-## CH025_DLG002
+## CH025_DLG003
 
-- speaker: `john_carter`
-- source_ref: `CH025:p010:q02`
+- speaker: `unresolved`
+- source_ref: `CH025:p016:q01`
 - clip_id: `CL003`
-- dialogue_text: Look!
+- dialogue_text: The woman! The woman! Strike her down; it is her plot. Kill her! Kill her!

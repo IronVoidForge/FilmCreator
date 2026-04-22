@@ -2,6 +2,11 @@
 
 - shot_id: `SH003`
 - scene_id: `CH014_SC002`
-- dialogue_events: `0`
+- dialogue_events: `1`
 
-- No dialogue events were bound to this shot.
+## CH014_DLG013
+
+- speaker: `john_carter`
+- source_ref: `CH014:p012:q01`
+- clip_id: `CL003`
+- dialogue_text: But I have fought—

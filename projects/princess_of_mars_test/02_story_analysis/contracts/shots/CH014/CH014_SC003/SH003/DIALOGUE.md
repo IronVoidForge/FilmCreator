@@ -2,7 +2,14 @@
 
 - shot_id: `SH003`
 - scene_id: `CH014_SC003`
-- dialogue_events: `2`
+- dialogue_events: `3`
+
+## CH014_DLG020
+
+- speaker: `unresolved`
+- source_ref: `CH014:p029:q01`
+- clip_id: `CL003`
+- dialogue_text: This much, Tars Tarkas, you may do for me in return for the friendship that, I must confess, I feel for you.
 
 ## CH014_DLG021
 

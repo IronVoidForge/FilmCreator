@@ -2,11 +2,18 @@
 
 - shot_id: `SH003`
 - scene_id: `CH027_SC002`
-- dialogue_events: `1`
+- dialogue_events: `2`
 
-## CH027_DLG005
+## CH027_DLG006
 
-- speaker: `unresolved`
-- source_ref: `CH027:p017:q01`
+- speaker: `john_carter`
+- source_ref: `CH027:p020:q01`
 - clip_id: `CL003`
-- dialogue_text: The men of Helium have prided themselves that they have ever shown Barsoom how a nation of red men should live, now is our opportunity to show them how they should die. Let us go about our duties as though a thousand useful years still lay before us.
+- dialogue_text: We have been very happy, John Carter,
+
+## CH027_DLG007
+
+- speaker: `dejah_thoris`
+- source_ref: `CH027:p020:q02`
+- clip_id: `CL003`
+- dialogue_text: and I thank whatever fate overtakes us that it permits us to die together.

@@ -1,6 +1,5 @@
 # Shot Index
 
-- `SH001` - Establishing Wide 1: The Great Hall Chaos (type=establishing_wide, target=5.2s, beat_ids=BT001, cast=2, env=The Great Hall, prev=(none), next=SH002)
-- `SH002` - Over The Shoulder 2: Carter Takes Cover (type=over_the_shoulder, target=5.0s, beat_ids=BT002, cast=2, env=The Great Hall, prev=SH001, next=SH003)
-- `SH003` - Over The Shoulder 3: Notan's Description (type=over_the_shoulder, target=5.0s, beat_ids=BT003, cast=1, env=The Great Hall, prev=SH002, next=SH004)
-- `SH004` - Over The Shoulder 4: Than Kosis Manhunt Order (type=over_the_shoulder, target=4.8s, beat_ids=BT004, cast=1, env=The Great Hall, prev=SH003, next=(none))
+- `SH001` - Medium 1: As the palace erupts in chaos over the dead guards,... (type=medium, target=5.5s, beat_ids=BT001, cast=1, env=The Great Hall, prev=(none), next=SH002)
+- `SH002` - Over The Shoulder 2: Carry the emotional arc through: Tension $\rightarr... (type=over_the_shoulder, target=5.3s, beat_ids=BT002, cast=2, env=The Great Hall, prev=SH001, next=SH003)
+- `SH003` - Closing Reaction 3: Land the scene consequence or transition cleanly. (type=closing_reaction, target=4.6s, beat_ids=BT003, cast=2, env=The Great Hall, prev=SH002, next=(none))

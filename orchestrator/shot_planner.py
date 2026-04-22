@@ -1120,6 +1120,7 @@ def run_shot_planning(
     use_llm: bool = True,
     force: bool = False,
     chapters: str | None = None,
+    run_tracker: "DownstreamRunTracker | None" = None,
 ) -> ShotPlanningSummary:
     project_dir = create_project(project_slug)
     selected_chapters = set(parse_chapter_selector(chapters))
@@ -1141,6 +1142,9 @@ def run_shot_planning(
     shot_records: list[ShotPackage] = []
     review_records: list[ShotPackage] = []
     total_scenes = len(scene_contract_files)
+    phase_name = "shot_packages"
+    if run_tracker is not None:
+        run_tracker.set_phase_total(phase_name, total_scenes)
 
     for scene_index, scene_contract_path in enumerate(scene_contract_files, start=1):
         scene_started_at = time.perf_counter()
@@ -1177,9 +1181,32 @@ def run_shot_planning(
             base_path = scene_dir / shot_id
             existing = read_json(base_path.with_suffix(".json")) if base_path.with_suffix(".json").exists() else None
             metadata = _shot_package_metadata(existing, artifact_id=f"{scene_id}_{shot_id}_SHOT_PACKAGE", fp=fp)
+            item_id = f"{scene_id}/{shot_id}"
+            old_meta = existing.get("metadata") or {} if isinstance(existing, dict) else {}
 
-            if existing and not force:
-                old_meta = existing.get("metadata") or {}
+            if existing and old_meta.get("status") == "locked" and not (run_tracker is not None and run_tracker.is_item_completed(phase_name, item_id, fp)):
+                stale_locked += 1
+                existing["metadata"]["status"] = "stale"
+                write_json(base_path.with_suffix(".json"), existing)
+                warnings.append(f"Locked shot package became stale and was not regenerated: {scene_id}/{shot_id}")
+                elapsed = round(time.perf_counter() - shot_started_at, 1)
+                print(f"[shot-planner] {scene_index}/{total_scenes} {shot_index}/{total_shots} finished {scene_id}/{shot_id} (stale locked) in {elapsed}s")
+                continue
+
+            if run_tracker is not None and run_tracker.is_item_completed(phase_name, item_id, fp) and existing:
+                reused += 1
+                package = _package_from_existing(existing, metadata)
+                shot_records.append(package)
+                scene_shots.append(package)
+                if _shot_needs_review(package):
+                    review_records.append(package)
+                    scene_review_shots.append(package)
+                    _append_shot_review_item(review_queue, package)
+                elapsed = round(time.perf_counter() - shot_started_at, 1)
+                print(f"[shot-planner] {scene_index}/{total_scenes} {shot_index}/{total_shots} finished {scene_id}/{shot_id} (resumed) in {elapsed}s")
+                continue
+
+            if existing and not force and run_tracker is None:
                 if old_meta.get("source_fingerprint") == fp:
                     reused += 1
                     package = _package_from_existing(existing, metadata)
@@ -1336,6 +1363,13 @@ def run_shot_planning(
             _write_shot_package_files(base_path, package)
             scene_written_files.extend([str(base_path.with_suffix(".json")), str(base_path.with_suffix(".md"))])
             written_files.extend([str(base_path.with_suffix(".json")), str(base_path.with_suffix(".md"))])
+            if run_tracker is not None:
+                run_tracker.mark_item_completed(
+                    phase_name,
+                    item_id,
+                    fp,
+                    outputs=[str(base_path.with_suffix(".json")), str(base_path.with_suffix(".md"))],
+                )
             synthesized += 1
             shot_records.append(package)
             scene_shots.append(package)

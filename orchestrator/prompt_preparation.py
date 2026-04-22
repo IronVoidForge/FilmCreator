@@ -882,6 +882,7 @@ def run_prompt_preparation(
     entity_ids: list[str] | None = None,
     chapters: str | None = None,
     shot_variants: list[str] | None = None,
+    run_tracker: "DownstreamRunTracker | None" = None,
 ) -> PromptPreparationSummary:
     project_dir = create_project(project_slug)
     root = project_dir / PROMPT_PREP_ROOT
@@ -907,11 +908,14 @@ def run_prompt_preparation(
     reused_count = 0
     processed_packages = 0
     stop_processing = False
+    phase_name = "prompt_preparation"
     selected_types = set(entity_types or [])
     selected_ids = {str(item).strip().lower() for item in (entity_ids or []) if str(item).strip()}
     selected_chapters = set(parse_chapter_selector(chapters))
     selected_shot_variants = {str(item).strip().lower() for item in (shot_variants or []) if str(item).strip()}
     allowed_shot_variants = [variant for variant in SHOT_VARIANTS if not selected_shot_variants or variant[0].lower() in selected_shot_variants]
+    if run_tracker is not None:
+        run_tracker.set_phase_total(phase_name, 0)
     if selected_chapters:
         scene_contracts = {
             scene_id: contract
@@ -929,6 +933,21 @@ def run_prompt_preparation(
             return True
         normalized = {str(candidate).strip().lower() for candidate in candidates if str(candidate).strip()}
         return bool(normalized & selected_ids)
+
+    def maybe_write_prompt(path: Path, package: PromptPackage, fp: str) -> bool:
+        nonlocal synthesized_count, reused_count
+        if run_tracker is not None and run_tracker.is_item_completed(phase_name, package.prompt_id, fp) and path.exists():
+            reused_count += 1
+            return False
+        wrote = _write_prompt_package_if_changed(path, package, force=(force or run_tracker is not None))
+        if wrote:
+            synthesized_count += 1
+            written_files.append(str(path))
+            if run_tracker is not None:
+                run_tracker.mark_item_completed(phase_name, package.prompt_id, fp, outputs=[str(path)])
+        else:
+            reused_count += 1
+        return wrote
 
     # Character reference bundles.
     if not selected_types or "character" in selected_types:
@@ -964,11 +983,8 @@ def run_prompt_preparation(
                     break
                 descriptor = character_descriptors.get(str(bible.get("character_id", "")).strip().lower())
                 package, package_path, sources = _package_for_character(project_dir=project_dir, bible=bible, descriptor=descriptor, variant=variant)
-                if _write_prompt_package_if_changed(package_path, package, force=force):
-                    synthesized_count += 1
-                    written_files.append(str(package_path))
-                else:
-                    reused_count += 1
+                fp = _fingerprint(sources)
+                maybe_write_prompt(package_path, package, fp)
                 processed_packages += 1
                 index_records.append(
                     {
@@ -979,7 +995,7 @@ def run_prompt_preparation(
                         "variant_name": package.inputs.get("variant_name", ""),
                         "status": "canonical",
                         "path": str(package_path),
-                        "source_fingerprint": _fingerprint(sources),
+                        "source_fingerprint": fp,
                     }
                 )
                 if limit is not None and processed_packages >= limit:
@@ -1020,11 +1036,8 @@ def run_prompt_preparation(
                     break
                 descriptor = environment_descriptors.get(str(bible.get("environment_id", "")).strip().lower())
                 package, package_path, sources = _package_for_environment(project_dir=project_dir, bible=bible, descriptor=descriptor, variant=variant)
-                if _write_prompt_package_if_changed(package_path, package, force=force):
-                    synthesized_count += 1
-                    written_files.append(str(package_path))
-                else:
-                    reused_count += 1
+                fp = _fingerprint(sources)
+                maybe_write_prompt(package_path, package, fp)
                 processed_packages += 1
                 index_records.append(
                     {
@@ -1035,7 +1048,7 @@ def run_prompt_preparation(
                         "variant_name": package.inputs.get("variant_name", ""),
                         "status": "canonical",
                         "path": str(package_path),
-                        "source_fingerprint": _fingerprint(sources),
+                        "source_fingerprint": fp,
                     }
                 )
                 if limit is not None and processed_packages >= limit:
@@ -1072,11 +1085,8 @@ def run_prompt_preparation(
                     character_descriptors=character_descriptors,
                     environment_descriptors=environment_descriptors,
                 )
-                if _write_prompt_package_if_changed(package_path, package, force=force):
-                    synthesized_count += 1
-                    written_files.append(str(package_path))
-                else:
-                    reused_count += 1
+                fp = _fingerprint(sources)
+                maybe_write_prompt(package_path, package, fp)
                 processed_packages += 1
                 index_records.append(
                     {
@@ -1087,7 +1097,7 @@ def run_prompt_preparation(
                         "variant_name": package.inputs.get("variant_name", ""),
                         "status": "generated" if not review_notes else "review",
                         "path": str(package_path),
-                        "source_fingerprint": _fingerprint(sources),
+                        "source_fingerprint": fp,
                     }
                 )
                 if review_notes:

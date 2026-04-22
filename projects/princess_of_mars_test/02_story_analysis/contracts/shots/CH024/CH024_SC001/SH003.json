@@ -5,12 +5,22 @@
   "shot_order": 3,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Action 3: Tars Tarkas life-or-death struggle",
+  "shot_title": "Action 3: Land the scene consequence or transition cleanly.",
   "shot_type": "action",
   "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-  "composition": "Dynamic composition in The Battlefield (Plains near an ancient dead city) with tars_tarkas crossing the frame and maintaining readable movement.",
-  "target_seconds": 5.5,
+  "composition": "Dynamic composition in The Battlefield (Plains near an ancient dead city) with john_carter, tars_tarkas crossing the frame and maintaining readable movement.",
+  "target_seconds": 5.6,
   "characters_in_frame": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'john_carter'"
+    },
     {
       "label": "Tars Tarkas",
       "canonical_id": "tars_tarkas",
@@ -36,13 +46,15 @@
     "BT003"
   ],
   "continuity_constraints": [
-    "Damage state of John Carter's craft post-crash",
-    "Blood/injury status of Tars Tarkas during/after melee",
-    "Weaponry consistency used in the melee",
-    "Tars Tarkas is engaged in a life-or-death struggle against three Warhoon warriors."
+    "Damage to Carter's craft",
+    "Blood/injury status of Tars Tarkas",
+    "Weaponry used in the melee.",
+    "Land the scene consequence or transition cleanly.",
+    "Resolve Warhoon Warriors -> Warhoon Warriors",
+    "Resolve The Battlefield (Plains near an ancient dead city) -> The Battlefield (Plains near an ancient dead city)"
   ],
-  "prompt_seed": "Action 3: Tars Tarkas is engaged in a life-or-death struggle.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in The Battlefield (Plains near an ancient dead city) with tars_tarkas crossing the frame and maintaining readable movement. Cast: tars_tarkas. Environment: T...",
-  "shot_notes": "Tars Tarkas is engaged in a life-or-death struggle against three Warhoon warriors.",
+  "prompt_seed": "Action 3: Land the scene consequence or transition cleanly.. action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in The Battlefield (Plains near an ancient dead city) with john_carter, tars_tarkas crossing the frame and maintaining readable movement. Cast: john_carter, tars_...",
+  "shot_notes": "Land the scene consequence or transition cleanly.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -100,12 +112,12 @@
     }
   ],
   "evidence_summary": [
-    "Execute a high-intensity combat sequence set within a large-scale battlefield to demonstrate John Carter's physical capabilities and facilitate a character-defining alliance. The scene requires coordination between crash effects (craft downing), multi-chara...",
+    "Establish John Carter's combat prowess and create a pivotal bond with Tars Tarkas.",
     "During a chaotic battle between Tharks and Warhoons, John Carter's craft is downed. He intervenes in a life-or-death struggle to save Tars Tarkas from three Warhoon warriors, proving his worth through sheer strength.",
     "Chaos/Peril $\\rightarrow$ Heroic Intervention $\\rightarrow$ Mutual Respect.",
     "Wide shots of the battlefield chaos",
     "Medium tracking shots of Carter's descent",
-    "Close-ups of combat and eye contact between Carter and Tars Tarkas",
+    "Close-ups of combat and eye contact between Carter and Tars Tarkas.",
     "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in...",
     "tars_tarkas | Tars Tarkas is a prominent Thark warrior and leader characterized by green skin. He carries himself with a professional demeanor, embodying the strength and combat skill valued by his Martian culture. His appearance is defined by standard Mart..."
   ],
@@ -113,24 +125,24 @@
     "artifact_id": "CH024_SC001_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "35eefb31232aa9b8063d5f75c0e4652f8f00cfbe",
+    "source_fingerprint": "2e26fea7d940932f9a464b49a5ffb3f01086a2fe",
     "created_at_utc": "2026-04-22T03:19:11.227089+00:00",
-    "updated_at_utc": "2026-04-22T15:38:36.240282+00:00",
+    "updated_at_utc": "2026-04-22T16:30:43.500624+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH024_SC001",
-        "version": "0ed2a93f27bdcb9f64924f25f44fad5e86e0dae7"
+        "version": "1cb7db0fe66c5ecf0bf7e2df1a14d7162cfca1b0"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH024_SC001",
-        "version": "6734b07227841424b75eb5ea6544014438023df3"
+        "version": "95cbea8e24d1a947f3cfd9d717301063238a59b4"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH024_SC001",
-        "version": "c0e71b3618c1bf9dbbc8a3e89c09c060a89f6626"
+        "version": "c51ef7f5df17f68fa9a76015cf9b36d9c4b3c7a3"
       }
     ],
     "locked_fields": {},
@@ -145,6 +157,11 @@
         "timestamp_utc": "2026-04-22T15:39:03.060643+00:00",
         "action": "synthesized",
         "source_fingerprint": "35eefb31232aa9b8063d5f75c0e4652f8f00cfbe"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:30:43.500624+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "2e26fea7d940932f9a464b49a5ffb3f01086a2fe"
       }
     ]
   }

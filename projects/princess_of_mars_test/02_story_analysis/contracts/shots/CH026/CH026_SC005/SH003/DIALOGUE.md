@@ -4,16 +4,16 @@
 - scene_id: `CH026_SC005`
 - dialogue_events: `2`
 
-## CH026_DLG008
-
-- speaker: `unresolved`
-- source_ref: `CH026:p043:q02`
-- clip_id: `CL003`
-- dialogue_text: it has remained for a man of another world to teach the green warriors of Barsoom the meaning of friendship; to him we owe the fact that the hordes of Thark can understand you; that they can appreciate and reciprocate the sentiments so graciously expressed.
-
 ## CH026_DLG009
 
 - speaker: `unresolved`
 - source_ref: `CH026:p046:q01`
 - clip_id: `CL003`
 - dialogue_text: Welcome, my son,
+
+## CH026_DLG010
+
+- speaker: `john_carter`
+- source_ref: `CH026:p046:q02`
+- clip_id: `CL003`
+- dialogue_text: that you are granted, gladly, and without one word of opposition, the most precious jewel in all Helium, yes, on all Barsoom, is sufficient earnest of my esteem.

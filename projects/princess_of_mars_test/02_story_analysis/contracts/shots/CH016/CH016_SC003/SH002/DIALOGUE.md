@@ -2,7 +2,7 @@
 
 - shot_id: `SH002`
 - scene_id: `CH016_SC003`
-- dialogue_events: `2`
+- dialogue_events: `3`
 
 ## CH016_DLG009
 
@@ -17,3 +17,10 @@
 - source_ref: `CH016:p022:q01`
 - clip_id: `CL002`
 - dialogue_text: That horrible Sarkoja has been before Tal Hajus,
+
+## CH016_DLG011
+
+- speaker: `dejah_thoris`
+- source_ref: `CH016:p022:q02`
+- clip_id: `CL002`
+- dialogue_text: and from what I heard upon the plaza there is little hope for either of you.

@@ -921,6 +921,7 @@ def run_scene_contract_synthesis(
     use_llm: bool = True,
     force: bool = False,
     chapters: str | None = None,
+    run_tracker: "DownstreamRunTracker | None" = None,
 ) -> SceneContractSynthesisSummary:
     project_dir = create_project(project_slug)
     selected_chapters = set(parse_chapter_selector(chapters))
@@ -939,6 +940,9 @@ def run_scene_contract_synthesis(
     warnings: list[str] = []
     contract_records: list[SceneContract] = []
     review_records: list[SceneContract] = []
+    phase_name = "scene_contracts"
+    if run_tracker is not None:
+        run_tracker.set_phase_total(phase_name, len(scene_files))
 
     for scene_path in scene_files:
         scene_id_match = re.search(r"(CH\d{3}_SC\d{3})\.md$", scene_path.name, re.IGNORECASE)
@@ -985,9 +989,43 @@ def run_scene_contract_synthesis(
         base_path.parent.mkdir(parents=True, exist_ok=True)
         existing = read_json(base_path.with_suffix(".json")) if base_path.with_suffix(".json").exists() else None
         metadata = _load_existing_metadata(existing, artifact_id=f"{scene_id}_SCENE_CONTRACT", fp=fp)
+        old_meta = existing.get("metadata") or {} if isinstance(existing, dict) else {}
 
-        if existing and not force:
-            old_meta = existing.get("metadata") or {}
+        if existing and old_meta.get("status") == "locked" and not (run_tracker is not None and run_tracker.is_item_completed(phase_name, scene_id, fp)):
+            stale_locked += 1
+            existing["metadata"]["status"] = "stale"
+            write_json(base_path.with_suffix(".json"), existing)
+            warnings.append(f"Locked scene contract became stale and was not regenerated: {scene_id}")
+            continue
+
+        if run_tracker is not None and run_tracker.is_item_completed(phase_name, scene_id, fp) and existing:
+            reused += 1
+            contract = SceneContract(
+                scene_id=existing.get("scene_id", scene_id),
+                chapter_id=existing.get("chapter_id", chapter_id),
+                scene_title=existing.get("scene_title", scene_title),
+                purpose=existing.get("purpose", scene_fields.get("scene_purpose", "")),
+                summary=existing.get("summary", scene_fields.get("scene_summary", "")),
+                emotional_arc=existing.get("emotional_arc", scene_fields.get("dominant_emotional_shift", "")),
+                production_intent=existing.get("production_intent", ""),
+                characters_required=[SceneReference(**item) for item in existing.get("characters_required", []) if isinstance(item, dict)],
+                environments_required=[SceneReference(**item) for item in existing.get("environments_required", []) if isinstance(item, dict)],
+                continuity_constraints=existing.get("continuity_constraints", []),
+                visual_coverage_families=existing.get("visual_coverage_families", []),
+                beat_list=[SceneBeat(**item) for item in existing.get("beat_list", []) if isinstance(item, dict)],
+                unresolved_questions=existing.get("unresolved_questions", []),
+                evidence_refs=existing.get("evidence_refs", []),
+                evidence_summary=existing.get("evidence_summary", []),
+                storyboard_markdown=existing.get("storyboard_markdown", ""),
+                metadata=metadata,
+            )
+            contract_records.append(contract)
+            if not _is_film_facing_scene(contract):
+                review_records.append(contract)
+                _append_review_item(review_queue, scene_id, ["Existing contract lacks a complete production shape."], contract.characters_required, contract.environments_required)
+            continue
+
+        if existing and not force and run_tracker is None:
             if old_meta.get("source_fingerprint") == fp:
                 reused += 1
                 contract = SceneContract(
@@ -1113,6 +1151,13 @@ def run_scene_contract_synthesis(
 
         _write_scene_contract_files(base_path, contract)
         written_files.extend([str(base_path.with_suffix(".json")), str(base_path.with_suffix(".md"))])
+        if run_tracker is not None:
+            run_tracker.mark_item_completed(
+                phase_name,
+                scene_id,
+                fp,
+                outputs=[str(base_path.with_suffix(".json")), str(base_path.with_suffix(".md"))],
+            )
         synthesized += 1
         contract_records.append(contract)
 

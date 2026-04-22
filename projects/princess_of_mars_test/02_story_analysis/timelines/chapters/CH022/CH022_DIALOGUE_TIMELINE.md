@@ -32,8 +32,8 @@
 - speaker: `sab_than`
 - source_ref: `CH022:p012:q01`
 - scene_id: `CH022_SC001`
-- shot_id: `SH002`
-- clip_id: `CL002`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: I am glad that you have so decided,
 - excerpt: "I am glad that you have so decided," replied Than Kosis. "It is far from my desire to push war further against the people of Helium, and, your promise shall be recorded and a proclamation to my people issued forthwith."
 
@@ -42,8 +42,8 @@
 - speaker: `sab_than`
 - source_ref: `CH022:p012:q02`
 - scene_id: `CH022_SC001`
-- shot_id: `SH002`
-- clip_id: `CL002`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: It is far from my desire to push war further against the people of Helium, and, your promise shall be recorded and a proclamation to my people issued forthwith.
 - excerpt: "I am glad that you have so decided," replied Than Kosis. "It is far from my desire to push war further against the people of Helium, and, your promise shall be recorded and a proclamation to my people issued forthwith."
 
@@ -52,8 +52,8 @@
 - speaker: `john_carter`
 - source_ref: `CH022:p013:q01`
 - scene_id: `CH022_SC001`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: It were better, Than Kosis,
 - excerpt: "It were better, Than Kosis," interrupted Dejah Thoris, "that the proclamation wait the ending of this war. It would look strange indeed to my people and to yours were the Princess of Helium to give herself to her country's enemy in the...
 
@@ -62,8 +62,8 @@
 - speaker: `unresolved`
 - source_ref: `CH022:p013:q02`
 - scene_id: `CH022_SC001`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: that the proclamation wait the ending of this war. It would look strange indeed to my people and to yours were the Princess of Helium to give herself to her country's enemy in the midst of hostilities.
 - excerpt: "It were better, Than Kosis," interrupted Dejah Thoris, "that the proclamation wait the ending of this war. It would look strange indeed to my people and to yours were the Princess of Helium to give herself to her country's enemy in the...
 - review_notes:
@@ -74,8 +74,8 @@
 - speaker: `john_carter`
 - source_ref: `CH022:p014:q01`
 - scene_id: `CH022_SC001`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: Cannot the war be ended at once?
 - excerpt: "Cannot the war be ended at once?" spoke Sab Than. "It requires but the word of Than Kosis to bring peace. Say it, my father, say the word that will hasten my happiness, and end this unpopular strife."
 
@@ -84,8 +84,8 @@
 - speaker: `unresolved`
 - source_ref: `CH022:p014:q02`
 - scene_id: `CH022_SC001`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: It requires but the word of Than Kosis to bring peace. Say it, my father, say the word that will hasten my happiness, and end this unpopular strife.
 - excerpt: "Cannot the war be ended at once?" spoke Sab Than. "It requires but the word of Than Kosis to bring peace. Say it, my father, say the word that will hasten my happiness, and end this unpopular strife."
 - review_notes:
@@ -95,9 +95,9 @@
 
 - speaker: `sab_than`
 - source_ref: `CH022:p015:q01`
-- scene_id: `CH022_SC002`
-- shot_id: `SH001`
-- clip_id: `CL001`
+- scene_id: `CH022_SC001`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: We shall see,
 - excerpt: "We shall see," replied Than Kosis, "how the people of Helium take to peace. I shall at least offer it to them."
 
@@ -105,9 +105,9 @@
 
 - speaker: `sab_than`
 - source_ref: `CH022:p015:q02`
-- scene_id: `CH022_SC002`
-- shot_id: `SH001`
-- clip_id: `CL001`
+- scene_id: `CH022_SC001`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: how the people of Helium take to peace. I shall at least offer it to them.
 - excerpt: "We shall see," replied Than Kosis, "how the people of Helium take to peace. I shall at least offer it to them."
 
@@ -126,8 +126,8 @@
 - speaker: `john_carter`
 - source_ref: `CH022:p021:q02`
 - scene_id: `CH022_SC002`
-- shot_id: `SH002`
-- clip_id: `CL002`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: and wish to speak privately with Dejah Thoris, Princess of Helium.
 - excerpt: "I am from Than Kosis," I replied, "and wish to speak privately with Dejah Thoris, Princess of Helium."
 
@@ -136,8 +136,8 @@
 - speaker: `unresolved`
 - source_ref: `CH022:p022:q01`
 - scene_id: `CH022_SC002`
-- shot_id: `SH002`
-- clip_id: `CL002`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: And your order?
 - excerpt: "And your order?" asked the fellow.
 - review_notes:
@@ -148,8 +148,8 @@
 - speaker: `unresolved`
 - source_ref: `CH022:p025:q01`
 - scene_id: `CH022_SC002`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: No one comes from Than Kosis without carrying an order or the password. You must give me one or the other before you may pass.
 - excerpt: "No one comes from Than Kosis without carrying an order or the password. You must give me one or the other before you may pass."
 - review_notes:
@@ -160,8 +160,8 @@
 - speaker: `john_carter`
 - source_ref: `CH022:p026:q01`
 - scene_id: `CH022_SC002`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: The only order I require, my friend, to enter where I will, hangs at my side,
 - excerpt: "The only order I require, my friend, to enter where I will, hangs at my side," I answered, tapping my long-sword; "will you let me pass in peace or no?"
 
@@ -170,8 +170,8 @@
 - speaker: `john_carter`
 - source_ref: `CH022:p026:q02`
 - scene_id: `CH022_SC002`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: will you let me pass in peace or no?
 - excerpt: "The only order I require, my friend, to enter where I will, hangs at my side," I answered, tapping my long-sword; "will you let me pass in peace or no?"
 
@@ -180,8 +180,8 @@
 - speaker: `john_carter`
 - source_ref: `CH022:p028:q01`
 - scene_id: `CH022_SC002`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: You are not here by the order of Than Kosis,
 - excerpt: "You are not here by the order of Than Kosis," cried the one who had first addressed me, "and not only shall you not enter the apartments of the Princess of Helium but you shall go back to Than Kosis under guard to explain this unwarrant...
 
@@ -190,8 +190,8 @@
 - speaker: `john_carter`
 - source_ref: `CH022:p028:q02`
 - scene_id: `CH022_SC002`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: and not only shall you not enter the apartments of the Princess of Helium but you shall go back to Than Kosis under guard to explain this unwarranted temerity. Throw down your sword; you cannot hope to overcome four of us,
 - excerpt: "You are not here by the order of Than Kosis," cried the one who had first addressed me, "and not only shall you not enter the apartments of the Princess of Helium but you shall go back to Than Kosis under guard to explain this unwarrant...
 
@@ -250,8 +250,8 @@
 - speaker: `dejah_thoris`
 - source_ref: `CH022:p035:q02`
 - scene_id: `CH022_SC003`
-- shot_id: `SH002`
-- clip_id: `CL002`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: and yet the voice! I have heard it before; it is not—it cannot be—no, for he is dead.
 - excerpt: "No friend of Helium's princess wears that metal," she replied, "and yet the voice! I have heard it before; it is not—it cannot be—no, for he is dead."
 
@@ -260,8 +260,8 @@
 - speaker: `john_carter`
 - source_ref: `CH022:p036:q01`
 - scene_id: `CH022_SC003`
-- shot_id: `SH002`
-- clip_id: `CL002`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: It is, though, my Princess, none other than John Carter,
 - excerpt: "It is, though, my Princess, none other than John Carter," I said. "Do you not recognize, even through paint and strange metal, the heart of your chieftain?"
 
@@ -300,8 +300,8 @@
 - speaker: `john_carter`
 - source_ref: `CH022:p039:q01`
 - scene_id: `CH022_SC003`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: What do you mean, Dejah Thoris?
 - excerpt: "What do you mean, Dejah Thoris?" I cried. "That you would not have promised yourself to the Zodangan prince had you known that I lived?"
 
@@ -310,8 +310,8 @@
 - speaker: `john_carter`
 - source_ref: `CH022:p039:q02`
 - scene_id: `CH022_SC003`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: That you would not have promised yourself to the Zodangan prince had you known that I lived?
 - excerpt: "What do you mean, Dejah Thoris?" I cried. "That you would not have promised yourself to the Zodangan prince had you known that I lived?"
 
@@ -320,8 +320,8 @@
 - speaker: `unresolved`
 - source_ref: `CH022:p040:q01`
 - scene_id: `CH022_SC003`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: Think you, John Carter, that I would give my heart to you yesterday and today to another? I thought that it lay buried with your ashes in the pits of Warhoon, and so today I have promised my body to another to save my people from the curse of a victorious Zodangan army.
 - excerpt: "Think you, John Carter, that I would give my heart to you yesterday and today to another? I thought that it lay buried with your ashes in the pits of Warhoon, and so today I have promised my body to another to save my people from the cu...
 - review_notes:
@@ -332,8 +332,8 @@
 - speaker: `unresolved`
 - source_ref: `CH022:p041:q01`
 - scene_id: `CH022_SC003`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: But I am not dead, my princess. I have come to claim you, and all Zodanga cannot prevent it.
 - excerpt: "But I am not dead, my princess. I have come to claim you, and all Zodanga cannot prevent it."
 - review_notes:
@@ -344,8 +344,8 @@
 - speaker: `unresolved`
 - source_ref: `CH022:p042:q01`
 - scene_id: `CH022_SC003`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: It is too late, John Carter, my promise is given, and on Barsoom that is final. The ceremonies which follow later are but meaningless formalities. They make the fact of marriage no more certain than does the funeral cortege of a jeddak again place the seal of death upon him. I am as good as married, John Carter. No longer may you call me your princess. No longer are you my chieftain.
 - excerpt: "It is too late, John Carter, my promise is given, and on Barsoom that is final. The ceremonies which follow later are but meaningless formalities. They make the fact of marriage no more certain than does the funeral cortege of a jeddak...
 - review_notes:
@@ -356,8 +356,8 @@
 - speaker: `unresolved`
 - source_ref: `CH022:p043:q01`
 - scene_id: `CH022_SC003`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: I know but little of your customs here upon Barsoom, Dejah Thoris, but I do know that I love you, and if you meant the last words you spoke to me that day as the hordes of Warhoon were charging down upon us, no other man shall ever claim you as his bride. You meant them then, my princess, and you mean them still! Say that it is true.
 - excerpt: "I know but little of your customs here upon Barsoom, Dejah Thoris, but I do know that I love you, and if you meant the last words you spoke to me that day as the hordes of Warhoon were charging down upon us, no other man shall ever clai...
 - review_notes:
@@ -368,8 +368,8 @@
 - speaker: `john_carter`
 - source_ref: `CH022:p044:q01`
 - scene_id: `CH022_SC003`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: I meant them, John Carter,
 - excerpt: "I meant them, John Carter," she whispered. "I cannot repeat them now for I have given myself to another. Ah, if you had only known our ways, my friend," she continued, half to herself, "the promise would have been yours long months ago,...
 
@@ -378,8 +378,8 @@
 - speaker: `john_carter`
 - source_ref: `CH022:p044:q02`
 - scene_id: `CH022_SC003`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: I cannot repeat them now for I have given myself to another. Ah, if you had only known our ways, my friend,
 - excerpt: "I meant them, John Carter," she whispered. "I cannot repeat them now for I have given myself to another. Ah, if you had only known our ways, my friend," she continued, half to herself, "the promise would have been yours long months ago,...
 
@@ -388,8 +388,8 @@
 - speaker: `john_carter`
 - source_ref: `CH022:p044:q03`
 - scene_id: `CH022_SC003`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: the promise would have been yours long months ago, and you could have claimed me before all others. It might have meant the fall of Helium, but I would have given my empire for my Tharkian chief.
 - excerpt: "I meant them, John Carter," she whispered. "I cannot repeat them now for I have given myself to another. Ah, if you had only known our ways, my friend," she continued, half to herself, "the promise would have been yours long months ago,...
 
@@ -398,8 +398,8 @@
 - speaker: `john_carter`
 - source_ref: `CH022:p045:q01`
 - scene_id: `CH022_SC003`
-- shot_id: `SH005`
-- clip_id: `CL005`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: Do you remember the night when you offended me? You called me your princess without having asked my hand of me, and then you boasted that you had fought for me. You did not know, and I should not have been offended; I see that now. But there was no one to tell you what I could not, that upon Barsoom there are two kinds of women in the cities of the red men. The one they fight for that they may ask them in marriage; the other kind they fight for also, but never ask their hands. When a man has won a woman he may address her as his princess, or in any of the several terms which signify possession. You had fought for me, but had never asked me in marriage, and so when you called me your princess, you see,
 - excerpt: Then aloud she said: "Do you remember the night when you offended me? You called me your princess without having asked my hand of me, and then you boasted that you had fought for me. You did not know, and I should not have been offended;...
 
@@ -408,8 +408,8 @@
 - speaker: `john_carter`
 - source_ref: `CH022:p045:q02`
 - scene_id: `CH022_SC003`
-- shot_id: `SH005`
-- clip_id: `CL005`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: I was hurt, but even then, John Carter, I did not repulse you, as I should have done, until you made it doubly worse by taunting me with having won me through combat.
 - excerpt: Then aloud she said: "Do you remember the night when you offended me? You called me your princess without having asked my hand of me, and then you boasted that you had fought for me. You did not know, and I should not have been offended;...
 
@@ -417,9 +417,9 @@
 
 - speaker: `john_carter`
 - source_ref: `CH022:p046:q01`
-- scene_id: `CH022_SC003`
-- shot_id: `SH005`
-- clip_id: `CL005`
+- scene_id: `CH022_SC004`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: I do not need ask your forgiveness now, Dejah Thoris,
 - excerpt: "I do not need ask your forgiveness now, Dejah Thoris," I cried. "You must know that my fault was of ignorance of your Barsoomian customs. What I failed to do, through implicit belief that my petition would be presumptuous and unwelcome,...
 
@@ -427,9 +427,9 @@
 
 - speaker: `john_carter`
 - source_ref: `CH022:p046:q02`
-- scene_id: `CH022_SC003`
-- shot_id: `SH005`
-- clip_id: `CL005`
+- scene_id: `CH022_SC004`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: You must know that my fault was of ignorance of your Barsoomian customs. What I failed to do, through implicit belief that my petition would be presumptuous and unwelcome, I do now, Dejah Thoris; I ask you to be my wife, and by all the Virginian fighting blood that flows in my veins you shall be.
 - excerpt: "I do not need ask your forgiveness now, Dejah Thoris," I cried. "You must know that my fault was of ignorance of your Barsoomian customs. What I failed to do, through implicit belief that my petition would be presumptuous and unwelcome,...
 
@@ -448,8 +448,8 @@
 - speaker: `dejah_thoris`
 - source_ref: `CH022:p047:q02`
 - scene_id: `CH022_SC004`
-- shot_id: `SH001`
-- clip_id: `CL001`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: I may never be yours while Sab Than lives.
 - excerpt: "No, John Carter, it is useless," she cried, hopelessly, "I may never be yours while Sab Than lives."
 
@@ -502,8 +502,8 @@
 - speaker: `unresolved`
 - source_ref: `CH022:p060:q01`
 - scene_id: `CH022_SC004`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: Yes, O Jeddak, but how had they access to the palace? I could believe that even with the diligent care of your guardsmen a single enemy might reach the inner chambers, but how a force of six or eight fighting men could have done so unobserved is beyond me. We shall soon know, however, for here comes the royal psychologist.
 - excerpt: "Yes, O Jeddak, but how had they access to the palace? I could believe that even with the diligent care of your guardsmen a single enemy might reach the inner chambers, but how a force of six or eight fighting men could have done so unob...
 - review_notes:
@@ -562,8 +562,8 @@
 - speaker: `john_carter`
 - source_ref: `CH022:p067:q01`
 - scene_id: `CH022_SC005`
-- shot_id: `SH002`
-- clip_id: `CL002`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: Where is my erstwhile savior?
 - excerpt: "Where is my erstwhile savior?" spoke another of the party, and I recognized the voice of the cousin of Than Kosis, whom I had rescued from the green warriors. "By the metal of my first ancestor," he went on, "but the description fits hi...
 
@@ -602,8 +602,8 @@
 - speaker: `sab_than`
 - source_ref: `CH022:p068:q02`
 - scene_id: `CH022_SC005`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: Have him brought to me at once. What know you of him, cousin? It seemed strange to me now that I think upon it that there should have been such a fighting man in Zodanga, of whose name, even, we were ignorant before today. And his name too, John Carter, who ever heard of such a name upon Barsoom!
 - excerpt: "Where is this man?" cried Than Kosis. "Have him brought to me at once. What know you of him, cousin? It seemed strange to me now that I think upon it that there should have been such a fighting man in Zodanga, of whose name, even, we we...
 
@@ -612,8 +612,8 @@
 - speaker: `unresolved`
 - source_ref: `CH022:p070:q01`
 - scene_id: `CH022_SC005`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: Keep your eyes on this other one,
 - excerpt: "Keep your eyes on this other one," commanded Than Kosis. "He also is a stranger and likely as not they both hail from Helium, and where one is we shall sooner or later find the other. Quadruple the air patrol, and let every man who leav...
 - review_notes:
@@ -648,8 +648,8 @@
 - speaker: `unresolved`
 - source_ref: `CH022:p072:q02`
 - scene_id: `CH022_SC005`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: and not one approaches the likeness of this new padwar of the guards, other than that which was recorded of him at the time he entered.
 - excerpt: "The likeness of every person who has entered or left the palace grounds today has been carefully examined," concluded the fellow, "and not one approaches the likeness of this new padwar of the guards, other than that which was recorded...
 - review_notes:
@@ -660,8 +660,8 @@
 - speaker: `dejah_thoris`
 - source_ref: `CH022:p073:q01`
 - scene_id: `CH022_SC005`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: Then we will have him shortly,
 - excerpt: "Then we will have him shortly," commented Than Kosis contentedly, "and in the meanwhile we will repair to the apartments of the Princess of Helium and question her in regard to the affair. She may know more than she cared to divulge to...
 
@@ -670,8 +670,8 @@
 - speaker: `unresolved`
 - source_ref: `CH022:p073:q02`
 - scene_id: `CH022_SC005`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: and in the meanwhile we will repair to the apartments of the Princess of Helium and question her in regard to the affair. She may know more than she cared to divulge to you, Notan. Come.
 - excerpt: "Then we will have him shortly," commented Than Kosis contentedly, "and in the meanwhile we will repair to the apartments of the Princess of Helium and question her in regard to the affair. She may know more than she cared to divulge to...
 - review_notes:

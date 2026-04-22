@@ -2,11 +2,18 @@
 
 - shot_id: `SH001`
 - scene_id: `CH020_SC005`
-- dialogue_events: `1`
+- dialogue_events: `2`
 
-## CH020_DLG013
+## CH020_DLG011
 
 - speaker: `unresolved`
-- source_ref: `CH020:p051:q01`
+- source_ref: `CH020:p045:q01`
 - clip_id: `CL001`
-- dialogue_text: The chances are small that your tale will be believed until after you have proven your trustworthiness and won friends among the higher nobles of the court. This you can most easily do through military service, as we are a warlike people on Barsoom,
+- dialogue_text: I am unarmed and no enemy,
+
+## CH020_DLG012
+
+- speaker: `unresolved`
+- source_ref: `CH020:p045:q02`
+- clip_id: `CL001`
+- dialogue_text: I have been a prisoner among the green men and am on my way to Zodanga. All I ask is food and rest for myself and my calot and the proper directions for reaching my destination.

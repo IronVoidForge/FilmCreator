@@ -4,13 +4,23 @@
   "chapter_id": "CH022",
   "shot_order": 3,
   "previous_shot_id": "SH002",
-  "next_shot_id": "SH004",
-  "shot_title": "Reaction Closeup 3: Dejah Thoris explains custom",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates dejah_thoris against Palace interior (near the antechamber/corridors) to capture the beat's emotional turn.",
-  "target_seconds": 5.0,
+  "next_shot_id": "",
+  "shot_title": "Action 3: She clarifies that her previous actions were a misu...",
+  "shot_type": "action",
+  "camera_description": "Active camera with tracking energy and clear spatial orientation.",
+  "composition": "Dynamic composition in Palace interior (near the antechamber/corridors) with john_carter, dejah_thoris crossing the frame and maintaining readable movement.",
+  "target_seconds": 5.6,
   "characters_in_frame": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'john_carter'"
+    },
     {
       "label": "Dejah Thoris",
       "canonical_id": "dejah_thoris",
@@ -36,11 +46,13 @@
     "BT003"
   ],
   "continuity_constraints": [
-    "Carter's physical state (sweat/blood from previous fight)",
-    "Dejah Thoris's regal appearance and wardrobe"
+    "Carter's physical state (sweat/blood from the previous fight) vs. Dejah's regal appearance.",
+    "She clarifies that her previous actions were a misunderstanding of marriage customs",
+    "leaving them both trapped by duty.",
+    "Resolve Palace interior (near the antechamber/corridors) -> Palace interior (near the antechamber/corridors)"
   ],
-  "prompt_seed": "Reaction Closeup 3: Dejah Thoris recognizes Carter but explains the bin.... reaction_closeup. Close framing that isolates reaction and emotional emphasis. Intimate composition that isolates dejah_thoris against Palace interior (near the antechamber/corridors) to capture the beat's emotional turn. Cast: dejah_thoris....",
-  "shot_notes": "Dejah Thoris recognizes Carter but explains the binding nature of her promise to Sab Than via Barsoomian custom.",
+  "prompt_seed": "Action 3: She clarifies that her previous actions were a misu.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in Palace interior (near the antechamber/corridors) with john_carter, dejah_thoris crossing the frame and maintaining readable movement. Cast: john_carter, d...",
+  "shot_notes": "She clarifies that her previous actions were a misunderstanding of marriage customs, leaving them both trapped by duty.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -98,12 +110,10 @@
     }
   ],
   "evidence_summary": [
-    "The scene must establish the cultural impasse preventing the protagonists' union. It requires a stark visual contrast between Carter's rugged, battle-worn state and Dejah Thoris's pristine, regal presence to emphasize their divergent immediate realities wit...",
+    "To provide emotional closure and explain the cultural conflict driving the plot.",
     "Carter finds Dejah Thoris. She recognizes him but explains that Barsoomian custom makes her promise to Sab Than binding. She clarifies that her previous actions were a misunderstanding of marriage customs, leaving them both trapped by duty.",
     "Confrontation $\\rightarrow$ Sorrowful Resignation. **Likely Visual Coverage Families:** - Two-shots to capture the intimacy and distance between them. - Tight close-ups on faces to emphasize emotional pain.",
-    "Two-shots (capturing intimacy vs. distance)",
-    "Tight close-ups (emphasizing emotional pain)",
-    "Carter's physical state (sweat/blood from previous fight)",
+    "Carter's physical state (sweat/blood from the previous fight) vs. Dejah's regal appearance.",
     "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b...",
     "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in..."
   ],
@@ -111,24 +121,24 @@
     "artifact_id": "CH022_SC003_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "a1f598ae1eb04838aa368cb51fb6a7bcde5926a6",
+    "source_fingerprint": "c05c1219b4fa11b67b356a3ba1ed8fa01642a87b",
     "created_at_utc": "2026-04-22T03:04:44.455353+00:00",
-    "updated_at_utc": "2026-04-22T15:27:38.388804+00:00",
+    "updated_at_utc": "2026-04-22T16:30:43.082400+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH022_SC003",
-        "version": "b9e5df720dfd35652d566c61497df1c82a6f9f8b"
+        "version": "b6a63946763881b6ff6b544ed644dc52b51b8ea8"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH022_SC003",
-        "version": "a56e8958ccd5298d9b02eab4f2c6effe9e83e10b"
+        "version": "95d44b92f678c9d5dc81cd7ee8cf3cffb313e6dc"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH022_SC003",
-        "version": "6c590fdfd4410013474f0180973f25c26ca69a26"
+        "version": "808f58c2cae1f2d4e439d5ae3fcd21fce9ba5918"
       }
     ],
     "locked_fields": {},
@@ -143,6 +153,11 @@
         "timestamp_utc": "2026-04-22T15:28:03.699571+00:00",
         "action": "synthesized",
         "source_fingerprint": "a1f598ae1eb04838aa368cb51fb6a7bcde5926a6"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:30:43.082901+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "c05c1219b4fa11b67b356a3ba1ed8fa01642a87b"
       }
     ]
   }

@@ -6,10 +6,10 @@
     "shot_order": 1,
     "previous_shot_id": "",
     "next_shot_id": "SH002",
-    "shot_title": "Over The Shoulder 1: Sola's Sympathy",
+    "shot_title": "Over The Shoulder 1: A heated argument erupts between Sola and Sarkoja....",
     "shot_type": "over_the_shoulder",
     "camera_description": "Shoulder-level conversational framing with visible foreground presence.",
-    "composition": "Over-the-shoulder composition in The Sleeping Quarters (Night) with sola sharing the frame for dialogue or tension.",
+    "composition": "Over-the-shoulder composition in The Sleeping Quarters (Night) with sola, sarkoja sharing the frame for dialogue or tension.",
     "target_seconds": 5.5,
     "characters_in_frame": [
       {
@@ -21,6 +21,16 @@
         "resolution_score": 186,
         "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
         "notes": "asset id exactly matches canonical id | query matches alias 'sola'"
+      },
+      {
+        "label": "Sarkoja",
+        "canonical_id": "sarkoja",
+        "display_name": "sarkoja",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH009/sarkoja.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'sarkoja'"
       }
     ],
     "environment": {
@@ -37,12 +47,13 @@
       "BT001"
     ],
     "continuity_constraints": [
-      "Emotional intensity levels must scale logically through the argument.",
-      "Physical proximity between characters during the escalation of conflict.",
-      "Sola expresses sympathy for the Red prisoner."
+      "Emotional intensity and physical proximity of the characters.",
+      "A heated argument erupts between Sola and Sarkoja. Sola expresses sympathy for the Red prisoner and criticizes the senseless bloodshed inherent in their culture",
+      "drawing Sarkoja's ire.",
+      "Resolve The Sleeping Quarters (Night) -> The Sleeping Quarters (Night)"
     ],
-    "prompt_seed": "Over The Shoulder 1: Sola expresses sympathy for the Red prisoner.. over_the_shoulder. Shoulder-level conversational framing with visible foreground presence. Over-the-shoulder composition in The Sleeping Quarters (Night) with sola sharing the frame for dialogue or tension. Cast: sola. Environment: The Sleeping Quarters (Night).",
-    "shot_notes": "Sola expresses sympathy for the Red prisoner.",
+    "prompt_seed": "Over The Shoulder 1: A heated argument erupts between Sola and Sarkoja..... over_the_shoulder. Shoulder-level conversational framing with visible foreground presence. Over-the-shoulder composition in The Sleeping Quarters (Night) with sola, sarkoja sharing the frame for dialogue or tension. Cast: sola, sarkoja. Envi...",
+    "shot_notes": "A heated argument erupts between Sola and Sarkoja. Sola expresses sympathy for the Red prisoner and criticizes the senseless bloodshed inherent in their culture, drawing Sarkoja's ire.",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -100,12 +111,12 @@
       }
     ],
     "evidence_summary": [
-      "The scene must establish the fundamental ideological divide between Sola and the Green Martian culture. The performance requires a transition from simmering tension to explosive anger, centered on Sola's empathy for a Red prisoner versus Sarkoja's cultural...",
+      "Highlight the ideological rift between Sola and the Green Martian culture.",
       "A heated argument erupts between Sola and Sarkoja. Sola expresses sympathy for the Red prisoner and criticizes the senseless bloodshed inherent in their culture, drawing Sarkoja's ire.",
       "Tension $\\rightarrow$ Outright Conflict/Anger.",
-      "Over-the-shoulder shots (argumentative dialogue)",
-      "Medium two-shots (body language/physicality)",
-      "Close-ups (Sola's empathy vs. Sarkoja's hardness)",
+      "Over-the-shoulder shots during the argument",
+      "medium two-shots to capture body language",
+      "close-ups on Sola's empathy vs. Sarkoja's hardness.",
       "sola | Sola is a female Green Martian, also identified as a Thark. Her visual identity is defined by her species' characteristic green coloring and traditional Green Martian attire. While specific physical proportions are not detailed, she is established as...",
       "sarkoja | Sarkoja is an older, hardened female Green Martian of the Thark people. She carries the visual weight of a high-ranking noble or spy, characterized by a calculating expression and adherence to strict cultural norms. Her appearance is defined by tr..."
     ],
@@ -113,24 +124,24 @@
       "artifact_id": "CH009_SC005_SH001_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "b990eb1507da02d65d03df7fa8bb77b4cf7b6911",
+      "source_fingerprint": "a4a1ae0828c4ba3ac185db287e22362f959df36b",
       "created_at_utc": "2026-04-22T01:21:53.207581+00:00",
-      "updated_at_utc": "2026-04-22T07:48:56.573697+00:00",
+      "updated_at_utc": "2026-04-22T16:30:39.791759+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH009_SC005",
-          "version": "8998a5f07d62eb89c89b1feaeda651a34dd24d89"
+          "version": "a54b7305e821a3729b8e30e3d70b6305a386f023"
         },
         {
           "dependency_type": "scene_binding",
           "dependency_id": "CH009_SC005",
-          "version": "b8851ccd068e9ee8e907c7d985dce786b25c2e5d"
+          "version": "ddbb5e47162646884fe87a998cf1355d61735fbb"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH009_SC005",
-          "version": "910e0610f7df8dc7560b3f5b9ccaac779635044f"
+          "version": "04ca4933a8c7deee9ff0d716b85dc0af0e4f92e3"
         }
       ],
       "locked_fields": {},
@@ -145,6 +156,11 @@
           "timestamp_utc": "2026-04-22T07:49:21.442525+00:00",
           "action": "synthesized",
           "source_fingerprint": "b990eb1507da02d65d03df7fa8bb77b4cf7b6911"
+        },
+        {
+          "timestamp_utc": "2026-04-22T16:30:39.791759+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "a4a1ae0828c4ba3ac185db287e22362f959df36b"
         }
       ]
     }
@@ -156,10 +172,10 @@
     "shot_order": 2,
     "previous_shot_id": "SH001",
     "next_shot_id": "SH003",
-    "shot_title": "Over The Shoulder 2: Sola's Criticism",
+    "shot_title": "Over The Shoulder 2: Carry the emotional arc through: Tension $\\rightarr...",
     "shot_type": "over_the_shoulder",
     "camera_description": "Shoulder-level conversational framing with visible foreground presence.",
-    "composition": "Over-the-shoulder composition in The Sleeping Quarters (Night) with sola sharing the frame for dialogue or tension.",
+    "composition": "Over-the-shoulder composition in The Sleeping Quarters (Night) with sola, sarkoja sharing the frame for dialogue or tension.",
     "target_seconds": 5.3,
     "characters_in_frame": [
       {
@@ -171,6 +187,16 @@
         "resolution_score": 186,
         "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
         "notes": "asset id exactly matches canonical id | query matches alias 'sola'"
+      },
+      {
+        "label": "Sarkoja",
+        "canonical_id": "sarkoja",
+        "display_name": "sarkoja",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH009/sarkoja.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'sarkoja'"
       }
     ],
     "environment": {
@@ -187,12 +213,12 @@
       "BT002"
     ],
     "continuity_constraints": [
-      "Emotional intensity levels must scale logically through the argument.",
-      "Physical proximity between characters during the escalation of conflict.",
-      "Sola criticizes the senseless bloodshed inherent in Green Martian culture."
+      "Emotional intensity and physical proximity of the characters.",
+      "Carry the emotional arc through: Tension $\\rightarrow$ Outright Conflict/Anger..",
+      "Resolve The Sleeping Quarters (Night) -> The Sleeping Quarters (Night)"
     ],
-    "prompt_seed": "Over The Shoulder 2: Sola criticizes the senseless bloodshed inherent in.... over_the_shoulder. Shoulder-level conversational framing with visible foreground presence. Over-the-shoulder composition in The Sleeping Quarters (Night) with sola sharing the frame for dialogue or tension. Cast: sola. Environment: The Sleeping Quarters (Night).",
-    "shot_notes": "Sola criticizes the senseless bloodshed inherent in Green Martian culture.",
+    "prompt_seed": "Over The Shoulder 2: Carry the emotional arc through: Tension $\\rightarr.... over_the_shoulder. Shoulder-level conversational framing with visible foreground presence. Over-the-shoulder composition in The Sleeping Quarters (Night) with sola, sarkoja sharing the frame for dialogue or tension. Cast: sola, sarkoja. Env...",
+    "shot_notes": "Carry the emotional arc through: Tension $\\rightarrow$ Outright Conflict/Anger..",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -250,12 +276,12 @@
       }
     ],
     "evidence_summary": [
-      "The scene must establish the fundamental ideological divide between Sola and the Green Martian culture. The performance requires a transition from simmering tension to explosive anger, centered on Sola's empathy for a Red prisoner versus Sarkoja's cultural...",
+      "Highlight the ideological rift between Sola and the Green Martian culture.",
       "A heated argument erupts between Sola and Sarkoja. Sola expresses sympathy for the Red prisoner and criticizes the senseless bloodshed inherent in their culture, drawing Sarkoja's ire.",
       "Tension $\\rightarrow$ Outright Conflict/Anger.",
-      "Over-the-shoulder shots (argumentative dialogue)",
-      "Medium two-shots (body language/physicality)",
-      "Close-ups (Sola's empathy vs. Sarkoja's hardness)",
+      "Over-the-shoulder shots during the argument",
+      "medium two-shots to capture body language",
+      "close-ups on Sola's empathy vs. Sarkoja's hardness.",
       "sola | Sola is a female Green Martian, also identified as a Thark. Her visual identity is defined by her species' characteristic green coloring and traditional Green Martian attire. While specific physical proportions are not detailed, she is established as...",
       "sarkoja | Sarkoja is an older, hardened female Green Martian of the Thark people. She carries the visual weight of a high-ranking noble or spy, characterized by a calculating expression and adherence to strict cultural norms. Her appearance is defined by tr..."
     ],
@@ -263,24 +289,24 @@
       "artifact_id": "CH009_SC005_SH002_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "b990eb1507da02d65d03df7fa8bb77b4cf7b6911",
+      "source_fingerprint": "a4a1ae0828c4ba3ac185db287e22362f959df36b",
       "created_at_utc": "2026-04-22T01:22:22.660343+00:00",
-      "updated_at_utc": "2026-04-22T07:49:21.449526+00:00",
+      "updated_at_utc": "2026-04-22T16:30:39.806769+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH009_SC005",
-          "version": "8998a5f07d62eb89c89b1feaeda651a34dd24d89"
+          "version": "a54b7305e821a3729b8e30e3d70b6305a386f023"
         },
         {
           "dependency_type": "scene_binding",
           "dependency_id": "CH009_SC005",
-          "version": "b8851ccd068e9ee8e907c7d985dce786b25c2e5d"
+          "version": "ddbb5e47162646884fe87a998cf1355d61735fbb"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH009_SC005",
-          "version": "910e0610f7df8dc7560b3f5b9ccaac779635044f"
+          "version": "04ca4933a8c7deee9ff0d716b85dc0af0e4f92e3"
         }
       ],
       "locked_fields": {},
@@ -295,6 +321,11 @@
           "timestamp_utc": "2026-04-22T07:49:39.113288+00:00",
           "action": "synthesized",
           "source_fingerprint": "b990eb1507da02d65d03df7fa8bb77b4cf7b6911"
+        },
+        {
+          "timestamp_utc": "2026-04-22T16:30:39.806769+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "a4a1ae0828c4ba3ac185db287e22362f959df36b"
         }
       ]
     }
@@ -306,12 +337,22 @@
     "shot_order": 3,
     "previous_shot_id": "SH002",
     "next_shot_id": "",
-    "shot_title": "Over The Shoulder 3: Sarkoja's Reaction",
+    "shot_title": "Over The Shoulder 3: Land the scene consequence or transition cleanly.",
     "shot_type": "over_the_shoulder",
     "camera_description": "Shoulder-level conversational framing with visible foreground presence.",
-    "composition": "Over-the-shoulder composition in The Sleeping Quarters (Night) with sarkoja sharing the frame for dialogue or tension.",
+    "composition": "Over-the-shoulder composition in The Sleeping Quarters (Night) with sola, sarkoja sharing the frame for dialogue or tension.",
     "target_seconds": 5.1,
     "characters_in_frame": [
+      {
+        "label": "Sola",
+        "canonical_id": "sola",
+        "display_name": "sola",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'sola'"
+      },
       {
         "label": "Sarkoja",
         "canonical_id": "sarkoja",
@@ -337,12 +378,12 @@
       "BT003"
     ],
     "continuity_constraints": [
-      "Emotional intensity levels must scale logically through the argument.",
-      "Physical proximity between characters during the escalation of conflict.",
-      "Sarkoja reacts to the criticism, escalating the tension into outright conflict/anger."
+      "Emotional intensity and physical proximity of the characters.",
+      "Land the scene consequence or transition cleanly.",
+      "Resolve The Sleeping Quarters (Night) -> The Sleeping Quarters (Night)"
     ],
-    "prompt_seed": "Over The Shoulder 3: Sarkoja reacts to the criticism, escalating the ten.... over_the_shoulder. Shoulder-level conversational framing with visible foreground presence. Over-the-shoulder composition in The Sleeping Quarters (Night) with sarkoja sharing the frame for dialogue or tension. Cast: sarkoja. Environment: The Sleeping Quarters (Night).",
-    "shot_notes": "Sarkoja reacts to the criticism, escalating the tension into outright conflict/anger.",
+    "prompt_seed": "Over The Shoulder 3: Land the scene consequence or transition cleanly.. over_the_shoulder. Shoulder-level conversational framing with visible foreground presence. Over-the-shoulder composition in The Sleeping Quarters (Night) with sola, sarkoja sharing the frame for dialogue or tension. Cast: sola, sarkoja. Environm...",
+    "shot_notes": "Land the scene consequence or transition cleanly.",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -400,12 +441,12 @@
       }
     ],
     "evidence_summary": [
-      "The scene must establish the fundamental ideological divide between Sola and the Green Martian culture. The performance requires a transition from simmering tension to explosive anger, centered on Sola's empathy for a Red prisoner versus Sarkoja's cultural...",
+      "Highlight the ideological rift between Sola and the Green Martian culture.",
       "A heated argument erupts between Sola and Sarkoja. Sola expresses sympathy for the Red prisoner and criticizes the senseless bloodshed inherent in their culture, drawing Sarkoja's ire.",
       "Tension $\\rightarrow$ Outright Conflict/Anger.",
-      "Over-the-shoulder shots (argumentative dialogue)",
-      "Medium two-shots (body language/physicality)",
-      "Close-ups (Sola's empathy vs. Sarkoja's hardness)",
+      "Over-the-shoulder shots during the argument",
+      "medium two-shots to capture body language",
+      "close-ups on Sola's empathy vs. Sarkoja's hardness.",
       "sola | Sola is a female Green Martian, also identified as a Thark. Her visual identity is defined by her species' characteristic green coloring and traditional Green Martian attire. While specific physical proportions are not detailed, she is established as...",
       "sarkoja | Sarkoja is an older, hardened female Green Martian of the Thark people. She carries the visual weight of a high-ranking noble or spy, characterized by a calculating expression and adherence to strict cultural norms. Her appearance is defined by tr..."
     ],
@@ -413,24 +454,24 @@
       "artifact_id": "CH009_SC005_SH003_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "b990eb1507da02d65d03df7fa8bb77b4cf7b6911",
+      "source_fingerprint": "a4a1ae0828c4ba3ac185db287e22362f959df36b",
       "created_at_utc": "2026-04-22T01:22:48.626733+00:00",
-      "updated_at_utc": "2026-04-22T07:49:39.120288+00:00",
+      "updated_at_utc": "2026-04-22T16:30:39.820274+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH009_SC005",
-          "version": "8998a5f07d62eb89c89b1feaeda651a34dd24d89"
+          "version": "a54b7305e821a3729b8e30e3d70b6305a386f023"
         },
         {
           "dependency_type": "scene_binding",
           "dependency_id": "CH009_SC005",
-          "version": "b8851ccd068e9ee8e907c7d985dce786b25c2e5d"
+          "version": "ddbb5e47162646884fe87a998cf1355d61735fbb"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH009_SC005",
-          "version": "910e0610f7df8dc7560b3f5b9ccaac779635044f"
+          "version": "04ca4933a8c7deee9ff0d716b85dc0af0e4f92e3"
         }
       ],
       "locked_fields": {},
@@ -445,6 +486,11 @@
           "timestamp_utc": "2026-04-22T07:49:56.783276+00:00",
           "action": "synthesized",
           "source_fingerprint": "b990eb1507da02d65d03df7fa8bb77b4cf7b6911"
+        },
+        {
+          "timestamp_utc": "2026-04-22T16:30:39.820776+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "a4a1ae0828c4ba3ac185db287e22362f959df36b"
         }
       ]
     }

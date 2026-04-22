@@ -4,9 +4,9 @@
 - scene_id: `CH020_SC003`
 - dialogue_events: `1`
 
-## CH020_DLG009
+## CH020_DLG010
 
 - speaker: `unresolved`
-- source_ref: `CH020:p032:q02`
+- source_ref: `CH020:p033:q01`
 - clip_id: `CL003`
-- dialogue_text: may you have a long and restful sleep—yes, a long sleep.
+- dialogue_text: I am sorry, but it is for the best good of Barsoom.

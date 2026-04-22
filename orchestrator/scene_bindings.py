@@ -498,6 +498,7 @@ def run_scene_binding_synthesis(
     *,
     force: bool = False,
     chapters: str | None = None,
+    run_tracker: "DownstreamRunTracker | None" = None,
 ) -> SceneBindingSummary:
     project_dir = create_project(project_slug)
     selected_chapters = set(parse_chapter_selector(chapters))
@@ -519,8 +520,11 @@ def run_scene_binding_synthesis(
     review_records: list[SceneBinding] = []
     future_requests: list[FutureEnvironmentRequest] = []
     chapter_environment_cache: dict[str, SceneBindingReference] = {}
+    phase_name = "scene_bindings"
 
     total_scenes = len(scene_contract_files)
+    if run_tracker is not None:
+        run_tracker.set_phase_total(phase_name, total_scenes)
     for index, scene_contract_path in enumerate(scene_contract_files, start=1):
         scene_contract = _load_json_file(scene_contract_path)
         scene_id = str(scene_contract.get("scene_id", "")).strip().upper() or scene_contract_path.stem.upper()
@@ -535,9 +539,31 @@ def run_scene_binding_synthesis(
         base_path.parent.mkdir(parents=True, exist_ok=True)
         existing = read_json(base_path) if base_path.exists() else None
         metadata = _load_existing_metadata(existing if isinstance(existing, dict) else None, f"{scene_id}_SCENE_BINDINGS", fp)
+        old_meta = existing.get("metadata") or {} if isinstance(existing, dict) else {}
 
-        if isinstance(existing, dict) and not force:
-            old_meta = existing.get("metadata") or {}
+        if isinstance(existing, dict) and old_meta.get("status") == "locked" and not (run_tracker is not None and run_tracker.is_item_completed(phase_name, scene_id, fp)):
+            stale_locked += 1
+            if isinstance(existing.get("metadata"), dict):
+                existing["metadata"]["status"] = "stale"
+                write_json(base_path, existing)
+            warnings.append(f"Locked scene binding became stale and was not regenerated: {scene_id}")
+            print(f"[scene-binding] {index}/{total_scenes} finished {scene_id} (stale locked)")
+            continue
+
+        if run_tracker is not None and run_tracker.is_item_completed(phase_name, scene_id, fp) and isinstance(existing, dict):
+            reused += 1
+            binding = _binding_from_existing(existing, metadata)
+            records.append(binding)
+            if binding.resolved_environment and binding.resolved_environment.canonical_id and binding.binding_mode != "unresolved":
+                chapter_environment_cache[chapter_id] = binding.resolved_environment
+            future_requests.extend(binding.future_environment_requests)
+            if binding.review_flags:
+                review_records.append(binding)
+                review_queue.append({"scene_id": scene_id, "issues": list(binding.review_flags)})
+            print(f"[scene-binding] {index}/{total_scenes} finished {scene_id} (resumed)")
+            continue
+
+        if isinstance(existing, dict) and not force and run_tracker is None:
             if old_meta.get("source_fingerprint") == fp:
                 reused += 1
                 binding = _binding_from_existing(existing, metadata)
@@ -614,6 +640,13 @@ def run_scene_binding_synthesis(
         write_json(base_path, binding.to_dict())
         base_path.with_suffix(".md").write_text(_render_scene_binding_markdown(binding), encoding="utf-8")
         written_files.extend([str(base_path), str(base_path.with_suffix(".md"))])
+        if run_tracker is not None:
+            run_tracker.mark_item_completed(
+                phase_name,
+                scene_id,
+                fp,
+                outputs=[str(base_path), str(base_path.with_suffix(".md"))],
+            )
         records.append(binding)
         synthesized += 1
 

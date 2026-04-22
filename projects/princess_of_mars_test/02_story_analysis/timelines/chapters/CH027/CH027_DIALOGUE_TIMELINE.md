@@ -32,8 +32,8 @@
 - speaker: `unresolved`
 - source_ref: `CH027:p015:q01`
 - scene_id: `CH027_SC002`
-- shot_id: `SH002`
-- clip_id: `CL002`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: My gentlemen,
 - excerpt: "My gentlemen," he concluded, "we have at best three days to live."
 - review_notes:
@@ -54,8 +54,8 @@
 - speaker: `unresolved`
 - source_ref: `CH027:p017:q01`
 - scene_id: `CH027_SC002`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: The men of Helium have prided themselves that they have ever shown Barsoom how a nation of red men should live, now is our opportunity to show them how they should die. Let us go about our duties as though a thousand useful years still lay before us.
 - excerpt: "The men of Helium have prided themselves that they have ever shown Barsoom how a nation of red men should live, now is our opportunity to show them how they should die. Let us go about our duties as though a thousand useful years still...
 - review_notes:
@@ -65,9 +65,9 @@
 
 - speaker: `john_carter`
 - source_ref: `CH027:p020:q01`
-- scene_id: `CH027_SC003`
-- shot_id: `SH001`
-- clip_id: `CL001`
+- scene_id: `CH027_SC002`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: We have been very happy, John Carter,
 - excerpt: "We have been very happy, John Carter," she said, "and I thank whatever fate overtakes us that it permits us to die together."
 
@@ -75,9 +75,9 @@
 
 - speaker: `dejah_thoris`
 - source_ref: `CH027:p020:q02`
-- scene_id: `CH027_SC003`
-- shot_id: `SH002`
-- clip_id: `CL002`
+- scene_id: `CH027_SC002`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: and I thank whatever fate overtakes us that it permits us to die together.
 - excerpt: "We have been very happy, John Carter," she said, "and I thank whatever fate overtakes us that it permits us to die together."
 
@@ -86,8 +86,8 @@
 - speaker: `unresolved`
 - source_ref: `CH027:p026:q01`
 - scene_id: `CH027_SC003`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: Let us bid each other farewell. The days of the greatness of Barsoom are over. Tomorrow's sun will look down upon a dead world which through all eternity must go swinging through the heavens peopled not even by memories. It is the end.
 - excerpt: "Let us bid each other farewell. The days of the greatness of Barsoom are over. Tomorrow's sun will look down upon a dead world which through all eternity must go swinging through the heavens peopled not even by memories. It is the end."
 - review_notes:
@@ -97,9 +97,9 @@
 
 - speaker: `john_carter`
 - source_ref: `CH027:p030:q01`
-- scene_id: `CH027_SC004`
-- shot_id: `SH001`
-- clip_id: `CL001`
+- scene_id: `CH027_SC003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: Kiss me, John Carter,
 - excerpt: "Kiss me, John Carter," she murmured. "I love you! I love you! It is cruel that we must be torn apart who were just starting upon a life of love and happiness."
 
@@ -107,9 +107,9 @@
 
 - speaker: `john_carter`
 - source_ref: `CH027:p030:q02`
-- scene_id: `CH027_SC004`
-- shot_id: `SH001`
-- clip_id: `CL001`
+- scene_id: `CH027_SC003`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: I love you! I love you! It is cruel that we must be torn apart who were just starting upon a life of love and happiness.
 - excerpt: "Kiss me, John Carter," she murmured. "I love you! I love you! It is cruel that we must be torn apart who were just starting upon a life of love and happiness."
 
@@ -118,8 +118,8 @@
 - speaker: `john_carter`
 - source_ref: `CH027:p032:q01`
 - scene_id: `CH027_SC004`
-- shot_id: `SH002`
-- clip_id: `CL002`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: It shall not be, my princess,
 - excerpt: "It shall not be, my princess," I cried. "There is, there must be some way, and John Carter, who has fought his way through a strange world for love of you, will find it."
 
@@ -128,8 +128,8 @@
 - speaker: `john_carter`
 - source_ref: `CH027:p032:q02`
 - scene_id: `CH027_SC004`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: There is, there must be some way, and John Carter, who has fought his way through a strange world for love of you, will find it.
 - excerpt: "It shall not be, my princess," I cried. "There is, there must be some way, and John Carter, who has fought his way through a strange world for love of you, will find it."
 
@@ -138,8 +138,8 @@
 - speaker: `unresolved`
 - source_ref: `CH027:p035:q01`
 - scene_id: `CH027_SC004`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: A flier, Jeddak! Quick! Order your swiftest flier to the palace top. I can save Barsoom yet.
 - excerpt: "A flier, Jeddak! Quick! Order your swiftest flier to the palace top. I can save Barsoom yet."
 - review_notes:
@@ -180,8 +180,8 @@
 - speaker: `john_carter`
 - source_ref: `CH027:p048:q01`
 - scene_id: `CH027_SC005`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: After it,
 - excerpt: "After it," I cried to my companion, "and if you reach the pump room turn loose all the pumps. It is the only chance Barsoom has to exist tomorrow!"
 
@@ -190,7 +190,7 @@
 - speaker: `john_carter`
 - source_ref: `CH027:p048:q02`
 - scene_id: `CH027_SC005`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: and if you reach the pump room turn loose all the pumps. It is the only chance Barsoom has to exist tomorrow!
 - excerpt: "After it," I cried to my companion, "and if you reach the pump room turn loose all the pumps. It is the only chance Barsoom has to exist tomorrow!"

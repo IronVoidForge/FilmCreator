@@ -2,11 +2,6 @@
 
 - shot_id: `SH001`
 - scene_id: `CH025_SC003`
-- dialogue_events: `1`
+- dialogue_events: `0`
 
-## CH025_DLG004
-
-- speaker: `john_carter`
-- source_ref: `CH025:p028:q01`
-- clip_id: `CL001`
-- dialogue_text: Was there ever such a man!
+- No dialogue events were bound to this shot.

@@ -4,13 +4,6 @@
 - scene_id: `CH023_SC002`
 - dialogue_events: `3`
 
-## CH023_DLG009
-
-- speaker: `unresolved`
-- source_ref: `CH023:p010:q01`
-- clip_id: `CL001`
-- dialogue_text: She knows it, Kantos Kan, and repulses me only because she is promised to Sab Than.
-
 ## CH023_DLG010
 
 - speaker: `unresolved`
@@ -24,3 +17,10 @@
 - source_ref: `CH023:p013:q01`
 - clip_id: `CL001`
 - dialogue_text: How?
+
+## CH023_DLG012
+
+- speaker: `john_carter`
+- source_ref: `CH023:p013:q02`
+- clip_id: `CL001`
+- dialogue_text: You are strongly guarded and a quadruple force patrols the sky.

@@ -31,34 +31,15 @@ echo   4. descriptor enrichment
 echo   5. prompt preparation
 echo.
 echo Character and environment bibles are NOT rerun.
+echo It will resume the latest interrupted matching run automatically if one exists.
 echo.
 
 set "CHAPTER_ARGS="
 if not "%CHAPTERS%"=="" set "CHAPTER_ARGS=--chapters %CHAPTERS%"
 
 echo.
-echo [1/5] Running scene binding synthesis...
-python -m orchestrator synthesize-scene-bindings %PROJECT_SLUG% --force %CHAPTER_ARGS%
-if errorlevel 1 goto :fail
-
-echo.
-echo [2/5] Running shot package synthesis...
-python -m orchestrator synthesize-shot-packages %PROJECT_SLUG% --force %CHAPTER_ARGS%
-if errorlevel 1 goto :fail
-
-echo.
-echo [3/5] Running dialogue timeline synthesis...
-python -m orchestrator synthesize-dialogue-timeline %PROJECT_SLUG% --force %CHAPTER_ARGS%
-if errorlevel 1 goto :fail
-
-echo.
-echo [4/5] Running descriptor enrichment...
-python -m orchestrator synthesize-descriptor-enrichment %PROJECT_SLUG% --force %CHAPTER_ARGS%
-if errorlevel 1 goto :fail
-
-echo.
-echo [5/5] Running prompt preparation...
-python -m orchestrator synthesize-prompt-preparation %PROJECT_SLUG% --force %CHAPTER_ARGS%
+echo Running resumable scene-bindings-and-downstream pipeline...
+python -m orchestrator run-downstream-pipeline %PROJECT_SLUG% --start-phase scene_bindings --pipeline-key scene_bindings_downstream %CHAPTER_ARGS% --shot-variant primary_keyframe --shot-variant alternate_angle --shot-variant consistency_repair
 if errorlevel 1 goto :fail
 
 echo.

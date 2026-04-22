@@ -4,9 +4,9 @@
 - scene_id: `CH016_SC005`
 - dialogue_events: `1`
 
-## CH016_DLG025
+## CH016_DLG026
 
-- speaker: `dejah_thoris`
-- source_ref: `CH016:p033:q02`
+- speaker: `john_carter`
+- source_ref: `CH016:p034:q01`
 - clip_id: `CL002`
-- dialogue_text: but it is two hundred miles north of us; it is one of the waterways we crossed on the trip to Thark.
+- dialogue_text: They would never suspect that we would try for that distant waterway,

@@ -4,9 +4,9 @@
 - scene_id: `CH027_SC004`
 - dialogue_events: `1`
 
-## CH027_DLG012
+## CH027_DLG013
 
-- speaker: `john_carter`
-- source_ref: `CH027:p032:q02`
+- speaker: `unresolved`
+- source_ref: `CH027:p035:q01`
 - clip_id: `CL003`
-- dialogue_text: There is, there must be some way, and John Carter, who has fought his way through a strange world for love of you, will find it.
+- dialogue_text: A flier, Jeddak! Quick! Order your swiftest flier to the palace top. I can save Barsoom yet.

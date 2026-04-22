@@ -5,11 +5,11 @@
   "shot_order": 3,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Over The Shoulder 3: Notan's Description",
-  "shot_type": "over_the_shoulder",
-  "camera_description": "Shoulder-level conversational framing with visible foreground presence.",
-  "composition": "Over-the-shoulder composition in The Great Hall with notan sharing the frame for dialogue or tension.",
-  "target_seconds": 5.0,
+  "shot_title": "Closing Reaction 3: Land the scene consequence or transition cleanly.",
+  "shot_type": "closing_reaction",
+  "camera_description": "Controlled closing frame that lands the consequence of the beat.",
+  "composition": "Closing composition in The Great Hall that emphasizes the consequence of land the scene consequence or transition cleanly..",
+  "target_seconds": 4.6,
   "characters_in_frame": [
     {
       "label": "Notan",
@@ -20,6 +20,16 @@
       "resolution_score": 186,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH022/notan.md",
       "notes": "asset id exactly matches canonical id | query matches alias 'notan'"
+    },
+    {
+      "label": "Than Kosis",
+      "canonical_id": "than_kosis",
+      "display_name": "than_kosis",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH021/than_kosis.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'than_kosis'"
     }
   ],
   "environment": {
@@ -36,11 +46,14 @@
     "BT003"
   ],
   "continuity_constraints": [
-    "Sound design: Muffled voices (inside ornament) vs. clear palace noise (outside).",
-    "Notan describes Carter as a superhuman stranger."
+    "Sound design (muffled voices vs. clear palace noise).",
+    "Land the scene consequence or transition cleanly.",
+    "Resolve John Carter (hidden) -> John Carter (hidden)",
+    "Resolve Palace Guards (off-screen/background) -> Palace Guards (off-screen/background)",
+    "Resolve The Great Hall -> The Great Hall"
   ],
-  "prompt_seed": "Over The Shoulder 3: From his hiding spot, Notan describes Carter as a s.... over_the_shoulder. Shoulder-level conversational framing with visible foreground presence. Over-the-shoulder composition in The Great Hall with notan sharing the frame for dialogue or tension. Cast: notan. Environment: The Great Hall.",
-  "shot_notes": "From his hiding spot, Notan describes Carter as a superhuman stranger.",
+  "prompt_seed": "Closing Reaction 3: Land the scene consequence or transition cleanly.. closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in The Great Hall that emphasizes the consequence of land the scene consequence or transition cleanly.. Cast: notan, than_kosis. Environment: T...",
+  "shot_notes": "Land the scene consequence or transition cleanly.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -98,12 +111,10 @@
     }
   ],
   "evidence_summary": [
-    "The scene must establish a sense of claustrophobic tension for Carter contrasted against the expansive, chaotic scale of the Great Hall. Production should focus on the auditory dichotomy between the muffled interior of the ornament and the loud, frantic atm...",
+    "To raise the stakes and establish the scale of the pursuit.",
     "As the palace erupts in chaos over the dead guards, Carter hides inside a large hanging ornament in the Great Hall. From his hiding spot, he overhears Notan describing him as a superhuman stranger and hears Than Kosis ordering a massive manhunt.",
     "Tension $\\rightarrow$ Dread. **Likely Visual Coverage Families:** - Macro shots of Carter's eyes/face within the ornament. - Low-angle or wide shots of the Great Hall to show scale and chaos. - Over-the-shoulder shots...",
-    "Macro shots of Carter's eyes/face within the ornament.",
-    "Low-angle or wide shots of the Great Hall to show scale and chaos.",
-    "Over-the-shoulder shots of the royals as they discuss the manhunt.",
+    "Sound design (muffled voices vs. clear palace noise).",
     "notan | Notan is a scholarly figure characterized by his role as an observant official within the Zodangan palace. While his specific physical dimensions remain unknown, he is visually defined by formal or scholarly Zodangan attire consistent with a royal a...",
     "than_kosis | Than Kosis is an elder male Martian ruler characterized by a commanding, authoritative presence. He is visually defined by his status as the Jeddak of Zodanga, typically appearing in regal, high-ranking noble regalia and royal garments that sig..."
   ],
@@ -111,24 +122,24 @@
     "artifact_id": "CH022_SC004_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "b01e3d774fc124573e9a55346d2f117dc236a7b9",
+    "source_fingerprint": "a0d06ddbf177f553ef933d0e88555cdfd134fb4b",
     "created_at_utc": "2026-04-22T03:07:07.391230+00:00",
-    "updated_at_utc": "2026-04-22T15:29:42.547413+00:00",
+    "updated_at_utc": "2026-04-22T16:30:43.141532+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH022_SC004",
-        "version": "5cac2d9b11f396f1d84b336fc971606e999753c1"
+        "version": "3c351bb4237fbfe6a37dab44f9b9c3aecd5cfe91"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH022_SC004",
-        "version": "e82899e67f85d8bd3a2e572da2a1e03799895e4c"
+        "version": "a65cab826268b2963b30811dea1388eaaa271472"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH022_SC004",
-        "version": "b38d0bb0c70bcb7f9b024420814101edd99128cc"
+        "version": "c4c464344b136e313be6f14492890fde48732e1b"
       }
     ],
     "locked_fields": {},
@@ -143,6 +154,11 @@
         "timestamp_utc": "2026-04-22T15:30:02.080891+00:00",
         "action": "synthesized",
         "source_fingerprint": "b01e3d774fc124573e9a55346d2f117dc236a7b9"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:30:43.141532+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "a0d06ddbf177f553ef933d0e88555cdfd134fb4b"
       }
     ]
   }

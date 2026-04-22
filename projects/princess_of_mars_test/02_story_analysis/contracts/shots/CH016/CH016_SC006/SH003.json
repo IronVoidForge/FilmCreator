@@ -5,21 +5,21 @@
   "shot_order": 3,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Medium 3: John takes cover and overhears Thark warriors plann...",
-  "shot_type": "medium",
-  "camera_description": "Stable medium framing that keeps action and character readable.",
-  "composition": "Readable medium composition in City outskirts featuring Thark Warriors.",
-  "target_seconds": 5.0,
+  "shot_title": "Closing Reaction 3: Land the scene consequence or transition cleanly.",
+  "shot_type": "closing_reaction",
+  "camera_description": "Controlled closing frame that lands the consequence of the beat.",
+  "composition": "Closing composition in City outskirts that emphasizes the consequence of land the scene consequence or transition cleanly..",
+  "target_seconds": 4.6,
   "characters_in_frame": [
     {
-      "label": "Thark Warriors",
-      "canonical_id": null,
-      "display_name": "Thark Warriors",
-      "status": "review",
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
+      "resolution_score": 186,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'john_carter'"
     }
   ],
   "environment": {
@@ -36,12 +36,15 @@
     "BT003"
   ],
   "continuity_constraints": [
-    "Nighttime lighting and shadow consistency",
-    "Movement patterns/choreography of Thark warriors",
-    "Sound design synchronization for overheard dialogue"
+    "Nighttime lighting/shadows",
+    "movement of the Thark warriors",
+    "sound design (overheard dialogue).",
+    "Land the scene consequence or transition cleanly.",
+    "Resolve Thark Chieftain (off-screen/overheard) -> Thark Chieftain (off-screen/overheard)",
+    "Resolve Thark Warriors -> Thark Warriors"
   ],
-  "prompt_seed": "Medium 3: John takes cover and overhears Thark warriors plann.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in City outskirts featuring Thark Warriors. Cast: Thark Warriors. Environment: City outskirts. Beat: John takes cover and overhears Thark warriors plan...",
-  "shot_notes": "John takes cover and overhears Thark warriors planning an ambush.",
+  "prompt_seed": "Closing Reaction 3: Land the scene consequence or transition cleanly.. closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in City outskirts that emphasizes the consequence of land the scene consequence or transition cleanly.. Cast: john_carter. Environment: City ou...",
+  "shot_notes": "Land the scene consequence or transition cleanly.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -99,36 +102,36 @@
     }
   ],
   "evidence_summary": [
-    "Establish a high-stakes transition from an active rescue attempt to a desperate survival situation. The scene relies on heavy atmosphere, utilizing low-light night settings and shadow play to facilitate the shift from John Carter's hopeful movement to his r...",
+    "The climax of the chapter; a failed plan leads to an ambush and high-stakes peril.",
     "John Carter attempts to meet the women at the city edge with his thoats, but finds the rendezvous compromised. After hiding his animals, he overhears Thark warriors planning to ambush him and take him to the vaults, while Dejah Thoris is being taken to Tal...",
     "Hopeful Action $\\rightarrow$ Confusion $\\rightarrow$ Terror/Realization of Trap.",
     "Low-light night shots",
     "POV shots from John Carter's hiding spot",
-    "Medium shots of Thark warriors moving through shadows",
+    "medium shots of the Thark warriors moving through shadows",
     "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in..."
   ],
   "metadata": {
     "artifact_id": "CH016_SC006_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "75a37e87afd21e72ccffe1dac2613d2ff5d8b71d",
+    "source_fingerprint": "c39b71b31163ac326e988f3149b634205201658f",
     "created_at_utc": "2026-04-22T02:16:22.603162+00:00",
-    "updated_at_utc": "2026-04-22T08:33:22.829523+00:00",
+    "updated_at_utc": "2026-04-22T16:30:41.451912+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH016_SC006",
-        "version": "37115c39523994a21c498d499470213656ab8348"
+        "version": "a082f374a5b9a4dabe0a83a7d3e5f4c622f403e3"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH016_SC006",
-        "version": "e0c439126a8578b7ecedca2d31b8c0babaa3989b"
+        "version": "5c45473b5db05bf233305d4560f5b95c9d441575"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH016_SC006",
-        "version": "62eaccb888fc9d9c837047af6129cea111aa133b"
+        "version": "5f84c13adeeb4c68c2b6bebb6e3e289f21d0b44a"
       }
     ],
     "locked_fields": {},
@@ -143,6 +146,11 @@
         "timestamp_utc": "2026-04-22T08:33:50.770830+00:00",
         "action": "synthesized",
         "source_fingerprint": "75a37e87afd21e72ccffe1dac2613d2ff5d8b71d"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:30:41.451912+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "c39b71b31163ac326e988f3149b634205201658f"
       }
     ]
   }

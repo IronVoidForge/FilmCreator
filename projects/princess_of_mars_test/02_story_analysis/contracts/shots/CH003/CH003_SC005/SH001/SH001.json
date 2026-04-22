@@ -5,21 +5,21 @@
   "shot_order": 1,
   "previous_shot_id": "",
   "next_shot_id": "SH002",
-  "shot_title": "Establishing Wide 1: The Leader dismounts",
-  "shot_type": "establishing_wide",
-  "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across The basin/open landscape with The Leader placed for immediate spatial orientation.",
-  "target_seconds": 5.2,
+  "shot_title": "Medium 1: The leader dismounts unarmed and offers the protago...",
+  "shot_type": "medium",
+  "camera_description": "Stable medium framing that keeps action and character readable.",
+  "composition": "Readable medium composition in The basin/open landscape featuring protagonist.",
+  "target_seconds": 5.5,
   "characters_in_frame": [
     {
-      "label": "The Leader",
-      "canonical_id": null,
-      "display_name": "The Leader",
-      "status": "review",
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
+      "resolution_score": 176,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
     }
   ],
   "environment": {
@@ -36,11 +36,14 @@
     "BT001"
   ],
   "continuity_constraints": [
-    "The Leader dismounts from their mount",
-    "appearing unarmed to signal peaceful intent."
+    "The armlet on the protagonist's arm",
+    "the height difference when he is lifted onto the mount.",
+    "The leader dismounts unarmed and offers the protagonist a metal armlet.",
+    "Resolve The Leader -> The Leader",
+    "Resolve The basin/open landscape -> The basin/open landscape"
   ],
-  "prompt_seed": "Establishing Wide 1: The Leader dismounts from their mount, appearing un.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across The basin/open landscape with The Leader placed for immediate spatial orientation. Cast: The Leader. Environment: The basin/open la...",
-  "shot_notes": "The Leader dismounts from their mount, appearing unarmed to signal peaceful intent.",
+  "prompt_seed": "Medium 1: The leader dismounts unarmed and offers the protago.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in The basin/open landscape featuring protagonist. Cast: protagonist. Environment: The basin/open landscape. Beat: The leader dismounts unarmed and off...",
+  "shot_notes": "The leader dismounts unarmed and offers the protagonist a metal armlet.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -98,12 +101,11 @@
     }
   ],
   "evidence_summary": [
-    "The scene requires a controlled interaction between the protagonist and the Martian forces to establish a diplomatic shift. Key focus is on the physical hand-off of the metal armlet and the logistical movement of lifting the protagonist onto a mount, requir...",
+    "Establish first contact and a tentative peace.",
     "The leader dismounts unarmed and offers the protagonist a metal armlet. The protagonist accepts, signaling peace. He is then lifted onto a Martian mount and taken away toward the distant hills.",
     "Tension $\\rightarrow$ Relief/Cautious Acceptance. **Likely Visual Coverage Families:** - Close-ups of the hand-off (the armlet). - Medium shots of the non-verbal communication/eye contact. - Wide shot of the cavalcade...",
-    "Close-ups of the hand-off (the armlet)",
-    "Medium shots of non-verbal communication/eye contact",
-    "Wide shot of the cavalcade moving toward the distant hills",
+    "The armlet on the protagonist's arm",
+    "the height difference when he is lifted onto the mount.",
     "protagonist | An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeless\" physic...",
     "martian_warriors | The martian_warriors are a highly disciplined military force of massive, 15-foot tall humanoids. They possess olive-green skin, red eyes, tusks, and four arms. In combat or transit, they are often seen mounted on slate-colored, eight-legg..."
   ],
@@ -111,24 +113,24 @@
     "artifact_id": "CH003_SC005_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "4134741a652aa4810ea7e6642ae79c1457f1bcd0",
+    "source_fingerprint": "0c9852b114eed384d03c130bb1ff53cb5dda8679",
     "created_at_utc": "2026-04-22T00:26:13.650266+00:00",
-    "updated_at_utc": "2026-04-22T07:09:18.285267+00:00",
+    "updated_at_utc": "2026-04-22T16:30:38.309316+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH003_SC005",
-        "version": "a44e708f74094cb190c24405a19c54f399e81f7c"
+        "version": "49b18ae384c0a905bf264c7becb4a39157f55cda"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH003_SC005",
-        "version": "35f9d28b8350060b9e5cb5a32cec8f12be468f77"
+        "version": "9eab832d48367bebb1470faf19af31a0558acbff"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH003_SC005",
-        "version": "7a9c302365322bf7864399967e8a861c95f83163"
+        "version": "be7f9170fe43f48a33119ced4edb72c1f0043233"
       }
     ],
     "locked_fields": {},
@@ -143,6 +145,11 @@
         "timestamp_utc": "2026-04-22T07:09:53.859109+00:00",
         "action": "synthesized",
         "source_fingerprint": "4134741a652aa4810ea7e6642ae79c1457f1bcd0"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:30:38.309316+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "0c9852b114eed384d03c130bb1ff53cb5dda8679"
       }
     ]
   }

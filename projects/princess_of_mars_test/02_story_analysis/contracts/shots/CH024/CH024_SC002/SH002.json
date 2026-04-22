@@ -5,12 +5,22 @@
   "shot_order": 2,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Action 2: Woola approaches or is discovered by Carter amidst...",
-  "shot_type": "action",
-  "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-  "composition": "Dynamic composition in The Battlefield with woola crossing the frame and maintaining readable movement.",
-  "target_seconds": 5.8,
+  "shot_title": "Medium 2: Carry the emotional arc through: Exhaustion $\\right...",
+  "shot_type": "medium",
+  "camera_description": "Stable medium framing that keeps action and character readable.",
+  "composition": "Readable medium composition in The Battlefield featuring john_carter, woola.",
+  "target_seconds": 5.3,
   "characters_in_frame": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'john_carter'"
+    },
     {
       "label": "Woola",
       "canonical_id": "woola",
@@ -36,12 +46,13 @@
     "BT002"
   ],
   "continuity_constraints": [
-    "Dirt and blood on Carter's clothing (Martian warrior attire)",
-    "Physical state/condition of Woola",
-    "Woola approaches or is discovered by Carter amidst the battlefield debris"
+    "Dirt/blood on Carter's clothing",
+    "Woola's physical state.",
+    "Carry the emotional arc through: Exhaustion $\\rightarrow$ Relief/Joy..",
+    "Resolve The Battlefield -> The Battlefield"
   ],
-  "prompt_seed": "Action 2: Woola approaches or is discovered by Carter amidst.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in The Battlefield with woola crossing the frame and maintaining readable movement. Cast: woola. Environment: The Battlefield. Beat: Woola approaches or is di...",
-  "shot_notes": "Woola approaches or is discovered by Carter amidst the battlefield debris.",
+  "prompt_seed": "Medium 2: Carry the emotional arc through: Exhaustion $\\right.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in The Battlefield featuring john_carter, woola. Cast: john_carter, woola. Environment: The Battlefield. Beat: Carry the emotional arc through: Exhaust...",
+  "shot_notes": "Carry the emotional arc through: Exhaustion $\\rightarrow$ Relief/Joy..",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -99,12 +110,12 @@
     }
   ],
   "evidence_summary": [
-    "Establish a moment of emotional grounding and character connection following the high-intensity skirmish between Tharks and Warhoons. The scene must transition from the physical toll of combat to a moment of relief through the reunion of John Carter and his...",
+    "Provide an emotional beat and character grounding after the battle.",
     "In the aftermath of the skirmish, John Carter is reunited with his loyal giant hound, Woola.",
     "Exhaustion $\\rightarrow$ Relief/Joy.",
     "Low-angle shots of Woola",
-    "Close-ups of the bond between man and beast",
-    "Dirt and blood on Carter's clothing (Martian warrior attire)",
+    "Close-ups of the bond between man and beast.",
+    "Dirt/blood on Carter's clothing",
     "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in...",
     "woola | Woola is a large Martian hound characterized by a beastly, canine-like silhouette. The most defining visual identifier is the presence of multiple tusks protruding from its mouth. As a calot, it possesses a massive frame suitable for acting as a pro..."
   ],
@@ -112,24 +123,24 @@
     "artifact_id": "CH024_SC002_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "89b774c1e8e92bb9472d0cc65f244b566769865b",
+    "source_fingerprint": "ca6d86497b675f71da4d13b8e5658f30b88a34ac",
     "created_at_utc": "2026-04-22T03:20:58.948057+00:00",
-    "updated_at_utc": "2026-04-22T15:40:17.190805+00:00",
+    "updated_at_utc": "2026-04-22T16:30:43.543185+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH024_SC002",
-        "version": "20b457e9df26f91528979aa496db3fa541992255"
+        "version": "37af83c23cfd66440cb50a6229308a484aef70a8"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH024_SC002",
-        "version": "b3fdd6cfb227a596055e2ba13d4d78ae71b4468a"
+        "version": "94324912b12831de212751e25567708366b1d444"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH024_SC002",
-        "version": "6b3287b987e12000aa8fc52f17b950266c0fb94b"
+        "version": "0d1958604a3db237b87da08da921c340632ed650"
       }
     ],
     "locked_fields": {},
@@ -144,6 +155,11 @@
         "timestamp_utc": "2026-04-22T15:40:31.310276+00:00",
         "action": "synthesized",
         "source_fingerprint": "89b774c1e8e92bb9472d0cc65f244b566769865b"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:30:43.543686+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "ca6d86497b675f71da4d13b8e5658f30b88a34ac"
       }
     ]
   }

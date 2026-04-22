@@ -1,6 +1,5 @@
 # Shot Index
 
-- `SH001` - Establishing Wide 1: Carter prepares (type=establishing_wide, target=5.2s, beat_ids=BT001, cast=1, env=Palace Balcony, prev=(none), next=SH002)
-- `SH002` - Medium 2: Carter leaps (type=medium, target=5.0s, beat_ids=BT002, cast=1, env=Palace Balcony, prev=SH001, next=SH003)
-- `SH003` - Medium 3: Carter strikes glass (type=medium, target=5.0s, beat_ids=BT003, cast=1, env=Palace Balcony, prev=SH002, next=SH004)
-- `SH004` - Closing Reaction 4: Carter descends (type=closing_reaction, target=4.3s, beat_ids=BT004, cast=1, env=Palace Balcony, prev=SH003, next=(none))
+- `SH001` - Medium 1: Under the cover of darkness, Carter makes his break... (type=medium, target=5.5s, beat_ids=BT001, cast=1, env=Palace Balcony, prev=(none), next=SH002)
+- `SH002` - Medium 2: Carry the emotional arc through: Suspense $\rightar... (type=medium, target=5.3s, beat_ids=BT002, cast=1, env=Palace Balcony, prev=SH001, next=SH003)
+- `SH003` - Closing Reaction 3: Land the scene consequence or transition cleanly. (type=closing_reaction, target=4.6s, beat_ids=BT003, cast=1, env=Palace Balcony, prev=SH002, next=(none))

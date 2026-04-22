@@ -30,8 +30,8 @@
 - speaker: `john_carter`
 - source_ref: `CH017:p015:q02`
 - scene_id: `CH017_SC002`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: the debt is no less, though Helium will never know, for you have saved the last of our line from worse than death.
 - excerpt: "If we make it, my chieftain, the debt of Helium will be a mighty one; greater than she can ever pay you; and should we not make it," she continued, "the debt is no less, though Helium will never know, for you have saved the last of our...
 
@@ -39,7 +39,7 @@
 
 - speaker: `john_carter`
 - source_ref: `CH017:p027:q01`
-- scene_id: `CH017_SC004`
+- scene_id: `CH017_SC003`
 - shot_id: `SH001`
 - clip_id: `CL001`
 - dialogue_text: Good-bye, my princess,
@@ -49,9 +49,9 @@
 
 - speaker: `john_carter`
 - source_ref: `CH017:p027:q02`
-- scene_id: `CH017_SC004`
-- shot_id: `SH001`
-- clip_id: `CL001`
+- scene_id: `CH017_SC003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: we may meet in Helium yet. I have escaped from worse plights than this,
 - excerpt: "Good-bye, my princess," I whispered, "we may meet in Helium yet. I have escaped from worse plights than this," and I tried to smile as I lied.
 
@@ -60,8 +60,8 @@
 - speaker: `dejah_thoris`
 - source_ref: `CH017:p028:q01`
 - scene_id: `CH017_SC004`
-- shot_id: `SH002`
-- clip_id: `CL002`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: What,
 - excerpt: "What," she cried, "are you not coming with us?"
 
@@ -70,8 +70,8 @@
 - speaker: `dejah_thoris`
 - source_ref: `CH017:p028:q02`
 - scene_id: `CH017_SC004`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: are you not coming with us?
 - excerpt: "What," she cried, "are you not coming with us?"
 
@@ -80,8 +80,8 @@
 - speaker: `unresolved`
 - source_ref: `CH017:p029:q01`
 - scene_id: `CH017_SC004`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: How may I, Dejah Thoris? Someone must hold these fellows off for a while, and I can better escape them alone than could the three of us together.
 - excerpt: "How may I, Dejah Thoris? Someone must hold these fellows off for a while, and I can better escape them alone than could the three of us together."
 - review_notes:
@@ -92,7 +92,7 @@
 - speaker: `john_carter`
 - source_ref: `CH017:p030:q01`
 - scene_id: `CH017_SC004`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: Fly, Sola! Dejah Thoris remains to die with the man she loves.
 - excerpt: She sprang quickly from the thoat and, throwing her dear arms about my neck, turned to Sola, saying with quiet dignity: "Fly, Sola! Dejah Thoris remains to die with the man she loves."

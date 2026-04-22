@@ -4,16 +4,16 @@
 - scene_id: `CH017_SC004`
 - dialogue_events: `2`
 
-## CH017_DLG004
+## CH017_DLG006
 
-- speaker: `john_carter`
-- source_ref: `CH017:p027:q01`
+- speaker: `dejah_thoris`
+- source_ref: `CH017:p028:q01`
 - clip_id: `CL001`
-- dialogue_text: Good-bye, my princess,
+- dialogue_text: What,
 
-## CH017_DLG005
+## CH017_DLG007
 
-- speaker: `john_carter`
-- source_ref: `CH017:p027:q02`
+- speaker: `dejah_thoris`
+- source_ref: `CH017:p028:q02`
 - clip_id: `CL001`
-- dialogue_text: we may meet in Helium yet. I have escaped from worse plights than this,
+- dialogue_text: are you not coming with us?

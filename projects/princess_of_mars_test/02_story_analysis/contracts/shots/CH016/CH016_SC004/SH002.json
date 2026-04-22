@@ -5,21 +5,31 @@
   "shot_order": 2,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Action 2: sola enters with urgent, high-stakes news.",
+  "shot_title": "Action 2: Carry the emotional arc through: Intimacy $\\rightar...",
   "shot_type": "action",
   "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-  "composition": "Dynamic composition in Dejah Thoris's quarters with sola crossing the frame and maintaining readable movement.",
-  "target_seconds": 5.5,
+  "composition": "Dynamic composition in Dejah Thoris's quarters with john_carter, dejah_thoris crossing the frame and maintaining readable movement.",
+  "target_seconds": 5.8,
   "characters_in_frame": [
     {
-      "label": "Sola",
-      "canonical_id": "sola",
-      "display_name": "sola",
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
       "status": "canonical",
       "entity_kind": "individual",
       "resolution_score": 186,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'sola'"
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'john_carter'"
+    },
+    {
+      "label": "Dejah Thoris",
+      "canonical_id": "dejah_thoris",
+      "display_name": "dejah_thoris",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH010/dejah_thoris.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'dejah_thoris'"
     }
   ],
   "environment": {
@@ -36,12 +46,13 @@
     "BT002"
   ],
   "continuity_constraints": [
-    "Sola's entrance and level of urgency",
-    "Character reaction timing to the news delivery",
-    "sola enters with urgent high-stakes news."
+    "Sola's entrance/urgency",
+    "character reactions to the news.",
+    "Carry the emotional arc through: Intimacy $\\rightarrow$ Shock/Terror..",
+    "Resolve Dejah Thoris's quarters -> Dejah Thoris's quarters"
   ],
-  "prompt_seed": "Action 2: sola enters with urgent, high-stakes news.. action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in Dejah Thoris's quarters with sola crossing the frame and maintaining readable movement. Cast: sola. Environment: Dejah Thoris's quarters. Beat: sola enters with urgen...",
-  "shot_notes": "sola enters with urgent, high-stakes news.",
+  "prompt_seed": "Action 2: Carry the emotional arc through: Intimacy $\\rightar.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in Dejah Thoris's quarters with john_carter, dejah_thoris crossing the frame and maintaining readable movement. Cast: john_carter, dejah_thoris. Environment:...",
+  "shot_notes": "Carry the emotional arc through: Intimacy $\\rightarrow$ Shock/Terror..",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -99,38 +110,37 @@
     }
   ],
   "evidence_summary": [
-    "Establish the immediate escalation of danger by transitioning the narrative focus from a mere escape attempt to a direct threat against Dejah Thoris's life. The scene must utilize handheld camera work and tight reaction shots to convey the sudden shift from...",
+    "Introduce the primary antagonist's threat and raise the stakes from \"escape\" to \"survival.\"",
     "Sola arrives with urgent news: Sarkoja has advised Tal Hajus to sacrifice Dejah Thoris to the wild dogs during the upcoming yearly games.",
     "Intimacy $\\rightarrow$ Shock/Terror.",
     "Reaction shots (close-ups)",
-    "Medium shots (three-character interaction)",
-    "Handheld camera (urgency/instability)",
-    "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in...",
-    "sola | Sola is a female Green Martian, also identified as a Thark. Her visual identity is defined by her species' characteristic green coloring and traditional Green Martian attire. While specific physical proportions are not detailed, she is established as...",
-    "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b..."
+    "medium shots of the three characters interacting",
+    "handheld camera to increase urgency.",
+    "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b...",
+    "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in..."
   ],
   "metadata": {
     "artifact_id": "CH016_SC004_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "d564ff41a83eccd82fa26115c926590c5d7283ad",
+    "source_fingerprint": "ffaa0ebda88c0d3c60afefeca7b21f1ad48c2ddd",
     "created_at_utc": "2026-04-22T02:12:09.303143+00:00",
-    "updated_at_utc": "2026-04-22T08:29:10.275729+00:00",
+    "updated_at_utc": "2026-04-22T16:30:41.322443+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH016_SC004",
-        "version": "dda906499e30294277b060af4c1373426ffab442"
+        "version": "f6d1e1ea5bb8b4c5bc67445832cbdb2d7d6bee1b"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH016_SC004",
-        "version": "22c59a77ac76d3e0cd146bdfd6b8823c5d1a726d"
+        "version": "c3061cfd0387b8797a25f783b0f988691823e3fc"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH016_SC004",
-        "version": "8806bc6e666b3aefa4a6bfd1400efdc0fcc2990c"
+        "version": "0d2721bd15a8a98a338302b668798bec151262c4"
       }
     ],
     "locked_fields": {},
@@ -145,6 +155,11 @@
         "timestamp_utc": "2026-04-22T08:29:34.833715+00:00",
         "action": "synthesized",
         "source_fingerprint": "d564ff41a83eccd82fa26115c926590c5d7283ad"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:30:41.322443+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "ffaa0ebda88c0d3c60afefeca7b21f1ad48c2ddd"
       }
     ]
   }

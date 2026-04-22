@@ -6,7 +6,7 @@
     "shot_order": 1,
     "previous_shot_id": "",
     "next_shot_id": "SH002",
-    "shot_title": "Action 1: Martian Warrior Approach",
+    "shot_title": "Action 1: A respectful but menacing Martian warrior presents...",
     "shot_type": "action",
     "camera_description": "Active camera with tracking energy and clear spatial orientation.",
     "composition": "Dynamic composition in Exterior/Plaza area with protagonist crossing the frame and maintaining readable movement.",
@@ -37,11 +37,13 @@
       "BT001"
     ],
     "continuity_constraints": [
-      "Precise appearance and fit of the specialized Martian combat arms and ornaments",
-      "The martian_warrior approaches the protagonist with a respectful but menacing demeanor."
+      "The specific appearance and fit of the new Martian arms and ornaments.",
+      "A respectful but menacing Martian warrior presents the protagonist with specialized combat arms and ornaments",
+      "marking his transition from outsider to trainee.",
+      "Resolve Exterior/Plaza area -> Exterior/Plaza area"
     ],
-    "prompt_seed": "Action 1: The martian_warrior approaches the protagonist with.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in Exterior/Plaza area with protagonist crossing the frame and maintaining readable movement. Cast: protagonist. Environment: Exterior/Plaza area. Beat: The...",
-    "shot_notes": "The martian_warrior approaches the protagonist with a respectful but menacing demeanor.",
+    "prompt_seed": "Action 1: A respectful but menacing Martian warrior presents.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in Exterior/Plaza area with protagonist crossing the frame and maintaining readable movement. Cast: protagonist. Environment: Exterior/Plaza area. Beat: A res...",
+    "shot_notes": "A respectful but menacing Martian warrior presents the protagonist with specialized combat arms and ornaments, marking his transition from outsider to trainee.",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -99,12 +101,12 @@
       }
     ],
     "evidence_summary": [
-      "The scene must establish the protagonist's transition from an outsider to a trainee within Martian warrior culture. The interaction between the martian_warrior and protagonist should balance respect with menace, utilizing the ritualistic presentation of spe...",
+      "Establish the protagonist's integration into Martian warrior culture through a ritualistic gift.",
       "A respectful but menacing Martian warrior presents the protagonist with specialized combat arms and ornaments, marking his transition from outsider to trainee.",
       "Tension $\\rightarrow$ Acceptance/Duty.",
-      "Close-ups on ornate weaponry and ornaments",
-      "Medium shots of martian_warrior's intimidating presence",
-      "Reaction shots of protagonist",
+      "Close-ups on the ornate weaponry",
+      "medium shots of the warrior's intimidating presence",
+      "reaction shots of the protagonist.",
       "protagonist | An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeless\" physic...",
       "martian_warrior | No visual data is available in the provided evidence to establish a stable physical identity, costume, or movement language for this character. The character is identified as an individual entity within a Martian context, but specific phys..."
     ],
@@ -112,24 +114,24 @@
       "artifact_id": "CH009_SC001_SH001_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "95bd375b77fac0988f161b389108ab39ba4024e1",
+      "source_fingerprint": "7b8a86ed6f5df0811914ea5370c5acfa42e4683b",
       "created_at_utc": "2026-04-22T01:15:46.005928+00:00",
-      "updated_at_utc": "2026-04-22T07:45:08.944215+00:00",
+      "updated_at_utc": "2026-04-22T16:30:39.577502+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH009_SC001",
-          "version": "9188fba09b4a60e63437e802ab8e6a8126ab0c93"
+          "version": "b43ca6504b1b33a0f41294ce815a8c7c691375ea"
         },
         {
           "dependency_type": "scene_binding",
           "dependency_id": "CH009_SC001",
-          "version": "60e6c090c4b0b701e14b934800aad235e5f2bfe3"
+          "version": "4b3006896aa074d025d02b94466cb094756b8077"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH009_SC001",
-          "version": "254571e5a44cf18096ca8b0723b326c61097476a"
+          "version": "ba2408fe796bd5ededd5a128aab5798231db707e"
         }
       ],
       "locked_fields": {},
@@ -144,6 +146,11 @@
           "timestamp_utc": "2026-04-22T07:45:32.713433+00:00",
           "action": "synthesized",
           "source_fingerprint": "95bd375b77fac0988f161b389108ab39ba4024e1"
+        },
+        {
+          "timestamp_utc": "2026-04-22T16:30:39.577502+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "7b8a86ed6f5df0811914ea5370c5acfa42e4683b"
         }
       ]
     }
@@ -155,12 +162,22 @@
     "shot_order": 2,
     "previous_shot_id": "SH001",
     "next_shot_id": "SH003",
-    "shot_title": "Action 2: Presentation of Gift",
+    "shot_title": "Action 2: Carry the emotional arc through: Tension $\\rightarr...",
     "shot_type": "action",
     "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-    "composition": "Dynamic composition in Exterior/Plaza area with martian_warrior crossing the frame and maintaining readable movement.",
+    "composition": "Dynamic composition in Exterior/Plaza area with protagonist, martian_warrior crossing the frame and maintaining readable movement.",
     "target_seconds": 5.8,
     "characters_in_frame": [
+      {
+        "label": "The Protagonist",
+        "canonical_id": "protagonist",
+        "display_name": "protagonist",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 176,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
+      },
       {
         "label": "Martian Warrior",
         "canonical_id": "martian_warrior",
@@ -186,11 +203,12 @@
       "BT002"
     ],
     "continuity_constraints": [
-      "Precise appearance and fit of the specialized Martian combat arms and ornaments",
-      "The martian_warrior presents the ritualistic gift of specialized combat arms and ornaments."
+      "The specific appearance and fit of the new Martian arms and ornaments.",
+      "Carry the emotional arc through: Tension $\\rightarrow$ Acceptance/Duty..",
+      "Resolve Exterior/Plaza area -> Exterior/Plaza area"
     ],
-    "prompt_seed": "Action 2: The martian_warrior presents the ritualistic gift o.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in Exterior/Plaza area with martian_warrior crossing the frame and maintaining readable movement. Cast: martian_warrior. Environment: Exterior/Plaza area. Be...",
-    "shot_notes": "The martian_warrior presents the ritualistic gift of specialized combat arms and ornaments.",
+    "prompt_seed": "Action 2: Carry the emotional arc through: Tension $\\rightarr.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in Exterior/Plaza area with protagonist, martian_warrior crossing the frame and maintaining readable movement. Cast: protagonist, martian_warrior. Environmen...",
+    "shot_notes": "Carry the emotional arc through: Tension $\\rightarrow$ Acceptance/Duty..",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -248,12 +266,12 @@
       }
     ],
     "evidence_summary": [
-      "The scene must establish the protagonist's transition from an outsider to a trainee within Martian warrior culture. The interaction between the martian_warrior and protagonist should balance respect with menace, utilizing the ritualistic presentation of spe...",
+      "Establish the protagonist's integration into Martian warrior culture through a ritualistic gift.",
       "A respectful but menacing Martian warrior presents the protagonist with specialized combat arms and ornaments, marking his transition from outsider to trainee.",
       "Tension $\\rightarrow$ Acceptance/Duty.",
-      "Close-ups on ornate weaponry and ornaments",
-      "Medium shots of martian_warrior's intimidating presence",
-      "Reaction shots of protagonist",
+      "Close-ups on the ornate weaponry",
+      "medium shots of the warrior's intimidating presence",
+      "reaction shots of the protagonist.",
       "protagonist | An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeless\" physic...",
       "martian_warrior | No visual data is available in the provided evidence to establish a stable physical identity, costume, or movement language for this character. The character is identified as an individual entity within a Martian context, but specific phys..."
     ],
@@ -261,24 +279,24 @@
       "artifact_id": "CH009_SC001_SH002_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "95bd375b77fac0988f161b389108ab39ba4024e1",
+      "source_fingerprint": "7b8a86ed6f5df0811914ea5370c5acfa42e4683b",
       "created_at_utc": "2026-04-22T01:16:16.300992+00:00",
-      "updated_at_utc": "2026-04-22T07:45:32.722433+00:00",
+      "updated_at_utc": "2026-04-22T16:30:39.591865+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH009_SC001",
-          "version": "9188fba09b4a60e63437e802ab8e6a8126ab0c93"
+          "version": "b43ca6504b1b33a0f41294ce815a8c7c691375ea"
         },
         {
           "dependency_type": "scene_binding",
           "dependency_id": "CH009_SC001",
-          "version": "60e6c090c4b0b701e14b934800aad235e5f2bfe3"
+          "version": "4b3006896aa074d025d02b94466cb094756b8077"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH009_SC001",
-          "version": "254571e5a44cf18096ca8b0723b326c61097476a"
+          "version": "ba2408fe796bd5ededd5a128aab5798231db707e"
         }
       ],
       "locked_fields": {},
@@ -293,6 +311,11 @@
           "timestamp_utc": "2026-04-22T07:45:49.188857+00:00",
           "action": "synthesized",
           "source_fingerprint": "95bd375b77fac0988f161b389108ab39ba4024e1"
+        },
+        {
+          "timestamp_utc": "2026-04-22T16:30:39.591865+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "7b8a86ed6f5df0811914ea5370c5acfa42e4683b"
         }
       ]
     }
@@ -304,10 +327,10 @@
     "shot_order": 3,
     "previous_shot_id": "SH002",
     "next_shot_id": "",
-    "shot_title": "Action 3: The protagonist receives the gear",
+    "shot_title": "Action 3: Land the scene consequence or transition cleanly.",
     "shot_type": "action",
     "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-    "composition": "Dynamic composition in Exterior/Plaza area with protagonist crossing the frame and maintaining readable movement.",
+    "composition": "Dynamic composition in Exterior/Plaza area with protagonist, martian_warrior crossing the frame and maintaining readable movement.",
     "target_seconds": 5.6,
     "characters_in_frame": [
       {
@@ -319,6 +342,16 @@
         "resolution_score": 176,
         "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
         "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
+      },
+      {
+        "label": "Martian Warrior",
+        "canonical_id": "martian_warrior",
+        "display_name": "martian_warrior",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 176,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/martian_warrior.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'martian_warrior'"
       }
     ],
     "environment": {
@@ -335,11 +368,12 @@
       "BT003"
     ],
     "continuity_constraints": [
-      "Precise appearance and fit of the specialized Martian combat arms and ornaments",
-      "The protagonist receives the gear, marking his transition from outsider to trainee."
+      "The specific appearance and fit of the new Martian arms and ornaments.",
+      "Land the scene consequence or transition cleanly.",
+      "Resolve Exterior/Plaza area -> Exterior/Plaza area"
     ],
-    "prompt_seed": "Action 3: The protagonist receives the gear, marking his tran.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in Exterior/Plaza area with protagonist crossing the frame and maintaining readable movement. Cast: protagonist. Environment: Exterior/Plaza area. Beat: The...",
-    "shot_notes": "The protagonist receives the gear, marking his transition from outsider to trainee.",
+    "prompt_seed": "Action 3: Land the scene consequence or transition cleanly.. action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in Exterior/Plaza area with protagonist, martian_warrior crossing the frame and maintaining readable movement. Cast: protagonist, martian_warrior. Environment: Ex...",
+    "shot_notes": "Land the scene consequence or transition cleanly.",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -397,12 +431,12 @@
       }
     ],
     "evidence_summary": [
-      "The scene must establish the protagonist's transition from an outsider to a trainee within Martian warrior culture. The interaction between the martian_warrior and protagonist should balance respect with menace, utilizing the ritualistic presentation of spe...",
+      "Establish the protagonist's integration into Martian warrior culture through a ritualistic gift.",
       "A respectful but menacing Martian warrior presents the protagonist with specialized combat arms and ornaments, marking his transition from outsider to trainee.",
       "Tension $\\rightarrow$ Acceptance/Duty.",
-      "Close-ups on ornate weaponry and ornaments",
-      "Medium shots of martian_warrior's intimidating presence",
-      "Reaction shots of protagonist",
+      "Close-ups on the ornate weaponry",
+      "medium shots of the warrior's intimidating presence",
+      "reaction shots of the protagonist.",
       "protagonist | An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeless\" physic...",
       "martian_warrior | No visual data is available in the provided evidence to establish a stable physical identity, costume, or movement language for this character. The character is identified as an individual entity within a Martian context, but specific phys..."
     ],
@@ -410,24 +444,24 @@
       "artifact_id": "CH009_SC001_SH003_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "95bd375b77fac0988f161b389108ab39ba4024e1",
+      "source_fingerprint": "7b8a86ed6f5df0811914ea5370c5acfa42e4683b",
       "created_at_utc": "2026-04-22T01:16:40.577314+00:00",
-      "updated_at_utc": "2026-04-22T07:45:49.196859+00:00",
+      "updated_at_utc": "2026-04-22T16:30:39.605873+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH009_SC001",
-          "version": "9188fba09b4a60e63437e802ab8e6a8126ab0c93"
+          "version": "b43ca6504b1b33a0f41294ce815a8c7c691375ea"
         },
         {
           "dependency_type": "scene_binding",
           "dependency_id": "CH009_SC001",
-          "version": "60e6c090c4b0b701e14b934800aad235e5f2bfe3"
+          "version": "4b3006896aa074d025d02b94466cb094756b8077"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH009_SC001",
-          "version": "254571e5a44cf18096ca8b0723b326c61097476a"
+          "version": "ba2408fe796bd5ededd5a128aab5798231db707e"
         }
       ],
       "locked_fields": {},
@@ -442,6 +476,11 @@
           "timestamp_utc": "2026-04-22T07:46:05.923679+00:00",
           "action": "synthesized",
           "source_fingerprint": "95bd375b77fac0988f161b389108ab39ba4024e1"
+        },
+        {
+          "timestamp_utc": "2026-04-22T16:30:39.605873+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "7b8a86ed6f5df0811914ea5370c5acfa42e4683b"
         }
       ]
     }

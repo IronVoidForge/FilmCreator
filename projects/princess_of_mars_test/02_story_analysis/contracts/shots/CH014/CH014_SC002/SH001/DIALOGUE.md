@@ -4,9 +4,9 @@
 - scene_id: `CH014_SC002`
 - dialogue_events: `1`
 
-## CH014_DLG014
+## CH014_DLG011
 
-- speaker: `john_carter`
-- source_ref: `CH014:p021:q01`
+- speaker: `the woman`
+- source_ref: `CH014:p011:q01`
 - clip_id: `CL001`
-- dialogue_text: What does this mean?
+- dialogue_text: The man of Barsoom,

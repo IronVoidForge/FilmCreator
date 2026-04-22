@@ -2,11 +2,6 @@
 
 - shot_id: `SH003`
 - scene_id: `CH019_SC001`
-- dialogue_events: `1`
+- dialogue_events: `0`
 
-## CH019_DLG002
-
-- speaker: `unresolved`
-- source_ref: `CH019:p006:q01`
-- clip_id: `CL003`
-- dialogue_text: John Carter, a friend of the red men of Helium.
+- No dialogue events were bound to this shot.

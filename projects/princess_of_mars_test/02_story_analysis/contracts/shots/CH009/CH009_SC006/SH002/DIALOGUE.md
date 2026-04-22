@@ -2,11 +2,6 @@
 
 - shot_id: `SH002`
 - scene_id: `CH009_SC006`
-- dialogue_events: `1`
+- dialogue_events: `0`
 
-## CH009_DLG008
-
-- speaker: `sola`
-- source_ref: `CH009:p018:q01`
-- clip_id: `CL002`
-- dialogue_text: I see nothing wrong with my expression of interest in this red woman,
+- No dialogue events were bound to this shot.

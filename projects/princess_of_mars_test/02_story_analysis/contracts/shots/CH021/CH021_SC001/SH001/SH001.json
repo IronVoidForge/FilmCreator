@@ -5,11 +5,11 @@
   "shot_order": 1,
   "previous_shot_id": "",
   "next_shot_id": "SH002",
-  "shot_title": "Establishing Wide 1: Carter travels through the agricultural tracts",
+  "shot_title": "Establishing Wide 1: John Carter travels through the agricultural tracts...",
   "shot_type": "establishing_wide",
   "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across Martian agricultural tracts (underground water conduits/refined flora) with john_carter placed for immediate spatial orientation.",
-  "target_seconds": 5.2,
+  "composition": "Wide composition across Martian agricultural tracts (underground water conduits/refined flora) with john_carter, Zodangan Noble placed for immediate spatial orientation.",
+  "target_seconds": 5.5,
   "characters_in_frame": [
     {
       "label": "John Carter",
@@ -20,6 +20,16 @@
       "resolution_score": 186,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
       "notes": "asset id exactly matches canonical id | query matches alias 'john_carter'"
+    },
+    {
+      "label": "Zodangan Noble",
+      "canonical_id": null,
+      "display_name": "Zodangan Noble",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 10,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
+      "notes": "apache_warriors | source context shares query language"
     }
   ],
   "environment": {
@@ -36,11 +46,15 @@
     "BT001"
   ],
   "continuity_constraints": [
-    "John Carter's travel gear/appearance (rugged survivor/1860s frontier attire)",
-    "Visual consistency of \"refined\" Martian flora and underground water conduits"
+    "Carter's travel gear/appearance",
+    "The specific visual look of the \"refined\" Martian flora.",
+    "John Carter travels through the agricultural tracts toward Zodanga",
+    "observing Martian technology. He stops at a farmhouse where a Zodangan noble informs him that the war is unpopular and shares the grim rumor that Dejah Thoris may have perished during an encounter with Tharks and Warhoons.",
+    "Resolve Zodangan Noble -> Zodangan Noble",
+    "Resolve Martian agricultural tracts (underground water conduits/refined flora) -> Martian agricultural tracts (underground water conduits/refined flora)"
   ],
-  "prompt_seed": "Establishing Wide 1: Carter travels through the agricultural tracts, obs.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across Martian agricultural tracts (underground water conduits/refined flora) with john_carter placed for immediate spatial orientation.",
-  "shot_notes": "Carter travels through the agricultural tracts, observing Martian technology and refined flora.",
+  "prompt_seed": "Establishing Wide 1: John Carter travels through the agricultural tracts.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across Martian agricultural tracts (underground water conduits/refined flora) with john_carter, Zodangan Noble placed for immediate spatia...",
+  "shot_notes": "John Carter travels through the agricultural tracts toward Zodanga, observing Martian technology. He stops at a farmhouse where a Zodangan noble informs him that the war is unpopular and shares the grim rumor that Dej...",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -98,36 +112,36 @@
     }
   ],
   "evidence_summary": [
-    "Establish the Martian landscape through its advanced agricultural technology and transition the tone from curiosity regarding the environment to dread following news of political unrest and personal tragedy. The scene must ground the scale of the Martian tr...",
+    "Establish the setting, provide exposition regarding the war's unpopularity, and introduce the tragic rumor of Dejah Thoris's death.",
     "John Carter travels through the agricultural tracts toward Zodanga, observing Martian technology. He stops at a farmhouse where a Zodangan noble informs him that the war is unpopular and shares the grim rumor that Dejah Thoris may have perished during an en...",
     "Curiosity $\\rightarrow$ Somberness/Dread.",
     "Wide landscape shots of Martian agriculture",
-    "Medium close-ups of Carter and Noble conversation",
-    "Close-ups on Carter's reaction",
+    "Medium close-ups of the conversation between Carter and the Noble",
+    "Close-ups on Carter's reaction to the news.",
     "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in..."
   ],
   "metadata": {
     "artifact_id": "CH021_SC001_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "ac36fef31a92cdc44898935d00dcba595e542ba2",
+    "source_fingerprint": "74969be034a3d5c45c0b726327d81a4894398633",
     "created_at_utc": "2026-04-22T02:48:47.613789+00:00",
-    "updated_at_utc": "2026-04-22T09:05:38.196943+00:00",
+    "updated_at_utc": "2026-04-22T16:30:42.573246+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH021_SC001",
-        "version": "36f54b12060da003e362d91c8e48137cacb47771"
+        "version": "bf2a8c1eba26c4f58441fce665461ff195b5ac73"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH021_SC001",
-        "version": "9a27784d79623f5f391b8b309bed0b1922754a01"
+        "version": "85ed3b775d759477ba0fe516b8b73ca550875162"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH021_SC001",
-        "version": "3594758845d95a5f6791bb280f05270e843a6e8e"
+        "version": "c96dc181c95b729b0e854b6a5ec344e9ade564bf"
       }
     ],
     "locked_fields": {},
@@ -142,6 +156,11 @@
         "timestamp_utc": "2026-04-22T09:06:10.627977+00:00",
         "action": "synthesized",
         "source_fingerprint": "ac36fef31a92cdc44898935d00dcba595e542ba2"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:30:42.573747+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "74969be034a3d5c45c0b726327d81a4894398633"
       }
     ]
   }

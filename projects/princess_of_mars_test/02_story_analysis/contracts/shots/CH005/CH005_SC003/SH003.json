@@ -5,12 +5,22 @@
   "shot_order": 3,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Action 3: The relentless pursuit of the_watch_dog intensifies...",
-  "shot_type": "action",
-  "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-  "composition": "Dynamic composition in Deserted Martian city streets with the_watch_dog crossing the frame and maintaining readable movement.",
-  "target_seconds": 5.5,
+  "shot_title": "Closing Reaction 3: Land the scene consequence or transition cleanly.",
+  "shot_type": "closing_reaction",
+  "camera_description": "Controlled closing frame that lands the consequence of the beat.",
+  "composition": "Closing composition in Deserted Martian city streets that emphasizes the consequence of land the scene consequence or transition cleanly..",
+  "target_seconds": 4.6,
   "characters_in_frame": [
+    {
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 176,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
+    },
     {
       "label": "The Watch Dog",
       "canonical_id": "the_watch_dog",
@@ -36,12 +46,13 @@
     "BT003"
   ],
   "continuity_constraints": [
-    "Precise height and distance measurements for all jumps to maintain physical logic",
-    "Strict timing of the_watch_dog's arrival at specific street corners relative to protagonist position",
-    "The relentless pursuit of the_watch_dog intensifies, closing the gap."
+    "The height and distance of jumps",
+    "the timing of the dog's arrival at various street corners.",
+    "Land the scene consequence or transition cleanly.",
+    "Resolve Deserted Martian city streets -> Deserted Martian city streets"
   ],
-  "prompt_seed": "Action 3: The relentless pursuit of the_watch_dog intensifies.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in Deserted Martian city streets with the_watch_dog crossing the frame and maintaining readable movement. Cast: the_watch_dog. Environment: Deserted Martian...",
-  "shot_notes": "The relentless pursuit of the_watch_dog intensifies, closing the gap.",
+  "prompt_seed": "Closing Reaction 3: Land the scene consequence or transition cleanly.. closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in Deserted Martian city streets that emphasizes the consequence of land the scene consequence or transition cleanly.. Cast: protagonist, the_w...",
+  "shot_notes": "Land the scene consequence or transition cleanly.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -99,12 +110,11 @@
     }
   ],
   "evidence_summary": [
-    "Execute a high-intensity pursuit sequence through the deserted Martian city streets, leveraging low-gravity physics to showcase the protagonist's extreme agility and superior jumping capabilities. The choreography must emphasize the physical exertion of the...",
+    "To escalate the tension through a high-stakes pursuit and showcase the protagonist's agility.",
     "A frantic chase ensues through the deserted streets of the Martian city. The protagonist uses his superior jumping ability to navigate the urban landscape, attempting to stay ahead of the relentless Watch Dog.",
     "Adrenaline/Exertion $\\rightarrow$ Desperation. **Likely Visual Coverage Families:** - Wide sweeping shots of the Martian architecture. - Dynamic tracking shots (gimbal or drone) following the chase. - POV shots from t...",
-    "Wide sweeping shots of Martian architecture",
-    "Dynamic tracking shots (gimbal or drone) following the chase",
-    "POV shots from protagonist jumping between structures",
+    "The height and distance of jumps",
+    "the timing of the dog's arrival at various street corners.",
     "protagonist | An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeless\" physic...",
     "the_watch_dog | No visual data is available for this character in the provided evidence. A stable visual identity cannot be established at this time. | unknown | unknown"
   ],
@@ -112,24 +122,24 @@
     "artifact_id": "CH005_SC003_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "c3768dcd5bbfd606d879184d1707a030c15cf376",
+    "source_fingerprint": "7569106d7d44f5471254ea3e8b67730a3ec9eda8",
     "created_at_utc": "2026-04-22T00:45:58.065901+00:00",
-    "updated_at_utc": "2026-04-22T07:22:15.465408+00:00",
+    "updated_at_utc": "2026-04-22T16:30:38.763083+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH005_SC003",
-        "version": "bba7b50a36e145fff6bd90accf7736d35bd43009"
+        "version": "f1e740469edf05087753e99d30bb177957df76b8"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH005_SC003",
-        "version": "7b2f94b3fe7b6bed7dfe97afcfbfc4d13eedb9ea"
+        "version": "64e2438c7d2e4504121eaade89852000b74141f3"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH005_SC003",
-        "version": "fe986808a941304d72e20f5409a97cf065f24035"
+        "version": "fca3c78cd4c142385b71b09e7538574fb2cf5585"
       }
     ],
     "locked_fields": {},
@@ -144,6 +154,11 @@
         "timestamp_utc": "2026-04-22T07:22:39.088630+00:00",
         "action": "synthesized",
         "source_fingerprint": "c3768dcd5bbfd606d879184d1707a030c15cf376"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:30:38.763583+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "7569106d7d44f5471254ea3e8b67730a3ec9eda8"
       }
     ]
   }

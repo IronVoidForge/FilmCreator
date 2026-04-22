@@ -1,6 +1,5 @@
 # Shot Index
 
-- `SH001` - Establishing Wide 1: The Protagonist is pinned by a massive Bull Ape. (type=establishing_wide, target=5.2s, beat_ids=BT001, cast=1, env=Interior chamber, prev=(none), next=SH002)
-- `SH002` - Insert Detail 2: The Bull Ape's mate approaches, armed with a stone... (type=insert_detail, target=5.0s, beat_ids=BT002, cast=1, env=Interior chamber, prev=SH001, next=SH003)
-- `SH003` - Insert Detail 3: The Watch-thing leaps into the fray to intercept th... (type=insert_detail, target=5.0s, beat_ids=BT003, cast=1, env=Interior chamber, prev=SH002, next=SH004)
-- `SH004` - Insert Detail 4: A brutal struggle ensues between the Watch-thing an... (type=insert_detail, target=4.8s, beat_ids=BT004, cast=1, env=Interior chamber, prev=SH003, next=(none))
+- `SH001` - Medium 1: The protagonist is pinned by a massive Bull Ape. (type=medium, target=5.5s, beat_ids=BT001, cast=1, env=Interior chamber, prev=(none), next=SH002)
+- `SH002` - Medium 2: As its mate approaches with a stone cudgel to finis... (type=medium, target=5.3s, beat_ids=BT002, cast=1, env=Interior chamber, prev=SH001, next=SH003)
+- `SH003` - Closing Reaction 3: **Participating Characters:** - The Protagonist - T... (type=closing_reaction, target=4.6s, beat_ids=BT003, cast=1, env=Interior chamber, prev=SH002, next=(none))

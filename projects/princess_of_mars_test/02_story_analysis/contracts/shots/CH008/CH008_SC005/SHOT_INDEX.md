@@ -1,6 +1,5 @@
 # Shot Index
 
-- `SH001` - Action 1: protagonist returns to City Plaza and spots the_pri... (type=action, target=5.7s, beat_ids=BT001, cast=1, env=City Plaza, prev=(none), next=SH002)
-- `SH002` - Action 2: the_prisoner makes eye contact and performs a silen... (type=action, target=5.5s, beat_ids=BT002, cast=1, env=City Plaza, prev=SH001, next=SH003)
-- `SH003` - Action 3: protagonist observes the interaction but fails to r... (type=action, target=5.5s, beat_ids=BT003, cast=1, env=City Plaza, prev=SH002, next=SH004)
-- `SH004` - Action 4: the_prisoner is led away, shifting from hope to con... (type=action, target=5.3s, beat_ids=BT004, cast=2, env=City Plaza, prev=SH003, next=(none))
+- `SH001` - Action 1: Returning to the plaza, the protagonist sees a beau... (type=action, target=6.0s, beat_ids=BT001, cast=1, env=City Plaza, prev=(none), next=SH002)
+- `SH002` - Action 2: Carry the emotional arc through: Curiosity $\righta... (type=action, target=5.8s, beat_ids=BT002, cast=2, env=City Plaza, prev=SH001, next=SH003)
+- `SH003` - Action 3: Land the scene consequence or transition cleanly. (type=action, target=5.6s, beat_ids=BT003, cast=2, env=City Plaza, prev=SH002, next=(none))

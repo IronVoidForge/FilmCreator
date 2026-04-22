@@ -5,12 +5,22 @@
   "shot_order": 2,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Insert Detail 2: Reaction",
+  "shot_title": "Insert Detail 2: Carry the emotional arc through: Determination $\\ri...",
   "shot_type": "insert_detail",
   "camera_description": "Tight detail framing focused on a single visual object or gesture.",
   "composition": "Detail composition centered on the key physical action or prop inside Thark (City).",
   "target_seconds": 5.3,
   "characters_in_frame": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'john_carter'"
+    },
     {
       "label": "Tars Tarkas",
       "canonical_id": "tars_tarkas",
@@ -36,10 +46,13 @@
     "BT002"
   ],
   "continuity_constraints": [
-    "Scale of the army depicted in wide shots (150,000 warriors)"
+    "Scale of the army depicted in wide shots.",
+    "Carry the emotional arc through: Determination $\\rightarrow$ Collective Zeal..",
+    "Resolve Thark Warriors/Hordes -> Thark Warriors/Hordes",
+    "Resolve Thark (City) -> Thark (City)"
   ],
-  "prompt_seed": "Insert Detail 2: Tars Tarkas and the Thark hordes react to the propo.... insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside Thark (City). Cast: tars_tarkas. Environment: Thark (City). Beat: Tars Tarkas and the Thark...",
-  "shot_notes": "Tars Tarkas and the Thark hordes react to the proposal.",
+  "prompt_seed": "Insert Detail 2: Carry the emotional arc through: Determination $\\ri.... insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside Thark (City). Cast: john_carter, tars_tarkas. Environment: Thark (City). Beat: Carry the emo...",
+  "shot_notes": "Carry the emotional arc through: Determination $\\rightarrow$ Collective Zeal..",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -97,12 +110,12 @@
     }
   ],
   "evidence_summary": [
-    "The scene must visually communicate the transition of John Carter from a survivor to a leader by staging a massive mobilization. The scale of the Thark army (150,000 warriors) is the primary production challenge and must be established through layered wide...",
+    "Establish the new mission and scale of the upcoming conflict.",
     "Now a chieftain, John Carter proposes an ambitious raid on Zodanga to rescue Dejah Thoris. The Thark hordes enthusiastically commit to the cause, amassing a massive army of 150,000 warriors.",
     "Determination $\\rightarrow$ Collective Zeal.",
     "Wide shots of the gathering masses",
     "Medium shots of Carter delivering his proposal",
-    "Close-ups of the warriors' fervor",
+    "Close-ups of the warriors' fervor.",
     "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in...",
     "tars_tarkas | Tars Tarkas is a prominent Thark warrior and leader characterized by green skin. He carries himself with a professional demeanor, embodying the strength and combat skill valued by his Martian culture. His appearance is defined by standard Mart..."
   ],
@@ -110,24 +123,24 @@
     "artifact_id": "CH024_SC005_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "eceb5169a469b6c69629e2d2a2ec266dd2fa7112",
+    "source_fingerprint": "d623a538306e91136b7718539f42dd397a82962b",
     "created_at_utc": "2026-04-22T03:25:31.775530+00:00",
-    "updated_at_utc": "2026-04-22T15:43:32.545526+00:00",
+    "updated_at_utc": "2026-04-22T16:30:43.733376+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH024_SC005",
-        "version": "8325271a81f21f70ec7620775acfb91b67d9e6eb"
+        "version": "f953bc0a2e0c893a6cabaff864a0050cbf1affa8"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH024_SC005",
-        "version": "a8d7e4104fb364be4d0c075eafe48ec312bece21"
+        "version": "1068ec76636ab1ceae4ec53972bfe7254f34834b"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH024_SC005",
-        "version": "0cf328c225ad45c86f99f4cb494437a2b48e714f"
+        "version": "98e60df8fa37c14ee27abdfd92754c86816c52af"
       }
     ],
     "locked_fields": {},
@@ -142,6 +155,11 @@
         "timestamp_utc": "2026-04-22T15:43:47.106022+00:00",
         "action": "synthesized",
         "source_fingerprint": "eceb5169a469b6c69629e2d2a2ec266dd2fa7112"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:30:43.733376+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d623a538306e91136b7718539f42dd397a82962b"
       }
     ]
   }

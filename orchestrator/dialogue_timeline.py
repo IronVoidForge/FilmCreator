@@ -715,6 +715,7 @@ def run_dialogue_timeline(
     *,
     force: bool = False,
     chapters: str | None = None,
+    run_tracker: "DownstreamRunTracker | None" = None,
 ) -> DialogueTimelineSummary:
     project_dir = create_project(project_slug)
     timeline_root = project_dir / "02_story_analysis" / "timelines"
@@ -733,6 +734,9 @@ def run_dialogue_timeline(
     edit_entries: list[dict[str, Any]] = []
     written_files: list[str] = []
     all_events: list[DialogueEvent] = []
+    phase_name = "dialogue_timeline"
+    if run_tracker is not None:
+        run_tracker.set_phase_total(phase_name, len(book_entries))
 
     for chapter_entry in book_entries:
         chapter_id = str(chapter_entry.get("chapter_id", "")).strip().upper()
@@ -752,6 +756,57 @@ def run_dialogue_timeline(
         lexicon = _build_speaker_lexicon(registry)
         scene_contracts = scene_contracts_by_chapter.get(chapter_id, [])
         shot_indexes = shot_indexes_by_chapter.get(chapter_id, {})
+        chapter_json = chapter_path / f"{chapter_id}_DIALOGUE_TIMELINE.json"
+        chapter_md = chapter_path / f"{chapter_id}_DIALOGUE_TIMELINE.md"
+        chapter_fp = _fingerprint([paragraph.get("text", "") for paragraph in paragraphs])
+        if run_tracker is not None and run_tracker.is_item_completed(phase_name, chapter_id, chapter_fp) and chapter_json.exists():
+            existing_payload = read_json(chapter_json)
+            if isinstance(existing_payload, dict):
+                chapter_events_payload = existing_payload.get("dialogue_events", [])
+                if isinstance(existing_payload.get("review_notes"), list):
+                    review_queue.extend([item for item in existing_payload.get("review_notes", []) if isinstance(item, dict)])
+                if isinstance(chapter_events_payload, list):
+                    all_events.extend([DialogueEvent(**item) for item in chapter_events_payload if isinstance(item, dict)])
+                chapter_summaries.append(
+                    {
+                        "chapter_id": chapter_id,
+                        "chapter_title": chapter_title,
+                        "source_path": path_to_manifest_value(source_path),
+                        "dialogue_events": len(chapter_events_payload) if isinstance(chapter_events_payload, list) else 0,
+                        "unresolved_speakers": len(
+                            [
+                                item
+                                for item in chapter_events_payload
+                                if isinstance(item, dict)
+                                and isinstance(item.get("speaker"), dict)
+                                and str(item.get("speaker", {}).get("status", "")).strip() == "unresolved"
+                            ]
+                        ) if isinstance(chapter_events_payload, list) else 0,
+                        "scene_count": len(scene_contracts),
+                        "shot_count": sum(len(shot_indexes.get(str(scene.get('scene_id', '')).strip().upper(), [])) for scene in scene_contracts),
+                    }
+                )
+                edit_entries.append(
+                    {
+                        "chapter_id": chapter_id,
+                        "chapter_title": chapter_title,
+                        "scene_count": len(scene_contracts),
+                        "dialogue_events": len(chapter_events_payload) if isinstance(chapter_events_payload, list) else 0,
+                        "estimated_duration_seconds": max(10, (len(chapter_events_payload) if isinstance(chapter_events_payload, list) else 0) * 3 + len(scene_contracts) * 5),
+                        "transition_note": _compact_snippet(
+                            " / ".join(
+                                part
+                                for part in [
+                                    str(scene_contracts[0].get("emotional_arc", "")) if scene_contracts else "",
+                                    str(scene_contracts[-1].get("production_intent", "")) if scene_contracts else "",
+                                ]
+                                if part.strip()
+                            ),
+                            limit=120,
+                        ),
+                    }
+                )
+            continue
 
         chapter_events: list[DialogueEvent] = []
         scene_character_ids = sorted(
@@ -866,13 +921,14 @@ def run_dialogue_timeline(
             "shot_count": sum(len(shot_indexes.get(str(scene.get('scene_id', '')).strip().upper(), [])) for scene in scene_contracts),
         }
         chapter_summaries.append(chapter_summary)
+        chapter_fp = _fingerprint([paragraph.get("text", "") for paragraph in paragraphs])
 
         chapter_payload = {
             "project_slug": project_slug,
             "chapter_id": chapter_id,
             "chapter_title": chapter_title,
             "source_path": path_to_manifest_value(source_path),
-            "source_fingerprint": _fingerprint([paragraph.get("text", "") for paragraph in paragraphs]),
+            "source_fingerprint": chapter_fp,
             "dialogue_events": [event.to_dict() for event in final_events],
             "scene_bindings": [
                 {
@@ -886,10 +942,17 @@ def run_dialogue_timeline(
         }
         chapter_json = chapter_path / f"{chapter_id}_DIALOGUE_TIMELINE.json"
         chapter_md = chapter_path / f"{chapter_id}_DIALOGUE_TIMELINE.md"
-        if force or not chapter_json.exists() or not chapter_md.exists():
+        if force or run_tracker is not None or not chapter_json.exists() or not chapter_md.exists():
             write_json(chapter_json, chapter_payload)
             chapter_md.write_text(_render_chapter_dialogue_timeline(chapter_id, final_events), encoding="utf-8")
             written_files.extend([str(chapter_json), str(chapter_md)])
+            if run_tracker is not None:
+                run_tracker.mark_item_completed(
+                    phase_name,
+                    chapter_id,
+                    chapter_fp,
+                    outputs=[str(chapter_json), str(chapter_md)],
+                )
 
         edit_entries.append(
             {

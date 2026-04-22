@@ -5,12 +5,22 @@
   "shot_order": 2,
   "previous_shot_id": "SH001",
   "next_shot_id": "SH003",
-  "shot_title": "Insert Detail 2: Carter attempts to lure the Thark Warriors away thr...",
+  "shot_title": "Insert Detail 2: Carry the emotional arc through: Defiance $\\rightar...",
   "shot_type": "insert_detail",
   "camera_description": "Tight detail framing focused on a single visual object or gesture.",
   "composition": "Detail composition centered on the key physical action or prop inside Rugged terrain/ravines near the Low Mountains.",
-  "target_seconds": 5.0,
+  "target_seconds": 5.3,
   "characters_in_frame": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'john_carter'"
+    },
     {
       "label": "Thark Warriors",
       "canonical_id": null,
@@ -36,11 +46,15 @@
     "BT002"
   ],
   "continuity_constraints": [
-    "Progressive physical damage/bruising on john_carter.",
-    "Transition from high-energy movement to total stillness as he falls unconscious."
+    "The physical damage/bruising on Carter",
+    "the transition from movement to stillness as he falls unconscious.",
+    "Carry the emotional arc through: Defiance $\\rightarrow$ Overwhelming Odds $\\rightarrow$ Total Defeat/Blackout.",
+    "**Likely Visual Coverage Families:**",
+    "- Handheld",
+    "shaky camera to simulate the chaos of the melee."
   ],
-  "prompt_seed": "Insert Detail 2: Carter attempts to lure the Thark Warriors away thr.... insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside Rugged terrain/ravines near the Low Mountains. Cast: Thark Warriors. Environment: Rugged terrain/ravines near the Low Mountains.",
-  "shot_notes": "Carter attempts to lure the Thark Warriors away through tactical movement.",
+  "prompt_seed": "Insert Detail 2: Carry the emotional arc through: Defiance $\\rightar.... insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside Rugged terrain/ravines near the Low Mountains. Cast: john_carter, Thark Warriors. Environmen...",
+  "shot_notes": "Carry the emotional arc through: Defiance $\\rightarrow$ Overwhelming Odds $\\rightarrow$ Total Defeat/Blackout. **Likely Visual Coverage Families:** - Handheld, shaky camera to simulate the chaos of the melee. - Close-...",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -93,36 +107,35 @@
     }
   ],
   "evidence_summary": [
-    "The scene requires a high-intensity melee sequence transitioning into a state of physical collapse. The focus is on the exhaustion of resources (ammunition) and the overwhelming physical pressure applied by the Thark Warriors to force the hero into unconsci...",
+    "To conclude the chapter with a moment of defeat and vulnerability for the hero.",
     "Having exhausted his ammunition, Carter attempts to lure the warriors away through movement but is eventually overwhelmed by the sheer numbers. He is beaten into unconsciousness as the pursuit continues.",
     "Defiance $\\rightarrow$ Overwhelming Odds $\\rightarrow$ Total Defeat/Blackout. **Likely Visual Coverage Families:** - Handheld, shaky camera to simulate the chaos of the melee. - Close-ups on Carter's struggle and even...",
-    "Handheld, shaky camera to simulate the chaos of the melee.",
-    "Close-ups on Carter's struggle and eventual loss of consciousness.",
-    "Low-angle shots of the overwhelming Thark force.",
+    "The physical damage/bruising on Carter",
+    "the transition from movement to stillness as he falls unconscious.",
     "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in..."
   ],
   "metadata": {
     "artifact_id": "CH017_SC004_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "0f4423bed6e1f6c93ccfb7de97c15d40646253fe",
+    "source_fingerprint": "d3996c9c0bfddd8c2e9bbca600ff08827b813ae3",
     "created_at_utc": "2026-04-22T02:24:24.794066+00:00",
-    "updated_at_utc": "2026-04-22T08:42:25.236236+00:00",
+    "updated_at_utc": "2026-04-22T16:30:41.669757+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH017_SC004",
-        "version": "96de3fa99b424e7deecb8a1d3dc2ed56e7b63a67"
+        "version": "c10e4da02cb38f64fe46a4e627e0aac413385426"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH017_SC004",
-        "version": "f3d39804f5ca7814be18073c47dcf88a25ed045a"
+        "version": "50067eaf14d62f4a957e3c3a7328b4f54578ecba"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH017_SC004",
-        "version": "13c0e8094e1f5be97b1dc38a6e0e1e3a7baddde7"
+        "version": "3199ced96132c3a3a5f844911de33e296c85dfde"
       }
     ],
     "locked_fields": {},
@@ -137,6 +150,11 @@
         "timestamp_utc": "2026-04-22T08:42:48.323612+00:00",
         "action": "synthesized",
         "source_fingerprint": "0f4423bed6e1f6c93ccfb7de97c15d40646253fe"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:30:41.669757+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d3996c9c0bfddd8c2e9bbca600ff08827b813ae3"
       }
     ]
   }

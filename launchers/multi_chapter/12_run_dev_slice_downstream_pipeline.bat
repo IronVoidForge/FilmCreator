@@ -35,37 +35,13 @@ echo   5. descriptor enrichment
 echo   6. prompt preparation
 echo.
 echo It assumes chapter summaries, character bibles, and environment bibles already exist.
+echo It will resume the latest interrupted matching run automatically if one exists.
 echo Shot prompt prep stays trimmed to the current reduced shot variant set.
 echo.
 
 echo.
-echo [1/6] Running scene contract synthesis...
-python -m orchestrator synthesize-scene-contracts %PROJECT_SLUG% --force --chapters %CHAPTERS%
-if errorlevel 1 goto :fail
-
-echo.
-echo [2/6] Running scene binding synthesis...
-python -m orchestrator synthesize-scene-bindings %PROJECT_SLUG% --force --chapters %CHAPTERS%
-if errorlevel 1 goto :fail
-
-echo.
-echo [3/6] Running shot package synthesis...
-python -m orchestrator synthesize-shot-packages %PROJECT_SLUG% --force --chapters %CHAPTERS%
-if errorlevel 1 goto :fail
-
-echo.
-echo [4/6] Running dialogue timeline synthesis...
-python -m orchestrator synthesize-dialogue-timeline %PROJECT_SLUG% --force --chapters %CHAPTERS%
-if errorlevel 1 goto :fail
-
-echo.
-echo [5/6] Running descriptor enrichment...
-python -m orchestrator synthesize-descriptor-enrichment %PROJECT_SLUG% --force --chapters %CHAPTERS%
-if errorlevel 1 goto :fail
-
-echo.
-echo [6/6] Running prompt preparation...
-python -m orchestrator synthesize-prompt-preparation %PROJECT_SLUG% --force --chapters %CHAPTERS%
+echo Running resumable downstream pipeline...
+python -m orchestrator run-downstream-pipeline %PROJECT_SLUG% --chapters %CHAPTERS% --start-phase scene_contracts --pipeline-key dev_slice_downstream --shot-variant primary_keyframe --shot-variant alternate_angle --shot-variant consistency_repair
 if errorlevel 1 goto :fail
 
 echo.

@@ -4,13 +4,23 @@
   "chapter_id": "CH014",
   "shot_order": 3,
   "previous_shot_id": "SH002",
-  "next_shot_id": "SH004",
-  "shot_title": "Action 3: Sola leaps in front of Sarkoja's dagger to protect...",
+  "next_shot_id": "",
+  "shot_title": "Action 3: Land the scene consequence or transition cleanly.",
   "shot_type": "action",
   "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-  "composition": "Dynamic composition in warhoon_incubator_site with sarkoja crossing the frame and maintaining readable movement.",
-  "target_seconds": 5.5,
+  "composition": "Dynamic composition in warhoon_incubator_site with dejah_thoris, sarkoja crossing the frame and maintaining readable movement.",
+  "target_seconds": 5.6,
   "characters_in_frame": [
+    {
+      "label": "Dejah Thoris",
+      "canonical_id": "dejah_thoris",
+      "display_name": "dejah_thoris",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH010/dejah_thoris.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'dejah_thoris'"
+    },
     {
       "label": "Sarkoja",
       "canonical_id": "sarkoja",
@@ -36,11 +46,12 @@
     "BT003"
   ],
   "continuity_constraints": [
-    "Precise spatial positioning of Sola relative to Dejah and Sarkoja during the leap",
-    "Sola leaps in front of Sarkoja's dagger to protect Dejah."
+    "Position of Sola relative to Dejah and Sarkoja.",
+    "Land the scene consequence or transition cleanly.",
+    "Resolve The duel site -> The duel site"
   ],
-  "prompt_seed": "Action 3: Sola leaps in front of Sarkoja's dagger to protect.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in warhoon_incubator_site with sarkoja crossing the frame and maintaining readable movement. Cast: sarkoja. Environment: warhoon_incubator_site. Beat: Sola le...",
-  "shot_notes": "Sola leaps in front of Sarkoja's dagger to protect Dejah.",
+  "prompt_seed": "Action 3: Land the scene consequence or transition cleanly.. action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in warhoon_incubator_site with dejah_thoris, sarkoja crossing the frame and maintaining readable movement. Cast: dejah_thoris, sarkoja. Environment: warhoon_incub...",
+  "shot_notes": "Land the scene consequence or transition cleanly.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -98,39 +109,38 @@
     }
   ],
   "evidence_summary": [
-    "The scene must execute a high-stakes dramatic pivot centered on a sacrificial act. The choreography requires precise timing between the confrontation of Sarkoja and Dejah Thoris and Sola's sudden intervention to intercept a lethal strike, transitioning the...",
+    "Heighten the drama through a sacrificial act and character confrontation.",
     "As John is blinded, Dejah Thoris confronts Sarkoja. In the ensuing chaos, Sola leaps in front of Sarkoja's dagger to protect the Princess, taking a mortal wound.",
     "Anger $\\rightarrow$ Horror/Shock.",
     "Medium shots of the confrontation",
-    "Slow-motion or high-impact close-ups of the stabbing",
-    "Reaction shots from Dejah",
+    "slow-motion or high-impact close-ups of the stabbing",
+    "reaction shots from Dejah.",
     "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b...",
     "sarkoja | Sarkoja is an older, hardened female Green Martian of the Thark people. She carries the visual weight of a high-ranking noble or spy, characterized by a calculating expression and adherence to strict cultural norms. Her appearance is defined by tr...",
-    "sola | Sola is a female Green Martian, also identified as a Thark. Her visual identity is defined by her species' characteristic green coloring and traditional Green Martian attire. While specific physical proportions are not detailed, she is established as...",
     "warhoon_incubator_site | No specific visual details are provided in the current evidence. The site functions as a secondary setting within the narrative. | Unknown. | Unknown. | Unknown."
   ],
   "metadata": {
     "artifact_id": "CH014_SC005_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "de4a7e089607aba447791bf5f0c01bd3ea7931e3",
+    "source_fingerprint": "38b73616863b7d92fb6d01c80c82264ff0abc9d1",
     "created_at_utc": "2026-04-22T02:00:26.530188+00:00",
-    "updated_at_utc": "2026-04-22T08:17:25.960705+00:00",
+    "updated_at_utc": "2026-04-22T16:30:40.874192+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH014_SC005",
-        "version": "5df11e2e443f13bfe92dfc989793f9d9b97522de"
+        "version": "28af8874f9612c5a3b10320a36be6af2ce9f1d1b"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH014_SC005",
-        "version": "8a8d87d18d36205ba4bef5af5ae46c245882b585"
+        "version": "83af89d1f13c6a8d6966fd06d3c1be5c399fea6d"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH014_SC005",
-        "version": "fc0fb4fc258d1f0f7d3390cb9117652a34a74a4c"
+        "version": "1520671f13a488aef00ef0e7f063f3823da5cf70"
       }
     ],
     "locked_fields": {},
@@ -145,6 +155,11 @@
         "timestamp_utc": "2026-04-22T08:17:49.811540+00:00",
         "action": "synthesized",
         "source_fingerprint": "de4a7e089607aba447791bf5f0c01bd3ea7931e3"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:30:40.874192+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "38b73616863b7d92fb6d01c80c82264ff0abc9d1"
       }
     ]
   }

@@ -2,14 +2,7 @@
 
 - shot_id: `SH002`
 - scene_id: `CH022_SC005`
-- dialogue_events: `4`
-
-## CH022_DLG053
-
-- speaker: `john_carter`
-- source_ref: `CH022:p067:q01`
-- clip_id: `CL002`
-- dialogue_text: Where is my erstwhile savior?
+- dialogue_events: `5`
 
 ## CH022_DLG054
 
@@ -31,3 +24,17 @@
 - source_ref: `CH022:p068:q01`
 - clip_id: `CL002`
 - dialogue_text: Where is this man?
+
+## CH022_DLG057
+
+- speaker: `sab_than`
+- source_ref: `CH022:p068:q02`
+- clip_id: `CL002`
+- dialogue_text: Have him brought to me at once. What know you of him, cousin? It seemed strange to me now that I think upon it that there should have been such a fighting man in Zodanga, of whose name, even, we were ignorant before today. And his name too, John Carter, who ever heard of such a name upon Barsoom!
+
+## CH022_DLG058
+
+- speaker: `unresolved`
+- source_ref: `CH022:p070:q01`
+- clip_id: `CL002`
+- dialogue_text: Keep your eyes on this other one,

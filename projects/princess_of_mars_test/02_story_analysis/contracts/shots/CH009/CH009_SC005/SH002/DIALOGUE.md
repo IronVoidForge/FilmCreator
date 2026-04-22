@@ -4,9 +4,9 @@
 - scene_id: `CH009_SC005`
 - dialogue_events: `1`
 
-## CH009_DLG004
+## CH009_DLG008
 
 - speaker: `sola`
-- source_ref: `CH009:p015:q01`
+- source_ref: `CH009:p018:q01`
 - clip_id: `CL002`
-- dialogue_text: What will be the manner of her going out?
+- dialogue_text: I see nothing wrong with my expression of interest in this red woman,

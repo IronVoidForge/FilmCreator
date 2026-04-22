@@ -2,6 +2,11 @@
 
 - shot_id: `SH002`
 - scene_id: `CH026_SC002`
-- dialogue_events: `0`
+- dialogue_events: `1`
 
-- No dialogue events were bound to this shot.
+## CH026_DLG002
+
+- speaker: `john_carter`
+- source_ref: `CH026:p020:q02`
+- clip_id: `CL002`
+- dialogue_text: the man to whom Helium owes her princess as well as her victory today.

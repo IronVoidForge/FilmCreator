@@ -4,9 +4,9 @@
 - scene_id: `CH010_SC003`
 - dialogue_events: `1`
 
-## CH010_DLG005
+## CH010_DLG006
 
-- speaker: `dejah_thoris`
-- source_ref: `CH010:p021:q01`
+- speaker: `john_carter`
+- source_ref: `CH010:p022:q01`
 - clip_id: `CL002`
-- dialogue_text: It was a purely scientific research party sent out by my father's father, the Jeddak of Helium, to rechart the air currents, and to take atmospheric density tests,
+- dialogue_text: We were unprepared for battle,

@@ -114,8 +114,8 @@
 - speaker: `unresolved`
 - source_ref: `CH024:p023:q02`
 - scene_id: `CH024_SC003`
-- shot_id: `SH002`
-- clip_id: `CL002`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: We shall see who it is dares strike the mighty Tal Hajus. Heat the irons; with my own hands I shall burn the eyes from his head that he may not pollute my person with his vile gaze.
 - excerpt: "Strap him to that pillar," he shrieked. "We shall see who it is dares strike the mighty Tal Hajus. Heat the irons; with my own hands I shall burn the eyes from his head that he may not pollute my person with his vile gaze."
 - review_notes:
@@ -146,8 +146,8 @@
 - speaker: `john_carter`
 - source_ref: `CH024:p025:q01`
 - scene_id: `CH024_SC003`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: Silence,
 - excerpt: "Silence," roared Tal Hajus. "Gag the creature and bind him as I command."
 
@@ -156,8 +156,8 @@
 - speaker: `unresolved`
 - source_ref: `CH024:p025:q02`
 - scene_id: `CH024_SC003`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: Gag the creature and bind him as I command.
 - excerpt: "Silence," roared Tal Hajus. "Gag the creature and bind him as I command."
 - review_notes:
@@ -167,9 +167,9 @@
 
 - speaker: `lorquas_ptomel`
 - source_ref: `CH024:p026:q01`
-- scene_id: `CH024_SC004`
-- shot_id: `SH001`
-- clip_id: `CL001`
+- scene_id: `CH024_SC003`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: Justice, Tal Hajus,
 - excerpt: "Justice, Tal Hajus," exclaimed Lorquas Ptomel. "Who are you to set aside the customs of ages among the Tharks."
 
@@ -177,9 +177,9 @@
 
 - speaker: `lorquas_ptomel`
 - source_ref: `CH024:p026:q02`
-- scene_id: `CH024_SC004`
-- shot_id: `SH001`
-- clip_id: `CL001`
+- scene_id: `CH024_SC003`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: Who are you to set aside the customs of ages among the Tharks.
 - excerpt: "Justice, Tal Hajus," exclaimed Lorquas Ptomel. "Who are you to set aside the customs of ages among the Tharks."
 
@@ -187,9 +187,9 @@
 
 - speaker: `john_carter`
 - source_ref: `CH024:p027:q01`
-- scene_id: `CH024_SC004`
-- shot_id: `SH002`
-- clip_id: `CL002`
+- scene_id: `CH024_SC003`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: Yes, justice!
 - excerpt: "Yes, justice!" echoed a dozen voices, and so, while Tal Hajus fumed and frothed, I continued.
 
@@ -198,8 +198,8 @@
 - speaker: `unresolved`
 - source_ref: `CH024:p028:q01`
 - scene_id: `CH024_SC004`
-- shot_id: `SH002`
-- clip_id: `CL002`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: You are a brave people and you love bravery, but where was your mighty jeddak during the fighting today? I did not see him in the thick of battle; he was not there. He rends defenseless women and little children in his lair, but how recently has one of you seen him fight with men? Why, even I, a midget beside him, felled him with a single blow of my fist. Is it of such that the Tharks fashion their jeddaks? There stands beside me now a great Thark, a mighty warrior and a noble man. Chieftains, how sounds, Tars Tarkas, Jeddak of Thark?
 - excerpt: "You are a brave people and you love bravery, but where was your mighty jeddak during the fighting today? I did not see him in the thick of battle; he was not there. He rends defenseless women and little children in his lair, but how rec...
 - review_notes:
@@ -210,8 +210,8 @@
 - speaker: `unresolved`
 - source_ref: `CH024:p030:q01`
 - scene_id: `CH024_SC004`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: It but remains for this council to command, and Tal Hajus must prove his fitness to rule. Were he a brave man he would invite Tars Tarkas to combat, for he does not love him, but Tal Hajus is afraid; Tal Hajus, your jeddak, is a coward. With my bare hands I could kill him, and he knows it.
 - excerpt: "It but remains for this council to command, and Tal Hajus must prove his fitness to rule. Were he a brave man he would invite Tars Tarkas to combat, for he does not love him, but Tal Hajus is afraid; Tal Hajus, your jeddak, is a coward....
 - review_notes:
@@ -222,8 +222,8 @@
 - speaker: `lorquas_ptomel`
 - source_ref: `CH024:p032:q01`
 - scene_id: `CH024_SC004`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: Tal Hajus,
 - excerpt: "Tal Hajus," said Lorquas Ptomel in a cold, hard voice, "never in my long life have I seen a jeddak of the Tharks so humiliated. There could be but one answer to this arraignment. We wait it." And still Tal Hajus stood as though petrified.
 
@@ -232,8 +232,8 @@
 - speaker: `lorquas_ptomel`
 - source_ref: `CH024:p032:q02`
 - scene_id: `CH024_SC004`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: never in my long life have I seen a jeddak of the Tharks so humiliated. There could be but one answer to this arraignment. We wait it.
 - excerpt: "Tal Hajus," said Lorquas Ptomel in a cold, hard voice, "never in my long life have I seen a jeddak of the Tharks so humiliated. There could be but one answer to this arraignment. We wait it." And still Tal Hajus stood as though petrified.
 
@@ -242,8 +242,8 @@
 - speaker: `unresolved`
 - source_ref: `CH024:p033:q01`
 - scene_id: `CH024_SC004`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: Chieftains,
 - excerpt: "Chieftains," continued Lorquas Ptomel, "shall the jeddak, Tal Hajus, prove his fitness to rule over Tars Tarkas?"
 - review_notes:
@@ -254,8 +254,8 @@
 - speaker: `unresolved`
 - source_ref: `CH024:p033:q02`
 - scene_id: `CH024_SC004`
-- shot_id: `SH005`
-- clip_id: `CL005`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: shall the jeddak, Tal Hajus, prove his fitness to rule over Tars Tarkas?
 - excerpt: "Chieftains," continued Lorquas Ptomel, "shall the jeddak, Tal Hajus, prove his fitness to rule over Tars Tarkas?"
 - review_notes:

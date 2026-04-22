@@ -4,9 +4,9 @@
 - scene_id: `CH009_SC004`
 - dialogue_events: `1`
 
-## CH009_DLG002
+## CH009_DLG005
 
-- speaker: `unresolved`
-- source_ref: `CH009:p013:q02`
+- speaker: `sola`
+- source_ref: `CH009:p015:q02`
 - clip_id: `CL003`
-- dialogue_text: will we enjoy the death throes of the red one? or does Lorquas Ptomel, Jed, intend holding her for ransom?
+- dialogue_text: She is very small and very beautiful; I had hoped that they would hold her for ransom.

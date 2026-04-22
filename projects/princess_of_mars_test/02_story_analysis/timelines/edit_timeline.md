@@ -9,7 +9,7 @@
 - scene_count: `5`
 - dialogue_events: `0`
 - estimated_duration_seconds: `25`
-- transition_note: Introspection / Solemnity. / Establish the transition from the terrestrial Arizona landscape to a supernatural inciti...
+- transition_note: Introspection / Solemnity. / Transition the protagonist from the terrestrial world to the inciting supernatural event.
 
 ## CH002
 
@@ -65,7 +65,7 @@
 - scene_count: `5`
 - dialogue_events: `0`
 - estimated_duration_seconds: `25`
-- transition_note: Anticipation $\rightarrow$ Sudden Alarm/Tension. / Establish a new character through a moment of dramatic irony and c...
+- transition_note: Anticipation $\rightarrow$ Sudden Alarm/Tension. / Introduce a new character and create a moment of missed connection...
 
 ## CH009
 
@@ -73,7 +73,7 @@
 - scene_count: `6`
 - dialogue_events: `9`
 - estimated_duration_seconds: `57`
-- transition_note: Tension $\rightarrow$ Acceptance/Duty. / Following the preceding argument, the scene focuses on the protagonist's int...
+- transition_note: Tension $\rightarrow$ Acceptance/Duty. / Establish the protagonist's new long-term objective.
 
 ## CH010
 
@@ -113,7 +113,7 @@
 - scene_count: `6`
 - dialogue_events: `33`
 - estimated_duration_seconds: `129`
-- transition_note: Romantic longing $\rightarrow$ Melancholy/Frustration. / Execute the high-stakes climax of the chapter by transitioni...
+- transition_note: Romantic longing $\rightarrow$ Melancholy/Frustration. / Deliver the chapter's climax and the primary cliffhanger.
 
 ## CH015
 
@@ -129,7 +129,7 @@
 - scene_count: `6`
 - dialogue_events: `30`
 - estimated_duration_seconds: `120`
-- transition_note: Exhaustion/Tension $\rightarrow$ Relief (at reaching safety) $\rightarrow$ Apprehension (approaching the city). / Est...
+- transition_note: Exhaustion/Tension $\rightarrow$ Relief (at reaching safety) $\rightarrow$ Apprehension (approaching the city). / The...
 
 ## CH017
 
@@ -161,7 +161,7 @@
 - scene_count: `5`
 - dialogue_events: `14`
 - estimated_duration_seconds: `67`
-- transition_note: Exhaustion $\rightarrow$ Awe/Intrigue. / The scene focuses on the physical transformation of the protagonist to facil...
+- transition_note: Exhaustion $\rightarrow$ Awe/Intrigue. / Set up the next narrative arc (Zodanga) and provide a new identity.
 
 ## CH021
 
@@ -169,7 +169,7 @@
 - scene_count: `6`
 - dialogue_events: `20`
 - estimated_duration_seconds: `90`
-- transition_note: Curiosity $\rightarrow$ Somberness/Dread. / Establish the formal elevation of John Carter's social and military statu...
+- transition_note: Curiosity $\rightarrow$ Somberness/Dread. / Resolution and reward; elevates Carter's social status within Zodanga.
 
 ## CH022
 
@@ -185,7 +185,7 @@
 - scene_count: `4`
 - dialogue_events: `21`
 - estimated_duration_seconds: `83`
-- transition_note: Shock/Despair $\rightarrow$ Determined Resolve. / The sequence must depict the grueling six-hour flight of a damaged...
+- transition_note: Shock/Despair $\rightarrow$ Determined Resolve. / To establish the aftermath of the action and transition into a stat...
 
 ## CH024
 
@@ -193,7 +193,7 @@
 - scene_count: `6`
 - dialogue_events: `26`
 - estimated_duration_seconds: `108`
-- transition_note: Chaos/Peril $\rightarrow$ Heroic Intervention $\rightarrow$ Mutual Respect. / The sequence must depict a high-stakes...
+- transition_note: Chaos/Peril $\rightarrow$ Heroic Intervention $\rightarrow$ Mutual Respect. / Execute the tactical infiltration and s...
 
 ## CH025
 
@@ -209,7 +209,7 @@
 - scene_count: `5`
 - dialogue_events: `10`
 - estimated_duration_seconds: `55`
-- transition_note: Tension $\rightarrow$ Chaos/Action $\rightarrow$ Triumph. / The scene requires a large-scale logistical coordination...
+- transition_note: Tension $\rightarrow$ Chaos/Action $\rightarrow$ Triumph. / To conclude the arc with a formal political and emotional...
 
 ## CH027
 
@@ -217,7 +217,7 @@
 - scene_count: `5`
 - dialogue_events: `18`
 - estimated_duration_seconds: `79`
-- transition_note: Peace/Contentment $\rightarrow$ Tranquility. / The sequence must visually communicate the extreme physical toll of ox...
+- transition_note: Peace/Contentment $\rightarrow$ Tranquility. / The climax and resolution of the immediate crisis.
 
 ## CH028
 

@@ -48,8 +48,8 @@
 - speaker: `sola`
 - source_ref: `CH015:p010:q01`
 - scene_id: `CH015_SC001`
-- shot_id: `SH002`
-- clip_id: `CL002`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: I think you wrong her, John Carter,
 - excerpt: "I think you wrong her, John Carter," said Sola. "I do not understand either her ways or yours, but I am sure the granddaughter of ten thousand jeddaks would never grieve like this over any who held but the highest claim upon her affecti...
 
@@ -78,8 +78,8 @@
 - speaker: `john_carter`
 - source_ref: `CH015:p012:q01`
 - scene_id: `CH015_SC001`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: Your mother!
 - excerpt: "Your mother!" I exclaimed, "but, Sola, you could not have known your mother, child."
 
@@ -88,8 +88,8 @@
 - speaker: `john_carter`
 - source_ref: `CH015:p012:q02`
 - scene_id: `CH015_SC001`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: but, Sola, you could not have known your mother, child.
 - excerpt: "Your mother!" I exclaimed, "but, Sola, you could not have known your mother, child."
 
@@ -108,8 +108,8 @@
 - speaker: `john_carter`
 - source_ref: `CH015:p013:q02`
 - scene_id: `CH015_SC001`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: If you would like to hear the strange and un-Barsoomian story come to the chariot tonight, John Carter, and I will tell you that of which I have never spoken in all my life before. And now the signal has been given to resume the march, you must go.
 - excerpt: "But I did. And my father also," she added. "If you would like to hear the strange and un-Barsoomian story come to the chariot tonight, John Carter, and I will tell you that of which I have never spoken in all my life before. And now the...
 
@@ -118,8 +118,8 @@
 - speaker: `john_carter`
 - source_ref: `CH015:p014:q01`
 - scene_id: `CH015_SC001`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: I will come tonight, Sola,
 - excerpt: "I will come tonight, Sola," I promised. "Be sure to tell Dejah Thoris I am alive and well. I shall not force myself upon her, and be sure that you do not let her know I saw her tears. If she would speak with me I but await her command."
 
@@ -128,8 +128,8 @@
 - speaker: `john_carter`
 - source_ref: `CH015:p014:q02`
 - scene_id: `CH015_SC001`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: Be sure to tell Dejah Thoris I am alive and well. I shall not force myself upon her, and be sure that you do not let her know I saw her tears. If she would speak with me I but await her command.
 - excerpt: "I will come tonight, Sola," I promised. "Be sure to tell Dejah Thoris I am alive and well. I shall not force myself upon her, and be sure that you do not let her know I saw her tears. If she would speak with me I but await her command."
 

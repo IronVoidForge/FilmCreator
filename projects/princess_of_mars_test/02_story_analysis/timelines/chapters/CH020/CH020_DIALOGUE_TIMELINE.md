@@ -7,7 +7,7 @@
 
 - speaker: `unresolved`
 - source_ref: `CH020:p011:q01`
-- scene_id: `CH020_SC002`
+- scene_id: `CH020_SC001`
 - shot_id: `SH001`
 - clip_id: `CL001`
 - dialogue_text: You wear the metal of a green warrior and are followed by a calot, yet you are of the figure of a red man. In color you are neither green nor red. In the name of the ninth ray, what manner of creature are you?
@@ -32,8 +32,8 @@
 - speaker: `unresolved`
 - source_ref: `CH020:p015:q01`
 - scene_id: `CH020_SC002`
-- shot_id: `SH002`
-- clip_id: `CL002`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: Your statements are most remarkable,
 - excerpt: "Your statements are most remarkable," said the voice, on concluding its questioning, "but you are evidently speaking the truth, and it is equally evident that you are not of Barsoom. I can tell that by the conformation of your brain and...
 - review_notes:
@@ -44,8 +44,8 @@
 - speaker: `unresolved`
 - source_ref: `CH020:p015:q02`
 - scene_id: `CH020_SC002`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: but you are evidently speaking the truth, and it is equally evident that you are not of Barsoom. I can tell that by the conformation of your brain and the strange location of your internal organs and the shape and size of your heart.
 - excerpt: "Your statements are most remarkable," said the voice, on concluding its questioning, "but you are evidently speaking the truth, and it is equally evident that you are not of Barsoom. I can tell that by the conformation of your brain and...
 - review_notes:
@@ -56,8 +56,8 @@
 - speaker: `unresolved`
 - source_ref: `CH020:p016:q01`
 - scene_id: `CH020_SC002`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: Can you see through me?
 - excerpt: "Can you see through me?" I exclaimed.
 - review_notes:
@@ -68,8 +68,8 @@
 - speaker: `unresolved`
 - source_ref: `CH020:p017:q01`
 - scene_id: `CH020_SC002`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: Yes, I can see all but your thoughts, and were you a Barsoomian I could read those.
 - excerpt: "Yes, I can see all but your thoughts, and were you a Barsoomian I could read those."
 - review_notes:
@@ -92,8 +92,8 @@
 - speaker: `unresolved`
 - source_ref: `CH020:p032:q01`
 - scene_id: `CH020_SC003`
-- shot_id: `SH002`
-- clip_id: `CL002`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: And so good-night, my friend,
 - excerpt: "And so good-night, my friend," he continued, "may you have a long and restful sleep—yes, a long sleep."
 - review_notes:
@@ -104,8 +104,8 @@
 - speaker: `unresolved`
 - source_ref: `CH020:p032:q02`
 - scene_id: `CH020_SC003`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: may you have a long and restful sleep—yes, a long sleep.
 - excerpt: "And so good-night, my friend," he continued, "may you have a long and restful sleep—yes, a long sleep."
 - review_notes:
@@ -116,8 +116,8 @@
 - speaker: `unresolved`
 - source_ref: `CH020:p033:q01`
 - scene_id: `CH020_SC003`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: I am sorry, but it is for the best good of Barsoom.
 - excerpt: And though he smiled pleasantly I saw in his thoughts the wish that he had never admitted me, and then a picture of him standing over me in the night, and the swift thrust of a long dagger and the half formed words, "I am sorry, but it i...
 - review_notes:
@@ -127,7 +127,7 @@
 
 - speaker: `unresolved`
 - source_ref: `CH020:p045:q01`
-- scene_id: `CH020_SC004`
+- scene_id: `CH020_SC005`
 - shot_id: `SH001`
 - clip_id: `CL001`
 - dialogue_text: I am unarmed and no enemy,
@@ -139,9 +139,9 @@
 
 - speaker: `unresolved`
 - source_ref: `CH020:p045:q02`
-- scene_id: `CH020_SC004`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- scene_id: `CH020_SC005`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: I have been a prisoner among the green men and am on my way to Zodanga. All I ask is food and rest for myself and my calot and the proper directions for reaching my destination.
 - excerpt: "I am unarmed and no enemy," I hastened to explain. "I have been a prisoner among the green men and am on my way to Zodanga. All I ask is food and rest for myself and my calot and the proper directions for reaching my destination."
 - review_notes:
@@ -152,8 +152,8 @@
 - speaker: `unresolved`
 - source_ref: `CH020:p051:q01`
 - scene_id: `CH020_SC005`
-- shot_id: `SH001`
-- clip_id: `CL001`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: The chances are small that your tale will be believed until after you have proven your trustworthiness and won friends among the higher nobles of the court. This you can most easily do through military service, as we are a warlike people on Barsoom,
 - excerpt: "The chances are small that your tale will be believed until after you have proven your trustworthiness and won friends among the higher nobles of the court. This you can most easily do through military service, as we are a warlike peopl...
 - review_notes:

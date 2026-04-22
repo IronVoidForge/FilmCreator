@@ -4,16 +4,16 @@
 - scene_id: `CH016_SC003`
 - dialogue_events: `2`
 
-## CH016_DLG011
-
-- speaker: `dejah_thoris`
-- source_ref: `CH016:p022:q02`
-- clip_id: `CL003`
-- dialogue_text: and from what I heard upon the plaza there is little hope for either of you.
-
 ## CH016_DLG012
 
 - speaker: `unresolved`
 - source_ref: `CH016:p023:q01`
 - clip_id: `CL003`
 - dialogue_text: What do they say?
+
+## CH016_DLG013
+
+- speaker: `unresolved`
+- source_ref: `CH016:p024:q01`
+- clip_id: `CL003`
+- dialogue_text: That you will be thrown to the wild calots [dogs] in the great arena as soon as the hordes have assembled for the yearly games.

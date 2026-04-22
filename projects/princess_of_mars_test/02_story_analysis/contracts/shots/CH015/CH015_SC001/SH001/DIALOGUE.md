@@ -2,7 +2,7 @@
 
 - shot_id: `SH001`
 - scene_id: `CH015_SC001`
-- dialogue_events: `4`
+- dialogue_events: `5`
 
 ## CH015_DLG001
 
@@ -31,3 +31,10 @@
 - source_ref: `CH015:p009:q01`
 - clip_id: `CL001`
 - dialogue_text: And that her grandmother's cat may now have no one to polish its teeth?
+
+## CH015_DLG005
+
+- speaker: `sola`
+- source_ref: `CH015:p010:q01`
+- clip_id: `CL001`
+- dialogue_text: I think you wrong her, John Carter,

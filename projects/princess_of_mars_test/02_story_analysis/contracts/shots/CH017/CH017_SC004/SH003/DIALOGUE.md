@@ -2,18 +2,11 @@
 
 - shot_id: `SH003`
 - scene_id: `CH017_SC004`
-- dialogue_events: `2`
+- dialogue_events: `1`
 
-## CH017_DLG007
+## CH017_DLG009
 
-- speaker: `dejah_thoris`
-- source_ref: `CH017:p028:q02`
+- speaker: `john_carter`
+- source_ref: `CH017:p030:q01`
 - clip_id: `CL003`
-- dialogue_text: are you not coming with us?
-
-## CH017_DLG008
-
-- speaker: `unresolved`
-- source_ref: `CH017:p029:q01`
-- clip_id: `CL003`
-- dialogue_text: How may I, Dejah Thoris? Someone must hold these fellows off for a while, and I can better escape them alone than could the three of us together.
+- dialogue_text: Fly, Sola! Dejah Thoris remains to die with the man she loves.

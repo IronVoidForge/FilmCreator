@@ -1,6 +1,5 @@
 # Shot Index
 
-- `SH001` - Establishing Wide 1: Protagonist regains consciousness (type=establishing_wide, target=5.2s, beat_ids=BT001, cast=1, env=SC001, prev=(none), next=SH002)
-- `SH002` - Insert Detail 2: Healer treats wounds (type=insert_detail, target=5.0s, beat_ids=BT002, cast=1, env=SC001, prev=SH001, next=SH003)
-- `SH003` - Insert Detail 3: Strapped to wild thoat (type=insert_detail, target=5.0s, beat_ids=BT003, cast=1, env=SC001, prev=SH002, next=SH004)
-- `SH004` - Insert Detail 4: Prepared for transport (type=insert_detail, target=4.8s, beat_ids=BT004, cast=1, env=SC001, prev=SH003, next=(none))
+- `SH001` - Medium 1: The protagonist regains consciousness after being r... (type=medium, target=5.5s, beat_ids=BT001, cast=1, env=Establish the protagonist's vulnerability and his status as a captive..., prev=(none), next=SH002)
+- `SH002` - Insert Detail 2: Carry the emotional arc through: Confusion/Pain $\r... (type=insert_detail, target=5.3s, beat_ids=BT002, cast=1, env=Establish the protagonist's vulnerability and his status as a captive..., prev=SH001, next=SH003)
+- `SH003` - Closing Reaction 3: Land the scene consequence or transition cleanly. (type=closing_reaction, target=4.6s, beat_ids=BT003, cast=1, env=Establish the protagonist's vulnerability and his status as a captive..., prev=SH002, next=(none))

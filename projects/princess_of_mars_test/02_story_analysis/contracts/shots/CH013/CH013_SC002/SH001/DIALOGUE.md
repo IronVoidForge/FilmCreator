@@ -2,7 +2,7 @@
 
 - shot_id: `SH001`
 - scene_id: `CH013_SC002`
-- dialogue_events: `2`
+- dialogue_events: `3`
 
 ## CH013_DLG005
 
@@ -17,3 +17,10 @@
 - source_ref: `CH013:p016:q02`
 - clip_id: `CL001`
 - dialogue_text: and that I would now see no more of you than of any of the other warriors.
+
+## CH013_DLG007
+
+- speaker: `john_carter`
+- source_ref: `CH013:p017:q01`
+- clip_id: `CL001`
+- dialogue_text: Sarkoja is a liar of the first magnitude,

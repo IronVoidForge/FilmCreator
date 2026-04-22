@@ -2,7 +2,14 @@
 
 - shot_id: `SH002`
 - scene_id: `CH010_SC005`
-- dialogue_events: `3`
+- dialogue_events: `4`
+
+## CH010_DLG018
+
+- speaker: `john_carter`
+- source_ref: `CH010:p043:q01`
+- clip_id: `CL002`
+- dialogue_text: I presume that that one whom I had failed to kill, would have killed me,
 
 ## CH010_DLG019
 

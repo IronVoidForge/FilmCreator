@@ -5,10 +5,10 @@
   "shot_order": 1,
   "previous_shot_id": "",
   "next_shot_id": "SH002",
-  "shot_title": "Insert Detail 1: Carter observing environment",
-  "shot_type": "insert_detail",
-  "camera_description": "Tight detail framing focused on a single visual object or gesture.",
-  "composition": "Detail composition centered on the key physical action or prop inside SC001.",
+  "shot_title": "Reaction Closeup 1: John Carter is in his cell when he realizes the jai...",
+  "shot_type": "reaction_closeup",
+  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+  "composition": "Intimate composition that isolates scene_character against Establish immediate tension and loss of agency. to capture the beat's emotional turn.",
   "target_seconds": 5.5,
   "characters_in_frame": [
     {
@@ -25,7 +25,7 @@
   "environment": {
     "label": "scene_environment",
     "canonical_id": null,
-    "display_name": "SC001",
+    "display_name": "Establish immediate tension and loss of agency.",
     "status": "review",
     "entity_kind": "environment",
     "resolution_score": null,
@@ -36,12 +36,15 @@
     "BT001"
   ],
   "continuity_constraints": [
-    "Lighting levels in the cell must remain stable for shadow movement",
-    "Precise tracking of the stolen keys' position/absence",
-    "John Carter observes the environment from within his subterranean prison cell."
+    "Lighting levels in the cell",
+    "position of the stolen keys.",
+    "John Carter is in his cell when he realizes the jailer's keys have been stolen by mysterious creatures lurking in the darkness",
+    "leaving him trapped.",
+    "**Participating Characters:**",
+    "- John Carter"
   ],
-  "prompt_seed": "Insert Detail 1: John Carter observes the environment from within hi.... insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside SC001. Cast: scene_character. Environment: SC001. Beat: John Carter observes the environment...",
-  "shot_notes": "John Carter observes the environment from within his subterranean prison cell.",
+  "prompt_seed": "Reaction Closeup 1: John Carter is in his cell when he realizes the jai.... reaction_closeup. Close framing that isolates reaction and emotional emphasis. Intimate composition that isolates scene_character against Establish immediate tension and loss of agency. to capture the beat's emotional turn. Cast: scene_chara...",
+  "shot_notes": "John Carter is in his cell when he realizes the jailer's keys have been stolen by mysterious creatures lurking in the darkness, leaving him trapped. **Participating Characters:** - John Carter **Participating Environm...",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -89,35 +92,34 @@
     }
   ],
   "evidence_summary": [
-    "The scene must utilize high-contrast, low-light cinematography to emphasize the subterranean setting of the Warhoon city. The lighting must remain consistent to support the transition from confusion to the realization of danger as shadows move within the ce...",
+    "Establish immediate tension and loss of agency.",
     "John Carter is in his cell when he realizes the jailer's keys have been stolen by mysterious creatures lurking in the darkness, leaving him trapped. **Participating Characters:** - John Carter **Participating Environments:** - Subterranean prison cells (War...",
     "Confusion $\\rightarrow$ Realization of entrapment/Danger. **Likely Visual Coverage Families:** - Close-ups on Carter's face and hands. - Low-light, high-contrast shots of the shadows/creatures. - POV shots of the empt...",
-    "Close-ups on Carter's face and hands",
-    "Low-light, high-contrast shots of shadows/creatures",
-    "POV shots of the empty key ring/missing keys"
+    "Lighting levels in the cell",
+    "position of the stolen keys."
   ],
   "metadata": {
     "artifact_id": "CH019_SC001_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "dd5d50c9a828aaa1210135622f65e3755d8257e0",
+    "source_fingerprint": "7801e4a71c0c1cc91f49918948632503ab157ae8",
     "created_at_utc": "2026-04-22T02:32:56.750358+00:00",
-    "updated_at_utc": "2026-04-22T08:50:57.401447+00:00",
+    "updated_at_utc": "2026-04-22T16:30:41.987003+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH019_SC001",
-        "version": "578bf6c9f7961e34773da21c78bb0a0bbd78b845"
+        "version": "eb96022dc2f783e77b821bf1244e8c53e6ac4b30"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH019_SC001",
-        "version": "5619bfefdae456e62d9b0ccf99f0b25c8a1e171e"
+        "version": "82bbe0d17ad5f238bfd68f2c85006b85147486e7"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH019_SC001",
-        "version": "f3df9cb8b6e2e91fb710e43326e69fe74610919c"
+        "version": "1cfc33bc00a0ade07b8f533cf7b403e2f0455064"
       }
     ],
     "locked_fields": {},
@@ -132,6 +134,11 @@
         "timestamp_utc": "2026-04-22T08:51:23.403265+00:00",
         "action": "synthesized",
         "source_fingerprint": "dd5d50c9a828aaa1210135622f65e3755d8257e0"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:30:41.987003+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "7801e4a71c0c1cc91f49918948632503ab157ae8"
       }
     ]
   }

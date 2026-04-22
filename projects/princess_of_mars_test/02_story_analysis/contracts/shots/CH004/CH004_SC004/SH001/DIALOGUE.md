@@ -2,7 +2,7 @@
 
 - shot_id: `SH001`
 - scene_id: `CH004_SC004`
-- dialogue_events: `2`
+- dialogue_events: `1`
 
 ## CH004_DLG001
 
@@ -10,10 +10,3 @@
 - source_ref: `CH004:p024:q01`
 - clip_id: `CL001`
 - dialogue_text: sak
-
-## CH004_DLG002
-
-- speaker: `unresolved`
-- source_ref: `CH004:p024:q02`
-- clip_id: `CL001`
-- dialogue_text: sak!

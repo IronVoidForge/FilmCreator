@@ -30,8 +30,8 @@
 - speaker: `unresolved`
 - source_ref: `CH012:p007:q01`
 - scene_id: `CH012_SC001`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: As a matter of justice I must warn you that we only await one of these two excuses for ridding ourselves of so great a responsibility. The safe delivery of the red girl to Tal Hajus is of the greatest importance. Not in a thousand years have the Tharks made such a capture; she is the granddaughter of the greatest of the red jeddaks, who is also our bitterest enemy. I have spoken. The red girl told us that we were without the softer sentiments of humanity, but we are a just and truthful race. You may go.
 - excerpt: "As a matter of justice I must warn you that we only await one of these two excuses for ridding ourselves of so great a responsibility. The safe delivery of the red girl to Tal Hajus is of the greatest importance. Not in a thousand years...
 - review_notes:
@@ -64,8 +64,8 @@
 - speaker: `john_carter`
 - source_ref: `CH012:p015:q02`
 - scene_id: `CH012_SC002`
-- shot_id: `SH002`
-- clip_id: `CL002`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: It seemed best that I quartered either by myself or among the other warriors, and I was awaiting an opportunity to ask your advice. As you know,
 - excerpt: "I have selected none," I replied. "It seemed best that I quartered either by myself or among the other warriors, and I was awaiting an opportunity to ask your advice. As you know," and I smiled, "I am not yet familiar with all the custo...
 
@@ -84,8 +84,8 @@
 - speaker: `john_carter`
 - source_ref: `CH012:p016:q01`
 - scene_id: `CH012_SC002`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: Come with me,
 - excerpt: "Come with me," he directed, and together we moved off across the plaza to a building which I was glad to see adjoined that occupied by Sola and her charges.
 
@@ -94,8 +94,8 @@
 - speaker: `unresolved`
 - source_ref: `CH012:p017:q01`
 - scene_id: `CH012_SC002`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: My quarters are on the first floor of this building,
 - excerpt: "My quarters are on the first floor of this building," he said, "and the second floor also is fully occupied by warriors, but the third floor and the floors above are vacant; you may take your choice of these.
 - review_notes:
@@ -106,8 +106,8 @@
 - speaker: `unresolved`
 - source_ref: `CH012:p018:q01`
 - scene_id: `CH012_SC002`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: I understand,
 - excerpt: "I understand," he continued, "that you have given up your woman to the red prisoner. Well, as you have said, your ways are not our ways, but you can fight well enough to do about as you please, and so, if you wish to give your woman to...
 - review_notes:
@@ -118,7 +118,7 @@
 - speaker: `john_carter`
 - source_ref: `CH012:p018:q02`
 - scene_id: `CH012_SC002`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: that you have given up your woman to the red prisoner. Well, as you have said, your ways are not our ways, but you can fight well enough to do about as you please, and so, if you wish to give your woman to a captive, it is your own affair; but as a chieftain you should have those to serve you, and in accordance with our customs you may select any or all the females from the retinues of the chieftains whose metal you now wear.
 - excerpt: "I understand," he continued, "that you have given up your woman to the red prisoner. Well, as you have said, your ways are not our ways, but you can fight well enough to do about as you please, and so, if you wish to give your woman to...

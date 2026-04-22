@@ -2,7 +2,14 @@
 
 - shot_id: `SH001`
 - scene_id: `CH010_SC004`
-- dialogue_events: `3`
+- dialogue_events: `2`
+
+## CH010_DLG008
+
+- speaker: `unresolved`
+- source_ref: `CH010:p033:q01`
+- clip_id: `CL001`
+- dialogue_text: Why did you do it? You who refused me even friendly recognition in the first hour of my peril! And now you risk your life and kill one of your companions for my sake. I cannot understand. What strange manner of man are you, that you consort with the green men, though your form is that of my race, while your color is little darker than that of the white ape? Tell me, are you human, or are you more than human?
 
 ## CH010_DLG009
 
@@ -10,17 +17,3 @@
 - source_ref: `CH010:p034:q01`
 - clip_id: `CL001`
 - dialogue_text: It is a strange tale,
-
-## CH010_DLG010
-
-- speaker: `john_carter`
-- source_ref: `CH010:p034:q02`
-- clip_id: `CL001`
-- dialogue_text: too long to attempt to tell you now, and one which I so much doubt the credibility of myself that I fear to hope that others will believe it. Suffice it, for the present, that I am your friend, and, so far as our captors will permit, your protector and your servant.
-
-## CH010_DLG011
-
-- speaker: `unresolved`
-- source_ref: `CH010:p035:q01`
-- clip_id: `CL001`
-- dialogue_text: Then you too are a prisoner? But why, then, those arms and the regalia of a Tharkian chieftain? What is your name? Where your country?

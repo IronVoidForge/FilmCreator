@@ -5,11 +5,11 @@
   "shot_order": 3,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Medium 3: Airship fleet is routed through precise component d...",
-  "shot_type": "medium",
-  "camera_description": "Stable medium framing that keeps action and character readable.",
-  "composition": "Readable medium composition in City buildings featuring green_martian_warriors, Airship Crews (unseen/distant).",
-  "target_seconds": 5.0,
+  "shot_title": "Closing Reaction 3: Land the scene consequence or transition cleanly.",
+  "shot_type": "closing_reaction",
+  "camera_description": "Controlled closing frame that lands the consequence of the beat.",
+  "composition": "Closing composition in City buildings that emphasizes the consequence of land the scene consequence or transition cleanly..",
+  "target_seconds": 4.6,
   "characters_in_frame": [
     {
       "label": "Green Martian Warriors",
@@ -20,16 +20,6 @@
       "resolution_score": 176,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH008/green_martian_warriors.md",
       "notes": "asset id exactly matches canonical id | query matches alias 'green_martian_warriors'"
-    },
-    {
-      "label": "Airship Crews (unseen/distant)",
-      "canonical_id": null,
-      "display_name": "Airship Crews (unseen/distant)",
-      "status": "review",
-      "entity_kind": "individual",
-      "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
     }
   ],
   "environment": {
@@ -46,12 +36,15 @@
     "BT003"
   ],
   "continuity_constraints": [
-    "Trajectory of projectiles must remain consistent with shot direction",
-    "Damage states of various ships must be tracked incrementally during the engagement",
-    "Airship fleet is routed through precise component disabling."
+    "Trajectory of projectiles",
+    "Damage states of the various ships during the engagement.",
+    "Land the scene consequence or transition cleanly.",
+    "Resolve Airship Crews (unseen/distant) -> Airship Crews (unseen/distant)",
+    "Resolve City buildings -> City buildings",
+    "Resolve rooftops -> rooftops"
   ],
-  "prompt_seed": "Medium 3: Airship fleet is routed through precise component d.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in City buildings featuring green_martian_warriors, Airship Crews (unseen/distant). Cast: green_martian_warriors, Airship Crews (unseen/distant). Envir...",
-  "shot_notes": "Airship fleet is routed through precise component disabling.",
+  "prompt_seed": "Closing Reaction 3: Land the scene consequence or transition cleanly.. closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in City buildings that emphasizes the consequence of land the scene consequence or transition cleanly.. Cast: green_martian_warriors. Environme...",
+  "shot_notes": "Land the scene consequence or transition cleanly.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -109,36 +102,36 @@
     }
   ],
   "evidence_summary": [
-    "The sequence must demonstrate the tactical superiority and disciplined military prowess of the green Martian warriors. Action should focus on precision marksmanship rather than indiscriminate fire, specifically targeting critical airship components such as...",
+    "Execute the primary action sequence and demonstrate Martian military prowess.",
     "A fierce battle erupts between the green Martians and the airship fleet. The Martian warriors use disciplined, specialized marksmanship to disable specific ship components like guns and steering gear, routing the fleet.",
     "Tension $\\rightarrow$ High-Stakes Action $\\rightarrow$ Victory/Chaos.",
     "Rapid cuts of Martian marksmen",
     "Long shots of airships being hit",
-    "Close-ups of specialized weaponry/targeting",
+    "Close-ups of specialized weaponry/targeting.",
     "green_martian_warriors | No specific visual data is provided in the evidence to establish a stable physical appearance, clothing, or movement style beyond the group's designation as \"green martian warriors.\" Visual identity is currently limited to the seman..."
   ],
   "metadata": {
     "artifact_id": "CH008_SC002_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "07b536f1b422e867b90acb8ea88efff33352057b",
+    "source_fingerprint": "0cd2863851fc597c81009947a9512aad5ff8e5fa",
     "created_at_utc": "2026-04-22T01:08:42.822952+00:00",
-    "updated_at_utc": "2026-04-22T07:40:04.725144+00:00",
+    "updated_at_utc": "2026-04-22T16:30:39.387434+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH008_SC002",
-        "version": "80aaff6a2abd61fead88a16fce960d90c17bf9ab"
+        "version": "72699cb95e466cd9f3e2caa20db6b04bfe74f683"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH008_SC002",
-        "version": "9d75fdc897a140ff436dc2eaef1add7ecc834a50"
+        "version": "e97c5b9e980409a1a106ccf9e8f4071bddfc9c61"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH008_SC002",
-        "version": "bd1538456962d7370e47896b08af2494fc8a1bae"
+        "version": "081d07a73a91551534059f4163be763a802ce88e"
       }
     ],
     "locked_fields": {},
@@ -153,6 +146,11 @@
         "timestamp_utc": "2026-04-22T07:40:28.269524+00:00",
         "action": "synthesized",
         "source_fingerprint": "07b536f1b422e867b90acb8ea88efff33352057b"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:30:39.387935+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "0cd2863851fc597c81009947a9512aad5ff8e5fa"
       }
     ]
   }

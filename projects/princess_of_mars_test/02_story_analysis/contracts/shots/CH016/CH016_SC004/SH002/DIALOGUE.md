@@ -2,18 +2,25 @@
 
 - shot_id: `SH002`
 - scene_id: `CH016_SC004`
-- dialogue_events: `2`
+- dialogue_events: `3`
 
-## CH016_DLG016
+## CH016_DLG018
 
-- speaker: `dejah_thoris`
-- source_ref: `CH016:p026:q01`
+- speaker: `sola`
+- source_ref: `CH016:p027:q01`
 - clip_id: `CL002`
-- dialogue_text: Yes,
+- dialogue_text: The great waterway which leads to Helium is but fifty miles to the south,
 
-## CH016_DLG017
+## CH016_DLG019
 
-- speaker: `dejah_thoris`
-- source_ref: `CH016:p026:q02`
+- speaker: `sola`
+- source_ref: `CH016:p027:q02`
 - clip_id: `CL002`
-- dialogue_text: come with us, Sola, you will be better off among the red men of Helium than you are here, and I can promise you not only a home with us, but the love and affection your nature craves and which must always be denied you by the customs of your own race. Come with us, Sola; we might go without you, but your fate would be terrible if they thought you had connived to aid us. I know that even that fear would not tempt you to interfere in our escape, but we want you with us, we want you to come to a land of sunshine and happiness, amongst a people who know the meaning of love, of sympathy, and of gratitude. Say that you will, Sola; tell me that you will.
+- dialogue_text: a swift thoat might make it in three hours; and then to Helium it is five hundred miles, most of the way through thinly settled districts. They would know and they would follow us. We might hide among the great trees for a time, but the chances are small indeed for escape. They would follow us to the very gates of Helium, and they would take toll of life at every step; you do not know them.
+
+## CH016_DLG020
+
+- speaker: `john_carter`
+- source_ref: `CH016:p028:q01`
+- clip_id: `CL002`
+- dialogue_text: Is there no other way we might reach Helium?

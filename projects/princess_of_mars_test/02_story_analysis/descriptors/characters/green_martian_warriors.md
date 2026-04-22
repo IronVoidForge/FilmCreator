@@ -25,23 +25,23 @@
 
 ## Generated Fields
 
-- build: canon-compatible best-effort character build
-- costume_materials: canon-compatible best-effort character costume materials
-- expression_tendency: canon-compatible best-effort character expression tendency
-- eye_color: canon-compatible best-effort character eye color
-- face_shape: canon-compatible best-effort character face shape
-- facial_hair: canon-compatible best-effort character facial hair
-- hair_color: canon-compatible best-effort character hair color
-- hair_style: canon-compatible best-effort character hair style
-- height: canon-compatible best-effort character height
-- posture: canon-compatible best-effort character posture
-- skin_tone: canon-compatible best-effort character skin tone
+- build: lean athletic build
+- costume_materials: worn cloth, leather, and practical field materials
+- expression_tendency: focused and self-controlled
+- eye_color: dark eyes
+- face_shape: angular face
+- facial_hair: clean-shaven or light stubble
+- hair_color: dark brown
+- hair_style: practical short hair
+- height: average-tall
+- posture: upright and ready
+- skin_tone: weathered light-to-medium skin
 
 ## Coverage
 
 - chapter_mentions: CH008
 - scene_mentions: CH008_SC002, CH008_SC003
-- shot_mentions: CH008_SC002/SH001, CH008_SC002/SH002, CH008_SC002/SH003, CH008_SC002/SH004, CH008_SC003/SH001, CH008_SC003/SH002, CH008_SC003/SH003, CH008_SC003/SH004
+- shot_mentions: CH008_SC002/SH001, CH008_SC002/SH002, CH008_SC002/SH003, CH008_SC003/SH001, CH008_SC003/SH002, CH008_SC003/SH003
 
 ## Evidence Summary
 
@@ -73,5 +73,5 @@
 - artifact_id: `DESC_CHAR_green_martian_warriors`
 - status: `generated`
 - source_fingerprint: `b63ee4be858fb15a3128ed6787275787e43b1076`
-- created_at_utc: `2026-04-22T04:08:33.588026+00:00`
-- updated_at_utc: `2026-04-22T04:08:33.588026+00:00`
+- created_at_utc: `2026-04-22T16:32:58.618713+00:00`
+- updated_at_utc: `2026-04-22T16:32:58.618713+00:00`

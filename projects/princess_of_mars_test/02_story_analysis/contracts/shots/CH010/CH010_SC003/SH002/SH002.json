@@ -5,11 +5,11 @@
   "shot_order": 2,
   "previous_shot_id": "SH001",
   "next_shot_id": "SH003",
-  "shot_title": "Insert Detail 2: Enraged by the assault, John Carter intervenes.",
-  "shot_type": "insert_detail",
-  "camera_description": "Tight detail framing focused on a single visual object or gesture.",
-  "composition": "Detail composition centered on the key physical action or prop inside The interior audience chamber.",
-  "target_seconds": 5.0,
+  "shot_title": "Medium 2: Enraged, Carter intervenes, engaging the warrior in...",
+  "shot_type": "medium",
+  "camera_description": "Stable medium framing that keeps action and character readable.",
+  "composition": "Readable medium composition in The interior audience chamber featuring john_carter, dejah_thoris.",
+  "target_seconds": 5.3,
   "characters_in_frame": [
     {
       "label": "John Carter",
@@ -20,6 +20,16 @@
       "resolution_score": 186,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
       "notes": "asset id exactly matches canonical id | query matches alias 'john_carter'"
+    },
+    {
+      "label": "Dejah Thoris",
+      "canonical_id": "dejah_thoris",
+      "display_name": "dejah_thoris",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH010/dejah_thoris.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'dejah_thoris'"
     }
   ],
   "environment": {
@@ -36,14 +46,15 @@
     "BT002"
   ],
   "continuity_constraints": [
-    "Weapon positions throughout the fight",
-    "Blood splatter patterns",
-    "Character blocking during combat",
-    "Enraged by the assault",
-    "John Carter intervenes."
+    "Weapon positions",
+    "blood splatter",
+    "character blocking during the fight.",
+    "Enraged",
+    "Carter intervenes",
+    "engaging the warrior in single combat."
   ],
-  "prompt_seed": "Insert Detail 2: Enraged by the assault, John Carter intervenes.. insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside The interior audience chamber. Cast: john_carter. Environment: The interior audience chamber. Beat:...",
-  "shot_notes": "Enraged by the assault, John Carter intervenes.",
+  "prompt_seed": "Medium 2: Enraged, Carter intervenes, engaging the warrior in.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in The interior audience chamber featuring john_carter, dejah_thoris. Cast: john_carter, dejah_thoris. Environment: The interior audience chamber. Beat...",
+  "shot_notes": "Enraged, Carter intervenes, engaging the warrior in single combat.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -101,12 +112,12 @@
     }
   ],
   "evidence_summary": [
-    "Execute a high-stakes combat climax within the interior audience chamber that establishes John Carter's martial superiority. The sequence must transition from a moment of social tension and outrage into a visceral, violent confrontation, utilizing handheld...",
+    "Provide the chapter's action climax and demonstrate Carter's combat prowess.",
     "A young Thark warrior strikes Dejah Thoris in a moment of mirthless laughter. Enraged, Carter intervenes, engaging the warrior in single combat. Despite the physical disparity, Carter uses superior technique to kill the warrior.",
     "From tension/outrage to violent action and sudden shock. **Likely Visual Coverage Families:** - Handheld/shaky cam for the combat sequence. - Medium shots of the strike on Dejah Thoris. - Wide shots to capture the mov...",
-    "Handheld/shaky cam (combat sequence)",
-    "Medium shots (strike on Dejah Thoris)",
-    "Wide shots (chamber movement)",
+    "Weapon positions",
+    "blood splatter",
+    "character blocking during the fight.",
     "dejah_thoris | Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts b...",
     "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in..."
   ],
@@ -114,24 +125,24 @@
     "artifact_id": "CH010_SC003_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "6ec6669207dc94245c32091a3b6ad2af9cb47a50",
+    "source_fingerprint": "f9c3ffb8ef3ee5ebafadfb78679bc182c549bb29",
     "created_at_utc": "2026-04-22T01:29:06.242743+00:00",
-    "updated_at_utc": "2026-04-22T07:54:17.667897+00:00",
+    "updated_at_utc": "2026-04-22T16:30:40.021715+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH010_SC003",
-        "version": "de770ba7eb740f8bebdd56b957d86e7ad23ffbf5"
+        "version": "cbd83f2647b9c44ec0bf2b449eb0b7d236d2a022"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH010_SC003",
-        "version": "1cea5a4e1a19570a39c4a63dea1320c9af54eae1"
+        "version": "6d4bbfa0a24640e16ab21837a4ca81c30a468105"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH010_SC003",
-        "version": "fb9de7f2dbd78c22ebb459ab7afe495b66240abd"
+        "version": "103ff08a43da8f316547c9fd6de33aea1d79aee0"
       }
     ],
     "locked_fields": {},
@@ -146,6 +157,11 @@
         "timestamp_utc": "2026-04-22T07:54:45.666028+00:00",
         "action": "synthesized",
         "source_fingerprint": "6ec6669207dc94245c32091a3b6ad2af9cb47a50"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:30:40.021715+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "f9c3ffb8ef3ee5ebafadfb78679bc182c549bb29"
       }
     ]
   }

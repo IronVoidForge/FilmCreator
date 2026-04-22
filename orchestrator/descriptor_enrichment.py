@@ -2431,6 +2431,7 @@ def run_descriptor_enrichment(
     entity_types: list[str] | None = None,
     entity_ids: list[str] | None = None,
     chapters: str | None = None,
+    run_tracker: "DownstreamRunTracker | None" = None,
 ) -> DescriptorEnrichmentSummary:
     project_dir = create_project(project_slug)
     output_root = _descriptor_root(project_dir)
@@ -2476,6 +2477,7 @@ def run_descriptor_enrichment(
     reused = 0
     processed = 0
     stop_processing = False
+    phase_name = "descriptor_enrichment"
     selected_types = set(entity_types or [])
     selected_ids = {str(item).strip().lower() for item in (entity_ids or []) if str(item).strip()}
 
@@ -2485,12 +2487,23 @@ def run_descriptor_enrichment(
         normalized = {str(candidate).strip().lower() for candidate in candidates if str(candidate).strip()}
         return bool(normalized & selected_ids)
 
-    def maybe_reuse(base_path: Path, fp: str, builder: Callable[[], DescriptorRecord], *, force: bool) -> DescriptorRecord:
+    if run_tracker is not None:
+        run_tracker.set_phase_total(phase_name, character_total + environment_total + scene_total + shot_total + key_item_total)
+
+    def maybe_reuse(base_path: Path, fp: str, builder: Callable[[], DescriptorRecord], *, force: bool, item_id: str) -> DescriptorRecord:
         nonlocal reused, synthesized
         existing = read_json(base_path.with_suffix(".json")) if base_path.with_suffix(".json").exists() else None
         metadata = _load_existing_metadata(existing, artifact_id=base_path.name, fp=fp)
-        if existing and not force:
-            old_meta = existing.get("metadata") or {}
+        old_meta = existing.get("metadata") or {} if isinstance(existing, dict) else {}
+        if existing and old_meta.get("status") == "locked" and not (run_tracker is not None and run_tracker.is_item_completed(phase_name, item_id, fp)):
+            existing["metadata"]["status"] = "stale"
+            write_json(base_path.with_suffix(".json"), existing)
+            warnings.append(f"Locked descriptor became stale and was not regenerated: {base_path.name}")
+            return _descriptor_from_existing(existing, metadata)
+        if run_tracker is not None and run_tracker.is_item_completed(phase_name, item_id, fp) and existing:
+            reused += 1
+            return _descriptor_from_existing(existing, metadata)
+        if existing and not force and run_tracker is None:
             if old_meta.get("source_fingerprint") == fp:
                 reused += 1
                 return _descriptor_from_existing(existing, metadata)
@@ -2504,6 +2517,13 @@ def run_descriptor_enrichment(
         _write_descriptor_files(base_path, record)
         synthesized += 1
         written_files.extend([str(base_path.with_suffix(".json")), str(base_path.with_suffix(".md"))])
+        if run_tracker is not None:
+            run_tracker.mark_item_completed(
+                phase_name,
+                item_id,
+                fp,
+                outputs=[str(base_path.with_suffix(".json")), str(base_path.with_suffix(".md"))],
+            )
         return record
 
     def log_start(label: str, index: int, total: int, entity_id: str) -> None:
@@ -2548,7 +2568,7 @@ def run_descriptor_enrichment(
                     use_llm=use_llm,
                 )
 
-            record = maybe_reuse(base_path, fp, build_character, force=force)
+            record = maybe_reuse(base_path, fp, build_character, force=force, item_id=f"character:{char_id}")
             records.append(record)
             log_finish("character", character_index, character_total, char_id, started_at)
             processed += 1
@@ -2593,7 +2613,7 @@ def run_descriptor_enrichment(
                     use_llm=use_llm,
                 )
 
-            record = maybe_reuse(base_path, fp, build_environment, force=force)
+            record = maybe_reuse(base_path, fp, build_environment, force=force, item_id=f"environment:{env_id}")
             records.append(record)
             log_finish("environment", environment_index, environment_total, env_id, started_at)
             processed += 1
@@ -2620,7 +2640,7 @@ def run_descriptor_enrichment(
             def build_scene() -> DescriptorRecord:
                 return _base_scene_descriptor(scene_id=scene_id, scene_contract=contract, shot_mentions=shot_mentions, use_llm=use_llm)
 
-            record = maybe_reuse(base_path, fp, build_scene, force=force)
+            record = maybe_reuse(base_path, fp, build_scene, force=force, item_id=f"scene:{scene_id}")
             records.append(record)
             log_finish("scene", scene_index, scene_total, scene_id, started_at)
             processed += 1
@@ -2652,7 +2672,7 @@ def run_descriptor_enrichment(
             def build_shot() -> DescriptorRecord:
                 return _base_shot_descriptor(shot=shot, scene_contract=scene_contract, use_llm=use_llm)
 
-            record = maybe_reuse(base_path, fp, build_shot, force=force)
+            record = maybe_reuse(base_path, fp, build_shot, force=force, item_id=f"shot:{scene_id}/{shot_id}")
             records.append(record)
             log_finish("shot", shot_index, shot_total, f"{scene_id}/{shot_id}", started_at)
             processed += 1
@@ -2685,7 +2705,7 @@ def run_descriptor_enrichment(
             def build_item() -> DescriptorRecord:
                 return _base_key_item_descriptor(item_id=item_id, candidate=candidate, use_llm=use_llm)
 
-            record = maybe_reuse(base_path, fp, build_item, force=force)
+            record = maybe_reuse(base_path, fp, build_item, force=force, item_id=f"key_item:{item_id}")
             records.append(record)
             log_finish("key_item", key_item_index, key_item_total, item_id, started_at)
             processed += 1

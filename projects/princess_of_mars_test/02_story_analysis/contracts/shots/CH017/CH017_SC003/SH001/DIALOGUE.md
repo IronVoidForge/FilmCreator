@@ -2,6 +2,11 @@
 
 - shot_id: `SH001`
 - scene_id: `CH017_SC003`
-- dialogue_events: `0`
+- dialogue_events: `1`
 
-- No dialogue events were bound to this shot.
+## CH017_DLG004
+
+- speaker: `john_carter`
+- source_ref: `CH017:p027:q01`
+- clip_id: `CL001`
+- dialogue_text: Good-bye, my princess,

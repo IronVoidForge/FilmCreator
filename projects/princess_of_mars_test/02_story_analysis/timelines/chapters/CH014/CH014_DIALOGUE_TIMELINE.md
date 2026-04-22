@@ -38,8 +38,8 @@
 - speaker: `dejah_thoris`
 - source_ref: `CH014:p004:q02`
 - scene_id: `CH014_SC001`
-- shot_id: `SH002`
-- clip_id: `CL002`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: I am happy here. I do not know why it is that I should always be happy and contented when you, John Carter, a stranger, are with me; yet at such times it seems that I am safe and that, with you, I shall soon return to my father's court and feel his strong arms about me and my mother's tears and kisses on my cheek.
 - excerpt: "No," she murmured, "I am happy here. I do not know why it is that I should always be happy and contented when you, John Carter, a stranger, are with me; yet at such times it seems that I am safe and that, with you, I shall soon return t...
 
@@ -68,8 +68,8 @@
 - speaker: `dejah_thoris`
 - source_ref: `CH014:p006:q02`
 - scene_id: `CH014_SC001`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: lovers.
 - excerpt: "Parents, brothers, and sisters, yes; and," she added in a low, thoughtful tone, "lovers."
 
@@ -90,8 +90,8 @@
 - speaker: `unresolved`
 - source_ref: `CH014:p008:q01`
 - scene_id: `CH014_SC001`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: Yes.
 - excerpt: "Yes."
 - review_notes:
@@ -102,8 +102,8 @@
 - speaker: `unresolved`
 - source_ref: `CH014:p009:q01`
 - scene_id: `CH014_SC001`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: And a—lover?
 - excerpt: "And a—lover?"
 - review_notes:
@@ -113,9 +113,9 @@
 
 - speaker: `the woman`
 - source_ref: `CH014:p011:q01`
-- scene_id: `CH014_SC001`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- scene_id: `CH014_SC002`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: The man of Barsoom,
 - excerpt: "The man of Barsoom," she finally ventured, "does not ask personal questions of women, except his mother, and the woman he has fought for and won."
 
@@ -123,9 +123,9 @@
 
 - speaker: `dejah_thoris`
 - source_ref: `CH014:p011:q02`
-- scene_id: `CH014_SC001`
-- shot_id: `SH005`
-- clip_id: `CL005`
+- scene_id: `CH014_SC002`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: does not ask personal questions of women, except his mother, and the woman he has fought for and won.
 - excerpt: "The man of Barsoom," she finally ventured, "does not ask personal questions of women, except his mother, and the woman he has fought for and won."
 
@@ -133,9 +133,9 @@
 
 - speaker: `john_carter`
 - source_ref: `CH014:p012:q01`
-- scene_id: `CH014_SC001`
-- shot_id: `SH005`
-- clip_id: `CL005`
+- scene_id: `CH014_SC002`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: But I have fought—
 - excerpt: "But I have fought—" I started, and then I wished my tongue had been cut from my mouth; for she turned even as I caught myself and ceased, and drawing my silks from her shoulder she held them out to me, and without a word, and with head...
 
@@ -143,7 +143,7 @@
 
 - speaker: `john_carter`
 - source_ref: `CH014:p021:q01`
-- scene_id: `CH014_SC002`
+- scene_id: `CH014_SC003`
 - shot_id: `SH001`
 - clip_id: `CL001`
 - dialogue_text: What does this mean?
@@ -153,9 +153,9 @@
 
 - speaker: `dejah_thoris`
 - source_ref: `CH014:p022:q01`
-- scene_id: `CH014_SC002`
-- shot_id: `SH002`
-- clip_id: `CL002`
+- scene_id: `CH014_SC003`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: Sarkoja thought it best,
 - excerpt: "Sarkoja thought it best," she answered, her face betokening her disapproval of the procedure.
 
@@ -176,8 +176,8 @@
 - speaker: `dejah_thoris`
 - source_ref: `CH014:p025:q01`
 - scene_id: `CH014_SC003`
-- shot_id: `SH001`
-- clip_id: `CL001`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: Sarkoja wears it, John Carter,
 - excerpt: "Sarkoja wears it, John Carter," she answered.
 
@@ -186,8 +186,8 @@
 - speaker: `dejah_thoris`
 - source_ref: `CH014:p027:q01`
 - scene_id: `CH014_SC003`
-- shot_id: `SH001`
-- clip_id: `CL001`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: John Carter,
 - excerpt: "John Carter," he answered, "if ever you and Dejah Thoris escape the Tharks it will be upon this journey. We know that you will not go without her. You have shown yourself a mighty fighter, and we do not wish to manacle you, so we hold y...
 
@@ -208,8 +208,8 @@
 - speaker: `unresolved`
 - source_ref: `CH014:p029:q01`
 - scene_id: `CH014_SC003`
-- shot_id: `SH002`
-- clip_id: `CL002`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: This much, Tars Tarkas, you may do for me in return for the friendship that, I must confess, I feel for you.
 - excerpt: "This much, Tars Tarkas, you may do for me in return for the friendship that, I must confess, I feel for you."
 - review_notes:
@@ -252,8 +252,8 @@
 - speaker: `unresolved`
 - source_ref: `CH014:p033:q01`
 - scene_id: `CH014_SC004`
-- shot_id: `SH001`
-- clip_id: `CL001`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: Were you to give me your word that neither you nor Dejah Thoris would attempt to escape until after we have safely reached the court of Tal Hajus you might have the key and throw the chains into the river Iss.
 - excerpt: "Were you to give me your word that neither you nor Dejah Thoris would attempt to escape until after we have safely reached the court of Tal Hajus you might have the key and throw the chains into the river Iss."
 - review_notes:
@@ -264,8 +264,8 @@
 - speaker: `john_carter`
 - source_ref: `CH014:p034:q01`
 - scene_id: `CH014_SC004`
-- shot_id: `SH002`
-- clip_id: `CL002`
+- shot_id: `SH003`
+- clip_id: `CL003`
 - dialogue_text: It were better that you held the key, Tars Tarkas,
 - excerpt: "It were better that you held the key, Tars Tarkas," I replied.
 
@@ -273,9 +273,9 @@
 
 - speaker: `john_carter`
 - source_ref: `CH014:p041:q01`
-- scene_id: `CH014_SC004`
-- shot_id: `SH003`
-- clip_id: `CL003`
+- scene_id: `CH014_SC005`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: What is the matter with Dejah Thoris?
 - excerpt: "What is the matter with Dejah Thoris?" I blurted out at her. "Why will she not speak to me?"
 
@@ -283,9 +283,9 @@
 
 - speaker: `john_carter`
 - source_ref: `CH014:p041:q02`
-- scene_id: `CH014_SC004`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- scene_id: `CH014_SC005`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: Why will she not speak to me?
 - excerpt: "What is the matter with Dejah Thoris?" I blurted out at her. "Why will she not speak to me?"
 
@@ -306,8 +306,8 @@
 - speaker: `john_carter`
 - source_ref: `CH014:p044:q01`
 - scene_id: `CH014_SC005`
-- shot_id: `SH001`
-- clip_id: `CL001`
+- shot_id: `SH002`
+- clip_id: `CL002`
 - dialogue_text: What might a sorak be, Sola?
 - excerpt: I pondered over this report for some time, finally asking, "What might a sorak be, Sola?"
 
@@ -349,8 +349,8 @@
 
 - speaker: `john_carter`
 - source_ref: `CH014:p052:q01`
-- scene_id: `CH014_SC005`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- scene_id: `CH014_SC006`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: I noticed that their eggs were so much smaller than those I saw hatching in your incubator,
 - excerpt: "I noticed that their eggs were so much smaller than those I saw hatching in your incubator," I added.

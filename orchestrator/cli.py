@@ -6,6 +6,7 @@ import json
 from .character_bible import run_character_bible_synthesis
 from .descriptor_enrichment import clear_descriptor_artifacts, run_descriptor_enrichment
 from .dialogue_enrichment import run_dialogue_enrichment
+from .downstream_pipeline import run_downstream_pipeline
 from .dialogue_timeline import run_dialogue_timeline
 from .environment_bible import run_environment_bible_synthesis
 from .identity_refinement import run_identity_refinement
@@ -126,6 +127,31 @@ def build_parser() -> argparse.ArgumentParser:
     r.add_argument("--no-llm", action="store_true")
     r.add_argument("--apply", action="store_true")
 
+    dp = subparsers.add_parser("run-downstream-pipeline")
+    dp.add_argument("project_slug")
+    dp.add_argument("--chapters", type=str, default=None)
+    dp.add_argument(
+        "--start-phase",
+        choices=[
+            "scene_contracts",
+            "scene_bindings",
+            "shot_packages",
+            "dialogue_timeline",
+            "descriptor_enrichment",
+            "prompt_preparation",
+        ],
+        default="scene_contracts",
+    )
+    dp.add_argument("--pipeline-key", type=str, default="downstream_pipeline")
+    dp.add_argument("--no-resume", action="store_true")
+    dp.add_argument("--no-llm", action="store_true")
+    dp.add_argument(
+        "--shot-variant",
+        action="append",
+        choices=["primary_keyframe", "alternate_angle", "consistency_repair"],
+        dest="shot_variants",
+    )
+
     return parser
 
 
@@ -242,6 +268,18 @@ def main() -> None:
             apply_merge=args.apply,
         )
         print(json.dumps(result.to_dict(), indent=2))
+
+    elif args.command == "run-downstream-pipeline":
+        summary = run_downstream_pipeline(
+            args.project_slug,
+            chapters=args.chapters,
+            start_phase=args.start_phase,
+            pipeline_key=args.pipeline_key,
+            resume=not args.no_resume,
+            use_llm=not args.no_llm,
+            shot_variants=args.shot_variants,
+        )
+        print(json.dumps(summary.to_dict(), indent=2))
 
 
 if __name__ == "__main__":

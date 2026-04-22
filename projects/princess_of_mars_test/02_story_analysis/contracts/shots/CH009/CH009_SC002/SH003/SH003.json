@@ -5,11 +5,11 @@
   "shot_order": 3,
   "previous_shot_id": "SH002",
   "next_shot_id": "",
-  "shot_title": "Insert Detail 3: Social Observation",
-  "shot_type": "insert_detail",
-  "camera_description": "Tight detail framing focused on a single visual object or gesture.",
-  "composition": "Detail composition centered on the key physical action or prop inside The Plaza.",
-  "target_seconds": 5.1,
+  "shot_title": "Closing Reaction 3: Land the scene consequence or transition cleanly.",
+  "shot_type": "closing_reaction",
+  "camera_description": "Controlled closing frame that lands the consequence of the beat.",
+  "composition": "Closing composition in The Plaza that emphasizes the consequence of land the scene consequence or transition cleanly..",
+  "target_seconds": 4.6,
   "characters_in_frame": [
     {
       "label": "The Protagonist",
@@ -20,6 +20,16 @@
       "resolution_score": 176,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
       "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
+    },
+    {
+      "label": "Sola",
+      "canonical_id": "sola",
+      "display_name": "sola",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'sola'"
     }
   ],
   "environment": {
@@ -36,11 +46,13 @@
     "BT003"
   ],
   "continuity_constraints": [
-    "Condition/fit of the modified armor during training sequences",
-    "Through the training, the protagonist observes the social roles of Mars (men handling law/strategy; women as educators and manufacturers)."
+    "Condition/fit of the modified armor during training sequences.",
+    "Land the scene consequence or transition cleanly.",
+    "Resolve Martian Youth (ensemble) -> Martian Youth (ensemble)",
+    "Resolve The Plaza -> The Plaza"
   ],
-  "prompt_seed": "Insert Detail 3: Through the training, the protagonist observes the.... insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside The Plaza. Cast: protagonist. Environment: The Plaza. Beat: Through the training, the protago...",
-  "shot_notes": "Through the training, the protagonist observes the social roles of Mars (men handling law/strategy; women as educators and manufacturers).",
+  "prompt_seed": "Closing Reaction 3: Land the scene consequence or transition cleanly.. closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in The Plaza that emphasizes the consequence of land the scene consequence or transition cleanly.. Cast: protagonist, sola. Environment: The Pl...",
+  "shot_notes": "Land the scene consequence or transition cleanly.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -98,36 +110,37 @@
     }
   ],
   "evidence_summary": [
-    "Establish the protagonist's physical capabilities and integrate him into Martian social structures through a sequence of gear modification and combat training. The scene must visually communicate the gendered division of labor on Mars, specifically highligh...",
+    "Demonstrate the protagonist's physical training and provide world-building regarding Martian social roles.",
     "Sola and the other women remodel the gear for the protagonist. He begins combat training in the plaza with the Martian youth, observing that while men handle law/strategy, women are the primary educators and manufacturers.",
     "Focused exertion $\\rightarrow$ Observational curiosity.",
-    "Montage-style coverage of gear modification",
     "Wide shots of the plaza training",
-    "Medium tracking shots of combat drills",
-    "protagonist | An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeless\" physic..."
+    "montage-style coverage of gear modification",
+    "medium tracking shots of combat drills.",
+    "protagonist | An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeless\" physic...",
+    "sola | Sola is a female Green Martian, also identified as a Thark. Her visual identity is defined by her species' characteristic green coloring and traditional Green Martian attire. While specific physical proportions are not detailed, she is established as..."
   ],
   "metadata": {
     "artifact_id": "CH009_SC002_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "9db932114c24efb590de46abc502287fedda2536",
+    "source_fingerprint": "f5c13906fbb143f4edbc958c2cf5f889d945cc69",
     "created_at_utc": "2026-04-22T01:17:55.307964+00:00",
-    "updated_at_utc": "2026-04-22T07:46:45.343242+00:00",
+    "updated_at_utc": "2026-04-22T16:30:39.665914+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH009_SC002",
-        "version": "4d81df67d3ab8055295b0bf041d82f91a0a5b652"
+        "version": "4433094c5a697654c33c1ec1f3562d3c79635d6d"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH009_SC002",
-        "version": "7851fd3a094e971f30bcd2fc852c69cd91ee50dc"
+        "version": "5d66c01c6ecafc958862fd2665ae382c93eb2b30"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH009_SC002",
-        "version": "98c5f33ff2a3eaaf25f962e11c0177f77ce2b6a0"
+        "version": "5375f14e949a198f78d0a7bc4fcf59cb89be5657"
       }
     ],
     "locked_fields": {},
@@ -142,6 +155,11 @@
         "timestamp_utc": "2026-04-22T07:47:01.392893+00:00",
         "action": "synthesized",
         "source_fingerprint": "9db932114c24efb590de46abc502287fedda2536"
+      },
+      {
+        "timestamp_utc": "2026-04-22T16:30:39.666416+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "f5c13906fbb143f4edbc958c2cf5f889d945cc69"
       }
     ]
   }
