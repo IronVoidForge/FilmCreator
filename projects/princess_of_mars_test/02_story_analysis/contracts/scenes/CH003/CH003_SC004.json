@@ -1,0 +1,330 @@
+{
+  "scene_id": "CH003_SC004",
+  "chapter_id": "CH003",
+  "scene_title": "SC004",
+  "purpose": "Demonstrate the protagonist's unique advantage and change the power dynamic.",
+  "summary": "To escape, the protagonist performs a massive thirty-foot leap, landing on the far side of the enclosure. The Martians witness this feat, shifting their view of him from prey to a \"wonderful discovery.\"",
+  "emotional_arc": "Desperation $\\rightarrow$ Triumph $\\rightarrow$ Observation (Martian side).\n\n**Likely Visual Coverage Families:**\n- Slow-motion or wide tracking shots of the massive leap.\n- Reaction shots from the Martian warriors (shock/interest).\n- Wide shot showing the distance covered by the jump.",
+  "production_intent": "The protagonist must execute a physically impossible thirty-foot leap to escape the enclosure, transitioning from a hunted state to an object of intense Martian curiosity. The scale of the jump and the reaction of the martian_warriors are the critical narrative drivers.",
+  "scene_short_description": "A subject performs a massive leap across a circular basin to escape an enclosure.",
+  "scene_primary_scale_story_point": "The thirty-foot distance of the jump relative to the low walled enclosure.",
+  "scene_required_anchor_catalog": [
+    "Low walled enclosure",
+    "Glass roof incubator",
+    "Yellowish moss-like vegetation"
+  ],
+  "scene_start_state": "protagonist is cornered within the basin/enclosure area by martian_warriors.",
+  "scene_end_state": "protagonist has landed on the far side of the enclosure; martian_warriors observe from a distance.",
+  "dominant_action_line": "A desperate leap across a wide gap to escape capture.",
+  "scene_spatial_layout": [
+    "Circular basin containing yellowish moss-like vegetation",
+    "Low walled enclosure with a glass roof incubator"
+  ],
+  "character_spatial_map": [
+    "protagonist starts inside the low walled enclosure",
+    "martian_warriors surround the perimeter of the enclosure"
+  ],
+  "environment_subzones": [
+    "Inside the enclosure",
+    "The far side of the enclosure",
+    "The basin floor"
+  ],
+  "entry_vectors": [
+    "protagonist leaps from inside to outside"
+  ],
+  "exit_vectors": [
+    "protagonist exits via the leap"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Physical exertion/launch",
+    "BT002 -> BT003: Landing and shift in Martian perspective"
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    },
+    {
+      "label": "Martian Warriors",
+      "canonical_id": "martian_warriors",
+      "display_name": "martian_warriors",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/martian_warriors.md",
+      "notes": "Direct registry match for 'martian_warriors'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The basin/enclosure area",
+      "canonical_id": null,
+      "display_name": "The basin/enclosure area",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    }
+  ],
+  "continuity_constraints": [
+    "The trajectory and landing point of the leap must match the thirty-foot requirement",
+    "Visual scale relationship between martian_warriors and protagonist"
+  ],
+  "visual_coverage_families": [
+    "Slow-motion or wide tracking shots of the massive leap",
+    "Reaction shots from the martian_warriors (shock/interest)",
+    "Wide shot showing the distance covered by the jump"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "protagonist prepares for the leap under pressure",
+      "purpose": "",
+      "action_start": "protagonist cornered by martian_warriors",
+      "action_end": "protagonist crouches to spring",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [
+        "martian_warriors"
+      ],
+      "spatial_context": "Inside the enclosure",
+      "blocking_hint": "protagonist center, martians at walls",
+      "environment_subzone": "Inside the enclosure",
+      "continuity_focus": "distance from wall",
+      "coverage_hint": "medium_full",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "the massive thirty-foot leap",
+      "purpose": "",
+      "action_start": "protagonist leaves ground",
+      "action_end": "protagonist hits far side",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "Across the basin gap",
+      "blocking_hint": "arc trajectory across frame",
+      "environment_subzone": "The basin floor",
+      "continuity_focus": "trajectory and landing point",
+      "coverage_hint": "wide tracking/slow-motion",
+      "coverage_priority": "critical",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "martian_warriors observe the feat",
+      "purpose": "",
+      "action_start": "protagonist lands on far side",
+      "action_end": "martians freeze in observation",
+      "active_subjects": [
+        "martian_warriors"
+      ],
+      "passive_subjects": [
+        "protagonist"
+      ],
+      "spatial_context": "Perimeter of enclosure",
+      "blocking_hint": "martians grouped, looking toward protagonist",
+      "environment_subzone": "The basin floor",
+      "continuity_focus": "scale of martians vs protagonist",
+      "coverage_hint": "reaction shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "none"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish desperation",
+      "planned_shot_moment_summary": "protagonist prepares for the jump",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "Inside the enclosure",
+      "planned_shot_required_anchor_1": "Low walled enclosure",
+      "planned_shot_scale_proof_detail": "proximity to martian_warriors",
+      "start_state_seed": "protagonist cornered",
+      "end_state_seed": "protagonist crouches to spring",
+      "action_seed": "crouching/loading power",
+      "blocking_seed": [
+        "center of enclosure"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "demonstrate feat",
+      "planned_shot_moment_summary": "the thirty-foot leap in flight",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "The basin floor",
+      "planned_shot_required_anchor_1": "Glass roof incubator",
+      "planned_shot_scale_proof_detail": "distance from enclosure wall",
+      "start_state_seed": "mid-air launch",
+      "end_state_seed": "approaching landing",
+      "action_seed": "soaring through air",
+      "blocking_seed": [
+        "traversing the gap"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "shift power dynamic",
+      "planned_shot_moment_summary": "martian_warriors react to the landing",
+      "primary_subject_seed": "martian_warriors",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "The basin floor",
+      "planned_shot_required_anchor_1": "Yellowish moss-like vegetation",
+      "planned_shot_scale_proof_detail": "height/size of martian_warriors vs protagonist",
+      "start_state_seed": "protagonist lands",
+      "end_state_seed": "martians staring",
+      "action_seed": "staring in shock/interest",
+      "blocking_seed": [
+        "standing at perimeter"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve The basin/enclosure area -> The basin/enclosure area"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH003",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH003_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH003_chapter_iii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH014_chapter_xiv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH003",
+      "canonical_id": "protagonist"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH003",
+      "canonical_id": "martian_warriors"
+    }
+  ],
+  "evidence_summary": [
+    "[CH003_SC004] Purpose: Demonstrate the protagonist's unique advantage and change the power dynamic.",
+    "[CH003_SC004] Summary: To escape, the protagonist performs a massive thirty-foot leap, landing on the far side of the enclosure. The Martians witness this feat, shifting their view of him from prey to a \"wonderful discovery.\"",
+    "[CH003_SC004] Emotional arc: Desperation $\\rightarrow$ Triumph $\\rightarrow$ Observation (Martian side). **Likely Visual Coverage Families:** - Slow-motion or wide tracking shots of the massive leap. - Reaction shots from the Martian warriors (shock/interes...",
+    "[CH003_SC004] Continuity: The trajectory and landing point of the leap; the visual scale of the Martians vs. the protagonist.",
+    "[CH003] Chapter summary: **Setting:** A circular basin on Mars covered in yellowish, moss-like vegetation, featuring a low walled enclosure with a glass roof (an incubator). **Events:** - The protagonist wakes up on Mars and discovers the eff...",
+    "[CH003] CHAPTER III (book index hit)",
+    "[CH007] CHAPTER VII (book index hit)",
+    "[CH014] CHAPTER XIV (book index hit)",
+    "Character protagonist: protagonist",
+    "Character martian_warriors: martian_warriors"
+  ],
+  "storyboard_markdown": "# Scene Contract: CH003_SC004\n\n## Production Intent\nThe protagonist must execute a physically impossible thirty-foot leap to escape the enclosure, transitioning from a hunted state to an object of intense Martian curiosity. The scale of the jump and the reaction of the martian_warriors are the critical narrative drivers.\n\n## Required Cast\n- protagonist\n- martian_warriors\n\n## Required Environments\n- The basin/enclosure area (circular basin, yellowish moss-like vegetation, low walled enclosure, glass roof incubator)\n\n## Continuity Constraints\n- The trajectory and landing point of the leap must match the thirty-foot requirement.\n- Visual scale relationship between martian_warriors and protagonist.\n\n## Beat List\n- BT001: protagonist prepares for the leap under pressure\n- BT002: the massive thirty-foot leap\n- BT003: martian_warriors observe the feat",
+  "metadata": {
+    "artifact_id": "CH003_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "6df1fb253d0d477ad2bd6d5943080acf7adaf99d",
+    "created_at_utc": "2026-04-23T19:36:38.272391+00:00",
+    "updated_at_utc": "2026-04-23T19:36:38.272391+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH003_SC004",
+        "version": "087588418ded00a208d9114699383af2565d991a"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH003_SC004",
+        "version": "4fe82be5047e9791d8e820ceaed6e26cf04fa6f1"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH003_SC004",
+        "version": "1ff0660a93466ba275ca0c98916059e0a503c20b"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-23T19:37:20.730793+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "6df1fb253d0d477ad2bd6d5943080acf7adaf99d"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+# Scene Binding Index
+
+- `CH001_SC001` - mode=unresolved, env=Unspecified (Narrative framing space), cast=1, flags=1
+- `CH001_SC002` - mode=unresolved, env=Remote Arizona quartz vein/hills, cast=2, flags=1
+- `CH001_SC003` - mode=unresolved, env=Arizona hills/plateau, cast=2, flags=1
+- `CH001_SC004` - mode=unresolved, env=The trail/valley near the ambush site, cast=3, flags=1
+- `CH001_SC005` - mode=unresolved, env=High cliffside trail, cast=1, flags=1
+- `CH002_SC001` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH002_SC002` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH002_SC003` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH002_SC004` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH002_SC005` - mode=unresolved, env=(none), cast=0, flags=1
+- `CH003_SC001` - mode=unresolved, env=A circular basin on Mars covered in yellowish, cast=1, flags=1
+- `CH003_SC002` - mode=unresolved, env=The glass-roofed incubator enclosure, cast=1, flags=1
+- `CH003_SC003` - mode=unresolved, env=The basin/vegetation area near the incubator, cast=2, flags=1
+- `CH003_SC004` - mode=unresolved, env=The basin/enclosure area, cast=2, flags=1
+- `CH003_SC005` - mode=unresolved, env=The basin/open landscape, cast=3, flags=2
+- `CH004_SC001` - mode=unresolved, env=Central Plaza of the Ancient City (Marble/Gold architecture, massive scale), cast=3, flags=2
+- `CH004_SC002` - mode=scene_level, env=grand_audience_chamber, cast=4, flags=1
+- `CH004_SC003` - mode=scene_level, env=grand_audience_chamber, cast=5, flags=1
+- `CH004_SC004` - mode=chapter_fallback, env=grand_audience_chamber, cast=3, flags=2
+- `CH004_SC005` - mode=chapter_fallback, env=grand_audience_chamber, cast=3, flags=2
+- `CH005_SC001` - mode=unresolved, env=Captive's chamber (decorated with murals), cast=3, flags=1
+- `CH005_SC002` - mode=unresolved, env=Captive's chamber, cast=2, flags=1
+- `CH005_SC003` - mode=unresolved, env=Deserted Martian city streets, cast=2, flags=1
+- `CH005_SC004` - mode=unresolved, env=Exterior building/alleyway, cast=3, flags=1
+- `CH006_SC001` - mode=unresolved, env=Interior chamber, cast=0, flags=1
+- `CH006_SC002` - mode=unresolved, env=Interior chamber, cast=0, flags=1
+- `CH006_SC003` - mode=unresolved, env=Interior chamber/Plaza threshold, cast=0, flags=1
+- `CH006_SC004` - mode=unresolved, env=Interior chamber leading out to a Plaza, cast=0, flags=1

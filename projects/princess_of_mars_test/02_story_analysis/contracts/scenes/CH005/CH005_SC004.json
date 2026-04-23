@@ -1,0 +1,356 @@
+{
+  "scene_id": "CH005_SC004",
+  "chapter_id": "CH005",
+  "scene_title": "SC004",
+  "purpose": "To provide a climax to the escape attempt and introduce a new, much larger threat.",
+  "summary": "In a desperate move to evade the dog, the protagonist leaps toward a window thirty feet above the ground. Just as he reaches safety, he is intercepted by a massive, white, hairless, ape-like creature that grabs him and drags him away.",
+  "emotional_arc": "Hope (of escape) $\\rightarrow$ Terror/Shock.\n\n**Likely Visual Coverage Families:**\n- Slow-motion capture of the high jump.\n- Extreme close-up of the protagonist's face during the grab.\n- Large-scale shots to show the size difference between the human and the Colossal Creature.\n- Sudden transition from bright exterior to dark/enclosed interior.",
+  "production_intent": "Execute a high-stakes vertical escape transition from an exterior alleyway to an interior lair, pivoting from a pursuit sequence into a sudden encounter with a massive predator.",
+  "scene_short_description": "A desperate leap toward a high window leads into an interception by a massive white creature.",
+  "scene_primary_scale_story_point": "Human protagonist vs. colossal, hairless, ape-like creature.",
+  "scene_required_anchor_catalog": [
+    "Window ledge (30ft elevation)",
+    "The Colossal Creature's hands/grip"
+  ],
+  "scene_start_state": "Protagonist fleeing the watch dog in an exterior alleyway.",
+  "scene_end_state": "Protagonist being dragged into a dark interior by the creature.",
+  "dominant_action_line": "Leap toward window -> Interception at ledge -> Dragged into darkness.",
+  "scene_spatial_layout": [
+    "Vertical ascent from alley floor to 30ft window",
+    "Transition through window threshold into enclosed space"
+  ],
+  "character_spatial_map": [
+    "protagonist: moving vertically toward window",
+    "the_watch_dog: pursuing from ground level",
+    "the_colossal_creature: positioned inside/at the window threshold"
+  ],
+  "environment_subzones": [
+    "Exterior building/alleyway",
+    "interior room of the Colossal Creature"
+  ],
+  "entry_vectors": [
+    "protagonist: leaping upward into window"
+  ],
+  "exit_vectors": [
+    "protagonist: being dragged into creature's lair"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Leap completion and ledge contact",
+    "BT002 -> BT003: Sudden interception and abduction"
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    },
+    {
+      "label": "The Watch Dog (pursuing)",
+      "canonical_id": "the_watch_dog",
+      "display_name": "the_watch_dog",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/the_watch_dog.md",
+      "notes": "Direct registry match for 'the_watch_dog'."
+    },
+    {
+      "label": "The Colossal Creature",
+      "canonical_id": "the_colossal_creature",
+      "display_name": "the_colossal_creature",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/the_colossal_creature.md",
+      "notes": "Direct registry match for 'the_colossal_creature'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Exterior building/alleyway",
+      "canonical_id": null,
+      "display_name": "Exterior building/alleyway",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    },
+    {
+      "label": "interior room of the Colossal Creature",
+      "canonical_id": null,
+      "display_name": "interior room of the Colossal Creature",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    }
+  ],
+  "continuity_constraints": [
+    "Window height must remain fixed at thirty feet above ground",
+    "Physical contact point between protagonist and creature must align with window ledge",
+    "Lighting shift from city street brightness to dark lair enclosure"
+  ],
+  "visual_coverage_families": [
+    "Slow-motion high jump capture",
+    "Extreme close-up facial reactions during contact",
+    "Large-scale scale comparison shots",
+    "High-contrast lighting transitions (bright exterior to dark interior)"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The desperate leap",
+      "purpose": "",
+      "action_start": "protagonist running in alleyway",
+      "action_end": "protagonist airborne toward window",
+      "active_subjects": [
+        "protagonist",
+        "the_watch_dog"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "Exterior building/alleyway",
+      "blocking_hint": "vertical movement from ground to 30ft",
+      "environment_subzone": "Exterior building/alleyway",
+      "continuity_focus": "window height 30ft",
+      "coverage_hint": "slow-motion capture of jump",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Reaching safety",
+      "purpose": "",
+      "action_start": "protagonist mid-air",
+      "action_end": "protagonist gripping the window ledge",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [
+        "the_watch_dog"
+      ],
+      "spatial_context": "Window threshold",
+      "blocking_hint": "clinging to frame",
+      "environment_subzone": "Exterior building/alleyway",
+      "continuity_focus": "physical contact with ledge",
+      "coverage_hint": "medium close up on hands/face",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The interception",
+      "purpose": "",
+      "action_start": "protagonist pulling himself in",
+      "action_end": "protagonist being dragged into the dark interior",
+      "active_subjects": [
+        "the_colossal_creature",
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "Window threshold/interior room",
+      "blocking_hint": "sudden grab from darkness",
+      "environment_subzone": "interior room of the Colossal Creature",
+      "continuity_focus": "lighting shift to dark interior",
+      "coverage_hint": "extreme close-up on face and large scale shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish escape desperation",
+      "planned_shot_moment_summary": "protagonist leaps toward the window",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "the_watch_dog"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "Exterior building/alleyway",
+      "planned_shot_required_anchor_1": "Window ledge",
+      "planned_shot_scale_proof_detail": "30ft height relative to ground",
+      "start_state_seed": "protagonist running",
+      "end_state_seed": "protagonist airborne",
+      "action_seed": "leaping upward",
+      "blocking_seed": [
+        "vertical trajectory toward window"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "bright city streets",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show moment of hope/safety",
+      "planned_shot_moment_summary": "protagonist reaches the window ledge",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "Exterior building/alleyway",
+      "planned_shot_required_anchor_1": "Window ledge",
+      "planned_shot_scale_proof_detail": "ledge contact",
+      "start_state_seed": "mid-air",
+      "end_state_seed": "hands gripping ledge",
+      "action_seed": "grabbing ledge",
+      "blocking_seed": [
+        "clinging to window frame"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "bright city streets",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "introduce threat/terror",
+      "planned_shot_moment_summary": "the_colossal_creature grabs protagonist",
+      "primary_subject_seed": "the_colossal_creature",
+      "secondary_subjects_seed": [
+        "protagonist"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "interior room of the Colossal Creature",
+      "planned_shot_required_anchor_1": "The Colossal Creature's hands",
+      "planned_shot_scale_proof_detail": "massive size vs human",
+      "start_state_seed": "protagonist safe on ledge",
+      "end_state_seed": "protagonist being pulled away",
+      "action_seed": "grabbing and dragging",
+      "blocking_seed": [
+        "creature lunges from interior to window"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Exterior building/alleyway -> Exterior building/alleyway",
+    "Resolve interior room of the Colossal Creature -> interior room of the Colossal Creature"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH005",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH005_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH003_chapter_iii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH023",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH023_chapter_xxiii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH005",
+      "canonical_id": "protagonist"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH005",
+      "canonical_id": "the_watch_dog"
+    }
+  ],
+  "evidence_summary": [
+    "[CH005_SC004] Purpose: To provide a climax to the escape attempt and introduce a new, much larger threat.",
+    "[CH005_SC004] Summary: In a desperate move to evade the dog, the protagonist leaps toward a window thirty feet above the ground. Just as he reaches safety, he is intercepted by a massive, white, hairless, ape-like creature that grabs him and drags him away.",
+    "[CH005_SC004] Emotional arc: Hope (of escape) $\\rightarrow$ Terror/Shock. **Likely Visual Coverage Families:** - Slow-motion capture of the high jump. - Extreme close-up of the protagonist's face during the grab. - Large-scale shots to show the size differe...",
+    "[CH005_SC004] Continuity: The height of the window; the physical contact point where the creature grabs the protagonist; lighting shift from city streets to the creature's lair.",
+    "[CH005] Chapter summary: **Setting:** A captive's chamber decorated with masterfully painted murals of Martian landscapes; a deserted street in a Martian city; the exterior of a building overlooking a valley. **Characters:** - **The Protagoni...",
+    "[CH003] CHAPTER III (book index hit)",
+    "[CH021] CHAPTER XXI (book index hit)",
+    "[CH023] CHAPTER XXIII (book index hit)",
+    "Character protagonist: protagonist",
+    "Character the_watch_dog: the_watch_dog"
+  ],
+  "storyboard_markdown": "# Scene Contract: CH005_SC004\n\n## Production Intent\nExecute a high-stakes vertical escape transition from an exterior alleyway to an interior lair, pivoting from a pursuit sequence into a sudden encounter with a massive predator.\n\n## Required Cast\n- protagonist\n- the_watch_dog\n- the_colossal_creature (massive, white, hairless, ape-like)\n\n## Required Environments\n- Exterior building/alleyway (bright city streets)\n- interior room of the Colossal Creature (dark/enclosed lair)\n\n## Continuity Constraints\n- Window height must remain fixed at thirty feet above ground.\n- Physical contact point between protagonist and creature must align with window ledge.\n- Lighting shift from bright exterior to dark interior enclosure.\n\n## Beat List\n- BT001: The desperate leap (protagonist leaps toward 30ft window).\n- BT002: Reaching safety (protagonist grabs the window ledge).\n- BT003: The interception (the_colossal_creature grabs and drags protagonist into darkness).",
+  "metadata": {
+    "artifact_id": "CH005_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "bc871ae8798d45b97b640f221bd8c559f01419e9",
+    "created_at_utc": "2026-04-23T19:43:56.002081+00:00",
+    "updated_at_utc": "2026-04-23T19:43:56.002081+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH005_SC004",
+        "version": "c9b33ecab2b578b312ac76a4b1efce56f1ef4842"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH005_SC004",
+        "version": "e072e1bf96dfaa7368335bf4fcef94e834c324d7"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH005_SC004",
+        "version": "e7503497453b57c166ae4483c6d9fe61f164be04"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-23T19:44:41.991139+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "bc871ae8798d45b97b640f221bd8c559f01419e9"
+      }
+    ]
+  }
+}

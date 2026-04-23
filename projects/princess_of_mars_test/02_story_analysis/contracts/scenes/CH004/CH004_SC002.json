@@ -1,0 +1,356 @@
+{
+  "scene_id": "CH004_SC002",
+  "chapter_id": "CH004",
+  "scene_title": "SC002",
+  "purpose": "Introduce the political hierarchy and the physical absurdity of the Martian culture.",
+  "summary": "The Narrator is presented to the Chieftain in a grand audience chamber. He observes the mismatch between the massive, ancient furniture and the Martians' biology, emphasizing the antiquity of the ruins.",
+  "emotional_arc": "Intimidation $\\rightarrow$ Observational Curiosity.\n\n**Likely Visual Coverage Families:**\n* Medium shots of the Chieftain in regalia.\n* Close-ups on the Narrator's face reacting to the environment.\n* Detail shots of the oversized, ancient furniture.",
+  "production_intent": "Establish the political hierarchy of Mars through a visual mismatch between massive, ancient marble and gold architecture and the biological scale of the Martian inhabitants. The environment must feel cavernous and antique to emphasize the absurdity of the current culture inhabiting ruins too large for them.",
+  "scene_short_description": "A small figure is presented within a cavernous hall filled with oversized marble and gold furniture.",
+  "scene_primary_scale_story_point": "Martian biology vs. massive ancient architecture mismatch.",
+  "scene_required_anchor_catalog": [
+    "Oversized Chieftain throne/furniture",
+    "Marble floor expanse"
+  ],
+  "scene_start_state": "The Narrator enters the vast, intimidating space of the grand audience chamber.",
+  "scene_end_state": "The Narrator settles into a state of observing the environmental absurdities.",
+  "dominant_action_line": "Presentation of the Narrator to the Chieftain within the grand hall.",
+  "scene_spatial_layout": [
+    "Vast open floor area between entrance and throne",
+    "High verticality emphasizing the scale of ruins"
+  ],
+  "character_spatial_map": [
+    "The Narrator: Small, positioned in the center/open floor",
+    "tars_tarkas: Accompanying or guiding the Narrator",
+    "chieftain: Seated on oversized furniture at the chamber's focal point",
+    "Martian Court: Peripheral to the central interaction"
+  ],
+  "environment_subzones": [
+    "Throne zone",
+    "Central procession path",
+    "Perimeter court area"
+  ],
+  "entry_vectors": [
+    "Main entrance to grand_audience_chamber"
+  ],
+  "exit_vectors": [
+    "Main entrance to grand_audience_chamber"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Transition from movement/presentation to stillness/observation",
+    "BT002 -> BT003: Transition from social intimidation to environmental curiosity"
+  ],
+  "characters_required": [
+    {
+      "label": "The Narrator",
+      "canonical_id": null,
+      "display_name": "The Narrator",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 6,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "Tars Tarkas",
+      "canonical_id": "tars_tarkas",
+      "display_name": "tars_tarkas",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
+      "notes": "Direct registry match for 'tars_tarkas'."
+    },
+    {
+      "label": "The Chieftain",
+      "canonical_id": "chieftain",
+      "display_name": "the_chieftain",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/chieftain.md",
+      "notes": "Direct registry match for 'the_chieftain'."
+    },
+    {
+      "label": "Martian Court",
+      "canonical_id": null,
+      "display_name": "Martian Court",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 6,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Grand Audience Chamber",
+      "canonical_id": "grand_audience_chamber",
+      "display_name": "grand_audience_chamber",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH004/grand_audience_chamber.md",
+      "notes": "Direct registry match for 'grand_audience_chamber'."
+    }
+  ],
+  "continuity_constraints": [
+    "Precise spatial positioning of the Narrator relative to massive chamber scale",
+    "Visual consistency of the Chieftain's specific regalia details"
+  ],
+  "visual_coverage_families": [
+    "Medium shots of the chieftain in regalia",
+    "Close-ups on the Narrator's reactive expressions",
+    "Detail shots of oversized, ancient furniture"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The Narrator is presented to the Chieftain",
+      "purpose": "",
+      "action_start": "walking into chamber",
+      "action_end": "standing before the throne",
+      "active_subjects": [
+        "The Narrator",
+        "tars_tarkas"
+      ],
+      "passive_subjects": [
+        "chieftain"
+      ],
+      "spatial_context": "central procession path",
+      "blocking_hint": "Narrator moving toward the focal point of the room",
+      "environment_subzone": "central procession path",
+      "continuity_focus": "placement of Narrator in relation to scale",
+      "coverage_hint": "wide shot for scale",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Confronting the Chieftain's presence",
+      "purpose": "",
+      "action_start": "Narrator stops moving",
+      "action_end": "Narrator faces the throne",
+      "active_subjects": [
+        "The Narrator",
+        "chieftain"
+      ],
+      "passive_subjects": [
+        "Martian Court"
+      ],
+      "spatial_context": "throne zone",
+      "blocking_hint": "Narrator looking up at the seated figure",
+      "environment_subzone": "throne zone",
+      "continuity_focus": "chieftain regalia details",
+      "coverage_hint": "medium shots of chieftain",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Observing the environmental mismatch",
+      "purpose": "",
+      "action_start": "Narrator's gaze shifts from person to object",
+      "action_end": "Narrator realizes the scale absurdity",
+      "active_subjects": [
+        "The Narrator"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "grand_audience_chamber",
+      "blocking_hint": "Narrator looking around the room",
+      "environment_subzone": "throne zone",
+      "continuity_focus": "furniture size vs biology",
+      "coverage_hint": "detail shots of furniture/close-ups on face",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale",
+      "planned_shot_moment_summary": "Narrator enters the massive chamber",
+      "primary_subject_seed": "The Narrator",
+      "secondary_subjects_seed": [
+        "tars_tarkas"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "central procession path",
+      "planned_shot_required_anchor_1": "marble floor expanse",
+      "planned_shot_scale_proof_detail": "tiny figure against massive walls",
+      "start_state_seed": "walking into frame",
+      "end_state_seed": "stopping in center",
+      "action_seed": "walking/standing",
+      "blocking_seed": [
+        "center floor"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "back"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "introduce hierarchy",
+      "planned_shot_moment_summary": "The Chieftain is revealed in regalia",
+      "primary_subject_seed": "chieftain",
+      "secondary_subjects_seed": [
+        "Martian Court"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "throne zone",
+      "planned_shot_required_anchor_1": "Oversized Chieftain throne/furniture",
+      "planned_shot_scale_proof_detail": "Chieftain dwarfed by furniture",
+      "start_state_seed": "static shot of throne",
+      "end_state_seed": "chieftain revealed",
+      "action_seed": "sitting/observing",
+      "blocking_seed": [
+        "seated on throne"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish absurdity",
+      "planned_shot_moment_summary": "Close up of oversized furniture details",
+      "primary_subject_seed": "ancient furniture",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "throne zone",
+      "planned_shot_required_anchor_1": "Oversized Chieftain throne/furniture",
+      "planned_shot_scale_proof_detail": "texture and size relative to hands",
+      "start_state_seed": "detail shot",
+      "end_state_seed": "detail shot",
+      "action_seed": "static observation",
+      "blocking_seed": [],
+      "shot_size": "insert_detail",
+      "camera_angle": "eye_level",
+      "lens_family": "telephoto",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve The Narrator -> The Narrator",
+    "Resolve Martian Court -> Martian Court"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH004",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH004_chapter_iv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH004",
+      "canonical_id": "tars_tarkas"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH004",
+      "canonical_id": "chieftain"
+    }
+  ],
+  "evidence_summary": [
+    "[CH004_SC002] Purpose: Introduce the political hierarchy and the physical absurdity of the Martian culture.",
+    "[CH004_SC002] Summary: The Narrator is presented to the Chieftain in a grand audience chamber. He observes the mismatch between the massive, ancient furniture and the Martians' biology, emphasizing the antiquity of the ruins.",
+    "[CH004_SC002] Emotional arc: Intimidation $\\rightarrow$ Observational Curiosity. **Likely Visual Coverage Families:** * Medium shots of the Chieftain in regalia. * Close-ups on the Narrator's face reacting to the environment. * Detail shots of the oversized...",
+    "[CH004_SC002] Continuity: The specific placement of the Narrator within the massive chamber; the visual details of the Chieftain's regalia.",
+    "[CH004] Chapter summary: **Setting:** An enormous, ancient city situated on a low table land near the edge of a dried-up Martian sea. The city features magnificent marble and gold architecture that appears far too large for its current inhabi...",
+    "[CH011] CHAPTER XI (book index hit)",
+    "[CH012] CHAPTER XII (book index hit)",
+    "[CH004] CHAPTER IV (book index hit)",
+    "Character tars_tarkas: tars_tarkas",
+    "Character chieftain: the_chieftain"
+  ],
+  "storyboard_markdown": "# Scene Contract: CH004_SC002\n\n## Production Intent\nEstablish the political hierarchy of Mars through a visual mismatch between massive, ancient marble and gold architecture and the biological scale of the Martian inhabitants. The environment must feel cavernous and antique to emphasize the absurdity of the current culture inhabiting ruins too large for them.\n\n## Required Cast\n- The Narrator\n- tars_tarkas\n- chieftain\n- Martian Court\n\n## Required Environments\n- grand_audience_chamber (Ancient marble/gold architecture, oversized furniture)\n\n## Continuity Constraints\n- Precise spatial positioning of the Narrator relative to massive chamber scale\n- Visual consistency of the Chieftain's specific regalia details\n\n## Beat List\n- BT001: The Narrator is presented to the Chieftain.\n- BT002: Confronting the Chieftain's presence.\n- BT003: Observing the environmental mismatch.",
+  "metadata": {
+    "artifact_id": "CH004_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "9acf99af67505c31717a793123afd3821fdb9fba",
+    "created_at_utc": "2026-04-23T19:38:50.742277+00:00",
+    "updated_at_utc": "2026-04-23T19:38:50.742277+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH004_SC002",
+        "version": "1c1491e5fc56af8520af0434d2582b2906bea702"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH004_SC002",
+        "version": "4e3e9ec0a35640f2b0f0e0f32cba4970cade255a"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH004_SC002",
+        "version": "57218eb77c1dc85d5083b352719edfcd0d557860"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-23T19:39:34.616334+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9acf99af67505c31717a793123afd3821fdb9fba"
+      }
+    ]
+  }
+}

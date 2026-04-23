@@ -1,0 +1,348 @@
+{
+  "scene_id": "CH004_SC004",
+  "chapter_id": "CH004",
+  "scene_title": "SC004",
+  "purpose": "Transition from public spectacle to private care and introduce a key supporting character.",
+  "summary": "The Narrator refuses further performance until his hunger is addressed. Tars Tarkas assigns Sola to look after him. Sola begins the process of providing sustenance.",
+  "emotional_arc": "Tension $\\rightarrow$ Relief/Exhaustion.\n\n**Likely Visual Coverage Families:**\n* Medium shots of the interaction between Tars Tarkas and Sola.\n* Over-the-shoulder (OTS) shots during the negotiation for food.",
+  "production_intent": "Move the narrative from the high-stakes public spectacle of the Audience Chamber into a controlled, private setting. The scene establishes the caretaking relationship between sola and the Narrator under the direction of tars_tarkas, shifting the tone from performance to physical recovery.",
+  "scene_short_description": "A performer refuses to continue until fed, leading to a transfer of care in private quarters.",
+  "scene_primary_scale_story_point": "Transition from massive marble/gold architecture to intimate corridor scale.",
+  "scene_required_anchor_catalog": [
+    "Food vessel/sustenance source",
+    "Corridor threshold"
+  ],
+  "scene_start_state": "The Narrator is physically exhausted and refusing performance in the Audience Chamber.",
+  "scene_end_state": "Sola begins providing sustenance to the Narrator in a private area.",
+  "dominant_action_line": "Negotiation for food leads to the assignment of a caretaker.",
+  "scene_spatial_layout": [
+    "Transition from large open chamber to narrow corridors",
+    "Movement toward enclosed private quarters"
+  ],
+  "character_spatial_map": [
+    "tars_tarkas positioned as authority figure between Narrator and sola",
+    "sola approaching Narrator to provide care"
+  ],
+  "environment_subzones": [
+    "Audience Chamber",
+    "Corridors",
+    "Private quarters"
+  ],
+  "entry_vectors": [
+    "Audience Chamber exit"
+  ],
+  "exit_vectors": [
+    "Private quarters entrance"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Shift from refusal to negotiation",
+    "BT002 -> BT003: Shift from command to caretaking"
+  ],
+  "characters_required": [
+    {
+      "label": "The Narrator",
+      "canonical_id": null,
+      "display_name": "The Narrator",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 6,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "Tars Tarkas",
+      "canonical_id": "tars_tarkas",
+      "display_name": "tars_tarkas",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
+      "notes": "Direct registry match for 'tars_tarkas'."
+    },
+    {
+      "label": "Sola",
+      "canonical_id": "sola",
+      "display_name": "sola",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
+      "notes": "Direct registry match for 'sola'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Transition from Audience Chamber to corridors/private quarters",
+      "canonical_id": null,
+      "display_name": "Transition from Audience Chamber to corridors/private quarters",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    }
+  ],
+  "continuity_constraints": [
+    "Narrator physical state (hunger/fatigue levels)",
+    "Sola height relative to the Narrator"
+  ],
+  "visual_coverage_families": [
+    "Medium shots of interaction between tars_tarkas and sola",
+    "Over-the-shoulder (OTS) shots during food negotiation"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The Narrator refuses to perform due to hunger",
+      "purpose": "",
+      "action_start": "Narrator stops movement",
+      "action_end": "tars_tarkas confronts him",
+      "active_subjects": [
+        "The Narrator",
+        "tars_tarkas"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "Audience Chamber",
+      "blocking_hint": "Narrator remains stationary/defiant",
+      "environment_subzone": "Audience Chamber",
+      "continuity_focus": "Narrator's fatigue level",
+      "coverage_hint": "Medium shot of Narrator",
+      "coverage_priority": "high",
+      "handoff_to_next": "The tension of the refusal"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Tars Tarkas assigns Sola to look after the Narrator",
+      "purpose": "",
+      "action_start": "tars_tarkas issues command",
+      "action_end": "sola accepts task",
+      "active_subjects": [
+        "tars_tarkas",
+        "sola"
+      ],
+      "passive_subjects": [
+        "The Narrator"
+      ],
+      "spatial_context": "Audience Chamber/Corridor threshold",
+      "blocking_hint": "tars_tarkas stands between the two others",
+      "environment_subzone": "Audience Chamber",
+      "continuity_focus": "Sola's height relative to Narrator",
+      "coverage_hint": "OTS shots during negotiation",
+      "coverage_priority": "medium",
+      "handoff_to_next": "The transition of responsibility"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Sola begins providing sustenance",
+      "purpose": "",
+      "action_start": "Sola enters private quarters",
+      "action_end": "sustenance is offered",
+      "active_subjects": [
+        "sola",
+        "The Narrator"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "Private quarters",
+      "blocking_hint": "Sola moves into the Narrator's immediate space",
+      "environment_subzone": "Private quarters",
+      "continuity_focus": "Narrator's physical state (hunger/relief)",
+      "coverage_hint": "Medium shots of caretaking",
+      "coverage_priority": "medium",
+      "handoff_to_next": "The relief/exhaustion state"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish conflict",
+      "planned_shot_moment_summary": "The Narrator refuses further performance due to hunger",
+      "primary_subject_seed": "The Narrator",
+      "secondary_subjects_seed": [
+        "tars_tarkas"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "Audience Chamber",
+      "planned_shot_required_anchor_1": "Audience Chamber threshold",
+      "planned_shot_scale_proof_detail": "Narrator's visible fatigue",
+      "start_state_seed": "Narrator standing/refusing",
+      "end_state_seed": "tars_tarkas reacting",
+      "action_seed": "The Narrator halts performance",
+      "blocking_seed": [
+        "Narrator center",
+        "tars_tarkas approaching"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "negotiation",
+      "planned_shot_moment_summary": "tars_tarkas assigns sola to the Narrator",
+      "primary_subject_seed": "tars_tarkas",
+      "secondary_subjects_seed": [
+        "sola",
+        "The Narrator"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "Audience Chamber",
+      "planned_shot_required_anchor_1": "tars_tarkas",
+      "planned_shot_scale_proof_detail": "Sola's height relative to Narrator",
+      "start_state_seed": "tars_tarkas speaking",
+      "end_state_seed": "sola acknowledging command",
+      "action_seed": "tars_tarkas directs sola toward the Narrator",
+      "blocking_seed": [
+        "OTS from Narrator towards tars_tarkas and sola"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "transition to care",
+      "planned_shot_moment_summary": "Sola begins providing sustenance in private quarters",
+      "primary_subject_seed": "sola",
+      "secondary_subjects_seed": [
+        "The Narrator"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "Private quarters",
+      "planned_shot_required_anchor_1": "Food vessel",
+      "planned_shot_scale_proof_detail": "Narrator's physical exhaustion",
+      "start_state_seed": "Sola entering private space",
+      "end_state_seed": "Sola offering food",
+      "action_seed": "Sola provides sustenance",
+      "blocking_seed": [
+        "Sola leaning toward the seated/resting Narrator"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve The Narrator -> The Narrator",
+    "Resolve Transition from Audience Chamber to corridors/private quarters -> Transition from Audience Chamber to corridors/private quarters"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH004",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH013",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH013_chapter_xiii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH022",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH022_chapter_xxii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH007_chapter_vii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH004",
+      "canonical_id": "tars_tarkas"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH004",
+      "canonical_id": "sola"
+    }
+  ],
+  "evidence_summary": [
+    "[CH004_SC004] Purpose: Transition from public spectacle to private care and introduce a key supporting character.",
+    "[CH004_SC004] Summary: The Narrator refuses further performance until his hunger is addressed. Tars Tarkas assigns Sola to look after him. Sola begins the process of providing sustenance.",
+    "[CH004_SC004] Emotional arc: Tension $\\rightarrow$ Relief/Exhaustion. **Likely Visual Coverage Families:** * Medium shots of the interaction between Tars Tarkas and Sola. * Over-the-shoulder (OTS) shots during the negotiation for food.",
+    "[CH004_SC004] Continuity: The Narrator's physical state (hunger/fatigue); Sola's height relative to the Narrator.",
+    "[CH004] Chapter summary: **Setting:** An enormous, ancient city situated on a low table land near the edge of a dried-up Martian sea. The city features magnificent marble and gold architecture that appears far too large for its current inhabi...",
+    "[CH013] CHAPTER XIII (book index hit)",
+    "[CH022] CHAPTER XXII (book index hit)",
+    "[CH007] CHAPTER VII (book index hit)",
+    "Character tars_tarkas: tars_tarkas",
+    "Character sola: sola"
+  ],
+  "storyboard_markdown": "# Scene Contract: CH004_SC004\n\n## Production Intent\nMove the narrative from high-stakes public spectacle into a controlled, private setting. Establish the caretaking relationship between sola and the Narrator under the direction of tars_tarkas, shifting tone from performance to physical recovery.\n\n## Required Cast\n- The Narrator\n- tars_tarkas\n- sola\n\n## Required Environments\n- Audience Chamber (Large marble/gold architecture)\n- Corridors\n- Private quarters\n\n## Continuity Constraints\n- Physical state of the Narrator (hunger and fatigue must be visually consistent)\n- Height relationship between sola and the Narrator\n\n## Beat List\n- BT001: The Narrator refuses to perform due to hunger.\n- BT002: Tars Tarkas assigns Sola to look after the Narrator.\n- BT003: Sola begins providing sustenance in private quarters.",
+  "metadata": {
+    "artifact_id": "CH004_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "a7d49aa1ff2f857307a6a13edd654f44cd61a726",
+    "created_at_utc": "2026-04-23T19:40:16.594805+00:00",
+    "updated_at_utc": "2026-04-23T19:40:16.594805+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH004_SC004",
+        "version": "3a1f66a9dc853bf4805bc5a6305dbe109e2aec9a"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH004_SC004",
+        "version": "e27102e07b7965204be3ca22442aa16f700a8dfa"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH004_SC004",
+        "version": "d2647f98b38f9593f293f44583f704cae76034f1"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-23T19:41:01.265186+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "a7d49aa1ff2f857307a6a13edd654f44cd61a726"
+      }
+    ]
+  }
+}

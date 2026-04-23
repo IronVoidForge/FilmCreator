@@ -1,0 +1,23 @@
+# Scene Binding: CH006_SC001
+
+- scene_id: `CH006_SC001`
+- chapter_id: `CH006`
+- binding_mode: `unresolved`
+- resolved_environment: Interior chamber
+
+## Resolved Cast
+
+- (none)
+
+## Notes
+
+- Scene referenced a non-canonical environment and no chapter fallback was available.
+
+## Review Flags
+
+- scene_environment_unresolved
+
+## Future Environment Requests
+
+- Interior chamber (missing_environment)
+- Martian city building (missing_environment)
