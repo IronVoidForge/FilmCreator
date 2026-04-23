@@ -5,46 +5,46 @@
   "purpose": "Establish the framing device and the protagonist's unique condition.",
   "summary": "An elderly John Carter introduces himself to the reader/audience, explaining his anomalous aging process and his decision to document his life story before he finally dies.",
   "emotional_arc": "Introspection / Solemnity.",
-  "production_intent": "Establish the narrative framing device by presenting an elderly protagonist who introduces his anomalous aging process and his intent to document his life history.",
+  "production_intent": "Establish the narrative framing device by presenting an elderly John Carter who explains his anomalous aging and his intent to document his life history before death.",
   "scene_short_description": "An elderly man sits in a soft-lit space addressing the audience about his life.",
-  "scene_primary_scale_story_point": "Subject is centered within a tight, intimate framing to emphasize personal scale.",
+  "scene_primary_scale_story_point": "Subject is centered within a localized, intimate narrative framing space.",
   "scene_required_anchor_catalog": [
     "Seated chair/position",
-    "Subject's weathered skin textures"
+    "Eyes of john_carter"
   ],
-  "scene_start_state": "Elderly John Carter sits in stillness, looking toward the lens.",
-  "scene_end_state": "John Carter finishes his explanation, maintaining a solemn gaze.",
-  "dominant_action_line": "Verbal exposition of anomalous aging and life documentation intent.",
+  "scene_start_state": "john_carter sits in stillness, looking toward the lens.",
+  "scene_end_state": "john_carter finishes his address, maintaining a solemn gaze.",
+  "dominant_action_line": "Verbal exposition regarding anomalous aging and life documentation.",
   "scene_spatial_layout": [
-    "Intimate, enclosed framing",
-    "Shallow depth of field focusing on subject"
+    "Intimate, enclosed framing space",
+    "Subject remains stationary/seated"
   ],
   "character_spatial_map": [
-    "John Carter seated centrally in frame"
+    "john_carter is seated in the center of the frame"
   ],
   "environment_subzones": [
     "primary scene playing area"
   ],
   "entry_vectors": [
-    "Direct eye contact from subject to lens"
+    "N/A (Static framing)"
   ],
   "exit_vectors": [
-    "Fade to black or transition via gaze shift"
+    "N/A (Static framing)"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Verbal introduction to explanation of condition",
-    "BT002 -> BT003: Explanation to declaration of intent"
+    "BT001 -> BT002: Visual shift from skin texture to eye contact",
+    "BT002 -> BT003: Shift from physical presence to verbal explanation"
   ],
   "characters_required": [
     {
       "label": "John Carter (Elderly)",
-      "canonical_id": null,
-      "display_name": "John Carter (Elderly)",
-      "status": "review",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
     }
   ],
   "environments_required": [
@@ -55,53 +55,53 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     }
   ],
   "continuity_constraints": [
-    "Consistent elderly age for John Carter",
-    "Stable tone of voice and delivery"
+    "Consistent elderly age for john_carter",
+    "Specific tone of voice and delivery consistency"
   ],
   "visual_coverage_families": [
     "Extreme close-ups of eyes and weathered skin",
-    "Medium shots of seated elderly subject",
+    "Medium shots of seated elderly Carter",
     "Soft lighting for memory/reflection"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Introduction of self",
+      "summary": "Visual introduction of physical aging",
       "purpose": "",
-      "action_start": "Subject looks at camera",
-      "action_end": "First sentence completed",
+      "action_start": "extreme close-up on skin texture",
+      "action_end": "eye contact established",
       "active_subjects": [
-        "John Carter (Elderly)"
+        "john_carter"
       ],
       "passive_subjects": [],
-      "spatial_context": "Seated framing space",
-      "blocking_hint": "Centered, seated",
-      "environment_subzone": "seated area",
-      "continuity_focus": "Age consistency",
-      "coverage_hint": "Medium shot",
+      "spatial_context": "intimate framing space",
+      "blocking_hint": "stationary seated position",
+      "environment_subzone": "Seated area",
+      "continuity_focus": "skin/wrinkle detail consistency",
+      "coverage_hint": "extreme close-up",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Explanation of anomalous aging",
+      "summary": "Verbal introduction of anomalous condition",
       "purpose": "",
-      "action_start": "Subject describes condition",
-      "action_end": "Condition explained",
+      "action_start": "subject begins speaking",
+      "action_end": "explanation of aging process complete",
       "active_subjects": [
-        "John Carter (Elderly)"
+        "john_carter"
       ],
       "passive_subjects": [],
-      "spatial_context": "Seated framing space",
-      "blocking_hint": "Static seated position",
-      "environment_subzone": "seated area",
-      "continuity_focus": "Tone of voice",
-      "coverage_hint": "Extreme close-up",
+      "spatial_context": "intimate framing space",
+      "blocking_hint": "seated upright facing camera",
+      "environment_subzone": "Seated area",
+      "continuity_focus": "tone of voice/delivery",
+      "coverage_hint": "medium shot",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
@@ -109,39 +109,66 @@
       "beat_id": "BT003",
       "summary": "Declaration of intent to document life",
       "purpose": "",
-      "action_start": "Subject states decision",
-      "action_end": "Final gaze held",
+      "action_start": "subject explains decision to write",
+      "action_end": "solemn silence after final word",
       "active_subjects": [
-        "John Carter (Elderly)"
+        "john_carter"
       ],
       "passive_subjects": [],
-      "spatial_context": "Seated framing space",
-      "blocking_hint": "Static seated position",
-      "environment_subzone": "seated area",
-      "continuity_focus": "Solemnity",
-      "coverage_hint": "Close-up",
-      "coverage_priority": "high",
-      "handoff_to_next": "End of scene"
+      "spatial_context": "intimate framing space",
+      "blocking_hint": "seated still",
+      "environment_subzone": "Seated area",
+      "continuity_focus": "emotional solemnity",
+      "coverage_hint": "medium/close-up",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_scene"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish_subject",
-      "planned_shot_moment_summary": "Carter looks into camera and begins speaking",
-      "primary_subject_seed": "John Carter (Elderly)",
+      "narrative_function": "establish_condition",
+      "planned_shot_moment_summary": "extreme detail of weathered skin and eyes",
+      "primary_subject_seed": "john_carter",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "seated area",
-      "planned_shot_required_anchor_1": "seated position",
-      "planned_shot_scale_proof_detail": "elderly features",
-      "start_state_seed": "still gaze",
-      "end_state_seed": "first words spoken",
-      "action_seed": "speaking",
+      "environment_subzone": "Seated area",
+      "planned_shot_required_anchor_1": "eyes of john_carter",
+      "planned_shot_scale_proof_detail": "macro texture of wrinkles",
+      "start_state_seed": "static extreme close-up",
+      "end_state_seed": "static extreme close-up",
+      "action_seed": "breathing/slight eye movement",
       "blocking_seed": [
-        "seated center"
+        "seated still"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "telephoto",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "introduce_character",
+      "planned_shot_moment_summary": "medium shot of seated elderly man",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "Seated area",
+      "planned_shot_required_anchor_1": "seated chair/position",
+      "planned_shot_scale_proof_detail": "full torso visible",
+      "start_state_seed": "medium shot",
+      "end_state_seed": "medium shot",
+      "action_seed": "speaking to camera",
+      "blocking_seed": [
+        "seated upright"
       ],
       "shot_size": "medium",
       "camera_angle": "eye_level",
@@ -151,64 +178,9 @@
       "focus_strategy": "shallow_subject",
       "lighting_style": "soft_even",
       "primary_subject_angle": "front_three_quarter_right"
-    },
-    {
-      "planned_shot_id": "SH002",
-      "beat_id": "BT002",
-      "narrative_function": "detail_condition",
-      "planned_shot_moment_summary": "Extreme detail of skin and eyes during explanation",
-      "primary_subject_seed": "John Carter (Elderly)",
-      "secondary_subjects_seed": [],
-      "subject_visibility": "on_screen",
-      "narration_mode": "in_scene_speaker",
-      "environment_subzone": "seated area",
-      "planned_shot_required_anchor_1": "weathered skin",
-      "planned_shot_scale_proof_detail": "skin texture/wrinkles",
-      "start_state_seed": "speaking",
-      "end_state_seed": "explanation concludes",
-      "action_seed": "speaking",
-      "blocking_seed": [
-        "seated center"
-      ],
-      "shot_size": "extreme_close_up",
-      "camera_angle": "eye_level",
-      "lens_family": "portrait",
-      "camera_motion": "locked_off",
-      "zoom_behavior": "none",
-      "focus_strategy": "shallow_subject",
-      "lighting_style": "soft_even",
-      "primary_subject_angle": "front"
-    },
-    {
-      "planned_shot_id": "SH003",
-      "beat_id": "BT003",
-      "narrative_function": "establish_intent",
-      "planned_shot_moment_summary": "Carter declares his decision to document his life",
-      "primary_subject_seed": "John Carter (Elderly)",
-      "secondary_subjects_seed": [],
-      "subject_visibility": "on_screen",
-      "narration_mode": "in_scene_speaker",
-      "environment_subzone": "seated area",
-      "planned_shot_required_anchor_1": "eyes",
-      "planned_shot_scale_proof_detail": "eye contact",
-      "start_state_seed": "finishing explanation",
-      "end_state_seed": "final solemn look",
-      "action_seed": "speaking/staring",
-      "blocking_seed": [
-        "seated center"
-      ],
-      "shot_size": "close_up",
-      "camera_angle": "eye_level",
-      "lens_family": "portrait",
-      "camera_motion": "push_in",
-      "zoom_behavior": "subtle_in",
-      "focus_strategy": "shallow_subject",
-      "lighting_style": "soft_even",
-      "primary_subject_angle": "front"
     }
   ],
   "unresolved_questions": [
-    "Resolve John Carter (Elderly) -> John Carter (Elderly)",
     "Resolve Unspecified (Narrative framing space) -> Unspecified (Narrative framing space)"
   ],
   "evidence_refs": [
@@ -256,6 +228,11 @@
       "source": "book_index",
       "chapter_id": "CH003",
       "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH003_chapter_iii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH001",
+      "canonical_id": "john_carter"
     }
   ],
   "evidence_summary": [
@@ -267,16 +244,17 @@
     "[CH001] Chapter summary: **Setting:** The Arizona hills and mountains; specifically a remote gold-bearing quartz vein, a high plateau with an Apache camp, and a large, ancient cave located on a narrow trail near a cliffside. **Characters:** *...",
     "[CH011] CHAPTER XI (book index hit)",
     "[CH025] CHAPTER XXV (book index hit)",
-    "[CH003] CHAPTER III (book index hit)"
+    "[CH003] CHAPTER III (book index hit)",
+    "Character john_carter: A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior ad..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH001_SC001\n\n## Production Intent\nEstablish the narrative framing device by presenting an elderly protagonist who introduces his anomalous aging process and his intent to document his life history.\n\n## Required Cast\n- John Carter (Elderly)\n\n## Required Environments\n- Unspecified (Narrative framing space)\n\n## Continuity Constraints\n- Consistent elderly age for John Carter\n- Stable tone of voice and delivery\n\n## Beat List\n- BT001: Introduction of self\n- BT002: Explanation of anomalous aging\n- BT003: Declaration of intent to document life",
+  "storyboard_markdown": "# Scene Contract: CH001_SC001\n\n## Production Intent\nEstablish the narrative framing device by presenting an elderly John Carter who explains his anomalous aging and his intent to document his life history before death.\n\n## Required Cast\n- john_carter (Elderly)\n\n## Required Environments\n- Unspecified (Narrative framing space)\n\n## Continuity Constraints\n- Consistent elderly age for john_carter\n- Specific tone of voice and delivery consistency\n\n## Beat List\n- BT001: Visual introduction of physical aging\n- BT002: Verbal introduction of anomalous condition\n- BT003: Declaration of intent to document life",
   "metadata": {
     "artifact_id": "CH001_SC001_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "61adbc951cee40352dadfa549c275fb5376f8056",
+    "source_fingerprint": "c7cb07f5e64521ad204414d172083552e0697bbc",
     "created_at_utc": "2026-04-21T23:17:11.047069+00:00",
-    "updated_at_utc": "2026-04-23T18:01:51.958498+00:00",
+    "updated_at_utc": "2026-04-23T18:43:54.632070+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -286,12 +264,12 @@
       {
         "dependency_type": "character_resolutions",
         "dependency_id": "CH001_SC001",
-        "version": "9ac91d4865f9bc19c442302e7d597d5ece939cec"
+        "version": "3a805fd3a3beddaeaf3ecdbce396255042222e45"
       },
       {
         "dependency_type": "environment_resolutions",
         "dependency_id": "CH001_SC001",
-        "version": "226c982492959c3aa30f42954459edabbf9be495"
+        "version": "0914537545f93949f4c8d3c94355385c63a79355"
       }
     ],
     "locked_fields": {},
@@ -336,6 +314,11 @@
         "timestamp_utc": "2026-04-23T18:02:16.207747+00:00",
         "action": "synthesized",
         "source_fingerprint": "61adbc951cee40352dadfa549c275fb5376f8056"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:44:17.093201+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "c7cb07f5e64521ad204414d172083552e0697bbc"
       }
     ]
   }

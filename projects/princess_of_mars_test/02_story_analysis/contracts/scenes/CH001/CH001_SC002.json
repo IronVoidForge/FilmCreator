@@ -5,60 +5,59 @@
   "purpose": "Establish the inciting incident and the stakes (the gold claim).",
   "summary": "In 1865, Carter and Powell discover a massive gold-bearing quartz vein in the Arizona hills. They agree on a plan: Powell will head to civilization for machinery while Carter stays to guard the site.",
   "emotional_arc": "Excitement / Triumph $\\rightarrow$ Determination.",
-  "production_intent": "Establish the discovery of a massive gold-bearing quartz vein in the Arizona hills to drive the plot forward through high stakes and immediate logistical planning.",
+  "production_intent": "Establish the discovery of a massive gold-bearing quartz vein in the Arizona hills to set the primary stakes for the characters. The scene must transition from the high energy of finding wealth to the sober reality of guarding and securing the claim.",
   "scene_short_description": "Two men discover a massive gold-bearing quartz vein amidst remote Arizona hills.",
   "scene_primary_scale_story_point": "The scale of the quartz vein relative to the human prospectors.",
   "scene_required_anchor_catalog": [
-    "Gold-bearing quartz vein",
-    "Prospector gear/tools"
+    "Massive quartz vein",
+    "1865 prospecting gear"
   ],
-  "scene_start_state": "Carter and Powell stand before a massive, shimmering quartz vein in the hills.",
-  "scene_end_state": "The men separate with a firm plan for machinery and site security.",
-  "dominant_action_line": "Discovery of gold leads to a strategic division of labor between the two men.",
+  "scene_start_state": "Carter and Powell stand before a newly uncovered, shimmering gold-bearing quartz vein under bright sun.",
+  "scene_end_state": "The men stand apart, one preparing to depart and the other prepared to guard.",
+  "dominant_action_line": "Discovery of wealth leads to a strategic division of labor between guarding and procurement.",
   "scene_spatial_layout": [
     "Open desert hill terrain",
-    "Proximity to the quartz vein structure"
+    "Proximity to the quartz vein outcrop"
   ],
   "character_spatial_map": [
-    "Carter and Powell positioned near the vein",
-    "Powell moving toward exit vector for civilization",
-    "Carter remaining stationary at the site"
+    "john_carter near the vein base",
+    "james_k_powell facing carter during planning"
   ],
   "environment_subzones": [
     "Quartz vein outcrop",
-    "Remote Arizona hills"
+    "Hillside slope"
   ],
   "entry_vectors": [
-    "Hillside approach"
+    "Hillside trail"
   ],
   "exit_vectors": [
-    "Path to civilization (Powell)",
+    "Civilization path (Powell)",
     "Site perimeter (Carter)"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Visual confirmation of wealth",
-    "BT002 -> BT003: Shift from discovery to logistical planning"
+    "BT001 -> BT002: Discovery to inspection",
+    "BT002 -> BT003: Inspection to strategic planning"
   ],
   "characters_required": [
     {
       "label": "John Carter (Younger)",
-      "canonical_id": null,
-      "display_name": "John Carter (Younger)",
-      "status": "review",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
     },
     {
       "label": "Captain James K. Powell",
-      "canonical_id": null,
-      "display_name": "Captain James K. Powell",
-      "status": "review",
+      "canonical_id": "james_k_powell",
+      "display_name": "james_k_powell",
+      "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/james_k_powell.md",
+      "notes": "Direct registry match for 'james_k_powell'."
     }
   ],
   "environments_required": [
@@ -69,18 +68,18 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     }
   ],
   "continuity_constraints": [
-    "Appearance of the gold vein",
+    "Appearance of the gold vein within quartz",
     "1865 prospector gear and clothing",
     "Bright desert sun lighting"
   ],
   "visual_coverage_families": [
     "Wide shots of the landscape",
-    "Medium shots of men inspecting the vein",
+    "Medium shots of men inspecting vein",
     "Close-ups of gold/quartz",
     "Two-shots for planning dialogue"
   ],
@@ -89,37 +88,37 @@
       "beat_id": "BT001",
       "summary": "Discovery of the vein",
       "purpose": "",
-      "action_start": "Men approaching the outcrop",
-      "action_end": "Visual contact with gold",
+      "action_start": "men approaching outcrop",
+      "action_end": "men stop at vein edge",
       "active_subjects": [
-        "John Carter (Younger)",
-        "Captain James K. Powell"
+        "john_carter",
+        "james_k_powell"
       ],
       "passive_subjects": [],
-      "spatial_context": "Remote Arizona quartz vein/hills",
-      "blocking_hint": "Men standing before the rock face",
+      "spatial_context": "Arizona hills",
+      "blocking_hint": "approaching from hillside",
       "environment_subzone": "Quartz vein outcrop",
-      "continuity_focus": "Gold appearance in quartz",
-      "coverage_hint": "Wide shot",
+      "continuity_focus": "1865 clothing/gear",
+      "coverage_hint": "wide shot",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Triumph and inspection",
+      "summary": "Inspection of the gold",
       "purpose": "",
-      "action_start": "Close inspection of the gold",
-      "action_end": "Realization of the claim's magnitude",
+      "action_start": "men leaning into quartz",
+      "action_end": "men looking at each other in triumph",
       "active_subjects": [
-        "John Carter (Younger)",
-        "Captain James K. Powell"
+        "john_carter",
+        "james_k_powell"
       ],
       "passive_subjects": [],
-      "spatial_context": "At the vein",
-      "blocking_hint": "Men leaning into the rock",
+      "spatial_context": "at the vein",
+      "blocking_hint": "huddled near rock face",
       "environment_subzone": "Quartz vein outcrop",
-      "continuity_focus": "1865 gear/clothing",
-      "coverage_hint": "Close-up",
+      "continuity_focus": "gold/quartz appearance",
+      "coverage_hint": "close-up/medium",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
@@ -127,111 +126,111 @@
       "beat_id": "BT003",
       "summary": "Strategic planning",
       "purpose": "",
-      "action_start": "Discussion of machinery and guarding",
-      "action_end": "Agreement to separate",
+      "action_start": "triumphant discussion",
+      "action_end": "agreement to split up",
       "active_subjects": [
-        "John Carter (Younger)",
-        "Captain James K. Powell"
+        "john_carter",
+        "james_k_powell"
       ],
       "passive_subjects": [],
-      "spatial_context": "At the vein",
-      "blocking_hint": "Two-shot dialogue stance",
+      "spatial_context": "near the vein",
+      "blocking_hint": "two-shot facing each other",
       "environment_subzone": "Quartz vein outcrop",
-      "continuity_focus": "Bright desert sun lighting",
-      "coverage_hint": "Medium two-shot",
+      "continuity_focus": "gear/clothing",
+      "coverage_hint": "two-shot",
       "coverage_priority": "high",
-      "handoff_to_next": "End of scene"
+      "handoff_to_next": "end_scene"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish setting and scale",
-      "planned_shot_moment_summary": "Wide view of the Arizona hills revealing the vein",
-      "primary_subject_seed": "Landscape",
+      "narrative_function": "establish_stakes",
+      "planned_shot_moment_summary": "wide view of the hills and the vein",
+      "primary_subject_seed": "landscape",
       "secondary_subjects_seed": [
-        "Carter",
-        "Powell"
+        "john_carter",
+        "james_k_powell"
       ],
       "subject_visibility": "on_screen",
-      "narration_mode": "in_scene_speaker",
-      "environment_subzone": "Remote Arizona quartz vein/hills",
-      "planned_shot_required_anchor_1": "Quartz vein",
-      "planned_shot_scale_proof_detail": "Vein size vs landscape",
-      "start_state_seed": "Static wide shot",
-      "end_state_seed": "Pan toward men",
-      "action_seed": "Establishing the remote location",
+      "narration_mode": "none",
+      "environment_subzone": "Quartz vein outcrop",
+      "planned_shot_required_anchor_1": "Massive quartz vein",
+      "planned_shot_scale_proof_detail": "men appear small against the vein/hills",
+      "start_state_seed": "wide landscape",
+      "end_state_seed": "wide landscape",
+      "action_seed": "men approach the vein",
       "blocking_seed": [
-        "Men small in frame"
+        "walking toward outcrop"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
-      "lens_family": "ultra_wide",
+      "lens_family": "wide",
       "camera_motion": "pan",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "hard_directional",
-      "primary_subject_angle": "front"
+      "primary_subject_angle": "front_three_quarter_right"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "show discovery detail",
-      "planned_shot_moment_summary": "Close up of gold in quartz",
-      "primary_subject_seed": "Gold vein",
+      "narrative_function": "detail_discovery",
+      "planned_shot_moment_summary": "close up of gold in quartz",
+      "primary_subject_seed": "gold_vein",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "Quartz vein outcrop",
-      "planned_shot_required_anchor_1": "Gold/quartz",
-      "planned_shot_scale_proof_detail": "Texture and glint of gold",
-      "start_state_seed": "Focus on rock",
-      "end_state_seed": "Focus on men's reactions",
-      "action_seed": "Revealing the gold content",
-      "blocking_seed": [],
-      "shot_size": "close_up",
-      "camera_angle": "low_angle",
-      "lens_family": "normal",
+      "planned_shot_required_anchor_1": "Massive quartz vein",
+      "planned_shot_scale_proof_detail": "texture of quartz and glint of gold",
+      "start_state_seed": "blurred quartz",
+      "end_state_seed": "sharp gold detail",
+      "action_seed": "glinting in sun",
+      "blocking_seed": [
+        "static"
+      ],
+      "shot_size": "insert_detail",
+      "camera_angle": "eye_level",
+      "lens_family": "telephoto",
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
-      "focus_strategy": "rack_focus",
+      "focus_strategy": "shallow_subject",
       "lighting_style": "hard_directional",
       "primary_subject_angle": "front"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "convey planning and stakes",
-      "planned_shot_moment_summary": "Two shot of Carter and Powell discussing the plan",
-      "primary_subject_seed": "John Carter (Younger)",
+      "narrative_function": "dialogue_resolution",
+      "planned_shot_moment_summary": "men agreeing on the plan",
+      "primary_subject_seed": "john_carter",
       "secondary_subjects_seed": [
-        "Captain James K. Powell"
+        "james_k_powell"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "Quartz vein outcrop",
-      "planned_shot_required_anchor_1": "Prospector gear",
-      "planned_shot_scale_proof_detail": "Men standing near vein",
-      "start_state_seed": "Medium two-shot",
-      "end_state_seed": "Cut to exit",
-      "action_seed": "Negotiating the division of labor",
+      "planned_shot_required_anchor_1": "1865 prospecting gear",
+      "planned_shot_scale_proof_detail": "man-to-man interaction",
+      "start_state_seed": "men facing each other",
+      "end_state_seed": "men separating",
+      "action_seed": "discussing machinery and guarding",
       "blocking_seed": [
-        "Facing each other"
+        "standing near vein"
       ],
       "shot_size": "medium",
       "camera_angle": "eye_level",
-      "lens_family": "portrait",
-      "camera_motion": "locked_off",
+      "lens_family": "normal",
+      "camera_motion": "subtle_in",
       "zoom_behavior": "subtle_in",
       "focus_strategy": "shallow_subject",
       "lighting_style": "hard_directional",
-      "primary_subject_angle": "front_three_quarter_left"
+      "primary_subject_angle": "profile_left"
     }
   ],
   "unresolved_questions": [
-    "Resolve John Carter (Younger) -> John Carter (Younger)",
-    "Resolve Captain James K. Powell -> Captain James K. Powell",
     "Resolve Remote Arizona quartz vein/hills -> Remote Arizona quartz vein/hills"
   ],
   "evidence_refs": [
@@ -279,6 +278,11 @@
       "source": "book_index",
       "chapter_id": "CH010",
       "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH001",
+      "canonical_id": "john_carter"
     }
   ],
   "evidence_summary": [
@@ -290,16 +294,17 @@
     "[CH001] Chapter summary: **Setting:** The Arizona hills and mountains; specifically a remote gold-bearing quartz vein, a high plateau with an Apache camp, and a large, ancient cave located on a narrow trail near a cliffside. **Characters:** *...",
     "[CH001] CHAPTER I (book index hit)",
     "[CH025] CHAPTER XXV (book index hit)",
-    "[CH010] CHAPTER X (book index hit)"
+    "[CH010] CHAPTER X (book index hit)",
+    "Character john_carter: A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior ad..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH001_SC002\n\n## Production Intent\nEstablish the discovery of a massive gold-bearing quartz vein in the Arizona hills to drive the plot forward through high stakes and immediate logistical planning.\n\n## Required Cast\n- John Carter (Younger)\n- Captain James K. Powell\n\n## Required Environments\n- Remote Arizona quartz vein/hills\n\n## Continuity Constraints\n- Appearance of the gold vein\n- 1865 prospector gear and clothing\n- Bright desert sun lighting\n\n## Beat List\n- BT001: Discovery of the vein\n- BT002: Triumph and inspection\n- BT003: Strategic planning",
+  "storyboard_markdown": "# Scene Contract: CH001_SC002\n\n## Production Intent\nEstablish the discovery of a massive gold-bearing quartz vein in the Arizona hills to set the primary stakes for the characters. The scene must transition from the high energy of finding wealth to the sober reality of guarding and securing the claim.\n\n## Required Cast\n- john_carter (Rugged 1860s frontier attire)\n- james_k_powell (1865 prospector gear)\n\n## Required Environments\n- Remote Arizona quartz vein/hills (Bright desert sun, massive quartz outcrop)\n\n## Continuity Constraints\n- Visual appearance of gold within the quartz vein\n- 1865 era prospecting clothing and equipment\n- High-contrast, bright desert sunlight\n\n## Beat List\n- BT001: Discovery of the vein.\n- BT002: Inspection of the gold.\n- BT003: Strategic planning (Powell to get machinery, Carter to guard).",
   "metadata": {
     "artifact_id": "CH001_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "d71c80162938429c46c0ae5768ea4c3b3634e0e6",
+    "source_fingerprint": "c41b396d1cf6b4d2de419e1bd16b52c3b5bdc146",
     "created_at_utc": "2026-04-21T23:17:26.665459+00:00",
-    "updated_at_utc": "2026-04-23T18:02:18.097096+00:00",
+    "updated_at_utc": "2026-04-23T18:44:17.779626+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -309,12 +314,12 @@
       {
         "dependency_type": "character_resolutions",
         "dependency_id": "CH001_SC002",
-        "version": "1d67cea7d127933a0630c3aca8968b78497446f8"
+        "version": "30d557a487d481e7ca89e8651853e6b9be6a48d9"
       },
       {
         "dependency_type": "environment_resolutions",
         "dependency_id": "CH001_SC002",
-        "version": "9a551172d3071265cbc7c1d19ef62f31e1988427"
+        "version": "7e8f4303ea40779be86242f60f8994b8f6f3c443"
       }
     ],
     "locked_fields": {},
@@ -359,6 +364,11 @@
         "timestamp_utc": "2026-04-23T18:02:45.339231+00:00",
         "action": "synthesized",
         "source_fingerprint": "d71c80162938429c46c0ae5768ea4c3b3634e0e6"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:44:44.263653+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "c41b396d1cf6b4d2de419e1bd16b52c3b5bdc146"
       }
     ]
   }

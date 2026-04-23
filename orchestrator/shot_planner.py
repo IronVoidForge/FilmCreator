@@ -16,7 +16,7 @@ from .lmstudio_client import LMStudioClient
 from .scaffold import create_project
 from .settings import load_runtime_settings
 
-SHOT_PLANNER_SCHEMA_VERSION = "2026-04-23-shot-planner-v3"
+SHOT_PLANNER_SCHEMA_VERSION = "2026-04-23-shot-planner-v4"
 
 SHOT_SIZE_ENUM = {"extreme_wide", "wide", "full", "medium_full", "medium", "medium_close", "close_up", "extreme_close_up", "insert_detail"}
 CAMERA_ANGLE_ENUM = {"eye_level", "low_angle", "high_angle", "overhead", "dutch"}
@@ -272,9 +272,104 @@ def _coerce_float(*values: object, fallback: float = 0.0) -> float:
 def _clean_label(value: object, *, fallback: str) -> str:
     if isinstance(value, str):
         cleaned = value.strip()
-        if cleaned and cleaned.lower() not in {"none", "(none)", "n/a"}:
+        if cleaned and cleaned.lower() not in {"none", "(none)", "n/a", "null", "[]", "[ ]", "{}", "{ }"}:
             return cleaned
     return fallback
+
+
+def _is_placeholder_text(value: object) -> bool:
+    if value is None:
+        return True
+    text = str(value).strip()
+    if not text:
+        return True
+    normalized = text.lower()
+    return normalized in {
+        "none",
+        "(none)",
+        "n/a",
+        "null",
+        "[]",
+        "[ ]",
+        "{}",
+        "{ }",
+        "unknown",
+        "(unknown)",
+    }
+
+
+def _normalize_match_key(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "_", value.strip().lower()).strip("_")
+
+
+def _label_variants(value: str) -> list[str]:
+    raw = str(value or "").strip()
+    if not raw:
+        return []
+    variants: list[str] = []
+
+    def add_variant(text: str) -> None:
+        normalized = _normalize_match_key(text)
+        if normalized and normalized not in variants:
+            variants.append(normalized)
+
+    cleaned = re.sub(r"\[\[|\]\]", "", raw)
+    add_variant(cleaned)
+    parenthetical = re.sub(r"\([^)]*\)", " ", cleaned)
+    add_variant(parenthetical)
+    article_stripped = re.sub(r"^(the|a|an)\s+", "", parenthetical.strip(), flags=re.IGNORECASE)
+    add_variant(article_stripped)
+    title_stripped = re.sub(
+        r"^(captain|capt\.?|general|gen\.?|major|maj\.?|colonel|col\.?|lieutenant|lt\.?|sergeant|sgt\.?|doctor|dr\.?|mr\.?|mrs\.?|ms\.?|miss|the)\s+",
+        "",
+        article_stripped.strip(),
+        flags=re.IGNORECASE,
+    )
+    add_variant(title_stripped)
+    descriptor_stripped = re.sub(
+        r"\b(younger|elderly|older|deceased|dead|corpse|body|wounded|injured|late)\b",
+        " ",
+        title_stripped,
+        flags=re.IGNORECASE,
+    )
+    add_variant(descriptor_stripped)
+    return variants
+
+
+def _best_display_label(ref: "ShotReference") -> str:
+    return _first_nonempty(ref.display_name, ref.label, fallback="")
+
+
+def _looks_like_scale_relation(value: str) -> bool:
+    text = " ".join(str(value or "").lower().split())
+    if not text:
+        return False
+    scale_terms = {
+        "scale",
+        "size",
+        "larger",
+        "smaller",
+        "towering",
+        "huge",
+        "enormous",
+        "tiny",
+        "width",
+        "height",
+        "distance",
+        "crowd",
+        "lone",
+        "body",
+        "furniture",
+        "trail",
+        "cliff",
+        "dais",
+        "platform",
+        "versus",
+        "against",
+        "beside",
+        "relative",
+    }
+    return any(term in text for term in scale_terms)
 
 
 def _coerce_string_list(*values: object) -> list[str]:
@@ -284,15 +379,19 @@ def _coerce_string_list(*values: object) -> list[str]:
             continue
         if isinstance(value, list):
             for item in value:
-                if isinstance(item, str) and item.strip() and item.strip().lower() not in {"none", "(none)", "n/a"}:
-                    items.append(item.strip())
+                if not isinstance(item, str):
+                    continue
+                stripped = item.strip()
+                if _is_placeholder_text(stripped):
+                    continue
+                items.append(stripped)
         elif isinstance(value, str):
             stripped = value.strip()
-            if not stripped or stripped.lower() in {"none", "(none)", "n/a"}:
+            if _is_placeholder_text(stripped):
                 continue
             parts = [part.strip() for part in re.split(r",|\n", stripped) if part.strip()]
             if parts:
-                items.extend(parts)
+                items.extend(part for part in parts if not _is_placeholder_text(part))
             else:
                 items.append(stripped)
 
@@ -441,16 +540,15 @@ def _scene_contract_to_scene_title(scene_contract: dict[str, Any]) -> str:
 
 
 def _find_ref_by_label(refs: list[dict[str, Any]], text: str) -> dict[str, Any] | None:
-    normalized_text = _normalize_asset_label(text)
-    if not normalized_text:
+    text_variants = _label_variants(text)
+    if not text_variants:
         return None
     for ref in refs:
-        candidates = [
-            _normalize_asset_label(str(ref.get("label", ""))),
-            _normalize_asset_label(str(ref.get("display_name", ""))),
-            _normalize_asset_label(str(ref.get("canonical_id", ""))),
-        ]
-        if normalized_text in candidates or any(candidate and candidate in normalized_text for candidate in candidates):
+        candidates: set[str] = set()
+        for field_name in ("label", "display_name", "canonical_id"):
+            for variant in _label_variants(str(ref.get(field_name, ""))):
+                candidates.add(variant)
+        if any(variant in candidates for variant in text_variants):
             return ref
     return None
 
@@ -464,7 +562,7 @@ def _binding_ref_to_shot_reference(raw_ref: dict[str, Any], project_dir: Path, *
         bible = _load_environment_bible(project_dir, canonical_id) if canonical_id else None
         fallback_entity_kind = "environment"
     source_path = str(raw_ref.get("source_path", ""))
-    if kind == "environment" and not canonical_id:
+    if not canonical_id:
         source_path = ""
     return ShotReference(
         label=str(raw_ref.get("label", canonical_id or "")),
@@ -548,21 +646,21 @@ def _select_environment_ref(scene_contract: dict[str, Any], project_dir: Path, s
 
 
 def _build_character_reference(project_dir: Path, raw_ref: dict[str, Any]) -> ShotReference:
-    canonical_id = str(raw_ref.get("canonical_id") or "").strip() or None
+    canonical_id = _normalize_optional_canonical_id(raw_ref.get("canonical_id"))
     bible = _load_character_bible(project_dir, canonical_id) if canonical_id else None
     display_name = _first_nonempty(
         str((bible or {}).get("display_name", "")),
-        str(raw_ref.get("display_name", "")),
-        fallback=str(raw_ref.get("label", canonical_id or "")),
+        "" if _is_placeholder_text(raw_ref.get("display_name")) else str(raw_ref.get("display_name", "")),
+        fallback="" if _is_placeholder_text(raw_ref.get("label")) else str(raw_ref.get("label", canonical_id or "")),
     )
     return ShotReference(
-        label=str(raw_ref.get("label", display_name)),
+        label="" if _is_placeholder_text(raw_ref.get("label")) else str(raw_ref.get("label", display_name)),
         canonical_id=canonical_id,
         display_name=display_name,
         status=str(raw_ref.get("status", (bible or {}).get("status", "review"))),
         entity_kind=str(raw_ref.get("entity_kind", (bible or {}).get("entity_kind", "individual"))),
         resolution_score=int(raw_ref.get("resolution_score")) if str(raw_ref.get("resolution_score", "")).isdigit() else raw_ref.get("resolution_score"),
-        source_path=str(raw_ref.get("source_path", "")),
+        source_path="" if not canonical_id else str(raw_ref.get("source_path", "")),
         notes=str(raw_ref.get("notes", "")),
     )
 
@@ -573,6 +671,7 @@ def _selected_characters(
     beat_summary: str,
     shot_order: int,
     scene_binding: dict[str, Any] | None = None,
+    subject_hints: list[str] | None = None,
 ) -> list[ShotReference]:
     raw_refs = scene_contract.get("characters_required", [])
     if isinstance(scene_binding, dict) and isinstance(scene_binding.get("resolved_characters"), list) and scene_binding.get("resolved_characters"):
@@ -593,6 +692,10 @@ def _selected_characters(
         ]
 
     matched: list[ShotReference] = []
+    for token in subject_hints or []:
+        ref = _find_ref_by_label([ref.to_dict() for ref in references], token)
+        if ref is not None:
+            matched.append(_build_character_reference(project_dir, ref))
     for token in re.split(r"[,;/]", beat_summary):
         ref = _find_ref_by_label([ref.to_dict() for ref in references], token)
         if ref is not None:
@@ -629,18 +732,32 @@ def _dedupe_shot_references(refs: list[ShotReference]) -> list[ShotReference]:
     return deduped
 
 
-def _shot_type_from_beat(scene_contract: dict[str, Any], beat_summary: str, shot_order: int) -> str:
-    text = f"{scene_contract.get('visual_coverage_families', [])} {beat_summary}".lower()
-    if shot_order == 1 and any(term in text for term in ["wide", "establish", "aerial", "opening", "overview"]):
+def _shot_type_from_beat(scene_contract: dict[str, Any], beat_payload: dict[str, Any], shot_order: int) -> str:
+    text = " ".join(
+        str(item)
+        for item in [
+            beat_payload.get("summary", ""),
+            beat_payload.get("action_start", ""),
+            beat_payload.get("action_end", ""),
+            beat_payload.get("coverage_hint", ""),
+            beat_payload.get("coverage_priority", ""),
+            beat_payload.get("blocking_hint", ""),
+        ]
+        if str(item).strip()
+    ).lower()
+    coverage_text = " ".join(str(item) for item in scene_contract.get("visual_coverage_families", []) if str(item).strip()).lower()
+    if shot_order == 1 and any(term in f"{text} {coverage_text}" for term in ["wide", "establish", "aerial", "opening", "overview"]):
         return "establishing_wide"
-    if any(term in text for term in ["crash", "battle", "attack", "fight", "chase", "charge", "action"]):
-        return "action"
-    if any(term in text for term in ["reaction", "respond", "reveal", "realize", "recognize"]):
-        return "reaction_closeup"
     if any(term in text for term in ["insert", "detail", "prop", "object", "hand"]):
         return "insert_detail"
     if any(term in text for term in ["over-the-shoulder", "over the shoulder", "dialogue", "conversation"]):
         return "over_the_shoulder"
+    if any(term in text for term in ["lift", "lifting", "carry", "carrying", "retrieve", "retrieval", "kneel", "kneeling", "hoist", "drag", "struggle"]):
+        return "medium"
+    if any(term in text for term in ["reaction", "respond", "reveal", "realize", "recognize", "discover", "discovery", "grief", "corpse", "body", "dead", "deceased", "stare", "frozen", "horror"]):
+        return "reaction_closeup"
+    if any(term in text for term in ["crash", "battle", "attack", "fight", "chase", "charge", "action", "pursuit", "flee", "flight", "run", "running", "pursuing", "ambush", "skirmish"]):
+        return "action"
     if shot_order == len(scene_contract.get("beat_list", []) or []):
         return "closing_reaction"
     return "medium"
@@ -660,13 +777,16 @@ def _camera_description(shot_type: str, beat_summary: str) -> str:
 
 
 def _composition_description(shot_type: str, characters: list[ShotReference], environment: ShotReference, beat_summary: str) -> str:
-    cast = ", ".join(ref.display_name for ref in characters[:3]) or "scene cast"
+    cast = ", ".join(_best_display_label(ref) for ref in characters[:3] if _best_display_label(ref)) or "scene cast"
     env = environment.display_name or environment.label
+    beat_text = beat_summary.lower()
     if shot_type == "establishing_wide":
         return f"Wide composition across {env} with {cast} placed for immediate spatial orientation."
     if shot_type == "action":
-        return f"Dynamic composition in {env} with {cast} crossing the frame and maintaining readable movement."
+        return f"Dynamic composition in {env} with clear pursuit vectors and readable movement for {cast}."
     if shot_type == "reaction_closeup":
+        if any(term in beat_text for term in ["body", "corpse", "deceased", "dead"]):
+            return f"Intimate composition that holds {cast} against {env} while preserving the fallen-body reveal."
         return f"Intimate composition that isolates {cast} against {env} to capture the beat's emotional turn."
     if shot_type == "insert_detail":
         return f"Detail composition centered on the key physical action or prop inside {env}."
@@ -674,6 +794,8 @@ def _composition_description(shot_type: str, characters: list[ShotReference], en
         return f"Over-the-shoulder composition in {env} with {cast} sharing the frame for dialogue or tension."
     if shot_type == "closing_reaction":
         return f"Closing composition in {env} that emphasizes the consequence of {beat_summary.lower()}."
+    if any(term in beat_text for term in ["lift", "carry", "retrieval", "struggle", "hoist", "drag"]):
+        return f"Readable medium composition in {env} that keeps {cast} together so the physical effort stays obvious."
     return f"Readable medium composition in {env} featuring {cast}."
 
 
@@ -814,18 +936,17 @@ def _visible_primary_subject_id(primary_subject: str, characters: list[ShotRefer
             if canonical_id:
                 return canonical_id
         return ""
-    normalized_primary = primary_subject.strip().lower()
+    primary_variants = _label_variants(primary_subject)
     for ref in characters:
         canonical_id = (ref.canonical_id or "").strip()
-        if canonical_id and canonical_id.lower() == normalized_primary:
+        ref_variants = set(_label_variants(ref.canonical_id or "")) | set(_label_variants(ref.label)) | set(_label_variants(ref.display_name))
+        if canonical_id and any(variant in ref_variants for variant in primary_variants):
             return canonical_id
-        if normalized_primary and normalized_primary in {ref.label.strip().lower(), ref.display_name.strip().lower()}:
-            return canonical_id or normalized_primary
     for ref in characters:
         canonical_id = (ref.canonical_id or "").strip()
         if canonical_id:
             return canonical_id
-    return normalized_primary
+    return ""
 
 
 def _visible_secondary_subject_ids(primary_subject_id: str, characters: list[ShotReference]) -> list[str]:
@@ -861,12 +982,14 @@ def _primary_subject_scale_relation(
     planned_shot: dict[str, Any],
     environment: ShotReference,
 ) -> str:
-    return _first_nonempty(
+    for candidate in (
         str(planned_shot.get("planned_shot_scale_proof_detail", "")),
         str(scene_contract.get("scene_primary_scale_story_point", "")),
         str(environment.notes or ""),
-        fallback="preserve readable scale hierarchy inside the frame",
-    )
+    ):
+        if _looks_like_scale_relation(candidate):
+            return candidate.strip()
+    return "preserve readable body-to-environment scale in frame"
 
 
 def _subject_relation_summary(primary_subject: str, secondary_subjects: list[str], subject_visibility: str) -> str:
@@ -978,8 +1101,21 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
             beat_payload["action_end"] = beat_summary
         planned_shot = planned_shots.get(shot_id, {})
         environment = _select_environment_ref(scene_contract, project_dir, scene_binding=scene_binding, beat_id=beat_id)
-        shot_type = _shot_type_from_beat(scene_contract, beat_summary, index)
-        characters = _selected_characters(scene_contract, project_dir, beat_summary, index, scene_binding=scene_binding)
+        shot_type = _shot_type_from_beat(scene_contract, beat_payload, index)
+        subject_hints = _coerce_string_list(
+            planned_shot.get("primary_subject_seed", ""),
+            planned_shot.get("secondary_subjects_seed", []),
+            beat_payload.get("active_subjects", []),
+            beat_payload.get("passive_subjects", []),
+        )
+        characters = _selected_characters(
+            scene_contract,
+            project_dir,
+            beat_summary,
+            index,
+            scene_binding=scene_binding,
+            subject_hints=subject_hints,
+        )
         camera_description = _camera_description(shot_type, beat_summary)
         composition = _composition_description(shot_type, characters, environment, beat_summary)
         shot_title = _shot_title_from_beat(shot_type, beat_summary, index)

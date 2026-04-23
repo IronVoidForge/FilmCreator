@@ -5,37 +5,37 @@
   "purpose": "Introduce the primary antagonist force and create immediate life-threatening tension.",
   "summary": "The protagonist hears the rattle of equipment and realizes a party of twenty mounted Martian warriors is approaching. He narrowly avoids being killed by the leader's spear as they pass near his hiding spot.",
   "emotional_arc": "Curiosity $\\rightarrow$ Terror/Panic.\n\n**Likely Visual Coverage Families:**\n- Low-angle shots of the approaching mounts to emphasize scale.\n- Close-ups of the spear tip narrowly missing the protagonist.\n- Rapid cutting between the warriors and the protagonist's hiding position.",
-  "production_intent": "Establish the scale and lethality of the Martian warrior cavalry through high-tension proximity. The sequence must transition from auditory curiosity to visceral terror as a spear tip narrowly misses the protagonist in the yellowish moss vegetation.",
-  "scene_short_description": "A lone man hides in yellowish moss as a cavalry of twenty warriors thunders past.",
-  "scene_primary_scale_story_point": "Twenty mounted warriors vs one hiding protagonist.",
+  "production_intent": "Establish the scale and lethality of the martian_warriors through a high-tension encounter where the protagonist must remain undetected while a massive cavalry force passes in close proximity.",
+  "scene_short_description": "A massive cavalry of four-armed humanoids passes a hidden figure in yellowish mossy vegetation.",
+  "scene_primary_scale_story_point": "15-foot tall martian_warriors on mounts vs. agile, low-profile protagonist.",
   "scene_required_anchor_catalog": [
     "incubator glass roof",
     "yellowish moss-like vegetation"
   ],
-  "scene_start_state": "Protagonist is stationary, listening to distant equipment rattle.",
-  "scene_end_state": "Protagonist is frozen in terror as the cavalry passes his immediate position.",
-  "dominant_action_line": "The protagonist hides from a passing cavalcade of twenty Martian warriors.",
+  "scene_start_state": "Protagonist hears the rattle of equipment while hiding in the basin.",
+  "scene_end_state": "The cavalry passes, leaving the protagonist in a state of panic.",
+  "dominant_action_line": "A party of twenty mounted warriors traverses the basin, nearly impaling the protagonist with a spear.",
   "scene_spatial_layout": [
-    "Circular basin with yellowish moss vegetation",
-    "Low walled enclosure containing an incubator"
+    "Circular basin containing yellowish moss-like vegetation",
+    "Low walled enclosure with glass roof (incubator) nearby"
   ],
   "character_spatial_map": [
-    "protagonist: crouched/hidden within the moss near the incubator",
-    "Martian Warriors (Cavalcade): moving in a line through the basin"
+    "protagonist is crouched/hidden within the vegetation near the incubator",
+    "martian_warriors move in a disciplined line through the basin"
   ],
   "environment_subzones": [
-    "incubator enclosure",
-    "mossy basin floor"
+    "The basin/vegetation area near the incubator",
+    "The incubator enclosure"
   ],
   "entry_vectors": [
-    "cavalry approach path through the basin"
+    "Basin perimeter (martian_warriors)"
   ],
   "exit_vectors": [
-    "cavalry exit path through the basin"
+    "Basin perimeter (martian_warriors)"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: auditory realization to visual sighting",
-    "BT002 -> BT003: approaching threat to near-miss impact"
+    "BT001 -> BT002: Auditory realization to visual sighting",
+    "BT002 -> BT003: Approaching threat to near-miss impact"
   ],
   "characters_required": [
     {
@@ -44,19 +44,19 @@
       "display_name": "protagonist",
       "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 176,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
     },
     {
       "label": "Martian Warriors (Cavalcade)",
-      "canonical_id": null,
-      "display_name": "Martian Warriors (Cavalcade)",
-      "status": "review",
-      "entity_kind": "individual",
-      "resolution_score": 6,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
-      "notes": "protagonist | token overlap: ['protagonist'] | generic role label reduces confidence"
+      "canonical_id": "martian_warriors",
+      "display_name": "martian_warriors",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/martian_warriors.md",
+      "notes": "Direct registry match for 'martian_warriors'."
     }
   ],
   "environments_required": [
@@ -67,74 +67,75 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     }
   ],
   "continuity_constraints": [
-    "Rhythmic speed and cadence of the twenty mounted warriors",
-    "Precise spatial distance between the leader's spear and protagonist"
+    "Speed and rhythmic cadence of the twenty mounted martian_warriors",
+    "Physical proximity/clearance distance between the leader's spear and protagonist"
   ],
   "visual_coverage_families": [
     "Low-angle shots of approaching mounts to emphasize scale",
-    "Close-ups of spear tip proximity",
+    "Close-ups of spear tip narrowly missing protagonist",
     "Rapid cutting between warriors and hiding position"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Protagonist hears equipment rattle and realizes danger",
+      "summary": "Protagonist hears equipment rattle",
       "purpose": "",
-      "action_start": "protagonist listening to silence",
-      "action_end": "protagonist realizing the sound is rhythmic",
+      "action_start": "protagonist listening",
+      "action_end": "protagonist realizes threat",
       "active_subjects": [
         "protagonist"
       ],
       "passive_subjects": [],
-      "spatial_context": "near incubator in mossy basin",
-      "blocking_hint": "protagonist remains low in vegetation",
-      "environment_subzone": "mossy basin floor",
-      "continuity_focus": "sound rhythm of equipment",
-      "coverage_hint": "close-up on protagonist's face",
+      "spatial_context": "within the yellowish mossy vegetation",
+      "blocking_hint": "protagonist is low and still",
+      "environment_subzone": "The basin/vegetation area near the incubator",
+      "continuity_focus": "rhythm of the rattle",
+      "coverage_hint": "close-up on protagonist reaction",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "The party of twenty mounted warriors approaches",
+      "summary": "Visual realization of the martian_warriors",
       "purpose": "",
-      "action_start": "distant rhythmic thudding",
-      "action_end": "warriors filling the visual field",
+      "action_start": "warriors appearing on horizon",
+      "action_end": "cavalcade approaching proximity",
       "active_subjects": [
-        "Martian Warriors (Cavalcade)"
+        "martian_warriors"
       ],
       "passive_subjects": [
         "protagonist"
       ],
-      "spatial_context": "basin floor",
-      "blocking_hint": "cavalry moving in a line",
-      "environment_subzone": "mossy basin floor",
-      "continuity_focus": "speed of mounts",
+      "spatial_context": "the circular basin",
+      "blocking_hint": "disciplined line of twenty mounts",
+      "environment_subzone": "The basin/vegetation area near the incubator",
+      "continuity_focus": "speed of the mounted warriors",
       "coverage_hint": "low-angle wide shots",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "The leader's spear narrowly misses the protagonist",
+      "summary": "The near-death spear strike",
       "purpose": "",
-      "action_start": "spear enters frame near protagonist",
-      "action_end": "cavalcade passes by",
+      "action_start": "spear enters frame",
+      "action_end": "warriors pass by",
       "active_subjects": [
-        "protagonist",
-        "Martian Warriors (Cavalcade)"
+        "martian_warriors"
       ],
-      "passive_subjects": [],
-      "spatial_context": "immediate proximity to hiding spot",
-      "blocking_hint": "protagonist flinches/shrinks into moss",
-      "environment_subzone": "mossy basin floor",
-      "continuity_focus": "proximity of spear tip",
-      "coverage_hint": "extreme close-up on spear and face",
+      "passive_subjects": [
+        "protagonist"
+      ],
+      "spatial_context": "immediate vicinity of protagonist's hiding spot",
+      "blocking_hint": "leader passes directly over the protagonist",
+      "environment_subzone": "The basin/vegetation area near the incubator",
+      "continuity_focus": "proximity of spear to protagonist",
+      "coverage_hint": "extreme close-up on spear tip and protagonist eyes",
       "coverage_priority": "critical",
       "handoff_to_next": "end_scene"
     }
@@ -147,14 +148,14 @@
       "planned_shot_moment_summary": "protagonist hears equipment rattle",
       "primary_subject_seed": "protagonist",
       "secondary_subjects_seed": [],
-      "subject_visibility": "on_screen",
+      "subject_visibility": "partial",
       "narration_mode": "none",
-      "environment_subzone": "mossy basin floor",
-      "planned_shot_required_anchor_1": "incubator glass roof",
-      "planned_shot_scale_proof_detail": "protagonist's reaction to sound",
+      "environment_subzone": "The basin/vegetation area near the incubator",
+      "planned_shot_required_anchor_1": "yellowish moss-like vegetation",
+      "planned_shot_scale_proof_detail": "low-profile protagonist vs wide basin",
       "start_state_seed": "protagonist listening",
-      "end_state_seed": "protagonist looking up in realization",
-      "action_seed": "listening, turning head",
+      "end_state_seed": "protagonist freezing",
+      "action_seed": "listening to distant rattle",
       "blocking_seed": [
         "crouched in moss"
       ],
@@ -170,20 +171,20 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "show scale of threat",
+      "narrative_function": "show scale",
       "planned_shot_moment_summary": "cavalcade enters view",
-      "primary_subject_seed": "Martian Warriors (Cavalcade)",
+      "primary_subject_seed": "martian_warriors",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "mossy basin floor",
+      "environment_subzone": "The basin/vegetation area near the incubator",
       "planned_shot_required_anchor_1": "incubator glass roof",
-      "planned_shot_scale_proof_detail": "low angle vs mounts",
+      "planned_shot_scale_proof_detail": "15-foot height vs environment",
       "start_state_seed": "distant movement",
-      "end_state_seed": "approaching thunder",
-      "action_seed": "riding, galloping",
+      "end_state_seed": "approaching mass",
+      "action_seed": "twenty mounted warriors riding in formation",
       "blocking_seed": [
-        "moving across frame"
+        "moving across the frame"
       ],
       "shot_size": "wide",
       "camera_angle": "low_angle",
@@ -199,33 +200,32 @@
       "beat_id": "BT003",
       "narrative_function": "climax tension",
       "planned_shot_moment_summary": "spear tip misses protagonist",
-      "primary_subject_seed": "protagonist",
+      "primary_subject_seed": "martian_warriors",
       "secondary_subjects_seed": [
-        "leader's spear"
+        "protagonist"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "mossy basin floor",
-      "planned_shot_required_anchor_1": "incubator glass roof",
-      "planned_shot_scale_proof_detail": "extreme proximity of spear to face",
-      "start_state_seed": "warrior passing",
-      "end_state_seed": "spear tip stopping/passing",
-      "action_seed": "narrowly avoiding strike",
+      "environment_subzone": "The basin/vegetation area near the incubator",
+      "planned_shot_required_anchor_1": "yellowish moss-like vegetation",
+      "planned_shot_scale_proof_detail": "inches between spear and skin",
+      "start_state_seed": "spear thrusting forward",
+      "end_state_seed": "spear passing by",
+      "action_seed": "leader's spear narrowly misses protagonist's head",
       "blocking_seed": [
-        "protagonist flinching"
+        "warrior passes close to hiding spot"
       ],
-      "shot_size": "close_up",
-      "camera_angle": "eye_level",
-      "lens_family": "portrait",
-      "camera_motion": "handheld",
+      "shot_size": "extreme_close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "telephoto",
+      "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "rack_focus",
       "lighting_style": "high_contrast_ceremonial",
-      "primary_subject_angle": "front"
+      "primary_subject_angle": "profile_right"
     }
   ],
   "unresolved_questions": [
-    "Resolve Martian Warriors (Cavalcade) -> Martian Warriors (Cavalcade)",
     "Resolve The basin/vegetation area near the incubator -> The basin/vegetation area near the incubator"
   ],
   "evidence_refs": [
@@ -273,6 +273,11 @@
       "source": "character_bible",
       "chapter_id": "CH003",
       "canonical_id": "protagonist"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH003",
+      "canonical_id": "martian_warriors"
     }
   ],
   "evidence_summary": [
@@ -284,16 +289,17 @@
     "[CH022] CHAPTER XXII (book index hit)",
     "[CH003] CHAPTER III (book index hit)",
     "[CH004] CHAPTER IV (book index hit)",
-    "Character protagonist: An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeles..."
+    "Character protagonist: An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeles...",
+    "Character martian_warriors: The martian_warriors are a highly disciplined military force of massive, 15-foot tall humanoids. They possess olive-green skin, red eyes, tusks, and four arms. In combat or transit, they are often seen mounted on slate-colored, e..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH003_SC003\n\n## Production Intent\nEstablish the scale and lethality of the Martian warrior cavalry through high-tension proximity. The sequence must transition from auditory curiosity to visceral terror as a spear tip narrowly misses the protagonist in the yellowish moss vegetation.\n\n## Required Cast\n- protagonist\n- Martian Warriors (Cavalcade)\n\n## Required Environments\n- The basin/vegetation area near the incubator\n\n## Continuity Constraints\n- Rhythmic speed and cadence of the twenty mounted warriors\n- Precise spatial distance between the leader's spear and protagonist\n\n## Beat List\n- BT001: Protagonist hears equipment rattle and realizes danger\n- BT002: The party of twenty mounted warriors approaches\n- BT003: The leader's spear narrowly misses the protagonist",
+  "storyboard_markdown": "# Scene Contract: CH003_SC003\n\n## Production Intent\nEstablish the scale and lethality of the martian_warriors through a high-tension encounter where the protagonist must remain undetected while a massive cavalry force passes in close proximity.\n\n## Required Cast\n- protagonist (Earthman, agile)\n- martian_warriors (20 mounted, 15ft tall, olive-green skin, red eyes, tusks, four arms)\n\n## Required Environments\n- The basin/vegetation area near the incubator (yellowish moss-like vegetation, circular basin)\n\n## Continuity Constraints\n- Speed and rhythmic cadence of the twenty mounted martian_warriors\n- Physical proximity/clearance distance between the leader's spear and protagonist\n\n## Beat List\n- BT001: Protagonist hears equipment rattle\n- BT002: Visual realization of the martian_warriors\n- BT003: The near-death spear strike",
   "metadata": {
     "artifact_id": "CH003_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "62f8dfa5e3e55889d7d3b099085367e4be95c604",
+    "source_fingerprint": "08723025ae10fa4296c965631dca649a0170f2fe",
     "created_at_utc": "2026-04-21T23:20:36.567181+00:00",
-    "updated_at_utc": "2026-04-23T18:07:14.358369+00:00",
+    "updated_at_utc": "2026-04-23T18:49:04.353670+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -303,12 +309,12 @@
       {
         "dependency_type": "character_resolutions",
         "dependency_id": "CH003_SC003",
-        "version": "cd2897b8e36a6df14afb286059ffdb465836cef7"
+        "version": "bf476699f69b2104147dfa5ff190887d4dba10e9"
       },
       {
         "dependency_type": "environment_resolutions",
         "dependency_id": "CH003_SC003",
-        "version": "88a6f98e1cbd5f1012535af05ad6a89ff928c1b1"
+        "version": "29acb335d9beb519e0bdda3993174fc8b9ca8561"
       }
     ],
     "locked_fields": {},
@@ -353,6 +359,11 @@
         "timestamp_utc": "2026-04-23T18:07:40.187717+00:00",
         "action": "synthesized",
         "source_fingerprint": "62f8dfa5e3e55889d7d3b099085367e4be95c604"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:49:31.847462+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "08723025ae10fa4296c965631dca649a0170f2fe"
       }
     ]
   }

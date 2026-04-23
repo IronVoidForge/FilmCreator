@@ -21,7 +21,7 @@ from .scaffold import create_project
 from .settings import load_runtime_settings
 from .world_global import global_character_registry_path, global_environment_registry_path
 
-SCENE_CONTRACT_SCHEMA_VERSION = "2026-04-23-scene-contracts-v3"
+SCENE_CONTRACT_SCHEMA_VERSION = "2026-04-23-scene-contracts-v4"
 
 
 @dataclass
@@ -392,17 +392,22 @@ def _dedupe_scene_labels(values: list[str]) -> list[str]:
 
 
 def _coerce_string_list(*values: object) -> list[str]:
+    placeholder_tokens = {"", "none", "(none)", "n/a", "null", "[]", "[ ]", "{}", "{ }"}
     items: list[str] = []
     for value in values:
         if value is None:
             continue
         if isinstance(value, list):
             for item in value:
-                if isinstance(item, str) and item.strip() and item.strip().lower() not in {"none", "(none)", "n/a"}:
-                    items.append(item.strip())
+                if not isinstance(item, str):
+                    continue
+                stripped = item.strip()
+                if not stripped or stripped.lower() in placeholder_tokens:
+                    continue
+                items.append(stripped)
         elif isinstance(value, str):
             stripped = value.strip()
-            if not stripped or stripped.lower() in {"none", "(none)", "n/a"}:
+            if not stripped or stripped.lower() in placeholder_tokens:
                 continue
             items.extend(_split_list_value(stripped) if ("," in stripped or ";" in stripped or "\n" in stripped) else [stripped])
 
@@ -474,66 +479,365 @@ def _candidate_threshold(kind: str) -> int:
     return 32 if kind == "character" else 30
 
 
-def _resolve_character_reference(project_slug: str, label: str, markdown: str, project_dir: Path) -> SceneReference:
+def _chapter_number(chapter_id: str) -> int | None:
+    match = re.search(r"CH(\d{3})", str(chapter_id or "").upper())
+    if not match:
+        return None
+    try:
+        return int(match.group(1))
+    except ValueError:
+        return None
+
+
+def _normalize_resolution_key(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "_", value.strip().lower()).strip("_")
+
+
+def _strip_parenthetical_text(value: str) -> str:
+    return re.sub(r"\([^)]*\)", " ", value or "")
+
+
+def _strip_bracket_markup(value: str) -> str:
+    return re.sub(r"\[\[|\]\]", "", value or "")
+
+
+def _strip_leading_articles(value: str) -> str:
+    return re.sub(r"^(the|a|an)\s+", "", value.strip(), flags=re.IGNORECASE)
+
+
+def _strip_character_titles(value: str) -> str:
+    return re.sub(
+        r"^(captain|capt\.?|general|gen\.?|major|maj\.?|colonel|col\.?|lieutenant|lt\.?|sergeant|sgt\.?|doctor|dr\.?|mr\.?|mrs\.?|ms\.?|miss|the)\s+",
+        "",
+        value.strip(),
+        flags=re.IGNORECASE,
+    )
+
+
+def _resolution_label_variants(label: str, *, kind: str) -> list[str]:
+    raw = _normalize_scene_label(_strip_bracket_markup(label))
+    if not raw:
+        return []
+
+    variants: list[str] = []
+
+    def add_variant(value: str) -> None:
+        normalized = _normalize_resolution_key(value)
+        if normalized and normalized not in variants:
+            variants.append(normalized)
+
+    add_variant(raw)
+    add_variant(_strip_parenthetical_text(raw))
+    article_stripped = _strip_leading_articles(_strip_parenthetical_text(raw))
+    add_variant(article_stripped)
+
+    if kind == "character":
+        titled = _strip_character_titles(article_stripped)
+        add_variant(titled)
+        # Remove descriptive lifecycle/state markers after stripping titles.
+        descriptive_trimmed = re.sub(
+            r"\b(younger|elderly|older|deceased|dead|corpse|body|wounded|injured|late)\b",
+            " ",
+            titled,
+            flags=re.IGNORECASE,
+        )
+        add_variant(descriptive_trimmed)
+    else:
+        slash_parts = [part.strip() for part in re.split(r"/|\bor\b", article_stripped, flags=re.IGNORECASE) if part.strip()]
+        for part in slash_parts:
+            add_variant(part)
+
+    return variants
+
+
+def _load_registry_entries(project_dir: Path, project_slug: str, kind: str) -> dict[str, dict[str, Any]]:
+    registry_path = _load_refined_registry_path(project_dir, kind, project_slug)
+    if not registry_path.exists():
+        return {}
+    payload = read_json(registry_path)
+    if not isinstance(payload, dict):
+        return {}
+    return {canonical_id: entry for canonical_id, entry in payload.items() if isinstance(canonical_id, str) and isinstance(entry, dict)}
+
+
+def _entry_chapter_mentions(entry: dict[str, Any]) -> list[str]:
+    chapters: list[str] = []
+    for value in entry.get("chapter_mentions", []):
+        text = str(value or "").strip().upper()
+        if re.fullmatch(r"CH\d{3}", text) and text not in chapters:
+            chapters.append(text)
+    for field_name in ("first_seen_chapter", "last_seen_chapter"):
+        text = str(entry.get(field_name, "") or "").strip().upper()
+        if re.fullmatch(r"CH\d{3}", text) and text not in chapters:
+            chapters.append(text)
+    for item in entry.get("source_history", []):
+        if not isinstance(item, dict):
+            continue
+        text = str(item.get("chapter_id", "") or "").strip().upper()
+        if re.fullmatch(r"CH\d{3}", text) and text not in chapters:
+            chapters.append(text)
+    for item in entry.get("alias_history", []):
+        if not isinstance(item, dict):
+            continue
+        text = str(item.get("chapter_id", "") or "").strip().upper()
+        if re.fullmatch(r"CH\d{3}", text) and text not in chapters:
+            chapters.append(text)
+    return chapters
+
+
+def _chapter_affinity_score(chapter_id: str, chapters: list[str]) -> int:
+    current = _chapter_number(chapter_id)
+    if current is None or not chapters:
+        return 0
+    distances = [
+        abs(current - chapter_number)
+        for chapter in chapters
+        if (chapter_number := _chapter_number(chapter)) is not None
+    ]
+    if not distances:
+        return 0
+    distance = min(distances)
+    if distance == 0:
+        return 18
+    if distance == 1:
+        return 10
+    if distance == 2:
+        return 4
+    return -min(12, distance * 2)
+
+
+def _entry_resolution_keys(canonical_id: str, entry: dict[str, Any], *, kind: str) -> set[str]:
+    raw_values: list[str] = [
+        canonical_id,
+        str(entry.get("display_name", "")),
+        *(str(alias) for alias in entry.get("aliases", []) if isinstance(alias, str)),
+    ]
+    for item in entry.get("alias_history", []):
+        if isinstance(item, dict) and item.get("alias"):
+            raw_values.append(str(item.get("alias")))
+    keys: set[str] = set()
+    for raw in raw_values:
+        for variant in _resolution_label_variants(raw, kind=kind):
+            keys.add(variant)
+    return {key for key in keys if key}
+
+
+def _best_registry_source_path(entry: dict[str, Any], chapter_id: str) -> str:
+    same_chapter_paths: list[str] = []
+    other_paths: list[str] = []
+    for item in entry.get("source_history", []):
+        if not isinstance(item, dict):
+            continue
+        source_path = str(item.get("source_path", "") or "").strip()
+        if not source_path:
+            continue
+        source_chapter = str(item.get("chapter_id", "") or "").strip().upper()
+        if source_chapter == chapter_id.upper():
+            same_chapter_paths.append(source_path)
+        else:
+            other_paths.append(source_path)
+    for path in entry.get("sources", []):
+        if not isinstance(path, str) or not path.strip():
+            continue
+        chapter_match = re.search(r"CH\d{3}", path.upper())
+        if chapter_match and chapter_match.group(0) == chapter_id.upper():
+            same_chapter_paths.append(path.strip())
+        else:
+            other_paths.append(path.strip())
+    ordered = same_chapter_paths + other_paths
+    return ordered[0] if ordered else ""
+
+
+def _scene_reference_from_registry_entry(
+    *,
+    project_dir: Path,
+    project_slug: str,
+    kind: str,
+    label: str,
+    canonical_id: str,
+    entry: dict[str, Any],
+    resolution_score: int,
+    notes: str,
+    chapter_id: str,
+) -> SceneReference:
+    if kind == "character":
+        bible = _load_character_bible(project_dir, canonical_id) or {}
+        fallback_entity_kind = "individual"
+    else:
+        bible = _load_environment_bible(project_dir, canonical_id) or {}
+        fallback_entity_kind = "environment"
+    registry_entry = _load_registry_entry(project_dir, project_slug, kind, canonical_id) or entry
+    return SceneReference(
+        label=_normalize_scene_label(label),
+        canonical_id=canonical_id,
+        display_name=_first_nonempty(
+            str(bible.get("display_name", "")),
+            str(registry_entry.get("display_name", "")),
+            fallback=label,
+        ),
+        status=str(registry_entry.get("status", bible.get("status", "canonical"))),
+        entity_kind=str(registry_entry.get("entity_kind", bible.get("entity_kind", fallback_entity_kind))),
+        resolution_score=resolution_score,
+        source_path=_best_registry_source_path(registry_entry, chapter_id),
+        notes=_compact_snippet(notes, limit=180),
+    )
+
+
+def _resolve_direct_registry_match(
+    *,
+    project_dir: Path,
+    project_slug: str,
+    kind: str,
+    label: str,
+    chapter_id: str,
+) -> SceneReference | None:
+    label_variants = _resolution_label_variants(label, kind=kind)
+    if not label_variants:
+        return None
+
+    best: tuple[int, str, dict[str, Any], str] | None = None
+    entries = _load_registry_entries(project_dir, project_slug, kind)
+    for canonical_id, entry in entries.items():
+        entry_keys = _entry_resolution_keys(canonical_id, entry, kind=kind)
+        if not entry_keys:
+            continue
+        matched_variant = next((variant for variant in label_variants if variant in entry_keys), "")
+        if not matched_variant:
+            continue
+        score = 120 + _chapter_affinity_score(chapter_id, _entry_chapter_mentions(entry))
+        notes = f"Direct registry match for '{matched_variant}'."
+        if best is None or score > best[0]:
+            best = (score, canonical_id, entry, notes)
+
+    if best is None:
+        return None
+
+    score, canonical_id, entry, notes = best
+    return _scene_reference_from_registry_entry(
+        project_dir=project_dir,
+        project_slug=project_slug,
+        kind=kind,
+        label=label,
+        canonical_id=canonical_id,
+        entry=entry,
+        resolution_score=score,
+        notes=notes,
+        chapter_id=chapter_id,
+    )
+
+
+def _best_fuzzy_candidate(
+    *,
+    project_slug: str,
+    project_dir: Path,
+    kind: str,
+    label: str,
+    markdown: str,
+    chapter_id: str,
+) -> SceneReference | None:
     normalized_label = _normalize_scene_label(label)
-    candidates = find_character_match_candidates(project_slug=project_slug, asset_id=label, aliases="", markdown=markdown, top_n=1)
+    if kind == "character":
+        candidates = find_character_match_candidates(project_slug=project_slug, asset_id=label, aliases="", markdown=markdown, top_n=5)
+    else:
+        candidates = find_environment_match_candidates(project_slug=project_slug, asset_id=label, markdown=markdown, top_n=5)
+
     if not candidates:
-        return SceneReference(label=normalized_label, display_name=normalized_label, notes="No character candidate found.")
-    candidate = candidates[0]
-    if candidate.score < _candidate_threshold("character"):
+        return SceneReference(label=normalized_label, display_name=normalized_label, notes=f"No {kind} candidate found.")
+
+    threshold = _candidate_threshold(kind)
+    best_candidate: Any | None = None
+    best_adjusted_score: int | None = None
+    for candidate in candidates:
+        has_strong_reason = any(
+            "asset id exactly matches" in reason
+            or "query matches alias" in reason
+            or "token overlap" in reason
+            for reason in candidate.reasons
+        )
+        adjusted = int(candidate.score) + _chapter_affinity_score(chapter_id, list(candidate.source_chapters))
+        if not has_strong_reason:
+            adjusted -= 18
+        if best_candidate is None or adjusted > (best_adjusted_score or -9999):
+            best_candidate = candidate
+            best_adjusted_score = adjusted
+
+    if best_candidate is None or best_adjusted_score is None:
+        return SceneReference(label=normalized_label, display_name=normalized_label, notes=f"No {kind} candidate found.")
+
+    has_strong_reason = any(
+        "asset id exactly matches" in reason
+        or "query matches alias" in reason
+        or "token overlap" in reason
+        for reason in best_candidate.reasons
+    )
+    if int(best_candidate.score) < threshold or not has_strong_reason:
         return SceneReference(
             label=normalized_label,
             canonical_id=None,
             display_name=normalized_label,
             status="review",
-            entity_kind="individual",
-            resolution_score=candidate.score,
-            source_path=candidate.source_paths[0] if candidate.source_paths else "",
-            notes=_compact_snippet(" | ".join([candidate.display_name, *candidate.reasons[:2]])),
+            entity_kind="individual" if kind == "character" else "environment",
+            resolution_score=int(best_candidate.score),
+            source_path="",
+            notes=f"Low-confidence {kind} match requires review.",
         )
-    bible = _load_character_bible(project_dir, candidate.canonical_id) or {}
-    registry_entry = _load_registry_entry(project_dir, project_slug, "character", candidate.canonical_id) or {}
-    return SceneReference(
-        label=normalized_label,
-        canonical_id=candidate.canonical_id,
-        display_name=_first_nonempty(str(bible.get("display_name", "")), candidate.display_name, str(registry_entry.get("display_name", "")), fallback=label),
-        status=str(registry_entry.get("status", bible.get("status", "canonical"))),
-        entity_kind=str(registry_entry.get("entity_kind", bible.get("entity_kind", "individual"))),
-        resolution_score=candidate.score,
-        source_path=candidate.source_paths[0] if candidate.source_paths else "",
-        notes=_compact_snippet(" | ".join(candidate.reasons[:2])),
+
+    entry = _load_registry_entry(project_dir, project_slug, kind, best_candidate.canonical_id) or {}
+    return _scene_reference_from_registry_entry(
+        project_dir=project_dir,
+        project_slug=project_slug,
+        kind=kind,
+        label=label,
+        canonical_id=best_candidate.canonical_id,
+        entry=entry,
+        resolution_score=int(best_candidate.score),
+        notes=" | ".join(best_candidate.reasons[:2]),
+        chapter_id=chapter_id,
     )
 
 
-def _resolve_environment_reference(project_slug: str, label: str, markdown: str, project_dir: Path) -> SceneReference:
+def _resolve_character_reference(project_slug: str, label: str, markdown: str, project_dir: Path, chapter_id: str) -> SceneReference:
     normalized_label = _normalize_scene_label(label)
-    candidates = find_environment_match_candidates(project_slug=project_slug, asset_id=label, markdown=markdown, top_n=1)
-    if not candidates:
-        return SceneReference(label=normalized_label, display_name=normalized_label, notes="No environment candidate found.")
-    candidate = candidates[0]
-    if candidate.score < _candidate_threshold("environment"):
-        return SceneReference(
-            label=normalized_label,
-            canonical_id=None,
-            display_name=normalized_label,
-            status="review",
-            entity_kind="environment",
-            resolution_score=candidate.score,
-            source_path=candidate.source_paths[0] if candidate.source_paths else "",
-            notes=_compact_snippet(" | ".join([candidate.display_name, *candidate.reasons[:2]])),
-        )
-    bible = _load_environment_bible(project_dir, candidate.canonical_id) or {}
-    registry_entry = _load_registry_entry(project_dir, project_slug, "environment", candidate.canonical_id) or {}
-    return SceneReference(
-        label=normalized_label,
-        canonical_id=candidate.canonical_id,
-        display_name=_first_nonempty(str(bible.get("display_name", "")), candidate.display_name, str(registry_entry.get("display_name", "")), fallback=label),
-        status=str(registry_entry.get("status", bible.get("status", "canonical"))),
-        entity_kind=str(registry_entry.get("entity_kind", bible.get("entity_kind", "environment"))),
-        resolution_score=candidate.score,
-        source_path=candidate.source_paths[0] if candidate.source_paths else "",
-        notes=_compact_snippet(" | ".join(candidate.reasons[:2])),
+    direct_match = _resolve_direct_registry_match(
+        project_dir=project_dir,
+        project_slug=project_slug,
+        kind="character",
+        label=label,
+        chapter_id=chapter_id,
     )
+    if direct_match is not None:
+        return direct_match
+    resolved = _best_fuzzy_candidate(
+        project_slug=project_slug,
+        project_dir=project_dir,
+        kind="character",
+        label=label,
+        markdown=markdown,
+        chapter_id=chapter_id,
+    )
+    return resolved if resolved is not None else SceneReference(label=normalized_label, display_name=normalized_label, notes="No character candidate found.")
+
+
+def _resolve_environment_reference(project_slug: str, label: str, markdown: str, project_dir: Path, chapter_id: str) -> SceneReference:
+    normalized_label = _normalize_scene_label(label)
+    direct_match = _resolve_direct_registry_match(
+        project_dir=project_dir,
+        project_slug=project_slug,
+        kind="environment",
+        label=label,
+        chapter_id=chapter_id,
+    )
+    if direct_match is not None:
+        return direct_match
+    resolved = _best_fuzzy_candidate(
+        project_slug=project_slug,
+        project_dir=project_dir,
+        kind="environment",
+        label=label,
+        markdown=markdown,
+        chapter_id=chapter_id,
+    )
+    return resolved if resolved is not None else SceneReference(label=normalized_label, display_name=normalized_label, notes="No environment candidate found.")
 
 
 def _scene_input_terms(scene_fields: dict[str, str]) -> list[str]:
@@ -1446,10 +1750,10 @@ def run_scene_contract_synthesis(
         raw_environments = _dedupe_scene_labels(_split_list_value(scene_fields.get("participating_environments", "")))
 
         character_refs = _dedupe_scene_references(
-            [_resolve_character_reference(project_slug, label, scene_markdown, project_dir) for label in raw_characters]
+            [_resolve_character_reference(project_slug, label, scene_markdown, project_dir, chapter_id) for label in raw_characters]
         )
         environment_refs = _dedupe_scene_references(
-            [_resolve_environment_reference(project_slug, label, scene_markdown, project_dir) for label in raw_environments]
+            [_resolve_environment_reference(project_slug, label, scene_markdown, project_dir, chapter_id) for label in raw_environments]
         )
 
         evidence_summary, evidence_refs = _collect_evidence(

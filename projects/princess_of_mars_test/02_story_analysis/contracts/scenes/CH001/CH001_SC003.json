@@ -5,50 +5,50 @@
   "purpose": "Introduce the primary conflict and physical threat.",
   "summary": "Carter notices suspicious movement in the valley. Suspecting an ambush, he pursues the trail and discovers a large Apache camp on a plateau, leading to a chaotic skirmish.",
   "emotional_arc": "Suspicion $\\rightarrow$ Alertness $\\rightarrow$ Chaos/Adrenaline.",
-  "production_intent": "Establish the physical threat of the Apache warriors through a transition from quiet observation to high-intensity combat. The sequence must move from a wide, observational perspective in the valley to a tight, chaotic handheld skirmish on the plateau.",
-  "scene_short_description": "A lone man tracks movement through a valley before discovering a large camp on a high plateau.",
-  "scene_primary_scale_story_point": "Individual scout vs. collective tribal unit.",
+  "production_intent": "Establish the physical threat of the Apache presence through a transition from quiet observation to high-intensity combat. The sequence must move from controlled, observational shots in the valley to chaotic, handheld movement during the skirmish on the plateau.",
+  "scene_short_description": "A lone traveler tracks movement through a valley before discovering an Apache camp on a high plateau.",
+  "scene_primary_scale_story_point": "Individual scout vs. large tribal encampment.",
   "scene_required_anchor_catalog": [
     "remote gold-bearing quartz vein",
-    "high plateau Apache camp",
+    "high plateau edge",
     "narrow trail near cliffside"
   ],
-  "scene_start_state": "John Carter (Younger) observing suspicious movement from a distance in the valley.",
-  "scene_end_state": "Chaotic skirmish between John Carter (Younger) and apache_warriors on the plateau.",
-  "dominant_action_line": "Pursuit of a trail leading to an ambush/skirmish encounter.",
+  "scene_start_state": "john_carter observing the valley floor from a distance.",
+  "scene_end_state": "chaotic skirmish erupting amidst the Apache camp.",
+  "dominant_action_line": "Tracking suspicious movement through terrain into an ambush/skirmish scenario.",
   "scene_spatial_layout": [
-    "Descent through Arizona hills into a valley",
-    "Ascent via narrow trail toward a high plateau"
+    "Verticality shift from low valley to high plateau",
+    "Linear pursuit along a narrow trail"
   ],
   "character_spatial_map": [
-    "John Carter (Younger) moving along the trail/plateau edge",
-    "apache_warriors positioned within camp and ambush points"
+    "john_carter moving from valley floor toward plateau edge",
+    "apache_warriors distributed across the plateau camp"
   ],
   "environment_subzones": [
-    "Arizona valley",
+    "Arizona hills/valley",
     "Narrow cliffside trail",
     "High plateau camp"
   ],
   "entry_vectors": [
-    "Trail leading from valley to plateau"
+    "Valley floor upward via narrow trail"
   ],
   "exit_vectors": [
-    "Cliffside descent"
+    "Plateau descent or combat engagement zones"
   ],
   "beat_transition_map": [
     "BT001 -> BT002: Pursuit transition",
-    "BT002 -> BT003: Discovery/Ambush transition"
+    "BT002 -> BT003: Discovery/Ambush trigger"
   ],
   "characters_required": [
     {
       "label": "John Carter (Younger)",
-      "canonical_id": null,
-      "display_name": "John Carter (Younger)",
-      "status": "review",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
     },
     {
       "label": "Apache Warriors",
@@ -56,9 +56,9 @@
       "display_name": "apache_warriors",
       "status": "canonical",
       "entity_kind": "group",
-      "resolution_score": 186,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'apache_warriors'"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/apache_warriors.md",
+      "notes": "Direct registry match for 'apache_warriors'."
     }
   ],
   "environments_required": [
@@ -69,8 +69,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     }
   ],
   "continuity_constraints": [
@@ -79,66 +79,66 @@
     "Weapon handling (rifles and sidearms)"
   ],
   "visual_coverage_families": [
-    "POV shots of movement in the valley",
-    "Wide shots of the Apache camp",
+    "POV shots of valley movement",
+    "Wide shots of Apache camp",
     "Handheld/shaky cam for skirmish",
-    "Medium shots of combat engagement"
+    "Medium combat engagement shots"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
       "summary": "Detection of movement",
       "purpose": "",
-      "action_start": "Carter scanning valley",
-      "action_end": "Carter identifies suspicious motion",
+      "action_start": "carter scanning valley",
+      "action_end": "movement confirmed",
       "active_subjects": [
-        "John Carter (Younger)"
+        "john_carter"
       ],
       "passive_subjects": [],
       "spatial_context": "Arizona hills/valley",
-      "blocking_hint": "Stationary at ridge",
-      "environment_subzone": "Arizona valley",
-      "continuity_focus": "Direction of gaze",
+      "blocking_hint": "stationary at ridge",
+      "environment_subzone": "Arizona hills/valley",
+      "continuity_focus": "direction of gaze",
       "coverage_hint": "POV shots",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Pursuit of the trail",
+      "summary": "Pursuit along trail",
       "purpose": "",
-      "action_start": "Carter begins descent/climb",
-      "action_end": "Carter reaches plateau edge",
+      "action_start": "carter moving toward target",
+      "action_end": "carter reaches plateau overlook",
       "active_subjects": [
-        "John Carter (Younger)"
+        "john_carter"
       ],
       "passive_subjects": [],
-      "spatial_context": "Narrow trail near cliffside",
-      "blocking_hint": "Moving along trail line",
+      "spatial_context": "narrow cliffside trail",
+      "blocking_hint": "moving along edge",
       "environment_subzone": "narrow cliffside trail",
-      "continuity_focus": "Direction of pursuit",
-      "coverage_hint": "Medium shots/tracking",
+      "continuity_focus": "direction of pursuit",
+      "coverage_hint": "medium shots",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Skirmish at the camp",
+      "summary": "Skirmish eruption",
       "purpose": "",
-      "action_start": "Carter discovers camp",
-      "action_end": "Chaotic combat engagement",
+      "action_start": "camp revealed",
+      "action_end": "chaotic combat",
       "active_subjects": [
-        "John Carter (Younger)",
+        "john_carter",
         "apache_warriors"
       ],
       "passive_subjects": [],
-      "spatial_context": "High plateau [[Apache camp]]",
-      "blocking_hint": "Scattered warriors vs single protagonist",
+      "spatial_context": "high plateau camp",
+      "blocking_hint": "combatants engaging in camp area",
       "environment_subzone": "high plateau camp",
-      "continuity_focus": "Number of warriors, weapon handling",
-      "coverage_hint": "Handheld/shaky cam",
+      "continuity_focus": "number of warriors and weapon use",
+      "coverage_hint": "handheld/shaky cam",
       "coverage_priority": "critical",
-      "handoff_to_next": "End of scene"
+      "handoff_to_next": "end_scene"
     }
   ],
   "planned_shots": [
@@ -146,26 +146,26 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish suspicion",
-      "planned_shot_moment_summary": "Carter spots movement in the valley",
-      "primary_subject_seed": "John Carter (Younger)",
+      "planned_shot_moment_summary": "movement detected in valley",
+      "primary_subject_seed": "john_carter",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "Arizona valley",
-      "planned_shot_required_anchor_1": "remote gold-bearing quartz vein",
-      "planned_shot_scale_proof_detail": "valley depth vs character size",
-      "start_state_seed": "Carter looking out",
-      "end_state_seed": "Carter focusing on movement",
+      "environment_subzone": "Arizona hills/valley",
+      "planned_shot_required_anchor_1": "quartz vein",
+      "planned_shot_scale_proof_detail": "distance between carter and valley floor",
+      "start_state_seed": "carter looking down",
+      "end_state_seed": "carter spotting movement",
       "action_seed": "scanning horizon",
       "blocking_seed": [
-        "standing at ridge edge"
+        "stationary observation"
       ],
-      "shot_size": "wide",
+      "shot_size": "medium_close",
       "camera_angle": "eye_level",
       "lens_family": "telephoto",
       "camera_motion": "pan",
       "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
+      "focus_strategy": "shallow_subject",
       "lighting_style": "diffuse_ambient",
       "primary_subject_angle": "profile_left"
     },
@@ -173,61 +173,60 @@
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "drive pursuit",
-      "planned_shot_moment_summary": "Carter moves along the narrow trail",
-      "primary_subject_seed": "John Carter (Younger)",
+      "planned_shot_moment_summary": "tracking the trail",
+      "primary_subject_seed": "john_carter",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "narrow cliffside trail",
       "planned_shot_required_anchor_1": "cliffside",
-      "planned_shot_scale_proof_detail": "trail width vs character",
-      "start_state_seed": "walking",
+      "planned_shot_scale_proof_detail": "trail width vs cliff height",
+      "start_state_seed": "walking trail",
       "end_state_seed": "reaching plateau edge",
-      "action_seed": "climbing/walking",
+      "action_seed": "climbing/moving fast",
       "blocking_seed": [
-        "moving along trail edge"
+        "linear movement along trail"
       ],
-      "shot_size": "medium_full",
+      "shot_size": "full",
       "camera_angle": "low_angle",
       "lens_family": "wide",
       "camera_motion": "track",
       "zoom_behavior": "none",
-      "focus_strategy": "shallow_subject",
+      "focus_strategy": "deep_focus",
       "lighting_style": "hard_directional",
       "primary_subject_angle": "rear_three_quarter_left"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "introduce threat/chaos",
-      "planned_shot_moment_summary": "Apache warriors emerge for skirmish",
+      "narrative_function": "reveal threat",
+      "planned_shot_moment_summary": "camp discovery",
       "primary_subject_seed": "apache_warriors",
       "secondary_subjects_seed": [
-        "John Carter (Younger)"
+        "john_carter"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "high plateau camp",
-      "planned_shot_required_anchor_1": "high plateau Apache camp",
-      "planned_shot_scale_proof_detail": "number of warriors vs camp size",
-      "start_state_seed": "camp stillness",
-      "end_state_seed": "combat chaos",
-      "action_seed": "skirmishing/shooting arrows",
+      "planned_shot_required_anchor_1": "plateau edge",
+      "planned_shot_scale_proof_detail": "size of camp vs carter",
+      "start_state_seed": "viewing camp from trail",
+      "end_state_seed": "skirmish begins",
+      "action_seed": "combat engagement",
       "blocking_seed": [
-        "warriors emerging from camp/cover"
+        "scattered warriors and carter entering frame"
       ],
-      "shot_size": "medium",
+      "shot_size": "wide",
       "camera_angle": "eye_level",
-      "lens_family": "normal",
+      "lens_family": "ultra_wide",
       "camera_motion": "handheld",
       "zoom_behavior": "none",
-      "focus_strategy": "rack_focus",
+      "focus_strategy": "deep_focus",
       "lighting_style": "high_contrast_ceremonial",
-      "primary_subject_angle": "front_three_quarter_right"
+      "primary_subject_angle": "front"
     }
   ],
   "unresolved_questions": [
-    "Resolve John Carter (Younger) -> John Carter (Younger)",
     "Resolve Arizona hills/plateau -> Arizona hills/plateau"
   ],
   "evidence_refs": [
@@ -279,7 +278,7 @@
     {
       "source": "character_bible",
       "chapter_id": "CH001",
-      "canonical_id": "apache_warriors"
+      "canonical_id": "john_carter"
     }
   ],
   "evidence_summary": [
@@ -292,16 +291,16 @@
     "[CH001] CHAPTER I (book index hit)",
     "[CH010] CHAPTER X (book index hit)",
     "[CH011] CHAPTER XI (book index hit)",
-    "Character apache_warriors: A large group of hostile 19th-century indigenous warriors characterized by their traditional Apache attire. They function as a collective unit, primarily seen engaged in ambush tactics and active skirmishes while wielding arrows."
+    "Character john_carter: A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior ad..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH001_SC003\n\n## Production Intent\nEstablish the physical threat of the Apache warriors through a transition from quiet observation to high-intensity combat. The sequence must move from a wide, observational perspective in the valley to a tight, chaotic handheld skirmish on the plateau.\n\n## Required Cast\n- John Carter (Younger)\n- apache_warriors (Large group, traditional 19th-century attire, wielding arrows)\n\n## Required Environments\n- Arizona hills/plateau (including remote gold-bearing quartz vein and narrow cliffside trail)\n- High plateau Apache camp\n\n## Continuity Constraints\n- Total count of apache_warriors must remain consistent during skirmish.\n- Direction of pursuit from valley to plateau must be linear.\n- Weapon handling: rifles/sidearms for Carter, arrows for warriors.\n\n## Beat List\n- BT001: Detection of movement in the valley.\n- BT002: Pursuit along the narrow cliffside trail.\n- BT003: Chaotic skirmish at the Apache camp on the plateau.",
+  "storyboard_markdown": "# Scene Contract: CH001_SC003\n\n## Production Intent\nEstablish the physical threat of the Apache presence through a transition from quiet observation to high-intensity combat. The sequence must move from controlled, observational shots in the valley to chaotic, handheld movement during the skirmish on the plateau.\n\n## Required Cast\n- john_carter (Rugged survivor/Confederate cavalry attire)\n- apache_warriors (Large group)\n\n## Required Environments\n- Arizona hills/valley (with quartz vein)\n- Narrow cliffside trail\n- High plateau camp\n\n## Continuity Constraints\n- Total count of apache_warriors must remain consistent during skirmish.\n- Direction of pursuit: Valley -> Trail -> Plateau.\n- Weapon handling: Consistent use of rifles and sidearms for carter and warriors.\n\n## Beat List\n- BT001: Detection of movement in the valley.\n- BT002: Pursuit along the narrow cliffside trail.\n- BT003: Discovery of camp and chaotic skirmish eruption.",
   "metadata": {
     "artifact_id": "CH001_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "24d8a8e2d9dadf45642a104328d2c441bfbfb3ff",
+    "source_fingerprint": "cb4bf81539b86996ba112285002214f47c53f027",
     "created_at_utc": "2026-04-21T23:17:44.908783+00:00",
-    "updated_at_utc": "2026-04-23T18:02:47.465166+00:00",
+    "updated_at_utc": "2026-04-23T18:44:44.951907+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -311,12 +310,12 @@
       {
         "dependency_type": "character_resolutions",
         "dependency_id": "CH001_SC003",
-        "version": "846bbc899f480a06c39d72980418604613eea2b2"
+        "version": "d12b287e94a3e207cb1969e947d7dc65d0f32bfe"
       },
       {
         "dependency_type": "environment_resolutions",
         "dependency_id": "CH001_SC003",
-        "version": "52f6ae2558d5ba08a1e918315daa58cf6dfee2da"
+        "version": "ff068ae2f7bdef611af1f15aa1ed961e59b24446"
       }
     ],
     "locked_fields": {},
@@ -361,6 +360,11 @@
         "timestamp_utc": "2026-04-23T18:03:15.054288+00:00",
         "action": "synthesized",
         "source_fingerprint": "24d8a8e2d9dadf45642a104328d2c441bfbfb3ff"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:45:10.715029+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "cb4bf81539b86996ba112285002214f47c53f027"
       }
     ]
   }

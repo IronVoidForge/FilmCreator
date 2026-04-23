@@ -5,49 +5,46 @@
   "purpose": "Transition the protagonist from the terrestrial world to the inciting supernatural event.",
   "summary": "Carter's horse leads him to a narrow cave entrance on a high trail. After checking Powell, Carter enters the large, ancient chamber. Inside, he is overcome by an unnatural drowsiness and collapses into unconsciousness.",
   "emotional_arc": "Exhaustion $\\rightarrow$ Confusion $\\rightarrow$ Lethargy/Loss of consciousness.",
-  "production_intent": "Establish the transition from a bright, terrestrial mountain trail into a dark, supernatural cave environment. The sequence must visually communicate the onset of an unnatural lethargy through lighting shifts and character physical degradation.",
-  "scene_short_description": "A man follows his horse into a narrow cliffside cave entrance and collapses inside.",
+  "production_intent": "Establish the transition from a rugged terrestrial journey to a supernatural event by moving the protagonist from high-altitude sunlight into a dim, oppressive ancient chamber where physiological control is lost.",
+  "scene_short_description": "A rugged man follows a horse into a narrow cliffside cave entrance and collapses inside.",
   "scene_primary_scale_story_point": "Massive ancient chamber scale relative to the small human figure.",
   "scene_required_anchor_catalog": [
     "Narrow cave entrance",
     "Ancient chamber floor"
   ],
-  "scene_start_state": "Bright daylight on a high, narrow mountain trail.",
-  "scene_end_state": "Total darkness/blackout following physical collapse.",
-  "dominant_action_line": "Carter enters the cave and succumbs to an unnatural sleep.",
+  "scene_start_state": "Bright, high-altitude sunlight on a narrow trail.",
+  "scene_end_state": "Darkness and unconsciousness inside the cave.",
+  "dominant_action_line": "Carter follows his horse into the cave and succumbs to an unnatural lethargy.",
   "scene_spatial_layout": [
     "High cliffside trail leading to a narrow aperture",
-    "Large, cavernous interior chamber"
+    "Large, expansive ancient chamber interior"
   ],
   "character_spatial_map": [
-    "John Carter (Younger) moves from trail into cave mouth",
-    "John Carter (Younger) collapses on the chamber floor"
+    "john_carter moves from high trail through entrance to chamber center"
   ],
   "environment_subzones": [
-    "High cliffside trail",
-    "Cave entrance threshold",
-    "Ancient chamber interior"
+    "primary scene playing area"
   ],
   "entry_vectors": [
-    "Narrow trail path"
+    "High cliffside trail"
   ],
   "exit_vectors": [
-    "None (character remains unconscious)"
+    "None (unconscious)"
   ],
   "beat_transition_map": [
     "BT001 -> BT002: Movement from exterior light to interior shadow",
-    "BT002 -> BT003: Physical stability to sudden collapse"
+    "BT002 -> BT003: Transition from physical movement to physiological collapse"
   ],
   "characters_required": [
     {
       "label": "John Carter (Younger)",
-      "canonical_id": null,
-      "display_name": "John Carter (Younger)",
-      "status": "review",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
     }
   ],
   "environments_required": [
@@ -58,8 +55,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     },
     {
       "label": "Ancient Cave interior",
@@ -68,13 +65,13 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     }
   ],
   "continuity_constraints": [
-    "Lighting transition from bright exterior to dim/dark cave interior",
-    "Visual cues for unnatural drowsiness (heavy eyelids, ocular focus loss)"
+    "Lighting transition from bright exterior to dark/dim cave",
+    "Visual cues for unnatural drowsiness (heavy eyelids, blurred vision)"
   ],
   "visual_coverage_families": [
     "Wide shots of cave entrance on cliffside",
@@ -86,94 +83,79 @@
       "beat_id": "BT001",
       "summary": "Carter follows horse to cave entrance",
       "purpose": "",
-      "action_start": "Walking on trail",
-      "action_end": "Reaching cave mouth",
+      "action_start": "walking on high trail",
+      "action_end": "reaching narrow entrance",
       "active_subjects": [
-        "John Carter (Younger)",
-        "Horse"
+        "john_carter"
       ],
-      "passive_subjects": [],
+      "passive_subjects": [
+        "horse"
+      ],
       "spatial_context": "High cliffside trail",
-      "blocking_hint": "Following the horse's lead toward the aperture",
+      "blocking_hint": "following the animal line",
       "environment_subzone": "High cliffside trail",
       "continuity_focus": "Bright exterior lighting",
-      "coverage_hint": "Wide shot of entrance",
+      "coverage_hint": "Wide shot of cave on cliff",
       "coverage_priority": "high",
-      "handoff_to_next": "Transition to interior shadow"
+      "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
       "summary": "Carter enters the ancient chamber",
       "purpose": "",
-      "action_start": "Stepping into cave",
-      "action_end": "Walking into center",
+      "action_start": "stepping through entrance",
+      "action_end": "standing in chamber center",
       "active_subjects": [
-        "John Carter (Younger)"
+        "john_carter"
       ],
       "passive_subjects": [],
-      "spatial_context": "Ancient chamber interior",
-      "blocking_hint": "Moving from light to dark",
-      "environment_subzone": "Cave entrance threshold",
-      "continuity_focus": "Lighting shift from bright to dim",
-      "coverage_hint": "Low-angle scale shot",
+      "spatial_context": "Ancient Cave interior",
+      "blocking_hint": "moving into open space",
+      "environment_subzone": "Ancient Cave interior",
+      "continuity_focus": "Transition from bright to dim/dark",
+      "coverage_hint": "Low-angle scale shots",
       "coverage_priority": "medium",
-      "handoff_to_next": "Onset of lethargy"
+      "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Carter succumbs to drowsiness and collapses",
+      "summary": "Carter succumbs to lethargy and collapses",
       "purpose": "",
-      "action_start": "Confusion/Staggering",
-      "action_end": "Unconscious on floor",
+      "action_start": "eyes drooping",
+      "action_end": "unconscious on floor",
       "active_subjects": [
-        "John Carter (Younger)"
+        "john_carter"
       ],
       "passive_subjects": [],
-      "spatial_context": "Ancient chamber interior",
-      "blocking_hint": "Center of chamber",
-      "environment_subzone": "Ancient chamber interior",
-      "continuity_focus": "Heavy eyelids and blurred vision cues",
-      "coverage_hint": "Close-ups and fade to black",
+      "spatial_context": "Ancient Cave interior",
+      "blocking_hint": "center of chamber",
+      "environment_subzone": "Ancient Cave interior",
+      "continuity_focus": "Unnatural drowsiness/heavy eyelids",
+      "coverage_hint": "Close-ups of eyes and collapse",
       "coverage_priority": "high",
-      "handoff_to_next": "End of scene"
-    },
-    {
-      "beat_id": "BT004",
-      "summary": "[[/SECTION]",
-      "purpose": "",
-      "action_start": "",
-      "action_end": "",
-      "active_subjects": [],
-      "passive_subjects": [],
-      "spatial_context": "",
-      "blocking_hint": "",
-      "environment_subzone": "",
-      "continuity_focus": "",
-      "coverage_hint": "",
-      "coverage_priority": "",
-      "handoff_to_next": ""
+      "handoff_to_next": "end_scene"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish location",
-      "planned_shot_moment_summary": "Horse leads Carter toward the narrow cave opening on the cliff",
-      "primary_subject_seed": "John Carter (Younger)",
+      "narrative_function": "establish setting",
+      "planned_shot_moment_summary": "horse leads Carter toward the narrow entrance",
+      "primary_subject_seed": "john_carter",
       "secondary_subjects_seed": [
-        "Horse"
+        "horse"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "High cliffside trail",
       "planned_shot_required_anchor_1": "Narrow cave entrance",
-      "planned_shot_scale_proof_detail": "Cliff height vs trail width",
-      "start_state_seed": "Bright daylight",
-      "end_state_seed": "Approaching cave mouth",
-      "action_seed": "Walking/Leading horse",
+      "planned_shot_scale_proof_detail": "Cliff edge height vs trail width",
+      "start_state_seed": "Carter walking on trail",
+      "end_state_seed": "Carter reaching entrance",
+      "action_seed": "walking toward aperture",
       "blocking_seed": [
-        "Carter following horse toward aperture"
+        "following horse line"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
@@ -187,27 +169,27 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "establish scale/transition",
-      "planned_shot_moment_summary": "Carter enters the large ancient chamber",
-      "primary_subject_seed": "John Carter (Younger)",
+      "narrative_function": "establish scale",
+      "planned_shot_moment_summary": "Carter enters the massive chamber",
+      "primary_subject_seed": "john_carter",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "Ancient chamber interior",
-      "planned_shot_required_anchor_1": "Cave entrance threshold",
-      "planned_shot_scale_proof_detail": "Ceiling height vs character height",
-      "start_state_seed": "Entering shadow",
-      "end_state_seed": "Walking into center",
-      "action_seed": "Walking",
+      "environment_subzone": "Ancient Cave interior",
+      "planned_shot_required_anchor_1": "Ancient chamber floor",
+      "planned_shot_scale_proof_detail": "Ceiling height vs Carter height",
+      "start_state_seed": "Entering darkness",
+      "end_state_seed": "Standing in center",
+      "action_seed": "walking into chamber",
       "blocking_seed": [
-        "Carter moving away from light source"
+        "center chamber"
       ],
       "shot_size": "full",
       "camera_angle": "low_angle",
       "lens_family": "ultra_wide",
       "camera_motion": "push_in",
       "zoom_behavior": "none",
-      "focus_strategy": "environment_priority",
+      "focus_strategy": "deep_focus",
       "lighting_style": "low_key_night",
       "primary_subject_angle": "rear_three_quarter_left"
     },
@@ -215,19 +197,19 @@
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "convey supernatural effect",
-      "planned_shot_moment_summary": "Carter's eyes droop and vision blurs",
-      "primary_subject_seed": "John Carter (Younger)",
+      "planned_shot_moment_summary": "Carter's eyes droop and he collapses",
+      "primary_subject_seed": "john_carter",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "Ancient chamber interior",
-      "planned_shot_required_anchor_1": "Chamber floor",
+      "environment_subzone": "Ancient Cave interior",
+      "planned_shot_required_anchor_1": "Ancient chamber floor",
       "planned_shot_scale_proof_detail": "N/A",
-      "start_state_seed": "Alert/Confused",
-      "end_state_seed": "Eyes closed",
-      "action_seed": "Drooping eyelids",
+      "start_state_seed": "Standing unsteady",
+      "end_state_seed": "Collapsed on floor",
+      "action_seed": "collapsing",
       "blocking_seed": [
-        "Stationary/Staggering"
+        "center chamber"
       ],
       "shot_size": "close_up",
       "camera_angle": "eye_level",
@@ -237,37 +219,9 @@
       "focus_strategy": "shallow_subject",
       "lighting_style": "low_key_night",
       "primary_subject_angle": "front"
-    },
-    {
-      "planned_shot_id": "SH004",
-      "beat_id": "BT003",
-      "narrative_function": "conclude scene",
-      "planned_shot_moment_summary": "Carter collapses into unconsciousness",
-      "primary_subject_seed": "John Carter (Younger)",
-      "secondary_subjects_seed": [],
-      "subject_visibility": "on_screen",
-      "narration_mode": "none",
-      "environment_subzone": "Ancient chamber interior",
-      "planned_shot_required_anchor_1": "Chamber floor",
-      "planned_shot_scale_proof_detail": "N/A",
-      "start_state_seed": "Staggering",
-      "end_state_seed": "Lying still",
-      "action_seed": "Collapsing",
-      "blocking_seed": [
-        "Falling to ground"
-      ],
-      "shot_size": "medium_full",
-      "camera_angle": "low_angle",
-      "lens_family": "wide",
-      "camera_motion": "pan",
-      "zoom_behavior": "none",
-      "focus_strategy": "shallow_subject",
-      "lighting_style": "low_key_night",
-      "primary_subject_angle": "front_three_quarter_right"
     }
   ],
   "unresolved_questions": [
-    "Resolve John Carter (Younger) -> John Carter (Younger)",
     "Resolve High cliffside trail -> High cliffside trail",
     "Resolve Ancient Cave interior -> Ancient Cave interior"
   ],
@@ -316,6 +270,11 @@
       "source": "book_index",
       "chapter_id": "CH010",
       "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH001",
+      "canonical_id": "john_carter"
     }
   ],
   "evidence_summary": [
@@ -327,16 +286,17 @@
     "[CH001] Chapter summary: **Setting:** The Arizona hills and mountains; specifically a remote gold-bearing quartz vein, a high plateau with an Apache camp, and a large, ancient cave located on a narrow trail near a cliffside. **Characters:** *...",
     "[CH001] CHAPTER I (book index hit)",
     "[CH016] CHAPTER XVI (book index hit)",
-    "[CH010] CHAPTER X (book index hit)"
+    "[CH010] CHAPTER X (book index hit)",
+    "Character john_carter: A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior ad..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH001_SC005\n\n## Production Intent\nEstablish the transition from a bright, terrestrial mountain trail into a dark, supernatural cave environment. The sequence must visually communicate the onset of an unnatural lethargy through lighting shifts and character physical degradation.\n\n## Required Cast\n- John Carter (Younger)\n\n## Required Environments\n- High cliffside trail\n- Ancient Cave interior\n\n## Continuity Constraints\n- Lighting transition from bright exterior to dim/dark cave interior\n- Visual cues for unnatural drowsiness (heavy eyelids, ocular focus loss)\n\n## Beat List\n- BT001: Carter follows horse to cave entrance\n- BT002: Carter enters the ancient chamber\n- BT003: Carter succumbs to drowsiness and collapses",
+  "storyboard_markdown": "# Scene Contract: CH001_SC005\n\n## Production Intent\nEstablish the transition from a rugged terrestrial journey to a supernatural event by moving the protagonist from high-altitude sunlight into a dim, oppressive ancient chamber where physiological control is lost.\n\n## Required Cast\n- john_carter (Younger)\n\n## Required Environments\n- High cliffside trail\n- Ancient Cave interior\n\n## Continuity Constraints\n- Lighting transition: Bright exterior to dark/dim cave interior.\n- Physiological cues: Heavy eyelids and blurred vision to indicate unnatural drowsiness.\n\n## Beat List\n- BT001: Carter follows horse to cave entrance (Exterior/Bright)\n- BT002: Carter enters the ancient chamber (Interior/Dim Scale)\n- BT003: Carter succumbs to lethargy and collapses (Interior/Darkness)",
   "metadata": {
     "artifact_id": "CH001_SC005_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "78db6a7c970c95ccf47ce5ed7a47c32ad7c83272",
+    "source_fingerprint": "225d274786ac531331be757a4718e197d7770ccd",
     "created_at_utc": "2026-04-21T23:18:24.217361+00:00",
-    "updated_at_utc": "2026-04-23T18:03:48.635140+00:00",
+    "updated_at_utc": "2026-04-23T18:45:40.445020+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -346,12 +306,12 @@
       {
         "dependency_type": "character_resolutions",
         "dependency_id": "CH001_SC005",
-        "version": "70398f264713a81c704faaa5463c227071880e1f"
+        "version": "4c179fd846a642498133212d2051ea2f53a42546"
       },
       {
         "dependency_type": "environment_resolutions",
         "dependency_id": "CH001_SC005",
-        "version": "266954bfc9120b60808571783e27746ac4284c6f"
+        "version": "57cd7d8b5e531c2e1843d94a6fdbf5517701f866"
       }
     ],
     "locked_fields": {},
@@ -396,6 +356,11 @@
         "timestamp_utc": "2026-04-23T18:04:16.297151+00:00",
         "action": "synthesized",
         "source_fingerprint": "78db6a7c970c95ccf47ce5ed7a47c32ad7c83272"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:46:05.391795+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "225d274786ac531331be757a4718e197d7770ccd"
       }
     ]
   }
