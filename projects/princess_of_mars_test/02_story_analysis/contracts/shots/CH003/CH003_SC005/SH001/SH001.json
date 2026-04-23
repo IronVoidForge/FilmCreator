@@ -14,6 +14,16 @@
   "action_during_shot": "The leader dismounts unarmed and offers the protagonist a metal armlet.",
   "action_continues_from": "The leader dismounts unarmed and offers the protagonist a metal armlet. The protagonist accepts, signaling peace. He is then lifted onto a Martian mount and taken away toward the distant hills.",
   "action_hands_off_to": "The protagonist accepts, signaling peace.",
+  "shot_size": "medium",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
+  "zoom_behavior": "none",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
+  "subject_visibility": "on_screen",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
   "subject_blocking": [
     "The armlet on the protagonist's arm",
     "protagonist remains readable within the active playing space."
@@ -24,7 +34,7 @@
     "Subject 1: protagonist remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "protagonist focuses toward the active scene action."
+    "primary scene subject focuses toward the active scene action."
   ],
   "environment_subzone": "primary scene playing area",
   "key_visible_environment_features": [
@@ -68,10 +78,11 @@
   "continuity_constraints": [
     "The armlet on the protagonist's arm",
     "the height difference when he is lifted onto the mount.",
-    "Resolve The Leader",
-    "Resolve The basin/open landscape"
+    "The leader dismounts unarmed and offers the protagonist a metal armlet.",
+    "Resolve The Leader -> The Leader",
+    "Resolve The basin/open landscape -> The basin/open landscape"
   ],
-  "prompt_seed": "Medium 1: The leader dismounts unarmed and offers the protago.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in The basin/open landscape featuring protagonist. Cast: protagonist. Environment: The basin/open landscape. Beat: The leader dismounts unarmed and off...",
+  "prompt_seed": "Medium 1: The leader dismounts unarmed and offers the protago.... medium. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable medium framing that keeps action and character readable....",
   "shot_notes": "The leader dismounts unarmed and offers the protagonist a metal armlet.",
   "evidence_refs": [
     {
@@ -143,24 +154,24 @@
     "artifact_id": "CH003_SC005_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "2cbd9d647e583b23527718dda3f57cf05638770d",
+    "source_fingerprint": "aba0979bdc0d5a884aceaaf812d51dd19a4c1465",
     "created_at_utc": "2026-04-22T00:26:13.650266+00:00",
-    "updated_at_utc": "2026-04-22T23:20:04.585026+00:00",
+    "updated_at_utc": "2026-04-23T04:43:39.091397+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH003_SC005",
-        "version": "647a737430e3880f3b0c7f143d601604e7dc6eaf"
+        "version": "3561cdd861d6bd49cabdd8d9f61b56f95c8b7e8d"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH003_SC005",
-        "version": "a1c26a186c1fd6bde3994900019b802c387f82e4"
+        "version": "34ee7f0e217b4765043d2b6f1ca6aaa0014da9f8"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH003_SC005",
-        "version": "b9720e6c56ee1a020426e01274dda587f9d13048"
+        "version": "bfbfb70b3faa66b090a72aac890d75dc203c0961"
       }
     ],
     "locked_fields": {},
@@ -190,6 +201,11 @@
         "timestamp_utc": "2026-04-22T23:20:53.720393+00:00",
         "action": "synthesized",
         "source_fingerprint": "2cbd9d647e583b23527718dda3f57cf05638770d"
+      },
+      {
+        "timestamp_utc": "2026-04-23T04:45:04.287253+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "aba0979bdc0d5a884aceaaf812d51dd19a4c1465"
       }
     ]
   }

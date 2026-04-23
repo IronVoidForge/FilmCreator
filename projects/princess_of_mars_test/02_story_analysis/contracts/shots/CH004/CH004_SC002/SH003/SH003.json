@@ -5,15 +5,25 @@
   "shot_order": 3,
   "previous_shot_id": "SH002",
   "next_shot_id": "",
-  "primary_subject": "tars_tarkas",
+  "primary_subject": "primary scene subject",
   "secondary_subjects": [
-    "the_chieftain"
+    "[]"
   ],
   "start_state": "Continue the established scene action toward consequence.",
   "end_state": "Arrive at the scene's transition point.",
   "action_during_shot": "Land the scene consequence or transition cleanly.",
-  "action_continues_from": "Land the emotional shift: Intimidation -> Observational Curiosity.",
+  "action_continues_from": "Land the emotional shift: Intimidation $\\\\rightarrow$ Observational Curiosity.\\n\\n**Likely Visual Coverage Families:**\\n* Medium shots of the Chieftain in regalia.\\n* Close-ups on the Narrator's face reacting to the environment.\\n* Detail shots of the oversized, ancient furniture..",
   "action_hands_off_to": "Arrive at the scene's transition point.",
+  "shot_size": "medium",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
+  "zoom_behavior": "none",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
+  "subject_visibility": "on_screen",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
   "subject_blocking": [
     "the visual details of the Chieftain's regalia.",
     "tars_tarkas remains readable within the active playing space.",
@@ -26,21 +36,20 @@
     "Subject 2: the_chieftain remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "tars_tarkas focuses toward the active scene action."
+    "primary scene subject focuses toward the active scene action."
   ],
   "environment_subzone": "primary scene playing area",
   "key_visible_environment_features": [
-    "primary scene playing area",
-    "grand_audience_chamber"
+    "primary scene playing area"
   ],
-  "continuity_from_previous_shot": "Land the emotional shift: Intimidation -> Observational Curiosity.",
+  "continuity_from_previous_shot": "Land the emotional shift: Intimidation $\\\\rightarrow$ Observational Curiosity.\\n\\n**Likely Visual Coverage Families:**\\n* Medium shots of the Chieftain in regalia.\\n* Close-ups on the Narrator's face reacting to the environment.\\n* Detail shots of the oversized, ancient furniture..",
   "continuity_to_next_shot": "Arrive at the scene's transition point.",
   "pose_anchor_frame": "Continue the established scene action toward consequence.",
   "pose_end_frame": "Arrive at the scene's transition point.",
-  "shot_title": "Closing Reaction 3: Scene Transition",
+  "shot_title": "Closing Reaction 3: Land the scene consequence or transition cleanly.",
   "shot_type": "closing_reaction",
   "camera_description": "Controlled closing frame that lands the consequence of the beat.",
-  "composition": "Closing composition in grand_audience_chamber that emphasizes the consequence of land the scene consequence or transition cleanly.",
+  "composition": "Closing composition in grand_audience_chamber that emphasizes the consequence of land the scene consequence or transition cleanly..",
   "target_seconds": 4.6,
   "characters_in_frame": [
     {
@@ -80,9 +89,11 @@
   "continuity_constraints": [
     "The specific placement of the Narrator within the massive chamber",
     "the visual details of the Chieftain's regalia.",
-    "Land the scene consequence or transition cleanly."
+    "Land the scene consequence or transition cleanly.",
+    "Resolve The Narrator -> The Narrator",
+    "Resolve Martian Court -> Martian Court"
   ],
-  "prompt_seed": "Closing Reaction 3: Land the scene consequence or transition cleanly.. closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in grand_audience_chamber that emphasizes the consequence of land the scene consequence or transition cleanly.. Cast: tars_tarkas, the_chieftai...",
+  "prompt_seed": "Closing Reaction 3: Land the scene consequence or transition cleanly.. closing_reaction. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Controlled closing frame that lands the conseque...",
   "shot_notes": "Land the scene consequence or transition cleanly.",
   "evidence_refs": [
     {
@@ -155,24 +166,24 @@
     "artifact_id": "CH004_SC002_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "df22a08379bd1eb320746e020e017af5eadd6315",
+    "source_fingerprint": "b158c1f9bc084fcb9d0b8590a8c577760cab188a",
     "created_at_utc": "2026-04-22T00:33:18.747626+00:00",
-    "updated_at_utc": "2026-04-22T23:26:25.031486+00:00",
+    "updated_at_utc": "2026-04-23T04:55:13.896497+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH004_SC002",
-        "version": "8ddff18458b37356037f30a914d134601fbf5eb3"
+        "version": "74f133655b95e1767939204247a8ed132191b157"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH004_SC002",
-        "version": "6efaa95da1f5269c3ab25e95731b8679f36fe2f1"
+        "version": "7a1944421d762a42ebb74c8b5a50bdcb2bbd5498"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH004_SC002",
-        "version": "b8f77def5e94b16e83292c38db37834d472078d6"
+        "version": "9a9fade8b032e8235145d08ad5ff8f11b79d42df"
       }
     ],
     "locked_fields": {},
@@ -202,6 +213,11 @@
         "timestamp_utc": "2026-04-22T23:27:07.963222+00:00",
         "action": "synthesized",
         "source_fingerprint": "df22a08379bd1eb320746e020e017af5eadd6315"
+      },
+      {
+        "timestamp_utc": "2026-04-23T04:56:29.788774+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "b158c1f9bc084fcb9d0b8590a8c577760cab188a"
       }
     ]
   }

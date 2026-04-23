@@ -5,15 +5,25 @@
   "shot_order": 1,
   "previous_shot_id": "",
   "next_shot_id": "SH002",
-  "primary_subject": "scene_character",
+  "primary_subject": "The Protagonist",
   "secondary_subjects": [
     "[]"
   ],
   "start_state": "The protagonist is observing the Arizona mountain landscape at night.",
   "end_state": "The protagonist becomes mesmerized by the red star, Mars.",
-  "action_during_shot": "The protagonist observes the landscape and becomes mesmerized by Mars.",
-  "action_continues_from": "While observing the landscape, the protagonist becomes mesmerized by Mars (the red star).",
+  "action_during_shot": "While observing the landscape, the protagonist becomes mesmerized by Mars (the red star).",
+  "action_continues_from": "While observing the landscape, the protagonist becomes mesmerized by Mars (the red star). He feels an irresistible pull toward it. As he closes his eyes, he is violently transported through space into darkness and cold.",
   "action_hands_off_to": "He feels an irresistible pull toward it.",
+  "shot_size": "medium",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
+  "zoom_behavior": "none",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
+  "subject_visibility": "on_screen",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
   "subject_blocking": [
     "scene_character remains readable within the active playing space."
   ],
@@ -22,21 +32,20 @@
     "Background depth keeps the landscape legible as the location anchor."
   ],
   "gaze_directions": [
-    "scene_character focuses toward Mars (the red star)."
+    "protagonist focuses toward Mars (the red star)."
   ],
   "environment_subzone": "primary scene playing area",
   "key_visible_environment_features": [
-    "Arizona mountain landscape at night",
-    "The red star, Mars"
+    "Arizona Mountain Landscape (Night)"
   ],
   "continuity_from_previous_shot": "Scene start: Observing the landscape.",
   "continuity_to_next_shot": "He feels an irresistible pull toward it.",
-  "pose_anchor_frame": "Protagonist observing the dark mountain landscape.",
-  "pose_end_frame": "Protagonist staring mesmerized at the red star Mars.",
+  "pose_anchor_frame": "Protagonist observing the mountain landscape.",
+  "pose_end_frame": "Protagonist mesmerized by the red star Mars.",
   "shot_title": "Medium 1: Mesmerized by Mars",
   "shot_type": "medium",
   "camera_description": "Stable medium framing that keeps action and character readable.",
-  "composition": "Readable medium composition featuring scene_character against the night landscape.",
+  "composition": "Readable medium composition featuring the protagonist against the night landscape.",
   "target_seconds": 5.2,
   "characters_in_frame": [
     {
@@ -65,9 +74,9 @@
   ],
   "continuity_constraints": [
     "While observing the landscape",
-    "The protagonist becomes mesmerized by Mars (the red star)"
+    "The protagonist becomes mesmerized by Mars (the red star)."
   ],
-  "prompt_seed": "Medium shot of scene_character in Arizona Mountain Landscape at night, mesmerized by the glowing red star Mars. Stable framing, readable composition.",
+  "prompt_seed": "Medium shot, eye level, normal lens, locked off, deep focus, hard directional lighting. The protagonist is mesmerized by the red star Mars in the night sky over Arizona mountains.",
   "shot_notes": "Focus on the transition from observation to trance.",
   "evidence_refs": [
     {
@@ -122,24 +131,24 @@
     "artifact_id": "CH002_SC005_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "341d17db824da499f072cbf8b45a177335a4aa59",
+    "source_fingerprint": "a89470fe590cafbee984f0cd6ee1e98e62b5e6f6",
     "created_at_utc": "2026-04-22T00:15:37.883328+00:00",
-    "updated_at_utc": "2026-04-22T23:09:27.471137+00:00",
+    "updated_at_utc": "2026-04-23T04:24:51.220024+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH002_SC005",
-        "version": "8b48be392c30f1620b9b60236ff412df04cc753a"
+        "version": "110d7454817b04b7fc69f622f6416393548b6310"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH002_SC005",
-        "version": "7dca7e4a971c347196d3659b8a579092670dbcc1"
+        "version": "95b46feaf818cbd6d4a1ad53bd1f9ad0dc13c78c"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH002_SC005",
-        "version": "790f20f81b3403a72a9edee0b5fc9fe190ef773d"
+        "version": "8957cc255e66d52ff125f13d2d3070554bd79bfd"
       }
     ],
     "locked_fields": {},
@@ -169,6 +178,11 @@
         "timestamp_utc": "2026-04-22T23:10:16.794737+00:00",
         "action": "synthesized",
         "source_fingerprint": "341d17db824da499f072cbf8b45a177335a4aa59"
+      },
+      {
+        "timestamp_utc": "2026-04-23T04:26:15.547118+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "a89470fe590cafbee984f0cd6ee1e98e62b5e6f6"
       }
     ]
   }

@@ -5,15 +5,25 @@
   "shot_order": 3,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "primary_subject": "tars_tarkas",
+  "primary_subject": "primary scene subject",
   "secondary_subjects": [
     "[]"
   ],
   "start_state": "Continue the established scene action toward consequence.",
   "end_state": "Arrive at the scene's transition point.",
   "action_during_shot": "Land the scene consequence or transition cleanly.",
-  "action_continues_from": "Land the emotional shift: Awe/Trepidation -> Alienation.",
+  "action_continues_from": "Land the emotional shift: Awe/Trepidation $\\\\rightarrow$ Alienation.\\n\\n**Likely Visual Coverage Families:**\\n* Extreme Wide Shots (EWS) to establish the scale of the city vs. characters.\\n* Low Angle shots looking up at Martians.\\n* POV shots from the Narrator's perspective showing the overwhelming crowd..",
   "action_hands_off_to": "Arrive at the scene's transition point.",
+  "shot_size": "medium",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
+  "zoom_behavior": "none",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
+  "subject_visibility": "on_screen",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
   "subject_blocking": [
     "movement patterns of the Martian crowd.",
     "tars_tarkas remains readable within the active playing space."
@@ -24,21 +34,21 @@
     "Subject 1: tars_tarkas remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "tars_tarkas focuses toward the active scene action."
+    "primary scene subject focuses toward the active scene action."
   ],
   "environment_subzone": "primary scene playing area",
   "key_visible_environment_features": [
     "primary scene playing area",
     "aerial_battlefield_mars | source context shares query language"
   ],
-  "continuity_from_previous_shot": "Land the emotional shift: Awe/Trepidation -> Alienation.",
+  "continuity_from_previous_shot": "Land the emotional shift: Awe/Trepidation $\\\\rightarrow$ Alienation.\\n\\n**Likely Visual Coverage Families:**\\n* Extreme Wide Shots (EWS) to establish the scale of the city vs. characters.\\n* Low Angle shots looking up at Martians.\\n* POV shots from the Narrator's perspective showing the overwhelming crowd..",
   "continuity_to_next_shot": "Arrive at the scene's transition point.",
   "pose_anchor_frame": "Continue the established scene action toward consequence.",
   "pose_end_frame": "Arrive at the scene's transition point.",
   "shot_title": "Closing Reaction 3: Land the scene consequence or transition cleanly.",
   "shot_type": "closing_reaction",
   "camera_description": "Controlled closing frame that lands the consequence of the beat.",
-  "composition": "Closing composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) that emphasizes the consequence of land the scene consequence or transition cleanly.",
+  "composition": "Closing composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) that emphasizes the consequence of land the scene consequence or transition cleanly..",
   "target_seconds": 4.6,
   "characters_in_frame": [
     {
@@ -70,7 +80,7 @@
     "movement patterns of the Martian crowd.",
     "Land the scene consequence or transition cleanly."
   ],
-  "prompt_seed": "Closing Reaction 3: Land the scene consequence or transition cleanly.. closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) that emphasizes the consequence of land the scene consequence or...",
+  "prompt_seed": "Closing Reaction 3: Land the scene consequence or transition cleanly.. closing_reaction. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Controlled closing frame that lands the conseque...",
   "shot_notes": "Land the scene consequence or transition cleanly.",
   "evidence_refs": [
     {
@@ -136,24 +146,24 @@
     "artifact_id": "CH004_SC001_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "db8f647fc0705b414368169bd52622f9badf45ef",
+    "source_fingerprint": "b8d5566e79879d2ccb2c618e384d9581ed6472f3",
     "created_at_utc": "2026-04-22T00:30:50.213617+00:00",
-    "updated_at_utc": "2026-04-22T23:24:02.726358+00:00",
+    "updated_at_utc": "2026-04-23T04:50:32.637966+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH004_SC001",
-        "version": "b361788704ac4e6e60ecfe1bd6e7fd25335ae917"
+        "version": "130162615c9cb657db20f4d9f3d6899adc053209"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH004_SC001",
-        "version": "32dfee34a0c5f10b9a7e7d145f53888b7d5e1a55"
+        "version": "43fefdce88fba8ccb4f04f005706c8f557bd942f"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH004_SC001",
-        "version": "6c0347ab7172c2054b87ab0a46c771ac1df02a8b"
+        "version": "27480ed1a17b7a692481b4382f163fd512ae8c8c"
       }
     ],
     "locked_fields": {},
@@ -183,6 +193,11 @@
         "timestamp_utc": "2026-04-22T23:24:44.870936+00:00",
         "action": "synthesized",
         "source_fingerprint": "db8f647fc0705b414368169bd52622f9badf45ef"
+      },
+      {
+        "timestamp_utc": "2026-04-23T04:52:00.576879+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "b8d5566e79879d2ccb2c618e384d9581ed6472f3"
       }
     ]
   }

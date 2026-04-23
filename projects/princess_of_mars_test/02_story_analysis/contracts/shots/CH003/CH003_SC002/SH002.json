@@ -14,6 +14,16 @@
   "action_during_shot": "Carry the emotional arc through: Curiosity $\\rightarrow$ Horror/Awe.",
   "action_continues_from": "The protagonist explores a nearby glass-roofed enclosure (an incubator) and finds large white eggs alongside grotesque, multi-limbed young Martians that have already hatched.",
   "action_hands_off_to": "Land the emotional shift: Curiosity $\\rightarrow$ Horror/Awe.",
+  "shot_size": "medium",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
+  "zoom_behavior": "none",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
+  "subject_visibility": "on_screen",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
   "subject_blocking": [
     "lighting through the glass roof.",
     "protagonist remains readable within the active playing space."
@@ -24,7 +34,7 @@
     "Subject 1: protagonist remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "protagonist focuses toward the active scene action."
+    "primary scene subject focuses toward the active scene action."
   ],
   "environment_subzone": "primary scene playing area",
   "key_visible_environment_features": [
@@ -68,12 +78,10 @@
   "continuity_constraints": [
     "The movement patterns of the hatchlings",
     "lighting through the glass roof.",
-    "Carry the emotional arc through: Curiosity $\\rightarrow$ Horror/Awe.",
-    "Macro shots of the eggs and the multi-limbed hatchlings.",
-    "POV shots from the protagonist looking through the glass."
+    "Carry the emotional arc through: Curiosity $\\rightarrow$ Horror/Awe."
   ],
-  "prompt_seed": "Action 2: Carry the emotional arc through: Curiosity $\\righta.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in The glass-roofed incubator enclosure with protagonist crossing the frame and maintaining readable movement. Cast: protagonist. Environment: The glass-roofed incubator...",
-  "shot_notes": "Carry the emotional arc through: Curiosity $\\rightarrow$ Horror/Awe. Macro shots of eggs and hatchlings; POV shots looking through glass.",
+  "prompt_seed": "Action 2: Carry the emotional arc through: Curiosity $\\righta.... action. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Active camera with tracking energy and clear spatial orientatio...",
+  "shot_notes": "Carry the emotional arc through: Curiosity $\\rightarrow$ Horror/Awe.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -138,24 +146,24 @@
     "artifact_id": "CH003_SC002_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "ab182e7da480107a96796cd9e4c1aaab0c122d22",
+    "source_fingerprint": "4f8b37c08efc19264fe394d23e305652771b0171",
     "created_at_utc": "2026-04-22T00:20:45.210815+00:00",
-    "updated_at_utc": "2026-04-22T23:14:45.339009+00:00",
+    "updated_at_utc": "2026-04-23T04:34:25.401429+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH003_SC002",
-        "version": "3da55ff9485b4f5b66242296319e5a5146bad90a"
+        "version": "06f3045b870192985735c3abf5ad54a536ec0a49"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH003_SC002",
-        "version": "2d67b077d223d0b73097d89aec3dcf03cd4c8146"
+        "version": "2d28c4c6ad51a19ccf58cc7058fcd8d48a56589b"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH003_SC002",
-        "version": "dee987872cd4131250b053a9ff64c8a6c3f2ffba"
+        "version": "f89ec59d5b7e8af247bc0cc6349ea6d60cdfdd34"
       }
     ],
     "locked_fields": {},
@@ -185,6 +193,11 @@
         "timestamp_utc": "2026-04-22T23:15:25.936543+00:00",
         "action": "synthesized",
         "source_fingerprint": "ab182e7da480107a96796cd9e4c1aaab0c122d22"
+      },
+      {
+        "timestamp_utc": "2026-04-23T04:35:30.812232+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "4f8b37c08efc19264fe394d23e305652771b0171"
       }
     ]
   }

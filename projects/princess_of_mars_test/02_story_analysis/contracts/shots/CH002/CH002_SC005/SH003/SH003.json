@@ -5,36 +5,48 @@
   "shot_order": 3,
   "previous_shot_id": "SH002",
   "next_shot_id": "SH004",
-  "primary_subject": "scene_character",
+  "primary_subject": "The Protagonist",
   "secondary_subjects": [
     "[]"
   ],
-  "start_state": "The protagonist closes his eyes.",
-  "end_state": "The protagonist is in the midst of violent space transport.",
+  "start_state": "He feels an irresistible pull toward it.",
+  "end_state": "The Protagonist is in Deep Space / Void.",
   "action_during_shot": "As he closes his eyes, he is violently transported through space into darkness and cold.",
-  "action_continues_from": "He feels an irresistible pull toward it.",
-  "action_hands_off_to": "Transition to Deep Space / Void.",
+  "action_continues_from": "As he closes his eyes, he is violently transported through space into darkness and cold.",
+  "action_hands_off_to": "The Protagonist in Deep Space / Void.",
+  "shot_size": "medium",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
+  "zoom_behavior": "none",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
+  "subject_visibility": "on_screen",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
   "subject_blocking": [
     "scene_character remains readable within the active playing space."
   ],
   "camera_relative_positions": [
-    "Camera anchors the action, then experiences violent motion/blur during transport."
+    "Camera anchors the action inside the primary scene playing area.",
+    "Background depth should keep the landscape legible as the location anchor.",
+    "Subject 1: scene_character remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "Eyes closed."
+    "primary scene subject focuses toward the active scene action."
   ],
   "environment_subzone": "primary scene playing area",
   "key_visible_environment_features": [
-    "Transition from Arizona mountains to darkness and light streaks of space."
+    "Arizona Mountain Landscape (Night)"
   ],
   "continuity_from_previous_shot": "As he closes his eyes, he is violently transported through space into darkness and cold.",
-  "continuity_to_next_shot": "Deep Space / Void environment.",
-  "pose_anchor_frame": "Protagonist with eyes closed.",
-  "pose_end_frame": "Protagonist being swept through a void of darkness and light streaks.",
+  "continuity_to_next_shot": "The Protagonist in Deep Space / Void.",
+  "pose_anchor_frame": "The Protagonist feeling the pull toward Mars.",
+  "pose_end_frame": "The Protagonist being violently transported through space.",
   "shot_title": "Medium 3: Cosmic Displacement",
   "shot_type": "medium",
-  "camera_description": "Stable medium framing that transitions into violent motion/displacement.",
-  "composition": "Readable medium composition featuring scene_character during displacement.",
+  "camera_description": "Stable medium framing that keeps action and character readable.",
+  "composition": "Readable medium composition in Arizona Mountain Landscape (Night) featuring The Protagonist.",
   "target_seconds": 5.0,
   "characters_in_frame": [
     {
@@ -63,10 +75,10 @@
   ],
   "continuity_constraints": [
     "As he closes his eyes",
-    "He is violently transported through space into darkness and cold"
+    "he is violently transported through space into darkness and cold."
   ],
-  "prompt_seed": "Medium shot, scene_character closing eyes, violent cosmic displacement, motion blur, light streaks, transitioning from night landscape to deep space void.",
-  "shot_notes": "Use abstract/VFX elements like motion blur and light streaks for the transport.",
+  "prompt_seed": "Medium 3: As he closes his eyes, he is violently transported.... medium. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable medium framing that keeps action and character readable.",
+  "shot_notes": "As he closes his eyes, he is violently transported through space into darkness and cold.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -120,24 +132,24 @@
     "artifact_id": "CH002_SC005_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "341d17db824da499f072cbf8b45a177335a4aa59",
+    "source_fingerprint": "a89470fe590cafbee984f0cd6ee1e98e62b5e6f6",
     "created_at_utc": "2026-04-22T00:17:00.336737+00:00",
-    "updated_at_utc": "2026-04-22T23:10:53.874528+00:00",
+    "updated_at_utc": "2026-04-23T04:27:23.345332+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH002_SC005",
-        "version": "8b48be392c30f1620b9b60236ff412df04cc753a"
+        "version": "110d7454817b04b7fc69f622f6416393548b6310"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH002_SC005",
-        "version": "7dca7e4a971c347196d3659b8a579092670dbcc1"
+        "version": "95b46feaf818cbd6d4a1ad53bd1f9ad0dc13c78c"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH002_SC005",
-        "version": "790f20f81b3403a72a9edee0b5fc9fe190ef773d"
+        "version": "8957cc255e66d52ff125f13d2d3070554bd79bfd"
       }
     ],
     "locked_fields": {},
@@ -167,6 +179,11 @@
         "timestamp_utc": "2026-04-22T23:11:31.326063+00:00",
         "action": "synthesized",
         "source_fingerprint": "341d17db824da499f072cbf8b45a177335a4aa59"
+      },
+      {
+        "timestamp_utc": "2026-04-23T04:28:39.278365+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "a89470fe590cafbee984f0cd6ee1e98e62b5e6f6"
       }
     ]
   }
