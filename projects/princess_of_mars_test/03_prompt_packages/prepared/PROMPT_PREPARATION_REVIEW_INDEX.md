@@ -1,16 +1,3 @@
 # Prompt Preparation Review Index
 
-- `apache_warriors` - apache_warriors Character Reference Review (subject_kind=character, status=review, variant=review)
-- `bull_ape_mate` - bull_ape Character Reference Review (subject_kind=character, status=review, variant=review)
-- `green_martians` - green_martians Character Reference Review (subject_kind=character, status=review, variant=review)
-- `martian_warrior_leader` - martian_warrior_leader Character Reference Review (subject_kind=character, status=review, variant=review)
-- `martian_warriors` - martian_warriors Character Reference Review (subject_kind=character, status=review, variant=review)
-- `the_chieftain` - the_chieftain Character Reference Review (subject_kind=character, status=review, variant=review)
-- `ancient_martian_city_plaza` - ancient_martian_city_plaza Environment Reference Review (subject_kind=environment, status=review, variant=review)
-- `ancient_tableland_city` - ancient_tableland_city Environment Reference Review (subject_kind=environment, status=review, variant=review)
-- `arizona_mountain_cave_ledge` - arizona_mountain_cave_ledge Environment Reference Review (subject_kind=environment, status=review, variant=review)
-- `martian_city_outskirts` - martian_city_outskirts Environment Reference Review (subject_kind=environment, status=review, variant=review)
-- `martian_city_plaza` - martian_city_plaza Environment Reference Review (subject_kind=environment, status=review, variant=review)
-- `martian_city_streets` - martian_city_streets Environment Reference Review (subject_kind=environment, status=review, variant=review)
-- `martian_distant_hills` - martian_distant_hills Environment Reference Review (subject_kind=environment, status=review, variant=review)
-- `martian_interior_chamber` - martian_interior_chamber Environment Reference Review (subject_kind=environment, status=review, variant=review)
+- No entries.
