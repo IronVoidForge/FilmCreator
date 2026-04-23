@@ -6,37 +6,37 @@
   "summary": "In 1865, Carter and Powell discover a massive gold-bearing quartz vein in the Arizona hills. They agree on a plan: Powell will head to civilization for machinery while Carter stays to guard the site.",
   "emotional_arc": "Excitement / Triumph $\\rightarrow$ Determination.",
   "production_intent": "Establish the discovery of a massive gold-bearing quartz vein in the Arizona hills to drive the plot forward through high stakes and immediate resource acquisition needs.",
-  "scene_short_description": "Two men discover a massive gold-bearing quartz vein within remote Arizona hills.",
+  "scene_short_description": "Two men discover a massive gold-bearing quartz vein in the remote Arizona hills.",
   "scene_primary_scale_story_point": "The scale of the quartz vein relative to the human prospectors.",
   "scene_required_anchor_catalog": [
-    "Gold-bearing quartz vein",
-    "Prospector gear/tools"
+    "Massive quartz vein",
+    "1865 prospecting gear"
   ],
-  "scene_start_state": "Carter and Powell stand before a massive, shimmering quartz vein in the hills.",
-  "scene_end_state": "The men separate with a strategic plan for machinery and site security.",
-  "dominant_action_line": "Discovery of gold leads to a tactical agreement on division of labor.",
+  "scene_start_state": "Carter and Powell stand before a newly uncovered, shimmering gold-bearing quartz vein.",
+  "scene_end_state": "The men separate with a strategic plan to secure the claim.",
+  "dominant_action_line": "Discovery of wealth leads to a tactical division of labor.",
   "scene_spatial_layout": [
     "Open desert hill terrain",
-    "Proximity to the quartz vein face"
+    "Proximity to the vertical quartz face"
   ],
   "character_spatial_map": [
-    "john_carter near the vein face",
-    "james_k_powell adjacent to carter"
+    "john_carter positioned near the vein base",
+    "james_k_powell standing adjacent to carter"
   ],
   "environment_subzones": [
-    "Quartz vein outcrop",
-    "Remote Arizona hills"
+    "arizona_gold_vein_claim (the vein face)",
+    "hill_plateau (surrounding terrain)"
   ],
   "entry_vectors": [
-    "Hillside trail"
+    "Hillside approach"
   ],
   "exit_vectors": [
     "Path toward civilization (Powell)",
-    "Site perimeter (Carter)"
+    "Guarding position at site (Carter)"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Discovery to shared realization",
-    "BT002 -> BT003: Realization to strategic planning"
+    "BT001 -> BT002: Discovery to realization of value",
+    "BT002 -> BT003: Realization to tactical planning"
   ],
   "characters_required": [
     {
@@ -63,24 +63,24 @@
   "environments_required": [
     {
       "label": "Remote Arizona quartz vein/hills",
-      "canonical_id": null,
-      "display_name": "Remote Arizona quartz vein/hills",
-      "status": "review",
+      "canonical_id": "arizona_gold_vein_claim",
+      "display_name": "arizona_gold_vein_claim",
+      "status": "canonical",
       "entity_kind": "environment",
-      "resolution_score": 8,
-      "source_path": "",
-      "notes": "Low-confidence environment match requires review."
+      "resolution_score": 134,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH001/arizona_gold_vein_claim.md",
+      "notes": "Chapter-local environment alias match for 'Remote Arizona quartz vein/hills' (key_overlap=2, label_overlap=5, context_overlap=4)."
     }
   ],
   "continuity_constraints": [
-    "Appearance and scale of the gold quartz vein",
+    "Appearance of the gold vein within quartz",
     "1865 prospector gear and clothing",
     "Bright desert sun lighting"
   ],
   "visual_coverage_families": [
     "Wide shots of the landscape",
-    "Medium shots of the men inspecting the vein",
-    "Close-ups of the gold/quartz",
+    "Medium shots of men inspecting vein",
+    "Close-ups of gold/quartz",
     "Two-shots for planning dialogue"
   ],
   "beat_list": [
@@ -88,16 +88,16 @@
       "beat_id": "BT001",
       "summary": "Discovery of the vein",
       "purpose": "",
-      "action_start": "men approaching outcrop",
-      "action_end": "men stopping at vein",
+      "action_start": "men walking through hills",
+      "action_end": "men stop at quartz face",
       "active_subjects": [
         "john_carter",
         "james_k_powell"
       ],
       "passive_subjects": [],
-      "spatial_context": "Remote Arizona quartz vein/hills",
-      "blocking_hint": "approaching the rock face",
-      "environment_subzone": "Quartz vein outcrop",
+      "spatial_context": "arizona_gold_vein_claim",
+      "blocking_hint": "approaching the vein from the plateau",
+      "environment_subzone": "hill_plateau",
       "continuity_focus": "1865 clothing/gear",
       "coverage_hint": "wide shot",
       "coverage_priority": "high",
@@ -105,37 +105,37 @@
     },
     {
       "beat_id": "BT002",
-      "summary": "Triumph and inspection",
+      "summary": "Inspection and triumph",
       "purpose": "",
-      "action_start": "men touching/examining quartz",
-      "action_end": "men realizing scale of find",
+      "action_start": "men leaning into quartz",
+      "action_end": "men staring at gold glint",
       "active_subjects": [
         "john_carter",
         "james_k_powell"
       ],
       "passive_subjects": [],
-      "spatial_context": "Quartz vein outcrop",
-      "blocking_hint": "leaning over the gold",
-      "environment_subzone": "Quartz vein outcrop",
-      "continuity_focus": "gold/quartz appearance",
-      "coverage_hint": "close-up",
+      "spatial_context": "arizona_gold_vein_claim",
+      "blocking_hint": "huddled close to the rock face",
+      "environment_subzone": "arizona_gold_vein_claim",
+      "continuity_focus": "appearance of gold vein",
+      "coverage_hint": "close-up/medium",
       "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Strategic planning",
+      "summary": "Tactical planning",
       "purpose": "",
-      "action_start": "men turning to face each other",
-      "action_end": "agreement reached for separation",
+      "action_start": "men standing upright",
+      "action_end": "men separating directions",
       "active_subjects": [
         "john_carter",
         "james_k_powell"
       ],
       "passive_subjects": [],
-      "spatial_context": "Quartz vein outcrop",
-      "blocking_hint": "standing in two-shot",
-      "environment_subzone": "Quartz vein outcrop",
+      "spatial_context": "arizona_gold_vein_claim",
+      "blocking_hint": "two-shot facing each other then breaking away",
+      "environment_subzone": "arizona_gold_vein_claim",
       "continuity_focus": "gear/clothing",
       "coverage_hint": "two-shot",
       "coverage_priority": "medium",
@@ -147,19 +147,22 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish_setting",
-      "planned_shot_moment_summary": "wide view of the Arizona hills and the vein",
+      "planned_shot_moment_summary": "wide view of the hills and the men finding the vein",
       "primary_subject_seed": "landscape",
-      "secondary_subjects_seed": [],
+      "secondary_subjects_seed": [
+        "john_carter",
+        "james_k_powell"
+      ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "Remote Arizona quartz vein/hills",
-      "planned_shot_required_anchor_1": "quartz vein",
-      "planned_shot_scale_proof_detail": "vein size vs hill slope",
-      "start_state_seed": "empty landscape",
-      "end_state_seed": "men entering frame",
-      "action_seed": "establishing shot of terrain",
+      "environment_subzone": "hill_plateau",
+      "planned_shot_required_anchor_1": "arizona_gold_vein_claim",
+      "planned_shot_scale_proof_detail": "men appear small against the hill",
+      "start_state_seed": "wide landscape",
+      "end_state_seed": "men approaching vein",
+      "action_seed": "walking toward discovery",
       "blocking_seed": [
-        "men walking toward outcrop"
+        "approaching from distance"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
@@ -168,29 +171,29 @@
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "hard_directional",
-      "primary_subject_angle": "front"
+      "primary_subject_angle": "rear_three_quarter_left"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "reveal_stakes",
+      "narrative_function": "show_stakes",
       "planned_shot_moment_summary": "close up of gold in quartz",
-      "primary_subject_seed": "gold vein",
+      "primary_subject_seed": "gold_vein",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "Quartz vein outcrop",
-      "planned_shot_required_anchor_1": "quartz vein",
-      "planned_shot_scale_proof_detail": "vein texture and gold flecks",
+      "environment_subzone": "arizona_gold_vein_claim",
+      "planned_shot_required_anchor_1": "arizona_gold_vein_claim",
+      "planned_shot_scale_proof_detail": "texture of quartz and glint of gold",
       "start_state_seed": "blurred quartz",
       "end_state_seed": "sharp gold detail",
-      "action_seed": "revealing the treasure",
+      "action_seed": "glinting in sun",
       "blocking_seed": [
-        "men leaning in"
+        "static"
       ],
-      "shot_size": "close_up",
+      "shot_size": "extreme_close_up",
       "camera_angle": "eye_level",
-      "lens_family": "normal",
+      "lens_family": "telephoto",
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
@@ -200,36 +203,34 @@
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "character_intent",
-      "planned_shot_moment_summary": "two shot of men planning",
+      "narrative_function": "dialogue_resolution",
+      "planned_shot_moment_summary": "two shot of men agreeing on the plan",
       "primary_subject_seed": "john_carter",
       "secondary_subjects_seed": [
         "james_k_powell"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "Quartz vein outcrop",
-      "planned_shot_required_anchor_1": "prospector gear",
-      "planned_shot_scale_proof_detail": "men height vs vein",
-      "start_state_seed": "men looking at gold",
-      "end_state_seed": "men looking at each other",
-      "action_seed": "discussing the plan",
+      "environment_subzone": "arizona_gold_vein_claim",
+      "planned_shot_required_anchor_1": "arizona_gold_vein_claim",
+      "planned_shot_scale_proof_detail": "men standing at the base of the vein",
+      "start_state_seed": "men facing each other",
+      "end_state_seed": "men turning to depart",
+      "action_seed": "discussing machinery and guarding",
       "blocking_seed": [
-        "standing face to face"
+        "standing face-to-face"
       ],
       "shot_size": "medium",
       "camera_angle": "eye_level",
-      "lens_family": "portrait",
+      "lens_family": "normal",
       "camera_motion": "locked_off",
-      "zoom_behavior": "subtle_in",
+      "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "hard_directional",
       "primary_subject_angle": "front_three_quarter_left"
     }
   ],
-  "unresolved_questions": [
-    "Resolve Remote Arizona quartz vein/hills -> Remote Arizona quartz vein/hills"
-  ],
+  "unresolved_questions": [],
   "evidence_refs": [
     {
       "source": "scene_breakdown",
@@ -294,14 +295,14 @@
     "[CH010] CHAPTER X (book index hit)",
     "Character john_carter: john_carter"
   ],
-  "storyboard_markdown": "# Scene Contract: CH001_SC002\n\n## Production Intent\nEstablish the discovery of a massive gold-bearing quartz vein in the Arizona hills to drive the plot forward through high stakes and immediate resource acquisition needs.\n\n## Required Cast\n- john_carter\n- james_k_powell\n\n## Required Environments\n- Remote Arizona quartz vein/hills\n\n## Continuity Constraints\n- Appearance and scale of the gold quartz vein\n- 1865 prospector gear and clothing\n- Bright desert sun lighting\n\n## Beat List\n- BT001: Discovery of the vein\n- BT002: Triumph and inspection\n- BT003: Strategic planning",
+  "storyboard_markdown": "# Scene Contract: CH001_SC002\n\n## Production Intent\nEstablish the discovery of a massive gold-bearing quartz vein in the remote Arizona hills to drive the plot forward through high stakes and immediate resource acquisition needs.\n\n## Required Cast\n- john_carter\n- james_k_powell\n\n## Required Environments\n- arizona_gold_vein_claim\n\n## Continuity Constraints\n- Appearance of the gold vein within quartz\n- 1865 prospector gear and clothing\n- Bright desert sun lighting\n\n## Beat List\n- BT001: Discovery of the vein\n- BT002: Inspection and triumph\n- BT003: Tactical planning",
   "metadata": {
     "artifact_id": "CH001_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "064ba534b15cffe28a0802d372af2640d5697a07",
-    "created_at_utc": "2026-04-23T19:28:15.381887+00:00",
-    "updated_at_utc": "2026-04-23T19:28:15.381887+00:00",
+    "source_fingerprint": "6240f7288efeb0ae097bb1a95a1d1fd4d68061da",
+    "created_at_utc": "2026-04-23T20:35:20.223657+00:00",
+    "updated_at_utc": "2026-04-23T20:35:20.223657+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -316,16 +317,16 @@
       {
         "dependency_type": "environment_resolutions",
         "dependency_id": "CH001_SC002",
-        "version": "7e8f4303ea40779be86242f60f8994b8f6f3c443"
+        "version": "3181a782aa2a777383c3b9b5351b0fb6eae0f3f8"
       }
     ],
     "locked_fields": {},
     "manual_overrides": {},
     "revision_history": [
       {
-        "timestamp_utc": "2026-04-23T19:28:55.279006+00:00",
+        "timestamp_utc": "2026-04-23T20:36:02.879939+00:00",
         "action": "synthesized",
-        "source_fingerprint": "064ba534b15cffe28a0802d372af2640d5697a07"
+        "source_fingerprint": "6240f7288efeb0ae097bb1a95a1d1fd4d68061da"
       }
     ]
   }
