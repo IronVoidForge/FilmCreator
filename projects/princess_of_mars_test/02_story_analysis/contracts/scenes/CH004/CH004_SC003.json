@@ -1,0 +1,376 @@
+{
+  "scene_id": "CH004_SC003",
+  "chapter_id": "CH004",
+  "scene_title": "SC003",
+  "purpose": "Establish the Narrator's agency and his ability to command respect through violence/physicality.",
+  "summary": "After being mocked, the Narrator punches a Martian warrior. This act of defiance earns him unexpected respect. He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
+  "emotional_arc": "Humiliation $\\rightarrow$ Defiance $\\rightarrow$ Triumph/Respect.",
+  "production_intent": "Demonstrate the Narrator's physical agency and capacity for violence to shift his social standing from mockery to respect. The sequence must emphasize the impact of a single punch and the impressive scale of a long-distance jump within an oversized architectural setting.",
+  "scene_short_description": "A man punches a warrior in a massive marble hall then performs a long distance leap.",
+  "scene_primary_scale_story_point": "The architecture is far too large for current inhabitants, emphasizing the scale of the jump.",
+  "scene_required_anchor_catalog": [
+    "grand_audience_chamber floor",
+    "marble/gold architectural pillars"
+  ],
+  "scene_start_state": "The Narrator stands surrounded by a mocking Martian Crowd in the plaza area.",
+  "scene_end_state": "The Narrator lands a long jump, leaving the assembly in awe.",
+  "dominant_action_line": "Defiance through violence followed by demonstration of physical prowess via jumping.",
+  "scene_spatial_layout": [
+    "Open plaza within the grand audience chamber",
+    "Large distances between the center and the crowd"
+  ],
+  "character_spatial_map": [
+    "The Narrator at center stage",
+    "martian_warrior in immediate proximity to The Narrator",
+    "chieftain and tars_tarkas observing from elevated or peripheral positions",
+    "Martian Crowd encircling the action area"
+  ],
+  "environment_subzones": [
+    "grand_audience_chamber plaza",
+    "grand_audience_chamber assembly perimeter"
+  ],
+  "entry_vectors": [
+    "martian_warrior enters center plaza"
+  ],
+  "exit_vectors": [
+    "The Narrator exits jump trajectory"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Physical strike and impact",
+    "BT002 -> BT003: Command issued and physical execution of jump"
+  ],
+  "characters_required": [
+    {
+      "label": "The Narrator",
+      "canonical_id": null,
+      "display_name": "The Narrator",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 6,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "Tars Tarkas",
+      "canonical_id": "tars_tarkas",
+      "display_name": "tars_tarkas",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
+      "notes": "Direct registry match for 'tars_tarkas'."
+    },
+    {
+      "label": "The Chieftain",
+      "canonical_id": "chieftain",
+      "display_name": "the_chieftain",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/chieftain.md",
+      "notes": "Direct registry match for 'the_chieftain'."
+    },
+    {
+      "label": "Martian Warrior",
+      "canonical_id": "martian_warrior",
+      "display_name": "martian_warrior",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/martian_warrior.md",
+      "notes": "Direct registry match for 'martian_warrior'."
+    },
+    {
+      "label": "Martian Crowd",
+      "canonical_id": null,
+      "display_name": "Martian Crowd",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 6,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Grand Audience Chamber / Plaza area",
+      "canonical_id": "grand_audience_chamber",
+      "display_name": "grand_audience_chamber",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH004/grand_audience_chamber.md",
+      "notes": "Direct registry match for 'grand_audience_chamber'."
+    }
+  ],
+  "continuity_constraints": [
+    "Physical contact precision during the punch sequence",
+    "Trajectory and landing physics of the sak jump"
+  ],
+  "visual_coverage_families": [
+    "Tight Close-ups (CU) on punch impact",
+    "Wide shots for sak jump scale",
+    "Reaction shots of Martian Crowd"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The Narrator is mocked and responds with a punch",
+      "purpose": "",
+      "action_start": "Mockery from martian_warrior",
+      "action_end": "Warrior hit and reeling",
+      "active_subjects": [
+        "The Narrator",
+        "martian_warrior"
+      ],
+      "passive_subjects": [
+        "Martian Crowd",
+        "chieftain",
+        "tars_tarkas"
+      ],
+      "spatial_context": "Center of the grand audience chamber plaza",
+      "blocking_hint": "Narrator and warrior in close proximity center stage",
+      "environment_subzone": "grand_audience_chamber plaza",
+      "continuity_focus": "Physical contact/impact timing",
+      "coverage_hint": "Tight CU on impact",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The assembly reacts to the violence",
+      "purpose": "",
+      "action_start": "Warrior falls",
+      "action_end": "Silence/Shock in crowd",
+      "active_subjects": [
+        "Martian Crowd"
+      ],
+      "passive_subjects": [
+        "The Narrator",
+        "martian_warrior"
+      ],
+      "spatial_context": "Perimeter of the plaza",
+      "blocking_hint": "Crowd faces center",
+      "environment_subzone": "grand_audience_chamber plaza",
+      "continuity_focus": "Reaction timing",
+      "coverage_hint": "Reaction shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Narrator performs the sak jump",
+      "purpose": "",
+      "action_start": "Command to jump is given",
+      "action_end": "Narrator lands impressive distance",
+      "active_subjects": [
+        "The Narrator"
+      ],
+      "passive_subjects": [
+        "Martian Crowd",
+        "chieftain"
+      ],
+      "spatial_context": "Across the grand audience chamber plaza",
+      "blocking_hint": "Long trajectory across open floor",
+      "environment_subzone": "grand_audience_chamber plaza",
+      "continuity_focus": "Jump physics and landing point",
+      "coverage_hint": "Wide shot for scale",
+      "coverage_priority": "high",
+      "handoff_to_next": "END"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish conflict",
+      "planned_shot_moment_summary": "The Narrator is mocked by the warrior",
+      "primary_subject_seed": "The Narrator",
+      "secondary_subjects_seed": [
+        "martian_warrior",
+        "Martian Crowd"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "grand_audience_chamber plaza",
+      "planned_shot_required_anchor_1": "grand_audience_chamber floor",
+      "planned_shot_scale_proof_detail": "crowd size vs narrator",
+      "start_state_seed": "Narrator looking humiliated",
+      "end_state_seed": "Narrator squaring up",
+      "action_seed": "tension building",
+      "blocking_seed": [
+        "Narrator center",
+        "warrior looming"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT001",
+      "narrative_function": "show violence",
+      "planned_shot_moment_summary": "The punch connects with the warrior",
+      "primary_subject_seed": "The Narrator",
+      "secondary_subjects_seed": [
+        "martian_warrior"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "grand_audience_chamber plaza",
+      "planned_shot_required_anchor_1": "grand_audience_chamber floor",
+      "planned_shot_scale_proof_detail": "impact force",
+      "start_state_seed": "Punch thrown",
+      "end_state_seed": "Warrior reeling",
+      "action_seed": "punch impact",
+      "blocking_seed": [
+        "Close contact"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "show scale of jump",
+      "planned_shot_moment_summary": "The Narrator performs the sak jump",
+      "primary_subject_seed": "The Narrator",
+      "secondary_subjects_seed": [
+        "Martian Crowd"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "grand_audience_chamber plaza",
+      "planned_shot_required_anchor_1": "grand_audience_chamber floor",
+      "planned_shot_scale_proof_detail": "distance traveled across marble floor",
+      "start_state_seed": "Narrator crouched for jump",
+      "end_state_seed": "Narrator landing far from start",
+      "action_seed": "long distance leap",
+      "blocking_seed": [
+        "Wide movement across plaza"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve The Narrator -> The Narrator",
+    "Resolve Martian Crowd -> Martian Crowd"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH004",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH016",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH016_chapter_xvi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH020",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH020_chapter_xx.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH004",
+      "canonical_id": "tars_tarkas"
+    }
+  ],
+  "evidence_summary": [
+    "[CH004_SC003] Purpose: Establish the Narrator's agency and his ability to command respect through violence/physicality.",
+    "[CH004_SC003] Summary: After being mocked, the Narrator punches a Martian warrior. This act of defiance earns him unexpected respect. He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
+    "[CH004_SC003] Emotional arc: Humiliation $\\rightarrow$ Defiance $\\rightarrow$ Triumph/Respect.",
+    "[CH004_SC003] Coverage: * Tight Close-ups (CU) on the punch and the impact. * Wide shots to capture the scale of the \"sak\" jump. * Reaction shots from the crowd (shifting from mockery to applause).",
+    "[CH004_SC003] Continuity: The physics/trajectory of the jump; the physical contact during the fight sequence.",
+    "[CH004] Chapter summary: **Setting:** An enormous, ancient city situated on a low table land near the edge of a dried-up Martian sea. The city features magnificent marble and gold architecture that appears far too large for its current inhabi...",
+    "[CH016] CHAPTER XVI (book index hit)",
+    "[CH010] CHAPTER X (book index hit)",
+    "[CH020] CHAPTER XX (book index hit)",
+    "Character tars_tarkas: tars_tarkas"
+  ],
+  "storyboard_markdown": "# Scene Contract: CH004_SC003\n\n## Production Intent\nDemonstrate the Narrator's physical agency and capacity for violence to shift his social standing from mockery to respect. The sequence must emphasize the impact of a single punch and the impressive scale of a long-distance jump within an oversized architectural setting.\n\n## Required Cast\n- The Narrator\n- tars_tarkas\n- chieftain\n- martian_warrior\n- Martian Crowd\n\n## Required Environments\n- grand_audience_chamber (Plaza area)\n\n## Continuity Constraints\n- Physical contact precision during the punch sequence\n- Trajectory and landing physics of the sak jump\n\n## Beat List\n- BT001: The Narrator is mocked and responds with a punch.\n- BT002: The assembly reacts to the violence.\n- BT003: The Narrator performs the sak jump.",
+  "metadata": {
+    "artifact_id": "CH004_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "e6c673d89bd2b6e8f2f13236623a1d4d8cd9d18f",
+    "created_at_utc": "2026-04-23T20:46:33.909323+00:00",
+    "updated_at_utc": "2026-04-23T20:46:33.909323+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH004_SC003",
+        "version": "ebae575c9438334cf6adcfebc6608afe3a4d174b"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH004_SC003",
+        "version": "e2c5710b1ad0d7e06e1f465cf46f457ebcaa7477"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH004_SC003",
+        "version": "bd86d9999b44f7bccfb01b97bccc38838a8715fb"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-23T20:47:17.700155+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "e6c673d89bd2b6e8f2f13236623a1d4d8cd9d18f"
+      }
+    ]
+  }
+}

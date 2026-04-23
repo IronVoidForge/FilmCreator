@@ -1,0 +1,345 @@
+{
+  "scene_id": "CH004_SC001",
+  "chapter_id": "CH004",
+  "scene_title": "SC001",
+  "purpose": "Establish the scale of the setting and the protagonist's status as a captive within an alien civilization.",
+  "summary": "The Narrator and Tars Tarkas arrive at a massive, ancient city built by a forgotten race. They enter a central plaza filled with hundreds of Martians, highlighting the narrator's smallness compared to the environment and its inhabitants.",
+  "emotional_arc": "Awe/Trepidation $\\rightarrow$ Alienation.",
+  "production_intent": "Establish the overwhelming scale of an ancient Martian city to visually communicate the protagonist's vulnerability and captive status. The environment must feel disproportionately large compared to the human character, utilizing marble and gold architecture to convey a sense of lost grandeur.",
+  "scene_short_description": "A small figure and a large companion enter a massive marble and gold plaza filled with hundreds of Martians.",
+  "scene_primary_scale_story_point": "The architecture is far too large for current inhabitants, dwarfing the human protagonist.",
+  "scene_required_anchor_catalog": [
+    "ancient_martian_city_plaza marble floor",
+    "gold architectural pillars"
+  ],
+  "scene_start_state": "The Narrator and tars_tarkas stand at the threshold of the massive plaza.",
+  "scene_end_state": "The Narrator is visually swallowed by the scale of the crowd and architecture.",
+  "dominant_action_line": "Moving from the city edge into the dense Martian crowd within the central plaza.",
+  "scene_spatial_layout": [
+    "Massive open plaza surrounded by oversized marble/gold structures",
+    "High density of Martians in the central walking paths"
+  ],
+  "character_spatial_map": [
+    "The Narrator: Small, central or foregrounded to show scale",
+    "tars_tarkas: Moving alongside The Narrator",
+    "Various Martians (crowd): Surrounding and towering over the protagonists"
+  ],
+  "environment_subzones": [
+    "plaza_threshold",
+    "central_plaza_floor",
+    "crowd_density_zone"
+  ],
+  "entry_vectors": [
+    "edge_of_city_entrance"
+  ],
+  "exit_vectors": [
+    "deep_into_plaza_crowd"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Arrival at the plaza threshold",
+    "BT002 -> BT003: Entry into the dense Martian crowd"
+  ],
+  "characters_required": [
+    {
+      "label": "The Narrator",
+      "canonical_id": null,
+      "display_name": "The Narrator",
+      "status": "unresolved",
+      "entity_kind": "",
+      "resolution_score": null,
+      "source_path": "",
+      "notes": "No character candidate found."
+    },
+    {
+      "label": "Tars Tarkas",
+      "canonical_id": "tars_tarkas",
+      "display_name": "tars_tarkas",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
+      "notes": "Direct registry match for 'tars_tarkas'."
+    },
+    {
+      "label": "Various Martians (crowd)",
+      "canonical_id": null,
+      "display_name": "Various Martians (crowd)",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 10,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Central Plaza of the Ancient City (Marble/Gold architecture, massive scale)",
+      "canonical_id": "ancient_martian_city_plaza",
+      "display_name": "ancient_martian_city_plaza",
+      "status": "canonical",
+      "entity_kind": "plaza",
+      "resolution_score": 186,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH004/ancient_martian_city_plaza.md",
+      "notes": "Chapter-local environment alias match for 'Central Plaza of the Ancient City (Marble/Gold architecture, massive scale)' (key_overlap=3, label_overlap=9, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Architecture and prop scale relative to The Narrator",
+    "Movement patterns and density of Various Martians (crowd)"
+  ],
+  "visual_coverage_families": [
+    "Extreme Wide Shots (EWS) for city vs. characters scale",
+    "Low Angle shots looking up at Martians",
+    "POV shots from Narrator perspective of the crowd"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Arrival at the massive city edge",
+      "purpose": "",
+      "action_start": "Characters approach threshold",
+      "action_end": "Characters stop to observe",
+      "active_subjects": [
+        "The Narrator",
+        "tars_tarkas"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "edge of ancient_martian_city_plaza",
+      "blocking_hint": "Standing at the perimeter looking in",
+      "environment_subzone": "plaza_threshold",
+      "continuity_focus": "Scale of architecture vs characters",
+      "coverage_hint": "EWS",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Entering the central plaza",
+      "purpose": "",
+      "action_start": "Walking into open space",
+      "action_end": "Entering the crowd zone",
+      "active_subjects": [
+        "The Narrator",
+        "tars_tarkas"
+      ],
+      "passive_subjects": [
+        "Various Martians (crowd)"
+      ],
+      "spatial_context": "central_plaza_floor",
+      "blocking_hint": "Moving from edge toward center",
+      "environment_subzone": "central_plaza_floor",
+      "continuity_focus": "Movement patterns of Martian crowd",
+      "coverage_hint": "Low angle shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Overwhelmed by the crowd",
+      "purpose": "",
+      "action_start": "Walking into dense Martians",
+      "action_end": "Standing amidst hundreds of Martians",
+      "active_subjects": [
+        "The Narrator"
+      ],
+      "passive_subjects": [
+        "Various Martians (crowd)"
+      ],
+      "spatial_context": "crowd_density_zone",
+      "blocking_hint": "Surrounded by moving bodies",
+      "environment_subzone": "crowd_density_zone",
+      "continuity_focus": "Crowd density and movement",
+      "coverage_hint": "POV shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "none"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale",
+      "planned_shot_moment_summary": "The Narrator and tars_tarkas view the massive city from the edge",
+      "primary_subject_seed": "The Narrator",
+      "secondary_subjects_seed": [
+        "tars_tarkas"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "plaza_threshold",
+      "planned_shot_required_anchor_1": "ancient_martian_city_plaza marble floor",
+      "planned_shot_scale_proof_detail": "Characters appear tiny against gold architecture",
+      "start_state_seed": "Wide view of city edge",
+      "end_state_seed": "Static wide shot",
+      "action_seed": "Standing still observing",
+      "blocking_seed": [
+        "Edge of plaza looking inward"
+      ],
+      "shot_size": "extreme_wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "back"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show scale vs inhabitants",
+      "planned_shot_moment_summary": "Low angle view of Martians towering over the protagonists",
+      "primary_subject_seed": "Various Martians (crowd)",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "central_plaza_floor",
+      "planned_shot_required_anchor_1": "gold architectural pillars",
+      "planned_shot_scale_proof_detail": "Martian height/presence relative to Narrator",
+      "start_state_seed": "Walking into plaza",
+      "end_state_seed": "Moving through crowd",
+      "action_seed": "Walking forward",
+      "blocking_seed": [
+        "Moving toward center"
+      ],
+      "shot_size": "full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "convey alienation",
+      "planned_shot_moment_summary": "POV of the overwhelming crowd from Narrator's eye level",
+      "primary_subject_seed": "The Narrator",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "internal_monologue",
+      "environment_subzone": "crowd_density_zone",
+      "planned_shot_required_anchor_1": "ancient_martian_city_plaza marble floor",
+      "planned_shot_scale_proof_detail": "Crowd density blocking horizon",
+      "start_state_seed": "Looking up at Martians",
+      "end_state_seed": "Scanning the crowd",
+      "action_seed": "Turning head",
+      "blocking_seed": [
+        "Stationary in crowd"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve The Narrator -> The Narrator",
+    "Resolve Various Martians (crowd) -> Various Martians (crowd)"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH004",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH016",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH016_chapter_xvi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH004",
+      "canonical_id": "tars_tarkas"
+    }
+  ],
+  "evidence_summary": [
+    "[CH004_SC001] Purpose: Establish the scale of the setting and the protagonist's status as a captive within an alien civilization.",
+    "[CH004_SC001] Summary: The Narrator and Tars Tarkas arrive at a massive, ancient city built by a forgotten race. They enter a central plaza filled with hundreds of Martians, highlighting the narrator's smallness compared to the environment and its inhabitants.",
+    "[CH004_SC001] Emotional arc: Awe/Trepidation $\\rightarrow$ Alienation.",
+    "[CH004_SC001] Coverage: * Extreme Wide Shots (EWS) to establish the scale of the city vs. characters. * Low Angle shots looking up at Martians. * POV shots from the Narrator's perspective showing the overwhelming crowd.",
+    "[CH004_SC001] Continuity: Scale of props/architecture relative to the Narrator; movement patterns of the Martian crowd.",
+    "[CH004] Chapter summary: **Setting:** An enormous, ancient city situated on a low table land near the edge of a dried-up Martian sea. The city features magnificent marble and gold architecture that appears far too large for its current inhabi...",
+    "[CH011] CHAPTER XI (book index hit)",
+    "[CH012] CHAPTER XII (book index hit)",
+    "[CH016] CHAPTER XVI (book index hit)",
+    "Character tars_tarkas: tars_tarkas"
+  ],
+  "storyboard_markdown": "# Scene Contract: CH004_SC001\n\n## Production Intent\nEstablish the overwhelming scale of an ancient Martian city to visually communicate the protagonist's vulnerability and captive status. The environment must feel disproportionately large compared to the human character, utilizing marble and gold architecture to convey a sense of lost grandeur.\n\n## Required Cast\n- The Narrator\n- tars_tarkas\n- Various Martians (crowd)\n\n## Required Environments\n- ancient_martian_city_plaza (Marble/Gold architecture, massive scale)\n\n## Continuity Constraints\n- Scale of props and architecture relative to The Narrator\n- Movement patterns and density of the Martian crowd\n\n## Beat List\n- BT001: Arrival at the massive city edge\n- BT002: Entering the central plaza\n- BT003: Overwhelmed by the crowd",
+  "metadata": {
+    "artifact_id": "CH004_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "a83b11654d7e1cb0459ff1532d986656b70eaf98",
+    "created_at_utc": "2026-04-23T20:45:06.862175+00:00",
+    "updated_at_utc": "2026-04-23T20:45:06.862675+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH004_SC001",
+        "version": "178ab5281e533ed3493aae337c140c2de5489529"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH004_SC001",
+        "version": "1303989c411a5b1adac158c3d078a571411de998"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH004_SC001",
+        "version": "47cd7a9772a8e556adbaab6cc7fb76b58ea875c5"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-23T20:45:50.824817+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "a83b11654d7e1cb0459ff1532d986656b70eaf98"
+      }
+    ]
+  }
+}

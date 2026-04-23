@@ -1,0 +1,324 @@
+{
+  "scene_id": "CH002_SC005",
+  "chapter_id": "CH002",
+  "scene_title": "SC005",
+  "purpose": "To trigger the protagonist's cosmic displacement and end the chapter on a high-concept cliffhanger.",
+  "summary": "While observing the landscape, the protagonist becomes mesmerized by Mars (the red star). He feels an irresistible pull toward it. As he closes his eyes, he is violently transported through space into darkness and cold.",
+  "emotional_arc": "From mesmerized trance to sudden, overwhelming cosmic displacement.",
+  "production_intent": "Establish a high-concept transition from a grounded, nocturnal mountain landscape to an abstract cosmic void. The sequence must use the visual anchor of Mars to bridge the physical world and the metaphysical displacement of the protagonist.",
+  "scene_short_description": "A man gazes at a red star before being violently pulled into the dark void.",
+  "scene_primary_scale_story_point": "Transition from terrestrial mountain scale to infinite cosmic scale.",
+  "scene_required_anchor_catalog": [
+    "Mars (the red star)",
+    "protagonist eyes"
+  ],
+  "scene_start_state": "protagonist observing the rocky_gorge_canyon under moonlight.",
+  "scene_end_state": "total darkness and cold within deep_space_void.",
+  "dominant_action_line": "Protagonist mesmerization leads to violent cosmic transport.",
+  "scene_spatial_layout": [
+    "Grounded mountain terrain with high verticality",
+    "Transition into non-Euclidean abstract space"
+  ],
+  "character_spatial_map": [
+    "protagonist positioned looking upward toward the sky"
+  ],
+  "environment_subzones": [
+    "primary scene playing area"
+  ],
+  "entry_vectors": [
+    "moonlight/starlight from above"
+  ],
+  "exit_vectors": [
+    "violent pull toward Mars"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Visual fixation on the red star",
+    "BT002 -> BT003: Closing eyes and sudden kinetic displacement"
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Arizona Mountain Landscape (Night)",
+      "canonical_id": "rocky_gorge_canyon",
+      "display_name": "rocky_gorge_canyon",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 44,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/rocky_gorge_canyon.md",
+      "notes": "Chapter-local environment alias match for 'Arizona Mountain Landscape (Night)' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    {
+      "label": "Deep Space / Void",
+      "canonical_id": "deep_space_void",
+      "display_name": "deep_space_void",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/deep_space_void.md",
+      "notes": "Direct registry match for 'deep_space_void'."
+    }
+  ],
+  "continuity_constraints": [
+    "Consistent brightness and visual appearance of Mars in sky",
+    "Seamless transition from rocky_gorge_canyon to deep_space_void"
+  ],
+  "visual_coverage_families": [
+    "Extreme Wide shots of landscape and Mars",
+    "Close-ups of eyes reflecting the red star",
+    "Abstract VFX sequences with motion blur and light streaks"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Observation of landscape and Mars",
+      "purpose": "",
+      "action_start": "protagonist looking at canyon",
+      "action_end": "eyes fixated on red star",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [
+        "Mars"
+      ],
+      "spatial_context": "rocky_gorge_canyon",
+      "blocking_hint": "standing facing the gorge",
+      "environment_subzone": "rocky_gorge_canyon",
+      "continuity_focus": "Mars brightness/position",
+      "coverage_hint": "extreme wide",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Mesmerized trance",
+      "purpose": "",
+      "action_start": "eyes reflecting star",
+      "action_end": "eyes closing",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "rocky_gorge_canyon",
+      "blocking_hint": "head tilted up",
+      "environment_subzone": "rocky_gorge_canyon",
+      "continuity_focus": "eye reflection detail",
+      "coverage_hint": "close-up",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Cosmic displacement",
+      "purpose": "",
+      "action_start": "eyes closed",
+      "action_end": "total darkness/cold",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "deep_space_void",
+      "blocking_hint": "violent kinetic motion through void",
+      "environment_subzone": "deep_space_void",
+      "continuity_focus": "transition from canyon to void",
+      "coverage_hint": "VFX heavy sequences",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish_setting",
+      "planned_shot_moment_summary": "protagonist looking at the landscape and Mars",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "Mars"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "rocky_gorge_canyon",
+      "planned_shot_required_anchor_1": "Mars",
+      "planned_shot_scale_proof_detail": "Mars relative to mountain peaks",
+      "start_state_seed": "wide view of canyon",
+      "end_state_seed": "protagonist silhouette against sky",
+      "action_seed": "observing",
+      "blocking_seed": [
+        "standing still"
+      ],
+      "shot_size": "extreme_wide",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "rear_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "emotional_connection",
+      "planned_shot_moment_summary": "extreme close up of eyes reflecting Mars",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "rocky_gorge_canyon",
+      "planned_shot_required_anchor_1": "protagonist eyes",
+      "planned_shot_scale_proof_detail": "reflection detail in pupil",
+      "start_state_seed": "eyes open",
+      "end_state_seed": "eyes closing",
+      "action_seed": "mesmerized trance",
+      "blocking_seed": [
+        "stationary head"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "climax_displacement",
+      "planned_shot_moment_summary": "violent transport through space",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "deep_space_void",
+      "planned_shot_required_anchor_1": "light streaks",
+      "planned_shot_scale_proof_detail": "motion blur vs darkness",
+      "start_state_seed": "eyes closed",
+      "end_state_seed": "total darkness",
+      "action_seed": "violent movement",
+      "blocking_seed": [
+        "uncontrolled kinetic motion"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "dutch",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "strong_in",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC005"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH015",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH015_chapter_xv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH005",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH005_chapter_v.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH012_chapter_xii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH002",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH002_SC005] Purpose: To trigger the protagonist's cosmic displacement and end the chapter on a high-concept cliffhanger.",
+    "[CH002_SC005] Summary: While observing the landscape, the protagonist becomes mesmerized by Mars (the red star). He feels an irresistible pull toward it. As he closes his eyes, he is violently transported through space into darkness and cold.",
+    "[CH002_SC005] Emotional arc: From mesmerized trance to sudden, overwhelming cosmic displacement.",
+    "[CH002_SC005] Coverage: Extreme Wide shots of the landscape and the red star Close-ups of the protagonist's eyes reflecting the star Abstract/VFX heavy sequences for the space transport (Motion blur, light streaks)",
+    "[CH002_SC005] Continuity: The visual appearance and brightness of Mars in the sky. The transition from the grounded Arizona environment to the abstract space sequence.",
+    "[CH002] Chapter summary: **Setting:** A cave in the Arizona mountains; a rocky gorge and canyon under moonlight; the vastness of space. **Characters:** - **The Protagonist:** A man who experiences physical paralysis due to a mysterious gas, u...",
+    "[CH015] CHAPTER XV (book index hit)",
+    "[CH005] CHAPTER V (book index hit)",
+    "[CH012] CHAPTER XII (book index hit)",
+    "Character protagonist: protagonist"
+  ],
+  "storyboard_markdown": "# Scene Contract: CH002_SC005\n\n## Production Intent\nEstablish a high-concept transition from a grounded, nocturnal mountain landscape to an abstract cosmic void. The sequence must use the visual anchor of Mars to bridge the physical world and the metaphysical displacement of the protagonist.\n\n## Required Cast\n- protagonist\n\n## Required Environments\n- rocky_gorge_canyon\n- deep_space_void\n\n## Continuity Constraints\n- Consistent brightness and visual appearance of Mars in sky\n- Seamless transition from rocky_gorge_canyon to deep_space_void\n\n## Beat List\n- BT001: Observation of landscape and Mars\n- BT002: Mesmerized trance\n- BT003: Cosmic displacement",
+  "metadata": {
+    "artifact_id": "CH002_SC005_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "961038df9831c76cc5b27c0416af90a998660c1f",
+    "created_at_utc": "2026-04-23T20:40:53.109177+00:00",
+    "updated_at_utc": "2026-04-23T20:40:53.109177+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH002_SC005",
+        "version": "dd39a149344c3551e0a955a2d2e9387f3a233703"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH002_SC005",
+        "version": "da2c6e998d6cc1ad842bf411f90417eae0043732"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH002_SC005",
+        "version": "d266c9ef8b1908a912f5f4b8ca4592336e57aadd"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-23T20:41:32.839712+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "961038df9831c76cc5b27c0416af90a998660c1f"
+      }
+    ]
+  }
+}
