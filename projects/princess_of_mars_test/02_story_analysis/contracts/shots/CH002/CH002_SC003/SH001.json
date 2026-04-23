@@ -9,11 +9,21 @@
   "secondary_subjects": [
     "[]"
   ],
-  "start_state": "The protagonist is paralyzed, undergoing intense mental struggle.",
-  "end_state": "The protagonist stands upright as his new, naked self.",
-  "action_during_shot": "The protagonist uses intense mental willpower to break the paralysis and begins to stand.",
+  "start_state": "After hours of isolation, the protagonist uses intense mental willpower to break the paralysis.",
+  "end_state": "Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, clothed body remains lying lifeless on the cave floor.",
+  "action_during_shot": "The protagonist uses intense mental willpower to break the paralysis.",
   "action_continues_from": "After hours of isolation, the protagonist uses intense mental willpower to break the paralysis.",
   "action_hands_off_to": "Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, clothed body remains lying lifeless on the cave floor.",
+  "shot_size": "medium",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
+  "zoom_behavior": "none",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
+  "subject_visibility": "on_screen",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
   "subject_blocking": [
     "scene_character remains readable within the active playing space."
   ],
@@ -22,20 +32,20 @@
     "Background depth keeps the cave environment legible as the location anchor."
   ],
   "gaze_directions": [
-    "scene_character focuses toward the active scene action."
+    "primary scene subject focuses toward the active scene action."
   ],
   "environment_subzone": "primary scene playing area",
   "key_visible_environment_features": [
     "primary scene playing area"
   ],
-  "continuity_from_previous_shot": "After hours of isolation, the protagonist uses intense mental willpower to break the paralysis.",
+  "continuity_from_previous_shot": "Scene start: Protagonist in isolation attempting to break paralysis.",
   "continuity_to_next_shot": "Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, clothed body remains lying lifeless on the cave floor.",
-  "pose_anchor_frame": "Protagonist in a state of paralyzed struggle.",
-  "pose_end_frame": "Protagonist standing upright as a naked figure.",
-  "shot_title": "Medium 1: Physical Struggle",
+  "pose_anchor_frame": "Protagonist struggling against paralysis with intense mental willpower.",
+  "pose_end_frame": "Protagonist standing up, beginning to realize the metamorphosis.",
+  "shot_title": "Medium 1: Mental Willpower Struggle",
   "shot_type": "medium",
   "camera_description": "Stable medium framing that keeps action and character readable.",
-  "composition": "Readable medium composition featuring scene_character in the primary scene playing area.",
+  "composition": "Readable medium composition featuring scene_character in the primary cave area.",
   "target_seconds": 5.5,
   "characters_in_frame": [
     {
@@ -64,10 +74,10 @@
   ],
   "continuity_constraints": [
     "After hours of isolation",
-    "intense mental willpower to break paralysis"
+    "the protagonist uses intense mental willpower to break the paralysis."
   ],
-  "prompt_seed": "Medium 1: After hours of isolation, the protagonist uses intense mental willpower to break the paralysis. medium. Stable medium framing. Readable medium composition featuring scene_character. Environment: Interior Cave (Deep shadows).",
-  "shot_notes": "Focus on the physical effort of breaking paralysis.",
+  "prompt_seed": "Medium 1: After hours of isolation, the protagonist uses intense mental willpower to break the paralysis. medium. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable medium framing that keeps action and character readable.",
+  "shot_notes": "After hours of isolation, the protagonist uses intense mental willpower to break the paralysis.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -121,24 +131,24 @@
     "artifact_id": "CH002_SC003_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "99accd31b64a4f03f3b84cf2a094f251eb19aae1",
+    "source_fingerprint": "f3e41d98e60d06a75f289ff02580ec2587842e77",
     "created_at_utc": "2026-04-22T00:12:55.828830+00:00",
-    "updated_at_utc": "2026-04-22T23:05:52.073924+00:00",
+    "updated_at_utc": "2026-04-23T04:18:34.007957+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH002_SC003",
-        "version": "720812ebeb49126439e9603c467a4b4ac9715601"
+        "version": "8972961977e69577f04d692aea57de1d60447523"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH002_SC003",
-        "version": "06d593db88cd938b86fd60242e347a5cc5ad8d9f"
+        "version": "795e0398fd7c7db5166160dd25b6175a3083f49c"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH002_SC003",
-        "version": "875726d5ddf0e86ba9f3f0f70205f269095c6110"
+        "version": "25a62340fc381a6a712a846ec840fc3c5f92734b"
       }
     ],
     "locked_fields": {},
@@ -173,6 +183,11 @@
         "timestamp_utc": "2026-04-22T23:06:36.284446+00:00",
         "action": "synthesized",
         "source_fingerprint": "99accd31b64a4f03f3b84cf2a094f251eb19aae1"
+      },
+      {
+        "timestamp_utc": "2026-04-23T04:19:52.263454+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "f3e41d98e60d06a75f289ff02580ec2587842e77"
       }
     ]
   }

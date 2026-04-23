@@ -9,33 +9,42 @@
   "secondary_subjects": [
     "[]"
   ],
-  "start_state": "The protagonist has just stood up.",
-  "end_state": "The protagonist realizes his metamorphosis, looking down at his new self and the old body.",
-  "action_during_shot": "The protagonist realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, clothed body remains lying lifeless on the cave floor.",
-  "action_continues_from": "Upon standing, he realizes he has undergone a metamorphosis.",
-  "action_hands_off_to": "The protagonist (The \"New\" Self) and The Protagonist (The \"Old\" Body) in deep shadows.",
+  "start_state": "Continue from prior beat: After hours of isolation, the protagonist uses intense mental willpower to break the paralysis.",
+  "end_state": "The Protagonist (The \"New\" Self) stands upright while his original, clothed body remains lying lifeless on the cave floor.",
+  "action_during_shot": "Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, clothed body remains lying lifeless on the cave floor.",
+  "action_continues_from": "Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, clothed body remains lying lifeless on the cave floor.",
+  "action_hands_off_to": "The Protagonist (The \"New\" Self) and The Protagonist (The \"Old\" Body) in Interior Cave.",
+  "shot_size": "medium",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
+  "zoom_behavior": "none",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
+  "subject_visibility": "on_screen",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
   "subject_blocking": [
     "scene_character remains readable within the active playing space."
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the primary scene playing area.",
-    "Subject 1 is isolated in close framing."
+    "Camera anchors the action inside the primary scene playing area."
   ],
   "gaze_directions": [
-    "scene_character focuses toward the realization/the old body."
+    "primary scene subject focuses toward the realization of his state."
   ],
   "environment_subzone": "primary scene playing area",
   "key_visible_environment_features": [
     "primary scene playing area"
   ],
-  "continuity_from_previous_shot": "Upon standing, he realizes he has undergone a metamorphosis.",
-  "continuity_to_next_shot": "The Protagonist (The \"New\" Self) and The Protagonist (The \"Old\" Body) in deep shadows.",
-  "pose_anchor_frame": "Protagonist standing upright, naked.",
-  "pose_end_frame": "Protagonist with an expression of profound shock and existential horror.",
+  "continuity_from_previous_shot": "Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, clothed body remains lying lifeless on the cave floor.",
+  "continuity_to_next_shot": "The Protagonist (The \"New\" Self) and The Protagonist (The \"Old\" Body) in Interior Cave.",
+  "pose_anchor_frame": "Protagonist just having stood up from paralysis.",
+  "pose_end_frame": "Protagonist looking down/around in shock at his nakedness and the old body.",
   "shot_title": "Reaction Closeup 2: Metamorphosis Realization",
   "shot_type": "reaction_closeup",
   "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates scene_character against the cave environment to capture the emotional turn of shock/horror.",
+  "composition": "Intimate composition that isolates scene_character against the cave to capture the beat's emotional turn.",
   "target_seconds": 5.3,
   "characters_in_frame": [
     {
@@ -64,11 +73,12 @@
   ],
   "continuity_constraints": [
     "Upon standing",
-    "realization of metamorphosis",
-    "new naked self vs original clothed body"
+    "he realizes he has undergone a metamorphosis",
+    "new, naked self stands upright",
+    "original, clothed body remains lying lifeless on the cave floor"
   ],
-  "prompt_seed": "Reaction Closeup 2: Upon standing, he realizes he has undergone a metamorphosis. reaction_closeup. Close framing that isolates reaction and emotional emphasis. Intimate composition. Environment: Interior Cave (Deep shadows).",
-  "shot_notes": "Capture the transition from effort to existential horror.",
+  "prompt_seed": "Reaction Closeup 2: Upon standing, he realizes he has undergone a metam.... reaction_closeup. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and em...",
+  "shot_notes": "Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, clothed body remains lying lifeless on the cave floor.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -122,24 +132,24 @@
     "artifact_id": "CH002_SC003_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "99accd31b64a4f03f3b84cf2a094f251eb19aae1",
+    "source_fingerprint": "f3e41d98e60d06a75f289ff02580ec2587842e77",
     "created_at_utc": "2026-04-22T00:13:25.048499+00:00",
-    "updated_at_utc": "2026-04-22T23:06:36.299952+00:00",
+    "updated_at_utc": "2026-04-23T04:19:52.270983+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH002_SC003",
-        "version": "720812ebeb49126439e9603c467a4b4ac9715601"
+        "version": "8972961977e69577f04d692aea57de1d60447523"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH002_SC003",
-        "version": "06d593db88cd938b86fd60242e347a5cc5ad8d9f"
+        "version": "795e0398fd7c7db5166160dd25b6175a3083f49c"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH002_SC003",
-        "version": "875726d5ddf0e86ba9f3f0f70205f269095c6110"
+        "version": "25a62340fc381a6a712a846ec840fc3c5f92734b"
       }
     ],
     "locked_fields": {},
@@ -174,6 +184,11 @@
         "timestamp_utc": "2026-04-22T23:07:08.675853+00:00",
         "action": "synthesized",
         "source_fingerprint": "99accd31b64a4f03f3b84cf2a094f251eb19aae1"
+      },
+      {
+        "timestamp_utc": "2026-04-23T04:20:52.415890+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "f3e41d98e60d06a75f289ff02580ec2587842e77"
       }
     ]
   }

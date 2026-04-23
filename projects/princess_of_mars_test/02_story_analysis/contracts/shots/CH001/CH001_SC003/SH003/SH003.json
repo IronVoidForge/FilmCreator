@@ -5,35 +5,48 @@
   "shot_order": 3,
   "previous_shot_id": "SH002",
   "next_shot_id": "",
-  "primary_subject": "apache_warriors",
+  "primary_subject": "primary scene subject",
   "secondary_subjects": [
-    "[]"
+    "apache_warriors"
   ],
   "start_state": "Continue the established scene action toward consequence.",
   "end_state": "Arrive at the scene's transition point.",
-  "action_during_shot": "Landing the scene consequence or transition cleanly through combat engagement.",
-  "action_continues_from": "Land the emotional shift: Suspicion -> Alertness -> Chaos/Adrenaline.",
+  "action_during_shot": "Land the scene consequence or transition cleanly.",
+  "action_continues_from": "Land the emotional shift: Suspicion -> Alertness -> Chaos/Adrenaline..",
   "action_hands_off_to": "Arrive at the scene's transition point.",
+  "shot_size": "medium",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
+  "zoom_behavior": "none",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
+  "subject_visibility": "on_screen",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
   "subject_blocking": [
     "medium shots of Carter engaging in combat.",
+    "weapon handling (rifles/sidearms).",
     "apache_warriors remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the primary scene playing area.",
-    "Subject 1: apache_warriors remains visually readable against environment scale."
+    "Background depth should keep Arizona hills/plateau legible as the location anchor.",
+    "Subject 1: apache_warriors remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "apache_warriors focuses toward the active scene action."
+    "primary scene subject focuses toward the active scene action."
   ],
   "environment_subzone": "primary scene playing area",
   "key_visible_environment_features": [
-    "primary scene playing area"
+    "primary scene playing area",
+    "aerial_battlefield_mars"
   ],
-  "continuity_from_previous_shot": "Land the emotional shift: Suspicion -> Alertness -> Chaos/Adrenaline.",
+  "continuity_from_previous_shot": "Land the emotional shift: Suspicion -> Alertness -> Chaos/Adrenaline..",
   "continuity_to_next_shot": "Arrive at the scene's transition point.",
-  "pose_anchor_frame": "apache_warriors engaged in active skirmish tactics.",
-  "pose_end_frame": "apache_warriors mid-combat action.",
-  "shot_title": "Insert Detail 3: Skirmish Transition",
+  "pose_anchor_frame": "Continue the established scene action toward consequence.",
+  "pose_end_frame": "Arrive at the scene's transition point.",
+  "shot_title": "Insert Detail 3: Combat Transition",
   "shot_type": "insert_detail",
   "camera_description": "Tight detail framing focused on a single visual object or gesture.",
   "composition": "Detail composition centered on the key physical action or prop inside Arizona hills/plateau.",
@@ -66,10 +79,13 @@
   "continuity_constraints": [
     "Number of warriors",
     "direction of pursuit",
-    "weapon handling (rifles/sidearms)"
+    "weapon handling (rifles/sidearms).",
+    "Land the scene consequence or transition cleanly.",
+    "Resolve John Carter (Younger) -> John Carter (Younger)",
+    "Resolve Arizona hills/plateau -> Arizona hills/plateau"
   ],
-  "prompt_seed": "Insert Detail 3: Land the scene consequence or transition cleanly.. insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside Arizona hills/plateau. Cast: apache_warriors. Environment: Arizona hills/plateau.",
-  "shot_notes": "Focuses on weapon handling and combat intensity.",
+  "prompt_seed": "Insert Detail 3: Land the scene consequence or transition cleanly.. insert_detail. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Tight detail framing focused on a single visual object...",
+  "shot_notes": "Land the scene consequence or transition cleanly.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -139,24 +155,24 @@
     "artifact_id": "CH001_SC003_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "6ec4685ac659585202b37c4122ca463d525ceca5",
+    "source_fingerprint": "08bd26ec1ebec7b19144ca57d8c5eb422ae89214",
     "created_at_utc": "2026-04-22T00:00:14.279536+00:00",
-    "updated_at_utc": "2026-04-22T22:55:30.314525+00:00",
+    "updated_at_utc": "2026-04-23T04:00:34.629521+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH001_SC003",
-        "version": "0e959845aa985c4384138c8c7201e0cad4516eba"
+        "version": "8f1f42db82baf7c1cb1ba2ec241442e947ea4143"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH001_SC003",
-        "version": "59e17113f9996acecbaf98661c5454c555f33c39"
+        "version": "6a1d63291bd2aa6a26ca4650d047bca4eb426dfe"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH001_SC003",
-        "version": "55ef72a54f6df782bf69b9e6f7a2e9618c5b877b"
+        "version": "4f16d0eea72154d03f352870701ca4d942319b58"
       }
     ],
     "locked_fields": {},
@@ -191,6 +207,11 @@
         "timestamp_utc": "2026-04-22T22:56:04.163139+00:00",
         "action": "synthesized",
         "source_fingerprint": "6ec4685ac659585202b37c4122ca463d525ceca5"
+      },
+      {
+        "timestamp_utc": "2026-04-23T04:01:43.300554+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "08bd26ec1ebec7b19144ca57d8c5eb422ae89214"
       }
     ]
   }

@@ -1322,6 +1322,47 @@ def _shot_needs_review(package: ShotPackage) -> bool:
         return True
     if not package.prompt_seed or len(package.prompt_seed) < 40:
         return True
+    if not all(
+        [
+            package.shot_size,
+            package.camera_angle,
+            package.lens_family,
+            package.camera_motion,
+            package.focus_strategy,
+            package.lighting_style,
+            package.subject_visibility,
+            package.narration_mode,
+        ]
+    ):
+        return True
+    normalized_primary = package.primary_subject.strip().lower()
+    if normalized_primary == "the narrator" and (
+        package.subject_visibility != "off_screen_voice" or package.narration_mode != "voiceover_off_screen"
+    ):
+        return True
+    placeholder_markers = {
+        "primary scene playing area",
+        "continue the established scene action.",
+        "arrive at the scene's transition point.",
+        "[]",
+        "subject remains readable",
+    }
+    text_fields = [
+        package.start_state,
+        package.end_state,
+        package.action_during_shot,
+        package.action_continues_from,
+        package.action_hands_off_to,
+        package.pose_anchor_frame,
+        package.pose_end_frame,
+        package.environment_subzone,
+    ]
+    normalized_texts = [" ".join(text.lower().split()) for text in text_fields if isinstance(text, str) and text.strip()]
+    if any(any(marker in text for marker in placeholder_markers) for text in normalized_texts):
+        return True
+    repeated = {text for text in normalized_texts if normalized_texts.count(text) >= 4}
+    if repeated:
+        return True
     return False
 
 
@@ -1781,16 +1822,56 @@ def run_shot_planning(
                 action_during_shot=_first_nonempty(merged.get("action_during_shot"), fallback=""),
                 action_continues_from=_first_nonempty(merged.get("action_continues_from"), fallback=""),
                 action_hands_off_to=_first_nonempty(merged.get("action_hands_off_to"), fallback=""),
-                shot_size=_normalize_enum(merged.get("shot_size"), SHOT_SIZE_ENUM, fallback="medium"),
-                camera_angle=_normalize_enum(merged.get("camera_angle"), CAMERA_ANGLE_ENUM, fallback="eye_level"),
-                lens_family=_normalize_enum(merged.get("lens_family"), LENS_FAMILY_ENUM, fallback="normal"),
-                camera_motion=_normalize_enum(merged.get("camera_motion"), CAMERA_MOTION_ENUM, fallback="locked_off"),
-                zoom_behavior=_normalize_enum(merged.get("zoom_behavior"), ZOOM_BEHAVIOR_ENUM, fallback="none"),
-                focus_strategy=_normalize_enum(merged.get("focus_strategy"), FOCUS_STRATEGY_ENUM, fallback="deep_focus"),
-                lighting_style=_normalize_enum(merged.get("lighting_style"), LIGHTING_STYLE_ENUM, fallback="hard_directional"),
-                subject_visibility=_normalize_enum(merged.get("subject_visibility"), SUBJECT_VISIBILITY_ENUM, fallback="on_screen"),
-                narration_mode=_normalize_enum(merged.get("narration_mode"), NARRATION_MODE_ENUM, fallback="none"),
-                primary_subject_angle=_normalize_enum(merged.get("primary_subject_angle"), PRIMARY_SUBJECT_ANGLE_ENUM, fallback=""),
+                shot_size=_normalize_enum(
+                    merged.get("shot_size"),
+                    SHOT_SIZE_ENUM,
+                    fallback=_normalize_enum(blueprint.get("shot_size"), SHOT_SIZE_ENUM, fallback="medium"),
+                ),
+                camera_angle=_normalize_enum(
+                    merged.get("camera_angle"),
+                    CAMERA_ANGLE_ENUM,
+                    fallback=_normalize_enum(blueprint.get("camera_angle"), CAMERA_ANGLE_ENUM, fallback="eye_level"),
+                ),
+                lens_family=_normalize_enum(
+                    merged.get("lens_family"),
+                    LENS_FAMILY_ENUM,
+                    fallback=_normalize_enum(blueprint.get("lens_family"), LENS_FAMILY_ENUM, fallback="normal"),
+                ),
+                camera_motion=_normalize_enum(
+                    merged.get("camera_motion"),
+                    CAMERA_MOTION_ENUM,
+                    fallback=_normalize_enum(blueprint.get("camera_motion"), CAMERA_MOTION_ENUM, fallback="locked_off"),
+                ),
+                zoom_behavior=_normalize_enum(
+                    merged.get("zoom_behavior"),
+                    ZOOM_BEHAVIOR_ENUM,
+                    fallback=_normalize_enum(blueprint.get("zoom_behavior"), ZOOM_BEHAVIOR_ENUM, fallback="none"),
+                ),
+                focus_strategy=_normalize_enum(
+                    merged.get("focus_strategy"),
+                    FOCUS_STRATEGY_ENUM,
+                    fallback=_normalize_enum(blueprint.get("focus_strategy"), FOCUS_STRATEGY_ENUM, fallback="deep_focus"),
+                ),
+                lighting_style=_normalize_enum(
+                    merged.get("lighting_style"),
+                    LIGHTING_STYLE_ENUM,
+                    fallback=_normalize_enum(blueprint.get("lighting_style"), LIGHTING_STYLE_ENUM, fallback="hard_directional"),
+                ),
+                subject_visibility=_normalize_enum(
+                    merged.get("subject_visibility"),
+                    SUBJECT_VISIBILITY_ENUM,
+                    fallback=_normalize_enum(blueprint.get("subject_visibility"), SUBJECT_VISIBILITY_ENUM, fallback="on_screen"),
+                ),
+                narration_mode=_normalize_enum(
+                    merged.get("narration_mode"),
+                    NARRATION_MODE_ENUM,
+                    fallback=_normalize_enum(blueprint.get("narration_mode"), NARRATION_MODE_ENUM, fallback="none"),
+                ),
+                primary_subject_angle=_normalize_enum(
+                    merged.get("primary_subject_angle"),
+                    PRIMARY_SUBJECT_ANGLE_ENUM,
+                    fallback=_normalize_enum(blueprint.get("primary_subject_angle"), PRIMARY_SUBJECT_ANGLE_ENUM, fallback=""),
+                ),
                 shot_title=_first_nonempty(merged.get("shot_title"), fallback=f"{scene_title} {shot_id}"),
                 shot_type=_first_nonempty(merged.get("shot_type"), fallback="medium"),
                 camera_description=_first_nonempty(merged.get("camera_description"), fallback="Stable readable framing."),
@@ -1954,6 +2035,16 @@ def _package_from_existing(existing: dict[str, Any], metadata: ShotPackageMetada
         action_during_shot=str(existing.get("action_during_shot", "")),
         action_continues_from=str(existing.get("action_continues_from", "")),
         action_hands_off_to=str(existing.get("action_hands_off_to", "")),
+        shot_size=_normalize_enum(existing.get("shot_size"), SHOT_SIZE_ENUM, fallback=""),
+        camera_angle=_normalize_enum(existing.get("camera_angle"), CAMERA_ANGLE_ENUM, fallback=""),
+        lens_family=_normalize_enum(existing.get("lens_family"), LENS_FAMILY_ENUM, fallback=""),
+        camera_motion=_normalize_enum(existing.get("camera_motion"), CAMERA_MOTION_ENUM, fallback=""),
+        zoom_behavior=_normalize_enum(existing.get("zoom_behavior"), ZOOM_BEHAVIOR_ENUM, fallback=""),
+        focus_strategy=_normalize_enum(existing.get("focus_strategy"), FOCUS_STRATEGY_ENUM, fallback=""),
+        lighting_style=_normalize_enum(existing.get("lighting_style"), LIGHTING_STYLE_ENUM, fallback=""),
+        subject_visibility=_normalize_enum(existing.get("subject_visibility"), SUBJECT_VISIBILITY_ENUM, fallback=""),
+        narration_mode=_normalize_enum(existing.get("narration_mode"), NARRATION_MODE_ENUM, fallback=""),
+        primary_subject_angle=_normalize_enum(existing.get("primary_subject_angle"), PRIMARY_SUBJECT_ANGLE_ENUM, fallback=""),
         shot_title=str(existing.get("shot_title", "")),
         shot_type=str(existing.get("shot_type", "")),
         camera_description=str(existing.get("camera_description", "")),

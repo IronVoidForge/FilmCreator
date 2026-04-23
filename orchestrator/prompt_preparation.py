@@ -711,6 +711,18 @@ def _package_for_shot(
         ),
         limit=180,
     )
+    shot_size = str(shot.get("shot_size", "")).strip()
+    camera_angle = str(shot.get("camera_angle", "")).strip()
+    lens_family = str(shot.get("lens_family", "")).strip()
+    camera_motion = str(shot.get("camera_motion", "")).strip()
+    zoom_behavior = str(shot.get("zoom_behavior", "")).strip()
+    focus_strategy = str(shot.get("focus_strategy", "")).strip()
+    lighting_style = str(shot.get("lighting_style", "")).strip()
+    subject_visibility = str(shot.get("subject_visibility", "")).strip()
+    narration_mode = str(shot.get("narration_mode", "")).strip()
+    primary_subject_angle = str(shot.get("primary_subject_angle", "")).strip()
+    environment_subzone = str(shot.get("environment_subzone", "")).strip()
+    primary_subject = str(shot.get("primary_subject", "")).strip()
     composition_hint = _first_nonempty(
         shot_descriptor_values.get("framing", ""),
         shot_descriptor_values.get("spatial_continuity", ""),
@@ -722,6 +734,9 @@ def _package_for_shot(
             "consistency_repair": "continuity-preserving framing with exact pose and costume locks",
         }.get(variant_key, variant_hint),
     )
+    if primary_subject.lower() == "the narrator":
+        subject_visibility = subject_visibility or "off_screen_voice"
+        narration_mode = narration_mode or "voiceover_off_screen"
     continuity = _coerce_bullets(shot.get("continuity_constraints", []), scene_contract.get("continuity_constraints", []))
     variant_camera = {
         "primary_keyframe": "Primary keyframe with balanced composition and clear subject placement.",
@@ -735,10 +750,24 @@ def _package_for_shot(
         "Film shot prompt",
         variant_camera,
         _compact(_strip_terms(scene_arc or scene_contract.get("production_intent", "") or scene_title, strip_terms), limit=140),
+        _listify(
+            f"shot size {shot_size}" if shot_size else "",
+            f"camera angle {camera_angle}" if camera_angle else "",
+            f"lens {lens_family}" if lens_family else "",
+            f"camera motion {camera_motion}" if camera_motion else "",
+            f"zoom {zoom_behavior}" if zoom_behavior else "",
+            f"focus {focus_strategy}" if focus_strategy else "",
+            f"lighting {lighting_style}" if lighting_style else "",
+            f"subject visibility {subject_visibility}" if subject_visibility else "",
+            f"narration {narration_mode}" if narration_mode else "",
+            f"primary subject angle {primary_subject_angle}" if primary_subject_angle else "",
+        ),
         camera_description,
         _compact(_strip_terms(composition_hint, strip_terms), limit=160),
+        _compact(_strip_terms(environment_subzone, strip_terms), limit=120) if environment_subzone else "",
         f"Characters: {', '.join(characters)}",
         f"Environment: {environment_descriptor}",
+        "Narrator, if present, is off-screen voice only and should not appear as a visible body in frame." if primary_subject.lower() == "the narrator" else "",
         "Keep continuity exact across costume, silhouette, lighting, and spatial relationships.",
         "Avoid proper nouns in the prompt body unless text is meant to appear on screen.",
         "No text, no watermark, no logo.",
@@ -800,6 +829,17 @@ def _package_for_shot(
             ),
             "camera_description": camera_description,
             "composition": composition_hint,
+            "shot_size": shot_size or "(none)",
+            "camera_angle": camera_angle or "(none)",
+            "lens_family": lens_family or "(none)",
+            "camera_motion": camera_motion or "(none)",
+            "zoom_behavior": zoom_behavior or "(none)",
+            "focus_strategy": focus_strategy or "(none)",
+            "lighting_style": lighting_style or "(none)",
+            "subject_visibility": subject_visibility or "(none)",
+            "narration_mode": narration_mode or "(none)",
+            "primary_subject_angle": primary_subject_angle or "(none)",
+            "environment_subzone": environment_subzone or "(none)",
             "prompt_family": "shot_prompt",
             "reference_asset_ids": "; ".join(reference_asset_ids),
             "reference_asset_types": "character; environment; scene_descriptor; shot_descriptor",
