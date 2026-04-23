@@ -113,6 +113,54 @@ class SceneBeat:
 
 
 @dataclass
+class PlannedShotSeed:
+    planned_shot_id: str
+    beat_id: str
+    narrative_function: str = ""
+    primary_subject_seed: str = ""
+    secondary_subjects_seed: list[str] = field(default_factory=list)
+    subject_visibility: str = ""
+    narration_mode: str = ""
+    environment_subzone: str = ""
+    start_state_seed: str = ""
+    end_state_seed: str = ""
+    action_seed: str = ""
+    blocking_seed: list[str] = field(default_factory=list)
+    shot_size: str = ""
+    camera_angle: str = ""
+    lens_family: str = ""
+    camera_motion: str = ""
+    zoom_behavior: str = ""
+    focus_strategy: str = ""
+    lighting_style: str = ""
+    primary_subject_angle: str = ""
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "planned_shot_id": self.planned_shot_id,
+            "beat_id": self.beat_id,
+            "narrative_function": self.narrative_function,
+            "primary_subject_seed": self.primary_subject_seed,
+            "secondary_subjects_seed": self.secondary_subjects_seed,
+            "subject_visibility": self.subject_visibility,
+            "narration_mode": self.narration_mode,
+            "environment_subzone": self.environment_subzone,
+            "start_state_seed": self.start_state_seed,
+            "end_state_seed": self.end_state_seed,
+            "action_seed": self.action_seed,
+            "blocking_seed": self.blocking_seed,
+            "shot_size": self.shot_size,
+            "camera_angle": self.camera_angle,
+            "lens_family": self.lens_family,
+            "camera_motion": self.camera_motion,
+            "zoom_behavior": self.zoom_behavior,
+            "focus_strategy": self.focus_strategy,
+            "lighting_style": self.lighting_style,
+            "primary_subject_angle": self.primary_subject_angle,
+        }
+
+
+@dataclass
 class SceneContract:
     scene_id: str
     chapter_id: str
@@ -135,6 +183,7 @@ class SceneContract:
     continuity_constraints: list[str] = field(default_factory=list)
     visual_coverage_families: list[str] = field(default_factory=list)
     beat_list: list[SceneBeat] = field(default_factory=list)
+    planned_shots: list[PlannedShotSeed] = field(default_factory=list)
     unresolved_questions: list[str] = field(default_factory=list)
     evidence_refs: list[dict[str, Any]] = field(default_factory=list)
     evidence_summary: list[str] = field(default_factory=list)
@@ -164,6 +213,7 @@ class SceneContract:
             "continuity_constraints": self.continuity_constraints,
             "visual_coverage_families": self.visual_coverage_families,
             "beat_list": [item.to_dict() for item in self.beat_list],
+            "planned_shots": [item.to_dict() for item in self.planned_shots],
             "unresolved_questions": self.unresolved_questions,
             "evidence_refs": self.evidence_refs,
             "evidence_summary": self.evidence_summary,
@@ -693,6 +743,113 @@ def _derive_scene_staging(
     }
 
 
+def _default_primary_subject_seed(summary: str) -> str:
+    lowered = summary.lower()
+    if "narrator" in lowered:
+        return "The Narrator"
+    if "john carter" in lowered:
+        return "John Carter"
+    if "chieftain" in lowered:
+        return "The Chieftain"
+    if "tars tarkas" in lowered:
+        return "Tars Tarkas"
+    if "martian warrior" in lowered:
+        return "Martian Warrior"
+    return "primary scene subject"
+
+
+def _default_subject_visibility(subject_seed: str) -> str:
+    if subject_seed.strip().lower() == "the narrator":
+        return "off_screen_voice"
+    return "on_screen"
+
+
+def _default_narration_mode(subject_seed: str) -> str:
+    if subject_seed.strip().lower() == "the narrator":
+        return "voiceover_off_screen"
+    return "none"
+
+
+def _default_shot_seed_enums(coverage_priority: str, beat_summary: str) -> dict[str, str]:
+    priority = coverage_priority.strip().lower()
+    summary = beat_summary.strip().lower()
+    if "transition" in priority:
+        return {
+            "shot_size": "medium",
+            "camera_angle": "eye_level",
+            "lens_family": "normal",
+            "camera_motion": "locked_off",
+            "zoom_behavior": "none",
+            "focus_strategy": "deep_focus",
+            "lighting_style": "hard_directional",
+            "primary_subject_angle": "front_three_quarter_left",
+        }
+    if "emotion" in priority or "reaction" in summary:
+        return {
+            "shot_size": "close_up",
+            "camera_angle": "eye_level",
+            "lens_family": "portrait",
+            "camera_motion": "push_in",
+            "zoom_behavior": "subtle_in",
+            "focus_strategy": "shallow_subject",
+            "lighting_style": "hard_directional",
+            "primary_subject_angle": "front_three_quarter_left",
+        }
+    if "detail" in summary or "insert" in summary:
+        return {
+            "shot_size": "insert_detail",
+            "camera_angle": "eye_level",
+            "lens_family": "portrait",
+            "camera_motion": "locked_off",
+            "zoom_behavior": "none",
+            "focus_strategy": "shallow_subject",
+            "lighting_style": "hard_directional",
+            "primary_subject_angle": "",
+        }
+    return {
+        "shot_size": "medium",
+        "camera_angle": "eye_level",
+        "lens_family": "normal",
+        "camera_motion": "locked_off",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "hard_directional",
+        "primary_subject_angle": "front_three_quarter_left",
+    }
+
+
+def _derive_planned_shots(beats: list[SceneBeat]) -> list[PlannedShotSeed]:
+    planned: list[PlannedShotSeed] = []
+    for index, beat in enumerate(beats, start=1):
+        primary_subject_seed = _default_primary_subject_seed(beat.summary)
+        enums = _default_shot_seed_enums(beat.coverage_priority, beat.summary)
+        planned.append(
+            PlannedShotSeed(
+                planned_shot_id=f"SH{index:03d}",
+                beat_id=beat.beat_id,
+                narrative_function=beat.coverage_priority or "story beat",
+                primary_subject_seed=primary_subject_seed,
+                secondary_subjects_seed=list(beat.passive_subjects),
+                subject_visibility=_default_subject_visibility(primary_subject_seed),
+                narration_mode=_default_narration_mode(primary_subject_seed),
+                environment_subzone=beat.environment_subzone or "primary scene playing area",
+                start_state_seed=beat.action_start or beat.summary,
+                end_state_seed=beat.action_end or beat.summary,
+                action_seed=beat.summary,
+                blocking_seed=_coerce_string_list(beat.blocking_hint, beat.spatial_context),
+                shot_size=enums["shot_size"],
+                camera_angle=enums["camera_angle"],
+                lens_family=enums["lens_family"],
+                camera_motion=enums["camera_motion"],
+                zoom_behavior=enums["zoom_behavior"],
+                focus_strategy=enums["focus_strategy"],
+                lighting_style=enums["lighting_style"],
+                primary_subject_angle=enums["primary_subject_angle"],
+            )
+        )
+    return planned
+
+
 def _synthesize_storyboard_markdown(contract: SceneContract) -> str:
     lines = [
         f"# Scene Contract: {contract.scene_id}",
@@ -822,6 +979,31 @@ def _synthesize_storyboard_markdown(contract: SceneContract) -> str:
     if not contract.beat_list:
         lines.append("- (none)")
 
+    lines.extend(["", "## Planned Shots", ""])
+    for planned_shot in contract.planned_shots:
+        bits = [
+            f"beat={planned_shot.beat_id}",
+            f"function={planned_shot.narrative_function or 'story beat'}",
+            f"primary={planned_shot.primary_subject_seed or '(none)'}",
+            f"visibility={planned_shot.subject_visibility or '(none)'}",
+            f"narration={planned_shot.narration_mode or '(none)'}",
+            f"subzone={planned_shot.environment_subzone or '(none)'}",
+            f"start={planned_shot.start_state_seed or '(none)'}",
+            f"end={planned_shot.end_state_seed or '(none)'}",
+            f"action={planned_shot.action_seed or '(none)'}",
+            f"shot_size={planned_shot.shot_size or '(none)'}",
+            f"camera_angle={planned_shot.camera_angle or '(none)'}",
+            f"lens={planned_shot.lens_family or '(none)'}",
+            f"motion={planned_shot.camera_motion or '(none)'}",
+            f"zoom={planned_shot.zoom_behavior or '(none)'}",
+            f"focus={planned_shot.focus_strategy or '(none)'}",
+            f"lighting={planned_shot.lighting_style or '(none)'}",
+            f"subject_angle={planned_shot.primary_subject_angle or '(none)'}",
+        ]
+        lines.append(f"- {planned_shot.planned_shot_id}: " + " | ".join(bits))
+    if not contract.planned_shots:
+        lines.append("- (none)")
+
     lines.extend(["", "## Evidence Summary", ""])
     if contract.evidence_summary:
         lines.extend([f"- {item}" for item in contract.evidence_summary])
@@ -844,6 +1026,7 @@ def _parse_scene_contract_packet(text: str, scene_id: str, chapter_id: str, fall
     production_scalars, production_lists, production_freeform = _parse_section_markdown(sections.get("production_markdown", ""))
     _, beat_lists, beat_freeform = _parse_section_markdown(sections.get("beat_markdown", ""))
     staging_scalars, staging_lists, _ = _parse_section_markdown(sections.get("scene_staging_markdown", ""))
+    _, planned_shot_lists, planned_shot_freeform = _parse_section_markdown(sections.get("planned_shots_markdown", ""))
     storyboard_text = sections.get("storyboard_markdown", "").strip()
     if not storyboard_text:
         storyboard_text = sections.get("markdown", "").strip()
@@ -872,6 +1055,7 @@ def _parse_scene_contract_packet(text: str, scene_id: str, chapter_id: str, fall
         "entry_vectors": staging_lists.get("entry_vectors", []) or list(fallback.get("entry_vectors", [])),
         "exit_vectors": staging_lists.get("exit_vectors", []) or list(fallback.get("exit_vectors", [])),
         "beat_transition_map": staging_lists.get("beat_transition_map", []) or list(fallback.get("beat_transition_map", [])),
+        "planned_shot_overrides": planned_shot_lists.get("planned_shot_list", []) or planned_shot_freeform,
     }
 
 
@@ -1022,6 +1206,7 @@ def _build_deterministic_payload(
         continuity_constraints=continuity_constraints,
         beats=beats,
     )
+    planned_shots = _derive_planned_shots(beats)
     production_intent = _first_nonempty(
         purpose,
         f"Stage {scene_id} with clear narrative intent, stable cast blocking, and continuity-aware coverage.",
@@ -1048,9 +1233,11 @@ def _build_deterministic_payload(
         "production_intent": production_intent,
         "storyboard_markdown": storyboard_markdown,
         "beat_overrides": [beat.to_dict() for beat in beats],
+        "planned_shot_overrides": [item.to_dict() for item in planned_shots],
         "continuity_overrides": continuity_constraints,
         "coverage_overrides": coverage_families,
         "beats": beats,
+        "planned_shots": planned_shots,
         **scene_staging,
         "character_refs": character_refs,
         "environment_refs": environment_refs,
@@ -1166,6 +1353,7 @@ def run_scene_contract_synthesis(
                 continuity_constraints=existing.get("continuity_constraints", []),
                 visual_coverage_families=existing.get("visual_coverage_families", []),
                 beat_list=[SceneBeat(**item) for item in existing.get("beat_list", []) if isinstance(item, dict)],
+                planned_shots=[PlannedShotSeed(**item) for item in existing.get("planned_shots", []) if isinstance(item, dict)],
                 unresolved_questions=existing.get("unresolved_questions", []),
                 evidence_refs=existing.get("evidence_refs", []),
                 evidence_summary=existing.get("evidence_summary", []),
@@ -1203,6 +1391,7 @@ def run_scene_contract_synthesis(
                     continuity_constraints=existing.get("continuity_constraints", []),
                     visual_coverage_families=existing.get("visual_coverage_families", []),
                     beat_list=[SceneBeat(**item) for item in existing.get("beat_list", []) if isinstance(item, dict)],
+                    planned_shots=[PlannedShotSeed(**item) for item in existing.get("planned_shots", []) if isinstance(item, dict)],
                     unresolved_questions=existing.get("unresolved_questions", []),
                     evidence_refs=existing.get("evidence_refs", []),
                     evidence_summary=existing.get("evidence_summary", []),
@@ -1264,6 +1453,7 @@ def run_scene_contract_synthesis(
         entry_vectors = _coerce_string_list(merged.get("entry_vectors", [])) or list(fallback_payload.get("entry_vectors", []))
         exit_vectors = _coerce_string_list(merged.get("exit_vectors", [])) or list(fallback_payload.get("exit_vectors", []))
         beat_transition_map = _coerce_string_list(merged.get("beat_transition_map", [])) or list(fallback_payload.get("beat_transition_map", []))
+        planned_shots = _coerce_planned_shots(merged.get("planned_shot_overrides", []), fallback_shots=fallback_payload["planned_shots"])
 
         metadata.upstream_dependencies = [
             {
@@ -1312,6 +1502,7 @@ def run_scene_contract_synthesis(
             continuity_constraints=continuity_constraints,
             visual_coverage_families=coverage_families,
             beat_list=beats,
+            planned_shots=planned_shots,
             unresolved_questions=[],
             evidence_refs=evidence_refs,
             evidence_summary=evidence_summary,
@@ -1328,6 +1519,7 @@ def run_scene_contract_synthesis(
         contract.unresolved_questions = unresolved_questions
         contract.storyboard_markdown = contract.storyboard_markdown or _synthesize_storyboard_markdown(contract)
         contract.beat_list = contract.beat_list or fallback_payload["beats"]
+        contract.planned_shots = contract.planned_shots or fallback_payload["planned_shots"]
 
         _write_scene_contract_files(base_path, contract)
         written_files.extend([str(base_path.with_suffix(".json")), str(base_path.with_suffix(".md"))])
@@ -1446,6 +1638,81 @@ def _coerce_beats(raw_beats: Any, *, scene_id: str, fallback_beats: list[SceneBe
     if beats:
         return beats
     return fallback_beats
+
+
+def _coerce_planned_shots(raw_planned_shots: Any, *, fallback_shots: list[PlannedShotSeed]) -> list[PlannedShotSeed]:
+    planned: list[PlannedShotSeed] = []
+    if isinstance(raw_planned_shots, list):
+        for index, item in enumerate(raw_planned_shots, start=1):
+            if isinstance(item, PlannedShotSeed):
+                planned.append(item)
+                continue
+            if isinstance(item, dict):
+                planned.append(
+                    PlannedShotSeed(
+                        planned_shot_id=_first_nonempty(item.get("planned_shot_id"), item.get("shot_id"), fallback=f"SH{index:03d}"),
+                        beat_id=_first_nonempty(item.get("beat_id"), fallback=f"BT{index:03d}"),
+                        narrative_function=_first_nonempty(item.get("narrative_function"), item.get("function"), fallback=""),
+                        primary_subject_seed=_first_nonempty(item.get("primary_subject_seed"), item.get("primary_subject"), fallback=""),
+                        secondary_subjects_seed=_coerce_string_list(item.get("secondary_subjects_seed", []), item.get("secondary_subjects", [])),
+                        subject_visibility=_first_nonempty(item.get("subject_visibility"), fallback=""),
+                        narration_mode=_first_nonempty(item.get("narration_mode"), fallback=""),
+                        environment_subzone=_first_nonempty(item.get("environment_subzone"), item.get("subzone"), fallback=""),
+                        start_state_seed=_first_nonempty(item.get("start_state_seed"), item.get("start_state"), fallback=""),
+                        end_state_seed=_first_nonempty(item.get("end_state_seed"), item.get("end_state"), fallback=""),
+                        action_seed=_first_nonempty(item.get("action_seed"), item.get("action"), fallback=""),
+                        blocking_seed=_coerce_string_list(item.get("blocking_seed", []), item.get("blocking", "")),
+                        shot_size=_first_nonempty(item.get("shot_size"), fallback=""),
+                        camera_angle=_first_nonempty(item.get("camera_angle"), fallback=""),
+                        lens_family=_first_nonempty(item.get("lens_family"), fallback=""),
+                        camera_motion=_first_nonempty(item.get("camera_motion"), fallback=""),
+                        zoom_behavior=_first_nonempty(item.get("zoom_behavior"), fallback=""),
+                        focus_strategy=_first_nonempty(item.get("focus_strategy"), fallback=""),
+                        lighting_style=_first_nonempty(item.get("lighting_style"), fallback=""),
+                        primary_subject_angle=_first_nonempty(item.get("primary_subject_angle"), fallback=""),
+                    )
+                )
+            elif isinstance(item, str):
+                raw = item.strip()
+                match = re.match(r"^\s*(SH\d{3})\s*:\s*(.*)$", raw, re.IGNORECASE)
+                shot_id = f"SH{index:03d}"
+                if match:
+                    shot_id = match.group(1).upper()
+                    raw = match.group(2).strip()
+                chunks = [chunk.strip() for chunk in raw.split("||") if chunk.strip()]
+                fields: dict[str, str] = {}
+                for chunk in chunks:
+                    if "=" not in chunk:
+                        continue
+                    key, value = chunk.split("=", 1)
+                    fields[_normalize_key(key)] = value.strip()
+                planned.append(
+                    PlannedShotSeed(
+                        planned_shot_id=shot_id,
+                        beat_id=_first_nonempty(fields.get("beat"), fields.get("beat_id"), fallback=f"BT{index:03d}"),
+                        narrative_function=_first_nonempty(fields.get("function"), fields.get("narrative_function"), fallback=""),
+                        primary_subject_seed=_first_nonempty(fields.get("primary"), fields.get("primary_subject_seed"), fallback=""),
+                        secondary_subjects_seed=_coerce_string_list(fields.get("secondary"), fields.get("secondary_subjects_seed")),
+                        subject_visibility=_first_nonempty(fields.get("visibility"), fields.get("subject_visibility"), fallback=""),
+                        narration_mode=_first_nonempty(fields.get("narration"), fields.get("narration_mode"), fallback=""),
+                        environment_subzone=_first_nonempty(fields.get("subzone"), fields.get("environment_subzone"), fallback=""),
+                        start_state_seed=_first_nonempty(fields.get("start"), fields.get("start_state_seed"), fallback=""),
+                        end_state_seed=_first_nonempty(fields.get("end"), fields.get("end_state_seed"), fallback=""),
+                        action_seed=_first_nonempty(fields.get("action"), fields.get("action_seed"), fallback=""),
+                        blocking_seed=_coerce_string_list(fields.get("blocking"), fields.get("blocking_seed")),
+                        shot_size=_first_nonempty(fields.get("shot_size"), fallback=""),
+                        camera_angle=_first_nonempty(fields.get("camera_angle"), fallback=""),
+                        lens_family=_first_nonempty(fields.get("lens"), fields.get("lens_family"), fallback=""),
+                        camera_motion=_first_nonempty(fields.get("motion"), fields.get("camera_motion"), fallback=""),
+                        zoom_behavior=_first_nonempty(fields.get("zoom"), fields.get("zoom_behavior"), fallback=""),
+                        focus_strategy=_first_nonempty(fields.get("focus"), fields.get("focus_strategy"), fallback=""),
+                        lighting_style=_first_nonempty(fields.get("lighting"), fields.get("lighting_style"), fallback=""),
+                        primary_subject_angle=_first_nonempty(fields.get("subject_angle"), fields.get("primary_subject_angle"), fallback=""),
+                    )
+                )
+    if planned:
+        return planned
+    return fallback_shots
 
 
 def _render_scene_contract_index(records: list[SceneContract]) -> str:
@@ -1581,6 +1848,12 @@ beat_transition_map:
 - BT002 -> BT003: <transition>
 [[/SECTION]]
 
+[[SECTION planned_shots_markdown]]
+planned_shot_list:
+- SH001: beat=BT001 || function=<story function> || primary=<primary subject label> || secondary=<secondary label 1, secondary label 2> || visibility=<on_screen|partial|silhouette|off_screen_voice|implied_only> || narration=<none|voiceover_off_screen|in_scene_speaker|internal_monologue> || subzone=<environment subzone> || start=<specific shot start state> || end=<specific shot end state> || action=<specific shot action> || blocking=<blocking seed> || shot_size=<extreme_wide|wide|full|medium_full|medium|medium_close|close_up|extreme_close_up|insert_detail> || camera_angle=<eye_level|low_angle|high_angle|overhead|dutch> || lens=<ultra_wide|wide|normal|portrait|telephoto> || motion=<locked_off|pan|tilt|push_in|pull_back|track|crane|handheld> || zoom=<none|subtle_in|subtle_out|strong_in|strong_out> || focus=<deep_focus|shallow_subject|rack_focus|environment_priority> || lighting=<soft_even|hard_directional|high_contrast_ceremonial|diffuse_ambient|backlit|torch_firelight|low_key_night> || subject_angle=<front|front_three_quarter_left|front_three_quarter_right|profile_left|profile_right|rear_three_quarter_left|rear_three_quarter_right|back>
+- SH002: beat=BT002 || function=<...> || primary=<...> || visibility=<...> || narration=<...> || subzone=<...> || start=<...> || end=<...> || action=<...> || blocking=<...> || shot_size=<...> || camera_angle=<...> || lens=<...> || motion=<...> || zoom=<...> || focus=<...> || lighting=<...> || subject_angle=<...>
+[[/SECTION]]
+
 [[SECTION beat_markdown]]
 beat_list:
 - BT001: <summary> || action_start=<how the beat begins> || action_end=<how the beat ends> || active_subjects=<subject A, subject B> || passive_subjects=<subject C> || spatial_context=<where the action happens> || blocking_hint=<where people are staged> || environment_subzone=<specific subzone> || continuity=<continuity focus> || coverage=<coverage hint> || priority=<coverage priority> || handoff=<what the next beat inherits>
@@ -1616,6 +1889,7 @@ beat_list:
         production_scalars, production_lists, production_freeform = _parse_section_markdown(record.sections.get("production_markdown", ""))
         _, beat_lists, beat_freeform = _parse_section_markdown(record.sections.get("beat_markdown", ""))
         staging_scalars, staging_lists, _ = _parse_section_markdown(record.sections.get("scene_staging_markdown", ""))
+        _, planned_shot_lists, planned_shot_freeform = _parse_section_markdown(record.sections.get("planned_shots_markdown", ""))
         storyboard_markdown = record.sections.get("storyboard_markdown", "").strip()
         return {
             "scene_title": _first_nonempty(production_scalars.get("scene_title"), fallback=scene_fields.get("scene_title", scene_id)),
@@ -1637,6 +1911,7 @@ beat_list:
             "entry_vectors": staging_lists.get("entry_vectors", []) or list(fallback_payload.get("entry_vectors", [])),
             "exit_vectors": staging_lists.get("exit_vectors", []) or list(fallback_payload.get("exit_vectors", [])),
             "beat_transition_map": staging_lists.get("beat_transition_map", []) or list(fallback_payload.get("beat_transition_map", [])),
+            "planned_shot_overrides": planned_shot_lists.get("planned_shot_list", []) or planned_shot_freeform or list(fallback_payload.get("planned_shots", [])),
         }
     except Exception:
         return None

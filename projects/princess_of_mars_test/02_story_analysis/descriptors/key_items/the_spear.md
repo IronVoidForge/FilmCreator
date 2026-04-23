@@ -17,8 +17,7 @@
 - holder_or_user_notes: used by the primary scene subject
 - iconic_features:
   - f the approaching mounts to emphasize scale. - Close-ups of the spear tip narrowly missing the protagonist. - Rapid cutting between the warriors and
-  - ain consistent across shots. - Precise spatial proximity of the spear tip to the protagonist during the near-miss. ## Beat List - BT001: Protagonist
-  - in The basin/vegetation area near the incubator emphasizing the spear near-miss.
+  - Focus on the proximity of the spear tip to the protagonist.
 - item_kind: spear
 - materials: worked metal, leather, or carved material
 - ornamentation: readable production detail
@@ -30,29 +29,21 @@
 
 - chapter_mentions: CH003
 - scene_mentions: CH003_SC003
-- shot_mentions: CH003_SC003/SH003
+- shot_mentions: CH003_SC003/SH002
 
 ## Evidence Summary
 
 - f the approaching mounts to emphasize scale. - Close-ups of the spear tip narrowly missing the protagonist. - Rapid cutting between the warriors and
-- ain consistent across shots. - Precise spatial proximity of the spear tip to the protagonist during the near-miss. ## Beat List - BT001: Protagonist
-- in The basin/vegetation area near the incubator emphasizing the spear near-miss.
+- Focus on the proximity of the spear tip to the protagonist.
 
 ## Review
 
-- generated_field_placeholder_shape
-- generated_field_placeholder_scale
-- generated_field_placeholder_materials
-- generated_field_placeholder_color_palette
-- generated_field_placeholder_ornamentation
-- generated_field_placeholder_condition_or_wear
-- generated_field_placeholder_holder_or_user_notes
-- generated_field_placeholder_symbolic_role
+- (none)
 
 ## Metadata
 
 - artifact_id: `DESC_ITEM_the_spear`
 - status: `generated`
-- source_fingerprint: `f6059f552fc0bcbca59543c90328e703a2c40899`
-- created_at_utc: `2026-04-22T19:30:39.567325+00:00`
-- updated_at_utc: `2026-04-22T19:30:39.567325+00:00`
+- source_fingerprint: `ea1f4d8a8fa2d9e26950d19ea0d3219aceffafa0`
+- created_at_utc: `2026-04-23T01:08:25.189209+00:00`
+- updated_at_utc: `2026-04-23T01:08:25.189209+00:00`

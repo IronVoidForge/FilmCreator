@@ -18,6 +18,17 @@ from .settings import load_runtime_settings
 
 SHOT_PLANNER_SCHEMA_VERSION = "2026-04-22-shot-planner-v2"
 
+SHOT_SIZE_ENUM = {"extreme_wide", "wide", "full", "medium_full", "medium", "medium_close", "close_up", "extreme_close_up", "insert_detail"}
+CAMERA_ANGLE_ENUM = {"eye_level", "low_angle", "high_angle", "overhead", "dutch"}
+LENS_FAMILY_ENUM = {"ultra_wide", "wide", "normal", "portrait", "telephoto"}
+CAMERA_MOTION_ENUM = {"locked_off", "pan", "tilt", "push_in", "pull_back", "track", "crane", "handheld"}
+ZOOM_BEHAVIOR_ENUM = {"none", "subtle_in", "subtle_out", "strong_in", "strong_out"}
+FOCUS_STRATEGY_ENUM = {"deep_focus", "shallow_subject", "rack_focus", "environment_priority"}
+LIGHTING_STYLE_ENUM = {"soft_even", "hard_directional", "high_contrast_ceremonial", "diffuse_ambient", "backlit", "torch_firelight", "low_key_night"}
+SUBJECT_VISIBILITY_ENUM = {"on_screen", "partial", "silhouette", "off_screen_voice", "implied_only"}
+NARRATION_MODE_ENUM = {"none", "voiceover_off_screen", "in_scene_speaker", "internal_monologue"}
+PRIMARY_SUBJECT_ANGLE_ENUM = {"front", "front_three_quarter_left", "front_three_quarter_right", "profile_left", "profile_right", "rear_three_quarter_left", "rear_three_quarter_right", "back"}
+
 
 @dataclass
 class ShotReference:
@@ -91,6 +102,16 @@ class ShotPackage:
     action_during_shot: str = ""
     action_continues_from: str = ""
     action_hands_off_to: str = ""
+    shot_size: str = ""
+    camera_angle: str = ""
+    lens_family: str = ""
+    camera_motion: str = ""
+    zoom_behavior: str = ""
+    focus_strategy: str = ""
+    lighting_style: str = ""
+    subject_visibility: str = ""
+    narration_mode: str = ""
+    primary_subject_angle: str = ""
     subject_blocking: list[str] = field(default_factory=list)
     camera_relative_positions: list[str] = field(default_factory=list)
     gaze_directions: list[str] = field(default_factory=list)
@@ -125,6 +146,16 @@ class ShotPackage:
             "action_during_shot": self.action_during_shot,
             "action_continues_from": self.action_continues_from,
             "action_hands_off_to": self.action_hands_off_to,
+            "shot_size": self.shot_size,
+            "camera_angle": self.camera_angle,
+            "lens_family": self.lens_family,
+            "camera_motion": self.camera_motion,
+            "zoom_behavior": self.zoom_behavior,
+            "focus_strategy": self.focus_strategy,
+            "lighting_style": self.lighting_style,
+            "subject_visibility": self.subject_visibility,
+            "narration_mode": self.narration_mode,
+            "primary_subject_angle": self.primary_subject_angle,
             "subject_blocking": self.subject_blocking,
             "camera_relative_positions": self.camera_relative_positions,
             "gaze_directions": self.gaze_directions,
@@ -633,11 +664,20 @@ def _prompt_seed(
     characters: list[ShotReference],
     environment: ShotReference,
     beat_summary: str,
+    shot_size: str,
+    camera_angle: str,
+    lens_family: str,
+    camera_motion: str,
+    zoom_behavior: str,
+    focus_strategy: str,
+    lighting_style: str,
+    subject_visibility: str,
+    primary_subject_angle: str,
 ) -> str:
     cast = ", ".join(ref.display_name or ref.label for ref in characters[:3]) or "none"
     env = environment.display_name or environment.label
     return _compact_snippet(
-        f"{shot_title}. {shot_type}. {camera_description} {composition} Cast: {cast}. Environment: {env}. Beat: {beat_summary}",
+        f"{shot_title}. {shot_type}. size={shot_size}. angle={camera_angle}. lens={lens_family}. motion={camera_motion}. zoom={zoom_behavior}. focus={focus_strategy}. lighting={lighting_style}. visibility={subject_visibility}. subject_angle={primary_subject_angle}. {camera_description} {composition} Cast: {cast}. Environment: {env}. Beat: {beat_summary}",
         limit=320,
     )
 
@@ -695,6 +735,75 @@ def _visible_environment_features(environment: ShotReference, beat_payload: dict
     return _ordered_unique([item for item in features if item])[:3]
 
 
+def _normalize_enum(value: Any, allowed: set[str], fallback: str = "") -> str:
+    normalized = str(value or "").strip().lower()
+    return normalized if normalized in allowed else fallback
+
+
+def _default_primary_subject_angle(primary_subject: str, shot_size: str, subject_visibility: str) -> str:
+    if subject_visibility == "off_screen_voice" or shot_size == "insert_detail":
+        return ""
+    if primary_subject.strip().lower() == "the narrator":
+        return ""
+    return "front_three_quarter_left"
+
+
+def _default_shot_enums(shot_type: str, primary_subject: str) -> dict[str, str]:
+    shot_type_normalized = shot_type.strip().lower()
+    if shot_type_normalized == "insert_detail":
+        shot_size = "insert_detail"
+        lens_family = "portrait"
+        focus_strategy = "shallow_subject"
+        camera_motion = "locked_off"
+        zoom_behavior = "none"
+        camera_angle = "eye_level"
+    elif shot_type_normalized in {"closing_reaction", "close_up"}:
+        shot_size = "close_up"
+        lens_family = "portrait"
+        focus_strategy = "shallow_subject"
+        camera_motion = "push_in"
+        zoom_behavior = "subtle_in"
+        camera_angle = "eye_level"
+    elif shot_type_normalized in {"wide", "establishing"}:
+        shot_size = "wide"
+        lens_family = "wide"
+        focus_strategy = "deep_focus"
+        camera_motion = "locked_off"
+        zoom_behavior = "none"
+        camera_angle = "eye_level"
+    else:
+        shot_size = "medium"
+        lens_family = "normal"
+        focus_strategy = "deep_focus"
+        camera_motion = "locked_off"
+        zoom_behavior = "none"
+        camera_angle = "eye_level"
+    subject_visibility = "off_screen_voice" if primary_subject.strip().lower() == "the narrator" else "on_screen"
+    return {
+        "shot_size": shot_size,
+        "camera_angle": camera_angle,
+        "lens_family": lens_family,
+        "camera_motion": camera_motion,
+        "zoom_behavior": zoom_behavior,
+        "focus_strategy": focus_strategy,
+        "lighting_style": "hard_directional",
+        "subject_visibility": subject_visibility,
+        "narration_mode": "voiceover_off_screen" if subject_visibility == "off_screen_voice" else "none",
+        "primary_subject_angle": _default_primary_subject_angle(primary_subject, shot_size, subject_visibility),
+    }
+
+
+def _scene_planned_shot_map(scene_contract: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    mapping: dict[str, dict[str, Any]] = {}
+    for item in scene_contract.get("planned_shots", []):
+        if not isinstance(item, dict):
+            continue
+        shot_id = str(item.get("planned_shot_id", item.get("shot_id", ""))).strip().upper()
+        if shot_id:
+            mapping[shot_id] = item
+    return mapping
+
+
 def _shot_title_from_beat(shot_type: str, beat_summary: str, shot_order: int) -> str:
     snippet = _compact_snippet(beat_summary, limit=54)
     if snippet:
@@ -708,8 +817,10 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
         beats = [{"beat_id": "BT001", "summary": scene_contract.get("summary", "") or scene_contract.get("production_intent", "") or scene_contract.get("scene_title", "")}]
     blueprints: list[dict[str, Any]] = []
     previous_end_state = _first_nonempty(str(scene_contract.get("scene_start_state", "")), str(scene_contract.get("summary", "")), fallback="")
+    planned_shots = _scene_planned_shot_map(scene_contract)
     for index, raw_beat in enumerate(beats, start=1):
         beat_id = f"BT{index:03d}"
+        shot_id = f"SH{index:03d}"
         beat_summary = ""
         beat_payload: dict[str, Any] = {
             "summary": "",
@@ -736,12 +847,44 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
             beat_payload["summary"] = beat_summary
             beat_payload["action_start"] = beat_summary
             beat_payload["action_end"] = beat_summary
+        planned_shot = planned_shots.get(shot_id, {})
         environment = _select_environment_ref(scene_contract, project_dir, scene_binding=scene_binding, beat_id=beat_id)
         shot_type = _shot_type_from_beat(scene_contract, beat_summary, index)
         characters = _selected_characters(scene_contract, project_dir, beat_summary, index, scene_binding=scene_binding)
         camera_description = _camera_description(shot_type, beat_summary)
         composition = _composition_description(shot_type, characters, environment, beat_summary)
         shot_title = _shot_title_from_beat(shot_type, beat_summary, index)
+        continuity_constraints = _coerce_string_list(
+            scene_contract.get("continuity_constraints", []),
+            beat_summary,
+            scene_contract.get("unresolved_questions", []),
+        )
+        primary_subject = _first_nonempty(
+            str(planned_shot.get("primary_subject_seed", "")),
+            beat_payload["active_subjects"][0] if beat_payload["active_subjects"] else "",
+            _first_nonempty(characters[0].display_name if characters else "", characters[0].label if characters else "", fallback="scene subject"),
+        )
+        enums = _default_shot_enums(shot_type, primary_subject)
+        shot_size = _normalize_enum(planned_shot.get("shot_size"), SHOT_SIZE_ENUM, fallback=enums["shot_size"])
+        camera_angle = _normalize_enum(planned_shot.get("camera_angle"), CAMERA_ANGLE_ENUM, fallback=enums["camera_angle"])
+        lens_family = _normalize_enum(planned_shot.get("lens_family"), LENS_FAMILY_ENUM, fallback=enums["lens_family"])
+        camera_motion = _normalize_enum(planned_shot.get("camera_motion"), CAMERA_MOTION_ENUM, fallback=enums["camera_motion"])
+        zoom_behavior = _normalize_enum(planned_shot.get("zoom_behavior"), ZOOM_BEHAVIOR_ENUM, fallback=enums["zoom_behavior"])
+        focus_strategy = _normalize_enum(planned_shot.get("focus_strategy"), FOCUS_STRATEGY_ENUM, fallback=enums["focus_strategy"])
+        lighting_style = _normalize_enum(planned_shot.get("lighting_style"), LIGHTING_STYLE_ENUM, fallback=enums["lighting_style"])
+        subject_visibility = _normalize_enum(planned_shot.get("subject_visibility"), SUBJECT_VISIBILITY_ENUM, fallback=enums["subject_visibility"])
+        narration_mode = _normalize_enum(planned_shot.get("narration_mode"), NARRATION_MODE_ENUM, fallback=enums["narration_mode"])
+        primary_subject_angle = _normalize_enum(planned_shot.get("primary_subject_angle"), PRIMARY_SUBJECT_ANGLE_ENUM, fallback=enums["primary_subject_angle"])
+        start_state = _first_nonempty(str(planned_shot.get("start_state_seed", "")), str(beat_payload.get("action_start", "")), previous_end_state, beat_summary, fallback=beat_summary)
+        end_state = _first_nonempty(str(planned_shot.get("end_state_seed", "")), str(beat_payload.get("action_end", "")), beat_summary, fallback=start_state)
+        action_continues_from = previous_end_state if index > 1 else _first_nonempty(str(scene_contract.get("scene_start_state", "")), beat_summary, fallback="")
+        action_hands_off_to = _first_nonempty(str(beat_payload.get("handoff_to_next", "")), end_state, fallback="")
+        action_during_shot = _first_nonempty(str(planned_shot.get("action_seed", "")), beat_summary, fallback=beat_summary)
+        subject_blocking = _shot_subject_blocking(scene_contract, beat_payload, characters)
+        subject_blocking = _ordered_unique(_coerce_string_list(planned_shot.get("blocking_seed", []), subject_blocking))
+        camera_positions = _camera_relative_positions(characters, environment, beat_payload)
+        subzone = _first_nonempty(str(planned_shot.get("environment_subzone", "")), str(beat_payload.get("environment_subzone", "")), *scene_contract.get("environment_subzones", []), fallback="")
+        visible_environment_features = _visible_environment_features(environment, beat_payload)
         prompt_seed = _prompt_seed(
             shot_title=shot_title,
             shot_type=shot_type,
@@ -750,33 +893,38 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
             characters=characters,
             environment=environment,
             beat_summary=beat_summary,
+            shot_size=shot_size,
+            camera_angle=camera_angle,
+            lens_family=lens_family,
+            camera_motion=camera_motion,
+            zoom_behavior=zoom_behavior,
+            focus_strategy=focus_strategy,
+            lighting_style=lighting_style,
+            subject_visibility=subject_visibility,
+            primary_subject_angle=primary_subject_angle or "unspecified",
         )
-        continuity_constraints = _coerce_string_list(
-            scene_contract.get("continuity_constraints", []),
-            beat_summary,
-            scene_contract.get("unresolved_questions", []),
-        )
-        primary_subject = beat_payload["active_subjects"][0] if beat_payload["active_subjects"] else (_first_nonempty(characters[0].display_name if characters else "", characters[0].label if characters else "", fallback="scene subject"))
-        start_state = _first_nonempty(str(beat_payload.get("action_start", "")), previous_end_state, beat_summary, fallback=beat_summary)
-        end_state = _first_nonempty(str(beat_payload.get("action_end", "")), beat_summary, fallback=start_state)
-        action_continues_from = previous_end_state if index > 1 else _first_nonempty(str(scene_contract.get("scene_start_state", "")), beat_summary, fallback="")
-        action_hands_off_to = _first_nonempty(str(beat_payload.get("handoff_to_next", "")), end_state, fallback="")
-        subject_blocking = _shot_subject_blocking(scene_contract, beat_payload, characters)
-        camera_positions = _camera_relative_positions(characters, environment, beat_payload)
-        subzone = _first_nonempty(str(beat_payload.get("environment_subzone", "")), *scene_contract.get("environment_subzones", []), fallback="")
-        visible_environment_features = _visible_environment_features(environment, beat_payload)
         blueprints.append(
             {
-                "shot_id": f"SH{index:03d}",
+                "shot_id": shot_id,
                 "shot_order": index,
                 "beat_ids": [beat_id],
                 "primary_subject": primary_subject,
-                "secondary_subjects": beat_payload.get("passive_subjects", []),
+                "secondary_subjects": _coerce_string_list(planned_shot.get("secondary_subjects_seed", []), beat_payload.get("passive_subjects", [])),
                 "start_state": start_state,
                 "end_state": end_state,
-                "action_during_shot": beat_summary,
+                "action_during_shot": action_during_shot,
                 "action_continues_from": action_continues_from,
                 "action_hands_off_to": action_hands_off_to,
+                "shot_size": shot_size,
+                "camera_angle": camera_angle,
+                "lens_family": lens_family,
+                "camera_motion": camera_motion,
+                "zoom_behavior": zoom_behavior,
+                "focus_strategy": focus_strategy,
+                "lighting_style": lighting_style,
+                "subject_visibility": subject_visibility,
+                "narration_mode": narration_mode,
+                "primary_subject_angle": primary_subject_angle,
                 "subject_blocking": subject_blocking,
                 "camera_relative_positions": camera_positions,
                 "gaze_directions": [f"{primary_subject} focuses toward the active scene action."] if primary_subject else [],
@@ -979,6 +1127,16 @@ action_during_shot: <what the shot is actively covering>
 action_continues_from: <what visual/action state this inherits>
 action_hands_off_to: <what the next shot should inherit>
 shot_type: <shot type>
+shot_size: <extreme_wide|wide|full|medium_full|medium|medium_close|close_up|extreme_close_up|insert_detail>
+camera_angle: <eye_level|low_angle|high_angle|overhead|dutch>
+lens_family: <ultra_wide|wide|normal|portrait|telephoto>
+camera_motion: <locked_off|pan|tilt|push_in|pull_back|track|crane|handheld>
+zoom_behavior: <none|subtle_in|subtle_out|strong_in|strong_out>
+focus_strategy: <deep_focus|shallow_subject|rack_focus|environment_priority>
+lighting_style: <soft_even|hard_directional|high_contrast_ceremonial|diffuse_ambient|backlit|torch_firelight|low_key_night>
+subject_visibility: <on_screen|partial|silhouette|off_screen_voice|implied_only>
+narration_mode: <none|voiceover_off_screen|in_scene_speaker|internal_monologue>
+primary_subject_angle: <front|front_three_quarter_left|front_three_quarter_right|profile_left|profile_right|rear_three_quarter_left|rear_three_quarter_right|back>
 camera_description: <camera note>
 composition: <composition note>
 characters_in_frame:
@@ -1034,6 +1192,16 @@ shot_notes: <optional short note>
                     "action_hands_off_to": _first_nonempty(scalars.get("action_hands_off_to"), fallback=""),
                     "shot_title": _first_nonempty(scalars.get("shot_title"), fallback=""),
                     "shot_type": _first_nonempty(scalars.get("shot_type"), fallback=""),
+                    "shot_size": _first_nonempty(scalars.get("shot_size"), fallback=""),
+                    "camera_angle": _first_nonempty(scalars.get("camera_angle"), fallback=""),
+                    "lens_family": _first_nonempty(scalars.get("lens_family"), fallback=""),
+                    "camera_motion": _first_nonempty(scalars.get("camera_motion"), fallback=""),
+                    "zoom_behavior": _first_nonempty(scalars.get("zoom_behavior"), fallback=""),
+                    "focus_strategy": _first_nonempty(scalars.get("focus_strategy"), fallback=""),
+                    "lighting_style": _first_nonempty(scalars.get("lighting_style"), fallback=""),
+                    "subject_visibility": _first_nonempty(scalars.get("subject_visibility"), fallback=""),
+                    "narration_mode": _first_nonempty(scalars.get("narration_mode"), fallback=""),
+                    "primary_subject_angle": _first_nonempty(scalars.get("primary_subject_angle"), fallback=""),
                     "camera_description": _first_nonempty(scalars.get("camera_description"), fallback=""),
                     "composition": _first_nonempty(scalars.get("composition"), fallback=""),
                     "characters_in_frame": _coerce_string_list(lists.get("characters_in_frame"), scalars.get("characters_in_frame")),
@@ -1073,6 +1241,16 @@ def _parse_shot_plan_blueprint(payload: dict[str, Any]) -> dict[str, Any]:
         "action_hands_off_to": str(payload.get("action_hands_off_to", "")),
         "shot_title": str(payload.get("shot_title", "")),
         "shot_type": str(payload.get("shot_type", "")),
+        "shot_size": str(payload.get("shot_size", "")),
+        "camera_angle": str(payload.get("camera_angle", "")),
+        "lens_family": str(payload.get("lens_family", "")),
+        "camera_motion": str(payload.get("camera_motion", "")),
+        "zoom_behavior": str(payload.get("zoom_behavior", "")),
+        "focus_strategy": str(payload.get("focus_strategy", "")),
+        "lighting_style": str(payload.get("lighting_style", "")),
+        "subject_visibility": str(payload.get("subject_visibility", "")),
+        "narration_mode": str(payload.get("narration_mode", "")),
+        "primary_subject_angle": str(payload.get("primary_subject_angle", "")),
         "camera_description": str(payload.get("camera_description", "")),
         "composition": str(payload.get("composition", "")),
         "target_seconds": _coerce_float(payload.get("target_seconds"), payload.get("estimated_seconds"), fallback=0.0) or None,
@@ -1160,6 +1338,16 @@ def _render_shot_package_markdown(package: ShotPackage) -> str:
         f"- previous_shot_id: `{package.previous_shot_id or '(none)'}`",
         f"- next_shot_id: `{package.next_shot_id or '(none)'}`",
         f"- shot_type: `{package.shot_type}`",
+        f"- shot_size: `{package.shot_size or '(none)'}`",
+        f"- camera_angle: `{package.camera_angle or '(none)'}`",
+        f"- lens_family: `{package.lens_family or '(none)'}`",
+        f"- camera_motion: `{package.camera_motion or '(none)'}`",
+        f"- zoom_behavior: `{package.zoom_behavior or '(none)'}`",
+        f"- focus_strategy: `{package.focus_strategy or '(none)'}`",
+        f"- lighting_style: `{package.lighting_style or '(none)'}`",
+        f"- subject_visibility: `{package.subject_visibility or '(none)'}`",
+        f"- narration_mode: `{package.narration_mode or '(none)'}`",
+        f"- primary_subject_angle: `{package.primary_subject_angle or '(none)'}`",
         f"- target_seconds: `{package.target_seconds}`",
         "",
         "## Camera",
@@ -1487,6 +1675,16 @@ def run_shot_planning(
                 "action_during_shot",
                 "action_continues_from",
                 "action_hands_off_to",
+                "shot_size",
+                "camera_angle",
+                "lens_family",
+                "camera_motion",
+                "zoom_behavior",
+                "focus_strategy",
+                "lighting_style",
+                "subject_visibility",
+                "narration_mode",
+                "primary_subject_angle",
                 "environment_subzone",
                 "continuity_from_previous_shot",
                 "continuity_to_next_shot",
@@ -1583,6 +1781,16 @@ def run_shot_planning(
                 action_during_shot=_first_nonempty(merged.get("action_during_shot"), fallback=""),
                 action_continues_from=_first_nonempty(merged.get("action_continues_from"), fallback=""),
                 action_hands_off_to=_first_nonempty(merged.get("action_hands_off_to"), fallback=""),
+                shot_size=_normalize_enum(merged.get("shot_size"), SHOT_SIZE_ENUM, fallback="medium"),
+                camera_angle=_normalize_enum(merged.get("camera_angle"), CAMERA_ANGLE_ENUM, fallback="eye_level"),
+                lens_family=_normalize_enum(merged.get("lens_family"), LENS_FAMILY_ENUM, fallback="normal"),
+                camera_motion=_normalize_enum(merged.get("camera_motion"), CAMERA_MOTION_ENUM, fallback="locked_off"),
+                zoom_behavior=_normalize_enum(merged.get("zoom_behavior"), ZOOM_BEHAVIOR_ENUM, fallback="none"),
+                focus_strategy=_normalize_enum(merged.get("focus_strategy"), FOCUS_STRATEGY_ENUM, fallback="deep_focus"),
+                lighting_style=_normalize_enum(merged.get("lighting_style"), LIGHTING_STYLE_ENUM, fallback="hard_directional"),
+                subject_visibility=_normalize_enum(merged.get("subject_visibility"), SUBJECT_VISIBILITY_ENUM, fallback="on_screen"),
+                narration_mode=_normalize_enum(merged.get("narration_mode"), NARRATION_MODE_ENUM, fallback="none"),
+                primary_subject_angle=_normalize_enum(merged.get("primary_subject_angle"), PRIMARY_SUBJECT_ANGLE_ENUM, fallback=""),
                 shot_title=_first_nonempty(merged.get("shot_title"), fallback=f"{scene_title} {shot_id}"),
                 shot_type=_first_nonempty(merged.get("shot_type"), fallback="medium"),
                 camera_description=_first_nonempty(merged.get("camera_description"), fallback="Stable readable framing."),
@@ -1636,6 +1844,15 @@ def run_shot_planning(
                 characters=package.characters_in_frame,
                 environment=package.environment or environment_ref,
                 beat_summary=" ".join(item for item in [package.action_during_shot, package.continuity_to_next_shot] if item) or _first_nonempty(scene_contract.get("summary", ""), scene_contract.get("production_intent", ""), fallback=""),
+                shot_size=package.shot_size,
+                camera_angle=package.camera_angle,
+                lens_family=package.lens_family,
+                camera_motion=package.camera_motion,
+                zoom_behavior=package.zoom_behavior,
+                focus_strategy=package.focus_strategy,
+                lighting_style=package.lighting_style,
+                subject_visibility=package.subject_visibility,
+                primary_subject_angle=package.primary_subject_angle or "unspecified",
             )
             package.shot_notes = package.shot_notes or _compact_snippet(str(scene_contract.get("summary", "")), limit=220)
 
