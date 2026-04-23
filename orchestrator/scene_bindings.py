@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
@@ -11,7 +12,7 @@ from .chapter_selection import chapter_matches, parse_chapter_selector
 from .core.json_io import read_json, write_json
 from .scaffold import create_project
 
-SCENE_BINDING_SCHEMA_VERSION = "2026-04-22-scene-bindings-v2"
+SCENE_BINDING_SCHEMA_VERSION = "2026-04-23-scene-bindings-v3"
 
 
 @dataclass
@@ -270,6 +271,122 @@ def _dedupe_refs(refs: list[SceneBindingReference]) -> list[SceneBindingReferenc
     return deduped
 
 
+def _normalize_key(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "_", str(value or "").strip().lower()).strip("_")
+
+
+def _meaningful_tokens(value: str) -> set[str]:
+    stopwords = {
+        "the",
+        "and",
+        "for",
+        "with",
+        "from",
+        "into",
+        "near",
+        "site",
+        "scene",
+        "area",
+        "space",
+        "place",
+        "through",
+        "under",
+        "over",
+        "within",
+        "floor",
+    }
+    return {
+        token
+        for token in re.findall(r"[a-z0-9]+", str(value or "").lower())
+        if len(token) > 2 and token not in stopwords and not token.isdigit()
+    }
+
+
+def _binding_ref_tokens(ref: SceneBindingReference) -> set[str]:
+    tokens = _meaningful_tokens(ref.label) | _meaningful_tokens(ref.display_name) | _meaningful_tokens(ref.canonical_id or "")
+    source_name = Path(ref.source_path).stem.replace("_", " ")
+    tokens |= _meaningful_tokens(source_name)
+    return tokens
+
+
+def _beat_environment_score(ref: SceneBindingReference, beat_payload: dict[str, Any]) -> int:
+    beat_text = " ".join(
+        str(item)
+        for item in [
+            beat_payload.get("summary", ""),
+            beat_payload.get("spatial_context", ""),
+            beat_payload.get("environment_subzone", ""),
+            beat_payload.get("blocking_hint", ""),
+            beat_payload.get("coverage_hint", ""),
+        ]
+        if str(item).strip()
+    )
+    beat_tokens = _meaningful_tokens(beat_text)
+    ref_tokens = _binding_ref_tokens(ref)
+    if not beat_tokens or not ref_tokens:
+        return 0
+
+    overlap = len(beat_tokens & ref_tokens)
+    score = overlap * 12
+    normalized_text = _normalize_key(beat_text)
+    canonical_key = _normalize_key(ref.canonical_id or "")
+    display_key = _normalize_key(ref.display_name)
+    if canonical_key and canonical_key in normalized_text:
+        score += 20
+    if display_key and display_key in normalized_text:
+        score += 16
+
+    open_air = {"plateau", "camp", "valley", "trail", "gorge", "canyon", "mountain", "landscape"}
+    enclosed = {"cave", "chamber", "room", "interior", "cell"}
+    cosmic = {"void", "space", "cosmic", "darkness"}
+    if beat_tokens & cosmic and ref_tokens & cosmic:
+        score += 18
+    if beat_tokens & open_air and ref_tokens & open_air:
+        score += 14
+    if beat_tokens & open_air and ref_tokens & enclosed:
+        score -= 18
+    if beat_tokens & cosmic and not (ref_tokens & cosmic):
+        score -= 24
+    return score
+
+
+def _derive_beat_environment_overrides(
+    scene_contract: dict[str, Any],
+    canonical_refs: list[SceneBindingReference],
+) -> tuple[list[BeatEnvironmentOverride], dict[str, int]]:
+    overrides: list[BeatEnvironmentOverride] = []
+    counts: dict[str, int] = {}
+    beat_list = scene_contract.get("beat_list", [])
+    if not isinstance(beat_list, list) or len(canonical_refs) < 2:
+        return overrides, counts
+
+    for item in beat_list:
+        if not isinstance(item, dict):
+            continue
+        beat_id = str(item.get("beat_id", "")).strip().upper()
+        if not beat_id:
+            continue
+        best_ref: SceneBindingReference | None = None
+        best_score = 0
+        for ref in canonical_refs:
+            score = _beat_environment_score(ref, item)
+            if score > best_score:
+                best_score = score
+                best_ref = ref
+        if best_ref is None or best_score < 18:
+            continue
+        if best_ref.canonical_id:
+            counts[best_ref.canonical_id] = counts.get(best_ref.canonical_id, 0) + 1
+        overrides.append(
+            BeatEnvironmentOverride(
+                beat_id=beat_id,
+                environment=best_ref,
+                reason=f"Beat environment matched {best_ref.canonical_id or best_ref.display_name or best_ref.label} from beat subzone/spatial context.",
+            )
+        )
+    return overrides, counts
+
+
 def _append_future_environment_request(
     requests: list[FutureEnvironmentRequest],
     *,
@@ -303,7 +420,7 @@ def _resolve_environment_binding(
     *,
     scene_contract: dict[str, Any],
     chapter_fallback: SceneBindingReference | None,
-) -> tuple[str, SceneBindingReference | None, list[str], list[str], list[str], list[FutureEnvironmentRequest]]:
+) -> tuple[str, SceneBindingReference | None, list[BeatEnvironmentOverride], list[str], list[str], list[str], list[FutureEnvironmentRequest]]:
     scene_id = str(scene_contract.get("scene_id", "")).strip().upper()
     chapter_id = str(scene_contract.get("chapter_id", "")).strip().upper() or scene_id[:5]
     evidence_refs = scene_contract.get("evidence_refs", []) if isinstance(scene_contract.get("evidence_refs"), list) else []
@@ -319,16 +436,24 @@ def _resolve_environment_binding(
 
     canonical_refs = [ref for ref in refs if ref.canonical_id and ref.status == "canonical"]
     canonical_ids = {ref.canonical_id for ref in canonical_refs if ref.canonical_id}
+    beat_environment_overrides, beat_counts = _derive_beat_environment_overrides(scene_contract, canonical_refs)
 
     if len(canonical_ids) == 1 and canonical_refs:
         chosen = sorted(canonical_refs, key=_candidate_sort_key, reverse=True)[0]
-        return "scene_level", chosen, candidate_environment_ids, review_flags, notes, future_requests
+        return "scene_level", chosen, beat_environment_overrides, candidate_environment_ids, review_flags, notes, future_requests
 
     if len(canonical_ids) > 1:
-        chosen = sorted(canonical_refs, key=_candidate_sort_key, reverse=True)[0]
+        chosen = sorted(
+            canonical_refs,
+            key=lambda ref: (beat_counts.get(ref.canonical_id or "", 0),) + _candidate_sort_key(ref),
+            reverse=True,
+        )[0]
         review_flags.append("multiple_scene_environment_candidates")
-        notes.append("Multiple canonical environments were listed; chose the highest-confidence scene-level environment.")
-        return "scene_level", chosen, candidate_environment_ids, review_flags, notes, future_requests
+        if beat_environment_overrides:
+            notes.append("Multiple canonical environments were listed; chose the dominant beat-matched environment and stored per-beat overrides.")
+        else:
+            notes.append("Multiple canonical environments were listed; chose the highest-confidence scene-level environment.")
+        return "scene_level", chosen, beat_environment_overrides, candidate_environment_ids, review_flags, notes, future_requests
 
     for ref in refs:
         if not ref.canonical_id:
@@ -345,7 +470,7 @@ def _resolve_environment_binding(
     if chapter_fallback and chapter_fallback.canonical_id:
         notes.append("Inherited chapter-level environment because the scene did not resolve a canonical environment.")
         review_flags.append("scene_environment_used_chapter_fallback")
-        return "chapter_fallback", chapter_fallback, candidate_environment_ids, review_flags, notes, future_requests
+        return "chapter_fallback", chapter_fallback, beat_environment_overrides, candidate_environment_ids, review_flags, notes, future_requests
 
     unresolved = refs[0] if refs else None
     if unresolved:
@@ -353,7 +478,7 @@ def _resolve_environment_binding(
     else:
         notes.append("Scene contract did not provide an environment reference.")
     review_flags.append("scene_environment_unresolved")
-    return "unresolved", unresolved, candidate_environment_ids, review_flags, notes, future_requests
+    return "unresolved", unresolved, beat_environment_overrides, candidate_environment_ids, review_flags, notes, future_requests
 
 
 def _render_scene_binding_markdown(binding: SceneBinding) -> str:
@@ -596,7 +721,7 @@ def run_scene_binding_synthesis(
                 if isinstance(item, dict)
             ]
         )
-        binding_mode, resolved_environment, candidate_environment_ids, review_flags, notes, scene_requests = _resolve_environment_binding(
+        binding_mode, resolved_environment, beat_environment_overrides, candidate_environment_ids, review_flags, notes, scene_requests = _resolve_environment_binding(
             scene_contract=scene_contract,
             chapter_fallback=chapter_environment_cache.get(chapter_id),
         )
@@ -630,7 +755,7 @@ def run_scene_binding_synthesis(
             binding_mode=binding_mode,
             resolved_characters=resolved_characters,
             resolved_environment=resolved_environment,
-            beat_environment_overrides=[],
+            beat_environment_overrides=beat_environment_overrides,
             candidate_environment_ids=candidate_environment_ids,
             future_environment_requests=scene_requests,
             review_flags=review_flags,

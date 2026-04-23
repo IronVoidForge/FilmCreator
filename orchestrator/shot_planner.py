@@ -339,6 +339,33 @@ def _label_variants(value: str) -> list[str]:
     return variants
 
 
+def _meaningful_tokens(value: str) -> set[str]:
+    stopwords = {
+        "the",
+        "and",
+        "for",
+        "with",
+        "from",
+        "into",
+        "near",
+        "site",
+        "scene",
+        "area",
+        "space",
+        "place",
+        "through",
+        "under",
+        "over",
+        "within",
+        "floor",
+    }
+    return {
+        token
+        for token in re.findall(r"[a-z0-9]+", str(value or "").lower())
+        if len(token) > 2 and token not in stopwords and not token.isdigit()
+    }
+
+
 def _best_display_label(ref: "ShotReference") -> str:
     return _first_nonempty(ref.display_name, ref.label, fallback="")
 
@@ -627,14 +654,175 @@ def _environment_override_for_beat(scene_binding: dict[str, Any], beat_id: str) 
     return None
 
 
-def _select_environment_ref(scene_contract: dict[str, Any], project_dir: Path, scene_binding: dict[str, Any] | None = None, beat_id: str = "") -> ShotReference:
+def _load_local_environment_entries(project_dir: Path, chapter_id: str) -> dict[str, dict[str, Any]]:
+    path = project_dir / "02_story_analysis" / "world" / "local" / f"{chapter_id.upper()}_ENVIRONMENT_REGISTRY.json"
+    if not path.exists():
+        return {}
+    payload = read_json(path)
+    if not isinstance(payload, dict):
+        return {}
+    return {canonical_id: entry for canonical_id, entry in payload.items() if isinstance(canonical_id, str) and isinstance(entry, dict)}
+
+
+def _local_environment_from_hint(
+    scene_contract: dict[str, Any],
+    project_dir: Path,
+    *,
+    beat_id: str,
+    subzone_hint: str,
+) -> ShotReference | None:
+    chapter_id = str(scene_contract.get("chapter_id", "")).strip().upper()
+    if not chapter_id:
+        return None
+
+    hints: list[str] = [subzone_hint]
+    for item in scene_contract.get("beat_list", []):
+        if not isinstance(item, dict):
+            continue
+        if str(item.get("beat_id", "")).strip().upper() != beat_id.upper():
+            continue
+        hints.extend(
+            [
+                str(item.get("environment_subzone", "")),
+                str(item.get("spatial_context", "")),
+                str(item.get("summary", "")),
+            ]
+        )
+        break
+    hint_text = " ".join(text for text in hints if str(text).strip())
+    hint_tokens = _meaningful_tokens(hint_text)
+    if not hint_tokens:
+        return None
+
+    best_ref: ShotReference | None = None
+    best_score = 0
+    for canonical_id, entry in _load_local_environment_entries(project_dir, chapter_id).items():
+        entry_tokens = _meaningful_tokens(canonical_id.replace("_", " "))
+        entry_tokens |= _meaningful_tokens(str(entry.get("display_name", "")))
+        for alias in entry.get("aliases", []):
+            if isinstance(alias, str):
+                entry_tokens |= _meaningful_tokens(alias)
+        for source_path in entry.get("sources", []):
+            if isinstance(source_path, str):
+                entry_tokens |= _meaningful_tokens(Path(source_path).stem.replace("_", " "))
+        overlap = len(hint_tokens & entry_tokens)
+        score = overlap * 12
+        normalized_hint = _normalize_match_key(hint_text)
+        canonical_key = _normalize_match_key(canonical_id)
+        if canonical_key and canonical_key in normalized_hint:
+            score += 20
+        if {"plateau", "camp"} <= hint_tokens and {"plateau", "camp"} <= entry_tokens:
+            score += 20
+        if {"valley", "floor"} <= hint_tokens and {"gold", "vein"} & entry_tokens:
+            score += 8
+        if {"void", "space"} & hint_tokens and {"void", "space"} & entry_tokens:
+            score += 20
+        if score > best_score:
+            best_score = score
+            best_ref = _binding_ref_to_shot_reference(
+                {
+                    "label": str(entry.get("display_name", canonical_id)),
+                    "canonical_id": canonical_id,
+                    "display_name": str(entry.get("display_name", canonical_id)),
+                    "status": str(entry.get("status", "canonical")),
+                    "entity_kind": str(entry.get("entity_kind", "environment")),
+                    "source_path": (entry.get("sources", []) or [""])[0],
+                    "notes": f"Chapter-local beat subzone match for '{subzone_hint or beat_id}'.",
+                },
+                project_dir,
+                kind="environment",
+            )
+    return best_ref if best_ref and best_score >= 20 else None
+
+
+def _select_scene_contract_environment_for_beat(
+    scene_contract: dict[str, Any],
+    project_dir: Path,
+    beat_id: str,
+) -> ShotReference | None:
+    environment_refs = scene_contract.get("environments_required", [])
+    if not isinstance(environment_refs, list):
+        return None
+    canonical_refs: list[ShotReference] = []
+    for raw_ref in environment_refs:
+        if not isinstance(raw_ref, dict):
+            continue
+        canonical_id = _normalize_optional_canonical_id(raw_ref.get("canonical_id"))
+        status = str(raw_ref.get("status", "review"))
+        if canonical_id and status == "canonical":
+            canonical_refs.append(_binding_ref_to_shot_reference(raw_ref, project_dir, kind="environment"))
+    if len(canonical_refs) < 2 or not beat_id:
+        return None
+
+    beat_payload: dict[str, Any] | None = None
+    for item in scene_contract.get("beat_list", []):
+        if not isinstance(item, dict):
+            continue
+        if str(item.get("beat_id", "")).strip().upper() == beat_id.upper():
+            beat_payload = item
+            break
+    if beat_payload is None:
+        return None
+
+    beat_text = " ".join(
+        str(item)
+        for item in [
+            beat_payload.get("summary", ""),
+            beat_payload.get("spatial_context", ""),
+            beat_payload.get("environment_subzone", ""),
+            beat_payload.get("blocking_hint", ""),
+            beat_payload.get("coverage_hint", ""),
+        ]
+        if str(item).strip()
+    )
+    beat_tokens = _meaningful_tokens(beat_text)
+    if not beat_tokens:
+        return None
+
+    best_ref: ShotReference | None = None
+    best_score = 0
+    for ref in canonical_refs:
+        ref_tokens = _meaningful_tokens(ref.label) | _meaningful_tokens(ref.display_name) | _meaningful_tokens(ref.canonical_id or "")
+        source_name = Path(ref.source_path).stem.replace("_", " ")
+        ref_tokens |= _meaningful_tokens(source_name)
+        overlap = len(beat_tokens & ref_tokens)
+        score = overlap * 12
+        beat_key = _normalize_match_key(beat_text)
+        if ref.canonical_id and _normalize_match_key(ref.canonical_id) in beat_key:
+            score += 20
+        if ref.display_name and _normalize_match_key(ref.display_name) in beat_key:
+            score += 16
+        if score > best_score:
+            best_score = score
+            best_ref = ref
+    return best_ref if best_ref and best_score >= 18 else None
+
+
+def _select_environment_ref(
+    scene_contract: dict[str, Any],
+    project_dir: Path,
+    scene_binding: dict[str, Any] | None = None,
+    beat_id: str = "",
+    subzone_hint: str = "",
+) -> ShotReference:
     if isinstance(scene_binding, dict) and scene_binding:
         override = _environment_override_for_beat(scene_binding, beat_id)
         if isinstance(override, dict):
             return _binding_ref_to_shot_reference(override, project_dir, kind="environment")
+        local_override = _local_environment_from_hint(scene_contract, project_dir, beat_id=beat_id, subzone_hint=subzone_hint)
+        if local_override is not None:
+            return local_override
         resolved_environment = scene_binding.get("resolved_environment")
         if isinstance(resolved_environment, dict):
             return _binding_ref_to_shot_reference(resolved_environment, project_dir, kind="environment")
+
+    local_override = _local_environment_from_hint(scene_contract, project_dir, beat_id=beat_id, subzone_hint=subzone_hint)
+    if local_override is not None:
+        return local_override
+
+    contract_override = _select_scene_contract_environment_for_beat(scene_contract, project_dir, beat_id)
+    if contract_override is not None:
+        return contract_override
 
     environment_refs = scene_contract.get("environments_required", [])
     if not isinstance(environment_refs, list) or not environment_refs:
@@ -1306,7 +1494,13 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
             beat_payload["action_start"] = beat_summary
             beat_payload["action_end"] = beat_summary
         planned_shot = planned_shots.get(shot_id, {})
-        environment = _select_environment_ref(scene_contract, project_dir, scene_binding=scene_binding, beat_id=beat_id)
+        environment = _select_environment_ref(
+            scene_contract,
+            project_dir,
+            scene_binding=scene_binding,
+            beat_id=beat_id,
+            subzone_hint=_first_nonempty(str(planned_shot.get("environment_subzone", "")), str(beat_payload.get("environment_subzone", "")), fallback=""),
+        )
         provisional_shot_type = _shot_type_from_beat(scene_contract, beat_payload, index)
         subject_hints = _coerce_string_list(
             planned_shot.get("primary_subject_seed", ""),
