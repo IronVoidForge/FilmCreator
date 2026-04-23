@@ -16,7 +16,7 @@ from .lmstudio_client import LMStudioClient
 from .scaffold import create_project
 from .settings import load_runtime_settings
 
-SHOT_PLANNER_SCHEMA_VERSION = "2026-04-22-shot-planner-v2"
+SHOT_PLANNER_SCHEMA_VERSION = "2026-04-23-shot-planner-v3"
 
 SHOT_SIZE_ENUM = {"extreme_wide", "wide", "full", "medium_full", "medium", "medium_close", "close_up", "extreme_close_up", "insert_detail"}
 CAMERA_ANGLE_ENUM = {"eye_level", "low_angle", "high_angle", "overhead", "dutch"}
@@ -97,6 +97,7 @@ class ShotPackage:
     next_shot_id: str = ""
     primary_subject: str = ""
     secondary_subjects: list[str] = field(default_factory=list)
+    shot_moment_summary: str = ""
     start_state: str = ""
     end_state: str = ""
     action_during_shot: str = ""
@@ -112,6 +113,16 @@ class ShotPackage:
     subject_visibility: str = ""
     narration_mode: str = ""
     primary_subject_angle: str = ""
+    visible_primary_subject_id: str = ""
+    visible_secondary_subject_ids: list[str] = field(default_factory=list)
+    primary_subject_frame_position: str = ""
+    primary_subject_scale_relation: str = ""
+    primary_subject_facing_direction: str = ""
+    primary_subject_pose_description: str = ""
+    subject_relation_summary: str = ""
+    required_environment_anchor_1: str = ""
+    required_scale_proof_detail: str = ""
+    camera_package_description: str = ""
     subject_blocking: list[str] = field(default_factory=list)
     camera_relative_positions: list[str] = field(default_factory=list)
     gaze_directions: list[str] = field(default_factory=list)
@@ -141,6 +152,7 @@ class ShotPackage:
             "next_shot_id": self.next_shot_id,
             "primary_subject": self.primary_subject,
             "secondary_subjects": self.secondary_subjects,
+            "shot_moment_summary": self.shot_moment_summary,
             "start_state": self.start_state,
             "end_state": self.end_state,
             "action_during_shot": self.action_during_shot,
@@ -156,6 +168,16 @@ class ShotPackage:
             "subject_visibility": self.subject_visibility,
             "narration_mode": self.narration_mode,
             "primary_subject_angle": self.primary_subject_angle,
+            "visible_primary_subject_id": self.visible_primary_subject_id,
+            "visible_secondary_subject_ids": self.visible_secondary_subject_ids,
+            "primary_subject_frame_position": self.primary_subject_frame_position,
+            "primary_subject_scale_relation": self.primary_subject_scale_relation,
+            "primary_subject_facing_direction": self.primary_subject_facing_direction,
+            "primary_subject_pose_description": self.primary_subject_pose_description,
+            "subject_relation_summary": self.subject_relation_summary,
+            "required_environment_anchor_1": self.required_environment_anchor_1,
+            "required_scale_proof_detail": self.required_scale_proof_detail,
+            "camera_package_description": self.camera_package_description,
             "subject_blocking": self.subject_blocking,
             "camera_relative_positions": self.camera_relative_positions,
             "gaze_directions": self.gaze_directions,
@@ -748,6 +770,113 @@ def _default_primary_subject_angle(primary_subject: str, shot_size: str, subject
     return "front_three_quarter_left"
 
 
+def _angle_to_facing_direction(primary_subject_angle: str, subject_visibility: str) -> str:
+    if subject_visibility == "off_screen_voice":
+        return "off-screen voice only"
+    mapping = {
+        "front": "facing directly toward camera",
+        "front_three_quarter_left": "front three-quarter left toward the scene action",
+        "front_three_quarter_right": "front three-quarter right toward the scene action",
+        "profile_left": "profile left toward the scene action",
+        "profile_right": "profile right toward the scene action",
+        "rear_three_quarter_left": "rear three-quarter left away from camera",
+        "rear_three_quarter_right": "rear three-quarter right away from camera",
+        "back": "back to camera with head turned toward the action",
+    }
+    return mapping.get(primary_subject_angle, "angled toward the scene action")
+
+
+def _camera_package_description(
+    shot_size: str,
+    camera_angle: str,
+    lens_family: str,
+    camera_motion: str,
+    zoom_behavior: str,
+    focus_strategy: str,
+    lighting_style: str,
+) -> str:
+    parts = [
+        shot_size.replace("_", "-") if shot_size else "",
+        camera_angle.replace("_", " ") if camera_angle else "",
+        f"{lens_family.replace('_', '-')} lens" if lens_family else "",
+        camera_motion.replace("_", " ") if camera_motion else "",
+        f"zoom {zoom_behavior.replace('_', ' ')}" if zoom_behavior and zoom_behavior != "none" else "",
+        focus_strategy.replace("_", " ") if focus_strategy else "",
+        lighting_style.replace("_", " ") if lighting_style else "",
+    ]
+    return _compact_snippet(", ".join(part for part in parts if part), limit=180)
+
+
+def _visible_primary_subject_id(primary_subject: str, characters: list[ShotReference], subject_visibility: str) -> str:
+    if subject_visibility == "off_screen_voice" or primary_subject.strip().lower() == "the narrator":
+        for ref in characters:
+            canonical_id = (ref.canonical_id or "").strip()
+            if canonical_id:
+                return canonical_id
+        return ""
+    normalized_primary = primary_subject.strip().lower()
+    for ref in characters:
+        canonical_id = (ref.canonical_id or "").strip()
+        if canonical_id and canonical_id.lower() == normalized_primary:
+            return canonical_id
+        if normalized_primary and normalized_primary in {ref.label.strip().lower(), ref.display_name.strip().lower()}:
+            return canonical_id or normalized_primary
+    for ref in characters:
+        canonical_id = (ref.canonical_id or "").strip()
+        if canonical_id:
+            return canonical_id
+    return normalized_primary
+
+
+def _visible_secondary_subject_ids(primary_subject_id: str, characters: list[ShotReference]) -> list[str]:
+    secondary: list[str] = []
+    for ref in characters:
+        canonical_id = (ref.canonical_id or "").strip()
+        if not canonical_id or canonical_id == primary_subject_id:
+            continue
+        secondary.append(canonical_id)
+    return _ordered_unique(secondary)[:3]
+
+
+def _primary_subject_frame_position(
+    shot_size: str,
+    environment_subzone: str,
+    subject_visibility: str,
+    shot_order: int,
+) -> str:
+    if subject_visibility == "off_screen_voice":
+        return "off-screen voice with no visible body"
+    subzone = environment_subzone or "active playing area"
+    if shot_size in {"extreme_wide", "wide"}:
+        return f"midground inside {subzone}"
+    if shot_size in {"medium_close", "close_up", "extreme_close_up"}:
+        return f"foreground inside {subzone}"
+    if shot_order == 1:
+        return f"foreground entry line within {subzone}"
+    return f"foreground right within {subzone}"
+
+
+def _primary_subject_scale_relation(
+    scene_contract: dict[str, Any],
+    planned_shot: dict[str, Any],
+    environment: ShotReference,
+) -> str:
+    return _first_nonempty(
+        str(planned_shot.get("planned_shot_scale_proof_detail", "")),
+        str(scene_contract.get("scene_primary_scale_story_point", "")),
+        str(environment.notes or ""),
+        fallback="preserve readable scale hierarchy inside the frame",
+    )
+
+
+def _subject_relation_summary(primary_subject: str, secondary_subjects: list[str], subject_visibility: str) -> str:
+    if subject_visibility == "off_screen_voice":
+        return "visible bodies should carry the scene while narration remains off-screen"
+    if secondary_subjects:
+        return f"{primary_subject} plays against {', '.join(secondary_subjects[:2])} in the same frame"
+    return f"{primary_subject} carries the frame alone"
+
+
 def _default_shot_enums(shot_type: str, primary_subject: str) -> dict[str, str]:
     shot_type_normalized = shot_type.strip().lower()
     if shot_type_normalized == "insert_detail":
@@ -864,6 +993,7 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
             beat_payload["active_subjects"][0] if beat_payload["active_subjects"] else "",
             _first_nonempty(characters[0].display_name if characters else "", characters[0].label if characters else "", fallback="scene subject"),
         )
+        secondary_subjects = _coerce_string_list(planned_shot.get("secondary_subjects_seed", []), beat_payload.get("passive_subjects", []))
         enums = _default_shot_enums(shot_type, primary_subject)
         shot_size = _normalize_enum(planned_shot.get("shot_size"), SHOT_SIZE_ENUM, fallback=enums["shot_size"])
         camera_angle = _normalize_enum(planned_shot.get("camera_angle"), CAMERA_ANGLE_ENUM, fallback=enums["camera_angle"])
@@ -885,6 +1015,33 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
         camera_positions = _camera_relative_positions(characters, environment, beat_payload)
         subzone = _first_nonempty(str(planned_shot.get("environment_subzone", "")), str(beat_payload.get("environment_subzone", "")), *scene_contract.get("environment_subzones", []), fallback="")
         visible_environment_features = _visible_environment_features(environment, beat_payload)
+        visible_primary_subject_id = _visible_primary_subject_id(primary_subject, characters, subject_visibility)
+        visible_secondary_subject_ids = _visible_secondary_subject_ids(visible_primary_subject_id, characters)
+        primary_subject_frame_position = _primary_subject_frame_position(shot_size, subzone, subject_visibility, index)
+        primary_subject_scale_relation = _primary_subject_scale_relation(scene_contract, planned_shot, environment)
+        primary_subject_facing_direction = _angle_to_facing_direction(primary_subject_angle, subject_visibility)
+        primary_subject_pose_description = _first_nonempty(start_state, action_during_shot, fallback="")
+        subject_relation_summary = _subject_relation_summary(primary_subject, secondary_subjects, subject_visibility)
+        required_environment_anchor_1 = _first_nonempty(
+            str(planned_shot.get("planned_shot_required_anchor_1", "")),
+            visible_environment_features[0] if visible_environment_features else "",
+            subzone,
+            fallback="",
+        )
+        required_scale_proof_detail = _first_nonempty(
+            str(planned_shot.get("planned_shot_scale_proof_detail", "")),
+            primary_subject_scale_relation,
+            fallback="",
+        )
+        camera_package_description = _camera_package_description(
+            shot_size,
+            camera_angle,
+            lens_family,
+            camera_motion,
+            zoom_behavior,
+            focus_strategy,
+            lighting_style,
+        )
         prompt_seed = _prompt_seed(
             shot_title=shot_title,
             shot_type=shot_type,
@@ -908,8 +1065,13 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
                 "shot_id": shot_id,
                 "shot_order": index,
                 "beat_ids": [beat_id],
+                "shot_moment_summary": _first_nonempty(
+                    str(planned_shot.get("planned_shot_moment_summary", "")),
+                    beat_summary,
+                    fallback="",
+                ),
                 "primary_subject": primary_subject,
-                "secondary_subjects": _coerce_string_list(planned_shot.get("secondary_subjects_seed", []), beat_payload.get("passive_subjects", [])),
+                "secondary_subjects": secondary_subjects,
                 "start_state": start_state,
                 "end_state": end_state,
                 "action_during_shot": action_during_shot,
@@ -925,6 +1087,16 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
                 "subject_visibility": subject_visibility,
                 "narration_mode": narration_mode,
                 "primary_subject_angle": primary_subject_angle,
+                "visible_primary_subject_id": visible_primary_subject_id,
+                "visible_secondary_subject_ids": visible_secondary_subject_ids,
+                "primary_subject_frame_position": primary_subject_frame_position,
+                "primary_subject_scale_relation": primary_subject_scale_relation,
+                "primary_subject_facing_direction": primary_subject_facing_direction,
+                "primary_subject_pose_description": primary_subject_pose_description,
+                "subject_relation_summary": subject_relation_summary,
+                "required_environment_anchor_1": required_environment_anchor_1,
+                "required_scale_proof_detail": required_scale_proof_detail,
+                "camera_package_description": camera_package_description,
                 "subject_blocking": subject_blocking,
                 "camera_relative_positions": camera_positions,
                 "gaze_directions": [f"{primary_subject} focuses toward the active scene action."] if primary_subject else [],
@@ -1078,6 +1250,13 @@ PRIORITIES:
 3. keep each shot compact and production-usable
 4. preserve continuity constraints and character/environment grounding
 5. make start state, end state, blocking, and action handoff explicit enough to stage a frame
+6. return prompt-ready visual fragments, not generic summaries
+
+STYLE RULES:
+- prefer short visual clauses over abstract commentary
+- do not write filler like "maintain readability" or "continue the established action"
+- choose one concrete environment anchor when possible
+- if scale matters, describe the scale proof explicitly
 
 PROJECT:
 {project_slug}
@@ -1121,6 +1300,7 @@ primary_subject: <main subject driving the shot>
 secondary_subjects:
 - subject 2
 - subject 3
+shot_moment_summary: <short visible frame summary>
 start_state: <explicit visual/action state at the start of the shot>
 end_state: <explicit visual/action state at the end of the shot>
 action_during_shot: <what the shot is actively covering>
@@ -1137,6 +1317,17 @@ lighting_style: <soft_even|hard_directional|high_contrast_ceremonial|diffuse_amb
 subject_visibility: <on_screen|partial|silhouette|off_screen_voice|implied_only>
 narration_mode: <none|voiceover_off_screen|in_scene_speaker|internal_monologue>
 primary_subject_angle: <front|front_three_quarter_left|front_three_quarter_right|profile_left|profile_right|rear_three_quarter_left|rear_three_quarter_right|back>
+visible_primary_subject_id: <canonical id or visible role token>
+visible_secondary_subject_ids:
+- canonical id
+primary_subject_frame_position: <short frame placement clause>
+primary_subject_scale_relation: <short scale relation clause>
+primary_subject_facing_direction: <short facing direction clause>
+primary_subject_pose_description: <short pose clause>
+subject_relation_summary: <short relation clause>
+required_environment_anchor_1: <short required anchor clause>
+required_scale_proof_detail: <short scale proof clause>
+camera_package_description: <single compact camera package clause>
 camera_description: <camera note>
 composition: <composition note>
 characters_in_frame:
@@ -1185,6 +1376,7 @@ shot_notes: <optional short note>
                     "beat_ids": _coerce_string_list(lists.get("beat_ids"), scalars.get("beat_ids")),
                     "primary_subject": _first_nonempty(scalars.get("primary_subject"), fallback=""),
                     "secondary_subjects": _coerce_string_list(lists.get("secondary_subjects"), scalars.get("secondary_subjects")),
+                    "shot_moment_summary": _first_nonempty(scalars.get("shot_moment_summary"), fallback=""),
                     "start_state": _first_nonempty(scalars.get("start_state"), fallback=""),
                     "end_state": _first_nonempty(scalars.get("end_state"), fallback=""),
                     "action_during_shot": _first_nonempty(scalars.get("action_during_shot"), fallback=""),
@@ -1202,6 +1394,16 @@ shot_notes: <optional short note>
                     "subject_visibility": _first_nonempty(scalars.get("subject_visibility"), fallback=""),
                     "narration_mode": _first_nonempty(scalars.get("narration_mode"), fallback=""),
                     "primary_subject_angle": _first_nonempty(scalars.get("primary_subject_angle"), fallback=""),
+                    "visible_primary_subject_id": _first_nonempty(scalars.get("visible_primary_subject_id"), fallback=""),
+                    "visible_secondary_subject_ids": _coerce_string_list(lists.get("visible_secondary_subject_ids"), scalars.get("visible_secondary_subject_ids")),
+                    "primary_subject_frame_position": _first_nonempty(scalars.get("primary_subject_frame_position"), fallback=""),
+                    "primary_subject_scale_relation": _first_nonempty(scalars.get("primary_subject_scale_relation"), fallback=""),
+                    "primary_subject_facing_direction": _first_nonempty(scalars.get("primary_subject_facing_direction"), fallback=""),
+                    "primary_subject_pose_description": _first_nonempty(scalars.get("primary_subject_pose_description"), fallback=""),
+                    "subject_relation_summary": _first_nonempty(scalars.get("subject_relation_summary"), fallback=""),
+                    "required_environment_anchor_1": _first_nonempty(scalars.get("required_environment_anchor_1"), fallback=""),
+                    "required_scale_proof_detail": _first_nonempty(scalars.get("required_scale_proof_detail"), fallback=""),
+                    "camera_package_description": _first_nonempty(scalars.get("camera_package_description"), fallback=""),
                     "camera_description": _first_nonempty(scalars.get("camera_description"), fallback=""),
                     "composition": _first_nonempty(scalars.get("composition"), fallback=""),
                     "characters_in_frame": _coerce_string_list(lists.get("characters_in_frame"), scalars.get("characters_in_frame")),
@@ -1234,6 +1436,7 @@ def _parse_shot_plan_blueprint(payload: dict[str, Any]) -> dict[str, Any]:
         "shot_order": int(payload.get("shot_order", 0) or 0),
         "primary_subject": str(payload.get("primary_subject", "")),
         "secondary_subjects": _coerce_string_list(payload.get("secondary_subjects", [])),
+        "shot_moment_summary": str(payload.get("shot_moment_summary", "")),
         "start_state": str(payload.get("start_state", "")),
         "end_state": str(payload.get("end_state", "")),
         "action_during_shot": str(payload.get("action_during_shot", "")),
@@ -1251,6 +1454,16 @@ def _parse_shot_plan_blueprint(payload: dict[str, Any]) -> dict[str, Any]:
         "subject_visibility": str(payload.get("subject_visibility", "")),
         "narration_mode": str(payload.get("narration_mode", "")),
         "primary_subject_angle": str(payload.get("primary_subject_angle", "")),
+        "visible_primary_subject_id": str(payload.get("visible_primary_subject_id", "")),
+        "visible_secondary_subject_ids": _coerce_string_list(payload.get("visible_secondary_subject_ids", [])),
+        "primary_subject_frame_position": str(payload.get("primary_subject_frame_position", "")),
+        "primary_subject_scale_relation": str(payload.get("primary_subject_scale_relation", "")),
+        "primary_subject_facing_direction": str(payload.get("primary_subject_facing_direction", "")),
+        "primary_subject_pose_description": str(payload.get("primary_subject_pose_description", "")),
+        "subject_relation_summary": str(payload.get("subject_relation_summary", "")),
+        "required_environment_anchor_1": str(payload.get("required_environment_anchor_1", "")),
+        "required_scale_proof_detail": str(payload.get("required_scale_proof_detail", "")),
+        "camera_package_description": str(payload.get("camera_package_description", "")),
         "camera_description": str(payload.get("camera_description", "")),
         "composition": str(payload.get("composition", "")),
         "target_seconds": _coerce_float(payload.get("target_seconds"), payload.get("estimated_seconds"), fallback=0.0) or None,
@@ -1335,6 +1548,18 @@ def _shot_needs_review(package: ShotPackage) -> bool:
         ]
     ):
         return True
+    if not all(
+        [
+            package.visible_primary_subject_id,
+            package.primary_subject_frame_position,
+            package.primary_subject_scale_relation,
+            package.primary_subject_facing_direction or package.subject_visibility == "off_screen_voice",
+            package.primary_subject_pose_description,
+            package.required_environment_anchor_1,
+            package.camera_package_description,
+        ]
+    ):
+        return True
     normalized_primary = package.primary_subject.strip().lower()
     if normalized_primary == "the narrator" and (
         package.subject_visibility != "off_screen_voice" or package.narration_mode != "voiceover_off_screen"
@@ -1356,6 +1581,10 @@ def _shot_needs_review(package: ShotPackage) -> bool:
         package.pose_anchor_frame,
         package.pose_end_frame,
         package.environment_subzone,
+        package.primary_subject_frame_position,
+        package.primary_subject_scale_relation,
+        package.subject_relation_summary,
+        package.required_environment_anchor_1,
     ]
     normalized_texts = [" ".join(text.lower().split()) for text in text_fields if isinstance(text, str) and text.strip()]
     if any(any(marker in text for marker in placeholder_markers) for text in normalized_texts):
@@ -1389,11 +1618,23 @@ def _render_shot_package_markdown(package: ShotPackage) -> str:
         f"- subject_visibility: `{package.subject_visibility or '(none)'}`",
         f"- narration_mode: `{package.narration_mode or '(none)'}`",
         f"- primary_subject_angle: `{package.primary_subject_angle or '(none)'}`",
+        f"- visible_primary_subject_id: `{package.visible_primary_subject_id or '(none)'}`",
         f"- target_seconds: `{package.target_seconds}`",
         "",
         "## Camera",
         "",
         package.camera_description or "(none)",
+        "",
+        "## Prompt Variables",
+        "",
+        f"- primary_subject_frame_position: {package.primary_subject_frame_position or '(none)'}",
+        f"- primary_subject_scale_relation: {package.primary_subject_scale_relation or '(none)'}",
+        f"- primary_subject_facing_direction: {package.primary_subject_facing_direction or '(none)'}",
+        f"- primary_subject_pose_description: {package.primary_subject_pose_description or '(none)'}",
+        f"- subject_relation_summary: {package.subject_relation_summary or '(none)'}",
+        f"- required_environment_anchor_1: {package.required_environment_anchor_1 or '(none)'}",
+        f"- required_scale_proof_detail: {package.required_scale_proof_detail or '(none)'}",
+        f"- camera_package_description: {package.camera_package_description or '(none)'}",
         "",
         "## Composition",
         "",
@@ -1402,6 +1643,7 @@ def _render_shot_package_markdown(package: ShotPackage) -> str:
         "## Action State",
         "",
         f"- primary_subject: {package.primary_subject or '(none)'}",
+        f"- shot_moment_summary: {package.shot_moment_summary or '(none)'}",
         f"- start_state: {package.start_state or '(none)'}",
         f"- end_state: {package.end_state or '(none)'}",
         f"- action_during_shot: {package.action_during_shot or '(none)'}",
@@ -1442,6 +1684,9 @@ def _render_shot_package_markdown(package: ShotPackage) -> str:
         lines.extend([f"- {ref.display_name or ref.label} (`{ref.canonical_id or ref.label}`)" for ref in characters])
     else:
         lines.append("- (none)")
+    if package.visible_secondary_subject_ids:
+        lines.extend(["", "### Visible Secondary Subject IDs", ""])
+        lines.extend([f"- `{item}`" for item in package.visible_secondary_subject_ids])
     lines.extend(
         [
             "",
@@ -1710,6 +1955,7 @@ def run_shot_planning(
             if not blueprint_payload.get("shot_type"):
                 blueprint_payload["shot_type"] = str(blueprint.get("shot_type", "medium"))
             for key in [
+                "shot_moment_summary",
                 "primary_subject",
                 "start_state",
                 "end_state",
@@ -1726,6 +1972,15 @@ def run_shot_planning(
                 "subject_visibility",
                 "narration_mode",
                 "primary_subject_angle",
+                "visible_primary_subject_id",
+                "primary_subject_frame_position",
+                "primary_subject_scale_relation",
+                "primary_subject_facing_direction",
+                "primary_subject_pose_description",
+                "subject_relation_summary",
+                "required_environment_anchor_1",
+                "required_scale_proof_detail",
+                "camera_package_description",
                 "environment_subzone",
                 "continuity_from_previous_shot",
                 "continuity_to_next_shot",
@@ -1736,6 +1991,7 @@ def run_shot_planning(
                     blueprint_payload[key] = str(blueprint.get(key, ""))
             for key in [
                 "secondary_subjects",
+                "visible_secondary_subject_ids",
                 "subject_blocking",
                 "camera_relative_positions",
                 "gaze_directions",
@@ -1817,6 +2073,7 @@ def run_shot_planning(
                 shot_order=int(merged.get("shot_order", len(scene_shots) + 1) or len(scene_shots) + 1),
                 primary_subject=_first_nonempty(merged.get("primary_subject"), fallback=""),
                 secondary_subjects=_coerce_string_list(merged.get("secondary_subjects", [])),
+                shot_moment_summary=_first_nonempty(merged.get("shot_moment_summary"), fallback=""),
                 start_state=_first_nonempty(merged.get("start_state"), fallback=""),
                 end_state=_first_nonempty(merged.get("end_state"), fallback=""),
                 action_during_shot=_first_nonempty(merged.get("action_during_shot"), fallback=""),
@@ -1872,6 +2129,16 @@ def run_shot_planning(
                     PRIMARY_SUBJECT_ANGLE_ENUM,
                     fallback=_normalize_enum(blueprint.get("primary_subject_angle"), PRIMARY_SUBJECT_ANGLE_ENUM, fallback=""),
                 ),
+                visible_primary_subject_id=_first_nonempty(merged.get("visible_primary_subject_id"), fallback=""),
+                visible_secondary_subject_ids=_coerce_string_list(merged.get("visible_secondary_subject_ids", [])),
+                primary_subject_frame_position=_first_nonempty(merged.get("primary_subject_frame_position"), fallback=""),
+                primary_subject_scale_relation=_first_nonempty(merged.get("primary_subject_scale_relation"), fallback=""),
+                primary_subject_facing_direction=_first_nonempty(merged.get("primary_subject_facing_direction"), fallback=""),
+                primary_subject_pose_description=_first_nonempty(merged.get("primary_subject_pose_description"), fallback=""),
+                subject_relation_summary=_first_nonempty(merged.get("subject_relation_summary"), fallback=""),
+                required_environment_anchor_1=_first_nonempty(merged.get("required_environment_anchor_1"), fallback=""),
+                required_scale_proof_detail=_first_nonempty(merged.get("required_scale_proof_detail"), fallback=""),
+                camera_package_description=_first_nonempty(merged.get("camera_package_description"), fallback=""),
                 shot_title=_first_nonempty(merged.get("shot_title"), fallback=f"{scene_title} {shot_id}"),
                 shot_type=_first_nonempty(merged.get("shot_type"), fallback="medium"),
                 camera_description=_first_nonempty(merged.get("camera_description"), fallback="Stable readable framing."),
@@ -1934,6 +2201,56 @@ def run_shot_planning(
                 lighting_style=package.lighting_style,
                 subject_visibility=package.subject_visibility,
                 primary_subject_angle=package.primary_subject_angle or "unspecified",
+            )
+            package.visible_primary_subject_id = package.visible_primary_subject_id or _visible_primary_subject_id(
+                package.primary_subject,
+                package.characters_in_frame,
+                package.subject_visibility,
+            )
+            package.visible_secondary_subject_ids = package.visible_secondary_subject_ids or _visible_secondary_subject_ids(
+                package.visible_primary_subject_id,
+                package.characters_in_frame,
+            )
+            package.primary_subject_frame_position = package.primary_subject_frame_position or _primary_subject_frame_position(
+                package.shot_size,
+                package.environment_subzone,
+                package.subject_visibility,
+                package.shot_order,
+            )
+            package.primary_subject_scale_relation = package.primary_subject_scale_relation or _primary_subject_scale_relation(
+                scene_contract,
+                blueprint,
+                package.environment or environment_ref,
+            )
+            package.primary_subject_facing_direction = package.primary_subject_facing_direction or _angle_to_facing_direction(
+                package.primary_subject_angle,
+                package.subject_visibility,
+            )
+            package.primary_subject_pose_description = package.primary_subject_pose_description or _first_nonempty(
+                package.pose_anchor_frame,
+                package.start_state,
+                package.action_during_shot,
+                fallback="",
+            )
+            package.subject_relation_summary = package.subject_relation_summary or _subject_relation_summary(
+                package.primary_subject,
+                package.secondary_subjects,
+                package.subject_visibility,
+            )
+            package.required_environment_anchor_1 = package.required_environment_anchor_1 or _first_nonempty(
+                package.key_visible_environment_features[0] if package.key_visible_environment_features else "",
+                package.environment_subzone,
+                fallback="",
+            )
+            package.required_scale_proof_detail = package.required_scale_proof_detail or package.primary_subject_scale_relation
+            package.camera_package_description = package.camera_package_description or _camera_package_description(
+                package.shot_size,
+                package.camera_angle,
+                package.lens_family,
+                package.camera_motion,
+                package.zoom_behavior,
+                package.focus_strategy,
+                package.lighting_style,
             )
             package.shot_notes = package.shot_notes or _compact_snippet(str(scene_contract.get("summary", "")), limit=220)
 
@@ -2030,6 +2347,7 @@ def _package_from_existing(existing: dict[str, Any], metadata: ShotPackageMetada
         shot_order=int(existing.get("shot_order", 0) or 0),
         primary_subject=str(existing.get("primary_subject", "")),
         secondary_subjects=_coerce_string_list(existing.get("secondary_subjects", [])),
+        shot_moment_summary=str(existing.get("shot_moment_summary", "")),
         start_state=str(existing.get("start_state", "")),
         end_state=str(existing.get("end_state", "")),
         action_during_shot=str(existing.get("action_during_shot", "")),
@@ -2045,6 +2363,16 @@ def _package_from_existing(existing: dict[str, Any], metadata: ShotPackageMetada
         subject_visibility=_normalize_enum(existing.get("subject_visibility"), SUBJECT_VISIBILITY_ENUM, fallback=""),
         narration_mode=_normalize_enum(existing.get("narration_mode"), NARRATION_MODE_ENUM, fallback=""),
         primary_subject_angle=_normalize_enum(existing.get("primary_subject_angle"), PRIMARY_SUBJECT_ANGLE_ENUM, fallback=""),
+        visible_primary_subject_id=str(existing.get("visible_primary_subject_id", "")),
+        visible_secondary_subject_ids=_coerce_string_list(existing.get("visible_secondary_subject_ids", [])),
+        primary_subject_frame_position=str(existing.get("primary_subject_frame_position", "")),
+        primary_subject_scale_relation=str(existing.get("primary_subject_scale_relation", "")),
+        primary_subject_facing_direction=str(existing.get("primary_subject_facing_direction", "")),
+        primary_subject_pose_description=str(existing.get("primary_subject_pose_description", "")),
+        subject_relation_summary=str(existing.get("subject_relation_summary", "")),
+        required_environment_anchor_1=str(existing.get("required_environment_anchor_1", "")),
+        required_scale_proof_detail=str(existing.get("required_scale_proof_detail", "")),
+        camera_package_description=str(existing.get("camera_package_description", "")),
         shot_title=str(existing.get("shot_title", "")),
         shot_type=str(existing.get("shot_type", "")),
         camera_description=str(existing.get("camera_description", "")),

@@ -21,7 +21,7 @@ from .scaffold import create_project
 from .settings import load_runtime_settings
 from .world_global import global_character_registry_path, global_environment_registry_path
 
-SCENE_CONTRACT_SCHEMA_VERSION = "2026-04-22-scene-contracts-v2"
+SCENE_CONTRACT_SCHEMA_VERSION = "2026-04-23-scene-contracts-v3"
 
 
 @dataclass
@@ -117,11 +117,14 @@ class PlannedShotSeed:
     planned_shot_id: str
     beat_id: str
     narrative_function: str = ""
+    planned_shot_moment_summary: str = ""
     primary_subject_seed: str = ""
     secondary_subjects_seed: list[str] = field(default_factory=list)
     subject_visibility: str = ""
     narration_mode: str = ""
     environment_subzone: str = ""
+    planned_shot_required_anchor_1: str = ""
+    planned_shot_scale_proof_detail: str = ""
     start_state_seed: str = ""
     end_state_seed: str = ""
     action_seed: str = ""
@@ -140,11 +143,14 @@ class PlannedShotSeed:
             "planned_shot_id": self.planned_shot_id,
             "beat_id": self.beat_id,
             "narrative_function": self.narrative_function,
+            "planned_shot_moment_summary": self.planned_shot_moment_summary,
             "primary_subject_seed": self.primary_subject_seed,
             "secondary_subjects_seed": self.secondary_subjects_seed,
             "subject_visibility": self.subject_visibility,
             "narration_mode": self.narration_mode,
             "environment_subzone": self.environment_subzone,
+            "planned_shot_required_anchor_1": self.planned_shot_required_anchor_1,
+            "planned_shot_scale_proof_detail": self.planned_shot_scale_proof_detail,
             "start_state_seed": self.start_state_seed,
             "end_state_seed": self.end_state_seed,
             "action_seed": self.action_seed,
@@ -169,6 +175,9 @@ class SceneContract:
     summary: str
     emotional_arc: str
     production_intent: str
+    scene_short_description: str = ""
+    scene_primary_scale_story_point: str = ""
+    scene_required_anchor_catalog: list[str] = field(default_factory=list)
     scene_start_state: str = ""
     scene_end_state: str = ""
     dominant_action_line: str = ""
@@ -199,6 +208,9 @@ class SceneContract:
             "summary": self.summary,
             "emotional_arc": self.emotional_arc,
             "production_intent": self.production_intent,
+            "scene_short_description": self.scene_short_description,
+            "scene_primary_scale_story_point": self.scene_primary_scale_story_point,
+            "scene_required_anchor_catalog": self.scene_required_anchor_catalog,
             "scene_start_state": self.scene_start_state,
             "scene_end_state": self.scene_end_state,
             "dominant_action_line": self.dominant_action_line,
@@ -818,8 +830,104 @@ def _default_shot_seed_enums(coverage_priority: str, beat_summary: str) -> dict[
     }
 
 
+def _normalize_fragment(text: str, *, limit: int = 120) -> str:
+    collapsed = " ".join(str(text or "").split()).strip(" ,;")
+    if not collapsed:
+        return ""
+    if len(collapsed) <= limit:
+        return collapsed
+    return collapsed[: limit - 3].rstrip(" ,;") + "..."
+
+
+def _scene_short_description(summary: str, purpose: str, emotional_arc: str) -> str:
+    return _normalize_fragment(
+        _first_nonempty(
+            summary,
+            purpose,
+            emotional_arc,
+            fallback="story scene with readable character hierarchy and environment context",
+        ),
+        limit=150,
+    )
+
+
+def _scene_scale_story_point(summary: str, purpose: str, evidence_summary: list[str]) -> str:
+    text = " ".join([summary, purpose, *evidence_summary]).lower()
+    if any(term in text for term in ["giant", "towering", "enormous", "huge", "dais", "small beside", "scale mismatch", "human-sized"]):
+        if "chair" in text or "desk" in text or "furniture" in text:
+            return "human-scale furnishings emphasize the mismatch beside larger bodies"
+        if "dais" in text or "rostrum" in text:
+            return "raised ceremonial architecture reinforces scale and status hierarchy"
+        return "subject scale contrast should remain visually obvious in the frame"
+    return ""
+
+
+def _scene_required_anchor_catalog(
+    scene_spatial_layout: list[str],
+    environment_subzones: list[str],
+    evidence_summary: list[str],
+) -> list[str]:
+    anchors = _coerce_string_list(environment_subzones, scene_spatial_layout)
+    text = " ".join(evidence_summary).lower()
+    heuristic_terms = [
+        ("dais", "raised dais"),
+        ("rostrum", "central rostrum"),
+        ("gallery", "gallery wall"),
+        ("throne", "authority seat"),
+        ("chair", "human-scale carved chair"),
+        ("desk", "human-scale carved desk"),
+        ("mural", "painted mural wall"),
+        ("bar", "window bar"),
+        ("threshold", "scene threshold"),
+        ("door", "entry doorway"),
+    ]
+    for term, label in heuristic_terms:
+        if term in text:
+            anchors.append(label)
+    return _coerce_string_list(anchors)[:5]
+
+
+def _planned_shot_anchor(beat: SceneBeat, scene_anchors: list[str]) -> str:
+    text = " ".join(
+        item
+        for item in [beat.environment_subzone, beat.spatial_context, beat.blocking_hint, beat.summary]
+        if item
+    ).lower()
+    for anchor in scene_anchors:
+        if anchor and any(token in text for token in anchor.lower().split()):
+            return anchor
+    if beat.environment_subzone:
+        return _normalize_fragment(beat.environment_subzone, limit=80)
+    if scene_anchors:
+        return scene_anchors[0]
+    return ""
+
+
+def _planned_shot_scale_proof_detail(beat: SceneBeat, scene_scale_story_point: str, scene_anchors: list[str]) -> str:
+    text = " ".join(item for item in [beat.summary, beat.spatial_context, beat.blocking_hint, scene_scale_story_point] if item).lower()
+    if "chair" in text or "desk" in text or "furniture" in text:
+        return "keep one oversized body beside human-scale furniture"
+    if "dais" in text or "rostrum" in text:
+        return "preserve the lower-floor versus raised-platform hierarchy"
+    if scene_scale_story_point:
+        return _normalize_fragment(scene_scale_story_point, limit=100)
+    if scene_anchors:
+        return f"keep {scene_anchors[0]} readable as the scale anchor"
+    return ""
+
+
 def _derive_planned_shots(beats: list[SceneBeat]) -> list[PlannedShotSeed]:
     planned: list[PlannedShotSeed] = []
+    scene_anchors = _scene_required_anchor_catalog(
+        [beat.spatial_context for beat in beats if beat.spatial_context],
+        [beat.environment_subzone for beat in beats if beat.environment_subzone],
+        [beat.summary for beat in beats],
+    )
+    scene_scale_story_point = _scene_scale_story_point(
+        " ".join(beat.summary for beat in beats),
+        " ".join(beat.purpose for beat in beats),
+        [beat.spatial_context for beat in beats if beat.spatial_context],
+    )
     for index, beat in enumerate(beats, start=1):
         primary_subject_seed = _default_primary_subject_seed(beat.summary)
         enums = _default_shot_seed_enums(beat.coverage_priority, beat.summary)
@@ -828,11 +936,17 @@ def _derive_planned_shots(beats: list[SceneBeat]) -> list[PlannedShotSeed]:
                 planned_shot_id=f"SH{index:03d}",
                 beat_id=beat.beat_id,
                 narrative_function=beat.coverage_priority or "story beat",
+                planned_shot_moment_summary=_normalize_fragment(
+                    _first_nonempty(beat.summary, beat.action_start, beat.action_end, fallback="visible story beat"),
+                    limit=110,
+                ),
                 primary_subject_seed=primary_subject_seed,
                 secondary_subjects_seed=list(beat.passive_subjects),
                 subject_visibility=_default_subject_visibility(primary_subject_seed),
                 narration_mode=_default_narration_mode(primary_subject_seed),
                 environment_subzone=beat.environment_subzone or "primary scene playing area",
+                planned_shot_required_anchor_1=_planned_shot_anchor(beat, scene_anchors),
+                planned_shot_scale_proof_detail=_planned_shot_scale_proof_detail(beat, scene_scale_story_point, scene_anchors),
                 start_state_seed=beat.action_start or beat.summary,
                 end_state_seed=beat.action_end or beat.summary,
                 action_seed=beat.summary,
@@ -862,6 +976,24 @@ def _synthesize_storyboard_markdown(contract: SceneContract) -> str:
         "",
         contract.production_intent or "(none)",
         "",
+        "## Scene Short Description",
+        "",
+        contract.scene_short_description or "(none)",
+        "",
+        "## Scene Primary Scale Story Point",
+        "",
+        contract.scene_primary_scale_story_point or "(none)",
+        "",
+        "## Scene Required Anchor Catalog",
+        "",
+    ]
+    if contract.scene_required_anchor_catalog:
+        lines.extend([f"- {item}" for item in contract.scene_required_anchor_catalog])
+    else:
+        lines.append("- (none)")
+
+    lines.extend([
+        "",
         "## Purpose",
         "",
         contract.purpose or "(none)",
@@ -888,7 +1020,7 @@ def _synthesize_storyboard_markdown(contract: SceneContract) -> str:
         "",
         "## Scene Spatial Layout",
         "",
-    ]
+    ])
     if contract.scene_spatial_layout:
         lines.extend([f"- {item}" for item in contract.scene_spatial_layout])
     else:
@@ -988,6 +1120,9 @@ def _synthesize_storyboard_markdown(contract: SceneContract) -> str:
             f"visibility={planned_shot.subject_visibility or '(none)'}",
             f"narration={planned_shot.narration_mode or '(none)'}",
             f"subzone={planned_shot.environment_subzone or '(none)'}",
+            f"moment={planned_shot.planned_shot_moment_summary or '(none)'}",
+            f"anchor1={planned_shot.planned_shot_required_anchor_1 or '(none)'}",
+            f"scale_proof={planned_shot.planned_shot_scale_proof_detail or '(none)'}",
             f"start={planned_shot.start_state_seed or '(none)'}",
             f"end={planned_shot.end_state_seed or '(none)'}",
             f"action={planned_shot.action_seed or '(none)'}",
@@ -1046,6 +1181,13 @@ def _parse_scene_contract_packet(text: str, scene_id: str, chapter_id: str, fall
         "beat_overrides": beat_lists.get("beat_list", []) or beat_freeform,
         "continuity_overrides": production_lists.get("continuity_constraints", []),
         "coverage_overrides": production_lists.get("visual_coverage_families", []),
+        "scene_short_description": _first_nonempty(staging_scalars.get("scene_short_description"), fallback.get("scene_short_description"), fallback=""),
+        "scene_primary_scale_story_point": _first_nonempty(
+            staging_scalars.get("scene_primary_scale_story_point"),
+            fallback.get("scene_primary_scale_story_point"),
+            fallback="",
+        ),
+        "scene_required_anchor_catalog": staging_lists.get("scene_required_anchor_catalog", []) or list(fallback.get("scene_required_anchor_catalog", [])),
         "scene_start_state": _first_nonempty(staging_scalars.get("scene_start_state"), fallback.get("scene_start_state"), fallback=""),
         "scene_end_state": _first_nonempty(staging_scalars.get("scene_end_state"), fallback.get("scene_end_state"), fallback=""),
         "dominant_action_line": _first_nonempty(staging_scalars.get("dominant_action_line"), fallback.get("dominant_action_line"), fallback=""),
@@ -1207,6 +1349,18 @@ def _build_deterministic_payload(
         beats=beats,
     )
     planned_shots = _derive_planned_shots(beats)
+    scene_short_description = _scene_short_description(summary, purpose, emotional_arc)
+    scene_primary_scale_story_point = _scene_scale_story_point(summary, purpose, evidence_summary)
+    scene_required_anchor_catalog = _scene_required_anchor_catalog(
+        list(scene_staging.get("scene_spatial_layout", [])),
+        list(scene_staging.get("environment_subzones", [])),
+        evidence_summary,
+    )
+    for item in planned_shots:
+        if not item.planned_shot_required_anchor_1:
+            item.planned_shot_required_anchor_1 = scene_required_anchor_catalog[0] if scene_required_anchor_catalog else ""
+        if not item.planned_shot_scale_proof_detail:
+            item.planned_shot_scale_proof_detail = scene_primary_scale_story_point
     production_intent = _first_nonempty(
         purpose,
         f"Stage {scene_id} with clear narrative intent, stable cast blocking, and continuity-aware coverage.",
@@ -1231,6 +1385,9 @@ def _build_deterministic_payload(
     return {
         "scene_title": scene_title,
         "production_intent": production_intent,
+        "scene_short_description": scene_short_description,
+        "scene_primary_scale_story_point": scene_primary_scale_story_point,
+        "scene_required_anchor_catalog": scene_required_anchor_catalog,
         "storyboard_markdown": storyboard_markdown,
         "beat_overrides": [beat.to_dict() for beat in beats],
         "planned_shot_overrides": [item.to_dict() for item in planned_shots],
@@ -1339,6 +1496,9 @@ def run_scene_contract_synthesis(
                 summary=existing.get("summary", scene_fields.get("scene_summary", "")),
                 emotional_arc=existing.get("emotional_arc", scene_fields.get("dominant_emotional_shift", "")),
                 production_intent=existing.get("production_intent", ""),
+                scene_short_description=existing.get("scene_short_description", ""),
+                scene_primary_scale_story_point=existing.get("scene_primary_scale_story_point", ""),
+                scene_required_anchor_catalog=existing.get("scene_required_anchor_catalog", []),
                 scene_start_state=existing.get("scene_start_state", ""),
                 scene_end_state=existing.get("scene_end_state", ""),
                 dominant_action_line=existing.get("dominant_action_line", ""),
@@ -1377,6 +1537,9 @@ def run_scene_contract_synthesis(
                     summary=existing.get("summary", scene_fields.get("scene_summary", "")),
                     emotional_arc=existing.get("emotional_arc", scene_fields.get("dominant_emotional_shift", "")),
                     production_intent=existing.get("production_intent", ""),
+                    scene_short_description=existing.get("scene_short_description", ""),
+                    scene_primary_scale_story_point=existing.get("scene_primary_scale_story_point", ""),
+                    scene_required_anchor_catalog=existing.get("scene_required_anchor_catalog", []),
                     scene_start_state=existing.get("scene_start_state", ""),
                     scene_end_state=existing.get("scene_end_state", ""),
                     dominant_action_line=existing.get("dominant_action_line", ""),
@@ -1431,6 +1594,7 @@ def run_scene_contract_synthesis(
                 character_refs=character_refs,
                 environment_refs=environment_refs,
                 evidence_summary=evidence_summary,
+                fallback_payload=fallback_payload,
             )
 
         if not synthesized_payload:
@@ -1443,6 +1607,15 @@ def run_scene_contract_synthesis(
         continuity_constraints = _coerce_string_list(merged.get("continuity_overrides", [])) or _split_list_value(scene_fields.get("likely_continuity_sensitivities", ""))
         coverage_families = _coerce_string_list(merged.get("coverage_overrides", [])) or _split_list_value(scene_fields.get("likely_visual_coverage_families", ""))
         production_intent = _first_nonempty(merged.get("production_intent"), fallback_payload["production_intent"], fallback="")
+        scene_short_description = _first_nonempty(merged.get("scene_short_description"), fallback_payload.get("scene_short_description"), fallback="")
+        scene_primary_scale_story_point = _first_nonempty(
+            merged.get("scene_primary_scale_story_point"),
+            fallback_payload.get("scene_primary_scale_story_point"),
+            fallback="",
+        )
+        scene_required_anchor_catalog = _coerce_string_list(merged.get("scene_required_anchor_catalog", [])) or list(
+            fallback_payload.get("scene_required_anchor_catalog", [])
+        )
         storyboard_markdown = _first_nonempty(merged.get("storyboard_markdown"), fallback_payload["storyboard_markdown"], fallback="")
         scene_start_state = _first_nonempty(merged.get("scene_start_state"), fallback_payload.get("scene_start_state"), fallback="")
         scene_end_state = _first_nonempty(merged.get("scene_end_state"), fallback_payload.get("scene_end_state"), fallback="")
@@ -1488,6 +1661,9 @@ def run_scene_contract_synthesis(
             summary=scene_fields.get("scene_summary", ""),
             emotional_arc=scene_fields.get("dominant_emotional_shift", ""),
             production_intent=production_intent,
+            scene_short_description=scene_short_description,
+            scene_primary_scale_story_point=scene_primary_scale_story_point,
+            scene_required_anchor_catalog=scene_required_anchor_catalog,
             scene_start_state=scene_start_state,
             scene_end_state=scene_end_state,
             dominant_action_line=dominant_action_line,
@@ -1653,11 +1829,24 @@ def _coerce_planned_shots(raw_planned_shots: Any, *, fallback_shots: list[Planne
                         planned_shot_id=_first_nonempty(item.get("planned_shot_id"), item.get("shot_id"), fallback=f"SH{index:03d}"),
                         beat_id=_first_nonempty(item.get("beat_id"), fallback=f"BT{index:03d}"),
                         narrative_function=_first_nonempty(item.get("narrative_function"), item.get("function"), fallback=""),
+                        planned_shot_moment_summary=_first_nonempty(item.get("planned_shot_moment_summary"), item.get("moment"), fallback=""),
                         primary_subject_seed=_first_nonempty(item.get("primary_subject_seed"), item.get("primary_subject"), fallback=""),
                         secondary_subjects_seed=_coerce_string_list(item.get("secondary_subjects_seed", []), item.get("secondary_subjects", [])),
                         subject_visibility=_first_nonempty(item.get("subject_visibility"), fallback=""),
                         narration_mode=_first_nonempty(item.get("narration_mode"), fallback=""),
                         environment_subzone=_first_nonempty(item.get("environment_subzone"), item.get("subzone"), fallback=""),
+                        planned_shot_required_anchor_1=_first_nonempty(
+                            item.get("planned_shot_required_anchor_1"),
+                            item.get("required_anchor_1"),
+                            item.get("anchor1"),
+                            fallback="",
+                        ),
+                        planned_shot_scale_proof_detail=_first_nonempty(
+                            item.get("planned_shot_scale_proof_detail"),
+                            item.get("required_scale_proof_detail"),
+                            item.get("scale_proof"),
+                            fallback="",
+                        ),
                         start_state_seed=_first_nonempty(item.get("start_state_seed"), item.get("start_state"), fallback=""),
                         end_state_seed=_first_nonempty(item.get("end_state_seed"), item.get("end_state"), fallback=""),
                         action_seed=_first_nonempty(item.get("action_seed"), item.get("action"), fallback=""),
@@ -1691,11 +1880,24 @@ def _coerce_planned_shots(raw_planned_shots: Any, *, fallback_shots: list[Planne
                         planned_shot_id=shot_id,
                         beat_id=_first_nonempty(fields.get("beat"), fields.get("beat_id"), fallback=f"BT{index:03d}"),
                         narrative_function=_first_nonempty(fields.get("function"), fields.get("narrative_function"), fallback=""),
+                        planned_shot_moment_summary=_first_nonempty(fields.get("moment"), fields.get("planned_shot_moment_summary"), fallback=""),
                         primary_subject_seed=_first_nonempty(fields.get("primary"), fields.get("primary_subject_seed"), fallback=""),
                         secondary_subjects_seed=_coerce_string_list(fields.get("secondary"), fields.get("secondary_subjects_seed")),
                         subject_visibility=_first_nonempty(fields.get("visibility"), fields.get("subject_visibility"), fallback=""),
                         narration_mode=_first_nonempty(fields.get("narration"), fields.get("narration_mode"), fallback=""),
                         environment_subzone=_first_nonempty(fields.get("subzone"), fields.get("environment_subzone"), fallback=""),
+                        planned_shot_required_anchor_1=_first_nonempty(
+                            fields.get("anchor1"),
+                            fields.get("required_anchor_1"),
+                            fields.get("planned_shot_required_anchor_1"),
+                            fallback="",
+                        ),
+                        planned_shot_scale_proof_detail=_first_nonempty(
+                            fields.get("scale_proof"),
+                            fields.get("required_scale_proof_detail"),
+                            fields.get("planned_shot_scale_proof_detail"),
+                            fallback="",
+                        ),
                         start_state_seed=_first_nonempty(fields.get("start"), fields.get("start_state_seed"), fallback=""),
                         end_state_seed=_first_nonempty(fields.get("end"), fields.get("end_state_seed"), fallback=""),
                         action_seed=_first_nonempty(fields.get("action"), fields.get("action_seed"), fallback=""),
@@ -1765,6 +1967,7 @@ def _llm_synthesis(
     character_refs: list[SceneReference],
     environment_refs: list[SceneReference],
     evidence_summary: list[str],
+    fallback_payload: dict[str, Any],
 ) -> dict[str, Any] | None:
     settings = load_runtime_settings()
     client = LMStudioClient(settings)
@@ -1787,6 +1990,14 @@ PRIORITIES:
 2. continuity discipline
 3. grounded cast and environment requirements
 4. concise beat list that can drive shot planning
+5. prompt-ready visual fragments rather than abstract summaries
+
+STYLE RULES:
+- prefer short visible clauses
+- no markdown inside field values
+- no generic filler like "primary scene playing area" or "maintain readability"
+- if a scale relationship matters, make it explicit
+- if a shot needs an anchor, choose a concrete object, structure, or subzone
 
 ENTRY:
 {json.dumps(scene_fields, indent=2, ensure_ascii=False)}
@@ -1827,6 +2038,11 @@ continuity_constraints:
 [[/SECTION]]
 
 [[SECTION scene_staging_markdown]]
+scene_short_description: <one short visual line, 8-20 words, no names required>
+scene_primary_scale_story_point: <one short scale or hierarchy note>
+scene_required_anchor_catalog:
+- anchor 1
+- anchor 2
 scene_start_state: <how the scene begins visually and dramatically>
 scene_end_state: <how the scene ends visually and dramatically>
 dominant_action_line: <main action thread of the scene>
@@ -1850,8 +2066,8 @@ beat_transition_map:
 
 [[SECTION planned_shots_markdown]]
 planned_shot_list:
-- SH001: beat=BT001 || function=<story function> || primary=<primary subject label> || secondary=<secondary label 1, secondary label 2> || visibility=<on_screen|partial|silhouette|off_screen_voice|implied_only> || narration=<none|voiceover_off_screen|in_scene_speaker|internal_monologue> || subzone=<environment subzone> || start=<specific shot start state> || end=<specific shot end state> || action=<specific shot action> || blocking=<blocking seed> || shot_size=<extreme_wide|wide|full|medium_full|medium|medium_close|close_up|extreme_close_up|insert_detail> || camera_angle=<eye_level|low_angle|high_angle|overhead|dutch> || lens=<ultra_wide|wide|normal|portrait|telephoto> || motion=<locked_off|pan|tilt|push_in|pull_back|track|crane|handheld> || zoom=<none|subtle_in|subtle_out|strong_in|strong_out> || focus=<deep_focus|shallow_subject|rack_focus|environment_priority> || lighting=<soft_even|hard_directional|high_contrast_ceremonial|diffuse_ambient|backlit|torch_firelight|low_key_night> || subject_angle=<front|front_three_quarter_left|front_three_quarter_right|profile_left|profile_right|rear_three_quarter_left|rear_three_quarter_right|back>
-- SH002: beat=BT002 || function=<...> || primary=<...> || visibility=<...> || narration=<...> || subzone=<...> || start=<...> || end=<...> || action=<...> || blocking=<...> || shot_size=<...> || camera_angle=<...> || lens=<...> || motion=<...> || zoom=<...> || focus=<...> || lighting=<...> || subject_angle=<...>
+- SH001: beat=BT001 || function=<story function> || moment=<visible shot moment summary> || primary=<primary subject label> || secondary=<secondary label 1, secondary label 2> || visibility=<on_screen|partial|silhouette|off_screen_voice|implied_only> || narration=<none|voiceover_off_screen|in_scene_speaker|internal_monologue> || subzone=<environment subzone> || anchor1=<required environment anchor> || scale_proof=<required scale proof detail> || start=<specific shot start state> || end=<specific shot end state> || action=<specific shot action> || blocking=<blocking seed> || shot_size=<extreme_wide|wide|full|medium_full|medium|medium_close|close_up|extreme_close_up|insert_detail> || camera_angle=<eye_level|low_angle|high_angle|overhead|dutch> || lens=<ultra_wide|wide|normal|portrait|telephoto> || motion=<locked_off|pan|tilt|push_in|pull_back|track|crane|handheld> || zoom=<none|subtle_in|subtle_out|strong_in|strong_out> || focus=<deep_focus|shallow_subject|rack_focus|environment_priority> || lighting=<soft_even|hard_directional|high_contrast_ceremonial|diffuse_ambient|backlit|torch_firelight|low_key_night> || subject_angle=<front|front_three_quarter_left|front_three_quarter_right|profile_left|profile_right|rear_three_quarter_left|rear_three_quarter_right|back>
+- SH002: beat=BT002 || function=<...> || moment=<...> || primary=<...> || visibility=<...> || narration=<...> || subzone=<...> || anchor1=<...> || scale_proof=<...> || start=<...> || end=<...> || action=<...> || blocking=<...> || shot_size=<...> || camera_angle=<...> || lens=<...> || motion=<...> || zoom=<...> || focus=<...> || lighting=<...> || subject_angle=<...>
 [[/SECTION]]
 
 [[SECTION beat_markdown]]
@@ -1902,6 +2118,14 @@ beat_list:
             "beat_overrides": beat_lists.get("beat_list", []) or beat_freeform,
             "continuity_overrides": production_lists.get("continuity_constraints", []),
             "coverage_overrides": production_lists.get("visual_coverage_families", []),
+            "scene_short_description": _first_nonempty(staging_scalars.get("scene_short_description"), fallback=fallback_payload.get("scene_short_description", "")),
+            "scene_primary_scale_story_point": _first_nonempty(
+                staging_scalars.get("scene_primary_scale_story_point"),
+                fallback=fallback_payload.get("scene_primary_scale_story_point", ""),
+            ),
+            "scene_required_anchor_catalog": staging_lists.get("scene_required_anchor_catalog", []) or list(
+                fallback_payload.get("scene_required_anchor_catalog", [])
+            ),
             "scene_start_state": _first_nonempty(staging_scalars.get("scene_start_state"), fallback=fallback_payload.get("scene_start_state", "")),
             "scene_end_state": _first_nonempty(staging_scalars.get("scene_end_state"), fallback=fallback_payload.get("scene_end_state", "")),
             "dominant_action_line": _first_nonempty(staging_scalars.get("dominant_action_line"), fallback=fallback_payload.get("dominant_action_line", "")),

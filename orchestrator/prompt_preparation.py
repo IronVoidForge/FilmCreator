@@ -14,7 +14,7 @@ from .environment_bible import _is_film_facing_environment
 from .prompt_package import PromptPackage, write_prompt_package
 from .scaffold import create_project
 
-PROMPT_PREPARATION_SCHEMA_VERSION = "2026-04-22-prompt-preparation-v1"
+PROMPT_PREPARATION_SCHEMA_VERSION = "2026-04-23-prompt-preparation-v2"
 
 
 PROMPT_PREP_ROOT = Path("03_prompt_packages") / "prepared"
@@ -81,6 +81,10 @@ def _compact(text: str, *, limit: int = 220) -> str:
     if len(collapsed) <= limit:
         return collapsed
     return collapsed[: limit - 3].rstrip() + "..."
+
+
+def _normalize_prompt_text(text: str) -> str:
+    return " ".join(text.split()).strip()
 
 
 def _first_nonempty(*values: object, fallback: str = "") -> str:
@@ -498,6 +502,41 @@ def _shot_environment_descriptor(
     return "described environment with stable spatial continuity"
 
 
+def _character_descriptor_by_id(
+    canonical_id: str,
+    character_bibles: dict[str, dict[str, Any]],
+    character_descriptors: dict[str, dict[str, Any]] | None = None,
+) -> str:
+    if not canonical_id:
+        return "described character with stable costume and silhouette"
+    bible = character_bibles.get(canonical_id.strip().lower())
+    descriptor = (character_descriptors or {}).get(canonical_id.strip().lower())
+    if bible:
+        return _character_descriptor(bible, descriptor)
+    return "described character with stable costume and silhouette"
+
+
+def _environment_descriptor_by_id(
+    canonical_id: str,
+    environment_bibles: dict[str, dict[str, Any]],
+    environment_descriptors: dict[str, dict[str, Any]] | None = None,
+) -> str:
+    if not canonical_id:
+        return "described environment with stable spatial continuity"
+    bible = environment_bibles.get(canonical_id.strip().lower())
+    descriptor = (environment_descriptors or {}).get(canonical_id.strip().lower())
+    if bible:
+        return _environment_descriptor(bible, descriptor)
+    return "described environment with stable spatial continuity"
+
+
+def _asset_role_label(canonical_id: str) -> str:
+    cleaned = _normalize_term(canonical_id or "")
+    if not cleaned:
+        return "reference subject"
+    return cleaned
+
+
 def _base_inputs(
     *,
     subject_kind: str,
@@ -669,6 +708,15 @@ def _package_for_shot(
         scene_descriptor_values.get("emotional_beat", ""),
         str(scene_contract.get("emotional_arc", "")).strip(),
     )
+    scene_short_description = _first_nonempty(
+        _strip_terms(str(scene_contract.get("scene_short_description", "")).strip(), [scene_id, scene_title]),
+        _compact(_strip_terms(scene_arc or scene_contract.get("production_intent", "") or scene_title, [scene_id, scene_title]), limit=160),
+        fallback="described scene action with readable spatial hierarchy",
+    )
+    scene_scale_story_point = _first_nonempty(
+        str(scene_contract.get("scene_primary_scale_story_point", "")).strip(),
+        fallback="preserve readable scale hierarchy inside the frame",
+    )
     characters = _shot_character_descriptors(shot, character_bibles, character_descriptors)
     environment_descriptor = _shot_environment_descriptor(shot, environment_bibles, environment_descriptors)
     strip_terms: list[str] = [scene_id, scene_title, shot_id, str(shot.get("shot_title", "")).strip()]
@@ -721,6 +769,21 @@ def _package_for_shot(
     subject_visibility = str(shot.get("subject_visibility", "")).strip()
     narration_mode = str(shot.get("narration_mode", "")).strip()
     primary_subject_angle = str(shot.get("primary_subject_angle", "")).strip()
+    visible_primary_subject_id = str(shot.get("visible_primary_subject_id", "")).strip().lower()
+    visible_secondary_subject_ids = [
+        str(item).strip().lower()
+        for item in shot.get("visible_secondary_subject_ids", [])
+        if isinstance(item, str) and str(item).strip()
+    ]
+    primary_subject_frame_position = str(shot.get("primary_subject_frame_position", "")).strip()
+    primary_subject_scale_relation = str(shot.get("primary_subject_scale_relation", "")).strip()
+    primary_subject_facing_direction = str(shot.get("primary_subject_facing_direction", "")).strip()
+    primary_subject_pose_description = str(shot.get("primary_subject_pose_description", "")).strip()
+    subject_relation_summary = str(shot.get("subject_relation_summary", "")).strip()
+    required_environment_anchor_1 = str(shot.get("required_environment_anchor_1", "")).strip()
+    required_scale_proof_detail = str(shot.get("required_scale_proof_detail", "")).strip()
+    camera_package_description = str(shot.get("camera_package_description", "")).strip()
+    shot_moment_summary = str(shot.get("shot_moment_summary", "")).strip()
     environment_subzone = str(shot.get("environment_subzone", "")).strip()
     primary_subject = str(shot.get("primary_subject", "")).strip()
     composition_hint = _first_nonempty(
@@ -737,6 +800,23 @@ def _package_for_shot(
     if primary_subject.lower() == "the narrator":
         subject_visibility = subject_visibility or "off_screen_voice"
         narration_mode = narration_mode or "voiceover_off_screen"
+    primary_subject_descriptor = _character_descriptor_by_id(
+        visible_primary_subject_id,
+        character_bibles,
+        character_descriptors,
+    )
+    secondary_subject_descriptors = [
+        _character_descriptor_by_id(item, character_bibles, character_descriptors)
+        for item in visible_secondary_subject_ids[:2]
+    ]
+    environment_canonical_id = ""
+    if isinstance(env_ref, dict):
+        environment_canonical_id = str(env_ref.get("canonical_id", "")).strip().lower()
+    environment_reference_descriptor = _environment_descriptor_by_id(
+        environment_canonical_id,
+        environment_bibles,
+        environment_descriptors,
+    )
     continuity = _coerce_bullets(shot.get("continuity_constraints", []), scene_contract.get("continuity_constraints", []))
     variant_camera = {
         "primary_keyframe": "Primary keyframe with balanced composition and clear subject placement.",
@@ -746,33 +826,56 @@ def _package_for_shot(
     }.get(variant_key, variant_hint)
     title = f"{shot_id} Shot Prompt - {variant_title}"
     prompt_id = f"{scene_id}_{shot_id}_{variant_key}_prompt"
-    prompt_parts = [
-        "Film shot prompt",
-        variant_camera,
-        _compact(_strip_terms(scene_arc or scene_contract.get("production_intent", "") or scene_title, strip_terms), limit=140),
-        _listify(
-            f"shot size {shot_size}" if shot_size else "",
-            f"camera angle {camera_angle}" if camera_angle else "",
-            f"lens {lens_family}" if lens_family else "",
-            f"camera motion {camera_motion}" if camera_motion else "",
-            f"zoom {zoom_behavior}" if zoom_behavior else "",
-            f"focus {focus_strategy}" if focus_strategy else "",
-            f"lighting {lighting_style}" if lighting_style else "",
-            f"subject visibility {subject_visibility}" if subject_visibility else "",
-            f"narration {narration_mode}" if narration_mode else "",
-            f"primary subject angle {primary_subject_angle}" if primary_subject_angle else "",
-        ),
-        camera_description,
-        _compact(_strip_terms(composition_hint, strip_terms), limit=160),
-        _compact(_strip_terms(environment_subzone, strip_terms), limit=120) if environment_subzone else "",
-        f"Characters: {', '.join(characters)}",
-        f"Environment: {environment_descriptor}",
-        "Narrator, if present, is off-screen voice only and should not appear as a visible body in frame." if primary_subject.lower() == "the narrator" else "",
-        "Keep continuity exact across costume, silhouette, lighting, and spatial relationships.",
-        "Avoid proper nouns in the prompt body unless text is meant to appear on screen.",
-        "No text, no watermark, no logo.",
+    reference_role_candidates: list[tuple[str, str]] = []
+    if visible_primary_subject_id:
+        reference_role_candidates.append(("identity reference for the primary visible subject", _asset_role_label(visible_primary_subject_id)))
+    if visible_secondary_subject_ids:
+        reference_role_candidates.append(("identity reference for the secondary visible subject", _asset_role_label(visible_secondary_subject_ids[0])))
+    if environment_canonical_id:
+        reference_role_candidates.append(("environment reference for the scene location", _asset_role_label(environment_canonical_id)))
+    if len(visible_secondary_subject_ids) > 1:
+        reference_role_candidates.append(("identity reference for an additional visible subject", _asset_role_label(visible_secondary_subject_ids[1])))
+    reference_roles = [
+        (f"image{index}", role_text, asset_label)
+        for index, (role_text, asset_label) in enumerate(reference_role_candidates[:4], start=1)
     ]
-    positive_prompt = _compact(". ".join(part for part in prompt_parts if part), limit=420)
+    primary_image_key = next((image_key for image_key, _, asset in reference_roles if asset == _asset_role_label(visible_primary_subject_id)), "")
+    secondary_image_key = next(
+        (image_key for image_key, _, asset in reference_roles if visible_secondary_subject_ids and asset == _asset_role_label(visible_secondary_subject_ids[0])),
+        "",
+    )
+    environment_image_key = next((image_key for image_key, _, asset in reference_roles if asset == _asset_role_label(environment_canonical_id)), "")
+
+    prompt_parts: list[str] = []
+    for image_key, role_text, _ in reference_roles:
+        prompt_parts.append(f"Use {image_key} as the {role_text}")
+    prompt_parts.extend(
+        [
+            variant_camera,
+            scene_short_description,
+            f"The subject from {primary_image_key} is {primary_subject_descriptor}, {primary_subject_frame_position}, {primary_subject_scale_relation}, {primary_subject_facing_direction}, {primary_subject_pose_description}" if primary_image_key else "",
+            f"The subject from {secondary_image_key} is {secondary_subject_descriptors[0]}, {subject_relation_summary}" if secondary_subject_descriptors and secondary_image_key else "",
+            f"Preserve {environment_reference_descriptor} from {environment_image_key}, especially {required_environment_anchor_1}" if environment_canonical_id and environment_image_key else f"Preserve {environment_descriptor}",
+            required_scale_proof_detail or scene_scale_story_point,
+            camera_package_description or _listify(
+                f"shot size {shot_size}" if shot_size else "",
+                f"camera angle {camera_angle}" if camera_angle else "",
+                f"lens {lens_family}" if lens_family else "",
+                f"camera motion {camera_motion}" if camera_motion else "",
+                f"zoom {zoom_behavior}" if zoom_behavior else "",
+                f"focus {focus_strategy}" if focus_strategy else "",
+                f"lighting {lighting_style}" if lighting_style else "",
+            ),
+            _compact(_strip_terms(composition_hint, strip_terms), limit=200),
+            _normalize_prompt_text(shot_moment_summary or scene_arc or scene_contract.get("production_intent", "") or scene_title),
+            _compact(_strip_terms(environment_subzone, strip_terms), limit=120) if environment_subzone else "",
+            "Narration is off-screen voice only; do not show a visible narrator body." if subject_visibility == "off_screen_voice" else "",
+            "Keep continuity exact across costume, silhouette, lighting, and spatial relationships.",
+            "Avoid proper nouns in the prompt body unless text is meant to appear on screen.",
+            "No text, no watermark, no logo.",
+        ]
+    )
+    positive_prompt = _normalize_prompt_text(". ".join(part for part in prompt_parts if part))
     package_path = project_dir / PROMPT_PREP_ROOT / "shots" / chapter_id / scene_id / shot_id / f"{variant_key}_prompt.md"
     sources = [
         project_dir / "02_story_analysis" / "contracts" / "scenes" / chapter_id / f"{scene_id}.json",
@@ -839,17 +942,32 @@ def _package_for_shot(
             "subject_visibility": subject_visibility or "(none)",
             "narration_mode": narration_mode or "(none)",
             "primary_subject_angle": primary_subject_angle or "(none)",
+            "visible_primary_subject_id": visible_primary_subject_id or "(none)",
+            "visible_secondary_subject_ids": "; ".join(visible_secondary_subject_ids) or "(none)",
+            "primary_subject_frame_position": primary_subject_frame_position or "(none)",
+            "primary_subject_scale_relation": primary_subject_scale_relation or "(none)",
+            "primary_subject_facing_direction": primary_subject_facing_direction or "(none)",
+            "primary_subject_pose_description": primary_subject_pose_description or "(none)",
+            "subject_relation_summary": subject_relation_summary or "(none)",
+            "scene_short_description": scene_short_description or "(none)",
+            "shot_moment_summary": shot_moment_summary or "(none)",
+            "required_environment_anchor_1": required_environment_anchor_1 or "(none)",
+            "required_scale_proof_detail": required_scale_proof_detail or "(none)",
+            "camera_package_description": camera_package_description or "(none)",
             "environment_subzone": environment_subzone or "(none)",
             "prompt_family": "shot_prompt",
             "reference_asset_ids": "; ".join(reference_asset_ids),
             "reference_asset_types": "character; environment; scene_descriptor; shot_descriptor",
         }
     )
+    for image_key, role_text, asset_label in reference_roles:
+        inputs[f"{image_key}_role"] = role_text
+        inputs[f"{image_key}_asset"] = asset_label
     package = PromptPackage(
         path=package_path,
         title=title,
         prompt_id=prompt_id,
-        purpose="Prepare a compact shot prompt for enhancer-safe generation.",
+        purpose="Prepare a structured multi-reference shot prompt for enhancer-safe generation.",
         workflow_type="still.scene_build.four_ref.klein.distilled",
         positive_prompt=positive_prompt,
         negative_prompt=GENERIC_NEGATIVE_PROMPT,
@@ -859,7 +977,7 @@ def _package_for_shot(
                 f"- Scene: {scene_id} / {scene_title}.",
                 f"- Variant: {variant_title}.",
                 *[f"- {item}" for item in continuity[:6]],
-                "- Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.",
+                "- Preserve reference-image roles, continuity, and canonical spatial relationships.",
             ]
         ),
         sources_markdown="\n".join(f"- {path}" for path in sources if path.exists()),
