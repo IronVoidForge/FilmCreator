@@ -16,7 +16,7 @@ from .lmstudio_client import LMStudioClient
 from .scaffold import create_project
 from .settings import load_runtime_settings
 
-SHOT_PLANNER_SCHEMA_VERSION = "2026-04-23-shot-planner-v4"
+SHOT_PLANNER_SCHEMA_VERSION = "2026-04-23-shot-planner-v5"
 
 SHOT_SIZE_ENUM = {"extreme_wide", "wide", "full", "medium_full", "medium", "medium_close", "close_up", "extreme_close_up", "insert_detail"}
 CAMERA_ANGLE_ENUM = {"eye_level", "low_angle", "high_angle", "overhead", "dutch"}
@@ -28,6 +28,9 @@ LIGHTING_STYLE_ENUM = {"soft_even", "hard_directional", "high_contrast_ceremonia
 SUBJECT_VISIBILITY_ENUM = {"on_screen", "partial", "silhouette", "off_screen_voice", "implied_only"}
 NARRATION_MODE_ENUM = {"none", "voiceover_off_screen", "in_scene_speaker", "internal_monologue"}
 PRIMARY_SUBJECT_ANGLE_ENUM = {"front", "front_three_quarter_left", "front_three_quarter_right", "profile_left", "profile_right", "rear_three_quarter_left", "rear_three_quarter_right", "back"}
+
+CLOSE_SHOT_SIZES = {"extreme_close_up", "close_up", "medium_close"}
+WIDE_SHOT_SIZES = {"extreme_wide", "wide"}
 
 
 @dataclass
@@ -370,6 +373,42 @@ def _looks_like_scale_relation(value: str) -> bool:
         "relative",
     }
     return any(term in text for term in scale_terms)
+
+
+def _looks_like_environment_anchor(value: str) -> bool:
+    text = " ".join(str(value or "").lower().split())
+    if not text or _is_placeholder_text(text):
+        return False
+    if any(term in text for term in ["eye", "eyes", "face", "skin", "wrinkle", "wrinkles", "mouth", "breath", "blink", "blink", "expression"]):
+        return False
+    anchor_terms = {
+        "trail",
+        "valley",
+        "plateau",
+        "camp",
+        "canyon",
+        "gorge",
+        "cave",
+        "void",
+        "sky",
+        "star",
+        "mountain",
+        "landscape",
+        "dais",
+        "rostrum",
+        "chair",
+        "desk",
+        "furniture",
+        "gallery",
+        "wall",
+        "mural",
+        "threshold",
+        "door",
+        "quartz",
+        "vein",
+        "bar",
+    }
+    return any(term in text for term in anchor_terms)
 
 
 def _coerce_string_list(*values: object) -> list[str]:
@@ -732,6 +771,97 @@ def _dedupe_shot_references(refs: list[ShotReference]) -> list[ShotReference]:
     return deduped
 
 
+def _subject_variants(value: str) -> set[str]:
+    return set(_label_variants(value))
+
+
+def _is_collective_reference(ref: ShotReference) -> bool:
+    label_text = " ".join([ref.label, ref.display_name, ref.canonical_id or ""]).lower()
+    if ref.entity_kind.strip().lower() in {"collective", "group"}:
+        return True
+    return any(term in label_text for term in ["warriors", "guards", "soldiers", "court", "crowd", "mob", "people"])
+
+
+def _visible_secondary_subject_labels(primary_subject: str, characters: list[ShotReference]) -> list[str]:
+    primary_variants = _subject_variants(primary_subject)
+    labels: list[str] = []
+    for ref in characters:
+        ref_variants = _subject_variants(ref.canonical_id or "") | _subject_variants(ref.label) | _subject_variants(ref.display_name)
+        if primary_variants and primary_variants & ref_variants:
+            continue
+        label = _best_display_label(ref) or ref.canonical_id or ref.label
+        if label:
+            labels.append(label)
+    return _ordered_unique(labels)[:3]
+
+
+def _filter_visible_characters(
+    *,
+    characters: list[ShotReference],
+    primary_subject: str,
+    secondary_subjects: list[str],
+    beat_payload: dict[str, Any],
+    shot_size: str,
+    shot_type: str,
+    subject_visibility: str,
+) -> list[ShotReference]:
+    if not characters:
+        return characters
+
+    intimate_frame = shot_size in CLOSE_SHOT_SIZES or shot_type in {"reaction_closeup", "closing_reaction", "insert_detail"}
+    primary_variants = _subject_variants(primary_subject)
+    secondary_variants: set[str] = set()
+    for item in secondary_subjects:
+        secondary_variants.update(_subject_variants(item))
+
+    primary_ref: ShotReference | None = None
+    others: list[ShotReference] = []
+    for ref in characters:
+        ref_variants = _subject_variants(ref.canonical_id or "") | _subject_variants(ref.label) | _subject_variants(ref.display_name)
+        if primary_ref is None and primary_variants and primary_variants & ref_variants:
+            primary_ref = ref
+            continue
+        others.append(ref)
+    if primary_ref is None:
+        primary_ref = characters[0]
+        others = characters[1:]
+
+    if subject_visibility == "off_screen_voice":
+        return [primary_ref]
+
+    beat_text = " ".join(
+        str(item)
+        for item in [
+            beat_payload.get("summary", ""),
+            beat_payload.get("action_start", ""),
+            beat_payload.get("action_end", ""),
+            beat_payload.get("blocking_hint", ""),
+        ]
+        if str(item).strip()
+    ).lower()
+    body_reveal = any(term in beat_text for term in ["body", "corpse", "deceased", "dead", "grief", "horror", "discover", "discovery"])
+    max_visible = 1 if shot_size == "insert_detail" else 2 if intimate_frame else 3
+
+    kept: list[ShotReference] = [primary_ref]
+    for ref in others:
+        if len(kept) >= max_visible:
+            break
+        ref_variants = _subject_variants(ref.canonical_id or "") | _subject_variants(ref.label) | _subject_variants(ref.display_name)
+        matches_secondary = bool(secondary_variants & ref_variants) if secondary_variants else False
+        is_collective = _is_collective_reference(ref)
+
+        if intimate_frame:
+            if body_reveal and is_collective:
+                continue
+            if is_collective and not matches_secondary:
+                continue
+            if not matches_secondary and len(kept) >= 2:
+                continue
+        kept.append(ref)
+
+    return _dedupe_shot_references(kept)
+
+
 def _shot_type_from_beat(scene_contract: dict[str, Any], beat_payload: dict[str, Any], shot_order: int) -> str:
     text = " ".join(
         str(item)
@@ -761,6 +891,54 @@ def _shot_type_from_beat(scene_contract: dict[str, Any], beat_payload: dict[str,
     if shot_order == len(scene_contract.get("beat_list", []) or []):
         return "closing_reaction"
     return "medium"
+
+
+def _resolved_shot_type(
+    scene_contract: dict[str, Any],
+    beat_payload: dict[str, Any],
+    planned_shot: dict[str, Any],
+    shot_order: int,
+    shot_size: str,
+) -> str:
+    text = " ".join(
+        str(item)
+        for item in [
+            beat_payload.get("summary", ""),
+            beat_payload.get("action_start", ""),
+            beat_payload.get("action_end", ""),
+            beat_payload.get("coverage_hint", ""),
+            beat_payload.get("coverage_priority", ""),
+            beat_payload.get("blocking_hint", ""),
+            planned_shot.get("narrative_function", ""),
+            planned_shot.get("planned_shot_moment_summary", ""),
+        ]
+        if str(item).strip()
+    ).lower()
+
+    if shot_size == "insert_detail" or any(term in text for term in ["insert", "detail", "prop", "object", "hand"]):
+        return "insert_detail"
+    if any(term in text for term in ["over-the-shoulder", "over the shoulder", "dialogue", "conversation", "exchange"]):
+        return "over_the_shoulder"
+
+    action_terms = ["battle", "attack", "fight", "chase", "charge", "pursuit", "flee", "flight", "run", "running", "ambush", "skirmish"]
+    reaction_terms = ["reaction", "respond", "reveal", "realize", "recognize", "discover", "discovery", "grief", "corpse", "body", "dead", "deceased", "stare", "frozen", "horror"]
+    physical_terms = ["lift", "lifting", "carry", "carrying", "retrieve", "retrieval", "kneel", "kneeling", "hoist", "drag", "struggle"]
+
+    if shot_size in WIDE_SHOT_SIZES:
+        if any(term in text for term in action_terms):
+            return "action"
+        return "establishing_wide"
+    if shot_size in CLOSE_SHOT_SIZES:
+        return "reaction_closeup"
+    if any(term in text for term in action_terms):
+        return "action"
+    if any(term in text for term in physical_terms):
+        return "medium"
+    if shot_order == len(scene_contract.get("beat_list", []) or []) and any(term in text for term in reaction_terms):
+        return "closing_reaction"
+    if any(term in text for term in reaction_terms):
+        return "medium"
+    return _shot_type_from_beat(scene_contract, beat_payload, shot_order)
 
 
 def _camera_description(shot_type: str, beat_summary: str) -> str:
@@ -992,6 +1170,34 @@ def _primary_subject_scale_relation(
     return "preserve readable body-to-environment scale in frame"
 
 
+def _environment_anchor(
+    planned_shot: dict[str, Any],
+    visible_environment_features: list[str],
+    subzone: str,
+) -> str:
+    for candidate in (
+        str(planned_shot.get("planned_shot_required_anchor_1", "")),
+        visible_environment_features[0] if visible_environment_features else "",
+        subzone,
+    ):
+        if _looks_like_environment_anchor(candidate):
+            return candidate.strip()
+    return subzone.strip() or (visible_environment_features[0].strip() if visible_environment_features else "")
+
+
+def _scale_proof_detail(
+    planned_shot: dict[str, Any],
+    primary_subject_scale_relation: str,
+) -> str:
+    for candidate in (
+        str(planned_shot.get("planned_shot_scale_proof_detail", "")),
+        primary_subject_scale_relation,
+    ):
+        if _looks_like_scale_relation(candidate):
+            return candidate.strip()
+    return primary_subject_scale_relation.strip()
+
+
 def _subject_relation_summary(primary_subject: str, secondary_subjects: list[str], subject_visibility: str) -> str:
     if subject_visibility == "off_screen_voice":
         return "visible bodies should carry the scene while narration remains off-screen"
@@ -1009,14 +1215,14 @@ def _default_shot_enums(shot_type: str, primary_subject: str) -> dict[str, str]:
         camera_motion = "locked_off"
         zoom_behavior = "none"
         camera_angle = "eye_level"
-    elif shot_type_normalized in {"closing_reaction", "close_up"}:
+    elif shot_type_normalized in {"closing_reaction", "close_up", "reaction_closeup"}:
         shot_size = "close_up"
         lens_family = "portrait"
         focus_strategy = "shallow_subject"
         camera_motion = "push_in"
         zoom_behavior = "subtle_in"
         camera_angle = "eye_level"
-    elif shot_type_normalized in {"wide", "establishing"}:
+    elif shot_type_normalized in {"wide", "establishing", "establishing_wide"}:
         shot_size = "wide"
         lens_family = "wide"
         focus_strategy = "deep_focus"
@@ -1101,14 +1307,14 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
             beat_payload["action_end"] = beat_summary
         planned_shot = planned_shots.get(shot_id, {})
         environment = _select_environment_ref(scene_contract, project_dir, scene_binding=scene_binding, beat_id=beat_id)
-        shot_type = _shot_type_from_beat(scene_contract, beat_payload, index)
+        provisional_shot_type = _shot_type_from_beat(scene_contract, beat_payload, index)
         subject_hints = _coerce_string_list(
             planned_shot.get("primary_subject_seed", ""),
             planned_shot.get("secondary_subjects_seed", []),
             beat_payload.get("active_subjects", []),
             beat_payload.get("passive_subjects", []),
         )
-        characters = _selected_characters(
+        candidate_characters = _selected_characters(
             scene_contract,
             project_dir,
             beat_summary,
@@ -1116,9 +1322,6 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
             scene_binding=scene_binding,
             subject_hints=subject_hints,
         )
-        camera_description = _camera_description(shot_type, beat_summary)
-        composition = _composition_description(shot_type, characters, environment, beat_summary)
-        shot_title = _shot_title_from_beat(shot_type, beat_summary, index)
         continuity_constraints = _coerce_string_list(
             scene_contract.get("continuity_constraints", []),
             beat_summary,
@@ -1127,11 +1330,13 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
         primary_subject = _first_nonempty(
             str(planned_shot.get("primary_subject_seed", "")),
             beat_payload["active_subjects"][0] if beat_payload["active_subjects"] else "",
-            _first_nonempty(characters[0].display_name if characters else "", characters[0].label if characters else "", fallback="scene subject"),
+            _first_nonempty(candidate_characters[0].display_name if candidate_characters else "", candidate_characters[0].label if candidate_characters else "", fallback="scene subject"),
         )
-        secondary_subjects = _coerce_string_list(planned_shot.get("secondary_subjects_seed", []), beat_payload.get("passive_subjects", []))
+        secondary_subject_hints = _coerce_string_list(planned_shot.get("secondary_subjects_seed", []), beat_payload.get("passive_subjects", []))
+        provisional_enums = _default_shot_enums(provisional_shot_type, primary_subject)
+        shot_size = _normalize_enum(planned_shot.get("shot_size"), SHOT_SIZE_ENUM, fallback=provisional_enums["shot_size"])
+        shot_type = _resolved_shot_type(scene_contract, beat_payload, planned_shot, index, shot_size)
         enums = _default_shot_enums(shot_type, primary_subject)
-        shot_size = _normalize_enum(planned_shot.get("shot_size"), SHOT_SIZE_ENUM, fallback=enums["shot_size"])
         camera_angle = _normalize_enum(planned_shot.get("camera_angle"), CAMERA_ANGLE_ENUM, fallback=enums["camera_angle"])
         lens_family = _normalize_enum(planned_shot.get("lens_family"), LENS_FAMILY_ENUM, fallback=enums["lens_family"])
         camera_motion = _normalize_enum(planned_shot.get("camera_motion"), CAMERA_MOTION_ENUM, fallback=enums["camera_motion"])
@@ -1141,6 +1346,19 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
         subject_visibility = _normalize_enum(planned_shot.get("subject_visibility"), SUBJECT_VISIBILITY_ENUM, fallback=enums["subject_visibility"])
         narration_mode = _normalize_enum(planned_shot.get("narration_mode"), NARRATION_MODE_ENUM, fallback=enums["narration_mode"])
         primary_subject_angle = _normalize_enum(planned_shot.get("primary_subject_angle"), PRIMARY_SUBJECT_ANGLE_ENUM, fallback=enums["primary_subject_angle"])
+        characters = _filter_visible_characters(
+            characters=candidate_characters,
+            primary_subject=primary_subject,
+            secondary_subjects=secondary_subject_hints,
+            beat_payload=beat_payload,
+            shot_size=shot_size,
+            shot_type=shot_type,
+            subject_visibility=subject_visibility,
+        )
+        secondary_subjects = _visible_secondary_subject_labels(primary_subject, characters)
+        camera_description = _camera_description(shot_type, beat_summary)
+        composition = _composition_description(shot_type, characters, environment, beat_summary)
+        shot_title = _shot_title_from_beat(shot_type, beat_summary, index)
         start_state = _first_nonempty(str(planned_shot.get("start_state_seed", "")), str(beat_payload.get("action_start", "")), previous_end_state, beat_summary, fallback=beat_summary)
         end_state = _first_nonempty(str(planned_shot.get("end_state_seed", "")), str(beat_payload.get("action_end", "")), beat_summary, fallback=start_state)
         action_continues_from = previous_end_state if index > 1 else _first_nonempty(str(scene_contract.get("scene_start_state", "")), beat_summary, fallback="")
@@ -1158,17 +1376,8 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
         primary_subject_facing_direction = _angle_to_facing_direction(primary_subject_angle, subject_visibility)
         primary_subject_pose_description = _first_nonempty(start_state, action_during_shot, fallback="")
         subject_relation_summary = _subject_relation_summary(primary_subject, secondary_subjects, subject_visibility)
-        required_environment_anchor_1 = _first_nonempty(
-            str(planned_shot.get("planned_shot_required_anchor_1", "")),
-            visible_environment_features[0] if visible_environment_features else "",
-            subzone,
-            fallback="",
-        )
-        required_scale_proof_detail = _first_nonempty(
-            str(planned_shot.get("planned_shot_scale_proof_detail", "")),
-            primary_subject_scale_relation,
-            fallback="",
-        )
+        required_environment_anchor_1 = _environment_anchor(planned_shot, visible_environment_features, subzone)
+        required_scale_proof_detail = _scale_proof_detail(planned_shot, primary_subject_scale_relation)
         camera_package_description = _camera_package_description(
             shot_size,
             camera_angle,

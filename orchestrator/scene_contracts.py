@@ -5,6 +5,7 @@ import json
 import re
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
@@ -21,7 +22,22 @@ from .scaffold import create_project
 from .settings import load_runtime_settings
 from .world_global import global_character_registry_path, global_environment_registry_path
 
-SCENE_CONTRACT_SCHEMA_VERSION = "2026-04-23-scene-contracts-v4"
+SCENE_CONTRACT_SCHEMA_VERSION = "2026-04-23-scene-contracts-v5"
+
+SCENE_LIST_FIELD_KEYS = {
+    "participating_characters",
+    "participating_environments",
+    "likely_visual_coverage_families",
+    "likely_continuity_sensitivities",
+}
+SCENE_REPAIRABLE_FIELD_KEYS = (
+    "scene_summary",
+    "dominant_emotional_shift",
+    "participating_characters",
+    "participating_environments",
+    "likely_visual_coverage_families",
+    "likely_continuity_sensitivities",
+)
 
 
 @dataclass
@@ -290,9 +306,8 @@ def _chapter_summary_path(project_dir: Path, chapter_id: str) -> Path:
     return project_dir / "02_story_analysis" / "chapter_analysis" / f"{chapter_id}_summary.md"
 
 
-def _load_scene_markdown(scene_path: Path) -> dict[str, str]:
+def _parse_scene_markdown_lines(lines: list[str], *, allow_title: bool = True) -> dict[str, str]:
     fields: dict[str, str] = {}
-    lines = scene_path.read_text(encoding="utf-8").splitlines()
     current_key: str | None = None
     current_value: list[str] = []
 
@@ -312,23 +327,174 @@ def _load_scene_markdown(scene_path: Path) -> dict[str, str]:
             if current_key is not None:
                 current_value.append("")
             continue
-        if line.startswith("# "):
+        if allow_title and line.startswith("# "):
             fields.setdefault("scene_title", line[2:].strip())
             continue
-        match = re.fullmatch(r"\*\*(.+?)\:\*\*\s*(.+)", line)
+        match = re.fullmatch(r"\*\*(.+?)\:\*\*\s*(.*)", line)
         if match:
             flush()
             current_key = _normalize_key(match.group(1))
-            current_value = [match.group(2).strip()]
+            inline_value = match.group(2).strip()
+            current_value = [inline_value] if inline_value else []
             continue
         if current_key is not None:
-            current_value.append(raw_line.rstrip())
+            if line.startswith("- "):
+                current_value.append(line[2:].strip())
+            else:
+                current_value.append(raw_line.rstrip())
     flush()
     return fields
 
 
+def _extract_embedded_scene_sections(text: str) -> tuple[str, dict[str, str]]:
+    lines = str(text or "").splitlines()
+    prefix_lines: list[str] = []
+    section_lines: list[str] = []
+    found_section = False
+    for raw_line in lines:
+        stripped = raw_line.strip()
+        if re.fullmatch(r"\*\*(.+?)\:\*\*\s*(.*)", stripped):
+            found_section = True
+        if found_section:
+            section_lines.append(raw_line)
+        else:
+            prefix_lines.append(raw_line)
+    cleaned_scalar = "\n".join(prefix_lines).strip()
+    if not found_section:
+        return cleaned_scalar or str(text or "").strip(), {}
+    parsed = _parse_scene_markdown_lines(section_lines, allow_title=False)
+    extracted = {key: value for key, value in parsed.items() if key in SCENE_REPAIRABLE_FIELD_KEYS and value.strip()}
+    return cleaned_scalar, extracted
+
+
+def _normalize_loaded_scene_fields(scene_fields: dict[str, str]) -> dict[str, str]:
+    cleaned = {key: " ".join(value.split()).strip() if "\n" not in value else "\n".join(line.rstrip() for line in value.splitlines()).strip() for key, value in scene_fields.items() if isinstance(value, str)}
+    for key in ("scene_purpose", "scene_summary", "dominant_emotional_shift"):
+        value = cleaned.get(key, "")
+        if not value:
+            continue
+        scalar_text, extracted = _extract_embedded_scene_sections(value)
+        cleaned[key] = scalar_text
+        for extracted_key, extracted_value in extracted.items():
+            if extracted_value and not cleaned.get(extracted_key):
+                cleaned[extracted_key] = extracted_value
+    return cleaned
+
+
+def _load_scene_markdown(scene_path: Path) -> dict[str, str]:
+    lines = scene_path.read_text(encoding="utf-8").splitlines()
+    return _normalize_loaded_scene_fields(_parse_scene_markdown_lines(lines))
+
+
 def _normalize_key(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", value.strip().lower()).strip("_")
+
+
+def _missing_scene_field_keys(scene_fields: dict[str, str]) -> list[str]:
+    missing: list[str] = []
+    for key in SCENE_REPAIRABLE_FIELD_KEYS:
+        value = scene_fields.get(key, "")
+        if key in SCENE_LIST_FIELD_KEYS:
+            if not _split_list_value(value):
+                missing.append(key)
+        elif not str(value or "").strip():
+            missing.append(key)
+    return missing
+
+
+def _extract_json_object(text: str) -> dict[str, Any] | None:
+    raw = str(text or "").strip()
+    if not raw:
+        return None
+    fenced = re.sub(r"^\s*```(?:json)?\s*|\s*```\s*$", "", raw, flags=re.IGNORECASE | re.DOTALL).strip()
+    start = fenced.find("{")
+    end = fenced.rfind("}")
+    if start < 0 or end <= start:
+        return None
+    try:
+        payload = json.loads(fenced[start : end + 1])
+    except json.JSONDecodeError:
+        return None
+    return payload if isinstance(payload, dict) else None
+
+
+def _chapter_summary_excerpt(project_dir: Path, chapter_id: str) -> str:
+    path = _chapter_summary_path(project_dir, chapter_id)
+    if not path.exists():
+        return ""
+    try:
+        return path.read_text(encoding="utf-8").strip()
+    except OSError:
+        return ""
+
+
+def _repair_scene_field_gaps(
+    *,
+    project_dir: Path,
+    scene_id: str,
+    chapter_id: str,
+    scene_markdown: str,
+    scene_fields: dict[str, str],
+) -> dict[str, str]:
+    missing_keys = _missing_scene_field_keys(scene_fields)
+    if not missing_keys:
+        return scene_fields
+
+    try:
+        settings = load_runtime_settings()
+        client = LMStudioClient(settings)
+    except Exception:
+        return scene_fields
+    chapter_summary = _chapter_summary_excerpt(project_dir, chapter_id)
+
+    system = (
+        "You extract missing scene-breakdown fields from markdown. "
+        "Return JSON only. Do not rewrite the whole scene. "
+        "Only fill the missing keys that are explicitly requested."
+    )
+    user = f"""
+Extract only the missing scene-breakdown fields for {scene_id}.
+
+RULES:
+- Return one JSON object only.
+- Do not include markdown fences.
+- Keep scalar fields concise strings.
+- Keep list fields as JSON arrays of short strings.
+- Use only evidence present in the scene markdown. Use the chapter summary only if the scene markdown is ambiguous.
+- Do not invent extra keys.
+
+MISSING_KEYS:
+{json.dumps(missing_keys, indent=2, ensure_ascii=False)}
+
+CURRENT_PARSED_FIELDS:
+{json.dumps(scene_fields, indent=2, ensure_ascii=False)}
+
+SCENE_MARKDOWN:
+{scene_markdown}
+
+CHAPTER_SUMMARY_EXCERPT:
+{chapter_summary}
+""".strip()
+
+    result = client.chat_completion_result(system_prompt=system, user_prompt=user, temperature=0.0)
+    if not result.is_success:
+        return scene_fields
+    payload = _extract_json_object(result.text)
+    if not payload:
+        return scene_fields
+
+    repaired = dict(scene_fields)
+    for key in missing_keys:
+        value = payload.get(key)
+        if key in SCENE_LIST_FIELD_KEYS:
+            values = _coerce_string_list(value if isinstance(value, list) else value)
+            if values:
+                repaired[key] = "\n".join(values)
+        else:
+            text_value = str(value or "").strip()
+            if text_value:
+                repaired[key] = text_value
+    return _normalize_loaded_scene_fields(repaired)
 
 
 def _split_list_value(value: str) -> list[str]:
@@ -462,6 +628,21 @@ def _load_refined_registry_path(project_dir: Path, kind: str, project_slug: str)
     return refined if refined.exists() else global_environment_registry_path(project_slug)
 
 
+def _load_local_registry_path(project_dir: Path, chapter_id: str, kind: str) -> Path:
+    suffix = "CHARACTER_REGISTRY" if kind == "character" else "ENVIRONMENT_REGISTRY"
+    return project_dir / "02_story_analysis" / "world" / "local" / f"{chapter_id.upper()}_{suffix}.json"
+
+
+def _load_local_registry_entries(project_dir: Path, chapter_id: str, kind: str) -> dict[str, dict[str, Any]]:
+    registry_path = _load_local_registry_path(project_dir, chapter_id, kind)
+    if not registry_path.exists():
+        return {}
+    payload = read_json(registry_path)
+    if not isinstance(payload, dict):
+        return {}
+    return {canonical_id: entry for canonical_id, entry in payload.items() if isinstance(canonical_id, str) and isinstance(entry, dict)}
+
+
 def _load_registry_entry(project_dir: Path, project_slug: str, kind: str, canonical_id: str) -> dict[str, Any] | None:
     registry_path = _load_refined_registry_path(project_dir, kind, project_slug)
     if not registry_path.exists():
@@ -491,6 +672,34 @@ def _chapter_number(chapter_id: str) -> int | None:
 
 def _normalize_resolution_key(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", value.strip().lower()).strip("_")
+
+
+def _meaningful_tokens(value: str) -> set[str]:
+    stopwords = {
+        "the",
+        "and",
+        "for",
+        "with",
+        "from",
+        "into",
+        "near",
+        "site",
+        "scene",
+        "area",
+        "space",
+        "place",
+        "through",
+        "under",
+        "over",
+        "within",
+        "night",
+        "day",
+    }
+    return {
+        token
+        for token in re.findall(r"[a-z0-9]+", str(value or "").lower())
+        if len(token) > 2 and token not in stopwords and not token.isdigit()
+    }
 
 
 def _strip_parenthetical_text(value: str) -> str:
@@ -558,6 +767,45 @@ def _load_registry_entries(project_dir: Path, project_slug: str, kind: str) -> d
     if not isinstance(payload, dict):
         return {}
     return {canonical_id: entry for canonical_id, entry in payload.items() if isinstance(canonical_id, str) and isinstance(entry, dict)}
+
+
+def _workspace_root(project_dir: Path) -> Path:
+    return project_dir.parent.parent
+
+
+@lru_cache(maxsize=512)
+def _read_text_cached(path_text: str) -> str:
+    path = Path(path_text)
+    if not path.exists():
+        return ""
+    try:
+        return path.read_text(encoding="utf-8")
+    except OSError:
+        return ""
+
+
+def _resolve_project_source_path(project_dir: Path, source_path: str) -> Path:
+    raw = Path(str(source_path).strip())
+    if raw.is_absolute():
+        return raw
+    workspace_candidate = _workspace_root(project_dir) / raw
+    if workspace_candidate.exists():
+        return workspace_candidate
+    project_candidate = project_dir / raw
+    if project_candidate.exists():
+        return project_candidate
+    return workspace_candidate
+
+
+def _entry_source_corpus(project_dir: Path, entry: dict[str, Any]) -> str:
+    snippets: list[str] = []
+    for source_path in entry.get("sources", []):
+        if not isinstance(source_path, str) or not source_path.strip():
+            continue
+        text = _read_text_cached(str(_resolve_project_source_path(project_dir, source_path)))
+        if text:
+            snippets.append(text)
+    return "\n".join(snippets)
 
 
 def _entry_chapter_mentions(entry: dict[str, Any]) -> list[str]:
@@ -726,6 +974,84 @@ def _resolve_direct_registry_match(
     )
 
 
+def _resolve_local_environment_alias(
+    *,
+    project_dir: Path,
+    project_slug: str,
+    label: str,
+    chapter_id: str,
+    markdown: str,
+) -> SceneReference | None:
+    local_entries = _load_local_registry_entries(project_dir, chapter_id, "environment")
+    if not local_entries:
+        return None
+
+    normalized_label = _normalize_scene_label(label)
+    label_tokens = _meaningful_tokens(normalized_label.replace("/", " "))
+    if not label_tokens:
+        return None
+
+    scene_tokens = _meaningful_tokens(markdown)
+    best: tuple[int, str, dict[str, Any], str] | None = None
+    label_parts = [part.strip().lower() for part in re.split(r"/|\bor\b", normalized_label, flags=re.IGNORECASE) if part.strip()]
+
+    for canonical_id, entry in local_entries.items():
+        key_tokens: set[str] = set()
+        for raw in (
+            canonical_id,
+            str(entry.get("display_name", "")),
+            *(str(alias) for alias in entry.get("aliases", []) if isinstance(alias, str)),
+        ):
+            key_tokens.update(_meaningful_tokens(str(raw).replace("_", " ")))
+
+        source_corpus = _entry_source_corpus(project_dir, entry).lower()
+        source_tokens = _meaningful_tokens(source_corpus)
+        key_overlap = len(label_tokens & key_tokens)
+        label_source_overlap = len(label_tokens & source_tokens)
+        context_overlap = len(scene_tokens & source_tokens)
+        exact_part_hits = sum(1 for part in label_parts if part and part in source_corpus)
+
+        score = (24 * key_overlap) + (12 * exact_part_hits) + (10 * label_source_overlap) + (6 * min(context_overlap, 4))
+        open_air_cues = {"sky", "landscape", "mountain", "mountains", "plateau", "valley", "trail", "gorge", "canyon", "hills"}
+        enclosed_tokens = {"cave", "subterranean", "interior", "chamber", "room", "cell"}
+        void_cues = {"void", "space", "cosmic", "starless"}
+        terrestrial_tokens = {"mountain", "plateau", "valley", "trail", "canyon", "gorge", "camp", "hills", "landscape"}
+        combined_tokens = label_tokens | scene_tokens
+        if combined_tokens & open_air_cues and source_tokens & enclosed_tokens:
+            score -= 28
+        if "landscape" in combined_tokens and source_tokens & enclosed_tokens and "cave" in source_tokens:
+            score -= 48
+        if label_tokens & void_cues and source_tokens & terrestrial_tokens:
+            score -= 24
+        if {"landscape", "night"} <= combined_tokens and source_tokens & {"night", "sky", "open", "air"}:
+            score += 12
+        if score < 22 or (key_overlap == 0 and label_source_overlap < 2 and exact_part_hits == 0):
+            continue
+
+        notes = (
+            f"Chapter-local environment alias match for '{normalized_label}' "
+            f"(key_overlap={key_overlap}, label_overlap={label_source_overlap}, context_overlap={min(context_overlap, 4)})."
+        )
+        if best is None or score > best[0]:
+            best = (score, canonical_id, entry, notes)
+
+    if best is None:
+        return None
+
+    score, canonical_id, entry, notes = best
+    return _scene_reference_from_registry_entry(
+        project_dir=project_dir,
+        project_slug=project_slug,
+        kind="environment",
+        label=label,
+        canonical_id=canonical_id,
+        entry=entry,
+        resolution_score=score,
+        notes=notes,
+        chapter_id=chapter_id,
+    )
+
+
 def _best_fuzzy_candidate(
     *,
     project_slug: str,
@@ -829,6 +1155,15 @@ def _resolve_environment_reference(project_slug: str, label: str, markdown: str,
     )
     if direct_match is not None:
         return direct_match
+    local_alias_match = _resolve_local_environment_alias(
+        project_dir=project_dir,
+        project_slug=project_slug,
+        label=label,
+        chapter_id=chapter_id,
+        markdown=markdown,
+    )
+    if local_alias_match is not None:
+        return local_alias_match
     resolved = _best_fuzzy_candidate(
         project_slug=project_slug,
         project_dir=project_dir,
@@ -1741,11 +2076,19 @@ def run_scene_contract_synthesis(
             continue
         scene_id = scene_id_match.group(1).upper()
         chapter_id = scene_id[:5]
+        scene_markdown = scene_path.read_text(encoding="utf-8")
         scene_fields = _load_scene_markdown(scene_path)
+        if use_llm:
+            scene_fields = _repair_scene_field_gaps(
+                project_dir=project_dir,
+                scene_id=scene_id,
+                chapter_id=chapter_id,
+                scene_markdown=scene_markdown,
+                scene_fields=scene_fields,
+            )
         scene_fields.setdefault("scene_purpose", scene_fields.get("scene_purpose", ""))
         scene_fields.setdefault("scene_summary", scene_fields.get("scene_summary", ""))
         scene_title = _scene_title_from_fields(scene_id, scene_fields)
-        scene_markdown = scene_path.read_text(encoding="utf-8")
         raw_characters = _dedupe_scene_labels(_split_list_value(scene_fields.get("participating_characters", "")))
         raw_environments = _dedupe_scene_labels(_split_list_value(scene_fields.get("participating_environments", "")))
 
@@ -1994,6 +2337,10 @@ def run_scene_contract_synthesis(
         for ref in character_refs + environment_refs:
             if ref.status != "canonical" or not ref.canonical_id:
                 unresolved_questions.append(f"Resolve {ref.label} -> {ref.display_name or ref.label}")
+        if not contract.characters_required:
+            unresolved_questions.append("Participating characters could not be extracted from the scene breakdown.")
+        if not contract.environments_required:
+            unresolved_questions.append("Participating environments could not be extracted from the scene breakdown.")
         if not contract.beat_list:
             unresolved_questions.append("Beat list could not be derived.")
         contract.unresolved_questions = unresolved_questions
