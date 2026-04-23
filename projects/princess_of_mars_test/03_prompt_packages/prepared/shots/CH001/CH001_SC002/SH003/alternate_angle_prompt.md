@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Excitement / Triumph $\rightarrow$ Determination.. Shoulder-level conversational framing with visible foreground presence.. Over-the-shoulder composition in with, sharing the frame for dialogue or tension.. Characters: . Environment: described environment with stable spatial continuity. Keep continuity exact across costume, silhouette,...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Excitement / Triumph $\rightarrow$ Determination.. Shoulder-level conversational framing with visible foreground presence.. Over-the-shoulder composition in with and sharing the frame for dialogue or tension.. Characters: . Environment: described environment with stable spatial continuity. Keep continuity exact across costume, silhouet...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -40,17 +40,18 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - next_shot_id: (none)
 - shot_lineage_ids: SH002; SH003
 - camera_description: Shoulder-level conversational framing with visible foreground presence.
-- composition: Over-the-shoulder composition in Remote Arizona quartz vein/hills with John Carter (Younger), Captain James K. Powell sharing the frame for dialogue or tension.
+- composition: Over-the-shoulder composition in Remote Arizona quartz vein/hills with John Carter (Younger) and Captain James K. Powell sharing the frame for dialogue or tension.
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH001_SC002; DESC_CH001_SC002_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH001_SC002 / SC002.
+- Scene: CH001_SC002 / Establish the inciting incident and the stakes (the gold claim)..
 - Variant: Alternate Angle.
-- Appearance and scale of the gold vein
-- 1865 prospector gear and clothing
-- Bright desert sun lighting consistency
+- Appearance of the gold vein
+- gear/clothing of 1865 prospectors
+- lighting (bright desert sun)
+- lighting (bright desert sun).
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

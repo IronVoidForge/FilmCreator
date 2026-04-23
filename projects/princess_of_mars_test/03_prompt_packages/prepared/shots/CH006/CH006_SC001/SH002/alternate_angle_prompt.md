@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Terror $\rightarrow$ Desperation $\rightarrow$ Fierce Loyalty. **Likely Visual Coverage Families:** - Tight close-ups on the protagonist'.... Tight detail framing focused on a single visual object or gesture.. Detail composition centered on the key physical action or prop inside .. Characters: . Environment: described environment with...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Terror $\rightarrow$ Desperation $\rightarrow$ Fierce Loyalty. **Likely Visual Coverage Families:** - Tight close-ups on the protagonist'.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: . Environment: described environment with stable spatial continuity. Keep...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,25 +35,25 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH006_SC001
 - chapter_id: CH006
-- shot_type: insert_detail
+- shot_type: medium
 - previous_shot_id: SH001
 - next_shot_id: SH003
 - shot_lineage_ids: SH001; SH002; SH003
-- camera_description: Tight detail framing focused on a single visual object or gesture.
-- composition: Detail composition centered on the key physical action or prop inside Interior chamber.
+- camera_description: Stable medium framing that keeps action and character readable.
+- composition: Readable medium composition in Interior chamber featuring scene_character.
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH006_SC001; DESC_CH006_SC001_SH002
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH006_SC001 / SC001.
+- Scene: CH006_SC001 / To establish immediate life-or-death stakes and demonstrate the loyal....
 - Variant: Alternate Angle.
-- Bull Ape limb positioning during pinning
-- Location of the stone cudgel
-- Physical injury state of the Watch-thing post-combat
-- The Bull Ape's mate approaches
-- wielding a stone cudgel to finish the Protagonist.
-- Resolve Interior chamber -> Interior chamber
+- The positioning of the Bull Ape's limbs
+- the location of the fallen cudgel
+- the physical state (injuries) of the Watch-thing during the fight.
+- As its mate approaches with a stone cudgel to finish him
+- the Watch-thing leaps into the fray
+- engaging the mate in a brutal struggle to buy the protagonist time.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

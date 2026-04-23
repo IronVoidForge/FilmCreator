@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Intimidation $\rightarrow$ Observational Curiosity. **Likely Visual Coverage Families:** * Medium shots of the Chieftain in regalia. * Cl.... Tight detail framing focused on a single visual object or gesture.. Detail composition centered on the key physical action or prop inside .. Characters: . Environment: Cavernous interior with hig...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Intimidation $\rightarrow$ Observational Curiosity. **Likely Visual Coverage Families:** * Medium shots of in regalia. * Close-ups on the.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of land the scene consequence or transition cleanly.. Characters: Green Ma...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,21 +35,22 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH004_SC002
 - chapter_id: CH004
-- shot_type: insert_detail
+- shot_type: closing_reaction
 - previous_shot_id: SH002
-- next_shot_id: SH004
-- shot_lineage_ids: SH002; SH003; SH004
-- camera_description: Tight detail framing focused on a single visual object or gesture.
-- composition: Detail composition centered on the key physical action or prop inside grand_audience_chamber.
+- next_shot_id: (none)
+- shot_lineage_ids: SH002; SH003
+- camera_description: Controlled closing frame that lands the consequence of the beat.
+- composition: Closing composition in grand_audience_chamber that emphasizes the consequence of land the scene consequence or transition cleanly.
 - prompt_family: shot_prompt
-- reference_asset_ids: grand_audience_chamber; DESC_CH004_SC002; DESC_CH004_SC002_SH003
+- reference_asset_ids: tars_tarkas; chieftain; grand_audience_chamber; DESC_CH004_SC002; DESC_CH004_SC002_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH004_SC002 / SC002.
+- Scene: CH004_SC002 / Introduce the political hierarchy and the physical absurdity of the M....
 - Variant: Alternate Angle.
-- Precise spatial placement of the Narrator within the massive scale of the grand_audience_chamber.
-- Visual consistency and detail of the chieftain's regalia.
+- The specific placement of the Narrator within the massive chamber
+- the visual details of the Chieftain's regalia.
+- Land the scene consequence or transition cleanly.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

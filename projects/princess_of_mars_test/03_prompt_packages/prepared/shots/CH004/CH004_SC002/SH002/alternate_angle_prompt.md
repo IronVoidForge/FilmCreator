@@ -46,10 +46,11 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH004_SC002 / SC002.
+- Scene: CH004_SC002 / Introduce the political hierarchy and the physical absurdity of the M....
 - Variant: Alternate Angle.
-- Precise spatial placement of the Narrator within the massive scale of the grand_audience_chamber.
-- Visual consistency and detail of the chieftain's regalia.
+- The specific placement of the Narrator within the massive chamber
+- the visual details of the Chieftain's regalia.
+- Carry the emotional arc through: Intimidation -> Observational Curiosity.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

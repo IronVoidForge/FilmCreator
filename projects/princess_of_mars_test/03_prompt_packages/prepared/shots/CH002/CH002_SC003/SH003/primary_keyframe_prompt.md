@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. From intense mental struggle to profound shock and existential horror. **Likely Visual Coverage Families:** - Medium shots of the physica.... Close framing that isolates reaction and emotional emphasis.. Intimate composition that isolates against to capture the beat's emotional turn.. Characters: . Environment: described env...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. From intense mental struggle to profound shock and existential horror. **Likely Visual Coverage Families:** - Medium shots of the physica.... Controlled closing frame that lands the consequence of the beat.. Closing composition that emphasizes the presence of both the naked standing figure and the clothed lying body in deep...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,22 +35,22 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH002_SC003
 - chapter_id: CH002
-- shot_type: reaction_closeup
+- shot_type: closing_reaction
 - previous_shot_id: SH002
 - next_shot_id: (none)
 - shot_lineage_ids: SH002; SH003
-- camera_description: Close framing that isolates reaction and emotional emphasis.
-- composition: Intimate composition that isolates scene_character against SC003 to capture the beat's emotional turn.
+- camera_description: Controlled closing frame that lands the consequence of the beat.
+- composition: Closing composition that emphasizes the presence of both the naked standing figure and the clothed lying body in deep shadows.
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH002_SC003; DESC_CH002_SC003_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH002_SC003 / SC003.
+- Scene: CH002_SC003 / To execute the central supernatural twist and reveal the protagonist'....
 - Variant: Primary Keyframe.
-- Exact spatial placement of the "old" body relative to the "new" self's standing position
-- Lighting consistency between the two versions of the character
-- The protagonist realizes his metamorphosis by observing his original clothed body lying lifeless on the cave floor.
+- The Protagonist (The "New" Self)
+- The Protagonist (The "Old" Body)
+- Interior Cave (Deep shadows)
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

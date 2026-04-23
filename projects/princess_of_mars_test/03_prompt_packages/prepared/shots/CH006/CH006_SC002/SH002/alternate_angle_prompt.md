@@ -46,12 +46,14 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH006_SC002 / SC002.
+- Scene: CH006_SC002 / To showcase the protagonist's combat prowess using Earthly tactics an....
 - Variant: Alternate Angle.
-- Directionality of cudgel swings
-- Blood splatter patterns
-- Protagonist's physical exhaustion levels
-- The Protagonist kills the first ape using a cudgel.
+- The direction of the cudgel swings
+- blood splatter patterns
+- the physical exhaustion levels of the protagonist.
+- The mate returns in a rage; rather than fleeing
+- the protagonist uses precise strikes to the chin and stomach to incapacitate and ultimately kill the second ape.
+- Resolve Interior chamber -> Interior chamber
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

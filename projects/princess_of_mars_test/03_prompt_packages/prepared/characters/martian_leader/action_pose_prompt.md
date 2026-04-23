@@ -11,7 +11,7 @@ Prepare a compact character reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film character reference sheet, dynamic action pose that preserves anatomy, costume, and identity, A massive, four-armed Martian warrior., 15ft tall, heavy humanoid frame with four arms., Martian warrior race., Dismounts from an eight-legged mount, clean neutral studio background, clear silhouette, consistent costum...
+Film character reference sheet, dynamic action pose that preserves anatomy, costume, and identity, A massive, four-armed Martian warrior., readable production detail, 15ft tall, heavy humanoid frame with four arms., Martian warrior race., clean neutral studio background, clear silhouette, consistent costume layers,...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

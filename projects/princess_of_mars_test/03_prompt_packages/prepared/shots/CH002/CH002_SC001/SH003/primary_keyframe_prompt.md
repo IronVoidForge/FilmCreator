@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. From awareness/confusion to helpless terror and sensory isolation. **Likely Visual Coverage Families:** - Extreme Close-ups (Eyes, dilate.... Controlled closing frame.. Closing composition in emphasizing transition from awareness to helpless terror as physical movement becomes impossible despite full consciousness.. Characte...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. From awareness/confusion to helpless terror and sensory isolation. **Likely Visual Coverage Families:** - Extreme Close-ups (Eyes, dilate.... Controlled closing frame that lands the consequence of the beat.. Closing composition emphasizing the protagonist's helplessness within the dark, claustrophobic cave and tenuous vapor....
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -39,18 +39,17 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - previous_shot_id: SH002
 - next_shot_id: (none)
 - shot_lineage_ids: SH002; SH003
-- camera_description: Controlled closing frame.
-- composition: Closing composition in SC001 emphasizing transition from awareness to helpless terror as physical movement becomes impossible despite full consciousness.
+- camera_description: Controlled closing frame that lands the consequence of the beat.
+- composition: Closing composition emphasizing the protagonist's helplessness within the dark, claustrophobic cave and tenuous vapor.
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH002_SC001; DESC_CH002_SC001_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH002_SC001 / SC001.
+- Scene: CH002_SC001 / To establish the protagonist's vulnerability and the supernatural thr....
 - Variant: Primary Keyframe.
-- Eye movement and pupil dilation consistency.
-- Visual density and quality of the mysterious vapor.
-- Transition from awareness to helpless terror as physical movement becomes impossible despite full consciousness.
+- The Protagonist
+- Interior Cave (Dark, claustrophobic, filled with tenuous vapor)
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

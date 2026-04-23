@@ -11,7 +11,7 @@ Prepare a compact character reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film character reference sheet, rear view with costume back detail and full silhouette clarity, 19th-century mining engineer and former Confederate officer., 1860s era, frontier/mining setting., average-tall, clean neutral studio background, clear silhouette, consistent costume layers, consistent facial structure, n...
+Film character reference sheet, rear view with costume back detail and full silhouette clarity, 19th-century mining engineer and former Confederate officer., readable production detail, lean but durable soldier's frame, 1860s era, clean neutral studio background, clear silhouette, consistent costume layers, consiste...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

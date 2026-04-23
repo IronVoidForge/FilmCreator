@@ -11,7 +11,7 @@ Prepare a compact character reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film character reference sheet, front-facing full-body reference with the camera square to the subject, An Earthman undergoing a supernatural transformation., agile and capable of high-intensity physical exertion., Earthman in a low-gravity environment., extreme agility, high-leaping capabilities, and earthly striki...
+Film character reference sheet, front-facing full-body reference with the camera square to the subject, An Earthman undergoing a supernatural transformation., readable production detail, agile and capable of high-intensity physical exertion., Earthman in a low-gravity environment., clean neutral studio background, c...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Humiliation $\rightarrow$ Defiance $\rightarrow$ Triumph/Respect. **Likely Visual Coverage Families:** * Tight Close-ups (CU) on the punc.... Wide establishing frame with a steady or lightly drifting camera.. Wide composition across with placed for immediate spatial orientation.. Characters: . Environment: Cavernous interior with high...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Humiliation $\rightarrow$ Defiance $\rightarrow$ Triumph/Respect. **Likely Visual Coverage Families:** * Tight Close-ups (CU) on the punc.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: . Environment: Cavernous interior with high vaulted ceilings, includes a c...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,24 +35,23 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH004_SC003
 - chapter_id: CH004
-- shot_type: establishing_wide
+- shot_type: medium
 - previous_shot_id: (none)
 - next_shot_id: SH002
 - shot_lineage_ids: SH001; SH002
-- camera_description: Wide establishing frame with a steady or lightly drifting camera.
-- composition: Wide composition across grand_audience_chamber with The Narrator placed for immediate spatial orientation.
+- camera_description: Stable medium framing that keeps action and character readable.
+- composition: Readable medium composition in grand_audience_chamber featuring The Narrator.
 - prompt_family: shot_prompt
 - reference_asset_ids: grand_audience_chamber; DESC_CH004_SC003; DESC_CH004_SC003_SH001
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH004_SC003 / SC003.
+- Scene: CH004_SC003 / Establish the Narrator's agency and his ability to command respect th....
 - Variant: Alternate Angle.
-- Physical contact precision during the fight sequence
-- Physics/trajectory consistency of the "sak" jump
-- Resolve The Narrator -> The Narrator
-- Resolve Martian Crowd -> Martian Crowd
-- Resolve Grand Audience Chamber / Plaza area -> Grand Audience Chamber / Plaza area
+- The physics/trajectory of the jump
+- the physical contact during the fight sequence.
+- After being mocked
+- the Narrator punches a Martian warrior.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

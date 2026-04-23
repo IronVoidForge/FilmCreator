@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Awe/Trepidation $\rightarrow$ Alienation. **Likely Visual Coverage Families:** * Extreme Wide Shots (EWS) to establish the scale of the c.... Wide establishing frame with a steady or lightly drifting camera.. Wide composition across with placed for immediate spatial orientation.. Characters: Green Martian (...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Awe/Trepidation $\rightarrow$ Alienation. **Likely Visual Coverage Families:** * Extreme Wide Shots (EWS) to establish the scale of the c.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: . Environment: described environment with sta...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,22 +35,23 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH004_SC001
 - chapter_id: CH004
-- shot_type: establishing_wide
+- shot_type: medium
 - previous_shot_id: (none)
 - next_shot_id: SH002
 - shot_lineage_ids: SH001; SH002
-- camera_description: Wide establishing frame with a steady or lightly drifting camera.
-- composition: Wide composition across Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) with tars_tarkas placed for immediate spatial orientation.
+- camera_description: Stable medium framing that keeps action and character readable.
+- composition: Readable medium composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) featuring The Narrator.
 - prompt_family: shot_prompt
-- reference_asset_ids: tars_tarkas; DESC_CH004_SC001; DESC_CH004_SC001_SH001
+- reference_asset_ids: DESC_CH004_SC001; DESC_CH004_SC001_SH001
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH004_SC001 / SC001.
+- Scene: CH004_SC001 / Establish the scale of the setting and the protagonist's status as a....
 - Variant: Consistency Repair.
-- Scale of props and architecture relative to the Narrator
-- Movement patterns/flow of the Martian crowd
-- Arrival at the massive, ancient city near the dried-up Martian sea.
+- Scale of props/architecture relative to the Narrator
+- movement patterns of the Martian crowd.
+- The Narrator and Tars Tarkas arrive at a massive ancient city built by a forgotten race. They enter a central plaza filled with hundreds of Martians highlighting the narrator's smallness compared to the environment and its inhabitants.
+- Resolve The Narrator -> The Narrator
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

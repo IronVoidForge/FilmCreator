@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Tension $\rightarrow$ Defiance $\rightarrow$ Somber relief/Resolution. **Likely Visual Coverage Families:** - Close-up on the protagonist.... Wide establishing frame with a steady or lightly drifting camera.. Wide composition across with placed for immediate spatial orientation.. Characters: . Environment: described environment with st...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Tension $\rightarrow$ Defiance $\rightarrow$ Somber relief/Resolution. **Likely Visual Coverage Families:** - Close-up on the protagonist.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: . Environment: described environment with stable spatial continuity. Keep...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,22 +35,23 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH006_SC004
 - chapter_id: CH006
-- shot_type: establishing_wide
+- shot_type: medium
 - previous_shot_id: (none)
 - next_shot_id: SH002
 - shot_lineage_ids: SH001; SH002
-- camera_description: Wide establishing frame with a steady or lightly drifting camera.
-- composition: Wide composition across Interior chamber leading out to a Plaza with scene_character placed for immediate spatial orientation.
+- camera_description: Stable medium framing that keeps action and character readable.
+- composition: Readable medium composition in Interior chamber leading out to a Plaza featuring scene_character.
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH006_SC004; DESC_CH006_SC004_SH001
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH006_SC004 / SC004.
+- Scene: CH006_SC004 / To establish the protagonist's protective nature and secure his new s....
 - Variant: Alternate Angle.
-- Physical state/mobility of the wounded Watch-thing
-- Lighting transition from interior chamber to exterior Martian light
-- The Martian Warrior attempts to execute the wounded Watch-thing.
+- The physical state of the Watch-thing (is it able to walk?)
+- the movement from interior light to exterior Martian light.
+- A warrior attempts to execute the wounded Watch-thing.
+- Resolve Interior chamber leading out to a Plaza -> Interior chamber leading out to a Plaza
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

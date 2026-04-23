@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. From shock to frantic urgency/flight. **Likely Visual Coverage Families:** - Tracking shots following the protagonist's movement - High-c.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: . Environment: described environment with stable spatial continuity. Keep...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. From shock to frantic urgency/flight. **Likely Visual Coverage Families:** - Tracking shots following the protagonist's movement - High-c.... Stable medium framing that keeps action and character readable; utilizes tracking to follow movement.. Readable medium composition featuring with high-contrast lighting (Dark cave vs. Moonlight)....
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -39,18 +39,18 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - previous_shot_id: SH001
 - next_shot_id: SH003
 - shot_lineage_ids: SH001; SH002; SH003
-- camera_description: Stable medium framing that keeps action and character readable.
-- composition: Readable medium composition in SC004 featuring scene_character.
+- camera_description: Stable medium framing that keeps action and character readable; utilizes tracking to follow movement.
+- composition: Readable medium composition featuring scene_character with high-contrast lighting (Dark cave vs. Moonlight).
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH002_SC004; DESC_CH002_SC004_SH002
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH002_SC004 / SC004.
+- Scene: CH002_SC004 / To transition the protagonist from the supernatural interior to the n....
 - Variant: Alternate Angle.
-- Protagonist's nudity and physical state across varying light levels
-- Driven by fear of an unknown presence
-- the protagonist begins a frantic flight from the cavern.
+- Carry the emotional arc through: From shock to frantic urgency/flight.
+- High-contrast lighting (Dark cave vs. Moonlight)
+- The protagonist's nudity and physical state as he moves through different light levels
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

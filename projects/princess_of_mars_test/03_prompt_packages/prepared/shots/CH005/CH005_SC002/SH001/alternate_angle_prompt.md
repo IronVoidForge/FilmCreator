@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Determination $\rightarrow$ Alarm/Panic. **Likely Visual Coverage Families:** - Low-angle shots of the Watch Dog to emphasize speed. - Ha.... Tight detail framing focused on a single visual object or gesture.. Detail composition centered on the key physical action or prop inside .. Characters: An Earthman undergoing a supernatural tran...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Determination $\rightarrow$ Alarm/Panic. **Likely Visual Coverage Families:** - Low-angle shots of the Watch Dog to emphasize speed. - Ha.... Close framing that isolates reaction and emotional emphasis.. Intimate composition isolating against to capture the emotional turn.. Characters: An Earthman undergoing a supernatural transformati...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,24 +35,22 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH005_SC002
 - chapter_id: CH005
-- shot_type: insert_detail
+- shot_type: reaction_closeup
 - previous_shot_id: (none)
 - next_shot_id: SH002
 - shot_lineage_ids: SH001; SH002
-- camera_description: Tight detail framing focused on a single visual object or gesture.
-- composition: Detail composition centered on the key physical action or prop inside Captive's chamber.
+- camera_description: Close framing that isolates reaction and emotional emphasis.
+- composition: Intimate composition isolating protagonist against Captive's chamber to capture the emotional turn.
 - prompt_family: shot_prompt
 - reference_asset_ids: protagonist; DESC_CH005_SC002; DESC_CH005_SC002_SH001
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH005_SC002 / SC002.
+- Scene: CH005_SC002 / To initiate the action and demonstrate the physical threat of the Mar....
 - Variant: Alternate Angle.
-- Physical distance between protagonist and the_watch_dog.
-- Direction of the chase sequence.
-- protagonist attempts to leave the Captive's chamber to test his limits and captor capabilities.
-- Resolve Captive's chamber -> Captive's chamber
-- Resolve immediate hallway/threshold -> immediate hallway/threshold
+- The physical distance between the protagonist and the dog
+- The direction of the chase
+- the direction of the chase.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

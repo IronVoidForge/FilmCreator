@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Terror $\rightarrow$ Desperation $\rightarrow$ Fierce Loyalty. **Likely Visual Coverage Families:** - Tight close-ups on the protagonist'.... Tight detail framing focused on a single visual object or gesture.. Detail composition centered on the key physical action or prop inside .. Characters: . Environment...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Terror $\rightarrow$ Desperation $\rightarrow$ Fierce Loyalty. **Likely Visual Coverage Families:** - Tight close-ups on the protagonist'.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of **participating characters:**\n- the prota...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,25 +35,25 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH006_SC001
 - chapter_id: CH006
-- shot_type: insert_detail
+- shot_type: closing_reaction
 - previous_shot_id: SH002
-- next_shot_id: SH004
-- shot_lineage_ids: SH002; SH003; SH004
-- camera_description: Tight detail framing focused on a single visual object or gesture.
-- composition: Detail composition centered on the key physical action or prop inside Interior chamber.
+- next_shot_id: (none)
+- shot_lineage_ids: SH002; SH003
+- camera_description: Controlled closing frame that lands the consequence of the beat.
+- composition: Closing composition in Interior chamber that emphasizes the consequence of **participating characters:**\n- the protagonist\n- the watch-thing\n- the bull ape\n- the mate (bull ape).
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH006_SC001; DESC_CH006_SC001_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH006_SC001 / SC001.
+- Scene: CH006_SC001 / To establish immediate life-or-death stakes and demonstrate the loyal....
 - Variant: Consistency Repair.
-- Bull Ape limb positioning during pinning
-- Location of the stone cudgel
-- Physical injury state of the Watch-thing post-combat
-- The Watch-thing leaps into the fray.
-- Resolve Interior chamber -> Interior chamber
-- Resolve Martian city building -> Martian city building
+- The positioning of the Bull Ape's limbs
+- the location of the fallen cudgel
+- the physical state (injuries) of the Watch-thing during the fight.
+- **Participating Characters:**
+- The Protagonist
+- The Watch-thing
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

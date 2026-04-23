@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. From intense mental struggle to profound shock and existential horror. **Likely Visual Coverage Families:** - Medium shots of the physica.... Close framing that isolates reaction and emotional emphasis.. Intimate composition that isolates against to capture the beat's emotional turn.. Characters: . Environm...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. From intense mental struggle to profound shock and existential horror. **Likely Visual Coverage Families:** - Medium shots of the physica.... Close framing that isolates reaction and emotional emphasis.. Intimate composition that isolates against the cave environment to capture the emotional turn of shock/h...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -40,18 +40,17 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - next_shot_id: SH003
 - shot_lineage_ids: SH001; SH002; SH003
 - camera_description: Close framing that isolates reaction and emotional emphasis.
-- composition: Intimate composition that isolates scene_character against SC003 to capture the beat's emotional turn.
+- composition: Intimate composition that isolates scene_character against the cave environment to capture the emotional turn of shock/horror.
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH002_SC003; DESC_CH002_SC003_SH002
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH002_SC003 / SC003.
+- Scene: CH002_SC003 / To execute the central supernatural twist and reveal the protagonist'....
 - Variant: Consistency Repair.
-- Exact spatial placement of the "old" body relative to the "new" self's standing position
-- Lighting consistency between the two versions of the character
-- The protagonist successfully stands up
-- revealing a naked body.
+- Upon standing
+- realization of metamorphosis
+- new naked self vs original clothed body
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Curiosity $\rightarrow$ Terror/Panic. **Likely Visual Coverage Families:** - Low-angle shots of the approaching mounts to emphasize scale.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring, .. Characters: An Earthman undergoing a supernatural transf...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Curiosity $\rightarrow$ Terror/Panic. **Likely Visual Coverage Families:** - Low-angle shots of the approaching mounts to emphasize scale.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: An Earthman undergoing a supernatural transfo...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -40,17 +40,17 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - next_shot_id: SH003
 - shot_lineage_ids: SH001; SH002; SH003
 - camera_description: Stable medium framing that keeps action and character readable.
-- composition: Readable medium composition in The basin/vegetation area near the incubator featuring protagonist, Martian Warriors (Cavalcade).
+- composition: Readable medium composition in The basin/vegetation area near the incubator featuring protagonist.
 - prompt_family: shot_prompt
 - reference_asset_ids: protagonist; DESC_CH003_SC003; DESC_CH003_SC003_SH002
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH003_SC003 / SC003.
+- Scene: CH003_SC003 / Introduce the primary antagonist force and create immediate life-thre....
 - Variant: Consistency Repair.
-- Speed and rhythmic cadence of the twenty mounted warriors
-- Precise spatial proximity of the leader's spear to the protagonist
-- Realization that a party of twenty mounted Martian warriors is approaching.
+- The speed/rhythm of the mounted warriors
+- the proximity of the spear to the protagonist.
+- Carry the emotional arc through: Curiosity $\rightarrow$ Terror/Panic.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

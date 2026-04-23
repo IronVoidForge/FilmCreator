@@ -11,7 +11,7 @@ Prepare a compact character reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film character reference sheet, expression sheet showing several clear emotional beats without changing costume, Human male, Earthling, former Confederate cavalry officer and soldier of fortune., 1860s American frontier/Confederate military background, transitioned to Martian setting., average-tall, clean neutral st...
+Film character reference sheet, expression sheet showing several clear emotional beats without changing costume, Human male, Earthling, former Confederate cavalry officer and soldier of fortune., lean but durable soldier's frame, 1860s American frontier/Confederate military background, transitioned to Martian settin...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

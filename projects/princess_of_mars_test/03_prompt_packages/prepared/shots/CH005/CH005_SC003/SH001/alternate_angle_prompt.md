@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Adrenaline/Exertion $\rightarrow$ Desperation. **Likely Visual Coverage Families:** - Wide sweeping shots of the Martian architecture. -.... Wide establishing frame with a steady or lightly drifting camera.. Wide composition across with placed for immediate spatial orientation.. Characters: An Earthman undergoing a supernatural transfo...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Adrenaline/Exertion $\rightarrow$ Desperation. **Likely Visual Coverage Families:** - Wide sweeping shots of the Martian architecture. -.... Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with crossing the frame and maintaining readable movement.. Characters: An Earthman undergoing a supernatu...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,22 +35,24 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH005_SC003
 - chapter_id: CH005
-- shot_type: establishing_wide
+- shot_type: action
 - previous_shot_id: (none)
 - next_shot_id: SH002
 - shot_lineage_ids: SH001; SH002
-- camera_description: Wide establishing frame with a steady or lightly drifting camera.
-- composition: Wide composition across Deserted Martian city streets with protagonist placed for immediate spatial orientation.
+- camera_description: Active camera with tracking energy and clear spatial orientation.
+- composition: Dynamic composition in Deserted Martian city streets with protagonist crossing the frame and maintaining readable movement.
 - prompt_family: shot_prompt
 - reference_asset_ids: protagonist; DESC_CH005_SC003; DESC_CH005_SC003_SH001
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH005_SC003 / SC003.
+- Scene: CH005_SC003 / To escalate the tension through a high-stakes pursuit and showcase th....
 - Variant: Alternate Angle.
-- Precise height and distance measurements for all jumps to maintain physics consistency
-- Strict timing of the_watch_dog arrival at specific street corners relative to protagonist position
-- The protagonist initiates a high-speed sprint through the deserted Martian streets.
+- The height and distance of jumps
+- the timing of the dog's arrival at various street corners.
+- A frantic chase ensues through the deserted streets of the Martian city. The protagonist uses his superior jumping ability to navigate the urban landscape
+- attempting to stay ahead of the relentless Watch Dog.
+- Resolve Deserted Martian city streets -> Deserted Martian city streets
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

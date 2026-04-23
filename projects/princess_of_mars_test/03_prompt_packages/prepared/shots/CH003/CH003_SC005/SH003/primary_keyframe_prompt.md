@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Tension $\rightarrow$ Relief/Cautious Acceptance. **Likely Visual Coverage Families:** - Close-ups of the hand-off (the armlet). - Medium.... Tight detail framing focused on a single visual object or gesture.. Detail composition centered on the key physical action or prop inside .. Characters: An Earthman undergoing a supern...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Tension $\rightarrow$ Relief/Cautious Acceptance. **Likely Visual Coverage Families:** - Close-ups of the hand-off (the armlet). - Medium.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of he is then lifted onto a martian mount and taken away toward...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,23 +35,24 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH003_SC005
 - chapter_id: CH003
-- shot_type: insert_detail
+- shot_type: closing_reaction
 - previous_shot_id: SH002
-- next_shot_id: SH004
-- shot_lineage_ids: SH002; SH003; SH004
-- camera_description: Tight detail framing focused on a single visual object or gesture.
-- composition: Detail composition centered on the key physical action or prop inside The basin/open landscape.
+- next_shot_id: (none)
+- shot_lineage_ids: SH002; SH003
+- camera_description: Controlled closing frame that lands the consequence of the beat.
+- composition: Closing composition in The basin/open landscape that emphasizes the consequence of he is then lifted onto a martian mount and taken away toward the distant hills..
 - prompt_family: shot_prompt
-- reference_asset_ids: protagonist; DESC_CH003_SC005; DESC_CH003_SC005_SH003
+- reference_asset_ids: protagonist; martian_warriors; DESC_CH003_SC005; DESC_CH003_SC005_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH003_SC005 / SC005.
+- Scene: CH003_SC005 / Establish first contact and a tentative peace..
 - Variant: Primary Keyframe.
-- Presence of the metal armlet on the protagonist's arm post-exchange
-- The protagonist accepts the armlet
-- signaling peace through the gesture.
-- Height differential during the lifting process onto the Martian mount
+- The armlet on the protagonist's arm
+- the height difference when he is lifted onto the mount.
+- He is then lifted onto a Martian mount and taken away toward the distant hills.
+- Resolve The Leader
+- Resolve The basin/open landscape
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

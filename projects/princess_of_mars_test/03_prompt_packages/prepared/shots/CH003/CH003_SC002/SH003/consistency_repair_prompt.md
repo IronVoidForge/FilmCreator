@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Curiosity $\rightarrow$ Horror/Awe. **Likely Visual Coverage Families:** - Macro shots of the eggs and the multi-limbed hatchlings. - POV.... Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with crossing the frame and maintaining readable movement.. Characters: An E...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Curiosity $\rightarrow$ Horror/Awe. **Likely Visual Coverage Families:** - Macro shots of the eggs and the multi-limbed hatchlings. - POV.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of land the scene consequence or transition c...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,21 +35,23 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH003_SC002
 - chapter_id: CH003
-- shot_type: action
+- shot_type: closing_reaction
 - previous_shot_id: SH002
 - next_shot_id: (none)
 - shot_lineage_ids: SH002; SH003
-- camera_description: Active camera with tracking energy and clear spatial orientation.
-- composition: Dynamic composition in The glass-roofed incubator enclosure with protagonist crossing the frame and maintaining readable movement.
+- camera_description: Controlled closing frame that lands the consequence of the beat.
+- composition: Closing composition in The glass-roofed incubator enclosure that emphasizes the consequence of land the scene consequence or transition cleanly..
 - prompt_family: shot_prompt
 - reference_asset_ids: protagonist; DESC_CH003_SC002; DESC_CH003_SC002_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH003_SC002 / SC002.
+- Scene: CH003_SC002 / Introduce the biological horror/wonder of Martian life..
 - Variant: Consistency Repair.
-- Hatchling movement patterns must remain consistent across takes.
-- Lighting consistency through the glass roof.
+- The movement patterns of the hatchlings
+- lighting through the glass roof.
+- Land the scene consequence or transition cleanly.
+- Resolve The glass-roofed incubator enclosure -> The glass-roofed incubator enclosure
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

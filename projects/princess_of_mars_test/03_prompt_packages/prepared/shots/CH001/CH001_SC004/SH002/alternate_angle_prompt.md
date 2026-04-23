@@ -46,12 +46,14 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH001_SC004 / SC004.
+- Scene: CH001_SC004 / Raise the emotional stakes and transition to the escape..
 - Variant: Alternate Angle.
-- Precise arrow placement on Captain James K. Powell's body
-- Physical injury levels/blood states for John Carter (Younger)
-- Relative proximity and distance of apache_warriors during pursuit
-- Carter experiences devastation upon seeing Powell killed by arrows.
+- Condition of Powell's body (arrow placement)
+- level of injury on Carter
+- proximity of pursuers.
+- Carry the emotional arc through: Horror / Grief -> Desperation / Urgency.
+- Resolve John Carter (Younger) -> John Carter (Younger)
+- Resolve Captain James K. Powell (Deceased) -> Captain James K. Powell (Deceased)
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

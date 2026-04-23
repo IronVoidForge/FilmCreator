@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Excitement / Triumph $\rightarrow$ Determination.. Wide establishing frame with a steady or lightly drifting camera.. Wide composition across with, placed for immediate spatial orientation.. Characters: . Environment: described environment with stable spatial continuity. Keep continuity exact across costume...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Excitement / Triumph $\rightarrow$ Determination.. Wide establishing frame with a steady or lightly drifting camera.. Wide composition across with and placed for immediate spatial orientation.. Characters: . Environment: described environment with stable spatial continuity. Keep continuity exact across cost...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -40,17 +40,19 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - next_shot_id: SH002
 - shot_lineage_ids: SH001; SH002
 - camera_description: Wide establishing frame with a steady or lightly drifting camera.
-- composition: Wide composition across Remote Arizona quartz vein/hills with John Carter (Younger), Captain James K. Powell placed for immediate spatial orientation.
+- composition: Wide composition across Remote Arizona quartz vein/hills with John Carter (Younger) and Captain James K. Powell placed for immediate spatial orientation.
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH001_SC002; DESC_CH001_SC002_SH001
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH001_SC002 / SC002.
+- Scene: CH001_SC002 / Establish the inciting incident and the stakes (the gold claim)..
 - Variant: Consistency Repair.
-- Appearance and scale of the gold vein
-- 1865 prospector gear and clothing
-- Bright desert sun lighting consistency
+- Appearance of the gold vein
+- gear/clothing of 1865 prospectors
+- lighting (bright desert sun)
+- In 1865
+- lighting (bright desert sun).
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

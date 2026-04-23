@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Horror / Grief $\rightarrow$ Desperation / Urgency.. Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with, crossing the frame and maintaining readable movement.. Characters: . Environment: described environment with stable spatial continuity. Keep continuity exact a...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Horror / Grief $\rightarrow$ Desperation / Urgency.. Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with crossing the frame and maintaining readable movement.. Characters: A large group of hostile indigenous fighters., readable production detail, group silhouette e...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,21 +37,23 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH001
 - shot_type: action
 - previous_shot_id: SH002
-- next_shot_id: SH004
-- shot_lineage_ids: SH002; SH003; SH004
+- next_shot_id: (none)
+- shot_lineage_ids: SH002; SH003
 - camera_description: Active camera with tracking energy and clear spatial orientation.
-- composition: Dynamic composition in The trail/valley near the ambush site with John Carter (Younger), Captain James K. Powell (Deceased) crossing the frame and maintaining readable movement.
+- composition: Dynamic composition in The trail/valley near the ambush site with apache_warriors crossing the frame and maintaining readable movement.
 - prompt_family: shot_prompt
-- reference_asset_ids: DESC_CH001_SC004; DESC_CH001_SC004_SH003
+- reference_asset_ids: apache_warriors; DESC_CH001_SC004; DESC_CH001_SC004_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH001_SC004 / SC004.
+- Scene: CH001_SC004 / Raise the emotional stakes and transition to the escape..
 - Variant: Consistency Repair.
-- Precise arrow placement on Captain James K. Powell's body
-- Physical injury levels/blood states for John Carter (Younger)
-- Relative proximity and distance of apache_warriors during pursuit
-- Carter retrieves/lifts Powell's body to move him.
+- Condition of Powell's body (arrow placement)
+- level of injury on Carter
+- proximity of pursuers.
+- Land the scene consequence or transition cleanly.
+- Resolve John Carter (Younger) -> John Carter (Younger)
+- Resolve Captain James K. Powell (Deceased) -> Captain James K. Powell (Deceased)
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

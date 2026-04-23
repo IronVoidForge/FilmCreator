@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. From intense mental struggle to profound shock and existential horror. **Likely Visual Coverage Families:** - Medium shots of the physica.... Wide establishing frame with a steady or lightly drifting camera.. Wide composition across with placed for immediate spatial orientation.. Characters: . Environment:...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. From intense mental struggle to profound shock and existential horror. **Likely Visual Coverage Families:** - Medium shots of the physica.... Stable medium framing that keeps action and character readable.. Readable medium composition featuring in the primary scene playing area.. Characters: . Environment:...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,22 +35,21 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH002_SC003
 - chapter_id: CH002
-- shot_type: establishing_wide
+- shot_type: medium
 - previous_shot_id: (none)
 - next_shot_id: SH002
 - shot_lineage_ids: SH001; SH002
-- camera_description: Wide establishing frame with a steady or lightly drifting camera.
-- composition: Wide composition across SC003 with scene_character placed for immediate spatial orientation.
+- camera_description: Stable medium framing that keeps action and character readable.
+- composition: Readable medium composition featuring scene_character in the primary scene playing area.
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH002_SC003; DESC_CH002_SC003_SH001
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH002_SC003 / SC003.
+- Scene: CH002_SC003 / To execute the central supernatural twist and reveal the protagonist'....
 - Variant: Consistency Repair.
-- Exact spatial placement of the "old" body relative to the "new" self's standing position
-- Lighting consistency between the two versions of the character
-- The protagonist exerts intense mental willpower to break physical paralysis.
+- After hours of isolation
+- intense mental willpower to break paralysis
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

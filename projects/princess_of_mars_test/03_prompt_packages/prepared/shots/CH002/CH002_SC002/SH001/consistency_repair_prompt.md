@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. From curiosity/investigation to primal terror and chaos. **Likely Visual Coverage Families:** - Wide shots of the gorge/entrance - Handhe.... Wide establishing frame with a steady or lightly drifting camera.. Wide composition across with placed for immediate spatial orientation.. Characters: . Environment:...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. From curiosity/investigation to primal terror and chaos. **Likely Visual Coverage Families:** - Wide shots of the gorge/entrance - Handhe.... Stable medium framing that keeps action and character readable.. Readable medium composition featuring against the cave entrance.. Characters: . Environment: describe...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,22 +35,20 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH002_SC002
 - chapter_id: CH002
-- shot_type: establishing_wide
+- shot_type: medium
 - previous_shot_id: (none)
 - next_shot_id: SH002
 - shot_lineage_ids: SH001; SH002
-- camera_description: Wide establishing frame with a steady or lightly drifting camera.
-- composition: Wide composition across SC002 with scene_character placed for immediate spatial orientation.
+- camera_description: Stable medium framing that keeps action and character readable.
+- composition: Readable medium composition featuring scene_character against the cave entrance.
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH002_SC002; DESC_CH002_SC002_SH001
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH002_SC002 / SC002.
+- Scene: CH002_SC002 / To introduce external conflict and demonstrate the supernatural power....
 - Variant: Consistency Repair.
-- Spatial positioning of warriors relative to the cave mouth.
-- Synchronicity of the "moaning" sound with character reaction timing and direction.
-- Apache warriors approach the cave entrance in the rocky gorge under moonlight.
+- A group of Apache warriors approaches the cave entrance.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

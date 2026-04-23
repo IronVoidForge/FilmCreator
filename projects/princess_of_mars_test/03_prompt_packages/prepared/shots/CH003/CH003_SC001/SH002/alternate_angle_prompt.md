@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Confusion $\rightarrow$ Physical Bewilderment/Surprise. **Likely Visual Coverage Families:** - Wide shots of the Martian landscape. - Med.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: An Earthman undergoing a supernatural transformation., agile and capable o...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Confusion $\rightarrow$ Physical Bewilderment/Surprise. **Likely Visual Coverage Families:** - Wide shots of the Martian landscape. - Med.... Stable medium framing that keeps action and character readable.. Readable medium composition in a circular basin on Mars featuring .. Characters: An Earthman undergoing a supernatural transformat...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -40,17 +40,18 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - next_shot_id: SH003
 - shot_lineage_ids: SH001; SH002; SH003
 - camera_description: Stable medium framing that keeps action and character readable.
-- composition: Readable medium composition in A circular basin on Mars covered in yellowish featuring protagonist.
+- composition: Readable medium composition in a circular basin on Mars featuring the protagonist.
 - prompt_family: shot_prompt
 - reference_asset_ids: protagonist; DESC_CH003_SC001; DESC_CH003_SC001_SH002
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH003_SC001 / SC001.
+- Scene: CH003_SC001 / Establish the protagonist's new physical reality and the alien enviro....
 - Variant: Alternate Angle.
-- Protagonist physical state (nakedness/exposure).
-- Consistency in leap height and distance relative to low gravity.
-- The protagonist attempts normal movement within the circular basin.
+- The height and distance of the leaps
+- The protagonist's nakedness/exposure
+- Emotional shift from Confusion to Surprise
+- the protagonist's physical state (nakedness/exposure).
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

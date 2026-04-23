@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Awe/Trepidation $\rightarrow$ Alienation. **Likely Visual Coverage Families:** * Extreme Wide Shots (EWS) to establish the scale of the c.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of encounter with hundreds of martians in the plaza, highlighting 's small...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Awe/Trepidation $\rightarrow$ Alienation. **Likely Visual Coverage Families:** * Extreme Wide Shots (EWS) to establish the scale of the c.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of land the scene consequence or transition cleanly.. Characters: Green Ma...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -40,18 +40,17 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - next_shot_id: (none)
 - shot_lineage_ids: SH002; SH003
 - camera_description: Controlled closing frame that lands the consequence of the beat.
-- composition: Closing composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) that emphasizes the consequence of encounter with hundreds of martians in the plaza, highlighting the narrator's smallness.
+- composition: Closing composition in Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) that emphasizes the consequence of land the scene consequence or transition cleanly.
 - prompt_family: shot_prompt
-- reference_asset_ids: DESC_CH004_SC001; DESC_CH004_SC001_SH003
+- reference_asset_ids: tars_tarkas; DESC_CH004_SC001; DESC_CH004_SC001_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH004_SC001 / SC001.
+- Scene: CH004_SC001 / Establish the scale of the setting and the protagonist's status as a....
 - Variant: Alternate Angle.
-- Scale of props and architecture relative to the Narrator
-- Movement patterns/flow of the Martian crowd
-- Encounter with hundreds of Martians in the plaza
-- highlighting the Narrator's smallness.
+- Scale of props/architecture relative to the Narrator
+- movement patterns of the Martian crowd.
+- Land the scene consequence or transition cleanly.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

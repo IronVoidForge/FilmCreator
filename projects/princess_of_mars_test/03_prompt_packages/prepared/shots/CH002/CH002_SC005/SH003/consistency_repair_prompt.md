@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. From mesmerized trance to sudden, overwhelming cosmic displacement. **Likely Visual Coverage Families:** - Extreme Wide shots of the land.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: . Environment: described environment with sta...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. From mesmerized trance to sudden, overwhelming cosmic displacement. **Likely Visual Coverage Families:** - Extreme Wide shots of the land.... Stable medium framing that transitions into violent motion/displacement.. Readable medium composition featuring during displacement.. Characters: . Environment: descr...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -39,18 +39,17 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - previous_shot_id: SH002
 - next_shot_id: SH004
 - shot_lineage_ids: SH002; SH003; SH004
-- camera_description: Stable medium framing that keeps action and character readable.
-- composition: Readable medium composition in SC005 featuring scene_character.
+- camera_description: Stable medium framing that transitions into violent motion/displacement.
+- composition: Readable medium composition featuring scene_character during displacement.
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH002_SC005; DESC_CH002_SC005_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH002_SC005 / SC005.
+- Scene: CH002_SC005 / To trigger the protagonist's cosmic displacement and end the chapter....
 - Variant: Consistency Repair.
-- Visual brightness and position of Mars (the red star) in the sky.
-- Seamless transition from grounded Arizona environment to abstract space sequence.
-- Protagonist closes his eyes.
+- As he closes his eyes
+- He is violently transported through space into darkness and cold
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

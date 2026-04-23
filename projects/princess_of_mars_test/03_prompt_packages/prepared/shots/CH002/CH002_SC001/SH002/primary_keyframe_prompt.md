@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. From awareness/confusion to helpless terror and sensory isolation. **Likely Visual Coverage Families:** - Extreme Close-ups (Eyes, dilate.... Stable medium framing.. Readable medium composition in featuring .. Characters: . Environment: described environment with stable spatial continuity. Keep continuity exact across costum...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. From awareness/confusion to helpless terror and sensory isolation. **Likely Visual Coverage Families:** - Extreme Close-ups (Eyes, dilate.... Stable medium framing that keeps action and character readable.. Readable medium composition featuring in the dark cave environment.. Characters: . Environment: described environment w...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -39,18 +39,16 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - previous_shot_id: SH001
 - next_shot_id: SH003
 - shot_lineage_ids: SH001; SH002; SH003
-- camera_description: Stable medium framing.
-- composition: Readable medium composition in SC001 featuring scene_character.
+- camera_description: Stable medium framing that keeps action and character readable.
+- composition: Readable medium composition featuring scene_character in the dark cave environment.
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH002_SC001; DESC_CH002_SC001_SH002
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH002_SC001 / SC001.
+- Scene: CH002_SC001 / To establish the protagonist's vulnerability and the supernatural thr....
 - Variant: Primary Keyframe.
-- Eye movement and pupil dilation consistency.
-- Visual density and quality of the mysterious vapor.
-- Inhalation of the mysterious, pungent vapor leads to conscious paralysis.
+- He is unable to move despite being fully aware.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

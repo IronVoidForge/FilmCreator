@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Tension $\rightarrow$ Relief/Exhaustion. **Likely Visual Coverage Families:** * Medium shots of the interaction between and . * Over-the-.... Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with, crossing the frame and maintaining readable movement.. Characters: Green Martian (Thark)...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Tension $\rightarrow$ Relief/Exhaustion. **Likely Visual Coverage Families:** * Medium shots of the interaction between Tars Tarkas and ..... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of begins the process of providing sustenance... Characters: Fe...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,23 +35,22 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH004_SC004
 - chapter_id: CH004
-- shot_type: action
+- shot_type: closing_reaction
 - previous_shot_id: SH002
-- next_shot_id: SH004
-- shot_lineage_ids: SH002; SH003; SH004
-- camera_description: Active camera with tracking energy and clear spatial orientation.
-- composition: Dynamic composition in grand_audience_chamber with tars_tarkas, sola crossing the frame and maintaining readable movement.
+- next_shot_id: (none)
+- shot_lineage_ids: SH002; SH003
+- camera_description: Controlled closing frame that lands the consequence of the beat.
+- composition: Closing composition in grand_audience_chamber that emphasizes the consequence of sola begins the process of providing sustenance..
 - prompt_family: shot_prompt
-- reference_asset_ids: tars_tarkas; sola; grand_audience_chamber; DESC_CH004_SC004; DESC_CH004_SC004_SH003
+- reference_asset_ids: sola; grand_audience_chamber; DESC_CH004_SC004; DESC_CH004_SC004_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH004_SC004 / SC004.
+- Scene: CH004_SC004 / Transition from public spectacle to private care and introduce a key....
 - Variant: Primary Keyframe.
-- The Narrator's physical state (hunger/fatigue levels)
-- Sola's height relative to the Narrator
-- The Narrator's physical state (hunger/fatigue levels).
+- The Narrator's physical state (hunger/fatigue)
 - Sola's height relative to the Narrator.
+- Sola begins the process of providing sustenance.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

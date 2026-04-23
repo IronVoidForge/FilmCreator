@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. From curiosity/investigation to primal terror and chaos. **Likely Visual Coverage Families:** - Wide shots of the gorge/entrance - Handhe.... Tight detail framing focused on a single visual object or gesture.. Detail composition centered on the key physical action or prop inside .. Characters: . Environment: described environment with...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. From curiosity/investigation to primal terror and chaos. **Likely Visual Coverage Families:** - Wide shots of the gorge/entrance - Handhe.... Stable medium framing that keeps action and character readable.. Readable medium composition in Cave Entrance / Rocky Gorge featuring .. Characters: . Environment: described environment with stab...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,22 +35,20 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH002_SC002
 - chapter_id: CH002
-- shot_type: insert_detail
+- shot_type: medium
 - previous_shot_id: SH001
 - next_shot_id: SH003
 - shot_lineage_ids: SH001; SH002; SH003
-- camera_description: Tight detail framing focused on a single visual object or gesture.
-- composition: Detail composition centered on the key physical action or prop inside SC002.
+- camera_description: Stable medium framing that keeps action and character readable.
+- composition: Readable medium composition in Cave Entrance / Rocky Gorge featuring scene_character.
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH002_SC002; DESC_CH002_SC002_SH002
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH002_SC002 / SC002.
+- Scene: CH002_SC002 / To introduce external conflict and demonstrate the supernatural power....
 - Variant: Alternate Angle.
-- Spatial positioning of warriors relative to the cave mouth.
-- Synchronicity of the "moaning" sound with character reaction timing and direction.
-- Warriors locate the immobile Protagonist near the cave.
+- They find the protagonist but are interrupted by a terrifying low moaning sound emanating from the depths.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

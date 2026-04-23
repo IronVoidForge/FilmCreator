@@ -46,11 +46,12 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH004_SC005 / SC005.
+- Scene: CH004_SC005 / Provide a moment of respite and introduce local fauna, grounding the....
 - Variant: Alternate Angle.
-- Small Martian Creature appearance and movement patterns
-- Ambient light levels within the Decorated Sleeping Chamber
-- Sola leads the Narrator into the decorated sleeping chamber.
+- The appearance and movement of the small creature
+- the level of light in the room.
+- Sola leads the Narrator to a decorated sleeping chamber. Inside
+- the Narrator encounters a strange ten-legged Martian creature with a frog-like head and tusks.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Desperation $\rightarrow$ Triumph $\rightarrow$ Observation (Martian side). **Likely Visual Coverage Families:** - Slow-motion or wide tr.... Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with crossing the frame and maintaining readable movement.. Characters: An E...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Desperation $\rightarrow$ Triumph $\rightarrow$ Observation (Martian side). **Likely Visual Coverage Families:** - Slow-motion or wide tr.... Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with crossing the frame and maintaining readable movement.. Characters: Larg...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -40,16 +40,17 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - next_shot_id: SH003
 - shot_lineage_ids: SH001; SH002; SH003
 - camera_description: Active camera with tracking energy and clear spatial orientation.
-- composition: Dynamic composition in The basin/enclosure area with protagonist crossing the frame and maintaining readable movement.
+- composition: Dynamic composition in The basin/enclosure area with martian_warriors crossing the frame and maintaining readable movement.
 - prompt_family: shot_prompt
-- reference_asset_ids: protagonist; DESC_CH003_SC004; DESC_CH003_SC004_SH002
+- reference_asset_ids: martian_warriors; DESC_CH003_SC004; DESC_CH003_SC004_SH002
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH003_SC004 / SC004.
+- Scene: CH003_SC004 / Demonstrate the protagonist's unique advantage and change the power d....
 - Variant: Consistency Repair.
-- Precise trajectory and landing point of the thirty-foot leap.
-- Visual scale consistency between protagonist and 15-foot tall martian_warriors.
+- The trajectory and landing point of the leap
+- the visual scale of the Martians vs. the protagonist.
+- Carry the emotional arc through: Desperation -> Triumph -> Observation (Martian side).
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

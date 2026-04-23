@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Tension $\rightarrow$ Relief/Cautious Acceptance. **Likely Visual Coverage Families:** - Close-ups of the hand-off (the armlet). - Medium.... Wide establishing frame with a steady or lightly drifting camera.. Wide composition across with placed for immediate spatial orientation.. Characters: . Environment:...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Tension $\rightarrow$ Relief/Cautious Acceptance. **Likely Visual Coverage Families:** - Close-ups of the hand-off (the armlet). - Medium.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: An Earthman undergoing a supernatural transfo...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,23 +35,23 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH003_SC005
 - chapter_id: CH003
-- shot_type: establishing_wide
+- shot_type: medium
 - previous_shot_id: (none)
 - next_shot_id: SH002
 - shot_lineage_ids: SH001; SH002
-- camera_description: Wide establishing frame with a steady or lightly drifting camera.
-- composition: Wide composition across The basin/open landscape with The Leader placed for immediate spatial orientation.
+- camera_description: Stable medium framing that keeps action and character readable.
+- composition: Readable medium composition in The basin/open landscape featuring protagonist.
 - prompt_family: shot_prompt
-- reference_asset_ids: DESC_CH003_SC005; DESC_CH003_SC005_SH001
+- reference_asset_ids: protagonist; DESC_CH003_SC005; DESC_CH003_SC005_SH001
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH003_SC005 / SC005.
+- Scene: CH003_SC005 / Establish first contact and a tentative peace..
 - Variant: Consistency Repair.
-- The Leader dismounts from their mount
-- appearing unarmed to signal peaceful intent.
-- Presence of the metal armlet on the protagonist's arm post-exchange
-- Height differential during the lifting process onto the Martian mount
+- The armlet on the protagonist's arm
+- the height difference when he is lifted onto the mount.
+- Resolve The Leader
+- Resolve The basin/open landscape
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

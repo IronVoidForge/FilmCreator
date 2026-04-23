@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. From mesmerized trance to sudden, overwhelming cosmic displacement. **Likely Visual Coverage Families:** - Extreme Wide shots of the land.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of violent transport through space into darkness and cold... Characters: ....
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. From mesmerized trance to sudden, overwhelming cosmic displacement. **Likely Visual Coverage Families:** - Extreme Wide shots of the land.... Controlled closing frame that lands the consequence of the beat.. Closing composition emphasizing the protagonist in the Deep Space / Void.. Characters: . Environment: described environment with...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -40,17 +40,17 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - next_shot_id: (none)
 - shot_lineage_ids: SH003; SH004
 - camera_description: Controlled closing frame that lands the consequence of the beat.
-- composition: Closing composition in SC005 that emphasizes the consequence of violent transport through space into darkness and cold..
+- composition: Closing composition emphasizing the protagonist in the Deep Space / Void.
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH002_SC005; DESC_CH002_SC005_SH004
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH002_SC005 / SC005.
+- Scene: CH002_SC005 / To trigger the protagonist's cosmic displacement and end the chapter....
 - Variant: Alternate Angle.
-- Visual brightness and position of Mars (the red star) in the sky.
-- Seamless transition from grounded Arizona environment to abstract space sequence.
-- Violent transport through space into darkness and cold.
+- The Protagonist
+- Arizona Mountain Landscape (Night)
+- Deep Space / Void
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

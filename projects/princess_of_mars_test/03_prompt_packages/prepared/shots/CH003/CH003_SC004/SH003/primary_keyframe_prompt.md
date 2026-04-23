@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Desperation $\rightarrow$ Triumph $\rightarrow$ Observation (Martian side). **Likely Visual Coverage Families:** - Slow-motion or wide tr.... Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with crossing the frame and maintaining readable movement.. Characters: An Earthman undergoing...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Desperation $\rightarrow$ Triumph $\rightarrow$ Observation (Martian side). **Likely Visual Coverage Families:** - Slow-motion or wide tr.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of landing the scene consequence or transition cleanly.. Charac...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,21 +35,22 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH003_SC004
 - chapter_id: CH003
-- shot_type: action
+- shot_type: closing_reaction
 - previous_shot_id: SH002
-- next_shot_id: SH004
-- shot_lineage_ids: SH002; SH003; SH004
-- camera_description: Active camera with tracking energy and clear spatial orientation.
-- composition: Dynamic composition in The basin/enclosure area with protagonist crossing the frame and maintaining readable movement.
+- next_shot_id: (none)
+- shot_lineage_ids: SH002; SH003
+- camera_description: Controlled closing frame that lands the consequence of the beat.
+- composition: Closing composition in The basin/enclosure area that emphasizes the consequence of landing the scene consequence or transition cleanly.
 - prompt_family: shot_prompt
-- reference_asset_ids: protagonist; DESC_CH003_SC004; DESC_CH003_SC004_SH003
+- reference_asset_ids: protagonist; martian_warriors; DESC_CH003_SC004; DESC_CH003_SC004_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH003_SC004 / SC004.
+- Scene: CH003_SC004 / Demonstrate the protagonist's unique advantage and change the power d....
 - Variant: Primary Keyframe.
-- Precise trajectory and landing point of the thirty-foot leap.
-- Visual scale consistency between protagonist and 15-foot tall martian_warriors.
+- The trajectory and landing point of the leap
+- the visual scale of the Martians vs. the protagonist.
+- Land the scene consequence or transition cleanly.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

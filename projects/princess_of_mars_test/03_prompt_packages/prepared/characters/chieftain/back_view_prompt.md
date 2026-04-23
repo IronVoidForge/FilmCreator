@@ -11,7 +11,7 @@ Prepare a compact character reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film character reference sheet, rear view with costume back detail and full silhouette clarity, A green Martian leader of a hardy, martial species., large-framed, described as being "out of proportion" to human-scale furniture (desks)., Green Martian civilization, clean neutral studio background, clear silhouette, c...
+Film character reference sheet, rear view with costume back detail and full silhouette clarity, A green Martian leader of a hardy, martial species., readable production detail, large-framed, described as being "out of proportion" to human-scale furniture (desks)., clean neutral studio background, clear silhouette, c...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

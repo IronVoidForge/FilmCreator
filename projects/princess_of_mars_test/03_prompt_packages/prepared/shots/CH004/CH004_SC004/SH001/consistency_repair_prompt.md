@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Tension $\rightarrow$ Relief/Exhaustion. **Likely Visual Coverage Families:** * Medium shots of the interaction between Tars Tarkas and S.... Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with crossing the frame and maintaining readable movement.. Characters: . En...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Tension $\rightarrow$ Relief/Exhaustion. **Likely Visual Coverage Families:** * Medium shots of the interaction between Tars Tarkas and S.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: . Environment: Cavernous interior with high v...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,23 +35,22 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH004_SC004
 - chapter_id: CH004
-- shot_type: action
+- shot_type: medium
 - previous_shot_id: (none)
 - next_shot_id: SH002
 - shot_lineage_ids: SH001; SH002
-- camera_description: Active camera with tracking energy and clear spatial orientation.
-- composition: Dynamic composition in grand_audience_chamber with The Narrator crossing the frame and maintaining readable movement.
+- camera_description: Stable medium framing that keeps action and character readable.
+- composition: Readable medium composition in grand_audience_chamber featuring The Narrator.
 - prompt_family: shot_prompt
 - reference_asset_ids: grand_audience_chamber; DESC_CH004_SC004; DESC_CH004_SC004_SH001
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH004_SC004 / SC004.
+- Scene: CH004_SC004 / Transition from public spectacle to private care and introduce a key....
 - Variant: Consistency Repair.
-- The Narrator's physical state (hunger/fatigue levels)
-- Sola's height relative to the Narrator
-- The Narrator's physical state (hunger/fatigue levels).
+- The Narrator's physical state (hunger/fatigue)
 - Sola's height relative to the Narrator.
+- Resolve The Narrator -> The Narrator
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Curiosity $\rightarrow$ Terror/Panic. **Likely Visual Coverage Families:** - Low-angle shots of the approaching mounts to emphasize scale.... Controlled closing frame that lands the consequence of the beat.. Closing composition in emphasizing the leader's spear narrowly missing .. Characters: An Earthman undergoing a superna...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Curiosity $\rightarrow$ Terror/Panic. **Likely Visual Coverage Families:** - Low-angle shots of the approaching mounts to emphasize scale.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of landing the scene consequence or transition cleanly.. Charac...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -40,17 +40,16 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - next_shot_id: (none)
 - shot_lineage_ids: SH002; SH003
 - camera_description: Controlled closing frame that lands the consequence of the beat.
-- composition: Closing composition in The basin/vegetation area near the incubator emphasizing the leader's spear narrowly missing the protagonist.
+- composition: Closing composition in The basin/vegetation area near the incubator that emphasizes the consequence of landing the scene consequence or transition cleanly.
 - prompt_family: shot_prompt
 - reference_asset_ids: protagonist; DESC_CH003_SC003; DESC_CH003_SC003_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH003_SC003 / SC003.
+- Scene: CH003_SC003 / Introduce the primary antagonist force and create immediate life-thre....
 - Variant: Primary Keyframe.
-- Speed and rhythmic cadence of the twenty mounted warriors
-- Precise spatial proximity of the leader's spear to the protagonist
-- The leader's spear narrowly misses the protagonist as they pass his hiding spot.
+- The speed/rhythm of the mounted warriors
+- the proximity of the spear to the protagonist.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

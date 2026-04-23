@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Fatigue $\rightarrow$ Curiosity/Uncanniness. **Likely Visual Coverage Families:** * Medium shots of the chamber's decor. * Close-ups on t.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: . Environment: Cavernous interior with high v...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Fatigue $\rightarrow$ Curiosity/Uncanniness. **Likely Visual Coverage Families:** * Medium shots of the chamber's decor. * Close-ups on t.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring, .. Characters: , Female Green Martian (Thark), readable pro...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -40,17 +40,17 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - next_shot_id: SH003
 - shot_lineage_ids: SH001; SH002; SH003
 - camera_description: Stable medium framing that keeps action and character readable.
-- composition: Readable medium composition in grand_audience_chamber featuring The Narrator.
+- composition: Readable medium composition in grand_audience_chamber featuring The Narrator, sola.
 - prompt_family: shot_prompt
-- reference_asset_ids: grand_audience_chamber; DESC_CH004_SC005; DESC_CH004_SC005_SH002
+- reference_asset_ids: sola; grand_audience_chamber; DESC_CH004_SC005; DESC_CH004_SC005_SH002
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH004_SC005 / SC005.
+- Scene: CH004_SC005 / Provide a moment of respite and introduce local fauna, grounding the....
 - Variant: Consistency Repair.
-- Small Martian Creature appearance and movement patterns
-- Ambient light levels within the Decorated Sleeping Chamber
-- The Narrator observes the decor of the chamber, settling into the space.
+- The appearance and movement of the small creature
+- the level of light in the room.
+- Carry the emotional arc through: Fatigue -> Curiosity/Uncanniness.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

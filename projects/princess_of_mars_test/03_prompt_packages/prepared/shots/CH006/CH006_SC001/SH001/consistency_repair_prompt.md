@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Terror $\rightarrow$ Desperation $\rightarrow$ Fierce Loyalty. **Likely Visual Coverage Families:** - Tight close-ups on the protagonist'.... Wide establishing frame with a steady or lightly drifting camera.. Wide composition across with placed for immediate spatial orientation.. Characters: . Environment:...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Terror $\rightarrow$ Desperation $\rightarrow$ Fierce Loyalty. **Likely Visual Coverage Families:** - Tight close-ups on the protagonist'.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: . Environment: described environment with sta...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,23 +35,22 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH006_SC001
 - chapter_id: CH006
-- shot_type: establishing_wide
+- shot_type: medium
 - previous_shot_id: (none)
 - next_shot_id: SH002
 - shot_lineage_ids: SH001; SH002
-- camera_description: Wide establishing frame with a steady or lightly drifting camera.
-- composition: Wide composition across Interior chamber with scene_character placed for immediate spatial orientation.
+- camera_description: Stable medium framing that keeps action and character readable.
+- composition: Readable medium composition in Interior chamber featuring scene_character.
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH006_SC001; DESC_CH006_SC001_SH001
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH006_SC001 / SC001.
+- Scene: CH006_SC001 / To establish immediate life-or-death stakes and demonstrate the loyal....
 - Variant: Consistency Repair.
-- Bull Ape limb positioning during pinning
-- Location of the stone cudgel
-- Physical injury state of the Watch-thing post-combat
-- The Protagonist is pinned by a massive Bull Ape.
+- The positioning of the Bull Ape's limbs
+- the location of the fallen cudgel
+- the physical state (injuries) of the Watch-thing during the fight.
 - Resolve Interior chamber -> Interior chamber
 - Resolve Martian city building -> Martian city building
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.

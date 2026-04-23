@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Tension $\rightarrow$ Defiance $\rightarrow$ Somber relief/Resolution. **Likely Visual Coverage Families:** - Close-up on the protagonist.... Tight detail framing focused on a single visual object or gesture.. Detail composition centered on the key physical action or prop inside .. Characters: . Environment: described environment with...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Tension $\rightarrow$ Defiance $\rightarrow$ Somber relief/Resolution. **Likely Visual Coverage Families:** - Close-up on the protagonist.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: . Environment: described environment with stable spatial continuity. Keep...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,22 +35,23 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH006_SC004
 - chapter_id: CH006
-- shot_type: insert_detail
+- shot_type: medium
 - previous_shot_id: SH002
-- next_shot_id: (none)
-- shot_lineage_ids: SH002; SH003
-- camera_description: Tight detail framing focused on a single visual object or gesture.
-- composition: Detail composition centered on the key physical action or prop inside Interior chamber leading out to a Plaza.
+- next_shot_id: SH004
+- shot_lineage_ids: SH002; SH003; SH004
+- camera_description: Stable medium framing that keeps action and character readable.
+- composition: Readable medium composition in Interior chamber leading out to a Plaza featuring scene_character.
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH006_SC004; DESC_CH006_SC004_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH006_SC004 / SC004.
+- Scene: CH006_SC004 / To establish the protagonist's protective nature and secure his new s....
 - Variant: Alternate Angle.
-- Physical state/mobility of the wounded Watch-thing
-- Lighting transition from interior chamber to exterior Martian light
-- The Protagonist, Sola, and his guardian depart the building into the plaza.
+- The physical state of the Watch-thing (is it able to walk?)
+- the movement from interior light to exterior Martian light.
+- He then departs the building with Sola and his guardian
+- having secured allies.
 - Resolve Interior chamber leading out to a Plaza -> Interior chamber leading out to a Plaza
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 

@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Desperation $\rightarrow$ Triumph $\rightarrow$ Observation (Martian side). **Likely Visual Coverage Families:** - Slow-motion or wide tr.... Wide establishing frame with a steady or lightly drifting camera.. Wide composition across with placed for immediate spatial orientation.. Characters: An Earthman undergoing a supernatural transf...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Desperation $\rightarrow$ Triumph $\rightarrow$ Observation (Martian side). **Likely Visual Coverage Families:** - Slow-motion or wide tr.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: An Earthman undergoing a supernatural transformation., readable production...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,21 +35,21 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH003_SC004
 - chapter_id: CH003
-- shot_type: establishing_wide
+- shot_type: medium
 - previous_shot_id: (none)
 - next_shot_id: SH002
 - shot_lineage_ids: SH001; SH002
-- camera_description: Wide establishing frame with a steady or lightly drifting camera.
-- composition: Wide composition across The basin/enclosure area with protagonist placed for immediate spatial orientation.
+- camera_description: Stable medium framing that keeps action and character readable.
+- composition: Readable medium composition in The basin/enclosure area featuring protagonist.
 - prompt_family: shot_prompt
 - reference_asset_ids: protagonist; DESC_CH003_SC004; DESC_CH003_SC004_SH001
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH003_SC004 / SC004.
+- Scene: CH003_SC004 / Demonstrate the protagonist's unique advantage and change the power d....
 - Variant: Alternate Angle.
-- Precise trajectory and landing point of the thirty-foot leap.
-- Visual scale consistency between protagonist and 15-foot tall martian_warriors.
+- The trajectory and landing point of the leap
+- the visual scale of the Martians vs. the protagonist.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

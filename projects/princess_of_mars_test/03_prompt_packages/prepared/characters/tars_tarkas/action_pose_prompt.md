@@ -11,7 +11,7 @@ Prepare a compact character reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film character reference sheet, dynamic action pose that preserves anatomy, costume, and identity, Green Martian (Thark) warrior and leader., Martian (Thark) setting., professional demeanor, average-tall, clean neutral studio background, clear silhouette, consistent costume layers, consistent facial structure, no na...
+Film character reference sheet, dynamic action pose that preserves anatomy, costume, and identity, Green Martian (Thark) warrior and leader., readable production detail, enormous frame built for combat and intimidation, Martian (Thark) setting., clean neutral studio background, clear silhouette, consistent costume l...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

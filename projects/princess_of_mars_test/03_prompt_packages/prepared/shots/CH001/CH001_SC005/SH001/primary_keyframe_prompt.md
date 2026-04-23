@@ -46,10 +46,11 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH001_SC005 / SC005.
+- Scene: CH001_SC005 / Transition the protagonist from the terrestrial world to the inciting....
 - Variant: Primary Keyframe.
 - Lighting transition (from bright exterior to dark/dim cave)
-- Visual cues for unnatural drowsiness (heavy eyelids, blurred vision)
+- the "unnatural" quality of the drowsiness (visual cues like heavy eyelids or blurred vision).
+- Carter's horse leads him to a narrow cave entrance on a high trail.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

@@ -11,7 +11,7 @@ Prepare a compact character reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film character reference sheet, full-body neutral standing reference with balanced posture, Large humanoid ape-like creature., Massive, immense strength, approximately 10-15ft tall., average-tall, clean neutral studio background, clear silhouette, consistent costume layers, consistent facial structure, no narrative...
+Film character reference sheet, full-body neutral standing reference with balanced posture, Large humanoid ape-like creature., readable production detail, Massive, immense strength, approximately 10-15ft tall., clean neutral studio background, clear silhouette, consistent costume layers, consistent facial structure,...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

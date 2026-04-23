@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Panic $\rightarrow$ Resolve $\rightarrow$ Adrenaline-fueled triumph. **Likely Visual Coverage Families:** - Medium shots of the protagoni.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: . Environment: described environment with stable spatial contin...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Panic $\rightarrow$ Resolve $\rightarrow$ Adrenaline-fueled triumph. **Likely Visual Coverage Families:** - Medium shots of the protagoni.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of **participating characters:**\n- the protagonist\n- the watc...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,23 +35,25 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH006_SC002
 - chapter_id: CH006
-- shot_type: medium
+- shot_type: closing_reaction
 - previous_shot_id: SH002
-- next_shot_id: SH004
-- shot_lineage_ids: SH002; SH003; SH004
-- camera_description: Stable medium framing that keeps action and character readable.
-- composition: Readable medium composition in Interior chamber featuring scene_character.
+- next_shot_id: (none)
+- shot_lineage_ids: SH002; SH003
+- camera_description: Controlled closing frame that lands the consequence of the beat.
+- composition: Closing composition in Interior chamber that emphasizes the consequence of **participating characters:**\n- the protagonist\n- the watch-thing (wounded/dying)\n- the mate (bull ape).
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH006_SC002; DESC_CH006_SC002_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH006_SC002 / SC002.
+- Scene: CH006_SC002 / To showcase the protagonist's combat prowess using Earthly tactics an....
 - Variant: Primary Keyframe.
-- Directionality of cudgel swings
-- Blood splatter patterns
-- Protagonist's physical exhaustion levels
-- The Mate (Bull Ape) returns in a rage.
+- The direction of the cudgel swings
+- blood splatter patterns
+- the physical exhaustion levels of the protagonist.
+- **Participating Characters:**
+- The Protagonist
+- The Watch-thing (wounded/dying)
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Exhaustion $\rightarrow$ Confusion $\rightarrow$ Lethargy/Loss of consciousness.. Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: . Environment: described environment with stable spatial continuity. Keep continuity exact across costume...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Exhaustion $\rightarrow$ Confusion $\rightarrow$ Lethargy/Loss of consciousness.. Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of inside, he is overcome by an unnatural drowsiness and collapses into unconsciousness... Characters: ....
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,21 +35,23 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH001_SC005
 - chapter_id: CH001
-- shot_type: medium
+- shot_type: closing_reaction
 - previous_shot_id: SH002
-- next_shot_id: SH004
-- shot_lineage_ids: SH002; SH003; SH004
-- camera_description: Stable medium framing that keeps action and character readable.
-- composition: Readable medium composition in High cliffside trail featuring John Carter (Younger).
+- next_shot_id: (none)
+- shot_lineage_ids: SH002; SH003
+- camera_description: Controlled closing frame that lands the consequence of the beat.
+- composition: Closing composition in High cliffside trail that emphasizes the consequence of inside, he is overcome by an unnatural drowsiness and collapses into unconsciousness..
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH001_SC005; DESC_CH001_SC005_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH001_SC005 / SC005.
+- Scene: CH001_SC005 / Transition the protagonist from the terrestrial world to the inciting....
 - Variant: Consistency Repair.
 - Lighting transition (from bright exterior to dark/dim cave)
-- Visual cues for unnatural drowsiness (heavy eyelids, blurred vision)
+- the "unnatural" quality of the drowsiness (visual cues like heavy eyelids or blurred vision).
+- Inside
+- he is overcome by an unnatural drowsiness and collapses into unconsciousness.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

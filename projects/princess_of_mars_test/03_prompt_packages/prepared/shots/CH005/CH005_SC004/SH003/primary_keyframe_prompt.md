@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Hope (of escape) $\rightarrow$ Terror/Shock. **Likely Visual Coverage Families:** - Slow-motion capture of the high jump. - Extreme close.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: An Earthman undergoing a supernatural transformation., agile an...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Hope (of escape) $\rightarrow$ Terror/Shock. **Likely Visual Coverage Families:** - Slow-motion capture of the high jump. - Extreme close.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of land the scene consequence or transition cleanly.. Character...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,23 +35,25 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH005_SC004
 - chapter_id: CH005
-- shot_type: medium
+- shot_type: closing_reaction
 - previous_shot_id: SH002
-- next_shot_id: SH004
-- shot_lineage_ids: SH002; SH003; SH004
-- camera_description: Stable medium framing that keeps action and character readable.
-- composition: Readable medium composition in Exterior building/alleyway featuring protagonist.
+- next_shot_id: (none)
+- shot_lineage_ids: SH002; SH003
+- camera_description: Controlled closing frame that lands the consequence of the beat.
+- composition: Closing composition in Exterior building/alleyway that emphasizes the consequence of land the scene consequence or transition cleanly.
 - prompt_family: shot_prompt
-- reference_asset_ids: protagonist; DESC_CH005_SC004; DESC_CH005_SC004_SH003
+- reference_asset_ids: protagonist; the_colossal_creature; DESC_CH005_SC004; DESC_CH005_SC004_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH005_SC004 / SC004.
+- Scene: CH005_SC004 / To provide a climax to the escape attempt and introduce a new, much l....
 - Variant: Primary Keyframe.
-- Window height must remain consistent at thirty feet
-- Physical contact point between protagonist and the_colossal_creature
-- Lighting shift from city streets to the creature's lair
-- The_colossal_creature intercepts the protagonist at the window threshold.
+- The height of the window
+- the physical contact point where the creature grabs the protagonist
+- lighting shift from city streets to the creature's lair.
+- Land the scene consequence or transition cleanly.
+- Resolve The Watch Dog (pursuing) -> The Watch Dog (pursuing)
+- Resolve Exterior building/alleyway -> Exterior building/alleyway
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

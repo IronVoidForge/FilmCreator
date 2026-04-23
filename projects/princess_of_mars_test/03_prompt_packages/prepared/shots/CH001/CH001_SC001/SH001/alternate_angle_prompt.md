@@ -46,11 +46,12 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH001_SC001 / SC001.
+- Scene: CH001_SC001 / Establish the framing device and the protagonist's unique condition..
 - Variant: Alternate Angle.
-- Consistency of Carter's elderly age/appearance
-- Stability of tone in voice and delivery
-- John Carter introduces himself directly to the audience.
+- Age of Carter (must remain consistent with "elderly" description)
+- tone of voice/delivery.
+- Resolve John Carter (Elderly) -> John Carter (Elderly)
+- Resolve Unspecified (Narrative framing space) -> Unspecified (Narrative framing space)
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

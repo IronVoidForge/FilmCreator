@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Fatigue $\rightarrow$ Curiosity/Uncanniness. **Likely Visual Coverage Families:** * Medium shots of the chamber's decor. * Close-ups on t.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of encounters a small, ten-legged martian creature with a frog-...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Fatigue $\rightarrow$ Curiosity/Uncanniness. **Likely Visual Coverage Families:** * Medium shots of the chamber's decor. * Close-ups on t.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of landing the scene consequence or transition cleanly.. Charac...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -40,17 +40,20 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - next_shot_id: (none)
 - shot_lineage_ids: SH002; SH003
 - camera_description: Controlled closing frame that lands the consequence of the beat.
-- composition: Closing composition in grand_audience_chamber that emphasizes the consequence of the narrator encounters a small, ten-legged martian creature with a frog-like head and tusks..
+- composition: Closing composition in grand_audience_chamber that emphasizes the consequence of landing the scene consequence or transition cleanly.
 - prompt_family: shot_prompt
-- reference_asset_ids: grand_audience_chamber; DESC_CH004_SC005; DESC_CH004_SC005_SH003
+- reference_asset_ids: sola; grand_audience_chamber; DESC_CH004_SC005; DESC_CH004_SC005_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH004_SC005 / SC005.
+- Scene: CH004_SC005 / Provide a moment of respite and introduce local fauna, grounding the....
 - Variant: Primary Keyframe.
-- Small Martian Creature appearance and movement patterns
-- Ambient light levels within the Decorated Sleeping Chamber
-- The Narrator encounters a small, ten-legged Martian creature with a frog-like head and tusks.
+- The appearance and movement of the small creature
+- the level of light in the room.
+- Land the scene consequence or transition cleanly.
+- Resolve The Narrator -> The Narrator
+- Resolve Small Martian Creature -> Small Martian Creature
+- Resolve Decorated Sleeping Chamber -> Decorated Sleeping Chamber
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

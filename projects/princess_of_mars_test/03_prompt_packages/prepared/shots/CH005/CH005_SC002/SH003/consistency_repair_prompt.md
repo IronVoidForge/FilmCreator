@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Determination $\rightarrow$ Alarm/Panic. **Likely Visual Coverage Families:** - Low-angle shots of to emphasize speed. - Handheld/shaky c.... Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with, crossing the frame and maintaining readable movement.. Characters: An...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Determination $\rightarrow$ Alarm/Panic. **Likely Visual Coverage Families:** - Low-angle shots of to emphasize speed. - Handheld/shaky c.... Controlled closing frame that lands the consequence of the beat; handheld/shaky cam.. Closing composition in emphasizing the consequence of the chase.. Characters: An...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,22 +35,21 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH005_SC002
 - chapter_id: CH005
-- shot_type: action
+- shot_type: closing_reaction
 - previous_shot_id: SH002
 - next_shot_id: (none)
 - shot_lineage_ids: SH002; SH003
-- camera_description: Active camera with tracking energy and clear spatial orientation.
-- composition: Dynamic composition in Captive's chamber with protagonist, the_watch_dog crossing the frame and maintaining readable movement.
+- camera_description: Controlled closing frame that lands the consequence of the beat; handheld/shaky cam.
+- composition: Closing composition in Captive's chamber emphasizing the consequence of the chase.
 - prompt_family: shot_prompt
 - reference_asset_ids: protagonist; the_watch_dog; DESC_CH005_SC002; DESC_CH005_SC002_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH005_SC002 / SC002.
+- Scene: CH005_SC002 / To initiate the action and demonstrate the physical threat of the Mar....
 - Variant: Consistency Repair.
-- Physical distance between protagonist and the_watch_dog.
-- Direction of the chase sequence.
-- the situation shifts from a test to a high-stakes survival chase.
+- The physical distance between the protagonist and the dog
+- the direction of the chase.
 - Resolve Captive's chamber -> Captive's chamber
 - Resolve immediate hallway/threshold -> immediate hallway/threshold
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.

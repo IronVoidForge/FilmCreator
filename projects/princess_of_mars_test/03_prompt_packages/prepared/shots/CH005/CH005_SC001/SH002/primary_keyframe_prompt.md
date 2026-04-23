@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Ition/Curiosity $\rightarrow$ Comfort/Observation. **Likely Visual Coverage Families:** - Close-ups of the protagonist's eyes and facial.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: Female Green Martian (Thark), Martian setting, identified as a T...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Ition/Curiosity $\rightarrow$ Comfort/Observation. **Likely Visual Coverage Families:** - Close-ups of 's eyes and facial expressions. -.... Stable medium framing that keeps action and character readable.. Readable medium composition featuring providing care to .. Characters: Female Green Martian (Thark), readable production...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -40,18 +40,19 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - next_shot_id: SH003
 - shot_lineage_ids: SH001; SH002; SH003
 - camera_description: Stable medium framing that keeps action and character readable.
-- composition: Readable medium composition in Captive's chamber (decorated with murals) featuring sola.
+- composition: Readable medium composition featuring sola providing care to the protagonist.
 - prompt_family: shot_prompt
-- reference_asset_ids: sola; DESC_CH005_SC001; DESC_CH005_SC001_SH002
+- reference_asset_ids: sola; protagonist; DESC_CH005_SC001; DESC_CH005_SC001_SH002
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH005_SC001 / SC001.
+- Scene: CH005_SC001 / Establish the protagonist's status as a captive, introduce the Martia....
 - Variant: Primary Keyframe.
-- Lighting shifts corresponding to moon cycles
-- Specific amount/type of food provided by sola
-- Position of The Watch Dog near the door
-- sola enters to provide care and nourishment (plant-milk).
+- Lighting changes based on moon cycles
+- Amount/type of food provided by Sola
+- Position of the Watch Dog near the door
+- amount/type of food provided by Sola
+- position of the Watch Dog near the door.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Intimidation $\rightarrow$ Observational Curiosity. **Likely Visual Coverage Families:** * Medium shots of the Chieftain in regalia. * Cl.... Tight detail framing focused on a single visual object or gesture.. Detail composition centered on the key physical action or prop inside .. Characters: . Environment: Cavernous interior with hig...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Intimidation $\rightarrow$ Observational Curiosity. **Likely Visual Coverage Families:** * Medium shots of the Chieftain in regalia. * Cl.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: . Environment: Cavernous interior with high vaulted ceilings, includes a c...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,21 +35,22 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH004_SC002
 - chapter_id: CH004
-- shot_type: insert_detail
+- shot_type: medium
 - previous_shot_id: (none)
 - next_shot_id: SH002
 - shot_lineage_ids: SH001; SH002
-- camera_description: Tight detail framing focused on a single visual object or gesture.
-- composition: Detail composition centered on the key physical action or prop inside grand_audience_chamber.
+- camera_description: Stable medium framing that keeps action and character readable.
+- composition: Readable medium composition in grand_audience_chamber featuring The Narrator.
 - prompt_family: shot_prompt
 - reference_asset_ids: grand_audience_chamber; DESC_CH004_SC002; DESC_CH004_SC002_SH001
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH004_SC002 / SC002.
+- Scene: CH004_SC002 / Introduce the political hierarchy and the physical absurdity of the M....
 - Variant: Alternate Angle.
-- Precise spatial placement of the Narrator within the massive scale of the grand_audience_chamber.
-- Visual consistency and detail of the chieftain's regalia.
+- The specific placement of the Narrator within the massive chamber
+- the visual details of the Chieftain's regalia.
+- The Narrator is presented to the Chieftain in a grand audience chamber. He observes the mismatch between the massive, ancient furniture and the Martians' biology, emphasizing the antiquity of the ruins.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

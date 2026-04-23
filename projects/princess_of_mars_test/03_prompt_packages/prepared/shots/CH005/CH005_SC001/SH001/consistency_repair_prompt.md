@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Isolation/Curiosity $\rightarrow$ Comfort/Observation. **Likely Visual Coverage Families:** - Close-ups of 's eyes and facial expressions.... Wide establishing frame with a steady or lightly drifting camera.. Wide composition across with placed for immediate spatial orientation.. Characters: An Earthman und...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Ition/Curiosity $\rightarrow$ Comfort/Observation. **Likely Visual Coverage Families:** - Close-ups of 's eyes and facial expressions. -.... Stable medium framing that keeps action and character readable.. Readable medium composition in Captive's chamber featuring and against mural backgrounds.. Characters:...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,22 +35,23 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH005_SC001
 - chapter_id: CH005
-- shot_type: establishing_wide
+- shot_type: medium
 - previous_shot_id: (none)
 - next_shot_id: SH002
 - shot_lineage_ids: SH001; SH002
-- camera_description: Wide establishing frame with a steady or lightly drifting camera.
-- composition: Wide composition across Captive's chamber (decorated with murals) with protagonist placed for immediate spatial orientation.
+- camera_description: Stable medium framing that keeps action and character readable.
+- composition: Readable medium composition in Captive's chamber featuring protagonist and sola against mural backgrounds.
 - prompt_family: shot_prompt
-- reference_asset_ids: protagonist; DESC_CH005_SC001; DESC_CH005_SC001_SH001
+- reference_asset_ids: protagonist; sola; DESC_CH005_SC001; DESC_CH005_SC001_SH001
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH005_SC001 / SC001.
+- Scene: CH005_SC001 / Establish the protagonist's status as a captive, introduce the Martia....
 - Variant: Consistency Repair.
-- Lighting shifts corresponding to moon cycles
-- Position of The Watch Dog near the door
-- Specific amount/type of food provided by sola
+- Lighting changes based on moon cycles
+- amount/type of food provided by Sola
+- position of the Watch Dog near the door
+- position of the Watch Dog near the door.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

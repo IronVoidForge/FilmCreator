@@ -46,10 +46,13 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH003_SC002 / SC002.
+- Scene: CH003_SC002 / Introduce the biological horror/wonder of Martian life..
 - Variant: Alternate Angle.
-- Hatchling movement patterns must remain consistent across takes.
-- Lighting consistency through the glass roof.
+- The movement patterns of the hatchlings
+- lighting through the glass roof.
+- Carry the emotional arc through: Curiosity $\rightarrow$ Horror/Awe.
+- Macro shots of the eggs and the multi-limbed hatchlings.
+- POV shots from the protagonist looking through the glass.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

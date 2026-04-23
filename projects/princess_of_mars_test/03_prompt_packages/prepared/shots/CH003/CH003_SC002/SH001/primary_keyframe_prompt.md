@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Curiosity $\rightarrow$ Horror/Awe. **Likely Visual Coverage Families:** - Macro shots of the eggs and the multi-limbed hatchlings. - POV.... Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with crossing the frame and maintaining readable movement.. Characters: An Earthman undergoing...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Curiosity $\rightarrow$ Horror/Awe. **Likely Visual Coverage Families:** - Macro shots of the eggs and the multi-limbed hatchlings. - POV.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: An Earthman undergoing a supernatural transformation., readable...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,21 +35,24 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH003_SC002
 - chapter_id: CH003
-- shot_type: action
+- shot_type: medium
 - previous_shot_id: (none)
 - next_shot_id: SH002
 - shot_lineage_ids: SH001; SH002
-- camera_description: Active camera with tracking energy and clear spatial orientation.
-- composition: Dynamic composition in The glass-roofed incubator enclosure with protagonist crossing the frame and maintaining readable movement.
+- camera_description: Stable medium framing that keeps action and character readable.
+- composition: Readable medium composition in The glass-roofed incubator enclosure featuring protagonist.
 - prompt_family: shot_prompt
 - reference_asset_ids: protagonist; DESC_CH003_SC002; DESC_CH003_SC002_SH001
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH003_SC002 / SC002.
+- Scene: CH003_SC002 / Introduce the biological horror/wonder of Martian life..
 - Variant: Primary Keyframe.
-- Hatchling movement patterns must remain consistent across takes.
-- Lighting consistency through the glass roof.
+- The movement patterns of the hatchlings
+- lighting through the glass roof.
+- The protagonist explores a nearby glass-roofed enclosure (an incubator) and finds large white eggs alongside grotesque
+- multi-limbed young Martians that have already hatched.
+- Resolve The glass-roofed incubator enclosure -> The glass-roofed incubator enclosure
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

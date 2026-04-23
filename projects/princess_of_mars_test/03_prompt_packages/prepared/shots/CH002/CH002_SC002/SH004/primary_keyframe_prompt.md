@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. From curiosity/investigation to primal terror and chaos. **Likely Visual Coverage Families:** - Wide shots of the gorge/entrance - Handhe.... Tight detail framing focused on a single visual object or gesture.. Detail composition centered on the key physical action or prop inside .. Characters: . Environment: described enviro...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. From curiosity/investigation to primal terror and chaos. **Likely Visual Coverage Families:** - Wide shots of the gorge/entrance - Handhe.... Controlled closing frame that lands the consequence of the beat.. Closing composition emphasizing the aftermath and the immobile protagonist.. Characters: . Environment: described envi...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,22 +35,22 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH002_SC002
 - chapter_id: CH002
-- shot_type: insert_detail
+- shot_type: closing_reaction
 - previous_shot_id: SH003
-- next_shot_id: SH005
-- shot_lineage_ids: SH003; SH004; SH005
-- camera_description: Tight detail framing focused on a single visual object or gesture.
-- composition: Detail composition centered on the key physical action or prop inside SC002.
+- next_shot_id: (none)
+- shot_lineage_ids: SH003; SH004
+- camera_description: Controlled closing frame that lands the consequence of the beat.
+- composition: Closing composition emphasizing the aftermath and the immobile protagonist.
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH002_SC002; DESC_CH002_SC002_SH004
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH002_SC002 / SC002.
+- Scene: CH002_SC002 / To introduce external conflict and demonstrate the supernatural power....
 - Variant: Primary Keyframe.
-- Spatial positioning of warriors relative to the cave mouth.
-- Synchronicity of the "moaning" sound with character reaction timing and direction.
-- The warriors break into a panicked flight/retreat.
+- The Protagonist (Immobile observer)
+- Apache Warriors
+- Cave Entrance / Rocky Gorge
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

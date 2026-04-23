@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Combat adrenaline $\rightarrow$ Social validation $\rightarrow$ Vulnerability/Empathy. **Likely Visual Coverage Families:** - Reaction sh.... Wide establishing frame with a steady or lightly drifting camera.. Wide composition across with placed for immediate spatial orientation.. Characters: . Environment: described environment with st...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Combat adrenaline $\rightarrow$ Social validation $\rightarrow$ Vulnerability/Empathy. **Likely Visual Coverage Families:** - Reaction sh.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: . Environment: described environment with stable spatial continuity. Keep...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,22 +35,24 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH006_SC003
 - chapter_id: CH006
-- shot_type: establishing_wide
+- shot_type: medium
 - previous_shot_id: (none)
 - next_shot_id: SH002
 - shot_lineage_ids: SH001; SH002
-- camera_description: Wide establishing frame with a steady or lightly drifting camera.
-- composition: Wide composition across Interior chamber/Plaza threshold with scene_character placed for immediate spatial orientation.
+- camera_description: Stable medium framing that keeps action and character readable.
+- composition: Readable medium composition in Interior chamber/Plaza threshold featuring scene_character.
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH006_SC003; DESC_CH006_SC003_SH001
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH006_SC003 / SC003.
+- Scene: CH006_SC003 / To transition from combat to social consequence and character introdu....
 - Variant: Alternate Angle.
-- Level of dirt/blood on the protagonist must remain consistent with post-combat state
-- Proximity of dead apes to the character group must be maintained for spatial logic
-- Martian warriors and Tars Tarkas arrive at the scene to witness the aftermath.
+- The level of dirt/blood on the protagonist
+- the proximity of the dead apes to the group.
+- Martian warriors
+- including Tars Tarkas
+- arrive to witness the aftermath.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

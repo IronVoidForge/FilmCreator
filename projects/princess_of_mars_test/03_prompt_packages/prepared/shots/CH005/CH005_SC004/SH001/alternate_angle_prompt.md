@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Hope (of escape) $\rightarrow$ Terror/Shock. **Likely Visual Coverage Families:** - Slow-motion capture of the high jump. - Extreme close.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: An Earthman undergoing a supernatural transformation., agile and capable o...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Hope (of escape) $\rightarrow$ Terror/Shock. **Likely Visual Coverage Families:** - Slow-motion capture of the high jump. - Extreme close.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: An Earthman undergoing a supernatural transformation., readable production...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -46,12 +46,14 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH005_SC004 / SC004.
+- Scene: CH005_SC004 / To provide a climax to the escape attempt and introduce a new, much l....
 - Variant: Alternate Angle.
-- Window height must remain consistent at thirty feet
-- Physical contact point between protagonist and the_colossal_creature
-- Lighting shift from city streets to the creature's lair
-- The protagonist attempts to evade The Watch Dog via a desperate leap toward a window thirty feet above the ground.
+- The height of the window
+- the physical contact point where the creature grabs the protagonist
+- lighting shift from city streets to the creature's lair.
+- In a desperate move to evade the dog
+- the protagonist leaps toward a window thirty feet above the ground. Just as he reaches safety
+- he is intercepted by a massive
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

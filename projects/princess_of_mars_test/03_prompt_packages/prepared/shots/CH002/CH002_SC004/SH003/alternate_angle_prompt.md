@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. From shock to frantic urgency/flight. **Likely Visual Coverage Families:** - Tracking shots following the protagonist's movement - High-c.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of the protagonist emerges from the cave into the arizona night/moonlight....
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. From shock to frantic urgency/flight. **Likely Visual Coverage Families:** - Tracking shots following the protagonist's movement - High-c.... Controlled closing frame that lands the consequence of the beat.. Closing composition emphasizing the consequence of the flight and the vast landscape.. Characters: . Environment: described envir...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -40,16 +40,15 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - next_shot_id: (none)
 - shot_lineage_ids: SH002; SH003
 - camera_description: Controlled closing frame that lands the consequence of the beat.
-- composition: Closing composition in SC004 that emphasizes the consequence of the protagonist emerges from the cave into the arizona night/moonlight.
+- composition: Closing composition emphasizing the consequence of the flight and the vast landscape.
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH002_SC004; DESC_CH002_SC004_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH002_SC004 / SC004.
+- Scene: CH002_SC004 / To transition the protagonist from the supernatural interior to the n....
 - Variant: Alternate Angle.
-- Protagonist's nudity and physical state across varying light levels
-- The protagonist emerges from the cave into the Arizona night/moonlight.
+- Land the scene consequence or transition cleanly.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

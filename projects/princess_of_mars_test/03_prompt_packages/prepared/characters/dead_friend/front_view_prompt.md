@@ -11,7 +11,7 @@ Prepare a compact character reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film character reference sheet, front-facing full-body reference with the camera square to the subject, deceased individual, average-tall, lean athletic build, weathered light-to-medium skin, clean neutral studio background, clear silhouette, consistent costume layers, consistent facial structure, no narrative actio...
+Film character reference sheet, front-facing full-body reference with the camera square to the subject, deceased individual, readable production detail, lean athletic build, decisive, efficient movement, clean neutral studio background, clear silhouette, consistent costume layers, consistent facial structure, no nar...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

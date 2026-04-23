@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Horror / Grief $\rightarrow$ Desperation / Urgency.. Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with crossing the frame and maintaining readable movement.. Characters: A large group of hostile indigenous fighters., 19th-century indigenous setting., engaged in ambush and skirmish...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Horror / Grief $\rightarrow$ Desperation / Urgency.. Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with crossing the frame and maintaining readable movement.. Characters: A large group of hostile indigenous fighters., readable production detail, group silhouette emphasizes numbers...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -46,13 +46,14 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH001_SC004 / SC004.
+- Scene: CH001_SC004 / Raise the emotional stakes and transition to the escape..
 - Variant: Primary Keyframe.
-- Precise arrow placement on Captain James K. Powell's body
-- Physical injury levels/blood states for John Carter (Younger)
-- Relative proximity and distance of apache_warriors during pursuit
+- Condition of Powell's body (arrow placement)
+- level of injury on Carter
+- proximity of pursuers.
 - Amidst the skirmish
-- Carter discovers the body of Captain James K. Powell.
+- Carter discovers Powell's body
+- killed by arrows. Devastated
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

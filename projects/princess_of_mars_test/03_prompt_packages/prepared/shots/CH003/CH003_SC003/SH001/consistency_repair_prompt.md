@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Curiosity $\rightarrow$ Terror/Panic. **Likely Visual Coverage Families:** - Low-angle shots of the approaching mounts to emphasize scale.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: An Earthman undergoing a supernatural transfo...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Curiosity $\rightarrow$ Terror/Panic. **Likely Visual Coverage Families:** - Low-angle shots of the approaching mounts to emphasize scale.... Close framing that isolates reaction and emotional emphasis.. Intimate composition that isolates against to capture the beat's emotional turn.. Characters: An Earthma...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,22 +35,21 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH003_SC003
 - chapter_id: CH003
-- shot_type: medium
+- shot_type: reaction_closeup
 - previous_shot_id: (none)
 - next_shot_id: SH002
 - shot_lineage_ids: SH001; SH002
-- camera_description: Stable medium framing that keeps action and character readable.
-- composition: Readable medium composition in The basin/vegetation area near the incubator featuring protagonist.
+- camera_description: Close framing that isolates reaction and emotional emphasis.
+- composition: Intimate composition that isolates protagonist against The basin/vegetation area near the incubator to capture the beat's emotional turn.
 - prompt_family: shot_prompt
 - reference_asset_ids: protagonist; DESC_CH003_SC003; DESC_CH003_SC003_SH001
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH003_SC003 / SC003.
+- Scene: CH003_SC003 / Introduce the primary antagonist force and create immediate life-thre....
 - Variant: Consistency Repair.
-- Speed and rhythmic cadence of the twenty mounted warriors
-- Precise spatial proximity of the leader's spear to the protagonist
-- Protagonist hears the rattle of approaching equipment.
+- The speed/rhythm of the mounted warriors
+- the proximity of the spear to the protagonist.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

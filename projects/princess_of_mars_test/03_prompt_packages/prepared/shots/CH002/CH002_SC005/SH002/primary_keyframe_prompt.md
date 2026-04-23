@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. From mesmerized trance to sudden, overwhelming cosmic displacement. **Likely Visual Coverage Families:** - Extreme Wide shots of the land.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: . Environment: described environment with stable spatial contin...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. From mesmerized trance to sudden, overwhelming cosmic displacement. **Likely Visual Coverage Families:** - Extreme Wide shots of the land.... Stable medium framing that keeps action and character readable.. Readable medium composition featuring in the Arizona landscape.. Characters: . Environment: described environment with...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -40,17 +40,15 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - next_shot_id: SH003
 - shot_lineage_ids: SH001; SH002; SH003
 - camera_description: Stable medium framing that keeps action and character readable.
-- composition: Readable medium composition in SC005 featuring scene_character.
+- composition: Readable medium composition featuring scene_character in the Arizona landscape.
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH002_SC005; DESC_CH002_SC005_SH002
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH002_SC005 / SC005.
+- Scene: CH002_SC005 / To trigger the protagonist's cosmic displacement and end the chapter....
 - Variant: Primary Keyframe.
-- Visual brightness and position of Mars (the red star) in the sky.
-- Seamless transition from grounded Arizona environment to abstract space sequence.
-- Protagonist experiences an irresistible pull toward the star.
+- He feels an irresistible pull toward it.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

@@ -46,11 +46,11 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH005_SC003 / SC003.
+- Scene: CH005_SC003 / To escalate the tension through a high-stakes pursuit and showcase th....
 - Variant: Consistency Repair.
-- Precise height and distance measurements for all jumps to maintain physics consistency
-- Strict timing of the_watch_dog arrival at specific street corners relative to protagonist position
-- The protagonist utilizes superior jumping ability to navigate urban structures and gaps.
+- The height and distance of jumps
+- the timing of the dog's arrival at various street corners.
+- Carry the emotional arc through: Adrenaline/Exertion -> Desperation.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

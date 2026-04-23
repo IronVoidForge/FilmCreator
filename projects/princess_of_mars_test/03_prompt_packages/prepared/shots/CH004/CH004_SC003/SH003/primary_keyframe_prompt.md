@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Humiliation $\rightarrow$ Defiance $\rightarrow$ Triumph/Respect. **Likely Visual Coverage Families:** * Tight Close-ups (CU) on the punc.... Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with, crossing the frame and maintaining readable movement.. Characters: Green Martian (Thark)...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Humiliation $\rightarrow$ Defiance $\rightarrow$ Triumph/Respect. **Likely Visual Coverage Families:** * Tight Close-ups (CU) on the punc.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of he is then commanded to perform "sak" (jumping), which he do...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -35,21 +35,24 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - target_models: qwen_image; flux; z_image
 - scene_id: CH004_SC003
 - chapter_id: CH004
-- shot_type: action
+- shot_type: closing_reaction
 - previous_shot_id: SH002
-- next_shot_id: SH004
-- shot_lineage_ids: SH002; SH003; SH004
-- camera_description: Active camera with tracking energy and clear spatial orientation.
-- composition: Dynamic composition in grand_audience_chamber with tars_tarkas, the_chieftain crossing the frame and maintaining readable movement.
+- next_shot_id: (none)
+- shot_lineage_ids: SH002; SH003
+- camera_description: Controlled closing frame that lands the consequence of the beat.
+- composition: Closing composition in grand_audience_chamber that emphasizes the consequence of he is then commanded to perform "sak" (jumping), which he does with impressive distance, further astounding the assembly..
 - prompt_family: shot_prompt
 - reference_asset_ids: tars_tarkas; chieftain; grand_audience_chamber; DESC_CH004_SC003; DESC_CH004_SC003_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH004_SC003 / SC003.
+- Scene: CH004_SC003 / Establish the Narrator's agency and his ability to command respect th....
 - Variant: Primary Keyframe.
-- Physical contact precision during the fight sequence
-- Physics/trajectory consistency of the "sak" jump
+- The physics/trajectory of the jump
+- the physical contact during the fight sequence.
+- He is then commanded to perform "sak" (jumping)
+- which he does with impressive distance
+- further astounding the assembly.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

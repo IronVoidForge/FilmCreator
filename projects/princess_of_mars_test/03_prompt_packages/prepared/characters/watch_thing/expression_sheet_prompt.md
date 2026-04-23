@@ -11,7 +11,7 @@ Prepare a compact character reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Film character reference sheet, expression sheet showing several clear emotional beats without changing costume, A fierce, multi-legged non-humanoid creature., Multi-legged anatomy, non-humanoid frame., Capable of brutal, high-intensity combat movement., clean neutral studio background, clear silhouette, consistent...
+Film character reference sheet, expression sheet showing several clear emotional beats without changing costume, A fierce, multi-legged non-humanoid creature., readable production detail, Multi-legged anatomy, non-humanoid frame., clean neutral studio background, clear silhouette, consistent costume layers, consiste...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition

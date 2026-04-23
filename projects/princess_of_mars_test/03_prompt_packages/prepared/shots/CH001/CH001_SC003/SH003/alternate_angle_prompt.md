@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Suspicion $\rightarrow$ Alertness $\rightarrow$ Chaos/Adrenaline.. Tight detail framing focused on a single visual object or gesture.. Detail composition centered on the key physical action or prop inside .. Characters: , A large group of hostile indigenous fighters., 19th-century indigenous setting., engaged in ambush and skirmish tac...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Suspicion $\rightarrow$ Alertness $\rightarrow$ Chaos/Adrenaline.. Tight detail framing focused on a single visual object or gesture.. Detail composition centered on the key physical action or prop inside .. Characters: A large group of hostile indigenous fighters., readable production detail, group silhouette emphasizes numbers and ha...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -37,8 +37,8 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - chapter_id: CH001
 - shot_type: insert_detail
 - previous_shot_id: SH002
-- next_shot_id: SH004
-- shot_lineage_ids: SH002; SH003; SH004
+- next_shot_id: (none)
+- shot_lineage_ids: SH002; SH003
 - camera_description: Tight detail framing focused on a single visual object or gesture.
 - composition: Detail composition centered on the key physical action or prop inside Arizona hills/plateau.
 - prompt_family: shot_prompt
@@ -46,11 +46,12 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
 
 # Continuity Notes
-- Scene: CH001_SC003 / SC003.
+- Scene: CH001_SC003 / Introduce the primary conflict and physical threat..
 - Variant: Alternate Angle.
-- Tracking the specific number of apache_warriors present
-- Maintaining consistent direction of pursuit along the trail
-- Precise weapon handling (rifles/sidearms) and arrow usage
+- Number of warriors
+- direction of pursuit
+- weapon handling (rifles/sidearms)
+- weapon handling (rifles/sidearms).
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes
