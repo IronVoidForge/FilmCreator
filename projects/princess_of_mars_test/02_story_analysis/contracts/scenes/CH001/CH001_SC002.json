@@ -1,35 +1,43 @@
 {
   "scene_id": "CH001_SC002",
   "chapter_id": "CH001",
-  "scene_title": "Establish the inciting incident and the stakes (the gold claim).",
+  "scene_title": "SC002",
   "purpose": "Establish the inciting incident and the stakes (the gold claim).",
   "summary": "In 1865, Carter and Powell discover a massive gold-bearing quartz vein in the Arizona hills. They agree on a plan: Powell will head to civilization for machinery while Carter stays to guard the site.",
   "emotional_arc": "Excitement / Triumph $\\rightarrow$ Determination.",
-  "production_intent": "Establish the inciting incident and the stakes (the gold claim).",
-  "scene_start_state": "In 1865, Carter and Powell discover a massive gold-bearing quartz vein in the Arizona hills. They agree on a plan: Powell will head to civilization for machinery while Carter stays to guard the site.",
-  "scene_end_state": "Arrive at the scene's transition point.",
-  "dominant_action_line": "In 1865, Carter and Powell discover a massive gold-bearing quartz vein in the Arizona hills. They agree on a plan: Powell will head to civilization for machinery while Carter stays to guard the site.",
+  "production_intent": "Establish the discovery of a massive gold-bearing quartz vein in the Arizona hills to drive the plot forward through high stakes and immediate logistical planning.",
+  "scene_short_description": "Two men discover a massive gold-bearing quartz vein amidst remote Arizona hills.",
+  "scene_primary_scale_story_point": "The scale of the quartz vein relative to the human prospectors.",
+  "scene_required_anchor_catalog": [
+    "Gold-bearing quartz vein",
+    "Prospector gear/tools"
+  ],
+  "scene_start_state": "Carter and Powell stand before a massive, shimmering quartz vein in the hills.",
+  "scene_end_state": "The men separate with a firm plan for machinery and site security.",
+  "dominant_action_line": "Discovery of gold leads to a strategic division of labor between the two men.",
   "scene_spatial_layout": [
-    "Appearance of the gold vein",
-    "gear/clothing of 1865 prospectors",
-    "lighting (bright desert sun)."
+    "Open desert hill terrain",
+    "Proximity to the quartz vein structure"
   ],
   "character_spatial_map": [
-    "Primary subject placement should remain readable against the main environment anchor."
+    "Carter and Powell positioned near the vein",
+    "Powell moving toward exit vector for civilization",
+    "Carter remaining stationary at the site"
   ],
   "environment_subzones": [
-    "primary scene playing area"
+    "Quartz vein outcrop",
+    "Remote Arizona hills"
   ],
   "entry_vectors": [
-    "Subjects inherit entry logic from the prior scene or chapter transition."
+    "Hillside approach"
   ],
   "exit_vectors": [
-    "Subjects exit or hand off toward the next story beat."
+    "Path to civilization (Powell)",
+    "Site perimeter (Carter)"
   ],
   "beat_transition_map": [
-    "BT001: In 1865, Carter and Powell discover a massive gold-bearing quartz vein in the Arizona hills. They agree on a plan: Powell will head to civilization for machinery while Carter stays to guard the site. -> In 1865, Carter and Powell discover a massive gold-bearing quartz vein in the Arizona hills. They agree on a plan: Powell will head to civilization for machinery while Carter stays to guard the site.",
-    "BT002: Continue the established scene action. -> Land the emotional shift: Excitement / Triumph $\\rightarrow$ Determination..",
-    "BT003: Continue the established scene action toward consequence. -> Arrive at the scene's transition point."
+    "BT001 -> BT002: Visual confirmation of wealth",
+    "BT002 -> BT003: Shift from discovery to logistical planning"
   ],
   "characters_required": [
     {
@@ -67,138 +75,156 @@
   ],
   "continuity_constraints": [
     "Appearance of the gold vein",
-    "gear/clothing of 1865 prospectors",
-    "lighting (bright desert sun)."
+    "1865 prospector gear and clothing",
+    "Bright desert sun lighting"
   ],
   "visual_coverage_families": [
     "Wide shots of the landscape",
-    "medium shots of the men inspecting the vein",
-    "close-ups of the gold/quartz",
-    "two-shots for the planning dialogue."
+    "Medium shots of men inspecting the vein",
+    "Close-ups of gold/quartz",
+    "Two-shots for planning dialogue"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "In 1865, Carter and Powell discover a massive gold-bearing quartz vein in the Arizona hills. They agree on a plan: Powell will head to civilization for machinery while Carter stays to guard the site.",
-      "purpose": "Establish the inciting incident and the stakes (the gold claim).",
-      "action_start": "In 1865, Carter and Powell discover a massive gold-bearing quartz vein in the Arizona hills. They agree on a plan: Powell will head to civilization for machinery while Carter stays to guard the site.",
-      "action_end": "In 1865, Carter and Powell discover a massive gold-bearing quartz vein in the Arizona hills. They agree on a plan: Powell will head to civilization for machinery while Carter stays to guard the site.",
-      "active_subjects": [],
+      "summary": "Discovery of the vein",
+      "purpose": "",
+      "action_start": "Men approaching the outcrop",
+      "action_end": "Visual contact with gold",
+      "active_subjects": [
+        "John Carter (Younger)",
+        "Captain James K. Powell"
+      ],
       "passive_subjects": [],
-      "spatial_context": "Appearance of the gold vein",
-      "blocking_hint": "Wide shots of the landscape",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "Appearance of the gold vein",
-      "coverage_hint": "Wide shots of the landscape",
-      "coverage_priority": "primary story beat",
-      "handoff_to_next": ""
+      "spatial_context": "Remote Arizona quartz vein/hills",
+      "blocking_hint": "Men standing before the rock face",
+      "environment_subzone": "Quartz vein outcrop",
+      "continuity_focus": "Gold appearance in quartz",
+      "coverage_hint": "Wide shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Carry the emotional arc through: Excitement / Triumph $\\rightarrow$ Determination..",
+      "summary": "Triumph and inspection",
       "purpose": "",
-      "action_start": "Continue the established scene action.",
-      "action_end": "Land the emotional shift: Excitement / Triumph $\\rightarrow$ Determination..",
-      "active_subjects": [],
+      "action_start": "Close inspection of the gold",
+      "action_end": "Realization of the claim's magnitude",
+      "active_subjects": [
+        "John Carter (Younger)",
+        "Captain James K. Powell"
+      ],
       "passive_subjects": [],
-      "spatial_context": "gear/clothing of 1865 prospectors",
-      "blocking_hint": "medium shots of the men inspecting the vein",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "gear/clothing of 1865 prospectors",
-      "coverage_hint": "medium shots of the men inspecting the vein",
-      "coverage_priority": "emotional transition",
-      "handoff_to_next": ""
+      "spatial_context": "At the vein",
+      "blocking_hint": "Men leaning into the rock",
+      "environment_subzone": "Quartz vein outcrop",
+      "continuity_focus": "1865 gear/clothing",
+      "coverage_hint": "Close-up",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Land the scene consequence or transition cleanly.",
+      "summary": "Strategic planning",
       "purpose": "",
-      "action_start": "Continue the established scene action toward consequence.",
-      "action_end": "Arrive at the scene's transition point.",
-      "active_subjects": [],
+      "action_start": "Discussion of machinery and guarding",
+      "action_end": "Agreement to separate",
+      "active_subjects": [
+        "John Carter (Younger)",
+        "Captain James K. Powell"
+      ],
       "passive_subjects": [],
-      "spatial_context": "lighting (bright desert sun).",
-      "blocking_hint": "two-shots for the planning dialogue.",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "lighting (bright desert sun).",
-      "coverage_hint": "two-shots for the planning dialogue.",
-      "coverage_priority": "transition beat",
-      "handoff_to_next": ""
+      "spatial_context": "At the vein",
+      "blocking_hint": "Two-shot dialogue stance",
+      "environment_subzone": "Quartz vein outcrop",
+      "continuity_focus": "Bright desert sun lighting",
+      "coverage_hint": "Medium two-shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "End of scene"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "primary story beat",
-      "primary_subject_seed": "primary scene subject",
-      "secondary_subjects_seed": [],
-      "subject_visibility": "on_screen",
-      "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "In 1865, Carter and Powell discover a massive gold-bearing quartz vein in the Arizona hills. They agree on a plan: Powell will head to civilization for machinery while Carter stays to guard the site.",
-      "end_state_seed": "In 1865, Carter and Powell discover a massive gold-bearing quartz vein in the Arizona hills. They agree on a plan: Powell will head to civilization for machinery while Carter stays to guard the site.",
-      "action_seed": "In 1865, Carter and Powell discover a massive gold-bearing quartz vein in the Arizona hills. They agree on a plan: Powell will head to civilization for machinery while Carter stays to guard the site.",
-      "blocking_seed": [
-        "Wide shots of the landscape",
-        "Appearance of the gold vein"
+      "narrative_function": "establish setting and scale",
+      "planned_shot_moment_summary": "Wide view of the Arizona hills revealing the vein",
+      "primary_subject_seed": "Landscape",
+      "secondary_subjects_seed": [
+        "Carter",
+        "Powell"
       ],
-      "shot_size": "medium",
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "Remote Arizona quartz vein/hills",
+      "planned_shot_required_anchor_1": "Quartz vein",
+      "planned_shot_scale_proof_detail": "Vein size vs landscape",
+      "start_state_seed": "Static wide shot",
+      "end_state_seed": "Pan toward men",
+      "action_seed": "Establishing the remote location",
+      "blocking_seed": [
+        "Men small in frame"
+      ],
+      "shot_size": "wide",
       "camera_angle": "eye_level",
-      "lens_family": "normal",
-      "camera_motion": "locked_off",
+      "lens_family": "ultra_wide",
+      "camera_motion": "pan",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "hard_directional",
-      "primary_subject_angle": "front_three_quarter_left"
+      "primary_subject_angle": "front"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "emotional transition",
-      "primary_subject_seed": "primary scene subject",
+      "narrative_function": "show discovery detail",
+      "planned_shot_moment_summary": "Close up of gold in quartz",
+      "primary_subject_seed": "Gold vein",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "Continue the established scene action.",
-      "end_state_seed": "Land the emotional shift: Excitement / Triumph $\\rightarrow$ Determination..",
-      "action_seed": "Carry the emotional arc through: Excitement / Triumph $\\rightarrow$ Determination..",
-      "blocking_seed": [
-        "medium shots of the men inspecting the vein",
-        "gear/clothing of 1865 prospectors"
-      ],
-      "shot_size": "medium",
-      "camera_angle": "eye_level",
+      "environment_subzone": "Quartz vein outcrop",
+      "planned_shot_required_anchor_1": "Gold/quartz",
+      "planned_shot_scale_proof_detail": "Texture and glint of gold",
+      "start_state_seed": "Focus on rock",
+      "end_state_seed": "Focus on men's reactions",
+      "action_seed": "Revealing the gold content",
+      "blocking_seed": [],
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
       "lens_family": "normal",
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
+      "focus_strategy": "rack_focus",
       "lighting_style": "hard_directional",
-      "primary_subject_angle": "front_three_quarter_left"
+      "primary_subject_angle": "front"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "transition beat",
-      "primary_subject_seed": "primary scene subject",
-      "secondary_subjects_seed": [],
+      "narrative_function": "convey planning and stakes",
+      "planned_shot_moment_summary": "Two shot of Carter and Powell discussing the plan",
+      "primary_subject_seed": "John Carter (Younger)",
+      "secondary_subjects_seed": [
+        "Captain James K. Powell"
+      ],
       "subject_visibility": "on_screen",
-      "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "Continue the established scene action toward consequence.",
-      "end_state_seed": "Arrive at the scene's transition point.",
-      "action_seed": "Land the scene consequence or transition cleanly.",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "Quartz vein outcrop",
+      "planned_shot_required_anchor_1": "Prospector gear",
+      "planned_shot_scale_proof_detail": "Men standing near vein",
+      "start_state_seed": "Medium two-shot",
+      "end_state_seed": "Cut to exit",
+      "action_seed": "Negotiating the division of labor",
       "blocking_seed": [
-        "two-shots for the planning dialogue.",
-        "lighting (bright desert sun)."
+        "Facing each other"
       ],
       "shot_size": "medium",
       "camera_angle": "eye_level",
-      "lens_family": "normal",
+      "lens_family": "portrait",
       "camera_motion": "locked_off",
-      "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
       "lighting_style": "hard_directional",
       "primary_subject_angle": "front_three_quarter_left"
     }
@@ -266,14 +292,14 @@
     "[CH025] CHAPTER XXV (book index hit)",
     "[CH010] CHAPTER X (book index hit)"
   ],
-  "storyboard_markdown": "# Scene Contract: CH001_SC002\n\n- chapter_id: `CH001`\n- scene_title: `Establish the inciting incident and the stakes (the gold claim).`\n\n## Production Intent\n\nEstablish the inciting incident and the stakes (the gold claim).\n\n## Storyboard\n\nIn 1865, Carter and Powell discover a massive gold-bearing quartz vein in the Arizona hills. They agree on a plan: Powell will head to civilization for machinery while Carter stays to guard the site.",
+  "storyboard_markdown": "# Scene Contract: CH001_SC002\n\n## Production Intent\nEstablish the discovery of a massive gold-bearing quartz vein in the Arizona hills to drive the plot forward through high stakes and immediate logistical planning.\n\n## Required Cast\n- John Carter (Younger)\n- Captain James K. Powell\n\n## Required Environments\n- Remote Arizona quartz vein/hills\n\n## Continuity Constraints\n- Appearance of the gold vein\n- 1865 prospector gear and clothing\n- Bright desert sun lighting\n\n## Beat List\n- BT001: Discovery of the vein\n- BT002: Triumph and inspection\n- BT003: Strategic planning",
   "metadata": {
     "artifact_id": "CH001_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "81f669b04c2d425b3c17f1378de4279807cdc023",
+    "source_fingerprint": "d71c80162938429c46c0ae5768ea4c3b3634e0e6",
     "created_at_utc": "2026-04-21T23:17:26.665459+00:00",
-    "updated_at_utc": "2026-04-23T03:34:19.518071+00:00",
+    "updated_at_utc": "2026-04-23T18:02:18.097096+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -328,6 +354,11 @@
         "timestamp_utc": "2026-04-23T03:34:56.325926+00:00",
         "action": "synthesized",
         "source_fingerprint": "81f669b04c2d425b3c17f1378de4279807cdc023"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:02:45.339231+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d71c80162938429c46c0ae5768ea4c3b3634e0e6"
       }
     ]
   }

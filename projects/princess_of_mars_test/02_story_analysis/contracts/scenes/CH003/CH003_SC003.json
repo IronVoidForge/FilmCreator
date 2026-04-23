@@ -1,34 +1,41 @@
 {
   "scene_id": "CH003_SC003",
   "chapter_id": "CH003",
-  "scene_title": "Introduce the primary antagonist force and create immediate life-thre...",
+  "scene_title": "SC003",
   "purpose": "Introduce the primary antagonist force and create immediate life-threatening tension.",
   "summary": "The protagonist hears the rattle of equipment and realizes a party of twenty mounted Martian warriors is approaching. He narrowly avoids being killed by the leader's spear as they pass near his hiding spot.",
   "emotional_arc": "Curiosity $\\rightarrow$ Terror/Panic.\n\n**Likely Visual Coverage Families:**\n- Low-angle shots of the approaching mounts to emphasize scale.\n- Close-ups of the spear tip narrowly missing the protagonist.\n- Rapid cutting between the warriors and the protagonist's hiding position.",
-  "production_intent": "Introduce the primary antagonist force and create immediate life-threatening tension.",
-  "scene_start_state": "The protagonist hears the rattle of equipment and realizes a party of twenty mounted Martian warriors is approaching. He narrowly avoids being killed by the leader's spear as they pass near his hiding spot.",
-  "scene_end_state": "Arrive at the scene's transition point.",
-  "dominant_action_line": "The protagonist hears the rattle of equipment and realizes a party of twenty mounted Martian warriors is approaching. He narrowly avoids being killed by the leader's spear as they pass near his hiding spot.",
+  "production_intent": "Establish the scale and lethality of the Martian warrior cavalry through high-tension proximity. The sequence must transition from auditory curiosity to visceral terror as a spear tip narrowly misses the protagonist in the yellowish moss vegetation.",
+  "scene_short_description": "A lone man hides in yellowish moss as a cavalry of twenty warriors thunders past.",
+  "scene_primary_scale_story_point": "Twenty mounted warriors vs one hiding protagonist.",
+  "scene_required_anchor_catalog": [
+    "incubator glass roof",
+    "yellowish moss-like vegetation"
+  ],
+  "scene_start_state": "Protagonist is stationary, listening to distant equipment rattle.",
+  "scene_end_state": "Protagonist is frozen in terror as the cavalry passes his immediate position.",
+  "dominant_action_line": "The protagonist hides from a passing cavalcade of twenty Martian warriors.",
   "scene_spatial_layout": [
-    "The speed/rhythm of the mounted warriors",
-    "the proximity of the spear to the protagonist."
+    "Circular basin with yellowish moss vegetation",
+    "Low walled enclosure containing an incubator"
   ],
   "character_spatial_map": [
-    "Primary subject placement should remain readable against the main environment anchor."
+    "protagonist: crouched/hidden within the moss near the incubator",
+    "Martian Warriors (Cavalcade): moving in a line through the basin"
   ],
   "environment_subzones": [
-    "primary scene playing area"
+    "incubator enclosure",
+    "mossy basin floor"
   ],
   "entry_vectors": [
-    "Subjects inherit entry logic from the prior scene or chapter transition."
+    "cavalry approach path through the basin"
   ],
   "exit_vectors": [
-    "Subjects exit or hand off toward the next story beat."
+    "cavalry exit path through the basin"
   ],
   "beat_transition_map": [
-    "BT001: The protagonist hears the rattle of equipment and realizes a party of twenty mounted Martian warriors is approaching. He narrowly avoids being killed by the leader's spear as they pass near his hiding spot. -> The protagonist hears the rattle of equipment and realizes a party of twenty mounted Martian warriors is approaching. He narrowly avoids being killed by the leader's spear as they pass near his hiding spot.",
-    "BT002: Continue the established scene action. -> Land the emotional shift: Curiosity $\\rightarrow$ Terror/Panic.\n\n**Likely Visual Coverage Families:**\n- Low-angle shots of the approaching mounts to emphasize scale.\n- Close-ups of the spear tip narrowly missing the protagonist.\n- Rapid cutting between the warriors and the protagonist's hiding position..",
-    "BT003: Continue the established scene action toward consequence. -> Arrive at the scene's transition point."
+    "BT001 -> BT002: auditory realization to visual sighting",
+    "BT002 -> BT003: approaching threat to near-miss impact"
   ],
   "characters_required": [
     {
@@ -65,132 +72,156 @@
     }
   ],
   "continuity_constraints": [
-    "The speed/rhythm of the mounted warriors",
-    "the proximity of the spear to the protagonist."
+    "Rhythmic speed and cadence of the twenty mounted warriors",
+    "Precise spatial distance between the leader's spear and protagonist"
   ],
-  "visual_coverage_families": [],
+  "visual_coverage_families": [
+    "Low-angle shots of approaching mounts to emphasize scale",
+    "Close-ups of spear tip proximity",
+    "Rapid cutting between warriors and hiding position"
+  ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "The protagonist hears the rattle of equipment and realizes a party of twenty mounted Martian warriors is approaching. He narrowly avoids being killed by the leader's spear as they pass near his hiding spot.",
-      "purpose": "Introduce the primary antagonist force and create immediate life-threatening tension.",
-      "action_start": "The protagonist hears the rattle of equipment and realizes a party of twenty mounted Martian warriors is approaching. He narrowly avoids being killed by the leader's spear as they pass near his hiding spot.",
-      "action_end": "The protagonist hears the rattle of equipment and realizes a party of twenty mounted Martian warriors is approaching. He narrowly avoids being killed by the leader's spear as they pass near his hiding spot.",
-      "active_subjects": [],
+      "summary": "Protagonist hears equipment rattle and realizes danger",
+      "purpose": "",
+      "action_start": "protagonist listening to silence",
+      "action_end": "protagonist realizing the sound is rhythmic",
+      "active_subjects": [
+        "protagonist"
+      ],
       "passive_subjects": [],
-      "spatial_context": "The speed/rhythm of the mounted warriors",
-      "blocking_hint": "",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "The speed/rhythm of the mounted warriors",
-      "coverage_hint": "",
-      "coverage_priority": "primary story beat",
-      "handoff_to_next": ""
+      "spatial_context": "near incubator in mossy basin",
+      "blocking_hint": "protagonist remains low in vegetation",
+      "environment_subzone": "mossy basin floor",
+      "continuity_focus": "sound rhythm of equipment",
+      "coverage_hint": "close-up on protagonist's face",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Carry the emotional arc through: Curiosity $\\rightarrow$ Terror/Panic.\n\n**Likely Visual Coverage Families:**\n- Low-angle shots of the approaching mounts to emphasize scale.\n- Close-ups of the spear tip narrowly missing the protagonist.\n- Rapid cutting between the warriors and the protagonist's hiding position..",
+      "summary": "The party of twenty mounted warriors approaches",
       "purpose": "",
-      "action_start": "Continue the established scene action.",
-      "action_end": "Land the emotional shift: Curiosity $\\rightarrow$ Terror/Panic.\n\n**Likely Visual Coverage Families:**\n- Low-angle shots of the approaching mounts to emphasize scale.\n- Close-ups of the spear tip narrowly missing the protagonist.\n- Rapid cutting between the warriors and the protagonist's hiding position..",
-      "active_subjects": [],
-      "passive_subjects": [],
-      "spatial_context": "the proximity of the spear to the protagonist.",
-      "blocking_hint": "",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "the proximity of the spear to the protagonist.",
-      "coverage_hint": "",
-      "coverage_priority": "emotional transition",
-      "handoff_to_next": ""
+      "action_start": "distant rhythmic thudding",
+      "action_end": "warriors filling the visual field",
+      "active_subjects": [
+        "Martian Warriors (Cavalcade)"
+      ],
+      "passive_subjects": [
+        "protagonist"
+      ],
+      "spatial_context": "basin floor",
+      "blocking_hint": "cavalry moving in a line",
+      "environment_subzone": "mossy basin floor",
+      "continuity_focus": "speed of mounts",
+      "coverage_hint": "low-angle wide shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Land the scene consequence or transition cleanly.",
+      "summary": "The leader's spear narrowly misses the protagonist",
       "purpose": "",
-      "action_start": "Continue the established scene action toward consequence.",
-      "action_end": "Arrive at the scene's transition point.",
-      "active_subjects": [],
+      "action_start": "spear enters frame near protagonist",
+      "action_end": "cavalcade passes by",
+      "active_subjects": [
+        "protagonist",
+        "Martian Warriors (Cavalcade)"
+      ],
       "passive_subjects": [],
-      "spatial_context": "the proximity of the spear to the protagonist.",
-      "blocking_hint": "",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "the proximity of the spear to the protagonist.",
-      "coverage_hint": "",
-      "coverage_priority": "transition beat",
-      "handoff_to_next": ""
+      "spatial_context": "immediate proximity to hiding spot",
+      "blocking_hint": "protagonist flinches/shrinks into moss",
+      "environment_subzone": "mossy basin floor",
+      "continuity_focus": "proximity of spear tip",
+      "coverage_hint": "extreme close-up on spear and face",
+      "coverage_priority": "critical",
+      "handoff_to_next": "end_scene"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "primary story beat",
-      "primary_subject_seed": "Martian Warrior",
+      "narrative_function": "establish tension",
+      "planned_shot_moment_summary": "protagonist hears equipment rattle",
+      "primary_subject_seed": "protagonist",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "The protagonist hears the rattle of equipment and realizes a party of twenty mounted Martian warriors is approaching. He narrowly avoids being killed by the leader's spear as they pass near his hiding spot.",
-      "end_state_seed": "The protagonist hears the rattle of equipment and realizes a party of twenty mounted Martian warriors is approaching. He narrowly avoids being killed by the leader's spear as they pass near his hiding spot.",
-      "action_seed": "The protagonist hears the rattle of equipment and realizes a party of twenty mounted Martian warriors is approaching. He narrowly avoids being killed by the leader's spear as they pass near his hiding spot.",
+      "environment_subzone": "mossy basin floor",
+      "planned_shot_required_anchor_1": "incubator glass roof",
+      "planned_shot_scale_proof_detail": "protagonist's reaction to sound",
+      "start_state_seed": "protagonist listening",
+      "end_state_seed": "protagonist looking up in realization",
+      "action_seed": "listening, turning head",
       "blocking_seed": [
-        "The speed/rhythm of the mounted warriors"
+        "crouched in moss"
       ],
-      "shot_size": "medium",
+      "shot_size": "medium_close",
       "camera_angle": "eye_level",
       "lens_family": "normal",
-      "camera_motion": "locked_off",
+      "camera_motion": "handheld",
       "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
-      "lighting_style": "hard_directional",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
       "primary_subject_angle": "front_three_quarter_left"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "emotional transition",
-      "primary_subject_seed": "primary scene subject",
+      "narrative_function": "show scale of threat",
+      "planned_shot_moment_summary": "cavalcade enters view",
+      "primary_subject_seed": "Martian Warriors (Cavalcade)",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "Continue the established scene action.",
-      "end_state_seed": "Land the emotional shift: Curiosity $\\rightarrow$ Terror/Panic.\n\n**Likely Visual Coverage Families:**\n- Low-angle shots of the approaching mounts to emphasize scale.\n- Close-ups of the spear tip narrowly missing the protagonist.\n- Rapid cutting between the warriors and the protagonist's hiding position..",
-      "action_seed": "Carry the emotional arc through: Curiosity $\\rightarrow$ Terror/Panic.\n\n**Likely Visual Coverage Families:**\n- Low-angle shots of the approaching mounts to emphasize scale.\n- Close-ups of the spear tip narrowly missing the protagonist.\n- Rapid cutting between the warriors and the protagonist's hiding position..",
+      "environment_subzone": "mossy basin floor",
+      "planned_shot_required_anchor_1": "incubator glass roof",
+      "planned_shot_scale_proof_detail": "low angle vs mounts",
+      "start_state_seed": "distant movement",
+      "end_state_seed": "approaching thunder",
+      "action_seed": "riding, galloping",
       "blocking_seed": [
-        "the proximity of the spear to the protagonist."
+        "moving across frame"
       ],
-      "shot_size": "medium",
-      "camera_angle": "eye_level",
-      "lens_family": "normal",
-      "camera_motion": "locked_off",
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
-      "lighting_style": "hard_directional",
-      "primary_subject_angle": "front_three_quarter_left"
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "transition beat",
-      "primary_subject_seed": "primary scene subject",
-      "secondary_subjects_seed": [],
+      "narrative_function": "climax tension",
+      "planned_shot_moment_summary": "spear tip misses protagonist",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "leader's spear"
+      ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "Continue the established scene action toward consequence.",
-      "end_state_seed": "Arrive at the scene's transition point.",
-      "action_seed": "Land the scene consequence or transition cleanly.",
+      "environment_subzone": "mossy basin floor",
+      "planned_shot_required_anchor_1": "incubator glass roof",
+      "planned_shot_scale_proof_detail": "extreme proximity of spear to face",
+      "start_state_seed": "warrior passing",
+      "end_state_seed": "spear tip stopping/passing",
+      "action_seed": "narrowly avoiding strike",
       "blocking_seed": [
-        "the proximity of the spear to the protagonist."
+        "protagonist flinching"
       ],
-      "shot_size": "medium",
+      "shot_size": "close_up",
       "camera_angle": "eye_level",
-      "lens_family": "normal",
-      "camera_motion": "locked_off",
+      "lens_family": "portrait",
+      "camera_motion": "handheld",
       "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
-      "lighting_style": "hard_directional",
-      "primary_subject_angle": "front_three_quarter_left"
+      "focus_strategy": "rack_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
     }
   ],
   "unresolved_questions": [
@@ -255,14 +286,14 @@
     "[CH004] CHAPTER IV (book index hit)",
     "Character protagonist: An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeles..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH003_SC003\n\n- chapter_id: `CH003`\n- scene_title: `Introduce the primary antagonist force and create immediate life-thre...`\n\n## Production Intent\n\nIntroduce the primary antagonist force and create immediate life-threatening tension.\n\n## Storyboard\n\nThe protagonist hears the rattle of equipment and realizes a party of twenty mounted Martian warriors is approaching. He narrowly avoids being killed by the leader's spear as they pass near his hiding spot.",
+  "storyboard_markdown": "# Scene Contract: CH003_SC003\n\n## Production Intent\nEstablish the scale and lethality of the Martian warrior cavalry through high-tension proximity. The sequence must transition from auditory curiosity to visceral terror as a spear tip narrowly misses the protagonist in the yellowish moss vegetation.\n\n## Required Cast\n- protagonist\n- Martian Warriors (Cavalcade)\n\n## Required Environments\n- The basin/vegetation area near the incubator\n\n## Continuity Constraints\n- Rhythmic speed and cadence of the twenty mounted warriors\n- Precise spatial distance between the leader's spear and protagonist\n\n## Beat List\n- BT001: Protagonist hears equipment rattle and realizes danger\n- BT002: The party of twenty mounted warriors approaches\n- BT003: The leader's spear narrowly misses the protagonist",
   "metadata": {
     "artifact_id": "CH003_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "12c3de383eb20221daddc116e1a44a4980c2b3ef",
+    "source_fingerprint": "62f8dfa5e3e55889d7d3b099085367e4be95c604",
     "created_at_utc": "2026-04-21T23:20:36.567181+00:00",
-    "updated_at_utc": "2026-04-23T03:40:53.340277+00:00",
+    "updated_at_utc": "2026-04-23T18:07:14.358369+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -317,6 +348,11 @@
         "timestamp_utc": "2026-04-23T03:41:29.831149+00:00",
         "action": "synthesized",
         "source_fingerprint": "12c3de383eb20221daddc116e1a44a4980c2b3ef"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:07:40.187717+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "62f8dfa5e3e55889d7d3b099085367e4be95c604"
       }
     ]
   }

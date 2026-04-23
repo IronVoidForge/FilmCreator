@@ -1,34 +1,41 @@
 {
   "scene_id": "CH003_SC001",
   "chapter_id": "CH003",
-  "scene_title": "Establish the protagonist's new physical reality and the alien enviro...",
+  "scene_title": "SC001",
   "purpose": "Establish the protagonist's new physical reality and the alien environment.",
   "summary": "The protagonist wakes up on Mars, naked and disoriented. He discovers that the low gravity makes normal movement impossible, causing him to leap uncontrollably with every step.",
   "emotional_arc": "Confusion $\\rightarrow$ Physical Bewilderment/Surprise.\n\n**Likely Visual Coverage Families:**\n- Wide shots of the Martian landscape.\n- Medium shots of the protagonist's clumsy, leaping movements.\n- Close-ups of his facial expressions (disorientation).",
-  "production_intent": "Establish the protagonist's new physical reality and the alien environment.",
-  "scene_start_state": "The protagonist wakes up on Mars, naked and disoriented. He discovers that the low gravity makes normal movement impossible, causing him to leap uncontrollably with every step.",
-  "scene_end_state": "Arrive at the scene's transition point.",
-  "dominant_action_line": "The protagonist wakes up on Mars, naked and disoriented. He discovers that the low gravity makes normal movement impossible, causing him to leap uncontrollably with every step.",
+  "production_intent": "Establish the protagonist's physical disorientation and the low-gravity Martian environment through clumsy, high-leaping movements. The visual language must emphasize the scale of the basin against a naked, vulnerable subject struggling with physics.",
+  "scene_short_description": "A naked man wakes up in a yellowish mossy basin and leaps uncontrollably due to low gravity.",
+  "scene_primary_scale_story_point": "The vastness of the Martian basin relative to the small, vulnerable protagonist.",
+  "scene_required_anchor_catalog": [
+    "Incubator glass roof",
+    "Low walled enclosure"
+  ],
+  "scene_start_state": "Protagonist lying naked and disoriented in yellowish moss-like vegetation.",
+  "scene_end_state": "Protagonist actively leaping uncontrollably across the basin floor.",
+  "dominant_action_line": "The protagonist attempts to move but is propelled into high, uncontrolled leaps by low gravity.",
   "scene_spatial_layout": [
-    "The height and distance of the leaps",
-    "the protagonist's physical state (nakedness/exposure)."
+    "Circular basin floor covered in yellowish moss-like vegetation",
+    "Low walled enclosure containing an incubator with a glass roof"
   ],
   "character_spatial_map": [
-    "Primary subject placement should remain readable against the main environment anchor."
+    "Protagonist centered within the circular basin",
+    "Movement radiates outward from the incubator zone"
   ],
   "environment_subzones": [
-    "primary scene playing area"
+    "Incubator enclosure (walled/glass roof)",
+    "Open basin floor (yellowish moss)"
   ],
   "entry_vectors": [
-    "Subjects inherit entry logic from the prior scene or chapter transition."
+    "N/A (Protagonist is already present)"
   ],
   "exit_vectors": [
-    "Subjects exit or hand off toward the next story beat."
+    "Uncontrolled leaping trajectory across the basin"
   ],
   "beat_transition_map": [
-    "BT001: The protagonist wakes up on Mars, naked and disoriented. He discovers that the low gravity makes normal movement impossible, causing him to leap uncontrollably with every step. -> The protagonist wakes up on Mars, naked and disoriented. He discovers that the low gravity makes normal movement impossible, causing him to leap uncontrollably with every step.",
-    "BT002: Continue the established scene action. -> Land the emotional shift: Confusion $\\rightarrow$ Physical Bewilderment/Surprise.\n\n**Likely Visual Coverage Families:**\n- Wide shots of the Martian landscape.\n- Medium shots of the protagonist's clumsy, leaping movements.\n- Close-ups of his facial expressions (disorientation)..",
-    "BT003: Continue the established scene action toward consequence. -> Arrive at the scene's transition point."
+    "BT001 -> BT002: Awakening to first movement attempt",
+    "BT002 -> BT003: Movement attempt to uncontrolled leaping realization"
   ],
   "characters_required": [
     {
@@ -65,132 +72,154 @@
     }
   ],
   "continuity_constraints": [
-    "The height and distance of the leaps",
-    "the protagonist's physical state (nakedness/exposure)."
+    "Protagonist remains naked throughout",
+    "Leap height and distance must remain consistent with low-gravity physics",
+    "Vegetation displacement during leaps"
   ],
-  "visual_coverage_families": [],
+  "visual_coverage_families": [
+    "Wide shots of Martian landscape",
+    "Medium shots of clumsy leaping movements",
+    "Close-ups of facial disorientation"
+  ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "The protagonist wakes up on Mars, naked and disoriented. He discovers that the low gravity makes normal movement impossible, causing him to leap uncontrollably with every step.",
-      "purpose": "Establish the protagonist's new physical reality and the alien environment.",
-      "action_start": "The protagonist wakes up on Mars, naked and disoriented. He discovers that the low gravity makes normal movement impossible, causing him to leap uncontrollably with every step.",
-      "action_end": "The protagonist wakes up on Mars, naked and disoriented. He discovers that the low gravity makes normal movement impossible, causing him to leap uncontrollably with every step.",
-      "active_subjects": [],
+      "summary": "Awakening in the basin",
+      "purpose": "",
+      "action_start": "lying motionless",
+      "action_end": "eyes opening",
+      "active_subjects": [
+        "protagonist"
+      ],
       "passive_subjects": [],
-      "spatial_context": "The height and distance of the leaps",
-      "blocking_hint": "",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "The height and distance of the leaps",
-      "coverage_hint": "",
-      "coverage_priority": "primary story beat",
-      "handoff_to_next": ""
+      "spatial_context": "incubator enclosure",
+      "blocking_hint": "prone on moss near glass roof",
+      "environment_subzone": "incubator enclosure",
+      "continuity_focus": "nakedness/exposure",
+      "coverage_hint": "wide shot of landscape and subject",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Carry the emotional arc through: Confusion $\\rightarrow$ Physical Bewilderment/Surprise.\n\n**Likely Visual Coverage Families:**\n- Wide shots of the Martian landscape.\n- Medium shots of the protagonist's clumsy, leaping movements.\n- Close-ups of his facial expressions (disorientation)..",
+      "summary": "Initial disorientation",
       "purpose": "",
-      "action_start": "Continue the established scene action.",
-      "action_end": "Land the emotional shift: Confusion $\\rightarrow$ Physical Bewilderment/Surprise.\n\n**Likely Visual Coverage Families:**\n- Wide shots of the Martian landscape.\n- Medium shots of the protagonist's clumsy, leaping movements.\n- Close-ups of his facial expressions (disorientation)..",
-      "active_subjects": [],
+      "action_start": "sitting up",
+      "action_end": "looking around confusedly",
+      "active_subjects": [
+        "protagonist"
+      ],
       "passive_subjects": [],
-      "spatial_context": "the protagonist's physical state (nakedness/exposure).",
-      "blocking_hint": "",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "the protagonist's physical state (nakedness/exposure).",
-      "coverage_hint": "",
-      "coverage_priority": "emotional transition",
-      "handoff_to_next": ""
+      "spatial_context": "incubator enclosure",
+      "blocking_hint": "seated in moss [[CH003]]",
+      "environment_subzone": "incubator enclosure",
+      "continuity_focus": "physical state (naked)",
+      "coverage_hint": "medium close-up on face",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Land the scene consequence or transition cleanly.",
+      "summary": "Discovery of low gravity",
       "purpose": "",
-      "action_start": "Continue the established scene action toward consequence.",
-      "action_end": "Arrive at the scene's transition point.",
-      "active_subjects": [],
+      "action_start": "attempting to stand",
+      "action_end": "uncontrolled leaping across basin",
+      "active_subjects": [
+        "protagonist"
+      ],
       "passive_subjects": [],
-      "spatial_context": "the protagonist's physical state (nakedness/exposure).",
-      "blocking_hint": "",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "the protagonist's physical state (nakedness/exposure).",
-      "coverage_hint": "",
-      "coverage_priority": "transition beat",
-      "handoff_to_next": ""
+      "spatial_context": "open basin floor",
+      "blocking_hint": "clumsy, high-leaping movements [[CH003_SC001]]",
+      "environment_subzone": "open basin floor",
+      "continuity_focus": "leap height and distance",
+      "coverage_hint": "medium/wide shots of movement",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "primary story beat",
-      "primary_subject_seed": "primary scene subject",
-      "secondary_subjects_seed": [],
+      "narrative_function": "establish setting and state",
+      "planned_shot_moment_summary": "protagonist lying still in moss",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "incubator"
+      ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "The protagonist wakes up on Mars, naked and disoriented. He discovers that the low gravity makes normal movement impossible, causing him to leap uncontrollably with every step.",
-      "end_state_seed": "The protagonist wakes up on Mars, naked and disoriented. He discovers that the low gravity makes normal movement impossible, causing him to leap uncontrollably with every step.",
-      "action_seed": "The protagonist wakes up on Mars, naked and disoriented. He discovers that the low gravity makes normal movement impossible, causing him to leap uncontrollably with every step.",
+      "environment_subzone": "incubator enclosure",
+      "planned_shot_required_anchor_1": "incubator glass roof",
+      "planned_shot_scale_proof_detail": "size of incubator vs body",
+      "start_state_seed": "eyes closed, motionless",
+      "end_state_seed": "eyes snap open",
+      "action_seed": "waking up",
       "blocking_seed": [
-        "The height and distance of the leaps"
+        "lying prone in moss"
       ],
-      "shot_size": "medium",
-      "camera_angle": "eye_level",
-      "lens_family": "normal",
-      "camera_motion": "locked_off",
+      "shot_size": "wide",
+      "camera_angle": "high_angle",
+      "lens_family": "wide",
+      "camera_motion": "slow_push_in",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
-      "lighting_style": "hard_directional",
+      "lighting_style": "diffuse_ambient",
       "primary_subject_angle": "front_three_quarter_left"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "emotional transition",
-      "primary_subject_seed": "primary scene subject",
+      "narrative_function": "show disorientation",
+      "planned_shot_moment_summary": "protagonist sitting up and looking around",
+      "primary_subject_seed": "protagonist",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "Continue the established scene action.",
-      "end_state_seed": "Land the emotional shift: Confusion $\\rightarrow$ Physical Bewilderment/Surprise.\n\n**Likely Visual Coverage Families:**\n- Wide shots of the Martian landscape.\n- Medium shots of the protagonist's clumsy, leaping movements.\n- Close-ups of his facial expressions (disorientation)..",
-      "action_seed": "Carry the emotional arc through: Confusion $\\rightarrow$ Physical Bewilderment/Surprise.\n\n**Likely Visual Coverage Families:**\n- Wide shots of the Martian landscape.\n- Medium shots of the protagonist's clumsy, leaping movements.\n- Close-ups of his facial expressions (disorientation)..",
+      "environment_subzone": "incubator enclosure",
+      "planned_shot_required_anchor_1": "low walled enclosure",
+      "planned_shot_scale_proof_detail": "height of walls vs subject",
+      "start_state_seed": "sitting upright",
+      "end_state_seed": "looking at hands/body",
+      "action_seed": "searching for orientation",
       "blocking_seed": [
-        "the protagonist's physical state (nakedness/exposure)."
+        "sitting in moss near wall"
       ],
-      "shot_size": "medium",
+      "shot_size": "medium_close",
       "camera_angle": "eye_level",
       "lens_family": "normal",
-      "camera_motion": "locked_off",
+      "camera_motion": "handheld",
       "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
-      "lighting_style": "hard_directional",
-      "primary_subject_angle": "front_three_quarter_left"
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "transition beat",
-      "primary_subject_seed": "primary scene subject",
+      "narrative_function": "demonstrate gravity physics",
+      "planned_shot_moment_summary": "first uncontrolled leap",
+      "primary_subject_seed": "protagonist",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "Continue the established scene action toward consequence.",
-      "end_state_seed": "Arrive at the scene's transition point.",
-      "action_seed": "Land the scene consequence or transition cleanly.",
+      "environment_subzone": "open basin floor",
+      "planned_shot_required_anchor_1": "yellowish moss-like vegetation",
+      "planned_shot_scale_proof_detail": "leap height vs ground level",
+      "start_state_seed": "standing attempt",
+      "end_state_seed": "mid-air suspension",
+      "action_seed": "leaping uncontrollably",
       "blocking_seed": [
-        "the protagonist's physical state (nakedness/exposure)."
+        "moving away from incubator"
       ],
-      "shot_size": "medium",
-      "camera_angle": "eye_level",
-      "lens_family": "normal",
-      "camera_motion": "locked_off",
+      "shot_size": "full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "track",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
-      "lighting_style": "hard_directional",
-      "primary_subject_angle": "front_three_quarter_left"
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_right"
     }
   ],
   "unresolved_questions": [
@@ -255,14 +284,14 @@
     "[CH007] CHAPTER VII (book index hit)",
     "Character protagonist: An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeles..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH003_SC001\n\n- chapter_id: `CH003`\n- scene_title: `Establish the protagonist's new physical reality and the alien enviro...`\n\n## Production Intent\n\nEstablish the protagonist's new physical reality and the alien environment.\n\n## Storyboard\n\nThe protagonist wakes up on Mars, naked and disoriented. He discovers that the low gravity makes normal movement impossible, causing him to leap uncontrollably with every step.",
+  "storyboard_markdown": "# Scene Contract: CH003_SC001\n\n## Production Intent\nEstablish the protagonist's physical disorientation and the low-gravity Martian environment through clumsy, high-leaping movements. The visual language must emphasize the scale of the basin against a naked, vulnerable subject struggling with physics.\n\n## Required Cast\n- protagonist (naked, Earthman)\n\n## Required Environments\n- A circular basin on Mars covered in yellowish moss-like vegetation\n- Incubator (low walled enclosure with glass roof)\n\n## Continuity Constraints\n- Protagonist must remain naked/exposed throughout the scene\n- Leap height and distance must be consistent for low-gravity physics\n- Moss displacement during leaps\n\n## Beat List\n- BT001: Awakening in the basin\n- BT002: Initial disorientation\n- BT003: Discovery of low gravity (uncontrolled leaping)",
   "metadata": {
     "artifact_id": "CH003_SC001_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "0f121bcf3c82526b3c6b19acca7a626c5c7fcbb7",
+    "source_fingerprint": "56cb351d87624e9e37589052f6c2653f5e5e6735",
     "created_at_utc": "2026-04-21T23:20:04.554507+00:00",
-    "updated_at_utc": "2026-04-23T03:39:51.031165+00:00",
+    "updated_at_utc": "2026-04-23T18:06:21.052004+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -317,6 +346,11 @@
         "timestamp_utc": "2026-04-23T03:40:15.812484+00:00",
         "action": "synthesized",
         "source_fingerprint": "0f121bcf3c82526b3c6b19acca7a626c5c7fcbb7"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:06:46.932737+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "56cb351d87624e9e37589052f6c2653f5e5e6735"
       }
     ]
   }

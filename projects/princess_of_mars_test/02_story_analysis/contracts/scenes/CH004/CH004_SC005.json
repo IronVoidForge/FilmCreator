@@ -1,34 +1,42 @@
 {
   "scene_id": "CH004_SC005",
   "chapter_id": "CH004",
-  "scene_title": "Provide a moment of respite and introduce local fauna, grounding the...",
+  "scene_title": "SC005",
   "purpose": "Provide a moment of respite and introduce local fauna, grounding the \"alien\" nature of the world.",
   "summary": "Sola leads the Narrator to a decorated sleeping chamber. Inside, the Narrator encounters a strange, ten-legged Martian creature with a frog-like head and tusks.",
   "emotional_arc": "Fatigue $\\rightarrow$ Curiosity/Uncanniness.\n\n**Likely Visual Coverage Families:**\n* Medium shots of the chamber's decor.\n* Close-ups on the strange creature to emphasize its alien features.\n* Low-key lighting to suggest a nighttime/rest setting.",
-  "production_intent": "Provide a moment of respite and introduce local fauna, grounding the \"alien\" nature of the world.",
-  "scene_start_state": "Sola leads the Narrator to a decorated sleeping chamber. Inside, the Narrator encounters a strange, ten-legged Martian creature with a frog-like head and tusks.",
-  "scene_end_state": "Arrive at the scene's transition point.",
-  "dominant_action_line": "Sola leads the Narrator to a decorated sleeping chamber. Inside, the Narrator encounters a strange, ten-legged Martian creature with a frog-like head and tusks.",
+  "production_intent": "Establish a moment of rest within the massive marble and gold architecture of the ancient city. Use low-key lighting to transition from physical fatigue to an uncanny encounter with local Martian fauna, grounding the alien biology of the world through close-up detail.",
+  "scene_short_description": "A character is led into a decorated sleeping chamber to encounter a strange ten-legged creature.",
+  "scene_primary_scale_story_point": "Architecture feels oversized relative to inhabitants, emphasizing the ancient city scale.",
+  "scene_required_anchor_catalog": [
+    "Decorated Sleeping Chamber furniture",
+    "Small Martian Creature (ten-legged)"
+  ],
+  "scene_start_state": "Sola and The Narrator enter the chamber under low-key lighting.",
+  "scene_end_state": "The Narrator observes the strange creature with curiosity/uncanniness.",
+  "dominant_action_line": "Sola guides The Narrator into the room where a small, ten-legged creature is discovered.",
   "scene_spatial_layout": [
-    "The appearance and movement of the small creature",
-    "the level of light in the room."
+    "Interior decorated sleeping chamber",
+    "Low-key lighting environment"
   ],
   "character_spatial_map": [
-    "Primary subject placement should remain readable against the main environment anchor."
+    "sola leads the movement",
+    "The Narrator follows sola",
+    "Small Martian Creature occupies a localized subzone of the floor or furniture"
   ],
   "environment_subzones": [
-    "primary scene playing area"
+    "Chamber entrance",
+    "Decorated sleeping area"
   ],
   "entry_vectors": [
-    "Subjects inherit entry logic from the prior scene or chapter transition."
+    "Entrance path from city corridor"
   ],
   "exit_vectors": [
-    "Subjects exit or hand off toward the next story beat."
+    "Exit path back to city corridor"
   ],
   "beat_transition_map": [
-    "BT001: Sola leads the Narrator to a decorated sleeping chamber. Inside, the Narrator encounters a strange, ten-legged Martian creature with a frog-like head and tusks. -> Sola leads the Narrator to a decorated sleeping chamber. Inside, the Narrator encounters a strange, ten-legged Martian creature with a frog-like head and tusks.",
-    "BT002: Continue the established scene action. -> Land the emotional shift: Fatigue $\\rightarrow$ Curiosity/Uncanniness.\n\n**Likely Visual Coverage Families:**\n* Medium shots of the chamber's decor.\n* Close-ups on the strange creature to emphasize its alien features.\n* Low-key lighting to suggest a nighttime/rest setting..",
-    "BT003: Continue the established scene action toward consequence. -> Arrive at the scene's transition point."
+    "BT001 -> BT002: Arrival and environmental reveal",
+    "BT002 -> BT003: Discovery of the creature"
   ],
   "characters_required": [
     {
@@ -75,132 +83,162 @@
     }
   ],
   "continuity_constraints": [
-    "The appearance and movement of the small creature",
-    "the level of light in the room."
+    "Small Martian Creature movement and physical appearance",
+    "Ambient light levels within the chamber"
   ],
-  "visual_coverage_families": [],
+  "visual_coverage_families": [
+    "Medium shots of chamber decor",
+    "Close-ups on Small Martian Creature features",
+    "Low-key nighttime lighting"
+  ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Sola leads the Narrator to a decorated sleeping chamber. Inside, the Narrator encounters a strange, ten-legged Martian creature with a frog-like head and tusks.",
-      "purpose": "Provide a moment of respite and introduce local fauna, grounding the \"alien\" nature of the world.",
-      "action_start": "Sola leads the Narrator to a decorated sleeping chamber. Inside, the Narrator encounters a strange, ten-legged Martian creature with a frog-like head and tusks.",
-      "action_end": "Sola leads the Narrator to a decorated sleeping chamber. Inside, the Narrator encounters a strange, ten-legged Martian creature with a frog-like head and tusks.",
-      "active_subjects": [],
+      "summary": "Arrival in the chamber",
+      "purpose": "",
+      "action_start": "Sola enters the doorway",
+      "action_end": "Sola stops in the room",
+      "active_subjects": [
+        "sola",
+        "The Narrator"
+      ],
       "passive_subjects": [],
-      "spatial_context": "The appearance and movement of the small creature",
-      "blocking_hint": "",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "The appearance and movement of the small creature",
-      "coverage_hint": "",
-      "coverage_priority": "primary story beat",
-      "handoff_to_next": ""
+      "spatial_context": "Chamber entrance",
+      "blocking_hint": "Sola leads the way through the threshold",
+      "environment_subzone": "Chamber entrance",
+      "continuity_focus": "Light level upon entry",
+      "coverage_hint": "Medium shot of movement",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Carry the emotional arc through: Fatigue $\\rightarrow$ Curiosity/Uncanniness.\n\n**Likely Visual Coverage Families:**\n* Medium shots of the chamber's decor.\n* Close-ups on the strange creature to emphasize its alien features.\n* Low-key lighting to suggest a nighttime/rest setting..",
+      "summary": "Environmental survey",
       "purpose": "",
-      "action_start": "Continue the established scene action.",
-      "action_end": "Land the emotional shift: Fatigue $\\rightarrow$ Curiosity/Uncanniness.\n\n**Likely Visual Coverage Families:**\n* Medium shots of the chamber's decor.\n* Close-ups on the strange creature to emphasize its alien features.\n* Low-key lighting to suggest a nighttime/rest setting..",
-      "active_subjects": [],
-      "passive_subjects": [],
-      "spatial_context": "the level of light in the room.",
-      "blocking_hint": "",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "the level of light in the room.",
-      "coverage_hint": "",
-      "coverage_priority": "emotional transition",
-      "handoff_to_next": ""
+      "action_start": "Narrator enters room",
+      "action_end": "Narrator notices something moving",
+      "active_subjects": [
+        "The Narrator"
+      ],
+      "passive_subjects": [
+        "sola"
+      ],
+      "spatial_context": "Decorated sleeping area",
+      "blocking_hint": "Narrator stands still to observe decor",
+      "environment_subzone": "Decorated sleeping area",
+      "continuity_focus": "Decor elements visibility",
+      "coverage_hint": "Medium shots of decor",
+      "coverage_priority": "low",
+      "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Land the scene consequence or transition cleanly.",
+      "summary": "Encounter with fauna",
       "purpose": "",
-      "action_start": "Continue the established scene action toward consequence.",
-      "action_end": "Arrive at the scene's transition point.",
-      "active_subjects": [],
-      "passive_subjects": [],
-      "spatial_context": "the level of light in the room.",
-      "blocking_hint": "",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "the level of light in the room.",
-      "coverage_hint": "",
-      "coverage_priority": "transition beat",
-      "handoff_to_next": ""
+      "action_start": "Creature is spotted",
+      "action_end": "Narrator stares at creature",
+      "active_subjects": [
+        "Small Martian Creature",
+        "The Narrator"
+      ],
+      "passive_subjects": [
+        "sola"
+      ],
+      "spatial_context": "Decorated sleeping area",
+      "blocking_hint": "Creature occupies a low position near furniture",
+      "environment_subzone": "Decorated sleeping area",
+      "continuity_focus": "Creature's ten legs and tusks",
+      "coverage_hint": "Close-ups on creature features",
+      "coverage_priority": "high",
+      "handoff_to_next": "End of scene"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "primary story beat",
-      "primary_subject_seed": "The Narrator",
-      "secondary_subjects_seed": [],
-      "subject_visibility": "off_screen_voice",
-      "narration_mode": "voiceover_off_screen",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "Sola leads the Narrator to a decorated sleeping chamber. Inside, the Narrator encounters a strange, ten-legged Martian creature with a frog-like head and tusks.",
-      "end_state_seed": "Sola leads the Narrator to a decorated sleeping chamber. Inside, the Narrator encounters a strange, ten-legged Martian creature with a frog-like head and tusks.",
-      "action_seed": "Sola leads the Narrator to a decorated sleeping chamber. Inside, the Narrator encounters a strange, ten-legged Martian creature with a frog-like head and tusks.",
-      "blocking_seed": [
-        "The appearance and movement of the small creature"
+      "narrative_function": "establish environment",
+      "planned_shot_moment_summary": "Sola leads Narrator into the decorated chamber",
+      "primary_subject_seed": "sola",
+      "secondary_subjects_seed": [
+        "The Narrator"
       ],
-      "shot_size": "medium",
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "Chamber entrance",
+      "planned_shot_required_anchor_1": "Decorated Sleeping Chamber furniture",
+      "planned_shot_scale_proof_detail": "Architecture vs character size",
+      "start_state_seed": "Sola entering doorway",
+      "end_state_seed": "Sola stopping in center of room",
+      "action_seed": "walking into chamber",
+      "blocking_seed": [
+        "sola leads",
+        "Narrator follows"
+      ],
+      "shot_size": "medium_full",
       "camera_angle": "eye_level",
-      "lens_family": "normal",
-      "camera_motion": "locked_off",
+      "lens_family": "wide",
+      "camera_motion": "track",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
-      "lighting_style": "hard_directional",
-      "primary_subject_angle": "front_three_quarter_left"
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "profile_left"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "emotional transition",
-      "primary_subject_seed": "primary scene subject",
-      "secondary_subjects_seed": [],
+      "narrative_function": "reveal decor",
+      "planned_shot_moment_summary": "The Narrator surveys the decorated room",
+      "primary_subject_seed": "The Narrator",
+      "secondary_subjects_seed": [
+        "Decorated Sleeping Chamber furniture"
+      ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "Continue the established scene action.",
-      "end_state_seed": "Land the emotional shift: Fatigue $\\rightarrow$ Curiosity/Uncanniness.\n\n**Likely Visual Coverage Families:**\n* Medium shots of the chamber's decor.\n* Close-ups on the strange creature to emphasize its alien features.\n* Low-key lighting to suggest a nighttime/rest setting..",
-      "action_seed": "Carry the emotional arc through: Fatigue $\\rightarrow$ Curiosity/Uncanniness.\n\n**Likely Visual Coverage Families:**\n* Medium shots of the chamber's decor.\n* Close-ups on the strange creature to emphasize its alien features.\n* Low-key lighting to suggest a nighttime/rest setting..",
+      "environment_subzone": "Decorated sleeping area",
+      "planned_shot_required_anchor_1": "Decorated Sleeping Chamber furniture",
+      "planned_shot_scale_proof_detail": "None",
+      "start_state_seed": "Narrator standing still",
+      "end_state_seed": "Narrator turning head",
+      "action_seed": "looking around",
       "blocking_seed": [
-        "the level of light in the room."
+        "Narrator stationary"
       ],
       "shot_size": "medium",
       "camera_angle": "eye_level",
       "lens_family": "normal",
-      "camera_motion": "locked_off",
+      "camera_motion": "pan",
       "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
-      "lighting_style": "hard_directional",
-      "primary_subject_angle": "front_three_quarter_left"
+      "focus_strategy": "environment_priority",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front_three_quarter_right"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "transition beat",
-      "primary_subject_seed": "primary scene subject",
+      "narrative_function": "introduce fauna",
+      "planned_shot_moment_summary": "Close up of the ten-legged creature with frog head and tusks",
+      "primary_subject_seed": "Small Martian Creature",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "Continue the established scene action toward consequence.",
-      "end_state_seed": "Arrive at the scene's transition point.",
-      "action_seed": "Land the scene consequence or transition cleanly.",
+      "environment_subzone": "Decorated sleeping area",
+      "planned_shot_required_anchor_1": "Small Martian Creature",
+      "planned_shot_scale_proof_detail": "Creature size relative to floor/furniture",
+      "start_state_seed": "Creature moving slightly",
+      "end_state_seed": "Creature freezing for observation",
+      "action_seed": "moving limbs and head",
       "blocking_seed": [
-        "the level of light in the room."
+        "creature on ground or furniture"
       ],
-      "shot_size": "medium",
-      "camera_angle": "eye_level",
-      "lens_family": "normal",
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "portrait",
       "camera_motion": "locked_off",
-      "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
-      "lighting_style": "hard_directional",
-      "primary_subject_angle": "front_three_quarter_left"
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front"
     }
   ],
   "unresolved_questions": [
@@ -266,14 +304,14 @@
     "[CH011] CHAPTER XI (book index hit)",
     "Character sola: Sola is a female Green Martian, also identified as a Thark. Her visual identity is defined by her species' characteristic green coloring and traditional Green Martian attire. While specific physical proportions are not detailed, she is estab..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH004_SC005\n\n- chapter_id: `CH004`\n- scene_title: `Provide a moment of respite and introduce local fauna, grounding the...`\n\n## Production Intent\n\nProvide a moment of respite and introduce local fauna, grounding the \"alien\" nature of the world.\n\n## Storyboard\n\nSola leads the Narrator to a decorated sleeping chamber. Inside, the Narrator encounters a strange, ten-legged Martian creature with a frog-like head and tusks.",
+  "storyboard_markdown": "# Scene Contract: CH004_SC005\n\n## Production Intent\nEstablish a moment of rest within the massive marble and gold architecture of the ancient city. Use low-key lighting to transition from physical fatigue to an uncanny encounter with local Martian fauna, grounding the alien biology of the world through close-up detail.\n\n## Required Cast\n- The Narrator\n- sola (Green Martian/Thark)\n- Small Martian Creature (Ten-legged, frog-like head, tusks)\n\n## Required Environments\n- Decorated Sleeping Chamber (Marble and gold architecture elements)\n\n## Continuity Constraints\n- Appearance and movement of the ten-legged creature\n- Ambient light levels in the chamber\n- Sola's green skin/traditional attire\n\n## Beat List\n- BT001: Arrival in the chamber\n- BT002: Environmental survey\n- BT003: Encounter with fauna",
   "metadata": {
     "artifact_id": "CH004_SC005_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "111780308064f049fba5e38ac3215b32a716565a",
+    "source_fingerprint": "5c9d275eb3eb3386c99883e127ae6ab676c0f84a",
     "created_at_utc": "2026-04-21T23:22:52.413384+00:00",
-    "updated_at_utc": "2026-04-23T03:45:19.728375+00:00",
+    "updated_at_utc": "2026-04-23T18:10:34.468054+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -328,6 +366,11 @@
         "timestamp_utc": "2026-04-23T03:45:53.254194+00:00",
         "action": "synthesized",
         "source_fingerprint": "111780308064f049fba5e38ac3215b32a716565a"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:11:00.505920+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "5c9d275eb3eb3386c99883e127ae6ab676c0f84a"
       }
     ]
   }

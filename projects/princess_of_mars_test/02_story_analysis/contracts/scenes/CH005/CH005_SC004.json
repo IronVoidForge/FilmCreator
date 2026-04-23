@@ -1,35 +1,42 @@
 {
   "scene_id": "CH005_SC004",
   "chapter_id": "CH005",
-  "scene_title": "To provide a climax to the escape attempt and introduce a new, much l...",
+  "scene_title": "SC004",
   "purpose": "To provide a climax to the escape attempt and introduce a new, much larger threat.",
   "summary": "In a desperate move to evade the dog, the protagonist leaps toward a window thirty feet above the ground. Just as he reaches safety, he is intercepted by a massive, white, hairless, ape-like creature that grabs him and drags him away.",
   "emotional_arc": "Hope (of escape) $\\rightarrow$ Terror/Shock.\n\n**Likely Visual Coverage Families:**\n- Slow-motion capture of the high jump.\n- Extreme close-up of the protagonist's face during the grab.\n- Large-scale shots to show the size difference between the human and the Colossal Creature.\n- Sudden transition from bright exterior to dark/enclosed interior.",
-  "production_intent": "To provide a climax to the escape attempt and introduce a new, much larger threat.",
-  "scene_start_state": "In a desperate move to evade the dog, the protagonist leaps toward a window thirty feet above the ground. Just as he reaches safety, he is intercepted by a massive, white, hairless, ape-like creature that grabs him and drags him away.",
-  "scene_end_state": "Arrive at the scene's transition point.",
-  "dominant_action_line": "In a desperate move to evade the dog, the protagonist leaps toward a window thirty feet above the ground. Just as he reaches safety, he is intercepted by a massive, white, hairless, ape-like creature that grabs him and drags him away.",
+  "production_intent": "Execute a high-stakes vertical escape sequence transitioning from an exterior chase to a sudden, terrifying abduction by a massive entity. The sequence must emphasize the protagonist's agility and the scale disparity between him and the colossal creature through lighting shifts and rapid spatial transitions.",
+  "scene_short_description": "A high leap toward a window leads to an abrupt abduction by a massive white entity.",
+  "scene_primary_scale_story_point": "Human vs. Colossal (massive scale disparity)",
+  "scene_required_anchor_catalog": [
+    "Window sill (30ft elevation)",
+    "The_colossal_creature's hand/grip"
+  ],
+  "scene_start_state": "protagonist fleeing The Watch Dog in an alleyway.",
+  "scene_end_state": "protagonist being dragged into the dark interior of the creature.",
+  "dominant_action_line": "Protagonist leaps for a window, is intercepted by the_colossal_creature, and is dragged away.",
   "scene_spatial_layout": [
-    "The height of the window",
-    "the physical contact point where the creature grabs the protagonist",
-    "lighting shift from city streets to the creature's lair."
+    "Vertical ascent from alley to 30ft window",
+    "Sudden transition from exterior street to enclosed interior"
   ],
   "character_spatial_map": [
-    "Primary subject placement should remain readable against the main environment anchor."
+    "protagonist: moving vertically toward window sill",
+    "The Watch Dog (pursuing): ground level/alleyway",
+    "the_colossal_creature: intercepting at window threshold"
   ],
   "environment_subzones": [
-    "primary scene playing area"
+    "Exterior building/alleyway",
+    "interior room of the Colossal Creature"
   ],
   "entry_vectors": [
-    "Subjects inherit entry logic from the prior scene or chapter transition."
+    "protagonist: leaping upward from alley"
   ],
   "exit_vectors": [
-    "Subjects exit or hand off toward the next story beat."
+    "protagonist: dragged into creature lair"
   ],
   "beat_transition_map": [
-    "BT001: In a desperate move to evade the dog, the protagonist leaps toward a window thirty feet above the ground. Just as he reaches safety, he is intercepted by a massive, white, hairless, ape-like creature that grabs him and drags him away. -> In a desperate move to evade the dog, the protagonist leaps toward a window thirty feet above the ground. Just as he reaches safety, he is intercepted by a massive, white, hairless, ape-like creature that grabs him and drags him away.",
-    "BT002: Continue the established scene action. -> Land the emotional shift: Hope (of escape) $\\rightarrow$ Terror/Shock.\n\n**Likely Visual Coverage Families:**\n- Slow-motion capture of the high jump.\n- Extreme close-up of the protagonist's face during the grab.\n- Large-scale shots to show the size difference between the human and the Colossal Creature.\n- Sudden transition from bright exterior to dark/enclosed interior..",
-    "BT003: Continue the established scene action toward consequence. -> Arrive at the scene's transition point."
+    "BT001 -> BT002: Leap completion and window contact",
+    "BT002 -> BT003: Sudden interception and abduction"
   ],
   "characters_required": [
     {
@@ -86,133 +93,159 @@
     }
   ],
   "continuity_constraints": [
-    "The height of the window",
-    "the physical contact point where the creature grabs the protagonist",
-    "lighting shift from city streets to the creature's lair."
+    "Window height at thirty feet",
+    "Physical contact point of the creature's grab",
+    "Lighting shift from city streets to creature lair"
   ],
-  "visual_coverage_families": [],
+  "visual_coverage_families": [
+    "Slow-motion high jump capture",
+    "Extreme close-up facial reaction during grab",
+    "Large-scale scale comparison shots",
+    "Bright exterior to dark interior lighting transitions"
+  ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "In a desperate move to evade the dog, the protagonist leaps toward a window thirty feet above the ground. Just as he reaches safety, he is intercepted by a massive, white, hairless, ape-like creature that grabs him and drags him away.",
-      "purpose": "To provide a climax to the escape attempt and introduce a new, much larger threat.",
-      "action_start": "In a desperate move to evade the dog, the protagonist leaps toward a window thirty feet above the ground. Just as he reaches safety, he is intercepted by a massive, white, hairless, ape-like creature that grabs him and drags him away.",
-      "action_end": "In a desperate move to evade the dog, the protagonist leaps toward a window thirty feet above the ground. Just as he reaches safety, he is intercepted by a massive, white, hairless, ape-like creature that grabs him and drags him away.",
-      "active_subjects": [],
+      "summary": "The desperate leap",
+      "purpose": "",
+      "action_start": "protagonist running in alleyway",
+      "action_end": "protagonist mid-air towards window",
+      "active_subjects": [
+        "protagonist",
+        "The Watch Dog (pursuing)"
+      ],
       "passive_subjects": [],
-      "spatial_context": "The height of the window",
-      "blocking_hint": "",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "The height of the window",
-      "coverage_hint": "",
-      "coverage_priority": "primary story beat",
-      "handoff_to_next": ""
+      "spatial_context": "Exterior building/alleyway",
+      "blocking_hint": "vertical movement from ground to 30ft height",
+      "environment_subzone": "Exterior building/alleyway",
+      "continuity_focus": "window height at 30ft",
+      "coverage_hint": "slow-motion capture of jump",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Carry the emotional arc through: Hope (of escape) $\\rightarrow$ Terror/Shock.\n\n**Likely Visual Coverage Families:**\n- Slow-motion capture of the high jump.\n- Extreme close-up of the protagonist's face during the grab.\n- Large-scale shots to show the size difference between the human and the Colossal Creature.\n- Sudden transition from bright exterior to dark/enclosed interior..",
+      "summary": "Reaching safety",
       "purpose": "",
-      "action_start": "Continue the established scene action.",
-      "action_end": "Land the emotional shift: Hope (of escape) $\\rightarrow$ Terror/Shock.\n\n**Likely Visual Coverage Families:**\n- Slow-motion capture of the high jump.\n- Extreme close-up of the protagonist's face during the grab.\n- Large-scale shots to show the size difference between the human and the Colossal Creature.\n- Sudden transition from bright exterior to dark/enclosed interior..",
-      "active_subjects": [],
+      "action_start": "protagonist mid-air",
+      "action_end": "protagonist grasping the window sill",
+      "active_subjects": [
+        "protagonist"
+      ],
       "passive_subjects": [],
-      "spatial_context": "the physical contact point where the creature grabs the protagonist",
-      "blocking_hint": "",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "the physical contact point where the creature grabs the protagonist",
-      "coverage_hint": "",
-      "coverage_priority": "emotional transition",
-      "handoff_to_next": ""
+      "spatial_context": "Window threshold",
+      "blocking_hint": "clinging to the ledge",
+      "environment_subzone": "Exterior building/alleyway",
+      "continuity_focus": "physical contact point at window sill",
+      "coverage_hint": "medium shot of grasp",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Land the scene consequence or transition cleanly.",
+      "summary": "The interception",
       "purpose": "",
-      "action_start": "Continue the established scene action toward consequence.",
-      "action_end": "Arrive at the scene's transition point.",
-      "active_subjects": [],
+      "action_start": "protagonist reaching safety",
+      "action_end": "protagonist dragged into the dark interior",
+      "active_subjects": [
+        "the_colossal_creature",
+        "protagonist"
+      ],
       "passive_subjects": [],
-      "spatial_context": "lighting shift from city streets to the creature's lair.",
-      "blocking_hint": "",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "lighting shift from city streets to the creature's lair.",
-      "coverage_hint": "",
-      "coverage_priority": "transition beat",
-      "handoff_to_next": ""
+      "spatial_context": "Transition from window to creature lair",
+      "blocking_hint": "sudden grab from the darkness of the room",
+      "environment_subzone": "interior room of the Colossal Creature",
+      "continuity_focus": "lighting shift from bright exterior to dark interior",
+      "coverage_hint": "extreme close-up of face and large-scale shot of creature",
+      "coverage_priority": "critical",
+      "handoff_to_next": "none"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "primary story beat",
-      "primary_subject_seed": "primary scene subject",
-      "secondary_subjects_seed": [],
+      "narrative_function": "establish escape attempt",
+      "planned_shot_moment_summary": "protagonist leaps toward the window",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "The Watch Dog (pursuing)"
+      ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "In a desperate move to evade the dog, the protagonist leaps toward a window thirty feet above the ground. Just as he reaches safety, he is intercepted by a massive, white, hairless, ape-like creature that grabs him and drags him away.",
-      "end_state_seed": "In a desperate move to evade the dog, the protagonist leaps toward a window thirty feet above the ground. Just as he reaches safety, he is intercepted by a massive, white, hairless, ape-like creature that grabs him and drags him away.",
-      "action_seed": "In a desperate move to evade the dog, the protagonist leaps toward a window thirty feet above the ground. Just as he reaches safety, he is intercepted by a massive, white, hairless, ape-like creature that grabs him and drags him away.",
+      "environment_subzone": "Exterior building/alleyway",
+      "planned_shot_required_anchor_1": "Window sill",
+      "planned_shot_scale_proof_detail": "30ft height relative to ground",
+      "start_state_seed": "protagonist running in alley",
+      "end_state_seed": "protagonist mid-air toward window",
+      "action_seed": "high jump",
       "blocking_seed": [
-        "The height of the window"
+        "vertical trajectory"
       ],
-      "shot_size": "medium",
-      "camera_angle": "eye_level",
-      "lens_family": "normal",
-      "camera_motion": "locked_off",
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "track",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
-      "lighting_style": "hard_directional",
-      "primary_subject_angle": "front_three_quarter_left"
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "emotional transition",
-      "primary_subject_seed": "primary scene subject",
+      "narrative_function": "show successful escape moment",
+      "planned_shot_moment_summary": "protagonist reaches the window sill",
+      "primary_subject_seed": "protagonist",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "Continue the established scene action.",
-      "end_state_seed": "Land the emotional shift: Hope (of escape) $\\rightarrow$ Terror/Shock.\n\n**Likely Visual Coverage Families:**\n- Slow-motion capture of the high jump.\n- Extreme close-up of the protagonist's face during the grab.\n- Large-scale shots to show the size difference between the human and the Colossal Creature.\n- Sudden transition from bright exterior to dark/enclosed interior..",
-      "action_seed": "Carry the emotional arc through: Hope (of escape) $\\rightarrow$ Terror/Shock.\n\n**Likely Visual Coverage Families:**\n- Slow-motion capture of the high jump.\n- Extreme close-up of the protagonist's face during the grab.\n- Large-scale shots to show the size difference between the human and the Colossal Creature.\n- Sudden transition from bright exterior to dark/enclosed interior..",
+      "environment_subzone": "Exterior building/alleyway",
+      "planned_shot_required_anchor_1": "Window sill",
+      "planned_shot_scale_proof_detail": "contact with ledge",
+      "start_state_seed": "mid-air jump",
+      "end_state_seed": "hands grasping ledge",
+      "action_seed": "grabbing window",
       "blocking_seed": [
-        "the physical contact point where the creature grabs the protagonist"
+        "clinging to ledge"
       ],
-      "shot_size": "medium",
+      "shot_size": "medium_close",
       "camera_angle": "eye_level",
       "lens_family": "normal",
       "camera_motion": "locked_off",
-      "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
-      "lighting_style": "hard_directional",
-      "primary_subject_angle": "front_three_quarter_left"
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "transition beat",
-      "primary_subject_seed": "primary scene subject",
-      "secondary_subjects_seed": [],
+      "narrative_function": "introduce threat and terror",
+      "planned_shot_moment_summary": "the_colossal_creature grabs protagonist",
+      "primary_subject_seed": "the_colossal_creature",
+      "secondary_subjects_seed": [
+        "protagonist"
+      ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "Continue the established scene action toward consequence.",
-      "end_state_seed": "Arrive at the scene's transition point.",
-      "action_seed": "Land the scene consequence or transition cleanly.",
+      "environment_subzone": "interior room of the Colossal Creature",
+      "planned_shot_required_anchor_1": "protagonist's face",
+      "planned_shot_scale_proof_detail": "massive hand vs human body",
+      "start_state_seed": "protagonist reaching safety",
+      "end_state_seed": "protagonist being pulled into darkness",
+      "action_seed": "interception and drag",
       "blocking_seed": [
-        "lighting shift from city streets to the creature's lair."
+        "sudden grab from interior shadow"
       ],
-      "shot_size": "medium",
+      "shot_size": "extreme_close_up",
       "camera_angle": "eye_level",
-      "lens_family": "normal",
-      "camera_motion": "locked_off",
+      "lens_family": "portrait",
+      "camera_motion": "handheld",
       "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
-      "lighting_style": "hard_directional",
-      "primary_subject_angle": "front_three_quarter_left"
+      "focus_strategy": "rack_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front"
     }
   ],
   "unresolved_questions": [
@@ -284,14 +317,14 @@
     "Character protagonist: An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeles...",
     "Character the_colossal_creature: No visual data is available to establish a stable identity, physical build, or costume for this character. The entity is identified only by its designation as \"the_colossal_creature.\""
   ],
-  "storyboard_markdown": "# Scene Contract: CH005_SC004\n\n- chapter_id: `CH005`\n- scene_title: `To provide a climax to the escape attempt and introduce a new, much l...`\n\n## Production Intent\n\nTo provide a climax to the escape attempt and introduce a new, much larger threat.\n\n## Storyboard\n\nIn a desperate move to evade the dog, the protagonist leaps toward a window thirty feet above the ground. Just as he reaches safety, he is intercepted by a massive, white, hairless, ape-like creature that grabs him and drags him away.",
+  "storyboard_markdown": "# Scene Contract: CH005_SC004\n\n## Production Intent\nExecute a high-stakes vertical escape sequence transitioning from an exterior chase to a sudden, terrifying abduction by a massive entity. The sequence must emphasize the protagonist's agility and the scale disparity between him and the colossal creature through lighting shifts and rapid spatial transitions.\n\n## Required Cast\n- protagonist\n- The Watch Dog (pursuing)\n- the_colossal_creature\n\n## Required Environments\n- Exterior building/alleyway\n- interior room of the Colossal Creature\n\n## Continuity Constraints\n- Window height at thirty feet\n- Physical contact point where the creature grabs the protagonist\n- Lighting shift from city streets to the creature's lair\n\n## Beat List\n- BT001: The desperate leap (protagonist leaps toward window)\n- BT002: Reaching safety (protagonist reaches window sill)\n- BT003: The interception (the_colossal_creature grabs and drags protagonist)",
   "metadata": {
     "artifact_id": "CH005_SC004_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "cfab3677b403fd08ebe5e4eafa4aab971e3cf03f",
+    "source_fingerprint": "0cb0080329cbdc2e79fd1134e6e61cb24001acf2",
     "created_at_utc": "2026-04-21T23:24:08.887056+00:00",
-    "updated_at_utc": "2026-04-23T03:47:47.380032+00:00",
+    "updated_at_utc": "2026-04-23T18:12:24.924015+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -346,6 +379,11 @@
         "timestamp_utc": "2026-04-23T03:48:26.570882+00:00",
         "action": "synthesized",
         "source_fingerprint": "cfab3677b403fd08ebe5e4eafa4aab971e3cf03f"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:12:53.036021+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "0cb0080329cbdc2e79fd1134e6e61cb24001acf2"
       }
     ]
   }

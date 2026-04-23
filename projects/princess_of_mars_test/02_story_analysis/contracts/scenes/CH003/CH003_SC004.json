@@ -1,34 +1,42 @@
 {
   "scene_id": "CH003_SC004",
   "chapter_id": "CH003",
-  "scene_title": "Demonstrate the protagonist's unique advantage and change the power d...",
+  "scene_title": "SC004",
   "purpose": "Demonstrate the protagonist's unique advantage and change the power dynamic.",
   "summary": "To escape, the protagonist performs a massive thirty-foot leap, landing on the far side of the enclosure. The Martians witness this feat, shifting their view of him from prey to a \"wonderful discovery.\"",
   "emotional_arc": "Desperation $\\rightarrow$ Triumph $\\rightarrow$ Observation (Martian side).\n\n**Likely Visual Coverage Families:**\n- Slow-motion or wide tracking shots of the massive leap.\n- Reaction shots from the Martian warriors (shock/interest).\n- Wide shot showing the distance covered by the jump.",
-  "production_intent": "Demonstrate the protagonist's unique advantage and change the power dynamic.",
-  "scene_start_state": "To escape, the protagonist performs a massive thirty-foot leap, landing on the far side of the enclosure. The Martians witness this feat, shifting their view of him from prey to a \"wonderful discovery.\"",
-  "scene_end_state": "Arrive at the scene's transition point.",
-  "dominant_action_line": "To escape, the protagonist performs a massive thirty-foot leap, landing on the far side of the enclosure. The Martians witness this feat, shifting their view of him from prey to a \"wonderful discovery.\"",
+  "production_intent": "Establish the protagonist's superhuman physical capabilities through a high-stakes escape attempt. The sequence must visually communicate the scale of the thirty-foot leap to justify the shift in Martian perception from predator/prey to scientific curiosity.",
+  "scene_short_description": "A naked man performs a massive leap across a circular basin to escape giant humanoids.",
+  "scene_primary_scale_story_point": "Protagonist's jump distance vs. 15-foot height of martian_warriors",
+  "scene_required_anchor_catalog": [
+    "low walled enclosure/incubator",
+    "yellowish moss-like vegetation"
+  ],
+  "scene_start_state": "protagonist is cornered within the basin enclosure, facing martian_warriors.",
+  "scene_end_state": "protagonist stands on the far side of the enclosure; martian_warriors observe from a distance.",
+  "dominant_action_line": "The protagonist executes a thirty-foot leap to clear the enclosure boundary.",
   "scene_spatial_layout": [
-    "The trajectory and landing point of the leap",
-    "the visual scale of the Martians vs. the protagonist."
+    "Circular basin with yellowish moss vegetation",
+    "Low walled enclosure under a glass roof"
   ],
   "character_spatial_map": [
-    "Primary subject placement should remain readable against the main environment anchor."
+    "protagonist positioned within the inner basin area",
+    "martian_warriors surrounding the perimeter/enclosure"
   ],
   "environment_subzones": [
-    "primary scene playing area"
+    "inner basin (moss zone)",
+    "enclosure boundary (wall/glass zone)",
+    "far side landing zone"
   ],
   "entry_vectors": [
-    "Subjects inherit entry logic from the prior scene or chapter transition."
+    "protagonist leap trajectory from inner basin to far side"
   ],
   "exit_vectors": [
     "Subjects exit or hand off toward the next story beat."
   ],
   "beat_transition_map": [
-    "BT001: To escape, the protagonist performs a massive thirty-foot leap, landing on the far side of the enclosure. The Martians witness this feat, shifting their view of him from prey to a \"wonderful discovery.\" -> To escape, the protagonist performs a massive thirty-foot leap, landing on the far side of the enclosure. The Martians witness this feat, shifting their view of him from prey to a \"wonderful discovery.\"",
-    "BT002: Continue the established scene action. -> Land the emotional shift: Desperation $\\rightarrow$ Triumph $\\rightarrow$ Observation (Martian side).\n\n**Likely Visual Coverage Families:**\n- Slow-motion or wide tracking shots of the massive leap.\n- Reaction shots from the Martian warriors (shock/interest).\n- Wide shot showing the distance covered by the jump..",
-    "BT003: Continue the established scene action toward consequence. -> Arrive at the scene's transition point."
+    "BT001 -> BT002: Leap execution and mid-air suspension",
+    "BT002 -> BT003: Impact/landing and Martian reaction"
   ],
   "characters_required": [
     {
@@ -65,131 +73,158 @@
     }
   ],
   "continuity_constraints": [
-    "The trajectory and landing point of the leap",
-    "the visual scale of the Martians vs. the protagonist."
+    "Precise trajectory and landing point of the thirty-foot leap",
+    "Visual scale relationship between 15-foot tall martian_warriors and protagonist"
   ],
-  "visual_coverage_families": [],
+  "visual_coverage_families": [
+    "Slow-motion or wide tracking shots of the massive leap",
+    "Reaction shots from the martian_warriors (shock/interest)",
+    "Wide shot showing the distance covered by the jump"
+  ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "To escape, the protagonist performs a massive thirty-foot leap, landing on the far side of the enclosure. The Martians witness this feat, shifting their view of him from prey to a \"wonderful discovery.\"",
-      "purpose": "Demonstrate the protagonist's unique advantage and change the power dynamic.",
-      "action_start": "To escape, the protagonist performs a massive thirty-foot leap, landing on the far side of the enclosure. The Martians witness this feat, shifting their view of him from prey to a \"wonderful discovery.\"",
-      "action_end": "To escape, the protagonist performs a massive thirty-foot leap, landing on the far side of the enclosure. The Martians witness this feat, shifting their view of him from prey to a \"wonderful discovery.\"",
-      "active_subjects": [],
-      "passive_subjects": [],
-      "spatial_context": "The trajectory and landing point of the leap",
-      "blocking_hint": "",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "The trajectory and landing point of the leap",
-      "coverage_hint": "",
-      "coverage_priority": "primary story beat",
-      "handoff_to_next": ""
+      "summary": "Protagonist prepares for escape",
+      "purpose": "",
+      "action_start": "protagonist cornered in moss zone",
+      "action_end": "protagonist launches into air",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [
+        "martian_warriors"
+      ],
+      "spatial_context": "inner basin area",
+      "blocking_hint": "protagonist center, warriors perimeter",
+      "environment_subzone": "inner basin",
+      "continuity_focus": "initial crouch height",
+      "coverage_hint": "close/medium on protagonist",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Carry the emotional arc through: Desperation $\\rightarrow$ Triumph $\\rightarrow$ Observation (Martian side).\n\n**Likely Visual Coverage Families:**\n- Slow-motion or wide tracking shots of the massive leap.\n- Reaction shots from the Martian warriors (shock/interest).\n- Wide shot showing the distance covered by the jump..",
+      "summary": "The massive leap",
       "purpose": "",
-      "action_start": "Continue the established scene action.",
-      "action_end": "Land the emotional shift: Desperation $\\rightarrow$ Triumph $\\rightarrow$ Observation (Martian side).\n\n**Likely Visual Coverage Families:**\n- Slow-motion or wide tracking shots of the massive leap.\n- Reaction shots from the Martian warriors (shock/interest).\n- Wide shot showing the distance covered by the jump..",
-      "active_subjects": [],
+      "action_start": "launch from moss",
+      "action_end": "landing on far side",
+      "active_subjects": [
+        "protagonist"
+      ],
       "passive_subjects": [],
-      "spatial_context": "the visual scale of the Martians vs. the protagonist.",
-      "blocking_hint": "",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "the visual scale of the Martians vs. the protagonist.",
-      "coverage_hint": "",
-      "coverage_priority": "emotional transition",
-      "handoff_to_next": ""
+      "spatial_context": "traversing the enclosure gap",
+      "blocking_hint": "arc through air above walls",
+      "environment_subzone": "enclosure boundary",
+      "continuity_focus": "thirty-foot distance trajectory",
+      "coverage_hint": "wide tracking/slow-motion",
+      "coverage_priority": "critical",
+      "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Land the scene consequence or transition cleanly.",
+      "summary": "Martian observation",
       "purpose": "",
-      "action_start": "Continue the established scene action toward consequence.",
-      "action_end": "Arrive at the scene's transition point.",
-      "active_subjects": [],
-      "passive_subjects": [],
-      "spatial_context": "the visual scale of the Martians vs. the protagonist.",
-      "blocking_hint": "",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "the visual scale of the Martians vs. the protagonist.",
-      "coverage_hint": "",
-      "coverage_priority": "transition beat",
-      "handoff_to_next": ""
+      "action_start": "protagonist hits ground",
+      "action_end": "martian warriors freeze in interest",
+      "active_subjects": [
+        "martian_warriors"
+      ],
+      "passive_subjects": [
+        "protagonist"
+      ],
+      "spatial_context": "far side of enclosure",
+      "blocking_hint": "warriors looking toward the landing site",
+      "environment_subzone": "far side landing zone",
+      "continuity_focus": "scale of martians vs protagonist",
+      "coverage_hint": "reaction shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "primary story beat",
-      "primary_subject_seed": "primary scene subject",
-      "secondary_subjects_seed": [],
+      "narrative_function": "establish desperation",
+      "planned_shot_moment_summary": "protagonist prepares for leap facing warriors",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "martian_warriors"
+      ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "To escape, the protagonist performs a massive thirty-foot leap, landing on the far side of the enclosure. The Martians witness this feat, shifting their view of him from prey to a \"wonderful discovery.\"",
-      "end_state_seed": "To escape, the protagonist performs a massive thirty-foot leap, landing on the far side of the enclosure. The Martians witness this feat, shifting their view of him from prey to a \"wonderful discovery.\"",
-      "action_seed": "To escape, the protagonist performs a massive thirty-foot leap, landing on the far side of the enclosure. The Martians witness this feat, shifting their view of him from prey to a \"wonderful discovery.\"",
+      "environment_subzone": "inner basin",
+      "planned_shot_required_anchor_1": "low walled enclosure",
+      "planned_shot_scale_proof_detail": "height of martian_warriors vs protagonist",
+      "start_state_seed": "protagonist crouched",
+      "end_state_seed": "protagonist launching",
+      "action_seed": "explosive jump launch",
       "blocking_seed": [
-        "The trajectory and landing point of the leap"
+        "center of moss zone"
       ],
-      "shot_size": "medium",
-      "camera_angle": "eye_level",
-      "lens_family": "normal",
-      "camera_motion": "locked_off",
+      "shot_size": "full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "push_in",
       "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
-      "lighting_style": "hard_directional",
-      "primary_subject_angle": "front_three_quarter_left"
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "emotional transition",
-      "primary_subject_seed": "Martian Warrior",
+      "narrative_function": "demonstrate scale/feat",
+      "planned_shot_moment_summary": "slow-motion mid-air trajectory",
+      "primary_subject_seed": "protagonist",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "Continue the established scene action.",
-      "end_state_seed": "Land the emotional shift: Desperation $\\rightarrow$ Triumph $\\rightarrow$ Observation (Martian side).\n\n**Likely Visual Coverage Families:**\n- Slow-motion or wide tracking shots of the massive leap.\n- Reaction shots from the Martian warriors (shock/interest).\n- Wide shot showing the distance covered by the jump..",
-      "action_seed": "Carry the emotional arc through: Desperation $\\rightarrow$ Triumph $\\rightarrow$ Observation (Martian side).\n\n**Likely Visual Coverage Families:**\n- Slow-motion or wide tracking shots of the massive leap.\n- Reaction shots from the Martian warriors (shock/interest).\n- Wide shot showing the distance covered by the jump..",
+      "environment_subzone": "enclosure boundary",
+      "planned_shot_required_anchor_1": "glass roof",
+      "planned_shot_scale_proof_detail": "thirty-foot distance covered",
+      "start_state_seed": "mid-air peak",
+      "end_state_seed": "descent toward far side",
+      "action_seed": "soaring through air",
       "blocking_seed": [
-        "the visual scale of the Martians vs. the protagonist."
+        "traversing the gap"
       ],
-      "shot_size": "medium",
-      "camera_angle": "eye_level",
-      "lens_family": "normal",
-      "camera_motion": "locked_off",
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
-      "lighting_style": "hard_directional",
-      "primary_subject_angle": "front_three_quarter_left"
+      "lighting_style": "backlit",
+      "primary_subject_angle": "profile_right"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "transition beat",
-      "primary_subject_seed": "primary scene subject",
-      "secondary_subjects_seed": [],
+      "narrative_function": "shift power dynamic",
+      "planned_shot_moment_summary": "martian warriors watching the landing",
+      "primary_subject_seed": "martian_warriors",
+      "secondary_subjects_seed": [
+        "protagonist"
+      ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "Continue the established scene action toward consequence.",
-      "end_state_seed": "Arrive at the scene's transition point.",
-      "action_seed": "Land the scene consequence or transition cleanly.",
+      "environment_subzone": "far side landing zone",
+      "planned_shot_required_anchor_1": "yellowish moss-like vegetation",
+      "planned_shot_scale_proof_detail": "15-foot height of martians vs protagonist",
+      "start_state_seed": "warriors looking down",
+      "end_state_seed": "warriors observing with interest",
+      "action_seed": "staring in shock/interest",
       "blocking_seed": [
-        "the visual scale of the Martians vs. the protagonist."
+        "standing at perimeter"
       ],
-      "shot_size": "medium",
+      "shot_size": "medium_full",
       "camera_angle": "eye_level",
       "lens_family": "normal",
       "camera_motion": "locked_off",
-      "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
-      "lighting_style": "hard_directional",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "diffuse_ambient",
       "primary_subject_angle": "front_three_quarter_left"
     }
   ],
@@ -260,14 +295,14 @@
     "Character protagonist: An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeles...",
     "Character martian_warriors: The martian_warriors are a highly disciplined military force of massive, 15-foot tall humanoids. They possess olive-green skin, red eyes, tusks, and four arms. In combat or transit, they are often seen mounted on slate-colored, e..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH003_SC004\n\n- chapter_id: `CH003`\n- scene_title: `Demonstrate the protagonist's unique advantage and change the power d...`\n\n## Production Intent\n\nDemonstrate the protagonist's unique advantage and change the power dynamic.\n\n## Storyboard\n\nTo escape, the protagonist performs a massive thirty-foot leap, landing on the far side of the enclosure. The Martians witness this feat, shifting their view of him from prey to a \"wonderful discovery.\"",
+  "storyboard_markdown": "# Scene Contract: CH003_SC004\n\n## Production Intent\nEstablish the protagonist's superhuman physical capabilities through a high-stakes escape attempt. The sequence must visually communicate the scale of the thirty-foot leap to justify the shift in Martian perception from predator/prey to scientific curiosity.\n\n## Required Cast\n- protagonist (Earthman, agile, naked)\n- martian_warriors (15-foot tall, olive-green skin, red eyes, tusks, four arms)\n\n## Required Environments\n- The basin/enclosure area (circular, yellowish moss-like vegetation, low walled enclosure, glass roof)\n\n## Continuity Constraints\n- Precise trajectory and landing point of the thirty-foot leap\n- Visual scale relationship between 15-foot tall martian_warriors and protagonist\n\n## Beat List\n- BT001: Protagonist prepares for escape\n- BT002: The massive leap\n- BT003: Martian observation",
   "metadata": {
     "artifact_id": "CH003_SC004_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "730ef36def4ea1dd0c3c9a14a81e66156ae819ce",
+    "source_fingerprint": "8c8b40d6206f777b5fcfb884ea819e08179b24d8",
     "created_at_utc": "2026-04-21T23:20:55.040204+00:00",
-    "updated_at_utc": "2026-04-23T03:41:30.536584+00:00",
+    "updated_at_utc": "2026-04-23T18:07:40.945146+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -322,6 +357,11 @@
         "timestamp_utc": "2026-04-23T03:42:07.133646+00:00",
         "action": "synthesized",
         "source_fingerprint": "730ef36def4ea1dd0c3c9a14a81e66156ae819ce"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:08:07.882373+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "8c8b40d6206f777b5fcfb884ea819e08179b24d8"
       }
     ]
   }

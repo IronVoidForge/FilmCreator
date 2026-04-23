@@ -1,35 +1,45 @@
 {
   "scene_id": "CH005_SC001",
   "chapter_id": "CH005",
-  "scene_title": "Establish the protagonist's status as a captive, introduce the Martia...",
+  "scene_title": "SC001",
   "purpose": "Establish the protagonist's status as a captive, introduce the Martian environment through sensory details, and establish Sola's role.",
   "summary": "The protagonist observes his surroundings, noting the murals of landscapes devoid of life. He experiences the care provided by Sola, learning about Martian biology (plant-milk) and the environmental extremes (nocturnal cold and moon cycles).",
   "emotional_arc": "Isolation/Curiosity $\\rightarrow$ Comfort/Observation.\n\n**Likely Visual Coverage Families:**\n- Close-ups of the protagonist's eyes and facial expressions.\n- Macro shots of the murals and Martian food.\n- Medium shots of Sola providing care.\n- Wide shots establishing the chamber's scale.",
-  "production_intent": "Establish the protagonist's status as a captive, introduce the Martian environment through sensory details, and establish Sola's role.",
-  "scene_start_state": "The protagonist observes his surroundings, noting the murals of landscapes devoid of life. He experiences the care provided by Sola, learning about Martian biology (plant-milk) and the environmental extremes (nocturnal cold and moon cycles).",
-  "scene_end_state": "Arrive at the scene's transition point.",
-  "dominant_action_line": "The protagonist observes his surroundings, noting the murals of landscapes devoid of life. He experiences the care provided by Sola, learning about Martian biology (plant-milk) and the environmental extremes (nocturnal cold and moon cycles).",
+  "production_intent": "Establish the protagonist's captivity through sensory observation of a decorated chamber and introduce Sola as a provider within the Martian ecosystem.",
+  "scene_short_description": "A captive observes lifeless landscape murals while receiving nourishment from a green Martian.",
+  "scene_primary_scale_story_point": "Large chamber scale vs intimate macro details of food and art.",
+  "scene_required_anchor_catalog": [
+    "Mural walls",
+    "Food vessel (plant-milk)",
+    "Chamber door"
+  ],
+  "scene_start_state": "protagonist alone, observing murals in isolation.",
+  "scene_end_state": "protagonist observing sola during nourishment.",
+  "dominant_action_line": "The protagonist observes his environment and receives care from sola.",
   "scene_spatial_layout": [
-    "Lighting changes based on moon cycles",
-    "amount/type of food provided by Sola",
-    "position of the Watch Dog near the door."
+    "Murals decorate the perimeter walls",
+    "Central area for protagonist/sola interaction",
+    "Doorway serves as observation point for The Watch Dog"
   ],
   "character_spatial_map": [
-    "Primary subject placement should remain readable against the main environment anchor."
+    "protagonist: central or seated near murals",
+    "sola: approaching protagonist with food",
+    "The Watch Dog (presence/observation): positioned at door threshold"
   ],
   "environment_subzones": [
-    "primary scene playing area"
+    "Mural zone",
+    "Feeding zone",
+    "Threshold zone"
   ],
   "entry_vectors": [
-    "Subjects inherit entry logic from the prior scene or chapter transition."
+    "Doorway entry for sola and The Watch Dog"
   ],
   "exit_vectors": [
-    "Subjects exit or hand off toward the next story beat."
+    "Doorway exit"
   ],
   "beat_transition_map": [
-    "BT001: The protagonist observes his surroundings, noting the murals of landscapes devoid of life. He experiences the care provided by Sola, learning about Martian biology (plant-milk) and the environmental extremes (nocturnal cold and moon cycles). -> The protagonist observes his surroundings, noting the murals of landscapes devoid of life. He experiences the care provided by Sola, learning about Martian biology (plant-milk) and the environmental extremes (nocturnal cold and moon cycles).",
-    "BT002: Continue the established scene action. -> Land the emotional shift: Isolation/Curiosity $\\rightarrow$ Comfort/Observation.\n\n**Likely Visual Coverage Families:**\n- Close-ups of the protagonist's eyes and facial expressions.\n- Macro shots of the murals and Martian food.\n- Medium shots of Sola providing care.\n- Wide shots establishing the chamber's scale..",
-    "BT003: Continue the established scene action toward consequence. -> Arrive at the scene's transition point."
+    "BT001 -> BT002: visual shift from wall to subject",
+    "BT002 -> BT003: introduction of secondary character/care"
   ],
   "characters_required": [
     {
@@ -76,133 +86,160 @@
     }
   ],
   "continuity_constraints": [
-    "Lighting changes based on moon cycles",
-    "amount/type of food provided by Sola",
-    "position of the Watch Dog near the door."
+    "Lighting shifts based on moon cycles",
+    "Specific volume and type of plant-milk provided by sola",
+    "Position of The Watch Dog near the door"
   ],
-  "visual_coverage_families": [],
+  "visual_coverage_families": [
+    "Close-ups of protagonist eyes and facial expressions",
+    "Macro shots of murals and plant-milk food",
+    "Medium shots of sola providing care",
+    "Wide shots establishing chamber scale"
+  ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "The protagonist observes his surroundings, noting the murals of landscapes devoid of life. He experiences the care provided by Sola, learning about Martian biology (plant-milk) and the environmental extremes (nocturnal cold and moon cycles).",
-      "purpose": "Establish the protagonist's status as a captive, introduce the Martian environment through sensory details, and establish Sola's role.",
-      "action_start": "The protagonist observes his surroundings, noting the murals of landscapes devoid of life. He experiences the care provided by Sola, learning about Martian biology (plant-milk) and the environmental extremes (nocturnal cold and moon cycles).",
-      "action_end": "The protagonist observes his surroundings, noting the murals of landscapes devoid of life. He experiences the care provided by Sola, learning about Martian biology (plant-milk) and the environmental extremes (nocturnal cold and moon cycles).",
-      "active_subjects": [],
+      "summary": "protagonist observes murals of lifeless landscapes",
+      "purpose": "",
+      "action_start": "protagonist looking at wall",
+      "action_end": "protagonist finishes scanning mural",
+      "active_subjects": [
+        "protagonist"
+      ],
       "passive_subjects": [],
-      "spatial_context": "Lighting changes based on moon cycles",
-      "blocking_hint": "",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "Lighting changes based on moon cycles",
-      "coverage_hint": "",
-      "coverage_priority": "primary story beat",
-      "handoff_to_next": ""
+      "spatial_context": "Mural zone",
+      "blocking_hint": "protagonist seated facing wall",
+      "environment_subzone": "Mural zone",
+      "continuity_focus": "lighting/moon cycle state",
+      "coverage_hint": "macro/close-up on eyes and murals",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Carry the emotional arc through: Isolation/Curiosity $\\rightarrow$ Comfort/Observation.\n\n**Likely Visual Coverage Families:**\n- Close-ups of the protagonist's eyes and facial expressions.\n- Macro shots of the murals and Martian food.\n- Medium shots of Sola providing care.\n- Wide shots establishing the chamber's scale..",
+      "summary": "sensory introduction to Martian biology via food",
       "purpose": "",
-      "action_start": "Continue the established scene action.",
-      "action_end": "Land the emotional shift: Isolation/Curiosity $\\rightarrow$ Comfort/Observation.\n\n**Likely Visual Coverage Families:**\n- Close-ups of the protagonist's eyes and facial expressions.\n- Macro shots of the murals and Martian food.\n- Medium shots of Sola providing care.\n- Wide shots establishing the chamber's scale..",
-      "active_subjects": [],
-      "passive_subjects": [],
-      "spatial_context": "amount/type of food provided by Sola",
-      "blocking_hint": "",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "amount/type of food provided by Sola",
-      "coverage_hint": "",
-      "coverage_priority": "emotional transition",
-      "handoff_to_next": ""
+      "action_start": "food presented",
+      "action_end": "protagonist observes plant-milk",
+      "active_subjects": [
+        "sola"
+      ],
+      "passive_subjects": [
+        "protagonist"
+      ],
+      "spatial_context": "Feeding zone",
+      "blocking_hint": "sola hands food to protagonist",
+      "environment_subzone": "Feeding zone",
+      "continuity_focus": "amount/type of plant-milk",
+      "coverage_hint": "macro shots of food",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Land the scene consequence or transition cleanly.",
+      "summary": "sola provides care and establishes role",
       "purpose": "",
-      "action_start": "Continue the established scene action toward consequence.",
-      "action_end": "Arrive at the scene's transition point.",
-      "active_subjects": [],
-      "passive_subjects": [],
-      "spatial_context": "position of the Watch Dog near the door.",
-      "blocking_hint": "",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "position of the Watch Dog near the door.",
-      "coverage_hint": "",
-      "coverage_priority": "transition beat",
-      "handoff_to_next": ""
+      "action_start": "sola enters [[CH005_SC001]]",
+      "action_end": "interaction concludes",
+      "active_subjects": [
+        "sola",
+        "protagonist"
+      ],
+      "passive_subjects": [
+        "The Watch Dog (presence/observation)"
+      ],
+      "spatial_context": "Feeding zone near door",
+      "blocking_hint": "sola moves from door to protagonist",
+      "environment_subzone": "Threshold zone",
+      "continuity_focus": "position of The Watch Dog at door",
+      "coverage_hint": "medium shots of interaction",
+      "coverage_priority": "high",
+      "handoff_to_next": "end"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "primary story beat",
-      "primary_subject_seed": "primary scene subject",
+      "narrative_function": "establish environment",
+      "planned_shot_moment_summary": "protagonist eyes scanning murals",
+      "primary_subject_seed": "protagonist",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "The protagonist observes his surroundings, noting the murals of landscapes devoid of life. He experiences the care provided by Sola, learning about Martian biology (plant-milk) and the environmental extremes (nocturnal cold and moon cycles).",
-      "end_state_seed": "The protagonist observes his surroundings, noting the murals of landscapes devoid of life. He experiences the care provided by Sola, learning about Martian biology (plant-milk) and the environmental extremes (nocturnal cold and moon cycles).",
-      "action_seed": "The protagonist observes his surroundings, noting the murals of landscapes devoid of life. He experiences the care provided by Sola, learning about Martian biology (plant-milk) and the environmental extremes (nocturnal cold and moon cycles).",
+      "environment_subzone": "Mural zone",
+      "planned_shot_required_anchor_1": "Mural walls",
+      "planned_shot_scale_proof_detail": "scale of landscape paintings vs protagonist",
+      "start_state_seed": "eyes closed/lowered",
+      "end_state_seed": "eyes tracking mural detail",
+      "action_seed": "scanning",
       "blocking_seed": [
-        "Lighting changes based on moon cycles"
+        "seated"
       ],
-      "shot_size": "medium",
+      "shot_size": "close_up",
       "camera_angle": "eye_level",
-      "lens_family": "normal",
-      "camera_motion": "locked_off",
+      "lens_family": "portrait",
+      "camera_motion": "pan",
       "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
-      "lighting_style": "hard_directional",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
       "primary_subject_angle": "front_three_quarter_left"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "emotional transition",
-      "primary_subject_seed": "primary scene subject",
+      "narrative_function": "sensory detail",
+      "planned_shot_moment_summary": "macro of plant-milk texture",
+      "primary_subject_seed": "plant-milk",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "Continue the established scene action.",
-      "end_state_seed": "Land the emotional shift: Isolation/Curiosity $\\rightarrow$ Comfort/Observation.\n\n**Likely Visual Coverage Families:**\n- Close-ups of the protagonist's eyes and facial expressions.\n- Macro shots of the murals and Martian food.\n- Medium shots of Sola providing care.\n- Wide shots establishing the chamber's scale..",
-      "action_seed": "Carry the emotional arc through: Isolation/Curiosity $\\rightarrow$ Comfort/Observation.\n\n**Likely Visual Coverage Families:**\n- Close-ups of the protagonist's eyes and facial expressions.\n- Macro shots of the murals and Martian food.\n- Medium shots of Sola providing care.\n- Wide shots establishing the chamber's scale..",
+      "environment_subzone": "Feeding zone",
+      "planned_shot_required_anchor_1": "Food vessel",
+      "planned_shot_scale_proof_detail": "viscosity/texture of liquid",
+      "start_state_seed": "vessel empty",
+      "end_state_seed": "vessel being filled/presented",
+      "action_seed": "pouring or presenting",
       "blocking_seed": [
-        "amount/type of food provided by Sola"
+        "sola hands"
       ],
-      "shot_size": "medium",
+      "shot_size": "insert_detail",
       "camera_angle": "eye_level",
-      "lens_family": "normal",
+      "lens_family": "telephoto",
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
-      "lighting_style": "hard_directional",
-      "primary_subject_angle": "front_three_quarter_left"
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "transition beat",
-      "primary_subject_seed": "primary scene subject",
-      "secondary_subjects_seed": [],
-      "subject_visibility": "on_screen",
-      "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "Continue the established scene action toward consequence.",
-      "end_state_seed": "Arrive at the scene's transition point.",
-      "action_seed": "Land the scene consequence or transition cleanly.",
-      "blocking_seed": [
-        "position of the Watch Dog near the door."
+      "narrative_function": "character introduction",
+      "planned_shot_moment_summary": "sola enters frame with care",
+      "primary_subject_seed": "sola",
+      "secondary_subjects_seed": [
+        "protagonist"
       ],
-      "shot_size": "medium",
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "Threshold zone",
+      "planned_shot_required_anchor_1": "Chamber door",
+      "planned_shot_scale_proof_detail": "height of sola vs protagonist",
+      "start_state_seed": "sola at door",
+      "end_state_seed": "sola near protagonist",
+      "action_seed": "approaching",
+      "blocking_seed": [
+        "walking toward center"
+      ],
+      "shot_size": "medium_full",
       "camera_angle": "eye_level",
-      "lens_family": "normal",
-      "camera_motion": "locked_off",
+      "lens_family": "wide",
+      "camera_motion": "track",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
-      "lighting_style": "hard_directional",
-      "primary_subject_angle": "front_three_quarter_left"
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "profile_left"
     }
   ],
   "unresolved_questions": [
@@ -273,14 +310,14 @@
     "Character protagonist: An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeles...",
     "Character sola: Sola is a female Green Martian, also identified as a Thark. Her visual identity is defined by her species' characteristic green coloring and traditional Green Martian attire. While specific physical proportions are not detailed, she is estab..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH005_SC001\n\n- chapter_id: `CH005`\n- scene_title: `Establish the protagonist's status as a captive, introduce the Martia...`\n\n## Production Intent\n\nEstablish the protagonist's status as a captive, introduce the Martian environment through sensory details, and establish Sola's role.\n\n## Storyboard\n\nThe protagonist observes his surroundings, noting the murals of landscapes devoid of life. He experiences the care provided by Sola, learning about Martian biology (plant-milk) and the environmental extremes (nocturnal cold and moon cycles).",
+  "storyboard_markdown": "# Scene Contract: CH005_SC001\n\n## Production Intent\nEstablish the protagonist's captivity through sensory observation of a decorated chamber and introduce Sola as a provider within the Martian ecosystem.\n\n## Required Cast\n- protagonist\n- sola\n- The Watch Dog (presence/observation)\n\n## Required Environments\n- Captive's chamber (decorated with murals)\n\n## Continuity Constraints\n- Lighting changes based on moon cycles\n- Amount and type of plant-milk provided by sola\n- Position of The Watch Dog near the door\n\n## Beat List\n- BT001: protagonist observes murals of lifeless landscapes\n- BT002: sensory introduction to Martian biology via food\n- BT003: sola provides care and establishes role",
   "metadata": {
     "artifact_id": "CH005_SC001_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "8595fb0fa1015bd719e5ddc821e8cf16f4784318",
+    "source_fingerprint": "b5c7d77c37ad84fc9c3f0d7da055ac2d7f798221",
     "created_at_utc": "2026-04-21T23:23:11.365191+00:00",
-    "updated_at_utc": "2026-04-23T03:45:55.433513+00:00",
+    "updated_at_utc": "2026-04-23T18:11:02.814652+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -335,6 +372,11 @@
         "timestamp_utc": "2026-04-23T03:46:32.797938+00:00",
         "action": "synthesized",
         "source_fingerprint": "8595fb0fa1015bd719e5ddc821e8cf16f4784318"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:11:28.160874+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "b5c7d77c37ad84fc9c3f0d7da055ac2d7f798221"
       }
     ]
   }

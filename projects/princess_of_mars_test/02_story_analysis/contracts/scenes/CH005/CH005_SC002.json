@@ -1,34 +1,41 @@
 {
   "scene_id": "CH005_SC002",
   "chapter_id": "CH005",
-  "scene_title": "To initiate the action and demonstrate the physical threat of the Mar...",
+  "scene_title": "SC002",
   "purpose": "To initiate the action and demonstrate the physical threat of the Martian guard beast.",
   "summary": "Seeking to test his limits and the capabilities of his captors, the protagonist attempts to leave his room. He quickly realizes that the short-legged Watch Dog is incredibly fast and intelligent, turning a test into a survival situation.",
   "emotional_arc": "Determination $\\rightarrow$ Alarm/Panic.\n\n**Likely Visual Coverage Families:**\n- Low-angle shots of the Watch Dog to emphasize speed.\n- Handheld/shaky cam for the protagonist's movement.\n- Tracking shots following the dog's rapid approach.",
-  "production_intent": "To initiate the action and demonstrate the physical threat of the Martian guard beast.",
-  "scene_start_state": "Seeking to test his limits and the capabilities of his captors, the protagonist attempts to leave his room. He quickly realizes that the short-legged Watch Dog is incredibly fast and intelligent, turning a test into a survival situation.",
-  "scene_end_state": "Arrive at the scene's transition point.",
-  "dominant_action_line": "Seeking to test his limits and the capabilities of his captors, the protagonist attempts to leave his room. He quickly realizes that the short-legged Watch Dog is incredibly fast and intelligent, turning a test into a survival situation.",
+  "production_intent": "Establish the physical threat and high-speed capabilities of the Martian guard beast through a failed escape attempt. The sequence must transition from controlled testing to chaotic survival, utilizing low-angle perspectives to emphasize the predator's speed relative to the protagonist's agility.",
+  "scene_short_description": "An agile captive attempts to exit a mural-decorated chamber but is intercepted by a fast predator.",
+  "scene_primary_scale_story_point": "Predator speed vs. Protagonist agility in low-gravity environment.",
+  "scene_required_anchor_catalog": [
+    "Martian landscape murals",
+    "Room threshold/doorway"
+  ],
+  "scene_start_state": "protagonist stands near the chamber exit with intent to leave.",
+  "scene_end_state": "protagonist is in a state of panic, fleeing from the approaching predator.",
+  "dominant_action_line": "Protagonist attempts escape -> Watch Dog intercepts -> High-speed chase begins.",
   "scene_spatial_layout": [
-    "The physical distance between the protagonist and the dog",
-    "the direction of the chase."
+    "Interior chamber containing painted murals",
+    "Transition point at the immediate hallway/threshold"
   ],
   "character_spatial_map": [
-    "Primary subject placement should remain readable against the main environment anchor."
+    "protagonist positioned near the threshold",
+    "the_watch_dog approaching from the hallway or corner of the chamber"
   ],
   "environment_subzones": [
-    "primary scene playing area"
+    "Captive's chamber (mural zone)",
+    "immediate hallway/threshold"
   ],
   "entry_vectors": [
-    "Subjects inherit entry logic from the prior scene or chapter transition."
+    "doorway into chamber"
   ],
   "exit_vectors": [
-    "Subjects exit or hand off toward the next story beat."
+    "hallway away from chamber"
   ],
   "beat_transition_map": [
-    "BT001: Seeking to test his limits and the capabilities of his captors, the protagonist attempts to leave his room. He quickly realizes that the short-legged Watch Dog is incredibly fast and intelligent, turning a test into a survival situation. -> Seeking to test his limits and the capabilities of his captors, the protagonist attempts to leave his room. He quickly realizes that the short-legged Watch Dog is incredibly fast and intelligent, turning a test into a survival situation.",
-    "BT002: Continue the established scene action. -> Land the emotional shift: Determination $\\rightarrow$ Alarm/Panic.\n\n**Likely Visual Coverage Families:**\n- Low-angle shots of the Watch Dog to emphasize speed.\n- Handheld/shaky cam for the protagonist's movement.\n- Tracking shots following the dog's rapid approach..",
-    "BT003: Continue the established scene action toward consequence. -> Arrive at the scene's transition point."
+    "BT001 -> BT002: protagonist crosses threshold",
+    "BT002 -> BT003: the_watch_dog enters frame/intercepts"
   ],
   "characters_required": [
     {
@@ -75,104 +82,124 @@
     }
   ],
   "continuity_constraints": [
-    "The physical distance between the protagonist and the dog",
-    "the direction of the chase."
+    "Physical distance between protagonist and the_watch_dog",
+    "Direction of the chase through threshold"
   ],
-  "visual_coverage_families": [],
+  "visual_coverage_families": [
+    "Low-angle shots of the_watch_dog for speed emphasis",
+    "Handheld/shaky cam for protagonist movement",
+    "Tracking shots following rapid approach"
+  ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Seeking to test his limits and the capabilities of his captors, the protagonist attempts to leave his room. He quickly realizes that the short-legged Watch Dog is incredibly fast and intelligent, turning a test into a survival situation.",
-      "purpose": "To initiate the action and demonstrate the physical threat of the Martian guard beast.",
-      "action_start": "Seeking to test his limits and the capabilities of his captors, the protagonist attempts to leave his room. He quickly realizes that the short-legged Watch Dog is incredibly fast and intelligent, turning a test into a survival situation.",
-      "action_end": "Seeking to test his limits and the capabilities of his captors, the protagonist attempts to leave his room. He quickly realizes that the short-legged Watch Dog is incredibly fast and intelligent, turning a test into a survival situation.",
-      "active_subjects": [],
+      "summary": "protagonist attempts to leave the room",
+      "purpose": "",
+      "action_start": "protagonist standing in chamber",
+      "action_end": "protagonist reaching threshold",
+      "active_subjects": [
+        "protagonist"
+      ],
       "passive_subjects": [],
-      "spatial_context": "The physical distance between the protagonist and the dog",
-      "blocking_hint": "",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "The physical distance between the protagonist and the dog",
-      "coverage_hint": "",
-      "coverage_priority": "primary story beat",
-      "handoff_to_next": ""
+      "spatial_context": "Captive's chamber",
+      "blocking_hint": "moving from mural area toward door",
+      "environment_subzone": "Captive's chamber",
+      "continuity_focus": "direction of movement toward exit",
+      "coverage_hint": "medium shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Carry the emotional arc through: Determination $\\rightarrow$ Alarm/Panic.\n\n**Likely Visual Coverage Families:**\n- Low-angle shots of the Watch Dog to emphasize speed.\n- Handheld/shaky cam for the protagonist's movement.\n- Tracking shots following the dog's rapid approach..",
+      "summary": "the_watch_dog intercepts the escape",
       "purpose": "",
-      "action_start": "Continue the established scene action.",
-      "action_end": "Land the emotional shift: Determination $\\rightarrow$ Alarm/Panic.\n\n**Likely Visual Coverage Families:**\n- Low-angle shots of the Watch Dog to emphasize speed.\n- Handheld/shaky cam for the protagonist's movement.\n- Tracking shots following the dog's rapid approach..",
-      "active_subjects": [],
+      "action_start": "the_watch_dog enters view",
+      "action_end": "the_watch_dog closes distance",
+      "active_subjects": [
+        "the_watch_dog",
+        "protagonist"
+      ],
       "passive_subjects": [],
-      "spatial_context": "the direction of the chase.",
-      "blocking_hint": "",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "the direction of the chase.",
-      "coverage_hint": "",
-      "coverage_priority": "emotional transition",
-      "handoff_to_next": ""
+      "spatial_context": "immediate hallway/threshold",
+      "blocking_hint": "predator cutting off path",
+      "environment_subzone": "immediate hallway/threshold",
+      "continuity_focus": "distance between dog and man",
+      "coverage_hint": "low-angle tracking",
+      "coverage_priority": "critical",
+      "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Land the scene consequence or transition cleanly.",
+      "summary": "survival chase begins",
       "purpose": "",
-      "action_start": "Continue the established scene action toward consequence.",
-      "action_end": "Arrive at the scene's transition point.",
-      "active_subjects": [],
+      "action_start": "protagonist turns to flee",
+      "action_end": "protagonist running in panic",
+      "active_subjects": [
+        "protagonist",
+        "the_watch_dog"
+      ],
       "passive_subjects": [],
-      "spatial_context": "the direction of the chase.",
-      "blocking_hint": "",
-      "environment_subzone": "primary scene playing area",
-      "continuity_focus": "the direction of the chase.",
-      "coverage_hint": "",
-      "coverage_priority": "transition beat",
-      "handoff_to_next": ""
+      "spatial_context": "hallway/threshold area",
+      "blocking_hint": "chaotic movement away from predator",
+      "environment_subzone": "immediate hallway/threshold",
+      "continuity_focus": "direction of chase",
+      "coverage_hint": "handheld shaky cam",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "primary story beat",
-      "primary_subject_seed": "primary scene subject",
+      "narrative_function": "establish intent",
+      "planned_shot_moment_summary": "protagonist moves toward door",
+      "primary_subject_seed": "protagonist",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "Seeking to test his limits and the capabilities of his captors, the protagonist attempts to leave his room. He quickly realizes that the short-legged Watch Dog is incredibly fast and intelligent, turning a test into a survival situation.",
-      "end_state_seed": "Seeking to test his limits and the capabilities of his captors, the protagonist attempts to leave his room. He quickly realizes that the short-legged Watch Dog is incredibly fast and intelligent, turning a test into a survival situation.",
-      "action_seed": "Seeking to test his limits and the capabilities of his captors, the protagonist attempts to leave his room. He quickly realizes that the short-legged Watch Dog is incredibly fast and intelligent, turning a test into a survival situation.",
+      "environment_subzone": "Captive's chamber",
+      "planned_shot_required_anchor_1": "Martian landscape murals",
+      "planned_shot_scale_proof_detail": "protagonist height vs mural scale",
+      "start_state_seed": "protagonist standing still",
+      "end_state_seed": "protagonist walking toward threshold",
+      "action_seed": "walking with determination",
       "blocking_seed": [
-        "The physical distance between the protagonist and the dog"
+        "center room moving to edge"
       ],
-      "shot_size": "medium",
+      "shot_size": "medium_full",
       "camera_angle": "eye_level",
       "lens_family": "normal",
-      "camera_motion": "locked_off",
+      "camera_motion": "push_in",
       "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
-      "lighting_style": "hard_directional",
-      "primary_subject_angle": "front_three_quarter_left"
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_right"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "emotional transition",
-      "primary_subject_seed": "primary scene subject",
-      "secondary_subjects_seed": [],
+      "narrative_function": "demonstrate threat",
+      "planned_shot_moment_summary": "the_watch_dog appears/moves fast",
+      "primary_subject_seed": "the_watch_dog",
+      "secondary_subjects_seed": [
+        "protagonist"
+      ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "Continue the established scene action.",
-      "end_state_seed": "Land the emotional shift: Determination $\\rightarrow$ Alarm/Panic.\n\n**Likely Visual Coverage Families:**\n- Low-angle shots of the Watch Dog to emphasize speed.\n- Handheld/shaky cam for the protagonist's movement.\n- Tracking shots following the dog's rapid approach..",
-      "action_seed": "Carry the emotional arc through: Determination $\\rightarrow$ Alarm/Panic.\n\n**Likely Visual Coverage Families:**\n- Low-angle shots of the Watch Dog to emphasize speed.\n- Handheld/shaky cam for the protagonist's movement.\n- Tracking shots following the dog's rapid approach..",
+      "environment_subzone": "immediate hallway/threshold",
+      "planned_shot_required_anchor_1": "doorway",
+      "planned_shot_scale_proof_detail": "low-angle height vs protagonist legs",
+      "start_state_seed": "the_watch_dog stationary or emerging",
+      "end_state_seed": "the_watch_dog mid-sprint",
+      "action_seed": "rapid approach",
       "blocking_seed": [
-        "the direction of the chase."
+        "moving from threshold toward protagonist"
       ],
-      "shot_size": "medium",
-      "camera_angle": "eye_level",
-      "lens_family": "normal",
-      "camera_motion": "locked_off",
+      "shot_size": "low_angle_full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "track",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "hard_directional",
@@ -181,26 +208,31 @@
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "transition beat",
-      "primary_subject_seed": "primary scene subject",
-      "secondary_subjects_seed": [],
+      "narrative_function": "establish panic",
+      "planned_shot_moment_summary": "protagonist reacts to predator",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "the_watch_dog"
+      ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "primary scene playing area",
-      "start_state_seed": "Continue the established scene action toward consequence.",
-      "end_state_seed": "Arrive at the scene's transition point.",
-      "action_seed": "Land the scene consequence or transition cleanly.",
+      "environment_subzone": "immediate hallway/threshold",
+      "planned_shot_required_anchor_1": "doorway",
+      "planned_shot_scale_proof_detail": "distance between subjects",
+      "start_state_seed": "protagonist looking back",
+      "end_state_seed": "protagonist running",
+      "action_seed": "fleeing",
       "blocking_seed": [
-        "the direction of the chase."
+        "running away from the_watch_dog"
       ],
-      "shot_size": "medium",
+      "shot_size": "medium_close",
       "camera_angle": "eye_level",
       "lens_family": "normal",
-      "camera_motion": "locked_off",
+      "camera_motion": "handheld",
       "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
-      "lighting_style": "hard_directional",
-      "primary_subject_angle": "front_three_quarter_left"
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "rear_three_quarter_left"
     }
   ],
   "unresolved_questions": [
@@ -271,14 +303,14 @@
     "Character protagonist: An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeles...",
     "Character the_watch_dog: No visual data is available for this character in the provided evidence. A stable visual identity cannot be established at this time."
   ],
-  "storyboard_markdown": "# Scene Contract: CH005_SC002\n\n- chapter_id: `CH005`\n- scene_title: `To initiate the action and demonstrate the physical threat of the Mar...`\n\n## Production Intent\n\nTo initiate the action and demonstrate the physical threat of the Martian guard beast.\n\n## Storyboard\n\nSeeking to test his limits and the capabilities of his captors, the protagonist attempts to leave his room. He quickly realizes that the short-legged Watch Dog is incredibly fast and intelligent, turning a test into a survival situation.",
+  "storyboard_markdown": "# Scene Contract: CH005_SC002\n\n## Production Intent\nEstablish the physical threat and high-speed capabilities of the Martian guard beast through a failed escape attempt. The sequence must transition from controlled testing to chaotic survival, utilizing low-angle perspectives to emphasize the predator's speed relative to the protagonist's agility.\n\n## Required Cast\n- protagonist (Earthman, agile, high-leaping)\n- the_watch_dog (Martian guard beast, short-legged, fast, intelligent)\n\n## Required Environments\n- Captive's chamber (decorated with Martian landscape murals)\n- immediate hallway/threshold\n\n## Continuity Constraints\n- Physical distance between protagonist and the_watch_dog\n- Direction of the chase through threshold\n\n## Beat List\n- BT001: protagonist attempts to leave the room\n- BT002: the_watch_dog intercepts the escape\n- BT003: survival chase begins",
   "metadata": {
     "artifact_id": "CH005_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "847c80bf4dbeaafa631eba8af428afef1fc50ebb",
+    "source_fingerprint": "8c73dee192fd6b6a82841bf0eb5678b434afe659",
     "created_at_utc": "2026-04-21T23:23:32.189716+00:00",
-    "updated_at_utc": "2026-04-23T03:46:34.122643+00:00",
+    "updated_at_utc": "2026-04-23T18:11:29.565394+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -333,6 +365,11 @@
         "timestamp_utc": "2026-04-23T03:47:09.585436+00:00",
         "action": "synthesized",
         "source_fingerprint": "847c80bf4dbeaafa631eba8af428afef1fc50ebb"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:11:56.067205+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "8c73dee192fd6b6a82841bf0eb5678b434afe659"
       }
     ]
   }
