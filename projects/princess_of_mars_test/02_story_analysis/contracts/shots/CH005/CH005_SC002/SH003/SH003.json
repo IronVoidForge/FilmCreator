@@ -5,11 +5,39 @@
   "shot_order": 3,
   "previous_shot_id": "SH002",
   "next_shot_id": "",
-  "shot_title": "Action 3: the situation shifts from a test to a high-stakes s...",
-  "shot_type": "action",
-  "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-  "composition": "Dynamic composition in Captive's chamber with protagonist, the_watch_dog crossing the frame and maintaining readable movement.",
-  "target_seconds": 5.6,
+  "primary_subject": "protagonist",
+  "secondary_subjects": [
+    "the_watch_dog"
+  ],
+  "start_state": "The chase in progress.",
+  "end_state": "Arrival at the scene's transition point.",
+  "action_during_shot": "Landing the scene consequence or transition cleanly.",
+  "action_continues_from": "Emotional shift to Alarm/Panic.",
+  "action_hands_off_to": "Arrive at the scene's transition point.",
+  "subject_blocking": [
+    "protagonist remains readable within the active playing space.",
+    "the_watch_dog remains readable within the active playing space."
+  ],
+  "camera_relative_positions": [
+    "Camera anchors action inside the primary scene playing area.",
+    "Handheld/shaky cam following the movement of the chase."
+  ],
+  "gaze_directions": [
+    "protagonist focuses toward the active scene action (the dog)."
+  ],
+  "environment_subzone": "primary scene playing area",
+  "key_visible_environment_features": [
+    "primary scene playing area"
+  ],
+  "continuity_from_previous_shot": "The rapid approach and panic of the protagonist.",
+  "continuity_to_next_shot": "Transition to next story beat/location.",
+  "pose_anchor_frame": "Protagonist in a state of panic, fleeing or reacting to the dog.",
+  "pose_end_frame": "Protagonist reaching the threshold/transition point.",
+  "shot_title": "Closing Reaction 3: Transition to Consequence",
+  "shot_type": "closing_reaction",
+  "camera_description": "Controlled closing frame that lands the consequence of the beat; handheld/shaky cam.",
+  "composition": "Closing composition in Captive's chamber emphasizing the consequence of the chase.",
+  "target_seconds": 4.6,
   "characters_in_frame": [
     {
       "label": "The Protagonist",
@@ -46,14 +74,13 @@
     "BT003"
   ],
   "continuity_constraints": [
-    "Physical distance between protagonist and the_watch_dog.",
-    "Direction of the chase sequence.",
-    "the situation shifts from a test to a high-stakes survival chase.",
+    "The physical distance between the protagonist and the dog",
+    "the direction of the chase.",
     "Resolve Captive's chamber -> Captive's chamber",
     "Resolve immediate hallway/threshold -> immediate hallway/threshold"
   ],
-  "prompt_seed": "Action 3: the situation shifts from a test to a high-stakes s.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in Captive's chamber with protagonist, the_watch_dog crossing the frame and maintaining readable movement. Cast: protagonist, the_watch_dog. Environment: Cap...",
-  "shot_notes": "the situation shifts from a test to a high-stakes survival chase.",
+  "prompt_seed": "Closing Reaction 3: Land the scene consequence or transition cleanly.. closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in Captive's chamber that emphasizes the consequence. Cast: protagonist, the_watch_dog. Environment: Captive's chamber.",
+  "shot_notes": "Use handheld/shaky cam to emphasize panic and movement toward transition.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -111,12 +138,12 @@
     }
   ],
   "evidence_summary": [
-    "The scene must establish the physical threat and high-speed capabilities of the Martian guard beast through a transition from controlled testing to uncontrolled survival. The protagonist's extreme agility and high-leaping capabilities should be contrasted a...",
+    "To initiate the action and demonstrate the physical threat of the Martian guard beast.",
     "Seeking to test his limits and the capabilities of his captors, the protagonist attempts to leave his room. He quickly realizes that the short-legged Watch Dog is incredibly fast and intelligent, turning a test into a survival situation.",
     "Determination $\\rightarrow$ Alarm/Panic. **Likely Visual Coverage Families:** - Low-angle shots of the Watch Dog to emphasize speed. - Handheld/shaky cam for the protagonist's movement. - Tracking shots following the...",
-    "Low-angle shots of the_watch_dog to emphasize speed.",
-    "Handheld/shaky cam for protagonist movement.",
-    "Tracking shots following the dog's rapid approach.",
+    "Seeking to test his limits and the capabilities of his captors, the protagonist attempts to leave his room. He quickly realizes that the short-legged Watch Dog is incredibly fast and intelligent, turning a test into a...",
+    "Arrive at the scene's transition point.",
+    "Seeking to test his limits and the capabilities of his captors, the protagonist attempts to leave his room. He quickly realizes that the short-legged Watch Dog is incredibly fast and intelligent, turning a test into a...",
     "protagonist | An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeless\" physic...",
     "the_watch_dog | No visual data is available for this character in the provided evidence. A stable visual identity cannot be established at this time. | unknown | unknown"
   ],
@@ -124,24 +151,24 @@
     "artifact_id": "CH005_SC002_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "41b5e8d212cd8d38b96d0f403bf0942075211100",
+    "source_fingerprint": "0b53a82b2958b1990e0e0937a1490df4c7a9a962",
     "created_at_utc": "2026-04-22T00:44:12.194127+00:00",
-    "updated_at_utc": "2026-04-22T17:27:29.155776+00:00",
+    "updated_at_utc": "2026-04-22T23:36:47.908092+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH005_SC002",
-        "version": "8e523e99c6fd92dce668c5f5a3dbf518bf67bbe4"
+        "version": "f061b64b5c30c86d8e3d9d68261d9abde852a3a6"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH005_SC002",
-        "version": "cc61255b6f19428c0dedcfd4608226d792776f35"
+        "version": "cc2a52f94fe48973d7df97bdb8229a50b0bfb795"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH005_SC002",
-        "version": "9346e429d609406b182749745ba7b27307966333"
+        "version": "110532de54910b5cd4abb7cb9515a820443be547"
       }
     ],
     "locked_fields": {},
@@ -166,6 +193,11 @@
         "timestamp_utc": "2026-04-22T17:27:59.503992+00:00",
         "action": "synthesized",
         "source_fingerprint": "41b5e8d212cd8d38b96d0f403bf0942075211100"
+      },
+      {
+        "timestamp_utc": "2026-04-22T23:37:21.394595+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "0b53a82b2958b1990e0e0937a1490df4c7a9a962"
       }
     ]
   }

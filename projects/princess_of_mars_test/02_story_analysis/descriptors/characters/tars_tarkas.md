@@ -31,33 +31,36 @@
 - identity_baseline: Green Martian (Thark) warrior and leader.
 - movement_language: professional demeanor
 - origin_or_historical_context: Martian (Thark) setting.
-- physical_presence_notes: Green Martian (Thark) warrior and leader. unknown unknown professional demeanor Tars Tarkas is a prominent Thark warrior and leader characterized by green skin. He carries himself with a professional demeanor, embodyi...
-- recurring_accessories:
-  - unknown
+- physical_presence_notes: Green Martian (Thark) warrior and leader. readable production detail enormous frame built for combat and intimidation professional demeanor presence reads as severe, disciplined, and intimidating
 - role: Thark warrior and leader; overseer of the hatching process at the incubator.
-- silhouette_notes: Martian warrior attire. unknown Green Martian (Thark) warrior and leader.
+- silhouette_notes: Martian warrior attire. enormous frame built for combat and intimidation Green Martian (Thark) warrior and leader.
 - state_variants:
   - warrior/combat-ready
 
 ## Generated Fields
 
-- build: lean athletic build
-- costume_materials: worn cloth, leather, and practical field materials
-- expression_tendency: focused and self-controlled
-- eye_color: dark eyes
-- face_shape: angular face
-- facial_hair: clean-shaven or light stubble
-- hair_color: dark brown
-- hair_style: practical short hair
-- height: average-tall
-- posture: upright and ready
-- skin_tone: weathered light-to-medium skin
+- age_presence: readable production detail
+- age_range: battle-hardened adult
+- build: massive war-ready Martian build
+- costume_materials: hides, leather, metal fittings, and war gear
+- expression_tendency: stern, martial self-command
+- eye_color: hard-set eyes adapted to a harsh martial life
+- face_shape: severe planar Martian facial structure
+- facial_hair: typically none
+- hair_color: scalp mostly bare or minimally haired
+- hair_style: minimal or tightly kept scalp hair
+- height: towering over a human frame
+- physical_build: enormous frame built for combat and intimidation
+- posture: upright, dominant, and imposing
+- sex: male-coded Thark warrior
+- skin_tone: deep green skin
+- voice_or_presence_notes: presence reads as severe, disciplined, and intimidating
 
 ## Coverage
 
 - chapter_mentions: CH004, CH006, CH007, CH011, CH012, CH013, CH015, CH017, CH014, CH024, CH025, CH026, CH027
 - scene_mentions: CH004_SC001, CH004_SC002, CH004_SC003, CH004_SC004
-- shot_mentions: CH004_SC001/SH001, CH004_SC001/SH002, CH004_SC003/SH003, CH004_SC004/SH003
+- shot_mentions: CH004_SC001/SH003, CH004_SC002/SH003, CH004_SC003/SH002, CH004_SC003/SH003, CH004_SC004/SH002
 
 ## Evidence Summary
 
@@ -66,29 +69,17 @@
 - Martian warrior attire.
 - Values strength and combat skill; maintains a professional demeanor.
 - Thark warrior and leader; overseer of the hatching process at the incubator.
-- unknown
 - [CH014] CHAPTER XIV (book index hit)
 - [CH004] CHAPTER IV (book index hit)
 
 ## Review
 
-- generated_field_placeholder_height
-- generated_field_placeholder_build
-- generated_field_placeholder_skin_tone
-- generated_field_placeholder_hair_color
-- generated_field_placeholder_hair_style
-- generated_field_placeholder_eye_color
-- generated_field_placeholder_face_shape
-- generated_field_placeholder_facial_hair
-- generated_field_placeholder_costume_materials
-- generated_field_placeholder_posture
-- generated_field_placeholder_expression_tendency
-- sex_unresolved
+- (none)
 
 ## Metadata
 
 - artifact_id: `DESC_CHAR_tars_tarkas`
 - status: `generated`
-- source_fingerprint: `82947961e3acc041953be590d64a6b3b20d6fbba`
-- created_at_utc: `2026-04-22T17:51:59.274305+00:00`
-- updated_at_utc: `2026-04-22T17:51:59.274305+00:00`
+- source_fingerprint: `655253a13a00ce26c416b93fcce332f21cfe2dc5`
+- created_at_utc: `2026-04-23T00:02:40.968266+00:00`
+- updated_at_utc: `2026-04-23T00:02:40.968266+00:00`

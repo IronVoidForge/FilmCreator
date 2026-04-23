@@ -52,19 +52,12 @@
 
 ## Review
 
-- generated_field_placeholder_scale
-- generated_field_placeholder_geography
-- generated_field_placeholder_architecture
-- generated_field_placeholder_pathways
-- generated_field_placeholder_materials
-- generated_field_placeholder_weather_or_atmosphere
-- generated_field_placeholder_foreground_midground_background
-- generated_field_placeholder_depth_cues
+- (none)
 
 ## Metadata
 
 - artifact_id: `DESC_ENV_valley_overlook_exterior`
 - status: `generated`
 - source_fingerprint: `5dc4bb5aabab41e90be4cce31c81e7654d43ee3a`
-- created_at_utc: `2026-04-22T18:04:18.536109+00:00`
-- updated_at_utc: `2026-04-22T18:04:18.536109+00:00`
+- created_at_utc: `2026-04-23T00:11:46.677427+00:00`
+- updated_at_utc: `2026-04-23T00:11:46.677427+00:00`

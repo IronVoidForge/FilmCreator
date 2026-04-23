@@ -6,11 +6,40 @@
     "shot_order": 1,
     "previous_shot_id": "",
     "next_shot_id": "SH002",
-    "shot_title": "Establishing Wide 1: protagonist observes murals",
-    "shot_type": "establishing_wide",
-    "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-    "composition": "Wide composition across Captive's chamber (decorated with murals) with protagonist placed for immediate spatial orientation.",
-    "target_seconds": 5.2,
+    "primary_subject": "protagonist",
+    "secondary_subjects": [
+      "sola"
+    ],
+    "start_state": "The protagonist observes his surroundings, noting the murals of landscapes devoid of life.",
+    "end_state": "The protagonist observes his surroundings and experiences care from Sola.",
+    "action_during_shot": "The protagonist observes the murals and experiences the care provided by Sola, learning about Martian biology and environmental extremes.",
+    "action_continues_from": "Scene start state: Protagonist observing murals and experiencing Sola's care.",
+    "action_hands_off_to": "Protagonist continuing to observe surroundings while Sola provides care.",
+    "subject_blocking": [
+      "protagonist remains readable within the active playing space.",
+      "sola remains readable within the active playing space.",
+      "lighting shifts based on moon cycles."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors action inside the primary scene playing area.",
+      "Background depth keeps murals legible as location anchor."
+    ],
+    "gaze_directions": [
+      "protagonist focuses toward the murals and Sola."
+    ],
+    "environment_subzone": "primary scene playing area",
+    "key_visible_environment_features": [
+      "murals of landscapes devoid of life"
+    ],
+    "continuity_from_previous_shot": "Scene start state.",
+    "continuity_to_next_shot": "Protagonist observing surroundings and receiving care from Sola.",
+    "pose_anchor_frame": "Protagonist looking at murals in the chamber.",
+    "pose_end_frame": "Protagonist looking toward Sola as she provides care.",
+    "shot_title": "Medium 1: Protagonist observing surroundings",
+    "shot_type": "medium",
+    "camera_description": "Stable medium framing that keeps action and character readable.",
+    "composition": "Readable medium composition in Captive's chamber featuring protagonist and sola against mural backgrounds.",
+    "target_seconds": 5.5,
     "characters_in_frame": [
       {
         "label": "The Protagonist",
@@ -21,6 +50,16 @@
         "resolution_score": 176,
         "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
         "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
+      },
+      {
+        "label": "Sola",
+        "canonical_id": "sola",
+        "display_name": "sola",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'sola'"
       }
     ],
     "environment": {
@@ -37,11 +76,12 @@
       "BT001"
     ],
     "continuity_constraints": [
-      "Lighting shifts corresponding to moon cycles",
-      "Position of The Watch Dog near the door"
+      "Lighting changes based on moon cycles",
+      "amount/type of food provided by Sola",
+      "position of the Watch Dog near the door"
     ],
-    "prompt_seed": "Establishing Wide 1: protagonist observes the murals of life-devoid Mart.... establishing_wide. Wide establishing frame with a steady or lightly drifting camera. Wide composition across Captive's chamber (decorated with murals) with protagonist placed for immediate spatial orientation. Cast: protagonist. Environment...",
-    "shot_notes": "protagonist observes the murals of life-devoid Martian landscapes.",
+    "prompt_seed": "Medium 1: The protagonist observes his surroundings, noting t.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in Captive's chamber (decorated with murals) featuring protagonist, sola. Cast: protagonist, sola. Environment: Captive's chamber (decorated with mural...",
+    "shot_notes": "Establish status as captive and introduce Martian environment via sensory details.",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -99,12 +139,12 @@
       }
     ],
     "evidence_summary": [
-      "Establish the protagonist's status as a captive through sensory immersion in the Martian environment. The scene must utilize visual details like murals and specific biological elements (plant-milk) to contrast the isolation of the chamber with the care prov...",
+      "Establish the protagonist's status as a captive, introduce the Martian environment through sensory details, and establish Sola's role.",
       "The protagonist observes his surroundings, noting the murals of landscapes devoid of life. He experiences the care provided by Sola, learning about Martian biology (plant-milk) and the environmental extremes (nocturnal cold and moon cycles).",
       "Isolation/Curiosity $\\rightarrow$ Comfort/Observation. **Likely Visual Coverage Families:** - Close-ups of the protagonist's eyes and facial expressions. - Macro shots of the murals and Martian food. - Medium shots of...",
-      "Close-ups of protagonist's eyes and facial expressions",
-      "Macro shots of murals and Martian food (plant-milk)",
-      "Medium shots of sola providing care",
+      "The protagonist observes his surroundings, noting the murals of landscapes devoid of life. He experiences the care provided by Sola, learning about Martian biology (plant-milk) and the environmental extremes (nocturna...",
+      "Arrive at the scene's transition point.",
+      "The protagonist observes his surroundings, noting the murals of landscapes devoid of life. He experiences the care provided by Sola, learning about Martian biology (plant-milk) and the environmental extremes (nocturna...",
       "protagonist | An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeless\" physic...",
       "sola | Sola is a female Green Martian, also identified as a Thark. Her visual identity is defined by her species' characteristic green coloring and traditional Green Martian attire. While specific physical proportions are not detailed, she is established as..."
     ],
@@ -112,24 +152,24 @@
       "artifact_id": "CH005_SC001_SH001_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "4eff045bc66b3b9e7e278731156ff53e763daeff",
+      "source_fingerprint": "fdf1300b2e1c3d7c69e023688741d0ec9c488a21",
       "created_at_utc": "2026-04-22T00:41:00.848215+00:00",
-      "updated_at_utc": "2026-04-22T17:24:02.930812+00:00",
+      "updated_at_utc": "2026-04-22T23:33:34.418805+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH005_SC001",
-          "version": "7b50bebbde30a52f3279caecdf6cbc75d46808fc"
+          "version": "15f74a96ea18828d52f70e6e197e7a53848117be"
         },
         {
           "dependency_type": "scene_binding",
           "dependency_id": "CH005_SC001",
-          "version": "dc097c16a48794383c3e17333e1c2e605b306523"
+          "version": "978635c65a1a3a170e09068ede66b6dabe2cbdf2"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH005_SC001",
-          "version": "e1b6eb936407392a047d738641cb0e50bfd9185c"
+          "version": "2f1e666f6ba590f8ec03de2617e43193b1e1ed74"
         }
       ],
       "locked_fields": {},
@@ -154,6 +194,11 @@
           "timestamp_utc": "2026-04-22T17:24:40.585025+00:00",
           "action": "synthesized",
           "source_fingerprint": "4eff045bc66b3b9e7e278731156ff53e763daeff"
+        },
+        {
+          "timestamp_utc": "2026-04-22T23:34:26.537341+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "fdf1300b2e1c3d7c69e023688741d0ec9c488a21"
         }
       ]
     }
@@ -165,11 +210,41 @@
     "shot_order": 2,
     "previous_shot_id": "SH001",
     "next_shot_id": "SH003",
-    "shot_title": "Medium 2: sola enters with nourishment",
+    "primary_subject": "sola",
+    "secondary_subjects": [
+      "protagonist"
+    ],
+    "start_state": "Sola is providing care to the protagonist.",
+    "end_state": "The emotional state shifts from Isolation/Curiosity to Comfort/Observation.",
+    "action_during_shot": "Carrying the emotional arc through Sola's care, including Martian biology (plant-milk) and environmental details.",
+    "action_continues_from": "Protagonist observing surroundings and receiving care from Sola.",
+    "action_hands_off_to": "The protagonist landing in a state of comfort/observation for the scene transition.",
+    "subject_blocking": [
+      "sola remains readable within the active playing space.",
+      "protagonist remains readable within the active playing space.",
+      "Sola provides specific amount/type of food."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors action inside the primary scene playing area.",
+      "Background depth keeps murals legible as location anchor."
+    ],
+    "gaze_directions": [
+      "sola focuses toward the protagonist."
+    ],
+    "environment_subzone": "primary scene playing area",
+    "key_visible_environment_features": [
+      "Murals of landscapes devoid of life",
+      "Primary scene playing area"
+    ],
+    "continuity_from_previous_shot": "Protagonist observing surroundings and receiving care from Sola.",
+    "continuity_to_next_shot": "Emotional shift to comfort/observation for final beat.",
+    "pose_anchor_frame": "Sola actively providing food/care to the protagonist.",
+    "pose_end_frame": "Sola completing the act of care, protagonist showing comfort.",
+    "shot_title": "Medium 2: Emotional arc transition",
     "shot_type": "medium",
     "camera_description": "Stable medium framing that keeps action and character readable.",
-    "composition": "Readable medium composition in Captive's chamber (decorated with murals) featuring sola.",
-    "target_seconds": 5.0,
+    "composition": "Readable medium composition featuring sola providing care to the protagonist.",
+    "target_seconds": 5.3,
     "characters_in_frame": [
       {
         "label": "Sola",
@@ -180,6 +255,16 @@
         "resolution_score": 186,
         "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
         "notes": "asset id exactly matches canonical id | query matches alias 'sola'"
+      },
+      {
+        "label": "The Protagonist",
+        "canonical_id": "protagonist",
+        "display_name": "protagonist",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 176,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
       }
     ],
     "environment": {
@@ -196,13 +281,12 @@
       "BT002"
     ],
     "continuity_constraints": [
-      "Lighting shifts corresponding to moon cycles",
-      "Specific amount/type of food provided by sola",
-      "Position of The Watch Dog near the door",
-      "sola enters to provide care and nourishment (plant-milk)."
+      "Lighting changes based on moon cycles",
+      "Amount/type of food provided by Sola",
+      "Position of the Watch Dog near the door"
     ],
-    "prompt_seed": "Medium 2: sola enters to provide care and nourishment (plant-.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in Captive's chamber (decorated with murals) featuring sola. Cast: sola. Environment: Captive's chamber (decorated with murals). Beat: sola enters to p...",
-    "shot_notes": "sola enters to provide care and nourishment (plant-milk).",
+    "prompt_seed": "Medium 2: Carry the emotional arc through: Isolation/Curiosit.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in Captive's chamber (decorated with murals) featuring sola, protagonist. Cast: sola, protagonist. Environment: Captive's chamber (decorated with mural...",
+    "shot_notes": "Focus on the emotional transition from isolation to comfort.",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -260,12 +344,12 @@
       }
     ],
     "evidence_summary": [
-      "Establish the protagonist's status as a captive through sensory immersion in the Martian environment. The scene must utilize visual details like murals and specific biological elements (plant-milk) to contrast the isolation of the chamber with the care prov...",
+      "Establish the protagonist's status as a captive, introduce the Martian environment through sensory details, and establish Sola's role.",
       "The protagonist observes his surroundings, noting the murals of landscapes devoid of life. He experiences the care provided by Sola, learning about Martian biology (plant-milk) and the environmental extremes (nocturnal cold and moon cycles).",
       "Isolation/Curiosity $\\rightarrow$ Comfort/Observation. **Likely Visual Coverage Families:** - Close-ups of the protagonist's eyes and facial expressions. - Macro shots of the murals and Martian food. - Medium shots of...",
-      "Close-ups of protagonist's eyes and facial expressions",
-      "Macro shots of murals and Martian food (plant-milk)",
-      "Medium shots of sola providing care",
+      "The protagonist observes his surroundings, noting the murals of landscapes devoid of life. He experiences the care provided by Sola, learning about Martian biology (plant-milk) and the environmental extremes (nocturna...",
+      "Arrive at the scene's transition point.",
+      "The protagonist observes his surroundings, noting the murals of landscapes devoid of life. He experiences the care provided by Sola, learning about Martian biology (plant-milk) and the environmental extremes (nocturna...",
       "protagonist | An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeless\" physic...",
       "sola | Sola is a female Green Martian, also identified as a Thark. Her visual identity is defined by her species' characteristic green coloring and traditional Green Martian attire. While specific physical proportions are not detailed, she is established as..."
     ],
@@ -273,24 +357,24 @@
       "artifact_id": "CH005_SC001_SH002_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "4eff045bc66b3b9e7e278731156ff53e763daeff",
+      "source_fingerprint": "fdf1300b2e1c3d7c69e023688741d0ec9c488a21",
       "created_at_utc": "2026-04-22T00:41:37.059370+00:00",
-      "updated_at_utc": "2026-04-22T17:24:40.600034+00:00",
+      "updated_at_utc": "2026-04-22T23:34:26.553357+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH005_SC001",
-          "version": "7b50bebbde30a52f3279caecdf6cbc75d46808fc"
+          "version": "15f74a96ea18828d52f70e6e197e7a53848117be"
         },
         {
           "dependency_type": "scene_binding",
           "dependency_id": "CH005_SC001",
-          "version": "dc097c16a48794383c3e17333e1c2e605b306523"
+          "version": "978635c65a1a3a170e09068ede66b6dabe2cbdf2"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH005_SC001",
-          "version": "e1b6eb936407392a047d738641cb0e50bfd9185c"
+          "version": "2f1e666f6ba590f8ec03de2617e43193b1e1ed74"
         }
       ],
       "locked_fields": {},
@@ -315,6 +399,11 @@
           "timestamp_utc": "2026-04-22T17:25:15.713741+00:00",
           "action": "synthesized",
           "source_fingerprint": "4eff045bc66b3b9e7e278731156ff53e763daeff"
+        },
+        {
+          "timestamp_utc": "2026-04-22T23:35:00.240758+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "fdf1300b2e1c3d7c69e023688741d0ec9c488a21"
         }
       ]
     }
@@ -325,172 +414,40 @@
     "chapter_id": "CH005",
     "shot_order": 3,
     "previous_shot_id": "SH002",
-    "next_shot_id": "SH004",
-    "shot_title": "Medium 3: protagonist learns biology",
-    "shot_type": "medium",
-    "camera_description": "Stable medium framing that keeps action and character readable.",
-    "composition": "Readable medium composition in Captive's chamber (decorated with murals) featuring protagonist.",
-    "target_seconds": 5.0,
-    "characters_in_frame": [
-      {
-        "label": "The Protagonist",
-        "canonical_id": "protagonist",
-        "display_name": "protagonist",
-        "status": "canonical",
-        "entity_kind": "individual",
-        "resolution_score": 176,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
-      }
-    ],
-    "environment": {
-      "label": "Captive's chamber (decorated with murals)",
-      "canonical_id": null,
-      "display_name": "Captive's chamber (decorated with murals)",
-      "status": "review",
-      "entity_kind": "environment",
-      "resolution_score": 8,
-      "source_path": "",
-      "notes": "aerial_battlefield_mars | source context shares query language"
-    },
-    "beat_ids": [
-      "BT003"
-    ],
-    "continuity_constraints": [
-      "Lighting shifts corresponding to moon cycles",
-      "Specific amount/type of food provided by sola",
-      "Position of The Watch Dog near the door"
-    ],
-    "prompt_seed": "Medium 3: protagonist learns about Martian biology and enviro.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in Captive's chamber (decorated with murals) featuring protagonist. Cast: protagonist. Environment: Captive's chamber (decorated with murals). Beat: pr...",
-    "shot_notes": "protagonist learns about Martian biology and environmental extremes (nocturnal cold/moon cycles).",
-    "evidence_refs": [
-      {
-        "source": "scene_contract",
-        "scene_id": "CH005_SC001"
-      },
-      {
-        "source": "scene_breakdown",
-        "chapter_id": "CH005",
-        "scene_id": "CH005_SC001"
-      },
-      {
-        "source": "scene_breakdown",
-        "chapter_id": "CH005",
-        "scene_id": "CH005_SC001"
-      },
-      {
-        "source": "scene_breakdown",
-        "chapter_id": "CH005",
-        "scene_id": "CH005_SC001"
-      },
-      {
-        "source": "scene_breakdown",
-        "chapter_id": "CH005",
-        "scene_id": "CH005_SC001"
-      },
-      {
-        "source": "chapter_summary",
-        "chapter_id": "CH005",
-        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH005_summary.md"
-      },
-      {
-        "source": "book_index",
-        "chapter_id": "CH016",
-        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH016_chapter_xvi.md"
-      },
-      {
-        "source": "book_index",
-        "chapter_id": "CH005",
-        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH005_chapter_v.md"
-      },
-      {
-        "source": "book_index",
-        "chapter_id": "CH006",
-        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH006_chapter_vi.md"
-      },
-      {
-        "source": "character_bible",
-        "chapter_id": "CH005",
-        "canonical_id": "protagonist"
-      },
-      {
-        "source": "character_bible",
-        "chapter_id": "CH005",
-        "canonical_id": "sola"
-      }
-    ],
-    "evidence_summary": [
-      "Establish the protagonist's status as a captive through sensory immersion in the Martian environment. The scene must utilize visual details like murals and specific biological elements (plant-milk) to contrast the isolation of the chamber with the care prov...",
-      "The protagonist observes his surroundings, noting the murals of landscapes devoid of life. He experiences the care provided by Sola, learning about Martian biology (plant-milk) and the environmental extremes (nocturnal cold and moon cycles).",
-      "Isolation/Curiosity $\\rightarrow$ Comfort/Observation. **Likely Visual Coverage Families:** - Close-ups of the protagonist's eyes and facial expressions. - Macro shots of the murals and Martian food. - Medium shots of...",
-      "Close-ups of protagonist's eyes and facial expressions",
-      "Macro shots of murals and Martian food (plant-milk)",
-      "Medium shots of sola providing care",
-      "protagonist | An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeless\" physic...",
-      "sola | Sola is a female Green Martian, also identified as a Thark. Her visual identity is defined by her species' characteristic green coloring and traditional Green Martian attire. While specific physical proportions are not detailed, she is established as..."
-    ],
-    "metadata": {
-      "artifact_id": "CH005_SC001_SH003_SHOT_PACKAGE",
-      "artifact_type": "shot_package",
-      "status": "generated",
-      "source_fingerprint": "4eff045bc66b3b9e7e278731156ff53e763daeff",
-      "created_at_utc": "2026-04-22T00:42:08.773693+00:00",
-      "updated_at_utc": "2026-04-22T17:25:15.730325+00:00",
-      "upstream_dependencies": [
-        {
-          "dependency_type": "scene_contract",
-          "dependency_id": "CH005_SC001",
-          "version": "7b50bebbde30a52f3279caecdf6cbc75d46808fc"
-        },
-        {
-          "dependency_type": "scene_binding",
-          "dependency_id": "CH005_SC001",
-          "version": "dc097c16a48794383c3e17333e1c2e605b306523"
-        },
-        {
-          "dependency_type": "shot_blueprints",
-          "dependency_id": "CH005_SC001",
-          "version": "e1b6eb936407392a047d738641cb0e50bfd9185c"
-        }
-      ],
-      "locked_fields": {},
-      "manual_overrides": {},
-      "revision_history": [
-        {
-          "timestamp_utc": "2026-04-22T00:42:40.456504+00:00",
-          "action": "synthesized",
-          "source_fingerprint": "1c85b962a4273e2118a7e14701b3c24c26a8ccc3"
-        },
-        {
-          "timestamp_utc": "2026-04-22T07:20:19.413845+00:00",
-          "action": "synthesized",
-          "source_fingerprint": "c8f47b4b40431fec0cd96a566c31aa9592089ca0"
-        },
-        {
-          "timestamp_utc": "2026-04-22T16:30:38.657722+00:00",
-          "action": "synthesized",
-          "source_fingerprint": "27520a3a8aa451a6f9400217eb5a7467eec6fb65"
-        },
-        {
-          "timestamp_utc": "2026-04-22T17:25:49.287216+00:00",
-          "action": "synthesized",
-          "source_fingerprint": "4eff045bc66b3b9e7e278731156ff53e763daeff"
-        }
-      ]
-    }
-  },
-  {
-    "shot_id": "SH004",
-    "scene_id": "CH005_SC001",
-    "chapter_id": "CH005",
-    "shot_order": 4,
-    "previous_shot_id": "SH003",
     "next_shot_id": "",
-    "shot_title": "Closing Reaction 4: Watch Dog presence",
+    "primary_subject": "protagonist",
+    "secondary_subjects": [
+      "sola"
+    ],
+    "start_state": "The protagonist and Sola in a state of comfort/observation.",
+    "end_state": "Arrive at the scene's transition point.",
+    "action_during_shot": "Landing the scene consequence or transition cleanly.",
+    "action_continues_from": "The emotional shift from Isolation/Curiosity to Comfort/Observation.",
+    "action_hands_off_to": "Transition to next story beat.",
+    "subject_blocking": [
+      "protagonist remains readable within the active playing space.",
+      "sola remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the primary scene playing area.",
+      "Background depth keeps Captive's chamber (decorated with murals) legible as the location anchor."
+    ],
+    "gaze_directions": [
+      "protagonist focuses toward the active scene action/transition point."
+    ],
+    "environment_subzone": "primary scene playing area",
+    "key_visible_environment_features": [
+      "The Watch Dog near the door"
+    ],
+    "continuity_from_previous_shot": "The emotional shift to Comfort/Observation.",
+    "continuity_to_next_shot": "Arrive at the scene's transition point.",
+    "pose_anchor_frame": "Protagonist and Sola in a settled, observant state.",
+    "pose_end_frame": "A final reaction or look toward the door/Watch Dog as the scene transitions.",
+    "shot_title": "Closing Reaction: Scene transition",
     "shot_type": "closing_reaction",
     "camera_description": "Controlled closing frame that lands the consequence of the beat.",
-    "composition": "Closing composition in Captive's chamber (decorated with murals) that emphasizes the consequence of the watch dog maintains presence/observation near the door..",
-    "target_seconds": 4.3,
+    "composition": "Closing composition in Captive's chamber (decorated with murals) that emphasizes the consequence of the transition.",
+    "target_seconds": 4.6,
     "characters_in_frame": [
       {
         "label": "The Protagonist",
@@ -524,16 +481,15 @@
       "notes": "aerial_battlefield_mars | source context shares query language"
     },
     "beat_ids": [
-      "BT004"
+      "BT003"
     ],
     "continuity_constraints": [
-      "Lighting shifts corresponding to moon cycles",
-      "Specific amount/type of food provided by sola",
-      "Position of The Watch Dog near the door",
-      "The Watch Dog maintains presence/observation near the door."
+      "Lighting changes based on moon cycles",
+      "amount/type of food provided by Sola",
+      "position of the Watch Dog near the door."
     ],
-    "prompt_seed": "Closing Reaction 4: The Watch Dog maintains presence/observation near t.... closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in Captive's chamber (decorated with murals) that emphasizes the consequence of the watch dog maintains presence/observation near the door...",
-    "shot_notes": "The Watch Dog maintains presence/observation near the door.",
+    "prompt_seed": "Closing Reaction 3: Land the scene consequence or transition cleanly.. closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in Captive's chamber (decorated with murals) that emphasizes the consequence of land the scene consequence or transition cleanly.. Cast: protag...",
+    "shot_notes": "Emphasize the presence of the Watch Dog near the door to signal transition.",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -591,51 +547,66 @@
       }
     ],
     "evidence_summary": [
-      "Establish the protagonist's status as a captive through sensory immersion in the Martian environment. The scene must utilize visual details like murals and specific biological elements (plant-milk) to contrast the isolation of the chamber with the care prov...",
+      "Establish the protagonist's status as a captive, introduce the Martian environment through sensory details, and establish Sola's role.",
       "The protagonist observes his surroundings, noting the murals of landscapes devoid of life. He experiences the care provided by Sola, learning about Martian biology (plant-milk) and the environmental extremes (nocturnal cold and moon cycles).",
       "Isolation/Curiosity $\\rightarrow$ Comfort/Observation. **Likely Visual Coverage Families:** - Close-ups of the protagonist's eyes and facial expressions. - Macro shots of the murals and Martian food. - Medium shots of...",
-      "Close-ups of protagonist's eyes and facial expressions",
-      "Macro shots of murals and Martian food (plant-milk)",
-      "Medium shots of sola providing care",
+      "The protagonist observes his surroundings, noting the murals of landscapes devoid of life. He experiences the care provided by Sola, learning about Martian biology (plant-milk) and the environmental extremes (nocturna...",
+      "Arrive at the scene's transition point.",
+      "The protagonist observes his surroundings, noting the murals of landscapes devoid of life. He experiences the care provided by Sola, learning about Martian biology (plant-milk) and the environmental extremes (nocturna...",
       "protagonist | An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeless\" physic...",
       "sola | Sola is a female Green Martian, also identified as a Thark. Her visual identity is defined by her species' characteristic green coloring and traditional Green Martian attire. While specific physical proportions are not detailed, she is established as..."
     ],
     "metadata": {
-      "artifact_id": "CH005_SC001_SH004_SHOT_PACKAGE",
+      "artifact_id": "CH005_SC001_SH003_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "4eff045bc66b3b9e7e278731156ff53e763daeff",
-      "created_at_utc": "2026-04-22T00:42:40.458004+00:00",
-      "updated_at_utc": "2026-04-22T17:25:49.303239+00:00",
+      "source_fingerprint": "fdf1300b2e1c3d7c69e023688741d0ec9c488a21",
+      "created_at_utc": "2026-04-22T00:42:08.773693+00:00",
+      "updated_at_utc": "2026-04-22T23:35:00.256765+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH005_SC001",
-          "version": "7b50bebbde30a52f3279caecdf6cbc75d46808fc"
+          "version": "15f74a96ea18828d52f70e6e197e7a53848117be"
         },
         {
           "dependency_type": "scene_binding",
           "dependency_id": "CH005_SC001",
-          "version": "dc097c16a48794383c3e17333e1c2e605b306523"
+          "version": "978635c65a1a3a170e09068ede66b6dabe2cbdf2"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH005_SC001",
-          "version": "e1b6eb936407392a047d738641cb0e50bfd9185c"
+          "version": "2f1e666f6ba590f8ec03de2617e43193b1e1ed74"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-22T00:43:12.144564+00:00",
+          "timestamp_utc": "2026-04-22T00:42:40.456504+00:00",
           "action": "synthesized",
           "source_fingerprint": "1c85b962a4273e2118a7e14701b3c24c26a8ccc3"
         },
         {
-          "timestamp_utc": "2026-04-22T17:26:24.421319+00:00",
+          "timestamp_utc": "2026-04-22T07:20:19.413845+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c8f47b4b40431fec0cd96a566c31aa9592089ca0"
+        },
+        {
+          "timestamp_utc": "2026-04-22T16:30:38.657722+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "27520a3a8aa451a6f9400217eb5a7467eec6fb65"
+        },
+        {
+          "timestamp_utc": "2026-04-22T17:25:49.287216+00:00",
           "action": "synthesized",
           "source_fingerprint": "4eff045bc66b3b9e7e278731156ff53e763daeff"
+        },
+        {
+          "timestamp_utc": "2026-04-22T23:35:33.845520+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "fdf1300b2e1c3d7c69e023688741d0ec9c488a21"
         }
       ]
     }

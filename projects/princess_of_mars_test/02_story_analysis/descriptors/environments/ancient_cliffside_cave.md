@@ -50,19 +50,12 @@
 
 ## Review
 
-- generated_field_placeholder_scale
-- generated_field_placeholder_geography
-- generated_field_placeholder_architecture
-- generated_field_placeholder_pathways
-- generated_field_placeholder_materials
-- generated_field_placeholder_weather_or_atmosphere
-- generated_field_placeholder_foreground_midground_background
-- generated_field_placeholder_depth_cues
+- (none)
 
 ## Metadata
 
 - artifact_id: `DESC_ENV_ancient_cliffside_cave`
 - status: `generated`
 - source_fingerprint: `e62f576de0d2f4571283c348be7d8f97e852a756`
-- created_at_utc: `2026-04-22T17:54:33.934298+00:00`
-- updated_at_utc: `2026-04-22T17:54:33.934298+00:00`
+- created_at_utc: `2026-04-23T00:04:39.742308+00:00`
+- updated_at_utc: `2026-04-23T00:04:39.742308+00:00`

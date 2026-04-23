@@ -5,11 +5,41 @@
   "shot_order": 2,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Action 2: Warriors applaud Protagonist",
-  "shot_type": "action",
-  "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-  "composition": "Dynamic composition in Interior chamber/Plaza threshold with scene_character crossing the frame and maintaining readable movement.",
-  "target_seconds": 5.8,
+  "primary_subject": "scene_character",
+  "secondary_subjects": [
+    "[]"
+  ],
+  "start_state": "Continue from prior beat: Martian warriors, including Tars Tarkas, arrive to witness the aftermath.",
+  "end_state": "Sola approaches with genuine concern for his well-being, providing a soft emotional counterpoint to the warriors' laughter.",
+  "action_during_shot": "They applaud his strength.",
+  "action_continues_from": "They applaud his strength.",
+  "action_hands_off_to": "Sola approaches with genuine concern for his well-being, providing a soft emotional counterpoint to the warriors' laughter.",
+  "subject_blocking": [
+    "the proximity of the dead apes to the group.",
+    "scene_character remains readable within the active playing space."
+  ],
+  "camera_relative_positions": [
+    "Camera anchors the action inside the primary scene playing area.",
+    "Background depth should keep Interior chamber/Plaza threshold legible as the location anchor.",
+    "Subject 1: scene_character remains visually readable against the environment scale."
+  ],
+  "gaze_directions": [
+    "scene_character focuses toward the active scene action."
+  ],
+  "environment_subzone": "primary scene playing area",
+  "key_visible_environment_features": [
+    "primary scene playing area",
+    "aerial_battlefield_mars | source context shares query language"
+  ],
+  "continuity_from_previous_shot": "They applaud his strength.",
+  "continuity_to_next_shot": "Sola approaches with genuine concern for his well-being, providing a soft emotional counterpoint to the warriors' laughter.",
+  "pose_anchor_frame": "Continue from prior beat: Martian warriors, including Tars Tarkas, arrive to witness the aftermath.",
+  "pose_end_frame": "Sola approaches with genuine concern for his well-being, providing a soft emotional counterpoint to the warriors' laughter.",
+  "shot_title": "Medium 2: Applauding strength",
+  "shot_type": "medium",
+  "camera_description": "Stable medium framing that keeps action and character readable.",
+  "composition": "Readable medium composition in Interior chamber/Plaza threshold featuring scene_character.",
+  "target_seconds": 5.0,
   "characters_in_frame": [
     {
       "label": "scene_character",
@@ -36,12 +66,12 @@
     "BT002"
   ],
   "continuity_constraints": [
-    "Level of dirt/blood on the protagonist must remain consistent with post-combat state",
-    "Proximity of dead apes to the character group must be maintained for spatial logic",
-    "The warriors applaud the Protagonist's strength, providing social validation."
+    "The level of dirt/blood on the protagonist",
+    "the proximity of the dead apes to the group.",
+    "They applaud his strength."
   ],
-  "prompt_seed": "Action 2: The warriors applaud the Protagonist's strength, pr.... action. Active camera with tracking energy and clear spatial orientation. Dynamic composition in Interior chamber/Plaza threshold with scene_character crossing the frame and maintaining readable movement. Cast: scene_character. Environment: Interior chamber/Plaza threshold.",
-  "shot_notes": "The warriors applaud the Protagonist's strength, providing social validation.",
+  "prompt_seed": "Medium 2: They applaud his strength.. medium. Stable medium framing that keeps action and character readable. Readable medium composition in Interior chamber/Plaza threshold featuring scene_character. Cast: scene_character. Environment: Interior chamber/Plaza threshold. Beat: They applaud his strength.",
+  "shot_notes": "They applaud his strength.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -89,35 +119,35 @@
     }
   ],
   "evidence_summary": [
-    "Establish the social aftermath of combat by transitioning from high-adrenaline violence to communal validation and individual empathy. The scene must balance the boisterous, celebratory energy of the Martian warriors with a quiet, intimate moment of concern...",
+    "To transition from combat to social consequence and character introduction (Tars Tarkas/Sola).",
     "Martian warriors, including Tars Tarkas, arrive to witness the aftermath. They applaud his strength. Sola approaches with genuine concern for his well-being, providing a soft emotional counterpoint to the warriors' laughter. **Participating Characters:** -...",
     "Combat adrenaline $\\rightarrow$ Social validation $\\rightarrow$ Vulnerability/Empathy. **Likely Visual Coverage Families:** - Reaction shots of the Martian warriors. - Medium two-shots between Sola and the Protagonist...",
-    "Reaction shots of the Martian warriors",
-    "Medium two-shots between Sola and the Protagonist",
-    "Low-angle shots of Tars Tarkas to establish presence"
+    "Martian warriors, including Tars Tarkas, arrive to witness the aftermath. They applaud his strength. Sola approaches with genuine concern for his well-being, providing a soft emotional counterpoint to the warriors' la...",
+    "**Participating Characters:** - The Protagonist - Tars Tarkas - Sola - Martian Warriors",
+    "Martian warriors, including Tars Tarkas, arrive to witness the aftermath. They applaud his strength. Sola approaches with genuine concern for his well-being, providing a soft emotional counterpoint to the warriors' la..."
   ],
   "metadata": {
     "artifact_id": "CH006_SC003_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "8e5e94a88dc6b3874c2adc08caac88aa138c39f4",
+    "source_fingerprint": "982d5268f1fef5085e53e03fdff4c1ac914f9d2f",
     "created_at_utc": "2026-04-22T00:55:49.484606+00:00",
-    "updated_at_utc": "2026-04-22T17:39:45.313267+00:00",
+    "updated_at_utc": "2026-04-22T23:48:15.012724+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH006_SC003",
-        "version": "2a1dcf09661bdef596e3d38d7b66b5e416bd09fb"
+        "version": "bb4b18fd6cfca5900ddd25409ab574ec5d54c3da"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH006_SC003",
-        "version": "4ff4641698bdee5c64e5f19f2d27cbacda25e679"
+        "version": "b373cf952199bcee9acfcb82a69013b9163775a3"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH006_SC003",
-        "version": "55b71684a6a5c78d1ee565699916e24426386238"
+        "version": "eab7bbd84d4b3ebebd6471cf003f569dd62aaead"
       }
     ],
     "locked_fields": {},
@@ -142,6 +172,11 @@
         "timestamp_utc": "2026-04-22T17:40:13.055509+00:00",
         "action": "synthesized",
         "source_fingerprint": "8e5e94a88dc6b3874c2adc08caac88aa138c39f4"
+      },
+      {
+        "timestamp_utc": "2026-04-22T23:49:08.877119+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "982d5268f1fef5085e53e03fdff4c1ac914f9d2f"
       }
     ]
   }

@@ -48,19 +48,12 @@
 
 ## Review
 
-- generated_field_placeholder_scale
-- generated_field_placeholder_geography
-- generated_field_placeholder_architecture
-- generated_field_placeholder_pathways
-- generated_field_placeholder_materials
-- generated_field_placeholder_weather_or_atmosphere
-- generated_field_placeholder_foreground_midground_background
-- generated_field_placeholder_depth_cues
+- (none)
 
 ## Metadata
 
 - artifact_id: `DESC_ENV_ancient_tableland_city`
 - status: `generated`
 - source_fingerprint: `50df435a53383af3ad39df0338d3734a9318b0e5`
-- created_at_utc: `2026-04-22T17:55:31.615870+00:00`
-- updated_at_utc: `2026-04-22T17:55:31.615870+00:00`
+- created_at_utc: `2026-04-23T00:05:22.331543+00:00`
+- updated_at_utc: `2026-04-23T00:05:22.331543+00:00`

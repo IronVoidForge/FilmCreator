@@ -52,19 +52,12 @@
 
 ## Review
 
-- generated_field_placeholder_scale
-- generated_field_placeholder_geography
-- generated_field_placeholder_architecture
-- generated_field_placeholder_pathways
-- generated_field_placeholder_materials
-- generated_field_placeholder_weather_or_atmosphere
-- generated_field_placeholder_foreground_midground_background
-- generated_field_placeholder_depth_cues
+- (none)
 
 ## Metadata
 
 - artifact_id: `DESC_ENV_rocky_gorge_canyon`
 - status: `generated`
 - source_fingerprint: `dc582fa4d3c8a4021460415821b142e349730b2e`
-- created_at_utc: `2026-04-22T18:03:51.815427+00:00`
-- updated_at_utc: `2026-04-22T18:03:51.815427+00:00`
+- created_at_utc: `2026-04-23T00:11:26.767510+00:00`
+- updated_at_utc: `2026-04-23T00:11:26.767510+00:00`

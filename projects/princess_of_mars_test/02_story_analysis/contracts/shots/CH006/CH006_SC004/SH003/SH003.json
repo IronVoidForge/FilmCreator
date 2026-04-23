@@ -4,12 +4,42 @@
   "chapter_id": "CH006",
   "shot_order": 3,
   "previous_shot_id": "SH002",
-  "next_shot_id": "",
-  "shot_title": "Insert Detail 3: The Protagonist, Sola, and his guardian depart the...",
-  "shot_type": "insert_detail",
-  "camera_description": "Tight detail framing focused on a single visual object or gesture.",
-  "composition": "Detail composition centered on the key physical action or prop inside Interior chamber leading out to a Plaza.",
-  "target_seconds": 5.1,
+  "next_shot_id": "SH004",
+  "primary_subject": "scene_character",
+  "secondary_subjects": [
+    "[]"
+  ],
+  "start_state": "Continue from prior beat: The protagonist intervenes physically, striking the warrior to protect his beast.",
+  "end_state": "**Participating Characters:**\\n- The Protagonist\\n- Sola\\n- Martian Warrior (Aggressor)\\n- The Watch-thing",
+  "action_during_shot": "He then departs the building with Sola and his guardian, having secured allies.",
+  "action_continues_from": "He then departs the building with Sola and his guardian, having secured allies.",
+  "action_hands_off_to": "**Participating Characters:**\\n- The Protagonist\\n- Sola\\n- Martian Warrior (Aggressor)\\n- The Watch-thing",
+  "subject_blocking": [
+    "the movement from interior light to exterior Martian light.",
+    "scene_character remains readable within the active playing space."
+  ],
+  "camera_relative_positions": [
+    "Camera anchors the action inside the primary scene playing area.",
+    "Background depth should keep Interior chamber leading out to a Plaza legible as the location anchor.",
+    "Subject 1: scene_character remains visually readable against the environment scale."
+  ],
+  "gaze_directions": [
+    "scene_character focuses toward the active scene action."
+  ],
+  "environment_subzone": "primary scene playing area",
+  "key_visible_environment_features": [
+    "primary scene playing area",
+    "aerial_battlefield_mars | source context shares query language"
+  ],
+  "continuity_from_previous_shot": "He then departs the building with Sola and his guardian, having secured allies.",
+  "continuity_to_next_shot": "**Participating Characters:**\\n- The Protagonist\\n- Sola\\n- Martian Warrior (Aggressor)\\n- The Watch-thing",
+  "pose_anchor_frame": "Continue from prior beat: The protagonist intervenes physically, striking the warrior to protect his beast.",
+  "pose_end_frame": "**Participating Characters:**\\n- The Protagonist\\n- Sola\\n- Martian Warrior (Aggressor)\\n- The Watch-thing",
+  "shot_title": "Medium 3: He then departs the building with Sola and his guar...",
+  "shot_type": "medium",
+  "camera_description": "Stable medium framing that keeps action and character readable.",
+  "composition": "Readable medium composition in Interior chamber leading out to a Plaza featuring scene_character.",
+  "target_seconds": 5.0,
   "characters_in_frame": [
     {
       "label": "scene_character",
@@ -36,13 +66,14 @@
     "BT003"
   ],
   "continuity_constraints": [
-    "Physical state/mobility of the wounded Watch-thing",
-    "Lighting transition from interior chamber to exterior Martian light",
-    "The Protagonist, Sola, and his guardian depart the building into the plaza.",
+    "The physical state of the Watch-thing (is it able to walk?)",
+    "the movement from interior light to exterior Martian light.",
+    "He then departs the building with Sola and his guardian",
+    "having secured allies.",
     "Resolve Interior chamber leading out to a Plaza -> Interior chamber leading out to a Plaza"
   ],
-  "prompt_seed": "Insert Detail 3: The Protagonist, Sola, and his guardian depart the.... insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside Interior chamber leading out to a Plaza. Cast: scene_character. Environment: Interior chamber...",
-  "shot_notes": "The Protagonist, Sola, and his guardian depart the building into the plaza.",
+  "prompt_seed": "Medium 3: He then departs the building with Sola and his guar.... medium. Stable medium framing that keeps action and character readable. Readable medium composition in Interior chamber leading out to a Plaza featuring scene_character. Cast: scene_character. Environment: Interior chamber leading out to a Plaza. Beat...",
+  "shot_notes": "He then departs the building with Sola and his guardian, having secured allies.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -90,35 +121,35 @@
     }
   ],
   "evidence_summary": [
-    "The scene requires a high-tension physical confrontation within an interior chamber that transitions into a group exit. Focus must be placed on the protagonist's physical intervention against the Martian Warrior and the subsequent movement of the party from...",
+    "To establish the protagonist's protective nature and secure his new status.",
     "A warrior attempts to execute the wounded Watch-thing. The protagonist intervenes physically, striking the warrior to protect his beast. He then departs the building with Sola and his guardian, having secured allies. **Participating Characters:** - The Prot...",
     "Tension $\\rightarrow$ Defiance $\\rightarrow$ Somber relief/Resolution. **Likely Visual Coverage Families:** - Close-up on the protagonist's hand/strike against the warrior. - Wide shot of the group exiting into the pl...",
-    "Close-up on the protagonist's hand/strike against the warrior",
-    "Wide shot of the group exiting into the plaza",
-    "Tracking shot following the protagonist and Sola"
+    "A warrior attempts to execute the wounded Watch-thing. The protagonist intervenes physically, striking the warrior to protect his beast. He then departs the building with Sola and his guardian, having secured allies....",
+    "**Participating Characters:** - The Protagonist - Sola - Martian Warrior (Aggressor) - The Watch-thing",
+    "A warrior attempts to execute the wounded Watch-thing. The protagonist intervenes physically, striking the warrior to protect his beast. He then departs the building with Sola and his guardian, having secured allies...."
   ],
   "metadata": {
     "artifact_id": "CH006_SC004_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "9f207cb50dd32caf8155bdb07c01ce331122488b",
+    "source_fingerprint": "d21d422776400545bd2bc3e91907bdb30f3d2099",
     "created_at_utc": "2026-04-22T00:57:36.642420+00:00",
-    "updated_at_utc": "2026-04-22T17:41:40.127246+00:00",
+    "updated_at_utc": "2026-04-22T23:53:03.216527+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH006_SC004",
-        "version": "a2bfaab059a6c120f9c49a818c0a2bb58605bb1b"
+        "version": "2ce84aad25a0947e8f2f868b61d12709676106cc"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH006_SC004",
-        "version": "ed6de23f3bfea68b3d21e3cdf2a33537416a9001"
+        "version": "8a4acf9f568d2145b489d2c7470cdfdfebc91160"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH006_SC004",
-        "version": "4ccc403c11c3e6a675eaba6c26cf080bc8138522"
+        "version": "926de06bf6b933d77709cc5f6e663546ead16f42"
       }
     ],
     "locked_fields": {},
@@ -143,6 +174,11 @@
         "timestamp_utc": "2026-04-22T17:42:08.791561+00:00",
         "action": "synthesized",
         "source_fingerprint": "9f207cb50dd32caf8155bdb07c01ce331122488b"
+      },
+      {
+        "timestamp_utc": "2026-04-22T23:53:59.720087+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d21d422776400545bd2bc3e91907bdb30f3d2099"
       }
     ]
   }

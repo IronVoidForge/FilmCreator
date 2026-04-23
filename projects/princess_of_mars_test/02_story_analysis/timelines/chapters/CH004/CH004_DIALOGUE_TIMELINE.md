@@ -43,9 +43,9 @@
 
 - speaker: `unresolved`
 - source_ref: `CH004:p025:q01`
-- scene_id: `CH004_SC004`
-- shot_id: `SH004`
-- clip_id: `CL004`
+- scene_id: `CH004_SC005`
+- shot_id: `SH001`
+- clip_id: `CL001`
 - dialogue_text: sak,
 - excerpt: My exhibition had been witnessed by several hundred lesser Martians, and they immediately broke into demands for a repetition, which the chieftain then ordered me to make; but I was both hungry and thirsty, and determined on the spot tha...
 - review_notes:

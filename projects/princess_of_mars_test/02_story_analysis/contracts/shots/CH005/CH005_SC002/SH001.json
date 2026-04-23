@@ -5,10 +5,37 @@
   "shot_order": 1,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "shot_title": "Insert Detail 1: protagonist attempts to leave the Captive's chamber...",
-  "shot_type": "insert_detail",
-  "camera_description": "Tight detail framing focused on a single visual object or gesture.",
-  "composition": "Detail composition centered on the key physical action or prop inside Captive's chamber.",
+  "primary_subject": "protagonist",
+  "secondary_subjects": [
+    "[]"
+  ],
+  "start_state": "Protagonist attempts to leave his room, testing his limits.",
+  "end_state": "Protagonist realizes the Watch Dog is fast and intelligent.",
+  "action_during_shot": "The protagonist's initial attempt to exit the chamber and his sudden realization of the threat.",
+  "action_continues_from": "Seeking to test his limits and the capabilities of his captors, the protagonist attempts to leave his room.",
+  "action_hands_off_to": "Protagonist realizes the short-legged Watch Dog is incredibly fast and intelligent.",
+  "subject_blocking": [
+    "Protagonist remains readable within the active playing space."
+  ],
+  "camera_relative_positions": [
+    "Camera anchors action inside the primary scene playing area.",
+    "Background depth keeps Captive's chamber legible as location anchor."
+  ],
+  "gaze_directions": [
+    "protagonist focuses toward the active scene action."
+  ],
+  "environment_subzone": "primary scene playing area",
+  "key_visible_environment_features": [
+    "primary scene playing area"
+  ],
+  "continuity_from_previous_shot": "Scene start: Protagonist attempting to leave room.",
+  "continuity_to_next_shot": "Realization of the Watch Dog's speed and intelligence.",
+  "pose_anchor_frame": "Protagonist moving toward the threshold with determination.",
+  "pose_end_frame": "Protagonist frozen in realization/alarm.",
+  "shot_title": "Reaction Closeup 1: Protagonist's Determination",
+  "shot_type": "reaction_closeup",
+  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+  "composition": "Intimate composition isolating protagonist against Captive's chamber to capture the emotional turn.",
   "target_seconds": 5.5,
   "characters_in_frame": [
     {
@@ -36,14 +63,11 @@
     "BT001"
   ],
   "continuity_constraints": [
-    "Physical distance between protagonist and the_watch_dog.",
-    "Direction of the chase sequence.",
-    "protagonist attempts to leave the Captive's chamber to test his limits and captor capabilities.",
-    "Resolve Captive's chamber -> Captive's chamber",
-    "Resolve immediate hallway/threshold -> immediate hallway/threshold"
+    "The physical distance between the protagonist and the dog",
+    "The direction of the chase"
   ],
-  "prompt_seed": "Insert Detail 1: protagonist attempts to leave the Captive's chamber.... insert_detail. Tight detail framing focused on a single visual object or gesture. Detail composition centered on the key physical action or prop inside Captive's chamber. Cast: protagonist. Environment: Captive's chamber. Beat: protagonist atte...",
-  "shot_notes": "protagonist attempts to leave the Captive's chamber to test his limits and captor capabilities.",
+  "prompt_seed": "Reaction Closeup 1: protagonist reaction, close framing, emotional emphasis, Captive's chamber environment.",
+  "shot_notes": "Capture the shift from determination to initial alarm.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -101,12 +125,12 @@
     }
   ],
   "evidence_summary": [
-    "The scene must establish the physical threat and high-speed capabilities of the Martian guard beast through a transition from controlled testing to uncontrolled survival. The protagonist's extreme agility and high-leaping capabilities should be contrasted a...",
+    "To initiate the action and demonstrate the physical threat of the Martian guard beast.",
     "Seeking to test his limits and the capabilities of his captors, the protagonist attempts to leave his room. He quickly realizes that the short-legged Watch Dog is incredibly fast and intelligent, turning a test into a survival situation.",
     "Determination $\\rightarrow$ Alarm/Panic. **Likely Visual Coverage Families:** - Low-angle shots of the Watch Dog to emphasize speed. - Handheld/shaky cam for the protagonist's movement. - Tracking shots following the...",
-    "Low-angle shots of the_watch_dog to emphasize speed.",
-    "Handheld/shaky cam for protagonist movement.",
-    "Tracking shots following the dog's rapid approach.",
+    "Seeking to test his limits and the capabilities of his captors, the protagonist attempts to leave his room. He quickly realizes that the short-legged Watch Dog is incredibly fast and intelligent, turning a test into a...",
+    "Arrive at the scene's transition point.",
+    "Seeking to test his limits and the capabilities of his captors, the protagonist attempts to leave his room. He quickly realizes that the short-legged Watch Dog is incredibly fast and intelligent, turning a test into a...",
     "protagonist | An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeless\" physic...",
     "the_watch_dog | No visual data is available for this character in the provided evidence. A stable visual identity cannot be established at this time. | unknown | unknown"
   ],
@@ -114,24 +138,24 @@
     "artifact_id": "CH005_SC002_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "41b5e8d212cd8d38b96d0f403bf0942075211100",
+    "source_fingerprint": "0b53a82b2958b1990e0e0937a1490df4c7a9a962",
     "created_at_utc": "2026-04-22T00:43:12.165925+00:00",
-    "updated_at_utc": "2026-04-22T17:26:24.449029+00:00",
+    "updated_at_utc": "2026-04-22T23:35:33.873735+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH005_SC002",
-        "version": "8e523e99c6fd92dce668c5f5a3dbf518bf67bbe4"
+        "version": "f061b64b5c30c86d8e3d9d68261d9abde852a3a6"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH005_SC002",
-        "version": "cc61255b6f19428c0dedcfd4608226d792776f35"
+        "version": "cc2a52f94fe48973d7df97bdb8229a50b0bfb795"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH005_SC002",
-        "version": "9346e429d609406b182749745ba7b27307966333"
+        "version": "110532de54910b5cd4abb7cb9515a820443be547"
       }
     ],
     "locked_fields": {},
@@ -156,6 +180,11 @@
         "timestamp_utc": "2026-04-22T17:26:58.736287+00:00",
         "action": "synthesized",
         "source_fingerprint": "41b5e8d212cd8d38b96d0f403bf0942075211100"
+      },
+      {
+        "timestamp_utc": "2026-04-22T23:36:17.175769+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "0b53a82b2958b1990e0e0937a1490df4c7a9a962"
       }
     ]
   }

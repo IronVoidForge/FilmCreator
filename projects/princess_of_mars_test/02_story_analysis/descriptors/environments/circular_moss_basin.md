@@ -54,19 +54,12 @@
 
 ## Review
 
-- generated_field_placeholder_scale
-- generated_field_placeholder_geography
-- generated_field_placeholder_architecture
-- generated_field_placeholder_pathways
-- generated_field_placeholder_materials
-- generated_field_placeholder_weather_or_atmosphere
-- generated_field_placeholder_foreground_midground_background
-- generated_field_placeholder_depth_cues
+- (none)
 
 ## Metadata
 
 - artifact_id: `DESC_ENV_circular_moss_basin`
 - status: `generated`
 - source_fingerprint: `ed30f8d13fd7d2dd633551d5cadae17969a0fd10`
-- created_at_utc: `2026-04-22T17:58:48.547744+00:00`
-- updated_at_utc: `2026-04-22T17:58:48.547744+00:00`
+- created_at_utc: `2026-04-23T00:07:46.577370+00:00`
+- updated_at_utc: `2026-04-23T00:07:46.577370+00:00`

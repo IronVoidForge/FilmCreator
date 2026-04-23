@@ -48,19 +48,12 @@
 
 ## Review
 
-- generated_field_placeholder_scale
-- generated_field_placeholder_geography
-- generated_field_placeholder_architecture
-- generated_field_placeholder_pathways
-- generated_field_placeholder_materials
-- generated_field_placeholder_weather_or_atmosphere
-- generated_field_placeholder_foreground_midground_background
-- generated_field_placeholder_depth_cues
+- (none)
 
 ## Metadata
 
 - artifact_id: `DESC_ENV_vast_cosmic_void`
 - status: `generated`
 - source_fingerprint: `b261847b76819044901f3ae08ebda15fa43499dd`
-- created_at_utc: `2026-04-22T18:04:45.535879+00:00`
-- updated_at_utc: `2026-04-22T18:04:45.535879+00:00`
+- created_at_utc: `2026-04-23T00:12:06.210431+00:00`
+- updated_at_utc: `2026-04-23T00:12:06.210431+00:00`

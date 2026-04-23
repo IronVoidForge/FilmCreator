@@ -52,19 +52,12 @@
 
 ## Review
 
-- generated_field_placeholder_scale
-- generated_field_placeholder_geography
-- generated_field_placeholder_architecture
-- generated_field_placeholder_pathways
-- generated_field_placeholder_materials
-- generated_field_placeholder_weather_or_atmosphere
-- generated_field_placeholder_foreground_midground_background
-- generated_field_placeholder_depth_cues
+- (none)
 
 ## Metadata
 
 - artifact_id: `DESC_ENV_martian_distant_hills`
 - status: `generated`
 - source_fingerprint: `b6d1569208e3a6bb5d93360b024ba025dc53fcea`
-- created_at_utc: `2026-04-22T18:01:57.626687+00:00`
-- updated_at_utc: `2026-04-22T18:01:57.626687+00:00`
+- created_at_utc: `2026-04-23T00:10:03.960950+00:00`
+- updated_at_utc: `2026-04-23T00:10:03.960950+00:00`

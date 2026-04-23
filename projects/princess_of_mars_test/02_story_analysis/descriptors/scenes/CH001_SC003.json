@@ -1,12 +1,12 @@
 {
   "descriptor_id": "DESC_CH001_SC003",
   "canonical_id": "CH001_SC003",
-  "display_name": "SC003",
+  "display_name": "Introduce the primary conflict and physical threat.",
   "entity_type": "scene",
   "status": "canonical",
   "field_values": {
     "chapter_id": "CH001",
-    "scene_title": "SC003",
+    "scene_title": "Introduce the primary conflict and physical threat.",
     "action_summary": "Carter notices suspicious movement in the valley. Suspecting an ambush, he pursues the trail and discovers a large Apache camp on a plateau, leading to a chaotic skirmish.",
     "emotional_beat": "Suspicion $\\rightarrow$ Alertness $\\rightarrow$ Chaos/Adrenaline.",
     "participants": [
@@ -21,15 +21,15 @@
     "location_requirements": [
       "Arizona hills/plateau"
     ],
-    "camera_intent": "POV shots (movement in valley); Wide shots (Apache camp); Medium shots (Carter combat engagement); Handheld/shaky cam (skirmish)",
+    "camera_intent": "Handheld/shaky cam for the skirmish; POV shots of the movement in the valley; wide shots of the Apache camp; medium shots of Carter engaging in combat.",
     "start_state": "scene opens in active continuity",
     "end_state": "scene resolves into the next narrative beat",
     "movement_notes": [
-      "Tracking the specific number of apache_warriors present",
-      "Maintaining consistent direction of pursuit along the trail",
-      "Precise weapon handling (rifles/sidearms) and arrow usage"
+      "Number of warriors",
+      "direction of pursuit",
+      "weapon handling (rifles/sidearms)."
     ],
-    "transition_notes": "# Scene Contract: CH001_SC003\n\n## Production Intent\nEstablish the physical threat and primary conflict through a transition from stealthy observation to high-intensity combat. The sequence requires careful coordination between the lead actor and a large group of extras to manage the scale of the Apache camp and the subsequent skirmish.\n\n## Required Cast\n- John Carter (Younger)\n- apache_warriors (Large group, 19th-century traditional attire, wielding arrows)\n\n## Required Environments\n- Arizona hills/plateau (including remote gold-bearing quartz vein area and high plateau)\n\n## Continuity Constraints\n- **Warrior Count:** Maintain consistent number of warriors throughout the camp discovery and skirmish.\n- **Pathing:** Ensure direction of pursuit remains consistent from valley to plateau.\n- **Weaponry:** Strict adherence to rifle/sidearm handling for Carter and arrow usage for apache_warriors.\n\n## Beat List\n- BT001: Carter observes suspicious movement within the valley.\n- BT002: Suspecting an ambush, Carter pursues the trail toward the plateau.\n- BT003: Carter discovers a large Apache camp on the plateau.\n- BT004: A chaotic skirmish erupts between Carter and the apache_warriors.",
+    "transition_notes": "# Scene Contract: CH001_SC003\n\n- chapter_id: `CH001`\n- scene_title: `Introduce the primary conflict and physical threat.`\n\n## Production Intent\n\nIntroduce the primary conflict and physical threat.\n\n## Storyboard\n\nCarter notices suspicious movement in the valley. Suspecting an ambush, he pursues the trail and discovers a large Apache camp on a plateau, leading to a chaotic skirmish.",
     "dialogue_relevance": "dialogue supports scene intent and continuity",
     "chapter_mentions": [
       "CH001"
@@ -37,7 +37,7 @@
   },
   "supported_field_values": {
     "chapter_id": "CH001",
-    "scene_title": "SC003",
+    "scene_title": "Introduce the primary conflict and physical threat.",
     "action_summary": "Carter notices suspicious movement in the valley. Suspecting an ambush, he pursues the trail and discovers a large Apache camp on a plateau, leading to a chaotic skirmish.",
     "emotional_beat": "Suspicion $\\rightarrow$ Alertness $\\rightarrow$ Chaos/Adrenaline.",
     "participants": [
@@ -47,13 +47,13 @@
     "location_requirements": [
       "Arizona hills/plateau"
     ],
-    "camera_intent": "POV shots (movement in valley); Wide shots (Apache camp); Medium shots (Carter combat engagement); Handheld/shaky cam (skirmish)",
+    "camera_intent": "Handheld/shaky cam for the skirmish; POV shots of the movement in the valley; wide shots of the Apache camp; medium shots of Carter engaging in combat.",
     "movement_notes": [
-      "Tracking the specific number of apache_warriors present",
-      "Maintaining consistent direction of pursuit along the trail",
-      "Precise weapon handling (rifles/sidearms) and arrow usage"
+      "Number of warriors",
+      "direction of pursuit",
+      "weapon handling (rifles/sidearms)."
     ],
-    "transition_notes": "# Scene Contract: CH001_SC003\n\n## Production Intent\nEstablish the physical threat and primary conflict through a transition from stealthy observation to high-intensity combat. The sequence requires careful coordination between the lead actor and a large group of extras to manage the scale of the Apache camp and the subsequent skirmish.\n\n## Required Cast\n- John Carter (Younger)\n- apache_warriors (Large group, 19th-century traditional attire, wielding arrows)\n\n## Required Environments\n- Arizona hills/plateau (including remote gold-bearing quartz vein area and high plateau)\n\n## Continuity Constraints\n- **Warrior Count:** Maintain consistent number of warriors throughout the camp discovery and skirmish.\n- **Pathing:** Ensure direction of pursuit remains consistent from valley to plateau.\n- **Weaponry:** Strict adherence to rifle/sidearm handling for Carter and arrow usage for apache_warriors.\n\n## Beat List\n- BT001: Carter observes suspicious movement within the valley.\n- BT002: Suspecting an ambush, Carter pursues the trail toward the plateau.\n- BT003: Carter discovers a large Apache camp on the plateau.\n- BT004: A chaotic skirmish erupts between Carter and the apache_warriors.",
+    "transition_notes": "# Scene Contract: CH001_SC003\n\n- chapter_id: `CH001`\n- scene_title: `Introduce the primary conflict and physical threat.`\n\n## Production Intent\n\nIntroduce the primary conflict and physical threat.\n\n## Storyboard\n\nCarter notices suspicious movement in the valley. Suspecting an ambush, he pursues the trail and discovers a large Apache camp on a plateau, leading to a chaotic skirmish.",
     "chapter_mentions": [
       "CH001"
     ]
@@ -198,8 +198,7 @@
   "shot_mentions": [
     "CH001_SC003/SH001",
     "CH001_SC003/SH002",
-    "CH001_SC003/SH003",
-    "CH001_SC003/SH004"
+    "CH001_SC003/SH003"
   ],
   "evidence_refs": [
     {
@@ -227,12 +226,6 @@
       "source_path": null
     },
     {
-      "source": "scene_contract",
-      "scene_id": "CH001_SC003",
-      "chapter_id": "CH001",
-      "source_path": null
-    },
-    {
       "source": "scene_contract_beat",
       "scene_id": "CH001_SC003",
       "chapter_id": "CH001",
@@ -245,7 +238,13 @@
       "source_path": null
     },
     {
-      "source": "scene_contract_beat",
+      "source": "scene_contract_continuity",
+      "scene_id": "CH001_SC003",
+      "chapter_id": "CH001",
+      "source_path": null
+    },
+    {
+      "source": "scene_contract_continuity",
       "scene_id": "CH001_SC003",
       "chapter_id": "CH001",
       "source_path": null
@@ -255,11 +254,11 @@
     "Introduce the primary conflict and physical threat.",
     "Carter notices suspicious movement in the valley. Suspecting an ambush, he pursues the trail and discovers a large Apache camp on a plateau, leading to a chaotic skirmish.",
     "Suspicion $\\rightarrow$ Alertness $\\rightarrow$ Chaos/Adrenaline.",
-    "Establish the physical threat and primary conflict through a transition from stealthy observation to high-intensity combat. The sequence requires careful coordination between the lead actor and a large group of extras to manage the scale of the Apache camp...",
-    "# Scene Contract: CH001_SC003 ## Production Intent Establish the physical threat and primary conflict through a transition from stealthy observation to high-intensity combat. The sequence requires careful coordination between the lead actor and a large grou...",
-    "Carter observes suspicious movement within the valley.",
-    "Suspecting an ambush, Carter pursues the trail toward the plateau.",
-    "Carter discovers a large Apache camp on the plateau."
+    "# Scene Contract: CH001_SC003 - chapter_id: `CH001` - scene_title: `Introduce the primary conflict and physical threat.` ## Production Intent Introduce the primary conflict and physical threat. ## Storyboard Carter notices suspicious movement in the valley....",
+    "Carry the emotional arc through: Suspicion $\\rightarrow$ Alertness $\\rightarrow$ Chaos/Adrenaline..",
+    "Land the scene consequence or transition cleanly.",
+    "Number of warriors",
+    "direction of pursuit"
   ],
   "inferred_fields": [
     "key_items",
@@ -267,25 +266,20 @@
     "end_state",
     "dialogue_relevance"
   ],
-  "review_flags": [
-    "generated_field_placeholder_key_items",
-    "generated_field_placeholder_start_state",
-    "generated_field_placeholder_end_state",
-    "generated_field_placeholder_dialogue_relevance"
-  ],
+  "review_flags": [],
   "related_assets": [],
   "metadata": {
     "artifact_id": "DESC_CH001_SC003",
     "artifact_type": "descriptor_scene",
     "status": "generated",
-    "source_fingerprint": "2bf3c6c00189e864dae94cb5e474d274608d4364",
-    "created_at_utc": "2026-04-22T18:06:46.851942+00:00",
-    "updated_at_utc": "2026-04-22T18:06:46.851942+00:00",
+    "source_fingerprint": "2fe0ce2381bedd14c02ed171e31c1b49cc68ddd9",
+    "created_at_utc": "2026-04-23T00:13:19.686163+00:00",
+    "updated_at_utc": "2026-04-23T00:13:19.686163+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH001_SC003",
-        "version": "bc2d8ce803e31a69b6960306e95ee31c79bf08f9"
+        "version": "0e959845aa985c4384138c8c7201e0cad4516eba"
       }
     ],
     "locked_fields": {},

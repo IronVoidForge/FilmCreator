@@ -46,19 +46,12 @@
 
 ## Review
 
-- generated_field_placeholder_scale
-- generated_field_placeholder_geography
-- generated_field_placeholder_architecture
-- generated_field_placeholder_pathways
-- generated_field_placeholder_materials
-- generated_field_placeholder_weather_or_atmosphere
-- generated_field_placeholder_foreground_midground_background
-- generated_field_placeholder_depth_cues
+- (none)
 
 ## Metadata
 
 - artifact_id: `DESC_ENV_martian_city_outskirts`
 - status: `generated`
 - source_fingerprint: `4892b63db800a51636b33b9c19cc87b60db7b8f1`
-- created_at_utc: `2026-04-22T18:00:32.377353+00:00`
-- updated_at_utc: `2026-04-22T18:00:32.377353+00:00`
+- created_at_utc: `2026-04-23T00:09:02.821569+00:00`
+- updated_at_utc: `2026-04-23T00:09:02.821569+00:00`

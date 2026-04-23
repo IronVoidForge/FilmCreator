@@ -9,19 +9,14 @@
 
 - chapter_mentions:
   - CH005
-- costume_layers:
-  - unknown
-- distinctive_features:
-  - unknown
 - entity_kind: individual
-- physical_presence_notes: unknown unknown unknown unknown No visual data is available in the provided evidence to establish a stable identity, physical build, or costume signature for this entity.
-- recurring_accessories:
-  - unknown
-- state_variants:
-  - unknown
+- physical_presence_notes: readable production detail lean athletic build decisive, efficient movement firm, direct presence
+- silhouette_notes: lean athletic build
 
 ## Generated Fields
 
+- age_presence: readable production detail
+- age_range: adult
 - build: lean athletic build
 - costume_materials: worn cloth, leather, and practical field materials
 - expression_tendency: focused and self-controlled
@@ -31,8 +26,12 @@
 - hair_color: dark brown
 - hair_style: practical short hair
 - height: average-tall
+- movement_language: decisive, efficient movement
+- physical_build: lean athletic build
 - posture: upright and ready
+- sex: male
 - skin_tone: weathered light-to-medium skin
+- voice_or_presence_notes: firm, direct presence
 
 ## Coverage
 
@@ -43,7 +42,6 @@
 ## Evidence Summary
 
 - No visual data is available in the provided evidence to establish a stable identity, physical build, or costume signature for this entity.
-- unknown
 - [CH021] CHAPTER XXI (book index hit)
 - [CH003] CHAPTER III (book index hit)
 - [CH009] CHAPTER IX (book index hit)
@@ -58,15 +56,15 @@
 - generated_field_placeholder_eye_color
 - generated_field_placeholder_face_shape
 - generated_field_placeholder_facial_hair
+- generated_field_placeholder_physical_build
 - generated_field_placeholder_costume_materials
 - generated_field_placeholder_posture
 - generated_field_placeholder_expression_tendency
-- sex_unresolved
 
 ## Metadata
 
 - artifact_id: `DESC_CHAR_colossal_ape_creature`
 - status: `generated`
-- source_fingerprint: `3bfe55f0c348bdc2d0fee92b681b664396c79a49`
-- created_at_utc: `2026-04-22T17:45:26.019451+00:00`
-- updated_at_utc: `2026-04-22T17:45:26.019451+00:00`
+- source_fingerprint: `2ebe680ca89584f61731eaa6c8f8cc200bc0592e`
+- created_at_utc: `2026-04-22T23:57:38.570268+00:00`
+- updated_at_utc: `2026-04-22T23:57:38.570268+00:00`

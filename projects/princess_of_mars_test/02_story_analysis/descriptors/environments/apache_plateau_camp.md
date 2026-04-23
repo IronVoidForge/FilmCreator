@@ -52,19 +52,12 @@
 
 ## Review
 
-- generated_field_placeholder_scale
-- generated_field_placeholder_geography
-- generated_field_placeholder_architecture
-- generated_field_placeholder_pathways
-- generated_field_placeholder_materials
-- generated_field_placeholder_weather_or_atmosphere
-- generated_field_placeholder_foreground_midground_background
-- generated_field_placeholder_depth_cues
+- (none)
 
 ## Metadata
 
 - artifact_id: `DESC_ENV_apache_plateau_camp`
 - status: `generated`
 - source_fingerprint: `68fbf0ce399edd3b7d15e27b7547ac24dae1bd98`
-- created_at_utc: `2026-04-22T17:56:01.406978+00:00`
-- updated_at_utc: `2026-04-22T17:56:01.406978+00:00`
+- created_at_utc: `2026-04-23T00:05:43.658855+00:00`
+- updated_at_utc: `2026-04-23T00:05:43.658855+00:00`

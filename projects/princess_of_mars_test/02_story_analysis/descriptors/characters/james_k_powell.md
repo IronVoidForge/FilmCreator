@@ -18,27 +18,33 @@
 - entity_kind: individual
 - identity_baseline: 19th-century mining engineer and former Confederate officer.
 - origin_or_historical_context: 1860s era; frontier/mining setting.
-- physical_presence_notes: 19th-century mining engineer and former Confederate officer. unknown unknown unknown A mid-19th-century man dressed in practical, rugged 1860s attire appropriate for a mining engineer and frontier traveler. In his fin...
+- physical_presence_notes: 19th-century mining engineer and former Confederate officer. readable production detail lean but durable soldier's frame economical military movement with confident balance presence reads as direct, capable, and front...
 - recurring_accessories:
   - Friend and partner to John Carter
 - role: Mining engineer; friend and partner to John Carter.
-- silhouette_notes: Practical 1860s attire suitable for mining engineering and frontier travel. unknown 19th-century mining engineer and former Confederate officer.
+- silhouette_notes: Practical 1860s attire suitable for mining engineering and frontier travel. lean but durable soldier's frame 19th-century mining engineer and former Confederate officer.
 - state_variants:
   - Deceased prospector (riddled with arrows)
 
 ## Generated Fields
 
-- build: lean athletic build
-- costume_materials: worn cloth, leather, and practical field materials
-- expression_tendency: focused and self-controlled
-- eye_color: dark eyes
-- face_shape: angular face
-- facial_hair: clean-shaven or light stubble
-- hair_color: dark brown
-- hair_style: practical short hair
-- height: average-tall
-- posture: upright and ready
-- skin_tone: weathered light-to-medium skin
+- age_presence: readable production detail
+- age_range: adult
+- build: lean battle-tested human build
+- costume_materials: worn cloth, leather, cavalry gear, and salvaged materials
+- expression_tendency: steady, capable, restrained intensity
+- eye_color: dark steady eyes
+- face_shape: weathered angular face
+- facial_hair: clean-shaven or short field stubble
+- hair_color: dark sun-faded hair
+- hair_style: short practical frontier cut
+- height: tall frontier-soldier stature
+- movement_language: economical military movement with confident balance
+- physical_build: lean but durable soldier's frame
+- posture: upright, self-possessed, and ready
+- sex: male
+- skin_tone: sun-weathered human skin
+- voice_or_presence_notes: presence reads as direct, capable, and frontier-hardened
 
 ## Coverage
 
@@ -51,7 +57,6 @@
 - A mid-19th-century man dressed in practical, rugged 1860s attire appropriate for a mining engineer and frontier traveler. In his final recorded state, he appears as a deceased prospector, his body riddled with arrows.
 - Former Confederate officer
 - Practical 1860s attire suitable for mining engineering and frontier travel.
-- unknown
 - Mining engineer; friend and partner to John Carter.
 - [CH001] CHAPTER I (book index hit)
 - [CH003] CHAPTER III (book index hit)
@@ -59,23 +64,12 @@
 
 ## Review
 
-- generated_field_placeholder_height
-- generated_field_placeholder_build
-- generated_field_placeholder_skin_tone
-- generated_field_placeholder_hair_color
-- generated_field_placeholder_hair_style
-- generated_field_placeholder_eye_color
-- generated_field_placeholder_face_shape
-- generated_field_placeholder_facial_hair
-- generated_field_placeholder_costume_materials
-- generated_field_placeholder_posture
-- generated_field_placeholder_expression_tendency
-- sex_unresolved
+- (none)
 
 ## Metadata
 
 - artifact_id: `DESC_CHAR_james_k_powell`
 - status: `generated`
-- source_fingerprint: `babf9f534be2fc0b72d5b5307527aa43c571c229`
-- created_at_utc: `2026-04-22T17:47:22.573273+00:00`
-- updated_at_utc: `2026-04-22T17:47:22.573273+00:00`
+- source_fingerprint: `564c307ada003b1aa8457b62cd77a62e136bbc0b`
+- created_at_utc: `2026-04-22T23:59:08.301576+00:00`
+- updated_at_utc: `2026-04-22T23:59:08.301576+00:00`

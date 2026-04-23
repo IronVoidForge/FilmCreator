@@ -9,19 +9,14 @@
 
 - chapter_mentions:
   - CH006
-- costume_layers:
-  - unknown
-- distinctive_features:
-  - unknown
 - entity_kind: individual
-- physical_presence_notes: unknown unknown unknown unknown No visual data is available in the provided evidence to establish a stable identity, physical build, or costume for this character.
-- recurring_accessories:
-  - unknown
-- state_variants:
-  - unknown
+- physical_presence_notes: readable production detail lean athletic build decisive, efficient movement firm, direct presence
+- silhouette_notes: lean athletic build
 
 ## Generated Fields
 
+- age_presence: readable production detail
+- age_range: adult
 - build: lean athletic build
 - costume_materials: worn cloth, leather, and practical field materials
 - expression_tendency: focused and self-controlled
@@ -31,8 +26,12 @@
 - hair_color: dark brown
 - hair_style: practical short hair
 - height: average-tall
+- movement_language: decisive, efficient movement
+- physical_build: lean athletic build
 - posture: upright and ready
+- sex: male
 - skin_tone: weathered light-to-medium skin
+- voice_or_presence_notes: firm, direct presence
 
 ## Coverage
 
@@ -43,7 +42,6 @@
 ## Evidence Summary
 
 - No visual data is available in the provided evidence to establish a stable identity, physical build, or costume for this character.
-- unknown
 - [CH006 p8-p10] Scarcely had the blow descended when I was confronted with a new danger. The ape’s mate, recovered from its first shock of terror, had returned to the scene of the encounter by way...
 - [CH003] CHAPTER III (book index hit)
 - [CH009] CHAPTER IX (book index hit)
@@ -59,15 +57,15 @@
 - generated_field_placeholder_eye_color
 - generated_field_placeholder_face_shape
 - generated_field_placeholder_facial_hair
+- generated_field_placeholder_physical_build
 - generated_field_placeholder_costume_materials
 - generated_field_placeholder_posture
 - generated_field_placeholder_expression_tendency
-- sex_unresolved
 
 ## Metadata
 
 - artifact_id: `DESC_CHAR_ape_man_2`
 - status: `generated`
-- source_fingerprint: `cd35b78c679bd5f190b50b71fc494229219f876a`
-- created_at_utc: `2026-04-22T17:43:32.469765+00:00`
-- updated_at_utc: `2026-04-22T17:43:32.469765+00:00`
+- source_fingerprint: `33c73efc3d0d98841dd2c4097a5a6b4eaa81d590`
+- created_at_utc: `2026-04-22T23:56:03.211780+00:00`
+- updated_at_utc: `2026-04-22T23:56:03.211780+00:00`

@@ -9,7 +9,7 @@
 - scene_count: `5`
 - dialogue_events: `0`
 - estimated_duration_seconds: `25`
-- transition_note: Introspection / Solemnity. / Establish the transition from the terrestrial Arizona landscape to a supernatural inciti...
+- transition_note: Introspection / Solemnity. / Transition the protagonist from the terrestrial world to the inciting supernatural event.
 
 ## CH002
 

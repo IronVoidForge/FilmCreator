@@ -23,28 +23,30 @@
 - movement_language: Dismounts from an eight-legged mount; capable of making peaceful gestures despite martial appearance.
 - origin_or_historical_context: Martian warrior race.
 - physical_build: 15ft tall, heavy humanoid frame with four arms.
-- physical_presence_notes: A massive, four-armed Martian warrior. unknown 15ft tall, heavy humanoid frame with four arms. Dismounts from an eight-legged mount; capable of making peaceful gestures despite martial appearance. A towering 15ft Mart...
-- recurring_accessories:
-  - unknown
+- physical_presence_notes: A massive, four-armed Martian warrior. readable production detail 15ft tall, heavy humanoid frame with four arms. Dismounts from an eight-legged mount; capable of making peaceful gestures despite martial appearance. p...
 - role: Leader of the Martian warrior race.
-- silhouette_notes: Unarmed carrying a metal armlet as a peace offering. 15ft tall heavy humanoid frame with four arms. A massive four-armed Martian warrior.
+- silhouette_notes: Unarmed, carrying a metal armlet as a peace offering. 15ft tall, heavy humanoid frame with four arms. A massive, four-armed Martian warrior.
 - state_variants:
   - Dismounted/Unarmed (carrying metal armlet)
   - Mounted (on eight-legged mount)
 
 ## Generated Fields
 
-- build: lean athletic build
-- costume_materials: worn cloth, leather, and practical field materials
-- expression_tendency: focused and self-controlled
-- eye_color: dark eyes
-- face_shape: angular face
-- facial_hair: clean-shaven or light stubble
-- hair_color: dark brown
-- hair_style: practical short hair
-- height: average-tall
-- posture: upright and ready
-- skin_tone: weathered light-to-medium skin
+- age_presence: readable production detail
+- age_range: battle-hardened adult
+- build: massive war-ready Martian build
+- costume_materials: hides, leather, metal fittings, and war gear
+- expression_tendency: stern, martial self-command
+- eye_color: hard-set eyes adapted to a harsh martial life
+- face_shape: severe planar Martian facial structure
+- facial_hair: typically none
+- hair_color: scalp mostly bare or minimally haired
+- hair_style: minimal or tightly kept scalp hair
+- height: towering over a human frame
+- posture: upright, dominant, and imposing
+- sex: male-coded Thark warrior
+- skin_tone: deep green skin
+- voice_or_presence_notes: presence reads as severe, disciplined, and intimidating
 
 ## Coverage
 
@@ -65,23 +67,12 @@
 
 ## Review
 
-- generated_field_placeholder_height
-- generated_field_placeholder_build
-- generated_field_placeholder_skin_tone
-- generated_field_placeholder_hair_color
-- generated_field_placeholder_hair_style
-- generated_field_placeholder_eye_color
-- generated_field_placeholder_face_shape
-- generated_field_placeholder_facial_hair
-- generated_field_placeholder_costume_materials
-- generated_field_placeholder_posture
-- generated_field_placeholder_expression_tendency
-- sex_unresolved
+- (none)
 
 ## Metadata
 
 - artifact_id: `DESC_CHAR_martian_leader`
 - status: `generated`
 - source_fingerprint: `83d0c174bb82570abb0595501ed19174a9a9f2ba`
-- created_at_utc: `2026-04-22T17:48:28.891904+00:00`
-- updated_at_utc: `2026-04-22T17:48:28.891904+00:00`
+- created_at_utc: `2026-04-22T23:59:59.373870+00:00`
+- updated_at_utc: `2026-04-22T23:59:59.373870+00:00`

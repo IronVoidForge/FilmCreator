@@ -50,19 +50,12 @@
 
 ## Review
 
-- generated_field_placeholder_scale
-- generated_field_placeholder_geography
-- generated_field_placeholder_architecture
-- generated_field_placeholder_pathways
-- generated_field_placeholder_materials
-- generated_field_placeholder_weather_or_atmosphere
-- generated_field_placeholder_foreground_midground_background
-- generated_field_placeholder_depth_cues
+- (none)
 
 ## Metadata
 
 - artifact_id: `DESC_ENV_deep_space_void`
 - status: `generated`
 - source_fingerprint: `57a09b0db7291bd3c0329beca27affadc4eac592`
-- created_at_utc: `2026-04-22T17:59:12.453411+00:00`
-- updated_at_utc: `2026-04-22T17:59:12.453411+00:00`
+- created_at_utc: `2026-04-23T00:08:04.465258+00:00`
+- updated_at_utc: `2026-04-23T00:08:04.465258+00:00`

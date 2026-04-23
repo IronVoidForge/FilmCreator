@@ -54,19 +54,12 @@
 
 ## Review
 
-- generated_field_placeholder_scale
-- generated_field_placeholder_geography
-- generated_field_placeholder_architecture
-- generated_field_placeholder_pathways
-- generated_field_placeholder_materials
-- generated_field_placeholder_weather_or_atmosphere
-- generated_field_placeholder_foreground_midground_background
-- generated_field_placeholder_depth_cues
+- (none)
 
 ## Metadata
 
 - artifact_id: `DESC_ENV_ancient_martian_city_plaza`
 - status: `generated`
 - source_fingerprint: `e9df0a8b1b0ffcb1d12996850358a545d1a1c9d2`
-- created_at_utc: `2026-04-22T17:55:03.773742+00:00`
-- updated_at_utc: `2026-04-22T17:55:03.773742+00:00`
+- created_at_utc: `2026-04-23T00:05:01.986561+00:00`
+- updated_at_utc: `2026-04-23T00:05:01.986561+00:00`

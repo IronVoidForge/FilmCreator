@@ -39,7 +39,7 @@
 
 - chapter_mentions: CH004
 - scene_mentions: CH004_SC002
-- shot_mentions: CH004_SC002/SH001, CH004_SC002/SH002, CH004_SC002/SH003, CH004_SC002/SH004, CH004_SC003/SH001, CH004_SC003/SH002, CH004_SC003/SH003, CH004_SC003/SH004, CH004_SC003/SH005, CH004_SC004/SH001, CH004_SC004/SH002, CH004_SC004/SH003, CH004_SC004/SH004, CH004_SC005/SH001, CH004_SC005/SH002, CH004_SC005/SH003
+- shot_mentions: CH004_SC002/SH001, CH004_SC002/SH002, CH004_SC002/SH003, CH004_SC003/SH001, CH004_SC003/SH002, CH004_SC003/SH003, CH004_SC004/SH001, CH004_SC004/SH002, CH004_SC004/SH003, CH004_SC005/SH001, CH004_SC005/SH002, CH004_SC005/SH003
 
 ## Evidence Summary
 
@@ -54,19 +54,12 @@
 
 ## Review
 
-- generated_field_placeholder_scale
-- generated_field_placeholder_geography
-- generated_field_placeholder_architecture
-- generated_field_placeholder_pathways
-- generated_field_placeholder_materials
-- generated_field_placeholder_weather_or_atmosphere
-- generated_field_placeholder_foreground_midground_background
-- generated_field_placeholder_depth_cues
+- (none)
 
 ## Metadata
 
 - artifact_id: `DESC_ENV_grand_audience_chamber`
 - status: `generated`
 - source_fingerprint: `4374063c3c2548018deff95be9b817f74fde4c5d`
-- created_at_utc: `2026-04-22T17:59:42.622529+00:00`
-- updated_at_utc: `2026-04-22T17:59:42.622529+00:00`
+- created_at_utc: `2026-04-23T00:08:26.398668+00:00`
+- updated_at_utc: `2026-04-23T00:08:26.398668+00:00`

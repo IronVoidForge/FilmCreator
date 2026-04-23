@@ -9,19 +9,14 @@
 
 - chapter_mentions:
   - CH003
-- costume_layers:
-  - unknown
-- distinctive_features:
-  - unknown
 - entity_kind: individual
-- physical_presence_notes: unknown unknown unknown unknown No visual data is available in the provided evidence to establish a stable identity, physical build, or costume for this entity. The character remains visually undefined.
-- recurring_accessories:
-  - unknown
-- state_variants:
-  - unknown
+- physical_presence_notes: readable production detail lean athletic build decisive, efficient movement firm, direct presence
+- silhouette_notes: lean athletic build
 
 ## Generated Fields
 
+- age_presence: readable production detail
+- age_range: adult
 - build: lean athletic build
 - costume_materials: worn cloth, leather, and practical field materials
 - expression_tendency: focused and self-controlled
@@ -31,8 +26,12 @@
 - hair_color: dark brown
 - hair_style: practical short hair
 - height: average-tall
+- movement_language: decisive, efficient movement
+- physical_build: lean athletic build
 - posture: upright and ready
+- sex: male
 - skin_tone: weathered light-to-medium skin
+- voice_or_presence_notes: firm, direct presence
 
 ## Coverage
 
@@ -43,7 +42,6 @@
 ## Evidence Summary
 
 - No visual data is available in the provided evidence to establish a stable identity, physical build, or costume for this entity. The character remains visually undefined.
-- unknown
 - [CH003 p28-p30] I noted that each was armed with several other weapons in addition to the huge spear which I have described. The weapon which caused me to decide against an attempt at escape by fl...
 - [CH003] CHAPTER III (book index hit)
 - [CH021] CHAPTER XXI (book index hit)
@@ -59,15 +57,15 @@
 - generated_field_placeholder_eye_color
 - generated_field_placeholder_face_shape
 - generated_field_placeholder_facial_hair
+- generated_field_placeholder_physical_build
 - generated_field_placeholder_costume_materials
 - generated_field_placeholder_posture
 - generated_field_placeholder_expression_tendency
-- sex_unresolved
 
 ## Metadata
 
 - artifact_id: `DESC_CHAR_martian_mounts`
 - status: `generated`
-- source_fingerprint: `50e2d59b399967aea81f3b2fa44fa6d014ec205b`
-- created_at_utc: `2026-04-22T17:48:51.265901+00:00`
-- updated_at_utc: `2026-04-22T17:48:51.265901+00:00`
+- source_fingerprint: `c88f7bd6543b8a5928779468ccf5c6734324f858`
+- created_at_utc: `2026-04-23T00:00:19.288043+00:00`
+- updated_at_utc: `2026-04-23T00:00:19.288043+00:00`
