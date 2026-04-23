@@ -4,7 +4,7 @@
 - `CH001_SC002` - Establish the inciting incident and the stakes (the gold claim). (beats=3, cast=2, envs=1)
 - `CH001_SC003` - Introduce the primary conflict and physical threat. (beats=3, cast=2, envs=1)
 - `CH001_SC004` - Raise the emotional stakes and transition to the escape. (beats=3, cast=3, envs=1)
-- `CH001_SC005` - Transition the protagonist from the terrestrial world to the inciting supernatural event. (beats=4, cast=1, envs=2)
+- `CH001_SC005` - Transition the protagonist from the terrestrial world to the inciting supernatural event. (beats=3, cast=1, envs=2)
 - `CH002_SC001` - To establish the protagonist's vulnerability and the supernatural threat within the cave. (beats=3, cast=0, envs=0)
 - `CH002_SC002` - To introduce external conflict and demonstrate the supernatural power of the cave's contents. (beats=3, cast=0, envs=0)
 - `CH002_SC003` - To execute the central supernatural twist and reveal the protagonist's transformation. (beats=3, cast=0, envs=0)

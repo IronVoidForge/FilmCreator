@@ -5,38 +5,39 @@
   "purpose": "To transition from combat to social consequence and character introduction (Tars Tarkas/Sola).",
   "summary": "Martian warriors, including Tars Tarkas, arrive to witness the aftermath. They applaud his strength. Sola approaches with genuine concern for his well-being, providing a soft emotional counterpoint to the warriors' laughter.\n\n**Participating Characters:**\n- The Protagonist\n- Tars Tarkas\n- Sola\n- Martian Warriors",
   "emotional_arc": "Combat adrenaline $\\rightarrow$ Social validation $\\rightarrow$ Vulnerability/Empathy.\n\n**Likely Visual Coverage Families:**\n- Reaction shots of the Martian warriors.\n- Medium two-shots between Sola and the Protagonist.\n- Low-angle shots of Tars Tarkas to establish presence.",
-  "production_intent": "Establish the social hierarchy and emotional aftermath of combat by transitioning from the adrenaline of battle to a moment of communal validation and individual empathy. The scene must contrast the loud, collective approval of the Martian warriors with the quiet, intimate concern shown by Sola toward the protagonist.",
-  "scene_short_description": "Martian warriors arrive at a threshold to witness combat aftermath amidst dead apes.",
-  "scene_primary_scale_story_point": "Tars Tarkas presence establishes dominance over the warrior group.",
+  "production_intent": "Establish the social hierarchy and character introduction of Tars Tarkas and Sola through the aftermath of combat. The scene must transition from high-adrenaline violence to a moment of communal validation followed by intimate emotional vulnerability.",
+  "scene_short_description": "Martian warriors arrive at a threshold to witness combat aftermath and applaud strength.",
+  "scene_primary_scale_story_point": "Tars Tarkas presence established via low-angle dominance over the group.",
   "scene_required_anchor_catalog": [
     "Dead apes",
     "Plaza threshold"
   ],
-  "scene_start_state": "Protagonist stands amidst the immediate aftermath of combat.",
-  "scene_end_state": "Sola provides a soft emotional counterpoint to the warriors' laughter.",
-  "dominant_action_line": "Warriors arrive and applaud strength, followed by Sola approaching with concern.",
+  "scene_start_state": "Protagonist stands amidst dead apes in a state of combat adrenaline.",
+  "scene_end_state": "Sola provides emotional counterpoint to warrior laughter through close proximity to protagonist.",
+  "dominant_action_line": "Warriors arrive and applaud -> Tars Tarkas presence is felt -> Sola approaches with concern.",
   "scene_spatial_layout": [
-    "Interior chamber leading out to an open plaza threshold",
-    "Grouping of warriors around the combat site"
+    "Interior chamber leading out to a plaza threshold",
+    "Open space occupied by dead apes"
   ],
   "character_spatial_map": [
     "Protagonist centered near dead apes",
-    "Tars Tarkas and warriors entering from plaza threshold",
-    "Sola moving from warrior group toward protagonist"
+    "Martian warriors entering from plaza threshold",
+    "Tars Tarkas positioned as a dominant figure within the warrior group",
+    "Sola approaching protagonist from the periphery"
   ],
   "environment_subzones": [
     "Interior chamber",
     "Plaza threshold"
   ],
   "entry_vectors": [
-    "Warriors enter via Plaza threshold"
+    "Plaza threshold (Warriors/Tars Tarkas)"
   ],
   "exit_vectors": [
-    "None specified"
+    "Interior chamber (Sola/Protagonist)"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Arrival of warriors and shift to social validation",
-    "BT002 -> BT003: Shift from collective laughter to individual empathy"
+    "BT001 -> BT002: Warriors enter and applaud",
+    "BT002 -> BT003: Sola breaks the social tension with empathy"
   ],
   "characters_required": [],
   "environments_required": [
@@ -47,8 +48,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     }
   ],
   "continuity_constraints": [
@@ -56,17 +57,37 @@
     "Proximity of dead apes to the character group must be maintained"
   ],
   "visual_coverage_families": [
-    "Reaction shots of the Martian warriors",
+    "Reaction shots of Martian warriors",
     "Medium two-shots between Sola and the Protagonist",
     "Low-angle shots of Tars Tarkas"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Arrival of Martian warriors and Tars Tarkas to witness the aftermath",
+      "summary": "Arrival of Martian warriors to witness aftermath",
       "purpose": "",
-      "action_start": "Warriors appear at plaza threshold",
-      "action_end": "Warriors settle into observation positions",
+      "action_start": "Warriors enter from plaza",
+      "action_end": "Warriors halt at threshold",
+      "active_subjects": [
+        "Martian Warriors"
+      ],
+      "passive_subjects": [
+        "Protagonist"
+      ],
+      "spatial_context": "Plaza threshold/Chamber entrance",
+      "blocking_hint": "Group movement toward the center",
+      "environment_subzone": "Plaza threshold",
+      "continuity_focus": "Blood/dirt on protagonist and dead apes",
+      "coverage_hint": "Wide reaction shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Social validation through applause",
+      "purpose": "",
+      "action_start": "Warriors begin applauding",
+      "action_end": "Laughter and applause peak",
       "active_subjects": [
         "Tars Tarkas",
         "Martian Warriors"
@@ -74,41 +95,20 @@
       "passive_subjects": [
         "Protagonist"
       ],
-      "spatial_context": "Plaza threshold/Interior chamber edge",
-      "blocking_hint": "Warriors enter from the exterior plaza towards the interior",
-      "environment_subzone": "Plaza threshold",
-      "continuity_focus": "Warrior group size and Tars Tarkas position",
-      "coverage_hint": "Low-angle shots of Tars Tarkas",
-      "coverage_priority": "high",
-      "handoff_to_next": "BT002"
-    },
-    {
-      "beat_id": "BT002",
-      "summary": "Social validation through collective applause/laughter",
-      "purpose": "",
-      "action_start": "Warriors observe the combat site",
-      "action_end": "Laughter and applause peak",
-      "active_subjects": [
-        "Martian Warriors"
-      ],
-      "passive_subjects": [
-        "Protagonist",
-        "Tars Tarkas"
-      ],
       "spatial_context": "Interior chamber near dead apes",
-      "blocking_hint": "Warriors cluster around the aftermath area",
+      "blocking_hint": "Warriors grouped around Tars Tarkas",
       "environment_subzone": "Interior chamber",
-      "continuity_focus": "Proximity of dead apes to warriors; Protagonist blood/dirt levels",
-      "coverage_hint": "Reaction shots of Martian warriors",
+      "continuity_focus": "Proximity of warriors to dead apes",
+      "coverage_hint": "Low-angle shots of Tars Tarkas",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Sola provides emotional counterpoint via individual concern",
+      "summary": "Sola's empathetic approach",
       "purpose": "",
-      "action_start": "Warriors are laughing",
-      "action_end": "Sola is in close proximity to the protagonist",
+      "action_start": "Laughter continues in background",
+      "action_end": "Sola reaches protagonist",
       "active_subjects": [
         "Sola",
         "Protagonist"
@@ -116,11 +116,11 @@
       "passive_subjects": [
         "Martian Warriors"
       ],
-      "spatial_context": "Interior chamber near protagonist",
-      "blocking_hint": "Sola breaks from the group to approach the protagonist",
+      "spatial_context": "Interior chamber",
+      "blocking_hint": "Sola moves through the group toward protagonist",
       "environment_subzone": "Interior chamber",
-      "continuity_focus": "Protagonist blood/dirt levels; Sola's proximity to protagonist",
-      "coverage_hint": "Medium two-shots between Sola and Protagonist",
+      "continuity_focus": "Protagonist's physical state (dirt/blood)",
+      "coverage_hint": "Medium two-shots",
       "coverage_priority": "high",
       "handoff_to_next": "End of scene"
     }
@@ -129,25 +129,25 @@
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish presence",
-      "planned_shot_moment_summary": "Warriors arrive at the threshold observing the scene",
-      "primary_subject_seed": "Tars Tarkas",
+      "narrative_function": "establish aftermath",
+      "planned_shot_moment_summary": "Warriors arrive at threshold seeing dead apes",
+      "primary_subject_seed": "Martian Warriors",
       "secondary_subjects_seed": [
-        "Martian Warriors"
+        "Protagonist"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "Plaza threshold",
-      "planned_shot_required_anchor_1": "Plaza threshold",
-      "planned_shot_scale_proof_detail": "Low angle height vs warrior group",
-      "start_state_seed": "Warriors appearing at threshold",
-      "end_state_seed": "Warriors standing in observation",
-      "action_seed": "Walking into view and observing",
+      "planned_shot_required_anchor_1": "Dead apes",
+      "planned_shot_scale_proof_detail": "Proximity of warriors to corpses",
+      "start_state_seed": "Warriors entering frame",
+      "end_state_seed": "Warriors stopping at threshold",
+      "action_seed": "Walking and observing",
       "blocking_seed": [
-        "Entering from plaza to chamber edge"
+        "Group movement from plaza into chamber"
       ],
       "shot_size": "wide",
-      "camera_angle": "low_angle",
+      "camera_angle": "eye_level",
       "lens_family": "wide",
       "camera_motion": "pan",
       "zoom_behavior": "none",
@@ -158,37 +158,37 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "reaction/validation",
-      "planned_shot_moment_summary": "Warriors applaud the protagonist's strength",
-      "primary_subject_seed": "Martian Warriors",
+      "narrative_function": "establish dominance",
+      "planned_shot_moment_summary": "Tars Tarkas is recognized among the warriors",
+      "primary_subject_seed": "Tars Tarkas",
       "secondary_subjects_seed": [
-        "Protagonist"
+        "Martian Warriors"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "Interior chamber",
-      "planned_shot_required_anchor_1": "Dead apes",
-      "planned_shot_scale_proof_detail": "Proximity to dead apes",
-      "start_state_seed": "Warriors observing",
-      "end_state_seed": "Warriors applauding/laughing",
-      "action_seed": "Applauding and laughing",
+      "environment_subzone": "Plaza threshold",
+      "planned_shot_required_anchor_1": "Plaza threshold",
+      "planned_shot_scale_proof_detail": "Low angle height vs Protagonist",
+      "start_state_seed": "Warriors applauding",
+      "end_state_seed": "Tars Tarkas standing still",
+      "action_seed": "Applauding and observing",
       "blocking_seed": [
-        "Grouped near the combat site"
+        "Tars Tarkas leading the group"
       ],
       "shot_size": "medium_full",
-      "camera_angle": "eye_level",
+      "camera_angle": "low_angle",
       "lens_family": "normal",
       "camera_motion": "locked_off",
-      "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
-      "lighting_style": "diffuse_ambient",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
       "primary_subject_angle": "front"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "emotional counterpoint",
-      "planned_shot_moment_summary": "Sola approaches the protagonist with concern",
+      "narrative_function": "emotional shift",
+      "planned_shot_moment_summary": "Sola approaches the protagonist",
       "primary_subject_seed": "Sola",
       "secondary_subjects_seed": [
         "Protagonist"
@@ -197,19 +197,19 @@
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "Interior chamber",
       "planned_shot_required_anchor_1": "Protagonist",
-      "planned_shot_scale_proof_detail": "Medium two-shot distance",
+      "planned_shot_scale_proof_detail": "Physical distance between Sola and Protagonist",
       "start_state_seed": "Warriors laughing in background",
-      "end_state_seed": "Sola and Protagonist in close proximity",
+      "end_state_seed": "Sola near Protagonist",
       "action_seed": "Approaching with concern",
       "blocking_seed": [
-        "Moving from group to protagonist"
+        "Sola moving toward protagonist"
       ],
       "shot_size": "medium",
       "camera_angle": "eye_level",
       "lens_family": "portrait",
       "camera_motion": "push_in",
-      "zoom_behavior": "subtle_in",
-      "focus_strategy": "shallow_subject",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
       "lighting_style": "soft_even",
       "primary_subject_angle": "front_three_quarter_left"
     }
@@ -269,14 +269,14 @@
     "[CH006] CHAPTER VI (book index hit)",
     "[CH007] CHAPTER VII (book index hit)"
   ],
-  "storyboard_markdown": "# Scene Contract: CH006_SC003\n\n## Production Intent\nEstablish the social hierarchy and emotional aftermath of combat by transitioning from the adrenaline of battle to a moment of communal validation and individual empathy. The scene must contrast the loud, collective approval of the Martian warriors with the quiet, intimate concern shown by Sola toward the protagonist.\n\n## Required Cast\n- The Protagonist\n- Tars Tarkas\n- Sola\n- Martian Warriors\n\n## Required Environments\n- Interior chamber/Plaza threshold\n\n## Continuity Constraints\n- Dirt and blood levels on the protagonist must remain consistent with combat aftermath\n- Proximity of dead apes to the character group must be maintained\n\n## Beat List\n- BT001: Arrival of Martian warriors and Tars Tarkas to witness the aftermath.\n- BT002: Social validation through collective applause/laughter.\n- BT003: Sola provides emotional counterpoint via individual concern.",
+  "storyboard_markdown": "# Scene Contract: CH006_SC003\n\n## Production Intent\nEstablish the social hierarchy and character introduction of Tars Tarkas and Sola through the aftermath of combat. The scene must transition from high-adrenaline violence to a moment of communal validation followed by intimate emotional vulnerability.\n\n## Required Cast\n- The Protagonist\n- Tars Tarkas\n- Sola\n- Martian Warriors\n\n## Required Environments\n- Interior chamber/Plaza threshold\n\n## Continuity Constraints\n- Dirt and blood levels on the protagonist must remain consistent with combat aftermath\n- Proximity of dead apes to the character group must be maintained\n\n## Beat List\n- BT001: Arrival of Martian warriors to witness aftermath\n- BT002: Social validation through applause\n- BT003: Sola's empathetic approach",
   "metadata": {
     "artifact_id": "CH006_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "956cad4e28b6fff4c3a4e46fedb660e9cfccac03",
+    "source_fingerprint": "e11de748bf48e502ed8bcf275f11cb7874a3a0ef",
     "created_at_utc": "2026-04-21T23:25:06.301665+00:00",
-    "updated_at_utc": "2026-04-23T18:13:49.646008+00:00",
+    "updated_at_utc": "2026-04-23T18:57:44.167578+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -291,7 +291,7 @@
       {
         "dependency_type": "environment_resolutions",
         "dependency_id": "CH006_SC003",
-        "version": "815a0ba60094ce746a376ee9b09a24cebbbe25a9"
+        "version": "3de701e71a938ae667011ca383859662df4bc578"
       }
     ],
     "locked_fields": {},
@@ -336,6 +336,11 @@
         "timestamp_utc": "2026-04-23T18:14:17.269839+00:00",
         "action": "synthesized",
         "source_fingerprint": "956cad4e28b6fff4c3a4e46fedb660e9cfccac03"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:58:27.004008+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "e11de748bf48e502ed8bcf275f11cb7874a3a0ef"
       }
     ]
   }

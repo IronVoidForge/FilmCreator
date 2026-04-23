@@ -5,72 +5,68 @@
   "shot_order": 1,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "primary_subject": "John Carter (Younger)",
-  "secondary_subjects": [
-    "[]"
-  ],
-  "shot_moment_summary": "Carter spots movement in the valley",
-  "start_state": "Carter looking out",
-  "end_state": "Carter focusing on movement",
+  "primary_subject": "john_carter",
+  "secondary_subjects": [],
+  "shot_moment_summary": "movement detected in valley",
+  "start_state": "carter looking down",
+  "end_state": "carter spotting movement",
   "action_during_shot": "scanning horizon",
-  "action_continues_from": "John Carter (Younger) observing suspicious movement from a distance in the valley.",
+  "action_continues_from": "john_carter observing the valley floor from a distance.",
   "action_hands_off_to": "BT002",
-  "shot_size": "wide",
+  "shot_size": "medium_close",
   "camera_angle": "eye_level",
   "lens_family": "telephoto",
   "camera_motion": "pan",
   "zoom_behavior": "none",
-  "focus_strategy": "deep_focus",
+  "focus_strategy": "shallow_subject",
   "lighting_style": "diffuse_ambient",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
   "primary_subject_angle": "profile_left",
-  "visible_primary_subject_id": "apache_warriors",
-  "visible_secondary_subject_ids": [
-    "[]"
-  ],
-  "primary_subject_frame_position": "midground inside Arizona valley",
-  "primary_subject_scale_relation": "valley depth vs character size",
+  "visible_primary_subject_id": "john_carter",
+  "visible_secondary_subject_ids": [],
+  "primary_subject_frame_position": "foreground inside Arizona hills/valley",
+  "primary_subject_scale_relation": "distance between carter and valley floor",
   "primary_subject_facing_direction": "profile left toward the scene action",
-  "primary_subject_pose_description": "Carter looking out",
-  "subject_relation_summary": "John Carter (Younger) carries the frame alone",
-  "required_environment_anchor_1": "remote gold-bearing quartz vein",
-  "required_scale_proof_detail": "valley depth vs character size",
-  "camera_package_description": "wide, eye level, telephoto lens, pan, deep focus, diffuse ambient",
+  "primary_subject_pose_description": "carter looking down",
+  "subject_relation_summary": "john_carter carries the frame alone",
+  "required_environment_anchor_1": "quartz vein",
+  "required_scale_proof_detail": "distance between carter and valley floor",
+  "camera_package_description": "medium-close, eye level, telephoto lens, pan, shallow subject, diffuse ambient",
   "subject_blocking": [
-    "standing at ridge edge",
-    "Stationary at ridge"
+    "stationary observation",
+    "stationary at ridge"
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the Arizona valley.",
+    "Camera anchors the action inside the Arizona hills/valley.",
     "Background depth should keep Arizona hills/plateau legible as the location anchor."
   ],
   "gaze_directions": [
-    "John Carter (Younger) focuses toward the active scene action."
+    "john_carter focuses toward the active scene action."
   ],
-  "environment_subzone": "Arizona valley",
+  "environment_subzone": "Arizona hills/valley",
   "key_visible_environment_features": [
-    "Arizona valley"
+    "quartz vein"
   ],
-  "continuity_from_previous_shot": "John Carter (Younger) observing suspicious movement from a distance in the valley.",
+  "continuity_from_previous_shot": "john_carter observing the valley floor from a distance.",
   "continuity_to_next_shot": "BT002",
-  "pose_anchor_frame": "Carter looking out",
-  "pose_end_frame": "Carter focusing on movement",
-  "shot_title": "Establishing Wide 1: Detection of movement",
+  "pose_anchor_frame": "carter looking down",
+  "pose_end_frame": "carter spotting movement",
+  "shot_title": "Detection of movement",
   "shot_type": "establishing_wide",
   "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across Arizona hills/plateau with apache_warriors placed for immediate spatial orientation.",
+  "composition": "Wide composition across Arizona hills/plateau with john_carter placed for immediate spatial orientation.",
   "target_seconds": 5.5,
   "characters_in_frame": [
     {
-      "label": "Apache Warriors",
-      "canonical_id": "apache_warriors",
-      "display_name": "apache_warriors",
+      "label": "John Carter (Younger)",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
       "status": "canonical",
-      "entity_kind": "group",
-      "resolution_score": 186,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'apache_warriors'"
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
     }
   ],
   "environment": {
@@ -81,7 +77,7 @@
     "entity_kind": "environment",
     "resolution_score": 8,
     "source_path": "",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "notes": "Low-confidence environment match requires review."
   },
   "beat_ids": [
     "BT001"
@@ -91,7 +87,7 @@
     "Direction of pursuit from valley to plateau",
     "Weapon handling (rifles and sidearms)"
   ],
-  "prompt_seed": "Establishing Wide 1: Detection of movement. establishing_wide. size=wide. angle=eye_level. lens=telephoto. motion=pan. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=profile_left. Wide establishing frame with a steady or lightly drifting camera. Wide composition across Ari...",
+  "prompt_seed": "Establishing Wide 1: Detection of movement. establishing_wide. size=medium_close. angle=eye_level. lens=telephoto. motion=pan. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=profile_left.",
   "shot_notes": "Detection of movement",
   "evidence_refs": [
     {
@@ -146,40 +142,41 @@
     {
       "source": "character_bible",
       "chapter_id": "CH001",
-      "canonical_id": "apache_warriors"
+      "canonical_id": "john_carter"
     }
   ],
   "evidence_summary": [
-    "Establish the physical threat of the Apache warriors through a transition from quiet observation to high-intensity combat. The sequence must move from a wide, observational perspective in the valley to a tight, chaotic handheld skirmish on the plateau.",
+    "Establish the physical threat of the Apache presence through a transition from quiet observation to high-intensity combat. The sequence must move from controlled, observational shots in the valley to chaotic, handheld movement during the skirmish on the pla...",
     "Carter notices suspicious movement in the valley. Suspecting an ambush, he pursues the trail and discovers a large Apache camp on a plateau, leading to a chaotic skirmish.",
     "Suspicion $\\rightarrow$ Alertness $\\rightarrow$ Chaos/Adrenaline.",
-    "John Carter (Younger) observing suspicious movement from a distance in the valley.",
-    "Chaotic skirmish between John Carter (Younger) and apache_warriors on the plateau.",
-    "Pursuit of a trail leading to an ambush/skirmish encounter.",
+    "john_carter observing the valley floor from a distance.",
+    "chaotic skirmish erupting amidst the Apache camp.",
+    "Tracking suspicious movement through terrain into an ambush/skirmish scenario.",
+    "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in...",
     "apache_warriors | A large group of hostile 19th-century indigenous warriors characterized by their traditional Apache attire. They function as a collective unit, primarily seen engaged in ambush tactics and active skirmishes while wielding arrows. | Traditi..."
   ],
   "metadata": {
     "artifact_id": "CH001_SC003_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "d7dd4417afcde41067c5ca7fa07d42f02ca3fc0a",
+    "source_fingerprint": "71f404736442000b18397530165f298f185dcd5d",
     "created_at_utc": "2026-04-21T23:59:01.801021+00:00",
-    "updated_at_utc": "2026-04-23T18:18:52.035305+00:00",
+    "updated_at_utc": "2026-04-23T19:05:37.064320+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH001_SC003",
-        "version": "f4f0d7ca2292e24891a0f5a35c7455bae2ed311b"
+        "version": "3d2d8d11e87979033fd1fd0e9ee5ac2e13b6daa9"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH001_SC003",
-        "version": "49abebeaba204c6115632cdc675c2c96583da218"
+        "version": "58a7d14b029d7502abfcbcd4417d02dead2c2df5"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH001_SC003",
-        "version": "81fa008cc53c19801030772de5872bfcc93e8cf8"
+        "version": "fcfb60d84fec19907cc0ef46b130ba587c1e4d33"
       }
     ],
     "locked_fields": {},
@@ -224,6 +221,11 @@
         "timestamp_utc": "2026-04-23T18:19:43.863908+00:00",
         "action": "synthesized",
         "source_fingerprint": "d7dd4417afcde41067c5ca7fa07d42f02ca3fc0a"
+      },
+      {
+        "timestamp_utc": "2026-04-23T19:06:43.866456+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "71f404736442000b18397530165f298f185dcd5d"
       }
     ]
   }

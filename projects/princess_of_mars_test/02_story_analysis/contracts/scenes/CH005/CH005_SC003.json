@@ -5,27 +5,28 @@
   "purpose": "To escalate the tension through a high-stakes pursuit and showcase the protagonist's agility.",
   "summary": "A frantic chase ensues through the deserted streets of the Martian city. The protagonist uses his superior jumping ability to navigate the urban landscape, attempting to stay ahead of the relentless Watch Dog.",
   "emotional_arc": "Adrenaline/Exertion $\\rightarrow$ Desperation.\n\n**Likely Visual Coverage Families:**\n- Wide sweeping shots of the Martian architecture.\n- Dynamic tracking shots (gimbal or drone) following the chase.\n- POV shots from the protagonist jumping between structures.",
-  "production_intent": "Execute a high-velocity pursuit through Martian urban architecture to demonstrate the protagonist's low-gravity leaping capabilities and escalating desperation.",
+  "production_intent": "Execute a high-velocity chase sequence through Martian urban architecture to demonstrate the protagonist's low-gravity leaping capabilities and escalating desperation as they are pursued by an unseen threat.",
   "scene_short_description": "A high-speed chase through deserted Martian streets involving extreme leaps across urban gaps.",
-  "scene_primary_scale_story_point": "Verticality and distance between architectural structures.",
+  "scene_primary_scale_story_point": "Verticality and gap distance between structures.",
   "scene_required_anchor_catalog": [
-    "Street corner intersections",
-    "Building edges/rooflines"
+    "Building edges/ledges",
+    "Street corners",
+    "Urban gaps"
   ],
-  "scene_start_state": "protagonist sprinting through a deserted street, looking back at the approaching threat.",
-  "scene_end_state": "protagonist trapped or cornered, breathing heavily with visible desperation.",
-  "dominant_action_line": "A frantic pursuit utilizing vertical urban navigation to evade a relentless pursuer.",
+  "scene_start_state": "protagonist sprinting through a deserted street, preparing for a leap.",
+  "scene_end_state": "protagonist cornered or struggling to maintain momentum under pressure.",
+  "dominant_action_line": "A frantic pursuit utilizing vertical urban navigation.",
   "scene_spatial_layout": [
     "Multi-level Martian city streets",
     "Wide gaps between building structures"
   ],
   "character_spatial_map": [
-    "protagonist: Moving vertically and horizontally across rooftops and street levels",
-    "the_watch_dog: Pursuing from ground level or following via street corners"
+    "protagonist: moving vertically and horizontally across rooftops/ledges",
+    "the_watch_dog: pursuing from street level or following paths"
   ],
   "environment_subzones": [
     "Deserted Martian city streets",
-    "Building rooftops/edges"
+    "Building exteriors/rooftops"
   ],
   "entry_vectors": [
     "Street level corridors"
@@ -34,8 +35,8 @@
     "Vertical leaps to higher structures"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Jump from street to structure",
-    "BT002 -> BT003: Transition from agility to exhaustion/cornering"
+    "BT001 -> BT002: jump completion into sprint",
+    "BT002 -> BT003: cornering and pursuit proximity"
   ],
   "characters_required": [
     {
@@ -44,9 +45,9 @@
       "display_name": "protagonist",
       "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 176,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
     },
     {
       "label": "The Watch Dog",
@@ -54,9 +55,9 @@
       "display_name": "the_watch_dog",
       "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 176,
+      "resolution_score": 138,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/the_watch_dog.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'watch_dog'"
+      "notes": "Direct registry match for 'the_watch_dog'."
     }
   ],
   "environments_required": [
@@ -67,8 +68,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     }
   ],
   "continuity_constraints": [
@@ -83,61 +84,57 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "The initial sprint through the streets",
+      "summary": "Initial sprint and leap",
       "purpose": "",
-      "action_start": "protagonist running in street",
-      "action_end": "protagonist reaching building edge",
+      "action_start": "sprint in street",
+      "action_end": "launch from ledge",
       "active_subjects": [
-        "protagonist",
-        "the_watch_dog"
+        "protagonist"
       ],
       "passive_subjects": [],
       "spatial_context": "Deserted Martian city streets",
-      "blocking_hint": "running down center of street",
+      "blocking_hint": "protagonist running toward building edge",
       "environment_subzone": "Deserted Martian city streets",
-      "continuity_focus": "timing of the_watch_dog arrival at corners",
-      "coverage_hint": "wide tracking shot",
+      "continuity_focus": "jump distance/height",
+      "coverage_hint": "wide sweeping shots",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "The vertical escape jump",
+      "summary": "Navigating the urban landscape via jumps",
       "purpose": "",
-      "action_start": "protagonist running at ledge",
-      "action_end": "protagonist landing on roof",
+      "action_start": "mid-air leap",
+      "action_end": "landing on rooftop",
       "active_subjects": [
         "protagonist"
       ],
-      "passive_subjects": [
-        "the_watch_dog"
-      ],
-      "spatial_context": "Between buildings",
-      "blocking_hint": "leaping from one structure to another",
-      "environment_subzone": "Building rooftops/edges",
-      "continuity_focus": "height and distance of jump",
-      "coverage_hint": "POV or low angle tracking",
-      "coverage_priority": "high",
+      "passive_subjects": [],
+      "spatial_context": "Building exteriors/rooftops",
+      "blocking_hint": "protagonist jumping between structures",
+      "environment_subzone": "Building exteriors/rooftops",
+      "continuity_focus": "jump distance/height",
+      "coverage_hint": "POV shots",
+      "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "The realization of desperation",
+      "summary": "The relentless pursuit closes in",
       "purpose": "",
-      "action_start": "protagonist landing heavily",
-      "action_end": "protagonist cornered on roof",
+      "action_start": "protagonist landing",
+      "action_end": "protagonist looking back in desperation",
       "active_subjects": [
-        "protagonist"
-      ],
-      "passive_subjects": [
+        "protagonist",
         "the_watch_dog"
       ],
-      "spatial_context": "Rooftop edge",
-      "blocking_hint": "protagonist panting/looking down",
-      "environment_subzone": "Building rooftops/edges",
-      "continuity_focus": "proximity of the_watch_dog below",
-      "coverage_hint": "medium shot or POV",
-      "coverage_priority": "medium",
+      "passive_subjects": [],
+      "spatial_context": "Street corners and rooftops",
+      "blocking_hint": "the_watch_dog appearing at street level",
+      "environment_subzone": "Deserted Martian city streets",
+      "continuity_focus": "timing of dog arrival",
+      "coverage_hint": "dynamic tracking shots",
+      "coverage_priority": "high",
       "handoff_to_next": "end"
     }
   ],
@@ -145,85 +142,83 @@
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish chase",
-      "planned_shot_moment_summary": "protagonist sprints down a wide street",
+      "narrative_function": "establish scale",
+      "planned_shot_moment_summary": "protagonist sprints toward a gap",
       "primary_subject_seed": "protagonist",
-      "secondary_subjects_seed": [
-        "the_watch_dog"
-      ],
+      "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "Deserted Martian city streets",
-      "planned_shot_required_anchor_1": "Street corner intersections",
-      "planned_shot_scale_proof_detail": "Distance between protagonist and the_watch_dog",
-      "start_state_seed": "protagonist running",
-      "end_state_seed": "protagonist approaching a building edge",
-      "action_seed": "sprinting",
+      "planned_shot_required_anchor_1": "Building edges/ledges",
+      "planned_shot_scale_proof_detail": "Distance of jump vs building height",
+      "start_state_seed": "sprint in street",
+      "end_state_seed": "launch from ledge",
+      "action_seed": "running and leaping",
       "blocking_seed": [
-        "running down center of street"
+        "protagonist moving toward edge"
       ],
       "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show agility",
+      "planned_shot_moment_summary": "POV of the jump across a gap",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "Building exteriors/rooftops",
+      "planned_shot_required_anchor_1": "Urban gaps",
+      "planned_shot_scale_proof_detail": "Height of fall/jump",
+      "start_state_seed": "mid-air launch",
+      "end_state_seed": "landing on ledge",
+      "action_seed": "leaping through air",
+      "blocking_seed": [
+        "protagonist moving across void"
+      ],
+      "shot_size": "full",
       "camera_angle": "eye_level",
       "lens_family": "wide",
       "camera_motion": "track",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "rear_three_quarter_left"
-    },
-    {
-      "planned_shot_id": "SH002",
-      "beat_id": "BT002",
-      "narrative_function": "showcase agility",
-      "planned_shot_moment_summary": "protagonist leaps across a massive gap between buildings",
-      "primary_subject_seed": "protagonist",
-      "secondary_subjects_seed": [],
-      "subject_visibility": "on_screen",
-      "narration_mode": "none",
-      "environment_subzone": "Building rooftops/edges",
-      "planned_shot_required_anchor_1": "Building edges/rooflines",
-      "planned_shot_scale_proof_detail": "Height of the jump relative to street below",
-      "start_state_seed": "running at edge",
-      "end_state_seed": "landing on opposite roof",
-      "action_seed": "leaping",
-      "blocking_seed": [
-        "jumping from one ledge to another"
-      ],
-      "shot_size": "full",
-      "camera_angle": "low_angle",
-      "lens_family": "ultra_wide",
-      "camera_motion": "track",
-      "zoom_behavior": "none",
-      "focus_strategy": "shallow_subject",
-      "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "profile_left"
+      "primary_subject_angle": "front"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "escalate tension",
-      "planned_shot_moment_summary": "POV of the jump landing and seeing the pursuer approaching",
-      "primary_subject_seed": "protagonist",
+      "planned_shot_moment_summary": "the_watch_dog appearing at a corner",
+      "primary_subject_seed": "the_watch_dog",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "Building rooftops/edges",
-      "planned_shot_required_anchor_1": "Building edges/rooflines",
-      "planned_shot_scale_proof_detail": "Proximity of the_watch_dog to corner",
-      "start_state_seed": "landing on roof",
-      "end_state_seed": "looking down at street",
-      "action_seed": "stumbling/looking back",
+      "environment_subzone": "Deserted Martian city streets",
+      "planned_shot_required_anchor_1": "Street corners",
+      "planned_shot_scale_proof_detail": "Timing of arrival vs protagonist position",
+      "start_state_seed": "corner visible",
+      "end_state_seed": "threat enters frame",
+      "action_seed": "rapidly approaching corner",
       "blocking_seed": [
-        "protagonist crouched on ledge"
+        "the_watch_dog moving through street"
       ],
       "shot_size": "medium_full",
-      "camera_angle": "high_angle",
-      "lens_family": "wide",
-      "camera_motion": "handheld",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "pan",
       "zoom_behavior": "none",
-      "focus_strategy": "rack_focus",
-      "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front_three_quarter_right"
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_left"
     }
   ],
   "unresolved_questions": [
@@ -293,14 +288,14 @@
     "Character protagonist: An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeles...",
     "Character the_watch_dog: No visual data is available for this character in the provided evidence. A stable visual identity cannot be established at this time."
   ],
-  "storyboard_markdown": "# Scene Contract: CH005_SC003\n\n## Production Intent\nExecute a high-velocity pursuit through Martian urban architecture to demonstrate the protagonist's low-gravity leaping capabilities and escalating desperation.\n\n## Required Cast\n- protagonist (Earthman, extreme agility/high-leaping)\n- the_watch_dog (Relentless pursuer; visual identity TBD)\n\n## Required Environments\n- Deserted Martian city streets\n- Building rooftops/edges\n\n## Continuity Constraints\n- Precise height and distance of jumps relative to gravity\n- Timing of the_watch_dog arrival at street corners\n\n## Beat List\n- BT001: The initial sprint through the streets\n- BT002: The vertical escape jump\n- BT003: The realization of desperation",
+  "storyboard_markdown": "# Scene Contract: CH005_SC003\n\n## Production Intent\nExecute a high-velocity chase sequence through Martian urban architecture to demonstrate the protagonist's low-gravity leaping capabilities and escalating desperation as they are pursued by an unseen threat.\n\n## Required Cast\n- protagonist (Earthman, extreme agility/high-leaping)\n- the_watch_dog (Relentless pursuer)\n\n## Required Environments\n- Deserted Martian city streets\n- Building exteriors/rooftops\n\n## Continuity Constraints\n- Precise height and distance of jumps relative to gravity\n- Timing of the_watch_dog arrival at street corners\n\n## Beat List\n- BT001: Initial sprint and leap\n- BT002: Navigating the urban landscape via jumps\n- BT003: The relentless pursuit closes in",
   "metadata": {
     "artifact_id": "CH005_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "f5116c6ffa7938fd9f498741d248554c561f1354",
+    "source_fingerprint": "193d159bc5b5705f20bddbea3813a30275507f8b",
     "created_at_utc": "2026-04-21T23:23:48.992397+00:00",
-    "updated_at_utc": "2026-04-23T18:11:56.818523+00:00",
+    "updated_at_utc": "2026-04-23T18:54:44.310227+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -310,12 +305,12 @@
       {
         "dependency_type": "character_resolutions",
         "dependency_id": "CH005_SC003",
-        "version": "ee85e280038eba7c76fb0eb5ceccba6d7f2afeb2"
+        "version": "7414b02a111e8b325bcbaa086c0f11a5c0af99e4"
       },
       {
         "dependency_type": "environment_resolutions",
         "dependency_id": "CH005_SC003",
-        "version": "ec874d5583dda4d5fbbdc3fe91df65408568532b"
+        "version": "53e3f6bb4249fcd18ba95ac3222a3e5ca3ba761e"
       }
     ],
     "locked_fields": {},
@@ -360,6 +355,11 @@
         "timestamp_utc": "2026-04-23T18:12:22.350729+00:00",
         "action": "synthesized",
         "source_fingerprint": "f5116c6ffa7938fd9f498741d248554c561f1354"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:55:24.555831+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "193d159bc5b5705f20bddbea3813a30275507f8b"
       }
     ]
   }

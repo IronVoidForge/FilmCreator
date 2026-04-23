@@ -7,43 +7,43 @@
   "next_shot_id": "",
   "primary_subject": "apache_warriors",
   "secondary_subjects": [
-    "John Carter (Younger)"
+    "john_carter"
   ],
-  "shot_moment_summary": "Apache warriors emerge for skirmish",
-  "start_state": "camp stillness",
-  "end_state": "combat chaos",
-  "action_during_shot": "skirmishing/shooting arrows",
+  "shot_moment_summary": "camp discovery",
+  "start_state": "viewing camp from trail",
+  "end_state": "skirmish begins",
+  "action_during_shot": "combat engagement",
   "action_continues_from": "reaching plateau edge",
-  "action_hands_off_to": "End of scene",
-  "shot_size": "medium",
+  "action_hands_off_to": "end_scene",
+  "shot_size": "wide",
   "camera_angle": "eye_level",
-  "lens_family": "normal",
+  "lens_family": "ultra_wide",
   "camera_motion": "handheld",
   "zoom_behavior": "none",
-  "focus_strategy": "rack_focus",
+  "focus_strategy": "deep_focus",
   "lighting_style": "high_contrast_ceremonial",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
-  "primary_subject_angle": "front_three_quarter_right",
+  "primary_subject_angle": "front",
   "visible_primary_subject_id": "apache_warriors",
   "visible_secondary_subject_ids": [
-    "[]"
+    "john_carter"
   ],
-  "primary_subject_frame_position": "foreground right within high plateau camp",
-  "primary_subject_scale_relation": "number of warriors vs camp size",
-  "primary_subject_facing_direction": "front three-quarter right toward the scene action",
-  "primary_subject_pose_description": "emerging from camp/cover skirmishing",
-  "subject_relation_summary": "apache_warriors plays against John Carter (Younger) in the same frame",
-  "required_environment_anchor_1": "high plateau Apache camp",
-  "required_scale_proof_detail": "number of warriors vs camp size",
-  "camera_package_description": "medium, eye level, normal lens, handheld, rack focus, high contrast ceremonial",
+  "primary_subject_frame_position": "midground inside high plateau camp",
+  "primary_subject_scale_relation": "size of camp vs carter",
+  "primary_subject_facing_direction": "facing directly toward camera",
+  "primary_subject_pose_description": "viewing camp from trail",
+  "subject_relation_summary": "apache_warriors plays against john_carter in the same frame",
+  "required_environment_anchor_1": "plateau edge",
+  "required_scale_proof_detail": "size of camp vs carter",
+  "camera_package_description": "wide, eye level, ultra-wide lens, handheld, deep focus, high contrast ceremonial",
   "subject_blocking": [
-    "warriors emerging from camp/cover",
-    "Scattered warriors vs single protagonist"
+    "scattered warriors and carter entering frame",
+    "combatants engaging in camp area"
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the high plateau camp.",
-    "Background depth keeps Arizona hills/plateau legible."
+    "Background depth should keep Arizona hills/plateau legible as the location anchor."
   ],
   "gaze_directions": [
     "apache_warriors focuses toward the active scene action."
@@ -53,13 +53,13 @@
     "high plateau camp"
   ],
   "continuity_from_previous_shot": "reaching plateau edge",
-  "continuity_to_next_shot": "End of scene",
-  "pose_anchor_frame": "camp stillness",
-  "pose_end_frame": "combat chaos",
-  "shot_title": "Insert Detail 3: Skirmish at the camp",
-  "shot_type": "insert_detail",
-  "camera_description": "Tight detail framing focused on a single visual object or gesture.",
-  "composition": "Detail composition centered on the key physical action or prop inside Arizona hills/plateau.",
+  "continuity_to_next_shot": "end_scene",
+  "pose_anchor_frame": "viewing camp from trail",
+  "pose_end_frame": "skirmish begins",
+  "shot_title": "Skirmish eruption",
+  "shot_type": "reaction_closeup",
+  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+  "composition": "Intimate composition that isolates apache_warriors, john_carter against Arizona hills/plateau to capture the beat's emotional turn.",
   "target_seconds": 5.1,
   "characters_in_frame": [
     {
@@ -68,9 +68,19 @@
       "display_name": "apache_warriors",
       "status": "canonical",
       "entity_kind": "group",
-      "resolution_score": 186,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'apache_warriors'"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/apache_warriors.md",
+      "notes": "Direct registry match for 'apache_warriors'."
+    },
+    {
+      "label": "John Carter (Younger)",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
     }
   ],
   "environment": {
@@ -81,7 +91,7 @@
     "entity_kind": "environment",
     "resolution_score": 8,
     "source_path": "",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "notes": "Low-confidence environment match requires review."
   },
   "beat_ids": [
     "BT003"
@@ -91,8 +101,8 @@
     "Direction of pursuit from valley to plateau",
     "Weapon handling (rifles and sidearms)"
   ],
-  "prompt_seed": "Insert Detail 3: Skirmish at the camp. insert_detail. size=medium. angle=eye_level. lens=normal. motion=handheld. zoom=none. focus=rack_focus. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front_three_quarter_right. Tight detail framing focused on a single visual object or gesture.",
-  "shot_notes": "Skirmish at the camp",
+  "prompt_seed": "Reaction Closeup 3: Skirmish eruption. reaction_closeup. size=wide. angle=eye_level. lens=ultra_wide. motion=handheld. zoom=none. focus=deep_focus. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front.",
+  "shot_notes": "Skirmish eruption",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -146,40 +156,41 @@
     {
       "source": "character_bible",
       "chapter_id": "CH001",
-      "canonical_id": "apache_warriors"
+      "canonical_id": "john_carter"
     }
   ],
   "evidence_summary": [
-    "Establish the physical threat of the Apache warriors through a transition from quiet observation to high-intensity combat. The sequence must move from a wide, observational perspective in the valley to a tight, chaotic handheld skirmish on the plateau.",
+    "Establish the physical threat of the Apache presence through a transition from quiet observation to high-intensity combat. The sequence must move from controlled, observational shots in the valley to chaotic, handheld movement during the skirmish on the pla...",
     "Carter notices suspicious movement in the valley. Suspecting an ambush, he pursues the trail and discovers a large Apache camp on a plateau, leading to a chaotic skirmish.",
     "Suspicion $\\rightarrow$ Alertness $\\rightarrow$ Chaos/Adrenaline.",
-    "John Carter (Younger) observing suspicious movement from a distance in the valley.",
-    "Chaotic skirmish between John Carter (Younger) and apache_warriors on the plateau.",
-    "Pursuit of a trail leading to an ambush/skirmish encounter.",
+    "john_carter observing the valley floor from a distance.",
+    "chaotic skirmish erupting amidst the Apache camp.",
+    "Tracking suspicious movement through terrain into an ambush/skirmish scenario.",
+    "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in...",
     "apache_warriors | A large group of hostile 19th-century indigenous warriors characterized by their traditional Apache attire. They function as a collective unit, primarily seen engaged in ambush tactics and active skirmishes while wielding arrows. | Traditi..."
   ],
   "metadata": {
     "artifact_id": "CH001_SC003_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "d7dd4417afcde41067c5ca7fa07d42f02ca3fc0a",
+    "source_fingerprint": "71f404736442000b18397530165f298f185dcd5d",
     "created_at_utc": "2026-04-22T00:00:14.279536+00:00",
-    "updated_at_utc": "2026-04-23T18:20:21.501078+00:00",
+    "updated_at_utc": "2026-04-23T19:07:43.838657+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH001_SC003",
-        "version": "f4f0d7ca2292e24891a0f5a35c7455bae2ed311b"
+        "version": "3d2d8d11e87979033fd1fd0e9ee5ac2e13b6daa9"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH001_SC003",
-        "version": "49abebeaba204c6115632cdc675c2c96583da218"
+        "version": "58a7d14b029d7502abfcbcd4417d02dead2c2df5"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH001_SC003",
-        "version": "81fa008cc53c19801030772de5872bfcc93e8cf8"
+        "version": "fcfb60d84fec19907cc0ef46b130ba587c1e4d33"
       }
     ],
     "locked_fields": {},
@@ -224,6 +235,11 @@
         "timestamp_utc": "2026-04-23T18:20:59.047759+00:00",
         "action": "synthesized",
         "source_fingerprint": "d7dd4417afcde41067c5ca7fa07d42f02ca3fc0a"
+      },
+      {
+        "timestamp_utc": "2026-04-23T19:08:43.757794+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "71f404736442000b18397530165f298f185dcd5d"
       }
     ]
   }

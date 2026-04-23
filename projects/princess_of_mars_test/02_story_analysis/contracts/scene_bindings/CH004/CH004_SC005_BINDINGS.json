@@ -10,8 +10,8 @@
       "status": "review",
       "entity_kind": "individual",
       "resolution_score": 6,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
-      "notes": "sola | token overlap: ['sola'] | generic role label reduces confidence"
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
     },
     {
       "label": "Sola",
@@ -19,9 +19,9 @@
       "display_name": "sola",
       "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 186,
+      "resolution_score": 138,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'sola'"
+      "notes": "Direct registry match for 'sola'."
     },
     {
       "label": "Small Martian Creature",
@@ -30,19 +30,19 @@
       "status": "review",
       "entity_kind": "individual",
       "resolution_score": 6,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
-      "notes": "sola | token overlap: ['sola'] | generic role label reduces confidence"
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
     }
   ],
   "resolved_environment": {
-    "label": "Grand Audience Chamber",
+    "label": "Grand Audience Chamber / Plaza area",
     "canonical_id": "grand_audience_chamber",
     "display_name": "grand_audience_chamber",
     "status": "canonical",
     "entity_kind": "environment",
-    "resolution_score": 183,
+    "resolution_score": 138,
     "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH004/grand_audience_chamber.md",
-    "notes": "asset id exactly matches canonical id | query matches alias 'grand_audience_chamber'"
+    "notes": "Direct registry match for 'grand_audience_chamber'."
   },
   "beat_environment_overrides": [],
   "candidate_environment_ids": [],
@@ -52,7 +52,7 @@
       "chapter_id": "CH004",
       "requested_label": "Decorated Sleeping Chamber",
       "request_type": "missing_environment",
-      "reason": "aerial_battlefield_mars | source context shares query language",
+      "reason": "Low-confidence environment match requires review.",
       "parent_environment_id": "grand_audience_chamber",
       "evidence_refs": [
         {
@@ -158,14 +158,14 @@
     "artifact_id": "CH004_SC005_SCENE_BINDINGS",
     "artifact_type": "scene_binding",
     "status": "generated",
-    "source_fingerprint": "05afe7820e8cd7bca993e9e104093acbe6b5e503",
+    "source_fingerprint": "e4af571378377095260f3d25035cd5ba06cbcf00",
     "created_at_utc": "2026-04-22T06:48:28.736664+00:00",
-    "updated_at_utc": "2026-04-23T18:14:44.780393+00:00",
+    "updated_at_utc": "2026-04-23T18:59:10.314116+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH004_SC005",
-        "version": "f8026281810fb5b23db2063f085a5bf13471806c"
+        "version": "eb23d718c295178308584e5e56c4c7e43298185e"
       }
     ],
     "locked_fields": {},
@@ -210,6 +210,11 @@
         "timestamp_utc": "2026-04-23T18:14:44.780894+00:00",
         "action": "synthesized",
         "source_fingerprint": "05afe7820e8cd7bca993e9e104093acbe6b5e503"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:59:10.314116+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "e4af571378377095260f3d25035cd5ba06cbcf00"
       }
     ]
   }

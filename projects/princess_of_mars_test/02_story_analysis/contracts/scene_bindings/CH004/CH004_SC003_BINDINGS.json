@@ -1,7 +1,7 @@
 {
   "scene_id": "CH004_SC003",
   "chapter_id": "CH004",
-  "binding_mode": "chapter_fallback",
+  "binding_mode": "scene_level",
   "resolved_characters": [
     {
       "label": "The Narrator",
@@ -10,8 +10,8 @@
       "status": "review",
       "entity_kind": "individual",
       "resolution_score": 6,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/chieftain.md",
-      "notes": "chieftain | token overlap: ['chieftain'] | generic role label reduces confidence"
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
     },
     {
       "label": "Tars Tarkas",
@@ -19,9 +19,9 @@
       "display_name": "tars_tarkas",
       "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 186,
+      "resolution_score": 138,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'tars_tarkas'"
+      "notes": "Direct registry match for 'tars_tarkas'."
     },
     {
       "label": "The Chieftain",
@@ -29,9 +29,9 @@
       "display_name": "the_chieftain",
       "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 176,
+      "resolution_score": 138,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/chieftain.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'chieftain'"
+      "notes": "Direct registry match for 'the_chieftain'."
     },
     {
       "label": "Martian Warrior",
@@ -39,9 +39,9 @@
       "display_name": "martian_warrior",
       "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 176,
+      "resolution_score": 138,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/martian_warrior.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'martian_warrior'"
+      "notes": "Direct registry match for 'martian_warrior'."
     },
     {
       "label": "Martian Crowd",
@@ -50,70 +50,29 @@
       "status": "review",
       "entity_kind": "individual",
       "resolution_score": 6,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/chieftain.md",
-      "notes": "chieftain | token overlap: ['chieftain'] | generic role label reduces confidence"
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
     }
   ],
   "resolved_environment": {
-    "label": "Grand Audience Chamber",
+    "label": "Grand Audience Chamber / Plaza area",
     "canonical_id": "grand_audience_chamber",
     "display_name": "grand_audience_chamber",
     "status": "canonical",
     "entity_kind": "environment",
-    "resolution_score": 183,
+    "resolution_score": 138,
     "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH004/grand_audience_chamber.md",
-    "notes": "asset id exactly matches canonical id | query matches alias 'grand_audience_chamber'"
+    "notes": "Direct registry match for 'grand_audience_chamber'."
   },
   "beat_environment_overrides": [],
-  "candidate_environment_ids": [],
-  "future_environment_requests": [
-    {
-      "scene_id": "CH004_SC003",
-      "chapter_id": "CH004",
-      "requested_label": "Grand Audience Chamber / Plaza area",
-      "request_type": "missing_environment",
-      "reason": "aerial_battlefield_mars | source context shares query language",
-      "parent_environment_id": "grand_audience_chamber",
-      "evidence_refs": [
-        {
-          "source": "scene_breakdown",
-          "chapter_id": "CH004",
-          "scene_id": "CH004_SC003"
-        },
-        {
-          "source": "scene_breakdown",
-          "chapter_id": "CH004",
-          "scene_id": "CH004_SC003"
-        },
-        {
-          "source": "scene_breakdown",
-          "chapter_id": "CH004",
-          "scene_id": "CH004_SC003"
-        },
-        {
-          "source": "scene_breakdown",
-          "chapter_id": "CH004",
-          "scene_id": "CH004_SC003"
-        },
-        {
-          "source": "chapter_summary",
-          "chapter_id": "CH004",
-          "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
-        },
-        {
-          "source": "book_index",
-          "chapter_id": "CH016",
-          "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH016_chapter_xvi.md"
-        }
-      ]
-    }
+  "candidate_environment_ids": [
+    "grand_audience_chamber"
   ],
+  "future_environment_requests": [],
   "review_flags": [
-    "scene_environment_used_chapter_fallback",
     "scene_cast_contains_unresolved_references"
   ],
   "notes": [
-    "Inherited chapter-level environment because the scene did not resolve a canonical environment.",
     "2 scene cast reference(s) still require review."
   ],
   "evidence_refs": [
@@ -184,14 +143,14 @@
     "artifact_id": "CH004_SC003_SCENE_BINDINGS",
     "artifact_type": "scene_binding",
     "status": "generated",
-    "source_fingerprint": "9fb8c4a9e00b6a09136fae61734fc513a0aa5148",
+    "source_fingerprint": "e3ddca9cd5e1d350e293f7721dafe15a66314a70",
     "created_at_utc": "2026-04-22T06:48:28.725660+00:00",
-    "updated_at_utc": "2026-04-23T18:14:44.748414+00:00",
+    "updated_at_utc": "2026-04-23T18:59:10.284094+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH004_SC003",
-        "version": "7ca07097563c5650943e8f4f0128b753bc4247f2"
+        "version": "2c45ac587c94edd7af90c6a063c47a6c17afe771"
       }
     ],
     "locked_fields": {},
@@ -236,6 +195,11 @@
         "timestamp_utc": "2026-04-23T18:14:44.748414+00:00",
         "action": "synthesized",
         "source_fingerprint": "9fb8c4a9e00b6a09136fae61734fc513a0aa5148"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:59:10.284094+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "e3ddca9cd5e1d350e293f7721dafe15a66314a70"
       }
     ]
   }

@@ -5,37 +5,38 @@
   "purpose": "To showcase the protagonist's combat prowess using Earthly tactics and resolve.",
   "summary": "Seeing his guardian losing, the protagonist kills the first ape with a cudgel. The mate returns in a rage; rather than fleeing, the protagonist uses precise strikes to the chin and stomach to incapacitate and ultimately kill the second ape.\n\n**Participating Characters:**\n- The Protagonist\n- The Watch-thing (wounded/dying)\n- The Mate (Bull Ape)",
   "emotional_arc": "Panic $\\rightarrow$ Resolve $\\rightarrow$ Adrenaline-fueled triumph.\n\n**Likely Visual Coverage Families:**\n- Medium shots of the protagonist's tactical movements.\n- Impact shots (the strike to the chin/stomach).\n- Close-ups on the protagonist's face showing determination over fear.",
-  "production_intent": "Demonstrate the protagonist's transition from panic to tactical combat mastery through Earthly fighting techniques. The sequence must emphasize physical impact and precise strikes against large primate adversaries within a confined Martian interior.",
+  "production_intent": "Demonstrate the protagonist's transition from panic to tactical combat resolve through Earthly fighting techniques. The sequence must emphasize physical impact and precise strikes against large primate adversaries within a Martian interior chamber.",
   "scene_short_description": "An Earthman uses a cudgel and precise strikes to kill two aggressive apes in an interior chamber.",
-  "scene_primary_scale_story_point": "Human scale combatant vs large primate adversaries.",
+  "scene_primary_scale_story_point": "Human vs Large Primate (Bull Ape) scale disparity.",
   "scene_required_anchor_catalog": [
     "Cudgel",
     "Wounded Watch-thing"
   ],
-  "scene_start_state": "The protagonist watches the Watch-thing losing a fight to the first ape.",
-  "scene_end_state": "The second ape is dead and the protagonist stands triumphant but exhausted.",
-  "dominant_action_line": "Protagonist intervenes in a fight, kills one ape with a cudgel, then uses precise strikes to kill a second enraged mate.",
+  "scene_start_state": "Protagonist watches the Watch-thing losing a fight in panic.",
+  "scene_end_state": "Protagonist stands victorious over the dead second ape, physically exhausted.",
+  "dominant_action_line": "Tactical combat progression from cudgel strike to precise anatomical strikes.",
   "scene_spatial_layout": [
     "Interior chamber within a Martian city building",
     "Open floor space for combat movement"
   ],
   "character_spatial_map": [
-    "Protagonist positioned between the Watch-thing and the first ape",
-    "The Mate (Bull Ape) entering from perimeter to engage protagonist"
+    "Protagonist central to combat zone",
+    "Watch-thing near ground/periphery",
+    "Apes entering from chamber thresholds"
   ],
   "environment_subzones": [
     "Combat center",
-    "Watch-thing recovery zone"
+    "Periphery near wounded guardian"
   ],
   "entry_vectors": [
-    "Bull Ape enters via chamber entrance/plaza threshold"
+    "Chamber entrance (Ape Mate)"
   ],
   "exit_vectors": [
-    "None specified"
+    "Plaza access (implied)"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Transition from defensive panic to offensive strike",
-    "BT002 -> BT003: Transition from single kill to second ape confrontation"
+    "BT001 -> BT002: Transition from panic to decisive action",
+    "BT002 -> BT003: Transition from first kill to second combat engagement"
   ],
   "characters_required": [],
   "environments_required": [
@@ -46,14 +47,14 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     }
   ],
   "continuity_constraints": [
-    "Directional consistency of cudgel swings",
-    "Blood splatter patterns relative to strike impact",
-    "Escalating physical exhaustion levels of the protagonist"
+    "Cudgel swing directionality",
+    "Blood splatter patterns",
+    "Protagonist physical exhaustion levels"
   ],
   "visual_coverage_families": [
     "Medium shots of tactical movements",
@@ -63,63 +64,62 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Protagonist witnesses Watch-thing losing fight",
+      "summary": "Protagonist reacts to Watch-thing losing fight",
       "purpose": "",
       "action_start": "Protagonist observing wounded guardian",
-      "action_end": "Protagonist gripping cudgel with resolve",
+      "action_end": "Protagonist seizing cudgel",
       "active_subjects": [
-        "The Protagonist",
-        "The Watch-thing",
-        "First Ape"
+        "Protagonist",
+        "Watch-thing"
       ],
       "passive_subjects": [],
-      "spatial_context": "Interior chamber near Watch-thing",
-      "blocking_hint": "Protagonist moves toward the struggle",
-      "environment_subzone": "Watch-thing recovery zone",
-      "continuity_focus": "Exhaustion/injury state of Watch-thing",
-      "coverage_hint": "Medium shot of protagonist's face",
+      "spatial_context": "Near wounded Watch-thing",
+      "blocking_hint": "Protagonist moving toward combat center",
+      "environment_subzone": "combat center",
+      "continuity_focus": "Exhaustion/Panic level",
+      "coverage_hint": "Close-up on face",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Protagonist kills first ape with cudgel",
+      "summary": "First ape killed via cudgel",
       "purpose": "",
-      "action_start": "Protagonist swings cudgel",
-      "action_end": "First ape collapses dead",
+      "action_start": "Swing begins",
+      "action_end": "First ape dead",
       "active_subjects": [
-        "The Protagonist",
+        "Protagonist",
         "First Ape"
       ],
       "passive_subjects": [
-        "The Watch-thing"
+        "Watch-thing"
       ],
       "spatial_context": "Combat center",
-      "blocking_hint": "Large sweeping motion of the cudgel",
-      "environment_subzone": "Combat center",
-      "continuity_focus": "Direction of swing and blood splatter",
-      "coverage_hint": "Impact shot/Medium shot",
-      "coverage_priority": "high",
+      "blocking_hint": "Wide arc swing",
+      "environment_subzone": "combat center",
+      "continuity_focus": "Cudgel direction and blood splatter",
+      "coverage_hint": "Medium shot of movement",
+      "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Protagonist kills second ape via precise strikes",
+      "summary": "Combat with the Mate",
       "purpose": "",
-      "action_start": "The Mate charges in rage",
-      "action_end": "Second ape is dead/incapacitated",
+      "action_start": "Mate enters in rage",
+      "action_end": "Second ape killed via precise strikes",
       "active_subjects": [
-        "The Protagonist",
-        "The Mate (Bull Ape)"
+        "Protagonist",
+        "The Mate"
       ],
       "passive_subjects": [],
       "spatial_context": "Combat center",
-      "blocking_hint": "Protagonist uses tactical pivots and precision hits",
-      "environment_subzone": "Combat center",
-      "continuity_focus": "Physical exhaustion of protagonist vs adrenaline",
-      "coverage_hint": "Close-ups on strikes and facial resolve",
+      "blocking_hint": "Tactical dodging and close-quarters striking",
+      "environment_subzone": "combat center",
+      "continuity_focus": "Precision of chin/stomach strikes; physical exhaustion",
+      "coverage_hint": "Impact shots and medium tactical shots",
       "coverage_priority": "high",
-      "handoff_to_next": "End of scene"
+      "handoff_to_next": "End"
     }
   ],
   "planned_shots": [
@@ -128,86 +128,85 @@
       "beat_id": "BT001",
       "narrative_function": "establish stakes",
       "planned_shot_moment_summary": "Protagonist sees Watch-thing wounded",
-      "primary_subject_seed": "The Protagonist",
+      "primary_subject_seed": "Protagonist",
       "secondary_subjects_seed": [
-        "The Watch-thing",
-        "First Ape"
+        "Watch-thing"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "Watch-thing recovery zone",
+      "environment_subzone": "combat center",
       "planned_shot_required_anchor_1": "Watch-thing",
-      "planned_shot_scale_proof_detail": "Size ratio of ape to Watch-thing",
+      "planned_shot_scale_proof_detail": "Watch-thing size vs Protagonist",
       "start_state_seed": "Protagonist looking at Watch-thing",
       "end_state_seed": "Protagonist gripping cudgel",
-      "action_seed": "Observing the struggle",
+      "action_seed": "Reaction to guardian's injury",
       "blocking_seed": [
-        "Protagonist standing near wounded guardian"
+        "Protagonist standing over or near Watch-thing"
       ],
-      "shot_size": "medium_full",
+      "shot_size": "medium_close",
       "camera_angle": "eye_level",
-      "lens_family": "wide",
+      "lens_family": "normal",
       "camera_motion": "handheld",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "low_key_night",
-      "primary_subject_angle": "front_three_quarter_right"
+      "primary_subject_angle": "front_three_quarter_left"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "show combat prowess",
-      "planned_shot_moment_summary": "Cudgel strike kills first ape",
-      "primary_subject_seed": "The Protagonist",
+      "planned_shot_moment_summary": "First ape killed with cudgel",
+      "primary_subject_seed": "Protagonist",
       "secondary_subjects_seed": [
         "First Ape"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "Combat center",
+      "environment_subzone": "combat center",
       "planned_shot_required_anchor_1": "Cudgel",
-      "planned_shot_scale_proof_detail": "Impact force of cudgel on ape skull",
-      "start_state_seed": "Protagonist swinging",
-      "end_state_seed": "Ape falling",
-      "action_seed": "Killing the first ape with a heavy swing",
+      "planned_shot_scale_proof_detail": "Cudgel impact force",
+      "start_state_seed": "Swing initiated",
+      "end_state_seed": "Ape falls",
+      "action_seed": "Heavy strike to first ape",
       "blocking_seed": [
-        "Protagonist lunges forward"
+        "Protagonist swinging cudgel in arc"
       ],
       "shot_size": "medium",
       "camera_angle": "low_angle",
-      "lens_family": "normal",
+      "lens_family": "wide",
       "camera_motion": "track",
-      "zoom_behavior": "subtle_in",
+      "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "hard_directional",
-      "primary_subject_angle": "profile_left"
+      "primary_subject_angle": "profile_right"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "show precision/resolve",
-      "planned_shot_moment_summary": "Precise strikes to chin and stomach",
-      "primary_subject_seed": "The Protagonist",
+      "narrative_function": "climax/impact",
+      "planned_shot_moment_summary": "Precise strikes to second ape",
+      "primary_subject_seed": "Protagonist",
       "secondary_subjects_seed": [
-        "The Mate (Bull Ape)"
+        "Mate (Bull Ape)"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "Combat center",
-      "planned_shot_required_anchor_1": "The Mate",
-      "planned_shot_scale_proof_detail": "Precision of hand/cudgel vs large target",
-      "start_state_seed": "Mate charging",
-      "end_state_seed": "Mate incapacitated",
-      "action_seed": "Striking chin and stomach to kill second ape",
+      "environment_subzone": "combat center",
+      "planned_shot_required_anchor_1": "Ape chin",
+      "planned_shot_scale_proof_detail": "Strike precision vs mass",
+      "start_state_seed": "Ape charging",
+      "end_state_seed": "Ape incapacitated",
+      "action_seed": "Strikes to chin and stomach",
       "blocking_seed": [
-        "Protagonist pivots to meet charge"
+        "Protagonist dodging and striking"
       ],
-      "shot_size": "close_up",
+      "shot_size": "medium_close",
       "camera_angle": "eye_level",
       "lens_family": "portrait",
       "camera_motion": "handheld",
-      "zoom_behavior": "none",
-      "focus_strategy": "shallow_subject",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "rack_focus",
       "lighting_style": "high_contrast_ceremonial",
       "primary_subject_angle": "front"
     }
@@ -267,14 +266,14 @@
     "[CH010] CHAPTER X (book index hit)",
     "[CH016] CHAPTER XVI (book index hit)"
   ],
-  "storyboard_markdown": "# Scene Contract: CH006_SC002\n\n## Production Intent\nDemonstrate the protagonist's transition from panic to tactical combat mastery through Earthly fighting techniques. The sequence must emphasize physical impact and precise strikes against large primate adversaries within a confined Martian interior.\n\n## Required Cast\n- The Protagonist (Earthman)\n- The Watch-thing (Multi-legged, wounded/dying)\n- The Mate (Bull Ape)\n- First Ape (Deceased)\n\n## Required Environments\n- Interior chamber (Martian city building)\n\n## Continuity Constraints\n- Directional consistency of cudgel swings\n- Blood splatter patterns relative to strike impact\n- Escalating physical exhaustion levels of the protagonist\n\n## Beat List\n- BT001: Protagonist witnesses Watch-thing losing fight.\n- BT002: Protagonist kills first ape with cudgel.\n- BT003: Protagonist kills second ape via precise strikes (chin/stomach).",
+  "storyboard_markdown": "# Scene Contract: CH006_SC002\n\n## Production Intent\nDemonstrate the protagonist's transition from panic to tactical combat resolve through Earthly fighting techniques. The sequence must emphasize physical impact and precise strikes against large primate adversaries within a Martian interior chamber.\n\n## Required Cast\n- The Protagonist (Earthman)\n- The Watch-thing (Wounded/Dying)\n- The First Ape (Deceased)\n- The Mate (Bull Ape)\n\n## Required Environments\n- Interior chamber (Martian city building)\n\n## Continuity Constraints\n- Direction of cudgel swings\n- Blood splatter patterns from strikes\n- Protagonist's increasing physical exhaustion levels\n\n## Beat List\n- BT001: Reaction to Watch-thing losing fight; transition from panic to resolve.\n- BT002: Execution of first kill using the cudgel.\n- BT003: Tactical combat against the Mate using precise chin and stomach strikes.",
   "metadata": {
     "artifact_id": "CH006_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "8c9f0b77f1ba12d2bedb10cb3988197893de0d52",
+    "source_fingerprint": "1867396cc260e732f2f5d73048a37897b6c10ed1",
     "created_at_utc": "2026-04-21T23:24:48.099175+00:00",
-    "updated_at_utc": "2026-04-23T18:13:21.615530+00:00",
+    "updated_at_utc": "2026-04-23T18:57:01.989221+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -289,7 +288,7 @@
       {
         "dependency_type": "environment_resolutions",
         "dependency_id": "CH006_SC002",
-        "version": "2103b37a9aa12b40af8fc7a1d69dc9a298a4e72f"
+        "version": "e2dbb196d799643d569626e9f475c3d413f5c2be"
       }
     ],
     "locked_fields": {},
@@ -334,6 +333,11 @@
         "timestamp_utc": "2026-04-23T18:13:48.957948+00:00",
         "action": "synthesized",
         "source_fingerprint": "8c9f0b77f1ba12d2bedb10cb3988197893de0d52"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:57:43.511200+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "1867396cc260e732f2f5d73048a37897b6c10ed1"
       }
     ]
   }

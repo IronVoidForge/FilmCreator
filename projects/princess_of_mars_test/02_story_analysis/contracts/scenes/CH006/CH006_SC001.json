@@ -5,39 +5,40 @@
   "purpose": "To establish immediate life-or-death stakes and demonstrate the loyalty of the Watch-thing.",
   "summary": "The protagonist is pinned by a massive Bull Ape. As its mate approaches with a stone cudgel to finish him, the Watch-thing leaps into the fray, engaging the mate in a brutal struggle to buy the protagonist time.\n\n**Participating Characters:**\n- The Protagonist\n- The Watch-thing\n- The Bull Ape\n- The Mate (Bull Ape)",
   "emotional_arc": "Terror $\\rightarrow$ Desperation $\\rightarrow$ Fierce Loyalty.\n\n**Likely Visual Coverage Families:**\n- Tight close-ups on the protagonist's struggle/pinned position.\n- Wide shots of the Watch-thing's intervention.\n- Handheld, kinetic shots of the creature combat.",
-  "production_intent": "Establish immediate life-or-death stakes through a physical struggle between the protagonist and a massive Bull Ape, culminating in a high-stakes intervention by the Watch-thing to demonstrate loyalty.",
-  "scene_short_description": "A pinned human struggles under a massive ape as a second ape approaches with a weapon.",
-  "scene_primary_scale_story_point": "Massive Bull Ape vs small Protagonist and multi-legged Watch-thing.",
+  "production_intent": "Establish immediate life-or-death stakes through a physical struggle between the protagonist and a Bull Ape, culminating in a high-stakes intervention by the Watch-thing to demonstrate loyalty.",
+  "scene_short_description": "A pinned man faces execution by a second beast until a multi-legged creature intervenes.",
+  "scene_primary_scale_story_point": "Massive Bull Ape vs small human protagonist and multi-legged Watch-thing.",
   "scene_required_anchor_catalog": [
     "Stone cudgel",
     "Interior chamber floor"
   ],
-  "scene_start_state": "Protagonist is pinned beneath the weight of the first Bull Ape.",
-  "scene_end_state": "The Watch-thing is engaged in a brutal struggle with the second Bull Ape.",
-  "dominant_action_line": "A desperate fight for survival transitions into a protective combat intervention.",
+  "scene_start_state": "Protagonist is pinned under the weight of a massive Bull Ape.",
+  "scene_end_state": "The Watch-thing is engaged in brutal combat with the Mate to protect the protagonist.",
+  "dominant_action_line": "A struggle for survival transitions from being pinned to a multi-creature melee.",
   "scene_spatial_layout": [
     "Interior chamber within a Martian city building",
-    "Open floor space allowing for creature movement"
+    "Open floor space for creature movement"
   ],
   "character_spatial_map": [
-    "Protagonist: pinned on the floor",
-    "Bull Ape 1: atop protagonist",
-    "Mate (Bull Ape): approaching from distance/periphery",
-    "Watch-thing: leaping into combat zone"
+    "Protagonist: Underneath Bull Ape on the chamber floor",
+    "Bull Ape: Overlapping protagonist",
+    "Mate (Bull Ape): Approaching from perimeter with cudgel",
+    "Watch-thing: Leaping from periphery into combat zone"
   ],
   "environment_subzones": [
-    "Chamber center",
-    "Approach path to chamber center"
+    "Chamber floor",
+    "Building interior"
   ],
   "entry_vectors": [
-    "Mate approach via chamber entrance/plaza connection"
+    "Mate enters via chamber doorway/perimeter",
+    "Watch-thing enters via leap from off-screen/periphery"
   ],
   "exit_vectors": [
-    "Subjects exit or hand off toward the next story beat."
+    "None specified"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: mate enters frame with weapon",
-    "BT002 -> BT003: watch-thing leaps into combat"
+    "BT001 -> BT002: Mate approaches with weapon",
+    "BT002 -> BT003: Watch-thing leaps into the fray"
   ],
   "characters_required": [],
   "environments_required": [
@@ -48,8 +49,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     },
     {
       "label": "Martian city building",
@@ -58,14 +59,14 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     }
   ],
   "continuity_constraints": [
-    "Bull Ape limb positioning relative to protagonist",
-    "Location and orientation of the stone cudgel",
-    "Physical injury state of the Watch-thing during combat"
+    "Bull Ape limb positioning during pinning",
+    "Location and state of the stone cudgel",
+    "Physical injury status of the Watch-thing post-combat"
   ],
   "visual_coverage_families": [
     "Tight close-ups on protagonist struggle/pinned position",
@@ -77,18 +78,18 @@
       "beat_id": "BT001",
       "summary": "Protagonist pinned by Bull Ape",
       "purpose": "",
-      "action_start": "protagonist under weight",
-      "action_end": "struggle for breath",
+      "action_start": "Protagonist trapped under weight",
+      "action_end": "Protagonist struggling for breath",
       "active_subjects": [
         "Protagonist",
         "Bull Ape"
       ],
       "passive_subjects": [],
-      "spatial_context": "chamber center",
-      "blocking_hint": "protagonist on floor beneath ape limbs",
-      "environment_subzone": "chamber center",
-      "continuity_focus": "limb positioning",
-      "coverage_hint": "tight close-up",
+      "spatial_context": "Chamber floor",
+      "blocking_hint": "Protagonist at center of frame beneath beast",
+      "environment_subzone": "chamber floor",
+      "continuity_focus": "Bull Ape limb placement",
+      "coverage_hint": "Tight close-ups",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
@@ -96,8 +97,8 @@
       "beat_id": "BT002",
       "summary": "Mate approaches with stone cudgel",
       "purpose": "",
-      "action_start": "mate enters view",
-      "action_end": "mate nears protagonist",
+      "action_start": "Mate enters view",
+      "action_end": "Mate raises cudgel over protagonist",
       "active_subjects": [
         "Mate (Bull Ape)"
       ],
@@ -105,20 +106,20 @@
         "Protagonist",
         "Bull Ape"
       ],
-      "spatial_context": "approach path to center",
-      "blocking_hint": "mate walking toward pinned subject",
-      "environment_subzone": "approach path",
-      "continuity_focus": "cudgel location",
-      "coverage_hint": "wide shot",
+      "spatial_context": "Approaching the pinned subject",
+      "blocking_hint": "Mate moving from periphery to center",
+      "environment_subzone": "chamber floor",
+      "continuity_focus": "Location of stone cudgel",
+      "coverage_hint": "Wide shots",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Watch-thing intervenes in combat",
+      "summary": "Watch-thing intervention",
       "purpose": "",
-      "action_start": "watch-thing leaps",
-      "action_end": "brutal struggle begins",
+      "action_start": "Watch-thing leaps into frame",
+      "action_end": "Brutal struggle begins between Watch-thing and Mate",
       "active_subjects": [
         "Watch-thing",
         "Mate (Bull Ape)"
@@ -126,13 +127,13 @@
       "passive_subjects": [
         "Protagonist"
       ],
-      "spatial_context": "chamber center",
-      "blocking_hint": "watch-thing intercepts mate's path",
-      "environment_subzone": "chamber center",
-      "continuity_focus": "watch-thing injury state",
-      "coverage_hint": "handheld kinetic",
+      "spatial_context": "Combat erupts near the pinned protagonist",
+      "blocking_hint": "Watch-thing intercepts the Mate's path",
+      "environment_subzone": "chamber floor",
+      "continuity_focus": "Physical state/injuries of Watch-thing",
+      "coverage_hint": "Handheld kinetic shots",
       "coverage_priority": "high",
-      "handoff_to_next": "end_scene"
+      "handoff_to_next": "end_of_scene"
     }
   ],
   "planned_shots": [
@@ -140,22 +141,22 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish stakes",
-      "planned_shot_moment_summary": "protagonist pinned under ape",
+      "planned_shot_moment_summary": "Protagonist struggling under weight",
       "primary_subject_seed": "Protagonist",
       "secondary_subjects_seed": [
         "Bull Ape"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "chamber center",
-      "planned_shot_required_anchor_1": "chamber floor",
-      "planned_shot_scale_proof_detail": "ape limbs covering protagonist",
-      "start_state_seed": "pinned position",
-      "end_state_seed": "struggle continues",
-      "action_seed": "protagonist gasping/struggling",
+      "environment_subzone": "chamber floor",
+      "planned_shot_required_anchor_1": "Bull Ape limbs",
+      "planned_shot_scale_proof_detail": "Massive size of Bull Ape relative to human",
+      "start_state_seed": "Protagonist pinned",
+      "end_state_seed": "Protagonist gasping",
+      "action_seed": "Struggling against weight",
       "blocking_seed": [
-        "protagonist on back",
-        "ape on top"
+        "Protagonist center",
+        "Bull Ape over top"
       ],
       "shot_size": "close_up",
       "camera_angle": "low_angle",
@@ -170,23 +171,23 @@
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "introduce threat",
-      "planned_shot_moment_summary": "mate approaches with cudgel",
+      "planned_shot_moment_summary": "Mate approaching with stone cudgel",
       "primary_subject_seed": "Mate (Bull Ape)",
       "secondary_subjects_seed": [
         "Stone cudgel"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "approach path",
-      "planned_shot_required_anchor_1": "stone cudgel",
-      "planned_shot_scale_proof_detail": "cudgel size vs ape hand",
-      "start_state_seed": "mate entering view",
-      "end_state_seed": "mate poised to strike",
-      "action_seed": "walking/approaching with weapon",
+      "environment_subzone": "chamber floor",
+      "planned_shot_required_anchor_1": "Stone cudgel",
+      "planned_shot_scale_proof_detail": "Cudgel size vs Mate hands",
+      "start_state_seed": "Mate walking",
+      "end_state_seed": "Mate raising weapon",
+      "action_seed": "Approaching to finish protagonist",
       "blocking_seed": [
-        "mate moving toward center"
+        "Mate moving toward center"
       ],
-      "shot_size": "wide",
+      "shot_size": "medium_full",
       "camera_angle": "eye_level",
       "lens_family": "wide",
       "camera_motion": "pan",
@@ -199,30 +200,30 @@
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "demonstrate loyalty",
-      "planned_shot_moment_summary": "watch-thing leaps into fray",
+      "planned_shot_moment_summary": "Watch-thing leaps into combat",
       "primary_subject_seed": "Watch-thing",
       "secondary_subjects_seed": [
         "Mate (Bull Ape)"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "chamber center",
-      "planned_shot_required_anchor_1": "chamber floor",
-      "planned_shot_scale_proof_detail": "multi-legged movement vs ape mass",
-      "start_state_seed": "leap from periphery",
-      "end_state_seed": "clash with mate",
-      "action_seed": "leaping and attacking",
+      "environment_subzone": "chamber floor",
+      "planned_shot_required_anchor_1": "Chamber floor",
+      "planned_shot_scale_proof_detail": "Multi-legged movement vs Bull Ape bulk",
+      "start_state_seed": "Watch-thing off-screen",
+      "end_state_seed": "Watch-thing colliding with Mate",
+      "action_seed": "Leaping into fray",
       "blocking_seed": [
-        "watch-thing intercepts mate"
+        "Watch-thing intercepts Mate path"
       ],
-      "shot_size": "full",
+      "shot_size": "wide",
       "camera_angle": "low_angle",
-      "lens_family": "wide",
+      "lens_family": "ultra_wide",
       "camera_motion": "handheld",
       "zoom_behavior": "none",
-      "focus_strategy": "rack_focus",
+      "focus_strategy": "deep_focus",
       "lighting_style": "low_key_night",
-      "primary_subject_angle": "front_three_quarter_right"
+      "primary_subject_angle": "front"
     }
   ],
   "unresolved_questions": [
@@ -281,14 +282,14 @@
     "[CH006] CHAPTER VI (book index hit)",
     "[CH021] CHAPTER XXI (book index hit)"
   ],
-  "storyboard_markdown": "# Scene Contract: CH006_SC001\n\n## Production Intent\nEstablish immediate life-or-death stakes through a physical struggle between the protagonist and a massive Bull Ape, culminating in a high-stakes intervention by the Watch-thing to demonstrate loyalty.\n\n## Required Cast\n- The Protagonist (Earthman)\n- The Watch-thing (Multi-legged creature)\n- The Bull Ape (Massive creature)\n- The Mate (Bull Ape with stone cudgel)\n\n## Required Environments\n- Interior chamber, Martian city building\n\n## Continuity Constraints\n- Positioning of the Bull Ape's limbs relative to protagonist.\n- Location and orientation of the fallen/held stone cudgel.\n- Physical injury state of the Watch-thing during combat.\n\n## Beat List\n- BT001: Protagonist pinned by Bull Ape.\n- BT002: Mate approaches with stone cudgel.\n- BT003: Watch-thing leaps into fray to engage mate.",
+  "storyboard_markdown": "# Scene Contract: CH006_SC001\n\n## Production Intent\nEstablish immediate life-or-death stakes and demonstrate the loyalty of the Watch-thing through a high-tension struggle between an Earthman, two Bull Apes, and a multi-legged creature.\n\n## Required Cast\n- The Protagonist (Earthman)\n- The Watch-thing (Multi-legged creature)\n- The Bull Ape (Massive beast)\n- The Mate (Bull Ape with stone cudgel)\n\n## Required Environments\n- Interior chamber, Martian city building\n\n## Continuity Constraints\n- Exact positioning of the Bull Ape's limbs while pinning.\n- Precise location and movement of the stone cudgel.\n- Physical injury/damage state of the Watch-thing during and after combat.\n\n## Beat List\n- BT001: Protagonist pinned by Bull Ape.\n- BT002: Mate approaches with stone cudgel to finish him.\n- BT003: Watch-thing leaps into the fray, engaging the mate in struggle.",
   "metadata": {
     "artifact_id": "CH006_SC001_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "8bc1bb000546503d2acc60fbb3ce5336dfa7aebe",
+    "source_fingerprint": "d9d47761c7e5debfead8b61f57c891d0123e2613",
     "created_at_utc": "2026-04-21T23:24:30.049176+00:00",
-    "updated_at_utc": "2026-04-23T18:12:54.381921+00:00",
+    "updated_at_utc": "2026-04-23T18:56:17.309262+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -303,7 +304,7 @@
       {
         "dependency_type": "environment_resolutions",
         "dependency_id": "CH006_SC001",
-        "version": "42f1c8f35b540e2fd8584352d02d8ddadd9c86ae"
+        "version": "02416380548f7694479579e81b9ed7524d011297"
       }
     ],
     "locked_fields": {},
@@ -348,6 +349,11 @@
         "timestamp_utc": "2026-04-23T18:13:20.926578+00:00",
         "action": "synthesized",
         "source_fingerprint": "8bc1bb000546503d2acc60fbb3ce5336dfa7aebe"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:57:01.319748+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d9d47761c7e5debfead8b61f57c891d0123e2613"
       }
     ]
   }

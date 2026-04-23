@@ -13,7 +13,6 @@
 - `CH003_SC004` - The basin/enclosure area (missing_environment)
 - `CH003_SC005` - The basin/open landscape (missing_environment)
 - `CH004_SC001` - Central Plaza of the Ancient City (Marble/Gold architecture, massive scale) (missing_environment)
-- `CH004_SC003` - Grand Audience Chamber / Plaza area (missing_environment)
 - `CH004_SC004` - Transition from Audience Chamber to corridors/private quarters (missing_environment)
 - `CH004_SC005` - Decorated Sleeping Chamber (missing_environment)
 - `CH005_SC001` - Captive's chamber (decorated with murals) (missing_environment)

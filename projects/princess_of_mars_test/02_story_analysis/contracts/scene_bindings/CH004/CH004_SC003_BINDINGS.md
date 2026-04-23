@@ -2,7 +2,7 @@
 
 - scene_id: `CH004_SC003`
 - chapter_id: `CH004`
-- binding_mode: `chapter_fallback`
+- binding_mode: `scene_level`
 - resolved_environment: grand_audience_chamber (grand_audience_chamber)
 
 ## Resolved Cast
@@ -15,14 +15,12 @@
 
 ## Notes
 
-- Inherited chapter-level environment because the scene did not resolve a canonical environment.
 - 2 scene cast reference(s) still require review.
 
 ## Review Flags
 
-- scene_environment_used_chapter_fallback
 - scene_cast_contains_unresolved_references
 
 ## Future Environment Requests
 
-- Grand Audience Chamber / Plaza area (missing_environment)
+- (none)

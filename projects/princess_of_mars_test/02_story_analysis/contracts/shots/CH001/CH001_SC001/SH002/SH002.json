@@ -5,71 +5,71 @@
   "shot_order": 2,
   "previous_shot_id": "SH001",
   "next_shot_id": "SH003",
-  "primary_subject": "John Carter (Elderly)",
-  "secondary_subjects": [
-    "[]"
-  ],
-  "shot_moment_summary": "Extreme detail of skin and eyes during explanation",
-  "start_state": "speaking",
-  "end_state": "explanation concludes",
-  "action_during_shot": "speaking",
-  "action_continues_from": "first words spoken",
+  "primary_subject": "john_carter",
+  "secondary_subjects": [],
+  "shot_moment_summary": "medium shot of seated elderly man",
+  "start_state": "medium shot",
+  "end_state": "medium shot",
+  "action_during_shot": "speaking to camera",
+  "action_continues_from": "static extreme close-up",
   "action_hands_off_to": "BT003",
-  "shot_size": "extreme_close_up",
+  "shot_size": "medium",
   "camera_angle": "eye_level",
-  "lens_family": "portrait",
+  "lens_family": "normal",
   "camera_motion": "locked_off",
   "zoom_behavior": "none",
   "focus_strategy": "shallow_subject",
   "lighting_style": "soft_even",
   "subject_visibility": "on_screen",
   "narration_mode": "in_scene_speaker",
-  "primary_subject_angle": "front",
-  "visible_primary_subject_id": "john carter (elderly)",
-  "visible_secondary_subject_ids": [
-    "[]"
-  ],
-  "primary_subject_frame_position": "foreground inside seated area",
-  "primary_subject_scale_relation": "skin texture/wrinkles",
-  "primary_subject_facing_direction": "facing directly toward camera",
-  "primary_subject_pose_description": "speaking",
-  "subject_relation_summary": "John Carter (Elderly) carries the frame alone",
-  "required_environment_anchor_1": "weathered skin",
-  "required_scale_proof_detail": "skin texture/wrinkles",
-  "camera_package_description": "extreme-close-up, eye level, portrait lens, locked off, shallow subject, soft even",
+  "primary_subject_angle": "front_three_quarter_right",
+  "visible_primary_subject_id": "john_carter",
+  "visible_secondary_subject_ids": [],
+  "primary_subject_frame_position": "foreground right within Seated area",
+  "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+  "primary_subject_facing_direction": "front three-quarter right toward the scene action",
+  "primary_subject_pose_description": "medium shot",
+  "subject_relation_summary": "john_carter carries the frame alone",
+  "required_environment_anchor_1": "seated chair/position",
+  "required_scale_proof_detail": "full torso visible",
+  "camera_package_description": "medium, eye level, normal lens, locked off, shallow subject, soft even",
   "subject_blocking": [
-    "seated center",
-    "Static seated position"
+    "seated upright",
+    "seated upright facing camera",
+    "intimate framing space",
+    "john_carter remains readable within the active playing space."
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the seated area."
+    "Camera anchors the action inside the Seated area.",
+    "Background depth should keep Unspecified (Narrative framing space) legible as the location anchor.",
+    "Subject 1: john_carter remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "John Carter (Elderly) focuses toward the active scene action."
+    "john_carter focuses toward the active scene action."
   ],
-  "environment_subzone": "seated area",
+  "environment_subzone": "Seated area",
   "key_visible_environment_features": [
-    "seated area"
+    "Seated area"
   ],
-  "continuity_from_previous_shot": "first words spoken",
+  "continuity_from_previous_shot": "static extreme close-up",
   "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "speaking",
-  "pose_end_frame": "explanation concludes",
-  "shot_title": "Medium 2: Explanation of anomalous aging",
+  "pose_anchor_frame": "medium shot",
+  "pose_end_frame": "medium shot",
+  "shot_title": "Verbal introduction of anomalous condition",
   "shot_type": "medium",
   "camera_description": "Stable medium framing that keeps action and character readable.",
-  "composition": "Readable medium composition in Unspecified (Narrative framing space) featuring John Carter (Elderly).",
+  "composition": "Readable medium composition in Unspecified (Narrative framing space) featuring john_carter.",
   "target_seconds": 5.3,
   "characters_in_frame": [
     {
       "label": "John Carter (Elderly)",
-      "canonical_id": null,
-      "display_name": "John Carter (Elderly)",
-      "status": "review",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
     }
   ],
   "environment": {
@@ -80,17 +80,18 @@
     "entity_kind": "environment",
     "resolution_score": 8,
     "source_path": "",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "notes": "Low-confidence environment match requires review."
   },
   "beat_ids": [
     "BT002"
   ],
   "continuity_constraints": [
-    "Consistent elderly age for John Carter",
-    "Stable tone of voice and delivery"
+    "Consistent elderly age for john_carter",
+    "Specific tone of voice and delivery consistency",
+    "Verbal introduction of anomalous condition"
   ],
-  "prompt_seed": "Medium 2: Explanation of anomalous aging. extreme_close_up. size=extreme_close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front.",
-  "shot_notes": "Explanation of anomalous aging",
+  "prompt_seed": "Medium 2: Verbal introduction of anomalous condition. medium. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front_three_quarter_right.",
+  "shot_notes": "Verbal introduction of anomalous condition",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -140,38 +141,44 @@
       "source": "book_index",
       "chapter_id": "CH003",
       "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH003_chapter_iii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH001",
+      "canonical_id": "john_carter"
     }
   ],
   "evidence_summary": [
-    "Establish the narrative framing device by presenting an elderly protagonist who introduces his anomalous aging process and his intent to document his life history.",
+    "Establish the narrative framing device by presenting an elderly John Carter who explains his anomalous aging and his intent to document his life history before death.",
     "An elderly John Carter introduces himself to the reader/audience, explaining his anomalous aging process and his decision to document his life story before he finally dies.",
     "Introspection / Solemnity.",
-    "Elderly John Carter sits in stillness, looking toward the lens.",
-    "John Carter finishes his explanation, maintaining a solemn gaze.",
-    "Verbal exposition of anomalous aging and life documentation intent."
+    "john_carter sits in stillness, looking toward the lens.",
+    "john_carter finishes his address, maintaining a solemn gaze.",
+    "Verbal exposition regarding anomalous aging and life documentation.",
+    "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in..."
   ],
   "metadata": {
     "artifact_id": "CH001_SC001_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "41439e86b2ae68bd30ddc39537b634cb6ec108a4",
+    "source_fingerprint": "1733399770bd4592b200f2a603e0b3f40b523246",
     "created_at_utc": "2026-04-21T23:56:51.261518+00:00",
-    "updated_at_utc": "2026-04-23T18:15:32.109239+00:00",
+    "updated_at_utc": "2026-04-23T19:00:16.101686+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH001_SC001",
-        "version": "e91b840e8381e4067362f8497beda680a4957f2a"
+        "version": "f6aff7a65b48052f05c6835d47cd0ae34bf909d6"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH001_SC001",
-        "version": "f51a04c6c27e971b0f1cae34f7621f403f01a448"
+        "version": "11fbdc2f17d7bcf2feb33fa583f676d7e58861ee"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH001_SC001",
-        "version": "ac34e29ff1a87fa7748aa64c4c1a4612a49d1ce7"
+        "version": "f19e12c84e8c76e279d2dbc8a8b7df1bf6752179"
       }
     ],
     "locked_fields": {},
@@ -221,6 +228,11 @@
         "timestamp_utc": "2026-04-23T18:16:06.797859+00:00",
         "action": "synthesized",
         "source_fingerprint": "41439e86b2ae68bd30ddc39537b634cb6ec108a4"
+      },
+      {
+        "timestamp_utc": "2026-04-23T19:01:20.488394+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "1733399770bd4592b200f2a603e0b3f40b523246"
       }
     ]
   }

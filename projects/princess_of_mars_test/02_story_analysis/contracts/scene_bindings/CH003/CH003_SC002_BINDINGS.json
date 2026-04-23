@@ -9,9 +9,9 @@
       "display_name": "protagonist",
       "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 176,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
     }
   ],
   "resolved_environment": {
@@ -21,8 +21,8 @@
     "status": "review",
     "entity_kind": "environment",
     "resolution_score": 8,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "source_path": "",
+    "notes": "Low-confidence environment match requires review."
   },
   "beat_environment_overrides": [],
   "candidate_environment_ids": [],
@@ -32,7 +32,7 @@
       "chapter_id": "CH003",
       "requested_label": "The glass-roofed incubator enclosure",
       "request_type": "missing_environment",
-      "reason": "aerial_battlefield_mars | source context shares query language",
+      "reason": "Low-confidence environment match requires review.",
       "parent_environment_id": null,
       "evidence_refs": [
         {
@@ -136,14 +136,14 @@
     "artifact_id": "CH003_SC002_SCENE_BINDINGS",
     "artifact_type": "scene_binding",
     "status": "generated",
-    "source_fingerprint": "379320641f74a355d0f608e75a27e4b80e6f9edb",
+    "source_fingerprint": "fce069e5c889df19f134119829d6bad43f1bc59a",
     "created_at_utc": "2026-04-22T06:48:28.687357+00:00",
-    "updated_at_utc": "2026-04-23T18:14:44.654859+00:00",
+    "updated_at_utc": "2026-04-23T18:59:10.187840+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH003_SC002",
-        "version": "3ab980cc81458cee1d140b311259a3017af2e81e"
+        "version": "832ac22fd733e78271dae2f747fb63cfce252b14"
       }
     ],
     "locked_fields": {},
@@ -188,6 +188,11 @@
         "timestamp_utc": "2026-04-23T18:14:44.654859+00:00",
         "action": "synthesized",
         "source_fingerprint": "379320641f74a355d0f608e75a27e4b80e6f9edb"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:59:10.187840+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "fce069e5c889df19f134119829d6bad43f1bc59a"
       }
     ]
   }

@@ -5,57 +5,52 @@
   "shot_order": 3,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "primary_subject": "John Carter (Elderly)",
-  "secondary_subjects": [
-    "[]"
-  ],
-  "shot_moment_summary": "Carter declares his decision to document his life",
-  "start_state": "finishing explanation",
-  "end_state": "final solemn look",
-  "action_during_shot": "speaking/staring",
-  "action_continues_from": "explanation concludes",
-  "action_hands_off_to": "End of scene",
+  "primary_subject": "john_carter",
+  "secondary_subjects": [],
+  "shot_moment_summary": "Declaration of intent to document life",
+  "start_state": "subject explains decision to write",
+  "end_state": "solemn silence after final word",
+  "action_during_shot": "Declaration of intent to document life",
+  "action_continues_from": "medium shot",
+  "action_hands_off_to": "end_scene",
   "shot_size": "close_up",
   "camera_angle": "eye_level",
   "lens_family": "portrait",
   "camera_motion": "push_in",
   "zoom_behavior": "subtle_in",
   "focus_strategy": "shallow_subject",
-  "lighting_style": "soft_even",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
-  "narration_mode": "in_scene_speaker",
-  "primary_subject_angle": "front",
-  "visible_primary_subject_id": "john carter (elderly)",
-  "visible_secondary_subject_ids": [
-    "[]"
-  ],
-  "primary_subject_frame_position": "foreground inside seated area",
-  "primary_subject_scale_relation": "eye contact",
-  "primary_subject_facing_direction": "facing directly toward camera",
-  "primary_subject_pose_description": "finishing explanation",
-  "subject_relation_summary": "John Carter (Elderly) carries the frame alone",
-  "required_environment_anchor_1": "eyes",
-  "required_scale_proof_detail": "eye contact",
-  "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, soft even",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
+  "visible_primary_subject_id": "john_carter",
+  "visible_secondary_subject_ids": [],
+  "primary_subject_frame_position": "foreground inside Seated area",
+  "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "subject explains decision to write",
+  "subject_relation_summary": "john_carter carries the frame alone",
+  "required_environment_anchor_1": "Seated area",
+  "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+  "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
   "subject_blocking": [
-    "seated center",
-    "Static seated position"
+    "seated still"
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the seated area."
+    "Camera anchors the action inside the Seated area."
   ],
   "gaze_directions": [
-    "John Carter (Elderly) focuses toward the active scene action."
+    "john_carter focuses toward the active scene action."
   ],
-  "environment_subzone": "seated area",
+  "environment_subzone": "Seated area",
   "key_visible_environment_features": [
-    "seated area"
+    "Seated area"
   ],
-  "continuity_from_previous_shot": "explanation concludes",
-  "continuity_to_next_shot": "End of scene",
-  "pose_anchor_frame": "finishing explanation",
-  "pose_end_frame": "final solemn look",
-  "shot_title": "Closing Reaction 3: Declaration of intent to document life",
+  "continuity_from_previous_shot": "medium shot",
+  "continuity_to_next_shot": "end_scene",
+  "pose_anchor_frame": "subject explains decision to write",
+  "pose_end_frame": "solemn silence after final word",
+  "shot_title": "Declaration of intent to document life",
   "shot_type": "closing_reaction",
   "camera_description": "Controlled closing frame that lands the consequence of the beat.",
   "composition": "Closing composition in Unspecified (Narrative framing space) that emphasizes the consequence of declaration of intent to document life.",
@@ -63,13 +58,13 @@
   "characters_in_frame": [
     {
       "label": "John Carter (Elderly)",
-      "canonical_id": null,
-      "display_name": "John Carter (Elderly)",
-      "status": "review",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
     }
   ],
   "environment": {
@@ -80,16 +75,16 @@
     "entity_kind": "environment",
     "resolution_score": 8,
     "source_path": "",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "notes": "Low-confidence environment match requires review."
   },
   "beat_ids": [
     "BT003"
   ],
   "continuity_constraints": [
-    "Consistent elderly age for John Carter",
-    "Stable tone of voice and delivery"
+    "Consistent elderly age for john_carter",
+    "Declaration of intent to document life"
   ],
-  "prompt_seed": "Closing Reaction 3: Declaration of intent to document life. close_up. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front.",
+  "prompt_seed": "Closing Reaction 3: Declaration of intent to document life. closing_reaction. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left.",
   "shot_notes": "Declaration of intent to document life",
   "evidence_refs": [
     {
@@ -140,38 +135,44 @@
       "source": "book_index",
       "chapter_id": "CH003",
       "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH003_chapter_iii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH001",
+      "canonical_id": "john_carter"
     }
   ],
   "evidence_summary": [
-    "Establish the narrative framing device by presenting an elderly protagonist who introduces his anomalous aging process and his intent to document his life history.",
+    "Establish the narrative framing device by presenting an elderly John Carter who explains his anomalous aging and his intent to document his life history before death.",
     "An elderly John Carter introduces himself to the reader/audience, explaining his anomalous aging process and his decision to document his life story before he finally dies.",
     "Introspection / Solemnity.",
-    "Elderly John Carter sits in stillness, looking toward the lens.",
-    "John Carter finishes his explanation, maintaining a solemn gaze.",
-    "Verbal exposition of anomalous aging and life documentation intent."
+    "john_carter sits in stillness, looking toward the lens.",
+    "john_carter finishes his address, maintaining a solemn gaze.",
+    "Verbal exposition regarding anomalous aging and life documentation.",
+    "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in..."
   ],
   "metadata": {
     "artifact_id": "CH001_SC001_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "41439e86b2ae68bd30ddc39537b634cb6ec108a4",
+    "source_fingerprint": "1733399770bd4592b200f2a603e0b3f40b523246",
     "created_at_utc": "2026-04-21T23:57:15.431137+00:00",
-    "updated_at_utc": "2026-04-23T18:16:06.810370+00:00",
+    "updated_at_utc": "2026-04-23T19:01:20.500393+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH001_SC001",
-        "version": "e91b840e8381e4067362f8497beda680a4957f2a"
+        "version": "f6aff7a65b48052f05c6835d47cd0ae34bf909d6"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH001_SC001",
-        "version": "f51a04c6c27e971b0f1cae34f7621f403f01a448"
+        "version": "11fbdc2f17d7bcf2feb33fa583f676d7e58861ee"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH001_SC001",
-        "version": "ac34e29ff1a87fa7748aa64c4c1a4612a49d1ce7"
+        "version": "f19e12c84e8c76e279d2dbc8a8b7df1bf6752179"
       }
     ],
     "locked_fields": {},
@@ -221,6 +222,11 @@
         "timestamp_utc": "2026-04-23T18:16:40.899279+00:00",
         "action": "synthesized",
         "source_fingerprint": "41439e86b2ae68bd30ddc39537b634cb6ec108a4"
+      },
+      {
+        "timestamp_utc": "2026-04-23T19:02:20.381722+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "1733399770bd4592b200f2a603e0b3f40b523246"
       }
     ]
   }

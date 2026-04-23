@@ -9,19 +9,19 @@
       "display_name": "protagonist",
       "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 176,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
     },
     {
       "label": "Martian Warriors (Cavalcade)",
-      "canonical_id": null,
-      "display_name": "Martian Warriors (Cavalcade)",
-      "status": "review",
-      "entity_kind": "individual",
-      "resolution_score": 6,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
-      "notes": "protagonist | token overlap: ['protagonist'] | generic role label reduces confidence"
+      "canonical_id": "martian_warriors",
+      "display_name": "martian_warriors",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/martian_warriors.md",
+      "notes": "Direct registry match for 'martian_warriors'."
     }
   ],
   "resolved_environment": {
@@ -31,8 +31,8 @@
     "status": "review",
     "entity_kind": "environment",
     "resolution_score": 8,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "source_path": "",
+    "notes": "Low-confidence environment match requires review."
   },
   "beat_environment_overrides": [],
   "candidate_environment_ids": [],
@@ -42,7 +42,7 @@
       "chapter_id": "CH003",
       "requested_label": "The basin/vegetation area near the incubator",
       "request_type": "missing_environment",
-      "reason": "aerial_battlefield_mars | source context shares query language",
+      "reason": "Low-confidence environment match requires review.",
       "parent_environment_id": null,
       "evidence_refs": [
         {
@@ -79,12 +79,10 @@
     }
   ],
   "review_flags": [
-    "scene_environment_unresolved",
-    "scene_cast_contains_unresolved_references"
+    "scene_environment_unresolved"
   ],
   "notes": [
-    "Scene referenced a non-canonical environment and no chapter fallback was available.",
-    "1 scene cast reference(s) still require review."
+    "Scene referenced a non-canonical environment and no chapter fallback was available."
   ],
   "evidence_refs": [
     {
@@ -131,6 +129,11 @@
       "source": "character_bible",
       "chapter_id": "CH003",
       "canonical_id": "protagonist"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH003",
+      "canonical_id": "martian_warriors"
     }
   ],
   "evidence_summary": [
@@ -142,20 +145,21 @@
     "[CH022] CHAPTER XXII (book index hit)",
     "[CH003] CHAPTER III (book index hit)",
     "[CH004] CHAPTER IV (book index hit)",
-    "Character protagonist: An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeles..."
+    "Character protagonist: An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeles...",
+    "Character martian_warriors: The martian_warriors are a highly disciplined military force of massive, 15-foot tall humanoids. They possess olive-green skin, red eyes, tusks, and four arms. In combat or transit, they are often seen mounted on slate-colored, e..."
   ],
   "metadata": {
     "artifact_id": "CH003_SC003_SCENE_BINDINGS",
     "artifact_type": "scene_binding",
     "status": "generated",
-    "source_fingerprint": "86e70d1ed493c6dd0ade8f5e72b586e9b889b30a",
+    "source_fingerprint": "ed59cd0afefdf3f1423357f396be1b9b5cafd614",
     "created_at_utc": "2026-04-22T06:48:28.694354+00:00",
-    "updated_at_utc": "2026-04-23T18:14:44.669834+00:00",
+    "updated_at_utc": "2026-04-23T18:59:10.207096+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH003_SC003",
-        "version": "cf98d6625f69944d85d716aebb36425e5fe1c117"
+        "version": "9a13a7f86dd19fa238c68a80a811d1bff3b975f0"
       }
     ],
     "locked_fields": {},
@@ -200,6 +204,11 @@
         "timestamp_utc": "2026-04-23T18:14:44.669834+00:00",
         "action": "synthesized",
         "source_fingerprint": "86e70d1ed493c6dd0ade8f5e72b586e9b889b30a"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:59:10.207096+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "ed59cd0afefdf3f1423357f396be1b9b5cafd614"
       }
     ]
   }

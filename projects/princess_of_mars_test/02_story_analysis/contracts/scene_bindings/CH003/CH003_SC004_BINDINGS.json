@@ -9,9 +9,9 @@
       "display_name": "protagonist",
       "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 176,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
     },
     {
       "label": "Martian Warriors",
@@ -19,9 +19,9 @@
       "display_name": "martian_warriors",
       "status": "canonical",
       "entity_kind": "group",
-      "resolution_score": 176,
+      "resolution_score": 138,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/martian_warriors.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'martian_warriors'"
+      "notes": "Direct registry match for 'martian_warriors'."
     }
   ],
   "resolved_environment": {
@@ -31,8 +31,8 @@
     "status": "review",
     "entity_kind": "environment",
     "resolution_score": 8,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "source_path": "",
+    "notes": "Low-confidence environment match requires review."
   },
   "beat_environment_overrides": [],
   "candidate_environment_ids": [],
@@ -42,7 +42,7 @@
       "chapter_id": "CH003",
       "requested_label": "The basin/enclosure area",
       "request_type": "missing_environment",
-      "reason": "aerial_battlefield_mars | source context shares query language",
+      "reason": "Low-confidence environment match requires review.",
       "parent_environment_id": null,
       "evidence_refs": [
         {
@@ -152,14 +152,14 @@
     "artifact_id": "CH003_SC004_SCENE_BINDINGS",
     "artifact_type": "scene_binding",
     "status": "generated",
-    "source_fingerprint": "b81032a07d3ac9b03c66a5896fe5a4aa41f3674d",
+    "source_fingerprint": "16919e1bb8eda557403a08d6d5f2128277a01379",
     "created_at_utc": "2026-04-22T06:48:28.701354+00:00",
-    "updated_at_utc": "2026-04-23T18:14:44.687693+00:00",
+    "updated_at_utc": "2026-04-23T18:59:10.222609+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH003_SC004",
-        "version": "38a3d9f5d1375a2091823b32eab5116ab67e219f"
+        "version": "a308e828a81d59d8daed01a609cd6fb4d95832d0"
       }
     ],
     "locked_fields": {},
@@ -204,6 +204,11 @@
         "timestamp_utc": "2026-04-23T18:14:44.687693+00:00",
         "action": "synthesized",
         "source_fingerprint": "b81032a07d3ac9b03c66a5896fe5a4aa41f3674d"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:59:10.222609+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "16919e1bb8eda557403a08d6d5f2128277a01379"
       }
     ]
   }

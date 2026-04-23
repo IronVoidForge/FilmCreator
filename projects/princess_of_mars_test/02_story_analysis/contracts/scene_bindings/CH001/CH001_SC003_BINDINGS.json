@@ -5,13 +5,13 @@
   "resolved_characters": [
     {
       "label": "John Carter (Younger)",
-      "canonical_id": null,
-      "display_name": "John Carter (Younger)",
-      "status": "review",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
     },
     {
       "label": "Apache Warriors",
@@ -19,9 +19,9 @@
       "display_name": "apache_warriors",
       "status": "canonical",
       "entity_kind": "group",
-      "resolution_score": 186,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'apache_warriors'"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/apache_warriors.md",
+      "notes": "Direct registry match for 'apache_warriors'."
     }
   ],
   "resolved_environment": {
@@ -31,8 +31,8 @@
     "status": "review",
     "entity_kind": "environment",
     "resolution_score": 8,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "source_path": "",
+    "notes": "Low-confidence environment match requires review."
   },
   "beat_environment_overrides": [],
   "candidate_environment_ids": [],
@@ -42,7 +42,7 @@
       "chapter_id": "CH001",
       "requested_label": "Arizona hills/plateau",
       "request_type": "missing_environment",
-      "reason": "aerial_battlefield_mars | source context shares query language",
+      "reason": "Low-confidence environment match requires review.",
       "parent_environment_id": null,
       "evidence_refs": [
         {
@@ -79,12 +79,10 @@
     }
   ],
   "review_flags": [
-    "scene_environment_unresolved",
-    "scene_cast_contains_unresolved_references"
+    "scene_environment_unresolved"
   ],
   "notes": [
-    "Scene referenced a non-canonical environment and no chapter fallback was available.",
-    "1 scene cast reference(s) still require review."
+    "Scene referenced a non-canonical environment and no chapter fallback was available."
   ],
   "evidence_refs": [
     {
@@ -135,7 +133,7 @@
     {
       "source": "character_bible",
       "chapter_id": "CH001",
-      "canonical_id": "apache_warriors"
+      "canonical_id": "john_carter"
     }
   ],
   "evidence_summary": [
@@ -148,20 +146,20 @@
     "[CH001] CHAPTER I (book index hit)",
     "[CH010] CHAPTER X (book index hit)",
     "[CH011] CHAPTER XI (book index hit)",
-    "Character apache_warriors: A large group of hostile 19th-century indigenous warriors characterized by their traditional Apache attire. They function as a collective unit, primarily seen engaged in ambush tactics and active skirmishes while wielding arrows."
+    "Character john_carter: A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior ad..."
   ],
   "metadata": {
     "artifact_id": "CH001_SC003_SCENE_BINDINGS",
     "artifact_type": "scene_binding",
     "status": "generated",
-    "source_fingerprint": "7434bc1e5d39030dd1ea9bfed5778741ed0282c7",
+    "source_fingerprint": "847b2e3d433e8c16a9ab8b7743db2f34ed05bad4",
     "created_at_utc": "2026-04-22T06:48:28.632119+00:00",
-    "updated_at_utc": "2026-04-23T18:14:44.518698+00:00",
+    "updated_at_utc": "2026-04-23T18:59:10.055727+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH001_SC003",
-        "version": "f4f0d7ca2292e24891a0f5a35c7455bae2ed311b"
+        "version": "3d2d8d11e87979033fd1fd0e9ee5ac2e13b6daa9"
       }
     ],
     "locked_fields": {},
@@ -206,6 +204,11 @@
         "timestamp_utc": "2026-04-23T18:14:44.518698+00:00",
         "action": "synthesized",
         "source_fingerprint": "7434bc1e5d39030dd1ea9bfed5778741ed0282c7"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:59:10.055727+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "847b2e3d433e8c16a9ab8b7743db2f34ed05bad4"
       }
     ]
   }

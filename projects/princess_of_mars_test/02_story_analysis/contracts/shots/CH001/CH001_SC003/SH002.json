@@ -5,82 +5,68 @@
   "shot_order": 2,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "primary_subject": "John Carter (Younger)",
-  "secondary_subjects": [
-    "apache_warriors"
-  ],
-  "shot_moment_summary": "Carter moves along the narrow trail",
-  "start_state": "walking along trail",
+  "primary_subject": "john_carter",
+  "secondary_subjects": [],
+  "shot_moment_summary": "tracking the trail",
+  "start_state": "walking trail",
   "end_state": "reaching plateau edge",
-  "action_during_shot": "climbing/walking",
-  "action_continues_from": "Carter focusing on movement",
+  "action_during_shot": "climbing/moving fast",
+  "action_continues_from": "carter spotting movement",
   "action_hands_off_to": "BT003",
-  "shot_size": "medium_full",
+  "shot_size": "full",
   "camera_angle": "low_angle",
   "lens_family": "wide",
   "camera_motion": "track",
   "zoom_behavior": "none",
-  "focus_strategy": "shallow_subject",
+  "focus_strategy": "deep_focus",
   "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
   "primary_subject_angle": "rear_three_quarter_left",
-  "visible_primary_subject_id": "john carter (younger)",
-  "visible_secondary_subject_ids": [
-    "apache_warriors"
-  ],
+  "visible_primary_subject_id": "john_carter",
+  "visible_secondary_subject_ids": [],
   "primary_subject_frame_position": "foreground right within narrow cliffside trail",
-  "primary_subject_scale_relation": "trail width vs character",
+  "primary_subject_scale_relation": "trail width vs cliff height",
   "primary_subject_facing_direction": "rear three-quarter left away from camera",
-  "primary_subject_pose_description": "walking along trail edge",
-  "subject_relation_summary": "John Carter (Younger) carries the frame alone",
+  "primary_subject_pose_description": "walking trail",
+  "subject_relation_summary": "john_carter carries the frame alone",
   "required_environment_anchor_1": "cliffside",
-  "required_scale_proof_detail": "trail width vs character",
-  "camera_package_description": "medium-full, low angle, wide lens, track, shallow subject, hard directional",
+  "required_scale_proof_detail": "trail width vs cliff height",
+  "camera_package_description": "full, low angle, wide lens, track, deep focus, hard directional",
   "subject_blocking": [
-    "moving along trail edge",
-    "Moving along trail line"
+    "linear movement along trail",
+    "moving along edge"
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the narrow cliffside trail.",
-    "Background depth keeps Arizona hills/plateau legible."
+    "Background depth should keep Arizona hills/plateau legible as the location anchor."
   ],
   "gaze_directions": [
-    "John Carter (Younger) focuses toward the active scene action."
+    "john_carter focuses toward the active scene action."
   ],
   "environment_subzone": "narrow cliffside trail",
   "key_visible_environment_features": [
     "narrow cliffside trail"
   ],
-  "continuity_from_previous_shot": "Carter focusing on movement",
+  "continuity_from_previous_shot": "carter spotting movement",
   "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "walking along trail",
+  "pose_anchor_frame": "walking trail",
   "pose_end_frame": "reaching plateau edge",
-  "shot_title": "Insert Detail 2: Pursuit of the trail",
-  "shot_type": "insert_detail",
-  "camera_description": "Tight detail framing focused on a single visual object or gesture.",
-  "composition": "Detail composition centered on the key physical action or prop inside Arizona hills/plateau.",
-  "target_seconds": 5.3,
+  "shot_title": "Pursuit along trail",
+  "shot_type": "action",
+  "camera_description": "Active camera with tracking energy and clear spatial orientation.",
+  "composition": "Dynamic composition in Arizona hills/plateau with clear pursuit vectors and readable movement for john_carter.",
+  "target_seconds": 5.8,
   "characters_in_frame": [
     {
       "label": "John Carter (Younger)",
-      "canonical_id": null,
-      "display_name": "John Carter (Younger)",
-      "status": "review",
-      "entity_kind": "individual",
-      "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
-    },
-    {
-      "label": "Apache Warriors",
-      "canonical_id": "apache_warriors",
-      "display_name": "apache_warriors",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
       "status": "canonical",
-      "entity_kind": "group",
-      "resolution_score": 186,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'apache_warriors'"
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
     }
   ],
   "environment": {
@@ -91,7 +77,7 @@
     "entity_kind": "environment",
     "resolution_score": 8,
     "source_path": "",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "notes": "Low-confidence environment match requires review."
   },
   "beat_ids": [
     "BT002"
@@ -101,8 +87,8 @@
     "Direction of pursuit from valley to plateau",
     "Weapon handling (rifles and sidearms)"
   ],
-  "prompt_seed": "Insert Detail 2: Pursuit of the trail. insert_detail. size=medium_full. angle=low_angle. lens=wide. motion=track. zoom=none. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=rear_three_quarter_left. Tight detail framing focused on a single visual object or gesture.",
-  "shot_notes": "Pursuit of the trail",
+  "prompt_seed": "Action 2: Pursuit along trail. action. size=full. angle=low_angle. lens=wide. motion=track. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=rear_three_quarter_left.",
+  "shot_notes": "Pursuit along trail",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -156,40 +142,41 @@
     {
       "source": "character_bible",
       "chapter_id": "CH001",
-      "canonical_id": "apache_warriors"
+      "canonical_id": "john_carter"
     }
   ],
   "evidence_summary": [
-    "Establish the physical threat of the Apache warriors through a transition from quiet observation to high-intensity combat. The sequence must move from a wide, observational perspective in the valley to a tight, chaotic handheld skirmish on the plateau.",
+    "Establish the physical threat of the Apache presence through a transition from quiet observation to high-intensity combat. The sequence must move from controlled, observational shots in the valley to chaotic, handheld movement during the skirmish on the pla...",
     "Carter notices suspicious movement in the valley. Suspecting an ambush, he pursues the trail and discovers a large Apache camp on a plateau, leading to a chaotic skirmish.",
     "Suspicion $\\rightarrow$ Alertness $\\rightarrow$ Chaos/Adrenaline.",
-    "John Carter (Younger) observing suspicious movement from a distance in the valley.",
-    "Chaotic skirmish between John Carter (Younger) and apache_warriors on the plateau.",
-    "Pursuit of a trail leading to an ambush/skirmish encounter.",
+    "john_carter observing the valley floor from a distance.",
+    "chaotic skirmish erupting amidst the Apache camp.",
+    "Tracking suspicious movement through terrain into an ambush/skirmish scenario.",
+    "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in...",
     "apache_warriors | A large group of hostile 19th-century indigenous warriors characterized by their traditional Apache attire. They function as a collective unit, primarily seen engaged in ambush tactics and active skirmishes while wielding arrows. | Traditi..."
   ],
   "metadata": {
     "artifact_id": "CH001_SC003_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "d7dd4417afcde41067c5ca7fa07d42f02ca3fc0a",
+    "source_fingerprint": "71f404736442000b18397530165f298f185dcd5d",
     "created_at_utc": "2026-04-21T23:59:40.115331+00:00",
-    "updated_at_utc": "2026-04-23T18:19:43.875911+00:00",
+    "updated_at_utc": "2026-04-23T19:06:43.879977+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH001_SC003",
-        "version": "f4f0d7ca2292e24891a0f5a35c7455bae2ed311b"
+        "version": "3d2d8d11e87979033fd1fd0e9ee5ac2e13b6daa9"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH001_SC003",
-        "version": "49abebeaba204c6115632cdc675c2c96583da218"
+        "version": "58a7d14b029d7502abfcbcd4417d02dead2c2df5"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH001_SC003",
-        "version": "81fa008cc53c19801030772de5872bfcc93e8cf8"
+        "version": "fcfb60d84fec19907cc0ef46b130ba587c1e4d33"
       }
     ],
     "locked_fields": {},
@@ -234,6 +221,11 @@
         "timestamp_utc": "2026-04-23T18:20:21.488580+00:00",
         "action": "synthesized",
         "source_fingerprint": "d7dd4417afcde41067c5ca7fa07d42f02ca3fc0a"
+      },
+      {
+        "timestamp_utc": "2026-04-23T19:07:43.827363+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "71f404736442000b18397530165f298f185dcd5d"
       }
     ]
   }

@@ -5,16 +5,16 @@
   "shot_order": 1,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "primary_subject": "John Carter (Younger)",
+  "primary_subject": "john_carter",
   "secondary_subjects": [
-    "Horse"
+    "horse"
   ],
-  "shot_moment_summary": "Horse leads Carter toward the narrow cave opening on the cliff",
-  "start_state": "Bright daylight",
-  "end_state": "Approaching cave mouth",
-  "action_during_shot": "Walking/Leading horse",
-  "action_continues_from": "Bright daylight on a high, narrow mountain trail.",
-  "action_hands_off_to": "Transition to interior shadow",
+  "shot_moment_summary": "horse leads Carter toward the narrow entrance",
+  "start_state": "Carter walking on trail",
+  "end_state": "Carter reaching entrance",
+  "action_during_shot": "walking toward aperture",
+  "action_continues_from": "Bright, high-altitude sunlight on a narrow trail.",
+  "action_hands_off_to": "BT002",
   "shot_size": "wide",
   "camera_angle": "eye_level",
   "lens_family": "wide",
@@ -25,52 +25,52 @@
   "subject_visibility": "on_screen",
   "narration_mode": "none",
   "primary_subject_angle": "profile_right",
-  "visible_primary_subject_id": "john carter (younger)",
+  "visible_primary_subject_id": "john_carter",
   "visible_secondary_subject_ids": [
-    "[]"
+    "horse"
   ],
   "primary_subject_frame_position": "midground inside High cliffside trail",
-  "primary_subject_scale_relation": "Cliff height vs trail width",
+  "primary_subject_scale_relation": "Cliff edge height vs trail width",
   "primary_subject_facing_direction": "profile right toward the scene action",
-  "primary_subject_pose_description": "Bright daylight",
-  "subject_relation_summary": "John Carter (Younger) plays against Horse in the same frame",
+  "primary_subject_pose_description": "Carter walking on trail",
+  "subject_relation_summary": "john_carter plays against horse in the same frame",
   "required_environment_anchor_1": "Narrow cave entrance",
-  "required_scale_proof_detail": "Cliff height vs trail width",
+  "required_scale_proof_detail": "Cliff edge height vs trail width",
   "camera_package_description": "wide, eye level, wide lens, track, deep focus, hard directional",
   "subject_blocking": [
-    "Carter following horse toward aperture",
-    "Following the horse's lead toward the aperture"
+    "following horse line",
+    "following the animal line"
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the High cliffside trail.",
     "Background depth should keep High cliffside trail legible as the location anchor."
   ],
   "gaze_directions": [
-    "John Carter (Younger) focuses toward the active scene action."
+    "john_carter focuses toward the active scene action."
   ],
   "environment_subzone": "High cliffside trail",
   "key_visible_environment_features": [
     "High cliffside trail"
   ],
-  "continuity_from_previous_shot": "Bright daylight on a high, narrow mountain trail.",
-  "continuity_to_next_shot": "Transition to interior shadow",
-  "pose_anchor_frame": "Bright daylight",
-  "pose_end_frame": "Approaching cave mouth",
+  "continuity_from_previous_shot": "Bright, high-altitude sunlight on a narrow trail.",
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "Carter walking on trail",
+  "pose_end_frame": "Carter reaching entrance",
   "shot_title": "Establishing Wide 1: Carter follows horse to cave entrance",
   "shot_type": "establishing_wide",
   "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across High cliffside trail with John Carter (Younger) placed for immediate spatial orientation.",
-  "target_seconds": 5.2,
+  "composition": "Wide composition across High cliffside trail with john_carter placed for immediate spatial orientation.",
+  "target_seconds": 5.5,
   "characters_in_frame": [
     {
       "label": "John Carter (Younger)",
-      "canonical_id": null,
-      "display_name": "John Carter (Younger)",
-      "status": "review",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
     }
   ],
   "environment": {
@@ -81,14 +81,14 @@
     "entity_kind": "environment",
     "resolution_score": 8,
     "source_path": "",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "notes": "Low-confidence environment match requires review."
   },
   "beat_ids": [
     "BT001"
   ],
   "continuity_constraints": [
-    "Lighting transition from bright exterior to dim/dark cave interior",
-    "Visual cues for unnatural drowsiness (heavy eyelids, ocular focus loss)"
+    "Lighting transition from bright exterior to dark/dim cave",
+    "Visual cues for unnatural drowsiness (heavy eyelids, blurred vision)"
   ],
   "prompt_seed": "Establishing Wide 1: Carter follows horse to cave entrance. establishing_wide. size=wide. angle=eye_level. lens=wide. motion=track. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=profile_right.",
   "shot_notes": "Carter follows horse to cave entrance",
@@ -141,38 +141,44 @@
       "source": "book_index",
       "chapter_id": "CH010",
       "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH001",
+      "canonical_id": "john_carter"
     }
   ],
   "evidence_summary": [
-    "Establish the transition from a bright, terrestrial mountain trail into a dark, supernatural cave environment. The sequence must visually communicate the onset of an unnatural lethargy through lighting shifts and character physical degradation.",
+    "Establish the transition from a rugged terrestrial journey to a supernatural event by moving the protagonist from high-altitude sunlight into a dim, oppressive ancient chamber where physiological control is lost.",
     "Carter's horse leads him to a narrow cave entrance on a high trail. After checking Powell, Carter enters the large, ancient chamber. Inside, he is overcome by an unnatural drowsiness and collapses into unconsciousness.",
     "Exhaustion $\\rightarrow$ Confusion $\\rightarrow$ Lethargy/Loss of consciousness.",
-    "Bright daylight on a high, narrow mountain trail.",
-    "Total darkness/blackout following physical collapse.",
-    "Carter enters the cave and succumbs to an unnatural sleep."
+    "Bright, high-altitude sunlight on a narrow trail.",
+    "Darkness and unconsciousness inside the cave.",
+    "Carter follows his horse into the cave and succumbs to an unnatural lethargy.",
+    "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in..."
   ],
   "metadata": {
     "artifact_id": "CH001_SC005_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "c5f9997febd29f71b802ee61fd8803c8296ccde7",
+    "source_fingerprint": "e5ac4ecbe9848f6bb8609f054be575bba9cbee35",
     "created_at_utc": "2026-04-22T00:03:49.697336+00:00",
-    "updated_at_utc": "2026-04-23T18:23:18.972834+00:00",
+    "updated_at_utc": "2026-04-23T19:12:18.184593+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH001_SC005",
-        "version": "c498ae75a8548206af489574c4efa242c32191b2"
+        "version": "5c098b331740dfafb3a77b10fe70724f26da565f"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH001_SC005",
-        "version": "f7366c8c3f27bcf7841cfb9dc153f96496a940ee"
+        "version": "509afda70fa9bd577c916a3089934c88246ac8ff"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH001_SC005",
-        "version": "6d397c552757e4409537de26d1f8f16910f698de"
+        "version": "e344cd41ce85347dbdbb9e2e3ed8a68502a17390"
       }
     ],
     "locked_fields": {},
@@ -217,6 +223,11 @@
         "timestamp_utc": "2026-04-23T18:24:24.590442+00:00",
         "action": "synthesized",
         "source_fingerprint": "c5f9997febd29f71b802ee61fd8803c8296ccde7"
+      },
+      {
+        "timestamp_utc": "2026-04-23T19:13:26.143426+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "e5ac4ecbe9848f6bb8609f054be575bba9cbee35"
       }
     ]
   }

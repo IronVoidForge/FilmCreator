@@ -5,46 +5,60 @@
   "shot_order": 2,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "primary_subject": "scene_character",
+  "primary_subject": "Protagonist (New Self)",
   "secondary_subjects": [
-    "[]"
+    "Protagonist (Old Body)"
   ],
-  "start_state": "Continue from prior beat: After hours of isolation, the protagonist uses intense mental willpower to break the paralysis.",
-  "end_state": "The Protagonist (The \"New\" Self) stands upright while his original, clothed body remains lying lifeless on the cave floor.",
-  "action_during_shot": "Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, clothed body remains lying lifeless on the cave floor.",
-  "action_continues_from": "Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, clothed body remains lying lifeless on the cave floor.",
-  "action_hands_off_to": "The Protagonist (The \"New\" Self) and The Protagonist (The \"Old\" Body) in Interior Cave.",
-  "shot_size": "medium",
-  "camera_angle": "eye_level",
-  "lens_family": "normal",
-  "camera_motion": "locked_off",
+  "shot_moment_summary": "standing naked self vs lying clothed body",
+  "start_state": "Standing up",
+  "end_state": "Realization",
+  "action_during_shot": "Rising and looking down",
+  "action_continues_from": "Breaking paralysis",
+  "action_hands_off_to": "BT003",
+  "shot_size": "wide",
+  "camera_angle": "low_angle",
+  "lens_family": "wide",
+  "camera_motion": "pull_back",
   "zoom_behavior": "none",
   "focus_strategy": "deep_focus",
-  "lighting_style": "hard_directional",
+  "lighting_style": "low_key_night",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
-  "primary_subject_angle": "front_three_quarter_left",
+  "primary_subject_angle": "profile_left",
+  "visible_primary_subject_id": "scene_character",
+  "visible_secondary_subject_ids": [],
+  "primary_subject_frame_position": "midground inside Cave floor",
+  "primary_subject_scale_relation": "Vertical height of new self vs horizontal length of old body",
+  "primary_subject_facing_direction": "profile left toward the scene action",
+  "primary_subject_pose_description": "Standing up",
+  "subject_relation_summary": "Protagonist (New Self) plays against Protagonist (Old Body) in the same frame",
+  "required_environment_anchor_1": "Clothed body",
+  "required_scale_proof_detail": "Vertical height of new self vs horizontal length of old body",
+  "camera_package_description": "wide, low angle, wide lens, pull back, deep focus, low key night",
   "subject_blocking": [
-    "scene_character remains readable within the active playing space."
+    "Standing near the lying body",
+    "Twitching/straining against floor",
+    "Cave floor"
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the primary scene playing area."
+    "Camera anchors the action inside the Deep shadow zone.",
+    "Background depth should keep SC003 legible as the location anchor."
   ],
   "gaze_directions": [
-    "primary scene subject focuses toward the realization of his state."
+    "Protagonist (New Self) focuses toward the active scene action."
   ],
-  "environment_subzone": "primary scene playing area",
+  "environment_subzone": "Cave floor",
   "key_visible_environment_features": [
-    "primary scene playing area"
+    "Deep shadow zone"
   ],
-  "continuity_from_previous_shot": "Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, clothed body remains lying lifeless on the cave floor.",
-  "continuity_to_next_shot": "The Protagonist (The \"New\" Self) and The Protagonist (The \"Old\" Body) in Interior Cave.",
-  "pose_anchor_frame": "Protagonist just having stood up from paralysis.",
-  "pose_end_frame": "Protagonist looking down/around in shock at his nakedness and the old body.",
-  "shot_title": "Reaction Closeup 2: Metamorphosis Realization",
+  "continuity_from_previous_shot": "Breaking paralysis",
+  "continuity_to_next_shot": "BT003",
+  "pose_anchor_frame": "Standing up",
+  "pose_end_frame": "Realization",
+  "shot_title": "Breaking the paralysis",
   "shot_type": "reaction_closeup",
   "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates scene_character against the cave to capture the beat's emotional turn.",
+  "composition": "Intimate composition that isolates scene_character against SC003 to capture the beat's emotional turn.",
   "target_seconds": 5.3,
   "characters_in_frame": [
     {
@@ -61,7 +75,7 @@
   "environment": {
     "label": "scene_environment",
     "canonical_id": null,
-    "display_name": "To execute the central supernatural twist and reveal the protagonist'...",
+    "display_name": "SC003",
     "status": "review",
     "entity_kind": "environment",
     "resolution_score": null,
@@ -72,13 +86,12 @@
     "BT002"
   ],
   "continuity_constraints": [
-    "Upon standing",
-    "he realizes he has undergone a metamorphosis",
-    "new, naked self stands upright",
-    "original, clothed body remains lying lifeless on the cave floor"
+    "Exact spatial placement of old body relative to new self's standing position",
+    "Lighting consistency across both versions of the character",
+    "Breaking the paralysis"
   ],
-  "prompt_seed": "Reaction Closeup 2: Upon standing, he realizes he has undergone a metam.... reaction_closeup. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and em...",
-  "shot_notes": "Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, clothed body remains lying lifeless on the cave floor.",
+  "prompt_seed": "Reaction Closeup 2: Breaking the paralysis. reaction_closeup. size=wide. angle=low_angle. lens=wide. motion=pull_back. zoom=none. focus=deep_focus. lighting=low_key_night. visibility=on_screen. subject_angle=profile_left. Close framing that isolates reaction and emotional emphasis. Intimate composition that isolates...",
+  "shot_notes": "Breaking the paralysis",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -121,35 +134,35 @@
     }
   ],
   "evidence_summary": [
-    "To execute the central supernatural twist and reveal the protagonist's transformation.",
+    "Execute a supernatural metamorphosis reveal through the physical separation of a protagonist's old clothed body and his new naked self. The scene requires precise spatial alignment between the two bodies to maintain the logic of the transformation within th...",
     "After hours of isolation, the protagonist uses intense mental willpower to break the paralysis. Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, clothed body remains lying lifeless on the ca...",
     "From intense mental struggle to profound shock and existential horror. **Likely Visual Coverage Families:** - Medium shots of the physical struggle/effort - Reveal shot: A wide or medium shot showing both the standing...",
-    "After hours of isolation, the protagonist uses intense mental willpower to break the paralysis. Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, cloth...",
-    "**Participating Characters:** - The Protagonist (The \"New\" Self) - The Protagonist (The \"Old\" Body) **Participating Environments:** - Interior Cave (Deep shadows)",
-    "After hours of isolation, the protagonist uses intense mental willpower to break the paralysis. Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, cloth..."
+    "Protagonist is paralyzed and isolated in deep shadows.",
+    "Naked protagonist stands upright, staring at his original clothed body.",
+    "Mental willpower breaks physical paralysis leading to a metamorphosis reveal."
   ],
   "metadata": {
     "artifact_id": "CH002_SC003_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "f3e41d98e60d06a75f289ff02580ec2587842e77",
+    "source_fingerprint": "7e5b6014c8273b8b95a1fa418f87ea610a238cb9",
     "created_at_utc": "2026-04-22T00:13:25.048499+00:00",
-    "updated_at_utc": "2026-04-23T04:19:52.270983+00:00",
+    "updated_at_utc": "2026-04-23T19:23:06.734096+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH002_SC003",
-        "version": "8972961977e69577f04d692aea57de1d60447523"
+        "version": "d1465c76b74c38be23ed0e3af81ad57be29de4c9"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH002_SC003",
-        "version": "795e0398fd7c7db5166160dd25b6175a3083f49c"
+        "version": "3f1b0552381145daedece25adc068c67f891817e"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH002_SC003",
-        "version": "25a62340fc381a6a712a846ec840fc3c5f92734b"
+        "version": "e9d21b479ad2329b58d239849cb43c4d83b21c4f"
       }
     ],
     "locked_fields": {},
@@ -189,6 +202,11 @@
         "timestamp_utc": "2026-04-23T04:20:52.415890+00:00",
         "action": "synthesized",
         "source_fingerprint": "f3e41d98e60d06a75f289ff02580ec2587842e77"
+      },
+      {
+        "timestamp_utc": "2026-04-23T19:24:10.760787+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "7e5b6014c8273b8b95a1fa418f87ea610a238cb9"
       }
     ]
   }

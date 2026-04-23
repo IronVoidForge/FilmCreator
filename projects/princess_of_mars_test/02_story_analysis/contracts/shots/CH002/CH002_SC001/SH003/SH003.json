@@ -5,49 +5,59 @@
   "shot_order": 3,
   "previous_shot_id": "SH002",
   "next_shot_id": "",
-  "primary_subject": "primary scene subject",
-  "secondary_subjects": [
-    "[]"
-  ],
-  "start_state": "Continue from prior beat: He is unable to move despite being fully aware.",
-  "end_state": "Participating Characters: The Protagonist; Participating Environments: Interior Cave (Dark, claustrophobic, filled with tenuous vapor)",
-  "action_during_shot": "Participating Characters: The Protagonist; Participating Environments: Interior Cave (Dark, claustrophobic, filled with tenuous vapor)",
-  "action_continues_from": "Participating Characters: The Protagonist; Participating Environments: Interior Cave (Dark, claustrophobic, filled with tenuous vapor)",
-  "action_hands_off_to": "Participating Characters: The Protagonist; Participating Environments: Interior Cave (Dark, claustrophobic, filled with tenuous vapor)",
-  "shot_size": "medium",
-  "camera_angle": "eye_level",
-  "lens_family": "normal",
-  "camera_motion": "locked_off",
+  "primary_subject": "Cave ceiling",
+  "secondary_subjects": [],
+  "shot_moment_summary": "Blurred vision of the cave ceiling",
+  "start_state": "clear view",
+  "end_state": "distorted/blurred view",
+  "action_during_shot": "vision fading",
+  "action_continues_from": "pupils dilated/fixed",
+  "action_hands_off_to": "end_scene",
+  "shot_size": "close_up",
+  "camera_angle": "low_angle",
+  "lens_family": "wide",
+  "camera_motion": "handheld",
   "zoom_behavior": "none",
-  "focus_strategy": "deep_focus",
-  "lighting_style": "hard_directional",
+  "focus_strategy": "environment_priority",
+  "lighting_style": "low_key_night",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
-  "primary_subject_angle": "front_three_quarter_left",
+  "primary_subject_angle": "front",
+  "visible_primary_subject_id": "",
+  "visible_secondary_subject_ids": [],
+  "primary_subject_frame_position": "foreground inside vapor-filled mid-air space",
+  "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+  "primary_subject_facing_direction": "facing directly toward camera",
+  "primary_subject_pose_description": "clear view",
+  "subject_relation_summary": "Cave ceiling carries the frame alone",
+  "required_environment_anchor_1": "cave wall texture",
+  "required_scale_proof_detail": "blurred textures vs sharp gas particles",
+  "camera_package_description": "close-up, low angle, wide lens, handheld, environment priority, low key night",
   "subject_blocking": [
-    "scene_character remains readable within the active playing space."
+    "subject immobile",
+    "Subject frozen in place",
+    "Cave interior"
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the primary scene playing area.",
-    "Background depth keeps the cave environment legible as the location anchor.",
-    "Subject 1 remains visually readable against the environment scale."
+    "Camera anchors the action inside the cave floor contact zone.",
+    "Background depth should keep SC001 legible as the location anchor."
   ],
   "gaze_directions": [
-    "primary scene subject focuses toward the active scene action."
+    "Cave ceiling focuses toward the active scene action."
   ],
-  "environment_subzone": "primary scene playing area",
+  "environment_subzone": "vapor-filled mid-air space",
   "key_visible_environment_features": [
-    "primary scene playing area"
+    "cave floor contact zone"
   ],
-  "continuity_from_previous_shot": "Participating Characters: The Protagonist; Participating Environments: Interior Cave (Dark, claustrophobic, filled with tenuous vapor)",
-  "continuity_to_next_shot": "Participating Characters: The Protagonist; Participating Environments: Interior Cave (Dark, claustrophobic, filled with tenuous vapor)",
-  "pose_anchor_frame": "The protagonist is immobile and trapped.",
-  "pose_end_frame": "The protagonist remains in a state of helpless terror within the cave.",
-  "shot_title": "Closing Reaction 3: The Protagonist in the Cave",
-  "shot_type": "closing_reaction",
-  "camera_description": "Controlled closing frame that lands the consequence of the beat.",
-  "composition": "Closing composition emphasizing the protagonist's helplessness within the dark, claustrophobic cave and tenuous vapor.",
-  "target_seconds": 4.6,
+  "continuity_from_previous_shot": "pupils dilated/fixed",
+  "continuity_to_next_shot": "end_scene",
+  "pose_anchor_frame": "clear view",
+  "pose_end_frame": "distorted/blurred view",
+  "shot_title": "Reaction Closeup 3: Total sensory isolation and terror",
+  "shot_type": "reaction_closeup",
+  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+  "composition": "Intimate composition that isolates scene_character against SC001 to capture the beat's emotional turn.",
+  "target_seconds": 5.1,
   "characters_in_frame": [
     {
       "label": "scene_character",
@@ -63,7 +73,7 @@
   "environment": {
     "label": "scene_environment",
     "canonical_id": null,
-    "display_name": "To establish the protagonist's vulnerability and the supernatural thr...",
+    "display_name": "SC001",
     "status": "review",
     "entity_kind": "environment",
     "resolution_score": null,
@@ -74,11 +84,13 @@
     "BT003"
   ],
   "continuity_constraints": [
-    "The protagonist is paralyzed by pungent vapor.",
-    "Environment is dark, claustrophobic, and filled with tenuous vapor."
+    "Pupil dilation and eye movement consistency",
+    "Vapor density and visual quality/texture",
+    "Sweat accumulation on skin",
+    "Total sensory isolation and terror"
   ],
-  "prompt_seed": "Closing Reaction 3: **Participating Characters:** - The Protagonist **P.... closing_reaction. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Controlled closing frame that lands the con...",
-  "shot_notes": "Emphasize the consequence of the paralysis and the environment.",
+  "prompt_seed": "Reaction Closeup 3: Total sensory isolation and terror. reaction_closeup. size=close_up. angle=low_angle. lens=wide. motion=handheld. zoom=none. focus=environment_priority. lighting=low_key_night. visibility=on_screen. subject_angle=front.",
+  "shot_notes": "Total sensory isolation and terror",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -121,35 +133,35 @@
     }
   ],
   "evidence_summary": [
-    "To establish the protagonist's vulnerability and the supernatural threat within the cave.",
+    "Establish the protagonist's physical helplessness and the presence of a supernatural threat via sensory isolation. The environment must feel claustrophobic, utilizing a pungent, visible vapor to communicate the source of paralysis.",
     "The protagonist is trapped in a state of conscious paralysis caused by a mysterious, pungent vapor inside the Arizona mountain cave. He is unable to move despite being fully aware. **Participating Characters:** - The Protagonist **Participating Environments...",
     "From awareness/confusion to helpless terror and sensory isolation. **Likely Visual Coverage Families:** - Extreme Close-ups (Eyes, dilated pupils, sweat, gas particles) - POV shots (Blurred or restricted vision) - Mac...",
-    "The protagonist is trapped in a state of conscious paralysis caused by a mysterious, pungent vapor inside the Arizona mountain cave. He is unable to move despite being fully aware. **Participating Characters:** - The...",
-    "**Participating Characters:** - The Protagonist **Participating Environments:** - Interior Cave (Dark, claustrophobic, filled with tenuous vapor)",
-    "The protagonist is trapped in a state of conscious paralysis caused by a mysterious, pungent vapor inside the Arizona mountain cave. He is unable to move despite being fully aware. **Participating Characters:** - The..."
+    "Protagonist experiences sudden confusion and awareness of a strange gas.",
+    "Protagonist is trapped in total physical paralysis amidst sensory isolation.",
+    "The protagonist struggles against rising paralysis caused by inhaled vapor."
   ],
   "metadata": {
     "artifact_id": "CH002_SC001_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "3b00f67cba2937251379f528df85f0ec9e1ccc22",
+    "source_fingerprint": "902186ad280e844ef6114098021f9de0909c176f",
     "created_at_utc": "2026-04-22T00:08:16.492386+00:00",
-    "updated_at_utc": "2026-04-23T04:11:29.891347+00:00",
+    "updated_at_utc": "2026-04-23T19:17:37.486656+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH002_SC001",
-        "version": "e5831f1fb4d65ca42e86f3b96667b189aefd2b30"
+        "version": "8912309d775f11d2eb8013223d5357e424a5367e"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH002_SC001",
-        "version": "84eb6c74281ef84206f9978b03a71aa41cd7526c"
+        "version": "3bf808bd8bab091275ce5fbcc75cc89b85693553"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH002_SC001",
-        "version": "801c1a1bd0ef86bb3c3844482918383faaec6e05"
+        "version": "d263611c3cc911c7a374e42502a24b24ccbbfbf8"
       }
     ],
     "locked_fields": {},
@@ -189,6 +201,11 @@
         "timestamp_utc": "2026-04-23T04:12:28.734680+00:00",
         "action": "synthesized",
         "source_fingerprint": "3b00f67cba2937251379f528df85f0ec9e1ccc22"
+      },
+      {
+        "timestamp_utc": "2026-04-23T19:18:37.918775+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "902186ad280e844ef6114098021f9de0909c176f"
       }
     ]
   }

@@ -1,5 +1,5 @@
 # Shot Index
 
-- `SH001` - Medium 1: The protagonist is trapped in a state of conscious... (type=medium, target=5.5s, beat_ids=BT001, cast=1, env=To establish the protagonist's vulnerability and the supernatural thr..., prev=(none), next=SH002)
-- `SH002` - Medium 2: He is unable to move despite being fully aware. (type=medium, target=5.3s, beat_ids=BT002, cast=1, env=To establish the protagonist's vulnerability and the supernatural thr..., prev=SH001, next=SH003)
-- `SH003` - Closing Reaction 3: The Protagonist in the Cave (type=closing_reaction, target=4.6s, beat_ids=BT003, cast=1, env=To establish the protagonist's vulnerability and the supernatural thr..., prev=SH002, next=(none))
+- `SH001` - Medium 1: Awareness of the environment and gas (type=medium, target=5.5s, beat_ids=BT001, cast=1, env=SC001, prev=(none), next=SH002)
+- `SH002` - Medium 2: Onset of physical paralysis (type=medium, target=5.3s, beat_ids=BT002, cast=1, env=SC001, prev=SH001, next=SH003)
+- `SH003` - Reaction Closeup 3: Total sensory isolation and terror (type=reaction_closeup, target=5.1s, beat_ids=BT003, cast=1, env=SC001, prev=SH002, next=(none))

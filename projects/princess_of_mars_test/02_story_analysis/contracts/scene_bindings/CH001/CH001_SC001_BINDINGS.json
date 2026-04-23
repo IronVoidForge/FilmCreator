@@ -5,13 +5,13 @@
   "resolved_characters": [
     {
       "label": "John Carter (Elderly)",
-      "canonical_id": null,
-      "display_name": "John Carter (Elderly)",
-      "status": "review",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
     }
   ],
   "resolved_environment": {
@@ -21,8 +21,8 @@
     "status": "review",
     "entity_kind": "environment",
     "resolution_score": 8,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "source_path": "",
+    "notes": "Low-confidence environment match requires review."
   },
   "beat_environment_overrides": [],
   "candidate_environment_ids": [],
@@ -32,7 +32,7 @@
       "chapter_id": "CH001",
       "requested_label": "Unspecified (Narrative framing space)",
       "request_type": "missing_environment",
-      "reason": "aerial_battlefield_mars | source context shares query language",
+      "reason": "Low-confidence environment match requires review.",
       "parent_environment_id": null,
       "evidence_refs": [
         {
@@ -69,12 +69,10 @@
     }
   ],
   "review_flags": [
-    "scene_environment_unresolved",
-    "scene_cast_contains_unresolved_references"
+    "scene_environment_unresolved"
   ],
   "notes": [
-    "Scene referenced a non-canonical environment and no chapter fallback was available.",
-    "1 scene cast reference(s) still require review."
+    "Scene referenced a non-canonical environment and no chapter fallback was available."
   ],
   "evidence_refs": [
     {
@@ -121,6 +119,11 @@
       "source": "book_index",
       "chapter_id": "CH003",
       "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH003_chapter_iii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH001",
+      "canonical_id": "john_carter"
     }
   ],
   "evidence_summary": [
@@ -132,20 +135,21 @@
     "[CH001] Chapter summary: **Setting:** The Arizona hills and mountains; specifically a remote gold-bearing quartz vein, a high plateau with an Apache camp, and a large, ancient cave located on a narrow trail near a cliffside. **Characters:** *...",
     "[CH011] CHAPTER XI (book index hit)",
     "[CH025] CHAPTER XXV (book index hit)",
-    "[CH003] CHAPTER III (book index hit)"
+    "[CH003] CHAPTER III (book index hit)",
+    "Character john_carter: A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior ad..."
   ],
   "metadata": {
     "artifact_id": "CH001_SC001_SCENE_BINDINGS",
     "artifact_type": "scene_binding",
     "status": "generated",
-    "source_fingerprint": "cf71b67ccaf28e6e2b4dcd7afca09b5ec252d93c",
+    "source_fingerprint": "80d014fb8876e0b8b98f8cd277828ae0145a35d4",
     "created_at_utc": "2026-04-22T06:48:28.620120+00:00",
-    "updated_at_utc": "2026-04-23T18:14:44.491642+00:00",
+    "updated_at_utc": "2026-04-23T18:59:10.033700+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH001_SC001",
-        "version": "e91b840e8381e4067362f8497beda680a4957f2a"
+        "version": "f6aff7a65b48052f05c6835d47cd0ae34bf909d6"
       }
     ],
     "locked_fields": {},
@@ -190,6 +194,11 @@
         "timestamp_utc": "2026-04-23T18:14:44.492142+00:00",
         "action": "synthesized",
         "source_fingerprint": "cf71b67ccaf28e6e2b4dcd7afca09b5ec252d93c"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:59:10.033700+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "80d014fb8876e0b8b98f8cd277828ae0145a35d4"
       }
     ]
   }

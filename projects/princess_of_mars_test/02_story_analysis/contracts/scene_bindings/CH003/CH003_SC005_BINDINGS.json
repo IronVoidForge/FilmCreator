@@ -9,9 +9,9 @@
       "display_name": "protagonist",
       "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 176,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
     },
     {
       "label": "The Leader",
@@ -20,8 +20,8 @@
       "status": "review",
       "entity_kind": "individual",
       "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
     },
     {
       "label": "Martian Warriors",
@@ -29,9 +29,9 @@
       "display_name": "martian_warriors",
       "status": "canonical",
       "entity_kind": "group",
-      "resolution_score": 176,
+      "resolution_score": 138,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/martian_warriors.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'martian_warriors'"
+      "notes": "Direct registry match for 'martian_warriors'."
     }
   ],
   "resolved_environment": {
@@ -41,8 +41,8 @@
     "status": "review",
     "entity_kind": "environment",
     "resolution_score": 8,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "source_path": "",
+    "notes": "Low-confidence environment match requires review."
   },
   "beat_environment_overrides": [],
   "candidate_environment_ids": [],
@@ -52,7 +52,7 @@
       "chapter_id": "CH003",
       "requested_label": "The basin/open landscape",
       "request_type": "missing_environment",
-      "reason": "aerial_battlefield_mars | source context shares query language",
+      "reason": "Low-confidence environment match requires review.",
       "parent_environment_id": null,
       "evidence_refs": [
         {
@@ -164,14 +164,14 @@
     "artifact_id": "CH003_SC005_SCENE_BINDINGS",
     "artifact_type": "scene_binding",
     "status": "generated",
-    "source_fingerprint": "1b10972ed19ec987f0ab5a3cd746d2bcc897d519",
+    "source_fingerprint": "545b5cc8874b803d43d9076e80e367fa2f1eee69",
     "created_at_utc": "2026-04-22T06:48:28.708360+00:00",
-    "updated_at_utc": "2026-04-23T18:14:44.703398+00:00",
+    "updated_at_utc": "2026-04-23T18:59:10.238945+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH003_SC005",
-        "version": "a7c19418befbc9a646a2ddca2a24a7ca42e9ecef"
+        "version": "e124c17b875ffbb8128b4298a42b32d25e4ccb50"
       }
     ],
     "locked_fields": {},
@@ -216,6 +216,11 @@
         "timestamp_utc": "2026-04-23T18:14:44.703398+00:00",
         "action": "synthesized",
         "source_fingerprint": "1b10972ed19ec987f0ab5a3cd746d2bcc897d519"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:59:10.238945+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "545b5cc8874b803d43d9076e80e367fa2f1eee69"
       }
     ]
   }

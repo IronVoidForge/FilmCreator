@@ -5,23 +5,23 @@
   "resolved_characters": [
     {
       "label": "John Carter (Younger)",
-      "canonical_id": null,
-      "display_name": "John Carter (Younger)",
-      "status": "review",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
     },
     {
       "label": "Captain James K. Powell (Deceased)",
-      "canonical_id": null,
-      "display_name": "Captain James K. Powell (Deceased)",
-      "status": "review",
+      "canonical_id": "james_k_powell",
+      "display_name": "james_k_powell",
+      "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/james_k_powell.md",
+      "notes": "Direct registry match for 'james_k_powell'."
     },
     {
       "label": "Apache Warriors",
@@ -29,9 +29,9 @@
       "display_name": "apache_warriors",
       "status": "canonical",
       "entity_kind": "group",
-      "resolution_score": 186,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'apache_warriors'"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/apache_warriors.md",
+      "notes": "Direct registry match for 'apache_warriors'."
     }
   ],
   "resolved_environment": {
@@ -41,8 +41,8 @@
     "status": "review",
     "entity_kind": "environment",
     "resolution_score": 8,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "source_path": "",
+    "notes": "Low-confidence environment match requires review."
   },
   "beat_environment_overrides": [],
   "candidate_environment_ids": [],
@@ -52,7 +52,7 @@
       "chapter_id": "CH001",
       "requested_label": "The trail/valley near the ambush site",
       "request_type": "missing_environment",
-      "reason": "aerial_battlefield_mars | source context shares query language",
+      "reason": "Low-confidence environment match requires review.",
       "parent_environment_id": null,
       "evidence_refs": [
         {
@@ -89,12 +89,10 @@
     }
   ],
   "review_flags": [
-    "scene_environment_unresolved",
-    "scene_cast_contains_unresolved_references"
+    "scene_environment_unresolved"
   ],
   "notes": [
-    "Scene referenced a non-canonical environment and no chapter fallback was available.",
-    "2 scene cast reference(s) still require review."
+    "Scene referenced a non-canonical environment and no chapter fallback was available."
   ],
   "evidence_refs": [
     {
@@ -145,7 +143,7 @@
     {
       "source": "character_bible",
       "chapter_id": "CH001",
-      "canonical_id": "apache_warriors"
+      "canonical_id": "john_carter"
     }
   ],
   "evidence_summary": [
@@ -158,20 +156,20 @@
     "[CH001] CHAPTER I (book index hit)",
     "[CH010] CHAPTER X (book index hit)",
     "[CH002] CHAPTER II (book index hit)",
-    "Character apache_warriors: A large group of hostile 19th-century indigenous warriors characterized by their traditional Apache attire. They function as a collective unit, primarily seen engaged in ambush tactics and active skirmishes while wielding arrows."
+    "Character john_carter: A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior ad..."
   ],
   "metadata": {
     "artifact_id": "CH001_SC004_SCENE_BINDINGS",
     "artifact_type": "scene_binding",
     "status": "generated",
-    "source_fingerprint": "3f2eab46b3b5fbbe1a2c9f4339e56139e0055d7d",
+    "source_fingerprint": "9ef9bf54d4c83e163a5d2368de6763ce64c70758",
     "created_at_utc": "2026-04-22T06:48:28.638126+00:00",
-    "updated_at_utc": "2026-04-23T18:14:44.533830+00:00",
+    "updated_at_utc": "2026-04-23T18:59:10.067391+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH001_SC004",
-        "version": "785ab2e310a09338756af3e5786c9fa6784b729f"
+        "version": "04aa56e56cbce808956c4611cd676d808494926b"
       }
     ],
     "locked_fields": {},
@@ -216,6 +214,11 @@
         "timestamp_utc": "2026-04-23T18:14:44.533830+00:00",
         "action": "synthesized",
         "source_fingerprint": "3f2eab46b3b5fbbe1a2c9f4339e56139e0055d7d"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:59:10.067391+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9ef9bf54d4c83e163a5d2368de6763ce64c70758"
       }
     ]
   }

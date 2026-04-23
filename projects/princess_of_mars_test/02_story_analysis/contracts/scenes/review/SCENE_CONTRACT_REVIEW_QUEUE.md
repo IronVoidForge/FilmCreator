@@ -1,21 +1,14 @@
 # Scene Contract Review Queue
 
 - `CH001_SC001`
-  - Resolve John Carter (Elderly) -> John Carter (Elderly)
   - Resolve Unspecified (Narrative framing space) -> Unspecified (Narrative framing space)
 - `CH001_SC002`
-  - Resolve John Carter (Younger) -> John Carter (Younger)
-  - Resolve Captain James K. Powell -> Captain James K. Powell
   - Resolve Remote Arizona quartz vein/hills -> Remote Arizona quartz vein/hills
 - `CH001_SC003`
-  - Resolve John Carter (Younger) -> John Carter (Younger)
   - Resolve Arizona hills/plateau -> Arizona hills/plateau
 - `CH001_SC004`
-  - Resolve John Carter (Younger) -> John Carter (Younger)
-  - Resolve Captain James K. Powell (Deceased) -> Captain James K. Powell (Deceased)
   - Resolve The trail/valley near the ambush site -> The trail/valley near the ambush site
 - `CH001_SC005`
-  - Resolve John Carter (Younger) -> John Carter (Younger)
   - Resolve High cliffside trail -> High cliffside trail
   - Resolve Ancient Cave interior -> Ancient Cave interior
 - `CH003_SC001`
@@ -24,7 +17,6 @@
 - `CH003_SC002`
   - Resolve The glass-roofed incubator enclosure -> The glass-roofed incubator enclosure
 - `CH003_SC003`
-  - Resolve Martian Warriors (Cavalcade) -> Martian Warriors (Cavalcade)
   - Resolve The basin/vegetation area near the incubator -> The basin/vegetation area near the incubator
 - `CH003_SC004`
   - Resolve The basin/enclosure area -> The basin/enclosure area
@@ -41,7 +33,6 @@
 - `CH004_SC003`
   - Resolve The Narrator -> The Narrator
   - Resolve Martian Crowd -> Martian Crowd
-  - Resolve Grand Audience Chamber / Plaza area -> Grand Audience Chamber / Plaza area
 - `CH004_SC004`
   - Resolve The Narrator -> The Narrator
   - Resolve Transition from Audience Chamber to corridors/private quarters -> Transition from Audience Chamber to corridors/private quarters
@@ -50,7 +41,6 @@
   - Resolve Small Martian Creature -> Small Martian Creature
   - Resolve Decorated Sleeping Chamber -> Decorated Sleeping Chamber
 - `CH005_SC001`
-  - Resolve The Watch Dog (presence/observation) -> The Watch Dog (presence/observation)
   - Resolve Captive's chamber (decorated with murals) -> Captive's chamber (decorated with murals)
 - `CH005_SC002`
   - Resolve Captive's chamber -> Captive's chamber
@@ -58,7 +48,6 @@
 - `CH005_SC003`
   - Resolve Deserted Martian city streets -> Deserted Martian city streets
 - `CH005_SC004`
-  - Resolve The Watch Dog (pursuing) -> The Watch Dog (pursuing)
   - Resolve Exterior building/alleyway -> Exterior building/alleyway
   - Resolve interior room of the Colossal Creature -> interior room of the Colossal Creature
 - `CH006_SC001`

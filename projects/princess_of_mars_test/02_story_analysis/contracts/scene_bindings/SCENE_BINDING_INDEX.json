@@ -6,13 +6,13 @@
     "resolved_characters": [
       {
         "label": "John Carter (Elderly)",
-        "canonical_id": null,
-        "display_name": "John Carter (Elderly)",
-        "status": "review",
+        "canonical_id": "john_carter",
+        "display_name": "john_carter",
+        "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 10,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-        "notes": "apache_warriors | source context shares query language"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+        "notes": "Direct registry match for 'john_carter'."
       }
     ],
     "resolved_environment": {
@@ -22,8 +22,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     },
     "beat_environment_overrides": [],
     "candidate_environment_ids": [],
@@ -33,7 +33,7 @@
         "chapter_id": "CH001",
         "requested_label": "Unspecified (Narrative framing space)",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -70,12 +70,10 @@
       }
     ],
     "review_flags": [
-      "scene_environment_unresolved",
-      "scene_cast_contains_unresolved_references"
+      "scene_environment_unresolved"
     ],
     "notes": [
-      "Scene referenced a non-canonical environment and no chapter fallback was available.",
-      "1 scene cast reference(s) still require review."
+      "Scene referenced a non-canonical environment and no chapter fallback was available."
     ],
     "evidence_refs": [
       {
@@ -122,6 +120,11 @@
         "source": "book_index",
         "chapter_id": "CH003",
         "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH003_chapter_iii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "john_carter"
       }
     ],
     "evidence_summary": [
@@ -133,20 +136,21 @@
       "[CH001] Chapter summary: **Setting:** The Arizona hills and mountains; specifically a remote gold-bearing quartz vein, a high plateau with an Apache camp, and a large, ancient cave located on a narrow trail near a cliffside. **Characters:** *...",
       "[CH011] CHAPTER XI (book index hit)",
       "[CH025] CHAPTER XXV (book index hit)",
-      "[CH003] CHAPTER III (book index hit)"
+      "[CH003] CHAPTER III (book index hit)",
+      "Character john_carter: A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior ad..."
     ],
     "metadata": {
       "artifact_id": "CH001_SC001_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "cf71b67ccaf28e6e2b4dcd7afca09b5ec252d93c",
+      "source_fingerprint": "80d014fb8876e0b8b98f8cd277828ae0145a35d4",
       "created_at_utc": "2026-04-22T06:48:28.620120+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.491642+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.033700+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH001_SC001",
-          "version": "e91b840e8381e4067362f8497beda680a4957f2a"
+          "version": "f6aff7a65b48052f05c6835d47cd0ae34bf909d6"
         }
       ],
       "locked_fields": {},
@@ -191,6 +195,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.492142+00:00",
           "action": "synthesized",
           "source_fingerprint": "cf71b67ccaf28e6e2b4dcd7afca09b5ec252d93c"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.033700+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "80d014fb8876e0b8b98f8cd277828ae0145a35d4"
         }
       ]
     }
@@ -202,23 +211,23 @@
     "resolved_characters": [
       {
         "label": "John Carter (Younger)",
-        "canonical_id": null,
-        "display_name": "John Carter (Younger)",
-        "status": "review",
+        "canonical_id": "john_carter",
+        "display_name": "john_carter",
+        "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 10,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-        "notes": "apache_warriors | source context shares query language"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+        "notes": "Direct registry match for 'john_carter'."
       },
       {
         "label": "Captain James K. Powell",
-        "canonical_id": null,
-        "display_name": "Captain James K. Powell",
-        "status": "review",
+        "canonical_id": "james_k_powell",
+        "display_name": "james_k_powell",
+        "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 10,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-        "notes": "apache_warriors | source context shares query language"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/james_k_powell.md",
+        "notes": "Direct registry match for 'james_k_powell'."
       }
     ],
     "resolved_environment": {
@@ -228,8 +237,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     },
     "beat_environment_overrides": [],
     "candidate_environment_ids": [],
@@ -239,7 +248,7 @@
         "chapter_id": "CH001",
         "requested_label": "Remote Arizona quartz vein/hills",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -276,12 +285,10 @@
       }
     ],
     "review_flags": [
-      "scene_environment_unresolved",
-      "scene_cast_contains_unresolved_references"
+      "scene_environment_unresolved"
     ],
     "notes": [
-      "Scene referenced a non-canonical environment and no chapter fallback was available.",
-      "2 scene cast reference(s) still require review."
+      "Scene referenced a non-canonical environment and no chapter fallback was available."
     ],
     "evidence_refs": [
       {
@@ -328,6 +335,11 @@
         "source": "book_index",
         "chapter_id": "CH010",
         "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "john_carter"
       }
     ],
     "evidence_summary": [
@@ -339,20 +351,21 @@
       "[CH001] Chapter summary: **Setting:** The Arizona hills and mountains; specifically a remote gold-bearing quartz vein, a high plateau with an Apache camp, and a large, ancient cave located on a narrow trail near a cliffside. **Characters:** *...",
       "[CH001] CHAPTER I (book index hit)",
       "[CH025] CHAPTER XXV (book index hit)",
-      "[CH010] CHAPTER X (book index hit)"
+      "[CH010] CHAPTER X (book index hit)",
+      "Character john_carter: A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior ad..."
     ],
     "metadata": {
       "artifact_id": "CH001_SC002_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "4f05137560f5efaec539f10dd0bef419088459f6",
+      "source_fingerprint": "9443e05741c6b6ea9299e39f9d7870b26fb7fd5b",
       "created_at_utc": "2026-04-22T06:48:28.626119+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.503162+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.044213+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH001_SC002",
-          "version": "7ca05db40297368852d54f7f5f87d97b1eea2a18"
+          "version": "3341161ad4fa8610f6b293ea861670f7582996ed"
         }
       ],
       "locked_fields": {},
@@ -397,6 +410,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.503661+00:00",
           "action": "synthesized",
           "source_fingerprint": "4f05137560f5efaec539f10dd0bef419088459f6"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.044213+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9443e05741c6b6ea9299e39f9d7870b26fb7fd5b"
         }
       ]
     }
@@ -408,13 +426,13 @@
     "resolved_characters": [
       {
         "label": "John Carter (Younger)",
-        "canonical_id": null,
-        "display_name": "John Carter (Younger)",
-        "status": "review",
+        "canonical_id": "john_carter",
+        "display_name": "john_carter",
+        "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 10,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-        "notes": "apache_warriors | source context shares query language"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+        "notes": "Direct registry match for 'john_carter'."
       },
       {
         "label": "Apache Warriors",
@@ -422,9 +440,9 @@
         "display_name": "apache_warriors",
         "status": "canonical",
         "entity_kind": "group",
-        "resolution_score": 186,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'apache_warriors'"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/apache_warriors.md",
+        "notes": "Direct registry match for 'apache_warriors'."
       }
     ],
     "resolved_environment": {
@@ -434,8 +452,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     },
     "beat_environment_overrides": [],
     "candidate_environment_ids": [],
@@ -445,7 +463,7 @@
         "chapter_id": "CH001",
         "requested_label": "Arizona hills/plateau",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -482,12 +500,10 @@
       }
     ],
     "review_flags": [
-      "scene_environment_unresolved",
-      "scene_cast_contains_unresolved_references"
+      "scene_environment_unresolved"
     ],
     "notes": [
-      "Scene referenced a non-canonical environment and no chapter fallback was available.",
-      "1 scene cast reference(s) still require review."
+      "Scene referenced a non-canonical environment and no chapter fallback was available."
     ],
     "evidence_refs": [
       {
@@ -538,7 +554,7 @@
       {
         "source": "character_bible",
         "chapter_id": "CH001",
-        "canonical_id": "apache_warriors"
+        "canonical_id": "john_carter"
       }
     ],
     "evidence_summary": [
@@ -551,20 +567,20 @@
       "[CH001] CHAPTER I (book index hit)",
       "[CH010] CHAPTER X (book index hit)",
       "[CH011] CHAPTER XI (book index hit)",
-      "Character apache_warriors: A large group of hostile 19th-century indigenous warriors characterized by their traditional Apache attire. They function as a collective unit, primarily seen engaged in ambush tactics and active skirmishes while wielding arrows."
+      "Character john_carter: A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior ad..."
     ],
     "metadata": {
       "artifact_id": "CH001_SC003_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "7434bc1e5d39030dd1ea9bfed5778741ed0282c7",
+      "source_fingerprint": "847b2e3d433e8c16a9ab8b7743db2f34ed05bad4",
       "created_at_utc": "2026-04-22T06:48:28.632119+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.518698+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.055727+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH001_SC003",
-          "version": "f4f0d7ca2292e24891a0f5a35c7455bae2ed311b"
+          "version": "3d2d8d11e87979033fd1fd0e9ee5ac2e13b6daa9"
         }
       ],
       "locked_fields": {},
@@ -609,6 +625,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.518698+00:00",
           "action": "synthesized",
           "source_fingerprint": "7434bc1e5d39030dd1ea9bfed5778741ed0282c7"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.055727+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "847b2e3d433e8c16a9ab8b7743db2f34ed05bad4"
         }
       ]
     }
@@ -620,23 +641,23 @@
     "resolved_characters": [
       {
         "label": "John Carter (Younger)",
-        "canonical_id": null,
-        "display_name": "John Carter (Younger)",
-        "status": "review",
+        "canonical_id": "john_carter",
+        "display_name": "john_carter",
+        "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 10,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-        "notes": "apache_warriors | source context shares query language"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+        "notes": "Direct registry match for 'john_carter'."
       },
       {
         "label": "Captain James K. Powell (Deceased)",
-        "canonical_id": null,
-        "display_name": "Captain James K. Powell (Deceased)",
-        "status": "review",
+        "canonical_id": "james_k_powell",
+        "display_name": "james_k_powell",
+        "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 10,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-        "notes": "apache_warriors | source context shares query language"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/james_k_powell.md",
+        "notes": "Direct registry match for 'james_k_powell'."
       },
       {
         "label": "Apache Warriors",
@@ -644,9 +665,9 @@
         "display_name": "apache_warriors",
         "status": "canonical",
         "entity_kind": "group",
-        "resolution_score": 186,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'apache_warriors'"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/apache_warriors.md",
+        "notes": "Direct registry match for 'apache_warriors'."
       }
     ],
     "resolved_environment": {
@@ -656,8 +677,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     },
     "beat_environment_overrides": [],
     "candidate_environment_ids": [],
@@ -667,7 +688,7 @@
         "chapter_id": "CH001",
         "requested_label": "The trail/valley near the ambush site",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -704,12 +725,10 @@
       }
     ],
     "review_flags": [
-      "scene_environment_unresolved",
-      "scene_cast_contains_unresolved_references"
+      "scene_environment_unresolved"
     ],
     "notes": [
-      "Scene referenced a non-canonical environment and no chapter fallback was available.",
-      "2 scene cast reference(s) still require review."
+      "Scene referenced a non-canonical environment and no chapter fallback was available."
     ],
     "evidence_refs": [
       {
@@ -760,7 +779,7 @@
       {
         "source": "character_bible",
         "chapter_id": "CH001",
-        "canonical_id": "apache_warriors"
+        "canonical_id": "john_carter"
       }
     ],
     "evidence_summary": [
@@ -773,20 +792,20 @@
       "[CH001] CHAPTER I (book index hit)",
       "[CH010] CHAPTER X (book index hit)",
       "[CH002] CHAPTER II (book index hit)",
-      "Character apache_warriors: A large group of hostile 19th-century indigenous warriors characterized by their traditional Apache attire. They function as a collective unit, primarily seen engaged in ambush tactics and active skirmishes while wielding arrows."
+      "Character john_carter: A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior ad..."
     ],
     "metadata": {
       "artifact_id": "CH001_SC004_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "3f2eab46b3b5fbbe1a2c9f4339e56139e0055d7d",
+      "source_fingerprint": "9ef9bf54d4c83e163a5d2368de6763ce64c70758",
       "created_at_utc": "2026-04-22T06:48:28.638126+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.533830+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.067391+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH001_SC004",
-          "version": "785ab2e310a09338756af3e5786c9fa6784b729f"
+          "version": "04aa56e56cbce808956c4611cd676d808494926b"
         }
       ],
       "locked_fields": {},
@@ -831,6 +850,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.533830+00:00",
           "action": "synthesized",
           "source_fingerprint": "3f2eab46b3b5fbbe1a2c9f4339e56139e0055d7d"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.067391+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9ef9bf54d4c83e163a5d2368de6763ce64c70758"
         }
       ]
     }
@@ -842,13 +866,13 @@
     "resolved_characters": [
       {
         "label": "John Carter (Younger)",
-        "canonical_id": null,
-        "display_name": "John Carter (Younger)",
-        "status": "review",
+        "canonical_id": "john_carter",
+        "display_name": "john_carter",
+        "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 10,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-        "notes": "apache_warriors | source context shares query language"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+        "notes": "Direct registry match for 'john_carter'."
       }
     ],
     "resolved_environment": {
@@ -858,8 +882,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     },
     "beat_environment_overrides": [],
     "candidate_environment_ids": [],
@@ -869,7 +893,7 @@
         "chapter_id": "CH001",
         "requested_label": "High cliffside trail",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -909,7 +933,7 @@
         "chapter_id": "CH001",
         "requested_label": "Ancient Cave interior",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -946,12 +970,10 @@
       }
     ],
     "review_flags": [
-      "scene_environment_unresolved",
-      "scene_cast_contains_unresolved_references"
+      "scene_environment_unresolved"
     ],
     "notes": [
-      "Scene referenced a non-canonical environment and no chapter fallback was available.",
-      "1 scene cast reference(s) still require review."
+      "Scene referenced a non-canonical environment and no chapter fallback was available."
     ],
     "evidence_refs": [
       {
@@ -998,6 +1020,11 @@
         "source": "book_index",
         "chapter_id": "CH010",
         "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "john_carter"
       }
     ],
     "evidence_summary": [
@@ -1009,20 +1036,21 @@
       "[CH001] Chapter summary: **Setting:** The Arizona hills and mountains; specifically a remote gold-bearing quartz vein, a high plateau with an Apache camp, and a large, ancient cave located on a narrow trail near a cliffside. **Characters:** *...",
       "[CH001] CHAPTER I (book index hit)",
       "[CH016] CHAPTER XVI (book index hit)",
-      "[CH010] CHAPTER X (book index hit)"
+      "[CH010] CHAPTER X (book index hit)",
+      "Character john_carter: A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior ad..."
     ],
     "metadata": {
       "artifact_id": "CH001_SC005_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "d666ca70ff0234a891ff22fc6b63f2f71ab47ef9",
+      "source_fingerprint": "9d05c4ac558f3bc2d40cb1992f291564849fed4b",
       "created_at_utc": "2026-04-22T06:48:28.644126+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.549345+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.078906+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH001_SC005",
-          "version": "c498ae75a8548206af489574c4efa242c32191b2"
+          "version": "5c098b331740dfafb3a77b10fe70724f26da565f"
         }
       ],
       "locked_fields": {},
@@ -1067,6 +1095,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.549345+00:00",
           "action": "synthesized",
           "source_fingerprint": "d666ca70ff0234a891ff22fc6b63f2f71ab47ef9"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.079405+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9d05c4ac558f3bc2d40cb1992f291564849fed4b"
         }
       ]
     }
@@ -1136,14 +1169,14 @@
       "artifact_id": "CH002_SC001_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "b2ddf6f76c98011abfcba4ff8b70c8388e565885",
+      "source_fingerprint": "d0b18ecd82dc3c20f6d1d219c4bc108b95bc7355",
       "created_at_utc": "2026-04-22T06:48:28.650161+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.563869+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.093916+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH002_SC001",
-          "version": "60b9f32f82c2ff034d0e9daf40e85f0ff1fff2a0"
+          "version": "8912309d775f11d2eb8013223d5357e424a5367e"
         }
       ],
       "locked_fields": {},
@@ -1188,6 +1221,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.564369+00:00",
           "action": "synthesized",
           "source_fingerprint": "b2ddf6f76c98011abfcba4ff8b70c8388e565885"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.093916+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "d0b18ecd82dc3c20f6d1d219c4bc108b95bc7355"
         }
       ]
     }
@@ -1257,14 +1295,14 @@
       "artifact_id": "CH002_SC002_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "cc95912e830dd56e0ad6130eab2d6755677fc594",
+      "source_fingerprint": "95f85096bd26fa4c57d8c667e9e85860c30f6d1d",
       "created_at_utc": "2026-04-22T06:48:28.656175+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.579215+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.108483+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH002_SC002",
-          "version": "90a946024476977735aa6771415c07a8ecc18183"
+          "version": "2c14cc25f8c9a490fff51536e293b85ac0e6a3b4"
         }
       ],
       "locked_fields": {},
@@ -1309,6 +1347,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.579715+00:00",
           "action": "synthesized",
           "source_fingerprint": "cc95912e830dd56e0ad6130eab2d6755677fc594"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.108984+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "95f85096bd26fa4c57d8c667e9e85860c30f6d1d"
         }
       ]
     }
@@ -1378,14 +1421,14 @@
       "artifact_id": "CH002_SC003_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "7be014352858ef768fcc29402c6edb8c9cc2a089",
+      "source_fingerprint": "6d4bb641986fe059b5d8e7b41ce652d55a1b026e",
       "created_at_utc": "2026-04-22T06:48:28.661371+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.594890+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.123495+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH002_SC003",
-          "version": "ed00f429b86bc433d26285e1a81262808d80ac93"
+          "version": "d1465c76b74c38be23ed0e3af81ad57be29de4c9"
         }
       ],
       "locked_fields": {},
@@ -1430,6 +1473,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.594890+00:00",
           "action": "synthesized",
           "source_fingerprint": "7be014352858ef768fcc29402c6edb8c9cc2a089"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.123495+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6d4bb641986fe059b5d8e7b41ce652d55a1b026e"
         }
       ]
     }
@@ -1499,14 +1547,14 @@
       "artifact_id": "CH002_SC004_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "d61f49f213ecd4ca8fe1dbbdfb05bb1159042ee6",
+      "source_fingerprint": "651b6fcdac26ac3e9b351738d5745f2b7721c0b0",
       "created_at_utc": "2026-04-22T06:48:28.667750+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.609276+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.137806+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH002_SC004",
-          "version": "097bf6b841c1bb0dd31c1f5c39435767f97a62ea"
+          "version": "baecd38702a6ca82d5fdd69e1966d5910d93a91a"
         }
       ],
       "locked_fields": {},
@@ -1551,6 +1599,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.609776+00:00",
           "action": "synthesized",
           "source_fingerprint": "d61f49f213ecd4ca8fe1dbbdfb05bb1159042ee6"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.137806+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "651b6fcdac26ac3e9b351738d5745f2b7721c0b0"
         }
       ]
     }
@@ -1620,14 +1673,14 @@
       "artifact_id": "CH002_SC005_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "6bdb16d7de8e92ea88c9e894f146dcf82688e4f3",
+      "source_fingerprint": "e4a7b4c0347af6af760c8f30620bc9f9cec99053",
       "created_at_utc": "2026-04-22T06:48:28.672358+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.624261+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.153752+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH002_SC005",
-          "version": "c519c6d223c5b4c804a1cacee4daa86be7e665c1"
+          "version": "55fdfd7b377defb34f7aa9602e6c84ceb175188f"
         }
       ],
       "locked_fields": {},
@@ -1672,6 +1725,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.624261+00:00",
           "action": "synthesized",
           "source_fingerprint": "6bdb16d7de8e92ea88c9e894f146dcf82688e4f3"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.153752+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "e4a7b4c0347af6af760c8f30620bc9f9cec99053"
         }
       ]
     }
@@ -1687,9 +1745,9 @@
         "display_name": "protagonist",
         "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 176,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
       }
     ],
     "resolved_environment": {
@@ -1699,8 +1757,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     },
     "beat_environment_overrides": [],
     "candidate_environment_ids": [],
@@ -1710,7 +1768,7 @@
         "chapter_id": "CH003",
         "requested_label": "A circular basin on Mars covered in yellowish",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -1750,7 +1808,7 @@
         "chapter_id": "CH003",
         "requested_label": "moss-like vegetation",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -1854,14 +1912,14 @@
       "artifact_id": "CH003_SC001_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "57b67364a267ed240cc86ba7329d2bc3e8f5f496",
+      "source_fingerprint": "3e600b7d34b19ca444c41e5a4e364a96ecfc38cd",
       "created_at_utc": "2026-04-22T06:48:28.680356+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.639271+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.168260+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH003_SC001",
-          "version": "da8a4c63b4e6aadc42310207963867b838301917"
+          "version": "834926eefeff0686d5e5736f9dd725027b44cabd"
         }
       ],
       "locked_fields": {},
@@ -1906,6 +1964,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.639773+00:00",
           "action": "synthesized",
           "source_fingerprint": "57b67364a267ed240cc86ba7329d2bc3e8f5f496"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.168758+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "3e600b7d34b19ca444c41e5a4e364a96ecfc38cd"
         }
       ]
     }
@@ -1921,9 +1984,9 @@
         "display_name": "protagonist",
         "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 176,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
       }
     ],
     "resolved_environment": {
@@ -1933,8 +1996,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     },
     "beat_environment_overrides": [],
     "candidate_environment_ids": [],
@@ -1944,7 +2007,7 @@
         "chapter_id": "CH003",
         "requested_label": "The glass-roofed incubator enclosure",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -2048,14 +2111,14 @@
       "artifact_id": "CH003_SC002_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "379320641f74a355d0f608e75a27e4b80e6f9edb",
+      "source_fingerprint": "fce069e5c889df19f134119829d6bad43f1bc59a",
       "created_at_utc": "2026-04-22T06:48:28.687357+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.654859+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.187840+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH003_SC002",
-          "version": "3ab980cc81458cee1d140b311259a3017af2e81e"
+          "version": "832ac22fd733e78271dae2f747fb63cfce252b14"
         }
       ],
       "locked_fields": {},
@@ -2100,6 +2163,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.654859+00:00",
           "action": "synthesized",
           "source_fingerprint": "379320641f74a355d0f608e75a27e4b80e6f9edb"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.187840+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "fce069e5c889df19f134119829d6bad43f1bc59a"
         }
       ]
     }
@@ -2115,19 +2183,19 @@
         "display_name": "protagonist",
         "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 176,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
       },
       {
         "label": "Martian Warriors (Cavalcade)",
-        "canonical_id": null,
-        "display_name": "Martian Warriors (Cavalcade)",
-        "status": "review",
-        "entity_kind": "individual",
-        "resolution_score": 6,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
-        "notes": "protagonist | token overlap: ['protagonist'] | generic role label reduces confidence"
+        "canonical_id": "martian_warriors",
+        "display_name": "martian_warriors",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/martian_warriors.md",
+        "notes": "Direct registry match for 'martian_warriors'."
       }
     ],
     "resolved_environment": {
@@ -2137,8 +2205,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     },
     "beat_environment_overrides": [],
     "candidate_environment_ids": [],
@@ -2148,7 +2216,7 @@
         "chapter_id": "CH003",
         "requested_label": "The basin/vegetation area near the incubator",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -2185,12 +2253,10 @@
       }
     ],
     "review_flags": [
-      "scene_environment_unresolved",
-      "scene_cast_contains_unresolved_references"
+      "scene_environment_unresolved"
     ],
     "notes": [
-      "Scene referenced a non-canonical environment and no chapter fallback was available.",
-      "1 scene cast reference(s) still require review."
+      "Scene referenced a non-canonical environment and no chapter fallback was available."
     ],
     "evidence_refs": [
       {
@@ -2237,6 +2303,11 @@
         "source": "character_bible",
         "chapter_id": "CH003",
         "canonical_id": "protagonist"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH003",
+        "canonical_id": "martian_warriors"
       }
     ],
     "evidence_summary": [
@@ -2248,20 +2319,21 @@
       "[CH022] CHAPTER XXII (book index hit)",
       "[CH003] CHAPTER III (book index hit)",
       "[CH004] CHAPTER IV (book index hit)",
-      "Character protagonist: An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeles..."
+      "Character protagonist: An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeles...",
+      "Character martian_warriors: The martian_warriors are a highly disciplined military force of massive, 15-foot tall humanoids. They possess olive-green skin, red eyes, tusks, and four arms. In combat or transit, they are often seen mounted on slate-colored, e..."
     ],
     "metadata": {
       "artifact_id": "CH003_SC003_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "86e70d1ed493c6dd0ade8f5e72b586e9b889b30a",
+      "source_fingerprint": "ed59cd0afefdf3f1423357f396be1b9b5cafd614",
       "created_at_utc": "2026-04-22T06:48:28.694354+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.669834+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.207096+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH003_SC003",
-          "version": "cf98d6625f69944d85d716aebb36425e5fe1c117"
+          "version": "9a13a7f86dd19fa238c68a80a811d1bff3b975f0"
         }
       ],
       "locked_fields": {},
@@ -2306,6 +2378,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.669834+00:00",
           "action": "synthesized",
           "source_fingerprint": "86e70d1ed493c6dd0ade8f5e72b586e9b889b30a"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.207096+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ed59cd0afefdf3f1423357f396be1b9b5cafd614"
         }
       ]
     }
@@ -2321,9 +2398,9 @@
         "display_name": "protagonist",
         "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 176,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
       },
       {
         "label": "Martian Warriors",
@@ -2331,9 +2408,9 @@
         "display_name": "martian_warriors",
         "status": "canonical",
         "entity_kind": "group",
-        "resolution_score": 176,
+        "resolution_score": 138,
         "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/martian_warriors.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'martian_warriors'"
+        "notes": "Direct registry match for 'martian_warriors'."
       }
     ],
     "resolved_environment": {
@@ -2343,8 +2420,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     },
     "beat_environment_overrides": [],
     "candidate_environment_ids": [],
@@ -2354,7 +2431,7 @@
         "chapter_id": "CH003",
         "requested_label": "The basin/enclosure area",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -2464,14 +2541,14 @@
       "artifact_id": "CH003_SC004_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "b81032a07d3ac9b03c66a5896fe5a4aa41f3674d",
+      "source_fingerprint": "16919e1bb8eda557403a08d6d5f2128277a01379",
       "created_at_utc": "2026-04-22T06:48:28.701354+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.687693+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.222609+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH003_SC004",
-          "version": "38a3d9f5d1375a2091823b32eab5116ab67e219f"
+          "version": "a308e828a81d59d8daed01a609cd6fb4d95832d0"
         }
       ],
       "locked_fields": {},
@@ -2516,6 +2593,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.687693+00:00",
           "action": "synthesized",
           "source_fingerprint": "b81032a07d3ac9b03c66a5896fe5a4aa41f3674d"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.222609+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "16919e1bb8eda557403a08d6d5f2128277a01379"
         }
       ]
     }
@@ -2531,9 +2613,9 @@
         "display_name": "protagonist",
         "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 176,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
       },
       {
         "label": "The Leader",
@@ -2542,8 +2624,8 @@
         "status": "review",
         "entity_kind": "individual",
         "resolution_score": 10,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-        "notes": "apache_warriors | source context shares query language"
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
       },
       {
         "label": "Martian Warriors",
@@ -2551,9 +2633,9 @@
         "display_name": "martian_warriors",
         "status": "canonical",
         "entity_kind": "group",
-        "resolution_score": 176,
+        "resolution_score": 138,
         "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/martian_warriors.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'martian_warriors'"
+        "notes": "Direct registry match for 'martian_warriors'."
       }
     ],
     "resolved_environment": {
@@ -2563,8 +2645,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     },
     "beat_environment_overrides": [],
     "candidate_environment_ids": [],
@@ -2574,7 +2656,7 @@
         "chapter_id": "CH003",
         "requested_label": "The basin/open landscape",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -2686,14 +2768,14 @@
       "artifact_id": "CH003_SC005_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "1b10972ed19ec987f0ab5a3cd746d2bcc897d519",
+      "source_fingerprint": "545b5cc8874b803d43d9076e80e367fa2f1eee69",
       "created_at_utc": "2026-04-22T06:48:28.708360+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.703398+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.238945+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH003_SC005",
-          "version": "a7c19418befbc9a646a2ddca2a24a7ca42e9ecef"
+          "version": "e124c17b875ffbb8128b4298a42b32d25e4ccb50"
         }
       ],
       "locked_fields": {},
@@ -2738,6 +2820,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.703398+00:00",
           "action": "synthesized",
           "source_fingerprint": "1b10972ed19ec987f0ab5a3cd746d2bcc897d519"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.238945+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "545b5cc8874b803d43d9076e80e367fa2f1eee69"
         }
       ]
     }
@@ -2763,9 +2850,9 @@
         "display_name": "tars_tarkas",
         "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 186,
+        "resolution_score": 138,
         "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'tars_tarkas'"
+        "notes": "Direct registry match for 'tars_tarkas'."
       },
       {
         "label": "Various Martians (crowd)",
@@ -2774,8 +2861,8 @@
         "status": "review",
         "entity_kind": "individual",
         "resolution_score": 10,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-        "notes": "apache_warriors | source context shares query language"
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
       }
     ],
     "resolved_environment": {
@@ -2785,8 +2872,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     },
     "beat_environment_overrides": [],
     "candidate_environment_ids": [],
@@ -2796,7 +2883,7 @@
         "chapter_id": "CH004",
         "requested_label": "Central Plaza of the Ancient City (Marble/Gold architecture, massive scale)",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -2902,14 +2989,14 @@
       "artifact_id": "CH004_SC001_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "ba047d19083a9355beaaf962828f3fe26578c602",
+      "source_fingerprint": "1802ee6206aac3a769915916f9cf4d4dbc52b044",
       "created_at_utc": "2026-04-22T06:48:28.714242+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.718401+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.253869+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH004_SC001",
-          "version": "ba1a966d0da66eadcc49024cd798ad7deb6cfa34"
+          "version": "9f378131d6fa42cfc748ce76ccdd6fe72efb8906"
         }
       ],
       "locked_fields": {},
@@ -2954,6 +3041,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.718401+00:00",
           "action": "synthesized",
           "source_fingerprint": "ba047d19083a9355beaaf962828f3fe26578c602"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.253869+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1802ee6206aac3a769915916f9cf4d4dbc52b044"
         }
       ]
     }
@@ -2970,8 +3062,8 @@
         "status": "review",
         "entity_kind": "individual",
         "resolution_score": 6,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/chieftain.md",
-        "notes": "chieftain | token overlap: ['chieftain'] | generic role label reduces confidence"
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
       },
       {
         "label": "Tars Tarkas",
@@ -2979,9 +3071,9 @@
         "display_name": "tars_tarkas",
         "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 186,
+        "resolution_score": 138,
         "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'tars_tarkas'"
+        "notes": "Direct registry match for 'tars_tarkas'."
       },
       {
         "label": "The Chieftain",
@@ -2989,9 +3081,9 @@
         "display_name": "the_chieftain",
         "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 176,
+        "resolution_score": 138,
         "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/chieftain.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'chieftain'"
+        "notes": "Direct registry match for 'the_chieftain'."
       },
       {
         "label": "Martian Court",
@@ -3000,8 +3092,8 @@
         "status": "review",
         "entity_kind": "individual",
         "resolution_score": 6,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/chieftain.md",
-        "notes": "chieftain | token overlap: ['chieftain'] | generic role label reduces confidence"
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
       }
     ],
     "resolved_environment": {
@@ -3010,9 +3102,9 @@
       "display_name": "grand_audience_chamber",
       "status": "canonical",
       "entity_kind": "environment",
-      "resolution_score": 183,
+      "resolution_score": 138,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH004/grand_audience_chamber.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'grand_audience_chamber'"
+      "notes": "Direct registry match for 'grand_audience_chamber'."
     },
     "beat_environment_overrides": [],
     "candidate_environment_ids": [
@@ -3093,14 +3185,14 @@
       "artifact_id": "CH004_SC002_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "b40fa9505e7faa67dcf7e7dade2a76ec874389c8",
+      "source_fingerprint": "20ddaea56b60a607b17708550f6ffc7c06371abd",
       "created_at_utc": "2026-04-22T06:48:28.719656+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.733913+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.268372+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH004_SC002",
-          "version": "f4a0a1ae5413f6480169670b3dae9aedf648cb39"
+          "version": "043e451eabae9cc09e1364c5e6f4f14167e79104"
         }
       ],
       "locked_fields": {},
@@ -3145,6 +3237,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.733913+00:00",
           "action": "synthesized",
           "source_fingerprint": "b40fa9505e7faa67dcf7e7dade2a76ec874389c8"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.269375+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "20ddaea56b60a607b17708550f6ffc7c06371abd"
         }
       ]
     }
@@ -3152,7 +3249,7 @@
   {
     "scene_id": "CH004_SC003",
     "chapter_id": "CH004",
-    "binding_mode": "chapter_fallback",
+    "binding_mode": "scene_level",
     "resolved_characters": [
       {
         "label": "The Narrator",
@@ -3161,8 +3258,8 @@
         "status": "review",
         "entity_kind": "individual",
         "resolution_score": 6,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/chieftain.md",
-        "notes": "chieftain | token overlap: ['chieftain'] | generic role label reduces confidence"
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
       },
       {
         "label": "Tars Tarkas",
@@ -3170,9 +3267,9 @@
         "display_name": "tars_tarkas",
         "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 186,
+        "resolution_score": 138,
         "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'tars_tarkas'"
+        "notes": "Direct registry match for 'tars_tarkas'."
       },
       {
         "label": "The Chieftain",
@@ -3180,9 +3277,9 @@
         "display_name": "the_chieftain",
         "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 176,
+        "resolution_score": 138,
         "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/chieftain.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'chieftain'"
+        "notes": "Direct registry match for 'the_chieftain'."
       },
       {
         "label": "Martian Warrior",
@@ -3190,9 +3287,9 @@
         "display_name": "martian_warrior",
         "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 176,
+        "resolution_score": 138,
         "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/martian_warrior.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'martian_warrior'"
+        "notes": "Direct registry match for 'martian_warrior'."
       },
       {
         "label": "Martian Crowd",
@@ -3201,70 +3298,29 @@
         "status": "review",
         "entity_kind": "individual",
         "resolution_score": 6,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/chieftain.md",
-        "notes": "chieftain | token overlap: ['chieftain'] | generic role label reduces confidence"
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
       }
     ],
     "resolved_environment": {
-      "label": "Grand Audience Chamber",
+      "label": "Grand Audience Chamber / Plaza area",
       "canonical_id": "grand_audience_chamber",
       "display_name": "grand_audience_chamber",
       "status": "canonical",
       "entity_kind": "environment",
-      "resolution_score": 183,
+      "resolution_score": 138,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH004/grand_audience_chamber.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'grand_audience_chamber'"
+      "notes": "Direct registry match for 'grand_audience_chamber'."
     },
     "beat_environment_overrides": [],
-    "candidate_environment_ids": [],
-    "future_environment_requests": [
-      {
-        "scene_id": "CH004_SC003",
-        "chapter_id": "CH004",
-        "requested_label": "Grand Audience Chamber / Plaza area",
-        "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
-        "parent_environment_id": "grand_audience_chamber",
-        "evidence_refs": [
-          {
-            "source": "scene_breakdown",
-            "chapter_id": "CH004",
-            "scene_id": "CH004_SC003"
-          },
-          {
-            "source": "scene_breakdown",
-            "chapter_id": "CH004",
-            "scene_id": "CH004_SC003"
-          },
-          {
-            "source": "scene_breakdown",
-            "chapter_id": "CH004",
-            "scene_id": "CH004_SC003"
-          },
-          {
-            "source": "scene_breakdown",
-            "chapter_id": "CH004",
-            "scene_id": "CH004_SC003"
-          },
-          {
-            "source": "chapter_summary",
-            "chapter_id": "CH004",
-            "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
-          },
-          {
-            "source": "book_index",
-            "chapter_id": "CH016",
-            "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH016_chapter_xvi.md"
-          }
-        ]
-      }
+    "candidate_environment_ids": [
+      "grand_audience_chamber"
     ],
+    "future_environment_requests": [],
     "review_flags": [
-      "scene_environment_used_chapter_fallback",
       "scene_cast_contains_unresolved_references"
     ],
     "notes": [
-      "Inherited chapter-level environment because the scene did not resolve a canonical environment.",
       "2 scene cast reference(s) still require review."
     ],
     "evidence_refs": [
@@ -3335,14 +3391,14 @@
       "artifact_id": "CH004_SC003_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "9fb8c4a9e00b6a09136fae61734fc513a0aa5148",
+      "source_fingerprint": "e3ddca9cd5e1d350e293f7721dafe15a66314a70",
       "created_at_utc": "2026-04-22T06:48:28.725660+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.748414+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.284094+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH004_SC003",
-          "version": "7ca07097563c5650943e8f4f0128b753bc4247f2"
+          "version": "2c45ac587c94edd7af90c6a063c47a6c17afe771"
         }
       ],
       "locked_fields": {},
@@ -3387,6 +3443,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.748414+00:00",
           "action": "synthesized",
           "source_fingerprint": "9fb8c4a9e00b6a09136fae61734fc513a0aa5148"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.284094+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "e3ddca9cd5e1d350e293f7721dafe15a66314a70"
         }
       ]
     }
@@ -3403,8 +3464,8 @@
         "status": "review",
         "entity_kind": "individual",
         "resolution_score": 6,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
-        "notes": "sola | token overlap: ['sola'] | generic role label reduces confidence"
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
       },
       {
         "label": "Tars Tarkas",
@@ -3412,9 +3473,9 @@
         "display_name": "tars_tarkas",
         "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 186,
+        "resolution_score": 138,
         "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'tars_tarkas'"
+        "notes": "Direct registry match for 'tars_tarkas'."
       },
       {
         "label": "Sola",
@@ -3422,20 +3483,20 @@
         "display_name": "sola",
         "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 186,
+        "resolution_score": 138,
         "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'sola'"
+        "notes": "Direct registry match for 'sola'."
       }
     ],
     "resolved_environment": {
-      "label": "Grand Audience Chamber",
+      "label": "Grand Audience Chamber / Plaza area",
       "canonical_id": "grand_audience_chamber",
       "display_name": "grand_audience_chamber",
       "status": "canonical",
       "entity_kind": "environment",
-      "resolution_score": 183,
+      "resolution_score": 138,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH004/grand_audience_chamber.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'grand_audience_chamber'"
+      "notes": "Direct registry match for 'grand_audience_chamber'."
     },
     "beat_environment_overrides": [],
     "candidate_environment_ids": [],
@@ -3445,7 +3506,7 @@
         "chapter_id": "CH004",
         "requested_label": "Transition from Audience Chamber to corridors/private quarters",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": "grand_audience_chamber",
         "evidence_refs": [
           {
@@ -3557,14 +3618,14 @@
       "artifact_id": "CH004_SC004_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "ce06708db15600e436563e658e9853beaa3f1d3e",
+      "source_fingerprint": "8fa8784c622b3a09de64129c909dfd125996f8f2",
       "created_at_utc": "2026-04-22T06:48:28.731661+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.763971+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.299610+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH004_SC004",
-          "version": "7e3fdbe1a75b5c76332d91df12c6b3526f6f3f2e"
+          "version": "bc58394668dc32962b79ac77e7f3cf986b622b5e"
         }
       ],
       "locked_fields": {},
@@ -3609,6 +3670,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.763971+00:00",
           "action": "synthesized",
           "source_fingerprint": "ce06708db15600e436563e658e9853beaa3f1d3e"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.299610+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "8fa8784c622b3a09de64129c909dfd125996f8f2"
         }
       ]
     }
@@ -3625,8 +3691,8 @@
         "status": "review",
         "entity_kind": "individual",
         "resolution_score": 6,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
-        "notes": "sola | token overlap: ['sola'] | generic role label reduces confidence"
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
       },
       {
         "label": "Sola",
@@ -3634,9 +3700,9 @@
         "display_name": "sola",
         "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 186,
+        "resolution_score": 138,
         "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'sola'"
+        "notes": "Direct registry match for 'sola'."
       },
       {
         "label": "Small Martian Creature",
@@ -3645,19 +3711,19 @@
         "status": "review",
         "entity_kind": "individual",
         "resolution_score": 6,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
-        "notes": "sola | token overlap: ['sola'] | generic role label reduces confidence"
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
       }
     ],
     "resolved_environment": {
-      "label": "Grand Audience Chamber",
+      "label": "Grand Audience Chamber / Plaza area",
       "canonical_id": "grand_audience_chamber",
       "display_name": "grand_audience_chamber",
       "status": "canonical",
       "entity_kind": "environment",
-      "resolution_score": 183,
+      "resolution_score": 138,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH004/grand_audience_chamber.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'grand_audience_chamber'"
+      "notes": "Direct registry match for 'grand_audience_chamber'."
     },
     "beat_environment_overrides": [],
     "candidate_environment_ids": [],
@@ -3667,7 +3733,7 @@
         "chapter_id": "CH004",
         "requested_label": "Decorated Sleeping Chamber",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": "grand_audience_chamber",
         "evidence_refs": [
           {
@@ -3773,14 +3839,14 @@
       "artifact_id": "CH004_SC005_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "05afe7820e8cd7bca993e9e104093acbe6b5e503",
+      "source_fingerprint": "e4af571378377095260f3d25035cd5ba06cbcf00",
       "created_at_utc": "2026-04-22T06:48:28.736664+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.780393+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.314116+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH004_SC005",
-          "version": "f8026281810fb5b23db2063f085a5bf13471806c"
+          "version": "eb23d718c295178308584e5e56c4c7e43298185e"
         }
       ],
       "locked_fields": {},
@@ -3825,6 +3891,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.780894+00:00",
           "action": "synthesized",
           "source_fingerprint": "05afe7820e8cd7bca993e9e104093acbe6b5e503"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.314116+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "e4af571378377095260f3d25035cd5ba06cbcf00"
         }
       ]
     }
@@ -3840,9 +3911,9 @@
         "display_name": "protagonist",
         "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 176,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
       },
       {
         "label": "Sola",
@@ -3850,19 +3921,19 @@
         "display_name": "sola",
         "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 186,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'sola'"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/sola.md",
+        "notes": "Direct registry match for 'sola'."
       },
       {
         "label": "The Watch Dog (presence/observation)",
-        "canonical_id": null,
-        "display_name": "The Watch Dog (presence/observation)",
-        "status": "review",
+        "canonical_id": "the_watch_dog",
+        "display_name": "the_watch_dog",
+        "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 16,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
-        "notes": "sola | token overlap: ['sola'] | source context shares query language"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/the_watch_dog.md",
+        "notes": "Direct registry match for 'the_watch_dog'."
       }
     ],
     "resolved_environment": {
@@ -3872,8 +3943,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     },
     "beat_environment_overrides": [],
     "candidate_environment_ids": [],
@@ -3883,7 +3954,7 @@
         "chapter_id": "CH005",
         "requested_label": "Captive's chamber (decorated with murals)",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -3920,12 +3991,10 @@
       }
     ],
     "review_flags": [
-      "scene_environment_unresolved",
-      "scene_cast_contains_unresolved_references"
+      "scene_environment_unresolved"
     ],
     "notes": [
-      "Scene referenced a non-canonical environment and no chapter fallback was available.",
-      "1 scene cast reference(s) still require review."
+      "Scene referenced a non-canonical environment and no chapter fallback was available."
     ],
     "evidence_refs": [
       {
@@ -3995,14 +4064,14 @@
       "artifact_id": "CH005_SC001_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "194622f6d5b50ad3fbcdde51f31e033ca3521555",
+      "source_fingerprint": "078013a3fe4d661c3fd1dca8a0cb6edc13e71ee5",
       "created_at_utc": "2026-04-22T06:48:28.742664+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.794909+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.328622+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH005_SC001",
-          "version": "e4367d233045d111ada5c68d7b8e9660bb5e26fa"
+          "version": "9111657eb2a9135d9fdb447af96114b24edcaa7f"
         }
       ],
       "locked_fields": {},
@@ -4047,6 +4116,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.795410+00:00",
           "action": "synthesized",
           "source_fingerprint": "194622f6d5b50ad3fbcdde51f31e033ca3521555"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.329123+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "078013a3fe4d661c3fd1dca8a0cb6edc13e71ee5"
         }
       ]
     }
@@ -4062,9 +4136,9 @@
         "display_name": "protagonist",
         "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 176,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
       },
       {
         "label": "The Watch Dog",
@@ -4072,9 +4146,9 @@
         "display_name": "the_watch_dog",
         "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 176,
+        "resolution_score": 138,
         "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/the_watch_dog.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'watch_dog'"
+        "notes": "Direct registry match for 'the_watch_dog'."
       }
     ],
     "resolved_environment": {
@@ -4084,8 +4158,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     },
     "beat_environment_overrides": [],
     "candidate_environment_ids": [],
@@ -4095,7 +4169,7 @@
         "chapter_id": "CH005",
         "requested_label": "Captive's chamber",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -4135,7 +4209,7 @@
         "chapter_id": "CH005",
         "requested_label": "immediate hallway/threshold",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -4245,14 +4319,14 @@
       "artifact_id": "CH005_SC002_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "aeeeff72f42fd472d7be61ecec4be1a1dcfb51ef",
+      "source_fingerprint": "1ec262d71e3542dfd12236e5033bdca79fbb432c",
       "created_at_utc": "2026-04-22T06:48:28.750172+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.811146+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.344634+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH005_SC002",
-          "version": "a51970f5a9f128cf2ba5c51df773aab91a2600ed"
+          "version": "00135047d77b7e42205d392f94b0f2faae36d478"
         }
       ],
       "locked_fields": {},
@@ -4297,6 +4371,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.811646+00:00",
           "action": "synthesized",
           "source_fingerprint": "aeeeff72f42fd472d7be61ecec4be1a1dcfb51ef"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.345135+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1ec262d71e3542dfd12236e5033bdca79fbb432c"
         }
       ]
     }
@@ -4312,9 +4391,9 @@
         "display_name": "protagonist",
         "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 176,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
       },
       {
         "label": "The Watch Dog",
@@ -4322,9 +4401,9 @@
         "display_name": "the_watch_dog",
         "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 176,
+        "resolution_score": 138,
         "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/the_watch_dog.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'watch_dog'"
+        "notes": "Direct registry match for 'the_watch_dog'."
       }
     ],
     "resolved_environment": {
@@ -4334,8 +4413,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     },
     "beat_environment_overrides": [],
     "candidate_environment_ids": [],
@@ -4345,7 +4424,7 @@
         "chapter_id": "CH005",
         "requested_label": "Deserted Martian city streets",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -4455,14 +4534,14 @@
       "artifact_id": "CH005_SC003_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "463433a9847b5a8ea873e48033e915d41fed52b8",
+      "source_fingerprint": "0ab55bf0ac86d2e24464c171bc8f22c3bbac3e2d",
       "created_at_utc": "2026-04-22T06:48:28.757174+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.827644+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.360650+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH005_SC003",
-          "version": "90ed6707ee572cb72ceca6ef306f2c1dfaa52917"
+          "version": "0a9fb9966e6afc74755c2b9c7a2531fcbc8194f3"
         }
       ],
       "locked_fields": {},
@@ -4507,6 +4586,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.827644+00:00",
           "action": "synthesized",
           "source_fingerprint": "463433a9847b5a8ea873e48033e915d41fed52b8"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.361152+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "0ab55bf0ac86d2e24464c171bc8f22c3bbac3e2d"
         }
       ]
     }
@@ -4522,19 +4606,19 @@
         "display_name": "protagonist",
         "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 176,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
       },
       {
         "label": "The Watch Dog (pursuing)",
-        "canonical_id": null,
-        "display_name": "The Watch Dog (pursuing)",
-        "status": "review",
+        "canonical_id": "the_watch_dog",
+        "display_name": "the_watch_dog",
+        "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 10,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-        "notes": "apache_warriors | source context shares query language"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/the_watch_dog.md",
+        "notes": "Direct registry match for 'the_watch_dog'."
       },
       {
         "label": "The Colossal Creature",
@@ -4542,9 +4626,9 @@
         "display_name": "the_colossal_creature",
         "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 186,
+        "resolution_score": 138,
         "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/the_colossal_creature.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'colossal_creature'"
+        "notes": "Direct registry match for 'the_colossal_creature'."
       }
     ],
     "resolved_environment": {
@@ -4554,8 +4638,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     },
     "beat_environment_overrides": [],
     "candidate_environment_ids": [],
@@ -4565,7 +4649,7 @@
         "chapter_id": "CH005",
         "requested_label": "Exterior building/alleyway",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -4605,7 +4689,7 @@
         "chapter_id": "CH005",
         "requested_label": "interior room of the Colossal Creature",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -4642,12 +4726,10 @@
       }
     ],
     "review_flags": [
-      "scene_environment_unresolved",
-      "scene_cast_contains_unresolved_references"
+      "scene_environment_unresolved"
     ],
     "notes": [
-      "Scene referenced a non-canonical environment and no chapter fallback was available.",
-      "1 scene cast reference(s) still require review."
+      "Scene referenced a non-canonical environment and no chapter fallback was available."
     ],
     "evidence_refs": [
       {
@@ -4698,7 +4780,7 @@
       {
         "source": "character_bible",
         "chapter_id": "CH005",
-        "canonical_id": "the_colossal_creature"
+        "canonical_id": "the_watch_dog"
       }
     ],
     "evidence_summary": [
@@ -4711,20 +4793,20 @@
       "[CH021] CHAPTER XXI (book index hit)",
       "[CH023] CHAPTER XXIII (book index hit)",
       "Character protagonist: An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeles...",
-      "Character the_colossal_creature: No visual data is available to establish a stable identity, physical build, or costume for this character. The entity is identified only by its designation as \"the_colossal_creature.\""
+      "Character the_watch_dog: No visual data is available for this character in the provided evidence. A stable visual identity cannot be established at this time."
     ],
     "metadata": {
       "artifact_id": "CH005_SC004_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "4da646f07c715ad8e312bcc0f05ea28ff4333f13",
+      "source_fingerprint": "1fc2acfc25bc26c2ebff691b780acd73c874bd5e",
       "created_at_utc": "2026-04-22T06:48:28.767175+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.843156+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.380311+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH005_SC004",
-          "version": "67ee87436fad948bb18b5a3a60ac61c21434e10d"
+          "version": "b33094962839628365feea1b4ed8d9e787365724"
         }
       ],
       "locked_fields": {},
@@ -4769,6 +4851,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.843156+00:00",
           "action": "synthesized",
           "source_fingerprint": "4da646f07c715ad8e312bcc0f05ea28ff4333f13"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.380311+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1fc2acfc25bc26c2ebff691b780acd73c874bd5e"
         }
       ]
     }
@@ -4785,8 +4872,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     },
     "beat_environment_overrides": [],
     "candidate_environment_ids": [],
@@ -4796,7 +4883,7 @@
         "chapter_id": "CH006",
         "requested_label": "Interior chamber",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -4836,7 +4923,7 @@
         "chapter_id": "CH006",
         "requested_label": "Martian city building",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -4934,14 +5021,14 @@
       "artifact_id": "CH006_SC001_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "a056b9d84683d2d2e70855833297c3cbc16c4898",
+      "source_fingerprint": "0e9258adf16c6cecb0321d96bfa99f0f3f46e36d",
       "created_at_utc": "2026-04-22T06:48:28.774683+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.859046+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.396648+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH006_SC001",
-          "version": "a871345e22a36de8bed3316bff84cbb2f3b85658"
+          "version": "18830898aa46c23304f90605f013248bf7f66ba3"
         }
       ],
       "locked_fields": {},
@@ -4986,6 +5073,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.859547+00:00",
           "action": "synthesized",
           "source_fingerprint": "a056b9d84683d2d2e70855833297c3cbc16c4898"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.396648+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "0e9258adf16c6cecb0321d96bfa99f0f3f46e36d"
         }
       ]
     }
@@ -5002,8 +5094,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     },
     "beat_environment_overrides": [],
     "candidate_environment_ids": [],
@@ -5013,7 +5105,7 @@
         "chapter_id": "CH006",
         "requested_label": "Interior chamber",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -5111,14 +5203,14 @@
       "artifact_id": "CH006_SC002_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "3c0674591bd6b3bb462abaf52ff62917600e1e1d",
+      "source_fingerprint": "c80632442065ab8d349c928ccb18fbbd542cca92",
       "created_at_utc": "2026-04-22T06:48:28.780683+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.875554+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.411157+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH006_SC002",
-          "version": "6d125016e39334c69028043cd0fa99855fce118f"
+          "version": "86ed3ce72f5637b47db3d328f171350ac0d7ebba"
         }
       ],
       "locked_fields": {},
@@ -5163,6 +5255,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.876055+00:00",
           "action": "synthesized",
           "source_fingerprint": "3c0674591bd6b3bb462abaf52ff62917600e1e1d"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.411157+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c80632442065ab8d349c928ccb18fbbd542cca92"
         }
       ]
     }
@@ -5179,8 +5276,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     },
     "beat_environment_overrides": [],
     "candidate_environment_ids": [],
@@ -5190,7 +5287,7 @@
         "chapter_id": "CH006",
         "requested_label": "Interior chamber/Plaza threshold",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -5288,14 +5385,14 @@
       "artifact_id": "CH006_SC003_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "3e33b44673dcfde0eeae4c6cf099e31556cd2c05",
+      "source_fingerprint": "ada02f3ea28d2398133321560f371211f41d1a70",
       "created_at_utc": "2026-04-22T06:48:28.786683+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.890979+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.425812+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH006_SC003",
-          "version": "e5cc3dd62314c0a7996c6faae9e07ba1fade73e0"
+          "version": "a2c7f6daa3ff659d7f1a4b57550ca28b653c56f4"
         }
       ],
       "locked_fields": {},
@@ -5340,6 +5437,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.891479+00:00",
           "action": "synthesized",
           "source_fingerprint": "3e33b44673dcfde0eeae4c6cf099e31556cd2c05"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.426312+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ada02f3ea28d2398133321560f371211f41d1a70"
         }
       ]
     }
@@ -5356,8 +5458,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     },
     "beat_environment_overrides": [],
     "candidate_environment_ids": [],
@@ -5367,7 +5469,7 @@
         "chapter_id": "CH006",
         "requested_label": "Interior chamber leading out to a Plaza",
         "request_type": "missing_environment",
-        "reason": "aerial_battlefield_mars | source context shares query language",
+        "reason": "Low-confidence environment match requires review.",
         "parent_environment_id": null,
         "evidence_refs": [
           {
@@ -5465,14 +5567,14 @@
       "artifact_id": "CH006_SC004_SCENE_BINDINGS",
       "artifact_type": "scene_binding",
       "status": "generated",
-      "source_fingerprint": "b997b76b68d06bd1ee33595715af535f24a27aad",
+      "source_fingerprint": "9f160b2b7d1051a1b974a7715e82ec1b5b3832b5",
       "created_at_utc": "2026-04-22T06:48:28.793682+00:00",
-      "updated_at_utc": "2026-04-23T18:14:44.907484+00:00",
+      "updated_at_utc": "2026-04-23T18:59:10.442677+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH006_SC004",
-          "version": "e45b9a4e2d6e5dc701ba0e414db95f70b50ba409"
+          "version": "ab0ff156b61f91b16cb8bae39dc637481917c00b"
         }
       ],
       "locked_fields": {},
@@ -5517,6 +5619,11 @@
           "timestamp_utc": "2026-04-23T18:14:44.907985+00:00",
           "action": "synthesized",
           "source_fingerprint": "b997b76b68d06bd1ee33595715af535f24a27aad"
+        },
+        {
+          "timestamp_utc": "2026-04-23T18:59:10.442677+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9f160b2b7d1051a1b974a7715e82ec1b5b3832b5"
         }
       ]
     }

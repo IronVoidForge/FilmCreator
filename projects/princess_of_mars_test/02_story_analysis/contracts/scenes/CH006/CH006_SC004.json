@@ -9,19 +9,19 @@
   "scene_short_description": "A warrior attempts to kill a wounded beast until the protagonist intervenes with physical force.",
   "scene_primary_scale_story_point": "Protagonist vs Aggressor (Physical dominance)",
   "scene_required_anchor_catalog": [
-    "The wounded Watch-thing",
-    "Building exit threshold"
+    "The Watch-thing (wounded/multi-legged)",
+    "Building threshold/exit"
   ],
-  "scene_start_state": "Tension in the interior chamber as a warrior approaches the wounded Watch-thing with lethal intent.",
-  "scene_end_state": "The group exits the building into the Martian plaza, having secured allies.",
-  "dominant_action_line": "Physical intervention/strike against the warrior followed by an exit from the building.",
+  "scene_start_state": "Warrior poised to execute the wounded Watch-thing in the interior chamber.",
+  "scene_end_state": "Protagonist, Sola, and Guardian exiting into the bright Martian plaza.",
+  "dominant_action_line": "Physical intervention against an aggressor followed by a group departure.",
   "scene_spatial_layout": [
-    "Interior chamber containing the combatants and the beast",
-    "Threshold leading to a wide Plaza"
+    "Interior chamber containing the confrontation",
+    "Threshold connecting chamber to Plaza"
   ],
   "character_spatial_map": [
     "Protagonist positioned between Warrior and Watch-thing",
-    "Sola and Guardian following protagonist toward exit"
+    "Sola and Guardian following Protagonist toward exit"
   ],
   "environment_subzones": [
     "Interior chamber",
@@ -29,14 +29,14 @@
     "Martian Plaza"
   ],
   "entry_vectors": [
-    "Warrior enters combat zone near Watch-thing"
+    "Warrior entry (implied)"
   ],
   "exit_vectors": [
-    "Group exits via building threshold to Plaza"
+    "Group movement through threshold to Plaza"
   ],
   "beat_transition_map": [
     "BT001 -> BT002: Physical strike/intervention",
-    "BT002 -> BT003: Departure from interior to exterior"
+    "BT002 -> BT003: Movement from interior to exterior"
   ],
   "characters_required": [],
   "environments_required": [
@@ -47,8 +47,8 @@
       "status": "review",
       "entity_kind": "environment",
       "resolution_score": 8,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
     }
   ],
   "continuity_constraints": [
@@ -58,23 +58,24 @@
   "visual_coverage_families": [
     "Close-up on physical strike (hand/impact)",
     "Wide shot of group exit into plaza",
-    "Tracking shot following movement from interior to exterior"
+    "Tracking shot following movement through threshold"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
       "summary": "Warrior attempts to execute the Watch-thing",
       "purpose": "",
-      "action_start": "Warrior approaches wounded beast",
-      "action_end": "Warrior prepares strike",
+      "action_start": "Warrior poised over beast",
+      "action_end": "Protagonist intervenes",
       "active_subjects": [
-        "Martian Warrior"
-      ],
-      "passive_subjects": [
+        "Martian Warrior",
         "The Watch-thing"
       ],
+      "passive_subjects": [
+        "The Protagonist"
+      ],
       "spatial_context": "Interior chamber",
-      "blocking_hint": "Warrior stands over the multi-legged creature",
+      "blocking_hint": "Warrior standing over multi-legged creature",
       "environment_subzone": "Interior chamber",
       "continuity_focus": "Watch-thing wound/mobility state",
       "coverage_hint": "Medium shot of threat",
@@ -83,10 +84,10 @@
     },
     {
       "beat_id": "BT002",
-      "summary": "Protagonist intervenes physically",
+      "summary": "Protagonist strikes the warrior to protect the beast",
       "purpose": "",
-      "action_start": "Protagonist lunges at Warrior",
-      "action_end": "Warrior is struck and repelled",
+      "action_start": "Protagonist lunges",
+      "action_end": "Warrior is repelled",
       "active_subjects": [
         "The Protagonist",
         "Martian Warrior"
@@ -95,29 +96,31 @@
         "The Watch-thing"
       ],
       "spatial_context": "Interior chamber",
-      "blocking_hint": "Protagonist moves between the two subjects",
+      "blocking_hint": "Intervention between aggressor and beast",
       "environment_subzone": "Interior chamber",
-      "continuity_focus": "Physical impact/strike force",
-      "coverage_hint": "Close-up on strike",
+      "continuity_focus": "Physicality of the strike",
+      "coverage_hint": "Close-up on impact",
       "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Group departs for the plaza",
+      "summary": "Protagonist departs with Sola and Guardian",
       "purpose": "",
-      "action_start": "Group turns toward exit",
-      "action_end": "Group enters the plaza",
+      "action_start": "Protagonist turns from warrior",
+      "action_end": "Group enters plaza",
       "active_subjects": [
         "The Protagonist",
         "Sola",
         "Guardian"
       ],
-      "passive_subjects": [],
-      "spatial_context": "Transition from interior to exterior",
-      "blocking_hint": "Protagonist leads the group through the threshold",
+      "passive_subjects": [
+        "Martian Warrior"
+      ],
+      "spatial_context": "Chamber to Plaza transition",
+      "blocking_hint": "Walking through threshold",
       "environment_subzone": "Building threshold/Plaza",
-      "continuity_focus": "Light transition (Interior to Martian light)",
+      "continuity_focus": "Light shift from interior to exterior Martian light",
       "coverage_hint": "Wide tracking shot",
       "coverage_priority": "medium",
       "handoff_to_next": "End of scene"
@@ -128,7 +131,7 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish threat",
-      "planned_shot_moment_summary": "Warrior moves toward the wounded beast",
+      "planned_shot_moment_summary": "Warrior prepares to strike Watch-thing",
       "primary_subject_seed": "Martian Warrior",
       "secondary_subjects_seed": [
         "The Watch-thing"
@@ -139,10 +142,10 @@
       "planned_shot_required_anchor_1": "The Watch-thing",
       "planned_shot_scale_proof_detail": "Watch-thing wound state",
       "start_state_seed": "Warrior looming over beast",
-      "end_state_seed": "Warrior poised to strike",
-      "action_seed": "Approaching the creature",
+      "end_state_seed": "Protagonist enters frame",
+      "action_seed": "Aggressor prepares execution",
       "blocking_seed": [
-        "Warrior stands over the multi-legged beast"
+        "Warrior over Watch-thing"
       ],
       "shot_size": "medium_full",
       "camera_angle": "eye_level",
@@ -157,7 +160,7 @@
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "show defiance",
-      "planned_shot_moment_summary": "Protagonist strikes the warrior",
+      "planned_shot_moment_summary": "Protagonist strikes Warrior",
       "primary_subject_seed": "The Protagonist",
       "secondary_subjects_seed": [
         "Martian Warrior"
@@ -165,13 +168,13 @@
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "Interior chamber",
-      "planned_shot_required_anchor_1": "Warrior",
+      "planned_shot_required_anchor_1": "Warrior's face",
       "planned_shot_scale_proof_detail": "Impact force",
       "start_state_seed": "Protagonist lunging",
       "end_state_seed": "Warrior recoiling",
-      "action_seed": "Striking the aggressor",
+      "action_seed": "Physical strike against aggressor",
       "blocking_seed": [
-        "Protagonist steps between warrior and beast"
+        "Protagonist intercepts Warrior"
       ],
       "shot_size": "close_up",
       "camera_angle": "eye_level",
@@ -179,14 +182,14 @@
       "camera_motion": "handheld",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
-      "lighting_style": "hard_directional",
+      "lighting_style": "low_key_night",
       "primary_subject_angle": "front_three_quarter_right"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "resolve status",
-      "planned_shot_moment_summary": "Group exits into the plaza",
+      "planned_shot_moment_summary": "Group exits to plaza",
       "primary_subject_seed": "The Protagonist",
       "secondary_subjects_seed": [
         "Sola",
@@ -198,18 +201,18 @@
       "planned_shot_required_anchor_1": "Building threshold",
       "planned_shot_scale_proof_detail": "Light transition",
       "start_state_seed": "Group at threshold",
-      "end_state_seed": "Group walking in plaza",
-      "action_seed": "Exiting building",
+      "end_state_seed": "Group walking into plaza",
+      "action_seed": "Walking out of building",
       "blocking_seed": [
-        "Protagonist leads Sola and Guardian out of the structure"
+        "Protagonist leads Sola and Guardian"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
-      "lens_family": "ultra_wide",
+      "lens_family": "wide",
       "camera_motion": "track",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
-      "lighting_style": "backlit",
+      "lighting_style": "hard_directional",
       "primary_subject_angle": "rear_three_quarter_left"
     }
   ],
@@ -268,14 +271,14 @@
     "[CH006] CHAPTER VI (book index hit)",
     "[CH010] CHAPTER X (book index hit)"
   ],
-  "storyboard_markdown": "# Scene Contract: CH006_SC004\n\n## Production Intent\nEstablish the protagonist's protective nature through a physical confrontation with an aggressor, transitioning from interior tension to exterior resolution. The sequence must manage the lighting shift from indoor chamber to bright Martian plaza and maintain the wounded state of the Watch-thing.\n\n## Required Cast\n- The Protagonist (Earthman)\n- Sola\n- Martian Warrior (Aggressor)\n- The Watch-thing (Multi-legged beast)\n- Guardian\n\n## Required Environments\n- Interior chamber (Martian city building)\n- Building threshold\n- Martian Plaza\n\n## Continuity Constraints\n- Physical mobility and wound state of the Watch-thing\n- Exposure transition from interior chamber light to exterior Martian light\n\n## Beat List\n- BT001: Warrior attempts to execute the Watch-thing.\n- BT002: Protagonist intervenes physically via strike.\n- BT003: Group departs building into the plaza.",
+  "storyboard_markdown": "# Scene Contract: CH006_SC004\n\n## Production Intent\nEstablish the protagonist's protective nature through a physical confrontation with an aggressor, transitioning from interior tension to exterior resolution. The sequence must manage the lighting shift from indoor chamber to bright Martian plaza and maintain the wounded state of the Watch-thing.\n\n## Required Cast\n- The Protagonist (Earthman)\n- Sola\n- Martian Warrior (Aggressor)\n- The Watch-thing (Multi-legged beast)\n- Guardian\n\n## Required Environments\n- Interior Chamber (Martian City building)\n- Building Threshold\n- Martian Plaza\n\n## Continuity Constraints\n- Physical state/mobility of the wounded Watch-thing.\n- Lighting transition: Interior chamber to exterior Martian light.\n\n## Beat List\n- BT001: Warrior attempts to execute the Watch-thing.\n- BT002: Protagonist strikes the warrior to protect the beast.\n- BT003: Protagonist departs with Sola and Guardian into the plaza.",
   "metadata": {
     "artifact_id": "CH006_SC004_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "e067d57d570fbe2363e7998326e9a4ff337685e4",
+    "source_fingerprint": "a7f5029d34e9e321b7f6961fe3f4c5bb10f02b19",
     "created_at_utc": "2026-04-21T23:25:22.608418+00:00",
-    "updated_at_utc": "2026-04-23T18:14:17.961252+00:00",
+    "updated_at_utc": "2026-04-23T18:58:27.668553+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -290,7 +293,7 @@
       {
         "dependency_type": "environment_resolutions",
         "dependency_id": "CH006_SC004",
-        "version": "c1f0c44ca8dcef5d9ffae829e1a7884fc3e5560a"
+        "version": "bec707cdaafe0dd20b6e9bd22b5fa41d1ccf384c"
       }
     ],
     "locked_fields": {},
@@ -335,6 +338,11 @@
         "timestamp_utc": "2026-04-23T18:14:44.443742+00:00",
         "action": "synthesized",
         "source_fingerprint": "e067d57d570fbe2363e7998326e9a4ff337685e4"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:59:09.989168+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "a7f5029d34e9e321b7f6961fe3f4c5bb10f02b19"
       }
     ]
   }

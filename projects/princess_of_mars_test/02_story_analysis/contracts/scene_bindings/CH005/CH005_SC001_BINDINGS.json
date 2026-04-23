@@ -9,9 +9,9 @@
       "display_name": "protagonist",
       "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 176,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
     },
     {
       "label": "Sola",
@@ -19,19 +19,19 @@
       "display_name": "sola",
       "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 186,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'sola'"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/sola.md",
+      "notes": "Direct registry match for 'sola'."
     },
     {
       "label": "The Watch Dog (presence/observation)",
-      "canonical_id": null,
-      "display_name": "The Watch Dog (presence/observation)",
-      "status": "review",
+      "canonical_id": "the_watch_dog",
+      "display_name": "the_watch_dog",
+      "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 16,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
-      "notes": "sola | token overlap: ['sola'] | source context shares query language"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/the_watch_dog.md",
+      "notes": "Direct registry match for 'the_watch_dog'."
     }
   ],
   "resolved_environment": {
@@ -41,8 +41,8 @@
     "status": "review",
     "entity_kind": "environment",
     "resolution_score": 8,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "source_path": "",
+    "notes": "Low-confidence environment match requires review."
   },
   "beat_environment_overrides": [],
   "candidate_environment_ids": [],
@@ -52,7 +52,7 @@
       "chapter_id": "CH005",
       "requested_label": "Captive's chamber (decorated with murals)",
       "request_type": "missing_environment",
-      "reason": "aerial_battlefield_mars | source context shares query language",
+      "reason": "Low-confidence environment match requires review.",
       "parent_environment_id": null,
       "evidence_refs": [
         {
@@ -89,12 +89,10 @@
     }
   ],
   "review_flags": [
-    "scene_environment_unresolved",
-    "scene_cast_contains_unresolved_references"
+    "scene_environment_unresolved"
   ],
   "notes": [
-    "Scene referenced a non-canonical environment and no chapter fallback was available.",
-    "1 scene cast reference(s) still require review."
+    "Scene referenced a non-canonical environment and no chapter fallback was available."
   ],
   "evidence_refs": [
     {
@@ -164,14 +162,14 @@
     "artifact_id": "CH005_SC001_SCENE_BINDINGS",
     "artifact_type": "scene_binding",
     "status": "generated",
-    "source_fingerprint": "194622f6d5b50ad3fbcdde51f31e033ca3521555",
+    "source_fingerprint": "078013a3fe4d661c3fd1dca8a0cb6edc13e71ee5",
     "created_at_utc": "2026-04-22T06:48:28.742664+00:00",
-    "updated_at_utc": "2026-04-23T18:14:44.794909+00:00",
+    "updated_at_utc": "2026-04-23T18:59:10.328622+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH005_SC001",
-        "version": "e4367d233045d111ada5c68d7b8e9660bb5e26fa"
+        "version": "9111657eb2a9135d9fdb447af96114b24edcaa7f"
       }
     ],
     "locked_fields": {},
@@ -216,6 +214,11 @@
         "timestamp_utc": "2026-04-23T18:14:44.795410+00:00",
         "action": "synthesized",
         "source_fingerprint": "194622f6d5b50ad3fbcdde51f31e033ca3521555"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:59:10.329123+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "078013a3fe4d661c3fd1dca8a0cb6edc13e71ee5"
       }
     ]
   }

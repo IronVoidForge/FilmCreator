@@ -6,73 +6,94 @@
     "shot_order": 1,
     "previous_shot_id": "",
     "next_shot_id": "SH002",
-    "primary_subject": "John Carter (Younger)",
+    "primary_subject": "john_carter",
     "secondary_subjects": [
-      "Captain James K. Powell (Deceased)"
+      "james_k_powell",
+      "apache_warriors"
     ],
-    "shot_moment_summary": "Carter sees Powell's body",
-    "start_state": "Carter approaching the body",
-    "end_state": "Carter frozen in grief",
-    "action_during_shot": "Stopping abruptly at the sight of the corpse",
-    "action_continues_from": "Carter discovers the arrow-riddled body of Powell in the skirmish zone.",
+    "shot_moment_summary": "Carter sees the arrows in Powell",
+    "start_state": "Carter scanning the ground",
+    "end_state": "Carter frozen looking at Powell",
+    "action_during_shot": "Stopping mid-skirmish",
+    "action_continues_from": "Carter amidst the chaos of the skirmish, locating Powell's body.",
     "action_hands_off_to": "BT002",
     "shot_size": "close_up",
     "camera_angle": "eye_level",
     "lens_family": "portrait",
     "camera_motion": "push_in",
-    "zoom_behavior": "subtle_in",
+    "zoom_behavior": "none",
     "focus_strategy": "shallow_subject",
-    "lighting_style": "diffuse_ambient",
+    "lighting_style": "hard_directional",
     "subject_visibility": "on_screen",
     "narration_mode": "none",
     "primary_subject_angle": "front_three_quarter_left",
-    "visible_primary_subject_id": "John Carter (Younger)",
+    "visible_primary_subject_id": "john_carter",
     "visible_secondary_subject_ids": [
-      "Captain James K. Powell (Deceased)"
+      "james_k_powell",
+      "apache_warriors"
     ],
     "primary_subject_frame_position": "foreground inside The narrow trail",
-    "primary_subject_scale_relation": "Body size relative to trail width",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
     "primary_subject_facing_direction": "front three-quarter left toward the scene action",
-    "primary_subject_pose_description": "Carter approaching the body",
-    "subject_relation_summary": "John Carter (Younger) plays against Captain James K. Powell (Deceased) in the same frame",
-    "required_environment_anchor_1": "Captain James K. Powell (Deceased) body",
-    "required_scale_proof_detail": "Body size relative to trail width",
-    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, diffuse ambient",
+    "primary_subject_pose_description": "Carter scanning the ground",
+    "subject_relation_summary": "john_carter plays against james_k_powell, apache_warriors in the same frame",
+    "required_environment_anchor_1": "james_k_powell",
+    "required_scale_proof_detail": "arrow depth/placement",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, shallow subject, hard directional",
     "subject_blocking": [
-      "Carter enters frame",
-      "stops near prone body",
-      "Carter stops dead in his tracks facing the body"
+      "Carter stumbling toward the body",
+      "Carter breaks away from combat toward the body"
     ],
     "camera_relative_positions": [
-      "Camera anchors the action inside the The narrow trail.",
-      "Background depth should keep The trail/valley near the ambush site legible as the location anchor."
+      "Camera anchors action inside the narrow trail",
+      "Background depth keeps the trail/valley location legible"
     ],
     "gaze_directions": [
-      "John Carter (Younger) focuses toward the active scene action."
+      "john_carter focuses toward the active scene action"
     ],
     "environment_subzone": "The narrow trail",
     "key_visible_environment_features": [
       "The narrow trail"
     ],
-    "continuity_from_previous_shot": "Carter discovers the arrow-riddled body of Powell in the skirmish zone.",
+    "continuity_from_previous_shot": "Carter amidst the chaos of the skirmish, locating Powell's body.",
     "continuity_to_next_shot": "BT002",
-    "pose_anchor_frame": "Carter approaching the body",
-    "pose_end_frame": "Carter frozen in grief",
-    "shot_title": "Action 1: Discovery of Powell's body",
-    "shot_type": "action",
-    "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-    "composition": "Dynamic composition in The trail/valley near the ambush site with apache_warriors crossing the frame and maintaining readable movement.",
-    "target_seconds": 6.0,
+    "pose_anchor_frame": "Carter scanning the ground",
+    "pose_end_frame": "Carter frozen looking at Powell",
+    "shot_title": "Reaction Closeup 1: Discovery of Powell's body",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition holding john_carter, james_k_powell, apache_warriors against the trail while preserving the fallen-body reveal.",
+    "target_seconds": 5.5,
     "characters_in_frame": [
+      {
+        "label": "John Carter (Younger)",
+        "canonical_id": "john_carter",
+        "display_name": "john_carter",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+        "notes": "Direct registry match for 'john_carter'."
+      },
+      {
+        "label": "Captain James K. Powell (Deceased)",
+        "canonical_id": "james_k_powell",
+        "display_name": "james_k_powell",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/james_k_powell.md",
+        "notes": "Direct registry match for 'james_k_powell'."
+      },
       {
         "label": "Apache Warriors",
         "canonical_id": "apache_warriors",
         "display_name": "apache_warriors",
         "status": "canonical",
         "entity_kind": "group",
-        "resolution_score": 186,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'apache_warriors'"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/apache_warriors.md",
+        "notes": "Direct registry match for 'apache_warriors'."
       }
     ],
     "environment": {
@@ -83,17 +104,16 @@
       "entity_kind": "environment",
       "resolution_score": 8,
       "source_path": "",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "notes": "Low-confidence environment match requires review."
     },
     "beat_ids": [
       "BT001"
     ],
     "continuity_constraints": [
-      "Arrow placement on Captain James K. Powell (Deceased)",
-      "Physical injury levels on John Carter (Younger)",
-      "Proximity and distance of apache_warriors during pursuit"
+      "Arrow placement on james_k_powell must remain static",
+      "Injury level on john_carter must reflect skirmish intensity"
     ],
-    "prompt_seed": "Action 1: Discovery of Powell's body. action. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Active camera with tracking energy and clear spatial orientation. Dynamic composition in The trail/valley near the ambush site.",
+    "prompt_seed": "Reaction Closeup 1: Discovery of Powell's body. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=none. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional emphasis.",
     "shot_notes": "Discovery of Powell's body",
     "evidence_refs": [
       {
@@ -148,40 +168,42 @@
       {
         "source": "character_bible",
         "chapter_id": "CH001",
-        "canonical_id": "apache_warriors"
+        "canonical_id": "john_carter"
       }
     ],
     "evidence_summary": [
-      "Establish the high emotional cost of the skirmish through the discovery of a fallen comrade, then pivot immediately into a high-stakes pursuit sequence to drive the transition to the escape phase.",
+      "Establish the high emotional cost of the skirmish through the discovery of a fallen comrade, transitioning immediately into a high-stakes pursuit sequence.",
       "Amidst the skirmish, Carter discovers Powell's body, killed by arrows. Devastated, Carter retrieves the body and attempts to flee from the pursuing warriors.",
       "Horror / Grief $\\rightarrow$ Desperation / Urgency.",
-      "Carter discovers the arrow-riddled body of Powell in the skirmish zone.",
-      "Carter is fleeing along the trail with the body, pursued by warriors.",
-      "Discovery -> Retrieval -> Flight.",
+      "Carter amidst the chaos of the skirmish, locating Powell's body.",
+      "Carter fleeing through the valley with the weight of a body or heavy gear.",
+      "Discovery -> Grief -> Retrieval -> Flight.",
+      "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in...",
+      "james_k_powell | A mid-19th-century man dressed in practical, rugged 1860s attire appropriate for a mining engineer and frontier traveler. In his final recorded state, he appears as a deceased prospector, his body riddled with arrows. | Practical 1860s atti...",
       "apache_warriors | A large group of hostile 19th-century indigenous warriors characterized by their traditional Apache attire. They function as a collective unit, primarily seen engaged in ambush tactics and active skirmishes while wielding arrows. | Traditi..."
     ],
     "metadata": {
       "artifact_id": "CH001_SC004_SH001_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "ce1d6a44c0dcc8876ba0b6792f0ff86d169dc516",
+      "source_fingerprint": "f7d12270c266d42316ad4b2abe0e6741c3dd2ab8",
       "created_at_utc": "2026-04-22T00:01:22.606271+00:00",
-      "updated_at_utc": "2026-04-23T18:20:59.069259+00:00",
+      "updated_at_utc": "2026-04-23T19:08:43.783405+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH001_SC004",
-          "version": "785ab2e310a09338756af3e5786c9fa6784b729f"
+          "version": "04aa56e56cbce808956c4611cd676d808494926b"
         },
         {
           "dependency_type": "scene_binding",
           "dependency_id": "CH001_SC004",
-          "version": "06cd5d82a9115e3357792a62b3c1b18d3bb45f28"
+          "version": "a588d428a866c140f17334464d3da8d4f16874d6"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH001_SC004",
-          "version": "68390fc0a141fcec1cceb28f8756b405de770ba9"
+          "version": "843b41b28e44873b0782049bf384c5e2d212b7f1"
         }
       ],
       "locked_fields": {},
@@ -226,6 +248,11 @@
           "timestamp_utc": "2026-04-23T18:21:56.479952+00:00",
           "action": "synthesized",
           "source_fingerprint": "ce1d6a44c0dcc8876ba0b6792f0ff86d169dc516"
+        },
+        {
+          "timestamp_utc": "2026-04-23T19:10:00.118759+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "f7d12270c266d42316ad4b2abe0e6741c3dd2ab8"
         }
       ]
     }
@@ -237,82 +264,82 @@
     "shot_order": 2,
     "previous_shot_id": "SH001",
     "next_shot_id": "SH003",
-    "primary_subject": "John Carter (Younger)",
+    "primary_subject": "john_carter",
     "secondary_subjects": [
-      "Captain James K. Powell (Deceased)"
+      "james_k_powell"
     ],
-    "shot_moment_summary": "Carter lifting the body",
-    "start_state": "Carter kneeling by body",
-    "end_state": "Carter hoisting body",
-    "action_during_shot": "Struggling to lift the deceased [[Captain James K. Powell (Deceased)]]",
-    "action_continues_from": "Carter frozen in grief",
+    "shot_moment_summary": "Carter's face breaking",
+    "start_state": "Staring at body",
+    "end_state": "Reaching for the body",
+    "action_during_shot": "Grieving/Retrieving",
+    "action_continues_from": "Carter frozen looking at Powell",
     "action_hands_off_to": "BT003",
-    "shot_size": "medium_full",
-    "camera_angle": "low_angle",
-    "lens_family": "wide",
-    "camera_motion": "handheld",
-    "zoom_behavior": "none",
-    "focus_strategy": "deep_focus",
-    "lighting_style": "diffuse_ambient",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
     "subject_visibility": "on_screen",
     "narration_mode": "none",
     "primary_subject_angle": "profile_left",
-    "visible_primary_subject_id": "John Carter (Younger)",
+    "visible_primary_subject_id": "john_carter",
     "visible_secondary_subject_ids": [
-      "Captain James K. Powell (Deceased)"
+      "james_k_powell"
     ],
-    "primary_subject_frame_position": "foreground right within The narrow trail",
-    "primary_subject_scale_relation": "Weight of body vs Carter's exertion",
+    "primary_subject_frame_position": "foreground inside The narrow trail",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
     "primary_subject_facing_direction": "profile left toward the scene action",
-    "primary_subject_pose_description": "Carter kneeling by body",
-    "subject_relation_summary": "John Carter (Younger) plays against Captain James K. Powell (Deceased) in the same frame",
-    "required_environment_anchor_1": "The narrow trail",
-    "required_scale_proof_detail": "Weight of body vs Carter's exertion",
-    "camera_package_description": "medium-full, low angle, wide lens, handheld, deep focus, diffuse ambient",
+    "primary_subject_pose_description": "Staring at body",
+    "subject_relation_summary": "john_carter plays against james_k_powell in the same frame",
+    "required_environment_anchor_1": "james_k_powell",
+    "required_scale_proof_detail": "facial expression",
+    "camera_package_description": "close-up, eye level, portrait lens, locked off, zoom subtle in, shallow subject, hard directional",
     "subject_blocking": [
-      "Carter moves from kneeling to a heavy lift position",
-      "Heavy, labored movement; Carter must physically struggle with the corpse"
+      "Carter kneeling by Powell",
+      "Carter hunched over the deceased"
     ],
     "camera_relative_positions": [
-      "Camera anchors the action inside the The narrow trail.",
-      "Background depth should keep The trail/valley near the ambush site legible as the location anchor."
+      "Camera anchors action inside the narrow trail",
+      "Background depth keeps the trail/valley location legible"
     ],
     "gaze_directions": [
-      "John Carter (Younger) focuses toward the active scene action."
+      "john_carter focuses toward the active scene action"
     ],
     "environment_subzone": "The narrow trail",
     "key_visible_environment_features": [
       "The narrow trail"
     ],
-    "continuity_from_previous_shot": "Carter frozen in grief",
+    "continuity_from_previous_shot": "Carter frozen looking at Powell",
     "continuity_to_next_shot": "BT003",
-    "pose_anchor_frame": "Carter kneeling by body",
-    "pose_end_frame": "Carter hoisting body",
-    "shot_title": "Action 2: Retrieval of the body",
-    "shot_type": "action",
-    "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-    "composition": "Dynamic composition in The trail/valley near the ambush site with John Carter (Younger), Captain James K. Powell (Deceased) crossing the frame and maintaining readable movement.",
-    "target_seconds": 5.8,
+    "pose_anchor_frame": "Staring at body",
+    "pose_end_frame": "Reaching for the body",
+    "shot_title": "Medium 2: Emotional devastation and retrieval",
+    "shot_type": "medium",
+    "camera_description": "Stable medium framing that keeps action and character readable.",
+    "composition": "Readable medium composition in The trail/valley near the ambush site keeping john_carter and james_k_powell together to emphasize physical effort.",
+    "target_seconds": 5.3,
     "characters_in_frame": [
       {
         "label": "John Carter (Younger)",
-        "canonical_id": null,
-        "display_name": "John Carter (Younger)",
-        "status": "review",
+        "canonical_id": "john_carter",
+        "display_name": "john_carter",
+        "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 10,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-        "notes": "apache_warriors | source context shares query language"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+        "notes": "Direct registry match for 'john_carter'."
       },
       {
         "label": "Captain James K. Powell (Deceased)",
-        "canonical_id": null,
-        "display_name": "Captain James K. Powell (Deceased)",
-        "status": "review",
+        "canonical_id": "james_k_powell",
+        "display_name": "james_k_powell",
+        "status": "canonical",
         "entity_kind": "individual",
-        "resolution_score": 10,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-        "notes": "apache_warriors | source context shares query language"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/james_k_powell.md",
+        "notes": "Direct registry match for 'james_k_powell'."
       }
     ],
     "environment": {
@@ -323,18 +350,17 @@
       "entity_kind": "environment",
       "resolution_score": 8,
       "source_path": "",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "notes": "Low-confidence environment match requires review."
     },
     "beat_ids": [
       "BT002"
     ],
     "continuity_constraints": [
-      "Arrow placement on Captain James K. Powell (Deceased)",
-      "Physical injury levels on John Carter (Younger)",
-      "Proximity and distance of apache_warriors during pursuit"
+      "Arrow placement on james_k_powell must remain static",
+      "Injury level on john_carter must reflect skirmish intensity"
     ],
-    "prompt_seed": "Action 2: Retrieval of the body. action. size=medium_full. angle=low_angle. lens=wide. motion=handheld. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=profile_left. Active camera with tracking energy and clear spatial orientation. Dynamic composition in The trail/valley near the ambush site.",
-    "shot_notes": "Retrieval of the body",
+    "prompt_seed": "Medium 2: Emotional devastation and retrieval. medium. size=close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=profile_left. Stable medium framing that keeps action and character readable.",
+    "shot_notes": "Emotional devastation and retrieval",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -388,40 +414,42 @@
       {
         "source": "character_bible",
         "chapter_id": "CH001",
-        "canonical_id": "apache_warriors"
+        "canonical_id": "john_carter"
       }
     ],
     "evidence_summary": [
-      "Establish the high emotional cost of the skirmish through the discovery of a fallen comrade, then pivot immediately into a high-stakes pursuit sequence to drive the transition to the escape phase.",
+      "Establish the high emotional cost of the skirmish through the discovery of a fallen comrade, transitioning immediately into a high-stakes pursuit sequence.",
       "Amidst the skirmish, Carter discovers Powell's body, killed by arrows. Devastated, Carter retrieves the body and attempts to flee from the pursuing warriors.",
       "Horror / Grief $\\rightarrow$ Desperation / Urgency.",
-      "Carter discovers the arrow-riddled body of Powell in the skirmish zone.",
-      "Carter is fleeing along the trail with the body, pursued by warriors.",
-      "Discovery -> Retrieval -> Flight.",
+      "Carter amidst the chaos of the skirmish, locating Powell's body.",
+      "Carter fleeing through the valley with the weight of a body or heavy gear.",
+      "Discovery -> Grief -> Retrieval -> Flight.",
+      "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in...",
+      "james_k_powell | A mid-19th-century man dressed in practical, rugged 1860s attire appropriate for a mining engineer and frontier traveler. In his final recorded state, he appears as a deceased prospector, his body riddled with arrows. | Practical 1860s atti...",
       "apache_warriors | A large group of hostile 19th-century indigenous warriors characterized by their traditional Apache attire. They function as a collective unit, primarily seen engaged in ambush tactics and active skirmishes while wielding arrows. | Traditi..."
     ],
     "metadata": {
       "artifact_id": "CH001_SC004_SH002_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "ce1d6a44c0dcc8876ba0b6792f0ff86d169dc516",
+      "source_fingerprint": "f7d12270c266d42316ad4b2abe0e6741c3dd2ab8",
       "created_at_utc": "2026-04-22T00:02:03.651192+00:00",
-      "updated_at_utc": "2026-04-23T18:21:56.492259+00:00",
+      "updated_at_utc": "2026-04-23T19:10:00.132893+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH001_SC004",
-          "version": "785ab2e310a09338756af3e5786c9fa6784b729f"
+          "version": "04aa56e56cbce808956c4611cd676d808494926b"
         },
         {
           "dependency_type": "scene_binding",
           "dependency_id": "CH001_SC004",
-          "version": "06cd5d82a9115e3357792a62b3c1b18d3bb45f28"
+          "version": "a588d428a866c140f17334464d3da8d4f16874d6"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH001_SC004",
-          "version": "68390fc0a141fcec1cceb28f8756b405de770ba9"
+          "version": "843b41b28e44873b0782049bf384c5e2d212b7f1"
         }
       ],
       "locked_fields": {},
@@ -466,6 +494,11 @@
           "timestamp_utc": "2026-04-23T18:22:37.601212+00:00",
           "action": "synthesized",
           "source_fingerprint": "ce1d6a44c0dcc8876ba0b6792f0ff86d169dc516"
+        },
+        {
+          "timestamp_utc": "2026-04-23T19:11:08.312382+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "f7d12270c266d42316ad4b2abe0e6741c3dd2ab8"
         }
       ]
     }
@@ -477,73 +510,94 @@
     "shot_order": 3,
     "previous_shot_id": "SH002",
     "next_shot_id": "",
-    "primary_subject": "apache_warriors",
+    "primary_subject": "john_carter",
     "secondary_subjects": [
-      "John Carter (Younger)",
-      "Captain James K. Powell (Deceased)"
+      "apache_warriors",
+      "james_k_powell"
     ],
-    "shot_moment_summary": "Warriors appearing/charging",
-    "start_state": "Carter moving with body",
-    "end_state": "Carter running for life",
-    "action_during_shot": "Warriors emerge from cover to pursue",
-    "action_continues_from": "Carter hoisting body",
+    "shot_moment_summary": "The pursuit begins",
+    "start_state": "Carter lifting/grabbing Powell",
+    "end_state": "Carter running away",
+    "action_during_shot": "Fleeing pursuit",
+    "action_continues_from": "Reaching for the body",
     "action_hands_off_to": "End of scene",
-    "shot_size": "wide",
-    "camera_angle": "eye_level",
-    "lens_family": "ultra_wide",
+    "shot_size": "medium_full",
+    "camera_angle": "low_angle",
+    "lens_family": "wide",
     "camera_motion": "track",
     "zoom_behavior": "none",
     "focus_strategy": "deep_focus",
     "lighting_style": "high_contrast_ceremonial",
     "subject_visibility": "on_screen",
     "narration_mode": "none",
-    "primary_subject_angle": "front",
-    "visible_primary_subject_id": "apache_warriors",
+    "primary_subject_angle": "rear_three_quarter_left",
+    "visible_primary_subject_id": "john_carter",
     "visible_secondary_subject_ids": [
-      "John Carter (Younger)"
+      "apache_warriors",
+      "james_k_powell"
     ],
-    "primary_subject_frame_position": "midground inside The valley floor ambush site",
-    "primary_subject_scale_relation": "Distance between warriors and Carter",
-    "primary_subject_facing_direction": "facing directly toward camera",
-    "primary_subject_pose_description": "Carter moving with body",
-    "subject_relation_summary": "apache_warriors plays against John Carter (Younger), Captain James K. Powell (Deceased) in the same frame",
-    "required_environment_anchor_1": "The narrow trail",
-    "required_scale_proof_detail": "Distance between warriors and Carter",
-    "camera_package_description": "wide, eye level, ultra-wide lens, track, deep focus, high contrast ceremonial",
+    "primary_subject_frame_position": "foreground right within The valley floor",
+    "primary_subject_scale_relation": "distance between pursuers and Carter",
+    "primary_subject_facing_direction": "rear three-quarter left away from camera",
+    "primary_subject_pose_description": "Carter lifting/grabbing Powell",
+    "subject_relation_summary": "john_carter plays against apache_warriors, james_k_powell in the same frame",
+    "required_environment_anchor_1": "narrow trail",
+    "required_scale_proof_detail": "distance between pursuers and Carter",
+    "camera_package_description": "medium-full, low angle, wide lens, track, deep focus, high contrast ceremonial",
     "subject_blocking": [
-      "Warriors charging down the slope toward the trail",
-      "Warriors closing distance; Carter moving away from threat"
+      "Carter moving rapidly away from the camera/pursuers",
+      "Carter running with urgency; Warriors in pursuit"
     ],
     "camera_relative_positions": [
-      "Camera anchors the action inside the The narrow trail.",
+      "Camera anchors the action inside the The valley floor.",
       "Background depth should keep The trail/valley near the ambush site legible as the location anchor."
     ],
     "gaze_directions": [
-      "apache_warriors focuses toward the active scene action."
+      "john_carter focuses toward the active scene action."
     ],
-    "environment_subzone": "The valley floor ambush site",
+    "environment_subzone": "The valley floor",
     "key_visible_environment_features": [
-      "The narrow trail"
+      "The valley floor"
     ],
-    "continuity_from_previous_shot": "Carter hoisting body",
+    "continuity_from_previous_shot": "Reaching for the body",
     "continuity_to_next_shot": "End of scene",
-    "pose_anchor_frame": "Carter moving with body",
-    "pose_end_frame": "Carter running for life",
-    "shot_title": "Action 3: Flight from pursuit",
+    "pose_anchor_frame": "Carter lifting/grabbing Powell",
+    "pose_end_frame": "Carter running away",
+    "shot_title": "Action 3: Desperate flight from pursuers",
     "shot_type": "action",
     "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-    "composition": "Dynamic composition in The trail/valley near the ambush site with apache_warriors crossing the frame and maintaining readable movement.",
+    "composition": "Dynamic composition in The trail/valley near the ambush site with clear pursuit vectors and readable movement for john_carter, apache_warriors, james_k_powell.",
     "target_seconds": 5.6,
     "characters_in_frame": [
+      {
+        "label": "John Carter (Younger)",
+        "canonical_id": "john_carter",
+        "display_name": "john_carter",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+        "notes": "Direct registry match for 'john_carter'."
+      },
       {
         "label": "Apache Warriors",
         "canonical_id": "apache_warriors",
         "display_name": "apache_warriors",
         "status": "canonical",
         "entity_kind": "group",
-        "resolution_score": 186,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-        "notes": "asset id exactly matches canonical id | query matches alias 'apache_warriors'"
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/apache_warriors.md",
+        "notes": "Direct registry match for 'apache_warriors'."
+      },
+      {
+        "label": "Captain James K. Powell (Deceased)",
+        "canonical_id": "james_k_powell",
+        "display_name": "james_k_powell",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/james_k_powell.md",
+        "notes": "Direct registry match for 'james_k_powell'."
       }
     ],
     "environment": {
@@ -554,18 +608,18 @@
       "entity_kind": "environment",
       "resolution_score": 8,
       "source_path": "",
-      "notes": "aerial_battlefield_mars | source context shares query language"
+      "notes": "Low-confidence environment match requires review."
     },
     "beat_ids": [
       "BT003"
     ],
     "continuity_constraints": [
-      "Arrow placement on Captain James K. Powell (Deceased)",
-      "Physical injury levels on John Carter (Younger)",
-      "Proximity and distance of apache_warriors during pursuit"
+      "Arrow placement on james_k_powell must remain static",
+      "Injury level on john_carter must reflect skirmish intensity",
+      "Proximity distance of apache_warriors to Carter during pursuit"
     ],
-    "prompt_seed": "Action 3: Flight from pursuit. action. size=wide. angle=eye_level. lens=ultra_wide. motion=track. zoom=none. focus=deep_focus. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front. Active camera with tracking energy and clear spatial orientation. Dynamic composition in The trail/valley near the ambush site.",
-    "shot_notes": "Flight from pursuit",
+    "prompt_seed": "Action 3: Desperate flight from pursuers. action. size=medium_full. angle=low_angle. lens=wide. motion=track. zoom=none. focus=deep_focus. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=rear_three_quarter_left. Active camera with tracking energy and clear spatial orientation.",
+    "shot_notes": "Desperate flight from pursuers",
     "evidence_refs": [
       {
         "source": "scene_contract",
@@ -619,40 +673,42 @@
       {
         "source": "character_bible",
         "chapter_id": "CH001",
-        "canonical_id": "apache_warriors"
+        "canonical_id": "john_carter"
       }
     ],
     "evidence_summary": [
-      "Establish the high emotional cost of the skirmish through the discovery of a fallen comrade, then pivot immediately into a high-stakes pursuit sequence to drive the transition to the escape phase.",
+      "Establish the high emotional cost of the skirmish through the discovery of a fallen comrade, transitioning immediately into a high-stakes pursuit sequence.",
       "Amidst the skirmish, Carter discovers Powell's body, killed by arrows. Devastated, Carter retrieves the body and attempts to flee from the pursuing warriors.",
       "Horror / Grief $\\rightarrow$ Desperation / Urgency.",
-      "Carter discovers the arrow-riddled body of Powell in the skirmish zone.",
-      "Carter is fleeing along the trail with the body, pursued by warriors.",
-      "Discovery -> Retrieval -> Flight.",
+      "Carter amidst the chaos of the skirmish, locating Powell's body.",
+      "Carter fleeing through the valley with the weight of a body or heavy gear.",
+      "Discovery -> Grief -> Retrieval -> Flight.",
+      "john_carter | A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior adorned in...",
+      "james_k_powell | A mid-19th-century man dressed in practical, rugged 1860s attire appropriate for a mining engineer and frontier traveler. In his final recorded state, he appears as a deceased prospector, his body riddled with arrows. | Practical 1860s atti...",
       "apache_warriors | A large group of hostile 19th-century indigenous warriors characterized by their traditional Apache attire. They function as a collective unit, primarily seen engaged in ambush tactics and active skirmishes while wielding arrows. | Traditi..."
     ],
     "metadata": {
       "artifact_id": "CH001_SC004_SH003_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "ce1d6a44c0dcc8876ba0b6792f0ff86d169dc516",
+      "source_fingerprint": "f7d12270c266d42316ad4b2abe0e6741c3dd2ab8",
       "created_at_utc": "2026-04-22T00:02:37.814612+00:00",
-      "updated_at_utc": "2026-04-23T18:22:37.613730+00:00",
+      "updated_at_utc": "2026-04-23T19:11:08.325961+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
           "dependency_id": "CH001_SC004",
-          "version": "785ab2e310a09338756af3e5786c9fa6784b729f"
+          "version": "04aa56e56cbce808956c4611cd676d808494926b"
         },
         {
           "dependency_type": "scene_binding",
           "dependency_id": "CH001_SC004",
-          "version": "06cd5d82a9115e3357792a62b3c1b18d3bb45f28"
+          "version": "a588d428a866c140f17334464d3da8d4f16874d6"
         },
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH001_SC004",
-          "version": "68390fc0a141fcec1cceb28f8756b405de770ba9"
+          "version": "843b41b28e44873b0782049bf384c5e2d212b7f1"
         }
       ],
       "locked_fields": {},
@@ -697,6 +753,11 @@
           "timestamp_utc": "2026-04-23T18:23:18.951314+00:00",
           "action": "synthesized",
           "source_fingerprint": "ce1d6a44c0dcc8876ba0b6792f0ff86d169dc516"
+        },
+        {
+          "timestamp_utc": "2026-04-23T19:12:18.159572+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "f7d12270c266d42316ad4b2abe0e6741c3dd2ab8"
         }
       ]
     }

@@ -19,9 +19,9 @@
       "display_name": "tars_tarkas",
       "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 186,
+      "resolution_score": 138,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'tars_tarkas'"
+      "notes": "Direct registry match for 'tars_tarkas'."
     },
     {
       "label": "Various Martians (crowd)",
@@ -30,8 +30,8 @@
       "status": "review",
       "entity_kind": "individual",
       "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
     }
   ],
   "resolved_environment": {
@@ -41,8 +41,8 @@
     "status": "review",
     "entity_kind": "environment",
     "resolution_score": 8,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "source_path": "",
+    "notes": "Low-confidence environment match requires review."
   },
   "beat_environment_overrides": [],
   "candidate_environment_ids": [],
@@ -52,7 +52,7 @@
       "chapter_id": "CH004",
       "requested_label": "Central Plaza of the Ancient City (Marble/Gold architecture, massive scale)",
       "request_type": "missing_environment",
-      "reason": "aerial_battlefield_mars | source context shares query language",
+      "reason": "Low-confidence environment match requires review.",
       "parent_environment_id": null,
       "evidence_refs": [
         {
@@ -158,14 +158,14 @@
     "artifact_id": "CH004_SC001_SCENE_BINDINGS",
     "artifact_type": "scene_binding",
     "status": "generated",
-    "source_fingerprint": "ba047d19083a9355beaaf962828f3fe26578c602",
+    "source_fingerprint": "1802ee6206aac3a769915916f9cf4d4dbc52b044",
     "created_at_utc": "2026-04-22T06:48:28.714242+00:00",
-    "updated_at_utc": "2026-04-23T18:14:44.718401+00:00",
+    "updated_at_utc": "2026-04-23T18:59:10.253869+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH004_SC001",
-        "version": "ba1a966d0da66eadcc49024cd798ad7deb6cfa34"
+        "version": "9f378131d6fa42cfc748ce76ccdd6fe72efb8906"
       }
     ],
     "locked_fields": {},
@@ -210,6 +210,11 @@
         "timestamp_utc": "2026-04-23T18:14:44.718401+00:00",
         "action": "synthesized",
         "source_fingerprint": "ba047d19083a9355beaaf962828f3fe26578c602"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:59:10.253869+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "1802ee6206aac3a769915916f9cf4d4dbc52b044"
       }
     ]
   }

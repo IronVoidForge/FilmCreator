@@ -5,23 +5,23 @@
   "resolved_characters": [
     {
       "label": "John Carter (Younger)",
-      "canonical_id": null,
-      "display_name": "John Carter (Younger)",
-      "status": "review",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
     },
     {
       "label": "Captain James K. Powell",
-      "canonical_id": null,
-      "display_name": "Captain James K. Powell",
-      "status": "review",
+      "canonical_id": "james_k_powell",
+      "display_name": "james_k_powell",
+      "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/james_k_powell.md",
+      "notes": "Direct registry match for 'james_k_powell'."
     }
   ],
   "resolved_environment": {
@@ -31,8 +31,8 @@
     "status": "review",
     "entity_kind": "environment",
     "resolution_score": 8,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "source_path": "",
+    "notes": "Low-confidence environment match requires review."
   },
   "beat_environment_overrides": [],
   "candidate_environment_ids": [],
@@ -42,7 +42,7 @@
       "chapter_id": "CH001",
       "requested_label": "Remote Arizona quartz vein/hills",
       "request_type": "missing_environment",
-      "reason": "aerial_battlefield_mars | source context shares query language",
+      "reason": "Low-confidence environment match requires review.",
       "parent_environment_id": null,
       "evidence_refs": [
         {
@@ -79,12 +79,10 @@
     }
   ],
   "review_flags": [
-    "scene_environment_unresolved",
-    "scene_cast_contains_unresolved_references"
+    "scene_environment_unresolved"
   ],
   "notes": [
-    "Scene referenced a non-canonical environment and no chapter fallback was available.",
-    "2 scene cast reference(s) still require review."
+    "Scene referenced a non-canonical environment and no chapter fallback was available."
   ],
   "evidence_refs": [
     {
@@ -131,6 +129,11 @@
       "source": "book_index",
       "chapter_id": "CH010",
       "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH001",
+      "canonical_id": "john_carter"
     }
   ],
   "evidence_summary": [
@@ -142,20 +145,21 @@
     "[CH001] Chapter summary: **Setting:** The Arizona hills and mountains; specifically a remote gold-bearing quartz vein, a high plateau with an Apache camp, and a large, ancient cave located on a narrow trail near a cliffside. **Characters:** *...",
     "[CH001] CHAPTER I (book index hit)",
     "[CH025] CHAPTER XXV (book index hit)",
-    "[CH010] CHAPTER X (book index hit)"
+    "[CH010] CHAPTER X (book index hit)",
+    "Character john_carter: A human male of Earth origin, John Carter presents as a rugged survivor. His visual identity shifts between his historical roots as an 1860s Confederate cavalry officer in frontier attire and his current status as a Martian warrior ad..."
   ],
   "metadata": {
     "artifact_id": "CH001_SC002_SCENE_BINDINGS",
     "artifact_type": "scene_binding",
     "status": "generated",
-    "source_fingerprint": "4f05137560f5efaec539f10dd0bef419088459f6",
+    "source_fingerprint": "9443e05741c6b6ea9299e39f9d7870b26fb7fd5b",
     "created_at_utc": "2026-04-22T06:48:28.626119+00:00",
-    "updated_at_utc": "2026-04-23T18:14:44.503162+00:00",
+    "updated_at_utc": "2026-04-23T18:59:10.044213+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH001_SC002",
-        "version": "7ca05db40297368852d54f7f5f87d97b1eea2a18"
+        "version": "3341161ad4fa8610f6b293ea861670f7582996ed"
       }
     ],
     "locked_fields": {},
@@ -200,6 +204,11 @@
         "timestamp_utc": "2026-04-23T18:14:44.503661+00:00",
         "action": "synthesized",
         "source_fingerprint": "4f05137560f5efaec539f10dd0bef419088459f6"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:59:10.044213+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9443e05741c6b6ea9299e39f9d7870b26fb7fd5b"
       }
     ]
   }

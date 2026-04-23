@@ -9,19 +9,19 @@
       "display_name": "protagonist",
       "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 176,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'protagonist'"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
     },
     {
       "label": "The Watch Dog (pursuing)",
-      "canonical_id": null,
-      "display_name": "The Watch Dog (pursuing)",
-      "status": "review",
+      "canonical_id": "the_watch_dog",
+      "display_name": "the_watch_dog",
+      "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 10,
-      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
-      "notes": "apache_warriors | source context shares query language"
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/the_watch_dog.md",
+      "notes": "Direct registry match for 'the_watch_dog'."
     },
     {
       "label": "The Colossal Creature",
@@ -29,9 +29,9 @@
       "display_name": "the_colossal_creature",
       "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 186,
+      "resolution_score": 138,
       "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/the_colossal_creature.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'colossal_creature'"
+      "notes": "Direct registry match for 'the_colossal_creature'."
     }
   ],
   "resolved_environment": {
@@ -41,8 +41,8 @@
     "status": "review",
     "entity_kind": "environment",
     "resolution_score": 8,
-    "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH026/aerial_battlefield_mars.md",
-    "notes": "aerial_battlefield_mars | source context shares query language"
+    "source_path": "",
+    "notes": "Low-confidence environment match requires review."
   },
   "beat_environment_overrides": [],
   "candidate_environment_ids": [],
@@ -52,7 +52,7 @@
       "chapter_id": "CH005",
       "requested_label": "Exterior building/alleyway",
       "request_type": "missing_environment",
-      "reason": "aerial_battlefield_mars | source context shares query language",
+      "reason": "Low-confidence environment match requires review.",
       "parent_environment_id": null,
       "evidence_refs": [
         {
@@ -92,7 +92,7 @@
       "chapter_id": "CH005",
       "requested_label": "interior room of the Colossal Creature",
       "request_type": "missing_environment",
-      "reason": "aerial_battlefield_mars | source context shares query language",
+      "reason": "Low-confidence environment match requires review.",
       "parent_environment_id": null,
       "evidence_refs": [
         {
@@ -129,12 +129,10 @@
     }
   ],
   "review_flags": [
-    "scene_environment_unresolved",
-    "scene_cast_contains_unresolved_references"
+    "scene_environment_unresolved"
   ],
   "notes": [
-    "Scene referenced a non-canonical environment and no chapter fallback was available.",
-    "1 scene cast reference(s) still require review."
+    "Scene referenced a non-canonical environment and no chapter fallback was available."
   ],
   "evidence_refs": [
     {
@@ -185,7 +183,7 @@
     {
       "source": "character_bible",
       "chapter_id": "CH005",
-      "canonical_id": "the_colossal_creature"
+      "canonical_id": "the_watch_dog"
     }
   ],
   "evidence_summary": [
@@ -198,20 +196,20 @@
     "[CH021] CHAPTER XXI (book index hit)",
     "[CH023] CHAPTER XXIII (book index hit)",
     "Character protagonist: An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a \"lifeles...",
-    "Character the_colossal_creature: No visual data is available to establish a stable identity, physical build, or costume for this character. The entity is identified only by its designation as \"the_colossal_creature.\""
+    "Character the_watch_dog: No visual data is available for this character in the provided evidence. A stable visual identity cannot be established at this time."
   ],
   "metadata": {
     "artifact_id": "CH005_SC004_SCENE_BINDINGS",
     "artifact_type": "scene_binding",
     "status": "generated",
-    "source_fingerprint": "4da646f07c715ad8e312bcc0f05ea28ff4333f13",
+    "source_fingerprint": "1fc2acfc25bc26c2ebff691b780acd73c874bd5e",
     "created_at_utc": "2026-04-22T06:48:28.767175+00:00",
-    "updated_at_utc": "2026-04-23T18:14:44.843156+00:00",
+    "updated_at_utc": "2026-04-23T18:59:10.380311+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH005_SC004",
-        "version": "67ee87436fad948bb18b5a3a60ac61c21434e10d"
+        "version": "b33094962839628365feea1b4ed8d9e787365724"
       }
     ],
     "locked_fields": {},
@@ -256,6 +254,11 @@
         "timestamp_utc": "2026-04-23T18:14:44.843156+00:00",
         "action": "synthesized",
         "source_fingerprint": "4da646f07c715ad8e312bcc0f05ea28ff4333f13"
+      },
+      {
+        "timestamp_utc": "2026-04-23T18:59:10.380311+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "1fc2acfc25bc26c2ebff691b780acd73c874bd5e"
       }
     ]
   }
