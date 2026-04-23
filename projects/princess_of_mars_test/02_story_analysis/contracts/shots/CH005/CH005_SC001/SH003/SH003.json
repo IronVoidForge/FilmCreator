@@ -9,34 +9,47 @@
   "secondary_subjects": [
     "sola"
   ],
-  "start_state": "The protagonist and Sola in a state of comfort/observation.",
+  "start_state": "Continue the established scene action toward consequence.",
   "end_state": "Arrive at the scene's transition point.",
-  "action_during_shot": "Landing the scene consequence or transition cleanly.",
-  "action_continues_from": "The emotional shift from Isolation/Curiosity to Comfort/Observation.",
-  "action_hands_off_to": "Transition to next story beat.",
+  "action_during_shot": "Land the scene consequence or transition cleanly.",
+  "action_continues_from": "Land the emotional shift: Isolation/Curiosity -> Comfort/Observation.",
+  "action_hands_off_to": "Arrive at the scene's transition point.",
+  "shot_size": "medium",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
+  "zoom_behavior": "none",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
+  "subject_visibility": "on_screen",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
   "subject_blocking": [
+    "position of the Watch Dog near the door.",
     "protagonist remains readable within the active playing space.",
     "sola remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the primary scene playing area.",
-    "Background depth keeps Captive's chamber (decorated with murals) legible as the location anchor."
+    "Background depth should keep Captive's chamber (decorated with murals) legible as the location anchor.",
+    "Subject 1: protagonist remains visually readable against the environment scale.",
+    "Subject 2: sola remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "protagonist focuses toward the active scene action/transition point."
+    "primary scene subject focuses toward the active scene action."
   ],
   "environment_subzone": "primary scene playing area",
   "key_visible_environment_features": [
-    "The Watch Dog near the door"
+    "primary scene playing area"
   ],
-  "continuity_from_previous_shot": "The emotional shift to Comfort/Observation.",
+  "continuity_from_previous_shot": "Land the emotional shift: Isolation/Curiosity -> Comfort/Observation.",
   "continuity_to_next_shot": "Arrive at the scene's transition point.",
-  "pose_anchor_frame": "Protagonist and Sola in a settled, observant state.",
-  "pose_end_frame": "A final reaction or look toward the door/Watch Dog as the scene transitions.",
-  "shot_title": "Closing Reaction: Scene transition",
+  "pose_anchor_frame": "Continue the established scene action toward consequence.",
+  "pose_end_frame": "Arrive at the scene's transition point.",
+  "shot_title": "Closing Reaction 3: Land the scene consequence",
   "shot_type": "closing_reaction",
   "camera_description": "Controlled closing frame that lands the consequence of the beat.",
-  "composition": "Closing composition in Captive's chamber (decorated with murals) that emphasizes the consequence of the transition.",
+  "composition": "Closing composition in Captive's chamber (decorated with murals) that emphasizes the consequence of land the scene consequence or transition cleanly..",
   "target_seconds": 4.6,
   "characters_in_frame": [
     {
@@ -76,10 +89,11 @@
   "continuity_constraints": [
     "Lighting changes based on moon cycles",
     "amount/type of food provided by Sola",
-    "position of the Watch Dog near the door."
+    "position of the Watch Dog near the door.",
+    "Land the scene consequence or transition cleanly."
   ],
-  "prompt_seed": "Closing Reaction 3: Land the scene consequence or transition cleanly.. closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in Captive's chamber (decorated with murals) that emphasizes the consequence of land the scene consequence or transition cleanly.. Cast: protag...",
-  "shot_notes": "Emphasize the presence of the Watch Dog near the door to signal transition.",
+  "prompt_seed": "Closing Reaction 3: Land the scene consequence or transition cleanly.. closing_reaction. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Controlled closing frame that lands the conseque...",
+  "shot_notes": "Land the scene consequence or transition cleanly.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -150,24 +164,24 @@
     "artifact_id": "CH005_SC001_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "fdf1300b2e1c3d7c69e023688741d0ec9c488a21",
+    "source_fingerprint": "bda08de7625c66d5cd6632304896472064dbb4fb",
     "created_at_utc": "2026-04-22T00:42:08.773693+00:00",
-    "updated_at_utc": "2026-04-22T23:35:00.256765+00:00",
+    "updated_at_utc": "2026-04-23T05:07:18.146826+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH005_SC001",
-        "version": "15f74a96ea18828d52f70e6e197e7a53848117be"
+        "version": "8b2001b7004797bd5b2912f9aa2a3336c1c4dab5"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH005_SC001",
-        "version": "978635c65a1a3a170e09068ede66b6dabe2cbdf2"
+        "version": "7906fee5a211b6a60b698fe9614f82eb418b8717"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH005_SC001",
-        "version": "2f1e666f6ba590f8ec03de2617e43193b1e1ed74"
+        "version": "7e4d4404253358de45b6490a68a35780a9923e00"
       }
     ],
     "locked_fields": {},
@@ -197,6 +211,11 @@
         "timestamp_utc": "2026-04-22T23:35:33.845520+00:00",
         "action": "synthesized",
         "source_fingerprint": "fdf1300b2e1c3d7c69e023688741d0ec9c488a21"
+      },
+      {
+        "timestamp_utc": "2026-04-23T05:08:14.183601+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "bda08de7625c66d5cd6632304896472064dbb4fb"
       }
     ]
   }

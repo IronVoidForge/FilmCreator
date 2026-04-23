@@ -66,5 +66,5 @@
 - artifact_id: `DESC_CHAR_bull_ape_mate`
 - status: `generated`
 - source_fingerprint: `0557f5d9a08ab04a6cc13fd3ef5e96c0ebba7d0c`
-- created_at_utc: `2026-04-22T23:56:50.725969+00:00`
-- updated_at_utc: `2026-04-22T23:56:50.725969+00:00`
+- created_at_utc: `2026-04-23T05:35:37.758405+00:00`
+- updated_at_utc: `2026-04-23T05:35:37.758405+00:00`

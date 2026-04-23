@@ -59,5 +59,5 @@
 - artifact_id: `DESC_ENV_rocky_gorge_canyon`
 - status: `generated`
 - source_fingerprint: `dc582fa4d3c8a4021460415821b142e349730b2e`
-- created_at_utc: `2026-04-23T00:11:26.767510+00:00`
-- updated_at_utc: `2026-04-23T00:11:26.767510+00:00`
+- created_at_utc: `2026-04-23T05:52:00.987599+00:00`
+- updated_at_utc: `2026-04-23T05:52:00.987599+00:00`

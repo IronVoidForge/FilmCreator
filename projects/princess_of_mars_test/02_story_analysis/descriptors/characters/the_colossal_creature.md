@@ -66,5 +66,5 @@
 - artifact_id: `DESC_CHAR_the_colossal_creature`
 - status: `generated`
 - source_fingerprint: `d7b4d36c98206e9900ed723e50d72a8826c07d5d`
-- created_at_utc: `2026-04-23T00:03:17.985532+00:00`
-- updated_at_utc: `2026-04-23T00:03:17.985532+00:00`
+- created_at_utc: `2026-04-23T05:42:50.315058+00:00`
+- updated_at_utc: `2026-04-23T05:42:50.315058+00:00`

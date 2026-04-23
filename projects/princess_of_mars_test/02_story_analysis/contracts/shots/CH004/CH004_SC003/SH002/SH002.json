@@ -5,8 +5,9 @@
   "shot_order": 2,
   "previous_shot_id": "SH001",
   "next_shot_id": "SH003",
-  "primary_subject": "tars_tarkas",
+  "primary_subject": "primary scene subject",
   "secondary_subjects": [
+    "tars_tarkas",
     "the_chieftain"
   ],
   "start_state": "Continue from prior beat: After being mocked, the Narrator punches a Martian warrior.",
@@ -14,7 +15,18 @@
   "action_during_shot": "This act of defiance earns him unexpected respect.",
   "action_continues_from": "This act of defiance earns him unexpected respect.",
   "action_hands_off_to": "He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
+  "shot_size": "medium",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
+  "zoom_behavior": "none",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
+  "subject_visibility": "on_screen",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
   "subject_blocking": [
+    "the physical contact during the fight sequence.",
     "tars_tarkas remains readable within the active playing space.",
     "the_chieftain remains readable within the active playing space."
   ],
@@ -25,11 +37,12 @@
     "Subject 2: the_chieftain remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "tars_tarkas focuses toward the active scene action."
+    "primary scene subject focuses toward the active scene action."
   ],
   "environment_subzone": "primary scene playing area",
   "key_visible_environment_features": [
-    "primary scene playing area"
+    "primary scene playing area",
+    "grand_audience_chamber"
   ],
   "continuity_from_previous_shot": "This act of defiance earns him unexpected respect.",
   "continuity_to_next_shot": "He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
@@ -78,9 +91,12 @@
   "continuity_constraints": [
     "The physics/trajectory of the jump",
     "the physical contact during the fight sequence.",
-    "This act of defiance earns him unexpected respect."
+    "This act of defiance earns him unexpected respect.",
+    "Resolve The Narrator -> The Narrator",
+    "Resolve Martian Crowd -> Martian Crowd",
+    "Resolve Grand Audience Chamber / Plaza area -> Grand Audience Chamber / Plaza area"
   ],
-  "prompt_seed": "Medium 2: This act of defiance earns him unexpected respect.. medium. Stable medium framing that keeps action and character readable. Readable medium composition in grand_audience_chamber featuring tars_tarkas, the_chieftain. Cast: tars_tarkas, the_chieftain. Environment: grand_audience_chamber. Beat: This act of de...",
+  "prompt_seed": "Medium 2: This act of defiance earns him unexpected respect.. medium. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable medium framing that keeps action and character readable. Rea...",
   "shot_notes": "This act of defiance earns him unexpected respect.",
   "evidence_refs": [
     {
@@ -153,24 +169,24 @@
     "artifact_id": "CH004_SC003_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "c8056e37592d932d20c76859ee5b765396783faf",
+    "source_fingerprint": "f135445af8e57d4d087286564569c1d6981a8267",
     "created_at_utc": "2026-04-22T00:35:22.794392+00:00",
-    "updated_at_utc": "2026-04-22T23:28:03.660086+00:00",
+    "updated_at_utc": "2026-04-23T04:57:41.974313+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH004_SC003",
-        "version": "bacf8d29cf70ef0bacef95e7567a86d84c7efe57"
+        "version": "ee5747c4d95d5d1b7ed35ff260b6fce25a2678cc"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH004_SC003",
-        "version": "5bcbb362b4e83bd2e91f859be72f1bf316bcd05f"
+        "version": "fd8eaa168595acc5f638720633d5a999301724e2"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH004_SC003",
-        "version": "43f21f31bc4becac2d8abd30e5262c680f63d3a6"
+        "version": "ac5cdf1045a2eab9169335c3705c3d8f857dc2e7"
       }
     ],
     "locked_fields": {},
@@ -200,6 +216,11 @@
         "timestamp_utc": "2026-04-22T23:28:42.964968+00:00",
         "action": "synthesized",
         "source_fingerprint": "c8056e37592d932d20c76859ee5b765396783faf"
+      },
+      {
+        "timestamp_utc": "2026-04-23T04:58:36.324586+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "f135445af8e57d4d087286564569c1d6981a8267"
       }
     ]
   }

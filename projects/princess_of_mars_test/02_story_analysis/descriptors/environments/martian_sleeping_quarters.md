@@ -54,5 +54,5 @@
 - artifact_id: `DESC_ENV_martian_sleeping_quarters`
 - status: `generated`
 - source_fingerprint: `3f1b9cbddb604a7e1f6a3a416b664963d187a6ed`
-- created_at_utc: `2026-04-23T00:11:05.434664+00:00`
-- updated_at_utc: `2026-04-23T00:11:05.434664+00:00`
+- created_at_utc: `2026-04-23T05:51:36.598516+00:00`
+- updated_at_utc: `2026-04-23T05:51:36.598516+00:00`

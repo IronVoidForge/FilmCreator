@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Panic $\rightarrow$ Resolve $\rightarrow$ Adrenaline-fueled triumph. **Likely Visual Coverage Families:** - Medium shots of the protagoni.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of **participating characters:**\n- the protagonist\n- the watc...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Panic $\rightarrow$ Resolve $\rightarrow$ Adrenaline-fueled triumph. **Likely Visual Coverage Families:** - Medium shots of the protagoni.... shot size medium; camera angle eye_level; lens normal; camera motion locked_off; zoom none; focus deep_focus; lighting hard_directional; subject visibility on_screen; narration none; p...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -22,7 +22,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - source_artifact_ids: CH006_SC002; SHOT_INDEX; DIALOGUE
 - reference_mode: shot_prompt_bundle
 - variant_name: primary_keyframe
-- lens_family: neutral_reference
+- lens_family: normal
 - composition_lock: preserve canonical identity and framing rules
 - trait_lock: preserve stable visual canon
 - image_to_image_source: 
@@ -41,6 +41,16 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - shot_lineage_ids: SH002; SH003
 - camera_description: Controlled closing frame that lands the consequence of the beat.
 - composition: Closing composition in Interior chamber that emphasizes the consequence of **participating characters:**\n- the protagonist\n- the watch-thing (wounded/dying)\n- the mate (bull ape).
+- shot_size: medium
+- camera_angle: eye_level
+- camera_motion: locked_off
+- zoom_behavior: none
+- focus_strategy: deep_focus
+- lighting_style: hard_directional
+- subject_visibility: on_screen
+- narration_mode: none
+- primary_subject_angle: front_three_quarter_left
+- environment_subzone: primary scene playing area
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH006_SC002; DESC_CH006_SC002_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor

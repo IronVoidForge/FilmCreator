@@ -59,5 +59,5 @@
 - artifact_id: `DESC_ENV_valley_overlook_exterior`
 - status: `generated`
 - source_fingerprint: `5dc4bb5aabab41e90be4cce31c81e7654d43ee3a`
-- created_at_utc: `2026-04-23T00:11:46.677427+00:00`
-- updated_at_utc: `2026-04-23T00:11:46.677427+00:00`
+- created_at_utc: `2026-04-23T05:52:23.291361+00:00`
+- updated_at_utc: `2026-04-23T05:52:23.291361+00:00`

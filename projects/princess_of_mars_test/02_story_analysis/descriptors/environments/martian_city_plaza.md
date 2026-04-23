@@ -61,5 +61,5 @@
 - artifact_id: `DESC_ENV_martian_city_plaza`
 - status: `generated`
 - source_fingerprint: `c6ed25eaeb37fcd2638a6eef8f9b770b0a910077`
-- created_at_utc: `2026-04-23T00:09:22.775133+00:00`
-- updated_at_utc: `2026-04-23T00:09:22.775634+00:00`
+- created_at_utc: `2026-04-23T05:49:40.800684+00:00`
+- updated_at_utc: `2026-04-23T05:49:40.800684+00:00`

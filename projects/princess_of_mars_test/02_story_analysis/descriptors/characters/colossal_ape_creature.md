@@ -66,5 +66,5 @@
 - artifact_id: `DESC_CHAR_colossal_ape_creature`
 - status: `generated`
 - source_fingerprint: `2ebe680ca89584f61731eaa6c8f8cc200bc0592e`
-- created_at_utc: `2026-04-22T23:57:38.570268+00:00`
-- updated_at_utc: `2026-04-22T23:57:38.570268+00:00`
+- created_at_utc: `2026-04-23T05:36:31.509521+00:00`
+- updated_at_utc: `2026-04-23T05:36:31.509521+00:00`

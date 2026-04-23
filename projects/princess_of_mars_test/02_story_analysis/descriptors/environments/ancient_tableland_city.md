@@ -55,5 +55,5 @@
 - artifact_id: `DESC_ENV_ancient_tableland_city`
 - status: `generated`
 - source_fingerprint: `50df435a53383af3ad39df0338d3734a9318b0e5`
-- created_at_utc: `2026-04-23T00:05:22.331543+00:00`
-- updated_at_utc: `2026-04-23T00:05:22.331543+00:00`
+- created_at_utc: `2026-04-23T05:45:10.987886+00:00`
+- updated_at_utc: `2026-04-23T05:45:10.987886+00:00`

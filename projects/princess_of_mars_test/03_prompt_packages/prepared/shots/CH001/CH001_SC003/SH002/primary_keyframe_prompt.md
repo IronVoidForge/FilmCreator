@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Suspicion $\rightarrow$ Alertness $\rightarrow$ Chaos/Adrenaline.. Tight detail framing focused on a single visual object or gesture; POV shots of movement in the valley.. Detail composition centered on the key physical action or prop inside .. Characters: , A large group of hostile indigenous fighters., readable production...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Suspicion $\rightarrow$ Alertness $\rightarrow$ Chaos/Adrenaline.. shot size medium; camera angle eye_level; lens normal; camera motion locked_off; zoom none; focus deep_focus; lighting hard_directional; subject visibility on_screen; narration none; primary subject angle front_three_quarter_left. Tight detail framing focused...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -22,7 +22,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - source_artifact_ids: CH001_SC003; SHOT_INDEX; DIALOGUE; apache_warriors
 - reference_mode: shot_prompt_bundle
 - variant_name: primary_keyframe
-- lens_family: neutral_reference
+- lens_family: normal
 - composition_lock: preserve canonical identity and framing rules
 - trait_lock: preserve stable visual canon
 - image_to_image_source: 
@@ -39,8 +39,18 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - previous_shot_id: SH001
 - next_shot_id: SH003
 - shot_lineage_ids: SH001; SH002; SH003
-- camera_description: Tight detail framing focused on a single visual object or gesture; POV shots of movement in the valley.
+- camera_description: Tight detail framing focused on a single visual object or gesture.
 - composition: Detail composition centered on the key physical action or prop inside Arizona hills/plateau.
+- shot_size: medium
+- camera_angle: eye_level
+- camera_motion: locked_off
+- zoom_behavior: none
+- focus_strategy: deep_focus
+- lighting_style: hard_directional
+- subject_visibility: on_screen
+- narration_mode: none
+- primary_subject_angle: front_three_quarter_left
+- environment_subzone: primary scene playing area
 - prompt_family: shot_prompt
 - reference_asset_ids: apache_warriors; DESC_CH001_SC003; DESC_CH001_SC003_SH002
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
@@ -50,8 +60,10 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - Variant: Primary Keyframe.
 - Number of warriors
 - direction of pursuit
-- weapon handling (rifles/sidearms)
 - weapon handling (rifles/sidearms).
+- Carry the emotional arc through: Suspicion -> Alertness -> Chaos/Adrenaline..
+- Resolve John Carter (Younger) -> John Carter (Younger)
+- Resolve Arizona hills/plateau -> Arizona hills/plateau
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

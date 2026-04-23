@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. From shock to frantic urgency/flight. **Likely Visual Coverage Families:** - Tracking shots following the protagonist's movement - High-c.... Stable medium framing that keeps action and character readable.. Readable medium composition featuring within the transitioning cave interior.. Characters: . Environment: described env...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. From shock to frantic urgency/flight. **Likely Visual Coverage Families:** - Tracking shots following the protagonist's movement - High-c.... shot size medium; camera angle eye_level; lens normal; camera motion locked_off; zoom none; focus deep_focus; lighting hard_directional; subject visibility on_screen; narration none; p...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -22,7 +22,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - source_artifact_ids: CH002_SC004; SHOT_INDEX; DIALOGUE
 - reference_mode: shot_prompt_bundle
 - variant_name: primary_keyframe
-- lens_family: neutral_reference
+- lens_family: normal
 - composition_lock: preserve canonical identity and framing rules
 - trait_lock: preserve stable visual canon
 - image_to_image_source: 
@@ -40,7 +40,17 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - next_shot_id: SH002
 - shot_lineage_ids: SH001; SH002
 - camera_description: Stable medium framing that keeps action and character readable.
-- composition: Readable medium composition featuring scene_character within the transitioning cave interior.
+- composition: Readable medium composition featuring the Protagonist against the transitioning cave/exterior boundary.
+- shot_size: medium
+- camera_angle: eye_level
+- camera_motion: locked_off
+- zoom_behavior: none
+- focus_strategy: deep_focus
+- lighting_style: hard_directional
+- subject_visibility: on_screen
+- narration_mode: none
+- primary_subject_angle: front_three_quarter_left
+- environment_subzone: primary scene playing area
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH002_SC004; DESC_CH002_SC004_SH001
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
@@ -48,9 +58,8 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 # Continuity Notes
 - Scene: CH002_SC004 / To transition the protagonist from the supernatural interior to the n....
 - Variant: Primary Keyframe.
-- Driven by fear of whatever is in the dark cave
-- The protagonist's nudity and physical state as he moves through light levels
-- Cave Interior (Transitioning)
+- Protagonist's nudity/physical state must be consistent through light transitions.
+- Maintain fear-driven movement.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

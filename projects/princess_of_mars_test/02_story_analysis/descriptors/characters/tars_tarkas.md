@@ -81,5 +81,5 @@
 - artifact_id: `DESC_CHAR_tars_tarkas`
 - status: `generated`
 - source_fingerprint: `655253a13a00ce26c416b93fcce332f21cfe2dc5`
-- created_at_utc: `2026-04-23T00:02:40.968266+00:00`
-- updated_at_utc: `2026-04-23T00:02:40.968266+00:00`
+- created_at_utc: `2026-04-23T05:42:08.506000+00:00`
+- updated_at_utc: `2026-04-23T05:42:08.506000+00:00`

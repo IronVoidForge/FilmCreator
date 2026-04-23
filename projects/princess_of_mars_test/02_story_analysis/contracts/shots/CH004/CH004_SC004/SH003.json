@@ -14,6 +14,16 @@
   "action_during_shot": "Sola begins the process of providing sustenance.",
   "action_continues_from": "Sola begins the process of providing sustenance.",
   "action_hands_off_to": "Sola begins the process of providing sustenance.",
+  "shot_size": "medium",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
+  "zoom_behavior": "none",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
+  "subject_visibility": "on_screen",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
   "subject_blocking": [
     "Sola's height relative to the Narrator.",
     "sola remains readable within the active playing space."
@@ -24,12 +34,12 @@
     "Subject 1: sola remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "sola focuses toward the active scene action."
+    "primary scene subject focuses toward the active scene action."
   ],
   "environment_subzone": "primary scene playing area",
   "key_visible_environment_features": [
     "primary scene playing area",
-    "grand_audience_chamber architecture"
+    "grand_audience_chamber"
   ],
   "continuity_from_previous_shot": "Sola begins the process of providing sustenance.",
   "continuity_to_next_shot": "Sola begins the process of providing sustenance.",
@@ -70,7 +80,7 @@
     "Sola's height relative to the Narrator.",
     "Sola begins the process of providing sustenance."
   ],
-  "prompt_seed": "Closing Reaction 3: Sola begins the process of providing sustenance.. closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in grand_audience_chamber that emphasizes the consequence of sola begins the process of providing sustenance.. Cast: sola. Environment: grand_au...",
+  "prompt_seed": "Closing Reaction 3: Sola begins the process of providing sustenance.. closing_reaction. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Controlled closing frame that lands the consequen...",
   "shot_notes": "Sola begins the process of providing sustenance.",
   "evidence_refs": [
     {
@@ -143,24 +153,24 @@
     "artifact_id": "CH004_SC004_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "f248ee8656584302d070a94489be3931beb4b245",
+    "source_fingerprint": "9360dc86f840e310129cbcbeac7993ec695acd51",
     "created_at_utc": "2026-04-22T00:39:12.258518+00:00",
-    "updated_at_utc": "2026-04-22T23:30:48.174265+00:00",
+    "updated_at_utc": "2026-04-23T05:01:19.894581+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH004_SC004",
-        "version": "bc3f1eaf6e4d8eccc84c161b4b7cf9e336adb620"
+        "version": "fbcac6d5bd774fd8bbc614313fbb42021280184a"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH004_SC004",
-        "version": "6db586cb23dc77d21bcdf698278c19da31a0a85f"
+        "version": "27bbecaa0cdfa623eef4080ada43a06c0d86e20a"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH004_SC004",
-        "version": "cfcfdbfc32381f1a743b52eff87d7be13401db9e"
+        "version": "c8c60fb9cd93376fe2aabfec25cd89944452f819"
       }
     ],
     "locked_fields": {},
@@ -190,6 +200,11 @@
         "timestamp_utc": "2026-04-22T23:31:23.999607+00:00",
         "action": "synthesized",
         "source_fingerprint": "f248ee8656584302d070a94489be3931beb4b245"
+      },
+      {
+        "timestamp_utc": "2026-04-23T05:02:06.297646+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9360dc86f840e310129cbcbeac7993ec695acd51"
       }
     ]
   }

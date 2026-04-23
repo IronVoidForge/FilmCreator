@@ -52,5 +52,5 @@
 - artifact_id: `DESC_ENV_arizona_mountain_cave_ledge`
 - status: `generated`
 - source_fingerprint: `ea8e2f8aae4e6ea8adf85758391984822bc364a1`
-- created_at_utc: `2026-04-23T00:06:45.760431+00:00`
-- updated_at_utc: `2026-04-23T00:06:45.760431+00:00`
+- created_at_utc: `2026-04-23T05:46:43.638805+00:00`
+- updated_at_utc: `2026-04-23T05:46:43.638805+00:00`

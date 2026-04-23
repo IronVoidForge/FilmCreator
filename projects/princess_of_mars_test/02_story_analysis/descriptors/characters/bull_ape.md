@@ -70,5 +70,5 @@
 - artifact_id: `DESC_CHAR_bull_ape`
 - status: `generated`
 - source_fingerprint: `3cb415460bee548fcb6f04ba2d22e3179ed6fcb2`
-- created_at_utc: `2026-04-23T03:22:17.672169+00:00`
-- updated_at_utc: `2026-04-23T03:22:17.672169+00:00`
+- created_at_utc: `2026-04-23T05:35:11.665291+00:00`
+- updated_at_utc: `2026-04-23T05:35:11.665291+00:00`

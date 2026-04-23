@@ -1,3 +1,18 @@
 # Descriptor Review Index
 
-- No entries.
+- `character:ape_man_1` - ape_man_1 (status=canonical, mentions=1, review=12)
+- `character:ape_man_2` - ape_man_2 (status=canonical, mentions=1, review=12)
+- `character:bull_ape_mate` - bull_ape (status=resolved_into, mentions=1, review=0)
+- `character:colossal_ape_creature` - colossal_ape_creature (status=canonical, mentions=1, review=12)
+- `character:dead_friend` - dead_friend (status=canonical, mentions=1, review=12)
+- `character:former_self` - former_self (status=canonical, mentions=1, review=12)
+- `character:martian_mounts` - martian_mounts (status=canonical, mentions=1, review=12)
+- `character:martian_warrior` - martian_warrior (status=canonical, mentions=3, review=12)
+- `character:martian_warrior_leader` - martian_warrior_leader (status=resolved_into, mentions=1, review=12)
+- `character:protagonist` - protagonist (status=canonical, mentions=10, review=11)
+- `character:the_chieftain` - the_chieftain (status=resolved_into, mentions=1, review=12)
+- `character:the_colossal_creature` - the_colossal_creature (status=canonical, mentions=1, review=12)
+- `character:the_watch_dog` - the_watch_dog (status=canonical, mentions=1, review=12)
+- `character:watch_thing` - watch_thing (status=canonical, mentions=1, review=11)
+- `character:watchdog` - watchdog (status=canonical, mentions=1, review=12)
+- `environment:arizona_mountain_cave_ledge` - arizona_mountain_cave_ledge (status=resolved_into, mentions=1, review=1)

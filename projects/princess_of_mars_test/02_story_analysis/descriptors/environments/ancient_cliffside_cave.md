@@ -57,5 +57,5 @@
 - artifact_id: `DESC_ENV_ancient_cliffside_cave`
 - status: `generated`
 - source_fingerprint: `e62f576de0d2f4571283c348be7d8f97e852a756`
-- created_at_utc: `2026-04-23T00:04:39.742308+00:00`
-- updated_at_utc: `2026-04-23T00:04:39.742308+00:00`
+- created_at_utc: `2026-04-23T05:44:22.770563+00:00`
+- updated_at_utc: `2026-04-23T05:44:22.770563+00:00`

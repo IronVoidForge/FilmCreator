@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Intimidation $\rightarrow$ Observational Curiosity. **Likely Visual Coverage Families:** * Medium shots of the Chieftain in regalia. * Cl.... Stable medium framing that keeps action and character readable.. Readable medium composition in featuring .. Characters: . Environment: Cavernous interior with high vaulted ceilings, i...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Intimidation $\rightarrow$ Observational Curiosity. **Likely Visual Coverage Families:** * Medium shots of the Chieftain in regalia. * Cl.... shot size medium; camera angle eye_level; lens normal; camera motion locked_off; zoom none; focus deep_focus; lighting hard_directional; subject visibility off_screen_voice; narration...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -22,7 +22,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - source_artifact_ids: CH004_SC002; SHOT_INDEX; DIALOGUE; tars_tarkas; chieftain
 - reference_mode: shot_prompt_bundle
 - variant_name: primary_keyframe
-- lens_family: neutral_reference
+- lens_family: normal
 - composition_lock: preserve canonical identity and framing rules
 - trait_lock: preserve stable visual canon
 - image_to_image_source: 
@@ -41,6 +41,16 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - shot_lineage_ids: SH001; SH002
 - camera_description: Stable medium framing that keeps action and character readable.
 - composition: Readable medium composition in grand_audience_chamber featuring The Narrator.
+- shot_size: medium
+- camera_angle: eye_level
+- camera_motion: locked_off
+- zoom_behavior: none
+- focus_strategy: deep_focus
+- lighting_style: hard_directional
+- subject_visibility: off_screen_voice
+- narration_mode: voiceover_off_screen
+- primary_subject_angle: front_three_quarter_left
+- environment_subzone: primary scene playing area
 - prompt_family: shot_prompt
 - reference_asset_ids: grand_audience_chamber; DESC_CH004_SC002; DESC_CH004_SC002_SH001
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
@@ -50,7 +60,10 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - Variant: Primary Keyframe.
 - The specific placement of the Narrator within the massive chamber
 - the visual details of the Chieftain's regalia.
-- The Narrator is presented to the Chieftain in a grand audience chamber. He observes the mismatch between the massive, ancient furniture and the Martians' biology, emphasizing the antiquity of the ruins.
+- The Narrator is presented to the Chieftain in a grand audience chamber. He observes the mismatch between the massive
+- ancient furniture and the Martians' biology
+- emphasizing the antiquity of the ruins.
+- Resolve The Narrator -> The Narrator
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

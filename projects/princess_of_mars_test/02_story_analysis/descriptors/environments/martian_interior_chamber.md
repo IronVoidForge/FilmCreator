@@ -59,5 +59,5 @@
 - artifact_id: `DESC_ENV_martian_interior_chamber`
 - status: `generated`
 - source_fingerprint: `e069fe83518d030c7a9d0e84a609250464f1e3dc`
-- created_at_utc: `2026-04-23T00:10:25.678211+00:00`
-- updated_at_utc: `2026-04-23T00:10:25.678211+00:00`
+- created_at_utc: `2026-04-23T05:50:52.314354+00:00`
+- updated_at_utc: `2026-04-23T05:50:52.314354+00:00`

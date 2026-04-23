@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Tension $\rightarrow$ Defiance $\rightarrow$ Somber relief/Resolution. **Likely Visual Coverage Families:** - Close-up on the protagonist.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of **participating characters:**\n- the prota...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Tension $\rightarrow$ Defiance $\rightarrow$ Somber relief/Resolution. **Likely Visual Coverage Families:** - Close-up on the protagonist.... shot size medium; camera angle eye_level; lens normal; camera motion locked_off; zoom none; focus deep_focus; lighting hard_directional; subject visibility on_screen;...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -22,7 +22,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - source_artifact_ids: CH006_SC004; SHOT_INDEX; DIALOGUE
 - reference_mode: shot_prompt_bundle
 - variant_name: consistency_repair
-- lens_family: neutral_reference
+- lens_family: normal
 - composition_lock: preserve canonical identity and framing rules
 - trait_lock: preserve stable visual canon
 - image_to_image_source: 
@@ -41,6 +41,16 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - shot_lineage_ids: SH003; SH004
 - camera_description: Controlled closing frame that lands the consequence of the beat.
 - composition: Closing composition in Interior chamber leading out to a Plaza that emphasizes the consequence of **participating characters:**\n- the protagonist\n- sola\n- martian warrior (aggressor)\n- the watch-thing.
+- shot_size: medium
+- camera_angle: eye_level
+- camera_motion: locked_off
+- zoom_behavior: none
+- focus_strategy: deep_focus
+- lighting_style: hard_directional
+- subject_visibility: on_screen
+- narration_mode: none
+- primary_subject_angle: front_three_quarter_left
+- environment_subzone: primary scene playing area
 - prompt_family: shot_prompt
 - reference_asset_ids: DESC_CH006_SC004; DESC_CH006_SC004_SH004
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor

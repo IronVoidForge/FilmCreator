@@ -5,15 +5,25 @@
   "shot_order": 2,
   "previous_shot_id": "SH001",
   "next_shot_id": "SH003",
-  "primary_subject": "The Narrator",
+  "primary_subject": "primary scene subject",
   "secondary_subjects": [
     "Sola"
   ],
   "start_state": "Continue the established scene action.",
-  "end_state": "Land the emotional shift from Fatigue to Curiosity/Uncanniness.",
-  "action_during_shot": "Carrying the emotional arc through medium shots of decor and close-ups on the strange creature under low-key lighting.",
+  "end_state": "Land the emotional shift: Fatigue $\\\\rightarrow$ Curiosity/Uncanniness.",
+  "action_during_shot": "Carry the emotional arc through: Fatigue $\\\\rightarrow$ Curiosity/Uncanniness.",
   "action_continues_from": "Sola leads the Narrator to a decorated sleeping chamber. Inside, the Narrator encounters a strange, ten-legged Martian creature with a frog-like head and tusks.",
-  "action_hands_off_to": "Land the emotional shift: Fatigue -> Curiosity/Uncanniness.",
+  "action_hands_off_to": "Land the emotional shift: Fatigue $\\\\rightarrow$ Curiosity/Uncanniness.",
+  "shot_size": "medium",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
+  "zoom_behavior": "none",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
+  "subject_visibility": "on_screen",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
   "subject_blocking": [
     "the level of light in the room.",
     "The Narrator remains readable within the active playing space.",
@@ -21,11 +31,12 @@
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the primary scene playing area.",
-    "Background depth keeps grand_audience_chamber legible as the location anchor.",
-    "Subject 1 (The Narrator) and Subject 2 (Sola) remain visually readable against the environment scale."
+    "Background depth should keep grand_audience_chamber legible as the location anchor.",
+    "Subject 1: The Narrator remains visually readable against the environment scale.",
+    "Subject 2: sola remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "The Narrator focuses toward the active scene action (the creature)."
+    "primary scene subject focuses toward the active scene action."
   ],
   "environment_subzone": "primary scene playing area",
   "key_visible_environment_features": [
@@ -33,10 +44,10 @@
     "grand_audience_chamber architecture"
   ],
   "continuity_from_previous_shot": "Sola leads the Narrator to a decorated sleeping chamber. Inside, the Narrator encounters a strange, ten-legged Martian creature with a frog-like head and tusks.",
-  "continuity_to_next_shot": "Land the emotional shift: Fatigue -> Curiosity/Uncanniness.",
-  "pose_anchor_frame": "The Narrator and Sola observing the room/creature.",
-  "pose_end_frame": "The Narrator showing curiosity or unease toward the creature.",
-  "shot_title": "Medium 2: Carry the emotional arc through",
+  "continuity_to_next_shot": "Land the emotional shift: Fatigue $\\\\rightarrow$ Curiosity/Uncanniness.",
+  "pose_anchor_frame": "Continue the established scene action.",
+  "pose_end_frame": "Land the emotional shift: Fatigue $\\\\rightarrow$ Curiosity/Uncanniness.",
+  "shot_title": "Medium 2: Carry the emotional arc through: Fatigue $\\\\rightarr...",
   "shot_type": "medium",
   "camera_description": "Stable medium framing that keeps action and character readable.",
   "composition": "Readable medium composition in grand_audience_chamber featuring The Narrator, sola.",
@@ -79,10 +90,10 @@
   "continuity_constraints": [
     "The appearance and movement of the small creature",
     "the level of light in the room.",
-    "Carry the emotional arc through: Fatigue -> Curiosity/Uncanniness."
+    "Carry the emotional arc through: Fatigue $\\\\rightarrow$ Curiosity/Uncanniness."
   ],
-  "prompt_seed": "Medium 2: Carry the emotional arc through: Fatigue to Curiosity. medium. Stable medium framing. Readable medium composition in grand_audience_chamber featuring The Narrator, sola. Cast: The Narrator, sola. Environment: grand_audience_chamber.",
-  "shot_notes": "Likely Visual Coverage Families: Medium shots of decor, close-ups on creature, low-key lighting.",
+  "prompt_seed": "Medium 2: Carry the emotional arc through: Fatigue $\\\\rightarr.... medium. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable medium framing that keeps action and character readable....",
+  "shot_notes": "Carry the emotional arc through: Fatigue $\\\\rightarrow$ Curiosity/Uncanniness.",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -148,24 +159,24 @@
     "artifact_id": "CH004_SC005_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "1d337f3969eceb1cba9ee946152252dff13c84d8",
+    "source_fingerprint": "6ff650335c47dea03939ecbfeb292ccc959d3143",
     "created_at_utc": "2026-04-22T00:40:10.138880+00:00",
-    "updated_at_utc": "2026-04-22T23:32:16.865737+00:00",
+    "updated_at_utc": "2026-04-23T05:03:21.642938+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH004_SC005",
-        "version": "e29bf3a8bc9c75512c07ab68256c75f30f27aba9"
+        "version": "7a560c680753aed58dc5fc6d4149ff523c47e556"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH004_SC005",
-        "version": "a82beb4aaa56c15d7979fd9dbc6cbc8f034e5d97"
+        "version": "582302234439c0e6f63c05a71f3a2cbd00d0d20f"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH004_SC005",
-        "version": "08bff21b2e10e2bb5ac463f1d1d2a897f2952db1"
+        "version": "01e6c412a7c25ce7cc1b652a260bb080746ef0c5"
       }
     ],
     "locked_fields": {},
@@ -195,6 +206,11 @@
         "timestamp_utc": "2026-04-22T23:32:55.453867+00:00",
         "action": "synthesized",
         "source_fingerprint": "1d337f3969eceb1cba9ee946152252dff13c84d8"
+      },
+      {
+        "timestamp_utc": "2026-04-23T05:04:14.370929+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "6ff650335c47dea03939ecbfeb292ccc959d3143"
       }
     ]
   }

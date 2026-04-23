@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Determination $\rightarrow$ Alarm/Panic. **Likely Visual Coverage Families:** - Low-angle shots of the Watch Dog to emphasize speed. - Ha.... Close framing that isolates reaction and emotional emphasis.. Intimate composition isolating against to capture the emotional turn.. Characters: An Earthman undergoing a supernatural transformati...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Determination $\rightarrow$ Alarm/Panic. **Likely Visual Coverage Families:** - Low-angle shots of the Watch Dog to emphasize speed. - Ha.... shot size medium; camera angle eye_level; lens normal; camera motion locked_off; zoom none; focus deep_focus; lighting hard_directional; subject visibility on_screen; narration none; primary subj...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -22,7 +22,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - source_artifact_ids: CH005_SC002; SHOT_INDEX; DIALOGUE; protagonist; the_watch_dog
 - reference_mode: shot_prompt_bundle
 - variant_name: alternate_angle
-- lens_family: neutral_reference
+- lens_family: normal
 - composition_lock: preserve canonical identity and framing rules
 - trait_lock: preserve stable visual canon
 - image_to_image_source: 
@@ -40,7 +40,17 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - next_shot_id: SH002
 - shot_lineage_ids: SH001; SH002
 - camera_description: Close framing that isolates reaction and emotional emphasis.
-- composition: Intimate composition isolating protagonist against Captive's chamber to capture the emotional turn.
+- composition: Intimate composition that isolates protagonist against Captive's chamber to capture the beat's emotional turn.
+- shot_size: medium
+- camera_angle: eye_level
+- camera_motion: locked_off
+- zoom_behavior: none
+- focus_strategy: deep_focus
+- lighting_style: hard_directional
+- subject_visibility: on_screen
+- narration_mode: none
+- primary_subject_angle: front_three_quarter_left
+- environment_subzone: primary scene playing area
 - prompt_family: shot_prompt
 - reference_asset_ids: protagonist; DESC_CH005_SC002; DESC_CH005_SC002_SH001
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
@@ -49,8 +59,11 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - Scene: CH005_SC002 / To initiate the action and demonstrate the physical threat of the Mar....
 - Variant: Alternate Angle.
 - The physical distance between the protagonist and the dog
-- The direction of the chase
 - the direction of the chase.
+- Seeking to test his limits and the capabilities of his captors
+- the protagonist attempts to leave his room. He quickly realizes that the short-legged Watch Dog is incredibly fast and intelligent
+- turning a test into a survival situation.
+- Resolve Captive's chamber -> Captive's chamber
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

@@ -53,5 +53,5 @@
 - artifact_id: `DESC_ENV_martian_city_outskirts`
 - status: `generated`
 - source_fingerprint: `4892b63db800a51636b33b9c19cc87b60db7b8f1`
-- created_at_utc: `2026-04-23T00:09:02.821569+00:00`
-- updated_at_utc: `2026-04-23T00:09:02.821569+00:00`
+- created_at_utc: `2026-04-23T05:49:18.288277+00:00`
+- updated_at_utc: `2026-04-23T05:49:18.288277+00:00`

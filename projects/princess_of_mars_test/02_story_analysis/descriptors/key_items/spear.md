@@ -28,7 +28,7 @@
 
 - chapter_mentions: CH003
 - scene_mentions: CH003_SC003
-- shot_mentions: (none)
+- shot_mentions: CH003_SC003/SH001
 
 ## Evidence Summary
 
@@ -42,6 +42,6 @@
 
 - artifact_id: `DESC_ITEM_spear`
 - status: `generated`
-- source_fingerprint: `8b1890a2f3c5124593dc7d43e7b99eb8a767781e`
-- created_at_utc: `2026-04-23T01:08:10.018605+00:00`
-- updated_at_utc: `2026-04-23T01:08:10.018605+00:00`
+- source_fingerprint: `546e9bda9fa08d7109ffb996da8fdf7e42fd2643`
+- created_at_utc: `2026-04-23T06:55:18.343052+00:00`
+- updated_at_utc: `2026-04-23T06:55:18.343052+00:00`

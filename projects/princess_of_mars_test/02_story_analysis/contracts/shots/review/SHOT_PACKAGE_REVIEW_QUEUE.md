@@ -134,14 +134,20 @@
   - 1 cast reference(s) need review.
 - `SH002` / `CH004_SC002`
   - 1 cast reference(s) need review.
+- `SH003` / `CH004_SC002`
 - `SH001` / `CH004_SC003`
   - 1 cast reference(s) need review.
+- `SH002` / `CH004_SC003`
+- `SH003` / `CH004_SC003`
 - `SH001` / `CH004_SC004`
   - 1 cast reference(s) need review.
+- `SH002` / `CH004_SC004`
+- `SH003` / `CH004_SC004`
 - `SH001` / `CH004_SC005`
   - 1 cast reference(s) need review.
 - `SH002` / `CH004_SC005`
   - 1 cast reference(s) need review.
+- `SH003` / `CH004_SC005`
 - `SH001` / `CH005_SC001`
   - Resolve environment for SH001.
 - `SH002` / `CH005_SC001`

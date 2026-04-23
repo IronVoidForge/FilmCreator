@@ -53,5 +53,5 @@
 - artifact_id: `DESC_ENV_arizona_mountain_mining_site`
 - status: `generated`
 - source_fingerprint: `16b4fbd34bfb203a879aac8c05c1b6b5538fc3be`
-- created_at_utc: `2026-04-23T00:07:04.727913+00:00`
-- updated_at_utc: `2026-04-23T00:07:04.727913+00:00`
+- created_at_utc: `2026-04-23T05:47:04.887463+00:00`
+- updated_at_utc: `2026-04-23T05:47:04.887463+00:00`

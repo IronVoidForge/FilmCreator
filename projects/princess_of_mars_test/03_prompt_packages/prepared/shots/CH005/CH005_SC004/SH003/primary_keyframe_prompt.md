@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Hope (of escape) $\rightarrow$ Terror/Shock. **Likely Visual Coverage Families:** - Slow-motion capture of the high jump. - Extreme close.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of land the scene consequence or transition cleanly.. Character...
+Film shot prompt. Primary keyframe with balanced composition and clear subject placement.. Hope (of escape) $\rightarrow$ Terror/Shock. **Likely Visual Coverage Families:** - Slow-motion capture of the high jump. - Extreme close.... shot size medium; camera angle eye_level; lens normal; camera motion locked_off; zoom none; focus deep_focus; lighting hard_directional; subject visibility on_screen; narration none; p...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -22,7 +22,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - source_artifact_ids: CH005_SC004; SHOT_INDEX; DIALOGUE; protagonist; the_colossal_creature
 - reference_mode: shot_prompt_bundle
 - variant_name: primary_keyframe
-- lens_family: neutral_reference
+- lens_family: normal
 - composition_lock: preserve canonical identity and framing rules
 - trait_lock: preserve stable visual canon
 - image_to_image_source: 
@@ -40,7 +40,17 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - next_shot_id: (none)
 - shot_lineage_ids: SH002; SH003
 - camera_description: Controlled closing frame that lands the consequence of the beat.
-- composition: Closing composition in Exterior building/alleyway that emphasizes the consequence of land the scene consequence or transition cleanly.
+- composition: Closing composition in Exterior building/alleyway that emphasizes the consequence of being dragged away.
+- shot_size: medium
+- camera_angle: eye_level
+- camera_motion: locked_off
+- zoom_behavior: none
+- focus_strategy: deep_focus
+- lighting_style: hard_directional
+- subject_visibility: on_screen
+- narration_mode: none
+- primary_subject_angle: front_three_quarter_left
+- environment_subzone: primary scene playing area
 - prompt_family: shot_prompt
 - reference_asset_ids: protagonist; the_colossal_creature; DESC_CH005_SC004; DESC_CH005_SC004_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
@@ -48,12 +58,11 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 # Continuity Notes
 - Scene: CH005_SC004 / To provide a climax to the escape attempt and introduce a new, much l....
 - Variant: Primary Keyframe.
+- Lighting shift from city streets to the creature's lair
+- Resolve Exterior building/alleyway transition
 - The height of the window
 - the physical contact point where the creature grabs the protagonist
 - lighting shift from city streets to the creature's lair.
-- Land the scene consequence or transition cleanly.
-- Resolve The Watch Dog (pursuing) -> The Watch Dog (pursuing)
-- Resolve Exterior building/alleyway -> Exterior building/alleyway
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

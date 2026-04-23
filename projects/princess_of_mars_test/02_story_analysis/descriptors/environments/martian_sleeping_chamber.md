@@ -57,5 +57,5 @@
 - artifact_id: `DESC_ENV_martian_sleeping_chamber`
 - status: `generated`
 - source_fingerprint: `cf52eecdde150c022f18227f291bc51dbe48d0ca`
-- created_at_utc: `2026-04-23T00:10:46.374497+00:00`
-- updated_at_utc: `2026-04-23T00:10:46.374497+00:00`
+- created_at_utc: `2026-04-23T05:51:15.369841+00:00`
+- updated_at_utc: `2026-04-23T05:51:15.369841+00:00`

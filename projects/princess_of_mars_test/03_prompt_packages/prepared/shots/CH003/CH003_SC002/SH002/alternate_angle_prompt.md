@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Curiosity $\rightarrow$ Horror/Awe. **Likely Visual Coverage Families:** - Macro shots of the eggs and the multi-limbed hatchlings. - POV.... Active camera with tracking energy and clear spatial orientation.. Dynamic composition in with crossing the frame and maintaining readable movement.. Characters: An Earthman undergoing a supernat...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Curiosity $\rightarrow$ Horror/Awe. **Likely Visual Coverage Families:** - Macro shots of the eggs and the multi-limbed hatchlings. - POV.... shot size medium; camera angle eye_level; lens normal; camera motion locked_off; zoom none; focus deep_focus; lighting hard_directional; subject visibility on_screen; narration none; primary subj...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -22,7 +22,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - source_artifact_ids: CH003_SC002; SHOT_INDEX; DIALOGUE; protagonist
 - reference_mode: shot_prompt_bundle
 - variant_name: alternate_angle
-- lens_family: neutral_reference
+- lens_family: normal
 - composition_lock: preserve canonical identity and framing rules
 - trait_lock: preserve stable visual canon
 - image_to_image_source: 
@@ -41,6 +41,16 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - shot_lineage_ids: SH001; SH002; SH003
 - camera_description: Active camera with tracking energy and clear spatial orientation.
 - composition: Dynamic composition in The glass-roofed incubator enclosure with protagonist crossing the frame and maintaining readable movement.
+- shot_size: medium
+- camera_angle: eye_level
+- camera_motion: locked_off
+- zoom_behavior: none
+- focus_strategy: deep_focus
+- lighting_style: hard_directional
+- subject_visibility: on_screen
+- narration_mode: none
+- primary_subject_angle: front_three_quarter_left
+- environment_subzone: primary scene playing area
 - prompt_family: shot_prompt
 - reference_asset_ids: protagonist; DESC_CH003_SC002; DESC_CH003_SC002_SH002
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
@@ -51,8 +61,6 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - The movement patterns of the hatchlings
 - lighting through the glass roof.
 - Carry the emotional arc through: Curiosity $\rightarrow$ Horror/Awe.
-- Macro shots of the eggs and the multi-limbed hatchlings.
-- POV shots from the protagonist looking through the glass.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

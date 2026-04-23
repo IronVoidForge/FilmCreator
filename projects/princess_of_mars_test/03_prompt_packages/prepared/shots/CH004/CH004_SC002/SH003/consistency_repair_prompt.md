@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Intimidation $\rightarrow$ Observational Curiosity. **Likely Visual Coverage Families:** * Medium shots of in regalia. * Close-ups on the.... Controlled closing frame that lands the consequence of the beat.. Closing composition in that emphasizes the consequence of land the scene consequence or transition c...
+Film shot prompt. Continuity repair pass that preserves pose, costume, lighting, and spatial relationships.. Intimidation $\rightarrow$ Observational Curiosity. **Likely Visual Coverage Families:** * Medium shots of in regalia. * Close-ups on the.... shot size medium; camera angle eye_level; lens normal; camera motion locked_off; zoom none; focus deep_focus; lighting hard_directional; subject visibility on_screen;...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -22,7 +22,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - source_artifact_ids: CH004_SC002; SHOT_INDEX; DIALOGUE; tars_tarkas; chieftain
 - reference_mode: shot_prompt_bundle
 - variant_name: consistency_repair
-- lens_family: neutral_reference
+- lens_family: normal
 - composition_lock: preserve canonical identity and framing rules
 - trait_lock: preserve stable visual canon
 - image_to_image_source: 
@@ -40,7 +40,17 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - next_shot_id: (none)
 - shot_lineage_ids: SH002; SH003
 - camera_description: Controlled closing frame that lands the consequence of the beat.
-- composition: Closing composition in grand_audience_chamber that emphasizes the consequence of land the scene consequence or transition cleanly.
+- composition: Closing composition in grand_audience_chamber that emphasizes the consequence of land the scene consequence or transition cleanly..
+- shot_size: medium
+- camera_angle: eye_level
+- camera_motion: locked_off
+- zoom_behavior: none
+- focus_strategy: deep_focus
+- lighting_style: hard_directional
+- subject_visibility: on_screen
+- narration_mode: none
+- primary_subject_angle: front_three_quarter_left
+- environment_subzone: primary scene playing area
 - prompt_family: shot_prompt
 - reference_asset_ids: tars_tarkas; chieftain; grand_audience_chamber; DESC_CH004_SC002; DESC_CH004_SC002_SH003
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
@@ -51,6 +61,8 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - The specific placement of the Narrator within the massive chamber
 - the visual details of the Chieftain's regalia.
 - Land the scene consequence or transition cleanly.
+- Resolve The Narrator -> The Narrator
+- Resolve Martian Court -> Martian Court
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 
 # Repair Notes

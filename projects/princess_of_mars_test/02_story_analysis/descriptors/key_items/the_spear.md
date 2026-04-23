@@ -17,7 +17,6 @@
 - holder_or_user_notes: used by the primary scene subject
 - iconic_features:
   - f the approaching mounts to emphasize scale. - Close-ups of the spear tip narrowly missing the protagonist. - Rapid cutting between the warriors and
-  - Focus on the proximity of the spear tip to the protagonist.
 - item_kind: spear
 - materials: worked metal, leather, or carved material
 - ornamentation: readable production detail
@@ -29,12 +28,11 @@
 
 - chapter_mentions: CH003
 - scene_mentions: CH003_SC003
-- shot_mentions: CH003_SC003/SH002
+- shot_mentions: (none)
 
 ## Evidence Summary
 
 - f the approaching mounts to emphasize scale. - Close-ups of the spear tip narrowly missing the protagonist. - Rapid cutting between the warriors and
-- Focus on the proximity of the spear tip to the protagonist.
 
 ## Review
 
@@ -44,6 +42,6 @@
 
 - artifact_id: `DESC_ITEM_the_spear`
 - status: `generated`
-- source_fingerprint: `ea1f4d8a8fa2d9e26950d19ea0d3219aceffafa0`
-- created_at_utc: `2026-04-23T01:08:25.189209+00:00`
-- updated_at_utc: `2026-04-23T01:08:25.189209+00:00`
+- source_fingerprint: `848639f93870a573efa47710725b2fa9d7865b05`
+- created_at_utc: `2026-04-23T06:55:34.260001+00:00`
+- updated_at_utc: `2026-04-23T06:55:34.260001+00:00`

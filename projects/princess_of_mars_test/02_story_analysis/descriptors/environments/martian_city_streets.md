@@ -59,5 +59,5 @@
 - artifact_id: `DESC_ENV_martian_city_streets`
 - status: `generated`
 - source_fingerprint: `b40a5baef998d4b8b076a5132aaedfdcaf5d4952`
-- created_at_utc: `2026-04-23T00:09:43.843221+00:00`
-- updated_at_utc: `2026-04-23T00:09:43.843221+00:00`
+- created_at_utc: `2026-04-23T05:50:05.030427+00:00`
+- updated_at_utc: `2026-04-23T05:50:05.030427+00:00`

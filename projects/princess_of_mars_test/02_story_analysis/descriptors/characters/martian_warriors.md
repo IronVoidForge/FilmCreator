@@ -77,5 +77,5 @@
 - artifact_id: `DESC_CHAR_martian_warriors`
 - status: `generated`
 - source_fingerprint: `3f28e8105ff7537d3f6113f3b3a3f4f3e8a6089b`
-- created_at_utc: `2026-04-23T00:01:25.691338+00:00`
-- updated_at_utc: `2026-04-23T00:01:25.691338+00:00`
+- created_at_utc: `2026-04-23T05:40:45.907601+00:00`
+- updated_at_utc: `2026-04-23T05:40:45.907601+00:00`

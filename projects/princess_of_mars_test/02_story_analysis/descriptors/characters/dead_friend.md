@@ -77,5 +77,5 @@
 - artifact_id: `DESC_CHAR_dead_friend`
 - status: `generated`
 - source_fingerprint: `fd0ab00149a0836735b10d8d7e133dc0e2801034`
-- created_at_utc: `2026-04-22T23:58:01.166272+00:00`
-- updated_at_utc: `2026-04-22T23:58:01.166272+00:00`
+- created_at_utc: `2026-04-23T05:36:56.887868+00:00`
+- updated_at_utc: `2026-04-23T05:36:56.887868+00:00`

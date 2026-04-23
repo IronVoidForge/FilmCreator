@@ -11,7 +11,7 @@ Prepare a compact shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Film shot prompt. Alternate angle with the same beat and preserved continuity.. Confusion $\rightarrow$ Physical Bewilderment/Surprise. **Likely Visual Coverage Families:** - Wide shots of the Martian landscape. - Med.... Stable medium framing that keeps action and character readable.. Readable medium composition in a circular basin on Mars featuring .. Characters: An Earthman undergoing a supernatural transformat...
+Film shot prompt. Alternate angle with the same beat and preserved continuity.. Confusion $\rightarrow$ Physical Bewilderment/Surprise. **Likely Visual Coverage Families:** - Wide shots of the Martian landscape. - Med.... shot size medium; camera angle eye_level; lens normal; camera motion locked_off; zoom none; focus deep_focus; lighting hard_directional; subject visibility on_screen; narration none; primary subj...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -22,7 +22,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - source_artifact_ids: CH003_SC001; SHOT_INDEX; DIALOGUE; protagonist
 - reference_mode: shot_prompt_bundle
 - variant_name: alternate_angle
-- lens_family: neutral_reference
+- lens_family: normal
 - composition_lock: preserve canonical identity and framing rules
 - trait_lock: preserve stable visual canon
 - image_to_image_source: 
@@ -40,7 +40,17 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - next_shot_id: SH002
 - shot_lineage_ids: SH001; SH002
 - camera_description: Stable medium framing that keeps action and character readable.
-- composition: Readable medium composition in a circular basin on Mars featuring the protagonist.
+- composition: Readable medium composition in A circular basin on Mars covered in yellowish featuring protagonist.
+- shot_size: medium
+- camera_angle: eye_level
+- camera_motion: locked_off
+- zoom_behavior: none
+- focus_strategy: deep_focus
+- lighting_style: hard_directional
+- subject_visibility: on_screen
+- narration_mode: none
+- primary_subject_angle: front_three_quarter_left
+- environment_subzone: primary scene playing area
 - prompt_family: shot_prompt
 - reference_asset_ids: protagonist; DESC_CH003_SC001; DESC_CH003_SC001_SH001
 - reference_asset_types: character; environment; scene_descriptor; shot_descriptor
@@ -49,7 +59,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - Scene: CH003_SC001 / Establish the protagonist's new physical reality and the alien enviro....
 - Variant: Alternate Angle.
 - The height and distance of the leaps
-- The protagonist's nakedness/exposure
+- the protagonist's physical state (nakedness/exposure)
 - the protagonist's physical state (nakedness/exposure).
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 

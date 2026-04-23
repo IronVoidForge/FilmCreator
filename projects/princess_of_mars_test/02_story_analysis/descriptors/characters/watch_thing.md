@@ -81,5 +81,5 @@
 - artifact_id: `DESC_CHAR_watch_thing`
 - status: `generated`
 - source_fingerprint: `7bde19a1acec6382df0203f409d9846b1a68c2e2`
-- created_at_utc: `2026-04-23T00:03:59.738882+00:00`
-- updated_at_utc: `2026-04-23T00:03:59.738882+00:00`
+- created_at_utc: `2026-04-23T05:43:37.300197+00:00`
+- updated_at_utc: `2026-04-23T05:43:37.300197+00:00`

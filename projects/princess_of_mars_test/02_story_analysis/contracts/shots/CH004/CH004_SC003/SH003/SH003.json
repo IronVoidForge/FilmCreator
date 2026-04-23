@@ -5,29 +5,43 @@
   "shot_order": 3,
   "previous_shot_id": "SH002",
   "next_shot_id": "",
-  "primary_subject": "tars_tarkas",
+  "primary_subject": "primary scene subject",
   "secondary_subjects": [
-    "the_chieftain"
+    "[]"
   ],
   "start_state": "Continue from prior beat: This act of defiance earns him unexpected respect.",
   "end_state": "He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
   "action_during_shot": "He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
   "action_continues_from": "He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
   "action_hands_off_to": "He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
+  "shot_size": "medium",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
+  "zoom_behavior": "none",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
+  "subject_visibility": "on_screen",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
   "subject_blocking": [
+    "the physical contact during the fight sequence.",
     "tars_tarkas remains readable within the active playing space.",
     "the_chieftain remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the primary scene playing area.",
-    "Background depth should keep grand_audience_chamber legible as the location anchor."
+    "Background depth should keep grand_audience_chamber legible as the location anchor.",
+    "Subject 1: tars_tarkas remains visually readable against the environment scale.",
+    "Subject 2: the_chieftain remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "tars_tarkas focuses toward the active scene action."
+    "primary scene subject focuses toward the active scene action."
   ],
   "environment_subzone": "primary scene playing area",
   "key_visible_environment_features": [
-    "primary scene playing area"
+    "primary scene playing area",
+    "grand_audience_chamber"
   ],
   "continuity_from_previous_shot": "He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
   "continuity_to_next_shot": "He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
@@ -78,9 +92,10 @@
     "the physical contact during the fight sequence.",
     "He is then commanded to perform \"sak\" (jumping)",
     "which he does with impressive distance",
-    "further astounding the assembly."
+    "further astounding the assembly.",
+    "Resolve The Narrator -> The Narrator"
   ],
-  "prompt_seed": "Closing Reaction 3: He is then commanded to perform \"sak\" (jumping), wh.... closing_reaction. Controlled closing frame that lands the consequence of the beat. Closing composition in grand_audience_chamber that emphasizes the consequence of he is then commanded to perform \"sak\" (jumping), which he does with impressiv...",
+  "prompt_seed": "Closing Reaction 3: He is then commanded to perform \"sak\" (jumping), wh.... closing_reaction. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Controlled closing frame that lands the con...",
   "shot_notes": "He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
   "evidence_refs": [
     {
@@ -153,24 +168,24 @@
     "artifact_id": "CH004_SC003_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "c8056e37592d932d20c76859ee5b765396783faf",
+    "source_fingerprint": "f135445af8e57d4d087286564569c1d6981a8267",
     "created_at_utc": "2026-04-22T00:36:06.122337+00:00",
-    "updated_at_utc": "2026-04-22T23:28:42.981766+00:00",
+    "updated_at_utc": "2026-04-23T04:58:36.334092+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH004_SC003",
-        "version": "bacf8d29cf70ef0bacef95e7567a86d84c7efe57"
+        "version": "ee5747c4d95d5d1b7ed35ff260b6fce25a2678cc"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH004_SC003",
-        "version": "5bcbb362b4e83bd2e91f859be72f1bf316bcd05f"
+        "version": "fd8eaa168595acc5f638720633d5a999301724e2"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH004_SC003",
-        "version": "43f21f31bc4becac2d8abd30e5262c680f63d3a6"
+        "version": "ac5cdf1045a2eab9169335c3705c3d8f857dc2e7"
       }
     ],
     "locked_fields": {},
@@ -200,6 +215,11 @@
         "timestamp_utc": "2026-04-22T23:29:22.467662+00:00",
         "action": "synthesized",
         "source_fingerprint": "c8056e37592d932d20c76859ee5b765396783faf"
+      },
+      {
+        "timestamp_utc": "2026-04-23T04:59:30.651879+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "f135445af8e57d4d087286564569c1d6981a8267"
       }
     ]
   }

@@ -59,5 +59,5 @@
 - artifact_id: `DESC_ENV_arizona_gold_vein_claim`
 - status: `generated`
 - source_fingerprint: `36d53a3be1100ea96bc247f316e1be70e36aa40c`
-- created_at_utc: `2026-04-23T00:06:04.994675+00:00`
-- updated_at_utc: `2026-04-23T00:06:04.994675+00:00`
+- created_at_utc: `2026-04-23T05:45:59.278826+00:00`
+- updated_at_utc: `2026-04-23T05:45:59.278826+00:00`

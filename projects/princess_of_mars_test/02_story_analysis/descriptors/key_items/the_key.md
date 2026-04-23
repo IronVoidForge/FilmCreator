@@ -19,8 +19,8 @@
 - holder_or_user_notes: used by the primary scene subject
 - iconic_features:
   - Detail composition centered on the key physical action or prop inside Arizona hills/plateau.
-  - le visual object or gesture. Detail composition centered on the key physical action or prop inside Arizona hills/plateau. Cast: John Carter (Younge
-  - le visual object or gesture. Detail composition centered on the key physical action or prop inside Arizona hills/plateau. Cast: apache_warriors. En
+  - Detail composition centered on the key physical action or prop inside grand_audience_chamber.
+  - Detail composition centered on the key physical action or prop inside Captive's chamber.
 - item_kind: key
 - materials: worked metal, leather, or carved material
 - ornamentation: readable production detail
@@ -37,11 +37,8 @@
 ## Evidence Summary
 
 - Detail composition centered on the key physical action or prop inside Arizona hills/plateau.
-- le visual object or gesture. Detail composition centered on the key physical action or prop inside Arizona hills/plateau. Cast: John Carter (Younge
-- le visual object or gesture. Detail composition centered on the key physical action or prop inside Arizona hills/plateau. Cast: apache_warriors. En
 - Detail composition centered on the key physical action or prop inside grand_audience_chamber.
-- le visual object or gesture. Detail composition centered on the key physical action or prop inside grand_audience_chamber. Cast: The Narrator. Envi
-- Detail composition centered on the key physical action/movement inside Captive's chamber.
+- Detail composition centered on the key physical action or prop inside Captive's chamber.
 
 ## Review
 
@@ -51,6 +48,6 @@
 
 - artifact_id: `DESC_ITEM_the_key`
 - status: `generated`
-- source_fingerprint: `86559cbd81929fdae016dbcfd7bbcb6db8883fc6`
-- created_at_utc: `2026-04-23T01:09:02.435505+00:00`
-- updated_at_utc: `2026-04-23T01:09:02.435505+00:00`
+- source_fingerprint: `d44c7d31b2a62c29edc3b499af3479787565cbb7`
+- created_at_utc: `2026-04-23T06:56:11.162609+00:00`
+- updated_at_utc: `2026-04-23T06:56:11.162609+00:00`
