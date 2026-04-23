@@ -9,8 +9,9 @@ The latest validated state is:
 - the refactor branch has merged into `main`
 - multi-chapter analysis for `princess_of_mars_test` completed `28/28` chapters with `0` failures
 - chapter analysis, world registries, snapshots, continuity, and librarian/index retrieval are stable enough to build on
+- baseline downstream synthesis phases now exist as first-class CLI stages, including character bibles, environment bibles, scene contracts, scene bindings, shot packages, dialogue timeline, descriptor enrichment, prompt preparation, and quality grading
 - the current bottleneck is no longer extraction correctness
-- the current bottleneck is synthesis and production-facing contract generation
+- the current bottleneck is synthesis quality at the handoff layers, especially prompt-ready variable quality, transition-scene environment handoff, and production-facing prompt fidelity
 
 ## Status Legend
 
@@ -153,14 +154,14 @@ The latest validated state is:
 ## New Active Roadmap Phases
 
 ### Phase 7 - Character Bible Synthesis
-- status: `planned`
-- evidence: upstream registries, refinement inputs, and librarian retrieval now exist to support this phase
-- next validation: produce canonical character bibles with evidence refs, revision history, locked fields, and review queues
+- status: `implemented`
+- evidence: `synthesize-character-bibles` is exposed through the CLI and launcher flow, and dedicated synthesis modules now exist under `orchestrator/character_bible*.py`
+- next validation: confirm full-book artifact writing, incremental reuse, and locked-field preservation against the current project layout
 
 ### Phase 8 - Environment Bible Synthesis
-- status: `planned`
-- evidence: upstream registries, continuity state, and retrieval now exist to support this phase
-- next validation: produce canonical environment bibles with hierarchy rules, evidence refs, revision history, and review queues
+- status: `implemented`
+- evidence: `synthesize-environment-bibles` is exposed through the CLI and launcher flow, and dedicated synthesis now exists in `orchestrator/environment_bible.py`
+- next validation: confirm full-book artifact writing, incremental reuse, and hierarchy-aware environment reuse against the current project layout
 
 ### Phase 9 - Scene Production Contracts
 - status: `validated`
@@ -168,9 +169,9 @@ The latest validated state is:
 - next validation: make scene contracts selector-first, add future environment request output, and bridge the contracts into authoritative scene bindings
 
 ### Phase 9.5 - Scene Binding and Environment Selection
-- status: `implemented`
-- evidence: `synthesize-scene-bindings` now writes per-scene binding artifacts, review queues, and future-environment request files between scene contracts and shot planning
-- next validation: confirm shot packages consistently inherit scene-level environments and that chapter fallback only appears when scene-level canonical selection is truly unavailable
+- status: `validated`
+- evidence: `synthesize-scene-bindings` writes per-scene binding artifacts, review queues, and future-environment request files, and the downstream dev-slice pipeline is actively using those bindings ahead of shot planning
+- next validation: confirm beat-level overrides consistently survive transition scenes and fully eliminate flattened environment handoff in clean reruns
 
 ### Phase 10 - Shot Planning and Shot Packages
 - status: `validated`
@@ -198,9 +199,9 @@ The latest validated state is:
 - next validation: produce a stable item registry with chapter mentions, visual summaries, and reference-sheet eligibility flags
 
 ### Phase 11.7 - Descriptor Enrichment and Reference Coverage
-- status: `planned`
-- evidence: the project now has canonical bibles, prompt preparation, and book-index retrieval, so a structured descriptor layer can consolidate evidence-grounded traits and reference coverage without re-asking the same questions
-- next validation: produce structured descriptor profiles with confidence, provenance, and coverage maps for characters, environments, scenes, and key items
+- status: `validated`
+- evidence: `synthesize-descriptor-enrichment` is live in the CLI and launchers, writes descriptor artifacts and review indexes, and the character descriptor spot-check loop is already being used to improve output quality
+- next validation: strengthen scene/environment descriptor quality, prompt-ready field typing, and full downstream consumption without placeholder leakage
 
 ### Phase 11.8 - Quality Grading and Selective Reruns
 - status: `implemented`

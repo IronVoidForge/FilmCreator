@@ -34,6 +34,44 @@ That means most of the new work belongs in:
 
 not in a final “write the whole prompt” LLM pass.
 
+## Current Implementation Checkpoint
+
+### Landed in the baseline pipeline
+
+- scene contracts now carry prompt-ready scene variables such as:
+  - `scene_short_description`
+  - `scene_primary_scale_story_point`
+  - `scene_required_anchor_catalog`
+  - planned-shot prompt seed fields
+- shot packages now carry prompt-ready frame variables such as:
+  - `visible_primary_subject_id`
+  - `visible_secondary_subject_ids`
+  - `primary_subject_frame_position`
+  - `primary_subject_scale_relation`
+  - `primary_subject_facing_direction`
+  - `primary_subject_pose_description`
+  - `subject_relation_summary`
+  - `required_environment_anchor_1`
+  - `camera_package_description`
+- prompt preparation now does baseline deterministic:
+  - `image1` / `image2` / `image3` / `image4` mapping
+  - template-style shot prompt assembly
+  - stronger narrator off-screen handling
+- deterministic validation/helper work has landed around:
+  - shot grammar coherence
+  - visible cast filtering
+  - placeholder stripping
+  - scene parsing cleanup
+  - targeted scene-field repair
+
+### Still open / under active refinement
+
+- clean separation between subject anchors and environment anchors
+- stronger typing for scale-proof versus detail-only fields
+- transition-scene environment handoff in fully clean reruns
+- lighting/style enum quality for unusual states like trance, void transit, and similar edge cases
+- final prompt fidelity compared with the reference-note ideal prompts
+
 ## Implementation Principles
 
 ### 1. Prompt-ready fragments, not summaries

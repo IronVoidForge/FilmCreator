@@ -20,8 +20,11 @@ Ship a local-first, reviewable, resumable film pipeline that can:
 - The latest full `princess_of_mars_test` run completed `28/28` chapters with `0` failures.
 - Multi-chapter authoring now produces stable analysis artifacts, world registries, continuity state, and run-level failure/retry tracking.
 - The librarian/index layer exists and can now serve as the retrieval backbone for synthesis stages.
+- Phase 7 character bible synthesis is implemented as a CLI/launcher stage.
 - Phase 8 environment bible synthesis is now implemented and runnable through the CLI and launcher.
+- Phase 9.5 scene binding, Phase 10 shot planning, Phase 11 dialogue timeline, Phase 11.5 prompt preparation, Phase 11.7 descriptor enrichment, and Phase 11.8 quality grading are all implemented as runnable downstream stages.
 - Repair-first retries and chunk fallback are active and materially improved authoring stability.
+- The current bottleneck is no longer phase availability; it is prompt-ready variable quality, environment handoff in transition scenes, and final prompt fidelity.
 
 ## Working Principles
 
@@ -195,7 +198,13 @@ This is the handoff layer between scene planning and shot planning. It is the ri
 
 #### Current Status
 
-Planned.
+Validated for baseline binding synthesis and downstream handoff.
+
+Current refinement work is focused on:
+
+- beat-level environment overrides in transition scenes
+- chapter-local environment alias selection
+- preventing environment flattening when a scene legitimately spans more than one place
 
 ### Phase 10 â€“ Shot Planning and Shot Packages
 
@@ -401,7 +410,13 @@ The project already knows the canon and can prepare prompt bundles. This phase a
 
 #### Current Status
 
-Implemented in code. Next validation is to confirm the new binding artifacts reliably eliminate per-shot environment drift during full downstream runs.
+Validated for baseline descriptor synthesis.
+
+Current refinement work is focused on:
+
+- prompt-ready field quality
+- classifier robustness across species and role families
+- reducing placeholder leakage into downstream prompt preparation
 
 ### Phase 11.8 â€“ Quality Grading and Selective Reruns
 
@@ -436,7 +451,7 @@ The pipeline now produces enough structured output that a later QA pass can judg
 
 #### Current Status
 
-Planned.
+Implemented.
 
 ### Phase 12 â€“ Character Sheet Generation and Approval (lighter planning for now)
 
@@ -614,12 +629,12 @@ When older beat/clip planning logic is still useful, wrap it through compatibili
 2. Phase 7 character bible synthesis is implemented and runnable.
 3. Phase 8 environment bible synthesis is implemented and runnable.
 4. Phase 9 scene production contracts and chapter storyboard outputs are implemented and runnable.
-5. Implement Phase 10 shot planning and shot packages.
-6. Implement Phase 11 dialogue, timing, and edit-aware sequencing.
-7. Implement Phase 11.5 prompt preparation and reference pack assembly.
-8. Implement Phase 11.6 key item index and reference pack assembly.
-9. Implement Phase 11.7 descriptor enrichment and reference coverage.
-10. Implement Phase 11.8 quality grading and selective reruns.
+5. Phase 10 shot planning and shot packages are implemented and validated for baseline runs; continue tightening environment handoff and prompt-ready variable quality.
+6. Phase 11 dialogue, timing, and edit-aware sequencing is implemented and validated for baseline runs.
+7. Phase 11.5 prompt preparation and reference pack assembly is implemented and validated for baseline runs; continue moving toward template-first prompt rendering.
+8. Phase 11.6 key item index and reference pack assembly remains pending as a distinct first-class phase.
+9. Phase 11.7 descriptor enrichment and reference coverage is implemented and validated for baseline runs; continue refining prompt-facing field quality.
+10. Phase 11.8 quality grading and selective reruns is implemented; next validation is regular use on live rerun queues.
 11. Then move into production asset generation phases 12-17.
 
 ## Database Timing

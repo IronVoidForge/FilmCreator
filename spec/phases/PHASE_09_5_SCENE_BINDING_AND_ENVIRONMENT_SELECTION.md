@@ -102,4 +102,6 @@ orchestrator/shot_planner.py
 
 ## Status
 
-- planned
+- `validated`
+- evidence: `synthesize-scene-bindings` writes per-scene binding artifacts, review queues, and future-environment request files, and the downstream dev-slice pipeline now runs this phase ahead of shot planning
+- next revision required: confirm beat-level environment overrides consistently survive transition scenes and eliminate flattened environment handoff in clean reruns

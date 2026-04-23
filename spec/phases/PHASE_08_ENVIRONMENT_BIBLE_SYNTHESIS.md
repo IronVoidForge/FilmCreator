@@ -48,3 +48,11 @@ orchestrator/environment_bible.py
 
 - consistent environment descriptions across scenes
 - reusable references for shot planning
+
+---
+
+## Status
+
+- `implemented`
+- evidence: `synthesize-environment-bibles` is available through `orchestrator/cli.py`, `orchestrator/environment_bible.py` exists, and the authoring/full-book launchers already route through this phase
+- next revision required: validate artifact writing, reuse semantics, and hierarchy-aware environment continuity against the current project output layout

@@ -88,3 +88,11 @@ orchestrator/character_bible_models.py
 - produces stable character definitions
 - preserves evidence
 - supports incremental updates
+
+---
+
+## Status
+
+- `implemented`
+- evidence: `synthesize-character-bibles` is available through `orchestrator/cli.py`, dedicated synthesis modules exist under `orchestrator/character_bible*.py`, and the authoring/full-book launchers already route through this phase
+- next revision required: validate artifact writing, reuse semantics, and locked-field preservation against the current project output layout

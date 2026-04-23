@@ -744,5 +744,6 @@ Potential launcher:
 
 ## Status
 
-- `planned`
-- evidence: the pipeline already has canonical bibles, scene contracts, shot packages, prompt preparation, and book-index retrieval, so this is the right place to add structured descriptor enrichment without restarting the whole architecture
+- `validated`
+- evidence: `synthesize-descriptor-enrichment` is available through `orchestrator/cli.py`, descriptor artifacts and review indexes are now written by the live pipeline, and character descriptor spot checks are already being used to improve real project outputs
+- next revision required: strengthen scene/environment descriptor quality, prompt-ready field typing, and downstream prompt consumption without placeholder leakage
