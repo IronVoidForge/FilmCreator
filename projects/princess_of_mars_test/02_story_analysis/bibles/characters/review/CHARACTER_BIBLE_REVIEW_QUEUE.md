@@ -1,3 +1,178 @@
 # Character Bible Review Queue
 
-- No character bible review items.
+- `john_carter`
+  - exact physical build and proportions
+  - specific movement language or posture
+- `apache_warriors`
+  - Specific physical builds of individual members are unknown.
+  - Exact visual details of the traditional attire are not specified beyond general era/culture.
+- `former_self`
+  - Character identity and physical appearance are entirely unestablished in the source material.
+- `protagonist`
+  - The specific visual appearance of the post-transformation body is not fully detailed beyond agility and combat prowess.
+  - Costume/clothing state in later chapters (CH006 onwards) is unknown.
+- `martian_mounts`
+  - Visual identity is entirely unestablished in provided evidence.
+  - Character nature (individual vs. group) remains ambiguous based on the identifier "mounts".
+- `martian_warrior_leader`
+  - Complete lack of physical or behavioral description in provided evidence.
+  - Visual identity, age, build, and costume are entirely unestablished.
+- `martian_warriors`
+  - Specific details of "standard Martian warrior gear" beyond rifles.
+  - Exact nature of the grappling gear mentioned in CH008.
+- `dead_friend`
+  - physical appearance
+  - age
+  - gender
+  - clothing/costume
+  - specific identity/name
+- `chieftain`
+  - Specific facial features or exact height/weight are not provided.
+  - Specific costume details (armor type, color) are not explicitly described beyond being "heavily armed."
+- `green_martians`
+  - Specific physical proportions and anatomy are unknown.
+  - Clothing, armor, or lack thereof is unknown.
+  - Behavioral patterns and movement styles are unknown.
+- `sola`
+  - Specific age and physical build are not provided.
+  - Exact details of "Green Martian attire" remain unspecified.
+- `tars_tarkas`
+  - Specific physical build and proportions are not detailed.
+  - Exact age or stage of life is unknown.
+- `martian_leader`
+  - Specific age or stage of life
+  - Detailed clothing/armor beyond the armlet and silhouette
+- `colossal_ape_creature`
+  - Specific species or subspecies characteristics.
+  - Visual texture (fur, skin, etc.).
+  - Actual physical dimensions and weight.
+  - Behavioral temperament.
+- `watchdog`
+  - complete lack of visual or behavioral description in provided evidence
+- `martian_warrior`
+  - Complete lack of visual or behavioral descriptors in the provided evidence.
+- `the_chieftain`
+  - Total lack of descriptive visual or behavioral evidence in provided source material.
+- `ape_man_1`
+  - Total lack of descriptive evidence regarding physical appearance or behavior.
+- `ape_man_2`
+  - Character lacks any descriptive visual or behavioral evidence in the provided source material.
+- `watch_thing`
+  - Specific number of legs is not defined.
+  - Exact biological species or origin is unknown.
+- `the_colossal_creature`
+  - complete lack of physical or behavioral description in provided evidence
+  - unknown biological or mechanical nature of the entity
+- `the_watch_dog`
+  - Character identity and physical appearance are entirely unstated in the provided evidence.
+- `lorquas_ptomel_jed`
+  - Specific costume or armor details are unstated.
+  - Exact age and facial features are unstated.
+  - Movement style and mannerisms are unstated.
+- `young_martian`
+  - Specific costume or clothing style.
+  - Specific movement patterns or mannerisms.
+  - Exact age beyond the "young" descriptor.
+- `bull_ape`
+  - Specific clothing or armor is not detailed beyond silhouette.
+  - Exact species or biological origin is unknown.
+- `bull_ape_mate`
+  - Specific facial features or skin texture
+  - Clothing or armor details
+  - Age or stage of life
+- `female_prisoner`
+  - complete lack of physical description or biographical detail in provided evidence
+  - actual name and visual appearance are unknown
+- `green_martian_warriors`
+  - Specific physical anatomy and proportions are unknown.
+  - Exact costume design and weaponry are unknown.
+  - Specific movement patterns or combat styles are unknown.
+- `woola`
+  - Specific species nomenclature (referred to as both "Martian hound" and "calot").
+- `red_prisoner`
+  - complete lack of physical or behavioral description in provided evidence
+- `sarkoja`
+  - Specific physical build and exact facial features are not detailed.
+  - Exact movement style is unknown.
+- `the_prisoner`
+  - Specific age of the character.
+  - Exact clothing or costume worn.
+  - Character's movement style or mannerisms.
+- `red_martian_prisoner`
+  - Specific physical dimensions and facial features are unstated.
+  - Exact nature of prisoner clothing/restraints is unknown.
+  - Movement style and temperament are not documented.
+- `dejah_thoris`
+  - Specific age and exact physical proportions are not defined.
+  - Exact details of the "princess attire" or "mourning attire" are implied but not visually specified.
+- `lorquas_ptomel`
+  - Specific facial features or scars are not detailed.
+  - Exact age is unstated.
+- `tal_hajus`
+  - Specific facial features or exact body proportions are not detailed.
+  - Exact age is unknown.
+- `dak_kova`
+  - Specific physical build and age are not defined.
+  - Exact visual details of the "ornate" leadership attire are unknown.
+- `kantos_kan`
+  - Exact age and specific physical dimensions.
+  - Specific visual details of his "specialized weaponry."
+- `warhoon_horde`
+  - Specific physical proportions and body types of individual members.
+  - Exact age range of the population.
+- `zad`
+  - Specific facial features or scars are unstated.
+  - Exact age and specific clothing/armor details are unknown.
+- `caretaker`
+  - Specific clothing items or textures.
+  - Exact movement style or posture.
+- `ptor_family`
+  - Specific physical descriptions of individual members are not provided.
+  - Exact visual details of "Red Martian attire" are undefined.
+- `solas_mother`
+  - Specific physical appearance and build.
+  - Costume and silhouette.
+  - Age and movement style.
+- `than_kosis`
+  - Specific physical build and exact facial features are not detailed.
+  - Exact color palette or material of the Zodangan regalia is unknown.
+- `zodangan_scout`
+  - Specific physical appearance and age.
+  - Exact nature of the "royal relative" connection.
+  - Visual design of flight equipment or scout attire.
+- `bar_comas`
+  - Specific physical build and facial features are not defined.
+  - Exact visual details of the Warhoon/Jeddak regalia are unknown.
+- `the_healer`
+  - Specific physical dimensions and body type are unstated.
+  - Exact movement patterns or mannerisms are unknown.
+- `the_jailer`
+  - Specific physical features and facial characteristics are unknown.
+  - Exact age and body proportions are not established.
+- `guardsmen`
+  - Specific physical appearance and facial features are unknown.
+  - Exact design/style of "standard Zodangan armor" is not detailed.
+- `notan`
+  - Specific physical appearance and age are not documented.
+  - Exact details of Zodangan attire.
+- `sab_than`
+  - Specific physical build and facial features are not documented.
+  - Exact movement style or mannerisms are unknown.
+- `tardos_mors`
+  - Conflicting reports on whether the entity is a singular individual or a group entity.
+  - Specific physical build and facial features are not documented.
+- `assistant_keeper_assassin`
+  - Physical appearance is completely unknown.
+  - Costume and silhouette are completely unknown.
+  - Age, build, and movement are completely unknown.
+- `black_haired_woman`
+  - Full physical appearance is unknown.
+  - Age, build, and clothing are not established.
+  - Personality and role are not established.
+- `mummified_woman`
+  - specific age at time of death
+  - clothing or funerary wrappings
+  - physical dimensions and build
+  - manner of movement (if any)
+- `visionary_child`
+  - Total lack of descriptive visual or behavioral evidence in provided source material.

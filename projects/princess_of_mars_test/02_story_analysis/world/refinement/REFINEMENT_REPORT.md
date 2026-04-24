@@ -1,7 +1,7 @@
 # World Refinement Report
 
 - project_slug: princess_of_mars_test
-- generated_at_utc: 2026-04-24T16:54:22.401612+00:00
+- generated_at_utc: 2026-04-24T17:03:03.287058+00:00
 - candidate_count: 8
 - comparison_count: 9
 - decision_count: 8

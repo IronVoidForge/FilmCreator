@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/james_k_powell.md] Physical Description: A mining engineer and former Confederate officer; friend and partner to John Carter.
+- identity_baseline: 19th-century mining engineer and former Confederate officer.
 - age_presence: unknown
 - physical_build: unknown
-- origin_or_historical_context: unknown
+- origin_or_historical_context: 1860s era; frontier/mining setting.
 - movement_language: unknown
-[source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/james_k_powell.md] Physical Description: A mining engineer and former Confederate officer; friend and partner to John Carter. [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/james_k_powell.md] Costume/Silhouette: 1860s era attire, likely practical for mining engineering and frontier travel. [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/james_k_powell.md] Prompt Phrases: Mining engineer, 19th-century officer, deceased prospector, riddled with arrows.
+A man of the 1860s era, appearing as a practical mining engineer or former officer. His silhouette is defined by frontier-ready, functional attire from the mid-19th century. In his final recorded state, he is a deceased prospector characterized by being riddled with arrows.
 
-- physical_traits: (none)
-- costume_signature: (none)
-- distinguishing_features: (none)
-- state_variants: (none)
+- physical_traits: Mining engineer aesthetic
+- costume_signature: Practical 1860s attire suitable for mining engineering and frontier travel.
+- distinguishing_features: Riddled with arrows (deceased state)
+- state_variants: Deceased prospector (riddled with arrows)
 
 ## Behavioral Bible
 
-- personality: (none)
-- role: individual
-- voice_notes: (none)
-- relationship_notes: (none)
+- personality: unknown
+- role: Friend and partner to John Carter; mining engineer; former Confederate officer.
+- voice_notes: unknown
+- relationship_notes: Friend and partner to John Carter
 
 ## Continuity
 
-- continuity_constraints: (none)
-- unresolved_ambiguities: (none)
+- continuity_constraints: Must maintain 1860s era practical clothing for non-deceased appearances.
+- unresolved_ambiguities: Specific physical build and age are not provided., Exact facial features or hair color are unknown.
 
 ## Evidence Summary
 
@@ -53,4 +53,4 @@
 - status: `generated`
 - source_fingerprint: `2c7be7643511776051c4e675e099c7ae382dbec6`
 - created_at_utc: `2026-04-24T16:57:51.692970+00:00`
-- updated_at_utc: `2026-04-24T16:57:51.692970+00:00`
+- updated_at_utc: `2026-04-24T17:18:37.905057+00:00`
