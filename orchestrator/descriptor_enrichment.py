@@ -20,7 +20,7 @@ from .lmstudio_client import LMStudioClient
 from .scaffold import create_project
 from .settings import load_runtime_settings
 
-DESCRIPTOR_ENRICHMENT_SCHEMA_VERSION = "2026-04-22-descriptor-enrichment-v3"
+DESCRIPTOR_ENRICHMENT_SCHEMA_VERSION = "2026-04-23-descriptor-enrichment-v4"
 
 
 DESCRIPTOR_ROOT = Path("02_story_analysis") / "descriptors"
@@ -109,6 +109,19 @@ SHOT_FIELD_ORDER = [
     "perspective_notes",
     "primary_subject",
     "secondary_subjects",
+    "visible_primary_subject_id",
+    "visible_secondary_subject_ids",
+    "primary_subject_frame_position",
+    "primary_subject_scale_relation",
+    "primary_subject_facing_direction",
+    "primary_subject_pose_description",
+    "subject_relation_summary",
+    "required_environment_anchor_1",
+    "required_subject_anchor_1",
+    "required_celestial_anchor_1",
+    "required_scale_proof_detail",
+    "camera_package_description",
+    "environment_subzone",
     "subject_positions",
     "pose_notes",
     "gaze_direction",
@@ -1924,6 +1937,56 @@ def _best_effort_generated_value(
         )
         if specific is not None:
             return specific
+    if entity_type == SHOT_ENTITY_TYPE and base_fields is not None:
+        shot_specific_defaults = {
+            "subject_positions": _first_nonempty(
+                str(base_fields.get("primary_subject_frame_position", "")),
+                str(base_fields.get("subject_relation_summary", "")),
+                fallback="readable subject placement in frame",
+            ),
+            "pose_notes": _first_nonempty(
+                str(base_fields.get("primary_subject_pose_description", "")),
+                str(base_fields.get("start_state", "")),
+                fallback="stable readable pose",
+            ),
+            "gaze_direction": _first_nonempty(
+                str(base_fields.get("primary_subject_facing_direction", "")),
+                fallback="focused toward the scene action",
+            ),
+            "background_layers": _first_nonempty(
+                str(base_fields.get("required_environment_anchor_1", "")),
+                str(base_fields.get("environment_subzone", "")),
+                fallback="readable location anchor behind the subject",
+            ),
+            "foreground_elements": _first_nonempty(
+                str(base_fields.get("required_subject_anchor_1", "")),
+                str(base_fields.get("required_celestial_anchor_1", "")),
+                fallback="foreground action detail supporting the beat",
+            ),
+            "midground_elements": _first_nonempty(
+                str(base_fields.get("environment_subzone", "")),
+                str(base_fields.get("required_environment_anchor_1", "")),
+                fallback="midground spatial anchor",
+            ),
+            "depth_cues": _first_nonempty(
+                str(base_fields.get("required_scale_proof_detail", "")),
+                str(base_fields.get("primary_subject_scale_relation", "")),
+                fallback="clear depth and scale relationship",
+            ),
+            "start_state": _first_nonempty(
+                str(base_fields.get("start_state", "")),
+                str(base_fields.get("primary_subject_pose_description", "")),
+                fallback="shot enters on a readable action state",
+            ),
+            "end_state": _first_nonempty(
+                str(base_fields.get("end_state", "")),
+                str(base_fields.get("movement_notes", "")),
+                fallback="shot resolves on a readable transition point",
+            ),
+        }
+        specific = shot_specific_defaults.get(field_name)
+        if specific is not None:
+            return specific
     defaults: dict[str, dict[str, Any]] = {
         "character": {
             "height": "average-tall",
@@ -2571,32 +2634,45 @@ def _base_shot_descriptor(
     set_field("shot_type", shot.get("shot_type") or "medium", origin="shot_package")
     set_field("previous_shot_id", str(shot.get("previous_shot_id", "")).strip().upper() or "none", origin="shot_package")
     set_field("next_shot_id", str(shot.get("next_shot_id", "")).strip().upper() or "none", origin="shot_package")
-    set_field("angle", shot.get("shot_type") or "medium", origin="shot_package")
+    set_field("angle", shot.get("camera_angle") or shot.get("shot_type") or "medium", origin="shot_package")
     set_field("framing", shot.get("composition") or "Readable composition.", origin="shot_package")
-    set_field("lens_family", "neutral_reference", origin="fallback")
-    set_field("distance", "medium", origin="fallback")
-    set_field("camera_height", "eye-level", origin="heuristic")
-    set_field("camera_motion", shot.get("camera_description") or "stable", origin="shot_package")
-    set_field("zoom_behavior", "stable", origin="heuristic")
-    set_field("focus_target", _first_nonempty(shot.get("shot_title"), shot.get("prompt_seed"), fallback=shot_id), origin="shot_package")
+    set_field("lens_family", shot.get("lens_family") or "unknown", origin="shot_package")
+    set_field("distance", shot.get("shot_size") or "unknown", origin="shot_package")
+    set_field("camera_height", shot.get("camera_angle") or "unknown", origin="shot_package")
+    set_field("camera_motion", shot.get("camera_description") or shot.get("camera_motion") or "stable", origin="shot_package")
+    set_field("zoom_behavior", shot.get("zoom_behavior") or "unknown", origin="shot_package")
+    set_field("focus_target", _first_nonempty(shot.get("primary_subject"), shot.get("shot_title"), shot.get("prompt_seed"), fallback=shot_id), origin="shot_package")
     set_field("perspective_notes", shot.get("camera_description") or "unknown", origin="shot_package")
     set_field("characters_in_frame", _coerce_string_list([ref.get("display_name", ref.get("label", "")) for ref in character_refs if isinstance(ref, dict)]), origin="shot_package")
-    set_field("primary_subject", _first_nonempty(*[ref.get("display_name", ref.get("label", "")) for ref in character_refs if isinstance(ref, dict)], fallback="unknown"), origin="shot_package")
-    set_field("secondary_subjects", _coerce_string_list([ref.get("display_name", ref.get("label", "")) for ref in character_refs[1:] if isinstance(ref, dict)]), origin="shot_package")
-    set_field("subject_positions", "unknown", origin="fallback")
-    set_field("pose_notes", "unknown", origin="fallback")
-    set_field("gaze_direction", "unknown", origin="fallback")
+    set_field("primary_subject", shot.get("primary_subject") or _first_nonempty(*[ref.get("display_name", ref.get("label", "")) for ref in character_refs if isinstance(ref, dict)], fallback="unknown"), origin="shot_package")
+    set_field("secondary_subjects", _coerce_string_list(shot.get("secondary_subjects", []), [ref.get("display_name", ref.get("label", "")) for ref in character_refs[1:] if isinstance(ref, dict)]), origin="shot_package")
+    set_field("visible_primary_subject_id", shot.get("visible_primary_subject_id") or "unknown", origin="shot_package")
+    set_field("visible_secondary_subject_ids", _coerce_string_list(shot.get("visible_secondary_subject_ids", [])), origin="shot_package")
+    set_field("primary_subject_frame_position", shot.get("primary_subject_frame_position") or "unknown", origin="shot_package")
+    set_field("primary_subject_scale_relation", shot.get("primary_subject_scale_relation") or "unknown", origin="shot_package")
+    set_field("primary_subject_facing_direction", shot.get("primary_subject_facing_direction") or "unknown", origin="shot_package")
+    set_field("primary_subject_pose_description", shot.get("primary_subject_pose_description") or "unknown", origin="shot_package")
+    set_field("subject_relation_summary", shot.get("subject_relation_summary") or "unknown", origin="shot_package")
+    set_field("required_environment_anchor_1", shot.get("required_environment_anchor_1") or "unknown", origin="shot_package")
+    set_field("required_subject_anchor_1", shot.get("required_subject_anchor_1") or "unknown", origin="shot_package")
+    set_field("required_celestial_anchor_1", shot.get("required_celestial_anchor_1") or "unknown", origin="shot_package")
+    set_field("required_scale_proof_detail", shot.get("required_scale_proof_detail") or "unknown", origin="shot_package")
+    set_field("camera_package_description", shot.get("camera_package_description") or "unknown", origin="shot_package")
+    set_field("environment_subzone", shot.get("environment_subzone") or "unknown", origin="shot_package")
+    set_field("subject_positions", shot.get("primary_subject_frame_position") or shot.get("subject_relation_summary") or "unknown", origin="shot_package")
+    set_field("pose_notes", shot.get("primary_subject_pose_description") or shot.get("pose_anchor_frame") or "unknown", origin="shot_package")
+    set_field("gaze_direction", shot.get("primary_subject_facing_direction") or "unknown", origin="shot_package")
     set_field("interaction_notes", _coerce_string_list(shot.get("continuity_constraints", [])), origin="shot_package")
     set_field("environment_id", str(env_ref.get("canonical_id", "")).strip().lower() or "unknown", origin="shot_package")
     set_field("environment_label", _first_nonempty(str(env_ref.get("display_name", "")), str(env_ref.get("label", "")), fallback="unknown"), origin="shot_package")
     set_field("spatial_continuity", shot.get("composition") or "unknown", origin="shot_package")
-    set_field("background_layers", "unknown", origin="fallback")
-    set_field("foreground_elements", "unknown", origin="fallback")
-    set_field("midground_elements", "unknown", origin="fallback")
-    set_field("depth_cues", "unknown", origin="fallback")
-    set_field("start_state", "unknown", origin="fallback")
-    set_field("end_state", "unknown", origin="fallback")
-    set_field("movement_notes", shot.get("shot_notes") or "unknown", origin="shot_package")
+    set_field("background_layers", shot.get("required_environment_anchor_1") or shot.get("environment_subzone") or "unknown", origin="shot_package")
+    set_field("foreground_elements", shot.get("required_subject_anchor_1") or shot.get("required_celestial_anchor_1") or "unknown", origin="shot_package")
+    set_field("midground_elements", shot.get("environment_subzone") or shot.get("required_environment_anchor_1") or "unknown", origin="shot_package")
+    set_field("depth_cues", shot.get("required_scale_proof_detail") or shot.get("primary_subject_scale_relation") or "unknown", origin="shot_package")
+    set_field("start_state", shot.get("start_state") or "unknown", origin="shot_package")
+    set_field("end_state", shot.get("end_state") or "unknown", origin="shot_package")
+    set_field("movement_notes", shot.get("action_during_shot") or shot.get("shot_notes") or "unknown", origin="shot_package")
     set_field("continuity_constraints", _coerce_string_list(shot.get("continuity_constraints", []), scene_contract.get("continuity_constraints", [])), origin="shot_package")
     set_field("keyframe_intent", shot.get("prompt_seed") or "unknown", origin="shot_package")
     set_field("image_to_image_intent", "preserve canonical continuity", origin="heuristic")
@@ -2646,6 +2722,44 @@ def _base_shot_descriptor(
         inferred_fields=inferred_fields,
     )
 
+    generic_shot_fillers = {
+        "primary subject centered with readable eyeline and spacing",
+        "clear readable pose with stable silhouette",
+        "architectural and atmospheric background layers",
+        "framing foreground details that support depth",
+        "midground action and spatial anchors",
+        "clear foreground-to-background separation",
+        "shot begins in visual continuity with the prior beat",
+        "shot lands on a readable transition point",
+    }
+    for field_name in [
+        "subject_positions",
+        "pose_notes",
+        "background_layers",
+        "foreground_elements",
+        "midground_elements",
+        "depth_cues",
+        "start_state",
+        "end_state",
+    ]:
+        value = str(base_fields.get(field_name, "")).strip().lower()
+        if value in generic_shot_fillers:
+            review_flags.append(f"generic_shot_descriptor_{field_name}")
+    framing_text = " ".join(
+        str(base_fields.get(key, "")).strip().lower()
+        for key in ["framing", "spatial_continuity", "environment_subzone", "required_environment_anchor_1"]
+        if str(base_fields.get(key, "")).strip()
+    )
+    environment_id = str(base_fields.get("environment_id", "")).strip().lower()
+    if environment_id and environment_id not in {"unknown", "none"} and framing_text and environment_id not in framing_text:
+        scene_environment_ids = {
+            str(ref.get("canonical_id", "")).strip().lower()
+            for ref in scene_contract.get("environments_required", [])
+            if isinstance(ref, dict) and str(ref.get("canonical_id", "")).strip()
+        }
+        conflicting_scene_envs = [env_id for env_id in scene_environment_ids if env_id != environment_id and env_id in framing_text]
+        if conflicting_scene_envs:
+            review_flags.append("shot_environment_reference_conflict")
     if "unknown" in {str(base_fields.get("environment_label", "")).lower(), str(base_fields.get("primary_subject", "")).lower()}:
         review_flags.append("thin_shot_subject_context")
     metadata = DescriptorMetadata(

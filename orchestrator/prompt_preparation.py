@@ -14,7 +14,7 @@ from .environment_bible import _is_film_facing_environment
 from .prompt_package import PromptPackage, write_prompt_package
 from .scaffold import create_project
 
-PROMPT_PREPARATION_SCHEMA_VERSION = "2026-04-23-prompt-preparation-v2"
+PROMPT_PREPARATION_SCHEMA_VERSION = "2026-04-23-prompt-preparation-v3"
 
 
 PROMPT_PREP_ROOT = Path("03_prompt_packages") / "prepared"
@@ -84,7 +84,10 @@ def _compact(text: str, *, limit: int = 220) -> str:
 
 
 def _normalize_prompt_text(text: str) -> str:
-    return " ".join(text.split()).strip()
+    normalized = " ".join(text.split()).strip()
+    normalized = re.sub(r"\.\s*\.", ".", normalized)
+    normalized = re.sub(r",\s*,", ", ", normalized)
+    return normalized.strip(" ,")
 
 
 def _first_nonempty(*values: object, fallback: str = "") -> str:
@@ -537,6 +540,145 @@ def _asset_role_label(canonical_id: str) -> str:
     return cleaned
 
 
+def _is_missing_asset(value: str) -> bool:
+    normalized = _normalize_term(value or "")
+    return normalized in {"", "none", "null", "unknown", "reference subject"}
+
+
+def _looks_like_subject_anchor(text: str) -> bool:
+    normalized = _normalize_term(text)
+    if not normalized:
+        return False
+    subject_terms = {
+        "eye",
+        "eyes",
+        "face",
+        "hand",
+        "hands",
+        "wound",
+        "arrow",
+        "silhouette",
+        "posture",
+        "expression",
+        "pupil",
+        "reflection",
+        "gaze",
+        "head",
+    }
+    return any(term in normalized for term in subject_terms)
+
+
+def _looks_like_celestial_anchor(text: str) -> bool:
+    normalized = _normalize_term(text)
+    if not normalized:
+        return False
+    celestial_terms = {"mars", "planet", "moon", "sun", "star", "constellation", "red star", "red planet"}
+    return any(term in normalized for term in celestial_terms)
+
+
+def _prompt_safe_anchor_text(text: str) -> str:
+    cleaned = _normalize_prompt_text(text)
+    if not cleaned:
+        return ""
+    replacements = {
+        r"\bmars\b": "the red planet",
+        r"\bred star\b": "the red star",
+    }
+    for pattern, replacement in replacements.items():
+        cleaned = re.sub(pattern, replacement, cleaned, flags=re.IGNORECASE)
+    return cleaned.strip(" ,;")
+
+
+def _environment_reference_conflict_issues(
+    scene_contract: dict[str, Any],
+    bound_environment_id: str,
+    environment_subzone: str,
+    required_environment_anchor_1: str,
+    composition_hint: str,
+) -> list[str]:
+    if not bound_environment_id:
+        return []
+    env_refs = [ref for ref in scene_contract.get("environments_required", []) if isinstance(ref, dict)]
+    if len(env_refs) < 2:
+        return []
+    context_text = " ".join(part for part in [environment_subzone, required_environment_anchor_1, composition_hint] if part).lower()
+    if not context_text:
+        return []
+    bound_id = bound_environment_id.strip().lower()
+    best_other_id = ""
+    best_other_score = 0
+    bound_score = 0
+    for ref in env_refs:
+        ref_id = str(ref.get("canonical_id", "")).strip().lower()
+        if not ref_id:
+            continue
+        variants = {
+            _normalize_term(ref_id),
+            _normalize_term(str(ref.get("display_name", ""))),
+            _normalize_term(str(ref.get("label", ""))),
+        }
+        score = 0
+        for variant in variants:
+            if variant and variant in _normalize_term(context_text):
+                score = max(score, len(variant.split()))
+        if ref_id == bound_id:
+            bound_score = score
+        elif score > best_other_score:
+            best_other_score = score
+            best_other_id = ref_id
+    if best_other_id and best_other_score > bound_score:
+        return [f"Environment reference conflict: prompt variables align more with `{best_other_id}` than bound `{bound_id}`."]
+    return []
+
+
+def _validate_shot_prompt_inputs(
+    *,
+    shot: dict[str, Any],
+    scene_contract: dict[str, Any],
+    visible_primary_subject_id: str,
+    visible_secondary_subject_ids: list[str],
+    environment_canonical_id: str,
+    environment_subzone: str,
+    required_environment_anchor_1: str,
+    subject_relation_summary: str,
+    primary_subject_frame_position: str,
+    required_subject_anchor_1: str,
+    required_celestial_anchor_1: str,
+    reference_roles: list[tuple[str, str, str]],
+    composition_hint: str,
+) -> list[str]:
+    review_notes: list[str] = []
+    shot_id = str(shot.get("shot_id", "")).strip().upper() or "shot"
+    if str(shot.get("subject_visibility", "")).strip() != "off_screen_voice" and not visible_primary_subject_id:
+        review_notes.append(f"{shot_id}: visible primary subject id is missing for an on-screen shot.")
+    if "carries the frame alone" in subject_relation_summary.lower() and visible_secondary_subject_ids:
+        review_notes.append(f"{shot_id}: visible secondary subjects conflict with a solo-frame relation summary.")
+    if environment_subzone and not environment_canonical_id:
+        review_notes.append(f"{shot_id}: environment subzone is present but the bound environment asset is missing.")
+    asset_map = {image_key: asset for image_key, _, asset in reference_roles}
+    for image_key, asset in asset_map.items():
+        if _is_missing_asset(asset):
+            review_notes.append(f"{shot_id}: {image_key} asset is null or unresolved.")
+    review_notes.extend(
+        _environment_reference_conflict_issues(
+            scene_contract,
+            environment_canonical_id,
+            environment_subzone,
+            required_environment_anchor_1,
+            composition_hint,
+        )
+    )
+    if required_environment_anchor_1 and (_looks_like_subject_anchor(required_environment_anchor_1) or _looks_like_celestial_anchor(required_environment_anchor_1)):
+        review_notes.append(f"{shot_id}: environment anchor is typed like a subject/celestial detail instead of a set anchor.")
+    if required_subject_anchor_1 and not _looks_like_subject_anchor(required_subject_anchor_1):
+        review_notes.append(f"{shot_id}: subject anchor is missing or not body/detail-specific enough.")
+    if required_celestial_anchor_1 and not _looks_like_celestial_anchor(required_celestial_anchor_1):
+        review_notes.append(f"{shot_id}: celestial anchor is present but not actually celestial.")
+    if not primary_subject_frame_position:
+        review_notes.append(f"{shot_id}: primary subject frame position is missing.")
+    return review_notes
+
+
 def _base_inputs(
     *,
     subject_kind: str,
@@ -781,6 +923,8 @@ def _package_for_shot(
     primary_subject_pose_description = str(shot.get("primary_subject_pose_description", "")).strip()
     subject_relation_summary = str(shot.get("subject_relation_summary", "")).strip()
     required_environment_anchor_1 = str(shot.get("required_environment_anchor_1", "")).strip()
+    required_subject_anchor_1 = str(shot.get("required_subject_anchor_1", "")).strip()
+    required_celestial_anchor_1 = str(shot.get("required_celestial_anchor_1", "")).strip()
     required_scale_proof_detail = str(shot.get("required_scale_proof_detail", "")).strip()
     camera_package_description = str(shot.get("camera_package_description", "")).strip()
     shot_moment_summary = str(shot.get("shot_moment_summary", "")).strip()
@@ -800,6 +944,21 @@ def _package_for_shot(
     if primary_subject.lower() == "the narrator":
         subject_visibility = subject_visibility or "off_screen_voice"
         narration_mode = narration_mode or "voiceover_off_screen"
+    characters_in_frame = [ref for ref in shot.get("characters_in_frame", []) if isinstance(ref, dict)]
+    character_ids_in_frame = {
+        str(ref.get("canonical_id", "")).strip().lower()
+        for ref in characters_in_frame
+        if str(ref.get("canonical_id", "")).strip()
+    }
+    visible_secondary_subject_ids = [
+        item
+        for item in visible_secondary_subject_ids
+        if item in character_ids_in_frame and item != visible_primary_subject_id
+    ]
+    if "carries the frame alone" in subject_relation_summary.lower():
+        visible_secondary_subject_ids = []
+    if subject_visibility == "off_screen_voice":
+        visible_primary_subject_id = ""
     primary_subject_descriptor = _character_descriptor_by_id(
         visible_primary_subject_id,
         character_bibles,
@@ -827,13 +986,13 @@ def _package_for_shot(
     title = f"{shot_id} Shot Prompt - {variant_title}"
     prompt_id = f"{scene_id}_{shot_id}_{variant_key}_prompt"
     reference_role_candidates: list[tuple[str, str]] = []
-    if visible_primary_subject_id:
+    if visible_primary_subject_id and not _is_missing_asset(visible_primary_subject_id):
         reference_role_candidates.append(("identity reference for the primary visible subject", _asset_role_label(visible_primary_subject_id)))
-    if visible_secondary_subject_ids:
+    if visible_secondary_subject_ids and not _is_missing_asset(visible_secondary_subject_ids[0]):
         reference_role_candidates.append(("identity reference for the secondary visible subject", _asset_role_label(visible_secondary_subject_ids[0])))
-    if environment_canonical_id:
+    if environment_canonical_id and not _is_missing_asset(environment_canonical_id):
         reference_role_candidates.append(("environment reference for the scene location", _asset_role_label(environment_canonical_id)))
-    if len(visible_secondary_subject_ids) > 1:
+    if len(visible_secondary_subject_ids) > 1 and not _is_missing_asset(visible_secondary_subject_ids[1]):
         reference_role_candidates.append(("identity reference for an additional visible subject", _asset_role_label(visible_secondary_subject_ids[1])))
     reference_roles = [
         (f"image{index}", role_text, asset_label)
@@ -845,6 +1004,21 @@ def _package_for_shot(
         "",
     )
     environment_image_key = next((image_key for image_key, _, asset in reference_roles if asset == _asset_role_label(environment_canonical_id)), "")
+    validation_notes = _validate_shot_prompt_inputs(
+        shot=shot,
+        scene_contract=scene_contract,
+        visible_primary_subject_id=visible_primary_subject_id,
+        visible_secondary_subject_ids=visible_secondary_subject_ids,
+        environment_canonical_id=environment_canonical_id,
+        environment_subzone=environment_subzone,
+        required_environment_anchor_1=required_environment_anchor_1,
+        subject_relation_summary=subject_relation_summary,
+        primary_subject_frame_position=primary_subject_frame_position,
+        required_subject_anchor_1=required_subject_anchor_1,
+        required_celestial_anchor_1=required_celestial_anchor_1,
+        reference_roles=reference_roles,
+        composition_hint=composition_hint,
+    )
 
     prompt_parts: list[str] = []
     for image_key, role_text, _ in reference_roles:
@@ -853,9 +1027,11 @@ def _package_for_shot(
         [
             variant_camera,
             scene_short_description,
-            f"The subject from {primary_image_key} is {primary_subject_descriptor}, {primary_subject_frame_position}, {primary_subject_scale_relation}, {primary_subject_facing_direction}, {primary_subject_pose_description}" if primary_image_key else "",
+            f"The subject from {primary_image_key} is {primary_subject_descriptor}, {primary_subject_frame_position}, {primary_subject_scale_relation}, {primary_subject_facing_direction}, {primary_subject_pose_description}" if primary_image_key else (f"The visible subject is {primary_subject_frame_position}, {primary_subject_scale_relation}, {primary_subject_facing_direction}, {primary_subject_pose_description}" if primary_subject_frame_position else ""),
             f"The subject from {secondary_image_key} is {secondary_subject_descriptors[0]}, {subject_relation_summary}" if secondary_subject_descriptors and secondary_image_key else "",
-            f"Preserve {environment_reference_descriptor} from {environment_image_key}, especially {required_environment_anchor_1}" if environment_canonical_id and environment_image_key else f"Preserve {environment_descriptor}",
+            f"Preserve {environment_reference_descriptor} from {environment_image_key}, especially {_prompt_safe_anchor_text(required_environment_anchor_1)}" if environment_canonical_id and environment_image_key and required_environment_anchor_1 else f"Preserve {environment_descriptor}",
+            f"Keep one readable subject anchor: {_prompt_safe_anchor_text(required_subject_anchor_1)}" if required_subject_anchor_1 else "",
+            f"Keep celestial anchor {_prompt_safe_anchor_text(required_celestial_anchor_1)} stable in the frame" if required_celestial_anchor_1 else "",
             required_scale_proof_detail or scene_scale_story_point,
             camera_package_description or _listify(
                 f"shot size {shot_size}" if shot_size else "",
@@ -952,6 +1128,8 @@ def _package_for_shot(
             "scene_short_description": scene_short_description or "(none)",
             "shot_moment_summary": shot_moment_summary or "(none)",
             "required_environment_anchor_1": required_environment_anchor_1 or "(none)",
+            "required_subject_anchor_1": required_subject_anchor_1 or "(none)",
+            "required_celestial_anchor_1": required_celestial_anchor_1 or "(none)",
             "required_scale_proof_detail": required_scale_proof_detail or "(none)",
             "camera_package_description": camera_package_description or "(none)",
             "environment_subzone": environment_subzone or "(none)",
@@ -982,12 +1160,12 @@ def _package_for_shot(
         ),
         sources_markdown="\n".join(f"- {path}" for path in sources if path.exists()),
     )
-    review_notes: list[str] = []
+    review_notes: list[str] = list(validation_notes)
     if not characters:
         review_notes.append("No stable character descriptors could be derived.")
     if "None" in environment_descriptor or "unresolved" in environment_descriptor.lower():
         review_notes.append("Environment descriptor is unresolved or thin.")
-    return package, package_path, [str(path) for path in sources if path.exists()], review_notes
+    return package, package_path, [str(path) for path in sources if path.exists()], list(dict.fromkeys(review_notes))
 
 
 def _coerce_bullets(*values: Any) -> list[str]:
@@ -1268,6 +1446,7 @@ def run_prompt_preparation(
                             "subject_id": package.inputs.get("subject_id", ""),
                             "variant_name": package.inputs.get("variant_name", ""),
                             "title": package.title,
+                            "path": str(package_path),
                             "issues": review_notes,
                         }
                     )

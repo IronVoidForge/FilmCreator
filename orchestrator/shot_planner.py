@@ -16,7 +16,7 @@ from .lmstudio_client import LMStudioClient
 from .scaffold import create_project
 from .settings import load_runtime_settings
 
-SHOT_PLANNER_SCHEMA_VERSION = "2026-04-23-shot-planner-v5"
+SHOT_PLANNER_SCHEMA_VERSION = "2026-04-23-shot-planner-v6"
 
 SHOT_SIZE_ENUM = {"extreme_wide", "wide", "full", "medium_full", "medium", "medium_close", "close_up", "extreme_close_up", "insert_detail"}
 CAMERA_ANGLE_ENUM = {"eye_level", "low_angle", "high_angle", "overhead", "dutch"}
@@ -124,6 +124,8 @@ class ShotPackage:
     primary_subject_pose_description: str = ""
     subject_relation_summary: str = ""
     required_environment_anchor_1: str = ""
+    required_subject_anchor_1: str = ""
+    required_celestial_anchor_1: str = ""
     required_scale_proof_detail: str = ""
     camera_package_description: str = ""
     subject_blocking: list[str] = field(default_factory=list)
@@ -179,6 +181,8 @@ class ShotPackage:
             "primary_subject_pose_description": self.primary_subject_pose_description,
             "subject_relation_summary": self.subject_relation_summary,
             "required_environment_anchor_1": self.required_environment_anchor_1,
+            "required_subject_anchor_1": self.required_subject_anchor_1,
+            "required_celestial_anchor_1": self.required_celestial_anchor_1,
             "required_scale_proof_detail": self.required_scale_proof_detail,
             "camera_package_description": self.camera_package_description,
             "subject_blocking": self.subject_blocking,
@@ -406,6 +410,8 @@ def _looks_like_environment_anchor(value: str) -> bool:
     text = " ".join(str(value or "").lower().split())
     if not text or _is_placeholder_text(text):
         return False
+    if _looks_like_celestial_anchor(text):
+        return False
     if any(term in text for term in ["eye", "eyes", "face", "skin", "wrinkle", "wrinkles", "mouth", "breath", "blink", "blink", "expression"]):
         return False
     anchor_terms = {
@@ -418,7 +424,6 @@ def _looks_like_environment_anchor(value: str) -> bool:
         "cave",
         "void",
         "sky",
-        "star",
         "mountain",
         "landscape",
         "dais",
@@ -436,6 +441,54 @@ def _looks_like_environment_anchor(value: str) -> bool:
         "bar",
     }
     return any(term in text for term in anchor_terms)
+
+
+def _looks_like_subject_anchor(value: str) -> bool:
+    text = " ".join(str(value or "").lower().split())
+    if not text or _is_placeholder_text(text):
+        return False
+    if _looks_like_celestial_anchor(text):
+        return False
+    subject_terms = {
+        "eye",
+        "eyes",
+        "face",
+        "hand",
+        "hands",
+        "mouth",
+        "jaw",
+        "wound",
+        "arrow",
+        "scar",
+        "helmet",
+        "silhouette",
+        "posture",
+        "shoulder",
+        "shoulders",
+        "expression",
+        "pupil",
+        "reflection",
+        "gaze",
+        "head",
+    }
+    return any(term in text for term in subject_terms)
+
+
+def _looks_like_celestial_anchor(value: str) -> bool:
+    text = " ".join(str(value or "").lower().split())
+    if not text or _is_placeholder_text(text):
+        return False
+    celestial_terms = {
+        "mars",
+        "planet",
+        "moon",
+        "sun",
+        "star",
+        "constellation",
+        "red star",
+        "red planet",
+    }
+    return any(term in text for term in celestial_terms)
 
 
 def _coerce_string_list(*values: object) -> list[str]:
@@ -1297,10 +1350,6 @@ def _camera_package_description(
 
 def _visible_primary_subject_id(primary_subject: str, characters: list[ShotReference], subject_visibility: str) -> str:
     if subject_visibility == "off_screen_voice" or primary_subject.strip().lower() == "the narrator":
-        for ref in characters:
-            canonical_id = (ref.canonical_id or "").strip()
-            if canonical_id:
-                return canonical_id
         return ""
     primary_variants = _label_variants(primary_subject)
     for ref in characters:
@@ -1319,7 +1368,7 @@ def _visible_secondary_subject_ids(primary_subject_id: str, characters: list[Sho
     secondary: list[str] = []
     for ref in characters:
         canonical_id = (ref.canonical_id or "").strip()
-        if not canonical_id or canonical_id == primary_subject_id:
+        if not canonical_id or canonical_id == primary_subject_id or _looks_like_celestial_anchor(canonical_id):
             continue
         secondary.append(canonical_id)
     return _ordered_unique(secondary)[:3]
@@ -1373,6 +1422,42 @@ def _environment_anchor(
     return subzone.strip() or (visible_environment_features[0].strip() if visible_environment_features else "")
 
 
+def _subject_anchor(
+    planned_shot: dict[str, Any],
+    beat_payload: dict[str, Any],
+    primary_subject_pose_description: str,
+    primary_subject_facing_direction: str,
+) -> str:
+    for candidate in (
+        str(planned_shot.get("planned_shot_required_anchor_1", "")),
+        str(planned_shot.get("planned_shot_subject_anchor_1", "")),
+        primary_subject_pose_description,
+        str(beat_payload.get("blocking_hint", "")),
+        primary_subject_facing_direction,
+    ):
+        if _looks_like_subject_anchor(candidate):
+            return candidate.strip()
+    return ""
+
+
+def _celestial_anchor(
+    planned_shot: dict[str, Any],
+    beat_payload: dict[str, Any],
+    subject_hints: list[str],
+) -> str:
+    candidates = [
+        str(planned_shot.get("planned_shot_required_anchor_1", "")),
+        str(planned_shot.get("planned_shot_celestial_anchor_1", "")),
+        *subject_hints,
+        *beat_payload.get("passive_subjects", []),
+        str(beat_payload.get("summary", "")),
+    ]
+    for candidate in candidates:
+        if _looks_like_celestial_anchor(candidate):
+            return candidate.strip()
+    return ""
+
+
 def _scale_proof_detail(
     planned_shot: dict[str, Any],
     primary_subject_scale_relation: str,
@@ -1392,6 +1477,59 @@ def _subject_relation_summary(primary_subject: str, secondary_subjects: list[str
     if secondary_subjects:
         return f"{primary_subject} plays against {', '.join(secondary_subjects[:2])} in the same frame"
     return f"{primary_subject} carries the frame alone"
+
+
+def _sanitize_visible_secondary_subject_ids(
+    visible_secondary_subject_ids: list[str],
+    characters: list[ShotReference],
+    primary_subject_id: str,
+    subject_relation_summary: str,
+    subject_visibility: str,
+) -> list[str]:
+    if subject_visibility == "off_screen_voice" or "carries the frame alone" in subject_relation_summary.lower():
+        return []
+    allowed_ids = {
+        (ref.canonical_id or "").strip()
+        for ref in characters
+        if (ref.canonical_id or "").strip() and not _looks_like_celestial_anchor(ref.canonical_id or "")
+    }
+    cleaned: list[str] = []
+    for item in visible_secondary_subject_ids:
+        canonical_id = str(item or "").strip()
+        if not canonical_id or canonical_id == primary_subject_id or canonical_id not in allowed_ids:
+            continue
+        cleaned.append(canonical_id)
+    return _ordered_unique(cleaned)[:3]
+
+
+def _sanitize_anchor_fields(
+    *,
+    planned_shot: dict[str, Any],
+    beat_payload: dict[str, Any],
+    subject_hints: list[str],
+    visible_environment_features: list[str],
+    subzone: str,
+    primary_subject_pose_description: str,
+    primary_subject_facing_direction: str,
+    required_environment_anchor_1: str,
+    required_subject_anchor_1: str,
+    required_celestial_anchor_1: str,
+) -> tuple[str, str, str]:
+    environment_anchor = required_environment_anchor_1.strip()
+    subject_anchor = required_subject_anchor_1.strip()
+    celestial_anchor = required_celestial_anchor_1.strip()
+
+    if not _looks_like_environment_anchor(environment_anchor):
+        environment_anchor = _environment_anchor(planned_shot, visible_environment_features, subzone)
+    if not _looks_like_subject_anchor(subject_anchor):
+        subject_anchor = _subject_anchor(planned_shot, beat_payload, primary_subject_pose_description, primary_subject_facing_direction)
+    if not _looks_like_celestial_anchor(celestial_anchor):
+        celestial_anchor = _celestial_anchor(planned_shot, beat_payload, subject_hints)
+    if _looks_like_celestial_anchor(environment_anchor):
+        environment_anchor = _environment_anchor(planned_shot, visible_environment_features, subzone)
+    if _looks_like_subject_anchor(environment_anchor):
+        environment_anchor = _environment_anchor(planned_shot, visible_environment_features, subzone)
+    return environment_anchor, subject_anchor, celestial_anchor
 
 
 def _default_shot_enums(shot_type: str, primary_subject: str) -> dict[str, str]:
@@ -1571,6 +1709,25 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
         primary_subject_pose_description = _first_nonempty(start_state, action_during_shot, fallback="")
         subject_relation_summary = _subject_relation_summary(primary_subject, secondary_subjects, subject_visibility)
         required_environment_anchor_1 = _environment_anchor(planned_shot, visible_environment_features, subzone)
+        required_subject_anchor_1 = _subject_anchor(
+            planned_shot,
+            beat_payload,
+            primary_subject_pose_description,
+            primary_subject_facing_direction,
+        )
+        required_celestial_anchor_1 = _celestial_anchor(planned_shot, beat_payload, subject_hints)
+        required_environment_anchor_1, required_subject_anchor_1, required_celestial_anchor_1 = _sanitize_anchor_fields(
+            planned_shot=planned_shot,
+            beat_payload=beat_payload,
+            subject_hints=subject_hints,
+            visible_environment_features=visible_environment_features,
+            subzone=subzone,
+            primary_subject_pose_description=primary_subject_pose_description,
+            primary_subject_facing_direction=primary_subject_facing_direction,
+            required_environment_anchor_1=required_environment_anchor_1,
+            required_subject_anchor_1=required_subject_anchor_1,
+            required_celestial_anchor_1=required_celestial_anchor_1,
+        )
         required_scale_proof_detail = _scale_proof_detail(planned_shot, primary_subject_scale_relation)
         camera_package_description = _camera_package_description(
             shot_size,
@@ -1634,6 +1791,8 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
                 "primary_subject_pose_description": primary_subject_pose_description,
                 "subject_relation_summary": subject_relation_summary,
                 "required_environment_anchor_1": required_environment_anchor_1,
+                "required_subject_anchor_1": required_subject_anchor_1,
+                "required_celestial_anchor_1": required_celestial_anchor_1,
                 "required_scale_proof_detail": required_scale_proof_detail,
                 "camera_package_description": camera_package_description,
                 "subject_blocking": subject_blocking,
@@ -1795,7 +1954,13 @@ STYLE RULES:
 - prefer short visual clauses over abstract commentary
 - do not write filler like "maintain readability" or "continue the established action"
 - choose one concrete environment anchor when possible
+- keep subject anchors, environment anchors, and celestial anchors separate
 - if scale matters, describe the scale proof explicitly
+- visible_secondary_subject_ids may only contain canonical ids for bodies actually visible in frame
+- never put celestial objects, planets, stars, or environment anchors into visible subject ids
+- if narration is off-screen, leave visible_primary_subject_id blank unless an actual visible body is the primary framed subject
+- for multi-environment scenes, bind each shot to the beat-specific environment and subzone rather than flattening the scene to one location
+- use lighting enums literally: low_key_night for night exteriors, diffuse_ambient for broad neutral interiors, torch_firelight for fire-lit spaces, high_contrast_ceremonial only for formal ritual/power scenes
 
 PROJECT:
 {project_slug}
@@ -1865,6 +2030,8 @@ primary_subject_facing_direction: <short facing direction clause>
 primary_subject_pose_description: <short pose clause>
 subject_relation_summary: <short relation clause>
 required_environment_anchor_1: <short required anchor clause>
+required_subject_anchor_1: <short visible body/detail anchor clause>
+required_celestial_anchor_1: <short sky/planet/star anchor clause when relevant; otherwise leave blank>
 required_scale_proof_detail: <short scale proof clause>
 camera_package_description: <single compact camera package clause>
 camera_description: <camera note>
@@ -1941,6 +2108,8 @@ shot_notes: <optional short note>
                     "primary_subject_pose_description": _first_nonempty(scalars.get("primary_subject_pose_description"), fallback=""),
                     "subject_relation_summary": _first_nonempty(scalars.get("subject_relation_summary"), fallback=""),
                     "required_environment_anchor_1": _first_nonempty(scalars.get("required_environment_anchor_1"), fallback=""),
+                    "required_subject_anchor_1": _first_nonempty(scalars.get("required_subject_anchor_1"), fallback=""),
+                    "required_celestial_anchor_1": _first_nonempty(scalars.get("required_celestial_anchor_1"), fallback=""),
                     "required_scale_proof_detail": _first_nonempty(scalars.get("required_scale_proof_detail"), fallback=""),
                     "camera_package_description": _first_nonempty(scalars.get("camera_package_description"), fallback=""),
                     "camera_description": _first_nonempty(scalars.get("camera_description"), fallback=""),
@@ -2001,6 +2170,8 @@ def _parse_shot_plan_blueprint(payload: dict[str, Any]) -> dict[str, Any]:
         "primary_subject_pose_description": str(payload.get("primary_subject_pose_description", "")),
         "subject_relation_summary": str(payload.get("subject_relation_summary", "")),
         "required_environment_anchor_1": str(payload.get("required_environment_anchor_1", "")),
+        "required_subject_anchor_1": str(payload.get("required_subject_anchor_1", "")),
+        "required_celestial_anchor_1": str(payload.get("required_celestial_anchor_1", "")),
         "required_scale_proof_detail": str(payload.get("required_scale_proof_detail", "")),
         "camera_package_description": str(payload.get("camera_package_description", "")),
         "camera_description": str(payload.get("camera_description", "")),
@@ -2172,6 +2343,8 @@ def _render_shot_package_markdown(package: ShotPackage) -> str:
         f"- primary_subject_pose_description: {package.primary_subject_pose_description or '(none)'}",
         f"- subject_relation_summary: {package.subject_relation_summary or '(none)'}",
         f"- required_environment_anchor_1: {package.required_environment_anchor_1 or '(none)'}",
+        f"- required_subject_anchor_1: {package.required_subject_anchor_1 or '(none)'}",
+        f"- required_celestial_anchor_1: {package.required_celestial_anchor_1 or '(none)'}",
         f"- required_scale_proof_detail: {package.required_scale_proof_detail or '(none)'}",
         f"- camera_package_description: {package.camera_package_description or '(none)'}",
         "",
@@ -2518,6 +2691,8 @@ def run_shot_planning(
                 "primary_subject_pose_description",
                 "subject_relation_summary",
                 "required_environment_anchor_1",
+                "required_subject_anchor_1",
+                "required_celestial_anchor_1",
                 "required_scale_proof_detail",
                 "camera_package_description",
                 "environment_subzone",
@@ -2676,6 +2851,8 @@ def run_shot_planning(
                 primary_subject_pose_description=_first_nonempty(merged.get("primary_subject_pose_description"), fallback=""),
                 subject_relation_summary=_first_nonempty(merged.get("subject_relation_summary"), fallback=""),
                 required_environment_anchor_1=_first_nonempty(merged.get("required_environment_anchor_1"), fallback=""),
+                required_subject_anchor_1=_first_nonempty(merged.get("required_subject_anchor_1"), fallback=""),
+                required_celestial_anchor_1=_first_nonempty(merged.get("required_celestial_anchor_1"), fallback=""),
                 required_scale_proof_detail=_first_nonempty(merged.get("required_scale_proof_detail"), fallback=""),
                 camera_package_description=_first_nonempty(merged.get("camera_package_description"), fallback=""),
                 shot_title=_first_nonempty(merged.get("shot_title"), fallback=f"{scene_title} {shot_id}"),
@@ -2781,6 +2958,17 @@ def run_shot_planning(
                 package.environment_subzone,
                 fallback="",
             )
+            package.required_subject_anchor_1 = package.required_subject_anchor_1 or _subject_anchor(
+                blueprint,
+                _coerce_scene_beat({"blocking_hint": package.subject_blocking[0] if package.subject_blocking else "", "environment_subzone": package.environment_subzone}, package.shot_moment_summary),
+                package.primary_subject_pose_description,
+                package.primary_subject_facing_direction,
+            )
+            package.required_celestial_anchor_1 = package.required_celestial_anchor_1 or _celestial_anchor(
+                blueprint,
+                _coerce_scene_beat({"passive_subjects": package.secondary_subjects, "summary": package.shot_moment_summary}, package.shot_moment_summary),
+                package.secondary_subjects,
+            )
             package.required_scale_proof_detail = package.required_scale_proof_detail or package.primary_subject_scale_relation
             package.camera_package_description = package.camera_package_description or _camera_package_description(
                 package.shot_size,
@@ -2792,6 +2980,49 @@ def run_shot_planning(
                 package.lighting_style,
             )
             package.shot_notes = package.shot_notes or _compact_snippet(str(scene_contract.get("summary", "")), limit=220)
+            package.visible_secondary_subject_ids = _sanitize_visible_secondary_subject_ids(
+                package.visible_secondary_subject_ids,
+                package.characters_in_frame,
+                package.visible_primary_subject_id,
+                package.subject_relation_summary,
+                package.subject_visibility,
+            )
+            visible_secondary_labels = [
+                _best_display_label(ref)
+                for ref in package.characters_in_frame
+                if (ref.canonical_id or "").strip() in set(package.visible_secondary_subject_ids)
+            ]
+            if package.visible_secondary_subject_ids:
+                package.secondary_subjects = visible_secondary_labels or package.secondary_subjects[:1]
+            else:
+                package.secondary_subjects = []
+            if package.subject_visibility == "off_screen_voice" or package.primary_subject.strip().lower() == "the narrator":
+                package.visible_primary_subject_id = ""
+            package.required_environment_anchor_1, package.required_subject_anchor_1, package.required_celestial_anchor_1 = _sanitize_anchor_fields(
+                planned_shot=blueprint,
+                beat_payload=_coerce_scene_beat(
+                    {
+                        "summary": package.shot_moment_summary,
+                        "blocking_hint": package.subject_blocking[0] if package.subject_blocking else "",
+                        "environment_subzone": package.environment_subzone,
+                        "passive_subjects": package.secondary_subjects,
+                    },
+                    package.shot_moment_summary,
+                ),
+                subject_hints=package.secondary_subjects,
+                visible_environment_features=package.key_visible_environment_features,
+                subzone=package.environment_subzone,
+                primary_subject_pose_description=package.primary_subject_pose_description,
+                primary_subject_facing_direction=package.primary_subject_facing_direction,
+                required_environment_anchor_1=package.required_environment_anchor_1,
+                required_subject_anchor_1=package.required_subject_anchor_1,
+                required_celestial_anchor_1=package.required_celestial_anchor_1,
+            )
+            package.subject_relation_summary = _subject_relation_summary(
+                package.primary_subject,
+                package.secondary_subjects,
+                package.subject_visibility,
+            )
 
             _write_shot_package_files(base_path, package)
             scene_written_files.extend([str(base_path.with_suffix(".json")), str(base_path.with_suffix(".md"))])
@@ -2910,6 +3141,8 @@ def _package_from_existing(existing: dict[str, Any], metadata: ShotPackageMetada
         primary_subject_pose_description=str(existing.get("primary_subject_pose_description", "")),
         subject_relation_summary=str(existing.get("subject_relation_summary", "")),
         required_environment_anchor_1=str(existing.get("required_environment_anchor_1", "")),
+        required_subject_anchor_1=str(existing.get("required_subject_anchor_1", "")),
+        required_celestial_anchor_1=str(existing.get("required_celestial_anchor_1", "")),
         required_scale_proof_detail=str(existing.get("required_scale_proof_detail", "")),
         camera_package_description=str(existing.get("camera_package_description", "")),
         shot_title=str(existing.get("shot_title", "")),
