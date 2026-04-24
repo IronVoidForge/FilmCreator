@@ -12,7 +12,6 @@ from .reference_assets import (
     load_reference_queue,
     make_reference_request,
     prompt_package_path,
-    reference_root,
     register_reference_candidate,
     reject_reference_candidate,
     lock_reference_candidate,
@@ -20,6 +19,7 @@ from .reference_assets import (
     validate_prompt_package,
     write_reference_queue,
 )
+from .runner import run_still
 from .scaffold import create_project
 
 REQUIRED_CHARACTER_REFERENCE_INPUTS = {
@@ -94,6 +94,78 @@ def run_character_reference_planning(
     return summarize_reference_phase(project_slug, "character", project_dir, warnings=warnings, written_files=written)
 
 
+def run_character_reference_generation(
+    project_slug: str,
+    *,
+    limit: int | None = None,
+    variants: list[str] | None = None,
+    character_ids: list[str] | None = None,
+    execute: bool = False,
+    seed: int | None = None,
+    workflow_id: str | None = None,
+) -> ReferencePhaseSummary:
+    project_dir = create_project(project_slug)
+    queue = load_reference_queue(project_dir, "character")
+    selected_variants = {variant.strip().lower() for variant in variants or [] if variant.strip()}
+    selected_ids = {character_id.strip().lower() for character_id in character_ids or [] if character_id.strip()}
+    eligible = []
+    warnings: list[str] = []
+    written: list[str] = []
+
+    for entry in queue:
+        character_id = str(entry.get("asset_id", "")).strip().lower()
+        variant = str(entry.get("variant_key", "")).strip().lower()
+        if selected_ids and character_id not in selected_ids:
+            continue
+        if selected_variants and variant not in selected_variants:
+            continue
+        if str(entry.get("status", "")).strip().lower() in {"blocked", "approved", "locked"}:
+            continue
+        if entry.get("warnings"):
+            continue
+        eligible.append(entry)
+
+    for entry in eligible[:limit]:
+        character_id = str(entry.get("asset_id", "")).strip().lower()
+        variant = str(entry.get("variant_key", "")).strip().lower()
+        prompt_path = str(entry.get("prompt_package_path", "")).strip()
+        try:
+            summary = run_still(
+                project_slug=project_slug,
+                stage="character_reference",
+                prompt_file=prompt_path,
+                workflow_id=workflow_id,
+                asset_id=character_id,
+                seed=seed,
+                execute=execute,
+            )
+        except Exception as exc:
+            warnings.append(f"{character_id}/{variant}: generation preparation failed: {exc}")
+            continue
+        entry["last_run_manifest"] = str(summary.manifest_path)
+        entry["last_patched_workflow"] = str(summary.patched_workflow_path)
+        entry["generation_ready"] = bool(summary.execution_ready)
+        entry["generation_requested_execute"] = bool(summary.execute_requested)
+        entry["status"] = "generated" if execute and summary.execution_ready else "prepared"
+        if summary.blockers:
+            entry.setdefault("review_notes", []).extend(summary.blockers)
+        if summary.warnings:
+            entry.setdefault("review_notes", []).extend(summary.warnings)
+        if execute:
+            output_files = _manifest_output_files(summary.manifest_path)
+            for output_file in output_files:
+                candidate_summary = register_character_reference_candidate(
+                    project_slug,
+                    character_id=character_id,
+                    variant=variant,
+                    image_path=output_file,
+                )
+                written.extend(candidate_summary.written_files)
+
+    written.extend(write_reference_queue(project_dir, "character", queue))
+    return summarize_reference_phase(project_slug, "character", project_dir, warnings=warnings, written_files=written)
+
+
 def register_character_reference_candidate(
     project_slug: str,
     *,
@@ -120,6 +192,18 @@ def reject_character_reference_candidate(project_slug: str, *, candidate_id: str
 
 def lock_character_reference_candidate(project_slug: str, *, candidate_id: str) -> ReferencePhaseSummary:
     return lock_reference_candidate(project_slug, asset_kind="character", candidate_id=candidate_id)
+
+
+def _manifest_output_files(manifest_path: Path) -> list[str]:
+    if not manifest_path.exists():
+        return []
+    payload = read_json(manifest_path)
+    if not isinstance(payload, dict):
+        return []
+    output_files = payload.get("output_files", [])
+    if not isinstance(output_files, list):
+        return []
+    return [str(path) for path in output_files if str(path).strip()]
 
 
 def _load_character_bibles(project_dir: Path) -> dict[str, dict[str, Any]]:
