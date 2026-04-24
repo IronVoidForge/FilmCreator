@@ -9,3 +9,21 @@
 - `martian_distant_hills`
   - Environment status=canonical entity_kind=landform.
   - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `CH002_SC002_SH001_primary_keyframe_prompt`
+  - SH001: subject anchor is missing or not body/detail-specific enough.
+- `CH002_SC002_SH001_alternate_angle_prompt`
+  - SH001: subject anchor is missing or not body/detail-specific enough.
+- `CH002_SC002_SH001_consistency_repair_prompt`
+  - SH001: subject anchor is missing or not body/detail-specific enough.
+- `CH002_SC002_SH002_primary_keyframe_prompt`
+  - SH002: subject anchor is missing or not body/detail-specific enough.
+- `CH002_SC002_SH002_alternate_angle_prompt`
+  - SH002: subject anchor is missing or not body/detail-specific enough.
+- `CH002_SC002_SH002_consistency_repair_prompt`
+  - SH002: subject anchor is missing or not body/detail-specific enough.
+- `CH002_SC004_SH002_primary_keyframe_prompt`
+  - SH002: subject anchor is missing or not body/detail-specific enough.
+- `CH002_SC004_SH002_alternate_angle_prompt`
+  - SH002: subject anchor is missing or not body/detail-specific enough.
+- `CH002_SC004_SH002_consistency_repair_prompt`
+  - SH002: subject anchor is missing or not body/detail-specific enough.
