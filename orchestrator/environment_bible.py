@@ -917,6 +917,7 @@ def run_environment_bible_synthesis(
     *,
     use_llm: bool = True,
     force: bool = False,
+    limit: int | None = None,
 ) -> EnvironmentBibleSynthesisSummary:
     project_dir = create_project(project_slug)
 
@@ -935,9 +936,12 @@ def run_environment_bible_synthesis(
     warnings: list[str] = []
     bible_records: list[EnvironmentBible] = []
     review_records: list[EnvironmentBible] = []
-    total_entries = len(registry)
+    registry_items = list(registry.items())
+    if limit is not None and limit >= 0:
+        registry_items = registry_items[:limit]
+    total_entries = len(registry_items)
 
-    for index, (env_id, entry) in enumerate(registry.items(), start=1):
+    for index, (env_id, entry) in enumerate(registry_items, start=1):
         started_at = time.perf_counter()
         print(f"[environment-bible] {index}/{total_entries} starting {env_id}...")
         fp = _fingerprint(entry)

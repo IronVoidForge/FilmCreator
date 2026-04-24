@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-call "%~dp0..\_shared\resolve_filmcreator_root.bat"
+call "%~dp0_shared\resolve_filmcreator_root.bat"
 if errorlevel 1 goto :fail
 
 pushd "%FILMCREATOR_ROOT%" >nul

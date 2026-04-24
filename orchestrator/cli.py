@@ -42,11 +42,13 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("project_slug")
     s.add_argument("--no-llm", action="store_true")
     s.add_argument("--force", action="store_true")
+    s.add_argument("--limit", type=int, default=None)
 
     e = subparsers.add_parser("synthesize-environment-bibles")
     e.add_argument("project_slug")
     e.add_argument("--no-llm", action="store_true")
     e.add_argument("--force", action="store_true")
+    e.add_argument("--limit", type=int, default=None)
 
     sc = subparsers.add_parser("synthesize-scene-contracts")
     sc.add_argument("project_slug")
@@ -198,9 +200,9 @@ def main() -> None:
     args = parser.parse_args()
 
     if args.command == "synthesize-character-bibles":
-        summary = run_character_bible_synthesis(args.project_slug, use_llm=not args.no_llm, force=args.force)
+        summary = run_character_bible_synthesis(args.project_slug, use_llm=not args.no_llm, force=args.force, limit=args.limit)
     elif args.command == "synthesize-environment-bibles":
-        summary = run_environment_bible_synthesis(args.project_slug, use_llm=not args.no_llm, force=args.force)
+        summary = run_environment_bible_synthesis(args.project_slug, use_llm=not args.no_llm, force=args.force, limit=args.limit)
     elif args.command == "synthesize-scene-contracts":
         summary = run_scene_contract_synthesis(args.project_slug, use_llm=not args.no_llm, force=args.force, chapters=args.chapters)
     elif args.command == "synthesize-scene-bindings":

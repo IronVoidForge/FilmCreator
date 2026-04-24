@@ -748,6 +748,7 @@ def run_character_bible_synthesis(
     *,
     use_llm: bool = True,
     force: bool = False,
+    limit: int | None = None,
 ) -> CharacterBibleSynthesisSummary:
     project_dir = create_project(project_slug)
 
@@ -768,6 +769,8 @@ def run_character_bible_synthesis(
     review_records: list[CharacterBible] = []
 
     registry_items = list(registry.items())
+    if limit is not None and limit >= 0:
+        registry_items = registry_items[:limit]
     total_entries = len(registry_items)
 
     for index, (char_id, entry) in enumerate(registry_items, start=1):

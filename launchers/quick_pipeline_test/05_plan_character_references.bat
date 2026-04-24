@@ -8,7 +8,7 @@ pushd "%FILMCREATOR_ROOT%" >nul
 
 echo.
 echo ========================================
-echo Quick Pipeline Test: Prompt Refresh
+echo Quick Pipeline Test: Plan Character References
 echo ========================================
 echo.
 set "PROJECT_SLUG=%~1"
@@ -19,17 +19,17 @@ echo.
 echo Project slug: %PROJECT_SLUG%
 echo Repo root: %FILMCREATOR_ROOT%
 echo.
-echo Running prompt preparation refresh...
-python -m orchestrator synthesize-prompt-preparation %PROJECT_SLUG% --force
+echo Running character reference planning for a small validation slice...
+python -m orchestrator plan-character-references %PROJECT_SLUG% --limit 2
 if errorlevel 1 goto :fail
 
 echo.
-echo Prompt preparation refresh complete.
+echo Character reference planning complete.
 goto :done
 
 :fail
 echo.
-echo Prompt refresh failed.
+echo Character reference planning failed.
 popd >nul
 exit /b 1
 

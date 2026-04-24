@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-call "%~dp0..\_shared\resolve_filmcreator_root.bat"
+call "%~dp0_shared\resolve_filmcreator_root.bat"
 if errorlevel 1 goto :fail
 
 pushd "%FILMCREATOR_ROOT%" >nul
@@ -19,12 +19,35 @@ echo.
 echo Project slug: %PROJECT_SLUG%
 echo Repo root: %FILMCREATOR_ROOT%
 echo.
-echo This clears downstream artifacts only and preserves upstream chapter summaries.
+echo This clears downstream artifacts only and preserves chapter summaries and bibles.
 echo Press any key to continue.
 pause
 
-call "%FILMCREATOR_ROOT%\launchers\multi_chapter\01_reset_downstream_artifacts.bat" %PROJECT_SLUG%
-if errorlevel 1 goto :fail
+set "PROJECT_ROOT=%FILMCREATOR_ROOT%\projects\%PROJECT_SLUG%"
+if not exist "%PROJECT_ROOT%" (
+    echo Project folder not found: %PROJECT_ROOT%
+    goto :fail
+)
+
+echo.
+echo Removing downstream artifacts...
+powershell -NoProfile -Command ^
+    "$root = '%PROJECT_ROOT%';" ^
+    "$targets = @(" ^
+    "    (Join-Path $root '02_story_analysis\contracts')," ^
+    "    (Join-Path $root '02_story_analysis\timelines')," ^
+    "    (Join-Path $root '02_story_analysis\descriptors')," ^
+    "    (Join-Path $root '02_story_analysis\grading')," ^
+    "    (Join-Path $root '02_story_analysis\dialogue_enrichment')," ^
+    "    (Join-Path $root '02_story_analysis\world\refinement')," ^
+    "    (Join-Path $root '03_prompt_packages')," ^
+    "    (Join-Path $root '04_references')," ^
+    "    (Join-Path $root '05_scenes')," ^
+    "    (Join-Path $root '06_reviews')," ^
+    "    (Join-Path $root '07_finals')," ^
+    "    (Join-Path $root 'logs')" ^
+    ");" ^
+    "foreach ($target in $targets) { if (Test-Path -LiteralPath $target) { Remove-Item -LiteralPath $target -Recurse -Force -ErrorAction SilentlyContinue } }"
 
 echo.
 echo Downstream artifact clear complete.
