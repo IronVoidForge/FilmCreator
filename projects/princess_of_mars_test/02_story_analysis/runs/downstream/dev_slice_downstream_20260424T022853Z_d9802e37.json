@@ -2,11 +2,11 @@
   "project_slug": "princess_of_mars_test",
   "pipeline_key": "dev_slice_downstream",
   "run_id": "20260424T022853Z_d9802e37",
-  "status": "failed",
+  "status": "completed",
   "started_at_utc": "2026-04-24T02:28:53Z",
-  "updated_at_utc": "2026-04-24T03:17:03Z",
-  "completed_at_utc": null,
-  "current_phase": "descriptor_enrichment",
+  "updated_at_utc": "2026-04-24T04:51:59Z",
+  "completed_at_utc": "2026-04-24T04:51:59Z",
+  "current_phase": "prompt_preparation",
   "config": {
     "project_slug": "princess_of_mars_test",
     "chapters": "2-3",
@@ -791,8 +791,8 @@
       "completed_at_utc": "2026-04-24T03:11:03Z"
     },
     "descriptor_enrichment": {
-      "status": "failed",
-      "total_items": 42,
+      "status": "completed",
+      "total_items": 0,
       "completed_items": 10,
       "items": {
         "scene:CH002_SC001": {
@@ -886,9 +886,24 @@
           ]
         }
       },
-      "summary": null,
+      "summary": {
+        "project_slug": "princess_of_mars_test",
+        "total_entries": 0,
+        "synthesized_count": 0,
+        "reused_count": 0,
+        "review_queue_count": 0,
+        "written_files": [
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\descriptors\\review\\DESCRIPTOR_REVIEW_QUEUE.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\descriptors\\review\\DESCRIPTOR_REVIEW_QUEUE.json",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\descriptors\\DESCRIPTOR_INDEX.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\descriptors\\DESCRIPTOR_INDEX.json",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\descriptors\\DESCRIPTOR_REVIEW_INDEX.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\descriptors\\DESCRIPTOR_REVIEW_INDEX.json"
+        ],
+        "warnings": []
+      },
       "started_at_utc": "2026-04-24T03:11:03Z",
-      "completed_at_utc": null,
+      "completed_at_utc": "2026-04-24T04:51:58Z",
       "failed_at_utc": "2026-04-24T03:17:03Z",
       "error": {
         "type": "NameError",
@@ -896,13 +911,839 @@
       }
     },
     "prompt_preparation": {
-      "status": "pending",
-      "total_items": null,
-      "completed_items": 0,
-      "items": {},
-      "summary": null,
-      "started_at_utc": null,
-      "completed_at_utc": null
+      "status": "completed",
+      "total_items": 0,
+      "completed_items": 90,
+      "items": {
+        "dead_friend_full_body_neutral_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\dead_friend\\full_body_neutral_prompt.md"
+          ]
+        },
+        "dead_friend_bust_portrait_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\dead_friend\\bust_portrait_prompt.md"
+          ]
+        },
+        "dead_friend_profile_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\dead_friend\\profile_view_prompt.md"
+          ]
+        },
+        "dead_friend_three_quarter_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\dead_friend\\three_quarter_view_prompt.md"
+          ]
+        },
+        "dead_friend_front_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\dead_friend\\front_view_prompt.md"
+          ]
+        },
+        "dead_friend_back_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\dead_friend\\back_view_prompt.md"
+          ]
+        },
+        "dead_friend_action_pose_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\dead_friend\\action_pose_prompt.md"
+          ]
+        },
+        "dead_friend_expression_sheet_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\dead_friend\\expression_sheet_prompt.md"
+          ]
+        },
+        "former_self_full_body_neutral_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\former_self\\full_body_neutral_prompt.md"
+          ]
+        },
+        "former_self_bust_portrait_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\former_self\\bust_portrait_prompt.md"
+          ]
+        },
+        "former_self_profile_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\former_self\\profile_view_prompt.md"
+          ]
+        },
+        "former_self_three_quarter_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\former_self\\three_quarter_view_prompt.md"
+          ]
+        },
+        "former_self_front_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\former_self\\front_view_prompt.md"
+          ]
+        },
+        "former_self_back_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\former_self\\back_view_prompt.md"
+          ]
+        },
+        "former_self_action_pose_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\former_self\\action_pose_prompt.md"
+          ]
+        },
+        "former_self_expression_sheet_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\former_self\\expression_sheet_prompt.md"
+          ]
+        },
+        "martian_leader_full_body_neutral_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_leader\\full_body_neutral_prompt.md"
+          ]
+        },
+        "martian_leader_bust_portrait_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_leader\\bust_portrait_prompt.md"
+          ]
+        },
+        "martian_leader_profile_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_leader\\profile_view_prompt.md"
+          ]
+        },
+        "martian_leader_three_quarter_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_leader\\three_quarter_view_prompt.md"
+          ]
+        },
+        "martian_leader_front_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_leader\\front_view_prompt.md"
+          ]
+        },
+        "martian_leader_back_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_leader\\back_view_prompt.md"
+          ]
+        },
+        "martian_leader_action_pose_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_leader\\action_pose_prompt.md"
+          ]
+        },
+        "martian_leader_expression_sheet_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_leader\\expression_sheet_prompt.md"
+          ]
+        },
+        "martian_mounts_full_body_neutral_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_mounts\\full_body_neutral_prompt.md"
+          ]
+        },
+        "martian_mounts_bust_portrait_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_mounts\\bust_portrait_prompt.md"
+          ]
+        },
+        "martian_mounts_profile_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_mounts\\profile_view_prompt.md"
+          ]
+        },
+        "martian_mounts_three_quarter_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_mounts\\three_quarter_view_prompt.md"
+          ]
+        },
+        "martian_mounts_front_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_mounts\\front_view_prompt.md"
+          ]
+        },
+        "martian_mounts_back_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_mounts\\back_view_prompt.md"
+          ]
+        },
+        "martian_mounts_action_pose_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_mounts\\action_pose_prompt.md"
+          ]
+        },
+        "martian_mounts_expression_sheet_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_mounts\\expression_sheet_prompt.md"
+          ]
+        },
+        "martian_warrior_leader_full_body_neutral_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_warrior_leader\\full_body_neutral_prompt.md"
+          ]
+        },
+        "martian_warrior_leader_bust_portrait_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_warrior_leader\\bust_portrait_prompt.md"
+          ]
+        },
+        "martian_warrior_leader_profile_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_warrior_leader\\profile_view_prompt.md"
+          ]
+        },
+        "martian_warrior_leader_three_quarter_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_warrior_leader\\three_quarter_view_prompt.md"
+          ]
+        },
+        "martian_warrior_leader_front_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_warrior_leader\\front_view_prompt.md"
+          ]
+        },
+        "martian_warrior_leader_back_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_warrior_leader\\back_view_prompt.md"
+          ]
+        },
+        "martian_warrior_leader_action_pose_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_warrior_leader\\action_pose_prompt.md"
+          ]
+        },
+        "martian_warrior_leader_expression_sheet_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_warrior_leader\\expression_sheet_prompt.md"
+          ]
+        },
+        "protagonist_full_body_neutral_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\protagonist\\full_body_neutral_prompt.md"
+          ]
+        },
+        "protagonist_bust_portrait_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\protagonist\\bust_portrait_prompt.md"
+          ]
+        },
+        "protagonist_profile_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:58Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\protagonist\\profile_view_prompt.md"
+          ]
+        },
+        "protagonist_three_quarter_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\protagonist\\three_quarter_view_prompt.md"
+          ]
+        },
+        "protagonist_front_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\protagonist\\front_view_prompt.md"
+          ]
+        },
+        "protagonist_back_view_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\protagonist\\back_view_prompt.md"
+          ]
+        },
+        "protagonist_action_pose_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\protagonist\\action_pose_prompt.md"
+          ]
+        },
+        "protagonist_expression_sheet_prompt": {
+          "status": "completed",
+          "fingerprint": "a3e57c5f48b2cce7d8f3931625a1a6750f2c52e3",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\protagonist\\expression_sheet_prompt.md"
+          ]
+        },
+        "arizona_mountain_cave_establishing_wide_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave\\establishing_wide_prompt.md"
+          ]
+        },
+        "arizona_mountain_cave_medium_spatial_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave\\medium_spatial_prompt.md"
+          ]
+        },
+        "arizona_mountain_cave_detail_focus_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave\\detail_focus_prompt.md"
+          ]
+        },
+        "arizona_mountain_cave_interior_layout_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave\\interior_layout_prompt.md"
+          ]
+        },
+        "arizona_mountain_cave_exterior_geography_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave\\exterior_geography_prompt.md"
+          ]
+        },
+        "arizona_mountain_cave_lighting_variant_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave\\lighting_variant_prompt.md"
+          ]
+        },
+        "arizona_mountain_cave_time_of_day_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave\\time_of_day_prompt.md"
+          ]
+        },
+        "arizona_mountain_cave_ledge_establishing_wide_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave_ledge\\establishing_wide_prompt.md"
+          ]
+        },
+        "arizona_mountain_cave_ledge_medium_spatial_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave_ledge\\medium_spatial_prompt.md"
+          ]
+        },
+        "arizona_mountain_cave_ledge_detail_focus_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave_ledge\\detail_focus_prompt.md"
+          ]
+        },
+        "arizona_mountain_cave_ledge_interior_layout_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave_ledge\\interior_layout_prompt.md"
+          ]
+        },
+        "arizona_mountain_cave_ledge_exterior_geography_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave_ledge\\exterior_geography_prompt.md"
+          ]
+        },
+        "arizona_mountain_cave_ledge_lighting_variant_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave_ledge\\lighting_variant_prompt.md"
+          ]
+        },
+        "arizona_mountain_cave_ledge_time_of_day_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave_ledge\\time_of_day_prompt.md"
+          ]
+        },
+        "circular_moss_basin_establishing_wide_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\circular_moss_basin\\establishing_wide_prompt.md"
+          ]
+        },
+        "circular_moss_basin_medium_spatial_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\circular_moss_basin\\medium_spatial_prompt.md"
+          ]
+        },
+        "circular_moss_basin_detail_focus_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\circular_moss_basin\\detail_focus_prompt.md"
+          ]
+        },
+        "circular_moss_basin_interior_layout_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\circular_moss_basin\\interior_layout_prompt.md"
+          ]
+        },
+        "circular_moss_basin_exterior_geography_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\circular_moss_basin\\exterior_geography_prompt.md"
+          ]
+        },
+        "circular_moss_basin_lighting_variant_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\circular_moss_basin\\lighting_variant_prompt.md"
+          ]
+        },
+        "circular_moss_basin_time_of_day_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\circular_moss_basin\\time_of_day_prompt.md"
+          ]
+        },
+        "deep_space_void_establishing_wide_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\deep_space_void\\establishing_wide_prompt.md"
+          ]
+        },
+        "deep_space_void_medium_spatial_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\deep_space_void\\medium_spatial_prompt.md"
+          ]
+        },
+        "deep_space_void_detail_focus_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\deep_space_void\\detail_focus_prompt.md"
+          ]
+        },
+        "deep_space_void_interior_layout_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\deep_space_void\\interior_layout_prompt.md"
+          ]
+        },
+        "deep_space_void_exterior_geography_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\deep_space_void\\exterior_geography_prompt.md"
+          ]
+        },
+        "deep_space_void_lighting_variant_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\deep_space_void\\lighting_variant_prompt.md"
+          ]
+        },
+        "deep_space_void_time_of_day_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\deep_space_void\\time_of_day_prompt.md"
+          ]
+        },
+        "rocky_gorge_canyon_establishing_wide_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\rocky_gorge_canyon\\establishing_wide_prompt.md"
+          ]
+        },
+        "rocky_gorge_canyon_medium_spatial_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\rocky_gorge_canyon\\medium_spatial_prompt.md"
+          ]
+        },
+        "rocky_gorge_canyon_detail_focus_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\rocky_gorge_canyon\\detail_focus_prompt.md"
+          ]
+        },
+        "rocky_gorge_canyon_interior_layout_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\rocky_gorge_canyon\\interior_layout_prompt.md"
+          ]
+        },
+        "rocky_gorge_canyon_exterior_geography_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\rocky_gorge_canyon\\exterior_geography_prompt.md"
+          ]
+        },
+        "rocky_gorge_canyon_lighting_variant_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\rocky_gorge_canyon\\lighting_variant_prompt.md"
+          ]
+        },
+        "rocky_gorge_canyon_time_of_day_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\rocky_gorge_canyon\\time_of_day_prompt.md"
+          ]
+        },
+        "vast_cosmic_void_establishing_wide_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\vast_cosmic_void\\establishing_wide_prompt.md"
+          ]
+        },
+        "vast_cosmic_void_medium_spatial_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\vast_cosmic_void\\medium_spatial_prompt.md"
+          ]
+        },
+        "vast_cosmic_void_detail_focus_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\vast_cosmic_void\\detail_focus_prompt.md"
+          ]
+        },
+        "vast_cosmic_void_interior_layout_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\vast_cosmic_void\\interior_layout_prompt.md"
+          ]
+        },
+        "vast_cosmic_void_exterior_geography_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\vast_cosmic_void\\exterior_geography_prompt.md"
+          ]
+        },
+        "vast_cosmic_void_lighting_variant_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\vast_cosmic_void\\lighting_variant_prompt.md"
+          ]
+        },
+        "vast_cosmic_void_time_of_day_prompt": {
+          "status": "completed",
+          "fingerprint": "30c726666d01d34e0b46ab7822af9b683a0975c1",
+          "completed_at_utc": "2026-04-24T04:51:59Z",
+          "outputs": [
+            "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\vast_cosmic_void\\time_of_day_prompt.md"
+          ]
+        }
+      },
+      "summary": {
+        "project_slug": "princess_of_mars_test",
+        "total_entries": 15,
+        "synthesized_count": 90,
+        "reused_count": 0,
+        "review_queue_count": 3,
+        "written_files": [
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\dead_friend\\full_body_neutral_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\dead_friend\\bust_portrait_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\dead_friend\\profile_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\dead_friend\\three_quarter_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\dead_friend\\front_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\dead_friend\\back_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\dead_friend\\action_pose_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\dead_friend\\expression_sheet_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\former_self\\full_body_neutral_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\former_self\\bust_portrait_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\former_self\\profile_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\former_self\\three_quarter_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\former_self\\front_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\former_self\\back_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\former_self\\action_pose_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\former_self\\expression_sheet_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_leader\\full_body_neutral_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_leader\\bust_portrait_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_leader\\profile_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_leader\\three_quarter_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_leader\\front_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_leader\\back_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_leader\\action_pose_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_leader\\expression_sheet_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_mounts\\full_body_neutral_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_mounts\\bust_portrait_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_mounts\\profile_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_mounts\\three_quarter_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_mounts\\front_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_mounts\\back_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_mounts\\action_pose_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_mounts\\expression_sheet_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_warrior_leader\\full_body_neutral_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_warrior_leader\\bust_portrait_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_warrior_leader\\profile_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_warrior_leader\\three_quarter_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_warrior_leader\\front_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_warrior_leader\\back_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_warrior_leader\\action_pose_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\martian_warrior_leader\\expression_sheet_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\protagonist\\full_body_neutral_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\protagonist\\bust_portrait_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\protagonist\\profile_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\protagonist\\three_quarter_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\protagonist\\front_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\protagonist\\back_view_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\protagonist\\action_pose_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\characters\\protagonist\\expression_sheet_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave\\establishing_wide_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave\\medium_spatial_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave\\detail_focus_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave\\interior_layout_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave\\exterior_geography_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave\\lighting_variant_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave\\time_of_day_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave_ledge\\establishing_wide_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave_ledge\\medium_spatial_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave_ledge\\detail_focus_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave_ledge\\interior_layout_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave_ledge\\exterior_geography_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave_ledge\\lighting_variant_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\arizona_mountain_cave_ledge\\time_of_day_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\circular_moss_basin\\establishing_wide_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\circular_moss_basin\\medium_spatial_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\circular_moss_basin\\detail_focus_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\circular_moss_basin\\interior_layout_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\circular_moss_basin\\exterior_geography_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\circular_moss_basin\\lighting_variant_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\circular_moss_basin\\time_of_day_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\deep_space_void\\establishing_wide_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\deep_space_void\\medium_spatial_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\deep_space_void\\detail_focus_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\deep_space_void\\interior_layout_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\deep_space_void\\exterior_geography_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\deep_space_void\\lighting_variant_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\deep_space_void\\time_of_day_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\rocky_gorge_canyon\\establishing_wide_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\rocky_gorge_canyon\\medium_spatial_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\rocky_gorge_canyon\\detail_focus_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\rocky_gorge_canyon\\interior_layout_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\rocky_gorge_canyon\\exterior_geography_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\rocky_gorge_canyon\\lighting_variant_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\rocky_gorge_canyon\\time_of_day_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\vast_cosmic_void\\establishing_wide_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\vast_cosmic_void\\medium_spatial_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\vast_cosmic_void\\detail_focus_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\vast_cosmic_void\\interior_layout_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\vast_cosmic_void\\exterior_geography_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\vast_cosmic_void\\lighting_variant_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\environments\\vast_cosmic_void\\time_of_day_prompt.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\PROMPT_PREPARATION_INDEX.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\PROMPT_PREPARATION_INDEX.json",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\PROMPT_PREPARATION_REVIEW_INDEX.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\PROMPT_PREPARATION_REVIEW_INDEX.json",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\review\\PROMPT_PREPARATION_REVIEW_QUEUE.md",
+          "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\03_prompt_packages\\prepared\\review\\PROMPT_PREPARATION_REVIEW_QUEUE.json"
+        ],
+        "warnings": []
+      },
+      "started_at_utc": "2026-04-24T04:51:58Z",
+      "completed_at_utc": "2026-04-24T04:51:59Z"
     }
   },
   "written_files": [
