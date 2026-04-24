@@ -46,6 +46,23 @@ This phase is intentionally about **reference-sheet generation and approval**, n
 
 This phase should progress in a controlled order so later variants inherit the best approved identity anchor.
 
+### Test Slice Mode
+
+For validation runs, the stage should support a small test slice:
+
+- generate `2` portrait/bust candidates
+- generate `2` full-body candidates from the approved portrait set
+- generate `2` supporting-view candidates from the approved full-body set
+
+This is a test flag behavior only. It is meant to exercise the approval gates and reveal quality issues quickly without running the full reference catalog.
+
+The approval gates still apply in test slice mode:
+
+- portrait approval is required before full-body image-to-image generation
+- full-body approval is required before supporting-view generation
+- rejected candidates are preserved
+- canonical approved refs are still lockable
+
 ### Stage 1 - Text-to-Image Portrait
 
 Start with a text-to-image portrait or bust reference for the character.
@@ -152,4 +169,3 @@ Character generation prompts should include, at minimum:
 - `orchestrator/reference_assets.py`
 - `orchestrator/prompt_preparation.py`
 - `orchestrator/cli.py` or the future `orchestrator/cli/` package
-

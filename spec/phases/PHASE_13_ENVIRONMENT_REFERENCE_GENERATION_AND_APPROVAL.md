@@ -44,6 +44,23 @@ This phase is intentionally about **reference-sheet generation and approval**, n
 
 ## Staged Generation Plan
 
+### Test Slice Mode
+
+For validation runs, the stage should support a small test slice:
+
+- generate `2` establishing-view candidates
+- generate `2` spatial-reference candidates from the approved establishing-view set
+- generate `2` supporting-variant candidates from the approved spatial-reference set
+
+This is a test flag behavior only. It is meant to exercise the approval gates and reveal quality issues quickly without running the full environment catalog.
+
+The approval gates still apply in test slice mode:
+
+- establishing-view approval is required before spatial image-to-image generation
+- spatial-reference approval is required before supporting variants
+- rejected candidates are preserved
+- canonical approved refs are still lockable
+
 ### Stage 1 - Text-to-Image Establishing View
 
 Start with a text-to-image establishing image for the environment.
@@ -147,4 +164,3 @@ Environment generation prompts should include, at minimum:
 - `orchestrator/reference_assets.py`
 - `orchestrator/prompt_preparation.py`
 - `orchestrator/cli.py` or the future `orchestrator/cli/` package
-
