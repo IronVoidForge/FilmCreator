@@ -73,5 +73,5 @@
 - artifact_id: `DESC_CHAR_apache_warriors`
 - status: `generated`
 - source_fingerprint: `2fc8c470574ec3449aa5dd401755cf05f1879d14`
-- created_at_utc: `2026-04-24T18:18:05.819742+00:00`
-- updated_at_utc: `2026-04-24T18:18:05.819742+00:00`
+- created_at_utc: `2026-04-24T18:59:12.316257+00:00`
+- updated_at_utc: `2026-04-24T18:59:12.316257+00:00`

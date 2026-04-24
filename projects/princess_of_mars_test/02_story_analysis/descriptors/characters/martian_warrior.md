@@ -72,5 +72,5 @@
 - artifact_id: `DESC_CHAR_martian_warrior`
 - status: `generated`
 - source_fingerprint: `1655a2c35ea6fc1de9aad2c9378697640f2222bd`
-- created_at_utc: `2026-04-24T18:20:26.837448+00:00`
-- updated_at_utc: `2026-04-24T18:20:26.837448+00:00`
+- created_at_utc: `2026-04-24T19:01:33.304707+00:00`
+- updated_at_utc: `2026-04-24T19:01:33.304707+00:00`

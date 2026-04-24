@@ -87,5 +87,5 @@
 - artifact_id: `DESC_CHAR_protagonist`
 - status: `generated`
 - source_fingerprint: `63422d9eb2b91d69bf47169e933539111c8641bd`
-- created_at_utc: `2026-04-24T18:22:03.454650+00:00`
-- updated_at_utc: `2026-04-24T18:22:03.454650+00:00`
+- created_at_utc: `2026-04-24T19:03:12.221317+00:00`
+- updated_at_utc: `2026-04-24T19:03:12.221317+00:00`

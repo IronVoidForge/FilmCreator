@@ -68,5 +68,5 @@
 - artifact_id: `DESC_CHAR_former_self`
 - status: `generated`
 - source_fingerprint: `942abf6555fccbf329bf14ecae0d113a7f84acfc`
-- created_at_utc: `2026-04-24T18:19:04.074045+00:00`
-- updated_at_utc: `2026-04-24T18:19:04.074045+00:00`
+- created_at_utc: `2026-04-24T19:00:11.234476+00:00`
+- updated_at_utc: `2026-04-24T19:00:11.234476+00:00`

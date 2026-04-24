@@ -67,5 +67,5 @@
 - artifact_id: `DESC_CHAR_martian_mounts`
 - status: `generated`
 - source_fingerprint: `f9e50dc3ca88c5c7bc13aea76aca1dd205766e52`
-- created_at_utc: `2026-04-24T18:20:01.615443+00:00`
-- updated_at_utc: `2026-04-24T18:20:01.615443+00:00`
+- created_at_utc: `2026-04-24T19:01:08.453960+00:00`
+- updated_at_utc: `2026-04-24T19:01:08.453960+00:00`
