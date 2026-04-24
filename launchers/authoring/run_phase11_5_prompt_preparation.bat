@@ -1,5 +1,10 @@
 @echo off
-setlocal enabledelayedexpansion
+setlocal
+
+call "%~dp0..\_shared\resolve_filmcreator_root.bat"
+if errorlevel 1 goto :fail
+
+pushd "%FILMCREATOR_ROOT%" >nul
 
 echo ========================================
 echo FilmCreator Phase 11.5 Prompt Preparation Launcher
@@ -53,11 +58,13 @@ echo   projects\%PROJECT_SLUG%\03_prompt_packages\prepared\characters\john_carte
 echo   projects\%PROJECT_SLUG%\03_prompt_packages\prepared\shots\CH010\CH010_SC001\SH001\primary_keyframe_prompt.md
 echo.
 echo Phase 11.5 prompt preparation launcher complete.
+popd >nul
 goto :end
 
 :fail
 echo.
 echo Phase 11.5 prompt preparation launcher failed.
+popd >nul
 pause
 
 :end

@@ -1,0 +1,12 @@
+# Scene Contract Index
+
+- `CH002_SC001` - To establish the protagonist's vulnerability and the supernatural threat within the cave. (beats=3, cast=1, envs=1)
+- `CH002_SC002` - To introduce external conflict and demonstrate the supernatural power of the cave's contents. (beats=3, cast=2, envs=1)
+- `CH002_SC003` - To execute the central supernatural twist and reveal the protagonist's transformation. (beats=3, cast=1, envs=1)
+- `CH002_SC004` - To transition the protagonist from the supernatural interior to the natural exterior. (beats=3, cast=1, envs=2)
+- `CH002_SC005` - To trigger the protagonist's cosmic displacement and end the chapter on a high-concept cliffhanger. (beats=3, cast=1, envs=2)
+- `CH003_SC001` - Establish the protagonist's new physical reality and the alien environment. (beats=2, cast=1, envs=1)
+- `CH003_SC002` - Introduce the biological horror/wonder of Martian life. (beats=3, cast=1, envs=1)
+- `CH003_SC003` - Introduce the primary antagonist force and create immediate life-threatening tension. (beats=3, cast=2, envs=1)
+- `CH003_SC004` - Demonstrate the protagonist's unique advantage and change the power dynamic. (beats=3, cast=2, envs=1)
+- `CH003_SC005` - Establish first contact and a tentative peace. (beats=3, cast=3, envs=1)

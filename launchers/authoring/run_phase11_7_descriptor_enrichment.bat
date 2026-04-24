@@ -1,5 +1,10 @@
 @echo off
-setlocal enabledelayedexpansion
+setlocal
+
+call "%~dp0..\_shared\resolve_filmcreator_root.bat"
+if errorlevel 1 goto :fail
+
+pushd "%FILMCREATOR_ROOT%" >nul
 
 echo ========================================
 echo FilmCreator Phase 11.7 Descriptor Enrichment Launcher
@@ -9,7 +14,7 @@ set /p PROJECT_SLUG=Project slug [princess_of_mars_test]:
 if "%PROJECT_SLUG%"=="" set PROJECT_SLUG=princess_of_mars_test
 echo.
 echo Project slug: %PROJECT_SLUG%
-echo Repo root: C:\FilmCreator_MC
+echo Repo root: %FILMCREATOR_ROOT%
 echo.
 echo This launcher will run:
 echo   1. descriptor enrichment synthesis
@@ -43,4 +48,11 @@ echo   projects\%PROJECT_SLUG%\02_story_analysis\descriptors\DESCRIPTOR_REVIEW_I
 echo   projects\%PROJECT_SLUG%\02_story_analysis\descriptors\review\DESCRIPTOR_REVIEW_QUEUE.md
 echo.
 echo Phase 11.7 descriptor enrichment launcher complete.
+popd >nul
+pause
+
+:fail
+echo.
+echo Phase 11.7 descriptor enrichment launcher failed.
+popd >nul
 pause
