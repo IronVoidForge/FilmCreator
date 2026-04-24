@@ -112,6 +112,85 @@ def _normalize_prompt_text(text: str) -> str:
     return normalized.strip(" ,")
 
 
+def _clean_prompt_clause(text: str) -> str:
+    cleaned = _normalize_prompt_text(text)
+    if not cleaned:
+        return ""
+    normalized = " ".join(cleaned.lower().split())
+    if any(marker in normalized for marker in {"(none)", "none", "null", "unknown", "n/a", "[]", "[ ]"}):
+        return ""
+    cleaned = re.sub(r"\bfor\s+\.\s*", "", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"\bwith\s*,\s*", "with ", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"\b(in|on|at|to|across|within|inside|around|near)\s+with\b", r"\1", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"\s+\.\s+\.", ".", cleaned)
+    cleaned = re.sub(r"\s{2,}", " ", cleaned)
+    return cleaned.strip(" ,.;")
+
+
+def _compose_prompt_clause(prefix: str, *parts: str, separator: str = ", ") -> str:
+    cleaned_parts = [
+        clause
+        for clause in (_clean_prompt_clause(part) for part in parts)
+        if clause
+    ]
+    if not cleaned_parts:
+        return ""
+    body = separator.join(cleaned_parts)
+    if prefix:
+        return f"{prefix} {body}".strip()
+    return body
+
+
+def _dedupe_prompt_clauses(clauses: list[str]) -> list[str]:
+    deduped: list[str] = []
+    seen: set[str] = set()
+    for clause in clauses:
+        cleaned = _clean_prompt_clause(clause)
+        if not cleaned:
+            continue
+        normalized = _normalize_term(cleaned)
+        if not normalized or normalized in seen:
+            continue
+        seen.add(normalized)
+        deduped.append(cleaned)
+    return deduped
+
+
+def _shot_prompt_sanity_issues(
+    positive_prompt: str,
+    *,
+    required_subject_anchor_1: str,
+    visible_primary_subject_id: str,
+    visible_secondary_subject_ids: list[str],
+    environment_image_key: str,
+    environment_canonical_id: str,
+    reference_roles: list[tuple[str, str, str]],
+) -> list[str]:
+    issues: list[str] = []
+    normalized = " ".join(positive_prompt.lower().split())
+    if re.search(r"\bfor\s+\.\s*\w+", normalized):
+        issues.append("Prompt body contains a broken `for .` fragment.")
+    if re.search(r"\bwith\s*,", normalized):
+        issues.append("Prompt body contains a dangling `with,` fragment.")
+    if re.search(r"\b,\s*,", normalized) or re.search(r"\.\s*\.", normalized):
+        issues.append("Prompt body contains repeated punctuation from clause assembly.")
+    if re.search(r"\(\s*\)", positive_prompt):
+        issues.append("Prompt body contains empty parentheses from a missing clause.")
+    if "null image" in normalized:
+        issues.append("Prompt body contains a null image role reference.")
+    if required_subject_anchor_1 and not _looks_like_subject_anchor(required_subject_anchor_1):
+        issues.append("Prompt body is using a non-body/detail subject anchor.")
+    if visible_primary_subject_id and any(item == visible_primary_subject_id for item in visible_secondary_subject_ids):
+        issues.append("Prompt body contains a visible cast contradiction.")
+    if not required_subject_anchor_1 and visible_primary_subject_id:
+        issues.append("Prompt body is missing the required subject anchor for an on-screen shot.")
+    if environment_canonical_id and not environment_image_key:
+        issues.append("Prompt body is missing an environment image role for a bound environment.")
+    if reference_roles and len(reference_roles) > 4:
+        issues.append("Prompt body has more reference roles than the prompt family expects.")
+    return list(dict.fromkeys(issues))
+
+
 def _first_nonempty(*values: object, fallback: str = "") -> str:
     for value in values:
         if isinstance(value, str) and value.strip():
@@ -1273,58 +1352,106 @@ def _package_for_shot(
         composition_hint=composition_hint,
     )
 
-    prompt_parts: list[str] = []
-    for image_key, role_text, _ in reference_roles:
-        prompt_parts.append(f"Use {image_key} as the {role_text}")
+    prompt_parts: list[str] = [f"Use {image_key} as the {role_text}" for image_key, role_text, _ in reference_roles]
     primary_subject_clause = ""
     if detail_only_object_shot:
         detail_subject = _first_nonempty(primary_subject_descriptor, primary_subject, fallback="")
-        if primary_subject_frame_position and detail_subject:
-            primary_subject_clause = (
-                f"The foreground detail is {detail_subject}, {primary_subject_frame_position}, "
-                f"{primary_subject_scale_relation}, {primary_subject_facing_direction}, {primary_subject_pose_description}"
-            )
-        elif primary_subject_frame_position:
-            primary_subject_clause = f"The foreground detail is {primary_subject_frame_position}, {primary_subject_scale_relation}, {primary_subject_pose_description}"
+        primary_subject_clause = _compose_prompt_clause(
+            "The foreground detail is",
+            detail_subject,
+            primary_subject_frame_position,
+            primary_subject_scale_relation,
+            primary_subject_facing_direction,
+            primary_subject_pose_description,
+        )
     elif primary_image_key:
-        primary_subject_clause = (
-            f"The subject from {primary_image_key} is {primary_subject_descriptor}, {primary_subject_frame_position}, "
-            f"{primary_subject_scale_relation}, {primary_subject_facing_direction}, {primary_subject_pose_description}"
+        primary_subject_clause = _compose_prompt_clause(
+            f"The subject from {primary_image_key} is",
+            primary_subject_descriptor or primary_subject,
+            primary_subject_frame_position,
+            primary_subject_scale_relation,
+            primary_subject_facing_direction,
+            primary_subject_pose_description,
         )
     elif primary_subject_frame_position:
-        primary_subject_clause = (
-            f"The visible subject is {primary_subject_frame_position}, {primary_subject_scale_relation}, "
-            f"{primary_subject_facing_direction}, {primary_subject_pose_description}"
+        primary_subject_clause = _compose_prompt_clause(
+            "The visible subject is",
+            primary_subject_frame_position,
+            primary_subject_scale_relation,
+            primary_subject_facing_direction,
+            primary_subject_pose_description,
         )
+
+    secondary_subject_clause = ""
+    if secondary_subject_descriptors and secondary_image_key:
+        secondary_subject_clause = _compose_prompt_clause(
+            f"The subject from {secondary_image_key} is",
+            secondary_subject_descriptors[0],
+            subject_relation_summary,
+        )
+
+    environment_anchor_clause = _prompt_anchor_clause(required_environment_anchor_1, kind="environment")
+    subject_anchor_clause = _prompt_anchor_clause(required_subject_anchor_1, kind="subject")
+    celestial_anchor_clause = _prompt_anchor_clause(required_celestial_anchor_1, kind="celestial")
+
+    environment_clause = ""
+    environment_subject = _first_nonempty(environment_reference_descriptor, environment_descriptor, fallback="")
+    if environment_canonical_id and environment_image_key:
+        environment_clause = _compose_prompt_clause(
+            "Preserve",
+            environment_subject,
+            f"from {environment_image_key}",
+            f"especially {environment_anchor_clause}" if environment_anchor_clause else "",
+            separator=" ",
+        )
+    else:
+        environment_clause = _clean_prompt_clause(f"Preserve {environment_descriptor}")
+
+    camera_clause = _clean_prompt_clause(camera_package_description or _listify(
+        f"shot size {shot_size}" if shot_size else "",
+        f"camera angle {camera_angle}" if camera_angle else "",
+        f"lens {lens_family}" if lens_family else "",
+        f"camera motion {camera_motion}" if camera_motion else "",
+        f"zoom {zoom_behavior}" if zoom_behavior else "",
+        f"focus {focus_strategy}" if focus_strategy else "",
+        f"lighting {lighting_style}" if lighting_style else "",
+    ))
+
     prompt_parts.extend(
         [
             variant_camera,
             scene_short_description,
             primary_subject_clause,
-            f"The subject from {secondary_image_key} is {secondary_subject_descriptors[0]}, {subject_relation_summary}" if secondary_subject_descriptors and secondary_image_key else "",
-            f"Preserve {environment_reference_descriptor} from {environment_image_key}, especially {_prompt_anchor_clause(required_environment_anchor_1, kind='environment')}" if environment_canonical_id and environment_image_key and _prompt_anchor_clause(required_environment_anchor_1, kind='environment') else f"Preserve {environment_descriptor}",
-            f"Keep one readable subject anchor: {_prompt_anchor_clause(required_subject_anchor_1, kind='subject')}" if _prompt_anchor_clause(required_subject_anchor_1, kind='subject') else "",
-            f"Keep celestial anchor {_prompt_anchor_clause(required_celestial_anchor_1, kind='celestial')} stable in the frame" if _prompt_anchor_clause(required_celestial_anchor_1, kind='celestial') else "",
+            secondary_subject_clause,
+            environment_clause,
+            f"Keep one readable subject anchor: {subject_anchor_clause}" if subject_anchor_clause else "",
+            f"Keep celestial anchor {celestial_anchor_clause} stable in the frame" if celestial_anchor_clause else "",
             required_scale_proof_detail or scene_scale_story_point,
-            camera_package_description or _listify(
-                f"shot size {shot_size}" if shot_size else "",
-                f"camera angle {camera_angle}" if camera_angle else "",
-                f"lens {lens_family}" if lens_family else "",
-                f"camera motion {camera_motion}" if camera_motion else "",
-                f"zoom {zoom_behavior}" if zoom_behavior else "",
-                f"focus {focus_strategy}" if focus_strategy else "",
-                f"lighting {lighting_style}" if lighting_style else "",
-            ),
-            _compact(_strip_terms(composition_hint, strip_terms), limit=200),
-            _normalize_prompt_text(shot_moment_summary or scene_arc or scene_contract.get("production_intent", "") or scene_title),
-            _compact(_strip_terms(environment_subzone, strip_terms), limit=120) if environment_subzone else "",
+            camera_clause,
+            _clean_prompt_clause(_compact(_strip_terms(composition_hint, strip_terms), limit=200)),
+            _clean_prompt_clause(_normalize_prompt_text(shot_moment_summary or scene_arc or scene_contract.get("production_intent", "") or scene_title)),
+            _clean_prompt_clause(_compact(_strip_terms(environment_subzone, strip_terms), limit=120) if environment_subzone else ""),
             "Narration is off-screen voice only; do not show a visible narrator body." if subject_visibility == "off_screen_voice" else "",
             "Keep continuity exact across costume, silhouette, lighting, and spatial relationships.",
             "Avoid proper nouns in the prompt body unless text is meant to appear on screen.",
             "No text, no watermark, no logo.",
         ]
     )
+    prompt_parts = _dedupe_prompt_clauses(prompt_parts)
     positive_prompt = _normalize_prompt_text(". ".join(part for part in prompt_parts if part))
+    review_notes: list[str] = list(validation_notes)
+    sanity_issues = _shot_prompt_sanity_issues(
+        positive_prompt,
+        required_subject_anchor_1=required_subject_anchor_1,
+        visible_primary_subject_id=visible_primary_subject_id,
+        visible_secondary_subject_ids=visible_secondary_subject_ids,
+        environment_image_key=environment_image_key,
+        environment_canonical_id=environment_canonical_id,
+        reference_roles=reference_roles,
+    )
+    if not primary_subject_clause:
+        sanity_issues.append(f"{shot_id}: primary subject clause could not be assembled safely.")
+    review_notes.extend(list(dict.fromkeys(sanity_issues)))
     package_path = project_dir / PROMPT_PREP_ROOT / "shots" / chapter_id / scene_id / shot_id / f"{variant_key}_prompt.md"
     sources = [
         project_dir / "02_story_analysis" / "contracts" / "scenes" / chapter_id / f"{scene_id}.json",
@@ -1411,6 +1538,8 @@ def _package_for_shot(
             "reference_asset_types": "character; environment; scene_descriptor; shot_descriptor",
         }
     )
+    if review_notes:
+        inputs["review_notes"] = "; ".join(review_notes)
     for image_key, role_text, asset_label in reference_roles:
         inputs[f"{image_key}_role"] = role_text
         inputs[f"{image_key}_asset"] = asset_label
@@ -1433,7 +1562,6 @@ def _package_for_shot(
         ),
         sources_markdown="\n".join(f"- {path}" for path in sources if path.exists()),
     )
-    review_notes: list[str] = list(validation_notes)
     if not characters:
         review_notes.append("No stable character descriptors could be derived.")
     if "None" in environment_descriptor or "unresolved" in environment_descriptor.lower():

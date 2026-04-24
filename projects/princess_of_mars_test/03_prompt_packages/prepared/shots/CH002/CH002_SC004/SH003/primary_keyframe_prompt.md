@@ -11,7 +11,7 @@ Prepare a structured multi-reference shot prompt for enhancer-safe generation.
 still.scene_build.four_ref.klein.distilled
 
 # Positive Prompt
-Use image1 as the identity reference for the primary visible subject. Use image2 as the environment reference for the scene location. Primary keyframe with balanced composition and clear subject placement. A naked man flees a dark cavern into the vast, moonlit Arizona mountain night. The subject from image1 is described character with stable costume and silhouette, midground inside rocky_gorge_canyon, Transition from enclosed cave darkness to infinite desert sky scale., rear three-quarter left away from camera, emerging from cave mouth. Preserve described environment with stable spatial anchors from image2, especially rocky gorge edge. Transition from enclosed cave darkness to infinite desert sky scale. wide, high angle, ultra-wide lens, pull back, deep focus, low key night. Dynamic composition in with clear pursuit vectors and readable movement for . protagonist enters the vast canyon. Keep continuity exact across costume, silhouette, lighting, and spatial relationships. Avoid proper nouns in the prompt body unless text is meant to appear on screen. No text, no watermark, no logo.
+Use image1 as the identity reference for the primary visible subject. Use image2 as the environment reference for the scene location. Primary keyframe with balanced composition and clear subject placement. A naked man flees a dark cavern into the vast, moonlit Arizona mountain night. The subject from image1 is described character with stable costume and silhouette, midground inside rocky_gorge_canyon, Transition from enclosed cave darkness to infinite desert sky scale, rear three-quarter left away from camera, emerging from cave mouth. Preserve described environment with stable spatial anchors from image2 especially rocky gorge edge. Transition from enclosed cave darkness to infinite desert sky scale. wide, high angle, ultra-wide lens, pull back, deep focus, low key night. Dynamic composition in clear pursuit vectors and readable movement. protagonist enters the vast canyon. Keep continuity exact across costume, silhouette, lighting, and spatial relationships. Avoid proper nouns in the prompt body unless text is meant to appear on screen. No text, no watermark, no logo
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -29,7 +29,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - change_budget: preserve scene continuity and shot intent
 - reuse_policy: reuse canonical shot contract canon
 - variant_policy: primary_keyframe
-- review_notes: 
+- review_notes: SH003: subject anchor is missing or not body/detail-specific enough.; Prompt body is using a non-body/detail subject anchor.
 - prompt_enhancer_mode: comfyui_text_prompt_enhancer
 - prompt_enhancer_profile: shot_reference
 - target_models: qwen_image; flux; z_image

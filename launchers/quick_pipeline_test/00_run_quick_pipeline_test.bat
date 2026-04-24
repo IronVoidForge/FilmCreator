@@ -12,12 +12,16 @@ echo FilmCreator Quick Pipeline Test
 echo ========================================
 echo.
 echo This quick test runs the post-bible pipeline in order:
-echo   1. descriptor enrichment refresh
-echo   2. prompt preparation refresh
-echo   3. downstream slice test (chapters 2-3)
-echo   4. quality grading
+echo   1. clear downstream artifacts
+echo   2. descriptor enrichment refresh
+echo   3. prompt preparation refresh
+echo   4. downstream slice test (chapters 2-3)
+echo   5. quality grading
 echo.
 pause
+
+call "%FILMCREATOR_ROOT%\launchers\quick_pipeline_test\00_clear_downstream_artifacts.bat" %*
+if errorlevel 1 goto :fail
 
 call "%FILMCREATOR_ROOT%\launchers\quick_pipeline_test\01_refresh_descriptor_enrichment.bat" %*
 if errorlevel 1 goto :fail
