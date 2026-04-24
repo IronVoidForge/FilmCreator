@@ -1,0 +1,306 @@
+{
+  "scene_id": "CH002_SC001",
+  "chapter_id": "CH002",
+  "scene_title": "SC001",
+  "purpose": "To establish the protagonist's vulnerability and the supernatural threat within the cave.",
+  "summary": "The protagonist is trapped in a state of conscious paralysis caused by a mysterious, pungent vapor inside the Arizona mountain cave. He is unable to move despite being fully aware.",
+  "emotional_arc": "From awareness/confusion to helpless terror and sensory isolation.",
+  "production_intent": "Establish the protagonist's physical helplessness and the presence of a supernatural threat through sensory isolation. The scene relies on the visual density of a pungent vapor to communicate the cause of paralysis within the claustrophobic cave environment.",
+  "scene_short_description": "A man lies paralyzed in a dark, vapor-filled cave experiencing sensory isolation.",
+  "scene_primary_scale_story_point": "Microscopic physiological detail vs. claustrophobic environmental enclosure.",
+  "scene_required_anchor_catalog": [
+    "Cave wall texture",
+    "Protagonist's eyes"
+  ],
+  "scene_start_state": "Protagonist is conscious but immobile amidst rising pungent vapor.",
+  "scene_end_state": "Protagonist is trapped in helpless terror as sensory isolation peaks.",
+  "dominant_action_line": "The protagonist experiences progressive paralysis and escalating terror while breathing in mysterious gas.",
+  "scene_spatial_layout": [
+    "Tight, claustrophobic cave interior",
+    "Low visibility due to tenuous vapor"
+  ],
+  "character_spatial_map": [
+    "protagonist centered/prone within the cave floor area"
+  ],
+  "environment_subzones": [
+    "primary scene playing area"
+  ],
+  "entry_vectors": [
+    "Subjects inherit entry logic from the prior scene or chapter transition."
+  ],
+  "exit_vectors": [
+    "Subjects exit or hand off toward the next story beat."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Transition from sensory awareness to physical realization of paralysis.",
+    "BT002 -> BT003: Transition from physical stillness to psychological terror."
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Interior Cave (Dark, claustrophobic, filled with tenuous vapor)",
+      "canonical_id": "arizona_mountain_cave",
+      "display_name": "arizona_mountain_cave",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 70,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/arizona_mountain_cave.md",
+      "notes": "Chapter-local environment alias match for 'Interior Cave (Dark, claustrophobic, filled with tenuous vapor)' (key_overlap=1, label_overlap=5, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Pupil dilation and eye movement tracking",
+    "Vapor density and visual quality consistency"
+  ],
+  "visual_coverage_families": [
+    "Extreme Close-ups (Eyes, dilated pupils, sweat, gas particles)",
+    "POV shots (Blurred or restricted vision)",
+    "Macro shots of the environment (Cave wall textures)"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Sensory onset of the vapor",
+      "purpose": "",
+      "action_start": "drifting gas particles",
+      "action_end": "gas thickens in frame",
+      "active_subjects": [],
+      "passive_subjects": [
+        "arizona_mountain_cave"
+      ],
+      "spatial_context": "interior cave [[subzone: vapor accumulation layer]]",
+      "blocking_hint": "none",
+      "environment_subzone": "vapor accumulation layer",
+      "continuity_focus": "vapor density/visual quality",
+      "coverage_hint": "macro shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Realization of paralysis",
+      "purpose": "",
+      "action_start": "protagonist eyes open",
+      "action_end": "protagonist attempts movement but fails",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "cave floor [[subzone: cave floor contact zone]]",
+      "blocking_hint": "prone position",
+      "environment_subzone": "cave floor contact zone",
+      "continuity_focus": "eye movement and pupil dilation",
+      "coverage_hint": "extreme close-ups",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Helpless terror and isolation",
+      "purpose": "",
+      "action_start": "protagonist realizes inability to move",
+      "action_end": "protagonist is lost in sensory isolation",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "claustrophobic cave [[subzone: vapor accumulation layer]]",
+      "blocking_hint": "prone/immobile",
+      "environment_subzone": "vapor accumulation layer",
+      "continuity_focus": "eye movement and pupil dilation",
+      "coverage_hint": "POV shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "end"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish environment",
+      "planned_shot_moment_summary": "Macro view of gas particles and cave texture",
+      "primary_subject_seed": "arizona_mountain_cave",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "vapor accumulation layer",
+      "planned_shot_required_anchor_1": "cave wall texture",
+      "planned_shot_scale_proof_detail": "gas particle density",
+      "start_state_seed": "static macro shot",
+      "end_state_seed": "static macro shot",
+      "action_seed": "vapor drifts through frame",
+      "blocking_seed": [],
+      "shot_size": "insert_detail",
+      "camera_angle": "eye_level",
+      "lens_family": "macro",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "establish paralysis",
+      "planned_shot_moment_summary": "Extreme close up of protagonist eyes and sweat",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "cave floor contact zone",
+      "planned_shot_required_anchor_1": "protagonist's eyes",
+      "planned_shot_scale_proof_detail": "pupil dilation",
+      "start_state_seed": "eyes open/alert",
+      "end_state_seed": "eyes wide/dilated",
+      "action_seed": "pupils dilate as gas enters",
+      "blocking_seed": [
+        "prone"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish terror",
+      "planned_shot_moment_summary": "Blurred POV of the dark cave walls",
+      "primary_subject_seed": "arizona_mountain_cave",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "vapor accumulation layer",
+      "planned_shot_required_anchor_1": "cave wall texture",
+      "planned_shot_scale_proof_detail": "blurred vision depth",
+      "start_state_seed": "blurry/unfocused",
+      "end_state_seed": "distorted/terror-filled",
+      "action_seed": "vision swims through gas",
+      "blocking_seed": [],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH028",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH028_chapter_xxviii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH001",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH001_chapter_i.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH002",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH002_SC001] Purpose: To establish the protagonist's vulnerability and the supernatural threat within the cave.",
+    "[CH002_SC001] Summary: The protagonist is trapped in a state of conscious paralysis caused by a mysterious, pungent vapor inside the Arizona mountain cave. He is unable to move despite being fully aware.",
+    "[CH002_SC001] Emotional arc: From awareness/confusion to helpless terror and sensory isolation.",
+    "[CH002_SC001] Coverage: Extreme Close-ups (Eyes, dilated pupils, sweat, gas particles) POV shots (Blurred or restricted vision) Macro shots of the environment (The texture of the cave walls)",
+    "[CH002_SC001] Continuity: Eye movement and pupil dilation. The specific visual quality/density of the vapor.",
+    "[CH002] Chapter summary: **Setting:** A cave in the Arizona mountains; a rocky gorge and canyon under moonlight; the vastness of space. **Characters:** - **The Protagonist:** A man who experiences physical paralysis due to a mysterious gas, u...",
+    "[CH028] CHAPTER XXVIII (book index hit)",
+    "[CH002] CHAPTER II (book index hit)",
+    "[CH001] CHAPTER I (book index hit)",
+    "Character protagonist: protagonist"
+  ],
+  "storyboard_markdown": "# Scene Contract: CH002_SC001\n\n## Production Intent\nEstablish the protagonist's physical helplessness and the presence of a supernatural threat through sensory isolation. The scene relies on the visual density of a pungent vapor to communicate the cause of paralysis within the claustrophobic cave environment.\n\n## Required Cast\n- protagonist\n\n## Required Environments\n- arizona_mountain_cave (Dark, claustrophobic, filled with tenuous vapor)\n\n## Continuity Constraints\n- Eye movement and pupil dilation tracking\n- Vapor density/visual quality consistency\n\n## Beat List\n- BT001: Sensory onset of the vapor\n- BT002: Realization of paralysis\n- BT003: Helpless terror and isolation",
+  "metadata": {
+    "artifact_id": "CH002_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "bbf3ded61c21d5dd0db1df506a404a32ef3c0711",
+    "created_at_utc": "2026-04-24T04:52:08.951287+00:00",
+    "updated_at_utc": "2026-04-24T04:52:08.951287+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH002_SC001",
+        "version": "d68b1967b5aba260033b4d51e6c5dd2da00e6d50"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH002_SC001",
+        "version": "da2c6e998d6cc1ad842bf411f90417eae0043732"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH002_SC001",
+        "version": "adb031d1b159ce45b59db4d99479851f20a0489c"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-24T04:52:53.736122+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "bbf3ded61c21d5dd0db1df506a404a32ef3c0711"
+      }
+    ]
+  }
+}
