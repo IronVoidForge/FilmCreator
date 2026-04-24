@@ -1,8 +1,8 @@
 # Title
-dead_friend Character Reference - Bust Portrait
+former_self Character Reference - Bust Portrait
 
 # ID
-dead_friend_bust_portrait_prompt
+former_self_bust_portrait_prompt
 
 # Purpose
 Prepare a compact character reference prompt for enhancer-safe generation.
@@ -11,15 +11,15 @@ Prepare a compact character reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-If this prompt is later used with an image reference, treat image1 as the locked identity reference. Bust character reference portrait, bust portrait with head, shoulders, and facial structure readable, deceased individual, readable production detail, lean athletic build, decisive, efficient movement, clean neutral studio background, clear silhouette, con..., high quality, clean character reference image, neutral background, even soft lighting, sharp subject detail, clear readable silhouette, clear facial structure, visible eyes, balanced facial lighting, clean portrait detail, visible body proportions, clear posture, defined limbs, consistent anatomy, visible outfit details, clear clothing layers, defined accessories, clean fabric detail, refined rendering, clean contrast, polished detail
+If this prompt is later used with an image reference, treat image1 as the locked identity reference. Bust character reference portrait, bust portrait with head, shoulders, and facial structure readable, readable production detail, lean athletic build, decisive, efficient movement, male, clean neutral studio background, clear silhouette, consistent costume..., high quality, clean character reference image, neutral background, even soft lighting, sharp subject detail, clear readable silhouette, clear facial structure, visible eyes, balanced facial lighting, clean portrait detail, visible body proportions, clear posture, defined limbs, consistent anatomy, visible outfit details, clear clothing layers, defined accessories, clean fabric detail, refined rendering, clean contrast, polished detail
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition, underexposed, harsh shadow, silhouette, cropped subject, text, watermark, obscured face, blurry face, deformed face, asymmetrical face, bad anatomy, extra limbs, cropped body, twisted proportions, muddy clothing, merged clothing shapes, hidden torso, crushed blacks, flat image, low detail
 
 # Inputs
 - subject_kind: character
-- subject_id: dead_friend
-- source_artifact_ids: CHAR_apache_warriors; dead_friend
+- subject_id: former_self
+- source_artifact_ids: CHAR_apache_warriors; former_self
 - reference_mode: character_reference_sheet
 - variant_name: bust_portrait
 - lens_family: neutral_reference
@@ -33,8 +33,8 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - prompt_enhancer_mode: comfyui_text_prompt_enhancer
 - prompt_enhancer_profile: character_reference
 - target_models: qwen_image; flux; z_image
-- display_name: dead_friend
-- identity_descriptor: deceased individual, readable production detail, lean athletic build, decisive, efficient movement
+- display_name: former_self
+- identity_descriptor: readable production detail, lean athletic build, decisive, efficient movement, male
 - body_descriptor: unknown
 - face_descriptor: 
 - costume_descriptor: unknown
@@ -58,4 +58,4 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 
 # Sources
 - C:\FilmCreator_MC\projects\princess_of_mars_test\02_story_analysis\bibles\characters\CHAR_apache_warriors.json
-- C:\FilmCreator_MC\projects\princess_of_mars_test\02_story_analysis\descriptors\characters\dead_friend.json
+- C:\FilmCreator_MC\projects\princess_of_mars_test\02_story_analysis\descriptors\characters\former_self.json
