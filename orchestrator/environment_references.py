@@ -98,23 +98,28 @@ def run_environment_reference_generation(project_slug: str, *, limit: int | None
     warnings: list[str] = []
     written: list[str] = []
 
-    for entry in queue:
-        environment_id = str(entry.get("asset_id", "")).strip().lower()
-        variant = str(entry.get("variant_key", "")).strip().lower()
-        if test_slice and not entry.get("validation_slice"):
-            continue
-        if selected_ids and environment_id not in selected_ids:
-            continue
-        if selected_variants and variant not in selected_variants:
-            continue
-        status = str(entry.get("status", "")).strip().lower()
-        if status in {"approved", "locked"}:
-            continue
-        if status == "blocked" and not test_slice:
-            continue
-        if entry.get("warnings") and not test_slice:
-            continue
-        eligible.append(entry)
+    if test_slice:
+        eligible = _prompt_prepared_entries(project_dir, "environment", selected_variants, selected_ids)
+
+    if not eligible:
+        for entry in queue:
+            environment_id = str(entry.get("asset_id", "")).strip().lower()
+            variant = str(entry.get("variant_key", "")).strip().lower()
+            if selected_ids and environment_id not in selected_ids:
+                continue
+            if selected_variants and variant not in selected_variants:
+                continue
+            status = str(entry.get("status", "")).strip().lower()
+            if status in {"approved", "locked"}:
+                continue
+            if status == "blocked" and not test_slice:
+                continue
+            if entry.get("warnings") and not test_slice:
+                continue
+            eligible.append(entry)
+
+    if not eligible and test_slice:
+        eligible = _fallback_prompt_prepared_entries(project_dir, "environment", selected_variants, selected_ids)
 
     if test_slice:
         eligible = _apply_validation_slice_caps(eligible)
@@ -154,7 +159,8 @@ def run_environment_reference_generation(project_slug: str, *, limit: int | None
             for output_file in _manifest_output_files(summary.manifest_path):
                 candidate_summary = register_environment_reference_candidate(project_slug, environment_id=environment_id, variant=variant, image_path=output_file)
                 written.extend(candidate_summary.written_files)
-    written.extend(write_reference_queue(project_dir, "environment", queue))
+    queue_to_write = eligible if test_slice and eligible else queue
+    written.extend(write_reference_queue(project_dir, "environment", queue_to_write))
     return summarize_reference_phase(project_slug, "environment", project_dir, warnings=warnings, written_files=written)
 
 
@@ -332,3 +338,60 @@ def _recommended_input_warnings(path: Path) -> list[str]:
     try: package = parse_prompt_package(path)
     except Exception: return []
     return [f"recommended input `{k}` missing" for k in OPTIONAL_BUT_RECOMMENDED_ENVIRONMENT_INPUTS if not str(package.inputs.get(k, "")).strip()]
+
+
+def _prompt_prepared_entries(
+    project_dir: Path,
+    subject_kind: str,
+    selected_variants: set[str],
+    selected_ids: set[str],
+) -> list[dict[str, Any]]:
+    index_path = project_dir / "03_prompt_packages" / "prepared" / "PROMPT_PREPARATION_INDEX.json"
+    if not index_path.exists():
+        return []
+    payload = read_json(index_path)
+    if not isinstance(payload, list):
+        return []
+    entries: list[dict[str, Any]] = []
+    for item in payload:
+        if not isinstance(item, dict):
+            continue
+        if str(item.get("subject_kind", "")).strip().lower() != subject_kind:
+            continue
+        if str(item.get("status", "")).strip().lower() != "canonical":
+            continue
+        asset_id = str(item.get("subject_id", "")).strip().lower()
+        variant = str(item.get("variant_name", "")).strip().lower()
+        if not asset_id or not variant:
+            continue
+        if selected_ids and asset_id not in selected_ids:
+            continue
+        if selected_variants and variant not in selected_variants:
+            continue
+        prompt_path = Path(str(item.get("path", "")))
+        if not prompt_path.exists():
+            continue
+        warnings = validate_prompt_package(prompt_path, REQUIRED_ENVIRONMENT_REFERENCE_INPUTS)
+        warnings.extend(_recommended_input_warnings(prompt_path))
+        entries.append(
+            {
+                "schema_version": "2026-04-23-reference-assets-v1",
+                "reference_request_id": f"{asset_id}_{variant}",
+                "asset_kind": subject_kind,
+                "asset_id": asset_id,
+                "variant_key": variant,
+                "prompt_package_path": str(prompt_path),
+                "status": "prepared" if not warnings else "blocked",
+                "approval_state": "unreviewed",
+                "locked": False,
+                "priority": "normal",
+                "candidate_ids": [],
+                "selected_candidate_id": "",
+                "review_notes": [],
+                "warnings": warnings,
+                "updated_at": "",
+                "generation_stage": _generation_stage_for_variant(variant),
+                "generation_workflow_id": _workflow_for_variant(variant),
+            }
+        )
+    return entries
