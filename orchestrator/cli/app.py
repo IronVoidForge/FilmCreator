@@ -49,7 +49,18 @@ def dispatch(args) -> None:
     elif args.command == "plan-character-references":
         summary = run_character_reference_planning(args.project_slug, force=args.force, variants=args.variants, limit=args.limit)
     elif args.command == "generate-character-references":
-        summary = run_character_reference_generation(args.project_slug, limit=args.limit, variants=args.variants, character_ids=args.character_ids, execute=args.execute, seed=args.seed, workflow_id=args.workflow_id, test_slice=args.test_slice)
+        summary = run_character_reference_generation(
+            args.project_slug,
+            limit=args.limit,
+            variants=args.variants,
+            character_ids=args.character_ids,
+            execute=args.execute,
+            seed=args.seed,
+            workflow_id=args.workflow_id,
+            test_slice=args.test_slice,
+            prompt_variant_id=args.prompt_variant,
+            booster_bundle_ids=args.booster_bundle_ids,
+        )
     elif args.command == "register-character-reference-candidate":
         summary = register_character_reference_candidate(args.project_slug, character_id=args.character_id, variant=args.variant, image_path=args.image_path)
     elif args.command == "approve-character-reference":
@@ -61,7 +72,18 @@ def dispatch(args) -> None:
     elif args.command == "plan-environment-references":
         summary = run_environment_reference_planning(args.project_slug, force=args.force, variants=args.variants, limit=args.limit)
     elif args.command == "generate-environment-references":
-        summary = run_environment_reference_generation(args.project_slug, limit=args.limit, variants=args.variants, environment_ids=args.environment_ids, execute=args.execute, seed=args.seed, workflow_id=args.workflow_id, test_slice=args.test_slice)
+        summary = run_environment_reference_generation(
+            args.project_slug,
+            limit=args.limit,
+            variants=args.variants,
+            environment_ids=args.environment_ids,
+            execute=args.execute,
+            seed=args.seed,
+            workflow_id=args.workflow_id,
+            test_slice=args.test_slice,
+            prompt_variant_id=args.prompt_variant,
+            booster_bundle_ids=args.booster_bundle_ids,
+        )
     elif args.command == "register-environment-reference-candidate":
         summary = register_environment_reference_candidate(args.project_slug, environment_id=args.environment_id, variant=args.variant, image_path=args.image_path)
     elif args.command == "approve-environment-reference":

@@ -5,6 +5,7 @@ from typing import Any
 
 from .core.json_io import read_json
 from .environment_bible import _is_film_facing_environment
+from .prompt_boosters import apply_booster_bundles
 from .prompt_package import PromptPackage, parse_prompt_package, write_prompt_package
 from .reference_assets import (
     ENVIRONMENT_DEFAULT_VARIANTS,
@@ -89,7 +90,19 @@ def run_environment_reference_planning(project_slug: str, *, force: bool = False
     return summarize_reference_phase(project_slug, "environment", project_dir, warnings=warnings, written_files=written)
 
 
-def run_environment_reference_generation(project_slug: str, *, limit: int | None = None, variants: list[str] | None = None, environment_ids: list[str] | None = None, execute: bool = False, seed: int | None = None, workflow_id: str | None = None, test_slice: bool = False) -> ReferencePhaseSummary:
+def run_environment_reference_generation(
+    project_slug: str,
+    *,
+    limit: int | None = None,
+    variants: list[str] | None = None,
+    environment_ids: list[str] | None = None,
+    execute: bool = False,
+    seed: int | None = None,
+    workflow_id: str | None = None,
+    test_slice: bool = False,
+    prompt_variant_id: str = "raw",
+    booster_bundle_ids: list[str] | None = None,
+) -> ReferencePhaseSummary:
     project_dir = create_project(project_slug)
     queue = load_reference_queue(project_dir, "environment")
     selected_variants = {v.strip().lower() for v in variants or [] if v.strip()}
@@ -118,9 +131,6 @@ def run_environment_reference_generation(project_slug: str, *, limit: int | None
                 continue
             eligible.append(entry)
 
-    if not eligible and test_slice:
-        eligible = _fallback_prompt_prepared_entries(project_dir, "environment", selected_variants, selected_ids)
-
     if test_slice:
         eligible = _apply_validation_slice_caps(eligible)
     selected_entries = eligible if limit is None else eligible[:limit]
@@ -137,12 +147,21 @@ def run_environment_reference_generation(project_slug: str, *, limit: int | None
         actual_workflow_id = workflow_id or _workflow_for_variant(variant, has_source=bool(source_ref))
         stage = _generation_stage_for_variant(variant, has_source=bool(source_ref))
         try:
-            generation_prompt_path = _write_generation_prompt_package(project_dir, entry, workflow_id=actual_workflow_id, source_ref=source_ref)
+            generation_prompt_path = _write_generation_prompt_package(
+                project_dir,
+                entry,
+                workflow_id=actual_workflow_id,
+                source_ref=source_ref,
+                prompt_variant_id=prompt_variant_id,
+                booster_bundle_ids=booster_bundle_ids,
+            )
             ref_args = [f"image1={source_ref}"] if source_ref else []
             summary = run_still(project_slug=project_slug, stage=stage, prompt_file=str(generation_prompt_path), workflow_id=actual_workflow_id, asset_id=environment_id, ref_args=ref_args, seed=seed, execute=execute)
         except Exception as exc:
             warnings.append(f"{environment_id}/{variant}: generation preparation failed: {exc}")
             continue
+        entry["prompt_variant_id"] = prompt_variant_id
+        entry["booster_bundle_ids"] = [bid for bid in (booster_bundle_ids or []) if str(bid).strip()]
         entry["generation_stage"] = stage
         entry["generation_workflow_id"] = actual_workflow_id
         entry["source_reference_image"] = source_ref
@@ -258,16 +277,57 @@ def _locked_reference_for_variant(project_dir: Path, environment_id: str, varian
     return ""
 
 
-def _write_generation_prompt_package(project_dir: Path, entry: dict[str, Any], *, workflow_id: str, source_ref: str) -> Path:
+def _write_generation_prompt_package(
+    project_dir: Path,
+    entry: dict[str, Any],
+    *,
+    workflow_id: str,
+    source_ref: str,
+    prompt_variant_id: str = "raw",
+    booster_bundle_ids: list[str] | None = None,
+) -> Path:
     package = parse_prompt_package(Path(str(entry.get("prompt_package_path", ""))))
     repair_notes = package.repair_notes_markdown
     positive_prompt = package.positive_prompt
+    negative_prompt = package.negative_prompt
     if source_ref:
         image_instruction = "Use image1 as the locked spatial reference."
         positive_prompt = _prepend_prompt_instruction(package.positive_prompt, image_instruction)
         extra_note = f"- Use image1 as locked environment reference: {source_ref}"
         repair_notes = (repair_notes + "\n" + extra_note).strip() if repair_notes else extra_note
-    generated = PromptPackage(path=package.path, title=package.title, prompt_id=package.prompt_id, purpose=package.purpose, workflow_type=workflow_id, positive_prompt=positive_prompt, negative_prompt=package.negative_prompt, inputs_markdown=package.inputs_markdown, continuity_notes_markdown=package.continuity_notes_markdown, sources_markdown=package.sources_markdown, repair_notes_markdown=repair_notes)
+
+    boosted_positive, boosted_negative, booster_meta = apply_booster_bundles(
+        positive_prompt,
+        negative_prompt,
+        prompt_variant_id=prompt_variant_id,
+        bundle_ids=booster_bundle_ids,
+    )
+    if booster_meta.get("booster_bundle_ids"):
+        summary_line = "- Prompt boosters: variant={variant} bundles={bundles}".format(
+            variant=str(booster_meta.get("prompt_variant_id", "raw")),
+            bundles=", ".join(str(b) for b in booster_meta.get("booster_bundle_ids", [])),
+        )
+        repair_notes = (repair_notes + "\n" + summary_line).strip() if repair_notes else summary_line
+
+    entry["prompt_variant_id"] = str(booster_meta.get("prompt_variant_id", prompt_variant_id or "raw"))
+    entry["booster_bundle_ids"] = list(booster_meta.get("booster_bundle_ids", []))
+    entry["missing_booster_bundle_ids"] = list(booster_meta.get("missing_booster_bundle_ids", []))
+    entry["positive_boosters"] = list(booster_meta.get("positive_boosters", []))
+    entry["negative_boosters"] = list(booster_meta.get("negative_boosters", []))
+
+    generated = PromptPackage(
+        path=package.path,
+        title=package.title,
+        prompt_id=package.prompt_id,
+        purpose=package.purpose,
+        workflow_type=workflow_id,
+        positive_prompt=boosted_positive,
+        negative_prompt=boosted_negative,
+        inputs_markdown=package.inputs_markdown,
+        continuity_notes_markdown=package.continuity_notes_markdown,
+        sources_markdown=package.sources_markdown,
+        repair_notes_markdown=repair_notes,
+    )
     asset_id = str(entry.get("asset_id", "")).strip().lower()
     variant = str(entry.get("variant_key", "")).strip().lower()
     output_path = project_dir / "03_reference_assets" / "environments" / asset_id / "generation_prompts" / f"{variant}_{workflow_id.replace('/', '_')}_prompt.md"

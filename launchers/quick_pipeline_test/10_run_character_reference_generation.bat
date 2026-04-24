@@ -27,13 +27,28 @@ echo.
 echo Project slug: %PROJECT_SLUG%
 echo Limit: %LIMIT%
 echo Variant: bust_portrait
+echo Prompt variants: raw, character_clean, character_readability, character_polish
 echo Repo root: %FILMCREATOR_ROOT%
 echo ComfyUI base URL: %FILMCREATOR_COMFY_BASE_URL%
 echo ComfyUI input dir: %FILMCREATOR_COMFY_INPUT_DIR%
 echo ComfyUI output dir: %FILMCREATOR_COMFY_OUTPUT_DIR%
 echo.
 echo Running character reference generation for a small validation slice...
-python -m orchestrator generate-character-references %PROJECT_SLUG% --variant bust_portrait --limit %LIMIT% --test-slice --execute
+echo.
+echo [1/4] prompt-variant=raw
+python -m orchestrator generate-character-references %PROJECT_SLUG% --variant bust_portrait --limit %LIMIT% --test-slice --execute --prompt-variant raw
+if errorlevel 1 goto :fail
+echo.
+echo [2/4] prompt-variant=character_clean
+python -m orchestrator generate-character-references %PROJECT_SLUG% --variant bust_portrait --limit %LIMIT% --test-slice --execute --prompt-variant character_clean
+if errorlevel 1 goto :fail
+echo.
+echo [3/4] prompt-variant=character_readability
+python -m orchestrator generate-character-references %PROJECT_SLUG% --variant bust_portrait --limit %LIMIT% --test-slice --execute --prompt-variant character_readability
+if errorlevel 1 goto :fail
+echo.
+echo [4/4] prompt-variant=character_polish
+python -m orchestrator generate-character-references %PROJECT_SLUG% --variant bust_portrait --limit %LIMIT% --test-slice --execute --prompt-variant character_polish
 if errorlevel 1 goto :fail
 
 echo.

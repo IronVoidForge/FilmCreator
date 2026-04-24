@@ -27,13 +27,28 @@ echo.
 echo Project slug: %PROJECT_SLUG%
 echo Limit: %LIMIT%
 echo Variant: establishing_wide
+echo Prompt variants: raw, environment_clean, environment_readability, environment_polish
 echo Repo root: %FILMCREATOR_ROOT%
 echo ComfyUI base URL: %FILMCREATOR_COMFY_BASE_URL%
 echo ComfyUI input dir: %FILMCREATOR_COMFY_INPUT_DIR%
 echo ComfyUI output dir: %FILMCREATOR_COMFY_OUTPUT_DIR%
 echo.
 echo Running environment reference generation for a small validation slice...
-python -m orchestrator generate-environment-references %PROJECT_SLUG% --variant establishing_wide --limit %LIMIT% --test-slice --execute
+echo.
+echo [1/4] prompt-variant=raw
+python -m orchestrator generate-environment-references %PROJECT_SLUG% --variant establishing_wide --limit %LIMIT% --test-slice --execute --prompt-variant raw
+if errorlevel 1 goto :fail
+echo.
+echo [2/4] prompt-variant=environment_clean
+python -m orchestrator generate-environment-references %PROJECT_SLUG% --variant establishing_wide --limit %LIMIT% --test-slice --execute --prompt-variant environment_clean
+if errorlevel 1 goto :fail
+echo.
+echo [3/4] prompt-variant=environment_readability
+python -m orchestrator generate-environment-references %PROJECT_SLUG% --variant establishing_wide --limit %LIMIT% --test-slice --execute --prompt-variant environment_readability
+if errorlevel 1 goto :fail
+echo.
+echo [4/4] prompt-variant=environment_polish
+python -m orchestrator generate-environment-references %PROJECT_SLUG% --variant establishing_wide --limit %LIMIT% --test-slice --execute --prompt-variant environment_polish
 if errorlevel 1 goto :fail
 
 echo.
