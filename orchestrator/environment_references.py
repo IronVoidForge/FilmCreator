@@ -54,10 +54,14 @@ def run_environment_reference_planning(project_slug: str, *, force: bool = False
     entries: list[dict[str, Any]] = []
     warnings: list[str] = []
     written: list[str] = []
+    planned_assets = 0
 
     for environment_id, bible in sorted(environment_bibles.items()):
+        if limit is not None and planned_assets >= limit:
+            break
         if not _should_plan_environment(bible):
             continue
+        planned_assets += 1
         priority = _environment_priority(bible)
         for variant in selected_variants:
             key = (environment_id, variant)
@@ -98,15 +102,32 @@ def lock_environment_reference_candidate(project_slug: str, *, candidate_id: str
 
 
 def _load_environment_bibles(project_dir: Path) -> dict[str, dict[str, Any]]:
-    root = project_dir / "02_story_analysis" / "bibles" / "environments"
-    if not root.exists():
-        return {}
     records: dict[str, dict[str, Any]] = {}
-    for path in sorted(root.glob("ENV_*.json")):
+    root = project_dir / "02_story_analysis" / "bibles" / "environments"
+    paths = sorted(path for path in root.glob("ENV_*.json") if path.is_file()) if root.exists() else []
+    if not paths:
+        fallback = project_dir / "02_story_analysis" / "world" / "global" / "ENVIRONMENT_REGISTRY_GLOBAL.json"
+        paths = [fallback] if fallback.exists() else []
+    for path in paths:
         payload = read_json(path)
         if isinstance(payload, dict):
-            env_id = str(payload.get("environment_id", "")).strip().lower()
+            if path.name.startswith("ENVIRONMENT_REGISTRY_GLOBAL"):
+                for env_id, entry in payload.items():
+                    if not isinstance(entry, dict):
+                        continue
+                    normalized_id = str(entry.get("canonical_id", env_id)).strip().lower()
+                    if not normalized_id:
+                        continue
+                    record = dict(entry)
+                    record.setdefault("environment_id", normalized_id)
+                    record.setdefault("display_name", str(entry.get("display_name", normalized_id)).strip() or normalized_id)
+                    records[normalized_id] = record
+                continue
+            env_id = str(payload.get("environment_id", payload.get("canonical_id", ""))).strip().lower()
             if env_id:
+                payload = dict(payload)
+                payload.setdefault("environment_id", env_id)
+                payload.setdefault("display_name", str(payload.get("display_name", env_id)).strip() or env_id)
                 records[env_id] = payload
     return records
 
@@ -116,7 +137,7 @@ def _should_plan_environment(bible: dict[str, Any]) -> bool:
     if not env_id:
         return False
     try:
-        return _is_film_facing_environment({"canonical_id": env_id}, bible)
+        return _is_film_facing_environment({"status": str(bible.get("status", "canonical")).strip().lower(), "entity_kind": str(bible.get("entity_kind", "environment")).strip().lower()}, bible)
     except Exception:
         return True
 

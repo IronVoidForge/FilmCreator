@@ -123,16 +123,33 @@ def lock_character_reference_candidate(project_slug: str, *, candidate_id: str) 
 
 
 def _load_character_bibles(project_dir: Path) -> dict[str, dict[str, Any]]:
-    root = project_dir / "02_story_analysis" / "bibles" / "characters"
-    if not root.exists():
-        return {}
     records: dict[str, dict[str, Any]] = {}
-    for path in sorted(root.glob("CHAR_*.json")):
+    root = project_dir / "02_story_analysis" / "bibles" / "characters"
+    paths = sorted(path for path in root.glob("CHAR_*.json") if path.is_file()) if root.exists() else []
+    if not paths:
+        fallback = project_dir / "02_story_analysis" / "world" / "global" / "CHARACTER_REGISTRY_GLOBAL.json"
+        paths = [fallback] if fallback.exists() else []
+    for path in paths:
         payload = read_json(path)
         if not isinstance(payload, dict):
             continue
-        character_id = str(payload.get("character_id", "")).strip().lower()
+        if path.name.startswith("CHARACTER_REGISTRY_GLOBAL"):
+            for character_id, entry in payload.items():
+                if not isinstance(entry, dict):
+                    continue
+                normalized_id = str(entry.get("canonical_id", character_id)).strip().lower()
+                if not normalized_id:
+                    continue
+                record = dict(entry)
+                record.setdefault("character_id", normalized_id)
+                record.setdefault("display_name", str(entry.get("display_name", normalized_id)).strip() or normalized_id)
+                records[normalized_id] = record
+            continue
+        character_id = str(payload.get("character_id", payload.get("canonical_id", ""))).strip().lower()
         if character_id:
+            payload = dict(payload)
+            payload.setdefault("character_id", character_id)
+            payload.setdefault("display_name", str(payload.get("display_name", character_id)).strip() or character_id)
             records[character_id] = payload
     return records
 
@@ -145,7 +162,7 @@ def _should_plan_character(bible: dict[str, Any]) -> bool:
     if status not in {"", "canonical"}:
         return False
     try:
-        return _is_film_facing_character({"canonical_id": character_id}, bible)
+        return _is_film_facing_character({"status": status, "entity_kind": str(bible.get("entity_kind", "individual")).strip().lower()}, bible)
     except Exception:
         return True
 

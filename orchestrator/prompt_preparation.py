@@ -19,12 +19,12 @@ PROMPT_PREPARATION_SCHEMA_VERSION = "2026-04-23-prompt-preparation-v3"
 
 PROMPT_PREP_ROOT = Path("03_prompt_packages") / "prepared"
 CHARACTER_VARIANTS = [
-    ("front_view", "Front View", "front-facing full-body reference with the camera square to the subject"),
-    ("three_quarter_view", "3/4 View", "three-quarter view with readable face, torso, and costume layers"),
-    ("profile_view", "Profile View", "profile view with a clean silhouette and side-plane facial structure"),
-    ("back_view", "Back View", "rear view with costume back detail and full silhouette clarity"),
     ("full_body_neutral", "Full Body Neutral", "full-body neutral standing reference with balanced posture"),
     ("bust_portrait", "Bust Portrait", "bust portrait with head, shoulders, and facial structure readable"),
+    ("profile_view", "Profile View", "profile view with a clean silhouette and side-plane facial structure"),
+    ("three_quarter_view", "3/4 View", "three-quarter view with readable face, torso, and costume layers"),
+    ("front_view", "Front View", "front-facing full-body reference with the camera square to the subject"),
+    ("back_view", "Back View", "rear view with costume back detail and full silhouette clarity"),
     ("action_pose", "Action Pose", "dynamic action pose that preserves anatomy, costume, and identity"),
     ("expression_sheet", "Expression Sheet", "expression sheet showing several clear emotional beats without changing costume"),
 ]
@@ -42,6 +42,28 @@ SHOT_VARIANTS = [
     ("alternate_angle", "Alternate Angle", "same moment from a different camera angle while preserving continuity"),
     ("consistency_repair", "Consistency Repair", "continuity repair pass that preserves pose, costume, and spatial relationships"),
 ]
+
+OPTIONAL_CHARACTER_REFERENCE_INPUTS = {
+    "display_name",
+    "identity_descriptor",
+    "body_descriptor",
+    "face_descriptor",
+    "costume_descriptor",
+    "posture_descriptor",
+    "expression_descriptor",
+    "locked_fields",
+}
+
+OPTIONAL_ENVIRONMENT_REFERENCE_INPUTS = {
+    "display_name",
+    "layout_descriptor",
+    "scale_descriptor",
+    "architecture_descriptor",
+    "landmark_descriptor",
+    "lighting_descriptor",
+    "mood_descriptor",
+    "locked_fields",
+}
 
 GENERIC_NEGATIVE_PROMPT = (
     "text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, "
@@ -129,6 +151,35 @@ def _descriptor_phrases(*values: str) -> list[str]:
     return phrases
 
 
+def _first_existing_path(paths: list[Path]) -> Path | None:
+    for path in paths:
+        if path.exists():
+            return path
+    return None
+
+
+def _recommended_repair_notes(inputs: dict[str, str], required_keys: set[str], *, label: str) -> list[str]:
+    notes: list[str] = []
+    for key in sorted(required_keys):
+        if not str(inputs.get(key, "")).strip():
+            notes.append(f"{label} recommended input `{key}` is missing")
+    return notes
+
+
+def _character_prompt_lead(variant_key: str) -> str:
+    variant = variant_key.strip().lower()
+    return {
+        "full_body_neutral": "Full-body character reference portrait",
+        "bust_portrait": "Bust character reference portrait",
+        "profile_view": "Profile character reference portrait",
+        "three_quarter_view": "Three-quarter character reference portrait",
+        "front_view": "Front-view character reference portrait",
+        "back_view": "Back-view character reference portrait",
+        "action_pose": "Action character reference portrait",
+        "expression_sheet": "Character expression reference sheet",
+    }.get(variant, "Character reference portrait")
+
+
 def _looks_like_metadata_summary(text: str) -> bool:
     normalized = " ".join(text.lower().split())
     metadata_markers = [
@@ -213,16 +264,22 @@ def _load_json_files(root: Path, pattern: str) -> list[dict[str, Any]]:
 
 def _character_bible_paths(project_dir: Path) -> list[Path]:
     root = project_dir / "02_story_analysis" / "bibles" / "characters"
-    if not root.exists():
-        return []
-    return sorted(path for path in root.glob("CHAR_*.json") if path.is_file())
+    if root.exists():
+        paths = sorted(path for path in root.glob("CHAR_*.json") if path.is_file())
+        if paths:
+            return paths
+    fallback = project_dir / "02_story_analysis" / "world" / "global" / "CHARACTER_REGISTRY_GLOBAL.json"
+    return [fallback] if fallback.exists() else []
 
 
 def _environment_bible_paths(project_dir: Path) -> list[Path]:
     root = project_dir / "02_story_analysis" / "bibles" / "environments"
-    if not root.exists():
-        return []
-    return sorted(path for path in root.glob("ENV_*.json") if path.is_file())
+    if root.exists():
+        paths = sorted(path for path in root.glob("ENV_*.json") if path.is_file())
+        if paths:
+            return paths
+    fallback = project_dir / "02_story_analysis" / "world" / "global" / "ENVIRONMENT_REGISTRY_GLOBAL.json"
+    return [fallback] if fallback.exists() else []
 
 
 def _scene_contract_paths(project_dir: Path) -> list[Path]:
@@ -260,8 +317,23 @@ def _load_character_bibles(project_dir: Path) -> dict[str, dict[str, Any]]:
         payload = read_json(path)
         if not isinstance(payload, dict):
             continue
-        character_id = str(payload.get("character_id", "")).strip().lower()
+        if path.name.startswith("CHARACTER_REGISTRY_GLOBAL"):
+            for character_id, entry in payload.items():
+                if not isinstance(entry, dict):
+                    continue
+                normalized_id = str(entry.get("canonical_id", character_id)).strip().lower()
+                if not normalized_id:
+                    continue
+                record = dict(entry)
+                record.setdefault("character_id", normalized_id)
+                record.setdefault("display_name", str(entry.get("display_name", normalized_id)).strip() or normalized_id)
+                records[normalized_id] = record
+            continue
+        character_id = str(payload.get("character_id", payload.get("canonical_id", ""))).strip().lower()
         if character_id:
+            payload = dict(payload)
+            payload.setdefault("character_id", character_id)
+            payload.setdefault("display_name", str(payload.get("display_name", character_id)).strip() or character_id)
             records[character_id] = payload
     return records
 
@@ -272,8 +344,23 @@ def _load_environment_bibles(project_dir: Path) -> dict[str, dict[str, Any]]:
         payload = read_json(path)
         if not isinstance(payload, dict):
             continue
-        environment_id = str(payload.get("environment_id", "")).strip().lower()
+        if path.name.startswith("ENVIRONMENT_REGISTRY_GLOBAL"):
+            for environment_id, entry in payload.items():
+                if not isinstance(entry, dict):
+                    continue
+                normalized_id = str(entry.get("canonical_id", environment_id)).strip().lower()
+                if not normalized_id:
+                    continue
+                record = dict(entry)
+                record.setdefault("environment_id", normalized_id)
+                record.setdefault("display_name", str(entry.get("display_name", normalized_id)).strip() or normalized_id)
+                records[normalized_id] = record
+            continue
+        environment_id = str(payload.get("environment_id", payload.get("canonical_id", ""))).strip().lower()
         if environment_id:
+            payload = dict(payload)
+            payload.setdefault("environment_id", environment_id)
+            payload.setdefault("display_name", str(payload.get("display_name", environment_id)).strip() or environment_id)
             records[environment_id] = payload
     return records
 
@@ -742,8 +829,9 @@ def _base_inputs(
     prompt_enhancer_profile: str,
     change_budget: str,
     reuse_policy: str,
+    extra_inputs: dict[str, str] | None = None,
 ) -> dict[str, str]:
-    return {
+    inputs = {
         "subject_kind": subject_kind,
         "subject_id": subject_id,
         "source_artifact_ids": "; ".join(source_artifact_ids),
@@ -761,6 +849,13 @@ def _base_inputs(
         "prompt_enhancer_profile": prompt_enhancer_profile,
         "target_models": "qwen_image; flux; z_image",
     }
+    if extra_inputs:
+        for key, value in extra_inputs.items():
+            if isinstance(value, str):
+                inputs[key] = value.strip()
+            else:
+                inputs[key] = ""
+    return inputs
 
 
 def _package_for_character(
@@ -774,19 +869,64 @@ def _package_for_character(
     character_id = str(bible.get("character_id", "")).strip().lower()
     display_name = str(bible.get("display_name", character_id)).strip() or character_id
     descriptor_text = _character_descriptor(bible, descriptor)
+    descriptor_source = descriptor or {}
+    body_descriptor = _listify(
+        *_coerce_bullets(
+            descriptor_source.get("physical_build", ""),
+            descriptor_source.get("physical_presence_notes", ""),
+            bible.get("physical_build", ""),
+            bible.get("body_type", ""),
+        )
+    )
+    face_descriptor = _listify(
+        *_coerce_bullets(
+            descriptor_source.get("face_shape", ""),
+            descriptor_source.get("eye_color", ""),
+            descriptor_source.get("facial_hair", ""),
+            descriptor_source.get("distinctive_features", ""),
+        )
+    )
+    costume_descriptor = _listify(
+        *_coerce_bullets(
+            descriptor_source.get("costume_signature", ""),
+            descriptor_source.get("costume_layers", ""),
+            descriptor_source.get("costume_materials", ""),
+            bible.get("costume_signature", ""),
+        )
+    )
+    posture_descriptor = _listify(*_coerce_bullets(descriptor_source.get("posture", ""), descriptor_source.get("movement_language", "")))
+    expression_descriptor = _listify(
+        *_coerce_bullets(descriptor_source.get("expression_tendency", ""), descriptor_source.get("voice_or_presence_notes", ""))
+    )
+    locked_fields = _listify(*_coerce_bullets(descriptor_source.get("locked_fields", ""), bible.get("locked_fields", "")))
+    repair_notes = _recommended_repair_notes(
+        {
+            "display_name": display_name,
+            "identity_descriptor": descriptor_text,
+            "body_descriptor": body_descriptor,
+            "face_descriptor": face_descriptor,
+            "costume_descriptor": costume_descriptor,
+            "posture_descriptor": posture_descriptor,
+            "expression_descriptor": expression_descriptor,
+            "locked_fields": locked_fields,
+        },
+        OPTIONAL_CHARACTER_REFERENCE_INPUTS,
+        label="character reference",
+    )
     title = f"{display_name} Character Reference - {variant_title}"
     prompt_id = f"{character_id}_{variant_key}_prompt"
     positive_prompt = _compact(
-        f"Film character reference sheet, {variant_hint}, {descriptor_text}, clean neutral studio background, clear silhouette, consistent costume layers, consistent facial structure, no narrative action, no text, no watermark.",
+        f"{_character_prompt_lead(variant_key)}, {variant_hint}, {descriptor_text}, clean neutral studio background, clear silhouette, consistent costume layers, consistent facial structure, no narrative action, no text, no watermark.",
         limit=320,
     )
     package_path = project_dir / PROMPT_PREP_ROOT / "characters" / character_id / f"{variant_key}_prompt.md"
-    sources = [
-        project_dir / "02_story_analysis" / "bibles" / "characters" / f"CHAR_{character_id}.json",
-    ]
-    markdown_source = project_dir / "02_story_analysis" / "bibles" / "characters" / f"CHAR_{character_id}.md"
-    if markdown_source.exists():
-        sources.append(markdown_source)
+    sources = []
+    bible_source = _first_existing_path(_character_bible_paths(project_dir))
+    if bible_source is not None:
+        sources.append(bible_source)
+    descriptor_source_path = project_dir / "02_story_analysis" / "descriptors" / "characters" / f"{character_id}.json"
+    if descriptor_source_path.exists():
+        sources.append(descriptor_source_path)
     source_artifact_ids = list(dict.fromkeys(path.stem for path in sources))
     inputs = _base_inputs(
         subject_kind="character",
@@ -797,6 +937,16 @@ def _package_for_character(
         prompt_enhancer_profile="character_reference",
         change_budget="preserve identity, costume, and silhouette",
         reuse_policy="reuse canonical visual canon",
+        extra_inputs={
+            "display_name": display_name,
+            "identity_descriptor": descriptor_text,
+            "body_descriptor": body_descriptor,
+            "face_descriptor": face_descriptor,
+            "costume_descriptor": costume_descriptor,
+            "posture_descriptor": posture_descriptor,
+            "expression_descriptor": expression_descriptor,
+            "locked_fields": locked_fields,
+        },
     )
     package = PromptPackage(
         path=package_path,
@@ -815,6 +965,7 @@ def _package_for_character(
                 "- Avoid proper nouns in the prompt body unless text is meant to appear on screen.",
             ]
         ),
+        repair_notes_markdown="\n".join(f"- {line}" for line in repair_notes),
         sources_markdown="\n".join(f"- {path}" for path in sources),
     )
     return package, package_path, [str(path) for path in sources]
@@ -831,19 +982,51 @@ def _package_for_environment(
     environment_id = str(bible.get("environment_id", "")).strip().lower()
     display_name = str(bible.get("display_name", environment_id)).strip() or environment_id
     descriptor_text = _environment_descriptor(bible, descriptor)
+    descriptor_source = descriptor or {}
+    layout_descriptor = _listify(
+        *_coerce_bullets(
+            descriptor_source.get("layout", ""),
+            descriptor_source.get("foreground_midground_background", ""),
+            descriptor_source.get("pathways", ""),
+            bible.get("layout_notes", ""),
+        )
+    )
+    scale_descriptor = _listify(*_coerce_bullets(descriptor_source.get("scale", ""), descriptor_source.get("depth_cues", "")))
+    architecture_descriptor = _listify(*_coerce_bullets(descriptor_source.get("architecture", ""), descriptor_source.get("materials", "")))
+    landmark_descriptor = _listify(
+        *_coerce_bullets(descriptor_source.get("camera_friendly_landmarks", ""), descriptor_source.get("recurring_anchors", ""))
+    )
+    lighting_descriptor = _listify(*_coerce_bullets(descriptor_source.get("lighting", ""), bible.get("lighting", "")))
+    mood_descriptor = _listify(*_coerce_bullets(descriptor_source.get("mood", ""), bible.get("mood", "")))
+    locked_fields = _listify(*_coerce_bullets(descriptor_source.get("locked_fields", ""), bible.get("locked_fields", "")))
+    repair_notes = _recommended_repair_notes(
+        {
+            "display_name": display_name,
+            "layout_descriptor": layout_descriptor,
+            "scale_descriptor": scale_descriptor,
+            "architecture_descriptor": architecture_descriptor,
+            "landmark_descriptor": landmark_descriptor,
+            "lighting_descriptor": lighting_descriptor,
+            "mood_descriptor": mood_descriptor,
+            "locked_fields": locked_fields,
+        },
+        OPTIONAL_ENVIRONMENT_REFERENCE_INPUTS,
+        label="environment reference",
+    )
     title = f"{display_name} Environment Reference - {variant_title}"
     prompt_id = f"{environment_id}_{variant_key}_prompt"
     positive_prompt = _compact(
-        f"Film environment reference sheet, {variant_hint}, {descriptor_text}, clear spatial layout, readable anchors and depth cues, no characters, no text, no watermark.",
+        f"Environment reference sheet, {variant_hint}, {descriptor_text}, clear spatial layout, readable anchors and depth cues, no characters, no text, no watermark.",
         limit=320,
     )
     package_path = project_dir / PROMPT_PREP_ROOT / "environments" / environment_id / f"{variant_key}_prompt.md"
-    sources = [
-        project_dir / "02_story_analysis" / "bibles" / "environments" / f"ENV_{environment_id}.json",
-    ]
-    markdown_source = project_dir / "02_story_analysis" / "bibles" / "environments" / f"ENV_{environment_id}.md"
-    if markdown_source.exists():
-        sources.append(markdown_source)
+    sources = []
+    bible_source = _first_existing_path(_environment_bible_paths(project_dir))
+    if bible_source is not None:
+        sources.append(bible_source)
+    descriptor_source_path = project_dir / "02_story_analysis" / "descriptors" / "environments" / f"{environment_id}.json"
+    if descriptor_source_path.exists():
+        sources.append(descriptor_source_path)
     source_artifact_ids = list(dict.fromkeys(path.stem for path in sources))
     inputs = _base_inputs(
         subject_kind="environment",
@@ -854,6 +1037,16 @@ def _package_for_environment(
         prompt_enhancer_profile="environment_reference",
         change_budget="preserve geography, lighting, and anchors",
         reuse_policy="reuse canonical spatial canon",
+        extra_inputs={
+            "display_name": display_name,
+            "layout_descriptor": layout_descriptor,
+            "scale_descriptor": scale_descriptor,
+            "architecture_descriptor": architecture_descriptor,
+            "landmark_descriptor": landmark_descriptor,
+            "lighting_descriptor": lighting_descriptor,
+            "mood_descriptor": mood_descriptor,
+            "locked_fields": locked_fields,
+        },
     )
     package = PromptPackage(
         path=package_path,
@@ -872,6 +1065,7 @@ def _package_for_environment(
                 "- Avoid proper nouns in the prompt body unless text is meant to appear on screen.",
             ]
         ),
+        repair_notes_markdown="\n".join(f"- {line}" for line in repair_notes),
         sources_markdown="\n".join(f"- {path}" for path in sources),
     )
     return package, package_path, [str(path) for path in sources]
