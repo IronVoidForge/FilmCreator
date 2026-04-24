@@ -9,9 +9,10 @@ The latest validated state is:
 - the refactor branch has merged into `main`
 - multi-chapter analysis for `princess_of_mars_test` completed `28/28` chapters with `0` failures
 - chapter analysis, world registries, snapshots, continuity, and librarian/index retrieval are stable enough to build on
-- baseline downstream synthesis phases now exist as first-class CLI stages, including character bibles, environment bibles, scene contracts, scene bindings, shot packages, dialogue timeline, descriptor enrichment, prompt preparation, and quality grading
+- character bible synthesis and environment bible synthesis are now validated as runnable downstream stages
+- scene contracts, scene bindings, shot packages, dialogue timeline, descriptor enrichment, prompt preparation, and quality grading are all present as first-class CLI stages
 - the current bottleneck is no longer extraction correctness
-- the current bottleneck is synthesis quality at the handoff layers, especially prompt-ready variable quality, transition-scene environment handoff, and production-facing prompt fidelity
+- the current bottleneck is synthesis quality at the handoff layers, especially prompt-ready variable quality, transition-scene environment handoff, subject/object typing, and production-facing prompt fidelity
 
 ## Status Legend
 
@@ -53,20 +54,20 @@ The latest validated state is:
 
 ### 1.6 SQLite relational model
 - status: `planned`
-- evidence: SQLite remains deferred until the file-first production contracts stabilize
-- next validation: revisit only after phases 7â€“11 contracts and lifecycle semantics are stable
+- evidence: SQLite remains deferred until the file-first production contracts stabilize, but the core entity/relationship variable set is now stable enough to design against
+- next validation: revisit once the remaining prompt-fidelity and lifecycle semantics are stable and the schema can be introduced without fighting active contract churn
 
 ## Shared Asset Foundation
 
 ### 2.1 character reference generation
 - status: `validated`
-- evidence: shared character prompt writing exists and can operate from analysis outputs
-- next validation: upgrade from reference prompt generation into canonical character bible synthesis and approved character reference bundles
+- evidence: shared character prompt writing exists and can operate from analysis outputs, and character bible synthesis now validates end to end in the downstream rerun
+- next validation: keep improving age/state variant handling and prompt-ready descriptor coverage
 
 ### 2.2 environment reference generation
 - status: `validated`
-- evidence: shared environment prompt writing exists and can operate from analysis outputs
-- next validation: upgrade from reference prompt generation into canonical environment bible synthesis and approved environment reference bundles
+- evidence: shared environment prompt writing exists and can operate from analysis outputs, and environment bible synthesis now validates end to end in the downstream rerun
+- next validation: keep tightening chapter-local alias resolution and transition-scene environment handoff
 
 ### 2.3 shared ref promotion and reuse
 - status: `implemented`
@@ -154,14 +155,14 @@ The latest validated state is:
 ## New Active Roadmap Phases
 
 ### Phase 7 - Character Bible Synthesis
-- status: `implemented`
-- evidence: `synthesize-character-bibles` is exposed through the CLI and launcher flow, and dedicated synthesis modules now exist under `orchestrator/character_bible*.py`
-- next validation: confirm full-book artifact writing, incremental reuse, and locked-field preservation against the current project layout
+- status: `validated`
+- evidence: `synthesize-character-bibles` is exposed through the CLI and launcher flow, dedicated synthesis modules exist under `orchestrator/character_bible*.py`, and full-book reruns have produced stable character bible artifacts and review queues
+- next validation: keep validating locked-field preservation and age/state variant coverage as new evidence lands
 
 ### Phase 8 - Environment Bible Synthesis
-- status: `implemented`
-- evidence: `synthesize-environment-bibles` is exposed through the CLI and launcher flow, and dedicated synthesis now exists in `orchestrator/environment_bible.py`
-- next validation: confirm full-book artifact writing, incremental reuse, and hierarchy-aware environment reuse against the current project layout
+- status: `validated`
+- evidence: `synthesize-environment-bibles` is exposed through the CLI and launcher flow, dedicated synthesis exists in `orchestrator/environment_bible.py`, and full-book reruns have produced stable environment bible artifacts and review queues
+- next validation: keep tightening hierarchy-aware environment reuse and chapter-local alias resolution
 
 ### Phase 9 - Scene Production Contracts
 - status: `validated`

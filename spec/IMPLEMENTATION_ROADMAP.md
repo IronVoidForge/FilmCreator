@@ -20,11 +20,11 @@ Ship a local-first, reviewable, resumable film pipeline that can:
 - The latest full `princess_of_mars_test` run completed `28/28` chapters with `0` failures.
 - Multi-chapter authoring now produces stable analysis artifacts, world registries, continuity state, and run-level failure/retry tracking.
 - The librarian/index layer exists and can now serve as the retrieval backbone for synthesis stages.
-- Phase 7 character bible synthesis is implemented as a CLI/launcher stage.
-- Phase 8 environment bible synthesis is now implemented and runnable through the CLI and launcher.
-- Phase 9.5 scene binding, Phase 10 shot planning, Phase 11 dialogue timeline, Phase 11.5 prompt preparation, Phase 11.7 descriptor enrichment, and Phase 11.8 quality grading are all implemented as runnable downstream stages.
+- Phase 7 character bible synthesis is validated as a CLI/launcher stage.
+- Phase 8 environment bible synthesis is validated and runnable through the CLI and launcher.
+- Phase 9.5 scene binding, Phase 10 shot planning, Phase 11 dialogue timeline, Phase 11.5 prompt preparation, Phase 11.7 descriptor enrichment, and Phase 11.8 quality grading are all implemented as runnable downstream stages, with the first five already validated in live reruns.
 - Repair-first retries and chunk fallback are active and materially improved authoring stability.
-- The current bottleneck is no longer phase availability; it is prompt-ready variable quality, environment handoff in transition scenes, and final prompt fidelity.
+- The current bottleneck is no longer phase availability; it is prompt-ready variable quality, environment handoff in transition scenes, subject/object typing, and final prompt fidelity.
 
 ## Working Principles
 
@@ -137,7 +137,7 @@ Scenes and shots need stable people and stable places before they can become pro
 
 #### Current Status
 
-Implemented and runnable.
+Validated and runnable.
 
 ### Phase 9 â€“ Scene Production Contracts
 
@@ -213,7 +213,7 @@ Current refinement work is focused on:
 Convert scene contracts and scene bindings into ordered shot plans and generation-facing shot packages.
 
 - status: `validated`
-- evidence: `synthesize-shot-packages` runs end to end, writes per-shot JSON/markdown packages, and produces shot indexes plus review queues for the full `princess_of_mars_test` run
+- evidence: `synthesize-shot-packages` runs end to end, writes per-shot JSON/markdown packages, and produces shot indexes plus review queues for the full `princess_of_mars_test` run; recent reruns also validate beat-specific environment overrides
 - next validation: tighten shot-to-dialogue and edit-aware sequencing on top of the new shot contract layer
 
 #### Inputs
@@ -626,10 +626,10 @@ When older beat/clip planning logic is still useful, wrap it through compatibili
 ## Recommended Build Order From Here
 
 1. Add cross-cutting artifact lifecycle, dependency, and review specs.
-2. Phase 7 character bible synthesis is implemented and runnable.
-3. Phase 8 environment bible synthesis is implemented and runnable.
+2. Phase 7 character bible synthesis is validated and runnable.
+3. Phase 8 environment bible synthesis is validated and runnable.
 4. Phase 9 scene production contracts and chapter storyboard outputs are implemented and runnable.
-5. Phase 10 shot planning and shot packages are implemented and validated for baseline runs; continue tightening environment handoff and prompt-ready variable quality.
+5. Phase 10 shot planning and shot packages are implemented and validated for baseline runs; continue tightening environment handoff, subject/object typing, and prompt-ready variable quality.
 6. Phase 11 dialogue, timing, and edit-aware sequencing is implemented and validated for baseline runs.
 7. Phase 11.5 prompt preparation and reference pack assembly is implemented and validated for baseline runs; continue moving toward template-first prompt rendering.
 8. Phase 11.6 key item index and reference pack assembly remains pending as a distinct first-class phase.

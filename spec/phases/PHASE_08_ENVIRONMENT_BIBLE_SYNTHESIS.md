@@ -53,6 +53,6 @@ orchestrator/environment_bible.py
 
 ## Status
 
-- `implemented`
-- evidence: `synthesize-environment-bibles` is available through `orchestrator/cli.py`, `orchestrator/environment_bible.py` exists, and the authoring/full-book launchers already route through this phase
-- next revision required: validate artifact writing, reuse semantics, and hierarchy-aware environment continuity against the current project output layout
+- `validated`
+- evidence: `synthesize-environment-bibles` is available through `orchestrator/cli.py`, `orchestrator/environment_bible.py` exists, and the authoring/full-book launchers already route through this phase; full reruns have produced stable environment bible artifacts and review queues
+- next revision required: keep tightening hierarchy-aware environment reuse and chapter-local alias resolution

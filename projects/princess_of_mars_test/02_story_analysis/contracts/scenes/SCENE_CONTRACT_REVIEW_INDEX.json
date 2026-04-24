@@ -1,317 +1,5 @@
 [
   {
-    "scene_id": "CH001_SC001",
-    "chapter_id": "CH001",
-    "scene_title": "SC001",
-    "purpose": "Establish the framing device and the protagonist's unique condition.",
-    "summary": "An elderly John Carter introduces himself to the reader/audience, explaining his anomalous aging process and his decision to document his life story before he finally dies.",
-    "emotional_arc": "Introspection / Solemnity.",
-    "production_intent": "Establish the narrative framing device by introducing an elderly protagonist who is documenting his life history. The scene must communicate his anomalous aging process and his impending mortality through a solemn, introspective tone.",
-    "scene_short_description": "An elderly man sits in a soft-lit space, addressing the audience about his life.",
-    "scene_primary_scale_story_point": "Subject is centered within a localized narrative framing space.",
-    "scene_required_anchor_catalog": [
-      "Seated chair/position",
-      "Weathered skin textures"
-    ],
-    "scene_start_state": "john_carter is seated, looking toward the lens with a solemn expression.",
-    "scene_end_state": "john_carter finishes his introduction, maintaining an introspective gaze.",
-    "dominant_action_line": "The protagonist speaks directly to the audience about his anomalous aging and life documentation.",
-    "scene_spatial_layout": [
-      "Tight framing around the seated subject",
-      "Softly defined background to emphasize isolation/reflection"
-    ],
-    "character_spatial_map": [
-      "john_carter is seated in a fixed position facing the camera"
-    ],
-    "environment_subzones": [
-      "primary scene playing area"
-    ],
-    "entry_vectors": [
-      "N/A (Static framing)"
-    ],
-    "exit_vectors": [
-      "N/A (Static framing)"
-    ],
-    "beat_transition_map": [
-      "BT001 -> BT002: Visual shift from macro texture to subject presence",
-      "BT002 -> BT003: Shift from medium shot to intimate eye contact"
-    ],
-    "characters_required": [
-      {
-        "label": "John Carter (Elderly)",
-        "canonical_id": "john_carter",
-        "display_name": "john_carter",
-        "status": "canonical",
-        "entity_kind": "individual",
-        "resolution_score": 138,
-        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
-        "notes": "Direct registry match for 'john_carter'."
-      }
-    ],
-    "environments_required": [
-      {
-        "label": "Unspecified (Narrative framing space)",
-        "canonical_id": null,
-        "display_name": "Unspecified (Narrative framing space)",
-        "status": "review",
-        "entity_kind": "environment",
-        "resolution_score": 8,
-        "source_path": "",
-        "notes": "Low-confidence environment match requires review."
-      }
-    ],
-    "continuity_constraints": [
-      "Consistent elderly age/appearance for john_carter",
-      "Consistent tone of voice and delivery"
-    ],
-    "visual_coverage_families": [
-      "Extreme close-ups of eyes and weathered skin",
-      "Medium shots of seated elderly subject",
-      "Soft lighting suggesting memory or reflection"
-    ],
-    "beat_list": [
-      {
-        "beat_id": "BT001",
-        "summary": "Visual introduction of anomalous aging via texture",
-        "purpose": "",
-        "action_start": "extreme close up on skin",
-        "action_end": "skin detail remains static",
-        "active_subjects": [
-          "john_carter"
-        ],
-        "passive_subjects": [],
-        "spatial_context": "Narrative framing space",
-        "blocking_hint": "stationary macro focus",
-        "environment_subzone": "Narrative framing space",
-        "continuity_focus": "skin texture/age consistency",
-        "coverage_hint": "extreme close-up",
-        "coverage_priority": "high",
-        "handoff_to_next": "BT002"
-      },
-      {
-        "beat_id": "BT002",
-        "summary": "Verbal introduction of self and condition",
-        "purpose": "",
-        "action_start": "subject begins speaking",
-        "action_end": "explanation of aging complete",
-        "active_subjects": [
-          "john_carter"
-        ],
-        "passive_subjects": [],
-        "spatial_context": "Narrative framing space",
-        "blocking_hint": "seated facing camera",
-        "environment_subzone": "Narrative framing space",
-        "continuity_focus": "tone of voice/delivery",
-        "coverage_hint": "medium shot",
-        "coverage_priority": "medium",
-        "handoff_to_next": "BT003"
-      },
-      {
-        "beat_id": "BT003",
-        "summary": "Declaration of intent to document life",
-        "purpose": "",
-        "action_start": "subject focuses gaze",
-        "action_end": "subject holds solemn expression",
-        "active_subjects": [
-          "john_carter"
-        ],
-        "passive_subjects": [],
-        "spatial_context": "Narrative framing space",
-        "blocking_hint": "seated stationary",
-        "environment_subzone": "Narrative framing space",
-        "continuity_focus": "solemnity/expression",
-        "coverage_hint": "close up eyes",
-        "coverage_priority": "high",
-        "handoff_to_next": "end_scene"
-      }
-    ],
-    "planned_shots": [
-      {
-        "planned_shot_id": "SH001",
-        "beat_id": "BT001",
-        "narrative_function": "establish condition",
-        "planned_shot_moment_summary": "extreme close up of weathered skin and eyes",
-        "primary_subject_seed": "john_carter",
-        "secondary_subjects_seed": [],
-        "subject_visibility": "on_screen",
-        "narration_mode": "in_scene_speaker",
-        "environment_subzone": "Narrative framing space",
-        "planned_shot_required_anchor_1": "weathered skin",
-        "planned_shot_scale_proof_detail": "macro detail of age lines",
-        "start_state_seed": "static macro view",
-        "end_state_seed": "static macro view",
-        "action_seed": "subject breathes/blinks",
-        "blocking_seed": [
-          "seated stationary"
-        ],
-        "shot_size": "extreme_close_up",
-        "camera_angle": "eye_level",
-        "lens_family": "telephoto",
-        "camera_motion": "locked_off",
-        "zoom_behavior": "none",
-        "focus_strategy": "shallow_subject",
-        "lighting_style": "soft_even",
-        "primary_subject_angle": "front"
-      },
-      {
-        "planned_shot_id": "SH002",
-        "beat_id": "BT002",
-        "narrative_function": "introduce character",
-        "planned_shot_moment_summary": "medium shot of seated john_carter speaking",
-        "primary_subject_seed": "john_carter",
-        "secondary_subjects_seed": [],
-        "subject_visibility": "on_screen",
-        "narration_mode": "in_scene_speaker",
-        "environment_subzone": "Narrative framing space",
-        "planned_shot_required_anchor_1": "seated position",
-        "planned_shot_scale_proof_detail": "subject torso and head in frame",
-        "start_state_seed": "subject looking at camera",
-        "end_state_seed": "subject mid-sentence",
-        "action_seed": "explaining anomalous aging",
-        "blocking_seed": [
-          "seated facing camera"
-        ],
-        "shot_size": "medium",
-        "camera_angle": "eye_level",
-        "lens_family": "normal",
-        "camera_motion": "locked_off",
-        "zoom_behavior": "none",
-        "focus_strategy": "shallow_subject",
-        "lighting_style": "soft_even",
-        "primary_subject_angle": "front_three_quarter_left"
-      },
-      {
-        "planned_shot_id": "SH003",
-        "beat_id": "BT003",
-        "narrative_function": "establish intent",
-        "planned_shot_moment_summary": "close up of eyes during final declaration",
-        "primary_subject_seed": "john_carter",
-        "secondary_subjects_seed": [],
-        "subject_visibility": "on_screen",
-        "narration_mode": "in_scene_speaker",
-        "environment_subzone": "Narrative framing space",
-        "planned_shot_required_anchor_1": "eyes",
-        "planned_shot_scale_proof_detail": "iris and eye detail",
-        "start_state_seed": "subject speaking",
-        "end_state_seed": "subject holds gaze",
-        "action_seed": "declaring decision to document life",
-        "blocking_seed": [
-          "seated stationary"
-        ],
-        "shot_size": "close_up",
-        "camera_angle": "eye_level",
-        "lens_family": "portrait",
-        "camera_motion": "push_in",
-        "zoom_behavior": "subtle_in",
-        "focus_strategy": "shallow_subject",
-        "lighting_style": "soft_even",
-        "primary_subject_angle": "front"
-      }
-    ],
-    "unresolved_questions": [
-      "Resolve Unspecified (Narrative framing space) -> Unspecified (Narrative framing space)"
-    ],
-    "evidence_refs": [
-      {
-        "source": "scene_breakdown",
-        "chapter_id": "CH001",
-        "scene_id": "CH001_SC001"
-      },
-      {
-        "source": "scene_breakdown",
-        "chapter_id": "CH001",
-        "scene_id": "CH001_SC001"
-      },
-      {
-        "source": "scene_breakdown",
-        "chapter_id": "CH001",
-        "scene_id": "CH001_SC001"
-      },
-      {
-        "source": "scene_breakdown",
-        "chapter_id": "CH001",
-        "scene_id": "CH001_SC001"
-      },
-      {
-        "source": "scene_breakdown",
-        "chapter_id": "CH001",
-        "scene_id": "CH001_SC001"
-      },
-      {
-        "source": "chapter_summary",
-        "chapter_id": "CH001",
-        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
-      },
-      {
-        "source": "book_index",
-        "chapter_id": "CH011",
-        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH011_chapter_xi.md"
-      },
-      {
-        "source": "book_index",
-        "chapter_id": "CH025",
-        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH025_chapter_xxv.md"
-      },
-      {
-        "source": "book_index",
-        "chapter_id": "CH003",
-        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH003_chapter_iii.md"
-      },
-      {
-        "source": "character_bible",
-        "chapter_id": "CH001",
-        "canonical_id": "john_carter"
-      }
-    ],
-    "evidence_summary": [
-      "[CH001_SC001] Purpose: Establish the framing device and the protagonist's unique condition.",
-      "[CH001_SC001] Summary: An elderly John Carter introduces himself to the reader/audience, explaining his anomalous aging process and his decision to document his life story before he finally dies.",
-      "[CH001_SC001] Emotional arc: Introspection / Solemnity.",
-      "[CH001_SC001] Coverage: Extreme close-ups of eyes/weathered skin, medium shots of the elderly Carter in a seated position, soft lighting to suggest memory or reflection.",
-      "[CH001_SC001] Continuity: Age of Carter (must remain consistent with \"elderly\" description), tone of voice/delivery.",
-      "[CH001] Chapter summary: **Setting:** The Arizona hills and mountains; specifically a remote gold-bearing quartz vein, a high plateau with an Apache camp, and a large, ancient cave located on a narrow trail near a cliffside. **Characters:** *...",
-      "[CH011] CHAPTER XI (book index hit)",
-      "[CH025] CHAPTER XXV (book index hit)",
-      "[CH003] CHAPTER III (book index hit)",
-      "Character john_carter: john_carter"
-    ],
-    "storyboard_markdown": "# Scene Contract: CH001_SC001\n\n## Production Intent\nEstablish the narrative framing device by introducing an elderly protagonist who is documenting his life history. The scene must communicate his anomalous aging process and his impending mortality through a solemn, introspective tone.\n\n## Required Cast\n- john_carter (Elderly)\n\n## Required Environments\n- Unspecified (Narrative framing space)\n\n## Continuity Constraints\n- Consistent elderly age/appearance for john_carter\n- Consistent tone of voice and delivery\n\n## Beat List\n- BT001: Visual introduction of anomalous aging via texture\n- BT002: Verbal introduction of self and condition\n- BT003: Declaration of intent to document life",
-    "metadata": {
-      "artifact_id": "CH001_SC001_SCENE_CONTRACT",
-      "artifact_type": "scene_contract",
-      "status": "generated",
-      "source_fingerprint": "4f9cdc29c5bf6ead6283422631dce74f8ef8886b",
-      "created_at_utc": "2026-04-24T02:06:14.882924+00:00",
-      "updated_at_utc": "2026-04-24T02:06:14.882924+00:00",
-      "upstream_dependencies": [
-        {
-          "dependency_type": "scene_breakdown",
-          "dependency_id": "CH001_SC001",
-          "version": "f533116e675a8183650532df8d43dc67114029d2"
-        },
-        {
-          "dependency_type": "character_resolutions",
-          "dependency_id": "CH001_SC001",
-          "version": "3a805fd3a3beddaeaf3ecdbce396255042222e45"
-        },
-        {
-          "dependency_type": "environment_resolutions",
-          "dependency_id": "CH001_SC001",
-          "version": "0914537545f93949f4c8d3c94355385c63a79355"
-        }
-      ],
-      "locked_fields": {},
-      "manual_overrides": {},
-      "revision_history": [
-        {
-          "timestamp_utc": "2026-04-24T02:06:54.687257+00:00",
-          "action": "synthesized",
-          "source_fingerprint": "4f9cdc29c5bf6ead6283422631dce74f8ef8886b"
-        }
-      ]
-    }
-  },
-  {
     "scene_id": "CH002_SC004",
     "chapter_id": "CH002",
     "scene_title": "SC004",
@@ -320,35 +8,35 @@
     "emotional_arc": "From shock to frantic urgency/flight.",
     "production_intent": "Execute a high-contrast transition from the dark, claustrophobic cave interior to the expansive, moonlit Arizona mountain landscape. The sequence must emphasize the protagonist's physical vulnerability and frantic flight through varying light levels.",
     "scene_short_description": "A naked man flees a dark cavern into the vast, moonlit Arizona mountain night.",
-    "scene_primary_scale_story_point": "Microscopic claustrophobia of cave vs. macroscopic vastness of rocky gorge canyon.",
+    "scene_primary_scale_story_point": "Transition from enclosed cave darkness to infinite desert sky scale.",
     "scene_required_anchor_catalog": [
       "Cave mouth threshold",
-      "Moonlit ridge"
+      "Rocky gorge edge"
     ],
-    "scene_start_state": "Protagonist in deep shadow, paralyzed by shock within the cave.",
-    "scene_end_state": "Protagonist running through the wide expanse of the rocky gorge canyon under moonlight.",
-    "dominant_action_line": "The protagonist flees the dark cave toward the light.",
+    "scene_start_state": "Protagonist in deep shadow within the cave interior, reacting to unseen threat.",
+    "scene_end_state": "Protagonist exposed in wide rocky_gorge_canyon under moonlight.",
+    "dominant_action_line": "The protagonist flees the cavern toward the exterior landscape.",
     "scene_spatial_layout": [
-      "Interior cave darkness transitioning to exterior moonlit landscape",
-      "Narrow cavern passage opening into a vast canyon"
+      "Interior cave darkness transitioning to bright moonlit exterior",
+      "Narrow passage opening into a vast canyon view"
     ],
     "character_spatial_map": [
-      "Protagonist moves from center-cave towards the exit threshold",
-      "Protagonist moves from threshold into the open gorge"
+      "Protagonist moves from deep interior towards the cave mouth",
+      "Protagonist emerges onto rocky terrain"
     ],
     "environment_subzones": [
       "Cave Interior (Transitioning)",
       "rocky_gorge_canyon"
     ],
     "entry_vectors": [
-      "Dark cave interior"
+      "Cave interior depths"
     ],
     "exit_vectors": [
-      "Moonlit canyon expanse"
+      "Rocky gorge canyon expanse"
     ],
     "beat_transition_map": [
-      "BT001 -> BT002: Movement from deep shadow to threshold light",
-      "BT002 -> BT003: Emergence from cave mouth into open landscape"
+      "BT001 -> BT002: Movement from cave shadows toward the light threshold",
+      "BT002 -> BT003: Emergence from cave mouth into the open landscape"
     ],
     "characters_required": [
       {
@@ -385,7 +73,8 @@
       }
     ],
     "continuity_constraints": [
-      "Protagonist nudity and physical state across light level transitions"
+      "Protagonist nudity and physical state across light transitions",
+      "Physical condition post-gas paralysis"
     ],
     "visual_coverage_families": [
       "Tracking shots following movement",
@@ -395,16 +84,16 @@
     "beat_list": [
       {
         "beat_id": "BT001",
-        "summary": "Protagonist reacts to fear in the dark",
+        "summary": "Protagonist reacts to threat in cave darkness",
         "purpose": "",
-        "action_start": "protagonist motionless in shadow",
-        "action_end": "protagonist breaks paralysis",
+        "action_start": "protagonist frozen in shock",
+        "action_end": "protagonist begins frantic movement",
         "active_subjects": [
           "protagonist"
         ],
         "passive_subjects": [],
-        "spatial_context": "deep cave interior",
-        "blocking_hint": "huddled or frozen near wall",
+        "spatial_context": "Cave Interior (Transitioning)",
+        "blocking_hint": "huddled against cave wall",
         "environment_subzone": "Cave Interior (Transitioning)",
         "continuity_focus": "nudity/skin texture in low light",
         "coverage_hint": "close-up/medium tracking",
@@ -413,19 +102,19 @@
       },
       {
         "beat_id": "BT002",
-        "summary": "Frantic flight toward the exit",
+        "summary": "Flight through the threshold",
         "purpose": "",
-        "action_start": "protagonist begins running",
-        "action_end": "protagonist reaches cave mouth",
+        "action_start": "protagonist lunges toward exit",
+        "action_end": "protagonist crosses cave mouth",
         "active_subjects": [
           "protagonist"
         ],
         "passive_subjects": [],
-        "spatial_context": "cave passage leading to light",
-        "blocking_hint": "scrambling through narrow space",
+        "spatial_context": "Cave Interior (Transitioning) to rocky_gorge_canyon",
+        "blocking_hint": "running toward light source",
         "environment_subzone": "Cave Interior (Transitioning)",
-        "continuity_focus": "transition from dark to high-contrast light",
-        "coverage_hint": "tracking shots",
+        "continuity_focus": "transition from shadow to moonlight on skin",
+        "coverage_hint": "tracking shot",
         "coverage_priority": "medium",
         "handoff_to_next": "BT003"
       },
@@ -433,17 +122,17 @@
         "beat_id": "BT003",
         "summary": "Emergence into the Arizona night",
         "purpose": "",
-        "action_start": "protagonist breaks into moonlight",
-        "action_end": "protagonist disappears into canyon landscape",
+        "action_start": "protagonist enters open air",
+        "action_end": "protagonist disappears into landscape",
         "active_subjects": [
           "protagonist"
         ],
         "passive_subjects": [],
-        "spatial_context": "cave mouth to rocky gorge canyon",
-        "blocking_hint": "running across open terrain",
+        "spatial_context": "rocky_gorge_canyon",
+        "blocking_hint": "running across rocky terrain",
         "environment_subzone": "rocky_gorge_canyon",
-        "continuity_focus": "skin exposure in moonlight vs cave shadow",
-        "coverage_hint": "wide shots",
+        "continuity_focus": "exposure to moonlight/vastness",
+        "coverage_hint": "wide shot",
         "coverage_priority": "high",
         "handoff_to_next": "end_scene"
       }
@@ -452,20 +141,20 @@
       {
         "planned_shot_id": "SH001",
         "beat_id": "BT001",
-        "narrative_function": "establish shock",
-        "planned_shot_moment_summary": "protagonist frozen in darkness",
+        "narrative_function": "establish fear",
+        "planned_shot_moment_summary": "protagonist recoils in darkness",
         "primary_subject_seed": "protagonist",
         "secondary_subjects_seed": [],
         "subject_visibility": "silhouette",
         "narration_mode": "none",
         "environment_subzone": "Cave Interior (Transitioning)",
         "planned_shot_required_anchor_1": "cave wall",
-        "planned_shot_scale_proof_detail": "tight framing vs cave walls",
-        "start_state_seed": "protagonist motionless",
-        "end_state_seed": "protagonist begins to move",
-        "action_seed": "sudden movement from paralysis",
+        "planned_shot_scale_proof_detail": "tight enclosure",
+        "start_state_seed": "protagonist huddled in shadow",
+        "end_state_seed": "protagonist lunging forward",
+        "action_seed": "fleeing from dark interior",
         "blocking_seed": [
-          "center of frame"
+          "moving away from cave depths"
         ],
         "shot_size": "medium_close",
         "camera_angle": "eye_level",
@@ -479,20 +168,20 @@
       {
         "planned_shot_id": "SH002",
         "beat_id": "BT002",
-        "narrative_function": "drive urgency",
-        "planned_shot_moment_summary": "protagonist scrambling toward light",
+        "narrative_function": "transition light",
+        "planned_shot_moment_summary": "protagonist hits the threshold of light",
         "primary_subject_seed": "protagonist",
         "secondary_subjects_seed": [],
         "subject_visibility": "on_screen",
         "narration_mode": "none",
         "environment_subzone": "Cave Interior (Transitioning)",
         "planned_shot_required_anchor_1": "cave mouth threshold",
-        "planned_shot_scale_proof_detail": "light intensity increase",
-        "start_state_seed": "protagonist running",
-        "end_state_seed": "protagonist hitting the threshold",
-        "action_seed": "frantic flight",
+        "planned_shot_scale_proof_detail": "light/dark contrast",
+        "start_state_seed": "protagonist in shadow",
+        "end_state_seed": "protagonist hit by moonlight",
+        "action_seed": "running through cave mouth",
         "blocking_seed": [
-          "moving toward camera/exit"
+          "crossing the threshold"
         ],
         "shot_size": "full",
         "camera_angle": "low_angle",
@@ -507,19 +196,19 @@
         "planned_shot_id": "SH003",
         "beat_id": "BT003",
         "narrative_function": "establish scale",
-        "planned_shot_moment_summary": "protagonist emerging into moonlight",
+        "planned_shot_moment_summary": "protagonist enters the vast canyon",
         "primary_subject_seed": "protagonist",
         "secondary_subjects_seed": [],
         "subject_visibility": "on_screen",
         "narration_mode": "none",
         "environment_subzone": "rocky_gorge_canyon",
-        "planned_shot_required_anchor_1": "moonlit ridge",
-        "planned_shot_scale_proof_detail": "character vs vast canyon",
-        "start_state_seed": "protagonist exiting cave",
-        "end_state_seed": "protagonist running in distance",
-        "action_seed": "running through landscape",
+        "planned_shot_required_anchor_1": "rocky gorge edge",
+        "planned_shot_scale_proof_detail": "vast landscape vs small human",
+        "start_state_seed": "protagonist emerging from mouth",
+        "end_state_seed": "protagonist running into distance",
+        "action_seed": "fleeing across terrain",
         "blocking_seed": [
-          "moving across wide frame"
+          "moving across canyon floor"
         ],
         "shot_size": "wide",
         "camera_angle": "eye_level",
@@ -528,7 +217,7 @@
         "zoom_behavior": "none",
         "focus_strategy": "deep_focus",
         "lighting_style": "low_key_night",
-        "primary_subject_angle": "profile_right"
+        "primary_subject_angle": "back"
       }
     ],
     "unresolved_questions": [
@@ -598,14 +287,14 @@
       "[CH028] CHAPTER XXVIII (book index hit)",
       "Character protagonist: protagonist"
     ],
-    "storyboard_markdown": "# Scene Contract: CH002_SC004\n\n## Production Intent\nExecute a high-contrast transition from the dark, claustrophobic cave interior to the expansive, moonlit Arizona mountain landscape. The sequence must emphasize the protagonist's physical vulnerability and frantic flight through varying light levels.\n\n## Required Cast\n- protagonist\n\n## Required Environments\n- Cave Interior (Transitioning)\n- rocky_gorge_canyon\n\n## Continuity Constraints\n- Protagonist nudity and physical state across light level transitions\n\n## Beat List\n- BT001: Protagonist reacts to fear in the dark\n- BT002: Frantic flight toward the exit\n- BT003: Emergence into the Arizona night",
+    "storyboard_markdown": "# Scene Contract: CH002_SC004\n\n## Production Intent\nExecute a high-contrast transition from the dark, claustrophobic cave interior to the expansive, moonlit Arizona mountain landscape. The sequence must emphasize the protagonist's physical vulnerability and frantic flight through varying light levels.\n\n## Required Cast\n- protagonist\n\n## Required Environments\n- Cave Interior (Transitioning)\n- rocky_gorge_canyon\n\n## Continuity Constraints\n- Protagonist nudity and physical state across light transitions\n- Physical condition post-gas paralysis\n\n## Beat List\n- BT001: Protagonist reacts to threat in cave darkness\n- BT002: Flight through the threshold\n- BT003: Emergence into the Arizona night",
     "metadata": {
       "artifact_id": "CH002_SC004_SCENE_CONTRACT",
       "artifact_type": "scene_contract",
       "status": "generated",
       "source_fingerprint": "6e3702eab769552303c38a086cef551ea95f506e",
-      "created_at_utc": "2026-04-24T02:11:45.134214+00:00",
-      "updated_at_utc": "2026-04-24T02:11:45.134214+00:00",
+      "created_at_utc": "2026-04-24T02:31:00.279921+00:00",
+      "updated_at_utc": "2026-04-24T02:31:00.279921+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_breakdown",
@@ -627,7 +316,7 @@
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-24T02:12:25.109164+00:00",
+          "timestamp_utc": "2026-04-24T02:31:40.655876+00:00",
           "action": "synthesized",
           "source_fingerprint": "6e3702eab769552303c38a086cef551ea95f506e"
         }
@@ -643,36 +332,36 @@
     "emotional_arc": "Tension $\\rightarrow$ Relief/Cautious Acceptance.",
     "production_intent": "Execute a high-tension diplomatic exchange through non-verbal cues and physical tokens. The sequence must transition from the stillness of a standoff to the kinetic movement of a departing cavalcade across the Martian basin.",
     "scene_short_description": "An unarmed leader offers a metal token to a protagonist in a yellowish mossy basin.",
-    "scene_primary_scale_story_point": "The height difference when the protagonist is lifted onto the Martian mount.",
+    "scene_primary_scale_story_point": "The physical height difference when the protagonist is lifted onto the Martian mount.",
     "scene_required_anchor_catalog": [
       "metal armlet",
       "Martian mount"
     ],
     "scene_start_state": "The Leader dismounts unarmed, facing the protagonist in a tense standoff.",
-    "scene_end_state": "A cavalcade moves away toward the martian_distant_hills.",
-    "dominant_action_line": "The exchange of the armlet leads to the protagonist being mounted and taken away.",
+    "scene_end_state": "A cavalcade of martian_warriors moves away toward the martian_distant_hills.",
+    "dominant_action_line": "The exchange of a metal armlet as a peace offering followed by the protagonist's transport.",
     "scene_spatial_layout": [
       "Circular basin with yellowish moss-like vegetation",
       "Open landscape leading to distant hills"
     ],
     "character_spatial_map": [
-      "The Leader stands facing protagonist",
-      "martian_warriors surround the perimeter",
-      "protagonist remains stationary until lifted"
+      "The Leader stands directly in front of protagonist",
+      "martian_warriors surround the perimeter or follow on mounts",
+      "protagonist remains stationary until being lifted"
     ],
     "environment_subzones": [
-      "circular_basin",
+      "yellowish_moss_basin",
       "martian_distant_hills"
     ],
     "entry_vectors": [
       "The Leader dismounts into the basin"
     ],
     "exit_vectors": [
-      "cavalcade moves toward martian_distant_hills"
+      "Cavalcade moves toward martian_distant_hills"
     ],
     "beat_transition_map": [
       "BT001 -> BT002: Hand-off of the armlet",
-      "BT002 -> BT003: Lifting onto the mount"
+      "BT002 -> BT003: Lifting onto the mount and departure"
     ],
     "characters_required": [
       {
@@ -724,37 +413,16 @@
     ],
     "visual_coverage_families": [
       "Close-ups of the hand-off (the armlet)",
-      "Medium shots of non-verbal communication/eye contact",
+      "Medium shots of non-verbal communication and eye contact",
       "Wide shot of the cavalcade moving toward the distant hills"
     ],
     "beat_list": [
       {
         "beat_id": "BT001",
-        "summary": "The Leader dismounts unarmed to approach the protagonist",
+        "summary": "The Leader dismounts and offers the armlet",
         "purpose": "",
-        "action_start": "Leader approaching on mount",
-        "action_end": "Leader standing unarmed before protagonist",
-        "active_subjects": [
-          "The Leader"
-        ],
-        "passive_subjects": [
-          "protagonist",
-          "martian_warriors"
-        ],
-        "spatial_context": "circular basin with yellowish moss",
-        "blocking_hint": "Leader moves from mount to ground level facing protagonist",
-        "environment_subzone": "circular_basin",
-        "continuity_focus": "unarmed status of The Leader",
-        "coverage_hint": "medium shots of eye contact",
-        "coverage_priority": "high",
-        "handoff_to_next": "The armlet offering"
-      },
-      {
-        "beat_id": "BT002",
-        "summary": "The exchange of the metal armlet",
-        "purpose": "",
-        "action_start": "Leader extends arm with armlet",
-        "action_end": "Protagonist holds the armlet",
+        "action_start": "Leader approaches unarmed",
+        "action_end": "armlet held out",
         "active_subjects": [
           "The Leader",
           "protagonist"
@@ -762,20 +430,41 @@
         "passive_subjects": [
           "martian_warriors"
         ],
-        "spatial_context": "close proximity in basin",
-        "blocking_hint": "Hands meeting in center frame",
-        "environment_subzone": "circular_basin",
-        "continuity_focus": "armlet on protagonist's arm post-exchange",
-        "coverage_hint": "close-ups of hand-off",
-        "coverage_priority": "critical",
-        "handoff_to_next": "The lifting process"
+        "spatial_context": "yellowish_moss_basin",
+        "blocking_hint": "The Leader stands before protagonist",
+        "environment_subzone": "yellowish_moss_basin",
+        "continuity_focus": "Leader is unarmed",
+        "coverage_hint": "close-up on hands/armlet",
+        "coverage_priority": "high",
+        "handoff_to_next": "the armlet"
+      },
+      {
+        "beat_id": "BT002",
+        "summary": "Protagonist accepts the peace offering",
+        "purpose": "",
+        "action_start": "Protagonist reaches for armlet",
+        "action_end": "Armlet is on protagonist's arm",
+        "active_subjects": [
+          "protagonist",
+          "The Leader"
+        ],
+        "passive_subjects": [
+          "martian_warriors"
+        ],
+        "spatial_context": "yellowish_moss_basin",
+        "blocking_hint": "Eye contact between subjects",
+        "environment_subzone": "yellowish_moss_basin",
+        "continuity_focus": "armlet placement on arm",
+        "coverage_hint": "medium shots of eye contact",
+        "coverage_priority": "medium",
+        "handoff_to_next": "protagonist is lifted"
       },
       {
         "beat_id": "BT003",
-        "summary": "The protagonist is lifted onto a Martian mount and departs",
+        "summary": "Protagonist is taken away toward the hills",
         "purpose": "",
-        "action_start": "Protagonist being assisted up [[lifting]]",
-        "action_end": "Cavalcade moving toward hills",
+        "action_start": "Protagonist is lifted onto mount",
+        "action_end": "Cavalcade moves into distance",
         "active_subjects": [
           "protagonist",
           "martian_warriors"
@@ -783,11 +472,11 @@
         "passive_subjects": [
           "The Leader"
         ],
-        "spatial_context": "basin transitioning to open landscape",
-        "blocking_hint": "Martian warriors assist the lift and form a group",
+        "spatial_context": "yellowish_moss_basin to martian_distant_hills",
+        "blocking_hint": "Mount carries protagonist away from camera",
         "environment_subzone": "martian_distant_hills",
         "continuity_focus": "height difference during lift",
-        "coverage_hint": "wide shot of cavalcade",
+        "coverage_hint": "wide shot of movement",
         "coverage_priority": "medium",
         "handoff_to_next": "none"
       }
@@ -797,50 +486,21 @@
         "planned_shot_id": "SH001",
         "beat_id": "BT001",
         "narrative_function": "establish contact",
-        "planned_shot_moment_summary": "The Leader dismounts unarmed and approaches",
+        "planned_shot_moment_summary": "The Leader offers the armlet",
         "primary_subject_seed": "The Leader",
         "secondary_subjects_seed": [
           "protagonist"
         ],
         "subject_visibility": "on_screen",
         "narration_mode": "in_scene_speaker",
-        "environment_subzone": "circular_basin",
-        "planned_shot_required_anchor_1": "mossy vegetation",
-        "planned_shot_scale_proof_detail": "Leader's unarmed status",
-        "start_state_seed": "Leader approaching on mount",
-        "end_state_seed": "Leader standing before protagonist",
-        "action_seed": "dismounting",
-        "blocking_seed": [
-          "Leader walks toward protagonist"
-        ],
-        "shot_size": "medium_full",
-        "camera_angle": "eye_level",
-        "lens_family": "normal",
-        "camera_motion": "track",
-        "zoom_behavior": "none",
-        "focus_strategy": "shallow_subject",
-        "lighting_style": "diffuse_ambient",
-        "primary_subject_angle": "front_three_quarter_right"
-      },
-      {
-        "planned_shot_id": "SH002",
-        "beat_id": "BT002",
-        "narrative_function": "signal peace",
-        "planned_shot_moment_summary": "Close up of the metal armlet being handed over",
-        "primary_subject_seed": "protagonist",
-        "secondary_subjects_seed": [
-          "The Leader"
-        ],
-        "subject_visibility": "on_screen",
-        "narration_mode": "none",
-        "environment_subzone": "circular_basin",
+        "environment_subzone": "yellowish_moss_basin",
         "planned_shot_required_anchor_1": "metal armlet",
-        "planned_shot_scale_proof_detail": "armlet on protagonist's arm",
-        "start_state_seed": "hand reaching out",
-        "end_state_seed": "armlet gripped by protagonist",
-        "action_seed": "offering and accepting token",
+        "planned_shot_scale_proof_detail": "hand size vs armlet",
+        "start_state_seed": "Leader dismounts",
+        "end_state_seed": "armlet held between hands",
+        "action_seed": "offering token",
         "blocking_seed": [
-          "hands meeting in center frame"
+          "face to face"
         ],
         "shot_size": "close_up",
         "camera_angle": "eye_level",
@@ -849,13 +509,42 @@
         "zoom_behavior": "none",
         "focus_strategy": "shallow_subject",
         "lighting_style": "diffuse_ambient",
-        "primary_subject_angle": "profile_left"
+        "primary_subject_angle": "front_three_quarter_left"
+      },
+      {
+        "planned_shot_id": "SH002",
+        "beat_id": "BT002",
+        "narrative_function": "confirm peace",
+        "planned_shot_moment_summary": "Protagonist accepts the armlet",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [
+          "The Leader"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "yellowish_moss_basin",
+        "planned_shot_required_anchor_1": "metal armlet",
+        "planned_shot_scale_proof_detail": "armlet on protagonist arm",
+        "start_state_seed": "hand reaches out",
+        "end_state_seed": "armlet secured on arm",
+        "action_seed": "accepting token",
+        "blocking_seed": [
+          "eye contact exchange"
+        ],
+        "shot_size": "medium_close",
+        "camera_angle": "eye_level",
+        "lens_family": "normal",
+        "camera_motion": "subtle_in",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "front"
       },
       {
         "planned_shot_id": "SH003",
         "beat_id": "BT003",
         "narrative_function": "exit scene",
-        "planned_shot_moment_summary": "Protagonist is lifted onto mount and departs",
+        "planned_shot_moment_summary": "Cavalcade departs toward hills",
         "primary_subject_seed": "protagonist",
         "secondary_subjects_seed": [
           "martian_warriors"
@@ -864,16 +553,16 @@
         "narration_mode": "none",
         "environment_subzone": "martian_distant_hills",
         "planned_shot_required_anchor_1": "Martian mount",
-        "planned_shot_scale_proof_detail": "height difference during lift",
-        "start_state_seed": "protagonist being lifted",
-        "end_state_seed": "cavalcade moving toward hills",
-        "action_seed": "mounting and riding away",
+        "planned_shot_scale_proof_detail": "height of protagonist on mount vs ground",
+        "start_state_seed": "protagonist lifted",
+        "end_state_seed": "cavalcade disappears toward hills",
+        "action_seed": "riding away",
         "blocking_seed": [
-          "group moves in unison"
+          "moving away from camera"
         ],
         "shot_size": "wide",
         "camera_angle": "low_angle",
-        "lens_family": "wide",
+        "lens_family": "ultra_wide",
         "camera_motion": "pan",
         "zoom_behavior": "none",
         "focus_strategy": "deep_focus",
@@ -948,14 +637,14 @@
       "[CH017] CHAPTER XVII (book index hit)",
       "Character protagonist: protagonist"
     ],
-    "storyboard_markdown": "# Scene Contract: CH003_SC005\n\n## Production Intent\nExecute a high-tension diplomatic exchange through non-verbal cues and physical tokens. The sequence must transition from the stillness of a standoff to the kinetic movement of a departing cavalcade across the Martian basin.\n\n## Required Cast\n- protagonist\n- The Leader\n- martian_warriors\n\n## Required Environments\n- circular_basin (yellowish mossy vegetation)\n- martian_distant_hills\n\n## Continuity Constraints\n- Metal armlet must remain visible on protagonist's arm after acceptance\n- Height differential between protagonist and Martian mount during lifting process\n\n## Beat List\n- BT001: The Leader dismounts unarmed to approach the protagonist\n- BT002: The exchange of the metal armlet\n- BT003: The protagonist is lifted onto a Martian mount and departs",
+    "storyboard_markdown": "# Scene Contract: CH003_SC005\n\n## Production Intent\nExecute a high-tension diplomatic exchange through non-verbal cues and physical tokens. The sequence must transition from the stillness of a standoff to the kinetic movement of a departing cavalcade across the Martian basin.\n\n## Required Cast\n- protagonist\n- The Leader\n- martian_warriors\n\n## Required Environments\n- yellowish_moss_basin\n- martian_distant_hills\n\n## Continuity Constraints\n- Metal armlet must remain visible on protagonist's arm after acceptance\n- Height differential between protagonist and Martian mount during lifting process\n\n## Beat List\n- BT001: The Leader dismounts and offers the armlet\n- BT002: Protagonist accepts the peace offering\n- BT003: Protagonist is taken away toward the hills",
     "metadata": {
       "artifact_id": "CH003_SC005_SCENE_CONTRACT",
       "artifact_type": "scene_contract",
       "status": "generated",
       "source_fingerprint": "b918054ca4e3bd80abaeb749ba3ab16db3754965",
-      "created_at_utc": "2026-04-24T02:15:46.695475+00:00",
-      "updated_at_utc": "2026-04-24T02:15:46.695475+00:00",
+      "created_at_utc": "2026-04-24T02:35:05.954290+00:00",
+      "updated_at_utc": "2026-04-24T02:35:05.954290+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_breakdown",
@@ -977,7 +666,7 @@
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-24T02:16:29.570126+00:00",
+          "timestamp_utc": "2026-04-24T02:35:48.814651+00:00",
           "action": "synthesized",
           "source_fingerprint": "b918054ca4e3bd80abaeb749ba3ab16db3754965"
         }

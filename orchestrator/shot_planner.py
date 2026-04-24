@@ -1558,9 +1558,9 @@ def _sanitize_anchor_fields(
 
 
 def _refine_lighting_style(shot_type: str, environment_id: str, lighting_style: str) -> str:
-    shot_type_normalized = shot_type.strip().lower()
-    environment_id_normalized = environment_id.strip().lower()
-    lighting_style_normalized = lighting_style.strip().lower()
+    shot_type_normalized = str(shot_type or "").strip().lower()
+    environment_id_normalized = str(environment_id or "").strip().lower()
+    lighting_style_normalized = str(lighting_style or "").strip().lower()
     if environment_id_normalized == "deep_space_void" and lighting_style_normalized == "high_contrast_ceremonial":
         return "backlit"
     if environment_id_normalized == "deep_space_void" and shot_type_normalized in {"closing_reaction", "reaction_closeup", "wide", "establishing_wide"}:

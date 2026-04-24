@@ -93,6 +93,6 @@ orchestrator/character_bible_models.py
 
 ## Status
 
-- `implemented`
-- evidence: `synthesize-character-bibles` is available through `orchestrator/cli.py`, dedicated synthesis modules exist under `orchestrator/character_bible*.py`, and the authoring/full-book launchers already route through this phase
-- next revision required: validate artifact writing, reuse semantics, and locked-field preservation against the current project output layout
+- `validated`
+- evidence: `synthesize-character-bibles` is available through `orchestrator/cli.py`, dedicated synthesis modules exist under `orchestrator/character_bible*.py`, and the authoring/full-book launchers already route through this phase; full reruns have produced stable character bible artifacts and review queues
+- next revision required: keep validating locked-field preservation and age/state variant coverage as new evidence lands

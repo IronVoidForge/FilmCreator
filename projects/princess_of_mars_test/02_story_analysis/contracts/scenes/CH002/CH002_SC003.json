@@ -9,19 +9,19 @@
   "scene_short_description": "A man struggles against paralysis before rising to find his clothed corpse lying on the cave floor.",
   "scene_primary_scale_story_point": "Verticality shift from prone/paralyzed to upright/naked vs horizontal/clothed body.",
   "scene_required_anchor_catalog": [
-    "old_body (clothed)",
-    "protagonist (naked)"
+    "old_body_position",
+    "standing_protagonist_axis"
   ],
   "scene_start_state": "Protagonist is prone and paralyzed in deep shadows.",
   "scene_end_state": "Protagonist stands naked, staring down at his own clothed corpse.",
   "dominant_action_line": "Mental willpower breaks physical paralysis leading to a metamorphosis reveal.",
   "scene_spatial_layout": [
-    "Deep shadow environment with rocky floor",
+    "Deep shadow environment with localized light on the struggle area",
     "Vertical separation between standing subject and prone subject"
   ],
   "character_spatial_map": [
-    "protagonist (new self) stands upright near the center/foreground",
-    "old body lies motionless on the cave floor in proximity to the new self"
+    "protagonist (new) stands upright above or near the old body",
+    "protagonist (old) lies lifeless on the cave floor"
   ],
   "environment_subzones": [
     "arizona_mountain_cave_floor",
@@ -73,61 +73,57 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Mental struggle to break paralysis",
+      "summary": "Intense mental struggle to break paralysis",
       "purpose": "",
       "action_start": "prone and immobile",
-      "action_end": "physical movement begins",
+      "action_end": "limbs twitching with effort",
       "active_subjects": [
         "protagonist"
       ],
       "passive_subjects": [],
       "spatial_context": "arizona_mountain_cave_floor",
-      "blocking_hint": "struggling against the ground",
+      "blocking_hint": "struggling on the ground",
       "environment_subzone": "arizona_mountain_cave_floor",
-      "continuity_focus": "muscle tension and position",
-      "coverage_hint": "medium shots of effort",
+      "continuity_focus": "clothed state of body",
+      "coverage_hint": "medium shots",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "The metamorphosis/standing up",
+      "summary": "Metamorphosis and standing",
       "purpose": "",
-      "action_start": "protagonist rising",
-      "action_end": "protagonist is standing naked",
+      "action_start": "straining upward",
+      "action_end": "standing upright and naked",
       "active_subjects": [
         "protagonist"
       ],
-      "passive_subjects": [
-        "old_body"
-      ],
+      "passive_subjects": [],
       "spatial_context": "arizona_mountain_cave_floor",
       "blocking_hint": "rising from the spot of the old body",
       "environment_subzone": "arizona_mountain_cave_floor",
-      "continuity_focus": "placement of old body relative to new feet",
+      "continuity_focus": "nakedness vs clothed corpse",
       "coverage_hint": "wide reveal shot",
       "coverage_priority": "critical",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Realization of horror",
+      "summary": "Realization and horror",
       "purpose": "",
-      "action_start": "protagonist looks down",
-      "action_end": "protagonist frozen in shock",
+      "action_start": "looking down at floor",
+      "action_end": "frozen in existential shock",
       "active_subjects": [
         "protagonist"
       ],
-      "passive_subjects": [
-        "old_body"
-      ],
+      "passive_subjects": [],
       "spatial_context": "arizona_mountain_cave_shadows",
-      "blocking_hint": "standing over the corpse",
+      "blocking_hint": "standing still, staring down",
       "environment_subzone": "arizona_mountain_cave_shadows",
       "continuity_focus": "lighting on face vs body",
-      "coverage_hint": "close-ups of face",
+      "coverage_hint": "close-ups",
       "coverage_priority": "high",
-      "handoff_to_next": "none"
+      "handoff_to_next": "end_scene"
     }
   ],
   "planned_shots": [
@@ -141,13 +137,13 @@
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "arizona_mountain_cave_floor",
-      "planned_shot_required_anchor_1": "arizona_mountain_cave_floor",
-      "planned_shot_scale_proof_detail": "muscle tension vs floor contact",
-      "start_state_seed": "prone/still",
-      "end_state_seed": "straining/moving",
-      "action_seed": "intense mental willpower effort",
+      "planned_shot_required_anchor_1": "old_body_position",
+      "planned_shot_scale_proof_detail": "clothed body proximity",
+      "start_state_seed": "prone position",
+      "end_state_seed": "straining upward",
+      "action_seed": "intense mental and physical effort to move limbs",
       "blocking_seed": [
-        "prone on rocky surface"
+        "protagonist struggling against the floor"
       ],
       "shot_size": "medium",
       "camera_angle": "low_angle",
@@ -156,7 +152,7 @@
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "low_key_night",
-      "primary_subject_angle": "front_three_quarter_left"
+      "primary_subject_angle": "front_three_quarter_right"
     },
     {
       "planned_shot_id": "SH002",
@@ -165,18 +161,18 @@
       "planned_shot_moment_summary": "standing naked figure vs lying clothed body",
       "primary_subject_seed": "protagonist",
       "secondary_subjects_seed": [
-        "old_body"
+        "old_body_position"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "arizona_mountain_cave_floor",
-      "planned_shot_required_anchor_1": "old_body",
-      "planned_shot_scale_proof_detail": "distance between standing feet and lying corpse",
+      "planned_shot_required_anchor_1": "old_body_position",
+      "planned_shot_scale_proof_detail": "distance between feet and corpse",
       "start_state_seed": "rising from floor",
-      "end_state_seed": "standing upright",
-      "action_seed": "metamorphosis reveal",
+      "end_state_seed": "standing fully upright",
+      "action_seed": "protagonist stands up to reveal nakedness",
       "blocking_seed": [
-        "protagonist stands over old body"
+        "protagonist rises away from the clothed body"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
@@ -185,7 +181,7 @@
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "low_key_night",
-      "primary_subject_angle": "profile_right"
+      "primary_subject_angle": "profile_left"
     },
     {
       "planned_shot_id": "SH003",
@@ -197,13 +193,13 @@
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "arizona_mountain_cave_shadows",
-      "planned_shot_required_anchor_1": "protagonist",
+      "planned_shot_required_anchor_1": "none",
       "planned_shot_scale_proof_detail": "facial expression detail",
       "start_state_seed": "looking down",
       "end_state_seed": "staring in shock",
-      "action_seed": "existential horror realization",
+      "action_seed": "face reacts to the sight of the corpse",
       "blocking_seed": [
-        "standing still"
+        "protagonist frozen in place"
       ],
       "shot_size": "close_up",
       "camera_angle": "eye_level",
@@ -280,14 +276,14 @@
     "[CH016] CHAPTER XVI (book index hit)",
     "Character protagonist: protagonist"
   ],
-  "storyboard_markdown": "# Scene Contract: CH002_SC003\n\n## Production Intent\nExecute the central supernatural twist and reveal the protagonist's metamorphosis. The scene must transition from intense physical struggle to the existential horror of discovering a lifeless, clothed version of oneself lying on the cave floor while standing naked.\n\n## Required Cast\n- protagonist (The \"New\" Self)\n- old_body (The \"Old\" Body/Clothed corpse)\n\n## Required Environments\n- arizona_mountain_cave (Deep shadows, rocky floor)\n\n## Continuity Constraints\n- Spatial relationship between the standing naked protagonist and the lying clothed body.\n- Lighting consistency across both versions of the character in the same frame.\n\n## Beat List\n- BT001: Intense mental struggle to break paralysis.\n- BT002: Metamorphosis/standing upright as a new, naked self.\n- BT003: Realization and existential horror upon seeing the old body.",
+  "storyboard_markdown": "# Scene Contract: CH002_SC003\n\n## Production Intent\nExecute the central supernatural twist and reveal the protagonist's metamorphosis. The scene must transition from a claustrophobic struggle against paralysis to a wide-scale realization where the standing naked protagonist is framed alongside his own lifeless, clothed body.\n\n## Required Cast\n- protagonist (The \"New\" Self)\n- protagonist (The \"Old\" Body/Clothed corpse)\n\n## Required Environments\n- arizona_mountain_cave (Deep shadows, rocky floor)\n\n## Continuity Constraints\n- Spatial distance between the standing naked subject and the lying clothed body must remain constant across shots.\n- Lighting must maintain consistency for both versions of the character to ensure they appear as part of the same physical reality/event.\n\n## Beat List\n- BT001: Intense mental struggle to break paralysis.\n- BT002: Metamorphosis and standing upright (naked).\n- BT003: Realization and existential horror upon seeing the corpse.",
   "metadata": {
     "artifact_id": "CH002_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
     "source_fingerprint": "e588bd0194d5c64d8805fe5707f80329c8c7848f",
-    "created_at_utc": "2026-04-24T02:10:59.979039+00:00",
-    "updated_at_utc": "2026-04-24T02:10:59.979039+00:00",
+    "created_at_utc": "2026-04-24T02:30:16.342338+00:00",
+    "updated_at_utc": "2026-04-24T02:30:16.342338+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -309,7 +305,7 @@
     "manual_overrides": {},
     "revision_history": [
       {
-        "timestamp_utc": "2026-04-24T02:11:44.465664+00:00",
+        "timestamp_utc": "2026-04-24T02:30:59.595864+00:00",
         "action": "synthesized",
         "source_fingerprint": "e588bd0194d5c64d8805fe5707f80329c8c7848f"
       }

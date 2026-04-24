@@ -12,30 +12,30 @@
     "incubator",
     "spear tip"
   ],
-  "scene_start_state": "Protagonist hears rhythmic equipment rattling in the distance.",
-  "scene_end_state": "Protagonist remains hidden, paralyzed by terror as the cavalry passes.",
-  "dominant_action_line": "A mounted cavalcade thunders past a hiding protagonist, nearly impaling him with a spear.",
+  "scene_start_state": "Protagonist hears equipment rattling in the distance.",
+  "scene_end_state": "Protagonist is frozen in terror as the cavalry passes.",
+  "dominant_action_line": "A mounted party of twenty warriors thunders past a hiding protagonist, nearly impaling him with a spear.",
   "scene_spatial_layout": [
     "Circular basin filled with yellowish moss-like vegetation",
     "Low walled enclosure with glass roof (incubator) nearby"
   ],
   "character_spatial_map": [
-    "protagonist is crouched/hidden within the circular_moss_basin",
+    "protagonist is crouched/hidden near the incubator",
     "martian_warriors move in a large group through the basin"
   ],
   "environment_subzones": [
-    "incubator_perimeter",
-    "moss_vegetation_floor"
+    "circular_moss_basin",
+    "incubator_perimeter"
   ],
   "entry_vectors": [
-    "martian_warriors enter via perimeter of circular_moss_basin"
+    "martian_warriors enter via basin perimeter"
   ],
   "exit_vectors": [
-    "martian_warriors exit via opposite side of circular_moss_basin"
+    "martian_warriors exit via opposite side of basin"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Sound transition from distant rattle to approaching thunder",
-    "BT002 -> BT003: Visual transition from wide movement to lethal close-up"
+    "BT001 -> BT002: Sound cue triggers movement",
+    "BT002 -> BT003: Visual contact/near miss"
   ],
   "characters_required": [
     {
@@ -72,8 +72,8 @@
     }
   ],
   "continuity_constraints": [
-    "Speed and rhythmic cadence of the twenty mounted warriors",
-    "Physical proximity distance between spear tip and protagonist"
+    "Rhythmic speed of the twenty mounted warriors",
+    "Proximity distance between spear tip and protagonist"
   ],
   "visual_coverage_families": [
     "Low-angle shots of approaching mounts to emphasize scale",
@@ -83,60 +83,58 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Protagonist hears equipment rattling",
+      "summary": "Protagonist hears rattling equipment",
       "purpose": "",
       "action_start": "protagonist is still",
-      "action_end": "protagonist turns head toward sound",
+      "action_end": "protagonist is alert",
       "active_subjects": [
         "protagonist"
       ],
       "passive_subjects": [],
-      "spatial_context": "circular_moss_basin",
-      "blocking_hint": "protagonist crouched near incubator",
-      "environment_subzone": "moss_vegetation_floor",
-      "continuity_focus": "initial silence/rattle rhythm",
+      "spatial_context": "incubator_perimeter",
+      "blocking_hint": "protagonist crouched near incubator wall",
+      "environment_subzone": "incubator_perimeter",
+      "continuity_focus": "sound rhythm of equipment",
       "coverage_hint": "close-up on protagonist reaction",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "The cavalry approaches",
+      "summary": "Realization of approaching warriors",
       "purpose": "",
-      "action_start": "distant rhythmic thumping",
-      "action_end": "mounted warriors fill the frame",
+      "action_start": "protagonist hears sound",
+      "action_end": "warriors visible in basin",
       "active_subjects": [
+        "protagonist",
         "martian_warriors"
       ],
-      "passive_subjects": [
-        "protagonist"
-      ],
+      "passive_subjects": [],
       "spatial_context": "circular_moss_basin",
-      "blocking_hint": "riders moving in a line through vegetation",
-      "environment_subzone": "moss_vegetation_floor",
-      "continuity_focus": "rhythm of twenty mounts",
+      "blocking_hint": "warriors moving in a group of twenty",
+      "environment_subzone": "circular_moss_basin",
+      "continuity_focus": "speed/rhythm of mounts",
       "coverage_hint": "low-angle wide shots",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "The near-miss strike",
+      "summary": "Near death encounter with spear",
       "purpose": "",
-      "action_start": "spear enters frame",
-      "action_end": "warrior passes by",
+      "action_start": "warriors pass hiding spot",
+      "action_end": "warriors move out of range",
       "active_subjects": [
-        "martian_warriors"
-      ],
-      "passive_subjects": [
+        "martian_warriors",
         "protagonist"
       ],
-      "spatial_context": "immediate vicinity of protagonist hiding spot",
-      "blocking_hint": "spear tip sweeps past protagonist's head",
-      "environment_subzone": "moss_vegetation_floor",
-      "continuity_focus": "proximity of spear to subject",
+      "passive_subjects": [],
+      "spatial_context": "incubator_perimeter",
+      "blocking_hint": "spear tip sweeps past protagonist's face",
+      "environment_subzone": "incubator_perimeter",
+      "continuity_focus": "proximity of spear to skin",
       "coverage_hint": "extreme close-up on spear/face",
-      "coverage_priority": "critical",
+      "coverage_priority": "high",
       "handoff_to_next": "end_scene"
     }
   ],
@@ -150,14 +148,14 @@
       "secondary_subjects_seed": [],
       "subject_visibility": "partial",
       "narration_mode": "none",
-      "environment_subzone": "moss_vegetation_floor",
+      "environment_subzone": "incubator_perimeter",
       "planned_shot_required_anchor_1": "incubator",
-      "planned_shot_scale_proof_detail": "distant sound vs small subject",
+      "planned_shot_scale_proof_detail": "protagonist small vs distant sound",
       "start_state_seed": "protagonist listening",
-      "end_state_seed": "protagonist reacting to sound",
-      "action_seed": "listening/reacting",
+      "end_state_seed": "protagonist looking toward basin",
+      "action_seed": "head turn",
       "blocking_seed": [
-        "crouched in moss"
+        "crouched near incubator"
       ],
       "shot_size": "medium_close",
       "camera_angle": "eye_level",
@@ -172,17 +170,17 @@
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "show scale",
-      "planned_shot_moment_summary": "cavalcade approaches",
+      "planned_shot_moment_summary": "cavalcade enters view",
       "primary_subject_seed": "martian_warriors",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "moss_vegetation_floor",
-      "planned_shot_required_anchor_1": "incubator",
-      "planned_shot_scale_proof_detail": "low angle looking up at mounts",
-      "start_state_seed": "distant riders",
-      "end_state_seed": "riders passing camera",
-      "action_seed": "riding/thundering",
+      "environment_subzone": "circular_moss_basin",
+      "planned_shot_required_anchor_1": "circular_moss_basin",
+      "planned_shot_scale_proof_detail": "low angle mounts towering over camera",
+      "start_state_seed": "mounts appearing on horizon",
+      "end_state_seed": "mounts thundering past",
+      "action_seed": "riding/galloping",
       "blocking_seed": [
         "moving in line through basin"
       ],
@@ -199,23 +197,23 @@
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "climax tension",
-      "planned_shot_moment_summary": "spear narrowly misses protagonist",
+      "planned_shot_moment_summary": "spear tip narrowly misses protagonist",
       "primary_subject_seed": "spear tip",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "moss_vegetation_floor",
+      "environment_subzone": "incubator_perimeter",
       "planned_shot_required_anchor_1": "protagonist",
-      "planned_shot_scale_proof_detail": "extreme proximity of spear to face",
-      "start_state_seed": "spear descending",
-      "end_state_seed": "spear passing close to head",
-      "action_seed": "thrusting/passing",
+      "planned_shot_scale_proof_detail": "inches from skin",
+      "start_state_seed": "spear thrusting forward",
+      "end_state_seed": "spear passing by",
+      "action_seed": "thrust/pass",
       "blocking_seed": [
-        "leader's spear moving through frame"
+        "spear enters frame near protagonist head"
       ],
       "shot_size": "extreme_close_up",
       "camera_angle": "eye_level",
-      "lens_family": "portrait",
+      "lens_family": "telephoto",
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
@@ -288,14 +286,14 @@
     "[CH021] CHAPTER XXI (book index hit)",
     "Character protagonist: protagonist"
   ],
-  "storyboard_markdown": "# Scene Contract: CH003_SC003\n\n## Production Intent\nEstablish the scale and lethality of the Martian warrior force through a high-tension encounter. The sequence must contrast the protagonist's small, hidden presence against the rhythmic, heavy movement of twenty mounted warriors passing in close proximity.\n\n## Required Cast\n- protagonist\n- martian_warriors (20 riders)\n\n## Required Environments\n- circular_moss_basin (with yellowish moss and incubator)\n\n## Continuity Constraints\n- Speed/rhythm of the 20 mounted warriors\n- Physical distance between spear tip and protagonist during pass\n\n## Beat List\n- BT001: Protagonist hears equipment rattling\n- BT002: The cavalry approaches\n- BT003: The near-miss strike",
+  "storyboard_markdown": "# Scene Contract: CH003_SC003\n\n## Production Intent\nEstablish the scale and lethality of the Martian warrior force through a high-tension encounter. The sequence must contrast the protagonist's small, hidden presence against the rhythmic, heavy movement of twenty mounted warriors passing in close proximity.\n\n## Required Cast\n- protagonist\n- martian_warriors (Cavalcade of 20)\n\n## Required Environments\n- circular_moss_basin\n- incubator_perimeter\n\n## Continuity Constraints\n- Rhythmic speed/cadence of the twenty mounted warriors\n- Physical distance between spear tip and protagonist's body\n\n## Beat List\n- BT001: Protagonist hears rattling equipment (Curiosity)\n- BT002: Realization of approaching martian_warriors (Tension)\n- BT003: Spear near miss (Terror/Panic)",
   "metadata": {
     "artifact_id": "CH003_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
     "source_fingerprint": "f15137542bb3c7f4a279ffaaf748b2f1e2d2b13a",
-    "created_at_utc": "2026-04-24T02:14:23.368398+00:00",
-    "updated_at_utc": "2026-04-24T02:14:23.368398+00:00",
+    "created_at_utc": "2026-04-24T02:33:43.083737+00:00",
+    "updated_at_utc": "2026-04-24T02:33:43.083737+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -317,7 +315,7 @@
     "manual_overrides": {},
     "revision_history": [
       {
-        "timestamp_utc": "2026-04-24T02:15:04.915589+00:00",
+        "timestamp_utc": "2026-04-24T02:34:24.385816+00:00",
         "action": "synthesized",
         "source_fingerprint": "f15137542bb3c7f4a279ffaaf748b2f1e2d2b13a"
       }
