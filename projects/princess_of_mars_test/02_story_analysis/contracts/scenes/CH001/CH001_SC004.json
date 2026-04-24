@@ -5,37 +5,37 @@
   "purpose": "Raise the emotional stakes and transition to the escape.",
   "summary": "Amidst the skirmish, Carter discovers Powell's body, killed by arrows. Devastated, Carter retrieves the body and attempts to flee from the pursuing warriors.",
   "emotional_arc": "Horror / Grief $\\rightarrow$ Desperation / Urgency.",
-  "production_intent": "Establish the immediate aftermath of a skirmish by focusing on the discovery of a fallen comrade and the subsequent desperate flight from pursuing warriors.",
+  "production_intent": "Establish the immediate aftermath of a skirmish by focusing on the discovery of a fallen comrade and the subsequent desperate flight from pursuing warriors. The sequence must transition from static grief to high-velocity movement.",
   "scene_short_description": "A man discovers a fallen comrade amidst a skirmish and flees while carrying the body.",
   "scene_primary_scale_story_point": "Individual survival against group pursuit.",
   "scene_required_anchor_catalog": [
     "james_k_powell (body)",
     "narrow trail"
   ],
-  "scene_start_state": "Carter discovers the arrow-riddled body of Powell in the skirmish zone.",
-  "scene_end_state": "Carter is fleeing through the terrain with the body, pursued by warriors.",
+  "scene_start_state": "Carter stands over the arrow-riddled body of Powell amidst the skirmish debris.",
+  "scene_end_state": "Carter is in active flight along the trail with pursuers closing distance.",
   "dominant_action_line": "Discovery -> Retrieval -> Flight.",
   "scene_spatial_layout": [
     "Narrow trail near a cliffside",
-    "High plateau environment"
+    "High plateau terrain"
   ],
   "character_spatial_map": [
     "john_carter positioned over james_k_powell",
-    "apache_warriors closing distance from the periphery"
+    "apache_warriors approaching from the periphery/rear"
   ],
   "environment_subzones": [
     "narrow trail",
     "cliffside edge"
   ],
   "entry_vectors": [
-    "skirmish site approach"
+    "apache_plateau_camp trail"
   ],
   "exit_vectors": [
-    "escape path along the trail"
+    "downward trail path"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Discovery to physical contact/retrieval",
-    "BT002 -> BT003: Retrieval to frantic flight"
+    "BT001 -> BT002: Discovery to physical contact",
+    "BT002 -> BT003: Physical struggle to kinetic flight"
   ],
   "characters_required": [
     {
@@ -82,9 +82,9 @@
     }
   ],
   "continuity_constraints": [
-    "Arrow placement on james_k_powell must remain static",
-    "Injury level on john_carter must be consistent during physical exertion",
-    "Proximity distance of apache_warriors to Carter"
+    "Arrow placement on james_k_powell must remain constant",
+    "Injury level on john_carter must be consistent with skirmish damage",
+    "Proximity distance of apache_warriors to Carter during pursuit"
   ],
   "visual_coverage_families": [
     "Close-ups of Carter's reaction to Powell",
@@ -96,8 +96,8 @@
       "beat_id": "BT001",
       "summary": "Discovery of Powell's body",
       "purpose": "",
-      "action_start": "Carter enters frame near skirmish site",
-      "action_end": "Carter stops dead in horror",
+      "action_start": "Carter stops mid-skirmish",
+      "action_end": "Carter realizes the extent of injuries",
       "active_subjects": [
         "john_carter"
       ],
@@ -105,12 +105,12 @@
         "james_k_powell"
       ],
       "spatial_context": "narrow trail near cliffside",
-      "blocking_hint": "Carter stands over the body",
+      "blocking_hint": "Carter standing over the corpse",
       "environment_subzone": "narrow trail",
       "continuity_focus": "arrow placement on Powell",
       "coverage_hint": "close-up reaction",
       "coverage_priority": "high",
-      "handoff_to_next": "BT002"
+      "handoff_to_next": "Physical contact with body"
     },
     {
       "beat_id": "BT002",
@@ -125,19 +125,19 @@
         "james_k_powell"
       ],
       "spatial_context": "narrow trail",
-      "blocking_hint": "Carter kneeling and then lifting",
+      "blocking_hint": "Struggling, kneeling, lifting",
       "environment_subzone": "narrow trail",
-      "continuity_focus": "Carter's injury level/exertion",
-      "coverage_hint": "medium shot struggle",
+      "continuity_focus": "Carter's injury level/sweat/dirt",
+      "coverage_hint": "medium shots of struggle",
       "coverage_priority": "medium",
-      "handoff_to_next": "BT003"
+      "handoff_to_next": "The sudden realization of pursuit"
     },
     {
       "beat_id": "BT003",
-      "summary": "Desperate flight",
+      "summary": "Flight from pursuers",
       "purpose": "",
-      "action_start": "Carter begins running",
-      "action_end": "Carter flees the immediate area",
+      "action_start": "Sound or sight of apache_warriors",
+      "action_end": "Carter fleeing down the trail",
       "active_subjects": [
         "john_carter",
         "apache_warriors"
@@ -145,20 +145,20 @@
       "passive_subjects": [
         "james_k_powell"
       ],
-      "spatial_context": "trail/valley near ambush site",
-      "blocking_hint": "Carter moving away from pursuers",
+      "spatial_context": "trail/valley area",
+      "blocking_hint": "Running along the narrow path",
       "environment_subzone": "narrow trail",
-      "continuity_focus": "proximity of warriors",
-      "coverage_hint": "tracking shot pursuit",
+      "continuity_focus": "proximity of warriors to Carter",
+      "coverage_hint": "tracking shots of flight",
       "coverage_priority": "high",
-      "handoff_to_next": "end_scene"
+      "handoff_to_next": "Transition to escape sequence"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "emotional impact",
+      "narrative_function": "establish grief",
       "planned_shot_moment_summary": "Carter sees Powell's body",
       "primary_subject_seed": "john_carter",
       "secondary_subjects_seed": [
@@ -168,18 +168,18 @@
       "narration_mode": "none",
       "environment_subzone": "narrow trail",
       "planned_shot_required_anchor_1": "james_k_powell",
-      "planned_shot_scale_proof_detail": "arrow placement on body",
-      "start_state_seed": "Carter approaching body",
-      "end_state_seed": "Carter frozen in horror",
-      "action_seed": "staring at the corpse",
+      "planned_shot_scale_proof_detail": "arrow count on body",
+      "start_state_seed": "Carter frozen in shock",
+      "end_state_seed": "Carter collapsing toward body",
+      "action_seed": "reaction to death",
       "blocking_seed": [
-        "Carter kneeling by Powell"
+        "Carter hovering over Powell"
       ],
       "shot_size": "close_up",
       "camera_angle": "eye_level",
       "lens_family": "portrait",
       "camera_motion": "push_in",
-      "zoom_behavior": "subtle_in",
+      "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "high_contrast_ceremonial",
       "primary_subject_angle": "front_three_quarter_left"
@@ -187,7 +187,7 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "physical struggle",
+      "narrative_function": "show struggle",
       "planned_shot_moment_summary": "Carter lifting the body",
       "primary_subject_seed": "john_carter",
       "secondary_subjects_seed": [
@@ -197,12 +197,13 @@
       "narration_mode": "none",
       "environment_subzone": "narrow trail",
       "planned_shot_required_anchor_1": "narrow trail",
-      "planned_shot_scale_proof_detail": "Carter's injury level",
+      "planned_shot_scale_proof_detail": "weight of body vs Carter's strength",
       "start_state_seed": "Carter reaching for Powell",
       "end_state_seed": "Carter hoisting the weight",
-      "action_seed": "struggling to lift the corpse",
+      "action_seed": "physical retrieval",
       "blocking_seed": [
-        "Carter bending over the body"
+        "Carter kneeling",
+        "then straining upward"
       ],
       "shot_size": "medium_full",
       "camera_angle": "low_angle",
@@ -216,8 +217,8 @@
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "tension/pursuit",
-      "planned_shot_moment_summary": "Carter running with the body",
+      "narrative_function": "drive urgency",
+      "planned_shot_moment_summary": "Carter running with body",
       "primary_subject_seed": "john_carter",
       "secondary_subjects_seed": [
         "apache_warriors"
@@ -226,12 +227,13 @@
       "narration_mode": "none",
       "environment_subzone": "narrow trail",
       "planned_shot_required_anchor_1": "cliffside edge",
-      "planned_shot_scale_proof_detail": "proximity of pursuers",
-      "start_state_seed": "Carter breaking into a run",
+      "planned_shot_scale_proof_detail": "distance between Carter and warriors",
+      "start_state_seed": "Carter stumbling into a run",
       "end_state_seed": "Carter disappearing around a bend",
-      "action_seed": "fleeing while carrying weight",
+      "action_seed": "fleeing pursuit",
       "blocking_seed": [
-        "Carter moving along the trail path"
+        "Carter running along the trail",
+        "warriors in background"
       ],
       "shot_size": "medium_full",
       "camera_angle": "eye_level",
@@ -308,14 +310,14 @@
     "[CH002] CHAPTER II (book index hit)",
     "Character john_carter: john_carter"
   ],
-  "storyboard_markdown": "# Scene Contract: CH001_SC004\n\n## Production Intent\nEstablish the immediate aftermath of a skirmish by focusing on the discovery of a fallen comrade and the subsequent desperate flight from pursuing warriors.\n\n## Required Cast\n- john_carter\n- james_k_powell (Deceased)\n- apache_warriors\n\n## Required Environments\n- apache_plateau_camp (narrow trail/cliffside)\n\n## Continuity Constraints\n- Arrow placement on james_k_powell must remain static.\n- Injury level on john_carter must be consistent during physical exertion.\n- Proximity distance of apache_warriors to Carter.\n\n## Beat List\n- BT001: Discovery of Powell's body (Horror/Grief).\n- BT002: Retrieval of the body (Physical struggle).\n- BT003: Desperate flight (Desperation/Urgency).",
+  "storyboard_markdown": "# Scene Contract: CH001_SC004\n\n## Production Intent\nEstablish the immediate aftermath of a skirmish by focusing on the discovery of a fallen comrade and the subsequent desperate flight from pursuing warriors. The sequence must transition from static grief to high-velocity movement.\n\n## Required Cast\n- john_carter\n- james_k_powell (Deceased)\n- apache_warriors\n\n## Required Environments\n- apache_plateau_camp (Narrow trail/cliffside)\n\n## Continuity Constraints\n- Arrow placement on james_k_powell must remain constant.\n- Injury level on john_carter must be consistent with skirmish damage.\n- Proximity distance of apache_warriors to Carter during pursuit.\n\n## Beat List\n- BT001: Discovery of Powell's body (Horror/Grief).\n- BT002: Physical retrieval and struggle to move the body.\n- BT003: Desperate flight from pursuing warriors (Urgency).",
   "metadata": {
     "artifact_id": "CH001_SC004_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
     "source_fingerprint": "eef6a3a89f72b9c60307ff6570fefa0c338897ca",
-    "created_at_utc": "2026-04-24T00:26:31.883764+00:00",
-    "updated_at_utc": "2026-04-24T00:26:31.883764+00:00",
+    "created_at_utc": "2026-04-24T02:08:15.117361+00:00",
+    "updated_at_utc": "2026-04-24T02:08:15.117361+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -337,7 +339,7 @@
     "manual_overrides": {},
     "revision_history": [
       {
-        "timestamp_utc": "2026-04-24T00:27:13.983930+00:00",
+        "timestamp_utc": "2026-04-24T02:08:58.076975+00:00",
         "action": "synthesized",
         "source_fingerprint": "eef6a3a89f72b9c60307ff6570fefa0c338897ca"
       }

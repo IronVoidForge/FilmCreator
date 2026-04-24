@@ -2051,6 +2051,54 @@ def _best_effort_generated_value(
     return "readable production detail"
 
 
+def _shot_descriptor_is_generic(value: Any) -> bool:
+    normalized = _normalize_term(str(value or ""))
+    if not normalized:
+        return True
+    generic_shot_fillers = {
+        "primary subject centered with readable eyeline and spacing",
+        "clear readable pose with stable silhouette",
+        "architectural and atmospheric background layers",
+        "framing foreground details that support depth",
+        "midground action and spatial anchors",
+        "clear foreground-to-background separation",
+        "shot begins in visual continuity with the prior beat",
+        "shot lands on a readable transition point",
+        "readable subject placement in frame",
+        "stable readable pose",
+        "readable location anchor behind the subject",
+        "foreground action detail supporting the beat",
+        "midground spatial anchor",
+        "clear depth and scale relationship",
+        "shot enters on a readable action state",
+        "shot resolves on a readable transition point",
+        "readable production detail",
+    }
+    return normalized in generic_shot_fillers
+
+
+def _restore_prompt_ready_shot_fields(base_fields: dict[str, Any], shot: dict[str, Any]) -> None:
+    replacements = {
+        "subject_positions": [shot.get("primary_subject_frame_position"), shot.get("subject_relation_summary")],
+        "pose_notes": [shot.get("primary_subject_pose_description"), shot.get("pose_anchor_frame")],
+        "background_layers": [shot.get("required_environment_anchor_1"), shot.get("environment_subzone")],
+        "foreground_elements": [shot.get("required_subject_anchor_1"), shot.get("required_celestial_anchor_1")],
+        "midground_elements": [shot.get("environment_subzone"), shot.get("required_environment_anchor_1")],
+        "depth_cues": [shot.get("required_scale_proof_detail"), shot.get("primary_subject_scale_relation")],
+        "start_state": [shot.get("start_state"), shot.get("pose_anchor_frame")],
+        "end_state": [shot.get("end_state"), shot.get("pose_end_frame")],
+        "movement_notes": [shot.get("action_during_shot"), shot.get("shot_notes")],
+        "gaze_direction": [shot.get("primary_subject_facing_direction"), shot.get("subject_relation_summary")],
+    }
+    for field_name, candidates in replacements.items():
+        current_value = base_fields.get(field_name, "")
+        if not _shot_descriptor_is_generic(current_value):
+            continue
+        replacement = _first_nonempty(*(str(candidate).strip() for candidate in candidates if str(candidate).strip()), fallback="")
+        if replacement and not _shot_descriptor_is_generic(replacement):
+            base_fields[field_name] = replacement
+
+
 def _complete_missing_generated_fields(
     *,
     entity_type: str,
@@ -2721,6 +2769,7 @@ def _base_shot_descriptor(
         review_flags=review_flags,
         inferred_fields=inferred_fields,
     )
+    _restore_prompt_ready_shot_fields(base_fields, shot)
 
     generic_shot_fillers = {
         "primary subject centered with readable eyeline and spacing",

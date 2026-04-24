@@ -5,23 +5,23 @@
   "purpose": "Introduce the primary conflict and physical threat.",
   "summary": "Carter notices suspicious movement in the valley. Suspecting an ambush, he pursues the trail and discovers a large Apache camp on a plateau, leading to a chaotic skirmish.",
   "emotional_arc": "Suspicion $\\rightarrow$ Alertness $\\rightarrow$ Chaos/Adrenaline.",
-  "production_intent": "Establish the physical threat of the Apache presence through a transition from quiet observation to high-intensity combat. The sequence must move from wide environmental scale to tight, handheld chaos to emphasize the suddenness of the ambush.",
+  "production_intent": "Establish the physical threat of the Apache presence through a transition from quiet observation to high-intensity combat. The sequence must move from controlled, observational shots in the valley to chaotic, handheld movement during the skirmish on the plateau.",
   "scene_short_description": "A lone man tracks movement through a valley before discovering an Apache camp on a high plateau.",
   "scene_primary_scale_story_point": "Individual scout vs. large tribal encampment.",
   "scene_required_anchor_catalog": [
     "quartz vein trail",
-    "plateau edge"
+    "apache camp structures"
   ],
-  "scene_start_state": "john_carter observing suspicious movement in the valley below.",
-  "scene_end_state": "chaotic skirmish between john_carter and apache_warriors.",
-  "dominant_action_line": "Pursuit of a trail leading to an ambush at a camp.",
+  "scene_start_state": "john_carter observing movement in the valley from a distance.",
+  "scene_end_state": "chaotic skirmish erupting on the plateau.",
+  "dominant_action_line": "Pursuit of suspicious movement leading to an ambush/skirmish discovery.",
   "scene_spatial_layout": [
-    "descending trail from hills toward plateau",
-    "elevated camp overlooking the valley"
+    "Descent through Arizona hills into the valley",
+    "Ascent toward the high plateau"
   ],
   "character_spatial_map": [
-    "john_carter moving along narrow trail",
-    "apache_warriors positioned within and around camp"
+    "john_carter moving along the trail edge",
+    "apache_warriors clustered within camp structures"
   ],
   "environment_subzones": [
     "valley floor",
@@ -29,14 +29,14 @@
     "high plateau camp"
   ],
   "entry_vectors": [
-    "descending trail from hills"
+    "valley descent path"
   ],
   "exit_vectors": [
-    "cliffside escape path"
+    "plateau skirmish perimeter"
   ],
   "beat_transition_map": [
     "BT001 -> BT002: transition from observation to pursuit",
-    "BT002 -> BT003: transition from discovery to combat"
+    "BT002 -> BT003: transition from stealthy approach to combat eruption"
   ],
   "characters_required": [
     {
@@ -74,7 +74,7 @@
   ],
   "continuity_constraints": [
     "Exact count of apache_warriors",
-    "Direction of pursuit along the trail",
+    "Direction of pursuit from valley to plateau",
     "Weapon handling (rifles and sidearms)"
   ],
   "visual_coverage_families": [
@@ -86,57 +86,55 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Suspicion of movement in valley",
+      "summary": "Suspicion of movement in the valley",
       "purpose": "",
-      "action_start": "carter scanning hills",
-      "action_end": "carter identifying movement",
+      "action_start": "carter observing from ridge",
+      "action_end": "carter deciding to follow",
       "active_subjects": [
         "john_carter"
       ],
       "passive_subjects": [],
-      "spatial_context": "valley floor view from ridge",
-      "blocking_hint": "stationary on ridge",
+      "spatial_context": "valley floor viewed from above",
+      "blocking_hint": "carter at edge of trail",
       "environment_subzone": "valley floor",
       "continuity_focus": "direction of gaze",
       "coverage_hint": "POV shots",
-      "coverage_priority": "medium",
+      "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Pursuit and discovery",
+      "summary": "Pursuit along the trail",
       "purpose": "",
-      "action_start": "carter moving down trail",
-      "action_end": "camp comes into view",
+      "action_start": "carter begins descent/movement",
+      "action_end": "carter reaches plateau edge",
       "active_subjects": [
         "john_carter"
       ],
-      "passive_subjects": [
-        "apache_warriors"
-      ],
-      "spatial_context": "quartz vein trail to plateau edge",
-      "blocking_hint": "moving along narrow path",
+      "passive_subjects": [],
+      "spatial_context": "quartz vein trail",
+      "blocking_hint": "carter moving through terrain",
       "environment_subzone": "quartz vein trail",
       "continuity_focus": "direction of pursuit",
-      "coverage_hint": "wide shots",
-      "coverage_priority": "high",
+      "coverage_hint": "medium shots",
+      "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Chaotic skirmish",
+      "summary": "Discovery and skirmish",
       "purpose": "",
-      "action_start": "warriors engage carter",
-      "action_end": "combat intensity peaks",
+      "action_start": "camp comes into view",
+      "action_end": "combat erupts",
       "active_subjects": [
         "john_carter",
         "apache_warriors"
       ],
       "passive_subjects": [],
-      "spatial_context": "plateau camp area",
-      "blocking_hint": "scattered combatants",
+      "spatial_context": "high plateau camp",
+      "blocking_hint": "warriors emerging from structures/carter engaging",
       "environment_subzone": "high plateau camp",
-      "continuity_focus": "number of warriors and weapon use",
+      "continuity_focus": "number of warriors, weapon handling",
       "coverage_hint": "handheld/shaky cam",
       "coverage_priority": "critical",
       "handoff_to_next": "end_scene"
@@ -147,7 +145,7 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish suspicion",
-      "planned_shot_moment_summary": "movement detected in valley",
+      "planned_shot_moment_summary": "john_carter spots movement in the valley",
       "primary_subject_seed": "john_carter",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
@@ -159,74 +157,68 @@
       "end_state_seed": "carter narrowing eyes",
       "action_seed": "scanning horizon",
       "blocking_seed": [
-        "standing on ridge"
+        "stationary at ridge edge"
       ],
       "shot_size": "medium_close",
       "camera_angle": "eye_level",
       "lens_family": "telephoto",
-      "camera_motion": "pan",
-      "zoom_behavior": "none",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
       "focus_strategy": "shallow_subject",
-      "lighting_style": "hard_directional",
+      "lighting_style": "diffuse_ambient",
       "primary_subject_angle": "profile_left"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "reveal threat",
-      "planned_shot_moment_summary": "camp discovered on plateau",
-      "primary_subject_seed": "apache_warriors",
-      "secondary_subjects_seed": [
-        "john_carter"
-      ],
+      "narrative_function": "drive pursuit",
+      "planned_shot_moment_summary": "john_carter moves along the trail",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "high plateau camp",
-      "planned_shot_required_anchor_1": "plateau edge",
-      "planned_shot_scale_proof_detail": "size of camp relative to plateau",
-      "start_state_seed": "carter cresting ridge",
-      "end_state_seed": "carter freezing",
-      "action_seed": "walking trail",
+      "environment_subzone": "quartz vein trail",
+      "planned_shot_required_anchor_1": "quartz vein trail",
+      "planned_shot_scale_proof_detail": "trail width vs carter",
+      "start_state_seed": "walking",
+      "end_state_seed": "stopping abruptly",
+      "action_seed": "tracking movement",
       "blocking_seed": [
-        "moving toward camera"
+        "moving along narrow path"
       ],
-      "shot_size": "wide",
-      "camera_angle": "high_angle",
+      "shot_size": "full",
+      "camera_angle": "eye_level",
       "lens_family": "wide",
       "camera_motion": "track",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
-      "lighting_style": "diffuse_ambient",
+      "lighting_style": "hard_directional",
       "primary_subject_angle": "rear_three_quarter_left"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "execute conflict",
-      "planned_shot_moment_summary": "skirmish breaks out",
-      "primary_subject_seed": "john_carter",
-      "secondary_subjects_seed": [
-        "apache_warriors"
-      ],
+      "narrative_function": "reveal threat",
+      "planned_shot_moment_summary": "apache camp is revealed on the plateau",
+      "primary_subject_seed": "apache_warriors",
+      "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "high plateau camp",
-      "planned_shot_required_anchor_1": "plateau edge",
-      "planned_shot_scale_proof_detail": "proximity of warriors to carter",
-      "start_state_seed": "combat begins",
-      "end_state_seed": "chaos peak",
-      "action_seed": "shooting and dodging",
-      "blocking_seed": [
-        "unpredictable movement"
-      ],
-      "shot_size": "medium",
-      "camera_angle": "dutch",
-      "lens_family": "normal",
-      "camera_motion": "handheld",
-      "zoom_behavior": "none",
-      "focus_strategy": "rack_focus",
-      "lighting_style": "high_contrast_ceremonial",
-      "primary_subject_angle": "front_three_quarter_right"
+      "planned_shot_required_anchor_1": "apache camp structures",
+      "planned_shot_scale_proof_detail": "camp size relative to plateau [[/SECTION]]",
+      "start_state_seed": "",
+      "end_state_seed": "",
+      "action_seed": "",
+      "blocking_seed": [],
+      "shot_size": "",
+      "camera_angle": "",
+      "lens_family": "",
+      "camera_motion": "",
+      "zoom_behavior": "",
+      "focus_strategy": "",
+      "lighting_style": "",
+      "primary_subject_angle": ""
     }
   ],
   "unresolved_questions": [],
@@ -294,14 +286,14 @@
     "[CH011] CHAPTER XI (book index hit)",
     "Character john_carter: john_carter"
   ],
-  "storyboard_markdown": "# Scene Contract: CH001_SC003\n\n## Production Intent\nEstablish the physical threat of the Apache presence through a transition from quiet observation to high-intensity combat. The sequence must move from wide environmental scale to tight, handheld chaos to emphasize the suddenness of the ambush.\n\n## Required Cast\n- john_carter\n- apache_warriors\n\n## Required Environments\n- arizona_gold_vein_claim (specifically valley floor, quartz vein trail, and high plateau camp)\n\n## Continuity Constraints\n- Exact count of apache_warriors\n- Direction of pursuit along the trail\n- Weapon handling (rifles and sidearms)\n\n## Beat List\n- BT001: Suspicion of movement in valley\n- BT002: Pursuit and discovery of Apache camp\n- BT003: Chaotic skirmish/combat engagement",
+  "storyboard_markdown": "# Scene Contract: CH001_SC003\n\n## Production Intent\nEstablish the physical threat of the Apache presence through a transition from quiet observation to high-intensity combat. The sequence must move from controlled, observational shots in the valley to chaotic, handheld movement during the skirmish on the plateau.\n\n## Required Cast\n- john_carter\n- apache_warriors\n\n## Required Environments\n- arizona_gold_vein_claim (valley, trail, and plateau)\n\n## Continuity Constraints\n- Exact count of apache_warriors\n- Direction of pursuit from valley to plateau\n- Weapon handling (rifles and sidearms)\n\n## Beat List\n- BT001: Suspicion of movement in the valley.\n- BT002: Pursuit along the trail.\n- BT003: Discovery and skirmish on the plateau.",
   "metadata": {
     "artifact_id": "CH001_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
     "source_fingerprint": "fdf0b402bcb31d1c8382c7dbdfd56509fac1f6ab",
-    "created_at_utc": "2026-04-24T00:25:51.945058+00:00",
-    "updated_at_utc": "2026-04-24T00:25:51.945058+00:00",
+    "created_at_utc": "2026-04-24T02:07:36.529241+00:00",
+    "updated_at_utc": "2026-04-24T02:07:36.529241+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -323,7 +315,7 @@
     "manual_overrides": {},
     "revision_history": [
       {
-        "timestamp_utc": "2026-04-24T00:26:31.831245+00:00",
+        "timestamp_utc": "2026-04-24T02:08:15.069335+00:00",
         "action": "synthesized",
         "source_fingerprint": "fdf0b402bcb31d1c8382c7dbdfd56509fac1f6ab"
       }

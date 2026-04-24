@@ -576,6 +576,32 @@ def _looks_like_celestial_anchor(text: str) -> bool:
     return any(term in normalized for term in celestial_terms)
 
 
+def _looks_like_object_subject(text: str) -> bool:
+    normalized = _normalize_term(text)
+    if not normalized:
+        return False
+    object_terms = {
+        "egg",
+        "eggs",
+        "armlet",
+        "amulet",
+        "artifact",
+        "object",
+        "prop",
+        "relic",
+        "ring",
+        "bracelet",
+        "necklace",
+        "spear",
+        "shield",
+        "weapon",
+        "stone",
+        "gem",
+        "crystal",
+    }
+    return any(term in normalized for term in object_terms)
+
+
 def _prompt_safe_anchor_text(text: str) -> str:
     cleaned = _normalize_prompt_text(text)
     if not cleaned:
@@ -587,6 +613,25 @@ def _prompt_safe_anchor_text(text: str) -> str:
     for pattern, replacement in replacements.items():
         cleaned = re.sub(pattern, replacement, cleaned, flags=re.IGNORECASE)
     return cleaned.strip(" ,;")
+
+
+def _prompt_anchor_clause(text: str, *, kind: str) -> str:
+    cleaned = _prompt_safe_anchor_text(text)
+    if not cleaned:
+        return ""
+    if kind == "environment":
+        if _looks_like_subject_anchor(cleaned) or _looks_like_celestial_anchor(cleaned):
+            return ""
+        return cleaned
+    if kind == "subject":
+        if not _looks_like_subject_anchor(cleaned) or _looks_like_celestial_anchor(cleaned):
+            return ""
+        return cleaned
+    if kind == "celestial":
+        if not _looks_like_celestial_anchor(cleaned) or _looks_like_object_subject(cleaned):
+            return ""
+        return cleaned
+    return cleaned
 
 
 def _environment_reference_conflict_issues(
@@ -635,6 +680,8 @@ def _validate_shot_prompt_inputs(
     *,
     shot: dict[str, Any],
     scene_contract: dict[str, Any],
+    primary_subject: str,
+    shot_size: str,
     visible_primary_subject_id: str,
     visible_secondary_subject_ids: list[str],
     environment_canonical_id: str,
@@ -649,12 +696,18 @@ def _validate_shot_prompt_inputs(
 ) -> list[str]:
     review_notes: list[str] = []
     shot_id = str(shot.get("shot_id", "")).strip().upper() or "shot"
-    if str(shot.get("subject_visibility", "")).strip() != "off_screen_voice" and not visible_primary_subject_id:
+    if (
+        str(shot.get("subject_visibility", "")).strip() != "off_screen_voice"
+        and not visible_primary_subject_id
+        and not (shot_size == "insert_detail" and _looks_like_object_subject(primary_subject))
+    ):
         review_notes.append(f"{shot_id}: visible primary subject id is missing for an on-screen shot.")
     if "carries the frame alone" in subject_relation_summary.lower() and visible_secondary_subject_ids:
         review_notes.append(f"{shot_id}: visible secondary subjects conflict with a solo-frame relation summary.")
     if environment_subzone and not environment_canonical_id:
         review_notes.append(f"{shot_id}: environment subzone is present but the bound environment asset is missing.")
+    if shot_size == "insert_detail" and _looks_like_object_subject(primary_subject) and visible_primary_subject_id:
+        review_notes.append(f"{shot_id}: object insert detail should use detail-first framing instead of forcing a visible body id.")
     asset_map = {image_key: asset for image_key, _, asset in reference_roles}
     for image_key, asset in asset_map.items():
         if _is_missing_asset(asset):
@@ -944,6 +997,8 @@ def _package_for_shot(
     if primary_subject.lower() == "the narrator":
         subject_visibility = subject_visibility or "off_screen_voice"
         narration_mode = narration_mode or "voiceover_off_screen"
+    primary_subject_is_object = _looks_like_object_subject(primary_subject)
+    detail_only_object_shot = shot_size == "insert_detail" and primary_subject_is_object
     characters_in_frame = [ref for ref in shot.get("characters_in_frame", []) if isinstance(ref, dict)]
     character_ids_in_frame = {
         str(ref.get("canonical_id", "")).strip().lower()
@@ -958,6 +1013,8 @@ def _package_for_shot(
     if "carries the frame alone" in subject_relation_summary.lower():
         visible_secondary_subject_ids = []
     if subject_visibility == "off_screen_voice":
+        visible_primary_subject_id = ""
+    if detail_only_object_shot:
         visible_primary_subject_id = ""
     primary_subject_descriptor = _character_descriptor_by_id(
         visible_primary_subject_id,
@@ -1007,6 +1064,8 @@ def _package_for_shot(
     validation_notes = _validate_shot_prompt_inputs(
         shot=shot,
         scene_contract=scene_contract,
+        primary_subject=primary_subject,
+        shot_size=shot_size,
         visible_primary_subject_id=visible_primary_subject_id,
         visible_secondary_subject_ids=visible_secondary_subject_ids,
         environment_canonical_id=environment_canonical_id,
@@ -1023,15 +1082,35 @@ def _package_for_shot(
     prompt_parts: list[str] = []
     for image_key, role_text, _ in reference_roles:
         prompt_parts.append(f"Use {image_key} as the {role_text}")
+    primary_subject_clause = ""
+    if detail_only_object_shot:
+        detail_subject = _first_nonempty(primary_subject_descriptor, primary_subject, fallback="")
+        if primary_subject_frame_position and detail_subject:
+            primary_subject_clause = (
+                f"The foreground detail is {detail_subject}, {primary_subject_frame_position}, "
+                f"{primary_subject_scale_relation}, {primary_subject_facing_direction}, {primary_subject_pose_description}"
+            )
+        elif primary_subject_frame_position:
+            primary_subject_clause = f"The foreground detail is {primary_subject_frame_position}, {primary_subject_scale_relation}, {primary_subject_pose_description}"
+    elif primary_image_key:
+        primary_subject_clause = (
+            f"The subject from {primary_image_key} is {primary_subject_descriptor}, {primary_subject_frame_position}, "
+            f"{primary_subject_scale_relation}, {primary_subject_facing_direction}, {primary_subject_pose_description}"
+        )
+    elif primary_subject_frame_position:
+        primary_subject_clause = (
+            f"The visible subject is {primary_subject_frame_position}, {primary_subject_scale_relation}, "
+            f"{primary_subject_facing_direction}, {primary_subject_pose_description}"
+        )
     prompt_parts.extend(
         [
             variant_camera,
             scene_short_description,
-            f"The subject from {primary_image_key} is {primary_subject_descriptor}, {primary_subject_frame_position}, {primary_subject_scale_relation}, {primary_subject_facing_direction}, {primary_subject_pose_description}" if primary_image_key else (f"The visible subject is {primary_subject_frame_position}, {primary_subject_scale_relation}, {primary_subject_facing_direction}, {primary_subject_pose_description}" if primary_subject_frame_position else ""),
+            primary_subject_clause,
             f"The subject from {secondary_image_key} is {secondary_subject_descriptors[0]}, {subject_relation_summary}" if secondary_subject_descriptors and secondary_image_key else "",
-            f"Preserve {environment_reference_descriptor} from {environment_image_key}, especially {_prompt_safe_anchor_text(required_environment_anchor_1)}" if environment_canonical_id and environment_image_key and required_environment_anchor_1 else f"Preserve {environment_descriptor}",
-            f"Keep one readable subject anchor: {_prompt_safe_anchor_text(required_subject_anchor_1)}" if required_subject_anchor_1 else "",
-            f"Keep celestial anchor {_prompt_safe_anchor_text(required_celestial_anchor_1)} stable in the frame" if required_celestial_anchor_1 else "",
+            f"Preserve {environment_reference_descriptor} from {environment_image_key}, especially {_prompt_anchor_clause(required_environment_anchor_1, kind='environment')}" if environment_canonical_id and environment_image_key and _prompt_anchor_clause(required_environment_anchor_1, kind='environment') else f"Preserve {environment_descriptor}",
+            f"Keep one readable subject anchor: {_prompt_anchor_clause(required_subject_anchor_1, kind='subject')}" if _prompt_anchor_clause(required_subject_anchor_1, kind='subject') else "",
+            f"Keep celestial anchor {_prompt_anchor_clause(required_celestial_anchor_1, kind='celestial')} stable in the frame" if _prompt_anchor_clause(required_celestial_anchor_1, kind='celestial') else "",
             required_scale_proof_detail or scene_scale_story_point,
             camera_package_description or _listify(
                 f"shot size {shot_size}" if shot_size else "",

@@ -491,6 +491,32 @@ def _looks_like_celestial_anchor(value: str) -> bool:
     return any(term in text for term in celestial_terms)
 
 
+def _looks_like_object_subject(value: str) -> bool:
+    text = " ".join(str(value or "").lower().split())
+    if not text or _is_placeholder_text(text):
+        return False
+    object_terms = {
+        "egg",
+        "eggs",
+        "armlet",
+        "amulet",
+        "artifact",
+        "object",
+        "prop",
+        "relic",
+        "ring",
+        "bracelet",
+        "necklace",
+        "spear",
+        "shield",
+        "weapon",
+        "stone",
+        "gem",
+        "crystal",
+    }
+    return any(term in text for term in object_terms)
+
+
 def _coerce_string_list(*values: object) -> list[str]:
     items: list[str] = []
     for value in values:
@@ -1446,14 +1472,13 @@ def _celestial_anchor(
     subject_hints: list[str],
 ) -> str:
     candidates = [
-        str(planned_shot.get("planned_shot_required_anchor_1", "")),
         str(planned_shot.get("planned_shot_celestial_anchor_1", "")),
         *subject_hints,
         *beat_payload.get("passive_subjects", []),
         str(beat_payload.get("summary", "")),
     ]
     for candidate in candidates:
-        if _looks_like_celestial_anchor(candidate):
+        if _looks_like_celestial_anchor(candidate) and not _looks_like_object_subject(candidate):
             return candidate.strip()
     return ""
 
@@ -1530,6 +1555,17 @@ def _sanitize_anchor_fields(
     if _looks_like_subject_anchor(environment_anchor):
         environment_anchor = _environment_anchor(planned_shot, visible_environment_features, subzone)
     return environment_anchor, subject_anchor, celestial_anchor
+
+
+def _refine_lighting_style(shot_type: str, environment_id: str, lighting_style: str) -> str:
+    shot_type_normalized = shot_type.strip().lower()
+    environment_id_normalized = environment_id.strip().lower()
+    lighting_style_normalized = lighting_style.strip().lower()
+    if environment_id_normalized == "deep_space_void" and lighting_style_normalized == "high_contrast_ceremonial":
+        return "backlit"
+    if environment_id_normalized == "deep_space_void" and shot_type_normalized in {"closing_reaction", "reaction_closeup", "wide", "establishing_wide"}:
+        return "backlit"
+    return lighting_style_normalized or "diffuse_ambient"
 
 
 def _default_shot_enums(shot_type: str, primary_subject: str) -> dict[str, str]:
@@ -1674,7 +1710,11 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
         camera_motion = _normalize_enum(planned_shot.get("camera_motion"), CAMERA_MOTION_ENUM, fallback=enums["camera_motion"])
         zoom_behavior = _normalize_enum(planned_shot.get("zoom_behavior"), ZOOM_BEHAVIOR_ENUM, fallback=enums["zoom_behavior"])
         focus_strategy = _normalize_enum(planned_shot.get("focus_strategy"), FOCUS_STRATEGY_ENUM, fallback=enums["focus_strategy"])
-        lighting_style = _normalize_enum(planned_shot.get("lighting_style"), LIGHTING_STYLE_ENUM, fallback=enums["lighting_style"])
+        lighting_style = _refine_lighting_style(
+            shot_type,
+            environment.canonical_id if environment else "",
+            _normalize_enum(planned_shot.get("lighting_style"), LIGHTING_STYLE_ENUM, fallback=enums["lighting_style"]),
+        )
         subject_visibility = _normalize_enum(planned_shot.get("subject_visibility"), SUBJECT_VISIBILITY_ENUM, fallback=enums["subject_visibility"])
         narration_mode = _normalize_enum(planned_shot.get("narration_mode"), NARRATION_MODE_ENUM, fallback=enums["narration_mode"])
         primary_subject_angle = _normalize_enum(planned_shot.get("primary_subject_angle"), PRIMARY_SUBJECT_ANGLE_ENUM, fallback=enums["primary_subject_angle"])
