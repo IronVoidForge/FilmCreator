@@ -155,7 +155,12 @@ def _utc_now() -> str:
 
 
 def _fingerprint(data: Any) -> str:
-    raw = json.dumps(data, sort_keys=True, ensure_ascii=False)
+    try:
+        raw = json.dumps(data, sort_keys=True, ensure_ascii=False, default=str)
+    except TypeError:
+        raw = json.dumps(str(data), sort_keys=True, ensure_ascii=False)
+    if not isinstance(raw, str):
+        raw = str(raw)
     return hashlib.sha1(raw.encode("utf-8")).hexdigest()
 
 

@@ -109,6 +109,7 @@ def _normalize_prompt_text(text: str) -> str:
     normalized = " ".join(text.split()).strip()
     normalized = re.sub(r"\.\s*\.", ".", normalized)
     normalized = re.sub(r",\s*,", ", ", normalized)
+    normalized = normalized.replace("_", " ")
     return normalized.strip(" ,")
 
 
@@ -120,11 +121,66 @@ def _clean_prompt_clause(text: str) -> str:
     if any(marker in normalized for marker in {"(none)", "none", "null", "unknown", "n/a", "[]", "[ ]"}):
         return ""
     cleaned = re.sub(r"\bfor\s+\.\s*", "", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"\bfor\.?$", "", cleaned, flags=re.IGNORECASE)
     cleaned = re.sub(r"\bwith\s*,\s*", "with ", cleaned, flags=re.IGNORECASE)
     cleaned = re.sub(r"\b(in|on|at|to|across|within|inside|around|near)\s+with\b", r"\1", cleaned, flags=re.IGNORECASE)
     cleaned = re.sub(r"\s+\.\s+\.", ".", cleaned)
     cleaned = re.sub(r"\s{2,}", " ", cleaned)
     return cleaned.strip(" ,.;")
+
+
+PROMPT_DESCRIPTOR_FILLER_MARKERS = {
+    "described character with stable costume and silhouette",
+    "described environment with stable spatial continuity",
+    "described environment with stable spatial anchors",
+    "readable production detail",
+    "agile and capable of high intensity physical exertion",
+    "earthman in a low gravity environment",
+    "an earthman undergoing a supernatural transformation",
+}
+
+PROMPT_FRAGMENT_NOISE = {
+    "floor",
+    "zone",
+    "layer",
+    "area",
+    "space",
+    "inside",
+    "outside",
+    "interior",
+    "exterior",
+    "foreground",
+    "midground",
+    "background",
+}
+
+
+def _looks_like_generic_prompt_descriptor(text: str) -> bool:
+    normalized = _normalize_term(text)
+    if not normalized:
+        return False
+    return any(marker in normalized for marker in PROMPT_DESCRIPTOR_FILLER_MARKERS)
+
+
+def _shot_prompt_detail_clause(*values: str) -> str:
+    for value in values:
+        cleaned = _clean_prompt_clause(value)
+        if not cleaned:
+            continue
+        if _looks_like_generic_prompt_descriptor(cleaned):
+            continue
+        return cleaned
+    return ""
+
+
+def _is_prompt_fragment_noise(text: str) -> bool:
+    normalized = _normalize_term(text)
+    if not normalized:
+        return True
+    if normalized in PROMPT_FRAGMENT_NOISE:
+        return True
+    tokens = normalized.split()
+    return len(tokens) == 1 and tokens[0] in PROMPT_FRAGMENT_NOISE
 
 
 def _compose_prompt_clause(prefix: str, *parts: str, separator: str = ", ") -> str:
@@ -154,6 +210,27 @@ def _dedupe_prompt_clauses(clauses: list[str]) -> list[str]:
         seen.add(normalized)
         deduped.append(cleaned)
     return deduped
+
+
+def _is_distinct_clause(candidate: str, comparisons: list[str]) -> bool:
+    cleaned_candidate = _clean_prompt_clause(candidate)
+    if not cleaned_candidate:
+        return False
+    candidate_norm = _normalize_term(cleaned_candidate)
+    for comparison in comparisons:
+        cleaned_comparison = _clean_prompt_clause(comparison)
+        if not cleaned_comparison:
+            continue
+        comparison_norm = _normalize_term(cleaned_comparison)
+        if not comparison_norm:
+            continue
+        if (
+            candidate_norm == comparison_norm
+            or candidate_norm in comparison_norm
+            or comparison_norm in candidate_norm
+        ):
+            return False
+    return True
 
 
 def _shot_prompt_sanity_issues(
@@ -778,7 +855,30 @@ def _prompt_safe_anchor_text(text: str) -> str:
     }
     for pattern, replacement in replacements.items():
         cleaned = re.sub(pattern, replacement, cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"\bthe\s+the\b", "the", cleaned, flags=re.IGNORECASE)
     return cleaned.strip(" ,;")
+
+
+def _prompt_celestial_anchor_text(text: str) -> str:
+    cleaned = _prompt_safe_anchor_text(text)
+    if not cleaned:
+        return ""
+    normalized = _normalize_term(cleaned)
+    if "red star" in normalized:
+        return "the red star"
+    if "red planet" in normalized:
+        return "the red planet"
+    if "moonlight" in normalized:
+        return "the moonlight"
+    if "moon" in normalized:
+        return "the moon"
+    if "sun" in normalized:
+        return "the sun"
+    if "mars" in normalized:
+        return "the red planet"
+    if _looks_like_celestial_anchor(cleaned) and not _looks_like_object_subject(cleaned):
+        return cleaned
+    return ""
 
 
 def _prompt_anchor_clause(text: str, *, kind: str) -> str:
@@ -794,9 +894,7 @@ def _prompt_anchor_clause(text: str, *, kind: str) -> str:
             return ""
         return cleaned
     if kind == "celestial":
-        if not _looks_like_celestial_anchor(cleaned) or _looks_like_object_subject(cleaned):
-            return ""
-        return cleaned
+        return _prompt_celestial_anchor_text(cleaned)
     return cleaned
 
 
@@ -1353,9 +1451,22 @@ def _package_for_shot(
     )
 
     prompt_parts: list[str] = [f"Use {image_key} as the {role_text}" for image_key, role_text, _ in reference_roles]
+    primary_subject_descriptor_text = _shot_prompt_detail_clause(primary_subject_descriptor)
+    primary_subject_text = _shot_prompt_detail_clause(primary_subject)
+    environment_reference_text = _shot_prompt_detail_clause(environment_reference_descriptor, environment_descriptor)
+    environment_descriptor_text = _shot_prompt_detail_clause(environment_descriptor)
+    scale_detail_clause = _shot_prompt_detail_clause(required_scale_proof_detail, scene_scale_story_point)
+    if not _is_distinct_clause(scale_detail_clause, [primary_subject_scale_relation, primary_subject_frame_position, primary_subject_pose_description]):
+        scale_detail_clause = ""
+    environment_subzone_clause = _clean_prompt_clause(
+        _compact(_strip_terms(environment_subzone, strip_terms), limit=120) if environment_subzone else ""
+    )
+    if _is_prompt_fragment_noise(environment_subzone_clause):
+        environment_subzone_clause = ""
+
     primary_subject_clause = ""
     if detail_only_object_shot:
-        detail_subject = _first_nonempty(primary_subject_descriptor, primary_subject, fallback="")
+        detail_subject = _first_nonempty(primary_subject_descriptor_text, primary_subject_text, fallback="")
         primary_subject_clause = _compose_prompt_clause(
             "The foreground detail is",
             detail_subject,
@@ -1367,7 +1478,7 @@ def _package_for_shot(
     elif primary_image_key:
         primary_subject_clause = _compose_prompt_clause(
             f"The subject from {primary_image_key} is",
-            primary_subject_descriptor or primary_subject,
+            primary_subject_descriptor_text or primary_subject_text,
             primary_subject_frame_position,
             primary_subject_scale_relation,
             primary_subject_facing_direction,
@@ -1386,7 +1497,7 @@ def _package_for_shot(
     if secondary_subject_descriptors and secondary_image_key:
         secondary_subject_clause = _compose_prompt_clause(
             f"The subject from {secondary_image_key} is",
-            secondary_subject_descriptors[0],
+            _shot_prompt_detail_clause(secondary_subject_descriptors[0]),
             subject_relation_summary,
         )
 
@@ -1395,10 +1506,10 @@ def _package_for_shot(
     celestial_anchor_clause = _prompt_anchor_clause(required_celestial_anchor_1, kind="celestial")
 
     environment_clause = ""
-    environment_subject = _first_nonempty(environment_reference_descriptor, environment_descriptor, fallback="")
+    environment_subject = _first_nonempty(environment_reference_text, environment_descriptor_text, fallback="")
     if environment_canonical_id and environment_image_key:
         environment_clause = _compose_prompt_clause(
-            "Preserve",
+            "Preserve the environment",
             environment_subject,
             f"from {environment_image_key}",
             f"especially {environment_anchor_clause}" if environment_anchor_clause else "",
@@ -1426,11 +1537,11 @@ def _package_for_shot(
             environment_clause,
             f"Keep one readable subject anchor: {subject_anchor_clause}" if subject_anchor_clause else "",
             f"Keep celestial anchor {celestial_anchor_clause} stable in the frame" if celestial_anchor_clause else "",
-            required_scale_proof_detail or scene_scale_story_point,
+            scale_detail_clause,
             camera_clause,
             _clean_prompt_clause(_compact(_strip_terms(composition_hint, strip_terms), limit=200)),
             _clean_prompt_clause(_normalize_prompt_text(shot_moment_summary or scene_arc or scene_contract.get("production_intent", "") or scene_title)),
-            _clean_prompt_clause(_compact(_strip_terms(environment_subzone, strip_terms), limit=120) if environment_subzone else ""),
+            environment_subzone_clause,
             "Narration is off-screen voice only; do not show a visible narrator body." if subject_visibility == "off_screen_voice" else "",
             "Keep continuity exact across costume, silhouette, lighting, and spatial relationships.",
             "Avoid proper nouns in the prompt body unless text is meant to appear on screen.",
@@ -1451,6 +1562,10 @@ def _package_for_shot(
     )
     if not primary_subject_clause:
         sanity_issues.append(f"{shot_id}: primary subject clause could not be assembled safely.")
+    if primary_subject_clause and _looks_like_generic_prompt_descriptor(primary_subject_clause):
+        sanity_issues.append(f"{shot_id}: primary subject clause still contains generic filler.")
+    if environment_clause and _looks_like_generic_prompt_descriptor(environment_clause):
+        sanity_issues.append(f"{shot_id}: environment clause still contains generic filler.")
     review_notes.extend(list(dict.fromkeys(sanity_issues)))
     package_path = project_dir / PROMPT_PREP_ROOT / "shots" / chapter_id / scene_id / shot_id / f"{variant_key}_prompt.md"
     sources = [

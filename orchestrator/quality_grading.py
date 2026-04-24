@@ -144,6 +144,39 @@ def _summarize_notes(notes: list[str]) -> str:
     return "; ".join(notes[:4])
 
 
+def _dialogue_artifact_identity(artifact_path: Path, payload: Any) -> tuple[str, str]:
+    if isinstance(payload, dict):
+        for key in ("chapter_id", "scene_id", "shot_id", "dialogue_id", "title"):
+            value = payload.get(key)
+            if _is_meaningful_string(value):
+                artifact_id = str(value).strip()
+                return artifact_id, artifact_id
+    name = artifact_path.name.upper()
+    if name == "DIALOGUE.JSON":
+        shot_id = artifact_path.parent.name.strip()
+        scene_id = artifact_path.parent.parent.name.strip() if artifact_path.parent.parent else ""
+        if scene_id and shot_id:
+            artifact_id = f"{scene_id}/{shot_id}"
+        else:
+            artifact_id = shot_id or artifact_path.stem
+        return artifact_id, artifact_id
+    if name == "DIALOGUE_INDEX.JSON":
+        artifact_id = artifact_path.parent.name.strip() or artifact_path.stem
+        return artifact_id, artifact_id
+    return artifact_path.stem, artifact_path.stem
+
+
+def _dialogue_event_list(payload: Any) -> list[dict[str, Any]]:
+    if isinstance(payload, dict):
+        events = payload.get("dialogue_events")
+        if isinstance(events, list):
+            return [item for item in events if isinstance(item, dict)]
+        return []
+    if isinstance(payload, list):
+        return [item for item in payload if isinstance(item, dict)]
+    return []
+
+
 @dataclass(frozen=True)
 class QualityGradeRecord:
     family: str
@@ -589,15 +622,16 @@ def _grader_shot(payload: dict[str, Any]) -> tuple[int, int, int, int, int, list
 
 
 def _grader_dialogue(payload: dict[str, Any], *, artifact_path: Path) -> tuple[int, int, int, int, int, list[str]]:
-    if "dialogue_events" in payload:
-        events = payload.get("dialogue_events") if isinstance(payload.get("dialogue_events"), list) else []
-        scene_bindings = payload.get("scene_bindings") if isinstance(payload.get("scene_bindings"), list) else []
-        completeness = _clamp(min(100.0, len(events) * 10 + len(scene_bindings) * 8 + (10 if _is_meaningful_string(payload.get("chapter_id")) else 0) + (10 if _is_meaningful_string(payload.get("source_path")) else 0)))
+    events = _dialogue_event_list(payload)
+    if isinstance(payload, list) or (isinstance(payload, dict) and "dialogue_events" in payload):
+        payload_dict = payload if isinstance(payload, dict) else {}
+        scene_bindings = payload_dict.get("scene_bindings") if isinstance(payload_dict.get("scene_bindings"), list) else []
+        completeness = _clamp(min(100.0, len(events) * 10 + len(scene_bindings) * 8 + (10 if _is_meaningful_string(payload_dict.get("chapter_id")) else 0) + (10 if _is_meaningful_string(payload_dict.get("source_path")) else 0)))
         unresolved = sum(1 for event in events if isinstance(event, dict) and event.get("speaker", {}).get("status") == "unresolved")
-        evidence_support = _clamp(min(100.0, len(events) * 10 + len(scene_bindings) * 8 + (10 if _is_meaningful_string(payload.get("source_fingerprint")) else 0)))
+        evidence_support = _clamp(min(100.0, len(events) * 10 + len(scene_bindings) * 8 + (10 if _is_meaningful_string(payload_dict.get("source_fingerprint")) else 0)))
         consistency = _clamp(100.0 - unresolved * 8)
         prompt_readiness = _clamp(completeness * 0.45 + evidence_support * 0.25 + consistency * 0.3)
-        inference_load = _clamp(unresolved * 10 + _count_review_flags(payload) * 8)
+        inference_load = _clamp(unresolved * 10 + (_count_review_flags(payload_dict) if isinstance(payload, dict) else 0) * 8)
         notes = []
         if unresolved:
             notes.append(f"{unresolved} unresolved speakers")
@@ -620,8 +654,9 @@ def _grader_dialogue(payload: dict[str, Any], *, artifact_path: Path) -> tuple[i
         return completeness, evidence_support, consistency, prompt_readiness, inference_load, notes
 
     if artifact_path.name.endswith("_DIALOGUE_TIMELINE.json"):
-        events = payload.get("dialogue_events") if isinstance(payload.get("dialogue_events"), list) else []
-        scene_bindings = payload.get("scene_bindings") if isinstance(payload.get("scene_bindings"), list) else []
+        events = _dialogue_event_list(payload)
+        payload_dict = payload if isinstance(payload, dict) else {}
+        scene_bindings = payload_dict.get("scene_bindings") if isinstance(payload_dict.get("scene_bindings"), list) else []
         completeness = _clamp(min(100.0, len(events) * 12 + len(scene_bindings) * 10))
         unresolved = len([event for event in events if isinstance(event, dict) and event.get("speaker", {}).get("status") == "unresolved"])
         evidence_support = _clamp(min(100.0, len(events) * 10 + len(scene_bindings) * 8))
@@ -714,6 +749,8 @@ def _make_grade_record(
         if not artifact_id:
             artifact_id = artifact_path.stem
         display_name = str(payload.get("display_name", "")) if _is_meaningful_string(payload.get("display_name")) else artifact_id
+    elif family.family == "dialogue_timeline" and isinstance(payload, list):
+        artifact_id, display_name = _dialogue_artifact_identity(artifact_path, payload)
     else:
         artifact_id = artifact_path.stem
         display_name = artifact_id
@@ -730,9 +767,13 @@ def _make_grade_record(
     elif family.family == "shot_package" and isinstance(payload, dict):
         completeness, evidence_support, consistency, prompt_readiness, inference_load, notes = _grader_shot(payload)
         chapter_mentions = [str(payload.get("chapter_id", ""))] if _is_meaningful_string(payload.get("chapter_id")) else []
-    elif family.family == "dialogue_timeline" and isinstance(payload, dict):
+    elif family.family == "dialogue_timeline" and isinstance(payload, (dict, list)):
         completeness, evidence_support, consistency, prompt_readiness, inference_load, notes = _grader_dialogue(payload, artifact_path=artifact_path)
-        chapter_mentions = [str(payload.get("chapter_id", ""))] if _is_meaningful_string(payload.get("chapter_id")) else []
+        if isinstance(payload, dict):
+            chapter_mentions = [str(payload.get("chapter_id", ""))] if _is_meaningful_string(payload.get("chapter_id")) else []
+        else:
+            chapter_id = artifact_path.parent.parent.name[:5].upper() if artifact_path.parent.parent else ""
+            chapter_mentions = [chapter_id] if chapter_id.startswith("CH") else []
     elif family.family == "descriptor" and isinstance(payload, dict):
         completeness, evidence_support, consistency, prompt_readiness, inference_load, notes = _grader_descriptor(payload)
         chapter_mentions = [str(item) for item in payload.get("chapter_mentions", []) if _is_meaningful_string(item)]
@@ -743,9 +784,9 @@ def _make_grade_record(
         completeness, evidence_support, consistency, prompt_readiness, inference_load, notes = 0, 0, 0, 0, 100, ["unrecognized artifact shape"]
         chapter_mentions = []
 
-    if isinstance(payload, dict):
+    if isinstance(payload, (dict, list)):
         fingerprint = _fingerprint_payload(payload)
-        evidence_refs = payload.get("evidence_refs") if isinstance(payload.get("evidence_refs"), list) else []
+        evidence_refs = payload.get("evidence_refs") if isinstance(payload, dict) and isinstance(payload.get("evidence_refs"), list) else []
     else:
         fingerprint = _fingerprint_text(payload)
         evidence_refs = []
