@@ -5,6 +5,7 @@ from typing import Any
 
 from .character_bible import _is_film_facing_character
 from .core.json_io import read_json
+from .prompt_boosters import apply_booster_bundles
 from .prompt_package import PromptPackage, parse_prompt_package, write_prompt_package
 from .reference_assets import (
     CHARACTER_DEFAULT_VARIANTS,
@@ -23,7 +24,6 @@ from .reference_assets import (
 )
 from .runner import run_still
 from .scaffold import create_project
-from .core.json_io import read_json
 
 CHARACTER_MASTER_VARIANTS = {"full_body_neutral", "bust_portrait"}
 CHARACTER_PRIMARY_MASTER_VARIANT = "full_body_neutral"
@@ -90,7 +90,7 @@ def run_character_reference_planning(project_slug: str, *, force: bool = False, 
     return summarize_reference_phase(project_slug, "character", project_dir, warnings=warnings, written_files=written)
 
 
-def run_character_reference_generation(project_slug: str, *, limit: int | None = None, variants: list[str] | None = None, character_ids: list[str] | None = None, execute: bool = False, seed: int | None = None, workflow_id: str | None = None, test_slice: bool = False) -> ReferencePhaseSummary:
+def run_character_reference_generation(project_slug: str, *, limit: int | None = None, variants: list[str] | None = None, character_ids: list[str] | None = None, execute: bool = False, seed: int | None = None, workflow_id: str | None = None, test_slice: bool = False, prompt_variant_id: str = "raw", booster_bundle_ids: list[str] | None = None) -> ReferencePhaseSummary:
     project_dir = create_project(project_slug)
     selected_variants = {v.strip().lower() for v in variants or [] if v.strip()}
     selected_ids = {c.strip().lower() for c in character_ids or [] if c.strip()}
@@ -141,7 +141,7 @@ def run_character_reference_generation(project_slug: str, *, limit: int | None =
         actual_workflow_id = workflow_id or _workflow_for_variant(variant, has_source=bool(source_ref))
         stage = _generation_stage_for_variant(variant, has_source=bool(source_ref))
         try:
-            generation_prompt_path = _write_generation_prompt_package(project_dir, entry, workflow_id=actual_workflow_id, source_ref=source_ref)
+            generation_prompt_path, booster_metadata = _write_generation_prompt_package(project_dir, entry, workflow_id=actual_workflow_id, source_ref=source_ref, prompt_variant_id=prompt_variant_id, booster_bundle_ids=booster_bundle_ids)
             ref_args = [f"image1={source_ref}"] if source_ref else []
             summary = run_still(project_slug=project_slug, stage=stage, prompt_file=str(generation_prompt_path), workflow_id=actual_workflow_id, asset_id=character_id, ref_args=ref_args, seed=seed, execute=execute)
         except Exception as exc:
@@ -150,6 +150,10 @@ def run_character_reference_generation(project_slug: str, *, limit: int | None =
         entry["generation_stage"] = stage
         entry["generation_workflow_id"] = actual_workflow_id
         entry["source_reference_image"] = source_ref
+        entry["prompt_variant_id"] = booster_metadata.get("prompt_variant_id", prompt_variant_id)
+        entry["booster_bundle_ids"] = booster_metadata.get("booster_bundle_ids", [])
+        entry["positive_boosters"] = booster_metadata.get("positive_boosters", [])
+        entry["negative_boosters"] = booster_metadata.get("negative_boosters", [])
         entry["last_run_manifest"] = str(summary.manifest_path)
         entry["last_patched_workflow"] = str(summary.patched_workflow_path)
         entry["generation_ready"] = bool(summary.execution_ready)
@@ -262,21 +266,26 @@ def _locked_reference_for_variant(project_dir: Path, character_id: str, variant:
     return ""
 
 
-def _write_generation_prompt_package(project_dir: Path, entry: dict[str, Any], *, workflow_id: str, source_ref: str) -> Path:
+def _write_generation_prompt_package(project_dir: Path, entry: dict[str, Any], *, workflow_id: str, source_ref: str, prompt_variant_id: str = "raw", booster_bundle_ids: list[str] | None = None) -> tuple[Path, dict[str, Any]]:
     package = parse_prompt_package(Path(str(entry.get("prompt_package_path", ""))))
     repair_notes = package.repair_notes_markdown
     positive_prompt = package.positive_prompt
+    negative_prompt = package.negative_prompt
     if source_ref:
         image_instruction = "Use image1 as the locked identity reference."
-        positive_prompt = _prepend_prompt_instruction(package.positive_prompt, image_instruction)
+        positive_prompt = _prepend_prompt_instruction(positive_prompt, image_instruction)
         extra_note = f"- Use image1 as locked identity reference: {source_ref}"
         repair_notes = (repair_notes + "\n" + extra_note).strip() if repair_notes else extra_note
-    generated = PromptPackage(path=package.path, title=package.title, prompt_id=package.prompt_id, purpose=package.purpose, workflow_type=workflow_id, positive_prompt=positive_prompt, negative_prompt=package.negative_prompt, inputs_markdown=package.inputs_markdown, continuity_notes_markdown=package.continuity_notes_markdown, sources_markdown=package.sources_markdown, repair_notes_markdown=repair_notes)
+    positive_prompt, negative_prompt, booster_metadata = apply_booster_bundles(positive_prompt, negative_prompt, prompt_variant_id=prompt_variant_id, bundle_ids=booster_bundle_ids)
+    if booster_metadata.get("booster_bundle_ids"):
+        repair_notes = (repair_notes + "\n" if repair_notes else "") + f"- Prompt boosters: {', '.join(booster_metadata['booster_bundle_ids'])}"
+    generated = PromptPackage(path=package.path, title=package.title, prompt_id=package.prompt_id, purpose=package.purpose, workflow_type=workflow_id, positive_prompt=positive_prompt, negative_prompt=negative_prompt, inputs_markdown=package.inputs_markdown, continuity_notes_markdown=package.continuity_notes_markdown, sources_markdown=package.sources_markdown, repair_notes_markdown=repair_notes)
     asset_id = str(entry.get("asset_id", "")).strip().lower()
     variant = str(entry.get("variant_key", "")).strip().lower()
-    output_path = project_dir / "03_reference_assets" / "characters" / asset_id / "generation_prompts" / f"{variant}_{workflow_id.replace('/', '_')}_prompt.md"
+    safe_variant = str(booster_metadata.get("prompt_variant_id", prompt_variant_id or "raw")).replace("/", "_")
+    output_path = project_dir / "03_reference_assets" / "characters" / asset_id / "generation_prompts" / f"{variant}_{safe_variant}_{workflow_id.replace('/', '_')}_prompt.md"
     write_prompt_package(output_path, generated)
-    return output_path
+    return output_path, booster_metadata
 
 
 def _manifest_output_files(manifest_path: Path) -> list[str]:
@@ -286,12 +295,7 @@ def _manifest_output_files(manifest_path: Path) -> list[str]:
     return [str(p) for p in payload.get("output_files", []) if str(p).strip()] if isinstance(payload, dict) and isinstance(payload.get("output_files", []), list) else []
 
 
-def _fallback_prompt_prepared_entries(
-    project_dir: Path,
-    subject_kind: str,
-    selected_variants: set[str],
-    selected_ids: set[str],
-) -> list[dict[str, Any]]:
+def _fallback_prompt_prepared_entries(project_dir: Path, subject_kind: str, selected_variants: set[str], selected_ids: set[str]) -> list[dict[str, Any]]:
     index_path = project_dir / "03_prompt_packages" / "prepared" / "PROMPT_PREPARATION_INDEX.json"
     if not index_path.exists():
         return []
@@ -317,36 +321,11 @@ def _fallback_prompt_prepared_entries(
         prompt_path = Path(str(item.get("path", "")))
         if not prompt_path.exists():
             continue
-        entries.append(
-            {
-                "schema_version": "2026-04-23-reference-assets-v1",
-                "reference_request_id": f"{asset_id}_{variant}",
-                "asset_kind": subject_kind,
-                "asset_id": asset_id,
-                "variant_key": variant,
-                "prompt_package_path": str(prompt_path),
-                "status": "prepared",
-                "approval_state": "unreviewed",
-                "locked": False,
-                "priority": "normal",
-                "candidate_ids": [],
-                "selected_candidate_id": "",
-                "review_notes": [],
-                "warnings": [],
-                "updated_at": "",
-                "generation_stage": _generation_stage_for_variant(variant),
-                "generation_workflow_id": _workflow_for_variant(variant),
-            }
-        )
+        entries.append({"schema_version": "2026-04-23-reference-assets-v1", "reference_request_id": f"{asset_id}_{variant}", "asset_kind": subject_kind, "asset_id": asset_id, "variant_key": variant, "prompt_package_path": str(prompt_path), "status": "prepared", "approval_state": "unreviewed", "locked": False, "priority": "normal", "candidate_ids": [], "selected_candidate_id": "", "review_notes": [], "warnings": [], "updated_at": "", "generation_stage": _generation_stage_for_variant(variant), "generation_workflow_id": _workflow_for_variant(variant)})
     return entries
 
 
-def _prompt_prepared_entries(
-    project_dir: Path,
-    subject_kind: str,
-    selected_variants: set[str],
-    selected_ids: set[str],
-) -> list[dict[str, Any]]:
+def _prompt_prepared_entries(project_dir: Path, subject_kind: str, selected_variants: set[str], selected_ids: set[str]) -> list[dict[str, Any]]:
     index_path = project_dir / "03_prompt_packages" / "prepared" / "PROMPT_PREPARATION_INDEX.json"
     if not index_path.exists():
         return []
@@ -374,27 +353,7 @@ def _prompt_prepared_entries(
             continue
         warnings = validate_prompt_package(prompt_path, REQUIRED_CHARACTER_REFERENCE_INPUTS)
         warnings.extend(_recommended_input_warnings(prompt_path))
-        entries.append(
-            {
-                "schema_version": "2026-04-23-reference-assets-v1",
-                "reference_request_id": f"{asset_id}_{variant}",
-                "asset_kind": subject_kind,
-                "asset_id": asset_id,
-                "variant_key": variant,
-                "prompt_package_path": str(prompt_path),
-                "status": "prepared" if not warnings else "blocked",
-                "approval_state": "unreviewed",
-                "locked": False,
-                "priority": "normal",
-                "candidate_ids": [],
-                "selected_candidate_id": "",
-                "review_notes": [],
-                "warnings": warnings,
-                "updated_at": "",
-                "generation_stage": _generation_stage_for_variant(variant),
-                "generation_workflow_id": _workflow_for_variant(variant),
-            }
-        )
+        entries.append({"schema_version": "2026-04-23-reference-assets-v1", "reference_request_id": f"{asset_id}_{variant}", "asset_kind": subject_kind, "asset_id": asset_id, "variant_key": variant, "prompt_package_path": str(prompt_path), "status": "prepared" if not warnings else "blocked", "approval_state": "unreviewed", "locked": False, "priority": "normal", "candidate_ids": [], "selected_candidate_id": "", "review_notes": [], "warnings": warnings, "updated_at": "", "generation_stage": _generation_stage_for_variant(variant), "generation_workflow_id": _workflow_for_variant(variant)})
     return entries
 
 
