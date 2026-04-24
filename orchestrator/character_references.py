@@ -28,43 +28,23 @@ CHARACTER_MASTER_VARIANTS = {"full_body_neutral", "bust_portrait"}
 CHARACTER_PRIMARY_MASTER_VARIANT = "full_body_neutral"
 CHARACTER_T2I_WORKFLOW_ID = "still.t2i.klein.distilled"
 CHARACTER_VARIANT_WORKFLOW_ID = "still.reference_variant.single_ref.klein.distilled"
-
-REQUIRED_CHARACTER_REFERENCE_INPUTS = {
-    "subject_kind",
-    "subject_id",
-    "source_artifact_ids",
-    "reference_mode",
-    "variant_name",
-    "reuse_policy",
+CHARACTER_VALIDATION_SLICE_LIMIT = 2
+CHARACTER_VALIDATION_SLICE_STAGES = {
+    "portrait": {"bust_portrait"},
+    "full_body": {"full_body_neutral"},
+    "supporting": {"profile_view", "three_quarter_view", "front_view", "back_view", "action_pose", "expression_sheet"},
 }
 
-OPTIONAL_BUT_RECOMMENDED_CHARACTER_INPUTS = {
-    "display_name",
-    "identity_descriptor",
-    "body_descriptor",
-    "face_descriptor",
-    "costume_descriptor",
-    "posture_descriptor",
-    "expression_descriptor",
-    "locked_fields",
-}
+REQUIRED_CHARACTER_REFERENCE_INPUTS = {"subject_kind", "subject_id", "source_artifact_ids", "reference_mode", "variant_name", "reuse_policy"}
+OPTIONAL_BUT_RECOMMENDED_CHARACTER_INPUTS = {"display_name", "identity_descriptor", "body_descriptor", "face_descriptor", "costume_descriptor", "posture_descriptor", "expression_descriptor", "locked_fields"}
 
 
-def run_character_reference_planning(
-    project_slug: str,
-    *,
-    force: bool = False,
-    variants: list[str] | None = None,
-    limit: int | None = None,
-) -> ReferencePhaseSummary:
+def run_character_reference_planning(project_slug: str, *, force: bool = False, variants: list[str] | None = None, limit: int | None = None, test_slice: bool = False) -> ReferencePhaseSummary:
     project_dir = create_project(project_slug)
     character_bibles = _load_character_bibles(project_dir)
-    selected_variants = [variant.strip().lower() for variant in (variants or CHARACTER_DEFAULT_VARIANTS) if variant.strip()]
+    selected_variants = _selected_variants(variants, test_slice=test_slice)
     existing = [] if force else load_reference_queue(project_dir, "character")
-    existing_by_key = {
-        (str(entry.get("asset_id", "")).strip().lower(), str(entry.get("variant_key", "")).strip().lower()): entry
-        for entry in existing
-    }
+    existing_by_key = {(str(e.get("asset_id", "")).strip().lower(), str(e.get("variant_key", "")).strip().lower()): e for e in existing}
     entries: list[dict[str, Any]] = []
     warnings: list[str] = []
     written: list[str] = []
@@ -80,47 +60,40 @@ def run_character_reference_planning(
         for variant in selected_variants:
             key = (character_id, variant)
             if key in existing_by_key:
-                entries.append(existing_by_key[key])
+                entry = existing_by_key[key]
+                if test_slice:
+                    entry["validation_slice"] = True
+                    entry["validation_slice_stage"] = _validation_slice_stage_for_variant(variant)
+                entries.append(entry)
                 continue
             path = prompt_package_path(project_dir, "character", character_id, variant)
             prompt_warnings = validate_prompt_package(path, REQUIRED_CHARACTER_REFERENCE_INPUTS)
             prompt_warnings.extend(_recommended_input_warnings(path))
-            request = make_reference_request(
-                asset_kind="character",
-                asset_id=character_id,
-                variant_key=variant,
-                prompt_path=path,
-                priority=priority,
-                warnings=prompt_warnings,
-            )
+            request = make_reference_request(asset_kind="character", asset_id=character_id, variant_key=variant, prompt_path=path, priority=priority, warnings=prompt_warnings)
             request["generation_stage"] = _generation_stage_for_variant(variant)
             request["generation_workflow_id"] = _workflow_for_variant(variant)
+            if test_slice:
+                request["validation_slice"] = True
+                request["validation_slice_stage"] = _validation_slice_stage_for_variant(variant)
+            if variant == "full_body_neutral":
+                request.setdefault("review_notes", []).append("Validation order: derive full-body from an approved locked bust/portrait reference when available.")
             if variant not in CHARACTER_MASTER_VARIANTS:
-                request.setdefault("review_notes", []).append(
-                    f"Requires an approved locked {CHARACTER_PRIMARY_MASTER_VARIANT} character reference before generation."
-                )
+                request.setdefault("review_notes", []).append(f"Requires an approved locked {CHARACTER_PRIMARY_MASTER_VARIANT} character reference before generation.")
             entries.append(request)
             if prompt_warnings:
                 warnings.append(f"{character_id}/{variant}: " + "; ".join(prompt_warnings))
 
+    if test_slice:
+        entries = _apply_validation_slice_caps(entries)
     written.extend(write_reference_queue(project_dir, "character", entries))
     return summarize_reference_phase(project_slug, "character", project_dir, warnings=warnings, written_files=written)
 
 
-def run_character_reference_generation(
-    project_slug: str,
-    *,
-    limit: int | None = None,
-    variants: list[str] | None = None,
-    character_ids: list[str] | None = None,
-    execute: bool = False,
-    seed: int | None = None,
-    workflow_id: str | None = None,
-) -> ReferencePhaseSummary:
+def run_character_reference_generation(project_slug: str, *, limit: int | None = None, variants: list[str] | None = None, character_ids: list[str] | None = None, execute: bool = False, seed: int | None = None, workflow_id: str | None = None, test_slice: bool = False) -> ReferencePhaseSummary:
     project_dir = create_project(project_slug)
     queue = load_reference_queue(project_dir, "character")
-    selected_variants = {variant.strip().lower() for variant in variants or [] if variant.strip()}
-    selected_ids = {character_id.strip().lower() for character_id in character_ids or [] if character_id.strip()}
+    selected_variants = {v.strip().lower() for v in variants or [] if v.strip()}
+    selected_ids = {c.strip().lower() for c in character_ids or [] if c.strip()}
     eligible: list[dict[str, Any]] = []
     warnings: list[str] = []
     written: list[str] = []
@@ -128,6 +101,8 @@ def run_character_reference_generation(
     for entry in queue:
         character_id = str(entry.get("asset_id", "")).strip().lower()
         variant = str(entry.get("variant_key", "")).strip().lower()
+        if test_slice and not entry.get("validation_slice"):
+            continue
         if selected_ids and character_id not in selected_ids:
             continue
         if selected_variants and variant not in selected_variants:
@@ -138,42 +113,28 @@ def run_character_reference_generation(
             continue
         eligible.append(entry)
 
+    if test_slice:
+        eligible = _apply_validation_slice_caps(eligible)
     selected_entries = eligible if limit is None else eligible[:limit]
     for entry in selected_entries:
         character_id = str(entry.get("asset_id", "")).strip().lower()
         variant = str(entry.get("variant_key", "")).strip().lower()
-        source_ref = _locked_master_reference(project_dir, character_id) if variant not in CHARACTER_MASTER_VARIANTS else ""
-        if variant not in CHARACTER_MASTER_VARIANTS and not source_ref:
-            note = f"{character_id}/{variant}: missing locked master reference; generate, approve, and lock {CHARACTER_PRIMARY_MASTER_VARIANT} first."
+        source_ref = _source_reference_for_variant(project_dir, character_id, variant)
+        if _requires_source_reference(variant) and not source_ref:
+            note = _missing_gate_note(character_id, variant)
             warnings.append(note)
             entry.setdefault("review_notes", []).append(note)
             entry["status"] = "blocked"
             continue
-
-        actual_workflow_id = workflow_id or _workflow_for_variant(variant)
-        stage = _generation_stage_for_variant(variant)
+        actual_workflow_id = workflow_id or _workflow_for_variant(variant, has_source=bool(source_ref))
+        stage = _generation_stage_for_variant(variant, has_source=bool(source_ref))
         try:
-            generation_prompt_path = _write_generation_prompt_package(
-                project_dir,
-                entry,
-                workflow_id=actual_workflow_id,
-                source_ref=source_ref,
-            )
+            generation_prompt_path = _write_generation_prompt_package(project_dir, entry, workflow_id=actual_workflow_id, source_ref=source_ref)
             ref_args = [f"source_frame={source_ref}"] if source_ref else []
-            summary = run_still(
-                project_slug=project_slug,
-                stage=stage,
-                prompt_file=str(generation_prompt_path),
-                workflow_id=actual_workflow_id,
-                asset_id=character_id,
-                ref_args=ref_args,
-                seed=seed,
-                execute=execute,
-            )
+            summary = run_still(project_slug=project_slug, stage=stage, prompt_file=str(generation_prompt_path), workflow_id=actual_workflow_id, asset_id=character_id, ref_args=ref_args, seed=seed, execute=execute)
         except Exception as exc:
             warnings.append(f"{character_id}/{variant}: generation preparation failed: {exc}")
             continue
-
         entry["generation_stage"] = stage
         entry["generation_workflow_id"] = actual_workflow_id
         entry["source_reference_image"] = source_ref
@@ -188,14 +149,8 @@ def run_character_reference_generation(
             entry.setdefault("review_notes", []).extend(summary.warnings)
         if execute:
             for output_file in _manifest_output_files(summary.manifest_path):
-                candidate_summary = register_character_reference_candidate(
-                    project_slug,
-                    character_id=character_id,
-                    variant=variant,
-                    image_path=output_file,
-                )
+                candidate_summary = register_character_reference_candidate(project_slug, character_id=character_id, variant=variant, image_path=output_file)
                 written.extend(candidate_summary.written_files)
-
     written.extend(write_reference_queue(project_dir, "character", queue))
     return summarize_reference_phase(project_slug, "character", project_dir, warnings=warnings, written_files=written)
 
@@ -203,25 +158,71 @@ def run_character_reference_generation(
 def register_character_reference_candidate(project_slug: str, *, character_id: str, variant: str, image_path: str) -> ReferencePhaseSummary:
     return register_reference_candidate(project_slug, asset_kind="character", asset_id=character_id, variant_key=variant, image_path=image_path)
 
-
 def approve_character_reference_candidate(project_slug: str, *, candidate_id: str) -> ReferencePhaseSummary:
     return approve_reference_candidate(project_slug, asset_kind="character", candidate_id=candidate_id)
 
-
 def reject_character_reference_candidate(project_slug: str, *, candidate_id: str, reason: str) -> ReferencePhaseSummary:
     return reject_reference_candidate(project_slug, asset_kind="character", candidate_id=candidate_id, reason=reason)
-
 
 def lock_character_reference_candidate(project_slug: str, *, candidate_id: str) -> ReferencePhaseSummary:
     return lock_reference_candidate(project_slug, asset_kind="character", candidate_id=candidate_id)
 
 
-def _generation_stage_for_variant(variant: str) -> str:
-    return "character_reference" if variant in CHARACTER_MASTER_VARIANTS else "character_reference_variant"
+def _selected_variants(variants: list[str] | None, *, test_slice: bool) -> list[str]:
+    if variants:
+        return [v.strip().lower() for v in variants if v.strip()]
+    if test_slice:
+        return ["bust_portrait", "full_body_neutral", "profile_view"]
+    return [v.strip().lower() for v in CHARACTER_DEFAULT_VARIANTS if v.strip()]
 
 
-def _workflow_for_variant(variant: str) -> str:
-    return CHARACTER_T2I_WORKFLOW_ID if variant in CHARACTER_MASTER_VARIANTS else CHARACTER_VARIANT_WORKFLOW_ID
+def _validation_slice_stage_for_variant(variant: str) -> str:
+    for stage, variants in CHARACTER_VALIDATION_SLICE_STAGES.items():
+        if variant in variants:
+            return stage
+    return "supporting"
+
+
+def _apply_validation_slice_caps(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    counts = {"portrait": 0, "full_body": 0, "supporting": 0}
+    capped: list[dict[str, Any]] = []
+    for entry in entries:
+        stage = str(entry.get("validation_slice_stage") or _validation_slice_stage_for_variant(str(entry.get("variant_key", ""))))
+        if stage not in counts:
+            stage = "supporting"
+        if counts[stage] >= CHARACTER_VALIDATION_SLICE_LIMIT:
+            continue
+        counts[stage] += 1
+        entry["validation_slice"] = True
+        entry["validation_slice_stage"] = stage
+        capped.append(entry)
+    return capped
+
+
+def _generation_stage_for_variant(variant: str, *, has_source: bool = False) -> str:
+    return "character_reference_variant" if has_source else "character_reference"
+
+
+def _workflow_for_variant(variant: str, *, has_source: bool = False) -> str:
+    return CHARACTER_VARIANT_WORKFLOW_ID if has_source else CHARACTER_T2I_WORKFLOW_ID
+
+
+def _requires_source_reference(variant: str) -> bool:
+    return variant not in {"bust_portrait"}
+
+
+def _source_reference_for_variant(project_dir: Path, character_id: str, variant: str) -> str:
+    if variant == "full_body_neutral":
+        return _locked_reference_for_variant(project_dir, character_id, "bust_portrait")
+    if variant == "bust_portrait":
+        return ""
+    return _locked_reference_for_variant(project_dir, character_id, "full_body_neutral") or _locked_master_reference(project_dir, character_id)
+
+
+def _missing_gate_note(character_id: str, variant: str) -> str:
+    if variant == "full_body_neutral":
+        return f"{character_id}/{variant}: missing locked bust_portrait reference; generate, approve, and lock portrait first."
+    return f"{character_id}/{variant}: missing locked full_body_neutral reference; generate, approve, and lock full-body first."
 
 
 def _locked_master_reference(project_dir: Path, character_id: str) -> str:
@@ -235,30 +236,29 @@ def _locked_master_reference(project_dir: Path, character_id: str) -> str:
     return ""
 
 
+def _locked_reference_for_variant(project_dir: Path, character_id: str, variant: str) -> str:
+    approved = load_approved_manifest(project_dir, "character")
+    for entry in approved:
+        if str(entry.get("asset_id", "")).strip().lower() != character_id.strip().lower() or not entry.get("locked"):
+            continue
+        if variant == CHARACTER_PRIMARY_MASTER_VARIANT:
+            return str(entry.get("canonical_reference_image", "")).strip()
+        supporting = entry.get("supporting_references", {})
+        if isinstance(supporting, dict):
+            return str(supporting.get(variant, "")).strip()
+    return ""
+
+
 def _write_generation_prompt_package(project_dir: Path, entry: dict[str, Any], *, workflow_id: str, source_ref: str) -> Path:
-    original_path = Path(str(entry.get("prompt_package_path", "")))
-    package = parse_prompt_package(original_path)
+    package = parse_prompt_package(Path(str(entry.get("prompt_package_path", ""))))
     repair_notes = package.repair_notes_markdown
     if source_ref:
         extra_note = f"- Use source_frame as locked identity reference: {source_ref}"
         repair_notes = (repair_notes + "\n" + extra_note).strip() if repair_notes else extra_note
-    generated = PromptPackage(
-        path=package.path,
-        title=package.title,
-        prompt_id=package.prompt_id,
-        purpose=package.purpose,
-        workflow_type=workflow_id,
-        positive_prompt=package.positive_prompt,
-        negative_prompt=package.negative_prompt,
-        inputs_markdown=package.inputs_markdown,
-        continuity_notes_markdown=package.continuity_notes_markdown,
-        sources_markdown=package.sources_markdown,
-        repair_notes_markdown=repair_notes,
-    )
+    generated = PromptPackage(path=package.path, title=package.title, prompt_id=package.prompt_id, purpose=package.purpose, workflow_type=workflow_id, positive_prompt=package.positive_prompt, negative_prompt=package.negative_prompt, inputs_markdown=package.inputs_markdown, continuity_notes_markdown=package.continuity_notes_markdown, sources_markdown=package.sources_markdown, repair_notes_markdown=repair_notes)
     asset_id = str(entry.get("asset_id", "")).strip().lower()
     variant = str(entry.get("variant_key", "")).strip().lower()
-    safe_workflow = workflow_id.replace("/", "_")
-    output_path = project_dir / "03_reference_assets" / "characters" / asset_id / "generation_prompts" / f"{variant}_{safe_workflow}_prompt.md"
+    output_path = project_dir / "03_reference_assets" / "characters" / asset_id / "generation_prompts" / f"{variant}_{workflow_id.replace('/', '_')}_prompt.md"
     write_prompt_package(output_path, generated)
     return output_path
 
@@ -267,12 +267,7 @@ def _manifest_output_files(manifest_path: Path) -> list[str]:
     if not manifest_path.exists():
         return []
     payload = read_json(manifest_path)
-    if not isinstance(payload, dict):
-        return []
-    output_files = payload.get("output_files", [])
-    if not isinstance(output_files, list):
-        return []
-    return [str(path) for path in output_files if str(path).strip()]
+    return [str(p) for p in payload.get("output_files", []) if str(p).strip()] if isinstance(payload, dict) and isinstance(payload.get("output_files", []), list) else []
 
 
 def _load_character_bibles(project_dir: Path) -> dict[str, dict[str, Any]]:
@@ -288,21 +283,14 @@ def _load_character_bibles(project_dir: Path) -> dict[str, dict[str, Any]]:
             continue
         if path.name.startswith("CHARACTER_REGISTRY_GLOBAL"):
             for character_id, record in payload.items():
-                if not isinstance(record, dict):
-                    continue
-                normalized_id = str(record.get("canonical_id", character_id)).strip().lower()
-                if normalized_id:
-                    item = dict(record)
-                    item.setdefault("character_id", normalized_id)
-                    item.setdefault("display_name", str(record.get("display_name", normalized_id)).strip() or normalized_id)
-                    records[normalized_id] = item
+                if isinstance(record, dict):
+                    normalized_id = str(record.get("canonical_id", character_id)).strip().lower()
+                    if normalized_id:
+                        item = dict(record); item.setdefault("character_id", normalized_id); item.setdefault("display_name", str(record.get("display_name", normalized_id)).strip() or normalized_id); records[normalized_id] = item
             continue
         character_id = str(payload.get("character_id", payload.get("canonical_id", ""))).strip().lower()
         if character_id:
-            item = dict(payload)
-            item.setdefault("character_id", character_id)
-            item.setdefault("display_name", str(payload.get("display_name", character_id)).strip() or character_id)
-            records[character_id] = item
+            item = dict(payload); item.setdefault("character_id", character_id); item.setdefault("display_name", str(payload.get("display_name", character_id)).strip() or character_id); records[character_id] = item
     return records
 
 
@@ -321,19 +309,13 @@ def _should_plan_character(bible: dict[str, Any]) -> bool:
 
 def _character_priority(bible: dict[str, Any]) -> str:
     role = " ".join(str(value).lower() for value in [bible.get("role", ""), bible.get("narrative_role", ""), bible.get("story_role", "")])
-    if any(term in role for term in ["protagonist", "lead", "major", "main", "primary"]):
-        return "high"
-    if any(term in role for term in ["supporting", "recurring", "secondary"]):
-        return "medium"
+    if any(term in role for term in ["protagonist", "lead", "major", "main", "primary"]): return "high"
+    if any(term in role for term in ["supporting", "recurring", "secondary"]): return "medium"
     return "normal"
 
 
 def _recommended_input_warnings(path: Path) -> list[str]:
-    if not path.exists():
-        return []
-    try:
-        package = parse_prompt_package(path)
-    except Exception:
-        return []
-    missing = sorted(key for key in OPTIONAL_BUT_RECOMMENDED_CHARACTER_INPUTS if not str(package.inputs.get(key, "")).strip())
-    return [f"recommended input `{key}` is missing" for key in missing]
+    if not path.exists(): return []
+    try: package = parse_prompt_package(path)
+    except Exception: return []
+    return [f"recommended input `{key}` is missing" for key in sorted(key for key in OPTIONAL_BUT_RECOMMENDED_CHARACTER_INPUTS if not str(package.inputs.get(key, "")).strip())]

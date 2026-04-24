@@ -30,6 +30,16 @@ Optional bible refresh steps for a tiny slice of canonical entities:
 
 These use a small `--limit` and are self-contained within the quick-test folder.
 
+Optional reference-generation steps for a tiny Phase 12/13 slice:
+- `10_run_character_reference_generation.bat`
+- `11_run_environment_reference_generation.bat`
+
+These execute a small generation slice using the prompts we already prepared:
+- characters: `bust_portrait`
+- environments: `establishing_wide`
+
+The default slice limit is `2`, and you can pass a different limit as the second argument.
+
 The auto launcher defaults to:
 - project slug `princess_of_mars_test`
 - chapters `2-3`
