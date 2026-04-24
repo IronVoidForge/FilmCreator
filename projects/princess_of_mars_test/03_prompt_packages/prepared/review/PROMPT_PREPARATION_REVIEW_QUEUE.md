@@ -9,6 +9,9 @@
 - `martian_warriors`
   - Character status=canonical entity_kind=group.
   - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `none`
+  - Environment status=review entity_kind=environment.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
 - `CH002_SC001_SH001_primary_keyframe_prompt`
   - Prompt body is missing the required subject anchor for an on-screen shot.
 - `CH002_SC001_SH001_alternate_angle_prompt`

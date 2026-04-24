@@ -3,6 +3,7 @@
 - `apache_warriors` - apache_warriors Character Reference Review (subject_kind=character, status=review, variant=review)
 - `martian_warrior_leader` - martian_warrior_leader Character Reference Review (subject_kind=character, status=review, variant=review)
 - `martian_warriors` - martian_warriors Character Reference Review (subject_kind=character, status=review, variant=review)
+- `none` - Cave Interior (Transitioning) Environment Reference Review (subject_kind=environment, status=review, variant=review)
 - `CH002_SC001_SH001_primary_keyframe_prompt` - SH001 Shot Prompt - Primary Keyframe (subject_kind=shot, status=review, variant=primary_keyframe)
 - `CH002_SC001_SH001_alternate_angle_prompt` - SH001 Shot Prompt - Alternate Angle (subject_kind=shot, status=review, variant=alternate_angle)
 - `CH002_SC001_SH001_consistency_repair_prompt` - SH001 Shot Prompt - Consistency Repair (subject_kind=shot, status=review, variant=consistency_repair)

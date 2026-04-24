@@ -533,6 +533,72 @@ def _load_scene_contracts(project_dir: Path) -> dict[str, dict[str, Any]]:
     return records
 
 
+def _scene_environment_prompt_records(
+    scene_contracts: dict[str, dict[str, Any]],
+    *,
+    selected_chapters: set[str] | None = None,
+) -> dict[str, dict[str, Any]]:
+    records: dict[str, dict[str, Any]] = {}
+    for scene_id, contract in scene_contracts.items():
+        chapter_id = str(contract.get("chapter_id", "")).strip().upper() or scene_id[:5]
+        if selected_chapters and not chapter_matches(chapter_id, selected_chapters):
+            continue
+        scene_title = str(contract.get("scene_title", "")).strip()
+        production_intent = str(contract.get("production_intent", "")).strip()
+        continuity_constraints = _coerce_bullets(contract.get("continuity_constraints", []))
+        environment_subzones = _coerce_bullets(contract.get("environment_subzones", []))
+        for ref in contract.get("environments_required", []):
+            if not isinstance(ref, dict):
+                continue
+            canonical_id = str(ref.get("canonical_id", "")).strip().lower()
+            if not canonical_id:
+                continue
+            display_name = str(ref.get("display_name", ref.get("label", canonical_id))).strip() or canonical_id
+            record = records.setdefault(
+                canonical_id,
+                {
+                    "environment_id": canonical_id,
+                    "display_name": display_name,
+                    "status": str(ref.get("status", "canonical")).strip().lower() or "canonical",
+                    "entity_kind": "environment",
+                    "environment_type": str(ref.get("label", "")).strip() or display_name,
+                    "chapter_mentions": [],
+                    "visual_summary": [],
+                    "layout_notes": [],
+                    "lighting": [],
+                    "mood": [],
+                    "recurring_elements": [],
+                    "constraints": [],
+                    "evidence_summary": [],
+                },
+            )
+            if chapter_id and chapter_id not in record["chapter_mentions"]:
+                record["chapter_mentions"].append(chapter_id)
+            notes = str(ref.get("notes", "")).strip()
+            if notes:
+                record["constraints"].append(notes)
+                record["evidence_summary"].append(notes)
+            if scene_title:
+                record["evidence_summary"].append(f"Scene: {scene_id} / {scene_title}")
+            if production_intent:
+                record["visual_summary"].append(production_intent)
+            if continuity_constraints:
+                record["constraints"].extend(continuity_constraints)
+            if environment_subzones:
+                record["layout_notes"].extend(environment_subzones)
+            if display_name:
+                record["recurring_elements"].append(display_name)
+            record["evidence_summary"].append(f"Chapter slice match: {chapter_id}")
+    for record in records.values():
+        for key in ("chapter_mentions", "visual_summary", "layout_notes", "lighting", "mood", "recurring_elements", "constraints", "evidence_summary"):
+            record[key] = list(dict.fromkeys(value for value in record.get(key, []) if str(value).strip()))
+        if not record.get("layout_notes") and record.get("visual_summary"):
+            record["layout_notes"] = list(record["visual_summary"][:2])
+        if not record.get("visual_summary") and record.get("layout_notes"):
+            record["visual_summary"] = list(record["layout_notes"][:2])
+    return records
+
+
 def _load_shot_packages(project_dir: Path) -> list[dict[str, Any]]:
     shots: list[dict[str, Any]] = []
     for path in _shot_index_paths(project_dir):
@@ -1791,6 +1857,7 @@ def run_prompt_preparation(
             for shot in shot_packages
             if chapter_matches(str(shot.get("chapter_id", "") or str(shot.get("scene_id", ""))[:5]), selected_chapters)
         ]
+    scene_environment_bibles = _scene_environment_prompt_records(scene_contracts, selected_chapters=selected_chapters or None)
 
     def matches_entity_id(*candidates: str) -> bool:
         if not selected_ids:
@@ -1868,7 +1935,10 @@ def run_prompt_preparation(
 
     # Environment reference bundles.
     if not selected_types or "environment" in selected_types:
-        for bible in sorted(environment_bibles.values(), key=lambda item: str(item.get("environment_id", ""))):
+        environment_records = dict(environment_bibles)
+        for env_id, scene_bible in scene_environment_bibles.items():
+            environment_records.setdefault(env_id, scene_bible)
+        for bible in sorted(environment_records.values(), key=lambda item: str(item.get("environment_id", ""))):
             if stop_processing:
                 break
             env_id = str(bible.get("environment_id", "")).strip().lower()
