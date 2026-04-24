@@ -13,6 +13,7 @@ The latest validated state is:
 - scene contracts, scene bindings, shot packages, dialogue timeline, descriptor enrichment, prompt preparation, and quality grading are all present as first-class CLI stages
 - the current bottleneck is no longer extraction correctness
 - the current bottleneck is synthesis quality at the handoff layers, especially prompt-ready variable quality, transition-scene environment handoff, subject/object typing, and production-facing prompt fidelity
+- Phase 12 and Phase 13 are now the next active structural targets for reference-generation workflow hardening
 
 ## Status Legend
 
@@ -213,6 +214,16 @@ The latest validated state is:
 - status: `planned`
 - evidence: the grading layer already emits `focus_fields`, which is the required contract for targeted smoothing without whole-family reruns
 - next validation: patch incomplete artifacts with narrow context packs and preserve prior strong fields
+
+### Phase 12 - Character Sheet Generation and Approval
+- status: `planned`
+- evidence: prompt-preparation bundles and character reference planning are in place, and the staged portrait -> full-body -> supporting-view generation model is now the intended generic workflow
+- next validation: produce a strong text-to-image portrait first, derive the approved full-body reference from it, then derive other views from the approved full-body or portrait ref
+
+### Phase 13 - Environment Reference Generation and Approval
+- status: `planned`
+- evidence: environment prompt-preparation bundles and environment reference planning are in place, and the staged establishing-view -> spatial-reference -> variant workflow is now the intended generic model
+- next validation: produce an approved establishing environment ref first, then derive the stabilized spatial and supporting variants from it
 
 ## Cross-Cutting Work Newly Required
 

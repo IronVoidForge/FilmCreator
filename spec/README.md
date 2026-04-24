@@ -18,6 +18,8 @@ This folder breaks the project into numbered implementation chunks by feature an
 5. `5_authoring`
 6. `6_deferred`
 
+Deferred work also includes a living future-issues log under `6_deferred/future_issues/` for known gaps, generic hardening tasks, and follow-on dialogue/prompt stability work.
+
 ## Spec Index
 
 - `1.1` repo, project, scene, and clip hierarchy
@@ -90,3 +92,5 @@ Phase B is now focused on:
 - prompt-preparation bridge assets
 - key item catalog and reference assets
 - post-ingest world refinement for safe duplicate/name/type cleanup
+- Phase 12 character sheet generation and approval
+- Phase 13 environment reference generation and approval
