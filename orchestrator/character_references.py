@@ -107,7 +107,10 @@ def run_character_reference_generation(project_slug: str, *, limit: int | None =
             continue
         if selected_variants and variant not in selected_variants:
             continue
-        if str(entry.get("status", "")).strip().lower() in {"blocked", "approved", "locked"}:
+        status = str(entry.get("status", "")).strip().lower()
+        if status in {"approved", "locked"}:
+            continue
+        if status == "blocked" and not test_slice:
             continue
         if entry.get("warnings") and not test_slice:
             continue
