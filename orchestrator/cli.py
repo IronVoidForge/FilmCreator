@@ -9,6 +9,7 @@ from .character_references import (
     lock_character_reference_candidate,
     register_character_reference_candidate,
     reject_character_reference_candidate,
+    run_character_reference_generation,
     run_character_reference_planning,
 )
 from .descriptor_enrichment import clear_descriptor_artifacts, run_descriptor_enrichment
@@ -21,6 +22,7 @@ from .environment_references import (
     lock_environment_reference_candidate,
     register_environment_reference_candidate,
     reject_environment_reference_candidate,
+    run_environment_reference_generation,
     run_environment_reference_planning,
 )
 from .identity_refinement import run_identity_refinement
@@ -76,26 +78,25 @@ def build_parser() -> argparse.ArgumentParser:
     pp.add_argument("project_slug")
     pp.add_argument("--force", action="store_true")
     pp.add_argument("--limit", type=int, default=None)
-    pp.add_argument(
-        "--entity-type",
-        action="append",
-        choices=["character", "environment", "scene", "shot"],
-        dest="entity_types",
-    )
+    pp.add_argument("--entity-type", action="append", choices=["character", "environment", "scene", "shot"], dest="entity_types")
     pp.add_argument("--entity-id", action="append", dest="entity_ids")
     pp.add_argument("--chapters", type=str, default=None)
-    pp.add_argument(
-        "--shot-variant",
-        action="append",
-        choices=["primary_keyframe", "alternate_angle", "consistency_repair"],
-        dest="shot_variants",
-    )
+    pp.add_argument("--shot-variant", action="append", choices=["primary_keyframe", "alternate_angle", "consistency_repair"], dest="shot_variants")
 
     crp = subparsers.add_parser("plan-character-references")
     crp.add_argument("project_slug")
     crp.add_argument("--force", action="store_true")
     crp.add_argument("--limit", type=int, default=None)
     crp.add_argument("--variant", action="append", dest="variants")
+
+    crg = subparsers.add_parser("generate-character-references")
+    crg.add_argument("project_slug")
+    crg.add_argument("--limit", type=int, default=None)
+    crg.add_argument("--variant", action="append", dest="variants")
+    crg.add_argument("--character-id", action="append", dest="character_ids")
+    crg.add_argument("--execute", action="store_true")
+    crg.add_argument("--seed", type=int, default=None)
+    crg.add_argument("--workflow-id", type=str, default=None)
 
     crc = subparsers.add_parser("register-character-reference-candidate")
     crc.add_argument("project_slug")
@@ -122,6 +123,15 @@ def build_parser() -> argparse.ArgumentParser:
     erp.add_argument("--limit", type=int, default=None)
     erp.add_argument("--variant", action="append", dest="variants")
 
+    erg = subparsers.add_parser("generate-environment-references")
+    erg.add_argument("project_slug")
+    erg.add_argument("--limit", type=int, default=None)
+    erg.add_argument("--variant", action="append", dest="variants")
+    erg.add_argument("--environment-id", action="append", dest="environment_ids")
+    erg.add_argument("--execute", action="store_true")
+    erg.add_argument("--seed", type=int, default=None)
+    erg.add_argument("--workflow-id", type=str, default=None)
+
     erc = subparsers.add_parser("register-environment-reference-candidate")
     erc.add_argument("project_slug")
     erc.add_argument("--environment-id", required=True)
@@ -146,37 +156,13 @@ def build_parser() -> argparse.ArgumentParser:
     de.add_argument("--no-llm", action="store_true")
     de.add_argument("--force", action="store_true")
     de.add_argument("--limit", type=int, default=None)
-    de.add_argument(
-        "--entity-type",
-        action="append",
-        choices=["character", "environment", "scene", "shot", "key_item"],
-        dest="entity_types",
-    )
+    de.add_argument("--entity-type", action="append", choices=["character", "environment", "scene", "shot", "key_item"], dest="entity_types")
     de.add_argument("--entity-id", action="append", dest="entity_ids")
     de.add_argument("--chapters", type=str, default=None)
 
     qg = subparsers.add_parser("grade-artifacts")
     qg.add_argument("project_slug")
-    qg.add_argument(
-        "--family",
-        action="append",
-        choices=[
-            "character",
-            "environment",
-            "scene",
-            "shot",
-            "dialogue",
-            "descriptor",
-            "prompt",
-            "character_bible",
-            "environment_bible",
-            "scene_contract",
-            "shot_package",
-            "dialogue_timeline",
-            "prompt_package",
-        ],
-        dest="families",
-    )
+    qg.add_argument("--family", action="append", choices=["character", "environment", "scene", "shot", "dialogue", "descriptor", "prompt", "character_bible", "environment_bible", "scene_contract", "shot_package", "dialogue_timeline", "prompt_package"], dest="families")
 
     rr = subparsers.add_parser("rerun-quality-artifacts")
     rr.add_argument("project_slug")
@@ -194,27 +180,11 @@ def build_parser() -> argparse.ArgumentParser:
     dp = subparsers.add_parser("run-downstream-pipeline")
     dp.add_argument("project_slug")
     dp.add_argument("--chapters", type=str, default=None)
-    dp.add_argument(
-        "--start-phase",
-        choices=[
-            "scene_contracts",
-            "scene_bindings",
-            "shot_packages",
-            "dialogue_timeline",
-            "descriptor_enrichment",
-            "prompt_preparation",
-        ],
-        default="scene_contracts",
-    )
+    dp.add_argument("--start-phase", choices=["scene_contracts", "scene_bindings", "shot_packages", "dialogue_timeline", "descriptor_enrichment", "prompt_preparation"], default="scene_contracts")
     dp.add_argument("--pipeline-key", type=str, default="downstream_pipeline")
     dp.add_argument("--no-resume", action="store_true")
     dp.add_argument("--no-llm", action="store_true")
-    dp.add_argument(
-        "--shot-variant",
-        action="append",
-        choices=["primary_keyframe", "alternate_angle", "consistency_repair"],
-        dest="shot_variants",
-    )
+    dp.add_argument("--shot-variant", action="append", choices=["primary_keyframe", "alternate_angle", "consistency_repair"], dest="shot_variants")
 
     ds = subparsers.add_parser("summarize-downstream-run")
     ds.add_argument("project_slug")
@@ -229,79 +199,63 @@ def main() -> None:
 
     if args.command == "synthesize-character-bibles":
         summary = run_character_bible_synthesis(args.project_slug, use_llm=not args.no_llm, force=args.force)
-        print(json.dumps(summary.to_dict(), indent=2))
     elif args.command == "synthesize-environment-bibles":
         summary = run_environment_bible_synthesis(args.project_slug, use_llm=not args.no_llm, force=args.force)
-        print(json.dumps(summary.to_dict(), indent=2))
     elif args.command == "synthesize-scene-contracts":
         summary = run_scene_contract_synthesis(args.project_slug, use_llm=not args.no_llm, force=args.force, chapters=args.chapters)
-        print(json.dumps(summary.to_dict(), indent=2))
     elif args.command == "synthesize-scene-bindings":
         summary = run_scene_binding_synthesis(args.project_slug, force=args.force, chapters=args.chapters)
-        print(json.dumps(summary.to_dict(), indent=2))
     elif args.command == "synthesize-shot-packages":
         summary = run_shot_planning(args.project_slug, use_llm=not args.no_llm, force=args.force, chapters=args.chapters)
-        print(json.dumps(summary.to_dict(), indent=2))
     elif args.command == "synthesize-dialogue-timeline":
         summary = run_dialogue_timeline(args.project_slug, force=args.force, chapters=args.chapters)
-        print(json.dumps(summary.to_dict(), indent=2))
     elif args.command == "synthesize-dialogue-enrichment":
         summary = run_dialogue_enrichment(args.project_slug, force=args.force)
-        print(json.dumps(summary.to_dict(), indent=2))
     elif args.command == "synthesize-prompt-preparation":
         summary = run_prompt_preparation(args.project_slug, force=args.force, limit=args.limit, entity_types=args.entity_types, entity_ids=args.entity_ids, chapters=args.chapters, shot_variants=args.shot_variants)
-        print(json.dumps(summary.to_dict(), indent=2))
     elif args.command == "plan-character-references":
         summary = run_character_reference_planning(args.project_slug, force=args.force, variants=args.variants, limit=args.limit)
-        print(json.dumps(summary.to_dict(), indent=2))
+    elif args.command == "generate-character-references":
+        summary = run_character_reference_generation(args.project_slug, limit=args.limit, variants=args.variants, character_ids=args.character_ids, execute=args.execute, seed=args.seed, workflow_id=args.workflow_id)
     elif args.command == "register-character-reference-candidate":
         summary = register_character_reference_candidate(args.project_slug, character_id=args.character_id, variant=args.variant, image_path=args.image_path)
-        print(json.dumps(summary.to_dict(), indent=2))
     elif args.command == "approve-character-reference":
         summary = approve_character_reference_candidate(args.project_slug, candidate_id=args.candidate_id)
-        print(json.dumps(summary.to_dict(), indent=2))
     elif args.command == "reject-character-reference":
         summary = reject_character_reference_candidate(args.project_slug, candidate_id=args.candidate_id, reason=args.reason)
-        print(json.dumps(summary.to_dict(), indent=2))
     elif args.command == "lock-character-reference":
         summary = lock_character_reference_candidate(args.project_slug, candidate_id=args.candidate_id)
-        print(json.dumps(summary.to_dict(), indent=2))
     elif args.command == "plan-environment-references":
         summary = run_environment_reference_planning(args.project_slug, force=args.force, variants=args.variants, limit=args.limit)
-        print(json.dumps(summary.to_dict(), indent=2))
+    elif args.command == "generate-environment-references":
+        summary = run_environment_reference_generation(args.project_slug, limit=args.limit, variants=args.variants, environment_ids=args.environment_ids, execute=args.execute, seed=args.seed, workflow_id=args.workflow_id)
     elif args.command == "register-environment-reference-candidate":
         summary = register_environment_reference_candidate(args.project_slug, environment_id=args.environment_id, variant=args.variant, image_path=args.image_path)
-        print(json.dumps(summary.to_dict(), indent=2))
     elif args.command == "approve-environment-reference":
         summary = approve_environment_reference_candidate(args.project_slug, candidate_id=args.candidate_id)
-        print(json.dumps(summary.to_dict(), indent=2))
     elif args.command == "reject-environment-reference":
         summary = reject_environment_reference_candidate(args.project_slug, candidate_id=args.candidate_id, reason=args.reason)
-        print(json.dumps(summary.to_dict(), indent=2))
     elif args.command == "lock-environment-reference":
         summary = lock_environment_reference_candidate(args.project_slug, candidate_id=args.candidate_id)
-        print(json.dumps(summary.to_dict(), indent=2))
     elif args.command == "synthesize-descriptor-enrichment":
         summary = run_descriptor_enrichment(args.project_slug, use_llm=not args.no_llm, force=args.force, limit=args.limit, entity_types=args.entity_types, entity_ids=args.entity_ids, chapters=args.chapters)
-        print(json.dumps(summary.to_dict(), indent=2))
     elif args.command == "clear-descriptor-artifacts":
         summary = clear_descriptor_artifacts(args.project_slug, include_prompt_packages=not args.keep_prompts)
-        print(json.dumps(summary.to_dict(), indent=2))
     elif args.command == "grade-artifacts":
         summary = run_quality_grading(args.project_slug, families=args.families)
-        print(json.dumps(summary.to_dict(), indent=2))
     elif args.command == "rerun-quality-artifacts":
         summary = run_selective_reruns(args.project_slug, execute=args.execute)
-        print(json.dumps(summary.to_dict(), indent=2))
     elif args.command == "refine-identities":
-        result = run_identity_refinement(args.project_slug, use_llm=not args.no_llm, apply_merge=args.apply)
-        print(json.dumps(result.to_dict(), indent=2))
+        summary = run_identity_refinement(args.project_slug, use_llm=not args.no_llm, apply_merge=args.apply)
     elif args.command == "run-downstream-pipeline":
         summary = run_downstream_pipeline(args.project_slug, chapters=args.chapters, start_phase=args.start_phase, pipeline_key=args.pipeline_key, resume=not args.no_resume, use_llm=not args.no_llm, shot_variants=args.shot_variants)
-        print(json.dumps(summary.to_dict(), indent=2))
     elif args.command == "summarize-downstream-run":
         summary = summarize_downstream_run(args.project_slug, pipeline_key=args.pipeline_key)
-        print(json.dumps(summary.to_dict(), indent=2))
+    else:
+        parser.error(f"Unknown command: {args.command}")
+        return
+
+    print(json.dumps(summary.to_dict(), indent=2))
 
 
 if __name__ == "__main__":
