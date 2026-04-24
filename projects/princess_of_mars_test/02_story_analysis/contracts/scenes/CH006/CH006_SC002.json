@@ -1,0 +1,352 @@
+{
+  "scene_id": "CH006_SC002",
+  "chapter_id": "CH006",
+  "scene_title": "SC002",
+  "purpose": "To showcase the protagonist's combat prowess using Earthly tactics and resolve.",
+  "summary": "Seeing his guardian losing, the protagonist kills the first ape with a cudgel. The mate returns in a rage; rather than fleeing, the protagonist uses precise strikes to the chin and stomach to incapacitate and ultimately kill the second ape.",
+  "emotional_arc": "Panic $\\rightarrow$ Resolve $\\rightarrow$ Adrenaline-fueled triumph.",
+  "production_intent": "Demonstrate the protagonist's transition from panic to tactical resolve through high-stakes combat against primate aggressors. The sequence must emphasize Earthly fighting techniques and precise physical impact over brute force.",
+  "scene_short_description": "An Earthman uses a cudgel to defend a wounded guardian against aggressive apes in a Martian chamber.",
+  "scene_primary_scale_story_point": "Human tactical precision vs. Primate brute strength.",
+  "scene_required_anchor_catalog": [
+    "cudgel",
+    "watch_thing (wounded)"
+  ],
+  "scene_start_state": "protagonist watching watch_thing lose combat to the first ape.",
+  "scene_end_state": "protagonist standing over the dead second ape, adrenaline-fueled.",
+  "dominant_action_line": "Protagonist kills first ape with cudgel, then uses precise strikes to kill the mate.",
+  "scene_spatial_layout": [
+    "martian_interior_chamber floor space",
+    "proximity between combatants and wounded watch_thing"
+  ],
+  "character_spatial_map": [
+    "protagonist near watch_thing",
+    "The Mate (Bull Ape) charging from chamber entrance",
+    "first ape positioned between protagonist and watch_thing"
+  ],
+  "environment_subzones": [
+    "martian_interior_chamber central floor",
+    "martian_interior_chamber perimeter"
+  ],
+  "entry_vectors": [
+    "The Mate (Bull Ape) enters via chamber doorway"
+  ],
+  "exit_vectors": [
+    "Subjects exit or hand off toward the next story beat."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Kill of first ape / Arrival of mate",
+    "BT002 -> BT003: Combat engagement / Final incapacitation"
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH006/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    },
+    {
+      "label": "The Watch-thing (wounded/dying)",
+      "canonical_id": "watch_thing",
+      "display_name": "watch_thing",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH006/watch_thing.md",
+      "notes": "Direct registry match for 'watch_thing'."
+    },
+    {
+      "label": "The Mate (Bull Ape)",
+      "canonical_id": null,
+      "display_name": "The Mate (Bull Ape)",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 10,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Interior chamber",
+      "canonical_id": "martian_interior_chamber",
+      "display_name": "martian_interior_chamber",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 104,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH006/martian_interior_chamber.md",
+      "notes": "Chapter-local environment alias match for 'Interior chamber' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Direction of cudgel swings",
+    "Blood splatter patterns",
+    "Protagonist physical exhaustion levels"
+  ],
+  "visual_coverage_families": [
+    "Medium shots of tactical movements",
+    "Impact shots (chin/stomach strikes)",
+    "Close-ups on facial determination"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Protagonist kills first ape with cudgel",
+      "purpose": "",
+      "action_start": "protagonist sees watch_thing losing",
+      "action_end": "first ape is dead",
+      "active_subjects": [
+        "protagonist",
+        "first ape"
+      ],
+      "passive_subjects": [
+        "watch_thing"
+      ],
+      "spatial_context": "martian_interior_chamber central floor",
+      "blocking_hint": "protagonist moves from guardian to aggressor",
+      "environment_subzone": "martian_interior_chamber central floor",
+      "continuity_focus": "cudgel swing direction and blood splatter",
+      "coverage_hint": "medium shots of movement",
+      "coverage_priority": "high",
+      "handoff_to_next": "The Mate (Bull Ape) enters in rage"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Mate (Bull Ape) returns in a rage",
+      "purpose": "",
+      "action_start": "mate enters chamber",
+      "action_end": "protagonist prepares for combat",
+      "active_subjects": [
+        "The Mate (Bull Ape)",
+        "protagonist"
+      ],
+      "passive_subjects": [
+        "watch_thing"
+      ],
+      "spatial_context": "martian_interior_chamber central floor",
+      "blocking_hint": "mate charges toward protagonist",
+      "environment_subzone": "martian_interior_chamber central floor",
+      "continuity_focus": "protagonist's level of panic/resolve",
+      "coverage_hint": "medium shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "Protagonist engages mate"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Protagonist uses precise strikes to kill the second ape",
+      "purpose": "",
+      "action_start": "mate charges",
+      "action_end": "second ape is dead",
+      "active_subjects": [
+        "protagonist",
+        "The Mate (Bull Ape)"
+      ],
+      "passive_subjects": [
+        "watch_thing"
+      ],
+      "spatial_context": "martian_interior_chamber central floor",
+      "blocking_hint": "protagonist uses chin and stomach strikes",
+      "environment_subzone": "martian_interior_chamber central floor",
+      "continuity_focus": "physical exhaustion levels and strike precision",
+      "coverage_hint": "impact shots and facial close-ups",
+      "coverage_priority": "high",
+      "handoff_to_next": "scene end"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish stakes",
+      "planned_shot_moment_summary": "protagonist sees watch_thing losing",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "watch_thing",
+        "first ape"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "martian_interior_chamber central floor",
+      "planned_shot_required_anchor_1": "watch_thing",
+      "planned_shot_scale_proof_detail": "watch_thing wounded state",
+      "start_state_seed": "protagonist in panic",
+      "end_state_seed": "protagonist gripping cudgel",
+      "action_seed": "protagonist lunges at first ape",
+      "blocking_seed": [
+        "protagonist moves from watch_thing toward first ape"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show impact",
+      "planned_shot_moment_summary": "cudgel strike to first ape",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "first ape"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "martian_interior_chamber central floor",
+      "planned_shot_required_anchor_1": "cudgel",
+      "planned_shot_scale_proof_detail": "blood splatter pattern",
+      "start_state_seed": "swinging cudgel",
+      "end_state_seed": "first ape falls",
+      "action_seed": "heavy strike to first ape",
+      "blocking_seed": [
+        "protagonist swings through the target"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "show tactical precision",
+      "planned_shot_moment_summary": "strike to chin and stomach",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "The Mate (Bull Ape)"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "martian_interior_chamber central floor",
+      "planned_shot_required_anchor_1": "The Mate (Bull Ape)",
+      "planned_shot_scale_proof_detail": "precise strike contact",
+      "start_state_seed": "mate charging",
+      "end_state_seed": "mate incapacitated",
+      "action_seed": "rapid strikes to chin and stomach",
+      "blocking_seed": [
+        "protagonist pivots to meet charge"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "track",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve The Mate (Bull Ape) -> The Mate (Bull Ape)"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH006",
+      "scene_id": "CH006_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH006",
+      "scene_id": "CH006_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH006",
+      "scene_id": "CH006_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH006",
+      "scene_id": "CH006_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH006",
+      "scene_id": "CH006_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH006",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH006_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH006",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH006_chapter_vi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH016",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH016_chapter_xvi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH006",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH006_SC002] Purpose: To showcase the protagonist's combat prowess using Earthly tactics and resolve.",
+    "[CH006_SC002] Summary: Seeing his guardian losing, the protagonist kills the first ape with a cudgel. The mate returns in a rage; rather than fleeing, the protagonist uses precise strikes to the chin and stomach to incapacitate and ultimately kill the secon...",
+    "[CH006_SC002] Emotional arc: Panic $\\rightarrow$ Resolve $\\rightarrow$ Adrenaline-fueled triumph.",
+    "[CH006_SC002] Coverage: Medium shots of the protagonist's tactical movements. Impact shots (the strike to the chin/stomach). Close-ups on the protagonist's face showing determination over fear.",
+    "[CH006_SC002] Continuity: The direction of the cudgel swings; blood splatter patterns; the physical exhaustion levels of the protagonist.",
+    "[CH006] Chapter summary: **Setting:** An interior chamber within a building in a Martian city, leading out to a plaza. **Characters:** - **The Protagonist:** An Earthman fighting for survival. - **The Watch-thing:** A multi-legged, loyal, and...",
+    "[CH006] CHAPTER VI (book index hit)",
+    "[CH010] CHAPTER X (book index hit)",
+    "[CH016] CHAPTER XVI (book index hit)",
+    "Character protagonist: protagonist"
+  ],
+  "storyboard_markdown": "# Scene Contract: CH006_SC002\n\n## Production Intent\nDemonstrate the protagonist's transition from panic to tactical resolve through high-stakes combat against primate aggressors. The sequence must emphasize Earthly fighting techniques and precise physical impact over brute force.\n\n## Required Cast\n- protagonist\n- watch_thing\n- The Mate (Bull Ape)\n\n## Required Environments\n- martian_interior_chamber\n\n## Continuity Constraints\n- Direction of cudgel swings\n- Blood splatter patterns\n- Protagonist physical exhaustion levels\n\n## Beat List\n- BT001: Protagonist kills first ape with cudgel\n- BT002: The Mate (Bull Ape) returns in a rage\n- BT003: Protagonist uses precise strikes to kill the second ape",
+  "metadata": {
+    "artifact_id": "CH006_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "67f039453b2ea1aaf0ee8a874f3a342216a8cf1e",
+    "created_at_utc": "2026-04-24T00:41:59.101243+00:00",
+    "updated_at_utc": "2026-04-24T00:41:59.101243+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH006_SC002",
+        "version": "724efed77c112fe1d6582f460f09a9b737d5794a"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH006_SC002",
+        "version": "0cb7528ddf0a6f23f6d10a1eaa7b212d9ea6cc52"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH006_SC002",
+        "version": "0b31b9b9b132e5acbc0e9a6b29d03058483e49cd"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-24T00:42:42.300240+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "67f039453b2ea1aaf0ee8a874f3a342216a8cf1e"
+      }
+    ]
+  }
+}

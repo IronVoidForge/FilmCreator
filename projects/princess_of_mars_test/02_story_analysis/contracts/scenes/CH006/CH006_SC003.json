@@ -1,0 +1,354 @@
+{
+  "scene_id": "CH006_SC003",
+  "chapter_id": "CH006",
+  "scene_title": "SC003",
+  "purpose": "To transition from combat to social consequence and character introduction (Tars Tarkas/Sola).",
+  "summary": "Martian warriors, including Tars Tarkas, arrive to witness the aftermath. They applaud his strength. Sola approaches with genuine concern for his well-being, providing a soft emotional counterpoint to the warriors' laughter.",
+  "emotional_arc": "Combat adrenaline $\\rightarrow$ Social validation $\\rightarrow$ Vulnerability/Empathy.",
+  "production_intent": "Establish the social hierarchy and emotional aftermath of combat by transitioning from high-adrenaline violence to communal validation and individual empathy. The scene must contrast the loud, collective approval of the martian_warriors with the quiet, intimate concern shown by sola toward the protagonist.",
+  "scene_short_description": "Martian warriors arrive at a threshold to witness a combat aftermath amidst dead apes.",
+  "scene_primary_scale_story_point": "tars_tarkas presence dominates the martian_warriors through scale and low-angle positioning.",
+  "scene_required_anchor_catalog": [
+    "dead apes",
+    "martian_interior_chamber threshold"
+  ],
+  "scene_start_state": "protagonist stands amidst combat debris and dead apes, breathing heavily from adrenaline.",
+  "scene_end_state": "sola approaches protagonist in a quiet moment of empathy while warriors applaud.",
+  "dominant_action_line": "Warriors arrive to applaud the victory; sola breaks the tension with personal concern.",
+  "scene_spatial_layout": [
+    "martian_interior_chamber opens toward a plaza threshold",
+    "dead apes clustered near the center of the action"
+  ],
+  "character_spatial_map": [
+    "protagonist centered near dead apes",
+    "tars_tarkas and martian_warriors entering from plaza threshold",
+    "sola approaching protagonist from side/periphery"
+  ],
+  "environment_subzones": [
+    "martian_interior_chamber combat zone",
+    "plaza threshold entry point"
+  ],
+  "entry_vectors": [
+    "martian_warriors via plaza threshold"
+  ],
+  "exit_vectors": [
+    "martian_warriors via plaza threshold"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: warriors enter and applaud",
+    "BT002 -> BT003: sola breaks from the group to approach protagonist"
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH006/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    },
+    {
+      "label": "Tars Tarkas",
+      "canonical_id": "tars_tarkas",
+      "display_name": "tars_tarkas",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH006/tars_tarkas.md",
+      "notes": "Direct registry match for 'tars_tarkas'."
+    },
+    {
+      "label": "Sola",
+      "canonical_id": "sola",
+      "display_name": "sola",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH006/sola.md",
+      "notes": "Direct registry match for 'sola'."
+    },
+    {
+      "label": "Martian Warriors",
+      "canonical_id": "martian_warriors",
+      "display_name": "martian_warriors",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH006/martian_warriors.md",
+      "notes": "Direct registry match for 'martian_warriors'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Interior chamber/Plaza threshold",
+      "canonical_id": "martian_interior_chamber",
+      "display_name": "martian_interior_chamber",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 104,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH006/martian_interior_chamber.md",
+      "notes": "Chapter-local environment alias match for 'Interior chamber/Plaza threshold' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "protagonist blood and dirt levels must match combat aftermath",
+    "proximity of dead apes to the group members"
+  ],
+  "visual_coverage_families": [
+    "Reaction shots of martian_warriors",
+    "Medium two-shots between sola and protagonist",
+    "Low-angle shots of tars_tarkas"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Arrival of the Martian warriors",
+      "purpose": "",
+      "action_start": "warriors appear at threshold",
+      "action_end": "warriors occupy the chamber space",
+      "active_subjects": [
+        "tars_tarkas",
+        "martian_warriors"
+      ],
+      "passive_subjects": [
+        "protagonist"
+      ],
+      "spatial_context": "martian_interior_chamber threshold",
+      "blocking_hint": "warriors enter from plaza towards center",
+      "environment_subzone": "plaza threshold",
+      "continuity_focus": "blood/dirt on protagonist must be visible",
+      "coverage_hint": "low-angle tars_tarkas",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Social validation through applause",
+      "purpose": "",
+      "action_start": "warriors see the aftermath",
+      "action_end": "laughter and applause peak",
+      "active_subjects": [
+        "martian_warriors",
+        "tars_tarkas"
+      ],
+      "passive_subjects": [
+        "protagonist"
+      ],
+      "spatial_context": "martian_interior_chamber combat zone",
+      "blocking_hint": "warriors cluster around dead apes",
+      "environment_subzone": "martian_interior_chamber combat zone",
+      "continuity_focus": "proximity of dead apes to warriors",
+      "coverage_hint": "reaction shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Sola's empathetic approach",
+      "purpose": "",
+      "action_start": "sola breaks from the laughing group",
+      "action_end": "sola reaches protagonist",
+      "active_subjects": [
+        "sola",
+        "protagonist"
+      ],
+      "passive_subjects": [
+        "martian_warriors"
+      ],
+      "spatial_context": "martian_interior_chamber combat zone",
+      "blocking_hint": "sola moves through the crowd to the center",
+      "environment_subzone": "martian_interior_chamber combat zone",
+      "continuity_focus": "protagonist blood/dirt levels",
+      "coverage_hint": "medium two-shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish presence",
+      "planned_shot_moment_summary": "tars_tarkas enters the chamber | primary=tars_tarkas",
+      "primary_subject_seed": "",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "plaza threshold",
+      "planned_shot_required_anchor_1": "plaza threshold",
+      "planned_shot_scale_proof_detail": "tars_tarkas height vs doorway",
+      "start_state_seed": "tars_tarkas silhouette at threshold",
+      "end_state_seed": "tars_tarkas fully in chamber",
+      "action_seed": "walking into view",
+      "blocking_seed": [
+        "entering from plaza"
+      ],
+      "shot_size": "full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "reaction",
+      "planned_shot_moment_summary": "warriors applaud the strength shown",
+      "primary_subject_seed": "martian_warriors",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "martian_interior_chamber combat zone",
+      "planned_shot_required_anchor_1": "dead apes",
+      "planned_shot_scale_proof_detail": "group size vs dead apes",
+      "start_state_seed": "warriors observing",
+      "end_state_seed": "warriors laughing/applauding",
+      "action_seed": "clapping and shouting",
+      "blocking_seed": [
+        "clustered near threshold"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "emotional shift",
+      "planned_shot_moment_summary": "sola approaches protagonist with concern",
+      "primary_subject_seed": "sola",
+      "secondary_subjects_seed": [
+        "protagonist"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "martian_interior_chamber combat zone",
+      "planned_shot_required_anchor_1": "dead apes",
+      "planned_shot_scale_proof_detail": "sola proximity to protagonist",
+      "start_state_seed": "sola moving toward protagonist",
+      "end_state_seed": "sola standing near protagonist",
+      "action_seed": "approaching and looking at protagonist",
+      "blocking_seed": [
+        "moving from group to protagonist"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "track",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH006",
+      "scene_id": "CH006_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH006",
+      "scene_id": "CH006_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH006",
+      "scene_id": "CH006_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH006",
+      "scene_id": "CH006_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH006",
+      "scene_id": "CH006_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH006",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH006_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH004_chapter_iv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH006",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH006_chapter_vi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH007_chapter_vii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH006",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH006_SC003] Purpose: To transition from combat to social consequence and character introduction (Tars Tarkas/Sola).",
+    "[CH006_SC003] Summary: Martian warriors, including Tars Tarkas, arrive to witness the aftermath. They applaud his strength. Sola approaches with genuine concern for his well-being, providing a soft emotional counterpoint to the warriors' laughter.",
+    "[CH006_SC003] Emotional arc: Combat adrenaline $\\rightarrow$ Social validation $\\rightarrow$ Vulnerability/Empathy.",
+    "[CH006_SC003] Coverage: Reaction shots of the Martian warriors. Medium two-shots between Sola and the Protagonist. Low-angle shots of Tars Tarkas to establish presence.",
+    "[CH006_SC003] Continuity: The level of dirt/blood on the protagonist; the proximity of the dead apes to the group.",
+    "[CH006] Chapter summary: **Setting:** An interior chamber within a building in a Martian city, leading out to a plaza. **Characters:** - **The Protagonist:** An Earthman fighting for survival. - **The Watch-thing:** A multi-legged, loyal, and...",
+    "[CH004] CHAPTER IV (book index hit)",
+    "[CH006] CHAPTER VI (book index hit)",
+    "[CH007] CHAPTER VII (book index hit)",
+    "Character protagonist: protagonist"
+  ],
+  "storyboard_markdown": "# Scene Contract: CH006_SC003\n\n## Production Intent\nEstablish the social hierarchy and emotional aftermath of combat by transitioning from high-adrenaline violence to communal validation and individual empathy. The scene must contrast the loud, collective approval of the martian_warriors with the quiet, intimate concern shown by sola toward the protagonist.\n\n## Required Cast\n- protagonist\n- tars_tarkas\n- sola\n- martian_warriors\n\n## Required Environments\n- martian_interior_chamber\n\n## Continuity Constraints\n- protagonist blood and dirt levels must match combat aftermath\n- proximity of dead apes to the group members\n\n## Beat List\n- BT001: Arrival of the Martian warriors\n- BT002: Social validation through applause\n- BT003: Sola's empathetic approach",
+  "metadata": {
+    "artifact_id": "CH006_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "76d6765c78a805582e32383af1ac35d213ec9e5d",
+    "created_at_utc": "2026-04-24T00:42:42.360253+00:00",
+    "updated_at_utc": "2026-04-24T00:42:42.360253+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH006_SC003",
+        "version": "c31cf71fd74fd02c72d226f8ecab0cc23eb53eda"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH006_SC003",
+        "version": "244bfb12ab41abf10b4b76a356bd32bc969b4a04"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH006_SC003",
+        "version": "a2577db7724858da71224f04faa083530619ec22"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-24T00:43:26.268502+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "76d6765c78a805582e32383af1ac35d213ec9e5d"
+      }
+    ]
+  }
+}

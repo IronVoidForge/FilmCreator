@@ -1,0 +1,3795 @@
+[
+  {
+    "scene_id": "CH001_SC001",
+    "chapter_id": "CH001",
+    "scene_title": "SC001",
+    "purpose": "Establish the framing device and the protagonist's unique condition.",
+    "summary": "An elderly John Carter introduces himself to the reader/audience, explaining his anomalous aging process and his decision to document his life story before he finally dies.",
+    "emotional_arc": "Introspection / Solemnity.",
+    "production_intent": "Establish the narrative framing device by introducing an elderly protagonist who is documenting his life history. The scene must convey a sense of urgency regarding his mortality and the anomalous nature of his aging process through intimate, reflective visual language.",
+    "scene_short_description": "An elderly man sits in a reflective space, addressing the audience about his life.",
+    "scene_primary_scale_story_point": "Intimate character study within a narrative framing space.",
+    "scene_required_anchor_catalog": [
+      "Seated chair/position",
+      "Subject's weathered skin/eyes"
+    ],
+    "scene_start_state": "john_carter is seated, prepared to speak.",
+    "scene_end_state": "john_carter concludes his introduction, establishing the intent to document his life.",
+    "dominant_action_line": "Direct address by john_carter regarding his anomalous aging and impending death.",
+    "scene_spatial_layout": [
+      "Seated subject centered or slightly off-center in a controlled framing space",
+      "Shallow depth of field to isolate subject from background"
+    ],
+    "character_spatial_map": [
+      "john_carter seated in center frame"
+    ],
+    "environment_subzones": [
+      "primary scene playing area"
+    ],
+    "entry_vectors": [
+      "Subjects inherit entry logic from the prior scene or chapter transition."
+    ],
+    "exit_vectors": [
+      "Subjects exit or hand off toward the next story beat."
+    ],
+    "beat_transition_map": [
+      "BT001 -> BT002: Visual shift from macro texture to subject identity",
+      "BT002 -> BT003: Shift from physical presence to verbal exposition"
+    ],
+    "characters_required": [
+      {
+        "label": "John Carter (Elderly)",
+        "canonical_id": "john_carter",
+        "display_name": "john_carter",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+        "notes": "Direct registry match for 'john_carter'."
+      }
+    ],
+    "environments_required": [
+      {
+        "label": "Unspecified (Narrative framing space)",
+        "canonical_id": null,
+        "display_name": "Unspecified (Narrative framing space)",
+        "status": "review",
+        "entity_kind": "environment",
+        "resolution_score": 8,
+        "source_path": "",
+        "notes": "Low-confidence environment match requires review."
+      }
+    ],
+    "continuity_constraints": [
+      "Consistent elderly physical appearance for john_carter",
+      "Stable vocal tone and delivery rhythm"
+    ],
+    "visual_coverage_families": [
+      "Extreme close-ups of eyes and weathered skin textures",
+      "Medium shots of seated elderly subject",
+      "Soft lighting emphasizing memory and reflection"
+    ],
+    "beat_list": [
+      {
+        "beat_id": "BT001",
+        "summary": "Visual introduction of anomalous aging via texture",
+        "purpose": "",
+        "action_start": "static macro view",
+        "action_end": "eye movement",
+        "active_subjects": [
+          "john_carter"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "Narrative framing space",
+        "blocking_hint": "subject is stationary",
+        "environment_subzone": "Narrative framing space",
+        "continuity_focus": "skin texture/age consistency",
+        "coverage_hint": "extreme close-up",
+        "coverage_priority": "high",
+        "handoff_to_next": "BT002"
+      },
+      {
+        "beat_id": "BT002",
+        "summary": "Identification of the subject",
+        "purpose": "",
+        "action_start": "camera pulls back to medium shot",
+        "action_end": "subject prepares to speak",
+        "active_subjects": [
+          "john_carter"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "Narrative framing space",
+        "blocking_hint": "seated in chair",
+        "environment_subzone": "Narrative framing space",
+        "continuity_focus": "clothing/posture",
+        "coverage_hint": "medium shot",
+        "coverage_priority": "medium",
+        "handoff_to_next": "BT003"
+      },
+      {
+        "beat_id": "BT003",
+        "summary": "Explanation of purpose and mortality",
+        "purpose": "",
+        "action_start": "subject begins speaking",
+        "action_end": "subject finishes introduction",
+        "active_subjects": [
+          "john_carter"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "Narrative framing space",
+        "blocking_hint": "seated, facing camera",
+        "environment_subzone": "Narrative framing space",
+        "continuity_focus": "vocal tone/delivery",
+        "coverage_hint": "close-up",
+        "coverage_priority": "high",
+        "handoff_to_next": "End of scene"
+      }
+    ],
+    "planned_shots": [
+      {
+        "planned_shot_id": "SH001",
+        "beat_id": "BT001",
+        "narrative_function": "establish_condition",
+        "planned_shot_moment_summary": "extreme close up of weathered skin and eyes",
+        "primary_subject_seed": "john_carter",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "in_scene_speaker",
+        "environment_subzone": "Narrative framing space",
+        "planned_shot_required_anchor_1": "eyes",
+        "planned_shot_scale_proof_detail": "macro texture detail",
+        "start_state_seed": "static eye contact",
+        "end_state_seed": "eye movement",
+        "action_seed": "subject blinks or shifts gaze",
+        "blocking_seed": [
+          "seated still"
+        ],
+        "shot_size": "extreme_close_up",
+        "camera_angle": "eye_level",
+        "lens_family": "telephoto",
+        "camera_motion": "locked_off",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "soft_even",
+        "primary_subject_angle": "front"
+      },
+      {
+        "planned_shot_id": "SH002",
+        "beat_id": "BT002",
+        "narrative_function": "establish_identity",
+        "planned_shot_moment_summary": "medium shot of seated elderly man",
+        "primary_subject_seed": "john_carter",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "in_scene_speaker",
+        "environment_subzone": "Narrative framing space",
+        "planned_shot_required_anchor_1": "seated position",
+        "planned_shot_scale_proof_detail": "subject height relative to chair",
+        "start_state_seed": "subject looking at camera",
+        "end_state_seed": "subject begins speaking",
+        "action_seed": "subject settles into seated posture",
+        "blocking_seed": [
+          "seated center frame"
+        ],
+        "shot_size": "medium",
+        "camera_angle": "eye_level",
+        "lens_family": "normal",
+        "camera_motion": "push_in",
+        "zoom_behavior": "subtle_in",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "soft_even",
+        "primary_subject_angle": "front_three_quarter_right"
+      },
+      {
+        "planned_shot_id": "SH003",
+        "beat_id": "BT003",
+        "narrative_function": "narrative_exposition",
+        "planned_shot_moment_summary": "close up of face during explanation",
+        "primary_subject_seed": "john_carter",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "in_scene_speaker",
+        "environment_subzone": "Narrative framing space",
+        "planned_shot_required_anchor_1": "face",
+        "planned_shot_scale_proof_detail": "facial expression detail",
+        "start_state_seed": "speaking about aging",
+        "end_state_seed": "concluding thought",
+        "action_seed": "verbal delivery of life story intent",
+        "blocking_seed": [
+          "seated still"
+        ],
+        "shot_size": "close_up",
+        "camera_angle": "eye_level",
+        "lens_family": "portrait",
+        "camera_motion": "locked_off",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "soft_even",
+        "primary_subject_angle": "front"
+      }
+    ],
+    "unresolved_questions": [
+      "Resolve Unspecified (Narrative framing space) -> Unspecified (Narrative framing space)"
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC001"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH025",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH025_chapter_xxv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH003",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH003_chapter_iii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "john_carter"
+      }
+    ],
+    "evidence_summary": [
+      "[CH001_SC001] Purpose: Establish the framing device and the protagonist's unique condition.",
+      "[CH001_SC001] Summary: An elderly John Carter introduces himself to the reader/audience, explaining his anomalous aging process and his decision to document his life story before he finally dies.",
+      "[CH001_SC001] Emotional arc: Introspection / Solemnity.",
+      "[CH001_SC001] Coverage: Extreme close-ups of eyes/weathered skin, medium shots of the elderly Carter in a seated position, soft lighting to suggest memory or reflection.",
+      "[CH001_SC001] Continuity: Age of Carter (must remain consistent with \"elderly\" description), tone of voice/delivery.",
+      "[CH001] Chapter summary: **Setting:** The Arizona hills and mountains; specifically a remote gold-bearing quartz vein, a high plateau with an Apache camp, and a large, ancient cave located on a narrow trail near a cliffside. **Characters:** *...",
+      "[CH011] CHAPTER XI (book index hit)",
+      "[CH025] CHAPTER XXV (book index hit)",
+      "[CH003] CHAPTER III (book index hit)",
+      "Character john_carter: john_carter"
+    ],
+    "storyboard_markdown": "# Scene Contract: CH001_SC001\n\n## Production Intent\nEstablish the narrative framing device by introducing an elderly protagonist who is documenting his life history. The scene must convey a sense of urgency regarding his mortality and the anomalous nature of his aging process through intimate, reflective visual language.\n\n## Required Cast\n- john_carter (Elderly)\n\n## Required Environments\n- Narrative framing space\n\n## Continuity Constraints\n- Consistent elderly physical appearance for john_carter\n- Stable vocal tone and delivery rhythm\n\n## Beat List\n- BT001: Visual introduction of anomalous aging via texture\n- BT002: Identification of the subject\n- BT003: Explanation of purpose and mortality",
+    "metadata": {
+      "artifact_id": "CH001_SC001_SCENE_CONTRACT",
+      "artifact_type": "scene_contract",
+      "status": "generated",
+      "source_fingerprint": "4f9cdc29c5bf6ead6283422631dce74f8ef8886b",
+      "created_at_utc": "2026-04-24T00:24:29.179490+00:00",
+      "updated_at_utc": "2026-04-24T00:24:29.179490+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_breakdown",
+          "dependency_id": "CH001_SC001",
+          "version": "f533116e675a8183650532df8d43dc67114029d2"
+        },
+        {
+          "dependency_type": "character_resolutions",
+          "dependency_id": "CH001_SC001",
+          "version": "3a805fd3a3beddaeaf3ecdbce396255042222e45"
+        },
+        {
+          "dependency_type": "environment_resolutions",
+          "dependency_id": "CH001_SC001",
+          "version": "0914537545f93949f4c8d3c94355385c63a79355"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-24T00:25:07.774426+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4f9cdc29c5bf6ead6283422631dce74f8ef8886b"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH002_SC004",
+    "chapter_id": "CH002",
+    "scene_title": "SC004",
+    "purpose": "To transition the protagonist from the supernatural interior to the natural exterior.",
+    "summary": "Driven by fear of whatever is in the dark cave, the protagonist flees the cavern and emerges into the Arizona night.",
+    "emotional_arc": "From shock to frantic urgency/flight.",
+    "production_intent": "Execute a high-contrast transition from the dark, claustrophobic cave interior to the expansive, moonlit Arizona mountain landscape. The sequence must emphasize the protagonist's physical vulnerability and frantic flight through varying light levels.",
+    "scene_short_description": "A naked man flees a dark cavern into the vast, moonlit Arizona mountain night.",
+    "scene_primary_scale_story_point": "Transition from claustrophobic cave interior to massive rocky_gorge_canyon scale.",
+    "scene_required_anchor_catalog": [
+      "Cave mouth threshold",
+      "Rocky gorge edge"
+    ],
+    "scene_start_state": "Protagonist in dark, suffocating cave interior, driven by fear.",
+    "scene_end_state": "Protagonist exposed in the vast, moonlit rocky_gorge_canyon.",
+    "dominant_action_line": "Frantic flight from the darkness into the moonlight.",
+    "scene_spatial_layout": [
+      "Interior cave depth leading to a bright threshold",
+      "Exterior canyon expanse under moonlight"
+    ],
+    "character_spatial_map": [
+      "protagonist moves from deep interior toward the light",
+      "protagonist emerges onto open rocky terrain"
+    ],
+    "environment_subzones": [
+      "Cave Interior (Transitioning)",
+      "rocky_gorge_canyon"
+    ],
+    "entry_vectors": [
+      "Dark cave depths"
+    ],
+    "exit_vectors": [
+      "Moonlit canyon floor"
+    ],
+    "beat_transition_map": [
+      "BT001 -> BT002: Movement from dark interior toward light threshold",
+      "BT002 -> BT003: Emergence from shadow into moonlight"
+    ],
+    "characters_required": [
+      {
+        "label": "The Protagonist",
+        "canonical_id": "protagonist",
+        "display_name": "protagonist",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
+      }
+    ],
+    "environments_required": [
+      {
+        "label": "Cave Interior (Transitioning)",
+        "canonical_id": null,
+        "display_name": "Cave Interior (Transitioning)",
+        "status": "review",
+        "entity_kind": "environment",
+        "resolution_score": 8,
+        "source_path": "",
+        "notes": "Low-confidence environment match requires review."
+      },
+      {
+        "label": "Arizona Mountain Landscape (Night/Moonlight)",
+        "canonical_id": "rocky_gorge_canyon",
+        "display_name": "rocky_gorge_canyon",
+        "status": "canonical",
+        "entity_kind": "environment",
+        "resolution_score": 44,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/rocky_gorge_canyon.md",
+        "notes": "Chapter-local environment alias match for 'Arizona Mountain Landscape (Night/Moonlight)' (key_overlap=0, label_overlap=2, context_overlap=4)."
+      }
+    ],
+    "continuity_constraints": [
+      "Protagonist nudity and physical state across light transitions",
+      "Physical condition post-gas paralysis"
+    ],
+    "visual_coverage_families": [
+      "Tracking shots following movement",
+      "High-contrast lighting (Dark cave vs. Moonlight)",
+      "Wide shots of character emerging into vast landscape"
+    ],
+    "beat_list": [
+      {
+        "beat_id": "BT001",
+        "summary": "Protagonist flees the dark cave interior",
+        "purpose": "",
+        "action_start": "protagonist in shadow",
+        "action_end": "approaching light",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "Cave Interior (Transitioning)",
+        "blocking_hint": "scrambling toward exit",
+        "environment_subzone": "Cave Interior (Transitioning)",
+        "continuity_focus": "nudity/physical state in low light",
+        "coverage_hint": "tracking/handheld",
+        "coverage_priority": "high",
+        "handoff_to_next": "BT002"
+      },
+      {
+        "beat_id": "BT002",
+        "summary": "Crossing the threshold into moonlight",
+        "purpose": "",
+        "action_start": "shadowed movement",
+        "action_end": "full exposure",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "Cave mouth",
+        "blocking_hint": "bursting through opening",
+        "environment_subzone": "Cave Interior (Transitioning)",
+        "continuity_focus": "transition from dark to high contrast light",
+        "coverage_hint": "high-contrast tracking",
+        "coverage_priority": "medium",
+        "handoff_to_next": "BT003"
+      },
+      {
+        "beat_id": "BT003",
+        "summary": "Emergence into the vast Arizona night",
+        "purpose": "",
+        "action_start": "entering moonlight",
+        "action_end": "running through canyon",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "rocky_gorge_canyon",
+        "blocking_hint": "running across open terrain",
+        "environment_subzone": "rocky_gorge_canyon",
+        "continuity_focus": "physical state in bright moonlight",
+        "coverage_hint": "wide shot of landscape",
+        "coverage_priority": "high",
+        "handoff_to_next": "end_scene"
+      }
+    ],
+    "planned_shots": [
+      {
+        "planned_shot_id": "SH001",
+        "beat_id": "BT001",
+        "narrative_function": "establish fear",
+        "planned_shot_moment_summary": "protagonist scrambling in darkness",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "silhouette",
+        "narration_mode": "none",
+        "environment_subzone": "Cave Interior (Transitioning)",
+        "planned_shot_required_anchor_1": "cave wall",
+        "planned_shot_scale_proof_detail": "tight cave walls vs body",
+        "start_state_seed": "darkness",
+        "end_state_seed": "approaching light",
+        "action_seed": "scrambling/running",
+        "blocking_seed": [
+          "moving toward exit"
+        ],
+        "shot_size": "medium_close",
+        "camera_angle": "low_angle",
+        "lens_family": "wide",
+        "camera_motion": "handheld",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "rear_three_quarter_left"
+      },
+      {
+        "planned_shot_id": "SH002",
+        "beat_id": "BT002",
+        "narrative_function": "transition light",
+        "planned_shot_moment_summary": "protagonist crossing the cave mouth",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "Cave Interior (Transitioning)",
+        "planned_shot_required_anchor_1": "cave mouth threshold",
+        "planned_shot_scale_proof_detail": "silhouette against bright moon",
+        "start_state_seed": "shadow",
+        "end_state_seed": "bright moonlight",
+        "action_seed": "bursting through",
+        "blocking_seed": [
+          "crossing threshold"
+        ],
+        "shot_size": "full",
+        "camera_angle": "eye_level",
+        "lens_family": "ultra_wide",
+        "camera_motion": "track",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "high_contrast_ceremonial",
+        "primary_subject_angle": "profile_right"
+      },
+      {
+        "planned_shot_id": "SH003",
+        "beat_id": "BT003",
+        "narrative_function": "establish scale",
+        "planned_shot_moment_summary": "protagonist running in vast canyon",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "rocky_gorge_canyon",
+        "planned_shot_required_anchor_1": "rocky gorge edge",
+        "planned_shot_scale_proof_detail": "tiny figure vs massive landscape",
+        "start_state_seed": "moonlight exposure",
+        "end_state_seed": "running into distance",
+        "action_seed": "frantic flight",
+        "blocking_seed": [
+          "running across canyon floor"
+        ],
+        "shot_size": "wide",
+        "camera_angle": "high_angle",
+        "lens_family": "ultra_wide",
+        "camera_motion": "pan",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "rear_three_quarter_left"
+      }
+    ],
+    "unresolved_questions": [
+      "Resolve Cave Interior (Transitioning) -> Cave Interior (Transitioning)"
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH002",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH002_chapter_ii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH027",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH027_chapter_xxvii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH028",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH028_chapter_xxviii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH002",
+        "canonical_id": "protagonist"
+      }
+    ],
+    "evidence_summary": [
+      "[CH002_SC004] Purpose: To transition the protagonist from the supernatural interior to the natural exterior.",
+      "[CH002_SC004] Summary: Driven by fear of whatever is in the dark cave, the protagonist flees the cavern and emerges into the Arizona night.",
+      "[CH002_SC004] Emotional arc: From shock to frantic urgency/flight.",
+      "[CH002_SC004] Coverage: Tracking shots following the protagonist's movement High-contrast lighting (Dark cave vs. Moonlight) Wide shots of the character emerging into the vast landscape",
+      "[CH002_SC004] Continuity: The protagonist's nudity and physical state as he moves through different light levels.",
+      "[CH002] Chapter summary: **Setting:** A cave in the Arizona mountains; a rocky gorge and canyon under moonlight; the vastness of space. **Characters:** - **The Protagonist:** A man who experiences physical paralysis due to a mysterious gas, u...",
+      "[CH002] CHAPTER II (book index hit)",
+      "[CH027] CHAPTER XXVII (book index hit)",
+      "[CH028] CHAPTER XXVIII (book index hit)",
+      "Character protagonist: protagonist"
+    ],
+    "storyboard_markdown": "# Scene Contract: CH002_SC004\n\n## Production Intent\nExecute a high-contrast transition from the dark, claustrophobic cave interior to the expansive, moonlit Arizona mountain landscape. The sequence must emphasize the protagonist's physical vulnerability and frantic flight through varying light levels.\n\n## Required Cast\n- protagonist\n\n## Required Environments\n- Cave Interior (Transitioning)\n- rocky_gorge_canyon\n\n## Continuity Constraints\n- Protagonist nudity and physical state across light transitions\n- Physical condition post-gas paralysis\n\n## Beat List\n- BT001: Protagonist flees the dark cave interior\n- BT002: Crossing the threshold into moonlight\n- BT003: Emergence into the vast Arizona night",
+    "metadata": {
+      "artifact_id": "CH002_SC004_SCENE_CONTRACT",
+      "artifact_type": "scene_contract",
+      "status": "generated",
+      "source_fingerprint": "6e3702eab769552303c38a086cef551ea95f506e",
+      "created_at_utc": "2026-04-24T00:29:57.229794+00:00",
+      "updated_at_utc": "2026-04-24T00:29:57.229794+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_breakdown",
+          "dependency_id": "CH002_SC004",
+          "version": "d3edbfe9c6448ad1e6eb41e6a06220b2eec4bcab"
+        },
+        {
+          "dependency_type": "character_resolutions",
+          "dependency_id": "CH002_SC004",
+          "version": "da2c6e998d6cc1ad842bf411f90417eae0043732"
+        },
+        {
+          "dependency_type": "environment_resolutions",
+          "dependency_id": "CH002_SC004",
+          "version": "e8071e1eb92e799448ce059ccd722c76381154cb"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-24T00:30:36.803716+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6e3702eab769552303c38a086cef551ea95f506e"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH003_SC005",
+    "chapter_id": "CH003",
+    "scene_title": "SC005",
+    "purpose": "Establish first contact and a tentative peace.",
+    "summary": "The leader dismounts unarmed and offers the protagonist a metal armlet. The protagonist accepts, signaling peace. He is then lifted onto a Martian mount and taken away toward the distant hills.",
+    "emotional_arc": "Tension $\\rightarrow$ Relief/Cautious Acceptance.",
+    "production_intent": "Execute a high-tension diplomatic exchange through non-verbal cues and physical object hand-off. The sequence transitions from a tense standoff to a movement-based exit, requiring precise coordination of the armlet prop and the protagonist's elevation onto the Martian mount.",
+    "scene_short_description": "An unarmed leader offers a metal armlet to a protagonist in a yellowish mossy basin.",
+    "scene_primary_scale_story_point": "The physical height difference when the protagonist is lifted onto the mount.",
+    "scene_required_anchor_catalog": [
+      "Martian mount",
+      "Metal armlet"
+    ],
+    "scene_start_state": "The Leader dismounts unarmed facing the protagonist in the basin.",
+    "scene_end_state": "The protagonist is mounted and moving away toward martian_distant_hills.",
+    "dominant_action_line": "The exchange of a peace offering via metal armlet followed by transport.",
+    "scene_spatial_layout": [
+      "Circular basin with yellowish moss-like vegetation",
+      "Open landscape leading to distant hills"
+    ],
+    "character_spatial_map": [
+      "The Leader stands facing protagonist",
+      "martian_warriors positioned as surrounding presence",
+      "protagonist centered in the exchange zone"
+    ],
+    "environment_subzones": [
+      "circular_basin",
+      "martian_distant_hills"
+    ],
+    "entry_vectors": [
+      "The Leader dismounts into basin"
+    ],
+    "exit_vectors": [
+      "Cavalcade moves toward martian_distant_hills"
+    ],
+    "beat_transition_map": [
+      "BT001 -> BT002: Physical hand-off of the armlet",
+      "BT002 -> BT003: Transition from standing to being mounted"
+    ],
+    "characters_required": [
+      {
+        "label": "The Protagonist",
+        "canonical_id": "protagonist",
+        "display_name": "protagonist",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
+      },
+      {
+        "label": "The Leader",
+        "canonical_id": null,
+        "display_name": "The Leader",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 10,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Martian Warriors",
+        "canonical_id": "martian_warriors",
+        "display_name": "martian_warriors",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/martian_warriors.md",
+        "notes": "Direct registry match for 'martian_warriors'."
+      }
+    ],
+    "environments_required": [
+      {
+        "label": "The basin/open landscape",
+        "canonical_id": "martian_distant_hills",
+        "display_name": "martian_distant_hills",
+        "status": "canonical",
+        "entity_kind": "landform",
+        "resolution_score": 66,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH003/martian_distant_hills.md",
+        "notes": "Chapter-local environment alias match for 'The basin/open landscape' (key_overlap=0, label_overlap=3, context_overlap=4)."
+      }
+    ],
+    "continuity_constraints": [
+      "Metal armlet must remain visible on protagonist's arm after acceptance",
+      "Height differential between protagonist and mount during lifting process"
+    ],
+    "visual_coverage_families": [
+      "Close-ups of the hand-off (the armlet)",
+      "Medium shots of non-verbal communication and eye contact",
+      "Wide shot of the cavalcade moving toward the distant hills"
+    ],
+    "beat_list": [
+      {
+        "beat_id": "BT001",
+        "summary": "The Leader dismounts unarmed to approach the protagonist",
+        "purpose": "",
+        "action_start": "Leader approaching on mount",
+        "action_end": "Leader standing unarmed before protagonist",
+        "active_subjects": [
+          "The Leader"
+        ],
+        "passive_subjects": [
+          "protagonist",
+          "martian_warriors"
+        ],
+        "spatial_context": "circular_basin",
+        "blocking_hint": "Leader moves from mount into center of basin",
+        "environment_subzone": "circular_basin",
+        "continuity_focus": "Leader must be unarmed",
+        "coverage_hint": "medium shots of eye contact",
+        "coverage_priority": "high",
+        "handoff_to_next": "The armlet offering"
+      },
+      {
+        "beat_id": "BT002",
+        "summary": "The metal armlet is offered and accepted as a peace signal",
+        "purpose": "",
+        "action_start": "Leader extends arm with armlet",
+        "action_end": "Protagonist wears the armlet",
+        "active_subjects": [
+          "The Leader",
+          "protagonist"
+        ],
+        "passive_subjects": [
+          "martian_warriors"
+        ],
+        "spatial_context": "circular_basin",
+        "blocking_hint": "Close proximity between two leads",
+        "environment_subzone": "circular_basin",
+        "continuity_focus": "Armlet must be visible on protagonist's arm post-beat",
+        "coverage_hint": "close-ups of hand-off",
+        "coverage_priority": "critical",
+        "handoff_to_next": "The mounting process"
+      },
+      {
+        "beat_id": "BT003",
+        "summary": "The protagonist is lifted onto a Martian mount and taken away",
+        "purpose": "",
+        "action_start": "Protagonist being assisted up",
+        "action_end": "Cavalcade moving toward hills",
+        "active_subjects": [
+          "protagonist",
+          "martian_warriors"
+        ],
+        "passive_subjects": [
+          "The Leader"
+        ],
+        "spatial_context": "circular_basin to martian_distant_hills",
+        "blocking_hint": "Group movement away from camera",
+        "environment_subzone": "martian_distant_hills",
+        "continuity_focus": "Height difference during lift",
+        "coverage_hint": "wide shot of cavalcade",
+        "coverage_priority": "medium",
+        "handoff_to_next": "none"
+      }
+    ],
+    "planned_shots": [
+      {
+        "planned_shot_id": "SH001",
+        "beat_id": "BT001",
+        "narrative_function": "establish contact",
+        "planned_shot_moment_summary": "The Leader dismounts unarmed and approaches",
+        "primary_subject_seed": "The Leader",
+        "secondary_subjects_seed": [
+          "protagonist"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "in_scene_speaker",
+        "environment_subzone": "circular_basin",
+        "planned_shot_required_anchor_1": "Martian mount",
+        "planned_shot_scale_proof_detail": "Leader height vs mount",
+        "start_state_seed": "Leader approaching",
+        "end_state_seed": "Leader facing protagonist",
+        "action_seed": "dismounting and walking unarmed",
+        "blocking_seed": [
+          "Leader moves from mount to center basin"
+        ],
+        "shot_size": "medium_full",
+        "camera_angle": "eye_level",
+        "lens_family": "normal",
+        "camera_motion": "track",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "front_three_quarter_right"
+      },
+      {
+        "planned_shot_id": "SH002",
+        "beat_id": "BT002",
+        "narrative_function": "signal peace",
+        "planned_shot_moment_summary": "Close up of the metal armlet being handed over",
+        "primary_subject_seed": "armlet",
+        "secondary_subjects_seed": [
+          "protagonist",
+          "The Leader"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "circular_basin",
+        "planned_shot_required_anchor_1": "metal armlet",
+        "planned_shot_scale_proof_detail": "hand size vs armlet",
+        "start_state_seed": "hands meeting",
+        "end_state_seed": "armlet on protagonist arm",
+        "action_seed": "hand-off of metal object",
+        "blocking_seed": [
+          "Hands in center frame"
+        ],
+        "shot_size": "insert_detail",
+        "camera_angle": "eye_level",
+        "lens_family": "portrait",
+        "camera_motion": "locked_off",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "front"
+      },
+      {
+        "planned_shot_id": "SH003",
+        "beat_id": "BT003",
+        "narrative_function": "exit scene",
+        "planned_shot_moment_summary": "Protagonist is lifted onto mount and rides away",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [
+          "martian_warriors"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "martian_distant_hills",
+        "planned_shot_required_anchor_1": "Martian mount",
+        "planned_shot_scale_proof_detail": "protagonist height on mount",
+        "start_state_seed": "lifting action",
+        "end_state_seed": "cavalcade moving away",
+        "action_seed": "mounting and riding toward hills",
+        "blocking_seed": [
+          "Protagonist lifted",
+          "then group moves out of frame"
+        ],
+        "shot_size": "wide",
+        "camera_angle": "low_angle",
+        "lens_family": "ultra_wide",
+        "camera_motion": "pan",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "rear_three_quarter_left"
+      }
+    ],
+    "unresolved_questions": [
+      "Resolve The Leader -> The Leader"
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC005"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH003",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH003_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH003",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH003_chapter_iii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH020",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH020_chapter_xx.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH017",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH017_chapter_xvii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH003",
+        "canonical_id": "protagonist"
+      }
+    ],
+    "evidence_summary": [
+      "[CH003_SC005] Purpose: Establish first contact and a tentative peace.",
+      "[CH003_SC005] Summary: The leader dismounts unarmed and offers the protagonist a metal armlet. The protagonist accepts, signaling peace. He is then lifted onto a Martian mount and taken away toward the distant hills.",
+      "[CH003_SC005] Emotional arc: Tension $\\rightarrow$ Relief/Cautious Acceptance.",
+      "[CH003_SC005] Coverage: Close-ups of the hand-off (the armlet). Medium shots of the non-verbal communication/eye contact. Wide shot of the cavalcade moving toward the distant hills.",
+      "[CH003_SC005] Continuity: The armlet on the protagonist's arm; the height difference when he is lifted onto the mount.",
+      "[CH003] Chapter summary: **Setting:** A circular basin on Mars covered in yellowish, moss-like vegetation, featuring a low walled enclosure with a glass roof (an incubator). **Events:** - The protagonist wakes up on Mars and discovers the eff...",
+      "[CH003] CHAPTER III (book index hit)",
+      "[CH020] CHAPTER XX (book index hit)",
+      "[CH017] CHAPTER XVII (book index hit)",
+      "Character protagonist: protagonist"
+    ],
+    "storyboard_markdown": "# Scene Contract: CH003_SC005\n\n## Production Intent\nExecute a high-tension diplomatic exchange through non-verbal cues and physical object hand-off. The sequence transitions from a tense standoff to a movement-based exit, requiring precise coordination of the armlet prop and the protagonist's elevation onto the Martian mount.\n\n## Required Cast\n- protagonist\n- The Leader\n- martian_warriors\n\n## Required Environments\n- circular_basin (yellowish mossy vegetation)\n- martian_distant_hills\n\n## Continuity Constraints\n- Metal armlet must remain visible on protagonist's arm after acceptance\n- Height differential between protagonist and mount during lifting process\n\n## Beat List\n- BT001: The Leader dismounts unarmed to approach the protagonist.\n- BT002: The metal armlet is offered and accepted as a peace signal.\n- BT003: The protagonist is lifted onto a Martian mount and taken away toward the hills.",
+    "metadata": {
+      "artifact_id": "CH003_SC005_SCENE_CONTRACT",
+      "artifact_type": "scene_contract",
+      "status": "generated",
+      "source_fingerprint": "b918054ca4e3bd80abaeb749ba3ab16db3754965",
+      "created_at_utc": "2026-04-24T00:34:02.244014+00:00",
+      "updated_at_utc": "2026-04-24T00:34:02.244014+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_breakdown",
+          "dependency_id": "CH003_SC005",
+          "version": "a886ddf73acb54e85c2385e58754cdb60356013f"
+        },
+        {
+          "dependency_type": "character_resolutions",
+          "dependency_id": "CH003_SC005",
+          "version": "61af6e89e2fe0afb9cc66b29da15f1e413886ead"
+        },
+        {
+          "dependency_type": "environment_resolutions",
+          "dependency_id": "CH003_SC005",
+          "version": "6930941725ce5656fdff054978106745e8f792ab"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-24T00:34:46.328100+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "b918054ca4e3bd80abaeb749ba3ab16db3754965"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH004_SC001",
+    "chapter_id": "CH004",
+    "scene_title": "SC001",
+    "purpose": "Establish the scale of the setting and the protagonist's status as a captive within an alien civilization.",
+    "summary": "The Narrator and Tars Tarkas arrive at a massive, ancient city built by a forgotten race. They enter a central plaza filled with hundreds of Martians, highlighting the narrator's smallness compared to the environment and its inhabitants.",
+    "emotional_arc": "Awe/Trepidation $\\rightarrow$ Alienation.",
+    "production_intent": "Establish the overwhelming scale of an ancient Martian city and the Narrator's vulnerability as a captive within a massive, alien social structure.",
+    "scene_short_description": "A small figure enters a massive marble and gold plaza filled with hundreds of Martians.",
+    "scene_primary_scale_story_point": "Architecture is far too large for current inhabitants; characters are dwarfed by the environment.",
+    "scene_required_anchor_catalog": [
+      "Marble/Gold architecture",
+      "Central Plaza floor"
+    ],
+    "scene_start_state": "The Narrator and tars_tarkas arrive at the edge of the massive city.",
+    "scene_end_state": "The Narrator is surrounded by a dense, overwhelming Martian crowd.",
+    "dominant_action_line": "Moving from the outskirts into the heart of a crowded, monumental plaza.",
+    "scene_spatial_layout": [
+      "Massive open central plaza",
+      "High-scale marble and gold structures surrounding the perimeter"
+    ],
+    "character_spatial_map": [
+      "The Narrator and tars_tarkas positioned as small elements in wide frames",
+      "Various Martians (crowd) occupying the midground and foreground"
+    ],
+    "environment_subzones": [
+      "ancient_martian_city_plaza_perimeter",
+      "ancient_martian_city_plaza_center"
+    ],
+    "entry_vectors": [
+      "City outskirts into plaza"
+    ],
+    "exit_vectors": [
+      "Through the crowd toward center"
+    ],
+    "beat_transition_map": [
+      "BT001 -> BT002: Arrival at city edge to entering the plaza",
+      "BT002 -> BT003: Entering plaza to being engulfed by the crowd"
+    ],
+    "characters_required": [
+      {
+        "label": "The Narrator",
+        "canonical_id": null,
+        "display_name": "The Narrator",
+        "status": "unresolved",
+        "entity_kind": "",
+        "resolution_score": null,
+        "source_path": "",
+        "notes": "No character candidate found."
+      },
+      {
+        "label": "Tars Tarkas",
+        "canonical_id": "tars_tarkas",
+        "display_name": "tars_tarkas",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
+        "notes": "Direct registry match for 'tars_tarkas'."
+      },
+      {
+        "label": "Various Martians (crowd)",
+        "canonical_id": null,
+        "display_name": "Various Martians (crowd)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 10,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environments_required": [
+      {
+        "label": "Central Plaza of the Ancient City (Marble/Gold architecture, massive scale)",
+        "canonical_id": "ancient_martian_city_plaza",
+        "display_name": "ancient_martian_city_plaza",
+        "status": "canonical",
+        "entity_kind": "plaza",
+        "resolution_score": 186,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH004/ancient_martian_city_plaza.md",
+        "notes": "Chapter-local environment alias match for 'Central Plaza of the Ancient City (Marble/Gold architecture, massive scale)' (key_overlap=3, label_overlap=9, context_overlap=4)."
+      }
+    ],
+    "continuity_constraints": [
+      "Architecture and prop scale relative to The Narrator",
+      "Movement patterns of the Martian crowd"
+    ],
+    "visual_coverage_families": [
+      "Extreme Wide Shots (EWS) for scale vs characters",
+      "Low Angle shots looking up at Martians",
+      "POV shots from Narrator perspective of crowd"
+    ],
+    "beat_list": [
+      {
+        "beat_id": "BT001",
+        "summary": "Arrival at the ancient city edge",
+        "purpose": "",
+        "action_start": "Walking toward massive structures",
+        "action_end": "Reaching the plaza threshold",
+        "active_subjects": [
+          "The Narrator",
+          "tars_tarkas"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "City outskirts near dried-up sea",
+        "blocking_hint": "Characters walking together towards center",
+        "environment_subzone": "ancient_martian_city_plaza_perimeter",
+        "continuity_focus": "Scale of architecture vs characters",
+        "coverage_hint": "EWS",
+        "coverage_priority": "high",
+        "handoff_to_next": "BT002"
+      },
+      {
+        "beat_id": "BT002",
+        "summary": "Entering the central plaza",
+        "purpose": "",
+        "action_start": "Stepping into open space",
+        "action_end": "Standing in the center of the plaza",
+        "active_subjects": [
+          "The Narrator",
+          "tars_tarkas"
+        ],
+        "passive_subjects": [
+          "Various Martians (crowd)"
+        ],
+        "spatial_context": "Central Plaza",
+        "blocking_hint": "Characters moving from perimeter to center",
+        "environment_subzone": "ancient_martian_city_plaza_center",
+        "continuity_focus": "Scale of marble/gold architecture",
+        "coverage_hint": "Low angle shots",
+        "coverage_priority": "medium",
+        "handoff_to_next": "BT003"
+      },
+      {
+        "beat_id": "BT003",
+        "summary": "Encountering the Martian crowd",
+        "purpose": "",
+        "action_start": "Seeing hundreds of Martians",
+        "action_end": "Being overwhelmed by the scale of the population",
+        "active_subjects": [
+          "The Narrator",
+          "Various Martians (crowd)"
+        ],
+        "passive_subjects": [
+          "tars_tarkas"
+        ],
+        "spatial_context": "Central Plaza center",
+        "blocking_hint": "Crowd moving around characters",
+        "environment_subzone": "ancient_martian_city_plaza_center",
+        "continuity_focus": "Movement patterns of the Martian crowd",
+        "coverage_hint": "POV shots",
+        "coverage_priority": "high",
+        "handoff_to_next": "none"
+      }
+    ],
+    "planned_shots": [
+      {
+        "planned_shot_id": "SH001",
+        "beat_id": "BT001",
+        "narrative_function": "establish scale",
+        "planned_shot_moment_summary": "The duo approaches the massive city walls",
+        "primary_subject_seed": "The Narrator",
+        "secondary_subjects_seed": [
+          "tars_tarkas"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "ancient_martian_city_plaza_perimeter",
+        "planned_shot_required_anchor_1": "marble/gold architecture",
+        "planned_shot_scale_proof_detail": "Characters appear tiny against structures",
+        "start_state_seed": "Wide shot of city edge",
+        "end_state_seed": "Characters moving toward plaza entrance",
+        "action_seed": "Walking toward the city",
+        "blocking_seed": [
+          "Walking in tandem"
+        ],
+        "shot_size": "extreme_wide",
+        "camera_angle": "eye_level",
+        "lens_family": "ultra_wide",
+        "camera_motion": "push_in",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "rear_three_quarter_left"
+      },
+      {
+        "planned_shot_id": "SH002",
+        "beat_id": "BT002",
+        "narrative_function": "establish awe",
+        "planned_shot_moment_summary": "The scale of the plaza is revealed",
+        "primary_subject_seed": "ancient_martian_city_plaza",
+        "secondary_subjects_seed": [
+          "tars_tarkas"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "ancient_martian_city_plaza_center",
+        "planned_shot_required_anchor_1": "marble/gold architecture",
+        "planned_shot_scale_proof_detail": "Verticality of gold structures",
+        "start_state_seed": "Wide view of plaza",
+        "end_state_seed": "Looking up at the height of buildings",
+        "action_seed": "Entering open space",
+        "blocking_seed": [
+          "Walking into center"
+        ],
+        "shot_size": "wide",
+        "camera_angle": "low_angle",
+        "lens_family": "wide",
+        "camera_motion": "pan",
+        "zoom_behavior": "none",
+        "focus_strategy": "environment_priority",
+        "lighting_style": "high_contrast_ceremonial",
+        "primary_subject_angle": "profile_left"
+      },
+      {
+        "planned_shot_id": "SH003",
+        "beat_id": "BT003",
+        "narrative_function": "establish alienation",
+        "planned_shot_moment_summary": "The crowd closes in on the Narrator",
+        "primary_subject_seed": "The Narrator",
+        "secondary_subjects_seed": [
+          "Various Martians (crowd)"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "ancient_martian_city_plaza_center",
+        "planned_shot_required_anchor_1": "Martian crowd",
+        "planned_shot_scale_proof_detail": "Crowd density vs character size",
+        "start_state_seed": "POV of approaching Martians",
+        "end_state_seed": "Surrounded by moving bodies",
+        "action_seed": "Navigating through people",
+        "blocking_seed": [
+          "Moving through a dense crowd"
+        ],
+        "shot_size": "medium_full",
+        "camera_angle": "eye_level",
+        "lens_family": "normal",
+        "camera_motion": "handheld",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "front"
+      }
+    ],
+    "unresolved_questions": [
+      "Resolve The Narrator -> The Narrator",
+      "Resolve Various Martians (crowd) -> Various Martians (crowd)"
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC001"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH004",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH016",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH016_chapter_xvi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH004",
+        "canonical_id": "tars_tarkas"
+      }
+    ],
+    "evidence_summary": [
+      "[CH004_SC001] Purpose: Establish the scale of the setting and the protagonist's status as a captive within an alien civilization.",
+      "[CH004_SC001] Summary: The Narrator and Tars Tarkas arrive at a massive, ancient city built by a forgotten race. They enter a central plaza filled with hundreds of Martians, highlighting the narrator's smallness compared to the environment and its inhabitants.",
+      "[CH004_SC001] Emotional arc: Awe/Trepidation $\\rightarrow$ Alienation.",
+      "[CH004_SC001] Coverage: * Extreme Wide Shots (EWS) to establish the scale of the city vs. characters. * Low Angle shots looking up at Martians. * POV shots from the Narrator's perspective showing the overwhelming crowd.",
+      "[CH004_SC001] Continuity: Scale of props/architecture relative to the Narrator; movement patterns of the Martian crowd.",
+      "[CH004] Chapter summary: **Setting:** An enormous, ancient city situated on a low table land near the edge of a dried-up Martian sea. The city features magnificent marble and gold architecture that appears far too large for its current inhabi...",
+      "[CH011] CHAPTER XI (book index hit)",
+      "[CH012] CHAPTER XII (book index hit)",
+      "[CH016] CHAPTER XVI (book index hit)",
+      "Character tars_tarkas: tars_tarkas"
+    ],
+    "storyboard_markdown": "# Scene Contract: CH004_SC001\n\n## Production Intent\nEstablish the overwhelming scale of an ancient Martian city and the Narrator's vulnerability as a captive within a massive, alien social structure.\n\n## Required Cast\n- The Narrator\n- tars_tarkas\n- Various Martians (crowd)\n\n## Required Environments\n- ancient_martian_city_plaza (Marble/Gold architecture, massive scale)\n\n## Continuity Constraints\n- Scale of props and architecture relative to The Narrator must remain consistent.\n- Movement patterns of the Martian crowd must feel organized yet overwhelming.\n\n## Beat List\n- BT001: Arrival at the ancient city edge.\n- BT002: Entering the central plaza.\n- BT003: Encountering the Martian crowd.",
+    "metadata": {
+      "artifact_id": "CH004_SC001_SCENE_CONTRACT",
+      "artifact_type": "scene_contract",
+      "status": "generated",
+      "source_fingerprint": "a83b11654d7e1cb0459ff1532d986656b70eaf98",
+      "created_at_utc": "2026-04-24T00:34:46.936849+00:00",
+      "updated_at_utc": "2026-04-24T00:34:46.936849+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_breakdown",
+          "dependency_id": "CH004_SC001",
+          "version": "178ab5281e533ed3493aae337c140c2de5489529"
+        },
+        {
+          "dependency_type": "character_resolutions",
+          "dependency_id": "CH004_SC001",
+          "version": "1303989c411a5b1adac158c3d078a571411de998"
+        },
+        {
+          "dependency_type": "environment_resolutions",
+          "dependency_id": "CH004_SC001",
+          "version": "47cd7a9772a8e556adbaab6cc7fb76b58ea875c5"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-24T00:35:30.257889+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "a83b11654d7e1cb0459ff1532d986656b70eaf98"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH004_SC002",
+    "chapter_id": "CH004",
+    "scene_title": "SC002",
+    "purpose": "Introduce the political hierarchy and the physical absurdity of the Martian culture.",
+    "summary": "The Narrator is presented to the Chieftain in a grand audience chamber. He observes the mismatch between the massive, ancient furniture and the Martians' biology, emphasizing the antiquity of the ruins.",
+    "emotional_arc": "Intimidation $\\rightarrow$ Observational Curiosity.",
+    "production_intent": "Establish the political hierarchy of Mars through a visual mismatch between massive, ancient marble and gold architecture and the biological scale of the Martian inhabitants. The scene must emphasize the antiquity of the ruins via oversized furniture that dwarfs the characters.",
+    "scene_short_description": "A small figure enters a massive marble hall filled with oversized, ancient gold furniture.",
+    "scene_primary_scale_story_point": "Furniture and architecture are disproportionately large compared to Martian biology.",
+    "scene_required_anchor_catalog": [
+      "Chieftain throne",
+      "Oversized marble table"
+    ],
+    "scene_start_state": "Narrator enters the vast expanse of the grand audience chamber feeling small.",
+    "scene_end_state": "Narrator observes the architectural mismatch with growing curiosity.",
+    "dominant_action_line": "The presentation of the Narrator to the Chieftain within a disproportionate environment.",
+    "scene_spatial_layout": [
+      "Vast open floor space between entrance and throne",
+      "High ceilings with marble/gold architecture"
+    ],
+    "character_spatial_map": [
+      "Narrator positioned in the center-floor expanse",
+      "chieftain seated on elevated, oversized throne",
+      "tars_tarkas acting as intermediary near Narrator"
+    ],
+    "environment_subzones": [
+      "throne_zone",
+      "central_aisle",
+      "entrance_threshold"
+    ],
+    "entry_vectors": [
+      "entrance_threshold"
+    ],
+    "exit_vectors": [
+      "entrance_threshold"
+    ],
+    "beat_transition_map": [
+      "BT001 -> BT002: Visual scale shock",
+      "BT002 -> BT003: Formal presentation shift"
+    ],
+    "characters_required": [
+      {
+        "label": "The Narrator",
+        "canonical_id": null,
+        "display_name": "The Narrator",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 6,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Tars Tarkas",
+        "canonical_id": "tars_tarkas",
+        "display_name": "tars_tarkas",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
+        "notes": "Direct registry match for 'tars_tarkas'."
+      },
+      {
+        "label": "The Chieftain",
+        "canonical_id": "chieftain",
+        "display_name": "the_chieftain",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/chieftain.md",
+        "notes": "Direct registry match for 'the_chieftain'."
+      },
+      {
+        "label": "Martian Court",
+        "canonical_id": null,
+        "display_name": "Martian Court",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 6,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environments_required": [
+      {
+        "label": "Grand Audience Chamber",
+        "canonical_id": "grand_audience_chamber",
+        "display_name": "grand_audience_chamber",
+        "status": "canonical",
+        "entity_kind": "environment",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH004/grand_audience_chamber.md",
+        "notes": "Direct registry match for 'grand_audience_chamber'."
+      }
+    ],
+    "continuity_constraints": [
+      "Precise spatial positioning of Narrator relative to massive chamber dimensions",
+      "Visual consistency of Chieftain regalia details"
+    ],
+    "visual_coverage_families": [
+      "Medium shots of chieftain in regalia",
+      "Close-ups on Narrator reaction",
+      "Detail shots of oversized ancient furniture"
+    ],
+    "beat_list": [
+      {
+        "beat_id": "BT001",
+        "summary": "Narrator enters the grand chamber and experiences the scale of the ruins",
+        "purpose": "",
+        "action_start": "Narrator crossing threshold",
+        "action_end": "Narrator standing still in center",
+        "active_subjects": [
+          "The Narrator"
+        ],
+        "passive_subjects": [
+          "Martian Court"
+        ],
+        "spatial_context": "central_aisle",
+        "blocking_hint": "walking from entrance toward throne",
+        "environment_subzone": "entrance_threshold",
+        "continuity_focus": "Narrator position in chamber",
+        "coverage_hint": "wide shot of scale",
+        "coverage_priority": "high",
+        "handoff_to_next": "BT002"
+      },
+      {
+        "beat_id": "BT002",
+        "summary": "Observation of the physical absurdity and antiquity of the furniture",
+        "purpose": "",
+        "action_start": "Narrator looking around",
+        "action_end": "Narrator focusing on a specific object",
+        "active_subjects": [
+          "The Narrator"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "grand_audience_chamber",
+        "blocking_hint": "Narrator turning head",
+        "environment_subzone": "throne_zone",
+        "continuity_focus": "furniture scale vs character",
+        "coverage_hint": "detail shots/close-ups",
+        "coverage_priority": "medium",
+        "handoff_to_next": "BT003"
+      },
+      {
+        "beat_id": "BT003",
+        "summary": "Formal presentation to the Chieftain",
+        "purpose": "",
+        "action_start": "tars_tarkas guiding Narrator",
+        "action_end": "Chieftain acknowledging presence",
+        "active_subjects": [
+          "tars_tarkas",
+          "The Narrator",
+          "chieftain"
+        ],
+        "passive_subjects": [
+          "Martian Court"
+        ],
+        "spatial_context": "throne_zone",
+        "blocking_hint": "Narrator and tars_tarkas facing the throne",
+        "environment_subzone": "throne_zone",
+        "continuity_focus": "chieftain regalia details",
+        "coverage_hint": "medium shots of chieftain",
+        "coverage_priority": "high",
+        "handoff_to_next": "end_scene"
+      }
+    ],
+    "planned_shots": [
+      {
+        "planned_shot_id": "SH001",
+        "beat_id": "BT001",
+        "narrative_function": "establish_scale",
+        "planned_shot_moment_summary": "Narrator enters the massive chamber",
+        "primary_subject_seed": "The Narrator",
+        "secondary_subjects_seed": [
+          "Martian Court"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "entrance_threshold",
+        "planned_shot_required_anchor_1": "entrance_threshold",
+        "planned_shot_scale_proof_detail": "character vs ceiling height",
+        "start_state_seed": "Narrator stepping into light",
+        "end_state_seed": "Narrator stopping in center",
+        "action_seed": "walking",
+        "blocking_seed": [
+          "center aisle"
+        ],
+        "shot_size": "wide",
+        "camera_angle": "low_angle",
+        "lens_family": "ultra_wide",
+        "camera_motion": "push_in",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "high_contrast_ceremonial",
+        "primary_subject_angle": "back"
+      },
+      {
+        "planned_shot_id": "SH002",
+        "beat_id": "BT002",
+        "narrative_function": "detail_environment",
+        "planned_shot_moment_summary": "Close up on massive furniture",
+        "primary_subject_seed": "ancient_furniture",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "throne_zone",
+        "planned_shot_required_anchor_1": "oversized_marble_table",
+        "planned_shot_scale_proof_detail": "furniture vs character hand size",
+        "start_state_seed": "static shot of table edge",
+        "end_state_seed": "camera pans up",
+        "action_seed": "static",
+        "blocking_seed": [
+          "fixed"
+        ],
+        "shot_size": "insert_detail",
+        "camera_angle": "eye_level",
+        "lens_family": "normal",
+        "camera_motion": "pan",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "front"
+      },
+      {
+        "planned_shot_id": "SH003",
+        "beat_id": "BT003",
+        "narrative_function": "character_intro",
+        "planned_shot_moment_summary": "Chieftain revealed in regalia",
+        "primary_subject_seed": "chieftain",
+        "secondary_subjects_seed": [
+          "tars_tarkas"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "throne_zone",
+        "planned_shot_required_anchor_1": "chieftain_throne",
+        "planned_shot_scale_proof_detail": "regalia detail vs throne size",
+        "start_state_seed": "tight on regalia",
+        "end_state_seed": "pull back to medium shot",
+        "action_seed": "sitting/observing",
+        "blocking_seed": [
+          "seated on throne"
+        ],
+        "shot_size": "medium",
+        "camera_angle": "low_angle",
+        "lens_family": "portrait",
+        "camera_motion": "pull_back",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "high_contrast_ceremonial",
+        "primary_subject_angle": "front_three_quarter_right"
+      }
+    ],
+    "unresolved_questions": [
+      "Resolve The Narrator -> The Narrator",
+      "Resolve Martian Court -> Martian Court"
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH004",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH004",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH004_chapter_iv.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH004",
+        "canonical_id": "tars_tarkas"
+      }
+    ],
+    "evidence_summary": [
+      "[CH004_SC002] Purpose: Introduce the political hierarchy and the physical absurdity of the Martian culture.",
+      "[CH004_SC002] Summary: The Narrator is presented to the Chieftain in a grand audience chamber. He observes the mismatch between the massive, ancient furniture and the Martians' biology, emphasizing the antiquity of the ruins.",
+      "[CH004_SC002] Emotional arc: Intimidation $\\rightarrow$ Observational Curiosity.",
+      "[CH004_SC002] Coverage: * Medium shots of the Chieftain in regalia. * Close-ups on the Narrator's face reacting to the environment. * Detail shots of the oversized, ancient furniture.",
+      "[CH004_SC002] Continuity: The specific placement of the Narrator within the massive chamber; the visual details of the Chieftain's regalia.",
+      "[CH004] Chapter summary: **Setting:** An enormous, ancient city situated on a low table land near the edge of a dried-up Martian sea. The city features magnificent marble and gold architecture that appears far too large for its current inhabi...",
+      "[CH011] CHAPTER XI (book index hit)",
+      "[CH012] CHAPTER XII (book index hit)",
+      "[CH004] CHAPTER IV (book index hit)",
+      "Character tars_tarkas: tars_tarkas"
+    ],
+    "storyboard_markdown": "# Scene Contract: CH004_SC002\n\n## Production Intent\nEstablish the political hierarchy of Mars through a visual mismatch between massive, ancient marble and gold architecture and the biological scale of the Martian inhabitants. The scene must emphasize the antiquity of the ruins via oversized furniture that dwarfs the characters.\n\n## Required Cast\n- The Narrator\n- tars_tarkas\n- chieftain\n- Martian Court\n\n## Required Environments\n- grand_audience_chamber\n\n## Continuity Constraints\n- Precise spatial positioning of Narrator relative to massive chamber dimensions\n- Visual consistency of Chieftain regalia details\n\n## Beat List\n- BT001: Narrator enters the grand chamber and experiences the scale of the ruins\n- BT002: Observation of the physical absurdity and antiquity of the furniture\n- BT003: Formal presentation to the Chieftain",
+    "metadata": {
+      "artifact_id": "CH004_SC002_SCENE_CONTRACT",
+      "artifact_type": "scene_contract",
+      "status": "generated",
+      "source_fingerprint": "bc4ac201af2e2abc76cfb4bb005dd9eb0903809d",
+      "created_at_utc": "2026-04-24T00:35:30.370930+00:00",
+      "updated_at_utc": "2026-04-24T00:35:30.370930+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_breakdown",
+          "dependency_id": "CH004_SC002",
+          "version": "9ede2dd7d04052102d134dd6b918c53ddab64e91"
+        },
+        {
+          "dependency_type": "character_resolutions",
+          "dependency_id": "CH004_SC002",
+          "version": "4e3e9ec0a35640f2b0f0e0f32cba4970cade255a"
+        },
+        {
+          "dependency_type": "environment_resolutions",
+          "dependency_id": "CH004_SC002",
+          "version": "57218eb77c1dc85d5083b352719edfcd0d557860"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-24T00:36:12.190942+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "bc4ac201af2e2abc76cfb4bb005dd9eb0903809d"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH004_SC003",
+    "chapter_id": "CH004",
+    "scene_title": "SC003",
+    "purpose": "Establish the Narrator's agency and his ability to command respect through violence/physicality.",
+    "summary": "After being mocked, the Narrator punches a Martian warrior. This act of defiance earns him unexpected respect. He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
+    "emotional_arc": "Humiliation $\\rightarrow$ Defiance $\\rightarrow$ Triumph/Respect.",
+    "production_intent": "Demonstrate the Narrator's physical agency and capacity for violence to shift his social standing from mockery to respect. The sequence must emphasize the impact of a single punch and the impressive distance of a high-performance jump within a massive architectural setting.",
+    "scene_short_description": "A man punches a warrior in a massive marble hall then performs a long leap.",
+    "scene_primary_scale_story_point": "The scale of the grand architecture vs. the human-sized physical feats.",
+    "scene_required_anchor_catalog": [
+      "marble floor",
+      "gold architectural pillars"
+    ],
+    "scene_start_state": "The Narrator is surrounded by a mocking Martian Crowd in the plaza.",
+    "scene_end_state": "The Narrator stands having completed a long jump, facing an astonished assembly.",
+    "dominant_action_line": "Defiance through violence followed by demonstration of athletic prowess.",
+    "scene_spatial_layout": [
+      "Open plaza area within the grand audience chamber",
+      "Large scale marble and gold architecture"
+    ],
+    "character_spatial_map": [
+      "The Narrator central to the crowd/warrior",
+      "martian_warrior in direct proximity to The Narrator",
+      "chieftain observing from a position of authority",
+      "Martian Crowd encircling the action"
+    ],
+    "environment_subzones": [
+      "grand_audience_chamber_plaza",
+      "assembly viewing area"
+    ],
+    "entry_vectors": [
+      "central plaza entrance"
+    ],
+    "exit_vectors": [
+      "central plaza exit"
+    ],
+    "beat_transition_map": [
+      "BT001 -> BT002: Physical strike and impact",
+      "BT002 -> BT003: Command issued and physical leap execution"
+    ],
+    "characters_required": [
+      {
+        "label": "The Narrator",
+        "canonical_id": null,
+        "display_name": "The Narrator",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 6,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Tars Tarkas",
+        "canonical_id": "tars_tarkas",
+        "display_name": "tars_tarkas",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
+        "notes": "Direct registry match for 'tars_tarkas'."
+      },
+      {
+        "label": "The Chieftain",
+        "canonical_id": "chieftain",
+        "display_name": "the_chieftain",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/chieftain.md",
+        "notes": "Direct registry match for 'the_chieftain'."
+      },
+      {
+        "label": "Martian Warrior",
+        "canonical_id": "martian_warrior",
+        "display_name": "martian_warrior",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/martian_warrior.md",
+        "notes": "Direct registry match for 'martian_warrior'."
+      },
+      {
+        "label": "Martian Crowd",
+        "canonical_id": null,
+        "display_name": "Martian Crowd",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 6,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environments_required": [
+      {
+        "label": "Grand Audience Chamber / Plaza area",
+        "canonical_id": "grand_audience_chamber",
+        "display_name": "grand_audience_chamber",
+        "status": "canonical",
+        "entity_kind": "environment",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH004/grand_audience_chamber.md",
+        "notes": "Direct registry match for 'grand_audience_chamber'."
+      }
+    ],
+    "continuity_constraints": [
+      "Physical contact precision during the punch sequence",
+      "Trajectory and landing distance of the sak jump"
+    ],
+    "visual_coverage_families": [
+      "Tight Close-ups (CU) on punch impact",
+      "Wide shots for sak jump scale",
+      "Reaction shots of Martian Crowd"
+    ],
+    "beat_list": [
+      {
+        "beat_id": "BT001",
+        "summary": "The Narrator punches the Martian Warrior",
+        "purpose": "",
+        "action_start": "Mockery from crowd",
+        "action_end": "Warrior hit and reeling",
+        "active_subjects": [
+          "The Narrator",
+          "martian_warrior"
+        ],
+        "passive_subjects": [
+          "Martian Crowd",
+          "chieftain"
+        ],
+        "spatial_context": "center of plaza",
+        "blocking_hint": "Narrator and warrior face-to-face",
+        "environment_subzone": "grand_audience_chamber_plaza",
+        "continuity_focus": "Physical contact/impact timing",
+        "coverage_hint": "Tight CU on punch",
+        "coverage_priority": "high",
+        "handoff_to_next": "BT002"
+      },
+      {
+        "beat_id": "BT002",
+        "summary": "The assembly reacts to the violence",
+        "purpose": "",
+        "action_start": "Punch impact",
+        "action_end": "Silence/Shock in crowd",
+        "active_subjects": [
+          "Martian Crowd",
+          "tars_tarkas"
+        ],
+        "passive_subjects": [
+          "The Narrator"
+        ],
+        "spatial_context": "surrounding plaza",
+        "blocking_hint": "Crowd members frozen in shock",
+        "environment_subzone": "grand_audience_chamber_plaza",
+        "continuity_focus": "Crowd expression shift",
+        "coverage_hint": "Reaction shots",
+        "coverage_priority": "medium",
+        "handoff_to_next": "BT003"
+      },
+      {
+        "beat_id": "BT003",
+        "summary": "The Narrator performs the sak jump",
+        "purpose": "",
+        "action_start": "Command to jump",
+        "action_end": "Landing after impressive distance",
+        "active_subjects": [
+          "The Narrator"
+        ],
+        "passive_subjects": [
+          "Martian Crowd",
+          "chieftain"
+        ],
+        "spatial_context": "open plaza area",
+        "blocking_hint": "Narrator moving across large expanse",
+        "environment_subzone": "grand_audience_chamber_plaza",
+        "continuity_focus": "Jump trajectory and landing point",
+        "coverage_hint": "Wide shot for scale",
+        "coverage_priority": "high",
+        "handoff_to_next": "End of scene"
+      }
+    ],
+    "planned_shots": [
+      {
+        "planned_shot_id": "SH001",
+        "beat_id": "BT001",
+        "narrative_function": "establish conflict",
+        "planned_shot_moment_summary": "The Narrator strikes the warrior",
+        "primary_subject_seed": "The Narrator",
+        "secondary_subjects_seed": [
+          "martian_warrior"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "in_scene_speaker",
+        "environment_subzone": "grand_audience_chamber_plaza",
+        "planned_shot_required_anchor_1": "marble floor",
+        "planned_shot_scale_proof_detail": "impact force against warrior mass",
+        "start_state_seed": "Narrator facing warrior",
+        "end_state_seed": "Warrior reeling from punch",
+        "action_seed": "punching",
+        "blocking_seed": [
+          "close proximity confrontation"
+        ],
+        "shot_size": "close_up",
+        "camera_angle": "eye_level",
+        "lens_family": "normal",
+        "camera_motion": "handheld",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "high_contrast_ceremonial",
+        "primary_subject_angle": "profile_left"
+      },
+      {
+        "planned_shot_id": "SH002",
+        "beat_id": "BT003",
+        "narrative_function": "demonstrate scale",
+        "planned_shot_moment_summary": "The Narrator performs the sak jump",
+        "primary_subject_seed": "The Narrator",
+        "secondary_subjects_seed": [
+          "Martian Crowd"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "in_scene_speaker",
+        "environment_subzone": "grand_audience_chamber_plaza",
+        "planned_shot_required_anchor_1": "gold architectural pillars",
+        "planned_shot_scale_proof_detail": "distance traveled relative to architecture",
+        "start_state_seed": "Narrator at jump takeoff point",
+        "end_state_seed": "Narrator landing in distance",
+        "action_seed": "jumping",
+        "blocking_seed": [
+          "wide open space traversal"
+        ],
+        "shot_size": "wide",
+        "camera_angle": "low_angle",
+        "lens_family": "ultra_wide",
+        "camera_motion": "pan",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "front_three_quarter_right"
+      }
+    ],
+    "unresolved_questions": [
+      "Resolve The Narrator -> The Narrator",
+      "Resolve Martian Crowd -> Martian Crowd"
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH004",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH016",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH016_chapter_xvi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH020",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH020_chapter_xx.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH004",
+        "canonical_id": "tars_tarkas"
+      }
+    ],
+    "evidence_summary": [
+      "[CH004_SC003] Purpose: Establish the Narrator's agency and his ability to command respect through violence/physicality.",
+      "[CH004_SC003] Summary: After being mocked, the Narrator punches a Martian warrior. This act of defiance earns him unexpected respect. He is then commanded to perform \"sak\" (jumping), which he does with impressive distance, further astounding the assembly.",
+      "[CH004_SC003] Emotional arc: Humiliation $\\rightarrow$ Defiance $\\rightarrow$ Triumph/Respect.",
+      "[CH004_SC003] Coverage: * Tight Close-ups (CU) on the punch and the impact. * Wide shots to capture the scale of the \"sak\" jump. * Reaction shots from the crowd (shifting from mockery to applause).",
+      "[CH004_SC003] Continuity: The physics/trajectory of the jump; the physical contact during the fight sequence.",
+      "[CH004] Chapter summary: **Setting:** An enormous, ancient city situated on a low table land near the edge of a dried-up Martian sea. The city features magnificent marble and gold architecture that appears far too large for its current inhabi...",
+      "[CH016] CHAPTER XVI (book index hit)",
+      "[CH010] CHAPTER X (book index hit)",
+      "[CH020] CHAPTER XX (book index hit)",
+      "Character tars_tarkas: tars_tarkas"
+    ],
+    "storyboard_markdown": "# Scene Contract: CH004_SC003\n\n## Production Intent\nDemonstrate the Narrator's physical agency and capacity for violence to shift his social standing from mockery to respect. The sequence must emphasize the impact of a single punch and the impressive distance of a high-performance jump within a massive architectural setting.\n\n## Required Cast\n- The Narrator\n- tars_tarkas\n- chieftain\n- martian_warrior\n- Martian Crowd\n\n## Required Environments\n- grand_audience_chamber (Plaza area)\n\n## Continuity Constraints\n- Physical contact precision during the punch sequence\n- Trajectory and landing distance of the sak jump\n\n## Beat List\n- BT001: The Narrator punches the Martian Warrior\n- BT002: The assembly reacts to the violence\n- BT003: The Narrator performs the sak jump",
+    "metadata": {
+      "artifact_id": "CH004_SC003_SCENE_CONTRACT",
+      "artifact_type": "scene_contract",
+      "status": "generated",
+      "source_fingerprint": "e6c673d89bd2b6e8f2f13236623a1d4d8cd9d18f",
+      "created_at_utc": "2026-04-24T00:36:12.316061+00:00",
+      "updated_at_utc": "2026-04-24T00:36:12.316061+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_breakdown",
+          "dependency_id": "CH004_SC003",
+          "version": "ebae575c9438334cf6adcfebc6608afe3a4d174b"
+        },
+        {
+          "dependency_type": "character_resolutions",
+          "dependency_id": "CH004_SC003",
+          "version": "e2c5710b1ad0d7e06e1f465cf46f457ebcaa7477"
+        },
+        {
+          "dependency_type": "environment_resolutions",
+          "dependency_id": "CH004_SC003",
+          "version": "bd86d9999b44f7bccfb01b97bccc38838a8715fb"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-24T00:36:50.850229+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "e6c673d89bd2b6e8f2f13236623a1d4d8cd9d18f"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH004_SC004",
+    "chapter_id": "CH004",
+    "scene_title": "SC004",
+    "purpose": "Transition from public spectacle to private care and introduce a key supporting character.",
+    "summary": "The Narrator refuses further performance until his hunger is addressed. Tars Tarkas assigns Sola to look after him. Sola begins the process of providing sustenance.",
+    "emotional_arc": "Tension $\\rightarrow$ Relief/Exhaustion.",
+    "production_intent": "Move the narrative from a high-stakes public performance within the grand architecture to an intimate, low-energy care sequence. The focus shifts from spectacle to the physical vulnerability of the Narrator and the introduction of Sola as a caregiver.",
+    "scene_short_description": "A weary performer refuses to continue until fed, leading to a transfer of care.",
+    "scene_primary_scale_story_point": "The massive marble and gold architecture dwarfs the individual characters during the transition.",
+    "scene_required_anchor_catalog": [
+      "food vessel/sustenance",
+      "grand_audience_chamber threshold"
+    ],
+    "scene_start_state": "The Narrator is physically depleted amidst the grandeur of the audience chamber.",
+    "scene_end_state": "Sola begins providing sustenance to the exhausted Narrator in a private setting.",
+    "dominant_action_line": "The Narrator demands food, Tars Tarkas delegates care to Sola, and Sola initiates feeding.",
+    "scene_spatial_layout": [
+      "Transition from wide public space to narrow corridor/private quarters",
+      "Shift from vertical scale (grand architecture) to horizontal intimacy (caregiving)"
+    ],
+    "character_spatial_map": [
+      "tars_tarkas positioned as authority figure over the Narrator",
+      "sola entering the personal space of the Narrator",
+      "The Narrator seated or slumped in a position of weakness"
+    ],
+    "environment_subzones": [
+      "grand_audience_chamber",
+      "corridors/private quarters"
+    ],
+    "entry_vectors": [
+      "Tars Tarkas and Narrator exit audience chamber via corridor path",
+      "Sola enters private quarters"
+    ],
+    "exit_vectors": [
+      "Sola remains in private quarters to provide care"
+    ],
+    "beat_transition_map": [
+      "BT001 -> BT002: Negotiation for sustenance",
+      "BT002 -> BT003: Delegation of duty and transition to care"
+    ],
+    "characters_required": [
+      {
+        "label": "The Narrator",
+        "canonical_id": null,
+        "display_name": "The Narrator",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 6,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Tars Tarkas",
+        "canonical_id": "tars_tarkas",
+        "display_name": "tars_tarkas",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
+        "notes": "Direct registry match for 'tars_tarkas'."
+      },
+      {
+        "label": "Sola",
+        "canonical_id": "sola",
+        "display_name": "sola",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
+        "notes": "Direct registry match for 'sola'."
+      }
+    ],
+    "environments_required": [
+      {
+        "label": "Transition from Audience Chamber to corridors/private quarters",
+        "canonical_id": "grand_audience_chamber",
+        "display_name": "grand_audience_chamber",
+        "status": "canonical",
+        "entity_kind": "environment",
+        "resolution_score": 86,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH004/grand_audience_chamber.md",
+        "notes": "Chapter-local environment alias match for 'Transition from Audience Chamber to corridors/private quarters' (key_overlap=2, label_overlap=2, context_overlap=3)."
+      }
+    ],
+    "continuity_constraints": [
+      "The Narrator's physical state of hunger and fatigue",
+      "Sola's height relative to the Narrator"
+    ],
+    "visual_coverage_families": [
+      "Medium shots of interaction between tars_tarkas and sola",
+      "Over-the-shoulder (OTS) shots during food negotiation"
+    ],
+    "beat_list": [
+      {
+        "beat_id": "BT001",
+        "summary": "The Narrator refuses further performance due to hunger",
+        "purpose": "",
+        "action_start": "Narrator stops performing",
+        "action_end": "Narrator states requirement for food",
+        "active_subjects": [
+          "The Narrator",
+          "tars_tarkas"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "grand_audience_chamber",
+        "blocking_hint": "Narrator is stationary/weak; Tars Tarkas stands over him",
+        "environment_subzone": "grand_audience_chamber",
+        "continuity_focus": "Physical fatigue of Narrator",
+        "coverage_hint": "OTS shots during negotiation",
+        "coverage_priority": "high",
+        "handoff_to_next": "The demand for food leads to the command."
+      },
+      {
+        "beat_id": "BT002",
+        "summary": "Tars Tarkas assigns Sola to look after the Narrator",
+        "purpose": "",
+        "action_start": "Tars Tarkas acknowledges hunger",
+        "action_end": "Sola is directed to the Narrator",
+        "active_subjects": [
+          "tars_tarkas",
+          "sola"
+        ],
+        "passive_subjects": [
+          "The Narrator"
+        ],
+        "spatial_context": "Transition area between chamber and corridor",
+        "blocking_hint": "Tars Tarkas mediates between Sola and Narrator",
+        "environment_subzone": "grand_audience_chamber",
+        "continuity_focus": "Sola's height relative to the others",
+        "coverage_hint": "Medium shots of interaction",
+        "coverage_priority": "medium",
+        "handoff_to_next": "The assignment leads to the care sequence."
+      },
+      {
+        "beat_id": "BT003",
+        "summary": "Sola begins providing sustenance to the Narrator",
+        "purpose": "",
+        "action_start": "Sola enters private space with food",
+        "action_end": "Narrator begins eating/resting",
+        "active_subjects": [
+          "sola",
+          "The Narrator"
+        ],
+        "passive_subjects": [
+          "tars_tarkas"
+        ],
+        "spatial_context": "corridors/private quarters",
+        "blocking_hint": "Sola leans into the Narrator's personal space",
+        "environment_subzone": "corridors/private quarters",
+        "continuity_focus": "Narrator's physical state (relief/exhaustion)",
+        "coverage_hint": "Medium close shots of caregiving",
+        "coverage_priority": "high",
+        "handoff_to_next": "End of scene."
+      }
+    ],
+    "planned_shots": [
+      {
+        "planned_shot_id": "SH001",
+        "beat_id": "BT001",
+        "narrative_function": "establish conflict",
+        "planned_shot_moment_summary": "The Narrator refuses to perform further without food",
+        "primary_subject_seed": "The Narrator",
+        "secondary_subjects_seed": [
+          "tars_tarkas"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "in_scene_speaker",
+        "environment_subzone": "grand_audience_chamber",
+        "planned_shot_required_anchor_1": "grand_audience_chamber threshold",
+        "planned_shot_scale_proof_detail": "massive marble architecture vs small human figure",
+        "start_state_seed": "Narrator standing/slumped",
+        "end_state_seed": "Narrator refusing movement",
+        "action_seed": "The Narrator gestures to his hunger",
+        "blocking_seed": [
+          "Narrator facing tars_tarkas"
+        ],
+        "shot_size": "medium_close",
+        "camera_angle": "eye_level",
+        "lens_family": "normal",
+        "camera_motion": "locked_off",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "high_contrast_ceremonial",
+        "primary_subject_angle": "front_three_quarter_right"
+      },
+      {
+        "planned_shot_id": "SH002",
+        "beat_id": "BT002",
+        "narrative_function": "negotiation/delegation",
+        "planned_shot_moment_summary": "Tars Tarkas assigns Sola to the Narrator",
+        "primary_subject_seed": "tars_tarkas",
+        "secondary_subjects_seed": [
+          "sola",
+          "The Narrator"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "in_scene_speaker",
+        "environment_subzone": "grand_audience_chamber",
+        "planned_shot_required_anchor_1": "tars_tarkas",
+        "planned_shot_scale_proof_detail": "height difference between sola and narrator",
+        "start_state_seed": "Tars Tarkas speaking",
+        "end_state_seed": "Sola accepting task",
+        "action_seed": "Tars Tarkas gestures to Sola",
+        "blocking_seed": [
+          "OTS from Narrator toward Tars Tarkas/Sola"
+        ],
+        "shot_size": "medium",
+        "camera_angle": "eye_level",
+        "lens_family": "portrait",
+        "camera_motion": "pan",
+        "zoom_behavior": "none",
+        "focus_strategy": "rack_focus",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "profile_left"
+      },
+      {
+        "planned_shot_id": "SH003",
+        "beat_id": "BT003",
+        "narrative_function": "character introduction/care",
+        "planned_shot_moment_summary": "Sola begins providing sustenance",
+        "primary_subject_seed": "sola",
+        "secondary_subjects_seed": [
+          "The Narrator"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "corridors/private quarters",
+        "planned_shot_required_anchor_1": "food vessel",
+        "planned_shot_scale_proof_detail": "Sola's height relative to the seated Narrator",
+        "start_state_seed": "Sola approaching with food",
+        "end_state_seed": "Sola feeding the Narrator",
+        "action_seed": "Sola offers sustenance",
+        "blocking_seed": [
+          "Sola leaning over the Narrator"
+        ],
+        "shot_size": "medium_close",
+        "camera_angle": "high_angle",
+        "lens_family": "normal",
+        "camera_motion": "push_in",
+        "zoom_behavior": "subtle_in",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "soft_even",
+        "primary_subject_angle": "front_three_quarter_left"
+      }
+    ],
+    "unresolved_questions": [
+      "Resolve The Narrator -> The Narrator"
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH004",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH013_chapter_xiii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH007",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH007_chapter_vii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH004",
+        "canonical_id": "tars_tarkas"
+      }
+    ],
+    "evidence_summary": [
+      "[CH004_SC004] Purpose: Transition from public spectacle to private care and introduce a key supporting character.",
+      "[CH004_SC004] Summary: The Narrator refuses further performance until his hunger is addressed. Tars Tarkas assigns Sola to look after him. Sola begins the process of providing sustenance.",
+      "[CH004_SC004] Emotional arc: Tension $\\rightarrow$ Relief/Exhaustion.",
+      "[CH004_SC004] Coverage: * Medium shots of the interaction between Tars Tarkas and Sola. * Over-the-shoulder (OTS) shots during the negotiation for food.",
+      "[CH004_SC004] Continuity: The Narrator's physical state (hunger/fatigue); Sola's height relative to the Narrator.",
+      "[CH004] Chapter summary: **Setting:** An enormous, ancient city situated on a low table land near the edge of a dried-up Martian sea. The city features magnificent marble and gold architecture that appears far too large for its current inhabi...",
+      "[CH013] CHAPTER XIII (book index hit)",
+      "[CH007] CHAPTER VII (book index hit)",
+      "[CH010] CHAPTER X (book index hit)",
+      "Character tars_tarkas: tars_tarkas"
+    ],
+    "storyboard_markdown": "# Scene Contract: CH004_SC004\n\n## Production Intent\nMove the narrative from a high-stakes public performance within the grand architecture to an intimate, low-energy care sequence. The focus shifts from spectacle to the physical vulnerability of the Narrator and the introduction of Sola as a caregiver.\n\n## Required Cast\n- The Narrator\n- tars_tarkas\n- sola\n\n## Required Environments\n- grand_audience_chamber\n- corridors/private quarters\n\n## Continuity Constraints\n- The Narrator's physical state (hunger/fatigue)\n- Sola's height relative to the Narrator\n\n## Beat List\n- BT001: The Narrator refuses further performance due to hunger.\n- BT002: Tars Tarkas assigns Sola to look after the Narrator.\n- BT003: Sola begins providing sustenance to the Narrator.",
+    "metadata": {
+      "artifact_id": "CH004_SC004_SCENE_CONTRACT",
+      "artifact_type": "scene_contract",
+      "status": "generated",
+      "source_fingerprint": "9f57fddfe47610e350643952e9fc8c4a6c19afd7",
+      "created_at_utc": "2026-04-24T00:36:50.956274+00:00",
+      "updated_at_utc": "2026-04-24T00:36:50.956274+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_breakdown",
+          "dependency_id": "CH004_SC004",
+          "version": "d48eedfc8bdfc550b0ecd61ffc0bf1d86f41effa"
+        },
+        {
+          "dependency_type": "character_resolutions",
+          "dependency_id": "CH004_SC004",
+          "version": "e27102e07b7965204be3ca22442aa16f700a8dfa"
+        },
+        {
+          "dependency_type": "environment_resolutions",
+          "dependency_id": "CH004_SC004",
+          "version": "72a53745f3281bca650babd25aa000e5b40bb30e"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-24T00:37:38.186194+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9f57fddfe47610e350643952e9fc8c4a6c19afd7"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH004_SC005",
+    "chapter_id": "CH004",
+    "scene_title": "SC005",
+    "purpose": "Provide a moment of respite and introduce local fauna, grounding the \"alien\" nature of the world.",
+    "summary": "Sola leads the Narrator to a decorated sleeping chamber. Inside, the Narrator encounters a strange, ten-legged Martian creature with a frog-like head and tusks.",
+    "emotional_arc": "Fatigue $\\rightarrow$ Curiosity/Uncanniness.",
+    "production_intent": "Establish a sense of rest within the massive marble and gold architecture by transitioning to an intimate, low-key interior. Use the introduction of local fauna to ground the alien setting through tactile, strange biological details.",
+    "scene_short_description": "A character is led into a decorated sleeping room to encounter a strange ten-legged creature.",
+    "scene_primary_scale_story_point": "Intimate interior scale contrasted against the enormous ancient city architecture.",
+    "scene_required_anchor_catalog": [
+      "martian_sleeping_chamber decor elements",
+      "Small Martian Creature"
+    ],
+    "scene_start_state": "Sola leads The Narrator toward the entrance of the chamber.",
+    "scene_end_state": "The Narrator observes the strange creature in the low light.",
+    "dominant_action_line": "Sola guides The Narrator into a decorated room where they discover an alien creature.",
+    "scene_spatial_layout": [
+      "Interior martian_sleeping_chamber setting",
+      "Low-key, dim lighting environment"
+    ],
+    "character_spatial_map": [
+      "sola leads the movement",
+      "The Narrator follows sola",
+      "Small Martian Creature occupies a localized area within the chamber"
+    ],
+    "environment_subzones": [
+      "chamber entrance",
+      "chamber interior decor zone",
+      "creature sighting zone"
+    ],
+    "entry_vectors": [
+      "chamber doorway"
+    ],
+    "exit_vectors": [
+      "chamber doorway"
+    ],
+    "beat_transition_map": [
+      "BT001 -> BT002: Arrival at the chamber",
+      "BT002 -> BT003: Discovery of the creature"
+    ],
+    "characters_required": [
+      {
+        "label": "The Narrator",
+        "canonical_id": null,
+        "display_name": "The Narrator",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 6,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Sola",
+        "canonical_id": "sola",
+        "display_name": "sola",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
+        "notes": "Direct registry match for 'sola'."
+      },
+      {
+        "label": "Small Martian Creature",
+        "canonical_id": null,
+        "display_name": "Small Martian Creature",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 6,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environments_required": [
+      {
+        "label": "Decorated Sleeping Chamber",
+        "canonical_id": "martian_sleeping_chamber",
+        "display_name": "martian_sleeping_chamber",
+        "status": "canonical",
+        "entity_kind": "environment",
+        "resolution_score": 114,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH004/martian_sleeping_chamber.md",
+        "notes": "Chapter-local environment alias match for 'Decorated Sleeping Chamber' (key_overlap=2, label_overlap=3, context_overlap=4)."
+      }
+    ],
+    "continuity_constraints": [
+      "Small Martian Creature movement and physical appearance",
+      "Light levels within the chamber"
+    ],
+    "visual_coverage_families": [
+      "Medium shots of martian_sleeping_chamber decor",
+      "Close-ups on Small Martian Creature features",
+      "Low-key lighting for nighttime rest setting"
+    ],
+    "beat_list": [
+      {
+        "beat_id": "BT001",
+        "summary": "Sola leads The Narrator to the chamber",
+        "purpose": "",
+        "action_start": "walking toward entrance",
+        "action_end": "stepping inside",
+        "active_subjects": [
+          "sola",
+          "The Narrator"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "chamber entrance",
+        "blocking_hint": "sola leading the way",
+        "environment_subzone": "chamber entrance",
+        "continuity_focus": "light level transition",
+        "coverage_hint": "medium_full",
+        "coverage_priority": "medium",
+        "handoff_to_next": "BT002"
+      },
+      {
+        "beat_id": "BT002",
+        "summary": "The Narrator observes the decorated chamber",
+        "purpose": "",
+        "action_start": "entering room",
+        "action_end": "noticing something strange",
+        "active_subjects": [
+          "The Narrator"
+        ],
+        "passive_subjects": [
+          "sola"
+        ],
+        "spatial_context": "chamber interior decor zone",
+        "blocking_hint": "narrator scanning the room",
+        "environment_subzone": "chamber interior decor zone",
+        "continuity_focus": "decor visibility",
+        "coverage_hint": "medium",
+        "coverage_priority": "low",
+        "handoff_to_next": "BT003"
+      },
+      {
+        "beat_id": "BT003",
+        "summary": "Encounter with the Small Martian Creature",
+        "purpose": "",
+        "action_start": "spotting movement",
+        "action_end": "staring at creature",
+        "active_subjects": [
+          "Small Martian Creature",
+          "The Narrator"
+        ],
+        "passive_subjects": [
+          "sola"
+        ],
+        "spatial_context": "creature sighting zone",
+        "blocking_hint": "creature positioned in low light",
+        "environment_subzone": "creature sighting zone",
+        "continuity_focus": "creature limb/tusk appearance",
+        "coverage_hint": "close_up",
+        "coverage_priority": "high",
+        "handoff_to_next": "end_scene"
+      }
+    ],
+    "planned_shots": [
+      {
+        "planned_shot_id": "SH001",
+        "beat_id": "BT001",
+        "narrative_function": "establish setting",
+        "planned_shot_moment_summary": "sola leads narrator into the chamber",
+        "primary_subject_seed": "sola",
+        "secondary_subjects_seed": [
+          "The Narrator"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "chamber entrance",
+        "planned_shot_required_anchor_1": "chamber doorway",
+        "planned_shot_scale_proof_detail": "architecture vs character size",
+        "start_state_seed": "walking toward door",
+        "end_state_seed": "entering room",
+        "action_seed": "walking",
+        "blocking_seed": [
+          "sola in front of narrator"
+        ],
+        "shot_size": "medium_full",
+        "camera_angle": "eye_level",
+        "lens_family": "wide",
+        "camera_motion": "track",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "profile_left"
+      },
+      {
+        "planned_shot_id": "SH002",
+        "beat_id": "BT002",
+        "narrative_function": "show environment",
+        "planned_shot_moment_summary": "narrator views the decorated room",
+        "primary_subject_seed": "martian_sleeping_chamber decor",
+        "secondary_subjects_seed": [
+          "The Narrator"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "chamber interior decor zone",
+        "planned_shot_required_anchor_1": "decor elements",
+        "planned_shot_scale_proof_detail": "room volume",
+        "start_state_seed": "looking around",
+        "end_state_seed": "stopping movement",
+        "action_seed": "observing",
+        "blocking_seed": [
+          "narrator standing center"
+        ],
+        "shot_size": "medium",
+        "camera_angle": "eye_level",
+        "lens_family": "normal",
+        "camera_motion": "pan",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "front_three_quarter_right"
+      },
+      {
+        "planned_shot_id": "SH003",
+        "beat_id": "BT003",
+        "narrative_function": "introduce fauna",
+        "planned_shot_moment_summary": "close up of the ten-legged creature",
+        "primary_subject_seed": "Small Martian Creature",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "creature sighting zone",
+        "planned_shot_required_anchor_1": "Small Martian Creature",
+        "planned_shot_scale_proof_detail": "creature vs decor size",
+        "start_state_seed": "creature moving",
+        "end_state_seed": "creature freezing/looking",
+        "action_seed": "moving limbs and tusks",
+        "blocking_seed": [
+          "creature on floor or furniture"
+        ],
+        "shot_size": "close_up",
+        "camera_angle": "low_angle",
+        "lens_family": "portrait",
+        "camera_motion": "locked_off",
+        "zoom_behavior": "subtle_in",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "front"
+      }
+    ],
+    "unresolved_questions": [
+      "Resolve The Narrator -> The Narrator",
+      "Resolve Small Martian Creature -> Small Martian Creature"
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC005"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH004",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH017",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH017_chapter_xvii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH004",
+        "canonical_id": "sola"
+      }
+    ],
+    "evidence_summary": [
+      "[CH004_SC005] Purpose: Provide a moment of respite and introduce local fauna, grounding the \"alien\" nature of the world.",
+      "[CH004_SC005] Summary: Sola leads the Narrator to a decorated sleeping chamber. Inside, the Narrator encounters a strange, ten-legged Martian creature with a frog-like head and tusks.",
+      "[CH004_SC005] Emotional arc: Fatigue $\\rightarrow$ Curiosity/Uncanniness.",
+      "[CH004_SC005] Coverage: * Medium shots of the chamber's decor. * Close-ups on the strange creature to emphasize its alien features. * Low-key lighting to suggest a nighttime/rest setting.",
+      "[CH004_SC005] Continuity: The appearance and movement of the small creature; the level of light in the room.",
+      "[CH004] Chapter summary: **Setting:** An enormous, ancient city situated on a low table land near the edge of a dried-up Martian sea. The city features magnificent marble and gold architecture that appears far too large for its current inhabi...",
+      "[CH017] CHAPTER XVII (book index hit)",
+      "[CH010] CHAPTER X (book index hit)",
+      "[CH011] CHAPTER XI (book index hit)",
+      "Character sola: sola"
+    ],
+    "storyboard_markdown": "# Scene Contract: CH004_SC005\n\n## Production Intent\nEstablish a sense of rest within the massive marble and gold architecture by transitioning to an intimate, low-key interior. Use the introduction of local fauna to ground the alien setting through tactile, strange biological details.\n\n## Required Cast\n- The Narrator\n- sola\n- Small Martian Creature\n\n## Required Environments\n- martian_sleeping_chamber\n\n## Continuity Constraints\n- Appearance and movement of the ten-legged Small Martian Creature (frog-like head, tusks)\n- Light levels within the chamber during transition from entrance to interior\n\n## Beat List\n- BT001: Sola leads The Narrator to the chamber\n- BT002: The Narrator observes the decorated chamber\n- BT003: Encounter with the Small Martian Creature",
+    "metadata": {
+      "artifact_id": "CH004_SC005_SCENE_CONTRACT",
+      "artifact_type": "scene_contract",
+      "status": "generated",
+      "source_fingerprint": "7e4a4a26686dbe7bee23aaf93a438f27a27454ea",
+      "created_at_utc": "2026-04-24T00:37:38.340916+00:00",
+      "updated_at_utc": "2026-04-24T00:37:38.340916+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_breakdown",
+          "dependency_id": "CH004_SC005",
+          "version": "e3dab2d59314bef3248803d2728292e937fc8373"
+        },
+        {
+          "dependency_type": "character_resolutions",
+          "dependency_id": "CH004_SC005",
+          "version": "2b7e6e3a23c15b75237c68f10c3ee392d5e4f08c"
+        },
+        {
+          "dependency_type": "environment_resolutions",
+          "dependency_id": "CH004_SC005",
+          "version": "f5774d5bc98dd3de8a701b27b188cb59121b6aee"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-24T00:38:18.164983+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "7e4a4a26686dbe7bee23aaf93a438f27a27454ea"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH005_SC002",
+    "chapter_id": "CH005",
+    "scene_title": "SC002",
+    "purpose": "To initiate the action and demonstrate the physical threat of the Martian guard beast.",
+    "summary": "Seeking to test his limits and the capabilities of his captors, the protagonist attempts to leave his room. He quickly realizes that the short-legged Watch Dog is incredibly fast and intelligent, turning a test into a survival situation.",
+    "emotional_arc": "Determination $\\rightarrow$ Alarm/Panic.",
+    "production_intent": "The protagonist attempts to test the boundaries of his confinement by exiting his chamber, only to be met with a high-speed predatory pursuit by the short-legged Watch Dog. The sequence must emphasize the sudden shift from controlled exploration to frantic survival through rapid movement and low-angle perspectives.",
+    "scene_short_description": "A captive attempts to exit a mural-decorated room and is pursued by a fast predator.",
+    "scene_primary_scale_story_point": "The small, short-legged scale of the_watch_dog vs its high-velocity movement.",
+    "scene_required_anchor_catalog": [
+      "captive_chamber_murals",
+      "immediate hallway/threshold"
+    ],
+    "scene_start_state": "protagonist stands at the edge of the captive_chamber_murals looking toward the threshold.",
+    "scene_end_state": "protagonist is in active flight from the_watch_dog through the immediate hallway/threshold.",
+    "dominant_action_line": "Protagonist exits room -> Watch Dog intercepts -> High-speed chase ensues.",
+    "scene_spatial_layout": [
+      "captive_chamber_murals connects to immediate hallway/threshold",
+      "movement flows from interior chamber to exterior hallway"
+    ],
+    "character_spatial_map": [
+      "protagonist positioned near the threshold exit",
+      "the_watch_dog approaching from the hallway or corner of the chamber"
+    ],
+    "environment_subzones": [
+      "captive_chamber_murals",
+      "immediate hallway/threshold"
+    ],
+    "entry_vectors": [
+      "threshold entrance from chamber"
+    ],
+    "exit_vectors": [
+      "hallway corridor away from chamber"
+    ],
+    "beat_transition_map": [
+      "BT001 -> BT002: sudden detection of movement",
+      "BT002 -> BT003: transition to high-speed chase"
+    ],
+    "characters_required": [
+      {
+        "label": "The Protagonist",
+        "canonical_id": "protagonist",
+        "display_name": "protagonist",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
+      },
+      {
+        "label": "The Watch Dog",
+        "canonical_id": "the_watch_dog",
+        "display_name": "the_watch_dog",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/the_watch_dog.md",
+        "notes": "Direct registry match for 'the_watch_dog'."
+      }
+    ],
+    "environments_required": [
+      {
+        "label": "Captive's chamber",
+        "canonical_id": "captive_chamber_murals",
+        "display_name": "captive_chamber_murals",
+        "status": "canonical",
+        "entity_kind": "environment",
+        "resolution_score": 92,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH005/captive_chamber_murals.md",
+        "notes": "Chapter-local environment alias match for 'Captive's chamber' (key_overlap=2, label_overlap=2, context_overlap=4)."
+      },
+      {
+        "label": "immediate hallway/threshold",
+        "canonical_id": null,
+        "display_name": "immediate hallway/threshold",
+        "status": "review",
+        "entity_kind": "environment",
+        "resolution_score": 8,
+        "source_path": "",
+        "notes": "Low-confidence environment match requires review."
+      }
+    ],
+    "continuity_constraints": [
+      "Physical distance between protagonist and the_watch_dog",
+      "Direction of the chase through the threshold"
+    ],
+    "visual_coverage_families": [
+      "Low-angle shots of the_watch_dog to emphasize speed",
+      "Handheld/shaky cam for protagonist movement",
+      "Tracking shots following rapid approach"
+    ],
+    "beat_list": [
+      {
+        "beat_id": "BT001",
+        "summary": "protagonist attempts to leave the room",
+        "purpose": "",
+        "action_start": "protagonist moves toward threshold",
+        "action_end": "protagonist reaches threshold",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "captive_chamber_murals",
+        "blocking_hint": "moving from center of murals to door",
+        "environment_subzone": "captive_chamber_murals",
+        "continuity_focus": "direction of movement toward exit",
+        "coverage_hint": "medium shot",
+        "coverage_priority": "medium",
+        "handoff_to_next": "detection of the_watch_dog"
+      },
+      {
+        "beat_id": "BT002",
+        "summary": "the_watch_dog intercepts the protagonist",
+        "purpose": "",
+        "action_start": "the_watch_dog lunges/appears",
+        "action_end": "the_watch_dog closes distance",
+        "active_subjects": [
+          "the_watch_dog",
+          "protagonist"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "immediate hallway/threshold",
+        "blocking_hint": "dog enters from threshold area",
+        "environment_subzone": "immediate hallway/threshold",
+        "continuity_focus": "distance between dog and protagonist",
+        "coverage_hint": "low-angle tracking",
+        "coverage_priority": "high",
+        "handoff_to_next": "start of chase"
+      },
+      {
+        "beat_id": "BT003",
+        "summary": "high-speed survival chase",
+        "purpose": "",
+        "action_start": "protagonist turns to flee",
+        "action_end": "protagonist running down hallway",
+        "active_subjects": [
+          "protagonist",
+          "the_watch_dog"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "immediate hallway/threshold",
+        "blocking_hint": "running away from camera/dog",
+        "environment_subzone": "immediate hallway/threshold",
+        "continuity_focus": "direction of chase and speed parity",
+        "coverage_hint": "handheld shaky cam",
+        "coverage_priority": "high",
+        "handoff_to_next": "end of scene"
+      }
+    ],
+    "planned_shots": [
+      {
+        "planned_shot_id": "SH001",
+        "beat_id": "BT001",
+        "narrative_function": "establish intent",
+        "planned_shot_moment_summary": "protagonist approaches the door",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "captive_chamber_murals",
+        "planned_shot_required_anchor_1": "captive_chamber_murals",
+        "planned_shot_scale_proof_detail": "protagonist height vs mural scale",
+        "start_state_seed": "protagonist standing still",
+        "end_state_seed": "protagonist stepping toward threshold",
+        "action_seed": "walking toward exit",
+        "blocking_seed": [
+          "center chamber moving to edge"
+        ],
+        "shot_size": "medium_full",
+        "camera_angle": "eye_level",
+        "lens_family": "normal",
+        "camera_motion": "push_in",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "profile_right"
+      },
+      {
+        "planned_shot_id": "SH002",
+        "beat_id": "BT002",
+        "narrative_function": "reveal threat",
+        "planned_shot_moment_summary": "the_watch_dog appears/lunges",
+        "primary_subject_seed": "the_watch_dog",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "immediate hallway/threshold",
+        "planned_shot_required_anchor_1": "immediate hallway/threshold",
+        "planned_shot_scale_proof_detail": "low-profile height of dog",
+        "start_state_seed": "dog stationary or emerging",
+        "end_state_seed": "dog in mid-sprint",
+        "action_seed": "rapidly approaching",
+        "blocking_seed": [
+          "entering from threshold"
+        ],
+        "shot_size": "close_up",
+        "camera_angle": "low_angle",
+        "lens_family": "wide",
+        "camera_motion": "track",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "high_contrast_ceremonial",
+        "primary_subject_angle": "front_three_quarter_left"
+      },
+      {
+        "planned_shot_id": "SH003",
+        "beat_id": "BT003",
+        "narrative_function": "demonstrate panic",
+        "planned_shot_moment_summary": "protagonist fleeing the dog",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "immediate hallway/threshold",
+        "planned_shot_required_anchor_1": "immediate hallway/threshold",
+        "planned_shot_scale_proof_detail": "distance between subjects",
+        "start_state_seed": "protagonist turning to run",
+        "end_state_seed": "protagonist sprinting away",
+        "action_seed": "running for survival",
+        "blocking_seed": [
+          "moving through hallway"
+        ],
+        "shot_size": "medium_full",
+        "camera_angle": "eye_level",
+        "lens_family": "wide",
+        "camera_motion": "handheld",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "back"
+      }
+    ],
+    "unresolved_questions": [
+      "Resolve immediate hallway/threshold -> immediate hallway/threshold"
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH005",
+        "scene_id": "CH005_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH005",
+        "scene_id": "CH005_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH005",
+        "scene_id": "CH005_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH005",
+        "scene_id": "CH005_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH005",
+        "scene_id": "CH005_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH005",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH005_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH005_chapter_v.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH005",
+        "canonical_id": "protagonist"
+      }
+    ],
+    "evidence_summary": [
+      "[CH005_SC002] Purpose: To initiate the action and demonstrate the physical threat of the Martian guard beast.",
+      "[CH005_SC002] Summary: Seeking to test his limits and the capabilities of his captors, the protagonist attempts to leave his room. He quickly realizes that the short-legged Watch Dog is incredibly fast and intelligent, turning a test into a survival situation.",
+      "[CH005_SC002] Emotional arc: Determination $\\rightarrow$ Alarm/Panic.",
+      "[CH005_SC002] Coverage: Low-angle shots of the Watch Dog to emphasize speed. Handheld/shaky cam for the protagonist's movement. Tracking shots following the dog's rapid approach.",
+      "[CH005_SC002] Continuity: The physical distance between the protagonist and the dog; the direction of the chase.",
+      "[CH005] Chapter summary: **Setting:** A captive's chamber decorated with masterfully painted murals of Martian landscapes; a deserted street in a Martian city; the exterior of a building overlooking a valley. **Characters:** - **The Protagoni...",
+      "[CH006] CHAPTER VI (book index hit)",
+      "[CH010] CHAPTER X (book index hit)",
+      "[CH005] CHAPTER V (book index hit)",
+      "Character protagonist: protagonist"
+    ],
+    "storyboard_markdown": "# Scene Contract: CH005_SC002\n\n## Production Intent\nThe protagonist attempts to test the boundaries of his confinement by exiting his chamber, only to be met with a high-speed predatory pursuit by the short-legged Watch Dog. The sequence must emphasize the sudden shift from controlled exploration to frantic survival through rapid movement and low-angle perspectives.\n\n## Required Cast\n- protagonist\n- the_watch_dog\n\n## Required Environments\n- captive_chamber_murals\n- immediate hallway/threshold\n\n## Continuity Constraints\n- Physical distance between protagonist and the_watch_dog\n- Direction of the chase through the threshold\n\n## Beat List\n- BT001: protagonist attempts to leave the room\n- BT002: the_watch_dog intercepts the protagonist\n- BT003: high-speed survival chase",
+    "metadata": {
+      "artifact_id": "CH005_SC002_SCENE_CONTRACT",
+      "artifact_type": "scene_contract",
+      "status": "generated",
+      "source_fingerprint": "61e3c0892413e63661491fe8ebcb49f7f7f147b3",
+      "created_at_utc": "2026-04-24T00:39:03.705102+00:00",
+      "updated_at_utc": "2026-04-24T00:39:03.705102+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_breakdown",
+          "dependency_id": "CH005_SC002",
+          "version": "8e0bdf66c528b5f498ff02159a8e2b778fe29185"
+        },
+        {
+          "dependency_type": "character_resolutions",
+          "dependency_id": "CH005_SC002",
+          "version": "7414b02a111e8b325bcbaa086c0f11a5c0af99e4"
+        },
+        {
+          "dependency_type": "environment_resolutions",
+          "dependency_id": "CH005_SC002",
+          "version": "a0e13b17eae4fd9e5839cef8784691de6a7e56b5"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-24T00:39:46.313948+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "61e3c0892413e63661491fe8ebcb49f7f7f147b3"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH006_SC001",
+    "chapter_id": "CH006",
+    "scene_title": "SC001",
+    "purpose": "To establish immediate life-or-death stakes and demonstrate the loyalty of the Watch-thing.",
+    "summary": "The protagonist is pinned by a massive Bull Ape. As its mate approaches with a stone cudgel to finish him, the Watch-thing leaps into the fray, engaging the mate in a brutal struggle to buy the protagonist time.",
+    "emotional_arc": "Terror $\\rightarrow$ Desperation $\\rightarrow$ Fierce Loyalty.",
+    "production_intent": "Establish life-or-death stakes through a physical struggle between the protagonist and a massive Bull Ape, utilizing a sudden intervention by the watch_thing to demonstrate loyalty. The sequence must transition from claustrophobic terror to kinetic creature combat.",
+    "scene_short_description": "An Earthman is pinned by a massive beast as its mate approaches with a weapon.",
+    "scene_primary_scale_story_point": "Massive bull_ape vs small protagonist and multi-legged watch_thing.",
+    "scene_required_anchor_catalog": [
+      "stone cudgel",
+      "martian_interior_chamber floor"
+    ],
+    "scene_start_state": "protagonist is pinned under the weight of bull_ape in martian_interior_chamber.",
+    "scene_end_state": "watch_thing and The Mate (Bull Ape) are locked in a brutal struggle.",
+    "dominant_action_line": "Protagonist struggles for survival while watch_thing intervenes to fight The Mate (Bull Ape).",
+    "scene_spatial_layout": [
+      "martian_interior_chamber floor space occupied by bull_ape and protagonist",
+      "mate approaches from the threshold of the martian_city_plaza"
+    ],
+    "character_spatial_map": [
+      "protagonist: pinned on chamber floor",
+      "bull_ape: looming over protagonist",
+      "The Mate (Bull Ape): approaching from plaza entrance",
+      "watch_thing: leaping from periphery into combat zone"
+    ],
+    "environment_subzones": [
+      "martian_interior_chamber",
+      "martian_city_plaza threshold"
+    ],
+    "entry_vectors": [
+      "The Mate (Bull Ape) enters via chamber doorway from martian_city_plaza"
+    ],
+    "exit_vectors": [
+      "Subjects exit or hand off toward the next story beat."
+    ],
+    "beat_transition_map": [
+      "BT001 -> BT002: mate approaches with weapon",
+      "BT002 -> BT003: watch_thing leaps into combat"
+    ],
+    "characters_required": [
+      {
+        "label": "The Protagonist",
+        "canonical_id": "protagonist",
+        "display_name": "protagonist",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH006/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
+      },
+      {
+        "label": "The Watch-thing",
+        "canonical_id": "watch_thing",
+        "display_name": "watch_thing",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH006/watch_thing.md",
+        "notes": "Direct registry match for 'watch_thing'."
+      },
+      {
+        "label": "The Bull Ape",
+        "canonical_id": "bull_ape",
+        "display_name": "bull_ape",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH006/bull_ape.md",
+        "notes": "Direct registry match for 'bull_ape'."
+      },
+      {
+        "label": "The Mate (Bull Ape)",
+        "canonical_id": null,
+        "display_name": "The Mate (Bull Ape)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 10,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environments_required": [
+      {
+        "label": "Interior chamber",
+        "canonical_id": "martian_interior_chamber",
+        "display_name": "martian_interior_chamber",
+        "status": "canonical",
+        "entity_kind": "sub_location",
+        "resolution_score": 104,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH006/martian_interior_chamber.md",
+        "notes": "Chapter-local environment alias match for 'Interior chamber' (key_overlap=2, label_overlap=2, context_overlap=4)."
+      },
+      {
+        "label": "Martian city building",
+        "canonical_id": "martian_city_plaza",
+        "display_name": "martian_city_plaza",
+        "status": "canonical",
+        "entity_kind": "plaza",
+        "resolution_score": 102,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH006/martian_city_plaza.md",
+        "notes": "Chapter-local environment alias match for 'Martian city building' (key_overlap=2, label_overlap=3, context_overlap=4)."
+      }
+    ],
+    "continuity_constraints": [
+      "bull_ape limb positioning during pinning",
+      "location of the fallen stone cudgel",
+      "physical injury state of watch_thing during fight"
+    ],
+    "visual_coverage_families": [
+      "Tight close-ups on protagonist struggle/pinned position",
+      "Wide shots of watch_thing intervention",
+      "Handheld kinetic creature combat"
+    ],
+    "beat_list": [
+      {
+        "beat_id": "BT001",
+        "summary": "protagonist pinned by bull_ape",
+        "purpose": "",
+        "action_start": "protagonist struggling under weight",
+        "action_end": "bull_ape limbs stabilizing position",
+        "active_subjects": [
+          "protagonist",
+          "bull_ape"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "martian_interior_chamber floor",
+        "blocking_hint": "protagonist trapped beneath massive beast",
+        "environment_subzone": "martian_interior_chamber",
+        "continuity_focus": "bull_ape limb placement",
+        "coverage_hint": "tight close-ups",
+        "coverage_priority": "high",
+        "handoff_to_next": "The Mate (Bull Ape) approaches"
+      },
+      {
+        "beat_id": "BT002",
+        "summary": "mate approaches with stone cudgel",
+        "purpose": "",
+        "action_start": "mate enters from plaza",
+        "action_end": "mate raises weapon to strike",
+        "active_subjects": [
+          "The Mate (Bull Ape)"
+        ],
+        "passive_subjects": [
+          "protagonist",
+          "bull_ape"
+        ],
+        "spatial_context": "chamber entrance/floor",
+        "blocking_hint": "mate moves toward the pinned protagonist",
+        "environment_subzone": "martian_interior_chamber",
+        "continuity_focus": "location of stone cudgel",
+        "coverage_hint": "wide shots",
+        "coverage_priority": "medium",
+        "handoff_to_next": "watch_thing intervention"
+      },
+      {
+        "beat_id": "BT003",
+        "summary": "watch_thing engages mate in combat",
+        "purpose": "",
+        "action_start": "watch_thing leaps into frame",
+        "action_end": "brutal struggle between creatures",
+        "active_subjects": [
+          "watch_thing",
+          "The Mate (Bull Ape)"
+        ],
+        "passive_subjects": [
+          "protagonist",
+          "bull_ape"
+        ],
+        "spatial_context": "center of chamber",
+        "blocking_hint": "watch_thing intercepts the mate's path to protagonist",
+        "environment_subzone": "martian_interior_chamber",
+        "continuity_focus": "watch_thing injury state",
+        "coverage_hint": "handheld kinetic shots",
+        "coverage_priority": "high",
+        "handoff_to_next": "combat continues"
+      }
+    ],
+    "planned_shots": [
+      {
+        "planned_shot_id": "SH001",
+        "beat_id": "BT001",
+        "narrative_function": "establish stakes",
+        "planned_shot_moment_summary": "protagonist pinned under bull_ape",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [
+          "bull_ape"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "martian_interior_chamber",
+        "planned_shot_required_anchor_1": "martian_interior_chamber floor",
+        "planned_shot_scale_proof_detail": "bull_ape limbs covering protagonist",
+        "start_state_seed": "protagonist gasping",
+        "end_state_seed": "mate enters frame",
+        "action_seed": "struggle",
+        "blocking_seed": [
+          "protagonist center floor",
+          "bull_ape over top"
+        ],
+        "shot_size": "close_up",
+        "camera_angle": "low_angle",
+        "lens_family": "portrait",
+        "camera_motion": "handheld",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "front_three_quarter_left"
+      },
+      {
+        "planned_shot_id": "SH002",
+        "beat_id": "BT002",
+        "narrative_function": "introduce threat",
+        "planned_shot_moment_summary": "mate approaches with stone cudgel",
+        "primary_subject_seed": "The Mate (Bull Ape)",
+        "secondary_subjects_seed": [
+          "stone cudgel"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "martian_interior_chamber",
+        "planned_shot_required_anchor_1": "stone cudgel",
+        "planned_shot_scale_proof_detail": "cudgel size relative to mate",
+        "start_state_seed": "mate enters doorway",
+        "end_state_seed": "mate raises weapon",
+        "action_seed": "approaching",
+        "blocking_seed": [
+          "mate moving from plaza to chamber"
+        ],
+        "shot_size": "medium_full",
+        "camera_angle": "eye_level",
+        "lens_family": "wide",
+        "camera_motion": "pan",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "profile_left"
+      },
+      {
+        "planned_shot_id": "SH003",
+        "beat_id": "BT003",
+        "narrative_function": "demonstrate loyalty",
+        "planned_shot_moment_summary": "watch_thing leaps into fray",
+        "primary_subject_seed": "watch_thing",
+        "secondary_subjects_seed": [
+          "The Mate (Bull Ape)"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "martian_interior_chamber",
+        "planned_shot_required_anchor_1": "martian_interior_chamber floor",
+        "planned_shot_scale_proof_detail": "watch_thing vs mate size ratio",
+        "start_state_seed": "watch_thing leaps",
+        "end_state_seed": "creature combat begins",
+        "action_seed": "combat",
+        "blocking_seed": [
+          "watch_thing intercepts mate between bull_ape and protagonist"
+        ],
+        "shot_size": "wide",
+        "camera_angle": "low_angle",
+        "lens_family": "ultra_wide",
+        "camera_motion": "handheld",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "front"
+      }
+    ],
+    "unresolved_questions": [
+      "Resolve The Mate (Bull Ape) -> The Mate (Bull Ape)"
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC001"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH006",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH006_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH020",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH020_chapter_xx.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH021",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH006",
+        "canonical_id": "protagonist"
+      }
+    ],
+    "evidence_summary": [
+      "[CH006_SC001] Purpose: To establish immediate life-or-death stakes and demonstrate the loyalty of the Watch-thing.",
+      "[CH006_SC001] Summary: The protagonist is pinned by a massive Bull Ape. As its mate approaches with a stone cudgel to finish him, the Watch-thing leaps into the fray, engaging the mate in a brutal struggle to buy the protagonist time.",
+      "[CH006_SC001] Emotional arc: Terror $\\rightarrow$ Desperation $\\rightarrow$ Fierce Loyalty.",
+      "[CH006_SC001] Coverage: Tight close-ups on the protagonist's struggle/pinned position. Wide shots of the Watch-thing's intervention. Handheld, kinetic shots of the creature combat.",
+      "[CH006_SC001] Continuity: The positioning of the Bull Ape's limbs; the location of the fallen cudgel; the physical state (injuries) of the Watch-thing during the fight.",
+      "[CH006] Chapter summary: **Setting:** An interior chamber within a building in a Martian city, leading out to a plaza. **Characters:** - **The Protagonist:** An Earthman fighting for survival. - **The Watch-thing:** A multi-legged, loyal, and...",
+      "[CH020] CHAPTER XX (book index hit)",
+      "[CH006] CHAPTER VI (book index hit)",
+      "[CH021] CHAPTER XXI (book index hit)",
+      "Character protagonist: protagonist"
+    ],
+    "storyboard_markdown": "# Scene Contract: CH006_SC001\n\n## Production Intent\nEstablish life-or-death stakes through a physical struggle between the protagonist and a massive Bull Ape, utilizing a sudden intervention by the watch_thing to demonstrate loyalty. The sequence must transition from claustrophobic terror to kinetic creature combat.\n\n## Required Cast\n- protagonist\n- bull_ape\n- The Mate (Bull Ape)\n- watch_thing\n\n## Required Environments\n- martian_interior_chamber\n- martian_city_plaza\n\n## Continuity Constraints\n- Positioning of bull_ape limbs during pinning\n- Location of the stone cudgel\n- Physical injury state of watch_thing during combat\n\n## Beat List\n- BT001: protagonist pinned by bull_ape\n- BT002: mate approaches with stone cudgel\n- BT003: watch_thing engages mate in combat",
+    "metadata": {
+      "artifact_id": "CH006_SC001_SCENE_CONTRACT",
+      "artifact_type": "scene_contract",
+      "status": "generated",
+      "source_fingerprint": "6db697bbcef30b30d8761b2817fcc4d70bc9b65b",
+      "created_at_utc": "2026-04-24T00:41:13.243858+00:00",
+      "updated_at_utc": "2026-04-24T00:41:13.243858+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_breakdown",
+          "dependency_id": "CH006_SC001",
+          "version": "aca4a953cc202ae75d2d33ab193b2ca80e1f6ee0"
+        },
+        {
+          "dependency_type": "character_resolutions",
+          "dependency_id": "CH006_SC001",
+          "version": "59ed48e8ab3e5226ccdbbf53da7a561318e4fd0f"
+        },
+        {
+          "dependency_type": "environment_resolutions",
+          "dependency_id": "CH006_SC001",
+          "version": "ebfcbd71f56cc780d6934890105b1ffec6c84ccc"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-24T00:41:58.459789+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6db697bbcef30b30d8761b2817fcc4d70bc9b65b"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH006_SC002",
+    "chapter_id": "CH006",
+    "scene_title": "SC002",
+    "purpose": "To showcase the protagonist's combat prowess using Earthly tactics and resolve.",
+    "summary": "Seeing his guardian losing, the protagonist kills the first ape with a cudgel. The mate returns in a rage; rather than fleeing, the protagonist uses precise strikes to the chin and stomach to incapacitate and ultimately kill the second ape.",
+    "emotional_arc": "Panic $\\rightarrow$ Resolve $\\rightarrow$ Adrenaline-fueled triumph.",
+    "production_intent": "Demonstrate the protagonist's transition from panic to tactical resolve through high-stakes combat against primate aggressors. The sequence must emphasize Earthly fighting techniques and precise physical impact over brute force.",
+    "scene_short_description": "An Earthman uses a cudgel to defend a wounded guardian against aggressive apes in a Martian chamber.",
+    "scene_primary_scale_story_point": "Human tactical precision vs. Primate brute strength.",
+    "scene_required_anchor_catalog": [
+      "cudgel",
+      "watch_thing (wounded)"
+    ],
+    "scene_start_state": "protagonist watching watch_thing lose combat to the first ape.",
+    "scene_end_state": "protagonist standing over the dead second ape, adrenaline-fueled.",
+    "dominant_action_line": "Protagonist kills first ape with cudgel, then uses precise strikes to kill the mate.",
+    "scene_spatial_layout": [
+      "martian_interior_chamber floor space",
+      "proximity between combatants and wounded watch_thing"
+    ],
+    "character_spatial_map": [
+      "protagonist near watch_thing",
+      "The Mate (Bull Ape) charging from chamber entrance",
+      "first ape positioned between protagonist and watch_thing"
+    ],
+    "environment_subzones": [
+      "martian_interior_chamber central floor",
+      "martian_interior_chamber perimeter"
+    ],
+    "entry_vectors": [
+      "The Mate (Bull Ape) enters via chamber doorway"
+    ],
+    "exit_vectors": [
+      "Subjects exit or hand off toward the next story beat."
+    ],
+    "beat_transition_map": [
+      "BT001 -> BT002: Kill of first ape / Arrival of mate",
+      "BT002 -> BT003: Combat engagement / Final incapacitation"
+    ],
+    "characters_required": [
+      {
+        "label": "The Protagonist",
+        "canonical_id": "protagonist",
+        "display_name": "protagonist",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH006/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
+      },
+      {
+        "label": "The Watch-thing (wounded/dying)",
+        "canonical_id": "watch_thing",
+        "display_name": "watch_thing",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH006/watch_thing.md",
+        "notes": "Direct registry match for 'watch_thing'."
+      },
+      {
+        "label": "The Mate (Bull Ape)",
+        "canonical_id": null,
+        "display_name": "The Mate (Bull Ape)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 10,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environments_required": [
+      {
+        "label": "Interior chamber",
+        "canonical_id": "martian_interior_chamber",
+        "display_name": "martian_interior_chamber",
+        "status": "canonical",
+        "entity_kind": "sub_location",
+        "resolution_score": 104,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH006/martian_interior_chamber.md",
+        "notes": "Chapter-local environment alias match for 'Interior chamber' (key_overlap=2, label_overlap=2, context_overlap=4)."
+      }
+    ],
+    "continuity_constraints": [
+      "Direction of cudgel swings",
+      "Blood splatter patterns",
+      "Protagonist physical exhaustion levels"
+    ],
+    "visual_coverage_families": [
+      "Medium shots of tactical movements",
+      "Impact shots (chin/stomach strikes)",
+      "Close-ups on facial determination"
+    ],
+    "beat_list": [
+      {
+        "beat_id": "BT001",
+        "summary": "Protagonist kills first ape with cudgel",
+        "purpose": "",
+        "action_start": "protagonist sees watch_thing losing",
+        "action_end": "first ape is dead",
+        "active_subjects": [
+          "protagonist",
+          "first ape"
+        ],
+        "passive_subjects": [
+          "watch_thing"
+        ],
+        "spatial_context": "martian_interior_chamber central floor",
+        "blocking_hint": "protagonist moves from guardian to aggressor",
+        "environment_subzone": "martian_interior_chamber central floor",
+        "continuity_focus": "cudgel swing direction and blood splatter",
+        "coverage_hint": "medium shots of movement",
+        "coverage_priority": "high",
+        "handoff_to_next": "The Mate (Bull Ape) enters in rage"
+      },
+      {
+        "beat_id": "BT002",
+        "summary": "The Mate (Bull Ape) returns in a rage",
+        "purpose": "",
+        "action_start": "mate enters chamber",
+        "action_end": "protagonist prepares for combat",
+        "active_subjects": [
+          "The Mate (Bull Ape)",
+          "protagonist"
+        ],
+        "passive_subjects": [
+          "watch_thing"
+        ],
+        "spatial_context": "martian_interior_chamber central floor",
+        "blocking_hint": "mate charges toward protagonist",
+        "environment_subzone": "martian_interior_chamber central floor",
+        "continuity_focus": "protagonist's level of panic/resolve",
+        "coverage_hint": "medium shots",
+        "coverage_priority": "medium",
+        "handoff_to_next": "Protagonist engages mate"
+      },
+      {
+        "beat_id": "BT003",
+        "summary": "Protagonist uses precise strikes to kill the second ape",
+        "purpose": "",
+        "action_start": "mate charges",
+        "action_end": "second ape is dead",
+        "active_subjects": [
+          "protagonist",
+          "The Mate (Bull Ape)"
+        ],
+        "passive_subjects": [
+          "watch_thing"
+        ],
+        "spatial_context": "martian_interior_chamber central floor",
+        "blocking_hint": "protagonist uses chin and stomach strikes",
+        "environment_subzone": "martian_interior_chamber central floor",
+        "continuity_focus": "physical exhaustion levels and strike precision",
+        "coverage_hint": "impact shots and facial close-ups",
+        "coverage_priority": "high",
+        "handoff_to_next": "scene end"
+      }
+    ],
+    "planned_shots": [
+      {
+        "planned_shot_id": "SH001",
+        "beat_id": "BT001",
+        "narrative_function": "establish stakes",
+        "planned_shot_moment_summary": "protagonist sees watch_thing losing",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [
+          "watch_thing",
+          "first ape"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "martian_interior_chamber central floor",
+        "planned_shot_required_anchor_1": "watch_thing",
+        "planned_shot_scale_proof_detail": "watch_thing wounded state",
+        "start_state_seed": "protagonist in panic",
+        "end_state_seed": "protagonist gripping cudgel",
+        "action_seed": "protagonist lunges at first ape",
+        "blocking_seed": [
+          "protagonist moves from watch_thing toward first ape"
+        ],
+        "shot_size": "medium_full",
+        "camera_angle": "eye_level",
+        "lens_family": "normal",
+        "camera_motion": "handheld",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "front_three_quarter_right"
+      },
+      {
+        "planned_shot_id": "SH002",
+        "beat_id": "BT002",
+        "narrative_function": "show impact",
+        "planned_shot_moment_summary": "cudgel strike to first ape",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [
+          "first ape"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "martian_interior_chamber central floor",
+        "planned_shot_required_anchor_1": "cudgel",
+        "planned_shot_scale_proof_detail": "blood splatter pattern",
+        "start_state_seed": "swinging cudgel",
+        "end_state_seed": "first ape falls",
+        "action_seed": "heavy strike to first ape",
+        "blocking_seed": [
+          "protagonist swings through the target"
+        ],
+        "shot_size": "medium",
+        "camera_angle": "low_angle",
+        "lens_family": "wide",
+        "camera_motion": "handheld",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "profile_left"
+      },
+      {
+        "planned_shot_id": "SH003",
+        "beat_id": "BT003",
+        "narrative_function": "show tactical precision",
+        "planned_shot_moment_summary": "strike to chin and stomach",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [
+          "The Mate (Bull Ape)"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "martian_interior_chamber central floor",
+        "planned_shot_required_anchor_1": "The Mate (Bull Ape)",
+        "planned_shot_scale_proof_detail": "precise strike contact",
+        "start_state_seed": "mate charging",
+        "end_state_seed": "mate incapacitated",
+        "action_seed": "rapid strikes to chin and stomach",
+        "blocking_seed": [
+          "protagonist pivots to meet charge"
+        ],
+        "shot_size": "medium_close",
+        "camera_angle": "eye_level",
+        "lens_family": "portrait",
+        "camera_motion": "track",
+        "zoom_behavior": "subtle_in",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "front"
+      }
+    ],
+    "unresolved_questions": [
+      "Resolve The Mate (Bull Ape) -> The Mate (Bull Ape)"
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH006",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH006_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH016",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH016_chapter_xvi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH006",
+        "canonical_id": "protagonist"
+      }
+    ],
+    "evidence_summary": [
+      "[CH006_SC002] Purpose: To showcase the protagonist's combat prowess using Earthly tactics and resolve.",
+      "[CH006_SC002] Summary: Seeing his guardian losing, the protagonist kills the first ape with a cudgel. The mate returns in a rage; rather than fleeing, the protagonist uses precise strikes to the chin and stomach to incapacitate and ultimately kill the secon...",
+      "[CH006_SC002] Emotional arc: Panic $\\rightarrow$ Resolve $\\rightarrow$ Adrenaline-fueled triumph.",
+      "[CH006_SC002] Coverage: Medium shots of the protagonist's tactical movements. Impact shots (the strike to the chin/stomach). Close-ups on the protagonist's face showing determination over fear.",
+      "[CH006_SC002] Continuity: The direction of the cudgel swings; blood splatter patterns; the physical exhaustion levels of the protagonist.",
+      "[CH006] Chapter summary: **Setting:** An interior chamber within a building in a Martian city, leading out to a plaza. **Characters:** - **The Protagonist:** An Earthman fighting for survival. - **The Watch-thing:** A multi-legged, loyal, and...",
+      "[CH006] CHAPTER VI (book index hit)",
+      "[CH010] CHAPTER X (book index hit)",
+      "[CH016] CHAPTER XVI (book index hit)",
+      "Character protagonist: protagonist"
+    ],
+    "storyboard_markdown": "# Scene Contract: CH006_SC002\n\n## Production Intent\nDemonstrate the protagonist's transition from panic to tactical resolve through high-stakes combat against primate aggressors. The sequence must emphasize Earthly fighting techniques and precise physical impact over brute force.\n\n## Required Cast\n- protagonist\n- watch_thing\n- The Mate (Bull Ape)\n\n## Required Environments\n- martian_interior_chamber\n\n## Continuity Constraints\n- Direction of cudgel swings\n- Blood splatter patterns\n- Protagonist physical exhaustion levels\n\n## Beat List\n- BT001: Protagonist kills first ape with cudgel\n- BT002: The Mate (Bull Ape) returns in a rage\n- BT003: Protagonist uses precise strikes to kill the second ape",
+    "metadata": {
+      "artifact_id": "CH006_SC002_SCENE_CONTRACT",
+      "artifact_type": "scene_contract",
+      "status": "generated",
+      "source_fingerprint": "67f039453b2ea1aaf0ee8a874f3a342216a8cf1e",
+      "created_at_utc": "2026-04-24T00:41:59.101243+00:00",
+      "updated_at_utc": "2026-04-24T00:41:59.101243+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_breakdown",
+          "dependency_id": "CH006_SC002",
+          "version": "724efed77c112fe1d6582f460f09a9b737d5794a"
+        },
+        {
+          "dependency_type": "character_resolutions",
+          "dependency_id": "CH006_SC002",
+          "version": "0cb7528ddf0a6f23f6d10a1eaa7b212d9ea6cc52"
+        },
+        {
+          "dependency_type": "environment_resolutions",
+          "dependency_id": "CH006_SC002",
+          "version": "0b31b9b9b132e5acbc0e9a6b29d03058483e49cd"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-24T00:42:42.300240+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "67f039453b2ea1aaf0ee8a874f3a342216a8cf1e"
+        }
+      ]
+    }
+  }
+]
