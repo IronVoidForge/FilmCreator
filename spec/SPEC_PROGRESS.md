@@ -54,7 +54,7 @@ The latest validated state is:
 
 ### 1.6 SQLite relational model
 - status: `planned`
-- evidence: SQLite remains deferred until the file-first production contracts stabilize, but the core entity/relationship variable set is now stable enough to design against
+- evidence: SQLite remains deferred until the file-first production contracts stabilize, but the core entity/relationship variable set is now stable enough to design against; a proposed structure v1.0 now exists in `PROPOSED_STRUCTURE_1_0.md`
 - next validation: revisit once the remaining prompt-fidelity and lifecycle semantics are stable and the schema can be introduced without fighting active contract churn
 
 ## Shared Asset Foundation

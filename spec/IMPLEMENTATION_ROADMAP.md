@@ -23,6 +23,7 @@ Ship a local-first, reviewable, resumable film pipeline that can:
 - Phase 7 character bible synthesis is validated as a CLI/launcher stage.
 - Phase 8 environment bible synthesis is validated and runnable through the CLI and launcher.
 - Phase 9.5 scene binding, Phase 10 shot planning, Phase 11 dialogue timeline, Phase 11.5 prompt preparation, Phase 11.7 descriptor enrichment, and Phase 11.8 quality grading are all implemented as runnable downstream stages, with the first five already validated in live reruns.
+- Phase 11.9 quality smoothing and patch repair is the next quality-side follow-on and should be treated as the narrow repair layer for weak fields after grading is stable.
 - Repair-first retries and chunk fallback are active and materially improved authoring stability.
 - The current bottleneck is no longer phase availability; it is prompt-ready variable quality, environment handoff in transition scenes, subject/object typing, and final prompt fidelity.
 
@@ -644,6 +645,8 @@ SQLite should remain deferred until:
 - phase 7-11.8 contracts stabilize,
 - lifecycle and dependency semantics stabilize,
 - the file-first artifacts are mature enough to sync rather than speculate.
+
+A proposed SQLite structure v1.0 now exists in `spec/PROPOSED_STRUCTURE_1_0.md` so future implementation work can target a concrete shape without freezing the schema prematurely.
 
 The first SQLite release should remain:
 

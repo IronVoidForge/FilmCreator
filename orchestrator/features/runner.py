@@ -358,7 +358,9 @@ def _execute_prepared_run(prepared: PreparedRun) -> None:
         if not comfy_outputs:
             raise RuntimeError(f"ComfyUI prompt {prompt_id} completed without any saved routed outputs.")
 
-        routed_outputs = _route_outputs(prepared, comfy_outputs)
+        from ..runner import _route_outputs as route_outputs
+
+        routed_outputs = route_outputs(prepared, comfy_outputs)
     except Exception as exc:
         manifest = read_json(prepared.manifest_path)
         manifest["status"] = "failed"

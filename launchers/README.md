@@ -4,8 +4,6 @@ The launcher tree is now grouped by workflow so the root stays readable:
 
 - `authoring/`
   - LM Studio connectivity checks and authoring-side smoke tests
-  - `authoring/princess_of_mars/`
-    - chapter-analysis and prompt-generation launchers for `princess_of_mars_test`
 - `render/8188/`
   - the default ComfyUI runtime and its keyframe review flow
 - `render/clean_8190/`
@@ -22,17 +20,6 @@ The launcher tree is now grouped by workflow so the root stays readable:
   - opens a FilmCreator shell for planning or authoring work
 - `authoring\test_lmstudio_connectivity.bat`
   - verifies the LM Studio connection before authoring
-- `authoring\test_pilot_scene_prompt_writer_lmstudio.bat`
-  - rewrites the canonical pilot prompt packages for `SC001/CL001`
-- `authoring\princess_of_mars\test_princess_of_mars_authoring_checkpoint.bat`
-  - runs the full chapter-to-analysis-to-prompt checkpoint for `princess_of_mars_test`
-- `authoring\princess_of_mars\test_princess_of_mars_authoring_checkpoint_ch09.bat`
-- `authoring\princess_of_mars\test_princess_of_mars_authoring_checkpoint_ch10.bat`
-- `authoring\princess_of_mars\test_princess_of_mars_chapter_analysis_pass.bat`
-- `authoring\princess_of_mars\test_princess_of_mars_scene_planning_pass.bat`
-- `authoring\princess_of_mars\test_princess_of_mars_shared_prompt_pass.bat`
-- `authoring\princess_of_mars\test_princess_of_mars_clip_prompt_pass.bat`
-- `authoring\princess_of_mars\test_princess_of_mars_full_chapter_authoring.bat`
 
 ## Render
 

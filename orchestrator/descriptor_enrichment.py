@@ -320,6 +320,10 @@ def _normalize_text(value: str) -> str:
     return " ".join(value.split()).strip()
 
 
+def _normalize_term(value: str) -> str:
+    return _normalize_text(value).lower()
+
+
 def _compact(text: str, *, limit: int = 220) -> str:
     collapsed = _normalize_text(text)
     if len(collapsed) <= limit:
