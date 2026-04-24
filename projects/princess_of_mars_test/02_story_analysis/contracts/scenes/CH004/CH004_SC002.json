@@ -5,39 +5,39 @@
   "purpose": "Introduce the political hierarchy and the physical absurdity of the Martian culture.",
   "summary": "The Narrator is presented to the Chieftain in a grand audience chamber. He observes the mismatch between the massive, ancient furniture and the Martians' biology, emphasizing the antiquity of the ruins.",
   "emotional_arc": "Intimidation $\\rightarrow$ Observational Curiosity.",
-  "production_intent": "Establish the political hierarchy of Mars through a visual mismatch between the massive, ancient marble and gold architecture and the biological scale of the Martian inhabitants. The scene must emphasize the antiquity of the ruins via oversized furniture that dwarfs the characters.",
-  "scene_short_description": "A small figure is presented within a massive, ancient hall filled with oversized marble and gold furniture.",
+  "production_intent": "Establish the political hierarchy of Mars through a visual mismatch between massive, ancient marble and gold architecture and the biological scale of the Martian inhabitants. The scene must emphasize the antiquity of the ruins via oversized furniture that dwarfs the characters.",
+  "scene_short_description": "A small figure enters a massive marble hall filled with oversized, ancient gold furniture.",
   "scene_primary_scale_story_point": "Furniture and architecture are disproportionately large compared to Martian biology.",
   "scene_required_anchor_catalog": [
-    "Chieftain's throne/seat",
+    "Chieftain throne",
     "Oversized marble table"
   ],
-  "scene_start_state": "The Narrator enters the vast expanse of the grand audience chamber, feeling small.",
-  "scene_end_state": "The Narrator observes the absurdity of the environment with curiosity.",
-  "dominant_action_line": "The presentation of the Narrator to the Chieftain amidst ancient ruins.",
+  "scene_start_state": "Narrator enters the vast expanse of the grand audience chamber feeling small.",
+  "scene_end_state": "Narrator observes the architectural mismatch with growing curiosity.",
+  "dominant_action_line": "The presentation of the Narrator to the Chieftain within a disproportionate environment.",
   "scene_spatial_layout": [
     "Vast open floor space between entrance and throne",
-    "High ceilings with marble/gold architectural elements"
+    "High ceilings with marble/gold architecture"
   ],
   "character_spatial_map": [
-    "The Narrator positioned in the center-floor expanse",
-    "chieftain seated on elevated, oversized furniture",
-    "tars_tarkas and Martian Court flanking the periphery"
+    "Narrator positioned in the center-floor expanse",
+    "chieftain seated on elevated, oversized throne",
+    "tars_tarkas acting as intermediary near Narrator"
   ],
   "environment_subzones": [
-    "central_audience_floor",
-    "throne_platform",
-    "peripheral_ruin_corridors"
+    "throne_zone",
+    "central_aisle",
+    "entrance_threshold"
   ],
   "entry_vectors": [
-    "main_chamber_entrance"
+    "entrance_threshold"
   ],
   "exit_vectors": [
-    "main_chamber_entrance"
+    "entrance_threshold"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Visual shift from scale to character hierarchy",
-    "BT002 -> BT003: Shift from intimidation to environmental observation"
+    "BT001 -> BT002: Visual scale shock",
+    "BT002 -> BT003: Formal presentation shift"
   ],
   "characters_required": [
     {
@@ -94,70 +94,72 @@
     }
   ],
   "continuity_constraints": [
-    "Precise spatial placement of the Narrator relative to massive chamber dimensions",
-    "Visual consistency of the Chieftain's specific regalia details"
+    "Precise spatial positioning of Narrator relative to massive chamber dimensions",
+    "Visual consistency of Chieftain regalia details"
   ],
   "visual_coverage_families": [
-    "Medium shots of the chieftain in regalia",
-    "Close-ups on the Narrator's face reacting to environment",
-    "Detail shots of oversized, ancient furniture"
+    "Medium shots of chieftain in regalia",
+    "Close-ups on Narrator reaction",
+    "Detail shots of oversized ancient furniture"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "The Narrator enters the grand chamber and feels the scale of the ruins",
+      "summary": "Narrator enters the grand chamber and experiences the scale of the ruins",
       "purpose": "",
-      "action_start": "Narrator at entrance",
-      "action_end": "Narrator in center floor",
+      "action_start": "Narrator crossing threshold",
+      "action_end": "Narrator standing still in center",
       "active_subjects": [
         "The Narrator"
       ],
-      "passive_subjects": [],
-      "spatial_context": "central_audience_floor",
-      "blocking_hint": "walking through vast space",
-      "environment_subzone": "central_audience_floor",
-      "continuity_focus": "placement of Narrator in chamber",
-      "coverage_hint": "wide shot showing scale",
+      "passive_subjects": [
+        "Martian Court"
+      ],
+      "spatial_context": "central_aisle",
+      "blocking_hint": "walking from entrance toward throne",
+      "environment_subzone": "entrance_threshold",
+      "continuity_focus": "Narrator position in chamber",
+      "coverage_hint": "wide shot of scale",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "The presentation to the Chieftain and recognition of authority",
+      "summary": "Observation of the physical absurdity and antiquity of the furniture",
       "purpose": "",
-      "action_start": "Narrator stops walking",
-      "action_end": "Narrator faces chieftain",
+      "action_start": "Narrator looking around",
+      "action_end": "Narrator focusing on a specific object",
       "active_subjects": [
-        "The Narrator",
-        "chieftain"
+        "The Narrator"
       ],
-      "passive_subjects": [
-        "tars_tarkas",
-        "Martian Court"
-      ],
-      "spatial_context": "throne_platform",
-      "blocking_hint": "Narrator facing the throne",
-      "environment_subzone": "throne_platform",
-      "continuity_focus": "chieftain regalia details",
-      "coverage_hint": "medium shots of chieftain",
+      "passive_subjects": [],
+      "spatial_context": "grand_audience_chamber",
+      "blocking_hint": "Narrator turning head",
+      "environment_subzone": "throne_zone",
+      "continuity_focus": "furniture scale vs character",
+      "coverage_hint": "detail shots/close-ups",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "The Narrator notices the mismatch between biology and architecture",
+      "summary": "Formal presentation to the Chieftain",
       "purpose": "",
-      "action_start": "Narrator looks around",
-      "action_end": "Narrator stares at furniture",
+      "action_start": "tars_tarkas guiding Narrator",
+      "action_end": "Chieftain acknowledging presence",
       "active_subjects": [
-        "The Narrator"
+        "tars_tarkas",
+        "The Narrator",
+        "chieftain"
       ],
-      "passive_subjects": [],
-      "spatial_context": "throne_platform",
-      "blocking_hint": "head turns/eye movements",
-      "environment_subzone": "throne_platform",
-      "continuity_focus": "furniture scale relative to characters",
-      "coverage_hint": "close-ups and detail shots",
+      "passive_subjects": [
+        "Martian Court"
+      ],
+      "spatial_context": "throne_zone",
+      "blocking_hint": "Narrator and tars_tarkas facing the throne",
+      "environment_subzone": "throne_zone",
+      "continuity_focus": "chieftain regalia details",
+      "coverage_hint": "medium shots of chieftain",
       "coverage_priority": "high",
       "handoff_to_next": "end_scene"
     }
@@ -166,85 +168,87 @@
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish scale",
+      "narrative_function": "establish_scale",
       "planned_shot_moment_summary": "Narrator enters the massive chamber",
       "primary_subject_seed": "The Narrator",
       "secondary_subjects_seed": [
-        "grand_audience_chamber"
+        "Martian Court"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "central_audience_floor",
-      "planned_shot_required_anchor_1": "marble architecture",
+      "environment_subzone": "entrance_threshold",
+      "planned_shot_required_anchor_1": "entrance_threshold",
       "planned_shot_scale_proof_detail": "character vs ceiling height",
-      "start_state_seed": "Narrator at threshold",
-      "end_state_seed": "Narrator walking into center",
+      "start_state_seed": "Narrator stepping into light",
+      "end_state_seed": "Narrator stopping in center",
       "action_seed": "walking",
       "blocking_seed": [
-        "center floor traversal"
+        "center aisle"
       ],
       "shot_size": "wide",
       "camera_angle": "low_angle",
       "lens_family": "ultra_wide",
       "camera_motion": "push_in",
       "zoom_behavior": "none",
-      "focus_strategy": "environment_priority",
-      "lighting_style": "diffuse_ambient",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
       "primary_subject_angle": "back"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "introduce hierarchy",
-      "planned_shot_moment_summary": "The Chieftain is revealed in regalia",
-      "primary_subject_seed": "chieftain",
-      "secondary_subjects_seed": [
-        "Martian Court"
-      ],
+      "narrative_function": "detail_environment",
+      "planned_shot_moment_summary": "Close up on massive furniture",
+      "primary_subject_seed": "ancient_furniture",
+      "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "throne_platform",
-      "planned_shot_required_anchor_1": "chieftain's throne",
-      "planned_shot_scale_proof_detail": "regalia detail vs character size",
-      "start_state_seed": "Medium shot of chieftain",
-      "end_state_seed": "Static medium shot",
-      "action_seed": "sitting/observing",
+      "environment_subzone": "throne_zone",
+      "planned_shot_required_anchor_1": "oversized_marble_table",
+      "planned_shot_scale_proof_detail": "furniture vs character hand size",
+      "start_state_seed": "static shot of table edge",
+      "end_state_seed": "camera pans up",
+      "action_seed": "static",
       "blocking_seed": [
-        "seated on oversized chair"
+        "fixed"
       ],
-      "shot_size": "medium",
+      "shot_size": "insert_detail",
       "camera_angle": "eye_level",
       "lens_family": "normal",
-      "camera_motion": "locked_off",
+      "camera_motion": "pan",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
-      "lighting_style": "high_contrast_ceremonial",
-      "primary_subject_angle": "front_three_quarter_right"
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "emphasize absurdity",
-      "planned_shot_moment_summary": "Close up of oversized furniture detail",
-      "primary_subject_seed": "ancient furniture",
-      "secondary_subjects_seed": [],
+      "narrative_function": "character_intro",
+      "planned_shot_moment_summary": "Chieftain revealed in regalia",
+      "primary_subject_seed": "chieftain",
+      "secondary_subjects_seed": [
+        "tars_tarkas"
+      ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "throne_platform",
-      "planned_shot_required_anchor_1": "oversized marble table",
-      "planned_shot_scale_proof_detail": "furniture vs Martian hand/body",
-      "start_state_seed": "Detail shot focus",
-      "end_state_seed": "Focus pull to Narrator",
-      "action_seed": "static detail",
-      "blocking_seed": [],
-      "shot_size": "insert_detail",
-      "camera_angle": "eye_level",
-      "lens_family": "telephoto",
-      "camera_motion": "locked_off",
+      "environment_subzone": "throne_zone",
+      "planned_shot_required_anchor_1": "chieftain_throne",
+      "planned_shot_scale_proof_detail": "regalia detail vs throne size",
+      "start_state_seed": "tight on regalia",
+      "end_state_seed": "pull back to medium shot",
+      "action_seed": "sitting/observing",
+      "blocking_seed": [
+        "seated on throne"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "low_angle",
+      "lens_family": "portrait",
+      "camera_motion": "pull_back",
       "zoom_behavior": "none",
-      "focus_strategy": "rack_focus",
-      "lighting_style": "hard_directional",
-      "primary_subject_angle": "profile_left"
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
     }
   ],
   "unresolved_questions": [
@@ -315,14 +319,14 @@
     "[CH004] CHAPTER IV (book index hit)",
     "Character tars_tarkas: tars_tarkas"
   ],
-  "storyboard_markdown": "# Scene Contract: CH004_SC002\n\n## Production Intent\nEstablish the political hierarchy of Mars through a visual mismatch between the massive, ancient marble and gold architecture and the biological scale of the Martian inhabitants. The scene must emphasize the antiquity of the ruins via oversized furniture that dwarfs the characters.\n\n## Required Cast\n- The Narrator\n- tars_tarkas\n- chieftain\n- Martian Court\n\n## Required Environments\n- grand_audience_chamber\n\n## Continuity Constraints\n- Precise spatial placement of the Narrator relative to massive chamber dimensions\n- Visual consistency of the Chieftain's specific regalia details\n\n## Beat List\n- BT001: The Narrator enters the grand chamber and feels the scale of the ruins\n- BT002: The presentation to the Chieftain and recognition of authority\n- BT003: The Narrator notices the mismatch between biology and architecture",
+  "storyboard_markdown": "# Scene Contract: CH004_SC002\n\n## Production Intent\nEstablish the political hierarchy of Mars through a visual mismatch between massive, ancient marble and gold architecture and the biological scale of the Martian inhabitants. The scene must emphasize the antiquity of the ruins via oversized furniture that dwarfs the characters.\n\n## Required Cast\n- The Narrator\n- tars_tarkas\n- chieftain\n- Martian Court\n\n## Required Environments\n- grand_audience_chamber\n\n## Continuity Constraints\n- Precise spatial positioning of Narrator relative to massive chamber dimensions\n- Visual consistency of Chieftain regalia details\n\n## Beat List\n- BT001: Narrator enters the grand chamber and experiences the scale of the ruins\n- BT002: Observation of the physical absurdity and antiquity of the furniture\n- BT003: Formal presentation to the Chieftain",
   "metadata": {
     "artifact_id": "CH004_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
     "source_fingerprint": "bc4ac201af2e2abc76cfb4bb005dd9eb0903809d",
-    "created_at_utc": "2026-04-23T20:45:50.936397+00:00",
-    "updated_at_utc": "2026-04-23T20:45:50.936397+00:00",
+    "created_at_utc": "2026-04-24T00:35:30.370930+00:00",
+    "updated_at_utc": "2026-04-24T00:35:30.370930+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -344,7 +348,7 @@
     "manual_overrides": {},
     "revision_history": [
       {
-        "timestamp_utc": "2026-04-23T20:46:33.789260+00:00",
+        "timestamp_utc": "2026-04-24T00:36:12.190942+00:00",
         "action": "synthesized",
         "source_fingerprint": "bc4ac201af2e2abc76cfb4bb005dd9eb0903809d"
       }

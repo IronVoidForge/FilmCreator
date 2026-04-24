@@ -7,33 +7,33 @@
   "emotional_arc": "Introspection / Solemnity.",
   "production_intent": "Establish the narrative framing device by introducing an elderly protagonist who is documenting his life history. The scene must convey a sense of urgency regarding his mortality and the anomalous nature of his aging process through intimate, reflective visual language.",
   "scene_short_description": "An elderly man sits in a reflective space, addressing the audience about his life.",
-  "scene_primary_scale_story_point": "Subject is centered within a tight, intimate framing to emphasize isolation and introspection.",
+  "scene_primary_scale_story_point": "Intimate character study within a narrative framing space.",
   "scene_required_anchor_catalog": [
     "Seated chair/position",
-    "Weathered skin textures"
+    "Subject's weathered skin/eyes"
   ],
-  "scene_start_state": "john_carter is seated, looking toward the lens with a solemn expression.",
-  "scene_end_state": "john_carter finishes his introduction, maintaining a heavy, reflective gaze.",
-  "dominant_action_line": "The protagonist speaks directly to the audience about his anomalous aging and life documentation.",
+  "scene_start_state": "john_carter is seated, prepared to speak.",
+  "scene_end_state": "john_carter concludes his introduction, establishing the intent to document his life.",
+  "dominant_action_line": "Direct address by john_carter regarding his anomalous aging and impending death.",
   "scene_spatial_layout": [
-    "Tight framing around the seated subject",
-    "Softly lit background to isolate the figure"
+    "Seated subject centered or slightly off-center in a controlled framing space",
+    "Shallow depth of field to isolate subject from background"
   ],
   "character_spatial_map": [
-    "john_carter is positioned centrally in a seated posture"
+    "john_carter seated in center frame"
   ],
   "environment_subzones": [
     "primary scene playing area"
   ],
   "entry_vectors": [
-    "Direct gaze from subject to lens"
+    "Subjects inherit entry logic from the prior scene or chapter transition."
   ],
   "exit_vectors": [
-    "Fade to black or transition to memory"
+    "Subjects exit or hand off toward the next story beat."
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Visual shift from macro texture to facial expression",
-    "BT002 -> BT003: Shift from direct address to reflective silence"
+    "BT001 -> BT002: Visual shift from macro texture to subject identity",
+    "BT002 -> BT003: Shift from physical presence to verbal exposition"
   ],
   "characters_required": [
     {
@@ -71,57 +71,57 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Visual introduction of the physical toll of aging",
+      "summary": "Visual introduction of anomalous aging via texture",
       "purpose": "",
-      "action_start": "eyes focusing on camera",
-      "action_end": "skin texture established",
+      "action_start": "static macro view",
+      "action_end": "eye movement",
       "active_subjects": [
         "john_carter"
       ],
       "passive_subjects": [],
-      "spatial_context": "tightly framed space",
-      "blocking_hint": "stationary seated position",
+      "spatial_context": "Narrative framing space",
+      "blocking_hint": "subject is stationary",
       "environment_subzone": "Narrative framing space",
-      "continuity_focus": "skin detail/age consistency",
+      "continuity_focus": "skin texture/age consistency",
       "coverage_hint": "extreme close-up",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Verbal introduction of the anomalous condition and purpose",
+      "summary": "Identification of the subject",
       "purpose": "",
-      "action_start": "subject begins speaking",
-      "action_end": "explanation of life documentation complete",
+      "action_start": "camera pulls back to medium shot",
+      "action_end": "subject prepares to speak",
       "active_subjects": [
         "john_carter"
       ],
       "passive_subjects": [],
-      "spatial_context": "seated area",
-      "blocking_hint": "direct address to camera",
+      "spatial_context": "Narrative framing space",
+      "blocking_hint": "seated in chair",
       "environment_subzone": "Narrative framing space",
-      "continuity_focus": "vocal tone/delivery",
+      "continuity_focus": "clothing/posture",
       "coverage_hint": "medium shot",
-      "coverage_priority": "high",
+      "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Final moment of solemnity and intent",
+      "summary": "Explanation of purpose and mortality",
       "purpose": "",
-      "action_start": "speech ceases",
-      "action_end": "subject holds gaze",
+      "action_start": "subject begins speaking",
+      "action_end": "subject finishes introduction",
       "active_subjects": [
         "john_carter"
       ],
       "passive_subjects": [],
-      "spatial_context": "seated area",
-      "blocking_hint": "stillness",
+      "spatial_context": "Narrative framing space",
+      "blocking_hint": "seated, facing camera",
       "environment_subzone": "Narrative framing space",
-      "continuity_focus": "expression stability",
-      "coverage_hint": "medium close-up",
-      "coverage_priority": "medium",
-      "handoff_to_next": "end_scene"
+      "continuity_focus": "vocal tone/delivery",
+      "coverage_hint": "close-up",
+      "coverage_priority": "high",
+      "handoff_to_next": "End of scene"
     }
   ],
   "planned_shots": [
@@ -135,11 +135,11 @@
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "Narrative framing space",
-      "planned_shot_required_anchor_1": "weathered skin",
-      "planned_shot_scale_proof_detail": "macro detail of aging",
-      "start_state_seed": "eyes opening or focusing",
-      "end_state_seed": "eyes steady on lens",
-      "action_seed": "subject breathes/settles",
+      "planned_shot_required_anchor_1": "eyes",
+      "planned_shot_scale_proof_detail": "macro texture detail",
+      "start_state_seed": "static eye contact",
+      "end_state_seed": "eye movement",
+      "action_seed": "subject blinks or shifts gaze",
       "blocking_seed": [
         "seated still"
       ],
@@ -155,29 +155,56 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "introduce_protagonist",
-      "planned_shot_moment_summary": "medium shot of john_carter speaking",
+      "narrative_function": "establish_identity",
+      "planned_shot_moment_summary": "medium shot of seated elderly man",
       "primary_subject_seed": "john_carter",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "Narrative framing space",
       "planned_shot_required_anchor_1": "seated position",
-      "planned_shot_scale_proof_detail": "subject seated in frame",
-      "start_state_seed": "subject begins speaking",
-      "end_state_seed": "subject finishes sentence",
-      "action_seed": "explaining anomalous aging",
+      "planned_shot_scale_proof_detail": "subject height relative to chair",
+      "start_state_seed": "subject looking at camera",
+      "end_state_seed": "subject begins speaking",
+      "action_seed": "subject settles into seated posture",
       "blocking_seed": [
-        "seated upright"
+        "seated center frame"
       ],
       "shot_size": "medium",
       "camera_angle": "eye_level",
       "lens_family": "normal",
-      "camera_motion": "subtle_push_in",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "narrative_exposition",
+      "planned_shot_moment_summary": "close up of face during explanation",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "Narrative framing space",
+      "planned_shot_required_anchor_1": "face",
+      "planned_shot_scale_proof_detail": "facial expression detail",
+      "start_state_seed": "speaking about aging",
+      "end_state_seed": "concluding thought",
+      "action_seed": "verbal delivery of life story intent",
+      "blocking_seed": [
+        "seated still"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "soft_even",
-      "primary_subject_angle": "front_three_quarter_left"
+      "primary_subject_angle": "front"
     }
   ],
   "unresolved_questions": [
@@ -247,14 +274,14 @@
     "[CH003] CHAPTER III (book index hit)",
     "Character john_carter: john_carter"
   ],
-  "storyboard_markdown": "# Scene Contract: CH001_SC001\n\n## Production Intent\nEstablish the narrative framing device by introducing an elderly protagonist who is documenting his life history. The scene must convey a sense of urgency regarding his mortality and the anomalous nature of his aging process through intimate, reflective visual language.\n\n## Required Cast\n- john_carter (Elderly)\n\n## Required Environments\n- Unspecified (Narrative framing space)\n\n## Continuity Constraints\n- Consistent elderly physical appearance for john_carter\n- Stable vocal tone and delivery rhythm\n\n## Beat List\n- BT001: Visual introduction of the physical toll of aging\n- BT002: Verbal introduction of the anomalous condition and purpose\n- BT003: Final moment of solemnity and intent",
+  "storyboard_markdown": "# Scene Contract: CH001_SC001\n\n## Production Intent\nEstablish the narrative framing device by introducing an elderly protagonist who is documenting his life history. The scene must convey a sense of urgency regarding his mortality and the anomalous nature of his aging process through intimate, reflective visual language.\n\n## Required Cast\n- john_carter (Elderly)\n\n## Required Environments\n- Narrative framing space\n\n## Continuity Constraints\n- Consistent elderly physical appearance for john_carter\n- Stable vocal tone and delivery rhythm\n\n## Beat List\n- BT001: Visual introduction of anomalous aging via texture\n- BT002: Identification of the subject\n- BT003: Explanation of purpose and mortality",
   "metadata": {
     "artifact_id": "CH001_SC001_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
     "source_fingerprint": "4f9cdc29c5bf6ead6283422631dce74f8ef8886b",
-    "created_at_utc": "2026-04-23T20:34:43.647954+00:00",
-    "updated_at_utc": "2026-04-23T20:34:43.647954+00:00",
+    "created_at_utc": "2026-04-24T00:24:29.179490+00:00",
+    "updated_at_utc": "2026-04-24T00:24:29.179490+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -276,7 +303,7 @@
     "manual_overrides": {},
     "revision_history": [
       {
-        "timestamp_utc": "2026-04-23T20:35:20.177135+00:00",
+        "timestamp_utc": "2026-04-24T00:25:07.774426+00:00",
         "action": "synthesized",
         "source_fingerprint": "4f9cdc29c5bf6ead6283422631dce74f8ef8886b"
       }

@@ -6,18 +6,18 @@
   "summary": "Sola leads the Narrator to a decorated sleeping chamber. Inside, the Narrator encounters a strange, ten-legged Martian creature with a frog-like head and tusks.",
   "emotional_arc": "Fatigue $\\rightarrow$ Curiosity/Uncanniness.",
   "production_intent": "Establish a sense of rest within the massive marble and gold architecture by transitioning to an intimate, low-key interior. Use the introduction of local fauna to ground the alien setting through tactile, strange biological details.",
-  "scene_short_description": "A character is led into a decorated sleeping chamber to encounter a strange ten-legged creature.",
+  "scene_short_description": "A character is led into a decorated sleeping room to encounter a strange ten-legged creature.",
   "scene_primary_scale_story_point": "Intimate interior scale contrasted against the enormous ancient city architecture.",
   "scene_required_anchor_catalog": [
-    "martian_sleeping_chamber decor",
+    "martian_sleeping_chamber decor elements",
     "Small Martian Creature"
   ],
-  "scene_start_state": "Sola leads The Narrator toward the chamber entrance under low-key lighting.",
-  "scene_end_state": "The Narrator observes the Small Martian Creature in close proximity.",
-  "dominant_action_line": "Sola guides The Narrator into a room where they discover an alien creature.",
+  "scene_start_state": "Sola leads The Narrator toward the entrance of the chamber.",
+  "scene_end_state": "The Narrator observes the strange creature in the low light.",
+  "dominant_action_line": "Sola guides The Narrator into a decorated room where they discover an alien creature.",
   "scene_spatial_layout": [
-    "Interior martian_sleeping_chamber with decorative elements",
-    "Low-light environment suggesting nighttime"
+    "Interior martian_sleeping_chamber setting",
+    "Low-key, dim lighting environment"
   ],
   "character_spatial_map": [
     "sola leads the movement",
@@ -26,17 +26,17 @@
   ],
   "environment_subzones": [
     "chamber entrance",
-    "decor zone",
+    "chamber interior decor zone",
     "creature sighting zone"
   ],
   "entry_vectors": [
-    "entry path from city architecture into martian_sleeping_chamber"
+    "chamber doorway"
   ],
   "exit_vectors": [
-    "exit path back to city corridors"
+    "chamber doorway"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Arrival at the chamber door",
+    "BT001 -> BT002: Arrival at the chamber",
     "BT002 -> BT003: Discovery of the creature"
   ],
   "characters_required": [
@@ -85,7 +85,7 @@
   ],
   "continuity_constraints": [
     "Small Martian Creature movement and physical appearance",
-    "Ambient light levels within the chamber"
+    "Light levels within the chamber"
   ],
   "visual_coverage_families": [
     "Medium shots of martian_sleeping_chamber decor",
@@ -95,10 +95,10 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Arrival at the chamber",
+      "summary": "Sola leads The Narrator to the chamber",
       "purpose": "",
-      "action_start": "sola leads narrator toward door",
-      "action_end": "characters cross threshold",
+      "action_start": "walking toward entrance",
+      "action_end": "stepping inside",
       "active_subjects": [
         "sola",
         "The Narrator"
@@ -107,48 +107,48 @@
       "spatial_context": "chamber entrance",
       "blocking_hint": "sola leading the way",
       "environment_subzone": "chamber entrance",
-      "continuity_focus": "lighting level upon entry",
+      "continuity_focus": "light level transition",
       "coverage_hint": "medium_full",
       "coverage_priority": "medium",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Exploring the chamber",
+      "summary": "The Narrator observes the decorated chamber",
       "purpose": "",
-      "action_start": "narrator enters room",
-      "action_end": "narrator stops to look around",
+      "action_start": "entering room",
+      "action_end": "noticing something strange",
       "active_subjects": [
         "The Narrator"
       ],
       "passive_subjects": [
         "sola"
       ],
-      "spatial_context": "martian_sleeping_chamber decor zone",
-      "blocking_hint": "narrator moving through decorated space",
-      "environment_subzone": "decor zone",
-      "continuity_focus": "visibility of decor",
+      "spatial_context": "chamber interior decor zone",
+      "blocking_hint": "narrator scanning the room",
+      "environment_subzone": "chamber interior decor zone",
+      "continuity_focus": "decor visibility",
       "coverage_hint": "medium",
       "coverage_priority": "low",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Encountering the creature",
+      "summary": "Encounter with the Small Martian Creature",
       "purpose": "",
-      "action_start": "narrator spots movement",
-      "action_end": "narrator observes the creature's features",
+      "action_start": "spotting movement",
+      "action_end": "staring at creature",
       "active_subjects": [
-        "The Narrator",
-        "Small Martian Creature"
+        "Small Martian Creature",
+        "The Narrator"
       ],
       "passive_subjects": [
         "sola"
       ],
       "spatial_context": "creature sighting zone",
-      "blocking_hint": "narrator freezes; creature is visible in foreground/midground",
+      "blocking_hint": "creature positioned in low light",
       "environment_subzone": "creature sighting zone",
-      "continuity_focus": "creature appearance and movement",
+      "continuity_focus": "creature limb/tusk appearance",
       "coverage_hint": "close_up",
       "coverage_priority": "high",
       "handoff_to_next": "end_scene"
@@ -167,11 +167,11 @@
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "chamber entrance",
-      "planned_shot_required_anchor_1": "martian_sleeping_chamber decor",
-      "planned_shot_scale_proof_detail": "decor size relative to characters",
-      "start_state_seed": "characters approaching door",
-      "end_state_seed": "characters entering room",
-      "action_seed": "walking into chamber",
+      "planned_shot_required_anchor_1": "chamber doorway",
+      "planned_shot_scale_proof_detail": "architecture vs character size",
+      "start_state_seed": "walking toward door",
+      "end_state_seed": "entering room",
+      "action_seed": "walking",
       "blocking_seed": [
         "sola in front of narrator"
       ],
@@ -189,18 +189,18 @@
       "beat_id": "BT002",
       "narrative_function": "show environment",
       "planned_shot_moment_summary": "narrator views the decorated room",
-      "primary_subject_seed": "The Narrator",
+      "primary_subject_seed": "martian_sleeping_chamber decor",
       "secondary_subjects_seed": [
-        "martian_sleeping_chamber decor"
+        "The Narrator"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "decor zone",
-      "planned_shot_required_anchor_1": "martian_sleeping_chamber decor",
-      "planned_shot_scale_proof_detail": "ornate details of chamber",
-      "start_state_seed": "narrator entering",
-      "end_state_seed": "narrator pausing",
-      "action_seed": "scanning the room",
+      "environment_subzone": "chamber interior decor zone",
+      "planned_shot_required_anchor_1": "decor elements",
+      "planned_shot_scale_proof_detail": "room volume",
+      "start_state_seed": "looking around",
+      "end_state_seed": "stopping movement",
+      "action_seed": "observing",
       "blocking_seed": [
         "narrator standing center"
       ],
@@ -209,7 +209,7 @@
       "lens_family": "normal",
       "camera_motion": "pan",
       "zoom_behavior": "none",
-      "focus_strategy": "environment_priority",
+      "focus_strategy": "shallow_subject",
       "lighting_style": "low_key_night",
       "primary_subject_angle": "front_three_quarter_right"
     },
@@ -224,10 +224,10 @@
       "narration_mode": "none",
       "environment_subzone": "creature sighting zone",
       "planned_shot_required_anchor_1": "Small Martian Creature",
-      "planned_shot_scale_proof_detail": "ten legs and frog-like head",
-      "start_state_seed": "creature stationary",
-      "end_state_seed": "creature moving/reacting",
-      "action_seed": "creature reveals itself",
+      "planned_shot_scale_proof_detail": "creature vs decor size",
+      "start_state_seed": "creature moving",
+      "end_state_seed": "creature freezing/looking",
+      "action_seed": "moving limbs and tusks",
       "blocking_seed": [
         "creature on floor or furniture"
       ],
@@ -309,14 +309,14 @@
     "[CH011] CHAPTER XI (book index hit)",
     "Character sola: sola"
   ],
-  "storyboard_markdown": "# Scene Contract: CH004_SC005\n\n## Production Intent\nEstablish a sense of rest within the massive marble and gold architecture by transitioning to an intimate, low-key interior. Use the introduction of local fauna to ground the alien setting through tactile, strange biological details.\n\n## Required Cast\n- The Narrator\n- sola\n- Small Martian Creature\n\n## Required Environments\n- martian_sleeping_chamber\n\n## Continuity Constraints\n- Appearance and movement of the Small Martian Creature (ten legs, frog head, tusks)\n- Ambient light levels within the chamber\n\n## Beat List\n- BT001: Arrival at the chamber\n- BT002: Exploring the chamber\n- BT003: Encountering the creature",
+  "storyboard_markdown": "# Scene Contract: CH004_SC005\n\n## Production Intent\nEstablish a sense of rest within the massive marble and gold architecture by transitioning to an intimate, low-key interior. Use the introduction of local fauna to ground the alien setting through tactile, strange biological details.\n\n## Required Cast\n- The Narrator\n- sola\n- Small Martian Creature\n\n## Required Environments\n- martian_sleeping_chamber\n\n## Continuity Constraints\n- Appearance and movement of the ten-legged Small Martian Creature (frog-like head, tusks)\n- Light levels within the chamber during transition from entrance to interior\n\n## Beat List\n- BT001: Sola leads The Narrator to the chamber\n- BT002: The Narrator observes the decorated chamber\n- BT003: Encounter with the Small Martian Creature",
   "metadata": {
     "artifact_id": "CH004_SC005_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
     "source_fingerprint": "7e4a4a26686dbe7bee23aaf93a438f27a27454ea",
-    "created_at_utc": "2026-04-23T20:48:02.033594+00:00",
-    "updated_at_utc": "2026-04-23T20:48:02.033594+00:00",
+    "created_at_utc": "2026-04-24T00:37:38.340916+00:00",
+    "updated_at_utc": "2026-04-24T00:37:38.340916+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -338,7 +338,7 @@
     "manual_overrides": {},
     "revision_history": [
       {
-        "timestamp_utc": "2026-04-23T20:48:42.621273+00:00",
+        "timestamp_utc": "2026-04-24T00:38:18.164983+00:00",
         "action": "synthesized",
         "source_fingerprint": "7e4a4a26686dbe7bee23aaf93a438f27a27454ea"
       }
