@@ -445,9 +445,9 @@ def _resolve_scope(
 
 
 def _asset_family_for_stage(stage: str) -> str:
-    if stage == "character_reference":
+    if stage in {"character_reference", "character_reference_variant"}:
         return "characters"
-    if stage == "environment_reference":
+    if stage in {"environment_reference", "environment_reference_variant"}:
         return "environments"
     raise ValueError(f"Could not infer project asset family for stage '{stage}'")
 
