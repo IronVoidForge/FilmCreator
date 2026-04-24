@@ -43,6 +43,65 @@
       ]
     },
     {
+      "id": "still.reference_variant.single_ref.klein.distilled",
+      "filename": "workflows/stills/single_ref_continuation/klein_single_image_edit_api.json",
+      "supported_stages": [
+        "character_reference_variant",
+        "environment_reference_variant"
+      ],
+      "output_scope": "project",
+      "prompt_type": "image_to_image_single_ref",
+      "required_image_slots": [
+        {
+          "slot": "source_frame",
+          "label": "approved canonical reference"
+        }
+      ],
+      "optional_image_slots": [],
+      "output_dir_template": "projects/{project_slug}/04_references/{asset_family}/{asset_id}",
+      "output_name_pattern": "{asset_id}_{stage}_{variant}_v{version:03d}.png",
+      "patch_points": {
+        "source_images": {
+          "source_frame": {
+            "node_id": 76,
+            "path": "inputs.image"
+          }
+        },
+        "prompt_text": {
+          "node_id": "75:74",
+          "node_type": "CLIPTextEncode",
+          "path": "inputs.text"
+        },
+        "seed": {
+          "node_id": "75:73",
+          "path": "inputs.noise_seed"
+        },
+        "scheduler_steps": {
+          "node_id": "75:62",
+          "path": "inputs.steps"
+        },
+        "cfg": {
+          "node_id": "75:63",
+          "path": "inputs.cfg"
+        },
+        "model_name": {
+          "node_id": "75:70",
+          "path": "inputs.unet_name"
+        },
+        "save_prefix": {
+          "node_id": 9,
+          "path": "inputs.filename_prefix"
+        },
+        "notes": [
+          "Project-scoped one-reference workflow for generating approved-reference variants after a master reference exists.",
+          "Used for supporting character/environment views so T2I does not redefine identity after approval."
+        ]
+      },
+      "preferred_output_nodes": [
+        9
+      ]
+    },
+    {
       "id": "still.next_scene.single_ref.klein.distilled",
       "filename": "workflows/stills/single_ref_continuation/klein_single_image_edit_api.json",
       "supported_stages": [
