@@ -1,0 +1,83 @@
+# Descriptor Review Queue
+
+## Character
+
+- `DESC_CHAR_dead_friend`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_former_self`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_martian_mounts`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_martian_warrior`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_martian_warrior_leader`
+  - status=resolved_into
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_protagonist`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+
