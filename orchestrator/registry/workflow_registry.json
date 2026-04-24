@@ -53,7 +53,7 @@
       "prompt_type": "image_to_image_single_ref",
       "required_image_slots": [
         {
-          "slot": "source_frame",
+          "slot": "image1",
           "label": "approved canonical reference"
         }
       ],
@@ -62,7 +62,7 @@
       "output_name_pattern": "{asset_id}_{stage}_{variant}_v{version:03d}.png",
       "patch_points": {
         "source_images": {
-          "source_frame": {
+          "image1": {
             "node_id": 76,
             "path": "inputs.image"
           }
@@ -112,13 +112,13 @@
       "prompt_type": "image_to_image_single_ref",
       "required_image_slots": [
         {
-          "slot": "source_frame",
+          "slot": "image1",
           "label": "base frame"
         }
       ],
       "optional_image_slots": [
         {
-          "slot": "continuity_ref",
+          "slot": "image2",
           "label": "secondary continuity reference"
         }
       ],
@@ -126,11 +126,11 @@
       "output_name_pattern": "{scene_id}_{clip_id}_{asset_code}{index:02d}.png",
       "patch_points": {
         "source_images": {
-          "source_frame": {
+          "image1": {
             "node_id": 76,
             "path": "inputs.image"
           },
-          "continuity_ref": {
+          "image2": {
             "node_id": 81,
             "path": "inputs.image"
           }
@@ -162,7 +162,7 @@
         },
         "notes": [
           "Canonical file is now the API-exported workflow.",
-          "This workflow currently exposes source_frame and continuity_ref as two separate LoadImage nodes."
+          "This workflow currently exposes image1 and image2 as two separate LoadImage nodes."
         ]
       },
       "preferred_output_nodes": [
@@ -181,11 +181,11 @@
       "prompt_type": "image_edit_two_ref",
       "required_image_slots": [
         {
-          "slot": "image_1",
+          "slot": "image1",
           "label": "base scene"
         },
         {
-          "slot": "image_2",
+          "slot": "image2",
           "label": "secondary subject reference"
         }
       ],
@@ -199,11 +199,11 @@
           "path": "inputs.text"
         },
         "source_images": {
-          "image_1": {
+          "image1": {
             "node_id": 76,
             "path": "inputs.image"
           },
-          "image_2": {
+          "image2": {
             "node_id": 81,
             "path": "inputs.image"
           }
@@ -248,21 +248,21 @@
       "prompt_type": "image_edit_four_ref",
       "required_image_slots": [
         {
-          "slot": "image_1",
+          "slot": "image1",
           "label": "base scene or environment reference"
         },
         {
-          "slot": "image_2",
+          "slot": "image2",
           "label": "primary character reference"
         }
       ],
       "optional_image_slots": [
         {
-          "slot": "image_3",
+          "slot": "image3",
           "label": "secondary character or costume reference"
         },
         {
-          "slot": "image_4",
+          "slot": "image4",
           "label": "detail or continuity reference"
         }
       ],
@@ -275,19 +275,19 @@
           "path": "inputs.text"
         },
         "source_images": {
-          "image_1": {
+          "image1": {
             "node_id": 76,
             "path": "inputs.image"
           },
-          "image_2": {
+          "image2": {
             "node_id": 81,
             "path": "inputs.image"
           },
-          "image_3": {
+          "image3": {
             "node_id": 141,
             "path": "inputs.image"
           },
-          "image_4": {
+          "image4": {
             "node_id": 144,
             "path": "inputs.image"
           }
@@ -330,7 +330,7 @@
       "prompt_type": "image_to_video_single_ref",
       "required_image_slots": [
         {
-          "slot": "source_frame",
+          "slot": "image1",
           "label": "approved keyframe or current continuity start frame"
         }
       ],
@@ -347,7 +347,7 @@
           "path": "inputs.text"
         },
         "source_images": {
-          "source_frame": {
+          "image1": {
             "node_id": 56,
             "path": "inputs.image"
           }
@@ -379,7 +379,7 @@
       "prompt_type": "image_to_video_single_ref",
       "required_image_slots": [
         {
-          "slot": "source_frame",
+          "slot": "image1",
           "label": "approved keyframe or current continuity start frame"
         }
       ],
@@ -414,7 +414,7 @@
           "path": "inputs.text"
         },
         "source_images": {
-          "source_frame": {
+          "image1": {
             "node_id": 85,
             "path": "inputs.image"
           }

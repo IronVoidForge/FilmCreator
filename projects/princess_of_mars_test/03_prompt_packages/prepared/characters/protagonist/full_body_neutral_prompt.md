@@ -11,7 +11,7 @@ Prepare a compact character reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Full-body character reference portrait, full-body neutral standing reference with balanced posture, An Earthman undergoing a supernatural transformation., readable production detail, agile and capable of high-intensity physical exertion., Earthman in a low-gravity environment., clean neutral studio background, clear...
+If this prompt is later used with an image reference, treat image1 as the locked identity reference. Full-body character reference portrait, full-body neutral standing reference with balanced posture, An Earthman undergoing a supernatural transformation., readable production detail, agile and capable of high-intensity physical exertion., Earthman in a low...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -45,6 +45,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 # Continuity Notes
 - Preserve canonical identity, costume silhouette, and body proportions.
 - Variant: Full Body Neutral.
+- If this prompt is later used with an image reference, treat image1 as the locked identity reference.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 - Avoid proper nouns in the prompt body unless text is meant to appear on screen.
 

@@ -33,7 +33,7 @@ if not "%ERRORLEVEL%"=="0" (
 )
 
 cd /d "%FILMCREATOR_ROOT%"
-python -m orchestrator run-batch %BATCH_MANIFEST% --ref "image_1=%REF_ENV%" --ref "image_2=%REF_CHAR%" --seed-base 3000 --execute
+python -m orchestrator run-batch %BATCH_MANIFEST% --ref "image1=%REF_ENV%" --ref "image2=%REF_CHAR%" --seed-base 3000 --execute
 
 echo.
 echo Review the batch manifest and generated stills under the pilot_scene project folders.

@@ -24,7 +24,7 @@ echo Variant: bust_portrait
 echo Repo root: %FILMCREATOR_ROOT%
 echo.
 echo Running character reference generation for a small validation slice...
-python -m orchestrator generate-character-references %PROJECT_SLUG% --variant bust_portrait --limit %LIMIT% --execute
+python -m orchestrator generate-character-references %PROJECT_SLUG% --variant bust_portrait --limit %LIMIT% --test-slice --execute
 if errorlevel 1 goto :fail
 
 echo.

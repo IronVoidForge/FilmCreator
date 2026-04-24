@@ -24,7 +24,7 @@ echo Variant: establishing_wide
 echo Repo root: %FILMCREATOR_ROOT%
 echo.
 echo Running environment reference generation for a small validation slice...
-python -m orchestrator generate-environment-references %PROJECT_SLUG% --variant establishing_wide --limit %LIMIT% --execute
+python -m orchestrator generate-environment-references %PROJECT_SLUG% --variant establishing_wide --limit %LIMIT% --test-slice --execute
 if errorlevel 1 goto :fail
 
 echo.

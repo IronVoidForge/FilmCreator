@@ -19,6 +19,6 @@ if not "%ERRORLEVEL%"=="0" (
     exit /b 1
 )
 
-start "FilmCreator Render Shell" cmd /k "cd /d %FILMCREATOR_ROOT% && echo ComfyUI render phase shell ready. && echo. && echo Current pilot batch command: && echo python -m orchestrator run-batch projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0001.json --ref image_1=projects/pilot_scene/05_scenes/SC001/clips/CL001/inputs/smoke_env.png --ref image_2=projects/pilot_scene/05_scenes/SC001/clips/CL001/inputs/smoke_char.png --seed-base 3000 --execute && echo. && echo ComfyUI is expected to stay open during render execution."
+start "FilmCreator Render Shell" cmd /k "cd /d %FILMCREATOR_ROOT% && echo ComfyUI render phase shell ready. && echo. && echo Current pilot batch command: && echo python -m orchestrator run-batch projects/pilot_scene/05_scenes/SC001/clips/CL001/logs/RUN_0001.json --ref image1=projects/pilot_scene/05_scenes/SC001/clips/CL001/inputs/smoke_env.png --ref image2=projects/pilot_scene/05_scenes/SC001/clips/CL001/inputs/smoke_char.png --seed-base 3000 --execute && echo. && echo ComfyUI is expected to stay open during render execution."
 
 endlocal

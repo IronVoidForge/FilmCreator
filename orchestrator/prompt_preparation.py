@@ -1125,19 +1125,24 @@ def _package_for_character(
             "locked_fields": locked_fields,
         },
     )
+    reference_instruction = "If this prompt is later used with an image reference, treat image1 as the locked identity reference."
     package = PromptPackage(
         path=package_path,
         title=title,
         prompt_id=prompt_id,
         purpose="Prepare a compact character reference prompt for enhancer-safe generation.",
         workflow_type="still.t2i.klein.distilled",
-        positive_prompt=positive_prompt,
+        positive_prompt=_compact(
+            f"{reference_instruction} {positive_prompt}",
+            limit=360,
+        ),
         negative_prompt=GENERIC_NEGATIVE_PROMPT,
         inputs_markdown="\n".join(f"- {key}: {value}" for key, value in inputs.items()),
         continuity_notes_markdown="\n".join(
             [
                 "- Preserve canonical identity, costume silhouette, and body proportions.",
                 f"- Variant: {variant_title}.",
+                "- If this prompt is later used with an image reference, treat image1 as the locked identity reference.",
                 "- Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.",
                 "- Avoid proper nouns in the prompt body unless text is meant to appear on screen.",
             ]
@@ -1225,19 +1230,24 @@ def _package_for_environment(
             "locked_fields": locked_fields,
         },
     )
+    reference_instruction = "If this prompt is later used with an image reference, treat image1 as the locked spatial reference."
     package = PromptPackage(
         path=package_path,
         title=title,
         prompt_id=prompt_id,
         purpose="Prepare a compact environment reference prompt for enhancer-safe generation.",
         workflow_type="still.t2i.klein.distilled",
-        positive_prompt=positive_prompt,
+        positive_prompt=_compact(
+            f"{reference_instruction} {positive_prompt}",
+            limit=360,
+        ),
         negative_prompt=GENERIC_NEGATIVE_PROMPT,
         inputs_markdown="\n".join(f"- {key}: {value}" for key, value in inputs.items()),
         continuity_notes_markdown="\n".join(
             [
                 "- Preserve geographic layout, scale, lighting, and recurring anchors.",
                 f"- Variant: {variant_title}.",
+                "- If this prompt is later used with an image reference, treat image1 as the locked spatial reference.",
                 "- Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.",
                 "- Avoid proper nouns in the prompt body unless text is meant to appear on screen.",
             ]

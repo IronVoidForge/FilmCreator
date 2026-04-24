@@ -25,7 +25,7 @@ Starter CLI commands are now scaffolded:
 - `python -m orchestrator promote-asset <project_slug> <source> <target> --scene SC001 --clip CL001`
 - `python -m orchestrator run-still <project_slug> <stage> <prompt_file> [--workflow-id ...] [--scene SC001] [--clip CL001] [--asset-id hero] [--ref slot=path] [--execute]`
 - `python -m orchestrator plan-batch <project_slug> <stage> --scene SC001 --clip CL001 [--prompt-file ...] [--batch-size 4]`
-- `python -m orchestrator run-batch <batch_manifest> [--ref image_1=...] [--seed-base 1000] [--execute]`
+- `python -m orchestrator run-batch <batch_manifest> [--ref image1=...] [--seed-base 1000] [--execute]`
 
 `run-still` prepares and validates by default. It writes a manifest plus a patched workflow preview into the run log, and only submits to ComfyUI when `--execute` is passed.
 
@@ -34,6 +34,6 @@ Starter CLI commands are now scaffolded:
 Current limitation:
 
 - The canonical workflows are now API exports, but some image-edit workflows still contain baked-in example `LoadImage` filenames for optional refs.
-- `run-still` warns about missing optional refs and auto-reuses the resolved continuity source for `continuity_ref`.
-- The four-ref keyframe path now auto-fills `image_3` and `image_4` with safe fallbacks when they are omitted, so a two-ref smoke run can still prepare cleanly.
+- `run-still` warns about missing optional refs and auto-reuses the resolved continuity source for `image2`.
+- The four-ref keyframe path now auto-fills `image3` and `image4` with safe fallbacks when they are omitted, so a two-ref smoke run can still prepare cleanly.
 - The current four-ref and two-ref workflow exports do not expose a registered negative-prompt patch point yet, so negative prompt text is preserved in prompt packages but not injected into those workflows.

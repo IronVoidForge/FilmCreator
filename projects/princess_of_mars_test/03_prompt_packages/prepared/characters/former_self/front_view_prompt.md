@@ -11,7 +11,7 @@ Prepare a compact character reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Front-view character reference portrait, front-facing full-body reference with the camera square to the subject, readable production detail, lean athletic build, decisive, efficient movement, male, clean neutral studio background, clear silhouette, consistent costume layers, consistent facial structure, no narrative...
+If this prompt is later used with an image reference, treat image1 as the locked identity reference. Front-view character reference portrait, front-facing full-body reference with the camera square to the subject, readable production detail, lean athletic build, decisive, efficient movement, male, clean neutral studio background, clear silhouette, consist...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -45,6 +45,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 # Continuity Notes
 - Preserve canonical identity, costume silhouette, and body proportions.
 - Variant: Front View.
+- If this prompt is later used with an image reference, treat image1 as the locked identity reference.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 - Avoid proper nouns in the prompt body unless text is meant to appear on screen.
 

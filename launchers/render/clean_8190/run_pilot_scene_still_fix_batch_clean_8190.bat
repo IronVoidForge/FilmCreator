@@ -67,7 +67,7 @@ if not defined BATCH_MANIFEST (
 )
 
 echo Running the pilot still-fix batch...
-python -m orchestrator run-batch "%BATCH_MANIFEST%" --ref "image_2=%SECONDARY_REF%" --seed-base 8000 --execute
+python -m orchestrator run-batch "%BATCH_MANIFEST%" --ref "image2=%SECONDARY_REF%" --seed-base 8000 --execute
 if errorlevel 1 (
     echo.
     echo run-batch failed. Inspect the manifest for blockers.

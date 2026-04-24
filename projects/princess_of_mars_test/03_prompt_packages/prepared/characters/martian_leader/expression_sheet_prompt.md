@@ -11,7 +11,7 @@ Prepare a compact character reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-Character expression reference sheet, expression sheet showing several clear emotional beats without changing costume, A massive, four-armed Martian warrior leader., readable production detail, 15ft tall, heavy humanoid frame with four arms., clean neutral studio background, clear silhouette, consistent costume laye...
+If this prompt is later used with an image reference, treat image1 as the locked identity reference. Character expression reference sheet, expression sheet showing several clear emotional beats without changing costume, A massive, four-armed Martian warrior leader., readable production detail, 15ft tall, heavy humanoid frame with four arms., clean neutral...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition
@@ -45,6 +45,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 # Continuity Notes
 - Preserve canonical identity, costume silhouette, and body proportions.
 - Variant: Expression Sheet.
+- If this prompt is later used with an image reference, treat image1 as the locked identity reference.
 - Keep the prompt compact enough for ComfyUI text prompt enhancers to expand safely.
 - Avoid proper nouns in the prompt body unless text is meant to appear on screen.
 

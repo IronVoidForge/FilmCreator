@@ -350,7 +350,7 @@ def _prompt_targets(project_slug: str, scene_id: str, clip_id: str) -> Iterable[
             workflow_type="still.scene_insert.two_ref.klein.distilled",
             guidance=(
                 "Write a corrective still-generation prompt that preserves composition and look while fixing local issues. "
-                "Assume image_1 is the approved still base and image_2 is a secondary reference when needed."
+                "Assume image1 is the approved still base and image2 is a secondary reference when needed."
             ),
             sources=base_sources,
         ),

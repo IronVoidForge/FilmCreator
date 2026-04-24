@@ -458,7 +458,7 @@ def _parse_ref_args(ref_args: list[str]) -> dict[str, str]:
         if "=" not in item:
             raise ValueError(f"Reference '{item}' must use slot=path syntax")
         slot, value = item.split("=", 1)
-        slot = slot.strip()
+        slot = _canonicalize_ref_slot(slot.strip())
         value = value.strip()
         if not slot or not value:
             raise ValueError(f"Reference '{item}' must use slot=path syntax")
@@ -489,11 +489,11 @@ def _resolve_stage_refs(
     continuity_source: str | None = None
     warnings: list[str] = []
 
-    if stage == "still_fix" and "image_1" in required_slots and "image_1" not in resolved:
+    if stage == "still_fix" and "image1" in required_slots and "image1" not in resolved:
         fix_of = prompt_package.inputs.get("fix_of")
         if _is_image_reference(fix_of):
-            resolved["image_1"] = fix_of
-            warnings.append("No image_1 ref was provided, so the runner will use Inputs -> fix_of as the still-fix base image.")
+            resolved["image1"] = fix_of
+            warnings.append("No image1 ref was provided, so the runner will use Inputs -> fix_of as the still-fix base image.")
         elif scene_id and clip_id:
             clip_state = load_clip_state(project_slug, scene_id, clip_id)
             approved_assets = clip_state.get("approved_assets", {})
@@ -508,35 +508,35 @@ def _resolve_stage_refs(
             ]
             fallback_fix_of = next((candidate for candidate in fallback_candidates if _is_image_reference(candidate)), "")
             if fallback_fix_of:
-                resolved["image_1"] = fallback_fix_of
+                resolved["image1"] = fallback_fix_of
                 warnings.append(
-                    "No image_1 ref was provided, so the runner will use the latest approved still-compatible image "
+                    "No image1 ref was provided, so the runner will use the latest approved still-compatible image "
                     "as the still-fix base image."
                 )
 
-    if "source_frame" in required_slots and "source_frame" not in resolved:
+    if "image1" in required_slots and "image1" not in resolved:
         if not scene_id or not clip_id:
-            raise ValueError("Continuation stages require --scene and --clip to resolve source_frame from state")
+            raise ValueError("Continuation stages require --scene and --clip to resolve image1 from state")
         continuity = resolve_continuity_source(project_slug, scene_id, clip_id)
         continuity_source = continuity.path
-        resolved["source_frame"] = continuity.path
-    elif "source_frame" in resolved:
-        continuity_source = resolved["source_frame"]
+        resolved["image1"] = continuity.path
+    elif "image1" in resolved:
+        continuity_source = resolved["image1"]
 
-    if "continuity_ref" in optional_slots and "continuity_ref" not in resolved and continuity_source:
-        resolved["continuity_ref"] = continuity_source
+    if "image2" in optional_slots and "image2" not in resolved and continuity_source:
+        resolved["image2"] = continuity_source
         warnings.append(
-            "No continuity_ref was provided, so the runner will reuse the resolved continuity source for that slot."
+            "No image2 ref was provided, so the runner will reuse the resolved continuity source for that slot."
         )
 
     if stage == "keyframe":
-        if "image_3" in optional_slots and "image_3" not in resolved and "image_2" in resolved:
-            resolved["image_3"] = resolved["image_2"]
+        if "image3" in optional_slots and "image3" not in resolved and "image2" in resolved:
+            resolved["image3"] = resolved["image2"]
             warnings.append(
-                "No image_3 ref was provided, so the runner will duplicate image_2 for that optional slot."
+                "No image3 ref was provided, so the runner will duplicate image2 for that optional slot."
             )
 
-        if "image_4" in optional_slots and "image_4" not in resolved:
+        if "image4" in optional_slots and "image4" not in resolved:
             continuity = None
             if scene_id and clip_id:
                 try:
@@ -545,14 +545,14 @@ def _resolve_stage_refs(
                     continuity = None
             if continuity is not None:
                 continuity_source = continuity_source or continuity.path
-                resolved["image_4"] = continuity.path
+                resolved["image4"] = continuity.path
                 warnings.append(
-                    "No image_4 continuity ref was provided, so the runner will reuse the resolved continuity source for that slot."
+                    "No image4 continuity ref was provided, so the runner will reuse the resolved continuity source for that slot."
                 )
-            elif "image_1" in resolved:
-                resolved["image_4"] = resolved["image_1"]
+            elif "image1" in resolved:
+                resolved["image4"] = resolved["image1"]
                 warnings.append(
-                    "No image_4 ref was provided, so the runner will duplicate image_1 for that optional slot."
+                    "No image4 ref was provided, so the runner will duplicate image1 for that optional slot."
                 )
 
     remaining_optional = sorted(optional_slots - set(resolved))
@@ -667,3 +667,16 @@ def _is_image_reference(value: str | None) -> bool:
     if not value:
         return False
     return Path(value).suffix.lower() in IMAGE_SUFFIXES
+
+
+def _canonicalize_ref_slot(slot: str) -> str:
+    normalized = slot.strip()
+    aliases = {
+        "source_frame": "image1",
+        "continuity_ref": "image2",
+        "image_1": "image1",
+        "image_2": "image2",
+        "image_3": "image3",
+        "image_4": "image4",
+    }
+    return aliases.get(normalized, normalized)

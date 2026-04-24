@@ -48,6 +48,7 @@ def build_parser() -> argparse.ArgumentParser:
     crg.add_argument("--execute", action="store_true")
     crg.add_argument("--seed", type=int, default=None)
     crg.add_argument("--workflow-id", default=None)
+    crg.add_argument("--test-slice", action="store_true")
 
     crc = subparsers.add_parser("register-character-reference-candidate")
     crc.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
@@ -82,6 +83,7 @@ def build_parser() -> argparse.ArgumentParser:
     erg.add_argument("--execute", action="store_true")
     erg.add_argument("--seed", type=int, default=None)
     erg.add_argument("--workflow-id", default=None)
+    erg.add_argument("--test-slice", action="store_true")
 
     erc = subparsers.add_parser("register-environment-reference-candidate")
     erc.add_argument("project_slug", nargs="?", default="princess_of_mars_test")

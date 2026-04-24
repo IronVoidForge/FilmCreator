@@ -109,7 +109,7 @@ def run_character_reference_generation(project_slug: str, *, limit: int | None =
             continue
         if str(entry.get("status", "")).strip().lower() in {"blocked", "approved", "locked"}:
             continue
-        if entry.get("warnings"):
+        if entry.get("warnings") and not test_slice:
             continue
         eligible.append(entry)
 
@@ -130,7 +130,7 @@ def run_character_reference_generation(project_slug: str, *, limit: int | None =
         stage = _generation_stage_for_variant(variant, has_source=bool(source_ref))
         try:
             generation_prompt_path = _write_generation_prompt_package(project_dir, entry, workflow_id=actual_workflow_id, source_ref=source_ref)
-            ref_args = [f"source_frame={source_ref}"] if source_ref else []
+            ref_args = [f"image1={source_ref}"] if source_ref else []
             summary = run_still(project_slug=project_slug, stage=stage, prompt_file=str(generation_prompt_path), workflow_id=actual_workflow_id, asset_id=character_id, ref_args=ref_args, seed=seed, execute=execute)
         except Exception as exc:
             warnings.append(f"{character_id}/{variant}: generation preparation failed: {exc}")
@@ -252,10 +252,13 @@ def _locked_reference_for_variant(project_dir: Path, character_id: str, variant:
 def _write_generation_prompt_package(project_dir: Path, entry: dict[str, Any], *, workflow_id: str, source_ref: str) -> Path:
     package = parse_prompt_package(Path(str(entry.get("prompt_package_path", ""))))
     repair_notes = package.repair_notes_markdown
+    positive_prompt = package.positive_prompt
     if source_ref:
-        extra_note = f"- Use source_frame as locked identity reference: {source_ref}"
+        image_instruction = "Use image1 as the locked identity reference."
+        positive_prompt = _prepend_prompt_instruction(package.positive_prompt, image_instruction)
+        extra_note = f"- Use image1 as locked identity reference: {source_ref}"
         repair_notes = (repair_notes + "\n" + extra_note).strip() if repair_notes else extra_note
-    generated = PromptPackage(path=package.path, title=package.title, prompt_id=package.prompt_id, purpose=package.purpose, workflow_type=workflow_id, positive_prompt=package.positive_prompt, negative_prompt=package.negative_prompt, inputs_markdown=package.inputs_markdown, continuity_notes_markdown=package.continuity_notes_markdown, sources_markdown=package.sources_markdown, repair_notes_markdown=repair_notes)
+    generated = PromptPackage(path=package.path, title=package.title, prompt_id=package.prompt_id, purpose=package.purpose, workflow_type=workflow_id, positive_prompt=positive_prompt, negative_prompt=package.negative_prompt, inputs_markdown=package.inputs_markdown, continuity_notes_markdown=package.continuity_notes_markdown, sources_markdown=package.sources_markdown, repair_notes_markdown=repair_notes)
     asset_id = str(entry.get("asset_id", "")).strip().lower()
     variant = str(entry.get("variant_key", "")).strip().lower()
     output_path = project_dir / "03_reference_assets" / "characters" / asset_id / "generation_prompts" / f"{variant}_{workflow_id.replace('/', '_')}_prompt.md"
@@ -268,6 +271,18 @@ def _manifest_output_files(manifest_path: Path) -> list[str]:
         return []
     payload = read_json(manifest_path)
     return [str(p) for p in payload.get("output_files", []) if str(p).strip()] if isinstance(payload, dict) and isinstance(payload.get("output_files", []), list) else []
+
+
+def _prepend_prompt_instruction(prompt: str, instruction: str) -> str:
+    prompt = str(prompt).strip()
+    instruction = str(instruction).strip()
+    if not instruction:
+        return prompt
+    if not prompt:
+        return instruction
+    if instruction.lower() in prompt.lower():
+        return prompt
+    return f"{instruction} {prompt}".strip()
 
 
 def _load_character_bibles(project_dir: Path) -> dict[str, dict[str, Any]]:
