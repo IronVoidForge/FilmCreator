@@ -19,9 +19,9 @@
 - physical_build: unknown
 - origin_or_historical_context: Zodanga (military setting)
 - movement_language: unknown
-A group of four unnamed soldiers serving the Zodangan military. They are characterized by their standard Zodangan military uniforms and armor, presenting a cohesive soldierly silhouette. In their final appearance, they are depicted as fallen warriors killed in combat.
+A group of four unnamed soldiers belonging to the Zodangan military. They are characterized by their standard Zodangan military uniforms and armor, serving as a cohesive unit of armored guardsmen. In their final appearance, they are depicted as fallen warriors following combat with John Carter.
 
-- physical_traits: Four distinct individuals within the group
+- physical_traits: Group size: Four individuals
 - costume_signature: Standard Zodangan military uniform and armor.
 - distinguishing_features: None specified
 - state_variants: Combat-ready (active), Fallen/Dead (post-combat)
@@ -29,14 +29,14 @@ A group of four unnamed soldiers serving the Zodangan military. They are charact
 ## Behavioral Bible
 
 - personality: unknown
-- role: Combatants / Antagonists (killed by John Carter)
+- role: Antagonistic military force (combatants)
 - voice_notes: unknown
-- relationship_notes: Killed by John Carter in combat
+- relationship_notes: Combatants against John Carter
 
 ## Continuity
 
-- continuity_constraints: Must consist of exactly four individuals as per the text., Uniforms must adhere to the Zodangan military standard.
-- unresolved_ambiguities: Specific physical appearance and facial features are unknown., Exact design/style of "standard Zodangan armor" is not detailed.
+- continuity_constraints: Must consist of exactly four individuals when appearing in combat., Uniforms must adhere to the standard Zodangan military aesthetic.
+- unresolved_ambiguities: Specific visual details of the armor design are not provided., Individual physical characteristics of the soldiers are unknown.
 
 ## Evidence Summary
 
@@ -53,4 +53,4 @@ A group of four unnamed soldiers serving the Zodangan military. They are charact
 - status: `generated`
 - source_fingerprint: `792b2c5c2f2f2a654e17c3d48935b3fb5cdace41`
 - created_at_utc: `2026-04-24T17:16:33.810239+00:00`
-- updated_at_utc: `2026-04-24T17:16:33.810239+00:00`
+- updated_at_utc: `2026-04-24T17:30:41.062825+00:00`

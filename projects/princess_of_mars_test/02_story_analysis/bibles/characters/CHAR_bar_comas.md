@@ -18,8 +18,8 @@
 - age_presence: Young adult.
 - physical_build: unknown
 - origin_or_historical_context: Warhoon culture; likely high-status or ritualistic setting.
-- movement_language: Dignified and composed posture.
-A young Warhoon leader possessing a dignified and commanding presence. He is characterized by his high status, typically appearing in the formal regalia of a Jeddak or specialized ritualistic combat attire. His visual identity is defined by an air of authority and composure suitable for a leader.
+- movement_language: Dignified, poised posture.
+A young Warhoon leader possessing a dignified and commanding presence. He is characterized by his high status, typically appearing in the formal regalia of a Jeddak or specialized ritualistic combat attire. His visual identity is defined by an air of authority and poise suitable for a leader of his station.
 
 - physical_traits: unknown
 - costume_signature: Jeddak regalia and ritualistic combat attire.
@@ -35,8 +35,8 @@ A young Warhoon leader possessing a dignified and commanding presence. He is cha
 
 ## Continuity
 
-- continuity_constraints: Must maintain a dignified presence consistent with leadership status., Costume should reflect the specific regalia of a Jeddak or ritualistic combat gear.
-- unresolved_ambiguities: Specific physical build and facial features are not defined., Exact visual details of the Warhoon/Jeddak regalia are unknown.
+- continuity_constraints: Must maintain a dignified and authoritative presence consistent with a leader., Costume should reflect the specific regalia of a Jeddak or ritualistic combat gear.
+- unresolved_ambiguities: Specific physical build and facial features are unknown., Exact visual details of the Warhoon species/anatomy are not provided.
 
 ## Evidence Summary
 
@@ -53,4 +53,4 @@ A young Warhoon leader possessing a dignified and commanding presence. He is cha
 - status: `generated`
 - source_fingerprint: `ac289d7962e93630c5c57c5263c83a2ab3710ee3`
 - created_at_utc: `2026-04-24T17:15:52.051330+00:00`
-- updated_at_utc: `2026-04-24T17:15:52.051330+00:00`
+- updated_at_utc: `2026-04-24T17:30:00.515321+00:00`

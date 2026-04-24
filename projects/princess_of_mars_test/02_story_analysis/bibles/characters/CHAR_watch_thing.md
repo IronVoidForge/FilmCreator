@@ -14,14 +14,14 @@
 
 ## Visual Bible
 
-- identity_baseline: A fierce, non-humanoid multi-legged creature.
+- identity_baseline: A fierce, multi-legged non-humanoid creature.
 - age_presence: unknown
 - physical_build: Multi-legged anatomy; non-humanoid frame.
 - origin_or_historical_context: unknown
 - movement_language: Capable of brutal, high-intensity combat movement.
-A non-humanoid creature characterized by a multi-legged silhouette. The entity possesses a fierce physical presence capable of engaging in brutal combat against large primates. Its visual identity is defined by its multiple limbs rather than a standard humanoid frame.
+A non-humanoid creature characterized by a multi-legged silhouette. The entity possesses a fierce physical presence capable of engaging in brutal combat against large primates. Its visual identity is defined primarily by its multiple limbs and non-humanoid body structure.
 
-- physical_traits: Multi-legged anatomy
+- physical_traits: Fierce appearance
 - costume_signature: Non-humanoid silhouette defined by multiple limbs.
 - distinguishing_features: Multiple legs/limbs, Non-humanoid morphology
 - state_variants: Combat-ready (engaged in brutal fighting)
@@ -31,7 +31,7 @@ A non-humanoid creature characterized by a multi-legged silhouette. The entity p
 - personality: Fierce and loyal.
 - role: Combatant.
 - voice_notes: unknown
-- relationship_notes: Displays loyalty (target relation unknown)
+- relationship_notes: Displays loyalty (target of relation unknown)
 
 ## Continuity
 
@@ -52,4 +52,4 @@ A non-humanoid creature characterized by a multi-legged silhouette. The entity p
 - status: `generated`
 - source_fingerprint: `495d6b137d990f36c2fd794f5cdea708b7a49a0c`
 - created_at_utc: `2026-04-24T17:09:27.672166+00:00`
-- updated_at_utc: `2026-04-24T17:09:27.672166+00:00`
+- updated_at_utc: `2026-04-24T17:23:42.058184+00:00`

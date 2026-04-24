@@ -31,12 +31,12 @@ A Martian ruler and Jeddak of Helium, appearing as an elder statesman. The chara
 - personality: unknown
 - role: Jeddak / Royal leader of Helium.
 - voice_notes: unknown
-- relationship_notes: Leader of the royal group in the sunken garden.
+- relationship_notes: Leads the royal group in the sunken garden.
 
 ## Continuity
 
 - continuity_constraints: Must maintain the visual identity of a high-ranking Martian ruler (Jeddak)., Costume must reflect Heliumite grand regalia.
-- unresolved_ambiguities: Conflicting reports on whether the entity is a singular individual or a group entity., Specific physical build and facial features are not documented.
+- unresolved_ambiguities: Whether the entity is a singular individual or a collective group (conflicting source notes)., Specific physical anatomy and build.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ A Martian ruler and Jeddak of Helium, appearing as an elder statesman. The chara
 - status: `generated`
 - source_fingerprint: `5f1b855bde9f5c3b2b1d81b708b02178f8c08378`
 - created_at_utc: `2026-04-24T17:17:18.522320+00:00`
-- updated_at_utc: `2026-04-24T17:17:18.522320+00:00`
+- updated_at_utc: `2026-04-24T17:31:25.809340+00:00`

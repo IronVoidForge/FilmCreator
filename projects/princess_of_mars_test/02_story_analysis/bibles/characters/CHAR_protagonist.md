@@ -19,9 +19,9 @@
 - physical_build: agile and capable of high-intensity physical exertion.
 - origin_or_historical_context: Earthman in a low-gravity environment.
 - movement_language: extreme agility, high-leaping capabilities, and earthly striking tactics (chin/stomach strikes).
-An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a "lifeless" physical shell of his original body. He moves with high physical prowess, capable of leaping over chariots and engaging in high-intensity combat using earthly striking tactics.
+A transformed Earthman characterized by extreme physical agility and high-leaping capabilities suited for low gravity. The character exhibits a transition from a standard human state to a post-supernatural transformation state, initially appearing naked and unarmed but demonstrating high-intensity combat prowess through earthly striking tactics.
 
-- physical_traits: high-leaping capability, extreme agility
+- physical_traits: capable of leaping over chariots, high physical prowess
 - costume_signature: unknown
 - distinguishing_features: supernatural transformation (post-transformation state)
 - state_variants: naked (post-transformation), clothed (original body/pre-transformation)
@@ -35,8 +35,8 @@ An Earthman characterized by extreme agility and high-leaping capabilities, like
 
 ## Continuity
 
-- continuity_constraints: Character possesses a "lifeless" physical shell left behind from a transformation.
-- unresolved_ambiguities: The specific visual appearance of the post-transformation body is not fully detailed beyond agility and combat prowess., Costume/clothing state in later chapters (CH006 onwards) is unknown.
+- continuity_constraints: Character undergoes a supernatural transformation that leaves behind a "lifeless" physical shell.
+- unresolved_ambiguities: Specific visual appearance of the post-transformation body beyond agility and combat style., The specific clothing worn during combat/later chapters is unknown.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ An Earthman characterized by extreme agility and high-leaping capabilities, like
 - status: `generated`
 - source_fingerprint: `9e6f3eb952d3067d6814bf2f458bb91964e31a2a`
 - created_at_utc: `2026-04-24T17:05:33.802570+00:00`
-- updated_at_utc: `2026-04-24T17:05:33.802570+00:00`
+- updated_at_utc: `2026-04-24T17:19:46.828903+00:00`

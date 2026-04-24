@@ -19,7 +19,7 @@
 - physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-The character is a mummified woman, characterized by the desiccated and preserved physical state of a corpse. Due to lack of specific descriptive evidence regarding her clothing or exact anatomy, her visual identity relies entirely on the textural qualities of mummification.
+The character is a mummified woman, characterized by the desiccated and preserved appearance of a corpse. Due to limited visual evidence, specific clothing, build, or movement patterns are currently unestablished.
 
 - physical_traits: unknown
 - costume_signature: unknown
@@ -35,8 +35,8 @@ The character is a mummified woman, characterized by the desiccated and preserve
 
 ## Continuity
 
-- continuity_constraints: must maintain a mummified/desiccated appearance
-- unresolved_ambiguities: specific age at time of death, clothing or funerary wrappings, physical dimensions and build, manner of movement (if any)
+- continuity_constraints: must maintain a mummified/desiccated visual state
+- unresolved_ambiguities: specific age at time of death, clothing or funerary wrappings, physical dimensions and build, manner of movement or presence
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ The character is a mummified woman, characterized by the desiccated and preserve
 - status: `generated`
 - source_fingerprint: `ea8edddec01bf4efbe152acd9770a906a480b077`
 - created_at_utc: `2026-04-24T17:17:58.627016+00:00`
-- updated_at_utc: `2026-04-24T17:17:58.627016+00:00`
+- updated_at_utc: `2026-04-24T17:32:05.174540+00:00`

@@ -35,8 +35,8 @@ No visual data is available in the provided evidence to establish a stable ident
 
 ## Continuity
 
-- continuity_constraints: unknown
-- unresolved_ambiguities: Character lacks any descriptive visual or behavioral evidence in the provided source material.
+- continuity_constraints: (none)
+- unresolved_ambiguities: character lacks any descriptive visual or behavioral evidence in the provided source material
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ No visual data is available in the provided evidence to establish a stable ident
 - status: `generated`
 - source_fingerprint: `079b82a3dae28cda980e5c680c78a65a4c0edd16`
 - created_at_utc: `2026-04-24T17:09:16.770366+00:00`
-- updated_at_utc: `2026-04-24T17:09:16.770366+00:00`
+- updated_at_utc: `2026-04-24T17:23:30.679629+00:00`

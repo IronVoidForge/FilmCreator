@@ -24,7 +24,7 @@ Dak Kova is a ferocious and scarred Warhoon warrior who serves as a martial lead
 - physical_traits: Ferocious expression
 - costume_signature: Ornate or distinct Warhoon warrior attire, likely heavy or ritualistic combat gear.
 - distinguishing_features: Scarred skin
-- state_variants: Presiding/Overseer (ornate leadership attire), Combat-ready (standard heavy Warhoon gear)
+- state_variants: Presiding/Overseer (ornate leadership attire), Combat-ready (standard Warhoon warrior gear)
 
 ## Behavioral Bible
 
@@ -35,8 +35,8 @@ Dak Kova is a ferocious and scarred Warhoon warrior who serves as a martial lead
 
 ## Continuity
 
-- continuity_constraints: Costume must remain more ornate than standard Warhoon warriors to maintain leadership status., Must consistently present as a scarred individual.
-- unresolved_ambiguities: Specific physical build and age are not defined., Exact visual details of the "ornate" leadership attire are unknown.
+- continuity_constraints: Costume must be more distinct/ornate than standard Warhoon warriors to denote leadership status., Must maintain a scarred physical appearance.
+- unresolved_ambiguities: Specific facial features and exact body proportions are unknown., Exact nature of the "ornate" elements in the costume is undefined.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ Dak Kova is a ferocious and scarred Warhoon warrior who serves as a martial lead
 - status: `generated`
 - source_fingerprint: `e40532eea6d4e1e114bae3ce0088dbd86a795487`
 - created_at_utc: `2026-04-24T17:13:39.344226+00:00`
-- updated_at_utc: `2026-04-24T17:13:39.344226+00:00`
+- updated_at_utc: `2026-04-24T17:27:49.305244+00:00`

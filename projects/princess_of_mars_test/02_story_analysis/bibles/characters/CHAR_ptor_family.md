@@ -19,7 +19,7 @@
 - physical_build: unknown
 - origin_or_historical_context: Red Martian setting; associated with farm environments featuring homes raised on metal shafts.
 - movement_language: unknown
-A collective of Red Martian government officers characterized by their specific Red Martian attire. They are visually linked to a farm setting composed of dwellings elevated on metal shafts.
+A collective of Red Martian government officers characterized by their specific Red Martian attire. They are visually linked to a farm setting where dwellings are elevated on metal shafts.
 
 - physical_traits: unknown
 - costume_signature: Red Martian attire.
@@ -35,8 +35,8 @@ A collective of Red Martian government officers characterized by their specific 
 
 ## Continuity
 
-- continuity_constraints: Must maintain Red Martian attire consistent with government officer status., Visual association with elevated metal shaft architecture for setting context.
-- unresolved_ambiguities: Specific physical descriptions of individual members are not provided., Exact visual details of "Red Martian attire" are undefined.
+- continuity_constraints: Must maintain Red Martian attire consistent with government officer status., Visual context should include or reference farm environments with homes raised on metal shafts.
+- unresolved_ambiguities: Specific physical descriptions of individual members are unknown., Exact visual details of "Red Martian attire" are not specified.
 
 ## Evidence Summary
 
@@ -52,4 +52,4 @@ A collective of Red Martian government officers characterized by their specific 
 - status: `generated`
 - source_fingerprint: `48f5aa88f129bba1bc2a4c37e73f6225bd616fe4`
 - created_at_utc: `2026-04-24T17:14:56.943571+00:00`
-- updated_at_utc: `2026-04-24T17:14:56.943571+00:00`
+- updated_at_utc: `2026-04-24T17:29:06.087095+00:00`

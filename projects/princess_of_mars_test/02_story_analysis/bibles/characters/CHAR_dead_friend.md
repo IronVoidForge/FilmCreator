@@ -14,12 +14,12 @@
 
 ## Visual Bible
 
-- identity_baseline: Deceased individual
+- identity_baseline: deceased individual
 - age_presence: unknown
 - physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-No visual data is available for this character. The entity is explicitly identified as deceased, precluding any active movement or living presence on screen.
+No visual data is available for this character. The entity is explicitly identified as deceased, precluding any active movement or living physical presence in the narrative context provided.
 
 - physical_traits: unknown
 - costume_signature: unknown
@@ -31,12 +31,12 @@ No visual data is available for this character. The entity is explicitly identif
 - personality: unknown
 - role: deceased individual
 - voice_notes: unknown
-- relationship_notes: referred to as a "friend"
+- relationship_notes: referenced as a "friend"
 
 ## Continuity
 
 - continuity_constraints: character is established as deceased
-- unresolved_ambiguities: physical appearance, age, gender, clothing/costume, specific identity/name
+- unresolved_ambiguities: physical appearance, age, gender, clothing/costume, manner of death
 
 ## Evidence Summary
 
@@ -52,4 +52,4 @@ No visual data is available for this character. The entity is explicitly identif
 - status: `generated`
 - source_fingerprint: `df5c39cc3acb8761392ff993c91bfd291d5e8b75`
 - created_at_utc: `2026-04-24T17:06:38.614270+00:00`
-- updated_at_utc: `2026-04-24T17:06:38.614270+00:00`
+- updated_at_utc: `2026-04-24T17:20:51.960117+00:00`

@@ -19,7 +19,7 @@
 - physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-No visual data is available in the provided evidence to establish a stable identity, physical build, or costume. The character is identified only by her status as a female prisoner.
+No visual data is available for this character in the provided evidence. A stable visual identity cannot be established.
 
 - physical_traits: unknown
 - costume_signature: unknown
@@ -29,14 +29,14 @@ No visual data is available in the provided evidence to establish a stable ident
 ## Behavioral Bible
 
 - personality: unknown
-- role: prisoner
+- role: unknown
 - voice_notes: unknown
 - relationship_notes: unknown
 
 ## Continuity
 
-- continuity_constraints: character identity is tied to the status of being a female prisoner.
-- unresolved_ambiguities: complete lack of physical description or biographical detail in provided evidence, actual name and visual appearance are unknown
+- continuity_constraints: none provided
+- unresolved_ambiguities: complete lack of visual or behavioral description in source material
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ No visual data is available in the provided evidence to establish a stable ident
 - status: `generated`
 - source_fingerprint: `dafe5d5359f3a68867d95c7505a0d91ec37b3ca6`
 - created_at_utc: `2026-04-24T17:10:57.962485+00:00`
-- updated_at_utc: `2026-04-24T17:10:57.962485+00:00`
+- updated_at_utc: `2026-04-24T17:25:11.938965+00:00`

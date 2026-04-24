@@ -19,12 +19,12 @@
 - physical_build: Large, beastly canine frame.
 - origin_or_historical_context: Martian setting.
 - movement_language: unknown
-Woola is a large Martian hound characterized by a beastly, canine-like silhouette. The most defining visual identifier is the presence of multiple tusks protruding from its jaw. As a calot, it possesses a massive frame suitable for acting as a protector and tracking animal.
+Woola is a large Martian hound characterized by a massive, beastly canine silhouette. The creature's most defining visual feature is its multiple tusks. As a calot, it possesses a heavy, powerful frame suitable for acting as a protector and tracking animal.
 
 - physical_traits: Multi-tusked, Large scale
 - costume_signature: Large, beastly silhouette with prominent tusks.
-- distinguishing_features: Multiple tusks, Large canine-like anatomy
-- state_variants: Protector/Combatant (acting against wild beasts), Tracking/Hunting state
+- distinguishing_features: Multiple tusks, Large canine-like silhouette
+- state_variants: Protector/Combatant (acting against wild beasts), Tracking animal
 
 ## Behavioral Bible
 
@@ -35,7 +35,7 @@ Woola is a large Martian hound characterized by a beastly, canine-like silhouett
 
 ## Continuity
 
-- continuity_constraints: Must maintain multi-tusked facial structure in all appearances., Silhouette must remain large and canine-like.
+- continuity_constraints: Must maintain multi-tusked anatomy in all appearances., Silhouette must remain large and canine-like.
 - unresolved_ambiguities: Specific species nomenclature (referred to as both "Martian hound" and "calot").
 
 ## Evidence Summary
@@ -55,4 +55,4 @@ Woola is a large Martian hound characterized by a beastly, canine-like silhouett
 - status: `generated`
 - source_fingerprint: `2b4823c3b119f7826c6a45121c14abfb6034cc4a`
 - created_at_utc: `2026-04-24T17:11:24.134837+00:00`
-- updated_at_utc: `2026-04-24T17:11:24.134837+00:00`
+- updated_at_utc: `2026-04-24T17:25:36.790108+00:00`

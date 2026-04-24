@@ -17,26 +17,26 @@
 - identity_baseline: A green Martian leader of a hardy, martial species.
 - age_presence: unknown
 - physical_build: large-framed; described as being "out of proportion" to human-scale furniture (desks).
-- origin_or_historical_context: Green Martian civilization; a society characterized by high mortality rates and regulated birth rates.
+- origin_or_historical_context: Green Martian civilization; high-tech/martial society with chariots and hounds.
 - movement_language: unknown
-The Chieftain is a large-framed Green Martian whose physical presence is notably disproportionate to standard human-scale architecture and furniture. As a leader of a hardy, martial culture, they are characterized by a heavy armament suitable for a society where death is frequent and combat is customary.
+A large-framed Green Martian leader characterized by a physical presence that dwarfs standard human-scale furniture. As part of a martial society, the chieftain is associated with heavy weaponry and a culture of hardiness. The visual identity is defined by green skin and a scale that suggests significant physical mass or height compared to the protagonist.
 
 - physical_traits: green skin
 - costume_signature: heavily armed martial attire.
 - distinguishing_features: green skin (inferred from "green Martians"), large physical scale relative to human environments
-- state_variants: heavily armed/battle-ready
+- state_variants: heavily armed / battle-ready
 
 ## Behavioral Bible
 
 - personality: unknown
-- role: Leader/Chieftain of the Green Martians.
+- role: leader/chieftain of Martian assemblage
 - voice_notes: unknown
-- relationship_notes: part of a society that utilizes Martian hounds for tracking/escort.
+- relationship_notes: part of a social hierarchy involving customary greetings and ceremonies
 
 ## Continuity
 
-- continuity_constraints: Must maintain a physical scale significantly larger than human characters., Appearance must align with the "Green Martian" biological profile.
-- unresolved_ambiguities: Specific facial features or exact height/weight are not provided., Specific costume details (armor type, color) are not explicitly described beyond being "heavily armed."
+- continuity_constraints: must maintain a physical scale larger than human-standard environments (desks), skin tone must remain consistent with the "green Martian" species identifier
+- unresolved_ambiguities: specific facial features or exact height/mass, specific clothing textures or armor styles
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ The Chieftain is a large-framed Green Martian whose physical presence is notably
 - status: `generated`
 - source_fingerprint: `c68c4dd2aabf8bc519cbdf156ed31f711096963e`
 - created_at_utc: `2026-04-24T17:06:49.569063+00:00`
-- updated_at_utc: `2026-04-24T17:06:49.569063+00:00`
+- updated_at_utc: `2026-04-24T17:21:03.139492+00:00`

@@ -19,7 +19,7 @@
 - physical_build: unknown
 - origin_or_historical_context: Martian (Thark) setting.
 - movement_language: professional demeanor
-Tars Tarkas is a prominent Thark warrior and leader characterized by green skin. He carries himself with a professional demeanor, embodying the strength and combat skill valued by his culture. His appearance is defined by Martian warrior attire suitable for his role as a high-ranking combatant and overseer.
+Tars Tarkas is a prominent Thark warrior and leader characterized by green skin. He carries himself with a professional demeanor, embodying the strength and combat skill valued by his culture. His appearance is defined by functional Martian warrior attire suitable for his role as a martial leader.
 
 - physical_traits: green complexion
 - costume_signature: Martian warrior attire.
@@ -29,14 +29,14 @@ Tars Tarkas is a prominent Thark warrior and leader characterized by green skin.
 ## Behavioral Bible
 
 - personality: Values strength and combat skill; maintains a professional demeanor.
-- role: Thark warrior and leader; oversees the hatching process at the incubator.
+- role: Thark warrior and leader; overseer of the hatching process.
 - voice_notes: unknown
 - relationship_notes: unknown
 
 ## Continuity
 
-- continuity_constraints: Must maintain green skin pigmentation consistent with Thark biology., Costume must remain within the aesthetic of Martian warrior attire.
-- unresolved_ambiguities: Specific physical build and proportions are not detailed., Exact age or stage of life is unknown.
+- continuity_constraints: Must maintain green skin pigmentation., Attire must remain consistent with Martian/Thark warrior aesthetics.
+- unresolved_ambiguities: Specific physical build and proportions are not defined., Exact age or stage of life is unknown.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ Tars Tarkas is a prominent Thark warrior and leader characterized by green skin.
 - status: `generated`
 - source_fingerprint: `76fbde73d48473ad025bfb77d29f9a64c3d775e7`
 - created_at_utc: `2026-04-24T17:07:41.575783+00:00`
-- updated_at_utc: `2026-04-24T17:07:41.575783+00:00`
+- updated_at_utc: `2026-04-24T17:21:55.544585+00:00`

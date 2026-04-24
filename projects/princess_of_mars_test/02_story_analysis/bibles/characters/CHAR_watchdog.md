@@ -19,7 +19,7 @@
 - physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-No visual data is available for this character. A stable physical identity cannot be established from the provided evidence.
+No visual data is available for this character. A stable visual identity cannot be established from the provided evidence.
 
 - physical_traits: unknown
 - costume_signature: unknown
@@ -48,4 +48,4 @@ No visual data is available for this character. A stable physical identity canno
 - status: `generated`
 - source_fingerprint: `09bde497ac24e285099212695064ebf2a3efd0d7`
 - created_at_utc: `2026-04-24T17:08:33.945209+00:00`
-- updated_at_utc: `2026-04-24T17:08:33.945209+00:00`
+- updated_at_utc: `2026-04-24T17:22:46.633853+00:00`

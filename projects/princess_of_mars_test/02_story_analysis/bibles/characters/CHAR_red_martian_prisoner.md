@@ -35,8 +35,8 @@ A beautiful woman of the Red Martian species. While her specific physical propor
 
 ## Continuity
 
-- continuity_constraints: Must maintain "beautiful" descriptor as per source text.
-- unresolved_ambiguities: Specific physical dimensions and facial features are unstated., Exact nature of prisoner clothing/restraints is unknown., Movement style and temperament are not documented.
+- continuity_constraints: Must maintain "beautiful" descriptor as per source text., Species identity must remain Red Martian.
+- unresolved_ambiguities: Specific physical build and age., Exact visual details of prisoner clothing/costume., Movement style or mannerisms.
 
 ## Evidence Summary
 
@@ -52,4 +52,4 @@ A beautiful woman of the Red Martian species. While her specific physical propor
 - status: `generated`
 - source_fingerprint: `f3d2c21ba76e6b1490aee9c556bffdd4c164b7df`
 - created_at_utc: `2026-04-24T17:12:26.374890+00:00`
-- updated_at_utc: `2026-04-24T17:12:26.374890+00:00`
+- updated_at_utc: `2026-04-24T17:26:38.337886+00:00`

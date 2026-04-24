@@ -19,7 +19,7 @@
 - physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-No visual data is available for this character. The individual is defined solely by their actions as an assassin and saboteur responsible for the murder of the atmosphere plant keeper.
+No visual data is available for this character. The entity is defined solely by their role as an assassin and saboteur responsible for the murder of the atmosphere plant keeper.
 
 - physical_traits: []
 - costume_signature: unknown
@@ -29,14 +29,14 @@ No visual data is available for this character. The individual is defined solely
 ## Behavioral Bible
 
 - personality: unknown
-- role: Assassin; saboteur; killer of the keeper.
+- role: Assassin, saboteur, killer of the keeper.
 - voice_notes: unknown
 - relationship_notes: Responsible for the murder of the atmosphere plant keeper.
 
 ## Continuity
 
 - continuity_constraints: Character is identified as a killer and saboteur.
-- unresolved_ambiguities: Physical appearance is completely unknown., Costume and silhouette are completely unknown., Age, build, and movement are completely unknown.
+- unresolved_ambiguities: Physical appearance is completely unknown., Costume and silhouette are completely unknown., Age, build, and movement language are completely unknown.
 
 ## Evidence Summary
 
@@ -53,4 +53,4 @@ No visual data is available for this character. The individual is defined solely
 - status: `generated`
 - source_fingerprint: `fcc03614599e72d3e7dd4ebbbb11842423243c83`
 - created_at_utc: `2026-04-24T17:17:33.898671+00:00`
-- updated_at_utc: `2026-04-24T17:17:33.898671+00:00`
+- updated_at_utc: `2026-04-24T17:31:41.026707+00:00`

@@ -17,26 +17,26 @@
 - identity_baseline: Martian aviator and royal relative.
 - age_presence: unknown
 - physical_build: unknown
-- origin_or_historical_context: Martian setting; associated with Zodangan royalty.
+- origin_or_historical_context: Martian setting; associated with Zodangan royalty and aviation.
 - movement_language: unknown
-The character is a Martian aviator and a member of the Zodangan royal lineage. Specific physical descriptions, clothing details, and movement patterns are not provided in the available evidence, leaving their exact visual appearance unknown beyond their functional role as a scout and pilot.
+The character is a Martian aviator of royal lineage, identified as a Zodangan scout. Specific physical descriptions and costume details are currently unestablished in the provided evidence, though their role implies an association with flight or aerial reconnaissance within a Martian context.
 
 - physical_traits: unknown
 - costume_signature: unknown
 - distinguishing_features: unknown
-- state_variants: aviator/pilot gear (inferred)
+- state_variants: aviator/flight gear (inferred)
 
 ## Behavioral Bible
 
 - personality: unknown
-- role: Scout; Martian aviator; royal relative.
+- role: Scout; Royal relative; Martian aviator.
 - voice_notes: unknown
-- relationship_notes: Royal relative (specific relation unknown)
+- relationship_notes: Identified as a royal relative.
 
 ## Continuity
 
-- continuity_constraints: Must maintain connection to Zodangan royalty and Martian aviation.
-- unresolved_ambiguities: Specific physical appearance and age., Exact nature of the "royal relative" connection., Visual design of flight equipment or scout attire.
+- continuity_constraints: Must maintain connection to Zodangan royalty and aviation capabilities.
+- unresolved_ambiguities: Specific physical appearance (height, build, facial features)., Exact nature of the "royal relative" connection., Visual design of flight equipment or scout attire.
 
 ## Evidence Summary
 
@@ -51,4 +51,4 @@ The character is a Martian aviator and a member of the Zodangan royal lineage. S
 - status: `generated`
 - source_fingerprint: `53719aa1de79a3f3d79b1bad2f0b16ad6b32ab08`
 - created_at_utc: `2026-04-24T17:15:37.507798+00:00`
-- updated_at_utc: `2026-04-24T17:15:37.507798+00:00`
+- updated_at_utc: `2026-04-24T17:29:46.737438+00:00`

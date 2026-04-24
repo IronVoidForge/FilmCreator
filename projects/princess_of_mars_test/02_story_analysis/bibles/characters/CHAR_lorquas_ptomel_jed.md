@@ -14,12 +14,12 @@
 
 ## Visual Bible
 
-- identity_baseline: Enormous Martian chieftain.
+- identity_baseline: Enormous Martian chieftain
 - age_presence: unknown
-- physical_build: Enormous, massive frame.
-- origin_or_historical_context: Martian setting.
+- physical_build: Enormous, massive frame
+- origin_or_historical_context: Martian setting
 - movement_language: unknown
-A character defined by immense physical scale, appearing as an enormous Martian chieftain. Due to lack of specific costume or movement data, the visual focus remains on his massive, imposing presence within a Martian context.
+A character defined by immense physical scale, appearing as an enormous Martian chieftain. Due to lack of specific costume or movement data, the visual focus remains on his massive, imposing presence and large-scale frame within a Martian context.
 
 - physical_traits: extreme size/mass
 - costume_signature: unknown
@@ -36,7 +36,7 @@ A character defined by immense physical scale, appearing as an enormous Martian 
 ## Continuity
 
 - continuity_constraints: Must maintain an "enormous" physical scale relative to other characters.
-- unresolved_ambiguities: Specific costume or armor details are unstated., Exact age and facial features are unstated., Movement style and mannerisms are unstated.
+- unresolved_ambiguities: Specific costume or armor details are unstated., Age and specific facial features are unknown., Mannerisms and movement style are unstated.
 
 ## Evidence Summary
 
@@ -52,4 +52,4 @@ A character defined by immense physical scale, appearing as an enormous Martian 
 - status: `generated`
 - source_fingerprint: `899c62f02928869101832587f6b3d70e2c7ebe57`
 - created_at_utc: `2026-04-24T17:10:06.705088+00:00`
-- updated_at_utc: `2026-04-24T17:10:06.705088+00:00`
+- updated_at_utc: `2026-04-24T17:24:19.400713+00:00`

@@ -19,7 +19,7 @@
 - physical_build: unknown
 - origin_or_historical_context: Zodangan royalty; Martian setting.
 - movement_language: unknown
-Sab Than is a Martian noble and the son of Than Kosis, identified as a prince and royal heir of Zodanga. While his specific physical build remains unknown, he is visually defined by his high-status Zodangan clothing, ranging from standard royal attire to ceremonial groom's garments. He carries the visual weight of a ruler or usurper within the Zodangan political context.
+Sab Than is a Martian noble and the son of Than Kosis, identified as a prince and royal heir of Zodanga. His visual identity is defined by high-status Zodangan clothing, ranging from standard royal attire to specific ceremonial groom's garments. While his specific physical build and facial features are not detailed, he carries the visual weight of a ruling usurper and noble youth.
 
 - physical_traits: unknown
 - costume_signature: Royal Zodangan attire.
@@ -29,14 +29,14 @@ Sab Than is a Martian noble and the son of Than Kosis, identified as a prince an
 ## Behavioral Bible
 
 - personality: unknown
-- role: Prince of Zodanga; Ruler/Usurper.
+- role: Prince of Zodanga; Usurper; Ruler of Zodanga.
 - voice_notes: unknown
 - relationship_notes: Son of Than Kosis.
 
 ## Continuity
 
-- continuity_constraints: Must maintain the visual identity of a high-ranking Zodangan noble., Costume must reflect specific status changes (e.g., groom vs. standard royal).
-- unresolved_ambiguities: Specific physical build and facial features are not documented., Exact movement style or mannerisms are unknown.
+- continuity_constraints: Must maintain high-status Martian/Zodangan aesthetic., Costume must reflect specific status shifts (e.g., groom vs. ruler).
+- unresolved_ambiguities: Specific physical build and facial features are undocumented., Exact movement style or mannerisms are unknown.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ Sab Than is a Martian noble and the son of Than Kosis, identified as a prince an
 - status: `generated`
 - source_fingerprint: `231a9614e5a950271a7300bfaa48aa46b5c21f87`
 - created_at_utc: `2026-04-24T17:17:01.979143+00:00`
-- updated_at_utc: `2026-04-24T17:17:01.979143+00:00`
+- updated_at_utc: `2026-04-24T17:31:09.315439+00:00`

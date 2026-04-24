@@ -19,7 +19,7 @@
 - physical_build: unknown
 - origin_or_historical_context: Martian setting; identified as a Thark/Green Martian.
 - movement_language: unknown
-Sola is a female Green Martian, also identified as a Thark. Her visual identity is defined by her species' characteristic green coloring and traditional Green Martian attire. While specific physical proportions are not detailed, she is established as a member of the Thark race within the Martian setting.
+Sola is a female Green Martian, also identified as a Thark. While her specific physical build and age are not explicitly detailed, she is visually defined by her identity as a member of the Green Martian race. She typically wears Green Martian attire.
 
 - physical_traits: Green skin
 - costume_signature: Green Martian attire
@@ -28,15 +28,15 @@ Sola is a female Green Martian, also identified as a Thark. Her visual identity 
 
 ## Behavioral Bible
 
-- personality: Empathetic, concerned, and skilled in craftsmanship/remodeling gear; acts with solicitude and maternal instincts toward others.
+- personality: Empathetic, concerned, and skilled in craftsmanship/remodeling gear.
 - role: Foster mother to newly hatched Martians; companion to the protagonist.
 - voice_notes: unknown
-- relationship_notes: Shows genuine concern and solicitude for the protagonist., Acts as a foster mother to newly hatched Martians., Demonstrates empathy toward Red Martians.
+- relationship_notes: Shows genuine concern and solicitude for the protagonist., Acts as a foster mother to newly hatched Martians., Shows empathy toward Red Martian prisoners.
 
 ## Continuity
 
-- continuity_constraints: Must maintain Green Martian (Thark) visual identity., Should be depicted with skills related to craftsmanship or gear remodeling.
-- unresolved_ambiguities: Specific age and physical build are not provided., Exact details of "Green Martian attire" remain unspecified.
+- continuity_constraints: Must maintain identity as a Green Martian/Thark., Costume should reflect Green Martian culture/attire.
+- unresolved_ambiguities: Specific physical dimensions and age are unstated., Exact visual details of "Green Martian attire" are unspecified.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ Sola is a female Green Martian, also identified as a Thark. Her visual identity 
 - status: `generated`
 - source_fingerprint: `49aa429414129d159fdeb91eb2289a6664f29c49`
 - created_at_utc: `2026-04-24T17:07:18.677546+00:00`
-- updated_at_utc: `2026-04-24T17:07:18.677546+00:00`
+- updated_at_utc: `2026-04-24T17:21:32.552716+00:00`

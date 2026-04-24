@@ -36,7 +36,7 @@ A beautiful and slender woman characterized by copper-colored skin and black hai
 ## Continuity
 
 - continuity_constraints: Skin tone must remain copper-colored., Hair color must remain black.
-- unresolved_ambiguities: Specific age of the character., Exact clothing or costume worn., Character's movement style or mannerisms.
+- unresolved_ambiguities: Specific age of the character., Exact clothing or costume worn., Character's specific movement style or mannerisms.
 
 ## Evidence Summary
 
@@ -51,4 +51,4 @@ A beautiful and slender woman characterized by copper-colored skin and black hai
 - status: `generated`
 - source_fingerprint: `b4b967140676d61ee39de3b4b643567b4e6936d2`
 - created_at_utc: `2026-04-24T17:12:14.066120+00:00`
-- updated_at_utc: `2026-04-24T17:12:14.066120+00:00`
+- updated_at_utc: `2026-04-24T17:26:26.446021+00:00`

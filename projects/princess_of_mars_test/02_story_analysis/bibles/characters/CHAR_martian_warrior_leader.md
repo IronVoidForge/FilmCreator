@@ -19,7 +19,7 @@
 - physical_build: unknown
 - origin_or_historical_context: Martian setting
 - movement_language: unknown
-No visual data is provided in the evidence to establish a stable physical identity, costume, or movement language for this character. The character is identified only by their role as a Martian warrior leader within the narrative context of chapters III, IV, and XVIII.
+No visual data is available in the provided evidence to establish a stable identity, physical build, or costume signature for this character. The entity is identified only as a martian warrior leader within the context of chapters III, IV, and XVIII.
 
 - physical_traits: unknown
 - costume_signature: unknown
@@ -29,14 +29,14 @@ No visual data is provided in the evidence to establish a stable physical identi
 ## Behavioral Bible
 
 - personality: unknown
-- role: Martian warrior leader
+- role: martial leader
 - voice_notes: unknown
 - relationship_notes: unknown
 
 ## Continuity
 
-- continuity_constraints: Character is a singular individual entity.
-- unresolved_ambiguities: Complete lack of physical or behavioral description in provided evidence., Visual identity, age, build, and costume are entirely unestablished.
+- continuity_constraints: character is resolved into the canonical entity "martian_warrior"
+- unresolved_ambiguities: complete lack of visual or behavioral description in provided evidence
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ No visual data is provided in the evidence to establish a stable physical identi
 - status: `generated`
 - source_fingerprint: `b7bfce7079482fbd203eb6aacda5ca6e54f0c0d7`
 - created_at_utc: `2026-04-24T17:06:07.262884+00:00`
-- updated_at_utc: `2026-04-24T17:06:07.262884+00:00`
+- updated_at_utc: `2026-04-24T17:20:20.843418+00:00`

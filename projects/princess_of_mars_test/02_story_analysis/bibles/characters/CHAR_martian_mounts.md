@@ -19,7 +19,7 @@
 - physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-No visual data is available in the provided evidence to establish a physical identity, costume, or movement language for this entity.
+No visual data is available in the provided evidence to establish a stable identity, physical build, or costume for this entity. The character remains visually undefined.
 
 - physical_traits: unknown
 - costume_signature: unknown
@@ -36,7 +36,7 @@ No visual data is available in the provided evidence to establish a physical ide
 ## Continuity
 
 - continuity_constraints: (none)
-- unresolved_ambiguities: Visual identity is entirely unestablished in provided evidence., Character nature (individual vs. group) remains ambiguous based on the identifier "mounts".
+- unresolved_ambiguities: Visual identity is entirely unestablished in provided evidence., Physical characteristics and movement language are unknown.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ No visual data is available in the provided evidence to establish a physical ide
 - status: `generated`
 - source_fingerprint: `6c068ce29fda6dccf70ffde0d9b52d3f0b46723b`
 - created_at_utc: `2026-04-24T17:05:55.328835+00:00`
-- updated_at_utc: `2026-04-24T17:05:55.328835+00:00`
+- updated_at_utc: `2026-04-24T17:20:08.569828+00:00`

@@ -19,7 +19,7 @@
 - physical_build: unknown
 - origin_or_historical_context: Thark culture / Green Martian setting
 - movement_language: unknown
-Sarkoja is an older, hardened female Green Martian of the Thark people. She carries the visual weight of a high-ranking noble or spy, characterized by a calculating expression and adherence to strict cultural norms. Her appearance is defined by traditional Green Martian attire consistent with her status.
+Sarkoja is an older, hardened female Green Martian of the Thark people. She carries the visual presence of a high-ranking noble, adhering strictly to her culture's norms. Her appearance is defined by a calculating expression and the specific silhouette of Thark attire.
 
 - physical_traits: Green skin (inferred from species)
 - costume_signature: High-ranking Thark attire
@@ -29,14 +29,14 @@ Sarkoja is an older, hardened female Green Martian of the Thark people. She carr
 ## Behavioral Bible
 
 - personality: Hostile demeanor; calculating; adheres strictly to cultural norms.
-- role: Thark noble / spy
+- role: Thark noble; spy.
 - voice_notes: unknown
 - relationship_notes: unknown
 
 ## Continuity
 
 - continuity_constraints: Must maintain the visual identity of a high-ranking Thark noble., Appearance must reflect an older, hardened individual rather than a youth.
-- unresolved_ambiguities: Specific physical build and exact facial features are not detailed., Exact movement style is unknown.
+- unresolved_ambiguities: Specific physical build and proportions are not documented., Exact details of her movement language or specific facial marks/scars are unknown.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ Sarkoja is an older, hardened female Green Martian of the Thark people. She carr
 - status: `generated`
 - source_fingerprint: `aa34748f90e527ba21503173b39f4c4606471301`
 - created_at_utc: `2026-04-24T17:11:56.723076+00:00`
-- updated_at_utc: `2026-04-24T17:11:56.723076+00:00`
+- updated_at_utc: `2026-04-24T17:26:09.416271+00:00`

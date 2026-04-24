@@ -16,14 +16,14 @@
 
 - identity_baseline: Large humanoid ape-like creature.
 - age_presence: unknown
-- physical_build: Immense, massive frame with extreme strength and a four-armed anatomy.
+- physical_build: Massive, immense strength; 10-15ft tall.
 - origin_or_historical_context: unknown
 - movement_language: unknown
-A massive humanoid ape-like creature standing between 10 and 15 feet tall. The character is defined by a heavy, powerful primate silhouette and possesses four distinct arms. The scale of the entity suggests immense physical strength.
+A massive humanoid ape-like creature standing between 10 and 15 feet tall. The character is defined by a heavy, primate silhouette and possesses four arms, conveying immense physical strength.
 
-- physical_traits: Humanoid ape-like features, Four-armed anatomy
+- physical_traits: Humanoid ape anatomy, Extreme height (10-15ft), Four-armed anatomy
 - costume_signature: Massive, four-armed primate silhouette.
-- distinguishing_features: Four arms, Height of 10-15ft
+- distinguishing_features: Four arms
 - state_variants: unknown
 
 ## Behavioral Bible
@@ -31,12 +31,12 @@ A massive humanoid ape-like creature standing between 10 and 15 feet tall. The c
 - personality: unknown
 - role: unknown
 - voice_notes: unknown
-- relationship_notes: bull_ape_mate (potential designation for a mate or related entity)
+- relationship_notes: bull_ape_mate (referenced in source)
 
 ## Continuity
 
-- continuity_constraints: Must maintain four arms in all depictions., Height must remain within the 10-15ft range.
-- unresolved_ambiguities: Specific clothing or armor is not detailed beyond silhouette., Exact species or biological origin is unknown.
+- continuity_constraints: Must maintain a four-armed anatomy., Height must remain within the 10-15ft range.
+- unresolved_ambiguities: Specific clothing or armor details are not provided., Age and specific movement patterns are unknown.
 
 ## Evidence Summary
 
@@ -54,4 +54,4 @@ A massive humanoid ape-like creature standing between 10 and 15 feet tall. The c
 - status: `generated`
 - source_fingerprint: `2d7fe2fdf1fb31546c279196617dc84664c498bb`
 - created_at_utc: `2026-04-24T17:10:31.672563+00:00`
-- updated_at_utc: `2026-04-24T17:10:31.672563+00:00`
+- updated_at_utc: `2026-04-24T17:24:44.946361+00:00`

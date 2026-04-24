@@ -18,25 +18,25 @@
 - age_presence: unknown
 - physical_build: unknown
 - origin_or_historical_context: Warhoon horde setting.
-- movement_language: silent; carries out duties as a prisoner handler and food deliverer.
-A member of the Warhoon horde serving in a custodial capacity. The character is visually defined by standard Warhoon soldier or guard attire and maintains a silent, functional presence while performing duties such as prisoner handling and food delivery.
+- movement_language: silent; carries out duties as a food deliverer and prisoner handler.
+A member of the Warhoon horde serving in a custodial capacity. The character is visually defined by standard Warhoon soldier or guard attire and maintains a silent, functional presence while performing duties such as delivering food or handling prisoners.
 
-- physical_traits: unknown
+- physical_traits: Warhoon biology (inferred)
 - costume_signature: standard Warhoon soldier or guard attire.
 - distinguishing_features: none mentioned
-- state_variants: armed/guard duty
+- state_variants: standard guard/soldier attire
 
 ## Behavioral Bible
 
 - personality: silent; functional.
-- role: Warhoon guard, prisoner handler, and food deliverer.
+- role: prisoner handler; food deliverer; guard.
 - voice_notes: unknown
 - relationship_notes: interacts with prisoners as a handler.
 
 ## Continuity
 
-- continuity_constraints: Must maintain the visual identity of a standard Warhoon soldier/guard.
-- unresolved_ambiguities: Specific physical features and facial characteristics are unknown., Exact age and body proportions are not established.
+- continuity_constraints: Must maintain the visual identity of a Warhoon soldier/guard., Should remain silent during duty cycles.
+- unresolved_ambiguities: specific physical features and anatomy, exact age or build, specific facial identifiers
 
 ## Evidence Summary
 
@@ -53,4 +53,4 @@ A member of the Warhoon horde serving in a custodial capacity. The character is 
 - status: `generated`
 - source_fingerprint: `036689e97ea1fd54a04e5937d08ae93058e269a9`
 - created_at_utc: `2026-04-24T17:16:20.257238+00:00`
-- updated_at_utc: `2026-04-24T17:16:20.257238+00:00`
+- updated_at_utc: `2026-04-24T17:30:27.437937+00:00`

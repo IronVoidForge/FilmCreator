@@ -18,25 +18,25 @@
 - age_presence: unknown
 - physical_build: Agile combatant frame.
 - origin_or_historical_context: Red Martian / Heliumite setting.
-- movement_language: Agile, tactical, and precise in combat.
-A Red Martian warrior and Heliumite air-scout characterized by an agile, tactical physical presence. He is visually defined by his transition from a skilled combatant utilizing specialized Martian swordsmanship to a disheveled prisoner in dungeon garb. His silhouette is that of a functional, lethal fighter capable of high precision.
+- movement_language: Agile, tactical, and precise movement characteristic of a skilled swordsman.
+A Red Martian warrior and Heliumite air-scout characterized by an agile, tactical physical presence. He is visually defined by his specialized swordsmanship and ability to move with lethal precision. His appearance fluctuates between a disheveled prisoner in dungeon garb or gladiator attire and a combat-ready soldier equipped with precise weaponry.
 
 - physical_traits: Red Martian skin/appearance
 - costume_signature: Prisoner or gladiator attire; disheveled dungeon garb.
 - distinguishing_features: []
-- state_variants: Prisoner/Gladiator (disheveled), Combat-ready (armed with specialized swordsmanship weaponry)
+- state_variants: Prisoner/Gladiator (disheveled), Armed combatant (carrying lethal weaponry)
 
 ## Behavioral Bible
 
-- personality: Distraught and driven by vengeance and honor.
+- personality: Distraught, driven by vengeance and honor.
 - role: Heliumite air-scout; tactical fighter; ally.
 - voice_notes: unknown
-- relationship_notes: Driven by matters regarding Dejah Thoris.
+- relationship_notes: Driven by honor regarding Dejah Thoris.
 
 ## Continuity
 
-- continuity_constraints: Must maintain the capability for specialized Martian swordsmanship., Visual state should shift from combatant to disheveled prisoner depending on narrative location (e.g., Zodangan dungeons).
-- unresolved_ambiguities: Exact age and specific physical dimensions., Specific visual details of his "specialized weaponry."
+- continuity_constraints: Must maintain the identity of a skilled Martian swordsman regardless of clothing state., Visual transition from air-scout/soldier to prisoner must be consistent with dungeon confinement.
+- unresolved_ambiguities: Specific age and exact physical dimensions., Exact visual details of "dungeon garb" beyond being disheveled.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ A Red Martian warrior and Heliumite air-scout characterized by an agile, tactica
 - status: `generated`
 - source_fingerprint: `703d66c70c26ff71d9c69439841fa9224572f46b`
 - created_at_utc: `2026-04-24T17:13:57.354999+00:00`
-- updated_at_utc: `2026-04-24T17:13:57.354999+00:00`
+- updated_at_utc: `2026-04-24T17:28:06.741399+00:00`

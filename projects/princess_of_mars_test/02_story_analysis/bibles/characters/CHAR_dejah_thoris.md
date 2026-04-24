@@ -19,7 +19,7 @@
 - physical_build: elegant silhouette
 - origin_or_historical_context: Martian (Jeddak/humanoid)
 - movement_language: unknown
-Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. As a member of the Jeddak/humanoid Martian lineage, her appearance is defined by her distinct red skin and royal status. Her wardrobe shifts between formal princess attire and specific mourning garments depending on her emotional state or circumstances.
+Dejah Thoris is a red-skinned Martian noblewoman of high-born status. She possesses an elegant silhouette consistent with her role as a princess. Her visual presentation shifts between regal princess attire and specific mourning attire depending on her emotional state, such as periods of intense grief.
 
 - physical_traits: humanoid anatomy
 - costume_signature: Princess attire
@@ -35,8 +35,8 @@ Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, hi
 
 ## Continuity
 
-- continuity_constraints: Skin tone must remain red/Martian., Visual identity must maintain a high-born, elegant silhouette.
-- unresolved_ambiguities: Specific age and exact physical proportions are not defined., Exact details of the "princess attire" or "mourning attire" are implied but not visually specified.
+- continuity_constraints: Skin tone must remain red/Martian., Visual elegance should be maintained despite status changes (captive/mourning).
+- unresolved_ambiguities: Specific age and exact physical proportions are not defined., Exact design of "princess attire" is implied but not detailed.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, hi
 - status: `generated`
 - source_fingerprint: `79ecc5d7030bc937e67bbb0112802de57910c0d3`
 - created_at_utc: `2026-04-24T17:12:39.829715+00:00`
-- updated_at_utc: `2026-04-24T17:12:39.829715+00:00`
+- updated_at_utc: `2026-04-24T17:26:51.214398+00:00`

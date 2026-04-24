@@ -35,8 +35,8 @@ No visual data is available to establish a stable identity, physical build, or c
 
 ## Continuity
 
-- continuity_constraints: character must remain consistent with the designation "the_colossal_creature" if visual data is later provided.
-- unresolved_ambiguities: complete lack of physical or behavioral description in provided evidence, unknown biological or mechanical nature of the entity
+- continuity_constraints: character is identified as a singular individual entity
+- unresolved_ambiguities: complete lack of visual or behavioral description in provided evidence
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ No visual data is available to establish a stable identity, physical build, or c
 - status: `generated`
 - source_fingerprint: `216afbaf927ed97bfb1c12f55ece54c2a41f9be3`
 - created_at_utc: `2026-04-24T17:09:41.460857+00:00`
-- updated_at_utc: `2026-04-24T17:09:41.460857+00:00`
+- updated_at_utc: `2026-04-24T17:23:56.083035+00:00`

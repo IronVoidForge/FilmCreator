@@ -35,7 +35,7 @@ No visual data is available in the provided evidence to establish a stable physi
 
 ## Continuity
 
-- continuity_constraints: Character is identified as a singular individual entity despite some references suggesting a group.
+- continuity_constraints: Character is identified as a singular individual entity despite some references to group entities in local breakdowns.
 - unresolved_ambiguities: Complete lack of visual or behavioral descriptors in the provided evidence.
 
 ## Evidence Summary
@@ -50,4 +50,4 @@ No visual data is available in the provided evidence to establish a stable physi
 - status: `generated`
 - source_fingerprint: `8f6e3132007bf7c4be22140b082d9368f2d94e95`
 - created_at_utc: `2026-04-24T17:08:43.397539+00:00`
-- updated_at_utc: `2026-04-24T17:08:43.397539+00:00`
+- updated_at_utc: `2026-04-24T17:22:56.216127+00:00`

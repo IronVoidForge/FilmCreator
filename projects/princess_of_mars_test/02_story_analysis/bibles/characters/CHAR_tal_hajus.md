@@ -18,25 +18,25 @@
 - age_presence: unknown
 - physical_build: Bestial, monstrous, and brutal frame.
 - origin_or_historical_context: Martian (Thark) setting.
-- movement_language: Commanding presence; capable of shifting to a cowardly demeanor when defeated.
-A green-skinned Martian known as a Thark, possessing a bestial and monstrous physical presence. As the Jeddak, he carries himself with a commanding, authoritative presence wearing grand Thark regalia, though this shifts to a cowardly demeanor in states of defeat. He is characterized visually as a brutal and feared warrior leader.
+- movement_language: Commanding presence; capable of shifting from authoritative to cowardly demeanor.
+A green-skinned Martian known as a Thark, possessing a bestial and monstrous physical presence. As the Jeddak, he carries himself with a commanding, authoritative presence while wearing grand Thark regalia. His visual identity shifts from that of a feared, brutal warrior leader to a defeated figure exhibiting a cowardly demeanor.
 
 - physical_traits: Green skin
 - costume_signature: Grand, authoritative Thark regalia.
 - distinguishing_features: Green skin
-- state_variants: Battle-ready/Warrior, Ceremonial/Regal (Jeddak), Defeated
+- state_variants: Clothed in grand Thark regalia (ruler state), Defeated/unarmored (defeated state)
 
 ## Behavioral Bible
 
-- personality: Brutal, cruel, and commanding; potentially cowardly when defeated.
-- role: Jeddak (ruler) of the Tharks; warrior leader.
+- personality: Brutal, cruel, and commanding; capable of cowardice when defeated.
+- role: Jeddak (ruler) of the Tharks; feared leader and warrior.
 - voice_notes: unknown
-- relationship_notes: Feared leader of the Tharks
+- relationship_notes: Feared by others as a brutal leader.
 
 ## Continuity
 
-- continuity_constraints: Must maintain green skin as a primary identifier., Costume must reflect high-status regalia when acting as Jeddak.
-- unresolved_ambiguities: Specific facial features or exact body proportions are not detailed., Exact age is unknown.
+- continuity_constraints: Must maintain green skin pigmentation., Regalia must reflect high-status Thark authority.
+- unresolved_ambiguities: Specific facial features or exact body proportions are not detailed., Exact nature of the "bestial" anatomy is unspecified.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ A green-skinned Martian known as a Thark, possessing a bestial and monstrous phy
 - status: `generated`
 - source_fingerprint: `0c67d30275812b5286d9a193897e9796efdc887b`
 - created_at_utc: `2026-04-24T17:13:19.721600+00:00`
-- updated_at_utc: `2026-04-24T17:13:19.721600+00:00`
+- updated_at_utc: `2026-04-24T17:27:29.342544+00:00`

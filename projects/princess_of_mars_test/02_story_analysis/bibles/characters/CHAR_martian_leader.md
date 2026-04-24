@@ -19,24 +19,24 @@
 - physical_build: 15ft tall; heavy humanoid frame with four arms.
 - origin_or_historical_context: Martian warrior race.
 - movement_language: Dismounts from an eight-legged mount to approach others.
-A towering 15ft Martian warrior characterized by olive-green skin, red eyes, and prominent tusks. The character possesses a unique four-armed anatomy. He is seen dismounting from an eight-legged mount to approach others unarmed, carrying only a metal armlet as a peace offering.
+A towering 15ft Martian warrior characterized by olive-green skin, red eyes, and prominent tusks. The character possesses a unique four-armed anatomy. In diplomatic or peaceful contexts, he dismounts from an eight-legged mount to approach unarmed, often carrying a metal armlet as a gesture of peace.
 
 - physical_traits: Four arms, Red eyes, Tusks, Olive-green skin
 - costume_signature: Unarmed, carrying a metal armlet as a peace offering.
 - distinguishing_features: Olive-green skin, Four arms, Red eyes, Tusks
-- state_variants: Mounted (on eight-legged mount), Dismounted/Unarmed (offering metal armlet)
+- state_variants: Dismounted/Unarmed (approaching with peace offering), Mounted (on eight-legged mount)
 
 ## Behavioral Bible
 
 - personality: Capable of peaceful gestures and diplomatic offerings.
 - role: Leader of the Martian warrior race.
 - voice_notes: unknown
-- relationship_notes: Approaches others with a peace offering (metal armlet)
+- relationship_notes: Approaches others with a metal armlet as a peace offering.
 
 ## Continuity
 
-- continuity_constraints: Must maintain 15ft height scale, Must possess exactly four arms, Skin tone must remain olive-green
-- unresolved_ambiguities: Specific age or stage of life, Detailed clothing/armor beyond the armlet and silhouette
+- continuity_constraints: Must maintain 15ft height and four-arm anatomy., Skin color must remain olive-green.
+- unresolved_ambiguities: Specific age or stage of life., Detailed clothing/armor beyond the mention of a metal armlet.
 
 ## Evidence Summary
 
@@ -53,4 +53,4 @@ A towering 15ft Martian warrior characterized by olive-green skin, red eyes, and
 - status: `generated`
 - source_fingerprint: `981426dfb4ee344c149a12dfd0bc0cf3723246ff`
 - created_at_utc: `2026-04-24T17:08:02.951002+00:00`
-- updated_at_utc: `2026-04-24T17:08:02.951002+00:00`
+- updated_at_utc: `2026-04-24T17:22:16.984791+00:00`

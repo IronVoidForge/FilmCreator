@@ -50,4 +50,4 @@ No visual data is available for this character in the provided evidence. A stabl
 - status: `generated`
 - source_fingerprint: `139aabaed1095a4ed9a66027df793fcd3614b408`
 - created_at_utc: `2026-04-24T17:18:11.750028+00:00`
-- updated_at_utc: `2026-04-24T17:18:11.750028+00:00`
+- updated_at_utc: `2026-04-24T17:32:18.007042+00:00`
