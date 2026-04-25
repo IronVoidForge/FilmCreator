@@ -6,38 +6,38 @@
   "summary": "A group of Apache warriors approaches the cave entrance. They find the protagonist but are interrupted by a terrifying, low moaning sound emanating from the depths. The warriors flee in panic; one warrior falls to his death during the retreat.",
   "emotional_arc": "From curiosity/investigation to primal terror and chaos.",
   "production_intent": "Establish the supernatural threat of the cave through auditory and psychological terror, forcing a chaotic retreat of the apache_warriors.",
-  "scene_short_description": "Apache warriors approach a rocky gorge entrance under moonlight before fleeing in terror.",
-  "scene_primary_scale_story_point": "The vastness of the canyon vs the small scale of the approaching group.",
+  "scene_short_description": "Apache warriors approach a dark cave entrance under moonlight before fleeing in terror.",
+  "scene_primary_scale_story_point": "The vastness of the rocky_gorge_canyon vs the small scale of the approaching group.",
   "scene_required_anchor_catalog": [
-    "cave mouth",
-    "rocky ledge"
+    "Cave mouth opening",
+    "Rocky gorge ledge"
   ],
-  "scene_start_state": "apache_warriors moving cautiously toward the cave entrance.",
-  "scene_end_state": "chaotic retreat with one warrior falling from a height.",
-  "dominant_action_line": "Investigation leads to auditory terror, triggering a panicked flight and accidental death.",
+  "scene_start_state": "apache_warriors moving cautiously toward the cave entrance in moonlight.",
+  "scene_end_state": "Chaos and panic as warriors flee, resulting in one death from a fall.",
+  "dominant_action_line": "Investigation leads to auditory terror, triggering a panicked retreat and accidental death.",
   "scene_spatial_layout": [
-    "open rocky gorge leading to narrow cave mouth",
-    "steep vertical drop near the retreat path"
+    "Open rocky gorge leading to a narrow cave mouth",
+    "Vertical drop/ledge near the path of retreat"
   ],
   "character_spatial_map": [
-    "protagonist is immobile near the cave entrance",
-    "apache_warriors approach from the canyon floor/outer rim"
+    "protagonist: immobile at cave entrance",
+    "apache_warriors: approaching from gorge towards cave"
   ],
   "environment_subzones": [
-    "rocky_gorge_canyon_floor",
-    "cave_mouth_threshold",
-    "gorge_edge_ledge"
+    "cave_mouth",
+    "rocky_gorge_floor",
+    "ledge_drop"
   ],
   "entry_vectors": [
-    "canyon path toward cave mouth"
+    "gorge floor approach"
   ],
   "exit_vectors": [
-    "rapid retreat back through the gorge",
+    "rapid retreat back through gorge",
     "vertical fall from ledge"
   ],
   "beat_transition_map": [
     "BT001 -> BT002: Sound interruption",
-    "BT002 -> BT003: Panic trigger"
+    "BT002 -> BT003: Panic trigger and flight"
   ],
   "characters_required": [
     {
@@ -86,19 +86,19 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Apache warriors approach the cave entrance",
+      "summary": "apache_warriors approach the cave entrance",
       "purpose": "",
-      "action_start": "warriors walking cautiously",
-      "action_end": "warriors reach the threshold",
+      "action_start": "warriors walking through gorge",
+      "action_end": "warriors reach proximity of mouth",
       "active_subjects": [
         "apache_warriors"
       ],
       "passive_subjects": [
         "protagonist"
       ],
-      "spatial_context": "rocky gorge leading to cave mouth",
-      "blocking_hint": "group formation moving toward darkness",
-      "environment_subzone": "rocky_gorge_canyon_floor",
+      "spatial_context": "rocky_gorge_floor to cave_mouth",
+      "blocking_hint": "group moving in formation",
+      "environment_subzone": "rocky_gorge_floor",
       "continuity_focus": "distance from cave mouth",
       "coverage_hint": "wide/low angle",
       "coverage_priority": "high",
@@ -106,61 +106,63 @@
     },
     {
       "beat_id": "BT002",
-      "summary": "A terrifying low moaning sound emanates from the depths",
+      "summary": "supernatural moaning sound interrupts the group",
       "purpose": "",
-      "action_start": "warriors stop moving",
-      "action_end": "warriors begin to panic",
+      "action_start": "warriors walking",
+      "action_end": "warriors frozen in terror",
       "active_subjects": [
         "apache_warriors"
       ],
       "passive_subjects": [
         "protagonist"
       ],
-      "spatial_context": "cave mouth threshold",
-      "blocking_hint": "sudden halt and wide-eyed reaction",
-      "environment_subzone": "cave_mouth_threshold",
-      "continuity_focus": "sound direction from cave interior",
+      "spatial_context": "cave_mouth",
+      "blocking_hint": "sudden halt, looking toward cave [[CH002_SC002]]",
+      "environment_subzone": "cave_mouth",
+      "continuity_focus": "timing of sound vs reaction",
       "coverage_hint": "medium/handheld",
       "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "The warriors flee in panic; one falls to his death",
+      "summary": "panic and retreat leads to a fatal fall",
       "purpose": "",
-      "action_start": "warriors sprinting away",
-      "action_end": "one warrior falls off the ledge",
+      "action_start": "warriors turning to run",
+      "action_end": "one warrior falls to death",
       "active_subjects": [
         "apache_warriors"
       ],
-      "passive_subjects": [],
-      "spatial_context": "gorge edge and canyon floor",
-      "blocking_hint": "chaotic, uncoordinated movement toward exit",
-      "environment_subzone": "gorge_edge_ledge",
-      "continuity_focus": "timing of fall during retreat",
+      "passive_subjects": [
+        "protagonist"
+      ],
+      "spatial_context": "ledge_drop/gorge",
+      "blocking_hint": "chaotic scattering, one falling off edge",
+      "environment_subzone": "ledge_drop",
+      "continuity_focus": "direction of flight",
       "coverage_hint": "wide/shaky cam",
-      "coverage_priority": "medium",
-      "handoff_to_next": "end_scene"
+      "coverage_priority": "high",
+      "handoff_to_next": "none"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish scale and approach",
-      "planned_shot_moment_summary": "warriors moving through moonlight toward the cave",
+      "narrative_function": "establish scale",
+      "planned_shot_moment_summary": "warriors approaching cave in moonlight",
       "primary_subject_seed": "apache_warriors",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "rocky_gorge_canyon_floor",
-      "planned_shot_required_anchor_1": "cave mouth",
-      "planned_shot_scale_proof_detail": "warriors appear small against canyon walls",
-      "start_state_seed": "warriors walking in formation",
-      "end_state_seed": "warriors stop at cave threshold",
-      "action_seed": "approaching the entrance",
+      "environment_subzone": "rocky_gorge_floor",
+      "planned_shot_required_anchor_1": "cave_mouth",
+      "planned_shot_scale_proof_detail": "warriors appear small against gorge walls",
+      "start_state_seed": "warriors walking",
+      "end_state_seed": "warriors stop near mouth",
+      "action_seed": "approaching cave",
       "blocking_seed": [
-        "walking toward camera/entrance"
+        "group formation moving toward entrance"
       ],
       "shot_size": "wide",
       "camera_angle": "low_angle",
@@ -169,52 +171,53 @@
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "low_key_night",
-      "primary_subject_angle": "front_three_quarter_right"
+      "primary_subject_angle": "rear_three_quarter_left"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "introduce supernatural threat",
-      "planned_shot_moment_summary": "the low moaning sound erupts from the dark",
+      "narrative_function": "introduce threat",
+      "planned_shot_moment_summary": "terrifying low moan from cave depths",
       "primary_subject_seed": "apache_warriors",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "cave_mouth_threshold",
-      "planned_shot_required_anchor_1": "cave mouth",
-      "planned_shot_scale_proof_detail": "sound directionality from darkness",
-      "start_state_seed": "warriors frozen in place",
-      "end_state_seed": "warriors turning to flee",
-      "action_seed": "reacting to sound",
+      "environment_subzone": "cave_mouth",
+      "planned_shot_required_anchor_1": "cave_mouth",
+      "planned_shot_scale_proof_detail": "audio directionality",
+      "start_state_seed": "warriors frozen",
+      "end_state_seed": "warriors reacting to sound",
+      "action_seed": "reacting to moan",
       "blocking_seed": [
-        "sudden freeze and pivot"
+        "warriors halt and turn toward cave"
       ],
       "shot_size": "medium_full",
       "camera_angle": "eye_level",
       "lens_family": "normal",
       "camera_motion": "handheld",
-      "zoom_behavior": "none",
+      "zoom_behavior": "subtle_in",
       "focus_strategy": "shallow_subject",
       "lighting_style": "low_key_night",
-      "primary_subject_angle": "profile_left"
+      "primary_subject_angle": "front"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "demonstrate chaos and consequence",
-      "planned_shot_moment_summary": "warriors scramble away; one falls from the ledge",
+      "narrative_function": "demonstrate chaos",
+      "planned_shot_moment_summary": "warriors fleeing and one falling",
       "primary_subject_seed": "apache_warriors",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "gorge_edge_ledge",
-      "planned_shot_required_anchor_1": "rocky ledge",
-      "planned_shot_scale_proof_detail": "verticality of the fall",
+      "environment_subzone": "ledge_drop",
+      "planned_shot_required_anchor_1": "ledge_drop",
+      "planned_shot_scale_proof_detail": "verticality of fall",
       "start_state_seed": "running in panic",
-      "end_state_seed": "warrior disappears below ledge",
+      "end_state_seed": "one warrior falls",
       "action_seed": "fleeing and falling",
       "blocking_seed": [
-        "uncoordinated sprinting/stumbling"
+        "scattered running",
+        "one trips/falls off ledge"
       ],
       "shot_size": "wide",
       "camera_angle": "high_angle",
@@ -223,7 +226,7 @@
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "low_key_night",
-      "primary_subject_angle": "rear_three_quarter_left"
+      "primary_subject_angle": "profile_left"
     }
   ],
   "unresolved_questions": [],
@@ -291,14 +294,14 @@
     "[CH021] CHAPTER XXI (book index hit)",
     "Character protagonist: A transformed Earthman characterized by extreme physical agility and high-leaping capabilities suited for low gravity. The character exhibits a transition from a standard human state to a post-supernatural transformation state, initia..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH002_SC002\n\n## Production Intent\nEstablish the supernatural threat of the cave through auditory and psychological terror, forcing a chaotic retreat of the apache_warriors.\n\n## Required Cast\n- protagonist\n- apache_warriors\n\n## Required Environments\n- rocky_gorge_canyon (including cave mouth and gorge edge)\n\n## Continuity Constraints\n- Distance between apache_warriors and cave mouth.\n- Timing/direction of moaning sound relative to character reaction.\n- Verticality of the ledge during the fall.\n\n## Beat List\n- BT001: Apache warriors approach the cave entrance.\n- BT002: A terrifying low moaning sound emanates from the depths.\n- BT003: The warriors flee in panic; one falls to his death.",
+  "storyboard_markdown": "# Scene Contract: CH002_SC002\n\n## Production Intent\nEstablish the supernatural threat of the cave through auditory and psychological terror, forcing a chaotic retreat of the apache_warriors.\n\n## Required Cast\n- protagonist (immobile observer)\n- apache_warriors\n\n## Required Environments\n- rocky_gorge_canyon (including cave_mouth and ledge_drop)\n\n## Continuity Constraints\n- Distance between apache_warriors and cave mouth during approach.\n- Timing and direction of the \"moaning\" sound relative to character reactions.\n- Directional source of audio from cave depths.\n\n## Beat List\n- BT001: apache_warriors approach the cave entrance.\n- BT002: supernatural moaning sound interrupts the group.\n- BT003: panic and retreat leads to a fatal fall.",
   "metadata": {
     "artifact_id": "CH002_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
     "source_fingerprint": "550b07af2d3a4b5988365dda7f9d31651b4fb9ee",
-    "created_at_utc": "2026-04-25T05:13:17.388685+00:00",
-    "updated_at_utc": "2026-04-25T05:13:17.388685+00:00",
+    "created_at_utc": "2026-04-25T17:15:27.993359+00:00",
+    "updated_at_utc": "2026-04-25T17:15:27.993359+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -320,7 +323,7 @@
     "manual_overrides": {},
     "revision_history": [
       {
-        "timestamp_utc": "2026-04-25T05:13:53.817802+00:00",
+        "timestamp_utc": "2026-04-25T17:15:54.819833+00:00",
         "action": "synthesized",
         "source_fingerprint": "550b07af2d3a4b5988365dda7f9d31651b4fb9ee"
       }

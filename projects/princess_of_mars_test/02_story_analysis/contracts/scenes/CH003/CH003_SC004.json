@@ -5,38 +5,38 @@
   "purpose": "Demonstrate the protagonist's unique advantage and change the power dynamic.",
   "summary": "To escape, the protagonist performs a massive thirty-foot leap, landing on the far side of the enclosure. The Martians witness this feat, shifting their view of him from prey to a \"wonderful discovery.\"",
   "emotional_arc": "Desperation $\\rightarrow$ Triumph $\\rightarrow$ Observation (Martian side).",
-  "production_intent": "Execute a high-impact physical feat to pivot the narrative from pursuit to observation. The sequence must emphasize the protagonist's superhuman agility through scale and trajectory, establishing his new status as a biological anomaly rather than mere prey.",
-  "scene_short_description": "A transformed man performs a massive thirty-foot leap across a mossy basin to escape captors.",
-  "scene_primary_scale_story_point": "Protagonist's jump distance (30ft) vs. enclosure width and martian_warriors height.",
+  "production_intent": "Execute a high-impact physical feat to pivot the narrative from pursuit to discovery. The sequence must emphasize the protagonist's superhuman agility through scale and trajectory, establishing a clear power shift between the subject and the observers.",
+  "scene_short_description": "A transformed man performs a massive thirty-foot leap across a mossy circular basin.",
+  "scene_primary_scale_story_point": "Protagonist's jump distance vs. enclosure diameter",
   "scene_required_anchor_catalog": [
     "low walled enclosure",
     "glass roof incubator"
   ],
-  "scene_start_state": "protagonist is cornered/desperate within the circular_moss_basin.",
-  "scene_end_state": "protagonist stands on the far side of the enclosure; martian_warriors observe in shock.",
-  "dominant_action_line": "A massive, superhuman leap across a wide gap to escape an enclosure.",
+  "scene_start_state": "protagonist cornered within the yellowish moss vegetation of the circular_moss_basin.",
+  "scene_end_state": "martian_warriors observing the protagonist from a position of curiosity rather than aggression.",
+  "dominant_action_line": "The protagonist executes a massive leap to escape the enclosure, landing on the far side.",
   "scene_spatial_layout": [
     "Circular basin with yellowish moss vegetation",
-    "Low walled perimeter under a glass roof"
+    "Low walled perimeter containing an incubator structure"
   ],
   "character_spatial_map": [
-    "protagonist starts inside the inner circle of the basin",
-    "martian_warriors positioned at the perimeter/entry points"
+    "protagonist starts inside the low walled enclosure",
+    "martian_warriors positioned outside/around the enclosure perimeter"
   ],
   "environment_subzones": [
-    "inner_moss_floor",
-    "enclosure_perimeter",
-    "far_side_landing_zone"
+    "interior_enclosure",
+    "mossy_basin_floor",
+    "far_side_rim"
   ],
   "entry_vectors": [
-    "pursuit path from martian_warriors"
+    "protagonist leap from interior to far side rim"
   ],
   "exit_vectors": [
-    "30-foot leap trajectory across the basin"
+    "protagonist movement away from the landing point"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Physical exertion/launch",
-    "BT002 -> BT003: Landing and shift in observer perspective"
+    "BT001 -> BT002: Physical exertion into airborne suspension",
+    "BT002 -> BT003: Impact/landing into Martian reaction"
   ],
   "characters_required": [
     {
@@ -84,61 +84,61 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Protagonist prepares for the leap",
+      "summary": "Protagonist prepares for escape",
       "purpose": "",
       "action_start": "crouched in desperation",
-      "action_end": "explosive upward launch",
+      "action_end": "explosive launch",
       "active_subjects": [
         "protagonist"
       ],
       "passive_subjects": [
         "martian_warriors"
       ],
-      "spatial_context": "inner basin floor",
-      "blocking_hint": "protagonist centered, warriors closing in",
-      "environment_subzone": "inner_moss_floor",
-      "continuity_focus": "muscle tension/coiling",
-      "coverage_hint": "medium shot of exertion",
+      "spatial_context": "inside the low walled enclosure",
+      "blocking_hint": "protagonist centered against the wall",
+      "environment_subzone": "interior_enclosure",
+      "continuity_focus": "launch point position",
+      "coverage_hint": "medium_full to full",
       "coverage_priority": "high",
-      "handoff_to_next": "The physical launch"
+      "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
       "summary": "The massive leap",
       "purpose": "",
-      "action_start": "feet leave the moss",
-      "action_end": "impact on far side",
+      "action_start": "leaving ground",
+      "action_end": "impacting far side rim",
       "active_subjects": [
         "protagonist"
       ],
       "passive_subjects": [],
-      "spatial_context": "mid-air across the basin",
-      "blocking_hint": "traversing the 30ft gap",
-      "environment_subzone": "inner_moss_floor",
-      "continuity_focus": "trajectory arc and distance",
+      "spatial_context": "traversing the 30-foot gap of the basin",
+      "blocking_hint": "arc trajectory across the frame",
+      "environment_subzone": "mossy_basin_floor",
+      "continuity_focus": "30-foot distance/trajectory",
       "coverage_hint": "wide tracking/slow-motion",
       "coverage_priority": "critical",
-      "handoff_to_next": "The landing impact"
+      "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "The shift in observation",
+      "summary": "Martian observation",
       "purpose": "",
-      "action_start": "protagonist lands on far side",
-      "action_end": "martian_warriors staring",
+      "action_start": "protagonist lands",
+      "action_end": "martians freeze in interest",
       "active_subjects": [
         "martian_warriors"
       ],
       "passive_subjects": [
         "protagonist"
       ],
-      "spatial_context": "enclosure perimeter looking inward",
-      "blocking_hint": "warriors frozen at the edge",
-      "environment_subzone": "enclosure_perimeter",
-      "continuity_focus": "scale of protagonist vs warriors",
-      "coverage_hint": "reaction shots",
-      "coverage_priority": "medium",
-      "handoff_to_next": "The new status quo"
+      "spatial_context": "edge of the enclosure [[/SECTION]]",
+      "blocking_hint": "",
+      "environment_subzone": "",
+      "continuity_focus": "",
+      "coverage_hint": "",
+      "coverage_priority": "",
+      "handoff_to_next": ""
     }
   ],
   "planned_shots": [
@@ -151,41 +151,41 @@
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "inner_moss_floor",
+      "environment_subzone": "interior_enclosure",
       "planned_shot_required_anchor_1": "low walled enclosure",
-      "planned_shot_scale_proof_detail": "proximity to walls",
+      "planned_shot_scale_proof_detail": "distance to wall",
       "start_state_seed": "crouched position",
-      "end_state_seed": "explosive launch",
-      "action_seed": "protagonist coils and leaps",
+      "end_state_seed": "launching upward",
+      "action_seed": "explosive jump initiation",
       "blocking_seed": [
-        "center of basin"
+        "center of enclosure"
       ],
-      "shot_size": "medium_full",
+      "shot_size": "full",
       "camera_angle": "low_angle",
       "lens_family": "wide",
       "camera_motion": "push_in",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front_three_quarter_right"
+      "primary_subject_angle": "profile_right"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "demonstrate feat",
-      "planned_shot_moment_summary": "mid-air trajectory",
+      "planned_shot_moment_summary": "slow-motion flight through air",
       "primary_subject_seed": "protagonist",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "inner_moss_floor",
+      "environment_subzone": "mossy_basin_floor",
       "planned_shot_required_anchor_1": "glass roof incubator",
-      "planned_shot_scale_proof_detail": "30ft distance relative to walls",
-      "start_state_seed": "launch point",
-      "end_state_seed": "apex of jump",
-      "action_seed": "slow-motion flight through air",
+      "planned_shot_scale_proof_detail": "30-foot arc height/length",
+      "start_state_seed": "mid-air peak",
+      "end_state_seed": "descending toward rim",
+      "action_seed": "soaring across the gap",
       "blocking_seed": [
-        "traversing the gap"
+        "traversing center of basin"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
@@ -200,28 +200,28 @@
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "shift power dynamic",
-      "planned_shot_moment_summary": "martian reaction to landing",
+      "planned_shot_moment_summary": "martian warriors reacting to landing",
       "primary_subject_seed": "martian_warriors",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "enclosure_perimeter",
+      "environment_subzone": "far_side_rim",
       "planned_shot_required_anchor_1": "low walled enclosure",
-      "planned_shot_scale_proof_detail": "height comparison to protagonist",
-      "start_state_seed": "watching pursuit",
-      "end_state_seed": "staring in awe",
-      "action_seed": "martian_warriors freeze and observe",
+      "planned_shot_scale_proof_detail": "height of martians vs protagonist",
+      "start_state_seed": "staring in shock",
+      "end_state_seed": "observing with interest",
+      "action_seed": "stillness/observation",
       "blocking_seed": [
-        "standing at perimeter"
+        "perimeter of basin"
       ],
-      "shot_size": "medium_close",
+      "shot_size": "medium_full",
       "camera_angle": "eye_level",
       "lens_family": "normal",
       "camera_motion": "locked_off",
       "zoom_behavior": "subtle_in",
-      "focus_strategy": "shallow_subject",
+      "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front"
+      "primary_subject_angle": "front_three_quarter_left"
     }
   ],
   "unresolved_questions": [],
@@ -289,14 +289,14 @@
     "[CH014] CHAPTER XIV (book index hit)",
     "Character protagonist: A transformed Earthman characterized by extreme physical agility and high-leaping capabilities suited for low gravity. The character exhibits a transition from a standard human state to a post-supernatural transformation state, initia..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH003_SC004\n\n## Production Intent\nExecute a high-impact physical feat to pivot the narrative from pursuit to observation. The sequence must emphasize the protagonist's superhuman agility through scale and trajectory, establishing his new status as a biological anomaly rather than mere prey.\n\n## Required Cast\n- protagonist (transformed Earthman)\n- martian_warriors\n\n## Required Environments\n- circular_moss_basin (yellowish moss, low walled enclosure, glass roof incubator)\n\n## Continuity Constraints\n- Precise 30-foot trajectory and landing point relative to enclosure walls\n- Visual scale ratio between protagonist and martian_warriors\n\n## Beat List\n- BT001: Protagonist prepares for the leap\n- BT002: The massive leap (30ft)\n- BT003: The shift in observation (Martian reaction)",
+  "storyboard_markdown": "# Scene Contract: CH003_SC004\n\n## Production Intent\nExecute a high-impact physical feat to pivot the narrative from pursuit to discovery. The sequence must emphasize the protagonist's superhuman agility through scale and trajectory, establishing a clear power shift between the subject and the observers.\n\n## Required Cast\n- protagonist\n- martian_warriors\n\n## Required Environments\n- circular_moss_basin (with low walled enclosure and glass roof incubator)\n\n## Continuity Constraints\n- Precise 30-foot trajectory and landing point relative to enclosure walls\n- Visual scale ratio between protagonist and martian_warriors\n\n## Beat List\n- BT001: Protagonist prepares for escape\n- BT002: The massive leap\n- BT003: Martian observation",
   "metadata": {
     "artifact_id": "CH003_SC004_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
     "source_fingerprint": "b93b466daa7c88c637eab9d0765bb66b1341d44e",
-    "created_at_utc": "2026-04-25T05:17:31.113584+00:00",
-    "updated_at_utc": "2026-04-25T05:17:31.113584+00:00",
+    "created_at_utc": "2026-04-25T17:18:34.035195+00:00",
+    "updated_at_utc": "2026-04-25T17:18:34.035195+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -318,7 +318,7 @@
     "manual_overrides": {},
     "revision_history": [
       {
-        "timestamp_utc": "2026-04-25T05:18:06.679881+00:00",
+        "timestamp_utc": "2026-04-25T17:18:59.328562+00:00",
         "action": "synthesized",
         "source_fingerprint": "b93b466daa7c88c637eab9d0765bb66b1341d44e"
       }

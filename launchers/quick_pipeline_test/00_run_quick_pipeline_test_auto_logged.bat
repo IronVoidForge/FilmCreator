@@ -1,10 +1,13 @@
 @echo off
-setlocal EnableExtensions
+setlocal EnableExtensions DisableDelayedExpansion
 
-call "%~dp0_shared\resolve_filmcreator_root.bat"
+set "SCRIPT_DIR=%~dp0"
+if "%SCRIPT_DIR:~-1%"=="\" set "SCRIPT_DIR=%SCRIPT_DIR:~0,-1%"
+
+call "%SCRIPT_DIR%\_shared\resolve_filmcreator_root.bat"
 if errorlevel 1 goto :fail_before_log
-
 pushd "%FILMCREATOR_ROOT%" >nul
+if errorlevel 1 goto :fail_before_log
 
 set "PROJECT_SLUG=%~1"
 if not defined PROJECT_SLUG set "PROJECT_SLUG=princess_of_mars_test"
@@ -36,86 +39,82 @@ call :log "Environment bible limit: %ENVIRONMENT_LIMIT%"
 call :log "Include character bibles: %RUN_CHARACTER_BIBLES%"
 call :log "Include environment bibles: %RUN_ENVIRONMENT_BIBLES%"
 call :log "Repo root: %FILMCREATOR_ROOT%"
+call :log "Script dir: %SCRIPT_DIR%"
 call :log "Log file: %LOG_FILE%"
-call :log ""
 
-call :run_step "00 Clear downstream artifacts" call "%~dp000_clear_downstream_artifacts.bat" %PROJECT_SLUG% %CHAPTERS%
+call :run_file_step "00 Clear downstream artifacts" "%SCRIPT_DIR%\00_clear_downstream_artifacts.bat" "%PROJECT_SLUG%" "%CHAPTERS%" "Y"
 if errorlevel 1 goto :fail
-
-if "%RUN_CHARACTER_BIBLES%"=="1" (
-    call :run_step "08 Character bibles" call "%~dp008_run_character_bibles.bat" %PROJECT_SLUG% %CHARACTER_LIMIT%
-    if errorlevel 1 goto :fail
-) else (
-    call :log "Skipping character bibles because RUN_CHARACTER_BIBLES=%RUN_CHARACTER_BIBLES%"
-)
-
-if "%RUN_ENVIRONMENT_BIBLES%"=="1" (
-    call :run_step "09 Environment bibles" call "%~dp009_run_environment_bibles.bat" %PROJECT_SLUG% %ENVIRONMENT_LIMIT%
-    if errorlevel 1 goto :fail
-) else (
-    call :log "Skipping environment bibles because RUN_ENVIRONMENT_BIBLES=%RUN_ENVIRONMENT_BIBLES%"
-)
-
-call :run_step "01 Scene contracts" call "%~dp001_run_scene_contracts.bat" %PROJECT_SLUG% %CHAPTERS%
+if "%RUN_CHARACTER_BIBLES%"=="1" call :run_file_step "08 Character bibles" "%SCRIPT_DIR%\08_run_character_bibles.bat" "%PROJECT_SLUG%" "%CHARACTER_LIMIT%"
 if errorlevel 1 goto :fail
-
-call :run_step "02 Scene bindings" call "%~dp002_run_scene_bindings.bat" %PROJECT_SLUG% %CHAPTERS%
+if "%RUN_ENVIRONMENT_BIBLES%"=="1" call :run_file_step "09 Environment bibles" "%SCRIPT_DIR%\09_run_environment_bibles.bat" "%PROJECT_SLUG%" "%ENVIRONMENT_LIMIT%"
 if errorlevel 1 goto :fail
-
-call :run_step "03 Shot packages" call "%~dp003_run_shot_packages.bat" %PROJECT_SLUG% %CHAPTERS%
+call :run_file_step "01 Scene contracts" "%SCRIPT_DIR%\01_run_scene_contracts.bat" "%PROJECT_SLUG%" "%CHAPTERS%"
 if errorlevel 1 goto :fail
-
-call :run_step "04 Dialogue timeline" call "%~dp004_run_dialogue_timeline.bat" %PROJECT_SLUG% %CHAPTERS%
+call :run_file_step "02 Scene bindings" "%SCRIPT_DIR%\02_run_scene_bindings.bat" "%PROJECT_SLUG%" "%CHAPTERS%"
 if errorlevel 1 goto :fail
-
-call :run_step "04.5 Visual fallback synthesis" python -m orchestrator synthesize-visual-fallbacks %PROJECT_SLUG% --force
+call :run_file_step "03 Shot packages" "%SCRIPT_DIR%\03_run_shot_packages.bat" "%PROJECT_SLUG%" "%CHAPTERS%"
 if errorlevel 1 goto :fail
-
-call :run_step "05 Descriptor enrichment" call "%~dp005_run_descriptor_enrichment.bat" %PROJECT_SLUG% %CHAPTERS%
+call :run_file_step "04 Dialogue timeline" "%SCRIPT_DIR%\04_run_dialogue_timeline.bat" "%PROJECT_SLUG%" "%CHAPTERS%"
 if errorlevel 1 goto :fail
-
-call :run_step "06 Prompt preparation" call "%~dp006_run_prompt_preparation.bat" %PROJECT_SLUG% %CHAPTERS%
+call :run_cmd_step "04.5 Visual fallback synthesis" python -m orchestrator synthesize-visual-fallbacks "%PROJECT_SLUG%" --force
 if errorlevel 1 goto :fail
-
-call :run_step "07 Quality grading" call "%~dp007_run_quality_grading.bat" %PROJECT_SLUG% %CHAPTERS%
+call :run_file_step "05 Descriptor enrichment" "%SCRIPT_DIR%\05_run_descriptor_enrichment.bat" "%PROJECT_SLUG%" "%CHAPTERS%"
+if errorlevel 1 goto :fail
+call :run_file_step "06 Prompt preparation" "%SCRIPT_DIR%\06_run_prompt_preparation.bat" "%PROJECT_SLUG%" "%CHAPTERS%"
+if errorlevel 1 goto :fail
+call :run_file_step "07 Quality grading" "%SCRIPT_DIR%\07_run_quality_grading.bat" "%PROJECT_SLUG%" "%CHAPTERS%"
 if errorlevel 1 goto :fail
 
 call :log ""
 call :log "========================================"
 call :log "Quick pipeline test complete."
 call :log "========================================"
-call :log ""
-call :log "Verify expected outputs:"
-call :log "- projects\%PROJECT_SLUG%\02_story_analysis\world\global\VISUAL_FALLBACKS.json"
-call :log "- projects\%PROJECT_SLUG%\03_prompt_packages\prepared\PROMPT_PREPARATION_INDEX.json"
-call :log "- projects\%PROJECT_SLUG%\03_prompt_packages\prepared\PROMPT_PREPARATION_REVIEW_INDEX.json"
-call :log "- projects\%PROJECT_SLUG%\02_story_analysis\grading\QUALITY_GRADE_INDEX.json"
-call :log "- projects\%PROJECT_SLUG%\02_story_analysis\grading\review\QUALITY_RERUN_QUEUE.json"
-call :log ""
-
 goto :done
 
-:run_step
+:run_file_step
 set "STEP_NAME=%~1"
-shift /1
+set "STEP_FILE=%~2"
+set "A1=%~3"
+set "A2=%~4"
+set "A3=%~5"
+set "A4=%~6"
 call :log ""
 call :log "----------------------------------------"
 call :log "START: %STEP_NAME%"
 call :log "----------------------------------------"
-call :log "Command: %*"
-%* 2>&1 | powershell -NoProfile -Command "$input | Tee-Object -FilePath '%LOG_FILE%' -Append"
-set "STEP_EXIT=%ERRORLEVEL%"
-if not "%STEP_EXIT%"=="0" (
-    call :log "FAILED: %STEP_NAME% with exit code %STEP_EXIT%"
-    exit /b %STEP_EXIT%
+powershell -NoProfile -ExecutionPolicy Bypass -Command "& { & '%STEP_FILE%' '%A1%' '%A2%' '%A3%' '%A4%' 2>&1 | Tee-Object -FilePath '%LOG_FILE%' -Append; exit $LASTEXITCODE }"
+set "RC=%ERRORLEVEL%"
+if not "%RC%"=="0" (
+ call :log "FAILED: %STEP_NAME% with exit code %RC%"
+ exit /b %RC%
+)
+call :log "DONE: %STEP_NAME%"
+exit /b 0
+
+:run_cmd_step
+set "STEP_NAME=%~1"
+shift
+call :log ""
+call :log "----------------------------------------"
+call :log "START: %STEP_NAME%"
+call :log "----------------------------------------"
+powershell -NoProfile -ExecutionPolicy Bypass -Command "& { cmd /c \"%*\" 2>&1 | Tee-Object -FilePath '%LOG_FILE%' -Append; exit $LASTEXITCODE }"
+set "RC=%ERRORLEVEL%"
+if not "%RC%"=="0" (
+ call :log "FAILED: %STEP_NAME% with exit code %RC%"
+ exit /b %RC%
 )
 call :log "DONE: %STEP_NAME%"
 exit /b 0
 
 :log
-set "LOG_MESSAGE=%~1"
-echo %LOG_MESSAGE%
->> "%LOG_FILE%" echo %LOG_MESSAGE%
+if "%~1"=="" (
+ echo.
+ >> "%LOG_FILE%" echo.
+) else (
+ echo %~1
+ >> "%LOG_FILE%" echo %~1
+)
 exit /b 0
 
 :fail
@@ -124,7 +123,6 @@ call :log "========================================"
 call :log "Quick pipeline test failed."
 call :log "See log: %LOG_FILE%"
 call :log "========================================"
-call :log ""
 popd >nul
 echo.
 echo Press any key to close this window.

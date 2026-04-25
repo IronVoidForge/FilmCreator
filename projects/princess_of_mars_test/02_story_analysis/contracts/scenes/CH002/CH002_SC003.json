@@ -6,22 +6,22 @@
   "summary": "After hours of isolation, the protagonist uses intense mental willpower to break the paralysis. Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, clothed body remains lying lifeless on the cave floor.",
   "emotional_arc": "From intense mental struggle to profound shock and existential horror.",
   "production_intent": "Execute the supernatural metamorphosis reveal by staging a dual-presence shot containing both the transformed naked protagonist and his original clothed corpse.",
-  "scene_short_description": "A man struggles to break paralysis before standing to find his clothed corpse lying nearby.",
-  "scene_primary_scale_story_point": "Verticality shift from prone/paralyzed to upright/transformed.",
+  "scene_short_description": "A man struggles against paralysis before standing to find his clothed corpse lying nearby.",
+  "scene_primary_scale_story_point": "The verticality of the new, upright naked figure contrasted against the horizontal, lifeless clothed body.",
   "scene_required_anchor_catalog": [
     "old_body_corpse",
-    "cave_floor_rock_surface"
+    "cave_floor_rock"
   ],
-  "scene_start_state": "Protagonist is prone and paralyzed on the cave floor in deep shadows.",
-  "scene_end_state": "Naked protagonist stands upright, staring down at his original clothed body.",
-  "dominant_action_line": "Mental willpower overcomes paralysis to trigger a physical metamorphosis and reveal a discarded shell.",
+  "scene_start_state": "Protagonist is paralyzed and immobile on the cave floor.",
+  "scene_end_state": "Protagonist stands naked, staring in horror at his original clothed self.",
+  "dominant_action_line": "Mental willpower overcomes paralysis to trigger a physical metamorphosis and reveal the discarded shell.",
   "scene_spatial_layout": [
     "Deep shadow environment with localized moonlight/ambient light",
-    "Vertical separation between the prone corpse and standing figure"
+    "Vertical separation between standing subject and prone subject"
   ],
   "character_spatial_map": [
-    "protagonist (New Self): Standing upright, naked, agile posture",
-    "protagonist (Old Body): Lying lifeless, clothed, prone on floor"
+    "protagonist (new): standing upright, naked, agile posture",
+    "protagonist (old): lying lifeless, clothed, prone on floor"
   ],
   "environment_subzones": [
     "arizona_mountain_cave_floor",
@@ -34,8 +34,8 @@
     "Subjects exit or hand off toward the next story beat."
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Physical exertion leads to sudden movement",
-    "BT002 -> BT003: Standing upright leads to visual discovery"
+    "BT001 -> BT002: Physical exertion leads to successful movement",
+    "BT002 -> BT003: Movement leads to visual discovery of the corpse"
   ],
   "characters_required": [
     {
@@ -62,7 +62,7 @@
     }
   ],
   "continuity_constraints": [
-    "Exact spatial distance between the old body and new self",
+    "Exact spatial distance between the old body and the new self",
     "Lighting consistency across both versions of the character"
   ],
   "visual_coverage_families": [
@@ -75,16 +75,16 @@
       "beat_id": "BT001",
       "summary": "Mental struggle to break paralysis",
       "purpose": "",
-      "action_start": "prone and immobile",
-      "action_end": "intense physical twitching/effort",
+      "action_start": "immobile on floor",
+      "action_end": "physical movement begins",
       "active_subjects": [
         "protagonist"
       ],
       "passive_subjects": [],
       "spatial_context": "arizona_mountain_cave_floor",
-      "blocking_hint": "lying in deep shadows",
+      "blocking_hint": "protagonist straining against the ground",
       "environment_subzone": "arizona_mountain_cave_floor",
-      "continuity_focus": "clothed body must be present",
+      "continuity_focus": "clothed body must remain in position",
       "coverage_hint": "medium shots of effort",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
@@ -93,32 +93,32 @@
       "beat_id": "BT002",
       "summary": "The metamorphosis and standing",
       "purpose": "",
-      "action_start": "straining against paralysis",
-      "action_end": "standing upright and naked",
+      "action_start": "protagonist rising",
+      "action_end": "protagonist is upright and naked",
       "active_subjects": [
         "protagonist"
       ],
       "passive_subjects": [],
       "spatial_context": "arizona_mountain_cave_floor",
-      "blocking_hint": "rising from the position of the old body",
+      "blocking_hint": "protagonist stands near the old body",
       "environment_subzone": "arizona_mountain_cave_floor",
-      "continuity_focus": "nakedness vs clothed corpse proximity",
+      "continuity_focus": "naked skin vs clothed corpse proximity",
       "coverage_hint": "wide reveal shot",
       "coverage_priority": "critical",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Realization and existential horror",
+      "summary": "Realization of horror",
       "purpose": "",
-      "action_start": "standing upright",
-      "action_end": "staring at the old body",
+      "action_start": "protagonist looking down",
+      "action_end": "protagonist frozen in shock",
       "active_subjects": [
         "protagonist"
       ],
       "passive_subjects": [],
       "spatial_context": "arizona_mountain_cave_floor",
-      "blocking_hint": "looking down toward the corpse",
+      "blocking_hint": "protagonist staring at the corpse",
       "environment_subzone": "arizona_mountain_cave_shadows",
       "continuity_focus": "lighting on face must match reveal shot",
       "coverage_hint": "close-ups of face",
@@ -139,11 +139,11 @@
       "environment_subzone": "arizona_mountain_cave_floor",
       "planned_shot_required_anchor_1": "old_body_corpse",
       "planned_shot_scale_proof_detail": "clothed body remains static",
-      "start_state_seed": "prone position",
-      "end_state_seed": "straining movement",
-      "action_seed": "intense mental willpower/physical twitching",
+      "start_state_seed": "prone/paralyzed",
+      "end_state_seed": "twitching/straining",
+      "action_seed": "intense mental and physical effort to move",
       "blocking_seed": [
-        "lying on cave floor"
+        "protagonist struggling on floor"
       ],
       "shot_size": "medium",
       "camera_angle": "low_angle",
@@ -165,12 +165,12 @@
       "narration_mode": "none",
       "environment_subzone": "arizona_mountain_cave_floor",
       "planned_shot_required_anchor_1": "old_body_corpse",
-      "planned_shot_scale_proof_detail": "naked figure vs clothed body in frame",
+      "planned_shot_scale_proof_detail": "standing height vs lying body",
       "start_state_seed": "rising from floor",
-      "end_state_seed": "standing upright",
-      "action_seed": "sudden vertical movement",
+      "end_state_seed": "fully upright",
+      "action_seed": "standing up with extreme agility",
       "blocking_seed": [
-        "rising away from the corpse"
+        "protagonist rises near the corpse"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
@@ -185,19 +185,19 @@
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "emotional climax",
-      "planned_shot_moment_summary": "realization of horror",
+      "planned_shot_moment_summary": "protagonist realizes his state",
       "primary_subject_seed": "protagonist",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "arizona_mountain_cave_shadows",
       "planned_shot_required_anchor_1": "old_body_corpse",
-      "planned_shot_scale_proof_detail": "facial expression of shock",
+      "planned_shot_scale_proof_detail": "facial expression of horror",
       "start_state_seed": "looking down",
-      "end_state_seed": "staring in horror",
-      "action_seed": "gaze shifts to the corpse",
+      "end_state_seed": "staring in shock",
+      "action_seed": "realizing the existence of the clothed body",
       "blocking_seed": [
-        "standing still"
+        "protagonist frozen in place"
       ],
       "shot_size": "close_up",
       "camera_angle": "eye_level",
@@ -274,14 +274,14 @@
     "[CH016] CHAPTER XVI (book index hit)",
     "Character protagonist: A transformed Earthman characterized by extreme physical agility and high-leaping capabilities suited for low gravity. The character exhibits a transition from a standard human state to a post-supernatural transformation state, initia..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH002_SC003\n\n## Production Intent\nExecute the supernatural metamorphosis reveal by staging a dual-presence shot containing both the transformed naked protagonist and his original clothed corpse.\n\n## Required Cast\n- protagonist (The \"New\" Self): Naked, agile, post-transformation state.\n- protagonist (The \"Old\" Body): Clothed, lifeless, prone.\n\n## Required Environments\n- arizona_mountain_cave: Deep shadows, rocky floor.\n\n## Continuity Constraints\n- Exact spatial distance between the old body and new self.\n- Lighting consistency across both versions of the character.\n\n## Beat List\n- BT001: Mental struggle to break paralysis.\n- BT002: The metamorphosis and standing.\n- BT003: Realization and existential horror.",
+  "storyboard_markdown": "# Scene Contract: CH002_SC003\n\n## Production Intent\nExecute the central supernatural twist and reveal the protagonist's metamorphosis by staging a dual-presence shot containing both the transformed naked figure and his original clothed corpse.\n\n## Required Cast\n- protagonist (The \"New\" Self): Naked, agile, post-transformation state.\n- protagonist (The \"Old\" Body): Clothed, lifeless, prone on floor.\n\n## Required Environments\n- arizona_mountain_cave: Deep shadows, rocky cave floor.\n\n## Continuity Constraints\n- Exact spatial placement of the clothed body relative to the standing naked figure.\n- Lighting consistency between the two versions of the character in the reveal shot.\n\n## Beat List\n- BT001: Intense mental struggle to break paralysis.\n- BT002: Physical metamorphosis and standing upright (naked).\n- BT003: Realization of the existence of the original clothed body.",
   "metadata": {
     "artifact_id": "CH002_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
     "source_fingerprint": "b26bdd68927a16cb026ae75c5f3e3a72ec0e6843",
-    "created_at_utc": "2026-04-25T05:13:53.862838+00:00",
-    "updated_at_utc": "2026-04-25T05:13:53.863338+00:00",
+    "created_at_utc": "2026-04-25T17:15:54.869405+00:00",
+    "updated_at_utc": "2026-04-25T17:15:54.869405+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -303,7 +303,7 @@
     "manual_overrides": {},
     "revision_history": [
       {
-        "timestamp_utc": "2026-04-25T05:14:29.311939+00:00",
+        "timestamp_utc": "2026-04-25T17:16:22.136342+00:00",
         "action": "synthesized",
         "source_fingerprint": "b26bdd68927a16cb026ae75c5f3e3a72ec0e6843"
       }

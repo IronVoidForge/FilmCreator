@@ -5,24 +5,24 @@
   "purpose": "Establish first contact and a tentative peace.",
   "summary": "The leader dismounts unarmed and offers the protagonist a metal armlet. The protagonist accepts, signaling peace. He is then lifted onto a Martian mount and taken away toward the distant hills.",
   "emotional_arc": "Tension $\\rightarrow$ Relief/Cautious Acceptance.",
-  "production_intent": "Execute a high-stakes non-verbal negotiation between the protagonist and The Leader within a yellowish mossy basin. The sequence must transition from physical tension to a ritualistic peace through the exchange of a metal armlet, concluding with the protagonist being mounted and transported toward the martian_distant_hills.",
-  "scene_short_description": "An unarmed leader offers a metal armlet to a transformed human in a mossy basin.",
+  "production_intent": "Establish a diplomatic pivot through non-verbal exchange and physical gestures of peace. The sequence must transition from high-tension standoff to a coordinated movement toward the horizon, utilizing the armlet as the central symbolic object.",
+  "scene_short_description": "An unarmed leader offers a metal armlet to a transformed human in a yellowish moss basin.",
   "scene_primary_scale_story_point": "The physical height difference between the protagonist and the Martian mount during the lift.",
   "scene_required_anchor_catalog": [
-    "yellowish moss-like vegetation",
-    "Martian mount"
+    "metal armlet",
+    "martian mount"
   ],
-  "scene_start_state": "The Leader dismounts unarmed facing the protagonist in the basin.",
+  "scene_start_state": "The Leader dismounts unarmed facing the protagonist in a tense standoff.",
   "scene_end_state": "A cavalcade moves away toward the martian_distant_hills.",
-  "dominant_action_line": "The exchange of a metal armlet as a peace offering and subsequent transport.",
+  "dominant_action_line": "The exchange of the armlet leads to the protagonist being mounted and escorted away.",
   "scene_spatial_layout": [
-    "Circular basin with yellowish mossy vegetation",
+    "Circular basin with yellowish moss-like vegetation",
     "Open landscape leading to distant hills"
   ],
   "character_spatial_map": [
-    "protagonist stands in the center of the basin",
-    "The Leader approaches from a mount",
-    "martian_warriors surround the perimeter"
+    "The Leader stands unarmed in front of the protagonist",
+    "martian_warriors surround the perimeter",
+    "protagonist is positioned near the center of the basin"
   ],
   "environment_subzones": [
     "yellowish_moss_basin",
@@ -36,7 +36,7 @@
   ],
   "beat_transition_map": [
     "BT001 -> BT002: Hand-off of the armlet",
-    "BT002 -> BT003: Lifting onto the mount"
+    "BT002 -> BT003: Physical lift onto the mount"
   ],
   "characters_required": [
     {
@@ -94,50 +94,50 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "The Leader dismounts unarmed to approach the protagonist",
+      "summary": "The Leader dismounts unarmed and offers the armlet",
       "purpose": "",
-      "action_start": "The Leader approaches on a mount",
-      "action_end": "The Leader stands unarmed in the basin",
+      "action_start": "Leader dismounting from mount",
+      "action_end": "armlet held out toward protagonist",
       "active_subjects": [
         "The Leader"
       ],
       "passive_subjects": [
         "protagonist"
       ],
-      "spatial_context": "yellowish mossy basin",
-      "blocking_hint": "Leader moves from mount to ground level facing protagonist",
+      "spatial_context": "yellowish_moss_basin",
+      "blocking_hint": "Leader approaches protagonist unarmed",
       "environment_subzone": "yellowish_moss_basin",
-      "continuity_focus": "unarmed status of The Leader",
+      "continuity_focus": "Leader must be unarmed",
       "coverage_hint": "medium shots of eye contact",
       "coverage_priority": "high",
-      "handoff_to_next": "The armlet offering"
+      "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "The metal armlet is offered and accepted as a peace signal",
+      "summary": "The Protagonist accepts the armlet as a sign of peace",
       "purpose": "",
-      "action_start": "The Leader extends the armlet",
-      "action_end": "The protagonist wears the armlet",
+      "action_start": "Protagonist reaching for armlet",
+      "action_end": "Armlet is on protagonist's arm",
       "active_subjects": [
-        "The Leader",
-        "protagonist"
+        "protagonist",
+        "The Leader"
       ],
       "passive_subjects": [
         "martian_warriors"
       ],
-      "spatial_context": "close proximity in basin",
-      "blocking_hint": "Hands meeting in center frame",
+      "spatial_context": "yellowish_moss_basin",
+      "blocking_hint": "Close proximity between two leads",
       "environment_subzone": "yellowish_moss_basin",
-      "continuity_focus": "armlet on protagonist's arm",
-      "coverage_hint": "close-ups of the hand-off",
-      "coverage_priority": "critical",
-      "handoff_to_next": "The lift onto the mount"
+      "continuity_focus": "armlet placement on arm",
+      "coverage_hint": "close-ups of hand-off",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "The protagonist is lifted onto a Martian mount and taken away",
+      "summary": "The Protagonist is lifted onto a Martian mount and taken away",
       "purpose": "",
-      "action_start": "Protagonist being assisted up [[lifting]]",
+      "action_start": "Protagonist being lifted",
       "action_end": "Cavalcade moving toward hills",
       "active_subjects": [
         "protagonist",
@@ -146,11 +146,11 @@
       "passive_subjects": [
         "The Leader"
       ],
-      "spatial_context": "basin to distant hills",
-      "blocking_hint": "Vertical movement of protagonist onto mount",
-      "environment_subzone": "martian_distant_hills",
+      "spatial_context": "yellowish_moss_basin to martian_distant_hills",
+      "blocking_hint": "Martian warriors assist in mounting",
+      "environment_subzone": "yellowish_moss_basin",
       "continuity_focus": "height difference during lift",
-      "coverage_hint": "wide shot of cavalcade",
+      "coverage_hint": "wide shot of movement",
       "coverage_priority": "medium",
       "handoff_to_next": "none"
     }
@@ -160,7 +160,7 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish contact",
-      "planned_shot_moment_summary": "The Leader dismounts unarmed",
+      "planned_shot_moment_summary": "The Leader offers the armlet",
       "primary_subject_seed": "The Leader",
       "secondary_subjects_seed": [
         "protagonist"
@@ -168,28 +168,28 @@
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "yellowish_moss_basin",
-      "planned_shot_required_anchor_1": "yellowish moss-like vegetation",
-      "planned_shot_scale_proof_detail": "Leader's height relative to protagonist",
-      "start_state_seed": "Leader approaching on mount",
-      "end_state_seed": "Leader standing unarmed",
-      "action_seed": "dismounting",
+      "planned_shot_required_anchor_1": "metal armlet",
+      "planned_shot_scale_proof_detail": "Leader's unarmed status",
+      "start_state_seed": "Leader dismounting",
+      "end_state_seed": "armlet held between hands",
+      "action_seed": "offering object",
       "blocking_seed": [
-        "Leader moves from mount to ground level"
+        "standing face-to-face"
       ],
-      "shot_size": "medium_full",
+      "shot_size": "medium_close",
       "camera_angle": "eye_level",
       "lens_family": "normal",
-      "camera_motion": "track",
+      "camera_motion": "locked_off",
       "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
+      "focus_strategy": "shallow_subject",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front_three_quarter_right"
+      "primary_subject_angle": "front_three_quarter_left"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "symbolic peace",
-      "planned_shot_moment_summary": "The armlet is handed over",
+      "planned_shot_moment_summary": "Protagonist accepts the armlet",
       "primary_subject_seed": "protagonist",
       "secondary_subjects_seed": [
         "The Leader"
@@ -199,11 +199,11 @@
       "environment_subzone": "yellowish_moss_basin",
       "planned_shot_required_anchor_1": "metal armlet",
       "planned_shot_scale_proof_detail": "armlet on protagonist's arm",
-      "start_state_seed": "Leader holding armlet",
-      "end_state_seed": "protagonist wearing armlet",
-      "action_seed": "hand-off",
+      "start_state_seed": "hand reaching out",
+      "end_state_seed": "armlet secured on wrist",
+      "action_seed": "accepting object",
       "blocking_seed": [
-        "close proximity between hands"
+        "protagonist takes item"
       ],
       "shot_size": "close_up",
       "camera_angle": "eye_level",
@@ -211,14 +211,14 @@
       "camera_motion": "locked_off",
       "zoom_behavior": "subtle_in",
       "focus_strategy": "shallow_subject",
-      "lighting_style": "soft_even",
-      "primary_subject_angle": "profile_left"
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "resolution/exit",
-      "planned_shot_moment_summary": "Cavalcade moves toward hills",
+      "narrative_function": "exit/transition",
+      "planned_shot_moment_summary": "Protagonist is lifted onto mount and moves away",
       "primary_subject_seed": "protagonist",
       "secondary_subjects_seed": [
         "martian_warriors"
@@ -226,19 +226,18 @@
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "martian_distant_hills",
-      "planned_shot_required_anchor_1": "Martian mount",
-      "planned_shot_scale_proof_detail": "height of protagonist on mount",
-      "start_state_seed": "Protagonist being lifted",
-      "end_state_seed": "Cavalcade receding",
-      "action_seed": "transport away",
+      "planned_shot_required_anchor_1": "martian mount",
+      "planned_shot_scale_proof_detail": "height difference during lift",
+      "start_state_seed": "protagonist being lifted",
+      "end_state_seed": "cavalcade moving toward hills",
+      "action_seed": "mounting and riding away",
       "blocking_seed": [
-        "protagonist mounted",
-        "moving away from camera"
+        "lifting protagonist onto mount"
       ],
       "shot_size": "wide",
       "camera_angle": "low_angle",
       "lens_family": "ultra_wide",
-      "camera_motion": "pan",
+      "camera_motion": "track",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
@@ -312,14 +311,14 @@
     "[CH017] CHAPTER XVII (book index hit)",
     "Character protagonist: A transformed Earthman characterized by extreme physical agility and high-leaping capabilities suited for low gravity. The character exhibits a transition from a standard human state to a post-supernatural transformation state, initia..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH003_SC005\n\n## Production Intent\nExecute a high-stakes non-verbal negotiation between the protagonist and The Leader within a yellowish mossy basin. The sequence must transition from physical tension to a ritualistic peace through the exchange of a metal armlet, concluding with the protagonist being mounted and transported toward the martian_distant_hills.\n\n## Required Cast\n- protagonist (transformed Earthman)\n- The Leader\n- martian_warriors\n\n## Required Environments\n- yellowish_moss_basin (circular basin, mossy vegetation)\n- martian_distant_hills\n\n## Continuity Constraints\n- Metal armlet must remain visible on protagonist's arm after acceptance.\n- Height differential during the lift onto the Martian mount.\n\n## Beat List\n- BT001: The Leader dismounts unarmed to approach the protagonist.\n- BT002: The metal armlet is offered and accepted as a peace signal.\n- BT003: The protagonist is lifted onto a Martian mount and taken away toward the hills.",
+  "storyboard_markdown": "# Scene Contract: CH003_SC005\n\n## Production Intent\nEstablish a diplomatic pivot through non-verbal exchange and physical gestures of peace. The sequence must transition from high-tension standoff to a coordinated movement toward the horizon, utilizing the armlet as the central symbolic object.\n\n## Required Cast\n- protagonist (transformed Earthman)\n- The Leader\n- martian_warriors\n\n## Required Environments\n- yellowish_moss_basin\n- martian_distant_hills\n\n## Continuity Constraints\n- Metal armlet must remain visible on protagonist's arm after acceptance\n- Height differential during the lift onto the Martian mount\n\n## Beat List\n- BT001: The Leader dismounts unarmed and offers the armlet.\n- BT002: The Protagonist accepts the armlet as a sign of peace.\n- BT003: The Protagonist is lifted onto a Martian mount and taken away toward the hills.",
   "metadata": {
     "artifact_id": "CH003_SC005_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
     "source_fingerprint": "a596d3e781334c0290e086683f7d70653ff06a2a",
-    "created_at_utc": "2026-04-25T05:18:07.308893+00:00",
-    "updated_at_utc": "2026-04-25T05:18:07.308893+00:00",
+    "created_at_utc": "2026-04-25T17:18:59.996911+00:00",
+    "updated_at_utc": "2026-04-25T17:18:59.996911+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -341,7 +340,7 @@
     "manual_overrides": {},
     "revision_history": [
       {
-        "timestamp_utc": "2026-04-25T05:18:45.388410+00:00",
+        "timestamp_utc": "2026-04-25T17:19:27.915223+00:00",
         "action": "synthesized",
         "source_fingerprint": "a596d3e781334c0290e086683f7d70653ff06a2a"
       }

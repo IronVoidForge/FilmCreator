@@ -5,23 +5,23 @@
   "purpose": "To trigger the protagonist's cosmic displacement and end the chapter on a high-concept cliffhanger.",
   "summary": "While observing the landscape, the protagonist becomes mesmerized by Mars (the red star). He feels an irresistible pull toward it. As he closes his eyes, he is violently transported through space into darkness and cold.",
   "emotional_arc": "From mesmerized trance to sudden, overwhelming cosmic displacement.",
-  "production_intent": "Establish a high-concept transition from a grounded, nocturnal mountain landscape to an abstract cosmic void. The sequence must visually link the brightness of Mars to the protagonist's internal trance before executing a violent VFX-driven displacement.",
-  "scene_short_description": "A man gazes at a bright red star before being violently pulled into the void.",
-  "scene_primary_scale_story_point": "Transition from terrestrial scale (mountains) to cosmic scale (deep space).",
+  "production_intent": "Establish a high-concept transition from a grounded nocturnal landscape to an abstract cosmic void. The sequence must bridge the physical stillness of the protagonist in the rocky gorge with the violent, kinetic energy of sudden space displacement via VFX-heavy motion blur and light streaks.",
+  "scene_short_description": "A man gazes at a bright red star before being violently pulled into the dark void.",
+  "scene_primary_scale_story_point": "Human scale in rocky gorge vs. infinite cosmic scale of deep space.",
   "scene_required_anchor_catalog": [
-    "Mars (the red star)",
+    "Mars (red star)",
     "protagonist eyes"
   ],
-  "scene_start_state": "protagonist standing in rocky_gorge_canyon under moonlight, looking upward.",
-  "scene_end_state": "protagonist lost in the darkness and cold of deep_space_void.",
-  "dominant_action_line": "The protagonist is mesmerized by Mars and then violently transported through space.",
+  "scene_start_state": "protagonist standing still in rocky_gorge_canyon under moonlight, looking upward.",
+  "scene_end_state": "total darkness and cold within deep_space_void.",
+  "dominant_action_line": "The protagonist is mesmerized by Mars, closes his eyes, and is violently transported through space.",
   "scene_spatial_layout": [
-    "Grounded rocky terrain under a night sky",
-    "Abstract, non-linear movement through light streaks and darkness"
+    "Grounded rocky terrain in Arizona mountains",
+    "Infinite void of deep space"
   ],
   "character_spatial_map": [
     "protagonist positioned within the canyon looking up at the sky",
-    "protagonist becomes a central point of motion during displacement"
+    "protagonist becomes a kinetic element moving through the void"
   ],
   "environment_subzones": [
     "rocky_gorge_canyon",
@@ -31,11 +31,11 @@
     "upward gaze toward Mars"
   ],
   "exit_vectors": [
-    "violent outward pull into the void"
+    "violent displacement into deep_space_void"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Visual focus shifts from landscape to protagonist's reaction",
-    "BT002 -> BT003: Sudden transition from stillness to high-velocity VFX motion"
+    "BT001 -> BT002: visual fixation to internal trance",
+    "BT002 -> BT003: eye closure to violent kinetic transport"
   ],
   "characters_required": [
     {
@@ -72,11 +72,11 @@
     }
   ],
   "continuity_constraints": [
-    "Consistent brightness and visual identity of Mars (the red star)",
+    "Visual brightness and specific hue of Mars in the sky",
     "Seamless transition from rocky_gorge_canyon to deep_space_void"
   ],
   "visual_coverage_families": [
-    "Extreme Wide shots of landscape and Mars",
+    "Extreme Wide shots of landscape and Mars (red star)",
     "Close-ups of eyes reflecting the red star",
     "Abstract VFX sequences with motion blur and light streaks"
   ],
@@ -86,49 +86,51 @@
       "summary": "Observation of the landscape and Mars",
       "purpose": "",
       "action_start": "protagonist looking at canyon",
-      "action_end": "Mars becomes the focal point",
+      "action_end": "protagonist fixated on red star",
       "active_subjects": [
         "protagonist"
       ],
-      "passive_subjects": [],
+      "passive_subjects": [
+        "Mars (red star)"
+      ],
       "spatial_context": "rocky_gorge_canyon",
-      "blocking_hint": "protagonist stationary in gorge",
+      "blocking_hint": "standing in gorge looking up",
       "environment_subzone": "rocky_gorge_canyon",
-      "continuity_focus": "Mars brightness/position",
-      "coverage_hint": "extreme wide",
+      "continuity_focus": "brightness of Mars",
+      "coverage_hint": "extreme wide landscape",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Mesmerized trance",
+      "summary": "Mesmerized trance and eye closure",
       "purpose": "",
-      "action_start": "eyes fixed on Mars",
-      "action_end": "eyes closing",
+      "action_start": "protagonist mesmerized",
+      "action_end": "eyes closed",
       "active_subjects": [
         "protagonist"
       ],
       "passive_subjects": [],
       "spatial_context": "rocky_gorge_canyon",
-      "blocking_hint": "protagonist frozen in gaze",
+      "blocking_hint": "head tilted up, eyes closing",
       "environment_subzone": "rocky_gorge_canyon",
-      "continuity_focus": "eye reflection of red star",
-      "coverage_hint": "close-up",
+      "continuity_focus": "eye reflection of Mars",
+      "coverage_hint": "close-up on eyes",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Cosmic displacement",
+      "summary": "Violent cosmic displacement",
       "purpose": "",
-      "action_start": "eyes close",
-      "action_end": "sudden darkness/cold",
+      "action_start": "eyes closed",
+      "action_end": "darkness and cold",
       "active_subjects": [
         "protagonist"
       ],
       "passive_subjects": [],
       "spatial_context": "deep_space_void",
-      "blocking_hint": "violent, non-linear movement",
+      "blocking_hint": "rapid movement through light streaks",
       "environment_subzone": "deep_space_void",
       "continuity_focus": "transition from canyon to void",
       "coverage_hint": "VFX heavy motion blur",
@@ -140,47 +142,49 @@
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish_setting",
-      "planned_shot_moment_summary": "wide view of canyon and Mars",
-      "primary_subject_seed": "Mars",
+      "narrative_function": "establish scale and setting",
+      "planned_shot_moment_summary": "protagonist looking at the red star in the sky",
+      "primary_subject_seed": "protagonist",
       "secondary_subjects_seed": [
-        "rocky_gorge_canyon"
+        "Mars (red star)"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "rocky_gorge_canyon",
-      "planned_shot_required_anchor_1": "Mars",
-      "planned_shot_scale_proof_detail": "Mars relative to mountain peaks",
-      "start_state_seed": "static landscape",
-      "end_state_seed": "static landscape",
-      "action_seed": "Mars glows intensely in the night sky",
-      "blocking_seed": [],
+      "planned_shot_required_anchor_1": "Mars (red star)",
+      "planned_shot_scale_proof_detail": "star vs canyon width",
+      "start_state_seed": "wide landscape view",
+      "end_state_seed": "protagonist looking up",
+      "action_seed": "observing the sky",
+      "blocking_seed": [
+        "standing still in gorge"
+      ],
       "shot_size": "extreme_wide",
       "camera_angle": "low_angle",
       "lens_family": "ultra_wide",
-      "camera_motion": "locked_off",
+      "camera_motion": "pan",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "low_key_night",
-      "primary_subject_angle": "front"
+      "primary_subject_angle": "rear_three_quarter_left"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "character_reaction",
-      "planned_shot_moment_summary": "close up of eyes reflecting red light",
+      "narrative_function": "convey mesmerized trance",
+      "planned_shot_moment_summary": "reflection of Mars in eyes",
       "primary_subject_seed": "protagonist",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "rocky_gorge_canyon",
       "planned_shot_required_anchor_1": "protagonist eyes",
-      "planned_shot_scale_proof_detail": "red star reflection in pupil",
-      "start_state_seed": "eyes open and mesmerized",
-      "end_state_seed": "eyes close",
-      "action_seed": "protagonist stares at Mars, then closes eyes",
+      "planned_shot_scale_proof_detail": "star reflection size",
+      "start_state_seed": "eyes open",
+      "end_state_seed": "eyes closing",
+      "action_seed": "closing eyes",
       "blocking_seed": [
-        "standing still"
+        "stationary head"
       ],
       "shot_size": "extreme_close_up",
       "camera_angle": "eye_level",
@@ -194,20 +198,20 @@
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "climax_displacement",
-      "planned_shot_moment_summary": "violent movement through space",
+      "narrative_function": "execute cosmic displacement",
+      "planned_shot_moment_summary": "violent transport through space",
       "primary_subject_seed": "protagonist",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "deep_space_void",
       "planned_shot_required_anchor_1": "light streaks",
-      "planned_shot_scale_proof_detail": "motion blur against darkness",
-      "start_state_seed": "eyes closed in canyon",
-      "end_state_seed": "total darkness/cold void",
-      "action_seed": "rapid transport through light streaks and darkness",
+      "planned_shot_scale_proof_detail": "motion blur intensity",
+      "start_state_seed": "eyes closed",
+      "end_state_seed": "total darkness",
+      "action_seed": "being pulled through void",
       "blocking_seed": [
-        "uncontrolled motion"
+        "kinetic movement through frame"
       ],
       "shot_size": "medium_full",
       "camera_angle": "dutch",
@@ -284,14 +288,14 @@
     "[CH012] CHAPTER XII (book index hit)",
     "Character protagonist: A transformed Earthman characterized by extreme physical agility and high-leaping capabilities suited for low gravity. The character exhibits a transition from a standard human state to a post-supernatural transformation state, initia..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH002_SC005\n\n## Production Intent\nEstablish a high-concept transition from a grounded, nocturnal mountain landscape to an abstract cosmic void. The sequence must visually link the brightness of Mars to the protagonist's internal trance before executing a violent VFX-driven displacement.\n\n## Required Cast\n- protagonist (A transformed Earthman)\n\n## Required Environments\n- rocky_gorge_canyon\n- deep_space_void\n\n## Continuity Constraints\n- Consistent visual appearance and brightness of Mars (the red star).\n- Seamless transition from the grounded Arizona environment to the abstract space sequence.\n\n## Beat List\n- BT001: Observation of the landscape and Mars.\n- BT002: Mesmerized trance/closing eyes.\n- BT003: Violent cosmic displacement into darkness and cold.",
+  "storyboard_markdown": "# Scene Contract: CH002_SC005\n\n## Production Intent\nEstablish a high-concept transition from a grounded nocturnal landscape to an abstract cosmic void. The sequence must bridge the physical stillness of the protagonist in the rocky gorge with the violent, kinetic energy of sudden space displacement via VFX-heavy motion blur and light streaks.\n\n## Required Cast\n- protagonist (transformed Earthman)\n\n## Required Environments\n- rocky_gorge_canyon (Arizona Mountain Landscape at Night)\n- deep_space_void\n\n## Continuity Constraints\n- Visual appearance and brightness/hue of Mars in the sky\n- Seamless transition from grounded canyon to abstract space sequence\n\n## Beat List\n- BT001: Observation of the landscape and Mars\n- BT002: Mesmerized trance and eye closure\n- BT003: Violent cosmic displacement",
   "metadata": {
     "artifact_id": "CH002_SC005_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
     "source_fingerprint": "9a9d8b306ae03d8ea8d2a86b73c43fb01e03ef74",
-    "created_at_utc": "2026-04-25T05:15:07.736272+00:00",
-    "updated_at_utc": "2026-04-25T05:15:07.736272+00:00",
+    "created_at_utc": "2026-04-25T17:16:49.911758+00:00",
+    "updated_at_utc": "2026-04-25T17:16:49.911758+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -313,7 +317,7 @@
     "manual_overrides": {},
     "revision_history": [
       {
-        "timestamp_utc": "2026-04-25T05:15:44.189438+00:00",
+        "timestamp_utc": "2026-04-25T17:17:17.061385+00:00",
         "action": "synthesized",
         "source_fingerprint": "9a9d8b306ae03d8ea8d2a86b73c43fb01e03ef74"
       }

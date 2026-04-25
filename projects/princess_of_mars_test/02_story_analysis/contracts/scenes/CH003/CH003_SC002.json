@@ -5,7 +5,7 @@
   "purpose": "Introduce the biological horror/wonder of Martian life.",
   "summary": "The protagonist explores a nearby glass-roofed enclosure (an incubator) and finds large white eggs alongside grotesque, multi-limbed young Martians that have already hatched.",
   "emotional_arc": "Curiosity $\\rightarrow$ Horror/Awe.",
-  "production_intent": "Establish the biological reality of Martian life through a transition from scientific curiosity to visceral horror. The visual language must contrast the sterile, glass-enclosed incubator with the grotesque, multi-limbed movement of the hatchlings and the large white eggs.",
+  "production_intent": "Establish the biological reality of Martian life through a transition from scientific curiosity to visceral horror. The visual language must emphasize the scale of the eggs and the unsettling, multi-limbed movement of the hatchlings within the incubator.",
   "scene_short_description": "A transformed man investigates a glass-roofed incubator filled with large white eggs and multi-limbed creatures.",
   "scene_primary_scale_story_point": "Large white eggs vs small, grotesque hatchlings.",
   "scene_required_anchor_catalog": [
@@ -14,10 +14,10 @@
   ],
   "scene_start_state": "protagonist approaches the glass enclosure with curiosity.",
   "scene_end_state": "protagonist recoils in horror/awe at the movement of the hatchlings.",
-  "dominant_action_line": "Exploration of the incubator leading to the discovery of active, grotesque life.",
+  "dominant_action_line": "Exploration of the incubator leads to the discovery of active, grotesque life.",
   "scene_spatial_layout": [
     "circular basin containing a low walled enclosure",
-    "glass roof overhead providing top-down lighting"
+    "glass roof overhead providing primary light source"
   ],
   "character_spatial_map": [
     "protagonist stands at the perimeter of the circular_moss_basin",
@@ -34,8 +34,8 @@
     "retreat from incubator_interior"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: visual discovery of eggs",
-    "BT002 -> BT003: detection of movement/hatchlings"
+    "BT001 -> BT002: discovery of eggs",
+    "BT002 -> BT003: detection of movement"
   ],
   "characters_required": [
     {
@@ -63,7 +63,7 @@
   ],
   "continuity_constraints": [
     "Hatchling movement patterns (multi-limbed coordination)",
-    "Light refraction and shadows through the glass roof"
+    "Light refraction/intensity through the glass roof"
   ],
   "visual_coverage_families": [
     "Macro shots of eggs and multi-limbed hatchlings",
@@ -82,53 +82,52 @@
       ],
       "passive_subjects": [],
       "spatial_context": "moss_basin_perimeter",
-      "blocking_hint": "approaching the low walled enclosure",
+      "blocking_hint": "approaching the low wall",
       "environment_subzone": "moss_basin_perimeter",
       "continuity_focus": "lighting through glass roof",
       "coverage_hint": "medium_full shot",
-      "coverage_priority": "low",
+      "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "discovery of eggs",
+      "summary": "discovery of large white eggs",
       "purpose": "",
-      "action_start": "looking down through glass",
-      "action_end": "focusing on white objects",
+      "action_start": "looking through glass",
+      "action_end": "focusing on egg cluster",
       "active_subjects": [
         "protagonist"
       ],
       "passive_subjects": [
         "large_white_eggs"
       ],
-      "spatial_context": "incubator_interior viewed from above",
-      "blocking_hint": "protagonist leaning over the edge",
+      "spatial_context": "incubator_interior visible through glass",
+      "blocking_hint": "leaning forward",
       "environment_subzone": "incubator_interior",
       "continuity_focus": "egg placement",
-      "coverage_hint": "macro/insert",
+      "coverage_hint": "POV/Macro",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "hatchlings emerge/move",
+      "summary": "hatchlings emerge and move",
       "purpose": "",
-      "action_start": "eggs appearing still",
-      "action_end": "grotesque movement detected",
+      "action_start": "eggs appear still",
+      "action_end": "creatures scuttle aggressively",
       "active_subjects": [
-        "multi-limbed_hatchlings"
+        "multi_limbed_hatchlings"
       ],
       "passive_subjects": [
-        "large_white_eggs",
         "protagonist"
       ],
-      "spatial_context": "incubator_interior",
-      "blocking_hint": "creatures scuttling between eggs",
+      "spatial_context": "inside the incubator [[incubator_interior]]",
+      "blocking_hint": "n/a",
       "environment_subzone": "incubator_interior",
-      "continuity_focus": "hatchling limb coordination and movement patterns",
-      "coverage_hint": "macro and POV",
+      "continuity_focus": "movement patterns of limbs",
+      "coverage_hint": "macro/reaction",
       "coverage_priority": "high",
-      "handoff_to_next": "none"
+      "handoff_to_next": "end_scene"
     }
   ],
   "planned_shots": [
@@ -138,17 +137,15 @@
       "narrative_function": "establish setting",
       "planned_shot_moment_summary": "protagonist approaches the glass roof",
       "primary_subject_seed": "protagonist",
-      "secondary_subjects_seed": [
-        "circular_moss_basin_glass_roof"
-      ],
+      "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "moss_basin_perimeter",
       "planned_shot_required_anchor_1": "circular_moss_basin_glass_roof",
-      "planned_shot_scale_proof_detail": "enclosure height relative to protagonist",
+      "planned_shot_scale_proof_detail": "protagonist height vs enclosure wall",
       "start_state_seed": "protagonist walking",
       "end_state_seed": "protagonist stopping at glass",
-      "action_seed": "approaching enclosure",
+      "action_seed": "approaching the structure",
       "blocking_seed": [
         "walking toward center of basin"
       ],
@@ -164,7 +161,7 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "reveal biological elements",
+      "narrative_function": "reveal biological wonder",
       "planned_shot_moment_summary": "macro view of large white eggs",
       "primary_subject_seed": "large_white_eggs",
       "secondary_subjects_seed": [],
@@ -173,15 +170,15 @@
       "environment_subzone": "incubator_interior",
       "planned_shot_required_anchor_1": "large_white_eggs",
       "planned_shot_scale_proof_detail": "egg size relative to hatchlings",
-      "start_state_seed": "static macro",
-      "end_state_seed": "static macro",
-      "action_seed": "none",
+      "start_state_seed": "static egg shot",
+      "end_state_seed": "protagonist POV looking down",
+      "action_seed": "scanning the eggs",
       "blocking_seed": [],
       "shot_size": "insert_detail",
       "camera_angle": "high_angle",
       "lens_family": "telephoto",
       "camera_motion": "locked_off",
-      "zoom_behavior": "none",
+      "zoom_behavior": "subtle_in",
       "focus_strategy": "shallow_subject",
       "lighting_style": "diffuse_ambient",
       "primary_subject_angle": "front"
@@ -190,57 +187,26 @@
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "introduce horror",
-      "planned_shot_moment_summary": "hatchlings moving among eggs",
-      "primary_subject_seed": "multi-limbed_hatchlings",
-      "secondary_subjects_seed": [
-        "large_white_eggs"
-      ],
+      "planned_shot_moment_summary": "hatchlings move among eggs",
+      "primary_subject_seed": "multi_limbed_hatchlings",
+      "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "incubator_interior",
       "planned_shot_required_anchor_1": "large_white_eggs",
-      "planned_shot_scale_proof_detail": "limb count and movement speed",
-      "start_state_seed": "stillness",
-      "end_state_seed": "erratic multi-limbed crawling",
-      "action_seed": "crawling/scuttling",
-      "blocking_seed": [
-        "moving between eggs"
-      ],
-      "shot_size": "close_up",
+      "planned_shot_scale_proof_detail": "limb count/movement speed",
+      "start_state_seed": "still hatchlings",
+      "end_state_seed": "scuttling movement",
+      "action_seed": "grotesque multi-limbed crawling",
+      "blocking_seed": [],
+      "shot_size": "extreme_close_up",
       "camera_angle": "low_angle",
-      "lens_family": "normal",
+      "lens_family": "macro",
       "camera_motion": "handheld",
       "zoom_behavior": "none",
       "focus_strategy": "rack_focus",
       "lighting_style": "high_contrast_ceremonial",
-      "primary_subject_angle": "front_three_quarter_right"
-    },
-    {
-      "planned_shot_id": "SH004",
-      "beat_id": "BT003",
-      "narrative_function": "character reaction",
-      "planned_shot_moment_summary": "protagonist reacts to hatchlings",
-      "primary_subject_seed": "protagonist",
-      "secondary_subjects_seed": [],
-      "subject_visibility": "on_screen",
-      "narration_mode": "none",
-      "environment_subzone": "moss_basin_perimeter",
-      "planned_shot_required_anchor_1": "circular_moss_basin_glass_roof",
-      "planned_shot_scale_proof_detail": "facial expression change",
-      "start_state_seed": "curiosity",
-      "end_state_seed": "horror/awe",
-      "action_seed": "recoiling",
-      "blocking_seed": [
-        "leaning back from glass"
-      ],
-      "shot_size": "medium_close",
-      "camera_angle": "eye_level",
-      "lens_family": "portrait",
-      "camera_motion": "push_in",
-      "zoom_behavior": "subtle_in",
-      "focus_strategy": "shallow_subject",
-      "lighting_style": "high_contrast_ceremonial",
-      "primary_subject_angle": "front"
+      "primary_subject_angle": "front_three_quarter_left"
     }
   ],
   "unresolved_questions": [],
@@ -308,14 +274,14 @@
     "[CH014] CHAPTER XIV (book index hit)",
     "Character protagonist: A transformed Earthman characterized by extreme physical agility and high-leaping capabilities suited for low gravity. The character exhibits a transition from a standard human state to a post-supernatural transformation state, initia..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH003_SC002\n\n## Production Intent\nEstablish the biological reality of Martian life through a transition from scientific curiosity to visceral horror. The visual language must contrast the sterile, glass-enclosed incubator with the grotesque, multi-limbed movement of the hatchlings and the large white eggs.\n\n## Required Cast\n- protagonist (transformed Earthman)\n\n## Required Environments\n- circular_moss_basin (with low walled enclosure and glass roof)\n\n## Continuity Constraints\n- Hatchling movement patterns (multi-limbed coordination)\n- Light refraction and shadows through the glass roof\n\n## Beat List\n- BT001: protagonist approaches the incubator\n- BT002: discovery of eggs\n- BT003: hatchlings emerge/move",
+  "storyboard_markdown": "# Scene Contract: CH003_SC002\n\n## Production Intent\nEstablish the biological reality of Martian life through a transition from scientific curiosity to visceral horror. The visual language must emphasize the scale of the eggs and the unsettling, multi-limbed movement of the hatchlings within the incubator.\n\n## Required Cast\n- protagonist (transformed Earthman)\n\n## Required Environments\n- circular_moss_basin (with glass-roofed incubator enclosure)\n\n## Continuity Constraints\n- Hatchling movement patterns (multi-limbed coordination)\n- Light refraction/intensity through the glass roof\n\n## Beat List\n- BT001: protagonist approaches the incubator\n- BT002: discovery of large white eggs\n- BT003: hatchlings emerge and move",
   "metadata": {
     "artifact_id": "CH003_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
     "source_fingerprint": "2427409801f924734f4ec80329e1d334c5f1e359",
-    "created_at_utc": "2026-04-25T05:16:17.326226+00:00",
-    "updated_at_utc": "2026-04-25T05:16:17.326226+00:00",
+    "created_at_utc": "2026-04-25T17:17:41.138946+00:00",
+    "updated_at_utc": "2026-04-25T17:17:41.138946+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -337,7 +303,7 @@
     "manual_overrides": {},
     "revision_history": [
       {
-        "timestamp_utc": "2026-04-25T05:16:55.400153+00:00",
+        "timestamp_utc": "2026-04-25T17:18:06.871286+00:00",
         "action": "synthesized",
         "source_fingerprint": "2427409801f924734f4ec80329e1d334c5f1e359"
       }
