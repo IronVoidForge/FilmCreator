@@ -1,0 +1,324 @@
+{
+  "scene_id": "CH002_SC004",
+  "chapter_id": "CH002",
+  "scene_title": "SC004",
+  "purpose": "To transition the protagonist from the supernatural interior to the natural exterior.",
+  "summary": "Driven by fear of whatever is in the dark cave, the protagonist flees the cavern and emerges into the Arizona night.",
+  "emotional_arc": "From shock to frantic urgency/flight.",
+  "production_intent": "Execute a high-stakes transition of the protagonist from a dark, supernatural cave interior into a vast, moonlit Arizona mountain landscape. The sequence must emphasize the character's physical vulnerability and frantic flight through extreme lighting shifts.",
+  "scene_short_description": "A naked man flees a dark cavern into the moonlight of a rocky canyon.",
+  "scene_primary_scale_story_point": "Transition from claustrophobic cave interior to vast rocky_gorge_canyon.",
+  "scene_required_anchor_catalog": [
+    "Cave mouth threshold",
+    "Moonlit canyon floor"
+  ],
+  "scene_start_state": "Protagonist in dark, supernatural cave interior experiencing shock.",
+  "scene_end_state": "Protagonist emerging into the wide Arizona night landscape.",
+  "dominant_action_line": "The protagonist flees the darkness of the cave with frantic urgency.",
+  "scene_spatial_layout": [
+    "Interior cave darkness transitioning to exterior moonlight",
+    "Narrow cave exit opening into a vast canyon scale"
+  ],
+  "character_spatial_map": [
+    "Protagonist moving from deep interior toward the light source",
+    "Protagonist traversing the threshold between cave and gorge"
+  ],
+  "environment_subzones": [
+    "Cave Interior (Transitioning)",
+    "rocky_gorge_canyon"
+  ],
+  "entry_vectors": [
+    "Deep cave darkness"
+  ],
+  "exit_vectors": [
+    "Moonlit canyon expanse"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Movement from dark interior toward the light threshold",
+    "BT002 -> BT003: Emergence from shadow into full moonlight"
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Cave Interior (Transitioning)",
+      "canonical_id": null,
+      "display_name": "Cave Interior (Transitioning)",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    },
+    {
+      "label": "Arizona Mountain Landscape (Night/Moonlight)",
+      "canonical_id": "rocky_gorge_canyon",
+      "display_name": "rocky_gorge_canyon",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 44,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/rocky_gorge_canyon.md",
+      "notes": "Chapter-local environment alias match for 'Arizona Mountain Landscape (Night/Moonlight)' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Protagonist nudity and physical state across light levels",
+    "Physical agility and leaping capabilities during flight"
+  ],
+  "visual_coverage_families": [
+    "Tracking shots following movement",
+    "High-contrast lighting (Dark cave vs. Moonlight)",
+    "Wide shots of character emerging into vast landscape"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Protagonist reacts to supernatural threat in darkness",
+      "purpose": "",
+      "action_start": "protagonist frozen in shock",
+      "action_end": "protagonist begins frantic movement",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "deep cave interior",
+      "blocking_hint": "huddled against cave wall",
+      "environment_subzone": "Cave Interior (Transitioning)",
+      "continuity_focus": "nudity/physical state in shadow",
+      "coverage_hint": "close up/medium tracking",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Flight toward the exit",
+      "purpose": "",
+      "action_start": "running through dark tunnel",
+      "action_end": "reaching the cave mouth",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "transitioning corridor",
+      "blocking_hint": "moving rapidly toward light source",
+      "environment_subzone": "Cave Interior (Transitioning)",
+      "continuity_focus": "light level shift on skin",
+      "coverage_hint": "tracking shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Emergence into the canyon",
+      "purpose": "",
+      "action_start": "bursting into moonlight",
+      "action_end": "running across rocky terrain",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "cave mouth to gorge floor",
+      "blocking_hint": "leaping/running through open space",
+      "environment_subzone": "rocky_gorge_canyon",
+      "continuity_focus": "full exposure in moonlight",
+      "coverage_hint": "wide shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish fear",
+      "planned_shot_moment_summary": "protagonist recoils in dark cave",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "silhouette",
+      "narration_mode": "none",
+      "environment_subzone": "Cave Interior (Transitioning)",
+      "planned_shot_required_anchor_1": "cave wall",
+      "planned_shot_scale_proof_detail": "tight claustrophobia",
+      "start_state_seed": "darkness",
+      "end_state_seed": "movement toward light",
+      "action_seed": "fleeing",
+      "blocking_seed": [
+        "moving away from unseen threat"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "transition light",
+      "planned_shot_moment_summary": "protagonist hits the cave mouth threshold",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "Cave Interior (Transitioning)",
+      "planned_shot_required_anchor_1": "cave mouth",
+      "planned_shot_scale_proof_detail": "extreme light contrast",
+      "start_state_seed": "shadows",
+      "end_state_seed": "bright moonlight",
+      "action_seed": "running through threshold",
+      "blocking_seed": [
+        "bursting through opening"
+      ],
+      "shot_size": "full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "rear_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish scale",
+      "planned_shot_moment_summary": "protagonist enters the vast canyon",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "rocky_gorge_canyon",
+      "planned_shot_required_anchor_1": "canyon floor",
+      "planned_shot_scale_proof_detail": "vast landscape vs small human",
+      "start_state_seed": "bright light",
+      "end_state_seed": "running into distance",
+      "action_seed": "leaping/running across terrain",
+      "blocking_seed": [
+        "traversing open gorge"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "back"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Cave Interior (Transitioning) -> Cave Interior (Transitioning)"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH027",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH027_chapter_xxvii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH028",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH028_chapter_xxviii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH002",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH002_SC004] Purpose: To transition the protagonist from the supernatural interior to the natural exterior.",
+    "[CH002_SC004] Summary: Driven by fear of whatever is in the dark cave, the protagonist flees the cavern and emerges into the Arizona night.",
+    "[CH002_SC004] Emotional arc: From shock to frantic urgency/flight.",
+    "[CH002_SC004] Coverage: Tracking shots following the protagonist's movement High-contrast lighting (Dark cave vs. Moonlight) Wide shots of the character emerging into the vast landscape",
+    "[CH002_SC004] Continuity: The protagonist's nudity and physical state as he moves through different light levels.",
+    "[CH002] Chapter summary: **Setting:** A cave in the Arizona mountains; a rocky gorge and canyon under moonlight; the vastness of space. **Characters:** - **The Protagonist:** A man who experiences physical paralysis due to a mysterious gas, u...",
+    "[CH002] CHAPTER II (book index hit)",
+    "[CH027] CHAPTER XXVII (book index hit)",
+    "[CH028] CHAPTER XXVIII (book index hit)",
+    "Character protagonist: An Earthman characterized by extreme physical agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH002_SC004\n\n## Production Intent\nExecute a high-stakes transition of the protagonist from a dark, supernatural cave interior into a vast, moonlit Arizona mountain landscape. The sequence must emphasize the character's physical vulnerability and frantic flight through extreme lighting shifts.\n\n## Required Cast\n- protagonist (Naked, physically agile)\n\n## Required Environments\n- Cave Interior (Transitioning)\n- rocky_gorge_canyon (Moonlit, vast)\n\n## Continuity Constraints\n- Protagonist nudity and physical state across light levels\n- Physical agility and leaping capabilities during flight\n\n## Beat List\n- BT001: Protagonist reacts to supernatural threat in darkness\n- BT002: Flight toward the exit\n- BT003: Emergence into the canyon",
+  "metadata": {
+    "artifact_id": "CH002_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "c3e912eca4627f6874b94e1f49d72d106244c73c",
+    "created_at_utc": "2026-04-25T21:30:41.372059+00:00",
+    "updated_at_utc": "2026-04-25T21:30:41.372059+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH002_SC004",
+        "version": "d3edbfe9c6448ad1e6eb41e6a06220b2eec4bcab"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH002_SC004",
+        "version": "da2c6e998d6cc1ad842bf411f90417eae0043732"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH002_SC004",
+        "version": "e8071e1eb92e799448ce059ccd722c76381154cb"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-25T21:31:07.635140+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "c3e912eca4627f6874b94e1f49d72d106244c73c"
+      }
+    ]
+  }
+}
