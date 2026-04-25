@@ -3,32 +3,129 @@
     {
       "bundle_id": "character_reference_clean_v1",
       "category": "character",
-      "positive": ["high quality", "clean character reference image", "neutral background", "even soft lighting", "sharp subject detail", "clear readable silhouette"],
-      "negative": ["underexposed", "harsh shadow", "silhouette", "cropped subject", "text", "watermark"]
+      "positive": [
+        "clean character reference image",
+        "neutral gray studio background",
+        "bright even soft lighting",
+        "soft frontal fill light",
+        "sharp subject detail",
+        "clear readable silhouette",
+        "natural contrast",
+        "no dramatic shadow"
+      ],
+      "negative": [
+        "underexposed",
+        "harsh shadow",
+        "silhouette",
+        "low key lighting",
+        "crushed blacks",
+        "cropped subject",
+        "text",
+        "watermark"
+      ],
+      "notes": "Base clean reference bundle. Tuned after early outputs were too dark and silhouette-heavy."
     },
     {
       "bundle_id": "character_face_readability_v1",
       "category": "character",
-      "positive": ["clear facial structure", "visible eyes", "balanced facial lighting", "clean portrait detail"],
-      "negative": ["obscured face", "blurry face", "deformed face", "asymmetrical face"]
+      "positive": [
+        "clear facial structure",
+        "visible eyes",
+        "readable facial planes",
+        "balanced facial lighting",
+        "natural skin texture",
+        "clean portrait detail"
+      ],
+      "negative": [
+        "obscured face",
+        "blurry face",
+        "deformed face",
+        "asymmetrical face",
+        "plastic skin",
+        "overly smooth skin"
+      ],
+      "notes": "Generic face readability for portraits and downstream identity testing."
     },
     {
       "bundle_id": "character_body_readability_v1",
       "category": "character",
-      "positive": ["visible body proportions", "clear posture", "defined limbs", "consistent anatomy"],
-      "negative": ["bad anatomy", "extra limbs", "cropped body", "twisted proportions"]
+      "positive": [
+        "natural realistic body proportions",
+        "visible body proportions",
+        "clear posture",
+        "defined limbs",
+        "consistent anatomy",
+        "realistic physique"
+      ],
+      "negative": [
+        "bad anatomy",
+        "extra limbs",
+        "cropped body",
+        "twisted proportions",
+        "cartoon proportions",
+        "bodybuilder exaggeration"
+      ],
+      "notes": "Reduces synthetic superhero/fitness-model exaggeration while keeping the subject readable."
     },
     {
       "bundle_id": "character_costume_readability_v1",
       "category": "character",
-      "positive": ["visible outfit details", "clear clothing layers", "defined accessories", "clean fabric detail"],
-      "negative": ["muddy clothing", "merged clothing shapes", "hidden torso", "crushed blacks"]
+      "positive": [
+        "visible outfit details",
+        "clear clothing layers",
+        "realistic clothing fit",
+        "defined accessories",
+        "clean fabric detail",
+        "visible clothing edges"
+      ],
+      "negative": [
+        "muddy clothing",
+        "merged clothing shapes",
+        "hidden torso",
+        "crushed blacks",
+        "generic athletic shirt",
+        "fashion catalog pose"
+      ],
+      "notes": "Early outputs drifted toward modern athletic shirts; this keeps clothing readable and less generic."
+    },
+    {
+      "bundle_id": "character_natural_realism_v1",
+      "category": "character",
+      "positive": [
+        "photographic reference image",
+        "natural realistic proportions",
+        "subtle facial asymmetry",
+        "real skin texture",
+        "natural studio photography",
+        "realistic clothing fit",
+        "grounded human realism"
+      ],
+      "negative": [
+        "cartoon proportions",
+        "game character",
+        "plastic skin",
+        "overly smooth skin",
+        "stylized anatomy",
+        "synthetic render look",
+        "glossy stock photo"
+      ],
+      "notes": "Added after early results looked too glossy/cartoon/fitness-model-like. Use for realism validation."
     },
     {
       "bundle_id": "character_reference_polish_v1",
       "category": "character",
-      "positive": ["refined rendering", "clean contrast", "polished detail"],
-      "negative": ["flat image", "low detail"]
+      "positive": [
+        "refined realistic detail",
+        "clean contrast",
+        "polished but natural reference image"
+      ],
+      "negative": [
+        "flat image",
+        "low detail",
+        "overpolished render",
+        "toy-like character"
+      ],
+      "notes": "Light polish only. Avoid using as the default because stronger polish can push toward synthetic catalog imagery."
     }
   ]
 }
