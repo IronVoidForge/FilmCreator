@@ -31,7 +31,7 @@ C:\FilmCreator_MC\launchers\quick_pipeline_test\00_run_quick_pipeline_test_resum
 Then inspect:
 
 - protagonist prompt package
-n- arizona mountain cave environment prompt
+- arizona mountain cave environment prompt
 - one CH002 shot prompt
 - QUALITY_GRADE_INDEX.json
 
