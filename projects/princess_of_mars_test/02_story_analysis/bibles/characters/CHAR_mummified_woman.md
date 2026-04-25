@@ -19,12 +19,12 @@
 - physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-The character is a mummified woman, characterized by the desiccated and preserved state of her remains. Due to lack of specific descriptive evidence regarding clothing or anatomy, her visual identity is defined primarily by this state of preservation.
+The character is a desiccated, mummified female figure. Due to lack of specific descriptive evidence regarding her build, clothing, or movement, the visual identity is strictly limited to her status as a preserved corpse.
 
 - physical_traits: unknown
 - costume_signature: unknown
 - distinguishing_features: mummified/desiccated skin texture
-- state_variants: mummified
+- state_variants: mummified state
 
 ## Behavioral Bible
 
@@ -35,8 +35,8 @@ The character is a mummified woman, characterized by the desiccated and preserve
 
 ## Continuity
 
-- continuity_constraints: must maintain a mummified/desiccated appearance
-- unresolved_ambiguities: specific age at time of death, clothing or funerary wrappings, physical dimensions and build, manner of movement (if animate)
+- continuity_constraints: must maintain mummified/desiccated appearance
+- unresolved_ambiguities: specific age at time of death, clothing or funerary wrappings, physical dimensions and build, manner of movement (if any)
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ The character is a mummified woman, characterized by the desiccated and preserve
 - status: `generated`
 - source_fingerprint: `ea8edddec01bf4efbe152acd9770a906a480b077`
 - created_at_utc: `2026-04-25T21:19:21.757007+00:00`
-- updated_at_utc: `2026-04-25T21:57:10.042945+00:00`
+- updated_at_utc: `2026-04-25T23:02:50.341554+00:00`

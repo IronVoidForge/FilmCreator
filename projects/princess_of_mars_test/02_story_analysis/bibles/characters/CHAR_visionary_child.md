@@ -21,22 +21,22 @@
 - movement_language: unknown
 No visual data is available in the provided evidence to establish a stable identity, physical appearance, or costume for this character.
 
-- physical_traits: unknown
+- physical_traits: []
 - costume_signature: unknown
-- distinguishing_features: unknown
-- state_variants: unknown
+- distinguishing_features: []
+- state_variants: []
 
 ## Behavioral Bible
 
 - personality: unknown
 - role: unknown
 - voice_notes: unknown
-- relationship_notes: unknown
+- relationship_notes: []
 
 ## Continuity
 
-- continuity_constraints: none provided
-- unresolved_ambiguities: Visual identity is entirely unestablished in the source material., Physical characteristics and age are unknown.
+- continuity_constraints: []
+- unresolved_ambiguities: Visual identity and physical characteristics are entirely unestablished in the provided text.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ No visual data is available in the provided evidence to establish a stable ident
 - status: `generated`
 - source_fingerprint: `139aabaed1095a4ed9a66027df793fcd3614b408`
 - created_at_utc: `2026-04-25T21:19:30.761037+00:00`
-- updated_at_utc: `2026-04-25T21:57:28.857970+00:00`
+- updated_at_utc: `2026-04-25T23:02:59.169169+00:00`

@@ -36,7 +36,7 @@ The character is identified primarily by her black hair. No further visual data 
 ## Continuity
 
 - continuity_constraints: Maintain black hair as the primary identifying visual trait.
-- unresolved_ambiguities: Full physical appearance is unknown., Age and build are unstated., Costume and movement style are unstated.
+- unresolved_ambiguities: Full physical appearance is unknown., Age, build, and clothing are not established., Personality and role are not established.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ The character is identified primarily by her black hair. No further visual data 
 - status: `generated`
 - source_fingerprint: `1a959eaef9764a109bf72bcd5bce982a5ef62a26`
 - created_at_utc: `2026-04-25T21:19:13.119695+00:00`
-- updated_at_utc: `2026-04-25T21:56:50.211322+00:00`
+- updated_at_utc: `2026-04-25T23:02:41.746299+00:00`
