@@ -3,11 +3,35 @@
 - `apache_warriors`
   - Character status=canonical entity_kind=group.
   - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `bull_ape_mate`
+  - Character status=resolved_into entity_kind=individual.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `green_martian_warriors`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `green_martians`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `guardsmen`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `lorquas_ptomel_jed`
+  - Character status=resolved_into entity_kind=individual.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
 - `martian_warrior_leader`
   - Character status=resolved_into entity_kind=individual.
   - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
 - `martian_warriors`
   - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `ptor_family`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `tardos_mors`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `the_chieftain`
+  - Character status=resolved_into entity_kind=individual.
   - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
 - `none`
   - Environment status=review entity_kind=environment.

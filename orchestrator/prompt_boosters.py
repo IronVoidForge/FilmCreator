@@ -117,11 +117,7 @@ def apply_booster_bundles(
 ) -> tuple[str, str, dict[str, Any]]:
     selected_ids = bundle_ids_for_variant(prompt_variant_id, bundle_ids)
     if not selected_ids:
-        return (
-            positive_prompt,
-            negative_prompt,
-            {"prompt_variant_id": prompt_variant_id or "raw", "booster_bundle_ids": []},
-        )
+        return positive_prompt, negative_prompt, {"prompt_variant_id": prompt_variant_id or "raw", "booster_bundle_ids": []}
 
     library = load_booster_library()
     missing = [bundle_id for bundle_id in selected_ids if bundle_id not in library]
@@ -165,4 +161,3 @@ def _dedupe_terms(terms: list[str]) -> list[str]:
             seen.add(key)
             deduped.append(cleaned)
     return deduped
-

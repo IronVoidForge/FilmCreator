@@ -1,8 +1,16 @@
 # Prompt Preparation Review Index
 
 - `apache_warriors` - apache_warriors Character Reference Review (subject_kind=character, status=review, variant=review)
+- `bull_ape_mate` - bull_ape Character Reference Review (subject_kind=character, status=review, variant=review)
+- `green_martian_warriors` - green_martian_warriors Character Reference Review (subject_kind=character, status=review, variant=review)
+- `green_martians` - green_martians Character Reference Review (subject_kind=character, status=review, variant=review)
+- `guardsmen` - guardsmen Character Reference Review (subject_kind=character, status=review, variant=review)
+- `lorquas_ptomel_jed` - lorquas_ptomel_jed Character Reference Review (subject_kind=character, status=review, variant=review)
 - `martian_warrior_leader` - martian_warrior_leader Character Reference Review (subject_kind=character, status=review, variant=review)
 - `martian_warriors` - martian_warriors Character Reference Review (subject_kind=character, status=review, variant=review)
+- `ptor_family` - ptor_family Character Reference Review (subject_kind=character, status=review, variant=review)
+- `tardos_mors` - tardos_mors Character Reference Review (subject_kind=character, status=review, variant=review)
+- `the_chieftain` - the_chieftain Character Reference Review (subject_kind=character, status=review, variant=review)
 - `none` - Cave Interior (Transitioning) Environment Reference Review (subject_kind=environment, status=review, variant=review)
 - `CH002_SC001_SH001_primary_keyframe_prompt` - SH001 Shot Prompt - Primary Keyframe (subject_kind=shot, status=review, variant=primary_keyframe)
 - `CH002_SC001_SH001_alternate_angle_prompt` - SH001 Shot Prompt - Alternate Angle (subject_kind=shot, status=review, variant=alternate_angle)
