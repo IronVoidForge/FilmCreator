@@ -13,7 +13,13 @@ from .core.json_io import read_json, write_json
 from .environment_bible import _is_film_facing_environment
 from .prompt_package import PromptPackage, write_prompt_package
 from .scaffold import create_project
-from .visual_fallbacks import character_negative_terms, environment_negative_terms, load_visual_fallbacks
+from .visual_fallbacks import (
+    character_negative_terms,
+    environment_negative_terms,
+    load_visual_fallbacks,
+    run_visual_fallback_synthesis,
+    visual_fallback_path,
+)
 
 PROMPT_PREPARATION_SCHEMA_VERSION = "2026-04-23-prompt-preparation-v3"
 
@@ -540,6 +546,13 @@ def _write_prompt_package_if_changed(path: Path, package: PromptPackage, *, forc
         return False
     write_prompt_package(path, package)
     return True
+
+
+def _ensure_visual_fallbacks(project_slug: str, project_dir: Path) -> dict[str, Any]:
+    path = visual_fallback_path(project_dir)
+    if not path.exists():
+        run_visual_fallback_synthesis(project_slug, force=False)
+    return load_visual_fallbacks(project_dir)
 
 
 def _load_json_files(root: Path, pattern: str) -> list[dict[str, Any]]:
@@ -1242,6 +1255,7 @@ def _package_for_character(
     bible: dict[str, Any],
     descriptor: dict[str, Any] | None,
     variant: tuple[str, str, str],
+    visual_fallbacks: dict[str, Any],
 ) -> tuple[PromptPackage, Path, list[str]]:
     variant_key, variant_title, variant_hint = variant
     character_id = str(bible.get("character_id", "")).strip().lower()
@@ -1408,6 +1422,7 @@ def _package_for_environment(
     bible: dict[str, Any],
     descriptor: dict[str, Any] | None,
     variant: tuple[str, str, str],
+    visual_fallbacks: dict[str, Any],
 ) -> tuple[PromptPackage, Path, list[str]]:
     variant_key, variant_title, variant_hint = variant
     environment_id = str(bible.get("environment_id", "")).strip().lower()
@@ -2047,6 +2062,7 @@ def run_prompt_preparation(
     run_tracker: "DownstreamRunTracker | None" = None,
 ) -> PromptPreparationSummary:
     project_dir = create_project(project_slug)
+    visual_fallbacks = _ensure_visual_fallbacks(project_slug, project_dir)
     root = project_dir / PROMPT_PREP_ROOT
     review_root = root / "review"
     root.mkdir(parents=True, exist_ok=True)
@@ -2145,7 +2161,13 @@ def run_prompt_preparation(
                 if stop_processing:
                     break
                 descriptor = character_descriptors.get(str(bible.get("character_id", "")).strip().lower())
-                package, package_path, sources = _package_for_character(project_dir=project_dir, bible=bible, descriptor=descriptor, variant=variant)
+                package, package_path, sources = _package_for_character(
+                    project_dir=project_dir,
+                    bible=bible,
+                    descriptor=descriptor,
+                    variant=variant,
+                    visual_fallbacks=visual_fallbacks,
+                )
                 fp = _fingerprint({"schema_version": PROMPT_PREPARATION_SCHEMA_VERSION, "sources": sources})
                 maybe_write_prompt(package_path, package, fp)
                 processed_packages += 1
@@ -2202,7 +2224,13 @@ def run_prompt_preparation(
                 if stop_processing:
                     break
                 descriptor = environment_descriptors.get(str(bible.get("environment_id", "")).strip().lower())
-                package, package_path, sources = _package_for_environment(project_dir=project_dir, bible=bible, descriptor=descriptor, variant=variant)
+                package, package_path, sources = _package_for_environment(
+                    project_dir=project_dir,
+                    bible=bible,
+                    descriptor=descriptor,
+                    variant=variant,
+                    visual_fallbacks=visual_fallbacks,
+                )
                 fp = _fingerprint({"schema_version": PROMPT_PREPARATION_SCHEMA_VERSION, "sources": sources})
                 maybe_write_prompt(package_path, package, fp)
                 processed_packages += 1
