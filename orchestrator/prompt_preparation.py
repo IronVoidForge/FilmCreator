@@ -13,6 +13,7 @@ from .core.json_io import read_json, write_json
 from .environment_bible import _is_film_facing_environment
 from .prompt_package import PromptPackage, write_prompt_package
 from .scaffold import create_project
+from .visual_fallbacks import character_negative_terms, environment_negative_terms, load_visual_fallbacks
 
 PROMPT_PREPARATION_SCHEMA_VERSION = "2026-04-23-prompt-preparation-v3"
 
@@ -162,6 +163,13 @@ def _looks_like_generic_prompt_descriptor(text: str) -> bool:
     return any(marker in normalized for marker in PROMPT_DESCRIPTOR_FILLER_MARKERS)
 
 
+def _descriptor_repair(descriptor: dict[str, Any] | None) -> dict[str, Any]:
+    if not isinstance(descriptor, dict):
+        return {}
+    repair = descriptor.get("reference_repair", {})
+    return repair if isinstance(repair, dict) else {}
+
+
 def _shot_prompt_detail_clause(*values: str) -> str:
     for value in values:
         cleaned = _clean_prompt_clause(value)
@@ -210,6 +218,59 @@ def _dedupe_prompt_clauses(clauses: list[str]) -> list[str]:
         seen.add(normalized)
         deduped.append(cleaned)
     return deduped
+
+
+def _prompt_text(*values: Any) -> str:
+    for value in values:
+        if value is None:
+            continue
+        if isinstance(value, dict):
+            candidates = value.values()
+        elif isinstance(value, list):
+            candidates = value
+        else:
+            candidates = [value]
+        for candidate in candidates:
+            cleaned = _clean_prompt_clause(str(candidate))
+            if not cleaned:
+                continue
+            if _looks_like_placeholder_text(cleaned) or _looks_like_generic_prompt_descriptor(cleaned) or _looks_like_metadata_summary(cleaned):
+                continue
+            return cleaned
+    return ""
+
+
+def _prompt_clause(*values: Any, limit: int = 240) -> str:
+    text = _prompt_text(*values)
+    if not text:
+        return ""
+    return _compact(text, limit=limit)
+
+
+def _prompt_field_text(descriptor: dict[str, Any] | None, repair: dict[str, Any], field_name: str, *fallback_values: Any) -> str:
+    descriptor = descriptor or {}
+    supported = descriptor.get("supported_field_values", {}) if isinstance(descriptor.get("supported_field_values", {}), dict) else {}
+    generated = descriptor.get("generated_field_values", {}) if isinstance(descriptor.get("generated_field_values", {}), dict) else {}
+    field_values = descriptor.get("field_values", {}) if isinstance(descriptor.get("field_values", {}), dict) else {}
+    return _prompt_text(
+        supported.get(field_name),
+        generated.get(field_name),
+        field_values.get(field_name),
+        repair.get(field_name),
+        *fallback_values,
+    )
+
+
+def _prompt_negative_prompt(*groups: Any) -> str:
+    terms: list[str] = []
+    for group in groups:
+        if isinstance(group, dict):
+            terms.extend(_coerce_bullets(*group.values()))
+        else:
+            terms.extend(_coerce_bullets(group))
+    terms = _dedupe_prompt_clauses([term for term in terms if term])
+    base_terms = _coerce_bullets(GENERIC_NEGATIVE_PROMPT)
+    return ", ".join(_dedupe_prompt_clauses([*base_terms, *terms])) or GENERIC_NEGATIVE_PROMPT
 
 
 def _is_distinct_clause(candidate: str, comparisons: list[str]) -> bool:
@@ -1111,56 +1172,100 @@ def _package_for_character(
     variant_key, variant_title, variant_hint = variant
     character_id = str(bible.get("character_id", "")).strip().lower()
     display_name = str(bible.get("display_name", character_id)).strip() or character_id
-    descriptor_text = _character_descriptor(bible, descriptor)
     descriptor_source = descriptor or {}
-    body_descriptor = _listify(
-        *_coerce_bullets(
-            descriptor_source.get("physical_build", ""),
-            descriptor_source.get("physical_presence_notes", ""),
-            bible.get("physical_build", ""),
-            bible.get("body_type", ""),
-        )
+    repair = _descriptor_repair(descriptor)
+    body_descriptor = _prompt_field_text(descriptor_source, repair, "body_descriptor", bible.get("physical_build", ""), bible.get("body_type", ""))
+    face_descriptor = _prompt_field_text(
+        descriptor_source,
+        repair,
+        "face_descriptor",
+        bible.get("face_shape", ""),
+        bible.get("eye_color", ""),
+        bible.get("facial_hair", ""),
+        bible.get("distinctive_features", ""),
     )
-    face_descriptor = _listify(
-        *_coerce_bullets(
-            descriptor_source.get("face_shape", ""),
-            descriptor_source.get("eye_color", ""),
-            descriptor_source.get("facial_hair", ""),
-            descriptor_source.get("distinctive_features", ""),
-        )
+    costume_descriptor = _prompt_field_text(
+        descriptor_source,
+        repair,
+        "costume_descriptor",
+        bible.get("costume_signature", ""),
+        bible.get("stable_visual_summary", ""),
     )
-    costume_descriptor = _listify(
-        *_coerce_bullets(
-            descriptor_source.get("costume_signature", ""),
-            descriptor_source.get("costume_layers", ""),
-            descriptor_source.get("costume_materials", ""),
-            bible.get("costume_signature", ""),
-        )
+    posture_descriptor = _prompt_field_text(descriptor_source, repair, "posture_descriptor", bible.get("movement_language", ""), bible.get("posture", ""))
+    expression_descriptor = _prompt_field_text(
+        descriptor_source,
+        repair,
+        "expression_descriptor",
+        bible.get("voice_or_presence_notes", ""),
+        bible.get("expression_tendency", ""),
     )
-    posture_descriptor = _listify(*_coerce_bullets(descriptor_source.get("posture", ""), descriptor_source.get("movement_language", "")))
-    expression_descriptor = _listify(
-        *_coerce_bullets(descriptor_source.get("expression_tendency", ""), descriptor_source.get("voice_or_presence_notes", ""))
+    locked_fields = _prompt_field_text(descriptor_source, repair, "locked_fields", bible.get("locked_fields", ""), bible.get("silhouette_notes", ""))
+    identity_descriptor = _prompt_field_text(
+        descriptor_source,
+        repair,
+        "identity_descriptor",
+        bible.get("identity_baseline", ""),
+        bible.get("stable_visual_summary", ""),
+        display_name,
     )
-    locked_fields = _listify(*_coerce_bullets(descriptor_source.get("locked_fields", ""), bible.get("locked_fields", "")))
+    source_visual_context = _prompt_field_text(descriptor_source, repair, "source_visual_context", visual_fallbacks.get("book_visual_context", ""))
+    subject_visual_context = _prompt_field_text(descriptor_source, repair, "subject_visual_context", display_name, character_id)
+    descriptor_clauses = _dedupe_prompt_clauses(
+        [
+            identity_descriptor,
+            body_descriptor,
+            face_descriptor,
+            costume_descriptor,
+            posture_descriptor,
+            expression_descriptor,
+            locked_fields,
+        ]
+    )
+    descriptor_text = _compact(", ".join(descriptor_clauses), limit=240)
+    fallback_fields_used = ", ".join(_coerce_bullets(*_coerce_bullets(repair.get("fallback_fields_used", []))))
     repair_notes = _recommended_repair_notes(
         {
             "display_name": display_name,
-            "identity_descriptor": descriptor_text,
+            "identity_descriptor": identity_descriptor,
             "body_descriptor": body_descriptor,
             "face_descriptor": face_descriptor,
             "costume_descriptor": costume_descriptor,
             "posture_descriptor": posture_descriptor,
             "expression_descriptor": expression_descriptor,
             "locked_fields": locked_fields,
+            "source_visual_context": source_visual_context,
+            "subject_visual_context": subject_visual_context,
         },
         OPTIONAL_CHARACTER_REFERENCE_INPUTS,
         label="character reference",
     )
+    if fallback_fields_used:
+        repair_notes.append(f"reference repair fallback fields used: {fallback_fields_used}")
+    repair_sources = _coerce_bullets(*_coerce_bullets(repair.get("repair_sources", [])))
+    if repair_sources:
+        repair_notes.append(f"reference repair sources: {', '.join(repair_sources)}")
     title = f"{display_name} Character Reference - {variant_title}"
     prompt_id = f"{character_id}_{variant_key}_prompt"
     positive_prompt = _compact(
-        f"{_character_prompt_lead(variant_key)}, {variant_hint}, {descriptor_text}, clean neutral studio background, clear silhouette, consistent costume layers, consistent facial structure, no narrative action, no text, no watermark.",
-        limit=320,
+        ", ".join(
+            clause
+            for clause in [
+                _character_prompt_lead(variant_key),
+                variant_hint,
+                descriptor_text,
+                source_visual_context,
+                subject_visual_context,
+                "clean neutral studio background",
+                "clear silhouette",
+                "consistent costume layers",
+                "consistent facial structure",
+                "no narrative action",
+                "no text",
+                "no watermark",
+            ]
+            if clause
+        ),
+        limit=360,
     )
     package_path = project_dir / PROMPT_PREP_ROOT / "characters" / character_id / f"{variant_key}_prompt.md"
     sources = []
@@ -1182,16 +1287,20 @@ def _package_for_character(
         reuse_policy="reuse canonical visual canon",
         extra_inputs={
             "display_name": display_name,
-            "identity_descriptor": descriptor_text,
+            "identity_descriptor": identity_descriptor,
             "body_descriptor": body_descriptor,
             "face_descriptor": face_descriptor,
             "costume_descriptor": costume_descriptor,
             "posture_descriptor": posture_descriptor,
             "expression_descriptor": expression_descriptor,
             "locked_fields": locked_fields,
+            "source_visual_context": source_visual_context,
+            "subject_visual_context": subject_visual_context,
+            "fallback_fields_used": fallback_fields_used,
         },
     )
     reference_instruction = "If this prompt is later used with an image reference, treat image1 as the locked identity reference."
+    negative_prompt = _prompt_negative_prompt(character_negative_terms(visual_fallbacks), repair.get("negative_terms", []))
     package = PromptPackage(
         path=package_path,
         title=title,
@@ -1200,9 +1309,9 @@ def _package_for_character(
         workflow_type="still.t2i.klein.distilled",
         positive_prompt=_compact(
             f"{reference_instruction} {positive_prompt}",
-            limit=360,
+            limit=420,
         ),
-        negative_prompt=GENERIC_NEGATIVE_PROMPT,
+        negative_prompt=negative_prompt,
         inputs_markdown="\n".join(f"- {key}: {value}" for key, value in inputs.items()),
         continuity_notes_markdown="\n".join(
             [
@@ -1229,24 +1338,47 @@ def _package_for_environment(
     variant_key, variant_title, variant_hint = variant
     environment_id = str(bible.get("environment_id", "")).strip().lower()
     display_name = str(bible.get("display_name", environment_id)).strip() or environment_id
-    descriptor_text = _environment_descriptor(bible, descriptor)
     descriptor_source = descriptor or {}
-    layout_descriptor = _listify(
-        *_coerce_bullets(
-            descriptor_source.get("layout", ""),
-            descriptor_source.get("foreground_midground_background", ""),
-            descriptor_source.get("pathways", ""),
-            bible.get("layout_notes", ""),
-        )
+    repair = _descriptor_repair(descriptor)
+    layout_descriptor = _prompt_field_text(
+        descriptor_source,
+        repair,
+        "layout_descriptor",
+        bible.get("layout_notes", ""),
+        bible.get("visual_summary", ""),
     )
-    scale_descriptor = _listify(*_coerce_bullets(descriptor_source.get("scale", ""), descriptor_source.get("depth_cues", "")))
-    architecture_descriptor = _listify(*_coerce_bullets(descriptor_source.get("architecture", ""), descriptor_source.get("materials", "")))
-    landmark_descriptor = _listify(
-        *_coerce_bullets(descriptor_source.get("camera_friendly_landmarks", ""), descriptor_source.get("recurring_anchors", ""))
+    scale_descriptor = _prompt_field_text(descriptor_source, repair, "scale_descriptor", bible.get("scale", ""), bible.get("depth_cues", ""))
+    architecture_descriptor = _prompt_field_text(
+        descriptor_source,
+        repair,
+        "architecture_descriptor",
+        bible.get("architecture", ""),
+        bible.get("materials", ""),
     )
-    lighting_descriptor = _listify(*_coerce_bullets(descriptor_source.get("lighting", ""), bible.get("lighting", "")))
-    mood_descriptor = _listify(*_coerce_bullets(descriptor_source.get("mood", ""), bible.get("mood", "")))
-    locked_fields = _listify(*_coerce_bullets(descriptor_source.get("locked_fields", ""), bible.get("locked_fields", "")))
+    landmark_descriptor = _prompt_field_text(
+        descriptor_source,
+        repair,
+        "landmark_descriptor",
+        bible.get("recurring_elements", ""),
+    )
+    lighting_descriptor = _prompt_field_text(descriptor_source, repair, "lighting_descriptor", bible.get("lighting", ""))
+    mood_descriptor = _prompt_field_text(descriptor_source, repair, "mood_descriptor", bible.get("mood", ""))
+    locked_fields = _prompt_field_text(descriptor_source, repair, "locked_fields", bible.get("locked_fields", ""))
+    source_visual_context = _prompt_field_text(descriptor_source, repair, "source_visual_context", visual_fallbacks.get("book_visual_context", ""))
+    subject_visual_context = _prompt_field_text(descriptor_source, repair, "subject_visual_context", display_name, environment_id)
+    descriptor_clauses = _dedupe_prompt_clauses(
+        [
+            layout_descriptor,
+            scale_descriptor,
+            architecture_descriptor,
+            landmark_descriptor,
+            lighting_descriptor,
+            mood_descriptor,
+            locked_fields,
+        ]
+    )
+    descriptor_text = _compact(", ".join(descriptor_clauses), limit=240)
+    fallback_fields_used = ", ".join(_coerce_bullets(*_coerce_bullets(repair.get("fallback_fields_used", []))))
     repair_notes = _recommended_repair_notes(
         {
             "display_name": display_name,
@@ -1257,15 +1389,37 @@ def _package_for_environment(
             "lighting_descriptor": lighting_descriptor,
             "mood_descriptor": mood_descriptor,
             "locked_fields": locked_fields,
+            "source_visual_context": source_visual_context,
+            "subject_visual_context": subject_visual_context,
         },
         OPTIONAL_ENVIRONMENT_REFERENCE_INPUTS,
         label="environment reference",
     )
+    if fallback_fields_used:
+        repair_notes.append(f"reference repair fallback fields used: {fallback_fields_used}")
+    repair_sources = _coerce_bullets(*_coerce_bullets(repair.get("repair_sources", [])))
+    if repair_sources:
+        repair_notes.append(f"reference repair sources: {', '.join(repair_sources)}")
     title = f"{display_name} Environment Reference - {variant_title}"
     prompt_id = f"{environment_id}_{variant_key}_prompt"
     positive_prompt = _compact(
-        f"Environment reference sheet, {variant_hint}, {descriptor_text}, clear spatial layout, readable anchors and depth cues, no characters, no text, no watermark.",
-        limit=320,
+        ", ".join(
+            clause
+            for clause in [
+                "Environment reference sheet",
+                variant_hint,
+                descriptor_text,
+                source_visual_context,
+                subject_visual_context,
+                "clear spatial layout",
+                "readable anchors and depth cues",
+                "no characters",
+                "no text",
+                "no watermark",
+            ]
+            if clause
+        ),
+        limit=360,
     )
     package_path = project_dir / PROMPT_PREP_ROOT / "environments" / environment_id / f"{variant_key}_prompt.md"
     sources = []
@@ -1294,9 +1448,13 @@ def _package_for_environment(
             "lighting_descriptor": lighting_descriptor,
             "mood_descriptor": mood_descriptor,
             "locked_fields": locked_fields,
+            "source_visual_context": source_visual_context,
+            "subject_visual_context": subject_visual_context,
+            "fallback_fields_used": fallback_fields_used,
         },
     )
     reference_instruction = "If this prompt is later used with an image reference, treat image1 as the locked spatial reference."
+    negative_prompt = _prompt_negative_prompt(environment_negative_terms(visual_fallbacks), repair.get("negative_terms", []))
     package = PromptPackage(
         path=package_path,
         title=title,
@@ -1305,9 +1463,9 @@ def _package_for_environment(
         workflow_type="still.t2i.klein.distilled",
         positive_prompt=_compact(
             f"{reference_instruction} {positive_prompt}",
-            limit=360,
+            limit=420,
         ),
-        negative_prompt=GENERIC_NEGATIVE_PROMPT,
+        negative_prompt=negative_prompt,
         inputs_markdown="\n".join(f"- {key}: {value}" for key, value in inputs.items()),
         continuity_notes_markdown="\n".join(
             [

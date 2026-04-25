@@ -32,6 +32,7 @@ from .prompt_preparation import run_prompt_preparation
 from .scene_contracts import run_scene_contract_synthesis
 from .scene_bindings import run_scene_binding_synthesis
 from .shot_planner import run_shot_planning
+from .visual_fallbacks import run_visual_fallback_synthesis
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -49,6 +50,10 @@ def build_parser() -> argparse.ArgumentParser:
     e.add_argument("--no-llm", action="store_true")
     e.add_argument("--force", action="store_true")
     e.add_argument("--limit", type=int, default=None)
+
+    vf = subparsers.add_parser("synthesize-visual-fallbacks")
+    vf.add_argument("project_slug")
+    vf.add_argument("--force", action="store_true")
 
     sc = subparsers.add_parser("synthesize-scene-contracts")
     sc.add_argument("project_slug")
@@ -93,6 +98,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     crg = subparsers.add_parser("generate-character-references")
     crg.add_argument("project_slug")
+    # TODO: Add --chapters once run_character_reference_generation supports chapter filtering.
     crg.add_argument("--limit", type=int, default=None)
     crg.add_argument("--variant", action="append", dest="variants")
     crg.add_argument("--character-id", action="append", dest="character_ids")
@@ -130,6 +136,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     erg = subparsers.add_parser("generate-environment-references")
     erg.add_argument("project_slug")
+    # TODO: Add --chapters once run_environment_reference_generation supports chapter filtering.
     erg.add_argument("--limit", type=int, default=None)
     erg.add_argument("--variant", action="append", dest="variants")
     erg.add_argument("--environment-id", action="append", dest="environment_ids")
@@ -209,6 +216,8 @@ def main() -> None:
         summary = run_character_bible_synthesis(args.project_slug, use_llm=not args.no_llm, force=args.force, limit=args.limit)
     elif args.command == "synthesize-environment-bibles":
         summary = run_environment_bible_synthesis(args.project_slug, use_llm=not args.no_llm, force=args.force, limit=args.limit)
+    elif args.command == "synthesize-visual-fallbacks":
+        summary = run_visual_fallback_synthesis(args.project_slug, force=args.force)
     elif args.command == "synthesize-scene-contracts":
         summary = run_scene_contract_synthesis(args.project_slug, use_llm=not args.no_llm, force=args.force, chapters=args.chapters)
     elif args.command == "synthesize-scene-bindings":

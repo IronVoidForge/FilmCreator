@@ -19,6 +19,9 @@ from .features.authoring.packet_parser import parse_packet_document
 from .lmstudio_client import LMStudioClient
 from .scaffold import create_project
 from .settings import load_runtime_settings
+from .visual_fallbacks import load_visual_fallbacks
+from .character_descriptor_repair import repair_character_reference_fields
+from .environment_descriptor_repair import repair_environment_reference_fields
 
 DESCRIPTOR_ENRICHMENT_SCHEMA_VERSION = "2026-04-23-descriptor-enrichment-v4"
 
@@ -240,11 +243,12 @@ class DescriptorRecord:
     evidence_summary: list[str] = field(default_factory=list)
     inferred_fields: list[str] = field(default_factory=list)
     review_flags: list[str] = field(default_factory=list)
+    reference_repair: dict[str, Any] | None = None
     related_assets: list[dict[str, Any]] = field(default_factory=list)
     metadata: DescriptorMetadata | None = None
 
     def to_dict(self) -> dict[str, Any]:
-        return {
+        data = {
             "descriptor_id": self.descriptor_id,
             "canonical_id": self.canonical_id,
             "display_name": self.display_name,
@@ -275,6 +279,9 @@ class DescriptorRecord:
             "related_assets": self.related_assets,
             "metadata": self.metadata.to_dict() if self.metadata else None,
         }
+        if self.reference_repair is not None:
+            data["reference_repair"] = self.reference_repair
+        return data
 
 
 @dataclass(frozen=True)
@@ -2297,6 +2304,34 @@ def _ordered_unique(values: list[str]) -> list[str]:
     return ordered
 
 
+def _attach_reference_repair(record: DescriptorRecord, visual_fallbacks: dict[str, Any]) -> DescriptorRecord:
+    if record.entity_type == CHARACTER_ENTITY_TYPE:
+        repair = repair_character_reference_fields(
+            canonical_id=record.canonical_id,
+            display_name=record.display_name,
+            field_values=record.field_values,
+            supported_field_values=record.supported_field_values,
+            generated_field_values=record.generated_field_values,
+            evidence_summary=record.evidence_summary,
+            visual_fallbacks=visual_fallbacks,
+        )
+    elif record.entity_type == ENVIRONMENT_ENTITY_TYPE:
+        repair = repair_environment_reference_fields(
+            canonical_id=record.canonical_id,
+            display_name=record.display_name,
+            field_values=record.field_values,
+            supported_field_values=record.supported_field_values,
+            generated_field_values=record.generated_field_values,
+            evidence_summary=record.evidence_summary,
+            visual_fallbacks=visual_fallbacks,
+        )
+    else:
+        return record
+    record.reference_repair = repair
+    record.review_flags = _ordered_unique([*record.review_flags, *_coerce_string_list(repair.get("review_flags", []))])
+    return record
+
+
 def _base_character_descriptor(
     project_slug: str,
     project_dir: Path,
@@ -2306,6 +2341,7 @@ def _base_character_descriptor(
     scene_mentions: list[str],
     shot_mentions: list[str],
     use_llm: bool,
+    visual_fallbacks: dict[str, Any],
 ) -> DescriptorRecord:
     evidence_summary, evidence_refs = _collect_character_evidence(project_slug, project_dir, char_id, entry, bible, scene_mentions, shot_mentions)
     base_fields: dict[str, Any] = {}
@@ -2424,7 +2460,7 @@ def _base_character_descriptor(
             {"dependency_type": "character_registry_entry", "dependency_id": char_id, "version": _fingerprint(entry)},
         ],
     )
-    return _finalize_descriptor(
+    record = _finalize_descriptor(
         descriptor_id=metadata.artifact_id,
         canonical_id=char_id,
         display_name=_first_nonempty(str(bible.get("display_name", "")), str(entry.get("display_name", "")), fallback=char_id),
@@ -2443,6 +2479,7 @@ def _base_character_descriptor(
         related_assets=related_assets,
         metadata=metadata,
     )
+    return _attach_reference_repair(record, visual_fallbacks)
 
 
 def _base_environment_descriptor(
@@ -2454,6 +2491,7 @@ def _base_environment_descriptor(
     scene_mentions: list[str],
     shot_mentions: list[str],
     use_llm: bool,
+    visual_fallbacks: dict[str, Any],
 ) -> DescriptorRecord:
     evidence_summary, evidence_refs = _collect_environment_evidence(project_slug, entry, bible)
     base_fields: dict[str, Any] = {}
@@ -2538,7 +2576,7 @@ def _base_environment_descriptor(
             {"dependency_type": "environment_registry_entry", "dependency_id": env_id, "version": _fingerprint(entry)},
         ],
     )
-    return _finalize_descriptor(
+    record = _finalize_descriptor(
         descriptor_id=metadata.artifact_id,
         canonical_id=env_id,
         display_name=_first_nonempty(str(bible.get("display_name", "")), str(entry.get("display_name", "")), fallback=env_id),
@@ -2557,6 +2595,7 @@ def _base_environment_descriptor(
         related_assets=[],
         metadata=metadata,
     )
+    return _attach_reference_repair(record, visual_fallbacks)
 
 
 def _base_scene_descriptor(
@@ -2982,8 +3021,13 @@ def _descriptor_base_path(project_dir: Path, record: DescriptorRecord) -> Path:
     return _descriptor_output_path(project_dir, record).with_suffix("")
 
 
-def _descriptor_from_existing(existing: dict[str, Any], metadata: DescriptorMetadata) -> DescriptorRecord:
-    return DescriptorRecord(
+def _descriptor_from_existing(
+    existing: dict[str, Any],
+    metadata: DescriptorMetadata,
+    *,
+    visual_fallbacks: dict[str, Any],
+) -> DescriptorRecord:
+    record = DescriptorRecord(
         descriptor_id=str(existing.get("descriptor_id", metadata.artifact_id)),
         canonical_id=str(existing.get("canonical_id", "")),
         display_name=str(existing.get("display_name", "")),
@@ -3011,9 +3055,11 @@ def _descriptor_from_existing(existing: dict[str, Any], metadata: DescriptorMeta
         evidence_summary=existing.get("evidence_summary", []),
         inferred_fields=existing.get("inferred_fields", []),
         review_flags=existing.get("review_flags", []),
+        reference_repair=existing.get("reference_repair"),
         related_assets=existing.get("related_assets", []),
         metadata=metadata,
     )
+    return _attach_reference_repair(record, visual_fallbacks)
 
 
 def _descriptor_review_issues(record: DescriptorRecord) -> list[str]:
@@ -3057,6 +3103,7 @@ def run_descriptor_enrichment(
     (output_root / "scenes").mkdir(parents=True, exist_ok=True)
     (output_root / "shots").mkdir(parents=True, exist_ok=True)
     (output_root / "key_items").mkdir(parents=True, exist_ok=True)
+    visual_fallbacks = load_visual_fallbacks(project_dir)
 
     character_bibles = _load_character_bibles(project_dir)
     environment_bibles = _load_environment_bibles(project_dir)
@@ -3113,19 +3160,19 @@ def run_descriptor_enrichment(
             existing["metadata"]["status"] = "stale"
             write_json(base_path.with_suffix(".json"), existing)
             warnings.append(f"Locked descriptor became stale and was not regenerated: {base_path.name}")
-            return _descriptor_from_existing(existing, metadata)
+            return _descriptor_from_existing(existing, metadata, visual_fallbacks=visual_fallbacks)
         if run_tracker is not None and run_tracker.is_item_completed(phase_name, item_id, fp) and existing:
             reused += 1
-            return _descriptor_from_existing(existing, metadata)
+            return _descriptor_from_existing(existing, metadata, visual_fallbacks=visual_fallbacks)
         if existing and not force and run_tracker is None:
             if old_meta.get("source_fingerprint") == fp:
                 reused += 1
-                return _descriptor_from_existing(existing, metadata)
+                return _descriptor_from_existing(existing, metadata, visual_fallbacks=visual_fallbacks)
             if old_meta.get("status") == "locked":
                 existing["metadata"]["status"] = "stale"
                 write_json(base_path.with_suffix(".json"), existing)
                 warnings.append(f"Locked descriptor became stale and was not regenerated: {base_path.name}")
-                return _descriptor_from_existing(existing, metadata)
+                return _descriptor_from_existing(existing, metadata, visual_fallbacks=visual_fallbacks)
         record = builder()
         base_path.parent.mkdir(parents=True, exist_ok=True)
         _write_descriptor_files(base_path, record)
@@ -3180,6 +3227,7 @@ def run_descriptor_enrichment(
                     scene_mentions=character_scene_map.get(char_id, []),
                     shot_mentions=character_shot_map.get(char_id, []),
                     use_llm=use_llm,
+                    visual_fallbacks=visual_fallbacks,
                 )
 
             record = maybe_reuse(base_path, fp, build_character, force=force, item_id=f"character:{char_id}")
@@ -3225,6 +3273,7 @@ def run_descriptor_enrichment(
                     scene_mentions=environment_scene_map.get(env_id, []),
                     shot_mentions=environment_shot_map.get(env_id, []),
                     use_llm=use_llm,
+                    visual_fallbacks=visual_fallbacks,
                 )
 
             record = maybe_reuse(base_path, fp, build_environment, force=force, item_id=f"environment:{env_id}")
