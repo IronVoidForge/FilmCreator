@@ -1,0 +1,3258 @@
+[
+  {
+    "scene_id": "CH002_SC001",
+    "chapter_id": "CH002",
+    "scene_title": "SC001",
+    "purpose": "To establish the protagonist's vulnerability and the supernatural threat within the cave.",
+    "summary": "The protagonist is trapped in a state of conscious paralysis caused by a mysterious, pungent vapor inside the Arizona mountain cave. He is unable to move despite being fully aware.",
+    "emotional_arc": "From awareness/confusion to helpless terror and sensory isolation.",
+    "production_intent": "Establish the protagonist's physical helplessness and the presence of a supernatural threat via sensory isolation. The scene relies on high-detail macro photography to communicate internal panic against an external environmental hazard.",
+    "scene_short_description": "A man lies paralyzed in a dark, vapor-filled Arizona mountain cave.",
+    "scene_primary_scale_story_point": "Microscopic sensory details vs. claustrophobic cavern scale.",
+    "scene_required_anchor_catalog": [
+      "textured cave wall",
+      "protagonist eyes"
+    ],
+    "scene_start_state": "Protagonist begins to inhale pungent vapor while experiencing confusion.",
+    "scene_end_state": "Protagonist is fully paralyzed, trapped in helpless terror.",
+    "dominant_action_line": "The inhalation of gas leading to total physical paralysis.",
+    "scene_spatial_layout": [
+      "Tight, claustrophobic cave interior",
+      "Low visibility due to tenuous vapor"
+    ],
+    "character_spatial_map": [
+      "protagonist prone on cave floor"
+    ],
+    "environment_subzones": [
+      "primary scene playing area"
+    ],
+    "entry_vectors": [
+      "gas infiltration from cave crevices"
+    ],
+    "exit_vectors": [
+      "none (subject is trapped)"
+    ],
+    "beat_transition_map": [
+      "BT001 -> BT002: Inhalation to onset of paralysis",
+      "BT002 -> BT003: Paralysis to peak sensory terror"
+    ],
+    "characters_required": [
+      {
+        "label": "The Protagonist",
+        "canonical_id": "protagonist",
+        "display_name": "protagonist",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
+      }
+    ],
+    "environments_required": [
+      {
+        "label": "Interior Cave (Dark, claustrophobic, filled with tenuous vapor)",
+        "canonical_id": "arizona_mountain_cave",
+        "display_name": "arizona_mountain_cave",
+        "status": "canonical",
+        "entity_kind": "environment",
+        "resolution_score": 70,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/arizona_mountain_cave.md",
+        "notes": "Chapter-local environment alias match for 'Interior Cave (Dark, claustrophobic, filled with tenuous vapor)' (key_overlap=1, label_overlap=5, context_overlap=4)."
+      }
+    ],
+    "continuity_constraints": [
+      "Pupil dilation and eye movement speed",
+      "Vapor density and visual quality/texture"
+    ],
+    "visual_coverage_families": [
+      "Extreme Close-ups (Eyes, dilated pupils, sweat, gas particles)",
+      "POV shots (Blurred or restricted vision)",
+      "Macro shots of the environment (Cave wall textures)"
+    ],
+    "beat_list": [
+      {
+        "beat_id": "BT001",
+        "summary": "Inhalation of pungent vapor",
+        "purpose": "",
+        "action_start": "drifting gas particles",
+        "action_end": "deep inhalation",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [
+          "vapor"
+        ],
+        "spatial_context": "arizona_mountain_cave",
+        "blocking_hint": "prone on floor",
+        "environment_subzone": "immediate breathing space",
+        "continuity_focus": "vapor density/texture",
+        "coverage_hint": "macro shots",
+        "coverage_priority": "high",
+        "handoff_to_next": "BT002"
+      },
+      {
+        "beat_id": "BT002",
+        "summary": "Onset of physical paralysis",
+        "purpose": "",
+        "action_start": "confusion/eye movement",
+        "action_end": "total stillness",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "arizona_mountain_cave",
+        "blocking_hint": "stationary prone",
+        "environment_subzone": "immediate breathing space",
+        "continuity_focus": "pupil dilation",
+        "coverage_hint": "extreme close-ups",
+        "coverage_priority": "high",
+        "handoff_to_next": "BT003"
+      },
+      {
+        "beat_id": "BT003",
+        "summary": "Peak helpless terror and sensory isolation",
+        "purpose": "",
+        "action_start": "awareness of paralysis",
+        "action_end": "sensory blackout/terror",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "arizona_mountain_cave",
+        "blocking_hint": "stationary prone",
+        "environment_subzone": "immediate breathing space",
+        "continuity_focus": "eye movement speed",
+        "coverage_hint": "POV shots",
+        "coverage_priority": "medium",
+        "handoff_to_next": "end"
+      }
+    ],
+    "planned_shots": [
+      {
+        "planned_shot_id": "SH001",
+        "beat_id": "BT001",
+        "narrative_function": "establish threat",
+        "planned_shot_moment_summary": "gas particles drifting near face",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [
+          "vapor"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "immediate breathing space",
+        "planned_shot_required_anchor_1": "textured cave wall",
+        "planned_shot_scale_proof_detail": "macro gas density",
+        "start_state_seed": "drifting vapor",
+        "end_state_seed": "inhale motion",
+        "action_seed": "inhalation of pungent gas",
+        "blocking_seed": [
+          "prone"
+        ],
+        "shot_size": "extreme_close_up",
+        "camera_angle": "eye_level",
+        "lens_family": "telephoto",
+        "camera_motion": "push_in",
+        "zoom_behavior": "subtle_in",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "front"
+      },
+      {
+        "planned_shot_id": "SH002",
+        "beat_id": "BT002",
+        "narrative_function": "show paralysis",
+        "planned_shot_moment_summary": "eyes widening and pupils dilating",
+        "primary_subject_seed": "protagonist eyes",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "immediate breathing space",
+        "planned_shot_required_anchor_1": "protagonist eyes",
+        "planned_shot_scale_proof_detail": "pupil dilation ratio",
+        "start_state_seed": "confusion",
+        "end_state_seed": "stasis",
+        "action_seed": "eye movement ceases",
+        "blocking_seed": [
+          "stationary"
+        ],
+        "shot_size": "extreme_close_up",
+        "camera_angle": "eye_level",
+        "lens_family": "portrait",
+        "camera_motion": "locked_off",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "front"
+      },
+      {
+        "planned_shot_id": "SH003",
+        "beat_id": "BT003",
+        "narrative_function": "convey terror",
+        "planned_shot_moment_summary": "blurred POV of cave walls",
+        "primary_subject_seed": "cave wall",
+        "secondary_subjects_seed": [
+          "vapor"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "cave floor contact zone",
+        "planned_shot_required_anchor_1": "textured cave wall",
+        "planned_shot_scale_proof_detail": "vision blur level",
+        "start_state_seed": "wide awareness",
+        "end_state_seed": "restricted vision",
+        "action_seed": "vision blurs/distorts",
+        "blocking_seed": [
+          "stationary"
+        ],
+        "shot_size": "medium_close",
+        "camera_angle": "eye_level",
+        "lens_family": "wide",
+        "camera_motion": "handheld",
+        "zoom_behavior": "none",
+        "focus_strategy": "environment_priority",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "front"
+      }
+    ],
+    "unresolved_questions": [],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC001"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH002",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH028",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH028_chapter_xxviii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH002_chapter_ii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH001_chapter_i.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH002",
+        "canonical_id": "protagonist"
+      }
+    ],
+    "evidence_summary": [
+      "[CH002_SC001] Purpose: To establish the protagonist's vulnerability and the supernatural threat within the cave.",
+      "[CH002_SC001] Summary: The protagonist is trapped in a state of conscious paralysis caused by a mysterious, pungent vapor inside the Arizona mountain cave. He is unable to move despite being fully aware.",
+      "[CH002_SC001] Emotional arc: From awareness/confusion to helpless terror and sensory isolation.",
+      "[CH002_SC001] Coverage: Extreme Close-ups (Eyes, dilated pupils, sweat, gas particles) POV shots (Blurred or restricted vision) Macro shots of the environment (The texture of the cave walls)",
+      "[CH002_SC001] Continuity: Eye movement and pupil dilation. The specific visual quality/density of the vapor.",
+      "[CH002] Chapter summary: **Setting:** A cave in the Arizona mountains; a rocky gorge and canyon under moonlight; the vastness of space. **Characters:** - **The Protagonist:** A man who experiences physical paralysis due to a mysterious gas, u...",
+      "[CH028] CHAPTER XXVIII (book index hit)",
+      "[CH002] CHAPTER II (book index hit)",
+      "[CH001] CHAPTER I (book index hit)",
+      "Character protagonist: An Earthman characterized by extreme physical agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a..."
+    ],
+    "storyboard_markdown": "# Scene Contract: CH002_SC001\n\n## Production Intent\nEstablish the protagonist's physical helplessness and the presence of a supernatural threat via sensory isolation. The scene relies on high-detail macro photography to communicate internal panic against an external environmental hazard.\n\n## Required Cast\n- protagonist\n\n## Required Environments\n- arizona_mountain_cave\n\n## Continuity Constraints\n- Pupil dilation and eye movement speed\n- Vapor density and visual quality/texture\n\n## Beat List\n- BT001: Inhalation of pungent vapor\n- BT002: Onset of physical paralysis\n- BT003: Peak helpless terror and sensory isolation",
+    "metadata": {
+      "artifact_id": "CH002_SC001_SCENE_CONTRACT",
+      "artifact_type": "scene_contract",
+      "status": "generated",
+      "source_fingerprint": "c221fb9b90444a379ffa48a8e8d73a66f6d587ac",
+      "created_at_utc": "2026-04-25T21:29:20.046585+00:00",
+      "updated_at_utc": "2026-04-25T21:29:20.046585+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_breakdown",
+          "dependency_id": "CH002_SC001",
+          "version": "d68b1967b5aba260033b4d51e6c5dd2da00e6d50"
+        },
+        {
+          "dependency_type": "character_resolutions",
+          "dependency_id": "CH002_SC001",
+          "version": "da2c6e998d6cc1ad842bf411f90417eae0043732"
+        },
+        {
+          "dependency_type": "environment_resolutions",
+          "dependency_id": "CH002_SC001",
+          "version": "adb031d1b159ce45b59db4d99479851f20a0489c"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-25T21:29:44.117575+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c221fb9b90444a379ffa48a8e8d73a66f6d587ac"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH002_SC002",
+    "chapter_id": "CH002",
+    "scene_title": "SC002",
+    "purpose": "To introduce external conflict and demonstrate the supernatural power of the cave's contents.",
+    "summary": "A group of Apache warriors approaches the cave entrance. They find the protagonist but are interrupted by a terrifying, low moaning sound emanating from the depths. The warriors flee in panic; one warrior falls to his death during the retreat.",
+    "emotional_arc": "From curiosity/investigation to primal terror and chaos.",
+    "production_intent": "Establish the supernatural threat of the cave through a sudden shift from tactical investigation to chaotic flight. The sequence must use sound and character reaction to convey an unseen presence that overwhelms the Apache warriors.",
+    "scene_short_description": "Apache warriors approach a cave entrance under moonlight before fleeing in terror from an unseen sound.",
+    "scene_primary_scale_story_point": "The vastness of the rocky gorge vs. the claustrophobic threat of the cave mouth.",
+    "scene_required_anchor_catalog": [
+      "cave mouth",
+      "rocky ledge"
+    ],
+    "scene_start_state": "apache_warriors approaching the cave entrance in a tactical formation.",
+    "scene_end_state": "chaotic retreat with one warrior falling from a height.",
+    "dominant_action_line": "Warriors investigate, hear a supernatural moan, and flee in panic.",
+    "scene_spatial_layout": [
+      "open rocky gorge leading to narrow cave mouth",
+      "elevated ledges overlooking the canyon floor"
+    ],
+    "character_spatial_map": [
+      "protagonist is immobile near the cave entrance",
+      "apache_warriors move from gorge center toward cave mouth"
+    ],
+    "environment_subzones": [
+      "rocky_gorge_canyon_floor",
+      "cave_mouth_threshold",
+      "ledge_overlook"
+    ],
+    "entry_vectors": [
+      "canyon floor approach"
+    ],
+    "exit_vectors": [
+      "rapid retreat back through the gorge",
+      "vertical fall from ledge"
+    ],
+    "beat_transition_map": [
+      "BT001 -> BT002: Sound interruption",
+      "BT002 -> BT003: Panic eruption"
+    ],
+    "characters_required": [
+      {
+        "label": "The Protagonist (Immobile observer)",
+        "canonical_id": "protagonist",
+        "display_name": "protagonist",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
+      },
+      {
+        "label": "Apache Warriors",
+        "canonical_id": "apache_warriors",
+        "display_name": "apache_warriors",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/apache_warriors.md",
+        "notes": "Direct registry match for 'apache_warriors'."
+      }
+    ],
+    "environments_required": [
+      {
+        "label": "Cave Entrance / Rocky Gorge",
+        "canonical_id": "rocky_gorge_canyon",
+        "display_name": "rocky_gorge_canyon",
+        "status": "canonical",
+        "entity_kind": "environment",
+        "resolution_score": 92,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/rocky_gorge_canyon.md",
+        "notes": "Chapter-local environment alias match for 'Cave Entrance / Rocky Gorge' (key_overlap=2, label_overlap=2, context_overlap=2)."
+      }
+    ],
+    "continuity_constraints": [
+      "Distance between apache_warriors and cave mouth",
+      "Timing of moaning sound relative to character reaction",
+      "Directional origin of the low moaning sound"
+    ],
+    "visual_coverage_families": [
+      "Wide shots of the gorge/entrance",
+      "Handheld/Shaky cam for panic",
+      "Low angle shots of approach"
+    ],
+    "beat_list": [
+      {
+        "beat_id": "BT001",
+        "summary": "Tactical approach to the cave",
+        "purpose": "",
+        "action_start": "warriors walking through gorge",
+        "action_end": "warriors reaching cave mouth",
+        "active_subjects": [
+          "apache_warriors"
+        ],
+        "passive_subjects": [
+          "protagonist"
+        ],
+        "spatial_context": "rocky_gorge_canyon_floor",
+        "blocking_hint": "group formation moving toward entrance",
+        "environment_subzone": "rocky_gorge_canyon_floor",
+        "continuity_focus": "distance to cave mouth",
+        "coverage_hint": "wide/low angle",
+        "coverage_priority": "high",
+        "handoff_to_next": "BT002"
+      },
+      {
+        "beat_id": "BT002",
+        "summary": "The supernatural interruption",
+        "purpose": "",
+        "action_start": "warriors approaching threshold",
+        "action_end": "warriors frozen in terror",
+        "active_subjects": [
+          "apache_warriors"
+        ],
+        "passive_subjects": [
+          "protagonist"
+        ],
+        "spatial_context": "cave_mouth_threshold",
+        "blocking_hint": "sudden halt near cave mouth",
+        "environment_subzone": "cave_mouth_threshold",
+        "continuity_focus": "timing of moan vs reaction",
+        "coverage_hint": "medium/handheld",
+        "coverage_priority": "critical",
+        "handoff_to_next": "BT003"
+      },
+      {
+        "beat_id": "BT003",
+        "summary": "Panic and retreat",
+        "purpose": "",
+        "action_start": "warriors breaking formation to run",
+        "action_end": "one warrior falls from ledge",
+        "active_subjects": [
+          "apache_warriors"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "ledge_overlook/gorge",
+        "blocking_hint": "chaotic scattering away from cave",
+        "environment_subzone": "ledge_overlook",
+        "continuity_focus": "direction of flight",
+        "coverage_hint": "wide/shaky cam",
+        "coverage_priority": "high",
+        "handoff_to_next": "end_scene"
+      }
+    ],
+    "planned_shots": [
+      {
+        "planned_shot_id": "SH001",
+        "beat_id": "BT001",
+        "narrative_function": "establish scale and approach",
+        "planned_shot_moment_summary": "warriors moving through the gorge toward the cave",
+        "primary_subject_seed": "apache_warriors",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "rocky_gorge_canyon_floor",
+        "planned_shot_required_anchor_1": "cave mouth",
+        "planned_shot_scale_proof_detail": "warriors appear small against canyon walls",
+        "start_state_seed": "warriors walking in formation",
+        "end_state_seed": "warriors nearing cave entrance",
+        "action_seed": "approaching the threshold",
+        "blocking_seed": [
+          "group movement toward camera/cave"
+        ],
+        "shot_size": "wide",
+        "camera_angle": "low_angle",
+        "lens_family": "wide",
+        "camera_motion": "track",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "front_three_quarter_right"
+      },
+      {
+        "planned_shot_id": "SH002",
+        "beat_id": "BT002",
+        "narrative_function": "introduce supernatural threat",
+        "planned_shot_moment_summary": "the low moaning sound emanates from the cave",
+        "primary_subject_seed": "apache_warriors",
+        "secondary_subjects_seed": [
+          "protagonist"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "in_scene_speaker",
+        "environment_subzone": "cave_mouth_threshold",
+        "planned_shot_required_anchor_1": "cave mouth",
+        "planned_shot_scale_proof_detail": "sound directionality",
+        "start_state_seed": "warriors pausing mid-step",
+        "end_state_seed": "warriors freezing in terror",
+        "action_seed": "reacting to sound",
+        "blocking_seed": [
+          "sudden halt/stasis"
+        ],
+        "shot_size": "medium_full",
+        "camera_angle": "eye_level",
+        "lens_family": "normal",
+        "camera_motion": "handheld",
+        "zoom_behavior": "subtle_in",
+        "focus_strategy": "rack_focus",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "profile_left"
+      },
+      {
+        "planned_shot_id": "SH003",
+        "beat_id": "BT003",
+        "narrative_function": "demonstrate chaos and consequence",
+        "planned_shot_moment_summary": "warriors flee and one falls to death",
+        "primary_subject_seed": "apache_warriors",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "ledge_overlook",
+        "planned_shot_required_anchor_1": "rocky ledge",
+        "planned_shot_scale_proof_detail": "verticality of the fall",
+        "start_state_seed": "warriors sprinting away",
+        "end_state_seed": "one warrior falling from view",
+        "action_seed": "fleeing and falling",
+        "blocking_seed": [
+          "scattered",
+          "frantic movement"
+        ],
+        "shot_size": "wide",
+        "camera_angle": "high_angle",
+        "lens_family": "ultra_wide",
+        "camera_motion": "handheld",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "rear_three_quarter_left"
+      }
+    ],
+    "unresolved_questions": [],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH002",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH002_chapter_ii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH022",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH022_chapter_xxii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH021",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH002",
+        "canonical_id": "protagonist"
+      }
+    ],
+    "evidence_summary": [
+      "[CH002_SC002] Purpose: To introduce external conflict and demonstrate the supernatural power of the cave's contents.",
+      "[CH002_SC002] Summary: A group of Apache warriors approaches the cave entrance. They find the protagonist but are interrupted by a terrifying, low moaning sound emanating from the depths. The warriors flee in panic; one warrior falls to his death during the...",
+      "[CH002_SC002] Emotional arc: From curiosity/investigation to primal terror and chaos.",
+      "[CH002_SC002] Coverage: Wide shots of the gorge/entrance Handheld/Shaky cam (To emphasize the panic of the warriors) Low angle shots of the warriors' approach",
+      "[CH002_SC002] Continuity: Positioning of the warriors relative to the cave mouth. The timing and direction of the \"moaning\" sound in relation to character reactions.",
+      "[CH002] Chapter summary: **Setting:** A cave in the Arizona mountains; a rocky gorge and canyon under moonlight; the vastness of space. **Characters:** - **The Protagonist:** A man who experiences physical paralysis due to a mysterious gas, u...",
+      "[CH002] CHAPTER II (book index hit)",
+      "[CH022] CHAPTER XXII (book index hit)",
+      "[CH021] CHAPTER XXI (book index hit)",
+      "Character protagonist: An Earthman characterized by extreme physical agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a..."
+    ],
+    "storyboard_markdown": "# Scene Contract: CH002_SC002\n\n## Production Intent\nEstablish the supernatural threat of the cave through a sudden shift from tactical investigation to chaotic flight. The sequence must use sound and character reaction to convey an unseen presence that overwhelms the Apache warriors.\n\n## Required Cast\n- protagonist\n- apache_warriors\n\n## Required Environments\n- rocky_gorge_canyon\n- cave_mouth_threshold\n- ledge_overlook\n\n## Continuity Constraints\n- Distance between apache_warriors and cave mouth\n- Timing of moaning sound relative to character reaction\n- Directional origin of the low moaning sound\n\n## Beat List\n- BT001: Tactical approach to the cave\n- BT002: The supernatural interruption\n- BT003: Panic and retreat",
+    "metadata": {
+      "artifact_id": "CH002_SC002_SCENE_CONTRACT",
+      "artifact_type": "scene_contract",
+      "status": "generated",
+      "source_fingerprint": "e8712dfe1944b695aecf874cfc95a3f2538478e1",
+      "created_at_utc": "2026-04-25T21:29:44.158171+00:00",
+      "updated_at_utc": "2026-04-25T21:29:44.158171+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_breakdown",
+          "dependency_id": "CH002_SC002",
+          "version": "4339794be562f3071af05f450c9258f257642555"
+        },
+        {
+          "dependency_type": "character_resolutions",
+          "dependency_id": "CH002_SC002",
+          "version": "644c80d8900dacb869d6213767ac11f1ccb0a2af"
+        },
+        {
+          "dependency_type": "environment_resolutions",
+          "dependency_id": "CH002_SC002",
+          "version": "1ad70dfb1ee1ca3b2b49b1612f126cd2430c04e9"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-25T21:30:12.015128+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "e8712dfe1944b695aecf874cfc95a3f2538478e1"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH002_SC003",
+    "chapter_id": "CH002",
+    "scene_title": "SC003",
+    "purpose": "To execute the central supernatural twist and reveal the protagonist's transformation.",
+    "summary": "After hours of isolation, the protagonist uses intense mental willpower to break the paralysis. Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, clothed body remains lying lifeless on the cave floor.",
+    "emotional_arc": "From intense mental struggle to profound shock and existential horror.",
+    "production_intent": "Execute the supernatural metamorphosis reveal by transitioning from a struggle against paralysis to the visual discovery of two distinct physical states. The shot must capture the spatial relationship between the standing naked protagonist and his original clothed corpse.",
+    "scene_short_description": "A man struggles against paralysis in a dark cave before standing to find his clothed body lying nearby.",
+    "scene_primary_scale_story_point": "The scale shift from individual physical struggle to the existential horror of dual existence.",
+    "scene_required_anchor_catalog": [
+      "old_body_clothed",
+      "protagonist_naked"
+    ],
+    "scene_start_state": "Protagonist is paralyzed and immobile on the cave floor in deep shadows.",
+    "scene_end_state": "Protagonist stands naked, staring down at his original clothed body.",
+    "dominant_action_line": "Mental willpower breaks paralysis leading to physical standing and metamorphosis discovery.",
+    "scene_spatial_layout": [
+      "Deep shadow environment with rocky textures",
+      "Vertical separation between the lying body and the standing figure"
+    ],
+    "character_spatial_map": [
+      "protagonist (New Self): Standing upright, naked",
+      "protagonist (Old Body): Lying lifeless on cave floor, clothed"
+    ],
+    "environment_subzones": [
+      "arizona_mountain_cave_floor",
+      "arizona_mountain_cave_shadows"
+    ],
+    "entry_vectors": [
+      "Subjects inherit entry logic from the prior scene or chapter transition."
+    ],
+    "exit_vectors": [
+      "Subjects exit or hand off toward the next story beat."
+    ],
+    "beat_transition_map": [
+      "BT001 -> BT002: Physical movement from paralysis to standing",
+      "BT002 -> BT003: Visual realization of the second body"
+    ],
+    "characters_required": [
+      {
+        "label": "The Protagonist (The \"New\" Self)",
+        "canonical_id": "protagonist",
+        "display_name": "protagonist",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
+      }
+    ],
+    "environments_required": [
+      {
+        "label": "Interior Cave (Deep shadows)",
+        "canonical_id": "arizona_mountain_cave",
+        "display_name": "arizona_mountain_cave",
+        "status": "canonical",
+        "entity_kind": "environment",
+        "resolution_score": 68,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/arizona_mountain_cave.md",
+        "notes": "Chapter-local environment alias match for 'Interior Cave (Deep shadows)' (key_overlap=1, label_overlap=2, context_overlap=4)."
+      }
+    ],
+    "continuity_constraints": [
+      "Exact spatial placement of old body relative to new self",
+      "Lighting consistency between the two versions of the character"
+    ],
+    "visual_coverage_families": [
+      "Medium shots of physical struggle/effort",
+      "Reveal shot showing both standing naked figure and lying clothed body in one frame",
+      "Close-ups of face during realization"
+    ],
+    "beat_list": [
+      {
+        "beat_id": "BT001",
+        "summary": "Mental struggle to break paralysis",
+        "purpose": "",
+        "action_start": "lying immobile",
+        "action_end": "breaking paralysis through willpower",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "arizona_mountain_cave_floor",
+        "blocking_hint": "prone on rocky ground",
+        "environment_subzone": "arizona_mountain_cave_floor",
+        "continuity_focus": "placement of limbs in shadows",
+        "coverage_hint": "medium shots of effort",
+        "coverage_priority": "high",
+        "handoff_to_next": "BT002"
+      },
+      {
+        "beat_id": "BT002",
+        "summary": "Physical ascent and metamorphosis reveal",
+        "purpose": "",
+        "action_start": "pushing off floor",
+        "action_end": "standing upright naked",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [
+          "old_body_clothed"
+        ],
+        "spatial_context": "arizona_mountain_cave_floor",
+        "blocking_hint": "rising from the position of the old body",
+        "environment_subzone": "arizona_mountain_cave_floor",
+        "continuity_focus": "spatial distance between standing naked self and lying clothed self",
+        "coverage_hint": "wide reveal shot",
+        "coverage_priority": "critical",
+        "handoff_to_next": "BT003"
+      },
+      {
+        "beat_id": "BT003",
+        "summary": "Existential horror realization",
+        "purpose": "",
+        "action_start": "looking down at floor",
+        "action_end": "staring in shock",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [
+          "old_body_clothed"
+        ],
+        "spatial_context": "arizona_mountain_cave_shadows",
+        "blocking_hint": "standing frozen",
+        "environment_subzone": "arizona_mountain_cave_shadows",
+        "continuity_focus": "lighting on face matches standing state",
+        "coverage_hint": "close-ups of face",
+        "coverage_priority": "high",
+        "handoff_to_next": "end"
+      }
+    ],
+    "planned_shots": [
+      {
+        "planned_shot_id": "SH001",
+        "beat_id": "BT001",
+        "narrative_function": "establish struggle",
+        "planned_shot_moment_summary": "protagonist fighting paralysis",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "arizona_mountain_cave_floor",
+        "planned_shot_required_anchor_1": "old_body_clothed",
+        "planned_shot_scale_proof_detail": "physical effort against ground",
+        "start_state_seed": "lying prone",
+        "end_state_seed": "straining muscles",
+        "action_seed": "intense mental willpower exertion",
+        "blocking_seed": [
+          "prone on floor"
+        ],
+        "shot_size": "medium",
+        "camera_angle": "low_angle",
+        "lens_family": "normal",
+        "camera_motion": "handheld",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "front_three_quarter_left"
+      },
+      {
+        "planned_shot_id": "SH002",
+        "beat_id": "BT002",
+        "narrative_function": "reveal metamorphosis",
+        "planned_shot_moment_summary": "standing naked figure vs lying clothed body",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [
+          "old_body_clothed"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "arizona_mountain_cave_floor",
+        "planned_shot_required_anchor_1": "old_body_clothed",
+        "planned_shot_scale_proof_detail": "verticality of new self vs horizontality of old self",
+        "start_state_seed": "rising from floor",
+        "end_state_seed": "standing upright",
+        "action_seed": "protagonist stands up to reveal nakedness and the corpse",
+        "blocking_seed": [
+          "standing near lying body"
+        ],
+        "shot_size": "wide",
+        "camera_angle": "eye_level",
+        "lens_family": "wide",
+        "camera_motion": "pull_back",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "profile_right"
+      },
+      {
+        "planned_shot_id": "SH003",
+        "beat_id": "BT003",
+        "narrative_function": "convey horror",
+        "planned_shot_moment_summary": "face reaction to discovery",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "arizona_mountain_cave_shadows",
+        "planned_shot_required_anchor_1": "none",
+        "planned_shot_scale_proof_detail": "facial expression of shock",
+        "start_state_seed": "looking down",
+        "end_state_seed": "staring in horror",
+        "action_seed": "realization of transformation",
+        "blocking_seed": [
+          "standing still"
+        ],
+        "shot_size": "close_up",
+        "camera_angle": "eye_level",
+        "lens_family": "portrait",
+        "camera_motion": "locked_off",
+        "zoom_behavior": "subtle_in",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "front"
+      }
+    ],
+    "unresolved_questions": [],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH002",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH020",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH020_chapter_xx.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH009",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH009_chapter_ix.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH016",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH016_chapter_xvi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH002",
+        "canonical_id": "protagonist"
+      }
+    ],
+    "evidence_summary": [
+      "[CH002_SC003] Purpose: To execute the central supernatural twist and reveal the protagonist's transformation.",
+      "[CH002_SC003] Summary: After hours of isolation, the protagonist uses intense mental willpower to break the paralysis. Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, clothed body remains l...",
+      "[CH002_SC003] Emotional arc: From intense mental struggle to profound shock and existential horror.",
+      "[CH002_SC003] Coverage: Medium shots of the physical struggle/effort Reveal shot: A wide or medium shot showing both the standing naked figure and the lying clothed body in one frame. Close-ups of the protagonist's face as he realizes his state.",
+      "[CH002_SC003] Continuity: The exact placement of the \"old\" body relative to where the \"new\" self stands. Lighting consistency between the two versions of the character.",
+      "[CH002] Chapter summary: **Setting:** A cave in the Arizona mountains; a rocky gorge and canyon under moonlight; the vastness of space. **Characters:** - **The Protagonist:** A man who experiences physical paralysis due to a mysterious gas, u...",
+      "[CH020] CHAPTER XX (book index hit)",
+      "[CH009] CHAPTER IX (book index hit)",
+      "[CH016] CHAPTER XVI (book index hit)",
+      "Character protagonist: An Earthman characterized by extreme physical agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a..."
+    ],
+    "storyboard_markdown": "# Scene Contract: CH002_SC003\n\n## Production Intent\nExecute the central supernatural twist and reveal the protagonist's metamorphosis. The scene must visually distinguish between the new naked, standing entity and the original clothed, lifeless body through precise spatial staging and lighting consistency.\n\n## Required Cast\n- protagonist (The \"New\" Self): Naked, agile, experiencing shock.\n- protagonist (The \"Old\" Body): Clothed, lying lifeless on cave floor.\n\n## Required Environments\n- arizona_mountain_cave: Deep shadows, rocky floor, low-key night lighting.\n\n## Continuity Constraints\n- Maintain exact spatial distance between the standing naked figure and the lying clothed body.\n- Ensure lighting consistency across both versions of the character within the same frame.\n\n## Beat List\n- BT001: Intense mental struggle to break paralysis.\n- BT002: Physical ascent revealing the naked metamorphosis and the original corpse.\n- BT003: Realization and existential horror.",
+    "metadata": {
+      "artifact_id": "CH002_SC003_SCENE_CONTRACT",
+      "artifact_type": "scene_contract",
+      "status": "generated",
+      "source_fingerprint": "b0b5ee8e0613d598948c68a0d5de90691bfca8ae",
+      "created_at_utc": "2026-04-25T21:30:12.059154+00:00",
+      "updated_at_utc": "2026-04-25T21:30:12.059154+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_breakdown",
+          "dependency_id": "CH002_SC003",
+          "version": "d186e09aaf166dd975a1d2db74000eb161ebae8d"
+        },
+        {
+          "dependency_type": "character_resolutions",
+          "dependency_id": "CH002_SC003",
+          "version": "b50b648806e7f423d0f2234632e01e5324165e61"
+        },
+        {
+          "dependency_type": "environment_resolutions",
+          "dependency_id": "CH002_SC003",
+          "version": "b10a73b69cfea5d3e15e0d867b0e568b958d49b5"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-25T21:30:40.678458+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "b0b5ee8e0613d598948c68a0d5de90691bfca8ae"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH002_SC004",
+    "chapter_id": "CH002",
+    "scene_title": "SC004",
+    "purpose": "To transition the protagonist from the supernatural interior to the natural exterior.",
+    "summary": "Driven by fear of whatever is in the dark cave, the protagonist flees the cavern and emerges into the Arizona night.",
+    "emotional_arc": "From shock to frantic urgency/flight.",
+    "production_intent": "Execute a high-stakes transition of the protagonist from a dark, supernatural cave interior into a vast, moonlit Arizona mountain landscape. The sequence must emphasize the character's physical vulnerability and frantic flight through extreme lighting shifts.",
+    "scene_short_description": "A naked man flees a dark cavern into the moonlight of a rocky canyon.",
+    "scene_primary_scale_story_point": "Transition from claustrophobic cave interior to vast rocky_gorge_canyon.",
+    "scene_required_anchor_catalog": [
+      "Cave mouth threshold",
+      "Moonlit canyon floor"
+    ],
+    "scene_start_state": "Protagonist in dark, supernatural cave interior experiencing shock.",
+    "scene_end_state": "Protagonist emerging into the wide Arizona night landscape.",
+    "dominant_action_line": "The protagonist flees the darkness of the cave with frantic urgency.",
+    "scene_spatial_layout": [
+      "Interior cave darkness transitioning to exterior moonlight",
+      "Narrow cave exit opening into a vast canyon scale"
+    ],
+    "character_spatial_map": [
+      "Protagonist moving from deep interior toward the light source",
+      "Protagonist traversing the threshold between cave and gorge"
+    ],
+    "environment_subzones": [
+      "Cave Interior (Transitioning)",
+      "rocky_gorge_canyon"
+    ],
+    "entry_vectors": [
+      "Deep cave darkness"
+    ],
+    "exit_vectors": [
+      "Moonlit canyon expanse"
+    ],
+    "beat_transition_map": [
+      "BT001 -> BT002: Movement from dark interior toward the light threshold",
+      "BT002 -> BT003: Emergence from shadow into full moonlight"
+    ],
+    "characters_required": [
+      {
+        "label": "The Protagonist",
+        "canonical_id": "protagonist",
+        "display_name": "protagonist",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
+      }
+    ],
+    "environments_required": [
+      {
+        "label": "Cave Interior (Transitioning)",
+        "canonical_id": null,
+        "display_name": "Cave Interior (Transitioning)",
+        "status": "review",
+        "entity_kind": "environment",
+        "resolution_score": 8,
+        "source_path": "",
+        "notes": "Low-confidence environment match requires review."
+      },
+      {
+        "label": "Arizona Mountain Landscape (Night/Moonlight)",
+        "canonical_id": "rocky_gorge_canyon",
+        "display_name": "rocky_gorge_canyon",
+        "status": "canonical",
+        "entity_kind": "environment",
+        "resolution_score": 44,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/rocky_gorge_canyon.md",
+        "notes": "Chapter-local environment alias match for 'Arizona Mountain Landscape (Night/Moonlight)' (key_overlap=0, label_overlap=2, context_overlap=4)."
+      }
+    ],
+    "continuity_constraints": [
+      "Protagonist nudity and physical state across light levels",
+      "Physical agility and leaping capabilities during flight"
+    ],
+    "visual_coverage_families": [
+      "Tracking shots following movement",
+      "High-contrast lighting (Dark cave vs. Moonlight)",
+      "Wide shots of character emerging into vast landscape"
+    ],
+    "beat_list": [
+      {
+        "beat_id": "BT001",
+        "summary": "Protagonist reacts to supernatural threat in darkness",
+        "purpose": "",
+        "action_start": "protagonist frozen in shock",
+        "action_end": "protagonist begins frantic movement",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "deep cave interior",
+        "blocking_hint": "huddled against cave wall",
+        "environment_subzone": "Cave Interior (Transitioning)",
+        "continuity_focus": "nudity/physical state in shadow",
+        "coverage_hint": "close up/medium tracking",
+        "coverage_priority": "high",
+        "handoff_to_next": "BT002"
+      },
+      {
+        "beat_id": "BT002",
+        "summary": "Flight toward the exit",
+        "purpose": "",
+        "action_start": "running through dark tunnel",
+        "action_end": "reaching the cave mouth",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "transitioning corridor",
+        "blocking_hint": "moving rapidly toward light source",
+        "environment_subzone": "Cave Interior (Transitioning)",
+        "continuity_focus": "light level shift on skin",
+        "coverage_hint": "tracking shot",
+        "coverage_priority": "medium",
+        "handoff_to_next": "BT003"
+      },
+      {
+        "beat_id": "BT003",
+        "summary": "Emergence into the canyon",
+        "purpose": "",
+        "action_start": "bursting into moonlight",
+        "action_end": "running across rocky terrain",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "cave mouth to gorge floor",
+        "blocking_hint": "leaping/running through open space",
+        "environment_subzone": "rocky_gorge_canyon",
+        "continuity_focus": "full exposure in moonlight",
+        "coverage_hint": "wide shot",
+        "coverage_priority": "high",
+        "handoff_to_next": "end_scene"
+      }
+    ],
+    "planned_shots": [
+      {
+        "planned_shot_id": "SH001",
+        "beat_id": "BT001",
+        "narrative_function": "establish fear",
+        "planned_shot_moment_summary": "protagonist recoils in dark cave",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "silhouette",
+        "narration_mode": "none",
+        "environment_subzone": "Cave Interior (Transitioning)",
+        "planned_shot_required_anchor_1": "cave wall",
+        "planned_shot_scale_proof_detail": "tight claustrophobia",
+        "start_state_seed": "darkness",
+        "end_state_seed": "movement toward light",
+        "action_seed": "fleeing",
+        "blocking_seed": [
+          "moving away from unseen threat"
+        ],
+        "shot_size": "medium_close",
+        "camera_angle": "eye_level",
+        "lens_family": "normal",
+        "camera_motion": "handheld",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "profile_left"
+      },
+      {
+        "planned_shot_id": "SH002",
+        "beat_id": "BT002",
+        "narrative_function": "transition light",
+        "planned_shot_moment_summary": "protagonist hits the cave mouth threshold",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "Cave Interior (Transitioning)",
+        "planned_shot_required_anchor_1": "cave mouth",
+        "planned_shot_scale_proof_detail": "extreme light contrast",
+        "start_state_seed": "shadows",
+        "end_state_seed": "bright moonlight",
+        "action_seed": "running through threshold",
+        "blocking_seed": [
+          "bursting through opening"
+        ],
+        "shot_size": "full",
+        "camera_angle": "low_angle",
+        "lens_family": "wide",
+        "camera_motion": "track",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "high_contrast_ceremonial",
+        "primary_subject_angle": "rear_three_quarter_left"
+      },
+      {
+        "planned_shot_id": "SH003",
+        "beat_id": "BT003",
+        "narrative_function": "establish scale",
+        "planned_shot_moment_summary": "protagonist enters the vast canyon",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "rocky_gorge_canyon",
+        "planned_shot_required_anchor_1": "canyon floor",
+        "planned_shot_scale_proof_detail": "vast landscape vs small human",
+        "start_state_seed": "bright light",
+        "end_state_seed": "running into distance",
+        "action_seed": "leaping/running across terrain",
+        "blocking_seed": [
+          "traversing open gorge"
+        ],
+        "shot_size": "wide",
+        "camera_angle": "eye_level",
+        "lens_family": "ultra_wide",
+        "camera_motion": "track",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "back"
+      }
+    ],
+    "unresolved_questions": [
+      "Resolve Cave Interior (Transitioning) -> Cave Interior (Transitioning)"
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH002",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH002_chapter_ii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH027",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH027_chapter_xxvii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH028",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH028_chapter_xxviii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH002",
+        "canonical_id": "protagonist"
+      }
+    ],
+    "evidence_summary": [
+      "[CH002_SC004] Purpose: To transition the protagonist from the supernatural interior to the natural exterior.",
+      "[CH002_SC004] Summary: Driven by fear of whatever is in the dark cave, the protagonist flees the cavern and emerges into the Arizona night.",
+      "[CH002_SC004] Emotional arc: From shock to frantic urgency/flight.",
+      "[CH002_SC004] Coverage: Tracking shots following the protagonist's movement High-contrast lighting (Dark cave vs. Moonlight) Wide shots of the character emerging into the vast landscape",
+      "[CH002_SC004] Continuity: The protagonist's nudity and physical state as he moves through different light levels.",
+      "[CH002] Chapter summary: **Setting:** A cave in the Arizona mountains; a rocky gorge and canyon under moonlight; the vastness of space. **Characters:** - **The Protagonist:** A man who experiences physical paralysis due to a mysterious gas, u...",
+      "[CH002] CHAPTER II (book index hit)",
+      "[CH027] CHAPTER XXVII (book index hit)",
+      "[CH028] CHAPTER XXVIII (book index hit)",
+      "Character protagonist: An Earthman characterized by extreme physical agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a..."
+    ],
+    "storyboard_markdown": "# Scene Contract: CH002_SC004\n\n## Production Intent\nExecute a high-stakes transition of the protagonist from a dark, supernatural cave interior into a vast, moonlit Arizona mountain landscape. The sequence must emphasize the character's physical vulnerability and frantic flight through extreme lighting shifts.\n\n## Required Cast\n- protagonist (Naked, physically agile)\n\n## Required Environments\n- Cave Interior (Transitioning)\n- rocky_gorge_canyon (Moonlit, vast)\n\n## Continuity Constraints\n- Protagonist nudity and physical state across light levels\n- Physical agility and leaping capabilities during flight\n\n## Beat List\n- BT001: Protagonist reacts to supernatural threat in darkness\n- BT002: Flight toward the exit\n- BT003: Emergence into the canyon",
+    "metadata": {
+      "artifact_id": "CH002_SC004_SCENE_CONTRACT",
+      "artifact_type": "scene_contract",
+      "status": "generated",
+      "source_fingerprint": "c3e912eca4627f6874b94e1f49d72d106244c73c",
+      "created_at_utc": "2026-04-25T21:30:41.372059+00:00",
+      "updated_at_utc": "2026-04-25T21:30:41.372059+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_breakdown",
+          "dependency_id": "CH002_SC004",
+          "version": "d3edbfe9c6448ad1e6eb41e6a06220b2eec4bcab"
+        },
+        {
+          "dependency_type": "character_resolutions",
+          "dependency_id": "CH002_SC004",
+          "version": "da2c6e998d6cc1ad842bf411f90417eae0043732"
+        },
+        {
+          "dependency_type": "environment_resolutions",
+          "dependency_id": "CH002_SC004",
+          "version": "e8071e1eb92e799448ce059ccd722c76381154cb"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-25T21:31:07.635140+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c3e912eca4627f6874b94e1f49d72d106244c73c"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH002_SC005",
+    "chapter_id": "CH002",
+    "scene_title": "SC005",
+    "purpose": "To trigger the protagonist's cosmic displacement and end the chapter on a high-concept cliffhanger.",
+    "summary": "While observing the landscape, the protagonist becomes mesmerized by Mars (the red star). He feels an irresistible pull toward it. As he closes his eyes, he is violently transported through space into darkness and cold.",
+    "emotional_arc": "From mesmerized trance to sudden, overwhelming cosmic displacement.",
+    "production_intent": "Establish a transition from a grounded, terrestrial night landscape to an abstract cosmic displacement. The sequence must move from the stillness of a mesmerized trance into a violent, high-velocity VFX sequence that ends in total darkness and cold.",
+    "scene_short_description": "A man gazes at a bright red star before being violently pulled into the void.",
+    "scene_primary_scale_story_point": "Transition from terrestrial scale (mountain landscape) to infinite cosmic scale (deep space).",
+    "scene_required_anchor_catalog": [
+      "Mars (red star)",
+      "protagonist eyes"
+    ],
+    "scene_start_state": "protagonist standing still in rocky_gorge_canyon under moonlight, staring at the sky.",
+    "scene_end_state": "total darkness and cold within deep_space_void.",
+    "dominant_action_line": "The protagonist is mesmerized by Mars, closes his eyes, and is violently transported through space.",
+    "scene_spatial_layout": [
+      "Grounded rocky terrain under a vast night sky",
+      "Abstract non-linear movement through the void"
+    ],
+    "character_spatial_map": [
+      "protagonist centered in landscape or framed via close-up",
+      "protagonist becomes a kinetic element during displacement"
+    ],
+    "environment_subzones": [
+      "rocky_gorge_canyon",
+      "deep_space_void"
+    ],
+    "entry_vectors": [
+      "skyward gaze"
+    ],
+    "exit_vectors": [
+      "violent cosmic pull into darkness"
+    ],
+    "beat_transition_map": [
+      "BT001 -> BT002: Visual fixation on the red star",
+      "BT002 -> BT003: Closing eyes and sudden kinetic acceleration"
+    ],
+    "characters_required": [
+      {
+        "label": "The Protagonist",
+        "canonical_id": "protagonist",
+        "display_name": "protagonist",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
+      }
+    ],
+    "environments_required": [
+      {
+        "label": "Arizona Mountain Landscape (Night)",
+        "canonical_id": "rocky_gorge_canyon",
+        "display_name": "rocky_gorge_canyon",
+        "status": "canonical",
+        "entity_kind": "environment",
+        "resolution_score": 44,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/rocky_gorge_canyon.md",
+        "notes": "Chapter-local environment alias match for 'Arizona Mountain Landscape (Night)' (key_overlap=0, label_overlap=2, context_overlap=4)."
+      },
+      {
+        "label": "Deep Space / Void",
+        "canonical_id": "deep_space_void",
+        "display_name": "deep_space_void",
+        "status": "canonical",
+        "entity_kind": "environment",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/deep_space_void.md",
+        "notes": "Direct registry match for 'deep_space_void'."
+      }
+    ],
+    "continuity_constraints": [
+      "Visual brightness and position of Mars in the sky",
+      "Seamless transition from rocky_gorge_canyon to deep_space_void"
+    ],
+    "visual_coverage_families": [
+      "Extreme Wide shots of landscape and Mars (red star)",
+      "Close-ups of eyes reflecting the red star",
+      "Abstract VFX sequences with motion blur and light streaks"
+    ],
+    "beat_list": [
+      {
+        "beat_id": "BT001",
+        "summary": "Observation of the landscape and Mars",
+        "purpose": "",
+        "action_start": "protagonist looking at canyon",
+        "action_end": "protagonist mesmerized by red star",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [
+          "Mars"
+        ],
+        "spatial_context": "rocky_gorge_canyon",
+        "blocking_hint": "standing still facing sky",
+        "environment_subzone": "rocky_gorge_canyon",
+        "continuity_focus": "brightness of Mars",
+        "coverage_hint": "extreme wide",
+        "coverage_priority": "high",
+        "handoff_to_next": "BT002"
+      },
+      {
+        "beat_id": "BT002",
+        "summary": "The mesmerized trance and eye closure",
+        "purpose": "",
+        "action_start": "staring at star",
+        "action_end": "eyes shut tight",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "rocky_gorge_canyon",
+        "blocking_hint": "head tilted up",
+        "environment_subzone": "rocky_gorge_canyon",
+        "continuity_focus": "eye reflection of Mars",
+        "coverage_hint": "close-up",
+        "coverage_priority": "medium",
+        "handoff_to_next": "BT003"
+      },
+      {
+        "beat_id": "BT003",
+        "summary": "Violent cosmic displacement",
+        "purpose": "",
+        "action_start": "eyes closed",
+        "action_end": "total darkness and cold",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "deep_space_void",
+        "blocking_hint": "rapid, chaotic movement",
+        "environment_subzone": "deep_space_void",
+        "continuity_focus": "transition from canyon to void",
+        "coverage_hint": "VFX heavy/motion blur",
+        "coverage_priority": "high",
+        "handoff_to_next": "end_of_scene"
+      }
+    ],
+    "planned_shots": [
+      {
+        "planned_shot_id": "SH001",
+        "beat_id": "BT001",
+        "narrative_function": "establish scale",
+        "planned_shot_moment_summary": "protagonist observing the landscape and Mars",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [
+          "Mars"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "rocky_gorge_canyon",
+        "planned_shot_required_anchor_1": "Mars",
+        "planned_shot_scale_proof_detail": "Mars relative to mountain peaks",
+        "start_state_seed": "wide view of canyon",
+        "end_state_seed": "protagonist looking up",
+        "action_seed": "staring at the red star",
+        "blocking_seed": [
+          "standing still"
+        ],
+        "shot_size": "extreme_wide",
+        "camera_angle": "low_angle",
+        "lens_family": "ultra_wide",
+        "camera_motion": "pan",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "back"
+      },
+      {
+        "planned_shot_id": "SH002",
+        "beat_id": "BT002",
+        "narrative_function": "internalize trance",
+        "planned_shot_moment_summary": "close up of eyes reflecting Mars",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "rocky_gorge_canyon",
+        "planned_shot_required_anchor_1": "protagonist eyes",
+        "planned_shot_scale_proof_detail": "reflection of red star in pupil",
+        "start_state_seed": "eyes open",
+        "end_state_seed": "eyes closing",
+        "action_seed": "closing eyes",
+        "blocking_seed": [
+          "stationary head"
+        ],
+        "shot_size": "extreme_close_up",
+        "camera_angle": "eye_level",
+        "lens_family": "portrait",
+        "camera_motion": "locked_off",
+        "zoom_behavior": "subtle_in",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "low_key_night",
+        "primary_subject_angle": "front"
+      },
+      {
+        "planned_shot_id": "SH003",
+        "beat_id": "BT003",
+        "narrative_function": "trigger displacement",
+        "planned_shot_moment_summary": "violent transport through space",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "deep_space_void",
+        "planned_shot_required_anchor_1": "light streaks",
+        "planned_shot_scale_proof_detail": "motion blur vs darkness",
+        "start_state_seed": "blackness of closed eyes",
+        "end_state_seed": "total darkness/cold",
+        "action_seed": "violent movement through void",
+        "blocking_seed": [
+          "uncontrolled kinetic motion"
+        ],
+        "shot_size": "medium_full",
+        "camera_angle": "dutch",
+        "lens_family": "wide",
+        "camera_motion": "track",
+        "zoom_behavior": "strong_in",
+        "focus_strategy": "environment_priority",
+        "lighting_style": "high_contrast_ceremonial",
+        "primary_subject_angle": "front_three_quarter_right"
+      }
+    ],
+    "unresolved_questions": [],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC005"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH002",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH005_chapter_v.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH012_chapter_xii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH002",
+        "canonical_id": "protagonist"
+      }
+    ],
+    "evidence_summary": [
+      "[CH002_SC005] Purpose: To trigger the protagonist's cosmic displacement and end the chapter on a high-concept cliffhanger.",
+      "[CH002_SC005] Summary: While observing the landscape, the protagonist becomes mesmerized by Mars (the red star). He feels an irresistible pull toward it. As he closes his eyes, he is violently transported through space into darkness and cold.",
+      "[CH002_SC005] Emotional arc: From mesmerized trance to sudden, overwhelming cosmic displacement.",
+      "[CH002_SC005] Coverage: Extreme Wide shots of the landscape and the red star Close-ups of the protagonist's eyes reflecting the star Abstract/VFX heavy sequences for the space transport (Motion blur, light streaks)",
+      "[CH002_SC005] Continuity: The visual appearance and brightness of Mars in the sky. The transition from the grounded Arizona environment to the abstract space sequence.",
+      "[CH002] Chapter summary: **Setting:** A cave in the Arizona mountains; a rocky gorge and canyon under moonlight; the vastness of space. **Characters:** - **The Protagonist:** A man who experiences physical paralysis due to a mysterious gas, u...",
+      "[CH015] CHAPTER XV (book index hit)",
+      "[CH005] CHAPTER V (book index hit)",
+      "[CH012] CHAPTER XII (book index hit)",
+      "Character protagonist: An Earthman characterized by extreme physical agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a..."
+    ],
+    "storyboard_markdown": "# Scene Contract: CH002_SC005\n\n## Production Intent\nEstablish a transition from a grounded, terrestrial night landscape to an abstract cosmic displacement. The sequence must move from the stillness of a mesmerized trance into a violent, high-velocity VFX sequence that ends in total darkness and cold.\n\n## Required Cast\n- protagonist\n\n## Required Environments\n- rocky_gorge_canyon\n- deep_space_void\n\n## Continuity Constraints\n- Visual brightness and position of Mars (red star) in the sky\n- Seamless transition from grounded canyon to abstract space sequence\n\n## Beat List\n- BT001: Observation of the landscape and Mars\n- BT002: The mesmerized trance and eye closure\n- BT003: Violent cosmic displacement",
+    "metadata": {
+      "artifact_id": "CH002_SC005_SCENE_CONTRACT",
+      "artifact_type": "scene_contract",
+      "status": "generated",
+      "source_fingerprint": "317d05101580d28388ae0d1574fc0102529cd796",
+      "created_at_utc": "2026-04-25T21:31:07.677171+00:00",
+      "updated_at_utc": "2026-04-25T21:31:07.677171+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_breakdown",
+          "dependency_id": "CH002_SC005",
+          "version": "dd39a149344c3551e0a955a2d2e9387f3a233703"
+        },
+        {
+          "dependency_type": "character_resolutions",
+          "dependency_id": "CH002_SC005",
+          "version": "da2c6e998d6cc1ad842bf411f90417eae0043732"
+        },
+        {
+          "dependency_type": "environment_resolutions",
+          "dependency_id": "CH002_SC005",
+          "version": "d266c9ef8b1908a912f5f4b8ca4592336e57aadd"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-25T21:31:34.703545+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "317d05101580d28388ae0d1574fc0102529cd796"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH003_SC001",
+    "chapter_id": "CH003",
+    "scene_title": "SC001",
+    "purpose": "Establish the protagonist's new physical reality and the alien environment.",
+    "summary": "The protagonist wakes up on Mars, naked and disoriented. He discovers that the low gravity makes normal movement impossible, causing him to leap uncontrollably with every step.",
+    "emotional_arc": "Confusion $\\rightarrow$ Physical Bewilderment/Surprise.",
+    "production_intent": "Establish the protagonist's physical disorientation within a low-gravity Martian environment. The visual narrative must emphasize the contrast between his naked vulnerability and the alien, mossy landscape through exaggerated, uncontrollable leaping movements.",
+    "scene_short_description": "A naked man wakes in a mossy Martian basin and struggles with low gravity.",
+    "scene_primary_scale_story_point": "Protagonist is small relative to the vast circular basin.",
+    "scene_required_anchor_catalog": [
+      "incubator glass roof",
+      "yellowish moss vegetation"
+    ],
+    "scene_start_state": "protagonist lying prone and naked in the moss.",
+    "scene_end_state": "protagonist leaping uncontrollably across the basin floor.",
+    "dominant_action_line": "Protagonist attempts to stand and move, resulting in unintended high-altitude leaps.",
+    "scene_spatial_layout": [
+      "circular basin floor",
+      "low walled enclosure with glass roof"
+    ],
+    "character_spatial_map": [
+      "protagonist centered in mossy subzone",
+      "movement radiates outward from incubator"
+    ],
+    "environment_subzones": [
+      "incubator zone (walled/glass)",
+      "open moss basin"
+    ],
+    "entry_vectors": [
+      "none (protagonist is already present)"
+    ],
+    "exit_vectors": [
+      "leaping toward basin perimeter"
+    ],
+    "beat_transition_map": [
+      "BT001 -> BT002: physical awakening to first movement attempt",
+      "BT002 -> BT003: standing up to uncontrolled leaping"
+    ],
+    "characters_required": [
+      {
+        "label": "The Protagonist",
+        "canonical_id": "protagonist",
+        "display_name": "protagonist",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
+      }
+    ],
+    "environments_required": [
+      {
+        "label": "A circular basin on Mars covered in yellowish",
+        "canonical_id": "circular_moss_basin",
+        "display_name": "circular_moss_basin",
+        "status": "canonical",
+        "entity_kind": "environment",
+        "resolution_score": 112,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH003/circular_moss_basin.md",
+        "notes": "Chapter-local environment alias match for 'A circular basin on Mars covered in yellowish' (key_overlap=2, label_overlap=4, context_overlap=4)."
+      }
+    ],
+    "continuity_constraints": [
+      "Protagonist remains naked throughout",
+      "Leap height and distance must remain consistent for physics logic",
+      "Moss vegetation state underfoot"
+    ],
+    "visual_coverage_families": [
+      "Wide shots of Martian landscape",
+      "Medium shots of clumsy leaping movements",
+      "Close-ups of facial disorientation"
+    ],
+    "beat_list": [
+      {
+        "beat_id": "BT001",
+        "summary": "Awakening and disorientation",
+        "purpose": "",
+        "action_start": "eyes closed, prone in moss",
+        "action_end": "protagonist realizes he is naked and alone",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "near incubator walls",
+        "blocking_hint": "lying still on the ground",
+        "environment_subzone": "incubator zone",
+        "continuity_focus": "nakedness/exposure",
+        "coverage_hint": "close-up facial expressions",
+        "coverage_priority": "high",
+        "handoff_to_next": "BT002"
+      },
+      {
+        "beat_id": "BT002",
+        "summary": "First movement attempt",
+        "purpose": "",
+        "action_start": "protagonist attempts to push up from moss",
+        "action_end": "protagonist is launched into the air",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "transitioning from incubator to basin floor",
+        "blocking_hint": "struggling to find footing",
+        "environment_subzone": "open moss basin",
+        "continuity_focus": "leap height/physics",
+        "coverage_hint": "medium shots of movement",
+        "coverage_priority": "high",
+        "handoff_to_next": "BT003"
+      },
+      {
+        "beat_id": "BT003",
+        "summary": "Uncontrolled leaping cycle",
+        "purpose": "",
+        "action_start": "protagonist mid-air",
+        "action_end": "protagonist continues to leap across the landscape",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "wide basin floor",
+        "blocking_hint": "erratic, high-leaping paths",
+        "environment_subzone": "open moss basin",
+        "continuity_focus": "leap distance/consistency",
+        "coverage_hint": "wide shots of landscape",
+        "coverage_priority": "medium",
+        "handoff_to_next": "end_scene"
+      }
+    ],
+    "planned_shots": [
+      {
+        "planned_shot_id": "SH001",
+        "beat_id": "BT001",
+        "narrative_function": "establish_state",
+        "planned_shot_moment_summary": "protagonist wakes up naked in moss",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "incubator zone",
+        "planned_shot_required_anchor_1": "incubator glass roof",
+        "planned_shot_scale_proof_detail": "protagonist size vs wall height",
+        "start_state_seed": "eyes closed, prone",
+        "end_state_seed": "eyes open, staring",
+        "action_seed": "waking up",
+        "blocking_seed": [
+          "lying on moss near incubator walls"
+        ],
+        "shot_size": "close_up",
+        "camera_angle": "eye_level",
+        "lens_family": "normal",
+        "camera_motion": "none",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "front"
+      },
+      {
+        "planned_shot_id": "SH002",
+        "beat_id": "BT002",
+        "narrative_function": "introduce_physics",
+        "planned_shot_moment_summary": "protagonist attempts to stand and leaps too high",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "open moss basin",
+        "planned_shot_required_anchor_1": "yellowish moss vegetation",
+        "planned_shot_scale_proof_detail": "leap height vs vegetation texture",
+        "start_state_seed": "kneeling",
+        "end_state_seed": "mid-air",
+        "action_seed": "uncontrolled leap",
+        "blocking_seed": [
+          "moving away from incubator"
+        ],
+        "shot_size": "medium_full",
+        "camera_angle": "low_angle",
+        "lens_family": "wide",
+        "camera_motion": "track",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "profile_left"
+      },
+      {
+        "planned_shot_id": "SH003",
+        "beat_id": "BT003",
+        "narrative_function": "establish_scale",
+        "planned_shot_moment_summary": "protagonist leaping through the vast basin",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "open moss basin",
+        "planned_shot_required_anchor_1": "circular basin perimeter",
+        "planned_shot_scale_proof_detail": "subject size vs basin diameter",
+        "start_state_seed": "mid-leap",
+        "end_state_seed": "landing/rebounding",
+        "action_seed": "clumsy leaping",
+        "blocking_seed": [
+          "traversing the basin floor"
+        ],
+        "shot_size": "wide",
+        "camera_angle": "eye_level",
+        "lens_family": "ultra_wide",
+        "camera_motion": "pan",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "rear_three_quarter_left"
+      }
+    ],
+    "unresolved_questions": [],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC001"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH003",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH003_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH003",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH003_chapter_iii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH007",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH007_chapter_vii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH003",
+        "canonical_id": "protagonist"
+      }
+    ],
+    "evidence_summary": [
+      "[CH003_SC001] Purpose: Establish the protagonist's new physical reality and the alien environment.",
+      "[CH003_SC001] Summary: The protagonist wakes up on Mars, naked and disoriented. He discovers that the low gravity makes normal movement impossible, causing him to leap uncontrollably with every step.",
+      "[CH003_SC001] Emotional arc: Confusion $\\rightarrow$ Physical Bewilderment/Surprise.",
+      "[CH003_SC001] Coverage: Wide shots of the Martian landscape. Medium shots of the protagonist's clumsy, leaping movements. Close-ups of his facial expressions (disorientation).",
+      "[CH003_SC001] Continuity: The height and distance of the leaps; the protagonist's physical state (nakedness/exposure).",
+      "[CH003] Chapter summary: **Setting:** A circular basin on Mars covered in yellowish, moss-like vegetation, featuring a low walled enclosure with a glass roof (an incubator). **Events:** - The protagonist wakes up on Mars and discovers the eff...",
+      "[CH010] CHAPTER X (book index hit)",
+      "[CH003] CHAPTER III (book index hit)",
+      "[CH007] CHAPTER VII (book index hit)",
+      "Character protagonist: An Earthman characterized by extreme physical agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a..."
+    ],
+    "storyboard_markdown": "# Scene Contract: CH003_SC001\n\n## Production Intent\nEstablish the protagonist's physical disorientation within a low-gravity Martian environment. The visual narrative must emphasize the contrast between his naked vulnerability and the alien, mossy landscape through exaggerated, uncontrollable leaping movements.\n\n## Required Cast\n- protagonist (naked, agile/high-leaping capability)\n\n## Required Environments\n- circular_moss_basin (yellowish moss, low walled enclosure, glass roof incubator)\n\n## Continuity Constraints\n- Protagonist must remain naked throughout the scene.\n- Leap height and distance must be consistent to maintain gravity logic.\n- Moss vegetation must react to landings/impacts.\n\n## Beat List\n- BT001: Awakening and disorientation (Close-up focus on facial confusion).\n- BT002: First movement attempt (Medium shot of the first accidental high leap).\n- BT003: Uncontrolled leaping cycle (Wide shots showing scale and erratic movement).",
+    "metadata": {
+      "artifact_id": "CH003_SC001_SCENE_CONTRACT",
+      "artifact_type": "scene_contract",
+      "status": "generated",
+      "source_fingerprint": "0af2658a4d1482de5c5b15f76e8242ea9352ab7d",
+      "created_at_utc": "2026-04-25T21:31:34.747816+00:00",
+      "updated_at_utc": "2026-04-25T21:31:34.747816+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_breakdown",
+          "dependency_id": "CH003_SC001",
+          "version": "836260c85f7a89a5b403b34bdd02ae4a6bf2dfaf"
+        },
+        {
+          "dependency_type": "character_resolutions",
+          "dependency_id": "CH003_SC001",
+          "version": "c2653569edb1dce1bd702a1864a72a1f95057579"
+        },
+        {
+          "dependency_type": "environment_resolutions",
+          "dependency_id": "CH003_SC001",
+          "version": "ee103e8b3a779daf5a1db8303b5d687025b824f6"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-25T21:32:01.945141+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "0af2658a4d1482de5c5b15f76e8242ea9352ab7d"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH003_SC002",
+    "chapter_id": "CH003",
+    "scene_title": "SC002",
+    "purpose": "Introduce the biological horror/wonder of Martian life.",
+    "summary": "The protagonist explores a nearby glass-roofed enclosure (an incubator) and finds large white eggs alongside grotesque, multi-limbed young Martians that have already hatched.",
+    "emotional_arc": "Curiosity $\\rightarrow$ Horror/Awe.",
+    "production_intent": "Establish the biological reality of Martian life through a transition from scientific curiosity to visceral horror. The visual language must contrast the sterile, glass-enclosed incubator with the grotesque, multi-limbed movement of the hatchlings and the large white eggs.",
+    "scene_short_description": "A man investigates a glass-roofed incubator containing large white eggs and multi-limbed creatures.",
+    "scene_primary_scale_story_point": "Small hatchlings vs large white eggs within a circular basin.",
+    "scene_required_anchor_catalog": [
+      "glass_roof",
+      "large_white_eggs"
+    ],
+    "scene_start_state": "protagonist approaches the circular_moss_basin with curiosity.",
+    "scene_end_state": "protagonist recoils in horror/awe from the hatchlings.",
+    "dominant_action_line": "Exploration of the incubator leading to the discovery of active, grotesque life.",
+    "scene_spatial_layout": [
+      "Circular basin containing yellowish moss-like vegetation",
+      "Low walled enclosure with a glass roof"
+    ],
+    "character_spatial_map": [
+      "protagonist stands at the perimeter of the circular_moss_basin",
+      "hatchlings move within the interior of the enclosure"
+    ],
+    "environment_subzones": [
+      "incubator_interior",
+      "basin_perimeter"
+    ],
+    "entry_vectors": [
+      "approach from mossy terrain"
+    ],
+    "exit_vectors": [
+      "retreat from glass enclosure"
+    ],
+    "beat_transition_map": [
+      "BT001 -> BT002: discovery of eggs",
+      "BT002 -> BT003: movement of hatchlings"
+    ],
+    "characters_required": [
+      {
+        "label": "The Protagonist",
+        "canonical_id": "protagonist",
+        "display_name": "protagonist",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
+      }
+    ],
+    "environments_required": [
+      {
+        "label": "The glass-roofed incubator enclosure",
+        "canonical_id": "circular_moss_basin",
+        "display_name": "circular_moss_basin",
+        "status": "canonical",
+        "entity_kind": "environment",
+        "resolution_score": 64,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH003/circular_moss_basin.md",
+        "notes": "Chapter-local environment alias match for 'The glass-roofed incubator enclosure' (key_overlap=0, label_overlap=4, context_overlap=4)."
+      }
+    ],
+    "continuity_constraints": [
+      "Hatchling movement patterns (multi-limbed coordination)",
+      "Light refraction and shadows through the glass roof"
+    ],
+    "visual_coverage_families": [
+      "Macro shots of eggs and multi-limbed hatchlings",
+      "POV through glass enclosure",
+      "Medium reaction shots of protagonist"
+    ],
+    "beat_list": [
+      {
+        "beat_id": "BT001",
+        "summary": "protagonist approaches the incubator",
+        "purpose": "",
+        "action_start": "walking through mossy terrain",
+        "action_end": "stopping at the glass wall",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "basin_perimeter",
+        "blocking_hint": "approaching the low wall",
+        "environment_subzone": "basin_perimeter",
+        "continuity_focus": "lighting through glass roof",
+        "coverage_hint": "medium_full shot",
+        "coverage_priority": "low",
+        "handoff_to_next": "BT002"
+      },
+      {
+        "beat_id": "BT002",
+        "summary": "discovery of eggs",
+        "purpose": "",
+        "action_start": "looking down through glass",
+        "action_end": "focusing on white objects",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [
+          "large_white_eggs"
+        ],
+        "spatial_context": "incubator_interior",
+        "blocking_hint": "leaning over the enclosure",
+        "environment_subzone": "incubator_interior",
+        "continuity_focus": "egg placement in moss",
+        "coverage_hint": "macro/POV",
+        "coverage_priority": "medium",
+        "handoff_to_next": "BT003"
+      },
+      {
+        "beat_id": "BT003",
+        "summary": "hatchlings emerge and move",
+        "purpose": "",
+        "action_start": "eggs or surroundings twitching",
+        "action_end": "protagonist recoiling",
+        "active_subjects": [
+          "multi_limbed_hatchlings"
+        ],
+        "passive_subjects": [
+          "protagonist"
+        ],
+        "spatial_context": "incubator_interior",
+        "blocking_hint": "creatures scurrying near eggs",
+        "environment_subzone": "incubator_interior",
+        "continuity_focus": "movement patterns of limbs",
+        "coverage_hint": "macro/reaction",
+        "coverage_priority": "high",
+        "handoff_to_next": "none"
+      }
+    ],
+    "planned_shots": [
+      {
+        "planned_shot_id": "SH001",
+        "beat_id": "BT001",
+        "narrative_function": "establish_setting",
+        "planned_shot_moment_summary": "protagonist approaches the glass enclosure",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [
+          "circular_moss_basin"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "basin_perimeter",
+        "planned_shot_required_anchor_1": "glass_roof",
+        "planned_shot_scale_proof_detail": "enclosure height relative to protagonist",
+        "start_state_seed": "protagonist walking towards basin",
+        "end_state_seed": "protagonist stops at glass",
+        "action_seed": "approaching enclosure",
+        "blocking_seed": [
+          "walking toward center of frame"
+        ],
+        "shot_size": "medium_full",
+        "camera_angle": "eye_level",
+        "lens_family": "wide",
+        "camera_motion": "track",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "profile_left"
+      },
+      {
+        "planned_shot_id": "SH002",
+        "beat_id": "BT002",
+        "narrative_function": "reveal_subject",
+        "planned_shot_moment_summary": "macro view of large white eggs",
+        "primary_subject_seed": "large_white_eggs",
+        "secondary_subjects_seed": [
+          "yellowish_moss"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "incubator_interior",
+        "planned_shot_required_anchor_1": "large_white_eggs",
+        "planned_shot_scale_proof_detail": "egg size relative to moss texture",
+        "start_state_seed": "static macro shot",
+        "end_state_seed": "protagonist's shadow falls over eggs",
+        "action_seed": "eggs resting in moss",
+        "blocking_seed": [
+          "stationary"
+        ],
+        "shot_size": "extreme_close_up",
+        "camera_angle": "low_angle",
+        "lens_family": "telephoto",
+        "camera_motion": "locked_off",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "front"
+      },
+      {
+        "planned_shot_id": "SH003",
+        "beat_id": "BT003",
+        "narrative_function": "climax_horror",
+        "planned_shot_moment_summary": "hatchlings move aggressively",
+        "primary_subject_seed": "multi_limbed_hatchlings",
+        "secondary_subjects_seed": [
+          "protagonist"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "incubator_interior",
+        "planned_shot_required_anchor_1": "large_white_eggs",
+        "planned_shot_scale_proof_detail": "limb count and movement speed",
+        "start_state_seed": "hatchlings twitching",
+        "end_state_seed": "protagonist recoiling",
+        "action_seed": "grotesque multi-limbed crawling",
+        "blocking_seed": [
+          "scurrying around eggs"
+        ],
+        "shot_size": "close_up",
+        "camera_angle": "low_angle",
+        "lens_family": "normal",
+        "camera_motion": "handheld",
+        "zoom_behavior": "none",
+        "focus_strategy": "rack_focus",
+        "lighting_style": "high_contrast_ceremonial",
+        "primary_subject_angle": "front_three_quarter_right"
+      }
+    ],
+    "unresolved_questions": [],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH003",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH003_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH003",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH003_chapter_iii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH007",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH007_chapter_vii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH014",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH014_chapter_xiv.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH003",
+        "canonical_id": "protagonist"
+      }
+    ],
+    "evidence_summary": [
+      "[CH003_SC002] Purpose: Introduce the biological horror/wonder of Martian life.",
+      "[CH003_SC002] Summary: The protagonist explores a nearby glass-roofed enclosure (an incubator) and finds large white eggs alongside grotesque, multi-limbed young Martians that have already hatched.",
+      "[CH003_SC002] Emotional arc: Curiosity $\\rightarrow$ Horror/Awe.",
+      "[CH003_SC002] Coverage: Macro shots of the eggs and the multi-limbed hatchlings. POV shots from the protagonist looking through the glass. Medium shots of his reaction to the grotesque creatures.",
+      "[CH003_SC002] Continuity: The movement patterns of the hatchlings; lighting through the glass roof.",
+      "[CH003] Chapter summary: **Setting:** A circular basin on Mars covered in yellowish, moss-like vegetation, featuring a low walled enclosure with a glass roof (an incubator). **Events:** - The protagonist wakes up on Mars and discovers the eff...",
+      "[CH003] CHAPTER III (book index hit)",
+      "[CH007] CHAPTER VII (book index hit)",
+      "[CH014] CHAPTER XIV (book index hit)",
+      "Character protagonist: An Earthman characterized by extreme physical agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a..."
+    ],
+    "storyboard_markdown": "# Scene Contract: CH003_SC002\n\n## Production Intent\nEstablish the biological reality of Martian life through a transition from scientific curiosity to visceral horror. The visual language must contrast the sterile, glass-enclosed incubator with the grotesque, multi-limbed movement of the hatchlings and the large white eggs.\n\n## Required Cast\n- protagonist (Earthman, agile)\n\n## Required Environments\n- circular_moss_basin (yellowish moss, low walled enclosure, glass roof)\n\n## Continuity Constraints\n- Hatchling limb coordination/movement patterns\n- Light refraction through the glass roof onto the interior moss\n\n## Beat List\n- BT001: protagonist approaches the incubator\n- BT002: discovery of eggs\n- BT003: hatchlings emerge and move",
+    "metadata": {
+      "artifact_id": "CH003_SC002_SCENE_CONTRACT",
+      "artifact_type": "scene_contract",
+      "status": "generated",
+      "source_fingerprint": "f648205dd08b804e6273487c1e77c16cc4ea97d9",
+      "created_at_utc": "2026-04-25T21:32:01.982244+00:00",
+      "updated_at_utc": "2026-04-25T21:32:01.982244+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_breakdown",
+          "dependency_id": "CH003_SC002",
+          "version": "9f99cd130e040717a80a33cbae1c8c805cb72e05"
+        },
+        {
+          "dependency_type": "character_resolutions",
+          "dependency_id": "CH003_SC002",
+          "version": "c2653569edb1dce1bd702a1864a72a1f95057579"
+        },
+        {
+          "dependency_type": "environment_resolutions",
+          "dependency_id": "CH003_SC002",
+          "version": "93679133427eb27ce5b622a902c1b5726a5e2f8a"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-25T21:32:29.267579+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "f648205dd08b804e6273487c1e77c16cc4ea97d9"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH003_SC003",
+    "chapter_id": "CH003",
+    "scene_title": "SC003",
+    "purpose": "Introduce the primary antagonist force and create immediate life-threatening tension.",
+    "summary": "The protagonist hears the rattle of equipment and realizes a party of twenty mounted Martian warriors is approaching. He narrowly avoids being killed by the leader's spear as they pass near his hiding spot.",
+    "emotional_arc": "Curiosity $\\rightarrow$ Terror/Panic.",
+    "production_intent": "Establish the scale and lethality of the martian warrior cavalry through high-tension proximity. The sequence must transition from auditory curiosity to visceral terror as a spear tip narrowly misses the protagonist's hiding position within the vegetation.",
+    "scene_short_description": "A lone figure hides in yellowish moss as a cavalry of twenty warriors thunders past.",
+    "scene_primary_scale_story_point": "Twenty mounted warriors vs one hiding protagonist.",
+    "scene_required_anchor_catalog": [
+      "incubator glass roof",
+      "yellowish moss vegetation"
+    ],
+    "scene_start_state": "Protagonist hears rhythmic rattling of equipment in the distance.",
+    "scene_end_state": "Protagonist remains frozen in terror as the cavalry passes.",
+    "dominant_action_line": "A mounted party of twenty warriors thunders through the basin, nearly impaling the protagonist with a spear.",
+    "scene_spatial_layout": [
+      "Circular basin topography",
+      "Vegetation clusters providing concealment near the incubator"
+    ],
+    "character_spatial_map": [
+      "protagonist: crouched/hidden within yellowish moss",
+      "martian_warriors: moving in a large group through the basin center"
+    ],
+    "environment_subzones": [
+      "circular_moss_basin",
+      "incubator enclosure"
+    ],
+    "entry_vectors": [
+      "basin perimeter (martian_warriors)"
+    ],
+    "exit_vectors": [
+      "basin perimeter (martian_warriors)"
+    ],
+    "beat_transition_map": [
+      "BT001 -> BT002: auditory realization to visual sighting",
+      "BT002 -> BT003: approach to near-miss impact"
+    ],
+    "characters_required": [
+      {
+        "label": "The Protagonist",
+        "canonical_id": "protagonist",
+        "display_name": "protagonist",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
+      },
+      {
+        "label": "Martian Warriors (Cavalcade)",
+        "canonical_id": "martian_warriors",
+        "display_name": "martian_warriors",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/martian_warriors.md",
+        "notes": "Direct registry match for 'martian_warriors'."
+      }
+    ],
+    "environments_required": [
+      {
+        "label": "The basin/vegetation area near the incubator",
+        "canonical_id": "circular_moss_basin",
+        "display_name": "circular_moss_basin",
+        "status": "canonical",
+        "entity_kind": "environment",
+        "resolution_score": 78,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH003/circular_moss_basin.md",
+        "notes": "Chapter-local environment alias match for 'The basin/vegetation area near the incubator' (key_overlap=1, label_overlap=3, context_overlap=4)."
+      }
+    ],
+    "continuity_constraints": [
+      "Rhythmic speed and cadence of the twenty mounted warriors",
+      "Physical distance between spear tip and protagonist during pass-by"
+    ],
+    "visual_coverage_families": [
+      "Low-angle shots of approaching mounts for scale",
+      "Close-ups of spear tip proximity to protagonist",
+      "Rapid cutting between warriors and hiding position"
+    ],
+    "beat_list": [
+      {
+        "beat_id": "BT001",
+        "summary": "Protagonist hears rattling equipment",
+        "purpose": "",
+        "action_start": "protagonist is still",
+        "action_end": "protagonist is alert",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "circular_moss_basin",
+        "blocking_hint": "hiding in moss near incubator",
+        "environment_subzone": "circular_moss_basin",
+        "continuity_focus": "sound rhythm",
+        "coverage_hint": "close-up on protagonist reaction",
+        "coverage_priority": "high",
+        "handoff_to_next": "BT002"
+      },
+      {
+        "beat_id": "BT002",
+        "summary": "Realization of approaching warriors",
+        "purpose": "",
+        "action_start": "protagonist hears sound",
+        "action_end": "warriors visible in distance",
+        "active_subjects": [
+          "martian_warriors"
+        ],
+        "passive_subjects": [
+          "protagonist"
+        ],
+        "spatial_context": "basin center",
+        "blocking_hint": "cavalcade moving through vegetation",
+        "environment_subzone": "circular_moss_basin",
+        "continuity_focus": "count of twenty warriors",
+        "coverage_hint": "low-angle wide shots",
+        "coverage_priority": "medium",
+        "handoff_to_next": "BT003"
+      },
+      {
+        "beat_id": "BT003",
+        "summary": "The near-miss spear strike",
+        "purpose": "",
+        "action_start": "warriors pass hiding spot",
+        "action_end": "warriors move out of range",
+        "active_subjects": [
+          "martian_warriors"
+        ],
+        "passive_subjects": [
+          "protagonist"
+        ],
+        "spatial_context": "immediate proximity to protagonist",
+        "blocking_hint": "spear thrusting through moss/vegetation",
+        "environment_subzone": "circular_moss_basin",
+        "continuity_focus": "proximity of spear tip",
+        "coverage_hint": "extreme close-up on spear and face",
+        "coverage_priority": "critical",
+        "handoff_to_next": "end_scene"
+      }
+    ],
+    "planned_shots": [
+      {
+        "planned_shot_id": "SH001",
+        "beat_id": "BT001",
+        "narrative_function": "establish tension",
+        "planned_shot_moment_summary": "protagonist hears equipment rattle",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "partial",
+        "narration_mode": "none",
+        "environment_subzone": "circular_moss_basin",
+        "planned_shot_required_anchor_1": "yellowish moss vegetation",
+        "planned_shot_scale_proof_detail": "protagonist's reaction to sound",
+        "start_state_seed": "protagonist listening",
+        "end_state_seed": "protagonist looking up",
+        "action_seed": "head turn toward sound",
+        "blocking_seed": [
+          "crouched in moss"
+        ],
+        "shot_size": "medium_close",
+        "camera_angle": "eye_level",
+        "lens_family": "normal",
+        "camera_motion": "handheld",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "profile_left"
+      },
+      {
+        "planned_shot_id": "SH002",
+        "beat_id": "BT002",
+        "narrative_function": "establish scale",
+        "planned_shot_moment_summary": "cavalcade enters view",
+        "primary_subject_seed": "martian_warriors",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "circular_moss_basin",
+        "planned_shot_required_anchor_1": "incubator glass roof",
+        "planned_shot_scale_proof_detail": "low angle vs mount height",
+        "start_state_seed": "distant movement",
+        "end_state_seed": "approaching mass",
+        "action_seed": "mounted warriors riding through basin",
+        "blocking_seed": [
+          "moving across frame"
+        ],
+        "shot_size": "wide",
+        "camera_angle": "low_angle",
+        "lens_family": "ultra_wide",
+        "camera_motion": "track",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "front_three_quarter_right"
+      },
+      {
+        "planned_shot_id": "SH003",
+        "beat_id": "BT003",
+        "narrative_function": "climax tension",
+        "planned_shot_moment_summary": "spear tip passes protagonist",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [
+          "martian_warriors"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "circular_moss_basin",
+        "planned_shot_required_anchor_1": "yellowish moss vegetation",
+        "planned_shot_scale_proof_detail": "inches from skin",
+        "start_state_seed": "spear thrusting near head",
+        "end_state_seed": "spear passing by",
+        "action_seed": "spear tip narrowly misses protagonist's face",
+        "blocking_seed": [
+          "protagonist flinching in moss"
+        ],
+        "shot_size": "extreme_close_up",
+        "camera_angle": "low_angle",
+        "lens_family": "portrait",
+        "camera_motion": "handheld",
+        "zoom_behavior": "none",
+        "focus_strategy": "rack_focus",
+        "lighting_style": "high_contrast_ceremonial",
+        "primary_subject_angle": "front"
+      }
+    ],
+    "unresolved_questions": [],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH003",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH003_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH003",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH003_chapter_iii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH004",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH004_chapter_iv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH021",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH003",
+        "canonical_id": "protagonist"
+      }
+    ],
+    "evidence_summary": [
+      "[CH003_SC003] Purpose: Introduce the primary antagonist force and create immediate life-threatening tension.",
+      "[CH003_SC003] Summary: The protagonist hears the rattle of equipment and realizes a party of twenty mounted Martian warriors is approaching. He narrowly avoids being killed by the leader's spear as they pass near his hiding spot.",
+      "[CH003_SC003] Emotional arc: Curiosity $\\rightarrow$ Terror/Panic.",
+      "[CH003_SC003] Coverage: Low-angle shots of the approaching mounts to emphasize scale. Close-ups of the spear tip narrowly missing the protagonist. Rapid cutting between the warriors and the protagonist's hiding position.",
+      "[CH003_SC003] Continuity: The speed/rhythm of the mounted warriors; the proximity of the spear to the protagonist.",
+      "[CH003] Chapter summary: **Setting:** A circular basin on Mars covered in yellowish, moss-like vegetation, featuring a low walled enclosure with a glass roof (an incubator). **Events:** - The protagonist wakes up on Mars and discovers the eff...",
+      "[CH003] CHAPTER III (book index hit)",
+      "[CH004] CHAPTER IV (book index hit)",
+      "[CH021] CHAPTER XXI (book index hit)",
+      "Character protagonist: An Earthman characterized by extreme physical agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a..."
+    ],
+    "storyboard_markdown": "# Scene Contract: CH003_SC003\n\n## Production Intent\nEstablish the scale and lethality of the martian warrior cavalry through high-tension proximity. The sequence must transition from auditory curiosity to visceral terror as a spear tip narrowly misses the protagonist's hiding position within the vegetation.\n\n## Required Cast\n- protagonist (Earthman, agile)\n- martian_warriors (Cavalcade of twenty mounted warriors)\n\n## Required Environments\n- circular_moss_basin (Yellowish moss, incubator with glass roof)\n\n## Continuity Constraints\n- Rhythmic speed and cadence of the twenty mounted warriors\n- Physical distance between spear tip and protagonist during pass-by\n\n## Beat List\n- BT001: Protagonist hears rattling equipment\n- BT002: Realization of approaching warriors\n- BT003: The near-miss spear strike",
+    "metadata": {
+      "artifact_id": "CH003_SC003_SCENE_CONTRACT",
+      "artifact_type": "scene_contract",
+      "status": "generated",
+      "source_fingerprint": "443b12e0a7dac5867f6f9bad86499de09673fe3b",
+      "created_at_utc": "2026-04-25T21:32:29.317663+00:00",
+      "updated_at_utc": "2026-04-25T21:32:29.317663+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_breakdown",
+          "dependency_id": "CH003_SC003",
+          "version": "452c051a3e7e98c88607793efa69d185daf2ff4a"
+        },
+        {
+          "dependency_type": "character_resolutions",
+          "dependency_id": "CH003_SC003",
+          "version": "bf476699f69b2104147dfa5ff190887d4dba10e9"
+        },
+        {
+          "dependency_type": "environment_resolutions",
+          "dependency_id": "CH003_SC003",
+          "version": "cfafb0bd7fe453012c06aaf1bdd793f06c3776f9"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-25T21:32:57.010395+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "443b12e0a7dac5867f6f9bad86499de09673fe3b"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH003_SC004",
+    "chapter_id": "CH003",
+    "scene_title": "SC004",
+    "purpose": "Demonstrate the protagonist's unique advantage and change the power dynamic.",
+    "summary": "To escape, the protagonist performs a massive thirty-foot leap, landing on the far side of the enclosure. The Martians witness this feat, shifting their view of him from prey to a \"wonderful discovery.\"",
+    "emotional_arc": "Desperation $\\rightarrow$ Triumph $\\rightarrow$ Observation (Martian side).",
+    "production_intent": "Execute a high-impact physical feat to pivot the narrative from pursuit to discovery. The sequence requires precise coordination of a thirty-foot leap across a circular basin, utilizing slow-motion and wide tracking to emphasize gravity-defying agility against the scale of the Martian environment.",
+    "scene_short_description": "A naked figure performs a massive thirty-foot leap across a yellowish mossy basin.",
+    "scene_primary_scale_story_point": "Protagonist's jump distance vs. the diameter of the circular_moss_basin enclosure.",
+    "scene_required_anchor_catalog": [
+      "glass roof incubator edge",
+      "far side perimeter wall"
+    ],
+    "scene_start_state": "protagonist is cornered/desperate within the yellowish moss vegetation.",
+    "scene_end_state": "martian_warriors observe the protagonist from a distance with interest.",
+    "dominant_action_line": "A massive leap across the enclosure to escape capture.",
+    "scene_spatial_layout": [
+      "circular basin containing yellowish moss-like vegetation",
+      "low walled enclosure under a glass roof"
+    ],
+    "character_spatial_map": [
+      "protagonist starts at center/inner edge of circular_moss_basin",
+      "martian_warriors positioned at the perimeter/observation zone"
+    ],
+    "environment_subzones": [
+      "inner_moss_zone",
+      "far_perimeter_wall",
+      "observation_rim"
+    ],
+    "entry_vectors": [
+      "protagonist leap from inner_moss_zone to far_perimeter_wall"
+    ],
+    "exit_vectors": [
+      "protagonist landing on far side of enclosure"
+    ],
+    "beat_transition_map": [
+      "BT001 -> BT002: Physical launch and mid-air suspension",
+      "BT002 -> BT003: Impact/landing and Martian reaction"
+    ],
+    "characters_required": [
+      {
+        "label": "The Protagonist",
+        "canonical_id": "protagonist",
+        "display_name": "protagonist",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
+      },
+      {
+        "label": "Martian Warriors",
+        "canonical_id": "martian_warriors",
+        "display_name": "martian_warriors",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/martian_warriors.md",
+        "notes": "Direct registry match for 'martian_warriors'."
+      }
+    ],
+    "environments_required": [
+      {
+        "label": "The basin/enclosure area",
+        "canonical_id": "circular_moss_basin",
+        "display_name": "circular_moss_basin",
+        "status": "canonical",
+        "entity_kind": "environment",
+        "resolution_score": 68,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH003/circular_moss_basin.md",
+        "notes": "Chapter-local environment alias match for 'The basin/enclosure area' (key_overlap=1, label_overlap=2, context_overlap=4)."
+      }
+    ],
+    "continuity_constraints": [
+      "Leap trajectory and landing point relative to circular_moss_basin perimeter",
+      "Visual scale relationship between protagonist and martian_warriors"
+    ],
+    "visual_coverage_families": [
+      "Slow-motion or wide tracking shots of the massive leap",
+      "Reaction shots from martian_warriors",
+      "Wide shots showing distance covered by jump"
+    ],
+    "beat_list": [
+      {
+        "beat_id": "BT001",
+        "summary": "Protagonist prepares for escape",
+        "purpose": "",
+        "action_start": "crouched in desperation",
+        "action_end": "explosive leap launch",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [
+          "martian_warriors"
+        ],
+        "spatial_context": "inner_moss_zone",
+        "blocking_hint": "protagonist centered in basin",
+        "environment_subzone": "inner_moss_zone",
+        "continuity_focus": "launch point position",
+        "coverage_hint": "full shot/low angle",
+        "coverage_priority": "high",
+        "handoff_to_next": "BT002"
+      },
+      {
+        "beat_id": "BT002",
+        "summary": "The massive leap",
+        "purpose": "",
+        "action_start": "leaving ground",
+        "action_end": "approaching far wall",
+        "active_subjects": [
+          "protagonist"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "traversing the basin diameter",
+        "blocking_hint": "arc through air",
+        "environment_subzone": "inner_moss_zone",
+        "continuity_focus": "trajectory and 30ft distance",
+        "coverage_hint": "slow-motion wide tracking",
+        "coverage_priority": "critical",
+        "handoff_to_next": "BT003"
+      },
+      {
+        "beat_id": "BT003",
+        "summary": "Martian observation",
+        "purpose": "",
+        "action_start": "protagonist lands on far side",
+        "action_end": "martians staring in interest",
+        "active_subjects": [
+          "martian_warriors"
+        ],
+        "passive_subjects": [
+          "protagonist"
+        ],
+        "spatial_context": "perimeter of enclosure",
+        "blocking_hint": "martians grouped at edge",
+        "environment_subzone": "observation_rim",
+        "continuity_focus": "scale of martians vs protagonist",
+        "coverage_hint": "reaction shots",
+        "coverage_priority": "medium",
+        "handoff_to_next": "none"
+      }
+    ],
+    "planned_shots": [
+      {
+        "planned_shot_id": "SH001",
+        "beat_id": "BT001",
+        "narrative_function": "establish desperation",
+        "planned_shot_moment_summary": "protagonist prepares for leap",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "inner_moss_zone",
+        "planned_shot_required_anchor_1": "glass roof incubator edge",
+        "planned_shot_scale_proof_detail": "proximity to walls",
+        "start_state_seed": "crouched position",
+        "end_state_seed": "explosive launch",
+        "action_seed": "protagonist coils and jumps",
+        "blocking_seed": [
+          "center of basin"
+        ],
+        "shot_size": "full",
+        "camera_angle": "low_angle",
+        "lens_family": "wide",
+        "camera_motion": "push_in",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "profile_right"
+      },
+      {
+        "planned_shot_id": "SH002",
+        "beat_id": "BT002",
+        "narrative_function": "demonstrate feat",
+        "planned_shot_moment_summary": "slow-motion mid-air flight",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "inner_moss_zone",
+        "planned_shot_required_anchor_1": "glass roof incubator edge",
+        "planned_shot_scale_proof_detail": "thirty-foot distance",
+        "start_state_seed": "mid-air apex",
+        "end_state_seed": "descent toward far wall",
+        "action_seed": "soaring through low gravity",
+        "blocking_seed": [
+          "traversing basin diameter"
+        ],
+        "shot_size": "wide",
+        "camera_angle": "eye_level",
+        "lens_family": "ultra_wide",
+        "camera_motion": "track",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "profile_left"
+      },
+      {
+        "planned_shot_id": "SH003",
+        "beat_id": "BT003",
+        "narrative_function": "shift power dynamic",
+        "planned_shot_moment_summary": "martian warriors watching",
+        "primary_subject_seed": "martian_warriors",
+        "secondary_subjects_seed": [],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "observation_rim",
+        "planned_shot_required_anchor_1": "far_perimeter_wall",
+        "planned_shot_scale_proof_detail": "scale of warriors vs protagonist",
+        "start_state_seed": "looking at empty space",
+        "end_state_seed": "staring in shock/interest",
+        "action_seed": "reacting to the leap",
+        "blocking_seed": [
+          "standing at enclosure edge"
+        ],
+        "shot_size": "medium_full",
+        "camera_angle": "eye_level",
+        "lens_family": "normal",
+        "camera_motion": "locked_off",
+        "zoom_behavior": "subtle_in",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "front_three_quarter_left"
+      }
+    ],
+    "unresolved_questions": [],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH003",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH003_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH003",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH003_chapter_iii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH007",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH007_chapter_vii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH014",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH014_chapter_xiv.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH003",
+        "canonical_id": "protagonist"
+      }
+    ],
+    "evidence_summary": [
+      "[CH003_SC004] Purpose: Demonstrate the protagonist's unique advantage and change the power dynamic.",
+      "[CH003_SC004] Summary: To escape, the protagonist performs a massive thirty-foot leap, landing on the far side of the enclosure. The Martians witness this feat, shifting their view of him from prey to a \"wonderful discovery.\"",
+      "[CH003_SC004] Emotional arc: Desperation $\\rightarrow$ Triumph $\\rightarrow$ Observation (Martian side).",
+      "[CH003_SC004] Coverage: Slow-motion or wide tracking shots of the massive leap. Reaction shots from the Martian warriors (shock/interest). Wide shot showing the distance covered by the jump.",
+      "[CH003_SC004] Continuity: The trajectory and landing point of the leap; the visual scale of the Martians vs. the protagonist.",
+      "[CH003] Chapter summary: **Setting:** A circular basin on Mars covered in yellowish, moss-like vegetation, featuring a low walled enclosure with a glass roof (an incubator). **Events:** - The protagonist wakes up on Mars and discovers the eff...",
+      "[CH003] CHAPTER III (book index hit)",
+      "[CH007] CHAPTER VII (book index hit)",
+      "[CH014] CHAPTER XIV (book index hit)",
+      "Character protagonist: An Earthman characterized by extreme physical agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a..."
+    ],
+    "storyboard_markdown": "# Scene Contract: CH003_SC004\n\n## Production Intent\nExecute a high-impact physical feat to pivot the narrative from pursuit to discovery. The sequence requires precise coordination of a thirty-foot leap across a circular basin, utilizing slow-motion and wide tracking to emphasize gravity-defying agility against the scale of the Martian environment.\n\n## Required Cast\n- protagonist (Earthman, agile)\n- martian_warriors\n\n## Required Environments\n- circular_moss_basin (yellowish moss, glass roof incubator, low walled enclosure)\n\n## Continuity Constraints\n- Leap trajectory and landing point relative to circular_moss_basin perimeter\n- Visual scale relationship between protagonist and martian_warriors\n\n## Beat List\n- BT001: Protagonist prepares for escape\n- BT002: The massive leap\n- BT003: Martian observation",
+    "metadata": {
+      "artifact_id": "CH003_SC004_SCENE_CONTRACT",
+      "artifact_type": "scene_contract",
+      "status": "generated",
+      "source_fingerprint": "f0edd81a570ad1e026f0e64ef8f5645460d2a841",
+      "created_at_utc": "2026-04-25T21:32:57.059438+00:00",
+      "updated_at_utc": "2026-04-25T21:32:57.059438+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_breakdown",
+          "dependency_id": "CH003_SC004",
+          "version": "9d8489d7fb32d976535ee947293a618167f7c9ba"
+        },
+        {
+          "dependency_type": "character_resolutions",
+          "dependency_id": "CH003_SC004",
+          "version": "4fe82be5047e9791d8e820ceaed6e26cf04fa6f1"
+        },
+        {
+          "dependency_type": "environment_resolutions",
+          "dependency_id": "CH003_SC004",
+          "version": "5f239b189cf37d8655865fa8c52031505286895d"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-25T21:33:25.035278+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "f0edd81a570ad1e026f0e64ef8f5645460d2a841"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH003_SC005",
+    "chapter_id": "CH003",
+    "scene_title": "SC005",
+    "purpose": "Establish first contact and a tentative peace.",
+    "summary": "The leader dismounts unarmed and offers the protagonist a metal armlet. The protagonist accepts, signaling peace. He is then lifted onto a Martian mount and taken away toward the distant hills.",
+    "emotional_arc": "Tension $\\rightarrow$ Relief/Cautious Acceptance.",
+    "production_intent": "Establish a diplomatic pivot through non-verbal exchange and physical gestures of peace. The sequence must transition from high tension to cautious acceptance, utilizing the armlet as the central symbolic object.",
+    "scene_short_description": "An unarmed leader offers a metal armlet to an Earthman in a yellowish mossy basin.",
+    "scene_primary_scale_story_point": "The physical height difference between the standing characters and the elevated protagonist on the mount.",
+    "scene_required_anchor_catalog": [
+      "metal armlet",
+      "Martian mount",
+      "yellowish moss-like vegetation"
+    ],
+    "scene_start_state": "The Leader dismounts from a mount, approaching the protagonist unarmed.",
+    "scene_end_state": "The protagonist is mounted and moving away toward the martian_distant_hills.",
+    "dominant_action_line": "The exchange of the armlet as a peace offering followed by the protagonist's transport.",
+    "scene_spatial_layout": [
+      "Open circular basin with yellowish moss vegetation",
+      "Proximity between Leader and protagonist for hand-off"
+    ],
+    "character_spatial_map": [
+      "The Leader approaches protagonist in center of basin",
+      "martian_warriors positioned as a surrounding presence",
+      "protagonist remains stationary until mounted"
+    ],
+    "environment_subzones": [
+      "yellowish_moss_basin",
+      "martian_distant_hills"
+    ],
+    "entry_vectors": [
+      "The Leader dismounts into the basin"
+    ],
+    "exit_vectors": [
+      "Cavalcade moves toward martian_distant_hills"
+    ],
+    "beat_transition_map": [
+      "BT001 -> BT002: Hand-off of the armlet",
+      "BT002 -> BT003: Physical lift onto the mount"
+    ],
+    "characters_required": [
+      {
+        "label": "The Protagonist",
+        "canonical_id": "protagonist",
+        "display_name": "protagonist",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/protagonist.md",
+        "notes": "Direct registry match for 'protagonist'."
+      },
+      {
+        "label": "The Leader",
+        "canonical_id": null,
+        "display_name": "The Leader",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 10,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Martian Warriors",
+        "canonical_id": "martian_warriors",
+        "display_name": "martian_warriors",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 138,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/martian_warriors.md",
+        "notes": "Direct registry match for 'martian_warriors'."
+      }
+    ],
+    "environments_required": [
+      {
+        "label": "The basin/open landscape",
+        "canonical_id": "martian_distant_hills",
+        "display_name": "martian_distant_hills",
+        "status": "canonical",
+        "entity_kind": "landform",
+        "resolution_score": 66,
+        "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH003/martian_distant_hills.md",
+        "notes": "Chapter-local environment alias match for 'The basin/open landscape' (key_overlap=0, label_overlap=3, context_overlap=4)."
+      }
+    ],
+    "continuity_constraints": [
+      "Metal armlet presence on protagonist's arm post-exchange",
+      "Height differential during protagonist lift onto Martian mount"
+    ],
+    "visual_coverage_families": [
+      "Close-ups of the hand-off (the armlet)",
+      "Medium shots of non-verbal communication and eye contact",
+      "Wide shot of the cavalcade moving toward the distant hills"
+    ],
+    "beat_list": [
+      {
+        "beat_id": "BT001",
+        "summary": "The Leader dismounts and approaches unarmed",
+        "purpose": "",
+        "action_start": "Leader dismounting",
+        "action_end": "Leader standing before protagonist",
+        "active_subjects": [
+          "The Leader"
+        ],
+        "passive_subjects": [
+          "protagonist"
+        ],
+        "spatial_context": "yellowish_moss_basin",
+        "blocking_hint": "Leader moves into protagonist's personal space",
+        "environment_subzone": "yellowish_moss_basin",
+        "continuity_focus": "Leader must be unarmed",
+        "coverage_hint": "medium shots of eye contact",
+        "coverage_priority": "high",
+        "handoff_to_next": "BT002"
+      },
+      {
+        "beat_id": "BT002",
+        "summary": "The armlet exchange",
+        "purpose": "",
+        "action_start": "The Leader offers the metal armlet",
+        "action_end": "Protagonist accepts and wears the armlet",
+        "active_subjects": [
+          "The Leader",
+          "protagonist"
+        ],
+        "passive_subjects": [],
+        "spatial_context": "yellowish_moss_basin",
+        "blocking_hint": "Hands meeting in center frame",
+        "environment_subzone": "yellowish_moss_basin",
+        "continuity_focus": "Armlet must be visible on protagonist's arm after this beat",
+        "coverage_hint": "close-ups of the hand-off",
+        "coverage_priority": "critical",
+        "handoff_to_next": "BT003"
+      },
+      {
+        "beat_id": "BT003",
+        "summary": "Protagonist is mounted and departs",
+        "purpose": "",
+        "action_start": "Protagonist being lifted onto mount",
+        "action_end": "Cavalcade moving toward hills",
+        "active_subjects": [
+          "protagonist",
+          "martian_warriors"
+        ],
+        "passive_subjects": [
+          "The Leader"
+        ],
+        "spatial_context": "yellowish_moss_basin to martian_distant_hills",
+        "blocking_hint": "Vertical lift movement followed by horizontal exit",
+        "environment_subzone": "yellowish_moss_basin",
+        "continuity_focus": "Height difference during the lift",
+        "coverage_hint": "wide shot of cavalcade",
+        "coverage_priority": "medium",
+        "handoff_to_next": "none"
+      }
+    ],
+    "planned_shots": [
+      {
+        "planned_shot_id": "SH001",
+        "beat_id": "BT001",
+        "narrative_function": "establish contact",
+        "planned_shot_moment_summary": "The Leader approaches unarmed",
+        "primary_subject_seed": "The Leader",
+        "secondary_subjects_seed": [
+          "protagonist"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "in_scene_speaker",
+        "environment_subzone": "yellowish_moss_basin",
+        "planned_shot_required_anchor_1": "yellowish_moss_basin",
+        "planned_shot_scale_proof_detail": "Leader dismounts to protagonist level",
+        "start_state_seed": "Leader approaching",
+        "end_state_seed": "Leader standing before protagonist",
+        "action_seed": "approaching unarmed",
+        "blocking_seed": [
+          "Leader walks toward protagonist"
+        ],
+        "shot_size": "medium_full",
+        "camera_angle": "eye_level",
+        "lens_family": "normal",
+        "camera_motion": "track",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "front_three_quarter_right"
+      },
+      {
+        "planned_shot_id": "SH002",
+        "beat_id": "BT002",
+        "narrative_function": "symbolic peace",
+        "planned_shot_moment_summary": "The armlet is handed over",
+        "primary_subject_seed": "metal armlet",
+        "secondary_subjects_seed": [
+          "protagonist",
+          "The Leader"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "yellowish_moss_basin",
+        "planned_shot_required_anchor_1": "metal armlet",
+        "planned_shot_scale_proof_detail": "Armlet visible on protagonist's arm",
+        "start_state_seed": "Hand reaching out",
+        "end_state_seed": "Armlet gripped by protagonist",
+        "action_seed": "hand-off",
+        "blocking_seed": [
+          "Close proximity hands"
+        ],
+        "shot_size": "close_up",
+        "camera_angle": "eye_level",
+        "lens_family": "portrait",
+        "camera_motion": "locked_off",
+        "zoom_behavior": "none",
+        "focus_strategy": "shallow_subject",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "front"
+      },
+      {
+        "planned_shot_id": "SH003",
+        "beat_id": "BT003",
+        "narrative_function": "resolution/exit",
+        "planned_shot_moment_summary": "Protagonist is lifted and rides away",
+        "primary_subject_seed": "protagonist",
+        "secondary_subjects_seed": [
+          "martian_warriors"
+        ],
+        "subject_visibility": "on_screen",
+        "narration_mode": "none",
+        "environment_subzone": "martian_distant_hills",
+        "planned_shot_required_anchor_1": "Martian mount",
+        "planned_shot_scale_proof_detail": "Height difference of lift",
+        "start_state_seed": "Protagonist being lifted",
+        "end_state_seed": "Cavalcade moving toward hills",
+        "action_seed": "mounting and riding away",
+        "blocking_seed": [
+          "Protagonist lifted onto mount",
+          "group moves out"
+        ],
+        "shot_size": "wide",
+        "camera_angle": "low_angle",
+        "lens_family": "wide",
+        "camera_motion": "pan",
+        "zoom_behavior": "none",
+        "focus_strategy": "deep_focus",
+        "lighting_style": "diffuse_ambient",
+        "primary_subject_angle": "rear_three_quarter_left"
+      }
+    ],
+    "unresolved_questions": [
+      "Resolve The Leader -> The Leader"
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH003",
+        "scene_id": "CH003_SC005"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH003",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH003_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH003",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH003_chapter_iii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH020",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH020_chapter_xx.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH017",
+        "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH017_chapter_xvii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH003",
+        "canonical_id": "protagonist"
+      }
+    ],
+    "evidence_summary": [
+      "[CH003_SC005] Purpose: Establish first contact and a tentative peace.",
+      "[CH003_SC005] Summary: The leader dismounts unarmed and offers the protagonist a metal armlet. The protagonist accepts, signaling peace. He is then lifted onto a Martian mount and taken away toward the distant hills.",
+      "[CH003_SC005] Emotional arc: Tension $\\rightarrow$ Relief/Cautious Acceptance.",
+      "[CH003_SC005] Coverage: Close-ups of the hand-off (the armlet). Medium shots of the non-verbal communication/eye contact. Wide shot of the cavalcade moving toward the distant hills.",
+      "[CH003_SC005] Continuity: The armlet on the protagonist's arm; the height difference when he is lifted onto the mount.",
+      "[CH003] Chapter summary: **Setting:** A circular basin on Mars covered in yellowish, moss-like vegetation, featuring a low walled enclosure with a glass roof (an incubator). **Events:** - The protagonist wakes up on Mars and discovers the eff...",
+      "[CH003] CHAPTER III (book index hit)",
+      "[CH020] CHAPTER XX (book index hit)",
+      "[CH017] CHAPTER XVII (book index hit)",
+      "Character protagonist: An Earthman characterized by extreme physical agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a..."
+    ],
+    "storyboard_markdown": "# Scene Contract: CH003_SC005\n\n## Production Intent\nEstablish a diplomatic pivot through non-verbal exchange and physical gestures of peace. The sequence must transition from high tension to cautious acceptance, utilizing the armlet as the central symbolic object.\n\n## Required Cast\n- protagonist (Earthman, agile)\n- The Leader (unarmed)\n- martian_warriors\n\n## Required Environments\n- yellowish_moss_basin (circular basin, mossy vegetation)\n- martian_distant_hills\n\n## Continuity Constraints\n- Metal armlet must remain on protagonist's arm after exchange.\n- Explicit height difference required when protagonist is lifted onto the Martian mount.\n\n## Beat List\n- BT001: The Leader dismounts and approaches unarmed.\n- BT002: The armlet exchange (peace offering).\n- BT003: Protagonist is mounted and departs toward hills.",
+    "metadata": {
+      "artifact_id": "CH003_SC005_SCENE_CONTRACT",
+      "artifact_type": "scene_contract",
+      "status": "generated",
+      "source_fingerprint": "866c27c7cafacc3b454ee28e5a390185435feb60",
+      "created_at_utc": "2026-04-25T21:33:25.664749+00:00",
+      "updated_at_utc": "2026-04-25T21:33:25.664749+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_breakdown",
+          "dependency_id": "CH003_SC005",
+          "version": "a886ddf73acb54e85c2385e58754cdb60356013f"
+        },
+        {
+          "dependency_type": "character_resolutions",
+          "dependency_id": "CH003_SC005",
+          "version": "61af6e89e2fe0afb9cc66b29da15f1e413886ead"
+        },
+        {
+          "dependency_type": "environment_resolutions",
+          "dependency_id": "CH003_SC005",
+          "version": "6930941725ce5656fdff054978106745e8f792ab"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-25T21:33:54.828174+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "866c27c7cafacc3b454ee28e5a390185435feb60"
+        }
+      ]
+    }
+  }
+]

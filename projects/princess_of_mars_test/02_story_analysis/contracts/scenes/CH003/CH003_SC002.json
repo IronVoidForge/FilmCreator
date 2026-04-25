@@ -1,0 +1,322 @@
+{
+  "scene_id": "CH003_SC002",
+  "chapter_id": "CH003",
+  "scene_title": "SC002",
+  "purpose": "Introduce the biological horror/wonder of Martian life.",
+  "summary": "The protagonist explores a nearby glass-roofed enclosure (an incubator) and finds large white eggs alongside grotesque, multi-limbed young Martians that have already hatched.",
+  "emotional_arc": "Curiosity $\\rightarrow$ Horror/Awe.",
+  "production_intent": "Establish the biological reality of Martian life through a transition from scientific curiosity to visceral horror. The visual language must contrast the sterile, glass-enclosed incubator with the grotesque, multi-limbed movement of the hatchlings and the large white eggs.",
+  "scene_short_description": "A man investigates a glass-roofed incubator containing large white eggs and multi-limbed creatures.",
+  "scene_primary_scale_story_point": "Small hatchlings vs large white eggs within a circular basin.",
+  "scene_required_anchor_catalog": [
+    "glass_roof",
+    "large_white_eggs"
+  ],
+  "scene_start_state": "protagonist approaches the circular_moss_basin with curiosity.",
+  "scene_end_state": "protagonist recoils in horror/awe from the hatchlings.",
+  "dominant_action_line": "Exploration of the incubator leading to the discovery of active, grotesque life.",
+  "scene_spatial_layout": [
+    "Circular basin containing yellowish moss-like vegetation",
+    "Low walled enclosure with a glass roof"
+  ],
+  "character_spatial_map": [
+    "protagonist stands at the perimeter of the circular_moss_basin",
+    "hatchlings move within the interior of the enclosure"
+  ],
+  "environment_subzones": [
+    "incubator_interior",
+    "basin_perimeter"
+  ],
+  "entry_vectors": [
+    "approach from mossy terrain"
+  ],
+  "exit_vectors": [
+    "retreat from glass enclosure"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: discovery of eggs",
+    "BT002 -> BT003: movement of hatchlings"
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The glass-roofed incubator enclosure",
+      "canonical_id": "circular_moss_basin",
+      "display_name": "circular_moss_basin",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 64,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH003/circular_moss_basin.md",
+      "notes": "Chapter-local environment alias match for 'The glass-roofed incubator enclosure' (key_overlap=0, label_overlap=4, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Hatchling movement patterns (multi-limbed coordination)",
+    "Light refraction and shadows through the glass roof"
+  ],
+  "visual_coverage_families": [
+    "Macro shots of eggs and multi-limbed hatchlings",
+    "POV through glass enclosure",
+    "Medium reaction shots of protagonist"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "protagonist approaches the incubator",
+      "purpose": "",
+      "action_start": "walking through mossy terrain",
+      "action_end": "stopping at the glass wall",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "basin_perimeter",
+      "blocking_hint": "approaching the low wall",
+      "environment_subzone": "basin_perimeter",
+      "continuity_focus": "lighting through glass roof",
+      "coverage_hint": "medium_full shot",
+      "coverage_priority": "low",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "discovery of eggs",
+      "purpose": "",
+      "action_start": "looking down through glass",
+      "action_end": "focusing on white objects",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [
+        "large_white_eggs"
+      ],
+      "spatial_context": "incubator_interior",
+      "blocking_hint": "leaning over the enclosure",
+      "environment_subzone": "incubator_interior",
+      "continuity_focus": "egg placement in moss",
+      "coverage_hint": "macro/POV",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "hatchlings emerge and move",
+      "purpose": "",
+      "action_start": "eggs or surroundings twitching",
+      "action_end": "protagonist recoiling",
+      "active_subjects": [
+        "multi_limbed_hatchlings"
+      ],
+      "passive_subjects": [
+        "protagonist"
+      ],
+      "spatial_context": "incubator_interior",
+      "blocking_hint": "creatures scurrying near eggs",
+      "environment_subzone": "incubator_interior",
+      "continuity_focus": "movement patterns of limbs",
+      "coverage_hint": "macro/reaction",
+      "coverage_priority": "high",
+      "handoff_to_next": "none"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish_setting",
+      "planned_shot_moment_summary": "protagonist approaches the glass enclosure",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "circular_moss_basin"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "basin_perimeter",
+      "planned_shot_required_anchor_1": "glass_roof",
+      "planned_shot_scale_proof_detail": "enclosure height relative to protagonist",
+      "start_state_seed": "protagonist walking towards basin",
+      "end_state_seed": "protagonist stops at glass",
+      "action_seed": "approaching enclosure",
+      "blocking_seed": [
+        "walking toward center of frame"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "reveal_subject",
+      "planned_shot_moment_summary": "macro view of large white eggs",
+      "primary_subject_seed": "large_white_eggs",
+      "secondary_subjects_seed": [
+        "yellowish_moss"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "incubator_interior",
+      "planned_shot_required_anchor_1": "large_white_eggs",
+      "planned_shot_scale_proof_detail": "egg size relative to moss texture",
+      "start_state_seed": "static macro shot",
+      "end_state_seed": "protagonist's shadow falls over eggs",
+      "action_seed": "eggs resting in moss",
+      "blocking_seed": [
+        "stationary"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "telephoto",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "climax_horror",
+      "planned_shot_moment_summary": "hatchlings move aggressively",
+      "primary_subject_seed": "multi_limbed_hatchlings",
+      "secondary_subjects_seed": [
+        "protagonist"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "incubator_interior",
+      "planned_shot_required_anchor_1": "large_white_eggs",
+      "planned_shot_scale_proof_detail": "limb count and movement speed",
+      "start_state_seed": "hatchlings twitching",
+      "end_state_seed": "protagonist recoiling",
+      "action_seed": "grotesque multi-limbed crawling",
+      "blocking_seed": [
+        "scurrying around eggs"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH003",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH003_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH003_chapter_iii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH014_chapter_xiv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH003",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH003_SC002] Purpose: Introduce the biological horror/wonder of Martian life.",
+    "[CH003_SC002] Summary: The protagonist explores a nearby glass-roofed enclosure (an incubator) and finds large white eggs alongside grotesque, multi-limbed young Martians that have already hatched.",
+    "[CH003_SC002] Emotional arc: Curiosity $\\rightarrow$ Horror/Awe.",
+    "[CH003_SC002] Coverage: Macro shots of the eggs and the multi-limbed hatchlings. POV shots from the protagonist looking through the glass. Medium shots of his reaction to the grotesque creatures.",
+    "[CH003_SC002] Continuity: The movement patterns of the hatchlings; lighting through the glass roof.",
+    "[CH003] Chapter summary: **Setting:** A circular basin on Mars covered in yellowish, moss-like vegetation, featuring a low walled enclosure with a glass roof (an incubator). **Events:** - The protagonist wakes up on Mars and discovers the eff...",
+    "[CH003] CHAPTER III (book index hit)",
+    "[CH007] CHAPTER VII (book index hit)",
+    "[CH014] CHAPTER XIV (book index hit)",
+    "Character protagonist: An Earthman characterized by extreme physical agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH003_SC002\n\n## Production Intent\nEstablish the biological reality of Martian life through a transition from scientific curiosity to visceral horror. The visual language must contrast the sterile, glass-enclosed incubator with the grotesque, multi-limbed movement of the hatchlings and the large white eggs.\n\n## Required Cast\n- protagonist (Earthman, agile)\n\n## Required Environments\n- circular_moss_basin (yellowish moss, low walled enclosure, glass roof)\n\n## Continuity Constraints\n- Hatchling limb coordination/movement patterns\n- Light refraction through the glass roof onto the interior moss\n\n## Beat List\n- BT001: protagonist approaches the incubator\n- BT002: discovery of eggs\n- BT003: hatchlings emerge and move",
+  "metadata": {
+    "artifact_id": "CH003_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "f648205dd08b804e6273487c1e77c16cc4ea97d9",
+    "created_at_utc": "2026-04-25T21:32:01.982244+00:00",
+    "updated_at_utc": "2026-04-25T21:32:01.982244+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH003_SC002",
+        "version": "9f99cd130e040717a80a33cbae1c8c805cb72e05"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH003_SC002",
+        "version": "c2653569edb1dce1bd702a1864a72a1f95057579"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH003_SC002",
+        "version": "93679133427eb27ce5b622a902c1b5726a5e2f8a"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-25T21:32:29.267579+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "f648205dd08b804e6273487c1e77c16cc4ea97d9"
+      }
+    ]
+  }
+}

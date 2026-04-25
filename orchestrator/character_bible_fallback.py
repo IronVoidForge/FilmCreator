@@ -34,25 +34,31 @@ def is_unknownish(value: Any) -> bool:
     if isinstance(value, str):
         normalized = value.strip().lower()
         normalized = normalized.strip(".,:;-_ ")
-        return (
-            not normalized
-            or normalized in {
-                "unknown",
-                "none",
-                "(none)",
-                "n/a",
-                "na",
-                "null",
-                "[]",
-                "[ ]",
-                "insufficient evidence",
-                "no data available",
-                "not specified",
-                "unspecified",
-                "not applicable",
-            }
-        )
+        if not normalized:
+            return True
+        if normalized in {
+            "unknown",
+            "unknown.",
+            "none",
+            "(none)",
+            "n/a",
+            "na",
+            "null",
+            "[]",
+            "[ ]",
+            "insufficient evidence",
+            "no data available",
+            "not specified",
+            "unspecified",
+            "not applicable",
+        }:
+            return True
+        if normalized in {"['unknown']", "['[]']"}:
+            return True
+        return False
     if isinstance(value, list):
+        if not value:
+            return True
         return not any(not is_unknownish(item) for item in value)
     if isinstance(value, dict):
         return not any(not is_unknownish(item) for item in value.values())
@@ -84,33 +90,59 @@ def needs_visual_production_fallback(bible_data: dict[str, Any]) -> bool:
     return visual_field_audit(bible_data)["needs_visual_production_fallback"]
 
 
-def fallback_bucket_for_character(entry: dict[str, Any], bible_data: dict[str, Any], evidence_summary: list[str]) -> str:
-    """Determine the fallback bucket for a character based on entity kind and evidence."""
+def fallback_bucket_for_character(entry: dict[str, Any], bible_data: dict[str, Any], evidence_summary: list[str]) -> tuple[str, str | None]:
+    """Determine the fallback bucket for a character based on entity kind and evidence.
+    
+    Returns:
+        tuple: (bucket_name, alias_redirect_target or None)
+    """
     entity_kind = str(entry.get("entity_kind", "individual")).strip().lower()
-    
-    if entity_kind in {"memory", "reference", "deceased", "abstract"}:
-        return "context_only"
-    
+    char_id = str(entry.get("canonical_id", "")).strip().lower()
     evidence_text = " ".join(evidence_summary).lower()
-    if any(marker in evidence_text for marker in ["dead", "deceased", "corpse", "body", "former", "memory of", "mentioned only"]):
-        return "context_only"
     
+    # 1. Alias/role redirect
+    if char_id == "protagonist" or "protagonist" in evidence_text:
+        if "john carter" in evidence_text or "carter" in evidence_text:
+            return ("alias_redirect", "john_carter")
+    
+    # 2. Context-only narrative/deceased/non-renderable
+    if entity_kind in {"memory", "reference", "deceased", "abstract"}:
+        return ("context_only", None)
+    if any(marker in evidence_text for marker in ["dead", "deceased", "corpse", "body", "riddled with arrows", "former", "memory of", "mentioned only"]):
+        return ("context_only", None)
+    
+    # 3. Group/horde
     if entity_kind in {"group", "collective", "horde"}:
-        return "group_or_horde"
+        return ("group_or_horde", None)
+    if any(marker in evidence_text for marker in ["warriors", "horde", "group", "collective"]):
+        return ("group_or_horde", None)
     
-    if any(marker in evidence_text for marker in ["creature", "beast", "animal", "calot", "thoat", "ape"]):
-        return "creature_or_primitive"
+    # 4. Quadruped/mount/beast
+    if any(marker in evidence_text for marker in ["mount", "mounts", "thoat", "quadruped", "watchdog", "watch dog", "hound"]):
+        if any(marker in evidence_text for marker in ["large", "massive", "colossal", "mount"]):
+            return ("large_quadruped", None)
+        return ("small_quadruped", None)
     
-    if any(marker in evidence_text for marker in ["martian", "thark", "green", "red martian", "barsoom", "helium"]):
-        return "barsoom_humanoid"
+    # 5. Non-human humanoid
+    if any(marker in evidence_text for marker in ["martian", "thark", "green martian", "red martian", "barsoom", "helium", "four-armed", "four armed", "15ft", "15 ft"]):
+        if any(marker in evidence_text for marker in ["humanoid", "warrior", "chieftain", "leader", "princess", "officer"]):
+            return ("non_human_humanoid", None)
     
-    if any(marker in evidence_text for marker in ["human", "earthling", "american", "confederate", "frontier", "cavalry"]):
-        return "earth_human"
+    # 6. Human
+    if any(marker in evidence_text for marker in ["human", "earthling", "american", "confederate", "frontier", "cavalry", "officer", "captain", "virginia"]):
+        return ("human", None)
     
+    # 7. Creature
+    if any(marker in evidence_text for marker in ["creature", "beast", "animal", "calot", "ape", "colossal"]):
+        if any(marker in evidence_text for marker in ["large", "massive", "colossal", "giant"]):
+            return ("large_creature", None)
+        return ("small_creature", None)
+    
+    # 8. Unknown reference
     if not evidence_summary or len(evidence_summary) < 2:
-        return "unknown_reference"
+        return ("unknown_reference", None)
     
-    return "barsoom_humanoid"
+    return ("unknown_reference", None)
 
 
 def fallback_result_audit(fallback: dict[str, Any]) -> dict[str, Any]:
@@ -136,7 +168,23 @@ def fallback_result_audit(fallback: dict[str, Any]) -> dict[str, Any]:
 
 def deterministic_visual_fallback(entry: dict[str, Any], bible_data: dict[str, Any], evidence_summary: list[str]) -> dict[str, Any]:
     """Generate deterministic visual production fallback when canon evidence is thin."""
-    fallback_bucket = fallback_bucket_for_character(entry, bible_data, evidence_summary)
+    fallback_bucket, alias_target = fallback_bucket_for_character(entry, bible_data, evidence_summary)
+    
+    if fallback_bucket == "alias_redirect":
+        return {
+            "status": "alias_redirect",
+            "fallback_bucket": fallback_bucket,
+            "alias_redirect_target": alias_target,
+            "production_identity_descriptor": f"alias redirect to {alias_target}",
+            "production_body_descriptor": "see canonical character",
+            "production_face_descriptor": "see canonical character",
+            "production_costume_descriptor": "see canonical character",
+            "production_silhouette": "see canonical character",
+            "production_movement_descriptor": "see canonical character",
+            "production_state_variants": [],
+            "negative_terms": [],
+            "provisionality_note": f"This is an alias or role reference that redirects to the canonical character: {alias_target}",
+        }
     
     if fallback_bucket == "context_only":
         return {
@@ -154,35 +202,65 @@ def deterministic_visual_fallback(entry: dict[str, Any], bible_data: dict[str, A
         }
     
     bucket_defaults = {
-        "earth_human": {
-            "production_identity_descriptor": "frontier-era human with practical field clothing",
-            "production_body_descriptor": "lean athletic human build, weathered and capable",
-            "production_face_descriptor": "angular weathered face with steady eyes",
-            "production_costume_descriptor": "worn cloth, leather, and practical frontier materials",
-            "production_silhouette": "upright human silhouette with frontier gear",
-            "production_movement_descriptor": "economical military movement with confident balance",
-            "production_state_variants": ["armed", "field-ready"],
-            "negative_terms": ["ornate", "ceremonial", "alien anatomy"],
+        "human": {
+            "production_identity_descriptor": "human with period-appropriate appearance",
+            "production_body_descriptor": "human build and proportions",
+            "production_face_descriptor": "human facial structure",
+            "production_costume_descriptor": "period-appropriate clothing",
+            "production_silhouette": "upright human silhouette",
+            "production_movement_descriptor": "natural human movement",
+            "production_state_variants": [],
+            "negative_terms": ["alien anatomy", "non-human features"],
         },
-        "barsoom_humanoid": {
-            "production_identity_descriptor": "Martian humanoid with species-appropriate anatomy",
-            "production_body_descriptor": "tall humanoid build adapted to Martian gravity",
-            "production_face_descriptor": "humanoid facial structure with Martian features",
-            "production_costume_descriptor": "minimal Martian harness, leather, and metal fittings",
-            "production_silhouette": "tall humanoid silhouette with Martian proportions",
-            "production_movement_descriptor": "fluid movement adapted to low gravity",
-            "production_state_variants": ["armed", "battle-ready"],
-            "negative_terms": ["Earth clothing", "heavy armor", "human proportions"],
+        "non_human_humanoid": {
+            "production_identity_descriptor": "humanoid with non-human anatomy",
+            "production_body_descriptor": "humanoid build with species-specific proportions",
+            "production_face_descriptor": "humanoid facial structure with non-human features",
+            "production_costume_descriptor": "minimal harness or species-appropriate gear",
+            "production_silhouette": "upright humanoid silhouette with non-human proportions",
+            "production_movement_descriptor": "humanoid movement with species-specific characteristics",
+            "production_state_variants": [],
+            "negative_terms": ["human proportions", "Earth clothing"],
         },
-        "creature_or_primitive": {
-            "production_identity_descriptor": "non-human creature with bestial anatomy",
-            "production_body_descriptor": "powerful animal build with species-specific musculature",
-            "production_face_descriptor": "animal skull structure with predatory features",
+        "small_quadruped": {
+            "production_identity_descriptor": "small four-legged animal",
+            "production_body_descriptor": "compact quadruped build",
+            "production_face_descriptor": "animal skull structure",
             "production_costume_descriptor": "natural hide or minimal harness",
-            "production_silhouette": "bestial silhouette with non-human proportions",
-            "production_movement_descriptor": "animal movement with sudden bursts of force",
-            "production_state_variants": ["alert", "aggressive"],
-            "negative_terms": ["human anatomy", "clothing", "upright posture"],
+            "production_silhouette": "low quadruped silhouette",
+            "production_movement_descriptor": "agile four-legged movement",
+            "production_state_variants": [],
+            "negative_terms": ["human anatomy", "upright posture", "bipedal"],
+        },
+        "large_quadruped": {
+            "production_identity_descriptor": "large four-legged mount or beast",
+            "production_body_descriptor": "massive quadruped build",
+            "production_face_descriptor": "large animal skull structure",
+            "production_costume_descriptor": "natural hide or riding harness",
+            "production_silhouette": "imposing quadruped silhouette",
+            "production_movement_descriptor": "powerful four-legged movement",
+            "production_state_variants": [],
+            "negative_terms": ["human anatomy", "upright posture", "bipedal"],
+        },
+        "small_creature": {
+            "production_identity_descriptor": "small non-human creature",
+            "production_body_descriptor": "compact creature build",
+            "production_face_descriptor": "creature facial structure",
+            "production_costume_descriptor": "natural hide or minimal covering",
+            "production_silhouette": "small creature silhouette",
+            "production_movement_descriptor": "creature-specific movement",
+            "production_state_variants": [],
+            "negative_terms": ["human anatomy", "humanoid"],
+        },
+        "large_creature": {
+            "production_identity_descriptor": "large non-human creature",
+            "production_body_descriptor": "massive creature build with powerful musculature",
+            "production_face_descriptor": "large creature skull structure",
+            "production_costume_descriptor": "natural hide or thick skin",
+            "production_silhouette": "imposing creature silhouette",
+            "production_movement_descriptor": "powerful creature movement",
+            "production_state_variants": [],
+            "negative_terms": ["human anatomy", "humanoid", "delicate"],
         },
         "group_or_horde": {
             "production_identity_descriptor": "collective group with unified visual identity",
@@ -191,7 +269,7 @@ def deterministic_visual_fallback(entry: dict[str, Any], bible_data: dict[str, A
             "production_costume_descriptor": "repeatable group uniform or martial gear",
             "production_silhouette": "group silhouette emphasizing numbers and cohesion",
             "production_movement_descriptor": "coordinated group movement",
-            "production_state_variants": ["formation", "dispersed"],
+            "production_state_variants": [],
             "negative_terms": ["singular", "individual portrait"],
         },
         "unknown_reference": {
@@ -208,16 +286,44 @@ def deterministic_visual_fallback(entry: dict[str, Any], bible_data: dict[str, A
     
     defaults = bucket_defaults.get(fallback_bucket, bucket_defaults["unknown_reference"])
     
+    # Canon-additive fallback: prefer canon, add bucket defaults only if needed
+    def _get_field(canon_key: str, default_key: str) -> str:
+        canon_val = bible_data.get(canon_key, "")
+        if not is_unknownish(canon_val):
+            return str(canon_val)
+        return defaults[default_key]
+    
+    def _combine_fields(*canon_keys: str, default_key: str) -> str:
+        parts = []
+        for key in canon_keys:
+            val = bible_data.get(key, "")
+            if not is_unknownish(val):
+                if isinstance(val, list):
+                    parts.extend(str(v) for v in val if not is_unknownish(v))
+                else:
+                    parts.append(str(val))
+        if parts:
+            return "; ".join(parts)
+        return defaults[default_key]
+    
+    def _get_list_field(canon_key: str, default_key: str) -> list[str]:
+        canon_val = bible_data.get(canon_key, [])
+        if isinstance(canon_val, list) and any(not is_unknownish(v) for v in canon_val):
+            return [str(v) for v in canon_val if not is_unknownish(v)]
+        if isinstance(canon_val, str) and not is_unknownish(canon_val):
+            return [str(canon_val)]
+        return defaults[default_key]
+    
     return {
         "status": "generated" if fallback_bucket != "unknown_reference" else "insufficient_context",
         "fallback_bucket": fallback_bucket,
-        "production_identity_descriptor": defaults["production_identity_descriptor"],
-        "production_body_descriptor": defaults["production_body_descriptor"],
-        "production_face_descriptor": defaults["production_face_descriptor"],
-        "production_costume_descriptor": defaults["production_costume_descriptor"],
-        "production_silhouette": defaults["production_silhouette"],
-        "production_movement_descriptor": defaults["production_movement_descriptor"],
-        "production_state_variants": defaults["production_state_variants"],
+        "production_identity_descriptor": _get_field("identity_baseline", "production_identity_descriptor") or _get_field("stable_visual_summary", "production_identity_descriptor"),
+        "production_body_descriptor": _combine_fields("physical_build", "physical_traits", default_key="production_body_descriptor"),
+        "production_face_descriptor": _combine_fields("distinguishing_features", default_key="production_face_descriptor"),
+        "production_costume_descriptor": _get_field("costume_signature", "production_costume_descriptor"),
+        "production_silhouette": _combine_fields("distinguishing_features", "physical_build", default_key="production_silhouette"),
+        "production_movement_descriptor": _get_field("movement_language", "production_movement_descriptor"),
+        "production_state_variants": _get_list_field("state_variants", "production_state_variants"),
         "negative_terms": defaults["negative_terms"],
         "provisionality_note": "Generated for visual production because strict canon evidence is thin; not strict canon.",
     }
