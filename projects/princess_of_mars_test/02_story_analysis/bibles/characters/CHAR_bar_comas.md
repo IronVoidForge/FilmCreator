@@ -17,14 +17,14 @@
 - identity_baseline: A young Warhoon leader with a dignified presence.
 - age_presence: Young adult.
 - physical_build: unknown
-- origin_or_historical_context: Warhoon culture; likely high-status or ritualistic setting.
-- movement_language: Dignified, poised posture.
-A young Warhoon leader possessing a dignified and commanding presence. He is characterized by his high-status appearance, typically wearing the formal regalia of a Jeddak combined with ritualistic combat attire. His visual identity is defined by the intersection of leadership authority and warrior readiness.
+- origin_or_historical_context: Warhoon culture; likely Martian setting based on context.
+- movement_language: Dignified and composed posture.
+A young Warhoon leader possessing a dignified and commanding presence. He is characterized by his status, likely appearing in the formal regalia of a Jeddak combined with ritualistic combat attire. His visual identity is defined by the authority of his leadership and the ceremonial nature of his clothing.
 
 - physical_traits: unknown
 - costume_signature: Jeddak regalia and ritualistic combat attire.
 - distinguishing_features: unknown
-- state_variants: Ritualistic/Combat (wearing Jeddak regalia)
+- state_variants: Ritualistic/Combat (wearing ceremonial armor or regalia)
 
 ## Behavioral Bible
 
@@ -35,8 +35,8 @@ A young Warhoon leader possessing a dignified and commanding presence. He is cha
 
 ## Continuity
 
-- continuity_constraints: Must maintain a dignified presence consistent with leadership status., Costume should reflect both Jeddak regalia and combat readiness.
-- unresolved_ambiguities: Specific physical build and facial features are not defined., Exact visual details of the Warhoon/Jeddak regalia are unknown.
+- continuity_constraints: Must maintain a dignified presence consistent with leadership status., Costume should reflect the specific intersection of Jeddak regalia and ritualistic combat gear.
+- unresolved_ambiguities: Specific physical build and facial features are not described., Exact visual details of the "regalia" or "ritualistic attire" are unknown.
 
 ## Evidence Summary
 
@@ -53,4 +53,4 @@ A young Warhoon leader possessing a dignified and commanding presence. He is cha
 - status: `generated`
 - source_fingerprint: `ac289d7962e93630c5c57c5263c83a2ab3710ee3`
 - created_at_utc: `2026-04-25T21:17:54.540575+00:00`
-- updated_at_utc: `2026-04-25T21:17:54.540575+00:00`
+- updated_at_utc: `2026-04-25T21:53:51.374996+00:00`

@@ -35,8 +35,8 @@ No visual data is available in the provided evidence to establish a stable ident
 
 ## Continuity
 
-- continuity_constraints: character identity is tied to the status of being a female prisoner.
-- unresolved_ambiguities: complete lack of visual or behavioral description in provided evidence, actual name and physical appearance are unknown
+- continuity_constraints: character identity is tied to the status of being a prisoner.
+- unresolved_ambiguities: physical appearance is entirely undocumented in provided evidence., specific name or identity remains unknown., age, build, and movement are unknown.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ No visual data is available in the provided evidence to establish a stable ident
 - status: `generated`
 - source_fingerprint: `dafe5d5359f3a68867d95c7505a0d91ec37b3ca6`
 - created_at_utc: `2026-04-25T21:14:32.937861+00:00`
-- updated_at_utc: `2026-04-25T21:14:32.937861+00:00`
+- updated_at_utc: `2026-04-25T21:46:03.896284+00:00`

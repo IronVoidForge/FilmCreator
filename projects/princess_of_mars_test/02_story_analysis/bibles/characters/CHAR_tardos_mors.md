@@ -22,7 +22,7 @@
 A Martian ruler and Jeddak of Helium, appearing as an elder statesman. The character is defined by grand royal regalia and ceremonial attire consistent with the Heliumite throne. He is visually associated with the leadership of the Heliumite people during periods of planetary crisis.
 
 - physical_traits: Martian physiology (inferred from "Martian king")
-- costume_signature: Grand royal regalia of the Heliumite throne.
+- costume_signature: Grand royal regalia of the Heliumite throne; ceremonial attire.
 - distinguishing_features: unknown
 - state_variants: Ceremonial/Royal (Grand regalia)
 
@@ -31,12 +31,12 @@ A Martian ruler and Jeddak of Helium, appearing as an elder statesman. The chara
 - personality: unknown
 - role: Jeddak / Royal leader of Helium.
 - voice_notes: unknown
-- relationship_notes: Leader of the royal group in the sunken garden.
+- relationship_notes: Leads the royal group in the sunken garden.
 
 ## Continuity
 
-- continuity_constraints: Must maintain the visual identity of a high-ranking Martian ruler (Jeddak)., Costume must reflect Heliumite grand regalia.
-- unresolved_ambiguities: Conflicting data regarding whether the entity is a singular individual or a group entity., Specific physical dimensions and movement patterns are not documented.
+- continuity_constraints: Must maintain the visual identity of a high-ranking Martian ruler (Jeddak)., Costume must remain consistent with Heliumite grand regalia.
+- unresolved_ambiguities: Entity kind ambiguity: Sources conflict between describing the character as a singular individual and a group entity., Physical specifics: Exact body type, height, and facial features are not provided.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ A Martian ruler and Jeddak of Helium, appearing as an elder statesman. The chara
 - status: `generated`
 - source_fingerprint: `5f1b855bde9f5c3b2b1d81b708b02178f8c08378`
 - created_at_utc: `2026-04-25T21:18:53.858186+00:00`
-- updated_at_utc: `2026-04-25T21:18:53.858186+00:00`
+- updated_at_utc: `2026-04-25T21:56:05.400313+00:00`

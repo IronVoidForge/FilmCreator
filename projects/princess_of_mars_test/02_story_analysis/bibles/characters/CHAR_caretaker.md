@@ -17,25 +17,25 @@
 - identity_baseline: An elderly, "dried-up" Martian.
 - age_presence: Elderly / Advanced age.
 - physical_build: Thin, desiccated, or emaciated frame.
-- origin_or_historical_context: Martian; lives in isolation within the Atmosphere Factory.
+- origin_or_historical_context: Resident of the Atmosphere Factory; suggests long-term isolation on Mars.
 - movement_language: unknown
-An elderly Martian with a desiccated, "dried-up" physical appearance. His silhouette reflects long-term seclusion within the Atmosphere Factory, suggesting a life of isolation. He possesses a thin, weathered frame consistent with his advanced age and environment.
+An elderly Martian with a desiccated, "dried-up" physical appearance. His look is defined by the effects of long-term seclusion within the Atmosphere Factory, suggesting a weathered and isolated existence.
 
 - physical_traits: Highly skilled in mental control and telepathy (non-visual trait)
 - costume_signature: Clothing suggesting long-term seclusion and isolation.
 - distinguishing_features: "Dried-up" skin/texture
-- state_variants: Secluded/Isolated (Atmosphere Factory)
+- state_variants: Secluded/Isolated state
 
 ## Behavioral Bible
 
-- personality: unknown
-- role: caretaker / isolated inhabitant of the Atmosphere Factory
+- personality: highly skilled in mental control and telepathy
+- role: caretaker / resident of the Atmosphere Factory
 - voice_notes: unknown
 - relationship_notes: unknown
 
 ## Continuity
 
-- continuity_constraints: Must maintain a "dried-up" or desiccated visual aesthetic., Appearance must reflect long-term isolation within an industrial/atmospheric setting.
+- continuity_constraints: Must maintain a "dried-up" or desiccated aesthetic., Appearance must reflect long-term isolation within an industrial/atmospheric setting.
 - unresolved_ambiguities: Specific clothing items or textures., Exact mannerisms or movement style.
 
 ## Evidence Summary
@@ -49,4 +49,4 @@ An elderly Martian with a desiccated, "dried-up" physical appearance. His silhou
 - status: `generated`
 - source_fingerprint: `78d0e54cc678de1f78094a52363fc21b9608e5a6`
 - created_at_utc: `2026-04-25T21:17:07.342173+00:00`
-- updated_at_utc: `2026-04-25T21:17:07.342173+00:00`
+- updated_at_utc: `2026-04-25T21:51:55.703423+00:00`

@@ -14,17 +14,17 @@
 
 ## Visual Bible
 
-- identity_baseline: A massive, four-armed Martian warrior leader.
+- identity_baseline: A massive, four-armed Martian warrior of the ruling class.
 - age_presence: unknown
 - physical_build: 15ft tall; heavy humanoid frame with four arms.
 - origin_or_historical_context: Martian warrior race.
 - movement_language: Dismounts from an eight-legged mount to approach others.
-A towering 15ft Martian warrior characterized by olive-green skin, red eyes, and prominent tusks. The character possesses a unique four-armed anatomy. He is seen dismounting from an eight-legged mount to approach others unarmed, carrying only a metal armlet as a gesture of peace.
+A towering 15ft Martian warrior characterized by olive-green skin, red eyes, and prominent tusks. The character possesses a unique four-armed anatomy. In appearance, he is seen dismounting from an eight-legged mount to approach others unarmed, specifically carrying a metal armlet as a gesture of peace.
 
 - physical_traits: Four arms, Red eyes, Tusks, Olive-green skin
 - costume_signature: Unarmed, carrying a metal armlet as a peace offering.
 - distinguishing_features: Olive-green skin, Four arms, Red eyes, Tusks
-- state_variants: Dismounted/Unarmed (approaching with peace offering), Mounted (on an eight-legged creature)
+- state_variants: Mounted (on eight-legged mount), Dismounted/Unarmed (offering metal armlet)
 
 ## Behavioral Bible
 
@@ -35,8 +35,8 @@ A towering 15ft Martian warrior characterized by olive-green skin, red eyes, and
 
 ## Continuity
 
-- continuity_constraints: Must maintain 15ft height and four-arm anatomy., Skin must remain olive-green.
-- unresolved_ambiguities: Specific age or stage of life., Detailed clothing or armor beyond the mention of a metal armlet.
+- continuity_constraints: Must maintain 15ft height and four-arm anatomy., Skin tone must remain olive-green.
+- unresolved_ambiguities: Specific age or stage of life., Detailed clothing/armor beyond the mention of a metal armlet.
 
 ## Evidence Summary
 
@@ -53,4 +53,4 @@ A towering 15ft Martian warrior characterized by olive-green skin, red eyes, and
 - status: `generated`
 - source_fingerprint: `981426dfb4ee344c149a12dfd0bc0cf3723246ff`
 - created_at_utc: `2026-04-25T21:12:31.546212+00:00`
-- updated_at_utc: `2026-04-25T21:12:31.546212+00:00`
+- updated_at_utc: `2026-04-25T21:41:57.354029+00:00`

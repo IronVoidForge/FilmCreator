@@ -24,7 +24,7 @@ A member of the Warhoon horde serving in a custodial capacity. The character is 
 - physical_traits: unknown
 - costume_signature: standard Warhoon soldier or guard attire.
 - distinguishing_features: none mentioned
-- state_variants: standard guard/soldier attire
+- state_variants: standard guard duty (prisoner handling/food delivery)
 
 ## Behavioral Bible
 
@@ -35,8 +35,8 @@ A member of the Warhoon horde serving in a custodial capacity. The character is 
 
 ## Continuity
 
-- continuity_constraints: Must maintain the visual identity of a Warhoon soldier/guard., Should exhibit silent behavior during duty cycles.
-- unresolved_ambiguities: Specific physical features and facial characteristics are unknown., Exact age and body proportions are not established.
+- continuity_constraints: Must maintain the visual identity of a standard Warhoon soldier/guard., Character behavior is characterized by silence and task-oriented movement.
+- unresolved_ambiguities: Specific physical features are unknown., Exact age and body proportions are unknown.
 
 ## Evidence Summary
 
@@ -53,4 +53,4 @@ A member of the Warhoon horde serving in a custodial capacity. The character is 
 - status: `generated`
 - source_fingerprint: `036689e97ea1fd54a04e5937d08ae93058e269a9`
 - created_at_utc: `2026-04-25T21:18:13.337859+00:00`
-- updated_at_utc: `2026-04-25T21:18:13.337859+00:00`
+- updated_at_utc: `2026-04-25T21:54:34.339844+00:00`

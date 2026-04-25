@@ -35,7 +35,7 @@ No visual data is available in the provided evidence to establish a stable ident
 
 ## Continuity
 
-- continuity_constraints: character identity is currently tied to the placeholder "red_prisoner"
+- continuity_constraints: character is identified as a singular individual entity
 - unresolved_ambiguities: complete lack of physical or behavioral description in provided evidence
 
 ## Evidence Summary
@@ -50,4 +50,4 @@ No visual data is available in the provided evidence to establish a stable ident
 - status: `generated`
 - source_fingerprint: `c183fe83ae4f8651deb382e107b643d4b2cd776a`
 - created_at_utc: `2026-04-25T21:15:04.510353+00:00`
-- updated_at_utc: `2026-04-25T21:15:04.510353+00:00`
+- updated_at_utc: `2026-04-25T21:47:24.383273+00:00`

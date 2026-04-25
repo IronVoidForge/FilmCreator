@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: Green Martian (Thark) warrior and leader.
+- identity_baseline: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH006/tars_tarkas.md] Physical Description: A Martian warrior who values strength and combat skill.
 - age_presence: unknown
 - physical_build: unknown
-- origin_or_historical_context: Martian (Thark) setting.
-- movement_language: professional demeanor
-Tars Tarkas is a prominent Thark warrior and leader characterized by green skin. He carries himself with a professional demeanor and is typically seen in Martian warrior attire, embodying the strength and combat skill valued by his people.
+- origin_or_historical_context: unknown
+- movement_language: unknown
+[source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH006/tars_tarkas.md] Physical Description: A Martian warrior who values strength and combat skill. [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH006/tars_tarkas.md] Costume/Silhouette: Martian warrior attire (unspecified). [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH007/tars_tarkas.md] Physical Description: Martian warrior/leader; oversees the hatching process at the incubator.
 
-- physical_traits: green complexion
-- costume_signature: Martian warrior attire.
-- distinguishing_features: green skin
-- state_variants: warrior/combat-ready
+- physical_traits: (none)
+- costume_signature: (none)
+- distinguishing_features: (none)
+- state_variants: (none)
 
 ## Behavioral Bible
 
-- personality: Values strength and combat skill; maintains a professional demeanor.
-- role: Thark warrior and leader.
-- voice_notes: unknown
-- relationship_notes: oversees the hatching process at the incubator.
+- personality: (none)
+- role: individual
+- voice_notes: (none)
+- relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: Skin color must remain green (Thark)., Must maintain a professional, combat-oriented demeanor.
-- unresolved_ambiguities: Specific physical build and proportions are not defined., Exact age or stage of life is unknown., Detailed specifics of the warrior attire/costume are unspecified.
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ Tars Tarkas is a prominent Thark warrior and leader characterized by green skin.
 - status: `generated`
 - source_fingerprint: `76fbde73d48473ad025bfb77d29f9a64c3d775e7`
 - created_at_utc: `2026-04-25T21:12:14.422744+00:00`
-- updated_at_utc: `2026-04-25T21:12:14.422744+00:00`
+- updated_at_utc: `2026-04-25T21:41:47.934394+00:00`

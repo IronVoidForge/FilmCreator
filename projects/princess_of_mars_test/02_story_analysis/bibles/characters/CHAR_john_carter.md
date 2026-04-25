@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: Human male, Earthling, former Confederate cavalry officer and soldier of fortune.
-- age_presence: Elderly in the framing narrative; younger/active as a warrior in primary action.
+- identity_baseline: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md] Physical Description: A former Confederate cavalry officer and soldier of fortune. Described as elderly in the framing narrative,...
+- age_presence: unknown
 - physical_build: unknown
-- origin_or_historical_context: 1860s American frontier / mid-19th century military background.
+- origin_or_historical_context: unknown
 - movement_language: unknown
-A human male of Earth origin, John Carter presents as a rugged frontiersman with a mid-19th century Confederate cavalry background. His visual identity shifts from the practical, utilitarian clothing of an 1860s soldier or prospector to a more exotic warrior aesthetic characterized by Martian silks and furs acquired through combat. He lacks the typical ornamental clothing associated with other Earthmen.
+[source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md] Physical Description: A former Confederate cavalry officer and soldier of fortune. Described as elderly in the framing narrative,... [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md] Costume/Silhouette: Confederate military background; likely wearing mid-19th century frontier/cavalry attire suitable for prospect... [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md] Prompt Phrases: Former Confederate cavalry officer, soldier of fortune, 1860s frontiersman, rugged prospector.
 
-- physical_traits: human male
-- costume_signature: Transitioning from 1860s cavalry attire to Martian spoils (silks and furs).
-- distinguishing_features: lacks typical Earthman ornaments/clothing
-- state_variants: Mid-19th century frontier/cavalry attire (prospector/soldier), Warrior/Survivor wearing Martian silks and furs
+- physical_traits: (none)
+- costume_signature: (none)
+- distinguishing_features: (none)
+- state_variants: (none)
 
 ## Behavioral Bible
 
-- personality: Capable of taming creatures through authority and kindness rather than brute force; survivor.
-- role: Former Confederate cavalry officer, soldier of fortune, warrior.
-- voice_notes: unknown
-- relationship_notes: capable of taming Martian thoats
+- personality: (none)
+- role: individual
+- voice_notes: (none)
+- relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: Visual transition from 1860s Earth attire to Martian spoils must be maintained., Must maintain the distinction of being an Earthman without typical "unsightly" ornaments.
-- unresolved_ambiguities: Specific physical build and proportions are not detailed., Exact movement language/posture is not specified.
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ A human male of Earth origin, John Carter presents as a rugged frontiersman with
 - status: `generated`
 - source_fingerprint: `c8f8573c39aa87087f7fb166cddfc9e5b8562965`
 - created_at_utc: `2026-04-25T20:46:48.056698+00:00`
-- updated_at_utc: `2026-04-25T21:10:02.055282+00:00`
+- updated_at_utc: `2026-04-25T21:38:11.899123+00:00`

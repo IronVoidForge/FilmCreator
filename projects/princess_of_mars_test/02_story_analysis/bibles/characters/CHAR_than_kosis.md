@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: A powerful Martian ruler and high-ranking noble of Zodanga.
+- identity_baseline: High-ranking Martian ruler and Jeddak of Zodanga.
 - age_presence: Elder male.
-- physical_build: unknown
-- origin_or_historical_context: Martian setting; specifically the Zodangan civilization.
-- movement_language: Commanding presence.
-Than Kosis is an elder male Martian ruler characterized by a commanding and authoritative presence. He is visually defined by his high-ranking status, appearing in regal Zodangan regalia and noble attire befitting a Jeddak. His silhouette is that of a powerful leader of the Zodangan people.
+- physical_build: Powerful build.
+- origin_or_historical_context: Zodangan/Martian nobility.
+- movement_language: Commanding presence; authoritative posture.
+Than Kosis is an elder male Martian ruler possessing a powerful build and a commanding, authoritative presence. He is defined by his high-ranking status as the Jeddak of Zodanga, typically appearing in regal Zodangan regalia and noble attire that signifies his command over his people.
 
 - physical_traits: unknown
-- costume_signature: Royal Zodangan regalia/regal authoritative attire.
+- costume_signature: Royal Zodangan regalia; regal, authoritative attire of a Jeddak.
 - distinguishing_features: unknown
 - state_variants: Royal/Ceremonial (Regalia)
 
 ## Behavioral Bible
 
-- personality: Authoritative and commanding.
-- role: Jeddak (Martian ruler) of Zodanga.
+- personality: Authoritative; commanding.
+- role: Jeddak (Ruler) of Zodanga.
 - voice_notes: unknown
-- relationship_notes: Commands massive manhunts.
+- relationship_notes: Commands massive manhunts and high-ranking nobility.
 
 ## Continuity
 
-- continuity_constraints: Must always maintain the visual status of a high-ranking noble or Jeddak when on screen., Costume must reflect Zodangan royal regalia.
-- unresolved_ambiguities: Specific physical build and exact facial features are unknown., Exact color palette or material of the regalia is not specified.
+- continuity_constraints: Must maintain the visual silhouette of a powerful, elder noble., Costume must remain consistent with Zodangan royal regalia.
+- unresolved_ambiguities: Specific facial features or scars are not documented., Exact physical dimensions/height are unknown.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ Than Kosis is an elder male Martian ruler characterized by a commanding and auth
 - status: `generated`
 - source_fingerprint: `98fbe1fe9d9b3c959609937c58b98dd3c6719b84`
 - created_at_utc: `2026-04-25T21:17:33.322576+00:00`
-- updated_at_utc: `2026-04-25T21:17:33.322576+00:00`
+- updated_at_utc: `2026-04-25T21:53:03.960004+00:00`

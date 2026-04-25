@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: Red-skinned Martian noblewoman
+- identity_baseline: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/dejah_thoris.md] Physical Description: Red Martian noblewoman; possesses deep intuition and historical knowledge.
 - age_presence: unknown
-- physical_build: elegant silhouette
-- origin_or_historical_context: Martian (Jeddak/humanoid)
+- physical_build: unknown
+- origin_or_historical_context: unknown
 - movement_language: unknown
-Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, high-born silhouette. Her appearance is defined by her status as a princess, typically seen in regal attire, though she may transition into specific states such as mourning or captivity.
+[source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/dejah_thoris.md] Physical Description: Red Martian noblewoman; possesses deep intuition and historical knowledge. [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH012/dejah_thoris.md] Physical Description: Red-skinned female (Jeddak/humanoid Martian). [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH012/dejah_thoris.md] Costume/Silhouette: Princess attire (implied).
 
-- physical_traits: humanoid anatomy
-- costume_signature: Princess attire
-- distinguishing_features: red skin
-- state_variants: princess attire, mourning attire, captive
+- physical_traits: (none)
+- costume_signature: (none)
+- distinguishing_features: (none)
+- state_variants: (none)
 
 ## Behavioral Bible
 
-- personality: possesses deep intuition and historical knowledge; capable of intense grief
-- role: Martian Princess / Noblewoman
-- voice_notes: unknown
-- relationship_notes: []
+- personality: (none)
+- role: individual
+- voice_notes: (none)
+- relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: skin tone must remain red/Martian, visual identity must maintain high-born/noble status cues
-- unresolved_ambiguities: specific age, exact physical proportions or mass, specific movement style
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ Dejah Thoris is a red-skinned Martian noblewoman characterized by an elegant, hi
 - status: `generated`
 - source_fingerprint: `79ecc5d7030bc937e67bbb0112802de57910c0d3`
 - created_at_utc: `2026-04-25T21:15:42.990236+00:00`
-- updated_at_utc: `2026-04-25T21:15:42.990236+00:00`
+- updated_at_utc: `2026-04-25T21:48:50.234390+00:00`

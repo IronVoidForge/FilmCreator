@@ -19,9 +19,9 @@
 - physical_build: Massive, immense strength, 10-15ft tall frame
 - origin_or_historical_context: unknown
 - movement_language: unknown
-A massive humanoid ape-like creature standing between 10 and 15 feet tall. The character is defined by a heavy, primate silhouette and possesses four arms. The build suggests immense physical strength and significant scale relative to standard humanoids.
+A massive humanoid ape-like creature standing between 10 and 15 feet tall. The character is defined by a heavy, primate silhouette and the presence of four arms. It possesses immense physical strength and a large-scale biological frame.
 
-- physical_traits: Four-armed anatomy, Large-scale humanoid proportions
+- physical_traits: Four-armed anatomy, Humanoid/ape hybrid morphology
 - costume_signature: Massive, four-armed primate silhouette
 - distinguishing_features: Four arms, Immense physical scale (10-15ft)
 - state_variants: unknown
@@ -52,4 +52,4 @@ A massive humanoid ape-like creature standing between 10 and 15 feet tall. The c
 - status: `generated`
 - source_fingerprint: `305402ea3aa88cba3e902ff5610b0bc95bcbc28e`
 - created_at_utc: `2026-04-25T21:14:23.682373+00:00`
-- updated_at_utc: `2026-04-25T21:14:23.682373+00:00`
+- updated_at_utc: `2026-04-25T21:45:44.751530+00:00`

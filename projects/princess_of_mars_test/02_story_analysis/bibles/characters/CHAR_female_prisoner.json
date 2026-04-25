@@ -32,11 +32,12 @@
     "unknown"
   ],
   "continuity_constraints": [
-    "character identity is tied to the status of being a female prisoner."
+    "character identity is tied to the status of being a prisoner."
   ],
   "unresolved_ambiguities": [
-    "complete lack of visual or behavioral description in provided evidence",
-    "actual name and physical appearance are unknown"
+    "physical appearance is entirely undocumented in provided evidence.",
+    "specific name or identity remains unknown.",
+    "age, build, and movement are unknown."
   ],
   "evidence_refs": [
     {
@@ -61,23 +62,18 @@
     "[CH011] CHAPTER XI (book index hit)"
   ],
   "visual_production_fallback": {
-    "status": "generated",
-    "fallback_bucket": "barsoom_humanoid",
-    "production_identity_descriptor": "Martian humanoid with species-appropriate anatomy",
-    "production_body_descriptor": "tall humanoid build adapted to Martian gravity",
-    "production_face_descriptor": "humanoid facial structure with Martian features",
-    "production_costume_descriptor": "minimal Martian harness, leather, and metal fittings",
-    "production_silhouette": "tall humanoid silhouette with Martian proportions",
-    "production_movement_descriptor": "fluid movement adapted to low gravity",
+    "status": "insufficient_context",
+    "fallback_bucket": "unknown_reference",
+    "production_identity_descriptor": "insufficient canon evidence for stable visual identity",
+    "production_body_descriptor": "unknown",
+    "production_face_descriptor": "unknown",
+    "production_costume_descriptor": "unknown",
+    "production_silhouette": "unknown",
+    "production_movement_descriptor": "unknown",
     "production_state_variants": [
-      "armed",
-      "battle-ready"
+      "prisoner (implied by ID)"
     ],
-    "negative_terms": [
-      "Earth clothing",
-      "heavy armor",
-      "human proportions"
-    ],
+    "negative_terms": [],
     "provisionality_note": "Generated for visual production because strict canon evidence is thin; not strict canon."
   },
   "metadata": {
@@ -86,7 +82,7 @@
     "status": "generated",
     "source_fingerprint": "dafe5d5359f3a68867d95c7505a0d91ec37b3ca6",
     "created_at_utc": "2026-04-25T21:14:32.937861+00:00",
-    "updated_at_utc": "2026-04-25T21:14:32.937861+00:00",
+    "updated_at_utc": "2026-04-25T21:46:03.896284+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "character_registry_entry",
@@ -99,6 +95,11 @@
     "revision_history": [
       {
         "timestamp_utc": "2026-04-25T21:14:41.258967+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "dafe5d5359f3a68867d95c7505a0d91ec37b3ca6"
+      },
+      {
+        "timestamp_utc": "2026-04-25T21:46:25.139302+00:00",
         "action": "synthesized",
         "source_fingerprint": "dafe5d5359f3a68867d95c7505a0d91ec37b3ca6"
       }

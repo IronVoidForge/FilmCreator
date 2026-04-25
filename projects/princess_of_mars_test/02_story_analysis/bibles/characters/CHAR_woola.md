@@ -19,7 +19,7 @@
 - physical_build: Large, beastly canine frame.
 - origin_or_historical_context: Martian setting.
 - movement_language: unknown
-Woola is a large Martian hound characterized by a beastly, canine-like silhouette. The most defining visual identifier is the presence of multiple tusks protruding from its head. As a calot, it possesses a massive frame suitable for acting as a protector and tracking animal.
+Woola is a large Martian hound characterized by a beastly, canine-like silhouette. The creature's most defining visual feature is its multiple tusks. As a calot, it possesses a massive frame suitable for acting as a protector and tracking animal.
 
 - physical_traits: Multi-tusked, Large scale
 - costume_signature: Large, beastly silhouette with prominent tusks.
@@ -28,15 +28,15 @@ Woola is a large Martian hound characterized by a beastly, canine-like silhouett
 
 ## Behavioral Bible
 
-- personality: Loyal, faithful, and protective.
-- role: Companion, protector, and tracking animal to the protagonist.
+- personality: Loyal and faithful; acts as a protector.
+- role: Companion, tracker, and protector against wild beasts.
 - voice_notes: unknown
-- relationship_notes: Loyal beast to the protagonist, Protector against wild beasts
+- relationship_notes: Accompanying the protagonist, Loyal beast to the protagonist
 
 ## Continuity
 
-- continuity_constraints: Must maintain multi-tusked feature in all appearances., Silhouette must remain large and canine-like.
-- unresolved_ambiguities: Specific species classification beyond "Martian hound" or "calot"., Exact scale/size relative to humans.
+- continuity_constraints: Must maintain multi-tusked identity across all appearances., Silhouette must remain large and canine-like.
+- unresolved_ambiguities: Specific species nomenclature (referred to as both "Martian hound" and "calot").
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ Woola is a large Martian hound characterized by a beastly, canine-like silhouett
 - status: `generated`
 - source_fingerprint: `2b4823c3b119f7826c6a45121c14abfb6034cc4a`
 - created_at_utc: `2026-04-25T21:14:50.525957+00:00`
-- updated_at_utc: `2026-04-25T21:14:50.525957+00:00`
+- updated_at_utc: `2026-04-25T21:46:40.701636+00:00`

@@ -23,7 +23,7 @@ A male Martian standing four feet tall. He possesses a physically perfect build,
 
 - physical_traits: Male, 4'0" height
 - costume_signature: unknown
-- distinguishing_features: Physically perfect proportions
+- distinguishing_features: Physically perfect proportions/physique
 - state_variants: unknown
 
 ## Behavioral Bible
@@ -31,12 +31,12 @@ A male Martian standing four feet tall. He possesses a physically perfect build,
 - personality: unknown
 - role: unknown
 - voice_notes: unknown
-- relationship_notes: (none)
+- relationship_notes: unknown
 
 ## Continuity
 
-- continuity_constraints: Height must remain consistent at four feet., Physical perfection is a defining anatomical trait.
-- unresolved_ambiguities: Specific costume or clothing style., Specific movement patterns or temperament.
+- continuity_constraints: Height must remain consistent at four feet., Physical perfection is a defining aesthetic trait.
+- unresolved_ambiguities: Specific costume or clothing style., Specific movement patterns or temperament., Exact age beyond the "young" descriptor.
 
 ## Evidence Summary
 
@@ -52,4 +52,4 @@ A male Martian standing four feet tall. He possesses a physically perfect build,
 - status: `generated`
 - source_fingerprint: `d5330af5d546b0bff2e1194fb2854b13415ff6f4`
 - created_at_utc: `2026-04-25T21:14:06.073399+00:00`
-- updated_at_utc: `2026-04-25T21:14:06.073399+00:00`
+- updated_at_utc: `2026-04-25T21:45:08.414194+00:00`

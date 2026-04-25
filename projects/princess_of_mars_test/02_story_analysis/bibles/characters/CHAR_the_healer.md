@@ -15,16 +15,16 @@
 ## Visual Bible
 
 - identity_baseline: Ancient female Warhoon
-- age_presence: Elderly; ancient
+- age_presence: Elderly / Ancient
 - physical_build: unknown
-- origin_or_historical_context: Warhoon culture/setting
+- origin_or_historical_context: Warhoon culture
 - movement_language: unknown
-An ancient female Warhoon characterized by a weathered and wise appearance. She carries the visual weight of her age and status, likely dressed in specialized healer's or elder's garments that define her silhouette within the Warhoon culture.
+An ancient female Warhoon characterized by a weathered and wise appearance. She is visually identified by her status as an elder, likely wearing traditional healer's or elder's garments that reflect her role within the Warhoon culture.
 
 - physical_traits: Wise or weathered facial features
 - costume_signature: Healer's or elder's garments
 - distinguishing_features: Weathered appearance
-- state_variants: Clothed in healer/elder attire
+- state_variants: Clothed (healer/elder attire)
 
 ## Behavioral Bible
 
@@ -35,7 +35,7 @@ An ancient female Warhoon characterized by a weathered and wise appearance. She 
 
 ## Continuity
 
-- continuity_constraints: Must maintain a weathered, ancient aesthetic consistent with an elder/healer role., Costume must reflect Warhoon healer or elder status.
+- continuity_constraints: Must maintain a weathered, elderly visual identity consistent with an ancient Warhoon., Costume must remain consistent with healer or elder status.
 - unresolved_ambiguities: Specific physical build and proportions are unknown., Exact movement style or posture is not documented.
 
 ## Evidence Summary
@@ -53,4 +53,4 @@ An ancient female Warhoon characterized by a weathered and wise appearance. She 
 - status: `generated`
 - source_fingerprint: `2a215f9f5c951366206a0b739a3b98e36de9e43a`
 - created_at_utc: `2026-04-25T21:18:04.102902+00:00`
-- updated_at_utc: `2026-04-25T21:18:04.102902+00:00`
+- updated_at_utc: `2026-04-25T21:54:14.832741+00:00`

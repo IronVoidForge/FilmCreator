@@ -35,8 +35,8 @@ No visual data is available in the provided evidence to establish a stable ident
 
 ## Continuity
 
-- continuity_constraints: character must maintain the role of a Martian warrior leader if visual details are later established.
-- unresolved_ambiguities: complete lack of physical description in provided evidence, identity and appearance remain entirely undefined
+- continuity_constraints: character identity is tied to the role of a Martian warrior leader
+- unresolved_ambiguities: complete lack of physical or behavioral description in provided evidence, visual appearance, age, and specific costume are entirely unstated
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ No visual data is available in the provided evidence to establish a stable ident
 - status: `generated`
 - source_fingerprint: `c55d452919070b1bcb928a8e00888b45524923a1`
 - created_at_utc: `2026-04-25T21:11:06.207873+00:00`
-- updated_at_utc: `2026-04-25T21:11:06.207873+00:00`
+- updated_at_utc: `2026-04-25T21:39:50.220026+00:00`

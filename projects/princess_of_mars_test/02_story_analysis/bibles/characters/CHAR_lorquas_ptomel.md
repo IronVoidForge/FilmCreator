@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: Green Martian (Thark) leader.
+- identity_baseline: Green Martian (Thark) leader
 - age_presence: unknown
 - physical_build: unknown
-- origin_or_historical_context: Thark civilization / Martian setting.
-- movement_language: authoritative posture.
-A high-ranking Green Martian (Thark) leader characterized by a stern and authoritative presence. The character wears Thark warrior attire consistent with their status as a chieftain or warrior leader.
+- origin_or_historical_context: Thark civilization / Mars
+- movement_language: authoritative presence
+A high-ranking Green Martian (Thark) leader characterized by a stern and authoritative demeanor. The character is identified as a chieftain or warrior leader, typically appearing in Thark warrior attire.
 
-- physical_traits: green complexion
-- costume_signature: Thark warrior attire.
+- physical_traits: green skin
+- costume_signature: Thark warrior attire
 - distinguishing_features: green skin
 - state_variants: warrior/leader attire
 
 ## Behavioral Bible
 
-- personality: Stern, authoritative demeanor.
+- personality: Stern, authoritative, and commanding.
 - role: High-ranking Thark leader / Chieftain.
 - voice_notes: unknown
 - relationship_notes: unknown
 
 ## Continuity
 
-- continuity_constraints: Must maintain green skin pigmentation., Must maintain a stern, authoritative expression and demeanor.
-- unresolved_ambiguities: Specific physical build and age are not defined in the evidence., Exact details of Thark warrior attire are implied but not explicitly described.
+- continuity_constraints: Must maintain green skin pigmentation consistent with the Thark species., Costume must reflect high-ranking warrior status within Thark culture.
+- unresolved_ambiguities: Specific physical build and age are not defined in the evidence., Exact details of the "Thark warrior attire" are implied but not visually specified.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ A high-ranking Green Martian (Thark) leader characterized by a stern and authori
 - status: `generated`
 - source_fingerprint: `0c8ff0d785d821436815c52c63de6e8712c2765a`
 - created_at_utc: `2026-04-25T21:15:58.249723+00:00`
-- updated_at_utc: `2026-04-25T21:15:58.249723+00:00`
+- updated_at_utc: `2026-04-25T21:49:16.393537+00:00`

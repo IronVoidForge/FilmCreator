@@ -19,7 +19,7 @@
 - physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-No visual data is available in the provided evidence to establish a stable identity, physical build, or costume for this character.
+No visual data is available in the provided evidence to establish a stable identity, physical build, or costume signature for this character.
 
 - physical_traits: unknown
 - costume_signature: unknown
@@ -35,7 +35,7 @@ No visual data is available in the provided evidence to establish a stable ident
 
 ## Continuity
 
-- continuity_constraints: (none)
+- continuity_constraints: unknown
 - unresolved_ambiguities: Character identity and physical appearance are entirely unestablished in the provided evidence.
 
 ## Evidence Summary
@@ -50,4 +50,4 @@ No visual data is available in the provided evidence to establish a stable ident
 - status: `generated`
 - source_fingerprint: `079b82a3dae28cda980e5c680c78a65a4c0edd16`
 - created_at_utc: `2026-04-25T21:13:24.148188+00:00`
-- updated_at_utc: `2026-04-25T21:13:24.148188+00:00`
+- updated_at_utc: `2026-04-25T21:43:42.172403+00:00`

@@ -19,7 +19,7 @@
 - physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-No visual data is available in the provided evidence to establish a stable identity, physical build, or costume for this character.
+No visual data is available in the provided evidence to establish a stable identity, physical build, or costume for this character. The entity is identified only by its canonical ID and name.
 
 - physical_traits: unknown
 - costume_signature: unknown
@@ -35,8 +35,8 @@ No visual data is available in the provided evidence to establish a stable ident
 
 ## Continuity
 
-- continuity_constraints: (none)
-- unresolved_ambiguities: Visual identity is entirely unestablished in the provided evidence., Physical scale and nature are unknown despite the name "colossal creature".
+- continuity_constraints: character is treated as a singular individual entity
+- unresolved_ambiguities: total lack of visual or behavioral description in provided evidence
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ No visual data is available in the provided evidence to establish a stable ident
 - status: `generated`
 - source_fingerprint: `216afbaf927ed97bfb1c12f55ece54c2a41f9be3`
 - created_at_utc: `2026-04-25T21:13:41.604897+00:00`
-- updated_at_utc: `2026-04-25T21:13:41.604897+00:00`
+- updated_at_utc: `2026-04-25T21:44:16.269223+00:00`
