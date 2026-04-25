@@ -16,8 +16,10 @@ from .scaffold import create_project
 from .visual_fallbacks import (
     character_negative_terms,
     environment_negative_terms,
+    fallback_text,
     load_visual_fallbacks,
     run_visual_fallback_synthesis,
+    select_environment_fallback_bucket,
     visual_fallback_path,
 )
 
@@ -1388,7 +1390,8 @@ def _package_for_character(
         },
     )
     reference_instruction = "If this prompt is later used with an image reference, treat image1 as the locked identity reference."
-    negative_prompt = _prompt_negative_prompt(character_negative_terms(visual_fallbacks), repair.get("negative_terms", []))
+    character_wardrobe_negatives = character_negative_terms(visual_fallbacks)
+    negative_prompt = _prompt_negative_prompt(character_wardrobe_negatives, repair.get("negative_terms", []))
     package = PromptPackage(
         path=package_path,
         title=title,
@@ -1416,6 +1419,16 @@ def _package_for_character(
     return package, package_path, [str(path) for path in sources]
 
 
+def _environment_fallback_bucket(environment_id: str, display_name: str) -> str:
+    combined = f"{environment_id} {display_name}".lower()
+    return select_environment_fallback_bucket(combined)
+
+
+def _environment_fallback_text(environment_id: str, display_name: str, visual_fallbacks: dict[str, Any]) -> str:
+    bucket = _environment_fallback_bucket(environment_id, display_name)
+    return fallback_text(visual_fallbacks, "environment", bucket)
+
+
 def _package_for_environment(
     *,
     project_dir: Path,
@@ -1429,20 +1442,32 @@ def _package_for_environment(
     display_name = str(bible.get("display_name", environment_id)).strip() or environment_id
     descriptor_source = descriptor or {}
     repair = _descriptor_repair(descriptor)
+    
+    fallback_bucket_text = _environment_fallback_text(environment_id, display_name, visual_fallbacks)
+    
     layout_descriptor = _prompt_field_text(
         descriptor_source,
         repair,
         "layout_descriptor",
         bible.get("layout_notes", ""),
         bible.get("visual_summary", ""),
+        fallback_bucket_text,
     )
-    scale_descriptor = _prompt_field_text(descriptor_source, repair, "scale_descriptor", bible.get("scale", ""), bible.get("depth_cues", ""))
+    scale_descriptor = _prompt_field_text(
+        descriptor_source,
+        repair,
+        "scale_descriptor",
+        bible.get("scale", ""),
+        bible.get("depth_cues", ""),
+        fallback_bucket_text,
+    )
     architecture_descriptor = _prompt_field_text(
         descriptor_source,
         repair,
         "architecture_descriptor",
         bible.get("architecture", ""),
         bible.get("materials", ""),
+        fallback_bucket_text,
     )
     landmark_descriptor = _prompt_field_text(
         descriptor_source,
@@ -1450,9 +1475,27 @@ def _package_for_environment(
         "landmark_descriptor",
         bible.get("recurring_elements", ""),
     )
-    lighting_descriptor = _prompt_field_text(descriptor_source, repair, "lighting_descriptor", bible.get("lighting", ""))
-    mood_descriptor = _prompt_field_text(descriptor_source, repair, "mood_descriptor", bible.get("mood", ""))
-    locked_fields = _prompt_field_text(descriptor_source, repair, "locked_fields", bible.get("locked_fields", ""))
+    lighting_descriptor = _prompt_field_text(
+        descriptor_source,
+        repair,
+        "lighting_descriptor",
+        bible.get("lighting", ""),
+        fallback_bucket_text,
+    )
+    mood_descriptor = _prompt_field_text(
+        descriptor_source,
+        repair,
+        "mood_descriptor",
+        bible.get("mood", ""),
+        fallback_bucket_text,
+    )
+    locked_fields = _prompt_field_text(
+        descriptor_source,
+        repair,
+        "locked_fields",
+        bible.get("locked_fields", ""),
+        fallback_bucket_text,
+    )
     source_visual_context = _prompt_field_text(descriptor_source, repair, "source_visual_context", visual_fallbacks.get("book_visual_context", ""))
     subject_visual_context = _prompt_field_text(descriptor_source, repair, "subject_visual_context", display_name, environment_id)
     descriptor_clauses = _dedupe_prompt_clauses(
@@ -1543,7 +1586,8 @@ def _package_for_environment(
         },
     )
     reference_instruction = "If this prompt is later used with an image reference, treat image1 as the locked spatial reference."
-    negative_prompt = _prompt_negative_prompt(environment_negative_terms(visual_fallbacks), repair.get("negative_terms", []))
+    environment_negatives = environment_negative_terms(visual_fallbacks)
+    negative_prompt = _prompt_negative_prompt(environment_negatives, repair.get("negative_terms", []))
     package = PromptPackage(
         path=package_path,
         title=title,
@@ -1579,6 +1623,7 @@ def _package_for_shot(
     variant: tuple[str, str, str],
     character_bibles: dict[str, dict[str, Any]],
     environment_bibles: dict[str, dict[str, Any]],
+    visual_fallbacks: dict[str, Any],
     scene_descriptor: dict[str, Any] | None = None,
     shot_descriptor: dict[str, Any] | None = None,
     character_descriptors: dict[str, dict[str, Any]] | None = None,
@@ -1773,7 +1818,20 @@ def _package_for_shot(
         composition_hint=composition_hint,
     )
 
-    prompt_parts: list[str] = [f"Use {image_key} as the {role_text}" for image_key, role_text, _ in reference_roles]
+    book_visual_context = _prompt_field_text(None, {}, "book_visual_context", visual_fallbacks.get("book_visual_context", ""))
+    
+    prompt_parts: list[str] = []
+    for image_key, role_text, asset_label in reference_roles:
+        if visible_primary_subject_id and asset_label == _asset_role_label(visible_primary_subject_id):
+            prompt_parts.append(f"Use {image_key} as the identity reference for {asset_label}")
+        elif environment_canonical_id and asset_label == _asset_role_label(environment_canonical_id):
+            prompt_parts.append(f"Use {image_key} as the environment reference for {asset_label}")
+        else:
+            prompt_parts.append(f"Use {image_key} as the {role_text}")
+    
+    if book_visual_context:
+        prompt_parts.append(f"Maintain the project visual language: {book_visual_context}")
+    
     primary_subject_descriptor_text = _shot_prompt_detail_clause(primary_subject_descriptor)
     primary_subject_text = _shot_prompt_detail_clause(primary_subject)
     environment_reference_text = _shot_prompt_detail_clause(environment_reference_descriptor, environment_descriptor)
@@ -1798,7 +1856,7 @@ def _package_for_shot(
             primary_subject_facing_direction,
             primary_subject_pose_description,
         )
-    elif primary_image_key:
+    elif primary_image_key and visible_primary_subject_id:
         primary_subject_clause = _compose_prompt_clause(
             f"The subject from {primary_image_key} is",
             primary_subject_descriptor_text or primary_subject_text,
@@ -1832,11 +1890,10 @@ def _package_for_shot(
     environment_subject = _first_nonempty(environment_reference_text, environment_descriptor_text, fallback="")
     if environment_canonical_id and environment_image_key:
         environment_clause = _compose_prompt_clause(
-            "Preserve the environment",
+            f"Preserve the environment from {environment_image_key}",
             environment_subject,
-            f"from {environment_image_key}",
             f"especially {environment_anchor_clause}" if environment_anchor_clause else "",
-            separator=" ",
+            separator=", ",
         )
     else:
         environment_clause = _clean_prompt_clause(f"Preserve {environment_descriptor}")
@@ -1981,6 +2038,16 @@ def _package_for_shot(
     for image_key, role_text, asset_label in reference_roles:
         inputs[f"{image_key}_role"] = role_text
         inputs[f"{image_key}_asset"] = asset_label
+    shot_negative_terms: list[str] = []
+    if visible_primary_subject_id:
+        character_wardrobe_negatives = character_negative_terms(visual_fallbacks)
+        shot_negative_terms.extend(character_wardrobe_negatives)
+    if environment_canonical_id:
+        environment_negatives = environment_negative_terms(visual_fallbacks)
+        shot_negative_terms.extend(environment_negatives)
+    
+    shot_negative_prompt = _prompt_negative_prompt(*shot_negative_terms) if shot_negative_terms else GENERIC_NEGATIVE_PROMPT
+    
     package = PromptPackage(
         path=package_path,
         title=title,
@@ -1988,7 +2055,7 @@ def _package_for_shot(
         purpose="Prepare a structured multi-reference shot prompt for enhancer-safe generation.",
         workflow_type="still.scene_build.four_ref.klein.distilled",
         positive_prompt=positive_prompt,
-        negative_prompt=GENERIC_NEGATIVE_PROMPT,
+        negative_prompt=shot_negative_prompt,
         inputs_markdown="\n".join(f"- {key}: {value}" for key, value in inputs.items()),
         continuity_notes_markdown="\n".join(
             [
@@ -2276,6 +2343,7 @@ def run_prompt_preparation(
                     variant=variant,
                     character_bibles=character_bibles,
                     environment_bibles=environment_bibles,
+                    visual_fallbacks=visual_fallbacks,
                     scene_descriptor=scene_descriptor,
                     shot_descriptor=shot_descriptor,
                     character_descriptors=character_descriptors,
