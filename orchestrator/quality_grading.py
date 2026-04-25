@@ -621,8 +621,21 @@ def _grader_shot(payload: dict[str, Any]) -> tuple[int, int, int, int, int, list
     return completeness, evidence_support, consistency, prompt_readiness, inference_load, notes
 
 
+def _is_silent_dialogue(payload: dict[str, Any]) -> bool:
+    """Check if dialogue is explicitly marked as silent/no dialogue expected."""
+    if isinstance(payload, dict):
+        if payload.get("no_dialogue_expected") is True:
+            return True
+        metadata = payload.get("metadata")
+        if isinstance(metadata, dict) and metadata.get("no_dialogue_expected") is True:
+            return True
+    return False
+
+
 def _grader_dialogue(payload: dict[str, Any], *, artifact_path: Path) -> tuple[int, int, int, int, int, list[str]]:
     events = _dialogue_event_list(payload)
+    is_silent = _is_silent_dialogue(payload)
+    
     if isinstance(payload, list) or (isinstance(payload, dict) and "dialogue_events" in payload):
         payload_dict = payload if isinstance(payload, dict) else {}
         scene_bindings = payload_dict.get("scene_bindings") if isinstance(payload_dict.get("scene_bindings"), list) else []
@@ -635,7 +648,7 @@ def _grader_dialogue(payload: dict[str, Any], *, artifact_path: Path) -> tuple[i
         notes = []
         if unresolved:
             notes.append(f"{unresolved} unresolved speakers")
-        if not events:
+        if not events and not is_silent:
             notes.append("no dialogue events")
         return completeness, evidence_support, consistency, prompt_readiness, inference_load, notes
 
@@ -708,6 +721,39 @@ def _grader_descriptor(payload: dict[str, Any]) -> tuple[int, int, int, int, int
     return completeness, evidence_support, consistency, prompt_readiness, inference_load, notes
 
 
+def _has_prompt_semantic_issue(text: str) -> tuple[bool, list[str]]:
+    """Check for semantic issues that should cap grade below A."""
+    issues = []
+    text_lower = text.lower()
+    
+    if "missing the required subject anchor" in text_lower or "missing required subject anchor" in text_lower:
+        issues.append("Prompt body is missing the required subject anchor")
+    
+    if "reference conflict" in text_lower:
+        issues.append("reference conflict exists")
+    
+    if "image1" in text_lower and "subject contradicts" in text_lower:
+        issues.append("image1 subject contradicts visible primary subject")
+    
+    if "visible subject exists" in text_lower and "positive prompt omits" in text_lower:
+        issues.append("visible subject exists but positive prompt omits it")
+    
+    if "shot negatives" in text_lower and "missing fallback" in text_lower:
+        issues.append("shot negatives are missing fallback terms")
+    
+    env_markers = ["architecture", "lighting", "mood", "scale"]
+    if "environment" in text_lower:
+        missing_env = [m for m in env_markers if m not in text_lower]
+        if len(missing_env) >= 2:
+            issues.append(f"environment prompt missing {', '.join(missing_env[:2])} descriptors")
+    
+    if "character" in text_lower:
+        if "body_descriptor" not in text_lower and "locked_fields" not in text_lower and "fallback repair" not in text_lower:
+            issues.append("character prompt missing body_descriptor or locked_fields and no fallback repair")
+    
+    return len(issues) > 0, issues
+
+
 def _grader_prompt_package(text: str) -> tuple[int, int, int, int, int, list[str]]:
     lines = text.splitlines()
     sections = sum(1 for line in lines if line.startswith("#"))
@@ -724,6 +770,11 @@ def _grader_prompt_package(text: str) -> tuple[int, int, int, int, int, list[str
         notes.append("reference ids are missing")
     if unknown_like:
         notes.append("placeholder language present")
+    
+    has_semantic_issue, semantic_issues = _has_prompt_semantic_issue(text)
+    if has_semantic_issue:
+        notes.extend(semantic_issues)
+    
     return completeness, evidence_support, consistency, prompt_readiness, inference_load, notes
 
 
@@ -796,12 +847,43 @@ def _make_grade_record(
     grade_band = _band_from_score(average)
     locked = _has_locked_fields(payload) if isinstance(payload, dict) else False
     rerun_recommended = not locked and quality_score_10 <= 6
-    review_status = "locked" if locked else ("rerun" if rerun_recommended else "ok")
     reason_bits = list(notes)
-    if grade_band == "C":
-        reason_bits.append("borderline completeness")
-    elif grade_band in {"D", "F"}:
-        reason_bits.append("low completeness or evidence coverage")
+    
+    # Apply prompt package semantic caps
+    if family.family == "prompt_package" and isinstance(payload, str):
+        has_semantic_issue, semantic_issues = _has_prompt_semantic_issue(payload)
+        if has_semantic_issue or prompt_readiness < 80:
+            if grade_band == "A":
+                grade_band = "C"
+                quality_score_10 = min(quality_score_10, 7)
+            rerun_recommended = True
+            if has_semantic_issue:
+                reason_bits.append("semantic prompt assembly issue")
+            if prompt_readiness < 80:
+                reason_bits.append(f"prompt readiness {prompt_readiness} below threshold 80")
+    
+    # Apply dialogue silent mode logic
+    if family.family == "dialogue_timeline" and isinstance(payload, (dict, list)):
+        events = _dialogue_event_list(payload)
+        is_silent = _is_silent_dialogue(payload)
+        if not events and is_silent:
+            # Silent dialogue with no events is acceptable
+            rerun_recommended = False
+            reason_bits = []
+        elif not events and not is_silent:
+            # Expected dialogue but no events - should rerun
+            rerun_recommended = True
+            if "no dialogue events" not in reason_bits:
+                reason_bits.append("expected dialogue but no events generated")
+    
+    # Add general rerun reasons for non-special families
+    if family.family not in {"prompt_package", "dialogue_timeline"}:
+        if grade_band == "C":
+            reason_bits.append("borderline completeness")
+        elif grade_band in {"D", "F"}:
+            reason_bits.append("low completeness or evidence coverage")
+    
+    review_status = "locked" if locked else ("rerun" if rerun_recommended else "ok")
     rerun_reason = reason_bits
     dependency_refs = list(family.dependencies)
 
@@ -823,7 +905,7 @@ def _make_grade_record(
         review_status=review_status,
         rerun_recommended=rerun_recommended,
         rerun_scope=family.rerun_scope if rerun_recommended else "",
-        rerun_stage=family.rerun_stage if rerun_recommended else "",
+        rerun_stage="run-prompt-preparation" if (family.family == "prompt_package" and rerun_recommended) else (family.rerun_stage if rerun_recommended else ""),
         rerun_reason=rerun_reason,
         dependency_refs=dependency_refs,
         evidence_refs=evidence_refs if isinstance(evidence_refs, list) else [],

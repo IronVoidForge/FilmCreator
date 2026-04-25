@@ -64,6 +64,7 @@ class CharacterBible:
 
     evidence_refs: list[dict[str, Any]] = field(default_factory=list)
     evidence_summary: list[str] = field(default_factory=list)
+    visual_production_fallback: dict[str, Any] = field(default_factory=dict)
     metadata: CharacterBibleMetadata | None = None
 
     def to_dict(self) -> dict[str, Any]:
@@ -94,6 +95,7 @@ class CharacterBible:
             "unresolved_ambiguities": self.unresolved_ambiguities,
             "evidence_refs": self.evidence_refs,
             "evidence_summary": self.evidence_summary,
+            "visual_production_fallback": self.visual_production_fallback,
             "metadata": self.metadata.to_dict() if self.metadata else None,
         }
 

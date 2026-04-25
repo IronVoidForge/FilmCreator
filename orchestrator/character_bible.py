@@ -13,6 +13,10 @@ from .character_bible_models import (
     CharacterBibleMetadata,
     CharacterBibleSynthesisSummary,
 )
+from .character_bible_fallback import (
+    needs_visual_production_fallback,
+    deterministic_visual_fallback,
+)
 from .character_bible_writer import (
     write_character_bible_index,
     write_character_bible_review_index,
@@ -883,6 +887,10 @@ def run_character_bible_synthesis(
             evidence_summary=evidence_summary,
             metadata=metadata,
         )
+        
+        # Generate visual production fallback if canon evidence is thin
+        if needs_visual_production_fallback(merged):
+            bible.visual_production_fallback = deterministic_visual_fallback(entry, merged, evidence_summary)
 
         _write_json_and_markdown(base_path, bible)
         written_files.extend([str(base_path.with_suffix(".json")), str(base_path.with_suffix(".md"))])

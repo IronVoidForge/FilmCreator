@@ -336,9 +336,9 @@ def _prompt_field_text(descriptor: dict[str, Any] | None, repair: dict[str, Any]
     field_values = descriptor.get("field_values", {}) if isinstance(descriptor.get("field_values", {}), dict) else {}
     return _prompt_text(
         supported.get(field_name),
+        repair.get(field_name),
         generated.get(field_name),
         field_values.get(field_name),
-        repair.get(field_name),
         *fallback_values,
     )
 
