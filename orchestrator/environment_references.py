@@ -68,9 +68,14 @@ def run_environment_reference_planning(project_slug: str, *, force: bool = False
                 entries.append(entry)
                 continue
             path = prompt_package_path(project_dir, "environment", environment_id, variant)
-            prompt_warnings = validate_prompt_package(path, REQUIRED_ENVIRONMENT_REFERENCE_INPUTS)
-            prompt_warnings.extend(_recommended_input_warnings(path))
+            blocking_warnings = validate_prompt_package(path, REQUIRED_ENVIRONMENT_REFERENCE_INPUTS)
+            recommended_warnings = _recommended_input_warnings(path)
+            prompt_warnings = blocking_warnings + recommended_warnings
+            
             request = make_reference_request(asset_kind="environment", asset_id=environment_id, variant_key=variant, prompt_path=path, priority=priority, warnings=prompt_warnings)
+            request["status"] = "blocked" if blocking_warnings else "prepared"
+            request["blocking_warnings"] = blocking_warnings
+            request["recommended_warnings"] = recommended_warnings
             request["generation_stage"] = _generation_stage_for_variant(variant)
             request["generation_workflow_id"] = _workflow_for_variant(variant)
             if test_slice:
@@ -81,8 +86,10 @@ def run_environment_reference_planning(project_slug: str, *, force: bool = False
             if variant not in ENVIRONMENT_MASTER_VARIANTS:
                 request.setdefault("review_notes", []).append(f"Requires an approved locked {ENVIRONMENT_PRIMARY_MASTER_VARIANT} environment reference before generation.")
             entries.append(request)
-            if prompt_warnings:
-                warnings.append(f"{environment_id}/{variant}: " + "; ".join(prompt_warnings))
+            if blocking_warnings:
+                warnings.append(f"{environment_id}/{variant} (BLOCKING): " + "; ".join(blocking_warnings))
+            if recommended_warnings:
+                warnings.append(f"{environment_id}/{variant} (RECOMMENDED): " + "; ".join(recommended_warnings))
 
     if test_slice:
         entries = _apply_validation_slice_caps(entries)
@@ -127,8 +134,12 @@ def run_environment_reference_generation(
                 continue
             if status == "blocked" and not test_slice:
                 continue
-            if entry.get("warnings") and not test_slice:
+            
+            # Recommended warnings should not block generation
+            blocking = entry.get("blocking_warnings", [])
+            if blocking and not test_slice:
                 continue
+                
             eligible.append(entry)
 
     if test_slice:
@@ -431,8 +442,11 @@ def _prompt_prepared_entries(
         prompt_path = Path(str(item.get("path", "")))
         if not prompt_path.exists():
             continue
-        warnings = validate_prompt_package(prompt_path, REQUIRED_ENVIRONMENT_REFERENCE_INPUTS)
-        warnings.extend(_recommended_input_warnings(prompt_path))
+        
+        blocking_warnings = validate_prompt_package(prompt_path, REQUIRED_ENVIRONMENT_REFERENCE_INPUTS)
+        recommended_warnings = _recommended_input_warnings(prompt_path)
+        warnings = blocking_warnings + recommended_warnings
+        
         entries.append(
             {
                 "schema_version": "2026-04-23-reference-assets-v1",
@@ -441,13 +455,15 @@ def _prompt_prepared_entries(
                 "asset_id": asset_id,
                 "variant_key": variant,
                 "prompt_package_path": str(prompt_path),
-                "status": "prepared" if not warnings else "blocked",
+                "status": "prepared" if not blocking_warnings else "blocked",
                 "approval_state": "unreviewed",
                 "locked": False,
                 "priority": "normal",
                 "candidate_ids": [],
                 "selected_candidate_id": "",
                 "review_notes": [],
+                "blocking_warnings": blocking_warnings,
+                "recommended_warnings": recommended_warnings,
                 "warnings": warnings,
                 "updated_at": "",
                 "generation_stage": _generation_stage_for_variant(variant),

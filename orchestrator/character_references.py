@@ -5,8 +5,7 @@ from typing import Any
 
 from .character_bible import _is_film_facing_character
 from .core.json_io import read_json
-from .prompt_boosters import apply_booster_bundles
-from .prompt_package import PromptPackage, parse_prompt_package, write_prompt_package
+from .prompt_package import PromptPackage, parse_prompt_package, write_prompt_package, _split_sections
 from .reference_assets import (
     CHARACTER_DEFAULT_VARIANTS,
     ReferencePhaseSummary,
@@ -69,9 +68,17 @@ def run_character_reference_planning(project_slug: str, *, force: bool = False, 
                 entries.append(entry)
                 continue
             path = prompt_package_path(project_dir, "character", character_id, variant)
-            prompt_warnings = validate_prompt_package(path, REQUIRED_CHARACTER_REFERENCE_INPUTS)
-            prompt_warnings.extend(_recommended_input_warnings(path))
+            blocking_warnings = validate_prompt_package(path, REQUIRED_CHARACTER_REFERENCE_INPUTS)
+            recommended_warnings = _recommended_input_warnings(path)
+            prompt_warnings = blocking_warnings + recommended_warnings
+            
+            identity_review_required = _is_character_identity_review_required(project_dir, character_id)
+            
             request = make_reference_request(asset_kind="character", asset_id=character_id, variant_key=variant, prompt_path=path, priority=priority, warnings=prompt_warnings)
+            request["status"] = "blocked" if blocking_warnings else "prepared"
+            request["blocking_warnings"] = blocking_warnings
+            request["recommended_warnings"] = recommended_warnings
+            request["identity_review_required"] = identity_review_required
             request["generation_stage"] = _generation_stage_for_variant(variant)
             request["generation_workflow_id"] = _workflow_for_variant(variant)
             if test_slice:
@@ -82,8 +89,10 @@ def run_character_reference_planning(project_slug: str, *, force: bool = False, 
             if variant not in CHARACTER_MASTER_VARIANTS:
                 request.setdefault("review_notes", []).append(f"Requires an approved locked {CHARACTER_PRIMARY_MASTER_VARIANT} character reference before generation.")
             entries.append(request)
-            if prompt_warnings:
-                warnings.append(f"{character_id}/{variant}: " + "; ".join(prompt_warnings))
+            if blocking_warnings:
+                warnings.append(f"{character_id}/{variant} (BLOCKING): " + "; ".join(blocking_warnings))
+            if recommended_warnings:
+                warnings.append(f"{character_id}/{variant} (RECOMMENDED): " + "; ".join(recommended_warnings))
 
     if test_slice:
         entries = _apply_validation_slice_caps(entries)
@@ -103,6 +112,7 @@ def run_character_reference_generation(
     test_slice: bool = False,
     prompt_variant_id: str = "raw",
     booster_bundle_ids: list[str] | None = None,
+    include_unresolved_identities: bool = False,
 ) -> ReferencePhaseSummary:
     project_dir = create_project(project_slug)
     selected_variants = {v.strip().lower() for v in variants or [] if v.strip()}
@@ -128,8 +138,11 @@ def run_character_reference_generation(
                 continue
             if status == "blocked" and not test_slice:
                 continue
-            if entry.get("warnings") and not test_slice:
+            
+            # Unresolved identity guard
+            if entry.get("identity_review_required") and not include_unresolved_identities:
                 continue
+                
             prompt_path = Path(str(entry.get("prompt_package_path", "")))
             if not prompt_path.exists():
                 continue
@@ -139,6 +152,9 @@ def run_character_reference_generation(
         eligible = _fallback_prompt_prepared_entries(project_dir, "character", selected_variants, selected_ids)
 
     if test_slice:
+        # Also filter out unresolved identities from test-slice by default
+        if not include_unresolved_identities:
+            eligible = [e for e in eligible if not e.get("identity_review_required")]
         eligible = _apply_validation_slice_caps(eligible)
     selected_entries = eligible if limit is None else eligible[:limit]
     for entry in selected_entries:
@@ -435,8 +451,15 @@ def _prompt_prepared_entries(
         prompt_path = Path(str(item.get("path", "")))
         if not prompt_path.exists():
             continue
-        warnings = validate_prompt_package(prompt_path, REQUIRED_CHARACTER_REFERENCE_INPUTS)
-        warnings.extend(_recommended_input_warnings(prompt_path))
+        
+        blocking_warnings = validate_prompt_package(prompt_path, REQUIRED_CHARACTER_REFERENCE_INPUTS)
+        recommended_warnings = _recommended_input_warnings(prompt_path)
+        warnings = blocking_warnings + recommended_warnings
+        
+        identity_review_required = False
+        if subject_kind == "character":
+            identity_review_required = _is_character_identity_review_required(project_dir, asset_id)
+            
         entries.append(
             {
                 "schema_version": "2026-04-23-reference-assets-v1",
@@ -445,20 +468,34 @@ def _prompt_prepared_entries(
                 "asset_id": asset_id,
                 "variant_key": variant,
                 "prompt_package_path": str(prompt_path),
-                "status": "prepared" if not warnings else "blocked",
+                "status": "prepared" if not blocking_warnings else "blocked",
                 "approval_state": "unreviewed",
                 "locked": False,
                 "priority": "normal",
                 "candidate_ids": [],
                 "selected_candidate_id": "",
                 "review_notes": [],
+                "blocking_warnings": blocking_warnings,
+                "recommended_warnings": recommended_warnings,
                 "warnings": warnings,
+                "identity_review_required": identity_review_required,
                 "updated_at": "",
                 "generation_stage": _generation_stage_for_variant(variant),
                 "generation_workflow_id": _workflow_for_variant(variant),
             }
         )
     return entries
+
+
+def _is_character_identity_review_required(project_dir: Path, character_id: str) -> bool:
+    path = project_dir / "01_source" / "character_descriptions" / f"{character_id}_clarification.md"
+    if not path.exists():
+        return False
+    try:
+        sections = _split_sections(path.read_text(encoding="utf-8"))
+        return not sections.get("Clarification Response", "").strip()
+    except Exception:
+        return True
 
 
 def _prepend_prompt_instruction(prompt: str, instruction: str) -> str:
