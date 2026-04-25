@@ -14,11 +14,38 @@ The spec covers:
 6. Chapter-aware test-slice selection
 7. Quick-test BAT updates
 
-## Problem Summary
+## Implementation Status On Experimental Branch
+
+Branch:
+
+```text
+spec-visual-fallback-descriptor-repair
+```
+
+Safe helper files currently added:
+
+```text
+orchestrator/visual_fallbacks.py
+orchestrator/character_descriptor_repair.py
+orchestrator/environment_descriptor_repair.py
+spec/VISUAL_FALLBACKS_DESCRIPTOR_REPAIR_AND_CHAPTER_SLICE_SPEC.md
+```
+
+Important branch warning:
+
+```text
+Do not blindly pull orchestrator/cli.py from this branch. It was touched during experimentation and should be restored/reviewed locally before use.
+```
+
+The helper modules are intended to be cherry-picked or manually merged into the current working branch, then wired into the core pipeline locally with compile/tests.
+
+---
+
+# Problem Summary
 
 Recent Phase 12/13 tests exposed two major failures.
 
-### Character failure
+## Character failure
 
 `ape_man_1` generated as modern portrait subjects, including corporate-style clothing. The repository shows `ape_man_1` has an unresolved clarification file and may match other existing identities. It should not have been treated as a stable canonical character reference target by default.
 
@@ -29,7 +56,7 @@ Root causes:
 - missing costume fields allowed modern clothing drift
 - no project-level visual/wardrobe fallback was available
 
-### Environment failure
+## Environment failure
 
 `arizona_mountain_cave` generated as generic open hills/grassland instead of a cave reference.
 
@@ -40,7 +67,9 @@ Root causes:
 - no specific cave landmark, cliff face, rocky threshold, or shadowed interior was injected
 - no project-level environment fallback existed
 
-## Design Principles
+---
+
+# Design Principles
 
 - Base prompt packages should contain canonical source-aware visual context.
 - Booster packs remain generation-time experimental modifiers, not the source of canon.
@@ -49,6 +78,7 @@ Root causes:
 - Fallback text must be marked as inferred or fallback, not treated as explicit book canon.
 - The book title may be stored as provenance, but prompts must use visual descriptors that do not depend on the model knowing the book.
 - Chapter test slices should select characters/environments from the chosen chapters, not arbitrary global entries.
+- Do not overwrite raw extraction fields when repairing descriptors. Store repairs under `reference_repair` or another explicit repair namespace.
 
 ---
 
@@ -190,32 +220,6 @@ Use, in priority order:
 5. selected fallback bucket from `character_fallbacks`
 6. safe reference defaults
 
-### Required behavior
-
-If costume is weak, write a fallback sentence such as:
-
-```text
-Costume not specifically described; use project visual fallback: non-modern pulp adventure clothing, weathered natural materials, frontier or alien-world styling as appropriate. Avoid modern business clothing, suits, ties, turtlenecks, athletic catalog styling, and corporate portrait styling.
-```
-
-If posture is weak:
-
-```text
-Neutral readable reference posture unless chapter context specifies action.
-```
-
-If expression is weak:
-
-```text
-Neutral readable expression unless chapter context specifies fear, aggression, grief, exhaustion, or another clear emotion.
-```
-
-If locked fields are weak:
-
-```text
-Preserve confirmed species or body type, skin tone, silhouette, costume era, and any source-supported distinguishing traits.
-```
-
 ### Storage
 
 Do not overwrite raw extraction. Store repaired values under a clear key, for example:
@@ -279,7 +283,7 @@ Use, in priority order:
 5. selected fallback bucket from `environment_fallbacks`
 6. safe reference defaults
 
-### Required behavior
+### Cave/cliffside repair requirement
 
 For a cave/cliffside environment, repair should explicitly include:
 
@@ -312,6 +316,34 @@ For `arizona_mountain_cave`, repaired fields should resemble:
 
 Prompt preparation must consume repaired descriptor values before writing prompt packages.
 
+## Local implementation guidance
+
+Modify:
+
+```text
+orchestrator/prompt_preparation.py
+```
+
+Do this locally with compile/tests because the file is large and central. Avoid full-file remote replacement.
+
+### Imports
+
+Add:
+
+```python
+from .visual_fallbacks import load_visual_fallbacks, character_negative_terms, environment_negative_terms
+```
+
+### Load visual fallbacks once
+
+Inside `run_prompt_preparation`, after `project_dir` is created:
+
+```python
+visual_fallbacks = load_visual_fallbacks(project_dir)
+```
+
+This avoids recomputing visual context per character/environment and keeps Phase 10.5 as the shared source of truth.
+
 ## New prompt package inputs
 
 Add these inputs where applicable:
@@ -322,43 +354,95 @@ subject_visual_context
 fallback_fields_used
 ```
 
-### Source visual context
+## Character prompt prep integration
 
-This is book/project-level visual style, not a plot summary.
+When building character reference prompt inputs:
 
-Good:
+1. Read:
 
-```text
-early pulp planetary-romance adventure, frontier desert realism, non-modern clothing, weathered natural materials, ancient alien-world culture, cinematic readable reference lighting
+```python
+repair = descriptor.get("reference_repair", {}) if isinstance(descriptor, dict) else {}
 ```
 
-Bad:
+2. For each field below, prefer existing explicit/supported descriptor values, then `reference_repair`, then visual fallback defaults:
 
 ```text
-A Princess of Mars chapter 2 where John Carter enters the cave and later travels to Mars
+identity_descriptor
+body_descriptor
+face_descriptor
+costume_descriptor
+posture_descriptor
+expression_descriptor
+locked_fields
+source_visual_context
+subject_visual_context
 ```
 
-The source title may appear in metadata or sources, but the actual prompt body should be descriptor-heavy and not depend on model knowledge of the book.
-
-### Subject visual context
-
-This is a compact sentence describing what the subject must look like or preserve.
-
-Character example:
+3. Add fallback fields to repair notes:
 
 ```text
-Rugged non-modern adventure figure; preserve confirmed traits and use era/world-appropriate clothing, not contemporary portrait styling.
+fallback_fields_used
+repair_sources
 ```
 
-Environment example:
+4. Do not allow raw `unknown` or generic placeholder text in positive prompts when repair/fallback values exist.
+
+5. Add negative terms from:
+
+```python
+character_negative_terms(visual_fallbacks)
+repair.get("negative_terms", [])
+```
+
+and dedupe them into the negative prompt.
+
+## Environment prompt prep integration
+
+When building environment reference prompt inputs:
+
+1. Read:
+
+```python
+repair = descriptor.get("reference_repair", {}) if isinstance(descriptor, dict) else {}
+```
+
+2. For each field below, prefer existing explicit/supported descriptor values, then `reference_repair`, then visual fallback defaults:
 
 ```text
-Frontier desert mountain cave landmark; make the cave mouth, cliffside rock face, rocky threshold, and shadowed interior visually explicit.
+layout_descriptor
+scale_descriptor
+architecture_descriptor
+landmark_descriptor
+lighting_descriptor
+mood_descriptor
+locked_fields
+source_visual_context
+subject_visual_context
 ```
 
-## Character prompt rules
+3. Add fallback fields to repair notes:
 
-Character positive prompts should include:
+```text
+fallback_fields_used
+repair_sources
+```
+
+4. Do not allow generic placeholders like `described environment with stable spatial anchors` in positive prompts when repair/fallback values exist.
+
+5. Add negative terms from:
+
+```python
+environment_negative_terms(visual_fallbacks)
+repair.get("negative_terms", [])
+```
+
+and dedupe them into the negative prompt.
+
+## Positive prompt injection rules
+
+### Character prompts
+
+Character positive prompts should include compact:
 
 ```text
 source_visual_context
@@ -371,13 +455,9 @@ locked visual fields
 reference composition
 ```
 
-Character positive prompts should not contain raw `unknown` or generic placeholders.
+### Environment prompts
 
-Character negative prompts should include wardrobe drift blockers from `VISUAL_FALLBACKS.json`.
-
-## Environment prompt rules
-
-Environment positive prompts should include:
+Environment positive prompts should include compact:
 
 ```text
 source_visual_context
@@ -392,9 +472,46 @@ locked fields
 reference composition
 ```
 
-Environment positive prompts should not rely on `described environment with stable spatial anchors` when a fallback can be generated.
+## Negative prompt injection rules
 
-Environment negative prompts should include environment drift blockers from `VISUAL_FALLBACKS.json`.
+Append/dedupe fallback negatives to existing generic negatives.
+
+Character references should include wardrobe drift blockers:
+
+```text
+modern suit
+necktie
+business attire
+office clothing
+corporate headshot
+passport photo
+turtleneck
+modern athletic shirt
+```
+
+Environment references should include environment drift blockers:
+
+```text
+generic meadow
+open grassy field
+rolling green hills
+no cave
+hidden landmark
+modern road
+cars
+modern buildings
+```
+
+## Scope guard
+
+For first implementation, keep this scoped to:
+
+```text
+character reference prompt packages
+environment reference prompt packages
+```
+
+Do not change scene/shot prompt behavior yet except where they already consume character/environment descriptors.
 
 ---
 
@@ -424,6 +541,60 @@ Store both:
 ```
 
 If Phase 11 repair is working, recommended warnings should become rare. If they remain, they should show up in reports and review queues without blocking generation.
+
+## Character implementation guidance
+
+Modify:
+
+```text
+orchestrator/character_references.py
+```
+
+In `_prompt_prepared_entries(...)`, split warnings:
+
+```python
+blocking_warnings = validate_prompt_package(prompt_path, REQUIRED_CHARACTER_REFERENCE_INPUTS)
+recommended_warnings = _recommended_input_warnings(prompt_path)
+```
+
+Then build entries as:
+
+```python
+"status": "blocked" if blocking_warnings else "prepared",
+"blocking_warnings": blocking_warnings,
+"recommended_warnings": recommended_warnings,
+"warnings": blocking_warnings + recommended_warnings,
+```
+
+Do not let recommended warnings alone set status to `blocked`.
+
+## Environment implementation guidance
+
+Modify:
+
+```text
+orchestrator/environment_references.py
+```
+
+Use the same pattern:
+
+```python
+blocking_warnings = validate_prompt_package(prompt_path, REQUIRED_ENVIRONMENT_REFERENCE_INPUTS)
+recommended_warnings = _recommended_input_warnings(prompt_path)
+```
+
+Then:
+
+```python
+"status": "blocked" if blocking_warnings else "prepared",
+"blocking_warnings": blocking_warnings,
+"recommended_warnings": recommended_warnings,
+"warnings": blocking_warnings + recommended_warnings,
+```
+
+## Review queue behavior
+
+Review queues should still display recommended warnings so users know which prompts had repair/fallback issues, but those warnings should not prevent generation or candidate registration.
 
 ## Unresolved identity guard
 
@@ -602,7 +773,7 @@ set "LIMIT=2"
 
 # Files To Modify
 
-## New files
+## New safe helper files
 
 ```text
 orchestrator/visual_fallbacks.py
@@ -611,7 +782,7 @@ orchestrator/environment_descriptor_repair.py
 spec/VISUAL_FALLBACKS_DESCRIPTOR_REPAIR_AND_CHAPTER_SLICE_SPEC.md
 ```
 
-## Existing files
+## Existing files to wire locally
 
 ```text
 orchestrator/descriptor_enrichment.py
@@ -634,33 +805,41 @@ Only update booster JSON if generation-time variants need additional anti-drift 
 
 ---
 
-# Commands To Run After Implementation
+# BAT Files To Run After Implementation
+
+Use BAT files, not raw commands.
 
 For the two-chapter validation slice:
 
-```bat
-python -m orchestrator synthesize-visual-fallbacks princess_of_mars_test --force
-python -m orchestrator synthesize-character-bibles princess_of_mars_test --chapters 2-3 --force
-python -m orchestrator synthesize-environment-bibles princess_of_mars_test --chapters 2-3 --force
-python -m orchestrator synthesize-descriptor-enrichment princess_of_mars_test --chapters 2-3 --force
-python -m orchestrator synthesize-prompt-preparation princess_of_mars_test --chapters 2-3 --force
+```text
+10_generate_chapter_character_prompts_only.bat
+11_generate_chapter_environment_prompts_only.bat
 ```
 
-Then dry-run reference generation:
+These should regenerate:
 
-```bat
-python -m orchestrator generate-character-references princess_of_mars_test --chapters 2-3 --test-slice --variant bust_portrait --prompt-variant character_readability --limit 2
-python -m orchestrator generate-environment-references princess_of_mars_test --chapters 2-3 --test-slice --variant establishing_wide --prompt-variant environment_readability --limit 2
+```text
+VISUAL_FALLBACKS.json
+character/environment bibles for chapters 2-3
+character/environment descriptor repairs for chapters 2-3
+character/environment prompt packages for chapters 2-3
 ```
 
-Then execute only after prompts are reviewed:
+Then dry-run or execute reference-generation BATs once those exist/are updated:
 
-```bat
-python -m orchestrator generate-character-references princess_of_mars_test --chapters 2-3 --test-slice --variant bust_portrait --prompt-variant character_readability --limit 2 --execute
-python -m orchestrator generate-environment-references princess_of_mars_test --chapters 2-3 --test-slice --variant establishing_wide --prompt-variant environment_readability --limit 2 --execute
+```text
+12_generate_chapter_character_reference_images.bat
+13_generate_chapter_environment_reference_images.bat
 ```
 
-For all eligible chapter subjects later, increase the limit or add a future explicit option:
+Expected defaults:
+
+```text
+CHAPTERS=2-3
+LIMIT=2
+```
+
+For all eligible chapter subjects later, increase `LIMIT` in the BAT or add:
 
 ```text
 --all-chapter-subjects
