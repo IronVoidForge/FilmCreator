@@ -648,38 +648,150 @@ If a user supplies:
 
 then test-slice should select up to 8 eligible subjects from the selected chapters.
 
+## Required CLI additions
+
+Add `--chapters` to:
+
+```text
+generate-character-references
+generate-environment-references
+```
+
+Pass the value through to:
+
+```text
+run_character_reference_generation(..., chapters=args.chapters)
+run_environment_reference_generation(..., chapters=args.chapters)
+```
+
+Then add optional `chapters: str | None = None` parameters to those generation functions.
+
+## Chapter metadata source
+
+The generation stage should not guess chapter membership from prompt file paths alone. Use these sources in priority order:
+
+1. `chapter_mentions` in the prompt-preparation index entry.
+2. `chapter_mentions` in the descriptor record.
+3. `chapter_mentions` in the character/environment bible.
+4. Scene/shot source artifact ids if they contain `CH###` tokens.
+5. Folder path fallback only as last resort.
+
+If prompt prep does not currently write `chapter_mentions` into reference prompt index entries, add it during Phase 11.5 prompt prep so Phase 12/13 can filter reliably.
+
+## Chapter filter behavior
+
+For each candidate entry:
+
+```text
+entry_chapters = normalized chapter mentions from metadata
+selected_chapters = parse_chapter_selector(args.chapters)
+keep entry only if entry_chapters intersects selected_chapters
+```
+
+If `--chapters` is omitted, preserve existing global behavior.
+
 ## Selection ranking
 
 For characters:
 
 1. chapter match
 2. resolved/canonical identity
-3. film-facing individual before group/provisional entries
-4. protagonist/main/major role signals
-5. descriptor completeness
-6. recurrence / scene count
-7. stable ID and non-placeholder name
+3. no unresolved clarification file
+4. film-facing individual before group/provisional entries
+5. protagonist/main/major role signals
+6. descriptor completeness / fewer recommended warnings
+7. recurrence / scene count within selected chapters
+8. stable ID and non-placeholder name
 
 For environments:
 
 1. chapter match
 2. bound to scenes/shots in selected chapters
 3. landmark/location specificity
-4. descriptor completeness
-5. recurrence / scene count
+4. descriptor completeness / fewer recommended warnings
+5. recurrence / scene count within selected chapters
 6. stable ID and non-placeholder name
 
-## Implementation detail
+## Unresolved identity handling
+
+For characters, add helper logic in `character_references.py`:
+
+```text
+projects/<project>/01_source/character_descriptions/<character_id>_clarification.md
+```
+
+If this file exists and its response section is blank or unresolved:
+
+```text
+identity_review_required = true
+```
+
+Default behavior in test-slice:
+
+```text
+skip unresolved identities
+```
+
+Optional future override:
+
+```text
+--include-unresolved-identities
+```
+
+This prevents `ape_man_1` from being selected as one of the default two chapter characters.
+
+## Limit behavior
 
 Do not double-limit. In test-slice mode:
 
 ```text
 slice_limit = user limit if provided, else 2
-apply chapter filter and ranking
-apply slice_limit
+apply chapter filter
+apply unresolved/canonical filters
+rank eligible entries
+select first slice_limit entries
 ```
 
 Do not apply both the hard validation cap and `eligible[:limit]` afterward.
+
+## Test-slice stage-family behavior
+
+Existing staged reference dependencies should still hold:
+
+```text
+characters: bust/portrait -> full body -> supporting views
+environments: establishing view -> spatial reference -> supporting variants
+```
+
+For test-slice with `--variant bust_portrait`, `--limit 2` means:
+
+```text
+2 eligible chapter characters for bust_portrait
+```
+
+For test-slice with multiple variants, the limit should apply per requested stage family unless the user explicitly requests a global cap. This preserves the original validation-slice intent while making the selected subjects chapter-aware.
+
+## Implementation sketch
+
+Add helper functions rather than inlining logic inside generation loops:
+
+```python
+def _entry_chapter_mentions(entry, project_dir, subject_kind): ...
+def _entry_matches_chapters(entry, selected_chapters, project_dir, subject_kind): ...
+def _entry_reference_priority(entry, project_dir, subject_kind): ...
+def _rank_chapter_slice_entries(entries, project_dir, subject_kind): ...
+def _apply_chapter_aware_test_slice(entries, project_dir, subject_kind, chapters, limit): ...
+```
+
+Then call this helper before selecting entries for generation.
+
+## Acceptance checks for #6
+
+- Running character image BAT with default `CHAPTERS=2-3` and `LIMIT=2` selects two eligible characters from chapters 2-3.
+- It does not select unresolved `ape_man_1` unless explicitly allowed.
+- Running environment image BAT with default `CHAPTERS=2-3` and `LIMIT=2` selects two eligible environments from chapters 2-3.
+- Increasing `LIMIT` selects more chapter subjects, not global subjects.
+- Omitting `CHAPTERS` preserves current global behavior.
 
 ---
 
