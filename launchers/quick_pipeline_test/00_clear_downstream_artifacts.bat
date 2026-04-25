@@ -14,14 +14,19 @@ echo.
 set "PROJECT_SLUG=%~1"
 if "%PROJECT_SLUG%"=="" set /p PROJECT_SLUG=Project slug [princess_of_mars_test]:
 if "%PROJECT_SLUG%"=="" set "PROJECT_SLUG=princess_of_mars_test"
+set "AUTO_CONFIRM=%~3"
 
 echo.
 echo Project slug: %PROJECT_SLUG%
 echo Repo root: %FILMCREATOR_ROOT%
 echo.
 echo This clears downstream artifacts only and preserves chapter summaries and bibles.
-echo Press any key to continue.
-pause
+if /I not "%AUTO_CONFIRM%"=="Y" (
+    echo Press any key to continue.
+    pause
+) else (
+    echo Auto-confirm enabled. Continuing without pause.
+)
 
 set "PROJECT_ROOT=%FILMCREATOR_ROOT%\projects\%PROJECT_SLUG%"
 if not exist "%PROJECT_ROOT%" (
