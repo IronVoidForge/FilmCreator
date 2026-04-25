@@ -5,35 +5,35 @@
   "purpose": "To establish the protagonist's vulnerability and the supernatural threat within the cave.",
   "summary": "The protagonist is trapped in a state of conscious paralysis caused by a mysterious, pungent vapor inside the Arizona mountain cave. He is unable to move despite being fully aware.",
   "emotional_arc": "From awareness/confusion to helpless terror and sensory isolation.",
-  "production_intent": "Establish the protagonist's physical helplessness and the presence of a supernatural threat through sensory isolation. The scene relies on the visual density of a pungent vapor to communicate the cause of paralysis within the claustrophobic cave environment.",
-  "scene_short_description": "A man lies paralyzed in a dark, vapor-filled cave experiencing sensory isolation.",
-  "scene_primary_scale_story_point": "Microscopic biological reaction vs. claustrophobic environmental scale.",
+  "production_intent": "Establish the protagonist's physical helplessness and the presence of a supernatural threat via sensory isolation. The scene relies on high-detail macro photography to communicate internal panic against an external environmental hazard.",
+  "scene_short_description": "A man lies paralyzed in a dark, vapor-filled Arizona mountain cave.",
+  "scene_primary_scale_story_point": "Microscopic sensory details vs. claustrophobic cavern scale.",
   "scene_required_anchor_catalog": [
-    "Cave wall texture",
-    "Protagonist's eyes"
+    "textured cave wall",
+    "protagonist eyes"
   ],
-  "scene_start_state": "Protagonist is conscious but immobile amidst rising pungent vapor.",
-  "scene_end_state": "Protagonist is trapped in helpless terror as sensory isolation peaks.",
-  "dominant_action_line": "The protagonist experiences progressive paralysis and escalating terror while breathing in mysterious gas.",
+  "scene_start_state": "Protagonist begins to inhale pungent vapor while experiencing confusion.",
+  "scene_end_state": "Protagonist is fully paralyzed, trapped in helpless terror.",
+  "dominant_action_line": "The inhalation of gas leading to total physical paralysis.",
   "scene_spatial_layout": [
     "Tight, claustrophobic cave interior",
     "Low visibility due to tenuous vapor"
   ],
   "character_spatial_map": [
-    "protagonist centered on cave floor"
+    "protagonist prone on cave floor"
   ],
   "environment_subzones": [
     "primary scene playing area"
   ],
   "entry_vectors": [
-    "Subjects inherit entry logic from the prior scene or chapter transition."
+    "gas infiltration from cave crevices"
   ],
   "exit_vectors": [
-    "Subjects exit or hand off toward the next story beat."
+    "none (subject is trapped)"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Transition from confusion to physical realization of paralysis.",
-    "BT002 -> BT003: Transition from paralysis to acute terror and sensory isolation."
+    "BT001 -> BT002: Inhalation to onset of paralysis",
+    "BT002 -> BT003: Paralysis to peak sensory terror"
   ],
   "characters_required": [
     {
@@ -60,8 +60,8 @@
     }
   ],
   "continuity_constraints": [
-    "Pupil dilation and eye movement tracking",
-    "Vapor density and visual quality consistency"
+    "Pupil dilation and eye movement speed",
+    "Vapor density and visual quality/texture"
   ],
   "visual_coverage_families": [
     "Extreme Close-ups (Eyes, dilated pupils, sweat, gas particles)",
@@ -71,108 +71,114 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Awareness of environment and presence of gas",
+      "summary": "Inhalation of pungent vapor",
       "purpose": "",
-      "action_start": "protagonist breathing in vapor",
-      "action_end": "realization of pungent smell",
+      "action_start": "drifting gas particles",
+      "action_end": "deep inhalation",
       "active_subjects": [
         "protagonist"
       ],
-      "passive_subjects": [],
+      "passive_subjects": [
+        "vapor"
+      ],
       "spatial_context": "arizona_mountain_cave",
-      "blocking_hint": "lying on cave floor",
-      "environment_subzone": "vapor layer",
-      "continuity_focus": "vapor density",
+      "blocking_hint": "prone on floor",
+      "environment_subzone": "immediate breathing space",
+      "continuity_focus": "vapor density/texture",
       "coverage_hint": "macro shots",
-      "coverage_priority": "medium",
+      "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Realization of physical paralysis",
+      "summary": "Onset of physical paralysis",
       "purpose": "",
-      "action_start": "attempted movement",
-      "action_end": "complete stillness/conscious paralysis",
+      "action_start": "confusion/eye movement",
+      "action_end": "total stillness",
       "active_subjects": [
         "protagonist"
       ],
       "passive_subjects": [],
       "spatial_context": "arizona_mountain_cave",
-      "blocking_hint": "lying flat, unable to twitch",
-      "environment_subzone": "cave floor contact zone",
-      "continuity_focus": "eye movement and pupil dilation",
+      "blocking_hint": "stationary prone",
+      "environment_subzone": "immediate breathing space",
+      "continuity_focus": "pupil dilation",
       "coverage_hint": "extreme close-ups",
       "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Helpless terror and sensory isolation",
+      "summary": "Peak helpless terror and sensory isolation",
       "purpose": "",
-      "action_start": "panic rising in eyes",
-      "action_end": "total sensory isolation/terror",
+      "action_start": "awareness of paralysis",
+      "action_end": "sensory blackout/terror",
       "active_subjects": [
         "protagonist"
       ],
       "passive_subjects": [],
       "spatial_context": "arizona_mountain_cave",
-      "blocking_hint": "eyes wide, staring into darkness",
-      "environment_subzone": "vapor layer",
-      "continuity_focus": "eye movement and pupil dilation",
+      "blocking_hint": "stationary prone",
+      "environment_subzone": "immediate breathing space",
+      "continuity_focus": "eye movement speed",
       "coverage_hint": "POV shots",
-      "coverage_priority": "high",
-      "handoff_to_next": "end_scene"
+      "coverage_priority": "medium",
+      "handoff_to_next": "end"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish environment",
-      "planned_shot_moment_summary": "Macro view of cave wall texture as vapor drifts past",
-      "primary_subject_seed": "arizona_mountain_cave",
-      "secondary_subjects_seed": [],
+      "narrative_function": "establish threat",
+      "planned_shot_moment_summary": "gas particles drifting near face",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "vapor"
+      ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "vapor layer",
-      "planned_shot_required_anchor_1": "cave wall texture",
-      "planned_shot_scale_proof_detail": "texture grain vs gas particles",
-      "start_state_seed": "static macro shot",
-      "end_state_seed": "drifting gas movement",
-      "action_seed": "gas drifts across rock",
-      "blocking_seed": [],
-      "shot_size": "insert_detail",
+      "environment_subzone": "immediate breathing space",
+      "planned_shot_required_anchor_1": "textured cave wall",
+      "planned_shot_scale_proof_detail": "macro gas density",
+      "start_state_seed": "drifting vapor",
+      "end_state_seed": "inhale motion",
+      "action_seed": "inhalation of pungent gas",
+      "blocking_seed": [
+        "prone"
+      ],
+      "shot_size": "extreme_close_up",
       "camera_angle": "eye_level",
-      "lens_family": "macro",
-      "camera_motion": "locked_off",
-      "zoom_behavior": "none",
-      "focus_strategy": "environment_priority",
+      "lens_family": "telephoto",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
       "lighting_style": "low_key_night",
       "primary_subject_angle": "front"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "establish paralysis",
-      "planned_shot_moment_summary": "Extreme close up of protagonist's eye dilating",
-      "primary_subject_seed": "protagonist",
+      "narrative_function": "show paralysis",
+      "planned_shot_moment_summary": "eyes widening and pupils dilating",
+      "primary_subject_seed": "protagonist eyes",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "cave floor contact zone",
+      "environment_subzone": "immediate breathing space",
       "planned_shot_required_anchor_1": "protagonist eyes",
-      "planned_shot_scale_proof_detail": "pupil diameter change",
-      "start_state_seed": "eye open and staring",
-      "end_state_seed": "pupil fully dilated",
-      "action_seed": "pupil dilation",
+      "planned_shot_scale_proof_detail": "pupil dilation ratio",
+      "start_state_seed": "confusion",
+      "end_state_seed": "stasis",
+      "action_seed": "eye movement ceases",
       "blocking_seed": [
-        "lying flat"
+        "stationary"
       ],
       "shot_size": "extreme_close_up",
       "camera_angle": "eye_level",
       "lens_family": "portrait",
       "camera_motion": "locked_off",
-      "zoom_behavior": "subtle_in",
+      "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "low_key_night",
       "primary_subject_angle": "front"
@@ -180,23 +186,25 @@
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "establish terror",
-      "planned_shot_moment_summary": "Blurred POV of the dark cave ceiling through gas",
-      "primary_subject_seed": "arizona_mountain_cave",
-      "secondary_subjects_seed": [],
+      "narrative_function": "convey terror",
+      "planned_shot_moment_summary": "blurred POV of cave walls",
+      "primary_subject_seed": "cave wall",
+      "secondary_subjects_seed": [
+        "vapor"
+      ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "vapor layer",
-      "planned_shot_required_anchor_1": "cave wall texture",
-      "planned_shot_scale_proof_detail": "blur radius vs gas density",
-      "start_state_seed": "blurred vision",
-      "end_state_seed": "extreme sensory isolation",
-      "action_seed": "vision blurs further",
+      "environment_subzone": "cave floor contact zone",
+      "planned_shot_required_anchor_1": "textured cave wall",
+      "planned_shot_scale_proof_detail": "vision blur level",
+      "start_state_seed": "wide awareness",
+      "end_state_seed": "restricted vision",
+      "action_seed": "vision blurs/distorts",
       "blocking_seed": [
-        "lying flat"
+        "stationary"
       ],
       "shot_size": "medium_close",
-      "camera_angle": "low_angle",
+      "camera_angle": "eye_level",
       "lens_family": "wide",
       "camera_motion": "handheld",
       "zoom_behavior": "none",
@@ -268,16 +276,16 @@
     "[CH028] CHAPTER XXVIII (book index hit)",
     "[CH002] CHAPTER II (book index hit)",
     "[CH001] CHAPTER I (book index hit)",
-    "Character protagonist: protagonist"
+    "Character protagonist: An Earthman characterized by extreme physical agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH002_SC001\n\n## Production Intent\nEstablish the protagonist's physical helplessness and the presence of a supernatural threat through sensory isolation. The scene relies on the visual density of a pungent vapor to communicate the cause of paralysis within the claustrophobic cave environment.\n\n## Required Cast\n- protagonist\n\n## Required Environments\n- arizona_mountain_cave (Dark, claustrophobic, filled with tenuous vapor)\n\n## Continuity Constraints\n- Pupil dilation and eye movement tracking\n- Vapor density and visual quality consistency\n\n## Beat List\n- BT001: Awareness of environment and presence of gas\n- BT002: Realization of physical paralysis\n- BT003: Helpless terror and sensory isolation",
+  "storyboard_markdown": "# Scene Contract: CH002_SC001\n\n## Production Intent\nEstablish the protagonist's physical helplessness and the presence of a supernatural threat via sensory isolation. The scene relies on high-detail macro photography to communicate internal panic against an external environmental hazard.\n\n## Required Cast\n- protagonist\n\n## Required Environments\n- arizona_mountain_cave\n\n## Continuity Constraints\n- Pupil dilation and eye movement speed\n- Vapor density and visual quality/texture\n\n## Beat List\n- BT001: Inhalation of pungent vapor\n- BT002: Onset of physical paralysis\n- BT003: Peak helpless terror and sensory isolation",
   "metadata": {
     "artifact_id": "CH002_SC001_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "bbf3ded61c21d5dd0db1df506a404a32ef3c0711",
-    "created_at_utc": "2026-04-25T20:47:45.260559+00:00",
-    "updated_at_utc": "2026-04-25T20:47:45.260559+00:00",
+    "source_fingerprint": "c221fb9b90444a379ffa48a8e8d73a66f6d587ac",
+    "created_at_utc": "2026-04-25T21:29:20.046585+00:00",
+    "updated_at_utc": "2026-04-25T21:29:20.046585+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -299,9 +307,9 @@
     "manual_overrides": {},
     "revision_history": [
       {
-        "timestamp_utc": "2026-04-25T20:48:11.508929+00:00",
+        "timestamp_utc": "2026-04-25T21:29:44.117575+00:00",
         "action": "synthesized",
-        "source_fingerprint": "bbf3ded61c21d5dd0db1df506a404a32ef3c0711"
+        "source_fingerprint": "c221fb9b90444a379ffa48a8e8d73a66f6d587ac"
       }
     ]
   }
