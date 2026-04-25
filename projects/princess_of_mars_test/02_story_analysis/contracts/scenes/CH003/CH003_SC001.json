@@ -1,0 +1,312 @@
+{
+  "scene_id": "CH003_SC001",
+  "chapter_id": "CH003",
+  "scene_title": "SC001",
+  "purpose": "Establish the protagonist's new physical reality and the alien environment.",
+  "summary": "The protagonist wakes up on Mars, naked and disoriented. He discovers that the low gravity makes normal movement impossible, causing him to leap uncontrollably with every step.",
+  "emotional_arc": "Confusion $\\rightarrow$ Physical Bewilderment/Surprise.",
+  "production_intent": "Establish the protagonist's transition to a low-gravity Martian environment through physical disorientation and uncontrollable leaping. The visual language must emphasize the scale of the alien landscape against the vulnerability of the naked subject.",
+  "scene_short_description": "A naked man wakes in a yellowish mossy basin and leaps uncontrollably due to low gravity.",
+  "scene_primary_scale_story_point": "Small human figure vs vast circular Martian basin.",
+  "scene_required_anchor_catalog": [
+    "incubator glass roof",
+    "yellowish moss vegetation"
+  ],
+  "scene_start_state": "protagonist lying prone and naked in the moss.",
+  "scene_end_state": "protagonist mid-leap, physically overwhelmed by gravity.",
+  "dominant_action_line": "Waking up, attempting to stand, and experiencing uncontrolled high-leaping movement.",
+  "scene_spatial_layout": [
+    "circular basin floor",
+    "low walled enclosure area"
+  ],
+  "character_spatial_map": [
+    "protagonist centered in mossy subzone",
+    "protagonist moving away from incubator anchor"
+  ],
+  "environment_subzones": [
+    "circular_moss_basin",
+    "incubator_enclosure"
+  ],
+  "entry_vectors": [
+    "none (subject is already present)"
+  ],
+  "exit_vectors": [
+    "erratic leaping paths across basin"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Awakening to first movement",
+    "BT002 -> BT003: Standing to uncontrolled leaping"
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "A circular basin on Mars covered in yellowish",
+      "canonical_id": "circular_moss_basin",
+      "display_name": "circular_moss_basin",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 112,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH003/circular_moss_basin.md",
+      "notes": "Chapter-local environment alias match for 'A circular basin on Mars covered in yellowish' (key_overlap=2, label_overlap=4, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Subject nudity and skin exposure state",
+    "Leap height and distance consistency"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of Martian landscape",
+    "Medium shots of clumsy leaping movements",
+    "Close-ups of facial disorientation"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Awakening in the basin",
+      "purpose": "",
+      "action_start": "eyes closed, prone",
+      "action_end": "eyes open, staring at sky",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "circular_moss_basin",
+      "blocking_hint": "lying near incubator wall",
+      "environment_subzone": "circular_moss_basin",
+      "continuity_focus": "nakedness/exposure",
+      "coverage_hint": "wide shot of landscape",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Realization of disorientation",
+      "purpose": "",
+      "action_start": "sitting up",
+      "action_end": "looking at limbs/body",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "circular_moss_basin",
+      "blocking_hint": "crouched in moss",
+      "environment_subzone": "circular_moss_basin",
+      "continuity_focus": "physical state of nudity",
+      "coverage_hint": "close-up facial expressions",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Discovery of low gravity effect",
+      "purpose": "",
+      "action_start": "attempting to stand/step",
+      "action_end": "uncontrolled high leap",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "circular_moss_basin",
+      "blocking_hint": "erratic movement across basin",
+      "environment_subzone": "circular_moss_basin",
+      "continuity_focus": "leap height and distance",
+      "coverage_hint": "medium/full shots of leaping",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish_setting",
+      "planned_shot_moment_summary": "protagonist wakes up in moss",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "circular_moss_basin",
+      "planned_shot_required_anchor_1": "incubator_enclosure",
+      "planned_shot_scale_proof_detail": "subject size relative to glass roof",
+      "start_state_seed": "eyes closed, prone",
+      "end_state_seed": "eyes open, staring",
+      "action_seed": "waking up",
+      "blocking_seed": [
+        "lying in moss near wall"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "high_angle",
+      "lens_family": "wide",
+      "camera_motion": "slow_push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "character_state",
+      "planned_shot_moment_summary": "protagonist realizes nudity and disorientation",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "circular_moss_basin",
+      "planned_shot_required_anchor_1": "yellowish_moss",
+      "planned_shot_scale_proof_detail": "skin texture vs moss texture",
+      "start_state_seed": "sitting up",
+      "end_state_seed": "looking at body",
+      "action_seed": "disoriented movement",
+      "blocking_seed": [
+        "sitting in moss"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "physical_reveal",
+      "planned_shot_moment_summary": "first uncontrollable leap",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "circular_moss_basin",
+      "planned_shot_required_anchor_1": "yellowish_moss",
+      "planned_shot_scale_proof_detail": "leap height vs moss depth",
+      "start_state_seed": "attempting step",
+      "end_state_seed": "mid-air suspension",
+      "action_seed": "leaping uncontrollably",
+      "blocking_seed": [
+        "moving across basin floor"
+      ],
+      "shot_size": "full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH003",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH003_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH003_chapter_iii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH007_chapter_vii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH003",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH003_SC001] Purpose: Establish the protagonist's new physical reality and the alien environment.",
+    "[CH003_SC001] Summary: The protagonist wakes up on Mars, naked and disoriented. He discovers that the low gravity makes normal movement impossible, causing him to leap uncontrollably with every step.",
+    "[CH003_SC001] Emotional arc: Confusion $\\rightarrow$ Physical Bewilderment/Surprise.",
+    "[CH003_SC001] Coverage: Wide shots of the Martian landscape. Medium shots of the protagonist's clumsy, leaping movements. Close-ups of his facial expressions (disorientation).",
+    "[CH003_SC001] Continuity: The height and distance of the leaps; the protagonist's physical state (nakedness/exposure).",
+    "[CH003] Chapter summary: **Setting:** A circular basin on Mars covered in yellowish, moss-like vegetation, featuring a low walled enclosure with a glass roof (an incubator). **Events:** - The protagonist wakes up on Mars and discovers the eff...",
+    "[CH010] CHAPTER X (book index hit)",
+    "[CH003] CHAPTER III (book index hit)",
+    "[CH007] CHAPTER VII (book index hit)",
+    "Character protagonist: A transformed Earthman characterized by extreme physical agility and high-leaping capabilities suited for low gravity. The character exhibits a transition from a standard human state to a post-supernatural transformation state, initia..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH003_SC001\n\n## Production Intent\nEstablish the protagonist's transition to a low-gravity Martian environment through physical disorientation and uncontrollable leaping. The visual language must emphasize the scale of the alien landscape against the vulnerability of the naked subject.\n\n## Required Cast\n- protagonist (naked, transformed Earthman)\n\n## Required Environments\n- circular_moss_basin (yellowish moss-like vegetation, low walled enclosure, glass roof incubator)\n\n## Continuity Constraints\n- Subject nudity and skin exposure state\n- Leap height and distance consistency\n\n## Beat List\n- BT001: Awakening in the basin\n- BT002: Realization of disorientation\n- BT003: Discovery of low gravity effect",
+  "metadata": {
+    "artifact_id": "CH003_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "62443499c179d213f0037f1c1d2d853dbed55513",
+    "created_at_utc": "2026-04-25T05:15:44.237729+00:00",
+    "updated_at_utc": "2026-04-25T05:15:44.237729+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH003_SC001",
+        "version": "836260c85f7a89a5b403b34bdd02ae4a6bf2dfaf"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH003_SC001",
+        "version": "c2653569edb1dce1bd702a1864a72a1f95057579"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH003_SC001",
+        "version": "ee103e8b3a779daf5a1db8303b5d687025b824f6"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-25T05:16:17.286697+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "62443499c179d213f0037f1c1d2d853dbed55513"
+      }
+    ]
+  }
+}
