@@ -90,6 +90,55 @@ def needs_visual_production_fallback(bible_data: dict[str, Any]) -> bool:
     return visual_field_audit(bible_data)["needs_visual_production_fallback"]
 
 
+def _flatten_text(value: Any) -> list[str]:
+    """Recursively collect strings from str/list/dict values."""
+    if is_unknownish(value):
+        return []
+    if isinstance(value, str):
+        return [value]
+    if isinstance(value, list):
+        result = []
+        for item in value:
+            result.extend(_flatten_text(item))
+        return result
+    if isinstance(value, dict):
+        result = []
+        for v in value.values():
+            result.extend(_flatten_text(v))
+        return result
+    return [str(value)]
+
+
+def _character_text(entry: dict[str, Any], bible_data: dict[str, Any], evidence_summary: list[str]) -> dict[str, str]:
+    """Return separate normalized text channels for classification."""
+    id_fields = ["canonical_id", "character_id", "display_name", "aliases"]
+    canon_fields = [
+        "identity_baseline", "stable_visual_summary", "physical_build", "physical_traits",
+        "costume_signature", "distinguishing_features", "movement_language", "role",
+        "origin_or_historical_context", "state_variants"
+    ]
+    
+    id_parts = []
+    for field in id_fields:
+        id_parts.extend(_flatten_text(entry.get(field)))
+    id_text = " ".join(id_parts).lower()
+    
+    canon_parts = []
+    for field in canon_fields:
+        canon_parts.extend(_flatten_text(bible_data.get(field)))
+    canon_text = " ".join(canon_parts).lower()
+    
+    evidence_text = " ".join(evidence_summary).lower()
+    all_text = f"{id_text} {canon_text} {evidence_text}"
+    
+    return {
+        "id_text": id_text,
+        "canon_text": canon_text,
+        "evidence_text": evidence_text,
+        "all_text": all_text,
+    }
+
+
 def fallback_bucket_for_character(entry: dict[str, Any], bible_data: dict[str, Any], evidence_summary: list[str]) -> tuple[str, str | None]:
     """Determine the fallback bucket for a character based on entity kind and evidence.
     
@@ -98,50 +147,81 @@ def fallback_bucket_for_character(entry: dict[str, Any], bible_data: dict[str, A
     """
     entity_kind = str(entry.get("entity_kind", "individual")).strip().lower()
     char_id = str(entry.get("canonical_id", "")).strip().lower()
-    evidence_text = " ".join(evidence_summary).lower()
+    display_name = str(entry.get("display_name", "")).strip().lower()
     
-    # 1. Alias/role redirect
-    if char_id == "protagonist" or "protagonist" in evidence_text:
-        if "john carter" in evidence_text or "carter" in evidence_text:
-            return ("alias_redirect", "john_carter")
+    text = _character_text(entry, bible_data, evidence_summary)
+    id_text = text["id_text"]
+    canon_text = text["canon_text"]
+    evidence_text = text["evidence_text"]
+    all_text = text["all_text"]
     
-    # 2. Context-only narrative/deceased/non-renderable
-    if entity_kind in {"memory", "reference", "deceased", "abstract"}:
-        return ("context_only", None)
-    if any(marker in evidence_text for marker in ["dead", "deceased", "corpse", "body", "riddled with arrows", "former", "memory of", "mentioned only"]):
-        return ("context_only", None)
+    # 1. Alias/role redirect - check ID first
+    if char_id == "protagonist" or display_name == "protagonist" or "protagonist" in id_text:
+        return ("alias_redirect", "john_carter")
     
-    # 3. Group/horde
+    # 2. Group/horde
     if entity_kind in {"group", "collective", "horde"}:
         return ("group_or_horde", None)
-    if any(marker in evidence_text for marker in ["warriors", "horde", "group", "collective"]):
+    if any(marker in all_text for marker in [" warriors", "horde", "collective"]):
         return ("group_or_horde", None)
     
-    # 4. Quadruped/mount/beast
-    if any(marker in evidence_text for marker in ["mount", "mounts", "thoat", "quadruped", "watchdog", "watch dog", "hound"]):
-        if any(marker in evidence_text for marker in ["large", "massive", "colossal", "mount"]):
-            return ("large_quadruped", None)
-        return ("small_quadruped", None)
+    # 3. Context-only - check entity kind and canon renderability
+    if entity_kind in {"memory", "reference", "deceased", "abstract"}:
+        return ("context_only", None)
     
-    # 5. Non-human humanoid
-    if any(marker in evidence_text for marker in ["martian", "thark", "green martian", "red martian", "barsoom", "helium", "four-armed", "four armed", "15ft", "15 ft"]):
-        if any(marker in evidence_text for marker in ["humanoid", "warrior", "chieftain", "leader", "princess", "officer"]):
+    # Context-only only if canon or evidence says non-renderable
+    context_only_markers = ["dead", "deceased", "corpse", "memory of", "mentioned only", "reference only"]
+    if any(marker in id_text or marker in canon_text or marker in evidence_text for marker in context_only_markers):
+        # But not if canon has active visual renderability
+        active_markers = [
+            "earthman", "naked", "agile", "leaping", "warrior", "martian", "chieftain",
+            "leader", "princess", "four-armed", "humanoid", "movement", "visual"
+        ]
+        if not any(marker in canon_text for marker in active_markers):
+            return ("context_only", None)
+    
+    # 4. Quadruped - entity itself must be mount/beast (check before humanoid)
+    quadruped_id_markers = ["mount", "mounts", "watchdog", "watch_dog", "woola", "hound", "calot", "thoat"]
+    # Canon markers that indicate the entity IS a mount/beast, not just uses one
+    quadruped_canon_markers = ["riding beast", "eight-legged mount", "eight-legged beast", "dog", "hound", "beast", "quadruped"]
+    
+    # Only classify as quadruped if ID or canon says it's a mount/beast
+    # But NOT if canon says "dismounts from" or "mounted on" (that means they USE a mount)
+    is_mount_user = "dismount" in canon_text or "mounted on" in canon_text or "riding" in canon_text
+    
+    if not is_mount_user:
+        if any(marker in id_text for marker in quadruped_id_markers) or \
+           any(marker in canon_text for marker in quadruped_canon_markers):
+            if any(marker in all_text for marker in ["large", "massive", "colossal"]):
+                return ("large_quadruped", None)
+            return ("small_quadruped", None)
+    
+    # 5. Non-human humanoid - check after quadruped but before human
+    martian_markers = ["martian", "thark", "green martian", "red martian", "barsoom", "helium", "four-armed", "four armed", "15ft", "15 ft"]
+    humanoid_markers = [" humanoid", "warrior", "chieftain", "leader", "princess", "officer", "jed", "person"]
+    
+    if any(marker in id_text or marker in canon_text or marker in evidence_text for marker in martian_markers):
+        if any(marker in id_text or marker in canon_text or marker in evidence_text for marker in humanoid_markers):
+            return ("non_human_humanoid", None)
+        # Martian without explicit humanoid markers - still non_human_humanoid if not beast
+        if not any(marker in id_text or marker in canon_text or marker in evidence_text for marker in ["beast", "animal", "mount", "creature"]):
             return ("non_human_humanoid", None)
     
     # 6. Human
-    if any(marker in evidence_text for marker in ["human", "earthling", "american", "confederate", "frontier", "cavalry", "officer", "captain", "virginia"]):
-        return ("human", None)
+    human_markers = ["human", "earthman", "earthling", "american", "confederate", "frontier", "cavalry", "captain", "virginia"]
+    if any(marker in id_text or marker in canon_text or marker in evidence_text for marker in human_markers):
+        # But not if explicitly non-humanoid
+        if "non-humanoid" not in canon_text and "non-humanoid" not in id_text:
+            return ("human", None)
     
     # 7. Creature
-    if any(marker in evidence_text for marker in ["creature", "beast", "animal", "calot", "ape", "colossal"]):
-        if any(marker in evidence_text for marker in ["large", "massive", "colossal", "giant"]):
+    creature_markers = ["creature", "beast", "animal", "calot", "ape", "bull ape", "colossal", "multi-legged"]
+    if any(marker in id_text or marker in canon_text or marker in evidence_text for marker in creature_markers):
+        if any(marker in all_text for marker in ["large", "massive", "colossal", "giant"]):
             return ("large_creature", None)
         return ("small_creature", None)
     
     # 8. Unknown reference
-    if not evidence_summary or len(evidence_summary) < 2:
-        return ("unknown_reference", None)
-    
     return ("unknown_reference", None)
 
 
@@ -173,17 +253,18 @@ def deterministic_visual_fallback(entry: dict[str, Any], bible_data: dict[str, A
     if fallback_bucket == "alias_redirect":
         return {
             "status": "alias_redirect",
-            "fallback_bucket": fallback_bucket,
+            "fallback_bucket": "alias_redirect",
+            "canonical_target_id": alias_target,
             "alias_redirect_target": alias_target,
-            "production_identity_descriptor": f"alias redirect to {alias_target}",
-            "production_body_descriptor": "see canonical character",
-            "production_face_descriptor": "see canonical character",
-            "production_costume_descriptor": "see canonical character",
-            "production_silhouette": "see canonical character",
-            "production_movement_descriptor": "see canonical character",
+            "production_identity_descriptor": f"Alias or role label; use canonical visual reference for {alias_target}.",
+            "production_body_descriptor": "Use canonical visual reference.",
+            "production_face_descriptor": "Use canonical visual reference.",
+            "production_costume_descriptor": "Use canonical visual reference.",
+            "production_silhouette": "Use canonical visual reference.",
+            "production_movement_descriptor": "Use canonical visual reference.",
             "production_state_variants": [],
             "negative_terms": [],
-            "provisionality_note": f"This is an alias or role reference that redirects to the canonical character: {alias_target}",
+            "provisionality_note": "Alias/role entry redirected to canonical character; do not render as a separate character.",
         }
     
     if fallback_bucket == "context_only":

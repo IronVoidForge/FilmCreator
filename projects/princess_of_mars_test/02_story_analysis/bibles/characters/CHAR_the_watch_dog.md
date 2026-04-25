@@ -19,7 +19,7 @@
 - physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-No visual data is available for this character in the provided evidence. A stable visual identity cannot be established.
+No visual data is available for this character in the provided evidence. A stable visual identity cannot be established at this time.
 
 - physical_traits: unknown
 - costume_signature: unknown
@@ -35,8 +35,8 @@ No visual data is available for this character in the provided evidence. A stabl
 
 ## Continuity
 
-- continuity_constraints: (none)
-- unresolved_ambiguities: complete lack of visual or behavioral description in provided evidence
+- continuity_constraints: character identity is established as a singular individual entity.
+- unresolved_ambiguities: complete lack of physical or behavioral description in provided evidence
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ No visual data is available for this character in the provided evidence. A stabl
 - status: `generated`
 - source_fingerprint: `9dc9d65f88122e2de6931fd0b9e0e8354dd4b184`
 - created_at_utc: `2026-04-25T21:13:49.633274+00:00`
-- updated_at_utc: `2026-04-25T21:44:37.420683+00:00`
+- updated_at_utc: `2026-04-25T22:57:14.475692+00:00`

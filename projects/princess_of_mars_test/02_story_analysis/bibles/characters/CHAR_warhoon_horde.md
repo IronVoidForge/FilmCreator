@@ -21,7 +21,7 @@
 - movement_language: Aggressive warrior posture.
 A bloodthirsty horde of green-skinned Martians characterized by an aggressive, tribal, or gladiatorial aesthetic. They inhabit a ruined ancient city and present as a collective of warriors.
 
-- physical_traits: Green skin pigmentation
+- physical_traits: Green skin tone
 - costume_signature: Tribal or gladiatorial aesthetic.
 - distinguishing_features: Green skin
 - state_variants: Combat/Aggressive state
@@ -29,14 +29,14 @@ A bloodthirsty horde of green-skinned Martians characterized by an aggressive, t
 ## Behavioral Bible
 
 - personality: Bloodthirsty and aggressive.
-- role: Aggressive warriors / community inhabitants.
+- role: Aggressive warriors / Horde inhabitants.
 - voice_notes: unknown
-- relationship_notes: []
+- relationship_notes: part of a community/horde
 
 ## Continuity
 
-- continuity_constraints: Must maintain green skin pigmentation., Aesthetic must remain consistent with tribal or gladiatorial themes.
-- unresolved_ambiguities: Specific physical proportions and body types of individual members., Exact age range of the population.
+- continuity_constraints: Must maintain green skin pigmentation., Aesthetic must remain consistent with tribal or gladiatorial themes within a ruined city setting.
+- unresolved_ambiguities: Specific physical dimensions and proportions are unknown., Exact age range of the individuals is not specified.
 
 ## Evidence Summary
 
@@ -53,4 +53,4 @@ A bloodthirsty horde of green-skinned Martians characterized by an aggressive, t
 - status: `generated`
 - source_fingerprint: `ed809208a536731dc3c42c78fe8994b62bece60d`
 - created_at_utc: `2026-04-25T21:16:48.313108+00:00`
-- updated_at_utc: `2026-04-25T21:51:10.617990+00:00`
+- updated_at_utc: `2026-04-25T23:00:15.447918+00:00`

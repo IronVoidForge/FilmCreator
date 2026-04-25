@@ -17,25 +17,25 @@
 - identity_baseline: A Martian noble and royal heir of Zodanga.
 - age_presence: Noble youth.
 - physical_build: unknown
-- origin_or_historical_context: Zodangan royalty / Martian setting.
+- origin_or_historical_context: Zodangan royalty; Martian setting.
 - movement_language: unknown
-Sab-than is a Martian noble and the son of Than Kosis, identified as a prince and heir to the Zodangan throne. His visual identity is defined by high-status Zodangan royal clothing, ranging from standard noble attire to specific ceremonial groom's garments. While his specific physical build and facial features are not detailed, he carries the silhouette of a ruling Martian youth.
+Sab Than is a noble youth and the son of Than Kosis, identified by his status as a Prince of Zodanga. His visual identity is defined by high-status Martian regalia, ranging from standard royal Zodangan attire to specific ceremonial groom clothing. While his specific physical build and facial features are not detailed, he carries the unmistakable silhouette of a Martian ruler and usurper.
 
 - physical_traits: unknown
 - costume_signature: Royal Zodangan attire.
 - distinguishing_features: unknown
-- state_variants: Royal Zodangan attire (standard), Royal groom attire (ceremonial)
+- state_variants: Royal Zodangan attire (Prince/Heir), Royal groom attire
 
 ## Behavioral Bible
 
 - personality: unknown
-- role: Prince of Zodanga; usurper and ruler.
+- role: Prince of Zodanga; Usurper; Ruler of Zodanga.
 - voice_notes: unknown
-- relationship_notes: Son of Than Kosis.
+- relationship_notes: Son of Than Kosis
 
 ## Continuity
 
-- continuity_constraints: Must maintain the visual identity of a Zodangan royal heir., Costume must reflect high-status Martian nobility.
+- continuity_constraints: Must maintain the visual distinction of a high-ranking Martian noble., Costume must reflect specific ceremonial roles (e.g., groom) when applicable.
 - unresolved_ambiguities: Specific physical build and facial features are undocumented., Exact movement style or mannerisms are unknown.
 
 ## Evidence Summary
@@ -55,4 +55,4 @@ Sab-than is a Martian noble and the son of Than Kosis, identified as a prince an
 - status: `generated`
 - source_fingerprint: `231a9614e5a950271a7300bfaa48aa46b5c21f87`
 - created_at_utc: `2026-04-25T21:18:42.396512+00:00`
-- updated_at_utc: `2026-04-25T21:55:40.177344+00:00`
+- updated_at_utc: `2026-04-25T23:02:10.558221+00:00`

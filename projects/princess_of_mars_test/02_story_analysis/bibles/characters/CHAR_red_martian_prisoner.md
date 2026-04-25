@@ -19,7 +19,7 @@
 - physical_build: unknown
 - origin_or_historical_context: Red Martian setting; currently in prisoner transport.
 - movement_language: unknown
-A beautiful woman of the Red Martian species. She is currently depicted in a state of captivity, being transported as a prisoner toward Thar. Specific details regarding her physical proportions, exact age, or specific clothing are not established beyond her status as a captive.
+A beautiful woman of the Red Martian species. While her specific physical proportions and movement are unrecorded, she is identified by her striking beauty and her status as a prisoner being transported to Thar.
 
 - physical_traits: Beautiful appearance
 - costume_signature: Prisoner attire (specifics unknown).
@@ -31,12 +31,12 @@ A beautiful woman of the Red Martian species. She is currently depicted in a sta
 - personality: unknown
 - role: Prisoner
 - voice_notes: unknown
-- relationship_notes: (none)
+- relationship_notes: Currently being transported to Thar
 
 ## Continuity
 
-- continuity_constraints: Must maintain "beautiful" descriptor as per source text., Species identity must remain Red Martian.
-- unresolved_ambiguities: Specific visual details of her Red Martian anatomy., Exact nature and style of prisoner clothing/silhouette., Age and physical build.
+- continuity_constraints: Must maintain "beautiful" descriptor as per source text.
+- unresolved_ambiguities: Specific physical dimensions and facial features., Exact nature of prisoner clothing/silhouette., Age and specific movement style.
 
 ## Evidence Summary
 
@@ -52,4 +52,4 @@ A beautiful woman of the Red Martian species. She is currently depicted in a sta
 - status: `generated`
 - source_fingerprint: `f3d2c21ba76e6b1490aee9c556bffdd4c164b7df`
 - created_at_utc: `2026-04-25T21:15:34.276860+00:00`
-- updated_at_utc: `2026-04-25T21:48:42.633112+00:00`
+- updated_at_utc: `2026-04-25T22:58:59.773703+00:00`

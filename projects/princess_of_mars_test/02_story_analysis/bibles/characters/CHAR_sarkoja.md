@@ -19,24 +19,24 @@
 - physical_build: unknown
 - origin_or_historical_context: Thark culture / Green Martian setting
 - movement_language: unknown
-An older, hardened female Green Martian of the Thark people. She carries the visual weight of a high-ranking noble or spy, characterized by a calculating expression and adherence to strict cultural norms. Her appearance is defined by traditional Green Martian attire suitable for her status.
+Sarkoja is an older, hardened female Green Martian of the Thark people. She carries the visual weight of a high-ranking noble or spy, characterized by a calculating expression and adherence to strict cultural norms. Her appearance is defined by traditional Green Martian attire consistent with her status.
 
-- physical_traits: Green skin
+- physical_traits: Green skin (inferred from species)
 - costume_signature: High-ranking Thark attire
-- distinguishing_features: Green skin (implied by species)
+- distinguishing_features: unknown
 - state_variants: Noble/High-ranking attire
 
 ## Behavioral Bible
 
 - personality: Hostile demeanor; calculating; adheres strictly to cultural norms.
-- role: Thark noble / spy
+- role: Thark noble / spy.
 - voice_notes: unknown
 - relationship_notes: unknown
 
 ## Continuity
 
-- continuity_constraints: Must maintain the visual identity of a high-ranking Thark noble., Appearance must reflect an older, hardened individual rather than a youth.
-- unresolved_ambiguities: Specific physical build and proportions are not documented., Exact movement language/posture is unknown.
+- continuity_constraints: Must maintain the visual identity of a high-ranking Thark noble., Appearance must reflect an older, hardened individual rather than a youthful one.
+- unresolved_ambiguities: Specific physical build and exact facial features are not detailed., Precise details of her "Green Martian attire" beyond its status/origin.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ An older, hardened female Green Martian of the Thark people. She carries the vis
 - status: `generated`
 - source_fingerprint: `aa34748f90e527ba21503173b39f4c4606471301`
 - created_at_utc: `2026-04-25T21:15:13.300829+00:00`
-- updated_at_utc: `2026-04-25T21:47:52.671727+00:00`
+- updated_at_utc: `2026-04-25T22:58:38.579118+00:00`

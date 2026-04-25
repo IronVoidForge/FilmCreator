@@ -36,7 +36,7 @@ A group of extraterrestrial entities identified by their distinct green skin. Fu
 ## Continuity
 
 - continuity_constraints: Must maintain green skin as a primary identifier.
-- unresolved_ambiguities: Specific physical proportions and anatomy are unknown., Clothing, armor, or lack thereof is unknown., Movement patterns and behavioral mannerisms are unknown.
+- unresolved_ambiguities: Specific physical proportions and anatomy are unknown., Clothing, armor, or lack thereof is unknown., Behavioral patterns and movement styles are unknown.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ A group of extraterrestrial entities identified by their distinct green skin. Fu
 - status: `generated`
 - source_fingerprint: `64f5e46f30c392f9a1811557ebb7e38249c81ea8`
 - created_at_utc: `2026-04-25T21:11:48.207401+00:00`
-- updated_at_utc: `2026-04-25T21:41:18.660686+00:00`
+- updated_at_utc: `2026-04-25T22:55:14.511416+00:00`

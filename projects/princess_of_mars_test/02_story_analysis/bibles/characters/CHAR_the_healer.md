@@ -15,28 +15,28 @@
 ## Visual Bible
 
 - identity_baseline: Ancient female Warhoon
-- age_presence: Elderly / Ancient
+- age_presence: Elderly; ancient
 - physical_build: unknown
-- origin_or_historical_context: Warhoon culture
+- origin_or_historical_context: Warhoon culture/setting
 - movement_language: unknown
-An ancient female Warhoon characterized by a weathered and wise appearance. She is visually identified by her status as an elder, likely wearing traditional healer's or elder's garments that reflect her role within the Warhoon culture.
+An ancient female Warhoon possessing a wise and weathered appearance. She is characterized by her elderly status and is typically seen wearing the distinctive garments of a healer or an elder.
 
-- physical_traits: Wise or weathered facial features
+- physical_traits: Female, Warhoon anatomy (inferred)
 - costume_signature: Healer's or elder's garments
 - distinguishing_features: Weathered appearance
-- state_variants: Clothed (healer/elder attire)
+- state_variants: Clothed in healer/elder attire
 
 ## Behavioral Bible
 
-- personality: Wise (inferred from appearance)
+- personality: Wise or weathered (visual inference)
 - role: Healer / Elder
 - voice_notes: unknown
 - relationship_notes: unknown
 
 ## Continuity
 
-- continuity_constraints: Must maintain a weathered, elderly visual identity consistent with an ancient Warhoon., Costume must remain consistent with healer or elder status.
-- unresolved_ambiguities: Specific physical build and proportions are unknown., Exact movement style or posture is not documented.
+- continuity_constraints: Must maintain the visual identity of an ancient Warhoon female., Costume must reflect healer or elder status.
+- unresolved_ambiguities: Specific physical build and proportions are not defined., Exact movement style and mannerisms are unknown.
 
 ## Evidence Summary
 
@@ -53,4 +53,4 @@ An ancient female Warhoon characterized by a weathered and wise appearance. She 
 - status: `generated`
 - source_fingerprint: `2a215f9f5c951366206a0b739a3b98e36de9e43a`
 - created_at_utc: `2026-04-25T21:18:04.102902+00:00`
-- updated_at_utc: `2026-04-25T21:54:14.832741+00:00`
+- updated_at_utc: `2026-04-25T23:01:31.986514+00:00`

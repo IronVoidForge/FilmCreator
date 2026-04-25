@@ -19,7 +19,7 @@
 - physical_build: unknown
 - origin_or_historical_context: Warhoon culture; arena/games setting.
 - movement_language: Aggressive stance; carries the presence of a presiding warlord.
-Dak Kova is a ferocious and scarred Warhoon warrior who serves as a martial leader. As the leader of the Warhoon horde, their appearance should be more ornate or distinct than standard warriors to denote their status as an overseer of the games. They maintain an aggressive, commanding presence suitable for a presiding warlord.
+Dak Kova is a ferocious and scarred Warhoon warrior who serves as a martial leader. As the head of the Warhoon horde, their appearance is distinguished from standard warriors by more ornate or distinct clothing used to denote leadership while presiding over the games. They maintain an aggressive, commanding presence suitable for an overseer of the arena.
 
 - physical_traits: Ferocious expression
 - costume_signature: Ornate or distinct Warhoon warrior attire, likely heavy or ritualistic combat gear.
@@ -29,13 +29,13 @@ Dak Kova is a ferocious and scarred Warhoon warrior who serves as a martial lead
 ## Behavioral Bible
 
 - personality: Ferocious and aggressive.
-- role: Leader of the Warhoon horde; presiding warlord and overseer of the arena games.
+- role: Leader of the Warhoon horde; presiding warlord and overseer of the games.
 - voice_notes: unknown
 - relationship_notes: Commands the Warhoon horde
 
 ## Continuity
 
-- continuity_constraints: Costume must be more distinct/ornate than standard Warhoon warriors to denote leadership status., Must maintain a scarred physical appearance.
+- continuity_constraints: Costume must be more ornate or distinct than standard Warhoon warriors to denote leadership status., Must maintain a scarred physical appearance.
 - unresolved_ambiguities: Specific facial features and exact body proportions are unknown., Exact nature of the "ornate" elements of the leadership costume is undefined.
 
 ## Evidence Summary
@@ -55,4 +55,4 @@ Dak Kova is a ferocious and scarred Warhoon warrior who serves as a martial lead
 - status: `generated`
 - source_fingerprint: `e40532eea6d4e1e114bae3ce0088dbd86a795487`
 - created_at_utc: `2026-04-25T21:16:23.336585+00:00`
-- updated_at_utc: `2026-04-25T21:50:03.312223+00:00`
+- updated_at_utc: `2026-04-25T22:59:50.255206+00:00`

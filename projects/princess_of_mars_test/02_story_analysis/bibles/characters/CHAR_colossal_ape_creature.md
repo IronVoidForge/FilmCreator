@@ -36,7 +36,7 @@ No visual data is available in the provided evidence to establish a stable ident
 ## Continuity
 
 - continuity_constraints: (none)
-- unresolved_ambiguities: complete lack of visual or behavioral description in provided evidence
+- unresolved_ambiguities: Visual identity is entirely unestablished in provided evidence., Physical scale and biological specifics are unknown.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ No visual data is available in the provided evidence to establish a stable ident
 - status: `generated`
 - source_fingerprint: `26044c2510034e15015a2fe677c8f66e1f96162b`
 - created_at_utc: `2026-04-25T21:12:43.945797+00:00`
-- updated_at_utc: `2026-04-25T21:42:19.867219+00:00`
+- updated_at_utc: `2026-04-25T22:56:11.169191+00:00`

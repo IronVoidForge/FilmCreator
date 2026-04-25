@@ -50,4 +50,4 @@ No visual data is available in the provided evidence to establish a stable ident
 - status: `generated`
 - source_fingerprint: `6c068ce29fda6dccf70ffde0d9b52d3f0b46723b`
 - created_at_utc: `2026-04-25T21:10:57.743667+00:00`
-- updated_at_utc: `2026-04-25T21:39:38.053065+00:00`
+- updated_at_utc: `2026-04-25T22:54:24.845041+00:00`

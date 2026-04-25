@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/dejah_thoris.md] Physical Description: Red Martian noblewoman; possesses deep intuition and historical knowledge.
+- identity_baseline: Red-skinned Martian noblewoman
 - age_presence: unknown
-- physical_build: unknown
-- origin_or_historical_context: unknown
+- physical_build: elegant silhouette
+- origin_or_historical_context: Jeddak/humanoid Martian setting
 - movement_language: unknown
-[source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/dejah_thoris.md] Physical Description: Red Martian noblewoman; possesses deep intuition and historical knowledge. [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH012/dejah_thoris.md] Physical Description: Red-skinned female (Jeddak/humanoid Martian). [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH012/dejah_thoris.md] Costume/Silhouette: Princess attire (implied).
+Dejah Thoris is a red-skinned Martian noblewoman of high-born status. She possesses an elegant, noble silhouette consistent with her role as a princess. Her appearance varies based on her circumstances, ranging from formal princess attire to specific mourning clothing during periods of intense grief, or appearing as a captive.
 
-- physical_traits: (none)
-- costume_signature: (none)
-- distinguishing_features: (none)
-- state_variants: (none)
+- physical_traits: red skin
+- costume_signature: Princess attire or high-born noble clothing
+- distinguishing_features: red skin
+- state_variants: princess/noble attire, mourning attire (intense grief), captive
 
 ## Behavioral Bible
 
-- personality: (none)
-- role: individual
-- voice_notes: (none)
-- relationship_notes: (none)
+- personality: Possesses deep intuition and historical knowledge; capable of intense grief.
+- role: Martian Princess / Noblewoman
+- voice_notes: unknown
+- relationship_notes: []
 
 ## Continuity
 
-- continuity_constraints: (none)
-- unresolved_ambiguities: (none)
+- continuity_constraints: Skin color must remain red (Martian), Visual presentation should reflect high-born status unless in a captive or mourning state
+- unresolved_ambiguities: Specific age and exact physical proportions, Specific details of the "princess attire" beyond silhouette
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@
 - status: `generated`
 - source_fingerprint: `79ecc5d7030bc937e67bbb0112802de57910c0d3`
 - created_at_utc: `2026-04-25T21:15:42.990236+00:00`
-- updated_at_utc: `2026-04-25T21:48:50.234390+00:00`
+- updated_at_utc: `2026-04-25T22:59:08.578430+00:00`

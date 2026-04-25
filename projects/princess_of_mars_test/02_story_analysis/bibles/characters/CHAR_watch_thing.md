@@ -14,16 +14,16 @@
 
 ## Visual Bible
 
-- identity_baseline: A multi-legged, non-humanoid creature.
+- identity_baseline: A fierce, multi-legged non-humanoid creature.
 - age_presence: unknown
 - physical_build: Multi-legged anatomy; non-humanoid frame.
 - origin_or_historical_context: unknown
-- movement_language: Fierce and combat-oriented movement.
-A non-humanoid creature characterized by a multi-legged silhouette. The entity possesses a fierce physical presence capable of engaging in brutal combat against large primates. Its visual identity is defined primarily by its multiple limbs and non-humanoid structure.
+- movement_language: Capable of brutal, high-intensity combat movement.
+A non-humanoid creature characterized by a multi-legged silhouette. The entity possesses a fierce physical presence capable of engaging in brutal combat against large primates. Its visual identity is defined by its multiple limbs rather than a humanoid frame.
 
-- physical_traits: Fierce appearance
+- physical_traits: Multi-legged anatomy
 - costume_signature: Non-humanoid silhouette defined by multiple limbs.
-- distinguishing_features: Multiple legs, Non-humanoid morphology
+- distinguishing_features: Multiple legs/limbs, Non-humanoid morphology
 - state_variants: Combat-ready (engaged in brutal fighting)
 
 ## Behavioral Bible
@@ -35,8 +35,8 @@ A non-humanoid creature characterized by a multi-legged silhouette. The entity p
 
 ## Continuity
 
-- continuity_constraints: Must maintain a multi-legged, non-humanoid silhouette., Must be capable of high-intensity combat against large apes.
-- unresolved_ambiguities: Specific number of legs is not defined., Exact biological classification or species origin is unknown.
+- continuity_constraints: Must maintain a non-humanoid, multi-legged silhouette., Must be capable of combat against large apes/primates.
+- unresolved_ambiguities: Specific number of legs is not defined., Exact biological species or origin is unknown.
 
 ## Evidence Summary
 
@@ -52,4 +52,4 @@ A non-humanoid creature characterized by a multi-legged silhouette. The entity p
 - status: `generated`
 - source_fingerprint: `495d6b137d990f36c2fd794f5cdea708b7a49a0c`
 - created_at_utc: `2026-04-25T21:13:31.900490+00:00`
-- updated_at_utc: `2026-04-25T21:44:00.432683+00:00`
+- updated_at_utc: `2026-04-25T22:56:57.062777+00:00`

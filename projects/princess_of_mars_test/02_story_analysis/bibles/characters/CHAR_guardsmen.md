@@ -14,12 +14,12 @@
 
 ## Visual Bible
 
-- identity_baseline: A group of unnamed Zodangan military personnel.
+- identity_baseline: A group of four unnamed Zodangan military soldiers.
 - age_presence: unknown
 - physical_build: unknown
 - origin_or_historical_context: Zodanga (military setting).
 - movement_language: unknown
-The guardsmen are a group of unnamed soldiers from Zodanga, characterized by their standard military uniforms and armor. They function as a cohesive unit of armored warriors within the Zodangan military structure. In the recorded instance, they appear as four dead combatants following an engagement with John Carter.
+A group of four unnamed soldiers belonging to the Zodangan military. They are characterized by their standard Zodangan military uniforms and armor, serving as a cohesive unit of armored guardsmen. In their final appearance, they are depicted as fallen warriors following combat with John Carter.
 
 - physical_traits: unknown
 - costume_signature: Standard Zodangan military uniform and armor.
@@ -29,14 +29,14 @@ The guardsmen are a group of unnamed soldiers from Zodanga, characterized by the
 ## Behavioral Bible
 
 - personality: unknown
-- role: Antagonistic combatants / fallen soldiers.
+- role: Antagonistic combatants / deceased soldiers.
 - voice_notes: unknown
-- relationship_notes: Engaged in combat with John Carter.
+- relationship_notes: Killed in combat by John Carter.
 
 ## Continuity
 
-- continuity_constraints: Must maintain a consistent Zodangan military aesthetic (uniform/armor).
-- unresolved_ambiguities: Specific visual details of the armor design are unknown., Physical characteristics of the individual soldiers are unknown.
+- continuity_constraints: Must consist of exactly four individuals., Must wear standard Zodangan military attire/armor.
+- unresolved_ambiguities: Specific physical appearance and facial features of the individual soldiers., Specific visual design of "standard Zodangan armor."
 
 ## Evidence Summary
 
@@ -53,4 +53,4 @@ The guardsmen are a group of unnamed soldiers from Zodanga, characterized by the
 - status: `generated`
 - source_fingerprint: `792b2c5c2f2f2a654e17c3d48935b3fb5cdace41`
 - created_at_utc: `2026-04-25T21:18:22.834557+00:00`
-- updated_at_utc: `2026-04-25T21:54:57.973307+00:00`
+- updated_at_utc: `2026-04-25T23:01:50.737366+00:00`

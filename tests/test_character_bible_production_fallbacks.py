@@ -318,5 +318,120 @@ def test_strict_canon_fields_preserved():
     assert not needs_visual_production_fallback(strong_bible)
 
 
+def test_martian_leader_with_mount_evidence():
+    """Test A: martian_leader with evidence mentioning mount should be non_human_humanoid."""
+    entry = {"canonical_id": "martian_leader", "entity_kind": "individual", "status": "canonical"}
+    bible_data = {
+        "identity_baseline": "A massive, four-armed Martian warrior leader.",
+        "physical_build": "15ft tall; heavy humanoid frame with four arms.",
+        "movement_language": "Dismounts from an eight-legged mount to approach others.",
+        "physical_traits": "Four arms, Red eyes, Tusks, Olive-green skin",
+        "costume_signature": "Unarmed, carrying a metal armlet as peace offering.",
+    }
+    evidence = ["dismounts from his eight-legged mount", "massive Martian warrior", "four-armed leader"]
+    
+    bucket, alias_target = fallback_bucket_for_character(entry, bible_data, evidence)
+    assert bucket == "non_human_humanoid", f"Expected non_human_humanoid but got {bucket}"
+    assert alias_target is None
+
+
+def test_chieftain_with_furniture_evidence():
+    """Test B: chieftain with furniture/mount/hound evidence should be non_human_humanoid."""
+    entry = {"canonical_id": "chieftain", "entity_kind": "individual", "status": "canonical"}
+    bible_data = {
+        "identity_baseline": "A green Martian of significant physical presence.",
+        "physical_build": "Large-framed; out of proportion to human-scale furniture.",
+        "role": "Leader/Chieftain of a Martian assemblage.",
+        "distinguishing_features": "Green skin, large scale",
+    }
+    evidence = ["chieftain", "green Martian", "chariot hound following behind"]
+    
+    bucket, alias_target = fallback_bucket_for_character(entry, bible_data, evidence)
+    assert bucket == "non_human_humanoid", f"Expected non_human_humanoid but got {bucket}"
+    assert alias_target is None
+
+
+def test_john_carter_with_lifeless_shell_evidence():
+    """Test C: john_carter with lifeless shell/body evidence should be human, not context_only."""
+    entry = {"canonical_id": "john_carter", "entity_kind": "individual", "status": "canonical"}
+    bible_data = {
+        "identity_baseline": "An Earthman undergoing supernatural transformation.",
+        "stable_visual_summary": "naked human male, agile movement, leaping through low gravity.",
+        "physical_build": "agile human male",
+        "costume_signature": "naked post-transformation",
+    }
+    evidence = ["lifeless physical shell", "John Carter", "Earthman", "agile movement"]
+    
+    bucket, alias_target = fallback_bucket_for_character(entry, bible_data, evidence)
+    assert bucket == "human", f"Expected human but got {bucket}"
+    assert alias_target is None
+
+
+def test_protagonist_always_redirects():
+    """Test D: protagonist always redirects to john_carter."""
+    entry = {"canonical_id": "protagonist", "display_name": "protagonist", "entity_kind": "individual", "status": "canonical"}
+    bible_data = {
+        "identity_baseline": "An Earthman undergoing supernatural transformation.",
+        "stable_visual_summary": "naked human male, agile movement.",
+    }
+    evidence = ["some evidence without John Carter mention"]
+    
+    bucket, alias_target = fallback_bucket_for_character(entry, bible_data, evidence)
+    assert bucket == "alias_redirect", f"Expected alias_redirect but got {bucket}"
+    assert alias_target == "john_carter"
+    
+    # Test full fallback generation
+    fallback = deterministic_visual_fallback(entry, bible_data, evidence)
+    assert fallback["status"] == "alias_redirect"
+    assert fallback["fallback_bucket"] == "alias_redirect"
+    assert fallback["canonical_target_id"] == "john_carter"
+    assert fallback["alias_redirect_target"] == "john_carter"
+    assert "john_carter" in fallback["production_identity_descriptor"]
+
+
+def test_martian_mounts_classification():
+    """Test E: martian_mounts should be large_quadruped or large_creature."""
+    entry = {"canonical_id": "martian_mounts", "entity_kind": "individual", "status": "canonical"}
+    bible_data = {
+        "stable_visual_summary": "Martian mounts; eight-legged riding beasts.",
+        "physical_build": "Large quadruped frame with eight legs.",
+    }
+    evidence = ["Martian mounts", "eight-legged riding beasts", "large mount"]
+    
+    bucket, alias_target = fallback_bucket_for_character(entry, bible_data, evidence)
+    assert bucket in ["large_quadruped", "large_creature"], f"Expected large_quadruped or large_creature but got {bucket}"
+    assert alias_target is None
+
+
+def test_notan_non_human_humanoid():
+    """Test F: notan should be non_human_humanoid, not human."""
+    entry = {"canonical_id": "notan", "entity_kind": "individual", "status": "canonical"}
+    bible_data = {
+        "identity_baseline": "Red Martian officer.",
+        "physical_build": "Humanoid frame with Martian proportions.",
+        "role": "Officer in the Martian hierarchy.",
+    }
+    evidence = ["Red Martian", "officer", "humanoid"]
+    
+    bucket, alias_target = fallback_bucket_for_character(entry, bible_data, evidence)
+    assert bucket == "non_human_humanoid", f"Expected non_human_humanoid but got {bucket}"
+    assert alias_target is None
+
+
+def test_watch_thing_not_human():
+    """Test G: watch_thing should be large_creature or large_quadruped, not human."""
+    entry = {"canonical_id": "watch_thing", "entity_kind": "individual", "status": "canonical"}
+    bible_data = {
+        "identity_baseline": "Multi-legged creature with non-humanoid anatomy.",
+        "physical_build": "Non-humanoid frame with multiple legs.",
+        "stable_visual_summary": "Multi-legged beast with alien anatomy.",
+    }
+    evidence = ["multi-legged", "non-humanoid", "beast"]
+    
+    bucket, alias_target = fallback_bucket_for_character(entry, bible_data, evidence)
+    assert bucket in ["large_creature", "large_quadruped", "small_creature", "small_quadruped"], f"Expected creature/quadruped but got {bucket}"
+    assert alias_target is None
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])

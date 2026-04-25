@@ -14,16 +14,16 @@
 
 ## Visual Bible
 
-- identity_baseline: A beautiful, slender woman with copper-colored skin and black hair.
+- identity_baseline: A beautiful woman with copper-colored skin and black hair.
 - age_presence: unknown
-- physical_build: Slender
+- physical_build: slender
 - origin_or_historical_context: Resembles Earthly women.
 - movement_language: unknown
-A beautiful and slender woman characterized by copper-colored skin and black hair. Her physical form is noted for its resemblance to Earthly women.
+A beautiful, slender woman characterized by her copper-colored skin and black hair. Her physical form is noted for its resemblance to Earthly women.
 
-- physical_traits: Slender frame
+- physical_traits: slender frame
 - costume_signature: unknown
-- distinguishing_features: Copper-colored skin, Black hair
+- distinguishing_features: copper-colored skin, black hair
 - state_variants: unknown
 
 ## Behavioral Bible
@@ -31,12 +31,12 @@ A beautiful and slender woman characterized by copper-colored skin and black hai
 - personality: unknown
 - role: unknown
 - voice_notes: unknown
-- relationship_notes: unknown
+- relationship_notes: (none)
 
 ## Continuity
 
 - continuity_constraints: Skin tone must remain copper-colored., Hair color must remain black.
-- unresolved_ambiguities: Exact age is not specified., Specific clothing or costume details are not provided in the evidence., Movement patterns and personality traits are unknown.
+- unresolved_ambiguities: Specific age of the character., Exact clothing or costume worn., Character's mannerisms or movement style.
 
 ## Evidence Summary
 
@@ -51,4 +51,4 @@ A beautiful and slender woman characterized by copper-colored skin and black hai
 - status: `generated`
 - source_fingerprint: `b4b967140676d61ee39de3b4b643567b4e6936d2`
 - created_at_utc: `2026-04-25T21:15:25.850388+00:00`
-- updated_at_utc: `2026-04-25T21:48:23.544296+00:00`
+- updated_at_utc: `2026-04-25T22:58:51.254317+00:00`

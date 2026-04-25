@@ -19,7 +19,7 @@
 - physical_build: Enormous, massive frame.
 - origin_or_historical_context: Martian setting.
 - movement_language: unknown
-Lorquas Ptomel Jed is characterized by an enormous, massive physical presence consistent with a high-ranking Martian chieftain. Beyond this scale and status, specific visual details regarding age, clothing, or movement are not established in the provided evidence.
+Lorquas Ptomel Jed is characterized by an enormous physical presence, identified as a Martian chieftain. Due to limited visual data, specific costume details and movement patterns remain undefined, but the character must be portrayed with significant mass and scale consistent with a high-ranking Martian leader.
 
 - physical_traits: Enormous stature
 - costume_signature: unknown
@@ -52,4 +52,4 @@ Lorquas Ptomel Jed is characterized by an enormous, massive physical presence co
 - status: `generated`
 - source_fingerprint: `7e9d145d5d9bee98bab8679f4efd2af995f319b7`
 - created_at_utc: `2026-04-25T21:13:57.396315+00:00`
-- updated_at_utc: `2026-04-25T21:44:50.906869+00:00`
+- updated_at_utc: `2026-04-25T22:57:22.300849+00:00`

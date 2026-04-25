@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md] Physical Description: - Currently naked following a supernatural transformation. - Possesses a "lifeless" physical shell left on t...
+- identity_baseline: An Earthman undergoing a supernatural transformation.
 - age_presence: unknown
-- physical_build: unknown
-- origin_or_historical_context: unknown
-- movement_language: unknown
-[source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md] Physical Description: - Currently naked following a supernatural transformation. - Possesses a "lifeless" physical shell left on t... [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md] Costume/Silhouette: - Naked (post-transformation). - Clothed (original body left in the cave). [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/protagonist.md] Physical Description: An Earthman currently naked and unarmed. Exhibits extreme agility and high-leaping capabilities due to the l...
+- physical_build: agile and capable of high-intensity physical exertion.
+- origin_or_historical_context: Earthman in a low-gravity environment.
+- movement_language: extreme agility, high-leaping capabilities, and earthly striking tactics (chin/stomach strikes).
+An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a "lifeless" physical shell. The character demonstrates high physical prowess, including the ability to leap over chariots and engage in high-intensity combat using earthly striking tactics.
 
-- physical_traits: (none)
-- costume_signature: (none)
-- distinguishing_features: (none)
-- state_variants: (none)
+- physical_traits: high-leaping capability, extreme agility
+- costume_signature: unknown
+- distinguishing_features: supernatural transformation (post-transformation state)
+- state_variants: naked (post-transformation), clothed (original body/pre-transformation)
 
 ## Behavioral Bible
 
-- personality: (none)
-- role: individual
-- voice_notes: (none)
+- personality: unknown
+- role: protagonist
+- voice_notes: unknown
 - relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: (none)
-- unresolved_ambiguities: (none)
+- continuity_constraints: Character's physical state is tied to a supernatural transformation., Movement must reflect low-gravity physics (high leaping).
+- unresolved_ambiguities: Specific visual appearance of the post-transformation body., Costume/clothing worn after the initial naked state.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@
 - status: `generated`
 - source_fingerprint: `9e6f3eb952d3067d6814bf2f458bb91964e31a2a`
 - created_at_utc: `2026-04-25T21:10:41.518385+00:00`
-- updated_at_utc: `2026-04-25T21:39:18.924115+00:00`
+- updated_at_utc: `2026-04-25T22:54:09.094102+00:00`

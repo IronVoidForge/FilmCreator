@@ -16,27 +16,27 @@
 
 - identity_baseline: Green Martian (Thark) warrior and ruler.
 - age_presence: unknown
-- physical_build: Bestial, monstrous, and powerful frame.
-- origin_or_historical_context: Martian (Thark) civilization.
-- movement_language: Commanding presence; transitions to a cowardly demeanor when defeated.
-A green-skinned Martian Thark characterized by a bestial and monstrous physical presence. As the Jeddak, he carries himself with a commanding, authoritative posture, typically clad in grand Thark regalia that signifies his status as a feared leader. His visual identity shifts from a brutal, powerful warrior to a figure of cowardice following defeat.
+- physical_build: Bestial, monstrous, and brutal frame.
+- origin_or_historical_context: Martian (Thark) setting.
+- movement_language: Commanding presence; capable of shifting to a cowardly demeanor when defeated.
+A green-skinned Martian known as a Thark, possessing a bestial and monstrous physical presence. As the Jeddak, he carries himself with a commanding, authoritative presence wearing grand Thark regalia, though this shifts to a cowardly demeanor in states of defeat. He is characterized visually as a brutal and feared warrior leader.
 
 - physical_traits: Green skin
 - costume_signature: Grand, authoritative Thark regalia.
 - distinguishing_features: Green skin
-- state_variants: Clothed in grand Thark regalia (ruler state), Defeated/unarmored (defeated state)
+- state_variants: Battle-ready/Warrior, Ceremonial/Regal (Jeddak), Defeated
 
 ## Behavioral Bible
 
-- personality: Brutal, cruel, and commanding; exhibits cowardice when defeated.
-- role: Jeddak (ruler) of the Tharks.
+- personality: Brutal, cruel, and commanding; potentially cowardly when defeated.
+- role: Jeddak (ruler) of the Tharks; warrior leader.
 - voice_notes: unknown
 - relationship_notes: Feared leader of the Tharks
 
 ## Continuity
 
-- continuity_constraints: Must maintain green skin pigmentation consistent with Thark biology., Regalia must reflect high-status Jeddak authority.
-- unresolved_ambiguities: Specific facial features or exact physical proportions are not detailed., Exact age is unknown.
+- continuity_constraints: Must maintain green skin as a primary identifier., Costume must reflect high-status regalia when acting as Jeddak.
+- unresolved_ambiguities: Specific facial features or exact body proportions are not detailed., Exact age is unknown.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ A green-skinned Martian Thark characterized by a bestial and monstrous physical 
 - status: `generated`
 - source_fingerprint: `0c67d30275812b5286d9a193897e9796efdc887b`
 - created_at_utc: `2026-04-25T21:16:09.743557+00:00`
-- updated_at_utc: `2026-04-25T21:49:35.641947+00:00`
+- updated_at_utc: `2026-04-25T22:59:36.528245+00:00`

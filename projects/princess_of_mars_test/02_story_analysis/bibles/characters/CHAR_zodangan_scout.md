@@ -17,14 +17,14 @@
 - identity_baseline: Martian aviator and royal relative.
 - age_presence: unknown
 - physical_build: unknown
-- origin_or_historical_context: Martian setting; associated with Zodangan royalty.
+- origin_or_historical_context: Martian setting; associated with Zodangan royalty and aviation.
 - movement_language: unknown
-The character is a Martian aviator and a member of a royal lineage. Specific physical dimensions, age, and costume details are not provided in the available evidence, though their role implies an association with flight or aerial technology within a Martian context.
+The character is a Martian aviator of royal lineage, identified as a Zodangan scout. Specific physical descriptions and costume details are currently unestablished in the provided evidence, though their role implies an association with flight or aerial reconnaissance within a Martian context.
 
 - physical_traits: unknown
 - costume_signature: unknown
 - distinguishing_features: unknown
-- state_variants: aviator/pilot gear (inferred)
+- state_variants: aviator/flight gear (inferred)
 
 ## Behavioral Bible
 
@@ -35,8 +35,8 @@ The character is a Martian aviator and a member of a royal lineage. Specific phy
 
 ## Continuity
 
-- continuity_constraints: Must maintain connection to Zodangan royalty and Martian aviation.
-- unresolved_ambiguities: Specific physical appearance is undocumented., Exact nature of the "royal" relationship is unspecified., Visual design of flight equipment/costume is unknown.
+- continuity_constraints: Must maintain connection to Zodangan royalty and aviation roles.
+- unresolved_ambiguities: Specific physical appearance is unknown., Exact nature of the "royal relative" connection is unstated., Visual details of flight equipment or attire are unstated.
 
 ## Evidence Summary
 
@@ -51,4 +51,4 @@ The character is a Martian aviator and a member of a royal lineage. Specific phy
 - status: `generated`
 - source_fingerprint: `53719aa1de79a3f3d79b1bad2f0b16ad6b32ab08`
 - created_at_utc: `2026-04-25T21:17:44.998200+00:00`
-- updated_at_utc: `2026-04-25T21:53:30.752137+00:00`
+- updated_at_utc: `2026-04-25T23:01:12.699014+00:00`

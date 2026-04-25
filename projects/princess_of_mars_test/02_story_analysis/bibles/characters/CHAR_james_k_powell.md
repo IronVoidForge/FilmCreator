@@ -19,7 +19,7 @@
 - physical_build: unknown
 - origin_or_historical_context: 1860s era; frontier/mining setting.
 - movement_language: unknown
-A man of the 1860s era, appearing as a practical mining engineer or former Confederate officer. His silhouette is defined by frontier-appropriate attire designed for rugged work and travel. In his final recorded state, he is seen as a deceased prospector, characterized by being riddled with arrows.
+A man of the 1860s era, appearing as a practical mining engineer or former officer. His silhouette is defined by frontier-ready, functional attire from the mid-19th century. In his final recorded state, he is depicted as a deceased prospector, characterized by being riddled with arrows.
 
 - physical_traits: Mining engineer aesthetic
 - costume_signature: Practical 1860s attire suitable for mining engineering and frontier travel.
@@ -35,8 +35,8 @@ A man of the 1860s era, appearing as a practical mining engineer or former Confe
 
 ## Continuity
 
-- continuity_constraints: Must maintain 1860s era practical clothing for active states.
-- unresolved_ambiguities: Specific physical build and age are not provided., Movement style is unknown.
+- continuity_constraints: Costume must remain consistent with 1860s practical frontier/mining utility.
+- unresolved_ambiguities: Specific physical build and age are not provided., Exact facial features or hair color are unknown.
 
 ## Evidence Summary
 
@@ -53,4 +53,4 @@ A man of the 1860s era, appearing as a practical mining engineer or former Confe
 - status: `generated`
 - source_fingerprint: `2c7be7643511776051c4e675e099c7ae382dbec6`
 - created_at_utc: `2026-04-25T20:46:37.329547+00:00`
-- updated_at_utc: `2026-04-25T21:38:17.296315+00:00`
+- updated_at_utc: `2026-04-25T22:53:15.497218+00:00`

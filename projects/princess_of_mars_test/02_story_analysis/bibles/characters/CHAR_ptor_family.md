@@ -19,7 +19,7 @@
 - physical_build: unknown
 - origin_or_historical_context: Red Martian setting; associated with farm environments featuring homes raised on metal shafts.
 - movement_language: unknown
-The ptor_family is a group of Red Martian government officers characterized by their hospitality. They are visually defined by their specific Red Martian attire and are contextually linked to farm settings where dwellings are elevated on metal shafts.
+A collective of Red Martian government officers characterized by their specific Red Martian attire. They are visually linked to a farm setting where dwellings are elevated on metal shafts.
 
 - physical_traits: unknown
 - costume_signature: Red Martian attire.
@@ -29,13 +29,13 @@ The ptor_family is a group of Red Martian government officers characterized by t
 ## Behavioral Bible
 
 - personality: Hospitable.
-- role: Red Martian government officers.
+- role: Government officers.
 - voice_notes: unknown
 - relationship_notes: unknown
 
 ## Continuity
 
-- continuity_constraints: Must maintain the visual identity of Red Martian government officers., Costume must remain consistent with Red Martian attire.
+- continuity_constraints: Must maintain Red Martian attire consistent with government officer status., Visual context should include or reference farm environments with homes raised on metal shafts.
 - unresolved_ambiguities: Specific physical descriptions of individual members are unknown., Exact visual details of "Red Martian attire" are not specified.
 
 ## Evidence Summary
@@ -52,4 +52,4 @@ The ptor_family is a group of Red Martian government officers characterized by t
 - status: `generated`
 - source_fingerprint: `48f5aa88f129bba1bc2a4c37e73f6225bd616fe4`
 - created_at_utc: `2026-04-25T21:17:16.650684+00:00`
-- updated_at_utc: `2026-04-25T21:52:20.006047+00:00`
+- updated_at_utc: `2026-04-25T23:00:44.026402+00:00`

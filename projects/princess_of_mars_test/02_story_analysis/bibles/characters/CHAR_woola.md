@@ -19,24 +19,24 @@
 - physical_build: Large, beastly canine frame.
 - origin_or_historical_context: Martian setting.
 - movement_language: unknown
-Woola is a large Martian hound characterized by a beastly, canine-like silhouette. The creature's most defining visual feature is its multiple tusks. As a calot, it possesses a massive frame suitable for acting as a protector and tracking animal.
+Woola is a large Martian hound characterized by a beastly, canine-like silhouette. The most defining visual identifier is the presence of multiple tusks protruding from its head. As a calot, it possesses a massive frame suitable for acting as a protector and tracking animal.
 
-- physical_traits: Multi-tusked, Large scale
+- physical_traits: Multi-tusked anatomy, Large scale relative to humans
 - costume_signature: Large, beastly silhouette with prominent tusks.
-- distinguishing_features: Multiple tusks, Canine-like anatomy
-- state_variants: Protector/Combatant (acting against wild beasts), Tracking/Hunting mode
+- distinguishing_features: Multiple tusks, Large canine-like silhouette
+- state_variants: Protector/Combatant (acting against wild beasts), Tracking/Hunting state
 
 ## Behavioral Bible
 
-- personality: Loyal and faithful; acts as a protector.
-- role: Companion, tracker, and protector against wild beasts.
+- personality: Loyal, faithful, and protective.
+- role: Companion, protector, and tracking animal.
 - voice_notes: unknown
-- relationship_notes: Accompanying the protagonist, Loyal beast to the protagonist
+- relationship_notes: Accompanying the protagonist, Acts as a protector against wild beasts
 
 ## Continuity
 
-- continuity_constraints: Must maintain multi-tusked identity across all appearances., Silhouette must remain large and canine-like.
-- unresolved_ambiguities: Specific species nomenclature (referred to as both "Martian hound" and "calot").
+- continuity_constraints: Must maintain multi-tusked facial anatomy in all appearances., Silhouette must remain large and beastly.
+- unresolved_ambiguities: Specific species classification beyond "Martian hound" or "calot"., Exact scale/size relative to the protagonist.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ Woola is a large Martian hound characterized by a beastly, canine-like silhouett
 - status: `generated`
 - source_fingerprint: `2b4823c3b119f7826c6a45121c14abfb6034cc4a`
 - created_at_utc: `2026-04-25T21:14:50.525957+00:00`
-- updated_at_utc: `2026-04-25T21:46:40.701636+00:00`
+- updated_at_utc: `2026-04-25T22:58:15.522198+00:00`

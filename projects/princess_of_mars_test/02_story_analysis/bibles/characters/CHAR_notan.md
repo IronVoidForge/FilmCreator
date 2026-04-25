@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: Scholarly or official figure; observant and analytical.
+- identity_baseline: Scholarly figure or official Zodangan advisor.
 - age_presence: unknown
 - physical_build: unknown
-- origin_or_historical_context: Zodangan setting (official/royal context).
+- origin_or_historical_context: Zodangan setting; likely associated with palace or official administration.
 - movement_language: unknown
-Notan is presented as a scholarly or official figure within the Zodangan context, likely serving in an advisory or investigative capacity. While his specific physical features remain unknown, his visual identity is defined by a silhouette of authority and intellect, characterized by formal Zodangan attire consistent with a royal advisor or psychologist.
+Notan is visually defined by his role as a scholarly or official figure within the Zodangan context. While specific physical traits are unknown, he is characterized by an appearance consistent with a royal advisor or high-ranking official, likely wearing formal Zodangan attire suitable for palace duties.
 
 - physical_traits: observant presence
 - costume_signature: Scholarly or official Zodangan attire.
-- distinguishing_features: none identified
+- distinguishing_features: unknown
 - state_variants: Official/Scholarly attire
 
 ## Behavioral Bible
 
-- personality: Observant, analytical, and psychologically minded; functions as an investigator of likenesses and identities.
-- role: Scholarly figure, royal advisor, or observant psychologist.
+- personality: Observant and analytical; functions as an observant psychologist.
+- role: Royal advisor / Scholarly figure.
 - voice_notes: unknown
-- relationship_notes: Observes Carter (described as a "superhuman stranger").
+- relationship_notes: Observes Carter (described by him as a "superhuman stranger").
 
 ## Continuity
 
-- continuity_constraints: Maintain the persona of an official or scholarly authority within Zodanga.
-- unresolved_ambiguities: Specific physical appearance and age are unknown., Exact nature of his specific rank within the Zodangan hierarchy.
+- continuity_constraints: Maintain scholarly or official Zodangan aesthetic.
+- unresolved_ambiguities: Specific physical appearance and age are not documented., Exact details of Zodangan attire.
 
 ## Evidence Summary
 
@@ -53,4 +53,4 @@ Notan is presented as a scholarly or official figure within the Zodangan context
 - status: `generated`
 - source_fingerprint: `4f6c5f3355e9c082e217d44b52bf37430a528839`
 - created_at_utc: `2026-04-25T21:18:32.593013+00:00`
-- updated_at_utc: `2026-04-25T21:55:15.178334+00:00`
+- updated_at_utc: `2026-04-25T23:02:00.850417+00:00`

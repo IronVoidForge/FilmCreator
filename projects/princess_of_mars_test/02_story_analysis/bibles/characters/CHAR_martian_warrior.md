@@ -17,9 +17,9 @@
 - identity_baseline: unknown
 - age_presence: unknown
 - physical_build: unknown
-- origin_or_historical_context: Martian setting
+- origin_or_historical_context: Martian setting (inferred from ID)
 - movement_language: unknown
-No visual data is available in the provided evidence to establish a stable physical identity, costume, or movement language for this character. The character is identified as an individual entity within a Martian context, but specific physical traits remain unrecorded.
+No visual data is available in the provided evidence to establish a stable physical identity, costume, or movement language for this character. The entity is identified as a "martian_warrior," suggesting a combatant role within a Martian context, but specific aesthetic details are absent.
 
 - physical_traits: unknown
 - costume_signature: unknown
@@ -29,14 +29,14 @@ No visual data is available in the provided evidence to establish a stable physi
 ## Behavioral Bible
 
 - personality: unknown
-- role: unknown
+- role: warrior (inferred)
 - voice_notes: unknown
 - relationship_notes: unknown
 
 ## Continuity
 
-- continuity_constraints: Character is identified as a singular individual entity despite potential group references in early documentation.
-- unresolved_ambiguities: Complete lack of visual or behavioral descriptors in provided evidence., Ambiguity regarding whether the character represents a specific individual or a generic archetype/group member.
+- continuity_constraints: Character identity shifts from a potential group entity in CH004 to a singular individual in CH015.
+- unresolved_ambiguities: Physical appearance and specific visual identifiers are entirely unstated., Whether the character is a single individual or part of a larger class of warriors remains visually undefined.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ No visual data is available in the provided evidence to establish a stable physi
 - status: `generated`
 - source_fingerprint: `bf980a9bbfe1b5228df67d068d4c41d787b6bd18`
 - created_at_utc: `2026-04-25T21:12:59.822824+00:00`
-- updated_at_utc: `2026-04-25T21:42:49.265470+00:00`
+- updated_at_utc: `2026-04-25T22:56:25.931774+00:00`

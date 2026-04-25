@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: A collective of Martian combatants characterized by green skin.
+- identity_baseline: unknown
 - age_presence: unknown
 - physical_build: unknown
-- origin_or_historical_context: Mars (Martian setting)
+- origin_or_historical_context: Martian setting (inferred from name)
 - movement_language: unknown
-A group of Martian warriors identified primarily by their green skin. Beyond this chromatic identifier, specific physical builds, clothing, and movement patterns are not established in the provided evidence.
+No specific visual data is provided for the individual members of this group beyond their designation as "green martian warriors." Their identity is defined by their species/coloration and their role as combatants within a Martian setting.
 
-- physical_traits: Green skin
+- physical_traits: green coloration (inferred from name)
 - costume_signature: unknown
-- distinguishing_features: Green skin pigmentation
+- distinguishing_features: green skin (inferred from name)
 - state_variants: combat-ready
 
 ## Behavioral Bible
 
 - personality: unknown
-- role: combatants/warriors
+- role: warrior group
 - voice_notes: unknown
 - relationship_notes: []
 
 ## Continuity
 
-- continuity_constraints: Must maintain green skin pigmentation as a group identifier.
-- unresolved_ambiguities: Specific physical anatomy and proportions are unknown., Costume, armor, or weaponry details are unknown., Specific movement styles or combat behaviors are unknown.
+- continuity_constraints: Must maintain consistent "green" skin tone if visualized.
+- unresolved_ambiguities: Specific physical anatomy and proportions are unknown., Exact costume design and weaponry are unknown., Individual variations within the group are unknown.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ A group of Martian warriors identified primarily by their green skin. Beyond thi
 - status: `generated`
 - source_fingerprint: `f1fdd65d0c6fd9dadcb3f63f566ef93655b6c180`
 - created_at_utc: `2026-04-25T21:14:41.259970+00:00`
-- updated_at_utc: `2026-04-25T21:46:25.140803+00:00`
+- updated_at_utc: `2026-04-25T22:58:06.375603+00:00`

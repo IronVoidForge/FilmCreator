@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: Large, four-armed humanoid warriors with olive-green skin.
+- identity_baseline: Large, four-armed humanoid military force with olive-green skin.
 - age_presence: unknown
 - physical_build: Massive, 15-foot tall humanoids.
-- origin_or_historical_context: Martian military setting.
-- movement_language: Highly disciplined and organized; demonstrate specialized marksmanship.
-The martian_warriors are a highly disciplined military force of massive, 15-foot tall humanoids. They possess olive-green skin, red eyes, tusks, and four arms. In combat or transit, they are often seen mounted on slate-colored, eight-legged animals and are equipped with long-range rifles constructed from white metal.
+- origin_or_historical_context: Martian setting; highly disciplined and organized military culture.
+- movement_language: Highly disciplined, organized, and capable of specialized marksmanship.
+The martian_warriors are a highly disciplined military force of massive, 15-foot tall humanoids. They possess olive-green skin, red eyes, tusks, and four arms. In combat or transit, they are often seen mounted on slate-colored, eight-legged animals and are equipped with long-range rifles constructed from white metal. Their presence is characterized by organized movement and specialized marksmanship.
 
-- physical_traits: 15 feet tall, Four arms
+- physical_traits: Four arms, 15ft height
 - costume_signature: Standard Martian warrior gear equipped with long-range white metal rifles.
 - distinguishing_features: Olive-green skin, Red eyes, Tusks, Four arms
-- state_variants: Mounted (riding eight-legged, slate-colored animals), Armed (carrying white metal long-range rifles)
+- state_variants: Mounted (riding eight-legged, slate-colored animals), Armed (utilizing long-range white metal rifles and grappling gear)
 
 ## Behavioral Bible
 
-- personality: Highly disciplined, organized, and valuing physical prowess; prone to mocking those perceived as weak.
+- personality: Highly disciplined, organized, and values physical prowess; prone to mocking those perceived as struggling.
 - role: Organized military force.
 - voice_notes: unknown
 - relationship_notes: Demonstrate derision toward the protagonist's struggles.
 
 ## Continuity
 
-- continuity_constraints: Must maintain 15ft height scale and four-arm anatomy., Rifles must be depicted as white metal., Mounts must be eight-legged and slate-colored.
-- unresolved_ambiguities: Specific details of "standard Martian warrior gear" beyond rifles., Exact nature of the tusks (size/placement).
+- continuity_constraints: Must maintain 15ft height and four-arm anatomy., Rifles must be depicted as white metal., Mounts must be eight-legged and slate-colored.
+- unresolved_ambiguities: Specific details of "standard Martian warrior gear" beyond rifles., Exact nature of the grappling gear mentioned in CH008.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ The martian_warriors are a highly disciplined military force of massive, 15-foot
 - status: `generated`
 - source_fingerprint: `8ef1f96a2279e4c113835dc0c836f1baf69b6647`
 - created_at_utc: `2026-04-25T21:11:14.718505+00:00`
-- updated_at_utc: `2026-04-25T21:40:05.417801+00:00`
+- updated_at_utc: `2026-04-25T22:54:41.518592+00:00`

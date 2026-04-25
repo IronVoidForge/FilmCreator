@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH006/sola.md] Physical Description: A Martian woman who shows genuine concern and solicitude for the protagonist.
+- identity_baseline: Female Green Martian (Thark)
 - age_presence: unknown
 - physical_build: unknown
-- origin_or_historical_context: unknown
+- origin_or_historical_context: Martian setting; identified as a Thark/Green Martian.
 - movement_language: unknown
-[source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH006/sola.md] Physical Description: A Martian woman who shows genuine concern and solicitude for the protagonist. [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH006/sola.md] Costume/Silhouette: Martian female attire (unspecified). [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH007/sola.md] Physical Description: Female Martian. Acts as a foster mother to newly hatched Martians.
+Sola is a female Green Martian, also identified as a Thark. While her specific physical build and age are not explicitly detailed, she is visually defined by her identity as a member of the Green Martian race. She typically wears Green Martian attire.
 
-- physical_traits: (none)
-- costume_signature: (none)
-- distinguishing_features: (none)
-- state_variants: (none)
+- physical_traits: Green skin
+- costume_signature: Green Martian attire
+- distinguishing_features: Green skin (implied by "Green Martian")
+- state_variants: Clothed in Green Martian attire
 
 ## Behavioral Bible
 
-- personality: (none)
-- role: individual
-- voice_notes: (none)
-- relationship_notes: (none)
+- personality: Empathetic, skilled in craftsmanship/remodeling gear, and shows genuine concern and solicitude for others.
+- role: Foster mother to newly hatched Martians; companion to the protagonist.
+- voice_notes: unknown
+- relationship_notes: Shows empathy toward Red Martians., Acts as a foster mother to newly hatched Martians., Demonstrates concern/solicitude for the protagonist.
 
 ## Continuity
 
-- continuity_constraints: (none)
-- unresolved_ambiguities: (none)
+- continuity_constraints: Must be visually consistent with Green Martian (Thark) biology., Costume should reflect Green Martian culture/attire.
+- unresolved_ambiguities: Specific physical dimensions and age are unstated., Exact visual details of "Green Martian attire" are unspecified.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@
 - status: `generated`
 - source_fingerprint: `49aa429414129d159fdeb91eb2289a6664f29c49`
 - created_at_utc: `2026-04-25T21:11:56.622151+00:00`
-- updated_at_utc: `2026-04-25T21:41:38.647157+00:00`
+- updated_at_utc: `2026-04-25T22:55:22.756298+00:00`

@@ -19,24 +19,24 @@
 - physical_build: Big, hulking, and powerful brute.
 - origin_or_historical_context: Martian setting.
 - movement_language: unknown
-Zad is a big, hulking, and powerful Martian warrior characterized by a brute-like physical presence. He functions as a single-named duelist capable of wielding a long-sword. Despite his imposing size and strength, he lacks the reputation of a successful combatant among his own chieftains.
+Zad is a big, hulking, and powerful Martian warrior. He possesses a brute-like physical presence characterized by significant mass and strength. As a duelist, he is typically seen wielding a long-sword.
 
-- physical_traits: Wields a long-sword
+- physical_traits: Large frame, Powerful build
 - costume_signature: unknown
 - distinguishing_features: unknown
 - state_variants: Armed (wielding a long-sword)
 
 ## Behavioral Bible
 
-- personality: Lacks the proven lethality of his peers; noted for having never made a kill among his own chieftains.
+- personality: Described as a powerful brute who has notably never made a kill among his own chieftains.
 - role: Warrior / Duelist
 - voice_notes: unknown
 - relationship_notes: Seen in conversation with Dejah Thoris
 
 ## Continuity
 
-- continuity_constraints: Must maintain a "hulking" and "brute" physical scale relative to other characters., Should be depicted as an armed combatant (long-sword).
-- unresolved_ambiguities: Specific facial features or scars are unstated., Exact age is unknown., The relationship between the name "Zad" and the name "*o mad*" is not explicitly defined, though they are linked to the same individual.
+- continuity_constraints: Must maintain a "hulking" and "big" physical presence., Should be depicted as a capable duelist despite his lack of kills among chieftains.
+- unresolved_ambiguities: Specific facial features or scars are unknown., Exact age is not specified., The relationship between the name "Zad" and the name "*o mad*" is unconfirmed.
 
 ## Evidence Summary
 
@@ -52,4 +52,4 @@ Zad is a big, hulking, and powerful Martian warrior characterized by a brute-lik
 - status: `generated`
 - source_fingerprint: `d5d94cdc8ea38b54d74683f230997cc0b7b26bbe`
 - created_at_utc: `2026-04-25T21:16:57.871107+00:00`
-- updated_at_utc: `2026-04-25T21:51:29.119865+00:00`
+- updated_at_utc: `2026-04-25T23:00:25.154005+00:00`
