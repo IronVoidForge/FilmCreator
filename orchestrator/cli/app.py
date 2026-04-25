@@ -58,6 +58,7 @@ def dispatch(args) -> None:
             seed=args.seed,
             workflow_id=args.workflow_id,
             test_slice=args.test_slice,
+            chapters=args.chapters,
             prompt_variant_id=args.prompt_variant,
             booster_bundle_ids=args.booster_bundle_ids,
         )
@@ -81,6 +82,7 @@ def dispatch(args) -> None:
             seed=args.seed,
             workflow_id=args.workflow_id,
             test_slice=args.test_slice,
+            chapters=args.chapters,
             prompt_variant_id=args.prompt_variant,
             booster_bundle_ids=args.booster_bundle_ids,
         )

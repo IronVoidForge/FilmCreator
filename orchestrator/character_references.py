@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import Any
 
 from .character_bible import _is_film_facing_character
+from .chapter_selection import any_chapter_matches, parse_chapter_selector
 from .core.json_io import read_json
 from .prompt_package import PromptPackage, parse_prompt_package, write_prompt_package, _split_sections
 from .reference_assets import (
@@ -110,6 +111,7 @@ def run_character_reference_generation(
     seed: int | None = None,
     workflow_id: str | None = None,
     test_slice: bool = False,
+    chapters: str | None = None,
     prompt_variant_id: str = "raw",
     booster_bundle_ids: list[str] | None = None,
     include_unresolved_identities: bool = False,
@@ -117,6 +119,7 @@ def run_character_reference_generation(
     project_dir = create_project(project_slug)
     selected_variants = {v.strip().lower() for v in variants or [] if v.strip()}
     selected_ids = {c.strip().lower() for c in character_ids or [] if c.strip()}
+    selected_chapters = set(parse_chapter_selector(chapters))
     queue = load_reference_queue(project_dir, "character")
     eligible: list[dict[str, Any]] = []
     warnings: list[str] = []
@@ -124,6 +127,8 @@ def run_character_reference_generation(
 
     if test_slice:
         eligible = _prompt_prepared_entries(project_dir, "character", selected_variants, selected_ids)
+        if selected_chapters:
+            eligible = [e for e in eligible if any_chapter_matches(e.get("chapter_mentions", []), selected_chapters)]
 
     if not eligible:
         for entry in queue:
@@ -132,6 +137,8 @@ def run_character_reference_generation(
             if selected_ids and character_id not in selected_ids:
                 continue
             if selected_variants and variant not in selected_variants:
+                continue
+            if selected_chapters and not any_chapter_matches(entry.get("chapter_mentions", []), selected_chapters):
                 continue
             status = str(entry.get("status", "")).strip().lower()
             if status in {"approved", "locked"}:
@@ -150,13 +157,25 @@ def run_character_reference_generation(
 
     if not eligible and test_slice:
         eligible = _fallback_prompt_prepared_entries(project_dir, "character", selected_variants, selected_ids)
+        if selected_chapters:
+            eligible = [e for e in eligible if any_chapter_matches(e.get("chapter_mentions", []), selected_chapters)]
 
     if test_slice:
         # Also filter out unresolved identities from test-slice by default
         if not include_unresolved_identities:
             eligible = [e for e in eligible if not e.get("identity_review_required")]
-        eligible = _apply_validation_slice_caps(eligible)
-    selected_entries = eligible if limit is None else eligible[:limit]
+        
+        if selected_chapters:
+            character_bibles = _load_character_bibles(project_dir)
+            eligible = _rank_character_entries(eligible, character_bibles, selected_chapters)
+            slice_limit = limit if limit is not None else 2
+            eligible = eligible[:slice_limit]
+        else:
+            eligible = _apply_validation_slice_caps(eligible)
+            if limit is not None:
+                eligible = eligible[:limit]
+        
+    selected_entries = eligible if (test_slice and selected_chapters) else (eligible if limit is None else eligible[:limit])
     for entry in selected_entries:
         character_id = str(entry.get("asset_id", "")).strip().lower()
         variant = str(entry.get("variant_key", "")).strip().lower()
@@ -479,6 +498,7 @@ def _prompt_prepared_entries(
                 "recommended_warnings": recommended_warnings,
                 "warnings": warnings,
                 "identity_review_required": identity_review_required,
+                "chapter_mentions": list(item.get("chapter_mentions", [])),
                 "updated_at": "",
                 "generation_stage": _generation_stage_for_variant(variant),
                 "generation_workflow_id": _workflow_for_variant(variant),
@@ -552,6 +572,44 @@ def _character_priority(bible: dict[str, Any]) -> str:
     if any(term in role for term in ["protagonist", "lead", "major", "main", "primary"]): return "high"
     if any(term in role for term in ["supporting", "recurring", "secondary"]): return "medium"
     return "normal"
+
+
+def _rank_character_entries(entries: list[dict[str, Any]], character_bibles: dict[str, dict[str, Any]], selected_chapters: set[str]) -> list[dict[str, Any]]:
+    def score_entry(entry: dict[str, Any]) -> tuple[int, ...]:
+        character_id = str(entry.get("asset_id", "")).strip().lower()
+        bible = character_bibles.get(character_id, {})
+        
+        # 1. Chapter match (already filtered, but for consistency)
+        chapter_match = 1 if any_chapter_matches(entry.get("chapter_mentions", []), selected_chapters) else 0
+        
+        # 2. Resolved/canonical identity
+        is_canonical = 1 if str(bible.get("status", "canonical")).strip().lower() == "canonical" else 0
+        
+        # 3. No unresolved clarification
+        no_clarification_needed = 0 if entry.get("identity_review_required") else 1
+        
+        # 4. Film-facing individual before group/provisional
+        entity_kind = str(bible.get("entity_kind", "individual")).strip().lower()
+        is_individual = 1 if entity_kind == "individual" else 0
+        
+        # 5. Protagonist/main/major role signals
+        priority_map = {"high": 2, "medium": 1, "normal": 0}
+        priority_score = priority_map.get(_character_priority(bible), 0)
+        
+        # 6. Descriptor completeness / fewer warnings
+        warning_score = -len(entry.get("warnings", []))
+        
+        # 7. Recurrence in selected chapters
+        mentions = entry.get("chapter_mentions", [])
+        recurrence = len([m for m in mentions if m in selected_chapters])
+        
+        # 8. Stable ID and non-placeholder name
+        display_name = str(bible.get("display_name", "")).strip().lower()
+        has_good_name = 1 if display_name and "character" not in display_name and "unknown" not in display_name else 0
+        
+        return (chapter_match, is_canonical, no_clarification_needed, is_individual, priority_score, recurrence, warning_score, has_good_name)
+
+    return sorted(entries, key=score_entry, reverse=True)
 
 
 def _recommended_input_warnings(path: Path) -> list[str]:

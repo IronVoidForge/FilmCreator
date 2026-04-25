@@ -3,6 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
+from .chapter_selection import any_chapter_matches, parse_chapter_selector
 from .core.json_io import read_json
 from .environment_bible import _is_film_facing_environment
 from .prompt_boosters import apply_booster_bundles
@@ -107,6 +108,7 @@ def run_environment_reference_generation(
     seed: int | None = None,
     workflow_id: str | None = None,
     test_slice: bool = False,
+    chapters: str | None = None,
     prompt_variant_id: str = "raw",
     booster_bundle_ids: list[str] | None = None,
 ) -> ReferencePhaseSummary:
@@ -114,12 +116,15 @@ def run_environment_reference_generation(
     queue = load_reference_queue(project_dir, "environment")
     selected_variants = {v.strip().lower() for v in variants or [] if v.strip()}
     selected_ids = {e.strip().lower() for e in environment_ids or [] if e.strip()}
+    selected_chapters = set(parse_chapter_selector(chapters))
     eligible: list[dict[str, Any]] = []
     warnings: list[str] = []
     written: list[str] = []
 
     if test_slice:
         eligible = _prompt_prepared_entries(project_dir, "environment", selected_variants, selected_ids)
+        if selected_chapters:
+            eligible = [e for e in eligible if any_chapter_matches(e.get("chapter_mentions", []), selected_chapters)]
 
     if not eligible:
         for entry in queue:
@@ -128,6 +133,8 @@ def run_environment_reference_generation(
             if selected_ids and environment_id not in selected_ids:
                 continue
             if selected_variants and variant not in selected_variants:
+                continue
+            if selected_chapters and not any_chapter_matches(entry.get("chapter_mentions", []), selected_chapters):
                 continue
             status = str(entry.get("status", "")).strip().lower()
             if status in {"approved", "locked"}:
@@ -143,8 +150,17 @@ def run_environment_reference_generation(
             eligible.append(entry)
 
     if test_slice:
-        eligible = _apply_validation_slice_caps(eligible)
-    selected_entries = eligible if limit is None else eligible[:limit]
+        if selected_chapters:
+            environment_bibles = _load_environment_bibles(project_dir)
+            eligible = _rank_environment_entries(eligible, environment_bibles, selected_chapters)
+            slice_limit = limit if limit is not None else 2
+            eligible = eligible[:slice_limit]
+        else:
+            eligible = _apply_validation_slice_caps(eligible)
+            if limit is not None:
+                eligible = eligible[:limit]
+                
+    selected_entries = eligible if (test_slice and selected_chapters) else (eligible if limit is None else eligible[:limit])
     for entry in selected_entries:
         environment_id = str(entry.get("asset_id", "")).strip().lower()
         variant = str(entry.get("variant_key", "")).strip().lower()
@@ -465,9 +481,42 @@ def _prompt_prepared_entries(
                 "blocking_warnings": blocking_warnings,
                 "recommended_warnings": recommended_warnings,
                 "warnings": warnings,
+                "chapter_mentions": list(item.get("chapter_mentions", [])),
                 "updated_at": "",
                 "generation_stage": _generation_stage_for_variant(variant),
                 "generation_workflow_id": _workflow_for_variant(variant),
             }
         )
     return entries
+
+
+def _rank_environment_entries(entries: list[dict[str, Any]], environment_bibles: dict[str, dict[str, Any]], selected_chapters: set[str]) -> list[dict[str, Any]]:
+    def score_entry(entry: dict[str, Any]) -> tuple[int, ...]:
+        env_id = str(entry.get("asset_id", "")).strip().lower()
+        bible = environment_bibles.get(env_id, {})
+        
+        # 1. Chapter match (already filtered, but for consistency)
+        chapter_match = 1 if any_chapter_matches(entry.get("chapter_mentions", []), selected_chapters) else 0
+        
+        # 2. Bound to scenes/shots in selected chapters (approximated by chapter_mentions in prompt-prep)
+        # 3. Landmark specificity
+        landmark = str(bible.get("landmark_descriptor", "")).strip().lower()
+        has_landmark = 1 if landmark and "none" not in landmark and "unknown" not in landmark else 0
+        
+        # 4. Descriptor completeness / fewer warnings
+        warning_score = -len(entry.get("warnings", []))
+        
+        # 5. Recurrence in selected chapters
+        mentions = entry.get("chapter_mentions", [])
+        recurrence = len([m for m in mentions if m in selected_chapters])
+        
+        # 6. Stable ID and non-placeholder name
+        display_name = str(bible.get("display_name", "")).strip().lower()
+        has_good_name = 1 if display_name and "environment" not in display_name and "unknown" not in display_name else 0
+        
+        priority_map = {"high": 2, "medium": 1, "normal": 0}
+        priority_score = priority_map.get(_environment_priority(bible), 0)
+        
+        return (chapter_match, priority_score, has_landmark, recurrence, warning_score, has_good_name)
+
+    return sorted(entries, key=score_entry, reverse=True)

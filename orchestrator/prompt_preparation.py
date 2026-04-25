@@ -2085,6 +2085,7 @@ def run_prompt_preparation(
                         "status": "canonical",
                         "path": str(package_path),
                         "source_fingerprint": fp,
+                        "chapter_mentions": list(dict.fromkeys(_coerce_bullets(bible.get("chapter_mentions", [])))),
                     }
                 )
                 if limit is not None and processed_packages >= limit:
@@ -2141,6 +2142,7 @@ def run_prompt_preparation(
                         "status": "canonical",
                         "path": str(package_path),
                         "source_fingerprint": fp,
+                        "chapter_mentions": list(dict.fromkeys(_coerce_bullets(bible.get("chapter_mentions", [])))),
                     }
                 )
                 if limit is not None and processed_packages >= limit:

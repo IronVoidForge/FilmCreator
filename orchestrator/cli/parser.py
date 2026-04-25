@@ -49,6 +49,7 @@ def build_parser() -> argparse.ArgumentParser:
     crg.add_argument("--seed", type=int, default=None)
     crg.add_argument("--workflow-id", default=None)
     crg.add_argument("--test-slice", action="store_true")
+    crg.add_argument("--chapters", default=None)
     crg.add_argument("--prompt-variant", type=str, default="raw")
     crg.add_argument("--booster-bundle", action="append", dest="booster_bundle_ids")
 
@@ -86,8 +87,10 @@ def build_parser() -> argparse.ArgumentParser:
     erg.add_argument("--seed", type=int, default=None)
     erg.add_argument("--workflow-id", default=None)
     erg.add_argument("--test-slice", action="store_true")
+    erg.add_argument("--chapters", default=None)
     erg.add_argument("--prompt-variant", type=str, default="raw")
     erg.add_argument("--booster-bundle", action="append", dest="booster_bundle_ids")
+
 
     erc = subparsers.add_parser("register-environment-reference-candidate")
     erc.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
