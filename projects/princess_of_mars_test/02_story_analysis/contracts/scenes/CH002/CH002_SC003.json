@@ -1,0 +1,316 @@
+{
+  "scene_id": "CH002_SC003",
+  "chapter_id": "CH002",
+  "scene_title": "SC003",
+  "purpose": "To execute the central supernatural twist and reveal the protagonist's transformation.",
+  "summary": "After hours of isolation, the protagonist uses intense mental willpower to break the paralysis. Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, clothed body remains lying lifeless on the cave floor.",
+  "emotional_arc": "From intense mental struggle to profound shock and existential horror.",
+  "production_intent": "Execute the supernatural metamorphosis reveal by transitioning from a physical struggle against paralysis to the visual discovery of a dual existence. The shot must capture both the standing naked protagonist and his original clothed corpse in a single frame to establish the twist.",
+  "scene_short_description": "A man struggles to stand in a dark cave only to find his clothed body lying dead nearby.",
+  "scene_primary_scale_story_point": "The verticality of the standing naked figure contrasted against the horizontal lifelessness of the clothed body.",
+  "scene_required_anchor_catalog": [
+    "Clothed corpse",
+    "Cave floor shadows"
+  ],
+  "scene_start_state": "Protagonist is paralyzed and immobile on the cave floor.",
+  "scene_end_state": "Protagonist stands upright, naked, staring down at his own dead, clothed self.",
+  "dominant_action_line": "Breaking physical paralysis through willpower to stand and discover metamorphosis.",
+  "scene_spatial_layout": [
+    "Deep shadow environment with localized light on the struggle area",
+    "Vertical separation between standing subject and prone subject"
+  ],
+  "character_spatial_map": [
+    "protagonist (New Self): Standing upright, naked",
+    "protagonist (Old Body): Lying lifeless, clothed, on cave floor"
+  ],
+  "environment_subzones": [
+    "arizona_mountain_cave_floor",
+    "deep_shadow_zone"
+  ],
+  "entry_vectors": [
+    "Subjects inherit entry logic from the prior scene or chapter transition."
+  ],
+  "exit_vectors": [
+    "Subjects exit or hand off toward the next story beat."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Physical breakthrough to vertical movement",
+    "BT002 -> BT003: Standing upright to visual realization/shock"
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist (The \"New\" Self)",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Interior Cave (Deep shadows)",
+      "canonical_id": "arizona_mountain_cave",
+      "display_name": "arizona_mountain_cave",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/arizona_mountain_cave.md",
+      "notes": "Chapter-local environment alias match for 'Interior Cave (Deep shadows)' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Exact spatial distance between the standing naked protagonist and the lying clothed body",
+    "Lighting consistency across both versions of the character in a single frame"
+  ],
+  "visual_coverage_families": [
+    "Medium shots of physical effort/struggle",
+    "Wide/Medium reveal shot containing both naked and clothed bodies",
+    "Close-ups of facial realization"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Intense mental struggle to break paralysis",
+      "purpose": "",
+      "action_start": "lying immobile",
+      "action_end": "limbs twitching/moving",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "arizona_mountain_cave_floor",
+      "blocking_hint": "prone on rocky ground",
+      "environment_subzone": "arizona_mountain_cave_floor",
+      "continuity_focus": "clothed body position",
+      "coverage_hint": "medium shots of effort",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Breaking paralysis and standing up",
+      "purpose": "",
+      "action_start": "straining upward",
+      "action_end": "standing upright",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "arizona_mountain_cave_floor",
+      "blocking_hint": "rising from the spot of the old body",
+      "environment_subzone": "arizona_mountain_cave_floor",
+      "continuity_focus": "nakedness reveal vs clothed body proximity",
+      "coverage_hint": "wide reveal shot",
+      "coverage_priority": "critical",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Realization of metamorphosis and existential horror",
+      "purpose": "",
+      "action_start": "standing still",
+      "action_end": "staring in shock",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [
+        "clothed corpse"
+      ],
+      "spatial_context": "arizona_mountain_cave_floor",
+      "blocking_hint": "looking down at the floor",
+      "environment_subzone": "arizona_mountain_cave_floor",
+      "continuity_focus": "lighting on face vs body",
+      "coverage_hint": "close-up of face",
+      "coverage_priority": "high",
+      "handoff_to_next": "end"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish struggle",
+      "planned_shot_moment_summary": "protagonist fighting paralysis",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "arizona_mountain_cave_floor",
+      "planned_shot_required_anchor_1": "clothed corpse",
+      "planned_shot_scale_proof_detail": "proximity to floor",
+      "start_state_seed": "prone position",
+      "end_state_seed": "straining upward",
+      "action_seed": "intense mental and physical effort to move limbs",
+      "blocking_seed": [
+        "lying on cave floor"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "reveal metamorphosis",
+      "planned_shot_moment_summary": "standing naked figure seen with dead body",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "clothed corpse"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "arizona_mountain_cave_floor",
+      "planned_shot_required_anchor_1": "clothed corpse",
+      "planned_shot_scale_proof_detail": "distance between standing and lying bodies",
+      "start_state_seed": "rising from floor",
+      "end_state_seed": "standing fully upright",
+      "action_seed": "standing up to reveal nakedness",
+      "blocking_seed": [
+        "standing near the original body"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "pull_back",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "convey horror",
+      "planned_shot_moment_summary": "protagonist realizes his state",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "arizona_mountain_cave_floor",
+      "planned_shot_required_anchor_1": "clothed corpse",
+      "planned_shot_scale_proof_detail": "facial expression detail",
+      "start_state_seed": "looking down",
+      "end_state_seed": "staring in shock",
+      "action_seed": "realizing the existence of the second body",
+      "blocking_seed": [
+        "standing still"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH020",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH020_chapter_xx.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH009",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH009_chapter_ix.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH016",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH016_chapter_xvi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH002",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH002_SC003] Purpose: To execute the central supernatural twist and reveal the protagonist's transformation.",
+    "[CH002_SC003] Summary: After hours of isolation, the protagonist uses intense mental willpower to break the paralysis. Upon standing, he realizes he has undergone a metamorphosis: his new, naked self stands upright while his original, clothed body remains l...",
+    "[CH002_SC003] Emotional arc: From intense mental struggle to profound shock and existential horror.",
+    "[CH002_SC003] Coverage: Medium shots of the physical struggle/effort Reveal shot: A wide or medium shot showing both the standing naked figure and the lying clothed body in one frame. Close-ups of the protagonist's face as he realizes his state.",
+    "[CH002_SC003] Continuity: The exact placement of the \"old\" body relative to where the \"new\" self stands. Lighting consistency between the two versions of the character.",
+    "[CH002] Chapter summary: **Setting:** A cave in the Arizona mountains; a rocky gorge and canyon under moonlight; the vastness of space. **Characters:** - **The Protagonist:** A man who experiences physical paralysis due to a mysterious gas, u...",
+    "[CH020] CHAPTER XX (book index hit)",
+    "[CH009] CHAPTER IX (book index hit)",
+    "[CH016] CHAPTER XVI (book index hit)",
+    "Character protagonist: protagonist"
+  ],
+  "storyboard_markdown": "# Scene Contract: CH002_SC003\n\n## Production Intent\nExecute the central supernatural twist and reveal the protagonist's metamorphosis. The scene must transition from a claustrophobic struggle against paralysis to a wide, shocking reveal of two versions of the same man: one standing and naked, the other lying dead and clothed.\n\n## Required Cast\n- protagonist (The \"New\" Self)\n- protagonist (The \"Old\" Body/Clothed corpse)\n\n## Required Environments\n- arizona_mountain_cave (Deep shadows, rocky floor)\n\n## Continuity Constraints\n- Spatial relationship between standing naked figure and lying clothed body must remain fixed for the reveal shot.\n- Lighting must be consistent across both character iterations in wide coverage.\n\n## Beat List\n- BT001: Intense mental struggle to break paralysis.\n- BT002: Physical breakthrough and standing upright (Metamorphosis reveal).\n- BT003: Realization of horror/existential shock.",
+  "metadata": {
+    "artifact_id": "CH002_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "e588bd0194d5c64d8805fe5707f80329c8c7848f",
+    "created_at_utc": "2026-04-25T20:48:38.666433+00:00",
+    "updated_at_utc": "2026-04-25T20:48:38.666433+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH002_SC003",
+        "version": "d186e09aaf166dd975a1d2db74000eb161ebae8d"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH002_SC003",
+        "version": "b50b648806e7f423d0f2234632e01e5324165e61"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH002_SC003",
+        "version": "b10a73b69cfea5d3e15e0d867b0e568b958d49b5"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-25T20:49:07.320488+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "e588bd0194d5c64d8805fe5707f80329c8c7848f"
+      }
+    ]
+  }
+}
