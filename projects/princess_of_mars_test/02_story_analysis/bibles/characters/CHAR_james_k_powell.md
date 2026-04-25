@@ -19,9 +19,9 @@
 - physical_build: unknown
 - origin_or_historical_context: 1860s era; frontier/mining setting.
 - movement_language: unknown
-A man of the 1860s era, appearing as a practical mining engineer or former officer. His silhouette is defined by frontier-ready, functional attire from the mid-19th century. In his final state, he is identified as a deceased prospector characterized by being riddled with arrows.
+A mid-19th-century man dressed in practical, rugged 1860s attire appropriate for a mining engineer and frontier traveler. In his final recorded state, he appears as a deceased prospector, his body riddled with arrows.
 
-- physical_traits: Mining engineer aesthetic
+- physical_traits: Former Confederate officer
 - costume_signature: Practical 1860s attire suitable for mining engineering and frontier travel.
 - distinguishing_features: Riddled with arrows (deceased state)
 - state_variants: Deceased prospector (riddled with arrows)
@@ -29,14 +29,14 @@ A man of the 1860s era, appearing as a practical mining engineer or former offic
 ## Behavioral Bible
 
 - personality: unknown
-- role: Friend and partner to John Carter; mining engineer; former Confederate officer.
+- role: Mining engineer; friend and partner to John Carter.
 - voice_notes: unknown
 - relationship_notes: Friend and partner to John Carter
 
 ## Continuity
 
-- continuity_constraints: Must maintain 1860s era practical clothing for active states., Deceased state must include arrow wounds.
-- unresolved_ambiguities: Specific physical build and age are not provided., Exact movement style is unknown.
+- continuity_constraints: Costume must reflect 1860s practical mining/frontier utility.
+- unresolved_ambiguities: Specific physical build and age are not provided., Movement style is unknown.
 
 ## Evidence Summary
 
@@ -53,4 +53,4 @@ A man of the 1860s era, appearing as a practical mining engineer or former offic
 - status: `generated`
 - source_fingerprint: `2c7be7643511776051c4e675e099c7ae382dbec6`
 - created_at_utc: `2026-04-25T20:46:37.329547+00:00`
-- updated_at_utc: `2026-04-25T20:46:37.329547+00:00`
+- updated_at_utc: `2026-04-25T21:09:51.179644+00:00`

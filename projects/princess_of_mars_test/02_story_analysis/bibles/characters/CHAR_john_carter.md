@@ -15,28 +15,28 @@
 ## Visual Bible
 
 - identity_baseline: Human male, Earthling, former Confederate cavalry officer and soldier of fortune.
-- age_presence: Elderly (in framing narrative) / unknown (active warrior state).
-- physical_build: Unknown.
-- origin_or_historical_context: 1860s American frontier/Confederate military background; transitioned to Martian setting.
-- movement_language: Capable of taming beasts through authority and kindness rather than brute force.
-A human male and former Confederate cavalry officer who transitions from a rugged 1860s frontiersman into a Martian warrior. His visual identity shifts from mid-19th century military/prospector attire to a more exotic silhouette composed of defeated chieftains' spoils, specifically silks and furs. He possesses a distinct lack of the typical ornaments or clothing associated with other Earthmen in his current environment.
+- age_presence: Elderly in the framing narrative; younger/active as a warrior in primary action.
+- physical_build: unknown
+- origin_or_historical_context: 1860s American frontier / mid-19th century military background.
+- movement_language: unknown
+A human male of Earth origin, John Carter presents as a rugged frontiersman with a mid-19th century Confederate cavalry background. His visual identity shifts from the practical, utilitarian clothing of an 1860s soldier or prospector to a more exotic warrior aesthetic characterized by Martian silks and furs acquired through combat. He lacks the typical ornamental clothing associated with other Earthmen.
 
-- physical_traits: Human male
-- costume_signature: Mid-19th century cavalry attire or spoils of war (Martian silks and furs).
-- distinguishing_features: Lacks typical "unsightly" Earthman clothing/ornaments.
-- state_variants: 1860s frontiersman/cavalry officer (Confederate military attire), Martian warrior (wearing spoils of war, including silks and furs)
+- physical_traits: human male
+- costume_signature: Transitioning from 1860s cavalry attire to Martian spoils (silks and furs).
+- distinguishing_features: lacks typical Earthman ornaments/clothing
+- state_variants: Mid-19th century frontier/cavalry attire (prospector/soldier), Warrior/Survivor wearing Martian silks and furs
 
 ## Behavioral Bible
 
-- personality: Capable of exercising authority and kindness to tame creatures; soldier of fortune.
-- role: Former Confederate cavalry officer; warrior; survivor.
+- personality: Capable of taming creatures through authority and kindness rather than brute force; survivor.
+- role: Former Confederate cavalry officer, soldier of fortune, warrior.
 - voice_notes: unknown
-- relationship_notes: Able to tame Martian thoats through authority and kindness.
+- relationship_notes: capable of taming Martian thoats
 
 ## Continuity
 
-- continuity_constraints: Visual transition from 1860s Earth attire to Martian spoils (silks/furs)., Must maintain the distinction of being an Earthman without typical "unsightly" ornaments.
-- unresolved_ambiguities: Exact physical build and proportions., Specific age during active combat sequences vs. framing narrative.
+- continuity_constraints: Visual transition from 1860s Earth attire to Martian spoils must be maintained., Must maintain the distinction of being an Earthman without typical "unsightly" ornaments.
+- unresolved_ambiguities: Specific physical build and proportions are not detailed., Exact movement language/posture is not specified.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ A human male and former Confederate cavalry officer who transitions from a rugge
 - status: `generated`
 - source_fingerprint: `c8f8573c39aa87087f7fb166cddfc9e5b8562965`
 - created_at_utc: `2026-04-25T20:46:48.056698+00:00`
-- updated_at_utc: `2026-04-25T20:46:48.056698+00:00`
+- updated_at_utc: `2026-04-25T21:10:02.055282+00:00`
