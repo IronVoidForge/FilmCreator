@@ -41,6 +41,60 @@ REQUIRED_CHARACTER_REFERENCE_INPUTS = {"subject_kind", "subject_id", "source_art
 OPTIONAL_BUT_RECOMMENDED_CHARACTER_INPUTS = {"display_name", "identity_descriptor", "body_descriptor", "face_descriptor", "costume_descriptor", "posture_descriptor", "expression_descriptor", "locked_fields"}
 
 
+def _coerce_chapter_mentions(value: Any) -> list[str]:
+    if isinstance(value, list):
+        raw = value
+    elif isinstance(value, str):
+        raw = [value]
+    else:
+        raw = []
+    out: list[str] = []
+    seen: set[str] = set()
+    for item in raw:
+        text = str(item).strip()
+        if not text:
+            continue
+        if text not in seen:
+            seen.add(text)
+            out.append(text)
+    return out
+
+
+def _merge_entries_into_queue(existing_queue: list[dict[str, Any]], updated_entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Preserve existing queue entries while replacing/appending updated entries.
+
+    Match on (asset_id, variant_key). Existing queue order is preserved. New entries
+    that were generated from prompt-prep index and not already in the queue are
+    appended at the end.
+    """
+    updates_by_key: dict[tuple[str, str], dict[str, Any]] = {}
+    for entry in updated_entries:
+        asset_id = str(entry.get("asset_id", "")).strip().lower()
+        variant = str(entry.get("variant_key", "")).strip().lower()
+        if not asset_id or not variant:
+            continue
+        updates_by_key[(asset_id, variant)] = entry
+
+    merged: list[dict[str, Any]] = []
+    seen: set[tuple[str, str]] = set()
+
+    for entry in existing_queue:
+        asset_id = str(entry.get("asset_id", "")).strip().lower()
+        variant = str(entry.get("variant_key", "")).strip().lower()
+        key = (asset_id, variant)
+        if key in updates_by_key:
+            merged.append(updates_by_key[key])
+            seen.add(key)
+        else:
+            merged.append(entry)
+
+    for key, entry in updates_by_key.items():
+        if key not in seen:
+            merged.append(entry)
+
+    return merged
+
+
 def run_character_reference_planning(project_slug: str, *, force: bool = False, variants: list[str] | None = None, limit: int | None = None, test_slice: bool = False) -> ReferencePhaseSummary:
     project_dir = create_project(project_slug)
     character_bibles = _load_character_bibles(project_dir)
@@ -63,6 +117,8 @@ def run_character_reference_planning(project_slug: str, *, force: bool = False, 
             key = (character_id, variant)
             if key in existing_by_key:
                 entry = existing_by_key[key]
+                if not entry.get("chapter_mentions"):
+                    entry["chapter_mentions"] = _coerce_chapter_mentions(bible.get("chapter_mentions", []))
                 if test_slice:
                     entry["validation_slice"] = True
                     entry["validation_slice_stage"] = _validation_slice_stage_for_variant(variant)
@@ -80,6 +136,7 @@ def run_character_reference_planning(project_slug: str, *, force: bool = False, 
             request["blocking_warnings"] = blocking_warnings
             request["recommended_warnings"] = recommended_warnings
             request["identity_review_required"] = identity_review_required
+            request["chapter_mentions"] = _coerce_chapter_mentions(bible.get("chapter_mentions", []))
             request["generation_stage"] = _generation_stage_for_variant(variant)
             request["generation_workflow_id"] = _workflow_for_variant(variant)
             if test_slice:
@@ -143,11 +200,23 @@ def run_character_reference_generation(
             status = str(entry.get("status", "")).strip().lower()
             if status in {"approved", "locked"}:
                 continue
-            if status == "blocked" and not test_slice:
-                continue
             
-            # Unresolved identity guard
-            if entry.get("identity_review_required") and not include_unresolved_identities:
+            blocking_warnings = entry.get("blocking_warnings", [])
+            recommended_warnings = entry.get("recommended_warnings", [])
+            if not isinstance(blocking_warnings, list):
+                blocking_warnings = []
+            if not isinstance(recommended_warnings, list):
+                recommended_warnings = []
+            
+            if status == "blocked" and blocking_warnings:
+                continue
+            if status == "blocked" and not blocking_warnings and recommended_warnings:
+                entry["status"] = "prepared"
+            
+            # Recompute identity_review_required for old queue entries
+            identity_review_required = bool(entry.get("identity_review_required")) or _is_character_identity_review_required(project_dir, character_id)
+            entry["identity_review_required"] = identity_review_required
+            if identity_review_required and not include_unresolved_identities:
                 continue
                 
             prompt_path = Path(str(entry.get("prompt_package_path", "")))
@@ -174,8 +243,11 @@ def run_character_reference_generation(
             eligible = _apply_validation_slice_caps(eligible)
             if limit is not None:
                 eligible = eligible[:limit]
-        
-    selected_entries = eligible if (test_slice and selected_chapters) else (eligible if limit is None else eligible[:limit])
+    
+    if test_slice:
+        selected_entries = eligible
+    else:
+        selected_entries = eligible if limit is None else eligible[:limit]
     for entry in selected_entries:
         character_id = str(entry.get("asset_id", "")).strip().lower()
         variant = str(entry.get("variant_key", "")).strip().lower()
@@ -220,7 +292,7 @@ def run_character_reference_generation(
             for output_file in _manifest_output_files(summary.manifest_path):
                 candidate_summary = register_character_reference_candidate(project_slug, character_id=character_id, variant=variant, image_path=output_file)
                 written.extend(candidate_summary.written_files)
-    queue_to_write = eligible if test_slice and eligible else queue
+    queue_to_write = _merge_entries_into_queue(queue, eligible) if eligible else queue
     written.extend(write_reference_queue(project_dir, "character", queue_to_write))
     return summarize_reference_phase(project_slug, "character", project_dir, warnings=warnings, written_files=written)
 
@@ -415,6 +487,13 @@ def _fallback_prompt_prepared_entries(
         prompt_path = Path(str(item.get("path", "")))
         if not prompt_path.exists():
             continue
+        
+        identity_review_required = _is_character_identity_review_required(project_dir, asset_id)
+        chapter_mentions = list(item.get("chapter_mentions", []))
+        blocking_warnings = validate_prompt_package(prompt_path, REQUIRED_CHARACTER_REFERENCE_INPUTS)
+        recommended_warnings = _recommended_input_warnings(prompt_path)
+        warnings = blocking_warnings + recommended_warnings
+        
         entries.append(
             {
                 "schema_version": "2026-04-23-reference-assets-v1",
@@ -423,14 +502,18 @@ def _fallback_prompt_prepared_entries(
                 "asset_id": asset_id,
                 "variant_key": variant,
                 "prompt_package_path": str(prompt_path),
-                "status": "prepared",
+                "status": "prepared" if not blocking_warnings else "blocked",
                 "approval_state": "unreviewed",
                 "locked": False,
                 "priority": "normal",
                 "candidate_ids": [],
                 "selected_candidate_id": "",
                 "review_notes": [],
-                "warnings": [],
+                "blocking_warnings": blocking_warnings,
+                "recommended_warnings": recommended_warnings,
+                "warnings": warnings,
+                "identity_review_required": identity_review_required,
+                "chapter_mentions": chapter_mentions,
                 "updated_at": "",
                 "generation_stage": _generation_stage_for_variant(variant),
                 "generation_workflow_id": _workflow_for_variant(variant),

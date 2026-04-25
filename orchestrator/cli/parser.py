@@ -111,9 +111,17 @@ def build_parser() -> argparse.ArgumentParser:
     erl.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
     erl.add_argument("--candidate-id", required=True)
 
+    vf = subparsers.add_parser(
+        "synthesize-visual-fallbacks",
+        help="Synthesize project-level visual fallback guidance for descriptor repair and prompt prep.",
+    )
+    vf.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
+    vf.add_argument("--force", action="store_true")
+
     synth = subparsers.add_parser("run-stage", help="Run a focused implemented pipeline stage.")
     synth.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
     synth.add_argument("stage", choices=[
+        "visual_fallbacks",
         "scene_contracts",
         "scene_bindings",
         "shot_packages",

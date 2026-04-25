@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Any
 
 from .character_bible import _is_film_facing_character
-from .chapter_selection import any_chapter_matches, chapter_matches, parse_chapter_selector
+from .chapter_selection import any_chapter_matches, chapter_matches, parse_chapter_selector, normalize_chapter_id
 from .core.json_io import read_json, write_json
 from .environment_bible import _is_film_facing_environment
 from .prompt_package import PromptPackage, write_prompt_package
@@ -92,6 +92,80 @@ class PromptPreparationSummary:
             "written_files": self.written_files,
             "warnings": self.warnings,
         }
+
+
+def _extract_chapter_tokens_from_text(text: str) -> list[str]:
+    values: list[str] = []
+    for match in re.finditer(r"\bCH\s*0*(\d{1,3})\b|\bchapter[_\s-]*(\d{1,3})\b", str(text), flags=re.IGNORECASE):
+        number = match.group(1) or match.group(2)
+        normalized = normalize_chapter_id(number)
+        if normalized:
+            values.append(normalized)
+    return values
+
+
+def _collect_chapter_mentions_from_value(value: Any) -> list[str]:
+    collected: list[str] = []
+    if isinstance(value, dict):
+        for nested in value.values():
+            collected.extend(_collect_chapter_mentions_from_value(nested))
+        return collected
+    if isinstance(value, list):
+        for item in value:
+            collected.extend(_collect_chapter_mentions_from_value(item))
+        return collected
+    text = str(value or "").strip()
+    if not text:
+        return []
+    normalized = normalize_chapter_id(text)
+    if normalized:
+        return [normalized]
+    return _extract_chapter_tokens_from_text(text)
+
+
+def _merged_chapter_mentions(*records_or_values: Any) -> list[str]:
+    mentions: list[str] = []
+    for value in records_or_values:
+        if not value:
+            continue
+        if isinstance(value, dict):
+            # Preferred explicit locations first
+            for key in [
+                "chapter_mentions",
+                "chapter_ids",
+                "chapters",
+                "source_artifact_ids",
+            ]:
+                if key in value:
+                    mentions.extend(_collect_chapter_mentions_from_value(value.get(key)))
+
+            for container_key in [
+                "field_values",
+                "supported_field_values",
+                "generated_field_values",
+                "reference_repair",
+            ]:
+                container = value.get(container_key)
+                if isinstance(container, dict):
+                    for key in [
+                        "chapter_mentions",
+                        "chapter_ids",
+                        "chapters",
+                        "source_artifact_ids",
+                    ]:
+                        if key in container:
+                            mentions.extend(_collect_chapter_mentions_from_value(container.get(key)))
+        else:
+            mentions.extend(_collect_chapter_mentions_from_value(value))
+
+    deduped: list[str] = []
+    seen: set[str] = set()
+    for mention in mentions:
+        normalized = normalize_chapter_id(mention)
+        if normalized and normalized not in seen:
+            seen.add(normalized)
+            deduped.append(normalized)
+    return deduped
 
 
 def _fingerprint(data: Any) -> str:
@@ -2085,7 +2159,7 @@ def run_prompt_preparation(
                         "status": "canonical",
                         "path": str(package_path),
                         "source_fingerprint": fp,
-                        "chapter_mentions": list(dict.fromkeys(_coerce_bullets(bible.get("chapter_mentions", [])))),
+                        "chapter_mentions": _merged_chapter_mentions(bible, descriptor),
                     }
                 )
                 if limit is not None and processed_packages >= limit:
@@ -2142,7 +2216,7 @@ def run_prompt_preparation(
                         "status": "canonical",
                         "path": str(package_path),
                         "source_fingerprint": fp,
-                        "chapter_mentions": list(dict.fromkeys(_coerce_bullets(bible.get("chapter_mentions", [])))),
+                        "chapter_mentions": _merged_chapter_mentions(bible, descriptor),
                     }
                 )
                 if limit is not None and processed_packages >= limit:

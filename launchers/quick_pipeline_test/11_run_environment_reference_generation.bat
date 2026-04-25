@@ -22,9 +22,12 @@ if "%PROJECT_SLUG%"=="" set /p PROJECT_SLUG=Project slug [princess_of_mars_test]
 if "%PROJECT_SLUG%"=="" set "PROJECT_SLUG=princess_of_mars_test"
 set "LIMIT=%~2"
 if "%LIMIT%"=="" set "LIMIT=2"
+set "CHAPTERS=%~3"
+if "%CHAPTERS%"=="" set "CHAPTERS=2-3"
 
 echo.
 echo Project slug: %PROJECT_SLUG%
+echo Chapters: %CHAPTERS%
 echo Limit: %LIMIT%
 echo Variant: establishing_wide
 echo Prompt variants: raw, environment_clean, environment_readability, environment_polish
@@ -36,19 +39,19 @@ echo.
 echo Running environment reference generation for a small validation slice...
 echo.
 echo [1/4] prompt-variant=raw
-python -m orchestrator generate-environment-references %PROJECT_SLUG% --variant establishing_wide --limit %LIMIT% --test-slice --execute --prompt-variant raw
+python -m orchestrator generate-environment-references %PROJECT_SLUG% --chapters %CHAPTERS% --variant establishing_wide --limit %LIMIT% --test-slice --execute --prompt-variant raw
 if errorlevel 1 goto :fail
 echo.
 echo [2/4] prompt-variant=environment_clean
-python -m orchestrator generate-environment-references %PROJECT_SLUG% --variant establishing_wide --limit %LIMIT% --test-slice --execute --prompt-variant environment_clean
+python -m orchestrator generate-environment-references %PROJECT_SLUG% --chapters %CHAPTERS% --variant establishing_wide --limit %LIMIT% --test-slice --execute --prompt-variant environment_clean
 if errorlevel 1 goto :fail
 echo.
 echo [3/4] prompt-variant=environment_readability
-python -m orchestrator generate-environment-references %PROJECT_SLUG% --variant establishing_wide --limit %LIMIT% --test-slice --execute --prompt-variant environment_readability
+python -m orchestrator generate-environment-references %PROJECT_SLUG% --chapters %CHAPTERS% --variant establishing_wide --limit %LIMIT% --test-slice --execute --prompt-variant environment_readability
 if errorlevel 1 goto :fail
 echo.
 echo [4/4] prompt-variant=environment_polish
-python -m orchestrator generate-environment-references %PROJECT_SLUG% --variant establishing_wide --limit %LIMIT% --test-slice --execute --prompt-variant environment_polish
+python -m orchestrator generate-environment-references %PROJECT_SLUG% --chapters %CHAPTERS% --variant establishing_wide --limit %LIMIT% --test-slice --execute --prompt-variant environment_polish
 if errorlevel 1 goto :fail
 
 echo.

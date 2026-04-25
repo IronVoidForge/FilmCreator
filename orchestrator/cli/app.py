@@ -28,6 +28,7 @@ from ..scene_bindings import run_scene_binding_synthesis
 from ..scene_contracts import run_scene_contract_synthesis
 from ..shot_planner import run_shot_planning
 from ..prompt_preparation import run_prompt_preparation
+from ..visual_fallbacks import run_visual_fallback_synthesis
 from .models import CliSummary
 from .rerun import plan_rerun
 from .status import run_status
@@ -44,6 +45,8 @@ def dispatch(args) -> None:
         summary = _run_or_plan_quick_test(args)
     elif args.command == "refresh-bibles":
         summary = _refresh_bibles(args)
+    elif args.command == "synthesize-visual-fallbacks":
+        summary = run_visual_fallback_synthesis(args.project_slug, force=args.force)
     elif args.command == "run-stage":
         summary = _run_stage(args)
     elif args.command == "plan-character-references":
@@ -114,6 +117,7 @@ def _run_or_plan_quick_test(args) -> Any:
     steps["scene_bindings"] = run_scene_binding_synthesis(args.project_slug, force=True, chapters=args.chapters).to_dict()
     steps["shot_packages"] = run_shot_planning(args.project_slug, use_llm=True, force=True, chapters=args.chapters).to_dict()
     steps["dialogue_timeline"] = run_dialogue_timeline(args.project_slug, force=True, chapters=args.chapters).to_dict()
+    steps["visual_fallbacks"] = run_visual_fallback_synthesis(args.project_slug, force=True).to_dict()
     steps["descriptor_enrichment"] = run_descriptor_enrichment(args.project_slug, use_llm=True, force=True, chapters=args.chapters).to_dict()
     steps["prompt_preparation"] = run_prompt_preparation(args.project_slug, force=True, chapters=args.chapters).to_dict()
     steps["quality_grading"] = run_quality_grading(args.project_slug).to_dict()
@@ -132,6 +136,8 @@ def _refresh_bibles(args) -> CliSummary:
 
 
 def _run_stage(args) -> Any:
+    if args.stage == "visual_fallbacks":
+        return run_visual_fallback_synthesis(args.project_slug, force=args.force)
     if args.stage == "scene_contracts":
         return run_scene_contract_synthesis(args.project_slug, use_llm=not args.no_llm, force=args.force, chapters=args.chapters)
     if args.stage == "scene_bindings":

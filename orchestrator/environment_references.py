@@ -41,6 +41,99 @@ REQUIRED_ENVIRONMENT_REFERENCE_INPUTS = {"subject_kind", "subject_id", "source_a
 OPTIONAL_BUT_RECOMMENDED_ENVIRONMENT_INPUTS = {"display_name", "layout_descriptor", "scale_descriptor", "architecture_descriptor", "landmark_descriptor", "lighting_descriptor", "mood_descriptor", "locked_fields"}
 
 
+def _coerce_chapter_mentions(value: Any) -> list[str]:
+    if isinstance(value, list):
+        raw = value
+    elif isinstance(value, str):
+        raw = [value]
+    else:
+        raw = []
+    out: list[str] = []
+    seen: set[str] = set()
+    for item in raw:
+        text = str(item).strip()
+        if not text:
+            continue
+        if text not in seen:
+            seen.add(text)
+            out.append(text)
+    return out
+
+
+def _merge_entries_into_queue(existing_queue: list[dict[str, Any]], updated_entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Preserve existing queue entries while replacing/appending updated entries.
+
+    Match on (asset_id, variant_key). Existing queue order is preserved. New entries
+    that were generated from prompt-prep index and not already in the queue are
+    appended at the end.
+    """
+    updates_by_key: dict[tuple[str, str], dict[str, Any]] = {}
+    for entry in updated_entries:
+        asset_id = str(entry.get("asset_id", "")).strip().lower()
+        variant = str(entry.get("variant_key", "")).strip().lower()
+        if not asset_id or not variant:
+            continue
+        updates_by_key[(asset_id, variant)] = entry
+
+    merged: list[dict[str, Any]] = []
+    seen: set[tuple[str, str]] = set()
+
+    for entry in existing_queue:
+        asset_id = str(entry.get("asset_id", "")).strip().lower()
+        variant = str(entry.get("variant_key", "")).strip().lower()
+        key = (asset_id, variant)
+        if key in updates_by_key:
+            merged.append(updates_by_key[key])
+            seen.add(key)
+        else:
+            merged.append(entry)
+
+    for key, entry in updates_by_key.items():
+        if key not in seen:
+            merged.append(entry)
+
+    return merged
+
+
+def _environment_landmark_text(bible: dict[str, Any]) -> str:
+    keys = [
+        "landmark_descriptor",
+        "camera_friendly_landmarks",
+        "recurring_anchors",
+        "recurring_elements",
+        "layout_notes",
+        "visual_summary",
+        "architecture_descriptor",
+        "terrain_descriptor",
+    ]
+    parts: list[str] = []
+    for key in keys:
+        value = bible.get(key)
+        if isinstance(value, list):
+            parts.extend(str(item).strip() for item in value if str(item).strip())
+        elif isinstance(value, dict):
+            parts.extend(str(item).strip() for item in value.values() if str(item).strip())
+        elif isinstance(value, str) and value.strip():
+            parts.append(value.strip())
+    return " ".join(parts).strip()
+
+
+def _meaningful_environment_text(text: str) -> bool:
+    normalized = " ".join(str(text).lower().split()).strip()
+    if not normalized:
+        return False
+    weak_markers = {
+        "unknown",
+        "none",
+        "n/a",
+        "null",
+        "[]",
+        "described environment with stable spatial anchors",
+        "described environment with stable spatial continuity",
+    }
+    return normalized not in weak_markers
+
+
 def run_environment_reference_planning(project_slug: str, *, force: bool = False, variants: list[str] | None = None, limit: int | None = None, test_slice: bool = False) -> ReferencePhaseSummary:
     project_dir = create_project(project_slug)
     environment_bibles = _load_environment_bibles(project_dir)
@@ -63,6 +156,8 @@ def run_environment_reference_planning(project_slug: str, *, force: bool = False
             key = (environment_id, variant)
             if key in existing_by_key:
                 entry = existing_by_key[key]
+                if not entry.get("chapter_mentions"):
+                    entry["chapter_mentions"] = _coerce_chapter_mentions(bible.get("chapter_mentions", []))
                 if test_slice:
                     entry["validation_slice"] = True
                     entry["validation_slice_stage"] = _validation_slice_stage_for_variant(variant)
@@ -77,6 +172,7 @@ def run_environment_reference_planning(project_slug: str, *, force: bool = False
             request["status"] = "blocked" if blocking_warnings else "prepared"
             request["blocking_warnings"] = blocking_warnings
             request["recommended_warnings"] = recommended_warnings
+            request["chapter_mentions"] = _coerce_chapter_mentions(bible.get("chapter_mentions", []))
             request["generation_stage"] = _generation_stage_for_variant(variant)
             request["generation_workflow_id"] = _workflow_for_variant(variant)
             if test_slice:
@@ -139,13 +235,18 @@ def run_environment_reference_generation(
             status = str(entry.get("status", "")).strip().lower()
             if status in {"approved", "locked"}:
                 continue
-            if status == "blocked" and not test_slice:
-                continue
             
-            # Recommended warnings should not block generation
-            blocking = entry.get("blocking_warnings", [])
-            if blocking and not test_slice:
+            blocking_warnings = entry.get("blocking_warnings", [])
+            recommended_warnings = entry.get("recommended_warnings", [])
+            if not isinstance(blocking_warnings, list):
+                blocking_warnings = []
+            if not isinstance(recommended_warnings, list):
+                recommended_warnings = []
+            
+            if status == "blocked" and blocking_warnings:
                 continue
+            if status == "blocked" and not blocking_warnings and recommended_warnings:
+                entry["status"] = "prepared"
                 
             eligible.append(entry)
 
@@ -159,8 +260,11 @@ def run_environment_reference_generation(
             eligible = _apply_validation_slice_caps(eligible)
             if limit is not None:
                 eligible = eligible[:limit]
-                
-    selected_entries = eligible if (test_slice and selected_chapters) else (eligible if limit is None else eligible[:limit])
+    
+    if test_slice:
+        selected_entries = eligible
+    else:
+        selected_entries = eligible if limit is None else eligible[:limit]
     for entry in selected_entries:
         environment_id = str(entry.get("asset_id", "")).strip().lower()
         variant = str(entry.get("variant_key", "")).strip().lower()
@@ -205,7 +309,7 @@ def run_environment_reference_generation(
             for output_file in _manifest_output_files(summary.manifest_path):
                 candidate_summary = register_environment_reference_candidate(project_slug, environment_id=environment_id, variant=variant, image_path=output_file)
                 written.extend(candidate_summary.written_files)
-    queue_to_write = eligible if test_slice and eligible else queue
+    queue_to_write = _merge_entries_into_queue(queue, eligible) if eligible else queue
     written.extend(write_reference_queue(project_dir, "environment", queue_to_write))
     return summarize_reference_phase(project_slug, "environment", project_dir, warnings=warnings, written_files=written)
 
@@ -500,8 +604,11 @@ def _rank_environment_entries(entries: list[dict[str, Any]], environment_bibles:
         
         # 2. Bound to scenes/shots in selected chapters (approximated by chapter_mentions in prompt-prep)
         # 3. Landmark specificity
-        landmark = str(bible.get("landmark_descriptor", "")).strip().lower()
-        has_landmark = 1 if landmark and "none" not in landmark and "unknown" not in landmark else 0
+        landmark_text = _environment_landmark_text(bible)
+        has_landmark = 1 if _meaningful_environment_text(landmark_text) else 0
+        
+        # Cave bonus
+        cave_bonus = 1 if any(term in f"{env_id} {landmark_text}".lower() for term in ["cave", "cliff", "cliffside", "cavern"]) else 0
         
         # 4. Descriptor completeness / fewer warnings
         warning_score = -len(entry.get("warnings", []))
@@ -517,6 +624,6 @@ def _rank_environment_entries(entries: list[dict[str, Any]], environment_bibles:
         priority_map = {"high": 2, "medium": 1, "normal": 0}
         priority_score = priority_map.get(_environment_priority(bible), 0)
         
-        return (chapter_match, priority_score, has_landmark, recurrence, warning_score, has_good_name)
+        return (chapter_match, priority_score, cave_bonus, has_landmark, recurrence, warning_score, has_good_name)
 
     return sorted(entries, key=score_entry, reverse=True)
