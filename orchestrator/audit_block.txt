@@ -1,0 +1,69 @@
+
+        # Audit visual fields before fallback
+        pre_fallback_audit = visual_field_audit(merged)
+        missing_fields = pre_fallback_audit["missing_fields"]
+
+        print(
+            f"[character-bible] {char_id} visual audit: "
+            f"missing={pre_fallback_audit['missing_count']}/"
+            f"{pre_fallback_audit['total_prompt_critical_fields']} "
+            f"fields: {', '.join(missing_fields) if missing_fields else 'none'}"
+        )
+
+        fallback_attempted = False
+        fallback_method = "none"
+        fallback_reason = "not_needed"
+        fallback = merged.get("visual_production_fallback") or {}
+
+        if pre_fallback_audit["needs_visual_production_fallback"]:
+            fallback_attempted = True
+            fallback_method = "deterministic"
+            fallback_reason = "missing_prompt_critical_fields"
+            fallback = deterministic_visual_fallback(entry, merged, evidence_summary)
+            merged["visual_production_fallback"] = fallback
+        else:
+            merged["visual_production_fallback"] = {}
+
+        post_fallback_audit = fallback_result_audit(merged.get("visual_production_fallback") or {})
+
+        print(
+            f"[character-bible] {char_id} fallback: "
+            f"attempted={'yes' if fallback_attempted else 'no'} "
+            f"reason={fallback_reason} "
+            f"bucket={post_fallback_audit.get('fallback_bucket') or 'none'} "
+            f"method={fallback_method} "
+            f"filled={post_fallback_audit['filled_count']}/"
+            f"{post_fallback_audit['filled_count'] + post_fallback_audit['empty_count']} "
+            f"status={post_fallback_audit.get('status') or 'none'}"
+        )
+
+        preview = ""
+        if isinstance(fallback, dict):
+            preview = str(
+                fallback.get("production_body_descriptor")
+                or fallback.get("production_identity_descriptor")
+                or ""
+            ).strip()
+        if preview:
+            print(f"[character-bible] {char_id} fallback preview: {preview[:180]}")
+
+        fallback_diagnostics.append({
+            "character_id": char_id,
+            "display_name": merged.get("display_name"),
+            "entity_kind": entry.get("entity_kind"),
+            "first_seen_chapter": entry.get("first_seen_chapter"),
+            "chapter_mentions": entry.get("chapter_mentions", []),
+            "synthesis_mode": "reused" if existing and not force else "synthesized",
+            "pre_fallback_audit": pre_fallback_audit,
+            "fallback_attempted": fallback_attempted,
+            "fallback_method": fallback_method,
+            "fallback_reason": fallback_reason,
+            "fallback_result_audit": post_fallback_audit,
+            "fallback_preview": {
+                "production_identity_descriptor": fallback.get("production_identity_descriptor") if isinstance(fallback, dict) else "",
+                "production_body_descriptor": fallback.get("production_body_descriptor") if isinstance(fallback, dict) else "",
+                "production_costume_descriptor": fallback.get("production_costume_descriptor") if isinstance(fallback, dict) else "",
+                "production_silhouette": fallback.get("production_silhouette") if isinstance(fallback, dict) else "",
+            },
+            "evidence_summary": evidence_summary[:5],
+        })

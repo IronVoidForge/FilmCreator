@@ -2,28 +2,86 @@
 from typing import Any
 
 
+PROMPT_CRITICAL_VISUAL_FIELDS = [
+    "identity_baseline",
+    "age_presence",
+    "physical_build",
+    "origin_or_historical_context",
+    "movement_language",
+    "stable_visual_summary",
+    "physical_traits",
+    "costume_signature",
+    "distinguishing_features",
+    "state_variants",
+]
+
+PRODUCTION_FALLBACK_FIELDS = [
+    "production_identity_descriptor",
+    "production_body_descriptor",
+    "production_face_descriptor",
+    "production_costume_descriptor",
+    "production_silhouette",
+    "production_movement_descriptor",
+    "production_state_variants",
+    "negative_terms",
+]
+
+
 def is_unknownish(value: Any) -> bool:
     """Check if a value is unknown, empty, or placeholder-like."""
     if value is None:
         return True
     if isinstance(value, str):
         normalized = value.strip().lower()
-        return not normalized or normalized in {"unknown", "none", "(none)", "n/a", "insufficient evidence", "no data available"}
+        normalized = normalized.strip(".,:;-_ ")
+        return (
+            not normalized
+            or normalized in {
+                "unknown",
+                "none",
+                "(none)",
+                "n/a",
+                "na",
+                "null",
+                "[]",
+                "[ ]",
+                "insufficient evidence",
+                "no data available",
+                "not specified",
+                "unspecified",
+                "not applicable",
+            }
+        )
     if isinstance(value, list):
-        return not any(str(item).strip() for item in value)
+        return not any(not is_unknownish(item) for item in value)
+    if isinstance(value, dict):
+        return not any(not is_unknownish(item) for item in value.values())
     return False
+
+
+def visual_field_audit(bible_data: dict[str, Any]) -> dict[str, Any]:
+    """Audit visual fields to determine which are missing."""
+    missing_fields = [
+        field for field in PROMPT_CRITICAL_VISUAL_FIELDS
+        if is_unknownish(bible_data.get(field))
+    ]
+    present_fields = [
+        field for field in PROMPT_CRITICAL_VISUAL_FIELDS
+        if field not in missing_fields
+    ]
+    return {
+        "total_prompt_critical_fields": len(PROMPT_CRITICAL_VISUAL_FIELDS),
+        "missing_count": len(missing_fields),
+        "present_count": len(present_fields),
+        "missing_fields": missing_fields,
+        "present_fields": present_fields,
+        "needs_visual_production_fallback": bool(missing_fields),
+    }
 
 
 def needs_visual_production_fallback(bible_data: dict[str, Any]) -> bool:
     """Determine if a character bible needs visual production fallback."""
-    critical_visual_fields = [
-        "identity_baseline",
-        "physical_build",
-        "costume_signature",
-        "stable_visual_summary",
-    ]
-    unknown_count = sum(1 for field in critical_visual_fields if is_unknownish(bible_data.get(field)))
-    return unknown_count >= 2
+    return visual_field_audit(bible_data)["needs_visual_production_fallback"]
 
 
 def fallback_bucket_for_character(entry: dict[str, Any], bible_data: dict[str, Any], evidence_summary: list[str]) -> str:
@@ -53,6 +111,27 @@ def fallback_bucket_for_character(entry: dict[str, Any], bible_data: dict[str, A
         return "unknown_reference"
     
     return "barsoom_humanoid"
+
+
+def fallback_result_audit(fallback: dict[str, Any]) -> dict[str, Any]:
+    """Audit fallback result to determine which fields were filled."""
+    filled_fields = [
+        field for field in PRODUCTION_FALLBACK_FIELDS
+        if not is_unknownish(fallback.get(field))
+    ]
+    empty_fields = [
+        field for field in PRODUCTION_FALLBACK_FIELDS
+        if field not in filled_fields
+    ]
+    return {
+        "status": fallback.get("status"),
+        "fallback_bucket": fallback.get("fallback_bucket"),
+        "filled_count": len(filled_fields),
+        "empty_count": len(empty_fields),
+        "filled_fields": filled_fields,
+        "empty_fields": empty_fields,
+        "non_empty": bool(filled_fields),
+    }
 
 
 def deterministic_visual_fallback(entry: dict[str, Any], bible_data: dict[str, Any], evidence_summary: list[str]) -> dict[str, Any]:
