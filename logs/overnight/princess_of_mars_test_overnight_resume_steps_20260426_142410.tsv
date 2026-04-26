@@ -1,0 +1,12 @@
+03 Character taxonomy	python -m orchestrator synthesize-character-taxonomy ""princess_of_mars_test"" --force
+04 Identity refinement plan	python -m orchestrator refine-identities ""princess_of_mars_test""
+06 Character bibles	python -m orchestrator synthesize-character-bibles ""princess_of_mars_test"" --force
+07 Environment bibles	python -m orchestrator synthesize-environment-bibles ""princess_of_mars_test"" --force
+08 Visual fallbacks	python -m orchestrator synthesize-visual-fallbacks ""princess_of_mars_test"" --force
+09 Scene contracts	python -m orchestrator synthesize-scene-contracts ""princess_of_mars_test"" --force --chapters ""2-3""
+10 Scene bindings	python -m orchestrator synthesize-scene-bindings ""princess_of_mars_test"" --force --chapters ""2-3""
+11 Shot packages	python -m orchestrator synthesize-shot-packages ""princess_of_mars_test"" --force --chapters ""2-3""
+12 Dialogue timeline	python -m orchestrator synthesize-dialogue-timeline ""princess_of_mars_test"" --force --chapters ""2-3""
+13 Descriptor enrichment	python -m orchestrator synthesize-descriptor-enrichment ""princess_of_mars_test"" --force --chapters ""2-3""
+14 Prompt preparation	python -m orchestrator synthesize-prompt-preparation ""princess_of_mars_test"" --force --chapters ""2-3""
+15 Quality grading	python -m orchestrator grade-artifacts ""princess_of_mars_test""
