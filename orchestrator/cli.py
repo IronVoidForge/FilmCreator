@@ -99,7 +99,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     crg = subparsers.add_parser("generate-character-references")
     crg.add_argument("project_slug")
-    # TODO: Add --chapters once run_character_reference_generation supports chapter filtering.
+    crg.add_argument("--chapters", type=str, default=None)
     crg.add_argument("--limit", type=int, default=None)
     crg.add_argument("--variant", action="append", dest="variants")
     crg.add_argument("--character-id", action="append", dest="character_ids")
@@ -137,7 +137,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     erg = subparsers.add_parser("generate-environment-references")
     erg.add_argument("project_slug")
-    # TODO: Add --chapters once run_environment_reference_generation supports chapter filtering.
+    erg.add_argument("--chapters", type=str, default=None)
     erg.add_argument("--limit", type=int, default=None)
     erg.add_argument("--variant", action="append", dest="variants")
     erg.add_argument("--environment-id", action="append", dest="environment_ids")
@@ -248,6 +248,7 @@ def main() -> None:
             seed=args.seed,
             workflow_id=args.workflow_id,
             test_slice=args.test_slice,
+            chapters=args.chapters,
             prompt_variant_id=args.prompt_variant,
             booster_bundle_ids=args.booster_bundle_ids,
         )
@@ -271,6 +272,7 @@ def main() -> None:
             seed=args.seed,
             workflow_id=args.workflow_id,
             test_slice=args.test_slice,
+            chapters=args.chapters,
             prompt_variant_id=args.prompt_variant,
             booster_bundle_ids=args.booster_bundle_ids,
         )

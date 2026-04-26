@@ -1,0 +1,332 @@
+{
+  "scene_id": "CH025_SC005",
+  "chapter_id": "CH025",
+  "scene_title": "SC005",
+  "purpose": "Provide the emotional payoff and romantic resolution of the chapter.",
+  "summary": "Amidst the distant sounds of war in Zodanga, Carter and Dejah Thoris are left alone in the throne room. Carter confesses his love and asks for her hand; she accepts, and they pledge themselves to one another.",
+  "emotional_arc": "Adrenaline/Chaos $\\rightarrow$ Intimacy/Romance.",
+  "production_intent": "Establish a quiet, intimate romantic resolution following the high-intensity battle in Zodanga. The visual language must pivot from chaotic combat to soft, focused intimacy using shallow depth of field and controlled lighting to isolate the couple within the debris-strewn throne room.",
+  "scene_short_description": "Two combat-worn figures find quiet intimacy amidst the wreckage of a royal throne room.",
+  "scene_primary_scale_story_point": "Intimate scale within a vast, ruined ceremonial space.",
+  "scene_required_anchor_catalog": [
+    "Throne",
+    "Debris piles"
+  ],
+  "scene_start_state": "Characters stand amidst dust and debris, breathing heavily from recent combat.",
+  "scene_end_state": "The couple is physically joined in a pledge of love.",
+  "dominant_action_line": "Carter confesses his love and asks for Dejah Thoris's hand; she accepts.",
+  "scene_spatial_layout": [
+    "Open floor space littered with debris",
+    "Centralized focus around the throne area"
+  ],
+  "character_spatial_map": [
+    "john_carter facing dejah_thoris",
+    "dejah_thoris facing john_carter"
+  ],
+  "environment_subzones": [
+    "Throne dais",
+    "Central hall floor"
+  ],
+  "entry_vectors": [
+    "Distant sounds of war (off-screen)"
+  ],
+  "exit_vectors": [
+    "None specified"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Transition from heavy breathing/silence to verbal confession.",
+    "BT002 -> BT003: Transition from spoken words to physical pledge/embrace."
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH025/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Dejah Thoris",
+      "canonical_id": "dejah_thoris",
+      "display_name": "dejah_thoris",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH025/dejah_thoris.md",
+      "notes": "Direct registry match for 'dejah_thoris'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Throne Room (post-battle)",
+      "canonical_id": "zodanga_palace_throne_room",
+      "display_name": "zodanga_palace_throne_room",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 92,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH025/zodanga_palace_throne_room.md",
+      "notes": "Chapter-local environment alias match for 'Throne Room (post-battle)' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Character dishevelment (sweat, torn clothing)",
+    "Presence of battle debris in throne room"
+  ],
+  "visual_coverage_families": [
+    "Close-ups of faces",
+    "Medium two-shots",
+    "Soft lighting/shallow focus"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Silence amidst the aftermath",
+      "purpose": "",
+      "action_start": "heavy breathing from combat",
+      "action_end": "eye contact established",
+      "active_subjects": [
+        "john_carter",
+        "dejah_thoris"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "central hall floor near debris",
+      "blocking_hint": "standing apart but facing one another",
+      "environment_subzone": "central hall floor",
+      "continuity_focus": "sweat and torn clothing",
+      "coverage_hint": "medium two-shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Confession",
+      "purpose": "",
+      "action_start": "Carter speaks his love",
+      "action_end": "Dejah Thoris hears the proposal",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "dejah_thoris"
+      ],
+      "spatial_context": "center of throne room",
+      "blocking_hint": "Carter remains steady, Dejah reacts",
+      "environment_subzone": "central hall floor",
+      "continuity_focus": "facial sweat/dishevelment",
+      "coverage_hint": "close-ups",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Pledge",
+      "purpose": "",
+      "action_start": "Dejah accepts the hand",
+      "action_end": "The couple pledges themselves to one another",
+      "active_subjects": [
+        "john_carter",
+        "dejah_thoris"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "center of throne room",
+      "blocking_hint": "closing the physical gap between them",
+      "environment_subzone": "central hall floor",
+      "continuity_focus": "physical contact/closeness",
+      "coverage_hint": "medium two-shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish atmosphere",
+      "planned_shot_moment_summary": "Characters standing in silence amidst debris",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "dejah_thoris"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "central hall floor",
+      "planned_shot_required_anchor_1": "debris piles",
+      "planned_shot_scale_proof_detail": "characters appear small against the ruined architecture",
+      "start_state_seed": "heavy breathing/exhaustion",
+      "end_state_seed": "eye contact established",
+      "action_seed": "standing still",
+      "blocking_seed": [
+        "facing each other in center room"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "emotional pivot",
+      "planned_shot_moment_summary": "Carter confesses his love",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "dejah_thoris"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "central hall floor",
+      "planned_shot_required_anchor_1": "throne",
+      "planned_shot_scale_proof_detail": "tight framing on facial expressions",
+      "start_state_seed": "verbalization begins",
+      "end_state_seed": "reaction captured",
+      "action_seed": "speaking",
+      "blocking_seed": [
+        "stationary"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "resolution",
+      "planned_shot_moment_summary": "The pledge and acceptance",
+      "primary_subject_seed": "dejah_thoris",
+      "secondary_subjects_seed": [
+        "john_carter"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "central hall floor",
+      "planned_shot_required_anchor_1": "throne",
+      "planned_shot_scale_proof_detail": "tight two-shot intimacy",
+      "start_state_seed": "acceptance spoken",
+      "end_state_seed": "embrace/pledge complete",
+      "action_seed": "embracing",
+      "blocking_seed": [
+        "moving into each other's space"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH025",
+      "scene_id": "CH025_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH025",
+      "scene_id": "CH025_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH025",
+      "scene_id": "CH025_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH025",
+      "scene_id": "CH025_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH025",
+      "scene_id": "CH025_SC005"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH025",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH025_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH025",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH025_chapter_xxv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH022",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH022_chapter_xxii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH023",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH023_chapter_xxiii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH025",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH025_SC005] Purpose: Provide the emotional payoff and romantic resolution of the chapter.",
+    "[CH025_SC005] Summary: Amidst the distant sounds of war in Zodanga, Carter and Dejah Thoris are left alone in the throne room. Carter confesses his love and asks for her hand; she accepts, and they pledge themselves to one another.",
+    "[CH025_SC005] Emotional arc: Adrenaline/Chaos $\\rightarrow$ Intimacy/Romance.",
+    "[CH025_SC005] Coverage: Close-ups of faces; medium two-shots; soft lighting/focus to contrast with the previous battle scenes.",
+    "[CH025_SC005] Continuity: Character dishevelment (sweat, torn clothing) from the preceding fight, debris in the room.",
+    "[CH025] Chapter summary: **Setting:** The palace and throne room of Zodanga; the subterranean dungeons of the palace. **Characters:** - **John Carter:** The protagonist, who infiltrates the palace to prevent a forced marriage. - **Dejah Thori...",
+    "[CH025] CHAPTER XXV (book index hit)",
+    "[CH022] CHAPTER XXII (book index hit)",
+    "[CH023] CHAPTER XXIII (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH025_SC005\n\n## Production Intent\nEstablish a quiet, intimate romantic resolution following the high-intensity battle in Zodanga. The visual language must pivot from chaotic combat to soft, focused intimacy using shallow depth of field and controlled lighting to isolate the couple within the debris-strewn throne room.\n\n## Required Cast\n- john_carter\n- dejah_thoris\n\n## Required Environments\n- zodanga_palace_throne_room\n\n## Continuity Constraints\n- Character dishevelment (sweat, torn clothing) from preceding fight.\n- Presence of debris in the throne room.\n\n## Beat List\n- BT001: Silence amidst the aftermath.\n- BT002: The Confession.\n- BT003: The Pledge.",
+  "metadata": {
+    "artifact_id": "CH025_SC005_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "b6b5296ff91c9f659759e61ae1ab9a94ea449533",
+    "created_at_utc": "2026-04-26T23:07:39.965588+00:00",
+    "updated_at_utc": "2026-04-26T23:07:39.965588+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH025_SC005",
+        "version": "53d1bb7380bfd883c32d3d9a99254580fe66976f"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH025_SC005",
+        "version": "854cb42c0d16632c3789677c792b8aae35e327c2"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH025_SC005",
+        "version": "f3bed2cfdc87bc55644512fffd40846d6de66ab6"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T23:08:08.396712+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "b6b5296ff91c9f659759e61ae1ab9a94ea449533"
+      }
+    ]
+  }
+}

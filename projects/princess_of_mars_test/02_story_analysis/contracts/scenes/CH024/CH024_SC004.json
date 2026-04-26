@@ -1,0 +1,348 @@
+{
+  "scene_id": "CH024_SC004",
+  "chapter_id": "CH024",
+  "scene_title": "SC004",
+  "purpose": "Transition from political victory to military mobilization.",
+  "summary": "Leveraging his new status, John Carter proposes a massive raid on Zodanga to rescue Dejah Thoris and seize wealth. The Thark hordes enthusiastically agree, and a force of 150,000 Green Martians begins their march.",
+  "emotional_arc": "Ambition $\\rightarrow$ Collective Excitement/War Fever.",
+  "production_intent": "Establish the transition from a localized political victory to a massive military mobilization. The sequence must scale from the intimate persuasion of leaders to the overwhelming visual presence of 150,000 Green Martians moving across the plains.",
+  "scene_short_description": "A leader proposes a massive raid leading to the mobilization of a vast Martian army.",
+  "scene_primary_scale_story_point": "Individual proposal scales up to 150,000 marching soldiers.",
+  "scene_required_anchor_catalog": [
+    "thark_city_complex skyline",
+    "thark_city_complex plains horizon"
+  ],
+  "scene_start_state": "John Carter standing before Tars Tarkas and Thark leaders.",
+  "scene_end_state": "A massive column of 150,000 Green Martians marching into the distance at dusk.",
+  "dominant_action_line": "Proposing a raid on Zodanga to rescue Dejah Thoris and seize wealth.",
+  "scene_spatial_layout": [
+    "Central assembly area within thark_city_complex",
+    "Expansive plains outside the city gates"
+  ],
+  "character_spatial_map": [
+    "john_carter positioned centrally facing leaders",
+    "tars_tarkas and Thark Hordes surrounding Carter in a semi-circle"
+  ],
+  "environment_subzones": [
+    "thark_city_complex assembly zone",
+    "thark_city_complex plains"
+  ],
+  "entry_vectors": [
+    "thark_city_complex gates"
+  ],
+  "exit_vectors": [
+    "thark_city_complex plains horizon"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Reaction to proposal",
+    "BT002 -> BT003: Transition from assembly to march"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH024/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Tars Tarkas",
+      "canonical_id": "tars_tarkas",
+      "display_name": "tars_tarkas",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH024/tars_tarkas.md",
+      "notes": "Direct registry match for 'tars_tarkas'."
+    },
+    {
+      "label": "Thark Hordes",
+      "canonical_id": null,
+      "display_name": "Thark Hordes",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 10,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Thark (City/Plains)",
+      "canonical_id": "thark_city_complex",
+      "display_name": "thark_city_complex",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 92,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH024/thark_city_complex.md",
+      "notes": "Chapter-local environment alias match for 'Thark (City/Plains)' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Army size must visually represent 150,000 units",
+    "Time of day transition from daylight to dusk/night"
+  ],
+  "visual_coverage_families": [
+    "Medium shots of Carter delivering proposal",
+    "Wide sweeping shots of massive army marching",
+    "Montage elements showing mobilization"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Carter proposes the raid on Zodanga to rescue Dejah Thoris and seize wealth",
+      "purpose": "",
+      "action_start": "Carter addresses the assembly",
+      "action_end": "Carter finishes his proposal",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "tars_tarkas",
+        "Thark Hordes"
+      ],
+      "spatial_context": "thark_city_complex assembly zone",
+      "blocking_hint": "Carter stands before the gathered leaders",
+      "environment_subzone": "assembly zone",
+      "continuity_focus": "Carter's physical presence and status",
+      "coverage_hint": "medium shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Thark hordes enthusiastically agree to the plan",
+      "purpose": "",
+      "action_start": "Moment of silence after proposal",
+      "action_end": "Collective roar of agreement",
+      "active_subjects": [
+        "Thark Hordes",
+        "tars_tarkas"
+      ],
+      "passive_subjects": [
+        "john_carter"
+      ],
+      "spatial_context": "thark_city_complex assembly zone",
+      "blocking_hint": "Hordes erupting in movement around Carter",
+      "environment_subzone": "assembly zone",
+      "continuity_focus": "Emotional shift to war fever",
+      "coverage_hint": "wide shots/montage",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "A force of 150,000 Green Martians begins their march",
+      "purpose": "",
+      "action_start": "Army movement through gates",
+      "action_end": "Army marching into the distance at dusk",
+      "active_subjects": [
+        "Thark Hordes"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "thark_city_complex plains",
+      "blocking_hint": "Massed ranks moving in formation",
+      "environment_subzone": "plains",
+      "continuity_focus": "Army size (150,000) and time of day transition to night",
+      "coverage_hint": "wide sweeping shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish intent",
+      "planned_shot_moment_summary": "Carter proposes the raid on Zodanga",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "tars_tarkas",
+        "Thark Hordes"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "thark_city_complex assembly zone",
+      "planned_shot_required_anchor_1": "assembly area",
+      "planned_shot_scale_proof_detail": "medium shot of Carter vs leaders",
+      "start_state_seed": "Carter speaking",
+      "end_state_seed": "Carter finishing proposal",
+      "action_seed": "delivering the pitch",
+      "blocking_seed": [
+        "Carter center",
+        "Tars Tarkas listening"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show agreement",
+      "planned_shot_moment_summary": "The Thark hordes react with excitement",
+      "primary_subject_seed": "Thark Hordes",
+      "secondary_subjects_seed": [
+        "tars_tarkas"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "thark_city_complex assembly zone",
+      "planned_shot_required_anchor_1": "assembly area",
+      "planned_shot_scale_proof_detail": "multiple groups of Martians cheering",
+      "start_state_seed": "silence after proposal",
+      "end_state_seed": "roaring cheers",
+      "action_seed": "cheering and weapon brandishing",
+      "blocking_seed": [
+        "Hordes surrounding the center"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "show scale of mobilization",
+      "planned_shot_moment_summary": "150,000 Martians march out",
+      "primary_subject_seed": "Thark Hordes",
+      "secondary_subjects_seed": [
+        "thark_city_complex skyline"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "thark_city_complex plains",
+      "planned_shot_required_anchor_1": "thark_city_complex skyline",
+      "planned_shot_scale_proof_detail": "massive army column stretching to horizon",
+      "start_state_seed": "army begins moving",
+      "end_state_seed": "army disappears into distance at dusk",
+      "action_seed": "marching",
+      "blocking_seed": [
+        "massed ranks moving through gates"
+      ],
+      "shot_size": "extreme_wide",
+      "camera_angle": "high_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "crane",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Thark Hordes -> Thark Hordes"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH024",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH024_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH026",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH026_chapter_xxvi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH022",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH022_chapter_xxii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH024",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH024_SC004] Purpose: Transition from political victory to military mobilization.",
+    "[CH024_SC004] Summary: Leveraging his new status, John Carter proposes a massive raid on Zodanga to rescue Dejah Thoris and seize wealth. The Thark hordes enthusiastically agree, and a force of 150,000 Green Martians begins their march.",
+    "[CH024_SC004] Emotional arc: Ambition $\\rightarrow$ Collective Excitement/War Fever.",
+    "[CH024_SC004] Coverage: Medium shots of Carter delivering the proposal. Wide sweeping shots of the massive army marching out of Thark. Montage elements showing the mobilization.",
+    "[CH024_SC004] Continuity: Army size/composition, time of day (transitioning to night for the next scene).",
+    "[CH024] Chapter summary: **Events:** John Carter's aircraft is shot down during a massive battle between Tharks and Warhoons. He intervenes to save Tars Tarkas from being killed by three Warhoon warriors, cementing a new friendship between th...",
+    "[CH021] CHAPTER XXI (book index hit)",
+    "[CH026] CHAPTER XXVI (book index hit)",
+    "[CH022] CHAPTER XXII (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH024_SC004\n\n## Production Intent\nEstablish the transition from a localized political victory to a massive military mobilization. The sequence must scale from the intimate persuasion of leaders to the overwhelming visual presence of 150,000 Green Martians moving across the plains.\n\n## Required Cast\n- john_carter\n- tars_tarkas\n- Thark Hordes\n\n## Required Environments\n- thark_city_complex (Assembly Zone and Plains)\n\n## Continuity Constraints\n- Army size must visually represent 150,000 units\n- Time of day transition from daylight to dusk/night\n\n## Beat List\n- BT001: Carter proposes the raid on Zodanga to rescue Dejah Thoris and seize wealth.\n- BT002: The Thark hordes enthusiastically agree to the plan.\n- BT003: A force of 150,000 Green Martians begins their march.",
+  "metadata": {
+    "artifact_id": "CH024_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "bc41962be1f29463a1d6393c4465db9bcf09d34b",
+    "created_at_utc": "2026-04-26T23:04:32.467172+00:00",
+    "updated_at_utc": "2026-04-26T23:04:32.467172+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH024_SC004",
+        "version": "82fbfdf2b856996915125d0997da35b4b84c6af7"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH024_SC004",
+        "version": "55e486f32121bb15957bee01148b2936894733bb"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH024_SC004",
+        "version": "52e011385d23e48911ed34220d7b52526b009a84"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T23:05:04.132516+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "bc41962be1f29463a1d6393c4465db9bcf09d34b"
+      }
+    ]
+  }
+}

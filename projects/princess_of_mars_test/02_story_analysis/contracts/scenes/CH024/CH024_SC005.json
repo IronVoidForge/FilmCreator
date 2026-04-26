@@ -1,0 +1,333 @@
+{
+  "scene_id": "CH024_SC005",
+  "chapter_id": "CH024",
+  "scene_title": "SC005",
+  "purpose": "Execute a high-stakes infiltration mission.",
+  "summary": "Under cover of night, John Carter leads a small group to infiltrate Zodanga. They scale the massive carborundum walls using a human ladder. Carter successfully enters the palace grounds and begins coordinating the silent takeover of the city gates.",
+  "emotional_arc": "Stealth/Tension $\\rightarrow$ High Stakes Action $\\rightarrow$ Calculated Control.",
+  "production_intent": "Execute a high-stakes night infiltration of Zodanga. The sequence requires precise coordination between human and Thark actors to simulate the scaling of massive carborundum walls via a human ladder, transitioning from stealthy tension into controlled tactical movement within the palace grounds.",
+  "scene_short_description": "A small group scales massive dark walls under moonlight to infiltrate a city.",
+  "scene_primary_scale_story_point": "Massive verticality of carborundum walls vs. small character scale.",
+  "scene_required_anchor_catalog": [
+    "Carborundum wall surface",
+    "Palace ground perimeter"
+  ],
+  "scene_start_state": "Nighttime shadows at the base of the massive Zodanga walls.",
+  "scene_end_state": "Carter standing within palace grounds, coordinating gate takeover.",
+  "dominant_action_line": "Scaling the vertical wall via human ladder to reach the palace interior.",
+  "scene_spatial_layout": [
+    "Vertical ascent from ground level to wall summit",
+    "Horizontal movement across palace grounds"
+  ],
+  "character_spatial_map": [
+    "john_carter at the apex of the climbing group",
+    "Small Group of Tharks forming the base and mid-section of the ladder"
+  ],
+  "environment_subzones": [
+    "zodanga_walled_city/wall_exterior",
+    "zodanga_walled_city/palace_grounds"
+  ],
+  "entry_vectors": [
+    "zodanga_walled_city/wall_exterior (upward)"
+  ],
+  "exit_vectors": [
+    "zodanga_walled_city/palace_grounds (inward)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Vertical ascent completion",
+    "BT002 -> BT003: Transition from climbing to ground coordination"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH024/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Small Group of Tharks",
+      "canonical_id": null,
+      "display_name": "Small Group of Tharks",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 10,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Zodanga (The Walls/Palace Grounds)",
+      "canonical_id": "zodanga_walled_city",
+      "display_name": "zodanga_walled_city",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 88,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH024/zodanga_walled_city.md",
+      "notes": "Chapter-local environment alias match for 'Zodanga (The Walls/Palace Grounds)' (key_overlap=1, label_overlap=4, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Moonlight direction and shadow consistency",
+    "Height scale of carborundum walls relative to characters",
+    "Physical placement and stability of the human ladder elements"
+  ],
+  "visual_coverage_families": [
+    "Night photography with high contrast (shadows vs. moonlight)",
+    "Vertical tracking shots of wall scaling",
+    "Close-ups on Carter's face for focus/stealth",
+    "POV shots from wall tops looking down into city"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Formation of the human ladder at the wall base",
+      "purpose": "",
+      "action_start": "Characters gather in shadows",
+      "action_end": "Ladder is stabilized",
+      "active_subjects": [
+        "Small Group of Tharks"
+      ],
+      "passive_subjects": [
+        "john_carter"
+      ],
+      "spatial_context": "Base of carborundum walls",
+      "blocking_hint": "Tharks stacking vertically against the wall",
+      "environment_subzone": "zodanga_walled_city/wall_exterior",
+      "continuity_focus": "Moonlight direction on wall texture",
+      "coverage_hint": "Wide low angle",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The vertical ascent and infiltration",
+      "purpose": "",
+      "action_start": "Climbing begins",
+      "action_end": "Carter reaches the top ledge",
+      "active_subjects": [
+        "john_carter",
+        "Small Group of Tharks"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "Vertical wall surface",
+      "blocking_hint": "Characters moving upward in a single column",
+      "environment_subzone": "zodanga_walled_city/wall_exterior",
+      "continuity_focus": "Height of the climb",
+      "coverage_hint": "Vertical tracking shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Establishing control within palace grounds",
+      "purpose": "",
+      "action_start": "Carter crests the wall",
+      "action_end": "Carter begins coordinating takeover",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "Small Group of Tharks"
+      ],
+      "spatial_context": "Wall summit overlooking palace [[implied]]",
+      "blocking_hint": "Carter crouched, looking down at gates",
+      "environment_subzone": "zodanga_walled_city/palace_grounds",
+      "continuity_focus": "View of city gates below",
+      "coverage_hint": "POV and close-ups",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale and tension",
+      "planned_shot_moment_summary": "Characters begin forming the ladder at the wall base",
+      "primary_subject_seed": "Small Group of Tharks",
+      "secondary_subjects_seed": [
+        "john_carter"
+      ],
+      "subject_visibility": "silhouette",
+      "narration_mode": "none",
+      "environment_subzone": "zodanga_walled_city/wall_exterior",
+      "planned_shot_required_anchor_1": "carborundum wall surface",
+      "planned_shot_scale_proof_detail": "height of wall vs character height",
+      "start_state_seed": "low angle at base",
+      "end_state_seed": "climbing begins",
+      "action_seed": "forming human ladder",
+      "blocking_seed": [
+        "characters stacking vertically"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "tilt",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "convey physical struggle and height",
+      "planned_shot_moment_summary": "Carter scales the final section of the wall",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "partial",
+      "narration_mode": "none",
+      "environment_subzone": "zodanga_walled_city/wall_exterior",
+      "planned_shot_required_anchor_1": "carborundum wall surface",
+      "planned_shot_scale_proof_detail": "vertical distance traveled",
+      "start_state_seed": "mid-climb",
+      "end_state_seed": "reaching the top",
+      "action_seed": "pulling himself over the ledge",
+      "blocking_seed": [
+        "Carter grasping the rim of the wall"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish tactical control",
+      "planned_shot_moment_summary": "Carter surveys the palace grounds from above",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "zodanga_walled_city/palace_grounds",
+      "planned_shot_required_anchor_1": "palace ground perimeter",
+      "planned_shot_scale_proof_detail": "view of city gates below",
+      "start_state_seed": "top of wall",
+      "end_state_seed": "looking down",
+      "action_seed": "scanning the area and signaling [[implied]]",
+      "blocking_seed": [
+        "Carter crouched on the wall edge"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "high_angle",
+      "lens_family": "telephoto",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Small Group of Tharks -> Small Group of Tharks"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC005"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH024",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH024_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH024",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH024_chapter_xxiv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH022",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH022_chapter_xxii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH024",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH024_SC005] Purpose: Execute a high-stakes infiltration mission.",
+    "[CH024_SC005] Summary: Under cover of night, John Carter leads a small group to infiltrate Zodanga. They scale the massive carborundum walls using a human ladder. Carter successfully enters the palace grounds and begins coordinating the silent takeover of t...",
+    "[CH024_SC005] Emotional arc: Stealth/Tension $\\rightarrow$ High Stakes Action $\\rightarrow$ Calculated Control.",
+    "[CH024_SC005] Coverage: Night photography with high contrast (shadows vs. moonlight). Vertical tracking shots of the wall scaling. Close-ups on Carter's face to convey focus and stealth. POV shots from the top of the walls looking down into the city.",
+    "[CH024_SC005] Continuity: Lighting/Moonlight direction, height of the walls, placement of the \"human ladder\" elements.",
+    "[CH024] Chapter summary: **Events:** John Carter's aircraft is shot down during a massive battle between Tharks and Warhoons. He intervenes to save Tars Tarkas from being killed by three Warhoon warriors, cementing a new friendship between th...",
+    "[CH024] CHAPTER XXIV (book index hit)",
+    "[CH021] CHAPTER XXI (book index hit)",
+    "[CH022] CHAPTER XXII (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH024_SC005\n\n## Production Intent\nExecute a high-stakes night infiltration of Zodanga. The sequence requires precise coordination between human and Thark actors to simulate the scaling of massive carborundum walls via a human ladder, transitioning from stealthy tension into controlled tactical movement within the palace grounds.\n\n## Required Cast\n- john_carter\n- Small Group of Tharks\n\n## Required Environments\n- zodanga_walled_city (The Walls/Palace Grounds)\n\n## Continuity Constraints\n- Moonlight direction and shadow consistency\n- Height scale of carborundum walls relative to characters\n- Physical placement and stability of the human ladder elements\n\n## Beat List\n- BT001: Formation of the human ladder at the wall base\n- BT002: The vertical ascent and infiltration\n- BT003: Establishing control within palace grounds",
+  "metadata": {
+    "artifact_id": "CH024_SC005_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "5a5968f1b39bd0a20090d54f2323a87d7119ec0b",
+    "created_at_utc": "2026-04-26T23:05:04.832761+00:00",
+    "updated_at_utc": "2026-04-26T23:05:04.832761+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH024_SC005",
+        "version": "c460a64a8d8c2ba9bb83ad7f5a24660201f37213"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH024_SC005",
+        "version": "aa2b3bae025155cf72318c0ad7031cbc251a633b"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH024_SC005",
+        "version": "c5e3b21b7f03ec712c8b563a52ddeeae6fee1b92"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T23:05:36.166223+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "5a5968f1b39bd0a20090d54f2323a87d7119ec0b"
+      }
+    ]
+  }
+}

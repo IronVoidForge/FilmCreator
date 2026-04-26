@@ -1,0 +1,317 @@
+{
+  "scene_id": "CH023_SC004",
+  "chapter_id": "CH023",
+  "scene_title": "SC004",
+  "purpose": "Establish the aftermath of the crash and the new status quo of being lost.",
+  "summary": "Carter survives the plunge but finds his navigation equipment (compass and speedometer) destroyed. He flies blindly for hours across the Martian landscape, eventually realizing he has missed Helium and is lost over an unfamiliar, desolate territory.",
+  "emotional_arc": "Relief (survival) $\\rightarrow$ Dread/Isolation.",
+  "production_intent": "Establish the immediate aftermath of a crash and transition into a state of prolonged isolation. The sequence must visually communicate the failure of mechanical navigation and the vast, indifferent scale of the Martian landscape to justify the character's shift from survival relief to dread.",
+  "scene_short_description": "A pilot survives a crash and realizes his navigation tools are broken while flying over wasteland.",
+  "scene_primary_scale_story_point": "The vastness of the desolate landscape dwarfs the small, damaged air machine.",
+  "scene_required_anchor_catalog": [
+    "Broken compass/speedometer",
+    "Damaged air machine cockpit"
+  ],
+  "scene_start_state": "Carter survives the plunge; initial relief in a damaged cockpit.",
+  "scene_end_state": "Carter realizes he has missed Helium and is lost over unknown territory.",
+  "dominant_action_line": "Navigating blindly through a desolate landscape with broken equipment.",
+  "scene_spatial_layout": [
+    "Interior air machine cockpit (confined)",
+    "Exterior Martian sky/wasteland (infinite)"
+  ],
+  "character_spatial_map": [
+    "john_carter seated within the damaged air machine cockpit"
+  ],
+  "environment_subzones": [
+    "primary scene playing area"
+  ],
+  "entry_vectors": [
+    "aerial descent into scene"
+  ],
+  "exit_vectors": [
+    "continuous flight into unknown territory"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Visual confirmation of equipment failure",
+    "BT002 -> BT003: Temporal jump/passage of time through landscape movement"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH023/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Martian Sky / Desolate landscapes (Dead Sea Bottom/Unidentified Cities)",
+      "canonical_id": "desolate_martian_wasteland",
+      "display_name": "desolate_martian_wasteland",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 152,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH023/desolate_martian_wasteland.md",
+      "notes": "Chapter-local environment alias match for 'The Martian Sky / Desolate landscapes (Dead Sea Bottom/Unidentified Cities)' (key_overlap=2, label_overlap=8, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Time of day progression over several hours",
+    "Physical state of the damaged air machine",
+    "Direction of travel relative to Helium"
+  ],
+  "visual_coverage_families": [
+    "Close-ups on broken instruments",
+    "Wide sweeping shots of desolate landscape",
+    "Medium shot of character realization"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Discovery of broken navigation equipment",
+      "purpose": "",
+      "action_start": "Carter checking survival status",
+      "action_end": "Carter identifies broken compass and speedometer",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "inside the air machine cockpit",
+      "blocking_hint": "Carter leaning over instruments",
+      "environment_subzone": "air_machine_cockpit",
+      "continuity_focus": "state of damaged air machine",
+      "coverage_hint": "close-ups on broken instruments",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Blind flight across the landscape",
+      "purpose": "",
+      "action_start": "Machine moving through sky",
+      "action_end": "Hours pass over unfamiliar terrain",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "desolate_martian_wasteland",
+      "blocking_hint": "Continuous aerial movement",
+      "environment_subzone": "desolate_martian_wasteland",
+      "continuity_focus": "passage of hours/time of day",
+      "coverage_hint": "wide sweeping shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Realization of being lost",
+      "purpose": "",
+      "action_start": "Carter scanning the horizon",
+      "action_end": "Carter realizes Helium is missed and he is in unknown territory",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "air_machine_cockpit overlooking wasteland",
+      "blocking_hint": "Carter frozen in seat",
+      "environment_subzone": "air_machine_cockpit",
+      "continuity_focus": "direction of travel vs destination",
+      "coverage_hint": "medium shot of realization",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish survival",
+      "planned_shot_moment_summary": "Carter checking equipment after the plunge",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "broken compass",
+        "broken speedometer"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "air_machine_cockpit",
+      "planned_shot_required_anchor_1": "broken compass",
+      "planned_shot_scale_proof_detail": "close-up on cracked glass",
+      "start_state_seed": "heavy breathing/relief",
+      "end_state_seed": "staring at dead needles",
+      "action_seed": "inspecting instruments",
+      "blocking_seed": [
+        "seated in cockpit"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "establish scale/isolation",
+      "planned_shot_moment_summary": "The air machine flying over the vast wasteland",
+      "primary_subject_seed": "air_machine",
+      "secondary_subjects_seed": [
+        "desolate_martian_wasteland"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "desolate_martian_wasteland",
+      "planned_shot_required_anchor_1": "horizon line",
+      "planned_shot_scale_proof_detail": "tiny machine against massive landscape",
+      "start_state_seed": "machine moving across frame",
+      "end_state_seed": "machine disappearing into distance",
+      "action_seed": "flying blindly",
+      "blocking_seed": [
+        "aerial transit"
+      ],
+      "shot_size": "extreme_wide",
+      "camera_angle": "high_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "rear_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "character realization",
+      "planned_shot_moment_summary": "Carter realizes he is lost",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "air_machine_cockpit",
+      "planned_shot_required_anchor_1": "cockpit window",
+      "planned_shot_scale_proof_detail": "expression of dread",
+      "start_state_seed": "looking at horizon",
+      "end_state_seed": "staring blankly in realization",
+      "action_seed": "realizing destination is missed",
+      "blocking_seed": [
+        "seated",
+        "looking out window"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH023",
+      "scene_id": "CH023_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH023",
+      "scene_id": "CH023_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH023",
+      "scene_id": "CH023_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH023",
+      "scene_id": "CH023_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH023",
+      "scene_id": "CH023_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH023",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH023_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH016",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH016_chapter_xvi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH023",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH023_chapter_xxiii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH011_chapter_xi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH023",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH023_SC004] Purpose: Establish the aftermath of the crash and the new status quo of being lost.",
+    "[CH023_SC004] Summary: Carter survives the plunge but finds his navigation equipment (compass and speedometer) destroyed. He flies blindly for hours across the Martian landscape, eventually realizing he has missed Helium and is lost over an unfamiliar, deso...",
+    "[CH023_SC004] Emotional arc: Relief (survival) $\\rightarrow$ Dread/Isolation.",
+    "[CH023_SC004] Coverage: Close-ups on broken instruments, wide sweeping shots of the desolate landscape to emphasize scale and loneliness, medium shot of Carter's realization.",
+    "[CH023_SC004] Continuity: Time of day (passage of hours), state of the damaged air machine, direction of travel vs. destination.",
+    "[CH023] Chapter summary: **Summary:** Following the news that Princess Dejah Thoris has been promised to Sab Than of Zodanga, John Carter meets secretly with Kantos Kan. The two devise a plan to separate: Kantos Kan will infiltrate the Zodang...",
+    "[CH016] CHAPTER XVI (book index hit)",
+    "[CH023] CHAPTER XXIII (book index hit)",
+    "[CH011] CHAPTER XI (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH023_SC004\n\n## Production Intent\nEstablish the immediate aftermath of a crash and transition into a state of prolonged isolation. The sequence must visually communicate the failure of mechanical navigation and the vast, indifferent scale of the Martian landscape to justify the character's shift from survival relief to dread.\n\n## Required Cast\n- john_carter\n\n## Required Environments\n- air_machine_cockpit\n- desolate_martian_wasteland\n\n## Continuity Constraints\n- Time of day progression over several hours\n- Physical state of the damaged air machine\n- Direction of travel relative to Helium\n\n## Beat List\n- BT001: Discovery of broken navigation equipment\n- BT002: Blind flight across the landscape\n- BT003: Realization of being lost",
+  "metadata": {
+    "artifact_id": "CH023_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "abe0930ea16eab2b1261c70b408fad0be5a90921",
+    "created_at_utc": "2026-04-26T23:02:26.900583+00:00",
+    "updated_at_utc": "2026-04-26T23:02:26.900583+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH023_SC004",
+        "version": "42fa113d7fa87ee428f1e7b466012855c3be6571"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH023_SC004",
+        "version": "d53132cd2d868a4e9efb4b716fad571ed078cabc"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH023_SC004",
+        "version": "b77e19bfaa7504e3f191ef9a51d1861131c12de1"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T23:02:55.649676+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "abe0930ea16eab2b1261c70b408fad0be5a90921"
+      }
+    ]
+  }
+}

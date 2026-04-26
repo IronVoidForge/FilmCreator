@@ -59,6 +59,25 @@ Chapter-scoped phases:
 
 Project-wide BATs accept CHAPTERS for interface consistency, but do not pass `--chapters`.
 
+## Reference generation phases
+
+Phase 12 and 13 reference generation BATs accept a third argument for LIMIT:
+
+```text
+%1 = PROJECT_SLUG (default: princess_of_mars_test)
+%2 = CHAPTERS (default: 2-3)
+%3 = LIMIT (default: 2)
+```
+
+These BATs run four prompt variants each and require ComfyUI on port 8190.
+
+Examples:
+
+```powershell
+cmd /c launchers\quicktest_phase\PHASE12_CHARACTER_REFERENCE_GENERATION_CHAPTERS.bat princess_of_mars_test 2-3 1
+cmd /c launchers\quicktest_phase\PHASE13_ENVIRONMENT_REFERENCE_GENERATION_CHAPTERS.bat princess_of_mars_test 2-3 1
+```
+
 ## Cleanup
 
 These quicktest BATs do not delete artifacts.
