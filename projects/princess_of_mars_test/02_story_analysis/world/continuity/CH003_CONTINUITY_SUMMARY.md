@@ -10,6 +10,7 @@
 ## Known Canonical Characters
 - dead_friend
 - former_self
+- grotesque_creatures
 - james_k_powell
 - john_carter
 - martian_leader
@@ -27,10 +28,14 @@
 - arizona_mountain_cave
 - arizona_mountain_cave_ledge
 - arizona_mountain_mining_site
+- arizona_quartz_vein_basin
+- arizona_quartz_vein_location
 - circular_moss_basin
 - deep_space_void
 - martian_distant_hills
+- martian_incubator_enclosure
 - rocky_gorge_canyon
+- rocky_gorge_nightscape
 - vast_cosmic_void
 
 ## Registry Artifacts

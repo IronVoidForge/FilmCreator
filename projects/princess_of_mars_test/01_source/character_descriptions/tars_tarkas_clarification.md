@@ -4,10 +4,10 @@
 tars_tarkas
 
 # Why This Needs Clarification
-Character is referenced via historical/political context rather than active presence.
+Needs specific visual details for Thark physiology.
 
 # Question
-Can you confirm Tars Tarkas's current visual state or location?
+What are the defining physical characteristics of a Thark?
 
 # Guidance
 - answer briefly and concretely

@@ -24,8 +24,10 @@
 - arizona_mountain_cave
 - arizona_mountain_cave_ledge
 - arizona_mountain_mining_site
+- arizona_quartz_vein_location
 - deep_space_void
 - rocky_gorge_canyon
+- rocky_gorge_nightscape
 - vast_cosmic_void
 
 ## Registry Artifacts

@@ -5,17 +5,17 @@ deserted_martian_cityscape
 
 # Why This Needs Clarification
 Potential existing environment matches detected:
-- ancient_martian_city (score 8; chapters: CH004; aliases: -)
-- apache_plateau_camp (score 8; chapters: CH001; aliases: -)
-- arizona_mountain_cave (score 8; chapters: CH002; aliases: -)
+- aerial_battlefield_mars (score 8; chapters: CH026; aliases: -)
+- ancient_cliffside_cave (score 8; chapters: CH001; aliases: -)
+- ancient_luxurious_quarters (score 8; chapters: CH011; aliases: -)
 
 # Question
 This environment may match one of the existing canonical settings above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical environment?
 
 # Candidate Matches
-- ancient_martian_city (score 8; chapters: CH004; aliases: -)
-- apache_plateau_camp (score 8; chapters: CH001; aliases: -)
-- arizona_mountain_cave (score 8; chapters: CH002; aliases: -)
+- aerial_battlefield_mars (score 8; chapters: CH026; aliases: -)
+- ancient_cliffside_cave (score 8; chapters: CH001; aliases: -)
+- ancient_luxurious_quarters (score 8; chapters: CH011; aliases: -)
 
 # Guidance
 - answer briefly and concretely

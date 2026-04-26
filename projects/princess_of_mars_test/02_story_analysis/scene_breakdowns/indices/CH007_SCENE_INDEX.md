@@ -1,4 +1,4 @@
-- [SC001](#sc001) The Journey to the Dead Sea Bottom
-- [SC002](#sc002) The Hatching Ceremony at the Incubator
-- [SC003](#sc003) The Brutal Reality of Martian Upbringing
-- [SC004](#sc004) Training and Mental Discovery in the Dead City
+* [SC001](#sc001) - The Great Procession to the Incubator
+* [SC002](#sc002) - The Hatching Ceremony and Ritual Capture
+* [SC003](#sc003) - Post-Hatching: Egg Transport and Resource Management
+* [SC004](#sc004) - Training in the Dead City

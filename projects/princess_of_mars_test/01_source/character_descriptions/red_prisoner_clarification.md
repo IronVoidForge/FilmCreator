@@ -4,10 +4,14 @@
 red_prisoner
 
 # Why This Needs Clarification
-Needs visual identification for a captive character.
+Needs visual definition for a Red Martian.
 
 # Question
-What are the specific physical characteristics of the Red prisoner (hair, skin color, etc.)?
+What are the specific physical characteristics of the Red female prisoner?
+
+# Candidate Matches
+- red_prisoner (score 176; chapters: CH009; aliases: -)
+- the_prisoner (score 6; chapters: CH008; aliases: -)
 
 # Guidance
 - answer briefly and concretely

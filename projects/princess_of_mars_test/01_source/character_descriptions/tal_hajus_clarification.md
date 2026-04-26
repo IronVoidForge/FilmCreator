@@ -4,10 +4,10 @@
 tal_hajus
 
 # Why This Needs Clarification
-Needs visual identification.
+No visual data available in text.
 
 # Question
-What are the physical characteristics of Tal Hajus?
+What does Tal Hajus look like?
 
 # Guidance
 - answer briefly and concretely

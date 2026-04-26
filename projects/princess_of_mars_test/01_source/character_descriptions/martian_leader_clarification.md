@@ -4,10 +4,14 @@
 martian_leader
 
 # Why This Needs Clarification
-Needs distinction from standard warriors to ensure unique character design.
+Potential existing identity matches detected:
+- martian_leader (score 176; chapters: CH003; aliases: -)
 
 # Question
-Does the leader have unique markings, different colored skin/eyes, or specific armor that distinguishes him from the other twenty warriors?
+This character may match one of the existing canonical identities above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical character?
+
+# Candidate Matches
+- martian_leader (score 176; chapters: CH003; aliases: -)
 
 # Guidance
 - answer briefly and concretely

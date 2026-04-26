@@ -1,5 +1,5 @@
-- [SC001](#sc001) - The Golden Years of Helium
-- [SC002](#sc002) - The Great Thinning Begins
-- [SC003](#sc003) - The Sunken Garden: Death Approaches
-- [SC004](#sc004) - The Epiphany and the Flight
-- [SC005](#sc005) - The Atmosphere Plant: The Final Push
+* [SC001](#sc001) - The Golden Age and the Sudden Ruin
+* [SC002](#sc002) - The Dying Days in the Sunken Garden
+* [SC003](#sc003) - The Mental Breakthrough
+* [SC004](#sc004) - The Desperate Flight
+* [SC005](#sc005) - The Atmosphere Plant: The Final Push

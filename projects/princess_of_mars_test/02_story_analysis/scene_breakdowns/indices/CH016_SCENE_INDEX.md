@@ -1,6 +1,4 @@
-* [SC001](#sc001) - The Long Trek to Thark
-* [SC002](#sc002) - Arrival and Separation in the City
-* [SC003](#sc003) - The Declaration of Devotion
-* [SC004](#sc004) - The Death Sentence Revealed
-* [SC005](#sc005) - Mapping the Escape
-* [SC006](#sc006) - The Failed Rendezvous and Ambush Discovery
+* [SC001](#sc001) Arrival at Thark and Reunion
+* [SC002](#sc002) The Escape Plan and the Revelation of Danger
+* [SC003](#sc003) The Failed Rendezvous
+* [SC004](#sc004) Infiltration and the Ambush Reveal

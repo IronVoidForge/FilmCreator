@@ -4,13 +4,16 @@
 watch_thing
 
 # Why This Needs Clarification
-Needs detailed biological description for rendering.
+Potential existing identity matches detected:
+- watch_thing (score 176; chapters: CH006; aliases: -)
+- protagonist (score 6; chapters: CH002, CH003; aliases: -)
 
 # Question
-What is the specific number of legs, the texture of its skin/fur, and its overall size relative to the protagonist?
+This character may match one of the existing canonical identities above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical character?
 
 # Candidate Matches
 - watch_thing (score 176; chapters: CH006; aliases: -)
+- protagonist (score 6; chapters: CH002, CH003; aliases: -)
 
 # Guidance
 - answer briefly and concretely

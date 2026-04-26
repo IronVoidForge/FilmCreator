@@ -1,5 +1,5 @@
-- [SC001](#sc001) Recovery and Transport
-- [SC002](#sc002) The Duel of the Jeddak
-- [SC003](#sc003) Isolation in the Dark
-- [SC004](#sc004) The Jailer's End
-- [SC005](#sc005) Eyes in the Shadows
+* [SC001](#sc001) - Recovery and Transport
+* [SC002](#sc002) - The Duel of the Jeddaks
+* [SC003](#sc003) - The March to Warhoon
+* [SC004](#sc004) - Imprisonment in Darkness
+* [SC005](#sc005) - The Escape Attempt and Terror

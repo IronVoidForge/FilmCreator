@@ -4,10 +4,10 @@
 protagonist
 
 # Why This Needs Clarification
-Identity and physical traits need establishment for visual consistency.
+Physical identity is unknown from text alone.
 
 # Question
-What is the protagonist's physical build, hair color, eye color, and typical attire?
+What is the protagonist's physical appearance, race/species, and attire?
 
 # Guidance
 - answer briefly and concretely

@@ -4,18 +4,10 @@
 dead_friend
 
 # Why This Needs Clarification
-Potential existing identity matches detected:
-- apache_warriors (score 10; chapters: CH002, CH001; aliases: -) Example context: CH002 9-11: Several times I thought I heard faint sounds behind me as of somebody moving cautiously, but eventually even these ceased, and I was left to the contemplation of my position withou...
-- former_self (score 10; chapters: CH002; aliases: -) Example context: CH002 9-11: Several times I thought I heard faint sounds behind me as of somebody moving cautiously, but eventually even these ceased, and I was left to the contemplation of my position withou...
-- james_k_powell (score 10; chapters: CH001; aliases: -)
+Identity and appearance are unknown.
 
 # Question
-This character may match one of the existing canonical identities above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical character?
-
-# Candidate Matches
-- apache_warriors (score 10; chapters: CH002, CH001; aliases: -) Example context: CH002 9-11: Several times I thought I heard faint sounds behind me as of somebody moving cautiously, but eventually even these ceased, and I was left to the contemplation of my position withou...
-- former_self (score 10; chapters: CH002; aliases: -) Example context: CH002 9-11: Several times I thought I heard faint sounds behind me as of somebody moving cautiously, but eventually even these ceased, and I was left to the contemplation of my position withou...
-- james_k_powell (score 10; chapters: CH001; aliases: -)
+What was the name and physical appearance of the protagonist's friend?
 
 # Guidance
 - answer briefly and concretely

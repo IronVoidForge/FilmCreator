@@ -4,10 +4,15 @@
 the_old_man
 
 # Why This Needs Clarification
-The extracted character id appears generic or role-based rather than clearly canonical.
+Physical appearance is extremely sparse.
 
 # Question
-This character is named or role-labeled but not fully identified. Can you find a stronger canonical identity from another chapter, or should FilmCreator keep this as a scene-local provisional character?
+What are the specific facial features, build, and clothing style of the elderly host?
+
+# Candidate Matches
+- apache_warriors (score 10; chapters: CH002, CH001; aliases: -)
+- ape_man_1 (score 10; chapters: CH006; aliases: -)
+- ape_man_2 (score 10; chapters: CH006; aliases: -)
 
 # Guidance
 - answer briefly and concretely

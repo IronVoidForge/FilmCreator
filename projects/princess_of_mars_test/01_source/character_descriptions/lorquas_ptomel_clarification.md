@@ -4,10 +4,10 @@
 lorquas_ptomel
 
 # Why This Needs Clarification
-Needs visual identity to distinguish from other Tharks.
+Physical appearance is not detailed in the text.
 
 # Question
-What are the physical characteristics and distinguishing features of the Thark Chieftain?
+What are the visual characteristics of the Thark Chieftain?
 
 # Guidance
 - answer briefly and concretely

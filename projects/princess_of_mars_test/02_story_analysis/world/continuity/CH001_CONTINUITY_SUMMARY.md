@@ -19,6 +19,7 @@
 - apache_plateau_camp
 - arizona_gold_vein_claim
 - arizona_mountain_mining_site
+- arizona_quartz_vein_location
 
 ## Registry Artifacts
 - projects/princess_of_mars_test/02_story_analysis/world/CHARACTER_REGISTRY.json

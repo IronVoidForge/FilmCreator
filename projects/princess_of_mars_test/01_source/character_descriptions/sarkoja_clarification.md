@@ -4,10 +4,10 @@
 sarkoja
 
 # Why This Needs Clarification
-Needs uniform and physical description to distinguish from other Zodgan citizens.
+No visual data available in text.
 
 # Question
-What is the standard uniform and appearance of a Zodangan barracks sentry?
+What are the visual characteristics of Sarkoja?
 
 # Guidance
 - answer briefly and concretely

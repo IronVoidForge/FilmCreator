@@ -1,5 +1,5 @@
-* [SC001](#sc001) - Awakening and Gravity Discovery
-* [SC002](#sc002) - The Incubator Discovery
-* [SC003](#sc003) - The Warrior Approach & Near Miss
-* [SC004](#sc004) - The Great Leap & Shift in Perception
-* [SC005](#sc005) - Peace Offering and Departure
+1. [SC001: Awakening and Gravity Discovery](#sc001)
+2. [SC002: The Incubator Observation](#sc002)
+3. [SC003: Confrontation with the Martian Cavalry](#sc003)
+4. [SC004: The Leap of Survival](#sc004)
+5. [SC005: Peace Offering and Departure](#sc005)

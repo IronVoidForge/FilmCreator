@@ -4,15 +4,18 @@
 zodangan_sentry
 
 # Why This Needs Clarification
-Character is a generic background entity with no distinguishing features.
+Potential existing identity matches detected:
+- apache_warriors (score 10; chapters: CH002, CH001; aliases: -)
+- ape_man_1 (score 10; chapters: CH006; aliases: -) Example context: CH006 4-6: The cudgel was swinging in the arc which ended upon my upturned face when a bolt of myriad-legged horror hurled itself through the doorway full upon the breast of my executioner. W...
+- ape_man_2 (score 10; chapters: CH006; aliases: -) Example context: CH006 4-6: The cudgel was swinging in the arc which ended upon my upturned face when a bolt of myriad-legged horror hurled itself through the doorway full upon the breast of my executioner. W...
 
 # Question
-What is the standard uniform and appearance of a Zodangan Sentry?
+This character may match one of the existing canonical identities above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical character?
 
 # Candidate Matches
-- apache_warriors (score 10; chapters: CH002; aliases: -)
-- ape_creature_1 (score 10; chapters: CH006; aliases: -)
-- ape_creature_2 (score 10; chapters: CH006; aliases: -)
+- apache_warriors (score 10; chapters: CH002, CH001; aliases: -)
+- ape_man_1 (score 10; chapters: CH006; aliases: -) Example context: CH006 4-6: The cudgel was swinging in the arc which ended upon my upturned face when a bolt of myriad-legged horror hurled itself through the doorway full upon the breast of my executioner. W...
+- ape_man_2 (score 10; chapters: CH006; aliases: -) Example context: CH006 4-6: The cudgel was swinging in the arc which ended upon my upturned face when a bolt of myriad-legged horror hurled itself through the doorway full upon the breast of my executioner. W...
 
 # Guidance
 - answer briefly and concretely

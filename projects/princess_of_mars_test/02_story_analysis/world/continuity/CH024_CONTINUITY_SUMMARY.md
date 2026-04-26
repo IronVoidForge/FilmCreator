@@ -6,7 +6,6 @@
 - CH024_SC003
 - CH024_SC004
 - CH024_SC005
-- CH024_SC006
 
 ## Known Canonical Characters
 - ape_man_1
@@ -20,8 +19,10 @@
 - dak_kova
 - dead_friend
 - dejah_thoris
+- female_healer
 - female_prisoner
 - former_self
+- grotesque_creatures
 - james_k_powell
 - john_carter
 - kantos_kan
@@ -31,6 +32,7 @@
 - martian_mounts
 - martian_warrior
 - martian_warrior_leader
+- martian_youth
 - notan
 - protagonist
 - red_martian_prisoner
@@ -38,6 +40,7 @@
 - sab_than
 - sarkoja
 - sola
+- sola_s_mother
 - solas_mother
 - tal_hajus
 - tars_tarkas
@@ -45,6 +48,7 @@
 - the_colossal_creature
 - the_healer
 - the_jailer
+- the_old_man
 - the_prisoner
 - the_watch_dog
 - warhoon_horde
@@ -53,15 +57,20 @@
 - woola
 - young_martian
 - zad
+- zodangan_cousin
 - zodangan_scout
+- zodangan_sentry
 
 ## Unresolved / Provisional Characters
-- None
+- captive_woman
 
 ## Known Canonical Environments
+- aerial_battle_skies
 - ancient_cliffside_cave
 - ancient_luxurious_quarters
 - ancient_martian_city_plaza
+- ancient_martian_city_ruins
+- ancient_opulent_quarters
 - ancient_sea_bottom
 - ancient_tableland_city
 - apache_plateau_camp
@@ -69,29 +78,44 @@
 - arizona_mountain_cave
 - arizona_mountain_cave_ledge
 - arizona_mountain_mining_site
+- arizona_quartz_vein_basin
+- arizona_quartz_vein_location
 - atmosphere_factory
 - audience_chamber
 - barsoomian_wilderness
 - battlefield_plains
 - captive_chamber_murals
+- caravan_camp_hills
 - caravan_camp_landscape
 - caravan_camp_southern_hills
 - carters_apartment_quarters
+- carters_quarters_building
+- chieftain_audience_chamber
 - circular_moss_basin
 - city_of_thark
+- colossal_creature_lair
 - communal_sleeping_quarters
 - dead_city_interior
 - dead_city_plaza
 - dead_sea_bottom
 - dead_sea_bottom_expanse
 - dead_sea_bottom_incubator
+- dead_sea_bottom_valley
 - deep_space_void
+- dejah_thoris_quarters
 - deserted_martian_city
+- deserted_martian_city_plaza
+- deserted_martian_cityscape
+- desolate_martian_wasteland
+- duel_arena_open_plains
 - eastern_martian_hills
 - grand_audience_chamber
 - green_martian_city
+- green_martian_city_complex
 - jeddak_vaults_and_quarters
+- lorquas_ptomel_audience_chamber
 - lorquas_ptomel_city_plazas
+- low_mountains_hills
 - marble_audience_chamber
 - martian_agricultural_tracts
 - martian_arid_territory
@@ -100,8 +124,12 @@
 - martian_city_plaza
 - martian_city_streets
 - martian_distant_hills
+- martian_incubator_enclosure
 - martian_interior_chamber
 - martian_night_expanse
+- martian_night_plaza
+- martian_plains_and_march_route
+- martian_plains_march_route
 - martian_plaza
 - martian_plaza_city
 - martian_sea_bottoms_and_canals
@@ -110,34 +138,51 @@
 - martian_sleeping_quarters
 - martian_valley_battlefield
 - martian_valley_skyline
+- martian_wilderness
 - martian_wilderness_corridor
 - mossy_sea_bottom
 - mossy_waste
 - mossy_waste_expanse
+- plaza_training_grounds
 - ptor_farmstead
 - remote_incubator_complex
 - rocky_gorge_canyon
+- rocky_gorge_nightscape
+- royal_palace_quarters
 - rugged_low_mountains
+- subterranean_amphitheater_arena
 - subterranean_dungeon
 - thark_audience_chamber
+- thark_city_and_surroundings
+- thark_city_complex
+- thark_city_interior
 - thark_city_plaza
 - thark_city_quarters
 - thark_city_settlement
 - thark_expedition_march_route
+- thark_plaza_audience_chamber
 - thark_plaza_quarters
 - thark_residential_quarters
 - thark_settlement_plaza
+- the_dead_city
+- the_incubator_enclosure
 - valley_overlook_exterior
 - vast_cosmic_void
+- warhoon_camp_interior
 - warhoon_city
+- warhoon_eastern_hills
 - warhoon_incubator_site
 - warhoon_mobile_camp
 - warhoon_subterranean_amphitheater
+- warhoon_subterranean_dungeon
 - zodanga_central_plaza
+- zodanga_city_gates
+- zodanga_city_streets
 - zodanga_cityscape
 - zodanga_palace_interior
 - zodanga_urban_complex
 - zodanga_walled_city
+- zodangan_aviation_training_grounds
 - zodangan_palace_quarters
 
 ## Registry Artifacts

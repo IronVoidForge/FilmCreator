@@ -1,6 +1,5 @@
 - [SC001](#sc001) The Battle and the Rescue
-- [SC002](#sc002) Reunion with Woola
-- [SC003](#sc003) Political Maneuvering in Thark
-- [SC004](#sc004) The Council Challenge and Duel
-- [SC005](#sc005) The Call to War: Planning the Raid
-- [SC006](#sc006) The Siege of Zodanga: Infiltration
+- [SC002](#sc002) Political Maneuvering and Sarkoja's Flight
+- [SC003](#sc003) The Council Challenge and Duel
+- [SC004](#sc004) The Call to War: Planning the Raid on Zodanga
+- [SC005](#sc005) Infiltration of Zodanga
