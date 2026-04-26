@@ -60,54 +60,83 @@ if errorlevel 1 goto :fail
 
 if /I NOT "%NO_CLEAR%"=="NO_CLEAR" (
     call :clear_artifacts
+    if errorlevel 1 goto :end_with_error
 )
 
 call :lm_studio_check
+if errorlevel 1 goto :end_with_error
+
 call :analyze_book
+if errorlevel 1 goto :end_with_error
+
 call :run_step "03 Character taxonomy" python -m orchestrator synthesize-character-taxonomy "%PROJECT_SLUG%" --force
+if errorlevel 1 goto :end_with_error
+
 call :run_step "04 Identity refinement plan" python -m orchestrator refine-identities "%PROJECT_SLUG%"
+if errorlevel 1 goto :end_with_error
+
 call :run_step "05 Identity refinement apply" python -m orchestrator refine-identities "%PROJECT_SLUG%" --apply
+if errorlevel 1 goto :end_with_error
+
 call :run_step "06 Character bibles" python -m orchestrator synthesize-character-bibles "%PROJECT_SLUG%" --force
+if errorlevel 1 goto :end_with_error
+
 call :run_step "07 Environment bibles" python -m orchestrator synthesize-environment-bibles "%PROJECT_SLUG%" --force
+if errorlevel 1 goto :end_with_error
+
 call :run_step "08 Visual fallbacks" python -m orchestrator synthesize-visual-fallbacks "%PROJECT_SLUG%" --force
+if errorlevel 1 goto :end_with_error
 
 if "%CHAPTERS%"=="" (
     call :run_step "09 Scene contracts" python -m orchestrator synthesize-scene-contracts "%PROJECT_SLUG%" --force
+    if errorlevel 1 goto :end_with_error
 ) else (
     call :run_step "09 Scene contracts" python -m orchestrator synthesize-scene-contracts "%PROJECT_SLUG%" --force --chapters "%CHAPTERS%"
+    if errorlevel 1 goto :end_with_error
 )
 
 if "%CHAPTERS%"=="" (
     call :run_step "10 Scene bindings" python -m orchestrator synthesize-scene-bindings "%PROJECT_SLUG%" --force
+    if errorlevel 1 goto :end_with_error
 ) else (
     call :run_step "10 Scene bindings" python -m orchestrator synthesize-scene-bindings "%PROJECT_SLUG%" --force --chapters "%CHAPTERS%"
+    if errorlevel 1 goto :end_with_error
 )
 
 if "%CHAPTERS%"=="" (
     call :run_step "11 Shot packages" python -m orchestrator synthesize-shot-packages "%PROJECT_SLUG%" --force
+    if errorlevel 1 goto :end_with_error
 ) else (
     call :run_step "11 Shot packages" python -m orchestrator synthesize-shot-packages "%PROJECT_SLUG%" --force --chapters "%CHAPTERS%"
+    if errorlevel 1 goto :end_with_error
 )
 
 if "%CHAPTERS%"=="" (
     call :run_step "12 Dialogue timeline" python -m orchestrator synthesize-dialogue-timeline "%PROJECT_SLUG%" --force
+    if errorlevel 1 goto :end_with_error
 ) else (
     call :run_step "12 Dialogue timeline" python -m orchestrator synthesize-dialogue-timeline "%PROJECT_SLUG%" --force --chapters "%CHAPTERS%"
+    if errorlevel 1 goto :end_with_error
 )
 
 if "%CHAPTERS%"=="" (
     call :run_step "13 Descriptor enrichment" python -m orchestrator synthesize-descriptor-enrichment "%PROJECT_SLUG%" --force
+    if errorlevel 1 goto :end_with_error
 ) else (
     call :run_step "13 Descriptor enrichment" python -m orchestrator synthesize-descriptor-enrichment "%PROJECT_SLUG%" --force --chapters "%CHAPTERS%"
+    if errorlevel 1 goto :end_with_error
 )
 
 if "%CHAPTERS%"=="" (
     call :run_step "14 Prompt preparation" python -m orchestrator synthesize-prompt-preparation "%PROJECT_SLUG%" --force
+    if errorlevel 1 goto :end_with_error
 ) else (
     call :run_step "14 Prompt preparation" python -m orchestrator synthesize-prompt-preparation "%PROJECT_SLUG%" --force --chapters "%CHAPTERS%"
+    if errorlevel 1 goto :end_with_error
 )
 
 call :run_step "15 Quality grading" python -m orchestrator grade-artifacts "%PROJECT_SLUG%"
+if errorlevel 1 goto :end_with_error
 
 echo.
 echo ========================================
@@ -115,7 +144,18 @@ echo Overnight pipeline completed successfully.
 echo Log file: %LOG_FILE%
 echo Latest log: %LATEST_LOG%
 echo ========================================
+pause
 exit /b 0
+
+:end_with_error
+echo.
+echo ========================================
+echo Pipeline stopped due to error
+echo Log file: %LOG_FILE%
+echo Latest log: %LATEST_LOG%
+echo ========================================
+pause
+exit /b 1
 
 :clear_artifacts
 echo.
@@ -127,38 +167,36 @@ echo ----------------------------------------
 >> "%LOG_FILE%" echo START: 00 Clear generated artifacts
 >> "%LOG_FILE%" echo ----------------------------------------
 
-(
-echo $paths = @(
-echo   'projects\%PROJECT_SLUG%\02_story_analysis\chapter_analysis',
-echo   'projects\%PROJECT_SLUG%\02_story_analysis\character_breakdowns',
-echo   'projects\%PROJECT_SLUG%\02_story_analysis\environment_breakdowns',
-echo   'projects\%PROJECT_SLUG%\02_story_analysis\world\chapters',
-echo   'projects\%PROJECT_SLUG%\02_story_analysis\taxonomy',
-echo   'projects\%PROJECT_SLUG%\02_story_analysis\bibles',
-echo   'projects\%PROJECT_SLUG%\02_story_analysis\contracts',
-echo   'projects\%PROJECT_SLUG%\02_story_analysis\timelines',
-echo   'projects\%PROJECT_SLUG%\02_story_analysis\descriptors',
-echo   'projects\%PROJECT_SLUG%\02_story_analysis\grading',
-echo   'projects\%PROJECT_SLUG%\02_story_analysis\quality',
-echo   'projects\%PROJECT_SLUG%\02_story_analysis\dialogue_enrichment',
-echo   'projects\%PROJECT_SLUG%\02_story_analysis\world\refinement',
-echo   'projects\%PROJECT_SLUG%\02_story_analysis\world\global\VISUAL_FALLBACKS.json',
-echo   'projects\%PROJECT_SLUG%\03_prompt_packages',
-echo   'projects\%PROJECT_SLUG%\04_references',
-echo   'projects\%PROJECT_SLUG%\05_scenes',
-echo   'projects\%PROJECT_SLUG%\06_reviews',
-echo   'projects\%PROJECT_SLUG%\07_finals'
-echo ^)
-echo foreach ($p in $paths^) {
-echo   if (Test-Path $p^) {
-echo     Write-Host "Removing: $p"
-echo     Remove-Item -Path $p -Recurse -Force -ErrorAction Stop
-echo   } else {
-echo     Write-Host "Not found (skipping): $p"
-echo   }
-echo }
-echo Write-Host "Clear completed successfully"
-) > "%TEMP_PS_SCRIPT%"
+echo $paths = @( > "%TEMP_PS_SCRIPT%"
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\chapter_analysis', >> "%TEMP_PS_SCRIPT%"
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\character_breakdowns', >> "%TEMP_PS_SCRIPT%"
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\environment_breakdowns', >> "%TEMP_PS_SCRIPT%"
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\world\chapters', >> "%TEMP_PS_SCRIPT%"
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\taxonomy', >> "%TEMP_PS_SCRIPT%"
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\bibles', >> "%TEMP_PS_SCRIPT%"
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\contracts', >> "%TEMP_PS_SCRIPT%"
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\timelines', >> "%TEMP_PS_SCRIPT%"
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\descriptors', >> "%TEMP_PS_SCRIPT%"
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\grading', >> "%TEMP_PS_SCRIPT%"
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\quality', >> "%TEMP_PS_SCRIPT%"
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\dialogue_enrichment', >> "%TEMP_PS_SCRIPT%"
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\world\refinement', >> "%TEMP_PS_SCRIPT%"
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\world\global\VISUAL_FALLBACKS.json', >> "%TEMP_PS_SCRIPT%"
+echo   'projects\%PROJECT_SLUG%\03_prompt_packages', >> "%TEMP_PS_SCRIPT%"
+echo   'projects\%PROJECT_SLUG%\04_references', >> "%TEMP_PS_SCRIPT%"
+echo   'projects\%PROJECT_SLUG%\05_scenes', >> "%TEMP_PS_SCRIPT%"
+echo   'projects\%PROJECT_SLUG%\06_reviews', >> "%TEMP_PS_SCRIPT%"
+echo   'projects\%PROJECT_SLUG%\07_finals' >> "%TEMP_PS_SCRIPT%"
+echo ^) >> "%TEMP_PS_SCRIPT%"
+echo foreach ($p in $paths) { >> "%TEMP_PS_SCRIPT%"
+echo   if (Test-Path $p) { >> "%TEMP_PS_SCRIPT%"
+echo     Write-Host "Removing: $p" >> "%TEMP_PS_SCRIPT%"
+echo     Remove-Item -Path $p -Recurse -Force -ErrorAction Stop >> "%TEMP_PS_SCRIPT%"
+echo   } else { >> "%TEMP_PS_SCRIPT%"
+echo     Write-Host "Not found (skipping): $p" >> "%TEMP_PS_SCRIPT%"
+echo   } >> "%TEMP_PS_SCRIPT%"
+echo } >> "%TEMP_PS_SCRIPT%"
+echo Write-Host "Clear completed successfully" >> "%TEMP_PS_SCRIPT%"
 
 powershell -NoProfile -ExecutionPolicy Bypass -File "%TEMP_PS_SCRIPT%" > "%TEMP_LOG%" 2>&1
 set "EXIT_CODE=%ERRORLEVEL%"
@@ -187,14 +225,14 @@ echo ----------------------------------------
 >> "%LOG_FILE%" echo START: 01 LM Studio connectivity check
 >> "%LOG_FILE%" echo ----------------------------------------
 
-(
-echo from json import dumps
-echo from orchestrator.settings import load_runtime_settings
-echo from orchestrator.lmstudio_client import LMStudioClient
-echo settings = load_runtime_settings(^)
-echo client = LMStudioClient(settings^)
-echo print(dumps(client.check(^).to_dict(^), indent=2^)^)
-) > "%TEMP_PY_SCRIPT%"
+echo import sys > "%TEMP_PY_SCRIPT%"
+echo sys.path.insert(0, '.') >> "%TEMP_PY_SCRIPT%"
+echo from json import dumps >> "%TEMP_PY_SCRIPT%"
+echo from orchestrator.settings import load_runtime_settings >> "%TEMP_PY_SCRIPT%"
+echo from orchestrator.lmstudio_client import LMStudioClient >> "%TEMP_PY_SCRIPT%"
+echo settings = load_runtime_settings() >> "%TEMP_PY_SCRIPT%"
+echo client = LMStudioClient(settings) >> "%TEMP_PY_SCRIPT%"
+echo print(dumps(client.check().to_dict(), indent=2)) >> "%TEMP_PY_SCRIPT%"
 
 cd /d "%REPO_ROOT%"
 python "%TEMP_PY_SCRIPT%" > "%TEMP_LOG%" 2>&1
@@ -224,12 +262,12 @@ echo ----------------------------------------
 >> "%LOG_FILE%" echo START: 02 Multi-chapter analysis / chapter summaries / breakdowns
 >> "%LOG_FILE%" echo ----------------------------------------
 
-(
-echo from orchestrator.book_authoring import analyze_book
-echo import json
-echo summary = analyze_book(project_slug='%PROJECT_SLUG%'^)
-echo print(json.dumps(summary.to_dict(^), indent=2^)^)
-) > "%TEMP_PY_SCRIPT%"
+echo import sys > "%TEMP_PY_SCRIPT%"
+echo sys.path.insert(0, '.') >> "%TEMP_PY_SCRIPT%"
+echo from orchestrator.book_authoring import analyze_book >> "%TEMP_PY_SCRIPT%"
+echo import json >> "%TEMP_PY_SCRIPT%"
+echo summary = analyze_book(project_slug='%PROJECT_SLUG%') >> "%TEMP_PY_SCRIPT%"
+echo print(json.dumps(summary.to_dict(), indent=2)) >> "%TEMP_PY_SCRIPT%"
 
 cd /d "%REPO_ROOT%"
 python "%TEMP_PY_SCRIPT%" > "%TEMP_LOG%" 2>&1
