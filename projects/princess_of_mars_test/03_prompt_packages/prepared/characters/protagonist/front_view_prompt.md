@@ -11,7 +11,7 @@ Prepare a compact character reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-If this prompt is later used with an image reference, treat image1 as the locked identity reference. Front-view character reference portrait, front-facing full-body reference with the camera square to the subject, An experienced Earthman fighter who undergoes a physical metamorphosis, Highly fit, athletic human male with superhuman agility, weathered angular face; dark steady eyes; short practical frontier cut; Po...
+If this prompt is later used with an image reference, treat image1 as the locked identity reference. Front-view character reference portrait, front-facing full-body reference with the camera square to the subject, protagonist, cinematic readable reference lighting, pulp planetary-romance adventure, ancient alien-world culture, frontier desert realism, weathered rock and dry wilderness terrain, non-modern clothing,...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition, modern suit, necktie, business attire, office clothing, corporate headshot, passport photo, turtleneck, modern athletic shirt
@@ -19,7 +19,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 # Inputs
 - subject_kind: character
 - subject_id: protagonist
-- source_artifact_ids: CHAR_apache_warriors; protagonist
+- source_artifact_ids: CHARACTER_REGISTRY_GLOBAL
 - reference_mode: character_reference_sheet
 - variant_name: front_view
 - lens_family: neutral_reference
@@ -34,15 +34,15 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - prompt_enhancer_profile: character_reference
 - target_models: qwen_image; flux; z_image
 - display_name: protagonist
-- identity_descriptor: An experienced Earthman fighter who undergoes a physical metamorphosis
-- body_descriptor: Highly fit, athletic human male with superhuman agility
-- face_descriptor: weathered angular face; dark steady eyes; short practical frontier cut; Post-transformation metamorphosis; Superhuman leaping ability; High level of physical fitness
-- costume_descriptor: Clothed and armed (original form); Naked (post-metamorphosis).; worn cloth, leather, cavalry gear, and salvaged materials; Clothed and armed (original form); Naked (post-metamorphosis).; Associated with Sola, Tars Tarkas, and Woola
-- posture_descriptor: upright, self-possessed, and ready
-- expression_descriptor: steady, capable, restrained intensity
-- locked_fields: Clothed and armed (original form); Naked (post-metamorphosis). Highly fit, athletic human male with superhuman agility. An experienced Earthman fighter who undergoes a physical metamorphosis
+- identity_descriptor: protagonist
+- body_descriptor: 
+- face_descriptor: 
+- costume_descriptor: 
+- posture_descriptor: 
+- expression_descriptor: 
+- locked_fields: 
 - source_visual_context: cinematic readable reference lighting, pulp planetary-romance adventure, ancient alien-world culture, frontier desert realism, weathered rock and dry wilderness terrain, non-modern clothing, weathered natural materials, tribal or gladiatorial costume logic
-- subject_visual_context: protagonist: An experienced Earthman fighter who undergoes a physical metamorphosis. Use feral or primitive non-modern appearance, rough natural materials if clothed, no tailored business attire; do not modernize clothing or portrait styling
+- subject_visual_context: protagonist
 - fallback_fields_used: 
 
 # Continuity Notes
@@ -53,8 +53,12 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - Avoid proper nouns in the prompt body unless text is meant to appear on screen.
 
 # Repair Notes
-- reference repair sources: VISUAL_FALLBACKS.json, descriptor_enrichment
+- character reference recommended input `body_descriptor` is missing
+- character reference recommended input `costume_descriptor` is missing
+- character reference recommended input `expression_descriptor` is missing
+- character reference recommended input `face_descriptor` is missing
+- character reference recommended input `locked_fields` is missing
+- character reference recommended input `posture_descriptor` is missing
 
 # Sources
-- C:\FilmCreator_MC\projects\princess_of_mars_test\02_story_analysis\bibles\characters\CHAR_apache_warriors.json
-- C:\FilmCreator_MC\projects\princess_of_mars_test\02_story_analysis\descriptors\characters\protagonist.json
+- C:\FilmCreator_MC\projects\princess_of_mars_test\02_story_analysis\world\global\CHARACTER_REGISTRY_GLOBAL.json

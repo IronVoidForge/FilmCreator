@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-If this prompt is later used with an image reference, treat image1 as the locked spatial reference. Environment reference sheet, detail-focused view on a recurring anchor or landmark, Circular basin geometry; rugged terrain with high visibility and open spaces suitable for long-range sightlines and large leaps, monumental scale, stone, metal, and weathered architectural surfaces, recognizable ridge lines, rock for...
+If this prompt is later used with an image reference, treat image1 as the locked spatial reference. Environment reference sheet, detail-focused view on a recurring anchor or landmark, rugged desert mountain terrain, dry scrub, weathered rock, clear horizon, readable distance and scale, cinematic readable reference lighting, pulp planetary-romance adventure, ancient alien-world culture, frontier desert realism, wea...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition, generic meadow, open grassy field, rolling green hills, no cave, hidden landmark, modern road, cars, modern buildings
@@ -19,7 +19,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 # Inputs
 - subject_kind: environment
 - subject_id: arizona_quartz_vein_basin
-- source_artifact_ids: ENV_aerial_battle_skies; arizona_quartz_vein_basin
+- source_artifact_ids: ENVIRONMENT_REGISTRY_GLOBAL
 - reference_mode: environment_reference_sheet
 - variant_name: detail_focus
 - lens_family: neutral_reference
@@ -34,16 +34,16 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - prompt_enhancer_profile: environment_reference
 - target_models: qwen_image; flux; z_image
 - display_name: arizona_quartz_vein_basin
-- layout_descriptor: Circular basin geometry; rugged terrain with high visibility and open spaces suitable for long-range sightlines and large leaps
-- scale_descriptor: monumental scale
-- architecture_descriptor: stone, metal, and weathered architectural surfaces
-- landmark_descriptor: recognizable ridge lines, rock formations, and terrain silhouette
-- lighting_descriptor: clear readable cinematic lighting with visible forms and depth
-- mood_descriptor: grounded atmospheric adventure tone
-- locked_fields: rugged terrain, rock materials, readable horizon
+- layout_descriptor: rugged desert mountain terrain, dry scrub, weathered rock, clear horizon, readable distance and scale
+- scale_descriptor: rugged desert mountain terrain, dry scrub, weathered rock, clear horizon, readable distance and scale
+- architecture_descriptor: rugged desert mountain terrain, dry scrub, weathered rock, clear horizon, readable distance and scale
+- landmark_descriptor: 
+- lighting_descriptor: rugged desert mountain terrain, dry scrub, weathered rock, clear horizon, readable distance and scale
+- mood_descriptor: rugged desert mountain terrain, dry scrub, weathered rock, clear horizon, readable distance and scale
+- locked_fields: rugged desert mountain terrain, dry scrub, weathered rock, clear horizon, readable distance and scale
 - source_visual_context: cinematic readable reference lighting, pulp planetary-romance adventure, ancient alien-world culture, frontier desert realism, weathered rock and dry wilderness terrain, non-modern clothing, weathered natural materials, tribal or gladiatorial costume logic
-- subject_visual_context: arizona quartz vein basin: Circular basin geometry; rugged terrain with high visibility and open spaces suitable for long-range sightlines and large leaps. Preserve rugged terrain, rock materials, readable horizon
-- fallback_fields_used: landmark_descriptor, lighting_descriptor, mood_descriptor, locked_fields
+- subject_visual_context: arizona quartz vein basin
+- fallback_fields_used: 
 
 # Continuity Notes
 - Preserve geographic layout, scale, lighting, and recurring anchors.
@@ -53,9 +53,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - Avoid proper nouns in the prompt body unless text is meant to appear on screen.
 
 # Repair Notes
-- reference repair fallback fields used: landmark_descriptor, lighting_descriptor, mood_descriptor, locked_fields
-- reference repair sources: VISUAL_FALLBACKS.json, descriptor_enrichment
+- environment reference recommended input `landmark_descriptor` is missing
 
 # Sources
-- C:\FilmCreator_MC\projects\princess_of_mars_test\02_story_analysis\bibles\environments\ENV_aerial_battle_skies.json
-- C:\FilmCreator_MC\projects\princess_of_mars_test\02_story_analysis\descriptors\environments\arizona_quartz_vein_basin.json
+- C:\FilmCreator_MC\projects\princess_of_mars_test\02_story_analysis\world\global\ENVIRONMENT_REGISTRY_GLOBAL.json

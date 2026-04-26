@@ -3,150 +3,183 @@
 - `apache_warriors`
   - Character status=canonical entity_kind=group.
   - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `captive_woman`
+  - Character status=provisional entity_kind=provisional_role.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `green_martian_warriors`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `green_martians`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `green_warriors`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `guardsmen`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `martian_people`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
 - `martian_warriors`
   - Character status=canonical entity_kind=group.
   - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `other_females`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `ptor_family`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `the_chieftain`
+  - Character status=resolved_into entity_kind=individual.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `warhoon_warriors_jailer`
+  - Character status=canonical entity_kind=group.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `watch_dog`
+  - Character status=resolved_into entity_kind=individual.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing individual.
+- `ancient_martian_city_plaza`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `ancient_martian_city_ruins`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `ancient_tableland_city`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `caravan_camp_hills`
+  - Environment status=canonical entity_kind=landform.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `caravan_camp_southern_hills`
+  - Environment status=canonical entity_kind=landform.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `carters_quarters_building`
+  - Environment status=canonical entity_kind=building.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `city_of_helium_procession_route`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `city_of_thark`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `dead_city_interior`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `dead_city_plaza`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `deserted_martian_city`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `deserted_martian_city_plaza`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `deserted_martian_cityscape`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `eastern_martian_hills`
+  - Environment status=canonical entity_kind=landform.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `green_martian_city`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `green_martian_city_complex`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `helium_city_interior`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `heliumite_flagship_interior`
+  - Environment status=canonical entity_kind=sub_location.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `lorquas_ptomel_city_plazas`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `low_mountains_hills`
+  - Environment status=canonical entity_kind=landform.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `martian_city_outskirts`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `martian_city_plaza`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `martian_city_streets`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
 - `martian_distant_hills`
   - Environment status=canonical entity_kind=landform.
   - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
-- `CH002_SC001_SH001_primary_keyframe_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC001_SH001_alternate_angle_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC001_SH001_consistency_repair_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC001_SH002_primary_keyframe_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC001_SH002_alternate_angle_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC001_SH002_consistency_repair_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC002_SH001_primary_keyframe_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC002_SH001_alternate_angle_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC002_SH001_consistency_repair_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC002_SH002_primary_keyframe_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC002_SH002_alternate_angle_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC002_SH002_consistency_repair_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC002_SH003_primary_keyframe_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC002_SH003_alternate_angle_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC002_SH003_consistency_repair_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC003_SH001_primary_keyframe_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC003_SH001_alternate_angle_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC003_SH001_consistency_repair_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC003_SH002_primary_keyframe_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC003_SH002_alternate_angle_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC003_SH002_consistency_repair_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC004_SH001_primary_keyframe_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC004_SH001_alternate_angle_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC004_SH001_consistency_repair_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC004_SH002_primary_keyframe_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC004_SH002_alternate_angle_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC004_SH002_consistency_repair_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC004_SH003_primary_keyframe_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC004_SH003_alternate_angle_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC004_SH003_consistency_repair_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC005_SH001_primary_keyframe_prompt`
-  - SH001: subject anchor is missing or not body/detail-specific enough.
-  - Prompt body is using a non-body/detail subject anchor.
-- `CH002_SC005_SH001_alternate_angle_prompt`
-  - SH001: subject anchor is missing or not body/detail-specific enough.
-  - Prompt body is using a non-body/detail subject anchor.
-- `CH002_SC005_SH001_consistency_repair_prompt`
-  - SH001: subject anchor is missing or not body/detail-specific enough.
-  - Prompt body is using a non-body/detail subject anchor.
-- `CH002_SC005_SH002_primary_keyframe_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC005_SH002_alternate_angle_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH002_SC005_SH002_consistency_repair_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC001_SH002_primary_keyframe_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC001_SH002_alternate_angle_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC001_SH002_consistency_repair_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC001_SH003_primary_keyframe_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC001_SH003_alternate_angle_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC001_SH003_consistency_repair_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC002_SH001_primary_keyframe_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC002_SH001_alternate_angle_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC002_SH001_consistency_repair_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC002_SH003_primary_keyframe_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC002_SH003_alternate_angle_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC002_SH003_consistency_repair_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC003_SH001_primary_keyframe_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC003_SH001_alternate_angle_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC003_SH001_consistency_repair_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC003_SH002_primary_keyframe_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC003_SH002_alternate_angle_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC003_SH002_consistency_repair_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC003_SH003_primary_keyframe_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC003_SH003_alternate_angle_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC003_SH003_consistency_repair_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC004_SH001_primary_keyframe_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC004_SH001_alternate_angle_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC004_SH001_consistency_repair_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC004_SH002_primary_keyframe_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC004_SH002_alternate_angle_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC004_SH002_consistency_repair_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC004_SH003_primary_keyframe_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC004_SH003_alternate_angle_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC004_SH003_consistency_repair_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC005_SH003_primary_keyframe_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC005_SH003_alternate_angle_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
-- `CH003_SC005_SH003_consistency_repair_prompt`
-  - Prompt body is missing the required subject anchor for an on-screen shot.
+- `martian_interior_chamber`
+  - Environment status=canonical entity_kind=sub_location.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `martian_night_plaza`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `martian_plaza`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `martian_plaza_city`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `plaza_training_grounds`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `thark_city_and_surroundings`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `thark_city_complex`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `thark_city_interior`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `thark_city_plaza`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `thark_city_quarters`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `thark_city_settlement`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `thark_plaza_audience_chamber`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `thark_plaza_quarters`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `thark_settlement_plaza`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `the_dead_city`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `warhoon_camp_interior`
+  - Environment status=canonical entity_kind=sub_location.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `warhoon_city`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `warhoon_eastern_hills`
+  - Environment status=canonical entity_kind=landform.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `zodanga_central_plaza`
+  - Environment status=canonical entity_kind=plaza.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `zodanga_city_gates`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `zodanga_city_streets`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `zodanga_cityscape`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `zodanga_palace_interior`
+  - Environment status=canonical entity_kind=sub_location.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
+- `zodanga_walled_city`
+  - Environment status=canonical entity_kind=city.
+  - Kept out of the main prompt-prep index because it is not a canonical film-facing environment.
