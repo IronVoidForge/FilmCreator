@@ -7,6 +7,8 @@ if "%PROJECT_SLUG%"=="" set "PROJECT_SLUG=princess_of_mars_test"
 set "CHAPTERS=%~2"
 if "%CHAPTERS%"=="" set "CHAPTERS=2-3"
 
+set "MODE=%~3"
+
 call "%~dp0_shared\resolve_filmcreator_root.bat" "%~dp0" || goto :fail_resolver
 set "REPO_ROOT=%FILMCREATOR_ROOT%"
 
@@ -50,6 +52,21 @@ echo ========================================
 
 cd /d "%REPO_ROOT%"
 if errorlevel 1 goto :fail
+
+if /I "%MODE%"=="VALIDATE_ONLY" (
+    echo.
+    echo ========================================
+    echo VALIDATE ONLY MODE
+    echo ========================================
+    echo Project: %PROJECT_SLUG%
+    echo Chapters: %CHAPTERS%
+    echo.
+    python -m orchestrator.overnight_pipeline_resume_check "%PROJECT_SLUG%" "%CHAPTERS%" --report
+    echo.
+    echo ========================================
+    pause
+    exit /b 0
+)
 
 call :detect_resume_stage
 if errorlevel 1 goto :end_with_error
@@ -204,14 +221,8 @@ echo ----------------------------------------
 >> "%LOG_FILE%" echo Detecting resume stage...
 >> "%LOG_FILE%" echo ----------------------------------------
 
-echo import sys > "%TEMP_PY_SCRIPT%"
-echo sys.path.insert(0, '.') >> "%TEMP_PY_SCRIPT%"
-echo from orchestrator.overnight_pipeline_resume_check import find_first_incomplete_stage >> "%TEMP_PY_SCRIPT%"
-echo stage = find_first_incomplete_stage('%PROJECT_SLUG%', '%CHAPTERS%') >> "%TEMP_PY_SCRIPT%"
-echo print(stage if stage else 'complete') >> "%TEMP_PY_SCRIPT%"
-
 cd /d "%REPO_ROOT%"
-python "%TEMP_PY_SCRIPT%" > "%TEMP_LOG%" 2>&1
+python -m orchestrator.overnight_pipeline_resume_check "%PROJECT_SLUG%" "%CHAPTERS%" > "%TEMP_LOG%" 2>&1
 set "EXIT_CODE=%ERRORLEVEL%"
 
 if not "!EXIT_CODE!"=="0" (
@@ -219,14 +230,12 @@ if not "!EXIT_CODE!"=="0" (
     type "%TEMP_LOG%" >> "%LOG_FILE%"
     type "%TEMP_LOG%" >> "%LATEST_LOG%"
     del "%TEMP_LOG%" >nul 2>nul
-    del "%TEMP_PY_SCRIPT%" >nul 2>nul
     echo Failed to detect resume stage
     exit /b 1
 )
 
 set /p RESUME_STAGE=<"%TEMP_LOG%"
 del "%TEMP_LOG%" >nul 2>nul
-del "%TEMP_PY_SCRIPT%" >nul 2>nul
 
 echo Detected stage: %RESUME_STAGE%
 >> "%LOG_FILE%" echo Detected stage: %RESUME_STAGE%
