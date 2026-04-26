@@ -5,9 +5,23 @@ set "PROJECT_SLUG=%~1"
 if "%PROJECT_SLUG%"=="" set "PROJECT_SLUG=princess_of_mars_test"
 
 set "CHAPTERS=%~2"
-if "%CHAPTERS%"=="" set "CHAPTERS=2-3"
-
 set "MODE=%~3"
+
+if /I "%CHAPTERS%"=="PLAN_ONLY" (
+    set "MODE=PLAN_ONLY"
+    set "CHAPTERS="
+)
+
+if /I "%CHAPTERS%"=="VALIDATE_ONLY" (
+    set "MODE=VALIDATE_ONLY"
+    set "CHAPTERS="
+)
+
+if "%CHAPTERS%"=="" (
+    set "CHAPTERS_DISPLAY=ALL"
+) else (
+    set "CHAPTERS_DISPLAY=%CHAPTERS%"
+)
 
 call "%~dp0_shared\resolve_filmcreator_root.bat" "%~dp0" || goto :fail_resolver
 set "REPO_ROOT=%FILMCREATOR_ROOT%"
@@ -27,7 +41,7 @@ echo ========================================
 echo FilmCreator Overnight Resume Pipeline
 echo ========================================
 echo Project slug: %PROJECT_SLUG%
-echo Chapters: %CHAPTERS%
+echo Chapters: %CHAPTERS_DISPLAY%
 echo Repo root: %REPO_ROOT%
 echo Log file: %LOG_FILE%
 echo Latest log: %LATEST_LOG%
@@ -59,7 +73,7 @@ if /I "%MODE%"=="VALIDATE_ONLY" (
     echo VALIDATE ONLY MODE
     echo ========================================
     echo Project: %PROJECT_SLUG%
-    echo Chapters: %CHAPTERS%
+    echo Chapters: %CHAPTERS_DISPLAY%
     echo.
     python -m orchestrator.overnight_pipeline_resume_check "%PROJECT_SLUG%" "%CHAPTERS%" --report
     echo.

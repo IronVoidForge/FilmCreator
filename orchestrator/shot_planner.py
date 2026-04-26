@@ -517,6 +517,35 @@ def _looks_like_object_subject(value: str) -> bool:
     return any(term in text for term in object_terms)
 
 
+def _looks_like_environment_phenomenon(value: str) -> bool:
+    """Check if subject is an environment phenomenon (vapor, mist, smoke, etc.)"""
+    text = " ".join(str(value or "").lower().split())
+    if not text or _is_placeholder_text(text):
+        return False
+    phenomenon_terms = {
+        "vapor",
+        "vapour",
+        "mist",
+        "fog",
+        "smoke",
+        "steam",
+        "haze",
+        "cloud",
+        "clouds",
+        "shadow",
+        "shadows",
+        "darkness",
+        "light",
+        "glow",
+        "fire",
+        "flame",
+        "wind",
+        "dust",
+        "sand",
+    }
+    return any(term in text for term in phenomenon_terms)
+
+
 def _coerce_string_list(*values: object) -> list[str]:
     items: list[str] = []
     for value in values:
@@ -1374,7 +1403,45 @@ def _camera_package_description(
     return _compact_snippet(", ".join(part for part in parts if part), limit=180)
 
 
-def _visible_primary_subject_id(primary_subject: str, characters: list[ShotReference], subject_visibility: str) -> str:
+def _resolve_renderable_subject_id(subject_id: str, project_dir: Path) -> str:
+    """Resolve alias/role to canonical character ID, or return empty for non-character subjects."""
+    if not subject_id or _is_placeholder_text(subject_id):
+        return ""
+    
+    # Check if this is a non-character subject (environment phenomenon, key item, etc.)
+    if _looks_like_object_subject(subject_id):
+        return ""
+    
+    # Check for environment phenomena (vapor, mist, smoke, etc.)
+    if _looks_like_environment_phenomenon(subject_id):
+        return ""
+    
+    # Check for environment/celestial subjects
+    if _looks_like_environment_anchor(subject_id) or _looks_like_celestial_anchor(subject_id):
+        return ""
+    
+    # Load character bible to check for alias resolution
+    bible = _load_character_bible(project_dir, subject_id)
+    if bible:
+        # Check if this is an alias that should redirect
+        alias_resolution = bible.get("alias_resolution", {})
+        if isinstance(alias_resolution, dict):
+            canonical_target = alias_resolution.get("canonical_target_id")
+            if canonical_target and isinstance(canonical_target, str) and canonical_target.strip():
+                return canonical_target.strip()
+        
+        # Check entity_kind - only return ID if it's a character
+        entity_kind = bible.get("entity_kind", "")
+        if entity_kind and entity_kind.strip().lower() not in {"individual", "person", "character", "group", "collective"}:
+            return ""
+        
+        # It's a canonical character, return the ID
+        return subject_id
+    
+    return subject_id
+
+
+def _visible_primary_subject_id(primary_subject: str, characters: list[ShotReference], subject_visibility: str, project_dir: Path) -> str:
     if subject_visibility == "off_screen_voice" or primary_subject.strip().lower() == "the narrator":
         return ""
     primary_variants = _label_variants(primary_subject)
@@ -1382,11 +1449,15 @@ def _visible_primary_subject_id(primary_subject: str, characters: list[ShotRefer
         canonical_id = (ref.canonical_id or "").strip()
         ref_variants = set(_label_variants(ref.canonical_id or "")) | set(_label_variants(ref.label)) | set(_label_variants(ref.display_name))
         if canonical_id and any(variant in ref_variants for variant in primary_variants):
-            return canonical_id
+            # Resolve through alias resolution
+            resolved_id = _resolve_renderable_subject_id(canonical_id, project_dir)
+            return resolved_id
     for ref in characters:
         canonical_id = (ref.canonical_id or "").strip()
         if canonical_id:
-            return canonical_id
+            # Resolve through alias resolution
+            resolved_id = _resolve_renderable_subject_id(canonical_id, project_dir)
+            return resolved_id
     return ""
 
 
@@ -1741,7 +1812,7 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
         camera_positions = _camera_relative_positions(characters, environment, beat_payload)
         subzone = _first_nonempty(str(planned_shot.get("environment_subzone", "")), str(beat_payload.get("environment_subzone", "")), *scene_contract.get("environment_subzones", []), fallback="")
         visible_environment_features = _visible_environment_features(environment, beat_payload)
-        visible_primary_subject_id = _visible_primary_subject_id(primary_subject, characters, subject_visibility)
+        visible_primary_subject_id = _visible_primary_subject_id(primary_subject, characters, subject_visibility, project_dir)
         visible_secondary_subject_ids = _visible_secondary_subject_ids(visible_primary_subject_id, characters)
         primary_subject_frame_position = _primary_subject_frame_position(shot_size, subzone, subject_visibility, index)
         primary_subject_scale_relation = _primary_subject_scale_relation(scene_contract, planned_shot, environment)
@@ -2962,6 +3033,7 @@ def run_shot_planning(
                 package.primary_subject,
                 package.characters_in_frame,
                 package.subject_visibility,
+                project_dir,
             )
             package.visible_secondary_subject_ids = package.visible_secondary_subject_ids or _visible_secondary_subject_ids(
                 package.visible_primary_subject_id,
