@@ -108,7 +108,8 @@ def fallback_bucket_for_character(entry: dict[str, Any], bible_data: dict[str, A
     if isinstance(alias_resolution, dict):
         status = str(alias_resolution.get("status", "")).strip().lower()
         target = alias_resolution.get("canonical_target_id")
-        if status == "approved" and target and not is_unknownish(target):
+        # Accept both "approved" (legacy) and "alias_approved" (canonical)
+        if status in {"approved", "alias_approved"} and target and not is_unknownish(target):
             return ("alias_redirect", str(target))
     
     # 2. Check entity_taxonomy for structured classification

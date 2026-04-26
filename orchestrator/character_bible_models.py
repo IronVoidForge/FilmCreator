@@ -62,6 +62,10 @@ class CharacterBible:
     continuity_constraints: list[str] = field(default_factory=list)
     unresolved_ambiguities: list[str] = field(default_factory=list)
 
+    entity_taxonomy: dict[str, Any] = field(default_factory=dict)
+    alias_resolution: dict[str, Any] = field(default_factory=dict)
+    associated_entities: list[dict[str, Any]] = field(default_factory=list)
+
     evidence_refs: list[dict[str, Any]] = field(default_factory=list)
     evidence_summary: list[str] = field(default_factory=list)
     visual_production_fallback: dict[str, Any] = field(default_factory=dict)
@@ -93,6 +97,9 @@ class CharacterBible:
             "relationship_notes": self.relationship_notes,
             "continuity_constraints": self.continuity_constraints,
             "unresolved_ambiguities": self.unresolved_ambiguities,
+            "entity_taxonomy": self.entity_taxonomy,
+            "alias_resolution": self.alias_resolution,
+            "associated_entities": self.associated_entities,
             "evidence_refs": self.evidence_refs,
             "evidence_summary": self.evidence_summary,
             "visual_production_fallback": self.visual_production_fallback,

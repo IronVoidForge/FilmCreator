@@ -19,24 +19,24 @@
 - physical_build: unknown
 - origin_or_historical_context: 19th-century indigenous setting.
 - movement_language: engaged in ambush and skirmish tactics.
-A large group of 19th-century indigenous fighters characterized by their traditional Apache attire. They function as a collective unit of hostile combatants, primarily identified through their use of arrows during ambushes and active skirmishes.
+A large group of hostile 19th-century indigenous fighters characterized by their traditional Apache attire. They operate as a cohesive unit, utilizing ambush tactics and skirmish combat while wielding arrows.
 
-- physical_traits: large group composition
-- costume_signature: Traditional Apache attire; armed with arrows.
-- distinguishing_features: arrow-wielding
-- state_variants: hostile ambushers, skirmishing warriors
+- physical_traits: Arrow-wielding
+- costume_signature: Traditional Apache attire.
+- distinguishing_features: Armed with arrows
+- state_variants: Hostile/Ambushing, Skirmishing
 
 ## Behavioral Bible
 
 - personality: Hostile and aggressive in combat.
-- role: Antagonistic combatant group; ambushers.
+- role: Antagonistic group engaged in ambush and skirmishes.
 - voice_notes: unknown
-- relationship_notes: engaged in hostile contact with other characters via ambush/skirmish
+- relationship_notes: Engaged in hostile contact with other characters via ambush.
 
 ## Continuity
 
 - continuity_constraints: Must maintain 19th-century indigenous historical context., Must be depicted as a large, cohesive group rather than isolated individuals.
-- unresolved_ambiguities: Specific visual details of traditional attire are not detailed beyond "traditional Apache attire.", Individual physical builds and ages within the group are unknown.
+- unresolved_ambiguities: Specific physical builds of individual warriors are not defined., Exact visual details of the "traditional attire" are not specified beyond the era/culture.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ A large group of 19th-century indigenous fighters characterized by their traditi
 - status: `generated`
 - source_fingerprint: `a66b21ab8006ce215dd048cea2a024af1308c7c1`
 - created_at_utc: `2026-04-25T20:47:07.931505+00:00`
-- updated_at_utc: `2026-04-25T22:53:49.548025+00:00`
+- updated_at_utc: `2026-04-26T03:13:15.314779+00:00`

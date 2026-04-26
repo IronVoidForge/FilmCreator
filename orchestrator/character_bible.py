@@ -848,6 +848,9 @@ def run_character_bible_synthesis(
                     relationship_notes=existing.get("relationship_notes", []),
                     continuity_constraints=existing.get("continuity_constraints", []),
                     unresolved_ambiguities=existing.get("unresolved_ambiguities", []),
+                    entity_taxonomy=existing.get("entity_taxonomy", {}),
+                    alias_resolution=existing.get("alias_resolution", {}),
+                    associated_entities=existing.get("associated_entities", []),
                     evidence_refs=existing.get("evidence_refs", []),
                     evidence_summary=existing.get("evidence_summary", []),
                     metadata=metadata,
@@ -869,6 +872,43 @@ def run_character_bible_synthesis(
                 continue
 
         evidence_summary, evidence_refs = _collect_evidence(project_slug, entry)
+        
+        # Load taxonomy artifact if present
+        taxonomy_artifact_path = project_dir / "02_story_analysis" / "taxonomy" / "characters" / f"CHAR_{char_id}_TAXONOMY.json"
+        taxonomy_data = {}
+        alias_resolution_data = {}
+        associated_entities_data = []
+        
+        if taxonomy_artifact_path.exists():
+            try:
+                taxonomy_artifact = read_json(taxonomy_artifact_path)
+                taxonomy_data = {
+                    "character_id": taxonomy_artifact.get("character_id"),
+                    "primary_type": taxonomy_artifact.get("primary_type"),
+                    "morphology": taxonomy_artifact.get("morphology"),
+                    "scale": taxonomy_artifact.get("scale"),
+                    "sentience": taxonomy_artifact.get("sentience"),
+                    "renderability": taxonomy_artifact.get("renderability"),
+                    "confidence": taxonomy_artifact.get("confidence"),
+                    "needs_review": taxonomy_artifact.get("needs_review"),
+                }
+                alias_resolution_data = taxonomy_artifact.get("alias_resolution", {})
+                # Extract associated evidence
+                assoc_evidence = taxonomy_artifact.get("associated_evidence", [])
+                if assoc_evidence:
+                    associated_entities_data = [{"evidence": e} for e in assoc_evidence]
+                
+                # Add taxonomy to upstream dependencies
+                metadata.upstream_dependencies.append({
+                    "dependency_type": "character_taxonomy",
+                    "dependency_id": char_id,
+                    "source_path": str(taxonomy_artifact_path),
+                })
+            except Exception:
+                warnings.append(f"Failed to load taxonomy artifact for {char_id}")
+        else:
+            warnings.append(f"Taxonomy artifact missing for {char_id}")
+        
         synthesized_payload = _llm_synthesis(entry, evidence_summary) if use_llm else None
         if not synthesized_payload:
             synthesized_payload = _deterministic_synthesis(entry, evidence_summary)
@@ -987,6 +1027,9 @@ def run_character_bible_synthesis(
             relationship_notes=merged.get("relationship_notes", []),
             continuity_constraints=merged.get("continuity_constraints", []),
             unresolved_ambiguities=merged.get("unresolved_ambiguities", []),
+            entity_taxonomy=taxonomy_data,
+            alias_resolution=alias_resolution_data,
+            associated_entities=associated_entities_data,
             evidence_refs=evidence_refs,
             evidence_summary=evidence_summary,
             visual_production_fallback=merged.get("visual_production_fallback", {}),

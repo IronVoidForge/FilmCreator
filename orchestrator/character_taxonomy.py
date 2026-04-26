@@ -23,91 +23,53 @@ def _load_character_registry(project_slug: str) -> dict[str, Any]:
     return read_json(path)
 
 
-def _load_character_bible(project_dir: Path, character_id: str) -> dict[str, Any] | None:
-    bible_path = project_dir / "02_story_analysis" / "bibles" / "characters" / f"CHAR_{character_id}.md"
-    if not bible_path.exists():
-        return None
-    content = bible_path.read_text(encoding="utf-8")
-    return {"content": content, "path": str(bible_path)}
-
-
-def _extract_entity_type_hints(character_id: str, registry_entry: dict, bible_data: dict | None) -> tuple[list[str], list[str]]:
-    """Extract direct and associated entity type hints from available sources."""
-    direct_hints = []
-    associated_hints = []
+def _iter_character_taxonomy_hint_records(
+    project_dir: Path,
+    character_id: str,
+    registry_entry: dict[str, Any],
+) -> list[dict[str, Any]]:
+    """Return structured taxonomy hint records from chapter extraction outputs.
+    Do not infer taxonomy from arbitrary prose.
+    Do not read character bible files.
+    """
+    records = []
     
-    # From registry entity_kind
-    entity_kind = registry_entry.get("entity_kind", "unknown")
-    if entity_kind == "group":
-        direct_hints.append("group")
+    # Search character breakdown chapters for structured hints
+    breakdown_root = project_dir / "02_story_analysis" / "character_breakdowns" / "chapters"
+    if not breakdown_root.exists():
+        return records
     
-    # From character bible content
-    if bible_data:
-        content = bible_data.get("content", "").lower()
+    # Iterate through chapter directories
+    for chapter_dir in sorted(breakdown_root.iterdir()):
+        if not chapter_dir.is_dir():
+            continue
         
-        # Direct type hints
-        if "human" in content and ("earth" in content or "virginia" in content or "confederate" in content):
-            direct_hints.append("human")
-        if "martian hound" in content or "calot" in content:
-            direct_hints.append("animal")
-        if "ape" in content and "creature" in content:
-            direct_hints.append("creature")
-        if "green martian" in content or "red martian" in content:
-            direct_hints.append("humanoid_nonhuman")
-        if "mummified" in content or "corpse" in content or "deceased" in content:
-            direct_hints.append("context_only")
+        # Look for character breakdown file
+        char_file = chapter_dir / f"{character_id}.md"
+        if not char_file.exists():
+            continue
         
-        # Associated hints (mounts, clothing, objects)
-        if "mount" in content or "riding" in content:
-            associated_hints.append("has_mount")
-        if "costume" in content or "clothing" in content or "armor" in content:
-            associated_hints.append("has_costume")
-        if "weapon" in content or "sword" in content:
-            associated_hints.append("has_weapon")
+        try:
+            content = char_file.read_text(encoding="utf-8")
+            # Parse structured taxonomy hints if present
+            # For now, we'll look for a structured section
+            # In the future, this should use packet parser
+            record = _parse_taxonomy_hints_from_markdown(content, str(char_file))
+            if record:
+                records.append(record)
+        except Exception:
+            continue
     
-    return direct_hints, associated_hints
+    return records
 
 
-def _extract_morphology_hints(character_id: str, bible_data: dict | None) -> list[str]:
-    """Extract morphology hints from available sources."""
-    hints = []
-    
-    if bible_data:
-        content = bible_data.get("content", "").lower()
-        
-        if "biped" in content or "two legs" in content or "humanoid" in content:
-            hints.append("biped")
-        if "quadruped" in content or "four legs" in content or "canine" in content:
-            hints.append("quadruped")
-        if "multi-legged" in content or "eight legs" in content:
-            hints.append("multi_legged")
-        if "wings" in content or "winged" in content or "flying" in content:
-            hints.append("winged")
-        if "serpentine" in content or "snake" in content:
-            hints.append("serpentine")
-    
-    return hints
-
-
-def _extract_scale_hints(character_id: str, bible_data: dict | None) -> list[str]:
-    """Extract scale hints from available sources."""
-    hints = []
-    
-    if bible_data:
-        content = bible_data.get("content", "").lower()
-        
-        if "tiny" in content or "small creature" in content:
-            hints.append("tiny")
-        if "small" in content and "scale" in content:
-            hints.append("small")
-        if "large" in content or "massive" in content or "colossal" in content:
-            hints.append("large")
-        if "giant" in content or "enormous" in content:
-            hints.append("giant")
-        if "human-scale" in content or "human scale" in content:
-            hints.append("human_scale")
-    
-    return hints
+def _parse_taxonomy_hints_from_markdown(content: str, source_path: str) -> dict[str, Any] | None:
+    """Parse taxonomy hints from markdown if present.
+    Returns None if no structured hints found.
+    """
+    # For now, return None since existing breakdowns don't have structured hints
+    # This will be populated when Phase 2 extraction is implemented
+    return None
 
 
 def _determine_primary_type(direct_hints: list[str], associated_hints: list[str], entity_kind: str) -> tuple[str, float, list[str]]:
@@ -253,13 +215,38 @@ def _synthesize_character_taxonomy(
 ) -> dict[str, Any]:
     """Synthesize taxonomy for a single character."""
     
-    # Load character bible if available
-    bible_data = _load_character_bible(project_dir, character_id)
+    # Load structured taxonomy hint records from upstream extraction
+    hint_records = _iter_character_taxonomy_hint_records(project_dir, character_id, registry_entry)
     
-    # Extract hints
-    direct_hints, associated_hints = _extract_entity_type_hints(character_id, registry_entry, bible_data)
-    morphology_hints = _extract_morphology_hints(character_id, bible_data)
-    scale_hints = _extract_scale_hints(character_id, bible_data)
+    # Aggregate hints from structured records
+    direct_hints = []
+    associated_hints = []
+    morphology_hints = []
+    scale_hints = []
+    
+    # From registry entity_kind
+    entity_kind = registry_entry.get("entity_kind", "unknown")
+    if entity_kind == "group":
+        direct_hints.append("group")
+    
+    # Aggregate from structured hint records
+    for record in hint_records:
+        char_type = record.get("character_type_hint", "unknown")
+        if char_type and char_type != "unknown":
+            direct_hints.append(char_type)
+        
+        morph = record.get("morphology_hint", "unknown")
+        if morph and morph != "unknown":
+            morphology_hints.append(morph)
+        
+        scale = record.get("scale_hint", "unknown")
+        if scale and scale != "unknown":
+            scale_hints.append(scale)
+        
+        # Associated entities are recorded separately
+        assoc = record.get("associated_entities", [])
+        if assoc:
+            associated_hints.extend(assoc)
     
     # Determine taxonomy
     entity_kind = registry_entry.get("entity_kind", "unknown")
