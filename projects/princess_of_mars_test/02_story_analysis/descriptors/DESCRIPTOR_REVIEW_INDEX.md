@@ -1,3 +1,16 @@
 # Descriptor Review Index
 
-- No entries.
+- `character:dead_friend` - dead_friend (status=canonical, mentions=1, review=11)
+- `character:former_self` - former_self (status=canonical, mentions=1, review=12)
+- `character:grotesque_creatures` - grotesque_creatures (status=canonical, mentions=1, review=11)
+- `character:martian_warrior_leader` - martian_warrior_leader (status=canonical, mentions=1, review=12)
+- `environment:arizona_mountain_cave` - arizona_mountain_cave (status=canonical, mentions=1, review=1)
+- `environment:arizona_mountain_cave_ledge` - arizona_mountain_cave_ledge (status=canonical, mentions=1, review=1)
+- `environment:arizona_quartz_vein_basin` - arizona_quartz_vein_basin (status=canonical, mentions=1, review=2)
+- `environment:circular_moss_basin` - circular_moss_basin (status=canonical, mentions=1, review=1)
+- `environment:deep_space_void` - deep_space_void (status=canonical, mentions=1, review=1)
+- `environment:martian_distant_hills` - martian_distant_hills (status=canonical, mentions=1, review=1)
+- `environment:martian_incubator_enclosure` - martian_incubator_enclosure (status=canonical, mentions=1, review=2)
+- `environment:rocky_gorge_canyon` - rocky_gorge_canyon (status=canonical, mentions=1, review=1)
+- `environment:rocky_gorge_nightscape` - rocky_gorge_nightscape (status=canonical, mentions=1, review=1)
+- `environment:vast_cosmic_void` - vast_cosmic_void (status=canonical, mentions=1, review=1)

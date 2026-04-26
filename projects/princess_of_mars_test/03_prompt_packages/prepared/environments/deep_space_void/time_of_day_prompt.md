@@ -11,7 +11,7 @@ Prepare a compact environment reference prompt for enhancer-safe generation.
 still.t2i.klein.distilled
 
 # Positive Prompt
-If this prompt is later used with an image reference, treat image1 as the locked spatial reference. Environment reference sheet, same place rendered at a different time of day while preserving canon, cinematic readable reference lighting, pulp planetary-romance adventure, ancient alien-world culture, frontier desert realism, weathered rock and dry wilderness terrain, non-modern clothing, weathered natural material...
+If this prompt is later used with an image reference, treat image1 as the locked spatial reference. Environment reference sheet, same place rendered at a different time of day while preserving canon, No descriptive visual data is currently available for this environment, monumental scale, stone, metal, and weathered architectural surfaces, clear landmark or anchor feature defining the location, cinematic readable...
 
 # Negative Prompt
 text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of focus, distorted anatomy, extra limbs, duplicate faces, cropped head, bad hands, messy composition, generic meadow, open grassy field, rolling green hills, no cave, hidden landmark, modern road, cars, modern buildings
@@ -19,7 +19,7 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 # Inputs
 - subject_kind: environment
 - subject_id: deep_space_void
-- source_artifact_ids: ENVIRONMENT_REGISTRY_GLOBAL
+- source_artifact_ids: ENV_aerial_battle_skies; deep_space_void
 - reference_mode: environment_reference_sheet
 - variant_name: time_of_day
 - lens_family: neutral_reference
@@ -34,16 +34,16 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - prompt_enhancer_profile: environment_reference
 - target_models: qwen_image; flux; z_image
 - display_name: deep_space_void
-- layout_descriptor: cinematic readable reference lighting, pulp planetary-romance adventure, ancient alien-world culture, frontier desert realism, weathered rock and dry wilderness terrain, non-modern clothing, weathered natural materials, tribal or gladiatorial costume logic; clear cinematic location reference with explicit landmarks, scale, materials, lighting, and atmosphere
-- scale_descriptor: cinematic readable reference lighting, pulp planetary-romance adventure, ancient alien-world culture, frontier desert realism, weathered rock and dry wilderness terrain, non-modern clothing, weathered natural materials, tribal or gladiatorial costume logic; clear cinematic location reference with explicit landmarks, scale, materials, lighting, and atmosphere
-- architecture_descriptor: cinematic readable reference lighting, pulp planetary-romance adventure, ancient alien-world culture, frontier desert realism, weathered rock and dry wilderness terrain, non-modern clothing, weathered natural materials, tribal or gladiatorial costume logic; clear cinematic location reference with explicit landmarks, scale, materials, lighting, and atmosphere
-- landmark_descriptor: 
+- layout_descriptor: No descriptive visual data is currently available for this environment
+- scale_descriptor: monumental scale
+- architecture_descriptor: stone, metal, and weathered architectural surfaces
+- landmark_descriptor: clear landmark or anchor feature defining the location
 - lighting_descriptor: cinematic readable reference lighting, pulp planetary-romance adventure, ancient alien-world culture, frontier desert realism, weathered rock and dry wilderness terrain, non-modern clothing, weathered natural materials, tribal or gladiatorial costume logic; clear cinematic location reference with explicit landmarks, scale, materials, lighting, and atmosphere
 - mood_descriptor: cinematic readable reference lighting, pulp planetary-romance adventure, ancient alien-world culture, frontier desert realism, weathered rock and dry wilderness terrain, non-modern clothing, weathered natural materials, tribal or gladiatorial costume logic; clear cinematic location reference with explicit landmarks, scale, materials, lighting, and atmosphere
-- locked_fields: cinematic readable reference lighting, pulp planetary-romance adventure, ancient alien-world culture, frontier desert realism, weathered rock and dry wilderness terrain, non-modern clothing, weathered natural materials, tribal or gladiatorial costume logic; clear cinematic location reference with explicit landmarks, scale, materials, lighting, and atmosphere
+- locked_fields: core landmark, scale, and material identity
 - source_visual_context: cinematic readable reference lighting, pulp planetary-romance adventure, ancient alien-world culture, frontier desert realism, weathered rock and dry wilderness terrain, non-modern clothing, weathered natural materials, tribal or gladiatorial costume logic
 - subject_visual_context: deep space void
-- fallback_fields_used: 
+- fallback_fields_used: landmark_descriptor, locked_fields
 
 # Continuity Notes
 - Preserve geographic layout, scale, lighting, and recurring anchors.
@@ -53,7 +53,9 @@ text, watermark, logo, subtitle, caption, signature, low quality, blurry, out of
 - Avoid proper nouns in the prompt body unless text is meant to appear on screen.
 
 # Repair Notes
-- environment reference recommended input `landmark_descriptor` is missing
+- reference repair fallback fields used: landmark_descriptor, locked_fields
+- reference repair sources: VISUAL_FALLBACKS.json, descriptor_enrichment
 
 # Sources
-- C:\FilmCreator_MC\projects\princess_of_mars_test\02_story_analysis\world\global\ENVIRONMENT_REGISTRY_GLOBAL.json
+- C:\FilmCreator_MC\projects\princess_of_mars_test\02_story_analysis\bibles\environments\ENV_aerial_battle_skies.json
+- C:\FilmCreator_MC\projects\princess_of_mars_test\02_story_analysis\descriptors\environments\deep_space_void.json

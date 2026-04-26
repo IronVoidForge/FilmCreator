@@ -1,3 +1,80 @@
 # Descriptor Review Queue
 
-- No review items.
+## Character
+
+- `DESC_CHAR_dead_friend`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_former_self`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_grotesque_creatures`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_martian_warrior_leader`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+
+## Environment
+
+- `DESC_ENV_arizona_mountain_cave`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_arizona_mountain_cave_ledge`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_arizona_quartz_vein_basin`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_circular_moss_basin`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_deep_space_void`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_distant_hills`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_incubator_enclosure`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_rocky_gorge_canyon`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_rocky_gorge_nightscape`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_vast_cosmic_void`
+  - reference_fields_repaired_from_visual_fallbacks
+
