@@ -1,0 +1,314 @@
+{
+  "scene_id": "CH003_SC001",
+  "chapter_id": "CH003",
+  "scene_title": "SC001",
+  "purpose": "Establish the protagonist's disorientation and the physical reality of Martian gravity.",
+  "summary": "The protagonist wakes up naked in a yellowish, mossy basin on Mars. He discovers that the low gravity makes even basic movements result in massive, uncontrolled leaps.",
+  "emotional_arc": "Confusion $\\rightarrow$ Disorientation $\\rightarrow$ Physical shock/Surprise.",
+  "production_intent": "Establish the protagonist's disorientation and the physical reality of Martian gravity through uncontrolled, massive leaps within a mossy basin.",
+  "scene_short_description": "A naked man wakes in a yellowish mossy basin and experiences uncontrolled leaps due to low gravity.",
+  "scene_primary_scale_story_point": "Protagonist's leap height vs quartz-bearing rock outcroppings.",
+  "scene_required_anchor_catalog": [
+    "quartz_bearing_rock_outcropping",
+    "incubator_glass_enclosure"
+  ],
+  "scene_start_state": "protagonist lying naked in yellowish moss.",
+  "scene_end_state": "protagonist experiencing physical shock from a massive, uncontrolled leap.",
+  "dominant_action_line": "Waking up and attempting basic movement resulting in gravity-defying leaps.",
+  "scene_spatial_layout": [
+    "circular basin floor covered in yellowish moss",
+    "quartz rock outcroppings surrounding the center",
+    "low walled glass incubator enclosure nearby"
+  ],
+  "character_spatial_map": [
+    "protagonist centered in the mossy basin",
+    "protagonist moving toward/away from quartz rocks"
+  ],
+  "environment_subzones": [
+    "mossy_basin_floor",
+    "quartz_outcropping_zone",
+    "incubator_perimeter"
+  ],
+  "entry_vectors": [
+    "none (protagonist is already present)"
+  ],
+  "exit_vectors": [
+    "leaping out of the central basin area"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: awakening to first movement",
+    "BT002 -> BT003: movement to gravity shock"
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "A circular basin on Mars",
+      "canonical_id": "arizona_quartz_vein_basin",
+      "display_name": "arizona_quartz_vein_basin",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH003/arizona_quartz_vein_basin.md",
+      "notes": "Chapter-local environment alias match for 'A circular basin on Mars' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "protagonist state of undress (naked)",
+    "height and distance of jumps relative to terrain"
+  ],
+  "visual_coverage_families": [
+    "POV shots of the alien landscape",
+    "Wide shots showing scale of leaps",
+    "Close-ups of physical exertion and confusion"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "protagonist wakes up confused",
+      "purpose": "",
+      "action_start": "eyes closed in moss",
+      "action_end": "protagonist looking around at landscape",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "center of arizona_quartz_vein_basin",
+      "blocking_hint": "lying on back in yellowish moss",
+      "environment_subzone": "mossy_basin_floor",
+      "continuity_focus": "nakedness/undress",
+      "coverage_hint": "POV shots of landscape",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "first attempt at movement results in massive leap",
+      "purpose": "",
+      "action_start": "protagonist pushing off ground",
+      "action_end": "protagonist suspended high above the basin",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "mossy basin floor near quartz rocks",
+      "blocking_hint": "sudden vertical ascent from center",
+      "environment_subzone": "mossy_basin_floor",
+      "continuity_focus": "jump height/distance",
+      "coverage_hint": "wide shots of scale",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "physical shock and disorientation from gravity",
+      "purpose": "",
+      "action_start": "protagonist mid-air descent",
+      "action_end": "protagonist landing with uncontrolled momentum",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "near quartz outcroppings",
+      "blocking_hint": "stumbling/uncontrolled landing",
+      "environment_subzone": "quartz_outcropping_zone",
+      "continuity_focus": "jump distance",
+      "coverage_hint": "close-ups of exertion/confusion",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish disorientation",
+      "planned_shot_moment_summary": "protagonist eyes opening to alien sky",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "mossy_basin_floor",
+      "planned_shot_required_anchor_1": "quartz_bearing_rock_outcropping",
+      "planned_shot_scale_proof_detail": "eye-level view of moss texture",
+      "start_state_seed": "eyes closed",
+      "end_state_seed": "eyes open/blinking",
+      "action_seed": "waking up",
+      "blocking_seed": [
+        "lying supine in moss"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "establish scale of movement",
+      "planned_shot_moment_summary": "protagonist attempts to stand and leaps too high",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "mossy_basin_floor",
+      "planned_shot_required_anchor_1": "quartz_bearing_rock_outcropping",
+      "planned_shot_scale_proof_detail": "height of leap vs rock height",
+      "start_state_seed": "standing attempt",
+      "end_state_seed": "mid-air peak",
+      "action_seed": "uncontrolled leaping",
+      "blocking_seed": [
+        "moving from center toward rocks"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "convey physical shock",
+      "planned_shot_moment_summary": "protagonist landing or reacting to the leap",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "mossy_basin_floor",
+      "planned_shot_required_anchor_1": "quartz_bearing_rock_outcropping",
+      "planned_shot_scale_proof_detail": "facial expression of surprise",
+      "start_state_seed": "mid-air descent",
+      "end_state_seed": "impact/landing",
+      "action_seed": "reacting to gravity shock",
+      "blocking_seed": [
+        "stumbling upon landing"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "handheld",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH003",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH003_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH003_chapter_iii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH013",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH013_chapter_xiii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH003",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH003_SC001] Purpose: Establish the protagonist's disorientation and the physical reality of Martian gravity.",
+    "[CH003_SC001] Summary: The protagonist wakes up naked in a yellowish, mossy basin on Mars. He discovers that the low gravity makes even basic movements result in massive, uncontrolled leaps.",
+    "[CH003_SC001] Emotional arc: Confusion $\\rightarrow$ Disorientation $\\rightarrow$ Physical shock/Surprise.",
+    "[CH003_SC001] Coverage: POV shots of the alien landscape. Wide shots showing the scale of his leaps. Close-ups of physical exertion and confusion.",
+    "[CH003_SC001] Continuity: The height and distance of the protagonist's jumps; his state of undress.",
+    "[CH003] Chapter summary: **Setting:** A circular basin on Mars covered in yellowish, moss-like vegetation, featuring quartz-bearing rock outcroppings and a low, walled glass enclosure (an incubator). **Events:** - The protagonist wakes up on...",
+    "[CH007] CHAPTER VII (book index hit)",
+    "[CH003] CHAPTER III (book index hit)",
+    "[CH013] CHAPTER XIII (book index hit)",
+    "Character protagonist: An experienced Earthman fighter characterized by extreme physical fitness and superhuman agility. Following a metamorphosis, his visual state shifts from a clothed, armed combatant to a naked individual. He moves with exceptional grac..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH003_SC001\n\n## Production Intent\nEstablish the protagonist's disorientation and the physical reality of Martian gravity through uncontrolled, massive leaps within a mossy basin.\n\n## Required Cast\n- protagonist (naked, physically fit)\n\n## Required Environments\n- arizona_quartz_vein_basin (yellowish moss, quartz outcroppings, incubator enclosure)\n\n## Continuity Constraints\n- Protagonist must remain naked throughout the scene.\n- Jump height and distance must be consistent with low-gravity physics relative to rock scale.\n\n## Beat List\n- BT001: protagonist wakes up confused\n- BT002: first attempt at movement results in massive leap\n- BT003: physical shock and disorientation from gravity",
+  "metadata": {
+    "artifact_id": "CH003_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "d564276d6a1f3fcc39b4ed2d3efbdbe053224a41",
+    "created_at_utc": "2026-04-26T16:53:51.052777+00:00",
+    "updated_at_utc": "2026-04-26T16:53:51.052777+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH003_SC001",
+        "version": "6cf16cf515427e98d4339815d310fef72af848d4"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH003_SC001",
+        "version": "c2653569edb1dce1bd702a1864a72a1f95057579"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH003_SC001",
+        "version": "2a78bb176a9ec11a6c01ad41887d217be31f6f6d"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T16:54:17.404025+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d564276d6a1f3fcc39b4ed2d3efbdbe053224a41"
+      }
+    ]
+  }
+}

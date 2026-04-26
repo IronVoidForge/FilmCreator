@@ -1,0 +1,325 @@
+{
+  "scene_id": "CH002_SC004",
+  "chapter_id": "CH002",
+  "scene_title": "SC004",
+  "purpose": "The supernatural reveal and the \"New Reality\" establishment.",
+  "summary": "Having broken free, the protagonist stands up only to realize he is naked. He looks down to see his own physical body\u2014clothed and armed\u2014lying lifeless on the cave floor. He realizes he has undergone a metaphysical metamorphosis.",
+  "emotional_arc": "Confusion to Existential Horror and Shock.",
+  "production_intent": "Establish the metaphysical shift through a visual juxtaposition of a naked, agile spirit and a clothed, lifeless physical shell. The scene must emphasize the shock of self-recognition via high-angle reveals and disorienting camera work within the cave environment.",
+  "scene_short_description": "A naked figure stands over his own lifeless, armed corpse in a rocky cave.",
+  "scene_primary_scale_story_point": "Vertical hierarchy between the standing spirit and the prone physical shell.",
+  "scene_required_anchor_catalog": [
+    "The Protagonist's Body (Lifeless shell)",
+    "Rocky floor of arizona_mountain_cave"
+  ],
+  "scene_start_state": "protagonist is rising from the cave floor, naked and disoriented.",
+  "scene_end_state": "protagonist stands paralyzed in horror overlooking his own corpse.",
+  "dominant_action_line": "The protagonist rises, realizes his nudity, and discovers his dead physical body.",
+  "scene_spatial_layout": [
+    "Protagonist stands upright in center-frame",
+    "Dead body lies prone on the floor at the protagonist's feet"
+  ],
+  "character_spatial_map": [
+    "protagonist: standing, naked, central vertical axis",
+    "The Protagonist's Body (Lifeless shell): prone, clothed, armed, at feet of protagonist"
+  ],
+  "environment_subzones": [
+    "cave_floor_center",
+    "rocky_gorge_perimeter"
+  ],
+  "entry_vectors": [
+    "protagonist rising from floor"
+  ],
+  "exit_vectors": [
+    "Subjects exit or hand off toward the next story beat."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: sudden realization of nudity",
+    "BT002 -> BT003: visual descent to the corpse"
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist (New form/Spirit)",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    },
+    {
+      "label": "The Protagonist's Body (Lifeless shell)",
+      "canonical_id": null,
+      "display_name": "The Protagonist's Body (Lifeless shell)",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 10,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Interior Cave",
+      "canonical_id": "arizona_mountain_cave",
+      "display_name": "arizona_mountain_cave",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 52,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/arizona_mountain_cave.md",
+      "notes": "Chapter-local environment alias match for 'Interior Cave' (key_overlap=1, label_overlap=1, context_overlap=3)."
+    }
+  ],
+  "continuity_constraints": [
+    "Exact spatial distance between naked protagonist and clothed dead body",
+    "Clothing and weapon set on The Protagonist's Body (Lifeless shell) must match previous combat state"
+  ],
+  "visual_coverage_families": [
+    "Reveal shots (Looking down at the body)",
+    "High-angle shots of the protagonist standing over his corpse",
+    "Disorienting camera movements"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Protagonist rises from the ground",
+      "purpose": "",
+      "action_start": "protagonist prone on floor",
+      "action_end": "protagonist standing upright",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "cave_floor_center",
+      "blocking_hint": "rising in center of frame",
+      "environment_subzone": "cave_floor_center",
+      "continuity_focus": "nakedness vs previous combat gear",
+      "coverage_hint": "medium_full shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Realization of nudity",
+      "purpose": "",
+      "action_start": "protagonist standing",
+      "action_end": "protagonist looking down",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "cave_floor_center",
+      "blocking_hint": "looking at own torso/limbs",
+      "environment_subzone": "cave_floor_center",
+      "continuity_focus": "skin contact/texture",
+      "coverage_hint": "close-up on face/torso",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Discovery of the corpse",
+      "purpose": "",
+      "action_start": "protagonist looking down",
+      "action_end": "protagonist frozen in horror",
+      "active_subjects": [
+        "protagonist",
+        "The Protagonist's Body (Lifeless shell)"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "cave_floor_center",
+      "blocking_hint": "standing subject overlooking prone subject",
+      "environment_subzone": "cave_floor_center",
+      "continuity_focus": "dead body clothing/weapon match",
+      "coverage_hint": "high-angle wide reveal",
+      "coverage_priority": "critical",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish metamorphosis",
+      "planned_shot_moment_summary": "protagonist rises from floor",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "cave_floor_center",
+      "planned_shot_required_anchor_1": "rocky floor",
+      "planned_shot_scale_proof_detail": "nakedness vs previous clothed state",
+      "start_state_seed": "protagonist low to ground",
+      "end_state_seed": "protagonist standing upright",
+      "action_seed": "rising and looking around",
+      "blocking_seed": [
+        "center cave floor"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "reveal shock",
+      "planned_shot_moment_summary": "protagonist looks down at himself",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "cave_floor_center",
+      "planned_shot_required_anchor_1": "protagonist body",
+      "planned_shot_scale_proof_detail": "naked skin texture",
+      "start_state_seed": "protagonist looking up",
+      "end_state_seed": "protagonist looking down",
+      "action_seed": "looking down in confusion",
+      "blocking_seed": [
+        "standing still"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "high_angle",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "the reveal",
+      "planned_shot_moment_summary": "camera reveals the dead body",
+      "primary_subject_seed": "The Protagonist's Body (Lifeless shell)",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "cave_floor_center",
+      "planned_shot_required_anchor_1": "dead body",
+      "planned_shot_scale_proof_detail": "clothed/armed vs naked protagonist",
+      "start_state_seed": "protagonist staring down",
+      "end_state_seed": "protagonist frozen in horror",
+      "action_seed": "camera pans/tilts to corpse",
+      "blocking_seed": [
+        "corpse at feet of standing subject"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "high_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "tilt",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve The Protagonist's Body (Lifeless shell) -> The Protagonist's Body (Lifeless shell)"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH028",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH028_chapter_xxviii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH001",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH001_chapter_i.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH002_chapter_ii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH002",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH002_SC004] Purpose: The supernatural reveal and the \"New Reality\" establishment.",
+    "[CH002_SC004] Summary: Having broken free, the protagonist stands up only to realize he is naked. He looks down to see his own physical body\u2014clothed and armed\u2014lying lifeless on the cave floor. He realizes he has undergone a metaphysical metamorphosis.",
+    "[CH002_SC004] Emotional arc: Confusion to Existential Horror and Shock.",
+    "[CH002_SC004] Coverage: Reveal shots (Looking down at the body) High-angle shots of the protagonist standing over his corpse Disorienting camera movements",
+    "[CH002_SC004] Continuity: The exact placement of the \"dead\" body relative to the \"new\" protagonist; clothing/weapon details on the dead body.",
+    "[CH002] Chapter summary: **Setting:** A cave in the Arizona mountains; a rocky gorge under a clear starlight night. **Characters:** - **The Protagonist:** An experienced fighter who becomes paralyzed by a mysterious gas in a cave, undergoes a...",
+    "[CH028] CHAPTER XXVIII (book index hit)",
+    "[CH001] CHAPTER I (book index hit)",
+    "[CH002] CHAPTER II (book index hit)",
+    "Character protagonist: An experienced Earthman fighter characterized by extreme physical fitness and superhuman agility. Following a metamorphosis, his visual state shifts from a clothed, armed combatant to a naked individual. He moves with exceptional grac..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH002_SC004\n\n## Production Intent\nEstablish the metaphysical shift through a visual juxtaposition of a naked, agile spirit and a clothed, lifeless physical shell. The scene must emphasize the shock of self-recognition via high-angle reveals and disorienting camera work within the cave environment.\n\n## Required Cast\n- protagonist (New form/Spirit)\n- The Protagonist's Body (Lifeless shell)\n\n## Required Environments\n- arizona_mountain_cave\n\n## Continuity Constraints\n- Exact spatial distance between naked protagonist and clothed dead body\n- Clothing and weapon set on The Protagonist's Body (Lifeless shell) must match previous combat state\n\n## Beat List\n- BT001: Protagonist rises from the ground\n- BT002: Realization of nudity\n- BT003: Discovery of the corpse",
+  "metadata": {
+    "artifact_id": "CH002_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "bcaac770a422763efabde2eef0a8c111174e273d",
+    "created_at_utc": "2026-04-26T16:52:57.300956+00:00",
+    "updated_at_utc": "2026-04-26T16:52:57.300956+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH002_SC004",
+        "version": "354b321b4c91438c7c819c4b876f7b09ae2c6128"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH002_SC004",
+        "version": "ceebf5e046cca98a237c088863fccd1c469a6752"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH002_SC004",
+        "version": "4d3de6c7695045fa8b529e1ecbf571dd019b2ee6"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T16:53:24.434105+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "bcaac770a422763efabde2eef0a8c111174e273d"
+      }
+    ]
+  }
+}

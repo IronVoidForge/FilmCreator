@@ -1,0 +1,312 @@
+{
+  "scene_id": "CH002_SC003",
+  "chapter_id": "CH002",
+  "scene_title": "SC003",
+  "purpose": "The climax of the protagonist's internal struggle.",
+  "summary": "At midnight, amidst rustling and moaning sounds, the protagonist engages in a massive psychological and physical battle of will to overcome the paralysis caused by the gas.",
+  "emotional_arc": "Despair to Intense Determination/Willpower.",
+  "production_intent": "A high-intensity psychological and physical struggle where the protagonist fights gas-induced paralysis. The performance must transition from total despair to extreme willpower through visible muscular strain and facial contortion.",
+  "scene_short_description": "A naked fighter struggles against gas paralysis inside a dark mountain cave at midnight.",
+  "scene_primary_scale_story_point": "Individual vs. invisible environmental force (gas).",
+  "scene_required_anchor_catalog": [
+    "rocky floor",
+    "cave wall"
+  ],
+  "scene_start_state": "Protagonist lying paralyzed amidst rustling and moaning sounds.",
+  "scene_end_state": "Protagonist exerting extreme willpower to overcome paralysis.",
+  "dominant_action_line": "Fighting the physical effects of gas through sheer mental force.",
+  "scene_spatial_layout": [
+    "confined cave floor",
+    "dark, enclosed interior"
+  ],
+  "character_spatial_map": [
+    "protagonist centered on rocky ground",
+    "protagonist prone/struggling against the floor"
+  ],
+  "environment_subzones": [
+    "cave floor",
+    "cave shadows"
+  ],
+  "entry_vectors": [
+    "none (internal scene)"
+  ],
+  "exit_vectors": [
+    "Subjects exit or hand off toward the next story beat."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: transition from passive paralysis to active physical struggle",
+    "BT002 -> BT003: transition from physical strain to mental breakthrough"
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist (Struggling)",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Interior Cave",
+      "canonical_id": "arizona_mountain_cave",
+      "display_name": "arizona_mountain_cave",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 52,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/arizona_mountain_cave.md",
+      "notes": "Chapter-local environment alias match for 'Interior Cave' (key_overlap=1, label_overlap=1, context_overlap=3)."
+    }
+  ],
+  "continuity_constraints": [
+    "Progression of facial expression from despair to determination",
+    "Lighting shifts corresponding to midnight passage",
+    "Physical state of nakedness/lack of gear"
+  ],
+  "visual_coverage_families": [
+    "Tight Close-ups (Face, straining muscles, eyes)",
+    "Sound-driven shots (Focusing on the source of the moaning)"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Initial paralysis and despair",
+      "purpose": "",
+      "action_start": "lying motionless",
+      "action_end": "first involuntary twitch",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "cave floor",
+      "blocking_hint": "prone on rocky ground",
+      "environment_subzone": "cave floor",
+      "continuity_focus": "despair expression",
+      "coverage_hint": "medium close-up",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Physical battle of will",
+      "purpose": "",
+      "action_start": "twitching",
+      "action_end": "intense muscular contraction",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "cave floor",
+      "blocking_hint": "straining against the ground",
+      "environment_subzone": "cave floor",
+      "continuity_focus": "muscle strain/facial contortion",
+      "coverage_hint": "tight close-ups",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Mental breakthrough and determination",
+      "purpose": "",
+      "action_start": "intense contraction",
+      "action_end": "eyes locking with purpose",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "cave floor",
+      "blocking_hint": "head lifting/eye focus",
+      "environment_subzone": "cave floor",
+      "continuity_focus": "shift to intense willpower",
+      "coverage_hint": "extreme close-up eyes/face",
+      "coverage_priority": "critical",
+      "handoff_to_next": "end"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish state",
+      "planned_shot_moment_summary": "protagonist lies motionless in darkness",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "cave floor",
+      "planned_shot_required_anchor_1": "rocky floor",
+      "planned_shot_scale_proof_detail": "full body length vs cave floor",
+      "start_state_seed": "stillness",
+      "end_state_seed": "twitching",
+      "action_seed": "initial gas reaction",
+      "blocking_seed": [
+        "prone on ground"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "high_angle",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "convey struggle",
+      "planned_shot_moment_summary": "muscles straining against paralysis",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "cave floor",
+      "planned_shot_required_anchor_1": "rocky floor",
+      "planned_shot_scale_proof_detail": "muscle tension vs skin texture",
+      "start_state_seed": "twitching",
+      "end_state_seed": "intense contraction",
+      "action_seed": "physical battle of will",
+      "blocking_seed": [
+        "straining against ground"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "portrait",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "climax of will",
+      "planned_shot_moment_summary": "eyes snapping with determination",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "cave floor",
+      "planned_shot_required_anchor_1": "rocky floor",
+      "planned_shot_scale_proof_detail": "eye dilation vs facial skin",
+      "start_state_seed": "despair expression",
+      "end_state_seed": "intense willpower gaze",
+      "action_seed": "mental breakthrough",
+      "blocking_seed": [
+        "head lifting slightly"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "telephoto",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH014_chapter_xiv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH002",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH002_SC003] Purpose: The climax of the protagonist's internal struggle.",
+    "[CH002_SC003] Summary: At midnight, amidst rustling and moaning sounds, the protagonist engages in a massive psychological and physical battle of will to overcome the paralysis caused by the gas.",
+    "[CH002_SC003] Emotional arc: Despair to Intense Determination/Willpower.",
+    "[CH002_SC003] Coverage: Tight Close-ups (Face, straining muscles, eyes) Sound-driven shots (Focusing on the source of the moaning)",
+    "[CH002_SC003] Continuity: The physical strain expressed in facial expressions; lighting shifts as midnight passes.",
+    "[CH002] Chapter summary: **Setting:** A cave in the Arizona mountains; a rocky gorge under a clear starlight night. **Characters:** - **The Protagonist:** An experienced fighter who becomes paralyzed by a mysterious gas in a cave, undergoes a...",
+    "[CH002] CHAPTER II (book index hit)",
+    "[CH014] CHAPTER XIV (book index hit)",
+    "[CH021] CHAPTER XXI (book index hit)",
+    "Character protagonist: An experienced Earthman fighter characterized by extreme physical fitness and superhuman agility. Following a metamorphosis, his visual state shifts from a clothed, armed combatant to a naked individual. He moves with exceptional grac..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH002_SC003\n\n## Production Intent\nA high-intensity psychological and physical struggle where the protagonist fights gas-induced paralysis. The performance must transition from total despair to extreme willpower through visible muscular strain and facial contortion.\n\n## Required Cast\n- protagonist (naked, experienced fighter, extreme physical fitness)\n\n## Required Environments\n- arizona_mountain_cave (interior, dark, rocky floor)\n\n## Continuity Constraints\n- Progression of facial expression from despair to determination\n- Lighting shifts corresponding to midnight passage\n- Physical state of nakedness/lack of gear\n\n## Beat List\n- BT001: Initial paralysis and despair\n- BT002: Physical battle of will\n- BT003: Mental breakthrough and determination",
+  "metadata": {
+    "artifact_id": "CH002_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "0e5330e83f5f3ffc8cbd6cf7d059308bfbe0796e",
+    "created_at_utc": "2026-04-26T16:52:31.921982+00:00",
+    "updated_at_utc": "2026-04-26T16:52:31.921982+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH002_SC003",
+        "version": "178161368518467341adcbf91a646e31a73f987f"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH002_SC003",
+        "version": "4ccf8adf85eb5060b1ee89b69e63107f98d2baa2"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH002_SC003",
+        "version": "4d3de6c7695045fa8b529e1ecbf571dd019b2ee6"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T16:52:56.573654+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "0e5330e83f5f3ffc8cbd6cf7d059308bfbe0796e"
+      }
+    ]
+  }
+}

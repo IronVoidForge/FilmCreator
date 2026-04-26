@@ -1,0 +1,326 @@
+{
+  "scene_id": "CH002_SC005",
+  "chapter_id": "CH002",
+  "scene_title": "SC005",
+  "purpose": "The transition from Earthly setting to the cosmic inciting incident.",
+  "summary": "Fleeing the cave into the Arizona night, the protagonist gazes at Mars. He feels an irresistible magnetic pull toward the red planet and is suddenly whisked away through space into darkness.",
+  "emotional_arc": "Fear to Fascination/Surrender to Transcendence.",
+  "production_intent": "Establish the transition from a terrestrial survival context to a cosmic inciting incident through a sudden, high-impact VFX transportation event. The sequence must bridge the physical reality of the Arizona desert with the metaphysical pull of Mars.",
+  "scene_short_description": "A naked man flees a rocky gorge into the desert night before being pulled toward Mars.",
+  "scene_primary_scale_story_point": "Human scale vs. planetary celestial scale.",
+  "scene_required_anchor_catalog": [
+    "Mars (celestial anchor)",
+    "Rocky gorge rim"
+  ],
+  "scene_start_state": "protagonist fleeing from cave mouth into rocky_gorge_nightscape.",
+  "scene_end_state": "protagonist vanished into deep_space_void darkness.",
+  "dominant_action_line": "Protagonist flees, gazes at Mars, feels magnetic pull, and is whisked away.",
+  "scene_spatial_layout": [
+    "Open desert floor under starlight",
+    "Verticality of the rocky gorge rim"
+  ],
+  "character_spatial_map": [
+    "protagonist positioned between cave mouth and open sky view",
+    "protagonist looking upward toward celestial anchor"
+  ],
+  "environment_subzones": [
+    "rocky_gorge_rim",
+    "desert_floor_open",
+    "deep_space_void"
+  ],
+  "entry_vectors": [
+    "cave_mouth (protagonist entry)"
+  ],
+  "exit_vectors": [
+    "vertical ascent/celestial pull (protagonist exit)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: physical movement to stillness/gaze",
+    "BT002 -> BT003: gaze to sudden kinetic acceleration"
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Arizona Mountain Landscape (Night)",
+      "canonical_id": "rocky_gorge_nightscape",
+      "display_name": "rocky_gorge_nightscape",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 44,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/rocky_gorge_nightscape.md",
+      "notes": "Chapter-local environment alias match for 'Arizona Mountain Landscape (Night)' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    {
+      "label": "Deep Space/Void",
+      "canonical_id": "deep_space_void",
+      "display_name": "deep_space_void",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/deep_space_void.md",
+      "notes": "Direct registry match for 'deep_space_void'."
+    }
+  ],
+  "continuity_constraints": [
+    "Fixed celestial position of Mars relative to horizon/protagonist",
+    "Visual texture and particle behavior of the transportation effect"
+  ],
+  "visual_coverage_families": [
+    "Wide vistas of the desert under starlight",
+    "Extreme Long Shots (Protagonist vs. Mars in sky)",
+    "VFX-heavy transition (The pull and jump into darkness)"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Fleeing the cave into the night",
+      "purpose": "",
+      "action_start": "protagonist emerging from cave darkness",
+      "action_end": "protagonist reaching open desert floor",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "rocky_gorge_rim",
+      "blocking_hint": "running from shadow to starlight",
+      "environment_subzone": "rocky_gorge_rim",
+      "continuity_focus": "nakedness/physical state",
+      "coverage_hint": "wide vista",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Gazing at Mars and feeling the pull",
+      "purpose": "",
+      "action_start": "protagonist stops running",
+      "action_end": "protagonist becomes paralyzed by fascination",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [
+        "Mars"
+      ],
+      "spatial_context": "desert_floor_open",
+      "blocking_hint": "standing still, looking up",
+      "environment_subzone": "desert_floor_open",
+      "continuity_focus": "position of Mars in sky",
+      "coverage_hint": "extreme long shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Sudden transportation into the void",
+      "purpose": "",
+      "action_start": "magnetic pull intensifies",
+      "action_end": "protagonist is gone, leaving only darkness",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "transition from Earth to deep_space_void",
+      "blocking_hint": "sudden upward movement/disappearance",
+      "environment_subzone": "deep_space_void",
+      "continuity_focus": "visual texture of transportation effect",
+      "coverage_hint": "VFX transition",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish escape",
+      "planned_shot_moment_summary": "protagonist running from cave into night",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "rocky_gorge_rim",
+      "planned_shot_required_anchor_1": "cave mouth",
+      "planned_shot_scale_proof_detail": "human vs gorge size",
+      "start_state_seed": "running from darkness",
+      "end_state_seed": "stopping at edge",
+      "action_seed": "fleeing",
+      "blocking_seed": [
+        "moving from cave toward open vista"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "rear_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "establish connection",
+      "planned_shot_moment_summary": "protagonist staring at Mars",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "desert_floor_open",
+      "planned_shot_required_anchor_1": "Mars",
+      "planned_shot_scale_proof_detail": "protagonist vs planet size",
+      "start_state_seed": "standing still",
+      "end_state_seed": "eyes wide in fascination",
+      "action_seed": "gazing upward",
+      "blocking_seed": [
+        "stationary",
+        "head tilted back"
+      ],
+      "shot_size": "extreme_long",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "execute transition",
+      "planned_shot_moment_summary": "protagonist whisked into darkness",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "deep_space_void",
+      "planned_shot_required_anchor_1": "Mars",
+      "planned_shot_scale_proof_detail": "sudden disappearance",
+      "start_state_seed": "magnetic pull begins",
+      "end_state_seed": "total darkness",
+      "action_seed": "rapid acceleration toward sky",
+      "blocking_seed": [
+        "vertical lift-off"
+      ],
+      "shot_size": "full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "crane",
+      "zoom_behavior": "strong_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "back"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC005"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH020",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH020_chapter_xx.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH002",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH002_SC005] Purpose: The transition from Earthly setting to the cosmic inciting incident.",
+    "[CH002_SC005] Summary: Fleeing the cave into the Arizona night, the protagonist gazes at Mars. He feels an irresistible magnetic pull toward the red planet and is suddenly whisked away through space into darkness.",
+    "[CH002_SC005] Emotional arc: Fear to Fascination/Surrender to Transcendence.",
+    "[CH002_SC005] Coverage: Wide vistas of the desert under starlight Extreme Long Shots (Protagonist vs. Mars in sky) VFX-heavy transition (The \"pull\" and the jump into darkness)",
+    "[CH002_SC005] Continuity: The position of Mars in the sky; the visual texture of the \"transportation\" effect.",
+    "[CH002] Chapter summary: **Setting:** A cave in the Arizona mountains; a rocky gorge under a clear starlight night. **Characters:** - **The Protagonist:** An experienced fighter who becomes paralyzed by a mysterious gas in a cave, undergoes a...",
+    "[CH002] CHAPTER II (book index hit)",
+    "[CH011] CHAPTER XI (book index hit)",
+    "[CH020] CHAPTER XX (book index hit)",
+    "Character protagonist: An experienced Earthman fighter characterized by extreme physical fitness and superhuman agility. Following a metamorphosis, his visual state shifts from a clothed, armed combatant to a naked individual. He moves with exceptional grac..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH002_SC005\n\n## Production Intent\nEstablish the transition from a terrestrial survival context to a cosmic inciting incident through a sudden, high-impact VFX transportation event. The sequence must bridge the physical reality of the Arizona desert with the metaphysical pull of Mars.\n\n## Required Cast\n- protagonist (naked, physically fit)\n\n## Required Environments\n- rocky_gorge_nightscape\n- deep_space_void\n\n## Continuity Constraints\n- Fixed celestial position of Mars relative to horizon/protagonist\n- Visual texture and particle behavior of the transportation effect\n\n## Beat List\n- BT001: Fleeing the cave into the night\n- BT002: Gazing at Mars and feeling the pull\n- BT003: Sudden transportation into the void",
+  "metadata": {
+    "artifact_id": "CH002_SC005_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "6444de43750959dd9983fca66f0193f8f36507b2",
+    "created_at_utc": "2026-04-26T16:53:24.481174+00:00",
+    "updated_at_utc": "2026-04-26T16:53:24.481174+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH002_SC005",
+        "version": "4a42f6b1e168cf59c4de5ab1c5c23ce8bda63409"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH002_SC005",
+        "version": "da2c6e998d6cc1ad842bf411f90417eae0043732"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH002_SC005",
+        "version": "b8b72e256c115dc73b829c577250798c96af71fa"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T16:53:50.991744+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "6444de43750959dd9983fca66f0193f8f36507b2"
+      }
+    ]
+  }
+}
