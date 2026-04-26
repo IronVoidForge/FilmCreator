@@ -1,0 +1,337 @@
+{
+  "scene_id": "CH007_SC003",
+  "chapter_id": "CH007",
+  "scene_title": "SC003",
+  "purpose": "To show the logistical reality of Martian survival and the strict management of their dwindling resources.",
+  "summary": "Following the ceremony, warriors begin the heavy labor of transporting eggs from subterranean vaults to the incubator to prepare for the next five-year incubation cycle. This demonstrates the biological selection process and resource regulation.",
+  "emotional_arc": "Ritualistic high $\\rightarrow$ Laborious/Systematic duty.",
+  "production_intent": "Establish the logistical burden of Martian survival through the heavy, systematic movement of biological assets. The transition from ceremony to labor must feel physically taxing and strictly regulated to emphasize resource scarcity.",
+  "scene_short_description": "Massive four-armed humanoids perform heavy labor transporting eggs from dark vaults to an incubator.",
+  "scene_primary_scale_story_point": "Fifteen-foot-tall martian_warriors dwarfing the biological cargo.",
+  "scene_required_anchor_catalog": [
+    "Eggs",
+    "Subterranean Vaults entrance"
+  ],
+  "scene_start_state": "Post-ceremony atmosphere shifting into heavy physical movement within dark vaults.",
+  "scene_end_state": "Eggs secured within the incubator enclosure after transport.",
+  "dominant_action_line": "Systematic transport of eggs from subterranean storage to incubation.",
+  "scene_spatial_layout": [
+    "Vertical transition from deep Subterranean Vaults to surface level incubator",
+    "Linear transport path between two distinct environments"
+  ],
+  "character_spatial_map": [
+    "martian_warriors positioned around egg clusters in vaults",
+    "martian_warriors moving along transit paths toward the_incubator_enclosure"
+  ],
+  "environment_subzones": [
+    "Subterranean Vaults",
+    "Transit Path",
+    "the_incubator_enclosure"
+  ],
+  "entry_vectors": [
+    "Vault exit path"
+  ],
+  "exit_vectors": [
+    "Incubator entry path"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Transition from retrieval to transit",
+    "BT002 -> BT003: Transition from transit to placement"
+  ],
+  "characters_required": [
+    {
+      "label": "Martian Warriors",
+      "canonical_id": "martian_warriors",
+      "display_name": "martian_warriors",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 130,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/martian_warriors.md",
+      "notes": "Direct registry match for 'martian_warriors'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Incubator",
+      "canonical_id": "the_incubator_enclosure",
+      "display_name": "the_incubator_enclosure",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 70,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH007/the_incubator_enclosure.md",
+      "notes": "Chapter-local environment alias match for 'The Incubator' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    },
+    {
+      "label": "Subterranean Vaults",
+      "canonical_id": null,
+      "display_name": "Subterranean Vaults",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    }
+  ],
+  "continuity_constraints": [
+    "Egg appearance and handling consistency",
+    "Lighting transitions from Subterranean Vaults to the_incubator_enclosure"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of martian_warriors moving eggs",
+    "Close-ups of eggs and subterranean environment",
+    "Montage-style transport sequences"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Retrieval of eggs from vaults",
+      "purpose": "",
+      "action_start": "warriors entering dark vaults",
+      "action_end": "eggs lifted and secured",
+      "active_subjects": [
+        "martian_warriors"
+      ],
+      "passive_subjects": [
+        "eggs"
+      ],
+      "spatial_context": "Subterranean Vaults",
+      "blocking_hint": "warriors surrounding egg clusters",
+      "environment_subzone": "Subterranean Vaults",
+      "continuity_focus": "egg handling/grip",
+      "coverage_hint": "close-ups of eggs",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Systematic transport",
+      "purpose": "",
+      "action_start": "warriors moving from vaults",
+      "action_end": "arrival at incubator perimeter",
+      "active_subjects": [
+        "martian_warriors"
+      ],
+      "passive_subjects": [
+        "eggs"
+      ],
+      "spatial_context": "Transit Path",
+      "blocking_hint": "marching/walking line",
+      "environment_subzone": "Transit Path",
+      "continuity_focus": "lighting transition",
+      "coverage_hint": "wide shots of movement",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Incubation placement",
+      "purpose": "",
+      "action_start": "warriors reaching incubator",
+      "action_end": "eggs placed for five-year cycle",
+      "active_subjects": [
+        "martian_warriors"
+      ],
+      "passive_subjects": [
+        "eggs"
+      ],
+      "spatial_context": "the_incubator_enclosure",
+      "blocking_hint": "warriors at enclosure slots",
+      "environment_subzone": "the_incubator_enclosure",
+      "continuity_focus": "egg appearance in light",
+      "coverage_hint": "montage/close-ups",
+      "coverage_priority": "high",
+      "handoff_to_next": "none"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale and labor",
+      "planned_shot_moment_summary": "warriors lifting eggs in vaults",
+      "primary_subject_seed": "martian_warriors",
+      "secondary_subjects_seed": [
+        "eggs"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "Subterranean Vaults",
+      "planned_shot_required_anchor_1": "eggs",
+      "planned_shot_scale_proof_detail": "fifteen-foot height vs egg size",
+      "start_state_seed": "dark vault interior",
+      "end_state_seed": "warrior grasping egg",
+      "action_seed": "lifting eggs from storage",
+      "blocking_seed": [
+        "warriors clustered around vaults"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show movement/process",
+      "planned_shot_moment_summary": "montage of transport",
+      "primary_subject_seed": "eggs",
+      "secondary_subjects_seed": [
+        "martian_warriors"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "Transit Path",
+      "planned_shot_required_anchor_1": "eggs",
+      "planned_shot_scale_proof_detail": "four-armed anatomy handling eggs",
+      "start_state_seed": "movement begins",
+      "end_state_seed": "approaching incubator",
+      "action_seed": "carrying eggs through transit",
+      "blocking_seed": [
+        "linear procession"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "conclude logistics",
+      "planned_shot_moment_summary": "placing eggs in incubator",
+      "primary_subject_seed": "eggs",
+      "secondary_subjects_seed": [
+        "the_incubator_enclosure"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "the_incubator_enclosure",
+      "planned_shot_required_anchor_1": "the_incubator_enclosure",
+      "planned_shot_scale_proof_detail": "egg placement within enclosure slots",
+      "start_state_seed": "entering enclosure",
+      "end_state_seed": "egg settled",
+      "action_seed": "placing eggs into incubator",
+      "blocking_seed": [
+        "warriors at enclosure perimeter"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "high_angle",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Subterranean Vaults -> Subterranean Vaults"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH007",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH007_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH014_chapter_xiv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH008",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH008_chapter_viii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH007",
+      "canonical_id": "martian_warriors"
+    }
+  ],
+  "evidence_summary": [
+    "[CH007_SC003] Purpose: To show the logistical reality of Martian survival and the strict management of their dwindling resources.",
+    "[CH007_SC003] Summary: Following the ceremony, warriors begin the heavy labor of transporting eggs from subterranean vaults to the incubator to prepare for the next five-year incubation cycle. This demonstrates the biological selection process and resource...",
+    "[CH007_SC003] Emotional arc: Ritualistic high $\\rightarrow$ Laborious/Systematic duty.",
+    "[CH007_SC003] Coverage: * Wide shots of the warriors moving eggs. * Close-ups of the eggs and the subterranean environment. * Montage-style shots of the transport process.",
+    "[CH007_SC003] Continuity: The appearance and handling of the eggs; Lighting transitions between vaults and surface.",
+    "[CH007] Chapter summary: **Events:** The protagonist joins Sola and a massive cavalcade of two hundred and fifty decorated chariots drawn by enormous animals to witness the hatching at a remote incubator. Upon arrival, the protagonist perform...",
+    "[CH007] CHAPTER VII (book index hit)",
+    "[CH014] CHAPTER XIV (book index hit)",
+    "[CH008] CHAPTER VIII (book index hit)",
+    "Character martian_warriors: The martian_warriors are a group of massive, fifteen-foot-tall humanoids characterized by olive-green skin and blood-red eyes. They possess a unique four-armed anatomy, with two arms positioned on the upper torso. Their appearanc..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH007_SC003\n\n## Production Intent\nEstablish the logistical burden of Martian survival through the heavy, systematic movement of biological assets. The transition from ceremony to labor must feel physically taxing and strictly regulated to emphasize resource scarcity.\n\n## Required Cast\n- martian_warriors (15ft tall, olive-green skin, blood-red eyes, four arms)\n\n## Required Environments\n- Subterranean Vaults\n- the_incubator_enclosure\n\n## Continuity Constraints\n- Egg appearance and handling consistency\n- Lighting transitions from Subterranean Vaults to the_incubator_enclosure\n\n## Beat List\n- BT001: Retrieval of eggs from vaults\n- BT002: Systematic transport\n- BT003: Incubation placement",
+  "metadata": {
+    "artifact_id": "CH007_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "0de87ce1c47389cf0f15065e323a02cb4015a8be",
+    "created_at_utc": "2026-04-26T22:26:24.817273+00:00",
+    "updated_at_utc": "2026-04-26T22:26:24.817273+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH007_SC003",
+        "version": "da193eb5ecd34da872755bbe373a3b1fccc15160"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH007_SC003",
+        "version": "495ca7d6419e03245aee7b77da020f96bad6a17f"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH007_SC003",
+        "version": "15752fd3636bb61c5fe8f4e8906d5c01b0d2a155"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:26:53.520449+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "0de87ce1c47389cf0f15065e323a02cb4015a8be"
+      }
+    ]
+  }
+}

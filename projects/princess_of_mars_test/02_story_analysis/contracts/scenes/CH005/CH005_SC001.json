@@ -1,0 +1,372 @@
+{
+  "scene_id": "CH005_SC001",
+  "chapter_id": "CH005",
+  "scene_title": "SC001",
+  "purpose": "Establish the protagonist's confinement, the presence of the Watch Dog, and the world-building through environmental observation.",
+  "summary": "Sola leaves the protagonist in his chamber, leaving him under the watchful eye of a ferocious Martian beast. The protagonist spends time studying the murals on the walls, which provide insight into Martian biology and celestial cycles.",
+  "emotional_arc": "Isolation $\\rightarrow$ Curiosity/Observation.",
+  "production_intent": "Establish the protagonist's physical confinement within a decorated chamber while introducing the predatory threat of the Watch Dog. Use environmental details to transition from the tension of isolation to intellectual curiosity through the study of Martian murals.",
+  "scene_short_description": "A captive studies detailed Martian murals while a ferocious beast watches from the doorway.",
+  "scene_primary_scale_story_point": "The scale of the room emphasizes the protagonist's smallness against the predator and the vastness of the murals.",
+  "scene_required_anchor_catalog": [
+    "mural wall surface",
+    "chamber doorway"
+  ],
+  "scene_start_state": "Sola exits the chamber, leaving the protagonist alone with the Watch Dog.",
+  "scene_end_state": "The protagonist is absorbed in the study of Martian biology and celestial cycles on the walls.",
+  "dominant_action_line": "Transition from social exit to solitary observation under threat.",
+  "scene_spatial_layout": [
+    "Murals cover the primary wall surfaces",
+    "Doorway serves as the threshold for the Watch Dog"
+  ],
+  "character_spatial_map": [
+    "protagonist: center room or near mural walls",
+    "sola: doorway/exit path",
+    "the_watch_dog: positioned at or near the door"
+  ],
+  "environment_subzones": [
+    "mural zone",
+    "doorway threshold",
+    "central floor area"
+  ],
+  "entry_vectors": [
+    "chamber entrance (sola)"
+  ],
+  "exit_vectors": [
+    "chamber entrance (sola)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Sola departs, leaving the protagonist in silence.",
+    "BT002 -> BT003: The threat of the beast settles into a background tension as focus shifts to the walls."
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    },
+    {
+      "label": "Sola (briefly)",
+      "canonical_id": "sola",
+      "display_name": "sola",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/sola.md",
+      "notes": "Direct registry match for 'sola'."
+    },
+    {
+      "label": "The Watch Dog",
+      "canonical_id": "the_watch_dog",
+      "display_name": "watch_dog",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/the_watch_dog.md",
+      "notes": "Direct registry match for 'the_watch_dog'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Captive's chamber (decorated with Martian landscape murals)",
+      "canonical_id": "captive_chamber_murals",
+      "display_name": "captive_chamber_murals",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 128,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH005/captive_chamber_murals.md",
+      "notes": "Chapter-local environment alias match for 'Captive's chamber (decorated with Martian landscape murals)' (key_overlap=3, label_overlap=6, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Mural detail consistency across macro shots",
+    "Lighting shifts indicating passage of time",
+    "Watch Dog position relative to the door"
+  ],
+  "visual_coverage_families": [
+    "Close-ups of protagonist eyes and expressions",
+    "Macro shots of mural details",
+    "Wide shots of room scale and beast positioning",
+    "Low-angle shots of the Watch Dog"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Sola departs the chamber",
+      "purpose": "",
+      "action_start": "sola standing near protagonist",
+      "action_end": "sola exits through door",
+      "active_subjects": [
+        "sola",
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "doorway threshold",
+      "blocking_hint": "sola moves toward exit path",
+      "environment_subzone": "doorway threshold",
+      "continuity_focus": "lighting at door",
+      "coverage_hint": "wide shot of room scale",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Watch Dog establishes presence",
+      "purpose": "",
+      "action_start": "beast enters frame",
+      "action_end": "beast becomes a stationary watcher",
+      "active_subjects": [
+        "the_watch_dog"
+      ],
+      "passive_subjects": [
+        "protagonist"
+      ],
+      "spatial_context": "doorway threshold",
+      "blocking_hint": "beast positioned relative to door",
+      "environment_subzone": "doorway threshold",
+      "continuity_focus": "position of the_watch_dog relative to the door",
+      "coverage_hint": "low-angle shot of beast",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Protagonist studies murals",
+      "purpose": "",
+      "action_start": "protagonist turns away from door",
+      "action_end": "protagonist is focused on wall details",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [
+        "the_watch_dog"
+      ],
+      "spatial_context": "mural zone",
+      "blocking_hint": "protagonist approaches mural wall",
+      "environment_subzone": "mural zone",
+      "continuity_focus": "mural details and lighting changes over time",
+      "coverage_hint": "macro shots of murals and close-ups of eyes",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish isolation",
+      "planned_shot_moment_summary": "Sola leaves the protagonist alone",
+      "primary_subject_seed": "sola",
+      "secondary_subjects_seed": [
+        "protagonist"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "doorway threshold",
+      "planned_shot_required_anchor_1": "chamber doorway",
+      "planned_shot_scale_proof_detail": "room width vs door size",
+      "start_state_seed": "sola moving toward exit",
+      "end_state_seed": "sola exiting frame",
+      "action_seed": "exit",
+      "blocking_seed": [
+        "sola moves from center to door"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "establish threat",
+      "planned_shot_moment_summary": "The Watch Dog settles into position",
+      "primary_subject_seed": "the_watch_dog",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "doorway threshold",
+      "planned_shot_required_anchor_1": "chamber doorway",
+      "planned_shot_scale_proof_detail": "beast height vs door frame",
+      "start_state_seed": "beast entering view",
+      "end_state_seed": "beast stationary",
+      "action_seed": "watching",
+      "blocking_seed": [
+        "beast stays near door"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "world building",
+      "planned_shot_moment_summary": "Protagonist examines Martian biology murals",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "mural wall surface"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "mural zone",
+      "planned_shot_required_anchor_1": "mural wall surface",
+      "planned_shot_scale_proof_detail": "macro detail vs hand size",
+      "start_state_seed": "protagonist turning to wall",
+      "end_state_seed": "protagonist leaning in",
+      "action_seed": "studying",
+      "blocking_seed": [
+        "protagonist moves toward mural"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH004",
+      "beat_id": "BT003",
+      "narrative_function": "world building",
+      "planned_shot_moment_summary": "Macro view of celestial cycles on mural",
+      "primary_subject_seed": "mural wall surface",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "mural zone",
+      "planned_shot_required_anchor_1": "mural wall surface",
+      "planned_shot_scale_proof_detail": "none",
+      "start_state_seed": "blurred texture",
+      "end_state_seed": "sharp detail",
+      "action_seed": "revealing information",
+      "blocking_seed": [
+        "static"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "telephoto",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH005",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH005_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH004_chapter_iv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH005",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH005_chapter_v.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH011_chapter_xi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH005",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH005_SC001] Purpose: Establish the protagonist's confinement, the presence of the Watch Dog, and the world-building through environmental observation.",
+    "[CH005_SC001] Summary: Sola leaves the protagonist in his chamber, leaving him under the watchful eye of a ferocious Martian beast. The protagonist spends time studying the murals on the walls, which provide insight into Martian biology and celestial cycles.",
+    "[CH005_SC001] Emotional arc: Isolation $\\rightarrow$ Curiosity/Observation.",
+    "[CH005_SC001] Coverage: Close-ups of the protagonist's eyes and expressions. Macro shots of the murals. Wide shots showing the scale of the room and the beast's position. Low-angle shots of the Watch Dog to emphasize threat.",
+    "[CH005_SC001] Continuity: Mural details, lighting changes as time passes (implied by narration), position of the Watch Dog relative to the door.",
+    "[CH005] Chapter summary: **Setting:** A captive's chamber decorated with beautiful murals of Martian landscapes; a deserted city street; and the interior of a building overlooking a valley. **Characters:** * **The Protagonist:** An adventurou...",
+    "[CH004] CHAPTER IV (book index hit)",
+    "[CH005] CHAPTER V (book index hit)",
+    "[CH011] CHAPTER XI (book index hit)",
+    "Character protagonist: An experienced Earthman fighter characterized by extreme physical fitness and superhuman agility. His visual identity is defined by a significant metamorphosis; he transitions from an armed, clothed combatant to a naked state followin..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH005_SC001\n\n## Production Intent\nEstablish the protagonist's physical confinement within a decorated chamber while introducing the predatory threat of the Watch Dog. Use environmental details to transition from the tension of isolation to intellectual curiosity through the study of Martian murals.\n\n## Required Cast\n- protagonist\n- sola (briefly)\n- the_watch_dog\n\n## Required Environments\n- captive_chamber_murals\n\n## Continuity Constraints\n- Mural detail consistency across macro shots\n- Lighting shifts indicating passage of time\n- Watch Dog position relative to the door\n\n## Beat List\n- BT001: Sola departs the chamber\n- BT002: The Watch Dog establishes presence\n- BT003: Protagonist studies murals",
+  "metadata": {
+    "artifact_id": "CH005_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "cc396fea21042c11c379542ed1d2a7916a8b020b",
+    "created_at_utc": "2026-04-26T22:20:16.514289+00:00",
+    "updated_at_utc": "2026-04-26T22:20:16.514289+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH005_SC001",
+        "version": "f7492527a3290336d2510caecdcbe1c8941fcfaa"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH005_SC001",
+        "version": "d75594643f2990a31dbb2a10fcd5eb4cafae438c"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH005_SC001",
+        "version": "d1cd985170897fc8ab53cc065dcddf8ef19154e3"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:20:47.840679+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "cc396fea21042c11c379542ed1d2a7916a8b020b"
+      }
+    ]
+  }
+}

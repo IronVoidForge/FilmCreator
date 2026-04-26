@@ -1,0 +1,342 @@
+{
+  "scene_id": "CH004_SC004",
+  "chapter_id": "CH004",
+  "scene_title": "SC004",
+  "purpose": "Provide a moment of respite and introduce domestic Martian elements.",
+  "summary": "Having proven his strength, the narrator requests food and water. Sola leads him to a decorated sleeping chamber where he is allowed to rest and encounters a strange, ten-legged Martian creature.",
+  "emotional_arc": "Exhaustion $\\rightarrow$ Relief/Curiosity",
+  "production_intent": "Transition the narrative from high-stakes physical exertion to domestic Martian life by establishing a sense of safety and curiosity within a private living space. The visual language must shift from grand, cold marble architecture to warm, intimate interior lighting.",
+  "scene_short_description": "A weary traveler is led through hallways into a warm, decorated chamber containing a strange creature.",
+  "scene_primary_scale_story_point": "Humanoid scale interaction between sola and The Narrator.",
+  "scene_required_anchor_catalog": [
+    "martian_sleeping_quarters entrance",
+    "ten-legged creature"
+  ],
+  "scene_start_state": "The Narrator is physically exhausted in the Interior Hallways.",
+  "scene_end_state": "The Narrator observes a strange creature in the martian_sleeping_quarters.",
+  "dominant_action_line": "Sola guides the exhausted Narrator to rest, leading to an encounter with a Martian creature.",
+  "scene_spatial_layout": [
+    "Linear progression from Interior Hallways into martian_sleeping_quarters",
+    "Transition from large scale public halls to intimate private quarters"
+  ],
+  "character_spatial_map": [
+    "sola leads The Narrator through the hallway",
+    "The Narrator rests within the sleeping chamber",
+    "ten-legged creature occupies a corner or floor space in the chamber"
+  ],
+  "environment_subzones": [
+    "Interior Hallways",
+    "martian_sleeping_quarters"
+  ],
+  "entry_vectors": [
+    "Interior Hallways entrance"
+  ],
+  "exit_vectors": [
+    "martian_sleeping_quarters exit"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Movement through hallway to chamber threshold",
+    "BT002 -> BT003: Transition from rest to discovery of creature"
+  ],
+  "characters_required": [
+    {
+      "label": "* The Narrator",
+      "canonical_id": null,
+      "display_name": "* The Narrator",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 6,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "* Sola",
+      "canonical_id": "sola",
+      "display_name": "sola",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/sola.md",
+      "notes": "Direct registry match for 'sola'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "* Decorated Sleeping Chamber",
+      "canonical_id": "martian_sleeping_quarters",
+      "display_name": "martian_sleeping_quarters",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH004/martian_sleeping_quarters.md",
+      "notes": "Chapter-local environment alias match for '* Decorated Sleeping Chamber' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    },
+    {
+      "label": "* Interior Hallways",
+      "canonical_id": null,
+      "display_name": "* Interior Hallways",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    }
+  ],
+  "continuity_constraints": [
+    "Movement and limb count of the ten-legged creature",
+    "Lighting transition from grand hall to private quarters"
+  ],
+  "visual_coverage_families": [
+    "Soft warmer lighting for martian_sleeping_quarters",
+    "Close-ups of the ten-legged creature",
+    "Medium shots of sola guiding The Narrator"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Request for sustenance and guidance",
+      "purpose": "",
+      "action_start": "narrator requests food and water",
+      "action_end": "sola begins leading the way",
+      "active_subjects": [
+        "The Narrator",
+        "sola"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "Interior Hallways",
+      "blocking_hint": "sola walking slightly ahead of narrator",
+      "environment_subzone": "Interior Hallways",
+      "continuity_focus": "lighting transition from grand hall",
+      "coverage_hint": "medium shots of sola guiding narrator",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Arrival and respite",
+      "purpose": "",
+      "action_start": "entering martian_sleeping_quarters",
+      "action_end": "narrator settles into rest",
+      "active_subjects": [
+        "The Narrator",
+        "sola"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "martian_sleeping_quarters",
+      "blocking_hint": "narrator moves toward sleeping area",
+      "environment_subzone": "martian_sleeping_quarters",
+      "continuity_focus": "warm lighting establishment",
+      "coverage_hint": "medium shots of narrator",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Discovery of the creature",
+      "purpose": "",
+      "action_start": "narrator notices movement",
+      "action_end": "visual contact with creature",
+      "active_subjects": [
+        "The Narrator"
+      ],
+      "passive_subjects": [
+        "ten-legged creature"
+      ],
+      "spatial_context": "martian_sleeping_quarters",
+      "blocking_hint": "creature positioned in chamber subzone",
+      "environment_subzone": "martian_sleeping_quarters",
+      "continuity_focus": "ten-legged limb movement",
+      "coverage_hint": "close-ups of the strange Martian creature",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish movement",
+      "planned_shot_moment_summary": "sola leads the narrator through the hallway",
+      "primary_subject_seed": "sola",
+      "secondary_subjects_seed": [
+        "The Narrator"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "Interior Hallways",
+      "planned_shot_required_anchor_1": "hallway corridor",
+      "planned_shot_scale_proof_detail": "humanoid scale comparison",
+      "start_state_seed": "narrator requesting food/water",
+      "end_state_seed": "arrival at chamber door",
+      "action_seed": "walking",
+      "blocking_seed": [
+        "sola walking ahead of narrator"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "establish relief",
+      "planned_shot_moment_summary": "narrator enters the decorated room and settles",
+      "primary_subject_seed": "The Narrator",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "martian_sleeping_quarters",
+      "planned_shot_required_anchor_1": "sleeping area",
+      "planned_shot_scale_proof_detail": "room decoration detail",
+      "start_state_seed": "entering chamber",
+      "end_state_seed": "sitting/lying down",
+      "action_seed": "resting",
+      "blocking_seed": [
+        "narrator moving to center of room"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "introduce creature",
+      "planned_shot_moment_summary": "close up of the ten-legged creature",
+      "primary_subject_seed": "ten-legged creature",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "martian_sleeping_quarters",
+      "planned_shot_required_anchor_1": "creature limbs",
+      "planned_shot_scale_proof_detail": "limb count detail",
+      "start_state_seed": "narrator noticing movement",
+      "end_state_seed": "creature reacting to gaze",
+      "action_seed": "moving limbs",
+      "blocking_seed": [
+        "creature on floor/surface"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "telephoto",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve * The Narrator -> * The Narrator",
+    "Resolve * Interior Hallways -> * Interior Hallways"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH004",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH017",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH017_chapter_xvii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH016",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH016_chapter_xvi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH020",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH020_chapter_xx.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH004",
+      "canonical_id": "sola"
+    }
+  ],
+  "evidence_summary": [
+    "[CH004_SC004] Purpose: Provide a moment of respite and introduce domestic Martian elements.",
+    "[CH004_SC004] Summary: Having proven his strength, the narrator requests food and water. Sola leads him to a decorated sleeping chamber where he is allowed to rest and encounters a strange, ten-legged Martian creature.",
+    "[CH004_SC004] Emotional arc: Exhaustion $\\rightarrow$ Relief/Curiosity",
+    "[CH004_SC004] Coverage: * Soft, warmer lighting for the chamber. * Close-ups of the strange Martian creature. * Medium shots of Sola guiding the narrator.",
+    "[CH004_SC004] Continuity: * The appearance and movement of the ten-legged creature. * Lighting transition from the grand hall to the private quarters.",
+    "[CH004] Chapter summary: **Setting:** An enormous, ancient city situated on a low table land near the edge of a dried-up Martian sea. The city features grand, white marble buildings inlaid with gold and jewels, though they appear built for a...",
+    "[CH017] CHAPTER XVII (book index hit)",
+    "[CH016] CHAPTER XVI (book index hit)",
+    "[CH020] CHAPTER XX (book index hit)",
+    "Character sola: Sola is a female Martian humanoid of human scale. She is characterized as a red Martian, suggesting a distinct skin pigmentation consistent with her species. While specific physical proportions and movement are undocumented, she functions vi..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH004_SC004\n\n## Production Intent\nTransition the narrative from high-stakes physical exertion to domestic Martian life by establishing a sense of safety and curiosity within a private living space. The visual language must shift from grand, cold marble architecture to warm, intimate interior lighting.\n\n## Required Cast\n- The Narrator\n- sola (Red Martian humanoid, human scale)\n\n## Required Environments\n- Interior Hallways\n- martian_sleeping_quarters (Decorated)\n\n## Continuity Constraints\n- Appearance and movement of the ten-legged creature (limb count/motion)\n- Lighting transition from grand hall to private quarters\n\n## Beat List\n- BT001: Request for sustenance and guidance\n- BT002: Arrival and respite\n- BT003: Discovery of the creature",
+  "metadata": {
+    "artifact_id": "CH004_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "60f08f0750a8e5d841d06d47360fd36381e59483",
+    "created_at_utc": "2026-04-26T22:19:47.463578+00:00",
+    "updated_at_utc": "2026-04-26T22:19:47.463578+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH004_SC004",
+        "version": "64f8c89d768b76347595c70a49be6979edcb490e"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH004_SC004",
+        "version": "17d5880a58baf04e1970ecfb871d2302483f8cfb"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH004_SC004",
+        "version": "1934166c22b179e759349b566ecf58d4417ee673"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:20:16.408732+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "60f08f0750a8e5d841d06d47360fd36381e59483"
+      }
+    ]
+  }
+}
