@@ -1,0 +1,374 @@
+{
+  "scene_id": "CH017_SC001",
+  "chapter_id": "CH017",
+  "scene_title": "SC001",
+  "purpose": "To execute the primary rescue mission and establish the stakes of Dejah Thoris's captivity.",
+  "summary": "The narrator infiltrates the city of Thark, witnessing Tal Hajus's cruelty toward Dejah Thoris. He intervenes by knocking the Jeddak unconscious and facilitating a daring escape with Dejah Thoris and Sola.",
+  "emotional_arc": "Tension/Terror $\\rightarrow$ Action/Relief.",
+  "production_intent": "Execute a high-stakes rescue mission within the Thark Jeddak's quarters. The sequence must transition from the oppressive, menacing presence of Tal Hajus to a kinetic, handheld escape sequence involving the Narrator, Dejah Thoris, and Sola.",
+  "scene_short_description": "An infiltrator strikes a tyrant to rescue a captive princess from her quarters.",
+  "scene_primary_scale_story_point": "The Jeddak's dominance over the captive princess is physically broken by the Narrator.",
+  "scene_required_anchor_catalog": [
+    "Tal Hajus's throne/seat",
+    "Dejah Thoris's position of captivity"
+  ],
+  "scene_start_state": "The Narrator observes Tal Hajus's cruelty toward Dejah Thoris from concealment.",
+  "scene_end_state": "The Narrator, Dejah Thoris, and Sola flee the apartments following the Jeddak's incapacitation.",
+  "dominant_action_line": "Infiltration -> Observation of Cruelty -> Physical Intervention (Strike) -> Escape.",
+  "scene_spatial_layout": [
+    "Interior apartment space with defined zones for the captive and the captor",
+    "Circular hall proximity for escape routing"
+  ],
+  "character_spatial_map": [
+    "Tal Hajus positioned as the dominant central figure",
+    "Dejah Thoris positioned in a state of duress/captivity relative to Tal Hajus",
+    "The Narrator entering from an infiltration vector"
+  ],
+  "environment_subzones": [
+    "Jeddak's apartments",
+    "Circular hall"
+  ],
+  "entry_vectors": [
+    "Infiltration point into the apartments"
+  ],
+  "exit_vectors": [
+    "Rapid exit through the circular hall"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Transition from observation to physical intervention",
+    "BT002 -> BT003: Transition from combat strike to kinetic escape"
+  ],
+  "characters_required": [
+    {
+      "label": "The Narrator",
+      "canonical_id": null,
+      "display_name": "The Narrator",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 6,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "Dejah Thoris",
+      "canonical_id": "dejah_thoris",
+      "display_name": "dejah_thoris",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH017/dejah_thoris.md",
+      "notes": "Direct registry match for 'dejah_thoris'."
+    },
+    {
+      "label": "Sola",
+      "canonical_id": "sola",
+      "display_name": "sola",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH017/sola.md",
+      "notes": "Direct registry match for 'sola'."
+    },
+    {
+      "label": "Tal Hajus",
+      "canonical_id": "tal_hajus",
+      "display_name": "tal_hajus",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH017/tal_hajus.md",
+      "notes": "Direct registry match for 'tal_hajus'."
+    },
+    {
+      "label": "Tars Tarkas (observer)",
+      "canonical_id": "tars_tarkas",
+      "display_name": "tars_tarkas",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH017/tars_tarkas.md",
+      "notes": "Direct registry match for 'tars_tarkas'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The City of Thark (Jeddak's apartments and circular hall)",
+      "canonical_id": "city_of_thark",
+      "display_name": "city_of_thark",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH017/city_of_thark.md",
+      "notes": "Direct registry match for 'city_of_thark'."
+    }
+  ],
+  "continuity_constraints": [
+    "Lighting consistency within the Thark apartments",
+    "Character positioning relative to Tal Hajus prior to the physical strike"
+  ],
+  "visual_coverage_families": [
+    "Low-angle shots of Tal Hajus to emphasize menace",
+    "Close-ups on Dejah Thoris for dignity under duress",
+    "Handheld/kinetic movement during confrontation and escape"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Observation of cruelty",
+      "purpose": "",
+      "action_start": "Narrator watching from shadows",
+      "action_end": "Tal Hajus prepares to torture Dejah",
+      "active_subjects": [
+        "tal_hajus"
+      ],
+      "passive_subjects": [
+        "dejah_thoris",
+        "the_narrator"
+      ],
+      "spatial_context": "Jeddak's apartments",
+      "blocking_hint": "Tal Hajus dominates the center; Dejah is cornered",
+      "environment_subzone": "city_of_thark",
+      "continuity_focus": "Lighting of the apartment must remain stable",
+      "coverage_hint": "Low-angle on Tal Hajus; Close-up on Dejah",
+      "coverage_priority": "high",
+      "handoff_to_next": "The tension peaks as the Narrator moves to intervene."
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Intervention",
+      "purpose": "",
+      "action_start": "Narrator lunges from concealment",
+      "action_end": "Tal Hajus is unconscious on the floor",
+      "active_subjects": [
+        "the_narrator",
+        "tal_hajus"
+      ],
+      "passive_subjects": [
+        "dejah_thoris",
+        "sola"
+      ],
+      "spatial_context": "Jeddak's apartments",
+      "blocking_hint": "Sudden movement into the central space",
+      "environment_subzone": "city_of_thark",
+      "continuity_focus": "Positioning of characters relative to Tal Hajus before strike",
+      "coverage_hint": "Handheld/kinetic movement",
+      "coverage_priority": "critical",
+      "handoff_to_next": "The sudden violence shifts the energy to escape."
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Escape",
+      "purpose": "",
+      "action_start": "Narrator grabs Dejah Thoris",
+      "action_end": "Characters exit the apartment zone",
+      "active_subjects": [
+        "the_narrator",
+        "dejah_thoris",
+        "sola"
+      ],
+      "passive_subjects": [
+        "tal_hajus"
+      ],
+      "spatial_context": "Apartments to Circular Hall",
+      "blocking_hint": "Rapid movement toward the exit vector",
+      "environment_subzone": "city_of_thark",
+      "continuity_focus": "Movement through subzones",
+      "coverage_hint": "Handheld/kinetic movement",
+      "coverage_priority": "medium",
+      "handoff_to_next": "Scene ends with relief of escape."
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish menace",
+      "planned_shot_moment_summary": "Tal Hajus looms over Dejah Thoris",
+      "primary_subject_seed": "tal_hajus",
+      "secondary_subjects_seed": [
+        "dejah_thoris"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "city_of_thark",
+      "planned_shot_required_anchor_1": "tal_hajus's throne/seat",
+      "planned_shot_scale_proof_detail": "low-angle height vs subject",
+      "start_state_seed": "Tal Hajus standing over Dejah",
+      "end_state_seed": "Dejah looking up in terror",
+      "action_seed": "Tal Hajus displays cruelty",
+      "blocking_seed": [
+        "Tal Hajus central",
+        "Dejah low/seated"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "execute climax",
+      "planned_shot_moment_summary": "The Narrator strikes Tal Hajus",
+      "primary_subject_seed": "the_narrator",
+      "secondary_subjects_seed": [
+        "tal_hajus"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "city_of_thark",
+      "planned_shot_required_anchor_1": "Tal Hajus's position",
+      "planned_shot_scale_proof_detail": "impact force",
+      "start_state_seed": "Narrator lunges",
+      "end_state_seed": "Tal Hajus falls unconscious",
+      "action_seed": "The Narrator knocks the Jeddak unconscious",
+      "blocking_seed": [
+        "Narrator enters frame to strike Tal Hajus"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "facilitate escape",
+      "planned_shot_moment_summary": "The group flees the apartments",
+      "primary_subject_seed": "dejah_thoris",
+      "secondary_subjects_seed": [
+        "the_narrator",
+        "sola"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "city_of_thark",
+      "planned_shot_required_anchor_1": "exit path",
+      "planned_shot_scale_proof_detail": "speed of movement",
+      "start_state_seed": "Group gathers near Dejah",
+      "end_state_seed": "Group exits toward circular hall",
+      "action_seed": "Daring escape with Dejah Thoris and Sola",
+      "blocking_seed": [
+        "Narrator leads Dejah and Sola through the exit"
+      ],
+      "shot_size": "full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "rear_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve The Narrator -> The Narrator"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH017",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH017_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH014_chapter_xiv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH017",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH017_chapter_xvii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH017",
+      "canonical_id": "dejah_thoris"
+    }
+  ],
+  "evidence_summary": [
+    "[CH017_SC001] Purpose: To execute the primary rescue mission and establish the stakes of Dejah Thoris's captivity.",
+    "[CH017_SC001] Summary: The narrator infiltrates the city of Thark, witnessing Tal Hajus's cruelty toward Dejah Thoris. He intervenes by knocking the Jeddak unconscious and facilitating a daring escape with Dejah Thoris and Sola.",
+    "[CH017_SC001] Emotional arc: Tension/Terror $\\rightarrow$ Action/Relief.",
+    "[CH017_SC001] Coverage: Low-angle shots of the Jeddak to emphasize menace. Close-ups on Dejah Thoris's expression of dignity under duress. Handheld/kinetic movement during the physical confrontation and escape.",
+    "[CH017_SC001] Continuity: The lighting of the Thark apartments; the positioning of the characters relative to Tal Hajus before the blow is struck.",
+    "[CH017] Chapter summary: **Events:** The narrator infiltrates the city of Thark to rescue Dejah Thoris from the clutches of the Thark Jeddak, Tal Hajus. After witnessing Tal Hajus's cruel intentions and his plan to torture the Princess, the n...",
+    "[CH010] CHAPTER X (book index hit)",
+    "[CH014] CHAPTER XIV (book index hit)",
+    "[CH017] CHAPTER XVII (book index hit)",
+    "Character dejah_thoris: Dejah Thoris is an elegant, red-skinned humanoid princess of the Martian red race. She possesses an ethereal presence and carries herself with the poise of a high-ranking Barsoomian noblewoman. Her visual identity is defined by her d..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH017_SC001\n\n## Production Intent\nExecute a high-stakes rescue mission within the Thark Jeddak's quarters. The sequence must transition from the oppressive, menacing presence of Tal Hajus to a kinetic, handheld escape sequence involving the Narrator, Dejah Thoris, and Sola.\n\n## Required Cast\n- the_narrator\n- dejah_thoris\n- sola\n- tal_hajus\n- tars_tarkas (observer)\n\n## Required Environments\n- city_of_thark (Jeddak's apartments and circular hall)\n\n## Continuity Constraints\n- Lighting consistency within the Thark apartments\n- Character positioning relative to Tal Hajus prior to the physical strike\n\n## Beat List\n- BT001: Observation of cruelty (Tal Hajus vs Dejah Thoris)\n- BT002: The Intervention (Narrator strikes Tal Hajus unconscious)\n- BT003: The Escape (Narrator, Dejah, and Sola flee the scene)",
+  "metadata": {
+    "artifact_id": "CH017_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "69fa57e56801cc5b88ea52801133c7b6a2d8257f",
+    "created_at_utc": "2026-04-26T22:46:11.498692+00:00",
+    "updated_at_utc": "2026-04-26T22:46:11.498692+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH017_SC001",
+        "version": "895aa568ae3ac5f88d61d273357ec59412fa975c"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH017_SC001",
+        "version": "8039951fee0af2262eb60c1661769ae4f3681992"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH017_SC001",
+        "version": "e4d8bec02288c2fa5cb69a94590d348d02e37e7c"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:46:45.327620+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "69fa57e56801cc5b88ea52801133c7b6a2d8257f"
+      }
+    ]
+  }
+}

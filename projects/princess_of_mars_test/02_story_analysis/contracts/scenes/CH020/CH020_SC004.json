@@ -1,0 +1,333 @@
+{
+  "scene_id": "CH020_SC004",
+  "chapter_id": "CH020",
+  "scene_title": "SC004",
+  "purpose": "Transition and character disguise for the next narrative arc.",
+  "summary": "Carter is rescued by the Ptor family at their farm. They provide him with food and perform a ritualistic grooming\u2014applying red oil to his skin and cutting his hair\u2014to help him pass as a Red Martian on his way to Zodanga.",
+  "emotional_arc": "Vulnerability $\\rightarrow$ Security/Preparation.",
+  "production_intent": "Establish the transition of john_carter from a vulnerable wanderer to a disguised traveler. The scene focuses on the ritualistic grooming process within the ptor_farmstead to ensure he can pass as a Red Martian for his journey to Zodanga.",
+  "scene_short_description": "A rescued traveler receives food and ritualistic grooming within a domestic farmstead setting.",
+  "scene_primary_scale_story_point": "Domestic scale; human-sized interactions within metal shaft structures.",
+  "scene_required_anchor_catalog": [
+    "metal shaft structure",
+    "grooming tools/oil vessel"
+  ],
+  "scene_start_state": "john_carter is physically exhausted and vulnerable after wandering the wilderness.",
+  "scene_end_state": "john_carter is visually transformed with red skin and new hair, prepared for travel.",
+  "dominant_action_line": "The Ptor family provides sustenance and performs a ritualistic grooming of John Carter.",
+  "scene_spatial_layout": [
+    "Interior domestic space within ptor_farmstead",
+    "Centralized seating/eating area"
+  ],
+  "character_spatial_map": [
+    "john_carter seated centrally as the recipient of care",
+    "ptor_family members positioned around john_carter for grooming and feeding"
+  ],
+  "environment_subzones": [
+    "eating area",
+    "grooming station"
+  ],
+  "entry_vectors": [
+    "wilderness path to ptor_farmstead"
+  ],
+  "exit_vectors": [
+    "farmstead exit toward Zodanga"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Transition from consumption to ritual",
+    "BT002 -> BT003: Transition from grooming to readiness"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH020/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "The Ptor Family",
+      "canonical_id": "ptor_family",
+      "display_name": "ptor_family",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH020/ptor_family.md",
+      "notes": "Direct registry match for 'ptor_family'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Ptor Farm (homes on metal shafts)",
+      "canonical_id": "ptor_farmstead",
+      "display_name": "ptor_farmstead",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 88,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH020/ptor_farmstead.md",
+      "notes": "Chapter-local environment alias match for 'The Ptor Farm (homes on metal shafts)' (key_overlap=1, label_overlap=4, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "john_carter skin must be coated in red oil",
+    "john_carter hairstyle must be altered/cut"
+  ],
+  "visual_coverage_families": [
+    "Warm domestic medium shots",
+    "Close-ups of grooming (oil application, hair cutting)",
+    "Food and sustenance close-ups"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Sustenance and recovery",
+      "purpose": "",
+      "action_start": "john_carter receiving food",
+      "action_end": "john_carter eating",
+      "active_subjects": [
+        "john_carter",
+        "ptor_family"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "eating area of ptor_farmstead",
+      "blocking_hint": "seated group around a central point",
+      "environment_subzone": "eating area",
+      "continuity_focus": "physical state of exhaustion",
+      "coverage_hint": "medium shots and food close-ups",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Ritualistic grooming",
+      "purpose": "",
+      "action_start": "application of red oil",
+      "action_end": "hair is cut and skin is red",
+      "active_subjects": [
+        "ptor_family"
+      ],
+      "passive_subjects": [
+        "john_carter"
+      ],
+      "spatial_context": "grooming station",
+      "blocking_hint": "ctor_family working on john_carter",
+      "environment_subzone": "grooming station",
+      "continuity_focus": "red oil saturation and hair length change",
+      "coverage_hint": "close-ups of hands, oil, and hair [[HIGH_PRIORITY]]",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Final preparation",
+      "purpose": "",
+      "action_start": "john_carter standing up",
+      "action_end": "john_carter ready to depart",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "ptor_family"
+      ],
+      "spatial_context": "interior of ptor_farmstead",
+      "blocking_hint": "john_carter preparing gear/standing",
+      "environment_subzone": "eating area",
+      "continuity_focus": "final look check (red skin, new hair)",
+      "coverage_hint": "medium shot",
+      "coverage_priority": "low",
+      "handoff_to_next": "none"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish relief",
+      "planned_shot_moment_summary": "john_carter eating food provided by ptor_family",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "ptor_family"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "eating area",
+      "planned_shot_required_anchor_1": "metal shaft structure",
+      "planned_shot_scale_proof_detail": "size of food vessels vs john_carter",
+      "start_state_seed": "john_carter reaching for food",
+      "end_state_seed": "john_carter consuming sustenance",
+      "action_seed": "eating",
+      "blocking_seed": [
+        "seated around table/area"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "warm_diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "disguise ritual",
+      "planned_shot_moment_summary": "application of red oil to skin",
+      "primary_subject_seed": "ptor_family",
+      "secondary_subjects_seed": [
+        "john_carter"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "grooming station",
+      "planned_shot_required_anchor_1": "oil vessel",
+      "planned_shot_scale_proof_detail": "viscosity and color of red oil on skin",
+      "start_state_seed": "oil being poured/applied",
+      "end_state_seed": "skin fully coated in red [[CONTINUITY_CRITICAL]]",
+      "action_seed": "applying oil",
+      "blocking_seed": [
+        "standing over seated john_carter"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "warm_directional",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT002",
+      "narrative_function": "disguise ritual",
+      "planned_shot_moment_summary": "cutting of hair",
+      "primary_subject_seed": "ptor_family",
+      "secondary_subjects_seed": [
+        "john_carter"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "grooming station",
+      "planned_shot_required_anchor_1": "hair cutting tool",
+      "planned_shot_scale_proof_detail": "new hair length/style [[CONTINUITY_CRITICAL]]",
+      "start_state_seed": "blade touching hair",
+      "end_state_seed": "hair cut and styled",
+      "action_seed": "cutting hair",
+      "blocking_seed": [
+        "close proximity to head"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "high_angle",
+      "lens_family": "telephoto",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "warm_directional",
+      "primary_subject_angle": "rear_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH020",
+      "scene_id": "CH020_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH020",
+      "scene_id": "CH020_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH020",
+      "scene_id": "CH020_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH020",
+      "scene_id": "CH020_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH020",
+      "scene_id": "CH020_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH020",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH020_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH020",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH020_chapter_xx.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH019",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH019_chapter_xix.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH020",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH020_SC004] Purpose: Transition and character disguise for the next narrative arc.",
+    "[CH020_SC004] Summary: Carter is rescued by the Ptor family at their farm. They provide him with food and perform a ritualistic grooming\u2014applying red oil to his skin and cutting his hair\u2014to help him pass as a Red Martian on his way to Zodanga.",
+    "[CH020_SC004] Emotional arc: Vulnerability $\\rightarrow$ Security/Preparation.",
+    "[CH020_SC004] Coverage: Warm, domestic medium shots; Close-ups of the grooming process (oil application, hair cutting); Food/sustenance close-ups.",
+    "[CH020_SC004] Continuity: Carter's physical appearance (skin color from oil, new hairstyle) must be consistent for subsequent scenes.",
+    "[CH020] Chapter summary: **Events:** After two weeks of wandering through the Martian wilderness, during which he is attacked by wild beasts and aided by his faithful calot Woola, John Carter reaches a massive Atmosphere Factory. Inside, he i...",
+    "[CH020] CHAPTER XX (book index hit)",
+    "[CH019] CHAPTER XIX (book index hit)",
+    "[CH021] CHAPTER XXI (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH020_SC004\n\n## Production Intent\nEstablish the transition of john_carter from a vulnerable wanderer to a disguised traveler. The scene focuses on the ritualistic grooming process within the ptor_farmstead to ensure he can pass as a Red Martian for his journey to Zodanga.\n\n## Required Cast\n- john_carter\n- ptor_family\n\n## Required Environments\n- ptor_farmstead (homes on metal shafts)\n\n## Continuity Constraints\n- john_carter skin must be coated in red oil\n- john_carter hairstyle must be altered/cut\n\n## Beat List\n- BT001: Sustenance and recovery\n- BT002: Ritualistic grooming\n- BT003: Final preparation",
+  "metadata": {
+    "artifact_id": "CH020_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "5db15e276d9e9cb40ad648883bef85dfa31c1185",
+    "created_at_utc": "2026-04-26T22:54:46.082971+00:00",
+    "updated_at_utc": "2026-04-26T22:54:46.083471+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH020_SC004",
+        "version": "c60c8ba31b02743e92629aec4b8c024ce832439e"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH020_SC004",
+        "version": "5feccdb2874a89c8b69d0e14b9b1522b9a791b12"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH020_SC004",
+        "version": "149814c061d844a64dd089eea4f6c718e4c28e2f"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:55:15.573841+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "5db15e276d9e9cb40ad648883bef85dfa31c1185"
+      }
+    ]
+  }
+}

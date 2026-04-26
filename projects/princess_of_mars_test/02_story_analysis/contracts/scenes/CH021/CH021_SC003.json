@@ -1,0 +1,337 @@
+{
+  "scene_id": "CH021_SC003",
+  "chapter_id": "CH021",
+  "scene_title": "SC003",
+  "purpose": "Reintroduce an ally and establish the political stakes of the plot.",
+  "summary": "In the central plaza of Zodanga, Carter reunites with Kantos Kan. They discuss the volatile political situation involving Sab Than's attempt to marry Dejah Thoris (if she were alive) to force a peace treaty with Helium.",
+  "emotional_arc": "Relief $\\rightarrow$ Tension/Political Anxiety.",
+  "production_intent": "Reintroduce an ally through a reunion in a high-traffic urban center to establish the political instability caused by Sab Than's marriage maneuvers.",
+  "scene_short_description": "Two men meet amidst the heavy foot traffic of a massive Martian urban plaza.",
+  "scene_primary_scale_story_point": "Large scale urban architecture vs intimate political dialogue.",
+  "scene_required_anchor_catalog": [
+    "mechanical cafe exterior",
+    "palace perimeter wall"
+  ],
+  "scene_start_state": "john_carter enters the bustling zodanga_central_plaza looking for an ally.",
+  "scene_end_state": "john_carter and kantos_kan stand in tense stillness amidst moving crowds.",
+  "dominant_action_line": "A reunion turns from personal relief into shared political dread.",
+  "scene_spatial_layout": [
+    "Open plaza floor with high-density pedestrian movement",
+    "Perimeter defined by palaces and mechanical cafes"
+  ],
+  "character_spatial_map": [
+    "john_carter positioned near the center of the plaza flow",
+    "kantos_kan positioned as a stationary point within the crowd"
+  ],
+  "environment_subzones": [
+    "zodanga_central_plaza_open_floor",
+    "zodanga_central_plaza_cafe_perimeter"
+  ],
+  "entry_vectors": [
+    "pedestrian thoroughfare from palace district"
+  ],
+  "exit_vectors": [
+    "thoroughfare toward mechanical cafes"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Visual recognition and physical approach",
+    "BT002 -> BT003: Shift from greeting to heavy political disclosure"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH021/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Kantos Kan",
+      "canonical_id": "kantos_kan",
+      "display_name": "kantos_kan",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH021/kantos_kan.md",
+      "notes": "Direct registry match for 'kantos_kan'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Central Plaza of Zodanga",
+      "canonical_id": "zodanga_central_plaza",
+      "display_name": "zodanga_central_plaza",
+      "status": "canonical",
+      "entity_kind": "plaza",
+      "resolution_score": 126,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH021/zodanga_central_plaza.md",
+      "notes": "Chapter-local environment alias match for 'Central Plaza of Zodanga' (key_overlap=3, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Background crowd movement density",
+    "Character positioning relative to plaza landmarks"
+  ],
+  "visual_coverage_families": [
+    "Medium shots for dialogue",
+    "Over-the-shoulder shots",
+    "Wide shots showing bustling plaza activity"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Reunion in the plaza",
+      "purpose": "",
+      "action_start": "john_carter navigating crowd",
+      "action_end": "visual contact made with kantos_kan",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "kantos_kan",
+        "crowd"
+      ],
+      "spatial_context": "zodanga_central_plaza_open_floor",
+      "blocking_hint": "walking through moving mass of people",
+      "environment_subzone": "zodanga_central_plaza_open_floor",
+      "continuity_focus": "crowd density and direction",
+      "coverage_hint": "wide shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Greeting",
+      "purpose": "",
+      "action_start": "approaching kantos_kan",
+      "action_end": "relief of finding the ally",
+      "active_subjects": [
+        "john_carter",
+        "kantos_kan"
+      ],
+      "passive_subjects": [
+        "crowd"
+      ],
+      "spatial_context": "zodanga_central_plaza_open_floor",
+      "blocking_hint": "two characters meeting in a pocket of space",
+      "environment_subzone": "zodanga_central_plaza_open_floor",
+      "continuity_focus": "character positioning relative to each other",
+      "coverage_hint": "medium shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Political Disclosure",
+      "purpose": "",
+      "action_start": "discussion of Sab Than's marriage plot",
+      "action_end": "realization of political volatility",
+      "active_subjects": [
+        "john_carter",
+        "kantos_kan"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "zodanga_central_plaza_open_floor",
+      "blocking_hint": "static, tense stance amidst moving crowd",
+      "environment_subzone": "zodanga_central_plaza_open_floor",
+      "continuity_focus": "background crowd movement vs foreground stillness",
+      "coverage_hint": "over-the-shoulder",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish_setting",
+      "planned_shot_moment_summary": "Wide view of the plaza with crowds moving around characters",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "kantos_kan",
+        "crowd"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "zodanga_central_plaza_open_floor",
+      "planned_shot_required_anchor_1": "palace perimeter wall",
+      "planned_shot_scale_proof_detail": "massive architecture vs human scale",
+      "start_state_seed": "wide shot of plaza [[SH001_START]]",
+      "end_state_seed": "john_carter spotting kantos_kan [[SH001_END]]",
+      "action_seed": "walking through crowd",
+      "blocking_seed": [
+        "john_carter weaves through pedestrians"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "character_reunion",
+      "planned_shot_moment_summary": "Medium shot of the two men meeting and embracing/greeting",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "kantos_kan"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "zodanga_central_plaza_open_floor",
+      "planned_shot_required_anchor_1": "mechanical cafe exterior",
+      "planned_shot_scale_proof_detail": "characters isolated from crowd flow",
+      "start_state_seed": "close proximity [[SH002_START]]",
+      "end_state_seed": "relief expressed in facial movement [[SH002_END]]",
+      "action_seed": "greeting and relief",
+      "blocking_seed": [
+        "standing face-to-face"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish_stakes",
+      "planned_shot_moment_summary": "Over-the-shoulder shot as the conversation turns to Sab Than and Dejah Thoris",
+      "primary_subject_seed": "kantos_kan",
+      "secondary_subjects_seed": [
+        "john_carter"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "zodanga_central_plaza_open_floor",
+      "planned_shot_required_anchor_1": "mechanical cafe exterior",
+      "planned_shot_scale_proof_detail": "tight framing vs wide background movement",
+      "start_state_seed": "tense facial expression [[SH003_START]]",
+      "end_state_seed": "heavy silence/anxiety [[SH003_END]]",
+      "action_seed": "discussing political marriage plot",
+      "blocking_seed": [
+        "static stance",
+        "intense eye contact"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH022",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH022_chapter_xxii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH025",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH025_chapter_xxv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH021",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH021_SC003] Purpose: Reintroduce an ally and establish the political stakes of the plot.",
+    "[CH021_SC003] Summary: In the central plaza of Zodanga, Carter reunites with Kantos Kan. They discuss the volatile political situation involving Sab Than's attempt to marry Dejah Thoris (if she were alive) to force a peace treaty with Helium.",
+    "[CH021_SC003] Emotional arc: Relief $\\rightarrow$ Tension/Political Anxiety.",
+    "[CH021_SC003] Coverage: Medium shots for dialogue; Over-the-shoulder shots; Wide shots showing the bustling plaza activity.",
+    "[CH021_SC003] Continuity: Crowd movement in the background; Character positioning in the plaza.",
+    "[CH021] Chapter summary: **Setting:** The journey begins on the cultivated agricultural tracts between the polar ice caps and populated centers, moving toward the vast, walled city of Zodanga. The setting features advanced Martian infrastruct...",
+    "[CH021] CHAPTER XXI (book index hit)",
+    "[CH022] CHAPTER XXII (book index hit)",
+    "[CH025] CHAPTER XXV (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH021_SC003\n\n## Production Intent\nReintroduce an ally through a reunion in a high-traffic urban center to establish the political instability caused by Sab Than's marriage maneuvers.\n\n## Required Cast\n- john_carter\n- kantos_kan\n\n## Required Environments\n- zodanga_central_plaza (Open floor and cafe perimeter)\n\n## Continuity Constraints\n- Background crowd movement density must remain consistent during dialogue beats.\n- Character positioning in the plaza relative to mechanical cafes must be maintained for shot transitions.\n\n## Beat List\n- BT001: Reunion in the plaza (Navigation/Visual Contact)\n- BT002: The Greeting (Relief/Physical Meeting)\n- BT003: Political Disclosure (Tension/Sab Than Plot)",
+  "metadata": {
+    "artifact_id": "CH021_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "ac90f020f5a5ea6cd9cdb361af8c96c3ac77bd98",
+    "created_at_utc": "2026-04-26T22:56:12.492159+00:00",
+    "updated_at_utc": "2026-04-26T22:56:12.492159+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH021_SC003",
+        "version": "70300ac84a5658fd1122003ab5092e3019d5dcc3"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH021_SC003",
+        "version": "481c223f2c391a75bc6ea63dc04193396375f2a2"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH021_SC003",
+        "version": "2ed10c6fe328505aa46ca2308a0d658d08c94431"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:56:43.393890+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "ac90f020f5a5ea6cd9cdb361af8c96c3ac77bd98"
+      }
+    ]
+  }
+}
