@@ -348,3 +348,48 @@ def test_taxonomy_conflict_blocks_merge(tmp_path, monkeypatch) -> None:
     decisions = json.loads(decisions_path.read_text(encoding="utf-8"))
     assert decisions[0]["requires_human_review"]
     assert "Taxonomy conflict" in decisions[0]["reason"]
+
+
+def test_generic_role_tokens_are_book_agnostic() -> None:
+    tokens = world_refinement_module._GENERIC_ROLE_TOKENS
+
+    assert "narrator_ch002" not in tokens
+    assert "prisoner_ch008" not in tokens
+    assert "martian_leader" not in tokens
+    assert "watch_dog" not in tokens
+
+    assert "narrator" in tokens
+    assert "prisoner" in tokens
+    assert "leader" in tokens
+    assert "chieftain" in tokens
+
+
+def test_generic_role_label_strips_chapter_suffix() -> None:
+    refiner = world_refinement_module.WorldIdentityRefiner.__new__(world_refinement_module.WorldIdentityRefiner)
+    entry = {"status": "canonical", "entity_kind": "individual", "chapter_mentions": ["CH001"]}
+    assert refiner._is_generic_role_label("leader_ch002", entry, taxonomy=None)
+
+
+def test_generic_role_label_strips_chapter_suffix_for_prisoner() -> None:
+    refiner = world_refinement_module.WorldIdentityRefiner.__new__(world_refinement_module.WorldIdentityRefiner)
+    entry = {"status": "canonical", "entity_kind": "individual", "chapter_mentions": ["CH001"]}
+    assert refiner._is_generic_role_label("prisoner_ch008", entry, taxonomy=None)
+
+
+def test_generic_role_label_strips_main_suffix() -> None:
+    refiner = world_refinement_module.WorldIdentityRefiner.__new__(world_refinement_module.WorldIdentityRefiner)
+    entry = {"status": "canonical", "entity_kind": "individual", "chapter_mentions": ["CH001"]}
+    assert refiner._is_generic_role_label("narrator_main", entry, taxonomy=None)
+
+
+def test_generic_role_label_strips_trailing_numeric_suffix() -> None:
+    refiner = world_refinement_module.WorldIdentityRefiner.__new__(world_refinement_module.WorldIdentityRefiner)
+    entry = {"status": "canonical", "entity_kind": "individual", "chapter_mentions": ["CH001"]}
+    assert refiner._is_generic_role_label("guard_003", entry, taxonomy=None)
+
+
+def test_high_confidence_taxonomy_prevents_generic_role_weakening() -> None:
+    refiner = world_refinement_module.WorldIdentityRefiner.__new__(world_refinement_module.WorldIdentityRefiner)
+    entry = {"status": "canonical", "entity_kind": "individual", "chapter_mentions": ["CH001"]}
+    taxonomy = {"confidence": 0.9, "primary_type": "human"}
+    assert not refiner._is_generic_role_label("guard_003", entry, taxonomy=taxonomy)

@@ -286,7 +286,7 @@ def test_negative_term_contradiction_quadruped():
 
 def test_alias_prompt_contradiction():
     """Alias candidate rendered as separate character creates review recommendation."""
-    alias_resolution = {"status": "alias_candidate"}
+    alias_resolution = {"status": "alias_candidate", "character_id": "role_label_entity"}
     prompt_package = {"visual_references": ["ref1", "ref2"]}
     contradictions = _alias_prompt_contradictions(alias_resolution, prompt_package)
     assert len(contradictions) == 1
@@ -296,7 +296,11 @@ def test_alias_prompt_contradiction():
 
 def test_alias_prompt_no_contradiction_with_approval():
     """Alias with canonical target is OK."""
-    alias_resolution = {"status": "alias_candidate", "canonical_target_id": "char_main"}
+    alias_resolution = {
+        "status": "alias_approved",
+        "character_id": "role_label_entity",
+        "canonical_target_id": "canonical_character",
+    }
     prompt_package = {"visual_references": ["ref1"]}
     contradictions = _alias_prompt_contradictions(alias_resolution, prompt_package)
     assert len(contradictions) == 0
@@ -316,7 +320,7 @@ def test_rerun_stage_mapping():
     """Rerun stage is correct for each contradiction type."""
     assert _rerun_stage_for_contradiction("taxonomy_fallback_mismatch") == "synthesize-character-bibles"
     assert _rerun_stage_for_contradiction("negative_term_contradiction") == "synthesize-character-bibles"
-    assert _rerun_stage_for_contradiction("alias_render_contradiction") == "run-world-refinement"
+    assert _rerun_stage_for_contradiction("alias_render_contradiction") == "refine-identities"
     assert _rerun_stage_for_contradiction("renderability_prompt_contradiction") == "run-prompt-preparation"
     assert _rerun_stage_for_contradiction("taxonomy_missing") == "synthesize-character-taxonomy"
 
@@ -467,7 +471,7 @@ def test_context_only_taxonomy_renderable_fallback_contradiction():
 
 def test_alias_candidate_prompt_visual_reference_recommends_refinement():
     """Alias candidate with visual refs routes to refine-identities."""
-    alias_resolution = {"status": "alias_candidate"}
+    alias_resolution = {"status": "alias_candidate", "character_id": "role_label_entity"}
     prompt_package = {"visual_references": ["ref1"]}
     contradictions = _alias_prompt_contradictions(alias_resolution, prompt_package)
     assert len(contradictions) >= 1
@@ -477,7 +481,7 @@ def test_alias_candidate_prompt_visual_reference_recommends_refinement():
 
 def test_role_label_prompt_visual_reference_recommends_refinement():
     """Role label with visual refs routes to refine-identities."""
-    alias_resolution = {"status": "role_label"}
+    alias_resolution = {"status": "role_label", "character_id": "role_label_entity"}
     prompt_package = {"visual_references": ["ref1"]}
     contradictions = _alias_prompt_contradictions(alias_resolution, prompt_package)
     assert len(contradictions) >= 1
@@ -487,7 +491,11 @@ def test_role_label_prompt_visual_reference_recommends_refinement():
 
 def test_alias_approved_does_not_flag_when_target_present():
     """Alias approved with canonical target does not flag."""
-    alias_resolution = {"status": "alias_approved", "canonical_target_id": "char_main"}
+    alias_resolution = {
+        "status": "alias_approved",
+        "character_id": "role_label_entity",
+        "canonical_target_id": "canonical_character",
+    }
     prompt_package = {"visual_references": ["ref1"]}
     contradictions = _alias_prompt_contradictions(alias_resolution, prompt_package)
     assert len(contradictions) == 0
@@ -522,4 +530,3 @@ def test_morphology_string_does_not_crash():
     # Should not raise AttributeError
     completeness, evidence, consistency, prompt_ready, inference, notes, contradictions = _grader_character(payload)
     assert isinstance(completeness, int)
-

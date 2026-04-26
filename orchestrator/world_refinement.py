@@ -31,16 +31,24 @@ RefineAction = Literal[
 
 _GENERIC_ROLE_TOKENS = {
     "narrator",
-    "narrator_main",
-    "narrator_ch002",
     "protagonist",
-    "former_self",
-    "dead_friend",
-    "prisoner",
-    "prisoner_ch008",
+    "stranger",
+    "man",
+    "woman",
+    "boy",
+    "girl",
+    "child",
+    "person",
+    "creature",
+    "beast",
+    "leader",
     "chieftain",
-    "martian_leader",
-    "watch_dog",
+    "warrior",
+    "prisoner",
+    "guard",
+    "friend",
+    "enemy",
+    "former_self",
 }
 
 _CHARACTER_ALLOWED_KINDS = {
@@ -63,6 +71,15 @@ _MAIN_SUFFIX_RE = re.compile(r"_main$", re.IGNORECASE)
 _TRAILING_NUMERIC_RE = re.compile(r"_\d{3}$", re.IGNORECASE)
 _NON_ALNUM_RE = re.compile(r"[^a-z0-9]+")
 _CHAPTER_ID_RE = re.compile(r"^CH(\d{3})$", re.IGNORECASE)
+
+
+def _strip_variant_suffixes(value: str) -> str:
+    """Remove generic suffixes such as _ch###, _main, _### for weak-role comparison."""
+    token = str(value).strip()
+    token = _CHAPTER_SUFFIX_RE.sub("", token)
+    token = _MAIN_SUFFIX_RE.sub("", token)
+    token = _TRAILING_NUMERIC_RE.sub("", token)
+    return token
 
 
 @dataclass(frozen=True)
@@ -1208,7 +1225,7 @@ class WorldIdentityRefiner:
             return None
 
     def _is_generic_role_label(self, canonical_id: str, entry: dict, taxonomy: dict | None) -> bool:
-        root = self._root_identity_token(canonical_id)
+        root = _strip_variant_suffixes(self._normalize_token(canonical_id))
         if root not in _GENERIC_ROLE_TOKENS:
             return False
         if taxonomy:

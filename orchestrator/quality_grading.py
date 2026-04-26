@@ -592,7 +592,7 @@ def _rerun_stage_for_contradiction(contradiction_type: str) -> str:
     stage_map = {
         "taxonomy_fallback_mismatch": "synthesize-character-bibles",
         "negative_term_contradiction": "synthesize-character-bibles",
-        "alias_render_contradiction": "run-world-refinement",
+        "alias_render_contradiction": "refine-identities",
         "renderability_prompt_contradiction": "run-prompt-preparation",
         "missing_taxonomy_snapshot": "synthesize-character-bibles",
         "taxonomy_missing": "synthesize-character-taxonomy",
