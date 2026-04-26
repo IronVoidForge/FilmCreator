@@ -19,6 +19,8 @@ for /f %%i in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMdd_HHmmss
 set "LOG_FILE=%LOG_DIR%\%PROJECT_SLUG%_overnight_full_%STAMP%.log"
 set "LATEST_LOG=%LOG_DIR%\%PROJECT_SLUG%_overnight_full_latest.log"
 set "TEMP_LOG=%LOG_DIR%\%PROJECT_SLUG%_overnight_step.tmp"
+set "TEMP_PS_SCRIPT=%LOG_DIR%\%PROJECT_SLUG%_overnight_temp.ps1"
+set "TEMP_PY_SCRIPT=%LOG_DIR%\%PROJECT_SLUG%_overnight_temp.py"
 
 if exist "%LATEST_LOG%" del "%LATEST_LOG%"
 
@@ -57,55 +59,55 @@ cd /d "%REPO_ROOT%"
 if errorlevel 1 goto :fail
 
 if /I NOT "%NO_CLEAR%"=="NO_CLEAR" (
-    call :run_step "00 Clear generated artifacts" "powershell -NoProfile -ExecutionPolicy Bypass -Command ""$paths = @('projects\%PROJECT_SLUG%\02_story_analysis\chapter_analysis', 'projects\%PROJECT_SLUG%\02_story_analysis\character_breakdowns', 'projects\%PROJECT_SLUG%\02_story_analysis\environment_breakdowns', 'projects\%PROJECT_SLUG%\02_story_analysis\world\chapters', 'projects\%PROJECT_SLUG%\02_story_analysis\taxonomy', 'projects\%PROJECT_SLUG%\02_story_analysis\bibles', 'projects\%PROJECT_SLUG%\02_story_analysis\contracts', 'projects\%PROJECT_SLUG%\02_story_analysis\timelines', 'projects\%PROJECT_SLUG%\02_story_analysis\descriptors', 'projects\%PROJECT_SLUG%\02_story_analysis\grading', 'projects\%PROJECT_SLUG%\02_story_analysis\quality', 'projects\%PROJECT_SLUG%\02_story_analysis\dialogue_enrichment', 'projects\%PROJECT_SLUG%\02_story_analysis\world\refinement', 'projects\%PROJECT_SLUG%\02_story_analysis\world\global\VISUAL_FALLBACKS.json', 'projects\%PROJECT_SLUG%\03_prompt_packages', 'projects\%PROJECT_SLUG%\04_references', 'projects\%PROJECT_SLUG%\05_scenes', 'projects\%PROJECT_SLUG%\06_reviews', 'projects\%PROJECT_SLUG%\07_finals'); foreach ($p in $paths) { if (Test-Path $p) { Write-Host \""Removing: $p\""; Remove-Item -Path $p -Recurse -Force -ErrorAction Stop } else { Write-Host \""Not found (skipping): $p\"" } }; Write-Host \""Clear completed successfully\"""""
+    call :clear_artifacts
 )
 
-call :run_step "01 LM Studio connectivity check" "python -c ""from json import dumps; from orchestrator.settings import load_runtime_settings; from orchestrator.lmstudio_client import LMStudioClient; settings=load_runtime_settings(); client=LMStudioClient(settings); print(dumps(client.check().to_dict(), indent=2))"""
-call :run_step "02 Multi-chapter analysis / chapter summaries / breakdowns" "python -c ""from orchestrator.book_authoring import analyze_book; import json; summary = analyze_book(project_slug='%PROJECT_SLUG%'); print(json.dumps(summary.to_dict(), indent=2))"""
-call :run_step "03 Character taxonomy" "python -m orchestrator synthesize-character-taxonomy ""%PROJECT_SLUG%"" --force"
-call :run_step "04 Identity refinement plan" "python -m orchestrator refine-identities ""%PROJECT_SLUG%"""
-call :run_step "05 Identity refinement apply" "python -m orchestrator refine-identities ""%PROJECT_SLUG%"" --apply"
-call :run_step "06 Character bibles" "python -m orchestrator synthesize-character-bibles ""%PROJECT_SLUG%"" --force"
-call :run_step "07 Environment bibles" "python -m orchestrator synthesize-environment-bibles ""%PROJECT_SLUG%"" --force"
-call :run_step "08 Visual fallbacks" "python -m orchestrator synthesize-visual-fallbacks ""%PROJECT_SLUG%"" --force"
+call :lm_studio_check
+call :analyze_book
+call :run_step "03 Character taxonomy" python -m orchestrator synthesize-character-taxonomy "%PROJECT_SLUG%" --force
+call :run_step "04 Identity refinement plan" python -m orchestrator refine-identities "%PROJECT_SLUG%"
+call :run_step "05 Identity refinement apply" python -m orchestrator refine-identities "%PROJECT_SLUG%" --apply
+call :run_step "06 Character bibles" python -m orchestrator synthesize-character-bibles "%PROJECT_SLUG%" --force
+call :run_step "07 Environment bibles" python -m orchestrator synthesize-environment-bibles "%PROJECT_SLUG%" --force
+call :run_step "08 Visual fallbacks" python -m orchestrator synthesize-visual-fallbacks "%PROJECT_SLUG%" --force
 
 if "%CHAPTERS%"=="" (
-    call :run_step "09 Scene contracts" "python -m orchestrator synthesize-scene-contracts ""%PROJECT_SLUG%"" --force"
+    call :run_step "09 Scene contracts" python -m orchestrator synthesize-scene-contracts "%PROJECT_SLUG%" --force
 ) else (
-    call :run_step "09 Scene contracts" "python -m orchestrator synthesize-scene-contracts ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
-)
-
-if "%CHAPTERS%"=="" (
-    call :run_step "10 Scene bindings" "python -m orchestrator synthesize-scene-bindings ""%PROJECT_SLUG%"" --force"
-) else (
-    call :run_step "10 Scene bindings" "python -m orchestrator synthesize-scene-bindings ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+    call :run_step "09 Scene contracts" python -m orchestrator synthesize-scene-contracts "%PROJECT_SLUG%" --force --chapters "%CHAPTERS%"
 )
 
 if "%CHAPTERS%"=="" (
-    call :run_step "11 Shot packages" "python -m orchestrator synthesize-shot-packages ""%PROJECT_SLUG%"" --force"
+    call :run_step "10 Scene bindings" python -m orchestrator synthesize-scene-bindings "%PROJECT_SLUG%" --force
 ) else (
-    call :run_step "11 Shot packages" "python -m orchestrator synthesize-shot-packages ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+    call :run_step "10 Scene bindings" python -m orchestrator synthesize-scene-bindings "%PROJECT_SLUG%" --force --chapters "%CHAPTERS%"
 )
 
 if "%CHAPTERS%"=="" (
-    call :run_step "12 Dialogue timeline" "python -m orchestrator synthesize-dialogue-timeline ""%PROJECT_SLUG%"" --force"
+    call :run_step "11 Shot packages" python -m orchestrator synthesize-shot-packages "%PROJECT_SLUG%" --force
 ) else (
-    call :run_step "12 Dialogue timeline" "python -m orchestrator synthesize-dialogue-timeline ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+    call :run_step "11 Shot packages" python -m orchestrator synthesize-shot-packages "%PROJECT_SLUG%" --force --chapters "%CHAPTERS%"
 )
 
 if "%CHAPTERS%"=="" (
-    call :run_step "13 Descriptor enrichment" "python -m orchestrator synthesize-descriptor-enrichment ""%PROJECT_SLUG%"" --force"
+    call :run_step "12 Dialogue timeline" python -m orchestrator synthesize-dialogue-timeline "%PROJECT_SLUG%" --force
 ) else (
-    call :run_step "13 Descriptor enrichment" "python -m orchestrator synthesize-descriptor-enrichment ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+    call :run_step "12 Dialogue timeline" python -m orchestrator synthesize-dialogue-timeline "%PROJECT_SLUG%" --force --chapters "%CHAPTERS%"
 )
 
 if "%CHAPTERS%"=="" (
-    call :run_step "14 Prompt preparation" "python -m orchestrator synthesize-prompt-preparation ""%PROJECT_SLUG%"" --force"
+    call :run_step "13 Descriptor enrichment" python -m orchestrator synthesize-descriptor-enrichment "%PROJECT_SLUG%" --force
 ) else (
-    call :run_step "14 Prompt preparation" "python -m orchestrator synthesize-prompt-preparation ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+    call :run_step "13 Descriptor enrichment" python -m orchestrator synthesize-descriptor-enrichment "%PROJECT_SLUG%" --force --chapters "%CHAPTERS%"
 )
 
-call :run_step "15 Quality grading" "python -m orchestrator grade-artifacts ""%PROJECT_SLUG%"""
+if "%CHAPTERS%"=="" (
+    call :run_step "14 Prompt preparation" python -m orchestrator synthesize-prompt-preparation "%PROJECT_SLUG%" --force
+) else (
+    call :run_step "14 Prompt preparation" python -m orchestrator synthesize-prompt-preparation "%PROJECT_SLUG%" --force --chapters "%CHAPTERS%"
+)
+
+call :run_step "15 Quality grading" python -m orchestrator grade-artifacts "%PROJECT_SLUG%"
 
 echo.
 echo ========================================
@@ -115,9 +117,141 @@ echo Latest log: %LATEST_LOG%
 echo ========================================
 exit /b 0
 
+:clear_artifacts
+echo.
+echo ----------------------------------------
+echo START: 00 Clear generated artifacts
+echo ----------------------------------------
+>> "%LOG_FILE%" echo.
+>> "%LOG_FILE%" echo ----------------------------------------
+>> "%LOG_FILE%" echo START: 00 Clear generated artifacts
+>> "%LOG_FILE%" echo ----------------------------------------
+
+(
+echo $paths = @(
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\chapter_analysis',
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\character_breakdowns',
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\environment_breakdowns',
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\world\chapters',
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\taxonomy',
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\bibles',
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\contracts',
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\timelines',
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\descriptors',
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\grading',
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\quality',
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\dialogue_enrichment',
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\world\refinement',
+echo   'projects\%PROJECT_SLUG%\02_story_analysis\world\global\VISUAL_FALLBACKS.json',
+echo   'projects\%PROJECT_SLUG%\03_prompt_packages',
+echo   'projects\%PROJECT_SLUG%\04_references',
+echo   'projects\%PROJECT_SLUG%\05_scenes',
+echo   'projects\%PROJECT_SLUG%\06_reviews',
+echo   'projects\%PROJECT_SLUG%\07_finals'
+echo ^)
+echo foreach ($p in $paths^) {
+echo   if (Test-Path $p^) {
+echo     Write-Host "Removing: $p"
+echo     Remove-Item -Path $p -Recurse -Force -ErrorAction Stop
+echo   } else {
+echo     Write-Host "Not found (skipping): $p"
+echo   }
+echo }
+echo Write-Host "Clear completed successfully"
+) > "%TEMP_PS_SCRIPT%"
+
+powershell -NoProfile -ExecutionPolicy Bypass -File "%TEMP_PS_SCRIPT%" > "%TEMP_LOG%" 2>&1
+set "EXIT_CODE=%ERRORLEVEL%"
+
+type "%TEMP_LOG%"
+type "%TEMP_LOG%" >> "%LOG_FILE%"
+type "%TEMP_LOG%" >> "%LATEST_LOG%"
+del "%TEMP_LOG%" >nul 2>nul
+del "%TEMP_PS_SCRIPT%" >nul 2>nul
+
+echo.
+echo DONE: 00 Clear generated artifacts exit code !EXIT_CODE!
+>> "%LOG_FILE%" echo DONE: 00 Clear generated artifacts exit code !EXIT_CODE!
+>> "%LATEST_LOG%" echo DONE: 00 Clear generated artifacts exit code !EXIT_CODE!
+
+if not "!EXIT_CODE!"=="0" goto :stepfail_clear
+exit /b 0
+
+:lm_studio_check
+echo.
+echo ----------------------------------------
+echo START: 01 LM Studio connectivity check
+echo ----------------------------------------
+>> "%LOG_FILE%" echo.
+>> "%LOG_FILE%" echo ----------------------------------------
+>> "%LOG_FILE%" echo START: 01 LM Studio connectivity check
+>> "%LOG_FILE%" echo ----------------------------------------
+
+(
+echo from json import dumps
+echo from orchestrator.settings import load_runtime_settings
+echo from orchestrator.lmstudio_client import LMStudioClient
+echo settings = load_runtime_settings(^)
+echo client = LMStudioClient(settings^)
+echo print(dumps(client.check(^).to_dict(^), indent=2^)^)
+) > "%TEMP_PY_SCRIPT%"
+
+cd /d "%REPO_ROOT%"
+python "%TEMP_PY_SCRIPT%" > "%TEMP_LOG%" 2>&1
+set "EXIT_CODE=%ERRORLEVEL%"
+
+type "%TEMP_LOG%"
+type "%TEMP_LOG%" >> "%LOG_FILE%"
+type "%TEMP_LOG%" >> "%LATEST_LOG%"
+del "%TEMP_LOG%" >nul 2>nul
+del "%TEMP_PY_SCRIPT%" >nul 2>nul
+
+echo.
+echo DONE: 01 LM Studio connectivity check exit code !EXIT_CODE!
+>> "%LOG_FILE%" echo DONE: 01 LM Studio connectivity check exit code !EXIT_CODE!
+>> "%LATEST_LOG%" echo DONE: 01 LM Studio connectivity check exit code !EXIT_CODE!
+
+if not "!EXIT_CODE!"=="0" goto :stepfail_lm
+exit /b 0
+
+:analyze_book
+echo.
+echo ----------------------------------------
+echo START: 02 Multi-chapter analysis / chapter summaries / breakdowns
+echo ----------------------------------------
+>> "%LOG_FILE%" echo.
+>> "%LOG_FILE%" echo ----------------------------------------
+>> "%LOG_FILE%" echo START: 02 Multi-chapter analysis / chapter summaries / breakdowns
+>> "%LOG_FILE%" echo ----------------------------------------
+
+(
+echo from orchestrator.book_authoring import analyze_book
+echo import json
+echo summary = analyze_book(project_slug='%PROJECT_SLUG%'^)
+echo print(json.dumps(summary.to_dict(^), indent=2^)^)
+) > "%TEMP_PY_SCRIPT%"
+
+cd /d "%REPO_ROOT%"
+python "%TEMP_PY_SCRIPT%" > "%TEMP_LOG%" 2>&1
+set "EXIT_CODE=%ERRORLEVEL%"
+
+type "%TEMP_LOG%"
+type "%TEMP_LOG%" >> "%LOG_FILE%"
+type "%TEMP_LOG%" >> "%LATEST_LOG%"
+del "%TEMP_LOG%" >nul 2>nul
+del "%TEMP_PY_SCRIPT%" >nul 2>nul
+
+echo.
+echo DONE: 02 Multi-chapter analysis / chapter summaries / breakdowns exit code !EXIT_CODE!
+>> "%LOG_FILE%" echo DONE: 02 Multi-chapter analysis / chapter summaries / breakdowns exit code !EXIT_CODE!
+>> "%LATEST_LOG%" echo DONE: 02 Multi-chapter analysis / chapter summaries / breakdowns exit code !EXIT_CODE!
+
+if not "!EXIT_CODE!"=="0" goto :stepfail_analyze
+exit /b 0
+
 :run_step
 set "STEP_NAME=%~1"
-set "CMD_LINE=%~2"
+shift
 
 echo.
 echo ----------------------------------------
@@ -128,7 +262,7 @@ echo ----------------------------------------
 >> "%LOG_FILE%" echo START: !STEP_NAME!
 >> "%LOG_FILE%" echo ----------------------------------------
 
-cmd /c "!CMD_LINE!" > "%TEMP_LOG%" 2>&1
+call %* > "%TEMP_LOG%" 2>&1
 set "EXIT_CODE=%ERRORLEVEL%"
 
 type "%TEMP_LOG%"
@@ -144,7 +278,20 @@ echo DONE: !STEP_NAME! exit code !EXIT_CODE!
 if not "!EXIT_CODE!"=="0" goto :stepfail
 exit /b 0
 
+:stepfail_clear
+set "STEP_NAME=00 Clear generated artifacts"
+goto :stepfail_common
+
+:stepfail_lm
+set "STEP_NAME=01 LM Studio connectivity check"
+goto :stepfail_common
+
+:stepfail_analyze
+set "STEP_NAME=02 Multi-chapter analysis / chapter summaries / breakdowns"
+goto :stepfail_common
+
 :stepfail
+:stepfail_common
 echo.
 echo ========================================
 echo FAILED: !STEP_NAME! with exit code !EXIT_CODE!
