@@ -117,6 +117,14 @@ def character_extraction_user_prompt(
         "scale_hint",
         "renderability_hint",
         "confidence",
+        "direct_identity_evidence",
+        "direct_visual_evidence",
+        "costume_or_covering_evidence",
+        "movement_evidence",
+        "associated_entities",
+        "alias_or_role_evidence",
+        "unknowns",
+        "source_refs",
     ]
     body_requirements = [
         "- if a character does not have enough physical or visual description in the supplied material to support dependable later image generation, set manual_description_required to true",

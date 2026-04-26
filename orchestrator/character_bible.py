@@ -227,7 +227,14 @@ def _deterministic_synthesis(entry: dict, evidence_summary: list[str]) -> dict[s
     }
 
 
-def _llm_synthesis(entry: dict, evidence_summary: list[str]) -> dict[str, Any] | None:
+def _llm_synthesis(
+    entry: dict,
+    evidence_summary: list[str],
+    *,
+    entity_taxonomy: dict[str, Any] | None = None,
+    alias_resolution: dict[str, Any] | None = None,
+    associated_entities: list[dict[str, Any]] | list[str] | None = None,
+) -> dict[str, Any] | None:
     settings = load_runtime_settings()
     client = LMStudioClient(settings)
 
@@ -264,8 +271,26 @@ BUCKET RULES:
 ENTRY:
 {json.dumps(entry, indent=2, ensure_ascii=False)}
 
+ENTITY_TAXONOMY:
+{json.dumps(entity_taxonomy or {}, indent=2, ensure_ascii=False)}
+
+ALIAS_RESOLUTION:
+{json.dumps(alias_resolution or {}, indent=2, ensure_ascii=False)}
+
+ASSOCIATED_ENTITIES:
+{json.dumps(associated_entities or [], indent=2, ensure_ascii=False)}
+
 EVIDENCE:
 {json.dumps(evidence_summary, indent=2, ensure_ascii=False)}
+
+TAXONOMY RULES:
+- Treat ENTITY_TAXONOMY as the source of truth for entity type, morphology, scale, and renderability.
+- Do not override taxonomy based on associated entities.
+- Associated entities describe things near, owned by, ridden by, carried by, or worn by the character; they are not the character's own body unless direct evidence explicitly says so.
+- Keep associated entities out of physical_build and physical_traits unless evidence explicitly says they are part of the entity's body.
+- If taxonomy confidence is low or primary_type is unknown, preserve uncertainty rather than guessing.
+- Do not silently merge aliases. Alias resolution belongs to identity refinement.
+- If ALIAS_RESOLUTION status is alias_candidate, role_label, or unresolved, do not write the character as a confirmed separate visual identity unless evidence supports it.
 
 Return exactly one FilmCreator packet in this structure:
 [[FILMCREATOR_PACKET]]
@@ -909,7 +934,13 @@ def run_character_bible_synthesis(
         else:
             warnings.append(f"Taxonomy artifact missing for {char_id}")
         
-        synthesized_payload = _llm_synthesis(entry, evidence_summary) if use_llm else None
+        synthesized_payload = _llm_synthesis(
+            entry,
+            evidence_summary,
+            entity_taxonomy=taxonomy_data,
+            alias_resolution=alias_resolution_data,
+            associated_entities=associated_entities_data,
+        ) if use_llm else None
         if not synthesized_payload:
             synthesized_payload = _deterministic_synthesis(entry, evidence_summary)
             if use_llm:
