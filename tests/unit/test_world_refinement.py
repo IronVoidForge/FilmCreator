@@ -151,8 +151,9 @@ def test_refine_world_applies_safe_merge_and_preserves_provenance(tmp_path, monk
     assert summary.candidate_count == 1
     assert summary.applied_count == 1
 
-    updated_registry = json.loads((global_dir / "CHARACTER_REGISTRY_GLOBAL.json").read_text(encoding="utf-8"))
-    updated_directory = json.loads((global_dir / "CHARACTER_DIRECTORY.json").read_text(encoding="utf-8"))
+    refined_dir = project_dir / "02_story_analysis" / "world" / "refinement"
+    updated_registry = json.loads((refined_dir / "CHARACTER_REGISTRY_GLOBAL_REFINED.json").read_text(encoding="utf-8"))
+    updated_directory = json.loads((refined_dir / "CHARACTER_DIRECTORY_REFINED.json").read_text(encoding="utf-8"))
 
     assert updated_registry["woola"]["aliases"]
     assert "woola_ch008" in updated_registry["woola"]["aliases"]
@@ -232,3 +233,118 @@ def test_refine_world_retries_empty_completion_once(tmp_path, monkeypatch) -> No
     assert summary.comparison_count == 1
     assert len(calls) == 2
     assert any("compact_retry" in prompt for prompt in calls)
+
+
+def test_generic_role_label_with_no_taxonomy_creates_review_candidate(tmp_path, monkeypatch) -> None:
+    repo_root = tmp_path
+    project_dir = repo_root / "projects" / "demo"
+    global_dir = project_dir / "02_story_analysis" / "world" / "global"
+    global_dir.mkdir(parents=True, exist_ok=True)
+
+    character_registry = {
+        "protagonist": _seed_character_entry(canonical_id="protagonist", display_name="protagonist", chapter_id="CH001"),
+        "protagonist_ch005": _seed_character_entry(canonical_id="protagonist_ch005", display_name="protagonist", chapter_id="CH005"),
+    }
+    _write_json(global_dir / "CHARACTER_REGISTRY_GLOBAL.json", character_registry)
+    _write_json(global_dir / "ENVIRONMENT_REGISTRY_GLOBAL.json", {})
+    _write_json(global_dir / "CHARACTER_DIRECTORY.json", {})
+    _write_json(global_dir / "ENVIRONMENT_DIRECTORY.json", {})
+
+    monkeypatch.setattr(common_module, "ROOT", repo_root)
+    monkeypatch.setattr(common_module, "PROJECTS_ROOT", repo_root / "projects")
+    monkeypatch.setattr(scaffold_module, "create_project", lambda project_slug: project_dir)
+    monkeypatch.setattr(world_global_module, "create_project", lambda project_slug: project_dir)
+    monkeypatch.setattr(world_refinement_module, "create_project", lambda project_slug: project_dir)
+
+    summary = world_refinement_module.refine_world_identities(
+        project_slug="demo",
+        use_llm=False,
+        apply_changes=False,
+    )
+
+    assert summary.candidate_count == 1
+    assert summary.human_review_count == 1
+
+
+def test_taxonomy_conflict_blocks_merge(tmp_path, monkeypatch) -> None:
+    repo_root = tmp_path
+    project_dir = repo_root / "projects" / "demo"
+    global_dir = project_dir / "02_story_analysis" / "world" / "global"
+    taxonomy_dir = project_dir / "02_story_analysis" / "taxonomy" / "characters"
+    taxonomy_dir.mkdir(parents=True, exist_ok=True)
+    global_dir.mkdir(parents=True, exist_ok=True)
+
+    character_registry = {
+        "entity_a": _seed_character_entry(canonical_id="entity_a", display_name="entity_a", chapter_id="CH001"),
+        "entity_b": _seed_character_entry(canonical_id="entity_b", display_name="entity_a", chapter_id="CH002"),
+    }
+    _write_json(global_dir / "CHARACTER_REGISTRY_GLOBAL.json", character_registry)
+    _write_json(global_dir / "ENVIRONMENT_REGISTRY_GLOBAL.json", {})
+    _write_json(global_dir / "CHARACTER_DIRECTORY.json", {})
+    _write_json(global_dir / "ENVIRONMENT_DIRECTORY.json", {})
+
+    _write_json(taxonomy_dir / "CHAR_entity_a_TAXONOMY.json", {
+        "character_id": "entity_a",
+        "primary_type": "human",
+        "entity_kind": "individual",
+        "confidence": 0.9,
+    })
+    _write_json(taxonomy_dir / "CHAR_entity_b_TAXONOMY.json", {
+        "character_id": "entity_b",
+        "primary_type": "animal",
+        "entity_kind": "individual",
+        "confidence": 0.9,
+    })
+
+    class _FakeLMStudioClient:
+        def __init__(self, settings) -> None:
+            self.settings = settings
+
+        def chat_completion_result(self, *, system_prompt, user_prompt, temperature, model=None):
+            return SimpleNamespace(
+                is_success=True,
+                text=json.dumps(
+                    {
+                        "entity_type": "character",
+                        "subject_ids": ["entity_a", "entity_b"],
+                        "action": "merge_into_existing",
+                        "target_id": "entity_a",
+                        "new_canonical_id": None,
+                        "new_entity_kind": None,
+                        "reason": "same display name",
+                        "confidence": "high",
+                        "requires_human_review": False,
+                    }
+                ),
+                error_message=None,
+            )
+
+    monkeypatch.setattr(common_module, "ROOT", repo_root)
+    monkeypatch.setattr(common_module, "PROJECTS_ROOT", repo_root / "projects")
+    monkeypatch.setattr(scaffold_module, "create_project", lambda project_slug: project_dir)
+    monkeypatch.setattr(world_global_module, "create_project", lambda project_slug: project_dir)
+    monkeypatch.setattr(world_refinement_module, "create_project", lambda project_slug: project_dir)
+    monkeypatch.setattr(world_refinement_module, "LMStudioClient", _FakeLMStudioClient)
+    monkeypatch.setattr(
+        world_refinement_module,
+        "load_runtime_settings",
+        lambda: SimpleNamespace(
+            lmstudio_base_url="http://127.0.0.1:1234/v1",
+            lmstudio_model=None,
+            lmstudio_timeout_seconds=1.0,
+        ),
+    )
+
+    summary = world_refinement_module.refine_world_identities(
+        project_slug="demo",
+        use_llm=True,
+        apply_changes=False,
+    )
+
+    assert summary.candidate_count == 1
+    assert summary.human_review_count == 1
+
+    decisions_path = project_dir / "02_story_analysis" / "world" / "refinement" / "REFINEMENT_DECISIONS.json"
+    decisions = json.loads(decisions_path.read_text(encoding="utf-8"))
+    assert decisions[0]["requires_human_review"]
+    assert "Taxonomy conflict" in decisions[0]["reason"]

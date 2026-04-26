@@ -29,7 +29,7 @@ RefineAction = Literal[
 ]
 
 
-_WEAK_CHARACTER_NAMES = {
+_GENERIC_ROLE_TOKENS = {
     "narrator",
     "narrator_main",
     "narrator_ch002",
@@ -162,6 +162,7 @@ class WorldIdentityRefiner:
 
         self._settings = None
         self._client: LMStudioClient | None = None
+        self._taxonomy_cache: dict[str, dict] = {}
 
     def run(self, *, use_llm: bool = True, apply_changes: bool = True) -> RefinementSummary:
         warnings: list[str] = []
@@ -365,9 +366,11 @@ class WorldIdentityRefiner:
             score += 4
             reasons.append(f"alias overlap: {sorted(overlap)}")
 
-        if self._is_weak_character_name(left_id) or self._is_weak_character_name(right_id):
+        left_taxonomy = self._load_taxonomy(left_id)
+        right_taxonomy = self._load_taxonomy(right_id)
+        if self._is_generic_role_label(left_id, left, left_taxonomy) or self._is_generic_role_label(right_id, right, right_taxonomy):
             score += 2
-            reasons.append("one or both ids are weak/generic character names")
+            reasons.append("one or both ids are generic role labels")
 
         if left.get("entity_kind") != right.get("entity_kind"):
             score += 2
@@ -518,7 +521,8 @@ class WorldIdentityRefiner:
         registry = self.character_registry if entity_type == "character" else self.environment_registry
         entry = registry.get(canonical_id, {})
         description_layers = entry.get("description_layers", {})
-        return {
+        taxonomy = self._load_taxonomy(canonical_id) if entity_type == "character" else None
+        summary = {
             "canonical_id": canonical_id,
             "display_name": entry.get("display_name"),
             "status": entry.get("status"),
@@ -528,10 +532,21 @@ class WorldIdentityRefiner:
             "last_seen_chapter": entry.get("last_seen_chapter"),
             "chapter_mentions": entry.get("chapter_mentions", []),
             "source_count": len(entry.get("sources", [])),
-            "weak_name": self._is_weak_character_name(canonical_id) if entity_type == "character" else False,
+            "weak_name": self._is_generic_role_label(canonical_id, entry, taxonomy) if entity_type == "character" else False,
             "canonical_rank_score": self._rank_entity_candidate(canonical_id, entry, entity_type),
             "stable_canonical_descriptions": description_layers.get("stable_canonical", []),
         }
+        if taxonomy:
+            summary["taxonomy"] = {
+                "primary_type": taxonomy.get("primary_type"),
+                "morphology": taxonomy.get("morphology"),
+                "scale": taxonomy.get("scale"),
+                "renderability": taxonomy.get("renderability"),
+                "confidence": taxonomy.get("confidence"),
+                "needs_review": taxonomy.get("needs_review"),
+                "alias_resolution": taxonomy.get("alias_resolution"),
+            }
+        return summary
 
     def _rank_cluster_members(self, member_ids: list[str], entity_type: Literal["character", "environment"]) -> list[dict]:
         ranked = [
@@ -570,7 +585,8 @@ class WorldIdentityRefiner:
                 score += 25
             if entry.get("entity_kind") != "provisional_role":
                 score += 8
-            if self._is_weak_character_name(canonical_id):
+            taxonomy = self._load_taxonomy(canonical_id)
+            if self._is_generic_role_label(canonical_id, entry, taxonomy):
                 score -= 20
         else:
             if entry.get("status") == "canonical":
@@ -654,9 +670,16 @@ class WorldIdentityRefiner:
             "mark_provisional",
             "flag_for_human_review",
         ]
+        guardrails = [
+            "Do not merge if taxonomy primary_type conflicts (human vs animal, group vs individual, object vs person)",
+            "Do not merge generic role labels without high-confidence evidence",
+            "If taxonomy confidence is low or conflicts exist, flag_for_human_review",
+            "If uncertain, flag_for_human_review",
+        ]
         payload: dict[str, object] = {
             "task": "classify_identity_refinement_candidate",
             "allowed_actions": allowed_actions,
+            "guardrails": guardrails,
             "candidate": candidate.to_dict(),
             "allowed_target_ids": [item["canonical_id"] for item in candidate.evidence.get("ranked_members", [])[:3]],
             "output_schema": {
@@ -776,8 +799,21 @@ class WorldIdentityRefiner:
         if decision.action == "mark_provisional":
             if candidate.entity_type != "character":
                 raise RefinementDecisionError("Environment provisional marking is not supported.")
-            if not any(self._is_weak_character_name(subject_id) for subject_id in candidate.subject_ids):
-                raise RefinementDecisionError("Provisional marking requires a weak character name.")
+            registry = self.character_registry
+            if not any(
+                self._is_generic_role_label(
+                    subject_id,
+                    registry.get(subject_id, {}),
+                    self._load_taxonomy(subject_id)
+                )
+                for subject_id in candidate.subject_ids
+            ):
+                raise RefinementDecisionError("Provisional marking requires a generic role label.")
+
+        if decision.action == "merge_into_existing" and candidate.entity_type == "character":
+            conflict = self._check_taxonomy_conflicts(candidate.subject_ids)
+            if conflict:
+                return self._force_human_review(candidate, f"Taxonomy conflict: {conflict}")
 
         return decision
 
@@ -1156,8 +1192,62 @@ class WorldIdentityRefiner:
         shorter, longer = sorted([left, right], key=len)
         return longer.startswith(f"{shorter}_") and len(longer) > len(shorter) + 1
 
+    def _load_taxonomy(self, character_id: str) -> dict | None:
+        if character_id in self._taxonomy_cache:
+            return self._taxonomy_cache[character_id]
+        taxonomy_path = self.project_dir / "02_story_analysis" / "taxonomy" / "characters" / f"CHAR_{character_id}_TAXONOMY.json"
+        if not taxonomy_path.exists():
+            self._taxonomy_cache[character_id] = None
+            return None
+        try:
+            taxonomy = json.loads(taxonomy_path.read_text(encoding="utf-8"))
+            self._taxonomy_cache[character_id] = taxonomy
+            return taxonomy
+        except Exception:  # noqa: BLE001
+            self._taxonomy_cache[character_id] = None
+            return None
+
+    def _is_generic_role_label(self, canonical_id: str, entry: dict, taxonomy: dict | None) -> bool:
+        root = self._root_identity_token(canonical_id)
+        if root not in _GENERIC_ROLE_TOKENS:
+            return False
+        if taxonomy:
+            if taxonomy.get("confidence", 0) >= 0.7 and taxonomy.get("primary_type") != "unknown":
+                return False
+            alias_status = taxonomy.get("alias_resolution", {}).get("status")
+            if alias_status == "canonical":
+                return False
+        if entry.get("status") == "canonical" and entry.get("entity_kind") in {"individual", "group"}:
+            if len(entry.get("chapter_mentions", [])) >= 3:
+                return False
+        return True
+
+    def _check_taxonomy_conflicts(self, subject_ids: list[str]) -> str | None:
+        taxonomies = [self._load_taxonomy(sid) for sid in subject_ids]
+        taxonomies = [t for t in taxonomies if t]
+        if len(taxonomies) < 2:
+            return None
+        primary_types = {t.get("primary_type") for t in taxonomies if t.get("primary_type") != "unknown"}
+        if len(primary_types) > 1:
+            if {"human", "animal"}.issubset(primary_types):
+                return "human vs animal"
+            if {"human", "object"}.issubset(primary_types):
+                return "human vs object"
+            if {"animal", "object"}.issubset(primary_types):
+                return "animal vs object"
+        entity_kinds = {t.get("entity_kind") for t in taxonomies}
+        if {"group", "individual"}.issubset(entity_kinds):
+            return "group vs individual"
+        renderabilities = {t.get("renderability") for t in taxonomies if t.get("renderability") != "unknown"}
+        if "context_only" in renderabilities and "renderable" in renderabilities:
+            return "context_only vs renderable"
+        low_confidence = [t for t in taxonomies if t.get("confidence", 1.0) < 0.5]
+        if low_confidence:
+            return "low taxonomy confidence"
+        return None
+
     def _is_weak_character_name(self, value: str) -> bool:
-        return self._normalize_token(value) in _WEAK_CHARACTER_NAMES
+        return self._normalize_token(value) in _GENERIC_ROLE_TOKENS
 
     def _normalize_token(self, value: str) -> str:
         return _NON_ALNUM_RE.sub("_", str(value).strip().lower()).strip("_")
