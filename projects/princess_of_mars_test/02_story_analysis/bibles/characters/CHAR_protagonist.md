@@ -19,9 +19,9 @@
 - physical_build: agile and capable of high-intensity physical exertion.
 - origin_or_historical_context: Earthman in a low-gravity environment.
 - movement_language: extreme agility, high-leaping capabilities, and earthly striking tactics (chin/stomach strikes).
-An Earthman characterized by extreme agility and high-leaping capabilities, likely due to low-gravity conditions. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a "lifeless" physical shell. The character demonstrates high physical prowess, including the ability to leap over chariots and engage in high-intensity combat using earthly striking tactics.
+An Earthman characterized by extreme physical agility and high-leaping capabilities, likely due to low gravity. Following a supernatural transformation, the character is initially seen in a naked state, having left behind a "lifeless" physical shell of his original form. He moves with high intensity, capable of both acrobatic leaps over obstacles like chariots and grounded, earthly combat striking tactics.
 
-- physical_traits: high-leaping capability, extreme agility
+- physical_traits: high physical prowess, extreme agility
 - costume_signature: unknown
 - distinguishing_features: supernatural transformation (post-transformation state)
 - state_variants: naked (post-transformation), clothed (original body/pre-transformation)
@@ -31,12 +31,12 @@ An Earthman characterized by extreme agility and high-leaping capabilities, like
 - personality: unknown
 - role: protagonist
 - voice_notes: unknown
-- relationship_notes: (none)
+- relationship_notes: unknown
 
 ## Continuity
 
-- continuity_constraints: Character's physical state is tied to a supernatural transformation., Movement must reflect low-gravity physics (high leaping).
-- unresolved_ambiguities: Specific visual appearance of the post-transformation body., Costume/clothing worn after the initial naked state.
+- continuity_constraints: Character possesses a "lifeless" physical shell left behind from the initial transformation.
+- unresolved_ambiguities: The specific visual appearance of the post-transformation body is not fully detailed beyond agility and combat capability., Costume/clothing for later chapters (post-CH003) is unknown.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ An Earthman characterized by extreme agility and high-leaping capabilities, like
 - status: `generated`
 - source_fingerprint: `9e6f3eb952d3067d6814bf2f458bb91964e31a2a`
 - created_at_utc: `2026-04-25T21:10:41.518385+00:00`
-- updated_at_utc: `2026-04-25T22:54:09.094102+00:00`
+- updated_at_utc: `2026-04-26T03:39:34.218703+00:00`

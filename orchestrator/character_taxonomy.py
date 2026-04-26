@@ -67,9 +67,104 @@ def _parse_taxonomy_hints_from_markdown(content: str, source_path: str) -> dict[
     """Parse taxonomy hints from markdown if present.
     Returns None if no structured hints found.
     """
-    # For now, return None since existing breakdowns don't have structured hints
-    # This will be populated when Phase 2 extraction is implemented
-    return None
+    import re
+    
+    # Field aliases
+    field_map = {
+        "character_type_hint": "character_type_hint",
+        "character_type": "character_type_hint",
+        "primary_type_hint": "character_type_hint",
+        "type_hint": "character_type_hint",
+        "morphology_hint": "morphology_hint",
+        "morphology": "morphology_hint",
+        "scale_hint": "scale_hint",
+        "scale": "scale_hint",
+        "renderability_hint": "renderability_hint",
+        "renderability": "renderability_hint",
+        "confidence": "confidence",
+        "taxonomy_confidence": "confidence",
+        "direct_identity_evidence": "direct_identity_evidence",
+        "identity_evidence": "direct_identity_evidence",
+        "direct_visual_evidence": "direct_visual_evidence",
+        "visual_evidence": "direct_visual_evidence",
+        "costume_or_covering_evidence": "costume_or_covering_evidence",
+        "costume_evidence": "costume_or_covering_evidence",
+        "equipment_evidence": "costume_or_covering_evidence",
+        "movement_evidence": "movement_evidence",
+        "associated_entities": "associated_entities",
+        "associated_entity_evidence": "associated_entities",
+        "alias_or_role_evidence": "alias_or_role_evidence",
+        "alias_evidence": "alias_or_role_evidence",
+        "role_evidence": "alias_or_role_evidence",
+        "unknowns": "unknowns",
+        "source_refs": "source_refs",
+        "source_references": "source_refs",
+    }
+    
+    # Valid enum values
+    valid_character_types = {"human", "humanoid_nonhuman", "animal", "creature", "group", "object", "machine", "abstract", "unknown"}
+    valid_morphologies = {"biped", "quadruped", "multi_legged", "serpentine", "winged", "constructed", "amorphous", "unknown"}
+    valid_scales = {"tiny", "small", "human_scale", "large", "giant", "unknown"}
+    valid_renderabilities = {"renderable", "context_only", "alias_or_role", "unknown"}
+    
+    def normalize_value(value: str) -> str:
+        return value.strip().lower().replace(" ", "_").replace("-", "_")
+    
+    def validate_enum(value: str, valid_set: set[str]) -> str:
+        normalized = normalize_value(value)
+        return normalized if normalized in valid_set else "unknown"
+    
+    # Parse fields
+    parsed = {}
+    found_any = False
+    
+    # Match both colon and bullet formats
+    pattern = r'^\s*-?\s*([\w_]+)\s*:\s*(.+)$'
+    
+    for line in content.splitlines():
+        match = re.match(pattern, line)
+        if not match:
+            continue
+        
+        field_name = match.group(1).strip().lower().replace(" ", "_").replace("-", "_")
+        field_value = match.group(2).strip()
+        
+        if field_name not in field_map:
+            continue
+        
+        canonical_name = field_map[field_name]
+        found_any = True
+        
+        if canonical_name == "character_type_hint":
+            parsed[canonical_name] = validate_enum(field_value, valid_character_types)
+        elif canonical_name == "morphology_hint":
+            parsed[canonical_name] = validate_enum(field_value, valid_morphologies)
+        elif canonical_name == "scale_hint":
+            parsed[canonical_name] = validate_enum(field_value, valid_scales)
+        elif canonical_name == "renderability_hint":
+            parsed[canonical_name] = validate_enum(field_value, valid_renderabilities)
+        elif canonical_name == "confidence":
+            try:
+                conf = float(field_value)
+                parsed[canonical_name] = max(0.0, min(1.0, conf))
+            except (ValueError, TypeError):
+                parsed[canonical_name] = 0.0
+        elif canonical_name == "associated_entities":
+            # Split by semicolon
+            entities = [e.strip() for e in field_value.split(";") if e.strip()]
+            parsed[canonical_name] = entities
+        elif canonical_name == "source_refs":
+            # Split by semicolon or comma
+            refs = [r.strip() for r in re.split(r'[;,]', field_value) if r.strip()]
+            parsed[canonical_name] = refs
+        else:
+            parsed[canonical_name] = field_value
+    
+    if not found_any:
+        return None
+    
+    parsed["source_path"] = source_path
+    return parsed
 
 
 def _determine_primary_type(direct_hints: list[str], associated_hints: list[str], entity_kind: str) -> tuple[str, float, list[str]]:

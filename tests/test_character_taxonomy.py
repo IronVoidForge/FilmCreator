@@ -13,6 +13,7 @@ from orchestrator.character_taxonomy import (
     _determine_scale,
     _determine_sentience,
     _iter_character_taxonomy_hint_records,
+    _parse_taxonomy_hints_from_markdown,
     _synthesize_character_taxonomy,
     run_character_taxonomy,
 )
@@ -389,6 +390,160 @@ def test_book_agnostic_no_hardcoded_names():
                 # Skip if it's just in a test or example
                 if "test" not in line.lower() and "example" not in line.lower():
                     pytest.fail(f"Found hardcoded book-specific name '{name}' in taxonomy logic: {line}")
+
+
+def test_parse_taxonomy_hints_from_markdown_colon_format():
+    """Test parsing taxonomy hints from colon format."""
+    markdown = """# Character Breakdown
+
+character_type_hint: human
+morphology_hint: biped
+scale_hint: human_scale
+renderability_hint: renderable
+confidence: 0.85
+direct_identity_evidence: explicitly called a human traveler
+direct_visual_evidence: upright bipedal person
+costume_or_covering_evidence: wears travel clothes
+movement_evidence: walks upright
+associated_entities: rides a large animal; carries a lantern
+alias_or_role_evidence: none
+unknowns: exact age
+source_refs: CH001:P12
+"""
+    result = _parse_taxonomy_hints_from_markdown(markdown, "/test/path.md")
+    
+    assert result is not None
+    assert result["character_type_hint"] == "human"
+    assert result["morphology_hint"] == "biped"
+    assert result["scale_hint"] == "human_scale"
+    assert result["renderability_hint"] == "renderable"
+    assert result["confidence"] == 0.85
+    assert result["direct_identity_evidence"] == "explicitly called a human traveler"
+    assert result["direct_visual_evidence"] == "upright bipedal person"
+    assert result["costume_or_covering_evidence"] == "wears travel clothes"
+    assert result["movement_evidence"] == "walks upright"
+    assert result["associated_entities"] == ["rides a large animal", "carries a lantern"]
+    assert result["alias_or_role_evidence"] == "none"
+    assert result["unknowns"] == "exact age"
+    assert result["source_refs"] == ["CH001:P12"]
+    assert result["source_path"] == "/test/path.md"
+
+
+def test_parse_taxonomy_hints_from_markdown_bullet_format():
+    """Test parsing taxonomy hints from bullet format."""
+    markdown = """# Character Breakdown
+
+- character_type_hint: human
+- morphology_hint: biped
+- scale_hint: human_scale
+- renderability_hint: renderable
+- confidence: 0.85
+- direct_identity_evidence: explicitly called a human traveler
+- associated_entities: rides a large animal; carries a lantern
+"""
+    result = _parse_taxonomy_hints_from_markdown(markdown, "/test/path.md")
+    
+    assert result is not None
+    assert result["character_type_hint"] == "human"
+    assert result["morphology_hint"] == "biped"
+    assert result["scale_hint"] == "human_scale"
+    assert result["renderability_hint"] == "renderable"
+    assert result["confidence"] == 0.85
+    assert result["associated_entities"] == ["rides a large animal", "carries a lantern"]
+
+
+def test_parse_taxonomy_hints_from_markdown_display_labels():
+    """Test parsing taxonomy hints with display labels."""
+    markdown = """# Character Breakdown
+
+- character_type: animal
+- morphology: quadruped
+- scale: large
+- renderability: renderable
+"""
+    result = _parse_taxonomy_hints_from_markdown(markdown, "/test/path.md")
+    
+    assert result is not None
+    assert result["character_type_hint"] == "animal"
+    assert result["morphology_hint"] == "quadruped"
+    assert result["scale_hint"] == "large"
+    assert result["renderability_hint"] == "renderable"
+
+
+def test_parse_taxonomy_hints_returns_none_without_structured_fields():
+    """Test that parser returns None for prose-only content."""
+    markdown = """# Character Breakdown
+
+The traveler rides a huge beast and walks into town.
+He appears to be a human warrior wearing exotic armor.
+"""
+    result = _parse_taxonomy_hints_from_markdown(markdown, "/test/path.md")
+    
+    assert result is None
+
+
+def test_parse_taxonomy_hints_invalid_values_become_unknown():
+    """Test that invalid enum values become unknown."""
+    markdown = """# Character Breakdown
+
+character_type_hint: invalid_type
+morphology_hint: invalid_morph
+scale_hint: invalid_scale
+renderability_hint: invalid_render
+"""
+    result = _parse_taxonomy_hints_from_markdown(markdown, "/test/path.md")
+    
+    assert result is not None
+    assert result["character_type_hint"] == "unknown"
+    assert result["morphology_hint"] == "unknown"
+    assert result["scale_hint"] == "unknown"
+    assert result["renderability_hint"] == "unknown"
+
+
+def test_parse_taxonomy_hints_confidence_clamped():
+    """Test that confidence is clamped to 0.0-1.0."""
+    markdown1 = "confidence: 2.0"
+    result1 = _parse_taxonomy_hints_from_markdown(markdown1, "/test/path.md")
+    assert result1["confidence"] == 1.0
+    
+    markdown2 = "confidence: -1.0"
+    result2 = _parse_taxonomy_hints_from_markdown(markdown2, "/test/path.md")
+    assert result2["confidence"] == 0.0
+
+
+def test_taxonomy_aggregates_parsed_markdown_hints(tmp_path):
+    """Test that taxonomy aggregates parsed markdown hints."""
+    project_dir = tmp_path / "test_project"
+    breakdown_dir = project_dir / "02_story_analysis" / "character_breakdowns" / "chapters" / "CH001"
+    breakdown_dir.mkdir(parents=True)
+    
+    # Create structured hint markdown
+    char_file = breakdown_dir / "test_char.md"
+    char_file.write_text(
+        """# Character Breakdown
+
+character_type_hint: human
+morphology_hint: biped
+scale_hint: human_scale
+confidence: 0.9
+""",
+        encoding="utf-8"
+    )
+    
+    registry_entry = {
+        "entity_kind": "individual",
+        "display_name": "test_char",
+        "status": "canonical",
+        "sources": []
+    }
+    
+    taxonomy = _synthesize_character_taxonomy("test_char", registry_entry, project_dir)
+    
+    # Should use parsed hints
+    assert taxonomy["primary_type"] == "human"
+    assert taxonomy["morphology"] == "biped"
+    assert taxonomy["scale"] == "human_scale"
+    assert taxonomy["confidence"] > 0.0
 
 
 if __name__ == "__main__":

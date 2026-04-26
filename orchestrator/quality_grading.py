@@ -24,6 +24,17 @@ NULL_STRINGS = {
     "not specified",
 }
 
+# Bucket family constants
+HUMAN_BUCKETS = {"human"}
+NON_HUMAN_HUMANOID_BUCKETS = {"non_human_humanoid"}
+QUADRUPED_BUCKETS = {"small_quadruped", "large_quadruped"}
+CREATURE_BUCKETS = {"small_creature", "large_creature"}
+GROUP_BUCKETS = {"group_or_horde"}
+NON_RENDER_BUCKETS = {"context_only", "alias_redirect"}
+UNKNOWN_BUCKETS = {"unknown_reference"}
+BIOLOGICAL_NON_HUMAN_BUCKETS = NON_HUMAN_HUMANOID_BUCKETS | QUADRUPED_BUCKETS | CREATURE_BUCKETS
+RENDERABLE_BUCKETS = HUMAN_BUCKETS | NON_HUMAN_HUMANOID_BUCKETS | QUADRUPED_BUCKETS | CREATURE_BUCKETS | GROUP_BUCKETS
+
 
 def _utc_now() -> str:
     return datetime.now(timezone.utc).isoformat()
@@ -431,10 +442,13 @@ def _score_10_from_score(score: int) -> int:
 def _taxonomy_fallback_contradictions(taxonomy: dict, fallback: dict) -> list[dict]:
     """Detect contradictions between taxonomy and visual_production_fallback."""
     contradictions = []
-    primary_type = taxonomy.get("primary_type", "")
-    fallback_bucket = fallback.get("fallback_bucket", "")
+    primary_type = str(taxonomy.get("primary_type", "")).strip().lower()
+    fallback_bucket = str(fallback.get("fallback_bucket", "")).strip().lower()
+    morphology = str(taxonomy.get("morphology", "unknown")).strip().lower()
+    renderability = str(taxonomy.get("renderability", "")).strip().lower()
     
-    if primary_type == "human" and fallback_bucket in ["non_human_humanoid", "creature", "quadruped"]:
+    # 1. Human contradicts non-human buckets
+    if primary_type == "human" and fallback_bucket in (NON_HUMAN_HUMANOID_BUCKETS | QUADRUPED_BUCKETS | CREATURE_BUCKETS):
         contradictions.append({
             "type": "taxonomy_fallback_mismatch",
             "severity": "high",
@@ -442,16 +456,48 @@ def _taxonomy_fallback_contradictions(taxonomy: dict, fallback: dict) -> list[di
             "rerun_stage": "synthesize-character-bibles"
         })
     
-    if primary_type == "humanoid_nonhuman" and fallback_bucket in ["quadruped", "creature"]:
-        morphology = taxonomy.get("morphology", {})
-        limb_config = morphology.get("limb_configuration", "")
-        if "quadruped" not in limb_config.lower() and "four-legged" not in limb_config.lower():
+    # 2. Humanoid nonhuman contradicts quadruped/creature buckets (especially if biped)
+    if primary_type == "humanoid_nonhuman" and fallback_bucket in (QUADRUPED_BUCKETS | CREATURE_BUCKETS):
+        if morphology == "biped":
             contradictions.append({
                 "type": "taxonomy_fallback_mismatch",
                 "severity": "high",
-                "detail": f"Taxonomy primary_type=humanoid_nonhuman but fallback_bucket={fallback_bucket} without supporting morphology",
+                "detail": f"Taxonomy primary_type=humanoid_nonhuman morphology=biped but fallback_bucket={fallback_bucket}",
                 "rerun_stage": "synthesize-character-bibles"
             })
+    
+    # 3. Animal/creature contradicts human bucket
+    if primary_type in {"animal", "creature"} and fallback_bucket in HUMAN_BUCKETS:
+        try:
+            confidence = float(taxonomy.get("confidence", 0.0) or 0.0)
+        except (TypeError, ValueError):
+            confidence = 0.0
+        needs_review = taxonomy.get("needs_review", False)
+        if not (confidence < 0.5 and needs_review):
+            contradictions.append({
+                "type": "taxonomy_fallback_mismatch",
+                "severity": "high",
+                "detail": f"Taxonomy primary_type={primary_type} but fallback_bucket={fallback_bucket}",
+                "rerun_stage": "synthesize-character-bibles"
+            })
+    
+    # 4. Group contradicts individual buckets
+    if primary_type == "group" and fallback_bucket in (HUMAN_BUCKETS | NON_HUMAN_HUMANOID_BUCKETS | QUADRUPED_BUCKETS | CREATURE_BUCKETS):
+        contradictions.append({
+            "type": "taxonomy_fallback_mismatch",
+            "severity": "high",
+            "detail": f"Taxonomy primary_type=group but fallback_bucket={fallback_bucket} (individual)",
+            "rerun_stage": "synthesize-character-bibles"
+        })
+    
+    # 5. Context-only contradicts renderable buckets
+    if renderability == "context_only" and fallback_bucket in RENDERABLE_BUCKETS:
+        contradictions.append({
+            "type": "taxonomy_fallback_mismatch",
+            "severity": "high",
+            "detail": f"Taxonomy renderability=context_only but fallback_bucket={fallback_bucket} (renderable)",
+            "rerun_stage": "synthesize-character-bibles"
+        })
     
     return contradictions
 
@@ -492,14 +538,29 @@ def _alias_prompt_contradictions(alias_resolution: dict, prompt_package: dict) -
     if not alias_resolution or not prompt_package:
         return contradictions
     
-    if alias_resolution.get("alias_candidate") or alias_resolution.get("alias_of"):
-        visual_refs = prompt_package.get("visual_references", [])
-        if visual_refs and not alias_resolution.get("approved_separate_render"):
+    status = str(alias_resolution.get("status", "unknown")).strip().lower()
+    
+    # Check for visual rendering attempts
+    has_visual_refs = bool(
+        prompt_package.get("visual_references") or
+        prompt_package.get("reference_asset_ids") or
+        prompt_package.get("subject_reference") or
+        prompt_package.get("character_reference_id") or
+        prompt_package.get("render_as_separate_character")
+    )
+    
+    if not has_visual_refs:
+        return contradictions
+    
+    # Alias candidate or role label with visual refs needs review
+    if status in {"alias_candidate", "role_label", "unresolved"}:
+        canonical_target = alias_resolution.get("canonical_target_id")
+        if not canonical_target:
             contradictions.append({
                 "type": "alias_render_contradiction",
                 "severity": "medium",
-                "detail": "Entity marked as alias but prompt package renders separate canonical visual reference without approval",
-                "rerun_stage": "run-world-refinement"
+                "detail": f"Entity status={status} but prompt package renders separate visual reference without canonical target",
+                "rerun_stage": "refine-identities"
             })
     
     return contradictions
@@ -577,13 +638,22 @@ def _grader_character(payload: dict[str, Any]) -> tuple[int, int, int, int, int,
         contradictions.extend(_taxonomy_fallback_contradictions(taxonomy, fallback))
         contradictions.extend(_negative_term_contradictions(taxonomy, fallback))
     
-    if taxonomy and taxonomy.get("confidence") == "low" and not payload.get("review_notes"):
-        contradictions.append({
-            "type": "low_confidence_taxonomy",
-            "severity": "medium",
-            "detail": "Taxonomy confidence=low but no review notes",
-            "rerun_stage": "synthesize-character-taxonomy"
-        })
+    # Handle numeric confidence
+    if taxonomy:
+        try:
+            confidence = float(taxonomy.get("confidence", 0.0) or 0.0)
+        except (TypeError, ValueError):
+            confidence = 0.0
+        
+        needs_review = payload.get("needs_review", False) or taxonomy.get("needs_review", False)
+        
+        if confidence < 0.5 and needs_review:
+            contradictions.append({
+                "type": "low_confidence_taxonomy",
+                "severity": "medium",
+                "detail": f"Taxonomy confidence={confidence:.2f} below threshold and needs review",
+                "rerun_stage": "synthesize-character-taxonomy"
+            })
     
     if _count_unknown_like(payload.get("stable_visual_summary")):
         notes.append("stable_visual_summary is unresolved")

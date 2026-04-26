@@ -19,24 +19,24 @@
 - physical_build: unknown
 - origin_or_historical_context: 19th-century indigenous setting.
 - movement_language: engaged in ambush and skirmish tactics.
-A large group of hostile 19th-century indigenous fighters characterized by their traditional Apache attire. They operate as a cohesive unit, utilizing ambush tactics and skirmish combat while wielding arrows.
+A large group of hostile 19th-century indigenous fighters characterized by their traditional Apache attire. They function as a collective unit, primarily seen engaged in ambush tactics and active skirmishes while wielding arrows.
 
-- physical_traits: Arrow-wielding
+- physical_traits: Large group composition
 - costume_signature: Traditional Apache attire.
 - distinguishing_features: Armed with arrows
 - state_variants: Hostile/Ambushing, Skirmishing
 
 ## Behavioral Bible
 
-- personality: Hostile and aggressive in combat.
-- role: Antagonistic group engaged in ambush and skirmishes.
+- personality: Hostile and aggressive during engagement.
+- role: Antagonistic combatants/ambushers.
 - voice_notes: unknown
-- relationship_notes: Engaged in hostile contact with other characters via ambush.
+- relationship_notes: Engaged in hostile skirmishes with other entities.
 
 ## Continuity
 
 - continuity_constraints: Must maintain 19th-century indigenous historical context., Must be depicted as a large, cohesive group rather than isolated individuals.
-- unresolved_ambiguities: Specific physical builds of individual warriors are not defined., Exact visual details of the "traditional attire" are not specified beyond the era/culture.
+- unresolved_ambiguities: Specific physical builds of individual members are unknown., Exact visual details of the "traditional attire" are not specified beyond the era/culture.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ A large group of hostile 19th-century indigenous fighters characterized by their
 - status: `generated`
 - source_fingerprint: `a66b21ab8006ce215dd048cea2a024af1308c7c1`
 - created_at_utc: `2026-04-25T20:47:07.931505+00:00`
-- updated_at_utc: `2026-04-26T03:13:15.314779+00:00`
+- updated_at_utc: `2026-04-26T03:41:42.194874+00:00`

@@ -917,6 +917,14 @@ def run_character_bible_synthesis(
 
         merged = _merge_with_existing(synthesized_payload, existing, metadata)
 
+        # Add taxonomy to merged BEFORE fallback so fallback can read it
+        if taxonomy_data:
+            merged["entity_taxonomy"] = taxonomy_data
+        if alias_resolution_data:
+            merged["alias_resolution"] = alias_resolution_data
+        if associated_entities_data:
+            merged["associated_entities"] = associated_entities_data
+
         # Audit visual fields before fallback
         pre_fallback_audit = visual_field_audit(merged)
         missing_fields = pre_fallback_audit["missing_fields"]

@@ -19,9 +19,9 @@
 - physical_build: unknown
 - origin_or_historical_context: 1860s era; frontier/mining setting.
 - movement_language: unknown
-A mid-19th-century man dressed in practical, rugged 1860s attire appropriate for a mining engineer and frontier traveler. In his final recorded state, he is a deceased prospector characterized by being riddled with arrows.
+A man of the 1860s era, James K. Powell is visually defined by his practical mining engineer attire and his history as a former Confederate officer. In his final recorded state, he appears as a deceased prospector, characterized by being riddled with arrows.
 
-- physical_traits: Former Confederate officer
+- physical_traits: Mining engineer aesthetic
 - costume_signature: Practical 1860s attire suitable for mining engineering and frontier travel.
 - distinguishing_features: Riddled with arrows (deceased state)
 - state_variants: Deceased prospector (riddled with arrows)
@@ -35,7 +35,7 @@ A mid-19th-century man dressed in practical, rugged 1860s attire appropriate for
 
 ## Continuity
 
-- continuity_constraints: Costume must reflect 1860s practical mining/frontier utility.
+- continuity_constraints: Costume must remain consistent with 1860s practical frontier/mining utility.
 - unresolved_ambiguities: Specific physical build and age are not provided., Movement style is unknown.
 
 ## Evidence Summary
@@ -53,4 +53,4 @@ A mid-19th-century man dressed in practical, rugged 1860s attire appropriate for
 - status: `generated`
 - source_fingerprint: `2c7be7643511776051c4e675e099c7ae382dbec6`
 - created_at_utc: `2026-04-25T20:46:37.329547+00:00`
-- updated_at_utc: `2026-04-26T03:12:33.602351+00:00`
+- updated_at_utc: `2026-04-26T03:41:13.728027+00:00`

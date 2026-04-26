@@ -1,6 +1,6 @@
 {
   "project_slug": "princess_of_mars_test",
-  "generated_at_utc": "2026-04-26T03:13:26.669283+00:00",
+  "generated_at_utc": "2026-04-26T03:41:51.705268+00:00",
   "total_records": 3,
   "attempted_count": 3,
   "non_empty_count": 3,
@@ -58,7 +58,7 @@
       },
       "fallback_preview": {
         "production_identity_descriptor": "19th-century mining engineer and former Confederate officer.",
-        "production_body_descriptor": "Former Confederate officer",
+        "production_body_descriptor": "Mining engineer aesthetic",
         "production_costume_descriptor": "Practical 1860s attire suitable for mining engineering and frontier travel.",
         "production_silhouette": "Riddled with arrows (deceased state)"
       },
@@ -97,16 +97,16 @@
       "synthesis_mode": "synthesized",
       "pre_fallback_audit": {
         "total_prompt_critical_fields": 10,
-        "missing_count": 1,
-        "present_count": 9,
+        "missing_count": 2,
+        "present_count": 8,
         "missing_fields": [
-          "physical_build"
+          "physical_build",
+          "movement_language"
         ],
         "present_fields": [
           "identity_baseline",
           "age_presence",
           "origin_or_historical_context",
-          "movement_language",
           "stable_visual_summary",
           "physical_traits",
           "costume_signature",
@@ -121,27 +121,27 @@
       "fallback_result_audit": {
         "status": "insufficient_context",
         "fallback_bucket": "unknown_reference",
-        "filled_count": 7,
-        "empty_count": 1,
+        "filled_count": 6,
+        "empty_count": 2,
         "filled_fields": [
           "production_identity_descriptor",
           "production_body_descriptor",
           "production_face_descriptor",
           "production_costume_descriptor",
           "production_silhouette",
-          "production_movement_descriptor",
           "production_state_variants"
         ],
         "empty_fields": [
+          "production_movement_descriptor",
           "negative_terms"
         ],
         "non_empty": true
       },
       "fallback_preview": {
         "production_identity_descriptor": "Human male, Earthling, former Confederate cavalry officer and soldier of fortune.",
-        "production_body_descriptor": "Human male",
-        "production_costume_descriptor": "Mid-19th century cavalry attire or spoils of war (Martian silks and furs).",
-        "production_silhouette": "Lacks typical \"unsightly\" Earthman clothing/ornaments."
+        "production_body_descriptor": "human male",
+        "production_costume_descriptor": "Mid-19th century cavalry attire or Martian spoils (silks and furs).",
+        "production_silhouette": "lacks typical Earthman ornaments/clothing"
       },
       "evidence_summary": [
         "[source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md] Physical Description: A former Confederate cavalry officer and soldier of fortune. Described as elderly in the framing narrative,...",
@@ -185,10 +185,10 @@
       "fallback_method": "deterministic",
       "fallback_reason": "missing_prompt_critical_fields",
       "fallback_result_audit": {
-        "status": "insufficient_context",
-        "fallback_bucket": "unknown_reference",
-        "filled_count": 7,
-        "empty_count": 1,
+        "status": "generated",
+        "fallback_bucket": "group_or_horde",
+        "filled_count": 8,
+        "empty_count": 0,
         "filled_fields": [
           "production_identity_descriptor",
           "production_body_descriptor",
@@ -196,16 +196,15 @@
           "production_costume_descriptor",
           "production_silhouette",
           "production_movement_descriptor",
-          "production_state_variants"
-        ],
-        "empty_fields": [
+          "production_state_variants",
           "negative_terms"
         ],
+        "empty_fields": [],
         "non_empty": true
       },
       "fallback_preview": {
         "production_identity_descriptor": "A large group of hostile indigenous fighters.",
-        "production_body_descriptor": "Arrow-wielding",
+        "production_body_descriptor": "Large group composition",
         "production_costume_descriptor": "Traditional Apache attire.",
         "production_silhouette": "Armed with arrows"
       },
