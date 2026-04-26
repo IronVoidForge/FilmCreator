@@ -4,8 +4,14 @@ from pathlib import Path
 from orchestrator.quality_grading import (
     _grader_prompt_package,
     _grader_dialogue,
+    _grader_character,
     _has_prompt_semantic_issue,
     _is_silent_dialogue,
+    _taxonomy_fallback_contradictions,
+    _negative_term_contradictions,
+    _alias_prompt_contradictions,
+    _renderability_prompt_contradictions,
+    _rerun_stage_for_contradiction,
 )
 
 
@@ -225,3 +231,152 @@ A scene
     has_issue, issues = _has_prompt_semantic_issue(prompt_text)
     assert has_issue
     assert any("visible subject exists" in issue for issue in issues)
+
+
+def test_taxonomy_fallback_contradiction_human_nonhuman():
+    """Human taxonomy + non-human fallback creates rerun recommendation."""
+    taxonomy = {"primary_type": "human"}
+    fallback = {"fallback_bucket": "non_human_humanoid"}
+    contradictions = _taxonomy_fallback_contradictions(taxonomy, fallback)
+    assert len(contradictions) == 1
+    assert contradictions[0]["type"] == "taxonomy_fallback_mismatch"
+    assert contradictions[0]["severity"] == "high"
+    assert contradictions[0]["rerun_stage"] == "synthesize-character-bibles"
+
+
+def test_taxonomy_fallback_contradiction_humanoid_quadruped():
+    """Humanoid taxonomy + quadruped fallback creates rerun recommendation."""
+    taxonomy = {"primary_type": "humanoid_nonhuman", "morphology": {"limb_configuration": "bipedal"}}
+    fallback = {"fallback_bucket": "quadruped"}
+    contradictions = _taxonomy_fallback_contradictions(taxonomy, fallback)
+    assert len(contradictions) == 1
+    assert contradictions[0]["type"] == "taxonomy_fallback_mismatch"
+    assert contradictions[0]["severity"] == "high"
+
+
+def test_taxonomy_fallback_no_contradiction_humanoid_quadruped_with_morphology():
+    """Humanoid + quadruped is OK if morphology supports it."""
+    taxonomy = {"primary_type": "humanoid_nonhuman", "morphology": {"limb_configuration": "quadruped stance"}}
+    fallback = {"fallback_bucket": "quadruped"}
+    contradictions = _taxonomy_fallback_contradictions(taxonomy, fallback)
+    assert len(contradictions) == 0
+
+
+def test_negative_term_contradiction_human():
+    """Human taxonomy + negative_terms 'human proportions' is contradiction."""
+    taxonomy = {"primary_type": "human"}
+    fallback = {"negative_terms": ["human proportions", "Earth clothing"]}
+    contradictions = _negative_term_contradictions(taxonomy, fallback)
+    assert len(contradictions) == 1
+    assert contradictions[0]["type"] == "negative_term_contradiction"
+    assert "human proportions" in contradictions[0]["detail"]
+
+
+def test_negative_term_contradiction_quadruped():
+    """Quadruped taxonomy + 'four-legged' in negative_terms is contradiction."""
+    taxonomy = {"primary_type": "quadruped"}
+    fallback = {"negative_terms": ["four-legged", "animal"]}
+    contradictions = _negative_term_contradictions(taxonomy, fallback)
+    assert len(contradictions) == 1
+    assert "four-legged" in contradictions[0]["detail"]
+
+
+def test_alias_prompt_contradiction():
+    """Alias candidate rendered as separate character creates review recommendation."""
+    alias_resolution = {"alias_candidate": True}
+    prompt_package = {"visual_references": ["ref1", "ref2"]}
+    contradictions = _alias_prompt_contradictions(alias_resolution, prompt_package)
+    assert len(contradictions) == 1
+    assert contradictions[0]["type"] == "alias_render_contradiction"
+    assert contradictions[0]["severity"] == "medium"
+
+
+def test_alias_prompt_no_contradiction_with_approval():
+    """Alias with approved_separate_render is OK."""
+    alias_resolution = {"alias_candidate": True, "approved_separate_render": True}
+    prompt_package = {"visual_references": ["ref1"]}
+    contradictions = _alias_prompt_contradictions(alias_resolution, prompt_package)
+    assert len(contradictions) == 0
+
+
+def test_renderability_prompt_contradiction():
+    """Context-only taxonomy + render prompt creates rerun recommendation."""
+    taxonomy = {"renderability": "context_only"}
+    prompt_package = {"visual_references": ["ref1"]}
+    contradictions = _renderability_prompt_contradictions(taxonomy, prompt_package)
+    assert len(contradictions) == 1
+    assert contradictions[0]["type"] == "renderability_prompt_contradiction"
+    assert contradictions[0]["severity"] == "high"
+
+
+def test_rerun_stage_mapping():
+    """Rerun stage is correct for each contradiction type."""
+    assert _rerun_stage_for_contradiction("taxonomy_fallback_mismatch") == "synthesize-character-bibles"
+    assert _rerun_stage_for_contradiction("negative_term_contradiction") == "synthesize-character-bibles"
+    assert _rerun_stage_for_contradiction("alias_render_contradiction") == "run-world-refinement"
+    assert _rerun_stage_for_contradiction("renderability_prompt_contradiction") == "run-prompt-preparation"
+    assert _rerun_stage_for_contradiction("taxonomy_missing") == "synthesize-character-taxonomy"
+
+
+def test_character_grading_with_contradictions():
+    """Character grading detects contradictions and adds to notes."""
+    payload = {
+        "role": "protagonist",
+        "stable_visual_summary": "A tall warrior",
+        "entity_taxonomy": {"primary_type": "human", "confidence": "high"},
+        "visual_production_fallback": {
+            "fallback_bucket": "non_human_humanoid",
+            "negative_terms": ["human proportions"]
+        },
+        "chapter_mentions": ["CH001"],
+        "evidence_refs": []
+    }
+    completeness, evidence, consistency, prompt_ready, inference, notes, contradictions = _grader_character(payload)
+    assert len(contradictions) == 2
+    assert any("fallback_bucket=non_human_humanoid" in c["detail"] for c in contradictions)
+    assert any("human proportions" in c["detail"] for c in contradictions)
+
+
+def test_character_grading_correct_taxonomy_fallback():
+    """Correct taxonomy/fallback pair passes."""
+    payload = {
+        "role": "protagonist",
+        "stable_visual_summary": "A tall warrior",
+        "entity_taxonomy": {"primary_type": "human", "confidence": "high"},
+        "visual_production_fallback": {
+            "fallback_bucket": "human",
+            "negative_terms": ["alien features"]
+        },
+        "chapter_mentions": ["CH001"],
+        "evidence_refs": []
+    }
+    completeness, evidence, consistency, prompt_ready, inference, notes, contradictions = _grader_character(payload)
+    assert len(contradictions) == 0
+
+
+def test_character_grading_low_confidence_no_review():
+    """Low confidence taxonomy without review notes creates contradiction."""
+    payload = {
+        "role": "protagonist",
+        "stable_visual_summary": "A tall warrior",
+        "entity_taxonomy": {"primary_type": "human", "confidence": "low"},
+        "visual_production_fallback": {"fallback_bucket": "human"},
+        "chapter_mentions": ["CH001"],
+        "evidence_refs": []
+    }
+    completeness, evidence, consistency, prompt_ready, inference, notes, contradictions = _grader_character(payload)
+    assert len(contradictions) == 1
+    assert contradictions[0]["type"] == "low_confidence_taxonomy"
+
+
+def test_character_grading_missing_taxonomy_no_crash():
+    """Missing taxonomy when taxonomy stage absent does not crash."""
+    payload = {
+        "role": "protagonist",
+        "stable_visual_summary": "A tall warrior",
+        "chapter_mentions": ["CH001"],
+        "evidence_refs": []
+    }
+    completeness, evidence, consistency, prompt_ready, inference, notes, contradictions = _grader_character(payload)
+    assert len(contradictions) == 0
+

@@ -428,7 +428,119 @@ def _score_10_from_score(score: int) -> int:
     return max(1, min(10, round(score / 10)))
 
 
-def _grader_character(payload: dict[str, Any]) -> tuple[int, int, int, int, int, list[str]]:
+def _taxonomy_fallback_contradictions(taxonomy: dict, fallback: dict) -> list[dict]:
+    """Detect contradictions between taxonomy and visual_production_fallback."""
+    contradictions = []
+    primary_type = taxonomy.get("primary_type", "")
+    fallback_bucket = fallback.get("fallback_bucket", "")
+    
+    if primary_type == "human" and fallback_bucket in ["non_human_humanoid", "creature", "quadruped"]:
+        contradictions.append({
+            "type": "taxonomy_fallback_mismatch",
+            "severity": "high",
+            "detail": f"Taxonomy primary_type=human but fallback_bucket={fallback_bucket}",
+            "rerun_stage": "synthesize-character-bibles"
+        })
+    
+    if primary_type == "humanoid_nonhuman" and fallback_bucket in ["quadruped", "creature"]:
+        morphology = taxonomy.get("morphology", {})
+        limb_config = morphology.get("limb_configuration", "")
+        if "quadruped" not in limb_config.lower() and "four-legged" not in limb_config.lower():
+            contradictions.append({
+                "type": "taxonomy_fallback_mismatch",
+                "severity": "high",
+                "detail": f"Taxonomy primary_type=humanoid_nonhuman but fallback_bucket={fallback_bucket} without supporting morphology",
+                "rerun_stage": "synthesize-character-bibles"
+            })
+    
+    return contradictions
+
+
+def _negative_term_contradictions(taxonomy: dict, fallback: dict) -> list[dict]:
+    """Detect contradictions between taxonomy and fallback negative_terms."""
+    contradictions = []
+    primary_type = taxonomy.get("primary_type", "")
+    negative_terms = fallback.get("negative_terms", [])
+    
+    if primary_type == "human":
+        for term in negative_terms:
+            if "human proportion" in term.lower():
+                contradictions.append({
+                    "type": "negative_term_contradiction",
+                    "severity": "high",
+                    "detail": f"Taxonomy primary_type=human but negative_terms includes '{term}'",
+                    "rerun_stage": "synthesize-character-bibles"
+                })
+    
+    if primary_type == "quadruped":
+        for term in negative_terms:
+            if "four-legged" in term.lower() or "four legged" in term.lower():
+                contradictions.append({
+                    "type": "negative_term_contradiction",
+                    "severity": "high",
+                    "detail": f"Taxonomy primary_type=quadruped but negative_terms includes '{term}'",
+                    "rerun_stage": "synthesize-character-bibles"
+                })
+    
+    return contradictions
+
+
+def _alias_prompt_contradictions(alias_resolution: dict, prompt_package: dict) -> list[dict]:
+    """Detect contradictions between alias resolution and prompt package rendering."""
+    contradictions = []
+    
+    if not alias_resolution or not prompt_package:
+        return contradictions
+    
+    if alias_resolution.get("alias_candidate") or alias_resolution.get("alias_of"):
+        visual_refs = prompt_package.get("visual_references", [])
+        if visual_refs and not alias_resolution.get("approved_separate_render"):
+            contradictions.append({
+                "type": "alias_render_contradiction",
+                "severity": "medium",
+                "detail": "Entity marked as alias but prompt package renders separate canonical visual reference without approval",
+                "rerun_stage": "run-world-refinement"
+            })
+    
+    return contradictions
+
+
+def _renderability_prompt_contradictions(taxonomy: dict, prompt_package: dict) -> list[dict]:
+    """Detect contradictions between taxonomy renderability and prompt package."""
+    contradictions = []
+    
+    if not taxonomy or not prompt_package:
+        return contradictions
+    
+    renderability = taxonomy.get("renderability", "")
+    visual_refs = prompt_package.get("visual_references", [])
+    
+    if renderability == "context_only" and visual_refs:
+        contradictions.append({
+            "type": "renderability_prompt_contradiction",
+            "severity": "high",
+            "detail": "Taxonomy renderability=context_only but prompt package tries to render character reference",
+            "rerun_stage": "run-prompt-preparation"
+        })
+    
+    return contradictions
+
+
+def _rerun_stage_for_contradiction(contradiction_type: str) -> str:
+    """Map contradiction type to appropriate rerun stage."""
+    stage_map = {
+        "taxonomy_fallback_mismatch": "synthesize-character-bibles",
+        "negative_term_contradiction": "synthesize-character-bibles",
+        "alias_render_contradiction": "run-world-refinement",
+        "renderability_prompt_contradiction": "run-prompt-preparation",
+        "missing_taxonomy_snapshot": "synthesize-character-bibles",
+        "taxonomy_missing": "synthesize-character-taxonomy",
+        "low_confidence_taxonomy": "synthesize-character-taxonomy"
+    }
+    return stage_map.get(contradiction_type, "unknown")
+
+
+def _grader_character(payload: dict[str, Any]) -> tuple[int, int, int, int, int, list[str], list[dict]]:
     completeness = _weighted_presence(
         payload,
         {
@@ -455,6 +567,24 @@ def _grader_character(payload: dict[str, Any]) -> tuple[int, int, int, int, int,
     consistency = _clamp(100.0 - len(payload.get("unresolved_ambiguities", [])) * 12 - _count_review_flags(payload) * 6)
     prompt_readiness = _clamp(completeness * 0.55 + evidence_support * 0.2 + (100 - inference_load) * 0.25)
     notes = []
+    contradictions = []
+    
+    taxonomy = payload.get("entity_taxonomy", {})
+    fallback = payload.get("visual_production_fallback", {})
+    alias_resolution = payload.get("alias_resolution", {})
+    
+    if taxonomy and fallback:
+        contradictions.extend(_taxonomy_fallback_contradictions(taxonomy, fallback))
+        contradictions.extend(_negative_term_contradictions(taxonomy, fallback))
+    
+    if taxonomy and taxonomy.get("confidence") == "low" and not payload.get("review_notes"):
+        contradictions.append({
+            "type": "low_confidence_taxonomy",
+            "severity": "medium",
+            "detail": "Taxonomy confidence=low but no review notes",
+            "rerun_stage": "synthesize-character-taxonomy"
+        })
+    
     if _count_unknown_like(payload.get("stable_visual_summary")):
         notes.append("stable_visual_summary is unresolved")
     if _count_unknown_like(payload.get("costume_signature")):
@@ -465,7 +595,11 @@ def _grader_character(payload: dict[str, Any]) -> tuple[int, int, int, int, int,
         notes.append("review flags present")
     if len(payload.get("unresolved_ambiguities", [])) > 0:
         notes.append(f"{len(payload.get('unresolved_ambiguities', []))} unresolved ambiguities")
-    return completeness, evidence_support, consistency, prompt_readiness, inference_load, notes
+    
+    for c in contradictions:
+        notes.append(c["detail"])
+    
+    return completeness, evidence_support, consistency, prompt_readiness, inference_load, notes, contradictions
 
 
 def _focus_fields_from_notes(family: str, notes: list[str]) -> list[str]:
@@ -807,17 +941,20 @@ def _make_grade_record(
         display_name = artifact_id
 
     if family.family == "character_bible" and isinstance(payload, dict):
-        completeness, evidence_support, consistency, prompt_readiness, inference_load, notes = _grader_character(payload)
+        completeness, evidence_support, consistency, prompt_readiness, inference_load, notes, contradictions = _grader_character(payload)
         chapter_mentions = [str(item) for item in payload.get("chapter_mentions", []) if _is_meaningful_string(item)]
     elif family.family == "environment_bible" and isinstance(payload, dict):
         completeness, evidence_support, consistency, prompt_readiness, inference_load, notes = _grader_environment(payload)
         chapter_mentions = [str(item) for item in payload.get("chapter_mentions", []) if _is_meaningful_string(item)]
+        contradictions = []
     elif family.family == "scene_contract" and isinstance(payload, dict):
         completeness, evidence_support, consistency, prompt_readiness, inference_load, notes = _grader_scene(payload)
         chapter_mentions = [str(payload.get("chapter_id", ""))] if _is_meaningful_string(payload.get("chapter_id")) else []
+        contradictions = []
     elif family.family == "shot_package" and isinstance(payload, dict):
         completeness, evidence_support, consistency, prompt_readiness, inference_load, notes = _grader_shot(payload)
         chapter_mentions = [str(payload.get("chapter_id", ""))] if _is_meaningful_string(payload.get("chapter_id")) else []
+        contradictions = []
     elif family.family == "dialogue_timeline" and isinstance(payload, (dict, list)):
         completeness, evidence_support, consistency, prompt_readiness, inference_load, notes = _grader_dialogue(payload, artifact_path=artifact_path)
         if isinstance(payload, dict):
@@ -825,15 +962,19 @@ def _make_grade_record(
         else:
             chapter_id = artifact_path.parent.parent.name[:5].upper() if artifact_path.parent.parent else ""
             chapter_mentions = [chapter_id] if chapter_id.startswith("CH") else []
+        contradictions = []
     elif family.family == "descriptor" and isinstance(payload, dict):
         completeness, evidence_support, consistency, prompt_readiness, inference_load, notes = _grader_descriptor(payload)
         chapter_mentions = [str(item) for item in payload.get("chapter_mentions", []) if _is_meaningful_string(item)]
+        contradictions = []
     elif family.family == "prompt_package" and isinstance(payload, str):
         completeness, evidence_support, consistency, prompt_readiness, inference_load, notes = _grader_prompt_package(payload)
         chapter_mentions = []
+        contradictions = []
     else:
         completeness, evidence_support, consistency, prompt_readiness, inference_load, notes = 0, 0, 0, 0, 100, ["unrecognized artifact shape"]
         chapter_mentions = []
+        contradictions = []
 
     if isinstance(payload, (dict, list)):
         fingerprint = _fingerprint_payload(payload)
@@ -845,8 +986,15 @@ def _make_grade_record(
     average = round((completeness + evidence_support + consistency + prompt_readiness + (100 - inference_load)) / 5)
     quality_score_10 = _score_10_from_score(average)
     grade_band = _band_from_score(average)
+    
+    high_severity_contradictions = [c for c in contradictions if c.get("severity") == "high"]
+    if high_severity_contradictions:
+        if grade_band in ["A", "B"]:
+            grade_band = "B+" if grade_band == "A" else "C"
+            quality_score_10 = min(quality_score_10, 7)
+    
     locked = _has_locked_fields(payload) if isinstance(payload, dict) else False
-    rerun_recommended = not locked and quality_score_10 <= 6
+    rerun_recommended = not locked and (quality_score_10 <= 6 or bool(high_severity_contradictions))
     reason_bits = list(notes)
     
     # Apply prompt package semantic caps
@@ -886,6 +1034,10 @@ def _make_grade_record(
     review_status = "locked" if locked else ("rerun" if rerun_recommended else "ok")
     rerun_reason = reason_bits
     dependency_refs = list(family.dependencies)
+    
+    rerun_stage_override = None
+    if high_severity_contradictions:
+        rerun_stage_override = high_severity_contradictions[0].get("rerun_stage")
 
     return QualityGradeRecord(
         family=family.family,
@@ -905,7 +1057,7 @@ def _make_grade_record(
         review_status=review_status,
         rerun_recommended=rerun_recommended,
         rerun_scope=family.rerun_scope if rerun_recommended else "",
-        rerun_stage="run-prompt-preparation" if (family.family == "prompt_package" and rerun_recommended) else (family.rerun_stage if rerun_recommended else ""),
+        rerun_stage="run-prompt-preparation" if (family.family == "prompt_package" and rerun_recommended) else (rerun_stage_override if rerun_stage_override else (family.rerun_stage if rerun_recommended else "")),
         rerun_reason=rerun_reason,
         dependency_refs=dependency_refs,
         evidence_refs=evidence_refs if isinstance(evidence_refs, list) else [],
