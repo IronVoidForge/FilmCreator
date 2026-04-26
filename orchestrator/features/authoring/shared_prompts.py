@@ -112,6 +112,11 @@ def character_extraction_user_prompt(
         "clarification_required",
         "clarification_reason",
         "clarification_question",
+        "character_type_hint",
+        "morphology_hint",
+        "scale_hint",
+        "renderability_hint",
+        "confidence",
     ]
     body_requirements = [
         "- if a character does not have enough physical or visual description in the supplied material to support dependable later image generation, set manual_description_required to true",
@@ -126,6 +131,18 @@ def character_extraction_user_prompt(
         "- every character record must include a non-empty markdown section",
         "- if details are sparse, still write a short markdown file explaining the uncertainty instead of omitting markdown",
         "- never omit the markdown section for any character record",
+        "",
+        "Entity taxonomy rules:",
+        "- identify what the entity itself appears to be, not what it wears or rides",
+        "- do not confuse nearby/associated things with the entity",
+        "- if source says a person rides a mount, classify the person separately from the mount",
+        "- if source says a character wears foreign/alien/exotic clothing, do not change their species/type",
+        "- character_type_hint: human, humanoid_nonhuman, animal, creature, group, object, machine, abstract, unknown",
+        "- morphology_hint: biped, quadruped, multi_legged, serpentine, winged, constructed, amorphous, unknown",
+        "- scale_hint: tiny, small, human_scale, large, giant, unknown",
+        "- renderability_hint: renderable, context_only, alias_or_role, unknown",
+        "- confidence: 0.0 to 1.0 for each type/morphology/renderability hint",
+        "- if uncertain, use unknown and explain the missing evidence in the markdown section",
     ]
     if degraded:
         body_requirements = [
@@ -162,6 +179,11 @@ def character_extraction_user_prompt(
             "clarification_required: true",
             "clarification_reason: Needs identity clarification.",
             "clarification_question: What is the protagonist's physical form and origin?",
+            "character_type_hint: unknown",
+            "morphology_hint: unknown",
+            "scale_hint: unknown",
+            "renderability_hint: unknown",
+            "confidence: 0.3",
             "",
             "[[SECTION markdown]]",
             "# Protagonist",

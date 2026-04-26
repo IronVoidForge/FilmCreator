@@ -139,15 +139,57 @@ def _character_text(entry: dict[str, Any], bible_data: dict[str, Any], evidence_
     }
 
 
+def has_direct_identity_evidence(text: str, markers: list[str]) -> bool:
+    """Check if text contains direct identity evidence."""
+    return any(marker in text for marker in markers)
+
+
+def has_associated_entity_evidence(text: str, markers: list[str]) -> bool:
+    """Check if text mentions associated entities (not the subject itself).
+    
+    Returns True if the text describes the subject USING/WEARING/RIDING something,
+    not if the subject IS that thing.
+    """
+    # Associated evidence uses specific patterns that indicate the subject is NOT the thing
+    association_patterns = [
+        "riding a", "riding an", "riding the", "riding on",
+        "mounted on", "dismount from", "dismounts from",
+        "followed by", "carrying a", "carrying an", "carrying the",
+        "wearing a", "wearing an", "wearing the", "wearing exotic"
+    ]
+    return any(pattern in text for pattern in association_patterns)
+
+
+def conservative_emergency_bucket(entry: dict[str, Any], bible_data: dict[str, Any], text: dict[str, str]) -> str:
+    """Return conservative bucket when evidence is weak or mixed."""
+    # If entity_kind explicitly says non-renderable, use context_only
+    entity_kind = str(entry.get("entity_kind", "individual")).strip().lower()
+    if entity_kind in {"memory", "reference", "deceased", "abstract"}:
+        return "context_only"
+    
+    # If canon has active visual evidence, don't default to context_only
+    canon_text = text["canon_text"]
+    active_visual_markers = ["movement", "visual", "appearance", "build", "frame", "posture"]
+    if any(marker in canon_text for marker in active_visual_markers):
+        return "unknown_reference"
+    
+    # Otherwise, weak evidence = unknown_reference
+    return "unknown_reference"
+
+
 def fallback_bucket_for_character(entry: dict[str, Any], bible_data: dict[str, Any], evidence_summary: list[str]) -> tuple[str, str | None]:
     """Determine the fallback bucket for a character based on entity kind and evidence.
+    
+    Conservative rules:
+    - Only classify as non-human/quadruped/creature if direct evidence says the entity IS that type
+    - Associated evidence (riding X, wearing Y) does not redefine the entity
+    - Weak/mixed evidence returns unknown_reference
+    - Alias redirects must come from structured metadata, not hardcoded IDs
     
     Returns:
         tuple: (bucket_name, alias_redirect_target or None)
     """
     entity_kind = str(entry.get("entity_kind", "individual")).strip().lower()
-    char_id = str(entry.get("canonical_id", "")).strip().lower()
-    display_name = str(entry.get("display_name", "")).strip().lower()
     
     text = _character_text(entry, bible_data, evidence_summary)
     id_text = text["id_text"]
@@ -155,74 +197,100 @@ def fallback_bucket_for_character(entry: dict[str, Any], bible_data: dict[str, A
     evidence_text = text["evidence_text"]
     all_text = text["all_text"]
     
-    # 1. Alias/role redirect - check ID first
-    if char_id == "protagonist" or display_name == "protagonist" or "protagonist" in id_text:
-        return ("alias_redirect", "john_carter")
+    # 1. Alias redirect - only from explicit metadata
+    alias_metadata = bible_data.get("alias_redirect_target")
+    if alias_metadata and not is_unknownish(alias_metadata):
+        return ("alias_redirect", str(alias_metadata))
     
-    # 2. Group/horde
+    # 2. Group/horde - entity_kind or direct collective evidence
     if entity_kind in {"group", "collective", "horde"}:
         return ("group_or_horde", None)
-    if any(marker in all_text for marker in [" warriors", "horde", "collective"]):
+    group_markers = ["group", "horde", "collective", "warriors", "soldiers"]
+    if has_direct_identity_evidence(id_text, group_markers):
         return ("group_or_horde", None)
     
-    # 3. Context-only - check entity kind and canon renderability
+    # 3. Context-only - entity_kind or explicit non-renderable metadata
     if entity_kind in {"memory", "reference", "deceased", "abstract"}:
         return ("context_only", None)
     
-    # Context-only only if canon or evidence says non-renderable
-    context_only_markers = ["dead", "deceased", "corpse", "memory of", "mentioned only", "reference only"]
-    if any(marker in id_text or marker in canon_text or marker in evidence_text for marker in context_only_markers):
-        # But not if canon has active visual renderability
-        active_markers = [
-            "earthman", "naked", "agile", "leaping", "warrior", "martian", "chieftain",
-            "leader", "princess", "four-armed", "humanoid", "movement", "visual"
-        ]
-        if not any(marker in canon_text for marker in active_markers):
+    context_only_metadata = bible_data.get("renderable", True)
+    if context_only_metadata is False:
+        return ("context_only", None)
+    
+    # Context-only if direct evidence says deceased/non-renderable AND no active visual evidence
+    context_markers = ["deceased", "corpse", "mummified", "memory of", "mentioned only", "reference only"]
+    if has_direct_identity_evidence(canon_text, context_markers) or has_direct_identity_evidence(id_text, context_markers):
+        active_markers = ["movement", "visual", "agile", "leaping", "posture", "build", "frame"]
+        if not has_direct_identity_evidence(canon_text, active_markers):
             return ("context_only", None)
     
-    # 4. Quadruped - entity itself must be mount/beast (check before humanoid)
-    quadruped_id_markers = ["mount", "mounts", "watchdog", "watch_dog", "woola", "hound", "calot", "thoat"]
-    # Canon markers that indicate the entity IS a mount/beast, not just uses one
-    quadruped_canon_markers = ["riding beast", "eight-legged mount", "eight-legged beast", "dog", "hound", "beast", "quadruped"]
-    
-    # Only classify as quadruped if ID or canon says it's a mount/beast
-    # But NOT if canon says "dismounts from" or "mounted on" (that means they USE a mount)
-    is_mount_user = "dismount" in canon_text or "mounted on" in canon_text or "riding" in canon_text
-    
-    if not is_mount_user:
-        if any(marker in id_text for marker in quadruped_id_markers) or \
-           any(marker in canon_text for marker in quadruped_canon_markers):
-            if any(marker in all_text for marker in ["large", "massive", "colossal"]):
+    # 4. Quadruped - entity itself must BE a mount/beast, not just use one
+    # Check for associated evidence first (disqualifies quadruped classification)
+    if has_associated_entity_evidence(canon_text, ["mount", "beast", "animal"]):
+        # This entity USES a mount, so it's not a mount itself
+        pass
+    else:
+        # Check if entity IS a mount/beast
+        quadruped_id_markers = ["mount", "mounts", "watchdog", "hound", "dog"]
+        quadruped_canon_markers = ["riding beast", "eight-legged mount", "eight-legged beast", "four-legged", "quadruped", "beast"]
+        
+        if has_direct_identity_evidence(id_text, quadruped_id_markers) or \
+           has_direct_identity_evidence(canon_text, quadruped_canon_markers):
+            size_markers = ["large", "massive", "colossal"]
+            if has_direct_identity_evidence(all_text, size_markers):
                 return ("large_quadruped", None)
             return ("small_quadruped", None)
     
-    # 5. Non-human humanoid - check after quadruped but before human
-    martian_markers = ["martian", "thark", "green martian", "red martian", "barsoom", "helium", "four-armed", "four armed", "15ft", "15 ft"]
-    humanoid_markers = [" humanoid", "warrior", "chieftain", "leader", "princess", "officer", "jed", "person"]
+    # 5. Non-human humanoid vs Human - check identity_baseline first
+    # If identity_baseline explicitly says "alien" or has non-human markers, prioritize that
+    identity_baseline = str(bible_data.get("identity_baseline", "")).lower()
+    physical_build = str(bible_data.get("physical_build", "")).lower()
+    identity_canon_text = f"{identity_baseline} {physical_build}"
     
-    if any(marker in id_text or marker in canon_text or marker in evidence_text for marker in martian_markers):
-        if any(marker in id_text or marker in canon_text or marker in evidence_text for marker in humanoid_markers):
-            return ("non_human_humanoid", None)
-        # Martian without explicit humanoid markers - still non_human_humanoid if not beast
-        if not any(marker in id_text or marker in canon_text or marker in evidence_text for marker in ["beast", "animal", "mount", "creature"]):
+    non_human_markers = ["alien", "non-human", "non human", "four-armed", "four armed", "tusks", "green skin", "red skin", "olive-green skin"]
+    humanoid_markers = ["humanoid", "bipedal", "upright", "warrior", "leader", "officer"]
+    human_markers = ["human", "man", "woman", "earthman", "earthling"]
+    
+    # Check for non-human markers in identity
+    has_non_human_identity = has_direct_identity_evidence(identity_canon_text, non_human_markers) or has_direct_identity_evidence(id_text, non_human_markers)
+    
+    # Check for explicit height markers that suggest non-human scale
+    height_markers = ["15ft", "15 ft", "12ft", "12 ft", "10ft", "10 ft"]
+    has_non_human_scale = has_direct_identity_evidence(canon_text, height_markers)
+    
+    # Check for humanoid markers
+    has_humanoid = has_direct_identity_evidence(canon_text, humanoid_markers) or has_direct_identity_evidence(id_text, humanoid_markers)
+    
+    # Check for human markers
+    has_human = has_direct_identity_evidence(canon_text, human_markers) or has_direct_identity_evidence(id_text, human_markers)
+    
+    # If identity says alien/non-human AND has humanoid markers, classify as non_human_humanoid
+    if (has_non_human_identity or has_non_human_scale) and has_humanoid:
+        # But not if explicitly beast/animal
+        beast_markers = ["beast", "animal", "creature"]
+        if not has_direct_identity_evidence(canon_text, beast_markers):
             return ("non_human_humanoid", None)
     
-    # 6. Human
-    human_markers = ["human", "earthman", "earthling", "american", "confederate", "frontier", "cavalry", "captain", "virginia"]
-    if any(marker in id_text or marker in canon_text or marker in evidence_text for marker in human_markers):
+    # If identity says human, classify as human
+    if has_human:
         # But not if explicitly non-humanoid
         if "non-humanoid" not in canon_text and "non-humanoid" not in id_text:
             return ("human", None)
     
-    # 7. Creature
-    creature_markers = ["creature", "beast", "animal", "calot", "ape", "bull ape", "colossal", "multi-legged"]
-    if any(marker in id_text or marker in canon_text or marker in evidence_text for marker in creature_markers):
-        if any(marker in all_text for marker in ["large", "massive", "colossal", "giant"]):
-            return ("large_creature", None)
-        return ("small_creature", None)
+    # 7. Creature - entity itself must BE a creature/beast
+    if has_associated_entity_evidence(canon_text, ["creature", "beast", "animal"]):
+        # This entity is associated with creatures, not a creature itself
+        pass
+    else:
+        creature_markers = ["creature", "beast", "animal", "ape", "multi-legged"]
+        if has_direct_identity_evidence(canon_text, creature_markers) or has_direct_identity_evidence(id_text, creature_markers):
+            size_markers = ["large", "massive", "colossal", "giant"]
+            if has_direct_identity_evidence(all_text, size_markers):
+                return ("large_creature", None)
+            return ("small_creature", None)
     
-    # 8. Unknown reference
-    return ("unknown_reference", None)
+    # 8. Conservative fallback - weak or mixed evidence
+    return conservative_emergency_bucket(entry, bible_data, text), None
 
 
 def fallback_result_audit(fallback: dict[str, Any]) -> dict[str, Any]:

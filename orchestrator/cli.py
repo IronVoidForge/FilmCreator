@@ -4,6 +4,7 @@ import argparse
 import json
 
 from .character_bible import run_character_bible_synthesis
+from .character_taxonomy import run_character_taxonomy
 from .character_references import (
     approve_character_reference_candidate,
     lock_character_reference_candidate,
@@ -192,6 +193,11 @@ def build_parser() -> argparse.ArgumentParser:
     r.add_argument("--no-llm", action="store_true")
     r.add_argument("--apply", action="store_true")
 
+    ct = subparsers.add_parser("synthesize-character-taxonomy")
+    ct.add_argument("project_slug")
+    ct.add_argument("--force", action="store_true")
+    ct.add_argument("--limit", type=int, default=None)
+
     dp = subparsers.add_parser("run-downstream-pipeline")
     dp.add_argument("project_slug")
     dp.add_argument("--chapters", type=str, default=None)
@@ -286,6 +292,8 @@ def main() -> None:
         summary = run_selective_reruns(args.project_slug, execute=args.execute)
     elif args.command == "refine-identities":
         summary = run_identity_refinement(args.project_slug, use_llm=not args.no_llm, apply_merge=args.apply)
+    elif args.command == "synthesize-character-taxonomy":
+        summary = run_character_taxonomy(args.project_slug, force=args.force, limit=args.limit)
     elif args.command == "run-downstream-pipeline":
         summary = run_downstream_pipeline(args.project_slug, chapters=args.chapters, start_phase=args.start_phase, pipeline_key=args.pipeline_key, resume=not args.no_resume, use_llm=not args.no_llm, shot_variants=args.shot_variants)
     elif args.command == "summarize-downstream-run":
@@ -294,7 +302,10 @@ def main() -> None:
         parser.error(f"Unknown command: {args.command}")
         return
 
-    print(json.dumps(summary.to_dict(), indent=2))
+    if hasattr(summary, 'to_dict'):
+        print(json.dumps(summary.to_dict(), indent=2))
+    else:
+        print(json.dumps(summary, indent=2))
 
 
 if __name__ == "__main__":
