@@ -81,116 +81,259 @@ if "%RESUME_STAGE%"=="complete" (
     exit /b 0
 )
 
+set "RUN_STORY_ANALYSIS=0"
+set "RUN_CHARACTER_TAXONOMY=0"
+set "RUN_IDENTITY_REFINEMENT=0"
+set "RUN_CHARACTER_BIBLES=0"
+set "RUN_ENVIRONMENT_BIBLES=0"
+set "RUN_VISUAL_FALLBACKS=0"
+set "RUN_SCENE_CONTRACTS=0"
+set "RUN_SCENE_BINDINGS=0"
+set "RUN_SHOT_PACKAGES=0"
+set "RUN_DIALOGUE_TIMELINE=0"
+set "RUN_DESCRIPTOR_ENRICHMENT=0"
+set "RUN_PROMPT_PREPARATION=0"
+set "RUN_QUALITY_GRADING=0"
+
+if "%RESUME_STAGE%"=="story_analysis" (
+    set "RUN_STORY_ANALYSIS=1"
+    set "RUN_CHARACTER_TAXONOMY=1"
+    set "RUN_IDENTITY_REFINEMENT=1"
+    set "RUN_CHARACTER_BIBLES=1"
+    set "RUN_ENVIRONMENT_BIBLES=1"
+    set "RUN_VISUAL_FALLBACKS=1"
+    set "RUN_SCENE_CONTRACTS=1"
+    set "RUN_SCENE_BINDINGS=1"
+    set "RUN_SHOT_PACKAGES=1"
+    set "RUN_DIALOGUE_TIMELINE=1"
+    set "RUN_DESCRIPTOR_ENRICHMENT=1"
+    set "RUN_PROMPT_PREPARATION=1"
+    set "RUN_QUALITY_GRADING=1"
+)
+
+if "%RESUME_STAGE%"=="character_taxonomy" (
+    set "RUN_CHARACTER_TAXONOMY=1"
+    set "RUN_IDENTITY_REFINEMENT=1"
+    set "RUN_CHARACTER_BIBLES=1"
+    set "RUN_ENVIRONMENT_BIBLES=1"
+    set "RUN_VISUAL_FALLBACKS=1"
+    set "RUN_SCENE_CONTRACTS=1"
+    set "RUN_SCENE_BINDINGS=1"
+    set "RUN_SHOT_PACKAGES=1"
+    set "RUN_DIALOGUE_TIMELINE=1"
+    set "RUN_DESCRIPTOR_ENRICHMENT=1"
+    set "RUN_PROMPT_PREPARATION=1"
+    set "RUN_QUALITY_GRADING=1"
+)
+
+if "%RESUME_STAGE%"=="identity_refinement" (
+    set "RUN_IDENTITY_REFINEMENT=1"
+    set "RUN_CHARACTER_BIBLES=1"
+    set "RUN_ENVIRONMENT_BIBLES=1"
+    set "RUN_VISUAL_FALLBACKS=1"
+    set "RUN_SCENE_CONTRACTS=1"
+    set "RUN_SCENE_BINDINGS=1"
+    set "RUN_SHOT_PACKAGES=1"
+    set "RUN_DIALOGUE_TIMELINE=1"
+    set "RUN_DESCRIPTOR_ENRICHMENT=1"
+    set "RUN_PROMPT_PREPARATION=1"
+    set "RUN_QUALITY_GRADING=1"
+)
+
+if "%RESUME_STAGE%"=="character_bibles" (
+    set "RUN_CHARACTER_BIBLES=1"
+    set "RUN_ENVIRONMENT_BIBLES=1"
+    set "RUN_VISUAL_FALLBACKS=1"
+    set "RUN_SCENE_CONTRACTS=1"
+    set "RUN_SCENE_BINDINGS=1"
+    set "RUN_SHOT_PACKAGES=1"
+    set "RUN_DIALOGUE_TIMELINE=1"
+    set "RUN_DESCRIPTOR_ENRICHMENT=1"
+    set "RUN_PROMPT_PREPARATION=1"
+    set "RUN_QUALITY_GRADING=1"
+)
+
+if "%RESUME_STAGE%"=="environment_bibles" (
+    set "RUN_ENVIRONMENT_BIBLES=1"
+    set "RUN_VISUAL_FALLBACKS=1"
+    set "RUN_SCENE_CONTRACTS=1"
+    set "RUN_SCENE_BINDINGS=1"
+    set "RUN_SHOT_PACKAGES=1"
+    set "RUN_DIALOGUE_TIMELINE=1"
+    set "RUN_DESCRIPTOR_ENRICHMENT=1"
+    set "RUN_PROMPT_PREPARATION=1"
+    set "RUN_QUALITY_GRADING=1"
+)
+
+if "%RESUME_STAGE%"=="visual_fallbacks" (
+    set "RUN_VISUAL_FALLBACKS=1"
+    set "RUN_SCENE_CONTRACTS=1"
+    set "RUN_SCENE_BINDINGS=1"
+    set "RUN_SHOT_PACKAGES=1"
+    set "RUN_DIALOGUE_TIMELINE=1"
+    set "RUN_DESCRIPTOR_ENRICHMENT=1"
+    set "RUN_PROMPT_PREPARATION=1"
+    set "RUN_QUALITY_GRADING=1"
+)
+
+if "%RESUME_STAGE%"=="scene_contracts" (
+    set "RUN_SCENE_CONTRACTS=1"
+    set "RUN_SCENE_BINDINGS=1"
+    set "RUN_SHOT_PACKAGES=1"
+    set "RUN_DIALOGUE_TIMELINE=1"
+    set "RUN_DESCRIPTOR_ENRICHMENT=1"
+    set "RUN_PROMPT_PREPARATION=1"
+    set "RUN_QUALITY_GRADING=1"
+)
+
+if "%RESUME_STAGE%"=="scene_bindings" (
+    set "RUN_SCENE_BINDINGS=1"
+    set "RUN_SHOT_PACKAGES=1"
+    set "RUN_DIALOGUE_TIMELINE=1"
+    set "RUN_DESCRIPTOR_ENRICHMENT=1"
+    set "RUN_PROMPT_PREPARATION=1"
+    set "RUN_QUALITY_GRADING=1"
+)
+
+if "%RESUME_STAGE%"=="shot_packages" (
+    set "RUN_SHOT_PACKAGES=1"
+    set "RUN_DIALOGUE_TIMELINE=1"
+    set "RUN_DESCRIPTOR_ENRICHMENT=1"
+    set "RUN_PROMPT_PREPARATION=1"
+    set "RUN_QUALITY_GRADING=1"
+)
+
+if "%RESUME_STAGE%"=="dialogue_timeline" (
+    set "RUN_DIALOGUE_TIMELINE=1"
+    set "RUN_DESCRIPTOR_ENRICHMENT=1"
+    set "RUN_PROMPT_PREPARATION=1"
+    set "RUN_QUALITY_GRADING=1"
+)
+
+if "%RESUME_STAGE%"=="descriptor_enrichment" (
+    set "RUN_DESCRIPTOR_ENRICHMENT=1"
+    set "RUN_PROMPT_PREPARATION=1"
+    set "RUN_QUALITY_GRADING=1"
+)
+
+if "%RESUME_STAGE%"=="prompt_preparation" (
+    set "RUN_PROMPT_PREPARATION=1"
+    set "RUN_QUALITY_GRADING=1"
+)
+
+if "%RESUME_STAGE%"=="quality_grading" (
+    set "RUN_QUALITY_GRADING=1"
+)
+
+if /I "%MODE%"=="PLAN_ONLY" (
+    call :print_plan
+    exit /b %ERRORLEVEL%
+)
+
 echo.
 echo Resuming from stage: %RESUME_STAGE%
 echo.
 >> "%LOG_FILE%" echo Resuming from stage: %RESUME_STAGE%
 >> "%LATEST_LOG%" echo Resuming from stage: %RESUME_STAGE%
 
-if "%RESUME_STAGE%"=="story_analysis" goto :stage_story_analysis
-if "%RESUME_STAGE%"=="character_taxonomy" goto :stage_character_taxonomy
-if "%RESUME_STAGE%"=="identity_refinement" goto :stage_identity_refinement
-if "%RESUME_STAGE%"=="character_bibles" goto :stage_character_bibles
-if "%RESUME_STAGE%"=="environment_bibles" goto :stage_environment_bibles
-if "%RESUME_STAGE%"=="visual_fallbacks" goto :stage_visual_fallbacks
-if "%RESUME_STAGE%"=="scene_contracts" goto :stage_scene_contracts
-if "%RESUME_STAGE%"=="scene_bindings" goto :stage_scene_bindings
-if "%RESUME_STAGE%"=="shot_packages" goto :stage_shot_packages
-if "%RESUME_STAGE%"=="dialogue_timeline" goto :stage_dialogue_timeline
-if "%RESUME_STAGE%"=="descriptor_enrichment" goto :stage_descriptor_enrichment
-if "%RESUME_STAGE%"=="prompt_preparation" goto :stage_prompt_preparation
-if "%RESUME_STAGE%"=="quality_grading" goto :stage_quality_grading
-
-echo Unknown resume stage: %RESUME_STAGE%
-goto :end_with_error
-
-:stage_story_analysis
-call :lm_studio_check
-if errorlevel 1 goto :end_with_error
-
-call :analyze_book
-if errorlevel 1 goto :end_with_error
-
-:stage_character_taxonomy
-call :run_step "03 Character taxonomy" "python -m orchestrator synthesize-character-taxonomy ""%PROJECT_SLUG%"" --force"
-if errorlevel 1 goto :end_with_error
-
-:stage_identity_refinement
-call :run_step "04 Identity refinement plan" "python -m orchestrator refine-identities ""%PROJECT_SLUG%"""
-if errorlevel 1 goto :end_with_error
-
-call :run_step "05 Identity refinement apply" "python -m orchestrator refine-identities ""%PROJECT_SLUG%"" --apply"
-if errorlevel 1 goto :end_with_error
-
-:stage_character_bibles
-call :run_step "06 Character bibles" "python -m orchestrator synthesize-character-bibles ""%PROJECT_SLUG%"" --force"
-if errorlevel 1 goto :end_with_error
-
-:stage_environment_bibles
-call :run_step "07 Environment bibles" "python -m orchestrator synthesize-environment-bibles ""%PROJECT_SLUG%"" --force"
-if errorlevel 1 goto :end_with_error
-
-:stage_visual_fallbacks
-call :run_step "08 Visual fallbacks" "python -m orchestrator synthesize-visual-fallbacks ""%PROJECT_SLUG%"" --force"
-if errorlevel 1 goto :end_with_error
-
-:stage_scene_contracts
-if "%CHAPTERS%"=="" (
-    call :run_step "09 Scene contracts" "python -m orchestrator synthesize-scene-contracts ""%PROJECT_SLUG%"" --force"
+if "%RUN_STORY_ANALYSIS%"=="1" (
+    call :lm_studio_check
     if errorlevel 1 goto :end_with_error
-) else (
-    call :run_step "09 Scene contracts" "python -m orchestrator synthesize-scene-contracts ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+    call :analyze_book
     if errorlevel 1 goto :end_with_error
 )
 
-:stage_scene_bindings
-if "%CHAPTERS%"=="" (
-    call :run_step "10 Scene bindings" "python -m orchestrator synthesize-scene-bindings ""%PROJECT_SLUG%"" --force"
-    if errorlevel 1 goto :end_with_error
-) else (
-    call :run_step "10 Scene bindings" "python -m orchestrator synthesize-scene-bindings ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+if "%RUN_CHARACTER_TAXONOMY%"=="1" (
+    call :run_step "03 Character taxonomy" "python -m orchestrator synthesize-character-taxonomy ""%PROJECT_SLUG%"" --force"
     if errorlevel 1 goto :end_with_error
 )
 
-:stage_shot_packages
-if "%CHAPTERS%"=="" (
-    call :run_step "11 Shot packages" "python -m orchestrator synthesize-shot-packages ""%PROJECT_SLUG%"" --force"
+if "%RUN_IDENTITY_REFINEMENT%"=="1" (
+    call :run_step "04 Identity refinement plan" "python -m orchestrator refine-identities ""%PROJECT_SLUG%"""
     if errorlevel 1 goto :end_with_error
-) else (
-    call :run_step "11 Shot packages" "python -m orchestrator synthesize-shot-packages ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+    call :run_step "05 Identity refinement apply" "python -m orchestrator refine-identities ""%PROJECT_SLUG%"" --apply"
     if errorlevel 1 goto :end_with_error
 )
 
-:stage_dialogue_timeline
-if "%CHAPTERS%"=="" (
-    call :run_step "12 Dialogue timeline" "python -m orchestrator synthesize-dialogue-timeline ""%PROJECT_SLUG%"" --force"
-    if errorlevel 1 goto :end_with_error
-) else (
-    call :run_step "12 Dialogue timeline" "python -m orchestrator synthesize-dialogue-timeline ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+if "%RUN_CHARACTER_BIBLES%"=="1" (
+    call :run_step "06 Character bibles" "python -m orchestrator synthesize-character-bibles ""%PROJECT_SLUG%"" --force"
     if errorlevel 1 goto :end_with_error
 )
 
-:stage_descriptor_enrichment
-if "%CHAPTERS%"=="" (
-    call :run_step "13 Descriptor enrichment" "python -m orchestrator synthesize-descriptor-enrichment ""%PROJECT_SLUG%"" --force"
-    if errorlevel 1 goto :end_with_error
-) else (
-    call :run_step "13 Descriptor enrichment" "python -m orchestrator synthesize-descriptor-enrichment ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+if "%RUN_ENVIRONMENT_BIBLES%"=="1" (
+    call :run_step "07 Environment bibles" "python -m orchestrator synthesize-environment-bibles ""%PROJECT_SLUG%"" --force"
     if errorlevel 1 goto :end_with_error
 )
 
-:stage_prompt_preparation
-if "%CHAPTERS%"=="" (
-    call :run_step "14 Prompt preparation" "python -m orchestrator synthesize-prompt-preparation ""%PROJECT_SLUG%"" --force"
-    if errorlevel 1 goto :end_with_error
-) else (
-    call :run_step "14 Prompt preparation" "python -m orchestrator synthesize-prompt-preparation ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+if "%RUN_VISUAL_FALLBACKS%"=="1" (
+    call :run_step "08 Visual fallbacks" "python -m orchestrator synthesize-visual-fallbacks ""%PROJECT_SLUG%"" --force"
     if errorlevel 1 goto :end_with_error
 )
 
-:stage_quality_grading
-call :run_step "15 Quality grading" "python -m orchestrator grade-artifacts ""%PROJECT_SLUG%"""
-if errorlevel 1 goto :end_with_error
+if "%RUN_SCENE_CONTRACTS%"=="1" (
+    if "%CHAPTERS%"=="" (
+        call :run_step "09 Scene contracts" "python -m orchestrator synthesize-scene-contracts ""%PROJECT_SLUG%"" --force"
+        if errorlevel 1 goto :end_with_error
+    ) else (
+        call :run_step "09 Scene contracts" "python -m orchestrator synthesize-scene-contracts ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+        if errorlevel 1 goto :end_with_error
+    )
+)
+
+if "%RUN_SCENE_BINDINGS%"=="1" (
+    if "%CHAPTERS%"=="" (
+        call :run_step "10 Scene bindings" "python -m orchestrator synthesize-scene-bindings ""%PROJECT_SLUG%"" --force"
+        if errorlevel 1 goto :end_with_error
+    ) else (
+        call :run_step "10 Scene bindings" "python -m orchestrator synthesize-scene-bindings ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+        if errorlevel 1 goto :end_with_error
+    )
+)
+
+if "%RUN_SHOT_PACKAGES%"=="1" (
+    if "%CHAPTERS%"=="" (
+        call :run_step "11 Shot packages" "python -m orchestrator synthesize-shot-packages ""%PROJECT_SLUG%"" --force"
+        if errorlevel 1 goto :end_with_error
+    ) else (
+        call :run_step "11 Shot packages" "python -m orchestrator synthesize-shot-packages ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+        if errorlevel 1 goto :end_with_error
+    )
+)
+
+if "%RUN_DIALOGUE_TIMELINE%"=="1" (
+    if "%CHAPTERS%"=="" (
+        call :run_step "12 Dialogue timeline" "python -m orchestrator synthesize-dialogue-timeline ""%PROJECT_SLUG%"" --force"
+        if errorlevel 1 goto :end_with_error
+    ) else (
+        call :run_step "12 Dialogue timeline" "python -m orchestrator synthesize-dialogue-timeline ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+        if errorlevel 1 goto :end_with_error
+    )
+)
+
+if "%RUN_DESCRIPTOR_ENRICHMENT%"=="1" (
+    if "%CHAPTERS%"=="" (
+        call :run_step "13 Descriptor enrichment" "python -m orchestrator synthesize-descriptor-enrichment ""%PROJECT_SLUG%"" --force"
+        if errorlevel 1 goto :end_with_error
+    ) else (
+        call :run_step "13 Descriptor enrichment" "python -m orchestrator synthesize-descriptor-enrichment ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+        if errorlevel 1 goto :end_with_error
+    )
+)
+
+if "%RUN_PROMPT_PREPARATION%"=="1" (
+    if "%CHAPTERS%"=="" (
+        call :run_step "14 Prompt preparation" "python -m orchestrator synthesize-prompt-preparation ""%PROJECT_SLUG%"" --force"
+        if errorlevel 1 goto :end_with_error
+    ) else (
+        call :run_step "14 Prompt preparation" "python -m orchestrator synthesize-prompt-preparation ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+        if errorlevel 1 goto :end_with_error
+    )
+)
+
+if "%RUN_QUALITY_GRADING%"=="1" (
+    call :run_step "15 Quality grading" "python -m orchestrator grade-artifacts ""%PROJECT_SLUG%"""
+    if errorlevel 1 goto :end_with_error
+)
 
 echo.
 echo ========================================
@@ -373,6 +516,70 @@ echo ========================================
 >> "%LOG_FILE%" echo FAILED: !STEP_NAME! with exit code !EXIT_CODE!
 >> "%LATEST_LOG%" echo FAILED: !STEP_NAME! with exit code !EXIT_CODE!
 exit /b !EXIT_CODE!
+
+:print_plan
+echo.
+echo ========================================
+echo PLAN ONLY MODE
+echo Resume stage: %RESUME_STAGE%
+echo ========================================
+echo.
+
+if "%RUN_STORY_ANALYSIS%"=="1" (
+    echo 01 LM Studio connectivity check
+    echo 02 Multi-chapter analysis / chapter summaries / breakdowns
+)
+
+if "%RUN_CHARACTER_TAXONOMY%"=="1" (
+    echo 03 Character taxonomy
+)
+
+if "%RUN_IDENTITY_REFINEMENT%"=="1" (
+    echo 04 Identity refinement plan
+    echo 05 Identity refinement apply
+)
+
+if "%RUN_CHARACTER_BIBLES%"=="1" (
+    echo 06 Character bibles
+)
+
+if "%RUN_ENVIRONMENT_BIBLES%"=="1" (
+    echo 07 Environment bibles
+)
+
+if "%RUN_VISUAL_FALLBACKS%"=="1" (
+    echo 08 Visual fallbacks
+)
+
+if "%RUN_SCENE_CONTRACTS%"=="1" (
+    echo 09 Scene contracts
+)
+
+if "%RUN_SCENE_BINDINGS%"=="1" (
+    echo 10 Scene bindings
+)
+
+if "%RUN_SHOT_PACKAGES%"=="1" (
+    echo 11 Shot packages
+)
+
+if "%RUN_DIALOGUE_TIMELINE%"=="1" (
+    echo 12 Dialogue timeline
+)
+
+if "%RUN_DESCRIPTOR_ENRICHMENT%"=="1" (
+    echo 13 Descriptor enrichment
+)
+
+if "%RUN_PROMPT_PREPARATION%"=="1" (
+    echo 14 Prompt preparation
+)
+
+if "%RUN_QUALITY_GRADING%"=="1" (
+    echo 15 Quality grading
+)
+
+exit /b 0
 
 :fail
 echo Failed to enter repo root: %REPO_ROOT%
