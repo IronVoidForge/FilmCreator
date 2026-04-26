@@ -76,7 +76,30 @@ call :delete_dir "02_story_analysis\timelines"
 call :delete_dir "02_story_analysis\descriptors"
 call :delete_dir "02_story_analysis\grading"
 call :delete_dir "03_prompt_packages\prepared"
+echo.
+echo ----------------------------------------
+echo Verifying downstream cleanup...
+echo ----------------------------------------
 
+set "VERIFY_FAILED=0"
+
+call :verify_missing_dir "02_story_analysis\taxonomy"
+call :verify_missing_dir "02_story_analysis\world\refinement"
+call :verify_missing_file "02_story_analysis\world\global\VISUAL_FALLBACKS.json"
+call :verify_missing_dir "02_story_analysis\bibles"
+call :verify_missing_dir "02_story_analysis\contracts"
+call :verify_missing_dir "02_story_analysis\timelines"
+call :verify_missing_dir "02_story_analysis\descriptors"
+call :verify_missing_dir "02_story_analysis\grading"
+call :verify_missing_dir "03_prompt_packages\prepared"
+
+if not "%VERIFY_FAILED%"=="0" (
+    echo.
+    echo ERROR: Cleanup verification failed. Some downstream artifacts still exist.
+    echo Do not run resume until these are removed.
+    pause
+    exit /b 1
+)
 echo.
 echo Cleanup complete.
 echo Preserved chapter summaries and source story analysis.
@@ -124,7 +147,27 @@ if exist "%ABS%" (
     echo Skipping missing file: %ABS%
 )
 exit /b 0
+:verify_missing_dir
+set "REL=%~1"
+set "ABS=%PROJECT_DIR%\%REL%"
+if exist "%ABS%" (
+    echo STILL EXISTS DIR: %ABS%
+    set "VERIFY_FAILED=1"
+) else (
+    echo removed dir: %ABS%
+)
+exit /b 0
 
+:verify_missing_file
+set "REL=%~1"
+set "ABS=%PROJECT_DIR%\%REL%"
+if exist "%ABS%" (
+    echo STILL EXISTS FILE: %ABS%
+    set "VERIFY_FAILED=1"
+) else (
+    echo removed file: %ABS%
+)
+exit /b 0
 :fail_resolver
 echo Failed to resolve FilmCreator root.
 exit /b 1
