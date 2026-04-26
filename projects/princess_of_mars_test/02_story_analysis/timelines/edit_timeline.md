@@ -6,15 +6,15 @@
 ## CH002
 
 - chapter_title: CHAPTER II
-- scene_count: `0`
+- scene_count: `5`
 - dialogue_events: `0`
-- estimated_duration_seconds: `10`
-- transition_note: 
+- estimated_duration_seconds: `25`
+- transition_note: From alertness/combat readiness to helpless terror and sensory isolation. / Establish the transition from a terrestri...
 
 ## CH003
 
 - chapter_title: CHAPTER III
-- scene_count: `0`
+- scene_count: `5`
 - dialogue_events: `0`
-- estimated_duration_seconds: `10`
-- transition_note:
+- estimated_duration_seconds: `25`
+- transition_note: Confusion $\rightarrow$ Disorientation $\rightarrow$ Physical shock/Surprise. / Establish a diplomatic connection bet...
