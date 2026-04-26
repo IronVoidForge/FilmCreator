@@ -1,0 +1,324 @@
+{
+  "scene_id": "CH027_SC003",
+  "chapter_id": "CH027",
+  "scene_title": "SC003",
+  "purpose": "Provide the protagonist's \"Aha!\" moment and shift the mode from passive dying to active rescue.",
+  "summary": "As Dejah Thoris slips into a coma, John Carter experiences a sudden, intense mental breakthrough. He recalls nine specific \"thought waves\" that act as the keys to the atmosphere plant's locks.",
+  "emotional_arc": "Despair $\\rightarrow$ Intense Mental Clarity/Resolve.",
+  "production_intent": "Establish the protagonist's transition from grief-stricken passivity to decisive action through a sudden mental epiphany. The visual language must shift from lethargic despair to high-contrast clarity as the nine thought waves are realized.",
+  "scene_short_description": "A dying woman slips into unconsciousness while a man experiences a sudden, intense mental breakthrough.",
+  "scene_primary_scale_story_point": "Intimate character focus within the expansive Helium Palace gardens.",
+  "scene_required_anchor_catalog": [
+    "Dejah Thoris (unconscious body)",
+    "John Carter's eyes"
+  ],
+  "scene_start_state": "Heavy atmosphere of despair; Dejah Thoris losing consciousness.",
+  "scene_end_state": "Intense resolve; John Carter possesses the nine keys to the atmosphere plant.",
+  "dominant_action_line": "The mental realization of nine specific thought waves.",
+  "scene_spatial_layout": [
+    "Concentrated around the reclining figure of Dejah Thoris",
+    "Transition from physical proximity to internal mental space"
+  ],
+  "character_spatial_map": [
+    "john_carter positioned over or beside dejah_thoris",
+    "dejah_thoris prone and immobile"
+  ],
+  "environment_subzones": [
+    "helium_palace_sunken_gardens (garden floor)"
+  ],
+  "entry_vectors": [
+    "Subjects inherit entry logic from the prior scene or chapter transition."
+  ],
+  "exit_vectors": [
+    "Subjects exit or hand off toward the next story beat."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Physical decline triggers mental spark",
+    "BT002 -> BT003: Mental clarity crystallizes into actionable resolve"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH027/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Dejah Thoris (unconscious)",
+      "canonical_id": "dejah_thoris",
+      "display_name": "dejah_thoris",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH027/dejah_thoris.md",
+      "notes": "Direct registry match for 'dejah_thoris'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Sunken Garden",
+      "canonical_id": "helium_palace_sunken_gardens",
+      "display_name": "helium_palace_sunken_gardens",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 80,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH027/helium_palace_sunken_gardens.md",
+      "notes": "Chapter-local environment alias match for 'Sunken Garden' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Precise synchronization of Dejah Thoris coma onset with John Carter's mental epiphany"
+  ],
+  "visual_coverage_families": [
+    "Abstract/Surreal visual effects for thought waves",
+    "Extreme close-ups on eyes and face",
+    "High-contrast lighting shifts"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Dejah Thoris slips into a coma",
+      "purpose": "",
+      "action_start": "eyes fluttering",
+      "action_end": "complete stillness",
+      "active_subjects": [
+        "dejah_thoris"
+      ],
+      "passive_subjects": [
+        "john_carter"
+      ],
+      "spatial_context": "helium_palace_sunken_gardens",
+      "blocking_hint": "Dejah is prone/unconscious",
+      "environment_subzone": "garden floor",
+      "continuity_focus": "timing of coma onset",
+      "coverage_hint": "medium close on Dejah",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "John Carter experiences mental breakthrough",
+      "purpose": "",
+      "action_start": "staring in despair",
+      "action_end": "eyes snapping into focus",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "dejah_thoris"
+      ],
+      "spatial_context": "helium_palace_sunken_gardens",
+      "blocking_hint": "Carter reacts to Dejah's stillness",
+      "environment_subzone": "garden floor",
+      "continuity_focus": "epiphany timing relative to coma",
+      "coverage_hint": "extreme close-up on eyes",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Recall of nine thought waves",
+      "purpose": "",
+      "action_start": "mental void",
+      "action_end": "nine keys identified",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "internal mental space/surreal overlay",
+      "blocking_hint": "N/A",
+      "environment_subzone": "abstract",
+      "continuity_focus": "sequence of nine waves",
+      "coverage_hint": "abstract/surreal VFX",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish despair",
+      "planned_shot_moment_summary": "Dejah Thoris eyes closing as she slips into coma",
+      "primary_subject_seed": "dejah_thoris",
+      "secondary_subjects_seed": [
+        "john_carter"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "helium_palace_sunken_gardens",
+      "planned_shot_required_anchor_1": "dejah_thoris",
+      "planned_shot_scale_proof_detail": "physical lethargy vs garden scale",
+      "start_state_seed": "eyes fluttering",
+      "end_state_seed": "eyes closed/still",
+      "action_seed": "slipping into coma",
+      "blocking_seed": [
+        "lying prone"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "represent epiphany",
+      "planned_shot_moment_summary": "Sudden mental breakthrough and recall of thought waves",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "helium_palace_sunken_gardens",
+      "planned_shot_required_anchor_1": "john_carter's eyes",
+      "planned_shot_scale_proof_detail": "internal vs external reality",
+      "start_state_seed": "staring blankly",
+      "end_state_seed": "eyes widening/focusing",
+      "action_seed": "mental breakthrough",
+      "blocking_seed": [
+        "seated/kneeling near Dejah"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "visualize thought waves",
+      "planned_shot_moment_summary": "Abstract representation of the nine keys",
+      "primary_subject_seed": "thought_waves",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "helium_palace_sunken_gardens",
+      "planned_shot_required_anchor_1": "atmosphere_plant_locks",
+      "planned_shot_scale_proof_detail": "abstract vs physical environment",
+      "start_state_seed": "void/darkness",
+      "end_state_seed": "nine distinct waves appearing",
+      "action_seed": "surreal visual manifestation",
+      "blocking_seed": [],
+      "shot_size": "insert_detail",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "none",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH027",
+      "scene_id": "CH027_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH027",
+      "scene_id": "CH027_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH027",
+      "scene_id": "CH027_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH027",
+      "scene_id": "CH027_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH027",
+      "scene_id": "CH027_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH027",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH027_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH020",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH020_chapter_xx.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH027",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH027_chapter_xxvii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH024",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH024_chapter_xxiv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH027",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH027_SC003] Purpose: Provide the protagonist's \"Aha!\" moment and shift the mode from passive dying to active rescue.",
+    "[CH027_SC003] Summary: As Dejah Thoris slips into a coma, John Carter experiences a sudden, intense mental breakthrough. He recalls nine specific \"thought waves\" that act as the keys to the atmosphere plant's locks.",
+    "[CH027_SC003] Emotional arc: Despair $\\rightarrow$ Intense Mental Clarity/Resolve.",
+    "[CH027_SC003] Coverage: Abstract/Surreal visual effects to represent the \"thought waves.\" Extreme close-ups on John Carter's eyes and face. High-contrast lighting to differentiate the mental breakthrough from the physical lethargy.",
+    "[CH027_SC003] Continuity: The timing of the coma onset relative to the mental epiphany.",
+    "[CH027] Chapter summary: **Setting:** The city of Helium (Palace gardens and council chambers) and the Atmosphere Plant. **Characters:** * **John Carter:** Prince of Helium, driven by love for Dejah Thoris to save the planet. * **Dejah Thoris...",
+    "[CH020] CHAPTER XX (book index hit)",
+    "[CH027] CHAPTER XXVII (book index hit)",
+    "[CH024] CHAPTER XXIV (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH027_SC003\n\n## Production Intent\nEstablish the protagonist's transition from grief-stricken passivity to decisive action through a sudden mental epiphany. The visual language must shift from lethargic despair to high-contrast clarity as the nine thought waves are realized.\n\n## Required Cast\n- john_carter\n- dejah_thoris (unconscious)\n\n## Required Environments\n- helium_palace_sunken_gardens\n\n## Continuity Constraints\n- Precise synchronization of Dejah Thoris coma onset with John Carter's mental epiphany.\n\n## Beat List\n- BT001: Dejah Thoris slips into a coma.\n- BT002: John Carter experiences mental breakthrough.\n- BT003: Recall of nine thought waves as keys to the atmosphere plant.",
+  "metadata": {
+    "artifact_id": "CH027_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "645c5b0a090267f6b7406a5af7ccb81e102a72bb",
+    "created_at_utc": "2026-04-26T23:11:22.002175+00:00",
+    "updated_at_utc": "2026-04-26T23:11:22.002175+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH027_SC003",
+        "version": "257fbbd22e7f1b15354f4bd983f142cfd2701e55"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH027_SC003",
+        "version": "666dd7fae7f862dafbd718dd8a440694cd831343"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH027_SC003",
+        "version": "de7a465a36b517cd570a0953abba78a5d3e5cbb4"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T23:11:50.976601+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "645c5b0a090267f6b7406a5af7ccb81e102a72bb"
+      }
+    ]
+  }
+}
