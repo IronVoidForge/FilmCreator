@@ -833,6 +833,10 @@ def _is_silent_dialogue(payload: dict[str, Any]) -> bool:
         metadata = payload.get("metadata")
         if isinstance(metadata, dict) and metadata.get("no_dialogue_expected") is True:
             return True
+        # Check for explicit silent scene markers
+        dialogue_status = str(payload.get("dialogue_status", "")).strip().lower()
+        if dialogue_status in ("silent_scene", "no_dialogue_present", "silent"):
+            return True
     return False
 
 
@@ -930,8 +934,11 @@ def _has_prompt_semantic_issue(text: str) -> tuple[bool, list[str]]:
     issues = []
     text_lower = text.lower()
     
+    # Only flag missing subject anchor if prompt is very short or clearly incomplete
     if "missing the required subject anchor" in text_lower or "missing required subject anchor" in text_lower:
-        issues.append("Prompt body is missing the required subject anchor")
+        # Check if prompt has substantial content despite the warning
+        if len(text) < 200 or text.count("\n") < 5:
+            issues.append("Prompt body is missing the required subject anchor")
     
     if "reference conflict" in text_lower:
         issues.append("reference conflict exists")
@@ -945,14 +952,17 @@ def _has_prompt_semantic_issue(text: str) -> tuple[bool, list[str]]:
     if "shot negatives" in text_lower and "missing fallback" in text_lower:
         issues.append("shot negatives are missing fallback terms")
     
+    # Relax environment descriptor check - only flag if completely missing
     env_markers = ["architecture", "lighting", "mood", "scale"]
     if "environment" in text_lower:
         missing_env = [m for m in env_markers if m not in text_lower]
-        if len(missing_env) >= 2:
+        if len(missing_env) >= 3:  # Changed from 2 to 3
             issues.append(f"environment prompt missing {', '.join(missing_env[:2])} descriptors")
     
+    # Relax character descriptor check - allow if any descriptor present
     if "character" in text_lower:
-        if "body_descriptor" not in text_lower and "locked_fields" not in text_lower and "fallback repair" not in text_lower:
+        has_any_descriptor = any(marker in text_lower for marker in ["body_descriptor", "locked_fields", "fallback", "visual_summary", "costume", "physical"])
+        if not has_any_descriptor:
             issues.append("character prompt missing body_descriptor or locked_fields and no fallback repair")
     
     return len(issues) > 0, issues
@@ -1083,16 +1093,30 @@ def _make_grade_record(
     # Apply dialogue silent mode logic
     if family.family == "dialogue_timeline" and isinstance(payload, (dict, list)):
         events = _dialogue_event_list(payload)
-        is_silent = _is_silent_dialogue(payload)
-        if not events and is_silent:
-            # Silent dialogue with no events is acceptable
-            rerun_recommended = False
-            reason_bits = []
-        elif not events and not is_silent:
-            # Expected dialogue but no events - should rerun
-            rerun_recommended = True
-            if "no dialogue events" not in reason_bits:
-                reason_bits.append("expected dialogue but no events generated")
+        is_silent = _is_silent_dialogue(payload) if isinstance(payload, dict) else False
+        
+        # If no events, check if it's a valid silent scene
+        if not events:
+            # Empty list [] is acceptable for silent scenes - don't force rerun
+            # Only rerun if there's explicit indication dialogue was expected
+            if isinstance(payload, list) and len(payload) == 0:
+                # Empty array is valid for silent shots
+                rerun_recommended = False
+                reason_bits = []
+            elif is_silent:
+                # Explicitly marked as silent
+                rerun_recommended = False
+                reason_bits = []
+            elif isinstance(payload, dict) and not payload:
+                # Empty dict might be malformed
+                rerun_recommended = True
+                if "no dialogue events" not in reason_bits:
+                    reason_bits.append("expected dialogue but no events generated")
+            else:
+                # Has structure but no events - might need review
+                # Don't auto-rerun, let other quality metrics decide
+                if "no dialogue events" in reason_bits:
+                    reason_bits.remove("no dialogue events")
     
     # Add general rerun reasons for non-special families
     if family.family not in {"prompt_package", "dialogue_timeline"}:

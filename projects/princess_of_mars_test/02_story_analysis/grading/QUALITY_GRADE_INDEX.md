@@ -1,7 +1,7 @@
 # Quality Grade Index
 
 - Project: `princess_of_mars_test`
-- Generated: `2026-04-26T17:41:19.923457+00:00`
+- Generated: `2026-04-26T18:27:42.924042+00:00`
 - Records: `584`
 
 ## Family Summary
@@ -10,7 +10,7 @@
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | Character Bibles | 74 | 7 | 68 | 82 | 70 | 68 | 43 | 36 |
 | Descriptor Records | 61 | 10 | 92 | 98 | 95 | 94 | 6 | 2 |
-| Dialogue Timelines | 34 | 5 | 5 | 4 | 100 | 33 | 0 | 34 |
+| Dialogue Timelines | 34 | 5 | 5 | 4 | 100 | 33 | 0 | 2 |
 | Environment Bibles | 136 | 8 | 94 | 72 | 81 | 85 | 29 | 9 |
 | Prompt Packages | 209 | 8 | 100 | 86 | 100 | 75 | 0 | 114 |
 | Scene Contracts | 10 | 10 | 99 | 100 | 98 | 99 | 4 | 0 |
@@ -360,98 +360,98 @@
 | 8 | B | character_bible | mummified_woman | 73 | 96 | 77 | 30 | - | 2 unresolved ambiguities |
 | 8 | B | character_bible | young_martian | 73 | 96 | 77 | 30 | - | 2 unresolved ambiguities |
 | 8 | B | character_bible | grotesque_creatures | 71 | 100 | 77 | 30 | - | costume_signature is thin; 3 unresolved ambiguities |
-| 8 | B | dialogue_timeline | princess_of_mars_test | 60 | 50 | 70 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 8 | B | dialogue_timeline | princess_of_mars_test | 60 | 50 | 70 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
-| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | Prompt body is missing the required subject anchor; environment prompt missing architecture, mood descriptors; character prompt missing body_descriptor or locked_fields and no fallback repair |
+| 8 | B | dialogue_timeline | princess_of_mars_test | 60 | 50 | 70 | 0 | - | no dialogue events |
+| 8 | B | dialogue_timeline | princess_of_mars_test | 60 | 50 | 70 | 0 | - | no dialogue events |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | alternate_angle_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | consistency_repair_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
+| 7 | C | prompt_package | primary_keyframe_prompt | 100 | 100 | 60 | 0 | run-prompt-preparation | prompt readiness 60 below threshold 80 |
 | 7 | C | environment_bible | city_of_thark | 97 | 50 | 79 | 45 | - | layout_notes are thin; 1 unresolved ambiguities |
 | 7 | C | environment_bible | dead_sea_bottom | 97 | 50 | 79 | 45 | - | layout_notes are thin; 2 unresolved ambiguities |
 | 7 | C | environment_bible | martian_plaza | 97 | 50 | 79 | 45 | - | layout_notes are thin; 1 unresolved ambiguities |
@@ -561,7 +561,7 @@
 | 6 | D | environment_bible | zodangan_land_camps | 55 | 42 | 52 | 45 | synthesize-environment-bibles | layout_notes are thin; 1 unresolved ambiguities |
 | 6 | C | character_bible | little_boy | 46 | 96 | 54 | 60 | synthesize-character-bibles | costume_signature is thin; physical_traits are thin; 3 unresolved ambiguities; Taxonomy confidence=0.00 below threshold and needs review |
 | 6 | D | character_bible | the_keeper | 46 | 82 | 52 | 60 | synthesize-character-bibles | costume_signature is thin; physical_traits are thin; 2 unresolved ambiguities |
-| 6 | C | dialogue_timeline | princess_of_mars_test | 46 | 20 | 53 | 0 | synthesize-dialogue-timeline | expected dialogue but no events generated |
+| 6 | C | dialogue_timeline | princess_of_mars_test | 46 | 20 | 53 | 0 | synthesize-dialogue-timeline | - |
 | 6 | D | character_bible | james_k_powell | 45 | 68 | 48 | 60 | synthesize-character-bibles | costume_signature is thin; physical_traits are thin; 1 unresolved ambiguities |
 | 6 | D | character_bible | zodangan_cousin | 45 | 68 | 48 | 60 | synthesize-character-bibles | costume_signature is thin; physical_traits are thin; 2 unresolved ambiguities |
 | 6 | D | character_bible | john_carter | 41 | 100 | 45 | 90 | synthesize-character-bibles | costume_signature is thin; physical_traits are thin |
@@ -570,36 +570,36 @@
 | 5 | D | character_bible | martian_warrior_leader | 47 | 68 | 46 | 75 | synthesize-character-bibles | costume_signature is thin; physical_traits are thin; 3 unresolved ambiguities; Taxonomy confidence=0.00 below threshold and needs review |
 | 5 | D | character_bible | red_martian_prisoner | 47 | 68 | 42 | 90 | synthesize-character-bibles | costume_signature is thin; physical_traits are thin; 3 unresolved ambiguities; Taxonomy confidence=0.00 below threshold and needs review |
 | 5 | D | character_bible | martian_warrior | 39 | 74 | 42 | 75 | synthesize-character-bibles | costume_signature is thin; physical_traits are thin; 3 unresolved ambiguities; Taxonomy confidence=0.00 below threshold and needs review |
-| 5 | D | dialogue_timeline | CH002_SC001/SH001 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH002_SC001/SH002 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH002_SC001/SH003 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH002_SC002/SH001 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH002_SC002/SH002 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH002_SC002/SH003 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH002_SC003/SH001 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH002_SC003/SH002 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH002_SC003/SH003 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH002_SC004/SH001 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH002_SC004/SH002 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH002_SC004/SH003 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH002_SC005/SH001 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH002_SC005/SH002 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH002_SC005/SH003 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH003_SC001/SH001 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH003_SC001/SH002 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH003_SC001/SH003 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH003_SC002/SH001 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH003_SC002/SH002 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH003_SC002/SH003 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH003_SC003/SH001 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH003_SC003/SH002 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH003_SC003/SH003 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH003_SC004/SH001 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH003_SC004/SH002 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH003_SC004/SH003 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH003_SC005/SH001 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH003_SC005/SH002 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
-| 5 | D | dialogue_timeline | CH003_SC005/SH003 | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
+| 5 | D | dialogue_timeline | CH002_SC001/SH001 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH002_SC001/SH002 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH002_SC001/SH003 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH002_SC002/SH001 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH002_SC002/SH002 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH002_SC002/SH003 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH002_SC003/SH001 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH002_SC003/SH002 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH002_SC003/SH003 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH002_SC004/SH001 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH002_SC004/SH002 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH002_SC004/SH003 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH002_SC005/SH001 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH002_SC005/SH002 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH002_SC005/SH003 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH003_SC001/SH001 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH003_SC001/SH002 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH003_SC001/SH003 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH003_SC002/SH001 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH003_SC002/SH002 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH003_SC002/SH003 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH003_SC003/SH001 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH003_SC003/SH002 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH003_SC003/SH003 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH003_SC004/SH001 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH003_SC004/SH002 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH003_SC004/SH003 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH003_SC005/SH001 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH003_SC005/SH002 | 0 | 0 | 30 | 0 | - | no dialogue events |
+| 5 | D | dialogue_timeline | CH003_SC005/SH003 | 0 | 0 | 30 | 0 | - | no dialogue events |
 | 5 | D | dialogue_timeline | princess_of_mars_test | 0 | 0 | 30 | 0 | synthesize-dialogue-timeline | no dialogue events |
 | 4 | F | character_bible | caretaker | 44 | 40 | 38 | 75 | synthesize-character-bibles | stable_visual_summary is unresolved; costume_signature is thin; physical_traits are thin; 4 unresolved ambiguities |
 | 4 | F | character_bible | watchdog | 44 | 40 | 38 | 75 | synthesize-character-bibles | stable_visual_summary is unresolved; costume_signature is thin; physical_traits are thin; 5 unresolved ambiguities |
