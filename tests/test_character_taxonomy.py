@@ -526,6 +526,12 @@ character_type_hint: human
 morphology_hint: biped
 scale_hint: human_scale
 confidence: 0.9
+direct_identity_evidence: explicitly called a human traveler
+direct_visual_evidence: upright bipedal person
+costume_or_covering_evidence: wears travel clothes
+movement_evidence: walks upright
+associated_entities: rides a large animal; carries a lantern
+source_refs: CH001:P12
 """,
         encoding="utf-8"
     )
@@ -544,6 +550,29 @@ confidence: 0.9
     assert taxonomy["morphology"] == "biped"
     assert taxonomy["scale"] == "human_scale"
     assert taxonomy["confidence"] > 0.0
+    
+    # Should preserve evidence strings
+    assert "direct_evidence_records" in taxonomy
+    assert len(taxonomy["direct_evidence_records"]) > 0
+    
+    evidence_record = taxonomy["direct_evidence_records"][0]
+    assert evidence_record["type_hint"] == "human"
+    assert evidence_record["morphology_hint"] == "biped"
+    assert evidence_record["scale_hint"] == "human_scale"
+    assert evidence_record["confidence"] == 0.9
+    assert evidence_record["direct_identity_evidence"] == "explicitly called a human traveler"
+    assert evidence_record["direct_visual_evidence"] == "upright bipedal person"
+    assert evidence_record["costume_or_covering_evidence"] == "wears travel clothes"
+    assert evidence_record["movement_evidence"] == "walks upright"
+    assert "CH001:P12" in evidence_record["source_refs"]
+    
+    # Should preserve associated evidence
+    assert "associated_evidence_records" in taxonomy
+    assert len(taxonomy["associated_evidence_records"]) > 0
+    
+    assoc_record = taxonomy["associated_evidence_records"][0]
+    assert "rides a large animal" in assoc_record["associated_entities"]
+    assert "carries a lantern" in assoc_record["associated_entities"]
 
 
 if __name__ == "__main__":

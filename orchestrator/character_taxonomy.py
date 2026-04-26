@@ -69,7 +69,7 @@ def _parse_taxonomy_hints_from_markdown(content: str, source_path: str) -> dict[
     """
     import re
     
-    # Field aliases
+    # Field aliases (for both colon format and subsection headers)
     field_map = {
         "character_type_hint": "character_type_hint",
         "character_type": "character_type_hint",
@@ -90,12 +90,17 @@ def _parse_taxonomy_hints_from_markdown(content: str, source_path: str) -> dict[
         "costume_or_covering_evidence": "costume_or_covering_evidence",
         "costume_evidence": "costume_or_covering_evidence",
         "equipment_evidence": "costume_or_covering_evidence",
+        "costume_or_equipment": "costume_or_covering_evidence",
+        "costume/equipment": "costume_or_covering_evidence",
         "movement_evidence": "movement_evidence",
+        "movement": "movement_evidence",
         "associated_entities": "associated_entities",
         "associated_entity_evidence": "associated_entities",
         "alias_or_role_evidence": "alias_or_role_evidence",
         "alias_evidence": "alias_or_role_evidence",
         "role_evidence": "alias_or_role_evidence",
+        "alias_or_role": "alias_or_role_evidence",
+        "alias/role_evidence": "alias_or_role_evidence",
         "unknowns": "unknowns",
         "source_refs": "source_refs",
         "source_references": "source_refs",
@@ -121,7 +126,45 @@ def _parse_taxonomy_hints_from_markdown(content: str, source_path: str) -> dict[
     # Match both colon and bullet formats
     pattern = r'^\s*-?\s*([\w_]+)\s*:\s*(.+)$'
     
+    # Also parse subsection content
+    subsection_pattern = r'^##\s+([^\n]+)$'
+    current_subsection = None
+    subsection_content = []
+    
     for line in content.splitlines():
+        # Check for subsection header
+        subsection_match = re.match(subsection_pattern, line)
+        if subsection_match:
+            # Save previous subsection content
+            if current_subsection and subsection_content:
+                subsection_text = "\n".join(subsection_content).strip()
+                if subsection_text:
+                    # Map subsection name to field
+                    subsection_name = current_subsection.lower().replace(" ", "_").replace("/", "_or_")
+                    if subsection_name in field_map:
+                        canonical_name = field_map[subsection_name]
+                        found_any = True
+                        if canonical_name == "associated_entities":
+                            entities = [e.strip() for e in re.split(r'[;,]', subsection_text) if e.strip()]
+                            parsed[canonical_name] = entities
+                        elif canonical_name == "source_refs":
+                            refs = [r.strip() for r in re.split(r'[;,]', subsection_text) if r.strip()]
+                            parsed[canonical_name] = refs
+                        else:
+                            parsed[canonical_name] = subsection_text
+            
+            current_subsection = subsection_match.group(1).strip()
+            subsection_content = []
+            continue
+        
+        # If we're in a subsection, accumulate content (including blank lines for now)
+        if current_subsection:
+            # Skip lines that are just section markers
+            if line.strip() and not line.strip().startswith("#"):
+                subsection_content.append(line.strip())
+            continue
+        
+        # Parse field lines
         match = re.match(pattern, line)
         if not match:
             continue
@@ -159,6 +202,23 @@ def _parse_taxonomy_hints_from_markdown(content: str, source_path: str) -> dict[
             parsed[canonical_name] = refs
         else:
             parsed[canonical_name] = field_value
+    
+    # Save final subsection content
+    if current_subsection and subsection_content:
+        subsection_text = "\n".join(subsection_content).strip()
+        if subsection_text:
+            subsection_name = current_subsection.lower().replace(" ", "_").replace("/", "_or_")
+            if subsection_name in field_map:
+                canonical_name = field_map[subsection_name]
+                found_any = True
+                if canonical_name == "associated_entities":
+                    entities = [e.strip() for e in re.split(r'[;,]', subsection_text) if e.strip()]
+                    parsed[canonical_name] = entities
+                elif canonical_name == "source_refs":
+                    refs = [r.strip() for r in re.split(r'[;,]', subsection_text) if r.strip()]
+                    parsed[canonical_name] = refs
+                else:
+                    parsed[canonical_name] = subsection_text
     
     if not found_any:
         return None
@@ -374,7 +434,36 @@ def _synthesize_character_taxonomy(
     confidences = [c for c in [type_confidence, morph_confidence, scale_confidence] if c > 0]
     overall_confidence = sum(confidences) / len(confidences) if confidences else 0.0
     
-    # Build taxonomy
+    # Build taxonomy with rich evidence records
+    direct_evidence_records = []
+    associated_evidence_records = []
+    
+    # Aggregate evidence from structured hint records
+    for record in hint_records:
+        evidence_record = {
+            "type_hint": record.get("character_type_hint", "unknown"),
+            "morphology_hint": record.get("morphology_hint", "unknown"),
+            "scale_hint": record.get("scale_hint", "unknown"),
+            "renderability_hint": record.get("renderability_hint", "unknown"),
+            "confidence": record.get("confidence", 0.0),
+            "direct_identity_evidence": record.get("direct_identity_evidence", ""),
+            "direct_visual_evidence": record.get("direct_visual_evidence", ""),
+            "costume_or_covering_evidence": record.get("costume_or_covering_evidence", ""),
+            "movement_evidence": record.get("movement_evidence", ""),
+            "source_path": record.get("source_path", ""),
+            "source_refs": record.get("source_refs", []),
+        }
+        direct_evidence_records.append(evidence_record)
+        
+        # Associated evidence
+        assoc_entities = record.get("associated_entities", [])
+        if assoc_entities:
+            associated_evidence_records.append({
+                "associated_entities": assoc_entities,
+                "source_path": record.get("source_path", ""),
+                "source_refs": record.get("source_refs", []),
+            })
+    
     taxonomy = {
         "character_id": character_id,
         "display_name": registry_entry.get("display_name", character_id),
@@ -386,7 +475,9 @@ def _synthesize_character_taxonomy(
         "renderability": renderability,
         "confidence": round(overall_confidence, 2),
         "direct_evidence": direct_hints,
+        "direct_evidence_records": direct_evidence_records,
         "associated_evidence": associated_hints,
+        "associated_evidence_records": associated_evidence_records,
         "conflicts": all_conflicts,
         "unknowns": [],
         "needs_review": needs_review,

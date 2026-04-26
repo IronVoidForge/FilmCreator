@@ -435,9 +435,30 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
             manual_description_required = False
             manual_description_reason = ""
 
+        # Extract taxonomy hints from record fields
+        from .features.authoring.entity_taxonomy import EntityTaxonomyHints, format_entity_taxonomy_markdown
+        
+        taxonomy_hints = EntityTaxonomyHints(
+            character_type_hint=raw_character.fields.get("character_type_hint", "unknown").strip() or "unknown",
+            morphology_hint=raw_character.fields.get("morphology_hint", "unknown").strip() or "unknown",
+            scale_hint=raw_character.fields.get("scale_hint", "unknown").strip() or "unknown",
+            renderability_hint=raw_character.fields.get("renderability_hint", "unknown").strip() or "unknown",
+            confidence=_parse_confidence(raw_character.fields.get("confidence", "0.0")),
+            direct_identity_evidence=raw_character.fields.get("direct_identity_evidence", "").strip(),
+            direct_visual_evidence=raw_character.fields.get("direct_visual_evidence", "").strip(),
+            costume_or_covering_evidence=raw_character.fields.get("costume_or_covering_evidence", "").strip(),
+            movement_evidence=raw_character.fields.get("movement_evidence", "").strip(),
+            associated_entities=_parse_list_field(raw_character.fields.get("associated_entities", "")),
+            alias_or_role_evidence=raw_character.fields.get("alias_or_role_evidence", "").strip(),
+            unknowns=raw_character.fields.get("unknowns", "").strip(),
+            source_refs=_parse_list_field(raw_character.fields.get("source_refs", "")),
+        )
+        
+        taxonomy_section = format_entity_taxonomy_markdown(taxonomy_hints)
+        
         character_markdown = _append_manual_description_section(
             markdown=_append_character_identity_section(
-                markdown=markdown,
+                markdown=markdown + "\n\n" + taxonomy_section,
                 aliases=aliases,
                 canonical_character_id=resolved_asset_id,
                 is_fully_identified=is_fully_identified,
@@ -2813,6 +2834,24 @@ def _validate_clip_plan(*, scene_id: str, scene_markdown: str, beat_ids: list[st
         raise LMStudioError(f"Clip plan for {scene_id} compressed {len(beat_ids)} beats into a single clip, which is not allowed.")
     warnings.extend(_validate_scene_duration_sanity(scene_id=scene_id, beat_ids=beat_ids, clip_ids=clip_ids))
     return warnings
+
+
+def _parse_confidence(value: str) -> float:
+    """Parse confidence value from string."""
+    try:
+        conf = float(value.strip())
+        return max(0.0, min(1.0, conf))
+    except (ValueError, TypeError):
+        return 0.0
+
+
+def _parse_list_field(value: str) -> list[str]:
+    """Parse comma or semicolon separated list field."""
+    if not value or not value.strip():
+        return []
+    import re
+    items = re.split(r'[;,]', value)
+    return [item.strip() for item in items if item.strip()]
 
 
 def _parse_packet_bool(value: str) -> bool:
