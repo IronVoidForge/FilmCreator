@@ -164,31 +164,31 @@ def format_entity_taxonomy_markdown(hints: EntityTaxonomyHints) -> str:
         f"- morphology: {hints.morphology_hint}",
         f"- scale: {hints.scale_hint}",
         f"- renderability: {hints.renderability_hint}",
-        f"- confidence: {hints.confidence:.2f}",
+        f"- confidence: {hints.confidence:.1f}",
+        "",
+        "## Direct Identity Evidence",
+        hints.direct_identity_evidence or "",
+        "",
+        "## Direct Visual Evidence",
+        hints.direct_visual_evidence or "",
+        "",
+        "## Costume/Equipment",
+        hints.costume_or_covering_evidence or "",
+        "",
+        "## Movement",
+        hints.movement_evidence or "",
+        "",
+        "## Associated Entities",
+        ", ".join(hints.associated_entities) if hints.associated_entities else "",
+        "",
+        "## Alias/Role Evidence",
+        hints.alias_or_role_evidence or "",
+        "",
+        "## Unknowns",
+        hints.unknowns or "",
+        "",
+        "## Source References",
+        ", ".join(hints.source_refs) if hints.source_refs else "",
     ]
-    
-    if hints.direct_identity_evidence:
-        lines.extend(["", "## Direct Identity Evidence", hints.direct_identity_evidence])
-    
-    if hints.direct_visual_evidence:
-        lines.extend(["", "## Direct Visual Evidence", hints.direct_visual_evidence])
-    
-    if hints.costume_or_covering_evidence:
-        lines.extend(["", "## Costume/Equipment", hints.costume_or_covering_evidence])
-    
-    if hints.movement_evidence:
-        lines.extend(["", "## Movement", hints.movement_evidence])
-    
-    if hints.associated_entities:
-        lines.extend(["", "## Associated Entities", ", ".join(hints.associated_entities)])
-    
-    if hints.alias_or_role_evidence:
-        lines.extend(["", "## Alias/Role Evidence", hints.alias_or_role_evidence])
-    
-    if hints.unknowns:
-        lines.extend(["", "## Unknowns", hints.unknowns])
-    
-    if hints.source_refs:
-        lines.extend(["", "## Source References", ", ".join(hints.source_refs)])
     
     return "\n".join(lines)
