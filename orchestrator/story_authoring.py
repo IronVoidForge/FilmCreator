@@ -1982,6 +1982,7 @@ def _chapter_summary_chunk_prompt(*, project_slug: str, chapter_id: str, chunk_l
         "- summarize only the information present in this chunk",
         "- keep the project summary reusable across chapters",
         "- keep the chapter summary focused on events, characters, and settings present in this chunk",
+        "- treat the chapter summary as production evidence rather than a reader synopsis: preserve every distinct filmable event, entrance, exit, reveal, decision, object interaction, location/subzone shift, visual continuity state, and uncertainty that later scene, shot, descriptor, or prompt stages would need",
     ]
     if degraded:
         requirements = [
@@ -2175,6 +2176,7 @@ def _chapter_summary_synthesis_prompt(*, project_slug: str, chapter_id: str, chu
         "- merge the partial chapter summaries into one coherent chapter summary",
         "- do not mention that the summaries came from chunks",
         "- keep the result grounded and concise",
+        "- treat the merged chapter summary as production evidence rather than a reader synopsis: preserve every distinct filmable event, entrance, exit, reveal, decision, object interaction, location/subzone shift, visual continuity state, and uncertainty that later scene, shot, descriptor, or prompt stages would need",
     ]
     if degraded:
         requirements = [

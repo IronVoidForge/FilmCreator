@@ -433,6 +433,7 @@ def main() -> None:
             initial_project=args.project_slug,
             initial_chapters=args.chapters,
             initial_mode=args.mode,
+            prompt_on_start=True,
         )
         return
     else:

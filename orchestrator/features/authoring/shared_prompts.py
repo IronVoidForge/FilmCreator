@@ -58,6 +58,7 @@ def chapter_summary_user_prompt(
         "- summarize the chapter at a high level for later scene extraction",
         "- keep the project summary reusable across chapters",
         "- keep the chapter summary focused on events, characters, and settings",
+        "- treat the chapter summary as production evidence rather than a reader synopsis: preserve every distinct filmable event, entrance, exit, reveal, decision, object interaction, location/subzone shift, visual continuity state, and uncertainty that later scene, shot, descriptor, or prompt stages would need",
     ]
     if degraded:
         requirements = [

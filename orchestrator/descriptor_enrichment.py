@@ -490,6 +490,7 @@ def _character_profile(base_fields: dict[str, Any], evidence_summary: list[str],
     hard_parts = [
         canonical_id,
         display_name,
+        " ".join(_coerce_string_list(base_fields.get("aliases", []))),
         str(base_fields.get("entity_kind", "")),
         str(base_fields.get("role", "")),
         str(base_fields.get("identity_baseline", "")),
@@ -561,6 +562,33 @@ def _character_profile(base_fields: dict[str, Any], evidence_summary: list[str],
         "is_human": resolved_profile_class == "human_individual",
         "conflicts": conflicts,
     }
+
+
+def _descriptor_identity_context(
+    *,
+    entity_type: str,
+    canonical_id: str,
+    display_name: str,
+    base_fields: dict[str, Any],
+    evidence_summary: list[str],
+) -> dict[str, Any]:
+    context = {
+        "canonical_id": canonical_id,
+        "display_name": display_name,
+        "aliases": _coerce_string_list(base_fields.get("aliases", [])),
+        "entity_kind": base_fields.get("entity_kind", ""),
+        "role": base_fields.get("role", ""),
+        "identity_baseline": base_fields.get("identity_baseline", ""),
+        "stable_visual_summary": base_fields.get("stable_visual_summary", ""),
+        "supported_physical_presence": base_fields.get("physical_presence_notes", ""),
+        "supported_costume_signature": base_fields.get("costume_signature", ""),
+        "supported_silhouette_notes": base_fields.get("silhouette_notes", ""),
+        "supported_distinctive_features": _coerce_string_list(base_fields.get("distinctive_features", [])),
+        "evidence_lines": evidence_summary[:8],
+    }
+    if entity_type == CHARACTER_ENTITY_TYPE:
+        context["character_profile_constraints"] = _character_profile(base_fields, evidence_summary, canonical_id, display_name)
+    return context
 
 
 def _character_specific_generated_default(
@@ -1722,13 +1750,24 @@ def _llm_refine_descriptor(
     )
 
     desired_field_lines = "\n".join(f"- {field}" for field in desired_fields)
+    identity_context = _descriptor_identity_context(
+        entity_type=entity_type,
+        canonical_id=canonical_id,
+        display_name=display_name,
+        base_fields=base_fields,
+        evidence_summary=evidence_summary,
+    )
     user = f"""
 Enrich the following {entity_type} descriptor using the evidence provided.
 
 Keep the output compact. Favor structured fields over prose.
 Use the book, registry, and existing contract evidence for supported fields.
+Treat canonical_id, display_name, aliases, and supported source descriptions as identity locks. Do not generate sex, age, species, grooming, costume, or anatomy that contradicts the name/aliases, pronoun evidence, entity kind, or source-backed description. If identity cues are incomplete, preserve uncertainty in review flags instead of using a stock generic portrait bundle.
 Use careful inference for generated fields when the text does not spell out a visual detail but the canon is still clear.
 For generated fields, make a best-effort visual decision from the book evidence and stable context instead of using unknown whenever the canon supports a reasonable choice. Do not leave generated visual fields empty if you can make a canon-compatible choice. Put those values in generated_fields_markdown, keep supported_fields_markdown strictly book-backed, and use review flags for anything still low-confidence or questionable.
+
+IDENTITY AND SOURCE LOCKS:
+{json.dumps(identity_context, indent=2, ensure_ascii=False)}
 
 DESCRIPTOR:
 {json.dumps({
@@ -1885,11 +1924,19 @@ def _llm_complete_generated_fields(
     )
 
     missing_field_lines = "\n".join(f"- {field}" for field in missing_fields)
+    identity_context = _descriptor_identity_context(
+        entity_type=entity_type,
+        canonical_id=canonical_id,
+        display_name=display_name,
+        base_fields=base_fields,
+        evidence_summary=evidence_summary,
+    )
     user = f"""
 Complete the following missing generated fields for this {entity_type} descriptor.
 
 Do not change any supported fields. Only fill the listed missing generated fields.
 Use the current descriptor context and evidence to make a best-effort canon-compatible choice.
+Treat canonical_id, display_name, aliases, and supported source descriptions as identity locks. Do not generate sex, age, species, grooming, costume, or anatomy that contradicts the name/aliases, pronoun evidence, entity kind, or source-backed description. If identity cues are incomplete, choose a cautious production value and add a review flag instead of using a stock generic portrait bundle.
 If a field is still ambiguous, choose the most plausible stable value rather than unknown.
 Do not write placeholders or meta phrases.
 Bad examples:
@@ -1906,6 +1953,9 @@ Good examples:
 
 Character-specific constraints:
 {character_profile_lines or '- No extra character constraints.'}
+
+IDENTITY AND SOURCE LOCKS:
+{json.dumps(identity_context, indent=2, ensure_ascii=False)}
 
 DESCRIPTOR:
 {json.dumps({
@@ -2470,7 +2520,17 @@ def _base_character_descriptor(
             if value:
                 base_fields[field_name] = value
                 field_origin[field_name] = "llm_supported"
-        for field_name, value in (llm_payload.get("generated_field_values") or {}).items():
+        generated_field_values = dict(llm_payload.get("generated_field_values") or {})
+        if generated_field_values:
+            generated_field_values, rewrite_flags = _rewrite_character_generated_fields(
+                generated_field_values,
+                base_fields=base_fields,
+                evidence_summary=evidence_summary,
+                canonical_id=char_id,
+                display_name=bible.get("display_name") or entry.get("display_name") or char_id,
+            )
+            review_flags.extend(rewrite_flags)
+        for field_name, value in generated_field_values.items():
             if value:
                 base_fields[field_name] = value
                 field_origin[field_name] = "llm_generated"

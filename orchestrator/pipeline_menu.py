@@ -46,6 +46,7 @@ def run_pipeline_menu(
     initial_project: str = "princess_of_mars_test",
     initial_chapters: str | None = None,
     initial_mode: str = "resume",
+    prompt_on_start: bool = False,
     input_fn: InputFn = input,
     output_fn: OutputFn = print,
     projects_root: Path | None = None,
@@ -56,6 +57,8 @@ def run_pipeline_menu(
         mode=initial_mode,
     )
     root = projects_root or (Path.cwd() / "projects")
+    if prompt_on_start:
+        _select_startup_scope(state, root, input_fn, output_fn)
 
     while True:
         _write_main_menu(state, output_fn)
@@ -91,6 +94,24 @@ def run_pipeline_menu(
             return state
         else:
             output_fn("Invalid choice. Please select one of the numbered options.")
+
+
+def _select_startup_scope(state: PipelineMenuState, projects_root: Path, input_fn: InputFn, output_fn: OutputFn) -> None:
+    output_fn("")
+    output_fn("FilmCreator startup scope")
+    detected = []
+    if projects_root.exists():
+        detected = sorted(path.name for path in projects_root.iterdir() if path.is_dir())
+    if detected:
+        output_fn("Available projects:")
+        output_fn(", ".join(detected[:20]))
+    project = input_fn(f"Project slug [{state.project_slug}]: ").strip()
+    if project:
+        state.project_slug = project
+    chapters = input_fn("Chapters to run, e.g. 2-3 or 22-25 [Enter for ALL]: ").strip()
+    state.chapters = chapters or None
+    output_fn(f"Project set to: {state.project_slug}")
+    output_fn(f"Chapters set to: {state.chapters or 'ALL'}")
 
 
 def _write_main_menu(state: PipelineMenuState, output_fn: OutputFn) -> None:

@@ -21,6 +21,26 @@ def test_pipeline_menu_updates_quick_slice_and_exits(tmp_path: Path) -> None:
     assert any("Exiting pipeline menu." in line for line in outputs)
 
 
+def test_pipeline_menu_startup_scope_prompts_project_and_all_chapters(tmp_path: Path) -> None:
+    projects_root = tmp_path / "projects"
+    (projects_root / "demo").mkdir(parents=True)
+    prompts = iter(["demo", "", "14"])
+    outputs: list[str] = []
+
+    state = run_pipeline_menu(
+        initial_project="princess_of_mars_test",
+        prompt_on_start=True,
+        input_fn=lambda prompt="": next(prompts),
+        output_fn=outputs.append,
+        projects_root=projects_root,
+    )
+
+    assert state.project_slug == "demo"
+    assert state.chapters is None
+    assert any("Project set to: demo" in line for line in outputs)
+    assert any("Chapters set to: ALL" in line for line in outputs)
+
+
 def test_pipeline_menu_character_reference_plan_uses_current_limit(monkeypatch) -> None:
     prompts = iter(["10", "3", "4", "10", "1", "14"])
     outputs: list[str] = []
