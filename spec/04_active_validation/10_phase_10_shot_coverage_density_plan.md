@@ -12,11 +12,16 @@ The planner should support tunable coverage density:
 low
 medium
 high
+legacy
 ```
 
 Default should be `medium`.
 
+`legacy` preserves the current one-shot-per-beat behavior for comparison, debugging, and low-cost validation.
+
 The purpose is not to force every scene into a huge edit. The purpose is to let FilmCreator vary coverage density intentionally, compare results, and avoid packing too much story into too few shots.
+
+Coverage density does not only mean "more shots." It means more editorial control when the story weight deserves it. Minor connective beats should stay economical even at medium density. Major reveals, action beats, and important dialogue should expand more aggressively.
 
 ## Research Basis
 
@@ -70,6 +75,79 @@ This is currently 3 shots. A movie version needs the plea, the Queen's reaction,
 
 ## Coverage Density Definitions
 
+Density is only one input. Final shot count should be:
+
+```text
+coverage_count = recipe(coverage_intent, beat_type, density, importance)
+```
+
+This avoids applying equal expansion to every beat.
+
+## Coverage Intent
+
+Add a scene-level coverage intent. In v1 this can be inferred by code from scene fields; later it can be stored explicitly in scene contracts.
+
+Suggested intents:
+
+```text
+economical_storybook
+classic_dialogue
+adventure_action
+wonder_reveal
+suspense_investigation
+montage_travel
+ceremonial_tableau
+```
+
+Intent changes how density behaves:
+
+- `economical_storybook` favors masters, readable silhouettes, and fewer cuts.
+- `classic_dialogue` favors master/two-shot, singles, listener reactions, and selective OTS.
+- `adventure_action` favors geography, action, impact, reaction, and handoff shots.
+- `wonder_reveal` favors partial reveal, scale proof, POV, and reaction.
+- `suspense_investigation` favors POV, inserts, clue details, and reaction.
+- `montage_travel` favors travel geography, landmarks, passage, and transition shots.
+- `ceremonial_tableau` favors group geography, speaker singles, crowd reactions, and scale.
+
+For Wizard of Oz, Alice, Princess of Mars, and similar public-domain adventure/fantasy projects, the first profile should be:
+
+```json
+{
+  "shot_coverage_profile": "classic_adventure"
+}
+```
+
+`classic_adventure` should favor readable silhouettes, clear geography, wide shots for fantasy scale, reaction closeups for wonder/fear, and inserts for magical or story-important objects.
+
+## Beat Importance
+
+Add deterministic beat importance:
+
+```text
+minor
+normal
+major
+set_piece
+```
+
+Meaning:
+
+- `minor` - connective tissue, simple travel, transition, minor action
+- `normal` - ordinary story beat requiring clear coverage
+- `major` - emotional turn, reveal, decision, important dialogue, meaningful action
+- `set_piece` - extended action, spectacle, ritual, musical/training sequence, major confrontation
+
+Examples:
+
+```text
+medium density + minor travel beat = 1-2 shots
+medium density + normal dialogue beat = 4-7 shots
+medium density + major reveal beat = 5-8 shots
+medium density + set_piece action beat = 10-18 shots, likely chunked
+```
+
+Importance should be stored in coverage metadata so bad calls are easy to debug.
+
 ### Low
 
 Use when the user wants a fast, economical, illustrated-storybook pass.
@@ -90,6 +168,8 @@ action beat: 3-5 shots
 reveal beat: 2-4 shots
 montage/travel beat: 2-5 shots
 ```
+
+Minor beats can remain 1 shot in low density.
 
 ### Medium
 
@@ -115,6 +195,8 @@ reveal beat: 5-9 shots
 montage/travel beat: 4-8 shots
 ```
 
+Medium should not force 6-14 shots per scene mechanically. A medium-density minor scene may still be 3-5 shots. A medium-density major scene may become 10-18 shots.
+
 ### High
 
 Use for major scenes, action sequences, arguments, reveals, or final-quality coverage tests.
@@ -137,6 +219,41 @@ montage/travel beat: 6-14 shots
 ```
 
 High density may require LLM chunking by beat group.
+
+High should still preserve long masters for stillness, ceremony, or dread when the coverage intent calls for it.
+
+## Runtime Planner
+
+Per-shot duration is not enough. The planner should estimate target scene and beat duration first, then distribute shot durations across coverage roles.
+
+V1 ranges:
+
+```text
+minor scene: 20-35 seconds
+normal scene: 35-75 seconds
+major scene: 75-150 seconds
+set piece: 120-300 seconds eventually, capped in v1 unless explicitly requested
+```
+
+V1 shot duration ranges still apply:
+
+```text
+low: 8-12 seconds
+medium: 5-8 seconds
+high: 4-7 seconds
+```
+
+Runtime algorithm:
+
+1. classify scene coverage intent
+2. classify each beat type and importance
+3. assign beat target seconds from importance and action/dialogue complexity
+4. expand shot roles from recipe
+5. distribute beat target seconds across roles
+6. clamp shot seconds to density range, allowing master/tableau shots to run longer
+7. clamp total scene duration to scene importance range unless explicitly marked set piece
+
+This keeps medium density from ballooning every scene while still expanding major beats.
 
 ## Beat Classification
 
@@ -162,24 +279,44 @@ Suggested beat types:
 
 ```text
 establishing_arrival
-dialogue_exchange
-monologue_or_storytelling
+dialogue_two_person
+dialogue_group
+dialogue_council_or_court
+dialogue_crowd_response
 reaction_emotion
 action_conflict
 movement_travel
 reveal_wonder
 investigation_discovery
 object_or_magic_business
-montage_time_passage
 transition_handoff
 ```
+
+V1 should implement only the core types first:
+
+```text
+establishing_arrival
+dialogue_two_person
+dialogue_group
+dialogue_council_or_court
+action_conflict
+reveal_wonder
+object_or_magic_business
+movement_travel
+reaction_emotion
+transition_handoff
+```
+
+Treat monologue, flashback, and montage as aliases or secondary hints in v1. Do not make too many classifier branches before the basic system is debugged.
 
 Classifier should be conservative and explainable. It can be keyword/rule based first.
 
 Examples:
 
-- "asks", "tells", "answers", "warns", "explains" -> `dialogue_exchange`
-- "recounts", "remembers", "flashback" -> `monologue_or_storytelling`
+- "asks", "tells", "answers", "warns", "explains" with two active subjects -> `dialogue_two_person`
+- "asks", "tells", "answers", "warns", "explains" with three or more active/passive subjects -> `dialogue_group`
+- "court", "council", "audience", "queen", "king", "wizard", "throne", "assembly" -> `dialogue_council_or_court`
+- "recounts", "remembers", "flashback" -> `dialogue_group` with memory/flashback coverage hints in v1
 - "attacks", "fights", "chases", "rescues" -> `action_conflict`
 - "arrives", "enters", "approaches" -> `establishing_arrival`
 - "revealed", "appears", "manifests" -> `reveal_wonder`
@@ -187,6 +324,21 @@ Examples:
 - "travels", "walks", "crosses" -> `movement_travel`
 
 The LLM can later refine beat type, but code should produce a stable first pass.
+
+Output debug metadata:
+
+```json
+{
+  "coverage_classification": {
+    "beat_type": "dialogue_group",
+    "importance": "major",
+    "confidence": 0.78,
+    "reasons": ["summary contains warns", "active/passive subject count = 5", "scene intent = ceremonial_tableau"]
+  }
+}
+```
+
+Do not use an LLM for v1 classification. Keep classification deterministic and unit-testable.
 
 ## Coverage Recipes
 
@@ -245,7 +397,7 @@ reaction_closeup
 handoff_medium
 ```
 
-### Dialogue Exchange Beat
+### Dialogue: Two-Person Beat
 
 Purpose:
 
@@ -299,6 +451,105 @@ Subject rule:
 - singles must name the visible primary subject
 - OTS shots must name foreground shoulder subject and featured subject
 - reaction shots must state what the character is reacting to
+
+### Dialogue: Group Beat
+
+Purpose:
+
+- preserve group geography
+- keep the current speaker clear
+- show group/listener reactions without pretending every exchange is a clean two-person reverse
+
+Low:
+
+1. group master
+2. speaker single or group reaction
+
+Medium:
+
+1. group master / geography
+2. speaker single
+3. listener group reaction
+4. key individual reaction
+5. optional clean single for next speaker
+6. object/location cutaway if relevant
+
+High:
+
+1. group master
+2. speaker single
+3. primary listener single
+4. group reaction
+5. secondary listener reaction
+6. relevant insert/cutaway
+7. new speaker single
+8. emotional landing reaction
+
+Useful shot types:
+
+```text
+group_master
+speaker_single
+listener_group_reaction
+key_individual_reaction
+clean_single
+insert_detail
+cutaway
+closing_reaction
+```
+
+Rules:
+
+- Do not overuse OTS in group scenes.
+- Use OTS only when there is a clear speaker/listener pair and useful foreground geography.
+- For Dorothy + companions + authority figure scenes, prefer group master, speaker single, group reaction, and key individual reactions.
+
+### Dialogue: Council / Court / Audience Beat
+
+Purpose:
+
+- make hierarchy and power geography clear
+- preserve the authority figure, petitioner, guards/crowd, and scale
+
+Low:
+
+1. ceremonial master / tableau
+2. authority speaker or petitioner reaction
+
+Medium:
+
+1. ceremonial wide/master
+2. authority speaker single
+3. petitioner/group reaction
+4. court/crowd response
+5. scale or throne/location insert
+6. decision/ultimatum closeup
+
+High:
+
+1. establishing ceremonial tableau
+2. authority figure reveal
+3. petitioner group geography
+4. authority single
+5. petitioner single
+6. crowd/listener response
+7. object/throne/symbol insert
+8. reverse reaction
+9. decision landing closeup
+10. exit/handoff
+
+Useful shot types:
+
+```text
+ceremonial_master
+authority_single
+petitioner_group
+crowd_response
+scale_proof_wide
+symbol_insert
+reaction_closeup
+handoff_wide
+```
 
 ### Monologue / Storytelling / Flashback Beat
 
@@ -530,6 +781,67 @@ Use controlled variation:
 - add scale proof for fantasy/sci-fi/worldbuilding beats
 - add cutaway when context/subtext matters
 
+### Master / Geography Reuse
+
+Do not add a new establishing or master shot for every beat.
+
+Use a geography reset only when:
+
+- location changes
+- blocking changes significantly
+- a new group or threat enters
+- action begins after dialogue
+- scale/reveal matters
+- the audience needs a spatial reminder before an impact/movement beat
+
+### Emotional Punctuation
+
+Add reaction shots only when:
+
+- power shifts
+- a decision changes
+- surprise/fear/wonder occurs
+- a character is excluded or observing
+- the next beat depends on the emotional response
+
+### Insert Eligibility
+
+Use inserts only when something visible matters:
+
+- hands doing a task
+- weapon/object/key item
+- map/sign/door/lock
+- magical transformation
+- evidence clue
+- scale proof
+
+Do not add inserts just to hit a count.
+
+### POV Eligibility
+
+Use POV only when:
+
+- a character discovers something
+- reveal is subjective
+- fear/wonder depends on what they see
+- direction/geography matters
+
+## Planned Shots Compatibility
+
+Scene contracts may already contain `planned_shots`. Those should be used as seed coverage roles, not as the final count.
+
+Rule:
+
+```text
+if planned_shots exist:
+  treat each planned shot as a required story/action coverage seed
+  expand around it according to density, importance, and coverage intent
+  preserve its subject/action/subzone where possible
+  do not assume planned_shots are the complete edit
+```
+
+This lets existing scene contracts remain useful without locking the shot planner into one shot per beat.
+
 Each recipe slot should be a role, not a fixed shot:
 
 ```json
@@ -551,6 +863,7 @@ Pipeline should send:
 - beat classifications
 - coverage recipe roles
 - expanded shot blueprints
+- coverage intent, beat importance, and target scene/beat seconds
 - instruction to preserve shot count and shot ids
 - instruction to fill all shot fields with equal detail
 - instruction to keep each shot's primary subject explicit
@@ -565,8 +878,10 @@ COVERAGE RULES:
 - Each shot is one cuttable movie shot, not a paragraph summary.
 - Preserve every supplied shot_id and shot_order.
 - Do not merge story events into fewer shots.
+- If a blueprint is weak, improve its details but keep its coverage role.
 - Fill every shot with concrete subject, camera, blocking, start_state, end_state, and handoff.
 - Every shot must name exactly one primary framed subject or a clearly framed group/environment subject.
+- For group/court dialogue, prefer speaker singles, group reactions, key individual reactions, and tableau geography over excessive OTS.
 - Use OTS/reverse/single/reaction/insert/cutaway roles when supplied by the blueprint.
 - Keep target_seconds in the configured range unless the blueprint marks the shot as a master or transition.
 
@@ -616,6 +931,15 @@ Add runtime/project setting:
 }
 ```
 
+Precedence:
+
+```text
+CLI argument
+  overrides project config
+    overrides runtime default
+      overrides hardcoded default medium
+```
+
 CLI option:
 
 ```powershell
@@ -641,6 +965,47 @@ Responsibilities:
 - calculate target seconds
 - avoid repetitive recipe choices
 - produce compact blueprints for `_build_shot_blueprints`
+
+Suggested dataclasses:
+
+```python
+@dataclass(frozen=True)
+class BeatClassification:
+    beat_id: str
+    beat_type: str
+    importance: str
+    confidence: float
+    reasons: list[str]
+
+
+@dataclass(frozen=True)
+class CoverageRole:
+    role: str
+    allowed_shot_types: list[str]
+    preferred_shot_size: str
+    subject_logic: str
+    purpose: str
+    target_seconds_min: float
+    target_seconds_max: float
+    optional: bool = False
+
+
+@dataclass(frozen=True)
+class ShotCoverageBlueprint:
+    shot_id: str
+    shot_order: int
+    beat_id: str
+    beat_type: str
+    coverage_role: str
+    shot_type: str
+    target_seconds: float
+    subject_logic: str
+    environment_logic: str
+    required_detail: str
+    continuity_purpose: str
+```
+
+Keep this module deterministic and unit-testable.
 
 ### Modify `orchestrator/shot_planner.py`
 
@@ -677,6 +1042,42 @@ Then keep the existing enrichment logic:
 
 Do not reduce current shot package fields.
 
+### Shot Package Metadata
+
+Add optional fields to shot package output:
+
+```json
+{
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "classic_dialogue",
+  "coverage_role": "listener_group_reaction",
+  "beat_type": "dialogue_group",
+  "coverage_importance": "normal",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "confidence": 0.78,
+    "reasons": ["active/passive subject count = 5"]
+  }
+}
+```
+
+These fields can live on the shot package or in metadata. They are important for quality grading, debugging, and side-by-side density comparisons.
+
+### Validation
+
+LLM validation should reject:
+
+- missing shot id
+- extra shot id
+- merged shots
+- blank primary subject
+- blank start/end/action
+- invalid shot enum
+- visible primary subject mismatch
+- missing coverage role
+- target seconds outside allowed range unless master/tableau exception applies
+
 ### Modify Scene Contracts Later, Not First
 
 Do not require scene contract regeneration for the first implementation.
@@ -698,6 +1099,7 @@ But Phase 10 should work without those fields.
 Run a small slice in all three modes:
 
 ```powershell
+python -m orchestrator synthesize-shot-packages wizard_of_oz --chapters 4 --coverage-density legacy --force
 python -m orchestrator synthesize-shot-packages wizard_of_oz --chapters 4 --coverage-density low --force
 python -m orchestrator synthesize-shot-packages wizard_of_oz --chapters 4 --coverage-density medium --force
 python -m orchestrator synthesize-shot-packages wizard_of_oz --chapters 4 --coverage-density high --force
@@ -716,17 +1118,19 @@ Compare:
 Expected rough results:
 
 ```text
+legacy: current one-shot-per-beat behavior
 low:    3-6 shots per scene for most scenes
-medium: 6-14 shots per scene for most scenes
-high:   12-30 shots per important scene, chunked when needed
+medium: 3-5 shots for minor scenes, 6-14 shots for normal/major scenes
+high:   12-30 shots per important scene, chunked when needed, but still economical for minor beats
 ```
 
 ## Acceptance Criteria
 
 - Default medium density produces more than one shot per meaningful beat.
+- Minor connective beats can remain economical even at medium/high density.
 - Every shot remains a detailed shot package with clear subject and action state.
-- Dialogue scenes include enough coverage for speaker/listener/reaction cutting.
+- Dialogue scenes distinguish two-person, group, court/council, and crowd-response coverage.
 - Action scenes include geography, action, impact, and reaction coverage.
 - Reveal scenes include scale and reaction coverage.
 - LLM calls are chunked when a scene becomes too large.
-- The user can tune `low`, `medium`, or `high` without changing code.
+- The user can tune `legacy`, `low`, `medium`, or `high` without changing code.
