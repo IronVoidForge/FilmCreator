@@ -5,39 +5,39 @@
   "purpose": "Establish the journey's progress and the escalating magical hostility of the Wicked Witch.",
   "summary": "Dorothy, Toto, Scarecrow, Tin Woodman, and Lion travel through the rugged West. The Witch attempts several assassination attempts: a pack of wolves (defeated by Tin Woodman), crows (defeated by Scarecrow), and black bees (neutralized by Scarecrow's straw).",
   "emotional_arc": "Determination $\\rightarrow$ Growing Dread $\\rightarrow$ Relief/Exhaustion.",
-  "production_intent": "Establish the group's progress through the western landscape while escalating tension via magical assassination attempts by the Wicked Witch. The sequence must transition from steady travel to high-stakes combat and finally to physical and emotional exhaustion.",
-  "scene_short_description": "A group travels through rugged, untilled western lands facing successive animal attacks.",
-  "scene_primary_scale_story_point": "The vastness of the western_rugged_lands vs the small traveling party.",
+  "production_intent": "Establish the group's progress through the western landscape while escalating tension via magical assassination attempts. The sequence must transition from steady travel to high-stakes combat and conclude with physical and emotional exhaustion.",
+  "scene_short_description": "A weary group traverses rugged, untilled western lands under constant magical threat.",
+  "scene_primary_scale_story_point": "Small travelers moving through vast, hostile western_rugged_lands.",
   "scene_required_anchor_catalog": [
     "untilled ground",
-    "travel path"
+    "traveling path"
   ],
-  "scene_start_state": "Group walking with determination through wide, rugged terrain.",
-  "scene_end_state": "Group resting or moving slowly, visibly exhausted and wary.",
-  "dominant_action_line": "The group survives three distinct animal assaults orchestrated by the Wicked Witch (off-screen).",
+  "scene_start_state": "The group is walking steadily across the rugged terrain with a sense of purpose.",
+  "scene_end_state": "The group is physically spent and emotionally drained after surviving multiple attacks.",
+  "dominant_action_line": "The travelers endure successive waves of animal attacks orchestrated by the Wicked Witch.",
   "scene_spatial_layout": [
     "Linear progression along a path through western_rugged_lands",
-    "Circular defensive formations during attacks"
+    "Group maintains close proximity during attacks"
   ],
   "character_spatial_map": [
-    "dorothy and toto central to the group formation",
+    "dorothy and toto center group",
     "tin_woodman and the_scarecrow positioned on flanks for defense",
-    "cowardly_lion trailing or reacting to threats"
+    "cowardly_lion following or flanking"
   ],
   "environment_subzones": [
-    "open western_rugged_lands",
-    "attack impact zones"
+    "open terrain",
+    "attack zones (wolf, crow, bee locations)"
   ],
   "entry_vectors": [
-    "traveling path from previous scene"
+    "western path entry"
   ],
   "exit_vectors": [
-    "continuing path toward Wicked Witch's castle"
+    "western path exit"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Sudden transition from travel to wolf assault",
-    "BT002 -> BT003: Transition from combat relief to crow threat",
-    "BT003 -> BT004: Transition from bird threat to bee swarm"
+    "BT001 -> BT002: Wolf attack triggers sudden combat",
+    "BT002 -> BT003: Crow attack shifts focus to the sky",
+    "BT003 -> BT004: Bee attack forces defensive posture"
   ],
   "characters_required": [
     {
@@ -116,7 +116,7 @@
   "continuity_constraints": [
     "dorothy clothing must be white",
     "the_scarecrow straw density must remain consistent",
-    "tin_woodman physical integrity/surface condition after combat"
+    "tin_woodman physical integrity post-combat"
   ],
   "visual_coverage_families": [
     "Wide shots of the landscape",
@@ -129,8 +129,8 @@
       "beat_id": "BT001",
       "summary": "Group travels through the West",
       "purpose": "",
-      "action_start": "walking steadily",
-      "action_end": "noticing movement in periphery",
+      "action_start": "steady walking",
+      "action_end": "detection of threat",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -141,9 +141,9 @@
       "passive_subjects": [
         "Wicked Witch (off-screen/magical influence)"
       ],
-      "spatial_context": "open western_rugged_lands",
-      "blocking_hint": "linear walking formation",
-      "environment_subzone": "open western_rugged_lands",
+      "spatial_context": "western_rugged_lands",
+      "blocking_hint": "group in line formation",
+      "environment_subzone": "open terrain",
       "continuity_focus": "dorothy white clothing",
       "coverage_hint": "wide landscape shots",
       "coverage_priority": "medium",
@@ -165,10 +165,10 @@
         "cowardly_lion",
         "toto"
       ],
-      "spatial_context": "attack impact zones",
+      "spatial_context": "attack zone",
       "blocking_hint": "tin_woodman moves to intercept",
-      "environment_subzone": "attack impact zones",
-      "continuity_focus": "tin_woodman physical integrity post-combat",
+      "environment_subzone": "open terrain",
+      "continuity_focus": "tin_woodman physical integrity",
       "coverage_hint": "action coverage",
       "coverage_priority": "high",
       "handoff_to_next": "BT003"
@@ -189,23 +189,23 @@
         "cowardly_lion",
         "toto"
       ],
-      "spatial_context": "attack impact zones",
-      "blocking_hint": "the_scarecrow swatting at air",
-      "environment_subzone": "attack impact zones",
+      "spatial_context": "attack zone",
+      "blocking_hint": "the_scarecrow reacts upward",
+      "environment_subzone": "open terrain",
       "continuity_focus": "the_scarecrow straw density",
-      "coverage_hint": "close-ups of reactions",
+      "coverage_hint": "close-ups of reactions and action",
       "coverage_priority": "medium",
       "handoff_to_next": "BT004"
     },
     {
       "beat_id": "BT004",
-      "summary": "Black bee swarm and neutralization",
+      "summary": "Black bee attack and neutralization",
       "purpose": "",
-      "action_start": "bees swarm the group",
+      "action_start": "swarm of black bees appears",
       "action_end": "bees neutralized by the_scarecrow's straw",
       "active_subjects": [
         "the_scarecrow",
-        "bees"
+        "black bees"
       ],
       "passive_subjects": [
         "dorothy",
@@ -213,62 +213,38 @@
         "cowardly_lion",
         "toto"
       ],
-      "spatial_context": "attack impact zones",
-      "blocking_hint": "the_scarecrow using straw to block bees",
-      "environment_subzone": "attack impact zones",
+      "spatial_context": "attack zone",
+      "blocking_hint": "the_scarecrow uses straw to neutralize",
+      "environment_subzone": "open terrain",
       "continuity_focus": "the_scarecrow straw density",
       "coverage_hint": "action/reaction shots",
       "coverage_priority": "high",
-      "handoff_to_next": "BT005"
-    },
-    {
-      "beat_id": "BT005",
-      "summary": "Exhaustion and dread",
-      "purpose": "",
-      "action_start": "group stops moving",
-      "action_end": "group continues with heavy steps",
-      "active_subjects": [
-        "dorothy",
-        "the_scarecrow",
-        "tin_woodman",
-        "cowardly_lion",
-        "toto"
-      ],
-      "passive_subjects": [
-        "Wicked Witch (off-screen/magical influence)"
-      ],
-      "spatial_context": "western_rugged_lands",
-      "blocking_hint": "huddled or slumped postures",
-      "environment_subzone": "open western_rugged_lands",
-      "continuity_focus": "dorothy white clothing",
-      "coverage_hint": "close-ups of reactions",
-      "coverage_priority": "medium",
-      "handoff_to_next": "end_of_scene"
+      "handoff_to_next": "End of scene"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish setting and progress",
-      "planned_shot_moment_summary": "group walking through vast landscape",
-      "primary_subject_seed": "the_scarecrow",
+      "narrative_function": "establish journey",
+      "planned_shot_moment_summary": "group walking through landscape",
+      "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
-        "dorothy",
+        "the_scarecrow",
         "tin_woodman",
         "cowardly_lion",
         "toto"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "open western_rugged_lands",
+      "environment_subzone": "open terrain",
       "planned_shot_required_anchor_1": "untilled ground",
-      "planned_shot_scale_proof_detail": "wide horizon line",
-      "start_state_seed": "group in mid-distance",
-      "end_state_seed": "group moving forward",
+      "planned_shot_scale_proof_detail": "wide horizon vs small group size",
+      "start_state_seed": "steady walking",
+      "end_state_seed": "sudden movement in periphery",
       "action_seed": "walking",
       "blocking_seed": [
-        "linear group movement"
+        "linear formation"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
@@ -290,14 +266,14 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "attack impact zones",
+      "environment_subzone": "attack zone",
       "planned_shot_required_anchor_1": "untilled ground",
-      "planned_shot_scale_proof_detail": "character vs animal size",
-      "start_state_seed": "wolves approaching",
+      "planned_shot_scale_proof_detail": "character vs pack size",
+      "start_state_seed": "wolf approach",
       "end_state_seed": "wolves defeated",
       "action_seed": "combat",
       "blocking_seed": [
-        "tin_woodman intercepting wolves"
+        "dynamic movement around tin_woodman"
       ],
       "shot_size": "medium_full",
       "camera_angle": "low_angle",
@@ -374,16 +350,16 @@
     "[CH003] Chapter III (book index hit)",
     "[CH005] Chapter V (book index hit)",
     "[CH011] Chapter XI (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH012_SC001\n\n## Production Intent\nEstablish the group's progress through the western landscape while escalating tension via magical assassination attempts by the Wicked Witch. The sequence must transition from steady travel to high-stakes combat and finally to physical and emotional exhaustion.\n\n## Required Cast\n- dorothy\n- toto\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- Wicked Witch (off-screen/magical influence)\n\n## Required Environments\n- western_rugged_lands\n\n## Continuity Constraints\n- dorothy: clothing must be white\n- the_scarecrow: maintain straw density consistency\n- tin_woodman: monitor physical integrity after combat\n\n## Beat List\n- BT001: Group travels through the West\n- BT002: Wolf attack and defense (tin_woodman)\n- BT003: Crow attack and defense (the_scarecrow)\n- BT004: Black bee swarm neutralization (the_scarecrow)\n- BT005: Exhaustion and dread",
+  "storyboard_markdown": "# Scene Contract: CH012_SC001\n\n## Production Intent\nEstablish the group's progress through the western landscape while escalating tension via magical assassination attempts. The sequence must transition from steady travel to high-stakes combat and conclude with physical and emotional exhaustion.\n\n## Required Cast\n- dorothy\n- toto\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- Wicked Witch (off-screen/magical influence)\n\n## Required Environments\n- western_rugged_lands\n\n## Continuity Constraints\n- dorothy: clothing must be white\n- the_scarecrow: maintain straw density consistency\n- tin_woodman: monitor physical integrity post-combat\n\n## Beat List\n- BT001: Group travels through the West\n- BT002: Wolf attack and defense (tin_woodman)\n- BT003: Crow attack and defense (the_scarecrow)\n- BT004: Black bee attack and neutralization (the_scarecrow)",
   "metadata": {
     "artifact_id": "CH012_SC001_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "e575aeee6a8a6d6cc612dfa94d0496662db89083",
+    "source_fingerprint": "220a76da084bfaaadd943299a27c0ec81db1414f",
     "created_at_utc": "2026-04-27T08:34:09.614502+00:00",
-    "updated_at_utc": "2026-04-27T08:34:09.614502+00:00",
+    "updated_at_utc": "2026-04-27T13:36:37.290958+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -408,6 +384,11 @@
         "timestamp_utc": "2026-04-27T08:34:55.594270+00:00",
         "action": "synthesized",
         "source_fingerprint": "e575aeee6a8a6d6cc612dfa94d0496662db89083"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:37:20.151082+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "220a76da084bfaaadd943299a27c0ec81db1414f"
       }
     ]
   }

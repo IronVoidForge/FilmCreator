@@ -5,38 +5,38 @@
   "purpose": "Execute the magical ritual and provide a high-energy transition.",
   "summary": "Dorothy performs the ritual of the Golden Cap, standing on different feet and reciting the magic words. The Winged Monkeys descend from the sky to obey her command to fly them to the Emerald City.",
   "emotional_arc": "Tension/Anticipation $\\rightarrow$ Awe/Exhilaration.",
-  "production_intent": "Execute the magical ritual of the Golden Cap through specific physical movements and verbal incantations to trigger a high-energy transition involving winged monkey arrival and aerial lift.",
-  "scene_short_description": "A young girl in white performs a ritual amidst vast scarlet flower fields as winged creatures descend.",
-  "scene_primary_scale_story_point": "Small human figures against a vast expanse of scarlet buttercups and yellow daisies.",
+  "production_intent": "Execute the ritual of the Golden Cap through specific physical movements and incantations to trigger a high-energy transition from ground-based tension to aerial exhilaration.",
+  "scene_short_description": "A young girl in white performs a ritual amidst vast scarlet fields as winged creatures descend.",
+  "scene_primary_scale_story_point": "Small human figures against the vastness of scarlet_flower_fields and descending aerial swarm.",
   "scene_required_anchor_catalog": [
-    "scarlet_flower_fields (vast landscape)",
-    "Golden Cap (ritual object)"
+    "dorothy",
+    "golden_cap"
   ],
-  "scene_start_state": "Dorothy stands isolated in the scarlet fields, preparing to perform the ritual.",
-  "scene_end_state": "The group is lifted into the air by winged monkeys for flight.",
-  "dominant_action_line": "Ritual performance leads to monkey descent and subsequent aerial transport.",
+  "scene_start_state": "dorothy stands centered in the scarlet fields, preparing the ritual.",
+  "scene_end_state": "The group is lifted into the air by winged_monkeys.",
+  "dominant_action_line": "Ritual performance leads to monkey descent and subsequent aerial ascent.",
   "scene_spatial_layout": [
-    "Open field expanse with low vegetation",
-    "Verticality introduced via descending monkeys"
+    "Open expanse of scarlet_flower_fields",
+    "Vertical transition from ground level to sky"
   ],
   "character_spatial_map": [
-    "dorothy at center of ritual circle",
-    "the_scarecrow, tin_woodman, cowardly_lion, toto clustered around dorothy",
-    "winged_monkeys descending from sky to ground level"
+    "dorothy at center focal point",
+    "the_scarecrow, tin_woodman, cowardly_lion, toto clustered near dorothy",
+    "winged_monkeys descending from overhead"
   ],
   "environment_subzones": [
-    "scarlet_flower_fields (ground level)",
-    "air above scarlet_flower_fields (aerial zone)"
+    "scarlet_flower_fields_ground",
+    "scarlet_flower_fields_sky"
   ],
   "entry_vectors": [
-    "winged_monkeys descending vertically from sky"
+    "winged_monkeys descent from sky"
   ],
   "exit_vectors": [
-    "group ascending vertically into the sky"
+    "group ascent into sky"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Ritual completion triggers monkey arrival",
-    "BT002 -> BT003: Monkey obedience triggers group lift"
+    "BT001 -> BT002: ritual completion to monkey arrival",
+    "BT002 -> BT003: monkey landing to group lift-off"
   ],
   "characters_required": [
     {
@@ -113,21 +113,21 @@
     }
   ],
   "continuity_constraints": [
-    "Specific sequence of Dorothy's foot placement and magic words",
-    "Arrival pattern and descent trajectory of the winged monkeys"
+    "Precise sequence of dorothy feet placement and magic words",
+    "Specific arrival pattern/descent order of winged_monkeys"
   ],
   "visual_coverage_families": [
-    "Low-angle hero shots of ritual performance",
-    "Sweeping aerial shots of monkey descent",
-    "Fast-paced movement shots during group lift"
+    "Low-angle hero shots of dorothy performing ritual",
+    "Sweeping aerial shots of winged_monkeys arrival",
+    "Fast-paced movement shots during lift-off"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Dorothy performs the ritual of the Golden Cap",
+      "summary": "Ritual of the Golden Cap",
       "purpose": "",
-      "action_start": "dorothy standing in scarlet fields",
-      "action_end": "magic words recited and feet shifted",
+      "action_start": "dorothy prepares to speak",
+      "action_end": "magic words completed",
       "active_subjects": [
         "dorothy"
       ],
@@ -137,20 +137,20 @@
         "cowardly_lion",
         "toto"
       ],
-      "spatial_context": "scarlet_flower_fields center",
-      "blocking_hint": "dorothy performs ritual movements while others watch closely",
-      "environment_subzone": "scarlet_flower_fields",
-      "continuity_focus": "exact sequence of feet and words",
+      "spatial_context": "scarlet_flower_fields_ground",
+      "blocking_hint": "dorothy center, others surrounding",
+      "environment_subzone": "scarlet_flower_fields_ground",
+      "continuity_focus": "feet/words sequence",
       "coverage_hint": "low-angle hero shots",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Winged Monkeys descend to obey command",
+      "summary": "Descent of the Monkeys",
       "purpose": "",
-      "action_start": "sky above fields",
-      "action_end": "monkeys arrive at ground level/near group",
+      "action_start": "sky becomes populated with movement",
+      "action_end": "winged_monkeys reach ground level",
       "active_subjects": [
         "winged_monkeys"
       ],
@@ -161,20 +161,20 @@
         "cowardly_lion",
         "toto"
       ],
-      "spatial_context": "transition from sky to scarlet_flower_fields",
-      "blocking_hint": "monkeys descend in a specific pattern around the group",
-      "environment_subzone": "air above scarlet_flower_fields",
-      "continuity_focus": "arrival pattern of monkeys",
+      "spatial_context": "scarlet_flower_fields_sky to ground",
+      "blocking_hint": "descending from above",
+      "environment_subzone": "scarlet_flower_fields_sky",
+      "continuity_focus": "arrival pattern",
       "coverage_hint": "sweeping aerial shots",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "The group is lifted for flight",
+      "summary": "Aerial Ascent",
       "purpose": "",
-      "action_start": "monkeys in proximity to group",
-      "action_end": "group ascending into the air",
+      "action_start": "monkeys make contact with group",
+      "action_end": "group leaves the ground",
       "active_subjects": [
         "winged_monkeys",
         "dorothy",
@@ -184,21 +184,21 @@
         "toto"
       ],
       "passive_subjects": [],
-      "spatial_context": "vertical movement from ground to sky",
-      "blocking_hint": "monkeys grab/lift characters as they ascend",
-      "environment_subzone": "scarlet_flower_fields to air above",
-      "continuity_focus": "",
-      "coverage_hint": "",
-      "coverage_priority": "",
-      "handoff_to_next": ""
+      "spatial_context": "scarlet_flower_fields_ground to sky",
+      "blocking_hint": "vertical lift-off",
+      "environment_subzone": "scarlet_flower_fields_sky",
+      "continuity_focus": "group cohesion during flight",
+      "coverage_hint": "fast-paced movement shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish ritual tension",
-      "planned_shot_moment_summary": "dorothy shifts feet and speaks words",
+      "narrative_function": "establish ritual power",
+      "planned_shot_moment_summary": "dorothy shifts feet and recites words",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "the_scarecrow",
@@ -208,19 +208,19 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "scarlet_flower_fields",
-      "planned_shot_required_anchor_1": "Golden Cap",
-      "planned_shot_scale_proof_detail": "low-angle hero perspective vs ground level flowers",
+      "environment_subzone": "scarlet_flower_fields_ground",
+      "planned_shot_required_anchor_1": "dorothy",
+      "planned_shot_scale_proof_detail": "low-angle perspective vs field expanse",
       "start_state_seed": "dorothy standing still",
-      "end_state_seed": "dorothy finishing incantation",
-      "action_seed": "shifting feet and reciting magic words",
+      "end_state_seed": "dorothy completing foot sequence",
+      "action_seed": "shifting weight between feet and speaking",
       "blocking_seed": [
         "dorothy center",
-        "others surrounding"
+        "companions in semi-circle"
       ],
-      "shot_size": "medium_close",
+      "shot_size": "medium_full",
       "camera_angle": "low_angle",
-      "lens_family": "portrait",
+      "lens_family": "normal",
       "camera_motion": "push_in",
       "zoom_behavior": "subtle_in",
       "focus_strategy": "shallow_subject",
@@ -230,29 +230,64 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "show scale of arrival",
-      "planned_shot_moment_summary": "winged monkeys descend from sky",
+      "narrative_function": "visualize magical response",
+      "planned_shot_moment_summary": "winged_monkeys descend from sky",
       "primary_subject_seed": "winged_monkeys",
       "secondary_subjects_seed": [
         "dorothy"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "air above scarlet_flower_fields",
-      "planned_shot_required_anchor_1": "scarlet_flower_fields",
-      "planned_shot_scale_proof_detail": "sweeping aerial view vs ground subjects",
+      "environment_subzone": "scarlet_flower_fields_sky",
+      "planned_shot_required_anchor_1": "sky_horizon",
+      "planned_shot_scale_proof_detail": "aerial sweep vs ground subjects",
       "start_state_seed": "clear sky",
-      "end_state_seed": "monkeys landing/circling",
-      "action_seed": "",
-      "blocking_seed": [],
-      "shot_size": "",
-      "camera_angle": "",
-      "lens_family": "",
-      "camera_motion": "",
-      "zoom_behavior": "",
-      "focus_strategy": "",
-      "lighting_style": "",
-      "primary_subject_angle": ""
+      "end_state_seed": "monkeys filling frame",
+      "action_seed": "descending in pattern",
+      "blocking_seed": [
+        "monkeys sweeping down toward center"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "high_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "crane",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "backlit",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "execute transition",
+      "planned_shot_moment_summary": "group is lifted into air",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto",
+        "winged_monkeys"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "scarlet_flower_fields_sky",
+      "planned_shot_required_anchor_1": "dorothy",
+      "planned_shot_scale_proof_detail": "rapid vertical movement",
+      "start_state_seed": "group on ground",
+      "end_state_seed": "group ascending",
+      "action_seed": "lifting off the ground",
+      "blocking_seed": [
+        "monkeys grabbing characters and rising"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_left"
     }
   ],
   "unresolved_questions": [],
@@ -318,16 +353,16 @@
     "[CH012] Chapter XII (book index hit)",
     "[CH014] Chapter XIV (book index hit)",
     "[CH018] Chapter XVIII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH014_SC003\n\n## Production Intent\nExecute the magical ritual of the Golden Cap through specific physical movements and verbal incantations to trigger a high-energy transition involving winged monkey arrival and aerial lift.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n- winged_monkeys (including Monkey King)\n\n## Required Environments\n- scarlet_flower_fields\n\n## Continuity Constraints\n- Specific sequence of Dorothy's foot placement and magic words.\n- Arrival pattern and descent trajectory of the winged monkeys.\n\n## Beat List\n- BT001: Dorothy performs the ritual of the Golden Cap.\n- BT002: Winged Monkeys descend to obey command.\n- BT003: The group is lifted for flight.",
+  "storyboard_markdown": "# Scene Contract: CH014_SC003\n\n## Production Intent\nExecute the ritual of the Golden Cap through specific physical movements and incantations to trigger a high-energy transition from ground-based tension to aerial exhilaration.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n- winged_monkeys (including Monkey King)\n\n## Required Environments\n- scarlet_flower_fields\n\n## Continuity Constraints\n- Precise sequence of dorothy feet placement and magic words.\n- Specific arrival pattern/descent order of winged_monkeys.\n\n## Beat List\n- BT001: Ritual of the Golden Cap (Feet/Words sequence)\n- BT002: Descent of the Monkeys (Arrival pattern)\n- BT003: Aerial Ascent (Group lift-off)",
   "metadata": {
     "artifact_id": "CH014_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "e10e728e9aebadba5d592850f1ef341740943c1f",
+    "source_fingerprint": "f20aa2bf3def5faefe9c9be6accfce5d8afe9daf",
     "created_at_utc": "2026-04-27T08:42:52.125443+00:00",
-    "updated_at_utc": "2026-04-27T08:42:52.125443+00:00",
+    "updated_at_utc": "2026-04-27T13:45:34.341962+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -352,6 +387,11 @@
         "timestamp_utc": "2026-04-27T08:43:29.606204+00:00",
         "action": "synthesized",
         "source_fingerprint": "e10e728e9aebadba5d592850f1ef341740943c1f"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:46:19.040952+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "f20aa2bf3def5faefe9c9be6accfce5d8afe9daf"
       }
     ]
   }

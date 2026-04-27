@@ -5,38 +5,37 @@
   "purpose": "Establish the physical obstacle of the river and create the initial conflict/loss.",
   "summary": "The group attempts to navigate a wide, swift river on a makeshift raft. The current proves too strong, sweeping them downstream and resulting in the Scarecrow being separated from the group and stuck on his pole in the middle of the water.",
   "emotional_arc": "Determination $\\rightarrow$ Panic/Loss.",
-  "production_intent": "Establish the river as a high-stakes physical barrier through a failed crossing attempt. The sequence must visually communicate the overwhelming power of the current relative to the small raft, culminating in the separation of the_scarecrow from the group.",
-  "scene_short_description": "A small makeshift raft struggles against a wide, swift river current.",
-  "scene_primary_scale_story_point": "Small raft vs vast, fast-moving water volume.",
+  "production_intent": "Establish the scale and danger of the swift river crossing through a failed raft navigation attempt. The sequence must visually communicate the transition from controlled movement to chaotic separation as the current breaks the group's formation.",
+  "scene_short_description": "A small makeshift raft struggles against a wide, fast-moving river current.",
+  "scene_primary_scale_story_point": "Small raft vs vast, swift water volume.",
   "scene_required_anchor_catalog": [
     "makeshift_raft",
     "the_scarecrow_pole"
   ],
-  "scene_start_state": "Group on raft navigating into the center of the swift river.",
-  "scene_end_state": "Raft downstream; the_scarecrow stuck on his pole in mid-river.",
-  "dominant_action_line": "Navigating the crossing -> Current overwhelms raft -> The_scarecrow is swept away and separated.",
+  "scene_start_state": "Group is positioned on the raft with determined expressions, navigating the river.",
+  "scene_end_state": "The group is on a drifting raft while the_scarecrow is stuck on his pole in mid-river.",
+  "dominant_action_line": "Navigating the current leads to the raft losing the Scarecrow to the water.",
   "scene_spatial_layout": [
-    "Linear movement along the river current",
-    "Vertical separation between raft and the_scarecrow's pole position"
+    "Raft moves downstream through swift_river_crossing",
+    "The_scarecrow becomes a stationary point in the moving current via his pole"
   ],
   "character_spatial_map": [
-    "dorothy, tin_woodman, cowardly_lion, toto on makeshift_raft",
-    "the_scarecrow attached to pole in mid-river"
+    "dorothy, tin_woodman, cowardly_lion, and toto are clustered on makeshift_raft",
+    "the_scarecrow is separated, positioned between the raft and the shore"
   ],
   "environment_subzones": [
     "swift_river_crossing (main channel)",
-    "riverbank (starting point/reference)"
+    "riverbank (distant/shoreline)"
   ],
   "entry_vectors": [
-    "raft moving from shore into current"
+    "Raft enters from upstream"
   ],
   "exit_vectors": [
-    "raft drifting downstream",
-    "the_scarecrow drifting/stuck mid-stream"
+    "Raft drifts downstream"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Current intensifies",
-    "BT002 -> BT003: Physical separation event"
+    "BT001 -> BT002: Current intensifies, raft loses stability",
+    "BT002 -> BT003: The_scarecrow is swept away and becomes stuck"
   ],
   "characters_required": [
     {
@@ -104,22 +103,22 @@
   ],
   "continuity_constraints": [
     "Water spray and wetness levels on all characters",
-    "Raft position relative to shore/current flow",
-    "The_scarecrow's attachment to his pole"
+    "Raft position relative to shore/current direction",
+    "The pole supporting the_scarecrow in mid-river"
   ],
   "visual_coverage_families": [
-    "Wide shots establishing river scale and raft vulnerability",
-    "Medium shots of group struggle against current",
+    "Wide shots establishing raft scale against river width",
+    "Medium shots of characters struggling against current",
     "Close-ups of the_scarecrow realizing separation",
-    "POV shots from raft looking at receding subject"
+    "POV shots from raft looking at receding subjects"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Group attempts crossing",
+      "summary": "Group attempts navigation",
       "purpose": "",
-      "action_start": "raft pushes off shore",
-      "action_end": "raft enters heavy current",
+      "action_start": "raft enters swift current",
+      "action_end": "current gains control of raft",
       "active_subjects": [
         "dorothy",
         "tin_woodman",
@@ -129,42 +128,42 @@
       ],
       "passive_subjects": [],
       "spatial_context": "swift_river_crossing",
-      "blocking_hint": "group centered on raft",
+      "blocking_hint": "group huddled on makeshift_raft",
       "environment_subzone": "swift_river_crossing",
-      "continuity_focus": "wetness levels start increasing",
-      "coverage_hint": "wide shot of scale",
+      "continuity_focus": "initial wetness levels",
+      "coverage_hint": "wide shot of raft in river",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Current overwhelms the raft",
+      "summary": "Current overwhelms the group",
       "purpose": "",
-      "action_start": "waves hit raft hard",
-      "action_end": "raft loses control/direction",
+      "action_start": "raft tilts sharply",
+      "action_end": "the_scarecrow is swept from raft",
       "active_subjects": [
         "dorothy",
         "tin_woodman",
-        "cowardly_lion"
+        "cowardly_lion",
+        "the_scarecrow"
       ],
       "passive_subjects": [
-        "the_scarecrow",
         "toto"
       ],
-      "spatial_context": "mid-river",
-      "blocking_hint": "characters bracing against sides of raft",
+      "spatial_context": "swift_river_crossing",
+      "blocking_hint": "characters grasping raft edges",
       "environment_subzone": "swift_river_crossing",
-      "continuity_focus": "water spray on clothing",
+      "continuity_focus": "increased water spray/wetness",
       "coverage_hint": "medium shots of struggle",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "The_scarecrow is separated",
+      "summary": "The Scarecrow is lost",
       "purpose": "",
-      "action_start": "the_scarecrow is swept from raft",
-      "action_end": "the_scarecrow is stuck on his pole in the water",
+      "action_start": "the_scarecrow enters the water",
+      "action_end": "the_scarecrow is stuck on his pole in mid-river",
       "active_subjects": [
         "the_scarecrow"
       ],
@@ -174,11 +173,11 @@
         "cowardly_lion",
         "toto"
       ],
-      "spatial_context": "mid-river separation",
-      "blocking_hint": "raft moves one way, the_scarecrow stays/drifts via pole",
+      "spatial_context": "swift_river_crossing",
+      "blocking_hint": "the_scarecrow isolated from the raft",
       "environment_subzone": "swift_river_crossing",
-      "continuity_focus": "the_scarecrow's position on pole",
-      "coverage_hint": "close-up of face and POV from raft",
+      "continuity_focus": "position of pole in water",
+      "coverage_hint": "close-up on face and POV from raft",
       "coverage_priority": "high",
       "handoff_to_next": "end_of_scene"
     }
@@ -194,17 +193,16 @@
         "dorothy",
         "tin_woodman",
         "cowardly_lion",
-        "the_scarecrow",
-        "toto"
+        "the_scarecrow"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "swift_river_crossing",
       "planned_shot_required_anchor_1": "makeshift_raft",
-      "planned_shot_scale_proof_detail": "raft size vs river width",
-      "start_state_seed": "raft near shore",
-      "end_state_seed": "raft in mid-stream",
-      "action_seed": "raft buffeted by waves",
+      "planned_shot_scale_proof_detail": "raft size relative to river width",
+      "start_state_seed": "raft steady in water",
+      "end_state_seed": "raft tilting in current",
+      "action_seed": "raft hits heavy current",
       "blocking_seed": [
         "group clustered on raft"
       ],
@@ -221,22 +219,19 @@
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "convey struggle",
-      "planned_shot_moment_summary": "group fighting the current",
+      "planned_shot_moment_summary": "characters fighting the water",
       "primary_subject_seed": "tin_woodman",
-      "secondary_subjects_seed": [
-        "dorothy",
-        "cowardly_lion"
-      ],
+      "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "swift_river_crossing",
       "planned_shot_required_anchor_1": "makeshift_raft",
       "planned_shot_scale_proof_detail": "water spray height",
-      "start_state_seed": "struggling stance",
-      "end_state_seed": "losing balance",
-      "action_seed": "characters bracing against water",
+      "start_state_seed": "group struggling",
+      "end_state_seed": "the_scarecrow slipping away",
+      "action_seed": "current sweeps raft and characters",
       "blocking_seed": [
-        "group shifting weight"
+        "characters gripping raft edges"
       ],
       "shot_size": "medium",
       "camera_angle": "low_angle",
@@ -245,37 +240,35 @@
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front"
+      "primary_subject_angle": "profile_left"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "convey loss",
-      "planned_shot_moment_summary": "the_scarecrow being swept away",
+      "planned_shot_moment_summary": "the_scarecrow stuck on pole",
       "primary_subject_seed": "the_scarecrow",
-      "secondary_subjects_seed": [
-        "dorothy",
-        "toto"
-      ],
+      "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "swift_river_crossing",
       "planned_shot_required_anchor_1": "the_scarecrow_pole",
-      "planned_shot_scale_proof_detail": "distance between raft and pole",
-      "start_state_seed": "the_scarecrow on raft",
-      "end_state_seed": "the_scarecrow stuck on pole mid-river",
-      "action_seed": "current pulls the_scarecrow away",
+      "planned_shot_scale_proof_detail": "distance from raft to the_scarecrow",
+      "start_state_seed": "the_scarecrow drifting",
+      "end_state_seed": "the_scarecrow stationary on pole",
+      "action_seed": "the_scarecrow is separated and stuck",
       "blocking_seed": [
-        "separation of subjects"
+        "the_scarecrow center frame",
+        "raft receding in background"
       ],
-      "shot_size": "medium_close",
+      "shot_size": "close_up",
       "camera_angle": "eye_level",
       "lens_family": "portrait",
       "camera_motion": "pull_back",
       "zoom_behavior": "none",
-      "focus_strategy": "rack_focus",
+      "focus_strategy": "shallow_subject",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "profile_left"
+      "primary_subject_angle": "front"
     }
   ],
   "unresolved_questions": [],
@@ -341,16 +334,16 @@
     "[CH008] Chapter VIII (book index hit)",
     "[CH003] Chapter III (book index hit)",
     "[CH007] Chapter VII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH008_SC001\n\n## Production Intent\nEstablish the river as a high-stakes physical barrier through a failed crossing attempt. The sequence must visually communicate the overwhelming power of the current relative to the small raft, culminating in the separation of the_scarecrow from the group.\n\n## Required Cast\n- dorothy\n- toto\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n\n## Required Environments\n- swift_river_crossing (Wide river with swift current)\n- makeshift_raft\n\n## Continuity Constraints\n- Water spray/wetness on characters\n- Position of the raft relative to the shore\n- The_scarecrow's attachment to his pole\n\n## Beat List\n- BT001: Group attempts crossing\n- BT002: Current overwhelms the raft\n- BT003: The_scarecrow is separated",
+  "storyboard_markdown": "# Scene Contract: CH008_SC001\n\n## Production Intent\nEstablish the scale and danger of the swift river crossing through a failed raft navigation attempt. The sequence must visually communicate the transition from controlled movement to chaotic separation as the current breaks the group's formation.\n\n## Required Cast\n- dorothy\n- toto\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n\n## Required Environments\n- swift_river_crossing (Wide river with swift current)\n- makeshift_raft\n\n## Continuity Constraints\n- Water spray and wetness levels on all characters\n- Raft position relative to shore/current direction\n- The pole supporting the_scarecrow in mid-river\n\n## Beat List\n- BT001: Group attempts navigation\n- BT002: Current overwhelms the group\n- BT003: The Scarecrow is lost",
   "metadata": {
     "artifact_id": "CH008_SC001_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "efa15f2c72d72a2025e6590ef9d470e5c89ecea4",
+    "source_fingerprint": "f759402c030321fc8e52777cfd20f355ccbe2bba",
     "created_at_utc": "2026-04-27T08:19:38.640797+00:00",
-    "updated_at_utc": "2026-04-27T08:19:38.640797+00:00",
+    "updated_at_utc": "2026-04-27T13:21:29.255451+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -375,6 +368,11 @@
         "timestamp_utc": "2026-04-27T08:20:22.594943+00:00",
         "action": "synthesized",
         "source_fingerprint": "efa15f2c72d72a2025e6590ef9d470e5c89ecea4"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:22:13.979844+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "f759402c030321fc8e52777cfd20f355ccbe2bba"
       }
     ]
   }

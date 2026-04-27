@@ -5,33 +5,33 @@
   "purpose": "Provide exposition regarding the Wizard's nature and reinforce the characters' individual motivations.",
   "summary": "The travelers stop at a farmhouse for supper. A local resident explains that the Great Oz is a shapeshifter who hides his true form. During the meal, the group discusses their specific desires: brains, a heart, courage, and the way home to Kansas.",
   "emotional_arc": "Curiosity/Awe regarding Oz to focused resolve.",
-  "production_intent": "Establish the mystical nature of the Wizard through local exposition while grounding the travelers' individual motivations during a communal meal. The scene must transition from curiosity regarding Oz to a unified sense of purpose among the group.",
-  "scene_short_description": "Travelers share a meal inside a farmhouse while learning about the Wizard's shapeshifting nature.",
-  "scene_primary_scale_story_point": "Group centered around a single dining table.",
+  "production_intent": "Establish the mystical nature of the Wizard through local exposition while grounding the travelers' individual motivations during a communal meal. The scene must transition from curiosity about Oz to a unified sense of purpose among the group.",
+  "scene_short_description": "Travelers share a meal inside a farmhouse while learning about the shapeshifting Wizard.",
+  "scene_primary_scale_story_point": "The dining table serves as the central anchor for all character interactions.",
   "scene_required_anchor_catalog": [
     "Dining table",
-    "Supper props (plates/food)"
+    "Supper food props"
   ],
-  "scene_start_state": "Travelers seated at the farmhouse table as supper is served.",
-  "scene_end_state": "The group sits in focused resolve after stating their desires.",
-  "dominant_action_line": "Discussion of the Wizard's true form leads to individual declarations of need.",
+  "scene_start_state": "Travelers seated at the farmhouse table during supper.",
+  "scene_end_state": "Characters resolved and focused on their specific desires.",
+  "dominant_action_line": "The group listens to local lore before declaring their personal needs.",
   "scene_spatial_layout": [
-    "Centralized dining area",
-    "Perimeter seating for farmer family"
+    "Centralized dining area within the interior farmhouse",
+    "Seating arranged around a single table"
   ],
   "character_spatial_map": [
-    "dorothy, the_scarecrow, tin_woodman, cowardly_lion, and toto clustered around the table",
-    "farmer_woman_family positioned as hosts/servers near the table"
+    "dorothy, the_scarecrow, tin_woodman, cowardly_lion, and toto clustered at the table",
+    "farmer_woman_family positioned as hosts/interlocutors"
   ],
   "environment_subzones": [
     "Dining area",
-    "Kitchen/Serving zone"
+    "Farmhouse interior perimeter"
   ],
   "entry_vectors": [
-    "Farmhouse door (travelers entry)"
+    "Main farmhouse entrance"
   ],
   "exit_vectors": [
-    "Farmhouse door (travelers exit)"
+    "Main farmhouse entrance"
   ],
   "beat_transition_map": [
     "BT001 -> BT002: Transition from eating to listening",
@@ -123,34 +123,33 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Travelers arrive and eat supper",
+      "summary": "Travelers eat supper at the farmhouse",
       "purpose": "",
-      "action_start": "travelers seated at table",
-      "action_end": "eating in progress",
+      "action_start": "travelers seated and eating",
+      "action_end": "eating continues during talk",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
         "tin_woodman",
         "cowardly_lion",
+        "toto",
         "farmer_woman_family"
       ],
-      "passive_subjects": [
-        "toto"
-      ],
+      "passive_subjects": [],
       "spatial_context": "Dining area",
-      "blocking_hint": "Group clustered around central table",
+      "blocking_hint": "seated around table",
       "environment_subzone": "Dining area",
-      "continuity_focus": "Food/supper props level",
-      "coverage_hint": "Medium group shots",
+      "continuity_focus": "food/supper props",
+      "coverage_hint": "medium group shots",
       "coverage_priority": "medium",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Exposition regarding the Wizard's nature",
+      "summary": "Local resident explains the Wizard's shapeshifting nature",
       "purpose": "",
       "action_start": "resident begins speaking",
-      "action_end": "travelers react to shapeshifter revelation",
+      "action_end": "explanation of Oz complete",
       "active_subjects": [
         "farmer_woman_family"
       ],
@@ -161,19 +160,19 @@
         "cowardly_lion"
       ],
       "spatial_context": "Dining area",
-      "blocking_hint": "Resident facing the group",
+      "blocking_hint": "resident facing group",
       "environment_subzone": "Dining area",
-      "continuity_focus": "Lighting transition toward evening",
-      "coverage_hint": "Over-the-shoulder shots",
+      "continuity_focus": "lighting transition day to evening",
+      "coverage_hint": "over-the-shoulder shots",
       "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Individual declarations of desire",
+      "summary": "Characters declare their specific desires",
       "purpose": "",
       "action_start": "first character states quest",
-      "action_end": "group sits in focused resolve",
+      "action_end": "final character states quest",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -184,12 +183,12 @@
         "farmer_woman_family"
       ],
       "spatial_context": "Dining area",
-      "blocking_hint": "Characters turning toward each other or looking ahead",
+      "blocking_hint": "individual focus at table",
       "environment_subzone": "Dining area",
-      "continuity_focus": "Food/supper props level",
-      "coverage_hint": "Close-ups on individuals",
+      "continuity_focus": "food/supper props",
+      "coverage_hint": "close-ups on individuals",
       "coverage_priority": "high",
-      "handoff_to_next": "End of scene"
+      "handoff_to_next": "end of scene"
     }
   ],
   "planned_shots": [
@@ -198,21 +197,21 @@
       "beat_id": "BT001",
       "narrative_function": "establish setting and group",
       "planned_shot_moment_summary": "travelers eating supper",
-      "primary_subject_seed": "the_scarecrow",
+      "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
-        "dorothy",
+        "the_scarecrow",
         "tin_woodman",
         "cowardly_lion",
-        "farmer_woman_family"
+        "toto"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "Dining area",
       "planned_shot_required_anchor_1": "Dining table",
       "planned_shot_scale_proof_detail": "Table occupies center frame",
-      "start_state_seed": "travelers seated",
+      "start_state_seed": "group eating",
       "end_state_seed": "eating continues",
-      "action_seed": "group eating and interacting",
+      "action_seed": "eating and quiet conversation",
       "blocking_seed": [
         "seated around table"
       ],
@@ -229,13 +228,11 @@
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "exposition delivery",
-      "planned_shot_moment_summary": "resident explains the Wizard is a shapeshifter",
+      "planned_shot_moment_summary": "local resident explains Oz is a shapeshifter",
       "primary_subject_seed": "farmer_woman_family",
       "secondary_subjects_seed": [
         "dorothy",
-        "the_scarecrow",
-        "tin_woodman",
-        "cowardly_lion"
+        "the_scarecrow"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
@@ -243,8 +240,8 @@
       "planned_shot_required_anchor_1": "Dining table",
       "planned_shot_scale_proof_detail": "OTS perspective over traveler shoulder",
       "start_state_seed": "resident speaking",
-      "end_state_seed": "travelers reacting with awe",
-      "action_seed": "resident gestures while explaining",
+      "end_state_seed": "resident finishing sentence",
+      "action_seed": "explaining Oz's nature",
       "blocking_seed": [
         "resident facing travelers"
       ],
@@ -255,27 +252,27 @@
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "soft_even",
-      "primary_subject_angle": "profile_right"
+      "primary_subject_angle": "profile_left"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "character motivation reinforcement",
       "planned_shot_moment_summary": "individual characters state their quests",
-      "primary_subject_seed": "dorothy",
+      "primary_subject_seed": "the_scarecrow",
       "secondary_subjects_seed": [
-        "the_scarecrow",
         "tin_woodman",
-        "cowardly_lion"
+        "cowardly_lion",
+        "dorothy"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "Dining area",
       "planned_shot_required_anchor_1": "Dining table",
-      "planned_shot_scale_proof_detail": "Tight framing on facial expressions",
+      "planned_shot_scale_proof_detail": "Tight framing on face",
       "start_state_seed": "character begins speaking",
       "end_state_seed": "character finishes quest statement",
-      "action_seed": "characters state desires (brains, heart, courage, home)",
+      "action_seed": "stating desire (brains, heart, courage, home)",
       "blocking_seed": [
         "seated at table"
       ],
@@ -354,16 +351,16 @@
     "[CH010] Chapter X (book index hit)",
     "[CH005] Chapter V (book index hit)",
     "[CH007] Chapter VII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH010_SC002\n\n## Production Intent\nEstablish the mystical nature of the Wizard through local exposition while grounding the travelers' individual motivations during a communal meal. The scene must transition from curiosity regarding Oz to a unified sense of purpose among the group.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n- farmer_woman_family\n\n## Required Environments\n- The Farmhouse (Interior)\n\n## Continuity Constraints\n- Food/supper props consumption levels\n- Lighting transition from day to evening\n\n## Beat List\n- BT001: Travelers arrive and eat supper.\n- BT002: Exposition regarding the Wizard's nature (shapeshifter).\n- BT003: Individual declarations of desire (brains, heart, courage, home).",
+  "storyboard_markdown": "# Scene Contract: CH010_SC002\n\n## Production Intent\nEstablish the mystical nature of the Wizard through local exposition while grounding the travelers' individual motivations during a communal meal. The scene must transition from curiosity about Oz to a unified sense of purpose among the group.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n- farmer_woman_family\n\n## Required Environments\n- The Farmhouse (Interior)\n\n## Continuity Constraints\n- Food/supper props consumption levels\n- Lighting transition from day to evening\n\n## Beat List\n- BT001: Travelers eat supper at the farmhouse.\n- BT002: Local resident explains the Wizard's shapeshifting nature.\n- BT003: Characters declare their specific desires (brains, heart, courage, home).",
   "metadata": {
     "artifact_id": "CH010_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "85ded0c11f9061edf8e14b898cc72535b7fdb8b0",
+    "source_fingerprint": "282ac721d58d12299c5069f7a3530ac7d606ed9f",
     "created_at_utc": "2026-04-27T08:27:08.935382+00:00",
-    "updated_at_utc": "2026-04-27T08:27:08.935382+00:00",
+    "updated_at_utc": "2026-04-27T13:29:20.944260+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -388,6 +385,11 @@
         "timestamp_utc": "2026-04-27T08:27:50.636689+00:00",
         "action": "synthesized",
         "source_fingerprint": "85ded0c11f9061edf8e14b898cc72535b7fdb8b0"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:30:02.809089+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "282ac721d58d12299c5069f7a3530ac7d606ed9f"
       }
     ]
   }

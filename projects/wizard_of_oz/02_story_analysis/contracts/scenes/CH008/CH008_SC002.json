@@ -5,34 +5,34 @@
   "purpose": "Resolve the immediate crisis of the lost companion through a \"deus ex machina\" moment.",
   "summary": "After reaching the shore, the group realizes the Scarecrow is gone. A passing Stork arrives and offers assistance. The Stork flies out to the middle of the river, retrieves the Scarecrow from his pole, and delivers him safely back to the group on the bank.",
   "emotional_arc": "Despair $\\rightarrow$ Relief/Wonder.",
-  "production_intent": "Establish the group's arrival at the swift riverbank and execute a high-scale aerial retrieval of the scarecrow via a stork to resolve the lost companion crisis.",
-  "scene_short_description": "A group stands defeated on a grassy bank before an aerial rescue arrives from the river.",
-  "scene_primary_scale_story_point": "The stork must appear large enough to carry the scarecrow across the water.",
+  "production_intent": "Establish the sudden arrival of a stork to resolve the loss of the scarecrow via mid-air retrieval. The sequence must emphasize the scale difference between the avian savior and the characters on the bank, transitioning from heavy despair to wonder.",
+  "scene_short_description": "A group stands defeated on a grassy bank until a large stork retrieves a companion from the river.",
+  "scene_primary_scale_story_point": "The stork must appear massive enough to carry the_scarecrow across the swift_river_crossing.",
   "scene_required_anchor_catalog": [
-    "swift_river_crossing (water line)",
-    "grassy riverbank (group staging area)"
+    "swift_river_crossing edge",
+    "the_scarecrow pole (mid-river)"
   ],
-  "scene_start_state": "Group stands on the bank looking at the empty river, expressing despair.",
-  "scene_end_state": "The group gathers around the returned scarecrow in wonder.",
-  "dominant_action_line": "Stork flies from bank to river, retrieves scarecrow from pole, and returns him to the group.",
+  "scene_start_state": "Group stands huddled and defeated on the grassy bank looking at the water.",
+  "scene_end_state": "The group gathers around the safely returned scarecrow on the bank.",
+  "dominant_action_line": "Stork arrives, flies to mid-river, grabs the_scarecrow from his pole, and returns him to the bank.",
   "scene_spatial_layout": [
     "Group clustered on the grassy edge of the swift_river_crossing",
-    "Open water expanse between bank and the lost pole"
+    "The_scarecrow located at a distance in the middle of the river current"
   ],
   "character_spatial_map": [
-    "dorothy, tin_woodman, cowardly_lion clustered in center bank",
-    "toto at dorothy's feet",
-    "stork enters from sky/horizon"
+    "dorothy, tin_woodman, cowardly_lion clustered near the bank edge",
+    "stork enters from sky/horizon",
+    "the_scarecrow positioned mid-river on a pole"
   ],
   "environment_subzones": [
-    "grassy riverbank",
-    "swift_river_crossing (mid-stream)"
+    "grassy_bank",
+    "swift_river_current"
   ],
   "entry_vectors": [
     "stork enters via aerial descent"
   ],
   "exit_vectors": [
-    "Subjects exit or hand off toward the next story beat."
+    "stork exits via aerial ascent"
   ],
   "beat_transition_map": [
     "BT001 -> BT002: Arrival of the stork",
@@ -117,7 +117,7 @@
     "Physical handling/grip of the_scarecrow during mid-air retrieval"
   ],
   "visual_coverage_families": [
-    "Low angle shots of group looking defeated on bank",
+    "Low angle shots of group looking defeated on riverbank",
     "Tracking shot following stork flight path",
     "Wide shot showing scale of stork carrying scarecrow",
     "Medium reaction shots of group receiving scarecrow"
@@ -125,10 +125,10 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Group realizes the Scarecrow is gone",
+      "summary": "Group realizes the_scarecrow is missing",
       "purpose": "",
-      "action_start": "group reaches shore",
-      "action_end": "group expresses despair",
+      "action_start": "group standing on bank",
+      "action_end": "stork appears in sky",
       "active_subjects": [
         "dorothy",
         "tin_woodman",
@@ -138,43 +138,20 @@
       "passive_subjects": [
         "the_scarecrow"
       ],
-      "spatial_context": "grassy riverbank",
-      "blocking_hint": "tight group cluster looking at water",
-      "environment_subzone": "grassy riverbank",
-      "continuity_focus": "character positions on bank",
-      "coverage_hint": "low angle shots of defeated group",
+      "spatial_context": "grassy_bank",
+      "blocking_hint": "huddled together looking at river",
+      "environment_subzone": "grassy_bank",
+      "continuity_focus": "group composition",
+      "coverage_hint": "low angle group shots",
       "coverage_priority": "high",
       "handoff_to_next": "stork arrival"
     },
     {
       "beat_id": "BT002",
-      "summary": "Stork arrives and flies to the pole",
+      "summary": "Stork retrieves the_scarecrow",
       "purpose": "",
-      "action_start": "stork appears in sky",
-      "action_end": "stork reaches mid-river pole",
-      "active_subjects": [
-        "stork"
-      ],
-      "passive_subjects": [
-        "dorothy",
-        "tin_woodman",
-        "cowardly_lion",
-        "toto"
-      ],
-      "spatial_context": "swift_river_crossing",
-      "blocking_hint": "aerial movement from bank to center river",
-      "environment_subzone": "swift_river_crossing",
-      "continuity_focus": "stork scale/height",
-      "coverage_hint": "tracking shot of flight path",
-      "coverage_priority": "medium",
-      "handoff_to_next": "retrieval"
-    },
-    {
-      "beat_id": "BT003",
-      "summary": "Stork retrieves and returns Scarecrow",
-      "purpose": "",
-      "action_start": "stork grabs pole/scarecrow",
-      "action_end": "scarecrow is safe on bank",
+      "action_start": "stork flying over water",
+      "action_end": "stork grabbing pole/scarecrow",
       "active_subjects": [
         "stork",
         "the_scarecrow"
@@ -184,12 +161,36 @@
         "tin_woodman",
         "cowardly_lion"
       ],
-      "spatial_context": "river to bank",
-      "blocking_hint": "stork descends from mid-river to group edge",
-      "environment_subzone": "grassy riverbank",
+      "spatial_context": "swift_river_current",
+      "blocking_hint": "aerial movement toward mid-river pole",
+      "environment_subzone": "swift_river_current",
       "continuity_focus": "physical handling of scarecrow during retrieval",
-      "coverage_hint": "wide shot of scale and medium reaction shots",
+      "coverage_hint": "tracking shot and wide scale shot",
       "coverage_priority": "high",
+      "handoff_to_next": "return to bank"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Stork delivers the_scarecrow",
+      "purpose": "",
+      "action_start": "stork approaching bank with load",
+      "action_end": "group celebrating/reacting",
+      "active_subjects": [
+        "stork",
+        "the_scarecrow",
+        "dorothy",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "passive_subjects": [
+        "toto"
+      ],
+      "spatial_context": "grassy_bank",
+      "blocking_hint": "stork lands near group; group moves toward scarecrow",
+      "environment_subzone": "grassy_bank",
+      "continuity_focus": "scale of stork upon landing",
+      "coverage_hint": "medium reaction shots",
+      "coverage_priority": "medium",
       "handoff_to_next": "scene end"
     }
   ],
@@ -198,7 +199,7 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish despair",
-      "planned_shot_moment_summary": "group realizes scarecrow is missing",
+      "planned_shot_moment_summary": "group realizes scarecrow is gone",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "tin_woodman",
@@ -206,19 +207,19 @@
         "toto"
       ],
       "subject_visibility": "on_screen",
-      "narration_mode": "in_scene_speaker",
-      "environment_subzone": "grassy riverbank",
-      "planned_shot_required_anchor_1": "grassy riverbank",
-      "planned_shot_scale_proof_detail": "low angle vs group height",
+      "narration_mode": "none",
+      "environment_subzone": "grassy_bank",
+      "planned_shot_required_anchor_1": "swift_river_crossing edge",
+      "planned_shot_scale_proof_detail": "low angle vs horizon",
       "start_state_seed": "group looking at water",
-      "end_state_seed": "group looking up",
+      "end_state_seed": "stork enters frame",
       "action_seed": "looking lost/defeated",
       "blocking_seed": [
-        "tight cluster on bank"
+        "huddled on bank"
       ],
       "shot_size": "medium_full",
       "camera_angle": "low_angle",
-      "lens_family": "normal",
+      "lens_family": "wide",
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
@@ -228,22 +229,22 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "introduce deus ex machina",
-      "planned_shot_moment_summary": "stork flies toward river",
+      "narrative_function": "show scale and movement",
+      "planned_shot_moment_summary": "stork flies toward river center",
       "primary_subject_seed": "stork",
       "secondary_subjects_seed": [
         "the_scarecrow"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "swift_river_crossing",
-      "planned_shot_required_anchor_1": "swift_river_crossing",
-      "planned_shot_scale_proof_detail": "stork size vs water expanse",
-      "start_state_seed": "stork appearing in sky",
-      "end_state_seed": "stork reaching mid-river",
-      "action_seed": "flying toward pole",
+      "environment_subzone": "swift_river_current",
+      "planned_shot_required_anchor_1": "the_scarecrow pole",
+      "planned_shot_scale_proof_detail": "stork vs river width",
+      "start_state_seed": "stork in air",
+      "end_state_seed": "stork reaching pole",
+      "action_seed": "tracking flight path",
       "blocking_seed": [
-        "aerial path over water"
+        "aerial trajectory"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
@@ -252,7 +253,7 @@
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "profile_right"
+      "primary_subject_angle": "profile_left"
     },
     {
       "planned_shot_id": "SH003",
@@ -267,21 +268,21 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "grassy riverbank",
-      "planned_shot_required_anchor_1": "grassy riverbank",
-      "planned_shot_scale_proof_detail": "stork landing/descending height",
+      "environment_subzone": "grassy_bank",
+      "planned_shot_required_anchor_1": "swift_river_crossing edge",
+      "planned_shot_scale_proof_detail": "stork landing height",
       "start_state_seed": "stork approaching bank",
       "end_state_seed": "group surrounding scarecrow",
-      "action_seed": "landing and releasing scarecrow",
+      "action_seed": "safe delivery",
       "blocking_seed": [
-        "stork descends to group edge"
+        "landing near group"
       ],
-      "shot_size": "wide",
-      "camera_angle": "low_angle",
-      "lens_family": "wide",
-      "camera_motion": "pan",
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
       "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
+      "focus_strategy": "shallow_subject",
       "lighting_style": "diffuse_ambient",
       "primary_subject_angle": "front"
     }
@@ -349,16 +350,16 @@
     "[CH008] Chapter VIII (book index hit)",
     "[CH009] Chapter IX (book index hit)",
     "[CH023] Chapter XXIII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH008_SC002\n\n## Production Intent\nEstablish the group's arrival at the swift riverbank and execute a high-scale aerial retrieval of the scarecrow via a stork to resolve the lost companion crisis.\n\n## Required Cast\n- dorothy\n- toto\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- stork\n\n## Required Environments\n- swift_river_crossing (grassy riverbank and water)\n\n## Continuity Constraints\n- Stork height/scale relative to characters and environment.\n- Physical handling of the_scarecrow during mid-air retrieval from his pole.\n\n## Beat List\n- BT001: Group realizes Scarecrow is missing; despair sets in.\n- BT002: Stork arrives and flies out to the middle of the river.\n- BT003: Stork retrieves Scarecrow from pole and delivers him back to the bank.",
+  "storyboard_markdown": "# Scene Contract: CH008_SC002\n\n## Production Intent\nEstablish the sudden arrival of a stork to resolve the loss of the scarecrow via mid-air retrieval. The sequence must emphasize the scale difference between the avian savior and the characters on the bank, transitioning from heavy despair to wonder.\n\n## Required Cast\n- dorothy\n- toto\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- stork\n\n## Required Environments\n- swift_river_crossing (grassy bank and river current)\n\n## Continuity Constraints\n- Stork height/scale relative to characters.\n- Physical handling of the_scarecrow during mid-air retrieval from his pole.\n\n## Beat List\n- BT001: Group realizes the_scarecrow is missing.\n- BT002: Stork retrieves the_scarecrow from the river center.\n- BT003: Stork delivers the_scarecrow safely back to the bank.",
   "metadata": {
     "artifact_id": "CH008_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "dc8405c14a1af94528b34456a1a17998d49bac5c",
+    "source_fingerprint": "12dc9daaa5c5e5e784ceaa03ca083811c1a8e778",
     "created_at_utc": "2026-04-27T08:20:23.703241+00:00",
-    "updated_at_utc": "2026-04-27T08:20:23.703241+00:00",
+    "updated_at_utc": "2026-04-27T13:22:15.100758+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -383,6 +384,11 @@
         "timestamp_utc": "2026-04-27T08:21:06.759883+00:00",
         "action": "synthesized",
         "source_fingerprint": "dc8405c14a1af94528b34456a1a17998d49bac5c"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:23:00.284448+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "12dc9daaa5c5e5e784ceaa03ca083811c1a8e778"
       }
     ]
   }

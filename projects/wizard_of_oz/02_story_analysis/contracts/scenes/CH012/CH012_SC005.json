@@ -5,14 +5,14 @@
   "purpose": "Climax and resolution of the primary antagonist's arc.",
   "summary": "Enraged by the theft, the Witch confronts Dorothy. In a moment of reflex/defense, Dorothy throws a bucket of water at her. The Witch melts away into a shapeless mass.",
   "emotional_arc": "Terror $\\rightarrow$ Outrage $\\rightarrow$ Disbelief $\\rightarrow$ Triumph.",
-  "production_intent": "Execute the climax of the antagonist's arc through a high-stakes confrontation involving physical reflex and heavy VFX melting sequences. The sequence requires precise coordination between water physics, character wetness continuity, and shapeless mass VFX transitions.",
-  "scene_short_description": "A confrontation in a dark kitchen leads to a water-induced melting transformation.",
-  "scene_primary_scale_story_point": "Character scale shifts from human proportions to a shapeless mass.",
+  "production_intent": "Execute the climax of the antagonist's arc through a high-stakes confrontation involving physical reflex and heavy VFX integration. The sequence requires precise coordination between water physics, character performance transitions from terror to triumph, and the digital dissolution of the Wicked Witch into a shapeless mass.",
+  "scene_short_description": "A confrontation in a dark kitchen leads to a water-induced magical dissolution.",
+  "scene_primary_scale_story_point": "Character scale shifts from intimate confrontation to the expansive visual of a melting mass.",
   "scene_required_anchor_catalog": [
     "water bucket",
     "kitchen floor"
   ],
-  "scene_start_state": "Dorothy stands cornered and terrified by the Witch in the kitchen.",
+  "scene_start_state": "Dorothy stands cornered and terrified by an enraged Wicked Witch.",
   "scene_end_state": "The Witch has dissolved into a shapeless mass on the floor.",
   "dominant_action_line": "Dorothy throws water at the Witch, causing her to melt.",
   "scene_spatial_layout": [
@@ -20,23 +20,22 @@
     "Proximity between characters during confrontation"
   ],
   "character_spatial_map": [
-    "Dorothy positioned defensively near kitchen elements",
-    "Wicked Witch positioned aggressively/dominantly"
+    "Wicked Witch dominates the space through intimidation",
+    "Dorothy occupies a defensive/cornered position"
   ],
   "environment_subzones": [
-    "wicked_witch_castle_interior_center",
-    "wicked_witch_castle_interior_floor"
+    "kitchen_center",
+    "floor_zone"
   ],
   "entry_vectors": [
-    "Dorothy enters via castle approach"
+    "Wicked Witch approaches from shadows"
   ],
   "exit_vectors": [
     "Dorothy exits following triumph"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Escalation of threat",
-    "BT002 -> BT003: Reflexive action/impact",
-    "BT003 -> BT004: Physical dissolution"
+    "BT001 -> BT002: Escalation of threat to physical reflex",
+    "BT002 -> BT003: Impact of water to magical dissolution"
   ],
   "characters_required": [
     {
@@ -79,43 +78,44 @@
   "visual_coverage_families": [
     "Tight two-shot confrontation",
     "High-frame-rate water impact",
-    "VFX-heavy melting process"
+    "VFX-heavy melting dissolution"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Witch confronts Dorothy in rage",
+      "summary": "The Witch confronts Dorothy in a rage",
       "purpose": "",
       "action_start": "Witch enters proximity",
-      "action_end": "Dorothy cornered",
+      "action_end": "Dorothy is cornered",
       "active_subjects": [
-        "Wicked Witch",
+        "Wicked Witch"
+      ],
+      "passive_subjects": [
         "dorothy"
       ],
-      "passive_subjects": [],
-      "spatial_context": "kitchen center",
+      "spatial_context": "kitchen_center",
       "blocking_hint": "Witch looms over Dorothy",
-      "environment_subzone": "wicked_witch_castle_interior_center",
-      "continuity_focus": "Dorothy's white dress state",
+      "environment_subzone": "kitchen_center",
+      "continuity_focus": "Dorothy's white clothing state",
       "coverage_hint": "tight two-shot",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Dorothy reacts defensively",
+      "summary": "Dorothy throws the water in defense",
       "purpose": "",
       "action_start": "Dorothy grabs bucket",
-      "action_end": "Water leaves bucket",
+      "action_end": "Water hits Witch",
       "active_subjects": [
         "dorothy"
       ],
       "passive_subjects": [
         "Wicked Witch"
       ],
-      "spatial_context": "kitchen center",
-      "blocking_hint": "Dorothy lunges with bucket",
-      "environment_subzone": "wicked_witch_castle_interior_center",
+      "spatial_context": "kitchen_center",
+      "blocking_hint": "Sudden movement from Dorothy",
+      "environment_subzone": "kitchen_center",
       "continuity_focus": "Bucket water level reduction",
       "coverage_hint": "high-frame-rate impact",
       "coverage_priority": "critical",
@@ -123,43 +123,23 @@
     },
     {
       "beat_id": "BT003",
-      "summary": "The Witch melts",
+      "summary": "The Witch melts into a mass",
       "purpose": "",
-      "action_start": "Water contacts skin",
-      "action_end": "Witch is a shapeless mass",
+      "action_start": "Witch hit by water",
+      "action_end": "Shapeless mass remains",
       "active_subjects": [
         "Wicked Witch"
       ],
       "passive_subjects": [
         "dorothy"
       ],
-      "spatial_context": "kitchen floor",
-      "blocking_hint": "Witch collapses downward",
-      "environment_subzone": "wicked_witch_castle_interior_floor",
-      "continuity_focus": "Wetness on floor/surfaces",
+      "spatial_context": "floor_zone",
+      "blocking_hint": "Witch collapses to floor",
+      "environment_subzone": "floor_zone",
+      "continuity_focus": "Wetness on floor/Witch residue",
       "coverage_hint": "VFX-heavy shots",
       "coverage_priority": "high",
-      "handoff_to_next": "BT004"
-    },
-    {
-      "beat_id": "BT004",
-      "summary": "Resolution of terror to triumph",
-      "purpose": "",
-      "action_start": "Mass settles",
-      "action_end": "Dorothy stands victorious",
-      "active_subjects": [
-        "dorothy"
-      ],
-      "passive_subjects": [
-        "Wicked Witch"
-      ],
-      "spatial_context": "kitchen floor/center",
-      "blocking_hint": "Dorothy looks down at mass",
-      "environment_subzone": "wicked_witch_castle_interior_center",
-      "continuity_focus": "Dorothy's wet clothing",
-      "coverage_hint": "medium shot",
-      "coverage_priority": "medium",
-      "handoff_to_next": "end"
+      "handoff_to_next": "End of scene"
     }
   ],
   "planned_shots": [
@@ -174,14 +154,14 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "wicked_witch_castle_interior_center",
-      "planned_shot_required_anchor_1": "kitchen floor",
-      "planned_shot_scale_proof_detail": "character height vs room",
-      "start_state_seed": "Dorothy cornered",
-      "end_state_seed": "Witch looming",
-      "action_seed": "confrontation",
+      "environment_subzone": "kitchen_center",
+      "planned_shot_required_anchor_1": "water bucket",
+      "planned_shot_scale_proof_detail": "character height vs kitchen architecture",
+      "start_state_seed": "Witch looming",
+      "end_state_seed": "Dorothy cornered",
+      "action_seed": "Witch advances aggressively",
       "blocking_seed": [
-        "Witch advances on Dorothy"
+        "Witch moves toward Dorothy"
       ],
       "shot_size": "medium_full",
       "camera_angle": "low_angle",
@@ -196,21 +176,21 @@
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "climax action",
-      "planned_shot_moment_summary": "Water hits Witch",
-      "primary_subject_seed": "Wicked Witch",
+      "planned_shot_moment_summary": "Water hits the Witch",
+      "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
-        "dorothy"
+        "Wicked Witch"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "wicked_witch_castle_interior_center",
+      "environment_subzone": "kitchen_center",
       "planned_shot_required_anchor_1": "water bucket",
       "planned_shot_scale_proof_detail": "water volume vs bucket size",
-      "start_state_seed": "Dorothy lifting bucket",
-      "end_state_seed": "Water impact",
+      "start_state_seed": "Dorothy grabbing bucket",
+      "end_state_seed": "Water impact on skin",
       "action_seed": "Dorothy throws water",
       "blocking_seed": [
-        "Dorothy thrusts bucket forward"
+        "Dorothy lunges forward"
       ],
       "shot_size": "medium_close",
       "camera_angle": "eye_level",
@@ -224,20 +204,20 @@
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "vfx transition",
-      "planned_shot_moment_summary": "Witch melting",
+      "narrative_function": "resolution/VFX",
+      "planned_shot_moment_summary": "Witch melts away",
       "primary_subject_seed": "Wicked Witch",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "wicked_witch_castle_interior_floor",
-      "planned_shot_required_anchor_1": "kitchen floor",
-      "planned_shot_scale_proof_detail": "mass volume vs human silhouette",
-      "start_state_seed": "Witch hit by water",
-      "end_state_seed": "Shapeless mass",
-      "action_seed": "Witch melts away",
+      "environment_subzone": "floor_zone",
+      "planned_shot_required_anchor_1": "floor_zone",
+      "planned_shot_scale_proof_detail": "mass volume vs floor area",
+      "start_state_seed": "Witch reacting to water",
+      "end_state_seed": "Shapeless mass on floor",
+      "action_seed": "Witch melts into a mass",
       "blocking_seed": [
-        "Witch collapses/dissolves"
+        "Witch collapses downward"
       ],
       "shot_size": "close_up",
       "camera_angle": "high_angle",
@@ -314,16 +294,16 @@
     "[CH012] Chapter XII (book index hit)",
     "[CH008] Chapter VIII (book index hit)",
     "[CH003] Chapter III (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH012_SC005\n\n## Production Intent\nExecute the climax of the antagonist's arc through a high-stakes confrontation involving physical reflex and heavy VFX melting sequences. The sequence requires precise coordination between water physics, character wetness continuity, and shapeless mass VFX transitions.\n\n## Required Cast\n- dorothy (Young human girl, white clothing)\n- Wicked Witch (Primary antagonist)\n\n## Required Environments\n- wicked_witch_castle_interior\n\n## Continuity Constraints\n- Water levels in bucket must decrease logically per throw\n- Dorothy's physical state (wet/dry) regarding her white dress\n\n## Beat List\n- BT001: Witch confronts Dorothy in rage\n- BT002: Dorothy reacts defensively with water\n- BT003: The Witch melts away\n- BT004: Resolution of terror to triumph",
+  "storyboard_markdown": "# Scene Contract: CH012_SC005\n\n## Production Intent\nExecute the climax of the antagonist's arc through a high-stakes confrontation involving physical reflex and heavy VFX integration. The sequence requires precise coordination between water physics, character performance transitions from terror to triumph, and the digital dissolution of the Wicked Witch into a shapeless mass.\n\n## Required Cast\n- dorothy (weary traveler, white clothing)\n- Wicked Witch (antagonist)\n\n## Required Environments\n- wicked_witch_castle_interior (The Witch's Kitchen)\n\n## Continuity Constraints\n- Water levels in bucket must decrease logically per throw\n- Dorothy's physical state (wet/dry)\n\n## Beat List\n- BT001: The Witch confronts Dorothy in a rage.\n- BT002: Dorothy throws the water in defense.\n- BT003: The Witch melts into a mass.",
   "metadata": {
     "artifact_id": "CH012_SC005_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "460838109e448960bae75ba0ad0e4b881dd99001",
+    "source_fingerprint": "f4667360b3f6a0e4d7f0d39b2678060ffc7c85b3",
     "created_at_utc": "2026-04-27T08:37:04.019701+00:00",
-    "updated_at_utc": "2026-04-27T08:37:04.019701+00:00",
+    "updated_at_utc": "2026-04-27T13:39:37.837512+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -348,6 +328,11 @@
         "timestamp_utc": "2026-04-27T08:37:46.411766+00:00",
         "action": "synthesized",
         "source_fingerprint": "460838109e448960bae75ba0ad0e4b881dd99001"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:40:18.490566+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "f4667360b3f6a0e4d7f0d39b2678060ffc7c85b3"
       }
     ]
   }

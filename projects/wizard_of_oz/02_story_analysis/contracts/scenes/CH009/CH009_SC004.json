@@ -5,37 +5,38 @@
   "purpose": "Resolution and emotional payoff.",
   "summary": "With the Lion safely out of the poppies, the Queen of the Mice promises future assistance before leading her subjects away. The group settles down in the grass, waiting anxiously for the Lion to wake up.",
   "emotional_arc": "Triumph $\\rightarrow$ Quiet Anticipation.",
-  "production_intent": "Establish the transition from the high-stakes rescue to a period of quiet, anxious waiting. The visual language must shift from the chaotic poppy field to the stillness of the grassy meadow as the mice depart and the travelers settle near the unconscious lion.",
-  "scene_short_description": "Exhausted travelers settle in a grassy meadow near an unconscious lion as mice depart.",
-  "scene_primary_scale_story_point": "The massive scale of Thousands of Field Mice departing against the small, weary group of travelers.",
+  "production_intent": "Establish the transition from active rescue to a state of weary rest. The visual narrative must move from the large-scale movement of the mice exodus to an intimate, high-tension focus on the unconscious lion's face as the group waits for his awakening.",
+  "scene_short_description": "Exhausted travelers settle in the grass near a poppy bed while mice depart into the distance.",
+  "scene_primary_scale_story_point": "The massive scale of Thousands of Field Mice departing vs. the small, intimate group of travelers.",
   "scene_required_anchor_catalog": [
     "poppy_bed",
     "cowardly_lion"
   ],
-  "scene_start_state": "The cowardly_lion lies unconscious just outside the poppy_bed; queen_of_the_field_mice stands before the group.",
-  "scene_end_state": "The travelers are seated in the grass, eyes fixed on the cowardly_lion's face.",
-  "dominant_action_line": "The mice depart after a promise of aid, leaving the group to wait for the lion to wake.",
+  "scene_start_state": "The Lion is positioned safely outside the poppy bed; mice are gathered around him.",
+  "scene_end_state": "The travelers are settled in the grass; the field is quiet; focus shifts to the Lion's face.",
+  "dominant_action_line": "The Queen of the Field Mice promises aid and leads her subjects away, leaving the group to wait for the Lion to wake.",
   "scene_spatial_layout": [
-    "poppy_bed serves as the boundary between the danger zone and the safe meadow.",
-    "travelers are clustered in a tight group near the cowardly_lion."
+    "Poppy bed serves as a boundary marker on one side of the meadow.",
+    "Travelers cluster in the grassy area adjacent to the poppy bed."
   ],
   "character_spatial_map": [
-    "queen_of_the_field_mice positioned between Thousands of Field Mice and the travelers.",
-    "dorothy, the_scarecrow, and tin_woodman grouped around the cowardly_lion."
+    "cowardly_lion is prone and central to the travelers' circle.",
+    "dorothy, the_scarecrow, and tin_woodman are positioned near the lion.",
+    "queen_of_the_field_mice leads Thousands of Field Mice away from the group."
   ],
   "environment_subzones": [
     "poppy_bed",
     "grassy_riverbank_meadow"
   ],
   "entry_vectors": [
-    "queen_of_the_field_mice via meadow path."
+    "Thousands of Field Mice (exiting via meadow)"
   ],
   "exit_vectors": [
-    "Thousands of Field Mice moving away from the meadow toward the horizon."
+    "Thousands of Field Mice (moving toward horizon)"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: mice depart, leaving silence.",
-    "BT002 -> BT003: travelers settle into stillness."
+    "BT001 -> BT002: mice depart, leaving the travelers alone.",
+    "BT002 -> BT003: group settles into rest, shifting focus to the lion."
   ],
   "characters_required": [
     {
@@ -112,8 +113,8 @@
     }
   ],
   "continuity_constraints": [
-    "The position of the cowardly_lion relative to the poppy bed.",
-    "Lighting/time of day transition from rescue to waiting."
+    "Maintain lion position relative to the poppy bed edge.",
+    "Manage lighting/time of day transition from rescue to rest."
   ],
   "visual_coverage_families": [
     "Wide shots showing the mice departing.",
@@ -123,10 +124,10 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Queen promises assistance and leads mice away",
+      "summary": "Queen of the Field Mice promises assistance and leads subjects away",
       "purpose": "",
-      "action_start": "queen_of_the_field_mice addresses the group",
-      "action_end": "mass movement of Thousands of Field Mice",
+      "action_start": "Queen speaks to travelers",
+      "action_end": "Mice disappear into meadow",
       "active_subjects": [
         "queen_of_the_field_mice",
         "Thousands of Field Mice"
@@ -137,20 +138,20 @@
         "tin_woodman",
         "cowardly_lion"
       ],
-      "spatial_context": "edge of poppy_bed and meadow",
-      "blocking_hint": "queen turns her back to travelers to lead mice away",
+      "spatial_context": "edge of poppy bed and meadow",
+      "blocking_hint": "Queen at center of mouse mass moving away from lion",
       "environment_subzone": "grassy_riverbank_meadow",
-      "continuity_focus": "ensure lion remains outside poppy_bed",
-      "coverage_hint": "wide shots",
+      "continuity_focus": "mouse density and direction of travel",
+      "coverage_hint": "wide shot",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Travelers settle in the grass",
+      "summary": "The travelers settle down in the grass",
       "purpose": "",
-      "action_start": "travelers standing near lion",
-      "action_end": "travelers seated and resting",
+      "action_start": "Travelers standing near lion",
+      "action_end": "Travelers seated/resting",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -159,20 +160,20 @@
       "passive_subjects": [
         "cowardly_lion"
       ],
-      "spatial_context": "meadow adjacent to poppy_bed",
-      "blocking_hint": "characters sit in a protective/observational cluster around lion",
+      "spatial_context": "immediate vicinity of the lion",
+      "blocking_hint": "Characters collapse around the unconscious lion",
       "environment_subzone": "grassy_riverbank_meadow",
-      "continuity_focus": "check lighting transition",
-      "coverage_hint": "medium group shots",
+      "continuity_focus": "position relative to poppy bed",
+      "coverage_hint": "medium group shot",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Anxious waiting for the lion to wake",
+      "summary": "Anxious waiting for the Lion's awakening",
       "purpose": "",
-      "action_start": "travelers settling",
-      "action_end": "tension builds on lion's face",
+      "action_start": "Quiet meadow atmosphere",
+      "action_end": "Tension peaks on lion's face",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -181,11 +182,11 @@
       "passive_subjects": [
         "cowardly_lion"
       ],
-      "spatial_context": "tight circle around lion",
-      "blocking_hint": "characters looking toward lion's head",
+      "spatial_context": "close to lion's head",
+      "blocking_hint": "Camera focuses tight on lion's features",
       "environment_subzone": "grassy_riverbank_meadow",
-      "continuity_focus": "maintain lion's position",
-      "coverage_hint": "close-up on lion",
+      "continuity_focus": "lighting transition/time of day",
+      "coverage_hint": "close-up",
       "coverage_priority": "high",
       "handoff_to_next": "END"
     }
@@ -195,21 +196,22 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish scale and departure",
-      "planned_shot_moment_summary": "The mice begin their mass exodus",
-      "primary_subject_seed": "Thousands of Field Mice",
+      "planned_shot_moment_summary": "The Queen of the Field Mice leads her subjects away",
+      "primary_subject_seed": "queen_of_the_field_mice",
       "secondary_subjects_seed": [
-        "queen_of_the_field_mice"
+        "Thousands of Field Mice",
+        "cowardly_lion"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "grassy_riverbank_meadow",
       "planned_shot_required_anchor_1": "poppy_bed",
       "planned_shot_scale_proof_detail": "thousands of mice vs single queen",
-      "start_state_seed": "queen speaking to group",
+      "start_state_seed": "mice clustered near lion",
       "end_state_seed": "mice moving toward horizon",
-      "action_seed": "mass movement of mice away from camera",
+      "action_seed": "queen leads the mass exodus",
       "blocking_seed": [
-        "queen leads the line away from travelers"
+        "mice move in a wave away from camera"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
@@ -218,12 +220,12 @@
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front_three_quarter_right"
+      "primary_subject_angle": "front_three_quarter_left"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "character relief/exhaustion",
+      "narrative_function": "character relief",
       "planned_shot_moment_summary": "The travelers settle into the grass",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
@@ -234,12 +236,12 @@
       "narration_mode": "none",
       "environment_subzone": "grassy_riverbank_meadow",
       "planned_shot_required_anchor_1": "cowardly_lion",
-      "planned_shot_scale_proof_detail": "group cluster size",
-      "start_state_seed": "travelers standing",
-      "end_state_seed": "travelers seated in grass",
-      "action_seed": "settling down heavily",
+      "planned_shot_scale_proof_detail": "group proximity to lion",
+      "start_state_seed": "travelers standing/exhausted",
+      "end_state_seed": "travelers sitting/resting",
+      "action_seed": "the group settles down in the grass",
       "blocking_seed": [
-        "characters collapse into a semi-circle around the lion"
+        "characters collapse into seated positions around the lion"
       ],
       "shot_size": "medium",
       "camera_angle": "eye_level",
@@ -247,31 +249,31 @@
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
-      "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front"
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_right"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "build tension for awakening",
-      "planned_shot_moment_summary": "Focus on the lion's face",
+      "narrative_function": "build tension",
+      "planned_shot_moment_summary": "Waiting for the lion to wake",
       "primary_subject_seed": "cowardly_lion",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "grassy_riverbank_meadow",
       "planned_shot_required_anchor_1": "cowardly_lion",
-      "planned_shot_scale_proof_detail": "extreme close up of features",
-      "start_state_seed": "lion sleeping",
-      "end_state_seed": "lion's face in stillness",
-      "action_seed": "static breathing/tension",
+      "planned_shot_scale_proof_detail": "extreme close proximity to face",
+      "start_state_seed": "lion unconscious/still",
+      "end_state_seed": "lion unconscious/still",
+      "action_seed": "the lion remains motionless as tension builds",
       "blocking_seed": [
-        "stationary"
+        "static shot of the face"
       ],
       "shot_size": "close_up",
-      "camera_angle": "low_angle",
+      "camera_angle": "eye_level",
       "lens_family": "portrait",
-      "camera_motion": "push_in",
+      "camera_motion": "locked_off",
       "zoom_behavior": "subtle_in",
       "focus_strategy": "shallow_subject",
       "lighting_style": "soft_even",
@@ -343,16 +345,16 @@
     "[CH008] Chapter VIII (book index hit)",
     "[CH009] Chapter IX (book index hit)",
     "[CH014] Chapter XIV (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH009_SC004\n\n## Production Intent\nEstablish the transition from high-stakes rescue to a period of quiet, anxious waiting. The visual language must shift from the chaotic poppy field to the stillness of the grassy meadow as the mice depart and the travelers settle near the unconscious lion.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- queen_of_the_field_mice\n- Thousands of Field Mice\n\n## Required Environments\n- grassy_riverbank_meadow\n- poppy_bed (adjacent)\n\n## Continuity Constraints\n- Position of cowardly_lion relative to the poppy_bed.\n- Lighting/time of day transition from rescue to waiting.\n\n## Beat List\n- BT001: Queen promises assistance and leads mice away.\n- BT002: Travelers settle in the grass.\n- BT003: Anxious waiting for the lion to wake.",
+  "storyboard_markdown": "# Scene Contract: CH009_SC004\n\n## Production Intent\nEstablish the transition from active rescue to a state of weary rest. The visual narrative must move from the large-scale movement of the mice exodus to an intimate, high-tension focus on the unconscious lion's face as the group waits for his awakening.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- queen_of_the_field_mice\n- Thousands of Field Mice\n\n## Required Environments\n- grassy_riverbank_meadow (adjacent to poppy_bed)\n\n## Continuity Constraints\n- Maintain lion position relative to the poppy bed edge.\n- Manage lighting/time of day transition from rescue to rest.\n\n## Beat List\n- BT001: Queen of the Field Mice promises assistance and leads subjects away.\n- BT002: The travelers settle down in the grass.\n- BT003: Anxious waiting for the Lion's awakening.",
   "metadata": {
     "artifact_id": "CH009_SC004_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "6cb2168c0019161c190ff0ce64da3de46ffd1334",
+    "source_fingerprint": "bb36d800b2764142a514c9946f55a5a691c48de9",
     "created_at_utc": "2026-04-27T08:25:42.556101+00:00",
-    "updated_at_utc": "2026-04-27T08:25:42.556101+00:00",
+    "updated_at_utc": "2026-04-27T13:27:48.242623+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -377,6 +379,11 @@
         "timestamp_utc": "2026-04-27T08:26:28.200159+00:00",
         "action": "synthesized",
         "source_fingerprint": "6cb2168c0019161c190ff0ce64da3de46ffd1334"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:28:35.367991+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "bb36d800b2764142a514c9946f55a5a691c48de9"
       }
     ]
   }

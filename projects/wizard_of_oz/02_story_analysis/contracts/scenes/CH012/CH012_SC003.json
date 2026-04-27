@@ -5,42 +5,42 @@
   "purpose": "To separate the protagonists and establish the new status quo of captivity.",
   "summary": "The Monkeys capture the group: Tin Woodman is dropped on rocks, Scarecrow is stripped of straw, and the Lion is bound. Dorothy is spared due to the mark on her forehead but taken to the castle.",
   "emotional_arc": "Chaos $\\rightarrow$ Defeat $\\rightarrow$ Isolation.",
-  "production_intent": "Execute the violent separation of the protagonist group through a coordinated capture by winged monkeys, transitioning from high-chaos movement in the West landscape to static isolation within the castle subzones.",
-  "scene_short_description": "A group of travelers is violently scattered and captured by winged monkeys across rugged terrain and castle grounds.",
-  "scene_primary_scale_story_point": "Group cohesion vs. individual isolation.",
+  "production_intent": "Execute the violent separation of the protagonist group through winged monkey intervention. Transition from a unified traveling party to isolated individuals in distinct states of captivity or distress across the West landscape and the Witch's Castle.",
+  "scene_short_description": "A group is violently scattered by winged monkeys across rugged terrain and castle grounds.",
+  "scene_primary_scale_story_point": "Group unity vs. individual isolation.",
   "scene_required_anchor_catalog": [
     "jagged rocks",
     "kitchen doorway",
     "courtyard perimeter"
   ],
-  "scene_start_state": "High-chaos movement of the group being intercepted by winged monkeys in the West landscape.",
-  "scene_end_state": "Static, isolated shots of characters in separate captivity zones.",
-  "dominant_action_line": "The Winged Monkeys dismantle the group's unity through physical force and relocation.",
+  "scene_start_state": "The group is traveling together in the West landscape before being intercepted.",
+  "scene_end_state": "Characters are isolated in separate subzones (rocks, castle interior, courtyard).",
+  "dominant_action_line": "Winged monkeys capture and disperse the travelers through force.",
   "scene_spatial_layout": [
     "Rugged West landscape transitioning to structured castle architecture",
-    "Disconnected subzones (rocks, courtyard, kitchen)"
+    "Disconnected spatial pockets for each character post-capture"
   ],
   "character_spatial_map": [
     "tin_woodman at rock formation",
     "the_scarecrow stripped in open terrain",
     "cowardly_lion bound in courtyard",
-    "dorothy moving toward kitchen interior"
+    "dorothy moving from exterior to kitchen interior"
   ],
   "environment_subzones": [
-    "West landscape rocks",
+    "rugged west landscape",
     "wicked_witch_castle_courtyard",
-    "wicked_witch_castle_kitchen"
+    "witch's castle kitchen"
   ],
   "entry_vectors": [
-    "winged_monkeys descending into landscape",
+    "winged_monkeys descending into West landscape",
     "dorothy entering kitchen via doorway"
   ],
   "exit_vectors": [
     "dorothy moving deeper into kitchen interior"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Physical impact and scattering",
-    "BT002 -> BT003: Transition from landscape to castle confinement"
+    "BT001 -> BT002: Violent dispersal of the group",
+    "BT002 -> BT003: Transition from landscape to castle interiors/courtyards"
   ],
   "characters_required": [
     {
@@ -107,10 +107,10 @@
     }
   ],
   "continuity_constraints": [
-    "Scarecrow must be stripped of all straw",
-    "Dorothy must display a visible mark on her forehead",
-    "Dorothy's attire is white (transitioned from green)",
-    "Tin Woodman position relative to rocks"
+    "Scarecrow must be stripped of straw",
+    "Dorothy's white clothing transition from green",
+    "Visual presence of the mark on Dorothy's forehead",
+    "Tin Woodman impact with rocks"
   ],
   "visual_coverage_families": [
     "High-angle shots of the group being scattered",
@@ -120,10 +120,10 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "The Capture",
+      "summary": "The capture and dispersal of the group",
       "purpose": "",
-      "action_start": "group traveling through West landscape",
-      "action_end": "monkeys intercepting group",
+      "action_start": "group traveling together",
+      "action_end": "monkeys scattering characters",
       "active_subjects": [
         "winged_monkeys"
       ],
@@ -133,56 +133,55 @@
         "tin_woodman",
         "cowardly_lion"
       ],
-      "spatial_context": "West landscape",
-      "blocking_hint": "descending aerial attack",
-      "environment_subzone": "West landscape rocks",
-      "continuity_focus": "group cohesion",
-      "coverage_hint": "high-angle scattering",
+      "spatial_context": "rugged west landscape",
+      "blocking_hint": "monkeys descending from above to pull subjects apart",
+      "environment_subzone": "rugged west landscape",
+      "continuity_focus": "group cohesion vs separation",
+      "coverage_hint": "high-angle wide shots",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "The Dismantling",
+      "summary": "The physical degradation of the protagonists",
       "purpose": "",
-      "action_start": "monkeys striking group",
-      "action_end": "characters physically incapacitated/stripped",
+      "action_start": "tin_woodman and scarecrow being targeted",
+      "action_end": "scarecrow is strawless and woodman is on rocks",
       "active_subjects": [
-        "winged_monkeys"
+        "winged_monkeys",
+        "tin_woodman",
+        "the_scarecrow"
       ],
       "passive_subjects": [
-        "the_scarecrow",
-        "tin_woodman",
         "cowardly_lion"
       ],
-      "spatial_context": "rugged terrain near rocks",
-      "blocking_hint": "tin_woodman dropped on rocks; scarecrow stripped of straw",
-      "environment_subzone": "West landscape rocks",
-      "continuity_focus": "scarecrow lack of straw; tin_woodman on rocks",
-      "coverage_hint": "medium shots of individual defeat",
+      "spatial_context": "rugged west landscape",
+      "blocking_hint": "monkeys working on scarecrow while dropping woodman",
+      "environment_subzone": "rugged west landscape",
+      "continuity_focus": "scarecrow straw loss; tin_woodman rock impact",
+      "coverage_hint": "medium shots of individual distress",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "The Separation",
+      "summary": "The transition to captivity and isolation",
       "purpose": "",
-      "action_start": "dorothy being spared",
-      "action_end": "characters in separate castle zones",
+      "action_start": "dorothy being spared/taken",
+      "action_end": "characters isolated in castle subzones",
       "active_subjects": [
         "dorothy",
-        "winged_monkeys"
-      ],
-      "passive_subjects": [
+        "winged_monkeys",
         "cowardly_lion"
       ],
-      "spatial_context": "transition from landscape to castle",
-      "blocking_hint": "dorothy led toward kitchen; lion left in courtyard",
-      "environment_subzone": "wicked_witch_castle_kitchen/courtyard",
-      "continuity_focus": "mark on forehead; white clothing; lion bound",
-      "coverage_hint": "medium shots of Dorothy; wide shots of Lion",
+      "passive_subjects": [],
+      "spatial_context": "transition from landscape to castle [[wicked_witch_castle_courtyard and witch's castle kitchen]]",
+      "blocking_hint": "dorothy moving through doorway; lion stationary in courtyard",
+      "environment_subzone": "witch's castle kitchen/wicked_witch_castle_courtyard",
+      "continuity_focus": "dorothy's white dress; mark on forehead; lion bound",
+      "coverage_hint": "medium shots of Dorothy; lonely wide shots of Lion",
       "coverage_priority": "high",
-      "handoff_to_next": "end_of_scene"
+      "handoff_to_next": "END"
     }
   ],
   "planned_shots": [
@@ -200,14 +199,14 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "West landscape rocks",
-      "planned_shot_required_anchor_1": "jagged rocks",
+      "environment_subzone": "rugged west landscape",
+      "planned_shot_required_anchor_1": "rugged terrain",
       "planned_shot_scale_proof_detail": "group size vs monkey swarm",
-      "start_state_seed": "group traveling",
-      "end_state_seed": "group being intercepted",
-      "action_seed": "monkeys dive-bombing the group",
+      "start_state_seed": "traveling group",
+      "end_state_seed": "scattered group",
+      "action_seed": "monkeys swoop and grab characters",
       "blocking_seed": [
-        "descending from high angle"
+        "chaotic movement in all directions"
       ],
       "shot_size": "wide",
       "camera_angle": "high_angle",
@@ -221,22 +220,22 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "establish defeat",
-      "planned_shot_moment_summary": "tin_woodman hits rocks and scarecrow loses straw",
+      "narrative_function": "establish defeat/loss",
+      "planned_shot_moment_summary": "scarecrow losing straw and tin woodman hitting rocks",
       "primary_subject_seed": "the_scarecrow",
       "secondary_subjects_seed": [
         "tin_woodman"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "West landscape rocks",
+      "environment_subzone": "rugged west landscape",
       "planned_shot_required_anchor_1": "jagged rocks",
-      "planned_shot_scale_proof_detail": "straw loss detail",
-      "start_state_seed": "scarecrow standing",
-      "end_state_seed": "scarecrow empty of straw",
-      "action_seed": "monkeys stripping straw from scarecrow",
+      "planned_shot_scale_proof_detail": "straw volume loss",
+      "start_state_seed": "intact scarecrow",
+      "end_state_seed": "strawless scarecrow",
+      "action_seed": "monkeys strip straw from scarecrow and drop woodman on rocks",
       "blocking_seed": [
-        "scattered on ground"
+        "static struggle vs dynamic stripping"
       ],
       "shot_size": "medium_full",
       "camera_angle": "eye_level",
@@ -244,35 +243,64 @@
       "camera_motion": "handheld",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
-      "lighting_style": "hard_directional",
+      "lighting_style": "diffuse_ambient",
       "primary_subject_angle": "profile_right"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "establish isolation",
-      "planned_shot_moment_summary": "dorothy enters kitchen alone",
+      "narrative_function": "establish isolation/new status quo",
+      "planned_shot_moment_summary": "dorothy entering kitchen and lion in courtyard",
       "primary_subject_seed": "dorothy",
-      "secondary_subjects_seed": [],
+      "secondary_subjects_seed": [
+        "cowardly_lion"
+      ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "wicked_witch_castle_kitchen",
+      "environment_subzone": "witch's castle kitchen",
       "planned_shot_required_anchor_1": "kitchen doorway",
-      "planned_shot_scale_proof_detail": "mark on forehead visibility",
+      "planned_shot_scale_proof_detail": "dorothy's white dress vs dark interior",
       "start_state_seed": "dorothy at threshold",
-      "end_state_seed": "dorothy in kitchen center",
-      "action_seed": "walking into captivity",
+      "end_state_seed": "dorothy in kitchen",
+      "action_seed": "dorothy is led into the kitchen",
       "blocking_seed": [
-        "moving from light to shadow"
+        "walking through doorway"
       ],
       "shot_size": "medium",
       "camera_angle": "eye_level",
-      "lens_family": "portrait",
+      "lens_family": "normal",
       "camera_motion": "push_in",
-      "zoom_behavior": "subtle_in",
+      "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "low_key_night",
       "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH004",
+      "beat_id": "BT003",
+      "narrative_function": "establish isolation/new status quo",
+      "planned_shot_moment_summary": "lion bound in courtyard",
+      "primary_subject_seed": "cowardly_lion",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "wicked_witch_castle_courtyard",
+      "planned_shot_required_anchor_1": "courtyard perimeter",
+      "planned_shot_scale_proof_detail": "lion size vs empty courtyard space",
+      "start_state_seed": "lion being brought in",
+      "end_state_seed": "lion alone and bound",
+      "action_seed": "lion sits bound in the wide courtyard",
+      "blocking_seed": [
+        "stationary center of frame"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "rear_three_quarter_left"
     }
   ],
   "unresolved_questions": [],
@@ -338,16 +366,16 @@
     "[CH012] Chapter XII (book index hit)",
     "[CH018] Chapter XVIII (book index hit)",
     "[CH006] Chapter VI (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH012_SC003\n\n## Production Intent\nExecute the violent separation of the protagonist group through a coordinated capture by winged monkeys, transitioning from high-chaos movement in the West landscape to static isolation within the castle subzones.\n\n## Required Cast\n- dorothy (white clothing, forehead mark)\n- the_scarecrow (no straw)\n- tin_woodman (on rocks)\n- cowardly_lion (bound)\n- winged_monkeys\n\n## Required Environments\n- West landscape (rugged/untilled)\n- wicked_witch_castle_courtyard\n- wicked_witch_castle_kitchen\n\n## Continuity Constraints\n- Scarecrow must be stripped of all straw.\n- Dorothy must display a visible mark on her forehead.\n- Dorothy's attire is white.\n- Tin Woodman position relative to rocks.\n\n## Beat List\n- BT001: The Capture (Monkeys intercept group)\n- BT002: The Dismantling (Scarecrow stripped, Woodman dropped, Lion bound)\n- BT003: The Separation (Dorothy taken to kitchen; status quo of captivity established)",
+  "storyboard_markdown": "# Scene Contract: CH012_SC003\n\n## Production Intent\nExecute the violent separation of the protagonist group through winged monkey intervention. Transition from a unified traveling party to isolated individuals in distinct states of captivity or distress across the West landscape and the Witch's Castle.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- winged_monkeys\n\n## Required Environments\n- rugged west landscape\n- wicked_witch_castle_courtyard\n- witch's castle kitchen\n\n## Continuity Constraints\n- Scarecrow must be stripped of straw\n- Dorothy's white clothing transition from green\n- Visual presence of the mark on Dorothy's forehead\n- Tin Woodman impact with rocks\n\n## Beat List\n- BT001: The capture and dispersal of the group.\n- BT002: The physical degradation of the protagonists (straw loss/rock impact).\n- BT003: The transition to captivity and isolation in the castle.",
   "metadata": {
     "artifact_id": "CH012_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "dcc760f992b049731df3a68e8ca5ac765fd2ae0f",
+    "source_fingerprint": "662caefe61c611aa3338aa2527ab1d4cc6276ff9",
     "created_at_utc": "2026-04-27T08:35:40.791473+00:00",
-    "updated_at_utc": "2026-04-27T08:35:40.791473+00:00",
+    "updated_at_utc": "2026-04-27T13:38:06.435700+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -372,6 +400,11 @@
         "timestamp_utc": "2026-04-27T08:36:25.271187+00:00",
         "action": "synthesized",
         "source_fingerprint": "dcc760f992b049731df3a68e8ca5ac765fd2ae0f"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:38:57.118194+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "662caefe61c611aa3338aa2527ab1d4cc6276ff9"
       }
     ]
   }

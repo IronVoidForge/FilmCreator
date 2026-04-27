@@ -5,38 +5,37 @@
   "purpose": "Provide world-building and backstory through dialogue during transit.",
   "summary": "While flying high above the landscape, the Monkey King tells Dorothy the story of how his people were cursed by the sorceress Gayelette to obey the Golden Cap after a prank gone wrong.",
   "emotional_arc": "Exhilaration $\\rightarrow$ Melancholy/Understanding.",
-  "production_intent": "Establish the historical weight of the Monkey King's lineage through a high-altitude transit sequence. The scene must balance the kinetic energy of flight with the heavy, melancholic delivery of a curse backstory, using the vast landscape to emphasize isolation and scale.",
-  "scene_short_description": "High altitude flight over a vast landscape during an aerial transit.",
-  "scene_primary_scale_story_point": "Microscopic character scale against macroscopic aerial landscape.",
+  "production_intent": "Establish the historical weight of the Monkey King's lineage through a narrative transition during aerial transit. The scene must balance the kinetic energy of flight with the heavy, melancholic tone of the backstory being shared.",
+  "scene_short_description": "Characters ride monkeys through high altitude air above a vast landscape.",
+  "scene_primary_scale_story_point": "High altitude aerial perspective relative to the ground below.",
   "scene_required_anchor_catalog": [
-    "monkey_back_saddle_points",
+    "monkey_back_saddle_area",
     "horizon_line"
   ],
-  "scene_start_state": "Characters riding monkeys through high altitude air, feeling the rush of flight.",
-  "scene_end_state": "A somber atmosphere as the weight of the curse is revealed.",
-  "dominant_action_line": "The Monkey King recounts the curse of Gayelette while flying.",
+  "scene_start_state": "High energy flight with characters exhilarated by movement.",
+  "scene_end_state": "Somber atmosphere as the weight of the curse is revealed.",
+  "dominant_action_line": "The Monkey King recounts the curse of Gayelette while in transit.",
   "scene_spatial_layout": [
-    "Vertical hierarchy of riders atop monkeys",
-    "Horizontal movement across the aerial plane"
+    "Vertical hierarchy between flying monkeys and the landscape below.",
+    "Linear formation of characters riding on monkey backs."
   ],
   "character_spatial_map": [
-    "dorothy positioned on monkey back",
-    "monkey_king leading dialogue",
-    "the_scarecrow, tin_woodman, cowardly_lion clustered as listeners on adjacent monkeys"
+    "dorothy positioned on a monkey back facing monkey_king.",
+    "the_scarecrow, tin_woodman, and cowardly_lion clustered as listeners."
   ],
   "environment_subzones": [
-    "upper_atmosphere",
-    "passing_landscape_below"
+    "aerial_transit_upper",
+    "aerial_transit_lower_landscape"
   ],
   "entry_vectors": [
-    "aerial_transit_path"
+    "high_altitude_flight_path"
   ],
   "exit_vectors": [
-    "aerial_transit_path"
+    "continuous_flight_trajectory"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Shift from environmental awe to character interaction",
-    "BT002 -> BT003: Shift from dialogue to emotional weight/backstory"
+    "BT001 -> BT002: shift from environmental awe to character focus",
+    "BT002 -> BT003: shift from narrative exposition to emotional weight"
   ],
   "characters_required": [
     {
@@ -103,7 +102,7 @@
     }
   ],
   "continuity_constraints": [
-    "Wind effects on hair and white clothing",
+    "Wind effects on hair and clothing",
     "Physical positioning of characters on monkey backs"
   ],
   "visual_coverage_families": [
@@ -116,42 +115,42 @@
       "beat_id": "BT001",
       "summary": "Aerial transit exhilaration",
       "purpose": "",
-      "action_start": "monkeys entering frame",
-      "action_end": "landscape passing below",
-      "active_subjects": [
+      "action_start": "high speed flight",
+      "action_end": "steady rhythmic movement",
+      "active_subjects": [],
+      "passive_subjects": [
         "dorothy",
         "monkey_king",
         "the_scarecrow",
         "tin_woodman",
         "cowardly_lion"
       ],
-      "passive_subjects": [],
       "spatial_context": "aerial_landscape_transit",
-      "blocking_hint": "characters riding monkeys in formation",
-      "environment_subzone": "upper_atmosphere",
-      "continuity_focus": "wind effects on hair/clothing",
+      "blocking_hint": "characters riding in formation",
+      "environment_subzone": "aerial_transit_lower_landscape",
+      "continuity_focus": "wind in hair/clothing",
       "coverage_hint": "wide beauty shots",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "The Story Begins",
+      "summary": "The Tale of Gayelette",
       "purpose": "",
       "action_start": "monkey_king begins speaking",
-      "action_end": "dorothy engages with the tale",
+      "action_end": "description of the prank",
       "active_subjects": [
-        "monkey_king",
-        "dorothy"
+        "monkey_king"
       ],
       "passive_subjects": [
+        "dorothy",
         "the_scarecrow",
         "tin_woodman",
         "cowardly_lion"
       ],
-      "spatial_context": "on monkey backs",
-      "blocking_hint": "seated riders facing each other/forward",
-      "environment_subzone": "upper_atmosphere",
+      "spatial_context": "aerial_transit_upper",
+      "blocking_hint": "seated on monkey backs",
+      "environment_subzone": "aerial_transit_upper",
       "continuity_focus": "physical positioning on monkeys",
       "coverage_hint": "medium shots",
       "coverage_priority": "medium",
@@ -159,24 +158,24 @@
     },
     {
       "beat_id": "BT003",
-      "summary": "The Curse of Gayelette",
+      "summary": "The Weight of the Curse",
       "purpose": "",
-      "action_start": "revelation of the prank and curse",
+      "action_start": "revelation of the Golden Cap obedience",
       "action_end": "melancholic silence/understanding",
       "active_subjects": [
-        "monkey_king",
-        "dorothy"
+        "dorothy",
+        "monkey_king"
       ],
       "passive_subjects": [
         "the_scarecrow",
         "tin_woodman",
         "cowardly_lion"
       ],
-      "spatial_context": "on monkey backs",
-      "blocking_hint": "heads bowed or somber expressions",
-      "environment_subzone": "upper_atmosphere",
-      "continuity_focus": "wind effects on clothing",
-      "coverage_hint": "medium/close shots",
+      "spatial_context": "aerial_transit_upper",
+      "blocking_hint": "characters leaning in or reacting",
+      "environment_subzone": "aerial_transit_upper",
+      "continuity_focus": "wind effects slowing/softening",
+      "coverage_hint": "medium close shots",
       "coverage_priority": "high",
       "handoff_to_next": "end_of_scene"
     }
@@ -188,21 +187,16 @@
       "narrative_function": "establish_setting",
       "planned_shot_moment_summary": "wide view of flight over landscape",
       "primary_subject_seed": "aerial_landscape_transit",
-      "secondary_subjects_seed": [
-        "dorothy",
-        "monkey_king"
-      ],
+      "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "upper_atmosphere",
+      "environment_subzone": "aerial_transit_lower_landscape",
       "planned_shot_required_anchor_1": "horizon_line",
-      "planned_shot_scale_proof_detail": "vastness_of_landscape",
-      "start_state_seed": "wide aerial vista",
-      "end_state_seed": "wide aerial vista",
-      "action_seed": "monkeys flying through frame",
-      "blocking_seed": [
-        "linear transit"
-      ],
+      "planned_shot_scale_proof_detail": "vastness of terrain below",
+      "start_state_seed": "wide vista",
+      "end_state_seed": "sweeping movement",
+      "action_seed": "flying through clouds",
+      "blocking_seed": [],
       "shot_size": "wide",
       "camera_angle": "eye_level",
       "lens_family": "ultra_wide",
@@ -210,59 +204,56 @@
       "zoom_behavior": "none",
       "focus_strategy": "environment_priority",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front_three_quarter_right"
+      "primary_subject_angle": "front"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "character_interaction",
-      "planned_shot_moment_summary": "dorothy listens to monkey king",
+      "planned_shot_moment_summary": "monkey_king begins telling the story",
       "primary_subject_seed": "monkey_king",
       "secondary_subjects_seed": [
         "dorothy"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "upper_atmosphere",
-      "planned_shot_required_anchor_1": "monkey_back_saddle_points",
-      "planned_shot_scale_proof_detail": "rider_to_monkey_ratio",
-      "start_state_seed": "medium shot of riders",
-      "end_state_seed": "medium shot of riders",
-      "action_seed": "monkey_king speaking",
+      "environment_subzone": "aerial_transit_upper",
+      "planned_shot_required_anchor_1": "monkey_back_saddle_area",
+      "planned_shot_scale_proof_detail": "characters relative to monkey size",
+      "start_state_seed": "medium shot of group",
+      "end_state_seed": "focus on speaker",
+      "action_seed": "speaking while riding",
       "blocking_seed": [
-        "seated on monkey back"
+        "seated on backs"
       ],
       "shot_size": "medium",
       "camera_angle": "eye_level",
       "lens_family": "normal",
-      "camera_motion": "track",
+      "camera_motion": "pan",
       "zoom_behavior": "subtle_in",
       "focus_strategy": "shallow_subject",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "profile_left"
+      "primary_subject_angle": "front_three_quarter_left"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "emotional_payoff",
-      "planned_shot_moment_summary": "reaction to the curse story",
+      "planned_shot_moment_summary": "dorothy reacts to the curse story",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
-        "the_scarecrow",
-        "tin_woodman",
         "cowardly_lion"
       ],
       "subject_visibility": "on_screen",
-      "narration_mode": "in_scene_speaker",
-      "environment_subzone": "upper_atmosphere",
-      "planned_shot_required_anchor_1": "monkey_back_saddle_points",
-      "planned_shot_scale_proof_detail": "facial_expression_detail",
-      "start_state_seed": "close on dorothy",
+      "narration_mode": "none",
+      "environment_subzone": "aerial_transit_upper",
+      "planned_shot_required_anchor_1": "monkey_back_saddle_area",
+      "planned_shot_scale_proof_detail": "facial expression detail",
+      "start_state_seed": "close on monkey_king",
       "end_state_seed": "close on dorothy",
-      "action_seed": "dorothy reacting to story",
+      "action_seed": "listening intently",
       "blocking_seed": [
-        "seated",
-        "wind-blown hair"
+        "seated stable"
       ],
       "shot_size": "medium_close",
       "camera_angle": "eye_level",
@@ -270,7 +261,7 @@
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
-      "lighting_style": "diffuse_ambient",
+      "lighting_style": "soft_even",
       "primary_subject_angle": "front_three_quarter_right"
     }
   ],
@@ -337,16 +328,16 @@
     "[CH012] Chapter XII (book index hit)",
     "[CH014] Chapter XIV (book index hit)",
     "[CH015] Chapter XV (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH014_SC004\n\n## Production Intent\nEstablish the historical weight of the Monkey King's lineage through a high-altitude transit sequence. The scene must balance the kinetic energy of flight with the heavy, melancholic delivery of a curse backstory, using the vast landscape to emphasize isolation and scale.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- monkey_king\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n\n## Required Environments\n- aerial_landscape_transit (The Sky)\n\n## Continuity Constraints\n- Wind effects on hair and white clothing of dorothy.\n- Physical positioning of characters on the monkeys' backs must remain stable during dialogue.\n\n## Beat List\n- BT001: Aerial transit exhilaration.\n- BT002: The Story Begins (Monkey King initiates dialogue).\n- BT003: The Curse of Gayelette (Emotional shift to melancholy/understanding).",
+  "storyboard_markdown": "# Scene Contract: CH014_SC004\n\n## Production Intent\nEstablish the historical weight of the Monkey King's lineage through a narrative transition during aerial transit. The scene must balance the kinetic energy of flight with the heavy, melancholic tone of the backstory being shared.\n\n## Required Cast\n- dorothy\n- monkey_king\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n\n## Required Environments\n- aerial_landscape_transit\n\n## Continuity Constraints\n- Wind effects on hair and clothing must remain consistent with flight speed.\n- Physical positioning of characters on the monkeys' backs must be stable for dialogue.\n\n## Beat List\n- BT001: Aerial transit exhilaration\n- BT002: The Tale of Gayelette\n- BT003: The Weight of the Curse",
   "metadata": {
     "artifact_id": "CH014_SC004_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "7d5e026216526a4482b508b0940e6a5a1f636e36",
+    "source_fingerprint": "051c55918604d24d5e5f753680977de9462a346b",
     "created_at_utc": "2026-04-27T08:43:30.674163+00:00",
-    "updated_at_utc": "2026-04-27T08:43:30.674163+00:00",
+    "updated_at_utc": "2026-04-27T13:46:20.394577+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -371,6 +362,11 @@
         "timestamp_utc": "2026-04-27T08:44:12.830825+00:00",
         "action": "synthesized",
         "source_fingerprint": "7d5e026216526a4482b508b0940e6a5a1f636e36"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:47:02.513130+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "051c55918604d24d5e5f753680977de9462a346b"
       }
     ]
   }

@@ -5,38 +5,39 @@
   "purpose": "To complete the group's reunion through a moment of physical restoration.",
   "summary": "The search party finds the Scarecrow's discarded clothes in a tall tree. Using his new axe, the Tin Woodman chops down the tree. They retrieve the clothes, restuff them with fresh straw, and restore the Scarecrow to life.",
   "emotional_arc": "From loss/despair to triumph and joy.",
-  "production_intent": "The search party locates the Scarecrow's empty clothes high in a smooth-trunked tree. The Tin Woodman uses his new gold-handled axe to fell the tree, allowing the group to retrieve the garments and restuff them with fresh straw to restore the Scarecrow.",
-  "scene_short_description": "A search party retrieves and restores discarded clothes from a tall tree on a rocky plain.",
+  "production_intent": "The search party locates the Scarecrow's discarded clothing high in a smooth-trunked tree. The Tin Woodman uses his new gold-handled axe to fell the tree, allowing the group to retrieve the clothes and restuff them with fresh straw to physically restore the Scarecrow.",
+  "scene_short_description": "A search party retrieves discarded clothing from a tall tree and restores a straw figure.",
   "scene_primary_scale_story_point": "The height of the tall_tree_location relative to the characters.",
   "scene_required_anchor_catalog": [
     "tall_tree_location",
     "gold-handled axe"
   ],
-  "scene_start_state": "Characters looking up at empty clothes in a high tree canopy with expressions of despair.",
+  "scene_start_state": "Characters looking up at empty clothes hanging in a tall tree with expressions of despair.",
   "scene_end_state": "The Scarecrow is fully stuffed and standing, surrounded by a joyful group.",
-  "dominant_action_line": "Felling the tree to retrieve clothes and restuffing them.",
+  "dominant_action_line": "Felling the tree to retrieve clothing and stuffing the straw back into the character.",
   "scene_spatial_layout": [
     "Characters clustered at the base of the tall_tree_location",
-    "Tree trunk serves as the vertical axis for action"
+    "Verticality emphasized by the smooth trunk reaching upward"
   ],
   "character_spatial_map": [
     "tin_woodman positioned at the base of the tree with axe",
-    "dorothy, cowardly_lion, and winkies observing/assisting near the fallen debris",
-    "the_scarecrow (restored) central to the group post-restoration"
+    "dorothy, cowardly_lion, and winkies observing from the rocky_plain perimeter",
+    "the_scarecrow (as clothes) suspended in the canopy"
   ],
   "environment_subzones": [
-    "rocky_plain base",
-    "tall_tree_location canopy"
+    "tree_canopy",
+    "tree_base",
+    "rocky_plain_floor"
   ],
   "entry_vectors": [
-    "approach from rocky_plain"
+    "characters approaching from the rocky_plain"
   ],
   "exit_vectors": [
-    "departure across rocky_plain"
+    "group moving away from the fallen tree"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: tree falls",
-    "BT002 -> BT003: clothes are stuffed"
+    "BT001 -> BT002: Physical action of chopping",
+    "BT002 -> BT003: Transition from destruction to reconstruction"
   ],
   "characters_required": [
     {
@@ -124,22 +125,23 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Discovery of clothes in tree",
+      "summary": "Discovery of clothes in the canopy",
       "purpose": "",
-      "action_start": "characters looking at canopy",
-      "action_end": "clothes identified as Scarecrow's",
+      "action_start": "characters looking up",
+      "action_end": "clothes identified",
       "active_subjects": [
         "dorothy",
         "cowardly_lion",
-        "tin_woodman"
+        "tin_woodman",
+        "winkies"
       ],
       "passive_subjects": [
         "the_scarecrow"
       ],
       "spatial_context": "base of tall_tree_location",
       "blocking_hint": "group looking upward in unison",
-      "environment_subzone": "tall_tree_location",
-      "continuity_focus": "clothes are empty",
+      "environment_subzone": "tree_canopy",
+      "continuity_focus": "clothes are empty and discarded",
       "coverage_hint": "low angle shots of tree",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
@@ -149,26 +151,28 @@
       "summary": "Felling the tree",
       "purpose": "",
       "action_start": "tin_woodman raises axe",
-      "action_end": "tree hits rocky_plain",
+      "action_end": "tree hits ground",
       "active_subjects": [
         "tin_woodman"
       ],
       "passive_subjects": [
+        "dorothy",
+        "cowardly_lion",
         "winkies"
       ],
       "spatial_context": "base of tall_tree_location",
       "blocking_hint": "tin_woodman centered at trunk",
-      "environment_subzone": "rocky_plain",
-      "continuity_focus": "gold-handled axe visibility",
+      "environment_subzone": "tree_base",
+      "continuity_focus": "gold-handled axe must be visible",
       "coverage_hint": "action shots of axe use",
-      "coverage_priority": "medium",
+      "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
       "summary": "Physical restoration",
       "purpose": "",
-      "action_start": "clothes retrieved from ground",
+      "action_start": "clothes laid on ground",
       "action_end": "the_scarecrow is standing and stuffed",
       "active_subjects": [
         "dorothy",
@@ -178,13 +182,13 @@
       "passive_subjects": [
         "the_scarecrow"
       ],
-      "spatial_context": "on the rocky_plain near fallen tree",
-      "blocking_hint": "characters kneeling around clothes",
-      "environment_subzone": "rocky_plain",
+      "spatial_context": "rocky_plain_floor",
+      "blocking_hint": "characters kneeling around the clothes",
+      "environment_subzone": "rocky_plain_floor",
       "continuity_focus": "clothes transition from empty to stuffed",
       "coverage_hint": "close-ups of straw stuffing",
-      "coverage_priority": "high",
-      "handoff_to_next": "end_of_scene"
+      "coverage_priority": "medium",
+      "handoff_to_next": "none"
     }
   ],
   "planned_shots": [
@@ -192,7 +196,7 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish scale and loss",
-      "planned_shot_moment_summary": "looking up at empty clothes in canopy",
+      "planned_shot_moment_summary": "looking up at clothes in canopy",
       "primary_subject_seed": "tall_tree_location",
       "secondary_subjects_seed": [
         "dorothy",
@@ -200,12 +204,12 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "tall_tree_location",
+      "environment_subzone": "tree_canopy",
       "planned_shot_required_anchor_1": "tall_tree_location",
-      "planned_shot_scale_proof_detail": "height of tree vs characters",
+      "planned_shot_scale_proof_detail": "clothes visible high above ground",
       "start_state_seed": "characters looking up",
-      "end_state_seed": "camera tilting up",
-      "action_seed": "looking at clothes",
+      "end_state_seed": "tin_woodman stepping forward",
+      "action_seed": "searching the canopy",
       "blocking_seed": [
         "group clustered at base"
       ],
@@ -216,27 +220,27 @@
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front"
+      "primary_subject_angle": "front_three_quarter_left"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "drive action",
-      "planned_shot_moment_summary": "tin_woodman chopping tree with gold axe",
+      "planned_shot_moment_summary": "axe striking wood",
       "primary_subject_seed": "tin_woodman",
       "secondary_subjects_seed": [
         "gold-handled axe"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "rocky_plain",
+      "environment_subzone": "tree_base",
       "planned_shot_required_anchor_1": "gold-handled axe",
-      "planned_shot_scale_proof_detail": "axe handle color/material",
-      "start_state_seed": "axe hitting bark",
+      "planned_shot_scale_proof_detail": "axe handle is gold",
+      "start_state_seed": "axe raised",
       "end_state_seed": "tree falling",
-      "action_seed": "chopping",
+      "action_seed": "chopping the tree",
       "blocking_seed": [
-        "tin_woodman at tree base"
+        "tin_woodman at trunk"
       ],
       "shot_size": "medium_full",
       "camera_angle": "eye_level",
@@ -245,25 +249,25 @@
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "hard_directional",
-      "primary_subject_angle": "profile_left"
+      "primary_subject_angle": "profile_right"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "show restoration",
-      "planned_shot_moment_summary": "straw being stuffed into clothes",
+      "planned_shot_moment_summary": "straw entering sleeves",
       "primary_subject_seed": "the_scarecrow",
       "secondary_subjects_seed": [
         "straw"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "rocky_plain",
+      "environment_subzone": "rocky_plain_floor",
       "planned_shot_required_anchor_1": "the_scarecrow",
-      "planned_shot_scale_proof_detail": "clothes transition from empty to full",
+      "planned_shot_scale_proof_detail": "clothes transition from empty to stuffed",
       "start_state_seed": "empty clothes on ground",
       "end_state_seed": "stuffed scarecrow standing",
-      "action_seed": "stuffing straw",
+      "action_seed": "stuffing straw into clothes",
       "blocking_seed": [
         "characters kneeling around clothes"
       ],
@@ -274,7 +278,7 @@
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "soft_even",
-      "primary_subject_angle": "front_three_quarter_right"
+      "primary_subject_angle": "front"
     }
   ],
   "unresolved_questions": [],
@@ -340,16 +344,16 @@
     "[CH005] Chapter V (book index hit)",
     "[CH012] Chapter XII (book index hit)",
     "[CH011] Chapter XI (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH013_SC003\n\n## Production Intent\nThe search party locates the Scarecrow's empty clothes high in a smooth-trunked tree. The Tin Woodman uses his new gold-handled axe to fell the tree, allowing the group to retrieve the garments and restuff them with fresh straw to restore the Scarecrow.\n\n## Required Cast\n- dorothy\n- cowardly_lion\n- tin_woodman\n- the_scarecrow\n- winkies\n\n## Required Environments\n- rocky_plain\n- tall_tree_location\n\n## Continuity Constraints\n- Condition of Scarecrow's clothes (empty vs. stuffed)\n- Appearance of the new gold-handled axe\n\n## Beat List\n- BT001: Discovery of clothes in tree\n- BT002: Felling the tree\n- BT003: Physical restoration",
+  "storyboard_markdown": "# Scene Contract: CH013_SC003\n\n## Production Intent\nThe search party locates the Scarecrow's discarded clothing high in a smooth-trunked tree. The Tin Woodman uses his new gold-handled axe to fell the tree, allowing the group to retrieve the clothes and restuff them with fresh straw to physically restore the Scarecrow.\n\n## Required Cast\n- dorothy\n- cowardly_lion\n- tin_woodman\n- the_scarecrow (as clothing/straw)\n- winkies\n\n## Required Environments\n- rocky_plain\n- tall_tree_location\n\n## Continuity Constraints\n- Condition of Scarecrow's clothes: must transition from empty to stuffed.\n- Tin Woodman's axe: must feature a gold handle.\n\n## Beat List\n- BT001: Discovery of clothes in the canopy.\n- BT002: Felling the tree with the gold-handled axe.\n- BT003: Restuffing the clothes with straw to restore the Scarecrow.",
   "metadata": {
     "artifact_id": "CH013_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "62d7d3a7f53e2e7d6f5099fd91c1d195ff9412e8",
+    "source_fingerprint": "e6f1f1720c941cebedcd7726bc0efc3dd1db4242",
     "created_at_utc": "2026-04-27T08:39:52.535254+00:00",
-    "updated_at_utc": "2026-04-27T08:39:52.535254+00:00",
+    "updated_at_utc": "2026-04-27T13:42:31.071404+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -374,6 +378,11 @@
         "timestamp_utc": "2026-04-27T08:40:34.581150+00:00",
         "action": "synthesized",
         "source_fingerprint": "62d7d3a7f53e2e7d6f5099fd91c1d195ff9412e8"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:43:15.285993+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "e6f1f1720c941cebedcd7726bc0efc3dd1db4242"
       }
     ]
   }

@@ -9,7 +9,7 @@ from typing import Any
 from .core.json_io import read_json, write_json
 from .scaffold import create_project
 
-VISUAL_FALLBACK_SCHEMA_VERSION = "2026-04-visual-fallbacks-v1"
+VISUAL_FALLBACK_SCHEMA_VERSION = "2026-04-visual-fallbacks-v2-book-agnostic"
 VISUAL_FALLBACK_RELATIVE_PATH = Path("02_story_analysis") / "world" / "global" / "VISUAL_FALLBACKS.json"
 
 DEFAULT_CHARACTER_NEGATIVES = [
@@ -24,10 +24,8 @@ DEFAULT_CHARACTER_NEGATIVES = [
 ]
 
 DEFAULT_ENVIRONMENT_NEGATIVES = [
-    "generic meadow",
-    "open grassy field",
-    "rolling green hills",
-    "no cave",
+    "generic empty landscape",
+    "featureless field",
     "hidden landmark",
     "modern road",
     "cars",
@@ -92,13 +90,14 @@ def default_visual_fallbacks(*, project_slug: str, source_title: str = "") -> di
         "schema_version": VISUAL_FALLBACK_SCHEMA_VERSION,
         "project_slug": project_slug,
         "source_title": source_title,
-        "book_visual_context": "early pulp planetary-romance adventure, frontier desert realism, non-modern clothing, weathered natural materials, ancient alien-world culture, cinematic readable reference lighting",
+        "book_visual_context": "cinematic readable reference lighting, era-aware non-modern story adaptation, grounded materials, clear silhouettes, source-supported color logic",
         "character_fallbacks": {
-            "general": "non-modern pulp adventure wardrobe and readable cinematic reference styling",
-            "earth_human": "late-19th-century frontier adventure clothing, weathered natural fabrics, belts, boots, simple utilitarian garments, no modern suit or tie unless explicitly described",
-            "barsoom_humanoid": "ancient alien-world planetary-romance wardrobe, harnesses, ornaments, tribal or gladiatorial elements, no modern Earth clothing",
-            "creature_or_primitive": "feral or primitive non-modern appearance, rough natural materials if clothed, no tailored business attire",
-            "group_or_horde": "coherent group visual language using non-modern tribal, frontier, or alien-world materials as appropriate",
+            "general": "era-aware non-modern character styling with clear silhouette, readable materials, and source-supported accessories; avoid contemporary portrait fashion unless explicitly described",
+            "human_period": "period-appropriate human clothing, practical natural fabrics, simple closures, worn footwear, no modern business or athletic styling unless explicitly described",
+            "humanoid_fantasy": "storybook humanoid styling, color-coded regional costume, practical garments, magical or ceremonial accents only when supported by source evidence",
+            "humanoid_speculative": "non-modern speculative humanoid styling, unfamiliar materials or ornaments when supported, coherent culture-specific costume logic, no contemporary Earth fashion",
+            "creature_or_animal": "source-appropriate animal or creature anatomy, readable scale, natural texture, movement-ready silhouette, minimal gear only when supported",
+            "group_or_crowd": "coherent group visual language with shared era, region, role, palette, and material logic while preserving individual variation",
         },
         "environment_fallbacks": {
             "general": "clear cinematic location reference with explicit landmarks, scale, materials, lighting, and atmosphere",
@@ -129,12 +128,14 @@ def environment_negative_terms(fallbacks: dict[str, Any]) -> list[str]:
 def select_character_fallback_bucket(text: str) -> str:
     normalized = text.lower()
     if any(term in normalized for term in ["horde", "tribe", "war party", "crowd", "group", "warriors"]):
-        return "group_or_horde"
+        return "group_or_crowd"
     if any(term in normalized for term in ["creature", "ape", "beast", "non humanoid", "non-humanoid", "multi-legged", "animal"]):
-        return "creature_or_primitive"
-    if any(term in normalized for term in ["martian", "barsoom", "green", "red martian", "alien", "thoat"]):
-        return "barsoom_humanoid"
-    return "earth_human"
+        return "creature_or_animal"
+    if any(term in normalized for term in ["witch", "wizard", "sorcerer", "magical", "enchanted", "fairy", "humanoid_nonhuman"]):
+        return "humanoid_fantasy"
+    if any(term in normalized for term in ["martian", "alien", "planetary", "non-earth", "extraterrestrial"]):
+        return "humanoid_speculative"
+    return "human_period"
 
 
 def select_environment_fallback_bucket(text: str) -> str:
@@ -152,7 +153,8 @@ def fallback_text(fallbacks: dict[str, Any], family: str, bucket: str) -> str:
     table = fallbacks.get(f"{family}_fallbacks", {})
     if not isinstance(table, dict):
         return ""
-    return str(table.get(bucket) or table.get("general") or "").strip()
+    key = _fallback_bucket_alias(bucket)
+    return str(table.get(key) or table.get(bucket) or table.get("general") or "").strip()
 
 
 def _normalize_visual_fallbacks(payload: dict[str, Any]) -> dict[str, Any]:
@@ -164,7 +166,7 @@ def _normalize_visual_fallbacks(payload: dict[str, Any]) -> dict[str, Any]:
             merged = dict(normalized[family])
             for key, value in incoming.items():
                 if str(value).strip():
-                    merged[str(key)] = str(value).strip()
+                    merged[_fallback_bucket_alias(str(key))] = str(value).strip()
             normalized[family] = merged
     incoming_negatives = payload.get("negative_terms", {})
     if isinstance(incoming_negatives, dict):
@@ -211,10 +213,12 @@ def _collect_project_context(project_dir: Path) -> dict[str, Any]:
 def _derive_book_visual_context(context: dict[str, Any]) -> str:
     digest = str(context.get("context_digest", "")).lower()
     descriptors = ["cinematic readable reference lighting"]
-    if any(term in digest for term in ["mars", "martian", "barsoom", "alien"]):
-        descriptors.extend(["pulp planetary-romance adventure", "ancient alien-world culture"])
+    if any(term in digest for term in ["witch", "wizard", "magic", "magical", "enchanted", "fairy", "castle"]):
+        descriptors.extend(["storybook fantasy adventure", "color-coded regional design", "practical fairy-tale costumes"])
+    elif any(term in digest for term in ["planet", "martian", "alien", "extraterrestrial"]):
+        descriptors.extend(["speculative adventure", "non-modern unfamiliar-world culture"])
     else:
-        descriptors.append("pulp adventure visual style")
+        descriptors.append("classic adventure visual style")
     if any(term in digest for term in ["arizona", "desert", "mountain", "cave", "frontier"]):
         descriptors.extend(["frontier desert realism", "weathered rock and dry wilderness terrain"])
     if any(term in digest for term in ["sword", "warrior", "harness", "tribal", "chieftain"]):
@@ -241,9 +245,18 @@ def _derive_environment_fallbacks(book_context: str, context: dict[str, Any]) ->
 
 
 def _guess_source_title(project_dir: Path, text: str) -> str:
-    if "princess of mars" in text.lower() or "princess_of_mars" in project_dir.name.lower():
-        return "A Princess of Mars"
     return project_dir.name.replace("_", " ").strip().title()
+
+
+def _fallback_bucket_alias(bucket: str) -> str:
+    aliases = {
+        "earth_human": "human_period",
+        "oz_humanoid": "humanoid_fantasy",
+        "barsoom_humanoid": "humanoid_speculative",
+        "creature_or_primitive": "creature_or_animal",
+        "group_or_horde": "group_or_crowd",
+    }
+    return aliases.get(str(bucket).strip(), str(bucket).strip())
 
 
 def _compact_text(text: str, *, limit: int) -> str:

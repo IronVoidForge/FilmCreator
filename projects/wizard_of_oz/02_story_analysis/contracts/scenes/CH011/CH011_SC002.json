@@ -5,37 +5,37 @@
   "purpose": "Introduce the central conflict and the Wizard's impossible demand.",
   "summary": "The group is lodged in the palace. They are informed that they may see the Wizard, but he will only grant their wishes if they first kill the Wicked Witch of the West.",
   "emotional_arc": "Anticipation $\\rightarrow$ Dread/Confusion.",
-  "production_intent": "Establish the high-stakes ultimatum provided by the Wizard within the luxury of the palace guest quarters. The scene must transition from a sense of hopeful arrival to the heavy realization of a lethal requirement.",
+  "production_intent": "Establish the high-stakes ultimatum provided by the Wizard's messenger within the palace setting. The group transitions from the comfort of their lodging to the realization of a lethal requirement for their desires.",
   "scene_short_description": "A group of travelers receives a lethal ultimatum inside emerald-toned palace quarters.",
-  "scene_primary_scale_story_point": "Palace guest quarters scale vs. the looming threat of the Wicked Witch.",
+  "scene_primary_scale_story_point": "Human scale characters against large, emerald-studded palace architecture.",
   "scene_required_anchor_catalog": [
-    "palace_guest_quarters furniture/lodging items",
-    "green_girl attendant"
+    "lodging furniture/food props",
+    "green marble surfaces"
   ],
-  "scene_start_state": "The group is settled in the palace, experiencing a moment of respite or anticipation.",
+  "scene_start_state": "The group is settled in the guest quarters, experiencing a moment of rest or anticipation.",
   "scene_end_state": "The group is stunned and unsettled by the demand to kill the Wicked Witch.",
-  "dominant_action_line": "An attendant delivers a conditional offer from the Wizard that requires a deadly task.",
+  "dominant_action_line": "green_girl delivers the Wizard's condition for granting wishes.",
   "scene_spatial_layout": [
-    "Group clustered within palace guest quarters",
-    "green_girl positioned as an external messenger"
+    "Group clustered around lodging/food area",
+    "green_girl positioned as an external messenger entering the space"
   ],
   "character_spatial_map": [
-    "dorothy, the_scarecrow, tin_woodman, cowardly_lion grouped in central seating/standing area",
-    "green_girl entering from hallway threshold"
+    "dorothy, the_scarecrow, tin_woodman, cowardly_lion clustered in center",
+    "green_girl at threshold or standing before the group"
   ],
   "environment_subzones": [
-    "palace_guest_quarters main room",
-    "palace_guest_quarters hallway"
+    "guest_seating_area",
+    "hallway_threshold"
   ],
   "entry_vectors": [
-    "green_girl via hallway entrance"
+    "palace_guest_quarters hallway entrance"
   ],
   "exit_vectors": [
-    "none specified"
+    "palace_guest_quarters hallway exit"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Delivery of the message",
-    "BT002 -> BT003: Reaction to the impossible demand"
+    "BT001 -> BT002: Arrival of messenger",
+    "BT002 -> BT003: Delivery of the ultimatum"
   ],
   "characters_required": [
     {
@@ -103,19 +103,19 @@
   ],
   "continuity_constraints": [
     "Prop consistency for lodging items and food",
-    "Character positioning relative to palace furniture"
+    "Character positioning within palace_guest_quarters"
   ],
   "visual_coverage_families": [
-    "Medium shots of group discussion",
+    "Medium shots of the group discussing news",
     "Reaction shots to green_girl delivery"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Group rests in palace quarters",
+      "summary": "Group resting in palace quarters",
       "purpose": "",
       "action_start": "group conversing",
-      "action_end": "green_girl enters",
+      "action_end": "interruption by arrival",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -123,20 +123,20 @@
         "cowardly_lion"
       ],
       "passive_subjects": [],
-      "spatial_context": "palace_guest_quarters main room",
-      "blocking_hint": "clustered around lodging items",
-      "environment_subzone": "palace_guest_quarters main room",
-      "continuity_focus": "lodging items/food placement",
+      "spatial_context": "guest_seating_area",
+      "blocking_hint": "clustered around food/lodging items",
+      "environment_subzone": "guest_seating_area",
+      "continuity_focus": "food and lodging props",
       "coverage_hint": "medium shots of group",
       "coverage_priority": "medium",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "The ultimatum is delivered",
+      "summary": "green_girl delivers the Wizard's message",
       "purpose": "",
-      "action_start": "green_girl enters hallway",
-      "action_end": "message completed",
+      "action_start": "green_girl enters",
+      "action_end": "message delivered",
       "active_subjects": [
         "green_girl"
       ],
@@ -146,20 +146,20 @@
         "tin_woodman",
         "cowardly_lion"
       ],
-      "spatial_context": "threshold between hallway and quarters",
-      "blocking_hint": "green_girl at door, group looking toward her",
-      "environment_subzone": "palace_guest_quarters hallway",
-      "continuity_focus": "green_girl attire/positioning",
-      "coverage_hint": "reaction shots to attendant",
+      "spatial_context": "hallway_threshold to guest_seating_area",
+      "blocking_hint": "messenger stands before group",
+      "environment_subzone": "hallway_threshold",
+      "continuity_focus": "green attire of attendant",
+      "coverage_hint": "reaction shots to delivery",
       "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Reaction to the demand",
+      "summary": "The impossible demand is processed",
       "purpose": "",
-      "action_start": "silence after message",
-      "action_end": "group in dread/confusion",
+      "action_start": "silence following message",
+      "action_end": "group in state of dread",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -169,11 +169,11 @@
       "passive_subjects": [
         "green_girl"
       ],
-      "spatial_context": "palace_guest_quarters main room",
-      "blocking_hint": "group frozen or shifting uncomfortably",
-      "environment_subzone": "palace_guest_quarters main room",
+      "spatial_context": "guest_seating_area",
+      "blocking_hint": "group members reacting individually",
+      "environment_subzone": "guest_seating_area",
       "continuity_focus": "character positioning",
-      "coverage_hint": "reaction shots of group members",
+      "coverage_hint": "reaction shots",
       "coverage_priority": "high",
       "handoff_to_next": "end_of_scene"
     }
@@ -182,7 +182,7 @@
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish group status",
+      "narrative_function": "establish_setting",
       "planned_shot_moment_summary": "group resting in quarters",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
@@ -192,11 +192,11 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "palace_guest_quarters main room",
-      "planned_shot_required_anchor_1": "lodging items",
-      "planned_shot_scale_proof_detail": "group size relative to furniture",
+      "environment_subzone": "guest_seating_area",
+      "planned_shot_required_anchor_1": "lodging furniture",
+      "planned_shot_scale_proof_detail": "human scale vs emerald walls",
       "start_state_seed": "group in relaxed state",
-      "end_state_seed": "group noticing green_girl",
+      "end_state_seed": "group noticing movement",
       "action_seed": "group conversing",
       "blocking_seed": [
         "seated/standing cluster"
@@ -213,25 +213,23 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "deliver conflict",
-      "planned_shot_moment_summary": "green_girl delivers the Wizard's terms",
+      "narrative_function": "introduce_messenger",
+      "planned_shot_moment_summary": "green_girl enters and speaks",
       "primary_subject_seed": "green_girl",
       "secondary_subjects_seed": [
         "dorothy",
-        "the_scarecrow",
-        "tin_woodman",
-        "cowardly_lion"
+        "the_scarecrow"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "palace_guest_quarters hallway",
-      "planned_shot_required_anchor_1": "hallway threshold",
-      "planned_shot_scale_proof_detail": "attendant height vs doorway",
-      "start_state_seed": "green_girl entering",
-      "end_state_seed": "green_girl finishing speech",
-      "action_seed": "speaking the ultimatum",
+      "environment_subzone": "hallway_threshold",
+      "planned_shot_required_anchor_1": "hallway entrance",
+      "planned_shot_scale_proof_detail": "messenger vs group distance",
+      "start_state_seed": "green_girl appearing at door",
+      "end_state_seed": "green_girl finishing sentence",
+      "action_seed": "delivery of message",
       "blocking_seed": [
-        "standing at entrance"
+        "green_girl standing upright/formal"
       ],
       "shot_size": "medium",
       "camera_angle": "eye_level",
@@ -239,14 +237,14 @@
       "camera_motion": "pan",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
-      "lighting_style": "soft_even",
+      "lighting_style": "diffuse_ambient",
       "primary_subject_angle": "front"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "show emotional shift",
-      "planned_shot_moment_summary": "group reacts to the demand to kill the witch",
+      "narrative_function": "reaction_to_conflict",
+      "planned_shot_moment_summary": "group reacts to the Witch demand",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "the_scarecrow",
@@ -255,21 +253,23 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "palace_guest_quarters main room",
-      "planned_shot_required_anchor_1": "lodging items",
-      "planned_shot_scale_proof_detail": "facial expressions vs environment",
-      "start_state_seed": "",
-      "end_state_seed": "",
-      "action_seed": "",
-      "blocking_seed": [],
-      "shot_size": "",
-      "camera_angle": "",
-      "lens_family": "",
-      "camera_motion": "",
-      "zoom_behavior": "",
-      "focus_strategy": "",
-      "lighting_style": "",
-      "primary_subject_angle": ""
+      "environment_subzone": "guest_seating_area",
+      "planned_shot_required_anchor_1": "lodging furniture",
+      "planned_shot_scale_proof_detail": "facial expressions close up",
+      "start_state_seed": "silence after demand",
+      "end_state_seed": "visible dread/confusion",
+      "action_seed": "reaction to news",
+      "blocking_seed": [
+        "group frozen or shifting uncomfortably"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
     }
   ],
   "unresolved_questions": [],
@@ -335,16 +335,16 @@
     "[CH011] Chapter XI (book index hit)",
     "[CH002] Chapter II (book index hit)",
     "[CH015] Chapter XV (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH011_SC002\n\n## Production Intent\nEstablish the high-stakes ultimatum provided by the Wizard within the luxury of the palace guest quarters. The scene must transition from a sense of hopeful arrival to the heavy realization of a lethal requirement.\n\n## Required Cast\n- dorothy (expressive face, white clothing)\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- green_girl (attendant, dressed in green)\n\n## Required Environments\n- palace_guest_quarters (emerald/green marble aesthetic)\n\n## Continuity Constraints\n- Prop consistency for lodging items and food\n- Character positioning relative to palace furniture\n\n## Beat List\n- BT001: Group rests in palace quarters.\n- BT002: The ultimatum is delivered by green_girl.\n- BT003: Reaction to the demand (Anticipation -> Dread/Confusion).",
+  "storyboard_markdown": "# Scene Contract: CH011_SC002\n\n## Production Intent\nEstablish the high-stakes ultimatum provided by the Wizard's messenger within the palace setting. The group transitions from the comfort of their lodging to the realization of a lethal requirement for their desires.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- green_girl\n\n## Required Environments\n- palace_guest_quarters (including guest_seating_area and hallway_threshold)\n\n## Continuity Constraints\n- Prop consistency for lodging items and food\n- Character positioning within palace_guest_quarters\n- Green attire for green_girl/citizens\n\n## Beat List\n- BT001: Group resting in palace quarters.\n- BT002: green_girl delivers the Wizard's message (kill the Wicked Witch).\n- BT003: The impossible demand is processed by the group.",
   "metadata": {
     "artifact_id": "CH011_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "574dac1f11d4555c129a03c441bf2f6875610375",
+    "source_fingerprint": "6a2bbabb1b1fb896ea274d0f8a5f7fe236235669",
     "created_at_utc": "2026-04-27T08:30:00.765602+00:00",
-    "updated_at_utc": "2026-04-27T08:30:00.765602+00:00",
+    "updated_at_utc": "2026-04-27T13:32:20.943671+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -369,6 +369,11 @@
         "timestamp_utc": "2026-04-27T08:30:41.182082+00:00",
         "action": "synthesized",
         "source_fingerprint": "574dac1f11d4555c129a03c441bf2f6875610375"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:33:03.780790+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "6a2bbabb1b1fb896ea274d0f8a5f7fe236235669"
       }
     ]
   }

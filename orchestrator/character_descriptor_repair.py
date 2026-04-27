@@ -120,7 +120,7 @@ def repair_character_reference_fields(
     repair["locked_fields"] = locked_fields
 
     if _is_weak(source_visual_context):
-        source_visual_context = "non-modern pulp adventure visual context, weathered natural materials, cinematic readable reference lighting"
+        source_visual_context = "era-aware non-modern story visual context, grounded materials, clear silhouettes, cinematic readable reference lighting"
         repair["fallback_fields_used"].append("source_visual_context")
     repair["source_visual_context"] = source_visual_context
 
@@ -175,10 +175,10 @@ def _join_fragments(*values: Any) -> str:
 
 
 def _body_fallback(bucket: str) -> str:
-    if bucket == "creature_or_primitive":
-        return "body not specifically described; use a feral or primitive non-modern silhouette with readable anatomy appropriate to the source context"
-    if bucket == "barsoom_humanoid":
-        return "body not specifically described; use a tall non-modern planetary-romance humanoid silhouette with readable proportions"
-    if bucket == "group_or_horde":
+    if bucket in {"creature_or_primitive", "creature_or_animal"}:
+        return "body not specifically described; use a source-appropriate creature or animal silhouette with readable anatomy"
+    if bucket in {"barsoom_humanoid", "humanoid_speculative"}:
+        return "body not specifically described; use a non-modern speculative humanoid silhouette with readable proportions"
+    if bucket in {"group_or_horde", "group_or_crowd"}:
         return "group body details vary; preserve coherent species, costume era, and group silhouette"
     return "body not specifically described; use a grounded human adventure silhouette with realistic proportions"

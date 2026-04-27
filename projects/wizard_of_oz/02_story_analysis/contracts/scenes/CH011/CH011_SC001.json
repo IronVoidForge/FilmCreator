@@ -5,25 +5,25 @@
   "purpose": "Establish the awe and scale of the Emerald City setting.",
   "summary": "Dorothy, Toto, Scarecrow, Tin Woodman, and Cowardly Lion arrive at the gates of the Emerald City. They are overwhelmed by the green marble streets and emerald-studded architecture before being led toward the Palace of Oz.",
   "emotional_arc": "Curiosity/Awe $\\rightarrow$ Overwhelmed Wonder.",
-  "production_intent": "Establish the overwhelming scale and monochromatic green aesthetic of the Emerald City through character reaction and architectural grandeur. The visual language must emphasize the transition from curiosity to total sensory wonder as the group enters the city gates.",
-  "scene_short_description": "A small group enters a massive city defined by green marble streets and emerald architecture.",
-  "scene_primary_scale_story_point": "The height of the emerald-studded buildings relative to the travelers.",
+  "production_intent": "Establish the overwhelming scale and monochromatic green splendor of the Emerald City to transition characters from travelers to awe-struck visitors. The visual language must emphasize the contrast between the weary, multi-colored group and the uniform emerald architecture and citizens.",
+  "scene_short_description": "A weary group enters a massive city of green marble and emerald-studded architecture.",
+  "scene_primary_scale_story_point": "Verticality of emerald-studded buildings vs the small scale of the travelers.",
   "scene_required_anchor_catalog": [
     "emerald_city_gates",
     "green_marble_streets",
-    "palace_of_oz_structure"
+    "Palace_of_Oz"
   ],
-  "scene_start_state": "The group stands at the threshold of the gates, looking inward.",
-  "scene_end_state": "The group is walking through crowds toward the Palace of Oz.",
-  "dominant_action_line": "The travelers navigate the emerald streets while reacting to the city's scale.",
+  "scene_start_state": "The group stands at the threshold of the gates, looking upward in curiosity.",
+  "scene_end_state": "The group is walking through a crowd toward the distant Palace of Oz, visibly overwhelmed.",
+  "dominant_action_line": "The group navigates the emerald streets while reacting to the overwhelming green environment.",
   "scene_spatial_layout": [
-    "Wide open thoroughfares made of green marble",
+    "Wide open thoroughfares of green marble",
     "Dense crowds of citizens dressed entirely in green"
   ],
   "character_spatial_map": [
-    "dorothy, the_scarecrow, tin_woodman, cowardly_lion, and toto move as a central cluster",
-    "guardian_of_the_gates positioned at the threshold",
-    "palace_soldiers flanking paths or guarding structures"
+    "dorothy and toto lead the central cluster",
+    "the_scarecrow, tin_woodman, and cowardly_lion flank the group",
+    "palace_soldiers and guardian_of_the_gates manage perimeter/gate access"
   ],
   "environment_subzones": [
     "emerald_city_gates",
@@ -33,11 +33,11 @@
     "gate_threshold"
   ],
   "exit_vectors": [
-    "path_to_palace"
+    "street_path_to_palace"
   ],
   "beat_transition_map": [
     "BT001 -> BT002: Arrival at gates to entry into streets",
-    "BT002 -> BT003: Street navigation to palace approach"
+    "BT002 -> BT003: Walking through crowds to approaching the Palace"
   ],
   "characters_required": [
     {
@@ -125,11 +125,11 @@
   ],
   "continuity_constraints": [
     "Specific shade and intensity of green lighting/filters",
-    "Group formation and spacing while navigating through crowds"
+    "Group formation density while navigating through crowds"
   ],
   "visual_coverage_families": [
-    "Wide establishing shots of the city architecture",
-    "Medium tracking shots of the traveling group",
+    "Wide establishing shots of the city",
+    "Medium tracking shots of the group walking",
     "Close-ups of character reactions to green splendor"
   ],
   "beat_list": [
@@ -137,21 +137,20 @@
       "beat_id": "BT001",
       "summary": "Arrival at the gates",
       "purpose": "",
-      "action_start": "group approaches gate threshold",
-      "action_end": "group halts in awe",
+      "action_start": "group reaches gate threshold",
+      "action_end": "group stops to look up",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
         "tin_woodman",
         "cowardly_lion",
-        "toto",
-        "guardian_of_the_gates"
+        "toto"
       ],
       "passive_subjects": [
-        "palace_soldiers"
+        "guardian_of_the_gates"
       ],
       "spatial_context": "emerald_city_gates",
-      "blocking_hint": "group stops at the gate entrance",
+      "blocking_hint": "group clustered at entrance",
       "environment_subzone": "emerald_city_gates",
       "continuity_focus": "green lighting intensity",
       "coverage_hint": "wide establishing shot",
@@ -160,10 +159,34 @@
     },
     {
       "beat_id": "BT002",
-      "summary": "Entering the streets",
+      "summary": "Entering the green splendor",
       "purpose": "",
-      "action_start": "group moves past gates",
-      "action_end": "group enters main thoroughfare",
+      "action_start": "stepping onto marble streets",
+      "action_end": "faces filled with wonder",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "passive_subjects": [
+        "citizens"
+      ],
+      "spatial_context": "emerald_city_streets",
+      "blocking_hint": "group walking in formation",
+      "environment_subzone": "emerald_city_streets",
+      "continuity_focus": "green marble texture/reflection",
+      "coverage_hint": "close-ups of reactions",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Navigating the city toward the Palace",
+      "purpose": "",
+      "action_start": "walking through green crowds",
+      "action_end": "approaching palace silhouette",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -173,39 +196,15 @@
       ],
       "passive_subjects": [
         "palace_soldiers",
-        "citizens_in_green"
+        "citizens"
       ],
       "spatial_context": "emerald_city_streets",
-      "blocking_hint": "group weaves through green-clad crowds",
+      "blocking_hint": "group weaving through crowd",
       "environment_subzone": "emerald_city_streets",
-      "continuity_focus": "group formation in crowd",
-      "coverage_hint": "medium tracking shot",
+      "continuity_focus": "group formation in crowds",
+      "coverage_hint": "medium tracking shots",
       "coverage_priority": "medium",
-      "handoff_to_next": "BT003"
-    },
-    {
-      "beat_id": "BT003",
-      "summary": "Toward the Palace",
-      "purpose": "",
-      "action_start": "group walking through streets",
-      "action_end": "group approaches palace entrance",
-      "active_subjects": [
-        "dorothy",
-        "the_scarecrow",
-        "tin_woodman",
-        "cowardly_lion",
-        "toto"
-      ],
-      "passive_subjects": [
-        "palace_soldiers"
-      ],
-      "spatial_context": "emerald_city_streets",
-      "blocking_hint": "group moves toward central palace structure",
-      "environment_subzone": "emerald_city_streets",
-      "continuity_focus": "green lighting intensity",
-      "coverage_hint": "wide/medium tracking",
-      "coverage_priority": "low",
-      "handoff_to_next": "none"
+      "handoff_to_next": "end_of_scene"
     }
   ],
   "planned_shots": [
@@ -213,7 +212,7 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish_scale",
-      "planned_shot_moment_summary": "group views the city from the gates",
+      "planned_shot_moment_summary": "group views gates for first time",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "the_scarecrow",
@@ -225,19 +224,19 @@
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "emerald_city_gates",
       "planned_shot_required_anchor_1": "emerald_city_gates",
-      "planned_shot_scale_proof_detail": "buildings towering over characters",
+      "planned_shot_scale_proof_detail": "towering architecture vs small group",
       "start_state_seed": "group at gate threshold",
-      "end_state_seed": "group stepping forward",
-      "action_seed": "characters stop and stare",
+      "end_state_seed": "group looking up",
+      "action_seed": "looking upward in awe",
       "blocking_seed": [
-        "group clustered near gate edge"
+        "group clustered near gate entrance"
       ],
       "shot_size": "wide",
       "camera_angle": "low_angle",
       "lens_family": "ultra_wide",
-      "camera_motion": "pan",
+      "camera_motion": "tilt",
       "zoom_behavior": "none",
-      "focus_strategy": "environment_priority",
+      "focus_strategy": "deep_focus",
       "lighting_style": "high_contrast_ceremonial",
       "primary_subject_angle": "front_three_quarter_right"
     },
@@ -253,15 +252,15 @@
         "cowardly_lion"
       ],
       "subject_visibility": "on_screen",
-      "narration_mode": "in_scene_speaker",
+      "narration_mode": "none",
       "environment_subzone": "emerald_city_streets",
       "planned_shot_required_anchor_1": "green_marble_streets",
-      "planned_shot_scale_proof_detail": "reflection of green in eyes",
+      "planned_shot_scale_proof_detail": "intensity of green light on skin",
       "start_state_seed": "eyes widening",
-      "end_state_seed": "expressions of wonder",
-      "action_seed": "characters react to visual stimuli",
+      "end_state_seed": "expression of wonder",
+      "action_seed": "reacting to visual stimuli",
       "blocking_seed": [
-        "group walking in loose formation"
+        "walking forward in tight formation"
       ],
       "shot_size": "close_up",
       "camera_angle": "eye_level",
@@ -271,6 +270,36 @@
       "focus_strategy": "shallow_subject",
       "lighting_style": "diffuse_ambient",
       "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish_destination",
+      "planned_shot_moment_summary": "group walking through green citizens toward palace",
+      "primary_subject_seed": "the_group",
+      "secondary_subjects_seed": [
+        "palace_soldiers",
+        "citizens"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "emerald_city_streets",
+      "planned_shot_required_anchor_1": "Palace_of_Oz",
+      "planned_shot_scale_proof_detail": "distant palace looming over crowd",
+      "start_state_seed": "walking through crowd",
+      "end_state_seed": "approaching palace gates",
+      "action_seed": "navigating crowds",
+      "blocking_seed": [
+        "group moving through green-clad citizens"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "rear_three_quarter_left"
     }
   ],
   "unresolved_questions": [],
@@ -336,16 +365,16 @@
     "[CH003] Chapter III (book index hit)",
     "[CH004] Chapter IV (book index hit)",
     "[CH005] Chapter V (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH011_SC001\n\n## Production Intent\nEstablish the overwhelming scale and monochromatic green aesthetic of the Emerald City through character reaction and architectural grandeur. The visual language must emphasize the transition from curiosity to total sensory wonder as the group enters the city gates.\n\n## Required Cast\n- dorothy\n- toto\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- guardian_of_the_gates\n- palace_soldiers\n\n## Required Environments\n- emerald_city_streets (Green Marble/Emerald)\n\n## Continuity Constraints\n- Specific shade and intensity of green lighting/filters.\n- The group's formation while walking through crowds.\n\n## Beat List\n- BT001: Arrival at the gates.\n- BT002: Entering the streets.\n- BT003: Toward the Palace.",
+  "storyboard_markdown": "# Scene Contract: CH011_SC001\n\n## Production Intent\nEstablish the overwhelming scale and monochromatic green splendor of the Emerald City to transition characters from travelers to awe-struck visitors. The visual language must emphasize the contrast between the weary, multi-colored group and the uniform emerald architecture and citizens.\n\n## Required Cast\n- dorothy\n- toto\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- guardian_of_the_gates\n- palace_soldiers\n\n## Required Environments\n- emerald_city_streets (Green Marble/Emerald)\n- emerald_city_gates\n- Palace_of_Oz\n\n## Continuity Constraints\n- Specific shade and intensity of \"green\" lighting/filters.\n- The group's formation while walking through crowds.\n\n## Beat List\n- BT001: Arrival at the gates (Curiosity/Awe)\n- BT002: Entering the green splendor (Transition to Wonder)\n- BT003: Navigating the city toward the Palace (Overwhelmed Wonder)",
   "metadata": {
     "artifact_id": "CH011_SC001_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "1f459bbbdc107bc357d9085267a67e7820e019ef",
+    "source_fingerprint": "94d76240839e97714f162cb74e2f2c5a9946fbf6",
     "created_at_utc": "2026-04-27T08:29:20.698370+00:00",
-    "updated_at_utc": "2026-04-27T08:29:20.698370+00:00",
+    "updated_at_utc": "2026-04-27T13:31:35.595278+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -370,6 +399,11 @@
         "timestamp_utc": "2026-04-27T08:29:59.688399+00:00",
         "action": "synthesized",
         "source_fingerprint": "1f459bbbdc107bc357d9085267a67e7820e019ef"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:32:19.832830+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "94d76240839e97714f162cb74e2f2c5a9946fbf6"
       }
     ]
   }

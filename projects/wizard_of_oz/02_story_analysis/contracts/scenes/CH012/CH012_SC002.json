@@ -5,37 +5,37 @@
   "purpose": "Escalation of the conflict through a major magical event.",
   "summary": "In desperation, the Wicked Witch uses the final charge of the Golden Cap to summon the Winged Monkeys. The monkeys descend upon the group.",
   "emotional_arc": "Desperation $\\rightarrow$ Terror.",
-  "production_intent": "Execute a high-stakes magical escalation where the Golden Cap triggers a massive aerial descent of winged monkeys. The sequence must transition from character desperation to chaotic terror through lighting shifts and aggressive camera movement.",
-  "scene_short_description": "A group travels through rugged lands before a massive swarm of winged creatures descends from above.",
+  "production_intent": "Execute a high-stakes magical escalation where the Golden Cap triggers a swarm event. The sequence must transition from character desperation to chaotic terror through lighting shifts and scale changes as winged monkeys descend from above.",
+  "scene_short_description": "A group of travelers faces a sudden aerial descent of winged creatures in an untilled landscape.",
   "scene_primary_scale_story_point": "Swarm scale vs individual character vulnerability.",
   "scene_required_anchor_catalog": [
     "western_rugged_lands horizon",
-    "dorothy white dress"
+    "dorothy's white dress"
   ],
-  "scene_start_state": "Group traveling through the untilled, rugged landscape under clear light.",
-  "scene_end_state": "Chaos and scramble as winged_monkeys descend into the frame.",
-  "dominant_action_line": "The Wicked Witch uses the Golden Cap to summon a swarm that descends upon the group.",
+  "scene_start_state": "Travelers moving through the rugged West, weary and desperate.",
+  "scene_end_state": "Chaos as winged monkeys descend upon the group.",
+  "dominant_action_line": "The Golden Cap summons a swarm of Winged Monkeys that attack the travelers.",
   "scene_spatial_layout": [
     "Open western_rugged_lands terrain",
-    "Vertical descent from sky to ground level"
+    "Vertical descent path from sky to ground"
   ],
   "character_spatial_map": [
-    "dorothy, the_scarecrow, tin_woodman, cowardly_lion clustered in center-ground",
-    "winged_monkeys descending from high overhead"
+    "dorothy, the_scarecrow, tin_woodman, cowardly_lion clustered in center",
+    "winged_monkeys descending from high angle"
   ],
   "environment_subzones": [
     "open_plains",
     "sky_canopy"
   ],
   "entry_vectors": [
-    "winged_monkeys via vertical descent"
+    "winged_monkeys (aerial descent)"
   ],
   "exit_vectors": [
-    "group scramble toward cover/unspecified direction"
+    "group scramble (ground movement)"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Magical activation to aerial visual reveal",
-    "BT002 -> BT003: Visual reveal to physical attack chaos"
+    "BT001 -> BT002: Magical trigger/Summoning flash",
+    "BT002 -> BT003: Descent to Impact/Chaos"
   ],
   "characters_required": [
     {
@@ -112,44 +112,44 @@
     }
   ],
   "continuity_constraints": [
-    "Lighting shifts as winged_monkeys cloud the sun",
-    "Character positioning during scramble"
+    "Lighting must dim/shift as monkeys cloud the sun",
+    "Character positioning during scramble must match previous travel state"
   ],
   "visual_coverage_families": [
-    "Low-angle shots of descending winged_monkeys",
-    "Handheld/shaky cam for attack chaos",
-    "Wide shots showing scale of monkey swarm"
+    "Low-angle descending monkey attacks",
+    "Handheld/shaky cam chaos",
+    "Wide swarm scale shots"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Magical activation of the Golden Cap",
+      "summary": "The Golden Cap is used in desperation",
       "purpose": "",
-      "action_start": "group traveling through rugged lands",
-      "action_end": "magical charge completes",
+      "action_start": "characters looking weary/desperate",
+      "action_end": "magical charge complete",
       "active_subjects": [
+        "dorothy",
         "Wicked Witch (presence/influence)"
       ],
       "passive_subjects": [
-        "dorothy",
         "the_scarecrow",
         "tin_woodman",
         "cowardly_lion"
       ],
       "spatial_context": "open_plains",
-      "blocking_hint": "characters grouped together in travel formation",
+      "blocking_hint": "tight group cluster",
       "environment_subzone": "open_plains",
-      "continuity_focus": "dorothy white dress visibility",
-      "coverage_hint": "medium shots of group reaction",
+      "continuity_focus": "dorothy in white dress",
+      "coverage_hint": "medium close-ups on faces",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "The descent begins",
+      "summary": "The summoning of the swarm",
       "purpose": "",
-      "action_start": "sky clears/changes",
-      "action_end": "monkeys visible in large numbers",
+      "action_start": "magical flash/charge",
+      "action_end": "sky begins to darken",
       "active_subjects": [
         "winged_monkeys"
       ],
@@ -159,20 +159,20 @@
         "tin_woodman",
         "cowardly_lion"
       ],
-      "spatial_context": "sky_canopy to open_plains",
-      "blocking_hint": "monkeys moving from high altitude toward ground",
+      "spatial_context": "sky_canopy",
+      "blocking_hint": "aerial descent from high angle",
       "environment_subzone": "sky_canopy",
-      "continuity_focus": "lighting shift as monkeys cloud sun",
-      "coverage_hint": "wide low-angle shots",
-      "coverage_priority": "high",
+      "continuity_focus": "lighting shift as sun is clouded",
+      "coverage_hint": "wide shots of swarm scale",
+      "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "The attack/scramble",
+      "summary": "The attack and scramble",
       "purpose": "",
-      "action_start": "monkeys reach ground level",
-      "action_end": "group in state of terror/chaos",
+      "action_start": "monkeys hitting ground level",
+      "action_end": "group in chaotic retreat",
       "active_subjects": [
         "winged_monkeys",
         "dorothy",
@@ -182,11 +182,11 @@
       ],
       "passive_subjects": [],
       "spatial_context": "open_plains",
-      "blocking_hint": "characters breaking formation to scramble",
+      "blocking_hint": "scattered scramble",
       "environment_subzone": "open_plains",
-      "continuity_focus": "character positioning during scramble",
+      "continuity_focus": "character positions shifting rapidly",
       "coverage_hint": "handheld/shaky cam",
-      "coverage_priority": "medium",
+      "coverage_priority": "high",
       "handoff_to_next": "end_of_scene"
     }
   ],
@@ -195,7 +195,7 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish desperation",
-      "planned_shot_moment_summary": "Wicked Witch influence triggers Golden Cap charge",
+      "planned_shot_moment_summary": "dorothy and group react to the Golden Cap charge",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "the_scarecrow",
@@ -205,17 +205,17 @@
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "open_plains",
-      "planned_shot_required_anchor_1": "dorothy white dress",
-      "planned_shot_scale_proof_detail": "character proximity to ground",
-      "start_state_seed": "group walking",
-      "end_state_seed": "sudden magical tension",
-      "action_seed": "magical charge occurs",
+      "planned_shot_required_anchor_1": "dorothy's white dress",
+      "planned_shot_scale_proof_detail": "character eye-level vs vast landscape",
+      "start_state_seed": "weary travelers walking",
+      "end_state_seed": "sudden magical activation",
+      "action_seed": "characters react to the cap",
       "blocking_seed": [
         "tight group cluster"
       ],
-      "shot_size": "medium_full",
+      "shot_size": "medium_close",
       "camera_angle": "eye_level",
-      "lens_family": "normal",
+      "lens_family": "portrait",
       "camera_motion": "push_in",
       "zoom_behavior": "subtle_in",
       "focus_strategy": "shallow_subject",
@@ -225,33 +225,30 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "reveal scale of threat",
-      "planned_shot_moment_summary": "winged_monkeys appear in sky [[LIGHTING SHIFT]]",
+      "narrative_function": "show scale of threat",
+      "planned_shot_moment_summary": "monkeys appear in the sky clouding the sun",
       "primary_subject_seed": "winged_monkeys",
       "secondary_subjects_seed": [
-        "dorothy",
-        "the_scarecrow",
-        "tin_woodman",
-        "cowardly_lion"
+        "western_rugged_lands"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "sky_canopy",
-      "planned_shot_required_anchor_1": "western_rugged_lands horizon",
-      "planned_shot_scale_proof_detail": "swarm size relative to horizon",
+      "planned_shot_required_anchor_1": "horizon",
+      "planned_shot_scale_proof_detail": "tiny monkeys vs massive sky",
       "start_state_seed": "clear sky",
-      "end_state_seed": "clouded sky",
-      "action_seed": "monkeys descend",
+      "end_state_seed": "sky darkened by wings",
+      "action_seed": "monkeys swarm into frame",
       "blocking_seed": [
-        "wide spread across sky"
+        "aerial descent pattern"
       ],
       "shot_size": "wide",
       "camera_angle": "low_angle",
       "lens_family": "ultra_wide",
       "camera_motion": "tilt",
       "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
-      "lighting_style": "diffuse_ambient",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "hard_directional_to_dimming",
       "primary_subject_angle": "front"
     },
     {
@@ -262,23 +259,21 @@
       "primary_subject_seed": "winged_monkeys",
       "secondary_subjects_seed": [
         "dorothy",
-        "the_scarecrow",
-        "tin_woodman",
         "cowardly_lion"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "open_plains",
-      "planned_shot_required_anchor_1": "dorothy white dress",
-      "planned_shot_scale_proof_detail": "rapid movement vs character stillness",
+      "planned_shot_required_anchor_1": "dorothy's white dress",
+      "planned_shot_scale_proof_detail": "rapid movement vs static ground",
       "start_state_seed": "descending swarm",
-      "end_state_seed": "chaotic scramble",
-      "action_seed": "attack begins",
+      "end_state_seed": "scrambling group",
+      "action_seed": "monkeys dive at characters",
       "blocking_seed": [
-        "disorganized scramble"
+        "chaotic scramble"
       ],
       "shot_size": "medium_full",
-      "camera_angle": "eye_level",
+      "camera_angle": "low_angle",
       "lens_family": "wide",
       "camera_motion": "handheld",
       "zoom_behavior": "none",
@@ -352,16 +347,16 @@
     "[CH012] Chapter XII (book index hit)",
     "[CH018] Chapter XVIII (book index hit)",
     "[CH022] Chapter XXII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH012_SC002\n\n## Production Intent\nExecute a high-stakes magical escalation where the Golden Cap triggers a massive aerial descent of winged monkeys. The sequence must transition from character desperation to chaotic terror through lighting shifts and aggressive camera movement.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- winged_monkeys\n- Wicked Witch (presence/influence)\n\n## Required Environments\n- western_rugged_lands\n\n## Continuity Constraints\n- Lighting shifts as winged_monkeys cloud the sun\n- Character positioning during scramble\n- Dorothy's white clothing consistency\n\n## Beat List\n- BT001: Magical activation of the Golden Cap\n- BT002: The descent begins (Visual reveal)\n- BT003: The attack/scramble (Chaos)",
+  "storyboard_markdown": "# Scene Contract: CH012_SC002\n\n## Production Intent\nExecute a high-stakes magical escalation where the Golden Cap triggers a swarm event. The sequence must transition from character desperation to chaotic terror through lighting shifts and scale changes as winged monkeys descend from above.\n\n## Required Cast\n- dorothy (wearing white dress)\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- winged_monkeys\n- Wicked Witch (presence/influence)\n\n## Required Environments\n- western_rugged_lands (open plains and sky canopy)\n\n## Continuity Constraints\n- Lighting must dim/shift as monkeys cloud the sun.\n- Character positioning during scramble must match previous travel state.\n- Dorothy's clothing must remain white.\n\n## Beat List\n- BT001: The Golden Cap is used in desperation.\n- BT002: The summoning of the swarm (sky darkens).\n- BT003: The attack and chaotic scramble.",
   "metadata": {
     "artifact_id": "CH012_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "b1427f6e3f3f45cf1c61104e13ec93216a418847",
+    "source_fingerprint": "bdbe494ae123afd249a26f4e1ad0dc79ef8e43ca",
     "created_at_utc": "2026-04-27T08:34:57.309724+00:00",
-    "updated_at_utc": "2026-04-27T08:34:57.309724+00:00",
+    "updated_at_utc": "2026-04-27T13:37:22.255060+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -386,6 +381,11 @@
         "timestamp_utc": "2026-04-27T08:35:39.689062+00:00",
         "action": "synthesized",
         "source_fingerprint": "b1427f6e3f3f45cf1c61104e13ec93216a418847"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:38:05.070887+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "bdbe494ae123afd249a26f4e1ad0dc79ef8e43ca"
       }
     ]
   }

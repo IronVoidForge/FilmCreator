@@ -5,37 +5,37 @@
   "purpose": "To reunite the core group and demonstrate the communal effort of the Winkies.",
   "summary": "Dorothy and the Lion lead a search party across a rocky plain, discovering the rusted Tin Woodman. They bring him back to the castle where Winkie tinsmiths spend three days repairing his body with patches.",
   "emotional_arc": "From desperation/worry to relief and gratitude.",
-  "production_intent": "Establish the scale of the desolate rocky plain through wide coverage before transitioning into a concentrated, time-lapse montage of communal repair work within the castle workshop. The sequence must visually track the physical restoration of the Tin Woodman from a rusted state to a patched, functional state.",
-  "scene_short_description": "A search party traverses a desolate rocky plain to find a rusted figure before repairing him in a workshop.",
-  "scene_primary_scale_story_point": "Vast, empty landscape vs. cramped, industrious workshop interior.",
+  "production_intent": "Establish the scale of the desolate rocky plain through a search party movement, transitioning into an intimate workshop setting to showcase communal repair work. The sequence must visually communicate the passage of time and the physical restoration of the Tin Woodman from a rusted state to a patched but functional state.",
+  "scene_short_description": "A search party traverses a desolate rocky plain to find a rusted figure before moving to a workshop.",
+  "scene_primary_scale_story_point": "Vast, empty landscape vs. cramped, busy workshop interior.",
   "scene_required_anchor_catalog": [
     "rusted tin_woodman",
-    "workshop anvil/tinsmith tools"
+    "tinsmith workbench"
   ],
-  "scene_start_state": "dorothy and cowardly_lion leading a search party across an expansive rocky terrain.",
-  "scene_end_state": "tin_woodman standing repaired with visible patches amidst grateful characters.",
-  "dominant_action_line": "Searching the plains, discovering the rusted woodman, and repairing him through communal effort.",
+  "scene_start_state": "Dorothy and cowardly_lion leading a search party across an expansive rocky terrain.",
+  "scene_end_state": "The repaired tin_woodman standing among the winkies in the workshop.",
+  "dominant_action_line": "Searching for, discovering, transporting, and repairing the Tin Woodman.",
   "scene_spatial_layout": [
     "Open expanse of rocky_plain",
     "Enclosed workshop area within yellow_castle"
   ],
   "character_spatial_map": [
-    "dorothy and cowardly_lion leading at the front of the search party",
-    "winkies clustered around tin_woodman in the workshop"
+    "dorothy and cowardly_lion lead the search party formation",
+    "winkies surround the tin_woodman at a central workbench"
   ],
   "environment_subzones": [
     "rocky_plain expanse",
     "yellow_castle workshop"
   ],
   "entry_vectors": [
-    "search party moving across rocky_plain"
+    "Search party enters rocky_plain from off-screen"
   ],
   "exit_vectors": [
-    "group moving from rocky_plain to yellow_castle"
+    "Search party exits toward yellow_castle"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: discovery transition via visual contact",
-    "BT002 -> BT003: location shift from plain to castle workshop"
+    "BT001 -> BT002: Discovery of the body in the terrain",
+    "BT002 -> BT003: Transition from discovery to workshop repair montage"
   ],
   "characters_required": [
     {
@@ -107,16 +107,16 @@
   ],
   "visual_coverage_families": [
     "Wide shots of desolate rocky plain",
-    "Close-ups of rusted battered Tin Woodman",
+    "Close-ups of rusted, battered Tin Woodman",
     "Montage/Time-lapse coverage of tinsmiths working"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Search across the rocky plain",
+      "summary": "Search party traverses the rocky plain",
       "purpose": "",
       "action_start": "walking through terrain",
-      "action_end": "stopping upon discovery",
+      "action_end": "stopping at a discovery",
       "active_subjects": [
         "dorothy",
         "cowardly_lion"
@@ -125,31 +125,32 @@
         "search party"
       ],
       "spatial_context": "rocky_plain",
-      "blocking_hint": "linear progression across landscape",
+      "blocking_hint": "linear search line",
       "environment_subzone": "rocky_plain",
-      "continuity_focus": "character fatigue/movement",
+      "continuity_focus": "character fatigue/weariness",
       "coverage_hint": "wide shots",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Discovery of the Tin Woodman",
+      "summary": "Discovery of the rusted Tin Woodman",
       "purpose": "",
-      "action_start": "spotting a metallic glint",
-      "action_end": "reaching the rusted body",
+      "action_start": "visual spotting",
+      "action_end": "approaching the body",
       "active_subjects": [
         "dorothy",
-        "cowardly_lion"
-      ],
-      "passive_subjects": [
+        "cowardly_lion",
         "tin_woodman"
       ],
-      "spatial_context": "rocky_plain near tin_woodman",
-      "blocking_hint": "characters converge on the central figure",
+      "passive_subjects": [
+        "search party"
+      ],
+      "spatial_context": "rocky_plain",
+      "blocking_hint": "group gathers around a central point",
       "environment_subzone": "rocky_plain",
-      "continuity_focus": "heavy rust level on tin_woodman",
-      "coverage_hint": "close-ups of rust/battered metal",
+      "continuity_focus": "heavy rust on tin_woodman",
+      "coverage_hint": "close-ups of rust/face",
       "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
@@ -157,31 +158,31 @@
       "beat_id": "BT003",
       "summary": "Communal repair montage",
       "purpose": "",
-      "action_start": "bringing woodman to workshop",
+      "action_start": "transporting to castle",
       "action_end": "completion of repairs",
       "active_subjects": [
-        "winkies"
+        "winkies",
+        "tin_woodman"
       ],
       "passive_subjects": [
-        "tin_woodman",
         "dorothy",
         "cowardly_lion"
       ],
-      "spatial_context": "yellow_castle workshop",
-      "blocking_hint": "tinsmiths working in a tight circle around the subject",
+      "spatial_context": "yellow_castle",
+      "blocking_hint": "tinsmiths clustered around workbench",
       "environment_subzone": "yellow_castle",
-      "continuity_focus": "progression of patches and reduction of rust",
-      "coverage_hint": "montage/time-lapse style",
+      "continuity_focus": "patch placement and appearance",
+      "coverage_hint": "montage/time-lapse",
       "coverage_priority": "medium",
-      "handoff_to_next": "end_of_scene"
+      "handoff_to_next": "end of scene"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish setting and scale",
-      "planned_shot_moment_summary": "search party moving through desolate terrain",
+      "narrative_function": "establish scale and desperation",
+      "planned_shot_moment_summary": "search party moving through rocks",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "cowardly_lion",
@@ -191,10 +192,10 @@
       "narration_mode": "none",
       "environment_subzone": "rocky_plain",
       "planned_shot_required_anchor_1": "rocky_plain horizon",
-      "planned_shot_scale_proof_detail": "wide landscape vs small character silhouettes",
-      "start_state_seed": "walking rhythm",
-      "end_state_seed": "stopping abruptly",
-      "action_seed": "searching the terrain",
+      "planned_shot_scale_proof_detail": "tiny figures against vast terrain",
+      "start_state_seed": "wide shot of landscape",
+      "end_state_seed": "tracking the group",
+      "action_seed": "walking/searching",
       "blocking_seed": [
         "linear movement across frame"
       ],
@@ -211,7 +212,7 @@
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "reveal discovery",
-      "planned_shot_moment_summary": "finding the rusted tin_woodman",
+      "planned_shot_moment_summary": "finding the rusted woodman",
       "primary_subject_seed": "tin_woodman",
       "secondary_subjects_seed": [
         "dorothy",
@@ -221,17 +222,17 @@
       "narration_mode": "none",
       "environment_subzone": "rocky_plain",
       "planned_shot_required_anchor_1": "rusted tin_woodman",
-      "planned_shot_scale_proof_detail": "close-up of rust texture vs wide environment",
-      "start_state_seed": "static discovery",
-      "end_state_seed": "approaching the body",
-      "action_seed": "finding the immobile figure",
+      "planned_shot_scale_proof_detail": "close proximity to character height",
+      "start_state_seed": "searching movement",
+      "end_state_seed": "static discovery",
+      "action_seed": "stopping abruptly",
       "blocking_seed": [
-        "characters converging on center object"
+        "group clusters around the body"
       ],
       "shot_size": "close_up",
       "camera_angle": "low_angle",
       "lens_family": "portrait",
-      "camera_motion": "push_in",
+      "camera_motion": "locked_off",
       "zoom_behavior": "subtle_in",
       "focus_strategy": "shallow_subject",
       "lighting_style": "hard_directional",
@@ -241,7 +242,7 @@
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "demonstrate communal effort",
-      "planned_shot_moment_summary": "montage of winkies repairing the body",
+      "planned_shot_moment_summary": "tinsmiths applying patches",
       "primary_subject_seed": "winkies",
       "secondary_subjects_seed": [
         "tin_woodman"
@@ -249,13 +250,13 @@
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "yellow_castle",
-      "planned_shot_required_anchor_1": "workshop tools",
-      "planned_shot_scale_proof_detail": "hands/tools vs metal surface",
-      "start_state_seed": "hammering sounds/motion",
-      "end_state_seed": "final patch placement",
-      "action_seed": "tinsmiths applying patches and cleaning rust",
+      "planned_shot_required_anchor_1": "tinsmith workbench",
+      "planned_shot_scale_proof_detail": "multiple hands working on one body",
+      "start_state_seed": "workshop environment",
+      "end_state_seed": "completed repair",
+      "action_seed": "hammering and patching",
       "blocking_seed": [
-        "circular movement around tin_woodman"
+        "circular arrangement around woodman"
       ],
       "shot_size": "medium_close",
       "camera_angle": "eye_level",
@@ -264,7 +265,7 @@
       "zoom_behavior": "none",
       "focus_strategy": "rack_focus",
       "lighting_style": "torch_firelight",
-      "primary_subject_angle": "front_three_quarter_right"
+      "primary_subject_angle": "profile_left"
     }
   ],
   "unresolved_questions": [],
@@ -330,16 +331,16 @@
     "[CH012] Chapter XII (book index hit)",
     "[CH013] Chapter XIII (book index hit)",
     "[CH002] Chapter II (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH013_SC002\n\n## Production Intent\nEstablish the scale of the desolate rocky plain through wide coverage before transitioning into a concentrated, time-lapse montage of communal repair work within the castle workshop. The sequence must visually track the physical restoration of the Tin Woodman from a rusted state to a patched, functional state.\n\n## Required Cast\n- dorothy\n- cowardly_lion\n- tin_woodman\n- winkies\n\n## Required Environments\n- rocky_plain\n- yellow_castle (workshop area)\n\n## Continuity Constraints\n- Progression of rust levels on tin_woodman\n- Specific placement and appearance of metal patches post-repair\n\n## Beat List\n- BT001: Search across the rocky plain\n- BT002: Discovery of the Tin Woodman\n- BT003: Communal repair montage",
+  "storyboard_markdown": "# Scene Contract: CH013_SC002\n\n## Production Intent\nEstablish the scale of the desolate rocky plain through a search party movement, transitioning into an intimate workshop setting to showcase communal repair work. The sequence must visually communicate the passage of time and the physical restoration of the Tin Woodman from a rusted state to a patched but functional state.\n\n## Required Cast\n- dorothy\n- cowardly_lion\n- tin_woodman\n- winkies\n\n## Required Environments\n- rocky_plain\n- yellow_castle (workshop area)\n\n## Continuity Constraints\n- Progression of rust levels on tin_woodman\n- Specific placement and appearance of metal patches post-repair\n\n## Beat List\n- BT001: Search party traverses the rocky plain\n- BT002: Discovery of the rusted Tin Woodman\n- BT003: Communal repair montage",
   "metadata": {
     "artifact_id": "CH013_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "421dd792a814f83a36eb0c94995aeca843b546b7",
+    "source_fingerprint": "588adf51b2b2e3ac3956e4a8947e2da9a1b636da",
     "created_at_utc": "2026-04-27T08:39:09.697144+00:00",
-    "updated_at_utc": "2026-04-27T08:39:09.697144+00:00",
+    "updated_at_utc": "2026-04-27T13:41:46.719398+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -364,6 +365,11 @@
         "timestamp_utc": "2026-04-27T08:39:51.443910+00:00",
         "action": "synthesized",
         "source_fingerprint": "421dd792a814f83a36eb0c94995aeca843b546b7"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:42:29.588768+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "588adf51b2b2e3ac3956e4a8947e2da9a1b636da"
       }
     ]
   }

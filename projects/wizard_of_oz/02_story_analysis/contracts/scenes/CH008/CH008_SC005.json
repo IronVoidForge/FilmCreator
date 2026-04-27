@@ -5,38 +5,38 @@
   "purpose": "Provide the resolution to the immediate threat and an emotional aftermath.",
   "summary": "Realizing they are immune, the Scarecrow and Tin Woodman work together to form a \"human chair\" to carry Dorothy and Toto out of the field. They manage to reach safety, but they are forced to make the heartbreaking decision to leave the Cowardly Lion behind in the poppies.",
   "emotional_arc": "Desperation $\\rightarrow$ Exhausted Relief/Melancholy.",
-  "production_intent": "Execute the physical coordination of a multi-character carry mechanism to transition from the poppy field to safe ground, concluding with a wide visual separation between the moving group and the sleeping lion.",
-  "scene_short_description": "A small group forms a makeshift seat to carry a girl through a vast scarlet meadow.",
-  "scene_primary_scale_story_point": "The massive scale of the sleeping lion relative to the small escaping group.",
+  "production_intent": "Execute the physical coordination of a multi-character carry mechanism to transition characters from a high-threat poppy field to safe ground, concluding with an emotional abandonment of a sleeping character.",
+  "scene_short_description": "A makeshift human chair carries a girl through a vast sea of red poppies.",
+  "scene_primary_scale_story_point": "Small group vs massive sleeping lion in endless poppy field.",
   "scene_required_anchor_catalog": [
-    "cowardly_lion (sleeping)",
-    "scarlet_poppy_meadow boundary"
+    "cowardly_lion (sleeping mass)",
+    "scarlet_poppy_meadow (red horizon)"
   ],
-  "scene_start_state": "Group realizes immunity amidst dense red poppies; desperation in movement.",
-  "scene_end_state": "Small group reaches safe ground, looking back at the distant lion.",
-  "dominant_action_line": "The Scarecrow and Tin Woodman carry Dorothy and Toto out of the field using a human chair.",
+  "scene_start_state": "Characters realizing immunity and beginning the physical lift.",
+  "scene_end_state": "Group reaches safe ground, looking back at the abandoned lion.",
+  "dominant_action_line": "The group forms a human chair to carry Dorothy and Toto out of the poppy field.",
   "scene_spatial_layout": [
-    "Dense scarlet poppy clusters surrounding characters",
-    "Transition from deep red meadow to clear safe ground"
+    "Transition from dense scarlet poppies to clear safe ground.",
+    "Increasing spatial gap between the moving group and the stationary lion."
   ],
   "character_spatial_map": [
-    "dorothy and toto centered in the human chair mechanism",
-    "the_scarecrow and tin_woodman supporting the weight on either side",
-    "cowardly_lion stationary and massive in the background/midground"
+    "the_scarecrow and tin_woodman supporting dorothy and toto in center.",
+    "cowardly_lion positioned deep within the poppy field."
   ],
   "environment_subzones": [
-    "scarlet_poppy_meadow (dense zone)",
-    "safe_ground (transition zone)"
+    "scarlet_poppy_meadow (dense)",
+    "safe_ground (clear)"
   ],
   "entry_vectors": [
-    "group moves from deep poppy field toward safe ground"
+    "group movement from poppy depths toward safe ground"
   ],
   "exit_vectors": [
-    "group exits frame toward safe ground"
+    "group exit into safe ground"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Physical realization to mechanical execution",
-    "BT002 -> BT003: Successful movement to emotional abandonment"
+    "BT001 -> BT002: Physical lift and stabilization",
+    "BT002 -> BT003: Movement through poppies to safety",
+    "BT003 -> BT004: Final realization and abandonment"
   ],
   "characters_required": [
     {
@@ -103,140 +103,141 @@
     }
   ],
   "continuity_constraints": [
-    "Physical coordination/weight distribution of the human chair mechanism",
+    "Physical coordination/weight distribution of the human chair",
     "Increasing distance between escaping group and cowardly_lion"
   ],
   "visual_coverage_families": [
-    "Medium shots of human chair mechanism and physical struggle",
-    "Tracking shots following slow progress out of red field",
-    "Wide shots showing group leaving massive sleeping lion in poppy sea",
+    "Medium shots of the human chair mechanism and physical struggle",
+    "Tracking shots following group progress out of red field",
+    "Wide shot showing small group leaving massive sleeping lion behind",
     "Close-ups of Scarecrow and Tin Woodman expressions"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Realization of immunity",
+      "summary": "Formation of the human chair",
       "purpose": "",
-      "action_start": "struggling against poppy sleep",
-      "action_end": "realizing they can move freely",
+      "action_start": "characters realizing immunity",
+      "action_end": "dorothy and toto are seated and stable",
+      "active_subjects": [
+        "the_scarecrow",
+        "tin_woodman",
+        "dorothy",
+        "toto"
+      ],
+      "passive_subjects": [
+        "cowardly_lion"
+      ],
+      "spatial_context": "dense scarlet poppy meadow",
+      "blocking_hint": "tight physical cluster",
+      "environment_subzone": "scarlet_poppy_meadow",
+      "continuity_focus": "coordination of the lift",
+      "coverage_hint": "medium shots of mechanism",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The slow trek out of the field",
+      "purpose": "",
+      "action_start": "group begins walking",
+      "action_end": "group reaches the edge of the poppies",
+      "active_subjects": [
+        "the_scarecrow",
+        "tin_woodman",
+        "dorothy",
+        "toto"
+      ],
+      "passive_subjects": [
+        "cowardly_lion"
+      ],
+      "spatial_context": "moving through scarlet poppy meadow",
+      "blocking_hint": "slow linear progression",
+      "environment_subzone": "scarlet_poppy_meadow",
+      "continuity_focus": "distance from lion increases",
+      "coverage_hint": "tracking shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The decision to leave the lion",
+      "purpose": "",
+      "action_start": "group reaches safe ground",
+      "action_end": "group turns back to look at the field",
       "active_subjects": [
         "the_scarecrow",
         "tin_woodman",
         "dorothy"
       ],
       "passive_subjects": [
-        "toto",
-        "cowardly_lion"
-      ],
-      "spatial_context": "deep within scarlet_poppy_meadow",
-      "blocking_hint": "characters huddled together in poppies",
-      "environment_subzone": "scarlet_poppy_meadow",
-      "continuity_focus": "character proximity to poppies",
-      "coverage_hint": "medium_close",
-      "coverage_priority": "high",
-      "handoff_to_next": "BT002"
-    },
-    {
-      "beat_id": "BT002",
-      "summary": "The Human Chair transport",
-      "purpose": "",
-      "action_start": "scarecrow and tin woodman positioning themselves",
-      "action_end": "slowly exiting the dense poppy zone",
-      "active_subjects": [
-        "the_scarecrow",
-        "tin_woodman",
-        "dorothy",
-        "toto"
-      ],
-      "passive_subjects": [
-        "cowardly_lion"
-      ],
-      "spatial_context": "moving through scarlet_poppy_meadow",
-      "blocking_hint": "linear formation of characters [[the_scarecrow/tin_woodman supporting dorothy]]",
-      "environment_subzone": "scarlet_poppy_meadow",
-      "continuity_focus": "physical coordination of the chair mechanism",
-      "coverage_hint": "medium/tracking",
-      "coverage_priority": "high",
-      "handoff_to_next": "BT003"
-    },
-    {
-      "beat_id": "BT003",
-      "summary": "Abandonment and relief",
-      "purpose": "",
-      "action_start": "reaching safe ground",
-      "action_end": "looking back at the sleeping lion",
-      "active_subjects": [
-        "dorothy",
-        "the_scarecrow",
-        "tin_woodman"
-      ],
-      "passive_subjects": [
         "cowardly_lion",
         "toto"
       ],
-      "spatial_context": "edge of scarlet_poppy_meadow and safe_ground",
-      "blocking_hint": "group moving away from the massive lion",
+      "spatial_context": "transition from poppies to safe ground",
+      "blocking_hint": "group stops at edge",
       "environment_subzone": "safe_ground",
-      "continuity_focus": "increasing distance between group and cowardly_lion",
-      "coverage_hint": "wide",
-      "coverage_priority": "medium",
-      "handoff_to_next": "none"
+      "continuity_focus": "emotional shift to melancholy",
+      "coverage_hint": "close-ups of expressions",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT004"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish immunity and desperation",
-      "planned_shot_moment_summary": "characters realize they are not falling asleep",
-      "primary_subject_seed": "the_scarecrow",
+      "narrative_function": "establish mechanism",
+      "planned_shot_moment_summary": "the_scarecrow and tin_woodman lift dorothy",
+      "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
+        "the_scarecrow",
         "tin_woodman",
-        "dorothy"
+        "toto"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "scarlet_poppy_meadow",
-      "planned_shot_required_anchor_1": "scarlet_poppy_meadow",
-      "planned_shot_scale_proof_detail": "close proximity of poppies to characters",
-      "start_state_seed": "panicked movement",
-      "end_state_seed": "sudden realization/stillness",
-      "action_seed": "characters stop struggling against sleep",
+      "planned_shot_required_anchor_1": "the_scarecrow",
+      "planned_shot_scale_proof_detail": "weight of dorothy on the chair mechanism",
+      "start_state_seed": "characters gathering",
+      "end_state_seed": "chair stabilized",
+      "action_seed": "lifting and balancing",
       "blocking_seed": [
         "tight cluster in poppies"
       ],
-      "shot_size": "medium_close",
+      "shot_size": "medium",
       "camera_angle": "eye_level",
       "lens_family": "normal",
       "camera_motion": "handheld",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front_three_quarter_left"
+      "primary_subject_angle": "front_three_quarter_right"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "show physical struggle of carry",
-      "planned_shot_moment_summary": "the human chair mechanism in motion",
-      "primary_subject_seed": "tin_woodman",
+      "narrative_function": "show progress",
+      "planned_shot_moment_summary": "tracking the group through red flowers",
+      "primary_subject_seed": "the_scarecrow",
       "secondary_subjects_seed": [
-        "the_scarecrow",
+        "tin_woodman",
         "dorothy",
         "toto"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "scarlet_poppy_meadow",
-      "planned_shot_required_anchor_1": "the_scarecrow",
-      "planned_shot_scale_proof_detail": "weight of dorothy on the mechanism",
-      "start_state_seed": "formation of chair",
-      "end_state_seed": "slow progress through poppies",
-      "action_seed": "scarecrow and tin woodman carry dorothy/toto",
+      "planned_shot_required_anchor_1": "scarlet_poppy_meadow",
+      "planned_shot_scale_proof_detail": "height of poppies relative to characters",
+      "start_state_seed": "moving through field",
+      "end_state_seed": "approaching edge",
+      "action_seed": "slow heavy walking",
       "blocking_seed": [
-        "linear movement through dense flora"
+        "linear movement through flowers"
       ],
-      "shot_size": "medium",
+      "shot_size": "medium_full",
       "camera_angle": "eye_level",
       "lens_family": "wide",
       "camera_motion": "track",
@@ -248,22 +249,25 @@
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "establish emotional aftermath and scale",
-      "planned_shot_moment_summary": "group leaves lion behind",
-      "primary_subject_seed": "dorothy",
+      "narrative_function": "establish scale and loss",
+      "planned_shot_moment_summary": "wide view of group leaving lion behind",
+      "primary_subject_seed": "cowardly_lion",
       "secondary_subjects_seed": [
-        "cowardly_lion"
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "toto"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "scarlet_poppy_meadow",
       "planned_shot_required_anchor_1": "cowardly_lion",
-      "planned_shot_scale_proof_detail": "massive size of lion vs small group",
-      "start_state_seed": "approaching safe ground",
-      "end_state_seed": "group in distance from lion",
-      "action_seed": "group walks away from sleeping lion",
+      "planned_shot_scale_proof_detail": "size of lion vs size of group",
+      "start_state_seed": "group at edge of field",
+      "end_state_seed": "group on safe ground",
+      "action_seed": "walking away from sleeping lion",
       "blocking_seed": [
-        "wide separation between subjects"
+        "wide separation"
       ],
       "shot_size": "wide",
       "camera_angle": "high_angle",
@@ -272,7 +276,7 @@
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "rear_three_quarter_right"
+      "primary_subject_angle": "rear_three_quarter_left"
     }
   ],
   "unresolved_questions": [],
@@ -338,16 +342,16 @@
     "[CH008] Chapter VIII (book index hit)",
     "[CH012] Chapter XII (book index hit)",
     "[CH009] Chapter IX (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH008_SC005\n\n## Production Intent\nExecute the physical coordination of a multi-character carry mechanism to transition from the poppy field to safe ground, concluding with a wide visual separation between the moving group and the sleeping lion.\n\n## Required Cast\n- dorothy\n- toto\n- the_scarecrow\n- tin_woodman\n- cowardly_lion (sleeping)\n\n## Required Environments\n- scarlet_poppy_meadow\n- safe_ground\n\n## Continuity Constraints\n- Physical coordination/weight distribution of the \"human chair\" mechanism.\n- Increasing distance between escaping group and cowardly_lion.\n\n## Beat List\n- BT001: Realization of immunity.\n- BT002: The Human Chair transport through poppies.\n- BT003: Abandonment and emotional relief/melancholy.",
+  "storyboard_markdown": "# Scene Contract: CH008_SC005\n\n## Production Intent\nExecute the physical coordination of a multi-character carry mechanism to transition characters from a high-threat poppy field to safe ground, concluding with an emotional abandonment of a sleeping character.\n\n## Required Cast\n- dorothy\n- toto\n- the_scarecrow\n- tin_woodman\n- cowardly_lion (sleeping)\n\n## Required Environments\n- scarlet_poppy_meadow\n- safe_ground\n\n## Continuity Constraints\n- Physical coordination/weight distribution of the human chair.\n- Increasing distance between escaping group and cowardly_lion.\n\n## Beat List\n- BT001: Formation of the human chair.\n- BT002: The slow trek out of the field.\n- BT003: The decision to leave the lion.",
   "metadata": {
     "artifact_id": "CH008_SC005_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "ed417f0ab36d04f920f52c98be7e6836767ebf23",
+    "source_fingerprint": "efe5695eb6e5f488c57bdbe412944844bb65169d",
     "created_at_utc": "2026-04-27T08:22:37.569254+00:00",
-    "updated_at_utc": "2026-04-27T08:22:37.569254+00:00",
+    "updated_at_utc": "2026-04-27T13:24:36.478695+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -372,6 +376,11 @@
         "timestamp_utc": "2026-04-27T08:23:22.308534+00:00",
         "action": "synthesized",
         "source_fingerprint": "ed417f0ab36d04f920f52c98be7e6836767ebf23"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:25:20.976209+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "efe5695eb6e5f488c57bdbe412944844bb65169d"
       }
     ]
   }

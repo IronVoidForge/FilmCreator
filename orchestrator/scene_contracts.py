@@ -22,7 +22,7 @@ from .scaffold import create_project
 from .settings import load_runtime_settings
 from .world_global import global_character_registry_path, global_environment_registry_path
 
-SCENE_CONTRACT_SCHEMA_VERSION = "2026-04-23-scene-contracts-v5"
+SCENE_CONTRACT_SCHEMA_VERSION = "2026-04-27-scene-contracts-v6-event-chain"
 
 SCENE_LIST_FIELD_KEYS = {
     "participating_characters",
@@ -200,6 +200,7 @@ class SceneContract:
     scene_spatial_layout: list[str] = field(default_factory=list)
     character_spatial_map: list[str] = field(default_factory=list)
     environment_subzones: list[str] = field(default_factory=list)
+    scene_event_chain: list[str] = field(default_factory=list)
     entry_vectors: list[str] = field(default_factory=list)
     exit_vectors: list[str] = field(default_factory=list)
     beat_transition_map: list[str] = field(default_factory=list)
@@ -233,6 +234,7 @@ class SceneContract:
             "scene_spatial_layout": self.scene_spatial_layout,
             "character_spatial_map": self.character_spatial_map,
             "environment_subzones": self.environment_subzones,
+            "scene_event_chain": self.scene_event_chain,
             "entry_vectors": self.entry_vectors,
             "exit_vectors": self.exit_vectors,
             "beat_transition_map": self.beat_transition_map,
@@ -1378,6 +1380,7 @@ def _derive_scene_staging(
     scene_spatial_layout = continuity_constraints[:3] or ["Use the established environment scale and architecture to anchor subject placement."]
     character_spatial_map = ["Primary subject placement should remain readable against the main environment anchor."]
     environment_subzones = ["primary scene playing area"]
+    scene_event_chain = _derive_scene_event_chain(summary, beats)
     entry_vectors = ["Subjects inherit entry logic from the prior scene or chapter transition."]
     exit_vectors = ["Subjects exit or hand off toward the next story beat."]
     beat_transition_map = [f"{beat.beat_id}: {beat.action_start or beat.summary} -> {beat.action_end or beat.summary}" for beat in beats]
@@ -1388,10 +1391,26 @@ def _derive_scene_staging(
         "scene_spatial_layout": scene_spatial_layout,
         "character_spatial_map": character_spatial_map,
         "environment_subzones": environment_subzones,
+        "scene_event_chain": scene_event_chain,
         "entry_vectors": entry_vectors,
         "exit_vectors": exit_vectors,
         "beat_transition_map": beat_transition_map,
     }
+
+
+def _derive_scene_event_chain(summary: str, beats: list[SceneBeat]) -> list[str]:
+    events: list[str] = []
+    for beat in beats:
+        for candidate in (beat.action_start, beat.summary, beat.action_end):
+            normalized = _normalize_fragment(candidate, limit=180)
+            if normalized and normalized not in events:
+                events.append(normalized)
+        if len(events) >= 8:
+            break
+    if events:
+        return events[:8]
+    sentences = [sentence.strip() for sentence in re.split(r"(?<=[.!?])\s+", summary) if sentence.strip()]
+    return [_normalize_fragment(sentence, limit=180) for sentence in sentences[:8]]
 
 
 def _default_primary_subject_seed(summary: str) -> str:
@@ -1677,6 +1696,12 @@ def _synthesize_storyboard_markdown(contract: SceneContract) -> str:
     else:
         lines.append("- (none)")
 
+    lines.extend(["", "## Scene Event Chain", ""])
+    if contract.scene_event_chain:
+        lines.extend([f"{index}. {item}" for index, item in enumerate(contract.scene_event_chain, start=1)])
+    else:
+        lines.append("- (none)")
+
     lines.extend([
         "",
         "## Required Cast",
@@ -1833,6 +1858,7 @@ def _parse_scene_contract_packet(text: str, scene_id: str, chapter_id: str, fall
         "scene_spatial_layout": staging_lists.get("scene_spatial_layout", []) or list(fallback.get("scene_spatial_layout", [])),
         "character_spatial_map": staging_lists.get("character_spatial_map", []) or list(fallback.get("character_spatial_map", [])),
         "environment_subzones": staging_lists.get("environment_subzones", []) or list(fallback.get("environment_subzones", [])),
+        "scene_event_chain": staging_lists.get("scene_event_chain", []) or list(fallback.get("scene_event_chain", [])),
         "entry_vectors": staging_lists.get("entry_vectors", []) or list(fallback.get("entry_vectors", [])),
         "exit_vectors": staging_lists.get("exit_vectors", []) or list(fallback.get("exit_vectors", [])),
         "beat_transition_map": staging_lists.get("beat_transition_map", []) or list(fallback.get("beat_transition_map", [])),
@@ -2270,6 +2296,7 @@ def run_scene_contract_synthesis(
         scene_spatial_layout = _coerce_string_list(merged.get("scene_spatial_layout", [])) or list(fallback_payload.get("scene_spatial_layout", []))
         character_spatial_map = _coerce_string_list(merged.get("character_spatial_map", [])) or list(fallback_payload.get("character_spatial_map", []))
         environment_subzones = _coerce_string_list(merged.get("environment_subzones", [])) or list(fallback_payload.get("environment_subzones", []))
+        scene_event_chain = _coerce_string_list(merged.get("scene_event_chain", [])) or list(fallback_payload.get("scene_event_chain", []))
         entry_vectors = _coerce_string_list(merged.get("entry_vectors", [])) or list(fallback_payload.get("entry_vectors", []))
         exit_vectors = _coerce_string_list(merged.get("exit_vectors", [])) or list(fallback_payload.get("exit_vectors", []))
         beat_transition_map = _coerce_string_list(merged.get("beat_transition_map", [])) or list(fallback_payload.get("beat_transition_map", []))
@@ -2317,6 +2344,7 @@ def run_scene_contract_synthesis(
             scene_spatial_layout=scene_spatial_layout,
             character_spatial_map=character_spatial_map,
             environment_subzones=environment_subzones,
+            scene_event_chain=scene_event_chain,
             entry_vectors=entry_vectors,
             exit_vectors=exit_vectors,
             beat_transition_map=beat_transition_map,
@@ -2649,6 +2677,9 @@ STYLE RULES:
 - no generic filler like "primary scene playing area" or "maintain readability"
 - if a scale relationship matters, make it explicit
 - if a shot needs an anchor, choose a concrete object, structure, or subzone
+- spell out the literal chain of events; do not rely on a paragraph overview
+- beat summaries must be action steps in story order, not abstract production categories
+- use concrete event language such as "Dorothy opens the door", "Scarecrow remembers the field", "the memory flashback begins"
 
 ENTRY:
 {json.dumps(scene_fields, indent=2, ensure_ascii=False)}
@@ -2706,6 +2737,11 @@ character_spatial_map:
 environment_subzones:
 - subzone 1
 - subzone 2
+scene_event_chain:
+- event 1: <specific visible or spoken action that starts the scene>
+- event 2: <next story action or line of explanation>
+- event 3: <next story action, movement, reveal, memory, flashback, or consequence>
+- event 4: <specific action that ends or hands off the scene>
 entry_vectors:
 - entry path 1
 exit_vectors:
@@ -2723,9 +2759,9 @@ planned_shot_list:
 
 [[SECTION beat_markdown]]
 beat_list:
-- BT001: <summary> || action_start=<how the beat begins> || action_end=<how the beat ends> || active_subjects=<subject A, subject B> || passive_subjects=<subject C> || spatial_context=<where the action happens> || blocking_hint=<where people are staged> || environment_subzone=<specific subzone> || continuity=<continuity focus> || coverage=<coverage hint> || priority=<coverage priority> || handoff=<what the next beat inherits>
-- BT002: <summary> || action_start=<...> || action_end=<...> || active_subjects=<...> || passive_subjects=<...> || spatial_context=<...> || blocking_hint=<...> || environment_subzone=<...> || continuity=<...> || coverage=<...> || priority=<...> || handoff=<...>
-- BT003: <summary> || action_start=<...> || action_end=<...> || active_subjects=<...> || passive_subjects=<...> || spatial_context=<...> || blocking_hint=<...> || environment_subzone=<...> || continuity=<...> || coverage=<...> || priority=<...> || handoff=<...>
+- BT001: <specific event, not a theme> || action_start=<literal first visible state/action> || action_end=<literal event completed by beat end> || active_subjects=<subject A, subject B> || passive_subjects=<subject C> || spatial_context=<where the action happens> || blocking_hint=<where people are staged> || environment_subzone=<specific subzone> || continuity=<continuity focus> || coverage=<coverage hint> || priority=<coverage priority> || handoff=<what the next beat inherits>
+- BT002: <next specific event in story order> || action_start=<...> || action_end=<...> || active_subjects=<...> || passive_subjects=<...> || spatial_context=<...> || blocking_hint=<...> || environment_subzone=<...> || continuity=<...> || coverage=<...> || priority=<...> || handoff=<...>
+- BT003: <next specific event in story order> || action_start=<...> || action_end=<...> || active_subjects=<...> || passive_subjects=<...> || spatial_context=<...> || blocking_hint=<...> || environment_subzone=<...> || continuity=<...> || coverage=<...> || priority=<...> || handoff=<...>
 [[/SECTION]]
 
 [[SECTION storyboard_markdown]]
@@ -2783,6 +2819,7 @@ beat_list:
             "scene_spatial_layout": staging_lists.get("scene_spatial_layout", []) or list(fallback_payload.get("scene_spatial_layout", [])),
             "character_spatial_map": staging_lists.get("character_spatial_map", []) or list(fallback_payload.get("character_spatial_map", [])),
             "environment_subzones": staging_lists.get("environment_subzones", []) or list(fallback_payload.get("environment_subzones", [])),
+            "scene_event_chain": staging_lists.get("scene_event_chain", []) or list(fallback_payload.get("scene_event_chain", [])),
             "entry_vectors": staging_lists.get("entry_vectors", []) or list(fallback_payload.get("entry_vectors", [])),
             "exit_vectors": staging_lists.get("exit_vectors", []) or list(fallback_payload.get("exit_vectors", [])),
             "beat_transition_map": staging_lists.get("beat_transition_map", []) or list(fallback_payload.get("beat_transition_map", [])),

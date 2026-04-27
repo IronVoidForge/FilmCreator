@@ -5,24 +5,26 @@
   "purpose": "Establish a debt of honor and introduce a new ally.",
   "summary": "While traveling near the river, the Tin Woodman kills a predatory yellow Wildcat that was attacking a small field mouse. The mouse reveals herself to be the Queen of all the Field Mice. After a brief tension where the Woodman protects the mice from Toto, the Queen pledges her people's service to him.",
   "emotional_arc": "Violence/Tension $\\rightarrow$ Wonder/Gratitude.",
-  "production_intent": "Establish a debt of honor through a violent intervention by the Tin Woodman, transitioning from a predatory threat to a formal alliance with the mouse population.",
+  "production_intent": "Establish a debt of honor through a violent intervention by the Tin Woodman, transitioning from a predatory threat to a formal alliance with the Field Mice.",
   "scene_short_description": "A metallic humanoid intervenes in a predator attack within a grassy meadow near poppy beds.",
-  "scene_primary_scale_story_point": "Microscopic mouse scale vs. bipedal humanoid scale.",
+  "scene_primary_scale_story_point": "Microscopic mouse scale vs. bipedal tin humanoid scale.",
   "scene_required_anchor_catalog": [
-    "dead_wildcat_carcass",
+    "dead yellow Wildcat",
+    "Tin Woodman's axe",
     "poppy_field_bed"
   ],
-  "scene_start_state": "Group traveling through the grassy meadow near the riverbank.",
-  "scene_end_state": "The group stands in a state of wonder as mice pledge service.",
-  "dominant_action_line": "Tin Woodman kills Wildcat -> Queen Mouse reveals identity -> Tin Woodman protects mice from Toto -> Alliance formed.",
+  "scene_start_state": "Traveling through grassy meadow near riverbank.",
+  "scene_end_state": "Group standing in gratitude as mice pledge service.",
+  "dominant_action_line": "Tin Woodman kills a predatory Wildcat to save a mouse, discovering the mouse is royalty.",
   "scene_spatial_layout": [
-    "Riverbank edge adjacent to poppy beds",
-    "Open grassy meadow for group movement"
+    "Open grassy field adjacent to poppy beds and river.",
+    "Vertical hierarchy between ground-level mice and bipedal travelers."
   ],
   "character_spatial_map": [
-    "tin_woodman positioned between the wildcat and the mice",
-    "toto near dorothy, potentially encroaching on mouse territory",
-    "queen_of_the_field_mice at ground level in the grass"
+    "tin_woodman positioned over dead wildcat",
+    "queen_of_the_field_mice at grass level near tin_woodman's feet",
+    "dorothy, the_scarecrow, and toto observing from mid-distance",
+    "toto in close proximity to mice during tension beat"
   ],
   "environment_subzones": [
     "grassy_riverbank_meadow",
@@ -35,9 +37,9 @@
     "continuing travel along riverbank"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Sudden violence/kill",
-    "BT002 -> BT003: Reveal of identity",
-    "BT003 -> BT004: Tension with Toto"
+    "BT001 -> BT002: sudden violence/kill",
+    "BT002 -> BT003: revelation of status",
+    "BT003 -> BT004: tension resolution and pledge"
   ],
   "characters_required": [
     {
@@ -114,101 +116,108 @@
     }
   ],
   "continuity_constraints": [
-    "Static position of the dead Wildcat carcass",
-    "Proximity distance between Toto and the mice during confrontation"
+    "Exact position of dead yellow Wildcat relative to Tin Woodman's axe",
+    "Proximity of Toto to the mice during confrontation"
   ],
   "visual_coverage_families": [
-    "Low-angle shots for the Wildcat attack",
+    "Low-angle shots for Wildcat attack",
     "Extreme close-ups (ECU) of the Queen Mouse",
     "Medium shots of group reactions"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Wildcat attack",
+      "summary": "Wildcat attack on mouse",
       "purpose": "",
-      "action_start": "Wildcat stalking mouse",
-      "action_end": "Wildcat killed by Woodman",
+      "action_start": "predator lunges",
+      "action_end": "axe strike",
       "active_subjects": [
-        "yellow_wildcat",
+        "yellow Wildcat",
         "queen_of_the_field_mice"
       ],
       "passive_subjects": [
-        "tin_woodman"
+        "tin_woodman",
+        "dorothy",
+        "the_scarecrow",
+        "toto"
       ],
-      "spatial_context": "grassy meadow near river",
-      "blocking_hint": "Low angle predator movement",
+      "spatial_context": "grassy_riverbank_meadow",
+      "blocking_hint": "low angle predator movement",
       "environment_subzone": "grassy_riverbank_meadow",
-      "continuity_focus": "Wildcat position post-kill",
+      "continuity_focus": "wildcat position",
       "coverage_hint": "low-angle shots",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Royal Revelation",
+      "summary": "Tin Woodman kills Wildcat",
       "purpose": "",
-      "action_start": "Mouse recovers from attack",
-      "action_end": "Mouse declares herself Queen",
+      "action_start": "axe swing",
+      "action_end": "Wildcat dead",
       "active_subjects": [
-        "queen_of_the_field_mice"
+        "tin_woodman",
+        "yellow Wildcat"
       ],
       "passive_subjects": [
-        "tin_woodman",
+        "queen_of_the_field_mice",
         "dorothy",
-        "the_scarecrow"
+        "the_scarecrow",
+        "toto"
       ],
-      "spatial_context": "Near dead wildcat",
-      "blocking_hint": "Mouse center frame",
+      "spatial_context": "near poppy_field_bed",
+      "blocking_hint": "Woodman stands over carcass",
       "environment_subzone": "grassy_riverbank_meadow",
-      "continuity_focus": "Mouse scale vs surroundings",
-      "coverage_hint": "ECU",
-      "coverage_priority": "medium",
+      "continuity_focus": "axe position/wildcat corpse",
+      "coverage_hint": "medium shots",
+      "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Group Reaction",
+      "summary": "The Queen's Revelation",
       "purpose": "",
-      "action_start": "Group stares at mouse",
-      "action_end": "Group acknowledges Queen",
+      "action_start": "mouse speaks",
+      "action_end": "group realizes status",
       "active_subjects": [
-        "dorothy",
-        "the_scarecrow",
+        "queen_of_the_field_mice",
         "tin_woodman"
       ],
       "passive_subjects": [
-        "queen_of_the_field_mice"
+        "dorothy",
+        "the_scarecrow",
+        "toto"
       ],
-      "spatial_context": "Meadow center",
-      "blocking_hint": "Medium group shot",
+      "spatial_context": "at Woodman's feet",
+      "blocking_hint": "Woodman looking down at ground level",
       "environment_subzone": "grassy_riverbank_meadow",
-      "continuity_focus": "Character proximity",
-      "coverage_hint": "medium shots",
-      "coverage_priority": "low",
+      "continuity_focus": "mouse proximity to Toto",
+      "coverage_hint": "ECU mouse",
+      "coverage_priority": "medium",
       "handoff_to_next": "BT004"
     },
     {
       "beat_id": "BT004",
-      "summary": "Toto Confrontation",
+      "summary": "Tension and Pledge",
       "purpose": "",
       "action_start": "Toto approaches mice",
-      "action_end": "Woodman secures peace/alliance",
+      "action_end": "mice pledge service",
       "active_subjects": [
-        "tin_woodman",
         "toto",
-        "queen_of_the_field_mice"
+        "queen_of_the_field_mice",
+        "tin_woodman"
       ],
       "passive_subjects": [
-        "dorothy"
+        "dorothy",
+        "the_scarecrow"
       ],
-      "spatial_context": "Ground level near Woodman's feet",
-      "blocking_hint": "Woodman shielding the ground",
+      "spatial_context": "group circle [[grassy_riverbank_meadow]]",
+      "blocking_hint": "Woodman shielding mice from Toto",
       "environment_subzone": "grassy_riverbank_meadow",
-      "continuity_focus": "Toto proximity to mice",
-      "coverage_hint": "medium shots",
+      "continuity_focus": "Toto/mice proximity",
+      "coverage_hint": "medium shots of group",
       "coverage_priority": "medium",
-      "handoff_to_next": "END"
+      "handoff_to_next": "end_scene"
     }
   ],
   "planned_shots": [
@@ -217,22 +226,22 @@
       "beat_id": "BT001",
       "narrative_function": "establish threat",
       "planned_shot_moment_summary": "Wildcat lunging at mouse",
-      "primary_subject_seed": "yellow_wildcat",
+      "primary_subject_seed": "yellow Wildcat",
       "secondary_subjects_seed": [
         "queen_of_the_field_mice"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "grassy_riverbank_meadow",
-      "planned_shot_required_anchor_1": "grassy_riverbank_meadow",
-      "planned_shot_scale_proof_detail": "low-angle perspective of predator",
-      "start_state_seed": "wildcat stalking",
-      "end_state_seed": "wildcat struck",
-      "action_seed": "predatory attack and kill",
+      "planned_shot_required_anchor_1": "poppy_field_bed",
+      "planned_shot_scale_proof_detail": "mouse vs predator size",
+      "start_state_seed": "predator lunging",
+      "end_state_seed": "impact of axe",
+      "action_seed": "Wildcat attack",
       "blocking_seed": [
-        "wildcat lunges from grass"
+        "low to ground"
       ],
-      "shot_size": "medium_full",
+      "shot_size": "low-angle medium",
       "camera_angle": "low_angle",
       "lens_family": "wide",
       "camera_motion": "handheld",
@@ -244,20 +253,49 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
+      "narrative_function": "establish hero",
+      "planned_shot_moment_summary": "Tin Woodman standing over kill",
+      "primary_subject_seed": "tin_woodman",
+      "secondary_subjects_seed": [
+        "dead yellow Wildcat"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "grassy_riverbank_meadow",
+      "planned_shot_required_anchor_1": "tin_woodman's axe",
+      "planned_shot_scale_proof_detail": "metallic silhouette vs grass",
+      "start_state_seed": "axe strike",
+      "end_state_seed": "woodman standing still",
+      "action_seed": "Woodman kills wildcat",
+      "blocking_seed": [
+        "standing over carcass"
+      ],
+      "shot_size": "full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
       "narrative_function": "character reveal",
-      "planned_shot_moment_summary": "Queen Mouse speaks",
+      "planned_shot_moment_summary": "Queen Mouse speaking",
       "primary_subject_seed": "queen_of_the_field_mice",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "grassy_riverbank_meadow",
-      "planned_shot_required_anchor_1": "dead_wildcat_carcass",
-      "planned_shot_scale_proof_detail": "ECU of mouse features",
-      "start_state_seed": "mouse trembling",
-      "end_state_seed": "mouse standing tall",
-      "action_seed": "revealing royal status",
+      "planned_shot_required_anchor_1": "grass blades",
+      "planned_shot_scale_proof_detail": "ECU mouse features",
+      "start_state_seed": "mouse looking up",
+      "end_state_seed": "mouse speaking",
+      "action_seed": "Queen reveals identity",
       "blocking_seed": [
-        "mouse center frame near carcass"
+        "ground level"
       ],
       "shot_size": "extreme_close_up",
       "camera_angle": "eye_level",
@@ -267,36 +305,6 @@
       "focus_strategy": "shallow_subject",
       "lighting_style": "soft_even",
       "primary_subject_angle": "front"
-    },
-    {
-      "planned_shot_id": "SH003",
-      "beat_id": "BT004",
-      "narrative_function": "tension/resolution",
-      "planned_shot_moment_summary": "Tin Woodman shielding mice from Toto",
-      "primary_subject_seed": "tin_woodman",
-      "secondary_subjects_seed": [
-        "toto",
-        "queen_of_the_field_mice"
-      ],
-      "subject_visibility": "on_screen",
-      "narration_mode": "in_scene_speaker",
-      "environment_subzone": "grassy_riverbank_meadow",
-      "planned_shot_required_anchor_1": "dead_wildcat_carcass",
-      "planned_shot_scale_proof_detail": "Tin Woodman's metallic silhouette vs small dog/mice",
-      "start_state_seed": "Toto approaching mice",
-      "end_state_seed": "Woodman blocking Toto",
-      "action_seed": "protective stance",
-      "blocking_seed": [
-        "Woodman steps between Toto and ground level"
-      ],
-      "shot_size": "medium",
-      "camera_angle": "eye_level",
-      "lens_family": "normal",
-      "camera_motion": "push_in",
-      "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
-      "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front_three_quarter_right"
     }
   ],
   "unresolved_questions": [],
@@ -362,16 +370,16 @@
     "[CH009] Chapter IX (book index hit)",
     "[CH014] Chapter XIV (book index hit)",
     "[CH010] Chapter X (book index hit)",
-    "Character tin_woodman: The Tin Woodman is a bipedal humanoid entity constructed entirely of articulated tin. He possesses a metallic silhouette and a non-flesh physical composition that renders him immune to poppy scents. His primary visual identifier is hi..."
+    "Character tin_woodman: The Tin Woodman is a bipedal humanoid entity composed entirely of articulated tin. He possesses a non-flesh, metallic silhouette and is characterized by his fully metallic construction. His primary equipment is an axe, which he carrie..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH009_SC001\n\n## Production Intent\nEstablish a debt of honor through a violent intervention by the Tin Woodman, transitioning from a predatory threat to a formal alliance with the mouse population.\n\n## Required Cast\n- tin_woodman\n- queen_of_the_field_mice\n- the_scarecrow\n- dorothy\n- toto\n\n## Required Environments\n- grassy_riverbank_meadow\n- poppy_field_bed\n\n## Continuity Constraints\n- Static position of the dead Wildcat carcass.\n- Proximity distance between Toto and the mice during confrontation.\n\n## Beat List\n- BT001: Wildcat attack and kill by Tin Woodman.\n- BT002: Queen Mouse reveals her identity.\n- BT003: Group reaction to the revelation.\n- BT004: Tin Woodman protects mice from Toto, leading to alliance.",
+  "storyboard_markdown": "# Scene Contract: CH009_SC001\n\n## Production Intent\nEstablish a debt of honor through a violent intervention by the Tin Woodman, transitioning from a predatory threat to a formal alliance with the Field Mice.\n\n## Required Cast\n- tin_woodman\n- queen_of_the_field_mice\n- the_scarecrow\n- dorothy\n- toto\n\n## Required Environments\n- grassy_riverbank_meadow\n- poppy_field_bed\n\n## Continuity Constraints\n- Position of dead yellow Wildcat relative to Tin Woodman's axe.\n- Proximity of Toto to the mice during confrontation.\n\n## Beat List\n- BT001: Wildcat attack on mouse.\n- BT002: Tin Woodman kills Wildcat.\n- BT003: The Queen's Revelation.\n- BT004: Tension and Pledge.",
   "metadata": {
     "artifact_id": "CH009_SC001_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "bc675d2ff01a7a4784eea6a1892e984298b3209a",
+    "source_fingerprint": "460799b46c733fca1539e34a02e02d0ec6d12948",
     "created_at_utc": "2026-04-27T08:23:23.393429+00:00",
-    "updated_at_utc": "2026-04-27T08:23:23.393429+00:00",
+    "updated_at_utc": "2026-04-27T13:25:22.226286+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -396,6 +404,11 @@
         "timestamp_utc": "2026-04-27T08:24:09.103983+00:00",
         "action": "synthesized",
         "source_fingerprint": "bc675d2ff01a7a4784eea6a1892e984298b3209a"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:26:09.247972+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "460799b46c733fca1539e34a02e02d0ec6d12948"
       }
     ]
   }

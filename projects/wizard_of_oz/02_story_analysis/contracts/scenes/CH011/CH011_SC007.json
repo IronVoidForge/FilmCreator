@@ -5,38 +5,38 @@
   "purpose": "Resolve the chapter by uniting the group's resolve for the upcoming quest.",
   "summary": "The group reunites and discusses their individual encounters. Realizing they have no other way to get what they want, they agree to face the Witch and prepare for their journey to the land of the Winkies the next morning.",
   "emotional_arc": "Uncertainty $\\rightarrow$ Somber Resolve.",
-  "production_intent": "Establish the group's unified resolve through a shared discussion of recent individual trials. The scene must transition from the heavy atmosphere of fatigue and uncertainty to a focused, somber commitment to face the Witch and depart for the land of the Winkies.",
-  "scene_short_description": "A group of weary travelers gathers in a palace guest room to plan their next journey.",
+  "production_intent": "The group reunites within the palace guest quarters to process individual trials and consolidate their resolve. The scene must transition from a state of weary uncertainty to a unified, somber commitment to face the Witch and depart for the land of the Winkies.",
+  "scene_short_description": "A weary group gathers in a palace guest room to plan their journey toward the Winkies.",
   "scene_primary_scale_story_point": "Intimate group circle within large palace quarters.",
   "scene_required_anchor_catalog": [
-    "Guest quarter furniture/seating area",
-    "Travel gear/bags for morning departure"
+    "Palace Guest Quarters furniture/seating",
+    "Travel gear/supplies"
   ],
-  "scene_start_state": "Characters are physically separated or slumped, reflecting individual exhaustion and uncertainty.",
-  "scene_end_state": "The group is gathered in a unified formation, prepared for the next morning's travel.",
-  "dominant_action_line": "Discussing encounters and agreeing to face the Witch.",
+  "scene_start_state": "Characters enter or sit in a state of exhaustion and doubt.",
+  "scene_end_state": "The group is gathered, prepared, and ready for morning departure.",
+  "dominant_action_line": "Discussing individual encounters leads to the collective decision to face the Witch.",
   "scene_spatial_layout": [
-    "Centralized seating/gathering area",
-    "Perimeter space for travel gear"
+    "Centralized grouping around a common area",
+    "Perimeter space used for travel preparation"
   ],
   "character_spatial_map": [
     "Dorothy at center of group focus",
     "Scarecrow, Tin Woodman, Cowardly Lion surrounding Dorothy",
-    "Toto near Dorothy's feet"
+    "Toto near Dorothy"
   ],
   "environment_subzones": [
-    "central_seating_zone",
-    "gear_storage_zone"
+    "central_seating_area",
+    "gear_preparation_zone"
   ],
   "entry_vectors": [
-    "character_arrival_paths"
+    "palace_corridor_to_quarters"
   ],
   "exit_vectors": [
-    "morning_departure_path"
+    "quarters_to_emerald_city_streets"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Transition from individual recounting to collective realization.",
-    "BT002 -> BT003: Transition from uncertainty to active preparation."
+    "BT001 -> BT002: Transition from individual recounting to collective realization",
+    "BT002 -> BT003: Transition from decision to physical preparation"
   ],
   "characters_required": [
     {
@@ -104,7 +104,7 @@
   ],
   "continuity_constraints": [
     "Visible character fatigue and emotional residue from individual trials",
-    "Dorothy's white dress/clothing consistency"
+    "Dorothy's transition to white clothing/dress"
   ],
   "visual_coverage_families": [
     "Group medium shots",
@@ -116,54 +116,8 @@
       "beat_id": "BT001",
       "summary": "Group reunites and discusses individual encounters",
       "purpose": "",
-      "action_start": "characters entering or settling in the quarters",
-      "action_end": "stories are shared",
-      "active_subjects": [
-        "dorothy",
-        "the_scarecrow",
-        "tin_woodman",
-        "cowardly_lion"
-      ],
-      "passive_subjects": [
-        "toto"
-      ],
-      "spatial_context": "palace_guest_quarters",
-      "blocking_hint": "scattered around seating area",
-      "environment_subzone": "central_seating_zone",
-      "continuity_focus": "character fatigue/emotional state",
-      "coverage_hint": "group medium shots",
-      "coverage_priority": "medium",
-      "handoff_to_next": "BT002"
-    },
-    {
-      "beat_id": "BT002",
-      "summary": "Realization of the only path forward",
-      "purpose": "",
-      "action_start": "discussion turns to the necessity of facing the Witch",
-      "action_end": "agreement is reached",
-      "active_subjects": [
-        "dorothy",
-        "the_scarecrow",
-        "tin_woodman",
-        "cowardly_lion"
-      ],
-      "passive_subjects": [
-        "toto"
-      ],
-      "spatial_context": "palace_guest_quarters",
-      "blocking_hint": "characters leaning in closer",
-      "environment_subzone": "central_seating_zone",
-      "continuity_focus": "shift from uncertainty to resolve",
-      "coverage_hint": "close-ups of each character",
-      "coverage_priority": "high",
-      "handoff_to_next": "BT003"
-    },
-    {
-      "beat_id": "BT003",
-      "summary": "Preparation for the journey to the land of the Winkies",
-      "purpose": "",
-      "action_start": "group begins organizing gear",
-      "action_end": "group is ready for the next morning",
+      "action_start": "characters gathering in the quarters",
+      "action_end": "discussion of trials concludes",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -173,9 +127,54 @@
       ],
       "passive_subjects": [],
       "spatial_context": "palace_guest_quarters",
-      "blocking_hint": "moving toward travel gear",
-      "environment_subzone": "gear_storage_zone",
-      "continuity_focus": "readiness for departure",
+      "blocking_hint": "seated or standing in a loose circle",
+      "environment_subzone": "central_seating_area",
+      "continuity_focus": "fatigue/emotional state from trials",
+      "coverage_hint": "group medium shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Realization and agreement to face the Witch",
+      "purpose": "",
+      "action_start": "silence or heavy realization",
+      "action_end": "verbal commitment to the plan",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "passive_subjects": [
+        "toto"
+      ],
+      "spatial_context": "palace_guest_quarters",
+      "blocking_hint": "tightening the circle/eye contact",
+      "environment_subzone": "central_seating_area",
+      "continuity_focus": "shift from uncertainty to resolve",
+      "coverage_hint": "close-ups of each character",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Preparation for journey to the land of the Winkies",
+      "purpose": "",
+      "action_start": "group standing up",
+      "action_end": "group ready for morning departure",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "palace_guest_quarters",
+      "blocking_hint": "moving toward gear/supplies",
+      "environment_subzone": "gear_preparation_zone",
+      "continuity_focus": "organized travel readiness",
       "coverage_hint": "final wide shot",
       "coverage_priority": "medium",
       "handoff_to_next": "end_of_scene"
@@ -185,8 +184,8 @@
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish_group_state",
-      "planned_shot_moment_summary": "characters reuniting and sharing stories",
+      "narrative_function": "establish group state",
+      "planned_shot_moment_summary": "characters reuniting and sharing experiences",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "the_scarecrow",
@@ -196,14 +195,14 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "central_seating_zone",
-      "planned_shot_required_anchor_1": "guest_quarter_furniture",
-      "planned_shot_scale_proof_detail": "group_proximity",
-      "start_state_seed": "characters scattered/fatigued",
-      "end_state_seed": "characters engaged in dialogue",
+      "environment_subzone": "central_seating_area",
+      "planned_shot_required_anchor_1": "palace_guest_quarters",
+      "planned_shot_scale_proof_detail": "group size relative to room",
+      "start_state_seed": "characters settling in",
+      "end_state_seed": "discussion of trials",
       "action_seed": "recounting encounters",
       "blocking_seed": [
-        "loose circle"
+        "seated circle"
       ],
       "shot_size": "medium_full",
       "camera_angle": "eye_level",
@@ -217,51 +216,55 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "emotional_pivot",
-      "planned_shot_moment_summary": "the realization that they must face the Witch",
-      "primary_subject_seed": "dorothy",
+      "narrative_function": "highlight commitment",
+      "planned_shot_moment_summary": "individual characters agreeing to the plan",
+      "primary_subject_seed": "the_scarecrow",
       "secondary_subjects_seed": [
-        "the_scarecrow",
         "tin_woodman",
         "cowardly_lion"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "central_seating_zone",
-      "planned_shot_required_anchor_1": "guest_quarter_furniture",
-      "planned_shot_scale_proof_detail": "facial_expression_detail",
-      "start_state_seed": "uncertain expressions",
-      "end_state_seed": "determined expressions",
-      "action_seed": "agreeing to the plan",
+      "environment_subzone": "central_seating_area",
+      "planned_shot_required_anchor_1": "palace_guest_quarters",
+      "planned_shot_scale_proof_detail": "facial expression detail",
+      "start_state_seed": "uncertainty",
+      "end_state_seed": "resolve",
+      "action_seed": "nodding/verbal agreement",
       "blocking_seed": [
-        "tightening circle"
+        "close proximity"
       ],
       "shot_size": "close_up",
       "camera_angle": "eye_level",
       "lens_family": "portrait",
-      "camera_motion": "push_in",
+      "camera_motion": "locked_off",
       "zoom_behavior": "subtle_in",
       "focus_strategy": "shallow_subject",
-      "lighting_style": "low_key_night",
+      "lighting_style": "soft_even",
       "primary_subject_angle": "front"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "resolve_confirmation",
-      "planned_shot_moment_summary": "final group unity before departure",
-      "primary_subject_seed": "the_group",
-      "secondary_subjects_seed": [],
+      "narrative_function": "resolve scene",
+      "planned_shot_moment_summary": "group preparing for morning travel",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "central_seating_zone",
-      "planned_shot_required_anchor_1": "gear_storage_zone",
-      "planned_shot_scale_proof_detail": "entire_group_visible",
-      "start_state_seed": "characters standing/preparing",
-      "end_state_seed": "group ready for travel",
-      "action_seed": "preparing for morning journey",
+      "environment_subzone": "gear_preparation_zone",
+      "planned_shot_required_anchor_1": "travel gear/supplies",
+      "planned_shot_scale_proof_detail": "full group in room context",
+      "start_state_seed": "decision made",
+      "end_state_seed": "ready for journey",
+      "action_seed": "organizing supplies",
       "blocking_seed": [
-        "unified group formation"
+        "dispersed around gear"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
@@ -336,16 +339,16 @@
     "[CH011] Chapter XI (book index hit)",
     "[CH012] Chapter XII (book index hit)",
     "[CH002] Chapter II (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH011_SC007\n\n## Production Intent\nEstablish the group's unified resolve through a shared discussion of recent individual trials. The scene must transition from the heavy atmosphere of fatigue and uncertainty to a focused, somber commitment to face the Witch and depart for the land of the Winkies.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n\n## Required Environments\n- palace_guest_quarters\n\n## Continuity Constraints\n- Character fatigue/emotional state following individual trials\n- Dorothy's white clothing consistency\n\n## Beat List\n- BT001: Group reunites and discusses individual encounters.\n- BT002: Realization of the only path forward (facing the Witch).\n- BT003: Preparation for the journey to the land of the Winkies.",
+  "storyboard_markdown": "# Scene Contract: CH011_SC007\n\n## Production Intent\nThe group reunites within the palace guest quarters to process individual trials and consolidate their resolve. The scene must transition from a state of weary uncertainty to a unified, somber commitment to face the Witch and depart for the land of the Winkies.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n\n## Required Environments\n- palace_guest_quarters\n\n## Continuity Constraints\n- Character fatigue/emotional state following individual trials\n- Dorothy's visual identity: white dress/clothing\n\n## Beat List\n- BT001: Group reunites and discusses individual encounters.\n- BT002: Realization of no other way; agreement to face the Witch.\n- BT003: Preparation for journey to the land of the Winkies the next morning.",
   "metadata": {
     "artifact_id": "CH011_SC007_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "10000db3cff61909e4bb286607150b1e4b219e81",
+    "source_fingerprint": "9658e99f2d03a701f2f5a744e96bde2bd4c4acb9",
     "created_at_utc": "2026-04-27T08:33:25.508798+00:00",
-    "updated_at_utc": "2026-04-27T08:33:25.508798+00:00",
+    "updated_at_utc": "2026-04-27T13:35:51.439659+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -370,6 +373,11 @@
         "timestamp_utc": "2026-04-27T08:34:07.844124+00:00",
         "action": "synthesized",
         "source_fingerprint": "10000db3cff61909e4bb286607150b1e4b219e81"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:36:35.441593+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9658e99f2d03a701f2f5a744e96bde2bd4c4acb9"
       }
     ]
   }

@@ -5,37 +5,37 @@
   "purpose": "Establish the scale and overwhelming visual intensity of the Emerald City.",
   "summary": "The group arrives at the massive, emerald-studded gates of the Emerald City. They encounter the Guardian of the Gates, who presents the first obstacle to their entry.",
   "emotional_arc": "Wonder/Awe to apprehension.",
-  "production_intent": "Establish the overwhelming scale and visual intensity of the Emerald City through massive architectural elements and emerald-studded textures. The sequence must transition from awe at the city's grandeur to apprehension as the group faces a physical obstacle presented by the Guardian.",
-  "scene_short_description": "A group approaches massive, emerald-studded gates facing an imposing Guardian.",
-  "scene_primary_scale_story_point": "The verticality of the gates dwarfs the traveling group.",
+  "production_intent": "Establish the overwhelming scale and visual intensity of the Emerald City through massive architectural elements and emerald-studded textures. The sequence must transition from awe at the city's grandeur to apprehension as the group faces a gatekeeper obstacle.",
+  "scene_short_description": "A group approaches massive, emerald-studded gates facing a towering guardian.",
+  "scene_primary_scale_story_point": "The verticality of the gate dwarfs the travelers.",
   "scene_required_anchor_catalog": [
     "emerald_city_gates",
     "guardian_of_the_gates"
   ],
-  "scene_start_state": "Group arrives at the base of the massive green gates, looking up in awe.",
-  "scene_end_state": "The group stands confronted and apprehensive before the Guardian.",
-  "dominant_action_line": "Approaching the gate and encountering the Guardian's obstacle.",
+  "scene_start_state": "Group arrives at the base of the massive gates, looking up in awe.",
+  "scene_end_state": "Group stands in apprehension before the Guardian's obstacle.",
+  "dominant_action_line": "The group approaches the gate and encounters the Guardian.",
   "scene_spatial_layout": [
-    "Vertical orientation emphasizing height",
-    "Wide expanse of emerald surfaces"
+    "Vertical hierarchy between characters and gate/guardian",
+    "Wide open approach leading to a massive vertical barrier"
   ],
   "character_spatial_map": [
     "dorothy, the_scarecrow, tin_woodman, cowardly_lion, toto clustered at base of gates",
-    "guardian_of_the_gates positioned as a looming vertical presence"
+    "guardian_of_the_gates positioned as an imposing vertical presence"
   ],
   "environment_subzones": [
-    "gate_surface",
-    "gate_threshold"
+    "emerald_city_gates_base",
+    "emerald_city_gates_upper_structure"
   ],
   "entry_vectors": [
-    "yellow_brick_road"
+    "yellow_brick_road approach"
   ],
   "exit_vectors": [
-    "gate_threshold"
+    "none (blocked by gate)"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: visual awe to physical confrontation",
-    "BT002 -> BT003: confrontation to obstacle realization"
+    "BT001 -> BT002: visual scale reveal to character reaction",
+    "BT002 -> BT003: character awe to confrontation with guardian"
   ],
   "characters_required": [
     {
@@ -112,21 +112,21 @@
     }
   ],
   "continuity_constraints": [
-    "Gate height must remain massive relative to character scale",
+    "Gate height must remain massive relative to character heights",
     "Background city glare/brightness must be consistent across shots"
   ],
   "visual_coverage_families": [
-    "Extreme wide shots of gates and walls",
-    "Low-angle shots of characters looking up at the Guardian",
-    "Close-ups of emerald embellishments on the gate"
+    "Extreme wide shots showing scale of gates and walls",
+    "Low-angle shots of group looking up at Guardian",
+    "Close-ups of emerald embellishments on gate"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Arrival and awe at the Emerald City gates",
+      "summary": "Arrival at the gates",
       "purpose": "",
-      "action_start": "group walking along road",
-      "action_end": "group stops at gate base",
+      "action_start": "group approaches gate base",
+      "action_end": "group stops in awe",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -138,42 +138,36 @@
         "emerald_city_gates"
       ],
       "spatial_context": "base of emerald_city_gates",
-      "blocking_hint": "group spreads out slightly while looking up",
-      "environment_subzone": "gate_surface",
-      "continuity_focus": "scale of gate vs characters",
+      "blocking_hint": "group clustered together looking up",
+      "environment_subzone": "emerald_city_gates_base",
+      "continuity_focus": "gate scale vs character height",
       "coverage_hint": "extreme wide shot",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Visual inspection of the gates",
+      "summary": "Visual immersion in emerald detail",
       "purpose": "",
-      "action_start": "characters staring in wonder",
-      "action_end": "focus shifts to specific emerald details",
-      "active_subjects": [
-        "dorothy",
-        "the_scarecrow",
-        "tin_woodman",
-        "cowardly_lion",
-        "toto"
-      ],
+      "action_start": "camera pans/cuts to gate surface",
+      "action_end": "glare of emeralds settles",
+      "active_subjects": [],
       "passive_subjects": [
         "emerald_city_gates"
       ],
-      "spatial_context": "gate surface",
-      "blocking_hint": "static group",
-      "environment_subzone": "gate_surface",
-      "continuity_focus": "brightness/glare of emeralds",
-      "coverage_hint": "close-up inserts",
+      "spatial_context": "surface of the gates",
+      "blocking_hint": "static texture focus",
+      "environment_subzone": "emerald_city_gates_upper_structure",
+      "continuity_focus": "brightness/glare consistency",
+      "coverage_hint": "close-up/insert",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Encounter with the Guardian",
+      "summary": "Confrontation with the Guardian",
       "purpose": "",
-      "action_start": "Guardian appears/speaks",
+      "action_start": "guardian appears/speaks",
       "action_end": "group reacts with apprehension",
       "active_subjects": [
         "guardian_of_the_gates",
@@ -184,11 +178,11 @@
         "toto"
       ],
       "passive_subjects": [],
-      "spatial_context": "gate threshold",
-      "blocking_hint": "low angle looking up at Guardian",
-      "environment_subzone": "gate_threshold",
-      "continuity_focus": "Guardian's height/scale",
-      "coverage_hint": "low-angle shots",
+      "spatial_context": "gate entrance",
+      "blocking_hint": "guardian towering over group",
+      "environment_subzone": "emerald_city_gates_base",
+      "continuity_focus": "low angle perspective",
+      "coverage_hint": "low-angle medium shot",
       "coverage_priority": "high",
       "handoff_to_next": "end_of_scene"
     }
@@ -209,14 +203,14 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "gate_surface",
+      "environment_subzone": "emerald_city_gates_base",
       "planned_shot_required_anchor_1": "emerald_city_gates",
       "planned_shot_scale_proof_detail": "characters appear tiny against gate base",
       "start_state_seed": "wide view of gates",
-      "end_state_seed": "group standing at base",
-      "action_seed": "group stops walking",
+      "end_state_seed": "extreme wide showing full height",
+      "action_seed": "group walking toward gates",
       "blocking_seed": [
-        "group clustered center-frame"
+        "group moving center frame toward gate"
       ],
       "shot_size": "extreme_wide",
       "camera_angle": "eye_level",
@@ -225,40 +219,40 @@
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "high_contrast_ceremonial",
-      "primary_subject_angle": "rear_three_quarter_left"
+      "primary_subject_angle": "rear_three_quarter_right"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "detail texture",
-      "planned_shot_moment_summary": "glinting emerald embellishments on the gate",
+      "planned_shot_moment_summary": "close inspection of emerald studs",
       "primary_subject_seed": "emerald_city_gates",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "gate_surface",
+      "environment_subzone": "emerald_city_gates_upper_structure",
       "planned_shot_required_anchor_1": "emerald_city_gates",
-      "planned_shot_scale_proof_detail": "macro detail of studs",
-      "start_state_seed": "close on texture",
-      "end_state_seed": "close on texture",
-      "action_seed": "light glints off emeralds",
+      "planned_shot_scale_proof_detail": "macro detail of embellishments",
+      "start_state_seed": "tight on gate surface",
+      "end_state_seed": "tight on gate surface",
+      "action_seed": "glinting light on emeralds",
       "blocking_seed": [
         "static"
       ],
-      "shot_size": "close_up",
+      "shot_size": "insert_detail",
       "camera_angle": "eye_level",
       "lens_family": "telephoto",
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
-      "lighting_style": "high_contrast_ceremonial",
+      "lighting_style": "backlit",
       "primary_subject_angle": "front"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "establish threat",
-      "planned_shot_moment_summary": "the Guardian looms over the group",
+      "narrative_function": "introduce obstacle",
+      "planned_shot_moment_summary": "guardian looms over the group",
       "primary_subject_seed": "guardian_of_the_gates",
       "secondary_subjects_seed": [
         "dorothy",
@@ -269,14 +263,15 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "gate_threshold",
+      "environment_subzone": "emerald_city_gates_base",
       "planned_shot_required_anchor_1": "guardian_of_the_gates",
-      "planned_shot_scale_proof_detail": "low angle makes Guardian appear massive",
-      "start_state_seed": "looking up at Guardian",
-      "end_state_seed": "Guardian speaking",
-      "action_seed": "Guardian presents obstacle",
+      "planned_shot_scale_proof_detail": "low angle looking up at guardian height",
+      "start_state_seed": "group looking up",
+      "end_state_seed": "guardian presenting obstacle",
+      "action_seed": "guardian speaks/blocks path",
       "blocking_seed": [
-        "group looking upward in a semi-circle"
+        "guardian standing central",
+        "group huddled below"
       ],
       "shot_size": "medium_full",
       "camera_angle": "low_angle",
@@ -285,7 +280,7 @@
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "high_contrast_ceremonial",
-      "primary_subject_angle": "front_three_quarter_right"
+      "primary_subject_angle": "front_three_quarter_left"
     }
   ],
   "unresolved_questions": [],
@@ -351,16 +346,16 @@
     "[CH010] Chapter X (book index hit)",
     "[CH011] Chapter XI (book index hit)",
     "[CH012] Chapter XII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH010_SC003\n\n## Production Intent\nEstablish the overwhelming scale and visual intensity of the Emerald City through massive architectural elements and emerald-studded textures. The sequence must transition from awe at the city's grandeur to apprehension as the group faces a physical obstacle presented by the Guardian.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n- guardian_of_the_gates\n\n## Required Environments\n- emerald_city_gates\n\n## Continuity Constraints\n- Gate height must remain massive relative to character scale.\n- Background city glare/brightness must be consistent across shots.\n\n## Beat List\n- BT001: Arrival and awe at the Emerald City gates.\n- BT002: Visual inspection of the gates.\n- BT003: Encounter with the Guardian.",
+  "storyboard_markdown": "# Scene Contract: CH010_SC003\n\n## Production Intent\nEstablish the overwhelming scale and visual intensity of the Emerald City through massive architectural elements and emerald-studded textures. The sequence must transition from awe at the city's grandeur to apprehension as the group faces a gatekeeper obstacle.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n- guardian_of_the_gates\n\n## Required Environments\n- emerald_city_gates\n\n## Continuity Constraints\n- Gate height must remain massive relative to character heights.\n- Background city glare/brightness must be consistent across shots.\n\n## Beat List\n- BT001: Arrival at the gates (Awe)\n- BT002: Visual immersion in emerald detail (Texture/Scale)\n- BT003: Confrontation with the Guardian (Apprehension)",
   "metadata": {
     "artifact_id": "CH010_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "512ec61364c53da347327c3c65a6499836ac90d0",
+    "source_fingerprint": "70fd7f90491ed5c330ebf037eb56468f27f0501e",
     "created_at_utc": "2026-04-27T08:27:51.714989+00:00",
-    "updated_at_utc": "2026-04-27T08:27:51.714989+00:00",
+    "updated_at_utc": "2026-04-27T13:30:04.622076+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -385,6 +380,11 @@
         "timestamp_utc": "2026-04-27T08:28:34.629346+00:00",
         "action": "synthesized",
         "source_fingerprint": "512ec61364c53da347327c3c65a6499836ac90d0"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:30:49.247936+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "70fd7f90491ed5c330ebf037eb56468f27f0501e"
       }
     ]
   }

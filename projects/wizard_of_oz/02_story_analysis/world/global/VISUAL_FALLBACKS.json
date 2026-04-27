@@ -1,17 +1,18 @@
 {
-  "schema_version": "2026-04-visual-fallbacks-v1",
+  "schema_version": "2026-04-visual-fallbacks-v2-book-agnostic",
   "project_slug": "wizard_of_oz",
   "source_title": "Wizard Of Oz",
-  "book_visual_context": "cinematic readable reference lighting, pulp adventure visual style, non-modern clothing, weathered natural materials",
+  "book_visual_context": "cinematic readable reference lighting, storybook fantasy adventure, color-coded regional design, practical fairy-tale costumes, non-modern clothing, weathered natural materials",
   "character_fallbacks": {
-    "general": "cinematic readable reference lighting, pulp adventure visual style, non-modern clothing, weathered natural materials; non-modern character styling; avoid contemporary portrait fashion unless explicitly described",
-    "earth_human": "late-19th-century frontier adventure clothing, weathered natural fabrics, belts, boots, simple utilitarian garments, no modern suit or tie unless explicitly described",
-    "barsoom_humanoid": "ancient alien-world planetary-romance wardrobe, harnesses, ornaments, tribal or gladiatorial elements, no modern Earth clothing",
-    "creature_or_primitive": "feral or primitive non-modern appearance, rough natural materials if clothed, no tailored business attire",
-    "group_or_horde": "coherent group visual language using non-modern tribal, frontier, or alien-world materials as appropriate"
+    "general": "cinematic readable reference lighting, storybook fantasy adventure, color-coded regional design, practical fairy-tale costumes, non-modern clothing, weathered natural materials; non-modern character styling; avoid contemporary portrait fashion unless explicitly described",
+    "human_period": "period-appropriate human clothing, practical natural fabrics, simple closures, worn footwear, no modern business or athletic styling unless explicitly described",
+    "humanoid_fantasy": "storybook humanoid styling, color-coded regional costume, practical garments, magical or ceremonial accents only when supported by source evidence",
+    "humanoid_speculative": "non-modern speculative humanoid styling, unfamiliar materials or ornaments when supported, coherent culture-specific costume logic, no contemporary Earth fashion",
+    "creature_or_animal": "source-appropriate animal or creature anatomy, readable scale, natural texture, movement-ready silhouette, minimal gear only when supported",
+    "group_or_crowd": "coherent group visual language with shared era, region, role, palette, and material logic while preserving individual variation"
   },
   "environment_fallbacks": {
-    "general": "cinematic readable reference lighting, pulp adventure visual style, non-modern clothing, weathered natural materials; clear cinematic location reference with explicit landmarks, scale, materials, lighting, and atmosphere",
+    "general": "cinematic readable reference lighting, storybook fantasy adventure, color-coded regional design, practical fairy-tale costumes, non-modern clothing, weathered natural materials; clear cinematic location reference with explicit landmarks, scale, materials, lighting, and atmosphere",
     "desert_mountain": "rugged desert mountain terrain, dry scrub, weathered rock, clear horizon, readable distance and scale",
     "cave_or_cliffside": "visible cave mouth, cliffside rock face, rocky threshold, shadowed interior, weathered stone, readable entrance landmark",
     "interior": "clear room or chamber layout, foreground midground background separation, pathways, anchor objects, visible scale",
@@ -29,10 +30,8 @@
       "modern athletic shirt"
     ],
     "environment": [
-      "generic meadow",
-      "open grassy field",
-      "rolling green hills",
-      "no cave",
+      "generic empty landscape",
+      "featureless field",
       "hidden landmark",
       "modern road",
       "cars",

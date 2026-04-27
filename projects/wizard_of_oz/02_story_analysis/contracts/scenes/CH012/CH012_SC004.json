@@ -5,33 +5,33 @@
   "purpose": "To create tension and provide the catalyst for the climax.",
   "summary": "Dorothy performs domestic labor in the kitchen. The Witch, using invisible magic, trips Dorothy to steal one of her Silver Shoes.",
   "emotional_arc": "Monotony $\\rightarrow$ Confusion $\\rightarrow$ Shock.",
-  "production_intent": "Establish a sense of domestic routine through repetitive kitchen labor before disrupting the peace with invisible magical interference. The sequence must transition from mundane stability to sudden physical shock, culminating in the theft of a key narrative object.",
-  "scene_short_description": "Domestic labor in a castle kitchen is interrupted by an invisible force stealing a silver shoe.",
+  "production_intent": "Establish a sense of domestic monotony through repetitive kitchen labor before disrupting the rhythm with an invisible, magical intervention. The sequence must transition from mundane task-oriented movement to sudden physical instability and theft.",
+  "scene_short_description": "Domestic labor in a castle kitchen interrupted by an invisible force stealing a silver shoe.",
   "scene_primary_scale_story_point": "Human scale domesticity vs. unseen magical presence.",
   "scene_required_anchor_catalog": [
-    "Silver Shoe",
-    "Kitchen workspace/surface"
+    "kitchen_work_surface",
+    "silver_shoe"
   ],
-  "scene_start_state": "Dorothy performing repetitive domestic tasks in a stable kitchen environment.",
-  "scene_end_state": "Dorothy in shock following a physical trip and the disappearance of one shoe.",
-  "dominant_action_line": "Dorothy works, is tripped by an invisible force, and loses a silver shoe.",
+  "scene_start_state": "Dorothy performing repetitive domestic chores in a clean kitchen environment.",
+  "scene_end_state": "Dorothy in a state of shock following a sudden trip and the loss of a shoe.",
+  "dominant_action_line": "Dorothy performs labor, is tripped by an invisible force, and loses a silver shoe.",
   "scene_spatial_layout": [
-    "Centered around a kitchen workspace",
-    "Open floor space for the trip/fall"
+    "Kitchen workspace centered around work surfaces",
+    "Open floor area for the tripping movement"
   ],
   "character_spatial_map": [
-    "dorothy: centered at kitchen workspace",
-    "Wicked Witch (invisible/presence): unseen; proximity to dorothy's feet"
+    "dorothy: positioned at kitchen work surfaces",
+    "Wicked Witch (invisible/presence): unseen; influence felt through physical interaction"
   ],
   "environment_subzones": [
-    "kitchen_workspace",
+    "kitchen_work_surface",
     "kitchen_floor"
   ],
   "entry_vectors": [
-    "Subjects inherit entry logic from the prior scene or chapter transition."
+    "dorothy: enters via domestic task loop"
   ],
   "exit_vectors": [
-    "Subjects exit or hand off toward the next story beat."
+    "dorothy: exits in state of shock"
   ],
   "beat_transition_map": [
     "BT001 -> BT002: physical disruption",
@@ -72,29 +72,29 @@
     }
   ],
   "continuity_constraints": [
-    "Presence or absence of exactly one silver shoe",
-    "Cleanliness and state of the kitchen environment"
+    "Presence/absence of exactly one silver shoe",
+    "Cleanliness and state of the kitchen surfaces"
   ],
   "visual_coverage_families": [
     "Close-ups of kitchen tasks",
-    "POV shots of physical trip/disruption",
-    "Extreme close-up on Silver Shoe snatching"
+    "POV shots of Dorothy feeling the trip",
+    "Extreme close-up on the Silver Shoe being snatched"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
       "summary": "Monotonous domestic labor",
       "purpose": "",
-      "action_start": "dorothy begins task",
-      "action_end": "task continues rhythmically",
+      "action_start": "dorothy engaged in task",
+      "action_end": "dorothy continues task",
       "active_subjects": [
         "dorothy"
       ],
       "passive_subjects": [],
-      "spatial_context": "kitchen_workspace",
-      "blocking_hint": "standing at work surface",
-      "environment_subzone": "kitchen_workspace",
-      "continuity_focus": "clean kitchen state",
+      "spatial_context": "kitchen_work_surface",
+      "blocking_hint": "standing at surface",
+      "environment_subzone": "kitchen_work_surface",
+      "continuity_focus": "cleanliness of kitchen/task state",
       "coverage_hint": "close-ups of tasks",
       "coverage_priority": "medium",
       "handoff_to_next": "BT002"
@@ -103,8 +103,8 @@
       "beat_id": "BT002",
       "summary": "The invisible trip",
       "purpose": "",
-      "action_start": "sudden movement at feet",
-      "action_end": "dorothy stumbles/falls",
+      "action_start": "sudden loss of balance",
+      "action_end": "dorothy stumbles",
       "active_subjects": [
         "dorothy"
       ],
@@ -112,10 +112,10 @@
         "Wicked Witch (invisible/presence)"
       ],
       "spatial_context": "kitchen_floor",
-      "blocking_hint": "stumble away from workspace",
+      "blocking_hint": "stumbling movement",
       "environment_subzone": "kitchen_floor",
-      "continuity_focus": "shoe position",
-      "coverage_hint": "POV or medium shot of stumble",
+      "continuity_focus": "shoe position on foot",
+      "coverage_hint": "POV of trip",
       "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
@@ -123,7 +123,7 @@
       "beat_id": "BT003",
       "summary": "The theft and shock",
       "purpose": "",
-      "action_start": "shoe is snatched",
+      "action_start": "shoe being snatched",
       "action_end": "dorothy realizes loss",
       "active_subjects": [
         "Wicked Witch (invisible/presence)"
@@ -132,11 +132,11 @@
         "dorothy"
       ],
       "spatial_context": "kitchen_floor",
-      "blocking_hint": "dorothy on floor looking at feet",
+      "blocking_hint": "shoe pulled from foot",
       "environment_subzone": "kitchen_floor",
-      "continuity_focus": "one shoe missing",
-      "coverage_hint": "extreme close-up of shoe removal",
-      "coverage_priority": "critical",
+      "continuity_focus": "one shoe present, one absent",
+      "coverage_hint": "extreme close-up on shoe",
+      "coverage_priority": "high",
       "handoff_to_next": "end_of_scene"
     }
   ],
@@ -145,19 +145,19 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish monotony",
-      "planned_shot_moment_summary": "dorothy performing kitchen tasks",
+      "planned_shot_moment_summary": "dorothy performing repetitive kitchen tasks",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "kitchen_workspace",
-      "planned_shot_required_anchor_1": "kitchen_workspace",
-      "planned_shot_scale_proof_detail": "standard human height",
+      "environment_subzone": "kitchen_work_surface",
+      "planned_shot_required_anchor_1": "kitchen_work_surface",
+      "planned_shot_scale_proof_detail": "hands to surface ratio",
       "start_state_seed": "steady labor",
       "end_state_seed": "steady labor",
       "action_seed": "repetitive domestic movement",
       "blocking_seed": [
-        "standing at workspace"
+        "standing at surface"
       ],
       "shot_size": "close_up",
       "camera_angle": "eye_level",
@@ -179,12 +179,12 @@
       "narration_mode": "none",
       "environment_subzone": "kitchen_floor",
       "planned_shot_required_anchor_1": "kitchen_floor",
-      "planned_shot_scale_proof_detail": "ground level",
+      "planned_shot_scale_proof_detail": "sudden vertical shift",
       "start_state_seed": "steady movement",
-      "end_state_seed": "stumble/fall",
-      "action_seed": "sudden loss of balance",
+      "end_state_seed": "unstable stumble",
+      "action_seed": "tripping motion",
       "blocking_seed": [
-        "stumbling backward"
+        "stumbling backward/sideways"
       ],
       "shot_size": "medium_close",
       "camera_angle": "low_angle",
@@ -200,17 +200,19 @@
       "beat_id": "BT003",
       "narrative_function": "highlight theft",
       "planned_shot_moment_summary": "silver shoe is snatched",
-      "primary_subject_seed": "Silver Shoe",
+      "primary_subject_seed": "silver_shoe",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "kitchen_floor",
-      "planned_shot_required_anchor_1": "Silver Shoe",
-      "planned_shot_scale_proof_detail": "macro detail",
-      "start_state_seed": "shoe on floor/foot",
+      "planned_shot_required_anchor_1": "silver_shoe",
+      "planned_shot_scale_proof_detail": "shoe removal from foot",
+      "start_state_seed": "shoe on foot",
       "end_state_seed": "shoe gone",
-      "action_seed": "rapid removal of shoe",
-      "blocking_seed": [],
+      "action_seed": "snatching motion",
+      "blocking_seed": [
+        "shoe being pulled away"
+      ],
       "shot_size": "extreme_close_up",
       "camera_angle": "low_angle",
       "lens_family": "telephoto",
@@ -286,16 +288,16 @@
     "[CH002] Chapter II (book index hit)",
     "[CH012] Chapter XII (book index hit)",
     "[CH003] Chapter III (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH012_SC004\n\n## Production Intent\nEstablish a sense of domestic routine through repetitive kitchen labor before disrupting the peace with invisible magical interference. The sequence must transition from mundane stability to sudden physical shock, culminating in the theft of a key narrative object.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- Wicked Witch (invisible/presence)\n\n## Required Environments\n- wicked_witch_castle_interior (Kitchen)\n\n## Continuity Constraints\n- Presence or absence of exactly one silver shoe\n- Cleanliness and state of the kitchen environment\n\n## Beat List\n- BT001: Monotonous domestic labor\n- BT002: The invisible trip\n- BT003: The theft and shock",
+  "storyboard_markdown": "# Scene Contract: CH012_SC004\n\n## Production Intent\nEstablish a sense of domestic monotony through repetitive kitchen labor before disrupting the rhythm with an invisible, magical intervention. The sequence must transition from mundane task-oriented movement to sudden physical instability and theft.\n\n## Required Cast\n- dorothy (weary traveler, white clothing)\n- Wicked Witch (invisible/presence)\n\n## Required Environments\n- wicked_witch_castle_interior (kitchen)\n\n## Continuity Constraints\n- Presence/absence of exactly one silver shoe\n- Cleanliness and state of the kitchen surfaces\n\n## Beat List\n- BT001: Monotonous domestic labor\n- BT002: The invisible trip\n- BT003: The theft and shock",
   "metadata": {
     "artifact_id": "CH012_SC004_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "7fe769c5ac9d6f99cb44c9b645aa956756acc858",
+    "source_fingerprint": "e200a28635818942fa9c5e3236081fa83354c14d",
     "created_at_utc": "2026-04-27T08:36:25.928371+00:00",
-    "updated_at_utc": "2026-04-27T08:36:25.928371+00:00",
+    "updated_at_utc": "2026-04-27T13:38:57.945070+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -320,6 +322,11 @@
         "timestamp_utc": "2026-04-27T08:37:03.359988+00:00",
         "action": "synthesized",
         "source_fingerprint": "7fe769c5ac9d6f99cb44c9b645aa956756acc858"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:39:37.039838+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "e200a28635818942fa9c5e3236081fa83354c14d"
       }
     ]
   }

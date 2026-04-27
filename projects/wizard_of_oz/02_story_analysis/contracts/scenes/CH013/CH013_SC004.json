@@ -5,39 +5,39 @@
   "purpose": "To provide closure to the West arc and set the stage for the final journey.",
   "summary": "The group prepares to leave for the Emerald City. The Winkies present them with parting gifts (jewelry, gold-headed stick, silver oil-can). During food gathering, Dorothy finds the Golden Cap in the Witch's cupboard and decides to wear it as they depart.",
   "emotional_arc": "From communal warmth to adventurous anticipation.",
-  "production_intent": "Establish the transition from the West arc to the final journey through a communal gift exchange and a discovery of magical utility. The sequence must move from intimate character-driven exchanges to an expansive sense of departure.",
-  "scene_short_description": "A group receives parting gifts before a girl discovers a golden cap in a storage area.",
-  "scene_primary_scale_story_point": "Group scale transitioning to individual discovery then wide horizon departure.",
+  "production_intent": "Establish the transition from the West arc to the final journey through a ritualized gift exchange and a discovery of power. The sequence must move from the communal warmth of the Winkies' farewell to the individual agency of Dorothy finding the Golden Cap.",
+  "scene_short_description": "A group receives parting gifts before a traveler discovers a golden relic in a storage area.",
+  "scene_primary_scale_story_point": "Group scale (gift exchange) transitioning to individual scale (discovery).",
   "scene_required_anchor_catalog": [
-    "The Witch's Cupboard/Storage area",
-    "The Horizon"
+    "gold-headed stick",
+    "silver oil-can",
+    "Golden Cap",
+    "Witch's Cupboard"
   ],
-  "scene_start_state": "Characters gathered in yellow_castle receiving gifts from winkies.",
-  "scene_end_state": "The group walking away toward the horizon with Dorothy wearing the Golden Cap.",
+  "scene_start_state": "The group is gathered within the yellow_castle receiving gifts from winkies.",
+  "scene_end_state": "The group walks away toward the horizon with dorothy wearing the Golden Cap.",
   "dominant_action_line": "Receiving parting gifts, discovering the Golden Cap, and departing for the Emerald City.",
   "scene_spatial_layout": [
-    "Interior gift exchange within yellow_castle",
-    "Transition to food gathering in The Witch's Cupboard/Storage area",
-    "Exterior departure toward horizon"
+    "Central gathering area in yellow_castle for gift exchange",
+    "Adjacent Witch's Cupboard/Storage area for discovery"
   ],
   "character_spatial_map": [
-    "winkies positioned as givers facing the group",
-    "dorothy, cowardly_lion, tin_woodman, the_scarecrow clustered around gifts",
-    "dorothy moves to The Witch's Cupboard/Storage area for discovery"
+    "winkies positioned as donors facing the group",
+    "dorothy, cowardly_lion, tin_woodman, the_scarecrow clustered as recipients",
+    "toto near dorothy"
   ],
   "environment_subzones": [
-    "yellow_castle interior",
-    "The Witch's Cupboard/Storage area"
+    "primary scene playing area"
   ],
   "entry_vectors": [
-    "winkies enter gift exchange zone"
+    "group enters yellow_castle from previous arc location"
   ],
   "exit_vectors": [
     "group exits toward horizon"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Transition from communal gathering to individual task (food gathering)",
-    "BT002 -> BT003: Transition from discovery to departure"
+    "BT001 -> BT002: transition from communal gift receiving to food gathering/searching",
+    "BT002 -> BT003: transition from discovery of the cap to the decision to depart"
   ],
   "characters_required": [
     {
@@ -124,22 +124,22 @@
     }
   ],
   "continuity_constraints": [
-    "Toto's collar must be present/visible",
-    "Dorothy's bracelet must be present/visible",
-    "The Golden Cap must be worn by Dorothy for the final exit"
+    "Toto's collar must be visible during gift exchange",
+    "Dorothy's bracelet must be present",
+    "The Golden Cap must remain on Dorothy's head for the final exit"
   ],
   "visual_coverage_families": [
-    "Medium shots of gift exchange focusing on physical items (jewelry, gold-headed stick, silver oil-can)",
-    "Close-ups of Dorothy discovering and donning the Golden Cap",
-    "Wide shot of group walking toward the horizon"
+    "Medium shots of gift exchange focusing on physical items",
+    "Close-ups of discovery and donning of the Golden Cap",
+    "Wide shot of group departure toward horizon"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
       "summary": "The Winkies present parting gifts to the group",
       "purpose": "",
-      "action_start": "winkies approach group with items",
-      "action_end": "group holds jewelry, gold-headed stick, and silver oil-can",
+      "action_start": "winkies approach with items",
+      "action_end": "gifts are held by travelers",
       "active_subjects": [
         "winkies",
         "dorothy",
@@ -150,10 +150,10 @@
       "passive_subjects": [
         "toto"
       ],
-      "spatial_context": "yellow_castle",
-      "blocking_hint": "winkies facing the group in a semi-circle",
+      "spatial_context": "yellow_castle [[CH013]]",
+      "blocking_hint": "winkies facing group in a semi-circle",
       "environment_subzone": "yellow_castle",
-      "continuity_focus": "jewelry/items must be clearly visible",
+      "continuity_focus": "jewelry (Toto's collar, Dorothy's bracelet) and items (gold-headed stick, silver oil-can)",
       "coverage_hint": "medium shots of items",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
@@ -162,23 +162,23 @@
       "beat_id": "BT002",
       "summary": "Dorothy discovers the Golden Cap while gathering food",
       "purpose": "",
-      "action_start": "dorothy enters storage area",
-      "action_end": "dorothy dons the Golden Cap",
+      "action_start": "dorothy enters cupboard area",
+      "action_end": "dorothy holds the cap",
       "active_subjects": [
-        "dorothy"
+        "dorothy",
+        "toto"
       ],
       "passive_subjects": [
         "winkies",
         "cowardly_lion",
         "tin_woodman",
-        "the_scarecrow",
-        "toto"
+        "the_scarecrow"
       ],
       "spatial_context": "The Witch's Cupboard/Storage area",
-      "blocking_hint": "dorothy isolated in cupboard subzone",
+      "blocking_hint": "dorothy hunched over cupboard contents",
       "environment_subzone": "The Witch's Cupboard/Storage area",
-      "continuity_focus": "Golden Cap must be worn for next beat",
-      "coverage_hint": "close-ups of discovery and donning",
+      "continuity_focus": "Golden Cap appearance",
+      "coverage_hint": "close-ups of discovery",
       "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
@@ -186,8 +186,8 @@
       "beat_id": "BT003",
       "summary": "The group departs for the Emerald City",
       "purpose": "",
-      "action_start": "group gathers to leave",
-      "action_end": "group walking toward horizon",
+      "action_start": "dorothy dons the cap",
+      "action_end": "group disappears toward horizon",
       "active_subjects": [
         "dorothy",
         "cowardly_lion",
@@ -198,13 +198,13 @@
       "passive_subjects": [
         "winkies"
       ],
-      "spatial_context": "yellow_castle exterior/horizon",
-      "blocking_hint": "group moving in a single direction away from camera",
+      "spatial_context": "yellow_castle to rocky plain [[CH013]]",
+      "blocking_hint": "group walking away from camera",
       "environment_subzone": "yellow_castle",
-      "continuity_focus": "dorothy must be wearing Golden Cap",
+      "continuity_focus": "Golden Cap must be on dorothy's head",
       "coverage_hint": "wide shot of departure",
       "coverage_priority": "medium",
-      "handoff_to_next": "none"
+      "handoff_to_next": "end_of_scene"
     }
   ],
   "planned_shots": [
@@ -212,7 +212,7 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish gift exchange",
-      "planned_shot_moment_summary": "winkies present jewelry and tools",
+      "planned_shot_moment_summary": "winkies presenting items to the group",
       "primary_subject_seed": "winkies",
       "secondary_subjects_seed": [
         "dorothy",
@@ -223,13 +223,13 @@
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "yellow_castle",
-      "planned_shot_required_anchor_1": "gift items",
-      "planned_shot_scale_proof_detail": "medium shot of hands/items",
-      "start_state_seed": "winkies approaching group",
-      "end_state_seed": "gifts held by characters",
-      "action_seed": "handing over gold-headed stick and silver oil-can",
+      "planned_shot_required_anchor_1": "gold-headed stick",
+      "planned_shot_scale_proof_detail": "items held by winkies vs group size",
+      "start_state_seed": "winkies approaching with items",
+      "end_state_seed": "items transferred to characters",
+      "action_seed": "handing over jewelry, gold-headed stick, and silver oil-can",
       "blocking_seed": [
-        "winkies facing the main group"
+        "winkies facing the travelers"
       ],
       "shot_size": "medium",
       "camera_angle": "eye_level",
@@ -244,25 +244,27 @@
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "reveal discovery",
-      "planned_shot_moment_summary": "dorothy finds the Golden Cap",
+      "planned_shot_moment_summary": "dorothy finds the Golden Cap in the cupboard",
       "primary_subject_seed": "dorothy",
-      "secondary_subjects_seed": [],
+      "secondary_subjects_seed": [
+        "toto"
+      ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "The Witch's Cupboard/Storage area",
-      "planned_shot_required_anchor_1": "Witch's cupboard",
-      "planned_shot_scale_proof_detail": "close-up on cap and face",
-      "start_state_seed": "dorothy searching cupboards",
+      "planned_shot_required_anchor_1": "Witch's Cupboard",
+      "planned_shot_scale_proof_detail": "cap size relative to dorothy's hands",
+      "start_state_seed": "dorothy searching through cupboard",
       "end_state_seed": "dorothy holding the Golden Cap",
-      "action_seed": "finding and lifting the cap",
+      "action_seed": "searching and finding the cap",
       "blocking_seed": [
-        "dorothy alone in storage subzone"
+        "dorothy leaning into the cupboard"
       ],
       "shot_size": "close_up",
       "camera_angle": "eye_level",
       "lens_family": "portrait",
       "camera_motion": "push_in",
-      "zoom_behavior": "subtle_in",
+      "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "diffuse_ambient",
       "primary_subject_angle": "front"
@@ -271,21 +273,24 @@
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "establish departure",
-      "planned_shot_moment_summary": "group walks toward horizon",
-      "primary_subject_seed": "the_scarecrow, cowardly_lion, tin_woodman, dorothy, toto",
+      "planned_shot_moment_summary": "the group walks away toward the horizon",
+      "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
-        "winkies"
+        "cowardly_lion",
+        "tin_woodman",
+        "the_scarecrow",
+        "toto"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "yellow_castle exterior",
+      "environment_subzone": "yellow_castle",
       "planned_shot_required_anchor_1": "horizon",
-      "planned_shot_scale_proof_detail": "wide shot showing group size vs landscape",
-      "start_state_seed": "group assembled for departure",
+      "planned_shot_scale_proof_detail": "group size against landscape [[CH013]]",
+      "start_state_seed": "group assembled with cap on head",
       "end_state_seed": "group walking away",
-      "action_seed": "walking toward the horizon",
+      "action_seed": "walking toward horizon",
       "blocking_seed": [
-        "group in line moving away from camera"
+        "group moving in single file or cluster"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
@@ -362,16 +367,16 @@
     "[CH012] Chapter XII (book index hit)",
     "[CH002] Chapter II (book index hit)",
     "[CH011] Chapter XI (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH013_SC004\n\n## Production Intent\nEstablish the transition from the West arc to the final journey through a communal gift exchange and a discovery of magical utility. The sequence must move from intimate character-driven exchanges to an expansive sense of departure.\n\n## Required Cast\n- dorothy\n- cowardly_lion\n- tin_woodman\n- the_scarecrow\n- toto\n- winkies\n\n## Required Environments\n- yellow_castle\n- The Witch's Cupboard/Storage area\n\n## Continuity Constraints\n- Toto's collar must be present/visible\n- Dorothy's bracelet must be present/visible\n- The Golden Cap must be worn by Dorothy for the final exit\n\n## Beat List\n- BT001: The Winkies present parting gifts to the group.\n- BT002: Dorothy discovers the Golden Cap while gathering food.\n- BT003: The group departs for the Emerald City.",
+  "storyboard_markdown": "# Scene Contract: CH013_SC004\n\n## Production Intent\nEstablish the transition from the West arc to the final journey through a ritualized gift exchange and a discovery of power. The sequence must move from the communal warmth of the Winkies' farewell to the individual agency of Dorothy finding the Golden Cap.\n\n## Required Cast\n- dorothy\n- cowardly_lion\n- tin_woodman\n- the_scarecrow\n- toto\n- winkies\n\n## Required Environments\n- yellow_castle\n- The Witch's Cupboard/Storage area\n\n## Continuity Constraints\n- Toto's collar must be visible during gift exchange.\n- Dorothy's bracelet must be present.\n- The Golden Cap must remain on Dorothy's head for the final exit.\n\n## Beat List\n- BT001: The Winkies present parting gifts to the group.\n- BT002: Dorothy discovers the Golden Cap while gathering food.\n- BT003: The group departs for the Emerald City.",
   "metadata": {
     "artifact_id": "CH013_SC004_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "fc883aad6e5ef1f13467eb7ef9700ea0947e38bd",
+    "source_fingerprint": "5f01076d49f864585e8238df3d31d84f0449f3fc",
     "created_at_utc": "2026-04-27T08:40:36.017213+00:00",
-    "updated_at_utc": "2026-04-27T08:40:36.017213+00:00",
+    "updated_at_utc": "2026-04-27T13:43:17.043290+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -396,6 +401,11 @@
         "timestamp_utc": "2026-04-27T08:41:21.509652+00:00",
         "action": "synthesized",
         "source_fingerprint": "fc883aad6e5ef1f13467eb7ef9700ea0947e38bd"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:44:03.861124+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "5f01076d49f864585e8238df3d31d84f0449f3fc"
       }
     ]
   }
