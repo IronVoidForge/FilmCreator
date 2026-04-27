@@ -30,6 +30,8 @@ Write the negative prompt here.
 # Continuity Notes
 - Preserve approved identities, costumes, and room geometry.
 
+# Repair Notes
+
 # Sources
 - projects/project_template/02_story_analysis/scene_breakdowns/SC001/
 - projects/project_template/02_story_analysis/clip_plans/SC001/CL001.md

@@ -27,6 +27,8 @@ Write the negative prompt text here.
 - Preserve identity, costume, and environment continuity.
 - Note any camera or framing rules that should carry forward.
 
+# Repair Notes
+
 # Sources
 - 02_story_analysis/scene_breakdowns/SC001/SC001_scene_breakdown.md
 - 02_story_analysis/clip_plans/SC001/CL001.md

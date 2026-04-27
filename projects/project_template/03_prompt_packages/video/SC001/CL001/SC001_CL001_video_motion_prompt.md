@@ -27,5 +27,7 @@ List motion failures to avoid.
 # Continuity Notes
 - Do not redefine identity or environment here.
 
+# Repair Notes
+
 # Sources
 - projects/project_template/02_story_analysis/clip_plans/SC001/CL001.md

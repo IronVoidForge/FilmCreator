@@ -25,5 +25,7 @@ List environment drift and style failures to avoid.
 # Continuity Notes
 - Keep this location stable for downstream scene and clip work.
 
+# Repair Notes
+
 # Sources
 - projects/project_template/02_story_analysis/environment_breakdowns/

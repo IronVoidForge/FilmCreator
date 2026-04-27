@@ -14,6 +14,7 @@ REQUIRED_HEADINGS = [
     "Negative Prompt",
     "Inputs",
     "Continuity Notes",
+    "Repair Notes",
     "Sources",
 ]
 
@@ -111,7 +112,9 @@ class PromptPackage:
 def parse_prompt_package(path: Path) -> PromptPackage:
     text = path.read_text(encoding="utf-8")
     sections = _split_sections(text)
-    missing = [heading for heading in REQUIRED_HEADINGS if heading not in sections or not sections[heading].strip()]
+    missing = [heading for heading in REQUIRED_HEADINGS if heading not in sections]
+    required_nonempty = [heading for heading in REQUIRED_HEADINGS if heading != "Repair Notes"]
+    missing.extend(heading for heading in required_nonempty if heading in sections and not sections[heading].strip())
     if missing:
         missing_text = ", ".join(missing)
         raise ValueError(f"Prompt package {path} is missing required sections: {missing_text}")
@@ -126,7 +129,7 @@ def parse_prompt_package(path: Path) -> PromptPackage:
         negative_prompt=sections["Negative Prompt"].strip(),
         inputs_markdown=sections["Inputs"].strip(),
         continuity_notes_markdown=sections["Continuity Notes"].strip(),
-        repair_notes_markdown=sections.get("Repair Notes", "").strip(),
+        repair_notes_markdown=sections["Repair Notes"].strip(),
         sources_markdown=sections["Sources"].strip(),
     )
 

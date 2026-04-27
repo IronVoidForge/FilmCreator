@@ -26,5 +26,7 @@ Write the negative prompt here.
 # Continuity Notes
 - Keep camera, costume, environment, and scale stable.
 
+# Repair Notes
+
 # Sources
 - projects/project_template/02_story_analysis/clip_plans/SC001/CL001.md

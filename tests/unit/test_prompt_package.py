@@ -33,6 +33,8 @@ def test_parse_prompt_package_sections(tmp_path: Path) -> None:
                 "# Continuity Notes",
                 "- preserve wardrobe",
                 "",
+                "# Repair Notes",
+                "",
                 "# Sources",
                 "- 02_story_analysis/clip_plans/SC001/CL001.md",
                 "",
@@ -50,3 +52,48 @@ def test_parse_prompt_package_sections(tmp_path: Path) -> None:
     assert prompt.inputs["project_id"] == "demo"
     assert prompt.sources == ["02_story_analysis/clip_plans/SC001/CL001.md"]
     assert prompt.repair_notes_markdown == ""
+
+
+def test_parse_prompt_package_requires_repair_notes_heading(tmp_path: Path) -> None:
+    prompt_file = tmp_path / "prompt_missing_repair.md"
+    prompt_file.write_text(
+        "\n".join(
+            [
+                "# Title",
+                "Scene Build Prompt",
+                "",
+                "# ID",
+                "SC001_CL001_scene_build_prompt",
+                "",
+                "# Purpose",
+                "Generate the opener.",
+                "",
+                "# Workflow Type",
+                "still.scene_build.four_ref.klein.distilled",
+                "",
+                "# Positive Prompt",
+                "cinematic frame",
+                "",
+                "# Negative Prompt",
+                "blurry",
+                "",
+                "# Inputs",
+                "- project_id: demo",
+                "",
+                "# Continuity Notes",
+                "- preserve wardrobe",
+                "",
+                "# Sources",
+                "- 02_story_analysis/clip_plans/SC001/CL001.md",
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    try:
+        parse_prompt_package(prompt_file)
+    except ValueError as exc:
+        assert "Repair Notes" in str(exc)
+    else:
+        raise AssertionError("Expected parse_prompt_package to reject missing Repair Notes heading")

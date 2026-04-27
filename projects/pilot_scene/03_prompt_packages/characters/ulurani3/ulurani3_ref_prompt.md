@@ -26,5 +26,7 @@ blurry, low quality, duplicate limbs, extra fingers, malformed anatomy, distorte
 - This is a shared reference image, so prioritize stable identity, costume, body proportions, and silhouette over dramatic action.
 - Keep the pose readable and neutral enough to reuse as a project-level character reference.
 
+# Repair Notes
+
 # Sources
 - manual_setup: initial smoke-test prompt package created before automated authoring is connected

@@ -25,5 +25,7 @@ List drift and style failures to avoid.
 # Continuity Notes
 - Keep the character recognizable across scenes and clips.
 
+# Repair Notes
+
 # Sources
 - projects/project_template/02_story_analysis/character_breakdowns/
