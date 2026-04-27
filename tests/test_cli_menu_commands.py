@@ -63,3 +63,44 @@ def test_cli_run_quicktest_composite_dispatches(monkeypatch, capsys) -> None:
     payload = json.loads(out)
     assert payload["profile"] == "11_to_14"
     assert payload["chapters"] == "2-3"
+
+
+def test_cli_run_production_range_dispatches(monkeypatch, capsys) -> None:
+    cli_module = _load_legacy_cli_module()
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "orchestrator",
+            "run-production-range",
+            "demo",
+            "--start-phase",
+            "scene_contracts",
+            "--end-phase",
+            "prompt_preparation",
+            "--chapters",
+            "2-3",
+            "--mode",
+            "force",
+        ],
+    )
+    monkeypatch.setattr(
+        cli_module,
+        "run_phase_range",
+        lambda project_slug, start_phase="", end_phase="", chapters=None, mode="force": {
+            "project_slug": project_slug,
+            "profile": "phase_range",
+            "start_phase": start_phase,
+            "end_phase": end_phase,
+            "chapters": chapters,
+            "mode": mode,
+        },
+    )
+    monkeypatch.setattr(cli_module, "persist_run_summary", lambda project_slug, run_type, payload: None)
+
+    cli_module.main()
+
+    out = capsys.readouterr().out
+    payload = json.loads(out)
+    assert payload["start_phase"] == "scene_contracts"
+    assert payload["end_phase"] == "prompt_preparation"

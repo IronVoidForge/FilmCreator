@@ -120,3 +120,36 @@ def test_pipeline_menu_cleanup_dry_run(monkeypatch) -> None:
     )
 
     assert any("Scope: downstream_only" in line for line in outputs)
+
+
+def test_pipeline_menu_advanced_range_runs_selected_span(monkeypatch) -> None:
+    prompts = iter(["13", "8", "12", "14"])
+    outputs: list[str] = []
+    called: dict[str, object] = {}
+
+    monkeypatch.setattr(
+        "orchestrator.pipeline_menu.run_phase_range",
+        lambda project_slug, start_phase="", end_phase="", chapters=None, mode="force": called.setdefault(
+            "summary",
+            {
+                "project_slug": project_slug,
+                "profile": "phase_range",
+                "start_phase": start_phase,
+                "end_phase": end_phase,
+                "chapters": chapters,
+                "mode": mode,
+            },
+        ),
+    )
+
+    run_pipeline_menu(
+        initial_project="demo",
+        initial_chapters="2-3",
+        initial_mode="force",
+        input_fn=lambda prompt="": next(prompts),
+        output_fn=outputs.append,
+        projects_root=Path("projects"),
+    )
+
+    assert called["summary"]["start_phase"] == "scene_contracts"
+    assert called["summary"]["end_phase"] == "descriptor_enrichment"

@@ -43,6 +43,40 @@ DOWNSTREAM_PHASES = [
 FULL_PRODUCTION_PHASES = PRE_DOWNSTREAM_PHASES + DOWNSTREAM_PHASES + ["quality_grading"]
 PROMPT_REFRESH_PHASES = ["descriptor_enrichment", "prompt_preparation"]
 RUN_MODES = {"resume", "force"}
+OPERATOR_PHASE_ORDER = [
+    "story_analysis",
+    "character_taxonomy",
+    "identity_refinement_plan",
+    "identity_refinement_apply",
+    "character_bibles",
+    "environment_bibles",
+    "visual_fallbacks",
+    "scene_contracts",
+    "scene_bindings",
+    "shot_packages",
+    "dialogue_timeline",
+    "descriptor_enrichment",
+    "prompt_preparation",
+    "quality_grading",
+]
+PROJECT_WIDE_PHASES = {
+    "character_taxonomy",
+    "identity_refinement_plan",
+    "identity_refinement_apply",
+    "character_bibles",
+    "environment_bibles",
+    "visual_fallbacks",
+    "quality_grading",
+}
+CHAPTER_SCOPED_PHASES = {
+    "story_analysis",
+    "scene_contracts",
+    "scene_bindings",
+    "shot_packages",
+    "dialogue_timeline",
+    "descriptor_enrichment",
+    "prompt_preparation",
+}
 TRUSTED_RESUME_PHASE_ORDER = [
     "lmstudio_check",
     "story_analysis",
@@ -251,6 +285,57 @@ def run_quicktest_composite(
     )
 
 
+def run_phase_range(
+    project_slug: str,
+    *,
+    start_phase: str,
+    end_phase: str,
+    chapters: str | None = None,
+    mode: str = "force",
+) -> ProductionRunSummary:
+    _validate_mode(mode)
+    selected = _select_phase_range(start_phase, end_phase)
+    phase_summaries: dict[str, Any] = {}
+    completed_phases: list[str] = []
+    warnings: list[str] = []
+    complete_by_phase: dict[str, bool | None] = {}
+    if mode == "resume":
+        status_summary = get_production_status(project_slug, chapters=chapters)
+        complete_by_phase = {
+            str(row["phase"]): row["complete"]
+            for row in status_summary.phases
+            if row.get("complete") is not None
+        }
+
+    for phase_name in selected:
+        status_key = _status_key_for_phase(phase_name)
+        if mode == "resume" and complete_by_phase.get(status_key) is True:
+            phase_summaries[phase_name] = {"skipped": True, "reason": "already complete"}
+            completed_phases.append(phase_name)
+            continue
+        summary = _run_operator_phase(project_slug, phase_name, chapters=chapters, mode=mode)
+        phase_summaries[phase_name] = _to_dict(summary)
+        completed_phases.append(phase_name)
+
+    if chapters:
+        warnings.append(
+            "Chapter selection only applies to story analysis and phases 09-14; project-wide phases ignore chapter slices."
+        )
+
+    return ProductionRunSummary(
+        profile="phase_range",
+        project_slug=project_slug,
+        chapters=chapters,
+        mode=mode,
+        completed_phases=completed_phases,
+        phase_summaries={
+            "selected_range": {"start_phase": start_phase, "end_phase": end_phase},
+            **phase_summaries,
+        },
+        warnings=warnings,
+    )
+
+
 def run_prompt_prep_refresh(
     project_slug: str,
     *,
@@ -435,6 +520,29 @@ def run_post_taxonomy_pipeline(
     )
 
 
+def format_production_run_summary(summary: ProductionRunSummary) -> list[str]:
+    lines = [
+        f"Profile: {summary.profile}",
+        f"Project: {summary.project_slug}",
+        f"Chapters: {summary.chapters or 'ALL'}",
+        f"Mode: {summary.mode}",
+        f"Completed phases: {', '.join(summary.completed_phases) if summary.completed_phases else 'none'}",
+    ]
+    if summary.phase_summaries.get("selected_range"):
+        selected = summary.phase_summaries["selected_range"]
+        if isinstance(selected, dict):
+            lines.append(
+                f"Range: {selected.get('start_phase', '')} -> {selected.get('end_phase', '')}"
+            )
+    planned = summary.phase_summaries.get("planned_phases")
+    if isinstance(planned, list):
+        lines.append(f"Planned phases: {', '.join(str(item) for item in planned) if planned else 'none'}")
+    if summary.warnings:
+        for warning in summary.warnings:
+            lines.append(f"Warning: {warning}")
+    return lines
+
+
 def _run_project_phase(project_slug: str, phase_name: str, *, mode: str) -> Any:
     force = mode == "force"
     if phase_name == "character_taxonomy":
@@ -448,6 +556,35 @@ def _run_project_phase(project_slug: str, phase_name: str, *, mode: str) -> Any:
     if phase_name == "visual_fallbacks":
         return run_visual_fallback_synthesis(project_slug, force=force)
     raise ValueError(f"Unsupported project phase: {phase_name}")
+
+
+def _run_operator_phase(project_slug: str, phase_name: str, *, chapters: str | None, mode: str) -> Any:
+    if phase_name == "story_analysis":
+        return run_story_analysis_pipeline(project_slug, chapters=chapters, mode=mode)
+    if phase_name == "character_taxonomy":
+        return run_character_taxonomy(project_slug, force=mode == "force")
+    if phase_name == "identity_refinement_plan":
+        return run_identity_refinement(project_slug, use_llm=True, apply_merge=False)
+    if phase_name == "identity_refinement_apply":
+        return run_identity_refinement(project_slug, use_llm=True, apply_merge=True)
+    if phase_name == "character_bibles":
+        return run_character_bible_synthesis(project_slug, use_llm=True, force=mode == "force")
+    if phase_name == "environment_bibles":
+        return run_environment_bible_synthesis(project_slug, use_llm=True, force=mode == "force")
+    if phase_name == "visual_fallbacks":
+        return run_visual_fallback_synthesis(project_slug, force=mode == "force")
+    if phase_name == "quality_grading":
+        return run_quality_grading(project_slug)
+    if phase_name in DOWNSTREAM_PHASES:
+        if mode == "resume":
+            return run_downstream_production(
+                project_slug,
+                chapters=chapters,
+                start_phase=phase_name,
+                mode="resume",
+            )
+        return _run_force_phase(project_slug, phase_name, chapters=chapters)
+    raise ValueError(f"Unsupported operator phase: {phase_name}")
 
 
 def _run_trusted_phase(project_slug: str, phase_name: str, *, chapters: str | None) -> Any:
@@ -500,6 +637,24 @@ def _resolve_trusted_resume_start_phase(resume_stage: str) -> str:
         return RESUME_STAGE_TO_TRUSTED_PHASE[resume_stage]
     except KeyError as exc:
         raise ValueError(f"Unsupported trusted resume stage: {resume_stage}") from exc
+
+
+def _select_phase_range(start_phase: str, end_phase: str) -> list[str]:
+    if start_phase not in OPERATOR_PHASE_ORDER:
+        raise ValueError(f"Unsupported start phase: {start_phase}")
+    if end_phase not in OPERATOR_PHASE_ORDER:
+        raise ValueError(f"Unsupported end phase: {end_phase}")
+    start_index = OPERATOR_PHASE_ORDER.index(start_phase)
+    end_index = OPERATOR_PHASE_ORDER.index(end_phase)
+    if end_index < start_index:
+        raise ValueError("End phase must not come before start phase.")
+    return OPERATOR_PHASE_ORDER[start_index : end_index + 1]
+
+
+def _status_key_for_phase(phase_name: str) -> str:
+    if phase_name in {"identity_refinement_plan", "identity_refinement_apply"}:
+        return "identity_refinement"
+    return phase_name
 
 
 def _resolve_story_analysis_chapter_paths(project_slug: str, chapters: str | None) -> list[Path]:

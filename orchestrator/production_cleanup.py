@@ -213,6 +213,17 @@ def format_cleanup_plan(summary: CleanupPlanSummary) -> list[str]:
     return lines
 
 
+def format_cleanup_execution(summary: CleanupExecutionSummary) -> list[str]:
+    lines = [
+        f"Project: {summary.project_slug}",
+        f"Scope: {summary.scope}",
+        f"Deleted targets: {len(summary.deleted)}",
+        f"Skipped missing: {len(summary.skipped_missing)}",
+        f"Verification failures: {len(summary.verification_failed)}",
+    ]
+    return lines
+
+
 def _cleanup_plan_path(project_root: Path) -> Path:
     return project_root / "02_story_analysis" / "cleanup" / "last_cleanup_plan.json"
 

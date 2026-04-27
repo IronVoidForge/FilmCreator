@@ -32,8 +32,11 @@ from .selective_rerun import run_selective_reruns
 from .prompt_preparation import run_prompt_preparation
 from .production_cleanup import create_cleanup_plan, execute_cleanup_plan
 from .production_pipeline import (
+    OPERATOR_PHASE_ORDER,
+    format_production_run_summary,
     plan_trusted_resume_pipeline,
     run_full_production_pipeline,
+    run_phase_range,
     run_quicktest_composite,
     run_story_analysis_pipeline,
 )
@@ -248,6 +251,13 @@ def build_parser() -> argparse.ArgumentParser:
     cp.add_argument("--scope", choices=["prompt_prep_only", "downstream_only", "taxonomy_and_downstream"], required=True)
     cp.add_argument("--execute", action="store_true")
 
+    rpr = subparsers.add_parser("run-production-range")
+    rpr.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
+    rpr.add_argument("--start-phase", choices=OPERATOR_PHASE_ORDER, required=True)
+    rpr.add_argument("--end-phase", choices=OPERATOR_PHASE_ORDER, required=True)
+    rpr.add_argument("--chapters", type=str, default=None)
+    rpr.add_argument("--mode", choices=["resume", "force"], default="force")
+
     menu = subparsers.add_parser("menu")
     menu.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
     menu.add_argument("--chapters", type=str, default=None)
@@ -377,6 +387,14 @@ def main() -> None:
             summary = execute_cleanup_plan(args.project_slug)
         else:
             summary = create_cleanup_plan(args.project_slug, scope=args.scope)
+    elif args.command == "run-production-range":
+        summary = run_phase_range(
+            args.project_slug,
+            start_phase=args.start_phase,
+            end_phase=args.end_phase,
+            chapters=args.chapters,
+            mode=args.mode,
+        )
     elif args.command == "menu":
         run_pipeline_menu(
             initial_project=args.project_slug,

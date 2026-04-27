@@ -6,14 +6,19 @@ from pathlib import Path
 from typing import Callable
 
 from .character_references import run_character_reference_generation, run_character_reference_planning
-from .production_cleanup import create_cleanup_plan, execute_cleanup_plan, format_cleanup_plan
+from .production_cleanup import create_cleanup_plan, execute_cleanup_plan, format_cleanup_execution, format_cleanup_plan
 from .environment_references import run_environment_reference_generation, run_environment_reference_planning
 from .production_pipeline import (
+    CHAPTER_SCOPED_PHASES,
     DOWNSTREAM_PHASES,
+    OPERATOR_PHASE_ORDER,
+    PROJECT_WIDE_PHASES,
+    format_production_run_summary,
     plan_trusted_resume_pipeline,
     run_quicktest_composite,
     run_downstream_production,
     run_full_production_pipeline,
+    run_phase_range,
     run_post_taxonomy_pipeline,
     run_prompt_prep_refresh,
     run_story_analysis_pipeline,
@@ -80,7 +85,7 @@ def run_pipeline_menu(
         elif choice == "12":
             _run_cleanup(state, input_fn, output_fn)
         elif choice == "13":
-            output_fn("Advanced phase range is planned next. This first menu slice keeps the predefined safe workflows only.")
+            _run_advanced_range(state, input_fn, output_fn)
         elif choice == "14":
             output_fn("Exiting pipeline menu.")
             return state
@@ -210,13 +215,13 @@ def _run_full_pipeline(state: PipelineMenuState, output_fn: OutputFn) -> None:
             chapters=state.chapters,
         )
         output_fn("Trusted overnight resume behavior is active for resume mode.")
-        _emit_summary(plan.to_dict(), output_fn)
+        _emit_summary(plan.to_dict(), output_fn, formatted_lines=format_production_run_summary(plan))
     summary = run_full_production_pipeline(
         state.project_slug,
         chapters=state.chapters,
         mode=state.mode,
     )
-    _emit_summary(summary.to_dict(), output_fn)
+    _emit_summary(summary.to_dict(), output_fn, formatted_lines=format_production_run_summary(summary))
 
 
 def _run_story_analysis(state: PipelineMenuState, input_fn: InputFn, output_fn: OutputFn) -> None:
@@ -233,21 +238,24 @@ def _run_story_analysis(state: PipelineMenuState, input_fn: InputFn, output_fn: 
             chapters=None,
             mode="resume",
         )
-        _emit_summary(_to_dict(summary), output_fn)
+        formatted = format_production_run_summary(summary) if hasattr(summary, "profile") else None
+        _emit_summary(_to_dict(summary), output_fn, formatted_lines=formatted)
     elif choice == "2":
         summary = run_story_analysis_pipeline(
             state.project_slug,
             chapters=state.chapters,
             mode=state.mode,
         )
-        _emit_summary(_to_dict(summary), output_fn)
+        formatted = format_production_run_summary(summary) if hasattr(summary, "profile") else None
+        _emit_summary(_to_dict(summary), output_fn, formatted_lines=formatted)
     elif choice == "3":
         summary = run_story_analysis_pipeline(
             state.project_slug,
             chapters=None,
             mode="force",
         )
-        _emit_summary(_to_dict(summary), output_fn)
+        formatted = format_production_run_summary(summary) if hasattr(summary, "profile") else None
+        _emit_summary(_to_dict(summary), output_fn, formatted_lines=formatted)
     elif choice != "4":
         output_fn("Invalid story analysis selection.")
 
@@ -266,7 +274,7 @@ def _run_post_taxonomy(state: PipelineMenuState, input_fn: InputFn, output_fn: O
             mode=state.mode,
             include_taxonomy=True,
         )
-        _emit_summary(summary.to_dict(), output_fn)
+        _emit_summary(summary.to_dict(), output_fn, formatted_lines=format_production_run_summary(summary))
     elif choice == "2":
         summary = run_post_taxonomy_pipeline(
             state.project_slug,
@@ -274,7 +282,7 @@ def _run_post_taxonomy(state: PipelineMenuState, input_fn: InputFn, output_fn: O
             mode=state.mode,
             include_taxonomy=False,
         )
-        _emit_summary(summary.to_dict(), output_fn)
+        _emit_summary(summary.to_dict(), output_fn, formatted_lines=format_production_run_summary(summary))
     elif choice != "3":
         output_fn("Invalid selection.")
 
@@ -326,7 +334,8 @@ def _run_downstream(state: PipelineMenuState, input_fn: InputFn, output_fn: Outp
             start_phase=value,
             mode=state.mode,
         )
-    _emit_summary(_to_dict(summary), output_fn)
+    formatted = format_production_run_summary(summary) if hasattr(summary, "project_slug") else None
+    _emit_summary(_to_dict(summary), output_fn, formatted_lines=formatted)
 
 
 def _run_prompt_refresh(state: PipelineMenuState, input_fn: InputFn, output_fn: OutputFn) -> None:
@@ -343,7 +352,7 @@ def _run_prompt_refresh(state: PipelineMenuState, input_fn: InputFn, output_fn: 
             mode=state.mode,
             prompt_only=False,
         )
-        _emit_summary(summary.to_dict(), output_fn)
+        _emit_summary(summary.to_dict(), output_fn, formatted_lines=format_production_run_summary(summary))
     elif choice == "2":
         summary = run_prompt_prep_refresh(
             state.project_slug,
@@ -351,7 +360,7 @@ def _run_prompt_refresh(state: PipelineMenuState, input_fn: InputFn, output_fn: 
             mode=state.mode,
             prompt_only=True,
         )
-        _emit_summary(summary.to_dict(), output_fn)
+        _emit_summary(summary.to_dict(), output_fn, formatted_lines=format_production_run_summary(summary))
     elif choice != "3":
         output_fn("Invalid prompt refresh selection.")
 
@@ -461,7 +470,7 @@ def _run_cleanup(state: PipelineMenuState, input_fn: InputFn, output_fn: OutputF
             output_fn("Cleanup cancelled.")
             return
         summary = execute_cleanup_plan(state.project_slug)
-        _emit_summary(summary.to_dict(), output_fn)
+        _emit_summary(summary.to_dict(), output_fn, formatted_lines=format_cleanup_execution(summary))
     elif choice != "5":
         output_fn("Invalid cleanup selection.")
 
@@ -478,7 +487,36 @@ def _show_cleanup_plan(state: PipelineMenuState, scope: str, output_fn: OutputFn
     )
 
 
-def _emit_summary(summary: dict[str, object], output_fn: OutputFn) -> None:
+def _run_advanced_range(state: PipelineMenuState, input_fn: InputFn, output_fn: OutputFn) -> None:
+    output_fn("")
+    output_fn("Advanced phase range")
+    for index, phase_name in enumerate(OPERATOR_PHASE_ORDER, start=1):
+        scope = "chapter-scoped" if phase_name in CHAPTER_SCOPED_PHASES else "project-wide"
+        output_fn(f"{index}. {phase_name} ({scope})")
+    start_raw = input_fn("Start phase number: ").strip()
+    end_raw = input_fn("End phase number: ").strip()
+    if not start_raw.isdigit() or not end_raw.isdigit():
+        output_fn("Phase range selection expects numeric choices.")
+        return
+    start_index = int(start_raw) - 1
+    end_index = int(end_raw) - 1
+    if not (0 <= start_index < len(OPERATOR_PHASE_ORDER)) or not (0 <= end_index < len(OPERATOR_PHASE_ORDER)):
+        output_fn("Phase range selection is out of bounds.")
+        return
+    start_phase = OPERATOR_PHASE_ORDER[start_index]
+    end_phase = OPERATOR_PHASE_ORDER[end_index]
+    summary = run_phase_range(
+        state.project_slug,
+        start_phase=start_phase,
+        end_phase=end_phase,
+        chapters=state.chapters,
+        mode=state.mode,
+    )
+    formatted = format_production_run_summary(summary) if hasattr(summary, "profile") else None
+    _emit_summary(_to_dict(summary), output_fn, formatted_lines=formatted)
+
+
+def _emit_summary(summary: dict[str, object], output_fn: OutputFn, formatted_lines: list[str] | None = None) -> None:
     project_slug = summary.get("project_slug") if isinstance(summary, dict) else None
     run_type = summary.get("profile") if isinstance(summary, dict) else None
     if isinstance(project_slug, str) and project_slug:
@@ -487,6 +525,9 @@ def _emit_summary(summary: dict[str, object], output_fn: OutputFn) -> None:
             run_type=str(run_type or summary.get("command") or "menu_action"),
             payload=summary,
         )
+    if formatted_lines:
+        for line in formatted_lines:
+            output_fn(line)
     output_fn(json.dumps(summary, indent=2))
 
 
