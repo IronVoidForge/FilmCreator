@@ -32,6 +32,7 @@
 | 01_reference_architecture/02_IMPLEMENTATION_ROADMAP.md | spec/IMPLEMENTATION_ROADMAP.md | Architecture | implemented_reference | Historical roadmap |
 | 01_reference_architecture/03_CLI_PIPELINE_ORCHESTRATOR_SPEC.md | spec/CLI_PIPELINE_ORCHESTRATOR_SPEC.md | Architecture | implemented_reference | CLI orchestrator design |
 | 01_reference_architecture/04_MULTI_CHAPTER_WORLD_MODEL_PLAN.md | spec/MULTI_CHAPTER_WORLD_MODEL_PLAN.md | Architecture | implemented_reference | Multi-chapter world model plan |
+| 01_reference_architecture/05_CURRENT_SYSTEM_MAP.md | new | Architecture | implemented_reference | Current high-level map of phases, CLI, smart resume, lifecycle, prompt schema, and reference assets |
 | **02_completed_or_implemented_reference/** | | | | **Implemented specs kept as reference** |
 | 02_completed_or_implemented_reference/01_foundation/01_01_repo_project_scene_clip_hierarchy.md | spec/1_foundation/1.1_repo_project_scene_clip_hierarchy.md | Foundation | implemented_reference | Hierarchy implemented |
 | 02_completed_or_implemented_reference/01_foundation/01_02_id_naming_and_file_conventions.md | spec/1_foundation/1.2_id_naming_and_file_conventions.md | Foundation | implemented_reference | Naming conventions in use |
@@ -142,7 +143,7 @@ See: `03_active_current_blockers/01_smart_resume_validation.md`
 ## Verification Notes
 
 - All taxonomy specs verified against `orchestrator/character_taxonomy.py`, `orchestrator/world_refinement.py`, `orchestrator/character_bible.py`, `orchestrator/character_bible_fallback.py`, `orchestrator/quality_grading.py`
-- Prompt package schema mismatch noted: spec requires `Repair Notes`; implementation may parse as optional
+- Prompt package schema alignment is now implemented; `Repair Notes` heading is required
 - Legacy 2.x shared asset specs may be outdated; current code uses `03_reference_assets` rather than old `04_references`
 - No specs renamed to `__complete.md` in this pass
 - No orchestrator/test/launcher implementation behavior changed

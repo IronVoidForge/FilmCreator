@@ -4,6 +4,10 @@
 
 This folder breaks the project into numbered implementation chunks by feature and handoff boundary.
 
+If you need the best current top-level orientation doc first, start with:
+
+- `01_reference_architecture/05_CURRENT_SYSTEM_MAP.md`
+
 ## Status Rule
 
 - Progress across specs is tracked in `SPEC_PROGRESS.md`.
@@ -96,4 +100,22 @@ Phase B is now focused on:
 - post-ingest world refinement for safe duplicate/name/type cleanup
 - Phase 12 character sheet generation and approval
 - Phase 13 environment reference generation and approval
+
+## Current System Map
+
+The architecture README is no longer the only orientation doc.
+
+For the current implemented state of:
+
+- phase order
+- operator CLI
+- smart resume
+- prompt package schema
+- artifact lifecycle / reuse
+- reference assets
+- launchers vs CLI
+
+see:
+
+- `01_reference_architecture/05_CURRENT_SYSTEM_MAP.md`
 
