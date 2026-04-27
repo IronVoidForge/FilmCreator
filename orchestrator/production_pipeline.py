@@ -395,6 +395,7 @@ def run_downstream_production(
     chapters: str | None = None,
     start_phase: str = "scene_contracts",
     mode: str = "resume",
+    coverage_density: str | None = None,
 ) -> ProductionRunSummary:
     _validate_mode(mode)
     if start_phase not in DOWNSTREAM_PHASES:
@@ -407,6 +408,7 @@ def run_downstream_production(
             start_phase=start_phase,
             resume=True,
             use_llm=True,
+            coverage_density=coverage_density,
         )
         return ProductionRunSummary(
             profile="downstream",
@@ -420,7 +422,7 @@ def run_downstream_production(
     phase_summaries: dict[str, Any] = {}
     completed_phases: list[str] = []
     for phase_name in DOWNSTREAM_PHASES[DOWNSTREAM_PHASES.index(start_phase) :]:
-        summary = _run_force_phase(project_slug, phase_name, chapters=chapters)
+        summary = _run_force_phase(project_slug, phase_name, chapters=chapters, coverage_density=coverage_density)
         phase_summaries[phase_name] = _to_dict(summary)
         completed_phases.append(phase_name)
     return ProductionRunSummary(
@@ -439,6 +441,7 @@ def run_full_production_pipeline(
     chapters: str | None = None,
     mode: str = "resume",
     start_phase: str = "character_taxonomy",
+    coverage_density: str | None = None,
 ) -> ProductionRunSummary:
     _validate_mode(mode)
     ingest_summary = ensure_book_ingested(project_slug=project_slug)
@@ -496,6 +499,7 @@ def run_full_production_pipeline(
             chapters=chapters,
             start_phase=downstream_start,
             mode=mode,
+            coverage_density=coverage_density,
         )
         for phase_name, payload in downstream_summary.phase_summaries.items():
             phase_summaries[phase_name] = payload
@@ -639,13 +643,13 @@ def _run_trusted_phase(project_slug: str, phase_name: str, *, chapters: str | No
     return _run_force_phase(project_slug, phase_name, chapters=chapters)
 
 
-def _run_force_phase(project_slug: str, phase_name: str, *, chapters: str | None) -> Any:
+def _run_force_phase(project_slug: str, phase_name: str, *, chapters: str | None, coverage_density: str | None = None) -> Any:
     if phase_name == "scene_contracts":
         return run_scene_contract_synthesis(project_slug, use_llm=True, force=True, chapters=chapters)
     if phase_name == "scene_bindings":
         return run_scene_binding_synthesis(project_slug, force=True, chapters=chapters)
     if phase_name == "shot_packages":
-        return run_shot_planning(project_slug, use_llm=True, force=True, chapters=chapters)
+        return run_shot_planning(project_slug, use_llm=True, force=True, chapters=chapters, coverage_density=coverage_density)
     if phase_name == "dialogue_timeline":
         return run_dialogue_timeline(project_slug, force=True, chapters=chapters)
     if phase_name == "descriptor_enrichment":

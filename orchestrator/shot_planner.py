@@ -15,6 +15,13 @@ from .features.authoring.packet_parser import parse_packet_document
 from .lmstudio_client import LMStudioClient
 from .scaffold import create_project
 from .settings import load_runtime_settings
+from .shot_coverage import (
+    DEFAULT_COVERAGE_DENSITY,
+    DEFAULT_COVERAGE_PROFILE,
+    expand_scene_coverage,
+    normalize_coverage_density,
+    target_seconds_allowed,
+)
 
 SHOT_PLANNER_SCHEMA_VERSION = "2026-04-23-shot-planner-v6"
 
@@ -145,6 +152,14 @@ class ShotPackage:
     shot_notes: str = ""
     evidence_refs: list[dict[str, Any]] = field(default_factory=list)
     evidence_summary: list[str] = field(default_factory=list)
+    coverage_density: str = ""
+    coverage_profile: str = ""
+    coverage_intent: str = ""
+    coverage_role: str = ""
+    beat_type: str = ""
+    coverage_importance: str = ""
+    coverage_blueprint_source: str = ""
+    coverage_classification: dict[str, Any] = field(default_factory=dict)
     metadata: ShotPackageMetadata | None = None
 
     def to_dict(self) -> dict[str, Any]:
@@ -207,6 +222,14 @@ class ShotPackage:
             "shot_notes": self.shot_notes,
             "evidence_refs": self.evidence_refs,
             "evidence_summary": self.evidence_summary,
+            "coverage_density": self.coverage_density,
+            "coverage_profile": self.coverage_profile,
+            "coverage_intent": self.coverage_intent,
+            "coverage_role": self.coverage_role,
+            "beat_type": self.beat_type,
+            "coverage_importance": self.coverage_importance,
+            "coverage_blueprint_source": self.coverage_blueprint_source,
+            "coverage_classification": self.coverage_classification,
             "metadata": self.metadata.to_dict() if self.metadata else None,
         }
 
@@ -1702,16 +1725,38 @@ def _shot_title_from_beat(shot_type: str, beat_summary: str, shot_order: int) ->
     return f"{shot_type.replace('_', ' ').title()} {shot_order}"
 
 
-def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, scene_binding: dict[str, Any] | None = None) -> list[dict[str, Any]]:
+def _build_shot_blueprints(
+    scene_contract: dict[str, Any],
+    project_dir: Path,
+    scene_binding: dict[str, Any] | None = None,
+    *,
+    coverage_density: str = DEFAULT_COVERAGE_DENSITY,
+    coverage_profile: str = DEFAULT_COVERAGE_PROFILE,
+) -> list[dict[str, Any]]:
+    coverage_density = normalize_coverage_density(coverage_density)
     beats = scene_contract.get("beat_list", [])
     if not isinstance(beats, list) or not beats:
         beats = [{"beat_id": "BT001", "summary": scene_contract.get("summary", "") or scene_contract.get("production_intent", "") or scene_contract.get("scene_title", "")}]
+    beat_lookup: dict[str, Any] = {}
+    for beat_index, raw_beat in enumerate(beats, start=1):
+        if isinstance(raw_beat, dict):
+            beat_id = str(raw_beat.get("beat_id", f"BT{beat_index:03d}")).strip().upper() or f"BT{beat_index:03d}"
+        else:
+            beat_id = f"BT{beat_index:03d}"
+        beat_lookup[beat_id] = raw_beat
+    coverage_blueprints = expand_scene_coverage(
+        scene_contract,
+        coverage_density=coverage_density,
+        coverage_profile=coverage_profile,
+    )
     blueprints: list[dict[str, Any]] = []
     previous_end_state = _first_nonempty(str(scene_contract.get("scene_start_state", "")), str(scene_contract.get("summary", "")), fallback="")
-    planned_shots = _scene_planned_shot_map(scene_contract)
-    for index, raw_beat in enumerate(beats, start=1):
-        beat_id = f"BT{index:03d}"
-        shot_id = f"SH{index:03d}"
+    for coverage in coverage_blueprints:
+        coverage_payload = coverage.to_dict()
+        index = coverage.shot_order
+        beat_id = coverage.beat_id
+        shot_id = coverage.shot_id
+        raw_beat = beat_lookup.get(beat_id, "")
         beat_summary = ""
         beat_payload: dict[str, Any] = {
             "summary": "",
@@ -1726,7 +1771,6 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
             "handoff_to_next": "",
         }
         if isinstance(raw_beat, dict):
-            beat_id = str(raw_beat.get("beat_id", beat_id)).strip().upper() or beat_id
             beat_summary = _first_nonempty(
                 str(raw_beat.get("summary", "")),
                 str(raw_beat.get("markdown", "")),
@@ -1738,7 +1782,7 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
             beat_payload["summary"] = beat_summary
             beat_payload["action_start"] = beat_summary
             beat_payload["action_end"] = beat_summary
-        planned_shot = planned_shots.get(shot_id, {})
+        planned_shot = coverage.seed_planned_shot
         environment = _select_environment_ref(
             scene_contract,
             project_dir,
@@ -1746,7 +1790,7 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
             beat_id=beat_id,
             subzone_hint=_first_nonempty(str(planned_shot.get("environment_subzone", "")), str(beat_payload.get("environment_subzone", "")), fallback=""),
         )
-        provisional_shot_type = _shot_type_from_beat(scene_contract, beat_payload, index)
+        provisional_shot_type = coverage.shot_type or _shot_type_from_beat(scene_contract, beat_payload, index)
         subject_hints = _coerce_string_list(
             planned_shot.get("primary_subject_seed", ""),
             planned_shot.get("secondary_subjects_seed", []),
@@ -1774,7 +1818,7 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
         secondary_subject_hints = _coerce_string_list(planned_shot.get("secondary_subjects_seed", []), beat_payload.get("passive_subjects", []))
         provisional_enums = _default_shot_enums(provisional_shot_type, primary_subject)
         shot_size = _normalize_enum(planned_shot.get("shot_size"), SHOT_SIZE_ENUM, fallback=provisional_enums["shot_size"])
-        shot_type = _resolved_shot_type(scene_contract, beat_payload, planned_shot, index, shot_size)
+        shot_type = coverage.shot_type or _resolved_shot_type(scene_contract, beat_payload, planned_shot, index, shot_size)
         enums = _default_shot_enums(shot_type, primary_subject)
         camera_angle = _normalize_enum(planned_shot.get("camera_angle"), CAMERA_ANGLE_ENUM, fallback=enums["camera_angle"])
         lens_family = _normalize_enum(planned_shot.get("lens_family"), LENS_FAMILY_ENUM, fallback=enums["lens_family"])
@@ -1919,6 +1963,18 @@ def _build_shot_blueprints(scene_contract: dict[str, Any], project_dir: Path, sc
                 "shot_type": shot_type,
                 "camera_description": camera_description,
                 "composition": composition,
+                "target_seconds": coverage.target_seconds,
+                "coverage_density": coverage_payload["coverage_density"],
+                "coverage_profile": coverage_payload["coverage_profile"],
+                "coverage_intent": coverage_payload["coverage_intent"],
+                "coverage_role": coverage_payload["coverage_role"],
+                "beat_type": coverage_payload["beat_type"],
+                "coverage_importance": coverage_payload["coverage_importance"],
+                "coverage_blueprint_source": coverage_payload["coverage_blueprint_source"],
+                "coverage_classification": coverage_payload["coverage_classification"],
+                "coverage_subject_logic": coverage_payload["subject_logic"],
+                "coverage_required_detail": coverage_payload["required_detail"],
+                "coverage_continuity_purpose": coverage_payload["continuity_purpose"],
                 "characters_in_frame": [ref.to_dict() for ref in characters],
                 "environment": environment.to_dict(),
                 "continuity_constraints": continuity_constraints[:6],
@@ -2054,6 +2110,21 @@ def _llm_synthesis(
     user = f"""
 Create generation-ready shot packages from the provided scene contract and shot blueprints.
 
+COVERAGE DENSITY:
+{shot_blueprints[0].get("coverage_density", DEFAULT_COVERAGE_DENSITY) if shot_blueprints else DEFAULT_COVERAGE_DENSITY}
+
+COVERAGE RULES:
+- Return exactly {len(shot_blueprints)} shots.
+- Preserve every supplied shot_id and shot_order.
+- Do not add, remove, merge, or renumber shots.
+- Each shot is one cuttable movie shot, not a paragraph summary.
+- If a blueprint is weak, improve its details but keep its coverage role.
+- Fill every shot with concrete subject, camera, blocking, start_state, end_state, and handoff.
+- Every shot must name exactly one primary framed subject or a clearly framed group/environment subject.
+- For group/court dialogue, prefer speaker singles, group reactions, key individual reactions, and tableau geography over excessive OTS.
+- Use OTS/reverse/single/reaction/insert/cutaway roles when supplied by the blueprint.
+- Keep target_seconds in the configured range unless the blueprint marks the shot as a master, tableau, wide, or transition shot.
+
 PRIORITIES:
 1. keep the shot order stable
 2. tighten camera and composition language
@@ -2125,6 +2196,14 @@ action_during_shot: <what the shot is actively covering>
 action_continues_from: <what visual/action state this inherits>
 action_hands_off_to: <what the next shot should inherit>
 shot_type: <shot type>
+coverage_role: <preserved coverage role from blueprint>
+coverage_density: <preserved coverage density>
+coverage_profile: <preserved coverage profile>
+coverage_intent: <preserved coverage intent>
+beat_type: <preserved beat type>
+coverage_importance: <preserved coverage importance>
+coverage_blueprint_source: <preserved blueprint source>
+target_seconds: <preserved or lightly adjusted target seconds>
 shot_size: <extreme_wide|wide|full|medium_full|medium|medium_close|close_up|extreme_close_up|insert_detail>
 camera_angle: <eye_level|low_angle|high_angle|overhead|dutch>
 lens_family: <ultra_wide|wide|normal|portrait|telephoto>
@@ -2204,6 +2283,13 @@ shot_notes: <optional short note>
                     "action_hands_off_to": _first_nonempty(scalars.get("action_hands_off_to"), fallback=""),
                     "shot_title": _first_nonempty(scalars.get("shot_title"), fallback=""),
                     "shot_type": _first_nonempty(scalars.get("shot_type"), fallback=""),
+                    "coverage_role": _first_nonempty(scalars.get("coverage_role"), fallback=""),
+                    "coverage_density": _first_nonempty(scalars.get("coverage_density"), fallback=""),
+                    "coverage_profile": _first_nonempty(scalars.get("coverage_profile"), fallback=""),
+                    "coverage_intent": _first_nonempty(scalars.get("coverage_intent"), fallback=""),
+                    "beat_type": _first_nonempty(scalars.get("beat_type"), fallback=""),
+                    "coverage_importance": _first_nonempty(scalars.get("coverage_importance"), fallback=""),
+                    "coverage_blueprint_source": _first_nonempty(scalars.get("coverage_blueprint_source"), fallback=""),
                     "shot_size": _first_nonempty(scalars.get("shot_size"), fallback=""),
                     "camera_angle": _first_nonempty(scalars.get("camera_angle"), fallback=""),
                     "lens_family": _first_nonempty(scalars.get("lens_family"), fallback=""),
@@ -2286,6 +2372,8 @@ _SCENE_SYNTHESIS_REQUIRED_FIELDS = [
 
 def _shot_plan_payload_quality_issues(payload: list[dict[str, Any]] | None, shot_blueprints: list[dict[str, Any]]) -> list[str]:
     expected_ids = [str(item.get("shot_id", "")).strip().upper() for item in shot_blueprints if str(item.get("shot_id", "")).strip()]
+    expected_by_id = {str(item.get("shot_id", "")).strip().upper(): item for item in shot_blueprints if str(item.get("shot_id", "")).strip()}
+    coverage_required = any(str(item.get("coverage_role", "")).strip() for item in shot_blueprints)
     if not payload:
         return ["LLM returned no shot records for the scene."]
     parsed_records = [_parse_shot_plan_blueprint(item) for item in payload if isinstance(item, dict)]
@@ -2299,6 +2387,9 @@ def _shot_plan_payload_quality_issues(payload: list[dict[str, Any]] | None, shot
         issues.append(f"Missing shot ids: {', '.join(missing_ids[:6])}.")
     if extra_ids:
         issues.append(f"Unexpected shot ids: {', '.join(extra_ids[:6])}.")
+    duplicate_ids = [shot_id for shot_id in _ordered_unique(actual_ids) if actual_ids.count(shot_id) > 1]
+    if duplicate_ids:
+        issues.append(f"Duplicate or merged shot ids: {', '.join(duplicate_ids[:6])}.")
 
     by_id = {str(item.get("shot_id", "")).strip().upper(): item for item in parsed_records}
     for shot_id in expected_ids:
@@ -2306,9 +2397,12 @@ def _shot_plan_payload_quality_issues(payload: list[dict[str, Any]] | None, shot
         if not record:
             continue
         missing_fields = [field for field in _SCENE_SYNTHESIS_REQUIRED_FIELDS if not str(record.get(field, "")).strip()]
+        blueprint = expected_by_id.get(shot_id, {})
         subject_visibility = str(record.get("subject_visibility", "")).strip()
         if subject_visibility in {"on_screen", "partial", "silhouette"} and not str(record.get("visible_primary_subject_id", "")).strip():
             missing_fields.append("visible_primary_subject_id")
+        if coverage_required and not str(record.get("coverage_role", "")).strip():
+            missing_fields.append("coverage_role")
         if not _coerce_string_list(record.get("beat_ids", [])):
             missing_fields.append("beat_ids")
         if not _coerce_string_list(record.get("subject_blocking", [])):
@@ -2319,7 +2413,61 @@ def _shot_plan_payload_quality_issues(payload: list[dict[str, Any]] | None, shot
             missing_fields.append("prompt_seed>=40_chars")
         if missing_fields:
             issues.append(f"{shot_id} missing or thin fields: {', '.join(_ordered_unique(missing_fields)[:10])}.")
+        enum_issues = _shot_plan_enum_issues(record)
+        if enum_issues:
+            issues.append(f"{shot_id} invalid enum values: {', '.join(enum_issues[:8])}.")
+        visible_id = str(record.get("visible_primary_subject_id", "")).strip()
+        primary_subject = str(record.get("primary_subject", "")).strip()
+        if visible_id and primary_subject and not _visible_primary_subject_matches(primary_subject, visible_id, record):
+            issues.append(f"{shot_id} visible primary subject mismatch: {primary_subject} vs {visible_id}.")
+        target_seconds = _coerce_float(record.get("target_seconds"), fallback=0.0)
+        if target_seconds and blueprint.get("coverage_density") and not target_seconds_allowed(
+            target_seconds,
+            str(blueprint.get("coverage_density", DEFAULT_COVERAGE_DENSITY)),
+            str(record.get("shot_type", "") or blueprint.get("shot_type", "")),
+            str(record.get("coverage_role", "") or blueprint.get("coverage_role", "")),
+        ):
+            issues.append(f"{shot_id} target_seconds outside coverage range: {target_seconds}.")
     return issues[:12]
+
+
+def _shot_plan_enum_issues(record: dict[str, Any]) -> list[str]:
+    enum_fields = {
+        "shot_size": SHOT_SIZE_ENUM,
+        "camera_angle": CAMERA_ANGLE_ENUM,
+        "lens_family": LENS_FAMILY_ENUM,
+        "camera_motion": CAMERA_MOTION_ENUM,
+        "zoom_behavior": ZOOM_BEHAVIOR_ENUM,
+        "focus_strategy": FOCUS_STRATEGY_ENUM,
+        "lighting_style": LIGHTING_STYLE_ENUM,
+        "subject_visibility": SUBJECT_VISIBILITY_ENUM,
+        "narration_mode": NARRATION_MODE_ENUM,
+        "primary_subject_angle": PRIMARY_SUBJECT_ANGLE_ENUM,
+    }
+    issues: list[str] = []
+    for field_name, allowed in enum_fields.items():
+        value = str(record.get(field_name, "")).strip()
+        if value and value not in allowed:
+            issues.append(f"{field_name}={value}")
+    return issues
+
+
+def _visible_primary_subject_matches(primary_subject: str, visible_id: str, record: dict[str, Any]) -> bool:
+    if visible_id in {"scene_subject", "environment", "group", "crowd"}:
+        return True
+    primary_key = _normalize_match_key(primary_subject)
+    visible_key = _normalize_match_key(visible_id)
+    if primary_key and visible_key and (primary_key in visible_key or visible_key in primary_key):
+        return True
+    for item in record.get("characters_in_frame", []):
+        if not isinstance(item, dict):
+            continue
+        if str(item.get("canonical_id", "")).strip() != visible_id:
+            continue
+        labels = [str(item.get("label", "")), str(item.get("display_name", ""))]
+        if any(primary_key and primary_key in _normalize_match_key(label) for label in labels):
+            return True
+    return False
 
 
 def _parse_shot_plan_blueprint(payload: dict[str, Any]) -> dict[str, Any]:
@@ -2376,6 +2524,14 @@ def _parse_shot_plan_blueprint(payload: dict[str, Any]) -> dict[str, Any]:
         "continuity_constraints": _coerce_string_list(payload.get("continuity_constraints", [])),
         "prompt_seed": str(payload.get("prompt_seed", "")),
         "shot_notes": str(payload.get("shot_notes", "")),
+        "coverage_density": str(payload.get("coverage_density", "")),
+        "coverage_profile": str(payload.get("coverage_profile", "")),
+        "coverage_intent": str(payload.get("coverage_intent", "")),
+        "coverage_role": str(payload.get("coverage_role", "")),
+        "beat_type": str(payload.get("beat_type", "")),
+        "coverage_importance": str(payload.get("coverage_importance", "")),
+        "coverage_blueprint_source": str(payload.get("coverage_blueprint_source", "")),
+        "coverage_classification": payload.get("coverage_classification", {}) if isinstance(payload.get("coverage_classification"), dict) else {},
     }
 
 
@@ -2713,15 +2869,44 @@ def _ordered_unique(values: list[str]) -> list[str]:
     return ordered
 
 
+def _load_project_generation_config(project_dir: Path) -> dict[str, Any]:
+    for relative in ("project_config.json", "config.json", "filmcreator_config.json"):
+        path = project_dir / relative
+        if path.exists():
+            payload = read_json(path)
+            if isinstance(payload, dict):
+                return payload
+    return {}
+
+
+def _resolve_coverage_density(project_dir: Path, cli_density: str | None = None) -> str:
+    if cli_density:
+        return normalize_coverage_density(cli_density)
+    project_config = _load_project_generation_config(project_dir)
+    for key in ("shot_coverage_density", "coverage_density"):
+        if project_config.get(key):
+            return normalize_coverage_density(project_config.get(key))
+    settings = load_runtime_settings()
+    return normalize_coverage_density(settings.shot_coverage_density, default=DEFAULT_COVERAGE_DENSITY)
+
+
+def _resolve_coverage_profile(project_dir: Path) -> str:
+    project_config = _load_project_generation_config(project_dir)
+    value = str(project_config.get("shot_coverage_profile", "") or project_config.get("coverage_profile", "")).strip()
+    return value or DEFAULT_COVERAGE_PROFILE
+
+
 def run_shot_planning(
     project_slug: str,
     *,
     use_llm: bool = True,
     force: bool = False,
     chapters: str | None = None,
+    coverage_density: str | None = None,
     run_tracker: "DownstreamRunTracker | None" = None,
 ) -> ShotPlanningSummary:
     project_dir = create_project(project_slug)
+    resolved_coverage_density = _resolve_coverage_density(project_dir, coverage_density)
     selected_chapters = set(parse_chapter_selector(chapters))
     scene_contract_files = [
         path for path in _scene_contract_files(project_dir) if chapter_matches(path.parent.name or path.stem[:5], selected_chapters)
@@ -2756,7 +2941,13 @@ def run_shot_planning(
         scene_dir.mkdir(parents=True, exist_ok=True)
         print(f"[shot-planner] {scene_index}/{total_scenes} starting {scene_id}...")
 
-        shot_blueprints = _build_shot_blueprints(scene_contract, project_dir, scene_binding=scene_binding)
+        shot_blueprints = _build_shot_blueprints(
+            scene_contract,
+            project_dir,
+            scene_binding=scene_binding,
+            coverage_density=resolved_coverage_density,
+            coverage_profile=_resolve_coverage_profile(project_dir),
+        )
         evidence = _load_shot_planning_evidence(
             project_dir=project_dir,
             scene_contract=scene_contract,
@@ -2870,6 +3061,8 @@ def run_shot_planning(
                 blueprint_payload["shot_title"] = str(blueprint.get("shot_title", ""))
             if not blueprint_payload.get("shot_type"):
                 blueprint_payload["shot_type"] = str(blueprint.get("shot_type", "medium"))
+            if not blueprint_payload.get("target_seconds"):
+                blueprint_payload["target_seconds"] = _coerce_float(blueprint.get("target_seconds"), estimated_seconds, fallback=estimated_seconds or 5.0)
             for key in [
                 "shot_moment_summary",
                 "primary_subject",
@@ -2904,9 +3097,18 @@ def run_shot_planning(
                 "continuity_to_next_shot",
                 "pose_anchor_frame",
                 "pose_end_frame",
+                "coverage_density",
+                "coverage_profile",
+                "coverage_intent",
+                "coverage_role",
+                "beat_type",
+                "coverage_importance",
+                "coverage_blueprint_source",
             ]:
                 if not blueprint_payload.get(key):
                     blueprint_payload[key] = str(blueprint.get(key, ""))
+            if not blueprint_payload.get("coverage_classification") and isinstance(blueprint.get("coverage_classification"), dict):
+                blueprint_payload["coverage_classification"] = blueprint.get("coverage_classification", {})
             for key in [
                 "secondary_subjects",
                 "visible_secondary_subject_ids",
@@ -3091,6 +3293,14 @@ def run_shot_planning(
                     *evidence["character_evidence"],
                     *evidence["environment_evidence"],
                 ],
+                coverage_density=_first_nonempty(merged.get("coverage_density"), fallback=coverage_density),
+                coverage_profile=_first_nonempty(merged.get("coverage_profile"), fallback=DEFAULT_COVERAGE_PROFILE),
+                coverage_intent=_first_nonempty(merged.get("coverage_intent"), fallback=""),
+                coverage_role=_first_nonempty(merged.get("coverage_role"), fallback=""),
+                beat_type=_first_nonempty(merged.get("beat_type"), fallback=""),
+                coverage_importance=_first_nonempty(merged.get("coverage_importance"), fallback=""),
+                coverage_blueprint_source=_first_nonempty(merged.get("coverage_blueprint_source"), fallback=""),
+                coverage_classification=merged.get("coverage_classification", {}) if isinstance(merged.get("coverage_classification"), dict) else {},
                 metadata=metadata,
             )
 
@@ -3381,6 +3591,14 @@ def _package_from_existing(existing: dict[str, Any], metadata: ShotPackageMetada
         shot_notes=str(existing.get("shot_notes", "")),
         evidence_refs=existing.get("evidence_refs", []),
         evidence_summary=existing.get("evidence_summary", []),
+        coverage_density=str(existing.get("coverage_density", "")),
+        coverage_profile=str(existing.get("coverage_profile", "")),
+        coverage_intent=str(existing.get("coverage_intent", "")),
+        coverage_role=str(existing.get("coverage_role", "")),
+        beat_type=str(existing.get("beat_type", "")),
+        coverage_importance=str(existing.get("coverage_importance", "")),
+        coverage_blueprint_source=str(existing.get("coverage_blueprint_source", "")),
+        coverage_classification=existing.get("coverage_classification", {}) if isinstance(existing.get("coverage_classification"), dict) else {},
         metadata=metadata,
     )
 

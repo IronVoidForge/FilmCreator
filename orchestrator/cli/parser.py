@@ -145,6 +145,7 @@ def build_parser() -> argparse.ArgumentParser:
     synth.add_argument("--force", action="store_true")
     synth.add_argument("--no-llm", action="store_true")
     synth.add_argument("--limit", type=int, default=None)
+    synth.add_argument("--coverage-density", choices=["legacy", "low", "medium", "high"], default=None)
 
     legacy = subparsers.add_parser("legacy", help="Run a legacy command through the archived compatibility surface.")
     legacy.add_argument("legacy_args", nargs=argparse.REMAINDER)

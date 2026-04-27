@@ -118,7 +118,7 @@ def _run_or_plan_quick_test(args) -> Any:
         steps["bibles"] = _refresh_bibles(args).to_dict()
     steps["scene_contracts"] = run_scene_contract_synthesis(args.project_slug, use_llm=True, force=True, chapters=args.chapters).to_dict()
     steps["scene_bindings"] = run_scene_binding_synthesis(args.project_slug, force=True, chapters=args.chapters).to_dict()
-    steps["shot_packages"] = run_shot_planning(args.project_slug, use_llm=True, force=True, chapters=args.chapters).to_dict()
+    steps["shot_packages"] = run_shot_planning(args.project_slug, use_llm=True, force=True, chapters=args.chapters, coverage_density=getattr(args, "coverage_density", None)).to_dict()
     steps["dialogue_timeline"] = run_dialogue_timeline(args.project_slug, force=True, chapters=args.chapters).to_dict()
     steps["visual_fallbacks"] = run_visual_fallback_synthesis(args.project_slug, force=True).to_dict()
     steps["descriptor_enrichment"] = run_descriptor_enrichment(args.project_slug, use_llm=True, force=True, chapters=args.chapters).to_dict()
@@ -149,7 +149,7 @@ def _run_stage(args) -> Any:
     if args.stage == "scene_bindings":
         return run_scene_binding_synthesis(args.project_slug, force=args.force, chapters=args.chapters)
     if args.stage == "shot_packages":
-        return run_shot_planning(args.project_slug, use_llm=not args.no_llm, force=args.force, chapters=args.chapters)
+        return run_shot_planning(args.project_slug, use_llm=not args.no_llm, force=args.force, chapters=args.chapters, coverage_density=args.coverage_density)
     if args.stage == "dialogue_timeline":
         return run_dialogue_timeline(args.project_slug, force=args.force, chapters=args.chapters)
     if args.stage == "descriptor_enrichment":

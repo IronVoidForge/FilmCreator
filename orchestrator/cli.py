@@ -46,6 +46,7 @@ from .production_run_state import persist_run_summary
 from .production_status import get_production_status, get_resume_check_summary
 from .scene_contracts import run_scene_contract_synthesis
 from .scene_bindings import run_scene_binding_synthesis
+from .shot_coverage import COVERAGE_DENSITIES
 from .shot_planner import run_shot_planning
 from .visual_fallbacks import run_visual_fallback_synthesis
 from .pipeline_menu import run_pipeline_menu
@@ -94,6 +95,7 @@ def build_parser() -> argparse.ArgumentParser:
     sp.add_argument("--no-llm", action="store_true")
     sp.add_argument("--force", action="store_true")
     sp.add_argument("--chapters", type=str, default=None)
+    sp.add_argument("--coverage-density", choices=sorted(COVERAGE_DENSITIES), default=None)
 
     dt = subparsers.add_parser("synthesize-dialogue-timeline")
     dt.add_argument("project_slug")
@@ -231,6 +233,7 @@ def build_parser() -> argparse.ArgumentParser:
     dp.add_argument("--no-resume", action="store_true")
     dp.add_argument("--no-llm", action="store_true")
     dp.add_argument("--shot-variant", action="append", choices=["primary_keyframe", "alternate_angle", "consistency_repair"], dest="shot_variants")
+    dp.add_argument("--coverage-density", choices=sorted(COVERAGE_DENSITIES), default=None)
 
     ds = subparsers.add_parser("summarize-downstream-run")
     ds.add_argument("project_slug")
@@ -251,6 +254,7 @@ def build_parser() -> argparse.ArgumentParser:
     rp.add_argument("--profile", choices=["full", "post-taxonomy"], default="full")
     rp.add_argument("--skip-taxonomy", action="store_true")
     rp.add_argument("--plan-only", action="store_true")
+    rp.add_argument("--coverage-density", choices=sorted(COVERAGE_DENSITIES), default=None)
 
     rsa = subparsers.add_parser("run-story-analysis")
     rsa.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
@@ -299,7 +303,7 @@ def main() -> None:
     elif args.command == "synthesize-scene-bindings":
         summary = run_scene_binding_synthesis(args.project_slug, force=args.force, chapters=args.chapters)
     elif args.command == "synthesize-shot-packages":
-        summary = run_shot_planning(args.project_slug, use_llm=not args.no_llm, force=args.force, chapters=args.chapters)
+        summary = run_shot_planning(args.project_slug, use_llm=not args.no_llm, force=args.force, chapters=args.chapters, coverage_density=args.coverage_density)
     elif args.command == "synthesize-dialogue-timeline":
         summary = run_dialogue_timeline(args.project_slug, force=args.force, chapters=args.chapters)
     elif args.command == "synthesize-dialogue-enrichment":
@@ -374,7 +378,7 @@ def main() -> None:
             else {"project_slug": args.project_slug, "status": "ingested", **ingest_summary.to_dict()}
         )
     elif args.command == "run-downstream-pipeline":
-        summary = run_downstream_pipeline(args.project_slug, chapters=args.chapters, start_phase=args.start_phase, pipeline_key=args.pipeline_key, resume=not args.no_resume, use_llm=not args.no_llm, shot_variants=args.shot_variants)
+        summary = run_downstream_pipeline(args.project_slug, chapters=args.chapters, start_phase=args.start_phase, pipeline_key=args.pipeline_key, resume=not args.no_resume, use_llm=not args.no_llm, shot_variants=args.shot_variants, coverage_density=args.coverage_density)
     elif args.command == "summarize-downstream-run":
         summary = summarize_downstream_run(args.project_slug, pipeline_key=args.pipeline_key)
     elif args.command == "project-status":
@@ -390,12 +394,14 @@ def main() -> None:
                 chapters=args.chapters,
                 mode=args.mode,
                 start_phase="character_bibles" if args.skip_taxonomy else "character_taxonomy",
+                coverage_density=args.coverage_density,
             )
         else:
             summary = run_full_production_pipeline(
                 args.project_slug,
                 chapters=args.chapters,
                 mode=args.mode,
+                coverage_density=args.coverage_density,
             )
     elif args.command == "run-story-analysis":
         summary = run_story_analysis_pipeline(

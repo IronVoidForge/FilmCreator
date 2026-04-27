@@ -71,6 +71,7 @@ def run_downstream_pipeline(
     resume: bool = True,
     use_llm: bool = True,
     shot_variants: list[str] | None = None,
+    coverage_density: str | None = None,
 ) -> DownstreamPipelineSummary:
     if start_phase not in DOWNSTREAM_PHASE_ORDER:
         raise ValueError(f"Unknown downstream start phase: {start_phase}")
@@ -81,6 +82,7 @@ def run_downstream_pipeline(
         "start_phase": start_phase,
         "use_llm": use_llm,
         "shot_variants": list(shot_variants or []),
+        "coverage_density": coverage_density,
         "stage_versions": {
             "scene_contracts": SCENE_CONTRACT_SCHEMA_VERSION,
             "scene_bindings": SCENE_BINDING_SCHEMA_VERSION,
@@ -113,6 +115,7 @@ def run_downstream_pipeline(
                     use_llm=use_llm,
                     force=False,
                     chapters=chapters,
+                    coverage_density=coverage_density,
                     run_tracker=tracker,
                 )
             elif phase_name == "scene_bindings":

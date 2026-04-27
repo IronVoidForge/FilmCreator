@@ -1,4 +1,4 @@
-from orchestrator.shot_planner import _shot_plan_payload_quality_issues
+from orchestrator.shot_planner import _build_shot_blueprints, _shot_plan_payload_quality_issues
 
 
 def _shot_payload(shot_id: str) -> dict:
@@ -58,3 +58,66 @@ def test_scene_shot_payload_quality_flags_missing_ids_and_thin_fields():
     assert any("Expected 2 shot records" in issue for issue in issues)
     assert any("Missing shot ids: SH002" in issue for issue in issues)
     assert any("SH001 missing or thin fields" in issue for issue in issues)
+
+
+def test_scene_shot_payload_quality_rejects_extra_id_and_blank_core_fields():
+    blueprints = [{"shot_id": "SH001", "coverage_role": "master_two_shot", "coverage_density": "medium"}]
+    payload = [_shot_payload("SH001"), _shot_payload("SH002")]
+    payload[0]["primary_subject"] = ""
+    payload[0]["start_state"] = ""
+    payload[0]["coverage_role"] = ""
+
+    issues = _shot_plan_payload_quality_issues(payload, blueprints)
+
+    assert any("Unexpected shot ids: SH002" in issue for issue in issues)
+    assert any("SH001 missing or thin fields" in issue and "primary_subject" in issue for issue in issues)
+    assert any("coverage_role" in issue for issue in issues)
+
+
+def test_build_shot_blueprints_medium_expands_coverage_metadata(tmp_path):
+    scene_contract = {
+        "scene_id": "CH001_SC001",
+        "chapter_id": "CH001",
+        "scene_title": "The Warning",
+        "summary": "Dorothy warns the companions and they decide what to do.",
+        "beat_list": [
+            {
+                "beat_id": "BT001",
+                "summary": "Dorothy warns the group and Scarecrow answers.",
+                "active_subjects": ["Dorothy", "Scarecrow", "Tin Woodman"],
+                "passive_subjects": ["Lion"],
+                "action_start": "The group gathers.",
+                "action_end": "The group has heard the warning.",
+                "environment_subzone": "road bend",
+            }
+        ],
+    }
+
+    blueprints = _build_shot_blueprints(scene_contract, tmp_path, coverage_density="medium")
+
+    assert len(blueprints) > 1
+    assert blueprints[0]["coverage_density"] == "medium"
+    assert blueprints[0]["coverage_profile"] == "classic_adventure"
+    assert blueprints[0]["coverage_role"]
+    assert blueprints[0]["beat_type"] == "dialogue_group"
+    assert isinstance(blueprints[0]["coverage_classification"], dict)
+    assert all(blueprint["primary_subject"] for blueprint in blueprints)
+    assert all(blueprint["start_state"] and blueprint["end_state"] and blueprint["action_during_shot"] for blueprint in blueprints)
+
+
+def test_build_shot_blueprints_legacy_matches_one_shot_per_beat_shape(tmp_path):
+    scene_contract = {
+        "scene_id": "CH001_SC001",
+        "chapter_id": "CH001",
+        "scene_title": "Two Beats",
+        "summary": "Two compact beats.",
+        "beat_list": [
+            {"beat_id": "BT001", "summary": "Dorothy enters the road."},
+            {"beat_id": "BT002", "summary": "Dorothy asks Scarecrow for help."},
+        ],
+    }
+
+    blueprints = _build_shot_blueprints(scene_contract, tmp_path, coverage_density="legacy")
+
+    assert [blueprint["shot_id"] for blueprint in blueprints] == ["SH001", "SH002"]
+    assert [blueprint["beat_ids"] for blueprint in blueprints] == [["BT001"], ["BT002"]]

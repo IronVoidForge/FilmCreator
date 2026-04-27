@@ -19,6 +19,7 @@ class RuntimeSettings:
     lmstudio_base_url: str
     lmstudio_model: str | None
     lmstudio_timeout_seconds: float
+    shot_coverage_density: str
 
 
 def load_runtime_settings() -> RuntimeSettings:
@@ -32,4 +33,5 @@ def load_runtime_settings() -> RuntimeSettings:
         lmstudio_base_url=os.environ.get("FILMCREATOR_LMSTUDIO_BASE_URL", "http://127.0.0.1:1234/v1").rstrip("/"),
         lmstudio_model=os.environ.get("FILMCREATOR_LMSTUDIO_MODEL") or DEFAULT_LLM_MODEL,
         lmstudio_timeout_seconds=float(os.environ.get("FILMCREATOR_LMSTUDIO_TIMEOUT_SECONDS", "120.0")),
+        shot_coverage_density=os.environ.get("FILMCREATOR_SHOT_COVERAGE_DENSITY", "medium").strip().lower() or "medium",
     )
