@@ -1,0 +1,160 @@
+# Environment Bible Review Queue
+
+- `farmhouse_interior_and_cellar`
+  - Specific visual characteristics of the farmhouse interior are not defined in provided evidence.
+  - Specific visual characteristics of the cellar are not defined in provided evidence.
+- `flying_house_interior`
+  - Complete lack of descriptive detail regarding the interior layout, lighting, or aesthetic.
+- `kansas_prairie_landscape`
+  - Lack of specific visual, lighting, or atmospheric descriptors in provided evidence.
+  - Spatial layout and scale are currently undefined.
+- `cyclone_storm_void`
+  - Visual characteristics of the "cyclone storm void" are not defined in provided evidence.
+  - Spatial geometry and internal layout are unknown.
+- `oz_lush_countryside`
+  - Specific visual descriptors (flora, topography, color palette) are missing from current evidence.
+  - Spatial relationship between chapters is not defined.
+- `yellow_brick_road_pathway`
+  - Specific visual textures or colors of the pathway are not explicitly defined in the provided text.
+  - Spatial relationship to surrounding terrain is unknown.
+- `cornfield_scarecrow_post`
+  - Specific visual details of the "singular wooden post" are not defined.
+  - The exact nature of the "sudden movement" within the greenery is unspecified.
+- `munchkin_country_farms`
+  - Specific spatial relationship between the farms and the blue dome structures is not defined.
+- `yellow_brick_road_transit`
+  - Specific terrain surrounding the road is not defined in provided evidence.
+- `brookside_meadow`
+  - Visual characteristics (flora, topography, water features) are entirely undocumented.
+  - Specific spatial relationship to other environments is unknown.
+- `dense_dark_forest`
+  - Specific visual textures and flora are unknown.
+  - Spatial layout and scale are undocumented.
+  - Atmospheric mood beyond "nighttime" is unstated.
+- `deteriorating_yellow_brick_road`
+  - Specific visual nature of the "deterioration" is not defined.
+  - Spatial boundaries and surrounding terrain are unknown.
+- `log_branch_cottage`
+  - Specific architectural or interior visual details are currently undocumented.
+  - Spatial relationship to other environments is unknown.
+- `forest_and_cottage_setting`
+  - Specific visual characteristics of the forest and cottage are not defined.
+  - Detailed spatial layout between the forest and the cottage is unknown.
+- `yellow_brick_road`
+  - Visual characteristics (color, texture, material) are not defined in the provided evidence.
+  - Spatial dimensions and specific pathing are unknown.
+- `thick_dark_forest`
+  - Specific visual characteristics (flora, density, terrain) are undocumented.
+  - Detailed lighting conditions beyond the implied "dark" descriptor are unknown.
+- `arizona_dense_forest_and_ditches`
+  - Specific visual density of the forest is not detailed beyond "dense."
+  - Precise topographical relationship between the forest and the ditches is unstated.
+- `swift_riverbank_and_meadow_view`
+  - Visual characteristics (flora, water speed, topography) are currently undocumented.
+  - Specific spatial relationship between the riverbank and the meadow is unverified.
+- `scarlet_poppy_meadow`
+  - Specific visual scale and density of the poppy field are unstated.
+  - Precise nature of the "hazard" is not defined in provided evidence.
+- `swift_river_crossing`
+  - Specific visual characteristics of the river (width, depth, bank composition) are unknown.
+  - Precise environmental details for appearances in CH002 and CH007 are not provided.
+- `grassy_riverbank_meadow`
+  - Specific visual characteristics (flora, water state, topography) are undocumented.
+  - Detailed spatial layout is unknown.
+- `poppy_field_bed`
+  - Specific visual characteristics of the poppy field are not defined.
+  - The exact nature of the "hazard" is not detailed in provided evidence.
+- `emerald_city_gates`
+  - Specific architectural details of the "massive emerald gates" are not defined beyond color and scale.
+  - The specific nature or appearance of the "Guardian" is unstated.
+- `emerald_city_streets`
+  - Specific architectural styles beyond "opulent verdant architecture" are not defined.
+- `green_countryside_landscape`
+  - Specific visual descriptors (flora, topography, color palette) are not defined.
+  - Detailed lighting and atmospheric conditions are unknown.
+- `palace_of_oz`
+  - Specific architectural details beyond "grand palace interiors" are not provided.
+  - Exact color palette beyond "emerald-themed" is unspecified.
+- `western_rugged_lands`
+  - Specific visual characteristics (topography, flora, climate) are undocumented.
+  - Spatial layout and scale are unknown.
+- `wicked_witch_castle_courtyard`
+  - Complete lack of visual or architectural detail in provided evidence.
+  - Spatial relationship to the rest of the castle is undefined.
+- `wicked_witch_castle_interior`
+  - Specific architectural or decorative details are currently undocumented.
+  - Visual tone and lighting schemes are undefined.
+- `rocky_plain`
+  - Visual characteristics (topography, flora, color palette) are completely undefined.
+  - Specific spatial layout is unknown.
+- `tall_tree_location`
+  - Visual characteristics of the "tall tree" are not defined in provided evidence.
+  - Spatial relationship to other environments is unknown.
+- `yellow_castle`
+  - Specific visual descriptors (color, scale, architecture) are not provided in the source material.
+  - Internal layout and spatial configuration are unknown.
+- `aerial_landscape_transit`
+  - Specific visual descriptors of the aerial landscape are missing.
+  - Atmospheric conditions and lighting profiles are undefined.
+- `scarlet_flower_fields`
+  - Visual characteristics (color, scale, flora type) are currently undocumented.
+  - Specific spatial layout and lighting conditions are unknown.
+- `palace_guest_quarters`
+  - Specific architectural layout of the chambers is not detailed beyond "domestic scale."
+  - Exact nature of the "tension" mentioned in atmosphere (contextual vs. environmental).
+- `throne_room_grand_hall`
+  - Specific architectural details of the "emerald" elements are not fully defined beyond prompt phrases.
+- `wizard_private_chamber`
+  - Specific floor plan or exact dimensions of the chamber are not defined.
+- `throne_room_of_oz`
+  - Visual identity, layout, lighting, and specific atmospheric details are currently undocumented.
+- `wizard_camp_area`
+  - Specific visual characteristics of the camp area are currently undocumented.
+  - The exact physical nature of the "camp" (e.g., temporary structures, terrain) is unknown.
+- `balloon_launch_platform`
+  - Specific visual characteristics of the platform are currently undocumented.
+  - Spatial dimensions and structural composition are unknown.
+- `emerald_city_palace_exterior`
+  - Visual identity and architectural details are currently undocumented.
+  - Specific spatial layout is unknown.
+- `emerald_city_throne_room`
+  - Specific architectural details of the hall are not provided.
+  - Exact nature of the "political transition" is undefined in visual terms.
+- `the_great_desert_border`
+  - Specific biological nature of "wild beasts" is undefined.
+  - Exact boundaries of the "border" are not specified.
+- `emerald_city_outskirts`
+  - Visual characteristics of the outskirts are currently undocumented.
+  - Specific spatial layout and relationship to the Emerald City proper are unknown.
+- `fighting_forest`
+  - Specific visual characteristics of the forest are currently undocumented.
+  - The nature of the "fighting" aspect (biological, magical, or environmental) is unstated.
+- `white_china_wall`
+  - Visual characteristics and material composition are currently undefined.
+  - Specific spatial dimensions and relationship to other environments are unknown.
+- `dainty_china_country`
+  - Specific material composition of the "china" surfaces is not explicitly detailed beyond being polished and reflective.
+- `ancient_forest_interior`
+  - Visual characteristics (texture, flora, scale) are currently undocumented.
+  - Spatial layout and specific lighting conditions are unknown.
+- `marshland_bog_complex`
+  - Visual characteristics of the marshland/bog are currently undocumented.
+  - Specific spatial layout and atmospheric qualities are unknown.
+- `oak_grove_monstrous_lair`
+  - Visual characteristics of the "oak grove" and "monstrous lair" are not defined.
+  - Spatial relationship between the grove and the lair is unknown.
+- `glindas_castle_approach`
+  - Visual characteristics of the approach are currently undocumented.
+  - Spatial relationship to Glinda's Castle is undefined.
+- `quadling_countryside`
+  - Complete lack of visual, atmospheric, or spatial descriptors in provided evidence.
+  - Specific geographic or architectural characteristics are unknown.
+- `rocky_hill_territory`
+  - Specific visual characteristics of the rocky hills are undocumented.
+  - Spatial layout and scale are unknown.
+- `glinda_castle_throne_room`
+  - Specific architectural details of the room are not provided beyond scale and the presence of the throne.
+  - Exact nature of the "shimmering" light source (diegetic vs. ambient) is unspecified.
+- `kansas_prairie_farmstead`
+  - Specific architectural details of the farmhouse are not provided.
+  - Precise topographical features of the prairie beyond "flat" are unspecified.

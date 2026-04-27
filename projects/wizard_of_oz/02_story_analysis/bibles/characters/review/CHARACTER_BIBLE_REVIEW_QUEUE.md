@@ -1,0 +1,158 @@
+# Character Bible Review Queue
+
+- `aunt_em`
+  - Visual identity (costume, build, age) is entirely unknown.
+  - Discrepancy in source material: Chapter CH012 evidence describes "magical winged creatures (monkeys)" under this ID, which conflicts with the individual entity status; it is unclear if this refers to the character or an associated group.
+- `dorothy`
+  - Specific silhouette and initial costume details are unknown.
+  - Exact physical build/proportions are not specified.
+- `toto`
+  - Exact breed or specific physical proportions are not defined.
+- `uncle_henry`
+  - visual identity is entirely undocumented in provided evidence
+- `munchkins`
+  - Specific facial features or individual physical variations within the group.
+  - Exact age range or biological maturity.
+- `witch_of_the_east`
+  - complete lack of visual descriptors for clothing, facial features, or body type
+  - unknown specific non-human characteristics
+- `witch_of_the_north`
+  - specific physical appearance (facial features, hair, etc.) is unknown
+  - exact age and movement style are unknown
+- `boq`
+  - Specific facial features or hair/eye color.
+  - Exact clothing style (beyond the implication of wealth).
+  - Precise age or stage of life.
+- `the_scarecrow`
+  - Specific facial features or head construction are not detailed.
+  - Exact clothing materials beyond "traditional scarecrow construction" are unknown.
+- `farmer`
+  - Specific physical build and age are not provided in the text.
+  - Exact visual details of "rustic clothing" are inferred rather than explicitly described.
+- `munchkin`
+  - specific facial features or skin tones
+  - clothing style and color palette
+  - mannerisms and gait
+- `old_crow`
+  - Specific species or breed of crow is unknown.
+  - Visual age or maturity level is not established.
+- `tin_woodman`
+  - Specific movement language (stiff vs. fluid) is not defined.
+  - Visual age or era of construction is unknown.
+- `cowardly_lion`
+  - Specific visual age or stage of life is not established.
+  - Exact dimensions/scale are unknown beyond being "large."
+- `kalidahs`
+  - Specific visual appearance (color, texture, species-type) is unknown.
+  - Sentience level is unknown.
+- `stork`
+  - Specific species or plumage details are unknown.
+  - Exact flight mechanics or behavioral temperament are unstated.
+- `queen_of_the_field_mice`
+  - specific visual markings or fur color
+  - specific movement style or temperament
+- `wildcat`
+  - Specific species or visual appearance beyond "strange beast" is unknown.
+  - Exact size/scale beyond "small" is unstated.
+- `farmer_woman_family`
+  - specific visual appearance of individual members
+  - age range and physical builds of the family members
+  - specific era or period-accurate clothing
+- `guardian_of_the_gates`
+  - specific visual appearance (clothing, features, color) is unknown
+  - exact nature of the "non-human" aspect is undefined
+- `green_girl`
+  - specific facial features and age
+  - clothing and costume style
+  - height and body proportions
+  - movement patterns and mannerisms
+- `palace_soldiers`
+  - Specific visual appearance (clothing, armor, facial features) is unknown.
+  - Sentience level is unknown.
+  - Movement patterns and specific physical builds are unknown.
+- `the_great_oz`
+  - Primary type, morphology, scale, and sentience are currently unknown.
+  - Visual identity and costume are entirely undocumented in the provided evidence.
+- `wicked_witch_of_the_west`
+  - Specific facial features beyond the single eye are unknown.
+  - Visual appearance of clothing/armor is unknown due to reliance on invisible magic.
+  - Age and specific movement style are not established.
+- `winkies`
+  - Specific facial features or individual physical variations are unknown.
+  - Exact nature of their sentience is unconfirmed by evidence.
+- `winged_monkeys`
+  - Scale of the entities is unknown.
+  - Sentience level is unknown.
+  - Specific wing structure (feathered, leathery, etc.) is unstated.
+- `monkey_king`
+  - Scale of the entity is unknown.
+  - Visual distinction between "monkey_king" as a singular individual versus a group entity (as suggested by conflicting chapter summaries) is unresolved.
+  - Specific physical appearance, color, or markings are undocumented.
+- `queen_of_the_mice`
+  - Specific species or breed of mouse is unknown.
+  - Visual appearance (color, fur texture, markings) is unknown.
+  - Movement style and specific costume/accessories are unknown.
+- `oz`
+  - specific facial features and hair color are unknown.
+  - exact costume/attire is not described in provided evidence.
+  - true nature of his "wizardry" (whether mechanical or magical) remains visually unstated.
+- `palace_staff`
+  - visual identity (no descriptive evidence provided)
+  - specific species/morphology beyond bipedal humanoid
+  - age and physical build
+- `oz_the_wizard`
+  - visual age
+  - physical build and proportions
+  - specific costume or attire
+  - mannerisms and movement style
+- `citizens_of_emerald_city`
+  - visual appearance of the group is entirely undocumented in provided evidence
+  - specific clothing or cultural identifiers are unknown
+- `glinda`
+  - Specific physical appearance (facial features, hair, etc.) is unknown.
+  - Specific clothing details beyond "high-status" are unknown.
+- `soldier`
+  - The exact visual appearance of the group's uniform or armor is unknown.
+  - It is unclear if "soldier" refers to a single individual or a collective unit, though specific actions are attributed to an individual with green whiskers.
+- `fighting_trees`
+  - Specific visual appearance of the "trees" (organic vs. animated wood).
+  - Number of legs.
+  - Specific movement patterns.
+- `green_whiskered_soldier`
+  - Specific facial structure and skin tone are unknown.
+  - Exact nature of "non-human" morphology is undefined.
+  - Clothing, armor, or weaponry are not specified.
+- `guardian_of_the_gate`
+  - Specific visual appearance of the group members is unknown.
+  - Sentience of the group is unknown.
+- `china_cow`
+  - Specific species or breed of the animal is unknown.
+  - Visual appearance (color, markings) is unknown.
+- `china_milkmaid`
+  - visual appearance and clothing are entirely undocumented
+  - specific age or stage of life is unknown
+  - movement style and personality are unknown
+- `china_princess`
+  - Specific visual appearance (clothing, facial features, color palette) is unknown.
+  - Age and temperament are unknown.
+- `mr_joker`
+  - Visual appearance (clothing, color, texture) is entirely undocumented.
+  - Specific age or stage of life is unknown.
+  - Movement style and personality are undocumented.
+- `great_spider_monster`
+  - Specific visual textures or colors of the exoskeleton/body are unknown.
+  - Specific movement patterns or speed are unknown.
+  - Exact number of legs is not specified beyond "multi-legged."
+- `tiger`
+  - Specific body type (whether it follows the bear-like body of the Kalidahs or a standard feline build).
+  - Scale/mass beyond "large."
+- `castle_guards`
+  - visual appearance (costume, build, features) is entirely undocumented
+  - sentience is unknown
+- `farmers_wife`
+  - Visual identity is entirely unestablished in provided evidence.
+  - Physical characteristics and costume are unknown.
+- `hammer_heads`
+  - specific visual appearance (clothing, color, texture)
+  - facial features and age
+  - mannerisms and movement style

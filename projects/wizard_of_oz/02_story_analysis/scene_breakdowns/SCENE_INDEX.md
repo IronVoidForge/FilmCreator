@@ -1,4 +1,4 @@
-- [SC001](#SC001) - Preparation and Departure
-- [SC002](#SC002) - The Munchkin Celebration
-- [SC003](#SC003) - Warning and the Cornfield Encounter
-- [SC004](#SC004) - An Unlikely Alliance
+- [SC001](#SC001) The Audience with Glinda
+- [SC002](#SC002) The Command of the Golden Cap
+- [SC003](#SC003) The Revelation and Farewell
+- [SC004](#SC004) The Journey Home and Loss

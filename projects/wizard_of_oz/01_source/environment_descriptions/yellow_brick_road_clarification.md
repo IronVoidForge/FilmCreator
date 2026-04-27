@@ -5,17 +5,17 @@ yellow_brick_road
 
 # Why This Needs Clarification
 Potential existing environment matches detected:
-- farmhouse_interior_and_cellar (score 8; chapters: CH001; aliases: -)
-- flying_house_interior (score 8; chapters: CH001; aliases: -)
-- kansas_prairie_landscape (score 8; chapters: CH001; aliases: -)
+- brookside_meadow (score 8; chapters: CH004; aliases: -)
+- cornfield_scarecrow_post (score 8; chapters: CH003; aliases: -)
+- cyclone_storm_void (score 8; chapters: CH001; aliases: -)
 
 # Question
 This environment may match one of the existing canonical settings above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical environment?
 
 # Candidate Matches
-- farmhouse_interior_and_cellar (score 8; chapters: CH001; aliases: -)
-- flying_house_interior (score 8; chapters: CH001; aliases: -)
-- kansas_prairie_landscape (score 8; chapters: CH001; aliases: -)
+- brookside_meadow (score 8; chapters: CH004; aliases: -)
+- cornfield_scarecrow_post (score 8; chapters: CH003; aliases: -)
+- cyclone_storm_void (score 8; chapters: CH001; aliases: -)
 
 # Guidance
 - answer briefly and concretely
