@@ -581,7 +581,7 @@ def _renderability_prompt_contradictions(taxonomy: dict, prompt_package: dict) -
             "type": "renderability_prompt_contradiction",
             "severity": "high",
             "detail": "Taxonomy renderability=context_only but prompt package tries to render character reference",
-            "rerun_stage": "run-prompt-preparation"
+            "rerun_stage": "synthesize-prompt-preparation"
         })
     
     return contradictions
@@ -593,7 +593,7 @@ def _rerun_stage_for_contradiction(contradiction_type: str) -> str:
         "taxonomy_fallback_mismatch": "synthesize-character-bibles",
         "negative_term_contradiction": "synthesize-character-bibles",
         "alias_render_contradiction": "refine-identities",
-        "renderability_prompt_contradiction": "run-prompt-preparation",
+        "renderability_prompt_contradiction": "synthesize-prompt-preparation",
         "missing_taxonomy_snapshot": "synthesize-character-bibles",
         "taxonomy_missing": "synthesize-character-taxonomy",
         "low_confidence_taxonomy": "synthesize-character-taxonomy"
@@ -934,11 +934,8 @@ def _has_prompt_semantic_issue(text: str) -> tuple[bool, list[str]]:
     issues = []
     text_lower = text.lower()
     
-    # Only flag missing subject anchor if prompt is very short or clearly incomplete
     if "missing the required subject anchor" in text_lower or "missing required subject anchor" in text_lower:
-        # Check if prompt has substantial content despite the warning
-        if len(text) < 200 or text.count("\n") < 5:
-            issues.append("Prompt body is missing the required subject anchor")
+        issues.append("Prompt body is missing the required subject anchor")
     
     if "reference conflict" in text_lower:
         issues.append("reference conflict exists")
@@ -1151,7 +1148,7 @@ def _make_grade_record(
         review_status=review_status,
         rerun_recommended=rerun_recommended,
         rerun_scope=family.rerun_scope if rerun_recommended else "",
-        rerun_stage="run-prompt-preparation" if (family.family == "prompt_package" and rerun_recommended) else (rerun_stage_override if rerun_stage_override else (family.rerun_stage if rerun_recommended else "")),
+        rerun_stage="synthesize-prompt-preparation" if (family.family == "prompt_package" and rerun_recommended) else (rerun_stage_override if rerun_stage_override else (family.rerun_stage if rerun_recommended else "")),
         rerun_reason=rerun_reason,
         dependency_refs=dependency_refs,
         evidence_refs=evidence_refs if isinstance(evidence_refs, list) else [],

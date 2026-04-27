@@ -321,7 +321,7 @@ def test_rerun_stage_mapping():
     assert _rerun_stage_for_contradiction("taxonomy_fallback_mismatch") == "synthesize-character-bibles"
     assert _rerun_stage_for_contradiction("negative_term_contradiction") == "synthesize-character-bibles"
     assert _rerun_stage_for_contradiction("alias_render_contradiction") == "refine-identities"
-    assert _rerun_stage_for_contradiction("renderability_prompt_contradiction") == "run-prompt-preparation"
+    assert _rerun_stage_for_contradiction("renderability_prompt_contradiction") == "synthesize-prompt-preparation"
     assert _rerun_stage_for_contradiction("taxonomy_missing") == "synthesize-character-taxonomy"
 
 

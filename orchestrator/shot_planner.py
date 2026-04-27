@@ -2040,6 +2040,7 @@ def _llm_synthesis(
     scene_contract: dict[str, Any],
     shot_blueprints: list[dict[str, Any]],
     evidence: dict[str, Any],
+    quality_feedback: list[str] | None = None,
 ) -> list[dict[str, Any]] | None:
     settings = load_runtime_settings()
     client = LMStudioClient(settings)
@@ -2090,6 +2091,8 @@ ENVIRONMENT EVIDENCE:
 
 BLUEPRINTS:
 {json.dumps(shot_blueprints, indent=2, ensure_ascii=False)}
+
+{("REPAIR REQUIREMENTS:\n" + "\n".join(f"- {item}" for item in quality_feedback[:12]) + "\n") if quality_feedback else ""}
 
 Return exactly one FilmCreator packet in this structure:
 [[FILMCREATOR_PACKET]]
@@ -2247,6 +2250,76 @@ shot_notes: <optional short note>
         return records
     except Exception:
         return None
+
+
+_SCENE_SYNTHESIS_REQUIRED_FIELDS = [
+    "shot_moment_summary",
+    "primary_subject",
+    "start_state",
+    "end_state",
+    "action_during_shot",
+    "action_continues_from",
+    "action_hands_off_to",
+    "shot_size",
+    "camera_angle",
+    "lens_family",
+    "camera_motion",
+    "focus_strategy",
+    "lighting_style",
+    "subject_visibility",
+    "narration_mode",
+    "primary_subject_frame_position",
+    "primary_subject_scale_relation",
+    "primary_subject_pose_description",
+    "required_environment_anchor_1",
+    "camera_package_description",
+    "camera_description",
+    "composition",
+    "environment_subzone",
+    "continuity_from_previous_shot",
+    "continuity_to_next_shot",
+    "pose_anchor_frame",
+    "pose_end_frame",
+    "prompt_seed",
+]
+
+
+def _shot_plan_payload_quality_issues(payload: list[dict[str, Any]] | None, shot_blueprints: list[dict[str, Any]]) -> list[str]:
+    expected_ids = [str(item.get("shot_id", "")).strip().upper() for item in shot_blueprints if str(item.get("shot_id", "")).strip()]
+    if not payload:
+        return ["LLM returned no shot records for the scene."]
+    parsed_records = [_parse_shot_plan_blueprint(item) for item in payload if isinstance(item, dict)]
+    actual_ids = [str(item.get("shot_id", "")).strip().upper() for item in parsed_records if str(item.get("shot_id", "")).strip()]
+    issues: list[str] = []
+    if len(parsed_records) != len(expected_ids):
+        issues.append(f"Expected {len(expected_ids)} shot records, received {len(parsed_records)}.")
+    missing_ids = [shot_id for shot_id in expected_ids if shot_id not in actual_ids]
+    extra_ids = [shot_id for shot_id in actual_ids if shot_id not in expected_ids]
+    if missing_ids:
+        issues.append(f"Missing shot ids: {', '.join(missing_ids[:6])}.")
+    if extra_ids:
+        issues.append(f"Unexpected shot ids: {', '.join(extra_ids[:6])}.")
+
+    by_id = {str(item.get("shot_id", "")).strip().upper(): item for item in parsed_records}
+    for shot_id in expected_ids:
+        record = by_id.get(shot_id)
+        if not record:
+            continue
+        missing_fields = [field for field in _SCENE_SYNTHESIS_REQUIRED_FIELDS if not str(record.get(field, "")).strip()]
+        subject_visibility = str(record.get("subject_visibility", "")).strip()
+        if subject_visibility in {"on_screen", "partial", "silhouette"} and not str(record.get("visible_primary_subject_id", "")).strip():
+            missing_fields.append("visible_primary_subject_id")
+        if not _coerce_string_list(record.get("beat_ids", [])):
+            missing_fields.append("beat_ids")
+        if not _coerce_string_list(record.get("subject_blocking", [])):
+            missing_fields.append("subject_blocking")
+        if not _coerce_string_list(record.get("camera_relative_positions", [])):
+            missing_fields.append("camera_relative_positions")
+        if len(str(record.get("prompt_seed", "")).strip()) < 40:
+            missing_fields.append("prompt_seed>=40_chars")
+        if missing_fields:
+            issues.append(f"{shot_id} missing or thin fields: {', '.join(_ordered_unique(missing_fields)[:10])}.")
+    return issues[:12]
 
 
 def _parse_shot_plan_blueprint(payload: dict[str, Any]) -> dict[str, Any]:
@@ -2696,6 +2769,8 @@ def run_shot_planning(
         scene_review_shots: list[ShotPackage] = []
         scene_written_files: list[str] = []
         total_shots = len(shot_blueprints)
+        synthesized_payload: list[dict[str, Any]] | None = None
+        scene_synthesis_attempted = False
 
         for shot_index, blueprint in enumerate(shot_blueprints, start=1):
             shot_id = str(blueprint.get("shot_id", "")).strip().upper()
@@ -2755,20 +2830,38 @@ def run_shot_planning(
                     print(f"[shot-planner] {scene_index}/{total_scenes} {shot_index}/{total_shots} finished {scene_id}/{shot_id} (stale locked) in {elapsed}s")
                     continue
 
-            synthesized_payload = _llm_synthesis(
-                project_slug=project_slug,
-                scene_contract=scene_contract,
-                shot_blueprints=shot_blueprints,
-                evidence=evidence,
-            ) if use_llm else None
-            if not synthesized_payload:
-                synthesized_payload = shot_blueprints
+            if not scene_synthesis_attempted:
+                scene_synthesis_attempted = True
                 if use_llm:
-                    warnings.append(f"LLM synthesis failed or returned invalid packet for {scene_id}; used deterministic fallback.")
-
-            if len(synthesized_payload) != len(shot_blueprints):
-                synthesized_payload = shot_blueprints
-                warnings.append(f"Shot planning for {scene_id} did not preserve blueprint count; used deterministic fallback.")
+                    synthesized_payload = _llm_synthesis(
+                        project_slug=project_slug,
+                        scene_contract=scene_contract,
+                        shot_blueprints=shot_blueprints,
+                        evidence=evidence,
+                    )
+                    quality_issues = _shot_plan_payload_quality_issues(synthesized_payload, shot_blueprints)
+                    if quality_issues:
+                        repaired_payload = _llm_synthesis(
+                            project_slug=project_slug,
+                            scene_contract=scene_contract,
+                            shot_blueprints=shot_blueprints,
+                            evidence=evidence,
+                            quality_feedback=quality_issues,
+                        )
+                        repaired_issues = _shot_plan_payload_quality_issues(repaired_payload, shot_blueprints)
+                        if repaired_payload and not repaired_issues:
+                            synthesized_payload = repaired_payload
+                            warnings.append(f"Shot planning for {scene_id} required one repair pass before writing.")
+                        else:
+                            synthesized_payload = shot_blueprints
+                            issue_summary = "; ".join((repaired_issues or quality_issues)[:3])
+                            warnings.append(f"Shot planning for {scene_id} failed scene-level quality validation; used deterministic fallback. {issue_summary}")
+                else:
+                    synthesized_payload = shot_blueprints
+                if not synthesized_payload:
+                    synthesized_payload = shot_blueprints
+                    if use_llm:
+                        warnings.append(f"LLM synthesis failed or returned invalid packet for {scene_id}; used deterministic fallback.")
 
             blueprint_payload = _parse_shot_plan_blueprint(next((item for item in synthesized_payload if item.get("shot_id") == shot_id), blueprint))
             if not blueprint_payload.get("shot_order"):
