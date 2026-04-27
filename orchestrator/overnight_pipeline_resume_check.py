@@ -11,6 +11,9 @@ import sys
 from pathlib import Path
 from typing import Any, Callable
 
+from .chapter_selection import normalize_chapter_id
+from .prompt_package import parse_prompt_package
+
 
 STAGES: list[str] = [
     "story_analysis",
@@ -62,6 +65,60 @@ def _count_records(data: dict[str, Any] | list[Any]) -> int:
         if isinstance(value, dict):
             return len(value)
     return 0
+
+
+def _is_nonempty_string(value: Any) -> bool:
+    return isinstance(value, str) and bool(value.strip())
+
+
+def _string_list(value: Any) -> list[str]:
+    if isinstance(value, list):
+        return [str(item).strip() for item in value if str(item).strip()]
+    if _is_nonempty_string(value):
+        return [str(value).strip()]
+    return []
+
+
+def _chapter_ids_from_value(value: Any) -> set[str]:
+    found: set[str] = set()
+    if isinstance(value, dict):
+        for nested in value.values():
+            found.update(_chapter_ids_from_value(nested))
+        return found
+    if isinstance(value, list):
+        for item in value:
+            found.update(_chapter_ids_from_value(item))
+        return found
+    if not _is_nonempty_string(value):
+        return found
+    text = str(value).strip()
+    normalized = normalize_chapter_id(text)
+    if normalized:
+        found.add(normalized)
+    for token in text.replace(",", " ").split():
+        normalized = normalize_chapter_id(token)
+        if normalized:
+            found.add(normalized)
+    return found
+
+
+def _chapter_coverage_from_records(records: list[dict[str, Any]]) -> set[str]:
+    coverage: set[str] = set()
+    for record in records:
+        if not isinstance(record, dict):
+            continue
+        for key in ("chapter_mentions", "chapter_id", "first_seen_chapter", "last_seen_chapter", "artifact_path", "path", "prompt_id", "subject_id"):
+            coverage.update(_chapter_ids_from_value(record.get(key)))
+    return coverage
+
+
+def _matches_requested_chapters(records: list[dict[str, Any]], chapters: str) -> tuple[bool, dict[str, Any]]:
+    requested = {_chapter_id(number) for number in parse_chapters(chapters)}
+    if not requested:
+        return True, {"requested": [], "covered": []}
+    covered = _chapter_coverage_from_records(records)
+    missing = sorted(requested - covered)
+    return not missing, {"requested": sorted(requested), "covered": sorted(covered), "missing": missing}
 
 
 def parse_chapters(chapters: str) -> list[int]:
@@ -211,12 +268,43 @@ def check_visual_fallbacks(project_root: Path, chapters: str = "") -> tuple[bool
     if not isinstance(data, dict):
         return False, "VISUAL_FALLBACKS.json is not a valid dict", {}
     
-    required = ["book_visual_context", "character_fallbacks", "environment_fallbacks", "negative_terms"]
-    missing = [k for k in required if not data.get(k)]
-    if missing:
-        return False, "VISUAL_FALLBACKS missing/empty required keys: " + ", ".join(missing), {}
+    missing: list[str] = []
+    if not _is_nonempty_string(data.get("source_title")):
+        missing.append("source_title")
+    if not _is_nonempty_string(data.get("book_visual_context")):
+        missing.append("book_visual_context")
 
-    return True, "visual fallbacks contain book context, fallback buckets, and negatives", {}
+    for family in ("character_fallbacks", "environment_fallbacks"):
+        payload = data.get(family)
+        if not isinstance(payload, dict) or not payload or not any(_is_nonempty_string(value) for value in payload.values()):
+            missing.append(family)
+        elif not _is_nonempty_string(payload.get("general")):
+            missing.append(f"{family}.general")
+
+    negatives = data.get("negative_terms")
+    if not isinstance(negatives, dict):
+        missing.append("negative_terms")
+    else:
+        if not _string_list(negatives.get("character_wardrobe")):
+            missing.append("negative_terms.character_wardrobe")
+        if not _string_list(negatives.get("environment")):
+            missing.append("negative_terms.environment")
+
+    has_digest = _is_nonempty_string(data.get("context_digest"))
+    has_sources = bool(_string_list(data.get("source_context_files")))
+    if not has_digest and not has_sources:
+        missing.append("context_digest/source_context_files")
+
+    if missing:
+        return False, "VISUAL_FALLBACKS missing/empty required content: " + ", ".join(missing), {
+            "has_context_digest": has_digest,
+            "source_context_files": len(_string_list(data.get("source_context_files"))),
+        }
+
+    return True, "visual fallbacks contain source title, context, fallback buckets, negatives, and source context", {
+        "source_context_files": len(_string_list(data.get("source_context_files"))),
+        "has_context_digest": has_digest,
+    }
 
 
 def check_scene_contracts(project_root: Path, chapters: str = "") -> tuple[bool, str, dict[str, Any]]:
@@ -464,6 +552,13 @@ def check_descriptor_enrichment(project_root: Path, chapters: str = "") -> tuple
         if count <= 0 and synthesized <= 0:
             return False, "DESCRIPTOR_INDEX has zero entries", {"count": count, "synthesized_count": synthesized}
         return True, f"descriptor index has {count or synthesized} entries", {"count": count, "synthesized_count": synthesized}
+    if isinstance(data, list):
+        if not data:
+            return False, "DESCRIPTOR_INDEX has zero entries", {"count": 0}
+        chapter_ok, details = _matches_requested_chapters([item for item in data if isinstance(item, dict)], chapters)
+        if not chapter_ok:
+            return False, "descriptor index exists but requested chapter coverage is missing", details
+        return True, f"descriptor index has {len(data)} entries with requested chapter coverage", {"count": len(data), **details}
     
     return False, "DESCRIPTOR_INDEX is not valid JSON", {}
 
@@ -494,15 +589,83 @@ def check_prompt_preparation(project_root: Path, chapters: str = "") -> tuple[bo
         synthesized = data.get("synthesized_count", 0)
         if count <= 0 and synthesized <= 0:
             return False, "prompt preparation index has zero entries", {"count": count, "synthesized_count": synthesized, "index": str(index_file)}
+        prepared_dir = project_root / "03_prompt_packages" / "prepared"
+        prompt_files = list(prepared_dir.rglob("*_prompt.md")) if prepared_dir.exists() else []
+        if not prompt_files:
+            return False, "no prepared prompt markdown files found", {"index": str(index_file)}
+        return True, f"prompt prep index and {len(prompt_files)} prompt files found", {
+            "index": str(index_file),
+            "prompt_files": len(prompt_files),
+        }
 
-    prepared_dir = project_root / "03_prompt_packages" / "prepared"
-    prompt_files = list(prepared_dir.rglob("*_prompt.md")) if prepared_dir.exists() else []
-    if not prompt_files:
-        return False, "no prepared prompt markdown files found", {"index": str(index_file)}
+    if not isinstance(data, list):
+        return False, "prompt preparation index is not valid JSON", {"index": str(index_file)}
 
-    return True, f"prompt prep index and {len(prompt_files)} prompt files found", {
+    canonical_records = [item for item in data if isinstance(item, dict) and str(item.get("status", "")).strip().lower() == "canonical"]
+    if not canonical_records:
+        return False, "prompt preparation index has no canonical records", {"index": str(index_file), "count": len(data)}
+
+    chapter_ok, chapter_details = _matches_requested_chapters(canonical_records, chapters)
+    if not chapter_ok:
+        return False, "prompt preparation index exists but requested chapter coverage is missing", {"index": str(index_file), **chapter_details}
+
+    missing_files: list[str] = []
+    empty_files: list[str] = []
+    parse_failures: list[str] = []
+    subject_kind_variants: dict[str, set[str]] = {}
+    for record in canonical_records:
+        subject_kind = str(record.get("subject_kind", "")).strip().lower()
+        variant_name = str(record.get("variant_name", "")).strip().lower()
+        if subject_kind:
+            subject_kind_variants.setdefault(subject_kind, set()).add(variant_name)
+        path_value = str(record.get("path", "")).strip()
+        if not path_value:
+            missing_files.append(f"{record.get('prompt_id', '(unknown)')} (missing path)")
+            continue
+        prompt_path = Path(path_value)
+        if not prompt_path.exists():
+            missing_files.append(path_value)
+            continue
+        try:
+            if not prompt_path.read_text(encoding="utf-8").strip():
+                empty_files.append(path_value)
+                continue
+            package = parse_prompt_package(prompt_path)
+            if not package.positive_prompt.strip():
+                empty_files.append(path_value)
+        except Exception:
+            parse_failures.append(path_value)
+
+    if missing_files or empty_files or parse_failures:
+        return False, "prompt preparation prompt files are missing, empty, or invalid", {
+            "index": str(index_file),
+            "missing_files": missing_files[:10],
+            "empty_files": empty_files[:10],
+            "parse_failures": parse_failures[:10],
+        }
+
+    if not subject_kind_variants:
+        return False, "prompt preparation index has no recognized subject kinds", {"index": str(index_file)}
+
+    variant_issues: list[str] = []
+    if "character" in subject_kind_variants and not ({"bust_portrait", "full_body_neutral"} & subject_kind_variants["character"]):
+        variant_issues.append("character missing bust_portrait/full_body_neutral")
+    if "environment" in subject_kind_variants and "establishing_wide" not in subject_kind_variants["environment"]:
+        variant_issues.append("environment missing establishing_wide")
+    if "shot" in subject_kind_variants and "primary_keyframe" not in subject_kind_variants["shot"]:
+        variant_issues.append("shot missing primary_keyframe")
+    if variant_issues:
+        return False, "prompt preparation index is missing expected variants", {
+            "index": str(index_file),
+            "subject_kind_variants": {key: sorted(value) for key, value in subject_kind_variants.items()},
+            "issues": variant_issues,
+        }
+
+    return True, f"prompt prep index and {len(canonical_records)} canonical prompt records validated", {
         "index": str(index_file),
-        "prompt_files": len(prompt_files),
+        "canonical_records": len(canonical_records),
+        "subject_kind_variants": {key: sorted(value) for key, value in subject_kind_variants.items()},
+        **chapter_details,
     }
 
 
@@ -514,6 +677,11 @@ def check_quality_grading(project_root: Path, chapters: str = "") -> tuple[bool,
         project_root / "02_story_analysis" / "quality" / "QUALITY_GRADING_INDEX.json",
     ]
 
+    rerun_candidates = [
+        project_root / "02_story_analysis" / "grading" / "review" / "QUALITY_RERUN_QUEUE.json",
+        project_root / "02_story_analysis" / "quality" / "review" / "QUALITY_RERUN_QUEUE.json",
+    ]
+
     for path in candidates:
         if not path.exists():
             continue
@@ -523,8 +691,48 @@ def check_quality_grading(project_root: Path, chapters: str = "") -> tuple[bool,
         if isinstance(data, dict):
             count = _count_records(data)
             total_records = data.get("total_records", 0)
+            family_summaries = data.get("family_summaries", [])
+            rerun_queue = data.get("rerun_queue", None)
+            if not isinstance(family_summaries, list) or not family_summaries:
+                return False, "quality grading index missing family summaries", {"path": str(path), "total_records": total_records}
+            invalid_family_summary = next(
+                (
+                    summary for summary in family_summaries
+                    if not isinstance(summary, dict)
+                    or not _is_nonempty_string(summary.get("family"))
+                    or int(summary.get("count", 0) or 0) < 0
+                    or not isinstance(summary.get("grade_counts", {}), dict)
+                ),
+                None,
+            )
+            if invalid_family_summary is not None:
+                return False, "quality grading family summaries are malformed", {"path": str(path)}
+            queue_path = next((candidate for candidate in rerun_candidates if candidate.exists()), None)
+            queue_payload = rerun_queue
+            if queue_path is not None:
+                queue_payload = _read_json(queue_path)
+            if not isinstance(queue_payload, list):
+                return False, "quality grading rerun queue is missing or malformed", {"path": str(path), "rerun_queue_path": str(queue_path) if queue_path else ""}
+            invalid_queue_item = next(
+                (
+                    item for item in queue_payload
+                    if not isinstance(item, dict)
+                    or not _is_nonempty_string(item.get("family"))
+                    or not _is_nonempty_string(item.get("artifact_id"))
+                    or not isinstance(item.get("reason", []), list)
+                ),
+                None,
+            )
+            if invalid_queue_item is not None:
+                return False, "quality grading rerun queue items are malformed", {"path": str(path), "rerun_queue_path": str(queue_path) if queue_path else ""}
             if count > 0 or total_records > 0:
-                return True, "quality grading index contains records", {"path": str(path), "count": count, "total_records": total_records}
+                return True, "quality grading index contains records, family summaries, and rerun queue", {
+                    "path": str(path),
+                    "count": count,
+                    "total_records": total_records,
+                    "family_summaries": len(family_summaries),
+                    "rerun_queue": len(queue_payload),
+                }
 
     # Fallback: any nonempty json in grading/quality
     for check_dir in [project_root / "02_story_analysis" / "grading", project_root / "02_story_analysis" / "quality"]:

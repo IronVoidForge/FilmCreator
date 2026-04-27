@@ -1,4 +1,4 @@
-﻿Status: 70%
+﻿Status: 90%
 
 # Smart Resume Validation
 
@@ -54,4 +54,10 @@ Should validate:
 ## Testing strategy
 
 Tests should be unit/focused tests, not full pipeline reruns.
+
+Implementation note (2026-04-26):
+
+- Added `tests/unit/test_overnight_pipeline_resume_check.py`.
+- `overnight_pipeline_resume_check.py` now performs stronger structural validation for visual fallbacks, descriptor enrichment, prompt preparation, and quality grading.
+- The archived sentinel-only quick resume BAT is explicitly marked obsolete so it cannot be mistaken for trusted resume behavior.
 

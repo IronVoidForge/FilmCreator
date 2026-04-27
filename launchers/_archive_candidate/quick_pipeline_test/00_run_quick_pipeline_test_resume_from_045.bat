@@ -1,6 +1,16 @@
 @echo off
 setlocal EnableExtensions DisableDelayedExpansion
 
+echo.
+echo This launcher is archived and obsolete.
+echo It used sentinel-file skipping and is not trustworthy for smart resume.
+echo Use:
+echo   python -m orchestrator.overnight_pipeline_resume_check princess_of_mars_test 2-3 --report
+echo or:
+echo   launchers\quicktest_phase\00_VALIDATE_RESUME_STATE.bat
+echo.
+exit /b 1
+
 set "SCRIPT_DIR=%~dp0"
 if "%SCRIPT_DIR:~-1%"=="\" set "SCRIPT_DIR=%SCRIPT_DIR:~0,-1%"
 
