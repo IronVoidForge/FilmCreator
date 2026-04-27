@@ -1,7 +1,7 @@
 # World Refinement Report
 
 - project_slug: wizard_of_oz
-- generated_at_utc: 2026-04-27T07:36:53.649189+00:00
+- generated_at_utc: 2026-04-27T12:50:57.518646+00:00
 - candidate_count: 3
 - comparison_count: 4
 - decision_count: 3

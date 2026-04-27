@@ -36,7 +36,7 @@ A small-scale quadruped animal. Specific breed or coloration is not established 
 ## Continuity
 
 - continuity_constraints: Must maintain small quadrupedal morphology.
-- unresolved_ambiguities: Specific species or breed of the animal is unknown., Visual appearance (color, markings) is unknown.
+- unresolved_ambiguities: Specific species or breed of the animal is unknown., Visual appearance (color, markings) is unknown., Movement patterns and temperament are unknown.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ A small-scale quadruped animal. Specific breed or coloration is not established 
 - status: `generated`
 - source_fingerprint: `3479781e68486defacce7c61b68c8a337ed06925`
 - created_at_utc: `2026-04-27T07:46:16.328236+00:00`
-- updated_at_utc: `2026-04-27T07:46:16.328236+00:00`
+- updated_at_utc: `2026-04-27T12:57:09.609465+00:00`

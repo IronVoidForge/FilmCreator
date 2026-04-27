@@ -14,17 +14,17 @@
 
 ## Visual Bible
 
-- identity_baseline: A bipedal humanoid entity composed entirely of tin.
+- identity_baseline: A bipedal humanoid entity constructed entirely of tin.
 - age_presence: unknown
 - physical_build: Humanoid frame with an articulated metallic body.
 - origin_or_historical_context: unknown
 - movement_language: unknown
-The Tin Woodman is a bipedal humanoid entity constructed entirely of articulated tin. He possesses a metallic silhouette and a non-flesh physical composition that renders him immune to poppy scents. His primary visual identifier is his fully metallic body and the axe he carries.
+The Tin Woodman is a bipedal humanoid entity composed entirely of articulated tin. He possesses a non-flesh, metallic silhouette and is characterized by his fully metallic construction. His primary equipment is an axe, which he carries as part of his standard visual profile.
 
 - physical_traits: Immune to poppy scent
 - costume_signature: Entirely metallic (tin) body; carries an axe.
-- distinguishing_features: Non-flesh/metallic composition, Articulated tin joints
-- state_variants: Standard (articulated tin body, carrying axe)
+- distinguishing_features: Non-flesh, entirely metallic composition, Articulated tin construction
+- state_variants: Standard (articulated tin body carrying an axe)
 
 ## Behavioral Bible
 
@@ -35,7 +35,7 @@ The Tin Woodman is a bipedal humanoid entity constructed entirely of articulated
 
 ## Continuity
 
-- continuity_constraints: Must maintain a fully metallic, non-flesh appearance., Body must be depicted as articulated tin.
+- continuity_constraints: Must maintain a non-flesh, entirely metallic appearance., Body must be depicted as articulated tin.
 - unresolved_ambiguities: Specific movement language (stiff vs. fluid) is not defined., Visual age or era of construction is unknown.
 
 ## Evidence Summary
@@ -55,4 +55,4 @@ The Tin Woodman is a bipedal humanoid entity constructed entirely of articulated
 - status: `generated`
 - source_fingerprint: `457c199eef081e2f9daffa447bf4f76b58420e11`
 - created_at_utc: `2026-04-27T07:40:18.608857+00:00`
-- updated_at_utc: `2026-04-27T07:40:18.608857+00:00`
+- updated_at_utc: `2026-04-27T12:53:24.906298+00:00`

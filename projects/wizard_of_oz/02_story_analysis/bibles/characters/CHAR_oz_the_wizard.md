@@ -19,7 +19,7 @@
 - physical_build: human scale, bipedal
 - origin_or_historical_context: unknown
 - movement_language: unknown
-A human male of standard human scale and bipedal morphology. No specific visual details regarding age, build, costume, or movement are provided in the available evidence.
+A human male of standard human scale and bipedal morphology. Specific visual details regarding age, build, costume, or movement are not provided in the available evidence.
 
 - physical_traits: primary_type: human
 - costume_signature: unknown
@@ -48,6 +48,6 @@ A human male of standard human scale and bipedal morphology. No specific visual 
 
 - artifact_id: `CHAR_oz_the_wizard`
 - status: `generated`
-- source_fingerprint: `50c142309f89f30ff25e825ea8a3c2b6a07362bb`
+- source_fingerprint: `7289d26de6ff5e4e42f2a6b93f06a6bcfec89144`
 - created_at_utc: `2026-04-27T07:44:42.401848+00:00`
-- updated_at_utc: `2026-04-27T07:44:42.401848+00:00`
+- updated_at_utc: `2026-04-27T12:56:13.660100+00:00`

@@ -16,10 +16,10 @@
 
 - identity_baseline: humanoid non-human biped
 - age_presence: unknown
-- physical_build: human scale, unknown proportions
+- physical_build: human scale, bipedal frame
 - origin_or_historical_context: unknown
 - movement_language: unknown
-The Witch of the East is a humanoid non-human entity of human scale. Specific visual details regarding her physical build, age, costume, or movement are not provided in the available evidence.
+The Witch of the East is a humanoid non-human entity of human scale. Due to insufficient visual evidence in the provided records, a specific physical appearance, costume, or movement style cannot be established.
 
 - physical_traits: bipedal morphology
 - costume_signature: unknown
@@ -31,12 +31,12 @@ The Witch of the East is a humanoid non-human entity of human scale. Specific vi
 - personality: unknown
 - role: unknown
 - voice_notes: unknown
-- relationship_notes: associated with Munchkins, associated with Dorothy, associated with Tin Woodman (antagonist)
+- relationship_notes: Associated with Munchkins, Associated with Dorothy, Associated with Tin Woodman (antagonist)
 
 ## Continuity
 
-- continuity_constraints: must maintain humanoid non-human morphology
-- unresolved_ambiguities: complete lack of visual descriptors for clothing, facial features, or body type, unknown specific non-human characteristics
+- continuity_constraints: Must maintain humanoid non-human morphology as per taxonomy.
+- unresolved_ambiguities: Specific visual appearance is entirely undocumented in provided evidence., Age, costume, and movement language are unknown.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ The Witch of the East is a humanoid non-human entity of human scale. Specific vi
 - status: `generated`
 - source_fingerprint: `9cb53ffd5819cd6d5c7fc69a45bbacf64d703b95`
 - created_at_utc: `2026-04-27T07:38:36.424089+00:00`
-- updated_at_utc: `2026-04-27T07:38:36.424089+00:00`
+- updated_at_utc: `2026-04-27T12:52:17.300880+00:00`

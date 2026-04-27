@@ -19,7 +19,7 @@
 - physical_build: bipedal, human scale
 - origin_or_historical_context: unknown
 - movement_language: unknown
-No visual data is available to establish a stable identity for this character. The entity is taxonomically defined as a bipedal, human-scale humanoid or non-humanoid, but specific physical characteristics, clothing, or movement patterns are not provided in the evidence.
+No visual data is available to establish a stable identity for this character. The entity is taxonomically defined as a bipedal, human-scale humanoid or non-humanoid, but specific physical traits, clothing, or movement patterns are not documented in the provided evidence.
 
 - physical_traits: unknown
 - costume_signature: unknown
@@ -36,7 +36,7 @@ No visual data is available to establish a stable identity for this character. T
 ## Continuity
 
 - continuity_constraints: character is a singular individual entity per resolution notes
-- unresolved_ambiguities: visual identity (no descriptive evidence provided), specific species/morphology beyond bipedal humanoid, age and physical build
+- unresolved_ambiguities: complete lack of visual description in provided evidence, identity and appearance are entirely unknown
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ No visual data is available to establish a stable identity for this character. T
 - status: `generated`
 - source_fingerprint: `a9692391b4264aaba8643a686435343bfbf35c5c`
 - created_at_utc: `2026-04-27T07:44:29.665280+00:00`
-- updated_at_utc: `2026-04-27T07:44:29.665280+00:00`
+- updated_at_utc: `2026-04-27T12:56:06.617959+00:00`

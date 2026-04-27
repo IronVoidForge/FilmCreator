@@ -19,7 +19,7 @@
 - physical_build: Large scale; multi-legged morphology.
 - origin_or_historical_context: unknown
 - movement_language: unknown
-A large-scale monster creature characterized by a multi-legged morphology. Specific visual textures or surface details are unknown, but the entity maintains a massive physical presence.
+A large-scale monster creature characterized by a multi-legged morphology. Specific visual textures or surface details are currently unrecorded, but the entity maintains a significant physical presence and non-humanoid limb structure.
 
 - physical_traits: Large scale
 - costume_signature: unknown
@@ -29,14 +29,14 @@ A large-scale monster creature characterized by a multi-legged morphology. Speci
 ## Behavioral Bible
 
 - personality: unknown
-- role: unknown
+- role: monster
 - voice_notes: unknown
 - relationship_notes: Associated with Scarecrow, Associated with Tin Woodman
 
 ## Continuity
 
-- continuity_constraints: Must maintain multi-legged morphology., Must maintain large scale relative to other characters.
-- unresolved_ambiguities: Specific visual appearance of the "trees" (organic vs. animated wood)., Number of legs., Specific movement patterns.
+- continuity_constraints: Must maintain multi-legged morphology as per taxonomy., Scale must remain large relative to associated characters.
+- unresolved_ambiguities: Specific visual appearance of the "trees" or biological texture is unknown., Exact number of legs is not specified.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ A large-scale monster creature characterized by a multi-legged morphology. Speci
 - status: `generated`
 - source_fingerprint: `e943f4d0297c30d5b43d5092d82a30894eadd9be`
 - created_at_utc: `2026-04-27T07:45:38.519672+00:00`
-- updated_at_utc: `2026-04-27T07:45:38.519672+00:00`
+- updated_at_utc: `2026-04-27T12:56:47.480560+00:00`

@@ -36,7 +36,7 @@ A tiny, quadrupedal animal entity. Due to limited visual evidence, specific mark
 ## Continuity
 
 - continuity_constraints: Must maintain tiny, quadrupedal animal morphology.
-- unresolved_ambiguities: Specific species or breed of mouse is unknown., Visual appearance (color, fur texture, markings) is unknown., Movement style and specific costume/accessories are unknown.
+- unresolved_ambiguities: Specific species or breed of mouse is unknown., Visual appearance (color, fur texture, markings) is unstated., Movement style and temperament are unstated.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ A tiny, quadrupedal animal entity. Due to limited visual evidence, specific mark
 - status: `generated`
 - source_fingerprint: `1e0ab16dfc1b3acd4168efa2b279cede9f357ae8`
 - created_at_utc: `2026-04-27T07:44:00.118070+00:00`
-- updated_at_utc: `2026-04-27T07:44:00.118070+00:00`
+- updated_at_utc: `2026-04-27T12:55:49.535767+00:00`

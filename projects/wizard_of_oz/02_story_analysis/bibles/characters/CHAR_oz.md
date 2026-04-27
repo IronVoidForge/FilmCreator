@@ -16,27 +16,27 @@
 
 - identity_baseline: A human male appearing as a man of some stature or authority.
 - age_presence: unknown
-- physical_build: human_scale biped
-- origin_or_historical_context: Emerald City / Oz setting
-- movement_language: characterized by formal gestures, such as bowing very low.
-Oz is a human male of human scale. While his specific clothing and physical build are not explicitly detailed, he carries himself with formal mannerisms, such as bowing low in greeting. He is associated with the use of spectacles or visual apparatuses that can be applied to others' eyes to alter their perception.
+- physical_build: unknown
+- origin_or_historical_context: Emerald City / Oz setting.
+- movement_language: Performs deep, low bows.
+Oz is a human male who presents himself with formal gestures, such as bowing very low. While specific clothing details are not provided in the evidence, he maintains a presence that allows him to interact with travelers within the Emerald City.
 
-- physical_traits: bipedal morphology
+- physical_traits: unknown
 - costume_signature: unknown
-- distinguishing_features: uses spectacles/glasses (specifically from a "great box") to alter the vision of others
-- state_variants: standard appearance, presenting via spectacle/illusion (using glasses)
+- distinguishing_features: unknown
+- state_variants: standard (clothed)
 
 ## Behavioral Bible
 
-- personality: polite and performative (exhibits extreme bowing/formality).
-- role: figure of authority/wizard figure.
+- personality: Polite and performative; exhibits exaggerated courtesy (e.g., bowing very low).
+- role: The Wizard / Figure of authority in the Emerald City.
 - voice_notes: unknown
-- relationship_notes: interacts with Dorothy, Scarecrow, Tin Woodman, and Cowardly Lion.
+- relationship_notes: Dorothy (interacts with), Scarecrow (interacts with), Tin Woodman (interacts with), Cowardly Lion (interacts with)
 
 ## Continuity
 
-- continuity_constraints: must maintain human morphology as per taxonomy.
-- unresolved_ambiguities: specific facial features and hair color are unknown., exact costume/attire is not described in provided evidence., true nature of his "wizardry" (whether mechanical or magical) remains visually unstated.
+- continuity_constraints: Must maintain human morphology and scale.
+- unresolved_ambiguities: Specific facial features, hair, or age are not documented., Exact costume design is unknown., The nature of his "great box" and the spectacles within it is mentioned but his personal attire is not described.
 
 ## Evidence Summary
 
@@ -53,6 +53,6 @@ Oz is a human male of human scale. While his specific clothing and physical buil
 
 - artifact_id: `CHAR_oz`
 - status: `generated`
-- source_fingerprint: `feaf270f769cf2b42f14eb339e9d4fbf36331cae`
+- source_fingerprint: `eec134c032c3632ad5e81678a0646b53a668e382`
 - created_at_utc: `2026-04-27T07:44:13.296644+00:00`
-- updated_at_utc: `2026-04-27T07:44:13.296644+00:00`
+- updated_at_utc: `2026-04-27T12:55:57.003823+00:00`

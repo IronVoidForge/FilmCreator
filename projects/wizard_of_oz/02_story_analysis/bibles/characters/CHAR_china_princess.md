@@ -35,8 +35,8 @@ A small-scale, bipedal humanoid non-human entity. Specific visual details regard
 
 ## Continuity
 
-- continuity_constraints: Must maintain small scale as defined by taxonomy., Must maintain bipedal morphology.
-- unresolved_ambiguities: Specific visual appearance (clothing, facial features, color palette) is unknown., Age and temperament are unknown.
+- continuity_constraints: Must maintain small scale as defined by entity taxonomy., Must maintain bipedal morphology.
+- unresolved_ambiguities: Visual appearance (clothing, color, texture) is entirely unknown., Specific species or non-human characteristics are undefined., Age and movement style are unestablished.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ A small-scale, bipedal humanoid non-human entity. Specific visual details regard
 - status: `generated`
 - source_fingerprint: `c8cb72b5b1cf35e2b217921ea1ed42c2843d1587`
 - created_at_utc: `2026-04-27T07:46:39.723889+00:00`
-- updated_at_utc: `2026-04-27T07:46:39.723889+00:00`
+- updated_at_utc: `2026-04-27T12:57:23.764222+00:00`

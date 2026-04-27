@@ -19,9 +19,9 @@
 - physical_build: small scale, bipedal morphology
 - origin_or_historical_context: fantasy setting
 - movement_language: unknown
-A small-scale humanoid fantasy creature of bipedal morphology. The character is defined by its diminutive size relative to standard humanoids. Specific clothing, movement patterns, and facial features are not established in the provided evidence.
+A small-scale, bipedal humanoid fantasy creature. While specific clothing or facial details are not provided in the evidence, the character is defined by a diminutive physical scale relative to standard humanoids.
 
-- physical_traits: bipedal
+- physical_traits: humanoid morphology
 - costume_signature: unknown
 - distinguishing_features: small stature
 - state_variants: unknown
@@ -36,7 +36,7 @@ A small-scale humanoid fantasy creature of bipedal morphology. The character is 
 ## Continuity
 
 - continuity_constraints: must maintain small scale relative to other characters
-- unresolved_ambiguities: specific facial features or skin tones, clothing style and color palette, mannerisms and gait
+- unresolved_ambiguities: specific facial features or skin tones, clothing style and color palette, specific movement patterns or temperament
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ A small-scale humanoid fantasy creature of bipedal morphology. The character is 
 - status: `generated`
 - source_fingerprint: `c498da2c4cbaeb406b2280ea9dee4a1d4abba5cc`
 - created_at_utc: `2026-04-27T07:39:53.570651+00:00`
-- updated_at_utc: `2026-04-27T07:39:53.570651+00:00`
+- updated_at_utc: `2026-04-27T12:53:10.329265+00:00`

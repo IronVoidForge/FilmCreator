@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: A rustic laborer living in the Kansas prairies.
+- identity_baseline: A rustic laborer living on the Kansas prairies.
 - age_presence: unknown
 - physical_build: unknown
 - origin_or_historical_context: Great Kansas prairies; rural agricultural setting.
 - movement_language: unknown
-A rustic individual situated within the Great Kansas prairies. The character is defined by a connection to agricultural labor, wearing assumed rustic clothing suitable for a prairie farm setting. Specific physical dimensions and facial features are not documented, but the visual identity is grounded in a rural, hardworking aesthetic.
+A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in agricultural tasks, such as tending to corn (ears). Visual identity is defined by practical, rustic clothing suitable for prairie farm life.
 
 - physical_traits: unknown
 - costume_signature: Rustic clothing.
 - distinguishing_features: unknown
-- state_variants: working/agricultural
+- state_variants: working/clothed
 
 ## Behavioral Bible
 
-- personality: pragmatic; focused on agricultural tasks (e.g., tending to corn ears).
-- role: farmer; husband to Aunt Em and Uncle Henry's relation.
+- personality: Pragmatic; demonstrates a matter-of-fact attitude toward agricultural imperfections (e.g., "They are ears just the same").
+- role: Farmer; husband to Aunt Em and father/relative to Uncle Henry's household.
 - voice_notes: unknown
-- relationship_notes: Husband to Aunt Em, Related to Uncle Henry
+- relationship_notes: Husband of Aunt Em, Associated with Uncle Henry
 
 ## Continuity
 
-- continuity_constraints: Clothing should remain consistent with a rustic, prairie agricultural lifestyle.
-- unresolved_ambiguities: Specific physical build and age are not provided in the text., Exact visual details of "rustic clothing" are inferred rather than explicitly described.
+- continuity_constraints: Clothing should remain consistent with a rustic, prairie agricultural setting.
+- unresolved_ambiguities: Specific physical build and age are not documented., Exact facial features or distinguishing marks are unknown.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ A rustic individual situated within the Great Kansas prairies. The character is 
 - status: `generated`
 - source_fingerprint: `e87061966b90f5b40535afe0a99934c9b866b80a`
 - created_at_utc: `2026-04-27T07:39:37.455974+00:00`
-- updated_at_utc: `2026-04-27T07:39:37.455974+00:00`
+- updated_at_utc: `2026-04-27T12:53:00.810309+00:00`

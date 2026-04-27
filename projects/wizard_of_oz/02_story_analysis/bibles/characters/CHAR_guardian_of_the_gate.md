@@ -19,7 +19,7 @@
 - physical_build: human_scale, bipedal morphology
 - origin_or_historical_context: unknown
 - movement_language: unknown
-The guardian_of_the_gate is a group of human-scale, bipedal entities. Specific visual details regarding their individual appearances, clothing, or movement patterns are not provided in the available evidence.
+The guardian_of_the_gate is a group of bipedal entities appearing at human scale. Specific visual details regarding their individual appearances, clothing, or movement patterns are not provided in the available evidence.
 
 - physical_traits: bipedal morphology
 - costume_signature: unknown
@@ -36,7 +36,7 @@ The guardian_of_the_gate is a group of human-scale, bipedal entities. Specific v
 ## Continuity
 
 - continuity_constraints: Must be treated as a group entity rather than a single individual.
-- unresolved_ambiguities: Specific visual appearance of the group members is unknown., Sentience of the group is unknown.
+- unresolved_ambiguities: Specific visual appearance of the group members is unknown., Sentience level is unknown., Individual movement and costume signatures are unknown.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ The guardian_of_the_gate is a group of human-scale, bipedal entities. Specific v
 - status: `generated`
 - source_fingerprint: `7c033f785b01ce112983e33728fab9af813a2672`
 - created_at_utc: `2026-04-27T07:46:04.878824+00:00`
-- updated_at_utc: `2026-04-27T07:46:04.878824+00:00`
+- updated_at_utc: `2026-04-27T12:57:02.531789+00:00`

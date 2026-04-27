@@ -19,12 +19,12 @@
 - physical_build: bipedal, human-scale
 - origin_or_historical_context: Oz (Emerald City)
 - movement_language: unknown
-As a group entity with no specific visual descriptions provided in the evidence, the citizens of the Emerald City are defined by their bipedal, human-scale morphology. Specific details regarding their clothing, age, or physical appearance remain unknown.
+As a group entity with no specific visual descriptions provided in the evidence, the citizens of the Emerald City are defined by their bipedal, human-scale morphology. There is currently no established visual identity regarding their clothing, physical features, or movement patterns.
 
 - physical_traits: bipedal, human-scale
 - costume_signature: unknown
-- distinguishing_features: []
-- state_variants: []
+- distinguishing_features: unknown
+- state_variants: unknown
 
 ## Behavioral Bible
 
@@ -36,7 +36,7 @@ As a group entity with no specific visual descriptions provided in the evidence,
 ## Continuity
 
 - continuity_constraints: maintain bipedal, human-scale morphology as per taxonomy
-- unresolved_ambiguities: visual appearance of the group is entirely undocumented in provided evidence, specific clothing or cultural identifiers are unknown
+- unresolved_ambiguities: visual appearance of the citizens is entirely undocumented in provided evidence, specific clothing or color palettes (e.g., green) are not explicitly stated in the source text provided
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ As a group entity with no specific visual descriptions provided in the evidence,
 - status: `generated`
 - source_fingerprint: `0471037111ff2f998cef20ae0ea124e3bec8421c`
 - created_at_utc: `2026-04-27T07:44:55.474978+00:00`
-- updated_at_utc: `2026-04-27T07:44:55.474978+00:00`
+- updated_at_utc: `2026-04-27T12:56:21.731054+00:00`

@@ -14,12 +14,12 @@
 
 ## Visual Bible
 
-- identity_baseline: A group of human-scale bipedal individuals representing a farming family.
+- identity_baseline: A collective group of human-scale bipedal individuals.
 - age_presence: unknown
 - physical_build: unknown
-- origin_or_historical_context: agricultural/farming setting
+- origin_or_historical_context: unknown
 - movement_language: unknown
-A group of human-scale, bipedal individuals identified as a farming family. Due to insufficient visual evidence, specific physical builds, ages, or costume details cannot be established; the identity is defined primarily by their collective role within an agricultural context.
+Insufficient evidence is provided to establish a stable visual identity for this group. The entity is taxonomically defined as a human-scale, bipedal group, but specific physical traits, clothing, or movement patterns are not documented in the available records.
 
 - physical_traits: morphology: biped, scale: human_scale
 - costume_signature: unknown
@@ -29,14 +29,14 @@ A group of human-scale, bipedal individuals identified as a farming family. Due 
 ## Behavioral Bible
 
 - personality: unknown
-- role: farming family
+- role: unknown
 - voice_notes: unknown
 - relationship_notes: []
 
 ## Continuity
 
-- continuity_constraints: maintain group cohesion as a single entity unit when referenced
-- unresolved_ambiguities: specific visual appearance of individual members, age range and physical builds of the family members, specific era or period-accurate clothing
+- continuity_constraints: Must be treated as a group entity rather than a single individual.
+- unresolved_ambiguities: Specific visual appearance of the family members is unknown., Individual ages, builds, and clothing are not established., Sentience level is unknown.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ A group of human-scale, bipedal individuals identified as a farming family. Due 
 - status: `generated`
 - source_fingerprint: `17c1505844c43ff662d3104ea586499a5d7ba32e`
 - created_at_utc: `2026-04-27T07:41:54.939964+00:00`
-- updated_at_utc: `2026-04-27T07:41:54.939964+00:00`
+- updated_at_utc: `2026-04-27T12:54:36.138486+00:00`

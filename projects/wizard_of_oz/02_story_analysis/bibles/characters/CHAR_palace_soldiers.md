@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: A collective of bipedal, human-scale entities serving as palace guards.
+- identity_baseline: A group of bipedal, human-scale entities serving as palace guards.
 - age_presence: unknown
 - physical_build: human_scale bipedal frame
-- origin_or_historical_context: unknown
+- origin_or_historical_context: associated with a palace setting and the "Guardian of the Gates"
 - movement_language: unknown
-The palace_soldiers are a group of human-scale, bipedal entities. Specific visual details regarding their physical build, age, movement, or costume signatures are not provided in the available evidence.
+A group of human-scale, bipedal entities functioning as palace soldiers. Specific visual details regarding their physical build, age, or costume are not provided in the available evidence.
 
 - physical_traits: bipedal morphology
 - costume_signature: unknown
 - distinguishing_features: []
-- state_variants: unknown
+- state_variants: []
 
 ## Behavioral Bible
 
 - personality: unknown
 - role: Palace guards; associated with the Guardian of the Gates.
 - voice_notes: unknown
-- relationship_notes: Associated with the Guardian of the Gates.
+- relationship_notes: Associated with the Guardian of the Gates
 
 ## Continuity
 
-- continuity_constraints: Maintain group identity as human-scale bipeds.
-- unresolved_ambiguities: Specific visual appearance (clothing, armor, facial features) is unknown., Sentience level is unknown., Movement patterns and specific physical builds are unknown.
+- continuity_constraints: Must maintain human-scale bipedal morphology as per taxonomy.
+- unresolved_ambiguities: Specific visual appearance (clothing, armor, facial features) is unknown., Sentience level is unknown., Movement patterns and specific combat/guarding styles are unknown.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ The palace_soldiers are a group of human-scale, bipedal entities. Specific visua
 - status: `generated`
 - source_fingerprint: `94e73a99502bdae42b594aec12ef3627b726cd3b`
 - created_at_utc: `2026-04-27T07:42:34.022029+00:00`
-- updated_at_utc: `2026-04-27T07:42:34.022029+00:00`
+- updated_at_utc: `2026-04-27T12:54:59.842548+00:00`

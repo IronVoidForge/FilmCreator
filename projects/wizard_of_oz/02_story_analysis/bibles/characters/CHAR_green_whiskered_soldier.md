@@ -19,7 +19,7 @@
 - physical_build: human_scale biped
 - origin_or_historical_context: unknown
 - movement_language: unknown
-A humanoid, non-human entity of human scale. The character's most defining visual identifier is the presence of green whiskers. Further details regarding costume, build, or movement are currently unsupported by the evidence.
+A humanoid, non-human entity of human scale. The character is defined by the presence of green whiskers. Further visual details regarding build, costume, or movement are not established in the provided evidence.
 
 - physical_traits: bipedal morphology
 - costume_signature: unknown
@@ -50,4 +50,4 @@ A humanoid, non-human entity of human scale. The character's most defining visua
 - status: `generated`
 - source_fingerprint: `98118215caae5002ae5575279fed273b9174f7f7`
 - created_at_utc: `2026-04-27T07:45:51.305004+00:00`
-- updated_at_utc: `2026-04-27T07:45:51.305004+00:00`
+- updated_at_utc: `2026-04-27T12:56:54.894852+00:00`

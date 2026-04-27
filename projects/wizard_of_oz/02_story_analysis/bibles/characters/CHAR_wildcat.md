@@ -19,9 +19,9 @@
 - physical_build: Small-scale quadruped.
 - origin_or_historical_context: Unknown
 - movement_language: Bounding across grass.
-A small-scale, quadrupedal animal that moves through the environment by bounding over grass.
+A small, quadrupedal animal that moves through the environment by bounding over the grass.
 
-- physical_traits: quadrupedal morphology
+- physical_traits: small scale
 - costume_signature: unknown
 - distinguishing_features: unknown
 - state_variants: bounding/active
@@ -35,8 +35,8 @@ A small-scale, quadrupedal animal that moves through the environment by bounding
 
 ## Continuity
 
-- continuity_constraints: Must maintain small scale relative to characters like the Tin Woodman and Scarecrow.
-- unresolved_ambiguities: Specific species or visual appearance beyond "strange beast" is unknown., Exact size/scale beyond "small" is unstated.
+- continuity_constraints: Must maintain small, quadrupedal scale.
+- unresolved_ambiguities: Specific species or visual appearance of the "strange beast" is not described beyond its movement and sound.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ A small-scale, quadrupedal animal that moves through the environment by bounding
 - status: `generated`
 - source_fingerprint: `90195fd7d71c544efee73fa35a5cfc0ec68187a0`
 - created_at_utc: `2026-04-27T07:41:42.519011+00:00`
-- updated_at_utc: `2026-04-27T07:41:42.519011+00:00`
+- updated_at_utc: `2026-04-27T12:54:29.074900+00:00`

@@ -16,10 +16,10 @@
 
 - identity_baseline: Quadrupedal creature/monster
 - age_presence: unknown
-- physical_build: Quadrupedal frame; mass and proportions unknown
+- physical_build: Quadrupedal frame; scale is unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-The monkey_king is a quadrupedal creature classified as a monster. Due to insufficient visual evidence, specific scale, mass, and anatomical details remain unconfirmed. The entity's presence is associated with the Winged Monkeys.
+The monkey_king is a quadrupedal creature classified as a monster. Specific physical dimensions, scale, and visual details regarding its coat or features are currently unestablished in the provided evidence.
 
 - physical_traits: morphology: quadruped
 - costume_signature: unknown
@@ -31,12 +31,12 @@ The monkey_king is a quadrupedal creature classified as a monster. Due to insuff
 - personality: unknown
 - role: unknown
 - voice_notes: unknown
-- relationship_notes: Associated with Winged Monkeys, Associated with Dorothy
+- relationship_notes: associated with Winged Monkeys, associated with Dorothy
 
 ## Continuity
 
-- continuity_constraints: Must maintain quadrupedal morphology as per taxonomy.
-- unresolved_ambiguities: Scale of the entity is unknown., Visual distinction between "monkey_king" as a singular individual versus a group entity (as suggested by conflicting chapter summaries) is unresolved., Specific physical appearance, color, or markings are undocumented.
+- continuity_constraints: maintain quadrupedal morphology
+- unresolved_ambiguities: scale of the entity is unknown, visual appearance and specific features are unrecorded, distinction between a singular individual and a group entity (noted in CH014 resolution)
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ The monkey_king is a quadrupedal creature classified as a monster. Due to insuff
 - status: `generated`
 - source_fingerprint: `a4c35aff29b9f5dac436402796e4f2e3a6ceaa7b`
 - created_at_utc: `2026-04-27T07:43:46.138536+00:00`
-- updated_at_utc: `2026-04-27T07:43:46.138536+00:00`
+- updated_at_utc: `2026-04-27T12:55:41.509701+00:00`

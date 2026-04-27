@@ -1,13 +1,32 @@
 @echo off
-setlocal EnableExtensions
+setlocal EnableExtensions EnableDelayedExpansion
 
-set "BAT_VERSION=SIMPLE_BAT_CMDSTRING_V4_2026-04-26"
+set "BAT_VERSION=SIMPLE_BAT_CMDSTRING_V5_PICK_PROJECT_2026-04-27"
 
 set "PROJECT_SLUG=%~1"
-if "%PROJECT_SLUG%"=="" set "PROJECT_SLUG=princess_of_mars_test"
-
 set "CHAPTERS=%~2"
 set "MODE=%~3"
+
+call "%~dp0_shared\resolve_filmcreator_root.bat" "%~dp0"
+if errorlevel 1 (
+    echo Failed to resolve FilmCreator root.
+    pause
+    exit /b 1
+)
+
+set "REPO_ROOT=%FILMCREATOR_ROOT%"
+
+if "%PROJECT_SLUG%"=="" (
+    call :pick_project
+    if errorlevel 1 goto :picker_failed
+)
+
+if not exist "%REPO_ROOT%\projects\%PROJECT_SLUG%" (
+    echo Project folder not found:
+    echo   %REPO_ROOT%\projects\%PROJECT_SLUG%
+    pause
+    exit /b 1
+)
 
 if /I "%CHAPTERS%"=="PLAN_ONLY" (
     set "MODE=PLAN_ONLY"
@@ -25,14 +44,6 @@ if "%CHAPTERS%"=="" (
     set "CHAPTERS_DISPLAY=%CHAPTERS%"
 )
 
-call "%~dp0_shared\resolve_filmcreator_root.bat" "%~dp0"
-if errorlevel 1 (
-    echo Failed to resolve FilmCreator root.
-    pause
-    exit /b 1
-)
-
-set "REPO_ROOT=%FILMCREATOR_ROOT%"
 set "LOG_DIR=%REPO_ROOT%\logs\overnight"
 if not exist "%LOG_DIR%" mkdir "%LOG_DIR%"
 
@@ -41,9 +52,11 @@ for /f %%i in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMdd_HHmmss
 set "LOG_FILE=%LOG_DIR%\%PROJECT_SLUG%_overnight_resume_%STAMP%.log"
 set "LATEST_LOG=%LOG_DIR%\%PROJECT_SLUG%_overnight_resume_latest.log"
 set "TEMP_LOG=%LOG_DIR%\%PROJECT_SLUG%_overnight_resume_step.tmp"
+set "TEMP_PY_SCRIPT=%LOG_DIR%\%PROJECT_SLUG%_overnight_resume_temp.py"
 
 if exist "%LATEST_LOG%" del "%LATEST_LOG%" >nul 2>nul
 if exist "%TEMP_LOG%" del "%TEMP_LOG%" >nul 2>nul
+if exist "%TEMP_PY_SCRIPT%" del "%TEMP_PY_SCRIPT%" >nul 2>nul
 
 cd /d "%REPO_ROOT%"
 if errorlevel 1 (
@@ -179,11 +192,18 @@ echo Start level: %START_LEVEL%>>"%LATEST_LOG%"
 echo.
 
 if %START_LEVEL% LEQ 1 (
-    call :run_step "01 LM Studio check" "python -m orchestrator diagnostics-lmstudio"
+    call :lm_studio_check
     if errorlevel 1 goto :fail_run
 )
 
-REM Story analysis intentionally not included in this downstream resume runner.
+if %START_LEVEL% LEQ 2 (
+    if "%CHAPTERS%"=="" (
+        call :run_step "02 Story analysis" "python -m orchestrator run-story-analysis ""%PROJECT_SLUG%"" --mode resume"
+    ) else (
+        call :run_step "02 Story analysis" "python -m orchestrator run-story-analysis ""%PROJECT_SLUG%"" --mode resume --chapters ""%CHAPTERS%"""
+    )
+    if errorlevel 1 goto :fail_run
+)
 
 if %START_LEVEL% LEQ 3 (
     call :run_step "03 Character taxonomy" "python -m orchestrator synthesize-character-taxonomy ""%PROJECT_SLUG%"" --force"
@@ -282,6 +302,89 @@ echo Latest: %LATEST_LOG%
 echo ============================================================
 pause
 exit /b 0
+
+:lm_studio_check
+echo.
+echo ----------------------------------------
+echo START: 01 LM Studio connectivity check
+echo ----------------------------------------
+
+echo.>>"%LOG_FILE%"
+echo ---------------------------------------->>"%LOG_FILE%"
+echo START: 01 LM Studio connectivity check>>"%LOG_FILE%"
+echo ---------------------------------------->>"%LOG_FILE%"
+
+echo.>>"%LATEST_LOG%"
+echo ---------------------------------------->>"%LATEST_LOG%"
+echo START: 01 LM Studio connectivity check>>"%LATEST_LOG%"
+echo ---------------------------------------->>"%LATEST_LOG%"
+
+echo import sys > "%TEMP_PY_SCRIPT%"
+echo sys.path.insert(0, '.') >> "%TEMP_PY_SCRIPT%"
+echo from json import dumps >> "%TEMP_PY_SCRIPT%"
+echo from orchestrator.settings import load_runtime_settings >> "%TEMP_PY_SCRIPT%"
+echo from orchestrator.lmstudio_client import LMStudioClient >> "%TEMP_PY_SCRIPT%"
+echo settings = load_runtime_settings() >> "%TEMP_PY_SCRIPT%"
+echo client = LMStudioClient(settings) >> "%TEMP_PY_SCRIPT%"
+echo print(dumps(client.check().to_dict(), indent=2)) >> "%TEMP_PY_SCRIPT%"
+
+cd /d "%REPO_ROOT%"
+python "%TEMP_PY_SCRIPT%" > "%TEMP_LOG%" 2>&1
+set "STEP_EXIT=%ERRORLEVEL%"
+
+type "%TEMP_LOG%"
+type "%TEMP_LOG%" >> "%LOG_FILE%"
+type "%TEMP_LOG%" >> "%LATEST_LOG%"
+del "%TEMP_PY_SCRIPT%" >nul 2>nul
+
+if not "%STEP_EXIT%"=="0" (
+    echo FAILED: 01 LM Studio connectivity check exit code %STEP_EXIT%
+    echo See log: %LOG_FILE%
+    echo Last output:
+    type "%TEMP_LOG%"
+    exit /b %STEP_EXIT%
+)
+
+echo DONE: 01 LM Studio connectivity check exit code 0
+echo DONE: 01 LM Studio connectivity check exit code 0>>"%LOG_FILE%"
+echo DONE: 01 LM Studio connectivity check exit code 0>>"%LATEST_LOG%"
+exit /b 0
+
+:pick_project
+echo ========================================
+echo Select FilmCreator project to resume
+echo ========================================
+set /a PROJECT_COUNT=0
+for /f "delims=" %%P in ('dir /b /ad "%REPO_ROOT%\projects" 2^>nul') do (
+    set /a PROJECT_COUNT+=1
+    set "PROJECT_!PROJECT_COUNT!=%%P"
+    echo !PROJECT_COUNT!. %%P
+)
+if "%PROJECT_COUNT%"=="0" (
+    echo No project folders were found under:
+    echo   %REPO_ROOT%\projects
+    exit /b 1
+)
+echo.
+set /p PROJECT_CHOICE=Project number:
+if "%PROJECT_CHOICE%"=="" (
+    echo No project selected.
+    exit /b 1
+)
+for %%N in (%PROJECT_CHOICE%) do set "PROJECT_SLUG=!PROJECT_%%N!"
+if "%PROJECT_SLUG%"=="" (
+    echo Invalid project selection: %PROJECT_CHOICE%
+    exit /b 1
+)
+echo Selected project: %PROJECT_SLUG%
+echo.
+exit /b 0
+
+:picker_failed
+echo.
+echo Project selection failed.
+pause
+exit /b 1
 
 :run_step
 set "STEP_NAME=%~1"

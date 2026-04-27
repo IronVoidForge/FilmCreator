@@ -19,7 +19,7 @@
 - physical_build: Giant scale; multi-legged morphology.
 - origin_or_historical_context: unknown
 - movement_language: unknown
-A giant, multi-legged monster of arachnid morphology. The entity is characterized by its massive scale and non-humanoid, multi-limbed structure.
+A giant, multi-legged monster of arachnid morphology. The creature is characterized by its massive scale and non-humanoid, multi-limbed structure.
 
 - physical_traits: Giant scale
 - costume_signature: unknown
@@ -36,7 +36,7 @@ A giant, multi-legged monster of arachnid morphology. The entity is characterize
 ## Continuity
 
 - continuity_constraints: Must maintain giant scale and multi-legged morphology.
-- unresolved_ambiguities: Specific visual textures or colors of the exoskeleton/body are unknown., Specific movement patterns or speed are unknown., Exact number of legs is not specified beyond "multi-legged."
+- unresolved_ambiguities: Specific visual details of the exoskeleton or coloration are unknown., Precise movement patterns are not documented.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ A giant, multi-legged monster of arachnid morphology. The entity is characterize
 - status: `generated`
 - source_fingerprint: `4a1d878d241c2b4efa3457c48041a857c24d74cd`
 - created_at_utc: `2026-04-27T07:47:04.740276+00:00`
-- updated_at_utc: `2026-04-27T07:47:04.740276+00:00`
+- updated_at_utc: `2026-04-27T12:57:38.852636+00:00`

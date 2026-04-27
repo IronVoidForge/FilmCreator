@@ -14,12 +14,12 @@
 
 ## Visual Bible
 
-- identity_baseline: A large-scale group of quadrupedal entities.
+- identity_baseline: A group of large-scale quadrupedal entities.
 - age_presence: unknown
-- physical_build: Large-scale quadrupeds.
+- physical_build: Large-scale, quadrupedal frame.
 - origin_or_historical_context: unknown
 - movement_language: unknown
-The kalidahs are a group of large-scale, quadrupedal entities. Specific visual details regarding their individual anatomy, coloration, or textures are not provided in the available evidence.
+The kalidahs are a group of large-scale, quadrupedal entities. Specific visual details regarding their individual morphology or coloration are not provided in the available evidence.
 
 - physical_traits: Large scale, Quadrupedal morphology
 - costume_signature: unknown
@@ -35,8 +35,8 @@ The kalidahs are a group of large-scale, quadrupedal entities. Specific visual d
 
 ## Continuity
 
-- continuity_constraints: Must be rendered as a group entity., Must maintain large-scale quadrupedal morphology.
-- unresolved_ambiguities: Specific visual appearance (color, texture, species-type) is unknown., Sentience level is unknown.
+- continuity_constraints: Must be rendered as a group of large quadrupeds.
+- unresolved_ambiguities: Specific visual appearance (color, texture, features) is unknown., Sentience level is unknown.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ The kalidahs are a group of large-scale, quadrupedal entities. Specific visual d
 - status: `generated`
 - source_fingerprint: `da35181380d8167fe1a63af5b96a19019ad654cf`
 - created_at_utc: `2026-04-27T07:41:05.894685+00:00`
-- updated_at_utc: `2026-04-27T07:41:05.894685+00:00`
+- updated_at_utc: `2026-04-27T12:54:07.341245+00:00`

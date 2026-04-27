@@ -19,24 +19,24 @@
 - physical_build: unknown
 - origin_or_historical_context: Emerald City setting; presence of "little green carts" suggests a specific local logistical or ceremonial culture.
 - movement_language: timid (specifically when entering the Throne Room).
-The soldier is a human-scale, bipedal group entity. While specific uniform details are unstated, individual members are identified by distinct facial hair, specifically "green whiskers." They function as guides and messengers within the Emerald City, capable of moving through its streets or appearing in formal settings like the Throne Room with a timid demeanor.
+The soldier is a human-scale, bipedal entity appearing within the Emerald City. While the group's collective appearance is not detailed, a specific prominent figure is identified by green whiskers. This individual exhibits timid movement when entering high-status environments like the Throne Room.
 
-- physical_traits: green whiskers (individual identifier)
+- physical_traits: unknown
 - costume_signature: unknown
 - distinguishing_features: green whiskers (specific to an individual within the group)
-- state_variants: summoned/ceremonial (entering the Throne Room), guide (leading through the streets of the Emerald City)
+- state_variants: summoned/ceremonial (entering the Throne Room)
 
 ## Behavioral Bible
 
-- personality: Timid when appearing before authority (Oz).
-- role: Messenger and guide within the Emerald City.
+- personality: Timid (when appearing before authority).
+- role: Messenger and guide within the Emerald City; advisor to be summoned.
 - voice_notes: unknown
-- relationship_notes: Acts as a messenger for the Guardian of the Gates., Provides advice to the Scarecrow.
+- relationship_notes: Acts as a messenger for the Guardian of the Gates., Provides guidance/navigation through the streets of the Emerald City.
 
 ## Continuity
 
-- continuity_constraints: The "green whiskers" is a primary identifier for the specific soldier summoned in CH018.
-- unresolved_ambiguities: The exact visual appearance of the group's uniform or armor is unknown., It is unclear if "soldier" refers to a single individual or a collective unit, though specific actions are attributed to an individual with green whiskers.
+- continuity_constraints: The "soldier with the green whiskers" is a primary identifier for this entity type or its leadership.
+- unresolved_ambiguities: It is unclear if "soldier" refers to a single individual or a collective group of identical entities., Specific uniform or armor details are not provided.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ The soldier is a human-scale, bipedal group entity. While specific uniform detai
 - status: `generated`
 - source_fingerprint: `0d892a6e369858666779da974401d85eb478f69b`
 - created_at_utc: `2026-04-27T07:45:22.143749+00:00`
-- updated_at_utc: `2026-04-27T07:45:22.143749+00:00`
+- updated_at_utc: `2026-04-27T12:56:38.645686+00:00`

@@ -4,13 +4,13 @@
 - status: `canonical`
 - entity_kind: `individual`
 - first_seen_chapter: `CH001`
-- last_seen_chapter: `CH023`
+- last_seen_chapter: `CH024`
 
 ## Identity
 
 - display_name: dorothy
 - aliases: (none)
-- chapter_mentions: CH001, CH002, CH003, CH004, CH005, CH006, CH007, CH008, CH009, CH010, CH011, CH012, CH013, CH014, CH015, CH016, CH017, CH018, CH019, CH020, CH021, CH022, CH023
+- chapter_mentions: CH001, CH002, CH003, CH004, CH005, CH006, CH007, CH008, CH009, CH010, CH011, CH012, CH013, CH014, CH015, CH016, CH017, CH018, CH019, CH020, CH021, CH022, CH023, CH024
 
 ## Visual Bible
 
@@ -18,25 +18,25 @@
 - age_presence: Child / Young girl.
 - physical_build: unknown
 - origin_or_historical_context: unknown
-- movement_language: Movement is influenced by the wearing of Silver Shoes, which are central to her magic and travel.
-Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and functional identifier is a pair of Silver Shoes, which are central to her movement and magical capabilities.
+- movement_language: Movement is influenced by the wearing of Silver Shoes, which are central to her movement and magic.
+Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is most notably identified by her Silver Shoes, which serve as a central element to her movement and magical capabilities.
 
-- physical_traits: Expressive face, Weary traveler aesthetic
+- physical_traits: Expressive face
 - costume_signature: White clothing/dress paired with Silver Shoes.
-- distinguishing_features: Silver Shoes (central to movement and magic)
-- state_variants: Initial state: Green clothing (inferred from color change history), Current state: White dress/clothing and Silver Shoes
+- distinguishing_features: Silver Shoes (central to movement/magic)
+- state_variants: Initial state: Green clothing (inferred from color change history), Current state: White dress/clothing, Traveler state: Weary traveler appearance
 
 ## Behavioral Bible
 
 - personality: unknown
-- role: Traveler
+- role: traveler
 - voice_notes: unknown
-- relationship_notes: Associated with Aunt Em and Uncle Henry, Associated with Toto, Associated with the Scarecrow, Tin Woodman, and Cowardly Lion
+- relationship_notes: Associated with Toto, Associated with Aunt Em and Uncle Henry, Associated with the Witch of the North, Munchkins, Boq, Scarecrow, Tin Woodman, Cowardly Lion, The Great Oz, Wicked Witch of the West, Winkies, Winged Monkeys, and Glinda the Good Witch.
 
 ## Continuity
 
-- continuity_constraints: Clothing color transition: Green to White., Silver Shoes must be present as a central element of her visual identity and movement.
-- unresolved_ambiguities: Specific silhouette and initial costume details are unknown., Exact physical build/proportions are not specified.
+- continuity_constraints: Clothing color transition: Green to White., Silver Shoes must be present as a central movement/magic element.
+- unresolved_ambiguities: Specific silhouette or initial costume details are unknown., Exact physical build and proportions are not specified.
 
 ## Evidence Summary
 
@@ -53,6 +53,6 @@ Dorothy is a young human girl characterized by an expressive face. While her ini
 
 - artifact_id: `CHAR_dorothy`
 - status: `generated`
-- source_fingerprint: `c3db07f742707b112fb6d069afd6c2cc5b34c245`
+- source_fingerprint: `73369102c964ff63fbfea616910a276556c3a313`
 - created_at_utc: `2026-04-27T07:37:10.929639+00:00`
-- updated_at_utc: `2026-04-27T07:37:10.929639+00:00`
+- updated_at_utc: `2026-04-27T12:51:09.721623+00:00`

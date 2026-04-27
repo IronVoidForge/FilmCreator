@@ -14,17 +14,17 @@
 
 ## Visual Bible
 
-- identity_baseline: small-scale humanoid non-human entity
+- identity_baseline: small-scale humanoid non-human
 - age_presence: unknown
 - physical_build: small frame, bipedal morphology
 - origin_or_historical_context: unknown
 - movement_language: unknown
-mr_joker is a small-scale, bipedal humanoid non-human entity. Due to insufficient visual evidence in the provided records, specific details regarding age, costume, movement, or distinguishing physical marks remain unknown.
+mr_joker is a small-scale, bipedal humanoid non-human entity. Due to insufficient descriptive evidence, specific facial features, clothing, or movement patterns cannot be established. The character's visual identity is defined primarily by its small scale and non-human morphology.
 
-- physical_traits: bipedal morphology
+- physical_traits: bipedal
 - costume_signature: unknown
-- distinguishing_features: []
-- state_variants: []
+- distinguishing_features: unknown
+- state_variants: unknown
 
 ## Behavioral Bible
 
@@ -35,8 +35,8 @@ mr_joker is a small-scale, bipedal humanoid non-human entity. Due to insufficien
 
 ## Continuity
 
-- continuity_constraints: Must maintain small scale as defined by taxonomy., Must maintain bipedal morphology.
-- unresolved_ambiguities: Visual appearance (clothing, color, texture) is entirely undocumented., Specific age or stage of life is unknown., Movement style and personality are undocumented.
+- continuity_constraints: Must maintain small scale as per entity taxonomy., Must maintain bipedal morphology.
+- unresolved_ambiguities: Specific visual appearance (clothing, color, texture) is unknown., Age and specific non-human biological traits are unknown., Movement style and personality are unknown.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ mr_joker is a small-scale, bipedal humanoid non-human entity. Due to insufficien
 - status: `generated`
 - source_fingerprint: `f089bf8b09ce6f8a5bc73f6a5356874285e6304a`
 - created_at_utc: `2026-04-27T07:46:52.015253+00:00`
-- updated_at_utc: `2026-04-27T07:46:52.015253+00:00`
+- updated_at_utc: `2026-04-27T12:57:31.189523+00:00`

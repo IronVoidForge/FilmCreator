@@ -1,1 +1,2 @@
-The journey of Dorothy Gale and her companions—the Scarecrow, the Tin Woodman, and the Cowardly Lion—through the Land of Oz. Following the defeat of the Wicked Witch, the group seeks a way to fulfill their individual desires and return to their respective homes or kingdoms. The narrative follows their growth from seeking specific traits (brains, heart, courage) to achieving leadership roles and finding resolution through magical intervention.
+[[SECTION
+A young girl named Dorothy and her dog, Toto, embark on a fantastical journey through the Land of Oz. After experiencing various magical encounters and seeking a way home, Dorothy eventually finds herself navigating the transition between the magical realm and her reality in Kansas.

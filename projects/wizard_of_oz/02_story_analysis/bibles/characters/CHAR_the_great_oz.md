@@ -19,7 +19,7 @@
 - physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-No visual data is available to establish a stable identity, physical build, or costume for this character. The entity's morphology and scale remain unknown.
+No visual data is available to establish a stable identity, physical build, or costume for this character. The entity's morphology and scale remain unknown according to the provided taxonomy.
 
 - physical_traits: []
 - costume_signature: unknown
@@ -36,7 +36,7 @@ No visual data is available to establish a stable identity, physical build, or c
 ## Continuity
 
 - continuity_constraints: Maintain unknown status for all physical and morphological traits until visual evidence is provided.
-- unresolved_ambiguities: Primary type, morphology, scale, and sentience are currently unknown., Visual identity and costume are entirely undocumented in the provided evidence.
+- unresolved_ambiguities: Primary type, morphology, scale, and sentience are currently unknown., Visual identity and costume signature are entirely undocumented in the provided evidence.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ No visual data is available to establish a stable identity, physical build, or c
 - status: `generated`
 - source_fingerprint: `583661f442453733527ba0b87e7e856ef9a477cf`
 - created_at_utc: `2026-04-27T07:42:47.134000+00:00`
-- updated_at_utc: `2026-04-27T07:42:47.134000+00:00`
+- updated_at_utc: `2026-04-27T12:55:07.499524+00:00`

@@ -4,13 +4,13 @@
 - status: `canonical`
 - entity_kind: `individual`
 - first_seen_chapter: `CH001`
-- last_seen_chapter: `CH023`
+- last_seen_chapter: `CH024`
 
 ## Identity
 
 - display_name: toto
 - aliases: (none)
-- chapter_mentions: CH001, CH002, CH003, CH004, CH005, CH006, CH007, CH008, CH009, CH010, CH011, CH012, CH014, CH019, CH020, CH021, CH022, CH023
+- chapter_mentions: CH001, CH002, CH003, CH004, CH005, CH006, CH007, CH008, CH009, CH010, CH011, CH012, CH014, CH019, CH020, CH021, CH022, CH023, CH024
 
 ## Visual Bible
 
@@ -18,25 +18,25 @@
 - age_presence: unknown
 - physical_build: Small, compact quadruped frame.
 - origin_or_historical_context: unknown
-- movement_language: alert
-Toto is a small quadruped animal, specifically a dog, characterized by its black fur and alert eyes. The character maintains a compact silhouette suitable for a companion animal.
+- movement_language: alert posture.
+Toto is a small quadruped dog characterized by a compact build and consistent black fur. The character possesses an alert physical presence with keen, observant eyes suitable for a companion animal.
 
-- physical_traits: Keen night vision
-- costume_signature: Black fur.
-- distinguishing_features: Black fur, Alert eyes
+- physical_traits: keen night vision
+- costume_signature: black fur.
+- distinguishing_features: black fur, alert eyes
 - state_variants: standard (black fur)
 
 ## Behavioral Bible
 
-- personality: unknown
-- role: Companion animal to Dorothy.
+- personality: companion animal; alert.
+- role: companion to Dorothy.
 - voice_notes: unknown
-- relationship_notes: Associated with Dorothy, Associated with Scarecrow, Associated with Tin Woodman, Associated with Cowardly Lion
+- relationship_notes: primary companion to Dorothy
 
 ## Continuity
 
-- continuity_constraints: Must maintain black fur color as per silhouette description., Scale must remain small relative to human characters.
-- unresolved_ambiguities: Exact breed or specific physical proportions are not defined.
+- continuity_constraints: maintain small scale relative to human characters, fur color must remain black
+- unresolved_ambiguities: specific breed is not identified
 
 ## Evidence Summary
 
@@ -53,6 +53,6 @@ Toto is a small quadruped animal, specifically a dog, characterized by its black
 
 - artifact_id: `CHAR_toto`
 - status: `generated`
-- source_fingerprint: `92efc05c4f8fb91bfe0c1c1e921251fd060c5a09`
+- source_fingerprint: `0a5d0db4b993e0377fd35b20513115abfd0a5703`
 - created_at_utc: `2026-04-27T07:37:43.509321+00:00`
-- updated_at_utc: `2026-04-27T07:37:43.509321+00:00`
+- updated_at_utc: `2026-04-27T12:51:38.703458+00:00`

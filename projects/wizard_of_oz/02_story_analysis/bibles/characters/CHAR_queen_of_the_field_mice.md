@@ -17,11 +17,11 @@
 - identity_baseline: A tiny, quadrupedal field mouse.
 - age_presence: unknown
 - physical_build: Small-scale rodent frame; tiny proportions.
-- origin_or_historical_context: naturalistic field setting.
+- origin_or_historical_context: unknown
 - movement_language: unknown
-A tiny, quadrupedal field mouse of small scale. As a non-human animal entity, the character possesses a standard rodent morphology suitable for renderable animation.
+A tiny, quadrupedal field mouse of miniature scale. As a non-human animal entity, the visual identity is defined by its small rodent morphology and diminutive size relative to other characters.
 
-- physical_traits: quadrupedal, tiny scale
+- physical_traits: quadrupedal
 - costume_signature: unknown
 - distinguishing_features: tiny scale
 - state_variants: natural/unclothed
@@ -29,14 +29,14 @@ A tiny, quadrupedal field mouse of small scale. As a non-human animal entity, th
 ## Behavioral Bible
 
 - personality: unknown
-- role: leader of the field mice (inferred from title)
+- role: leader of field mice (inferred from title)
 - voice_notes: unknown
 - relationship_notes: associated with Field Mice (subjects), associated with Tin Woodman, associated with Scarecrow
 
 ## Continuity
 
-- continuity_constraints: must maintain tiny scale relative to other characters
-- unresolved_ambiguities: specific visual markings or fur color, specific movement style or temperament
+- continuity_constraints: must maintain tiny, quadrupedal rodent morphology
+- unresolved_ambiguities: specific visual appearance of the mouse (color, fur texture, etc.) is not provided, specific personality or vocal qualities are unknown
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ A tiny, quadrupedal field mouse of small scale. As a non-human animal entity, th
 - status: `generated`
 - source_fingerprint: `678546f15ff2bc829e66c96827a0c1ff71cc9b7d`
 - created_at_utc: `2026-04-27T07:41:29.135984+00:00`
-- updated_at_utc: `2026-04-27T07:41:29.135984+00:00`
+- updated_at_utc: `2026-04-27T12:54:21.272737+00:00`

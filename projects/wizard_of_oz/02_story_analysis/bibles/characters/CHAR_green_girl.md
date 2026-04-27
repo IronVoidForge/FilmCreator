@@ -19,7 +19,7 @@
 - physical_build: human scale, bipedal
 - origin_or_historical_context: unknown
 - movement_language: unknown
-A human-scale bipedal individual characterized by distinct green skin. Beyond this primary chromatic identifier, specific physical dimensions, age, and attire remain unrecorded in the provided evidence.
+A human-scale bipedal individual characterized by distinct green skin pigmentation. Further visual details regarding age, build, costume, and movement are currently unrecorded in the provided evidence.
 
 - physical_traits: green skin
 - costume_signature: unknown
@@ -36,7 +36,7 @@ A human-scale bipedal individual characterized by distinct green skin. Beyond th
 ## Continuity
 
 - continuity_constraints: maintain green skin pigmentation as the primary visual identifier
-- unresolved_ambiguities: specific facial features and age, clothing and costume style, height and body proportions, movement patterns and mannerisms
+- unresolved_ambiguities: specific facial features and hair, age and physical proportions, clothing and costume style, mannerisms and movement patterns
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ A human-scale bipedal individual characterized by distinct green skin. Beyond th
 - status: `generated`
 - source_fingerprint: `df1cab29c3fdeb81740430fe98d14fa65e047c42`
 - created_at_utc: `2026-04-27T07:42:22.081194+00:00`
-- updated_at_utc: `2026-04-27T07:42:22.081194+00:00`
+- updated_at_utc: `2026-04-27T12:54:52.725617+00:00`

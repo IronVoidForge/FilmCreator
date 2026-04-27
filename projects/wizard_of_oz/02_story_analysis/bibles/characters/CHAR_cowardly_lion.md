@@ -17,26 +17,26 @@
 - identity_baseline: Large quadrupedal feline predator.
 - age_presence: unknown
 - physical_build: Heavy, large-scale frame; noted as too heavy to be carried by others.
-- origin_or_historical_context: Oz setting.
+- origin_or_historical_context: Oz (fantasy setting)
 - movement_language: Quadrupedal movement.
-A large, heavy quadrupedal lion with a massive physical presence. The character possesses a distinct feline predator silhouette and is noted for being of such significant mass that he cannot be carried by other characters.
+A large, heavy quadrupedal feline with a predator's silhouette. The character possesses significant mass, described as being too heavy to be carried by companions. As an animal entity, the visual identity is defined by its large scale and feline morphology.
 
 - physical_traits: Large animal scale
-- costume_signature: Natural feline silhouette.
+- costume_signature: Feline silhouette.
 - distinguishing_features: Large predator silhouette
 - state_variants: natural/unclothed
 
 ## Behavioral Bible
 
 - personality: unknown
-- role: unknown
+- role: companion/traveler
 - voice_notes: unknown
-- relationship_notes: Associated with Dorothy, Scarecrow, and Tin Woodman.
+- relationship_notes: Associated with Dorothy, Scarecrow, and Tin Woodman., Interacts with the Queen of the Field Mice., Associated with The Great Oz and the Wicked Witch of the West.
 
 ## Continuity
 
-- continuity_constraints: Must maintain a large, heavy physical scale relative to other characters., Silhouette must remain consistent as a large quadrupedal feline.
-- unresolved_ambiguities: Specific visual age or stage of life is not established., Exact dimensions/scale are unknown beyond being "large."
+- continuity_constraints: Must maintain a large, heavy physical presence consistent with being uncarryable., Silhouette must remain consistently feline/quadrupedal.
+- unresolved_ambiguities: Specific visual details of fur color or pattern are not provided in the evidence., Exact age or stage of life is unknown.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ A large, heavy quadrupedal lion with a massive physical presence. The character 
 - status: `generated`
 - source_fingerprint: `a31315d0d98735634276d48aa4cdc22de33bfbab`
 - created_at_utc: `2026-04-27T07:40:39.965566+00:00`
-- updated_at_utc: `2026-04-27T07:40:39.965566+00:00`
+- updated_at_utc: `2026-04-27T12:53:44.901156+00:00`

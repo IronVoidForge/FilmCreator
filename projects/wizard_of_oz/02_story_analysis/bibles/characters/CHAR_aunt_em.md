@@ -4,22 +4,22 @@
 - status: `canonical`
 - entity_kind: `individual`
 - first_seen_chapter: `CH001`
-- last_seen_chapter: `CH017`
+- last_seen_chapter: `CH024`
 
 ## Identity
 
 - display_name: aunt_em
 - aliases: (none)
-- chapter_mentions: CH001, CH012, CH015, CH017
+- chapter_mentions: CH001, CH012, CH015, CH017, CH024
 
 ## Visual Bible
 
 - identity_baseline: unknown
 - age_presence: unknown
-- physical_build: bipedal, human scale
+- physical_build: biped, human_scale
 - origin_or_historical_context: unknown
 - movement_language: unknown
-Visual identity is currently unestablished. While the entity is taxonomically classified as a bipedal, human-scale individual, specific details regarding costume, silhouette, or physical build are not provided in the available evidence.
+Visual identity is currently unestablished. While the entity is taxonomically classified as a human-scale biped, specific details regarding age, build, costume, or movement are not provided in the available evidence. Note: Chapter CH012 contains conflicting descriptive data regarding "magical winged creatures (monkeys)" which may refer to associated entities rather than this character.
 
 - physical_traits: []
 - costume_signature: unknown
@@ -31,12 +31,12 @@ Visual identity is currently unestablished. While the entity is taxonomically cl
 - personality: unknown
 - role: unknown
 - voice_notes: unknown
-- relationship_notes: Associated with Dorothy, Associated with Uncle Henry, Associated with Wicked Witch of the West, Associated with Scarecrow, Tin Woodman, and Cowardly Lion
+- relationship_notes: Associated with Dorothy, Associated with Uncle Henry, Associated with Wicked Witch of the West, Associated with Scarecrow, Associated with Tin Woodman, Associated with Cowardly Lion
 
 ## Continuity
 
-- continuity_constraints: Maintain bipedal morphology as per taxonomy.
-- unresolved_ambiguities: Visual identity (costume, build, age) is entirely unknown., Discrepancy in source material: Chapter CH012 evidence describes "magical winged creatures (monkeys)" under this ID, which conflicts with the individual entity status; it is unclear if this refers to the character or an associated group.
+- continuity_constraints: Maintain bipedal, human-scale morphology as per taxonomy.
+- unresolved_ambiguities: Visual identity (costume, age, build) is entirely unknown., Discrepancy in CH012 suggests potential confusion between this character and associated flying primates.
 
 ## Evidence Summary
 
@@ -51,6 +51,6 @@ Visual identity is currently unestablished. While the entity is taxonomically cl
 
 - artifact_id: `CHAR_aunt_em`
 - status: `generated`
-- source_fingerprint: `a6fe45a38c35170a1c07bb9a2080efd4fd4eff39`
+- source_fingerprint: `30b0c7ec7d1e2427f91a9d1d6c3280b7c1b2fbf8`
 - created_at_utc: `2026-04-27T07:36:53.895250+00:00`
-- updated_at_utc: `2026-04-27T07:36:53.895250+00:00`
+- updated_at_utc: `2026-04-27T12:50:57.775857+00:00`

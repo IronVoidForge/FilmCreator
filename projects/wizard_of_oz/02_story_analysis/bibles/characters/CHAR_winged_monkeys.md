@@ -51,4 +51,4 @@ A group of winged, monkey-like entities. Their primary visual identifier is a pr
 - status: `generated`
 - source_fingerprint: `458309ed86136f90fef296f449891f17913814d9`
 - created_at_utc: `2026-04-27T07:43:32.087239+00:00`
-- updated_at_utc: `2026-04-27T07:43:32.087239+00:00`
+- updated_at_utc: `2026-04-27T12:55:31.693300+00:00`

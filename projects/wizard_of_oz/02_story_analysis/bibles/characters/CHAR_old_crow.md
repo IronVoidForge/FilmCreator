@@ -36,7 +36,7 @@ A small, winged animal characterized by black feathers. The entity is a talking 
 ## Continuity
 
 - continuity_constraints: Must maintain small scale and black feather coloration.
-- unresolved_ambiguities: Specific species or breed of crow is unknown., Visual age or maturity level is not established.
+- unresolved_ambiguities: Specific species or breed of crow is unknown., Visual age/maturity of the bird is unknown.
 
 ## Evidence Summary
 
@@ -51,4 +51,4 @@ A small, winged animal characterized by black feathers. The entity is a talking 
 - status: `generated`
 - source_fingerprint: `f234e1a54647089e846500a7af3dadf8a6a7099d`
 - created_at_utc: `2026-04-27T07:40:06.224906+00:00`
-- updated_at_utc: `2026-04-27T07:40:06.224906+00:00`
+- updated_at_utc: `2026-04-27T12:53:17.750925+00:00`

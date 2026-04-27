@@ -16,27 +16,27 @@
 
 - identity_baseline: A living, straw-filled humanoid figure.
 - age_presence: unknown
-- physical_build: Bipedal humanoid frame of human scale; non-flesh construction.
-- origin_or_historical_context: Rustic cornfield origin.
+- physical_build: Bipedal humanoid form of human scale; rustic construction.
+- origin_or_historical_context: Cornfield origin; rustic/traditional scarecrow construction.
 - movement_language: Clumsy movement.
-The Scarecrow is a bipedal, human-scale humanoid constructed from rustic materials. As a non-flesh entity, the figure is visibly stuffed with straw and maintains a traditional scarecrow silhouette. Its movement is characterized as clumsy, reflecting its makeshift, straw-filled construction.
+The Scarecrow is a bipedal, human-scale humanoid figure of rustic construction, appearing as a living entity stuffed entirely with straw. His movement is characterized by a distinct clumsiness. He lacks flesh and is visually defined by his traditional scarecrow silhouette and cornfield origins.
 
 - physical_traits: Immune to poppy scent
 - costume_signature: Traditional scarecrow construction.
 - distinguishing_features: Stuffed with straw, Non-flesh entity
-- state_variants: standard (straw-filled)
+- state_variants: Standard (straw-filled)
 
 ## Behavioral Bible
 
 - personality: unknown
 - role: unknown
 - voice_notes: unknown
-- relationship_notes: Associated with Dorothy, Associated with Toto, Associated with Tin Woodman, Associated with Cowardly Lion
+- relationship_notes: Associated with Dorothy, Toto, Tin Woodman, and Cowardly Lion.
 
 ## Continuity
 
-- continuity_constraints: Must maintain straw-filled internal composition., Movement must remain clumsy.
-- unresolved_ambiguities: Specific facial features or head construction are not detailed., Exact clothing materials beyond "traditional scarecrow construction" are unknown.
+- continuity_constraints: Must maintain a non-flesh, straw-filled internal composition., Movement should remain clumsy as per character archetype.
+- unresolved_ambiguities: Specific facial features or head construction are not detailed beyond "scarecrow" archetype.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ The Scarecrow is a bipedal, human-scale humanoid constructed from rustic materia
 - status: `generated`
 - source_fingerprint: `4a02141cda93fa845c4e68a7d76b3be1a2480512`
 - created_at_utc: `2026-04-27T07:39:16.302568+00:00`
-- updated_at_utc: `2026-04-27T07:39:16.302568+00:00`
+- updated_at_utc: `2026-04-27T12:52:41.060643+00:00`

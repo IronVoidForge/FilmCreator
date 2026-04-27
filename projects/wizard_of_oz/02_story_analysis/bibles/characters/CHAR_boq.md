@@ -19,24 +19,24 @@
 - physical_build: Small-scale humanoid; bipedal morphology.
 - origin_or_historical_context: Land of the Munchkins.
 - movement_language: unknown
-Boq is a small-scale, bipedal humanoid of the Munchkin race. He possesses a high socioeconomic status within his community, characterized as one of the richest Munchkins in the land. Specific facial features or detailed clothing are not documented, but his presence is defined by his wealth and role as a host.
+Boq is a small-scale, bipedal humanoid of the Munchkin race. He possesses a high socioeconomic status within his community, characterized as one of the richest Munchkins in the land. While specific facial or bodily details are unstated, his visual identity is defined by his scale and his presentation as a person of significant wealth.
 
-- physical_traits: small scale
+- physical_traits: bipedal
 - costume_signature: unknown (noted as being a "rich Munchkin")
 - distinguishing_features: small scale
-- state_variants: hosting/social (waits upon guests)
+- state_variants: wealthy/formal attire (inferred from status)
 
 ## Behavioral Bible
 
-- personality: Hospitable; serves as a host to guests.
-- role: Wealthy Munchkin resident/host.
+- personality: Hospitable; serves as a host to Dorothy.
+- role: Wealthy Munchkin host.
 - voice_notes: unknown
-- relationship_notes: Interacts with Dorothy (waits upon her during supper).
+- relationship_notes: Host to Dorothy
 
 ## Continuity
 
 - continuity_constraints: Must maintain small scale relative to other characters., Visual presentation should reflect high wealth/status.
-- unresolved_ambiguities: Specific facial features or hair/eye color., Exact clothing style (beyond the implication of wealth)., Precise age or stage of life.
+- unresolved_ambiguities: Specific facial features and hair., Exact color palette of Munchkin physiology or clothing., Specific age or stage of life.
 
 ## Evidence Summary
 
@@ -51,4 +51,4 @@ Boq is a small-scale, bipedal humanoid of the Munchkin race. He possesses a high
 - status: `generated`
 - source_fingerprint: `c01b72734f9dc506aab8086fa047ee7f826c6738`
 - created_at_utc: `2026-04-27T07:39:02.024835+00:00`
-- updated_at_utc: `2026-04-27T07:39:02.024835+00:00`
+- updated_at_utc: `2026-04-27T12:52:32.864702+00:00`

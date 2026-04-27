@@ -19,7 +19,7 @@
 - physical_build: humanoid biped, human scale
 - origin_or_historical_context: Ruler of the Quadlings; associated with a ruby throne.
 - movement_language: unknown
-Glinda is a powerful humanoid entity and the Witch of the South, possessing a high-status magical presence. Her visual identity is tied to her role as a ruler, specifically associated with a ruby throne.
+Glinda is a powerful humanoid entity and the Witch of the South, possessing a high-status magical presence. Her visual identity is closely tied to her seat of power, specifically associated with a ruby throne.
 
 - physical_traits: bipedal morphology
 - costume_signature: high-status magical attire associated with a ruby throne.
@@ -29,14 +29,14 @@ Glinda is a powerful humanoid entity and the Witch of the South, possessing a hi
 ## Behavioral Bible
 
 - personality: unknown
-- role: The most powerful of all the Witches; ruler over the Quadlings.
+- role: The most powerful of all the Witches; ruler of the Quadlings.
 - voice_notes: unknown
 - relationship_notes: Associated with Dorothy, Scarecrow, Tin Woodman, and Lion., Subject to inquiries by travelers seeking her presence.
 
 ## Continuity
 
-- continuity_constraints: Visual presentation must maintain a high-status magical presence.
-- unresolved_ambiguities: Specific physical appearance (facial features, hair, etc.) is unknown., Specific clothing details beyond "high-status" are unknown.
+- continuity_constraints: Visual presentation must maintain a high-status magical presence., Connection to the Quadlings and the ruby throne should be preserved.
+- unresolved_ambiguities: Specific physical appearance (facial features, hair, etc.) is unknown., Specific clothing/armor details beyond "high-status" are unknown.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ Glinda is a powerful humanoid entity and the Witch of the South, possessing a hi
 - status: `generated`
 - source_fingerprint: `c9a8abdf2ceaf426b38ac5b4ee5756765e33522b`
 - created_at_utc: `2026-04-27T07:45:08.316235+00:00`
-- updated_at_utc: `2026-04-27T07:45:08.316235+00:00`
+- updated_at_utc: `2026-04-27T12:56:29.414332+00:00`
