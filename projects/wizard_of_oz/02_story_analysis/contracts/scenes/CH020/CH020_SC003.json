@@ -5,33 +5,33 @@
   "purpose": "Provide exposition regarding the nature and limitations of the China Country inhabitants.",
   "summary": "Dorothy meets a beautiful China Princess. The Princess explains the tragedy of being mended (loss of beauty) and the physical stiffness that occurs if they are removed from their homeland.",
   "emotional_arc": "Curiosity $\\rightarrow$ Melancholy/Pathos.",
-  "production_intent": "Establish the fragile physical reality of the China Country inhabitants through a meeting between dorothy and china_princess. The scene must emphasize the contrast between human organic movement and porcelain rigidity, using the princess's exposition to ground the stakes of their existence.",
-  "scene_short_description": "A young girl meets a delicate porcelain princess amidst tiny colorful houses on a white platter floor.",
+  "production_intent": "Establish the fragile and precarious nature of the China Country inhabitants through a meeting between a weary human traveler and a perfect porcelain figure. The visual language must emphasize the contrast between organic weariness and inorganic perfection, while highlighting the physical risks inherent to the porcelain characters' existence.",
+  "scene_short_description": "A weary traveler meets a delicate porcelain princess amidst tiny colorful houses on a white platter floor.",
   "scene_primary_scale_story_point": "Human scale vs. miniature china architecture and inhabitants.",
   "scene_required_anchor_catalog": [
     "smooth_white_platter_floor",
     "tiny_colorful_china_houses"
   ],
-  "scene_start_state": "dorothy enters the dainty_china_country settlement, encountering the china_princess.",
-  "scene_end_state": "The group absorbs the tragic reality of porcelain life as the princess finishes her explanation.",
-  "dominant_action_line": "The princess explains the physical consequences of mending and leaving their homeland.",
+  "scene_start_state": "dorothy enters the dainty_china_country settlement looking weary.",
+  "scene_end_state": "dorothy listens in somber realization to the princess's limitations.",
+  "dominant_action_line": "The meeting and subsequent exposition regarding porcelain fragility and mending.",
   "scene_spatial_layout": [
     "characters positioned on a vast, smooth white floor surface",
-    "tiny houses clustered to create a miniature village scale"
+    "tiny houses clustered to create a miniature village feel"
   ],
   "character_spatial_map": [
-    "china_princess centered near her porcelain structures",
-    "dorothy and companions grouped as observers in the mid-ground"
+    "dorothy stands as a large organic presence relative to the china_princess",
+    "china_princess remains centered within her porcelain settlement"
   ],
   "environment_subzones": [
     "porcelain_settlement_center",
-    "china_house_cluster"
+    "tiny_china_house_cluster"
   ],
   "entry_vectors": [
-    "dorothy_approach_path"
+    "dorothy enters from edge of white platter floor"
   ],
   "exit_vectors": [
-    "group_departure_path"
+    "dorothy exits toward the next cluster of houses"
   ],
   "beat_transition_map": [
     "BT001 -> BT002: visual discovery to verbal engagement",
@@ -103,7 +103,7 @@
   ],
   "continuity_constraints": [
     "china_princess must appear visually perfect but physically fragile",
-    "porcelain inhabitants must maintain a smooth, non-organic texture"
+    "porcelain surfaces must remain smooth and unblemished unless specifically discussing mending"
   ],
   "visual_coverage_families": [
     "Two-shots between dorothy and china_princess",
@@ -113,10 +113,32 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Initial meeting and discovery",
+      "summary": "Discovery of the China Country",
       "purpose": "",
-      "action_start": "dorothy enters the porcelain area",
-      "action_end": "eye contact established between dorothy and china_princess",
+      "action_start": "dorothy enters the white platter area",
+      "action_end": "dorothy stops to observe the settlement",
+      "active_subjects": [
+        "dorothy"
+      ],
+      "passive_subjects": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "spatial_context": "dainty_china_country",
+      "blocking_hint": "group moves through miniature houses",
+      "environment_subzone": "porcelain_settlement_center",
+      "continuity_focus": "dorothy's white dress visibility",
+      "coverage_hint": "wide shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Meeting",
+      "purpose": "",
+      "action_start": "china_princess appears",
+      "action_end": "the first exchange of greetings",
       "active_subjects": [
         "dorothy",
         "china_princess"
@@ -126,43 +148,20 @@
         "tin_woodman",
         "cowardly_lion"
       ],
-      "spatial_context": "dainty_china_country settlement",
-      "blocking_hint": "dorothy stands before the princess among tiny houses",
+      "spatial_context": "dainty_china_country",
+      "blocking_hint": "dorothy leans in to see the princess",
       "environment_subzone": "porcelain_settlement_center",
-      "continuity_focus": "ensure china_princess looks perfect and unblemished",
-      "coverage_hint": "wide shot to establish scale",
-      "coverage_priority": "high",
-      "handoff_to_next": "BT002"
-    },
-    {
-      "beat_id": "BT002",
-      "summary": "The Princess's introduction",
-      "purpose": "",
-      "action_start": "china_princess acknowledges the visitors",
-      "action_end": "the princess begins her explanation",
-      "active_subjects": [
-        "china_princess",
-        "dorothy"
-      ],
-      "passive_subjects": [
-        "the_scarecrow",
-        "tin_woodman",
-        "cowardly_lion"
-      ],
-      "spatial_context": "dainty_china_country settlement",
-      "blocking_hint": "china_princess remains poised and still",
-      "environment_subzone": "porcelain_settlement_center",
-      "continuity_focus": "maintain porcelain texture on skin",
-      "coverage_hint": "close-ups on china_princess",
+      "continuity_focus": "china_princess perfection",
+      "coverage_hint": "two-shot",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "The tragedy of mending and stiffness",
+      "summary": "The Tragedy of Mending",
       "purpose": "",
-      "action_start": "princess explains the loss of beauty from being mended",
-      "action_end": "the group reacts to the physical limitations described",
+      "action_start": "princess begins explaining limitations",
+      "action_end": "the weight of the exposition settles on dorothy",
       "active_subjects": [
         "china_princess",
         "dorothy"
@@ -172,11 +171,11 @@
         "tin_woodman",
         "cowardly_lion"
       ],
-      "spatial_context": "dainty_china_country settlement",
-      "blocking_hint": "dorothy leans in; princess remains rigid",
+      "spatial_context": "dainty_china_country",
+      "blocking_hint": "close-up on princess's face",
       "environment_subzone": "porcelain_settlement_center",
-      "continuity_focus": "emphasize the fragility of the princess",
-      "coverage_hint": "over-the-shoulder shots",
+      "continuity_focus": "fragility of porcelain movement",
+      "coverage_hint": "close-up/OTS",
       "coverage_priority": "high",
       "handoff_to_next": "end_of_scene"
     }
@@ -186,10 +185,9 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish_setting",
-      "planned_shot_moment_summary": "dorothy encounters the princess in the settlement",
+      "planned_shot_moment_summary": "dorothy discovers the porcelain settlement",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
-        "china_princess",
         "the_scarecrow",
         "tin_woodman",
         "cowardly_lion"
@@ -198,54 +196,27 @@
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "porcelain_settlement_center",
       "planned_shot_required_anchor_1": "smooth_white_platter_floor",
-      "planned_shot_scale_proof_detail": "dorothy's height relative to tiny houses",
-      "start_state_seed": "wide view of settlement",
-      "end_state_seed": "medium shot of encounter",
-      "action_seed": "dorothy approaches the princess",
+      "planned_shot_scale_proof_detail": "dorothy's feet vs tiny houses",
+      "start_state_seed": "wide shot of settlement",
+      "end_state_seed": "medium shot on dorothy",
+      "action_seed": "dorothy walking through the area",
       "blocking_seed": [
-        "dorothy moves toward china_princess"
+        "walking toward center"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
       "lens_family": "wide",
-      "camera_motion": "push_in",
+      "camera_motion": "track",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
-      "lighting_style": "soft_even",
+      "lighting_style": "diffuse_ambient",
       "primary_subject_angle": "front_three_quarter_right"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "character_introduction",
-      "planned_shot_moment_summary": "close up on the princess's perfect face",
-      "primary_subject_seed": "china_princess",
-      "secondary_subjects_seed": [],
-      "subject_visibility": "on_screen",
-      "narration_mode": "in_scene_speaker",
-      "environment_subzone": "porcelain_settlement_center",
-      "planned_shot_required_anchor_1": "china_princess_face",
-      "planned_shot_scale_proof_detail": "extreme detail of porcelain texture",
-      "start_state_seed": "medium shot",
-      "end_state_seed": "close up",
-      "action_seed": "princess begins speaking",
-      "blocking_seed": [
-        "china_princess remains still and poised"
-      ],
-      "shot_size": "close_up",
-      "camera_angle": "eye_level",
-      "lens_family": "portrait",
-      "camera_motion": "locked_off",
-      "zoom_behavior": "subtle_in",
-      "focus_strategy": "shallow_subject",
-      "lighting_style": "soft_even",
-      "primary_subject_angle": "front"
-    },
-    {
-      "planned_shot_id": "SH003",
-      "beat_id": "BT003",
-      "narrative_function": "exposition_delivery",
-      "planned_shot_moment_summary": "over the shoulder shot of princess explaining mending tragedy",
+      "planned_shot_moment_summary": "the princess is revealed in her perfection",
       "primary_subject_seed": "china_princess",
       "secondary_subjects_seed": [
         "dorothy"
@@ -253,22 +224,22 @@
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "porcelain_settlement_center",
-      "planned_shot_required_anchor_1": "smooth_white_platter_floor",
-      "planned_shot_scale_proof_detail": "contrast between dorothy's skin and princess's porcelain",
-      "start_state_seed": "close up on princess",
-      "end_state_seed": "medium two-shot",
-      "action_seed": "princess describes the loss of beauty from mending",
+      "planned_shot_required_anchor_1": "tiny_colorful_china_houses",
+      "planned_shot_scale_proof_detail": "princess height vs house size",
+      "start_state_seed": "medium shot on princess",
+      "end_state_seed": "close-up on princess",
+      "action_seed": "princess greets dorothy",
       "blocking_seed": [
-        "china_princess gestures minimally"
+        "stationary [[/SECTION]]"
       ],
-      "shot_size": "medium_close",
-      "camera_angle": "eye_level",
-      "lens_family": "portrait",
-      "camera_motion": "locked_off",
-      "zoom_behavior": "none",
-      "focus_strategy": "shallow_subject",
-      "lighting_style": "soft_even",
-      "primary_subject_angle": "profile_left"
+      "shot_size": "",
+      "camera_angle": "",
+      "lens_family": "",
+      "camera_motion": "",
+      "zoom_behavior": "",
+      "focus_strategy": "",
+      "lighting_style": "",
+      "primary_subject_angle": ""
     }
   ],
   "unresolved_questions": [],
@@ -334,16 +305,16 @@
     "[CH020] Chapter XX (book index hit)",
     "[CH014] Chapter XIV (book index hit)",
     "[CH008] Chapter VIII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH020_SC003\n\n## Production Intent\nEstablish the fragile physical reality of the China Country inhabitants through a meeting between dorothy and china_princess. The scene must emphasize the contrast between human organic movement and porcelain rigidity, using the princess's exposition to ground the stakes of their existence.\n\n## Required Cast\n- dorothy\n- china_princess\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n\n## Required Environments\n- dainty_china_country (porcelain settlement with smooth white floor and tiny houses)\n\n## Continuity Constraints\n- china_princess must appear visually perfect but physically fragile.\n- Porcelain inhabitants must maintain a smooth, non-organic texture.\n- Scale: Dorothy's size relative to the miniature porcelain architecture.\n\n## Beat List\n- BT001: Initial meeting and discovery.\n- BT002: The Princess's introduction.\n- BT003: The tragedy of mending and stiffness.",
+  "storyboard_markdown": "# Scene Contract: CH020_SC003\n\n## Production Intent\nEstablish the fragile and precarious nature of the China Country inhabitants through a meeting between a weary human traveler and a perfect porcelain figure. The visual language must emphasize the contrast between organic weariness and inorganic perfection, while highlighting the physical risks inherent to the porcelain characters' existence.\n\n## Required Cast\n- dorothy\n- china_princess\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n\n## Required Environments\n- dainty_china_country (smooth white platter floor, tiny colorful houses)\n\n## Continuity Constraints\n- china_princess must appear visually perfect but physically fragile.\n- porcelain surfaces must remain smooth and unblemished unless specifically discussing mending.\n\n## Beat List\n- BT001: Discovery of the China Country\n- BT002: The Meeting\n- BT003: The Tragedy of Mending",
   "metadata": {
     "artifact_id": "CH020_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "68f4018086200b532ac983fa7d69adfdbb7cf440",
+    "source_fingerprint": "def318adcfcfae3a304b3cc9c13c7c00b83b7b66",
     "created_at_utc": "2026-04-27T09:02:39.009758+00:00",
-    "updated_at_utc": "2026-04-27T09:02:39.009758+00:00",
+    "updated_at_utc": "2026-04-27T14:05:40.954791+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -368,6 +339,11 @@
         "timestamp_utc": "2026-04-27T09:03:24.017668+00:00",
         "action": "synthesized",
         "source_fingerprint": "68f4018086200b532ac983fa7d69adfdbb7cf440"
+      },
+      {
+        "timestamp_utc": "2026-04-27T14:06:19.500607+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "def318adcfcfae3a304b3cc9c13c7c00b83b7b66"
       }
     ]
   }

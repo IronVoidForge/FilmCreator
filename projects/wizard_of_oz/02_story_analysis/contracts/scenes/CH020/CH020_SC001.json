@@ -5,38 +5,39 @@
   "purpose": "Establish the new setting's unique physics and the group's entry into a high-stakes, fragile environment.",
   "summary": "The travelers use a wooden ladder constructed by the Tin Woodman to scale a massive wall. Upon crossing over, they enter the Dainty China Country, immediately realizing that every movement must be calculated to avoid destruction.",
   "emotional_arc": "Determination $\\rightarrow$ Awe $\\rightarrow$ Extreme Caution/Tension.",
-  "production_intent": "Establish the physical scale of the wall and the transition from a rugged climb to a fragile, high-stakes porcelain landscape. The sequence must emphasize the shift from mechanical effort to extreme physical restraint to prevent environmental destruction.",
-  "scene_short_description": "Travelers climb a massive wall via wooden ladder into a fragile porcelain landscape.",
-  "scene_primary_scale_story_point": "The height of the wall relative to character scale.",
+  "production_intent": "Establish the physical scale of the wall and the transition into a fragile, high-stakes porcelain environment where movement must be hyper-calculated.",
+  "scene_short_description": "Travelers climb a wooden ladder over a massive wall into a fragile porcelain landscape.",
+  "scene_primary_scale_story_point": "The height of the wall relative to the travelers' scale.",
   "scene_required_anchor_catalog": [
-    "tin_woodman_ladder",
+    "wooden_ladder",
     "white_platter_floor"
   ],
-  "scene_start_state": "Characters positioned at the base of a massive wall with a wooden ladder.",
-  "scene_end_state": "Characters frozen in cautious movement on a smooth, white porcelain surface.",
-  "dominant_action_line": "Scaling the wall and navigating the fragile china terrain.",
+  "scene_start_state": "Characters gathered at the base of the massive wall with a wooden ladder.",
+  "scene_end_state": "Characters frozen in cautious movement upon the porcelain floor.",
+  "dominant_action_line": "Scaling the wall via ladder and entering the fragile china country.",
   "scene_spatial_layout": [
-    "Vertical ascent along the wall face",
-    "Horizontal traversal across a flat, platter-like floor"
+    "Vertical ascent against a massive vertical plane",
+    "Horizontal transition onto a smooth, white, platter-like surface"
   ],
   "character_spatial_map": [
-    "group clustered at ladder base",
-    "staggered vertical distribution during climb",
-    "spread out cautiously upon entry to china country"
+    "group clustered at base of wall",
+    "single file ascent on ladder",
+    "cautious spacing on porcelain floor"
   ],
   "environment_subzones": [
-    "wall_face",
+    "wall_base",
+    "wall_summit",
     "dainty_china_country_floor"
   ],
   "entry_vectors": [
-    "climbing up the wooden ladder"
+    "vertical climb via wooden_ladder"
   ],
   "exit_vectors": [
-    "cautious walking across the white floor"
+    "horizontal movement across china_country_floor"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Vertical ascent to horizontal crossing",
-    "BT002 -> BT003: Visual awe to physical tension"
+    "BT001 -> BT002: Vertical ascent to summit crossing",
+    "BT002 -> BT003: Summit descent to porcelain floor contact"
   ],
   "characters_required": [
     {
@@ -113,21 +114,21 @@
     }
   ],
   "continuity_constraints": [
-    "Vertical scale relationship between characters and the high wall",
+    "Vertical scale relationship between characters and the massive wall",
     "Structural stability of the wooden ladder during ascent"
   ],
   "visual_coverage_families": [
-    "Low angle shots of ladder and daunting wall height",
+    "Low angle shots of ladder and wall height",
     "Wide establishing shots of porcelain landscape",
-    "Close-ups on feet and steps for careful movement"
+    "Close-ups on feet and steps for movement precision"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Scaling the wall via ladder",
+      "summary": "Scaling the massive wall via ladder",
       "purpose": "",
       "action_start": "characters at base of wall",
-      "action_end": "characters reaching the top ledge",
+      "action_end": "group reaches summit ledge",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -136,20 +137,20 @@
         "toto"
       ],
       "passive_subjects": [],
-      "spatial_context": "wall_face",
-      "blocking_hint": "vertical staggered line on ladder",
-      "environment_subzone": "wall_face",
-      "continuity_focus": "ladder stability and wall height",
+      "spatial_context": "wall_base to wall_summit",
+      "blocking_hint": "single file vertical climb",
+      "environment_subzone": "wall_base",
+      "continuity_focus": "ladder stability and character height vs wall",
       "coverage_hint": "low angle shots of ladder/wall",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Entering the Dainty China Country",
+      "summary": "Crossing the summit threshold",
       "purpose": "",
-      "action_start": "crossing the ledge",
-      "action_end": "standing on the white floor",
+      "action_start": "climbing over top edge",
+      "action_end": "group standing on new terrain",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -158,20 +159,20 @@
         "toto"
       ],
       "passive_subjects": [],
-      "spatial_context": "transition from wall to floor",
-      "blocking_hint": "group spilling over the edge",
-      "environment_subzone": "dainty_china_country_floor",
-      "continuity_focus": "transition of terrain texture",
+      "spatial_context": "wall_summit transition to china country",
+      "blocking_hint": "emerging from behind wall crest",
+      "environment_subzone": "wall_summit",
+      "continuity_focus": "transition from vertical to horizontal plane",
       "coverage_hint": "wide establishing shots",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Realizing environmental fragility",
+      "summary": "Realizing the fragility of the terrain",
       "purpose": "",
-      "action_start": "first step on porcelain",
-      "action_end": "group frozen in cautious movement",
+      "action_start": "first step on white floor",
+      "action_end": "group frozen in extreme caution",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -180,10 +181,10 @@
         "toto"
       ],
       "passive_subjects": [],
-      "spatial_context": "white platter-like landscape",
-      "blocking_hint": "slowed, deliberate movements",
+      "spatial_context": "dainty_china_country_floor",
+      "blocking_hint": "slowed, deliberate movement patterns",
       "environment_subzone": "dainty_china_country_floor",
-      "continuity_focus": "movement speed and weight distribution",
+      "continuity_focus": "smoothness of white platter floor",
       "coverage_hint": "close-ups on feet/steps",
       "coverage_priority": "high",
       "handoff_to_next": "end_of_scene"
@@ -204,16 +205,16 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "wall_face",
-      "planned_shot_required_anchor_1": "tin_woodman_ladder",
-      "planned_shot_scale_proof_detail": "ladder height vs character height",
-      "start_state_seed": "base of wall",
-      "end_state_seed": "mid-climb",
-      "action_seed": "climbing the wooden ladder",
+      "environment_subzone": "wall_base",
+      "planned_shot_required_anchor_1": "wooden_ladder",
+      "planned_shot_scale_proof_detail": "low angle looking up wall height",
+      "start_state_seed": "characters at base",
+      "end_state_seed": "climbing mid-way",
+      "action_seed": "climbing ladder",
       "blocking_seed": [
-        "staggered vertical climb"
+        "single file on ladder"
       ],
-      "shot_size": "low_angle_full",
+      "shot_size": "full",
       "camera_angle": "low_angle",
       "lens_family": "wide",
       "camera_motion": "tilt",
@@ -226,7 +227,7 @@
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "establish setting",
-      "planned_shot_moment_summary": "crossing the top of the wall",
+      "planned_shot_moment_summary": "crossing the summit into china country",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "the_scarecrow",
@@ -236,14 +237,14 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "dainty_china_country_floor",
+      "environment_subzone": "wall_summit",
       "planned_shot_required_anchor_1": "white_platter_floor",
-      "planned_shot_scale_proof_detail": "vastness of white landscape",
-      "start_state_seed": "top edge of wall",
-      "end_state_seed": "wide view of china country",
-      "action_seed": "stepping onto the porcelain floor",
+      "planned_shot_scale_proof_detail": "wide shot of porcelain landscape",
+      "start_state_seed": "climbing over edge",
+      "end_state_seed": "standing on summit",
+      "action_seed": "crossing over wall",
       "blocking_seed": [
-        "group emerging over the ledge"
+        "group emerging over ledge"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
@@ -257,8 +258,8 @@
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "emphasize fragility",
-      "planned_shot_moment_summary": "first steps on china floor",
+      "narrative_function": "emphasize tension",
+      "planned_shot_moment_summary": "first steps on porcelain floor",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "toto"
@@ -267,17 +268,17 @@
       "narration_mode": "none",
       "environment_subzone": "dainty_china_country_floor",
       "planned_shot_required_anchor_1": "white_platter_floor",
-      "planned_shot_scale_proof_detail": "delicate contact with surface",
-      "start_state_seed": "foot hovering",
-      "end_state_seed": "foot landing softly",
-      "action_seed": "walking with extreme caution",
+      "planned_shot_scale_proof_detail": "extreme close up of feet on china",
+      "start_state_seed": "foot touching surface",
+      "end_state_seed": "foot lifting cautiously",
+      "action_seed": "careful stepping",
       "blocking_seed": [
         "slow",
-        "deliberate steps"
+        "deliberate foot placement"
       ],
-      "shot_size": "close_up",
+      "shot_size": "extreme_close_up",
       "camera_angle": "low_angle",
-      "lens_family": "normal",
+      "lens_family": "telephoto",
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
@@ -350,16 +351,16 @@
     "[CH020] Chapter XX (book index hit)",
     "[CH015] Chapter XV (book index hit)",
     "[CH002] Chapter II (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH020_SC001\n\n## Production Intent\nEstablish the physical scale of the wall and the transition from a rugged climb to a fragile, high-stakes porcelain landscape. The sequence must emphasize the shift from mechanical effort to extreme physical restraint to prevent environmental destruction.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n\n## Required Environments\n- wall_face (The high wall of China Country)\n- dainty_china_country_floor (The white, platter-like landscape)\n\n## Continuity Constraints\n- Vertical scale relationship between characters and the high wall.\n- Structural stability of the wooden ladder during ascent.\n\n## Beat List\n- BT001: Scaling the wall via ladder.\n- BT002: Entering the Dainty China Country.\n- BT003: Realizing environmental fragility.",
+  "storyboard_markdown": "# Scene Contract: CH020_SC001\n\n## Production Intent\nEstablish the physical scale of the wall and the transition into a fragile, high-stakes porcelain environment where movement must be hyper-calculated.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n\n## Required Environments\n- dainty_china_country (including white platter-like floor and tiny china houses)\n- wall_summit/base structures\n\n## Continuity Constraints\n- Vertical scale relationship between characters and the massive wall.\n- Structural stability of the wooden ladder during ascent.\n- Transition from vertical climbing to horizontal porcelain walking.\n\n## Beat List\n- BT001: Scaling the massive wall via ladder.\n- BT002: Crossing the summit threshold into China Country.\n- BT003: Realizing the fragility of the terrain through cautious movement.",
   "metadata": {
     "artifact_id": "CH020_SC001_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "66bbfd0f652a9a6bbccd2b442d8e1e01d80bb1bf",
+    "source_fingerprint": "6076db194eefdb85da75249bbe77d4a1c884965b",
     "created_at_utc": "2026-04-27T09:01:08.439359+00:00",
-    "updated_at_utc": "2026-04-27T09:01:08.439359+00:00",
+    "updated_at_utc": "2026-04-27T14:04:12.290684+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -384,6 +385,11 @@
         "timestamp_utc": "2026-04-27T09:01:50.385088+00:00",
         "action": "synthesized",
         "source_fingerprint": "66bbfd0f652a9a6bbccd2b442d8e1e01d80bb1bf"
+      },
+      {
+        "timestamp_utc": "2026-04-27T14:04:55.442067+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "6076db194eefdb85da75249bbe77d4a1c884965b"
       }
     ]
   }

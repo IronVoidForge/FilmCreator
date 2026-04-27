@@ -5,37 +5,37 @@
   "purpose": "Demonstrate the physical danger and \"lethality\" of the environment through a mishap.",
   "summary": "While navigating the landscape, Dorothy startles a china cow. The resulting chaos causes the cow to kick over a China Milkmaid; the cow breaks its leg and the milkmaid is nicked on the elbow, highlighting the permanent consequences of breakage in this world.",
   "emotional_arc": "Caution $\\rightarrow$ Panic $\\rightarrow$ Guilt/Shock.",
-  "production_intent": "Establish the lethal fragility of the porcelain environment through a sudden physical accident. The sequence must transition from cautious navigation to high-stakes chaos, emphasizing that breakage in this world is permanent and traumatic.",
-  "scene_short_description": "A group navigates a smooth white landscape until a startled porcelain cow causes a chain reaction of breakage.",
-  "scene_primary_scale_story_point": "Human-sized characters navigating a miniature, fragile china architecture scale.",
+  "production_intent": "Establish the lethal fragility of the porcelain environment by staging a physical mishap that results in permanent structural damage to characters. The sequence must transition from cautious navigation to sudden chaos and conclude with the heavy emotional weight of irreversible breakage.",
+  "scene_short_description": "A traveler startles a fragile porcelain cow, triggering a chain reaction of breakage and permanent damage.",
+  "scene_primary_scale_story_point": "Human scale vs tiny colorful china houses and porcelain inhabitants.",
   "scene_required_anchor_catalog": [
-    "tiny colorful china houses",
-    "smooth white platter-like floor"
+    "china_milkmaid",
+    "china_cow"
   ],
-  "scene_start_state": "The group moves cautiously across the white expanse toward the china houses.",
-  "scene_end_state": "Stasis following the accident; characters frozen in shock amidst broken porcelain pieces.",
-  "dominant_action_line": "Dorothy startles the cow, triggering a collision that breaks the cow and nicks the milkmaid.",
+  "scene_start_state": "The group navigates the smooth white platter-like floor of the dainty_china_country with extreme caution.",
+  "scene_end_state": "The group stands in shock amidst the broken porcelain limbs and chipped surfaces.",
+  "dominant_action_line": "Dorothy startles the cow, causing a kick that breaks the cow's leg and nicks the milkmaid.",
   "scene_spatial_layout": [
-    "Open white landscape with scattered tiny china houses",
-    "High contrast between organic movement and rigid porcelain structures"
+    "Open landscape with smooth white floor surface",
+    "Scattered tiny colorful china houses"
   ],
   "character_spatial_map": [
-    "dorothy leads the group near the china_cow",
-    "the_scarecrow, tin_woodman, cowardly_lion, and toto follow in a loose cluster",
-    "china_milkmaid is positioned in the path of the cow's potential movement"
+    "dorothy positioned near china_cow",
+    "china_milkmaid standing in path of potential movement",
+    "the_scarecrow, tin_woodman, cowardly_lion, and toto observing from periphery"
   ],
   "environment_subzones": [
-    "white platter floor",
-    "china house cluster"
+    "open landscape",
+    "house cluster zone"
   ],
   "entry_vectors": [
-    "group walking from off-screen across the white expanse"
+    "group walking across white floor"
   ],
   "exit_vectors": [
-    "none (scene ends in static shock)"
+    "group retreating from accident site"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: sudden movement/startle",
+    "BT001 -> BT002: sudden startle/movement",
     "BT002 -> BT003: impact and breakage"
   ],
   "characters_required": [
@@ -124,7 +124,7 @@
   ],
   "continuity_constraints": [
     "Exact location of the nick on china_milkmaid's elbow",
-    "Specific orientation/position of the broken china_cow leg"
+    "Specific orientation of the broken leg on china_cow"
   ],
   "visual_coverage_families": [
     "Medium shots of interaction between dorothy and china_cow",
@@ -149,20 +149,20 @@
         "china_cow",
         "china_milkmaid"
       ],
-      "spatial_context": "open white landscape near tiny houses",
-      "blocking_hint": "group moves in a loose line",
-      "environment_subzone": "white platter floor",
-      "continuity_focus": "dorothy's white clothing",
-      "coverage_hint": "medium shots of group",
+      "spatial_context": "dainty_china_country open landscape",
+      "blocking_hint": "group moving in a loose cluster",
+      "environment_subzone": "open landscape",
+      "continuity_focus": "walking pace and group formation",
+      "coverage_hint": "medium shots of interaction",
       "coverage_priority": "medium",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "The startle event",
+      "summary": "The startle and kick",
       "purpose": "",
       "action_start": "dorothy makes sudden movement",
-      "action_end": "china_cow begins to kick",
+      "action_end": "cow kicks out towards milkmaid",
       "active_subjects": [
         "dorothy",
         "china_cow"
@@ -170,20 +170,20 @@
       "passive_subjects": [
         "china_milkmaid"
       ],
-      "spatial_context": "immediate vicinity of the cow",
-      "blocking_hint": "dorothy moves toward cow; cow recoils",
-      "environment_subzone": "white platter floor",
-      "continuity_focus": "cow's orientation before kick",
+      "spatial_context": "near the cow",
+      "blocking_hint": "dorothy close to cow's head/side",
+      "environment_subzone": "open landscape",
+      "continuity_focus": "proximity of dorothy to cow",
       "coverage_hint": "quick cuts",
       "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "The mishap and breakage",
+      "summary": "The breakage and aftermath",
       "purpose": "",
-      "action_start": "cow kicks milkmaid",
-      "action_end": "characters frozen in shock at the damage",
+      "action_start": "impact with milkmaid and floor",
+      "action_end": "characters staring at damage",
       "active_subjects": [
         "china_cow",
         "china_milkmaid"
@@ -195,13 +195,13 @@
         "cowardly_lion",
         "toto"
       ],
-      "spatial_context": "impact zone on white floor",
-      "blocking_hint": "chaos of movement followed by sudden stillness",
-      "environment_subzone": "white platter floor",
-      "continuity_focus": "location of milkmaid's nick; orientation of broken cow leg",
+      "spatial_context": "accident site",
+      "blocking_hint": "broken pieces on white floor",
+      "environment_subzone": "open landscape",
+      "continuity_focus": "location of milkmaid's nick and cow leg orientation",
       "coverage_hint": "close-ups on cracks/breaks",
-      "coverage_priority": "critical",
-      "handoff_to_next": "none"
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
     }
   ],
   "planned_shots": [
@@ -218,13 +218,13 @@
         "toto"
       ],
       "subject_visibility": "on_screen",
-      "narration_mode": "in_scene_speaker",
-      "environment_subzone": "white platter floor",
-      "planned_shot_required_anchor_1": "white platter floor",
-      "planned_shot_scale_proof_detail": "human vs tiny houses",
+      "narration_mode": "none",
+      "environment_subzone": "open landscape",
+      "planned_shot_required_anchor_1": "dainty_china_country floor",
+      "planned_shot_scale_proof_detail": "human feet vs tiny houses",
       "start_state_seed": "walking motion",
       "end_state_seed": "sudden halt",
-      "action_seed": "group navigates landscape",
+      "action_seed": "group navigating terrain",
       "blocking_seed": [
         "linear progression"
       ],
@@ -241,21 +241,21 @@
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "trigger accident",
-      "planned_shot_moment_summary": "dorothy startles the cow",
+      "planned_shot_moment_summary": "cow reacts to dorothy",
       "primary_subject_seed": "china_cow",
       "secondary_subjects_seed": [
         "dorothy"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "white platter floor",
+      "environment_subzone": "open landscape",
       "planned_shot_required_anchor_1": "china_cow",
-      "planned_shot_scale_proof_detail": "cow size vs milkmaid size",
-      "start_state_seed": "cow standing still",
-      "end_state_seed": "cow kicking",
-      "action_seed": "cow reacts to dorothy's presence",
+      "planned_shot_scale_proof_detail": "cow size relative to houses",
+      "start_state_seed": "startled movement",
+      "end_state_seed": "kick motion",
+      "action_seed": "cow kicks out",
       "blocking_seed": [
-        "cow pivots sharply"
+        "dorothy near cow flank"
       ],
       "shot_size": "medium",
       "camera_angle": "low_angle",
@@ -270,19 +270,19 @@
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "show consequence",
-      "planned_shot_moment_summary": "the break occurs",
+      "planned_shot_moment_summary": "impact and breakage",
       "primary_subject_seed": "china_milkmaid",
       "secondary_subjects_seed": [
         "china_cow"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "white platter floor",
+      "environment_subzone": "open landscape",
       "planned_shot_required_anchor_1": "china_milkmaid",
-      "planned_shot_scale_proof_detail": "nicked elbow detail",
-      "start_state_seed": "collision imminent",
-      "end_state_seed": "broken pieces on floor",
-      "action_seed": "cow kicks milkmaid; cow leg snaps; milkmaid elbow nicks",
+      "planned_shot_scale_proof_detail": "visible chip on elbow",
+      "start_state_seed": "collision",
+      "end_state_seed": "stillness",
+      "action_seed": "milkmaid is nicked and cow leg breaks",
       "blocking_seed": [
         "impact zone"
       ],
@@ -291,36 +291,9 @@
       "lens_family": "portrait",
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
-      "focus_strategy": "rack_focus",
-      "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front"
-    },
-    {
-      "planned_shot_id": "SH004",
-      "beat_id": "BT003",
-      "narrative_function": "emphasize lethality",
-      "planned_shot_moment_summary": "close up of damage",
-      "primary_subject_seed": "china_cow",
-      "secondary_subjects_seed": [],
-      "subject_visibility": "on_screen",
-      "narration_mode": "none",
-      "environment_subzone": "white platter floor",
-      "planned_shot_required_anchor_1": "broken leg",
-      "planned_shot_scale_proof_detail": "fracture detail",
-      "start_state_seed": "impact",
-      "end_state_seed": "static broken leg",
-      "action_seed": "showing the snapped porcelain leg",
-      "blocking_seed": [
-        "ground level"
-      ],
-      "shot_size": "extreme_close_up",
-      "camera_angle": "low_angle",
-      "lens_family": "telephoto",
-      "camera_motion": "locked_off",
-      "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "profile_left"
+      "primary_subject_angle": "front_three_quarter_left"
     }
   ],
   "unresolved_questions": [],
@@ -386,16 +359,16 @@
     "[CH020] Chapter XX (book index hit)",
     "[CH010] Chapter X (book index hit)",
     "[CH009] Chapter IX (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH020_SC002\n\n## Production Intent\nEstablish the lethal fragility of the porcelain environment through a sudden physical accident. The sequence must transition from cautious navigation to high-stakes chaos, emphasizing that breakage in this world is permanent and traumatic.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n- china_milkmaid\n- china_cow\n\n## Required Environments\n- dainty_china_country (white platter floor, tiny colorful houses)\n\n## Continuity Constraints\n- Exact location of the nick on china_milkmaid's elbow.\n- Specific orientation/position of the broken china_cow leg.\n\n## Beat List\n- BT001: Cautious navigation of the landscape.\n- BT002: The startle event (Dorothy startles cow).\n- BT003: The mishap and breakage (Cow kicks milkmaid; cow leg breaks; milkmaid nicked).",
+  "storyboard_markdown": "# Scene Contract: CH020_SC002\n\n## Production Intent\nEstablish the lethal fragility of the porcelain environment by staging a physical mishap that results in permanent structural damage to characters. The sequence must transition from cautious navigation to sudden chaos and conclude with the heavy emotional weight of irreversible breakage.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n- china_milkmaid\n- china_cow\n\n## Required Environments\n- dainty_china_country (smooth white platter-like floor, tiny colorful houses)\n\n## Continuity Constraints\n- Exact location of the nick on china_milkmaid's elbow.\n- Specific orientation of the broken leg on china_cow.\n\n## Beat List\n- BT001: Cautious navigation of the landscape.\n- BT002: The startle and kick.\n- BT003: The breakage and aftermath.",
   "metadata": {
     "artifact_id": "CH020_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "3d8ce58bf08b889f18e0df3e7d0c3babaae92f9e",
+    "source_fingerprint": "67169d197dbcbef7ac39f2cce7bdf73701c5df41",
     "created_at_utc": "2026-04-27T09:01:51.471860+00:00",
-    "updated_at_utc": "2026-04-27T09:01:51.471860+00:00",
+    "updated_at_utc": "2026-04-27T14:04:56.711260+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -420,6 +393,11 @@
         "timestamp_utc": "2026-04-27T09:02:37.942369+00:00",
         "action": "synthesized",
         "source_fingerprint": "3d8ce58bf08b889f18e0df3e7d0c3babaae92f9e"
+      },
+      {
+        "timestamp_utc": "2026-04-27T14:05:39.748804+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "67169d197dbcbef7ac39f2cce7bdf73701c5df41"
       }
     ]
   }

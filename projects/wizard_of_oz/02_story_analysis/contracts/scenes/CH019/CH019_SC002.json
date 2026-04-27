@@ -5,16 +5,16 @@
   "purpose": "To provide character development and thematic reflection on their experiences with the Wizard.",
   "summary": "As the group travels toward the South, they engage in a philosophical discussion regarding the Wizard's true nature and the validity of the gifts (brain, heart, courage) they received.",
   "emotional_arc": "Contemplative/Melancholic to Determined.",
-  "production_intent": "The group moves through the emerald_city_outskirts, transitioning from a state of doubt regarding their Wizard-given attributes to a unified sense of purpose. The movement must feel continuous and directional toward the South to maintain travel momentum.",
-  "scene_short_description": "A group travels through vast green fields under an open sky.",
-  "scene_primary_scale_story_point": "Wide expanse of emerald_city_outskirts relative to small traveling group.",
+  "production_intent": "Establish character depth through philosophical dialogue while maintaining a steady progression toward the South. The scene uses walking movement to transition the group from a state of melancholic reflection on their perceived inadequacies to a unified sense of determination.",
+  "scene_short_description": "A group travels through vast green fields discussing the validity of their magical gifts.",
+  "scene_primary_scale_story_point": "Small characters traversing an expansive emerald_city_outskirts landscape.",
   "scene_required_anchor_catalog": [
     "horizon_line",
     "walking_path"
   ],
-  "scene_start_state": "Group walking in a loose line, heads down, tone is somber.",
-  "scene_end_state": "Group walking with increased pace and upright posture, tone is resolute.",
-  "dominant_action_line": "Continuous walking while engaging in dialogue about the Wizard.",
+  "scene_start_state": "Group walking in a loose line, heads down, atmosphere is heavy and contemplative.",
+  "scene_end_state": "Group walking with increased pace and upright posture, atmosphere is resolute.",
+  "dominant_action_line": "Continuous walking while engaging in philosophical debate.",
   "scene_spatial_layout": [
     "Linear progression through open terrain",
     "Characters spaced at intervals to allow for individual close-ups"
@@ -28,14 +28,14 @@
     "emerald_city_outskirts_open_field"
   ],
   "entry_vectors": [
-    "North to South path"
+    "North (moving South)"
   ],
   "exit_vectors": [
-    "Southward path"
+    "South (continuing movement)"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: shift from observation to questioning",
-    "BT002 -> BT003: shift from doubt to resolve"
+    "BT001 -> BT002: Shift from general travel to specific doubt",
+    "BT002 -> BT003: Shift from doubt to collective resolve"
   ],
   "characters_required": [
     {
@@ -113,10 +113,10 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Group travels through the green fields in silence or low murmurs",
+      "summary": "Group travels through the outskirts in silence or low murmurs",
       "purpose": "",
       "action_start": "walking rhythmically",
-      "action_end": "pausing dialogue",
+      "action_end": "discussion begins",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -126,19 +126,19 @@
       ],
       "passive_subjects": [],
       "spatial_context": "emerald_city_outskirts_open_field",
-      "blocking_hint": "staggered walking line moving South",
+      "blocking_hint": "linear walking line",
       "environment_subzone": "emerald_city_outskirts_open_field",
-      "continuity_focus": "walking direction toward South",
+      "continuity_focus": "walking direction South",
       "coverage_hint": "wide tracking shot",
-      "coverage_priority": "high",
+      "coverage_priority": "medium",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Philosophical debate regarding the Wizard and the nature of their gifts",
+      "summary": "Philosophical debate regarding the Wizard and the validity of their gifts",
       "purpose": "",
-      "action_start": "verbal questioning",
-      "action_end": "moment of heavy reflection",
+      "action_start": "voices rise above walking noise",
+      "action_end": "moment of heavy silence/doubt",
       "active_subjects": [
         "the_scarecrow",
         "tin_woodman",
@@ -149,35 +149,34 @@
         "toto"
       ],
       "spatial_context": "emerald_city_outskirts_open_field",
-      "blocking_hint": "characters turning heads toward each other while walking",
+      "blocking_hint": "characters turning heads toward speaker",
       "environment_subzone": "emerald_city_outskirts_open_field",
-      "continuity_focus": "maintain character spacing",
+      "continuity_focus": "character spacing maintained",
       "coverage_hint": "close-ups on faces",
-      "coverage_priority": "medium",
+      "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "The group reaches a consensus and regains determination",
+      "summary": "Transition from doubt to determination",
       "purpose": "",
-      "action_start": "resolute statement",
-      "action_end": "walking with purpose",
+      "action_start": "dorothy or group leader speaks with conviction",
+      "action_end": "group marches forward with renewed energy",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
         "tin_woodman",
-        "cowardly_lion"
-      ],
-      "passive_subjects": [
+        "cowardly_lion",
         "toto"
       ],
+      "passive_subjects": [],
       "spatial_context": "emerald_city_outskirts_open_field",
-      "blocking_hint": "tightening of walking formation/upright posture",
+      "blocking_hint": "posture straightens, pace increases",
       "environment_subzone": "emerald_city_outskirts_open_field",
       "continuity_focus": "consistent Southward movement",
-      "coverage_hint": "group medium shot",
-      "coverage_priority": "high",
-      "handoff_to_next": "end_scene"
+      "coverage_hint": "group medium shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_of_scene"
     }
   ],
   "planned_shots": [
@@ -185,10 +184,10 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish_context",
-      "planned_shot_moment_summary": "group walking through fields",
-      "primary_subject_seed": "dorothy",
+      "planned_shot_moment_summary": "group enters frame walking south",
+      "primary_subject_seed": "the_scarecrow",
       "secondary_subjects_seed": [
-        "the_scarecrow",
+        "dorothy",
         "tin_woodman",
         "cowardly_lion",
         "toto"
@@ -197,9 +196,9 @@
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "emerald_city_outskirts_open_field",
       "planned_shot_required_anchor_1": "horizon_line",
-      "planned_shot_scale_proof_detail": "group size vs field expanse",
-      "start_state_seed": "wide shot of group",
-      "end_state_seed": "medium tracking shot",
+      "planned_shot_scale_proof_detail": "characters small against field expanse",
+      "start_state_seed": "wide shot of group walking",
+      "end_state_seed": "group moving into mid-ground",
       "action_seed": "walking",
       "blocking_seed": [
         "linear line"
@@ -211,24 +210,25 @@
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front_three_quarter_right"
+      "primary_subject_angle": "profile_right"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "character_depth",
       "planned_shot_moment_summary": "individual questioning of gifts",
-      "primary_subject_seed": "the_scarecrow",
+      "primary_subject_seed": "tin_woodman",
       "secondary_subjects_seed": [
-        "dorothy"
+        "dorothy",
+        "the_scarecrow"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "emerald_city_outskirts_open_field",
       "planned_shot_required_anchor_1": "walking_path",
-      "planned_shot_scale_proof_detail": "face detail vs background blur",
-      "start_state_seed": "medium shot",
-      "end_state_seed": "close-up",
+      "planned_shot_scale_proof_detail": "tight framing on facial expression",
+      "start_state_seed": "medium shot of tin_woodman",
+      "end_state_seed": "close-up on tin_woodman",
       "action_seed": "speaking while walking",
       "blocking_seed": [
         "staggered line"
@@ -240,7 +240,39 @@
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "profile_left"
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "thematic_resolution",
+      "planned_shot_moment_summary": "group accepts their nature and moves forward",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "emerald_city_outskirts_open_field",
+      "planned_shot_required_anchor_1": "horizon_line",
+      "planned_shot_scale_proof_detail": "group moving toward camera/horizon",
+      "start_state_seed": "medium shot of group",
+      "end_state_seed": "wide shot as they march south",
+      "action_seed": "walking with purpose",
+      "blocking_seed": [
+        "tightened line"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
     }
   ],
   "unresolved_questions": [],
@@ -306,16 +338,16 @@
     "[CH019] Chapter XIX (book index hit)",
     "[CH002] Chapter II (book index hit)",
     "[CH010] Chapter X (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH019_SC002\n\n## Production Intent\nThe group moves through the emerald_city_outskirts, transitioning from a state of doubt regarding their Wizard-given attributes to a unified sense of purpose. The movement must feel continuous and directional toward the South to maintain travel momentum.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n\n## Required Environments\n- emerald_city_outskirts (green fields)\n\n## Continuity Constraints\n- Walking direction must be consistently toward the South.\n- Character spacing in the walking line must remain stable for tracking shots.\n\n## Beat List\n- BT001: Group travels through the green fields in silence or low murmurs.\n- BT002: Philosophical debate regarding the Wizard and the nature of their gifts.\n- BT003: The group reaches a consensus and regains determination.",
+  "storyboard_markdown": "# Scene Contract: CH019_SC002\n\n## Production Intent\nEstablish character depth through philosophical dialogue while maintaining a steady progression toward the South. The scene uses walking movement to transition the group from a state of melancholic reflection on their perceived inadequacies to a unified sense of determination.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n\n## Required Environments\n- emerald_city_outskirts\n\n## Continuity Constraints\n- Consistent walking direction toward the South\n- Fixed character spacing within the walking line\n\n## Beat List\n- BT001: Group travels through the outskirts in silence or low murmurs.\n- BT002: Philosophical debate regarding the Wizard and the validity of their gifts.\n- BT003: Transition from doubt to determination.",
   "metadata": {
     "artifact_id": "CH019_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "a110f319bc804c5ff4b1d0d3d1eec188840f96d4",
+    "source_fingerprint": "096ba85879c7df61f66cc012c6259bd6486fc46e",
     "created_at_utc": "2026-04-27T08:58:18.685292+00:00",
-    "updated_at_utc": "2026-04-27T08:58:18.685292+00:00",
+    "updated_at_utc": "2026-04-27T14:01:15.087930+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -340,6 +372,11 @@
         "timestamp_utc": "2026-04-27T08:58:57.261552+00:00",
         "action": "synthesized",
         "source_fingerprint": "a110f319bc804c5ff4b1d0d3d1eec188840f96d4"
+      },
+      {
+        "timestamp_utc": "2026-04-27T14:01:58.168920+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "096ba85879c7df61f66cc012c6259bd6486fc46e"
       }
     ]
   }

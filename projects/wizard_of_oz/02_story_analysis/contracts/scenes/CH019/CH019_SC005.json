@@ -5,37 +5,36 @@
   "purpose": "To introduce a new physical barrier and set the objective for the next sequence.",
   "summary": "Emerging from the forest, the group is confronted by a massive, smooth wall made of white china. The Tin Woodman proposes building a ladder to overcome it.",
   "emotional_arc": "Exhaustion to Bewilderment/Problem-solving.",
-  "production_intent": "Establish the massive scale of the white china wall as a physical obstacle that halts character progress. The transition from forest exhaustion to bewilderment must be visually anchored by the sudden appearance of the smooth, reflective surface.",
+  "production_intent": "Establish the massive scale of the white china wall as a physical obstacle that halts character progress. The transition from forest edge to the smooth, reflective surface must emphasize the sudden shift in environment and the characters' exhaustion.",
   "scene_short_description": "A weary group emerges from a thick forest to face a massive, smooth white china wall.",
-  "scene_primary_scale_story_point": "The vertical height of the white china wall dwarfs the character group.",
+  "scene_primary_scale_story_point": "The verticality and immense height of the china wall relative to human-sized characters.",
   "scene_required_anchor_catalog": [
-    "white_china_wall surface",
-    "forest edge line"
+    "white_china_wall",
+    "forest_edge"
   ],
-  "scene_start_state": "Characters emerge from the dark forest into a clearing at the base of the wall, visibly exhausted.",
-  "scene_end_state": "The group stands before the barrier, focused on the tin_woodman's proposal to build a ladder.",
-  "dominant_action_line": "Group discovery of the wall followed by the proposal of a solution.",
+  "scene_start_state": "Characters emerge from the dark forest edge into a clearing facing the wall.",
+  "scene_end_state": "The group stands before the barrier, focused on the proposal of building a ladder.",
+  "dominant_action_line": "Group discovers the wall and discusses how to bypass it.",
   "scene_spatial_layout": [
-    "Forest edge meets the base of the vertical china structure",
-    "Open clearing at the foot of the wall"
+    "Forest edge meets the base of the vertical china structure.",
+    "Open clearing at the foot of the wall."
   ],
   "character_spatial_map": [
-    "dorothy, the_scarecrow, tin_woodman, cowardly_lion, and toto clustered near the forest exit",
-    "characters facing toward the white_china_wall"
+    "dorothy, the_scarecrow, tin_woodman, cowardly_lion, and toto clustered near the forest boundary."
   ],
   "environment_subzones": [
     "forest_edge",
-    "wall_base"
+    "white_china_wall_base"
   ],
   "entry_vectors": [
-    "forest_exit path"
+    "forest_exit_path"
   ],
   "exit_vectors": [
     "none (characters remain at base)"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: visual shock of the barrier",
-    "BT002 -> BT003: shift from observation to verbal planning"
+    "BT001 -> BT002: Discovery of the barrier",
+    "BT002 -> BT003: Transition from shock to tactical discussion"
   ],
   "characters_required": [
     {
@@ -102,8 +101,8 @@
     }
   ],
   "continuity_constraints": [
-    "Scale relationship between characters and the verticality of the white china wall",
-    "Texture and smoothness of the white china surface"
+    "Scale relationship between characters and the white china wall",
+    "Texture of the smooth, white china surface"
   ],
   "visual_coverage_families": [
     "Extreme wide shots (low angle) looking up at the massive wall",
@@ -115,8 +114,8 @@
       "beat_id": "BT001",
       "summary": "Discovery of the wall",
       "purpose": "",
-      "action_start": "characters emerge from forest",
-      "action_end": "group stops at the base of the wall",
+      "action_start": "characters walking out of forest",
+      "action_end": "group stops at edge of clearing",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -125,10 +124,10 @@
         "toto"
       ],
       "passive_subjects": [],
-      "spatial_context": "forest_edge to wall_base",
-      "blocking_hint": "line of characters moving from shadow to light",
-      "environment_subzone": "wall_base",
-      "continuity_focus": "transition from forest shade to bright white wall reflection",
+      "spatial_context": "forest_edge to white_china_wall_base",
+      "blocking_hint": "characters emerge in a line or cluster from forest shadows",
+      "environment_subzone": "forest_edge",
+      "continuity_focus": "transition from dark forest to bright china wall",
       "coverage_hint": "extreme_wide",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
@@ -137,31 +136,30 @@
       "beat_id": "BT002",
       "summary": "Reaction to the barrier",
       "purpose": "",
-      "action_start": "group stands still in bewilderment",
-      "action_end": "characters look up at the height of the wall",
+      "action_start": "group staring upward",
+      "action_end": "silence/bewilderment settles",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
         "tin_woodman",
-        "cowardly_lion"
-      ],
-      "passive_subjects": [
+        "cowardly_lion",
         "toto"
       ],
-      "spatial_context": "wall_base",
-      "blocking_hint": "characters looking upward in unison",
-      "environment_subzone": "wall_base",
-      "continuity_focus": "scale of characters vs wall height",
-      "coverage_hint": "POV/Medium group",
+      "passive_subjects": [],
+      "spatial_context": "base of white_china_wall",
+      "blocking_hint": "characters looking up in unison",
+      "environment_subzone": "white_china_wall_base",
+      "continuity_focus": "scale of wall vs characters",
+      "coverage_hint": "POV/Low angle wide",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "The proposal",
+      "summary": "Proposing the ladder",
       "purpose": "",
-      "action_start": "silence/bewilderment",
-      "action_end": "group focuses on the plan to build a ladder",
+      "action_start": "tin_woodman breaks silence",
+      "action_end": "group accepts the objective",
       "active_subjects": [
         "tin_woodman"
       ],
@@ -170,11 +168,11 @@
         "the_scarecrow",
         "cowardly_lion"
       ],
-      "spatial_context": "wall_base",
-      "blocking_hint": "tin_woodman breaks the group formation to propose idea",
-      "environment_subzone": "wall_base",
-      "continuity_focus": "character focus shift",
-      "coverage_hint": "medium shot",
+      "spatial_context": "white_china_wall_base",
+      "blocking_hint": "tin_woodman moves to center of group",
+      "environment_subzone": "white_china_wall_base",
+      "continuity_focus": "character positions relative to wall",
+      "coverage_hint": "medium group shot",
       "coverage_priority": "high",
       "handoff_to_next": "next sequence"
     }
@@ -184,25 +182,24 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish scale",
-      "planned_shot_moment_summary": "group emerges and sees the wall",
-      "primary_subject_seed": "white_china_wall",
+      "planned_shot_moment_summary": "group emerges and stops dead",
+      "primary_subject_seed": "cowardly_lion",
       "secondary_subjects_seed": [
         "dorothy",
         "the_scarecrow",
         "tin_woodman",
-        "cowardly_lion",
         "toto"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "wall_base",
+      "environment_subzone": "forest_edge",
       "planned_shot_required_anchor_1": "white_china_wall",
-      "planned_shot_scale_proof_detail": "low angle looking up to emphasize height",
-      "start_state_seed": "characters in forest shadow",
-      "end_state_seed": "characters in clearing facing wall",
-      "action_seed": "group walks into light/clearing",
+      "planned_shot_scale_proof_detail": "low angle looking up at wall height",
+      "start_state_seed": "characters moving from forest",
+      "end_state_seed": "characters frozen in place",
+      "action_seed": "stopping abruptly",
       "blocking_seed": [
-        "walking from forest edge toward camera/wall"
+        "group enters frame from forest edge"
       ],
       "shot_size": "extreme_wide",
       "camera_angle": "low_angle",
@@ -211,42 +208,39 @@
       "zoom_behavior": "none",
       "focus_strategy": "environment_priority",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "rear_three_quarter_left"
+      "primary_subject_angle": "front_three_quarter_left"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "convey bewilderment",
-      "planned_shot_moment_summary": "characters react to the wall's texture and height",
-      "primary_subject_seed": "dorothy",
-      "secondary_subjects_seed": [
-        "the_scarecrow",
-        "cowardly_lion"
-      ],
+      "planned_shot_moment_summary": "POV looking up the smooth surface",
+      "primary_subject_seed": "white_china_wall",
+      "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
-      "narration_mode": "in_scene_speaker",
-      "environment_subzone": "wall_base",
+      "narration_mode": "none",
+      "environment_subzone": "white_china_wall_base",
       "planned_shot_required_anchor_1": "white_china_wall",
-      "planned_shot_scale_proof_detail": "POV looking up the smooth surface",
-      "start_state_seed": "characters standing still",
-      "end_state_seed": "characters looking upward",
-      "action_seed": "heads tilt up toward the sky/wall top",
+      "planned_shot_scale_proof_detail": "vertical height of wall",
+      "start_state_seed": "looking at base",
+      "end_state_seed": "looking up toward top",
+      "action_seed": "tilting upward",
       "blocking_seed": [
-        "stationary group cluster"
+        "camera mimics character gaze"
       ],
-      "shot_size": "medium_full",
-      "camera_angle": "eye_level",
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
       "lens_family": "wide",
-      "camera_motion": "locked_off",
+      "camera_motion": "tilt",
       "zoom_behavior": "none",
-      "focus_strategy": "shallow_subject",
-      "lighting_style": "soft_even",
-      "primary_subject_angle": "front_three_quarter_right"
+      "focus_strategy": "environment_priority",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "set objective",
+      "narrative_function": "introduce solution",
       "planned_shot_moment_summary": "tin_woodman proposes the ladder",
       "primary_subject_seed": "tin_woodman",
       "secondary_subjects_seed": [
@@ -256,23 +250,23 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "wall_base",
+      "environment_subzone": "white_china_wall_base",
       "planned_shot_required_anchor_1": "white_china_wall",
-      "planned_shot_scale_proof_detail": "medium shot against wall backdrop",
-      "start_state_seed": "group looking up",
-      "end_state_seed": "group looking at tin_woodman",
-      "action_seed": "tin_woodman speaks and gestures toward the wall",
+      "planned_shot_scale_proof_detail": "characters small against wall background",
+      "start_state_seed": "group in shock",
+      "end_state_seed": "group listening to tin_woodman",
+      "action_seed": "speaking and gesturing toward the wall",
       "blocking_seed": [
-        "tin_woodman steps slightly forward"
+        "tin_woodman steps forward slightly"
       ],
       "shot_size": "medium",
       "camera_angle": "eye_level",
       "lens_family": "normal",
-      "camera_motion": "push_in",
-      "zoom_behavior": "subtle_in",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
-      "lighting_style": "soft_even",
-      "primary_subject_angle": "front"
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
     }
   ],
   "unresolved_questions": [],
@@ -338,16 +332,16 @@
     "[CH020] Chapter XX (book index hit)",
     "[CH006] Chapter VI (book index hit)",
     "[CH007] Chapter VII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH019_SC005\n\n## Production Intent\nEstablish the massive scale of the white china wall as a physical obstacle that halts character progress. The transition from forest exhaustion to bewilderment must be visually anchored by the sudden appearance of the smooth, reflective surface.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n\n## Required Environments\n- white_china_wall (forest edge/base)\n\n## Continuity Constraints\n- Scale relationship between characters and the verticality of the white china wall.\n- Texture and smoothness of the white china surface.\n\n## Beat List\n- BT001: Discovery of the wall.\n- BT002: Reaction to the barrier.\n- BT003: The proposal (ladder).",
+  "storyboard_markdown": "# Scene Contract: CH019_SC005\n\n## Production Intent\nEstablish the massive scale of the white china wall as a physical obstacle that halts character progress. The transition from forest edge to the smooth, reflective surface must emphasize the sudden shift in environment and the characters' exhaustion.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n\n## Required Environments\n- white_china_wall (Base/Edge of forest)\n\n## Continuity Constraints\n- Scale relationship between characters and the white china wall.\n- Texture of the smooth, white china surface.\n\n## Beat List\n- BT001: Discovery of the wall.\n- BT002: Reaction to the barrier.\n- BT003: Proposing the ladder.",
   "metadata": {
     "artifact_id": "CH019_SC005_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "e31c62ff9f75ddf0be5b33f7fb5a43206ce943fa",
+    "source_fingerprint": "38d2c29ec20172607b2063169aac7046b161499c",
     "created_at_utc": "2026-04-27T09:00:23.367776+00:00",
-    "updated_at_utc": "2026-04-27T09:00:23.367776+00:00",
+    "updated_at_utc": "2026-04-27T14:03:26.472705+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -372,6 +366,11 @@
         "timestamp_utc": "2026-04-27T09:01:06.983944+00:00",
         "action": "synthesized",
         "source_fingerprint": "e31c62ff9f75ddf0be5b33f7fb5a43206ce943fa"
+      },
+      {
+        "timestamp_utc": "2026-04-27T14:04:10.477506+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "38d2c29ec20172607b2063169aac7046b161499c"
       }
     ]
   }

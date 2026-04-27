@@ -5,37 +5,37 @@
   "purpose": "To demonstrate the utility of the characters' abilities and resolve the immediate conflict.",
   "summary": "The Tin Woodman uses his axe to hack through the aggressive branches, carving a path for the group. They realize the trees are only aggressive at the perimeter/first row.",
   "emotional_arc": "Panic to Relief/Triumph.",
-  "production_intent": "Establish the tin_woodman as a functional asset to the group by using his axe to breach an aggressive perimeter of branches. The sequence must transition from high-tension combat with vegetation to a calm realization that the interior forest is non-hostile.",
-  "scene_short_description": "An axe carves a path through aggressive, thrashing branches to reveal a calm forest interior.",
-  "scene_primary_scale_story_point": "The scale shifts from the claustrophobic, aggressive perimeter to the open, safe clearing beyond.",
+  "production_intent": "Demonstrate the mechanical utility of the tin_woodman to resolve a physical blockade. The sequence must transition from high-tension environmental aggression to a stabilized, cleared pathway through the fighting_forest.",
+  "scene_short_description": "An axe carves a path through aggressive forest branches to create a safe passage.",
+  "scene_primary_scale_story_point": "The perimeter of the fighting_forest is dense and aggressive; the interior is passive.",
   "scene_required_anchor_catalog": [
     "aggressive_branch_perimeter",
-    "cleared_pathway"
+    "cleared_pathway_center"
   ],
-  "scene_start_state": "Group is trapped/surrounded by thrashing branches; high panic.",
-  "scene_end_state": "Group stands in a newly carved path; relief and triumph.",
-  "dominant_action_line": "tin_woodman hacks through the perimeter to create a safe zone.",
+  "scene_start_state": "Group trapped by encroaching, moving branches in a state of panic.",
+  "scene_end_state": "Group standing in a stabilized clearing with visible debris from the path.",
+  "dominant_action_line": "tin_woodman hacks through aggressive foliage to open a corridor.",
   "scene_spatial_layout": [
-    "Perimeter of aggressive vegetation forms a tight circle around the group.",
-    "A linear path is cut through the first row of trees."
+    "Perimeter defined by active/aggressive vegetation",
+    "Central axis defined by the newly carved path"
   ],
   "character_spatial_map": [
-    "tin_woodman positioned at the leading edge of the group against the branches.",
-    "dorothy, the_scarecrow, cowardly_lion, and toto clustered behind the tin_woodman."
+    "tin_woodman at the leading edge of the group",
+    "dorothy, the_scarecrow, cowardly_lion, and toto clustered behind the axe line"
   ],
   "environment_subzones": [
-    "aggressive_perimeter",
-    "cleared_pathway"
+    "perimeter_zone (aggressive)",
+    "cleared_pathway (passive/safe)"
   ],
   "entry_vectors": [
-    "fighting_forest (perimeter)"
+    "forest_edge_approach"
   ],
   "exit_vectors": [
-    "cleared_pathway (interior)"
+    "carved_path_forward"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Physical breakthrough via axe strikes.",
-    "BT002 -> BT003: Visual shift from movement to stillness."
+    "BT001 -> BT002: Physical breakthrough",
+    "BT002 -> BT003: Realization of safety"
   ],
   "characters_required": [
     {
@@ -102,8 +102,8 @@
     }
   ],
   "continuity_constraints": [
-    "Cumulative state of chopped branches in the clearing",
-    "Physical condition and edge sharpness of tin_woodman's axe"
+    "Cumulative state of chopped branches and debris",
+    "Physical condition/edge of tin_woodman's axe"
   ],
   "visual_coverage_families": [
     "Action shots of axe striking wood",
@@ -113,54 +113,56 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "The group is besieged by aggressive branches",
+      "summary": "Panic as aggressive branches close in",
       "purpose": "",
-      "action_start": "branches thrashing at characters",
-      "action_end": "panic reaches peak",
+      "action_start": "branches twitching toward group",
+      "action_end": "group cornered",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
-        "tin_woodman",
         "cowardly_lion",
         "toto"
       ],
       "passive_subjects": [
-        "aggressive_perimeter"
+        "tin_woodman"
       ],
-      "spatial_context": "trapped within fighting_forest",
-      "blocking_hint": "characters huddled and defensive",
-      "environment_subzone": "aggressive_perimeter",
-      "continuity_focus": "initial branch density",
+      "spatial_context": "perimeter_zone",
+      "blocking_hint": "characters backing into a tight circle",
+      "environment_subzone": "perimeter_zone",
+      "continuity_focus": "branch density/movement",
       "coverage_hint": "medium shots of panic",
       "coverage_priority": "high",
-      "handoff_to_next": "tin_woodman engages"
+      "handoff_to_next": "tin_woodman intervenes"
     },
     {
       "beat_id": "BT002",
-      "summary": "tin_woodman carves a path",
+      "summary": "tin_woodman carves the path",
       "purpose": "",
-      "action_start": "axe swings into wood",
-      "action_end": "a gap is opened in the perimeter",
+      "action_start": "axe swing begins",
+      "action_end": "branches fall away",
       "active_subjects": [
         "tin_woodman"
       ],
       "passive_subjects": [
-        "aggressive_perimeter"
+        "dorothy",
+        "the_scarecrow",
+        "cowardly_lion",
+        "toto"
       ],
-      "spatial_context": "at the edge of the clearing",
-      "blocking_hint": "tin_woodman moves aggressively against the branches",
-      "environment_subzone": "aggressive_perimeter",
+      "spatial_context": "perimeter_zone to cleared_pathway",
+      "blocking_hint": "tin_woodman moving linearly through foliage",
+      "environment_subzone": "perimeter_zone",
       "continuity_focus": "axe condition and branch debris",
       "coverage_hint": "action shots of axe strikes",
       "coverage_priority": "high",
-      "handoff_to_next": "the path is revealed"
+      "handoff_to_next": "group enters the clearing"
     },
     {
       "beat_id": "BT003",
-      "summary": "Discovery of the safe interior",
+      "summary": "Realization that the interior is safe",
       "purpose": "",
-      "action_start": "group peers through the gap",
-      "action_end": "group moves into the calm zone",
+      "action_start": "stepping into light/clearing",
+      "action_end": "group regrouping",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -170,11 +172,11 @@
       "passive_subjects": [
         "tin_woodman"
       ],
-      "spatial_context": "transition from perimeter to path",
-      "blocking_hint": "characters stepping forward cautiously then with relief",
+      "spatial_context": "cleared_pathway",
+      "blocking_hint": "characters spreading out to catch breath",
       "environment_subzone": "cleared_pathway",
       "continuity_focus": "state of chopped branches",
-      "coverage_hint": "wide shots of the clearing",
+      "coverage_hint": "wide shots of the path",
       "coverage_priority": "medium",
       "handoff_to_next": "scene end"
     }
@@ -183,23 +185,24 @@
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish conflict",
-      "planned_shot_moment_summary": "branches thrashing against the group",
-      "primary_subject_seed": "aggressive_perimeter",
+      "narrative_function": "establish threat",
+      "planned_shot_moment_summary": "aggressive branches closing in on the group",
+      "primary_subject_seed": "cowardly_lion",
       "secondary_subjects_seed": [
         "dorothy",
-        "cowardly_lion"
+        "the_scarecrow",
+        "toto"
       ],
       "subject_visibility": "on_screen",
-      "narration_mode": "in_scene_speaker",
-      "environment_subzone": "aggressive_perimeter",
+      "narration_mode": "none",
+      "environment_subzone": "perimeter_zone",
       "planned_shot_required_anchor_1": "aggressive_branch_perimeter",
-      "planned_shot_scale_proof_detail": "branches pressing against characters",
+      "planned_shot_scale_proof_detail": "branches pressing against character faces",
       "start_state_seed": "tightly enclosed space",
-      "end_state_seed": "chaos of movement",
-      "action_seed": "branches lashing out",
+      "end_state_seed": "impending collision",
+      "action_seed": "characters recoiling from movement",
       "blocking_seed": [
-        "group huddled together"
+        "huddled cluster"
       ],
       "shot_size": "medium_full",
       "camera_angle": "eye_level",
@@ -207,26 +210,26 @@
       "camera_motion": "handheld",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
-      "lighting_style": "diffuse_ambient",
+      "lighting_style": "high_contrast_ceremonial",
       "primary_subject_angle": "front_three_quarter_left"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "demonstrate utility",
-      "planned_shot_moment_summary": "axe striking wood",
+      "narrative_function": "demonstrate ability",
+      "planned_shot_moment_summary": "axe striking through thick wood",
       "primary_subject_seed": "tin_woodman",
       "secondary_subjects_seed": [
-        "aggressive_perimeter"
+        "aggressive_branch_perimeter"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "aggressive_perimeter",
-      "planned_shot_required_anchor_1": "tin_woodman's axe",
-      "planned_shot_scale_proof_detail": "wood splinters flying",
+      "environment_subzone": "perimeter_zone",
+      "planned_shot_required_anchor_1": "aggressive_branch_perimeter",
+      "planned_shot_scale_proof_detail": "wood splinters flying from impact",
       "start_state_seed": "axe raised",
-      "end_state_seed": "branch severed",
-      "action_seed": "hacking through branches",
+      "end_state_seed": "branches falling",
+      "action_seed": "hacking through wood",
       "blocking_seed": [
         "tin_woodman stepping forward into branches"
       ],
@@ -243,7 +246,7 @@
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "resolve conflict",
-      "planned_shot_moment_summary": "group seeing the calm interior",
+      "planned_shot_moment_summary": "group stepping into the cleared area",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "the_scarecrow",
@@ -253,13 +256,13 @@
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "cleared_pathway",
-      "planned_shot_required_anchor_1": "cleared_pathway",
-      "planned_shot_scale_proof_detail": "open space visible through branches",
-      "start_state_seed": "looking through gap",
-      "end_state_seed": "group stepping forward",
-      "action_seed": "regrouping in the path",
+      "planned_shot_required_anchor_1": "cleared_pathway_center",
+      "planned_shot_scale_proof_detail": "wide view of debris vs calm interior trees",
+      "start_state_seed": "emerging from brush",
+      "end_state_seed": "standing in clearing",
+      "action_seed": "regrouping and breathing relief",
       "blocking_seed": [
-        "group moving into the cleared zone"
+        "spreading out along the path"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
@@ -267,7 +270,7 @@
       "camera_motion": "pull_back",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
-      "lighting_style": "soft_even",
+      "lighting_style": "diffuse_ambient",
       "primary_subject_angle": "front"
     }
   ],
@@ -334,16 +337,16 @@
     "[CH007] Chapter VII (book index hit)",
     "[CH019] Chapter XIX (book index hit)",
     "[CH005] Chapter V (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH019_SC004\n\n## Production Intent\nEstablish the tin_woodman as a functional asset to the group by using his axe to breach an aggressive perimeter of branches. The sequence must transition from high-tension combat with vegetation to a calm realization that the interior forest is non-hostile.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n\n## Required Environments\n- fighting_forest (specifically aggressive_perimeter and cleared_pathway)\n\n## Continuity Constraints\n- Cumulative state of chopped branches in the clearing\n- Physical condition and edge sharpness of tin_woodman's axe\n\n## Beat List\n- BT001: The group is besieged by aggressive branches.\n- BT002: tin_woodman carves a path.\n- BT003: Discovery of the safe interior.",
+  "storyboard_markdown": "# Scene Contract: CH019_SC004\n\n## Production Intent\nDemonstrate the mechanical utility of the tin_woodman to resolve a physical blockade. The sequence must transition from high-tension environmental aggression to a stabilized, cleared pathway through the fighting_forest.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n\n## Required Environments\n- fighting_forest (perimeter_zone and cleared_pathway)\n\n## Continuity Constraints\n- Cumulative state of chopped branches and debris\n- Physical condition/edge of tin_woodman's axe\n\n## Beat List\n- BT001: Panic as aggressive branches close in.\n- BT002: tin_woodman carves the path.\n- BT003: Realization that the interior is safe.",
   "metadata": {
     "artifact_id": "CH019_SC004_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "680fed062a1cefc628260cc11bb61e8ef66abb03",
+    "source_fingerprint": "de5eadf600896d8119200c6d9ff104449de9bf89",
     "created_at_utc": "2026-04-27T08:59:40.298399+00:00",
-    "updated_at_utc": "2026-04-27T08:59:40.298399+00:00",
+    "updated_at_utc": "2026-04-27T14:02:42.833430+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -368,6 +371,11 @@
         "timestamp_utc": "2026-04-27T09:00:22.250138+00:00",
         "action": "synthesized",
         "source_fingerprint": "680fed062a1cefc628260cc11bb61e8ef66abb03"
+      },
+      {
+        "timestamp_utc": "2026-04-27T14:03:25.136114+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "de5eadf600896d8119200c6d9ff104449de9bf89"
       }
     ]
   }
