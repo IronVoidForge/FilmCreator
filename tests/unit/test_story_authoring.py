@@ -887,6 +887,32 @@ def test_packet_parser_accepts_missing_record_closers() -> None:
     assert packet.records[1].fields["scene_id"] == "SC002"
 
 
+def test_packet_parser_cleans_malformed_nested_section_wrappers() -> None:
+    response = "\n".join(
+        [
+            "[[FILMCREATOR_PACKET]]",
+            "task: chapter_summary",
+            "version: 1",
+            "",
+            "[[SECTION project_summary_markdown]]",
+            "[[SECTION A reusable project summary. [[/SECTION]]",
+            "[[/SECTION]]",
+            "",
+            "[[SECTION chapter_summary_markdown]]",
+            "[[SECTION",
+            "Dorothy returns home.",
+            "[[/SECTION]]",
+            "[[/SECTION]]",
+            "[[/FILMCREATOR_PACKET]]",
+        ]
+    )
+
+    packet = story_authoring_module._parse_packet_document(response, expected_task="chapter_summary")
+
+    assert story_authoring_module._require_packet_section(packet, "project_summary_markdown") == "A reusable project summary."
+    assert story_authoring_module._require_packet_section(packet, "chapter_summary_markdown") == "Dorothy returns home."
+
+
 def test_scene_decomposition_validator_warns_on_two_scenes_and_rejects_empty() -> None:
     scene_records = [
         story_authoring_module._PacketRecord(

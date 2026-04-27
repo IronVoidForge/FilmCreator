@@ -24,7 +24,7 @@ No specific visual descriptors are provided in the current evidence. The environ
 ## Continuity
 
 - constraints: Must function as an obstacle for characters.
-- unresolved_ambiguities: Specific visual characteristics of the forest are currently undocumented., The nature of the "fighting" aspect (biological, magical, or environmental) is unstated.
+- unresolved_ambiguities: Visual characteristics of the forest are currently undocumented., Specific spatial layout and environmental hazards are unknown.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ No specific visual descriptors are provided in the current evidence. The environ
 - status: `generated`
 - source_fingerprint: `44a57423bc39b4b230143790a23a4b5a72c8a1d4`
 - created_at_utc: `2026-04-27T07:55:35.255945+00:00`
-- updated_at_utc: `2026-04-27T07:55:35.255945+00:00`
+- updated_at_utc: `2026-04-27T13:02:13.842077+00:00`

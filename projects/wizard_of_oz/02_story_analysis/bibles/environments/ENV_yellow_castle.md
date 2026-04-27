@@ -24,7 +24,7 @@ The yellow_castle serves as the central seat of power within the Land of the Wes
 ## Continuity
 
 - constraints: Must function as the seat of power for the Land of the West.
-- unresolved_ambiguities: Specific visual descriptors (color, scale, architecture) are not provided in the source material., Internal layout and spatial configuration are unknown.
+- unresolved_ambiguities: Specific visual descriptors (color, scale, architecture) are not provided in the current evidence., Internal layout and spatial configuration are unknown.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ The yellow_castle serves as the central seat of power within the Land of the Wes
 - status: `generated`
 - source_fingerprint: `01a6323484795488cb0b15ddaa0c88c55c5a30ac`
 - created_at_utc: `2026-04-27T07:53:15.299907+00:00`
-- updated_at_utc: `2026-04-27T07:53:15.299907+00:00`
+- updated_at_utc: `2026-04-27T13:00:59.707288+00:00`

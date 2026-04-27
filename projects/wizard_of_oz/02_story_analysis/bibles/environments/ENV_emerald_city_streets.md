@@ -17,7 +17,7 @@
 A monochromatic green cityscape defined by opulent verdant architecture and emerald-studded facades. The streets are paved with green marble, creating a shimmering jewel-toned environment where every surface reflects a saturated verdant hue.
 
 - layout_notes: Monumental scale featuring wide thoroughfares designed for processions.
-- lighting: Dazzling, high-glint, and overwhelming splendor; characterized by saturated brilliance.
+- lighting: Dazzling, high-glint, and overwhelming splendor; characterized by saturated brilliance and heavy reflections.
 - mood: Overwhelming splendor and opulence.
 - recurring_elements: Green marble paving, Emerald-studded facades, Monochromatic green color palette
 
@@ -43,4 +43,4 @@ A monochromatic green cityscape defined by opulent verdant architecture and emer
 - status: `generated`
 - source_fingerprint: `c1ba9fe964f8d2cb703e2f6f36dd60804bd8f8dd`
 - created_at_utc: `2026-04-27T07:51:53.015702+00:00`
-- updated_at_utc: `2026-04-27T07:51:53.015702+00:00`
+- updated_at_utc: `2026-04-27T13:00:16.280164+00:00`

@@ -14,16 +14,16 @@
 
 ## Visual Bible
 
-A vast, flat landscape defined by a wide-open horizon. The farmhouse acts as the primary structural anchor within this expansive prairie setting. The aesthetic is grounded in mundane reality, providing a sharp contrast to magical realms.
+A vast, flat landscape defined by a wide-open horizon. The farmhouse serves as the primary structural anchor within this expansive prairie setting. The aesthetic is grounded in mundane reality, providing a sharp contrast to magical realms.
 
-- layout_notes: Wide-open horizon; farmhouse serves as the central structural anchor in a vast, flat landscape.
+- layout_notes: Wide-open horizon; farmhouse acts as the central structural anchor in a vast, flat expanse.
 - lighting: Naturalistic, bright, and earthly.
 - mood: Homecoming and mundane reality.
 - recurring_elements: Farmhouse (structural anchor), Wide-open horizon
 
 ## Continuity
 
-- constraints: Must maintain a sense of mundane reality compared to magical realms., Scale must emphasize the vastness of the flat landscape.
+- constraints: Must maintain a sense of mundane reality compared to magical settings., Scale must emphasize the vastness of the flat landscape.
 - unresolved_ambiguities: Specific architectural details of the farmhouse are not provided., Precise topographical features of the prairie beyond "flat" are unspecified.
 
 ## Evidence Summary
@@ -43,4 +43,4 @@ A vast, flat landscape defined by a wide-open horizon. The farmhouse acts as the
 - status: `generated`
 - source_fingerprint: `4e136a3fd84610e17855048b05353edd2cdd40b5`
 - created_at_utc: `2026-04-27T07:57:15.409348+00:00`
-- updated_at_utc: `2026-04-27T07:57:15.409348+00:00`
+- updated_at_utc: `2026-04-27T13:03:06.706232+00:00`

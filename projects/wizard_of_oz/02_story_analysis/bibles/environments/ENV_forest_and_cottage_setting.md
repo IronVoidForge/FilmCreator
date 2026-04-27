@@ -14,7 +14,7 @@
 
 ## Visual Bible
 
-The environment consists of a forest and a cottage, serving as the primary location for initial encounters. Specific visual details regarding the architecture or flora are currently undocumented in the provided evidence.
+The environment consists of a forest and a cottage, serving as the primary location for initial character encounters. Specific visual details regarding the architecture or flora are currently undocumented in the provided evidence.
 
 - layout_notes: Spatial relationship between the forest and the cottage is established but specific layout is unknown.
 - lighting: unknown
@@ -24,7 +24,7 @@ The environment consists of a forest and a cottage, serving as the primary locat
 ## Continuity
 
 - constraints: Must function as the primary setting for initial encounters.
-- unresolved_ambiguities: Specific visual characteristics of the forest and cottage are not defined., Detailed spatial layout between the forest and the cottage is unknown.
+- unresolved_ambiguities: Specific visual characteristics of the forest and cottage are not defined., Precise spatial configuration between the forest and the cottage is unknown.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ The environment consists of a forest and a cottage, serving as the primary locat
 - status: `generated`
 - source_fingerprint: `454947010785aa83ee8cf484da82a98ce673a9dd`
 - created_at_utc: `2026-04-27T07:50:13.666294+00:00`
-- updated_at_utc: `2026-04-27T07:50:13.666294+00:00`
+- updated_at_utc: `2026-04-27T12:59:23.474490+00:00`

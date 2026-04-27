@@ -123,6 +123,9 @@ def parse_packet_body(packet_body: str) -> PacketDocument:
         if not stripped:
             index += 1
             continue
+        if stripped == SECTION_END_TAG:
+            index += 1
+            continue
         if stripped == RECORD_START_TAG:
             record_lines, index = collect_tagged_block(lines, index, RECORD_START_TAG, RECORD_END_TAG, fallback_start_tag=RECORD_START_TAG)
             records.append(parse_packet_record(record_lines))
@@ -152,6 +155,9 @@ def parse_packet_record(record_lines: list[str]) -> PacketRecord:
     while index < len(record_lines):
         stripped = record_lines[index].strip()
         if not stripped:
+            index += 1
+            continue
+        if stripped == SECTION_END_TAG:
             index += 1
             continue
         section_match = SECTION_TAG_PATTERN.fullmatch(stripped)
@@ -212,11 +218,32 @@ def collect_tagged_block(
             return body, index + 1
         if fallback_start_tag is not None and stripped == fallback_start_tag:
             return body, index
-        if fallback_stop_any_tag and stripped.startswith("[[") and stripped.endswith("]]"):
+        if fallback_stop_any_tag and is_structural_packet_tag(stripped):
             return body, index
         body.append(lines[index])
         index += 1
     return body, index
+
+
+def is_structural_packet_tag(stripped: str) -> bool:
+    return (
+        stripped in {PACKET_START_TAG, PACKET_END_TAG, RECORD_START_TAG, RECORD_END_TAG, SECTION_END_TAG}
+        or SECTION_TAG_PATTERN.fullmatch(stripped) is not None
+    )
+
+
+def clean_section_text(value: str) -> str:
+    cleaned = value.strip()
+    inline_match = re.fullmatch(r"\[\[SECTION\s+(.*?)\s*\[\[/SECTION\]\]", cleaned, flags=re.DOTALL)
+    if inline_match:
+        return inline_match.group(1).strip()
+
+    lines = cleaned.splitlines()
+    while lines and lines[0].strip() == "[[SECTION":
+        lines = lines[1:]
+    while lines and lines[-1].strip() == SECTION_END_TAG:
+        lines = lines[:-1]
+    return "\n".join(lines).strip()
 
 
 def split_packet_key_value(line: str) -> tuple[str, str]:
@@ -230,7 +257,7 @@ def split_packet_key_value(line: str) -> tuple[str, str]:
 
 
 def require_packet_section(packet: PacketDocument, section_name: str, *, allow_empty: bool = False) -> str:
-    value = packet.sections.get(section_name.lower(), "").strip()
+    value = clean_section_text(packet.sections.get(section_name.lower(), ""))
     if not value and not allow_empty:
         raise LMStudioError(f"Packet is missing required section '{section_name}'.")
     return value
@@ -258,7 +285,7 @@ def require_record_field(record: PacketRecord, field_name: str, *, allow_empty: 
 
 
 def require_record_section(record: PacketRecord, section_name: str, *, allow_empty: bool = False) -> str:
-    value = record.sections.get(section_name.lower(), "").strip()
+    value = clean_section_text(record.sections.get(section_name.lower(), ""))
     if not value and not allow_empty:
         raise LMStudioError(f"Packet record is missing required section '{section_name}'.")
     return value

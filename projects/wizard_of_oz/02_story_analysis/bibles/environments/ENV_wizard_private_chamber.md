@@ -24,7 +24,7 @@ A small-scale, cramped interior functioning as a mundane illusionist's lair. The
 ## Continuity
 
 - constraints: Must feel utilitarian/practical, not magical., Space must remain small-scale and enclosed.
-- unresolved_ambiguities: Specific floor plan or exact dimensions of the chamber are not defined.
+- unresolved_ambiguities: Specific floor plan or exact dimensions of the chamber are unstated.
 
 ## Evidence Summary
 
@@ -43,4 +43,4 @@ A small-scale, cramped interior functioning as a mundane illusionist's lair. The
 - status: `generated`
 - source_fingerprint: `138af5b27640bd06022365cf6e64d4aff617f9bd`
 - created_at_utc: `2026-04-27T07:54:09.750694+00:00`
-- updated_at_utc: `2026-04-27T07:54:09.750694+00:00`
+- updated_at_utc: `2026-04-27T13:01:28.238296+00:00`

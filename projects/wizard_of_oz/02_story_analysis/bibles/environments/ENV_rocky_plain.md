@@ -19,12 +19,12 @@ No specific visual descriptors are provided in the current evidence. The environ
 - layout_notes: Unknown.
 - lighting: Unknown.
 - mood: Unknown.
-- recurring_elements: None identified.
+- recurring_elements: None identified
 
 ## Continuity
 
-- constraints: Must function as a transit and discovery location.
-- unresolved_ambiguities: Visual characteristics (topography, flora, color palette) are completely undefined., Specific spatial layout is unknown.
+- constraints: Use only as a secondary setting for transit or discovery based on available evidence.
+- unresolved_ambiguities: Visual characteristics (topography, flora, color palette) are completely undocumented., Specific spatial layout and scale are unknown.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ No specific visual descriptors are provided in the current evidence. The environ
 - status: `generated`
 - source_fingerprint: `50e9b8506f227ff0c00b37a59c52073ff4cabe9c`
 - created_at_utc: `2026-04-27T07:52:56.781134+00:00`
-- updated_at_utc: `2026-04-27T07:52:56.781134+00:00`
+- updated_at_utc: `2026-04-27T13:00:49.645537+00:00`

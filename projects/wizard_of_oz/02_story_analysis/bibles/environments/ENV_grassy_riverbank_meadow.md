@@ -24,7 +24,7 @@ No specific visual details are provided in the current evidence. The environment
 ## Continuity
 
 - constraints: Must function as a transit setting
-- unresolved_ambiguities: Specific visual characteristics (flora, water state, topography) are undocumented., Detailed spatial layout is unknown.
+- unresolved_ambiguities: Specific visual characteristics (flora, water state, topography) are undocumented., Precise spatial relationship between the river and the meadow is unstated.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ No specific visual details are provided in the current evidence. The environment
 - status: `generated`
 - source_fingerprint: `214c35cd628f8d1b66c18366fe6c603a56360516`
 - created_at_utc: `2026-04-27T07:51:21.581140+00:00`
-- updated_at_utc: `2026-04-27T07:51:21.581140+00:00`
+- updated_at_utc: `2026-04-27T12:59:59.312966+00:00`

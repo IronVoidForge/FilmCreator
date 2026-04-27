@@ -14,17 +14,17 @@
 
 ## Visual Bible
 
-No specific visual details are provided in the current evidence. The location is identified as a primary setting within an ancient forest interior.
+No specific visual descriptors are provided in the current evidence. The location is identified as an ancient forest interior serving as a primary setting.
 
 - layout_notes: Unknown
 - lighting: Unknown
 - mood: Unknown
-- recurring_elements: None identified
+- recurring_elements: None documented
 
 ## Continuity
 
-- constraints: None identified
-- unresolved_ambiguities: Visual characteristics (texture, flora, scale) are currently undocumented., Spatial layout and specific lighting conditions are unknown.
+- constraints: None documented
+- unresolved_ambiguities: Visual characteristics (texture, flora, scale) are currently undocumented., Specific spatial layout and lighting conditions are unknown.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ No specific visual details are provided in the current evidence. The location is
 - status: `generated`
 - source_fingerprint: `83d9abbb7bbad36867dbf2443db278059d257efe`
 - created_at_utc: `2026-04-27T07:56:06.293261+00:00`
-- updated_at_utc: `2026-04-27T07:56:06.293261+00:00`
+- updated_at_utc: `2026-04-27T13:02:30.099386+00:00`

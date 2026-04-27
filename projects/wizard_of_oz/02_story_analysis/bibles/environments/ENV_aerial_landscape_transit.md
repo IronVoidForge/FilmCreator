@@ -19,12 +19,12 @@ An aerial landscape utilized as a transit setting during flight phases. Specific
 - layout_notes: Spatial configuration is defined by movement through an aerial landscape.
 - lighting: Unknown
 - mood: Unknown
-- recurring_elements: Flight/Transit movement
+- recurring_elements: Aerial transit/flight
 
 ## Continuity
 
-- constraints: Must function as a transit setting for flight phases.
-- unresolved_ambiguities: Specific visual descriptors of the aerial landscape are missing., Atmospheric conditions and lighting profiles are undefined.
+- constraints: Must function as a transitional space for flight sequences.
+- unresolved_ambiguities: Specific visual descriptors of the landscape are currently unavailable., Atmospheric conditions and lighting profiles are undefined.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ An aerial landscape utilized as a transit setting during flight phases. Specific
 - status: `generated`
 - source_fingerprint: `1ed6fdcaf44ecfcb867e2805d9c52194984f98d1`
 - created_at_utc: `2026-04-27T07:53:25.527346+00:00`
-- updated_at_utc: `2026-04-27T07:53:25.527346+00:00`
+- updated_at_utc: `2026-04-27T13:01:05.120201+00:00`

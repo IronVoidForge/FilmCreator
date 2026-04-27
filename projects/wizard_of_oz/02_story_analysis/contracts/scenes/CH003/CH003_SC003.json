@@ -6,27 +6,27 @@
   "summary": "After a night's rest, Dorothy continues her journey. Boq offers a warning about the dangers ahead. While resting near a cornfield, Dorothy encounters a Scarecrow perched on a pole who suddenly comes to life.",
   "emotional_arc": "From cautious optimism to sudden shock/surprise.",
   "production_intent": "Establish the transition from Munchkin safety to road uncertainty through a character encounter that shifts from travel fatigue to sudden shock. The sequence must emphasize the isolation of the cornfield and the physical transformation of the scarecrow from an object to a living entity.",
-  "scene_short_description": "A traveler rests near a tall cornfield before encountering a living scarecrow.",
-  "scene_primary_scale_story_point": "Vertical hierarchy between the ground-level traveler and the elevated scarecrow.",
+  "scene_short_description": "A weary traveler rests near a tall cornfield before encountering a living scarecrow.",
+  "scene_primary_scale_story_point": "The verticality of the scarecrow's pole against the horizontal expanse of the cornfield.",
   "scene_required_anchor_catalog": [
-    "pole_structure",
+    "scarecrow_pole",
     "yellow_brick_road"
   ],
-  "scene_start_state": "Dorothy traveling along the road with visible fatigue.",
+  "scene_start_state": "Dorothy walking along the road, appearing weary and disheveled.",
   "scene_end_state": "Dorothy in a state of shock facing the living scarecrow.",
-  "dominant_action_line": "Dorothy rests near a cornfield and is startled by a scarecrow coming to life.",
+  "dominant_action_line": "Dorothy travels, receives a warning, rests, and encounters a living scarecrow.",
   "scene_spatial_layout": [
-    "linear path of yellow_brick_road",
-    "verticality of the pole at the edge of the cornfield"
+    "linear path along yellow_brick_road",
+    "cornfield_scarecrow_post positioned at the edge of the road"
   ],
   "character_spatial_map": [
-    "dorothy walking along yellow_brick_road",
-    "boq positioned briefly near dorothy",
-    "the_scarecrow perched high on pole_structure"
+    "dorothy moves along the road toward the cornfield edge",
+    "boq stands near dorothy for a brief warning",
+    "the_scarecrow is elevated on the pole above the road"
   ],
   "environment_subzones": [
     "yellow_brick_road",
-    "cornfield_scarecrow_post"
+    "cornfield_edge"
   ],
   "entry_vectors": [
     "yellow_brick_road (dorothy)"
@@ -35,8 +35,8 @@
     "yellow_brick_road (dorothy)"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: dialogue/warning transition",
-    "BT002 -> BT003: environmental shift to rest and encounter"
+    "BT001 -> BT002: dialogue exchange/warning",
+    "BT002 -> BT003: transition to rest and sudden movement"
   ],
   "characters_required": [
     {
@@ -98,65 +98,66 @@
   ],
   "visual_coverage_families": [
     "Low angle looking up at the scarecrow on the pole",
-    "Close-ups of straw movement and awakening mechanics",
+    "Close-ups of straw movement during awakening",
     "Wide shots emphasizing cornfield isolation"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Dorothy continues journey",
+      "summary": "Dorothy travels the road and receives a warning from Boq",
       "purpose": "",
-      "action_start": "walking along road",
-      "action_end": "approaching boq",
+      "action_start": "dorothy walking",
+      "action_end": "boq finishes warning",
       "active_subjects": [
-        "dorothy"
+        "dorothy",
+        "boq"
       ],
       "passive_subjects": [],
       "spatial_context": "yellow_brick_road",
-      "blocking_hint": "linear movement",
+      "blocking_hint": "dorothy stops on road to face boq",
       "environment_subzone": "yellow_brick_road",
-      "continuity_focus": "white clothing dishevelment",
-      "coverage_hint": "medium_full shot",
+      "continuity_focus": "dorothy's disheveled appearance",
+      "coverage_hint": "medium shots of interaction",
       "coverage_priority": "medium",
-      "handoff_to_next": "BT002"
+      "handoff_to_next": "dorothy moves toward cornfield"
     },
     {
       "beat_id": "BT002",
-      "summary": "Boq's warning",
+      "summary": "Dorothy rests near the cornfield edge",
       "purpose": "",
-      "action_start": "boq approaches dorothy",
-      "action_end": "boq departs",
+      "action_start": "dorothy sitting/resting",
+      "action_end": "dorothy notices movement",
       "active_subjects": [
-        "boq",
         "dorothy"
       ],
       "passive_subjects": [],
-      "spatial_context": "yellow_brick_road",
-      "blocking_hint": "stationary interaction",
-      "environment_subzone": "yellow_brick_road",
-      "continuity_focus": "dorothy's fatigue level",
-      "coverage_hint": "medium shot",
+      "spatial_context": "cornfield_edge",
+      "blocking_hint": "dorothy seated near the pole",
+      "environment_subzone": "cornfield_edge",
+      "continuity_focus": "fatigue level",
+      "coverage_hint": "wide shot of isolation",
       "coverage_priority": "low",
-      "handoff_to_next": "BT003"
+      "handoff_to_next": "the_scarecrow awakens"
     },
     {
       "beat_id": "BT003",
-      "summary": "The Scarecrow awakens",
+      "summary": "The Scarecrow comes to life",
       "purpose": "",
-      "action_start": "dorothy rests near cornfield",
-      "action_end": "the_scarecrow moves/lives",
+      "action_start": "static straw on pole",
+      "action_end": "scarecrow moves/speaks",
       "active_subjects": [
-        "the_scarecrow",
+        "the_scarecrow"
+      ],
+      "passive_subjects": [
         "dorothy"
       ],
-      "passive_subjects": [],
-      "spatial_context": "cornfield_scarecrow_post",
-      "blocking_hint": "dorothy seated/resting below pole",
-      "environment_subzone": "cornfield_scarecrow_post",
-      "continuity_focus": "pole positioning and straw movement",
-      "coverage_hint": "low angle / close-up",
+      "spatial_context": "cornfield_edge",
+      "blocking_hint": "the_scarecrow perched high on the pole",
+      "environment_subzone": "cornfield_edge",
+      "continuity_focus": "positioning of scarecrow on pole",
+      "coverage_hint": "low angle and close-ups of straw",
       "coverage_priority": "high",
-      "handoff_to_next": "end_of_scene"
+      "handoff_to_next": "shocked reaction"
     }
   ],
   "planned_shots": [
@@ -171,12 +172,12 @@
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "yellow_brick_road",
       "planned_shot_required_anchor_1": "yellow_brick_road",
-      "planned_shot_scale_proof_detail": "dorothy's disheveled white clothing",
+      "planned_shot_scale_proof_detail": "dorothy's disheveled clothing vs road length",
       "start_state_seed": "walking",
-      "end_state_seed": "stopping",
-      "action_seed": "traveling",
+      "end_state_seed": "stopping for boq",
+      "action_seed": "walking with weary gait",
       "blocking_seed": [
-        "linear movement along road"
+        "center road"
       ],
       "shot_size": "medium_full",
       "camera_angle": "eye_level",
@@ -189,59 +190,30 @@
     },
     {
       "planned_shot_id": "SH002",
-      "beat_id": "BT002",
-      "narrative_function": "deliver warning",
-      "planned_shot_moment_summary": "boq warns dorothy",
-      "primary_subject_seed": "boq",
-      "secondary_subjects_seed": [
-        "dorothy"
-      ],
-      "subject_visibility": "on_screen",
-      "narration_mode": "in_scene_speaker",
-      "environment_subzone": "yellow_brick_road",
-      "planned_shot_required_anchor_1": "yellow_brick_road",
-      "planned_shot_scale_proof_detail": "proximity of characters",
-      "start_state_seed": "standing",
-      "end_state_seed": "departing",
-      "action_seed": "warning",
-      "blocking_seed": [
-        "side-by-side interaction"
-      ],
-      "shot_size": "medium",
-      "camera_angle": "eye_level",
-      "lens_family": "normal",
-      "camera_motion": "locked_off",
-      "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
-      "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "profile_left"
-    },
-    {
-      "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "reveal supernatural element",
-      "planned_shot_moment_summary": "the_scarecrow awakens",
+      "narrative_function": "reveal scarecrow life",
+      "planned_shot_moment_summary": "straw moving on pole",
       "primary_subject_seed": "the_scarecrow",
       "secondary_subjects_seed": [
         "dorothy"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "cornfield_scarecrow_post",
-      "planned_shot_required_anchor_1": "pole_structure",
+      "environment_subzone": "cornfield_edge",
+      "planned_shot_required_anchor_1": "scarecrow_pole",
       "planned_shot_scale_proof_detail": "height of pole relative to dorothy",
-      "start_state_seed": "static object",
-      "end_state_seed": "living entity",
-      "action_seed": "awakening/movement",
+      "start_state_seed": "static straw",
+      "end_state_seed": "moving limbs",
+      "action_seed": "straw shifts and arms move",
       "blocking_seed": [
-        "vertical movement on pole"
+        "perched on pole"
       ],
       "shot_size": "close_up",
       "camera_angle": "low_angle",
       "lens_family": "portrait",
-      "camera_motion": "tilt",
-      "zoom_behavior": "subtle_in",
-      "focus_strategy": "rack_focus",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
       "lighting_style": "diffuse_ambient",
       "primary_subject_angle": "front"
     }
@@ -309,16 +281,16 @@
     "[CH004] Chapter IV (book index hit)",
     "[CH003] Chapter III (book index hit)",
     "[CH010] Chapter X (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH003_SC003\n\n## Production Intent\nEstablish the transition from Munchkin safety to road uncertainty through a character encounter that shifts from travel fatigue to sudden shock. The sequence must emphasize the isolation of the cornfield and the physical transformation of the scarecrow from an object to a living entity.\n\n## Required Cast\n- dorothy (white clothing/dress, expressive face)\n- boq (brief appearance)\n- the_scarecrow (straw-based, perched on pole)\n\n## Required Environments\n- yellow_brick_road\n- cornfield_scarecrow_post (edge of large cornfield with pole structure)\n\n## Continuity Constraints\n- Dorothy's level of fatigue/dishevelment after traveling.\n- The physical positioning of the_scarecrow on the pole.\n\n## Beat List\n- BT001: Dorothy continues journey along the road.\n- BT002: Boq offers a warning about dangers ahead.\n- BT003: Dorothy rests near cornfield; the_scarecrow awakens on his pole.",
+  "storyboard_markdown": "# Scene Contract: CH003_SC003\n\n## Production Intent\nEstablish the transition from Munchkin safety to road uncertainty through a character encounter that shifts from travel fatigue to sudden shock. The sequence must emphasize the isolation of the cornfield and the physical transformation of the scarecrow from an object to a living entity.\n\n## Required Cast\n- dorothy (weary traveler, white dress/clothing)\n- boq (brief appearance)\n- the_scarecrow (perched on pole)\n\n## Required Environments\n- yellow_brick_road\n- cornfield_scarecrow_post\n\n## Continuity Constraints\n- Dorothy's level of fatigue and dishevelment post-travel\n- Physical positioning of the_scarecrow on the pole\n\n## Beat List\n- BT001: Dorothy travels the road and receives a warning from Boq.\n- BT002: Dorothy rests near the cornfield edge.\n- BT003: The Scarecrow comes to life.",
   "metadata": {
     "artifact_id": "CH003_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "1b31823564f4b0b7c8c81ef3e90d0b1d3a7463b9",
+    "source_fingerprint": "174b4f66c42ea3c0d87201eeb9a15379d19b2d9b",
     "created_at_utc": "2026-04-27T08:05:09.457093+00:00",
-    "updated_at_utc": "2026-04-27T08:05:09.457093+00:00",
+    "updated_at_utc": "2026-04-27T13:07:05.866356+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -343,6 +315,11 @@
         "timestamp_utc": "2026-04-27T08:05:51.003339+00:00",
         "action": "synthesized",
         "source_fingerprint": "1b31823564f4b0b7c8c81ef3e90d0b1d3a7463b9"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:07:37.327544+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "174b4f66c42ea3c0d87201eeb9a15379d19b2d9b"
       }
     ]
   }

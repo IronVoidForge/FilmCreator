@@ -17,26 +17,26 @@
 - identity_baseline: unknown
 - age_presence: unknown
 - physical_build: human_scale bipedal group
-- origin_or_historical_context: unknown
+- origin_or_historical_context: castle setting
 - movement_language: unknown
-No visual data is available to establish a stable identity, costume, or physical profile for the castle_guards. They are categorized as a human-scale bipedal group, but specific aesthetic details remain unknown.
+Insufficient visual evidence is provided to establish a stable identity, costume, or physical appearance for the castle_guards. They are categorized as a human-scale bipedal group within a castle setting, but specific aesthetic details remain unknown.
 
-- physical_traits: bipedal morphology, human scale
+- physical_traits: unknown
 - costume_signature: unknown
-- distinguishing_features: []
-- state_variants: []
+- distinguishing_features: unknown
+- state_variants: unknown
 
 ## Behavioral Bible
 
 - personality: unknown
-- role: unknown
+- role: guards
 - voice_notes: unknown
 - relationship_notes: associated with Glinda
 
 ## Continuity
 
-- continuity_constraints: maintain bipedal morphology and human scale if rendered
-- unresolved_ambiguities: visual appearance (costume, build, features) is entirely undocumented, sentience is unknown
+- continuity_constraints: must maintain group status as bipedal human-scale entities
+- unresolved_ambiguities: visual appearance and costume are entirely undocumented, specific movement language is unknown, sentience is unknown
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ No visual data is available to establish a stable identity, costume, or physical
 - status: `generated`
 - source_fingerprint: `9bced56688e6cfae667a112abdf7710c6d82ec35`
 - created_at_utc: `2026-04-27T07:47:30.281461+00:00`
-- updated_at_utc: `2026-04-27T07:47:30.281461+00:00`
+- updated_at_utc: `2026-04-27T12:57:54.145573+00:00`

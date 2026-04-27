@@ -14,7 +14,7 @@
 
 ## Visual Bible
 
-No specific visual details are provided in the current evidence. The location functions as a secondary shelter setting within the narrative.
+No specific visual details are provided in the current evidence. The location functions as a secondary shelter setting.
 
 - layout_notes: Unknown
 - lighting: Unknown
@@ -23,8 +23,8 @@ No specific visual details are provided in the current evidence. The location fu
 
 ## Continuity
 
-- constraints: Must function as a shelter/secondary setting
-- unresolved_ambiguities: Specific architectural or interior visual details are currently undocumented., Spatial relationship to other environments is unknown.
+- constraints: Must function as a shelter
+- unresolved_ambiguities: Specific visual characteristics of the cottage are undocumented., Internal layout and architectural details are unknown.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ No specific visual details are provided in the current evidence. The location fu
 - status: `generated`
 - source_fingerprint: `4153064e9ffcbf04be0b03d442f9dfcc76a89408`
 - created_at_utc: `2026-04-27T07:50:04.655018+00:00`
-- updated_at_utc: `2026-04-27T07:50:04.655018+00:00`
+- updated_at_utc: `2026-04-27T12:59:18.690298+00:00`

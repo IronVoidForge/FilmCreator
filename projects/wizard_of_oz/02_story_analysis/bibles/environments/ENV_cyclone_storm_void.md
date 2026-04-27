@@ -24,7 +24,7 @@ No specific visual descriptors are provided in the current evidence. The environ
 ## Continuity
 
 - constraints: Must function as a dynamic transit setting.
-- unresolved_ambiguities: Visual characteristics of the "cyclone storm void" are not defined in provided evidence., Spatial geometry and internal layout are unknown.
+- unresolved_ambiguities: Visual characteristics of the "cyclone storm void" are not defined., Spatial geometry and internal layout are unknown.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ No specific visual descriptors are provided in the current evidence. The environ
 - status: `generated`
 - source_fingerprint: `73268cefcba862836fc81581601625456902a401`
 - created_at_utc: `2026-04-27T07:48:31.107253+00:00`
-- updated_at_utc: `2026-04-27T07:48:31.107253+00:00`
+- updated_at_utc: `2026-04-27T12:58:29.818957+00:00`

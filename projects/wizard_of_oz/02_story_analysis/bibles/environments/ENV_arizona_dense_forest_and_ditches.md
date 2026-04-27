@@ -16,15 +16,15 @@
 
 A dense forest environment located in Arizona, characterized by the presence of ditches.
 
-- layout_notes: Features dense forestation and ditch structures.
+- layout_notes: Contains forested areas and ditch structures.
 - lighting: unknown
 - mood: unknown
 - recurring_elements: Dense forest, Ditches
 
 ## Continuity
 
-- constraints: Must maintain Arizona-based forest characteristics.
-- unresolved_ambiguities: Specific visual density of the forest is not detailed beyond "dense.", Precise topographical relationship between the forest and the ditches is unstated.
+- constraints: Must maintain Arizona regional identity
+- unresolved_ambiguities: Specific visual density of the forest is not detailed., Precise topographical relationship between the forest and the ditches is unstated.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ A dense forest environment located in Arizona, characterized by the presence of 
 - status: `generated`
 - source_fingerprint: `1e37ea95a7603b3179426ff0f1eedd703c7e1c77`
 - created_at_utc: `2026-04-27T07:50:42.925783+00:00`
-- updated_at_utc: `2026-04-27T07:50:42.925783+00:00`
+- updated_at_utc: `2026-04-27T12:59:38.965614+00:00`

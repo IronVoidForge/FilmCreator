@@ -19,9 +19,9 @@
 - physical_build: Large scale; morphology is quadrupedal.
 - origin_or_historical_context: Fantasy forest setting.
 - movement_language: unknown
-A large-scale, quadrupedal beast characterized by a tiger's head. While the specific body type is not explicitly detailed for this individual entity, it is associated with monstrous "Kalidah" creatures that possess bodies like bears and heads like tigers.
+A large-scale, quadrupedal beast characterized by a tiger's head. While the specific body type is not explicitly defined for this individual entity, it is associated with "monstrous beasts" that possess bear-like bodies and long, sharp claws.
 
-- physical_traits: Tiger-like facial features
+- physical_traits: unknown
 - costume_signature: unknown
 - distinguishing_features: Tiger-like head
 - state_variants: unknown
@@ -31,12 +31,12 @@ A large-scale, quadrupedal beast characterized by a tiger's head. While the spec
 - personality: unknown
 - role: unknown
 - voice_notes: unknown
-- relationship_notes: Associated with the Lion and Forest Animals
+- relationship_notes: Associated with the Lion and Forest Animals.
 
 ## Continuity
 
-- continuity_constraints: Maintain feline head morphology.
-- unresolved_ambiguities: Specific body type (whether it follows the bear-like body of the Kalidahs or a standard feline build)., Scale/mass beyond "large."
+- continuity_constraints: Maintain distinction between a "tiger" and the "Kalidahs" (which are described as having bear bodies and tiger heads).
+- unresolved_ambiguities: The specific body morphology of the entity "tiger" is not explicitly detailed, only its head type., It is unclear if "tiger" refers to a standard feline or a creature with the monstrous proportions of a Kalidah.
 
 ## Evidence Summary
 
@@ -53,4 +53,4 @@ A large-scale, quadrupedal beast characterized by a tiger's head. While the spec
 - status: `generated`
 - source_fingerprint: `6d17098d15ef995e20288feaae7499a7948556e2`
 - created_at_utc: `2026-04-27T07:47:17.500312+00:00`
-- updated_at_utc: `2026-04-27T07:47:17.500312+00:00`
+- updated_at_utc: `2026-04-27T12:57:46.094100+00:00`

@@ -6,36 +6,36 @@
   "summary": "Inside the airborne house, chaos ensues. Dorothy struggles to maintain her footing and must act quickly to rescue Toto when he nearly falls through the open trap door during a violent lurch.",
   "emotional_arc": "Terror $\\rightarrow$ Desperate protective instinct.",
   "production_intent": "Execute a high-stakes action sequence within the confined, tilting interior of an airborne farmhouse. The sequence must emphasize physical instability and the immediate threat to toto via the open trap door during violent house movements.",
-  "scene_short_description": "A young girl struggles for footing inside a tilting, airborne farmhouse to rescue her dog.",
-  "scene_primary_scale_story_point": "Small-scale claustrophobia vs large-scale aerial chaos.",
+  "scene_short_description": "Chaos erupts inside a tilting airborne farmhouse as a small dog nears an open trap door.",
+  "scene_primary_scale_story_point": "Small-scale interior confinement vs. large-scale aerial turbulence.",
   "scene_required_anchor_catalog": [
     "open trap door",
     "sliding loose objects"
   ],
-  "scene_start_state": "Interior farmhouse lurching violently; dorothy struggling for balance.",
-  "scene_end_state": "dorothy secures toto after a near-fall through the trap door.",
-  "dominant_action_line": "Dorothy navigates tilting floors to intercept toto before he falls through the trap door.",
+  "scene_start_state": "Interior of farmhouse_interior_and_cellar tilting violently; dorothy struggling for footing.",
+  "scene_end_state": "dorothy secures toto after a near-fall through the cellar opening.",
+  "dominant_action_line": "dorothy navigates shifting floor angles to rescue toto from the trap door.",
   "scene_spatial_layout": [
-    "Confined one-room interior with vertical instability",
-    "Slanted floor planes relative to camera axis"
+    "Confined one-room interior with vertical access via trap door",
+    "Slanted floor planes during lurching sequences"
   ],
   "character_spatial_map": [
-    "dorothy positioned mid-room, moving toward the cellar opening",
+    "dorothy positioned mid-room, navigating toward the cellar opening",
     "toto positioned near the edge of the open trap door"
   ],
   "environment_subzones": [
     "farmhouse_interior_and_cellar (main room)",
-    "farmhouse_interior_and_cellar (trap door threshold)"
+    "cellar (via trap door)"
   ],
   "entry_vectors": [
-    "dorothy enters via floor lurching/stumbling"
+    "house lurching directionality"
   ],
   "exit_vectors": [
-    "none (scene contained within interior)"
+    "vertical drop through trap door"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: violent house lurch",
-    "BT002 -> BT003: desperate physical reach"
+    "BT001 -> BT002: violent lurch triggers movement",
+    "BT002 -> BT003: rescue attempt initiates"
   ],
   "characters_required": [
     {
@@ -83,60 +83,60 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Violent lurch and loss of footing",
+      "summary": "House lurches violently causing chaos",
       "purpose": "",
-      "action_start": "stable standing",
-      "action_end": "stumbling on tilted floor",
+      "action_start": "stable tilt",
+      "action_end": "extreme tilt",
       "active_subjects": [
         "dorothy"
       ],
       "passive_subjects": [
         "loose objects"
       ],
-      "spatial_context": "main farmhouse room",
-      "blocking_hint": "dorothy center frame, tilting floor",
+      "spatial_context": "farmhouse_interior_and_cellar",
+      "blocking_hint": "dorothy bracing against furniture/walls",
       "environment_subzone": "farmhouse_interior_and_cellar",
-      "continuity_focus": "floor angle/object slide direction",
-      "coverage_hint": "medium_full tracking",
+      "continuity_focus": "direction of object slide",
+      "coverage_hint": "medium shots",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Toto's near fall",
+      "summary": "Toto nears the trap door",
       "purpose": "",
-      "action_start": "toto walking/standing",
-      "action_end": "toto sliding toward trap door",
+      "action_start": "toto walking",
+      "action_end": "toto sliding toward edge",
       "active_subjects": [
         "toto"
       ],
       "passive_subjects": [
         "dorothy"
       ],
-      "spatial_context": "near the cellar opening",
-      "blocking_hint": "toto at edge of trap door",
+      "spatial_context": "near open trap door",
+      "blocking_hint": "toto at the threshold of cellar",
       "environment_subzone": "farmhouse_interior_and_cellar",
-      "continuity_focus": "direction of slide matches house lurch",
-      "coverage_hint": "close-up on toto/trap door",
+      "continuity_focus": "angle of floor tilt",
+      "coverage_hint": "close-ups",
       "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Desperate rescue",
+      "summary": "Dorothy rescues Toto",
       "purpose": "",
       "action_start": "dorothy lunging",
-      "action_end": "dorothy securing toto",
+      "action_end": "dorothy holding toto [[action_end=dorothy holding toto]",
       "active_subjects": [
         "dorothy",
         "toto"
       ],
       "passive_subjects": [],
-      "spatial_context": "threshold of trap door",
-      "blocking_hint": "dorothy diving toward the floor/trap door",
+      "spatial_context": "trap door edge",
+      "blocking_hint": "dorothy diving toward the opening",
       "environment_subzone": "farmhouse_interior_and_cellar",
-      "continuity_focus": "maintaining tilt angle",
-      "coverage_hint": "tight medium shot",
+      "continuity_focus": "dorothy's footing stability",
+      "coverage_hint": "tight medium shots",
       "coverage_priority": "high",
       "handoff_to_next": "end_of_scene"
     }
@@ -145,7 +145,7 @@
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish chaos",
+      "narrative_function": "establish instability",
       "planned_shot_moment_summary": "house lurches violently",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
@@ -156,11 +156,11 @@
       "environment_subzone": "farmhouse_interior_and_cellar",
       "planned_shot_required_anchor_1": "floor plane",
       "planned_shot_scale_proof_detail": "objects sliding in unison",
-      "start_state_seed": "dorothy standing",
-      "end_state_seed": "dorothy stumbling",
-      "action_seed": "dorothy loses footing as room tilts",
+      "start_state_seed": "dorothy off-balance",
+      "end_state_seed": "dorothy bracing against wall",
+      "action_seed": "dorothy struggles to maintain footing during tilt",
       "blocking_seed": [
-        "center room to floor lurch"
+        "dorothy moves toward center room"
       ],
       "shot_size": "medium_full",
       "camera_angle": "dutch",
@@ -174,8 +174,8 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "heighten stakes",
-      "planned_shot_moment_summary": "toto nears trap door",
+      "narrative_function": "establish threat",
+      "planned_shot_moment_summary": "toto slips toward trap door",
       "primary_subject_seed": "toto",
       "secondary_subjects_seed": [
         "trap door"
@@ -185,14 +185,14 @@
       "environment_subzone": "farmhouse_interior_and_cellar",
       "planned_shot_required_anchor_1": "open trap door",
       "planned_shot_scale_proof_detail": "toto's proximity to edge",
-      "start_state_seed": "toto sliding",
-      "end_state_seed": "toto dangling",
-      "action_seed": "toto slides toward the open cellar hole",
+      "start_state_seed": "toto near floor",
+      "end_state_seed": "toto sliding toward opening",
+      "action_seed": "toto nearly falls through the open trap door",
       "blocking_seed": [
-        "near trap door threshold"
+        "toto moves toward cellar edge"
       ],
       "shot_size": "close_up",
-      "camera_angle": "high_angle",
+      "camera_angle": "low_angle",
       "lens_family": "normal",
       "camera_motion": "track",
       "zoom_behavior": "subtle_in",
@@ -203,7 +203,7 @@
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "climax/resolution",
+      "narrative_function": "resolve tension",
       "planned_shot_moment_summary": "dorothy grabs toto",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
@@ -212,16 +212,16 @@
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "farmhouse_interior_and_cellar",
-      "planned_shot_required_anchor_1": "trap door",
-      "planned_shot_scale_proof_detail": "dorothy's reach vs floor tilt",
+      "planned_shot_required_anchor_1": "open trap door",
+      "planned_shot_scale_proof_detail": "dorothy's reach vs distance to edge",
       "start_state_seed": "dorothy lunging",
       "end_state_seed": "dorothy clutching toto",
-      "action_seed": "dorothy lunges and grabs toto just before he falls",
+      "action_seed": "dorothy rescues toto from the brink",
       "blocking_seed": [
-        "floor to trap door edge"
+        "dorothy dives toward trap door"
       ],
       "shot_size": "medium_close",
-      "camera_angle": "low_angle",
+      "camera_angle": "eye_level",
       "lens_family": "portrait",
       "camera_motion": "push_in",
       "zoom_behavior": "none",
@@ -293,16 +293,16 @@
     "[CH011] Chapter XI (book index hit)",
     "[CH001] Chapter I (book index hit)",
     "[CH010] Chapter X (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH001_SC003\n\n## Production Intent\nExecute a high-stakes action sequence within the confined, tilting interior of an airborne farmhouse. The sequence must emphasize physical instability and the immediate threat to toto via the open trap door during violent house movements.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- toto\n\n## Required Environments\n- farmhouse_interior_and_cellar (one-room interior, tilting floor planes, open trap door)\n\n## Continuity Constraints\n- Floor and wall angles must tilt in synchronization with house motion.\n- Loose objects must slide in a consistent direction relative to house lurching.\n\n## Beat List\n- BT001: Violent lurch and loss of footing.\n- BT002: Toto's near fall toward the trap door.\n- BT003: Desperate rescue/grabbing toto.",
+  "storyboard_markdown": "# Scene Contract: CH001_SC003\n\n## Production Intent\nExecute a high-stakes action sequence within the confined, tilting interior of an airborne farmhouse. The sequence must emphasize physical instability and the immediate threat to toto via the open trap door during violent house movements.\n\n## Required Cast\n- dorothy (young human girl, expressive face)\n- toto (small dog)\n\n## Required Environments\n- farmhouse_interior_and_cellar (one-room interior with vertical access via trap door)\n\n## Continuity Constraints\n- Floor and wall angles must tilt in synchronization with house motion.\n- Loose objects must slide in a consistent direction relative to house lurching.\n\n## Beat List\n- BT001: House lurches violently causing chaos.\n- BT002: Toto nears the trap door.\n- BT003: Dorothy rescues Toto.",
   "metadata": {
     "artifact_id": "CH001_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "a6721260a62c4b63c387f662191a6d98e23f9625",
+    "source_fingerprint": "eef9b425563d3e59d0582ce5e2f68da686f82846",
     "created_at_utc": "2026-04-27T07:58:52.728622+00:00",
-    "updated_at_utc": "2026-04-27T07:58:52.728622+00:00",
+    "updated_at_utc": "2026-04-27T13:04:00.489760+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -327,6 +327,11 @@
         "timestamp_utc": "2026-04-27T07:59:33.777351+00:00",
         "action": "synthesized",
         "source_fingerprint": "a6721260a62c4b63c387f662191a6d98e23f9625"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:04:20.494720+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "eef9b425563d3e59d0582ce5e2f68da686f82846"
       }
     ]
   }

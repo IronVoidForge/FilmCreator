@@ -9,22 +9,22 @@
 ## Identity
 
 - display_name: palace_of_oz
-- environment_type: Primary Setting / Emerald-themed sovereign residence
+- environment_type: Primary Setting / Sovereign Residence
 - chapter_mentions: CH011
 
 ## Visual Bible
 
-A grandiose interior characterized by monumental ceremonial halls and royal audience chambers. The architecture is designed to accommodate massive, non-human manifestations of the Wizard within its large-scale chambers. The aesthetic follows an emerald-themed sovereign residence motif.
+A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard.
 
 - layout_notes: Grandiose interior halls and large-scale chambers capable of accommodating massive scale manifestations.
 - lighting: Shifting and theatrical; ranges from looming shadows (Giant Head) to intense glows (Ball of Fire).
 - mood: Shifting and theatrical.
-- recurring_elements: Emerald themes, Monumental ceremonial architecture, Large-scale manifestations of the Wizard
+- recurring_elements: Emerald themes, Monumental ceremonial architecture, Large-scale manifestations (e.g., Giant Head, Ball of Fire)
 
 ## Continuity
 
-- constraints: Scale must accommodate non-human, massive entities., Lighting must be capable of extreme shifts between shadow and intense glow.
-- unresolved_ambiguities: Specific architectural details beyond "grand palace interiors" are not provided., Exact color palette beyond "emerald-themed" is unspecified.
+- constraints: Must accommodate massive non-human scale manifestations.
+- unresolved_ambiguities: Specific architectural layout beyond "grand halls" and "chambers" is not detailed., Exact color palette beyond "emerald-themed" is unspecified.
 
 ## Evidence Summary
 
@@ -43,4 +43,4 @@ A grandiose interior characterized by monumental ceremonial halls and royal audi
 - status: `generated`
 - source_fingerprint: `dedfcbca7b83d9adb721844e75c74f706a51df4e`
 - created_at_utc: `2026-04-27T07:52:15.589596+00:00`
-- updated_at_utc: `2026-04-27T07:52:15.589596+00:00`
+- updated_at_utc: `2026-04-27T13:00:28.590313+00:00`

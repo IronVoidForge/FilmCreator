@@ -24,7 +24,7 @@ No specific visual descriptors are provided in the current evidence. The locatio
 ## Continuity
 
 - constraints: Must function as a setting for both imprisonment and climactic action.
-- unresolved_ambiguities: Specific architectural or decorative details are currently undocumented., Visual tone and lighting schemes are undefined.
+- unresolved_ambiguities: Specific visual architecture and interior layout are currently undocumented., Lighting and atmospheric qualities are unknown.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ No specific visual descriptors are provided in the current evidence. The locatio
 - status: `generated`
 - source_fingerprint: `f32158ad51535f221df9b516bfb43faf3bffa1d4`
 - created_at_utc: `2026-04-27T07:52:47.223331+00:00`
-- updated_at_utc: `2026-04-27T07:52:47.223331+00:00`
+- updated_at_utc: `2026-04-27T13:00:44.615013+00:00`

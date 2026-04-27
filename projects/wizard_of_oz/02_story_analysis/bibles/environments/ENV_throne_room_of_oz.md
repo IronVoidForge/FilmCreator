@@ -14,7 +14,7 @@
 
 ## Visual Bible
 
-No specific visual descriptors are provided in the current evidence. The location serves as a critical site for character transformations and confrontations.
+No specific visual descriptors are provided in the current evidence. The location serves as a critical narrative hub for character transformations and confrontations.
 
 - layout_notes: Unknown.
 - lighting: Unknown.
@@ -23,8 +23,8 @@ No specific visual descriptors are provided in the current evidence. The locatio
 
 ## Continuity
 
-- constraints: Must function as a space capable of hosting character transformations and confrontations.
-- unresolved_ambiguities: Visual identity, layout, lighting, and specific atmospheric details are currently undocumented.
+- constraints: Must function as a site for confrontation and transformation.
+- unresolved_ambiguities: Specific visual architecture and aesthetic details are currently undocumented., Spatial layout is unknown.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ No specific visual descriptors are provided in the current evidence. The locatio
 - status: `generated`
 - source_fingerprint: `911b97bbab7a5e69680873e8c08c3b81036b36e7`
 - created_at_utc: `2026-04-27T07:54:21.817110+00:00`
-- updated_at_utc: `2026-04-27T07:54:21.817110+00:00`
+- updated_at_utc: `2026-04-27T13:01:34.515167+00:00`

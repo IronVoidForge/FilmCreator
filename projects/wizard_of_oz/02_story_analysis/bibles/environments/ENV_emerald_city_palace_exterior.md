@@ -24,7 +24,7 @@ No specific visual descriptors are provided in the current evidence. The locatio
 ## Continuity
 
 - constraints: Must function as a transit hub/secondary setting per narrative role.
-- unresolved_ambiguities: Visual identity and architectural details are currently undocumented., Specific spatial layout is unknown.
+- unresolved_ambiguities: Visual characteristics (color, scale, architecture) are currently undocumented., Specific spatial layout is unknown.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ No specific visual descriptors are provided in the current evidence. The locatio
 - status: `generated`
 - source_fingerprint: `e2c087958c5d794087e58164d13e95e023b2c6a0`
 - created_at_utc: `2026-04-27T07:54:51.593894+00:00`
-- updated_at_utc: `2026-04-27T07:54:51.593894+00:00`
+- updated_at_utc: `2026-04-27T13:01:50.166459+00:00`

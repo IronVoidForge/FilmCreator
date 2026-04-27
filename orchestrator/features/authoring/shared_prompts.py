@@ -18,6 +18,7 @@ def analysis_system_prompt() -> str:
             "Do not wrap the packet in code fences unless explicitly requested.",
             "Do not produce JSON-only responses.",
             "If a packet asks for markdown sections, emit the section name on its own line and wrap the body in [[SECTION ...]] ... [[/SECTION]].",
+            "Do not put another [[SECTION ...]] tag inside a section body.",
             "Keep the response deterministic and grounded in the supplied chapter text.",
         ]
     )

@@ -14,7 +14,7 @@
 
 ## Visual Bible
 
-No specific visual details are provided in the current evidence. The environment functions primarily as a site for transit and action sequences.
+No specific visual details are provided in the current evidence. The environment functions primarily as a transit setting and an action location.
 
 - layout_notes: Unknown.
 - lighting: Unknown.
@@ -23,8 +23,8 @@ No specific visual details are provided in the current evidence. The environment
 
 ## Continuity
 
-- constraints: Must function as a viable transit setting or action location.
-- unresolved_ambiguities: Specific visual characteristics of the platform are currently undocumented., Spatial dimensions and structural composition are unknown.
+- constraints: Must function as a platform for balloon launch/transit operations.
+- unresolved_ambiguities: Specific physical characteristics and architectural details are currently undocumented., Visual aesthetic and scale are unknown.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ No specific visual details are provided in the current evidence. The environment
 - status: `generated`
 - source_fingerprint: `fe507e1e806de9dce8431620f4fe33f9e92db497`
 - created_at_utc: `2026-04-27T07:54:42.452136+00:00`
-- updated_at_utc: `2026-04-27T07:54:42.452136+00:00`
+- updated_at_utc: `2026-04-27T13:01:45.320161+00:00`

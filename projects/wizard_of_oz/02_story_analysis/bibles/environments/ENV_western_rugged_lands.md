@@ -24,7 +24,7 @@ No specific visual descriptors are provided in the current evidence. The environ
 ## Continuity
 
 - constraints: Must function as a transit setting
-- unresolved_ambiguities: Specific visual characteristics (topography, flora, climate) are undocumented., Spatial layout and scale are unknown.
+- unresolved_ambiguities: Specific visual characteristics of the rugged lands are currently undocumented., Spatial layout and topographical details are unknown.
 
 ## Evidence Summary
 
@@ -38,4 +38,4 @@ No specific visual descriptors are provided in the current evidence. The environ
 - status: `generated`
 - source_fingerprint: `5ddb185460dc030f08eff8f52c5474372d6098d4`
 - created_at_utc: `2026-04-27T07:52:29.692166+00:00`
-- updated_at_utc: `2026-04-27T07:52:29.692166+00:00`
+- updated_at_utc: `2026-04-27T13:00:35.230153+00:00`

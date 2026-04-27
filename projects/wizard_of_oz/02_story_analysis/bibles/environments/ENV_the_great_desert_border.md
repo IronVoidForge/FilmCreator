@@ -17,13 +17,13 @@
 A wild and untamed expanse characterized by shifting sand dunes and an infinite horizon. The landscape is defined by extreme environmental hazards, including heat haze and the presence of wild beasts and hostile elements.
 
 - layout_notes: Vast scale with shifting dune topography and no visible landmarks to break the infinite horizon.
-- lighting: Harsh, unrelenting sunlight; heavy use of heat haze.
+- lighting: Harsh, unrelenting sunlight; heavy presence of heat haze.
 - mood: Isolation, extreme danger, and untamed hostility.
-- recurring_elements: Shifting sand dunes, Wild beasts, Hostile elements
+- recurring_elements: Shifting sand dunes, Wild beasts, Heat haze
 
 ## Continuity
 
-- constraints: Must maintain a sense of infinite scale, Environment must function as a physical obstacle to transit
+- constraints: Must maintain a sense of infinite scale, Environment functions as a physical obstacle to transit
 - unresolved_ambiguities: Specific biological nature of "wild beasts" is undefined., Exact boundaries of the "border" are not specified.
 
 ## Evidence Summary
@@ -43,4 +43,4 @@ A wild and untamed expanse characterized by shifting sand dunes and an infinite 
 - status: `generated`
 - source_fingerprint: `2dc7c97e72635f9c36a59c381394044367cadb1c`
 - created_at_utc: `2026-04-27T07:55:13.908853+00:00`
-- updated_at_utc: `2026-04-27T07:55:13.908853+00:00`
+- updated_at_utc: `2026-04-27T13:02:02.242520+00:00`

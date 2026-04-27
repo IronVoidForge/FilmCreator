@@ -14,9 +14,9 @@
 
 ## Visual Bible
 
-A path characterized by its yellow brick construction, currently in a state of deterioration. It serves as the central route for movement through the setting.
+A path characterized by its yellow brick construction, currently in a state of deterioration. It serves as the central artery for movement through the setting.
 
-- layout_notes: Functions as a primary transit corridor.
+- layout_notes: Functions as a primary transit route.
 - lighting: unknown
 - mood: unknown
 - recurring_elements: Yellow brick construction
@@ -24,7 +24,7 @@ A path characterized by its yellow brick construction, currently in a state of d
 ## Continuity
 
 - constraints: Must maintain status as a deteriorating path
-- unresolved_ambiguities: Specific visual nature of the "deterioration" is not defined., Spatial boundaries and surrounding terrain are unknown.
+- unresolved_ambiguities: Specific visual nature of the "deterioration" is not defined., Spatial relationship to surrounding terrain is unknown.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ A path characterized by its yellow brick construction, currently in a state of d
 - status: `generated`
 - source_fingerprint: `5d3a176659c6320a39f526f36fa128660174d067`
 - created_at_utc: `2026-04-27T07:49:55.232360+00:00`
-- updated_at_utc: `2026-04-27T07:49:55.232360+00:00`
+- updated_at_utc: `2026-04-27T12:59:13.644492+00:00`

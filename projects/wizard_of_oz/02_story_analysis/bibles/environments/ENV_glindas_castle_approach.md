@@ -40,4 +40,4 @@ No specific visual details are provided in the current evidence. The location se
 - status: `generated`
 - source_fingerprint: `43cca57b285ecf9665bab02f73d83566d7544b59`
 - created_at_utc: `2026-04-27T07:56:33.883385+00:00`
-- updated_at_utc: `2026-04-27T07:56:33.883385+00:00`
+- updated_at_utc: `2026-04-27T13:02:44.996892+00:00`

@@ -115,6 +115,32 @@ def test_parse_packet_document_promotes_implicit_markdown_fields_into_sections()
     assert packet.sections["chapter_summary_markdown"].startswith("# Chapter Summary")
 
 
+def test_parse_packet_document_cleans_malformed_nested_section_wrappers() -> None:
+    response = "\n".join(
+        [
+            "[[FILMCREATOR_PACKET]]",
+            "task: chapter_summary",
+            "version: 1",
+            "",
+            "[[SECTION project_summary_markdown]]",
+            "[[SECTION A reusable project summary. [[/SECTION]]",
+            "[[/SECTION]]",
+            "",
+            "[[SECTION chapter_summary_markdown]]",
+            "[[SECTION",
+            "Dorothy returns home.",
+            "[[/SECTION]]",
+            "[[/SECTION]]",
+            "[[/FILMCREATOR_PACKET]]",
+        ]
+    )
+
+    packet = packet_parser.parse_packet_document(response, expected_task="chapter_summary")
+
+    assert packet_parser.require_packet_section(packet, "project_summary_markdown") == "A reusable project summary."
+    assert packet_parser.require_packet_section(packet, "chapter_summary_markdown") == "Dorothy returns home."
+
+
 def test_extract_character_records_from_index_markdown_salvages_heading_blocks() -> None:
     markdown = "\n".join(
         [

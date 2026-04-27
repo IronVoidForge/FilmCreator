@@ -23,7 +23,7 @@ Opulent guest chambers located within the emerald palace interiors. The space fe
 
 ## Continuity
 
-- constraints: Must maintain domestic scale within the grander palace structure., Lighting must remain soft, diffused, and green.
+- constraints: Must maintain a domestic scale relative to the grander palace structure., Lighting must remain soft, diffused, and green.
 - unresolved_ambiguities: Specific architectural layout of the chambers is not detailed beyond "domestic scale.", Exact nature of the "tension" mentioned in atmosphere (contextual vs. environmental).
 
 ## Evidence Summary
@@ -43,4 +43,4 @@ Opulent guest chambers located within the emerald palace interiors. The space fe
 - status: `generated`
 - source_fingerprint: `d55f124065d459bbd582fb523be4ff65e11b3cc4`
 - created_at_utc: `2026-04-27T07:53:44.417253+00:00`
-- updated_at_utc: `2026-04-27T07:53:44.417253+00:00`
+- updated_at_utc: `2026-04-27T13:01:15.212299+00:00`

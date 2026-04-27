@@ -5,37 +5,37 @@
   "purpose": "Provide a magical blessing and set the protagonist on her journey.",
   "summary": "The Witch of the North kisses Dorothy's forehead for protection and points her toward the Yellow Brick Road before vanishing in a magical display.",
   "emotional_arc": "Solemnity $\\rightarrow$ Loneliness/Resolve",
-  "production_intent": "Establish the protagonist's transition from arrival to journey through a magical blessing. The sequence must manage a high-impact visual disappearance of the witch while maintaining the emotional weight of the blessing on Dorothy.",
-  "scene_short_description": "A magical figure blesses a young girl before vanishing at the start of a golden path.",
-  "scene_primary_scale_story_point": "Character-to-environment scale shift from intimate blessing to isolated wide landscape.",
+  "production_intent": "Establish the transition from magical guidance to solitary journeying through a ritualistic blessing and sudden disappearance. The sequence requires precise synchronization between character contact and special effects lighting shifts to maintain the weight of the blessing before transitioning into an atmosphere of isolation.",
+  "scene_short_description": "A magical figure blesses a weary traveler before vanishing at the edge of a golden path.",
+  "scene_primary_scale_story_point": "Character intimacy (kiss) scales up to environmental isolation (wide shot).",
   "scene_required_anchor_catalog": [
     "yellow_brick_road_pathway",
-    "Dorothy's forehead"
+    "dorothy's forehead"
   ],
-  "scene_start_state": "Close proximity between witch_of_the_north and dorothy at the clearing edge.",
-  "scene_end_state": "dorothy standing alone facing the yellow_brick_road_pathway.",
-  "dominant_action_line": "The Witch of the North blesses Dorothy and vanishes, leaving her to face the road alone.",
+  "scene_start_state": "Dorothy and the Witch of the North stand in solemn proximity at the clearing edge.",
+  "scene_end_state": "Dorothy stands alone facing the start of the Yellow Brick Road.",
+  "dominant_action_line": "The Witch blesses Dorothy, points toward the road, and vanishes.",
   "scene_spatial_layout": [
-    "Clearing edge meeting the start of the yellow_brick_road_pathway.",
-    "Intimate personal space for blessing transitioning to open path."
+    "Characters positioned at the threshold between the lush clearing and the pathway.",
+    "The path serves as the primary directional vector for the protagonist."
   ],
   "character_spatial_map": [
-    "witch_of_the_north positioned in close proximity to dorothy.",
-    "dorothy facing toward the yellow_brick_road_pathway."
+    "witch_of_the_north: Proximate to dorothy, facing her.",
+    "dorothy: Facing witch_of_the_north, positioned at the edge of the clearing."
   ],
   "environment_subzones": [
     "clearing_edge",
-    "yellow_brick_road_start"
+    "yellow_brick_road_pathway"
   ],
   "entry_vectors": [
-    "witch_of_the_north enters via clearing_edge"
+    "clearing_edge (witch_of_the_north)"
   ],
   "exit_vectors": [
-    "dorothy exits via yellow_brick_road_start"
+    "yellow_brick_road_pathway (dorothy)"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Physical contact/blessing",
-    "BT002 -> BT003: Magical disappearance/isolation"
+    "BT001 -> BT002: Physical contact to magical departure.",
+    "BT002 -> BT003: Magical disappearance to environmental isolation."
   ],
   "characters_required": [
     {
@@ -72,8 +72,8 @@
     }
   ],
   "continuity_constraints": [
-    "Lighting and atmospheric shifts during the magical disappearance effect.",
-    "Dorothy's specific direction of travel toward the road following the departure."
+    "Lighting and atmospheric shifts must align with the moment of magical disappearance.",
+    "Dorothy's physical orientation must match her travel direction toward the road post-disappearance."
   ],
   "visual_coverage_families": [
     "Extreme close-up: The kiss on the forehead.",
@@ -83,7 +83,7 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "The Witch of the North kisses Dorothy's forehead for protection",
+      "summary": "The Witch provides a blessing via a kiss",
       "purpose": "",
       "action_start": "witch leans toward dorothy",
       "action_end": "kiss is completed",
@@ -93,47 +93,47 @@
       ],
       "passive_subjects": [],
       "spatial_context": "clearing_edge",
-      "blocking_hint": "intimate proximity",
+      "blocking_hint": "faces in close proximity",
       "environment_subzone": "clearing_edge",
-      "continuity_focus": "dorothy's facial expression/reaction",
+      "continuity_focus": "forehead contact point",
       "coverage_hint": "extreme close-up",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "The Witch points toward the road and vanishes",
+      "summary": "The Witch points the way and vanishes",
       "purpose": "",
-      "action_start": "witch gestures to path",
-      "action_end": "witch is gone from frame",
+      "action_start": "witch gestures toward road",
+      "action_end": "witch is no longer visible",
       "active_subjects": [
         "witch_of_the_north"
       ],
       "passive_subjects": [
         "dorothy"
       ],
-      "spatial_context": "clearing_edge/road junction",
-      "blocking_hint": "witch stands, points, then disappears",
+      "spatial_context": "clearing_edge",
+      "blocking_hint": "witch moves hand toward path then disappears",
       "environment_subzone": "clearing_edge",
-      "continuity_focus": "lighting/atmosphere shift during magic effect",
+      "continuity_focus": "lighting/atmosphere shift during disappearance",
       "coverage_hint": "special effects shot",
       "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Dorothy is left alone to face her journey",
+      "summary": "Dorothy faces her journey alone",
       "purpose": "",
-      "action_start": "dorothy reacts to disappearance",
-      "action_end": "dorothy faces the road",
+      "action_start": "dorothy realizes witch is gone",
+      "action_end": "dorothy stands at the road start",
       "active_subjects": [
         "dorothy"
       ],
       "passive_subjects": [],
-      "spatial_context": "yellow_brick_road_start",
-      "blocking_hint": "dorothy stands solitary at path entrance",
-      "environment_subzone": "yellow_brick_road_start",
-      "continuity_focus": "dorothy's direction of travel toward the road",
+      "spatial_context": "yellow_brick_road_pathway",
+      "blocking_hint": "dorothy turns toward the path",
+      "environment_subzone": "yellow_brick_road_pathway",
+      "continuity_focus": "direction of travel toward road",
       "coverage_hint": "wide shot",
       "coverage_priority": "medium",
       "handoff_to_next": "end_of_scene"
@@ -153,12 +153,12 @@
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "clearing_edge",
       "planned_shot_required_anchor_1": "dorothy's forehead",
-      "planned_shot_scale_proof_detail": "extreme close-up detail of skin contact",
+      "planned_shot_scale_proof_detail": "extreme close-up of skin contact",
       "start_state_seed": "witch leaning in",
       "end_state_seed": "kiss completed",
       "action_seed": "witch kisses dorothy's forehead",
       "blocking_seed": [
-        "tightly framed two-shot/ECU"
+        "tightly framed faces"
       ],
       "shot_size": "extreme_close_up",
       "camera_angle": "eye_level",
@@ -172,7 +172,7 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "magical transition",
+      "narrative_function": "execute magic effect",
       "planned_shot_moment_summary": "the witch vanishes in a display",
       "primary_subject_seed": "witch_of_the_north",
       "secondary_subjects_seed": [
@@ -182,12 +182,12 @@
       "narration_mode": "none",
       "environment_subzone": "clearing_edge",
       "planned_shot_required_anchor_1": "yellow_brick_road_pathway",
-      "planned_shot_scale_proof_detail": "visual disappearance effect",
+      "planned_shot_scale_proof_detail": "sudden absence of character mass",
       "start_state_seed": "witch pointing toward road",
       "end_state_seed": "witch gone",
       "action_seed": "magical disappearance",
       "blocking_seed": [
-        "witch moves/points then vanishes"
+        "witch gestures then vanishes"
       ],
       "shot_size": "medium_full",
       "camera_angle": "eye_level",
@@ -202,24 +202,24 @@
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "establish isolation",
-      "planned_shot_moment_summary": "dorothy standing alone at the road",
+      "planned_shot_moment_summary": "dorothy standing alone at the road start",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "yellow_brick_road_start",
+      "environment_subzone": "yellow_brick_road_pathway",
       "planned_shot_required_anchor_1": "yellow_brick_road_pathway",
-      "planned_shot_scale_proof_detail": "wide shot showing smallness of girl against path",
+      "planned_shot_scale_proof_detail": "character dwarfed by environment",
       "start_state_seed": "dorothy looking at empty space",
       "end_state_seed": "dorothy facing road",
       "action_seed": "dorothy stands alone",
       "blocking_seed": [
-        "dorothy centered or rule-of-thirds against the road"
+        "dorothy centered or rule-of-thirds against the path"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
       "lens_family": "wide",
-      "camera_motion": "locked_off",
+      "camera_motion": "pull_back",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
@@ -289,16 +289,16 @@
     "[CH002] Chapter II (book index hit)",
     "[CH003] Chapter III (book index hit)",
     "[CH012] Chapter XII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH002_SC005\n\n## Production Intent\nEstablish the protagonist's transition from arrival to journey through a magical blessing. The sequence must manage a high-impact visual disappearance of the witch while maintaining the emotional weight of the blessing on Dorothy.\n\n## Required Cast\n- dorothy (young human girl, white clothing/dress, expressive face)\n- witch_of_the_north\n\n## Required Environments\n- yellow_brick_road_pathway (edge of clearing / start of road)\n\n## Continuity Constraints\n- Lighting and atmospheric shifts during the magical disappearance effect.\n- Dorothy's specific direction of travel toward the road following the departure.\n\n## Beat List\n- BT001: The Witch of the North kisses Dorothy's forehead for protection.\n- BT002: The Witch points toward the road and vanishes in a magical display.\n- BT003: Dorothy is left alone to face her journey at the start of the road.",
+  "storyboard_markdown": "# Scene Contract: CH002_SC005\n\n## Production Intent\nEstablish the transition from magical guidance to solitary journeying through a ritualistic blessing and sudden disappearance. The sequence requires precise synchronization between character contact and special effects lighting shifts to maintain the weight of the blessing before transitioning into an atmosphere of isolation.\n\n## Required Cast\n- dorothy (young human girl, weary traveler appearance)\n- witch_of_the_north\n\n## Required Environments\n- clearing_edge\n- yellow_brick_road_pathway (lush country, colorful flowers, fruit-bearing trees)\n\n## Continuity Constraints\n- Lighting/Atmosphere must shift during the magical disappearance.\n- Dorothy's physical orientation must align with her travel direction toward the road post-disappearance.\n\n## Beat List\n- BT001: The Witch provides a blessing via a kiss.\n- BT002: The Witch points the way and vanishes.\n- BT003: Dorothy faces her journey alone.",
   "metadata": {
     "artifact_id": "CH002_SC005_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "f5bb26e9ea297bd25ade15e00acc7c251020530f",
+    "source_fingerprint": "4d1421972ffb4534349a61f7c04c5192896e30ac",
     "created_at_utc": "2026-04-27T08:03:02.039494+00:00",
-    "updated_at_utc": "2026-04-27T08:03:02.039494+00:00",
+    "updated_at_utc": "2026-04-27T13:06:01.637011+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -323,6 +323,11 @@
         "timestamp_utc": "2026-04-27T08:03:45.604138+00:00",
         "action": "synthesized",
         "source_fingerprint": "f5bb26e9ea297bd25ade15e00acc7c251020530f"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:06:22.976603+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "4d1421972ffb4534349a61f7c04c5192896e30ac"
       }
     ]
   }

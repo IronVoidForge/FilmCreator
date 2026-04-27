@@ -40,4 +40,4 @@ No specific visual descriptors are provided in the current evidence. The locatio
 - status: `generated`
 - source_fingerprint: `a4f6a2ab0093f51b021080b7984ea23e10f3de47`
 - created_at_utc: `2026-04-27T07:56:52.835630+00:00`
-- updated_at_utc: `2026-04-27T07:56:52.835630+00:00`
+- updated_at_utc: `2026-04-27T13:02:55.012260+00:00`

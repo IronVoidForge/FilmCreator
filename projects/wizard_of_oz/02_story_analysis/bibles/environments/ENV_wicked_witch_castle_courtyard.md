@@ -24,7 +24,7 @@ No specific visual descriptors are provided in the current evidence. The locatio
 ## Continuity
 
 - constraints: Must function as an area of imprisonment.
-- unresolved_ambiguities: Complete lack of visual or architectural detail in provided evidence., Spatial relationship to the rest of the castle is undefined.
+- unresolved_ambiguities: Visual identity and architectural details are currently undocumented., Specific spatial layout is unknown.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ No specific visual descriptors are provided in the current evidence. The locatio
 - status: `generated`
 - source_fingerprint: `5b6eea639b4f2966e8896826b63137cccbf94195`
 - created_at_utc: `2026-04-27T07:52:37.985287+00:00`
-- updated_at_utc: `2026-04-27T07:52:37.985287+00:00`
+- updated_at_utc: `2026-04-27T13:00:39.739370+00:00`

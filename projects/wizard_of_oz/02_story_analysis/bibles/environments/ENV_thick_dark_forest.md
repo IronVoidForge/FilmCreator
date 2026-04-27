@@ -19,12 +19,12 @@ No specific visual descriptors are provided in the current evidence. The environ
 - layout_notes: Unknown.
 - lighting: Dark (per name).
 - mood: Unknown.
-- recurring_elements: None documented.
+- recurring_elements: None identified.
 
 ## Continuity
 
 - constraints: Must function as a setting for transit and encounters.
-- unresolved_ambiguities: Specific visual characteristics (flora, density, terrain) are undocumented., Detailed lighting conditions beyond the implied "dark" descriptor are unknown.
+- unresolved_ambiguities: Specific visual characteristics (flora, density, terrain) are not defined., Detailed lighting conditions beyond the implication of "dark" are unknown.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ No specific visual descriptors are provided in the current evidence. The environ
 - status: `generated`
 - source_fingerprint: `e214df32318ec547dc6db68534b6c11549dd2492`
 - created_at_utc: `2026-04-27T07:50:33.111688+00:00`
-- updated_at_utc: `2026-04-27T07:50:33.111688+00:00`
+- updated_at_utc: `2026-04-27T12:59:33.763069+00:00`

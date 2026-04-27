@@ -24,7 +24,7 @@ A vast, high-status ceremonial hall designed for large gatherings of officials a
 ## Continuity
 
 - constraints: Must maintain a sense of scale suitable for large gatherings., Visual tone must balance formal grandeur with the weight of mourning/transition.
-- unresolved_ambiguities: Specific architectural details of the hall are not provided., Exact nature of the "political transition" is undefined in visual terms.
+- unresolved_ambiguities: Specific architectural details of the hall are not provided., Exact nature of the "political transition" is undefined in current evidence.
 
 ## Evidence Summary
 
@@ -43,4 +43,4 @@ A vast, high-status ceremonial hall designed for large gatherings of officials a
 - status: `generated`
 - source_fingerprint: `33b36bcf08cd69c1c40d092bdf370c3a2ef4a6dc`
 - created_at_utc: `2026-04-27T07:55:01.472292+00:00`
-- updated_at_utc: `2026-04-27T07:55:01.472292+00:00`
+- updated_at_utc: `2026-04-27T13:01:55.452610+00:00`

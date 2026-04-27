@@ -5,23 +5,23 @@
   "purpose": "The inciting incident of the chapter\u2014the cyclone strikes and physically displaces the protagonist.",
   "summary": "Just as Dorothy attempts to reach the cellar, a powerful cyclone hits. The house is ripped from its foundations and lifted into the air by intense wind pressure.",
   "emotional_arc": "Panic $\\rightarrow$ Disorientation/Terror.",
-  "production_intent": "Execute the physical transition of the farmhouse from a grounded structure to an airborne vessel via high-pressure wind forces. The sequence requires tight synchronization between interior chaos (flying objects/dust) and exterior VFX (lifting house/cyclone void).",
-  "scene_short_description": "A farmhouse is violently ripped from the Kansas prairie by a powerful cyclone.",
-  "scene_primary_scale_story_point": "Micro-scale interior chaos vs macro-scale environmental displacement.",
+  "production_intent": "Execute the physical transition of the farmhouse from a grounded structure to an airborne vessel via high-pressure wind forces. The sequence requires synchronized movement between interior debris, character reaction, and external VFX sky/ground shifts to simulate violent displacement.",
+  "scene_short_description": "A small farmhouse is ripped from the Kansas prairie by a violent cyclone.",
+  "scene_primary_scale_story_point": "Human scale interior vs. massive environmental displacement.",
   "scene_required_anchor_catalog": [
     "cellar_entrance",
     "window_frame"
   ],
-  "scene_start_state": "Dorothy moves toward the cellar amidst rising wind pressure.",
-  "scene_end_state": "The house is airborne, suspended within the cyclone storm void.",
-  "dominant_action_line": "Wind pressure hits -> House detaches from foundation -> House lifts into air.",
+  "scene_start_state": "Dorothy moves toward the cellar as wind pressure builds.",
+  "scene_end_state": "The house is airborne and spinning within the storm void.",
+  "dominant_action_line": "Wind strikes, lifting the structure from its foundations.",
   "scene_spatial_layout": [
-    "One-room farmhouse interior connected to a cellar entrance",
-    "Exterior Kansas prairie landscape transitioning to cyclone void"
+    "One-room farmhouse interior",
+    "Transition to airborne cyclone void"
   ],
   "character_spatial_map": [
-    "dorothy: center room moving toward cellar_entrance",
-    "toto: implied presence near dorothy"
+    "dorothy positioned between center room and cellar entrance",
+    "toto implied near dorothy"
   ],
   "environment_subzones": [
     "farmhouse_interior_and_cellar",
@@ -35,7 +35,7 @@
   ],
   "beat_transition_map": [
     "BT001 -> BT002: sudden impact/shudder",
-    "BT002 -> BT003: structural detachment/lift-off"
+    "BT002 -> BT003: structural lift/ascent"
   ],
   "characters_required": [
     {
@@ -82,9 +82,9 @@
     }
   ],
   "continuity_constraints": [
-    "Interior objects must fly in consistent wind direction",
-    "Rapid light level shifts (spinning through clouds)",
-    "Dust and debris movement patterns"
+    "Interior objects flying through air",
+    "Rapidly shifting light levels from cloud rotation",
+    "Dust and debris movement directionality"
   ],
   "visual_coverage_families": [
     "Handheld/Shaky cam for impact simulation",
@@ -95,58 +95,56 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Dorothy attempts to reach the cellar as wind builds",
+      "summary": "Dorothy attempts to reach the cellar amidst rising wind",
       "purpose": "",
-      "action_start": "Dorothy moving toward cellar",
-      "action_end": "wind pressure increases",
+      "action_start": "walking toward cellar",
+      "action_end": "reaching for cellar door",
       "active_subjects": [
         "dorothy"
       ],
       "passive_subjects": [],
       "spatial_context": "farmhouse_interior_and_cellar",
-      "blocking_hint": "moving from center to cellar door",
+      "blocking_hint": "Dorothy moves from center room to cellar entrance",
       "environment_subzone": "farmhouse_interior_and_cellar",
-      "continuity_focus": "dust movement begins",
+      "continuity_focus": "dust movement beginning",
       "coverage_hint": "medium_full",
-      "coverage_priority": "medium",
+      "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "The cyclone strikes the house",
+      "summary": "The cyclone strikes the house with massive force",
       "purpose": "",
-      "action_start": "sudden impact/shudder",
+      "action_start": "sudden shudder",
       "action_end": "objects flying through air",
       "active_subjects": [
         "dorothy"
       ],
-      "passive_subjects": [
-        "interior_objects"
-      ],
+      "passive_subjects": [],
       "spatial_context": "farmhouse_interior_and_cellar",
-      "blocking_hint": "Dorothy bracing against furniture",
+      "blocking_hint": "Dorothy recoils from impact",
       "environment_subzone": "farmhouse_interior_and_cellar",
-      "continuity_focus": "flying objects directionality",
+      "continuity_focus": "flying interior objects",
       "coverage_hint": "extreme_close_up/handheld",
       "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "The house is lifted into the air",
+      "summary": "The house is ripped from the ground and lifted into the air",
       "purpose": "",
-      "action_start": "structural detachment",
-      "action_end": "house suspended in cyclone void",
+      "action_start": "structural lift",
+      "action_end": "spinning in storm void",
       "active_subjects": [
         "dorothy"
       ],
       "passive_subjects": [],
       "spatial_context": "cyclone_storm_void",
-      "blocking_hint": "Dorothy reacting to vertical movement",
+      "blocking_hint": "Dorothy loses footing as floor tilts",
       "environment_subzone": "cyclone_storm_void",
-      "continuity_focus": "light level shifts/spinning clouds",
+      "continuity_focus": "rapid light level changes/spinning clouds",
       "coverage_hint": "POV/VFX heavy",
-      "coverage_priority": "high",
+      "coverage_priority": "critical",
       "handoff_to_next": "end_of_scene"
     }
   ],
@@ -155,23 +153,23 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish tension",
-      "planned_shot_moment_summary": "Dorothy rushes toward cellar as wind builds",
+      "planned_shot_moment_summary": "Dorothy rushes toward cellar as wind howls",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "farmhouse_interior_and_cellar",
       "planned_shot_required_anchor_1": "cellar_entrance",
-      "planned_shot_scale_proof_detail": "dorothy's proximity to floor/cellar",
-      "start_state_seed": "steady movement",
-      "end_state_seed": "sudden shudder",
+      "planned_shot_scale_proof_detail": "human height relative to door",
+      "start_state_seed": "walking fast",
+      "end_state_seed": "stumbling",
       "action_seed": "running toward cellar",
       "blocking_seed": [
-        "center room to cellar door"
+        "moving from center to cellar edge"
       ],
       "shot_size": "medium_full",
       "camera_angle": "eye_level",
-      "lens_family": "normal",
+      "lens_family": "wide",
       "camera_motion": "handheld",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
@@ -182,55 +180,55 @@
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "simulate impact",
-      "planned_shot_moment_summary": "The cyclone hits the structure",
-      "primary_subject_seed": "dorothy",
+      "planned_shot_moment_summary": "The house shudders violently as the cyclone hits",
+      "primary_subject_seed": "farmhouse_interior_and_cellar",
       "secondary_subjects_seed": [
-        "interior_objects"
+        "flying_objects"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "farmhouse_interior_and_cellar",
       "planned_shot_required_anchor_1": "window_frame",
-      "planned_shot_scale_proof_detail": "flying objects vs character size",
-      "start_state_seed": "shaking camera",
-      "end_state_seed": "violent vibration",
-      "action_seed": "objects flying through air",
+      "planned_shot_scale_proof_detail": "objects flying across room width",
+      "start_state_seed": "stable interior",
+      "end_state_seed": "chaotic debris field",
+      "action_seed": "objects lift and fly",
       "blocking_seed": [
-        "chaotic movement around dorothy"
+        "debris moving toward camera"
       ],
-      "shot_size": "close_up",
+      "shot_size": "medium",
       "camera_angle": "dutch",
       "lens_family": "wide",
       "camera_motion": "handheld",
       "zoom_behavior": "none",
-      "focus_strategy": "rack_focus",
+      "focus_strategy": "environment_priority",
       "lighting_style": "high_contrast_ceremonial",
       "primary_subject_angle": "front"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "visualize displacement",
-      "planned_shot_moment_summary": "POV looking out window as ground drops away",
-      "primary_subject_seed": "ground_landscape",
+      "narrative_function": "show displacement",
+      "planned_shot_moment_summary": "POV looking out window as ground falls away",
+      "primary_subject_seed": "cyclone_storm_void",
       "secondary_subjects_seed": [
-        "window_frame"
+        "ground_landscape"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "cyclone_storm_void",
+      "environment_subzone": "farmhouse_interior_and_cellar",
       "planned_shot_required_anchor_1": "window_frame",
       "planned_shot_scale_proof_detail": "rapidly receding prairie horizon",
-      "start_state_seed": "grounded view",
-      "end_state_seed": "aerial void",
-      "action_seed": "house lifting from earth",
+      "start_state_seed": "static ground view",
+      "end_state_seed": "receding ground/spinning sky",
+      "action_seed": "vertical and rotational ascent",
       "blocking_seed": [
-        "static window frame vs moving background"
+        "camera looking through window frame"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
       "lens_family": "ultra_wide",
-      "camera_motion": "crane",
+      "camera_motion": "handheld",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
@@ -300,16 +298,16 @@
     "[CH012] Chapter XII (book index hit)",
     "[CH023] Chapter XXIII (book index hit)",
     "[CH002] Chapter II (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH001_SC002\n\n## Production Intent\nExecute the physical transition of the farmhouse from a grounded structure to an airborne vessel via high-pressure wind forces. The sequence requires tight synchronization between interior chaos (flying objects/dust) and exterior VFX (lifting house/cyclone void).\n\n## Required Cast\n- dorothy (young human girl, white clothing)\n- toto (indirectly)\n\n## Required Environments\n- farmhouse_interior_and_cellar (Kansas prairie setting)\n- cyclone_storm_void (high-altitude/spinning clouds)\n\n## Continuity Constraints\n- Interior objects must fly in consistent wind direction\n- Rapid light level shifts (spinning through clouds)\n- Dust and debris movement patterns\n\n## Beat List\n- BT001: Dorothy attempts to reach the cellar as wind builds.\n- BT002: The cyclone strikes the house, causing interior chaos.\n- BT003: The house is ripped from foundations and lifted into the air.",
+  "storyboard_markdown": "# Scene Contract: CH001_SC002\n\n## Production Intent\nExecute the physical transition of the farmhouse from a grounded structure to an airborne vessel via high-pressure wind forces. The sequence requires synchronized movement between interior debris, character reaction, and external VFX sky/ground shifts to simulate violent displacement.\n\n## Required Cast\n- dorothy (Young human girl, expressive face)\n- toto (Indirectly present)\n\n## Required Environments\n- farmhouse_interior_and_cellar (One-room, Kansas prairie setting)\n- cyclone_storm_void (High-velocity wind/cloud environment)\n\n## Continuity Constraints\n- Interior objects flying through air\n- Rapidly shifting light levels from cloud rotation\n- Dust and debris movement directionality\n\n## Beat List\n- BT001: Dorothy attempts to reach the cellar amidst rising wind.\n- BT002: The cyclone strikes the house with massive force.\n- BT003: The house is ripped from the ground and lifted into the air.",
   "metadata": {
     "artifact_id": "CH001_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "241876701f255bcee4bf02e226cb5fd45e26c1e7",
+    "source_fingerprint": "01fcac049aa57085910c9b57b7c69dace895b118",
     "created_at_utc": "2026-04-27T07:58:11.095455+00:00",
-    "updated_at_utc": "2026-04-27T07:58:11.095455+00:00",
+    "updated_at_utc": "2026-04-27T13:03:40.033176+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -334,6 +332,11 @@
         "timestamp_utc": "2026-04-27T07:58:52.686116+00:00",
         "action": "synthesized",
         "source_fingerprint": "241876701f255bcee4bf02e226cb5fd45e26c1e7"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:04:00.450216+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "01fcac049aa57085910c9b57b7c69dace895b118"
       }
     ]
   }

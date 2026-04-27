@@ -24,7 +24,7 @@ No specific visual descriptors are provided in the current evidence. The environ
 ## Continuity
 
 - constraints: Must function as a transit setting
-- unresolved_ambiguities: Visual characteristics (color, texture, material) are not defined in the provided evidence., Spatial dimensions and specific pathing are unknown.
+- unresolved_ambiguities: Visual composition and material properties are currently undefined., Specific spatial layout is unknown.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ No specific visual descriptors are provided in the current evidence. The environ
 - status: `generated`
 - source_fingerprint: `cb8358f1577baf1fec56b31db32aa4ad85a96eda`
 - created_at_utc: `2026-04-27T07:50:23.769513+00:00`
-- updated_at_utc: `2026-04-27T07:50:23.769513+00:00`
+- updated_at_utc: `2026-04-27T12:59:28.871063+00:00`

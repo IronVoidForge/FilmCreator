@@ -24,7 +24,7 @@ No specific visual descriptors are provided in the current evidence. The environ
 ## Continuity
 
 - constraints: acts as a barrier
-- unresolved_ambiguities: Visual characteristics and material composition are currently undefined., Specific spatial dimensions and relationship to other environments are unknown.
+- unresolved_ambiguities: Visual characteristics (material, scale, color) are not defined., Specific spatial relationship to other environments is unknown.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ No specific visual descriptors are provided in the current evidence. The environ
 - status: `generated`
 - source_fingerprint: `5837d478ae557766a1fd040f2043d37f82d03e6a`
 - created_at_utc: `2026-04-27T07:55:44.326320+00:00`
-- updated_at_utc: `2026-04-27T07:55:44.326320+00:00`
+- updated_at_utc: `2026-04-27T13:02:18.544586+00:00`

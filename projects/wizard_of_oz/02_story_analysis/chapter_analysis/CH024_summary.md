@@ -1,2 +1,1 @@
-[[SECTION
 Dorothy returns to her farm in Kansas, running toward Aunt Em. Upon seeing her, Aunt Em is shocked and embraces her. Dorothy informs her aunt that she has returned from the Land of Oz, accompanied by Toto, expressing her profound relief at being home.

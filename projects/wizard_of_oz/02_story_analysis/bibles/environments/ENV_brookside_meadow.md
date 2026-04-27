@@ -14,17 +14,17 @@
 
 ## Visual Bible
 
-No specific visual descriptors are provided in the current evidence. The location functions as a secondary setting used for rest stops.
+Insufficient descriptive data available to establish a visual profile. The location functions as a secondary setting used for rest stops.
 
-- layout_notes: Unknown.
-- lighting: Unknown.
-- mood: Unknown.
+- layout_notes: Unknown
+- lighting: Unknown
+- mood: Unknown
 - recurring_elements: None identified
 
 ## Continuity
 
-- constraints: Must function as a rest stop/secondary setting.
-- unresolved_ambiguities: Visual characteristics (flora, topography, water features) are entirely undocumented., Specific spatial relationship to other environments is unknown.
+- constraints: Must function as a rest stop per narrative role
+- unresolved_ambiguities: Complete lack of visual or atmospheric descriptors in provided evidence., Spatial relationship to other environments is undefined.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ No specific visual descriptors are provided in the current evidence. The locatio
 - status: `generated`
 - source_fingerprint: `c5567725d04267cf6881cee26e2ae2e94b7b49b3`
 - created_at_utc: `2026-04-27T07:49:36.265915+00:00`
-- updated_at_utc: `2026-04-27T07:49:36.265915+00:00`
+- updated_at_utc: `2026-04-27T12:59:03.594252+00:00`

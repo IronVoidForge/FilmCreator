@@ -5,38 +5,38 @@
   "purpose": "Introduce Boq and provide world-building regarding how Dorothy is perceived.",
   "summary": "Dorothy attends a celebration at the home of Boq, a wealthy Munchkin. Amidst the festivities, Boq mistakenly identifies her as a \"friendly witch\" because of her silver shoes and blue-and-white attire.",
   "emotional_arc": "From festive celebration to social confusion/tension.",
-  "production_intent": "Establish Boq's wealth and status within munchkin_country_farms through a festive celebration. Use Dorothy's specific visual markers\u2014silver shoes and blue-and-white attire\u2014to trigger a social misunderstanding that shifts the mood from communal joy to localized tension.",
-  "scene_short_description": "A wealthy Munchkin celebration featuring dancing guests amidst blue houses and round domes.",
+  "production_intent": "Establish Boq's wealth and status within munchkin_country_farms through a high-energy celebration. Use the visual contrast of Dorothy's blue-and-white attire and silver shoes to trigger a social misunderstanding that shifts the mood from communal joy to localized tension.",
+  "scene_short_description": "A wealthy Munchkin celebration featuring dancing guests and festive food amidst blue houses and round domes.",
   "scene_primary_scale_story_point": "Boq's wealth relative to the surrounding munchkin_country_farms.",
   "scene_required_anchor_catalog": [
     "silver shoes",
     "blue-and-white attire",
-    "food/drink props"
+    "celebration food/drink props"
   ],
-  "scene_start_state": "High-energy festive celebration with dancing Munchkins.",
+  "scene_start_state": "High-energy festive dancing and communal eating in a wealthy courtyard.",
   "scene_end_state": "Stagnant social tension following the witch accusation.",
   "dominant_action_line": "Dorothy navigates a party until Boq misidentifies her as a friendly witch.",
   "scene_spatial_layout": [
-    "Open celebration grounds near blue domed structures.",
+    "Open celebration grounds surrounded by blue houses with round domes.",
     "Central gathering area for dancing and food service."
   ],
   "character_spatial_map": [
-    "boq positioned as a central figure of wealth/authority.",
-    "dorothy moving through the crowd of Munchkin party guests."
+    "Dorothy positioned within the crowd of Munchkin party guests.",
+    "Boq approaching Dorothy from the periphery or center."
   ],
   "environment_subzones": [
     "celebration_grounds",
-    "dining_area"
+    "boq_residence_exterior"
   ],
   "entry_vectors": [
-    "Dorothy enters via celebration_grounds."
+    "Dorothy enters through the main celebration grounds."
   ],
   "exit_vectors": [
-    "Dorothy exits toward night's rest path."
+    "Dorothy exits toward night's rest."
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Shift from group movement to individual interaction.",
-    "BT002 -> BT003: Shift from verbal accusation to social reaction."
+    "BT001 -> BT002: Festive energy to direct interaction.",
+    "BT002 -> BT003: Direct address to social fallout."
   ],
   "characters_required": [
     {
@@ -83,8 +83,8 @@
     }
   ],
   "continuity_constraints": [
-    "Food and drink prop levels at celebration tables.",
-    "Lighting transition from day to night."
+    "Food and drink prop levels must remain consistent during celebration beats.",
+    "Lighting transition from day to night if following into night's rest."
   ],
   "visual_coverage_families": [
     "Medium shots: Group interactions and dancing.",
@@ -94,10 +94,10 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Festive celebration atmosphere",
+      "summary": "Festive celebration in the grounds",
       "purpose": "",
-      "action_start": "Munchkins dancing",
-      "action_end": "Dorothy enters the grounds",
+      "action_start": "guests dancing and eating",
+      "action_end": "Dorothy moving through crowd",
       "active_subjects": [
         "Munchkin party guests"
       ],
@@ -105,19 +105,19 @@
         "dorothy"
       ],
       "spatial_context": "celebration_grounds",
-      "blocking_hint": "guests scattered around dining area",
+      "blocking_hint": "fluid movement across the courtyard",
       "environment_subzone": "celebration_grounds",
       "continuity_focus": "food/drink prop levels",
-      "coverage_hint": "medium shots of group",
+      "coverage_hint": "medium shots of group interaction",
       "coverage_priority": "high",
-      "handoff_to_next": "Dorothy enters the social space."
+      "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Boq's observation and accusation",
+      "summary": "Boq's approach and observation",
       "purpose": "",
-      "action_start": "Boq spots Dorothy",
-      "action_end": "Boq calls her a \"friendly witch\"",
+      "action_start": "Boq spotting Dorothy",
+      "action_end": "Boq addressing her directly",
       "active_subjects": [
         "boq",
         "dorothy"
@@ -125,34 +125,34 @@
       "passive_subjects": [
         "Munchkin party guests"
       ],
-      "spatial_context": "near boq's wealth markers",
-      "blocking_hint": "boq intercepts dorothy's path",
+      "spatial_context": "near the center of festivities",
+      "blocking_hint": "Boq breaks from the crowd toward Dorothy",
       "environment_subzone": "celebration_grounds",
       "continuity_focus": "silver shoes visibility",
-      "coverage_hint": "over-the-shoulder",
-      "coverage_priority": "high",
-      "handoff_to_next": "The social mood shifts."
+      "coverage_hint": "over-the-shoulder shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Social confusion and tension",
+      "summary": "The witch accusation and social tension",
       "purpose": "",
-      "action_start": "Silence following accusation",
-      "action_end": "Tension settles over the group",
+      "action_start": "Boq calls her a friendly witch",
+      "action_end": "Dorothy's reaction/social confusion",
       "active_subjects": [
-        "dorothy",
-        "boq"
+        "boq",
+        "dorothy"
       ],
       "passive_subjects": [
         "Munchkin party guests"
       ],
-      "spatial_context": "center of celebration",
-      "blocking_hint": "guests freeze or murmur",
+      "spatial_context": "immediate proximity of Boq and Dorothy",
+      "blocking_hint": "sudden halt in movement; crowd attention shifts",
       "environment_subzone": "celebration_grounds",
-      "continuity_focus": "lighting transition toward night",
+      "continuity_focus": "blue-and-white attire focus",
       "coverage_hint": "reaction shots",
-      "coverage_priority": "medium",
-      "handoff_to_next": "Transition to next scene."
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
     }
   ],
   "planned_shots": [
@@ -160,7 +160,7 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish atmosphere",
-      "planned_shot_moment_summary": "Munchkin guests dancing in celebration",
+      "planned_shot_moment_summary": "Munchkin guests dancing and eating",
       "primary_subject_seed": "Munchkin party guests",
       "secondary_subjects_seed": [
         "dorothy"
@@ -168,13 +168,13 @@
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "celebration_grounds",
-      "planned_shot_required_anchor_1": "blue houses",
-      "planned_shot_scale_proof_detail": "wide view of festive grounds",
-      "start_state_seed": "active dancing",
-      "end_state_seed": "dorothy entering frame",
-      "action_seed": "dancing and celebration",
+      "planned_shot_required_anchor_1": "food/drink props",
+      "planned_shot_scale_proof_detail": "large group density",
+      "start_state_seed": "wide view of festivities",
+      "end_state_seed": "medium shot of crowd",
+      "action_seed": "dancing and eating",
       "blocking_seed": [
-        "distributed group movement"
+        "scattered movement throughout grounds"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
@@ -198,16 +198,16 @@
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "celebration_grounds",
       "planned_shot_required_anchor_1": "silver shoes",
-      "planned_shot_scale_proof_detail": "close proximity to boq",
-      "start_state_seed": "boq observing crowd",
-      "end_state_seed": "boq speaking to dorothy",
-      "action_seed": "Boq approaches Dorothy and speaks",
+      "planned_shot_scale_proof_detail": "close proximity between Boq and Dorothy",
+      "start_state_seed": "Boq approaching Dorothy",
+      "end_state_seed": "Boq speaking to Dorothy",
+      "action_seed": "Boq stops in front of Dorothy",
       "blocking_seed": [
-        "boq moves toward dorothy"
+        "Boq moves into Dorothy's personal space"
       ],
       "shot_size": "medium_close",
       "camera_angle": "eye_level",
-      "lens_family": "portrait",
+      "lens_family": "normal",
       "camera_motion": "push_in",
       "zoom_behavior": "subtle_in",
       "focus_strategy": "shallow_subject",
@@ -227,10 +227,10 @@
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "celebration_grounds",
       "planned_shot_required_anchor_1": "blue-and-white attire",
-      "planned_shot_scale_proof_detail": "focus on facial expression",
-      "start_state_seed": "dorothy listening",
-      "end_state_seed": "dorothy's stunned reaction",
-      "action_seed": "Dorothy reacts to the label \"friendly witch\"",
+      "planned_shot_scale_proof_detail": "tight focus on facial expression",
+      "start_state_seed": "Boq's accusation",
+      "end_state_seed": "Dorothy's stunned reaction",
+      "action_seed": "Dorothy freezes in confusion",
       "blocking_seed": [
         "static confrontation"
       ],
@@ -240,7 +240,7 @@
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
-      "lighting_style": "soft_even",
+      "lighting_style": "high_contrast_ceremonial",
       "primary_subject_angle": "front"
     }
   ],
@@ -309,16 +309,16 @@
     "[CH003] Chapter III (book index hit)",
     "[CH010] Chapter X (book index hit)",
     "[CH023] Chapter XXIII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH003_SC002\n\n## Production Intent\nEstablish Boq's wealth and status within munchkin_country_farms through a festive celebration. Use Dorothy's specific visual markers\u2014silver shoes and blue-and-white attire\u2014to trigger a social misunderstanding that shifts the mood from communal joy to localized tension.\n\n## Required Cast\n- dorothy (expressive face, white/blue-and-white attire, silver shoes)\n- boq (wealthy Munchkin)\n- Munchkin party guests\n\n## Required Environments\n- munchkin_country_farms (blue houses, round domes, celebration grounds)\n\n## Continuity Constraints\n- Food and drink prop levels at celebration tables.\n- Lighting transition from day to night.\n- Dorothy's silver shoes must be visible during the accusation.\n\n## Beat List\n- BT001: Festive celebration atmosphere.\n- BT002: Boq's observation and accusation of Dorothy as a \"friendly witch\".\n- BT003: Social confusion and tension following the label.",
+  "storyboard_markdown": "# Scene Contract: CH003_SC002\n\n## Production Intent\nEstablish Boq's wealth and status within munchkin_country_farms through a high-energy celebration. Use the visual contrast of Dorothy's blue-and-white attire and silver shoes to trigger a social misunderstanding that shifts the mood from communal joy to localized tension.\n\n## Required Cast\n- dorothy (weary traveler, blue-and-white attire, silver shoes)\n- boq (wealthy Munchkin)\n- Munchkin party guests\n\n## Required Environments\n- munchkin_country_farms (blue houses, round domes, celebration grounds)\n\n## Continuity Constraints\n- Food and drink prop levels must remain consistent during celebration beats.\n- Lighting transition from day to night if following into night's rest.\n- Dorothy's silver shoes and blue-and-white attire must be clearly visible during the accusation.\n\n## Beat List\n- BT001: Festive celebration in the grounds.\n- BT002: Boq's approach and observation of Dorothy's attire.\n- BT003: The witch accusation and resulting social tension.",
   "metadata": {
     "artifact_id": "CH003_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "eed985a1ecc34efd3683e0a2db1c22744d897332",
+    "source_fingerprint": "85a2118333d465875e9d439d5f6bb55368d7ee4f",
     "created_at_utc": "2026-04-27T08:04:26.933422+00:00",
-    "updated_at_utc": "2026-04-27T08:04:26.933422+00:00",
+    "updated_at_utc": "2026-04-27T13:06:44.275022+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -343,6 +343,11 @@
         "timestamp_utc": "2026-04-27T08:05:09.403073+00:00",
         "action": "synthesized",
         "source_fingerprint": "eed985a1ecc34efd3683e0a2db1c22744d897332"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:07:05.819321+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "85a2118333d465875e9d439d5f6bb55368d7ee4f"
       }
     ]
   }

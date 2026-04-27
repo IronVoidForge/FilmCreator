@@ -23,8 +23,8 @@ No visual data available. The interior details of the flying house are currently
 
 ## Continuity
 
-- constraints: Documentation limited to canonical ID placeholder.
-- unresolved_ambiguities: Complete lack of descriptive detail regarding the interior layout, lighting, or aesthetic.
+- constraints: Must adhere to future canonical descriptions for the flying house interior.
+- unresolved_ambiguities: Complete lack of visual or spatial descriptive data in current records.
 
 ## Evidence Summary
 
@@ -36,4 +36,4 @@ No visual data available. The interior details of the flying house are currently
 - status: `generated`
 - source_fingerprint: `3b731d2047ac83a81aa6796e0acb2c4a7fadec7b`
 - created_at_utc: `2026-04-27T07:48:14.404955+00:00`
-- updated_at_utc: `2026-04-27T07:48:14.404955+00:00`
+- updated_at_utc: `2026-04-27T12:58:20.546607+00:00`

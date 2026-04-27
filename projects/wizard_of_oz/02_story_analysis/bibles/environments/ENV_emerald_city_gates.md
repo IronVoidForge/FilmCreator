@@ -14,17 +14,17 @@
 
 ## Visual Bible
 
-A grand-scale ceremonial entrance characterized by massive emerald gates and glowing green architecture. The structures convey a sense of monumental grandeur and officialdom, serving as the primary threshold to the city.
+A grand-scale ceremonial entrance characterized by massive emerald gates and glowing green architecture. The structure serves as a monumental threshold, defined by its shimmering verdant light and sense of officialdom.
 
-- layout_notes: Large-scale gate structures featuring a presence of a Guardian at the entrance.
-- lighting: Bright, shimmering verdant light with high-contrast shadows.
+- layout_notes: Large-scale gate structures featuring a presence of the Guardian at the entrance.
+- lighting: Bright, shimmering green light with high-contrast shadows.
 - mood: Monumental grandeur and officialdom.
 - recurring_elements: Massive emerald gates, Glowing green architecture, Shimmering verdant light
 
 ## Continuity
 
-- constraints: Must maintain a sense of grand scale threshold, Lighting must remain bright and shimmering
-- unresolved_ambiguities: Specific architectural details of the "massive emerald gates" are not defined beyond color and scale., The specific nature or appearance of the "Guardian" is unstated.
+- constraints: Must maintain a sense of grand scale threshold, Lighting must remain bright and shimmering green
+- unresolved_ambiguities: Specific architectural details of the "massive gates" beyond being emerald/glowing are not defined., The specific nature or appearance of the Guardian is not detailed.
 
 ## Evidence Summary
 
@@ -43,4 +43,4 @@ A grand-scale ceremonial entrance characterized by massive emerald gates and glo
 - status: `generated`
 - source_fingerprint: `fc6c7f1b519513f4bf5c4d9bda3bda953fdbd7bc`
 - created_at_utc: `2026-04-27T07:51:40.772368+00:00`
-- updated_at_utc: `2026-04-27T07:51:40.772368+00:00`
+- updated_at_utc: `2026-04-27T13:00:09.548202+00:00`

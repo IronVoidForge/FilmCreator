@@ -14,7 +14,7 @@
 
 ## Visual Bible
 
-Insufficient descriptive data available to define specific visual characteristics. The environment is identified as a primary setting within the narrative structure.
+Insufficient descriptive data available to establish a visual profile. The environment is identified as the primary setting for the narrative.
 
 - layout_notes: Unknown
 - lighting: Unknown
@@ -23,8 +23,8 @@ Insufficient descriptive data available to define specific visual characteristic
 
 ## Continuity
 
-- constraints: Visual details are currently unextracted from source material.
-- unresolved_ambiguities: Specific visual descriptors (flora, topography, color palette) are missing from current evidence., Spatial relationship between chapters is not defined.
+- constraints: None identified
+- unresolved_ambiguities: Visual characteristics and specific geography are currently undocumented.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ Insufficient descriptive data available to define specific visual characteristic
 - status: `generated`
 - source_fingerprint: `4bbd58a289a1f60c0ce9105ab2ddbc42a7b06a9e`
 - created_at_utc: `2026-04-27T07:48:40.489030+00:00`
-- updated_at_utc: `2026-04-27T07:48:40.489030+00:00`
+- updated_at_utc: `2026-04-27T12:58:34.858505+00:00`

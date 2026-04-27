@@ -5,29 +5,28 @@
   "purpose": "Establish the transition from the gray Kansas reality to the vibrant, surreal world of Oz.",
   "summary": "Dorothy wakes up following the cyclone to find herself not in a storm-ravaged Kansas, but in a lush, colorful landscape filled with flowers and fruit.",
   "emotional_arc": "Confusion $\\rightarrow$ Wonder/Awe",
-  "production_intent": "Execute a high-contrast visual transition from the dark, stormy atmosphere of Kansas to a highly saturated, lush Oz landscape. The sequence must emphasize the sensory overload experienced by Dorothy as she wakes up amidst vibrant flora and fruit-bearing trees.",
-  "scene_short_description": "A disheveled girl wakes up in a lush, colorful landscape filled with flowers and fruit.",
-  "scene_primary_scale_story_point": "The vastness of the colorful Oz landscape compared to the small scale of Dorothy and Toto.",
+  "production_intent": "Transition the visual language from a dark, storm-ravaged Kansas aesthetic to a highly saturated, lush Oz landscape. The environment must feel surreal and vibrant through extreme color density in flora and fruit-bearing trees.",
+  "scene_short_description": "A weary traveler wakes amidst a surreal explosion of colorful flowers and fruit-bearing trees.",
+  "scene_primary_scale_story_point": "The vastness of the lush landscape relative to the small, disheveled girl.",
   "scene_required_anchor_catalog": [
-    "Fruit-bearing trees",
-    "Sparkling brook",
-    "Colorful flower clusters"
+    "Fruit-bearing tree",
+    "Sparkling brook"
   ],
-  "scene_start_state": "Dorothy is disheveled, waking up in a state of confusion following a cyclone.",
-  "scene_end_state": "Dorothy is looking out at the landscape in a state of wonder and awe.",
-  "dominant_action_line": "Dorothy wakes up and discovers her new surroundings.",
+  "scene_start_state": "Dorothy waking up in a state of confusion and physical disarray.",
+  "scene_end_state": "Dorothy looking out at the vibrant world in awe.",
+  "dominant_action_line": "Dorothy awakens and processes the sensory shift from storm to paradise.",
   "scene_spatial_layout": [
     "Open landscape surrounding the immediate vicinity of the house",
-    "Proximity to a sparkling brook and fruit trees"
+    "Dense clusters of colorful flora near the subject"
   ],
   "character_spatial_map": [
-    "dorothy is central in the immediate vicinity of the house",
-    "toto is near dorothy"
+    "dorothy centered or low in frame during awakening",
+    "toto near dorothy"
   ],
   "environment_subzones": [
-    "Flower clusters",
-    "Fruit tree grove",
-    "Sparkling brook area"
+    "Flower-filled clearing",
+    "Fruit-bearing grove",
+    "Sparkling brook bank"
   ],
   "entry_vectors": [
     "Cyclone impact site (implied)"
@@ -36,8 +35,8 @@
     "Path toward the sparkling brook"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Awakening to sensory awareness",
-    "BT002 -> BT003: Awareness to environmental exploration"
+    "BT001 -> BT002: Physical awakening to sensory awareness",
+    "BT002 -> BT003: Sensory awareness to environmental scale realization"
   ],
   "characters_required": [
     {
@@ -74,149 +73,119 @@
     }
   ],
   "continuity_constraints": [
-    "Lighting transition from dark/stormy to bright/saturated",
-    "Dorothy's physical state must remain disheveled from cyclone impact",
-    "Dorothy's attire is white dress"
+    "Lighting shift from dark/stormy to bright/saturated",
+    "Dorothy physical state must remain disheveled from cyclone"
   ],
   "visual_coverage_families": [
     "Wide shots establishing scale and color saturation",
     "Close-ups on facial reactions to sensory overload",
-    "POV shots of the new environment"
+    "POV shots of the lush landscape"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Dorothy wakes up disheveled",
+      "summary": "Awakening from the cyclone",
       "purpose": "",
-      "action_start": "eyes closed, breathing heavy",
-      "action_end": "eyes open, looking around confused",
+      "action_start": "eyes closed, disheveled state",
+      "action_end": "eyes open, confusion",
+      "active_subjects": [
+        "dorothy",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "Flower-filled clearing",
+      "blocking_hint": "Dorothy on ground near Toto",
+      "environment_subzone": "Flower-filled clearing",
+      "continuity_focus": "Disheveled clothing/hair",
+      "coverage_hint": "Close-up",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Sensory discovery",
+      "purpose": "",
+      "action_start": "sitting up",
+      "action_end": "staring in wonder",
       "active_subjects": [
         "dorothy"
       ],
       "passive_subjects": [
         "toto"
       ],
-      "spatial_context": "immediate vicinity of house",
-      "blocking_hint": "lying on ground among flowers",
-      "environment_subzone": "flower clusters",
-      "continuity_focus": "disheveled hair and clothing",
-      "coverage_hint": "close-up",
-      "coverage_priority": "high",
-      "handoff_to_next": "BT002"
-    },
-    {
-      "beat_id": "BT002",
-      "summary": "Sensory realization of the landscape",
-      "purpose": "",
-      "action_start": "Dorothy looking around",
-      "action_end": "Dorothy processing colors/scents",
-      "active_subjects": [
-        "dorothy",
-        "toto"
-      ],
-      "passive_subjects": [],
-      "spatial_context": "lush landscape",
-      "blocking_hint": "Dorothy sitting up",
-      "environment_subzone": "fruit tree grove",
-      "continuity_focus": "bright saturated lighting",
-      "coverage_hint": "POV shots and wide shots",
+      "spatial_context": "Immediate vicinity of flowers/fruit",
+      "blocking_hint": "Dorothy looking at nearby flora",
+      "environment_subzone": "Fruit-bearing grove",
+      "continuity_focus": "Bright saturated lighting",
+      "coverage_hint": "POV and Close-up",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Transition to awe",
+      "summary": "Realization of scale",
       "purpose": "",
-      "action_start": "confusion in eyes",
-      "action_end": "wonder/awe expression",
+      "action_start": "looking toward horizon",
+      "action_end": "stillness in awe",
       "active_subjects": [
-        "dorothy"
+        "dorothy",
+        "toto"
       ],
       "passive_subjects": [],
-      "spatial_context": "near sparkling brook",
-      "blocking_hint": "Dorothy standing or sitting tall",
-      "environment_subzone": "sparkling brook area",
-      "continuity_focus": "saturated colors",
-      "coverage_hint": "close-up",
+      "spatial_context": "Open landscape",
+      "blocking_hint": "Subjects small against the vista",
+      "environment_subzone": "Flower-filled clearing",
+      "continuity_focus": "Vibrant color palette",
+      "coverage_hint": "Wide shot",
       "coverage_priority": "high",
-      "handoff_to_next": "end of scene"
+      "handoff_to_next": "end_scene"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish disorientation",
-      "planned_shot_moment_summary": "Dorothy waking up disheveled",
+      "narrative_function": "establish character state",
+      "planned_shot_moment_summary": "Dorothy wakes up disheveled",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "toto"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "immediate vicinity of house",
-      "planned_shot_required_anchor_1": "flower clusters",
-      "planned_shot_scale_proof_detail": "small girl in large landscape",
+      "environment_subzone": "Flower-filled clearing",
+      "planned_shot_required_anchor_1": "Fruit-bearing tree",
+      "planned_shot_scale_proof_detail": "Subject size vs large flowers",
       "start_state_seed": "eyes closed, disheveled",
       "end_state_seed": "eyes opening, confused",
-      "action_seed": "Dorothy stirs and wakes",
+      "action_seed": "waking up",
       "blocking_seed": [
         "lying on ground"
       ],
       "shot_size": "medium_close",
       "camera_angle": "eye_level",
       "lens_family": "normal",
-      "camera_motion": "handheld",
+      "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
-      "lighting_style": "diffuse_ambient",
+      "lighting_style": "bright_saturated",
       "primary_subject_angle": "front_three_quarter_left"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "establish new world scale",
-      "planned_shot_moment_summary": "Wide view of the lush landscape",
-      "primary_subject_seed": "Oz landscape",
-      "secondary_subjects_seed": [
-        "dorothy",
-        "toto"
-      ],
-      "subject_visibility": "on_screen",
-      "narration_mode": "none",
-      "environment_subzone": "flower clusters",
-      "planned_shot_required_anchor_1": "fruit-bearing trees",
-      "planned_shot_scale_proof_detail": "vastness of colorful horizon",
-      "start_state_seed": "wide vista",
-      "end_state_seed": "wide vista",
-      "action_seed": "camera pans across flowers and fruit",
-      "blocking_seed": [
-        "subjects stationary in distance"
-      ],
-      "shot_size": "wide",
-      "camera_angle": "eye_level",
-      "lens_family": "ultra_wide",
-      "camera_motion": "pan",
-      "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
-      "lighting_style": "soft_even",
-      "primary_subject_angle": "front"
-    },
-    {
-      "planned_shot_id": "SH003",
-      "beat_id": "BT003",
-      "narrative_function": "convey wonder",
-      "planned_shot_moment_summary": "Dorothy's reaction to the colors",
+      "narrative_function": "sensory overload",
+      "planned_shot_moment_summary": "Dorothy sees the colors and fruit",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "fruit tree grove",
-      "planned_shot_required_anchor_1": "fruit-bearing trees",
-      "planned_shot_scale_proof_detail": "close up on expressive face",
-      "start_state_seed": "confused expression",
-      "end_state_seed": "awe-struck expression",
-      "action_seed": "Dorothy looks around in wonder",
+      "environment_subzone": "Fruit-bearing grove",
+      "planned_shot_required_anchor_1": "Fruit-bearing tree",
+      "planned_shot_scale_proof_detail": "Close up on vibrant textures",
+      "start_state_seed": "looking around",
+      "end_state_seed": "gasping",
+      "action_seed": "scanning environment",
       "blocking_seed": [
         "sitting up"
       ],
@@ -225,8 +194,38 @@
       "lens_family": "portrait",
       "camera_motion": "push_in",
       "zoom_behavior": "subtle_in",
-      "focus_strategy": "shallow_subject",
-      "lighting_style": "high_contrast_ceremonial",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "bright_saturated",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish scale",
+      "planned_shot_moment_summary": "Wide view of the Oz landscape",
+      "primary_subject_seed": "landscape",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "Flower-filled clearing",
+      "planned_shot_required_anchor_1": "Sparkling brook",
+      "planned_shot_scale_proof_detail": "Extreme wide shot showing vastness",
+      "start_state_seed": "wide vista",
+      "end_state_seed": "wide vista",
+      "action_seed": "static observation",
+      "blocking_seed": [
+        "subjects small in frame"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "bright_saturated",
       "primary_subject_angle": "front"
     }
   ],
@@ -295,16 +294,16 @@
     "[CH005] Chapter V (book index hit)",
     "[CH011] Chapter XI (book index hit)",
     "[CH023] Chapter XXIII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH002_SC001\n\n## Production Intent\nExecute a high-contrast visual transition from the dark, stormy atmosphere of Kansas to a highly saturated, lush Oz landscape. The sequence must emphasize the sensory overload experienced by Dorothy as she wakes up amidst vibrant flora and fruit-bearing trees.\n\n## Required Cast\n- dorothy (Young girl, white dress, expressive face)\n- toto (Small dog)\n\n## Required Environments\n- The exterior/immediate vicinity of Dorothy's house (Oz landscape): Lush, colorful flowers, fruit-bearing trees, sparkling brook.\n\n## Continuity Constraints\n- Lighting: Transition from dark/stormy to bright/saturated.\n- Wardrobe: Dorothy in white dress, disheveled state.\n\n## Beat List\n- BT001: Dorothy wakes up disheveled.\n- BT002: Sensory realization of the landscape.\n- BT003: Transition to awe.",
+  "storyboard_markdown": "# Scene Contract: CH002_SC001\n\n## Production Intent\nTransition the visual language from a dark, storm-ravaged Kansas aesthetic to a highly saturated, lush Oz landscape. The environment must feel surreal and vibrant through extreme color density in flora and fruit-bearing trees.\n\n## Required Cast\n- dorothy (disheveled, expressive face)\n- toto\n\n## Required Environments\n- The exterior/immediate vicinity of Dorothy's house (Oz landscape): Lush, colorful flowers, fruit-bearing trees, sparkling brook.\n\n## Continuity Constraints\n- Lighting transition: Dark/stormy to bright/saturated.\n- Character state: Dorothy must appear disheveled from the cyclone.\n\n## Beat List\n- BT001: Awakening from the cyclone (Confusion)\n- BT002: Sensory discovery of colors and fruit (Transition)\n- BT003: Realization of scale and beauty (Wonder/Awe)",
   "metadata": {
     "artifact_id": "CH002_SC001_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "0f9daf8fe055e644549595560e07179d98570580",
+    "source_fingerprint": "d977ef6681bdc4d95e03bb5fffcedc2264191e1e",
     "created_at_utc": "2026-04-27T08:00:13.131575+00:00",
-    "updated_at_utc": "2026-04-27T08:00:13.131575+00:00",
+    "updated_at_utc": "2026-04-27T13:04:40.403445+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -329,6 +328,11 @@
         "timestamp_utc": "2026-04-27T08:00:53.130349+00:00",
         "action": "synthesized",
         "source_fingerprint": "0f9daf8fe055e644549595560e07179d98570580"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:04:59.471647+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d977ef6681bdc4d95e03bb5fffcedc2264191e1e"
       }
     ]
   }

@@ -5,39 +5,38 @@
   "purpose": "Establish Dorothy's new status and the beginning of her journey.",
   "summary": "Dorothy changes into a clean gingham dress and discovers the silver shoes fit perfectly. She sets out on the Yellow Brick Road, passing prosperous Munchkin farms and receiving bows from locals.",
   "emotional_arc": "From domestic preparation to a sense of wonder and curiosity.",
-  "production_intent": "Transition the protagonist from a state of domestic preparation to active journeying. The visual progression moves from intimate, tactile details of new attire and footwear to expansive, colorful landscapes that establish the scale of Munchkin Country.",
-  "scene_short_description": "A young girl in a clean gingham dress discovers her silver shoes before walking down a bright yellow road.",
-  "scene_primary_scale_story_point": "Transition from intimate interior scale to expansive landscape scale.",
+  "production_intent": "Transition Dorothy from a weary traveler into a clean, prepared protagonist. The sequence must visually validate her new status through the tactile details of her gingham dress and silver shoes before moving her into the expansive, colorful Munchkin landscape to establish the scale of her journey.",
+  "scene_short_description": "A girl changes into clean attire and begins a journey down a bright yellow path.",
+  "scene_primary_scale_story_point": "Small domestic scale transitioning to vast landscape scale.",
   "scene_required_anchor_catalog": [
-    "Yellow Brick Road",
-    "Blue houses with round domes",
-    "Large cornfield"
+    "silver shoes",
+    "yellow_brick_road",
+    "blue houses with round domes"
   ],
-  "scene_start_state": "Dorothy in temporary quarters, focused on dressing and footwear.",
-  "scene_end_state": "Dorothy walking away along the road toward the horizon.",
-  "dominant_action_line": "Dorothy prepares her appearance and begins her trek through Munchkin Country.",
+  "scene_start_state": "Dorothy in temporary quarters, preparing her new attire.",
+  "scene_end_state": "Dorothy walking away from camera into the Munchkin landscape.",
+  "dominant_action_line": "Dorothy dresses and sets out on a walk through prosperous farmland.",
   "scene_spatial_layout": [
-    "Interior domestic space transitioning to exterior rural landscape",
-    "Linear path defined by the Yellow Brick Road"
+    "Interior domestic space transitioning to exterior road.",
+    "Road flanked by cornfields and blue domed houses."
   ],
   "character_spatial_map": [
-    "dorothy centered in domestic shots, moving toward center-frame on road",
-    "toto accompanying dorothy's movement",
-    "Local Munchkins positioned at farm boundaries or roadside"
+    "dorothy centered in domestic shots.",
+    "dorothy moving along the central axis of yellow_brick_road."
   ],
   "environment_subzones": [
-    "munchkin_country_farms (interior/outskirts)",
-    "yellow_brick_road (pathway)"
+    "munchkin_country_farms",
+    "yellow_brick_road"
   ],
   "entry_vectors": [
-    "dorothy enters from quarters to road"
+    "dorothy enters via quarters"
   ],
   "exit_vectors": [
-    "dorothy exits via yellow_brick_road toward horizon"
+    "dorothy exits via yellow_brick_road"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Cut from intimate detail to wide landscape",
-    "BT002 -> BT003: Transition from static observation to active tracking"
+    "BT001 -> BT002: Cut from interior detail to exterior wide.",
+    "BT002 -> BT003: Transition from landscape view to tracking movement."
   ],
   "characters_required": [
     {
@@ -94,11 +93,11 @@
     }
   ],
   "continuity_constraints": [
-    "Perfect fit and visual luster of silver shoes",
-    "Pristine cleanliness of the gingham dress"
+    "Perfect fit and luster of silver shoes",
+    "Absolute cleanliness of the gingham dress"
   ],
   "visual_coverage_families": [
-    "Close-ups: Silver shoes, gingham fabric texture",
+    "Close-ups: Silver shoes, gingham fabric textures",
     "Wide shots: Colorful Munchkin landscape, long stretch of Yellow Brick Road",
     "Tracking shots: Dorothy walking along the road"
   ],
@@ -107,15 +106,16 @@
       "beat_id": "BT001",
       "summary": "Dressing and shoe discovery",
       "purpose": "",
-      "action_start": "dorothy preparing attire",
-      "action_end": "silver shoes are on feet",
+      "action_start": "dorothy preparing clothes",
+      "action_end": "silver shoes are on",
       "active_subjects": [
-        "dorothy",
+        "dorothy"
+      ],
+      "passive_subjects": [
         "toto"
       ],
-      "passive_subjects": [],
       "spatial_context": "munchkin_country_farms",
-      "blocking_hint": "seated near quarters",
+      "blocking_hint": "seated near clothing",
       "environment_subzone": "munchkin_country_farms",
       "continuity_focus": "cleanliness of gingham and fit of silver shoes",
       "coverage_hint": "close-ups on fabric and shoes",
@@ -127,15 +127,17 @@
       "summary": "Entering the landscape",
       "purpose": "",
       "action_start": "dorothy steps onto road",
-      "action_end": "landscape is revealed",
+      "action_end": "dorothy is visible in wide shot",
       "active_subjects": [
         "dorothy"
       ],
-      "passive_subjects": [],
+      "passive_subjects": [
+        "Local Munchkins (background/extras)"
+      ],
       "spatial_context": "yellow_brick_road",
-      "blocking_hint": "walking from quarters to road edge",
+      "blocking_hint": "walking down center of path",
       "environment_subzone": "yellow_brick_road",
-      "continuity_focus": "dress remains clean",
+      "continuity_focus": "dress cleanliness",
       "coverage_hint": "wide shots of landscape",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
@@ -144,21 +146,19 @@
       "beat_id": "BT003",
       "summary": "The journey begins",
       "purpose": "",
-      "action_start": "dorothy walking along road",
-      "action_end": "passing farms and locals",
+      "action_start": "dorothy walking past farms",
+      "action_end": "dorothy continues down road",
       "active_subjects": [
         "dorothy",
         "Local Munchkins (background/extras)"
       ],
-      "passive_subjects": [
-        "toto"
-      ],
-      "spatial_context": "yellow_brick_road near cornfield",
-      "blocking_hint": "walking down center of road",
-      "environment_subzone": "yellow_brick_road",
-      "continuity_focus": "consistent walking pace",
+      "passive_subjects": [],
+      "spatial_context": "yellow_brick_road near cornfields",
+      "blocking_hint": "walking through local greetings",
+      "environment_subzone": "munchkin_country_farms",
+      "continuity_focus": "silver shoes appearance",
       "coverage_hint": "tracking shots",
-      "coverage_priority": "high",
+      "coverage_priority": "medium",
       "handoff_to_next": "end_of_scene"
     }
   ],
@@ -169,19 +169,17 @@
       "narrative_function": "establish status",
       "planned_shot_moment_summary": "close up of silver shoes fitting feet",
       "primary_subject_seed": "dorothy",
-      "secondary_subjects_seed": [
-        "toto"
-      ],
+      "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "munchkin_country_farms",
       "planned_shot_required_anchor_1": "silver shoes",
       "planned_shot_scale_proof_detail": "shoes fit perfectly",
-      "start_state_seed": "feet in old attire",
-      "end_state_seed": "feet in silver shoes",
-      "action_seed": "stepping into shoes",
+      "start_state_seed": "feet bare or in old clothes",
+      "end_state_seed": "silver shoes on feet",
+      "action_seed": "putting on shoes",
       "blocking_seed": [
-        "seated or standing still"
+        "seated"
       ],
       "shot_size": "close_up",
       "camera_angle": "low_angle",
@@ -196,21 +194,21 @@
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "establish setting",
-      "planned_shot_moment_summary": "wide view of colorful landscape and road",
+      "planned_shot_moment_summary": "wide view of Munchkin landscape and road",
       "primary_subject_seed": "yellow_brick_road",
       "secondary_subjects_seed": [
-        "munchkin_country_farms"
+        "Local Munchkins (background/extras)"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "yellow_brick_road",
-      "planned_shot_required_anchor_1": "blue houses",
-      "planned_shot_scale_proof_detail": "long stretch of road visible",
+      "planned_shot_required_anchor_1": "blue houses with round domes",
+      "planned_shot_scale_proof_detail": "vastness of road vs small houses",
       "start_state_seed": "empty road",
       "end_state_seed": "dorothy entering frame",
-      "action_seed": "landscape reveal",
+      "action_seed": "walking into view",
       "blocking_seed": [
-        "dorothy enters from side"
+        "walking down center"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
@@ -219,27 +217,27 @@
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front"
+      "primary_subject_angle": "front_three_quarter_right"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "establish journey",
-      "planned_shot_moment_summary": "tracking Dorothy walking past farms",
+      "planned_shot_moment_summary": "tracking Dorothy passing farms",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "Local Munchkins (background/extras)"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "yellow_brick_road",
-      "planned_shot_required_anchor_1": "large cornfield",
+      "environment_subzone": "munchkin_country_farms",
+      "planned_shot_required_anchor_1": "yellow_brick_road",
       "planned_shot_scale_proof_detail": "distance traveled",
-      "start_state_seed": "walking pace",
+      "start_state_seed": "walking rhythmically",
       "end_state_seed": "walking toward horizon",
       "action_seed": "walking and receiving bows",
       "blocking_seed": [
-        "dorothy walking center road"
+        "moving forward along road"
       ],
       "shot_size": "full",
       "camera_angle": "eye_level",
@@ -248,7 +246,7 @@
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "soft_even",
-      "primary_subject_angle": "front_three_quarter_right"
+      "primary_subject_angle": "profile_left"
     }
   ],
   "unresolved_questions": [
@@ -316,16 +314,16 @@
     "[CH003] Chapter III (book index hit)",
     "[CH002] Chapter II (book index hit)",
     "[CH010] Chapter X (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH003_SC001\n\n## Production Intent\nTransition the protagonist from a state of domestic preparation to active journeying. The visual progression moves from intimate, tactile details of new attire and footwear to expansive, colorful landscapes that establish the scale of Munchkin Country.\n\n## Required Cast\n- dorothy\n- toto\n- Local Munchkins (background/extras)\n\n## Required Environments\n- munchkin_country_farms\n- yellow_brick_road\n\n## Continuity Constraints\n- Perfect fit and visual luster of silver shoes\n- Pristine cleanliness of the gingham dress\n\n## Beat List\n- BT001: Dressing and shoe discovery\n- BT002: Entering the landscape\n- BT003: The journey begins",
+  "storyboard_markdown": "# Scene Contract: CH003_SC001\n\n## Production Intent\nTransition Dorothy from a weary traveler into a clean, prepared protagonist. The sequence must visually validate her new status through the tactile details of her gingham dress and silver shoes before moving her into the expansive, colorful Munchkin landscape to establish the scale of her journey.\n\n## Required Cast\n- dorothy\n- toto\n- Local Munchkins (background/extras)\n\n## Required Environments\n- munchkin_country_farms (blue houses, round domes, cornfields)\n- yellow_brick_road\n\n## Continuity Constraints\n- Silver shoes must fit perfectly and maintain luster.\n- Gingham dress must remain clean throughout the sequence.\n\n## Beat List\n- BT001: Dressing and shoe discovery.\n- BT002: Entering the landscape.\n- BT003: The journey begins.",
   "metadata": {
     "artifact_id": "CH003_SC001_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "508de2f44c40894d71bd295ab6f22c813e0e2bca",
+    "source_fingerprint": "e10c27bdac8b6653e858dc31a6059c1899951934",
     "created_at_utc": "2026-04-27T08:03:46.311462+00:00",
-    "updated_at_utc": "2026-04-27T08:03:46.311462+00:00",
+    "updated_at_utc": "2026-04-27T13:06:23.622498+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -350,6 +348,11 @@
         "timestamp_utc": "2026-04-27T08:04:26.257181+00:00",
         "action": "synthesized",
         "source_fingerprint": "508de2f44c40894d71bd295ab6f22c813e0e2bca"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:06:43.585629+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "e10c27bdac8b6653e858dc31a6059c1899951934"
       }
     ]
   }

@@ -24,7 +24,7 @@ No specific visual descriptors are provided in the current evidence. The locatio
 ## Continuity
 
 - constraints: Must function as a transit setting or departure point.
-- unresolved_ambiguities: Visual characteristics of the outskirts are currently undocumented., Specific spatial layout and relationship to the Emerald City proper are unknown.
+- unresolved_ambiguities: Specific visual characteristics of the outskirts are currently undocumented., Spatial relationship to the main Emerald City is not defined in provided evidence.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ No specific visual descriptors are provided in the current evidence. The locatio
 - status: `generated`
 - source_fingerprint: `fe8327ae79d70bf477e87791536e6f061f01ee13`
 - created_at_utc: `2026-04-27T07:55:25.534934+00:00`
-- updated_at_utc: `2026-04-27T07:55:25.534934+00:00`
+- updated_at_utc: `2026-04-27T13:02:08.697942+00:00`

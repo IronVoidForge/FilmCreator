@@ -17,14 +17,14 @@
 No specific visual details are provided in the current evidence. The area functions primarily as a transitional zone connecting the interior grand throne room to the exterior world.
 
 - layout_notes: Serves as a spatial bridge between the grand throne room and the outside world.
-- lighting: Unknown
-- mood: Unknown
-- recurring_elements: None identified
+- lighting: unknown
+- mood: unknown
+- recurring_elements: none identified
 
 ## Continuity
 
 - constraints: Must function as a transition space between the throne room and the exterior.
-- unresolved_ambiguities: Specific visual characteristics of the camp area are currently undocumented., The exact physical nature of the "camp" (e.g., temporary structures, terrain) is unknown.
+- unresolved_ambiguities: Specific visual characteristics of the camp area are currently undocumented., The physical nature of the "camp" (e.g., temporary structures, terrain) is unknown.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ No specific visual details are provided in the current evidence. The area functi
 - status: `generated`
 - source_fingerprint: `0ce96166714fdc91406ddf6c72ec74a837c62555`
 - created_at_utc: `2026-04-27T07:54:31.530251+00:00`
-- updated_at_utc: `2026-04-27T07:54:31.530251+00:00`
+- updated_at_utc: `2026-04-27T13:01:39.685333+00:00`

@@ -24,7 +24,7 @@ No specific visual details are provided in the current evidence. The location is
 ## Continuity
 
 - constraints: []
-- unresolved_ambiguities: Specific visual characteristics of the farmhouse interior are not defined in provided evidence., Specific visual characteristics of the cellar are not defined in provided evidence.
+- unresolved_ambiguities: Specific visual characteristics of the farmhouse interior are not documented., Specific visual characteristics of the cellar are not documented.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ No specific visual details are provided in the current evidence. The location is
 - status: `generated`
 - source_fingerprint: `5670a02f70eccbcb43e0f6d2755a72916ee5bc68`
 - created_at_utc: `2026-04-27T07:48:04.759270+00:00`
-- updated_at_utc: `2026-04-27T07:48:04.759270+00:00`
+- updated_at_utc: `2026-04-27T12:58:15.108422+00:00`

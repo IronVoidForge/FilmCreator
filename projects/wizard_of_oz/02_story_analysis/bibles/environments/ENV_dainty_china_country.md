@@ -14,17 +14,17 @@
 
 ## Visual Bible
 
-A miniature-scale environment characterized by polished, reflective surfaces and a smooth, seamless white ground plane. The space is enclosed by high perimeter walls that define the country's boundaries.
+A miniature-scale environment characterized by extreme fragility. The landscape is defined by a smooth, seamless white ground plane and high perimeter walls that enclose the territory. All surfaces are highly polished, contributing to a bright and reflective aesthetic.
 
-- layout_notes: Miniature scale relative to travelers; defined by high perimeter walls and a seamless white ground plane.
+- layout_notes: Miniature scale relative to travelers; enclosed by high perimeter walls on a seamless white ground plane.
 - lighting: High-key, bright, and highly reflective due to polished surfaces.
-- mood: Extreme fragility, tension, and precariousness; a sense that every movement carries the threat of shattering.
-- recurring_elements: Polished, reflective surfaces, Seamless white ground plane, High perimeter walls
+- mood: Fragile, tense, and precarious; characterized by the constant threat of shattering.
+- recurring_elements: High perimeter walls, Smooth, seamless white ground plane, Polished, reflective surfaces
 
 ## Continuity
 
-- constraints: Miniature scale relative to travelers, Extreme fragility (threat of shattering)
-- unresolved_ambiguities: Specific material composition of the "china" surfaces is not explicitly detailed beyond being polished and reflective.
+- constraints: Extreme fragility (every movement carries the threat of shattering), Miniature scale relative to characters
+- unresolved_ambiguities: Specific material composition of the walls and ground beyond "polished" and "white" is unstated.
 
 ## Evidence Summary
 
@@ -43,4 +43,4 @@ A miniature-scale environment characterized by polished, reflective surfaces and
 - status: `generated`
 - source_fingerprint: `b8947829f9b414324ef9b689f0a4cd97900474fa`
 - created_at_utc: `2026-04-27T07:55:53.617366+00:00`
-- updated_at_utc: `2026-04-27T07:55:53.617366+00:00`
+- updated_at_utc: `2026-04-27T13:02:23.492104+00:00`

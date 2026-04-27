@@ -19,12 +19,12 @@ No specific visual descriptors are provided in the current evidence. The environ
 - layout_notes: Unknown.
 - lighting: Unknown.
 - mood: Unknown.
-- recurring_elements: None documented
+- recurring_elements: None identified
 
 ## Continuity
 
-- constraints: Must maintain identity as kansas_prairie_landscape
-- unresolved_ambiguities: Lack of specific visual, lighting, or atmospheric descriptors in provided evidence., Spatial layout and scale are currently undefined.
+- constraints: Must function as a primary or transit setting.
+- unresolved_ambiguities: Lack of specific visual, lighting, or atmospheric descriptors in the provided source material.
 
 ## Evidence Summary
 
@@ -40,4 +40,4 @@ No specific visual descriptors are provided in the current evidence. The environ
 - status: `generated`
 - source_fingerprint: `152f2000868026d9ce4eb370c32276b750b67094`
 - created_at_utc: `2026-04-27T07:48:21.781289+00:00`
-- updated_at_utc: `2026-04-27T07:48:21.781289+00:00`
+- updated_at_utc: `2026-04-27T12:58:24.639766+00:00`

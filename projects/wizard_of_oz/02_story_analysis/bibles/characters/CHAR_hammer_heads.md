@@ -19,9 +19,9 @@
 - physical_build: human scale; proportions unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-The entity known as hammer_heads is a humanoid, non-human biped of human scale. Due to insufficient descriptive evidence in the provided records, specific visual identifiers such as age, build, costume, or movement patterns remain unknown and cannot be established for production.
+The entity known as hammer_heads is a humanoid, non-human biped of human scale. Specific visual details regarding age, build, costume, or movement are not provided in the available evidence.
 
-- physical_traits: morphology: biped
+- physical_traits: bipedal morphology
 - costume_signature: unknown
 - distinguishing_features: unknown
 - state_variants: unknown
@@ -31,12 +31,12 @@ The entity known as hammer_heads is a humanoid, non-human biped of human scale. 
 - personality: unknown
 - role: unknown
 - voice_notes: unknown
-- relationship_notes: (none)
+- relationship_notes: []
 
 ## Continuity
 
-- continuity_constraints: must maintain humanoid non-human bipedal morphology as per taxonomy
-- unresolved_ambiguities: specific visual appearance (clothing, color, texture), facial features and age, mannerisms and movement style
+- continuity_constraints: Must maintain humanoid non-human morphology as per taxonomy.
+- unresolved_ambiguities: Complete lack of specific visual descriptors (clothing, facial features, color palette)., Ambiguity regarding the nature of "hammer_heads" (whether it refers to a single individual or a collective/species type, though registry treats as singular).
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ The entity known as hammer_heads is a humanoid, non-human biped of human scale. 
 - status: `generated`
 - source_fingerprint: `3e15c7ea83bad03f523c4e67ee249ba765dba25a`
 - created_at_utc: `2026-04-27T07:47:51.982730+00:00`
-- updated_at_utc: `2026-04-27T07:47:51.982730+00:00`
+- updated_at_utc: `2026-04-27T12:58:07.420484+00:00`

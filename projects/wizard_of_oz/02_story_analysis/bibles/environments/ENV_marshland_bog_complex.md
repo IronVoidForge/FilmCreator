@@ -14,7 +14,7 @@
 
 ## Visual Bible
 
-No specific visual descriptors are provided in the current evidence. The environment functions primarily as a transit setting within the narrative structure.
+The environment is a marshland bog complex utilized primarily as a transit setting. Specific visual characteristics are currently undocumented in the provided evidence.
 
 - layout_notes: Unknown.
 - lighting: Unknown.
@@ -23,8 +23,8 @@ No specific visual descriptors are provided in the current evidence. The environ
 
 ## Continuity
 
-- constraints: Must function as a transit setting.
-- unresolved_ambiguities: Visual characteristics of the marshland/bog are currently undocumented., Specific spatial layout and atmospheric qualities are unknown.
+- constraints: Must function as a transit setting
+- unresolved_ambiguities: Specific visual descriptors for the marshland/bog terrain are missing., Lighting and atmospheric conditions are unknown.
 
 ## Evidence Summary
 
@@ -39,4 +39,4 @@ No specific visual descriptors are provided in the current evidence. The environ
 - status: `generated`
 - source_fingerprint: `b28882294317b28c8adb3be80bf0d61c3a75b4e1`
 - created_at_utc: `2026-04-27T07:56:15.536623+00:00`
-- updated_at_utc: `2026-04-27T07:56:15.536623+00:00`
+- updated_at_utc: `2026-04-27T13:02:35.143980+00:00`

@@ -5,37 +5,37 @@
   "purpose": "Character development and thematic exposition regarding \"home.\"",
   "summary": "During a midday break by a brook, Dorothy and the Scarecrow engage in a philosophical discussion. Dorothy expresses her longing for Kansas, while the Scarecrow struggles to comprehend why anyone would prefer a gray landscape over Oz.",
   "emotional_arc": "Physical rest $\\rightarrow$ Melancholy/Philosophical curiosity.",
-  "production_intent": "Establish character depth through a midday rest period where the physical stillness of the brook contrasts with the internal emotional shift from fatigue to melancholy. The setting must bridge the transition between well-tended farmland and the approaching dismal landscape via the deteriorating yellow brick road.",
-  "scene_short_description": "A midday break by a flowing brook adjacent to a deteriorating yellow brick road.",
-  "scene_primary_scale_story_point": "Human scale characters seated against a wide, transitioning landscape.",
+  "production_intent": "Establish character depth through a midday rest period where the physical fatigue of travel transitions into emotional vulnerability. The setting must contrast the colorful Oz environment with the internal melancholy of Dorothy's longing for Kansas.",
+  "scene_short_description": "A midday break by a flowing brook adjacent to a deteriorating stretch of yellow brick road.",
+  "scene_primary_scale_story_point": "Human scale characters seated against the expansive, lonesome landscape.",
   "scene_required_anchor_catalog": [
-    "flowing_brook",
-    "deteriorating_yellow_brick_road"
+    "brook_edge",
+    "lunch_props"
   ],
-  "scene_start_state": "Dorothy and the Scarecrow are resting by the water during midday.",
-  "scene_end_state": "A heavy silence or contemplative mood following the discussion of Kansas.",
-  "dominant_action_line": "Philosophical discussion regarding the nature of home and preference for landscape.",
+  "scene_start_state": "Characters resting by the water after travel.",
+  "scene_end_state": "Philosophical tension between two differing views of home.",
+  "dominant_action_line": "Dorothy expresses longing for Kansas while the_scarecrow questions her preference.",
   "scene_spatial_layout": [
-    "Characters positioned between the brook and the road",
-    "Brook serves as a foreground/midground element"
+    "characters positioned near brook_edge",
+    "deteriorating_yellow_brick_road visible in background"
   ],
   "character_spatial_map": [
-    "dorothy seated near lunch props",
-    "the_scarecrow seated facing dorothy"
+    "dorothy seated near lunch_props",
+    "the_scarecrow positioned facing dorothy"
   ],
   "environment_subzones": [
-    "brook_edge",
+    "brook_water_edge",
     "road_shoulder"
   ],
   "entry_vectors": [
-    "yellow_brick_road"
+    "deteriorating_yellow_brick_road"
   ],
   "exit_vectors": [
-    "yellow_brick_road"
+    "deteriorating_yellow_brick_road"
   ],
   "beat_transition_map": [
     "BT001 -> BT002: Physical rest to verbal engagement",
-    "BT002 -> BT003: Verbal engagement to emotional shift"
+    "BT002 -> BT003: Verbal engagement to emotional divergence"
   ],
   "characters_required": [
     {
@@ -72,40 +72,40 @@
     }
   ],
   "continuity_constraints": [
-    "Water flow and ripple patterns in the brook",
-    "Precise position of lunch items and props"
+    "Water flow and ripple patterns in brook",
+    "Position of lunch items and props"
   ],
   "visual_coverage_families": [
-    "Two-shots of Dorothy and the Scarecrow",
-    "Close-ups on Dorothy's face during monologue",
-    "Reaction shots from the Scarecrow"
+    "Two-shots of characters",
+    "Close-ups on dorothy during monologue",
+    "Reaction shots from the_scarecrow"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Midday rest by the brook",
+      "summary": "Midday rest period",
       "purpose": "",
-      "action_start": "characters approaching water",
-      "action_end": "characters settled with lunch items",
+      "action_start": "characters arrive at brook",
+      "action_end": "characters settle with lunch items",
       "active_subjects": [
         "dorothy",
         "the_scarecrow"
       ],
       "passive_subjects": [],
-      "spatial_context": "brook_edge",
-      "blocking_hint": "seated near water's edge",
-      "environment_subzone": "brook_edge",
-      "continuity_focus": "lunch item placement",
+      "spatial_context": "brook_edge near road",
+      "blocking_hint": "seated on ground",
+      "environment_subzone": "road_shoulder",
+      "continuity_focus": "lunch_props placement",
       "coverage_hint": "wide two-shot",
       "coverage_priority": "medium",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Discussion of Kansas",
+      "summary": "Dorothy's longing for Kansas",
       "purpose": "",
-      "action_start": "Dorothy begins speaking",
-      "action_end": "Dorothy finishes monologue",
+      "action_start": "dorothy begins speaking",
+      "action_end": "dorothy finishes monologue",
       "active_subjects": [
         "dorothy"
       ],
@@ -113,19 +113,19 @@
         "the_scarecrow"
       ],
       "spatial_context": "brook_edge",
-      "blocking_hint": "Dorothy looking toward the horizon/brook",
-      "environment_subzone": "brook_edge",
-      "continuity_focus": "water ripples",
-      "coverage_hint": "close-up on Dorothy",
+      "blocking_hint": "seated, looking toward water",
+      "environment_subzone": "brook_water_edge",
+      "continuity_focus": "facial expression/weary traveler look",
+      "coverage_hint": "close-up on dorothy",
       "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Scarecrow's confusion regarding Oz vs Kansas",
+      "summary": "The_scarecrow's confusion",
       "purpose": "",
-      "action_start": "Scarecrow responds to Dorothy",
-      "action_end": "philosophical tension settles",
+      "action_start": "the_scarecrow responds",
+      "action_end": "philosophical impasse",
       "active_subjects": [
         "the_scarecrow"
       ],
@@ -133,10 +133,10 @@
         "dorothy"
       ],
       "spatial_context": "brook_edge",
-      "blocking_hint": "Scarecrow looking at Dorothy or the landscape",
-      "environment_subzone": "brook_edge",
-      "continuity_focus": "water ripples",
-      "coverage_hint": "reaction shots",
+      "blocking_hint": "seated, reacting to dorothy",
+      "environment_subzone": "brook_water_edge",
+      "continuity_focus": "reaction timing",
+      "coverage_hint": "reaction shots from the_scarecrow",
       "coverage_priority": "medium",
       "handoff_to_next": "end_scene"
     }
@@ -146,21 +146,21 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish_setting",
-      "planned_shot_moment_summary": "characters resting by water",
+      "planned_shot_moment_summary": "characters settling for midday break",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "the_scarecrow"
       ],
       "subject_visibility": "on_screen",
-      "narration_mode": "none",
-      "environment_subzone": "brook_edge",
-      "planned_shot_required_anchor_1": "flowing_brook",
-      "planned_shot_scale_proof_detail": "characters small against brook and road",
-      "start_state_seed": "midday light on water",
-      "end_state_seed": "characters settling into rest",
-      "action_seed": "sitting down",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "road_shoulder",
+      "planned_shot_required_anchor_1": "lunch_props",
+      "planned_shot_scale_proof_detail": "human scale vs road width",
+      "start_state_seed": "characters approaching brook",
+      "end_state_seed": "characters seated",
+      "action_seed": "settling down",
       "blocking_seed": [
-        "seated near brook"
+        "sitting near water"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
@@ -175,21 +175,21 @@
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "character_exposition",
-      "planned_shot_moment_summary": "Dorothy speaks of Kansas",
+      "planned_shot_moment_summary": "dorothy speaks of Kansas",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "the_scarecrow"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "brook_edge",
-      "planned_shot_required_anchor_1": "flowing_brook",
-      "planned_shot_scale_proof_detail": "close proximity to Dorothy's face",
-      "start_state_seed": "Dorothy looking at brook",
-      "end_state_seed": "Dorothy looking at Scarecrow",
-      "action_seed": "speaking",
+      "environment_subzone": "brook_water_edge",
+      "planned_shot_required_anchor_1": "brook_edge",
+      "planned_shot_scale_proof_detail": "facial expression detail",
+      "start_state_seed": "dorothy looking at water",
+      "end_state_seed": "dorothy looking up",
+      "action_seed": "monologue",
       "blocking_seed": [
-        "seated facing Scarecrow"
+        "seated facing the_scarecrow"
       ],
       "shot_size": "close_up",
       "camera_angle": "eye_level",
@@ -204,21 +204,21 @@
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "reaction/thematic_clash",
-      "planned_shot_moment_summary": "Scarecrow reacts to Kansas description",
+      "planned_shot_moment_summary": "the_scarecrow reacts to Kansas description",
       "primary_subject_seed": "the_scarecrow",
       "secondary_subjects_seed": [
         "dorothy"
       ],
       "subject_visibility": "on_screen",
-      "narration_mode": "none",
-      "environment_subzone": "brook_edge",
-      "planned_shot_required_anchor_1": "flowing_brook",
-      "planned_shot_scale_proof_detail": "focus on Scarecrow's expression",
-      "start_state_seed": "Scarecrow listening",
-      "end_state_seed": "Scarecrow looking confused",
-      "action_seed": "tilting head",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "brook_water_edge",
+      "planned_shot_required_anchor_1": "brook_edge",
+      "planned_shot_scale_proof_detail": "head/shoulder framing",
+      "start_state_seed": "the_scarecrow listening",
+      "end_state_seed": "the_scarecrow questioning",
+      "action_seed": "tilting head in confusion",
       "blocking_seed": [
-        "seated facing Dorothy"
+        "seated facing dorothy"
       ],
       "shot_size": "medium_close",
       "camera_angle": "eye_level",
@@ -293,16 +293,16 @@
     "[CH003] Chapter III (book index hit)",
     "[CH004] Chapter IV (book index hit)",
     "[CH005] Chapter V (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH004_SC002\n\n## Production Intent\nEstablish character depth through a midday rest period where the physical stillness of the brook contrasts with the internal emotional shift from fatigue to melancholy. The setting must bridge the transition between well-tended farmland and the approaching dismal landscape via the deteriorating yellow brick road.\n\n## Required Cast\n- dorothy (young human girl, white clothing/dress)\n- the_scarecrow\n\n## Required Environments\n- deteriorating_yellow_brick_road (transitioning from farmland to dismal landscape)\n- brook_edge (peaceful brook)\n\n## Continuity Constraints\n- Water flow and ripple patterns in the brook\n- Precise position of lunch items and props\n\n## Beat List\n- BT001: Midday rest by the brook\n- BT002: Discussion of Kansas\n- BT003: Scarecrow's confusion regarding Oz vs Kansas",
+  "storyboard_markdown": "# Scene Contract: CH004_SC002\n\n## Production Intent\nEstablish character depth through a midday rest period where physical fatigue transitions into emotional vulnerability. The setting must contrast the colorful Oz environment with the internal melancholy of Dorothy's longing for Kansas.\n\n## Required Cast\n- dorothy (weary traveler, white dress/clothing)\n- the_scarecrow\n\n## Required Environments\n- deteriorating_yellow_brick_road (beside a peaceful brook)\n\n## Continuity Constraints\n- Water flow and ripple patterns in brook\n- Position of lunch items and props\n\n## Beat List\n- BT001: Midday rest period\n- BT002: Dorothy's longing for Kansas\n- BT003: The_scarecrow's confusion",
   "metadata": {
     "artifact_id": "CH004_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "de15411238b1f7cd4ef07bd5fdcbad91e087f89f",
+    "source_fingerprint": "1c66ceaaf28d8baf2b9d75d2111cc00b97cfcb1b",
     "created_at_utc": "2026-04-27T08:07:18.630219+00:00",
-    "updated_at_utc": "2026-04-27T08:07:18.630219+00:00",
+    "updated_at_utc": "2026-04-27T13:09:03.620294+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -327,6 +327,11 @@
         "timestamp_utc": "2026-04-27T08:07:58.282614+00:00",
         "action": "synthesized",
         "source_fingerprint": "de15411238b1f7cd4ef07bd5fdcbad91e087f89f"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:09:44.391817+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "1c66ceaaf28d8baf2b9d75d2111cc00b97cfcb1b"
       }
     ]
   }
