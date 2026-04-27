@@ -80,7 +80,14 @@ def test_run_full_production_force_runs_remaining_pipeline(monkeypatch) -> None:
 
     summary = run_full_production_pipeline("demo", chapters="2-3", mode="force")
 
-    assert project_phase_calls == ["character_taxonomy", "identity_refinement", "character_bibles", "environment_bibles", "visual_fallbacks"]
+    assert project_phase_calls == [
+        "character_taxonomy",
+        "identity_refinement",
+        "character_bibles",
+        "character_visual_evidence",
+        "environment_bibles",
+        "visual_fallbacks",
+    ]
     assert downstream_calls == [("demo", "2-3", "scene_contracts", "force")]
     assert summary.phase_summaries["quality_grading"]["phase"] == "quality_grading"
 
@@ -111,7 +118,13 @@ def test_plan_trusted_resume_pipeline_matches_bat_mapping(monkeypatch) -> None:
 
     assert summary.phase_summaries["resume_stage"] == "descriptor_enrichment"
     assert summary.phase_summaries["start_phase"] == "descriptor_enrichment"
-    assert summary.phase_summaries["planned_phases"] == ["descriptor_enrichment", "prompt_preparation", "quality_grading"]
+    assert summary.phase_summaries["planned_phases"] == [
+        "lmstudio_check",
+        "story_analysis",
+        "descriptor_enrichment",
+        "prompt_preparation",
+        "quality_grading",
+    ]
 
 
 def test_run_trusted_resume_pipeline_uses_forced_bat_sequence(monkeypatch) -> None:
@@ -124,6 +137,15 @@ def test_run_trusted_resume_pipeline_uses_forced_bat_sequence(monkeypatch) -> No
         "orchestrator.production_pipeline.lmstudio_check",
         lambda: {"phase": "lmstudio_check"},
     )
+    monkeypatch.setattr(
+        "orchestrator.production_pipeline.run_story_analysis_pipeline",
+        lambda project_slug, chapters=None, mode="resume": {
+            "phase": "story_analysis",
+            "project_slug": project_slug,
+            "chapters": chapters,
+            "mode": mode,
+        },
+    )
 
     def fake_trusted(project_slug, phase_name, *, chapters=None):
         calls.append((phase_name, chapters))
@@ -133,7 +155,7 @@ def test_run_trusted_resume_pipeline_uses_forced_bat_sequence(monkeypatch) -> No
 
     summary = run_trusted_resume_pipeline("demo", chapters="2-3")
 
-    assert summary.completed_phases[0] == "character_taxonomy"
+    assert summary.completed_phases[:3] == ["lmstudio_check", "story_analysis", "character_taxonomy"]
     assert calls[0] == ("character_taxonomy", "2-3")
     assert calls[-1] == ("quality_grading", "2-3")
 

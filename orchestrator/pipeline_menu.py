@@ -104,21 +104,45 @@ def run_pipeline_menu(
 def _select_startup_scope(state: PipelineMenuState, projects_root: Path, input_fn: InputFn, output_fn: OutputFn) -> None:
     output_fn("")
     output_fn("FilmCreator startup scope")
-    detected = []
-    if projects_root.exists():
-        detected = sorted(path.name for path in projects_root.iterdir() if path.is_dir())
-    if detected:
-        output_fn("Available projects:")
-        output_fn(", ".join(detected[:20]))
-    project = input_fn(f"Project slug [{state.project_slug}]: ").strip()
-    if project:
-        state.project_slug = project
+    _select_startup_project(state, projects_root, input_fn, output_fn)
     chapters = input_fn("Chapters to run, e.g. 2-3 or 22-25 [Enter for ALL]: ").strip()
     state.chapters = chapters or None
     _select_model_on_startup(state, input_fn, output_fn)
     output_fn(f"Project set to: {state.project_slug}")
     output_fn(f"Chapters set to: {state.chapters or 'ALL'}")
     output_fn(f"Model set to: {state.lmstudio_model}")
+
+
+def _select_startup_project(state: PipelineMenuState, projects_root: Path, input_fn: InputFn, output_fn: OutputFn) -> None:
+    detected = []
+    if projects_root.exists():
+        detected = sorted(path.name for path in projects_root.iterdir() if path.is_dir())
+    if not detected:
+        project = input_fn(f"Project slug [{state.project_slug}]: ").strip()
+        if project:
+            state.project_slug = project
+        return
+
+    output_fn("Available projects:")
+    for index, slug in enumerate(detected, start=1):
+        default_note = " [default]" if slug == state.project_slug else ""
+        output_fn(f"{index}. {slug}{default_note}")
+    manual_choice = len(detected) + 1
+    output_fn(f"{manual_choice}. Enter project slug manually")
+    raw = input_fn(f"Choose project [Enter for {state.project_slug}]: ").strip()
+    if not raw:
+        return
+    if raw.isdigit():
+        selected = int(raw)
+        if 1 <= selected <= len(detected):
+            state.project_slug = detected[selected - 1]
+            return
+        if selected == manual_choice:
+            manual_slug = input_fn("Project slug: ").strip()
+            if manual_slug:
+                state.project_slug = manual_slug
+            return
+    output_fn(f"Invalid project selection. Keeping: {state.project_slug}")
 
 
 def _select_model_on_startup(state: PipelineMenuState, input_fn: InputFn, output_fn: OutputFn) -> None:

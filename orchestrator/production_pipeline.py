@@ -204,14 +204,16 @@ def plan_trusted_resume_pipeline(
         )
 
     start_phase = _resolve_trusted_resume_start_phase(resume_stage)
-    planned_phases = TRUSTED_RESUME_PHASE_ORDER[
-        TRUSTED_RESUME_PHASE_ORDER.index(start_phase) :
+    downstream_start_index = max(
+        TRUSTED_RESUME_PHASE_ORDER.index(start_phase),
+        TRUSTED_RESUME_PHASE_ORDER.index("character_taxonomy"),
+    )
+    planned_phases = [
+        "lmstudio_check",
+        "story_analysis",
+        *TRUSTED_RESUME_PHASE_ORDER[downstream_start_index:],
     ]
     warnings: list[str] = []
-    if "story_analysis" in planned_phases:
-        warnings.append(
-            "The trusted overnight BAT does not execute story analysis in its downstream resume path; it starts with LM Studio check and then taxonomy onward."
-        )
     return ProductionRunSummary(
         profile="trusted_resume_plan",
         project_slug=project_slug,
@@ -257,10 +259,11 @@ def run_trusted_resume_pipeline(
         if phase_name == "lmstudio_check":
             summary = lmstudio_check()
         elif phase_name == "story_analysis":
-            warnings.append(
-                "Story analysis remains excluded from trusted downstream resume execution, matching the overnight BAT."
+            summary = run_story_analysis_pipeline(
+                project_slug,
+                chapters=chapters,
+                mode="resume",
             )
-            continue
         else:
             summary = _run_trusted_phase(project_slug, phase_name, chapters=chapters)
         phase_summaries[phase_name] = _to_dict(summary)
@@ -657,6 +660,8 @@ def _run_force_phase(project_slug: str, phase_name: str, *, chapters: str | None
         return run_descriptor_enrichment(project_slug, use_llm=True, force=True, chapters=chapters)
     if phase_name == "prompt_preparation":
         return run_prompt_preparation(project_slug, force=True, chapters=chapters)
+    if phase_name == "quality_grading":
+        return run_quality_grading(project_slug)
     raise ValueError(f"Unsupported force phase: {phase_name}")
 
 
