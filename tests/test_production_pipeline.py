@@ -1,6 +1,14 @@
 from types import SimpleNamespace
 
-from orchestrator.production_pipeline import run_full_production_pipeline, run_prompt_prep_refresh
+from orchestrator.production_pipeline import (
+    _resolve_story_analysis_chapter_paths,
+    plan_trusted_resume_pipeline,
+    run_quicktest_composite,
+    run_full_production_pipeline,
+    run_prompt_prep_refresh,
+    run_story_analysis_pipeline,
+    run_trusted_resume_pipeline,
+)
 
 
 def test_run_prompt_prep_refresh_force_runs_both(monkeypatch) -> None:
@@ -26,7 +34,7 @@ def test_run_prompt_prep_refresh_force_runs_both(monkeypatch) -> None:
     ]
 
 
-def test_run_full_production_resume_skips_completed_and_runs_remaining(monkeypatch) -> None:
+def test_run_full_production_force_runs_remaining_pipeline(monkeypatch) -> None:
     monkeypatch.setattr(
         "orchestrator.production_pipeline.get_production_status",
         lambda project_slug, chapters=None: SimpleNamespace(
@@ -66,10 +74,96 @@ def test_run_full_production_resume_skips_completed_and_runs_remaining(monkeypat
     monkeypatch.setattr("orchestrator.production_pipeline.run_downstream_production", fake_downstream)
     monkeypatch.setattr("orchestrator.production_pipeline.run_quality_grading", lambda project_slug: {"phase": "quality_grading"})
 
-    summary = run_full_production_pipeline("demo", chapters="2-3", mode="resume")
+    summary = run_full_production_pipeline("demo", chapters="2-3", mode="force")
 
-    assert "character_taxonomy" in summary.completed_phases
-    assert project_phase_calls == ["identity_refinement", "character_bibles", "environment_bibles", "visual_fallbacks"]
-    assert downstream_calls == [("demo", "2-3", "scene_bindings", "resume")]
-    assert summary.phase_summaries["character_taxonomy"]["skipped"] is True
+    assert project_phase_calls == ["character_taxonomy", "identity_refinement", "character_bibles", "environment_bibles", "visual_fallbacks"]
+    assert downstream_calls == [("demo", "2-3", "scene_contracts", "force")]
     assert summary.phase_summaries["quality_grading"]["phase"] == "quality_grading"
+
+
+def test_run_story_analysis_pipeline_resume_uses_resume_runner(monkeypatch) -> None:
+    monkeypatch.setattr(
+        "orchestrator.production_pipeline.run_resume_book_analysis",
+        lambda project_slug, fail_fast=False: {"project_slug": project_slug, "resume": True},
+    )
+
+    summary = run_story_analysis_pipeline("demo", mode="resume")
+
+    assert summary.completed_phases == ["story_analysis"]
+    assert summary.phase_summaries["story_analysis"]["resume"] is True
+
+
+def test_plan_trusted_resume_pipeline_matches_bat_mapping(monkeypatch) -> None:
+    monkeypatch.setattr(
+        "orchestrator.production_pipeline.find_first_incomplete_stage",
+        lambda project_slug, chapters="": "descriptor_enrichment",
+    )
+
+    summary = plan_trusted_resume_pipeline("demo", chapters="2-3")
+
+    assert summary.phase_summaries["resume_stage"] == "descriptor_enrichment"
+    assert summary.phase_summaries["start_phase"] == "descriptor_enrichment"
+    assert summary.phase_summaries["planned_phases"] == ["descriptor_enrichment", "prompt_preparation", "quality_grading"]
+
+
+def test_run_trusted_resume_pipeline_uses_forced_bat_sequence(monkeypatch) -> None:
+    monkeypatch.setattr(
+        "orchestrator.production_pipeline.find_first_incomplete_stage",
+        lambda project_slug, chapters="": "character_taxonomy",
+    )
+    calls: list[tuple[str, str | None]] = []
+    monkeypatch.setattr(
+        "orchestrator.production_pipeline.lmstudio_check",
+        lambda: {"phase": "lmstudio_check"},
+    )
+
+    def fake_trusted(project_slug, phase_name, *, chapters=None):
+        calls.append((phase_name, chapters))
+        return {"phase": phase_name}
+
+    monkeypatch.setattr("orchestrator.production_pipeline._run_trusted_phase", fake_trusted)
+
+    summary = run_trusted_resume_pipeline("demo", chapters="2-3")
+
+    assert summary.completed_phases[0] == "character_taxonomy"
+    assert calls[0] == ("character_taxonomy", "2-3")
+    assert calls[-1] == ("quality_grading", "2-3")
+
+
+def test_run_quicktest_composite_11_to_14_maps_to_shot_packages(monkeypatch) -> None:
+    monkeypatch.setattr(
+        "orchestrator.production_pipeline.run_downstream_production",
+        lambda project_slug, chapters=None, start_phase="scene_contracts", mode="resume": {
+            "project_slug": project_slug,
+            "chapters": chapters,
+            "start_phase": start_phase,
+            "mode": mode,
+        },
+    )
+
+    summary = run_quicktest_composite("demo", chapters="2-3", composite="11_to_14")
+
+    assert summary["start_phase"] == "shot_packages"
+    assert summary["mode"] == "force"
+
+
+def test_resolve_story_analysis_chapter_paths_filters_manifest(monkeypatch, tmp_path) -> None:
+    project_root = tmp_path / "projects" / "demo" / "01_source" / "book"
+    project_root.mkdir(parents=True)
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setattr(
+        "orchestrator.production_pipeline._read_manifest_chapter_paths",
+        lambda project_dir, manifest_path: [
+            tmp_path / "projects" / "demo" / "01_source" / "chapters" / "CH001_one.md",
+            tmp_path / "projects" / "demo" / "01_source" / "chapters" / "CH002_two.md",
+            tmp_path / "projects" / "demo" / "01_source" / "chapters" / "CH003_three.md",
+        ],
+    )
+    monkeypatch.setattr(
+        "orchestrator.production_pipeline._chapter_id_from_path",
+        lambda path: path.name.split("_", 1)[0],
+    )
+
+    resolved = _resolve_story_analysis_chapter_paths("demo", "2-3")
+
+    assert [path.name for path in resolved] == ["CH002_two.md", "CH003_three.md"]

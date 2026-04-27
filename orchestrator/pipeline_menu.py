@@ -6,13 +6,17 @@ from pathlib import Path
 from typing import Callable
 
 from .character_references import run_character_reference_generation, run_character_reference_planning
+from .production_cleanup import create_cleanup_plan, execute_cleanup_plan, format_cleanup_plan
 from .environment_references import run_environment_reference_generation, run_environment_reference_planning
 from .production_pipeline import (
     DOWNSTREAM_PHASES,
+    plan_trusted_resume_pipeline,
+    run_quicktest_composite,
     run_downstream_production,
     run_full_production_pipeline,
     run_post_taxonomy_pipeline,
     run_prompt_prep_refresh,
+    run_story_analysis_pipeline,
 )
 from .production_status import format_production_status, get_production_status
 
@@ -28,6 +32,7 @@ class PipelineMenuState:
     mode: str = "resume"
     character_reference_limit: int = 1
     environment_reference_limit: int = 1
+    last_cleanup_scope: str | None = None
 
 
 def run_pipeline_menu(
@@ -60,7 +65,7 @@ def run_pipeline_menu(
         elif choice == "5":
             _run_full_pipeline(state, output_fn)
         elif choice == "6":
-            output_fn("Story analysis menu entry is not wired yet. Use the existing story-analysis launcher for now.")
+            _run_story_analysis(state, input_fn, output_fn)
         elif choice == "7":
             _run_post_taxonomy(state, input_fn, output_fn)
         elif choice == "8":
@@ -72,7 +77,7 @@ def run_pipeline_menu(
         elif choice == "11":
             _run_environment_references(state, input_fn, output_fn)
         elif choice == "12":
-            output_fn("Cleanup is planned as a dry-run-first workflow and is not enabled in this first menu slice yet.")
+            _run_cleanup(state, input_fn, output_fn)
         elif choice == "13":
             output_fn("Advanced phase range is planned next. This first menu slice keeps the predefined safe workflows only.")
         elif choice == "14":
@@ -192,12 +197,52 @@ def _show_status(state: PipelineMenuState, output_fn: OutputFn) -> None:
 
 
 def _run_full_pipeline(state: PipelineMenuState, output_fn: OutputFn) -> None:
+    if state.mode == "resume":
+        plan = plan_trusted_resume_pipeline(
+            state.project_slug,
+            chapters=state.chapters,
+        )
+        output_fn("Trusted overnight resume behavior is active for resume mode.")
+        _emit_summary(plan.to_dict(), output_fn)
     summary = run_full_production_pipeline(
         state.project_slug,
         chapters=state.chapters,
         mode=state.mode,
     )
     _emit_summary(summary.to_dict(), output_fn)
+
+
+def _run_story_analysis(state: PipelineMenuState, input_fn: InputFn, output_fn: OutputFn) -> None:
+    output_fn("")
+    output_fn("Story analysis / chapter summaries")
+    output_fn("1. Resume full-book story analysis")
+    output_fn("2. Run selected chapter slice")
+    output_fn("3. Run full-book analysis from manifest")
+    output_fn("4. Back")
+    choice = input_fn("Choose: ").strip()
+    if choice == "1":
+        summary = run_story_analysis_pipeline(
+            state.project_slug,
+            chapters=None,
+            mode="resume",
+        )
+        _emit_summary(_to_dict(summary), output_fn)
+    elif choice == "2":
+        summary = run_story_analysis_pipeline(
+            state.project_slug,
+            chapters=state.chapters,
+            mode=state.mode,
+        )
+        _emit_summary(_to_dict(summary), output_fn)
+    elif choice == "3":
+        summary = run_story_analysis_pipeline(
+            state.project_slug,
+            chapters=None,
+            mode="force",
+        )
+        _emit_summary(_to_dict(summary), output_fn)
+    elif choice != "4":
+        output_fn("Invalid story analysis selection.")
 
 
 def _run_post_taxonomy(state: PipelineMenuState, input_fn: InputFn, output_fn: OutputFn) -> None:
@@ -229,13 +274,16 @@ def _run_post_taxonomy(state: PipelineMenuState, input_fn: InputFn, output_fn: O
 
 def _run_downstream(state: PipelineMenuState, input_fn: InputFn, output_fn: OutputFn) -> None:
     options = {
-        "1": "scene_contracts",
-        "2": "scene_contracts",
-        "3": "scene_bindings",
-        "4": "shot_packages",
-        "5": "dialogue_timeline",
-        "6": "descriptor_enrichment",
-        "7": "prompt_preparation",
+        "1": ("phase", "scene_contracts"),
+        "2": ("phase", "scene_contracts"),
+        "3": ("phase", "scene_bindings"),
+        "4": ("phase", "shot_packages"),
+        "5": ("phase", "dialogue_timeline"),
+        "6": ("phase", "descriptor_enrichment"),
+        "7": ("phase", "prompt_preparation"),
+        "8": ("composite", "09_to_14"),
+        "9": ("composite", "11_to_14"),
+        "10": ("composite", "13_to_14"),
     }
     output_fn("")
     output_fn("Downstream phases")
@@ -246,21 +294,32 @@ def _run_downstream(state: PipelineMenuState, input_fn: InputFn, output_fn: Outp
     output_fn("5. Start at dialogue timeline")
     output_fn("6. Start at descriptor enrichment")
     output_fn("7. Start at prompt preparation")
-    output_fn("8. Back")
+    output_fn("8. Quicktest composite 09 to 14")
+    output_fn("9. Quicktest composite 11 to 14")
+    output_fn("10. Quicktest composite 13 to 14")
+    output_fn("11. Back")
     choice = input_fn("Choose: ").strip()
-    if choice == "8":
+    if choice == "11":
         return
-    start_phase = options.get(choice)
-    if start_phase is None:
+    selected = options.get(choice)
+    if selected is None:
         output_fn("Invalid downstream selection.")
         return
-    summary = run_downstream_production(
-        state.project_slug,
-        chapters=state.chapters,
-        start_phase=start_phase,
-        mode=state.mode,
-    )
-    _emit_summary(summary.to_dict(), output_fn)
+    kind, value = selected
+    if kind == "composite":
+        summary = run_quicktest_composite(
+            state.project_slug,
+            chapters=state.chapters or "2-3",
+            composite=value,
+        )
+    else:
+        summary = run_downstream_production(
+            state.project_slug,
+            chapters=state.chapters,
+            start_phase=value,
+            mode=state.mode,
+        )
+    _emit_summary(_to_dict(summary), output_fn)
 
 
 def _run_prompt_refresh(state: PipelineMenuState, input_fn: InputFn, output_fn: OutputFn) -> None:
@@ -372,6 +431,39 @@ def _run_environment_references(state: PipelineMenuState, input_fn: InputFn, out
             output_fn("Limit must be a positive integer.")
     elif choice != "4":
         output_fn("Invalid environment reference selection.")
+
+
+def _run_cleanup(state: PipelineMenuState, input_fn: InputFn, output_fn: OutputFn) -> None:
+    output_fn("")
+    output_fn("Clear artifacts")
+    output_fn("1. Dry-run: clear prompt prep and descriptors")
+    output_fn("2. Dry-run: clear downstream phases")
+    output_fn("3. Dry-run: clear taxonomy and everything downstream")
+    output_fn("4. Execute last dry-run plan")
+    output_fn("5. Back")
+    choice = input_fn("Choose: ").strip()
+    if choice == "1":
+        _show_cleanup_plan(state, "prompt_prep_only", output_fn)
+    elif choice == "2":
+        _show_cleanup_plan(state, "downstream_only", output_fn)
+    elif choice == "3":
+        _show_cleanup_plan(state, "taxonomy_and_downstream", output_fn)
+    elif choice == "4":
+        confirm = input_fn("Type DELETE to execute this cleanup: ").strip()
+        if confirm != "DELETE":
+            output_fn("Cleanup cancelled.")
+            return
+        summary = execute_cleanup_plan(state.project_slug)
+        _emit_summary(summary.to_dict(), output_fn)
+    elif choice != "5":
+        output_fn("Invalid cleanup selection.")
+
+
+def _show_cleanup_plan(state: PipelineMenuState, scope: str, output_fn: OutputFn) -> None:
+    summary = create_cleanup_plan(state.project_slug, scope=scope)
+    state.last_cleanup_scope = scope
+    for line in format_cleanup_plan(summary):
+        output_fn(line)
 
 
 def _emit_summary(summary: dict[str, object], output_fn: OutputFn) -> None:

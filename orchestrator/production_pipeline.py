@@ -1,18 +1,24 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Any
 
+from .book_authoring import _chapter_id_from_path, _read_manifest_chapter_paths, analyze_book
+from .authoring import lmstudio_check
 from .character_bible import run_character_bible_synthesis
 from .character_taxonomy import run_character_taxonomy
+from .chapter_selection import parse_chapter_selector
 from .descriptor_enrichment import run_descriptor_enrichment
 from .dialogue_timeline import run_dialogue_timeline
 from .downstream_pipeline import run_downstream_pipeline
 from .environment_bible import run_environment_bible_synthesis
 from .identity_refinement import run_identity_refinement
+from .overnight_pipeline_resume_check import find_first_incomplete_stage
 from .prompt_preparation import run_prompt_preparation
 from .production_status import get_production_status
 from .quality_grading import run_quality_grading
+from .resume_book_analysis import run_resume_book_analysis
 from .scene_bindings import run_scene_binding_synthesis
 from .scene_contracts import run_scene_contract_synthesis
 from .shot_planner import run_shot_planning
@@ -37,6 +43,38 @@ DOWNSTREAM_PHASES = [
 FULL_PRODUCTION_PHASES = PRE_DOWNSTREAM_PHASES + DOWNSTREAM_PHASES + ["quality_grading"]
 PROMPT_REFRESH_PHASES = ["descriptor_enrichment", "prompt_preparation"]
 RUN_MODES = {"resume", "force"}
+TRUSTED_RESUME_PHASE_ORDER = [
+    "lmstudio_check",
+    "story_analysis",
+    "character_taxonomy",
+    "identity_refinement_plan",
+    "identity_refinement_apply",
+    "character_bibles",
+    "environment_bibles",
+    "visual_fallbacks",
+    "scene_contracts",
+    "scene_bindings",
+    "shot_packages",
+    "dialogue_timeline",
+    "descriptor_enrichment",
+    "prompt_preparation",
+    "quality_grading",
+]
+RESUME_STAGE_TO_TRUSTED_PHASE = {
+    "story_analysis": "lmstudio_check",
+    "character_taxonomy": "character_taxonomy",
+    "identity_refinement": "identity_refinement_plan",
+    "character_bibles": "character_bibles",
+    "environment_bibles": "environment_bibles",
+    "visual_fallbacks": "visual_fallbacks",
+    "scene_contracts": "scene_contracts",
+    "scene_bindings": "scene_bindings",
+    "shot_packages": "shot_packages",
+    "dialogue_timeline": "dialogue_timeline",
+    "descriptor_enrichment": "descriptor_enrichment",
+    "prompt_preparation": "prompt_preparation",
+    "quality_grading": "quality_grading",
+}
 
 
 @dataclass(frozen=True)
@@ -59,6 +97,158 @@ class ProductionRunSummary:
             "phase_summaries": self.phase_summaries,
             "warnings": self.warnings,
         }
+
+
+def run_story_analysis_pipeline(
+    project_slug: str,
+    *,
+    chapters: str | None = None,
+    mode: str = "resume",
+) -> ProductionRunSummary:
+    _validate_mode(mode)
+    if mode == "resume" and not chapters:
+        summary = run_resume_book_analysis(project_slug=project_slug, fail_fast=False)
+        return ProductionRunSummary(
+            profile="story_analysis",
+            project_slug=project_slug,
+            chapters=chapters,
+            mode=mode,
+            completed_phases=["story_analysis"],
+            phase_summaries={"story_analysis": summary},
+        )
+
+    requested_paths = _resolve_story_analysis_chapter_paths(project_slug, chapters)
+    summary = analyze_book(
+        project_slug=project_slug,
+        chapters=[str(path) for path in requested_paths] if requested_paths else None,
+        fail_fast=False,
+    )
+    warnings: list[str] = []
+    if mode == "resume" and chapters:
+        warnings.append(
+            "Story analysis resume mode with a chapter slice runs the selected chapters directly instead of using the full resume planner."
+        )
+    return ProductionRunSummary(
+        profile="story_analysis",
+        project_slug=project_slug,
+        chapters=chapters,
+        mode=mode,
+        completed_phases=["story_analysis"],
+        phase_summaries={"story_analysis": _to_dict(summary)},
+        warnings=warnings,
+    )
+
+
+def plan_trusted_resume_pipeline(
+    project_slug: str,
+    *,
+    chapters: str | None = None,
+) -> ProductionRunSummary:
+    resume_stage = find_first_incomplete_stage(project_slug, chapters or "") or "complete"
+    if resume_stage == "complete":
+        return ProductionRunSummary(
+            profile="trusted_resume_plan",
+            project_slug=project_slug,
+            chapters=chapters,
+            mode="resume",
+            completed_phases=[],
+            phase_summaries={"resume_stage": "complete", "planned_phases": []},
+        )
+
+    start_phase = _resolve_trusted_resume_start_phase(resume_stage)
+    planned_phases = TRUSTED_RESUME_PHASE_ORDER[
+        TRUSTED_RESUME_PHASE_ORDER.index(start_phase) :
+    ]
+    warnings: list[str] = []
+    if "story_analysis" in planned_phases:
+        warnings.append(
+            "The trusted overnight BAT does not execute story analysis in its downstream resume path; it starts with LM Studio check and then taxonomy onward."
+        )
+    return ProductionRunSummary(
+        profile="trusted_resume_plan",
+        project_slug=project_slug,
+        chapters=chapters,
+        mode="resume",
+        completed_phases=[],
+        phase_summaries={
+            "resume_stage": resume_stage,
+            "start_phase": start_phase,
+            "planned_phases": planned_phases,
+        },
+        warnings=warnings,
+    )
+
+
+def run_trusted_resume_pipeline(
+    project_slug: str,
+    *,
+    chapters: str | None = None,
+) -> ProductionRunSummary:
+    plan = plan_trusted_resume_pipeline(project_slug, chapters=chapters)
+    planned = plan.phase_summaries.get("planned_phases", [])
+    if not isinstance(planned, list) or not planned:
+        return ProductionRunSummary(
+            profile="trusted_resume_run",
+            project_slug=project_slug,
+            chapters=chapters,
+            mode="resume",
+            completed_phases=[],
+            phase_summaries=dict(plan.phase_summaries),
+            warnings=list(plan.warnings),
+        )
+
+    phase_summaries: dict[str, Any] = {
+        "resume_stage": plan.phase_summaries.get("resume_stage"),
+        "start_phase": plan.phase_summaries.get("start_phase"),
+        "planned_phases": planned,
+    }
+    completed_phases: list[str] = []
+    warnings = list(plan.warnings)
+
+    for phase_name in planned:
+        if phase_name == "lmstudio_check":
+            summary = lmstudio_check()
+        elif phase_name == "story_analysis":
+            warnings.append(
+                "Story analysis remains excluded from trusted downstream resume execution, matching the overnight BAT."
+            )
+            continue
+        else:
+            summary = _run_trusted_phase(project_slug, phase_name, chapters=chapters)
+        phase_summaries[phase_name] = _to_dict(summary)
+        completed_phases.append(phase_name)
+
+    return ProductionRunSummary(
+        profile="trusted_resume_run",
+        project_slug=project_slug,
+        chapters=chapters,
+        mode="resume",
+        completed_phases=completed_phases,
+        phase_summaries=phase_summaries,
+        warnings=warnings,
+    )
+
+
+def run_quicktest_composite(
+    project_slug: str,
+    *,
+    chapters: str | None,
+    composite: str,
+) -> ProductionRunSummary:
+    composite_map = {
+        "09_to_14": "scene_contracts",
+        "11_to_14": "shot_packages",
+        "13_to_14": "descriptor_enrichment",
+    }
+    start_phase = composite_map.get(composite)
+    if start_phase is None:
+        raise ValueError(f"Unsupported quicktest composite: {composite}")
+    return run_downstream_production(
+        project_slug,
+        chapters=chapters,
+        start_phase=start_phase,
+        mode="force",
+    )
 
 
 def run_prompt_prep_refresh(
@@ -152,6 +342,8 @@ def run_full_production_pipeline(
     start_phase: str = "character_taxonomy",
 ) -> ProductionRunSummary:
     _validate_mode(mode)
+    if mode == "resume":
+        return run_trusted_resume_pipeline(project_slug, chapters=chapters)
     if start_phase not in FULL_PRODUCTION_PHASES:
         raise ValueError(f"Unsupported full production start phase: {start_phase}")
 
@@ -232,6 +424,8 @@ def run_post_taxonomy_pipeline(
     mode: str = "resume",
     include_taxonomy: bool = True,
 ) -> ProductionRunSummary:
+    if mode == "resume":
+        return run_trusted_resume_pipeline(project_slug, chapters=chapters)
     start_phase = "character_taxonomy" if include_taxonomy else "character_bibles"
     return run_full_production_pipeline(
         project_slug,
@@ -254,6 +448,22 @@ def _run_project_phase(project_slug: str, phase_name: str, *, mode: str) -> Any:
     if phase_name == "visual_fallbacks":
         return run_visual_fallback_synthesis(project_slug, force=force)
     raise ValueError(f"Unsupported project phase: {phase_name}")
+
+
+def _run_trusted_phase(project_slug: str, phase_name: str, *, chapters: str | None) -> Any:
+    if phase_name == "character_taxonomy":
+        return run_character_taxonomy(project_slug, force=True)
+    if phase_name == "identity_refinement_plan":
+        return run_identity_refinement(project_slug, use_llm=True, apply_merge=False)
+    if phase_name == "identity_refinement_apply":
+        return run_identity_refinement(project_slug, use_llm=True, apply_merge=True)
+    if phase_name == "character_bibles":
+        return run_character_bible_synthesis(project_slug, use_llm=True, force=True)
+    if phase_name == "environment_bibles":
+        return run_environment_bible_synthesis(project_slug, use_llm=True, force=True)
+    if phase_name == "visual_fallbacks":
+        return run_visual_fallback_synthesis(project_slug, force=True)
+    return _run_force_phase(project_slug, phase_name, chapters=chapters)
 
 
 def _run_force_phase(project_slug: str, phase_name: str, *, chapters: str | None) -> Any:
@@ -283,3 +493,27 @@ def _to_dict(summary: Any) -> dict[str, Any]:
 def _validate_mode(mode: str) -> None:
     if mode not in RUN_MODES:
         raise ValueError(f"Unsupported run mode: {mode}")
+
+
+def _resolve_trusted_resume_start_phase(resume_stage: str) -> str:
+    try:
+        return RESUME_STAGE_TO_TRUSTED_PHASE[resume_stage]
+    except KeyError as exc:
+        raise ValueError(f"Unsupported trusted resume stage: {resume_stage}") from exc
+
+
+def _resolve_story_analysis_chapter_paths(project_slug: str, chapters: str | None) -> list[Path]:
+    if not chapters:
+        return []
+    selected_ids = set(parse_chapter_selector(chapters))
+    if not selected_ids:
+        return []
+
+    project_dir = Path.cwd() / "projects" / project_slug
+    manifest_path = project_dir / "01_source" / "book" / "book_manifest.md"
+    manifest_paths = _read_manifest_chapter_paths(project_dir=project_dir, manifest_path=manifest_path)
+    resolved: list[Path] = []
+    for path in manifest_paths:
+        if _chapter_id_from_path(path) in selected_ids:
+            resolved.append(path)
+    return resolved

@@ -1,0 +1,48 @@
+{
+  "schema_version": "2026-04-visual-fallbacks-v1",
+  "project_slug": "demo",
+  "source_title": "Demo",
+  "book_visual_context": "cinematic readable reference lighting, pulp adventure visual style, non-modern clothing, weathered natural materials",
+  "character_fallbacks": {
+    "general": "cinematic readable reference lighting, pulp adventure visual style, non-modern clothing, weathered natural materials; non-modern character styling; avoid contemporary portrait fashion unless explicitly described",
+    "earth_human": "late-19th-century frontier adventure clothing, weathered natural fabrics, belts, boots, simple utilitarian garments, no modern suit or tie unless explicitly described",
+    "barsoom_humanoid": "ancient alien-world planetary-romance wardrobe, harnesses, ornaments, tribal or gladiatorial elements, no modern Earth clothing",
+    "creature_or_primitive": "feral or primitive non-modern appearance, rough natural materials if clothed, no tailored business attire",
+    "group_or_horde": "coherent group visual language using non-modern tribal, frontier, or alien-world materials as appropriate"
+  },
+  "environment_fallbacks": {
+    "general": "cinematic readable reference lighting, pulp adventure visual style, non-modern clothing, weathered natural materials; clear cinematic location reference with explicit landmarks, scale, materials, lighting, and atmosphere",
+    "desert_mountain": "rugged desert mountain terrain, dry scrub, weathered rock, clear horizon, readable distance and scale",
+    "cave_or_cliffside": "visible cave mouth, cliffside rock face, rocky threshold, shadowed interior, weathered stone, readable entrance landmark",
+    "interior": "clear room or chamber layout, foreground midground background separation, pathways, anchor objects, visible scale",
+    "wilderness": "natural terrain with distinct foreground, midground, background, landmarks, lighting, and weather atmosphere"
+  },
+  "negative_terms": {
+    "character_wardrobe": [
+      "modern suit",
+      "necktie",
+      "business attire",
+      "office clothing",
+      "corporate headshot",
+      "passport photo",
+      "turtleneck",
+      "modern athletic shirt"
+    ],
+    "environment": [
+      "generic meadow",
+      "open grassy field",
+      "rolling green hills",
+      "no cave",
+      "hidden landmark",
+      "modern road",
+      "cars",
+      "modern buildings"
+    ]
+  },
+  "notes": [
+    "Generated fallback text is descriptor-heavy by design and should not depend on image models knowing the source title.",
+    "Fallbacks are inferred visual guidance, not explicit canon unless supported by source artifacts."
+  ],
+  "source_context_files": [],
+  "context_digest": ""
+}
