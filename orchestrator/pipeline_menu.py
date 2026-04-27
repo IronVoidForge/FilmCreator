@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable
@@ -25,6 +26,7 @@ from .production_pipeline import (
 )
 from .production_run_state import persist_run_summary
 from .production_status import format_production_status, get_production_status
+from .settings import DEFAULT_LLM_MODEL, STARTUP_LLM_MODELS
 
 
 InputFn = Callable[[str], str]
@@ -36,6 +38,7 @@ class PipelineMenuState:
     project_slug: str = "princess_of_mars_test"
     chapters: str | None = None
     mode: str = "resume"
+    lmstudio_model: str = DEFAULT_LLM_MODEL
     character_reference_limit: int = 1
     environment_reference_limit: int = 1
     last_cleanup_scope: str | None = None
@@ -55,10 +58,12 @@ def run_pipeline_menu(
         project_slug=initial_project,
         chapters=initial_chapters,
         mode=initial_mode,
+        lmstudio_model=os.environ.get("FILMCREATOR_LMSTUDIO_MODEL") or DEFAULT_LLM_MODEL,
     )
     root = projects_root or (Path.cwd() / "projects")
     if prompt_on_start:
         _select_startup_scope(state, root, input_fn, output_fn)
+    _apply_runtime_model(state)
 
     while True:
         _write_main_menu(state, output_fn)
@@ -110,8 +115,33 @@ def _select_startup_scope(state: PipelineMenuState, projects_root: Path, input_f
         state.project_slug = project
     chapters = input_fn("Chapters to run, e.g. 2-3 or 22-25 [Enter for ALL]: ").strip()
     state.chapters = chapters or None
+    _select_model_on_startup(state, input_fn, output_fn)
     output_fn(f"Project set to: {state.project_slug}")
     output_fn(f"Chapters set to: {state.chapters or 'ALL'}")
+    output_fn(f"Model set to: {state.lmstudio_model}")
+
+
+def _select_model_on_startup(state: PipelineMenuState, input_fn: InputFn, output_fn: OutputFn) -> None:
+    output_fn("LM Studio model")
+    for index, model_name in enumerate(STARTUP_LLM_MODELS, start=1):
+        default_note = " [default]" if model_name == state.lmstudio_model else ""
+        output_fn(f"{index}. {model_name}{default_note}")
+    raw = input_fn(f"Choose model [Enter for {state.lmstudio_model}]: ").strip()
+    if not raw:
+        return
+    if raw.isdigit():
+        selected = int(raw)
+        if 1 <= selected <= len(STARTUP_LLM_MODELS):
+            state.lmstudio_model = STARTUP_LLM_MODELS[selected - 1]
+            return
+    if raw in STARTUP_LLM_MODELS:
+        state.lmstudio_model = raw
+        return
+    output_fn(f"Invalid model selection. Keeping: {state.lmstudio_model}")
+
+
+def _apply_runtime_model(state: PipelineMenuState) -> None:
+    os.environ["FILMCREATOR_LMSTUDIO_MODEL"] = state.lmstudio_model
 
 
 def _write_main_menu(state: PipelineMenuState, output_fn: OutputFn) -> None:
@@ -120,6 +150,7 @@ def _write_main_menu(state: PipelineMenuState, output_fn: OutputFn) -> None:
     output_fn(f"Project:  {state.project_slug}")
     output_fn(f"Chapters: {state.chapters or 'ALL'}")
     output_fn(f"Mode:     {state.mode}")
+    output_fn(f"Model:    {state.lmstudio_model}")
     output_fn("")
     output_fn("1. Select project")
     output_fn("2. Select chapters / ALL")

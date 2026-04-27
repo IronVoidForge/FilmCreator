@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 from orchestrator.pipeline_menu import run_pipeline_menu
@@ -24,7 +25,7 @@ def test_pipeline_menu_updates_quick_slice_and_exits(tmp_path: Path) -> None:
 def test_pipeline_menu_startup_scope_prompts_project_and_all_chapters(tmp_path: Path) -> None:
     projects_root = tmp_path / "projects"
     (projects_root / "demo").mkdir(parents=True)
-    prompts = iter(["demo", "", "14"])
+    prompts = iter(["demo", "", "2", "14"])
     outputs: list[str] = []
 
     state = run_pipeline_menu(
@@ -37,8 +38,29 @@ def test_pipeline_menu_startup_scope_prompts_project_and_all_chapters(tmp_path: 
 
     assert state.project_slug == "demo"
     assert state.chapters is None
+    assert state.lmstudio_model == "supergemma4-26b-uncensored-fast-v2"
     assert any("Project set to: demo" in line for line in outputs)
     assert any("Chapters set to: ALL" in line for line in outputs)
+    assert any("Model set to: supergemma4-26b-uncensored-fast-v2" in line for line in outputs)
+
+
+def test_pipeline_menu_startup_model_sets_runtime_env(tmp_path: Path, monkeypatch) -> None:
+    projects_root = tmp_path / "projects"
+    (projects_root / "demo").mkdir(parents=True)
+    prompts = iter(["demo", "", "1", "14"])
+
+    monkeypatch.delenv("FILMCREATOR_LMSTUDIO_MODEL", raising=False)
+
+    state = run_pipeline_menu(
+        initial_project="demo",
+        prompt_on_start=True,
+        input_fn=lambda prompt="": next(prompts),
+        output_fn=lambda line: None,
+        projects_root=projects_root,
+    )
+
+    assert state.lmstudio_model == "gemma-4-26b-a4b-it-uncensored.i1"
+    assert os.environ.get("FILMCREATOR_LMSTUDIO_MODEL") == "gemma-4-26b-a4b-it-uncensored.i1"
 
 
 def test_pipeline_menu_character_reference_plan_uses_current_limit(monkeypatch) -> None:

@@ -564,6 +564,77 @@ def _character_profile(base_fields: dict[str, Any], evidence_summary: list[str],
     }
 
 
+def _contains_any_phrase(text: str, phrases: list[str]) -> bool:
+    return any(phrase in text for phrase in phrases)
+
+
+def _character_identity_cues(
+    base_fields: dict[str, Any],
+    evidence_summary: list[str],
+    canonical_id: str,
+    display_name: str,
+) -> dict[str, Any]:
+    parts = [
+        canonical_id,
+        display_name,
+        " ".join(_coerce_string_list(base_fields.get("aliases", []))),
+        str(base_fields.get("role", "")),
+        str(base_fields.get("entity_kind", "")),
+        str(base_fields.get("identity_baseline", "")),
+        str(base_fields.get("origin_or_historical_context", "")),
+        str(base_fields.get("age_presence", "")),
+        str(base_fields.get("physical_presence_notes", "")),
+        str(base_fields.get("movement_language", "")),
+        str(base_fields.get("costume_signature", "")),
+        str(base_fields.get("voice_or_presence_notes", "")),
+        " ".join(_coerce_string_list(base_fields.get("distinctive_features", []))),
+        " ".join(evidence_summary),
+    ]
+    text = f" {' '.join(_normalize_text(part).lower() for part in parts if isinstance(part, str) and part.strip())} "
+    entity_kind = str(base_fields.get("entity_kind", "")).strip().lower()
+
+    feminine = _contains_any_phrase(
+        text,
+        [" she ", " her ", " hers ", " woman ", " girl ", " princess ", " queen ", " witch ", " lady ", " mother ", " aunt ", " sister ", " bride ", " female "],
+    )
+    masculine = _contains_any_phrase(
+        text,
+        [" he ", " his ", " him ", " man ", " boy ", " prince ", " king ", " wizard ", " lord ", " father ", " uncle ", " brother ", " groom ", " male "],
+    )
+    child = _contains_any_phrase(
+        text,
+        [" child ", " children ", " little girl ", " little boy ", " young girl ", " young boy ", " schoolgirl ", " schoolboy ", " youngster ", " kid ", " girl ", " boy "],
+    )
+    elder = _contains_any_phrase(
+        text,
+        [" old man ", " old woman ", " elderly ", " aged ", " elder ", " grandmother ", " grandfather ", " matron ", " patriarch "],
+    )
+    collective = entity_kind in {"group", "collective"} or _contains_any_phrase(
+        text,
+        [" they ", " them ", " their ", " group ", " crowd ", " troop ", " band ", " court ", " council ", " villagers ", " soldiers ", " guards ", " monkeys ", " mice ", " children "],
+    )
+    creature = _contains_any_phrase(
+        text,
+        [" creature ", " beast ", " animal ", " monkey ", " monkey-like ", " rabbit ", " rabbit-like ", " lion ", " tiger ", " bear ", " dog ", " hound ", " horse ", " bird ", " winged ", " fur ", " feathers ", " paws ", " claws ", " whiskers ", " muzzle ", " snout ", " tail ", " quadruped ", " nonhuman "],
+    )
+    human = _contains_any_phrase(
+        text,
+        [" human ", " woman ", " man ", " girl ", " boy ", " princess ", " prince ", " queen ", " king ", " mother ", " father ", " aunt ", " uncle ", " child ", " person "],
+    )
+
+    return {
+        "entity_kind": entity_kind,
+        "is_feminine_coded": feminine,
+        "is_masculine_coded": masculine,
+        "is_child_coded": child,
+        "is_elder_coded": elder,
+        "is_collective_coded": collective,
+        "is_creature_coded": creature,
+        "is_human_coded": human,
+        "cue_count": sum(1 for flag in [feminine, masculine, child, elder, collective, creature, human] if flag),
+    }
+
+
 def _descriptor_identity_context(
     *,
     entity_type: str,
@@ -600,6 +671,7 @@ def _character_specific_generated_default(
     display_name: str,
 ) -> Any:
     profile = _character_profile(base_fields, evidence_summary, canonical_id, display_name)
+    cues = _character_identity_cues(base_fields, evidence_summary, canonical_id, display_name)
     profile_class = profile["resolved_profile_class"]
     if profile_class == "collective_group":
         collective_defaults = {
@@ -622,6 +694,27 @@ def _character_specific_generated_default(
         }
         if field_name in collective_defaults:
             return collective_defaults[field_name]
+    if cues["is_creature_coded"] and profile_class == "unknown_individual":
+        creature_like_defaults = {
+            "height": "animal-scale body sized to the species",
+            "build": "species-appropriate creature build",
+            "skin_tone": "species-specific hide, fur, feather, or skin coloration",
+            "hair_color": "natural coat or fur coloring",
+            "hair_style": "natural coat, mane, or feather arrangement",
+            "eye_color": "animal or creature eyes matched to the species",
+            "face_shape": "species-specific muzzle, beak, or skull structure",
+            "facial_hair": "not applicable",
+            "costume_materials": "natural body covering or simple harness materials",
+            "posture": "creature posture readable for the species",
+            "expression_tendency": "animal or creature alertness",
+            "voice_or_presence_notes": "presence reads as distinctly nonhuman",
+            "physical_build": "nonhuman silhouette with species-specific anatomy",
+            "movement_language": "species-specific movement with clear creature mechanics",
+            "sex": "creature sex not visually emphasized",
+            "age_range": "adult creature",
+        }
+        if field_name in creature_like_defaults:
+            return creature_like_defaults[field_name]
     if profile_class == "creature_individual":
         creature_defaults = {
             "height": "large creature scale",
@@ -643,6 +736,34 @@ def _character_specific_generated_default(
         }
         if field_name in creature_defaults:
             return creature_defaults[field_name]
+    if cues["is_child_coded"] and profile_class in {"human_individual", "unknown_individual"}:
+        child_defaults = {
+            "height": "child-sized stature",
+            "build": "small youthful build",
+            "skin_tone": "human skin tone suited to the canon context",
+            "hair_color": "human hair color suited to the canon context",
+            "hair_style": "simple youthful hairstyle",
+            "eye_color": "young attentive eyes",
+            "face_shape": "soft youthful face",
+            "facial_hair": "none",
+            "costume_materials": "simple cloth and child-appropriate materials",
+            "posture": "youthful posture with visible energy or caution",
+            "expression_tendency": "open, readable child emotion",
+            "voice_or_presence_notes": "presence reads as clearly young",
+            "physical_build": "small youthful silhouette",
+            "movement_language": "quick childlike movement",
+            "sex": "female" if cues["is_feminine_coded"] and not cues["is_masculine_coded"] else "male" if cues["is_masculine_coded"] and not cues["is_feminine_coded"] else "child",
+            "age_range": "child",
+        }
+        if field_name in child_defaults:
+            return child_defaults[field_name]
+    if cues["is_feminine_coded"] and profile_class == "unknown_individual":
+        feminine_defaults = {
+            "facial_hair": "none",
+            "sex": "female",
+        }
+        if field_name in feminine_defaults:
+            return feminine_defaults[field_name]
     if profile_class == "green_martian_individual":
         green_defaults = {
             "height": "towering over a human frame",
@@ -770,6 +891,7 @@ def _rewrite_character_generated_fields(
     display_name: str,
 ) -> tuple[dict[str, Any], list[str]]:
     profile = _character_profile(base_fields, evidence_summary, canonical_id, display_name)
+    cues = _character_identity_cues(base_fields, evidence_summary, canonical_id, display_name)
     rewritten = dict(generated_fields)
     rewrite_flags: list[str] = list(profile.get("conflicts", []))
 
@@ -791,28 +913,101 @@ def _rewrite_character_generated_fields(
         )
         rewrite_flags.append(reason)
 
+    def set_direct(field_name: str, value: Any, reason: str) -> None:
+        rewritten[field_name] = value
+        rewrite_flags.append(reason)
+
     for field_name, value in list(rewritten.items()):
         if _looks_like_generic_character_bundle(value):
+            if field_name == "facial_hair" and (profile["is_feminine_coded"] or cues["is_feminine_coded"]):
+                set_direct(field_name, "none", "identity_cue_conflict_grooming")
+                continue
             replace(field_name, f"character_generated_field_rewritten_{field_name}")
             continue
         normalized = _normalize_text(str(value)).lower() if isinstance(value, str) else ""
-        if profile["is_feminine_coded"] and field_name == "facial_hair" and any(token in normalized for token in ["stubble", "beard", "mustache", "moustache"]):
-            replace(field_name, "character_gender_contradiction_rewritten")
+        if field_name == "sex":
+            if cues["is_collective_coded"] and any(token in normalized for token in ["male", "female", "man", "woman", "boy", "girl"]):
+                set_direct(field_name, "mixed or unspecified group", "identity_cue_conflict_group_vs_individual")
+                continue
+            if cues["is_feminine_coded"] and any(token in normalized for token in ["male", "man", "boy"]):
+                set_direct(field_name, "female", "identity_cue_conflict_sex")
+                continue
+            if cues["is_masculine_coded"] and any(token in normalized for token in ["female", "woman", "girl"]):
+                set_direct(field_name, "male", "identity_cue_conflict_sex")
+                continue
+        if field_name == "age_range":
+            if cues["is_child_coded"] and any(token in normalized for token in ["adult", "older", "elder", "middle-aged", "battle-hardened"]):
+                set_direct(field_name, "child", "identity_cue_conflict_age")
+                continue
+            if cues["is_elder_coded"] and any(token in normalized for token in ["child", "young", "teen"]):
+                set_direct(field_name, "older adult", "identity_cue_conflict_age")
+                continue
+        if (profile["is_feminine_coded"] or cues["is_feminine_coded"]) and field_name == "facial_hair" and any(token in normalized for token in ["stubble", "beard", "mustache", "moustache"]):
+            set_direct(field_name, "none", "identity_cue_conflict_grooming")
+        elif cues["is_collective_coded"] and field_name == "facial_hair" and any(token in normalized for token in ["stubble", "beard", "mustache", "moustache", "clean-shaven"]):
+            replace(field_name, "identity_cue_conflict_group_vs_individual")
         elif profile["resolved_profile_class"] == "green_martian_individual" and field_name in {"skin_tone", "hair_color", "hair_style", "facial_hair"}:
             if any(token in normalized for token in ["light-to-medium", "dark brown", "short hair", "stubble", "clean-shaven"]):
-                replace(field_name, f"character_species_contradiction_rewritten_{field_name}")
+                replace(field_name, f"identity_cue_conflict_species_{field_name}")
         elif profile["resolved_profile_class"] == "creature_individual" and field_name in {"hair_style", "face_shape", "facial_hair", "skin_tone", "hair_color"}:
             if any(token in normalized for token in ["short hair", "angular face", "clean-shaven", "stubble", "dark brown", "light-to-medium"]):
-                replace(field_name, f"character_creature_contradiction_rewritten_{field_name}")
+                replace(field_name, f"identity_cue_conflict_species_{field_name}")
+        elif cues["is_creature_coded"] and field_name in {"hair_style", "face_shape", "facial_hair", "skin_tone", "hair_color", "costume_materials"}:
+            if any(token in normalized for token in ["short hair", "angular face", "clean-shaven", "stubble", "dark brown", "light-to-medium", "frontier", "cloth"]):
+                replace(field_name, f"identity_cue_conflict_species_{field_name}")
         elif profile["resolved_profile_class"] == "human_individual" and field_name in {"sex", "age_range", "height", "build", "skin_tone", "hair_color", "hair_style", "eye_color", "face_shape", "facial_hair", "movement_language", "voice_or_presence_notes"}:
             if any(token in normalized for token in ["animal", "beast", "hide", "fur", "mane", "predatory", "skull", "primal"]) or normalized == "not applicable":
-                replace(field_name, f"character_human_contradiction_rewritten_{field_name}")
+                replace(field_name, f"identity_cue_conflict_species_{field_name}")
         elif profile["resolved_profile_class"] == "collective_group" and str(base_fields.get("entity_kind", "")).strip().lower() == "individual":
             # A singular entity should not inherit collective outputs even if noisy evidence mentions groups.
             if field_name in {"sex", "age_range", "height", "build", "movement_language", "voice_or_presence_notes"}:
-                replace(field_name, f"character_individual_vs_collective_rewritten_{field_name}")
+                replace(field_name, f"identity_cue_conflict_group_vs_individual_{field_name}")
 
     return rewritten, _ordered_unique(rewrite_flags)
+
+
+def _character_identity_review_flags(
+    field_values: dict[str, Any],
+    *,
+    base_fields: dict[str, Any],
+    evidence_summary: list[str],
+    canonical_id: str,
+    display_name: str,
+) -> list[str]:
+    profile = _character_profile(base_fields, evidence_summary, canonical_id, display_name)
+    cues = _character_identity_cues(base_fields, evidence_summary, canonical_id, display_name)
+    flags: list[str] = []
+
+    sex_value = _normalize_text(str(field_values.get("sex", ""))).lower()
+    age_value = _normalize_text(str(field_values.get("age_range", ""))).lower()
+    facial_hair_value = _normalize_text(str(field_values.get("facial_hair", ""))).lower()
+    species_fields = " ".join(
+        _normalize_text(str(field_values.get(field_name, ""))).lower()
+        for field_name in ["skin_tone", "hair_color", "hair_style", "face_shape", "facial_hair", "costume_materials", "identity_baseline"]
+    )
+
+    if cues["is_feminine_coded"] and any(token in sex_value for token in ["male", "man", "boy"]):
+        flags.append("identity_cue_conflict_sex")
+    if cues["is_masculine_coded"] and any(token in sex_value for token in ["female", "woman", "girl"]):
+        flags.append("identity_cue_conflict_sex")
+    if cues["is_child_coded"] and any(token in age_value for token in ["adult", "older", "elder", "middle-aged", "battle-hardened"]):
+        flags.append("identity_cue_conflict_age")
+    if cues["is_elder_coded"] and any(token in age_value for token in ["child", "young", "teen"]):
+        flags.append("identity_cue_conflict_age")
+    if cues["is_collective_coded"] and any(token in sex_value for token in ["male", "female", "man", "woman", "boy", "girl"]):
+        flags.append("identity_cue_conflict_group_vs_individual")
+    if (profile["is_feminine_coded"] or cues["is_feminine_coded"]) and any(token in facial_hair_value for token in ["stubble", "beard", "mustache", "moustache"]):
+        flags.append("identity_cue_conflict_grooming")
+    if profile["is_human"] and any(token in species_fields for token in ["fur", "mane", "muzzle", "snout", "paws", "claws", "primal", "predatory"]):
+        flags.append("identity_cue_conflict_species")
+    if (profile["is_creature"] or cues["is_creature_coded"]) and any(
+        token in species_fields for token in ["light-to-medium skin", "dark brown", "short practical frontier cut", "clean-shaven", "field stubble", "angular face"]
+    ):
+        flags.append("identity_cue_conflict_species")
+    if cues["cue_count"] <= 1:
+        flags.append("identity_cue_low_support")
+
+    return _ordered_unique(flags)
 
 
 def _load_json_file(path: Path) -> dict[str, Any]:
@@ -2559,6 +2754,15 @@ def _base_character_descriptor(
         inferred_fields=inferred_fields,
     )
     _sanitize_character_fields(base_fields, field_origin)
+    review_flags.extend(
+        _character_identity_review_flags(
+            base_fields,
+            base_fields=base_fields,
+            evidence_summary=evidence_summary,
+            canonical_id=char_id,
+            display_name=bible.get("display_name") or entry.get("display_name") or char_id,
+        )
+    )
 
     if not evidence_summary:
         evidence_summary = ["No usable evidence lines were collected."]
@@ -2680,6 +2884,14 @@ def _base_environment_descriptor(
         review_flags=review_flags,
         inferred_fields=inferred_fields,
     )
+
+    low_support_fields = [
+        field_name
+        for field_name in ["layout", "scale", "geography", "architecture", "materials", "lighting", "mood", "weather_or_atmosphere"]
+        if field_origin.get(field_name) in {"fallback", "llm_generated"} and _descriptor_value_is_unknown(base_fields.get(field_name), field_name=field_name)
+    ]
+    if len(low_support_fields) >= 3:
+        review_flags.append("environment_identity_low_support")
 
     if "unknown" in {str(base_fields.get("layout", "")).lower(), str(base_fields.get("lighting", "")).lower(), str(base_fields.get("mood", "")).lower()}:
         review_flags.append("low_confidence_spatial_fields")

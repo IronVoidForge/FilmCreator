@@ -6,6 +6,11 @@ from pathlib import Path
 
 
 DEFAULT_LLM_MODEL = "gemma-4-26b-a4b-it"
+STARTUP_LLM_MODELS = (
+    "gemma-4-26b-a4b-it-uncensored.i1",
+    "supergemma4-26b-uncensored-fast-v2",
+    "gemma-4-26b-a4b-it",
+)
 
 
 @dataclass(frozen=True)
