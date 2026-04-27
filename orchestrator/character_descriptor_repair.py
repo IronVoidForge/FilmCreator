@@ -175,10 +175,10 @@ def _join_fragments(*values: Any) -> str:
 
 
 def _body_fallback(bucket: str) -> str:
-    if bucket in {"creature_or_primitive", "creature_or_animal"}:
+    if bucket == "creature_or_animal":
         return "body not specifically described; use a source-appropriate creature or animal silhouette with readable anatomy"
-    if bucket in {"barsoom_humanoid", "humanoid_speculative"}:
+    if bucket == "humanoid_speculative":
         return "body not specifically described; use a non-modern speculative humanoid silhouette with readable proportions"
-    if bucket in {"group_or_horde", "group_or_crowd"}:
+    if bucket == "group_or_crowd":
         return "group body details vary; preserve coherent species, costume era, and group silhouette"
     return "body not specifically described; use a grounded human adventure silhouette with realistic proportions"

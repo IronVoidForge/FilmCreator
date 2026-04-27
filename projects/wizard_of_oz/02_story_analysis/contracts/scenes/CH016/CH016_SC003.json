@@ -5,36 +5,36 @@
   "purpose": "To fulfill the Lion's quest and establish the Wizard's use of psychological placebo.",
   "summary": "The Cowardly Lion seeks courage. Oz provides a green liquid in a dish, claiming it must be swallowed to work. The Lion drinks it and immediately feels transformed by the perceived power of the potion.",
   "emotional_arc": "Fear/Anxiety $\\rightarrow$ Hesitation $\\rightarrow$ Sudden Bravado.",
-  "production_intent": "Establish the Wizard's use of psychological placebo by providing a green liquid to the Cowardly Lion. The scene must visually track the transition from physical trembling and slumped posture to an upright, bravado-filled stance following the ingestion of the potion.",
-  "scene_short_description": "A massive lion drinks green liquid from a carved dish provided by the Wizard.",
-  "scene_primary_scale_story_point": "The Cowardly Lion is a large, heavy quadrupedal predator of significant mass.",
+  "production_intent": "Establish the Wizard's use of psychological placebo by providing a green liquid to the Cowardly Lion. The scene must visually track the transition from physical trembling and slumped posture to an upright, bravado-filled stance following the ingestion of the liquid.",
+  "scene_short_description": "A large predator seeks courage through a green liquid provided by a mysterious figure.",
+  "scene_primary_scale_story_point": "The massive weight of the cowardly_lion vs the small carved dish.",
   "scene_required_anchor_catalog": [
     "carved dish",
     "throne_room_of_oz"
   ],
   "scene_start_state": "cowardly_lion is slumped and trembling with anxiety.",
-  "scene_end_state": "cowardly_lion is upright and projecting sudden bravado.",
-  "dominant_action_line": "The Lion consumes the green liquid and undergoes a perceived psychological transformation.",
+  "scene_end_state": "cowardly_lion stands upright with sudden bravado.",
+  "dominant_action_line": "The Lion drinks the green liquid and undergoes a psychological transformation.",
   "scene_spatial_layout": [
     "central focus on the interaction between oz and cowardly_lion",
-    "scale contrast between the Wizard and the massive lion"
+    "throne_room_of_oz provides high-ceiling scale"
   ],
   "character_spatial_map": [
-    "oz positioned to present the dish",
-    "cowardly_lion occupying significant floor space due to mass"
+    "oz positioned as the provider/authority",
+    "cowardly_lion positioned as the seeker/recipient"
   ],
   "environment_subzones": [
-    "throne_room_of_oz"
+    "throne_room_of_oz central area"
   ],
   "entry_vectors": [
-    "cowardly_lion enters throne_room_of_oz"
+    "approach to the center of the throne room"
   ],
   "exit_vectors": [
-    "cowardly_lion exits throne_room_of_oz"
+    "departure from the center of the throne room"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: presentation of the placebo",
-    "BT002 -> BT003: ingestion and transformation"
+    "BT001 -> BT002: The presentation of the dish",
+    "BT002 -> BT003: The ingestion and immediate reaction"
   ],
   "characters_required": [
     {
@@ -76,155 +76,145 @@
   ],
   "visual_coverage_families": [
     "Close-up of green liquid in carved dish",
-    "Medium shot of trembling lion during consumption",
-    "Low-angle shots of upright lion to emphasize stature"
+    "Medium shot of trembling Lion during ingestion",
+    "Low-angle shots of Lion to emphasize stature change"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
       "summary": "Oz presents the green liquid",
       "purpose": "",
-      "action_start": "oz holds carved dish",
-      "action_end": "dish is offered to lion",
+      "action_start": "oz holds out dish",
+      "action_end": "dish is held before lion",
       "active_subjects": [
-        "oz"
-      ],
-      "passive_subjects": [
+        "oz",
         "cowardly_lion"
       ],
-      "spatial_context": "throne_room_of_oz",
-      "blocking_hint": "oz stands before the massive lion",
+      "passive_subjects": [],
+      "spatial_context": "center of throne room",
+      "blocking_hint": "oz stands authoritative, lion is low/slumped",
       "environment_subzone": "throne_room_of_oz",
-      "continuity_focus": "liquid level in dish",
-      "coverage_hint": "close-up of liquid",
-      "coverage_priority": "high",
-      "handoff_to_next": "BT002"
+      "continuity_focus": "liquid level in dish | coverage=medium shot | priority=high | handoff=BT002",
+      "coverage_hint": "",
+      "coverage_priority": "",
+      "handoff_to_next": ""
     },
     {
       "beat_id": "BT002",
       "summary": "The Lion drinks the potion",
       "purpose": "",
-      "action_start": "lion approaches dish trembling",
-      "action_end": "dish is emptied/liquid level drops",
-      "active_subjects": [
-        "cowardly_lion",
-        "oz"
-      ],
-      "passive_subjects": [],
-      "spatial_context": "throne_room_of_oz",
-      "blocking_hint": "lion leans down to the dish",
-      "environment_subzone": "throne_room_of_oz",
-      "continuity_focus": "liquid level in dish; lion's trembling",
-      "coverage_hint": "medium shot of trembling",
-      "coverage_priority": "high",
-      "handoff_to_next": "BT003"
-    },
-    {
-      "beat_id": "BT003",
-      "summary": "The Lion transforms through placebo",
-      "purpose": "",
-      "action_start": "lion finishes drinking",
-      "action_end": "lion stands with bravado",
+      "action_start": "lion approaches dish",
+      "action_end": "dish is emptied/lowered",
       "active_subjects": [
         "cowardly_lion"
       ],
       "passive_subjects": [
         "oz"
       ],
-      "spatial_context": "throne_room_of_oz",
-      "blocking_hint": "lion shifts from slumped to upright",
-      "environment_subzone": "throne_room_of_oz",
-      "continuity_focus": "posture change from slumped to upright",
-      "coverage_hint": "low-angle shot of lion",
-      "coverage_priority": "medium",
-      "handoff_to_next": "end_scene"
+      "spatial_context": "interaction over the dish",
+      "blocking_hint": "lion's head moves toward the dish | environment_subzone=throne_room_of_oz",
+      "environment_subzone": "",
+      "continuity_focus": "liquid level depletion | coverage=close-up of liquid and medium shot of trembling | priority=high | handoff=BT003",
+      "coverage_hint": "",
+      "coverage_priority": "",
+      "handoff_to_next": ""
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The transformation occurs",
+      "purpose": "",
+      "action_start": "lion finishes drinking",
+      "action_end": "lion stands in bravado pose",
+      "active_subjects": [
+        "cowardly_lion"
+      ],
+      "passive_subjects": [
+        "oz"
+      ],
+      "spatial_context": "throne room center",
+      "blocking_hint": "lion shifts from slumped to upright predator silhouette | environment_subzone=throne_room_of_oz",
+      "environment_subzone": "",
+      "continuity_focus": "posture change (slumped to upright) | coverage=low-angle shots | priority=high | handoff=end of scene",
+      "coverage_hint": "",
+      "coverage_priority": "",
+      "handoff_to_next": ""
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish placebo",
-      "planned_shot_moment_summary": "oz presents the carved dish containing green liquid",
-      "primary_subject_seed": "oz",
-      "secondary_subjects_seed": [
-        "cowardly_lion"
-      ],
-      "subject_visibility": "on_screen",
-      "narration_mode": "in_scene_speaker",
-      "environment_subzone": "throne_room_of_oz",
-      "planned_shot_required_anchor_1": "carved dish",
-      "planned_shot_scale_proof_detail": "dish relative to oz's hands",
-      "start_state_seed": "dish held steady",
-      "end_state_seed": "dish offered to lion",
-      "action_seed": "offering the liquid",
-      "blocking_seed": [
-        "oz reaches toward lion"
-      ],
-      "shot_size": "close_up",
-      "camera_angle": "eye_level",
-      "lens_family": "normal",
-      "camera_motion": "locked_off",
-      "zoom_behavior": "none",
-      "focus_strategy": "shallow_subject",
-      "lighting_style": "high_contrast_ceremonial",
-      "primary_subject_angle": "front_three_quarter_right"
+      "narrative_function": "establish placebo | moment=oz presents the carved dish | primary=oz | secondary=cowardly_lion | visibility=on_screen | narration=in_scene_speaker | subzone=throne_room_of_oz | anchor1=carved dish | scale_proof=dish size relative to oz hands | start=dish held out | end=dish presented | action=oz offers the liquid | blocking=oz stands before lion | shot_size=medium | camera_angle=eye_level | lens=normal | motion=locked_off | zoom=none | focus=shallow_subject | lighting=high_contrast_ceremonial | subject_angle=front_three_quarter_right",
+      "planned_shot_moment_summary": "",
+      "primary_subject_seed": "",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "",
+      "narration_mode": "",
+      "environment_subzone": "",
+      "planned_shot_required_anchor_1": "",
+      "planned_shot_scale_proof_detail": "",
+      "start_state_seed": "",
+      "end_state_seed": "",
+      "action_seed": "",
+      "blocking_seed": [],
+      "shot_size": "",
+      "camera_angle": "",
+      "lens_family": "",
+      "camera_motion": "",
+      "zoom_behavior": "",
+      "focus_strategy": "",
+      "lighting_style": "",
+      "primary_subject_angle": ""
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "show hesitation/fear",
-      "planned_shot_moment_summary": "lion trembles while approaching the dish",
-      "primary_subject_seed": "cowardly_lion",
-      "secondary_subjects_seed": [
-        "oz"
-      ],
-      "subject_visibility": "on_screen",
-      "narration_mode": "in_scene_speaker",
-      "environment_subzone": "throne_room_of_oz",
-      "planned_shot_required_anchor_1": "carved dish",
-      "planned_shot_scale_proof_detail": "lion's massive physical presence vs dish",
-      "start_state_seed": "lion trembling",
-      "end_state_seed": "lion drinking",
-      "action_seed": "drinking the liquid",
-      "blocking_seed": [
-        "lion leans down to dish"
-      ],
-      "shot_size": "medium",
-      "camera_angle": "eye_level",
-      "lens_family": "wide",
-      "camera_motion": "handheld",
-      "zoom_behavior": "none",
-      "focus_strategy": "shallow_subject",
-      "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front_three_quarter_left"
+      "narrative_function": "detail placebo | moment=close up of the green liquid | primary=green liquid | secondary=carved dish | visibility=on_screen | narration=none | subzone=throne_room_of_oz | anchor1=carved dish | scale_proof=liquid surface tension | start=dish static | end=dish tilting | action=lion drinks the liquid | blocking=lion leans into frame | shot_size=close_up | camera_angle=eye_level | lens=portrait | motion=locked_off | zoom=none | focus=deep_focus | lighting=high_contrast_ceremonial | subject_angle=front",
+      "planned_shot_moment_summary": "",
+      "primary_subject_seed": "",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "",
+      "narration_mode": "",
+      "environment_subzone": "",
+      "planned_shot_required_anchor_1": "",
+      "planned_shot_scale_proof_detail": "",
+      "start_state_seed": "",
+      "end_state_seed": "",
+      "action_seed": "",
+      "blocking_seed": [],
+      "shot_size": "",
+      "camera_angle": "",
+      "lens_family": "",
+      "camera_motion": "",
+      "zoom_behavior": "",
+      "focus_strategy": "",
+      "lighting_style": "",
+      "primary_subject_angle": ""
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "establish bravado",
-      "planned_shot_moment_summary": "lion stands tall and upright after drinking",
-      "primary_subject_seed": "cowardly_lion",
+      "narrative_function": "show transformation | moment=lion stands tall and brave | primary=cowardly_lion | secondary=oz | visibility=on_screen | narration=none | subzone=throne_room_of_oz | anchor1=throne_room_of_oz | scale_proof=lion's upright predator silhouette | start=slumped/trembling | end=upright/brave | action=lion shifts posture to bravado | blocking=lion moves from slumped to tall | shot_size=medium_full | camera_angle=low_angle | lens=wide | motion=push_in | zoom=subtle_in | focus=shallow_subject | lighting=high_contrast_ceremonial | subject_angle=front_three_quarter_left",
+      "planned_shot_moment_summary": "",
+      "primary_subject_seed": "",
       "secondary_subjects_seed": [],
-      "subject_visibility": "on_screen",
-      "narration_mode": "in_scene_speaker",
-      "environment_subzone": "throne_room_of_oz",
-      "planned_shot_required_anchor_1": "throne_room_of_oz",
-      "planned_shot_scale_proof_detail": "upright posture vs slumped start",
-      "start_state_seed": "post-ingestion pause",
-      "end_state_seed": "bravado stance",
-      "action_seed": "shifting posture to upright",
-      "blocking_seed": [
-        "lion rises from slumped position"
-      ],
-      "shot_size": "medium_full",
-      "camera_angle": "low_angle",
-      "lens_family": "wide",
-      "camera_motion": "push_in",
-      "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
-      "lighting_style": "high_contrast_ceremonial",
-      "primary_subject_angle": "front"
+      "subject_visibility": "",
+      "narration_mode": "",
+      "environment_subzone": "",
+      "planned_shot_required_anchor_1": "",
+      "planned_shot_scale_proof_detail": "",
+      "start_state_seed": "",
+      "end_state_seed": "",
+      "action_seed": "",
+      "blocking_seed": [],
+      "shot_size": "",
+      "camera_angle": "",
+      "lens_family": "",
+      "camera_motion": "",
+      "zoom_behavior": "",
+      "focus_strategy": "",
+      "lighting_style": "",
+      "primary_subject_angle": ""
     }
   ],
   "unresolved_questions": [],
@@ -290,16 +280,16 @@
     "[CH011] Chapter XI (book index hit)",
     "[CH015] Chapter XV (book index hit)",
     "[CH010] Chapter X (book index hit)",
-    "Character cowardly_lion: A large, heavy quadrupedal lion with a massive physical presence. The character possesses a distinct feline predator silhouette and is noted for being of such significant mass that he cannot be carried by other characters."
+    "Character cowardly_lion: A large, heavy quadrupedal feline with a predator's silhouette. The character possesses significant mass, described as being too heavy to be carried by companions. As an animal entity, the visual identity is defined by its large sca..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH016_SC003\n\n## Production Intent\nEstablish the Wizard's use of psychological placebo by providing a green liquid to the Cowardly Lion. The scene must visually track the transition from physical trembling and slumped posture to an upright, bravado-filled stance following the ingestion of the potion.\n\n## Required Cast\n- cowardly_lion (Large, heavy quadrupedal lion; massive presence)\n- oz (The Wizard)\n\n## Required Environments\n- throne_room_of_oz\n\n## Continuity Constraints\n- Liquid level in the carved dish must decrease during BT002.\n- Posture of cowardly_lion must transition from slumped/trembling to upright/bravado.\n\n## Beat List\n- BT001: Oz presents the green liquid.\n- BT002: The Lion drinks the potion (with trembling).\n- BT003: The Lion transforms through placebo (posture shift).",
+  "storyboard_markdown": "# Scene Contract: CH016_SC003\n\n## Production Intent\nEstablish the Wizard's use of psychological placebo by providing a green liquid to the Cowardly Lion. The scene must visually track the transition from physical trembling and slumped posture to an upright, bravado-filled stance following the ingestion of the liquid.\n\n## Required Cast\n- cowardly_lion: Large, heavy quadrupedal feline with predator silhouette; significant mass.\n- oz: The Wizard.\n\n## Required Environments\n- throne_room_of_oz: High scale ceremonial setting.\n\n## Continuity Constraints\n- Liquid level in the carved dish must decrease logically during ingestion.\n- Cowardly Lion's posture must transition from slumped/trembling to upright/brave.\n\n## Beat List\n- BT001: Oz presents the green liquid.\n- BT002: The Lion drinks the potion.\n- BT003: The transformation occurs (psychological bravado).",
   "metadata": {
     "artifact_id": "CH016_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "d9bf25744f446a917e15fbd2e3cfd451ffc67d50",
+    "source_fingerprint": "db66b4ca1ed58783ec8d55e6551453ac27269a79",
     "created_at_utc": "2026-04-27T08:50:14.275722+00:00",
-    "updated_at_utc": "2026-04-27T08:50:14.275722+00:00",
+    "updated_at_utc": "2026-04-27T13:53:03.121457+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -324,6 +314,11 @@
         "timestamp_utc": "2026-04-27T08:50:56.481843+00:00",
         "action": "synthesized",
         "source_fingerprint": "d9bf25744f446a917e15fbd2e3cfd451ffc67d50"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:53:44.941843+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "db66b4ca1ed58783ec8d55e6551453ac27269a79"
       }
     ]
   }

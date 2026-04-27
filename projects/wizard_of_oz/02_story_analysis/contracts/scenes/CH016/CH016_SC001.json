@@ -5,37 +5,37 @@
   "purpose": "To fulfill the Scarecrow's quest and establish the Wizard's method of \"magic\" through physical manipulation.",
   "summary": "The Scarecrow enters the throne room to receive his brains. Oz performs a crude but effective procedure, replacing the straw in the Scarecrow's head with bran, pins, and needles. The Scarecrow emerges convinced of his newfound intellect.",
   "emotional_arc": "Anticipation $\\rightarrow$ Confusion/Shock $\\rightarrow$ Intellectual Satisfaction.",
-  "production_intent": "Demonstrate the Wizard's deceptive magic through a physical, crude procedure involving the replacement of straw with bran and sharp objects. The scene must emphasize the tactile nature of the \"brain\" transfer to ground the fantasy in physical manipulation.",
-  "scene_short_description": "A rustic humanoid receives a crude brain replacement via physical stuffing in a grand throne room.",
-  "scene_primary_scale_story_point": "Humanoid-scale Scarecrow vs. Wizard's manipulation tools.",
+  "production_intent": "Demonstrate the Wizard's deceptive magic through a physical, crude procedure involving the replacement of straw with bran and pins. The scene must emphasize the tactile nature of the \"brain\" mixture to establish that Oz's power is based on manipulation rather than true sorcery.",
+  "scene_short_description": "A rustic humanoid figure receives a crude cranial procedure inside a grand throne room.",
+  "scene_primary_scale_story_point": "Humanoid scale (the_scarecrow) interacting with the Wizard's workspace within the large-scale throne_room_of_oz.",
   "scene_required_anchor_catalog": [
     "the_scarecrow head cavity",
     "bran/pin mixture container"
   ],
-  "scene_start_state": "The Scarecrow enters the throne room with high anticipation.",
-  "scene_end_state": "The Scarecrow emerges convinced of his newfound intellect.",
-  "dominant_action_line": "Oz replaces straw in the Scarecrow's head with a mixture of bran, pins, and needles.",
+  "scene_start_state": "The_scarecrow enters the throne_room_of_oz with high anticipation.",
+  "scene_end_state": "The_scarecrow emerges from the procedure expressing intellectual satisfaction.",
+  "dominant_action_line": "Oz replaces straw in the Scarecrow's head with a mixture of bran and pins.",
   "scene_spatial_layout": [
-    "Centralized interaction zone around the throne/manipulation area",
-    "Open floor space for entry and exit"
+    "Centralized workspace for the procedure",
+    "Open floor space for entry/exit"
   ],
   "character_spatial_map": [
-    "oz positioned as the active manipulator",
-    "the_scarecrow positioned as the recipient/subject"
+    "oz positioned at the manipulation site",
+    "the_scarecrow seated or held stationary during the procedure"
   ],
   "environment_subzones": [
-    "throne_room_of_oz central dais",
-    "throne_room_of_oz entrance path"
+    "throne_room_of_oz central area",
+    "wizard's manipulation station"
   ],
   "entry_vectors": [
-    "throne_room_of_oz entrance"
+    "entrance to throne_room_of_oz"
   ],
   "exit_vectors": [
-    "throne_room_of_oz exit"
+    "exit from throne_room_of_oz"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Physical contact/procedure begins",
-    "BT002 -> BT003: Procedure completes/Awakening"
+    "BT001 -> BT002: Transition from arrival to physical contact",
+    "BT002 -> BT003: Transition from procedure to realization"
   ],
   "characters_required": [
     {
@@ -72,20 +72,20 @@
     }
   ],
   "continuity_constraints": [
-    "Ratio of straw to bran inside the Scarecrow's head",
-    "Specific placement and quantity of pins/needles within the head cavity"
+    "Ratio of straw to bran within the Scarecrow's head cavity",
+    "Specific placement and quantity of pins/needles in the mixture"
   ],
   "visual_coverage_families": [
     "Close-ups of the bran, pins, and needles mixture",
     "Medium shots of physical head manipulation",
-    "Reaction shots of the Scarecrow's face during awakening"
+    "Reaction shots of the Scarecrow waking up"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "The Scarecrow enters the throne room seeking his brains",
+      "summary": "The Scarecrow enters the throne room seeking brains",
       "purpose": "",
-      "action_start": "walking through entrance",
+      "action_start": "walking through doors",
       "action_end": "standing before oz",
       "active_subjects": [
         "the_scarecrow"
@@ -93,72 +93,74 @@
       "passive_subjects": [
         "oz"
       ],
-      "spatial_context": "throne_room_of_oz central dais",
-      "blocking_hint": "approach from door to center",
-      "environment_subzone": "throne_room_of_oz entrance path",
-      "continuity_focus": "initial straw state in head",
-      "coverage_hint": "wide/medium",
+      "spatial_context": "throne_room_of_oz central area",
+      "blocking_hint": "approach center stage",
+      "environment_subzone": "throne_room_of_oz central area",
+      "continuity_focus": "initial straw state of the_scarecrow",
+      "coverage_hint": "wide shot",
       "coverage_priority": "medium",
-      "handoff_to_next": "BT002"
+      "handoff_to_next": "the_scarecrow's anticipation"
     },
     {
       "beat_id": "BT002",
       "summary": "Oz performs the crude procedure",
       "purpose": "",
-      "action_start": "opening the Scarecrow's head cavity",
-      "action_end": "stuffing bran and pins inside",
+      "action_start": "opening head cavity",
+      "action_end": "filling cavity with bran/pins",
       "active_subjects": [
         "oz",
         "the_scarecrow"
       ],
       "passive_subjects": [],
-      "spatial_context": "throne_room_of_oz central dais",
+      "spatial_context": "wizard's manipulation station",
       "blocking_hint": "oz leaning over the_scarecrow",
-      "environment_subzone": "throne_room_of_oz central dais",
-      "continuity_focus": "ratio of straw to bran; pin placement",
-      "coverage_hint": "close-up/insert",
+      "environment_subzone": "wizard's manipulation station",
+      "continuity_focus": "straw vs bran ratio; pin placement",
+      "coverage_hint": "close-ups of mixture and medium shots of manipulation",
       "coverage_priority": "high",
-      "handoff_to_next": "BT003"
+      "handoff_to_next": "the_scarecrow's physical shock"
     },
     {
       "beat_id": "BT003",
-      "summary": "The Scarecrow wakes up with intellect",
+      "summary": "The Scarecrow realizes his new intellect",
       "purpose": "",
-      "action_start": "eyes opening/confusion",
-      "action_end": "satisfied expression",
+      "action_start": "eyes opening/reacting",
+      "action_end": "expressing satisfaction",
       "active_subjects": [
         "the_scarecrow"
       ],
       "passive_subjects": [
         "oz"
       ],
-      "spatial_context": "throne_room_of_oz central dais",
-      "blocking_hint": "the_scarecrow remains stationary",
-      "environment_subzone": "throne_room_of_oz central dais",
-      "continuity_focus": "final head contents visible",
-      "coverage_hint": "reaction shots",
+      "spatial_context": "wizard's manipulation station",
+      "blocking_hint": "seated reaction shots",
+      "environment_subzone": "wizard's manipulation station",
+      "continuity_focus": "final mixture state in head",
+      "coverage_hint": "reaction close-ups",
       "coverage_priority": "high",
-      "handoff_to_next": "none"
+      "handoff_to_next": "exit from scene"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish arrival",
+      "narrative_function": "establish entry",
       "planned_shot_moment_summary": "the_scarecrow enters the throne room",
       "primary_subject_seed": "the_scarecrow",
-      "secondary_subjects_seed": [],
+      "secondary_subjects_seed": [
+        "oz"
+      ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "throne_room_of_oz entrance path",
-      "planned_shot_required_anchor_1": "throne_room_of_oz central dais",
-      "planned_shot_scale_proof_detail": "humanoid-scale silhouette",
+      "environment_subzone": "throne_room_of_oz central area",
+      "planned_shot_required_anchor_1": "throne_room_of_oz entrance",
+      "planned_shot_scale_proof_detail": "humanoid scale vs architecture",
       "start_state_seed": "walking into frame",
-      "end_state_seed": "approaching oz",
-      "action_seed": "walking with anticipation",
+      "end_state_seed": "stopping before oz",
+      "action_seed": "entering the room",
       "blocking_seed": [
-        "entry from perimeter to center"
+        "center aisle walk"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
@@ -172,51 +174,53 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "show procedure",
-      "planned_shot_moment_summary": "oz stuffing the head with bran and pins",
-      "primary_subject_seed": "oz",
+      "narrative_function": "detail the magic method",
+      "planned_shot_moment_summary": "close up of bran and pins being inserted",
+      "primary_subject_seed": "bran/pin mixture",
       "secondary_subjects_seed": [
         "the_scarecrow"
       ],
       "subject_visibility": "on_screen",
-      "narration_mode": "in_scene_speaker",
-      "environment_subzone": "throne_room_of_oz central dais",
+      "narration_mode": "none",
+      "environment_subzone": "wizard's manipulation station",
       "planned_shot_required_anchor_1": "the_scarecrow head cavity",
-      "planned_shot_scale_proof_detail": "close-up of small pins vs straw",
-      "start_state_seed": "head tilted back",
-      "end_state_seed": "head filled with bran",
-      "action_seed": "physical stuffing/manipulation",
+      "planned_shot_scale_proof_detail": "small pin vs straw texture",
+      "start_state_seed": "straw visible in head",
+      "end_state_seed": "mixture filling head",
+      "action_seed": "pouring bran and pins into head",
       "blocking_seed": [
-        "oz leaning over the_scarecrow"
+        "stationary close-up"
       ],
-      "shot_size": "close_up",
+      "shot_size": "insert_detail",
       "camera_angle": "high_angle",
-      "lens_family": "portrait",
+      "lens_family": "telephoto",
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "hard_directional",
-      "primary_subject_angle": "profile_left"
+      "primary_subject_angle": "top_down"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "show transformation",
-      "planned_shot_moment_summary": "the_scarecrow realizes he has brains",
+      "narrative_function": "show character transformation",
+      "planned_shot_moment_summary": "the_scarecrow reacts to new intellect",
       "primary_subject_seed": "the_scarecrow",
-      "secondary_subjects_seed": [],
+      "secondary_subjects_seed": [
+        "oz"
+      ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "throne_room_of_oz central dais",
+      "environment_subzone": "wizard's manipulation station",
       "planned_shot_required_anchor_1": "the_scarecrow face",
-      "planned_shot_scale_proof_detail": "facial expression shift",
+      "planned_shot_scale_proof_detail": "humanoid facial expression",
       "start_state_seed": "confused/shocked expression",
-      "end_state_seed": "intellectual satisfaction",
-      "action_seed": "waking up and reacting",
+      "end_state_seed": "satisfied/intellectual expression",
+      "action_seed": "waking up and realizing intelligence",
       "blocking_seed": [
-        "seated or standing still"
+        "seated reaction"
       ],
-      "shot_size": "medium_close",
+      "shot_size": "close_up",
       "camera_angle": "eye_level",
       "lens_family": "portrait",
       "camera_motion": "push_in",
@@ -289,16 +293,16 @@
     "[CH016] Chapter XVI (book index hit)",
     "[CH011] Chapter XI (book index hit)",
     "[CH018] Chapter XVIII (book index hit)",
-    "Character the_scarecrow: The Scarecrow is a bipedal, human-scale humanoid constructed from rustic materials. As a non-flesh entity, the figure is visibly stuffed with straw and maintains a traditional scarecrow silhouette. Its movement is characterized as c..."
+    "Character the_scarecrow: The Scarecrow is a bipedal, human-scale humanoid figure of rustic construction, appearing as a living entity stuffed entirely with straw. His movement is characterized by a distinct clumsiness. He lacks flesh and is visually defined..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH016_SC001\n\n## Production Intent\nDemonstrate the Wizard's deceptive magic through a physical, crude procedure involving the replacement of straw with bran and sharp objects. The scene must emphasize the tactile nature of the \"brain\" transfer to ground the fantasy in physical manipulation.\n\n## Required Cast\n- the_scarecrow\n- oz\n\n## Required Environments\n- throne_room_of_oz\n\n## Continuity Constraints\n- Ratio of straw to bran inside the Scarecrow's head\n- Specific placement and quantity of pins/needles within the head cavity\n\n## Beat List\n- BT001: The Scarecrow enters the throne room seeking his brains.\n- BT002: Oz performs the crude procedure (stuffing bran/pins).\n- BT003: The Scarecrow wakes up with intellect.",
+  "storyboard_markdown": "# Scene Contract: CH016_SC001\n\n## Production Intent\nDemonstrate the Wizard's deceptive magic through a physical, crude procedure involving the replacement of straw with bran and pins. The scene must emphasize the tactile nature of the \"brain\" mixture to establish that Oz's power is based on manipulation rather than true sorcery.\n\n## Required Cast\n- the_scarecrow\n- oz\n\n## Required Environments\n- throne_room_of_oz\n\n## Continuity Constraints\n- Ratio of straw to bran within the Scarecrow's head cavity\n- Specific placement and quantity of pins/needles in the mixture\n\n## Beat List\n- BT001: The Scarecrow enters the throne room seeking brains.\n- BT002: Oz performs the crude procedure (replacing straw with bran/pins).\n- BT003: The Scarecrow realizes his new intellect.",
   "metadata": {
     "artifact_id": "CH016_SC001_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "6243ac2d76f3f8b23a0f9e71daa86a4d5e692b4d",
+    "source_fingerprint": "e13fddee6cccdbd8c644422111a250c7d636175e",
     "created_at_utc": "2026-04-27T08:48:36.932320+00:00",
-    "updated_at_utc": "2026-04-27T08:48:36.932320+00:00",
+    "updated_at_utc": "2026-04-27T13:51:35.333596+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -323,6 +327,11 @@
         "timestamp_utc": "2026-04-27T08:49:19.646201+00:00",
         "action": "synthesized",
         "source_fingerprint": "6243ac2d76f3f8b23a0f9e71daa86a4d5e692b4d"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:52:18.538830+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "e13fddee6cccdbd8c644422111a250c7d636175e"
       }
     ]
   }

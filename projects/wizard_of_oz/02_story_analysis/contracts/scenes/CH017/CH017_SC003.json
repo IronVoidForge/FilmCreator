@@ -5,38 +5,38 @@
   "purpose": "Establish the political transition and public stakes.",
   "summary": "Oz makes a formal announcement to the citizens of the Emerald City. He claims he is traveling to visit a \"brother Wizard\" in the clouds. To maintain order, he appoints the Scarecrow as the temporary ruler of the city.",
   "emotional_arc": "From public spectacle to a sense of formal transition.",
-  "production_intent": "Establish the political transition of the Emerald City through a formal public announcement. The scene must visually communicate the shift from Oz's established authority to the Scarecrow's temporary regency, utilizing the scale of the palace exterior to emphasize the weight of the public stakes.",
-  "scene_short_description": "A formal announcement at the palace exterior where power is transferred to a new ruler.",
-  "scene_primary_scale_story_point": "The vertical hierarchy between Oz on the palace elevation and the Citizens in the square below.",
+  "production_intent": "Establish the political transition and public stakes through a formal announcement. The scene must visually communicate the shift from Oz's deceptive authority to the Scarecrow's temporary governance as Oz departs for the clouds.",
+  "scene_short_description": "A formal public announcement at the palace exterior before a gathered crowd of citizens.",
+  "scene_primary_scale_story_point": "The hierarchy shifts from the Wizard's spectacle to the Scarecrow's temporary rule.",
   "scene_required_anchor_catalog": [
     "emerald_city_palace_exterior_steps",
-    "central_podium"
+    "podium_or_raised_platform"
   ],
-  "scene_start_state": "Oz stands before a large crowd, preparing to speak from an elevated position.",
-  "scene_end_state": "The Scarecrow stands in a new official capacity as the crowd reacts to the transition.",
-  "dominant_action_line": "Oz announces his departure and appoints the Scarecrow as temporary ruler.",
+  "scene_start_state": "Oz stands before a large crowd, preparing for a formal address.",
+  "scene_end_state": "the_scarecrow stands in an official capacity as the city transitions to his rule.",
+  "dominant_action_line": "Oz announces his departure and appoints the Scarecrow as ruler.",
   "scene_spatial_layout": [
-    "Vertical separation between the speaker (Oz) and the audience (Citizens).",
-    "Centralized focus on the podium/steps area."
+    "Vertical hierarchy with Oz on elevated palace steps.",
+    "Horizontal spread of Citizens of the Emerald City in the public square."
   ],
   "character_spatial_map": [
-    "oz is positioned at the elevated palace steps.",
-    "the_scarecrow is positioned near oz for the appointment.",
-    "Citizens of the Emerald City occupy the lower public square."
+    "oz positioned at the highest point of the emerald_city_palace_exterior.",
+    "the_scarecrow positioned near oz during the appointment.",
+    "Citizens of the Emerald City occupying the lower square area."
   ],
   "environment_subzones": [
-    "emerald_city_palace_exterior_steps",
-    "emerald_city_public_square"
+    "palace_steps",
+    "public_square"
   ],
   "entry_vectors": [
-    "Citizens enter from the periphery of the square."
+    "crowd_approach_from_square"
   ],
   "exit_vectors": [
-    "Oz exits toward the palace/clouds."
+    "oz_departure_path"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Transition from announcement to explanation.",
-    "BT002 -> BT003: Transition from explanation to formal appointment."
+    "BT001 -> BT002: Oz begins his formal address.",
+    "BT002 -> BT003: The announcement of the Scarecrow's appointment."
   ],
   "characters_required": [
     {
@@ -94,10 +94,10 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Oz makes a formal announcement to the citizens",
+      "summary": "Oz's formal announcement of departure",
       "purpose": "",
       "action_start": "Oz stands before the crowd",
-      "action_end": "The crowd falls silent for the announcement",
+      "action_end": "Oz claims he is visiting a brother Wizard",
       "active_subjects": [
         "oz"
       ],
@@ -105,39 +105,39 @@
         "Citizens of the Emerald City"
       ],
       "spatial_context": "emerald_city_palace_exterior_steps",
-      "blocking_hint": "Oz elevated, Citizens below",
-      "environment_subzone": "emerald_city_palace_exterior_steps",
-      "continuity_focus": "Crowd density/placement",
-      "coverage_hint": "Wide shot",
+      "blocking_hint": "Oz at center high point",
+      "environment_subzone": "palace_steps",
+      "continuity_focus": "Oz's formal gestures/bowing",
+      "coverage_hint": "wide shot",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Oz claims he is traveling to visit a \"brother Wizard\" in the clouds",
+      "summary": "The crowd reacts to the news of the clouds and the brother Wizard",
       "purpose": "",
-      "action_start": "Oz begins explaining his departure",
-      "action_end": "The claim of the brother Wizard is made",
+      "action_start": "Crowd hears announcement",
+      "action_end": "Curiosity spreads through the square",
       "active_subjects": [
-        "oz"
-      ],
-      "passive_subjects": [
         "Citizens of the Emerald City"
       ],
-      "spatial_context": "emerald_city_palace_exterior_steps",
-      "blocking_hint": "Oz gesturing upward",
-      "environment_subzone": "emerald_city_palace_exterior_steps",
-      "continuity_focus": "Oz's formal mannerisms/bowing",
-      "coverage_hint": "Medium shot/Reaction shots",
+      "passive_subjects": [
+        "oz"
+      ],
+      "spatial_context": "public_square",
+      "blocking_hint": "Citizens clustered in groups",
+      "environment_subzone": "public_square",
+      "continuity_focus": "crowd density/placement",
+      "coverage_hint": "reaction shots",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Oz appoints the Scarecrow as temporary ruler",
+      "summary": "The appointment of the Scarecrow as temporary ruler",
       "purpose": "",
-      "action_start": "Oz introduces the new authority",
-      "action_end": "The Scarecrow assumes a regal posture",
+      "action_start": "Oz gestures to the Scarecrow",
+      "action_end": "the_scarecrow assumes a regal posture",
       "active_subjects": [
         "oz",
         "the_scarecrow"
@@ -145,40 +145,41 @@
       "passive_subjects": [
         "Citizens of the Emerald City"
       ],
-      "spatial_context": "emerald_city_palace_exterior_steps",
-      "blocking_hint": "the_scarecrow moves to a position of prominence near Oz",
-      "environment_subzone": "emerald_city_palace_exterior_steps",
-      "continuity_focus": "Scarecrow's regal/official posture",
-      "coverage_hint": "Medium shot/Reaction shots",
+      "spatial_context": "palace_steps",
+      "blocking_hint": "Oz and the_scarecrow side-by-side",
+      "environment_subzone": "palace_steps",
+      "continuity_focus": "the_scarecrow's regal posture",
+      "coverage_hint": "medium shot",
       "coverage_priority": "high",
-      "handoff_to_next": "End of scene"
+      "handoff_to_next": "end_of_scene"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish scale and authority",
-      "planned_shot_moment_summary": "Oz addresses the massive crowd",
+      "narrative_function": "establish_scale",
+      "planned_shot_moment_summary": "Oz addressing the crowd from the palace exterior",
       "primary_subject_seed": "oz",
       "secondary_subjects_seed": [
         "Citizens of the Emerald City"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "emerald_city_palace_exterior_steps",
+      "environment_subzone": "palace_steps",
       "planned_shot_required_anchor_1": "emerald_city_palace_exterior_steps",
-      "planned_shot_scale_proof_detail": "crowd vs palace height",
-      "start_state_seed": "Oz facing crowd",
-      "end_state_seed": "Oz finishing opening statement",
-      "action_seed": "Oz speaking to the masses",
+      "planned_shot_scale_proof_detail": "wide shot showing Oz vs crowd size",
+      "start_state_seed": "Oz standing tall",
+      "end_state_seed": "Oz beginning to speak",
+      "action_seed": "Oz gestures formally",
       "blocking_seed": [
-        "Oz centered on steps"
+        "Oz center frame on steps",
+        "crowd below"
       ],
       "shot_size": "wide",
       "camera_angle": "low_angle",
       "lens_family": "wide",
-      "camera_motion": "pan",
+      "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "high_contrast_ceremonial",
@@ -187,58 +188,58 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "convey motivation/deception",
-      "planned_shot_moment_summary": "Oz explains his journey to the clouds",
-      "primary_subject_seed": "oz",
+      "narrative_function": "character_reaction",
+      "planned_shot_moment_summary": "Citizens reacting to the news of the brother Wizard",
+      "primary_subject_seed": "Citizens of the Emerald City",
       "secondary_subjects_seed": [
-        "Citizens of the Emerald City"
+        "oz"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "emerald_city_palace_exterior_steps",
-      "planned_shot_required_anchor_1": "central_podium",
-      "planned_shot_scale_proof_detail": "Oz's formal mannerisms/bowing",
-      "start_state_seed": "Oz mid-sentence",
-      "end_state_seed": "Oz finishing the claim of a brother Wizard",
-      "action_seed": "Oz gesturing toward the sky",
+      "environment_subzone": "public_square",
+      "planned_shot_required_anchor_1": "emerald_city_palace_exterior_steps",
+      "planned_shot_scale_proof_detail": "medium shots of individual citizens",
+      "start_state_seed": "crowd listening",
+      "end_state_seed": "crowd murmuring/curious",
+      "action_seed": "citizens exchange looks",
       "blocking_seed": [
-        "Oz leaning slightly forward"
+        "scattered throughout square"
       ],
-      "shot_size": "medium_full",
+      "shot_size": "medium",
       "camera_angle": "eye_level",
       "lens_family": "normal",
-      "camera_motion": "locked_off",
-      "zoom_behavior": "subtle_in",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
-      "lighting_style": "high_contrast_ceremonial",
+      "lighting_style": "diffuse_ambient",
       "primary_subject_angle": "front"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "execute political transition",
-      "planned_shot_moment_summary": "The Scarecrow is appointed ruler",
+      "narrative_function": "plot_pivot",
+      "planned_shot_moment_summary": "The official appointment of the Scarecrow",
       "primary_subject_seed": "the_scarecrow",
       "secondary_subjects_seed": [
         "oz"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "emerald_city_palace_exterior_steps",
-      "planned_shot_required_anchor_1": "central_podium",
-      "planned_shot_scale_proof_detail": "Scarecrow's regal posture",
-      "start_state_seed": "Oz gesturing to Scarecrow",
-      "end_state_seed": "Scarecrow assuming official stance",
-      "action_seed": "The appointment of the Scarecrow",
+      "environment_subzone": "palace_steps",
+      "planned_shot_required_anchor_1": "podium_or_raised_platform",
+      "planned_shot_scale_proof_detail": "medium shot capturing both characters' interaction",
+      "start_state_seed": "Oz gesturing to the Scarecrow",
+      "end_state_seed": "the_scarecrow in regal posture",
+      "action_seed": "Oz appoints the Scarecrow",
       "blocking_seed": [
-        "the_scarecrow stepping into frame near Oz"
+        "Oz and the_scarecrow side-by-side on steps"
       ],
       "shot_size": "medium",
       "camera_angle": "eye_level",
-      "lens_family": "normal",
+      "lens_family": "portrait",
       "camera_motion": "push_in",
-      "zoom_behavior": "none",
-      "focus_strategy": "shallow_subject",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "rack_focus",
       "lighting_style": "high_contrast_ceremonial",
       "primary_subject_angle": "front_three_quarter_left"
     }
@@ -308,16 +309,16 @@
     "[CH015] Chapter XV (book index hit)",
     "[CH017] Chapter XVII (book index hit)",
     "[CH010] Chapter X (book index hit)",
-    "Character oz: Oz is a human male of human scale. While his specific clothing and physical build are not explicitly detailed, he carries himself with formal mannerisms, such as bowing low in greeting. He is associated with the use of spectacles or visual app..."
+    "Character oz: Oz is a human male who presents himself with formal gestures, such as bowing very low. While specific clothing details are not provided in the evidence, he maintains a presence that allows him to interact with travelers within the Emerald City."
   ],
-  "storyboard_markdown": "# Scene Contract: CH017_SC003\n\n## Production Intent\nEstablish the political transition of the Emerald City through a formal public announcement. The scene must visually communicate the shift from Oz's established authority to the Scarecrow's temporary regency, utilizing the scale of the palace exterior to emphasize the weight of the public stakes.\n\n## Required Cast\n- oz (Human male, human scale, formal mannerisms)\n- the_scarecrow (Regal/official posture required)\n- Citizens of the Emerald City (Crowd density must be maintained)\n\n## Required Environments\n- emerald_city_palace_exterior (Steps and Public Square)\n\n## Continuity Constraints\n- Maintain consistent crowd density and placement.\n- Ensure the_scarecrow maintains a regal/official posture during the appointment.\n- Oz's formal mannerisms (e.g., bowing) must be consistent with his characterization.\n\n## Beat List\n- BT001: Oz makes a formal announcement to the citizens.\n- BT002: Oz claims he is traveling to visit a \"brother Wizard\" in the clouds.\n- BT003: Oz appoints the Scarecrow as temporary ruler of the city.",
+  "storyboard_markdown": "# Scene Contract: CH017_SC003\n\n## Production Intent\nEstablish the political transition and public stakes. Oz announces his departure to visit a \"brother Wizard\" in the clouds and appoints the Scarecrow as the temporary ruler of the Emerald City.\n\n## Required Cast\n- oz (Human male, formal gestures/bowing)\n- the_scarecrow (Regal/official posture during appointment)\n- Citizens of the Emerald City (Curious crowd)\n\n## Required Environments\n- emerald_city_palace_exterior (Palace steps and public square)\n\n## Continuity Constraints\n- Maintain consistent crowd density and placement.\n- Ensure the_scarecrow maintains a regal/official posture for the appointment.\n\n## Beat List\n- BT001: Oz's formal announcement of departure to visit \"brother Wizard\".\n- BT002: Citizen reaction to the news.\n- BT003: Official appointment of the Scarecrow as temporary ruler.",
   "metadata": {
     "artifact_id": "CH017_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "96268b1cb0858503afc9fff34a37fd72f57046ad",
+    "source_fingerprint": "f2ca3a140efd67ecebb1cb6301506352cc01636a",
     "created_at_utc": "2026-04-27T08:52:59.764852+00:00",
-    "updated_at_utc": "2026-04-27T08:52:59.764852+00:00",
+    "updated_at_utc": "2026-04-27T13:55:56.967061+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -342,6 +343,11 @@
         "timestamp_utc": "2026-04-27T08:53:46.909976+00:00",
         "action": "synthesized",
         "source_fingerprint": "96268b1cb0858503afc9fff34a37fd72f57046ad"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:56:41.437038+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "f2ca3a140efd67ecebb1cb6301506352cc01636a"
       }
     ]
   }

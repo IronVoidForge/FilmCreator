@@ -5,38 +5,38 @@
   "purpose": "Build tension and establish the passage of time through waiting.",
   "summary": "The travelers are ushered into guest rooms within the palace. They wait in a state of growing agitation, discussing their expectations and the Wizard's perceived power.",
   "emotional_arc": "Anticipation $\\rightarrow$ Irritation/Anxiety.",
-  "production_intent": "Establish the psychological weight of waiting through progressive lighting shifts and character agitation. The sequence must transition from the initial arrival to a state of heightened anxiety regarding the Wizard's power.",
-  "scene_short_description": "Travelers waiting inside palace guest rooms while discussing expectations and the Wizard's power.",
-  "scene_primary_scale_story_point": "Palace interior scale relative to small group of travelers.",
+  "production_intent": "Establish the psychological weight of waiting within a high-status environment. Use lighting shifts to visually communicate the passage of time as the travelers transition from hopeful anticipation to agitated anxiety regarding the Wizard's power and their unfulfilled promises.",
+  "scene_short_description": "Travelers wait in ornate palace guest rooms as light shifts through the windows.",
+  "scene_primary_scale_story_point": "Palace scale vs. individual traveler weariness.",
   "scene_required_anchor_catalog": [
-    "Guest room furniture",
-    "Palace doorway"
+    "Guest room window/light source",
+    "Seating furniture (chairs/sofas)"
   ],
-  "scene_start_state": "Travelers are ushered into the room by palace staff.",
-  "scene_end_state": "Group is in a state of growing agitation and discussion.",
-  "dominant_action_line": "The group waits and discusses the Wizard's perceived power.",
+  "scene_start_state": "Travelers are ushered in by palace staff; initial energy is expectant.",
+  "scene_end_state": "Travelers are visibly agitated and discussing the Wizard's power.",
+  "dominant_action_line": "The group waits for the Wizard while their conversation turns from expectations to doubt.",
   "scene_spatial_layout": [
-    "Enclosed guest quarters within the Palace of Oz",
-    "Defined seating/standing areas for the travelers"
+    "Enclosed guest room interior",
+    "Central seating area for travelers"
   ],
   "character_spatial_map": [
-    "dorothy in white dress near center or window",
-    "the_scarecrow, tin_woodman, and cowardly_lion grouped in room interior",
-    "palace_staff at threshold or exiting"
+    "dorothy: central or near window",
+    "the_scarecrow, tin_woodman, cowardly_lion: clustered in seating area",
+    "palace_staff: near entry/exit points"
   ],
   "environment_subzones": [
-    "guest_room_interior",
-    "doorway_threshold"
+    "guest_room_seating",
+    "guest_room_window_zone"
   ],
   "entry_vectors": [
-    "palace_staff leading group through doorway"
+    "palace_door (palace_staff entry)"
   ],
   "exit_vectors": [
-    "palace_staff exiting through doorway"
+    "palace_door"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Arrival to initial waiting",
-    "BT002 -> BT003: Waiting to growing agitation/discussion"
+    "BT001 -> BT002: temporal jump via lighting shift",
+    "BT002 -> BT003: escalation of verbal agitation"
   ],
   "characters_required": [
     {
@@ -103,21 +103,21 @@
     }
   ],
   "continuity_constraints": [
-    "Lighting changes to indicate passage of time",
-    "Character positioning within the guest quarters"
+    "Lighting must shift progressively to indicate time passing",
+    "Character positioning within guest quarters must remain consistent between temporal jumps"
   ],
   "visual_coverage_families": [
-    "Interior medium shots of the group in the room",
-    "Reaction shots as they wait",
-    "Montage-style coverage of time passing"
+    "Interior medium shots of group interaction",
+    "Reaction shots for individual agitation",
+    "Montage coverage of lighting shifts and time passage"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Travelers ushered into guest rooms",
+      "summary": "Arrival and settling in guest rooms",
       "purpose": "",
-      "action_start": "travelers entering room",
-      "action_end": "staff exiting",
+      "action_start": "palace_staff ushering travelers in",
+      "action_end": "travelers finding seats",
       "active_subjects": [
         "palace_staff",
         "dorothy",
@@ -126,20 +126,20 @@
         "cowardly_lion"
       ],
       "passive_subjects": [],
-      "spatial_context": "doorway_threshold",
-      "blocking_hint": "staff leading group through door",
-      "environment_subzone": "doorway_threshold",
-      "continuity_focus": "initial character positioning",
-      "coverage_hint": "medium shots of arrival",
+      "spatial_context": "guest room entrance and seating area",
+      "blocking_hint": "staff directs group toward center furniture",
+      "environment_subzone": "guest_room_seating",
+      "continuity_focus": "initial lighting state",
+      "coverage_hint": "wide shot of entry",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "The period of waiting begins",
+      "summary": "The passage of time through waiting",
       "purpose": "",
-      "action_start": "group settling in room",
-      "action_end": "light shifts significantly",
+      "action_start": "characters sitting in silence",
+      "action_end": "lighting has visibly changed",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -147,20 +147,20 @@
         "cowardly_lion"
       ],
       "passive_subjects": [],
-      "spatial_context": "guest_room_interior",
-      "blocking_hint": "characters finding places to sit or stand",
-      "environment_subzone": "guest_room_interior",
-      "continuity_focus": "lighting changes indicating time passage",
-      "coverage_hint": "montage-style coverage of time passing",
+      "spatial_context": "entire guest room",
+      "blocking_hint": "static characters",
+      "environment_subzone": "guest_room_window_zone",
+      "continuity_focus": "lighting shift must be distinct",
+      "coverage_hint": "montage/insert shots",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Growing agitation and discussion",
+      "summary": "Growing agitation and discussion of the Wizard",
       "purpose": "",
-      "action_start": "low level murmurs",
-      "action_end": "heightened anxiety/irritation",
+      "action_start": "low murmur of conversation",
+      "action_end": "heightened tension/anxiety",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -168,21 +168,21 @@
         "cowardly_lion"
       ],
       "passive_subjects": [],
-      "spatial_context": "guest_room_interior",
-      "blocking_hint": "characters moving closer or gesturing agitatedly",
-      "environment_subzone": "guest_room_interior",
-      "continuity_focus": "character positioning within quarters",
+      "spatial_context": "guest room seating area",
+      "blocking_hint": "characters leaning in or pacing slightly",
+      "environment_subzone": "guest_room_seating",
+      "continuity_focus": "lighting remains in shifted state",
       "coverage_hint": "reaction shots and medium group shots",
       "coverage_priority": "high",
-      "handoff_to_next": "end_of_scene"
+      "handoff_to_next": "end of scene"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish arrival",
-      "planned_shot_moment_summary": "travelers enter guest room",
+      "narrative_function": "establish setting and entry",
+      "planned_shot_moment_summary": "palace_staff ushering travelers into the room",
       "primary_subject_seed": "palace_staff",
       "secondary_subjects_seed": [
         "dorothy",
@@ -192,45 +192,45 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "doorway_threshold",
-      "planned_shot_required_anchor_1": "doorway_threshold",
-      "planned_shot_scale_proof_detail": "group size vs room volume",
+      "environment_subzone": "guest_room_seating",
+      "planned_shot_required_anchor_1": "palace_door",
+      "planned_shot_scale_proof_detail": "scale of room relative to travelers",
       "start_state_seed": "travelers entering",
       "end_state_seed": "staff exiting",
-      "action_seed": "ushering travelers in",
+      "action_seed": "ushering and settling",
       "blocking_seed": [
-        "staff leads group through door"
+        "staff leads group to center"
       ],
-      "shot_size": "medium_full",
+      "shot_size": "wide",
       "camera_angle": "eye_level",
       "lens_family": "wide",
       "camera_motion": "pan",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
-      "lighting_style": "diffuse_ambient",
+      "lighting_style": "soft_even",
       "primary_subject_angle": "front_three_quarter_left"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "establish time passage",
-      "planned_shot_moment_summary": "lighting shifts across the room",
-      "primary_subject_seed": "palace_of_oz",
+      "narrative_function": "show passage of time",
+      "planned_shot_moment_summary": "lighting shifts across the room floor",
+      "primary_subject_seed": "guest_room_window_zone",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "guest_room_interior",
-      "planned_shot_required_anchor_1": "guest_room_furniture",
-      "planned_shot_scale_proof_detail": "light angle on floor/walls",
-      "start_state_seed": "initial light state",
-      "end_state_seed": "shifted light state",
-      "action_seed": "lighting transitions",
+      "environment_subzone": "guest_room_window_zone",
+      "planned_shot_required_anchor_1": "guest_room_window_zone",
+      "planned_shot_scale_proof_detail": "shadow length change",
+      "start_state_seed": "bright light",
+      "end_state_seed": "dimming/shifting light",
+      "action_seed": "light movement",
       "blocking_seed": [
-        "static group"
+        "static"
       ],
-      "shot_size": "wide",
+      "shot_size": "insert_detail",
       "camera_angle": "eye_level",
-      "lens_family": "wide",
+      "lens_family": "normal",
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "environment_priority",
@@ -240,7 +240,7 @@
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "character reaction/tension",
+      "narrative_function": "character agitation",
       "planned_shot_moment_summary": "group discussing Wizard's power",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
@@ -250,20 +250,20 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "guest_room_interior",
-      "planned_shot_required_anchor_1": "guest_room_furniture",
-      "planned_shot_scale_proof_detail": "character proximity to furniture",
-      "start_state_seed": "agitated discussion",
-      "end_state_seed": "heightened anxiety",
-      "action_seed": "discussing expectations",
+      "environment_subzone": "guest_room_seating",
+      "planned_shot_required_anchor_1": "guest_room_seating",
+      "planned_shot_scale_proof_detail": "proximity of characters",
+      "start_state_seed": "quiet discussion",
+      "end_state_seed": "agitated debate",
+      "action_seed": "talking and pacing",
       "blocking_seed": [
-        "characters clustered in room"
+        "characters shifting in seats"
       ],
       "shot_size": "medium_close",
       "camera_angle": "eye_level",
       "lens_family": "portrait",
-      "camera_motion": "push_in",
-      "zoom_behavior": "subtle_in",
+      "camera_motion": "subtle_in",
+      "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "low_key_night",
       "primary_subject_angle": "front_three_quarter_right"
@@ -332,16 +332,16 @@
     "[CH011] Chapter XI (book index hit)",
     "[CH015] Chapter XV (book index hit)",
     "[CH010] Chapter X (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH015_SC002\n\n## Production Intent\nEstablish the psychological weight of waiting through progressive lighting shifts and character agitation. The sequence must transition from the initial arrival to a state of heightened anxiety regarding the Wizard's power.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- palace_staff (Green-whiskered Soldier/Girl)\n\n## Required Environments\n- palace_of_oz (Guest Rooms)\n\n## Continuity Constraints\n- Lighting changes to indicate passage of time\n- Character positioning within the guest quarters\n\n## Beat List\n- BT001: Travelers ushered into guest rooms\n- BT002: The period of waiting begins\n- BT003: Growing agitation and discussion",
+  "storyboard_markdown": "# Scene Contract: CH015_SC002\n\n## Production Intent\nEstablish the psychological weight of waiting within a high-status environment. Use lighting shifts to visually communicate the passage of time as the travelers transition from hopeful anticipation to agitated anxiety regarding the Wizard's power and their unfulfilled promises.\n\n## Required Cast\n- dorothy (weary traveler, white clothing)\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- palace_staff (Green-whiskered Soldier/Girl)\n\n## Required Environments\n- palace_of_oz (Guest Rooms)\n\n## Continuity Constraints\n- Lighting must shift progressively to indicate time passing.\n- Character positioning within guest quarters must remain consistent between temporal jumps.\n\n## Beat List\n- BT001: Arrival and settling in guest rooms.\n- BT002: The passage of time through waiting.\n- BT003: Growing agitation and discussion of the Wizard.",
   "metadata": {
     "artifact_id": "CH015_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "9a06a0c87461f007144824f7025e75d6da0dca55",
+    "source_fingerprint": "9e9f877ec6b598c6d8033f3415e79e61525ab135",
     "created_at_utc": "2026-04-27T08:45:40.956110+00:00",
-    "updated_at_utc": "2026-04-27T08:45:40.956110+00:00",
+    "updated_at_utc": "2026-04-27T13:48:32.851789+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -366,6 +366,11 @@
         "timestamp_utc": "2026-04-27T08:46:21.944812+00:00",
         "action": "synthesized",
         "source_fingerprint": "9a06a0c87461f007144824f7025e75d6da0dca55"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:49:16.809834+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9e9f877ec6b598c6d8033f3415e79e61525ab135"
       }
     ]
   }

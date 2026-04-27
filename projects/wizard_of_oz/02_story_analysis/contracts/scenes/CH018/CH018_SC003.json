@@ -5,39 +5,39 @@
   "purpose": "Introduce a narrative obstacle and reveal the limitations of the group's resources.",
   "summary": "The Golden Cap is used to summon the Monkey King and his band. However, the Monkey King refuses to fly Dorothy across the desert, explaining that Winged Monkeys are bound to their own territory.",
   "emotional_arc": "Hope $\\rightarrow$ Frustration/Disappointment.",
-  "production_intent": "Establish the hierarchy of the monkey troop and the refusal of service through a power-dynamic shift. The visual language must transition from the hopeful expectation of the Golden Cap's magic to the crushing reality of territorial limitations.",
-  "scene_short_description": "A group uses a golden artifact to summon a winged troop into a grand throne room.",
-  "scene_primary_scale_story_point": "The massive scale of the winged_monkeys troop relative to dorothy and the_scarecrow.",
+  "production_intent": "Establish the power dynamic between the travelers and the monkey troop through scale and verticality. The scene must transition from the magical anticipation of a successful summoning to the harsh reality of territorial limitations.",
+  "scene_short_description": "A weary traveler and companion face a powerful ruler amidst a swarm of flying primates.",
+  "scene_primary_scale_story_point": "The monkey_king dominates the vertical space relative to the grounded travelers.",
   "scene_required_anchor_catalog": [
-    "emerald_city_throne_room throne",
-    "Golden Cap artifact"
+    "throne_structure",
+    "golden_cap"
   ],
-  "scene_start_state": "The Golden Cap is activated, triggering the arrival of the winged_monkeys.",
-  "scene_end_state": "The monkey_king delivers a refusal, leaving the group stranded.",
-  "dominant_action_line": "Summoning the troop followed by a negotiation that ends in rejection.",
+  "scene_start_state": "dorothy holds the golden_cap in a state of expectant hope.",
+  "scene_end_state": "dorothy and the_scarecrow stand defeated by the refusal of passage.",
+  "dominant_action_line": "The summoning of the monkey_king leads to a negotiation that ends in rejection.",
   "scene_spatial_layout": [
-    "Verticality emphasized by winged_monkeys occupying upper air space",
-    "Centralized focus on the throne area for the monkey_king"
+    "Vertical hierarchy with winged_monkeys occupying upper air space",
+    "Centralized throne area for monkey_king"
   ],
   "character_spatial_map": [
-    "dorothy and the_scarecrow positioned at floor level, looking upward",
-    "monkey_king positioned on or near the throne structure",
-    "winged_monkeys distributed across mid-to-high vertical planes"
+    "dorothy and the_scarecrow positioned on floor level",
+    "monkey_king positioned on or near throne structure",
+    "winged_monkeys distributed throughout the room volume"
   ],
   "environment_subzones": [
     "throne_platform",
-    "upper_air_space",
-    "floor_level_approach"
+    "central_floor",
+    "upper_air_space"
   ],
   "entry_vectors": [
-    "vertical descent (winged_monkeys)"
+    "summoning_event_center"
   ],
   "exit_vectors": [
-    "none (characters remain in state of disappointment)"
+    "floor_level_exit"
   ],
   "beat_transition_map": [
     "BT001 -> BT002: magical arrival to confrontation",
-    "BT002 -> BT003: negotiation to refusal"
+    "BT002 -> BT003: negotiation to rejection"
   ],
   "characters_required": [
     {
@@ -94,75 +94,74 @@
     }
   ],
   "continuity_constraints": [
-    "winged_monkeys flight patterns and spatial positioning within emerald_city_throne_room"
+    "Winged monkeys flight patterns and spatial positioning within emerald_city_throne_room"
   ],
   "visual_coverage_families": [
-    "Low angle power shots (monkey_king)",
-    "Reaction close-ups (dorothy, the_scarecrow)",
-    "Wide scale establishing shots (winged_monkeys troop)"
+    "Low angle shots of monkey_king to establish power",
+    "Reaction shots of dorothy and the_scarecrow",
+    "Wide shots showing scale of winged_monkeys troop"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "The Golden Cap summons the winged_monkeys",
+      "summary": "The summoning of the monkeys via the golden_cap",
       "purpose": "",
-      "action_start": "cap is used",
-      "action_end": "troop fills the room",
+      "action_start": "dorothy uses cap",
+      "action_end": "winged_monkeys appear",
       "active_subjects": [
-        "winged_monkeys"
-      ],
-      "passive_subjects": [
         "dorothy",
         "the_scarecrow"
       ],
-      "spatial_context": "emerald_city_throne_room",
-      "blocking_hint": "monkeys descending from above",
-      "environment_subzone": "upper_air_space",
-      "continuity_focus": "flight patterns and density",
-      "coverage_hint": "wide shot scale",
+      "passive_subjects": [
+        "winged_monkeys"
+      ],
+      "spatial_context": "central_floor",
+      "blocking_hint": "dorothy center stage looking up",
+      "environment_subzone": "central_floor",
+      "continuity_focus": "cap usage",
+      "coverage_hint": "wide shot of arrival",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "The monkey_king confronts the group's request",
+      "summary": "The monkey_king confronts the group",
       "purpose": "",
-      "action_start": "monkey_king makes presence known",
-      "action_end": "request is acknowledged",
+      "action_start": "monkeys swarm room",
+      "action_end": "monkey_king addresses travelers",
       "active_subjects": [
         "monkey_king",
+        "winged_monkeys"
+      ],
+      "passive_subjects": [
         "dorothy",
         "the_scarecrow"
       ],
-      "passive_subjects": [
-        "winged_monkeys"
-      ],
-      "spatial_context": "throne area",
-      "blocking_hint": "king looking down at group",
+      "spatial_context": "throne_platform and upper_air_space",
+      "blocking_hint": "king dominates high ground",
       "environment_subzone": "throne_platform",
-      "continuity_focus": "eye lines between king and floor subjects",
-      "coverage_hint": "low angle shots",
+      "continuity_focus": "winged_monkeys flight patterns",
+      "coverage_hint": "low angle shots of king",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "The refusal is delivered",
+      "summary": "The refusal of the request",
       "purpose": "",
-      "action_start": "monkey_king explains territory bounds",
-      "action_end": "group realizes they are stuck",
+      "action_start": "dorothy asks for flight",
+      "action_end": "monkey_king explains territorial bounds",
       "active_subjects": [
         "monkey_king",
-        "dorothy",
-        "the_scarecrow"
+        "dorothy"
       ],
       "passive_subjects": [
-        "winged_monkeys"
+        "the_scarecrow"
       ],
-      "spatial_context": "floor vs throne",
-      "blocking_hint": "dorothy shrinking/slumping",
-      "environment_subzone": "floor_level_approach",
-      "continuity_focus": "emotional shift from hope to frustration",
+      "spatial_context": "between floor and throne",
+      "blocking_hint": "tension between low and high ground",
+      "environment_subzone": "central_floor",
+      "continuity_focus": "emotional shift to frustration",
       "coverage_hint": "reaction shots",
       "coverage_priority": "high",
       "handoff_to_next": "end_of_scene"
@@ -172,30 +171,29 @@
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish scale",
-      "planned_shot_moment_summary": "the winged_monkeys swarm into the room",
-      "primary_subject_seed": "winged_monkeys",
+      "narrative_function": "establish magic",
+      "planned_shot_moment_summary": "the golden_cap is used",
+      "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
-        "dorothy",
         "the_scarecrow"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "upper_air_space",
-      "planned_shot_required_anchor_1": "emerald_city_throne_room throne",
-      "planned_shot_scale_proof_detail": "troop density vs floor subjects",
-      "start_state_seed": "empty room/cap activation",
-      "end_state_seed": "room filled with winged movement",
-      "action_seed": "swarming descent",
+      "environment_subzone": "central_floor",
+      "planned_shot_required_anchor_1": "golden_cap",
+      "planned_shot_scale_proof_detail": "close up on cap vs wide room",
+      "start_state_seed": "dorothy holding cap",
+      "end_state_seed": "monkeys appearing",
+      "action_seed": "summoning",
       "blocking_seed": [
-        "descending from ceiling to mid-air"
+        "dorothy center floor"
       ],
-      "shot_size": "wide",
+      "shot_size": "medium_close",
       "camera_angle": "eye_level",
-      "lens_family": "ultra_wide",
-      "camera_motion": "pan",
-      "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
       "lighting_style": "high_contrast_ceremonial",
       "primary_subject_angle": "front_three_quarter_left"
     },
@@ -203,28 +201,28 @@
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "establish power",
-      "planned_shot_moment_summary": "the monkey_king addresses the group",
+      "planned_shot_moment_summary": "monkey_king appears",
       "primary_subject_seed": "monkey_king",
       "secondary_subjects_seed": [
-        "dorothy"
+        "winged_monkeys"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "throne_platform",
-      "planned_shot_required_anchor_1": "emerald_city_throne_room throne",
+      "planned_shot_required_anchor_1": "throne_structure",
       "planned_shot_scale_proof_detail": "low angle looking up at king",
-      "start_state_seed": "king appearing in frame",
-      "end_state_seed": "king speaking",
-      "action_seed": "speaking with authority",
+      "start_state_seed": "monkeys descending",
+      "end_state_seed": "king seated/standing",
+      "action_seed": "arrival",
       "blocking_seed": [
-        "seated or standing on throne"
+        "king occupies high ground"
       ],
-      "shot_size": "medium_full",
+      "shot_size": "low_angle_wide",
       "camera_angle": "low_angle",
-      "lens_family": "normal",
-      "camera_motion": "locked_off",
-      "zoom_behavior": "subtle_in",
-      "focus_strategy": "shallow_subject",
+      "lens_family": "ultra_wide",
+      "camera_motion": "tilt",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
       "lighting_style": "high_contrast_ceremonial",
       "primary_subject_angle": "front"
     },
@@ -232,30 +230,30 @@
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "reveal obstacle",
-      "planned_shot_moment_summary": "dorothy reacts to the refusal",
+      "planned_shot_moment_summary": "the refusal of flight",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
-        "the_scarecrow"
+        "monkey_king"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "floor_level_approach",
-      "planned_shot_required_anchor_1": "Golden Cap artifact",
-      "planned_shot_scale_proof_detail": "close up on expressive face",
-      "start_state_seed": "expectant expression",
-      "end_state_seed": "disappointed expression",
-      "action_seed": "reacting to news",
+      "environment_subzone": "central_floor",
+      "planned_shot_required_anchor_1": "throne_structure",
+      "planned_shot_scale_proof_detail": "reaction shot vs king's distance",
+      "start_state_seed": "king speaking",
+      "end_state_seed": "dorothy looking down",
+      "action_seed": "rejection",
       "blocking_seed": [
-        "standing near the cap"
+        "dorothy and the_scarecrow reacting to king"
       ],
-      "shot_size": "close_up",
+      "shot_size": "medium_close",
       "camera_angle": "eye_level",
       "lens_family": "portrait",
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
-      "lighting_style": "soft_even",
-      "primary_subject_angle": "front_three_quarter_right"
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
     }
   ],
   "unresolved_questions": [],
@@ -321,16 +319,16 @@
     "[CH022] Chapter XXII (book index hit)",
     "[CH014] Chapter XIV (book index hit)",
     "[CH023] Chapter XXIII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH018_SC003\n\n## Production Intent\nEstablish the hierarchy of the monkey troop and the refusal of service through a power-dynamic shift. The visual language must transition from the hopeful expectation of the Golden Cap's magic to the crushing reality of territorial limitations.\n\n## Required Cast\n- dorothy (white clothing/dress, expressive face)\n- the_scarecrow\n- monkey_king\n- winged_monkeys (troop)\n\n## Required Environments\n- emerald_city_throne_room (occupied by monkeys)\n\n## Continuity Constraints\n- Winged Monkeys' flight patterns and spatial positioning within the throne room.\n- Dorothy's attire (white dress).\n\n## Beat List\n- BT001: The Golden Cap summons the winged_monkeys.\n- BT002: The monkey_king confronts the group's request.\n- BT003: The refusal is delivered regarding desert transport.",
+  "storyboard_markdown": "# Scene Contract: CH018_SC003\n\n## Production Intent\nEstablish the power dynamic between the travelers and the monkey troop through scale and verticality. The scene must transition from the magical anticipation of a successful summoning to the harsh reality of territorial limitations.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- monkey_king\n- winged_monkeys\n\n## Required Environments\n- emerald_city_throne_room\n\n## Continuity Constraints\n- Winged monkeys flight patterns and spatial positioning within emerald_city_throne_room\n\n## Beat List\n- BT001: The summoning of the monkeys via the golden_cap\n- BT002: The monkey_king confronts the group\n- BT003: The refusal of the request",
   "metadata": {
     "artifact_id": "CH018_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "9902a242824180a03d08dd04c8c8137f20a059e5",
+    "source_fingerprint": "b4f36f4082c7322bef01382812386d52fdb38005",
     "created_at_utc": "2026-04-27T08:56:02.535358+00:00",
-    "updated_at_utc": "2026-04-27T08:56:02.535358+00:00",
+    "updated_at_utc": "2026-04-27T13:58:58.296543+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -355,6 +353,11 @@
         "timestamp_utc": "2026-04-27T08:56:45.831583+00:00",
         "action": "synthesized",
         "source_fingerprint": "9902a242824180a03d08dd04c8c8137f20a059e5"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:59:39.427280+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "b4f36f4082c7322bef01382812386d52fdb38005"
       }
     ]
   }

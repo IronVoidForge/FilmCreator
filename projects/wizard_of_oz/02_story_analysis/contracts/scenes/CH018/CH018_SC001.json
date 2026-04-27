@@ -5,38 +5,38 @@
   "purpose": "Establish the emotional aftermath of the Wizard's departure and transition the group's status.",
   "summary": "In the wake of the balloon's departure, the group experiences a moment of grief. Dorothy provides comfort to the Tin Woodman to ensure he does not rust from tears.",
   "emotional_arc": "Despair/Melancholy $\\rightarrow$ Quiet Resignation.",
-  "production_intent": "Capture the heavy emotional vacuum left by the Wizard's departure using a shift from active grief to quiet resignation. Focus on the physical vulnerability of the Tin Woodman and the group's huddling formation within the vastness of the throne room.",
-  "scene_short_description": "A small group huddles in grief beneath the scale of an empty, massive throne.",
-  "scene_primary_scale_story_point": "The group appears small and isolated against the empty throne.",
+  "production_intent": "Capture the heavy emotional vacuum left by the Wizard's departure using a shift from collective grief to individual comfort. The visual language must emphasize the scale of the empty throne room against the small, huddling group.",
+  "scene_short_description": "A small group huddles in a vast, empty ceremonial hall following a sudden departure.",
+  "scene_primary_scale_story_point": "The massive scale of the empty throne vs the smallness of the four travelers.",
   "scene_required_anchor_catalog": [
     "empty_throne",
     "tin_woodman_joints"
   ],
-  "scene_start_state": "Characters standing in disarray following the balloon's departure.",
-  "scene_end_state": "A quiet, resigned huddle centered around dorothy and tin_woodman.",
-  "dominant_action_line": "Dorothy comforts tin_woodman to prevent him from rusting due to tears.",
+  "scene_start_state": "The group stands in stunned silence, looking toward the departure point.",
+  "scene_end_state": "Dorothy provides physical comfort to the Tin Woodman as the group settles into a new reality.",
+  "dominant_action_line": "Processing loss through grief and providing tactile comfort to prevent rust.",
   "scene_spatial_layout": [
     "Characters clustered in the mid-ground",
-    "Empty throne dominating the background/upper frame"
+    "Large expanse of floor between characters and the throne"
   ],
   "character_spatial_map": [
     "dorothy near tin_woodman",
-    "the_scarecrow, cowardly_lion forming a protective perimeter around the center",
-    "tin_woodman central to the emotional focus"
+    "the_scarecrow, cowardly_lion forming a protective perimeter around the group",
+    "all subjects oriented toward or away from the empty_throne"
   ],
   "environment_subzones": [
-    "throne_area",
-    "group_huddle_zone"
+    "throne_alcove",
+    "central_floor"
   ],
   "entry_vectors": [
     "none (characters are already present)"
   ],
   "exit_vectors": [
-    "toward_throne_area"
+    "forward toward throne_alcove"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: shift from shock to active weeping",
-    "BT002 -> BT003: shift from weeping to physical comfort/resignation"
+    "BT001 -> BT002: shift from collective shock to individual sorrow",
+    "BT002 -> BT003: shift from sorrow to active caretaking"
   ],
   "characters_required": [
     {
@@ -94,41 +94,41 @@
   ],
   "continuity_constraints": [
     "Tear tracks on tin_woodman",
-    "Positioning of characters relative to the empty throne"
+    "Character positioning relative to the empty throne"
   ],
   "visual_coverage_families": [
     "Close-ups on faces (grief)",
     "Medium shots of the group huddling",
-    "Detail shot of Tin Woodman's joints/tears"
+    "Detail shots of Tin Woodman's joints and tear tracks"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "The immediate shock of departure",
+      "summary": "Collective shock at the departure",
       "purpose": "",
-      "action_start": "characters looking up at the sky/ceiling",
-      "action_end": "silence settles over the room",
+      "action_start": "group staring upward/outward",
+      "action_end": "silence settles",
       "active_subjects": [
-        "the_scarecrow",
-        "cowardly_lion",
         "dorothy",
-        "tin_woodman"
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
       ],
       "passive_subjects": [],
-      "spatial_context": "emerald_city_throne_room",
-      "blocking_hint": "characters scattered in mid-ground",
-      "environment_subzone": "throne_area",
-      "continuity_focus": "positioning relative to empty throne",
-      "coverage_hint": "wide/medium shots of faces",
+      "spatial_context": "central_floor near empty_throne",
+      "blocking_hint": "characters spaced apart in disbelief",
+      "environment_subzone": "central_floor",
+      "continuity_focus": "positioning relative to throne",
+      "coverage_hint": "wide/medium shots",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "The onset of grief",
+      "summary": "The onset of melancholy",
       "purpose": "",
       "action_start": "tin_woodman begins to tremble",
-      "action_end": "tears begin to flow from tin_woodman",
+      "action_end": "tears begin to fall",
       "active_subjects": [
         "tin_woodman"
       ],
@@ -137,12 +137,12 @@
         "the_scarecrow",
         "cowardly_lion"
       ],
-      "spatial_context": "group huddle zone",
-      "blocking_hint": "tin_woodman becomes the focal point of the group",
-      "environment_subzone": "group_huddle_zone",
+      "spatial_context": "central_floor",
+      "blocking_hint": "tin_woodman isolates slightly",
+      "environment_subzone": "central_floor",
       "continuity_focus": "tear tracks on tin_woodman",
-      "coverage_hint": "close-ups/detail shots",
-      "coverage_priority": "high",
+      "coverage_hint": "close-ups",
+      "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
@@ -150,7 +150,7 @@
       "summary": "Quiet resignation and comfort",
       "purpose": "",
       "action_start": "dorothy moves toward tin_woodman",
-      "action_end": "the group settles into a quiet, resigned state",
+      "action_end": "group huddles together",
       "active_subjects": [
         "dorothy",
         "tin_woodman"
@@ -159,12 +159,12 @@
         "the_scarecrow",
         "cowardly_lion"
       ],
-      "spatial_context": "group huddle zone",
-      "blocking_hint": "dorothy provides physical comfort to tin_woodman",
-      "environment_subzone": "group_huddle_zone",
+      "spatial_context": "central_floor",
+      "blocking_hint": "dorothy breaks from group to reach tin_woodman",
+      "environment_subzone": "central_floor",
       "continuity_focus": "tear tracks on tin_woodman",
-      "coverage_hint": "medium shots of group huddling",
-      "coverage_priority": "medium",
+      "coverage_hint": "medium/detail shots",
+      "coverage_priority": "high",
       "handoff_to_next": "end_of_scene"
     }
   ],
@@ -172,29 +172,29 @@
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish aftermath",
+      "narrative_function": "establish scale and loss",
       "planned_shot_moment_summary": "group staring at the void left by the balloon",
       "primary_subject_seed": "the_scarecrow",
       "secondary_subjects_seed": [
-        "cowardly_lion",
         "dorothy",
-        "tin_woodman"
+        "tin_woodman",
+        "cowardly_lion"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "throne_area",
+      "environment_subzone": "central_floor",
       "planned_shot_required_anchor_1": "empty_throne",
-      "planned_shot_scale_proof_detail": "group vs throne height",
-      "start_state_seed": "wide shot of empty space",
-      "end_state_seed": "lingering on faces",
-      "action_seed": "characters standing still in shock",
+      "planned_shot_scale_proof_detail": "throne dominates upper frame",
+      "start_state_seed": "wide shot of group",
+      "end_state_seed": "wide shot of group",
+      "action_seed": "group stands motionless",
       "blocking_seed": [
-        "scattered near throne"
+        "scattered near center"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
       "lens_family": "wide",
-      "camera_motion": "slow_push_in",
+      "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
@@ -203,7 +203,7 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "convey grief",
+      "narrative_function": "convey individual grief",
       "planned_shot_moment_summary": "tin_woodman begins to weep",
       "primary_subject_seed": "tin_woodman",
       "secondary_subjects_seed": [
@@ -211,19 +211,20 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "group_huddle_zone",
+      "environment_subzone": "central_floor",
       "planned_shot_required_anchor_1": "tin_woodman_joints",
-      "planned_shot_scale_proof_detail": "tear track detail",
+      "planned_shot_scale_proof_detail": "tear tracks visible on metal",
       "start_state_seed": "medium shot of tin_woodman",
-      "end_state_seed": "extreme close up on eyes/joints",
-      "action_seed": "tears falling",
+      "end_state_seed": "close-up on face",
+      "action_seed": "tin_woodman bows head",
       "blocking_seed": [
-        "tin_woodman seated or slumped"
+        "tin_woodman center",
+        "dorothy approaching"
       ],
       "shot_size": "close_up",
       "camera_angle": "eye_level",
       "lens_family": "portrait",
-      "camera_motion": "locked_off",
+      "camera_motion": "push_in",
       "zoom_behavior": "subtle_in",
       "focus_strategy": "shallow_subject",
       "lighting_style": "soft_even",
@@ -232,31 +233,31 @@
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "transition status",
-      "planned_shot_moment_summary": "dorothy provides comfort",
+      "narrative_function": "provide resolution/comfort",
+      "planned_shot_moment_summary": "dorothy touches tin_woodman to stop the rust",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "tin_woodman"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "group_huddle_zone",
-      "planned_shot_required_anchor_1": "empty_throne",
-      "planned_shot_scale_proof_detail": "proximity of characters",
-      "start_state_seed": "close up on tin_woodman",
+      "environment_subzone": "central_floor",
+      "planned_shot_required_anchor_1": "tin_woodman_joints",
+      "planned_shot_scale_proof_detail": "hand on metal surface",
+      "start_state_seed": "close-up of faces",
       "end_state_seed": "medium shot of huddle",
-      "action_seed": "dorothy touching tin_woodman",
+      "action_seed": "dorothy comforts tin_woodman",
       "blocking_seed": [
-        "dorothy leaning into tin_woodman"
+        "dorothy and tin_woodman close together"
       ],
       "shot_size": "medium_close",
       "camera_angle": "eye_level",
-      "lens_family": "normal",
-      "camera_motion": "pull_back",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "soft_even",
-      "primary_subject_angle": "front_three_quarter_right"
+      "primary_subject_angle": "profile_left"
     }
   ],
   "unresolved_questions": [],
@@ -322,16 +323,16 @@
     "[CH011] Chapter XI (book index hit)",
     "[CH002] Chapter II (book index hit)",
     "[CH007] Chapter VII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH018_SC001\n\n## Production Intent\nCapture the heavy emotional vacuum left by the Wizard's departure using a shift from active grief to quiet resignation. Focus on the physical vulnerability of the Tin Woodman and the group's huddling formation within the vastness of the throne room.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n\n## Required Environments\n- emerald_city_throne_room\n\n## Continuity Constraints\n- Tear tracks on tin_woodman\n- Positioning of characters relative to the empty throne\n\n## Beat List\n- BT001: The immediate shock of departure\n- BT002: The onset of grief\n- BT003: Quiet resignation and comfort",
+  "storyboard_markdown": "# Scene Contract: CH018_SC001\n\n## Production Intent\nCapture the heavy emotional vacuum left by the Wizard's departure using a shift from collective grief to individual comfort. The visual language must emphasize the scale of the empty throne room against the small, huddling group.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n\n## Required Environments\n- emerald_city_throne_room\n\n## Continuity Constraints\n- Tear tracks on tin_woodman\n- Character positioning relative to the empty throne\n\n## Beat List\n- BT001: Collective shock at the departure.\n- BT002: The onset of melancholy (tin_woodman's tears).\n- BT003: Quiet resignation and comfort (dorothy provides care).",
   "metadata": {
     "artifact_id": "CH018_SC001_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "7bc444796d09cdaf1848b247b6c20c638131a455",
+    "source_fingerprint": "461e00223248b7580fb92f05c6453325651d22f3",
     "created_at_utc": "2026-04-27T08:54:34.348466+00:00",
-    "updated_at_utc": "2026-04-27T08:54:34.348466+00:00",
+    "updated_at_utc": "2026-04-27T13:57:27.622830+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -356,6 +357,11 @@
         "timestamp_utc": "2026-04-27T08:55:17.632930+00:00",
         "action": "synthesized",
         "source_fingerprint": "7bc444796d09cdaf1848b247b6c20c638131a455"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:58:10.215776+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "461e00223248b7580fb92f05c6453325651d22f3"
       }
     ]
   }

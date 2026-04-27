@@ -5,38 +5,38 @@
   "purpose": "The climax of the Wizard's \"Great and Terrible\" persona.",
   "summary": "The travelers are brought into the Throne Room. They are met with terrifying, massive illusions (the Head, the Beast) designed to intimidate them. The Lion's roar inadvertently triggers a reveal or breaks the tension.",
   "emotional_arc": "Terror $\\rightarrow$ Confusion/Shock.",
-  "production_intent": "Execute the climactic intimidation sequence where massive illusions overwhelm the travelers within a vast dome. The visual language must pivot from overwhelming scale to intimate terror, concluding with a sudden shift in tension triggered by an auditory event.",
-  "scene_short_description": "Travelers enter a massive hall and face towering, terrifying illusions.",
-  "scene_primary_scale_story_point": "Illusions must dwarf the travelers in height and volume.",
+  "production_intent": "Establish the overwhelming psychological dominance of The Wizard through massive, intimidating illusions within a vast architectural space. Use scale disparity between the small travelers and the colossal Head/Beast to drive terror before transitioning into sudden confusion via an auditory disruption.",
+  "scene_short_description": "Travelers enter a massive domed hall and face colossal, terrifying illusions.",
+  "scene_primary_scale_story_point": "Massive illusion height vs. small human travelers.",
   "scene_required_anchor_catalog": [
     "throne_room_grand_hall_dome",
     "illusion_head_structure",
     "illusion_beast_structure"
   ],
-  "scene_start_state": "Travelers enter the vast, dark hall feeling small and vulnerable.",
-  "scene_end_state": "Tension breaks into confusion following a roar.",
-  "dominant_action_line": "The travelers face massive illusions until a roar disrupts the intimidation.",
+  "scene_start_state": "Travelers enter the vast, dark expanse of the throne room.",
+  "scene_end_state": "Tension breaks into shock following a roar.",
+  "dominant_action_line": "The travelers face intimidating illusions until a roar triggers a reveal.",
   "scene_spatial_layout": [
-    "Vast open floor of the grand hall",
-    "High verticality provided by the dome"
+    "Vast open floor within a large dome",
+    "Verticality emphasized by towering illusions"
   ],
   "character_spatial_map": [
-    "dorothy, the_scarecrow, tin_woodman, cowardly_lion clustered in center/lower third",
-    "The Wizard (as Illusions) looming above and behind characters"
+    "dorothy, the_scarecrow, tin_woodman, cowardly_lion clustered in center/floor",
+    "The Wizard (as Illusions) looming above characters"
   ],
   "environment_subzones": [
-    "throne_room_grand_hall_floor",
+    "throne_room_grand_hall_center",
     "throne_room_grand_hall_dome_ceiling"
   ],
   "entry_vectors": [
     "main_entrance_path"
   ],
   "exit_vectors": [
-    "none_specified"
+    "main_entrance_path"
   ],
   "beat_transition_map": [
     "BT001 -> BT002: Sudden appearance of illusions",
-    "BT002 -> BT003: Auditory disruption/roar"
+    "BT002 -> BT003: Auditory disruption (roar)"
   ],
   "characters_required": [
     {
@@ -103,21 +103,21 @@
     }
   ],
   "continuity_constraints": [
-    "Illusion size relative to characters",
+    "Illusion scale relative to characters",
     "Lighting shifts during magical displays"
   ],
   "visual_coverage_families": [
     "Low-angle shots emphasizing illusion scale",
-    "Extreme close-ups of character terror",
+    "Extreme close-ups of character facial terror",
     "Wide shots of dome vastness"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Travelers enter the Throne Room",
+      "summary": "Travelers enter the throne room",
       "purpose": "",
-      "action_start": "walking through entrance",
-      "action_end": "stopping in center floor",
+      "action_start": "travelers walking into hall",
+      "action_end": "travelers halt in center",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -125,11 +125,11 @@
         "cowardly_lion"
       ],
       "passive_subjects": [],
-      "spatial_context": "throne_room_grand_hall_floor",
-      "blocking_hint": "group formation moving toward center",
-      "environment_subzone": "throne_room_grand_hall_floor",
-      "continuity_focus": "character spacing",
-      "coverage_hint": "wide shot of dome",
+      "spatial_context": "throne_room_grand_hall_center",
+      "blocking_hint": "group clustered together",
+      "environment_subzone": "throne_room_grand_hall_center",
+      "continuity_focus": "scale of characters vs dome",
+      "coverage_hint": "wide shot",
       "coverage_priority": "medium",
       "handoff_to_next": "BT002"
     },
@@ -137,8 +137,8 @@
       "beat_id": "BT002",
       "summary": "The Wizard's illusions manifest",
       "purpose": "",
-      "action_start": "sudden lighting shift/shadows",
-      "action_end": "characters cowering in terror",
+      "action_start": "shadows/lighting shift",
+      "action_end": "massive Head and Beast loom over group",
       "active_subjects": [
         "The Wizard (as Illusions)"
       ],
@@ -148,11 +148,11 @@
         "tin_woodman",
         "cowardly_lion"
       ],
-      "spatial_context": "throne_room_grand_hall_dome and floor",
-      "blocking_hint": "illusions looming from above/behind",
-      "environment_subzone": "throne_room_grand_hall_dome",
-      "continuity_focus": "scale of illusions vs characters; lighting shifts",
-      "coverage_hint": "low-angle shots and extreme close-ups",
+      "spatial_context": "throne_room_grand_hall_dome_ceiling",
+      "blocking_hint": "illusions appearing vertically above characters",
+      "environment_subzone": "throne_room_grand_hall_dome_ceiling",
+      "continuity_focus": "lighting shifts during magical display",
+      "coverage_hint": "low-angle shots",
       "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
@@ -161,7 +161,7 @@
       "summary": "The Lion's roar breaks the tension",
       "purpose": "",
       "action_start": "peak terror/silence",
-      "action_end": "confusion/shock",
+      "action_end": "confusion and shock",
       "active_subjects": [
         "cowardly_lion"
       ],
@@ -171,11 +171,11 @@
         "tin_woodman",
         "The Wizard (as Illusions)"
       ],
-      "spatial_context": "throne_room_grand_hall_floor",
-      "blocking_hint": "lion breaks from group stance",
-      "environment_subzone": "throne_room_grand_hall_floor",
-      "continuity_focus": "emotional shift from terror to shock",
-      "coverage_hint": "medium close-up on lion/reactions",
+      "spatial_context": "throne_room_grand_hall_center",
+      "blocking_hint": "lion breaks from group to roar",
+      "environment_subzone": "throne_room_grand_hall_center",
+      "continuity_focus": "emotional shift terror to confusion",
+      "coverage_hint": "extreme close-ups/medium shots",
       "coverage_priority": "high",
       "handoff_to_next": "end_of_scene"
     }
@@ -194,29 +194,29 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "throne_room_grand_hall_floor",
+      "environment_subzone": "throne_room_grand_hall_center",
       "planned_shot_required_anchor_1": "throne_room_grand_hall_dome",
-      "planned_shot_scale_proof_detail": "characters appear tiny against dome height",
-      "start_state_seed": "walking into frame",
-      "end_state_seed": "standing still in center",
-      "action_seed": "entering the hall",
+      "planned_shot_scale_proof_detail": "wide shot showing tiny characters in massive dome",
+      "start_state_seed": "travelers walking into frame",
+      "end_state_seed": "travelers stopping mid-floor",
+      "action_seed": "walking/entering",
       "blocking_seed": [
-        "group walking toward center"
+        "group movement toward center"
       ],
-      "shot_size": "wide",
+      "shot_size": "extreme_wide",
       "camera_angle": "eye_level",
       "lens_family": "ultra_wide",
       "camera_motion": "push_in",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front_three_quarter_right"
+      "primary_subject_angle": "front_three_quarter_left"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "establish_threat",
-      "planned_shot_moment_summary": "massive illusions manifest",
+      "planned_shot_moment_summary": "the Head and Beast illusions manifest",
       "primary_subject_seed": "The Wizard (as Illusions)",
       "secondary_subjects_seed": [
         "dorothy",
@@ -226,19 +226,19 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "throne_room_grand_hall_dome",
+      "environment_subzone": "throne_room_grand_hall_dome_ceiling",
       "planned_shot_required_anchor_1": "illusion_head_structure",
-      "planned_shot_scale_proof_detail": "illusion height vs character height",
+      "planned_shot_scale_proof_detail": "low angle looking up at massive head",
       "start_state_seed": "darkness/shadows",
-      "end_state_seed": "towering presence",
-      "action_seed": "illusions loom over group",
+      "end_state_seed": "massive illusion looming over characters",
+      "action_seed": "manifesting illusions",
       "blocking_seed": [
-        "characters cowering"
+        "illusions appearing above travelers"
       ],
-      "shot_size": "low_angle_wide",
+      "shot_size": "wide",
       "camera_angle": "low_angle",
       "lens_family": "wide",
-      "camera_motion": "tilt_up",
+      "camera_motion": "tilt",
       "zoom_behavior": "none",
       "focus_strategy": "environment_priority",
       "lighting_style": "high_contrast_ceremonial",
@@ -248,7 +248,7 @@
       "planned_shot_id": "SH003",
       "beat_id": "BT002",
       "narrative_function": "character_reaction",
-      "planned_shot_moment_summary": "terror in faces",
+      "planned_shot_moment_summary": "terror on faces",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "the_scarecrow",
@@ -257,14 +257,14 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "throne_room_grand_hall_floor",
+      "environment_subzone": "throne_room_grand_hall_center",
       "planned_shot_required_anchor_1": "none",
-      "planned_shot_scale_proof_detail": "n/a",
-      "start_state_seed": "frozen in fear",
-      "end_state_seed": "eyes wide",
+      "planned_shot_scale_proof_detail": "tight framing of eyes/mouths",
+      "start_state_seed": "static terror",
+      "end_state_seed": "peak terror",
       "action_seed": "reacting to illusions",
       "blocking_seed": [
-        "tight cluster"
+        "characters recoiling"
       ],
       "shot_size": "extreme_close_up",
       "camera_angle": "eye_level",
@@ -272,30 +272,31 @@
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
-      "lighting_style": "hard_directional",
+      "lighting_style": "high_contrast_ceremonial",
       "primary_subject_angle": "front"
     },
     {
       "planned_shot_id": "SH004",
       "beat_id": "BT003",
       "narrative_function": "tension_break",
-      "planned_shot_moment_summary": "the roar occurs",
+      "planned_shot_moment_summary": "lion roars and tension breaks",
       "primary_subject_seed": "cowardly_lion",
       "secondary_subjects_seed": [
         "dorothy",
         "the_scarecrow",
-        "tin_woodman"
+        "tin_woodman",
+        "The Wizard (as Illusions)"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "throne_room_grand_hall_floor",
+      "environment_subzone": "throne_room_grand_hall_center",
       "planned_shot_required_anchor_1": "none",
-      "planned_shot_scale_proof_detail": "n/a",
+      "planned_shot_scale_proof_detail": "reaction to sound",
       "start_state_seed": "terror",
-      "end_state_seed": "confusion",
-      "action_seed": "lion roars",
+      "end_state_seed": "confusion/shock",
+      "action_seed": "roaring",
       "blocking_seed": [
-        "lion lunging or head back"
+        "lion stepping forward"
       ],
       "shot_size": "medium_close",
       "camera_angle": "eye_level",
@@ -372,16 +373,16 @@
     "[CH015] Chapter XV (book index hit)",
     "[CH011] Chapter XI (book index hit)",
     "[CH010] Chapter X (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH015_SC003\n\n## Production Intent\nExecute the climactic intimidation sequence where massive illusions overwhelm the travelers within a vast dome. The visual language must pivot from overwhelming scale to intimate terror, concluding with a sudden shift in tension triggered by an auditory event.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- The Wizard (as Illusions)\n\n## Required Environments\n- throne_room_grand_hall\n\n## Continuity Constraints\n- Scale of illusions relative to characters must remain consistent across shots.\n- Lighting shifts must synchronize with magical/illusion displays.\n\n## Beat List\n- BT001: Travelers enter the Throne Room.\n- BT002: The Wizard's illusions manifest (The Head, The Beast).\n- BT003: The Lion's roar breaks the tension.",
+  "storyboard_markdown": "# Scene Contract: CH015_SC003\n\n## Production Intent\nEstablish the overwhelming psychological dominance of The Wizard through massive, intimidating illusions within a vast architectural space. Use scale disparity between the small travelers and the colossal Head/Beast to drive terror before transitioning into sudden confusion via an auditory disruption.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- The Wizard (as Illusions)\n\n## Required Environments\n- throne_room_grand_hall\n\n## Continuity Constraints\n- Scale of illusions relative to characters\n- Lighting shifts during magical displays\n\n## Beat List\n- BT001: Travelers enter the throne room.\n- BT002: The Wizard's illusions manifest (Head and Beast).\n- BT003: The Lion's roar breaks the tension/triggers reveal.",
   "metadata": {
     "artifact_id": "CH015_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "18305b0f8e07f817e5af6a2590962c7afcfcf155",
+    "source_fingerprint": "d492735670e6c4de88b2fbe537990887b75e10ca",
     "created_at_utc": "2026-04-27T08:46:23.755272+00:00",
-    "updated_at_utc": "2026-04-27T08:46:23.755272+00:00",
+    "updated_at_utc": "2026-04-27T13:49:18.591114+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -406,6 +407,11 @@
         "timestamp_utc": "2026-04-27T08:47:11.943817+00:00",
         "action": "synthesized",
         "source_fingerprint": "18305b0f8e07f817e5af6a2590962c7afcfcf155"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:50:08.331118+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d492735670e6c4de88b2fbe537990887b75e10ca"
       }
     ]
   }

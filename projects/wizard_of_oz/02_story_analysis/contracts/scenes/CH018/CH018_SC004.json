@@ -5,37 +5,37 @@
   "purpose": "Provide a new direction for the quest and establish the stakes for the next act.",
   "summary": "A soldier with green whiskers is summoned. He suggests seeking Glinda, the Good Witch of the South, but warns of the dangers of the desert road. The group accepts the challenge and resolves to leave the next morning.",
   "emotional_arc": "Uncertainty $\\rightarrow$ Resolute Courage.",
-  "production_intent": "Establish the new quest direction by introducing a specialized guide and defining the environmental hazards of the desert road. The scene must transition from the group's current uncertainty to a unified, resolute decision to depart at dawn.",
-  "scene_short_description": "A soldier with green whiskers advises a group within an emerald throne room.",
-  "scene_primary_scale_story_point": "The scale of the throne room dwarfs the small traveling party.",
+  "production_intent": "Establish the new quest direction toward Glinda and heighten stakes via the desert road warning. The scene must transition from a state of uncertainty to resolute courage as the group commits to an early departure.",
+  "scene_short_description": "A soldier with green whiskers warns a weary group about the desert road within the throne room.",
+  "scene_primary_scale_story_point": "The scale of the vast, dangerous desert road vs the safety of the emerald city throne room.",
   "scene_required_anchor_catalog": [
     "emerald_city_throne_room central dais",
     "soldier's green whiskers"
   ],
-  "scene_start_state": "The group is gathered in the throne room, listening to a summoned soldier.",
-  "scene_end_state": "The group stands together, resolved to leave at dawn.",
-  "dominant_action_line": "The Soldier delivers a warning about Glinda and the desert road, prompting the group's acceptance.",
+  "scene_start_state": "The group is gathered in the throne room, listening to the summoned soldier.",
+  "scene_end_state": "The group stands together, resolved to depart at dawn.",
+  "dominant_action_line": "The soldier delivers a warning about Glinda and the desert; the group accepts the challenge.",
   "scene_spatial_layout": [
     "Centralized gathering around the soldier",
-    "Large open floor space of the throne room"
+    "Group clustered in a semi-circle facing the soldier"
   ],
   "character_spatial_map": [
-    "soldier positioned as the focal point/informant",
-    "dorothy, the_scarecrow, tin_woodman, and cowardly_lion clustered as a unit"
+    "soldier positioned as the focal point of information",
+    "dorothy, the_scarecrow, tin_woodman, and cowardly_lion grouped as listeners"
   ],
   "environment_subzones": [
-    "emerald_city_throne_room central dais",
-    "emerald_city_throne_room perimeter shadows"
+    "throne_room_center",
+    "throne_room_perimeter"
   ],
   "entry_vectors": [
-    "soldier entry via summoning"
+    "soldier enters from perimeter to center"
   ],
   "exit_vectors": [
-    "group exit toward morning departure"
+    "group exits toward perimeter/doors for morning departure"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Soldier's warning shifts focus to the desert road",
-    "BT002 -> BT003: Group consensus shifts from doubt to resolution"
+    "BT001 -> BT002: verbal warning delivery",
+    "BT002 -> BT003: collective decision making"
   ],
   "characters_required": [
     {
@@ -102,7 +102,7 @@
     }
   ],
   "continuity_constraints": [
-    "Lighting shift from daytime to evening/dusk as characters plan for next morning"
+    "Lighting must shift from daytime to evening/dusk as characters plan for next morning"
   ],
   "visual_coverage_families": [
     "Medium shot of the Soldier delivering the warning",
@@ -112,32 +112,9 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Soldier is summoned and introduces the path to Glinda",
+      "summary": "Soldier delivers warning about Glinda and the desert road",
       "purpose": "",
-      "action_start": "soldier enters the throne room",
-      "action_end": "soldier identifies Glinda as the goal",
-      "active_subjects": [
-        "soldier"
-      ],
-      "passive_subjects": [
-        "dorothy",
-        "the_scarecrow",
-        "tin_woodman",
-        "cowardly_lion"
-      ],
-      "spatial_context": "emerald_city_throne_room central dais",
-      "blocking_hint": "soldier stands before the group",
-      "environment_subzone": "emerald_city_throne_room central dais",
-      "continuity_focus": "ensure green whiskers are visible",
-      "coverage_hint": "medium shot of soldier",
-      "coverage_priority": "high",
-      "handoff_to_next": "BT002"
-    },
-    {
-      "beat_id": "BT002",
-      "summary": "The Soldier warns of the dangers of the desert road",
-      "purpose": "",
-      "action_start": "soldier begins warning tone",
+      "action_start": "soldier begins speaking",
       "action_end": "warning is completed",
       "active_subjects": [
         "soldier"
@@ -148,20 +125,20 @@
         "tin_woodman",
         "cowardly_lion"
       ],
-      "spatial_context": "emerald_city_throne_room central dais",
-      "blocking_hint": "group reacts to the danger mentioned",
-      "environment_subzone": "emerald_city_throne_room central dais",
-      "continuity_focus": "lighting begins to dim toward evening",
-      "coverage_hint": "reaction shots of group",
-      "coverage_priority": "medium",
-      "handoff_to_next": "BT003"
+      "spatial_context": "throne_room_center",
+      "blocking_hint": "soldier stands before the group",
+      "environment_subzone": "throne_room_center",
+      "continuity_focus": "ensure green whiskers are visible",
+      "coverage_hint": "medium shot of soldier",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
     },
     {
-      "beat_id": "BT003",
-      "summary": "The group accepts the challenge and resolves to leave at dawn",
+      "beat_id": "BT002",
+      "summary": "Group processes danger and accepts challenge",
       "purpose": "",
-      "action_start": "group members nodding in agreement",
-      "action_end": "group stands ready for departure",
+      "action_start": "silence after warning",
+      "action_end": "group nods in agreement",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -171,11 +148,33 @@
       "passive_subjects": [
         "soldier"
       ],
-      "spatial_context": "emerald_city_throne_room central dais",
-      "blocking_hint": "group huddles closer together",
-      "environment_subzone": "emerald_city_throne_room central dais",
-      "continuity_focus": "evening lighting established",
-      "coverage_hint": "wide shot of group",
+      "spatial_context": "throne_room_center",
+      "blocking_hint": "group reacts as a unit",
+      "environment_subzone": "throne_room_center",
+      "continuity_focus": "maintain group positions",
+      "coverage_hint": "reaction shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Resolution to leave the next morning",
+      "purpose": "",
+      "action_start": "verbal agreement",
+      "action_end": "group settles into planning mode",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "soldier"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "throne_room_center",
+      "blocking_hint": "group gathers closer for planning",
+      "environment_subzone": "throne_room_center",
+      "continuity_focus": "lighting shifts toward evening/dusk",
+      "coverage_hint": "wide shot",
       "coverage_priority": "high",
       "handoff_to_next": "end_of_scene"
     }
@@ -184,8 +183,8 @@
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "introduce guide",
-      "planned_shot_moment_summary": "soldier is summoned and presents himself",
+      "narrative_function": "establish stakes",
+      "planned_shot_moment_summary": "soldier delivers the warning about Glinda and the desert road",
       "primary_subject_seed": "soldier",
       "secondary_subjects_seed": [
         "dorothy",
@@ -195,14 +194,15 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "emerald_city_throne_room central dais",
+      "environment_subzone": "throne_room_center",
       "planned_shot_required_anchor_1": "soldier's green whiskers",
-      "planned_shot_scale_proof_detail": "soldier is smaller than throne architecture",
-      "start_state_seed": "soldier enters frame",
-      "end_state_seed": "soldier stands ready",
-      "action_seed": "soldier presents himself",
+      "planned_shot_scale_proof_detail": "medium shot framing soldier against group distance",
+      "start_state_seed": "soldier speaking",
+      "end_state_seed": "soldier finishing warning",
+      "action_seed": "soldier gesturing toward the desert direction",
       "blocking_seed": [
-        "soldier center stage"
+        "soldier center",
+        "group semi-circle"
       ],
       "shot_size": "medium",
       "camera_angle": "eye_level",
@@ -210,46 +210,14 @@
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
-      "lighting_style": "high_contrast_ceremonial",
+      "lighting_style": "diffuse_ambient",
       "primary_subject_angle": "front_three_quarter_right"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "establish stakes",
-      "planned_shot_moment_summary": "soldier warns of the desert road and Glinda",
-      "primary_subject_seed": "soldier",
-      "secondary_subjects_seed": [
-        "dorothy",
-        "the_scarecrow",
-        "tin_woodman",
-        "cowardly_lion"
-      ],
-      "subject_visibility": "on_screen",
-      "narration_mode": "in_scene_speaker",
-      "environment_subzone": "emerald_city_throne_room central dais",
-      "planned_shot_required_anchor_1": "soldier's green whiskers",
-      "planned_shot_scale_proof_detail": "group reaction distance",
-      "start_state_seed": "soldier speaking",
-      "end_state_seed": "soldier finishing warning",
-      "action_seed": "soldier gestures toward the road/south",
-      "blocking_seed": [
-        "soldier remains stationary"
-      ],
-      "shot_size": "medium_close",
-      "camera_angle": "eye_level",
-      "lens_family": "portrait",
-      "camera_motion": "push_in",
-      "zoom_behavior": "subtle_in",
-      "focus_strategy": "shallow_subject",
-      "lighting_style": "high_contrast_ceremonial",
-      "primary_subject_angle": "profile_left"
-    },
-    {
-      "planned_shot_id": "SH003",
-      "beat_id": "BT003",
-      "narrative_function": "resolve conflict",
-      "planned_shot_moment_summary": "group agrees to leave next morning",
+      "narrative_function": "show reaction",
+      "planned_shot_moment_summary": "group members nodding in agreement and processing the danger",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "the_scarecrow",
@@ -257,15 +225,44 @@
         "cowardly_lion"
       ],
       "subject_visibility": "on_screen",
-      "narration_mode": "in_scene_speaker",
-      "environment_subzone": "emerald_city_throne_room central dais",
+      "narration_mode": "none",
+      "environment_subzone": "throne_room_center",
       "planned_shot_required_anchor_1": "emerald_city_throne_room central dais",
-      "planned_shot_scale_proof_detail": "group size relative to room",
-      "start_state_seed": "group nodding",
-      "end_state_seed": "group standing resolute",
-      "action_seed": "group nods and agrees to leave at dawn",
+      "planned_shot_scale_proof_detail": "close proximity of group members",
+      "start_state_seed": "reaction to warning",
+      "end_state_seed": "nodding in agreement",
+      "action_seed": "group nodding and looking at each other",
       "blocking_seed": [
-        "group tight cluster"
+        "tight cluster"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish resolution",
+      "planned_shot_moment_summary": "final wide shot of the group planning departure as light dims",
+      "primary_subject_seed": "group",
+      "secondary_subjects_seed": [
+        "soldier"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "throne_room_center",
+      "planned_shot_required_anchor_1": "emerald_city_throne_room central dais",
+      "planned_shot_scale_proof_detail": "wide view of entire room and group size",
+      "start_state_seed": "decision made",
+      "end_state_seed": "planning for morning",
+      "action_seed": "group standing together in resolve",
+      "blocking_seed": [
+        "spread across center floor"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
@@ -274,7 +271,7 @@
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "low_key_night",
-      "primary_subject_angle": "front_three_quarter_left"
+      "primary_subject_angle": "front"
     }
   ],
   "unresolved_questions": [],
@@ -340,16 +337,16 @@
     "[CH018] Chapter XVIII (book index hit)",
     "[CH012] Chapter XII (book index hit)",
     "[CH015] Chapter XV (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH018_SC004\n\n## Production Intent\nEstablish the new quest direction by introducing a specialized guide and defining the environmental hazards of the desert road. The scene must transition from the group's current uncertainty to a unified, resolute decision to depart at dawn.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- soldier (with green whiskers)\n\n## Required Environments\n- emerald_city_throne_room\n\n## Continuity Constraints\n- Lighting shift from daytime to evening/dusk as characters plan for next morning.\n\n## Beat List\n- BT001: Soldier is summoned and introduces the path to Glinda.\n- BT002: The Soldier warns of the dangers of the desert road.\n- BT003: The group accepts the challenge and resolves to leave at dawn.",
+  "storyboard_markdown": "# Scene Contract: CH018_SC004\n\n## Production Intent\nEstablish the new quest direction toward Glinda and heighten stakes via the desert road warning. The scene must transition from a state of uncertainty to resolute courage as the group commits to an early departure.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- soldier (with green whiskers)\n\n## Required Environments\n- emerald_city_throne_room\n\n## Continuity Constraints\n- Lighting must shift from daytime to evening/dusk as characters plan for next morning.\n\n## Beat List\n- BT001: Soldier delivers warning about Glinda and the desert road.\n- BT002: Group processes danger and accepts challenge.\n- BT003: Resolution to leave the next morning.",
   "metadata": {
     "artifact_id": "CH018_SC004_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "868656729474f2f0a1437c043ad41562b9840a99",
+    "source_fingerprint": "fc0f8eec248d840a33e18ad1ab635c70f658ef51",
     "created_at_utc": "2026-04-27T08:56:46.895260+00:00",
-    "updated_at_utc": "2026-04-27T08:56:46.895260+00:00",
+    "updated_at_utc": "2026-04-27T13:59:40.506021+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -374,6 +371,11 @@
         "timestamp_utc": "2026-04-27T08:57:32.015410+00:00",
         "action": "synthesized",
         "source_fingerprint": "868656729474f2f0a1437c043ad41562b9840a99"
+      },
+      {
+        "timestamp_utc": "2026-04-27T14:00:24.182787+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "fc0f8eec248d840a33e18ad1ab635c70f658ef51"
       }
     ]
   }

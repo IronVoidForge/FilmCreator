@@ -5,37 +5,38 @@
   "purpose": "The climax of the chapter and the tragic reversal of fortune.",
   "summary": "As the balloon begins to lift, Dorothy realizes Toto is missing and rushes to find him. Just as she reaches the basket, the ropes snap prematurely. The balloon ascends rapidly into the sky with only Oz inside, leaving Dorothy and her friends stranded on the ground.",
   "emotional_arc": "From frantic hope to sudden shock and abandonment.",
-  "production_intent": "Execute the tragic separation of Dorothy and Oz via a mechanical failure of the balloon tethering system. The sequence must transition from high-energy movement to static despair, emphasizing the vertical distance growing between the characters on the ground and the ascending vessel.",
-  "scene_short_description": "A character rushes toward a lifting vessel just as the tethers fail, causing an immediate vertical separation.",
-  "scene_primary_scale_story_point": "The growing vertical gap between the ground-bound group and the ascending balloon.",
+  "production_intent": "Execute the tragic separation of Dorothy and Oz via a mechanical failure during balloon ascent. The sequence must transition from high-energy movement to static despair, emphasizing the physical distance growing between the ground party and the ascending vessel.",
+  "scene_short_description": "A character rushes toward a lifting vessel only for it to snap free and ascend rapidly.",
+  "scene_primary_scale_story_point": "The scale shift from ground-level intimacy to the vast sky separation.",
   "scene_required_anchor_catalog": [
     "balloon_basket",
-    "tether_ropes"
+    "snapping_ropes",
+    "emerald_city_palace_exterior"
   ],
-  "scene_start_state": "Dorothy realizes Toto is missing while the balloon begins its initial lift.",
-  "scene_end_state": "The balloon is a small object in the sky; Dorothy and friends are stationary on the ground.",
-  "dominant_action_line": "Dorothy runs for the basket, the ropes snap, and the balloon ascends rapidly with Oz inside.",
+  "scene_start_state": "Dorothy realizes Toto is missing and begins a frantic sprint toward the balloon.",
+  "scene_end_state": "The balloon is high in the sky; Dorothy and friends are small and stranded on the ground.",
+  "dominant_action_line": "Dorothy's failed attempt to reach the basket before the ropes snap.",
   "scene_spatial_layout": [
-    "Vertical axis priority (ground to sky)",
-    "Open launch area near palace exterior"
+    "Verticality increases as the scene progresses",
+    "Grounded group remains clustered near the launch site"
   ],
   "character_spatial_map": [
     "dorothy: moving from mid-ground toward balloon_basket",
-    "oz: contained within balloon_basket",
-    "the_scarecrow, tin_woodman, Lion: clustered on ground near launch site"
+    "oz: inside balloon_basket",
+    "the_scarecrow, tin_woodman, Lion: stationary near balloon_launch_platform"
   ],
   "environment_subzones": [
     "balloon_launch_platform",
-    "emerald_city_palace_exterior"
+    "sky_vertical_axis"
   ],
   "entry_vectors": [
-    "dorothy running from off-screen toward basket"
+    "dorothy: running from off-screen toward basket"
   ],
   "exit_vectors": [
-    "oz ascending vertically out of frame"
+    "oz: ascending via balloon"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: sudden mechanical failure",
+    "BT001 -> BT002: sudden mechanical failure (rope snap)",
     "BT002 -> BT003: rapid vertical ascent"
   ],
   "characters_required": [
@@ -124,34 +125,33 @@
   ],
   "continuity_constraints": [
     "Precise timing of rope snap relative to Dorothy's proximity to the basket",
-    "Consistent rate of vertical ascent for the balloon"
+    "Consistent vertical velocity of the balloon ascent"
   ],
   "visual_coverage_families": [
     "Tracking shots of Dorothy running toward the basket",
     "High-angle/POV looking up at the ascending balloon",
     "Close-ups of snapping ropes and facial reactions",
-    "Wide shots showing the shrinking balloon against the sky"
+    "Wide shots of the shrinking balloon against the sky"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Dorothy realizes Toto is missing and rushes toward the balloon",
+      "summary": "Dorothy realizes Toto is missing and rushes to the basket",
       "purpose": "",
-      "action_start": "Dorothy stops mid-conversation",
-      "action_end": "Dorothy reaches the edge of the launch platform",
+      "action_start": "Dorothy stops mid-action",
+      "action_end": "Dorothy reaches the balloon ropes",
       "active_subjects": [
         "dorothy"
       ],
       "passive_subjects": [
         "the_scarecrow",
         "tin_woodman",
-        "Lion",
-        "oz"
+        "Lion"
       ],
       "spatial_context": "balloon_launch_platform",
-      "blocking_hint": "Dorothy breaks away from the group toward the basket",
+      "blocking_hint": "Dorothy sprinting across the platform toward the basket",
       "environment_subzone": "balloon_launch_platform",
-      "continuity_focus": "Dorothy's distance from the basket must decrease steadily",
+      "continuity_focus": "speed of run vs distance to basket",
       "coverage_hint": "tracking shot",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
@@ -160,8 +160,8 @@
       "beat_id": "BT002",
       "summary": "The ropes snap prematurely",
       "purpose": "",
-      "action_start": "Balloon begins to lift slightly",
-      "action_end": "Ropes fall slack/snap",
+      "action_start": "Ropes under high tension",
+      "action_end": "Ropes severed and basket free",
       "active_subjects": [
         "oz"
       ],
@@ -169,10 +169,10 @@
         "dorothy"
       ],
       "spatial_context": "balloon_launch_platform",
-      "blocking_hint": "Focus on the connection between basket and ground",
+      "blocking_hint": "Dorothy's hands reaching for the rope as it breaks",
       "environment_subzone": "balloon_launch_platform",
-      "continuity_focus": "Timing of snap relative to Dorothy's reach",
-      "coverage_hint": "close-up/insert",
+      "continuity_focus": "timing of snap relative to Dorothy's reach",
+      "coverage_hint": "close-up",
       "coverage_priority": "critical",
       "handoff_to_next": "BT003"
     },
@@ -180,8 +180,8 @@
       "beat_id": "BT003",
       "summary": "The balloon ascends rapidly, leaving everyone behind",
       "purpose": "",
-      "action_start": "Balloon breaks contact with ground",
-      "action_end": "Balloon is a small speck in the sky",
+      "action_start": "Balloon lifting from ground",
+      "action_end": "Balloon small in the sky",
       "active_subjects": [
         "oz"
       ],
@@ -191,13 +191,13 @@
         "tin_woodman",
         "Lion"
       ],
-      "spatial_context": "emerald_city_palace_exterior",
-      "blocking_hint": "Group remains grounded, looking upward",
-      "environment_subzone": "emerald_city_palace_exterior",
-      "continuity_focus": "Speed of ascent must be rapid and consistent",
-      "coverage_hint": "wide shot/high-angle POV",
+      "spatial_context": "sky_vertical_axis",
+      "blocking_hint": "Group looking upward in shock",
+      "environment_subzone": "sky_vertical_axis",
+      "continuity_focus": "speed of ascent",
+      "coverage_hint": "wide shot/high-angle",
       "coverage_priority": "medium",
-      "handoff_to_next": "none"
+      "handoff_to_next": "end_of_scene"
     }
   ],
   "planned_shots": [
@@ -205,23 +205,19 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish urgency",
-      "planned_shot_moment_summary": "Dorothy realizes Toto is missing and begins running",
+      "planned_shot_moment_summary": "Dorothy realizes Toto is missing and runs",
       "primary_subject_seed": "dorothy",
-      "secondary_subjects_seed": [
-        "the_scarecrow",
-        "tin_woodman",
-        "Lion"
-      ],
+      "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "balloon_launch_platform",
       "planned_shot_required_anchor_1": "balloon_basket",
       "planned_shot_scale_proof_detail": "distance between Dorothy and basket",
-      "start_state_seed": "Dorothy standing near group",
-      "end_state_seed": "Dorothy mid-sprint",
-      "action_seed": "running toward balloon",
+      "start_state_seed": "Dorothy mid-sprint",
+      "end_state_seed": "Dorothy reaching for ropes",
+      "action_seed": "running",
       "blocking_seed": [
-        "dorothy breaks from group toward basket"
+        "linear sprint toward basket"
       ],
       "shot_size": "medium_full",
       "camera_angle": "eye_level",
@@ -235,25 +231,23 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "climax of tension",
-      "planned_shot_moment_summary": "the ropes snap prematurely",
-      "primary_subject_seed": "tether_ropes",
-      "secondary_subjects_seed": [
-        "dorothy"
-      ],
+      "narrative_function": "trigger climax",
+      "planned_shot_moment_summary": "The ropes snap prematurely",
+      "primary_subject_seed": "snapping_ropes",
+      "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "balloon_launch_platform",
-      "planned_shot_required_anchor_1": "tether_ropes",
-      "planned_shot_scale_proof_detail": "tension in rope before snap",
-      "start_state_seed": "ropes taut",
-      "end_state_seed": "ropes frayed/snapped",
-      "action_seed": "ropes snapping under tension",
+      "planned_shot_required_anchor_1": "snapping_ropes",
+      "planned_shot_scale_proof_detail": "tension release in rope fibers",
+      "start_state_seed": "ropes under tension",
+      "end_state_seed": "ropes severed",
+      "action_seed": "snapping",
       "blocking_seed": [
-        "close up on tether point"
+        "close-up on rope attachment points"
       ],
-      "shot_size": "insert_detail",
-      "camera_angle": "low_angle",
+      "shot_size": "extreme_close_up",
+      "camera_angle": "eye_level",
       "lens_family": "telephoto",
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
@@ -265,27 +259,22 @@
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "establish abandonment",
-      "planned_shot_moment_summary": "balloon ascends rapidly into the sky",
+      "planned_shot_moment_summary": "The balloon ascends rapidly into the sky",
       "primary_subject_seed": "oz",
-      "secondary_subjects_seed": [
-        "dorothy",
-        "the_scarecrow",
-        "tin_woodman",
-        "Lion"
-      ],
+      "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "emerald_city_palace_exterior",
-      "planned_shot_required_anchor_1": "balloon_basket",
-      "planned_shot_scale_proof_detail": "balloon shrinking in frame",
+      "environment_subzone": "sky_vertical_axis",
+      "planned_shot_required_anchor_1": "emerald_city_palace_exterior",
+      "planned_shot_scale_proof_detail": "balloon shrinking against palace architecture",
       "start_state_seed": "balloon lifting off ground",
       "end_state_seed": "balloon high in sky",
-      "action_seed": "rapid vertical ascent",
+      "action_seed": "ascending",
       "blocking_seed": [
-        "group looking up from ground"
+        "wide shot of group looking up"
       ],
-      "shot_size": "extreme_wide",
-      "camera_angle": "high_angle",
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
       "lens_family": "ultra_wide",
       "camera_motion": "tilt",
       "zoom_behavior": "none",
@@ -359,16 +348,16 @@
     "[CH017] Chapter XVII (book index hit)",
     "[CH005] Chapter V (book index hit)",
     "[CH003] Chapter III (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH017_SC004\n\n## Production Intent\nExecute the tragic separation of Dorothy and Oz via a mechanical failure of the balloon tethering system. The sequence must transition from high-energy movement to static despair, emphasizing the vertical distance growing between the characters on the ground and the ascending vessel.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- oz (inside basket)\n- the_scarecrow\n- tin_woodman\n- Lion\n- toto (off-screen/searching)\n\n## Required Environments\n- balloon_launch_platform\n- emerald_city_palace_exterior\n\n## Continuity Constraints\n- Timing of rope snap relative to Dorothy's position.\n- Rate and height of the balloon's vertical ascent.\n\n## Beat List\n- BT001: Dorothy realizes Toto is missing and rushes toward the balloon.\n- BT002: The ropes snap prematurely.\n- BT003: The balloon ascends rapidly, leaving everyone behind.",
+  "storyboard_markdown": "# Scene Contract: CH017_SC004\n\n## Production Intent\nExecute the tragic separation of Dorothy and Oz via a mechanical failure during balloon ascent. The sequence must transition from high-energy movement to static despair, emphasizing the physical distance growing between the ground party and the ascending vessel.\n\n## Required Cast\n- dorothy (expressive face, weary traveler)\n- oz (inside basket)\n- the_scarecrow\n- tin_woodman\n- Lion\n- toto (off-screen/searching)\n\n## Required Environments\n- balloon_launch_platform\n- emerald_city_palace_exterior\n- sky_vertical_axis\n\n## Continuity Constraints\n- Timing of rope snap relative to Dorothy's physical position.\n- Vertical velocity and scale reduction of the balloon during ascent.\n\n## Beat List\n- BT001: Dorothy realizes Toto is missing and rushes to the basket.\n- BT002: The ropes snap prematurely.\n- BT003: The balloon ascends rapidly, leaving everyone behind.",
   "metadata": {
     "artifact_id": "CH017_SC004_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "aaf5274caf45645837059927264f06392ad37743",
+    "source_fingerprint": "abc4c61ed382eaccc456e05db8fa961df7e83881",
     "created_at_utc": "2026-04-27T08:53:48.961640+00:00",
-    "updated_at_utc": "2026-04-27T08:53:48.962641+00:00",
+    "updated_at_utc": "2026-04-27T13:56:43.511814+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -393,6 +382,11 @@
         "timestamp_utc": "2026-04-27T08:54:33.243855+00:00",
         "action": "synthesized",
         "source_fingerprint": "aaf5274caf45645837059927264f06392ad37743"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:57:26.523995+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "abc4c61ed382eaccc456e05db8fa961df7e83881"
       }
     ]
   }

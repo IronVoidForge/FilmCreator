@@ -153,8 +153,7 @@ def fallback_text(fallbacks: dict[str, Any], family: str, bucket: str) -> str:
     table = fallbacks.get(f"{family}_fallbacks", {})
     if not isinstance(table, dict):
         return ""
-    key = _fallback_bucket_alias(bucket)
-    return str(table.get(key) or table.get(bucket) or table.get("general") or "").strip()
+    return str(table.get(str(bucket).strip()) or table.get("general") or "").strip()
 
 
 def _normalize_visual_fallbacks(payload: dict[str, Any]) -> dict[str, Any]:
@@ -166,7 +165,7 @@ def _normalize_visual_fallbacks(payload: dict[str, Any]) -> dict[str, Any]:
             merged = dict(normalized[family])
             for key, value in incoming.items():
                 if str(value).strip():
-                    merged[_fallback_bucket_alias(str(key))] = str(value).strip()
+                    merged[str(key)] = str(value).strip()
             normalized[family] = merged
     incoming_negatives = payload.get("negative_terms", {})
     if isinstance(incoming_negatives, dict):
@@ -246,17 +245,6 @@ def _derive_environment_fallbacks(book_context: str, context: dict[str, Any]) ->
 
 def _guess_source_title(project_dir: Path, text: str) -> str:
     return project_dir.name.replace("_", " ").strip().title()
-
-
-def _fallback_bucket_alias(bucket: str) -> str:
-    aliases = {
-        "earth_human": "human_period",
-        "oz_humanoid": "humanoid_fantasy",
-        "barsoom_humanoid": "humanoid_speculative",
-        "creature_or_primitive": "creature_or_animal",
-        "group_or_horde": "group_or_crowd",
-    }
-    return aliases.get(str(bucket).strip(), str(bucket).strip())
 
 
 def _compact_text(text: str, *, limit: int) -> str:
