@@ -5,16 +5,16 @@
   "shot_order": 3,
   "previous_shot_id": "SH002",
   "next_shot_id": "",
-  "primary_subject": "farmhouse_interior_and_cellar",
+  "primary_subject": "farmhouse_structure",
   "secondary_subjects": [
-    "aunt_em",
-    "uncle_henry"
+    "uncle_henry",
+    "dorothy"
   ],
-  "shot_moment_summary": "low angle of house against dark sky",
-  "start_state": "gray light",
-  "end_state": "dark/stormy light",
-  "action_during_shot": "wind picks up, hair and clothes move",
-  "action_continues_from": "turning to action",
+  "shot_moment_summary": "low angle of house against darkening sky",
+  "start_state": "gray_light",
+  "end_state": "dark_stormy",
+  "action_during_shot": "wind_increasing",
+  "action_continues_from": "dreadful_expression",
   "action_hands_off_to": "end_of_scene",
   "shot_size": "wide",
   "camera_angle": "low_angle",
@@ -26,56 +26,51 @@
   "subject_visibility": "on_screen",
   "narration_mode": "none",
   "primary_subject_angle": "front",
-  "visible_primary_subject_id": "dorothy",
+  "visible_primary_subject_id": "aunt_em",
   "visible_secondary_subject_ids": [
-    "aunt_em",
-    "uncle_henry"
+    "uncle_henry",
+    "dorothy"
   ],
   "primary_subject_frame_position": "midground inside kansas_prairie_landscape",
-  "primary_subject_scale_relation": "farmhouse dwarfed by vastness of landscape and storm scale",
+  "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
   "primary_subject_facing_direction": "facing directly toward camera",
-  "primary_subject_pose_description": "gray light",
-  "subject_relation_summary": "farmhouse_interior_and_cellar plays against aunt_em, uncle_henry in the same frame",
+  "primary_subject_pose_description": "gray_light",
+  "subject_relation_summary": "farmhouse_structure plays against uncle_henry, dorothy in the same frame",
   "required_environment_anchor_1": "kansas_prairie_landscape",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "farmhouse dwarfed by darkening sky",
+  "required_scale_proof_detail": "looming_sky",
   "camera_package_description": "wide, low angle, wide lens, push in, deep focus, low key night",
   "subject_blocking": [
-    "static house",
-    "characters moving toward safety/cellar"
+    "static",
+    "characters moving toward safety/cellar",
+    "farmhouse_interior_and_cellar/kansas_prairie_landscape",
+    "aunt_em remains readable within the active playing space.",
+    "uncle_henry remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the farmhouse_interior_and_cellar.",
-    "Background depth keeps kansas_prairie_landscape legible as location anchor."
+    "Background depth should keep kansas_prairie_landscape legible as the location anchor.",
+    "Subject 1: aunt_em remains visually readable against the environment scale.",
+    "Subject 2: uncle_henry remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "farmhouse_interior_and_cellar focuses toward the active scene action."
+    "farmhouse_structure focuses toward the active scene action."
   ],
-  "environment_subzone": "farmhouse_interior_and_cellar/kansas_prairie_landscape",
+  "environment_subzone": "kansas_prairie_landscape",
   "key_visible_environment_features": [
     "farmhouse_interior_and_cellar"
   ],
-  "continuity_from_previous_shot": "turning to action",
+  "continuity_from_previous_shot": "dreadful_expression",
   "continuity_to_next_shot": "end_of_scene",
-  "pose_anchor_frame": "gray light",
-  "pose_end_frame": "dark/stormy light",
+  "pose_anchor_frame": "gray_light",
+  "pose_end_frame": "dark_stormy",
   "shot_title": "Establishing Wide 3: Escalating Dread",
   "shot_type": "establishing_wide",
   "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across kansas_prairie_landscape with dorothy, aunt_em, uncle_henry placed for immediate spatial orientation.",
+  "composition": "Wide composition across kansas_prairie_landscape with aunt_em, uncle_henry, dorothy placed for immediate spatial orientation.",
   "target_seconds": 5.1,
   "characters_in_frame": [
-    {
-      "label": "Dorothy",
-      "canonical_id": "dorothy",
-      "display_name": "dorothy",
-      "status": "canonical",
-      "entity_kind": "individual",
-      "resolution_score": 138,
-      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
-      "notes": "Direct registry match for 'dorothy'."
-    },
     {
       "label": "Aunt Em",
       "canonical_id": "aunt_em",
@@ -95,6 +90,16 @@
       "resolution_score": 138,
       "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/uncle_henry.md",
       "notes": "Direct registry match for 'uncle_henry'."
+    },
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
     }
   ],
   "environment": {
@@ -112,10 +117,11 @@
   ],
   "continuity_constraints": [
     "Lighting shift from bright/gray to dark/stormy",
-    "Wind speed and direction affecting hair and clothing"
+    "Wind speed and direction affecting hair and clothing",
+    "Escalating dread as storm closes in"
   ],
-  "prompt_seed": "Establishing Wide 3: Escalating dread as storm arrives. establishing_wide. size=wide. angle=low_angle. lens=wide. motion=push_in. zoom=none. focus=deep_focus. lighting=low_key_night. visibility=on_screen. subject_angle=front. Wide establishing frame with a steady or lightly drifting camera. Wide composition across k...",
-  "shot_notes": "Escalating dread as storm arrives",
+  "prompt_seed": "Establishing Wide 3: Escalating dread as storm closes in. establishing_wide. size=wide. angle=low_angle. lens=wide. motion=push_in. zoom=none. focus=deep_focus. lighting=low_key_night. visibility=on_screen. subject_angle=front. Wide establishing frame with a steady or lightly drifting camera. Wide composition across...",
+  "shot_notes": "Escalating dread as storm closes in",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -173,14 +179,14 @@
     }
   ],
   "evidence_summary": [
-    "Establish the desolate, colorless Kansas prairie and the looming threat of a dual-direction cyclone. The visual progression must move from mundane vigilance to escalating dread through lighting shifts and increasing wind intensity.",
+    "Establish the desolate, colorless Kansas prairie and the looming threat of a dual-direction cyclone. The sequence must transition from mundane farm vigilance to escalating dread as weather conditions deteriorate.",
     "In the colorless Kansas prairie, the family lives under the shadow of potential cyclones. As a massive storm approaches from two directions, Uncle Henry prepares for the worst while Aunt Em directs Dorothy toward safety.",
     "Mundane vigilance $\\rightarrow$ Escalating dread.",
-    "Bright, gray, windless prairie landscape.",
-    "Dark, stormy atmosphere with high wind activity.",
-    "Family members react to the approaching storm as preparations begin.",
-    "dorothy | Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and functional id...",
-    "aunt_em | Visual identity is currently unestablished. While the entity is taxonomically classified as a bipedal, human-scale individual, specific details regarding costume, silhouette, or physical build are not provided in the available evidence. | unknown...",
+    "Bright, gray, desolate prairie under high-key overcast light.",
+    "Dark, stormy atmosphere with increasing wind and heavy cloud cover.",
+    "Family members react to the approaching storm through preparation and safety directives.",
+    "dorothy | Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is most notabl...",
+    "aunt_em | Visual identity is currently unestablished. While the entity is taxonomically classified as a human-scale biped, specific details regarding age, build, costume, or movement are not provided in the available evidence. Note: Chapter CH012 contains c...",
     "uncle_henry | No visual data is available to establish a stable identity, costume, or physical presence for uncle_henry. The character is confirmed as a human-scale individual but lacks specific descriptive evidence regarding appearance or movement. | unkno...",
     "kansas_prairie_landscape | No specific visual descriptors are provided in the current evidence. The environment is identified as a prairie landscape within the Kansas setting. | Unknown. | Unknown. | Unknown.",
     "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown"
@@ -189,24 +195,24 @@
     "artifact_id": "CH001_SC001_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "7874814ff9de0766488daa40080d11ec9d7bedeb",
+    "source_fingerprint": "6951cde724270037ba8786edd0ff160cd8a7b5de",
     "created_at_utc": "2026-04-27T09:18:38.842985+00:00",
-    "updated_at_utc": "2026-04-27T09:18:38.842985+00:00",
+    "updated_at_utc": "2026-04-27T14:22:23.702063+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH001_SC001",
-        "version": "d8eeca9c17519ed145c49412dc1c7ecb6e32b31e"
+        "version": "802e23bad206e9cddf759515953378e3694da6cd"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH001_SC001",
-        "version": "922e21e3767ee5d7f692f9194cb335ba8547b61f"
+        "version": "4d3b13b585f809f78da5d2e9b34b4850b2194eee"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH001_SC001",
-        "version": "08e08f1f42f08f10e98c0b6bca863d08f30ad369"
+        "version": "94df253f5760c35c377ba86800026b17b79b7957"
       }
     ],
     "locked_fields": {},
@@ -216,6 +222,11 @@
         "timestamp_utc": "2026-04-27T09:19:46.715781+00:00",
         "action": "synthesized",
         "source_fingerprint": "7874814ff9de0766488daa40080d11ec9d7bedeb"
+      },
+      {
+        "timestamp_utc": "2026-04-27T14:23:38.737367+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "6951cde724270037ba8786edd0ff160cd8a7b5de"
       }
     ]
   }

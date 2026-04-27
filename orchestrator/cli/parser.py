@@ -118,10 +118,21 @@ def build_parser() -> argparse.ArgumentParser:
     vf.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
     vf.add_argument("--force", action="store_true")
 
+    cve = subparsers.add_parser(
+        "refine-character-visual-evidence",
+        help="Recover source-supported visual evidence and patch character bibles before downstream descriptors.",
+    )
+    cve.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
+    cve.add_argument("--force", action="store_true")
+    cve.add_argument("--only-review", action="store_true")
+    cve.add_argument("--chapters", default=None)
+    cve.add_argument("--limit", type=int, default=None)
+
     synth = subparsers.add_parser("run-stage", help="Run a focused implemented pipeline stage.")
     synth.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
     synth.add_argument("stage", choices=[
         "visual_fallbacks",
+        "character_visual_evidence",
         "scene_contracts",
         "scene_bindings",
         "shot_packages",

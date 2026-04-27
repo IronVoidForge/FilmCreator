@@ -6,16 +6,14 @@
   "previous_shot_id": "",
   "next_shot_id": "",
   "primary_subject": "dorothy",
-  "secondary_subjects": [
-    "toto"
-  ],
-  "shot_moment_summary": "looking up at the house structure",
+  "secondary_subjects": [],
+  "shot_moment_summary": "looking up at the massive house structure",
   "start_state": "dorothy looking up in shock",
-  "end_state": "dorothy moving toward edge",
-  "action_during_shot": "looking at the massive house",
+  "end_state": "dorothy moving toward the edge",
+  "action_during_shot": "looking at the structure",
   "action_continues_from": "Dorothy stands in shock near the heavy impact site of her house.",
   "action_hands_off_to": "BT002",
-  "shot_size": "wide",
+  "shot_size": "close_up",
   "camera_angle": "low_angle",
   "lens_family": "wide",
   "camera_motion": "tilt",
@@ -26,46 +24,41 @@
   "narration_mode": "in_scene_speaker",
   "primary_subject_angle": "front_three_quarter_right",
   "visible_primary_subject_id": "dorothy",
-  "visible_secondary_subject_ids": [
-    "toto"
-  ],
-  "primary_subject_frame_position": "midground inside The house foundation perimeter",
-  "primary_subject_scale_relation": "low angle vs house height",
+  "visible_secondary_subject_ids": [],
+  "primary_subject_frame_position": "foreground inside The house foundation/underside",
+  "primary_subject_scale_relation": "house height vs dorothy height",
   "primary_subject_facing_direction": "front three-quarter right toward the scene action",
   "primary_subject_pose_description": "dorothy looking up in shock",
-  "subject_relation_summary": "dorothy plays against toto in the same frame",
-  "required_environment_anchor_1": "The house foundation perimeter",
+  "subject_relation_summary": "dorothy carries the frame alone",
+  "required_environment_anchor_1": "The house foundation/underside",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "low angle vs house height",
-  "camera_package_description": "wide, low angle, wide lens, tilt, deep focus, diffuse ambient",
+  "required_scale_proof_detail": "house height vs dorothy height",
+  "camera_package_description": "close-up, low angle, wide lens, tilt, deep focus, diffuse ambient",
   "subject_blocking": [
-    "dorothy near house base",
-    "dorothy near the base of the structure",
-    "dorothy remains readable within the active playing space.",
-    "toto remains readable within the active playing space."
+    "dorothy stands near house base",
+    "dorothy moves toward the structure"
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the The house foundation perimeter.",
+    "Camera anchors the action inside the The house foundation/underside.",
     "Background depth should keep The site of the house landing legible as the location anchor.",
-    "Subject 1: dorothy remains visually readable against the environment scale.",
-    "Subject 2: toto remains visually readable against the environment scale."
+    "Subject 1: dorothy remains visually readable against the environment scale."
   ],
   "gaze_directions": [
     "dorothy focuses toward the active scene action."
   ],
-  "environment_subzone": "The house foundation perimeter",
+  "environment_subzone": "The house foundation/underside",
   "key_visible_environment_features": [
-    "The house foundation perimeter"
+    "The house foundation/underside"
   ],
   "continuity_from_previous_shot": "Dorothy stands in shock near the heavy impact site of her house.",
   "continuity_to_next_shot": "BT002",
   "pose_anchor_frame": "dorothy looking up in shock",
-  "pose_end_frame": "dorothy moving toward edge",
-  "shot_title": "Establishing Wide 1: Dorothy discovers the house impact",
-  "shot_type": "establishing_wide",
-  "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across The site of the house landing with dorothy, toto placed for immediate spatial orientation.",
+  "pose_end_frame": "dorothy moving toward the edge",
+  "shot_title": "Reaction Closeup 1: Dorothy discovers the house impact",
+  "shot_type": "reaction_closeup",
+  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+  "composition": "Intimate composition that isolates dorothy against The site of the house landing to capture the beat's emotional turn.",
   "target_seconds": 5.5,
   "characters_in_frame": [
     {
@@ -77,16 +70,6 @@
       "resolution_score": 138,
       "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH002/dorothy.md",
       "notes": "Direct registry match for 'dorothy'."
-    },
-    {
-      "label": "Toto",
-      "canonical_id": "toto",
-      "display_name": "toto",
-      "status": "canonical",
-      "entity_kind": "individual",
-      "resolution_score": 138,
-      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH002/toto.md",
-      "notes": "Direct registry match for 'toto'."
     }
   ],
   "environment": {
@@ -105,10 +88,9 @@
   "continuity_constraints": [
     "House position relative to character movement",
     "Scale disparity between Dorothy and munchkins",
-    "Dorothy discovers the house impact",
-    "Resolve The site of the house landing -> The site of the house landing"
+    "Dorothy discovers the house impact"
   ],
-  "prompt_seed": "Establishing Wide 1: Dorothy discovers the house impact. establishing_wide. size=wide. angle=low_angle. lens=wide. motion=tilt. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_right. Wide establishing frame with a steady or lightly drifting camera. Wide...",
+  "prompt_seed": "Reaction Closeup 1: Dorothy discovers the house impact. reaction_closeup. size=close_up. angle=low_angle. lens=wide. motion=tilt. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_right. Close framing that isolates reaction and emotional emphasis. Intimate...",
   "shot_notes": "Dorothy discovers the house impact",
   "evidence_refs": [
     {
@@ -172,33 +154,32 @@
     "Shock $\\rightarrow$ Realization of liberation/Triumph (Munchkins)",
     "Dorothy stands in shock near the heavy impact site of her house.",
     "Munchkins celebrate the liberation following the discovery of the Witch.",
-    "Dorothy investigates the area beneath the house to discover the fallen Witch.",
-    "dorothy | Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and functional id...",
-    "toto | Toto is a small quadruped animal, specifically a dog, characterized by its black fur and alert eyes. The character maintains a compact silhouette suitable for a companion animal. | Black fur. | unknown",
-    "munchkins | The munchkins are a group of small-scale, bipedal entities characterized by a uniform color palette of blue. Their primary visual identifier is their costume consisting of blue clothing and blue hats that are specifically adorned with bells. | B..."
+    "Dorothy investigates the area beneath the house to discover the cause of the impact.",
+    "dorothy | Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is most notabl...",
+    "munchkins | The munchkins are a group of small-scale, bipedal entities characterized by a uniform color palette of blue. Their primary visual identifier is their clothing, consisting of blue garments and blue hats that are specifically adorned with bells. |..."
   ],
   "metadata": {
     "artifact_id": "CH002_SC002_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "0e243781d086ff656c718411fa06e73cb3c4f798",
+    "source_fingerprint": "5c938e61c899fbb869c7e2dad9d2326f3091e9f4",
     "created_at_utc": "2026-04-27T09:33:37.044679+00:00",
-    "updated_at_utc": "2026-04-27T09:33:37.044679+00:00",
+    "updated_at_utc": "2026-04-27T14:37:51.891089+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH002_SC002",
-        "version": "93669ffbead0e74a4453801a3570fac0607dab64"
+        "version": "435f6a21d29253698109abab248e453d932ff0de"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH002_SC002",
-        "version": "d5c656f8b6fa9b731c6451f709a178cfb484c454"
+        "version": "6ffe40e6751a305643a08046f2b26e2d7bfe936a"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH002_SC002",
-        "version": "50bf0e1c0aebca5276c67799e544d3a50ec76ba4"
+        "version": "16f5f5029e2eafeb36759b980fbb0fe7a27ff295"
       }
     ],
     "locked_fields": {},
@@ -208,6 +189,11 @@
         "timestamp_utc": "2026-04-27T09:34:50.193916+00:00",
         "action": "synthesized",
         "source_fingerprint": "0e243781d086ff656c718411fa06e73cb3c4f798"
+      },
+      {
+        "timestamp_utc": "2026-04-27T14:39:02.923532+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "5c938e61c899fbb869c7e2dad9d2326f3091e9f4"
       }
     ]
   }

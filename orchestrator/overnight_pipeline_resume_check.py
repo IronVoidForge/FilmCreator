@@ -20,6 +20,7 @@ STAGES: list[str] = [
     "character_taxonomy",
     "identity_refinement",
     "character_bibles",
+    "character_visual_evidence",
     "environment_bibles",
     "visual_fallbacks",
     "scene_contracts",
@@ -257,6 +258,33 @@ def check_environment_bibles(project_root: Path, chapters: str = "") -> tuple[bo
         return False, "environment bible index exists but no environment bible JSONs found", {}
 
     return True, f"{len(files)} environment bible JSONs found", {"files": len(files)}
+
+
+def check_character_visual_evidence(project_root: Path, chapters: str = "") -> tuple[bool, str, dict[str, Any]]:
+    evidence_dir = project_root / "02_story_analysis" / "bibles" / "characters" / "visual_evidence"
+    index_file = evidence_dir / "CHARACTER_VISUAL_EVIDENCE_INDEX.json"
+    if not index_file.exists():
+        return False, "missing CHARACTER_VISUAL_EVIDENCE_INDEX.json", {}
+
+    data = _read_json(index_file)
+    if not isinstance(data, dict):
+        return False, "CHARACTER_VISUAL_EVIDENCE_INDEX.json is not a valid dict", {}
+
+    records = data.get("records", [])
+    if not isinstance(records, list):
+        return False, "CHARACTER_VISUAL_EVIDENCE_INDEX records is not a list", {}
+
+    bible_dir = project_root / "02_story_analysis" / "bibles" / "characters"
+    bible_count = len([p for p in bible_dir.glob("CHAR_*.json") if p.is_file()])
+    if bible_count <= 0:
+        return False, "no character bible JSONs found for visual evidence refinement", {}
+
+    return True, "character visual evidence refinement index found", {
+        "records": len(records),
+        "patched_count": data.get("patched_count", 0),
+        "review_count": data.get("review_count", 0),
+        "bible_count": bible_count,
+    }
 
 
 def check_visual_fallbacks(project_root: Path, chapters: str = "") -> tuple[bool, str, dict[str, Any]]:
@@ -755,6 +783,7 @@ CHECKS: dict[str, Callable[[Path, str], tuple[bool, str, dict[str, Any]]]] = {
     "character_taxonomy": check_character_taxonomy,
     "identity_refinement": check_identity_refinement,
     "character_bibles": check_character_bibles,
+    "character_visual_evidence": check_character_visual_evidence,
     "environment_bibles": check_environment_bibles,
     "visual_fallbacks": check_visual_fallbacks,
     "scene_contracts": check_scene_contracts,

@@ -5,62 +5,68 @@
   "shot_order": 2,
   "previous_shot_id": "SH001",
   "next_shot_id": "SH003",
-  "primary_subject": "silver shoes",
-  "secondary_subjects": [],
-  "shot_moment_summary": "The silver shoes appearing on the ground",
-  "start_state": "empty ground",
-  "end_state": "shoes visible",
-  "action_during_shot": "shoes are revealed/given to Dorothy",
-  "action_continues_from": "remains fully dried",
+  "primary_subject": "dorothy",
+  "secondary_subjects": [
+    "witch_of_the_north"
+  ],
+  "shot_moment_summary": "Dorothy learns she cannot go home",
+  "start_state": "curiosity",
+  "end_state": "despair",
+  "action_during_shot": "Dorothy reacts to news of impassable land",
+  "action_continues_from": "shoes visible on Dorothy",
   "action_hands_off_to": "BT003",
-  "shot_size": "insert_detail",
-  "camera_angle": "low_angle",
-  "lens_family": "normal",
+  "shot_size": "close_up",
+  "camera_angle": "eye_level",
+  "lens_family": "portrait",
   "camera_motion": "locked_off",
-  "zoom_behavior": "none",
+  "zoom_behavior": "subtle_in",
   "focus_strategy": "shallow_subject",
   "lighting_style": "soft_even",
   "subject_visibility": "on_screen",
   "narration_mode": "in_scene_speaker",
   "primary_subject_angle": "front",
   "visible_primary_subject_id": "dorothy",
-  "visible_secondary_subject_ids": [],
-  "primary_subject_frame_position": "foreground right within The drying site",
-  "primary_subject_scale_relation": "Small scale character interaction transitioning to large scale world-building via the slate.",
+  "visible_secondary_subject_ids": [
+    "witch_of_the_north"
+  ],
+  "primary_subject_frame_position": "foreground inside The clearing near the house",
+  "primary_subject_scale_relation": "Small scale character interaction transitioning to the large scale journey toward Emerald City.",
   "primary_subject_facing_direction": "facing directly toward camera",
-  "primary_subject_pose_description": "empty ground",
-  "subject_relation_summary": "silver shoes carries the frame alone",
-  "required_environment_anchor_1": "The drying site",
+  "primary_subject_pose_description": "curiosity",
+  "subject_relation_summary": "dorothy plays against witch_of_the_north in the same frame",
+  "required_environment_anchor_1": "The clearing near the house",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "Small scale character interaction transitioning to large scale world-building via the slate.",
-  "camera_package_description": "insert-detail, low angle, normal lens, locked off, shallow subject, soft even",
+  "required_scale_proof_detail": "Small scale character interaction transitioning to the large scale journey toward Emerald City.",
+  "camera_package_description": "close-up, eye level, portrait lens, locked off, zoom subtle in, shallow subject, soft even",
   "subject_blocking": [
-    "Dorothy leans down to receive them",
-    "Dorothy approaches the remains",
-    "The drying site",
-    "dorothy remains readable within the active playing space."
+    "Dorothy standing/reacting",
+    "Dorothy facing the Witch of the North",
+    "The clearing near the house",
+    "dorothy remains readable within the active playing space.",
+    "witch_of_the_north remains readable within the active playing space."
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the The drying site.",
+    "Camera anchors the action inside the The clearing near the house.",
     "Background depth should keep The clearing near the house legible as the location anchor.",
-    "Subject 1: dorothy remains visually readable against the environment scale."
+    "Subject 1: dorothy remains visually readable against the environment scale.",
+    "Subject 2: witch_of_the_north remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "silver shoes focuses toward the active scene action."
+    "dorothy focuses toward the active scene action."
   ],
-  "environment_subzone": "The drying site",
+  "environment_subzone": "The clearing near the house",
   "key_visible_environment_features": [
-    "The drying site"
+    "The clearing near the house"
   ],
-  "continuity_from_previous_shot": "remains fully dried",
+  "continuity_from_previous_shot": "shoes visible on Dorothy",
   "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "empty ground",
-  "pose_end_frame": "shoes visible",
-  "shot_title": "Insert Detail 2: Discovery and acquisition of silver shoes",
-  "shot_type": "insert_detail",
-  "camera_description": "Tight detail framing focused on a single visual object or gesture.",
-  "composition": "Detail composition centered on the key physical action or prop inside The clearing near the house.",
+  "pose_anchor_frame": "curiosity",
+  "pose_end_frame": "despair",
+  "shot_title": "Reaction Closeup 2: The request to go home",
+  "shot_type": "reaction_closeup",
+  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+  "composition": "Intimate composition that isolates dorothy, witch_of_the_north against The clearing near the house to capture the beat's emotional turn.",
   "target_seconds": 5.3,
   "characters_in_frame": [
     {
@@ -72,6 +78,16 @@
       "resolution_score": 138,
       "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH002/dorothy.md",
       "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "The Witch of the North",
+      "canonical_id": "witch_of_the_north",
+      "display_name": "witch_of_the_north",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH002/witch_of_the_north.md",
+      "notes": "Direct registry match for 'witch_of_the_north'."
     }
   ],
   "environment": {
@@ -88,13 +104,13 @@
     "BT002"
   ],
   "continuity_constraints": [
-    "Visual transition of the Wicked Witch of the East body drying up",
-    "Consistent visual appearance of silver shoes on Dorothy's feet",
-    "Discovery and acquisition of silver shoes",
+    "Visual transition of the Wicked Witch's body drying up",
+    "Silver shoes appearing on Dorothy's feet",
+    "The request to go home",
     "Resolve The clearing near the house -> The clearing near the house"
   ],
-  "prompt_seed": "Insert Detail 2: Discovery and acquisition of silver shoes. insert_detail. size=insert_detail. angle=low_angle. lens=normal. motion=locked_off. zoom=none. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front. Tight detail framing focused on a single visual object or gesture. Detail co...",
-  "shot_notes": "Discovery and acquisition of silver shoes",
+  "prompt_seed": "Reaction Closeup 2: The request to go home. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=subtle_in. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front. Close framing that isolates reaction and emotional emphasis. Intimate composition that...",
+  "shot_notes": "The request to go home",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -152,38 +168,37 @@
     }
   ],
   "evidence_summary": [
-    "Establish the transition from the immediate aftermath of the Witch's death to the introduction of the primary quest mechanism. The sequence must visually bridge the magical destruction of the Wicked Witch of the East with the physical acquisition of the sil...",
+    "Establish the primary quest by transitioning from the aftermath of the Witch's demise to the revelation of the path toward the Emerald City. The sequence must handle the visual transformation of the Wicked Witch of the East and the introduction of key magic...",
     "The body of the Wicked Witch of the East dries up, leaving behind enchanted silver shoes which are given to Dorothy. When Dorothy asks to go home, she learns the land is impassable, but a magical slate reveals her path: the Emerald City to see Oz the Great.",
     "Curiosity $\\rightarrow$ Despair (at being trapped) $\\rightarrow$ Purpose/Determination",
     "Visual aftermath of the Wicked Witch of the East drying up in the clearing.",
-    "Dorothy looking toward the horizon with newfound purpose after seeing the slate.",
-    "Discovery of the silver shoes and receiving directions to the Emerald City.",
-    "munchkins | The munchkins are a group of small-scale, bipedal entities characterized by a uniform color palette of blue. Their primary visual identifier is their costume consisting of blue clothing and blue hats that are specifically adorned with bells. | B...",
-    "dorothy | Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and functional id...",
+    "Dorothy looking toward the path to the Emerald City with determination.",
+    "Discovery of the silver shoes leads to a realization of being trapped, resolved by the magical slate's guidance.",
+    "dorothy | Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is most notabl...",
     "witch_of_the_north | A humanoid non-human entity of human scale. The character is defined by a signature costume consisting of white clothing decorated with star patterns. Further physical details regarding build, age, or movement are currently unestablishe..."
   ],
   "metadata": {
     "artifact_id": "CH002_SC004_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "eb8ea60f62af33c611fb721e9fb54cef15f8c654",
+    "source_fingerprint": "85423d30ad811bb0055f5d5b0fa08e513e5d0954",
     "created_at_utc": "2026-04-27T09:42:12.991818+00:00",
-    "updated_at_utc": "2026-04-27T09:42:12.991818+00:00",
+    "updated_at_utc": "2026-04-27T14:46:40.001483+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH002_SC004",
-        "version": "40c61549d145344874904983a5f23ff2d8a61555"
+        "version": "cd0c32cb9ab2002b86ce412205871176683f7ce1"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH002_SC004",
-        "version": "2c68398fb120e864693501fb69b648afe02f39b5"
+        "version": "bd79389f799e9a844e0e5193f0ec0f9e947fd8b6"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH002_SC004",
-        "version": "92d1a1ad4485409dc17fd378f56d48ee8757d7c2"
+        "version": "2d7e0fd5ae5514c8521bae75efe93eccec8763c0"
       }
     ],
     "locked_fields": {},
@@ -193,6 +208,11 @@
         "timestamp_utc": "2026-04-27T09:43:21.847520+00:00",
         "action": "synthesized",
         "source_fingerprint": "eb8ea60f62af33c611fb721e9fb54cef15f8c654"
+      },
+      {
+        "timestamp_utc": "2026-04-27T14:47:52.716387+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "85423d30ad811bb0055f5d5b0fa08e513e5d0954"
       }
     ]
   }

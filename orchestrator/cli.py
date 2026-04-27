@@ -5,6 +5,7 @@ import json
 
 from .book_ingest import ensure_book_ingested
 from .character_bible import run_character_bible_synthesis
+from .character_visual_evidence_refinement import run_character_visual_evidence_refinement
 from .character_taxonomy import run_character_taxonomy
 from .character_references import (
     approve_character_reference_candidate,
@@ -59,6 +60,13 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--no-llm", action="store_true")
     s.add_argument("--force", action="store_true")
     s.add_argument("--limit", type=int, default=None)
+
+    cve = subparsers.add_parser("refine-character-visual-evidence")
+    cve.add_argument("project_slug")
+    cve.add_argument("--force", action="store_true")
+    cve.add_argument("--only-review", action="store_true")
+    cve.add_argument("--chapters", type=str, default=None)
+    cve.add_argument("--limit", type=int, default=None)
 
     e = subparsers.add_parser("synthesize-environment-bibles")
     e.add_argument("project_slug")
@@ -280,6 +288,8 @@ def main() -> None:
 
     if args.command == "synthesize-character-bibles":
         summary = run_character_bible_synthesis(args.project_slug, use_llm=not args.no_llm, force=args.force, limit=args.limit)
+    elif args.command == "refine-character-visual-evidence":
+        summary = run_character_visual_evidence_refinement(args.project_slug, force=args.force, only_review=args.only_review, chapters=args.chapters, limit=args.limit)
     elif args.command == "synthesize-environment-bibles":
         summary = run_environment_bible_synthesis(args.project_slug, use_llm=not args.no_llm, force=args.force, limit=args.limit)
     elif args.command == "synthesize-visual-fallbacks":

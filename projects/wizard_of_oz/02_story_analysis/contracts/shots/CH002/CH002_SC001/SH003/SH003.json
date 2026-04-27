@@ -5,60 +5,68 @@
   "shot_order": 3,
   "previous_shot_id": "SH002",
   "next_shot_id": "",
-  "primary_subject": "dorothy",
-  "secondary_subjects": [],
-  "shot_moment_summary": "Dorothy's reaction to the colors",
-  "start_state": "confused expression",
-  "end_state": "awe-struck expression",
-  "action_during_shot": "Dorothy looks around in wonder",
-  "action_continues_from": "wide vista",
-  "action_hands_off_to": "end of scene",
-  "shot_size": "close_up",
-  "camera_angle": "eye_level",
-  "lens_family": "portrait",
-  "camera_motion": "push_in",
-  "zoom_behavior": "subtle_in",
-  "focus_strategy": "shallow_subject",
-  "lighting_style": "high_contrast_ceremonial",
+  "primary_subject": "landscape",
+  "secondary_subjects": [
+    "toto"
+  ],
+  "shot_moment_summary": "Wide view of the Oz landscape",
+  "start_state": "wide vista",
+  "end_state": "wide vista",
+  "action_during_shot": "static observation",
+  "action_continues_from": "gasping",
+  "action_hands_off_to": "end_scene",
+  "shot_size": "wide",
+  "camera_angle": "low_angle",
+  "lens_family": "ultra_wide",
+  "camera_motion": "pan",
+  "zoom_behavior": "none",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
   "primary_subject_angle": "front",
   "visible_primary_subject_id": "dorothy",
-  "visible_secondary_subject_ids": [],
-  "primary_subject_frame_position": "foreground inside fruit tree grove",
-  "primary_subject_scale_relation": "close up on expressive face",
+  "visible_secondary_subject_ids": [
+    "toto"
+  ],
+  "primary_subject_frame_position": "midground inside Flower-filled clearing",
+  "primary_subject_scale_relation": "The vastness of the lush landscape relative to the small, disheveled girl.",
   "primary_subject_facing_direction": "facing directly toward camera",
-  "primary_subject_pose_description": "confused expression",
-  "subject_relation_summary": "dorothy carries the frame alone",
-  "required_environment_anchor_1": "fruit tree grove",
-  "required_subject_anchor_1": "confused expression",
+  "primary_subject_pose_description": "wide vista",
+  "subject_relation_summary": "landscape plays against toto in the same frame",
+  "required_environment_anchor_1": "Flower-filled clearing",
+  "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "The vastness of the colorful Oz landscape compared to the small scale of Dorothy and Toto.",
-  "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, high contrast ceremonial",
+  "required_scale_proof_detail": "The vastness of the lush landscape relative to the small, disheveled girl.",
+  "camera_package_description": "wide, low angle, ultra-wide lens, pan, deep focus, hard directional",
   "subject_blocking": [
-    "sitting up",
-    "Dorothy standing or sitting tall",
-    "near sparkling brook"
+    "subjects small in frame",
+    "Subjects small against the vista",
+    "Open landscape",
+    "dorothy remains readable within the active playing space.",
+    "toto remains readable within the active playing space."
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the sparkling brook area.",
-    "Background depth should keep The exterior/immediate vicinity of Dorothy's house (Oz landscape) legible as the location anchor."
+    "Camera anchors the action inside the Flower-filled clearing.",
+    "Background depth should keep The exterior/immediate vicinity of Dorothy's house (Oz landscape) legible as the location anchor.",
+    "Subject 1: dorothy remains visually readable against the environment scale.",
+    "Subject 2: toto remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "dorothy focuses toward the active scene action."
+    "landscape focuses toward the active scene action."
   ],
-  "environment_subzone": "fruit tree grove",
+  "environment_subzone": "Flower-filled clearing",
   "key_visible_environment_features": [
-    "sparkling brook area"
+    "Flower-filled clearing"
   ],
-  "continuity_from_previous_shot": "wide vista",
-  "continuity_to_next_shot": "end of scene",
-  "pose_anchor_frame": "confused expression",
-  "pose_end_frame": "awe-struck expression",
-  "shot_title": "Reaction Closeup 3: Transition to awe",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates dorothy against The exterior/immediate vicinity of Dorothy's house (Oz landscape) to capture the beat's emotional turn.",
+  "continuity_from_previous_shot": "gasping",
+  "continuity_to_next_shot": "end_scene",
+  "pose_anchor_frame": "wide vista",
+  "pose_end_frame": "wide vista",
+  "shot_title": "Establishing Wide 3: Realization of scale",
+  "shot_type": "establishing_wide",
+  "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
+  "composition": "Wide composition across The exterior/immediate vicinity of Dorothy's house (Oz landscape) with dorothy, toto placed for immediate spatial orientation.",
   "target_seconds": 5.1,
   "characters_in_frame": [
     {
@@ -70,6 +78,16 @@
       "resolution_score": 138,
       "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH002/dorothy.md",
       "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH002/toto.md",
+      "notes": "Direct registry match for 'toto'."
     }
   ],
   "environment": {
@@ -86,12 +104,13 @@
     "BT003"
   ],
   "continuity_constraints": [
-    "Lighting transition from dark/stormy to bright/saturated",
-    "Dorothy's physical state must remain disheveled from cyclone impact",
-    "Dorothy's attire is white dress"
+    "Lighting shift from dark/stormy to bright/saturated",
+    "Dorothy physical state must remain disheveled from cyclone",
+    "Realization of scale",
+    "Resolve The exterior/immediate vicinity of Dorothy's house (Oz landscape) -> The exterior/immediate vicinity of Dorothy's house (Oz landscape)"
   ],
-  "prompt_seed": "Reaction Closeup 3: Transition to awe. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front. Close framing that isolates reaction and emotional emphasis.",
-  "shot_notes": "Transition to awe",
+  "prompt_seed": "Establishing Wide 3: Realization of scale. establishing_wide. size=wide. angle=low_angle. lens=ultra_wide. motion=pan. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front. Wide establishing frame with a steady or lightly drifting camera. Wide composition across The exter...",
+  "shot_notes": "Realization of scale",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -149,37 +168,37 @@
     }
   ],
   "evidence_summary": [
-    "Execute a high-contrast visual transition from the dark, stormy atmosphere of Kansas to a highly saturated, lush Oz landscape. The sequence must emphasize the sensory overload experienced by Dorothy as she wakes up amidst vibrant flora and fruit-bearing trees.",
+    "Transition the visual language from a dark, storm-ravaged Kansas aesthetic to a highly saturated, lush Oz landscape. The environment must feel surreal and vibrant through extreme color density in flora and fruit-bearing trees.",
     "Dorothy wakes up following the cyclone to find herself not in a storm-ravaged Kansas, but in a lush, colorful landscape filled with flowers and fruit.",
     "Confusion $\\rightarrow$ Wonder/Awe",
-    "Dorothy is disheveled, waking up in a state of confusion following a cyclone.",
-    "Dorothy is looking out at the landscape in a state of wonder and awe.",
-    "Dorothy wakes up and discovers her new surroundings.",
-    "dorothy | Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and functional id...",
-    "toto | Toto is a small quadruped animal, specifically a dog, characterized by its black fur and alert eyes. The character maintains a compact silhouette suitable for a companion animal. | Black fur. | unknown"
+    "Dorothy waking up in a state of confusion and physical disarray.",
+    "Dorothy looking out at the vibrant world in awe.",
+    "Dorothy awakens and processes the sensory shift from storm to paradise.",
+    "dorothy | Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is most notabl...",
+    "toto | Toto is a small quadruped dog characterized by a compact build and consistent black fur. The character possesses an alert physical presence with keen, observant eyes suitable for a companion animal. | black fur. | companion animal; alert."
   ],
   "metadata": {
     "artifact_id": "CH002_SC001_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "556176e4dd9e817f0dc767702108ce1042a32e63",
+    "source_fingerprint": "3832b52bdf6fe37e48e1f73ba9ba2597f913df76",
     "created_at_utc": "2026-04-27T09:32:31.122236+00:00",
-    "updated_at_utc": "2026-04-27T09:32:31.122236+00:00",
+    "updated_at_utc": "2026-04-27T14:36:40.007349+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH002_SC001",
-        "version": "d06907cd1f4b12cfc4e43bf47a35123f232f7ede"
+        "version": "4b5da85d0bd7aab6d81720e2b4e16ebde68a0b34"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH002_SC001",
-        "version": "72a7793686917111efae405f38f528e16b4c7a8e"
+        "version": "66005d85f99ce7c1536c818e9dced5964ca6d951"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH002_SC001",
-        "version": "868fc483e36a48d6c3ec0c1de3f5c29c03d38bab"
+        "version": "5494baac5cc2492aec6ba27706b113f1effbecca"
       }
     ],
     "locked_fields": {},
@@ -189,6 +208,11 @@
         "timestamp_utc": "2026-04-27T09:33:37.023677+00:00",
         "action": "synthesized",
         "source_fingerprint": "556176e4dd9e817f0dc767702108ce1042a32e63"
+      },
+      {
+        "timestamp_utc": "2026-04-27T14:37:51.874939+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "3832b52bdf6fe37e48e1f73ba9ba2597f913df76"
       }
     ]
   }

@@ -8,6 +8,7 @@ from .book_authoring import _chapter_id_from_path, _read_manifest_chapter_paths,
 from .book_ingest import ensure_book_ingested
 from .authoring import lmstudio_check
 from .character_bible import run_character_bible_synthesis
+from .character_visual_evidence_refinement import run_character_visual_evidence_refinement
 from .character_taxonomy import run_character_taxonomy
 from .chapter_selection import parse_chapter_selector
 from .descriptor_enrichment import run_descriptor_enrichment
@@ -30,6 +31,7 @@ PRE_DOWNSTREAM_PHASES = [
     "character_taxonomy",
     "identity_refinement",
     "character_bibles",
+    "character_visual_evidence",
     "environment_bibles",
     "visual_fallbacks",
 ]
@@ -50,6 +52,7 @@ OPERATOR_PHASE_ORDER = [
     "identity_refinement_plan",
     "identity_refinement_apply",
     "character_bibles",
+    "character_visual_evidence",
     "environment_bibles",
     "visual_fallbacks",
     "scene_contracts",
@@ -65,6 +68,7 @@ PROJECT_WIDE_PHASES = {
     "identity_refinement_plan",
     "identity_refinement_apply",
     "character_bibles",
+    "character_visual_evidence",
     "environment_bibles",
     "visual_fallbacks",
     "quality_grading",
@@ -85,6 +89,7 @@ TRUSTED_RESUME_PHASE_ORDER = [
     "identity_refinement_plan",
     "identity_refinement_apply",
     "character_bibles",
+    "character_visual_evidence",
     "environment_bibles",
     "visual_fallbacks",
     "scene_contracts",
@@ -100,6 +105,7 @@ RESUME_STAGE_TO_TRUSTED_PHASE = {
     "character_taxonomy": "character_taxonomy",
     "identity_refinement": "identity_refinement_plan",
     "character_bibles": "character_bibles",
+    "character_visual_evidence": "character_visual_evidence",
     "environment_bibles": "environment_bibles",
     "visual_fallbacks": "visual_fallbacks",
     "scene_contracts": "scene_contracts",
@@ -575,6 +581,8 @@ def _run_project_phase(project_slug: str, phase_name: str, *, mode: str) -> Any:
         return run_identity_refinement(project_slug, use_llm=True, apply_merge=True)
     if phase_name == "character_bibles":
         return run_character_bible_synthesis(project_slug, use_llm=True, force=force)
+    if phase_name == "character_visual_evidence":
+        return run_character_visual_evidence_refinement(project_slug, force=force)
     if phase_name == "environment_bibles":
         return run_environment_bible_synthesis(project_slug, use_llm=True, force=force)
     if phase_name == "visual_fallbacks":
@@ -593,6 +601,8 @@ def _run_operator_phase(project_slug: str, phase_name: str, *, chapters: str | N
         return run_identity_refinement(project_slug, use_llm=True, apply_merge=True)
     if phase_name == "character_bibles":
         return run_character_bible_synthesis(project_slug, use_llm=True, force=mode == "force")
+    if phase_name == "character_visual_evidence":
+        return run_character_visual_evidence_refinement(project_slug, force=mode == "force")
     if phase_name == "environment_bibles":
         return run_environment_bible_synthesis(project_slug, use_llm=True, force=mode == "force")
     if phase_name == "visual_fallbacks":
@@ -620,6 +630,8 @@ def _run_trusted_phase(project_slug: str, phase_name: str, *, chapters: str | No
         return run_identity_refinement(project_slug, use_llm=True, apply_merge=True)
     if phase_name == "character_bibles":
         return run_character_bible_synthesis(project_slug, use_llm=True, force=True)
+    if phase_name == "character_visual_evidence":
+        return run_character_visual_evidence_refinement(project_slug, force=True)
     if phase_name == "environment_bibles":
         return run_environment_bible_synthesis(project_slug, use_llm=True, force=True)
     if phase_name == "visual_fallbacks":

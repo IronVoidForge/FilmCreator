@@ -10,18 +10,18 @@
     "uncle_henry"
   ],
   "shot_moment_summary": "close up of weathered faces reacting to sky",
-  "start_state": "observing sky",
-  "end_state": "turning to action",
-  "action_during_shot": "aunt_em directs dorothy",
-  "action_continues_from": "darkening clouds",
+  "start_state": "vigilant_expression",
+  "end_state": "dreadful_expression",
+  "action_during_shot": "looking_upward",
+  "action_continues_from": "dimming_sky",
   "action_hands_off_to": "BT003",
   "shot_size": "close_up",
-  "camera_angle": "eye_level",
+  "camera_angle": "low_angle",
   "lens_family": "portrait",
   "camera_motion": "locked_off",
   "zoom_behavior": "none",
   "focus_strategy": "shallow_subject",
-  "lighting_style": "soft_even",
+  "lighting_style": "diffuse_ambient",
   "subject_visibility": "on_screen",
   "narration_mode": "in_scene_speaker",
   "primary_subject_angle": "front_three_quarter_left",
@@ -30,35 +30,40 @@
     "uncle_henry"
   ],
   "primary_subject_frame_position": "foreground inside farmhouse_interior_and_cellar",
-  "primary_subject_scale_relation": "human vs storm scale",
+  "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
   "primary_subject_facing_direction": "front three-quarter left toward the scene action",
-  "primary_subject_pose_description": "observing sky",
+  "primary_subject_pose_description": "vigilant_expression",
   "subject_relation_summary": "aunt_em plays against uncle_henry in the same frame",
   "required_environment_anchor_1": "farmhouse_interior_and_cellar",
-  "required_subject_anchor_1": "",
+  "required_subject_anchor_1": "vigilant_expression",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "human vs storm scale",
-  "camera_package_description": "close-up, eye level, portrait lens, locked off, shallow subject, soft even",
+  "required_scale_proof_detail": "human_vs_storm",
+  "camera_package_description": "close-up, low angle, portrait lens, locked off, shallow subject, diffuse ambient",
   "subject_blocking": [
-    "aunt_em near window",
-    "characters moving within house"
+    "standing_near_doorway",
+    "characters clustered near farmhouse exits",
+    "farmhouse_interior_and_cellar",
+    "aunt_em remains readable within the active playing space.",
+    "uncle_henry remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the farmhouse_interior_and_cellar.",
-    "Background depth keeps farmhouse interior legible as location anchor."
+    "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+    "Subject 1: aunt_em remains visually readable against the environment scale.",
+    "Subject 2: uncle_henry remains visually readable against the environment scale."
   ],
   "gaze_directions": [
     "aunt_em focuses toward the active scene action."
   ],
   "environment_subzone": "farmhouse_interior_and_cellar",
   "key_visible_environment_features": [
-    "farmhouse window"
+    "farmhouse_interior_and_cellar"
   ],
-  "continuity_from_previous_shot": "darkening clouds",
+  "continuity_from_previous_shot": "dimming_sky",
   "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "observing sky",
-  "pose_end_frame": "turning to action",
-  "shot_title": "Reaction Closeup 2: Family Vigilance",
+  "pose_anchor_frame": "vigilant_expression",
+  "pose_end_frame": "dreadful_expression",
+  "shot_title": "Reaction Closeup 2: Mundane Vigilance",
   "shot_type": "reaction_closeup",
   "camera_description": "Close framing that isolates reaction and emotional emphasis.",
   "composition": "Intimate composition that isolates aunt_em, uncle_henry against farmhouse_interior_and_cellar to capture the beat's emotional turn.",
@@ -100,10 +105,11 @@
   ],
   "continuity_constraints": [
     "Lighting shift from bright/gray to dark/stormy",
-    "Wind speed and direction affecting hair and clothing"
+    "Wind speed and direction affecting hair and clothing",
+    "Mundane vigilance of the family"
   ],
-  "prompt_seed": "Reaction Closeup 2: Family vigilance and storm preparation. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional emphas...",
-  "shot_notes": "Family vigilance and storm preparation",
+  "prompt_seed": "Reaction Closeup 2: Mundane vigilance of the family. reaction_closeup. size=close_up. angle=low_angle. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional emphasi...",
+  "shot_notes": "Mundane vigilance of the family",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -161,14 +167,14 @@
     }
   ],
   "evidence_summary": [
-    "Establish the desolate, colorless Kansas prairie and the looming threat of a dual-direction cyclone. The visual progression must move from mundane vigilance to escalating dread through lighting shifts and increasing wind intensity.",
+    "Establish the desolate, colorless Kansas prairie and the looming threat of a dual-direction cyclone. The sequence must transition from mundane farm vigilance to escalating dread as weather conditions deteriorate.",
     "In the colorless Kansas prairie, the family lives under the shadow of potential cyclones. As a massive storm approaches from two directions, Uncle Henry prepares for the worst while Aunt Em directs Dorothy toward safety.",
     "Mundane vigilance $\\rightarrow$ Escalating dread.",
-    "Bright, gray, windless prairie landscape.",
-    "Dark, stormy atmosphere with high wind activity.",
-    "Family members react to the approaching storm as preparations begin.",
-    "dorothy | Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and functional id...",
-    "aunt_em | Visual identity is currently unestablished. While the entity is taxonomically classified as a bipedal, human-scale individual, specific details regarding costume, silhouette, or physical build are not provided in the available evidence. | unknown...",
+    "Bright, gray, desolate prairie under high-key overcast light.",
+    "Dark, stormy atmosphere with increasing wind and heavy cloud cover.",
+    "Family members react to the approaching storm through preparation and safety directives.",
+    "dorothy | Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is most notabl...",
+    "aunt_em | Visual identity is currently unestablished. While the entity is taxonomically classified as a human-scale biped, specific details regarding age, build, costume, or movement are not provided in the available evidence. Note: Chapter CH012 contains c...",
     "uncle_henry | No visual data is available to establish a stable identity, costume, or physical presence for uncle_henry. The character is confirmed as a human-scale individual but lacks specific descriptive evidence regarding appearance or movement. | unkno...",
     "kansas_prairie_landscape | No specific visual descriptors are provided in the current evidence. The environment is identified as a prairie landscape within the Kansas setting. | Unknown. | Unknown. | Unknown.",
     "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown"
@@ -177,24 +183,24 @@
     "artifact_id": "CH001_SC001_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "7874814ff9de0766488daa40080d11ec9d7bedeb",
+    "source_fingerprint": "6951cde724270037ba8786edd0ff160cd8a7b5de",
     "created_at_utc": "2026-04-27T09:17:31.002309+00:00",
-    "updated_at_utc": "2026-04-27T09:17:31.002309+00:00",
+    "updated_at_utc": "2026-04-27T14:21:09.676224+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH001_SC001",
-        "version": "d8eeca9c17519ed145c49412dc1c7ecb6e32b31e"
+        "version": "802e23bad206e9cddf759515953378e3694da6cd"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH001_SC001",
-        "version": "922e21e3767ee5d7f692f9194cb335ba8547b61f"
+        "version": "4d3b13b585f809f78da5d2e9b34b4850b2194eee"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH001_SC001",
-        "version": "08e08f1f42f08f10e98c0b6bca863d08f30ad369"
+        "version": "94df253f5760c35c377ba86800026b17b79b7957"
       }
     ],
     "locked_fields": {},
@@ -204,6 +210,11 @@
         "timestamp_utc": "2026-04-27T09:18:38.841985+00:00",
         "action": "synthesized",
         "source_fingerprint": "7874814ff9de0766488daa40080d11ec9d7bedeb"
+      },
+      {
+        "timestamp_utc": "2026-04-27T14:22:23.700560+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "6951cde724270037ba8786edd0ff160cd8a7b5de"
       }
     ]
   }

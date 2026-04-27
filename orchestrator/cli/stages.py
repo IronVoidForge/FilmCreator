@@ -4,7 +4,8 @@ from .models import StageDefinition
 
 STAGES = (
     StageDefinition("01","character_bibles","Character Bibles","synthesize-character-bibles","character_bible"),
-    StageDefinition("02","environment_bibles","Environment Bibles","synthesize-environment-bibles","environment_bible"),
+    StageDefinition("02","character_visual_evidence","Character Visual Evidence","refine-character-visual-evidence","character_visual_evidence",("character_bibles",)),
+    StageDefinition("03","environment_bibles","Environment Bibles","synthesize-environment-bibles","environment_bible",("character_visual_evidence",)),
     StageDefinition("07","scene_contracts","Scene Contracts","synthesize-scene-contracts","scene_contract"),
     StageDefinition("08","scene_bindings","Scene Bindings","synthesize-scene-bindings","scene_binding",("scene_contracts",)),
     StageDefinition("09","shot_packages","Shot Packages","synthesize-shot-packages","shot_package",("scene_bindings",)),
