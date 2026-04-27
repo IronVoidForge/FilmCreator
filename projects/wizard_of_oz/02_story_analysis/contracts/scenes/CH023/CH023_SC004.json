@@ -1,0 +1,378 @@
+{
+  "scene_id": "CH023_SC004",
+  "chapter_id": "CH023",
+  "scene_title": "SC004",
+  "purpose": "To execute the climax (the return) and provide the final resolution/aftermath.",
+  "summary": "Dorothy clicks her heels three times and commands herself home. She is instantly transported to the Kansas prairie. In the transition, the Silver Shoes are lost in the desert. Dorothy arrives safely at her farmhouse to find Uncle Henry and Toto.",
+  "emotional_arc": "Magical Chaos $\\rightarrow$ Sudden Arrival $\\rightarrow$ Grounded Relief/Melancholy (loss of shoes).",
+  "production_intent": "Execute the magical transition from a high-fantasy environment to a grounded, naturalistic prairie setting. The sequence must visually communicate the loss of the Silver Shoes during the spatial jump and resolve the character arc through a reunion in a sepia/natural color palette.",
+  "scene_short_description": "A magical heel-click triggers a chaotic spatial jump followed by a quiet arrival at a farmhouse.",
+  "scene_primary_scale_story_point": "Transition from micro-action (heel clicks) to macro-environment (Kansas landscape).",
+  "scene_required_anchor_catalog": [
+    "Silver Shoes",
+    "Farmhouse structure",
+    "Toto"
+  ],
+  "scene_start_state": "Dorothy in white dress, clicking heels in a magical setting.",
+  "scene_end_state": "Dorothy reunited with Uncle Henry and Toto at the farmhouse.",
+  "dominant_action_line": "Dorothy commands herself home via heel clicks, undergoes transport, and arrives at the farmstead.",
+  "scene_spatial_layout": [
+    "Transitional void/space between desert and prairie",
+    "Open expanse of Kansas prairie leading to the farmhouse"
+  ],
+  "character_spatial_map": [
+    "dorothy: center frame during transition; moving toward uncle_henry in final beat",
+    "uncle_henry: stationary near farmhouse",
+    "toto: near dorothy or uncle_henry"
+  ],
+  "environment_subzones": [
+    "The Desert (transitional)",
+    "kansas_prairie_farmstead"
+  ],
+  "entry_vectors": [
+    "Dorothy enters via magical transport into the prairie subzone"
+  ],
+  "exit_vectors": [
+    "Subjects exit or hand off toward the next story beat."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Instantaneous spatial jump/visual blur",
+    "BT002 -> BT003: Hard cut from landscape to character reunion"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH023/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Uncle Henry",
+      "canonical_id": "uncle_henry",
+      "display_name": "uncle_henry",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH023/uncle_henry.md",
+      "notes": "Direct registry match for 'uncle_henry'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH023/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Desert (transitional)",
+      "canonical_id": null,
+      "display_name": "The Desert (transitional)",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    },
+    {
+      "label": "Kansas Prairie/Farmhouse",
+      "canonical_id": "kansas_prairie_farmstead",
+      "display_name": "kansas_prairie_farmstead",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 126,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH023/kansas_prairie_farmstead.md",
+      "notes": "Chapter-local environment alias match for 'Kansas Prairie/Farmhouse' (key_overlap=2, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Immediate shift from magical color palette to sepia/natural lighting",
+    "Visual disappearance of Silver Shoes during the transition phase"
+  ],
+  "visual_coverage_families": [
+    "Fast-paced/blurred POV or montage for flight through space",
+    "Wide establishing shot of Kansas landscape",
+    "Medium shots of reunion"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The Command",
+      "purpose": "",
+      "action_start": "Dorothy prepares to click",
+      "action_end": "Third click finishes",
+      "active_subjects": [
+        "dorothy"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "The Desert (transitional)",
+      "blocking_hint": "Dorothy centered, focus on feet",
+      "environment_subzone": "The Desert (transitional)",
+      "continuity_focus": "Silver Shoes must be visible and functional",
+      "coverage_hint": "Close up/Insert",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Transition",
+      "purpose": "",
+      "action_start": "Visual blur begins",
+      "action_end": "Dorothy arrives in Kansas",
+      "active_subjects": [
+        "dorothy"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "Void between desert and prairie",
+      "blocking_hint": "Fast motion/blur",
+      "environment_subzone": "The Desert (transitional)",
+      "continuity_focus": "Silver Shoes must be lost during this beat",
+      "coverage_hint": "POV/Montage",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Return",
+      "purpose": "",
+      "action_start": "Sudden stillness in Kansas",
+      "action_end": "Reunion complete",
+      "active_subjects": [
+        "dorothy",
+        "uncle_henry",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "kansas_prairie_farmstead",
+      "blocking_hint": "Dorothy moves toward Uncle Henry and Toto",
+      "environment_subzone": "kansas_prairie_farmstead",
+      "continuity_focus": "Sepia/natural color palette; Dorothy in white dress; no Silver Shoes",
+      "coverage_hint": "Wide to Medium",
+      "coverage_priority": "high",
+      "handoff_to_next": "End of scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "climax trigger",
+      "planned_shot_moment_summary": "Dorothy clicks heels three times",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "The Desert (transitional)",
+      "planned_shot_required_anchor_1": "Silver Shoes",
+      "planned_shot_scale_proof_detail": "Close up on feet/shoes",
+      "start_state_seed": "Dorothy standing",
+      "end_state_seed": "Third click completed",
+      "action_seed": "Clicking heels",
+      "blocking_seed": [
+        "Standing center"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "transition",
+      "planned_shot_moment_summary": "Flight through space/desert loss",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "The Desert (transitional)",
+      "planned_shot_required_anchor_1": "Silver Shoes",
+      "planned_shot_scale_proof_detail": "Blurred motion of shoes falling away",
+      "start_state_seed": "Blurry movement",
+      "end_state_seed": "Transition complete",
+      "action_seed": "Rapid spatial displacement",
+      "blocking_seed": [
+        "Moving through void"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "resolution",
+      "planned_shot_moment_summary": "Wide view of Kansas arrival",
+      "primary_subject_seed": "kansas_prairie_farmstead",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "kansas_prairie_farmstead",
+      "planned_shot_required_anchor_1": "Farmhouse structure",
+      "planned_shot_scale_proof_detail": "Extreme wide shot showing landscape scale",
+      "start_state_seed": "Static prairie",
+      "end_state_seed": "Dorothy visible in frame",
+      "action_seed": "Establishing the new reality",
+      "blocking_seed": [
+        "Wide landscape"
+      ],
+      "shot_size": "extreme_wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH004",
+      "beat_id": "BT003",
+      "narrative_function": "emotional resolution",
+      "planned_shot_moment_summary": "Reunion with family",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "uncle_henry",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "kansas_prairie_farmstead",
+      "planned_shot_required_anchor_1": "Toto",
+      "planned_shot_scale_proof_detail": "Medium shot grouping characters",
+      "start_state_seed": "Dorothy approaching",
+      "end_state_seed": "Embrace/reunion",
+      "action_seed": "Reunion hug",
+      "blocking_seed": [
+        "Dorothy moves to uncle_henry"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve The Desert (transitional) -> The Desert (transitional)"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH023",
+      "scene_id": "CH023_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH023",
+      "scene_id": "CH023_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH023",
+      "scene_id": "CH023_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH023",
+      "scene_id": "CH023_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH023",
+      "scene_id": "CH023_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH023",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH023_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH023",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH023_chapter_xxiii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH023",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH023_SC004] Purpose: To execute the climax (the return) and provide the final resolution/aftermath.",
+    "[CH023_SC004] Summary: Dorothy clicks her heels three times and commands herself home. She is instantly transported to the Kansas prairie. In the transition, the Silver Shoes are lost in the desert. Dorothy arrives safely at her farmhouse to find Uncle Henr...",
+    "[CH023_SC004] Emotional arc: Magical Chaos $\\rightarrow$ Sudden Arrival $\\rightarrow$ Grounded Relief/Melancholy (loss of shoes).",
+    "[CH023_SC004] Coverage: Fast-paced/blurred POV or montage for the flight through space. Wide establishing shot of the Kansas landscape. Medium shots of Dorothy's reunion with Uncle Henry and Toto.",
+    "[CH023_SC004] Continuity: The sudden change in lighting/color palette from magical to sepia/natural; the visual disappearance of the shoes during the transition.",
+    "[CH023] Chapter summary: **Setting:** A room within Glinda's Castle and the Kansas prairie. **Characters:** - Dorothy: Seeking to return to Kansas. - Scarecrow: Desires to return to the Emerald City to rule. - Tin Woodman: Desires to return t...",
+    "[CH023] Chapter XXIII (book index hit)",
+    "[CH012] Chapter XII (book index hit)",
+    "[CH011] Chapter XI (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH023_SC004\n\n## Production Intent\nExecute the magical transition from a high-fantasy environment to a grounded, naturalistic prairie setting. The sequence must visually communicate the loss of the Silver Shoes during the spatial jump and resolve the character arc through a reunion in a sepia/natural color palette.\n\n## Required Cast\n- dorothy (white dress)\n- uncle_henry\n- toto\n\n## Required Environments\n- The Desert (transitional)\n- kansas_prairie_farmstead\n\n## Continuity Constraints\n- Immediate shift from magical color palette to sepia/natural lighting\n- Visual disappearance of the Silver Shoes during the transition phase\n\n## Beat List\n- BT001: The Command (Heel clicks)\n- BT002: The Transition (Spatial jump and loss of shoes)\n- BT003: The Return (Arrival and reunion at farmhouse)",
+  "metadata": {
+    "artifact_id": "CH023_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "83654ffbc181f05b25ef86c1ea2b407b424978cf",
+    "created_at_utc": "2026-04-27T09:15:30.143795+00:00",
+    "updated_at_utc": "2026-04-27T09:15:30.143795+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH023_SC004",
+        "version": "831961dc8e60dfb939c1b0f3fdc8b0e0634ee516"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH023_SC004",
+        "version": "272f0de528704837d06ec61088c8a81f65de7cd7"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH023_SC004",
+        "version": "7ed3f649af428b61611e6a0151b4b7e7f146c414"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T09:16:14.900481+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "83654ffbc181f05b25ef86c1ea2b407b424978cf"
+      }
+    ]
+  }
+}

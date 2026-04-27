@@ -1,0 +1,337 @@
+{
+  "scene_id": "CH001_SC004",
+  "chapter_id": "CH001",
+  "scene_title": "SC004",
+  "purpose": "Transition from action to a state of suspended, eerie calm; establishes the new status quo.",
+  "summary": "The violent shaking subsides into a rhythmic swaying. Exhausted and overwhelmed, Dorothy and Toto fall asleep as the house continues its long, silent journey through the sky.",
+  "emotional_arc": "Chaos $\\rightarrow$ Exhaustion/Eerie tranquility.",
+  "production_intent": "Transition the visual energy from violent kinetic chaos to a rhythmic, suspended state of eerie calm. Use light movement and house sway to establish the new status quo of high-altitude drifting.",
+  "scene_short_description": "Violent shaking subsides into a rhythmic swaying as the farmhouse drifts through high altitude clouds.",
+  "scene_primary_scale_story_point": "Small interior space vs vast cyclone_storm_void.",
+  "scene_required_anchor_catalog": [
+    "farmhouse_interior_floor",
+    "dorothy_white_dress"
+  ],
+  "scene_start_state": "Violent, chaotic shaking of the structure.",
+  "scene_end_state": "Rhythmic swaying with subjects in deep sleep.",
+  "dominant_action_line": "The house transitions from violent turbulence to a rhythmic, silent drift.",
+  "scene_spatial_layout": [
+    "Single room farmhouse interior",
+    "Verticality implied by high altitude sky context"
+  ],
+  "character_spatial_map": [
+    "dorothy centered or resting on floor/furniture",
+    "toto near dorothy"
+  ],
+  "environment_subzones": [
+    "farmhouse_interior_and_cellar",
+    "cyclone_storm_void"
+  ],
+  "entry_vectors": [
+    "None (internal scene)"
+  ],
+  "exit_vectors": [
+    "None (internal scene)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Kinetic energy decay",
+    "BT002 -> BT003: Transition to stillness/sleep"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Interior of the floating farmhouse",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 64,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local environment alias match for 'Interior of the floating farmhouse' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    },
+    {
+      "label": "high altitude/sky",
+      "canonical_id": "cyclone_storm_void",
+      "display_name": "cyclone_storm_void",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/cyclone_storm_void.md",
+      "notes": "Chapter-local environment alias match for 'high altitude/sky' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Rhythmic house sway frequency",
+    "Light patterns moving across floor surfaces in sync with cloud layers"
+  ],
+  "visual_coverage_families": [
+    "Slow, sweeping pans",
+    "Soft, rhythmic lighting simulating passing clouds",
+    "Close-ups on sleeping subjects"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Kinetic decay from chaos to sway",
+      "purpose": "",
+      "action_start": "violent shaking",
+      "action_end": "rhythmic swaying",
+      "active_subjects": [],
+      "passive_subjects": [
+        "dorothy",
+        "toto"
+      ],
+      "spatial_context": "farmhouse_interior_and_cellar",
+      "blocking_hint": "entire room moves in pendulum motion",
+      "environment_subzone": "farmhouse_interior_and_cellar",
+      "continuity_focus": "sway rhythm frequency",
+      "coverage_hint": "wide pans",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Exhaustion and sleep",
+      "purpose": "",
+      "action_start": "subjects overwhelmed by movement",
+      "action_end": "subjects asleep",
+      "active_subjects": [
+        "dorothy",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "farmhouse_interior_and_cellar",
+      "blocking_hint": "subjects settling into rest",
+      "environment_subzone": "farmhouse_interior_and_cellar",
+      "continuity_focus": "white clothing visibility",
+      "coverage_hint": "close-ups",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Eerie tranquility of the drift",
+      "purpose": "",
+      "action_start": "deep sleep",
+      "action_end": "silent journey continues",
+      "active_subjects": [],
+      "passive_subjects": [
+        "dorothy",
+        "toto"
+      ],
+      "spatial_context": "farmhouse_interior_and_cellar",
+      "blocking_hint": "static subjects in moving light",
+      "environment_subzone": "farmhouse_interior_and_cellar",
+      "continuity_focus": "light patterns moving across floor",
+      "coverage_hint": "slow sweeping pans",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish transition",
+      "planned_shot_moment_summary": "shaking subsides into sway",
+      "primary_subject_seed": "farmhouse_interior_and_cellar",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "farmhouse_interior_and_cellar",
+      "planned_shot_required_anchor_1": "farmhouse_interior_floor",
+      "planned_shot_scale_proof_detail": "visible vibration of floorboards",
+      "start_state_seed": "violent shaking",
+      "end_state_seed": "rhythmic sway",
+      "action_seed": "structure settles into a pendulum motion",
+      "blocking_seed": [
+        "camera follows house movement"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "handheld to pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "character state",
+      "planned_shot_moment_summary": "dorothy and toto succumb to exhaustion",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "farmhouse_interior_and_cellar",
+      "planned_shot_required_anchor_1": "dorothy_white_dress",
+      "planned_shot_scale_proof_detail": "rhythmic light passing over white fabric",
+      "start_state_seed": "exhausted movement",
+      "end_state_seed": "stillness",
+      "action_seed": "subjects fall asleep",
+      "blocking_seed": [
+        "subjects settling into rest position"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "slow_pan",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish atmosphere",
+      "planned_shot_moment_summary": "house drifting through clouds",
+      "primary_subject_seed": "farmhouse_interior_and_cellar",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "farmhouse_interior_and_cellar",
+      "planned_shot_required_anchor_1": "farmhouse_interior_floor",
+      "planned_shot_scale_proof_detail": "moving light patterns on floor",
+      "start_state_seed": "sleeping subjects",
+      "end_state_seed": "drifting silence",
+      "action_seed": "light sweeps across the room",
+      "blocking_seed": [
+        "static camera observing movement of light"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH001",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH005",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH006",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH001",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH001_SC004] Purpose: Transition from action to a state of suspended, eerie calm; establishes the new status quo.",
+    "[CH001_SC004] Summary: The violent shaking subsides into a rhythmic swaying. Exhausted and overwhelmed, Dorothy and Toto fall asleep as the house continues its long, silent journey through the sky.",
+    "[CH001_SC004] Emotional arc: Chaos $\\rightarrow$ Exhaustion/Eerie tranquility.",
+    "[CH001_SC004] Coverage: Slow, sweeping pans. Soft, rhythmic lighting (simulating passing clouds). Close-ups on Dorothy and Toto sleeping.",
+    "[CH001_SC004] Continuity: The \"sway\" rhythm; light patterns moving across the floor as the house drifts through different cloud layers.",
+    "[CH001] Chapter summary: **Setting:** A small, one-room farmhouse situated in the middle of the vast, colorless Kansas prairies. The landscape is characterized by gray grass and baked earth. **Characters:** - **Dorothy:** An orphaned young gi...",
+    "[CH002] Chapter II (book index hit)",
+    "[CH005] Chapter V (book index hit)",
+    "[CH006] Chapter VI (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH001_SC004\n\n## Production Intent\nTransition the visual energy from violent kinetic chaos to a rhythmic, suspended state of eerie calm. Use light movement and house sway to establish the new status quo of high-altitude drifting.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- toto\n\n## Required Environments\n- farmhouse_interior_and_cellar\n- cyclone_storm_void (high altitude context)\n\n## Continuity Constraints\n- The \"sway\" rhythm frequency must remain consistent.\n- Light patterns moving across the floor must simulate passing cloud layers.\n\n## Beat List\n- BT001: Kinetic decay from chaos to sway.\n- BT002: Exhaustion and sleep.\n- BT003: Eerie tranquility of the drift.",
+  "metadata": {
+    "artifact_id": "CH001_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "150816a8013907f63c6e22b04522a6ec04762ce6",
+    "created_at_utc": "2026-04-27T07:59:33.816367+00:00",
+    "updated_at_utc": "2026-04-27T07:59:33.816367+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH001_SC004",
+        "version": "a5b698de9322fb428348d38941358172c4eabac3"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH001_SC004",
+        "version": "501e042384ff3035d033b00ac3e1cdb7a4266e7d"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH001_SC004",
+        "version": "243eee18bf66417cadd7260d3411a19b4a617cb5"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:00:12.708928+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "150816a8013907f63c6e22b04522a6ec04762ce6"
+      }
+    ]
+  }
+}

@@ -1,0 +1,386 @@
+{
+  "scene_id": "CH020_SC005",
+  "chapter_id": "CH020",
+  "scene_title": "SC005",
+  "purpose": "Resolve the chapter with a climax of accidental destruction and an exit from the setting.",
+  "summary": "The group reaches the far wall to exit. As they climb, the Cowardly Lion's tail accidentally smashes a china church. They successfully scale the wall and leave the country, reflecting on the fragility of their journey.",
+  "emotional_arc": "Urgency $\\rightarrow$ Climax (Accident) $\\rightarrow$ Relief/Reflection.",
+  "production_intent": "Execute a high-stakes exit sequence involving physical climbing and accidental destruction of porcelain assets. The scene must transition from the frantic energy of scaling a barrier to a quiet, reflective wide shot as the group leaves the fragile landscape behind.",
+  "scene_short_description": "A group scales a massive barrier, accidentally smashing a porcelain structure before exiting the fragile land.",
+  "scene_primary_scale_story_point": "Characters are large relative to the tiny colorful china houses and porcelain inhabitants.",
+  "scene_required_anchor_catalog": [
+    "The far wall",
+    "China church"
+  ],
+  "scene_start_state": "Group approaching the base of The far wall with urgency.",
+  "scene_end_state": "Group positioned outside dainty_china_country looking back at the land.",
+  "dominant_action_line": "Scaling the wall and accidental destruction of a china church by a tail.",
+  "scene_spatial_layout": [
+    "Vertical ascent along The far wall",
+    "Horizontal expanse of dainty_china_country below"
+  ],
+  "character_spatial_map": [
+    "Group clustered at the base of The far wall",
+    "Characters ascending vertically in staggered positions"
+  ],
+  "environment_subzones": [
+    "The far wall",
+    "dainty_china_country (porcelain landscape)"
+  ],
+  "entry_vectors": [
+    "Approach from dainty_china_country floor"
+  ],
+  "exit_vectors": [
+    "Over the top of The far wall into new territory"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Physical impact/climax",
+    "BT002 -> BT003: Transition from chaos to stillness"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH020/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH020/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH020/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH020/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH020/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The far wall",
+      "canonical_id": null,
+      "display_name": "The far wall",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    },
+    {
+      "label": "the exit point of China Country",
+      "canonical_id": "dainty_china_country",
+      "display_name": "dainty_china_country",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 92,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH020/dainty_china_country.md",
+      "notes": "Chapter-local environment alias match for 'the exit point of China Country' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Transition of china church from pristine to broken state",
+    "Character physical positioning relative to the wall height during exit"
+  ],
+  "visual_coverage_families": [
+    "Climbing action sequences",
+    "Destruction of china church via tail impact",
+    "Wide environmental departure shots"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The group climbs the wall with urgency",
+      "purpose": "",
+      "action_start": "group reaches base of wall",
+      "action_end": "characters are mid-climb",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "The far wall",
+      "blocking_hint": "vertical staggered climb",
+      "environment_subzone": "The far wall",
+      "continuity_focus": "character height relative to wall texture",
+      "coverage_hint": "action shots of climbing",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Cowardly Lion's tail smashes a china church",
+      "purpose": "",
+      "action_start": "lion moves upward",
+      "action_end": "church is destroyed",
+      "active_subjects": [
+        "cowardly_lion"
+      ],
+      "passive_subjects": [
+        "china_church"
+      ],
+      "spatial_context": "dainty_china_country below the wall",
+      "blocking_hint": "lion positioned above the porcelain structure",
+      "environment_subzone": "dainty_china_country",
+      "continuity_focus": "church state changes from intact to broken",
+      "coverage_hint": "destruction shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The group scales the wall and exits, reflecting on the journey",
+      "purpose": "",
+      "action_start": "characters cresting the top of the wall",
+      "action_end": "group looking back at the land",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "edge of The far wall overlooking dainty_china_country",
+      "blocking_hint": "characters spread along the top edge",
+      "environment_subzone": "The far wall",
+      "continuity_focus": "physical position of characters exiting",
+      "coverage_hint": "wide shot looking back",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish urgency",
+      "planned_shot_moment_summary": "group begins climbing the wall",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "The far wall",
+      "planned_shot_required_anchor_1": "The far wall",
+      "planned_shot_scale_proof_detail": "characters dwarfing china houses below",
+      "start_state_seed": "group at base of wall",
+      "end_state_seed": "characters mid-climb",
+      "action_seed": "climbing upward",
+      "blocking_seed": [
+        "staggered vertical ascent"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "climax/destruction",
+      "planned_shot_moment_summary": "tail hits the church",
+      "primary_subject_seed": "cowardly_lion",
+      "secondary_subjects_seed": [
+        "china_church"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "dainty_china_country",
+      "planned_shot_required_anchor_1": "china_church",
+      "planned_shot_scale_proof_detail": "tail size vs house size",
+      "start_state_seed": "lion mid-climb",
+      "end_state_seed": "church in pieces",
+      "action_seed": "tail smashes church",
+      "blocking_seed": [
+        "lion positioned above the church structure"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "resolution/reflection",
+      "planned_shot_moment_summary": "group looks back from outside",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "dainty_china_country",
+      "planned_shot_required_anchor_1": "The far wall",
+      "planned_shot_scale_proof_detail": "view of the entire porcelain landscape",
+      "start_state_seed": "characters cresting wall",
+      "end_state_seed": "group looking back",
+      "action_seed": "looking back at the land",
+      "blocking_seed": [
+        "group spread along the top edge of the wall"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "high_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "pull_back",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "rear_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve The far wall -> The far wall"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH020",
+      "scene_id": "CH020_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH020",
+      "scene_id": "CH020_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH020",
+      "scene_id": "CH020_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH020",
+      "scene_id": "CH020_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH020",
+      "scene_id": "CH020_SC005"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH020",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH020_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH020",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH020_chapter_xx.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH021_chapter_xxi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH020",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH020_SC005] Purpose: Resolve the chapter with a climax of accidental destruction and an exit from the setting.",
+    "[CH020_SC005] Summary: The group reaches the far wall to exit. As they climb, the Cowardly Lion's tail accidentally smashes a china church. They successfully scale the wall and leave the country, reflecting on the fragility of their journey.",
+    "[CH020_SC005] Emotional arc: Urgency $\\rightarrow$ Climax (Accident) $\\rightarrow$ Relief/Reflection.",
+    "[CH020_SC005] Coverage: Action shots of the climbing process. A \"destruction\" shot of the church being hit by the tail. Wide shot of the group looking back at the land from the outside.",
+    "[CH020_SC005] Continuity: The state of the church (broken) vs. the previous untouched landscape; the physical position of the characters as they exit.",
+    "[CH020] Chapter summary: **Setting:** The Dainty China Country, a land characterized by a smooth, white, platter-like floor, tiny colorful china houses, and inhabitants made entirely of fragile porcelain. **Characters:** - Dorothy - Scarecrow...",
+    "[CH010] Chapter X (book index hit)",
+    "[CH020] Chapter XX (book index hit)",
+    "[CH021] Chapter XXI (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH020_SC005\n\n## Production Intent\nExecute a high-stakes exit sequence involving physical climbing and accidental destruction of porcelain assets. The scene must transition from the frantic energy of scaling a barrier to a quiet, reflective wide shot as the group leaves the fragile landscape behind.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n\n## Required Environments\n- The far wall\n- dainty_china_country\n\n## Continuity Constraints\n- Transition of china church from pristine to broken state\n- Character physical positioning relative to the wall height during exit\n\n## Beat List\n- BT001: The group climbs the wall with urgency.\n- BT002: The Cowardly Lion's tail smashes a china church.\n- BT003: The group scales the wall and exits, reflecting on the journey.",
+  "metadata": {
+    "artifact_id": "CH020_SC005_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "a1973a514b4a0a0de55dbbd99003c655568122d5",
+    "created_at_utc": "2026-04-27T09:04:08.140208+00:00",
+    "updated_at_utc": "2026-04-27T09:04:08.140208+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH020_SC005",
+        "version": "3aab2221d7963d06c00746869d57742da0d3c1db"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH020_SC005",
+        "version": "fdc56eb52df8daaa5218a8ee2e3bf940a80676a6"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH020_SC005",
+        "version": "ad0c6e6353c1d6dce765381bc1f99881c0a1f5ae"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T09:04:48.850902+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "a1973a514b4a0a0de55dbbd99003c655568122d5"
+      }
+    ]
+  }
+}

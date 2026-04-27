@@ -1,0 +1,374 @@
+{
+  "scene_id": "CH019_SC004",
+  "chapter_id": "CH019",
+  "scene_title": "SC004",
+  "purpose": "To demonstrate the utility of the characters' abilities and resolve the immediate conflict.",
+  "summary": "The Tin Woodman uses his axe to hack through the aggressive branches, carving a path for the group. They realize the trees are only aggressive at the perimeter/first row.",
+  "emotional_arc": "Panic to Relief/Triumph.",
+  "production_intent": "Establish the tin_woodman as a functional asset to the group by using his axe to breach an aggressive perimeter of branches. The sequence must transition from high-tension combat with vegetation to a calm realization that the interior forest is non-hostile.",
+  "scene_short_description": "An axe carves a path through aggressive, thrashing branches to reveal a calm forest interior.",
+  "scene_primary_scale_story_point": "The scale shifts from the claustrophobic, aggressive perimeter to the open, safe clearing beyond.",
+  "scene_required_anchor_catalog": [
+    "aggressive_branch_perimeter",
+    "cleared_pathway"
+  ],
+  "scene_start_state": "Group is trapped/surrounded by thrashing branches; high panic.",
+  "scene_end_state": "Group stands in a newly carved path; relief and triumph.",
+  "dominant_action_line": "tin_woodman hacks through the perimeter to create a safe zone.",
+  "scene_spatial_layout": [
+    "Perimeter of aggressive vegetation forms a tight circle around the group.",
+    "A linear path is cut through the first row of trees."
+  ],
+  "character_spatial_map": [
+    "tin_woodman positioned at the leading edge of the group against the branches.",
+    "dorothy, the_scarecrow, cowardly_lion, and toto clustered behind the tin_woodman."
+  ],
+  "environment_subzones": [
+    "aggressive_perimeter",
+    "cleared_pathway"
+  ],
+  "entry_vectors": [
+    "fighting_forest (perimeter)"
+  ],
+  "exit_vectors": [
+    "cleared_pathway (interior)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Physical breakthrough via axe strikes.",
+    "BT002 -> BT003: Visual shift from movement to stillness."
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH019/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH019/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH019/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH019/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH019/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Dense Forest (clearing/pathway)",
+      "canonical_id": "fighting_forest",
+      "display_name": "fighting_forest",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH019/fighting_forest.md",
+      "notes": "Chapter-local environment alias match for 'Dense Forest (clearing/pathway)' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Cumulative state of chopped branches in the clearing",
+    "Physical condition and edge sharpness of tin_woodman's axe"
+  ],
+  "visual_coverage_families": [
+    "Action shots of axe striking wood",
+    "Wide shots showing path clearance",
+    "Medium shots of group regrouping"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The group is besieged by aggressive branches",
+      "purpose": "",
+      "action_start": "branches thrashing at characters",
+      "action_end": "panic reaches peak",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "passive_subjects": [
+        "aggressive_perimeter"
+      ],
+      "spatial_context": "trapped within fighting_forest",
+      "blocking_hint": "characters huddled and defensive",
+      "environment_subzone": "aggressive_perimeter",
+      "continuity_focus": "initial branch density",
+      "coverage_hint": "medium shots of panic",
+      "coverage_priority": "high",
+      "handoff_to_next": "tin_woodman engages"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "tin_woodman carves a path",
+      "purpose": "",
+      "action_start": "axe swings into wood",
+      "action_end": "a gap is opened in the perimeter",
+      "active_subjects": [
+        "tin_woodman"
+      ],
+      "passive_subjects": [
+        "aggressive_perimeter"
+      ],
+      "spatial_context": "at the edge of the clearing",
+      "blocking_hint": "tin_woodman moves aggressively against the branches",
+      "environment_subzone": "aggressive_perimeter",
+      "continuity_focus": "axe condition and branch debris",
+      "coverage_hint": "action shots of axe strikes",
+      "coverage_priority": "high",
+      "handoff_to_next": "the path is revealed"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Discovery of the safe interior",
+      "purpose": "",
+      "action_start": "group peers through the gap",
+      "action_end": "group moves into the calm zone",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "cowardly_lion",
+        "toto"
+      ],
+      "passive_subjects": [
+        "tin_woodman"
+      ],
+      "spatial_context": "transition from perimeter to path",
+      "blocking_hint": "characters stepping forward cautiously then with relief",
+      "environment_subzone": "cleared_pathway",
+      "continuity_focus": "state of chopped branches",
+      "coverage_hint": "wide shots of the clearing",
+      "coverage_priority": "medium",
+      "handoff_to_next": "scene end"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish conflict",
+      "planned_shot_moment_summary": "branches thrashing against the group",
+      "primary_subject_seed": "aggressive_perimeter",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "aggressive_perimeter",
+      "planned_shot_required_anchor_1": "aggressive_branch_perimeter",
+      "planned_shot_scale_proof_detail": "branches pressing against characters",
+      "start_state_seed": "tightly enclosed space",
+      "end_state_seed": "chaos of movement",
+      "action_seed": "branches lashing out",
+      "blocking_seed": [
+        "group huddled together"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "demonstrate utility",
+      "planned_shot_moment_summary": "axe striking wood",
+      "primary_subject_seed": "tin_woodman",
+      "secondary_subjects_seed": [
+        "aggressive_perimeter"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "aggressive_perimeter",
+      "planned_shot_required_anchor_1": "tin_woodman's axe",
+      "planned_shot_scale_proof_detail": "wood splinters flying",
+      "start_state_seed": "axe raised",
+      "end_state_seed": "branch severed",
+      "action_seed": "hacking through branches",
+      "blocking_seed": [
+        "tin_woodman stepping forward into branches"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "resolve conflict",
+      "planned_shot_moment_summary": "group seeing the calm interior",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "cowardly_lion",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "cleared_pathway",
+      "planned_shot_required_anchor_1": "cleared_pathway",
+      "planned_shot_scale_proof_detail": "open space visible through branches",
+      "start_state_seed": "looking through gap",
+      "end_state_seed": "group stepping forward",
+      "action_seed": "regrouping in the path",
+      "blocking_seed": [
+        "group moving into the cleared zone"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "pull_back",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH019",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH019_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH019",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH019_chapter_xix.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH005",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH019",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH019_SC004] Purpose: To demonstrate the utility of the characters' abilities and resolve the immediate conflict.",
+    "[CH019_SC004] Summary: The Tin Woodman uses his axe to hack through the aggressive branches, carving a path for the group. They realize the trees are only aggressive at the perimeter/first row.",
+    "[CH019_SC004] Emotional arc: Panic to Relief/Triumph.",
+    "[CH019_SC004] Coverage: Action shots of the axe striking wood; Wide shots showing the path being cleared; Medium shots of the group regrouping.",
+    "[CH019_SC004] Continuity: The state of the chopped branches; Tin Woodman's axe condition.",
+    "[CH019] Chapter summary: **Setting:** The outskirts of the Emerald City, the surrounding green fields, a thick forest, and the edge of a white china wall. **Characters:** Dorothy, Scarecrow, Tin Woodman, Cowardly Lion, Toto, Guardian of the G...",
+    "[CH007] Chapter VII (book index hit)",
+    "[CH019] Chapter XIX (book index hit)",
+    "[CH005] Chapter V (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH019_SC004\n\n## Production Intent\nEstablish the tin_woodman as a functional asset to the group by using his axe to breach an aggressive perimeter of branches. The sequence must transition from high-tension combat with vegetation to a calm realization that the interior forest is non-hostile.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n\n## Required Environments\n- fighting_forest (specifically aggressive_perimeter and cleared_pathway)\n\n## Continuity Constraints\n- Cumulative state of chopped branches in the clearing\n- Physical condition and edge sharpness of tin_woodman's axe\n\n## Beat List\n- BT001: The group is besieged by aggressive branches.\n- BT002: tin_woodman carves a path.\n- BT003: Discovery of the safe interior.",
+  "metadata": {
+    "artifact_id": "CH019_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "680fed062a1cefc628260cc11bb61e8ef66abb03",
+    "created_at_utc": "2026-04-27T08:59:40.298399+00:00",
+    "updated_at_utc": "2026-04-27T08:59:40.298399+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH019_SC004",
+        "version": "e6d700794db424188bdff0c659163baef03ea5f6"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH019_SC004",
+        "version": "73c47be69e1fa3945daf457695543efc197a8038"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH019_SC004",
+        "version": "8c85acd225f1fb5f4170051a002322266ca7f24b"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T09:00:22.250138+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "680fed062a1cefc628260cc11bb61e8ef66abb03"
+      }
+    ]
+  }
+}

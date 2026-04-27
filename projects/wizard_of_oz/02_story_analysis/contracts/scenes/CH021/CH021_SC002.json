@@ -1,0 +1,387 @@
+{
+  "scene_id": "CH021_SC002",
+  "chapter_id": "CH021",
+  "scene_title": "SC002",
+  "purpose": "Introduce the central conflict and the scale of the threat.",
+  "summary": "The travelers stumble upon a clearing filled with a massive gathering of wild animals, all appearing terrified.",
+  "emotional_arc": "Confusion to intense fear/tension.",
+  "production_intent": "Establish the massive scale of the forest threat by contrasting the small group of travelers against a vast, unnaturally quiet assembly of terrified wild animals. The visual language must shift from the dense, mossy enclosure of the ancient forest to an expansive clearing that feels overwhelmed by the sheer volume of diverse fauna.",
+  "scene_short_description": "Travelers emerge from thick mossy woods into a massive clearing filled with terrified wild animals.",
+  "scene_primary_scale_story_point": "The travelers are dwarfed by the sheer number and variety of large forest beasts.",
+  "scene_required_anchor_catalog": [
+    "ancient_forest_interior_edge",
+    "central_clearing_floor"
+  ],
+  "scene_start_state": "Travelers push through thick moss and massive trees into a sudden opening.",
+  "scene_end_state": "The travelers stand frozen, facing an overwhelming assembly of anxious predators and prey.",
+  "dominant_action_line": "The group stumbles into the clearing and discovers the mass gathering of terrified beasts.",
+  "scene_spatial_layout": [
+    "Dense forest perimeter surrounding a wide central clearing",
+    "Animals clustered in large, non-aggressive groups within the open space"
+  ],
+  "character_spatial_map": [
+    "dorothy, toto, the_scarecrow, tin_woodman, Lion positioned at the forest edge",
+    "various forest beasts (tigers, elephants, bears, wolves, foxes) distributed across the clearing floor"
+  ],
+  "environment_subzones": [
+    "thick_mossy_perimeter",
+    "central_clearing"
+  ],
+  "entry_vectors": [
+    "forest_edge_path"
+  ],
+  "exit_vectors": [
+    "forest_edge_path"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: visual discovery of the clearing scale",
+    "BT002 -> BT003: realization of animal behavior/terror"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Lion",
+      "canonical_id": null,
+      "display_name": "Lion",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "various forest beasts (tigers, elephants, bears, wolves, foxes)",
+      "canonical_id": null,
+      "display_name": "various forest beasts (tigers, elephants, bears, wolves, foxes)",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Forest Clearing",
+      "canonical_id": "ancient_forest_interior",
+      "display_name": "ancient_forest_interior",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 80,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH021/ancient_forest_interior.md",
+      "notes": "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Animal placement within the clearing relative to one another",
+    "Lighting consistency in the forest opening transition"
+  ],
+  "visual_coverage_families": [
+    "Extreme wide shots of the animal assembly",
+    "Medium shots of diverse animals looking anxious",
+    "Reaction shots of the travelers"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Travelers emerge from the thick forest into a clearing",
+      "purpose": "",
+      "action_start": "pushing through moss and trees",
+      "action_end": "stopping at the edge of the opening",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "Lion",
+        "toto"
+      ],
+      "passive_subjects": [
+        "various forest beasts (tigers, elephants, bears, wolves, foxes)"
+      ],
+      "spatial_context": "thick_mossy_perimeter",
+      "blocking_hint": "travelers moving in a line from dense woods to edge",
+      "environment_subzone": "thick_mossy_perimeter",
+      "continuity_focus": "lighting transition from shade to clearing light",
+      "coverage_hint": "wide shot of entry",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Discovery of the massive animal gathering",
+      "purpose": "",
+      "action_start": "travelers looking out",
+      "action_end": "camera revealing the scale of animals",
+      "active_subjects": [
+        "various forest beasts (tigers, elephants, bears, wolves, foxes)"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "Lion",
+        "toto"
+      ],
+      "spatial_context": "central_clearing",
+      "blocking_hint": "animals scattered across the clearing floor",
+      "environment_subzone": "central_clearing",
+      "continuity_focus": "animal placement consistency",
+      "coverage_hint": "extreme wide shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Realization of the animals' terror and tension",
+      "purpose": "",
+      "action_start": "observing animal stillness",
+      "action_end": "travelers reacting with fear",
+      "active_subjects": [
+        "dorothy",
+        "Lion"
+      ],
+      "passive_subjects": [
+        "various forest beasts (tigers, elephants, bears, wolves, foxes)"
+      ],
+      "spatial_context": "forest edge looking into clearing",
+      "blocking_hint": "travelers frozen at the perimeter",
+      "environment_subzone": "thick_mossy_perimeter",
+      "continuity_focus": "facial expressions matching animal anxiety",
+      "coverage_hint": "reaction shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish environment and entry",
+      "planned_shot_moment_summary": "travelers break through the mossy tree line",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "Lion",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "thick_mossy_perimeter",
+      "planned_shot_required_anchor_1": "ancient_forest_interior_edge",
+      "planned_shot_scale_proof_detail": "massive trees vs small travelers",
+      "start_state_seed": "dense foliage view",
+      "end_state_seed": "clearing reveal",
+      "action_seed": "travelers stepping forward",
+      "blocking_seed": [
+        "walking through brush"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "establish scale of threat",
+      "planned_shot_moment_summary": "extreme wide view of the animal assembly",
+      "primary_subject_seed": "various forest beasts (tigers, elephants, bears, wolves, foxes)",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "central_clearing",
+      "planned_shot_required_anchor_1": "central_clearing_floor",
+      "planned_shot_scale_proof_detail": "hundreds of animals filling the frame",
+      "start_state_seed": "empty clearing view",
+      "end_state_seed": "full assembly reveal",
+      "action_seed": "animals standing still/anxious",
+      "blocking_seed": [
+        "static massed groups"
+      ],
+      "shot_size": "extreme_wide",
+      "camera_angle": "high_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "convey emotional shift",
+      "planned_shot_moment_summary": "close up of travelers reacting to the animals",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "Lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "thick_mossy_perimeter",
+      "planned_shot_required_anchor_1": "ancient_forest_interior_edge",
+      "planned_shot_scale_proof_detail": "facial expression detail",
+      "start_state_seed": "neutral face",
+      "end_state_seed": "fearful/confused face",
+      "action_seed": "staring in shock",
+      "blocking_seed": [
+        "frozen in place"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Lion -> Lion",
+    "Resolve various forest beasts (tigers, elephants, bears, wolves, foxes) -> various forest beasts (tigers, elephants, bears, wolves, foxes)"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH021_chapter_xxi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH006",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH009",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH009_chapter_ix.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH021",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH021_SC002] Purpose: Introduce the central conflict and the scale of the threat.",
+    "[CH021_SC002] Summary: The travelers stumble upon a clearing filled with a massive gathering of wild animals, all appearing terrified.",
+    "[CH021_SC002] Emotional arc: Confusion to intense fear/tension.",
+    "[CH021_SC002] Coverage: Extreme wide shots of the animal assembly; medium shots of diverse animals looking anxious; reaction shots of the travelers.",
+    "[CH021_SC002] Continuity: Animal placement within the clearing; lighting consistency in the forest opening.",
+    "[CH021] Chapter summary: **Setting:** A disagreeable country of bogs and marshes, leading into a vast, ancient forest filled with massive trees and thick moss. **Characters:** Dorothy, Toto, the Scarecrow, the Tin Woodman, the Lion, various f...",
+    "[CH021] Chapter XXI (book index hit)",
+    "[CH006] Chapter VI (book index hit)",
+    "[CH009] Chapter IX (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH021_SC002\n\n## Production Intent\nEstablish the massive scale of the forest threat by contrasting the small group of travelers against a vast, unnaturally quiet assembly of terrified wild animals. The visual language must shift from the dense, mossy enclosure of the ancient forest to an expansive clearing that feels overwhelmed by the sheer volume of diverse fauna.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- toto\n- the_scarecrow\n- tin_woodman\n- Lion\n- various forest beasts (tigers, elephants, bears, wolves, foxes)\n\n## Required Environments\n- ancient_forest_interior (thick mossy perimeter and central clearing)\n\n## Continuity Constraints\n- Animal placement within the clearing relative to one another\n- Lighting consistency in the forest opening transition\n\n## Beat List\n- BT001: Travelers emerge from the thick forest into a clearing.\n- BT002: Discovery of the massive animal gathering.\n- BT003: Realization of the animals' terror and tension.",
+  "metadata": {
+    "artifact_id": "CH021_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "48d8677bb62a0efb69a6811ea53ab02df9cca6a1",
+    "created_at_utc": "2026-04-27T09:05:37.505236+00:00",
+    "updated_at_utc": "2026-04-27T09:05:37.505236+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH021_SC002",
+        "version": "df5cad39e14219ebf4884d33955e5b4ce517c61d"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH021_SC002",
+        "version": "f6091521d6e5a6c4b93bfd69ab15f953895fb3d4"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH021_SC002",
+        "version": "991bf6f1b8d0f52b463a9b22e411375f549b64b8"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T09:06:22.162952+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "48d8677bb62a0efb69a6811ea53ab02df9cca6a1"
+      }
+    ]
+  }
+}

@@ -1,0 +1,360 @@
+{
+  "scene_id": "CH018_SC002",
+  "chapter_id": "CH018",
+  "scene_title": "SC002",
+  "purpose": "Transition from mourning to active problem-solving; establish the Scarecrow's new authority.",
+  "summary": "The Scarecrow, now acting as ruler, convenes a meeting with the travelers. Dorothy states her goal of returning to Kansas, leading the Scarecrow to suggest using the Golden Cap to summon the Winged Monkeys for flight.",
+  "emotional_arc": "Melancholy $\\rightarrow$ Hopeful Determination.",
+  "production_intent": "Establish the Scarecrow's transition from a companion to a formal ruler of the Emerald City. The scene must pivot the group dynamic from mourning to active problem-solving through the introduction of a magical solution.",
+  "scene_short_description": "A formal assembly in a grand throne room where a ruler proposes a magical flight.",
+  "scene_primary_scale_story_point": "The Scarecrow occupies a position of elevated authority within the throne room hierarchy.",
+  "scene_required_anchor_catalog": [
+    "Golden Cap",
+    "Throne"
+  ],
+  "scene_start_state": "The travelers sit in heavy, melancholy silence within the formal setting.",
+  "scene_end_state": "The group shifts toward purposeful movement following the suggestion of flight.",
+  "dominant_action_line": "The Scarecrow convenes a meeting to address Dorothy's desire to return home via the Golden Cap.",
+  "scene_spatial_layout": [
+    "Formalized assembly around the central throne area",
+    "Travelers positioned as petitioners or guests before the ruler"
+  ],
+  "character_spatial_map": [
+    "the_scarecrow positioned at or near the throne",
+    "dorothy, tin_woodman, and cowardly_lion grouped together facing the throne"
+  ],
+  "environment_subzones": [
+    "throne_zone",
+    "assembly_floor"
+  ],
+  "entry_vectors": [
+    "central aisle leading to throne"
+  ],
+  "exit_vectors": [
+    "side exits from assembly floor"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: shift from silence to verbal declaration",
+    "BT002 -> BT003: shift from problem statement to magical solution"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH018/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH018/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH018/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH018/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Throne Room (formalized setting)",
+      "canonical_id": "emerald_city_throne_room",
+      "display_name": "emerald_city_throne_room",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 102,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH018/emerald_city_throne_room.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room (formalized setting)' (key_overlap=2, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Presence and handling of the Golden Cap"
+  ],
+  "visual_coverage_families": [
+    "Wide shot of the throne room meeting",
+    "Medium shots of Scarecrow addressing the group",
+    "Close-up on the Golden Cap"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The group sits in mourning within the throne room",
+      "purpose": "",
+      "action_start": "silent assembly",
+      "action_end": "the_scarecrow begins to speak",
+      "active_subjects": [
+        "dorothy",
+        "tin_woodman",
+        "cowardly_lion",
+        "the_scarecrow"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "emerald_city_throne_room",
+      "blocking_hint": "travelers grouped together facing the throne",
+      "environment_subzone": "assembly_floor",
+      "continuity_focus": "initial placement of characters",
+      "coverage_hint": "wide shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Dorothy states her goal to return to Kansas",
+      "purpose": "",
+      "action_start": "Dorothy speaks",
+      "action_end": "Dorothy finishes speaking",
+      "active_subjects": [
+        "dorothy"
+      ],
+      "passive_subjects": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "spatial_context": "emerald_city_throne_room",
+      "blocking_hint": "Dorothy stands or leans forward to address the Scarecrow",
+      "environment_subzone": "assembly_floor",
+      "continuity_focus": "Dorothy's white clothing visibility",
+      "coverage_hint": "medium shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Scarecrow proposes using the Golden Cap for flight",
+      "purpose": "",
+      "action_start": "Scarecrow responds to Dorothy",
+      "action_end": "The group reacts to the plan",
+      "active_subjects": [
+        "the_scarecrow"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "spatial_context": "emerald_city_throne_room",
+      "blocking_hint": "Scarecrow moves toward or presents the Golden Cap",
+      "environment_subzone": "throne_zone",
+      "continuity_focus": "handling of the Golden Cap",
+      "coverage_hint": "close-up on cap and medium on Scarecrow",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish setting and mood",
+      "planned_shot_moment_summary": "The group sits in mourning within the large throne room",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "assembly_floor",
+      "planned_shot_required_anchor_1": "throne",
+      "planned_shot_scale_proof_detail": "wide shot showing distance between travelers and throne",
+      "start_state_seed": "static wide",
+      "end_state_seed": "static wide",
+      "action_seed": "group sitting in silence",
+      "blocking_seed": [
+        "travelers clustered on one side of the room"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "character motivation",
+      "planned_shot_moment_summary": "Dorothy expresses her goal to return to Kansas",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "assembly_floor",
+      "planned_shot_required_anchor_1": "none",
+      "planned_shot_scale_proof_detail": "medium shot of Dorothy's expressive face",
+      "start_state_seed": "medium shot",
+      "end_state_seed": "medium shot",
+      "action_seed": "Dorothy speaks her intent",
+      "blocking_seed": [
+        "Dorothy facing the throne"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish solution and authority",
+      "planned_shot_moment_summary": "The Scarecrow suggests using the Golden Cap",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [
+        "Golden Cap"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "throne_zone",
+      "planned_shot_required_anchor_1": "Golden Cap",
+      "planned_shot_scale_proof_detail": "close-up on the cap to emphasize its importance",
+      "start_state_seed": "medium shot of Scarecrow",
+      "end_state_seed": "close-up on cap",
+      "action_seed": "Scarecrow gestures toward or handles the Golden Cap",
+      "blocking_seed": [
+        "Scarecrow seated/standing at throne"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH018",
+      "scene_id": "CH018_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH018",
+      "scene_id": "CH018_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH018",
+      "scene_id": "CH018_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH018",
+      "scene_id": "CH018_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH018",
+      "scene_id": "CH018_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH018",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH018_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH023",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH023_chapter_xxiii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH018",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH018",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH018_SC002] Purpose: Transition from mourning to active problem-solving; establish the Scarecrow's new authority.",
+    "[CH018_SC002] Summary: The Scarecrow, now acting as ruler, convenes a meeting with the travelers. Dorothy states her goal of returning to Kansas, leading the Scarecrow to suggest using the Golden Cap to summon the Winged Monkeys for flight.",
+    "[CH018_SC002] Emotional arc: Melancholy $\\rightarrow$ Hopeful Determination.",
+    "[CH018_SC002] Coverage: Wide shot of the throne room meeting; medium shots of Scarecrow addressing the group; close-up on the Golden Cap.",
+    "[CH018_SC002] Continuity: The presence/handling of the Golden Cap.",
+    "[CH018] Chapter summary: **Setting:** The Throne Room in the Emerald City. **Characters:** Dorothy, Scarecrow (now ruler of the Emerald City), Tin Woodman, Cowardly Lion, the Monkey King and his band of Winged Monkeys, and a Soldier with gree...",
+    "[CH023] Chapter XXIII (book index hit)",
+    "[CH018] Chapter XVIII (book index hit)",
+    "[CH003] Chapter III (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH018_SC002\n\n## Production Intent\nEstablish the Scarecrow's transition from a companion to a formal ruler of the Emerald City. The scene must pivot the group dynamic from mourning to active problem-solving through the introduction of a magical solution.\n\n## Required Cast\n- dorothy (white clothing/dress, expressive face)\n- the_scarecrow (ruler persona)\n- tin_woodman\n- cowardly_lion\n\n## Required Environments\n- emerald_city_throne_room (formalized setting)\n\n## Continuity Constraints\n- The presence and handling of the Golden Cap must be consistent.\n\n## Beat List\n- BT001: Group sits in mourning within the throne room.\n- BT002: Dorothy states her goal to return to Kansas.\n- BT003: The Scarecrow proposes using the Golden Cap for flight.",
+  "metadata": {
+    "artifact_id": "CH018_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "9ea1b028ad89002ac7d0554d7f8585ed79e2265b",
+    "created_at_utc": "2026-04-27T08:55:18.719734+00:00",
+    "updated_at_utc": "2026-04-27T08:55:18.719734+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH018_SC002",
+        "version": "aae17cc102fd9e77b1430baab9ec92f76dc82171"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH018_SC002",
+        "version": "7b7795861542089095390b194cf2cb6562efe9ee"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH018_SC002",
+        "version": "ea59807706fdcbff060dfb0173f1dea76e7820d5"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:56:01.449166+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9ea1b028ad89002ac7d0554d7f8585ed79e2265b"
+      }
+    ]
+  }
+}

@@ -1,0 +1,372 @@
+{
+  "scene_id": "CH015_SC002",
+  "chapter_id": "CH015",
+  "scene_title": "SC002",
+  "purpose": "Build tension and establish the passage of time through waiting.",
+  "summary": "The travelers are ushered into guest rooms within the palace. They wait in a state of growing agitation, discussing their expectations and the Wizard's perceived power.",
+  "emotional_arc": "Anticipation $\\rightarrow$ Irritation/Anxiety.",
+  "production_intent": "Establish the psychological weight of waiting through progressive lighting shifts and character agitation. The sequence must transition from the initial arrival to a state of heightened anxiety regarding the Wizard's power.",
+  "scene_short_description": "Travelers waiting inside palace guest rooms while discussing expectations and the Wizard's power.",
+  "scene_primary_scale_story_point": "Palace interior scale relative to small group of travelers.",
+  "scene_required_anchor_catalog": [
+    "Guest room furniture",
+    "Palace doorway"
+  ],
+  "scene_start_state": "Travelers are ushered into the room by palace staff.",
+  "scene_end_state": "Group is in a state of growing agitation and discussion.",
+  "dominant_action_line": "The group waits and discusses the Wizard's perceived power.",
+  "scene_spatial_layout": [
+    "Enclosed guest quarters within the Palace of Oz",
+    "Defined seating/standing areas for the travelers"
+  ],
+  "character_spatial_map": [
+    "dorothy in white dress near center or window",
+    "the_scarecrow, tin_woodman, and cowardly_lion grouped in room interior",
+    "palace_staff at threshold or exiting"
+  ],
+  "environment_subzones": [
+    "guest_room_interior",
+    "doorway_threshold"
+  ],
+  "entry_vectors": [
+    "palace_staff leading group through doorway"
+  ],
+  "exit_vectors": [
+    "palace_staff exiting through doorway"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Arrival to initial waiting",
+    "BT002 -> BT003: Waiting to growing agitation/discussion"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH015/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH015/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH015/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "Palace Staff (Green-whiskered Soldier/Girl)",
+      "canonical_id": "palace_staff",
+      "display_name": "palace_staff",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH015/palace_staff.md",
+      "notes": "Direct registry match for 'palace_staff'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Palace of Oz (Guest Rooms)",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 112,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Direct registry match for 'palace_of_oz'."
+    }
+  ],
+  "continuity_constraints": [
+    "Lighting changes to indicate passage of time",
+    "Character positioning within the guest quarters"
+  ],
+  "visual_coverage_families": [
+    "Interior medium shots of the group in the room",
+    "Reaction shots as they wait",
+    "Montage-style coverage of time passing"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Travelers ushered into guest rooms",
+      "purpose": "",
+      "action_start": "travelers entering room",
+      "action_end": "staff exiting",
+      "active_subjects": [
+        "palace_staff",
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "doorway_threshold",
+      "blocking_hint": "staff leading group through door",
+      "environment_subzone": "doorway_threshold",
+      "continuity_focus": "initial character positioning",
+      "coverage_hint": "medium shots of arrival",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The period of waiting begins",
+      "purpose": "",
+      "action_start": "group settling in room",
+      "action_end": "light shifts significantly",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "guest_room_interior",
+      "blocking_hint": "characters finding places to sit or stand",
+      "environment_subzone": "guest_room_interior",
+      "continuity_focus": "lighting changes indicating time passage",
+      "coverage_hint": "montage-style coverage of time passing",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Growing agitation and discussion",
+      "purpose": "",
+      "action_start": "low level murmurs",
+      "action_end": "heightened anxiety/irritation",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "guest_room_interior",
+      "blocking_hint": "characters moving closer or gesturing agitatedly",
+      "environment_subzone": "guest_room_interior",
+      "continuity_focus": "character positioning within quarters",
+      "coverage_hint": "reaction shots and medium group shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish arrival",
+      "planned_shot_moment_summary": "travelers enter guest room",
+      "primary_subject_seed": "palace_staff",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "doorway_threshold",
+      "planned_shot_required_anchor_1": "doorway_threshold",
+      "planned_shot_scale_proof_detail": "group size vs room volume",
+      "start_state_seed": "travelers entering",
+      "end_state_seed": "staff exiting",
+      "action_seed": "ushering travelers in",
+      "blocking_seed": [
+        "staff leads group through door"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "establish time passage",
+      "planned_shot_moment_summary": "lighting shifts across the room",
+      "primary_subject_seed": "palace_of_oz",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "guest_room_interior",
+      "planned_shot_required_anchor_1": "guest_room_furniture",
+      "planned_shot_scale_proof_detail": "light angle on floor/walls",
+      "start_state_seed": "initial light state",
+      "end_state_seed": "shifted light state",
+      "action_seed": "lighting transitions",
+      "blocking_seed": [
+        "static group"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "character reaction/tension",
+      "planned_shot_moment_summary": "group discussing Wizard's power",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "guest_room_interior",
+      "planned_shot_required_anchor_1": "guest_room_furniture",
+      "planned_shot_scale_proof_detail": "character proximity to furniture",
+      "start_state_seed": "agitated discussion",
+      "end_state_seed": "heightened anxiety",
+      "action_seed": "discussing expectations",
+      "blocking_seed": [
+        "characters clustered in room"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH015",
+      "scene_id": "CH015_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH015",
+      "scene_id": "CH015_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH015",
+      "scene_id": "CH015_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH015",
+      "scene_id": "CH015_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH015",
+      "scene_id": "CH015_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH015",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH015_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH015",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH015",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH015_SC002] Purpose: Build tension and establish the passage of time through waiting.",
+    "[CH015_SC002] Summary: The travelers are ushered into guest rooms within the palace. They wait in a state of growing agitation, discussing their expectations and the Wizard's perceived power.",
+    "[CH015_SC002] Emotional arc: Anticipation $\\rightarrow$ Irritation/Anxiety.",
+    "[CH015_SC002] Coverage: Interior medium shots of the group in the room; reaction shots as they wait; montage-style coverage of time passing.",
+    "[CH015_SC002] Continuity: Lighting changes to indicate passage of time; character positioning within the guest quarters.",
+    "[CH015] Chapter summary: **Summary:** After returning to the Emerald City and reporting the death of the Wicked Witch of the West, Dorothy and her companions demand that the Wizard fulfill his promises. After a period of tense waiting and a t...",
+    "[CH011] Chapter XI (book index hit)",
+    "[CH015] Chapter XV (book index hit)",
+    "[CH010] Chapter X (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH015_SC002\n\n## Production Intent\nEstablish the psychological weight of waiting through progressive lighting shifts and character agitation. The sequence must transition from the initial arrival to a state of heightened anxiety regarding the Wizard's power.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- palace_staff (Green-whiskered Soldier/Girl)\n\n## Required Environments\n- palace_of_oz (Guest Rooms)\n\n## Continuity Constraints\n- Lighting changes to indicate passage of time\n- Character positioning within the guest quarters\n\n## Beat List\n- BT001: Travelers ushered into guest rooms\n- BT002: The period of waiting begins\n- BT003: Growing agitation and discussion",
+  "metadata": {
+    "artifact_id": "CH015_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "9a06a0c87461f007144824f7025e75d6da0dca55",
+    "created_at_utc": "2026-04-27T08:45:40.956110+00:00",
+    "updated_at_utc": "2026-04-27T08:45:40.956110+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH015_SC002",
+        "version": "50d79de1f6e3fb75e9f6db1a4948d888461796b1"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH015_SC002",
+        "version": "4ee816c35f91527386e7a993215759e3c4e4d71b"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH015_SC002",
+        "version": "12d7b311ac571ca514ca2060d2fd512f2a7670a4"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:46:21.944812+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9a06a0c87461f007144824f7025e75d6da0dca55"
+      }
+    ]
+  }
+}

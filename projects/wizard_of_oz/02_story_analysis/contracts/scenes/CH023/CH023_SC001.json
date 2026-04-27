@@ -1,0 +1,399 @@
+{
+  "scene_id": "CH023_SC001",
+  "chapter_id": "CH023",
+  "scene_title": "SC001",
+  "purpose": "To establish the final objective and negotiate the terms of Dorothy's return.",
+  "summary": "The companions gather in Glinda's throne room to express their individual desires for returning to their respective homes/kingdoms. Dorothy presents her plea to return to Kansas, leading to Glinda's condition regarding the Golden Cap.",
+  "emotional_arc": "Anticipation $\\rightarrow$ Negotiation/Solemnity.",
+  "production_intent": "Establish the final objective through a formal negotiation between Dorothy and Glinda. The scene must transition from the companions' collective anticipation of their desires to a solemn agreement regarding the terms of return, centered on the authority of the Ruby Throne and the presence of the Golden Cap.",
+  "scene_short_description": "Companions gather before a throne to declare their homes and negotiate return terms.",
+  "scene_primary_scale_story_point": "Glinda's authority is established by her elevated position on the Ruby Throne relative to the group.",
+  "scene_required_anchor_catalog": [
+    "Ruby Throne",
+    "Golden Cap"
+  ],
+  "scene_start_state": "The companions stand in a grouped arrangement facing the Ruby Throne.",
+  "scene_end_state": "A solemn agreement or condition is set regarding the Golden Cap and Dorothy's return.",
+  "dominant_action_line": "Companions declare their desires; Dorothy pleads for Kansas; Glinda sets conditions.",
+  "scene_spatial_layout": [
+    "Grouped cluster of companions in the floor space facing the throne",
+    "Elevated throne area separated from the group"
+  ],
+  "character_spatial_map": [
+    "Glinda the Good Witch seated on Ruby Throne",
+    "Dorothy, Scarecrow, Tin Woodman, and Lion clustered at a respectful distance from the throne"
+  ],
+  "environment_subzones": [
+    "ruby_throne_platform",
+    "central_floor_assembly"
+  ],
+  "entry_vectors": [
+    "group_approach_to_throne"
+  ],
+  "exit_vectors": [
+    "exit_from_throne_room"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Transition from collective presence to individual declarations.",
+    "BT002 -> BT003: Transition from companion desires to Dorothy's specific plea.",
+    "BT003 -> BT004: Transition from plea to Glinda's authoritative response."
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH023/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH023/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH023/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Lion",
+      "canonical_id": null,
+      "display_name": "Lion",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "Glinda the Good Witch",
+      "canonical_id": null,
+      "display_name": "Glinda the Good Witch",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Glinda's Throne Room (Ruby Throne)",
+      "canonical_id": "glinda_castle_throne_room",
+      "display_name": "glinda_castle_throne_room",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 136,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH023/glinda_castle_throne_room.md",
+      "notes": "Chapter-local environment alias match for 'Glinda's Throne Room (Ruby Throne)' (key_overlap=3, label_overlap=4, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Precise positioning of the Golden Cap",
+    "Physical proximity of companions to the Ruby Throne"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of throne room and group arrangement",
+    "Medium close-ups of companions expressing desires",
+    "Close-ups on Glinda to establish authority"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Companions gather in the throne room",
+      "purpose": "",
+      "action_start": "companions enter or assemble",
+      "action_end": "group is settled and facing Glinda",
+      "active_subjects": [
+        "the_scarecrow",
+        "tin_woodman",
+        "Lion",
+        "dorothy"
+      ],
+      "passive_subjects": [
+        "Glinda the Good Witch"
+      ],
+      "spatial_context": "glinda_castle_throne_room",
+      "blocking_hint": "companions clustered in central floor assembly",
+      "environment_subzone": "central_floor_assembly",
+      "continuity_focus": "proximity to throne",
+      "coverage_hint": "wide shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Individual desires are expressed",
+      "purpose": "",
+      "action_start": "Scarecrow speaks",
+      "action_end": "Tin Woodman and Lion have spoken",
+      "active_subjects": [
+        "the_scarecrow",
+        "tin_woodman",
+        "Lion"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "Glinda the Good Witch"
+      ],
+      "spatial_context": "glinda_castle_throne_room",
+      "blocking_hint": "characters speaking from within the group cluster",
+      "environment_subzone": "central_floor_assembly",
+      "continuity_focus": "character order in group",
+      "coverage_hint": "medium close-ups",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Dorothy presents her plea for Kansas",
+      "purpose": "",
+      "action_start": "Dorothy steps forward or speaks up",
+      "action_end": "Dorothy finishes her request",
+      "active_subjects": [
+        "dorothy"
+      ],
+      "passive_subjects": [
+        "Glinda the Good Witch",
+        "the_scarecrow",
+        "tin_woodman",
+        "Lion"
+      ],
+      "spatial_context": "glinda_castle_throne_room",
+      "blocking_hint": "Dorothy positioned slightly more forward or distinct in the group",
+      "environment_subzone": "central_floor_assembly",
+      "continuity_focus": "Dorothy's white clothing visibility",
+      "coverage_hint": "medium close-up",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT004"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "Glinda negotiates terms via the Golden Cap",
+      "purpose": "",
+      "action_start": "Glinda speaks",
+      "action_end": "The condition of the Golden Cap is established",
+      "active_subjects": [
+        "Glinda the Good Witch"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "Lion"
+      ],
+      "spatial_context": "glinda_castle_throne_room",
+      "blocking_hint": "Glinda remains seated on the Ruby Throne",
+      "environment_subzone": "ruby_throne_platform",
+      "continuity_focus": "presence and position of the Golden Cap",
+      "coverage_hint": "close-ups on Glinda",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish_setting",
+      "planned_shot_moment_summary": "companions gather in the throne room",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [
+        "tin_woodman",
+        "Lion",
+        "dorothy",
+        "Glinda the Good Witch"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "central_floor_assembly",
+      "planned_shot_required_anchor_1": "ruby_throne",
+      "planned_shot_scale_proof_detail": "group size relative to throne height",
+      "start_state_seed": "wide view of room",
+      "end_state_seed": "wide view of group",
+      "action_seed": "companions move into position",
+      "blocking_seed": [
+        "grouping near center floor"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "character_motivation",
+      "planned_shot_moment_summary": "companions express individual desires",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "central_floor_assembly",
+      "planned_shot_required_anchor_1": "ruby_throne",
+      "planned_shot_scale_proof_detail": "medium framing of character",
+      "start_state_seed": "static medium shot",
+      "end_state_seed": "static medium shot",
+      "action_seed": "Scarecrow speaks desire to rule Emerald City",
+      "blocking_seed": [
+        "standing in group cluster"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT004",
+      "narrative_function": "establish_authority",
+      "planned_shot_moment_summary": "Glinda responds to Dorothy's plea",
+      "primary_subject_seed": "Glinda the Good Witch",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "ruby_throne_platform",
+      "planned_shot_required_anchor_1": "ruby_throne",
+      "planned_shot_scale_proof_detail": "low angle looking up at Glinda",
+      "start_state_seed": "close on Glinda",
+      "end_state_seed": "close on Glinda",
+      "action_seed": "Glinda presents condition regarding Golden Cap",
+      "blocking_seed": [
+        "seated on throne"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Lion -> Lion",
+    "Resolve Glinda the Good Witch -> Glinda the Good Witch"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH023",
+      "scene_id": "CH023_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH023",
+      "scene_id": "CH023_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH023",
+      "scene_id": "CH023_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH023",
+      "scene_id": "CH023_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH023",
+      "scene_id": "CH023_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH023",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH023_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH023",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH023_chapter_xxiii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH018",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH023",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH023_SC001] Purpose: To establish the final objective and negotiate the terms of Dorothy's return.",
+    "[CH023_SC001] Summary: The companions gather in Glinda's throne room to express their individual desires for returning to their respective homes/kingdoms. Dorothy presents her plea to return to Kansas, leading to Glinda's condition regarding the Golden Cap.",
+    "[CH023_SC001] Emotional arc: Anticipation $\\rightarrow$ Negotiation/Solemnity.",
+    "[CH023_SC001] Coverage: Wide shots of the throne room and the group's arrangement. Medium close-ups of each companion expressing their desire. Close-ups on Glinda to establish her authority.",
+    "[CH023_SC001] Continuity: The presence/positioning of the Golden Cap; the physical proximity of the companions to the throne.",
+    "[CH023] Chapter summary: **Setting:** A room within Glinda's Castle and the Kansas prairie. **Characters:** - Dorothy: Seeking to return to Kansas. - Scarecrow: Desires to return to the Emerald City to rule. - Tin Woodman: Desires to return t...",
+    "[CH023] Chapter XXIII (book index hit)",
+    "[CH012] Chapter XII (book index hit)",
+    "[CH018] Chapter XVIII (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH023_SC001\n\n## Production Intent\nEstablish the final objective through a formal negotiation between Dorothy and Glinda. The scene must transition from the companions' collective anticipation of their desires to a solemn agreement regarding the terms of return, centered on the authority of the Ruby Throne and the presence of the Golden Cap.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- the_scarecrow\n- tin_woodman\n- Lion\n- Glinda the Good Witch\n\n## Required Environments\n- glinda_castle_throne_room (Ruby Throne, Golden Cap)\n\n## Continuity Constraints\n- Precise positioning of the Golden Cap\n- Physical proximity of companions to the Ruby Throne\n\n## Beat List\n- BT001: Companions gather in the throne room.\n- BT002: Individual desires are expressed by Scarecrow, Tin Woodman, and Lion.\n- BT003: Dorothy presents her plea for Kansas.\n- BT004: Glinda negotiates terms via the Golden Cap.",
+  "metadata": {
+    "artifact_id": "CH023_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "c431a972ca0bbb235360bef9247da14171ece3e5",
+    "created_at_utc": "2026-04-27T09:13:07.413860+00:00",
+    "updated_at_utc": "2026-04-27T09:13:07.413860+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH023_SC001",
+        "version": "2aaaa68aa3c9ab8f31c8931e6324d902ab7ed4a7"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH023_SC001",
+        "version": "dd479cca940221985eaffadb9a8083bd0eddf8aa"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH023_SC001",
+        "version": "843b9daf6945a1489d9aa348495555fb3f0f73ae"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T09:13:55.750379+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "c431a972ca0bbb235360bef9247da14171ece3e5"
+      }
+    ]
+  }
+}

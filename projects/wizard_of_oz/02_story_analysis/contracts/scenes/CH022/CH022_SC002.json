@@ -1,0 +1,390 @@
+{
+  "scene_id": "CH022_SC002",
+  "chapter_id": "CH022",
+  "scene_title": "SC002",
+  "purpose": "Introduce the magical solution to the physical conflict.",
+  "summary": "Realizing they cannot win a physical fight against the Hammer-Heads, Dorothy decides to use the Golden Cap. She performs the ritual to summon the Winged Monkeys.",
+  "emotional_arc": "Desperation $\\rightarrow$ Hope/Anticipation.",
+  "production_intent": "Transition from a physical confrontation with the hammer_heads to a magical intervention. The sequence must visually communicate the shift in power through atmospheric lighting changes and character reactions as dorothy performs the ritual with the Golden Cap.",
+  "scene_short_description": "A group of travelers trapped on a rocky hill face an imminent threat before a magical summons.",
+  "scene_primary_scale_story_point": "Small human scale vs large looming sky and threatening hammer_heads.",
+  "scene_required_anchor_catalog": [
+    "Golden Cap",
+    "rocky_hill_territory terrain"
+  ],
+  "scene_start_state": "Travelers cornered on the rocks, facing imminent physical threat from hammer_heads.",
+  "scene_end_state": "Sky reacts to summoning; atmosphere shifts toward hope/anticipation.",
+  "dominant_action_line": "Dorothy uses the Golden Cap to summon the Winged Monkeys.",
+  "scene_spatial_layout": [
+    "Tight grouping of travelers on elevated rocky terrain",
+    "Hammer_heads positioned as a surrounding threat"
+  ],
+  "character_spatial_map": [
+    "dorothy center stage with the Golden Cap",
+    "the_scarecrow, tin_woodman, and cowardly_lion clustered behind/beside dorothy",
+    "toto at dorothy's feet",
+    "hammer_heads in background periphery"
+  ],
+  "environment_subzones": [
+    "rocky_hill_territory high ground",
+    "sky/upper atmosphere"
+  ],
+  "entry_vectors": [
+    "hammer_heads approaching from hill perimeter"
+  ],
+  "exit_vectors": [
+    "none (scene transitions to summoning effect)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: realization of defeat to decision to act",
+    "BT002 -> BT003: ritual execution to magical atmospheric shift"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH022/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH022/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH022/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH022/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH022/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    },
+    {
+      "label": "Hammer-Heads (background/threat)",
+      "canonical_id": "hammer_heads",
+      "display_name": "hammer_heads",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH022/hammer_heads.md",
+      "notes": "Direct registry match for 'hammer_heads'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The rocky hill",
+      "canonical_id": "rocky_hill_territory",
+      "display_name": "rocky_hill_territory",
+      "status": "canonical",
+      "entity_kind": "landform",
+      "resolution_score": 92,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH022/rocky_hill_territory.md",
+      "notes": "Chapter-local environment alias match for 'The rocky hill' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Lighting and atmospheric shift during summoning ritual",
+    "Dorothy hand placement on the Golden Cap"
+  ],
+  "visual_coverage_families": [
+    "Close-ups of dorothy and the Golden Cap",
+    "Low angle shots looking up at the sky",
+    "Reaction shots of the travelers' faces"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Realization of physical defeat",
+      "purpose": "",
+      "action_start": "hammer_heads advancing",
+      "action_end": "dorothy stops retreating",
+      "active_subjects": [
+        "dorothy",
+        "hammer_heads"
+      ],
+      "passive_subjects": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "spatial_context": "rocky_hill_territory",
+      "blocking_hint": "travelers backed against rock face",
+      "environment_subzone": "rocky_hill_territory",
+      "continuity_focus": "physical positioning of travelers",
+      "coverage_hint": "wide/reaction shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "dorothy decides to use the cap"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Ritual",
+      "purpose": "",
+      "action_start": "dorothy grasping the Golden Cap",
+      "action_end": "ritual completed",
+      "active_subjects": [
+        "dorothy"
+      ],
+      "passive_subjects": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "spatial_context": "rocky_hill_territory",
+      "blocking_hint": "dorothy center focus",
+      "environment_subzone": "rocky_hill_territory",
+      "continuity_focus": "hand placement on cap; lighting shift start",
+      "coverage_hint": "close-ups of dorothy and cap",
+      "coverage_priority": "high",
+      "handoff_to_next": "sky/atmosphere change"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Summoning Effect",
+      "purpose": "",
+      "action_start": "magical light/atmosphere shift",
+      "action_end": "anticipation for monkeys",
+      "active_subjects": [
+        "dorothy",
+        "hammer_heads"
+      ],
+      "passive_subjects": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "spatial_context": "rocky_hill_territory and sky",
+      "blocking_hint": "camera looking up",
+      "environment_subzone": "sky/upper atmosphere",
+      "continuity_focus": "lighting/atmosphere change complete",
+      "coverage_hint": "low angle shots of sky; reaction shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish threat",
+      "planned_shot_moment_summary": "travelers realize they cannot win the fight",
+      "primary_subject_seed": "hammer_heads",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "rocky_hill_territory",
+      "planned_shot_required_anchor_1": "rocky_hill_territory",
+      "planned_shot_scale_proof_detail": "threat distance vs traveler grouping",
+      "start_state_seed": "travelers cornered",
+      "end_state_seed": "dorothy looks at the cap",
+      "action_seed": "hammer_heads closing in",
+      "blocking_seed": [
+        "travelers huddled together"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "introduce solution",
+      "planned_shot_moment_summary": "dorothy reaches for the Golden Cap",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "Golden Cap"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "rocky_hill_territory",
+      "planned_shot_required_anchor_1": "Golden Cap",
+      "planned_shot_scale_proof_detail": "hand to cap proximity",
+      "start_state_seed": "dorothy reaching",
+      "end_state_seed": "hands on cap",
+      "action_seed": "ritual begins",
+      "blocking_seed": [
+        "dorothy seated or kneeling"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "visualize magic",
+      "planned_shot_moment_summary": "the sky reacts to the summons",
+      "primary_subject_seed": "sky",
+      "secondary_subjects_seed": [
+        "dorothy"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "sky/upper atmosphere",
+      "planned_shot_required_anchor_1": "rocky_hill_territory",
+      "planned_shot_scale_proof_detail": "low angle looking up at vast sky",
+      "start_state_seed": "ritual peak",
+      "end_state_seed": "atmosphere changed",
+      "action_seed": "summoning effect takes hold",
+      "blocking_seed": [
+        "camera tilts upward"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "tilt",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH022",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH022_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH022",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH022_chapter_xxii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH018",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH022",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH022_SC002] Purpose: Introduce the magical solution to the physical conflict.",
+    "[CH022_SC002] Summary: Realizing they cannot win a physical fight against the Hammer-Heads, Dorothy decides to use the Golden Cap. She performs the ritual to summon the Winged Monkeys.",
+    "[CH022_SC002] Emotional arc: Desperation $\\rightarrow$ Hope/Anticipation.",
+    "[CH022_SC002] Coverage: Close-ups of Dorothy and the Golden Cap. Low angle shots looking up at the sky as the summons takes effect. Reaction shots of the travelers' faces.",
+    "[CH022_SC002] Continuity: The lighting/atmosphere change during the magical summoning; Dorothy's hand placement on the cap.",
+    "[CH022] Chapter summary: **Setting:** A rocky hill inhabited by Hammer-Heads and the lush, red-themed Country of the Quadlings. **Characters:** Dorothy, Scarecrow, Tin Woodman, Cowardly Lion, Toto, Hammer-Heads (armless creatures with project...",
+    "[CH022] Chapter XXII (book index hit)",
+    "[CH012] Chapter XII (book index hit)",
+    "[CH018] Chapter XVIII (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH022_SC002\n\n## Production Intent\nTransition from a physical confrontation with the hammer_heads to a magical intervention. The sequence must visually communicate the shift in power through atmospheric lighting changes and character reactions as dorothy performs the ritual with the Golden Cap.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n- hammer_heads (background threat)\n\n## Required Environments\n- rocky_hill_territory\n\n## Continuity Constraints\n- Lighting and atmospheric shift during summoning ritual\n- Dorothy hand placement on the Golden Cap\n\n## Beat List\n- BT001: Realization of physical defeat\n- BT002: The Ritual\n- BT003: The Summoning Effect",
+  "metadata": {
+    "artifact_id": "CH022_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "9b131f6e3e47ac0ea2fa6f9b7e56a978dad6ba3d",
+    "created_at_utc": "2026-04-27T09:09:55.584252+00:00",
+    "updated_at_utc": "2026-04-27T09:09:55.584252+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH022_SC002",
+        "version": "164a3628bebc809c5cc21166bfe7ac7a7c0d4f96"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH022_SC002",
+        "version": "f0cff7d3dec2f77531f9f5154575ee01c71e2db8"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH022_SC002",
+        "version": "9a7e3888194ec0db1b0893fc755c39afdd6bcfea"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T09:10:37.856633+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9b131f6e3e47ac0ea2fa6f9b7e56a978dad6ba3d"
+      }
+    ]
+  }
+}

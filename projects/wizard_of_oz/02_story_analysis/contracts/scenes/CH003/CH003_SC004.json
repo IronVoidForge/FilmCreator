@@ -1,0 +1,349 @@
+{
+  "scene_id": "CH003_SC004",
+  "chapter_id": "CH003",
+  "scene_title": "SC004",
+  "purpose": "Establish the primary traveling duo and their shared goal.",
+  "summary": "Dorothy helps the Scarecrow down from his pole. The Scarecrow explains his desire for brains and asks Dorothy to take him to the Emerald City to see Oz. Dorothy agrees, and they set off together, with a skeptical Toto following.",
+  "emotional_arc": "From confusion to companionship and shared purpose.",
+  "production_intent": "Establish the traveling partnership between dorothy and the_scarecrow through a physical rescue and shared goal alignment. The sequence must transition from the isolation of the cornfield edge to the movement along the yellow_brick_road.",
+  "scene_short_description": "A girl assists a straw figure down from a pole at a cornfield edge before walking together.",
+  "scene_primary_scale_story_point": "Human scale interaction with a vertical object (pole) transitioning to wide landscape travel.",
+  "scene_required_anchor_catalog": [
+    "wooden pole",
+    "yellow_brick_road"
+  ],
+  "scene_start_state": "the_scarecrow is suspended on a pole at the cornfield edge.",
+  "scene_end_state": "dorothy, the_scarecrow, and toto are walking away down the yellow_brick_road.",
+  "dominant_action_line": "Dorothy assists the Scarecrow down from his post, they form an alliance, and begin their journey.",
+  "scene_spatial_layout": [
+    "Verticality at the cornfield edge (pole).",
+    "Linear progression along the yellow_brick_road."
+  ],
+  "character_spatial_map": [
+    "dorothy positioned near the base of the pole.",
+    "the_scarecrow descending from the pole to dorothy's level.",
+    "toto following at a distance behind the duo."
+  ],
+  "environment_subzones": [
+    "cornfield_edge",
+    "yellow_brick_road"
+  ],
+  "entry_vectors": [
+    "cornfield_edge (dorothy)"
+  ],
+  "exit_vectors": [
+    "yellow_brick_road (all characters)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Physical descent completed.",
+    "BT002 -> BT003: Agreement reached and movement begins."
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "The Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+      "notes": "Direct registry match for 'the_scarecrow'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Cornfield edge/Yellow Brick Road",
+      "canonical_id": "yellow_brick_road",
+      "display_name": "yellow_brick_road",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 124,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH005/yellow_brick_road.md",
+      "notes": "Direct registry match for 'yellow_brick_road'."
+    }
+  ],
+  "continuity_constraints": [
+    "Physical contact mechanics during the descent from the pole.",
+    "Relative positioning of toto to the two main characters during travel."
+  ],
+  "visual_coverage_families": [
+    "Two-shots: Dorothy and the Scarecrow walking together.",
+    "Close-ups: The Scarecrow's expressive face; Toto's skeptical expressions.",
+    "Profile shots: The duo walking away into the distance."
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The descent from the pole",
+      "purpose": "",
+      "action_start": "dorothy approaches the cornfield edge",
+      "action_end": "the_scarecrow is on the ground",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow"
+      ],
+      "passive_subjects": [
+        "toto"
+      ],
+      "spatial_context": "cornfield_edge",
+      "blocking_hint": "dorothy reaches up toward the pole",
+      "environment_subzone": "cornfield_edge",
+      "continuity_focus": "physical contact/weight transfer during descent",
+      "coverage_hint": "medium shot of interaction",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The request for brains",
+      "purpose": "",
+      "action_start": "the_scarecrow stands on ground",
+      "action_end": "dorothy agrees to help",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow"
+      ],
+      "passive_subjects": [
+        "toto"
+      ],
+      "spatial_context": "cornfield_edge/road junction",
+      "blocking_hint": "face to face standing",
+      "environment_subzone": "cornfield_edge",
+      "continuity_focus": "eye level alignment",
+      "coverage_hint": "close-ups on faces",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Departure for Emerald City",
+      "purpose": "",
+      "action_start": "the duo turns toward the road",
+      "action_end": "characters move out of frame/distance",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow"
+      ],
+      "passive_subjects": [
+        "toto"
+      ],
+      "spatial_context": "yellow_brick_road",
+      "blocking_hint": "walking in single file or side-by-side",
+      "environment_subzone": "yellow_brick_road",
+      "continuity_focus": "toto's position relative to duo",
+      "coverage_hint": "wide profile shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "none"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish character state",
+      "planned_shot_moment_summary": "dorothy reaches up to the pole",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "cornfield_edge",
+      "planned_shot_required_anchor_1": "wooden pole",
+      "planned_shot_scale_proof_detail": "height difference between dorothy and pole top",
+      "start_state_seed": "dorothy approaching pole",
+      "end_state_seed": "dorothy grasping the_scarecrow",
+      "action_seed": "helping him down",
+      "blocking_seed": [
+        "dorothy at base of pole"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "character motivation",
+      "planned_shot_moment_summary": "the_scarecrow expresses desire for brains",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [
+        "dorothy"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "cornfield_edge",
+      "planned_shot_required_anchor_1": "wooden pole",
+      "planned_shot_scale_proof_detail": "eye level contact between duo",
+      "start_state_seed": "the_scarecrow on ground",
+      "end_state_seed": "the_scarecrow finished speaking",
+      "action_seed": "dialogue exchange",
+      "blocking_seed": [
+        "standing face to face"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish journey",
+      "planned_shot_moment_summary": "the duo walks away into distance",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "yellow_brick_road",
+      "planned_shot_required_anchor_1": "yellow_brick_road",
+      "planned_shot_scale_proof_detail": "characters shrinking against road perspective",
+      "start_state_seed": "duo turning to road",
+      "end_state_seed": "duo walking into distance",
+      "action_seed": "walking away",
+      "blocking_seed": [
+        "walking down center of road"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH003",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH003_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH023",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH023_chapter_xxiii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH003",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH003_SC004] Purpose: Establish the primary traveling duo and their shared goal.",
+    "[CH003_SC004] Summary: Dorothy helps the Scarecrow down from his pole. The Scarecrow explains his desire for brains and asks Dorothy to take him to the Emerald City to see Oz. Dorothy agrees, and they set off together, with a skeptical Toto following.",
+    "[CH003_SC004] Emotional arc: From confusion to companionship and shared purpose.",
+    "[CH003_SC004] Coverage: Two-shots: Dorothy and the Scarecrow walking together. Close-ups: The Scarecrow's expressive (if straw) face; Toto's skeptical expressions. Profile shots: The duo walking away into the distance.",
+    "[CH003_SC004] Continuity: The physical interaction of helping the Scarecrow down; the placement of Toto relative to the two main characters.",
+    "[CH003] Chapter summary: **Setting:** The Munchkin Country (characterized by blue houses and round domes) and the Yellow Brick Road, specifically near a large cornfield. **Characters:** - **Dorothy:** A young girl traveling to the Emerald Cit...",
+    "[CH023] Chapter XXIII (book index hit)",
+    "[CH003] Chapter III (book index hit)",
+    "[CH004] Chapter IV (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH003_SC004\n\n## Production Intent\nEstablish the traveling partnership between dorothy and the_scarecrow through a physical rescue and shared goal alignment. The sequence must transition from the isolation of the cornfield edge to the movement along the yellow_brick_road.\n\n## Required Cast\n- dorothy (white clothing/dress, expressive face)\n- the_scarecrow (straw construction, expressive face)\n- toto (skeptical expression)\n\n## Required Environments\n- cornfield_edge (near large cornfield)\n- yellow_brick_road\n\n## Continuity Constraints\n- Physical interaction mechanics of helping the_scarecrow down from the pole.\n- Placement and movement of toto relative to dorothy and the_scarecrow during travel.\n\n## Beat List\n- BT001: The descent from the pole.\n- BT002: The request for brains/agreement to go to Emerald City.\n- BT003: Departure via the yellow_brick_road.",
+  "metadata": {
+    "artifact_id": "CH003_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "116dec704c0db4ab50f2ce732b074e6ef8b201e3",
+    "created_at_utc": "2026-04-27T08:05:51.042342+00:00",
+    "updated_at_utc": "2026-04-27T08:05:51.042342+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH003_SC004",
+        "version": "bdd2a69dfba566eb11377552b591cb2a28bcf9ed"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH003_SC004",
+        "version": "c4cd2addcf561500ce3b466d7339637b3fe50248"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH003_SC004",
+        "version": "3630c172ba49818755dd387b3526d5b10102907f"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:06:34.601046+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "116dec704c0db4ab50f2ce732b074e6ef8b201e3"
+      }
+    ]
+  }
+}

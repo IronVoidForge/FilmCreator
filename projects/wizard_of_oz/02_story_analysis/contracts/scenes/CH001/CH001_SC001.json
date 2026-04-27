@@ -1,0 +1,363 @@
+{
+  "scene_id": "CH001_SC001",
+  "chapter_id": "CH001",
+  "scene_title": "SC001",
+  "purpose": "Establish the setting, the constant threat of nature, and the tension of the approaching cyclone.",
+  "summary": "In the colorless Kansas prairie, the family lives under the shadow of potential cyclones. As a massive storm approaches from two directions, Uncle Henry prepares for the worst while Aunt Em directs Dorothy toward safety.",
+  "emotional_arc": "Mundane vigilance $\\rightarrow$ Escalating dread.",
+  "production_intent": "Establish the desolate, colorless Kansas prairie and the looming threat of a dual-direction cyclone. The visual progression must move from mundane vigilance to escalating dread through lighting shifts and increasing wind intensity.",
+  "scene_short_description": "A colorless prairie landscape under the shadow of approaching storm clouds.",
+  "scene_primary_scale_story_point": "The farmhouse is dwarfed by the vastness of the kansas_prairie_landscape and the scale of the storms.",
+  "scene_required_anchor_catalog": [
+    "farmhouse_interior_and_cellar structure",
+    "horizon line/storm front"
+  ],
+  "scene_start_state": "Bright, gray, windless prairie landscape.",
+  "scene_end_state": "Dark, stormy atmosphere with high wind activity.",
+  "dominant_action_line": "Family members react to the approaching storm as preparations begin.",
+  "scene_spatial_layout": [
+    "farmhouse_interior_and_cellar serves as the central hub",
+    "kansas_prairie_landscape surrounds all exterior views"
+  ],
+  "character_spatial_map": [
+    "uncle_henry positioned near storm preparation points",
+    "aunt_em directing dorothy toward safety",
+    "toto present within the domestic sphere"
+  ],
+  "environment_subzones": [
+    "farmhouse_interior_and_cellar",
+    "kansas_prairie_landscape"
+  ],
+  "entry_vectors": [
+    "wind/storm front approaching from two directions"
+  ],
+  "exit_vectors": [
+    "movement toward cellar/safety"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: visual shift in sky color",
+    "BT002 -> BT003: increase in wind velocity"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Aunt Em",
+      "canonical_id": "aunt_em",
+      "display_name": "aunt_em",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/aunt_em.md",
+      "notes": "Direct registry match for 'aunt_em'."
+    },
+    {
+      "label": "Uncle Henry",
+      "canonical_id": "uncle_henry",
+      "display_name": "uncle_henry",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/uncle_henry.md",
+      "notes": "Direct registry match for 'uncle_henry'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "One-room farmhouse",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 62,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local environment alias match for 'One-room farmhouse' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    },
+    {
+      "label": "vast",
+      "canonical_id": "kansas_prairie_landscape",
+      "display_name": "kansas_prairie_landscape",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 46,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/kansas_prairie_landscape.md",
+      "notes": "Chapter-local environment alias match for 'vast' (key_overlap=0, label_overlap=1, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Lighting shift from bright/gray to dark/stormy",
+    "Wind speed and direction affecting hair and clothing"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of desolate landscape and approaching storm clouds",
+    "Mid/Close shots of weathered faces (aunt_em, uncle_henry)",
+    "Low angle shots of farmhouse against darkening sky"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Establishing the colorless prairie and approaching storm",
+      "purpose": "",
+      "action_start": "static gray landscape",
+      "action_end": "clouds darkening sky",
+      "active_subjects": [],
+      "passive_subjects": [
+        "kansas_prairie_landscape"
+      ],
+      "spatial_context": "kansas_prairie_landscape",
+      "blocking_hint": "wide horizon view",
+      "environment_subzone": "kansas_prairie_landscape",
+      "continuity_focus": "lighting bright/gray",
+      "coverage_hint": "extreme_wide",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Family vigilance and storm preparation",
+      "purpose": "",
+      "action_start": "uncle_henry preparing",
+      "action_end": "aunt_em directing dorothy",
+      "active_subjects": [
+        "uncle_henry",
+        "aunt_em",
+        "dorothy"
+      ],
+      "passive_subjects": [
+        "toto"
+      ],
+      "spatial_context": "farmhouse_interior_and_cellar",
+      "blocking_hint": "characters moving within house",
+      "environment_subzone": "farmhouse_interior_and_cellar",
+      "continuity_focus": "wind beginning to affect hair/clothing",
+      "coverage_hint": "mid/close shots of faces",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Escalating dread as storm arrives",
+      "purpose": "",
+      "action_start": "sky turns dark",
+      "action_end": "high wind and darkness",
+      "active_subjects": [
+        "dorothy",
+        "aunt_em",
+        "uncle_henry"
+      ],
+      "passive_subjects": [
+        "toto"
+      ],
+      "spatial_context": "farmhouse_interior_and_cellar/kansas_prairie_landscape",
+      "blocking_hint": "characters moving toward safety/cellar",
+      "environment_subzone": "farmhouse_interior_and_cellar",
+      "continuity_focus": "lighting dark/stormy; high wind speed",
+      "coverage_hint": "low angle house shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish_setting",
+      "planned_shot_moment_summary": "wide view of gray prairie and distant clouds",
+      "primary_subject_seed": "kansas_prairie_landscape",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "kansas_prairie_landscape",
+      "planned_shot_required_anchor_1": "horizon line",
+      "planned_shot_scale_proof_detail": "vastness of landscape vs small farmhouse",
+      "start_state_seed": "bright/gray sky",
+      "end_state_seed": "darkening clouds",
+      "action_seed": "clouds move slowly across horizon",
+      "blocking_seed": [
+        "static"
+      ],
+      "shot_size": "extreme_wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "character_reaction",
+      "planned_shot_moment_summary": "close up of weathered faces reacting to sky",
+      "primary_subject_seed": "aunt_em",
+      "secondary_subjects_seed": [
+        "uncle_henry"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "farmhouse_interior_and_cellar",
+      "planned_shot_required_anchor_1": "farmhouse window",
+      "planned_shot_scale_proof_detail": "human vs storm scale",
+      "start_state_seed": "observing sky",
+      "end_state_seed": "turning to action",
+      "action_seed": "aunt_em directs dorothy",
+      "blocking_seed": [
+        "aunt_em near window"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "escalate_tension",
+      "planned_shot_moment_summary": "low angle of house against dark sky",
+      "primary_subject_seed": "farmhouse_interior_and_cellar",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "kansas_prairie_landscape",
+      "planned_shot_required_anchor_1": "farmhouse structure",
+      "planned_shot_scale_proof_detail": "house dwarfed by darkening sky",
+      "start_state_seed": "gray light",
+      "end_state_seed": "dark/stormy light",
+      "action_seed": "wind picks up, hair and clothes move",
+      "blocking_seed": [
+        "static house"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH001",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH001",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH001_chapter_i.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH023",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH023_chapter_xxiii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH001",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH001_SC001] Purpose: Establish the setting, the constant threat of nature, and the tension of the approaching cyclone.",
+    "[CH001_SC001] Summary: In the colorless Kansas prairie, the family lives under the shadow of potential cyclones. As a massive storm approaches from two directions, Uncle Henry prepares for the worst while Aunt Em directs Dorothy toward safety.",
+    "[CH001_SC001] Emotional arc: Mundane vigilance $\\rightarrow$ Escalating dread.",
+    "[CH001_SC001] Coverage: Wide shots of the desolate landscape and approaching storm clouds. Mid/Close shots of characters' weathered faces (Aunt Em, Uncle Henry). Low angle shots of the house against the darkening sky.",
+    "[CH001_SC001] Continuity: Lighting shifts from bright/gray to dark/stormy; wind speed/direction affecting hair and clothing.",
+    "[CH001] Chapter summary: **Setting:** A small, one-room farmhouse situated in the middle of the vast, colorless Kansas prairies. The landscape is characterized by gray grass and baked earth. **Characters:** - **Dorothy:** An orphaned young gi...",
+    "[CH001] Chapter I (book index hit)",
+    "[CH002] Chapter II (book index hit)",
+    "[CH023] Chapter XXIII (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH001_SC001\n\n## Production Intent\nEstablish the desolate, colorless Kansas prairie and the looming threat of a dual-direction cyclone. The visual progression must move from mundane vigilance to escalating dread through lighting shifts and increasing wind intensity.\n\n## Required Cast\n- dorothy (young human girl, expressive face, white clothing)\n- aunt_em (weathered face)\n- uncle_henry (weathered face)\n- toto\n\n## Required Environments\n- farmhouse_interior_and_cellar (one-room farmhouse)\n- kansas_prairie_landscape (vast, gray grass, baked earth)\n\n## Continuity Constraints\n- Lighting shift: bright/gray -> dark/stormy\n- Wind speed/direction: increasing intensity affecting hair and clothing\n\n## Beat List\n- BT001: Establishing the colorless prairie and approaching storm\n- BT002: Family vigilance and storm preparation\n- BT003: Escalating dread as storm arrives",
+  "metadata": {
+    "artifact_id": "CH001_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "62a25da37a64f3a8a777be477748f3410129772b",
+    "created_at_utc": "2026-04-27T07:57:28.406976+00:00",
+    "updated_at_utc": "2026-04-27T07:57:28.406976+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH001_SC001",
+        "version": "1bac3b5a16c583c86053f58f00bdb3a4ddf75a2f"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH001_SC001",
+        "version": "50e7dbef8ed7a76250818a4665ba5c695be02a90"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH001_SC001",
+        "version": "fb0b897a129d6942729500e83bfb888210fb2211"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T07:58:11.052286+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "62a25da37a64f3a8a777be477748f3410129772b"
+      }
+    ]
+  }
+}

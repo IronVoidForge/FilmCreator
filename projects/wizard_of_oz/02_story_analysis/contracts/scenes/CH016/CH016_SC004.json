@@ -1,0 +1,308 @@
+{
+  "scene_id": "CH016_SC004",
+  "chapter_id": "CH016",
+  "scene_title": "SC004",
+  "purpose": "To reveal the Wizard's true nature and create tension regarding Dorothy's future.",
+  "summary": "After the group departs, Oz is left alone. He drops the persona of the Great Wizard, admitting to himself that he is merely a humbug using sleight of hand. He expresses profound doubt about his ability to solve Dorothy's problem of returning home.",
+  "emotional_arc": "Performance/Confidence $\\rightarrow$ Isolation $\\rightarrow$ Anxiety/Dread.",
+  "production_intent": "Transition the environment from a grand ceremonial space to an intimate, shadowy void. The visual language must shift from wide-scale spectacle to tight, claustrophobic character study as the Wizard's public persona collapses into private anxiety.",
+  "scene_short_description": "A solitary figure deconstructs a grand persona within a vast, emptying ceremonial hall.",
+  "scene_primary_scale_story_point": "Human scale vs. massive architectural emptiness.",
+  "scene_required_anchor_catalog": [
+    "throne",
+    "spectacles"
+  ],
+  "scene_start_state": "Grand, brightly lit throne room immediately following group departure.",
+  "scene_end_state": "Shadowy, intimate space focused on a distressed individual.",
+  "dominant_action_line": "The Wizard sheds his formal mannerisms and admits his status as a humbug.",
+  "scene_spatial_layout": [
+    "Large open floor area surrounding the central throne",
+    "High ceilings creating vertical emptiness"
+  ],
+  "character_spatial_map": [
+    "oz centered or near throne"
+  ],
+  "environment_subzones": [
+    "primary scene playing area"
+  ],
+  "entry_vectors": [
+    "group_exit_path"
+  ],
+  "exit_vectors": [
+    "Subjects exit or hand off toward the next story beat."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Sudden drop in physical posture and lighting shift",
+    "BT002 -> BT003: Tightening of camera focus/proximity"
+  ],
+  "characters_required": [
+    {
+      "label": "Oz (The Wizard)",
+      "canonical_id": "oz",
+      "display_name": "oz",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/oz_the_wizard.md",
+      "notes": "Direct registry match for 'oz_the_wizard'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Throne Room of Oz (now quiet/empty)",
+      "canonical_id": "throne_room_of_oz",
+      "display_name": "throne_room_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH016/throne_room_of_oz.md",
+      "notes": "Direct registry match for 'throne_room_of_oz'."
+    }
+  ],
+  "continuity_constraints": [
+    "Lighting state must transition from grand/ceremonial to intimate/shadowy relative to previous scenes"
+  ],
+  "visual_coverage_families": [
+    "Wide shots emphasizing throne room emptiness and scale",
+    "Tight close-ups on Oz to capture internal conflict"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The persona remains briefly before the silence sets in",
+      "purpose": "",
+      "action_start": "Oz standing formally",
+      "action_end": "Silence after group departure",
+      "active_subjects": [
+        "oz"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "throne_room_of_oz",
+      "blocking_hint": "Oz center stage",
+      "environment_subzone": "throne_area",
+      "continuity_focus": "lighting transition from grand to shadowy",
+      "coverage_hint": "wide shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The collapse of the Great Wizard",
+      "purpose": "",
+      "action_start": "Formal posture",
+      "action_end": "Admission of being a humbug",
+      "active_subjects": [
+        "oz"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "throne_room_of_oz",
+      "blocking_hint": "Oz moves away from formal stance",
+      "environment_subzone": "throne_area",
+      "continuity_focus": "physical mannerisms shift from formal to casual/humbled",
+      "coverage_hint": "medium/close-up",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Internalized anxiety regarding Dorothy",
+      "purpose": "",
+      "action_start": "Self-reflection",
+      "action_end": "Profound doubt and dread",
+      "active_subjects": [
+        "oz"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "throne_room_of_oz",
+      "blocking_hint": "Oz becomes still/small",
+      "environment_subzone": "throne_area",
+      "continuity_focus": "lighting deepens into shadow",
+      "coverage_hint": "tight close-up",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish isolation",
+      "planned_shot_moment_summary": "Oz standing alone after group leaves",
+      "primary_subject_seed": "oz",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "throne_area",
+      "planned_shot_required_anchor_1": "throne",
+      "planned_shot_scale_proof_detail": "wide shot showing room emptiness",
+      "start_state_seed": "grand lighting",
+      "end_state_seed": "transition to shadow",
+      "action_seed": "Oz stands still as echoes fade",
+      "blocking_seed": [
+        "center throne"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "pull_back",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "reveal true nature",
+      "planned_shot_moment_summary": "Oz drops persona and admits being a humbug",
+      "primary_subject_seed": "oz",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "throne_area",
+      "planned_shot_required_anchor_1": "spectacles",
+      "planned_shot_scale_proof_detail": "tight framing on face",
+      "start_state_seed": "formal posture",
+      "end_state_seed": "slumped posture",
+      "action_seed": "Oz manipulates spectacles or gestures with sleight of hand",
+      "blocking_seed": [
+        "near throne"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "convey dread",
+      "planned_shot_moment_summary": "Oz expresses doubt about Dorothy's return",
+      "primary_subject_seed": "oz",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "throne_area",
+      "planned_shot_required_anchor_1": "throne",
+      "planned_shot_scale_proof_detail": "extreme close up on eyes/face",
+      "start_state_seed": "anxious expression",
+      "end_state_seed": "dreadful stillness",
+      "action_seed": "Oz stares into the shadows",
+      "blocking_seed": [
+        "seated or slumped near throne"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "telephoto",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH016",
+      "scene_id": "CH016_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH016",
+      "scene_id": "CH016_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH016",
+      "scene_id": "CH016_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH016",
+      "scene_id": "CH016_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH016",
+      "scene_id": "CH016_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH016",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH016_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH016",
+      "canonical_id": "oz"
+    }
+  ],
+  "evidence_summary": [
+    "[CH016_SC004] Purpose: To reveal the Wizard's true nature and create tension regarding Dorothy's future.",
+    "[CH016_SC004] Summary: After the group departs, Oz is left alone. He drops the persona of the Great Wizard, admitting to himself that he is merely a humbug using sleight of hand. He expresses profound doubt about his ability to solve Dorothy's problem of re...",
+    "[CH016_SC004] Emotional arc: Performance/Confidence $\\rightarrow$ Isolation $\\rightarrow$ Anxiety/Dread.",
+    "[CH016_SC004] Coverage: Wide shots showing the emptiness of the large throne room to emphasize isolation. Tight close-ups on Oz's face to capture his internal conflict and fear. Lighting shift from \"grand\" to more intimate/shadowy.",
+    "[CH016_SC004] Continuity: The lighting state of the room compared to previous scenes.",
+    "[CH016] Chapter summary: **Setting:** The Throne Room of Oz and the surrounding camp area. **Characters:** - **The Scarecrow:** Seeking brains. - **The Tin Woodman:** Seeking a heart. - **The Cowardly Lion:** Seeking courage. - **Oz (The Wiza...",
+    "[CH002] Chapter II (book index hit)",
+    "[CH003] Chapter III (book index hit)",
+    "[CH011] Chapter XI (book index hit)",
+    "Character oz: Oz is a human male of human scale. While his specific clothing and physical build are not explicitly detailed, he carries himself with formal mannerisms, such as bowing low in greeting. He is associated with the use of spectacles or visual app..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH016_SC004\n\n## Production Intent\nTransition the environment from a grand ceremonial space to an intimate, shadowy void. The visual language must shift from wide-scale spectacle to tight, claustrophobic character study as the Wizard's public persona collapses into private anxiety.\n\n## Required Cast\n- oz (Human male, formal mannerisms, uses spectacles)\n\n## Required Environments\n- throne_room_of_oz (Large, empty, transitioning from grand to shadowy/intimate)\n\n## Continuity Constraints\n- Lighting state must transition from \"grand\" to more intimate/shadowy compared to previous scenes.\n\n## Beat List\n- BT001: The persona remains briefly before the silence sets in.\n- BT002: The collapse of the Great Wizard (admission of being a humbug).\n- BT003: Internalized anxiety regarding Dorothy's future.",
+  "metadata": {
+    "artifact_id": "CH016_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "23322889ebb9ebd488a25c3ccfb544ef05d205ce",
+    "created_at_utc": "2026-04-27T08:50:56.518351+00:00",
+    "updated_at_utc": "2026-04-27T08:50:56.518351+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH016_SC004",
+        "version": "951061a9f38f6238b1fe26d9144c7aed3564adb9"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH016_SC004",
+        "version": "b6458182a9bfe5592caf5d26625a361a153868d1"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH016_SC004",
+        "version": "80b6c2c38d5bf8b3626710b0fdf4d26fe8cd156e"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:51:35.652644+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "23322889ebb9ebd488a25c3ccfb544ef05d205ce"
+      }
+    ]
+  }
+}

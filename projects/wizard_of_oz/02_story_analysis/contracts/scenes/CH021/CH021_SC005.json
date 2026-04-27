@@ -1,0 +1,337 @@
+{
+  "scene_id": "CH021_SC005",
+  "chapter_id": "CH021",
+  "scene_title": "SC005",
+  "purpose": "Execute the action climax of the chapter.",
+  "summary": "Utilizing the monster's slender neck as a weakness, the Lion leaps onto its back and delivers a single, massive paw strike that decapitates the creature.",
+  "emotional_arc": "High-stakes action/violence.",
+  "production_intent": "Execute a high-impact action climax where the Lion exploits the anatomical weakness of the great_spider_monster. The sequence requires precise coordination between the jump trajectory and the decapitation impact to maintain visceral weight.",
+  "scene_short_description": "A predator leaps onto a massive arachnid back to deliver a lethal decapitating blow.",
+  "scene_primary_scale_story_point": "Lion is small relative to the massive scale of the great_spider_monster.",
+  "scene_required_anchor_catalog": [
+    "slender neck of great_spider_monster",
+    "thick moss/ancient trees"
+  ],
+  "scene_start_state": "Lion poised for leap; great_spider_monster positioned in oak_grove_monstrous_lair.",
+  "scene_end_state": "Great spider monster decapitated; Lion atop the carcass.",
+  "dominant_action_line": "Lion leaps onto the monster's back and strikes the neck.",
+  "scene_spatial_layout": [
+    "Verticality defined by the leap from ground to monster's back.",
+    "Scale defined by massive trees and multi-limbed arachnid structure."
+  ],
+  "character_spatial_map": [
+    "Lion: Ground level transitioning to monster's dorsal area.",
+    "great_spider_monster: Central mass within the lair."
+  ],
+  "environment_subzones": [
+    "mossy floor",
+    "monster back/neck zone"
+  ],
+  "entry_vectors": [
+    "Lion jump trajectory"
+  ],
+  "exit_vectors": [
+    "Decapitated head falling from neck"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Leap launch to mid-air flight",
+    "BT002 -> BT003: Impact landing to decapitation strike"
+  ],
+  "characters_required": [
+    {
+      "label": "Lion",
+      "canonical_id": null,
+      "display_name": "Lion",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 10,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "Great Spider Monster",
+      "canonical_id": "great_spider_monster",
+      "display_name": "great_spider_monster",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/great_spider_monster.md",
+      "notes": "Direct registry match for 'great_spider_monster'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Oak Grove",
+      "canonical_id": "oak_grove_monstrous_lair",
+      "display_name": "oak_grove_monstrous_lair",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 104,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH021/oak_grove_monstrous_lair.md",
+      "notes": "Chapter-local environment alias match for 'Oak Grove' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Lion jump trajectory path",
+    "Blood and impact effect timing",
+    "Position of monster limbs during strike"
+  ],
+  "visual_coverage_families": [
+    "Dynamic handheld shots of the leap",
+    "Slow-motion impact shot",
+    "Wide shot showing scale of kill"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The Leap",
+      "purpose": "",
+      "action_start": "Lion coils muscles",
+      "action_end": "Lion leaves ground",
+      "active_subjects": [
+        "Lion"
+      ],
+      "passive_subjects": [
+        "great_spider_monster"
+      ],
+      "spatial_context": "mossy floor near monster [[blocking_hint=Lion moves toward center]",
+      "blocking_hint": "",
+      "environment_subzone": "mossy floor",
+      "continuity_focus": "Jump trajectory start",
+      "coverage_hint": "handheld leap shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Ascent",
+      "purpose": "",
+      "action_start": "Lion in mid-air",
+      "action_end": "Lion lands on monster back",
+      "active_subjects": [
+        "Lion"
+      ],
+      "passive_subjects": [
+        "great_spider_monster"
+      ],
+      "spatial_context": "Vertical space between floor and monster neck [[blocking_hint=Lion targets the slender neck]",
+      "blocking_hint": "",
+      "environment_subzone": "monster back/neck zone",
+      "continuity_focus": "Trajectory alignment",
+      "coverage_hint": "wide scale shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Kill",
+      "purpose": "",
+      "action_start": "Lion strikes with paw",
+      "action_end": "Monster head is severed",
+      "active_subjects": [
+        "Lion"
+      ],
+      "passive_subjects": [
+        "great_spider_monster"
+      ],
+      "spatial_context": "Top of monster's neck [[blocking_hint=Single massive strike]",
+      "blocking_hint": "",
+      "environment_subzone": "monster back/neck zone",
+      "continuity_focus": "Blood and impact effects",
+      "coverage_hint": "slow-motion impact",
+      "coverage_priority": "critical",
+      "handoff_to_next": "End Scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish momentum",
+      "planned_shot_moment_summary": "Lion launches into the air",
+      "primary_subject_seed": "Lion",
+      "secondary_subjects_seed": [
+        "great_spider_monster"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "mossy floor",
+      "planned_shot_required_anchor_1": "thick moss",
+      "planned_shot_scale_proof_detail": "Lion vs massive tree trunks",
+      "start_state_seed": "Lion coiled",
+      "end_state_seed": "Lion airborne",
+      "action_seed": "Leap launch",
+      "blocking_seed": [
+        "Lion moves toward monster [[shot_size=medium_full"
+      ],
+      "shot_size": "",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left]]"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show scale and vulnerability",
+      "planned_shot_moment_summary": "Lion mid-air approaching the neck",
+      "primary_subject_seed": "Lion",
+      "secondary_subjects_seed": [
+        "great_spider_monster"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "monster back/neck zone",
+      "planned_shot_required_anchor_1": "slender neck of great_spider_monster",
+      "planned_shot_scale_proof_detail": "Lion size relative to monster neck",
+      "start_state_seed": "Lion mid-air",
+      "end_state_seed": "Lion contacting back",
+      "action_seed": "Flight trajectory",
+      "blocking_seed": [
+        "Lion descends onto monster [[shot_size=wide"
+      ],
+      "shot_size": "",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "rear_three_quarter_left]]"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "climax impact",
+      "planned_shot_moment_summary": "The massive paw strike decapitates the creature",
+      "primary_subject_seed": "great_spider_monster",
+      "secondary_subjects_seed": [
+        "Lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "monster back/neck zone",
+      "planned_shot_required_anchor_1": "slender neck of great_spider_monster",
+      "planned_shot_scale_proof_detail": "Paw size vs neck diameter",
+      "start_state_seed": "Contact made",
+      "end_state_seed": "Head severed",
+      "action_seed": "Decapitation strike",
+      "blocking_seed": [
+        "Lion strikes downward [[shot_size=close_up"
+      ],
+      "shot_size": "",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "profile_right]]"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Lion -> Lion"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC005"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH009",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH009_chapter_ix.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH005",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH021",
+      "canonical_id": "great_spider_monster"
+    }
+  ],
+  "evidence_summary": [
+    "[CH021_SC005] Purpose: Execute the action climax of the chapter.",
+    "[CH021_SC005] Summary: Utilizing the monster's slender neck as a weakness, the Lion leaps onto its back and delivers a single, massive paw strike that decapitates the creature.",
+    "[CH021_SC005] Emotional arc: High-stakes action/violence.",
+    "[CH021_SC005] Coverage: Dynamic handheld shots of the leap; slow-motion impact shot; wide shot showing the scale of the kill.",
+    "[CH021_SC005] Continuity: The trajectory of the Lion's jump; blood/impact effects; position of the monster's limbs.",
+    "[CH021] Chapter summary: **Setting:** A disagreeable country of bogs and marshes, leading into a vast, ancient forest filled with massive trees and thick moss. **Characters:** Dorothy, Toto, the Scarecrow, the Tin Woodman, the Lion, various f...",
+    "[CH009] Chapter IX (book index hit)",
+    "[CH012] Chapter XII (book index hit)",
+    "[CH005] Chapter V (book index hit)",
+    "Character great_spider_monster: A giant, multi-legged monster of arachnid morphology. The entity is characterized by its massive scale and non-humanoid, multi-limbed structure."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH021_SC005\n\n## Production Intent\nExecute a high-impact action climax where the Lion exploits the anatomical weakness of the great_spider_monster. The sequence requires precise coordination between the jump trajectory and the decapitation impact to maintain visceral weight.\n\n## Required Cast\n- Lion\n- great_spider_monster (Giant, multi-legged arachnid morphology)\n\n## Required Environments\n- oak_grove_monstrous_lair (Ancient forest, massive trees, thick moss)\n\n## Continuity Constraints\n- Lion jump trajectory path\n- Blood and impact effect timing\n- Position of monster limbs during strike\n\n## Beat List\n- BT001: The Leap (Launch from ground)\n- BT002: The Ascent (Mid-air flight to back)\n- BT003: The Kill (Decapitation strike)",
+  "metadata": {
+    "artifact_id": "CH021_SC005_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "f16b16a2c001fb787904178e0635252c67fd392f",
+    "created_at_utc": "2026-04-27T09:07:47.192896+00:00",
+    "updated_at_utc": "2026-04-27T09:07:47.192896+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH021_SC005",
+        "version": "49909d9430131fac2865da3e37a7a521edfd1dd3"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH021_SC005",
+        "version": "bc4ad446717203b9076185145ee12f9d30a857d8"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH021_SC005",
+        "version": "11872de3034f606fbfd27ce536f42223f7a7545d"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T09:08:26.894375+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "f16b16a2c001fb787904178e0635252c67fd392f"
+      }
+    ]
+  }
+}

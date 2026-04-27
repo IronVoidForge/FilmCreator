@@ -1,0 +1,358 @@
+{
+  "scene_id": "CH004_SC001",
+  "chapter_id": "CH004",
+  "scene_title": "SC001",
+  "purpose": "Establish the physical struggle and the character dynamic of the journey.",
+  "summary": "Dorothy, Toto, and the Scarecrow navigate a deteriorating stretch of the Yellow Brick Road. The Scarecrow's lack of intellect is highlighted through his repeated stumbles into holes in the broken road.",
+  "emotional_arc": "Determination $\\rightarrow$ Frustration/Exhaustion.",
+  "production_intent": "Establish the physical struggle and character dynamic through a journey across deteriorating terrain. The sequence must emphasize the transition from farmland to wasteland while highlighting the Scarecrow's lack of intellect via repeated stumbles into road hazards.",
+  "scene_short_description": "A trio navigates a crumbling yellow brick path transitioning from farmland into a desolate wasteland.",
+  "scene_primary_scale_story_point": "The scale shifts from wide, expansive landscape to tight, claustrophobic focus on broken road textures.",
+  "scene_required_anchor_catalog": [
+    "deteriorating_yellow_brick_road",
+    "holes in the broken road"
+  ],
+  "scene_start_state": "Dorothy, Toto, and the Scarecrow walking with determination across farmland edges.",
+  "scene_end_state": "The group shows signs of exhaustion/frustration amidst a desolate landscape.",
+  "dominant_action_line": "Navigating a deteriorating path while the Scarecrow repeatedly stumbles into holes.",
+  "scene_spatial_layout": [
+    "Linear progression along the yellow brick road",
+    "Transition from open farmland to lonesome wasteland"
+  ],
+  "character_spatial_map": [
+    "dorothy leads or walks centrally",
+    "the_scarecrow follows, prone to lateral deviations into holes",
+    "toto moves near dorothy"
+  ],
+  "environment_subzones": [
+    "farmland_edge",
+    "deteriorating_yellow_brick_road",
+    "desolate_wasteland"
+  ],
+  "entry_vectors": [
+    "farmland_edge path"
+  ],
+  "exit_vectors": [
+    "wasteland transition path"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: physical stumble/interruption of rhythm",
+    "BT002 -> BT003: escalation of fatigue and road degradation"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "A desolate",
+      "canonical_id": null,
+      "display_name": "A desolate",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    },
+    {
+      "label": "uneven stretch of the Yellow Brick Road transitioning from farmland to wasteland",
+      "canonical_id": "deteriorating_yellow_brick_road",
+      "display_name": "deteriorating_yellow_brick_road",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 156,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH004/deteriorating_yellow_brick_road.md",
+      "notes": "Chapter-local environment alias match for 'uneven stretch of the Yellow Brick Road transitioning from farmland to wasteland' (key_overlap=3, label_overlap=6, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Specific pattern of broken bricks in deteriorating_yellow_brick_road",
+    "Physical state of the_scarecrow (straw displacement after falls)"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of the landscape",
+    "Medium tracking shots of the trio walking",
+    "Close-ups of feet, bricks, and Scarecrow's clumsy falls"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Walking with determination through farmland",
+      "purpose": "",
+      "action_start": "rhythmic walking",
+      "action_end": "approaching road deterioration",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "farmland_edge",
+      "blocking_hint": "linear movement along path",
+      "environment_subzone": "farmland_edge",
+      "continuity_focus": "clean clothing/straw",
+      "coverage_hint": "wide landscape",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Scarecrow stumbles into a hole",
+      "purpose": "",
+      "action_start": "steady gait",
+      "action_end": "clumsy fall into road hole",
+      "active_subjects": [
+        "the_scarecrow"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "toto"
+      ],
+      "spatial_context": "deteriorating_yellow_brick_road",
+      "blocking_hint": "stumble away from center line",
+      "environment_subzone": "deteriorating_yellow_brick_road",
+      "continuity_focus": "straw displacement/broken brick pattern",
+      "coverage_hint": "medium tracking and close-ups",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Group enters wasteland with exhaustion",
+      "purpose": "",
+      "action_start": "recovering from fall",
+      "action_end": "slower, frustrated pace",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "desolate_wasteland",
+      "blocking_hint": "slumped postures",
+      "environment_subzone": "desolate_wasteland",
+      "continuity_focus": "increased straw displacement",
+      "coverage_hint": "wide and medium shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish setting",
+      "planned_shot_moment_summary": "trio walking through farmland edge",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "farmland_edge",
+      "planned_shot_required_anchor_1": "deteriorating_yellow_brick_road",
+      "planned_shot_scale_proof_detail": "wide landscape vs small trio",
+      "start_state_seed": "walking rhythmically",
+      "end_state_seed": "approaching first road break",
+      "action_seed": "walking",
+      "blocking_seed": [
+        "linear progression"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "highlight struggle",
+      "planned_shot_moment_summary": "the_scarecrow falls into a hole",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [
+        "dorothy"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "deteriorating_yellow_brick_road",
+      "planned_shot_required_anchor_1": "holes in the broken road",
+      "planned_shot_scale_proof_detail": "close-up on brick texture vs character size",
+      "start_state_seed": "walking",
+      "end_state_seed": "stumble/fall",
+      "action_seed": "tripping into hole",
+      "blocking_seed": [
+        "lateral stumble"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT002",
+      "narrative_function": "continuity check",
+      "planned_shot_moment_summary": "close up of straw displacement",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "deteriorating_yellow_brick_road",
+      "planned_shot_required_anchor_1": "holes in the broken road",
+      "planned_shot_scale_proof_detail": "extreme detail of straw vs fabric",
+      "start_state_seed": "impact",
+      "end_state_seed": "settled straw",
+      "action_seed": "straw shifting",
+      "blocking_seed": [
+        "stationary on ground"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve A desolate -> A desolate"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH004",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH005",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH004",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH004_SC001] Purpose: Establish the physical struggle and the character dynamic of the journey.",
+    "[CH004_SC001] Summary: Dorothy, Toto, and the Scarecrow navigate a deteriorating stretch of the Yellow Brick Road. The Scarecrow's lack of intellect is highlighted through his repeated stumbles into holes in the broken road.",
+    "[CH004_SC001] Emotional arc: Determination $\\rightarrow$ Frustration/Exhaustion.",
+    "[CH004_SC001] Coverage: Wide shots of the landscape; medium tracking shots of the trio walking; close-ups of feet/bricks and Scarecrow's clumsy falls.",
+    "[CH004_SC001] Continuity: The specific pattern of broken bricks; the physical state of the Scarecrow (straw displacement after falls).",
+    "[CH004] Chapter summary: **Setting:** A deteriorating stretch of the Yellow Brick Road that transitions from well-tended farmland into a dismal, lonesome landscape, eventually entering a dense, dark forest where the canopy blocks out the dayl...",
+    "[CH003] Chapter III (book index hit)",
+    "[CH012] Chapter XII (book index hit)",
+    "[CH005] Chapter V (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH004_SC001\n\n## Production Intent\nEstablish the physical struggle and character dynamic through a journey across deteriorating terrain. The sequence must emphasize the transition from farmland to wasteland while highlighting the Scarecrow's lack of intellect via repeated stumbles into road hazards.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- the_scarecrow\n- toto\n\n## Required Environments\n- farmland_edge\n- deteriorating_yellow_brick_road (broken brick patterns, holes)\n- desolate_wasteland\n\n## Continuity Constraints\n- Specific pattern of broken bricks in deteriorating_yellow_brick_road\n- Physical state of the_scarecrow (straw displacement after falls)\n\n## Beat List\n- BT001: Walking with determination through farmland.\n- BT002: The Scarecrow stumbles into a hole.\n- BT003: Group enters wasteland with exhaustion.",
+  "metadata": {
+    "artifact_id": "CH004_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "a28fb2a36726af3b244cff7425d18d1bf50650f8",
+    "created_at_utc": "2026-04-27T08:06:36.070953+00:00",
+    "updated_at_utc": "2026-04-27T08:06:36.070953+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH004_SC001",
+        "version": "01fee89cff105a766143f95e5d79433102afc011"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH004_SC001",
+        "version": "32df80e34e2af9b1c7ebb8939f1769e11436bdd7"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH004_SC001",
+        "version": "b5e69274201a16d162fac0d2fe6b2c0ba8799d0c"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:07:17.534466+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "a28fb2a36726af3b244cff7425d18d1bf50650f8"
+      }
+    ]
+  }
+}

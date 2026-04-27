@@ -1,0 +1,4 @@
+- [SC001](#sc001) The Forest Ambush
+- [SC002](#sc002) The Lion's Confession
+- [SC003](#sc003) The Beetle Incident
+- [SC004](#sc004) Rust and Regret

@@ -1,0 +1,392 @@
+{
+  "scene_id": "CH016_SC002",
+  "chapter_id": "CH016",
+  "scene_title": "SC002",
+  "purpose": "To fulfill the Tin Woodman's quest and demonstrate the Wizard's mechanical \"magic.\"",
+  "summary": "The Tin Woodman requests a heart. Oz uses shears to cut into the Woodman's tin chest, inserts a silk-and-sawdust heart, and solders the metal shut. The Woodman experiences an immediate emotional awakening.",
+  "emotional_arc": "Desperation $\\rightarrow$ Physical Vulnerability $\\rightarrow$ Joy/Emotional Overflow.",
+  "production_intent": "Execute a mechanical surgical procedure involving the physical modification of a tin humanoid. The sequence must emphasize the tactile nature of the Wizard's magic through metalwork, heat, and material textures to transition the character from emotional void to sensation.",
+  "scene_short_description": "A metallic humanoid undergoes a mechanical heart transplant within a ceremonial throne room.",
+  "scene_primary_scale_story_point": "Micro-scale surgical precision vs macro-scale ceremonial environment.",
+  "scene_required_anchor_catalog": [
+    "tin_woodman chest plate",
+    "soldering tool/heat source",
+    "silk-and-sawdust heart object"
+  ],
+  "scene_start_state": "tin_woodman stands in a state of desperation before oz.",
+  "scene_end_state": "tin_woodman experiences emotional overflow following the successful solder.",
+  "dominant_action_line": "Oz cuts into the tin chest, inserts the heart, and solders the metal shut.",
+  "scene_spatial_layout": [
+    "Centralized focus on the interaction between oz and tin_woodman",
+    "Vertical hierarchy with oz presiding over the seated or kneeling tin_woodman"
+  ],
+  "character_spatial_map": [
+    "oz positioned as the active technician/authority",
+    "tin_woodman positioned as the vulnerable recipient"
+  ],
+  "environment_subzones": [
+    "throne_room_of_oz central dais",
+    "throne_room_of_oz workspace area"
+  ],
+  "entry_vectors": [
+    "tin_woodman enters via central aisle"
+  ],
+  "exit_vectors": [
+    "tin_woodman exits following emotional awakening"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Physical breach of the metal shell",
+    "BT002 -> BT003: Completion of the seal and sensory onset"
+  ],
+  "characters_required": [
+    {
+      "label": "The Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Oz (The Wizard)",
+      "canonical_id": "oz",
+      "display_name": "oz",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/oz_the_wizard.md",
+      "notes": "Direct registry match for 'oz_the_wizard'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Throne Room of Oz",
+      "canonical_id": "throne_room_of_oz",
+      "display_name": "throne_room_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH016/throne_room_of_oz.md",
+      "notes": "Direct registry match for 'throne_room_of_oz'."
+    }
+  ],
+  "continuity_constraints": [
+    "The specific seam where the tin chest is cut and subsequently soldered",
+    "Visual appearance and texture of the silk-and-sawdust heart"
+  ],
+  "visual_coverage_families": [
+    "Macro shots of shears cutting tin",
+    "Close-ups of soldering process with sparks and heat",
+    "Medium shots of character emotional reaction"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The Request",
+      "purpose": "",
+      "action_start": "tin_woodman expresses desperation",
+      "action_end": "oz accepts the task",
+      "active_subjects": [
+        "tin_woodman",
+        "oz"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "throne_room_of_oz central dais",
+      "blocking_hint": "tin_woodman positioned before oz",
+      "environment_subzone": "throne_room_of_oz central dais",
+      "continuity_focus": "tin_woodman's intact metallic silhouette",
+      "coverage_hint": "medium_full shot of interaction",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Procedure",
+      "purpose": "",
+      "action_start": "shears contact tin [[CH016_SC002]]",
+      "action_end": "soldering completes the seal [[CH016_SC002]]",
+      "active_subjects": [
+        "oz"
+      ],
+      "passive_subjects": [
+        "tin_woodman"
+      ],
+      "spatial_context": "throne_room_of_oz workspace area",
+      "blocking_hint": "tight focus on tin_woodman's chest plate",
+      "environment_subzone": "throne_room_of_oz workspace area",
+      "continuity_focus": "the seam and the silk-and-sawdust heart appearance [[CH016_SC002]]",
+      "coverage_hint": "macro/close-up sequence of cutting, inserting, soldering",
+      "coverage_priority": "critical",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Awakening",
+      "purpose": "",
+      "action_start": "soldering heat dissipates",
+      "action_end": "tin_woodman experiences joy [[CH016_SC002]]",
+      "active_subjects": [
+        "tin_woodman"
+      ],
+      "passive_subjects": [
+        "oz"
+      ],
+      "spatial_context": "throne_room_of_oz central dais",
+      "blocking_hint": "tin_woodman's reaction in center frame",
+      "environment_subzone": "throne_room_of_oz central dais",
+      "continuity_focus": "the newly soldered seam on the chest [[CH016_SC002]]",
+      "coverage_hint": "medium shot of emotional shift",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish desperation",
+      "planned_shot_moment_summary": "tin_woodman requests heart",
+      "primary_subject_seed": "tin_woodman",
+      "secondary_subjects_seed": [
+        "oz"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "throne_room_of_oz central dais",
+      "planned_shot_required_anchor_1": "tin_woodman chest plate",
+      "planned_shot_scale_proof_detail": "full body height of tin_woodman",
+      "start_state_seed": "tin_woodman pleading",
+      "end_state_seed": "oz preparing tools",
+      "action_seed": "requesting heart",
+      "blocking_seed": [
+        "tin_woodman facing oz"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "demonstrate mechanical magic",
+      "planned_shot_moment_summary": "shears cutting tin",
+      "primary_subject_seed": "oz hands/tools",
+      "secondary_subjects_seed": [
+        "tin_woodman chest"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "throne_room_of_oz workspace area",
+      "planned_shot_required_anchor_1": "tin_woodman chest plate",
+      "planned_shot_scale_proof_detail": "macro detail of metal edge",
+      "start_state_seed": "shears touching tin",
+      "end_state_seed": "cut cavity opened",
+      "action_seed": "cutting into tin [[CH016_SC002]]",
+      "blocking_seed": [
+        "close proximity to chest"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "telephoto",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT002",
+      "narrative_function": "show heart insertion",
+      "planned_shot_moment_summary": "placing silk heart [[CH016_SC002]]",
+      "primary_subject_seed": "silk-and-sawdust heart",
+      "secondary_subjects_seed": [
+        "tin_woodman chest cavity"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "throne_room_of_oz workspace area",
+      "planned_shot_required_anchor_1": "silk-and-sawdust heart",
+      "planned_shot_scale_proof_detail": "texture of silk vs tin",
+      "start_state_seed": "heart hovering over cavity",
+      "end_state_seed": "heart seated in cavity",
+      "action_seed": "inserting heart",
+      "blocking_seed": [
+        "hands entering frame"
+      ],
+      "shot_size": "insert_detail",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH004",
+      "beat_id": "BT002",
+      "narrative_function": "demonstrate soldering",
+      "planned_shot_moment_summary": "sparks and heat [[CH016_SC002]]",
+      "primary_subject_seed": "soldering tool",
+      "secondary_subjects_seed": [
+        "tin seam"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "throne_room_of_oz workspace area",
+      "planned_shot_required_anchor_1": "tin_woodman chest plate",
+      "planned_shot_scale_proof_detail": "sparks against dark metal",
+      "start_state_seed": "heat applied to seam",
+      "end_state_seed": "metal fused shut",
+      "action_seed": "soldering the cut [[CH016_SC002]]",
+      "blocking_seed": [
+        "tight on the seam"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "telephoto",
+      "camera_motion": "subtle_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "torch_firelight",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH005",
+      "beat_id": "BT003",
+      "narrative_function": "show emotional awakening",
+      "planned_shot_moment_summary": "tin_woodman feels joy [[CH016_SC002]]",
+      "primary_subject_seed": "tin_woodman",
+      "secondary_subjects_seed": [
+        "oz"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "throne_room_of_oz central dais",
+      "planned_shot_required_anchor_1": "tin_woodman chest plate",
+      "planned_shot_scale_proof_detail": "facial articulation/expression change",
+      "start_state_seed": "post-solder stillness",
+      "end_state_seed": "joyful reaction",
+      "action_seed": "experiencing emotional overflow",
+      "blocking_seed": [
+        "tin_woodman reacting to internal sensation"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH016",
+      "scene_id": "CH016_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH016",
+      "scene_id": "CH016_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH016",
+      "scene_id": "CH016_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH016",
+      "scene_id": "CH016_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH016",
+      "scene_id": "CH016_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH016",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH016_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH016",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH016_chapter_xvi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH015",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH016",
+      "canonical_id": "tin_woodman"
+    }
+  ],
+  "evidence_summary": [
+    "[CH016_SC002] Purpose: To fulfill the Tin Woodman's quest and demonstrate the Wizard's mechanical \"magic.\"",
+    "[CH016_SC002] Summary: The Tin Woodman requests a heart. Oz uses shears to cut into the Woodman's tin chest, inserts a silk-and-sawdust heart, and solders the metal shut. The Woodman experiences an immediate emotional awakening.",
+    "[CH016_SC002] Emotional arc: Desperation $\\rightarrow$ Physical Vulnerability $\\rightarrow$ Joy/Emotional Overflow.",
+    "[CH016_SC002] Coverage: Macro shots of the shears cutting tin. Close-ups of the soldering process (sparks/heat). Medium shot of the Woodman's reaction to his new \"feeling.\"",
+    "[CH016_SC002] Continuity: The seam where the tin was cut and subsequently soldered; the appearance of the silk heart.",
+    "[CH016] Chapter summary: **Setting:** The Throne Room of Oz and the surrounding camp area. **Characters:** - **The Scarecrow:** Seeking brains. - **The Tin Woodman:** Seeking a heart. - **The Cowardly Lion:** Seeking courage. - **Oz (The Wiza...",
+    "[CH016] Chapter XVI (book index hit)",
+    "[CH011] Chapter XI (book index hit)",
+    "[CH015] Chapter XV (book index hit)",
+    "Character tin_woodman: The Tin Woodman is a bipedal humanoid entity constructed entirely of articulated tin. He possesses a metallic silhouette and a non-flesh physical composition that renders him immune to poppy scents. His primary visual identifier is hi..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH016_SC002\n\n## Production Intent\nExecute a mechanical surgical procedure involving the physical modification of a tin humanoid. The sequence must emphasize the tactile nature of the Wizard's magic through metalwork, heat, and material textures to transition the character from emotional void to sensation.\n\n## Required Cast\n- tin_woodman (The Tin Woodman)\n- oz (Oz/The Wizard)\n\n## Required Environments\n- throne_room_of_oz\n\n## Continuity Constraints\n- The specific seam where the tin chest is cut and subsequently soldered.\n- Visual appearance and texture of the silk-and-sawdust heart.\n\n## Beat List\n- BT001: The Request (Desperation)\n- BT002: The Procedure (Physical Vulnerability/Mechanical Magic)\n- BT003: The Awakening (Joy/Emotional Overflow)",
+  "metadata": {
+    "artifact_id": "CH016_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "ae087eac38973bef3dd9161c139fb52ab78051d7",
+    "created_at_utc": "2026-04-27T08:49:19.684711+00:00",
+    "updated_at_utc": "2026-04-27T08:49:19.684711+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH016_SC002",
+        "version": "e2b6ce15c2f95e5e259bd3014667c49a7fdc92e7"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH016_SC002",
+        "version": "89859308e87bba572011edc08af230311d06e089"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH016_SC002",
+        "version": "05fce49abac928be4178a23d6501c1a26af325d5"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:50:14.222722+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "ae087eac38973bef3dd9161c139fb52ab78051d7"
+      }
+    ]
+  }
+}

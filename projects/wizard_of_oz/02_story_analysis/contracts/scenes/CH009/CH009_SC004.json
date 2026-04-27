@@ -1,0 +1,383 @@
+{
+  "scene_id": "CH009_SC004",
+  "chapter_id": "CH009",
+  "scene_title": "SC004",
+  "purpose": "Resolution and emotional payoff.",
+  "summary": "With the Lion safely out of the poppies, the Queen of the Mice promises future assistance before leading her subjects away. The group settles down in the grass, waiting anxiously for the Lion to wake up.",
+  "emotional_arc": "Triumph $\\rightarrow$ Quiet Anticipation.",
+  "production_intent": "Establish the transition from the high-stakes rescue to a period of quiet, anxious waiting. The visual language must shift from the chaotic poppy field to the stillness of the grassy meadow as the mice depart and the travelers settle near the unconscious lion.",
+  "scene_short_description": "Exhausted travelers settle in a grassy meadow near an unconscious lion as mice depart.",
+  "scene_primary_scale_story_point": "The massive scale of Thousands of Field Mice departing against the small, weary group of travelers.",
+  "scene_required_anchor_catalog": [
+    "poppy_bed",
+    "cowardly_lion"
+  ],
+  "scene_start_state": "The cowardly_lion lies unconscious just outside the poppy_bed; queen_of_the_field_mice stands before the group.",
+  "scene_end_state": "The travelers are seated in the grass, eyes fixed on the cowardly_lion's face.",
+  "dominant_action_line": "The mice depart after a promise of aid, leaving the group to wait for the lion to wake.",
+  "scene_spatial_layout": [
+    "poppy_bed serves as the boundary between the danger zone and the safe meadow.",
+    "travelers are clustered in a tight group near the cowardly_lion."
+  ],
+  "character_spatial_map": [
+    "queen_of_the_field_mice positioned between Thousands of Field Mice and the travelers.",
+    "dorothy, the_scarecrow, and tin_woodman grouped around the cowardly_lion."
+  ],
+  "environment_subzones": [
+    "poppy_bed",
+    "grassy_riverbank_meadow"
+  ],
+  "entry_vectors": [
+    "queen_of_the_field_mice via meadow path."
+  ],
+  "exit_vectors": [
+    "Thousands of Field Mice moving away from the meadow toward the horizon."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: mice depart, leaving silence.",
+    "BT002 -> BT003: travelers settle into stillness."
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH009/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH009/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH009/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion (unconscious)",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH009/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "Queen of the Field Mice",
+      "canonical_id": "queen_of_the_field_mice",
+      "display_name": "Queen of the Field Mice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH009/queen_of_the_field_mice.md",
+      "notes": "Direct registry match for 'queen_of_the_field_mice'."
+    },
+    {
+      "label": "Thousands of Field Mice",
+      "canonical_id": null,
+      "display_name": "Thousands of Field Mice",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Open green field",
+      "canonical_id": "grassy_riverbank_meadow",
+      "display_name": "grassy_riverbank_meadow",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 66,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH009/grassy_riverbank_meadow.md",
+      "notes": "Chapter-local environment alias match for 'Open green field' (key_overlap=0, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "The position of the cowardly_lion relative to the poppy bed.",
+    "Lighting/time of day transition from rescue to waiting."
+  ],
+  "visual_coverage_families": [
+    "Wide shots showing the mice departing.",
+    "Medium group shots of the exhausted but relieved travelers.",
+    "Close-up on the Lion's face to build tension for his awakening."
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Queen promises assistance and leads mice away",
+      "purpose": "",
+      "action_start": "queen_of_the_field_mice addresses the group",
+      "action_end": "mass movement of Thousands of Field Mice",
+      "active_subjects": [
+        "queen_of_the_field_mice",
+        "Thousands of Field Mice"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "spatial_context": "edge of poppy_bed and meadow",
+      "blocking_hint": "queen turns her back to travelers to lead mice away",
+      "environment_subzone": "grassy_riverbank_meadow",
+      "continuity_focus": "ensure lion remains outside poppy_bed",
+      "coverage_hint": "wide shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Travelers settle in the grass",
+      "purpose": "",
+      "action_start": "travelers standing near lion",
+      "action_end": "travelers seated and resting",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman"
+      ],
+      "passive_subjects": [
+        "cowardly_lion"
+      ],
+      "spatial_context": "meadow adjacent to poppy_bed",
+      "blocking_hint": "characters sit in a protective/observational cluster around lion",
+      "environment_subzone": "grassy_riverbank_meadow",
+      "continuity_focus": "check lighting transition",
+      "coverage_hint": "medium group shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Anxious waiting for the lion to wake",
+      "purpose": "",
+      "action_start": "travelers settling",
+      "action_end": "tension builds on lion's face",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman"
+      ],
+      "passive_subjects": [
+        "cowardly_lion"
+      ],
+      "spatial_context": "tight circle around lion",
+      "blocking_hint": "characters looking toward lion's head",
+      "environment_subzone": "grassy_riverbank_meadow",
+      "continuity_focus": "maintain lion's position",
+      "coverage_hint": "close-up on lion",
+      "coverage_priority": "high",
+      "handoff_to_next": "END"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale and departure",
+      "planned_shot_moment_summary": "The mice begin their mass exodus",
+      "primary_subject_seed": "Thousands of Field Mice",
+      "secondary_subjects_seed": [
+        "queen_of_the_field_mice"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "grassy_riverbank_meadow",
+      "planned_shot_required_anchor_1": "poppy_bed",
+      "planned_shot_scale_proof_detail": "thousands of mice vs single queen",
+      "start_state_seed": "queen speaking to group",
+      "end_state_seed": "mice moving toward horizon",
+      "action_seed": "mass movement of mice away from camera",
+      "blocking_seed": [
+        "queen leads the line away from travelers"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "character relief/exhaustion",
+      "planned_shot_moment_summary": "The travelers settle into the grass",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "grassy_riverbank_meadow",
+      "planned_shot_required_anchor_1": "cowardly_lion",
+      "planned_shot_scale_proof_detail": "group cluster size",
+      "start_state_seed": "travelers standing",
+      "end_state_seed": "travelers seated in grass",
+      "action_seed": "settling down heavily",
+      "blocking_seed": [
+        "characters collapse into a semi-circle around the lion"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "build tension for awakening",
+      "planned_shot_moment_summary": "Focus on the lion's face",
+      "primary_subject_seed": "cowardly_lion",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "grassy_riverbank_meadow",
+      "planned_shot_required_anchor_1": "cowardly_lion",
+      "planned_shot_scale_proof_detail": "extreme close up of features",
+      "start_state_seed": "lion sleeping",
+      "end_state_seed": "lion's face in stillness",
+      "action_seed": "static breathing/tension",
+      "blocking_seed": [
+        "stationary"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Thousands of Field Mice -> Thousands of Field Mice"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH009",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH009_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH008",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH008_chapter_viii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH009",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH009_chapter_ix.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH014_chapter_xiv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH009",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH009_SC004] Purpose: Resolution and emotional payoff.",
+    "[CH009_SC004] Summary: With the Lion safely out of the poppies, the Queen of the Mice promises future assistance before leading her subjects away. The group settles down in the grass, waiting anxiously for the Lion to wake up.",
+    "[CH009_SC004] Emotional arc: Triumph $\\rightarrow$ Quiet Anticipation.",
+    "[CH009_SC004] Coverage: Wide shots showing the mice departing. Medium group shots of the exhausted but relieved travelers. Close-up on the Lion's face to build tension for his awakening.",
+    "[CH009_SC004] Continuity: The position of the Lion relative to the poppy bed; the lighting/time of day transition.",
+    "[CH009] Chapter summary: **Setting:** A grassy field near a river, adjacent to a poppy bed. **Characters:** - Dorothy - Scarecrow - Tin Woodman - Toto - The Queen of the Field Mice (and her subjects) - The Cowardly Lion (unconscious) **Events...",
+    "[CH008] Chapter VIII (book index hit)",
+    "[CH009] Chapter IX (book index hit)",
+    "[CH014] Chapter XIV (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH009_SC004\n\n## Production Intent\nEstablish the transition from high-stakes rescue to a period of quiet, anxious waiting. The visual language must shift from the chaotic poppy field to the stillness of the grassy meadow as the mice depart and the travelers settle near the unconscious lion.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- queen_of_the_field_mice\n- Thousands of Field Mice\n\n## Required Environments\n- grassy_riverbank_meadow\n- poppy_bed (adjacent)\n\n## Continuity Constraints\n- Position of cowardly_lion relative to the poppy_bed.\n- Lighting/time of day transition from rescue to waiting.\n\n## Beat List\n- BT001: Queen promises assistance and leads mice away.\n- BT002: Travelers settle in the grass.\n- BT003: Anxious waiting for the lion to wake.",
+  "metadata": {
+    "artifact_id": "CH009_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "6cb2168c0019161c190ff0ce64da3de46ffd1334",
+    "created_at_utc": "2026-04-27T08:25:42.556101+00:00",
+    "updated_at_utc": "2026-04-27T08:25:42.556101+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH009_SC004",
+        "version": "0cc913b6bd9f204f6ef7ef38da47f4883ea5aabf"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH009_SC004",
+        "version": "1bb9f7c0a368e547a669d192d13353ba92b90d2a"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH009_SC004",
+        "version": "daa1d5fad3ccfac3c9cc92a658cb916ac47b168e"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:26:28.200159+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "6cb2168c0019161c190ff0ce64da3de46ffd1334"
+      }
+    ]
+  }
+}

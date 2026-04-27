@@ -1,0 +1,348 @@
+{
+  "scene_id": "CH010_SC001",
+  "chapter_id": "CH010",
+  "scene_title": "SC001",
+  "purpose": "Reintegrate the Cowardly Lion into the group and transition the journey toward the Emerald City.",
+  "summary": "After being rescued from a poppy field by mice, the Cowardly Lion reunites with Dorothy, Scarecrow, Tin Woodman, and Toto. The group continues their trek along the yellow brick road through a landscape characterized by green-painted houses and emerald attire.",
+  "emotional_arc": "Relief (from the Lion's rescue) to steady determination.",
+  "production_intent": "Reintegrate the cowardly_lion into the traveling party following his rescue from a poppy field. The scene establishes the group's unified movement toward the Emerald City through a landscape defined by green-painted structures and emerald tones.",
+  "scene_short_description": "A group walks along a yellow brick road through a landscape of green houses.",
+  "scene_primary_scale_story_point": "The scale of the wide green countryside relative to the small traveling group on the road.",
+  "scene_required_anchor_catalog": [
+    "yellow brick road",
+    "green-painted houses"
+  ],
+  "scene_start_state": "cowardly_lion is being reintegrated into the group after his rescue.",
+  "scene_end_state": "The full group walks in formation along the yellow brick road.",
+  "dominant_action_line": "The group reunites and continues their trek toward the Emerald City.",
+  "scene_spatial_layout": [
+    "linear progression along the yellow brick road",
+    "green houses lining the periphery of the landscape"
+  ],
+  "character_spatial_map": [
+    "dorothy, the_scarecrow, tin_woodman, and toto lead or flank the cowardly_lion",
+    "cowardly_lion positioned centrally within the group formation"
+  ],
+  "environment_subzones": [
+    "yellow brick road",
+    "green countryside perimeter"
+  ],
+  "entry_vectors": [
+    "cowardly_lion enters from poppy field area"
+  ],
+  "exit_vectors": [
+    "entire group exits along the yellow brick road path"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: reunion contact",
+    "BT002 -> BT003: transition to walking rhythm"
+  ],
+  "characters_required": [
+    {
+      "label": "* Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH010/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "* Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH010/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "* Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH010/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "* Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH010/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "* Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH010/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "* The Yellow Brick Road / Green Countryside",
+      "canonical_id": "green_countryside_landscape",
+      "display_name": "green_countryside_landscape",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 134,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH010/green_countryside_landscape.md",
+      "notes": "Chapter-local environment alias match for '* The Yellow Brick Road / Green Countryside' (key_overlap=2, label_overlap=5, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "cowardly_lion physical state recovering from poppy sleep",
+    "visual consistency of green aesthetic in background elements"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of green_countryside_landscape and yellow brick road",
+    "Medium tracking shots of the walking group",
+    "Close-ups of reunion between cowardly_lion and companions"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "reunion of cowardly_lion and the group",
+      "purpose": "",
+      "action_start": "cowardly_lion approaches companions",
+      "action_end": "physical contact made",
+      "active_subjects": [
+        "cowardly_lion",
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "yellow brick road",
+      "blocking_hint": "cowardly_lion moves into the center of the group circle",
+      "environment_subzone": "yellow brick road",
+      "continuity_focus": "lion's post-poppy lethargy/recovery",
+      "coverage_hint": "close_ups",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "emotional relief settles",
+      "purpose": "",
+      "action_start": "group embraces or greets lion",
+      "action_end": "group stabilizes formation",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "passive_subjects": [
+        "toto"
+      ],
+      "spatial_context": "yellow brick road",
+      "blocking_hint": "characters cluster tightly",
+      "environment_subzone": "yellow brick road",
+      "continuity_focus": "visual consistency of green background",
+      "coverage_hint": "medium shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "transition to trek",
+      "purpose": "",
+      "action_start": "group begins walking",
+      "action_end": "group moves toward horizon",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "green_countryside_landscape",
+      "blocking_hint": "linear formation along road",
+      "environment_subzone": "yellow brick road",
+      "continuity_focus": "steady walking pace",
+      "coverage_hint": "wide shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish reunion",
+      "planned_shot_moment_summary": "cowardly_lion meets the companions",
+      "primary_subject_seed": "cowardly_lion",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "yellow brick road",
+      "planned_shot_required_anchor_1": "yellow brick road",
+      "planned_shot_scale_proof_detail": "group size vs road width",
+      "start_state_seed": "cowardly_lion approaching group",
+      "end_state_seed": "physical contact established",
+      "action_seed": "reunion hug or greeting",
+      "blocking_seed": [
+        "cowardly_lion moves toward the center of the group"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT003",
+      "narrative_function": "establish journey",
+      "planned_shot_moment_summary": "group walking in unison",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "green_countryside_landscape",
+      "planned_shot_required_anchor_1": "green-painted houses",
+      "planned_shot_scale_proof_detail": "road stretching to horizon",
+      "start_state_seed": "group in formation",
+      "end_state_seed": "group moving away from camera",
+      "action_seed": "walking along the road",
+      "blocking_seed": [
+        "linear walking line"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH010",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH010_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH008",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH008_chapter_viii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH014_chapter_xiv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH010",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH010_SC001] Purpose: Reintegrate the Cowardly Lion into the group and transition the journey toward the Emerald City.",
+    "[CH010_SC001] Summary: After being rescued from a poppy field by mice, the Cowardly Lion reunites with Dorothy, Scarecrow, Tin Woodman, and Toto. The group continues their trek along the yellow brick road through a landscape characterized by green-painted h...",
+    "[CH010_SC001] Emotional arc: Relief (from the Lion's rescue) to steady determination.",
+    "[CH010_SC001] Coverage: * Wide shots of the green landscape and yellow brick road. * Medium tracking shots of the group walking. * Close-ups of the Lion's reunion with the companions.",
+    "[CH010_SC001] Continuity: The Lion's physical state (recovering from poppy sleep); the visual consistency of the \"green\" aesthetic in the background.",
+    "[CH010] Chapter summary: **Summary:** After being rescued from a field of deadly poppies by mice, the Cowardly Lion rejoins Dorothy and her companions. The group travels along the yellow brick road through a landscape dominated by green-paint...",
+    "[CH008] Chapter VIII (book index hit)",
+    "[CH014] Chapter XIV (book index hit)",
+    "[CH010] Chapter X (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH010_SC001\n\n## Production Intent\nReintegrate the cowardly_lion into the traveling party following his rescue from a poppy field. The scene establishes the group's unified movement toward the Emerald City through a landscape defined by green-painted structures and emerald tones.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n\n## Required Environments\n- green_countryside_landscape (featuring yellow brick road and green-painted houses)\n\n## Continuity Constraints\n- cowardly_lion physical state recovering from poppy sleep\n- visual consistency of green aesthetic in background elements\n\n## Beat List\n- BT001: reunion of cowardly_lion and the group\n- BT002: emotional relief settles\n- BT003: transition to trek",
+  "metadata": {
+    "artifact_id": "CH010_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "829447fe999cbafc3aebe2fac17262b65d43ed4d",
+    "created_at_utc": "2026-04-27T08:26:29.276897+00:00",
+    "updated_at_utc": "2026-04-27T08:26:29.276897+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH010_SC001",
+        "version": "4a133d5282009c0895c62af8e555f4d34392de21"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH010_SC001",
+        "version": "9622f2641bb0de85355aba2e6c6f33fff37a56b4"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH010_SC001",
+        "version": "54d66196f5302a1113d321476a3ac43916c20bb4"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:27:07.478434+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "829447fe999cbafc3aebe2fac17262b65d43ed4d"
+      }
+    ]
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "scene_id": "CH002_SC004",
+  "chapter_id": "CH002",
+  "scene_title": "SC004",
+  "purpose": "Provide the \"magical item\" and establish the primary quest/obstacle.",
+  "summary": "The body of the Wicked Witch of the East dries up, leaving behind enchanted silver shoes which are given to Dorothy. When Dorothy asks to go home, she learns the land is impassable, but a magical slate reveals her path: the Emerald City to see Oz the Great.",
+  "emotional_arc": "Curiosity $\\rightarrow$ Despair (at being trapped) $\\rightarrow$ Purpose/Determination",
+  "production_intent": "Establish the transition from the immediate aftermath of the Witch's death to the introduction of the primary quest mechanism. The sequence must visually bridge the magical destruction of the Wicked Witch of the East with the physical acquisition of the silver shoes and the revelation of the path to the Emerald City via the magic slate.",
+  "scene_short_description": "A lush clearing where magical artifacts are revealed following a sudden disappearance.",
+  "scene_primary_scale_story_point": "Small scale character interaction transitioning to large scale world-building via the slate.",
+  "scene_required_anchor_catalog": [
+    "The dried remains of the Witch",
+    "The silver shoes",
+    "The magic slate"
+  ],
+  "scene_start_state": "Visual aftermath of the Wicked Witch of the East drying up in the clearing.",
+  "scene_end_state": "Dorothy looking toward the horizon with newfound purpose after seeing the slate.",
+  "dominant_action_line": "Discovery of the silver shoes and receiving directions to the Emerald City.",
+  "scene_spatial_layout": [
+    "Open clearing surrounded by lush flowers and fruit trees",
+    "Central focus on the site of the Witch's disappearance"
+  ],
+  "character_spatial_map": [
+    "dorothy: Center frame, reacting to items/news",
+    "witch_of_the_north: Standing near Dorothy, holding or using the slate",
+    "munchkins: Surrounding the central group in the clearing"
+  ],
+  "environment_subzones": [
+    "The drying site (Witch's remains)",
+    "The central gathering area"
+  ],
+  "entry_vectors": [
+    "Path from the house into the clearing"
+  ],
+  "exit_vectors": [
+    "Path leading toward the Emerald City direction"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Discovery of shoes via visual reveal",
+    "BT002 -> BT003: Shift from physical item to verbal news/slate revelation"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH002/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "The Witch of the North",
+      "canonical_id": "witch_of_the_north",
+      "display_name": "witch_of_the_north",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH002/witch_of_the_north.md",
+      "notes": "Direct registry match for 'witch_of_the_north'."
+    },
+    {
+      "label": "Munchkins",
+      "canonical_id": "munchkins",
+      "display_name": "munchkins",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH002/munchkins.md",
+      "notes": "Direct registry match for 'munchkins'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The clearing near the house",
+      "canonical_id": null,
+      "display_name": "The clearing near the house",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    }
+  ],
+  "continuity_constraints": [
+    "Visual transition of the Wicked Witch of the East body drying up",
+    "Consistent visual appearance of silver shoes on Dorothy's feet"
+  ],
+  "visual_coverage_families": [
+    "Insert shots: Silver shoes, magical slate",
+    "Close-ups: Dorothy's emotional reactions to news of impassable land",
+    "Medium shots: Witch of the North interacting with magic slate"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The drying of the Wicked Witch of the East",
+      "purpose": "",
+      "action_start": "Witch body present",
+      "action_end": "Witch body dried up",
+      "active_subjects": [
+        "munchkins"
+      ],
+      "passive_subjects": [
+        "Witch remains"
+      ],
+      "spatial_context": "The drying site",
+      "blocking_hint": "Munchkins observing the transformation",
+      "environment_subzone": "The drying site",
+      "continuity_focus": "Transition of the Witch's body",
+      "coverage_hint": "Wide/Medium shot of the event",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Discovery and acquisition of silver shoes",
+      "purpose": "",
+      "action_start": "Shoes revealed in remains",
+      "action_end": "Dorothy wearing shoes",
+      "active_subjects": [
+        "dorothy",
+        "munchkins"
+      ],
+      "passive_subjects": [
+        "silver shoes"
+      ],
+      "spatial_context": "The drying site",
+      "blocking_hint": "Dorothy approaches the remains",
+      "environment_subzone": "The drying site",
+      "continuity_focus": "Visual appearance of silver shoes on Dorothy's feet",
+      "coverage_hint": "Insert shots and close-ups",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Revelation of the path to Emerald City",
+      "purpose": "",
+      "action_start": "Dorothy asks to go home",
+      "action_end": "Dorothy accepts the quest",
+      "active_subjects": [
+        "dorothy",
+        "witch_of_the_north"
+      ],
+      "passive_subjects": [
+        "munchkins"
+      ],
+      "spatial_context": "The central gathering area",
+      "blocking_hint": "Witch of the North uses the magic slate",
+      "environment_subzone": "The central gathering area",
+      "continuity_focus": "Magic slate visual appearance",
+      "coverage_hint": "Medium shots and close-ups on Dorothy's reaction",
+      "coverage_priority": "high",
+      "handoff_to_next": "End of scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish aftermath",
+      "planned_shot_moment_summary": "The Witch of the East body drying up",
+      "primary_subject_seed": "Witch remains",
+      "secondary_subjects_seed": [
+        "munchkins"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "The drying site",
+      "planned_shot_required_anchor_1": "Witch remains",
+      "planned_shot_scale_proof_detail": "size of shoes relative to dried body",
+      "start_state_seed": "remains visible",
+      "end_state_seed": "remains fully dried",
+      "action_seed": "body desiccates",
+      "blocking_seed": [
+        "munchkins observing from periphery"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "introduce magical item",
+      "planned_shot_moment_summary": "The silver shoes appearing on the ground",
+      "primary_subject_seed": "silver shoes",
+      "secondary_subjects_seed": [
+        "dorothy"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "The drying site",
+      "planned_shot_required_anchor_1": "silver shoes",
+      "planned_shot_scale_proof_detail": "shoes resting in center of dried remains",
+      "start_state_seed": "empty ground",
+      "end_state_seed": "shoes visible",
+      "action_seed": "shoes are revealed/given to Dorothy",
+      "blocking_seed": [
+        "Dorothy leans down to receive them"
+      ],
+      "shot_size": "insert_detail",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish quest obstacle",
+      "planned_shot_moment_summary": "Witch of the North showing the slate",
+      "primary_subject_seed": "witch_of_the_north",
+      "secondary_subjects_seed": [
+        "dorothy"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "The central gathering area",
+      "planned_shot_required_anchor_1": "magic slate",
+      "planned_shot_scale_proof_detail": "slate size in Witch's hands",
+      "start_state_seed": "Dorothy asking to go home",
+      "end_state_seed": "path to Emerald City revealed",
+      "action_seed": "Witch uses slate to show the way",
+      "blocking_seed": [
+        "Witch and Dorothy face each other"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve The clearing near the house -> The clearing near the house"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH002",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH002_SC004] Purpose: Provide the \"magical item\" and establish the primary quest/obstacle.",
+    "[CH002_SC004] Summary: The body of the Wicked Witch of the East dries up, leaving behind enchanted silver shoes which are given to Dorothy. When Dorothy asks to go home, she learns the land is impassable, but a magical slate reveals her path: the Emerald Ci...",
+    "[CH002_SC004] Emotional arc: Curiosity $\\rightarrow$ Despair (at being trapped) $\\rightarrow$ Purpose/Determination",
+    "[CH002_SC004] Coverage: Insert shots: The silver shoes and the magical slate. Close-ups: Dorothy's reaction to the news that she cannot simply go home. Medium shots: The Witch of the North using the magic slate.",
+    "[CH002_SC004] Continuity: The transition of the Witch's body (drying up). The visual appearance of the silver shoes on Dorothy's feet.",
+    "[CH002] Chapter summary: **Setting:** A lush, beautiful country in the Land of Oz, characterized by colorful flowers, fruit-bearing trees, and a sparkling brook. **Characters:** - **Dorothy:** A young girl from Kansas, newly arrived in Oz. -...",
+    "[CH011] Chapter XI (book index hit)",
+    "[CH003] Chapter III (book index hit)",
+    "[CH002] Chapter II (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH002_SC004\n\n## Production Intent\nEstablish the transition from the immediate aftermath of the Witch's death to the introduction of the primary quest mechanism. The sequence must visually bridge the magical destruction of the Wicked Witch of the East with the physical acquisition of the silver shoes and the revelation of the path to the Emerald City via the magic slate.\n\n## Required Cast\n- dorothy (Young girl, white clothing/dress)\n- witch_of_the_north\n- munchkins\n\n## Required Environments\n- The clearing near the house (Lush, colorful flowers, fruit trees, sparkling brook)\n\n## Continuity Constraints\n- Visual transition of the Wicked Witch of the East body drying up.\n- Consistent visual appearance of silver shoes on Dorothy's feet.\n- Magic slate visual properties during use.\n\n## Beat List\n- BT001: The drying of the Wicked Witch of the East.\n- BT002: Discovery and acquisition of silver shoes.\n- BT003: Revelation of the path to Emerald City via magic slate.",
+  "metadata": {
+    "artifact_id": "CH002_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "9224d33e36e3f7a32e38c5ded5e8ffe66a52dc1e",
+    "created_at_utc": "2026-04-27T08:02:17.992708+00:00",
+    "updated_at_utc": "2026-04-27T08:02:17.992708+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH002_SC004",
+        "version": "a105df32e207d985f0e154f2ad436f1a40fc44d4"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH002_SC004",
+        "version": "affe29ed146e9c5ffb19dd2ee17ac29ac58b1090"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH002_SC004",
+        "version": "47d630c59763f5dccb832f37af97f617136e84bf"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:03:01.998498+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9224d33e36e3f7a32e38c5ded5e8ffe66a52dc1e"
+      }
+    ]
+  }
+}

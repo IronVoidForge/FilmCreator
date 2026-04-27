@@ -1,0 +1,378 @@
+{
+  "scene_id": "CH012_SC003",
+  "chapter_id": "CH012",
+  "scene_title": "SC003",
+  "purpose": "To separate the protagonists and establish the new status quo of captivity.",
+  "summary": "The Monkeys capture the group: Tin Woodman is dropped on rocks, Scarecrow is stripped of straw, and the Lion is bound. Dorothy is spared due to the mark on her forehead but taken to the castle.",
+  "emotional_arc": "Chaos $\\rightarrow$ Defeat $\\rightarrow$ Isolation.",
+  "production_intent": "Execute the violent separation of the protagonist group through a coordinated capture by winged monkeys, transitioning from high-chaos movement in the West landscape to static isolation within the castle subzones.",
+  "scene_short_description": "A group of travelers is violently scattered and captured by winged monkeys across rugged terrain and castle grounds.",
+  "scene_primary_scale_story_point": "Group cohesion vs. individual isolation.",
+  "scene_required_anchor_catalog": [
+    "jagged rocks",
+    "kitchen doorway",
+    "courtyard perimeter"
+  ],
+  "scene_start_state": "High-chaos movement of the group being intercepted by winged monkeys in the West landscape.",
+  "scene_end_state": "Static, isolated shots of characters in separate captivity zones.",
+  "dominant_action_line": "The Winged Monkeys dismantle the group's unity through physical force and relocation.",
+  "scene_spatial_layout": [
+    "Rugged West landscape transitioning to structured castle architecture",
+    "Disconnected subzones (rocks, courtyard, kitchen)"
+  ],
+  "character_spatial_map": [
+    "tin_woodman at rock formation",
+    "the_scarecrow stripped in open terrain",
+    "cowardly_lion bound in courtyard",
+    "dorothy moving toward kitchen interior"
+  ],
+  "environment_subzones": [
+    "West landscape rocks",
+    "wicked_witch_castle_courtyard",
+    "wicked_witch_castle_kitchen"
+  ],
+  "entry_vectors": [
+    "winged_monkeys descending into landscape",
+    "dorothy entering kitchen via doorway"
+  ],
+  "exit_vectors": [
+    "dorothy moving deeper into kitchen interior"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Physical impact and scattering",
+    "BT002 -> BT003: Transition from landscape to castle confinement"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "Winged Monkeys",
+      "canonical_id": "winged_monkeys",
+      "display_name": "winged_monkeys",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 130,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/winged_monkeys.md",
+      "notes": "Direct registry match for 'winged_monkeys'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The West landscape $\\rightarrow$ Witch's Castle (Kitchen/Courtyard)",
+      "canonical_id": "wicked_witch_castle_courtyard",
+      "display_name": "wicked_witch_castle_courtyard",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 126,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH012/wicked_witch_castle_courtyard.md",
+      "notes": "Chapter-local environment alias match for 'The West landscape $\\rightarrow$ Witch's Castle (Kitchen/Courtyard)' (key_overlap=3, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Scarecrow must be stripped of all straw",
+    "Dorothy must display a visible mark on her forehead",
+    "Dorothy's attire is white (transitioned from green)",
+    "Tin Woodman position relative to rocks"
+  ],
+  "visual_coverage_families": [
+    "High-angle shots of the group being scattered",
+    "Medium shots of Dorothy entering the kitchen",
+    "Lonely wide shots of the Lion in the courtyard"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The Capture",
+      "purpose": "",
+      "action_start": "group traveling through West landscape",
+      "action_end": "monkeys intercepting group",
+      "active_subjects": [
+        "winged_monkeys"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "spatial_context": "West landscape",
+      "blocking_hint": "descending aerial attack",
+      "environment_subzone": "West landscape rocks",
+      "continuity_focus": "group cohesion",
+      "coverage_hint": "high-angle scattering",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Dismantling",
+      "purpose": "",
+      "action_start": "monkeys striking group",
+      "action_end": "characters physically incapacitated/stripped",
+      "active_subjects": [
+        "winged_monkeys"
+      ],
+      "passive_subjects": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "spatial_context": "rugged terrain near rocks",
+      "blocking_hint": "tin_woodman dropped on rocks; scarecrow stripped of straw",
+      "environment_subzone": "West landscape rocks",
+      "continuity_focus": "scarecrow lack of straw; tin_woodman on rocks",
+      "coverage_hint": "medium shots of individual defeat",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Separation",
+      "purpose": "",
+      "action_start": "dorothy being spared",
+      "action_end": "characters in separate castle zones",
+      "active_subjects": [
+        "dorothy",
+        "winged_monkeys"
+      ],
+      "passive_subjects": [
+        "cowardly_lion"
+      ],
+      "spatial_context": "transition from landscape to castle",
+      "blocking_hint": "dorothy led toward kitchen; lion left in courtyard",
+      "environment_subzone": "wicked_witch_castle_kitchen/courtyard",
+      "continuity_focus": "mark on forehead; white clothing; lion bound",
+      "coverage_hint": "medium shots of Dorothy; wide shots of Lion",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish chaos",
+      "planned_shot_moment_summary": "monkeys descending on group",
+      "primary_subject_seed": "winged_monkeys",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "West landscape rocks",
+      "planned_shot_required_anchor_1": "jagged rocks",
+      "planned_shot_scale_proof_detail": "group size vs monkey swarm",
+      "start_state_seed": "group traveling",
+      "end_state_seed": "group being intercepted",
+      "action_seed": "monkeys dive-bombing the group",
+      "blocking_seed": [
+        "descending from high angle"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "high_angle",
+      "lens_family": "wide",
+      "camera_motion": "crane",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "establish defeat",
+      "planned_shot_moment_summary": "tin_woodman hits rocks and scarecrow loses straw",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [
+        "tin_woodman"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "West landscape rocks",
+      "planned_shot_required_anchor_1": "jagged rocks",
+      "planned_shot_scale_proof_detail": "straw loss detail",
+      "start_state_seed": "scarecrow standing",
+      "end_state_seed": "scarecrow empty of straw",
+      "action_seed": "monkeys stripping straw from scarecrow",
+      "blocking_seed": [
+        "scattered on ground"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish isolation",
+      "planned_shot_moment_summary": "dorothy enters kitchen alone",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "wicked_witch_castle_kitchen",
+      "planned_shot_required_anchor_1": "kitchen doorway",
+      "planned_shot_scale_proof_detail": "mark on forehead visibility",
+      "start_state_seed": "dorothy at threshold",
+      "end_state_seed": "dorothy in kitchen center",
+      "action_seed": "walking into captivity",
+      "blocking_seed": [
+        "moving from light to shadow"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH012",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH018",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH006",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH012",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH012_SC003] Purpose: To separate the protagonists and establish the new status quo of captivity.",
+    "[CH012_SC003] Summary: The Monkeys capture the group: Tin Woodman is dropped on rocks, Scarecrow is stripped of straw, and the Lion is bound. Dorothy is spared due to the mark on her forehead but taken to the castle.",
+    "[CH012_SC003] Emotional arc: Chaos $\\rightarrow$ Defeat $\\rightarrow$ Isolation.",
+    "[CH012_SC003] Coverage: High-angle shots of the group being scattered; medium shots of Dorothy entering the kitchen; lonely wide shots of the Lion in the courtyard.",
+    "[CH012_SC003] Continuity: Scarecrow's lack of straw; Dorothy's transition from traveler to servant; the visual presence of the mark on her forehead.",
+    "[CH012] Chapter summary: **Setting:** The rugged, untilled lands of the West, moving toward the Wicked Witch's castle. **Characters:** * **Dorothy & Toto:** Traveling toward the West; Dorothy discovers her green clothes have turned white. * *...",
+    "[CH012] Chapter XII (book index hit)",
+    "[CH018] Chapter XVIII (book index hit)",
+    "[CH006] Chapter VI (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH012_SC003\n\n## Production Intent\nExecute the violent separation of the protagonist group through a coordinated capture by winged monkeys, transitioning from high-chaos movement in the West landscape to static isolation within the castle subzones.\n\n## Required Cast\n- dorothy (white clothing, forehead mark)\n- the_scarecrow (no straw)\n- tin_woodman (on rocks)\n- cowardly_lion (bound)\n- winged_monkeys\n\n## Required Environments\n- West landscape (rugged/untilled)\n- wicked_witch_castle_courtyard\n- wicked_witch_castle_kitchen\n\n## Continuity Constraints\n- Scarecrow must be stripped of all straw.\n- Dorothy must display a visible mark on her forehead.\n- Dorothy's attire is white.\n- Tin Woodman position relative to rocks.\n\n## Beat List\n- BT001: The Capture (Monkeys intercept group)\n- BT002: The Dismantling (Scarecrow stripped, Woodman dropped, Lion bound)\n- BT003: The Separation (Dorothy taken to kitchen; status quo of captivity established)",
+  "metadata": {
+    "artifact_id": "CH012_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "dcc760f992b049731df3a68e8ca5ac765fd2ae0f",
+    "created_at_utc": "2026-04-27T08:35:40.791473+00:00",
+    "updated_at_utc": "2026-04-27T08:35:40.791473+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH012_SC003",
+        "version": "19d2001d6d954ff1987921421ffe1a2783148934"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH012_SC003",
+        "version": "e6e82397828aefa5f11bf1e811f597640fc254ef"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH012_SC003",
+        "version": "cf38ee8f3b3fb4f89405302e489328e3a487e679"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:36:25.271187+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "dcc760f992b049731df3a68e8ca5ac765fd2ae0f"
+      }
+    ]
+  }
+}

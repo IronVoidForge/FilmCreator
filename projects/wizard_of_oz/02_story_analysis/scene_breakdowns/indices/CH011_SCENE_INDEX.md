@@ -1,0 +1,7 @@
+- [SC001](#SC001) Arrival in the Emerald City
+- [SC002](#SC002) The Wizard's Ultimatum
+- [SC003](#SC003) Dorothy and the Giant Head
+- [SC004](#SC004) Scarecrow and the Lovely Lady
+- [SC005](#SC005) Tin Woodman and the Terrible Beast
+- [SC006](#SC006) Cowardly Lion and the Ball of Fire
+- [SC007](#SC007) The Decision to Depart

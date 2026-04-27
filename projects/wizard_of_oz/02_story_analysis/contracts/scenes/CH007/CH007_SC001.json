@@ -1,0 +1,380 @@
+{
+  "scene_id": "CH007_SC001",
+  "chapter_id": "CH007",
+  "scene_title": "SC001",
+  "purpose": "Establish group dynamics and provide a moment of respite before the upcoming obstacles.",
+  "summary": "The travelers set up camp in a dense forest. Individual tasks are performed: Tin Woodman gathers wood, Scarecrow collects nuts for Dorothy, and the Lion hunts alone.",
+  "emotional_arc": "Calm/Routine $\\rightarrow$ Anticipation of travel.",
+  "production_intent": "Establish the group's ability to function as a unit through domestic labor within a dense forest setting. The scene must transition from the active labor of camp setup to a settled, quiet state that prepares the audience for the next leg of travel.",
+  "scene_short_description": "Travelers perform individual chores under a massive forest tree to establish a temporary campsite.",
+  "scene_primary_scale_story_point": "Large scale tree serves as the central vertical anchor for all character activity.",
+  "scene_required_anchor_catalog": [
+    "large tree",
+    "campfire site"
+  ],
+  "scene_start_state": "Characters entering the clearing with supplies and tools.",
+  "scene_end_state": "Group settled around a central point, looking toward the path ahead.",
+  "dominant_action_line": "The group transitions from individual labor to collective rest.",
+  "scene_spatial_layout": [
+    "Camp centered under the large tree.",
+    "Perimeter defined by dense forest and deep ditches."
+  ],
+  "character_spatial_map": [
+    "dorothy and toto near the central camp area.",
+    "tin_woodman moving between wood piles and campfire.",
+    "the_scarecrow foraging in the immediate periphery.",
+    "cowardly_lion moving toward the forest edge/away from camp."
+  ],
+  "environment_subzones": [
+    "under_large_tree",
+    "forest_perimeter",
+    "ditch_zone"
+  ],
+  "entry_vectors": [
+    "forest_edge_to_tree"
+  ],
+  "exit_vectors": [
+    "tree_to_forest_edge"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Labor montage transition.",
+    "BT002 -> BT003: Shift from activity to stillness."
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH007/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH007/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH007/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH007/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH007/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Dense Forest (under a large tree)",
+      "canonical_id": "arizona_dense_forest_and_ditches",
+      "display_name": "arizona_dense_forest_and_ditches",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 112,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH007/arizona_dense_forest_and_ditches.md",
+      "notes": "Chapter-local environment alias match for 'Dense Forest (under a large tree)' (key_overlap=2, label_overlap=4, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Cumulative volume of wood gathered by tin_woodman.",
+    "Cumulative count of nuts collected by the_scarecrow.",
+    "Fixed position of the campfire and camp setup relative to the large tree."
+  ],
+  "visual_coverage_families": [
+    "Wide shots of the forest camp setting.",
+    "Medium tracking shots of characters performing chores.",
+    "Close-ups of food/supplies being gathered."
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Arrival and dispersal",
+      "purpose": "",
+      "action_start": "characters enter clearing",
+      "action_end": "characters move to separate tasks",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "passive_subjects": [
+        "toto"
+      ],
+      "spatial_context": "under the large tree",
+      "blocking_hint": "dispersal from center to periphery",
+      "environment_subzone": "under_large_tree",
+      "continuity_focus": "initial camp setup position",
+      "coverage_hint": "wide shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Individual labor montage",
+      "purpose": "",
+      "action_start": "tin_woodman picking up wood",
+      "action_end": "the_scarecrow finishing nut collection",
+      "active_subjects": [
+        "tin_woodman",
+        "the_scarecrow",
+        "cowardly_lion"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "toto"
+      ],
+      "spatial_context": "forest perimeter and tree base",
+      "blocking_hint": "repetitive task-based movement",
+      "environment_subzone": "forest_perimeter",
+      "continuity_focus": "accumulation of wood/nuts",
+      "coverage_hint": "medium tracking and close-ups",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Settling for respite",
+      "purpose": "",
+      "action_start": "characters returning to center",
+      "action_end": "group looking toward the horizon",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "passive_subjects": [
+        "toto"
+      ],
+      "spatial_context": "campfire site",
+      "blocking_hint": "converging on campfire",
+      "environment_subzone": "under_large_tree",
+      "continuity_focus": "final campfire position",
+      "coverage_hint": "medium/wide shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish_setting",
+      "planned_shot_moment_summary": "wide view of the group arriving at the large tree",
+      "primary_subject_seed": "arizona_dense_forest_and_ditches",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "under_large_tree",
+      "planned_shot_required_anchor_1": "large tree",
+      "planned_shot_scale_proof_detail": "tree height vs character height",
+      "start_state_seed": "characters entering frame",
+      "end_state_seed": "characters spreading out",
+      "action_seed": "group dispersing to tasks",
+      "blocking_seed": [
+        "wide dispersal from center to periphery"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "character_detail",
+      "planned_shot_moment_summary": "close up of nuts being gathered",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "forest_perimeter",
+      "planned_shot_required_anchor_1": "nuts",
+      "planned_shot_scale_proof_detail": "hand size vs nut size",
+      "start_state_seed": "hands reaching for nuts",
+      "end_state_seed": "hands holding collected nuts",
+      "action_seed": "gathering food",
+      "blocking_seed": [
+        "stationary foraging"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish_rest",
+      "planned_shot_moment_summary": "group settling around the campfire",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "toto",
+        "the_scarecrow",
+        "tin_woodman"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "under_large_tree",
+      "planned_shot_required_anchor_1": "campfire site",
+      "planned_shot_scale_proof_detail": "characters clustered around fire radius",
+      "start_state_seed": "characters approaching center",
+      "end_state_seed": "characters seated/resting",
+      "action_seed": "settling into camp",
+      "blocking_seed": [
+        "converging on campfire"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "torch_firelight",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH007",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH007_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH014_chapter_xiv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH022",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH022_chapter_xxii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH007",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH007_SC001] Purpose: Establish group dynamics and provide a moment of respite before the upcoming obstacles.",
+    "[CH007_SC001] Summary: The travelers set up camp in a dense forest. Individual tasks are performed: Tin Woodman gathers wood, Scarecrow collects nuts for Dorothy, and the Lion hunts alone.",
+    "[CH007_SC001] Emotional arc: Calm/Routine $\\rightarrow$ Anticipation of travel.",
+    "[CH007_SC001] Coverage: Wide shots of the forest camp setting. Medium tracking shots of characters performing chores. Close-ups of food/supplies being gathered.",
+    "[CH007_SC001] Continuity: Amount of wood/nuts collected; position of the campfire/camp setup.",
+    "[CH007] Chapter summary: **Setting:** A dense forest containing deep ditches, a riverbank, and eventually a view of a beautiful, fruit-filled meadow across a swift river. **Characters:** Dorothy (and Toto), Scarecrow, Tin Woodman, Cowardly Li...",
+    "[CH007] Chapter VII (book index hit)",
+    "[CH014] Chapter XIV (book index hit)",
+    "[CH022] Chapter XXII (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH007_SC001\n\n## Production Intent\nEstablish the group's ability to function as a unit through domestic labor within a dense forest setting. The scene must transition from the active labor of camp setup to a settled, quiet state that prepares the audience for the next leg of travel.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- toto\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n\n## Required Environments\n- arizona_dense_forest_and_ditches (specifically under a large tree)\n\n## Continuity Constraints\n- Cumulative volume of wood gathered by tin_woodman.\n- Cumulative count of nuts collected by the_scarecrow.\n- Fixed position of the campfire and camp setup relative to the large tree.\n\n## Beat List\n- BT001: Arrival and dispersal\n- BT002: Individual labor montage\n- BT003: Settling for respite",
+  "metadata": {
+    "artifact_id": "CH007_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "ef68acbae852dd7f65f712dec96a78355d13caeb",
+    "created_at_utc": "2026-04-27T08:16:30.416919+00:00",
+    "updated_at_utc": "2026-04-27T08:16:30.416919+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH007_SC001",
+        "version": "05d40fe0d375f764d3de59e9e2125ffa721f0e89"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH007_SC001",
+        "version": "4e75051287ad80bf3eea90c06c10905e5f5e2f68"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH007_SC001",
+        "version": "eb345d9d61413bc9278b56219ef4885583da72a6"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:17:13.350797+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "ef68acbae852dd7f65f712dec96a78355d13caeb"
+      }
+    ]
+  }
+}

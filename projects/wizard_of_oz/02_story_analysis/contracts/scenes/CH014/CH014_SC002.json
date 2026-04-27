@@ -1,0 +1,388 @@
+{
+  "scene_id": "CH014_SC002",
+  "chapter_id": "CH014",
+  "scene_title": "SC002",
+  "purpose": "Provide the solution to the group's predicament via a magical guide.",
+  "summary": "Dorothy uses her whistle to summon the Queen of the Mice. The Queen appears and informs them they are heading the wrong way, then reveals that the Golden Cap can be used to command the Winged Monkeys for transport.",
+  "emotional_arc": "Despair $\\rightarrow$ Curiosity/Hope.",
+  "production_intent": "Establish a magical solution to the group's travel predicament through a scale-discrepant encounter between human travelers and a mouse monarch. The sequence must transition from heavy despair to newfound hope via the revelation of the Golden Cap's utility.",
+  "scene_short_description": "A group of travelers in scarlet fields summons a tiny queen to find their way.",
+  "scene_primary_scale_story_point": "Tiny mouse monarch vs. full-sized human companions.",
+  "scene_required_anchor_catalog": [
+    "Golden Cap",
+    "Dorothy's whistle"
+  ],
+  "scene_start_state": "The group is stalled and despondent amidst scarlet flowers.",
+  "scene_end_state": "The group holds the Golden Cap with renewed purpose.",
+  "dominant_action_line": "Dorothy summons the Queen of the Mice to learn how to use the Golden Cap for transport.",
+  "scene_spatial_layout": [
+    "Open field expanse of scarlet buttercups and yellow daisies",
+    "Low ground level for mouse interaction"
+  ],
+  "character_spatial_map": [
+    "dorothy, the_scarecrow, tin_woodman, cowardly_lion clustered in center",
+    "queen_of_the_mice positioned at foot-level relative to travelers",
+    "toto near dorothy"
+  ],
+  "environment_subzones": [
+    "scarlet_flower_fields_floor",
+    "scarlet_flower_fields_midground"
+  ],
+  "entry_vectors": [
+    "group enters from midground"
+  ],
+  "exit_vectors": [
+    "group exits via flight (implied)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Summoning success/appearance",
+    "BT002 -> BT003: Information reveal/solution discovery"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH014/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH014/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH014/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH014/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH014/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    },
+    {
+      "label": "Queen of the Mice",
+      "canonical_id": "queen_of_the_mice",
+      "display_name": "queen_of_the_mice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH014/queen_of_the_mice.md",
+      "notes": "Direct registry match for 'queen_of_the_mice'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Scarlet Fields",
+      "canonical_id": "scarlet_flower_fields",
+      "display_name": "scarlet_flower_fields",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 86,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH014/scarlet_flower_fields.md",
+      "notes": "Chapter-local environment alias match for 'The Scarlet Fields' (key_overlap=2, label_overlap=2, context_overlap=3)."
+    }
+  ],
+  "continuity_constraints": [
+    "Extreme scale difference between mice and travelers",
+    "Precise placement of the Golden Cap during reveal"
+  ],
+  "visual_coverage_families": [
+    "Low-angle shots for queen_of_the_mice",
+    "Reaction shots from companions (the_scarecrow, tin_woodman, cowardly_lion)",
+    "Close-ups on dorothy's interaction with whistle and Golden Cap"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Dorothy summons the Queen using her whistle",
+      "purpose": "",
+      "action_start": "group in despair",
+      "action_end": "whistle sound completes",
+      "active_subjects": [
+        "dorothy"
+      ],
+      "passive_subjects": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "spatial_context": "scarlet_flower_fields_midground",
+      "blocking_hint": "dorothy center, others surrounding",
+      "environment_subzone": "scarlet_flower_fields_midground",
+      "continuity_focus": "whistle in hand",
+      "coverage_hint": "medium_full to close-up on whistle",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Queen of the Mice appears and corrects their direction",
+      "purpose": "",
+      "action_start": "queen emerges from flowers",
+      "action_end": "queen finishes warning",
+      "active_subjects": [
+        "queen_of_the_mice"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "spatial_context": "scarlet_flower_fields_floor",
+      "blocking_hint": "queen at foot-level of travelers",
+      "environment_subzone": "scarlet_flower_fields_floor",
+      "continuity_focus": "scale difference check",
+      "coverage_hint": "low-angle shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Queen reveals the Golden Cap's power to command Winged Monkeys",
+      "purpose": "",
+      "action_start": "queen points/gestures to cap",
+      "action_end": "group realizes solution",
+      "active_subjects": [
+        "queen_of_the_mice",
+        "dorothy"
+      ],
+      "passive_subjects": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "spatial_context": "scarlet_flower_fields_midground",
+      "blocking_hint": "dorothy looking down at queen and cap",
+      "environment_subzone": "scarlet_flower_fields_midground",
+      "continuity_focus": "placement of Golden Cap",
+      "coverage_hint": "close-ups on cap/reactions",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish despair",
+      "planned_shot_moment_summary": "dorothy raises whistle to lips",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "scarlet_flower_fields_midground",
+      "planned_shot_required_anchor_1": "dorothy's whistle",
+      "planned_shot_scale_proof_detail": "human scale",
+      "start_state_seed": "group looking lost",
+      "end_state_seed": "whistle to mouth",
+      "action_seed": "dorothy blows whistle",
+      "blocking_seed": [
+        "group huddled in flowers"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "introduce guide",
+      "planned_shot_moment_summary": "queen of the mice appears",
+      "primary_subject_seed": "queen_of_the_mice",
+      "secondary_subjects_seed": [
+        "dorothy"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "scarlet_flower_fields_floor",
+      "planned_shot_required_anchor_1": "scarlet_flower_fields_floor",
+      "planned_shot_scale_proof_detail": "mouse-to-human ratio",
+      "start_state_seed": "whistle sound",
+      "end_state_seed": "queen appears",
+      "action_seed": "queen emerges from flowers",
+      "blocking_seed": [
+        "queen at dorothy's feet"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "reveal solution",
+      "planned_shot_moment_summary": "revelation of Golden Cap utility",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "queen_of_the_mice"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "scarlet_flower_fields_midground",
+      "planned_shot_required_anchor_1": "Golden Cap",
+      "planned_shot_scale_proof_detail": "hand-held cap vs tiny queen",
+      "start_state_seed": "queen speaking",
+      "end_state_seed": "dorothy looking at cap",
+      "action_seed": "dorothy touches Golden Cap",
+      "blocking_seed": [
+        "dorothy leaning down toward queen"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH014_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH014_chapter_xiv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH022",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH022_chapter_xxii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH014",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH014_SC002] Purpose: Provide the solution to the group's predicament via a magical guide.",
+    "[CH014_SC002] Summary: Dorothy uses her whistle to summon the Queen of the Mice. The Queen appears and informs them they are heading the wrong way, then reveals that the Golden Cap can be used to command the Winged Monkeys for transport.",
+    "[CH014_SC002] Emotional arc: Despair $\\rightarrow$ Curiosity/Hope.",
+    "[CH014_SC002] Coverage: Low-angle shots for the Queen of the Mice; reaction shots from the companions; close-ups on Dorothy's interaction with the whistle and the Cap.",
+    "[CH014_SC002] Continuity: Scale difference between the mice and the travelers; placement of the Golden Cap.",
+    "[CH014] Chapter summary: **Setting:** The vast, scarlet fields of buttercups and yellow daisies between the Wicked Witch's castle and the Emerald City; later, the air above the landscape during flight. **Characters:** - **Dorothy:** Uses the...",
+    "[CH014] Chapter XIV (book index hit)",
+    "[CH012] Chapter XII (book index hit)",
+    "[CH022] Chapter XXII (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH014_SC002\n\n## Production Intent\nEstablish a magical solution to the group's travel predicament through a scale-discrepant encounter between human travelers and a mouse monarch. The sequence must transition from heavy despair to newfound hope via the revelation of the Golden Cap's utility.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n- queen_of_the_mice (tiny scale)\n\n## Required Environments\n- scarlet_flower_fields (vast fields of scarlet buttercups and yellow daisies)\n\n## Continuity Constraints\n- Maintain extreme scale difference between mice and travelers.\n- Ensure consistent placement of the Golden Cap during the reveal.\n\n## Beat List\n- BT001: Dorothy summons the Queen using her whistle.\n- BT002: The Queen of the Mice appears and corrects their direction.\n- BT003: The Queen reveals the Golden Cap's power to command Winged Monkeys.",
+  "metadata": {
+    "artifact_id": "CH014_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "5f7cfd1e76c5002644f9da8aaf99a353ab32b92a",
+    "created_at_utc": "2026-04-27T08:42:05.749806+00:00",
+    "updated_at_utc": "2026-04-27T08:42:05.749806+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH014_SC002",
+        "version": "475cf5e2cd06f4a2ab066bd593777b498e058bf4"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH014_SC002",
+        "version": "07461e2f955480418e5af675fdfd5296ddc96c57"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH014_SC002",
+        "version": "c1d1ddeff61da4d8552b23215e232a0cc7760b59"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:42:51.058627+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "5f7cfd1e76c5002644f9da8aaf99a353ab32b92a"
+      }
+    ]
+  }
+}

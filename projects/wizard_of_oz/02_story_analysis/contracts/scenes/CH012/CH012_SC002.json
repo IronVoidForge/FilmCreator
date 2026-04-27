@@ -1,0 +1,392 @@
+{
+  "scene_id": "CH012_SC002",
+  "chapter_id": "CH012",
+  "scene_title": "SC002",
+  "purpose": "Escalation of the conflict through a major magical event.",
+  "summary": "In desperation, the Wicked Witch uses the final charge of the Golden Cap to summon the Winged Monkeys. The monkeys descend upon the group.",
+  "emotional_arc": "Desperation $\\rightarrow$ Terror.",
+  "production_intent": "Execute a high-stakes magical escalation where the Golden Cap triggers a massive aerial descent of winged monkeys. The sequence must transition from character desperation to chaotic terror through lighting shifts and aggressive camera movement.",
+  "scene_short_description": "A group travels through rugged lands before a massive swarm of winged creatures descends from above.",
+  "scene_primary_scale_story_point": "Swarm scale vs individual character vulnerability.",
+  "scene_required_anchor_catalog": [
+    "western_rugged_lands horizon",
+    "dorothy white dress"
+  ],
+  "scene_start_state": "Group traveling through the untilled, rugged landscape under clear light.",
+  "scene_end_state": "Chaos and scramble as winged_monkeys descend into the frame.",
+  "dominant_action_line": "The Wicked Witch uses the Golden Cap to summon a swarm that descends upon the group.",
+  "scene_spatial_layout": [
+    "Open western_rugged_lands terrain",
+    "Vertical descent from sky to ground level"
+  ],
+  "character_spatial_map": [
+    "dorothy, the_scarecrow, tin_woodman, cowardly_lion clustered in center-ground",
+    "winged_monkeys descending from high overhead"
+  ],
+  "environment_subzones": [
+    "open_plains",
+    "sky_canopy"
+  ],
+  "entry_vectors": [
+    "winged_monkeys via vertical descent"
+  ],
+  "exit_vectors": [
+    "group scramble toward cover/unspecified direction"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Magical activation to aerial visual reveal",
+    "BT002 -> BT003: Visual reveal to physical attack chaos"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "Winged Monkeys",
+      "canonical_id": "winged_monkeys",
+      "display_name": "winged_monkeys",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 130,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/winged_monkeys.md",
+      "notes": "Direct registry match for 'winged_monkeys'."
+    },
+    {
+      "label": "Wicked Witch (presence/influence)",
+      "canonical_id": null,
+      "display_name": "Wicked Witch (presence/influence)",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The rugged West landscape",
+      "canonical_id": "western_rugged_lands",
+      "display_name": "western_rugged_lands",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH012/western_rugged_lands.md",
+      "notes": "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Lighting shifts as winged_monkeys cloud the sun",
+    "Character positioning during scramble"
+  ],
+  "visual_coverage_families": [
+    "Low-angle shots of descending winged_monkeys",
+    "Handheld/shaky cam for attack chaos",
+    "Wide shots showing scale of monkey swarm"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Magical activation of the Golden Cap",
+      "purpose": "",
+      "action_start": "group traveling through rugged lands",
+      "action_end": "magical charge completes",
+      "active_subjects": [
+        "Wicked Witch (presence/influence)"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "spatial_context": "open_plains",
+      "blocking_hint": "characters grouped together in travel formation",
+      "environment_subzone": "open_plains",
+      "continuity_focus": "dorothy white dress visibility",
+      "coverage_hint": "medium shots of group reaction",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The descent begins",
+      "purpose": "",
+      "action_start": "sky clears/changes",
+      "action_end": "monkeys visible in large numbers",
+      "active_subjects": [
+        "winged_monkeys"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "spatial_context": "sky_canopy to open_plains",
+      "blocking_hint": "monkeys moving from high altitude toward ground",
+      "environment_subzone": "sky_canopy",
+      "continuity_focus": "lighting shift as monkeys cloud sun",
+      "coverage_hint": "wide low-angle shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The attack/scramble",
+      "purpose": "",
+      "action_start": "monkeys reach ground level",
+      "action_end": "group in state of terror/chaos",
+      "active_subjects": [
+        "winged_monkeys",
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "open_plains",
+      "blocking_hint": "characters breaking formation to scramble",
+      "environment_subzone": "open_plains",
+      "continuity_focus": "character positioning during scramble",
+      "coverage_hint": "handheld/shaky cam",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish desperation",
+      "planned_shot_moment_summary": "Wicked Witch influence triggers Golden Cap charge",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "open_plains",
+      "planned_shot_required_anchor_1": "dorothy white dress",
+      "planned_shot_scale_proof_detail": "character proximity to ground",
+      "start_state_seed": "group walking",
+      "end_state_seed": "sudden magical tension",
+      "action_seed": "magical charge occurs",
+      "blocking_seed": [
+        "tight group cluster"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "reveal scale of threat",
+      "planned_shot_moment_summary": "winged_monkeys appear in sky [[LIGHTING SHIFT]]",
+      "primary_subject_seed": "winged_monkeys",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "sky_canopy",
+      "planned_shot_required_anchor_1": "western_rugged_lands horizon",
+      "planned_shot_scale_proof_detail": "swarm size relative to horizon",
+      "start_state_seed": "clear sky",
+      "end_state_seed": "clouded sky",
+      "action_seed": "monkeys descend",
+      "blocking_seed": [
+        "wide spread across sky"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "tilt",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "convey terror/chaos",
+      "planned_shot_moment_summary": "monkeys strike the group",
+      "primary_subject_seed": "winged_monkeys",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "open_plains",
+      "planned_shot_required_anchor_1": "dorothy white dress",
+      "planned_shot_scale_proof_detail": "rapid movement vs character stillness",
+      "start_state_seed": "descending swarm",
+      "end_state_seed": "chaotic scramble",
+      "action_seed": "attack begins",
+      "blocking_seed": [
+        "disorganized scramble"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Wicked Witch (presence/influence) -> Wicked Witch (presence/influence)"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH012",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH018",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH022",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH022_chapter_xxii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH012",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH012_SC002] Purpose: Escalation of the conflict through a major magical event.",
+    "[CH012_SC002] Summary: In desperation, the Wicked Witch uses the final charge of the Golden Cap to summon the Winged Monkeys. The monkeys descend upon the group.",
+    "[CH012_SC002] Emotional arc: Desperation $\\rightarrow$ Terror.",
+    "[CH012_SC002] Coverage: Low-angle shots of the monkeys descending; handheld/shaky cam for the chaos of the attack; wide shots showing the scale of the monkey swarm.",
+    "[CH012_SC002] Continuity: Lighting shifts as the monkeys cloud the sun; positioning of characters during the scramble.",
+    "[CH012] Chapter summary: **Setting:** The rugged, untilled lands of the West, moving toward the Wicked Witch's castle. **Characters:** * **Dorothy & Toto:** Traveling toward the West; Dorothy discovers her green clothes have turned white. * *...",
+    "[CH012] Chapter XII (book index hit)",
+    "[CH018] Chapter XVIII (book index hit)",
+    "[CH022] Chapter XXII (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH012_SC002\n\n## Production Intent\nExecute a high-stakes magical escalation where the Golden Cap triggers a massive aerial descent of winged monkeys. The sequence must transition from character desperation to chaotic terror through lighting shifts and aggressive camera movement.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- winged_monkeys\n- Wicked Witch (presence/influence)\n\n## Required Environments\n- western_rugged_lands\n\n## Continuity Constraints\n- Lighting shifts as winged_monkeys cloud the sun\n- Character positioning during scramble\n- Dorothy's white clothing consistency\n\n## Beat List\n- BT001: Magical activation of the Golden Cap\n- BT002: The descent begins (Visual reveal)\n- BT003: The attack/scramble (Chaos)",
+  "metadata": {
+    "artifact_id": "CH012_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "b1427f6e3f3f45cf1c61104e13ec93216a418847",
+    "created_at_utc": "2026-04-27T08:34:57.309724+00:00",
+    "updated_at_utc": "2026-04-27T08:34:57.309724+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH012_SC002",
+        "version": "01726351a42adf9e0383278395ef3534249d11f8"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH012_SC002",
+        "version": "d48bda0482ac88f1e527c95163f063d984c5f2f9"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH012_SC002",
+        "version": "8387c939f4fee2b7c16aefeecdd61b66597417a2"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:35:39.689062+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "b1427f6e3f3f45cf1c61104e13ec93216a418847"
+      }
+    ]
+  }
+}

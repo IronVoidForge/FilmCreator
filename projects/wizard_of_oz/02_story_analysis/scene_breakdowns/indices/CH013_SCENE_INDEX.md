@@ -1,0 +1,4 @@
+- [SC001](#sc001) Liberation and Celebration at the Yellow Castle
+- [SC002](#sc002) The Rescue of the Tin Woodman
+- [SC003](#sc003) Restoring the Scarecrow
+- [SC004](#sc004) Farewell Gifts and Departure

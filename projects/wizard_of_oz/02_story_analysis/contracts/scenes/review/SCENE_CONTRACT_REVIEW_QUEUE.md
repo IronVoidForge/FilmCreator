@@ -1,0 +1,85 @@
+# Scene Contract Review Queue
+
+- `CH002_SC001`
+  - Resolve The exterior/immediate vicinity of Dorothy's house (Oz landscape) -> The exterior/immediate vicinity of Dorothy's house (Oz landscape)
+- `CH002_SC002`
+  - Resolve The site of the house landing -> The site of the house landing
+- `CH002_SC003`
+  - Resolve The clearing near the house -> The clearing near the house
+- `CH002_SC004`
+  - Resolve The clearing near the house -> The clearing near the house
+- `CH003_SC001`
+  - Resolve Local Munchkins (background/extras) -> Local Munchkins (background/extras)
+- `CH003_SC002`
+  - Resolve Munchkin party guests -> Munchkin party guests
+- `CH004_SC001`
+  - Resolve A desolate -> A desolate
+- `CH004_SC003`
+  - Resolve Scarecrow (as narrator) -> Scarecrow (as narrator)
+  - Resolve Crow (flashback/implied) -> Crow (flashback/implied)
+  - Resolve A cornfield (memory/flashback) -> A cornfield (memory/flashback)
+- `CH007_SC003`
+  - Resolve The Second Ditch/Bridge Site -> The Second Ditch/Bridge Site
+- `CH009_SC002`
+  - Resolve Thousands of Field Mice -> Thousands of Field Mice
+- `CH009_SC003`
+  - Resolve Thousands of Field Mice -> Thousands of Field Mice
+- `CH009_SC004`
+  - Resolve Thousands of Field Mice -> Thousands of Field Mice
+- `CH010_SC002`
+  - Resolve * The Farmhouse (Interior) -> * The Farmhouse (Interior)
+- `CH012_SC001`
+  - Resolve Wicked Witch (off-screen/magical influence) -> Wicked Witch (off-screen/magical influence)
+- `CH012_SC002`
+  - Resolve Wicked Witch (presence/influence) -> Wicked Witch (presence/influence)
+- `CH012_SC004`
+  - Resolve Wicked Witch (invisible/presence) -> Wicked Witch (invisible/presence)
+- `CH012_SC005`
+  - Resolve Wicked Witch -> Wicked Witch
+- `CH012_SC006`
+  - Resolve Scarecrow (brief) -> Scarecrow (brief)
+- `CH013_SC004`
+  - Resolve The Witch's Cupboard/Storage area -> The Witch's Cupboard/Storage area
+- `CH014_SC005`
+  - Resolve The Gates of the Emerald City -> The Gates of the Emerald City
+- `CH015_SC003`
+  - Resolve The Wizard (as Illusions) -> The Wizard (as Illusions)
+- `CH017_SC003`
+  - Resolve Citizens of the Emerald City -> Citizens of the Emerald City
+- `CH017_SC004`
+  - Resolve Lion -> Lion
+- `CH020_SC001`
+  - Resolve the white -> the white
+- `CH020_SC005`
+  - Resolve The far wall -> The far wall
+- `CH021_SC001`
+  - Resolve Lion -> Lion
+- `CH021_SC002`
+  - Resolve Lion -> Lion
+  - Resolve various forest beasts (tigers, elephants, bears, wolves, foxes) -> various forest beasts (tigers, elephants, bears, wolves, foxes)
+- `CH021_SC003`
+  - Resolve Lion -> Lion
+  - Resolve various forest beasts -> various forest beasts
+  - Resolve Dorothy and companions (as observers) -> Dorothy and companions (as observers)
+- `CH021_SC004`
+  - Resolve Lion -> Lion
+- `CH021_SC005`
+  - Resolve Lion -> Lion
+- `CH021_SC006`
+  - Resolve Lion -> Lion
+  - Resolve various forest beasts -> various forest beasts
+  - Resolve Dorothy and companions -> Dorothy and companions
+- `CH022_SC004`
+  - Resolve Farmer's Wife -> Farmer's Wife
+  - Resolve The lush -> The lush
+  - Resolve a farmhouse/homestead -> a farmhouse/homestead
+- `CH023_SC001`
+  - Resolve Lion -> Lion
+  - Resolve Glinda the Good Witch -> Glinda the Good Witch
+- `CH023_SC002`
+  - Resolve Lion -> Lion
+  - Resolve Glinda the Good Witch -> Glinda the Good Witch
+- `CH023_SC003`
+  - Resolve Glinda the Good Witch (and departing companions in farewell) -> Glinda the Good Witch (and departing companions in farewell)
+- `CH023_SC004`
+  - Resolve The Desert (transitional) -> The Desert (transitional)

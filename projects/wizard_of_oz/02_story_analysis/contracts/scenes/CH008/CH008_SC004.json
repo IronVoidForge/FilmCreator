@@ -1,0 +1,376 @@
+{
+  "scene_id": "CH008_SC004",
+  "chapter_id": "CH008",
+  "scene_title": "SC004",
+  "purpose": "Execute the primary conflict/climax of the chapter; demonstrate the stakes of the environment.",
+  "summary": "The deadly scent takes effect. Dorothy and Toto fall into a deep sleep. The Cowardly Lion, unable to be easily moved by the others, also succumbs to the poppies and falls asleep.",
+  "emotional_arc": "Peace $\\rightarrow$ Terror/Urgency (for the non-sleeping characters).",
+  "production_intent": "Demonstrate the environmental lethality of the scarlet poppy meadow through a cascading loss of consciousness. The sequence must transition from a peaceful, sensory-heavy atmosphere to a state of high urgency for the unaffected characters as their companions succumb to sleep.",
+  "scene_short_description": "A vast meadow of scarlet poppies induces deep, sudden sleep in the travelers.",
+  "scene_primary_scale_story_point": "The massive scale of the poppy field vs. the smallness of the sleeping characters.",
+  "scene_required_anchor_catalog": [
+    "scarlet_poppy_meadow",
+    "large_flower_clusters"
+  ],
+  "scene_start_state": "Characters walking through a dense, sunny field of red poppies.",
+  "scene_end_state": "Dorothy, Toto, and Cowardly Lion are unconscious in the flowers; Scarecrow and Tin Woodman stand over them in alarm.",
+  "dominant_action_line": "The scent triggers a sequence of collapses from smallest to largest character.",
+  "scene_spatial_layout": [
+    "Dense floral clusters obscuring ground-level footing",
+    "Open meadow expanse surrounding the central group"
+  ],
+  "character_spatial_map": [
+    "dorothy and toto at center-foreground",
+    "cowardly_lion in mid-ground, heavy presence",
+    "the_scarecrow and tin_woodman flanking the sleeping group"
+  ],
+  "environment_subzones": [
+    "poppy_dense_cluster",
+    "meadow_open_expanse"
+  ],
+  "entry_vectors": [
+    "walking path through scarlet_poppy_meadow"
+  ],
+  "exit_vectors": [
+    "none (characters are incapacitated)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: sensory onset to physical collapse",
+    "BT002 -> BT003: individual sleep to group crisis"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Deep within the poppy field",
+      "canonical_id": "scarlet_poppy_meadow",
+      "display_name": "scarlet_poppy_meadow",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH008/scarlet_poppy_meadow.md",
+      "notes": "Chapter-local environment alias match for 'Deep within the poppy field' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Physical positioning of sleeping characters relative to one another",
+    "Graduated levels of sleepiness expressed through movement/muscle tension"
+  ],
+  "visual_coverage_families": [
+    "Close-ups of Dorothy's eyes closing",
+    "Slow-motion shots of Toto falling asleep",
+    "Wide shot of Cowardly Lion collapsing into flowers",
+    "Medium shots of Scarecrow and Tin Woodman reacting to the danger"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The scent takes effect on Dorothy and Toto",
+      "purpose": "",
+      "action_start": "walking through poppies",
+      "action_end": "eyes closing/slumping",
+      "active_subjects": [
+        "dorothy",
+        "toto"
+      ],
+      "passive_subjects": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "spatial_context": "poppy_dense_cluster",
+      "blocking_hint": "Dorothy slows her pace near a cluster",
+      "environment_subzone": "poppy_dense_cluster",
+      "continuity_focus": "eye movement and eyelid heaviness",
+      "coverage_hint": "close-ups",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Cowardly Lion succumbs to the poppies",
+      "purpose": "",
+      "action_start": "Lion struggling to stay upright",
+      "action_end": "Lion lying prone in flowers",
+      "active_subjects": [
+        "cowardly_lion"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "toto",
+        "the_scarecrow",
+        "tin_woodman"
+      ],
+      "spatial_context": "meadow_open_expanse",
+      "blocking_hint": "Lion falls heavily away from the others",
+      "environment_subzone": "meadow_open_expanse",
+      "continuity_focus": "weight and impact of the fall",
+      "coverage_hint": "wide shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Realization of danger by unaffected characters",
+      "purpose": "",
+      "action_start": "Scarecrow/Tin Woodman observing sleep",
+      "action_end": "Urgent realization/panic",
+      "active_subjects": [
+        "the_scarecrow",
+        "tin_woodman"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "toto",
+        "cowardly_lion"
+      ],
+      "spatial_context": "surrounding the sleeping group",
+      "blocking_hint": "Scarecrow and Tin Woodman move toward the bodies",
+      "environment_subzone": "poppy_dense_cluster",
+      "continuity_focus": "reaction speed vs sleeping stillness",
+      "coverage_hint": "medium shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish threat",
+      "planned_shot_moment_summary": "Dorothy's eyes begin to heavy",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "poppy_dense_cluster",
+      "planned_shot_required_anchor_1": "scarlet_poppy_meadow",
+      "planned_shot_scale_proof_detail": "extreme close up of iris/eyelid",
+      "start_state_seed": "eyes open/alert",
+      "end_state_seed": "eyes closing",
+      "action_seed": "slow eyelid descent",
+      "blocking_seed": [
+        "stationary center"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "demonstrate scale of impact",
+      "planned_shot_moment_summary": "Toto loses footing and falls",
+      "primary_subject_seed": "toto",
+      "secondary_subjects_seed": [
+        "dorothy"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "poppy_dense_cluster",
+      "planned_shot_required_anchor_1": "scarlet_poppy_meadow",
+      "planned_shot_scale_proof_detail": "slow motion movement vs flower size",
+      "start_state_seed": "toto walking",
+      "end_state_seed": "toto curled in flowers",
+      "action_seed": "slow-motion collapse",
+      "blocking_seed": [
+        "near dorothy's feet"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "climax of environmental effect",
+      "planned_shot_moment_summary": "Lion collapses heavily into the field",
+      "primary_subject_seed": "cowardly_lion",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "meadow_open_expanse",
+      "planned_shot_required_anchor_1": "scarlet_poppy_meadow",
+      "planned_shot_scale_proof_detail": "mass of lion vs field depth",
+      "start_state_seed": "lion stumbling",
+      "end_state_seed": "lion prone in flowers",
+      "action_seed": "heavy collapse into flora",
+      "blocking_seed": [
+        "mid-ground center"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "pull_back",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH008",
+      "scene_id": "CH008_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH008",
+      "scene_id": "CH008_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH008",
+      "scene_id": "CH008_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH008",
+      "scene_id": "CH008_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH008",
+      "scene_id": "CH008_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH008",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH008_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH008",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH008_chapter_viii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH008",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH008_SC004] Purpose: Execute the primary conflict/climax of the chapter; demonstrate the stakes of the environment.",
+    "[CH008_SC004] Summary: The deadly scent takes effect. Dorothy and Toto fall into a deep sleep. The Cowardly Lion, unable to be easily moved by the others, also succumbs to the poppies and falls asleep.",
+    "[CH008_SC004] Emotional arc: Peace $\\rightarrow$ Terror/Urgency (for the non-sleeping characters).",
+    "[CH008_SC004] Coverage: Close-ups of Dorothy's eyes closing. Slow-motion shots of Toto falling asleep. Wide shot showing the Lion collapsing heavily into the flowers. Medium shots of Scarecrow and Tin Woodman realizing they are unaffected but their friends...",
+    "[CH008_SC004] Continuity: The physical positioning of the sleeping characters; the level of \"sleepiness\" expressed through movement.",
+    "[CH008] Chapter summary: **Setting:** A sunny country featuring a wide river with a swift current, a grassy riverbank, and a vast meadow filled with scarlet poppies. **Characters:** Dorothy, Toto, Scarecrow, Tin Woodman, Cowardly Lion, and a...",
+    "[CH007] Chapter VII (book index hit)",
+    "[CH008] Chapter VIII (book index hit)",
+    "[CH011] Chapter XI (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH008_SC004\n\n## Production Intent\nDemonstrate the environmental lethality of the scarlet poppy meadow through a cascading loss of consciousness. The sequence must transition from a peaceful, sensory-heavy atmosphere to a state of high urgency for the unaffected characters as their companions succumb to sleep.\n\n## Required Cast\n- dorothy (young human girl, white clothing)\n- toto\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n\n## Required Environments\n- scarlet_poppy_meadow (vast meadow filled with scarlet poppies)\n\n## Continuity Constraints\n- Physical positioning of sleeping characters relative to one another.\n- Graduated levels of sleepiness expressed through movement/muscle tension.\n\n## Beat List\n- BT001: The scent takes effect on Dorothy and Toto.\n- BT002: The Cowardly Lion succumbs to the poppies.\n- BT003: Realization of danger by unaffected characters.",
+  "metadata": {
+    "artifact_id": "CH008_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "a8481404cb8ac06a5a9a052f50758f2ea2927bcc",
+    "created_at_utc": "2026-04-27T08:21:52.171970+00:00",
+    "updated_at_utc": "2026-04-27T08:21:52.171970+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH008_SC004",
+        "version": "eda9adeaeb6c1ec1bc33fd5420a98addbc0eacc9"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH008_SC004",
+        "version": "5aa459f5650a99e063e293355081ed452202c38c"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH008_SC004",
+        "version": "854caf74f7e3b167ee8033f9dd735567a5d319a6"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:22:36.503482+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "a8481404cb8ac06a5a9a052f50758f2ea2927bcc"
+      }
+    ]
+  }
+}

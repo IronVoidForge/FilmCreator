@@ -1,0 +1,349 @@
+{
+  "scene_id": "CH013_SC001",
+  "chapter_id": "CH013",
+  "scene_title": "SC001",
+  "purpose": "To establish the immediate aftermath of the Witch's death and the shift in political power.",
+  "summary": "Dorothy frees the Cowardly Lion from his cage and announces to the Winkies that they are no longer slaves. The Winkies celebrate their liberation with a feast at the Yellow Castle.",
+  "emotional_arc": "From tension/captivity to jubilation and relief.",
+  "production_intent": "Establish the immediate political transition following the Witch's death by transitioning from a state of captivity to communal liberation. The visual narrative must move from the localized tension of a cage release to the expansive scale of a celebratory feast within the Yellow Castle courtyard.",
+  "scene_short_description": "A captive beast is freed before a crowd celebrating liberation with a feast.",
+  "scene_primary_scale_story_point": "Individual liberation (Lion) scaling up to mass political liberation (Winkies).",
+  "scene_required_anchor_catalog": [
+    "Lion's cage",
+    "Feast tables"
+  ],
+  "scene_start_state": "Dorothy standing by the cage in a tense atmosphere.",
+  "scene_end_state": "Large scale communal feast in the courtyard.",
+  "dominant_action_line": "Dorothy releases the Lion and declares freedom to the Winkies.",
+  "scene_spatial_layout": [
+    "Cage located as a focal point for initial action",
+    "Courtyard expands outward from the cage area into dining zones"
+  ],
+  "character_spatial_map": [
+    "dorothy positioned near the cage/Winkie crowd",
+    "cowardly_lion confined within the cage initially",
+    "winkies distributed between the cage and feast tables"
+  ],
+  "environment_subzones": [
+    "cage zone",
+    "courtyard feast area"
+  ],
+  "entry_vectors": [
+    "Dorothy approaching the cage"
+  ],
+  "exit_vectors": [
+    "Winkies moving toward feast tables"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Release of tension via physical liberation",
+    "BT002 -> BT003: Shift from speech to communal celebration"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "Winkies",
+      "canonical_id": "winkies",
+      "display_name": "Winkies",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/winkies.md",
+      "notes": "Direct registry match for 'winkies'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Yellow Castle (Interior/Courtyard)",
+      "canonical_id": "yellow_castle",
+      "display_name": "yellow_castle",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/yellow_castle.md",
+      "notes": "Direct registry match for 'yellow_castle'."
+    }
+  ],
+  "continuity_constraints": [
+    "Physical state and latch mechanism of the Lion's cage",
+    "Implied absence or removal of the Witch's remains"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of the castle courtyard during the feast",
+    "Close-ups of Dorothy's declaration",
+    "Medium shots of the Lion being released from his cage"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The release of the Lion",
+      "purpose": "",
+      "action_start": "Dorothy approaches the cage",
+      "action_end": "Lion steps free from the cage",
+      "active_subjects": [
+        "dorothy",
+        "cowardly_lion"
+      ],
+      "passive_subjects": [
+        "winkies"
+      ],
+      "spatial_context": "Cage zone within the castle",
+      "blocking_hint": "Dorothy at the bars, Lion inside",
+      "environment_subzone": "cage zone",
+      "continuity_focus": "Cage latch state and door position",
+      "coverage_hint": "Medium shots of release",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Declaration of Freedom",
+      "purpose": "",
+      "action_start": "Dorothy turns to the crowd",
+      "action_end": "The Winkies react to the news",
+      "active_subjects": [
+        "dorothy",
+        "winkies"
+      ],
+      "passive_subjects": [
+        "cowardly_lion"
+      ],
+      "spatial_context": "In front of the cage/crowd",
+      "blocking_hint": "Dorothy center-frame facing outward",
+      "environment_subzone": "cage zone",
+      "continuity_focus": "Dorothy's white clothing visibility",
+      "coverage_hint": "Close-ups of declaration",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Liberation Feast",
+      "purpose": "",
+      "action_start": "Cheering begins",
+      "action_end": "Feast is in full swing",
+      "active_subjects": [
+        "winkies"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "cowardly_lion"
+      ],
+      "spatial_context": "Yellow Castle courtyard",
+      "blocking_hint": "Winkies seated/standing at tables",
+      "environment_subzone": "courtyard feast area",
+      "continuity_focus": "Presence of food and feast items",
+      "coverage_hint": "Wide shots of the courtyard",
+      "coverage_priority": "medium",
+      "handoff_to_next": "none"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish captivity",
+      "planned_shot_moment_summary": "Dorothy approaching the cage",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "cage zone",
+      "planned_shot_required_anchor_1": "Lion's cage",
+      "planned_shot_scale_proof_detail": "Cage occupies significant foreground depth",
+      "start_state_seed": "Dorothy near cage",
+      "end_state_seed": "Cage door opens",
+      "action_seed": "Dorothy unlocks/opens cage",
+      "blocking_seed": [
+        "Dorothy stands at cage bars"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "deliver political shift",
+      "planned_shot_moment_summary": "Dorothy's declaration to the Winkies",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "winkies"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "cage zone",
+      "planned_shot_required_anchor_1": "Lion's cage",
+      "planned_shot_scale_proof_detail": "Dorothy is framed against the crowd",
+      "start_state_seed": "Dorothy speaking",
+      "end_state_seed": "Dorothy finishing declaration",
+      "action_seed": "Dorothy announces freedom",
+      "blocking_seed": [
+        "Dorothy facing the Winkies"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish new status quo",
+      "planned_shot_moment_summary": "The Winkies celebrating at the feast",
+      "primary_subject_seed": "winkies",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "courtyard feast area",
+      "planned_shot_required_anchor_1": "Feast tables",
+      "planned_shot_scale_proof_detail": "Wide view of courtyard architecture and crowd density",
+      "start_state_seed": "Crowd cheering",
+      "end_state_seed": "Feast in progress",
+      "action_seed": "Winkies eating and celebrating",
+      "blocking_seed": [
+        "Winkies gathered around tables"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH013",
+      "scene_id": "CH013_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH013",
+      "scene_id": "CH013_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH013",
+      "scene_id": "CH013_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH013",
+      "scene_id": "CH013_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH013",
+      "scene_id": "CH013_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH013",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH013",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH013_chapter_xiii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH014_chapter_xiv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH013",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH013_SC001] Purpose: To establish the immediate aftermath of the Witch's death and the shift in political power.",
+    "[CH013_SC001] Summary: Dorothy frees the Cowardly Lion from his cage and announces to the Winkies that they are no longer slaves. The Winkies celebrate their liberation with a feast at the Yellow Castle.",
+    "[CH013_SC001] Emotional arc: From tension/captivity to jubilation and relief.",
+    "[CH013_SC001] Coverage: Wide shots of the castle courtyard during the feast. Close-ups of Dorothy's declaration. Medium shots of the Lion being released from his cage.",
+    "[CH013_SC001] Continuity: The state of the Lion's cage; the presence/absence of the Witch's remains (implied).",
+    "[CH013] Chapter summary: **Setting:** The Yellow Castle in the Land of the West; a rocky plain; a tall tree with a smooth trunk. **Characters:** Dorothy, the Cowardly Lion, the Tin Woodman, the Scarecrow, the Winkies (Yellow People), and the...",
+    "[CH012] Chapter XII (book index hit)",
+    "[CH013] Chapter XIII (book index hit)",
+    "[CH014] Chapter XIV (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH013_SC001\n\n## Production Intent\nEstablish the immediate political transition following the Witch's death by transitioning from a state of captivity to communal liberation. The visual narrative must move from the localized tension of a cage release to the expansive scale of a celebratory feast within the Yellow Castle courtyard.\n\n## Required Cast\n- dorothy (Young human girl, white clothing/dress)\n- cowardly_lion (Released from cage)\n- winkies (Yellow People, celebrating)\n\n## Required Environments\n- yellow_castle (Interior/Courtyard, featuring cage zone and feast area)\n\n## Continuity Constraints\n- Physical state and latch mechanism of the Lion's cage.\n- Implied absence or removal of the Witch's remains.\n\n## Beat List\n- BT001: The release of the Lion.\n- BT002: The Declaration of Freedom.\n- BT003: The Liberation Feast.",
+  "metadata": {
+    "artifact_id": "CH013_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "7b2bded023138292a172ea027d817814d6526e84",
+    "created_at_utc": "2026-04-27T08:38:28.195301+00:00",
+    "updated_at_utc": "2026-04-27T08:38:28.195301+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH013_SC001",
+        "version": "0f2738e9037f70d71ebc1050be08dfbb4bb8cb73"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH013_SC001",
+        "version": "9351b95fb6d6602322558c2092a5b7bfec40ef2a"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH013_SC001",
+        "version": "65465af4939456a88da8b632911c1074ce42859d"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:39:09.643636+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "7b2bded023138292a172ea027d817814d6526e84"
+      }
+    ]
+  }
+}

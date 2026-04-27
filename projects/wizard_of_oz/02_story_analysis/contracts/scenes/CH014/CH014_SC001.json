@@ -1,0 +1,378 @@
+{
+  "scene_id": "CH014_SC001",
+  "chapter_id": "CH014",
+  "scene_title": "SC001",
+  "purpose": "Establish the group's state of exhaustion and disorientation.",
+  "summary": "Dorothy, Scarecrow, Tin Woodman, Cowardly Lion, and Toto wander aimlessly through a vast, overwhelming field of scarlet buttercups and yellow daisies. Without the Yellow Brick Road to guide them, they are lost and losing hope.",
+  "emotional_arc": "Hopeful/Determined $\\rightarrow$ Despair/Exhaustion.",
+  "production_intent": "Establish the overwhelming scale of the scarlet flower fields to visually dwarf the characters, emphasizing their loss of direction and physical depletion. The environment must feel endless and repetitive to mirror the group's psychological state.",
+  "scene_short_description": "A weary group wanders aimlessly through a vast, endless expanse of scarlet buttercups and yellow daisies.",
+  "scene_primary_scale_story_point": "The landscape scale dwarfs the character group to emphasize isolation.",
+  "scene_required_anchor_catalog": [
+    "scarlet_flower_fields"
+  ],
+  "scene_start_state": "Characters moving with purpose but showing early signs of fatigue.",
+  "scene_end_state": "Characters stumbling and slowing, visually defeated by the environment.",
+  "dominant_action_line": "The group wanders aimlessly through the flowers without a path.",
+  "scene_spatial_layout": [
+    "Non-linear movement through dense floral clusters",
+    "No visible road or guiding structure"
+  ],
+  "character_spatial_map": [
+    "dorothy leads or stays central to the cluster",
+    "cowardly_lion and tin_woodman trail with heavy movements",
+    "toto moves between character legs"
+  ],
+  "environment_subzones": [
+    "scarlet_flower_fields_foreground",
+    "scarlet_flower_fields_horizon"
+  ],
+  "entry_vectors": [
+    "Unspecified floral path"
+  ],
+  "exit_vectors": [
+    "Unspecified floral path"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Transition from movement to realization of being lost",
+    "BT002 -> BT003: Transition from disorientation to physical collapse/exhaustion"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH014/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH014/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH014/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH014/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH014/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Scarlet Fields (vast flower fields)",
+      "canonical_id": "scarlet_flower_fields",
+      "display_name": "scarlet_flower_fields",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 136,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH014/scarlet_flower_fields.md",
+      "notes": "Chapter-local environment alias match for 'The Scarlet Fields (vast flower fields)' (key_overlap=3, label_overlap=4, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Consistent direction of travel through flower beds",
+    "Tin Woodman physical state (rust/stiff movement)",
+    "Cowardly Lion heavy panting and breath rhythm"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of massive landscape for scale",
+    "Medium tracking shots of weary movement",
+    "Close-ups on faces showing fatigue"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Wandering through the fields",
+      "purpose": "",
+      "action_start": "group walking with intent",
+      "action_end": "group spreading out across flowers",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "scarlet_flower_fields_foreground",
+      "blocking_hint": "loose group movement through dense flora",
+      "environment_subzone": "scarlet_flower_fields_foreground",
+      "continuity_focus": "direction of travel",
+      "coverage_hint": "wide shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Realization of being lost",
+      "purpose": "",
+      "action_start": "walking rhythm",
+      "action_end": "searching gaze",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "cowardly_lion"
+      ],
+      "passive_subjects": [
+        "tin_woodman",
+        "toto"
+      ],
+      "spatial_context": "scarlet_flower_fields_foreground",
+      "blocking_hint": "characters stop and turn heads in different directions",
+      "environment_subzone": "scarlet_flower_fields_foreground",
+      "continuity_focus": "absence of Yellow Brick Road",
+      "coverage_hint": "medium tracking",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Physical collapse/exhaustion",
+      "purpose": "",
+      "action_start": "searching gaze",
+      "action_end": "slumped/heavy movement",
+      "active_subjects": [
+        "cowardly_lion",
+        "tin_woodman",
+        "dorothy"
+      ],
+      "passive_subjects": [
+        "the_scarecrow",
+        "toto"
+      ],
+      "spatial_context": "scarlet_flower_fields_foreground",
+      "blocking_hint": "characters slowing to a crawl or stopping to breathe",
+      "environment_subzone": "scarlet_flower_fields_foreground",
+      "continuity_focus": "lion panting and tin_woodman rust/stiffness",
+      "coverage_hint": "close-ups",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale",
+      "planned_shot_moment_summary": "group enters the vast field",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "scarlet_flower_fields_foreground",
+      "planned_shot_required_anchor_1": "scarlet_flower_fields",
+      "planned_shot_scale_proof_detail": "characters appear small against the horizon",
+      "start_state_seed": "group walking upright",
+      "end_state_seed": "group spreading out",
+      "action_seed": "wandering through flowers",
+      "blocking_seed": [
+        "loose cluster formation"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show disorientation",
+      "planned_shot_moment_summary": "characters stop and look around aimlessly",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "scarlet_flower_fields_foreground",
+      "planned_shot_required_anchor_1": "scarlet_flower_fields",
+      "planned_shot_scale_proof_detail": "repetitive flower patterns in all directions",
+      "start_state_seed": "walking",
+      "end_state_seed": "standing still",
+      "action_seed": "searching for the Yellow Brick Road",
+      "blocking_seed": [
+        "characters breaking formation to look around"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "show exhaustion",
+      "planned_shot_moment_summary": "close up on weary faces and heavy breathing",
+      "primary_subject_seed": "cowardly_lion",
+      "secondary_subjects_seed": [
+        "tin_woodman",
+        "dorothy"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "scarlet_flower_fields_foreground",
+      "planned_shot_required_anchor_1": "scarlet_flower_fields",
+      "planned_shot_scale_proof_detail": "n/a",
+      "start_state_seed": "searching",
+      "end_state_seed": "slumping",
+      "action_seed": "panting and heavy movement",
+      "blocking_seed": [
+        "characters slowing down significantly"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH014_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH006",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH005",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH014",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH014_SC001] Purpose: Establish the group's state of exhaustion and disorientation.",
+    "[CH014_SC001] Summary: Dorothy, Scarecrow, Tin Woodman, Cowardly Lion, and Toto wander aimlessly through a vast, overwhelming field of scarlet buttercups and yellow daisies. Without the Yellow Brick Road to guide them, they are lost and losing hope.",
+    "[CH014_SC001] Emotional arc: Hopeful/Determined $\\rightarrow$ Despair/Exhaustion.",
+    "[CH014_SC001] Coverage: Wide shots of the massive landscape to emphasize scale; medium tracking shots of the group's weary movement; close-ups on faces showing fatigue.",
+    "[CH014_SC001] Continuity: Direction of travel through the flowers; physical state of the Tin Woodman (rust/movement) and Lion (panting).",
+    "[CH014] Chapter summary: **Setting:** The vast, scarlet fields of buttercups and yellow daisies between the Wicked Witch's castle and the Emerald City; later, the air above the landscape during flight. **Characters:** - **Dorothy:** Uses the...",
+    "[CH006] Chapter VI (book index hit)",
+    "[CH002] Chapter II (book index hit)",
+    "[CH005] Chapter V (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH014_SC001\n\n## Production Intent\nEstablish the overwhelming scale of the scarlet flower fields to visually dwarf the characters, emphasizing their loss of direction and physical depletion. The environment must feel endless and repetitive to mirror the group's psychological state.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n\n## Required Environments\n- scarlet_flower_fields\n\n## Continuity Constraints\n- Consistent direction of travel through flower beds\n- Tin Woodman physical state (rust/stiff movement)\n- Cowardly Lion heavy panting and breath rhythm\n\n## Beat List\n- BT001: Wandering through the fields\n- BT002: Realization of being lost\n- BT003: Physical collapse/exhaustion",
+  "metadata": {
+    "artifact_id": "CH014_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "6eebb5a1037c7ffa17e51a5a3eacd6d1a3dd81ce",
+    "created_at_utc": "2026-04-27T08:41:22.610161+00:00",
+    "updated_at_utc": "2026-04-27T08:41:22.610161+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH014_SC001",
+        "version": "0866368999a8908325315d2422d579b55849db91"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH014_SC001",
+        "version": "e2b5d32915d374af2d137f76e7c410b09abc5d5a"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH014_SC001",
+        "version": "c1e402767ccda7af5ab3e36a7c0536bc05123740"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:42:04.673562+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "6eebb5a1037c7ffa17e51a5a3eacd6d1a3dd81ce"
+      }
+    ]
+  }
+}

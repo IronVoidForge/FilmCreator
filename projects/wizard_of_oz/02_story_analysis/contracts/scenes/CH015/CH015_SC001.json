@@ -1,0 +1,374 @@
+{
+  "scene_id": "CH015_SC001",
+  "chapter_id": "CH015",
+  "scene_title": "SC001",
+  "purpose": "Establish the group's new status and their demand for justice/fulfillment of promises.",
+  "summary": "Dorothy and her companions arrive at the Emerald City gates, triumphant after defeating the Wicked Witch. They confront the authorities, demanding to see the Wizard to claim the rewards promised to them.",
+  "emotional_arc": "Triumph $\\rightarrow$ Impatience/Demanding.",
+  "production_intent": "Establish the group's transition from travelers to claimants by presenting their physical wear against the grandeur of the Emerald City. The scene must emphasize the shift from the triumph of defeating the Wicked Witch to the frustration of bureaucratic delay at the gates.",
+  "scene_short_description": "A weary but triumphant group approaches massive gates to demand promised rewards.",
+  "scene_primary_scale_story_point": "The small scale of the travelers against the massive emerald_city_gates.",
+  "scene_required_anchor_catalog": [
+    "emerald_city_gates",
+    "guardian_of_the_gates"
+  ],
+  "scene_start_state": "The group approaches the gates, visibly triumphant but physically exhausted.",
+  "scene_end_state": "A tense standoff between the travelers and the authority figure.",
+  "dominant_action_line": "Demanding access to the Wizard to claim promised rewards.",
+  "scene_spatial_layout": [
+    "Open approach leading to a massive vertical barrier",
+    "Confrontation zone directly in front of the gate entrance"
+  ],
+  "character_spatial_map": [
+    "dorothy, the_scarecrow, tin_woodman, cowardly_lion positioned as a unified group",
+    "guardian_of_the_gates positioned as a barrier between the group and the city"
+  ],
+  "environment_subzones": [
+    "approach_path",
+    "gate_threshold"
+  ],
+  "entry_vectors": [
+    "approach_path (from West)"
+  ],
+  "exit_vectors": [
+    "approach_path (retreat or continued waiting)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Arrival and visual establishment of status",
+    "BT002 -> BT003: Transition from triumph to confrontation"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH015/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH015/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH015/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "Guardian of the Gates",
+      "canonical_id": "guardian_of_the_gates",
+      "display_name": "guardian_of_the_gates",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH015/guardian_of_the_gates.md",
+      "notes": "Direct registry match for 'guardian_of_the_gates'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Great Gate of the Emerald City",
+      "canonical_id": "emerald_city_gates",
+      "display_name": "emerald_city_gates",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 102,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH015/emerald_city_gates.md",
+      "notes": "Chapter-local environment alias match for 'The Great Gate of the Emerald City' (key_overlap=2, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Companions must exhibit dirt and wear from the journey from the West",
+    "Dorothy in white clothing/dress"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of the group approaching the gate",
+    "Medium shots of the confrontation with the Guardian",
+    "Close-ups on Dorothy's determination"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Arrival at the gates",
+      "purpose": "",
+      "action_start": "group enters frame approaching gate",
+      "action_end": "group stops before the threshold",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "passive_subjects": [
+        "guardian_of_the_gates"
+      ],
+      "spatial_context": "approach_path",
+      "blocking_hint": "group moves in a cluster",
+      "environment_subzone": "approach_path",
+      "continuity_focus": "dirt and wear on clothing/surfaces",
+      "coverage_hint": "wide shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Confrontation",
+      "purpose": "",
+      "action_start": "guardian steps forward or is revealed",
+      "action_end": "verbal exchange begins",
+      "active_subjects": [
+        "guardian_of_the_gates",
+        "dorothy"
+      ],
+      "passive_subjects": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "spatial_context": "gate_threshold",
+      "blocking_hint": "guardian stands as a vertical obstacle",
+      "environment_subzone": "gate_threshold",
+      "continuity_focus": "group's physical state vs gate grandeur",
+      "coverage_hint": "medium shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Demand",
+      "purpose": "",
+      "action_start": "dorothy speaks up",
+      "action_end": "tension peaks as demand is made",
+      "active_subjects": [
+        "dorothy",
+        "guardian_of_the_gates"
+      ],
+      "passive_subjects": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "spatial_context": "gate_threshold",
+      "blocking_hint": "dorothy steps forward from the group",
+      "environment_subzone": "gate_threshold",
+      "continuity_focus": "dorothy's white dress vs dirt",
+      "coverage_hint": "close-ups",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale and arrival",
+      "planned_shot_moment_summary": "group walking toward the massive gates",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "approach_path",
+      "planned_shot_required_anchor_1": "emerald_city_gates",
+      "planned_shot_scale_proof_detail": "group size relative to gate height",
+      "start_state_seed": "wide view of approach",
+      "end_state_seed": "group reaches threshold",
+      "action_seed": "walking with triumphant gait",
+      "blocking_seed": [
+        "linear progression toward camera/gate"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "establish confrontation",
+      "planned_shot_moment_summary": "guardian blocks the path",
+      "primary_subject_seed": "guardian_of_the_gates",
+      "secondary_subjects_seed": [
+        "dorothy"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "gate_threshold",
+      "planned_shot_required_anchor_1": "emerald_city_gates",
+      "planned_shot_scale_proof_detail": "height of guardian vs group",
+      "start_state_seed": "medium shot of gate",
+      "end_state_seed": "medium shot of confrontation",
+      "action_seed": "guardian stands firm",
+      "blocking_seed": [
+        "guardian centered",
+        "group facing him"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "character motivation",
+      "planned_shot_moment_summary": "dorothy demands justice",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "gate_threshold",
+      "planned_shot_required_anchor_1": "emerald_city_gates",
+      "planned_shot_scale_proof_detail": "facial expression detail",
+      "start_state_seed": "close up on eyes",
+      "end_state_seed": "close up on mouth speaking",
+      "action_seed": "speaking with determination",
+      "blocking_seed": [
+        "stationary facing guardian"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH015",
+      "scene_id": "CH015_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH015",
+      "scene_id": "CH015_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH015",
+      "scene_id": "CH015_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH015",
+      "scene_id": "CH015_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH015",
+      "scene_id": "CH015_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH015",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH015_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH015",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH023",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH023_chapter_xxiii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH015",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH015_SC001] Purpose: Establish the group's new status and their demand for justice/fulfillment of promises.",
+    "[CH015_SC001] Summary: Dorothy and her companions arrive at the Emerald City gates, triumphant after defeating the Wicked Witch. They confront the authorities, demanding to see the Wizard to claim the rewards promised to them.",
+    "[CH015_SC001] Emotional arc: Triumph $\\rightarrow$ Impatience/Demanding.",
+    "[CH015_SC001] Coverage: Wide shots of the group approaching the gate; medium shots of the confrontation with the Guardian; close-ups on Dorothy's determination.",
+    "[CH015_SC001] Continuity: The physical state of the companions (dirt, wear) following their journey from the West.",
+    "[CH015] Chapter summary: **Summary:** After returning to the Emerald City and reporting the death of the Wicked Witch of the West, Dorothy and her companions demand that the Wizard fulfill his promises. After a period of tense waiting and a t...",
+    "[CH015] Chapter XV (book index hit)",
+    "[CH011] Chapter XI (book index hit)",
+    "[CH023] Chapter XXIII (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH015_SC001\n\n## Production Intent\nEstablish the group's transition from travelers to claimants by presenting their physical wear against the grandeur of the Emerald City. The scene must emphasize the shift from the triumph of defeating the Wicked Witch to the frustration of bureaucratic delay at the gates.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- guardian_of_the_gates\n\n## Required Environments\n- emerald_city_gates\n\n## Continuity Constraints\n- Companions must exhibit dirt and wear from the journey from the West\n- Dorothy in white clothing/dress\n\n## Beat List\n- BT001: Arrival at the gates\n- BT002: The Confrontation\n- BT003: The Demand",
+  "metadata": {
+    "artifact_id": "CH015_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "f2d82c75de011c745dfa3768daae71a3b03e9c02",
+    "created_at_utc": "2026-04-27T08:44:58.191202+00:00",
+    "updated_at_utc": "2026-04-27T08:44:58.191202+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH015_SC001",
+        "version": "d37135b2bf6128867dbfc461c37480c63c6db803"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH015_SC001",
+        "version": "82c5ba43ff240f2be18f73b6e009aa964749046e"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH015_SC001",
+        "version": "89fae152a4a498dbd7f6712e890e783f011a9587"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:45:39.854744+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "f2d82c75de011c745dfa3768daae71a3b03e9c02"
+      }
+    ]
+  }
+}

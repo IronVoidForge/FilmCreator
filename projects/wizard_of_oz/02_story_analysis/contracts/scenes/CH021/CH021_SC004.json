@@ -1,0 +1,330 @@
+{
+  "scene_id": "CH021_SC004",
+  "chapter_id": "CH021",
+  "scene_title": "SC004",
+  "purpose": "Build suspense and escalate the tension toward the climax.",
+  "summary": "The Lion moves through the forest, tracking the monster. He eventually locates the creature sleeping in an oak grove.",
+  "emotional_arc": "Tension and suspense.",
+  "production_intent": "Establish a predatory tracking sequence through dense forest terrain to build tension. The visual progression moves from the Lion's active movement and sensory perception to the discovery of the massive, sleeping great_spider_monster within an oak grove.",
+  "scene_short_description": "A predator tracks a massive sleeping arachnid through an ancient, mossy oak grove.",
+  "scene_primary_scale_story_point": "The great_spider_monster is massive in scale relative to the Lion.",
+  "scene_required_anchor_catalog": [
+    "thick mossy tree trunks",
+    "oak canopy dappled light"
+  ],
+  "scene_start_state": "Lion moving through dense forest undergrowth.",
+  "scene_end_state": "Lion frozen, observing the sleeping great_spider_monster.",
+  "dominant_action_line": "The Lion tracks and locates the sleeping monster.",
+  "scene_spatial_layout": [
+    "Dense ancient forest with massive trees and thick moss",
+    "Open oak grove containing the lair"
+  ],
+  "character_spatial_map": [
+    "Lion moves through mid-ground forest layers",
+    "great_spider_monster occupies large portion of oak grove floor"
+  ],
+  "environment_subzones": [
+    "dense_forest_undergrowth",
+    "oak_grove_monstrous_lair"
+  ],
+  "entry_vectors": [
+    "forest_pathway"
+  ],
+  "exit_vectors": [
+    "forest_pathway"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: tracking movement to discovery",
+    "BT002 -> BT003: discovery to close observation"
+  ],
+  "characters_required": [
+    {
+      "label": "Lion",
+      "canonical_id": null,
+      "display_name": "Lion",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 10,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "Great Spider Monster (sleeping)",
+      "canonical_id": "great_spider_monster",
+      "display_name": "great_spider_monster",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/great_spider_monster.md",
+      "notes": "Direct registry match for 'great_spider_monster'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Oak Grove",
+      "canonical_id": "oak_grove_monstrous_lair",
+      "display_name": "oak_grove_monstrous_lair",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 104,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH021/oak_grove_monstrous_lair.md",
+      "notes": "Chapter-local environment alias match for 'Oak Grove' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Dappled sunlight through oak canopy",
+    "Physical scale relationship between Lion and great_spider_monster"
+  ],
+  "visual_coverage_families": [
+    "POV shots from Lion perspective",
+    "Slow tracking shots through trees",
+    "Extreme close-ups of monster breathing/movements"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Lion tracks through the forest",
+      "purpose": "",
+      "action_start": "Lion enters dense undergrowth",
+      "action_end": "Lion pauses to listen/scent",
+      "active_subjects": [
+        "Lion"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "dense_forest_undergrowth",
+      "blocking_hint": "moving between massive tree trunks",
+      "environment_subzone": "dense_forest_undergrowth",
+      "continuity_focus": "dappled sunlight through canopy",
+      "coverage_hint": "tracking shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Discovery of the lair",
+      "purpose": "",
+      "action_start": "Lion breaks into the oak grove",
+      "action_end": "Lion freezes upon seeing the monster",
+      "active_subjects": [
+        "Lion"
+      ],
+      "passive_subjects": [
+        "great_spider_monster"
+      ],
+      "spatial_context": "oak_grove_monstrous_lair",
+      "blocking_hint": "Lion at edge of clearing, monster in center",
+      "environment_subzone": "oak_grove_monstrous_lair",
+      "continuity_focus": "scale comparison between Lion and monster limbs",
+      "coverage_hint": "wide/POV",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Observing the sleeping threat",
+      "purpose": "",
+      "action_start": "Lion remains still",
+      "action_end": "Monster shifts slightly in sleep",
+      "active_subjects": [
+        "great_spider_monster"
+      ],
+      "passive_subjects": [
+        "Lion"
+      ],
+      "spatial_context": "oak_grove_monstrous_lair",
+      "blocking_hint": "Lion hidden in shadows, monster center frame",
+      "environment_subzone": "oak_grove_monstrous_lair",
+      "continuity_focus": "rhythmic breathing movement",
+      "coverage_hint": "extreme close-ups",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish tracking",
+      "planned_shot_moment_summary": "Lion moving through thick moss and trees",
+      "primary_subject_seed": "Lion",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "dense_forest_undergrowth",
+      "planned_shot_required_anchor_1": "thick mossy tree trunks",
+      "planned_shot_scale_proof_detail": "Lion size relative to massive trees",
+      "start_state_seed": "Lion entering frame",
+      "end_state_seed": "Lion pausing mid-stride",
+      "action_seed": "walking/tracking",
+      "blocking_seed": [
+        "moving through forest layers"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "reveal scale",
+      "planned_shot_moment_summary": "Lion enters the oak grove and sees the monster",
+      "primary_subject_seed": "great_spider_monster",
+      "secondary_subjects_seed": [
+        "Lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "oak_grove_monstrous_lair",
+      "planned_shot_required_anchor_1": "oak canopy dappled light",
+      "planned_shot_scale_proof_detail": "Monster limbs spanning wide area",
+      "start_state_seed": "Lion looking into grove",
+      "end_state_seed": "Wide view of monster",
+      "action_seed": "discovery",
+      "blocking_seed": [
+        "Lion stops at edge of grove"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "escalate tension",
+      "planned_shot_moment_summary": "Extreme close up of monster breathing",
+      "primary_subject_seed": "great_spider_monster",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "oak_grove_monstrous_lair",
+      "planned_shot_required_anchor_1": "mossy ground",
+      "planned_shot_scale_proof_detail": "Texture of monster skin/legs vs moss",
+      "start_state_seed": "Close on monster limb",
+      "end_state_seed": "Close on breathing movement",
+      "action_seed": "breathing/twitching",
+      "blocking_seed": [
+        "stationary"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "telephoto",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Lion -> Lion"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH021_chapter_xxi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH006",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH021",
+      "canonical_id": "great_spider_monster"
+    }
+  ],
+  "evidence_summary": [
+    "[CH021_SC004] Purpose: Build suspense and escalate the tension toward the climax.",
+    "[CH021_SC004] Summary: The Lion moves through the forest, tracking the monster. He eventually locates the creature sleeping in an oak grove.",
+    "[CH021_SC004] Emotional arc: Tension and suspense.",
+    "[CH021_SC004] Coverage: Point-of-view shots from the Lion's perspective; slow tracking shots through trees; extreme close-ups of the sleeping monster's breathing/movements.",
+    "[CH021_SC004] Continuity: Lighting (dappled sunlight through oaks); the physical scale of the monster relative to the Lion.",
+    "[CH021] Chapter summary: **Setting:** A disagreeable country of bogs and marshes, leading into a vast, ancient forest filled with massive trees and thick moss. **Characters:** Dorothy, Toto, the Scarecrow, the Tin Woodman, the Lion, various f...",
+    "[CH007] Chapter VII (book index hit)",
+    "[CH021] Chapter XXI (book index hit)",
+    "[CH006] Chapter VI (book index hit)",
+    "Character great_spider_monster: A giant, multi-legged monster of arachnid morphology. The entity is characterized by its massive scale and non-humanoid, multi-limbed structure."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH021_SC004\n\n## Production Intent\nEstablish a predatory tracking sequence through dense forest terrain to build tension. The visual progression moves from the Lion's active movement and sensory perception to the discovery of the massive, sleeping great_spider_monster within an oak grove.\n\n## Required Cast\n- Lion\n- great_spider_monster (sleeping)\n\n## Required Environments\n- oak_grove_monstrous_lair (Ancient forest with massive trees, thick moss, and dappled sunlight)\n\n## Continuity Constraints\n- Lighting: Dappled sunlight through oak canopy must remain consistent.\n- Scale: The physical scale of the great_spider_monster must be significantly larger than the Lion.\n\n## Beat List\n- BT001: Lion tracks through the forest.\n- BT002: Discovery of the lair.\n- BT003: Observing the sleeping threat.",
+  "metadata": {
+    "artifact_id": "CH021_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "10e6fe532a4e4cbd120cf1752ee709db1e6ce118",
+    "created_at_utc": "2026-04-27T09:07:05.568177+00:00",
+    "updated_at_utc": "2026-04-27T09:07:05.568177+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH021_SC004",
+        "version": "5379429d81f7250878b4bc00f93234a852cdb982"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH021_SC004",
+        "version": "b0f27aabad10215c24c935cfda5b47a73fe53c8e"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH021_SC004",
+        "version": "11872de3034f606fbfd27ce536f42223f7a7545d"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T09:07:46.155582+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "10e6fe532a4e4cbd120cf1752ee709db1e6ce118"
+      }
+    ]
+  }
+}

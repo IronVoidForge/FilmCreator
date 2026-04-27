@@ -1,0 +1,373 @@
+{
+  "scene_id": "CH020_SC004",
+  "chapter_id": "CH020",
+  "scene_title": "SC004",
+  "purpose": "Add character texture and a moment of levity/absurdity to the journey.",
+  "summary": "The group encounters Mr. Joker, a cracked China Clown whose appearance is a result of his own foolishness (standing on his head too often).",
+  "emotional_arc": "Tension $\\rightarrow$ Bewilderment/Amusement.",
+  "production_intent": "Introduce the fragile, porcelain nature of the Dainty China Country through a character encounter that shifts from high tension to absurd amusement. The interaction must emphasize the physical vulnerability of the inhabitants and the specific history of mr_joker's cracks.",
+  "scene_short_description": "A group of travelers encounters a cracked porcelain clown on a smooth white platter floor.",
+  "scene_primary_scale_story_point": "Fragile porcelain inhabitants relative to the vast, smooth white platter-like ground.",
+  "scene_required_anchor_catalog": [
+    "smooth white platter floor",
+    "tiny colorful china houses"
+  ],
+  "scene_start_state": "The group moves cautiously across the white expanse, sensing potential danger.",
+  "scene_end_state": "The group stands in a state of bewildered amusement facing mr_joker.",
+  "dominant_action_line": "The travelers encounter and react to the absurd appearance of mr_joker.",
+  "scene_spatial_layout": [
+    "Open, flat expanse of white porcelain floor",
+    "Scattered tiny colorful china houses providing scale reference"
+  ],
+  "character_spatial_map": [
+    "dorothy, the_scarecrow, tin_woodman, cowardly_lion clustered in a defensive group",
+    "mr_joker positioned centrally as the point of encounter"
+  ],
+  "environment_subzones": [
+    "white platter floor",
+    "china house cluster"
+  ],
+  "entry_vectors": [
+    "travel path across the white expanse"
+  ],
+  "exit_vectors": [
+    "continued path through dainty_china_country"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: sudden encounter/tension spike",
+    "BT002 -> BT003: realization of absurdity/amusement"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH020/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH020/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH020/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH020/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "Mr. Joker",
+      "canonical_id": "mr_joker",
+      "display_name": "mr_joker",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH020/mr_joker.md",
+      "notes": "Direct registry match for 'mr_joker'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Dainty China Country",
+      "canonical_id": "dainty_china_country",
+      "display_name": "dainty_china_country",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH020/dainty_china_country.md",
+      "notes": "Direct registry match for 'dainty_china_country'."
+    }
+  ],
+  "continuity_constraints": [
+    "Exact pattern and placement of cracks on mr_joker"
+  ],
+  "visual_coverage_families": [
+    "Medium shots of group reaction to mr_joker",
+    "Close-ups on mr_joker crack patterns"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The group encounters mr_joker amidst tension",
+      "purpose": "",
+      "action_start": "group walking cautiously",
+      "action_end": "group stops in alarm",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "passive_subjects": [
+        "mr_joker"
+      ],
+      "spatial_context": "white platter floor near china houses",
+      "blocking_hint": "defensive group cluster",
+      "environment_subzone": "white platter floor",
+      "continuity_focus": "group formation",
+      "coverage_hint": "wide shot of encounter",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Discovery of mr_joker's appearance",
+      "purpose": "",
+      "action_start": "tension peak",
+      "action_end": "visual focus on cracks",
+      "active_subjects": [
+        "mr_joker"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "spatial_context": "center of white floor",
+      "blocking_hint": "mr_joker stationary",
+      "environment_subzone": "white platter floor",
+      "continuity_focus": "crack pattern on mr_joker",
+      "coverage_hint": "close-up on cracks",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Shift to bewilderment and amusement",
+      "purpose": "",
+      "action_start": "visual realization of absurdity",
+      "action_end": "group relaxes into amusement",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "passive_subjects": [
+        "mr_joker"
+      ],
+      "spatial_context": "facing mr_joker",
+      "blocking_hint": "loosening group formation",
+      "environment_subzone": "white platter floor",
+      "continuity_focus": "facial expressions",
+      "coverage_hint": "medium reaction shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end of scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish tension",
+      "planned_shot_moment_summary": "group spotting mr_joker in the distance",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "white platter floor",
+      "planned_shot_required_anchor_1": "smooth white platter floor",
+      "planned_shot_scale_proof_detail": "tiny china houses for scale",
+      "start_state_seed": "group walking",
+      "end_state_seed": "group stopping abruptly",
+      "action_seed": "group halts in caution",
+      "blocking_seed": [
+        "group formation tight"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "reveal character detail",
+      "planned_shot_moment_summary": "close up of mr_joker's cracks",
+      "primary_subject_seed": "mr_joker",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "white platter floor",
+      "planned_shot_required_anchor_1": "mr_joker",
+      "planned_shot_scale_proof_detail": "crack texture vs porcelain surface",
+      "start_state_seed": "static clown",
+      "end_state_seed": "clown standing still",
+      "action_seed": "reveal the foolishness of the cracks",
+      "blocking_seed": [
+        "centered"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "capture reaction",
+      "planned_shot_moment_summary": "group reacting with bewilderment",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "white platter floor",
+      "planned_shot_required_anchor_1": "smooth white platter floor",
+      "planned_shot_scale_proof_detail": "human vs china scale",
+      "start_state_seed": "tense faces",
+      "end_state_seed": "amused/bewildered faces",
+      "action_seed": "group shifts from fear to amusement",
+      "blocking_seed": [
+        "medium group shot"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH020",
+      "scene_id": "CH020_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH020",
+      "scene_id": "CH020_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH020",
+      "scene_id": "CH020_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH020",
+      "scene_id": "CH020_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH020",
+      "scene_id": "CH020_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH020",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH020_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH020",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH020_chapter_xx.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH005",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH020",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH020_SC004] Purpose: Add character texture and a moment of levity/absurdity to the journey.",
+    "[CH020_SC004] Summary: The group encounters Mr. Joker, a cracked China Clown whose appearance is a result of his own foolishness (standing on his head too often).",
+    "[CH020_SC004] Emotional arc: Tension $\\rightarrow$ Bewilderment/Amusement.",
+    "[CH020_SC004] Coverage: Medium shots of the group reacting to the clown. Close-ups on Mr. Joker's cracks to show his \"foolish\" history.",
+    "[CH020_SC004] Continuity: The pattern of cracks on Mr. Joker.",
+    "[CH020] Chapter summary: **Setting:** The Dainty China Country, a land characterized by a smooth, white, platter-like floor, tiny colorful china houses, and inhabitants made entirely of fragile porcelain. **Characters:** - Dorothy - Scarecrow...",
+    "[CH020] Chapter XX (book index hit)",
+    "[CH003] Chapter III (book index hit)",
+    "[CH005] Chapter V (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH020_SC004\n\n## Production Intent\nIntroduce the fragile, porcelain nature of the Dainty China Country through a character encounter that shifts from high tension to absurd amusement. The interaction must emphasize the physical vulnerability of the inhabitants and the specific history of mr_joker's cracks.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- mr_joker\n\n## Required Environments\n- dainty_china_country (specifically the white platter floor and tiny china houses)\n\n## Continuity Constraints\n- The pattern of cracks on mr_joker must remain consistent across all coverage.\n\n## Beat List\n- BT001: Group encounters mr_joker amidst tension.\n- BT002: Discovery of mr_joker's cracked appearance/foolishness.\n- BT003: Shift to bewilderment and amusement.",
+  "metadata": {
+    "artifact_id": "CH020_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "b0777e94315ae6dc7137766b3444f2b2339b63ff",
+    "created_at_utc": "2026-04-27T09:03:25.086408+00:00",
+    "updated_at_utc": "2026-04-27T09:03:25.086408+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH020_SC004",
+        "version": "d0bfff34938bb1448e795e639ccb486971495a3c"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH020_SC004",
+        "version": "89ff5fa25f20a703ac677f3e3a47518f550ed01c"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH020_SC004",
+        "version": "a65133de015b37fd66ca85bda8c23ea89353a598"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T09:04:06.671085+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "b0777e94315ae6dc7137766b3444f2b2339b63ff"
+      }
+    ]
+  }
+}

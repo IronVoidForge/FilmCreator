@@ -1,0 +1,376 @@
+{
+  "scene_id": "CH008_SC003",
+  "chapter_id": "CH008",
+  "scene_title": "SC003",
+  "purpose": "Transition from relief to a new, insidious threat; establish the atmosphere of the poppy field.",
+  "summary": "The group continues their journey along the riverbank toward the Yellow Brick Road. They wander into a vast, beautiful meadow filled with scarlet poppies. The visual beauty masks the deadly scent of the flowers.",
+  "emotional_arc": "Relief $\\rightarrow$ Tranquility/Lethargy.",
+  "production_intent": "Transition the group from the active river crossing into a vast, visually overwhelming meadow. The environment must shift from high-energy movement to a heavy, lethargic atmosphere where the beauty of the scarlet poppies masks an insidious sensory threat.",
+  "scene_short_description": "A group travels from a swift riverbank into a massive, scarlet poppy meadow.",
+  "scene_primary_scale_story_point": "The vastness of the scarlet_poppy_meadow relative to the small character group.",
+  "scene_required_anchor_catalog": [
+    "scarlet_poppy_meadow",
+    "swift_river_crossing"
+  ],
+  "scene_start_state": "Characters exiting the sunny, active swift_river_crossing.",
+  "scene_end_state": "Characters moving with heavy limbs and drooping eyes within the hazy poppy field.",
+  "dominant_action_line": "The group wanders into the meadow and succumbs to the scent of the poppies.",
+  "scene_spatial_layout": [
+    "Linear progression from riverbank toward the Yellow Brick Road.",
+    "Transition from open water/grass to dense floral expanse."
+  ],
+  "character_spatial_map": [
+    "dorothy, the_scarecrow, tin_woodman, cowardly_lion, and toto move in a loose cluster."
+  ],
+  "environment_subzones": [
+    "swift_river_crossing",
+    "scarlet_poppy_meadow"
+  ],
+  "entry_vectors": [
+    "swift_river_crossing (exit vector)"
+  ],
+  "exit_vectors": [
+    "toward Yellow Brick Road via scarlet_poppy_meadow"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Transition from riverbank to meadow edge.",
+    "BT002 -> BT003: Transition from walking to lethargic wandering."
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Grassy riverbank",
+      "canonical_id": "swift_river_crossing",
+      "display_name": "swift_river_crossing",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH008/swift_river_crossing.md",
+      "notes": "Chapter-local environment alias match for 'Grassy riverbank' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    {
+      "label": "massive meadow of scarlet poppies",
+      "canonical_id": "scarlet_poppy_meadow",
+      "display_name": "scarlet_poppy_meadow",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 112,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH008/scarlet_poppy_meadow.md",
+      "notes": "Chapter-local environment alias match for 'massive meadow of scarlet poppies' (key_overlap=2, label_overlap=4, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Poppy density and color saturation must remain consistent",
+    "Lighting transition from sunny riverbank to hazy meadow atmosphere"
+  ],
+  "visual_coverage_families": [
+    "EWS of vast poppy field scale",
+    "CU of poppies and wafting scent particles",
+    "MS of characters showing heavy-lidded lethargy"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Group exits riverbank and enters meadow",
+      "purpose": "",
+      "action_start": "walking on grass",
+      "action_end": "stepping into poppies",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "swift_river_crossing to scarlet_poppy_meadow border",
+      "blocking_hint": "group moving in a line toward camera/depth",
+      "environment_subzone": "scarlet_poppy_meadow",
+      "continuity_focus": "lighting shift from sunny to hazy",
+      "coverage_hint": "EWS",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The scent of the poppies fills the air",
+      "purpose": "",
+      "action_start": "static flowers",
+      "action_end": "wafting movement",
+      "active_subjects": [],
+      "passive_subjects": [
+        "scarlet_poppy_meadow"
+      ],
+      "spatial_context": "within the meadow",
+      "blocking_hint": "n/a",
+      "environment_subzone": "scarlet_poppy_meadow",
+      "continuity_focus": "color saturation of poppies",
+      "coverage_hint": "CU",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The group succumbs to lethargy",
+      "purpose": "",
+      "action_start": "steady walking",
+      "action_end": "slow, heavy-lidded movement",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "deep in scarlet_poppy_meadow",
+      "blocking_hint": "group spacing increases as they slow down",
+      "environment_subzone": "scarlet_poppy_meadow",
+      "continuity_focus": "character movement speed",
+      "coverage_hint": "MS",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale",
+      "planned_shot_moment_summary": "group enters the vast meadow",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "scarlet_poppy_meadow",
+      "planned_shot_required_anchor_1": "scarlet_poppy_meadow",
+      "planned_shot_scale_proof_detail": "characters dwarfed by red horizon",
+      "start_state_seed": "sunny riverbank edge",
+      "end_state_seed": "edge of poppy field",
+      "action_seed": "walking into the flowers",
+      "blocking_seed": [
+        "group moving forward in line"
+      ],
+      "shot_size": "extreme_wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "rear_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "sensory introduction",
+      "planned_shot_moment_summary": "scent wafting through air",
+      "primary_subject_seed": "scarlet_poppy_meadow",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "scarlet_poppy_meadow",
+      "planned_shot_required_anchor_1": "scarlet_poppy_meadow",
+      "planned_shot_scale_proof_detail": "macro detail of petals",
+      "start_state_seed": "static poppy",
+      "end_state_seed": "swaying poppy",
+      "action_seed": "scent particles wafting",
+      "blocking_seed": [],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "telephoto",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "character state shift",
+      "planned_shot_moment_summary": "characters becoming heavy-lidded",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "scarlet_poppy_meadow",
+      "planned_shot_required_anchor_1": "scarlet_poppy_meadow",
+      "planned_shot_scale_proof_detail": "slowed gait",
+      "start_state_seed": "walking upright",
+      "end_state_seed": "slumping/heavy eyes",
+      "action_seed": "wandering slowly",
+      "blocking_seed": [
+        "group cluster slowing down"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH008",
+      "scene_id": "CH008_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH008",
+      "scene_id": "CH008_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH008",
+      "scene_id": "CH008_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH008",
+      "scene_id": "CH008_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH008",
+      "scene_id": "CH008_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH008",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH008_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH008",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH008_chapter_viii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH008",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH008_SC003] Purpose: Transition from relief to a new, insidious threat; establish the atmosphere of the poppy field.",
+    "[CH008_SC003] Summary: The group continues their journey along the riverbank toward the Yellow Brick Road. They wander into a vast, beautiful meadow filled with scarlet poppies. The visual beauty masks the deadly scent of the flowers.",
+    "[CH008_SC003] Emotional arc: Relief $\\rightarrow$ Tranquility/Lethargy.",
+    "[CH008_SC003] Coverage: Extreme wide shots (EWS) of the vast poppy field to establish beauty and scale. Close-ups (CU) of the poppies and the scent \"wafting\" through the air. Medium shots of the characters walking, becoming increasingly slow/heavy-lidded.",
+    "[CH008_SC003] Continuity: The density and color saturation of the poppies; the lighting transition from sunny riverbank to the hazy atmosphere of the field.",
+    "[CH008] Chapter summary: **Setting:** A sunny country featuring a wide river with a swift current, a grassy riverbank, and a vast meadow filled with scarlet poppies. **Characters:** Dorothy, Toto, Scarecrow, Tin Woodman, Cowardly Lion, and a...",
+    "[CH007] Chapter VII (book index hit)",
+    "[CH008] Chapter VIII (book index hit)",
+    "[CH002] Chapter II (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH008_SC003\n\n## Production Intent\nTransition the group from the active river crossing into a vast, visually overwhelming meadow. The environment must shift from high-energy movement to a heavy, lethargic atmosphere where the beauty of the scarlet poppies masks an insidious sensory threat.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n\n## Required Environments\n- swift_river_crossing\n- scarlet_poppy_meadow\n\n## Continuity Constraints\n- Poppy density and color saturation must remain consistent.\n- Lighting transition from sunny riverbank to hazy meadow atmosphere.\n\n## Beat List\n- BT001: Group exits riverbank and enters meadow.\n- BT002: The scent of the poppies fills the air.\n- BT003: The group succumbs to lethargy.",
+  "metadata": {
+    "artifact_id": "CH008_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "54f0320c81f30f22b65e6f36370cfe29a73aa917",
+    "created_at_utc": "2026-04-27T08:21:07.827787+00:00",
+    "updated_at_utc": "2026-04-27T08:21:07.827787+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH008_SC003",
+        "version": "2a5e23bf4903b91c2bfe23c112c07948ca429bf8"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH008_SC003",
+        "version": "5aa459f5650a99e063e293355081ed452202c38c"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH008_SC003",
+        "version": "60b31cc4051fcc2f4c550f2a65211093143584b9"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:21:51.013658+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "54f0320c81f30f22b65e6f36370cfe29a73aa917"
+      }
+    ]
+  }
+}

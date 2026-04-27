@@ -1,0 +1,462 @@
+[
+  {
+    "entity_type": "environment",
+    "subject_ids": [
+      "yellow_brick_road",
+      "yellow_brick_road_pathway",
+      "yellow_brick_road_transit"
+    ],
+    "reason": "chapter suffix or short title variant detected; preferred target ranked as yellow_brick_road (score 81)",
+    "heuristic_score": 23,
+    "evidence": {
+      "cluster_root": "yellow_brick_road",
+      "member_summaries": [
+        {
+          "canonical_id": "yellow_brick_road",
+          "display_name": "yellow_brick_road",
+          "status": "canonical",
+          "entity_kind": "environment",
+          "aliases": [],
+          "first_seen_chapter": "CH005",
+          "last_seen_chapter": "CH005",
+          "chapter_mentions": [
+            "CH005"
+          ],
+          "source_count": 0,
+          "weak_name": false,
+          "canonical_rank_score": 39,
+          "stable_canonical_descriptions": []
+        },
+        {
+          "canonical_id": "yellow_brick_road_pathway",
+          "display_name": "yellow_brick_road_pathway",
+          "status": "canonical",
+          "entity_kind": "environment",
+          "aliases": [],
+          "first_seen_chapter": "CH002",
+          "last_seen_chapter": "CH002",
+          "chapter_mentions": [
+            "CH002"
+          ],
+          "source_count": 0,
+          "weak_name": false,
+          "canonical_rank_score": 39,
+          "stable_canonical_descriptions": []
+        },
+        {
+          "canonical_id": "yellow_brick_road_transit",
+          "display_name": "yellow_brick_road_transit",
+          "status": "canonical",
+          "entity_kind": "environment",
+          "aliases": [],
+          "first_seen_chapter": "CH003",
+          "last_seen_chapter": "CH003",
+          "chapter_mentions": [
+            "CH003"
+          ],
+          "source_count": 0,
+          "weak_name": false,
+          "canonical_rank_score": 39,
+          "stable_canonical_descriptions": []
+        }
+      ],
+      "pairwise_edges": [
+        {
+          "subject_ids": [
+            "yellow_brick_road",
+            "yellow_brick_road_pathway"
+          ],
+          "reason": "chapter suffix or short title variant detected",
+          "heuristic_score": 4
+        },
+        {
+          "subject_ids": [
+            "yellow_brick_road",
+            "yellow_brick_road_transit"
+          ],
+          "reason": "chapter suffix or short title variant detected",
+          "heuristic_score": 4
+        }
+      ],
+      "ranked_members": [
+        {
+          "canonical_id": "yellow_brick_road",
+          "display_name": "yellow_brick_road",
+          "status": "canonical",
+          "entity_kind": "environment",
+          "aliases": [],
+          "first_seen_chapter": "CH005",
+          "last_seen_chapter": "CH005",
+          "chapter_mentions": [
+            "CH005"
+          ],
+          "source_count": 0,
+          "weak_name": false,
+          "canonical_rank_score": 81,
+          "stable_canonical_descriptions": []
+        },
+        {
+          "canonical_id": "yellow_brick_road_pathway",
+          "display_name": "yellow_brick_road_pathway",
+          "status": "canonical",
+          "entity_kind": "environment",
+          "aliases": [],
+          "first_seen_chapter": "CH002",
+          "last_seen_chapter": "CH002",
+          "chapter_mentions": [
+            "CH002"
+          ],
+          "source_count": 0,
+          "weak_name": false,
+          "canonical_rank_score": 39,
+          "stable_canonical_descriptions": []
+        },
+        {
+          "canonical_id": "yellow_brick_road_transit",
+          "display_name": "yellow_brick_road_transit",
+          "status": "canonical",
+          "entity_kind": "environment",
+          "aliases": [],
+          "first_seen_chapter": "CH003",
+          "last_seen_chapter": "CH003",
+          "chapter_mentions": [
+            "CH003"
+          ],
+          "source_count": 0,
+          "weak_name": false,
+          "canonical_rank_score": 39,
+          "stable_canonical_descriptions": []
+        }
+      ],
+      "preferred_target_id": "yellow_brick_road"
+    }
+  },
+  {
+    "entity_type": "character",
+    "subject_ids": [
+      "farmer",
+      "farmer_woman_family"
+    ],
+    "reason": "chapter suffix or short title variant detected; entity kind drift detected (individual vs group); preferred target ranked as farmer (score 88)",
+    "heuristic_score": 16,
+    "evidence": {
+      "cluster_root": "farmer",
+      "member_summaries": [
+        {
+          "canonical_id": "farmer",
+          "display_name": "farmer",
+          "status": "canonical",
+          "entity_kind": "individual",
+          "aliases": [],
+          "first_seen_chapter": "CH004",
+          "last_seen_chapter": "CH004",
+          "chapter_mentions": [
+            "CH004"
+          ],
+          "source_count": 0,
+          "weak_name": false,
+          "canonical_rank_score": 46,
+          "stable_canonical_descriptions": [],
+          "taxonomy": {
+            "primary_type": "human",
+            "morphology": "biped",
+            "scale": "human_scale",
+            "renderability": "renderable",
+            "confidence": 1.0,
+            "needs_review": false,
+            "alias_resolution": {
+              "status": "canonical",
+              "canonical_target_id": null,
+              "confidence": 1.0,
+              "evidence": [
+                "Registry status is canonical"
+              ],
+              "requires_human_review": false
+            }
+          }
+        },
+        {
+          "canonical_id": "farmer_woman_family",
+          "display_name": "farmer_woman_family",
+          "status": "canonical",
+          "entity_kind": "group",
+          "aliases": [],
+          "first_seen_chapter": "CH010",
+          "last_seen_chapter": "CH010",
+          "chapter_mentions": [
+            "CH010"
+          ],
+          "source_count": 0,
+          "weak_name": false,
+          "canonical_rank_score": 46,
+          "stable_canonical_descriptions": [],
+          "taxonomy": {
+            "primary_type": "group",
+            "morphology": "biped",
+            "scale": "human_scale",
+            "renderability": "renderable",
+            "confidence": 1.0,
+            "needs_review": false,
+            "alias_resolution": {
+              "status": "canonical",
+              "canonical_target_id": null,
+              "confidence": 1.0,
+              "evidence": [
+                "Registry status is canonical"
+              ],
+              "requires_human_review": false
+            }
+          }
+        }
+      ],
+      "pairwise_edges": [
+        {
+          "subject_ids": [
+            "farmer",
+            "farmer_woman_family"
+          ],
+          "reason": "chapter suffix or short title variant detected; entity kind drift detected (individual vs group)",
+          "heuristic_score": 6
+        }
+      ],
+      "ranked_members": [
+        {
+          "canonical_id": "farmer",
+          "display_name": "farmer",
+          "status": "canonical",
+          "entity_kind": "individual",
+          "aliases": [],
+          "first_seen_chapter": "CH004",
+          "last_seen_chapter": "CH004",
+          "chapter_mentions": [
+            "CH004"
+          ],
+          "source_count": 0,
+          "weak_name": false,
+          "canonical_rank_score": 88,
+          "stable_canonical_descriptions": [],
+          "taxonomy": {
+            "primary_type": "human",
+            "morphology": "biped",
+            "scale": "human_scale",
+            "renderability": "renderable",
+            "confidence": 1.0,
+            "needs_review": false,
+            "alias_resolution": {
+              "status": "canonical",
+              "canonical_target_id": null,
+              "confidence": 1.0,
+              "evidence": [
+                "Registry status is canonical"
+              ],
+              "requires_human_review": false
+            }
+          }
+        },
+        {
+          "canonical_id": "farmer_woman_family",
+          "display_name": "farmer_woman_family",
+          "status": "canonical",
+          "entity_kind": "group",
+          "aliases": [],
+          "first_seen_chapter": "CH010",
+          "last_seen_chapter": "CH010",
+          "chapter_mentions": [
+            "CH010"
+          ],
+          "source_count": 0,
+          "weak_name": false,
+          "canonical_rank_score": 46,
+          "stable_canonical_descriptions": [],
+          "taxonomy": {
+            "primary_type": "group",
+            "morphology": "biped",
+            "scale": "human_scale",
+            "renderability": "renderable",
+            "confidence": 1.0,
+            "needs_review": false,
+            "alias_resolution": {
+              "status": "canonical",
+              "canonical_target_id": null,
+              "confidence": 1.0,
+              "evidence": [
+                "Registry status is canonical"
+              ],
+              "requires_human_review": false
+            }
+          }
+        }
+      ],
+      "preferred_target_id": "farmer"
+    }
+  },
+  {
+    "entity_type": "character",
+    "subject_ids": [
+      "oz",
+      "oz_the_wizard"
+    ],
+    "reason": "chapter suffix or short title variant detected; preferred target ranked as oz (score 88)",
+    "heuristic_score": 14,
+    "evidence": {
+      "cluster_root": "oz",
+      "member_summaries": [
+        {
+          "canonical_id": "oz",
+          "display_name": "oz",
+          "status": "canonical",
+          "entity_kind": "individual",
+          "aliases": [
+            "oz_the_wizard"
+          ],
+          "first_seen_chapter": "CH015",
+          "last_seen_chapter": "CH015",
+          "chapter_mentions": [
+            "CH015",
+            "CH016",
+            "CH017"
+          ],
+          "source_count": 0,
+          "weak_name": false,
+          "canonical_rank_score": 46,
+          "stable_canonical_descriptions": [],
+          "taxonomy": {
+            "primary_type": "human",
+            "morphology": "biped",
+            "scale": "human_scale",
+            "renderability": "renderable",
+            "confidence": 1.0,
+            "needs_review": false,
+            "alias_resolution": {
+              "status": "canonical",
+              "canonical_target_id": null,
+              "confidence": 1.0,
+              "evidence": [
+                "Registry status is canonical"
+              ],
+              "requires_human_review": false
+            }
+          }
+        },
+        {
+          "canonical_id": "oz_the_wizard",
+          "display_name": "oz_the_wizard",
+          "status": "canonical",
+          "entity_kind": "individual",
+          "aliases": [],
+          "first_seen_chapter": "CH016",
+          "last_seen_chapter": "CH017",
+          "chapter_mentions": [
+            "CH016",
+            "CH017"
+          ],
+          "source_count": 0,
+          "weak_name": false,
+          "canonical_rank_score": 49,
+          "stable_canonical_descriptions": [],
+          "taxonomy": {
+            "primary_type": "human",
+            "morphology": "biped",
+            "scale": "human_scale",
+            "renderability": "renderable",
+            "confidence": 1.0,
+            "needs_review": false,
+            "alias_resolution": {
+              "status": "canonical",
+              "canonical_target_id": null,
+              "confidence": 1.0,
+              "evidence": [
+                "Registry status is canonical"
+              ],
+              "requires_human_review": false
+            }
+          }
+        }
+      ],
+      "pairwise_edges": [
+        {
+          "subject_ids": [
+            "oz",
+            "oz_the_wizard"
+          ],
+          "reason": "chapter suffix or short title variant detected",
+          "heuristic_score": 4
+        }
+      ],
+      "ranked_members": [
+        {
+          "canonical_id": "oz",
+          "display_name": "oz",
+          "status": "canonical",
+          "entity_kind": "individual",
+          "aliases": [
+            "oz_the_wizard"
+          ],
+          "first_seen_chapter": "CH015",
+          "last_seen_chapter": "CH015",
+          "chapter_mentions": [
+            "CH015",
+            "CH016",
+            "CH017"
+          ],
+          "source_count": 0,
+          "weak_name": false,
+          "canonical_rank_score": 88,
+          "stable_canonical_descriptions": [],
+          "taxonomy": {
+            "primary_type": "human",
+            "morphology": "biped",
+            "scale": "human_scale",
+            "renderability": "renderable",
+            "confidence": 1.0,
+            "needs_review": false,
+            "alias_resolution": {
+              "status": "canonical",
+              "canonical_target_id": null,
+              "confidence": 1.0,
+              "evidence": [
+                "Registry status is canonical"
+              ],
+              "requires_human_review": false
+            }
+          }
+        },
+        {
+          "canonical_id": "oz_the_wizard",
+          "display_name": "oz_the_wizard",
+          "status": "canonical",
+          "entity_kind": "individual",
+          "aliases": [],
+          "first_seen_chapter": "CH016",
+          "last_seen_chapter": "CH017",
+          "chapter_mentions": [
+            "CH016",
+            "CH017"
+          ],
+          "source_count": 0,
+          "weak_name": false,
+          "canonical_rank_score": 49,
+          "stable_canonical_descriptions": [],
+          "taxonomy": {
+            "primary_type": "human",
+            "morphology": "biped",
+            "scale": "human_scale",
+            "renderability": "renderable",
+            "confidence": 1.0,
+            "needs_review": false,
+            "alias_resolution": {
+              "status": "canonical",
+              "canonical_target_id": null,
+              "confidence": 1.0,
+              "evidence": [
+                "Registry status is canonical"
+              ],
+              "requires_human_review": false
+            }
+          }
+        }
+      ],
+      "preferred_target_id": "oz"
+    }
+  }
+]

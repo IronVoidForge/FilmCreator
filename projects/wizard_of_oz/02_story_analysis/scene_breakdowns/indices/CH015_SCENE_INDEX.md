@@ -1,0 +1,5 @@
+* [SC001 - The Demand at the Gates](#sc001)
+* [SC002 - Waiting in the Palace](#sc002)
+* [SC003 - The Grand Illusion](#sc003)
+* [SC004 - The Humbug Revealed](#sc004)
+* [SC005 - The Man from Omaha](#sc005)

@@ -1,0 +1,364 @@
+{
+  "scene_id": "CH017_SC002",
+  "chapter_id": "CH017",
+  "scene_title": "SC002",
+  "purpose": "Montage of preparation and technical setup for the flight.",
+  "summary": "A three-day period where Dorothy and Oz work together to construct a large green silk balloon. They apply glue to make it airtight, attach a basket, and prepare a heating mechanism using wood provided by the Tin Woodman.",
+  "emotional_arc": "From heavy labor to focused anticipation.",
+  "production_intent": "A three-day montage documenting the technical construction of a large green silk balloon. The sequence must visually communicate the progression from raw materials to a functional flight apparatus through repetitive labor and increasing scale.",
+  "scene_short_description": "Construction of a massive green silk balloon through repetitive technical labor.",
+  "scene_primary_scale_story_point": "The balloon expands from small fabric scraps to a massive airborne structure.",
+  "scene_required_anchor_catalog": [
+    "green silk balloon",
+    "wicker basket",
+    "wood pile"
+  ],
+  "scene_start_state": "Scattered green silk and raw materials on the palace grounds.",
+  "scene_end_state": "A completed, airtight green balloon with an attached basket and heating mechanism.",
+  "dominant_action_line": "Dorothy and Oz assemble the balloon components using glue, silk, and wood.",
+  "scene_spatial_layout": [
+    "Open assembly area within emerald_city_palace_exterior",
+    "Centralized around the growing balloon structure"
+  ],
+  "character_spatial_map": [
+    "dorothy and oz positioned around the perimeter of the balloon fabric",
+    "tin_woodman approaching from periphery with materials"
+  ],
+  "environment_subzones": [
+    "assembly_zone",
+    "material_storage_zone"
+  ],
+  "entry_vectors": [
+    "tin_woodman enters via palace grounds path"
+  ],
+  "exit_vectors": [
+    "dorothy and oz exit toward palace interior"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Time jump/Montage cut",
+    "BT002 -> BT003: Time jump/Montage cut",
+    "BT003 -> BT004: Final assembly completion"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Oz (The Wizard)",
+      "canonical_id": "oz",
+      "display_name": "oz",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/oz_the_wizard.md",
+      "notes": "Direct registry match for 'oz_the_wizard'."
+    },
+    {
+      "label": "Tin Woodman (providing materials)",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Exterior/Interior Palace grounds",
+      "canonical_id": "emerald_city_palace_exterior",
+      "display_name": "emerald_city_palace_exterior",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 114,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH017/emerald_city_palace_exterior.md",
+      "notes": "Chapter-local environment alias match for 'Exterior/Interior Palace grounds' (key_overlap=2, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Incremental size and state of the green silk balloon",
+    "Weather conditions shifting over a three-day period"
+  ],
+  "visual_coverage_families": [
+    "Montage/Insert shots (glue, silk, wood)",
+    "Wide shots (balloon scale growth)",
+    "Medium shots (dorothy and oz tandem work)"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Initial silk preparation and gluing",
+      "purpose": "",
+      "action_start": "unrolling green silk",
+      "action_end": "seams glued airtight",
+      "active_subjects": [
+        "dorothy",
+        "oz"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "assembly_zone",
+      "blocking_hint": "characters working on ground level",
+      "environment_subzone": "assembly_zone",
+      "continuity_focus": "silk texture and glue application",
+      "coverage_hint": "insert shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Scaling the balloon structure",
+      "purpose": "",
+      "action_start": "small fabric mound",
+      "action_end": "large silk mass",
+      "active_subjects": [
+        "dorothy",
+        "oz"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "assembly_zone",
+      "blocking_hint": "characters moving around larger circumference",
+      "environment_subzone": "assembly_zone",
+      "continuity_focus": "balloon size increase",
+      "coverage_hint": "wide shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Integration of heating mechanism and basket",
+      "purpose": "",
+      "action_start": "wood being delivered",
+      "action_end": "basket attached to silk",
+      "active_subjects": [
+        "tin_woodman",
+        "oz",
+        "dorothy"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "assembly_zone",
+      "blocking_hint": "tin_woodman delivering wood to the center",
+      "environment_subzone": "assembly_zone",
+      "continuity_focus": "presence of wood pile and basket",
+      "coverage_hint": "medium shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT004"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "Final technical readiness",
+      "purpose": "",
+      "action_start": "construction noise/labor",
+      "action_end": "quiet focused anticipation",
+      "active_subjects": [
+        "dorothy",
+        "oz"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "assembly_zone",
+      "blocking_hint": "characters standing back to view work",
+      "environment_subzone": "assembly_zone",
+      "continuity_focus": "completed balloon state",
+      "coverage_hint": "medium shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish labor",
+      "planned_shot_moment_summary": "applying glue to silk edges",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "oz"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "assembly_zone",
+      "planned_shot_required_anchor_1": "green silk balloon",
+      "planned_shot_scale_proof_detail": "small fabric patch",
+      "start_state_seed": "glue pot open",
+      "end_state_seed": "silk seam joined",
+      "action_seed": "spreading adhesive",
+      "blocking_seed": [
+        "kneeling beside fabric"
+      ],
+      "shot_size": "insert_detail",
+      "camera_angle": "eye_level",
+      "lens_family": "telephoto",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show scale growth",
+      "planned_shot_moment_summary": "wide view of balloon expanding",
+      "primary_subject_seed": "green silk balloon",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "oz"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "assembly_zone",
+      "planned_shot_required_anchor_1": "green silk balloon",
+      "planned_shot_scale_proof_detail": "balloon covers significant ground area",
+      "start_state_seed": "empty grounds",
+      "end_state_seed": "large fabric mound",
+      "action_seed": "fabric being stretched",
+      "blocking_seed": [
+        "characters moving around perimeter"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "high_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "crane",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "material delivery",
+      "planned_shot_moment_summary": "tin_woodman bringing wood",
+      "primary_subject_seed": "tin_woodman",
+      "secondary_subjects_seed": [
+        "oz"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "material_storage_zone",
+      "planned_shot_required_anchor_1": "wood pile",
+      "planned_shot_scale_proof_detail": "large stack of timber",
+      "start_state_seed": "approach with load",
+      "end_state_seed": "stacking wood",
+      "action_seed": "carrying and dropping wood",
+      "blocking_seed": [
+        "walking toward assembly zone"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH017",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH017_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH017",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH017_chapter_xvii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH013",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH013_chapter_xiii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH015",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH017",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH017_SC002] Purpose: Montage of preparation and technical setup for the flight.",
+    "[CH017_SC002] Summary: A three-day period where Dorothy and Oz work together to construct a large green silk balloon. They apply glue to make it airtight, attach a basket, and prepare a heating mechanism using wood provided by the Tin Woodman.",
+    "[CH017_SC002] Emotional arc: From heavy labor to focused anticipation.",
+    "[CH017_SC002] Coverage: Montage/Insert shots: Glue being applied, silk being stretched, wood being gathered. Wide shots: The scale of the balloon growing over time. Medium shots: Dorothy and Oz working in tandem.",
+    "[CH017_SC002] Continuity: The size and state of the green silk balloon; weather conditions over the three days.",
+    "[CH017] Chapter summary: **Setting:** The Throne Room and the exterior of the Palace in the Emerald City. **Characters:** - Dorothy: Longing to return to Kansas. - Oz (The Wizard): A \"humbug\" seeking to escape his life of deception by returni...",
+    "[CH017] Chapter XVII (book index hit)",
+    "[CH013] Chapter XIII (book index hit)",
+    "[CH015] Chapter XV (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH017_SC002\n\n## Production Intent\nA three-day montage documenting the technical construction of a large green silk balloon. The sequence must visually communicate the progression from raw materials to a functional flight apparatus through repetitive labor and increasing scale.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- oz\n- tin_woodman\n\n## Required Environments\n- emerald_city_palace_exterior (assembly_zone, material_storage_zone)\n\n## Continuity Constraints\n- Incremental size and state of the green silk balloon\n- Weather conditions shifting over a three-day period\n\n## Beat List\n- BT001: Initial silk preparation and gluing\n- BT002: Scaling the balloon structure\n- BT003: Integration of heating mechanism and basket\n- BT004: Final technical readiness",
+  "metadata": {
+    "artifact_id": "CH017_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "681620b589c8f4f0285ecbe5152f8761c982c048",
+    "created_at_utc": "2026-04-27T08:52:17.691715+00:00",
+    "updated_at_utc": "2026-04-27T08:52:17.691715+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH017_SC002",
+        "version": "b5eed3d51373247e347adb016276975c08b469da"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH017_SC002",
+        "version": "f3803b9ebc3b21412fa8f7b471f68fefde97fa9b"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH017_SC002",
+        "version": "0fea76a1b3ab18671c50e6335a03241592b7d6ff"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:52:59.033883+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "681620b589c8f4f0285ecbe5152f8761c982c048"
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+# Scene Binding Index
+
+- `CH001_SC001` - mode=scene_level, env=kansas_prairie_landscape, cast=4, flags=1
+- `CH001_SC002` - mode=scene_level, env=farmhouse_interior_and_cellar, cast=2, flags=1
+- `CH001_SC004` - mode=scene_level, env=farmhouse_interior_and_cellar, cast=2, flags=1
+- `CH002_SC001` - mode=unresolved, env=The exterior/immediate vicinity of Dorothy's house (Oz landscape), cast=2, flags=1
+- `CH002_SC002` - mode=unresolved, env=The site of the house landing, cast=3, flags=1
+- `CH002_SC003` - mode=unresolved, env=The clearing near the house, cast=3, flags=1
+- `CH002_SC004` - mode=unresolved, env=The clearing near the house, cast=3, flags=1
+- `CH003_SC001` - mode=scene_level, env=yellow_brick_road, cast=3, flags=2
+- `CH003_SC002` - mode=scene_level, env=munchkin_country_farms, cast=3, flags=1
+- `CH003_SC003` - mode=scene_level, env=yellow_brick_road, cast=3, flags=1
+- `CH004_SC003` - mode=scene_level, env=brookside_meadow, cast=4, flags=1
+- `CH006_SC001` - mode=scene_level, env=thick_dark_forest, cast=5, flags=1
+- `CH007_SC003` - mode=chapter_fallback, env=arizona_dense_forest_and_ditches, cast=6, flags=1
+- `CH008_SC003` - mode=scene_level, env=scarlet_poppy_meadow, cast=5, flags=1
+- `CH009_SC001` - mode=scene_level, env=grassy_riverbank_meadow, cast=5, flags=1
+- `CH009_SC002` - mode=scene_level, env=poppy_field_bed, cast=4, flags=1
+- `CH009_SC003` - mode=scene_level, env=poppy_field_bed, cast=6, flags=1
+- `CH009_SC004` - mode=scene_level, env=grassy_riverbank_meadow, cast=6, flags=1
+- `CH010_SC002` - mode=chapter_fallback, env=green_countryside_landscape, cast=6, flags=1
+- `CH012_SC001` - mode=scene_level, env=western_rugged_lands, cast=6, flags=1
+- `CH012_SC002` - mode=scene_level, env=western_rugged_lands, cast=6, flags=1
+- `CH012_SC004` - mode=scene_level, env=wicked_witch_castle_interior, cast=2, flags=1
+- `CH012_SC005` - mode=scene_level, env=wicked_witch_castle_interior, cast=2, flags=1
+- `CH012_SC006` - mode=scene_level, env=wicked_witch_castle_courtyard, cast=4, flags=1
+- `CH013_SC002` - mode=scene_level, env=rocky_plain, cast=4, flags=1
+- `CH013_SC003` - mode=scene_level, env=rocky_plain, cast=5, flags=1
+- `CH015_SC003` - mode=scene_level, env=throne_room_grand_hall, cast=5, flags=1
+- `CH017_SC001` - mode=scene_level, env=emerald_city_throne_room, cast=2, flags=1
+- `CH017_SC003` - mode=scene_level, env=emerald_city_palace_exterior, cast=3, flags=1
+- `CH017_SC004` - mode=scene_level, env=balloon_launch_platform, cast=6, flags=2
+- `CH021_SC001` - mode=scene_level, env=marshland_bog_complex, cast=5, flags=2
+- `CH021_SC002` - mode=scene_level, env=ancient_forest_interior, cast=6, flags=1
+- `CH021_SC003` - mode=scene_level, env=ancient_forest_interior, cast=4, flags=1
+- `CH021_SC004` - mode=scene_level, env=oak_grove_monstrous_lair, cast=2, flags=1
+- `CH021_SC005` - mode=scene_level, env=oak_grove_monstrous_lair, cast=2, flags=1
+- `CH021_SC006` - mode=scene_level, env=ancient_forest_interior, cast=3, flags=1
+- `CH022_SC004` - mode=scene_level, env=quadling_countryside, cast=6, flags=1
+- `CH023_SC001` - mode=scene_level, env=glinda_castle_throne_room, cast=5, flags=1
+- `CH023_SC002` - mode=scene_level, env=glinda_castle_throne_room, cast=6, flags=1
+- `CH023_SC003` - mode=scene_level, env=glinda_castle_throne_room, cast=2, flags=1

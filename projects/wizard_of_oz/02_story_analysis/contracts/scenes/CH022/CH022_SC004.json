@@ -1,0 +1,418 @@
+{
+  "scene_id": "CH022_SC004",
+  "chapter_id": "CH022",
+  "scene_title": "SC004",
+  "purpose": "Establish the new setting (Quadling Country) and provide a moment of respite.",
+  "summary": "The group lands in the lush, red-themed Country of the Quadlings. They meet a kind farmer's wife who provides them with food and rest, allowing them to recover from their journey.",
+  "emotional_arc": "Exhaustion $\\rightarrow$ Relief/Comfort.",
+  "production_intent": "Establish the red-hued landscape of Quadling Country through wide environmental shots before transitioning to a warm, intimate domestic setting. The visual progression must move from the vastness of the red countryside to the soft, comforting interior of a farmhouse to facilitate the emotional shift from exhaustion to relief.",
+  "scene_short_description": "A weary group arrives in a lush red landscape and finds refuge at a farmhouse.",
+  "scene_primary_scale_story_point": "Vast red landscape vs. intimate farmhouse interior.",
+  "scene_required_anchor_catalog": [
+    "quadling_countryside horizon",
+    "farmhouse/homestead table"
+  ],
+  "scene_start_state": "The group arrives in the red landscape, visibly exhausted and travel-worn.",
+  "scene_end_state": "The group is resting and eating within the warmth of the farmhouse.",
+  "dominant_action_line": "Traveling through the red terrain to meeting and being fed by the Farmer's Wife.",
+  "scene_spatial_layout": [
+    "Open expanse of quadling_countryside leading toward a farmhouse/homestead",
+    "Interior domestic space centered around a meal area"
+  ],
+  "character_spatial_map": [
+    "dorothy, the_scarecrow, tin_woodman, cowardly_lion, toto: clustered as a traveling unit",
+    "Farmer's Wife: positioned within the farmhouse/homestead serving the group"
+  ],
+  "environment_subzones": [
+    "quadling_countryside",
+    "a farmhouse/homestead"
+  ],
+  "entry_vectors": [
+    "Group enters via quadling_countryside"
+  ],
+  "exit_vectors": [
+    "Group remains within a farmhouse/homestead"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Arrival at the homestead",
+    "BT002 -> BT003: Transition to meal and rest"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH022/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH022/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH022/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH022/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH022/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    },
+    {
+      "label": "Farmer's Wife",
+      "canonical_id": null,
+      "display_name": "Farmer's Wife",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The lush",
+      "canonical_id": null,
+      "display_name": "The lush",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    },
+    {
+      "label": "red-colored landscape of the Quadling Country",
+      "canonical_id": "quadling_countryside",
+      "display_name": "quadling_countryside",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH022/quadling_countryside.md",
+      "notes": "Chapter-local environment alias match for 'red-colored landscape of the Quadling Country' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    },
+    {
+      "label": "a farmhouse/homestead",
+      "canonical_id": null,
+      "display_name": "a farmhouse/homestead",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    }
+  ],
+  "continuity_constraints": [
+    "Character clothing must remain dirty from travel throughout the scene",
+    "Track consumption levels of food and drink provided by Farmer's Wife"
+  ],
+  "visual_coverage_families": [
+    "Wide shots establishing the red color palette of quadling_countryside",
+    "Medium shots of the meal and interaction with Farmer's Wife",
+    "Warm, soft lighting emphasizing domestic comfort"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Arrival in Quadling Country",
+      "purpose": "",
+      "action_start": "group walking through red landscape",
+      "action_end": "group reaches farmhouse vicinity",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "quadling_countryside",
+      "blocking_hint": "group moving in a line across terrain",
+      "environment_subzone": "quadling_countryside",
+      "continuity_focus": "clothing must be dirty/travel-worn",
+      "coverage_hint": "wide establishing shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Meeting the Farmer's Wife",
+      "purpose": "",
+      "action_start": "group approaches farmhouse",
+      "action_end": "Farmer's Wife invites group inside",
+      "active_subjects": [
+        "Farmer's Wife",
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "a farmhouse/homestead entrance",
+      "blocking_hint": "group meets Farmer's Wife at threshold",
+      "environment_subzone": "a farmhouse/homestead",
+      "continuity_focus": "clothing state remains dirty",
+      "coverage_hint": "medium shots of interaction",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Respite and Meal",
+      "purpose": "",
+      "action_start": "group seated at table",
+      "action_end": "group eating and resting",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "Farmer's Wife"
+      ],
+      "passive_subjects": [
+        "toto"
+      ],
+      "spatial_context": "a farmhouse/homestead interior",
+      "blocking_hint": "seated around a central table",
+      "environment_subzone": "a farmhouse/homestead",
+      "continuity_focus": "track food/drink consumption levels",
+      "coverage_hint": "medium shots of meal",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish setting",
+      "planned_shot_moment_summary": "wide view of red landscape with group entering",
+      "primary_subject_seed": "quadling_countryside",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "quadling_countryside",
+      "planned_shot_required_anchor_1": "quadling_countryside horizon",
+      "planned_shot_scale_proof_detail": "vastness of red terrain relative to small group",
+      "start_state_seed": "group walking through red landscape",
+      "end_state_seed": "group approaching farmhouse",
+      "action_seed": "walking",
+      "blocking_seed": [
+        "group moving across frame"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "introduce character/relief",
+      "planned_shot_moment_summary": "meeting Farmer's Wife at the farmhouse",
+      "primary_subject_seed": "Farmer's Wife",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "a farmhouse/homestead",
+      "planned_shot_required_anchor_1": "a farmhouse/homestead table",
+      "planned_shot_scale_proof_detail": "human scale domesticity",
+      "start_state_seed": "group at doorstep",
+      "end_state_seed": "group seated",
+      "action_seed": "greeting and inviting in",
+      "blocking_seed": [
+        "Farmer's Wife meets group at entrance"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "convey comfort",
+      "planned_shot_moment_summary": "close up of food and eating",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "Farmer's Wife"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "a farmhouse/homestead",
+      "planned_shot_required_anchor_1": "a farmhouse/homestead table",
+      "planned_shot_scale_proof_detail": "food items on table",
+      "start_state_seed": "food being served",
+      "end_state_seed": "characters eating",
+      "action_seed": "eating and resting",
+      "blocking_seed": [
+        "seated around table"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Farmer's Wife -> Farmer's Wife",
+    "Resolve The lush -> The lush",
+    "Resolve a farmhouse/homestead -> a farmhouse/homestead"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH022",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH022_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH022",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH022_chapter_xxii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH022",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH022_SC004] Purpose: Establish the new setting (Quadling Country) and provide a moment of respite.",
+    "[CH022_SC004] Summary: The group lands in the lush, red-themed Country of the Quadlings. They meet a kind farmer's wife who provides them with food and rest, allowing them to recover from their journey.",
+    "[CH022_SC004] Emotional arc: Exhaustion $\\rightarrow$ Relief/Comfort.",
+    "[CH022_SC004] Coverage: Wide shots establishing the red color palette of the environment. Medium shots of the meal and interaction with the farmer's wife. Warm, soft lighting to emphasize comfort.",
+    "[CH022_SC004] Continuity: The amount of food/drink consumed; the state of the characters' clothing (dirty from travel).",
+    "[CH022] Chapter summary: **Setting:** A rocky hill inhabited by Hammer-Heads and the lush, red-themed Country of the Quadlings. **Characters:** Dorothy, Scarecrow, Tin Woodman, Cowardly Lion, Toto, Hammer-Heads (armless creatures with project...",
+    "[CH002] Chapter II (book index hit)",
+    "[CH022] Chapter XXII (book index hit)",
+    "[CH003] Chapter III (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH022_SC004\n\n## Production Intent\nEstablish the red-hued landscape of Quadling Country through wide environmental shots before transitioning to a warm, intimate domestic setting. The visual progression must move from the vastness of the red countryside to the soft, comforting interior of a farmhouse to facilitate the emotional shift from exhaustion to relief.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n- Farmer's Wife\n\n## Required Environments\n- quadling_countryside\n- a farmhouse/homestead\n\n## Continuity Constraints\n- Character clothing must remain dirty from travel throughout the scene.\n- Track consumption levels of food and drink provided by Farmer's Wife.\n\n## Beat List\n- BT001: Arrival in Quadling Country (Wide landscape, group walking).\n- BT002: Meeting the Farmer's Wife (Interaction at farmhouse entrance).\n- BT003: Respite and Meal (Group eating/resting inside farmhouse).",
+  "metadata": {
+    "artifact_id": "CH022_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "380f68846d1a46ee8164163575abd7ddef011600",
+    "created_at_utc": "2026-04-27T09:11:34.291285+00:00",
+    "updated_at_utc": "2026-04-27T09:11:34.291285+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH022_SC004",
+        "version": "89e6b471a9bf724224a600fb4abf6df2c0e3aa83"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH022_SC004",
+        "version": "58b832673be3262534384f1cd75a7ef8da97943b"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH022_SC004",
+        "version": "81700bc9e13790f480d3b0b6f72922babac2f923"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T09:12:19.493334+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "380f68846d1a46ee8164163575abd7ddef011600"
+      }
+    ]
+  }
+}

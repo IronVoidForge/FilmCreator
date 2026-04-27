@@ -1,0 +1,378 @@
+{
+  "scene_id": "CH015_SC005",
+  "chapter_id": "CH015",
+  "scene_title": "SC005",
+  "purpose": "Character backstory and resolution of the immediate conflict.",
+  "summary": "In a smaller, more intimate chamber, Oz explains his true identity as a balloonist from Omaha. He admits he has no magic but promises to fulfill his obligations (brains, heart, courage) through non-magical means and pledges to help Dorothy find a way home.",
+  "emotional_arc": "Anger $\\rightarrow$ Melancholy/Resignation/Cautious Hope.",
+  "production_intent": "Establish the vulnerability of Oz by stripping away his magical facade through a grounded confession. The scene must transition from high-tension confrontation to an intimate, shared moment of truth within a confined space.",
+  "scene_short_description": "A tense confrontation in a small chamber shifts into an intimate confession of truth.",
+  "scene_primary_scale_story_point": "Intimate and confined; the space forces characters closer together than previous scenes.",
+  "scene_required_anchor_catalog": [
+    "oz's confession point",
+    "group reaction cluster"
+  ],
+  "scene_start_state": "High tension; characters demanding fulfillment of promises.",
+  "scene_end_state": "Quiet resignation and a tentative pact for non-magical solutions.",
+  "dominant_action_line": "Oz reveals his identity as a balloonist from Omaha and pledges to help via non-magical means.",
+  "scene_spatial_layout": [
+    "Tight grouping around oz",
+    "Limited walking paths due to chamber size"
+  ],
+  "character_spatial_map": [
+    "oz centered or anchored to a specific furniture piece",
+    "dorothy, the_scarecrow, tin_woodman, and cowardly_lion clustered in close proximity facing oz"
+  ],
+  "environment_subzones": [
+    "confession zone",
+    "reaction cluster"
+  ],
+  "entry_vectors": [
+    "chamber entrance"
+  ],
+  "exit_vectors": [
+    "chamber entrance"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Shift from demand to revelation",
+    "BT002 -> BT003: Shift from revelation to resolution/pledge"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH015/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH015/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH015/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "Oz",
+      "canonical_id": "oz",
+      "display_name": "oz",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH015/oz.md",
+      "notes": "Direct registry match for 'oz'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Small Chamber",
+      "canonical_id": "wizard_private_chamber",
+      "display_name": "wizard_private_chamber",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH015/wizard_private_chamber.md",
+      "notes": "Chapter-local environment alias match for 'The Small Chamber' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Tight character proximity and grouping due to smaller scale of wizard_private_chamber compared to Throne Room"
+  ],
+  "visual_coverage_families": [
+    "Eye-level medium shots for group dialogue",
+    "Close-ups on oz during monologue",
+    "Group reaction shots"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The demand for fulfillment",
+      "purpose": "",
+      "action_start": "characters confronting oz",
+      "action_end": "tension peaks before silence",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "passive_subjects": [
+        "oz"
+      ],
+      "spatial_context": "wizard_private_chamber",
+      "blocking_hint": "characters crowded around oz",
+      "environment_subzone": "reaction cluster",
+      "continuity_focus": "tight grouping vs throne room",
+      "coverage_hint": "medium shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The revelation of the balloonist",
+      "purpose": "",
+      "action_start": "oz begins speaking",
+      "action_end": "oz admits he has no magic",
+      "active_subjects": [
+        "oz"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "spatial_context": "wizard_private_chamber",
+      "blocking_hint": "oz remains anchored while others listen intently",
+      "environment_subzone": "confession zone",
+      "continuity_focus": "focus on oz's vulnerability",
+      "coverage_hint": "close-ups",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The non-magical pledge",
+      "purpose": "",
+      "action_start": "oz promises to fulfill obligations via other means",
+      "action_end": "group accepts the plan",
+      "active_subjects": [
+        "oz",
+        "dorothy"
+      ],
+      "passive_subjects": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "spatial_context": "wizard_private_chamber",
+      "blocking_hint": "characters shifting from anger to cautious hope",
+      "environment_subzone": "reaction cluster",
+      "continuity_focus": "maintaining proximity",
+      "coverage_hint": "group reaction shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish tension",
+      "planned_shot_moment_summary": "characters demanding promises",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "reaction cluster",
+      "planned_shot_required_anchor_1": "group reaction cluster",
+      "planned_shot_scale_proof_detail": "tight grouping in small chamber",
+      "start_state_seed": "tense standoff",
+      "end_state_seed": "oz preparing to speak",
+      "action_seed": "demanding answers",
+      "blocking_seed": [
+        "characters leaning in"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "character backstory/empathy",
+      "planned_shot_moment_summary": "oz admits he is a balloonist from Omaha",
+      "primary_subject_seed": "oz",
+      "secondary_subjects_seed": [
+        "dorothy"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "confession zone",
+      "planned_shot_required_anchor_1": "oz's confession point",
+      "planned_shot_scale_proof_detail": "close proximity to oz",
+      "start_state_seed": "oz speaking truth",
+      "end_state_seed": "oz finishing monologue",
+      "action_seed": "confessing identity",
+      "blocking_seed": [
+        "oz stationary",
+        "vulnerable"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "resolution/hope",
+      "planned_shot_moment_summary": "oz pledges non-magical help and Dorothy's reaction",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "oz"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "reaction cluster",
+      "planned_shot_required_anchor_1": "group reaction cluster",
+      "planned_shot_scale_proof_detail": "tight grouping",
+      "start_state_seed": "oz making pledge",
+      "end_state_seed": "cautious hope established",
+      "action_seed": "accepting the new terms",
+      "blocking_seed": [
+        "characters relaxing posture"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH015",
+      "scene_id": "CH015_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH015",
+      "scene_id": "CH015_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH015",
+      "scene_id": "CH015_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH015",
+      "scene_id": "CH015_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH015",
+      "scene_id": "CH015_SC005"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH015",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH015_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH015",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH005",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH015",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH015_SC005] Purpose: Character backstory and resolution of the immediate conflict.",
+    "[CH015_SC005] Summary: In a smaller, more intimate chamber, Oz explains his true identity as a balloonist from Omaha. He admits he has no magic but promises to fulfill his obligations (brains, heart, courage) through non-magical means and pledges to help Do...",
+    "[CH015_SC005] Emotional arc: Anger $\\rightarrow$ Melancholy/Resignation/Cautious Hope.",
+    "[CH015_SC005] Coverage: Eye-level medium shots for the conversation; close-ups on Oz during his monologue to build empathy; group reaction shots.",
+    "[CH015_SC005] Continuity: Character proximity and grouping in the smaller space compared to the Throne Room.",
+    "[CH015] Chapter summary: **Summary:** After returning to the Emerald City and reporting the death of the Wicked Witch of the West, Dorothy and her companions demand that the Wizard fulfill his promises. After a period of tense waiting and a t...",
+    "[CH015] Chapter XV (book index hit)",
+    "[CH002] Chapter II (book index hit)",
+    "[CH005] Chapter V (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH015_SC005\n\n## Production Intent\nEstablish the vulnerability of Oz by stripping away his magical facade through a grounded confession. The scene must transition from high-tension confrontation to an intimate, shared moment of truth within a confined space.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- oz\n\n## Required Environments\n- wizard_private_chamber\n\n## Continuity Constraints\n- Tight character proximity and grouping due to smaller scale of wizard_private_chamber compared to Throne Room.\n\n## Beat List\n- BT001: The demand for fulfillment (Anger)\n- BT002: The revelation of the balloonist (Melancholy/Resignation)\n- BT003: The non-magical pledge (Cautious Hope)",
+  "metadata": {
+    "artifact_id": "CH015_SC005_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "3e44b754779f68694a2c83f3b111b16eb305c323",
+    "created_at_utc": "2026-04-27T08:47:56.184053+00:00",
+    "updated_at_utc": "2026-04-27T08:47:56.184053+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH015_SC005",
+        "version": "adb82f474d4f68fc0b70d75f3a659b9e11d51fa4"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH015_SC005",
+        "version": "e1ec0c07b5e0ead307e55627a6da1439371ece51"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH015_SC005",
+        "version": "12240899b051562d0beee4351f5150bf5c3127f2"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:48:36.868810+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "3e44b754779f68694a2c83f3b111b16eb305c323"
+      }
+    ]
+  }
+}

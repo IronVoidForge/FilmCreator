@@ -1,0 +1,462 @@
+{
+  "scene_id": "CH022_SC003",
+  "chapter_id": "CH022",
+  "scene_title": "SC003",
+  "purpose": "Transition the characters from one geographic region to another via aerial movement.",
+  "summary": "The Winged Monkeys arrive and pick up the travelers. They fly over the hill, bypassing the frustrated Hammer-Heads, and transport the group across the landscape.",
+  "emotional_arc": "Fear $\\rightarrow$ Awe/Exhilaration.",
+  "production_intent": "Execute a high-altitude aerial transition to move the ensemble from the rocky hill territory toward the red-themed Quadling landscape. The sequence must emphasize the scale of the terrain and the shift in character emotion through varying flight speeds and heights.",
+  "scene_short_description": "Winged monkeys lift the group into the sky, soaring over rocky hills and receding figures below.",
+  "scene_primary_scale_story_point": "Aerial perspective contrasting small travelers against vast rocky_hill_territory.",
+  "scene_required_anchor_catalog": [
+    "hammer_heads (receding ground anchor)",
+    "rocky_hill_peaks (terrain anchor)"
+  ],
+  "scene_start_state": "Travelers are grounded in the rocky hill territory facing imminent threat or transition.",
+  "scene_end_state": "Travelers are airborne, soaring over the landscape toward a new region.",
+  "dominant_action_line": "winged_monkeys arrive and transport dorothy, the_scarecrow, tin_woodman, cowardly_lion, and toto across the sky.",
+  "scene_spatial_layout": [
+    "Verticality increases from ground level to high altitude.",
+    "Horizontal movement follows a flight path bypassing rocky terrain."
+  ],
+  "character_spatial_map": [
+    "travelers clustered in center of winged_monkeys formation",
+    "hammer_heads positioned at lowest vertical plane"
+  ],
+  "environment_subzones": [
+    "rocky_hill_territory (ground/low altitude)",
+    "sky_transit_zone (high altitude)"
+  ],
+  "entry_vectors": [
+    "winged_monkeys descend from sky into rocky_hill_territory"
+  ],
+  "exit_vectors": [
+    "travelers and winged_monkeys exit via high-altitude flight path"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Arrival and pickup",
+    "BT002 -> BT003: Ascent and bypass",
+    "BT003 -> BT004: High-altitude transit"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH022/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH022/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH022/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH022/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH022/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    },
+    {
+      "label": "Winged Monkeys",
+      "canonical_id": "winged_monkeys",
+      "display_name": "winged_monkeys",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH022/winged_monkeys.md",
+      "notes": "Direct registry match for 'winged_monkeys'."
+    },
+    {
+      "label": "Hammer-Heads (below)",
+      "canonical_id": "hammer_heads",
+      "display_name": "hammer_heads",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH022/hammer_heads.md",
+      "notes": "Direct registry match for 'hammer_heads'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Sky/Aerial view of the rocky hills and transitioning landscapes",
+      "canonical_id": "rocky_hill_territory",
+      "display_name": "rocky_hill_territory",
+      "status": "canonical",
+      "entity_kind": "landform",
+      "resolution_score": 58,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH022/rocky_hill_territory.md",
+      "notes": "Chapter-local environment alias match for 'Sky/Aerial view of the rocky hills and transitioning landscapes' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Flight height and velocity consistency",
+    "Character grip and posture during transport"
+  ],
+  "visual_coverage_families": [
+    "Extreme wide shots (aerial) showing landscape scale",
+    "Tracking shots following winged_monkeys flight path",
+    "POV shots from travelers looking down at hammer_heads"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "winged_monkeys arrival",
+      "purpose": "",
+      "action_start": "monkeys appearing in sky",
+      "action_end": "monkeys hovering near travelers",
+      "active_subjects": [
+        "winged_monkeys"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto",
+        "hammer_heads"
+      ],
+      "spatial_context": "rocky_hill_territory",
+      "blocking_hint": "monkeys descend toward center group",
+      "environment_subzone": "rocky_hill_territory",
+      "continuity_focus": "initial height of monkeys",
+      "coverage_hint": "wide shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Pickup",
+      "purpose": "",
+      "action_start": "travelers reacting to arrival",
+      "action_end": "travelers lifted off ground",
+      "active_subjects": [
+        "winged_monkeys",
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "passive_subjects": [
+        "hammer_heads"
+      ],
+      "spatial_context": "rocky_hill_territory",
+      "blocking_hint": "monkeys physically engage with travelers",
+      "environment_subzone": "rocky_hill_territory",
+      "continuity_focus": "grip/posture of characters during lift",
+      "coverage_hint": "medium shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Bypassing the Hammer-Heads",
+      "purpose": "",
+      "action_start": "group ascending over hill crest",
+      "action_end": "hammer_heads receding below",
+      "active_subjects": [
+        "winged_monkeys",
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "passive_subjects": [
+        "hammer_heads"
+      ],
+      "spatial_context": "transition from ground to sky",
+      "blocking_hint": "flight path moves away from hammer_heads",
+      "environment_subzone": "rocky_hill_territory",
+      "continuity_focus": "speed of flight and vertical ascent rate",
+      "coverage_hint": "extreme wide aerial",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT004"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "Aerial Transit",
+      "purpose": "",
+      "action_start": "group in stable high-altitude flight",
+      "action_end": "group moving toward new region",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto",
+        "winged_monkeys"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "sky_transit_zone",
+      "blocking_hint": "characters looking down/around in awe",
+      "environment_subzone": "sky_transit_zone",
+      "continuity_focus": "consistent flight speed and height",
+      "coverage_hint": "POV and tracking shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish arrival",
+      "planned_shot_moment_summary": "winged_monkeys descend toward the group",
+      "primary_subject_seed": "winged_monkeys",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "rocky_hill_territory",
+      "planned_shot_required_anchor_1": "hammer_heads",
+      "planned_shot_scale_proof_detail": "size of monkeys relative to travelers",
+      "start_state_seed": "monkeys approaching from sky",
+      "end_state_seed": "monkeys landing/hovering near group",
+      "action_seed": "descent and approach",
+      "blocking_seed": [
+        "monkeys circle the travelers"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show transition of state",
+      "planned_shot_moment_summary": "travelers are lifted from the ground",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "rocky_hill_territory",
+      "planned_shot_required_anchor_1": "hammer_heads",
+      "planned_shot_scale_proof_detail": "distance between travelers and hammer_heads increasing",
+      "start_state_seed": "travelers on ground",
+      "end_state_seed": "travelers suspended in air",
+      "action_seed": "lifting/pickup",
+      "blocking_seed": [
+        "monkeys grab characters and ascend"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "crane",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish scale and bypass",
+      "planned_shot_moment_summary": "group flies over the hill bypassing hammer_heads",
+      "primary_subject_seed": "winged_monkeys",
+      "secondary_subjects_seed": [
+        "hammer_heads"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "rocky_hill_territory",
+      "planned_shot_required_anchor_1": "rocky_hill_peaks",
+      "planned_shot_scale_proof_detail": "tiny hammer_heads below large flying group",
+      "start_state_seed": "group clearing the hill crest",
+      "end_state_seed": "hammer_heads becoming small dots",
+      "action_seed": "flight bypass",
+      "blocking_seed": [
+        "monkeys fly in formation over terrain"
+      ],
+      "shot_size": "extreme_wide",
+      "camera_angle": "high_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "rear_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH004",
+      "beat_id": "BT004",
+      "narrative_function": "character emotional payoff",
+      "planned_shot_moment_summary": "travelers look down at the receding landscape",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "sky_transit_zone",
+      "planned_shot_required_anchor_1": "rocky_hill_peaks",
+      "planned_shot_scale_proof_detail": "rapidly receding ground features",
+      "start_state_seed": "travelers looking down",
+      "end_state_seed": "faces showing awe/exhilaration",
+      "action_seed": "looking down at landscape",
+      "blocking_seed": [
+        "characters clinging to monkeys/each other"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "track",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "backlit",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH022",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH022_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH022",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH022_chapter_xxii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH022",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH022_SC003] Purpose: Transition the characters from one geographic region to another via aerial movement.",
+    "[CH022_SC003] Summary: The Winged Monkeys arrive and pick up the travelers. They fly over the hill, bypassing the frustrated Hammer-Heads, and transport the group across the landscape.",
+    "[CH022_SC003] Emotional arc: Fear $\\rightarrow$ Awe/Exhilaration.",
+    "[CH022_SC003] Coverage: Extreme wide shots (aerial) showing the scale of the journey. Tracking shots following the monkeys' flight path. POV shots from the travelers looking down at the receding Hammer-Heads.",
+    "[CH022_SC003] Continuity: The height and speed of the flight; character grip/posture while being carried.",
+    "[CH022] Chapter summary: **Setting:** A rocky hill inhabited by Hammer-Heads and the lush, red-themed Country of the Quadlings. **Characters:** Dorothy, Scarecrow, Tin Woodman, Cowardly Lion, Toto, Hammer-Heads (armless creatures with project...",
+    "[CH022] Chapter XXII (book index hit)",
+    "[CH012] Chapter XII (book index hit)",
+    "[CH007] Chapter VII (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH022_SC003\n\n## Production Intent\nExecute a high-altitude aerial transition to move the ensemble from the rocky hill territory toward the red-themed Quadling landscape. The sequence must emphasize the scale of the terrain and the shift in character emotion through varying flight speeds and heights.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n- winged_monkeys\n- hammer_heads (below)\n\n## Required Environments\n- rocky_hill_territory\n- sky_transit_zone\n\n## Continuity Constraints\n- Flight height and velocity consistency\n- Character grip and posture during transport\n\n## Beat List\n- BT001: winged_monkeys arrival\n- BT002: The Pickup\n- BT003: Bypassing the Hammer-Heads\n- BT004: Aerial Transit",
+  "metadata": {
+    "artifact_id": "CH022_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "cf16543e4fe221707dc324ec78b1f7ed0e4d6ed2",
+    "created_at_utc": "2026-04-27T09:10:38.969956+00:00",
+    "updated_at_utc": "2026-04-27T09:10:38.969956+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH022_SC003",
+        "version": "71893093df1582623d223c7ff7f70967902ea741"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH022_SC003",
+        "version": "b9b98c513da15ec425c15fd0609c87dea2d1f7e2"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH022_SC003",
+        "version": "3a6f3b9e4de7109c98a7fedceaa53f7c537afda2"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T09:11:31.837072+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "cf16543e4fe221707dc324ec78b1f7ed0e4d6ed2"
+      }
+    ]
+  }
+}

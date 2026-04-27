@@ -1,0 +1,391 @@
+{
+  "scene_id": "CH010_SC004",
+  "chapter_id": "CH010",
+  "scene_title": "SC004",
+  "purpose": "Introduce a physical constraint (the spectacles) and transition the characters into the city proper.",
+  "summary": "To protect them from being blinded by the city's brilliance, the Guardian forces Dorothy, her companions, and Toto to wear green-lensed spectacles. The Guardian locks the glasses onto their heads with a key he keeps, then leads them through the gates and into the streets of the Emerald City.",
+  "emotional_arc": "Constraint/Frustration to sensory overload.",
+  "production_intent": "Establish the physical restriction of green-lensed spectacles on all travelers to manage visual brilliance. The sequence transitions the group from a state of resistance/frustration into the overwhelming sensory environment of the city streets.",
+  "scene_short_description": "Travelers are fitted with locked green spectacles before entering a brilliant city.",
+  "scene_primary_scale_story_point": "Individual character scale (fitting glasses) expanding to group scale (entering streets).",
+  "scene_required_anchor_catalog": [
+    "guardian_of_the_gates key",
+    "emerald_city_gates entrance"
+  ],
+  "scene_start_state": "The group stands before the gates, facing the Guardian.",
+  "scene_end_state": "The group moves through the gates into the bright city streets.",
+  "dominant_action_line": "The Guardian forces spectacles onto the group and locks them in place.",
+  "scene_spatial_layout": [
+    "Linear progression from gate threshold to street interior",
+    "Tight grouping during the fitting process"
+  ],
+  "character_spatial_map": [
+    "dorothy, the_scarecrow, tin_woodman, cowardly_lion, and toto clustered near guardian_of_the_gates",
+    "guardian_of_the_gates positioned as the gatekeeper/authority figure"
+  ],
+  "environment_subzones": [
+    "emerald_city_gates threshold",
+    "emerald_city_gates streets"
+  ],
+  "entry_vectors": [
+    "yellow brick road approach"
+  ],
+  "exit_vectors": [
+    "city street interior"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Physical contact/fitting",
+    "BT002 -> BT003: Movement through threshold"
+  ],
+  "characters_required": [
+    {
+      "label": "* Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH010/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "* Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH010/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "* Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH010/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "* Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH010/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "* Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH010/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    },
+    {
+      "label": "* Guardian of the Gates",
+      "canonical_id": "guardian_of_the_gates",
+      "display_name": "guardian_of_the_gates",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH010/guardian_of_the_gates.md",
+      "notes": "Direct registry match for 'guardian_of_the_gates'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "* The Emerald City Gates / Streets of the Emerald City",
+      "canonical_id": "emerald_city_gates",
+      "display_name": "emerald_city_gates",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 126,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH010/emerald_city_gates.md",
+      "notes": "Chapter-local environment alias match for '* The Emerald City Gates / Streets of the Emerald City' (key_overlap=3, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Uniform fit and appearance of green spectacles on all characters",
+    "Consistent green color tint applied to camera/POV shots"
+  ],
+  "visual_coverage_families": [
+    "Close-ups of spectacles being fitted and locked",
+    "POV shots through green-tinted lenses",
+    "Tracking shots following group entry into streets"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Guardian presents spectacles to the group",
+      "purpose": "",
+      "action_start": "Group stands before gates",
+      "action_end": "Guardian holds glasses ready",
+      "active_subjects": [
+        "guardian_of_the_gates"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "spatial_context": "emerald_city_gates threshold",
+      "blocking_hint": "Guardian stands central to the group",
+      "environment_subzone": "emerald_city_gates threshold",
+      "continuity_focus": "spectacle appearance",
+      "coverage_hint": "medium shots of group reaction",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The spectacles are fitted and locked",
+      "purpose": "",
+      "action_start": "Guardian reaches for characters",
+      "action_end": "Glasses are secured with key",
+      "active_subjects": [
+        "guardian_of_the_gates",
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "emerald_city_gates threshold",
+      "blocking_hint": "Guardian moves from person to person in a line",
+      "environment_subzone": "emerald_city_gates threshold",
+      "continuity_focus": "lock mechanism and key usage",
+      "coverage_hint": "close-ups of fitting",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The group enters the city streets",
+      "purpose": "",
+      "action_start": "Group wearing glasses moves forward",
+      "action_end": "Group is walking through the city proper",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto",
+        "guardian_of_the_gates"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "emerald_city_gates streets",
+      "blocking_hint": "Group follows Guardian in a single file or tight cluster",
+      "environment_subzone": "emerald_city_gates streets",
+      "continuity_focus": "green tint POV/visuals",
+      "coverage_hint": "tracking shots and POV shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish constraint",
+      "planned_shot_moment_summary": "Guardian approaches with spectacles",
+      "primary_subject_seed": "guardian_of_the_gates",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "emerald_city_gates threshold",
+      "planned_shot_required_anchor_1": "guardian_of_the_gates key",
+      "planned_shot_scale_proof_detail": "close proximity of Guardian to group",
+      "start_state_seed": "group waiting",
+      "end_state_seed": "Guardian holding spectacles",
+      "action_seed": "Guardian presents glasses",
+      "blocking_seed": [
+        "Guardian stands before the line of travelers"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "detail constraint",
+      "planned_shot_moment_summary": "spectacles being locked onto heads",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "guardian_of_the_gates"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "emerald_city_gates threshold",
+      "planned_shot_required_anchor_1": "green spectacles",
+      "planned_shot_scale_proof_detail": "lock mechanism detail",
+      "start_state_seed": "glasses on face",
+      "end_state_seed": "glasses locked",
+      "action_seed": "Guardian uses key to lock glasses",
+      "blocking_seed": [
+        "Guardian leans in toward Dorothy's head"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "sensory transition",
+      "planned_shot_moment_summary": "group enters city streets through green lens",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "emerald_city_gates streets",
+      "planned_shot_required_anchor_1": "emerald_city_gates entrance",
+      "planned_shot_scale_proof_detail": "green tint overlay",
+      "start_state_seed": "group at gate threshold",
+      "end_state_seed": "group walking into street",
+      "action_seed": "Group walks forward into brilliance",
+      "blocking_seed": [
+        "Group follows Guardian through gates"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "rear_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH010",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH010_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH010",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH010_SC004] Purpose: Introduce a physical constraint (the spectacles) and transition the characters into the city proper.",
+    "[CH010_SC004] Summary: To protect them from being blinded by the city's brilliance, the Guardian forces Dorothy, her companions, and Toto to wear green-lensed spectacles. The Guardian locks the glasses onto their heads with a key he keeps, then leads them t...",
+    "[CH010_SC004] Emotional arc: Constraint/Frustration to sensory overload.",
+    "[CH010_SC004] Coverage: * Close-ups of the spectacles being fitted and locked. * POV shots through green-tinted lenses. * Tracking shots following the group as they enter the city streets.",
+    "[CH010_SC004] Continuity: The fit and appearance of the green spectacles on each character; the specific \"green\" tint applied to the camera/POV.",
+    "[CH010] Chapter summary: **Summary:** After being rescued from a field of deadly poppies by mice, the Cowardly Lion rejoins Dorothy and her companions. The group travels along the yellow brick road through a landscape dominated by green-paint...",
+    "[CH011] Chapter XI (book index hit)",
+    "[CH010] Chapter X (book index hit)",
+    "[CH012] Chapter XII (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH010_SC004\n\n## Production Intent\nEstablish the physical restriction of green-lensed spectacles on all travelers to manage visual brilliance. The sequence transitions the group from a state of resistance/frustration into the overwhelming sensory environment of the city streets.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n- guardian_of_the_gates\n\n## Required Environments\n- emerald_city_gates\n\n## Continuity Constraints\n- Uniform fit and appearance of green spectacles on all characters\n- Consistent green color tint applied to camera/POV shots\n\n## Beat List\n- BT001: Guardian presents spectacles to the group\n- BT002: The spectacles are fitted and locked\n- BT003: The group enters the city streets",
+  "metadata": {
+    "artifact_id": "CH010_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "cccf61cf307975b200c4dcc0edfd212ba0f65dc1",
+    "created_at_utc": "2026-04-27T08:28:35.693756+00:00",
+    "updated_at_utc": "2026-04-27T08:28:35.693756+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH010_SC004",
+        "version": "d237968190cc3658bf9c8bc6ecc195b6d14b6d39"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH010_SC004",
+        "version": "aeffd802d9119c4fa2c239ca474feded987946ca"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH010_SC004",
+        "version": "e938d3f6078badec040f0398e33f202a70021730"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:29:19.495498+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "cccf61cf307975b200c4dcc0edfd212ba0f65dc1"
+      }
+    ]
+  }
+}

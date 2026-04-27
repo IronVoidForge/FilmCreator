@@ -1,0 +1,343 @@
+{
+  "scene_id": "CH002_SC002",
+  "chapter_id": "CH002",
+  "scene_title": "SC002",
+  "purpose": "Introduce the central conflict and the accidental consequence of Dorothy's arrival.",
+  "summary": "Dorothy discovers that her house has landed on top of a figure; upon investigation, she realizes she has killed the Wicked Witch of the East, liberating the Munchkins from their oppression.",
+  "emotional_arc": "Shock $\\rightarrow$ Realization of liberation/Triumph (Munchkins)",
+  "production_intent": "Establish the accidental destruction of the Wicked Witch of the East via house landing. The scene must visually communicate the scale difference between Dorothy and the Munchkins while transitioning from the shock of a heavy impact to the communal triumph of a liberated people.",
+  "scene_short_description": "A large house sits amidst colorful flowers, crushing a figure beneath its foundation.",
+  "scene_primary_scale_story_point": "Dorothy towers over the small Munchkin population.",
+  "scene_required_anchor_catalog": [
+    "The landed house structure",
+    "Colorful flower beds"
+  ],
+  "scene_start_state": "Dorothy stands in shock near the heavy impact site of her house.",
+  "scene_end_state": "Munchkins celebrate the liberation following the discovery of the Witch.",
+  "dominant_action_line": "Dorothy investigates the area beneath the house to discover the fallen Witch.",
+  "scene_spatial_layout": [
+    "House occupies central visual weight",
+    "Lush, colorful landscape surrounds the impact zone"
+  ],
+  "character_spatial_map": [
+    "dorothy positioned near house edge",
+    "munchkins clustered at feet of dorothy or near flowers"
+  ],
+  "environment_subzones": [
+    "The house foundation perimeter",
+    "Flower and fruit-bearing tree groves"
+  ],
+  "entry_vectors": [
+    "Dorothy approaching from house threshold"
+  ],
+  "exit_vectors": [
+    "Munchkins moving toward Dorothy in celebration"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Discovery of the impact site",
+    "BT002 -> BT003: Reveal of the Witch and subsequent liberation"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH002/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH002/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    },
+    {
+      "label": "Munchkins",
+      "canonical_id": "munchkins",
+      "display_name": "munchkins",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH002/munchkins.md",
+      "notes": "Direct registry match for 'munchkins'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The site of the house landing",
+      "canonical_id": null,
+      "display_name": "The site of the house landing",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    }
+  ],
+  "continuity_constraints": [
+    "House position relative to character movement",
+    "Scale disparity between Dorothy and munchkins"
+  ],
+  "visual_coverage_families": [
+    "Low angle shots looking up at house impact",
+    "Medium shots for Dorothy and Munchkin interaction",
+    "Reveal shot of the Witch under the house structure"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Dorothy discovers the house impact",
+      "purpose": "",
+      "action_start": "dorothy standing in shock",
+      "action_end": "dorothy approaching the house edge",
+      "active_subjects": [
+        "dorothy",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "The house foundation perimeter",
+      "blocking_hint": "dorothy near the base of the structure",
+      "environment_subzone": "The house foundation perimeter",
+      "continuity_focus": "house position relative to dorothy",
+      "coverage_hint": "low angle shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Discovery of the Witch",
+      "purpose": "",
+      "action_start": "dorothy looking under the house",
+      "action_end": "the realization of the figure's identity",
+      "active_subjects": [
+        "dorothy"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "The house foundation perimeter",
+      "blocking_hint": "dorothy leaning over the structure edge",
+      "environment_subzone": "The house foundation perimeter",
+      "continuity_focus": "scale of figure vs house",
+      "coverage_hint": "reveal shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Munchkin liberation celebration",
+      "purpose": "",
+      "action_start": "munchkins emerging from surroundings",
+      "action_end": "triumphant atmosphere established",
+      "active_subjects": [
+        "munchkins"
+      ],
+      "passive_subjects": [
+        "dorothy"
+      ],
+      "spatial_context": "Flower and fruit-bearing tree groves",
+      "blocking_hint": "munchkins clustered around dorothy's feet",
+      "environment_subzone": "Flower and fruit-bearing tree groves",
+      "continuity_focus": "scale difference between dorothy and munchkins",
+      "coverage_hint": "medium shots of interaction",
+      "coverage_priority": "medium",
+      "handoff_to_next": "none"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish impact",
+      "planned_shot_moment_summary": "looking up at the house structure",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "The house foundation perimeter",
+      "planned_shot_required_anchor_1": "The landed house structure",
+      "planned_shot_scale_proof_detail": "low angle vs house height",
+      "start_state_seed": "dorothy looking up in shock",
+      "end_state_seed": "dorothy moving toward edge",
+      "action_seed": "looking at the massive house",
+      "blocking_seed": [
+        "dorothy near house base"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "tilt",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "reveal consequence",
+      "planned_shot_moment_summary": "seeing the Witch's legs/figure",
+      "primary_subject_seed": "the figure under house",
+      "secondary_subjects_seed": [
+        "dorothy"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "The house foundation perimeter",
+      "planned_shot_required_anchor_1": "The landed house structure",
+      "planned_shot_scale_proof_detail": "house vs figure size",
+      "start_state_seed": "camera panning down",
+      "end_state_seed": "reveal of the Witch",
+      "action_seed": "discovering the body",
+      "blocking_seed": [
+        "dorothy leaning over edge"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish liberation",
+      "planned_shot_moment_summary": "munchkins celebrating",
+      "primary_subject_seed": "munchkins",
+      "secondary_subjects_seed": [
+        "dorothy"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "Flower and fruit-bearing tree groves",
+      "planned_shot_required_anchor_1": "Colorful flower beds",
+      "planned_shot_scale_proof_detail": "munchkin height vs dorothy height",
+      "start_state_seed": "munchkins appearing",
+      "end_state_seed": "munchkins cheering",
+      "action_seed": "celebrating liberation",
+      "blocking_seed": [
+        "munchkins surrounding dorothy's feet"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve The site of the house landing -> The site of the house landing"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH002",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH002_SC002] Purpose: Introduce the central conflict and the accidental consequence of Dorothy's arrival.",
+    "[CH002_SC002] Summary: Dorothy discovers that her house has landed on top of a figure; upon investigation, she realizes she has killed the Wicked Witch of the East, liberating the Munchkins from their oppression.",
+    "[CH002_SC002] Emotional arc: Shock $\\rightarrow$ Realization of liberation/Triumph (Munchkins)",
+    "[CH002_SC002] Coverage: Low angle shots: Looking up at the house to show its impact. Medium shots: Interaction between Dorothy and the small Munchkins. Reveal shot: The discovery of the Witch under the house.",
+    "[CH002_SC002] Continuity: Position of the house relative to the characters. The scale difference between Dorothy and the Munchkins.",
+    "[CH002] Chapter summary: **Setting:** A lush, beautiful country in the Land of Oz, characterized by colorful flowers, fruit-bearing trees, and a sparkling brook. **Characters:** - **Dorothy:** A young girl from Kansas, newly arrived in Oz. -...",
+    "[CH002] Chapter II (book index hit)",
+    "[CH003] Chapter III (book index hit)",
+    "[CH011] Chapter XI (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH002_SC002\n\n## Production Intent\nEstablish the accidental destruction of the Wicked Witch of the East via house landing. The scene must visually communicate the scale difference between Dorothy and the Munchkins while transitioning from the shock of a heavy impact to the communal triumph of a liberated people.\n\n## Required Cast\n- dorothy (young girl, white clothing/dress)\n- toto\n- munchkins (small scale)\n\n## Required Environments\n- The site of the house landing (lush country, colorful flowers, fruit-bearing trees)\n\n## Continuity Constraints\n- Position of the house relative to characters\n- Scale difference between Dorothy and Munchkins\n\n## Beat List\n- BT001: Dorothy discovers the house impact\n- BT002: Discovery of the Witch\n- BT003: Munchkin liberation celebration",
+  "metadata": {
+    "artifact_id": "CH002_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "faead1fb65fae1f28f16d75c60f6acb1474d05d7",
+    "created_at_utc": "2026-04-27T08:00:53.596422+00:00",
+    "updated_at_utc": "2026-04-27T08:00:53.596422+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH002_SC002",
+        "version": "fecbe0783e15b15d5813f68f238bb76102e8dd54"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH002_SC002",
+        "version": "1c4377881d9922c84021c50f87d2bf12f261c1ef"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH002_SC002",
+        "version": "c64d065e6805179373900ca7bfe41fe85e703f27"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:01:33.506289+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "faead1fb65fae1f28f16d75c60f6acb1474d05d7"
+      }
+    ]
+  }
+}

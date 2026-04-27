@@ -1,0 +1,5 @@
+- [SC001](#SC001) Lost in the Scarlet Fields
+- [SC002](#SC002) The Queen of the Mice
+- [SC003](#SC003) Summoning the Winged Monkeys
+- [SC004](#SC004) Flight and the Legend of the Cap
+- [SC005](#SC005) Arrival at the Emerald City

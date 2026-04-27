@@ -1,0 +1,30 @@
+{
+  "merge_groups": [
+    {
+      "entity_type": "character",
+      "action": "merge_into_existing",
+      "canonical_id": "oz",
+      "subject_ids": [
+        "oz",
+        "oz_the_wizard"
+      ],
+      "target_id": "oz",
+      "new_canonical_id": null,
+      "new_entity_kind": null,
+      "reason": "High confidence match; oz_the_wizard is a descriptive variant of the canonical entity oz.",
+      "confidence": "high"
+    }
+  ],
+  "review": [
+    {
+      "entity_type": "environment",
+      "subject_ids": [
+        "yellow_brick_road",
+        "yellow_brick_road_pathway",
+        "yellow_brick_road_transit"
+      ],
+      "reason": "Decision subject ids did not match candidate ids.",
+      "confidence": "low"
+    }
+  ]
+}

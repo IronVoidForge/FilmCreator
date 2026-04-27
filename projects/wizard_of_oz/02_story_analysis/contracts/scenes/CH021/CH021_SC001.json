@@ -1,0 +1,392 @@
+{
+  "scene_id": "CH021_SC001",
+  "chapter_id": "CH021",
+  "scene_title": "SC001",
+  "purpose": "Establish the difficult terrain and transition the group into a new, more dangerous environment.",
+  "summary": "Dorothy, Toto, and their companions struggle through disagreeable bogs and marshes before entering a vast, ancient forest characterized by massive trees and thick moss.",
+  "emotional_arc": "From physical exhaustion/discomfort to a sense of awe and foreboding.",
+  "production_intent": "Establish the physical toll of the marshland terrain and execute a visual transition from open, muddy bogs into the claustrophobic, massive scale of an ancient forest.",
+  "scene_short_description": "A group struggles through thick bogs before entering a massive, moss-covered ancient forest.",
+  "scene_primary_scale_story_point": "Transition from horizontal expanse of marshes to vertical scale of massive trees.",
+  "scene_required_anchor_catalog": [
+    "thick_moss_patches",
+    "massive_tree_trunks"
+  ],
+  "scene_start_state": "Group wading through open, disagreeable marshland bogs.",
+  "scene_end_state": "Group standing dwarfed by the entrance of a dense, ancient forest canopy.",
+  "dominant_action_line": "The group navigates difficult mud and bog terrain to reach the forest edge.",
+  "scene_spatial_layout": [
+    "Open horizontal plane for marshland",
+    "Vertical enclosure for forest interior"
+  ],
+  "character_spatial_map": [
+    "dorothy, the_scarecrow, tin_woodman, Lion, and toto move in a staggered line through mud",
+    "the_scarecrow and tin_woodman lead or flank to assist movement"
+  ],
+  "environment_subzones": [
+    "marshland_bog_complex",
+    "ancient_forest_interior"
+  ],
+  "entry_vectors": [
+    "marshland_bog_complex (via wading)"
+  ],
+  "exit_vectors": [
+    "ancient_forest_interior (via tree line entry)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Transition from wide landscape struggle to character-focused physical exertion.",
+    "BT002 -> BT003: Transition from open marsh light to forest canopy shadow."
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Lion",
+      "canonical_id": null,
+      "display_name": "Lion",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Bogs/Marshes",
+      "canonical_id": "marshland_bog_complex",
+      "display_name": "marshland_bog_complex",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH021/marshland_bog_complex.md",
+      "notes": "Chapter-local environment alias match for 'Bogs/Marshes' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    {
+      "label": "Ancient Forest",
+      "canonical_id": "ancient_forest_interior",
+      "display_name": "ancient_forest_interior",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 76,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH021/ancient_forest_interior.md",
+      "notes": "Chapter-local environment alias match for 'Ancient Forest' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Accumulating mud levels on clothing and limbs",
+    "Lighting shift from open marsh brightness to dense forest canopy shadow"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of landscape scale",
+    "Medium tracking shots of group movement through mud",
+    "Close-ups of feet in bogs and mossy textures"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Group struggles through the disagreeable bogs",
+      "purpose": "",
+      "action_start": "wading into marshland",
+      "action_end": "deepening mud levels",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "Lion",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "marshland_bog_complex",
+      "blocking_hint": "staggered line through muck",
+      "environment_subzone": "marshland_bog_complex",
+      "continuity_focus": "mud accumulation on white clothing and metal surfaces",
+      "coverage_hint": "wide landscape shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Physical toll of the terrain is emphasized",
+      "purpose": "",
+      "action_start": "heavy stepping",
+      "action_end": "exhausted movement",
+      "active_subjects": [
+        "dorothy",
+        "tin_woodman",
+        "Lion"
+      ],
+      "passive_subjects": [
+        "the_scarecrow",
+        "toto"
+      ],
+      "spatial_context": "marshland_bog_complex",
+      "blocking_hint": "close proximity to ground/mud",
+      "environment_subzone": "marshland_bog_complex",
+      "continuity_focus": "wet mud textures on limbs",
+      "coverage_hint": "medium tracking and close-ups",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Transition into the ancient forest",
+      "purpose": "",
+      "action_start": "approaching tree line",
+      "action_end": "standing under massive canopy",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "Lion",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "transition from marsh to forest",
+      "blocking_hint": "group moving toward vertical structures",
+      "environment_subzone": "ancient_forest_interior",
+      "continuity_focus": "lighting shift from open to dense canopy shadow",
+      "coverage_hint": "wide and full shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish landscape difficulty",
+      "planned_shot_moment_summary": "group wading through wide bog expanse",
+      "primary_subject_seed": "marshland_bog_complex",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "Lion",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "marshland_bog_complex",
+      "planned_shot_required_anchor_1": "horizon_line",
+      "planned_shot_scale_proof_detail": "vastness of bog vs small group size",
+      "start_state_seed": "wide view of marsh",
+      "end_state_seed": "group moving deeper into mud",
+      "action_seed": "wading",
+      "blocking_seed": [
+        "staggered line traversal"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "convey physical exhaustion",
+      "planned_shot_moment_summary": "close up of feet and mud textures",
+      "primary_subject_seed": "feet/limbs",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "tin_woodman"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "marshland_bog_complex",
+      "planned_shot_required_anchor_1": "mud_surface",
+      "planned_shot_scale_proof_detail": "visceral texture of sludge",
+      "start_state_seed": "foot lifting from mud",
+      "end_state_seed": "foot sinking into bog",
+      "action_seed": "struggling through muck",
+      "blocking_seed": [
+        "individual footwork"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish awe and foreboding",
+      "planned_shot_moment_summary": "group enters massive tree shadows",
+      "primary_subject_seed": "ancient_forest_interior",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "Lion",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "ancient_forest_interior",
+      "planned_shot_required_anchor_1": "massive_tree_trunks",
+      "planned_shot_scale_proof_detail": "trees dwarfing characters",
+      "start_state_seed": "edge of forest line",
+      "end_state_seed": "deep within canopy shadow",
+      "action_seed": "walking into shade",
+      "blocking_seed": [
+        "group moving from light to dark"
+      ],
+      "shot_size": "full",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "rear_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Lion -> Lion"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH006",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH005",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH021",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH021_SC001] Purpose: Establish the difficult terrain and transition the group into a new, more dangerous environment.",
+    "[CH021_SC001] Summary: Dorothy, Toto, and their companions struggle through disagreeable bogs and marshes before entering a vast, ancient forest characterized by massive trees and thick moss.",
+    "[CH021_SC001] Emotional arc: From physical exhaustion/discomfort to a sense of awe and foreboding.",
+    "[CH021_SC001] Coverage: Wide shots of the landscape; medium tracking shots of the group struggling through mud; close-ups of feet in bogs and mossy textures.",
+    "[CH021_SC001] Continuity: Mud levels on clothing/limbs; lighting shifts from open marsh to dense forest canopy.",
+    "[CH021] Chapter summary: **Setting:** A disagreeable country of bogs and marshes, leading into a vast, ancient forest filled with massive trees and thick moss. **Characters:** Dorothy, Toto, the Scarecrow, the Tin Woodman, the Lion, various f...",
+    "[CH006] Chapter VI (book index hit)",
+    "[CH002] Chapter II (book index hit)",
+    "[CH005] Chapter V (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH021_SC001\n\n## Production Intent\nEstablish the physical toll of the marshland terrain and execute a visual transition from open, muddy bogs into the claustrophobic, massive scale of an ancient forest.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- toto\n- the_scarecrow\n- tin_woodman\n- Lion\n\n## Required Environments\n- marshland_bog_complex (open, disagreeable, muddy)\n- ancient_forest_interior (massive trees, thick moss, dense canopy)\n\n## Continuity Constraints\n- Mud levels on clothing/limbs must increase throughout the bog sequence.\n- Lighting must transition from open marsh brightness to heavy forest canopy shadows.\n\n## Beat List\n- BT001: Group struggles through the disagreeable bogs.\n- BT002: Physical toll of the terrain is emphasized via close-up textures.\n- BT003: Transition into the awe and foreboding of the ancient forest.",
+  "metadata": {
+    "artifact_id": "CH021_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "ea32fa93b47fb56f0265159bd5963c454008c53a",
+    "created_at_utc": "2026-04-27T09:04:50.937592+00:00",
+    "updated_at_utc": "2026-04-27T09:04:50.937592+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH021_SC001",
+        "version": "0837de34ee81f92268ea8868562ff92674309ca5"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH021_SC001",
+        "version": "faba4e790fd6133f98aa7cb43b9df9089b46be77"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH021_SC001",
+        "version": "d126e5a609a1583ca02efae1964fe60342cb7c37"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T09:05:34.793152+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "ea32fa93b47fb56f0265159bd5963c454008c53a"
+      }
+    ]
+  }
+}

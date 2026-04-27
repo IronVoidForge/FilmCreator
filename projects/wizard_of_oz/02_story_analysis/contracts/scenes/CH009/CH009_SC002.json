@@ -1,0 +1,356 @@
+{
+  "scene_id": "CH009_SC002",
+  "chapter_id": "CH009",
+  "scene_title": "SC002",
+  "purpose": "Escalation and preparation for the rescue mission.",
+  "summary": "The Scarecrow asks the Queen to help rescue the Cowardly Lion from the poppy field. The Tin Woodman begins constructing a makeshift wooden truck using tree limbs and pegs, while the mice begin arriving in massive numbers, each carrying string to serve as harness lines.",
+  "emotional_arc": "Desperation $\\rightarrow$ Industrious Hope.",
+  "production_intent": "Establish the transition from panic to organized rescue preparation. The scene requires managing a growing crowd of mice and the progressive assembly of a wooden vehicle constructed from natural debris.",
+  "scene_short_description": "A rustic construction site in a grassy field as a mouse army arrives with supplies.",
+  "scene_primary_scale_story_point": "The massive scale of thousands of mice relative to the human-scale characters.",
+  "scene_required_anchor_catalog": [
+    "makeshift wooden truck frame",
+    "poppy_field_bed edge"
+  ],
+  "scene_start_state": "Scarecrow pleading for help amidst growing anxiety.",
+  "scene_end_state": "A bustling, industrious scene with a partially built truck and a dense mouse presence.",
+  "dominant_action_line": "The mobilization of resources (mice and wood) to build a rescue vehicle.",
+  "scene_spatial_layout": [
+    "Construction zone centered around the wooden truck frame.",
+    "Approaching perimeter defined by the incoming mouse tide."
+  ],
+  "character_spatial_map": [
+    "the_scarecrow positioned near queen_of_the_field_mice.",
+    "tin_woodman working at the center of the makeshift truck assembly.",
+    "Thousands of Field Mice flowing from the field edges toward the center."
+  ],
+  "environment_subzones": [
+    "poppy_field_bed edge",
+    "construction subzone (truck site)",
+    "mouse approach path"
+  ],
+  "entry_vectors": [
+    "mouse swarm entering from all grassy field directions."
+  ],
+  "exit_vectors": [
+    "Subjects exit or hand off toward the next story beat."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Transition from verbal plea to physical labor.",
+    "BT002 -> BT003: Transition from individual construction to collective arrival."
+  ],
+  "characters_required": [
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH009/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH009/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Queen of the Field Mice",
+      "canonical_id": "queen_of_the_field_mice",
+      "display_name": "Queen of the Field Mice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH009/queen_of_the_field_mice.md",
+      "notes": "Direct registry match for 'queen_of_the_field_mice'."
+    },
+    {
+      "label": "Thousands of Field Mice",
+      "canonical_id": null,
+      "display_name": "Thousands of Field Mice",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Grassy field near the poppy bed",
+      "canonical_id": "poppy_field_bed",
+      "display_name": "poppy_field_bed",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 126,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH009/poppy_field_bed.md",
+      "notes": "Chapter-local environment alias match for 'Grassy field near the poppy bed' (key_overlap=3, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Progressive assembly state of the wooden truck (limbs and pegs).",
+    "Increasing density/volume of the field mice crowd."
+  ],
+  "visual_coverage_families": [
+    "Montage-style coverage of the Woodman building.",
+    "Wide shots showing the scale of the approaching mouse army.",
+    "Detail shots of mice carrying individual string segments."
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The Scarecrow's plea for rescue",
+      "purpose": "",
+      "action_start": "the_scarecrow approaches queen_of_the_field_mice",
+      "action_end": "queen_of_the_field_mice agrees to assist",
+      "active_subjects": [
+        "the_scarecrow",
+        "queen_of_the_field_mice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "edge of poppy_field_bed",
+      "blocking_hint": "Scarecrow looming over the Queen",
+      "environment_subzone": "poppy_field_bed edge",
+      "continuity_focus": "character height relationship",
+      "coverage_hint": "medium_close shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Construction begins",
+      "purpose": "",
+      "action_start": "tin_woodman gathers tree limbs",
+      "action_end": "the makeshift wooden truck frame takes shape",
+      "active_subjects": [
+        "tin_woodman"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "grassy field center",
+      "blocking_hint": "Woodman centered around the wood pile",
+      "environment_subzone": "construction subzone",
+      "continuity_focus": "assembly state of the truck",
+      "coverage_hint": "montage/detail shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The mouse army arrives",
+      "purpose": "",
+      "action_start": "distant movement in grass",
+      "action_end": "mice surround the construction site with string lines",
+      "active_subjects": [
+        "Thousands of Field Mice"
+      ],
+      "passive_subjects": [
+        "tin_woodman",
+        "the_scarecrow"
+      ],
+      "spatial_context": "entire field area",
+      "blocking_hint": "Mice moving in waves toward center",
+      "environment_subzone": "mouse approach path",
+      "continuity_focus": "increasing density of mice",
+      "coverage_hint": "wide shots and detail string shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish stakes",
+      "planned_shot_moment_summary": "the_scarecrow pleads with queen_of_the_field_mice",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [
+        "queen_of_the_field_mice"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "poppy_field_bed edge",
+      "planned_shot_required_anchor_1": "poppy_field_bed",
+      "planned_shot_scale_proof_detail": "human-scale humanoid vs mouse queen",
+      "start_state_seed": "scarecrow leaning in",
+      "end_state_seed": "queen nodding",
+      "action_seed": "pleading",
+      "blocking_seed": [
+        "close proximity"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "subtle_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "montage of labor",
+      "planned_shot_moment_summary": "tin_woodman assembling limbs and pegs",
+      "primary_subject_seed": "tin_woodman",
+      "secondary_subjects_seed": [
+        "makeshift wooden truck frame"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "construction subzone",
+      "planned_shot_required_anchor_1": "makeshift wooden truck frame",
+      "planned_shot_scale_proof_detail": "tree limbs vs tin woodman hands",
+      "start_state_seed": "raw limbs on grass",
+      "end_state_seed": "partially joined structure",
+      "action_seed": "hammering/fitting pegs",
+      "blocking_seed": [
+        "kneeling at truck site"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish scale",
+      "planned_shot_moment_summary": "thousands of mice arrive with string",
+      "primary_subject_seed": "Thousands of Field Mice",
+      "secondary_subjects_seed": [
+        "makeshift wooden truck frame"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "mouse approach path",
+      "planned_shot_required_anchor_1": "makeshift wooden truck frame",
+      "planned_shot_scale_proof_detail": "thousands of small dots vs large truck structure",
+      "start_state_seed": "distant movement",
+      "end_state_seed": "dense crowd surrounding construction",
+      "action_seed": "marching with string",
+      "blocking_seed": [
+        "filling the field"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "high_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "crane",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Thousands of Field Mice -> Thousands of Field Mice"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH009",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH009_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH009",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH009_chapter_ix.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH014_chapter_xiv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH009",
+      "canonical_id": "the_scarecrow"
+    }
+  ],
+  "evidence_summary": [
+    "[CH009_SC002] Purpose: Escalation and preparation for the rescue mission.",
+    "[CH009_SC002] Summary: The Scarecrow asks the Queen to help rescue the Cowardly Lion from the poppy field. The Tin Woodman begins constructing a makeshift wooden truck using tree limbs and pegs, while the mice begin arriving in massive numbers, each carryin...",
+    "[CH009_SC002] Emotional arc: Desperation $\\rightarrow$ Industrious Hope.",
+    "[CH009_SC002] Coverage: Montage-style coverage of the Woodman building. Wide shots (WS) showing the scale of the approaching mouse army. Detail shots of the mice carrying individual pieces of string.",
+    "[CH009_SC002] Continuity: The assembly state of the wooden truck; the increasing density of the mouse crowd.",
+    "[CH009] Chapter summary: **Setting:** A grassy field near a river, adjacent to a poppy bed. **Characters:** - Dorothy - Scarecrow - Tin Woodman - Toto - The Queen of the Field Mice (and her subjects) - The Cowardly Lion (unconscious) **Events...",
+    "[CH009] Chapter IX (book index hit)",
+    "[CH012] Chapter XII (book index hit)",
+    "[CH014] Chapter XIV (book index hit)",
+    "Character the_scarecrow: The Scarecrow is a bipedal, human-scale humanoid constructed from rustic materials. As a non-flesh entity, the figure is visibly stuffed with straw and maintains a traditional scarecrow silhouette. Its movement is characterized as c..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH009_SC002\n\n## Production Intent\nEstablish the transition from panic to organized rescue preparation. The scene requires managing a growing crowd of mice and the progressive assembly of a wooden vehicle constructed from natural debris.\n\n## Required Cast\n- the_scarecrow\n- tin_woodman\n- queen_of_the_field_mice\n- Thousands of Field Mice\n\n## Required Environments\n- poppy_field_bed (edge)\n- Grassy field (construction site)\n\n## Continuity Constraints\n- Progressive assembly state of the wooden truck (limbs and pegs).\n- Increasing density/volume of the field mice crowd.\n\n## Beat List\n- BT001: The Scarecrow's plea for rescue.\n- BT002: Construction begins (Tin Woodman).\n- BT003: The mouse army arrives with string lines.",
+  "metadata": {
+    "artifact_id": "CH009_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "cf0ab5d4b60e3e15b378d11e8569ba702f651f58",
+    "created_at_utc": "2026-04-27T08:24:10.817163+00:00",
+    "updated_at_utc": "2026-04-27T08:24:10.817163+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH009_SC002",
+        "version": "c774a6c5779dd462f18f8b3388aa59286ee51d2a"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH009_SC002",
+        "version": "405a2aff7f524f77141c2cd5b6a641aae955e629"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH009_SC002",
+        "version": "32522636435bb2db5bcb4eab7ac4d6efab802740"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:24:53.628702+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "cf0ab5d4b60e3e15b378d11e8569ba702f651f58"
+      }
+    ]
+  }
+}

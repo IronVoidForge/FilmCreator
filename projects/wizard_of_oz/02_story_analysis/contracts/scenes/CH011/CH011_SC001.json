@@ -1,0 +1,376 @@
+{
+  "scene_id": "CH011_SC001",
+  "chapter_id": "CH011",
+  "scene_title": "SC001",
+  "purpose": "Establish the awe and scale of the Emerald City setting.",
+  "summary": "Dorothy, Toto, Scarecrow, Tin Woodman, and Cowardly Lion arrive at the gates of the Emerald City. They are overwhelmed by the green marble streets and emerald-studded architecture before being led toward the Palace of Oz.",
+  "emotional_arc": "Curiosity/Awe $\\rightarrow$ Overwhelmed Wonder.",
+  "production_intent": "Establish the overwhelming scale and monochromatic green aesthetic of the Emerald City through character reaction and architectural grandeur. The visual language must emphasize the transition from curiosity to total sensory wonder as the group enters the city gates.",
+  "scene_short_description": "A small group enters a massive city defined by green marble streets and emerald architecture.",
+  "scene_primary_scale_story_point": "The height of the emerald-studded buildings relative to the travelers.",
+  "scene_required_anchor_catalog": [
+    "emerald_city_gates",
+    "green_marble_streets",
+    "palace_of_oz_structure"
+  ],
+  "scene_start_state": "The group stands at the threshold of the gates, looking inward.",
+  "scene_end_state": "The group is walking through crowds toward the Palace of Oz.",
+  "dominant_action_line": "The travelers navigate the emerald streets while reacting to the city's scale.",
+  "scene_spatial_layout": [
+    "Wide open thoroughfares made of green marble",
+    "Dense crowds of citizens dressed entirely in green"
+  ],
+  "character_spatial_map": [
+    "dorothy, the_scarecrow, tin_woodman, cowardly_lion, and toto move as a central cluster",
+    "guardian_of_the_gates positioned at the threshold",
+    "palace_soldiers flanking paths or guarding structures"
+  ],
+  "environment_subzones": [
+    "emerald_city_gates",
+    "emerald_city_streets"
+  ],
+  "entry_vectors": [
+    "gate_threshold"
+  ],
+  "exit_vectors": [
+    "path_to_palace"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Arrival at gates to entry into streets",
+    "BT002 -> BT003: Street navigation to palace approach"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "Guardian of the Gates",
+      "canonical_id": "guardian_of_the_gates",
+      "display_name": "guardian_of_the_gates",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/guardian_of_the_gates.md",
+      "notes": "Direct registry match for 'guardian_of_the_gates'."
+    },
+    {
+      "label": "Palace Soldiers",
+      "canonical_id": "palace_soldiers",
+      "display_name": "palace_soldiers",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/palace_soldiers.md",
+      "notes": "Direct registry match for 'palace_soldiers'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Streets of the Emerald City (Green Marble/Emerald)",
+      "canonical_id": "emerald_city_streets",
+      "display_name": "emerald_city_streets",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 146,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/emerald_city_streets.md",
+      "notes": "Chapter-local environment alias match for 'The Streets of the Emerald City (Green Marble/Emerald)' (key_overlap=3, label_overlap=5, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Specific shade and intensity of green lighting/filters",
+    "Group formation and spacing while navigating through crowds"
+  ],
+  "visual_coverage_families": [
+    "Wide establishing shots of the city architecture",
+    "Medium tracking shots of the traveling group",
+    "Close-ups of character reactions to green splendor"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Arrival at the gates",
+      "purpose": "",
+      "action_start": "group approaches gate threshold",
+      "action_end": "group halts in awe",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto",
+        "guardian_of_the_gates"
+      ],
+      "passive_subjects": [
+        "palace_soldiers"
+      ],
+      "spatial_context": "emerald_city_gates",
+      "blocking_hint": "group stops at the gate entrance",
+      "environment_subzone": "emerald_city_gates",
+      "continuity_focus": "green lighting intensity",
+      "coverage_hint": "wide establishing shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Entering the streets",
+      "purpose": "",
+      "action_start": "group moves past gates",
+      "action_end": "group enters main thoroughfare",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "passive_subjects": [
+        "palace_soldiers",
+        "citizens_in_green"
+      ],
+      "spatial_context": "emerald_city_streets",
+      "blocking_hint": "group weaves through green-clad crowds",
+      "environment_subzone": "emerald_city_streets",
+      "continuity_focus": "group formation in crowd",
+      "coverage_hint": "medium tracking shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Toward the Palace",
+      "purpose": "",
+      "action_start": "group walking through streets",
+      "action_end": "group approaches palace entrance",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "passive_subjects": [
+        "palace_soldiers"
+      ],
+      "spatial_context": "emerald_city_streets",
+      "blocking_hint": "group moves toward central palace structure",
+      "environment_subzone": "emerald_city_streets",
+      "continuity_focus": "green lighting intensity",
+      "coverage_hint": "wide/medium tracking",
+      "coverage_priority": "low",
+      "handoff_to_next": "none"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish_scale",
+      "planned_shot_moment_summary": "group views the city from the gates",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "emerald_city_gates",
+      "planned_shot_required_anchor_1": "emerald_city_gates",
+      "planned_shot_scale_proof_detail": "buildings towering over characters",
+      "start_state_seed": "group at gate threshold",
+      "end_state_seed": "group stepping forward",
+      "action_seed": "characters stop and stare",
+      "blocking_seed": [
+        "group clustered near gate edge"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "character_reaction",
+      "planned_shot_moment_summary": "close up of faces seeing green splendor",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "emerald_city_streets",
+      "planned_shot_required_anchor_1": "green_marble_streets",
+      "planned_shot_scale_proof_detail": "reflection of green in eyes",
+      "start_state_seed": "eyes widening",
+      "end_state_seed": "expressions of wonder",
+      "action_seed": "characters react to visual stimuli",
+      "blocking_seed": [
+        "group walking in loose formation"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "track",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH011",
+      "scene_id": "CH011_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH011",
+      "scene_id": "CH011_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH011",
+      "scene_id": "CH011_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH011",
+      "scene_id": "CH011_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH011",
+      "scene_id": "CH011_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH011",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH005",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH011",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH011_SC001] Purpose: Establish the awe and scale of the Emerald City setting.",
+    "[CH011_SC001] Summary: Dorothy, Toto, Scarecrow, Tin Woodman, and Cowardly Lion arrive at the gates of the Emerald City. They are overwhelmed by the green marble streets and emerald-studded architecture before being led toward the Palace of Oz.",
+    "[CH011_SC001] Emotional arc: Curiosity/Awe $\\rightarrow$ Overwhelmed Wonder.",
+    "[CH011_SC001] Coverage: Wide establishing shots of the city; medium tracking shots of the group walking; close-ups of character reactions to the green splendor.",
+    "[CH011_SC001] Continuity: The specific shade and intensity of \"green\" lighting/filters; the group's formation while walking through crowds.",
+    "[CH011] Chapter summary: **Setting:** The Emerald City, characterized by green marble streets, emerald-studded buildings, and citizens dressed entirely in green. The group stays within the Palace of Oz. **Characters:** - Dorothy & Toto - Scar...",
+    "[CH003] Chapter III (book index hit)",
+    "[CH004] Chapter IV (book index hit)",
+    "[CH005] Chapter V (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH011_SC001\n\n## Production Intent\nEstablish the overwhelming scale and monochromatic green aesthetic of the Emerald City through character reaction and architectural grandeur. The visual language must emphasize the transition from curiosity to total sensory wonder as the group enters the city gates.\n\n## Required Cast\n- dorothy\n- toto\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- guardian_of_the_gates\n- palace_soldiers\n\n## Required Environments\n- emerald_city_streets (Green Marble/Emerald)\n\n## Continuity Constraints\n- Specific shade and intensity of green lighting/filters.\n- The group's formation while walking through crowds.\n\n## Beat List\n- BT001: Arrival at the gates.\n- BT002: Entering the streets.\n- BT003: Toward the Palace.",
+  "metadata": {
+    "artifact_id": "CH011_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "1f459bbbdc107bc357d9085267a67e7820e019ef",
+    "created_at_utc": "2026-04-27T08:29:20.698370+00:00",
+    "updated_at_utc": "2026-04-27T08:29:20.698370+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH011_SC001",
+        "version": "47fade0130998fdc40a887ddb86567e5a4268d70"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH011_SC001",
+        "version": "84dead21b2909cf1d7135809c01fd1bf82a54e00"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH011_SC001",
+        "version": "aa2ef4e87a34e9c3521cfeb13f8a4612925d0bb8"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:29:59.688399+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "1f459bbbdc107bc357d9085267a67e7820e019ef"
+      }
+    ]
+  }
+}

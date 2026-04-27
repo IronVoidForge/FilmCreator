@@ -1,0 +1,449 @@
+{
+  "scene_id": "CH007_SC003",
+  "chapter_id": "CH007",
+  "scene_title": "SC003",
+  "purpose": "Escalation of tension through a life-threatening encounter and a high-stakes decision.",
+  "summary": "The group reaches a second ditch too wide for the Lion to jump. The Woodman chops a tree to create a bridge. As they cross, Kalidahs attack. To save the group, the Scarecrow directs the Woodman to chop the bridge, dropping the monsters into the abyss.",
+  "emotional_arc": "Tension $\\rightarrow$ Terror $\\rightarrow$ Triumph/Exhaustion.",
+  "production_intent": "Execute a high-tension sequence involving environmental modification and a sudden predator attack. The sequence requires precise timing between the construction of a makeshift bridge and the arrival of the Kalidahs to ensure the life-threatening stakes are visually coherent.",
+  "scene_short_description": "A group crosses a makeshift log bridge over a wide ditch as predators attack from the forest.",
+  "scene_primary_scale_story_point": "The width of the second ditch exceeds the jumping capacity of the cowardly_lion.",
+  "scene_required_anchor_catalog": [
+    "The felled tree/bridge",
+    "The edge of the abyss/ditch"
+  ],
+  "scene_start_state": "The group stands at the edge of a wide, impassable ditch.",
+  "scene_end_state": "The group is safe on the far side; monsters are in the abyss.",
+  "dominant_action_line": "Constructing a bridge to cross a gap, defending it from attack, and destroying it to survive.",
+  "scene_spatial_layout": [
+    "A wide ditch separating two forest banks.",
+    "A single tree spanning the gap as a narrow walkway."
+  ],
+  "character_spatial_map": [
+    "tin_woodman positioned at the tree trunk for chopping.",
+    "the_scarecrow positioned near the edge to direct movement.",
+    "dorothy, toto, and cowardly_lion traversing the bridge length."
+  ],
+  "environment_subzones": [
+    "The Near Bank",
+    "The Bridge (Tree Trunk)",
+    "The Abyss (Ditch Interior)",
+    "The Far Bank"
+  ],
+  "entry_vectors": [
+    "Forest path leading to the near bank."
+  ],
+  "exit_vectors": [
+    "Path across the bridge to the far bank."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Physical construction of the crossing.",
+    "BT002 -> BT003: Sudden transition from transit to combat/terror.",
+    "BT003 -> BT004: High-stakes decision and environmental destruction."
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH007/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH007/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH007/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH007/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH007/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "Kalidahs",
+      "canonical_id": "kalidahs",
+      "display_name": "kalidahs",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH007/kalidahs.md",
+      "notes": "Direct registry match for 'kalidahs'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Second Ditch/Bridge Site",
+      "canonical_id": null,
+      "display_name": "The Second Ditch/Bridge Site",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    }
+  ],
+  "continuity_constraints": [
+    "Exact position of the tree/bridge relative to the ditch width.",
+    "Timing of the final chop relative to character crossing positions."
+  ],
+  "visual_coverage_families": [
+    "Handheld/shaky cam for the Kalidah attack.",
+    "POV shots from the bridge looking down at the monsters.",
+    "Close-ups of axe work and verbal commands."
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Discovery of the impassable ditch",
+      "purpose": "",
+      "action_start": "group walking through forest",
+      "action_end": "group stops at ditch edge",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "passive_subjects": [
+        "toto"
+      ],
+      "spatial_context": "The Near Bank",
+      "blocking_hint": "group clustered at the precipice",
+      "environment_subzone": "The Near Bank",
+      "continuity_focus": "ditch width must look unjumpable",
+      "coverage_hint": "wide shot of group and gap",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Construction of the bridge",
+      "purpose": "",
+      "action_start": "tin_woodman begins chopping",
+      "action_end": "tree is laid across the ditch",
+      "active_subjects": [
+        "tin_woodman",
+        "the_scarecrow"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "cowardly_lion",
+        "toto"
+      ],
+      "spatial_context": "The Near Bank/Bridge",
+      "blocking_hint": "tin_woodman working at tree base",
+      "environment_subzone": "The Near Bank",
+      "continuity_focus": "tree position must be stable for crossing",
+      "coverage_hint": "close-ups of axe work",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Kalidah attack",
+      "purpose": "",
+      "action_start": "characters step onto the bridge",
+      "action_end": "monsters reach the bridge edge",
+      "active_subjects": [
+        "kalidahs",
+        "dorothy",
+        "cowardly_lion",
+        "toto"
+      ],
+      "passive_subjects": [
+        "the_scarecrow",
+        "tin_woodman"
+      ],
+      "spatial_context": "The Bridge (Tree Trunk)",
+      "blocking_hint": "characters trapped on narrow log",
+      "environment_subzone": "The Bridge (Tree Trunk)",
+      "continuity_focus": "character position on bridge during attack",
+      "coverage_hint": "handheld/shaky cam",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT004"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "The decisive chop",
+      "purpose": "",
+      "action_start": "the_scarecrow gives command",
+      "action_end": "bridge falls, monsters drop",
+      "active_subjects": [
+        "the_scarecrow",
+        "tin_woodman",
+        "kalidahs"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "cowardly_lion",
+        "toto"
+      ],
+      "spatial_context": "The Near Bank/Bridge",
+      "blocking_hint": "tin_woodman strikes the support",
+      "environment_subzone": "The Bridge (Tree Trunk)",
+      "continuity_focus": "timing of chop vs character exit",
+      "coverage_hint": "POV from bridge looking down",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish obstacle",
+      "planned_shot_moment_summary": "group views the wide ditch",
+      "primary_subject_seed": "cowardly_lion",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "The Near Bank",
+      "planned_shot_required_anchor_1": "The Second Ditch/Bridge Site",
+      "planned_shot_scale_proof_detail": "ditch width vs lion jump capacity",
+      "start_state_seed": "group approaching edge",
+      "end_state_seed": "group halted at edge",
+      "action_seed": "looking into the abyss",
+      "blocking_seed": [
+        "standing in a line at the precipice"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show effort/construction",
+      "planned_shot_moment_summary": "tin_woodman chopping the tree",
+      "primary_subject_seed": "tin_woodman",
+      "secondary_subjects_seed": [
+        "the_scarecrow"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "The Near Bank",
+      "planned_shot_required_anchor_1": "The felled tree/bridge",
+      "planned_shot_scale_proof_detail": "axe impact on wood",
+      "start_state_seed": "tree standing",
+      "end_state_seed": "tree positioned as bridge",
+      "action_seed": "chopping and positioning",
+      "blocking_seed": [
+        "tin_woodman at base of tree"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "escalate terror",
+      "planned_shot_moment_summary": "kalidahs attack during crossing",
+      "primary_subject_seed": "kalidahs",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "toto",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "The Bridge (Tree Trunk)",
+      "planned_shot_required_anchor_1": "The edge of the abyss/ditch",
+      "planned_shot_scale_proof_detail": "monsters approaching bridge height",
+      "start_state_seed": "characters mid-bridge",
+      "end_state_seed": "chaos on bridge",
+      "action_seed": "predators lunging",
+      "blocking_seed": [
+        "characters scrambling on narrow log"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH004",
+      "beat_id": "BT004",
+      "narrative_function": "resolve tension",
+      "planned_shot_moment_summary": "the_scarecrow commands the chop",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [
+        "tin_woodman",
+        "kalidahs"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "The Near Bank",
+      "planned_shot_required_anchor_1": "The felled tree/bridge",
+      "planned_shot_scale_proof_detail": "bridge falling into abyss",
+      "start_state_seed": "command given",
+      "end_state_seed": "bridge collapses",
+      "action_seed": "final axe strike",
+      "blocking_seed": [
+        "the_scarecrow shouting",
+        "tin_woodman striking"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "handheld",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve The Second Ditch/Bridge Site -> The Second Ditch/Bridge Site"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH007",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH007_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH019",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH019_chapter_xix.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH009",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH009_chapter_ix.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH007",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH007_SC003] Purpose: Escalation of tension through a life-threatening encounter and a high-stakes decision.",
+    "[CH007_SC003] Summary: The group reaches a second ditch too wide for the Lion to jump. The Woodman chops a tree to create a bridge. As they cross, Kalidahs attack. To save the group, the Scarecrow directs the Woodman to chop the bridge, dropping the monster...",
+    "[CH007_SC003] Emotional arc: Tension $\\rightarrow$ Terror $\\rightarrow$ Triumph/Exhaustion.",
+    "[CH007_SC003] Coverage: Handheld/shaky cam for the Kalidah attack. POV shots from the bridge looking down at the monsters. Close-ups of the Woodman's axe work and the Scarecrow's commands.",
+    "[CH007_SC003] Continuity: The position of the tree/bridge; the timing of the chop relative to the characters crossing.",
+    "[CH007] Chapter summary: **Setting:** A dense forest containing deep ditches, a riverbank, and eventually a view of a beautiful, fruit-filled meadow across a swift river. **Characters:** Dorothy (and Toto), Scarecrow, Tin Woodman, Cowardly Li...",
+    "[CH007] Chapter VII (book index hit)",
+    "[CH019] Chapter XIX (book index hit)",
+    "[CH009] Chapter IX (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH007_SC003\n\n## Production Intent\nExecute a high-tension sequence involving environmental modification and a sudden predator attack. The sequence requires precise timing between the construction of a makeshift bridge and the arrival of the Kalidahs to ensure the life-threatening stakes are visually coherent.\n\n## Required Cast\n- dorothy\n- toto\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- kalidahs\n\n## Required Environments\n- The Second Ditch/Bridge Site (Near Bank, Bridge/Tree Trunk, Abyss, Far Bank)\n\n## Continuity Constraints\n- Exact position of the tree/bridge relative to the ditch width.\n- Timing of the final chop relative to character crossing positions.\n\n## Beat List\n- BT001: Discovery of the impassable ditch.\n- BT002: Construction of the bridge.\n- BT003: The Kalidah attack.\n- BT004: The decisive chop.",
+  "metadata": {
+    "artifact_id": "CH007_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "e7eea9f102ae65572141b115b1f420982d87498f",
+    "created_at_utc": "2026-04-27T08:17:59.176786+00:00",
+    "updated_at_utc": "2026-04-27T08:17:59.176786+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH007_SC003",
+        "version": "8bdcc0b2817a83150c87636e36d23b805d15085d"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH007_SC003",
+        "version": "dff484a99b3ae8f3ada7d8e590fc43797fbfdb47"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH007_SC003",
+        "version": "3454f4842e61e1cac868d64167ae6416c27d4505"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:18:52.376104+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "e7eea9f102ae65572141b115b1f420982d87498f"
+      }
+    ]
+  }
+}

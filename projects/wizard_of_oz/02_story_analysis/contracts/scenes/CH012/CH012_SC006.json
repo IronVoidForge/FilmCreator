@@ -1,0 +1,351 @@
+{
+  "scene_id": "CH012_SC006",
+  "chapter_id": "CH012",
+  "scene_title": "SC006",
+  "purpose": "Aftermath and setup for the next phase of the journey.",
+  "summary": "Dorothy retrieves her shoe and rushes through the castle to free the Lion and her friends.",
+  "emotional_arc": "Relief $\\rightarrow$ Urgency.",
+  "production_intent": "Dorothy recovers her lost footwear and navigates the castle interior to locate and liberate her companions. The sequence must transition from a moment of individual relief to high-stakes movement through the prison architecture.",
+  "scene_short_description": "A girl in white retrieves a silver shoe and runs through castle corridors to find friends.",
+  "scene_primary_scale_story_point": "Individual retrieval scaling up to group reunion.",
+  "scene_required_anchor_catalog": [
+    "Silver Shoe",
+    "Prison cell bars"
+  ],
+  "scene_start_state": "Dorothy finds the Silver Shoe amidst the aftermath.",
+  "scene_end_state": "The full group is assembled and ready for departure.",
+  "dominant_action_line": "Dorothy retrieves her shoe and rushes through the castle to free the Lion and her friends.",
+  "scene_spatial_layout": [
+    "Linear progression from retrieval point through corridors to prison cells.",
+    "Transition from isolated courtyard/room to communal cell area."
+  ],
+  "character_spatial_map": [
+    "dorothy moves from isolation toward the group.",
+    "cowardly_lion, Scarecrow (brief), and tin_woodman are positioned within or near prison subzones."
+  ],
+  "environment_subzones": [
+    "wicked_witch_castle_courtyard",
+    "prison_areas"
+  ],
+  "entry_vectors": [
+    "Dorothy enters via courtyard/retrieval zone."
+  ],
+  "exit_vectors": [
+    "Group exits through castle gates toward the West."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Physical movement from retrieval to transit.",
+    "BT002 -> BT003: Arrival at prison subzone and reunion."
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Cowardly Lion (brief)",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "Scarecrow (brief)",
+      "canonical_id": null,
+      "display_name": "Scarecrow (brief)",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "Tin Woodman (brief)",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Witch's Castle (Courtyard/Prison areas)",
+      "canonical_id": "wicked_witch_castle_courtyard",
+      "display_name": "wicked_witch_castle_courtyard",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 136,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH012/wicked_witch_castle_courtyard.md",
+      "notes": "Chapter-local environment alias match for 'Witch's Castle (Courtyard/Prison areas)' (key_overlap=3, label_overlap=4, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Presence of the recovered Silver Shoe on Dorothy's foot/hand",
+    "Physical condition and integrity of Scarecrow and Tin Woodman"
+  ],
+  "visual_coverage_families": [
+    "Tracking shots following Dorothy as she runs",
+    "Medium shots of reunions",
+    "Wide shot of group reunited"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Dorothy retrieves the Silver Shoe",
+      "purpose": "",
+      "action_start": "Dorothy spotting the shoe",
+      "action_end": "Shoe is secured",
+      "active_subjects": [
+        "dorothy"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "wicked_witch_castle_courtyard",
+      "blocking_hint": "Dorothy kneeling near a structural anchor",
+      "environment_subzone": "wicked_witch_castle_courtyard",
+      "continuity_focus": "Silver Shoe must be visible and intact",
+      "coverage_hint": "close-up on shoe/face",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Dorothy rushes through the castle",
+      "purpose": "",
+      "action_start": "Dorothy breaks into a run",
+      "action_end": "Dorothy reaches the prison area",
+      "active_subjects": [
+        "dorothy"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "castle corridors/prison paths",
+      "blocking_hint": "Running along walls toward the cells",
+      "environment_subzone": "prison_areas",
+      "continuity_focus": "Dorothy's white clothing and shoe must remain consistent during movement",
+      "coverage_hint": "tracking shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The group reunites",
+      "purpose": "",
+      "action_start": "Dorothy arrives at the cell area",
+      "action_end": "The group is assembled for departure",
+      "active_subjects": [
+        "dorothy",
+        "cowardly_lion",
+        "Scarecrow (brief)",
+        "tin_woodman"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "prison areas",
+      "blocking_hint": "Characters converging in a single frame",
+      "environment_subzone": "prison_areas",
+      "continuity_focus": "Scarecrow and Tin Woodman physical condition check",
+      "coverage_hint": "wide shot of group",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish recovery",
+      "planned_shot_moment_summary": "Dorothy finds the Silver Shoe",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "wicked_witch_castle_courtyard",
+      "planned_shot_required_anchor_1": "Silver Shoe",
+      "planned_shot_scale_proof_detail": "shoe size relative to Dorothy's hand",
+      "start_state_seed": "Dorothy reaching down",
+      "end_state_seed": "Dorothy securing the shoe",
+      "action_seed": "retrieval of footwear",
+      "blocking_seed": [
+        "kneeling in courtyard"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "drive urgency",
+      "planned_shot_moment_summary": "Dorothy running through castle corridors",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "prison_areas",
+      "planned_shot_required_anchor_1": "castle walls",
+      "planned_shot_scale_proof_detail": "corridor width vs Dorothy's speed",
+      "start_state_seed": "Dorothy standing up",
+      "end_state_seed": "Dorothy entering prison zone",
+      "action_seed": "running through castle",
+      "blocking_seed": [
+        "running along corridor walls"
+      ],
+      "shot_size": "full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "resolve reunion",
+      "planned_shot_moment_summary": "The group gathers together",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "cowardly_lion",
+        "Scarecrow (brief)",
+        "tin_woodman"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "prison_areas",
+      "planned_shot_required_anchor_1": "prison cell bars",
+      "planned_shot_scale_proof_detail": "group density in frame",
+      "start_state_seed": "Dorothy approaching friends",
+      "end_state_seed": "Group standing together",
+      "action_seed": "reunion and assembly",
+      "blocking_seed": [
+        "characters clustering around Dorothy"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Scarecrow (brief) -> Scarecrow (brief)"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC006"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC006"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC006"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC006"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC006"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH012",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH013",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH013_chapter_xiii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH012",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH012_SC006] Purpose: Aftermath and setup for the next phase of the journey.",
+    "[CH012_SC006] Summary: Dorothy retrieves her shoe and rushes through the castle to free the Lion and her friends.",
+    "[CH012_SC006] Emotional arc: Relief $\\rightarrow$ Urgency.",
+    "[CH012_SC006] Coverage: Tracking shots following Dorothy as she runs; medium shots of the reunions; wide shot of the group reunited.",
+    "[CH012_SC006] Continuity: The recovered Silver Shoe; the physical condition of the Scarecrow and Tin Woodman.",
+    "[CH012] Chapter summary: **Setting:** The rugged, untilled lands of the West, moving toward the Wicked Witch's castle. **Characters:** * **Dorothy & Toto:** Traveling toward the West; Dorothy discovers her green clothes have turned white. * *...",
+    "[CH012] Chapter XII (book index hit)",
+    "[CH011] Chapter XI (book index hit)",
+    "[CH013] Chapter XIII (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH012_SC006\n\n## Production Intent\nDorothy recovers her lost footwear and navigates the castle interior to locate and liberate her companions. The sequence must transition from a moment of individual relief to high-stakes movement through the prison architecture.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- cowardly_lion (brief)\n- Scarecrow (brief)\n- tin_woodman (brief)\n\n## Required Environments\n- wicked_witch_castle_courtyard\n- prison_areas\n\n## Continuity Constraints\n- Presence of the recovered Silver Shoe on Dorothy's foot/hand.\n- Physical condition and integrity of the Scarecrow and Tin Woodman.\n\n## Beat List\n- BT001: Dorothy retrieves the Silver Shoe.\n- BT002: Dorothy rushes through the castle.\n- BT003: The group reunites.",
+  "metadata": {
+    "artifact_id": "CH012_SC006_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "29fa969ed82964bbc3a6637ae797e8736a79333a",
+    "created_at_utc": "2026-04-27T08:37:47.082580+00:00",
+    "updated_at_utc": "2026-04-27T08:37:47.082580+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH012_SC006",
+        "version": "a85219095bdd80049b6c1cb8613da5e3d4c01227"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH012_SC006",
+        "version": "e6a1ab36cc009588aa41246e996a8e68bc8bbcae"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH012_SC006",
+        "version": "a35e3890ba10ea117fc05bc5a2408f7b3d7bded8"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:38:28.141302+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "29fa969ed82964bbc3a6637ae797e8736a79333a"
+      }
+    ]
+  }
+}

@@ -1,0 +1,348 @@
+{
+  "scene_id": "CH004_SC005",
+  "chapter_id": "CH004",
+  "scene_title": "SC005",
+  "purpose": "Resolution of the chapter's journey and establishment of a temporary safe haven.",
+  "summary": "The group finds a small log cottage for shelter. Dorothy and Toto settle down on a bed of dried leaves to sleep, while the Scarecrow remains standing watch through the night.",
+  "emotional_arc": "Fear $\\rightarrow$ Exhausted relief/Vigilance.",
+  "production_intent": "Establish a transition from the high-tension forest journey to a state of exhausted relief within a confined, protective structure. The visual language must shift from the expansive, dark forest canopy to the intimate, enclosed textures of the log cottage, utilizing low-key lighting to emphasize safety and vigilance.",
+  "scene_short_description": "A group finds shelter inside a small log and branch cottage within a dark forest.",
+  "scene_primary_scale_story_point": "Interior enclosure vs. exterior forest darkness.",
+  "scene_required_anchor_catalog": [
+    "dried_leaf_bed",
+    "cottage_entrance_shadows"
+  ],
+  "scene_start_state": "The group enters the log_branch_cottage seeking refuge from the dark forest.",
+  "scene_end_state": "Dorothy and Toto are asleep on leaves while the_scarecrow stands watch in the shadows.",
+  "dominant_action_line": "Settling into a temporary shelter for rest and protection.",
+  "scene_spatial_layout": [
+    "Enclosed, cramped interior defined by log walls",
+    "Central sleeping area composed of dried leaves"
+  ],
+  "character_spatial_map": [
+    "dorothy: centered on dried_leaf_bed",
+    "toto: adjacent to dorothy on dried_leaf_bed",
+    "the_scarecrow: positioned near cottage entrance or in shadows"
+  ],
+  "environment_subzones": [
+    "leaf_sleeping_zone",
+    "shadow_watch_zone"
+  ],
+  "entry_vectors": [
+    "forest_to_cottage_threshold"
+  ],
+  "exit_vectors": [
+    "none (scene is contained)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: transition from arrival to settling",
+    "BT002 -> BT003: transition from rest to nocturnal vigilance"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "A small cottage made of logs and branches inside the forest",
+      "canonical_id": "log_branch_cottage",
+      "display_name": "log_branch_cottage",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 98,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH004/log_branch_cottage.md",
+      "notes": "Chapter-local environment alias match for 'A small cottage made of logs and branches inside the forest' (key_overlap=1, label_overlap=5, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Lighting consistency from small fire or moonlight source",
+    "Fixed placement of the dried leaf bed"
+  ],
+  "visual_coverage_families": [
+    "Medium shots of the interior",
+    "Close-ups of Dorothy sleeping",
+    "Static wide shot of Scarecrow standing guard in shadows"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Arrival at the cottage",
+      "purpose": "",
+      "action_start": "group enters log_branch_cottage",
+      "action_end": "group reaches leaf bed",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "interior of log_branch_cottage",
+      "blocking_hint": "moving from entrance to center",
+      "environment_subzone": "cottage_interior",
+      "continuity_focus": "lighting source direction",
+      "coverage_hint": "medium shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Settling for rest",
+      "purpose": "",
+      "action_start": "dorothy approaches leaves",
+      "action_end": "dorothy and toto are asleep",
+      "active_subjects": [
+        "dorothy",
+        "toto"
+      ],
+      "passive_subjects": [
+        "the_scarecrow"
+      ],
+      "spatial_context": "dried_leaf_bed",
+      "blocking_hint": "lowering to the floor",
+      "environment_subzone": "leaf_sleeping_zone",
+      "continuity_focus": "placement of leaf bed",
+      "coverage_hint": "close-ups",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The night watch",
+      "purpose": "",
+      "action_start": "lights dim/moonlight shifts",
+      "action_end": "scene end",
+      "active_subjects": [
+        "the_scarecrow"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "toto"
+      ],
+      "spatial_context": "cottage shadows",
+      "blocking_hint": "standing near entrance",
+      "environment_subzone": "shadow_watch_zone",
+      "continuity_focus": "lighting from moonlight or fire",
+      "coverage_hint": "static wide shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "none"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish shelter",
+      "planned_shot_moment_summary": "group enters the log cottage",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "cottage_interior",
+      "planned_shot_required_anchor_1": "log_branch_cottage",
+      "planned_shot_scale_proof_detail": "enclosed walls vs forest darkness",
+      "start_state_seed": "movement into frame",
+      "end_state_seed": "settling in center",
+      "action_seed": "group moves toward the leaf bed",
+      "blocking_seed": [
+        "central movement towards leaves"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "convey exhaustion",
+      "planned_shot_moment_summary": "dorothy and toto settle on leaves",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "leaf_sleeping_zone",
+      "planned_shot_required_anchor_1": "dried_leaf_bed",
+      "planned_shot_scale_proof_detail": "close proximity of characters to bed",
+      "start_state_seed": "sitting on leaves",
+      "end_state_seed": "lying still",
+      "action_seed": "settling down to sleep",
+      "blocking_seed": [
+        "low to ground"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "torch_firelight",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish vigilance",
+      "planned_shot_moment_summary": "the_scarecrow watches from the shadows",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [
+        "dorothy"
+      ],
+      "subject_visibility": "silhouette",
+      "narration_mode": "none",
+      "environment_subzone": "shadow_watch_zone",
+      "planned_shot_required_anchor_1": "cottage_entrance_shadows",
+      "planned_shot_scale_proof_detail": "scarecrow standing vs sleeping group",
+      "start_state_seed": "standing still",
+      "end_state_seed": "standing still",
+      "action_seed": "guarding the entrance",
+      "blocking_seed": [
+        "stationary in shadows"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "back"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC005"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH004",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH004",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH004_SC005] Purpose: Resolution of the chapter's journey and establishment of a temporary safe haven.",
+    "[CH004_SC005] Summary: The group finds a small log cottage for shelter. Dorothy and Toto settle down on a bed of dried leaves to sleep, while the Scarecrow remains standing watch through the night.",
+    "[CH004_SC005] Emotional arc: Fear $\\rightarrow$ Exhausted relief/Vigilance.",
+    "[CH004_SC005] Coverage: Medium shots of the interior; close-ups of Dorothy sleeping; static wide shot of Scarecrow standing guard in the shadows.",
+    "[CH004_SC005] Continuity: Lighting from any small fire or moonlight; placement of the leaf bed.",
+    "[CH004] Chapter summary: **Setting:** A deteriorating stretch of the Yellow Brick Road that transitions from well-tended farmland into a dismal, lonesome landscape, eventually entering a dense, dark forest where the canopy blocks out the dayl...",
+    "[CH007] Chapter VII (book index hit)",
+    "[CH004] Chapter IV (book index hit)",
+    "[CH011] Chapter XI (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH004_SC005\n\n## Production Intent\nEstablish a transition from the high-tension forest journey to a state of exhausted relief within a confined, protective structure. The visual language must shift from the expansive, dark forest canopy to the intimate, enclosed textures of the log cottage, utilizing low-key lighting to emphasize safety and vigilance.\n\n## Required Cast\n- dorothy (young human girl, white clothing)\n- the_scarecrow\n- toto\n\n## Required Environments\n- log_branch_cottage (small cottage made of logs and branches inside a dense forest)\n\n## Continuity Constraints\n- Lighting consistency from small fire or moonlight source\n- Fixed placement of the dried leaf bed\n\n## Beat List\n- BT001: Arrival at the cottage\n- BT002: Settling for rest\n- BT003: The night watch",
+  "metadata": {
+    "artifact_id": "CH004_SC005_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "2f9402ce29184511922d3a26b27147081b9ec37b",
+    "created_at_utc": "2026-04-27T08:09:22.962596+00:00",
+    "updated_at_utc": "2026-04-27T08:09:22.962596+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH004_SC005",
+        "version": "5121df8fd044d12819c3d1b1e428adc92b20d039"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH004_SC005",
+        "version": "32df80e34e2af9b1c7ebb8939f1769e11436bdd7"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH004_SC005",
+        "version": "1d3e7443db4919b92c5e182e3ac2eab10fc9cb69"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:10:03.703600+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "2f9402ce29184511922d3a26b27147081b9ec37b"
+      }
+    ]
+  }
+}

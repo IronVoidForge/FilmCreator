@@ -1,0 +1,4 @@
+- [SC001](#sc001) The Mourning in the Throne Room
+- [SC002](#sc002) The Scarecrow's Proposal
+- [SC003](#sc003) The Monkey King's Refusal
+- [SC004](#sc004) The Soldier's Counsel and Departure Decision

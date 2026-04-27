@@ -1,0 +1,377 @@
+{
+  "scene_id": "CH014_SC004",
+  "chapter_id": "CH014",
+  "scene_title": "SC004",
+  "purpose": "Provide world-building and backstory through dialogue during transit.",
+  "summary": "While flying high above the landscape, the Monkey King tells Dorothy the story of how his people were cursed by the sorceress Gayelette to obey the Golden Cap after a prank gone wrong.",
+  "emotional_arc": "Exhilaration $\\rightarrow$ Melancholy/Understanding.",
+  "production_intent": "Establish the historical weight of the Monkey King's lineage through a high-altitude transit sequence. The scene must balance the kinetic energy of flight with the heavy, melancholic delivery of a curse backstory, using the vast landscape to emphasize isolation and scale.",
+  "scene_short_description": "High altitude flight over a vast landscape during an aerial transit.",
+  "scene_primary_scale_story_point": "Microscopic character scale against macroscopic aerial landscape.",
+  "scene_required_anchor_catalog": [
+    "monkey_back_saddle_points",
+    "horizon_line"
+  ],
+  "scene_start_state": "Characters riding monkeys through high altitude air, feeling the rush of flight.",
+  "scene_end_state": "A somber atmosphere as the weight of the curse is revealed.",
+  "dominant_action_line": "The Monkey King recounts the curse of Gayelette while flying.",
+  "scene_spatial_layout": [
+    "Vertical hierarchy of riders atop monkeys",
+    "Horizontal movement across the aerial plane"
+  ],
+  "character_spatial_map": [
+    "dorothy positioned on monkey back",
+    "monkey_king leading dialogue",
+    "the_scarecrow, tin_woodman, cowardly_lion clustered as listeners on adjacent monkeys"
+  ],
+  "environment_subzones": [
+    "upper_atmosphere",
+    "passing_landscape_below"
+  ],
+  "entry_vectors": [
+    "aerial_transit_path"
+  ],
+  "exit_vectors": [
+    "aerial_transit_path"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Shift from environmental awe to character interaction",
+    "BT002 -> BT003: Shift from dialogue to emotional weight/backstory"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH014/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Monkey King",
+      "canonical_id": "monkey_king",
+      "display_name": "monkey_king",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH014/monkey_king.md",
+      "notes": "Direct registry match for 'monkey_king'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH014/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH014/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion (as listeners)",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH014/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Sky (aerial view of the landscape)",
+      "canonical_id": "aerial_landscape_transit",
+      "display_name": "aerial_landscape_transit",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 102,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH014/aerial_landscape_transit.md",
+      "notes": "Chapter-local environment alias match for 'The Sky (aerial view of the landscape)' (key_overlap=2, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Wind effects on hair and white clothing",
+    "Physical positioning of characters on monkey backs"
+  ],
+  "visual_coverage_families": [
+    "Wide beauty shots of aerial landscape",
+    "Medium character coverage (Dorothy and Monkey King)",
+    "Stylized flashback imagery"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Aerial transit exhilaration",
+      "purpose": "",
+      "action_start": "monkeys entering frame",
+      "action_end": "landscape passing below",
+      "active_subjects": [
+        "dorothy",
+        "monkey_king",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "aerial_landscape_transit",
+      "blocking_hint": "characters riding monkeys in formation",
+      "environment_subzone": "upper_atmosphere",
+      "continuity_focus": "wind effects on hair/clothing",
+      "coverage_hint": "wide beauty shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Story Begins",
+      "purpose": "",
+      "action_start": "monkey_king begins speaking",
+      "action_end": "dorothy engages with the tale",
+      "active_subjects": [
+        "monkey_king",
+        "dorothy"
+      ],
+      "passive_subjects": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "spatial_context": "on monkey backs",
+      "blocking_hint": "seated riders facing each other/forward",
+      "environment_subzone": "upper_atmosphere",
+      "continuity_focus": "physical positioning on monkeys",
+      "coverage_hint": "medium shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Curse of Gayelette",
+      "purpose": "",
+      "action_start": "revelation of the prank and curse",
+      "action_end": "melancholic silence/understanding",
+      "active_subjects": [
+        "monkey_king",
+        "dorothy"
+      ],
+      "passive_subjects": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "spatial_context": "on monkey backs",
+      "blocking_hint": "heads bowed or somber expressions",
+      "environment_subzone": "upper_atmosphere",
+      "continuity_focus": "wind effects on clothing",
+      "coverage_hint": "medium/close shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish_setting",
+      "planned_shot_moment_summary": "wide view of flight over landscape",
+      "primary_subject_seed": "aerial_landscape_transit",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "monkey_king"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "upper_atmosphere",
+      "planned_shot_required_anchor_1": "horizon_line",
+      "planned_shot_scale_proof_detail": "vastness_of_landscape",
+      "start_state_seed": "wide aerial vista",
+      "end_state_seed": "wide aerial vista",
+      "action_seed": "monkeys flying through frame",
+      "blocking_seed": [
+        "linear transit"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "character_interaction",
+      "planned_shot_moment_summary": "dorothy listens to monkey king",
+      "primary_subject_seed": "monkey_king",
+      "secondary_subjects_seed": [
+        "dorothy"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "upper_atmosphere",
+      "planned_shot_required_anchor_1": "monkey_back_saddle_points",
+      "planned_shot_scale_proof_detail": "rider_to_monkey_ratio",
+      "start_state_seed": "medium shot of riders",
+      "end_state_seed": "medium shot of riders",
+      "action_seed": "monkey_king speaking",
+      "blocking_seed": [
+        "seated on monkey back"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "emotional_payoff",
+      "planned_shot_moment_summary": "reaction to the curse story",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "upper_atmosphere",
+      "planned_shot_required_anchor_1": "monkey_back_saddle_points",
+      "planned_shot_scale_proof_detail": "facial_expression_detail",
+      "start_state_seed": "close on dorothy",
+      "end_state_seed": "close on dorothy",
+      "action_seed": "dorothy reacting to story",
+      "blocking_seed": [
+        "seated",
+        "wind-blown hair"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH014_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH014_chapter_xiv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH015",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH014",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH014_SC004] Purpose: Provide world-building and backstory through dialogue during transit.",
+    "[CH014_SC004] Summary: While flying high above the landscape, the Monkey King tells Dorothy the story of how his people were cursed by the sorceress Gayelette to obey the Golden Cap after a prank gone wrong.",
+    "[CH014_SC004] Emotional arc: Exhilaration $\\rightarrow$ Melancholy/Understanding.",
+    "[CH014_SC004] Coverage: Medium shots of Dorothy and the Monkey King; wide \"beauty shots\" of the landscape passing below; perhaps stylized flashback imagery if used.",
+    "[CH014_SC004] Continuity: Wind effects on hair/clothing; the physical positioning of characters on the monkeys' backs.",
+    "[CH014] Chapter summary: **Setting:** The vast, scarlet fields of buttercups and yellow daisies between the Wicked Witch's castle and the Emerald City; later, the air above the landscape during flight. **Characters:** - **Dorothy:** Uses the...",
+    "[CH012] Chapter XII (book index hit)",
+    "[CH014] Chapter XIV (book index hit)",
+    "[CH015] Chapter XV (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH014_SC004\n\n## Production Intent\nEstablish the historical weight of the Monkey King's lineage through a high-altitude transit sequence. The scene must balance the kinetic energy of flight with the heavy, melancholic delivery of a curse backstory, using the vast landscape to emphasize isolation and scale.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- monkey_king\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n\n## Required Environments\n- aerial_landscape_transit (The Sky)\n\n## Continuity Constraints\n- Wind effects on hair and white clothing of dorothy.\n- Physical positioning of characters on the monkeys' backs must remain stable during dialogue.\n\n## Beat List\n- BT001: Aerial transit exhilaration.\n- BT002: The Story Begins (Monkey King initiates dialogue).\n- BT003: The Curse of Gayelette (Emotional shift to melancholy/understanding).",
+  "metadata": {
+    "artifact_id": "CH014_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "7d5e026216526a4482b508b0940e6a5a1f636e36",
+    "created_at_utc": "2026-04-27T08:43:30.674163+00:00",
+    "updated_at_utc": "2026-04-27T08:43:30.674163+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH014_SC004",
+        "version": "6824ec3495e160ea3f7145fc96d89017526574c0"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH014_SC004",
+        "version": "7498ce8ebc6fe9f8249e024527f7bcbaea99b5f9"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH014_SC004",
+        "version": "a022447e1b76a3e9b12124dc1a4ed80e35f709b9"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:44:12.830825+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "7d5e026216526a4482b508b0940e6a5a1f636e36"
+      }
+    ]
+  }
+}

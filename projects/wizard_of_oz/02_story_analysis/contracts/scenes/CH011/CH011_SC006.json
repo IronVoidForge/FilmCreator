@@ -1,0 +1,281 @@
+{
+  "scene_id": "CH011_SC006",
+  "chapter_id": "CH011",
+  "scene_title": "SC006",
+  "purpose": "Establish the fourth manifestation of Oz and the stakes for Cowardly Lion.",
+  "summary": "The Cowardly Lion meets the Wizard, who appears as a Ball of Fire. He demands proof of the Witch's death before granting courage.",
+  "emotional_arc": "Terror $\\rightarrow$ Helplessness.",
+  "production_intent": "Establish the fourth manifestation of Oz through a high-contrast encounter between a massive physical predator and a non-corporeal light source. The scene must emphasize the scale disparity and the psychological shift from terror to helplessness using dynamic lighting driven by the fire source.",
+  "scene_short_description": "A massive lion trembles before a floating, intense ball of fire in a grand chamber.",
+  "scene_primary_scale_story_point": "The massive physical presence of the cowardly_lion vs the ethereal scale of the_great_oz.",
+  "scene_required_anchor_catalog": [
+    "central throne area",
+    "floor surface near lion"
+  ],
+  "scene_start_state": "cowardly_lion enters a dark, cavernous chamber illuminated only by a growing light source.",
+  "scene_end_state": "cowardly_lion is physically diminished and emotionally broken by the demand.",
+  "dominant_action_line": "The_great_oz demands proof of death while cowardly_lion reacts to the overwhelming presence.",
+  "scene_spatial_layout": [
+    "vast open floor space within palace_of_oz",
+    "vertical hierarchy between low lion and elevated fire source"
+  ],
+  "character_spatial_map": [
+    "cowardly_lion positioned center-midground, looking upward",
+    "the_great_oz hovering in upper-midground/high-center"
+  ],
+  "environment_subzones": [
+    "throne_area",
+    "audience_floor"
+  ],
+  "entry_vectors": [
+    "lion entrance from palace corridors"
+  ],
+  "exit_vectors": [
+    "none (character remains trapped by fear)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: sudden light flare",
+    "BT002 -> BT003: shift from visual shock to verbal confrontation"
+  ],
+  "characters_required": [
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "The Great Oz (Ball of Fire)",
+      "canonical_id": "the_great_oz",
+      "display_name": "the_great_oz",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+      "notes": "Direct registry match for 'the_great_oz'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Light flicker frequency and intensity must sync with the_great_oz movement/presence",
+    "cowardly_lion mass must remain consistent in scale relative to palace architecture"
+  ],
+  "visual_coverage_families": [
+    "Close-ups on trembling feline features and muscle twitching",
+    "High-contrast lighting shifts driven by the ball of fire intensity"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Manifestation of the Wizard",
+      "purpose": "",
+      "action_start": "darkness in palace_of_oz",
+      "action_end": "blinding light from the_great_oz",
+      "active_subjects": [
+        "the_great_oz"
+      ],
+      "passive_subjects": [
+        "cowardly_lion"
+      ],
+      "spatial_context": "throne_area",
+      "blocking_hint": "lion retreats to edge of frame",
+      "environment_subzone": "throne_area",
+      "continuity_focus": "light intensity spike",
+      "coverage_hint": "wide shot showing scale",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Demand for Proof",
+      "purpose": "",
+      "action_start": "fire stabilizes",
+      "action_end": "lion is paralyzed by the question",
+      "active_subjects": [
+        "the_great_oz",
+        "cowardly_lion"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "audience_floor",
+      "blocking_hint": "lion looking up at fire source",
+      "environment_subzone": "audience_floor",
+      "continuity_focus": "flicker pattern of light",
+      "coverage_hint": "close-ups on lion's face",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale and terror",
+      "planned_shot_moment_summary": "the_great_oz manifests as a blinding light",
+      "primary_subject_seed": "the_great_oz",
+      "secondary_subjects_seed": [
+        "cowardly_lion"
+      ],
+      "subject_visibility": "silhouette",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "throne_area",
+      "planned_shot_required_anchor_1": "central throne area",
+      "planned_shot_scale_proof_detail": "lion's head relative to the fire mass",
+      "start_state_seed": "darkness",
+      "end_state_seed": "blinding light flare",
+      "action_seed": "fire ignites in center of room",
+      "blocking_seed": [
+        "lion recoils into corner"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "torch_firelight",
+      "primary_subject_angle": "rear_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "character reaction",
+      "planned_shot_moment_summary": "lion's physical trembling",
+      "primary_subject_seed": "cowardly_lion",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "audience_floor",
+      "planned_shot_required_anchor_1": "floor surface near lion",
+      "planned_shot_scale_proof_detail": "massive quadrupedal silhouette",
+      "start_state_seed": "recoiling",
+      "end_state_seed": "frozen in fear",
+      "action_seed": "muscles twitching and breathing heavy",
+      "blocking_seed": [
+        "lion crouched low"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH011",
+      "scene_id": "CH011_SC006"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH011",
+      "scene_id": "CH011_SC006"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH011",
+      "scene_id": "CH011_SC006"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH011",
+      "scene_id": "CH011_SC006"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH011",
+      "scene_id": "CH011_SC006"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH011",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH015",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH011",
+      "canonical_id": "cowardly_lion"
+    }
+  ],
+  "evidence_summary": [
+    "[CH011_SC006] Purpose: Establish the fourth manifestation of Oz and the stakes for Cowardly Lion.",
+    "[CH011_SC006] Summary: The Cowardly Lion meets the Wizard, who appears as a Ball of Fire. He demands proof of the Witch's death before granting courage.",
+    "[CH011_SC006] Emotional arc: Terror $\\rightarrow$ Helplessness.",
+    "[CH011_SC006] Coverage: Close-ups on the Lion's trembling; lighting effects from the Ball of Fire illuminating the room and the character.",
+    "[CH011_SC006] Continuity: Light flicker/intensity from the fire source.",
+    "[CH011] Chapter summary: **Setting:** The Emerald City, characterized by green marble streets, emerald-studded buildings, and citizens dressed entirely in green. The group stays within the Palace of Oz. **Characters:** - Dorothy & Toto - Scar...",
+    "[CH011] Chapter XI (book index hit)",
+    "[CH015] Chapter XV (book index hit)",
+    "[CH010] Chapter X (book index hit)",
+    "Character cowardly_lion: A large, heavy quadrupedal lion with a massive physical presence. The character possesses a distinct feline predator silhouette and is noted for being of such significant mass that he cannot be carried by other characters."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH011_SC006\n\n## Production Intent\nEstablish the fourth manifestation of Oz through a high-contrast encounter between a massive physical predator and a non-corporeal light source. The scene must emphasize the scale disparity and the psychological shift from terror to helplessness using dynamic lighting driven by the fire source.\n\n## Required Cast\n- cowardly_lion (Large, heavy quadrupedal lion; significant mass)\n- the_great_oz (Ball of Fire manifestation)\n\n## Required Environments\n- palace_of_oz (Throne Room/Audience Chamber)\n\n## Continuity Constraints\n- Light flicker frequency and intensity must sync with the_great_oz movement/presence.\n- cowardly_lion mass must remain consistent in scale relative to palace architecture.\n\n## Beat List\n- BT001: Manifestation of the Wizard (Light flare/scale establishment).\n- BT002: The Demand for Proof (Verbal confrontation and lion's reaction).",
+  "metadata": {
+    "artifact_id": "CH011_SC006_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "6c141589a18e68a20ccbf82830dcb48b0ca4b547",
+    "created_at_utc": "2026-04-27T08:32:48.591928+00:00",
+    "updated_at_utc": "2026-04-27T08:32:48.591928+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH011_SC006",
+        "version": "69a979805aa99e1a7c5e0b529f3cb2b94962f00d"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH011_SC006",
+        "version": "90b38e4a0746b5029a996ff3f1c5ccfe751d39c3"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH011_SC006",
+        "version": "ec6df55c989f344ada3891c7b9b83ccc8e61ee7d"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:33:24.418226+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "6c141589a18e68a20ccbf82830dcb48b0ca4b547"
+      }
+    ]
+  }
+}

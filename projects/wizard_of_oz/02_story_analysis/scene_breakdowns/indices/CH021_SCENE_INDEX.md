@@ -1,0 +1,6 @@
+- [SC001](#sc001) The Marsh and the Ancient Forest
+- [SC002](#sc002) The Gathering of Beasts
+- [SC003](#sc003) The Lion's Bargain
+- [SC004](#sc004) The Hunt in the Oak Grove
+- [SC005](#sc005) The Decapitation
+- [SC006](#sc006) Coronation of the King

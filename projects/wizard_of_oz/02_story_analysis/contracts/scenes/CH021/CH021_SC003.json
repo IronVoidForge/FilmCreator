@@ -1,0 +1,335 @@
+{
+  "scene_id": "CH021_SC003",
+  "chapter_id": "CH021",
+  "scene_title": "SC003",
+  "purpose": "Establish the Lion's motivation and the stakes of the quest.",
+  "summary": "A tiger explains that a giant spider-like monster is terrorizing the forest. The Lion seizes the opportunity, striking a deal with the animals: if he kills the beast, they will crown him King of the Forest.",
+  "emotional_arc": "Fear to ambitious determination (Lion).",
+  "production_intent": "Establish the Lion's transition from a fearful observer to an ambitious leader by leveraging the threat of a spider-like monster. The scene must visually communicate the shift in power dynamics through camera height and character posture as the deal is struck with the forest beasts.",
+  "scene_short_description": "A large tiger describes a monster to a group of animals in an ancient mossy forest.",
+  "scene_primary_scale_story_point": "The Tiger is a large-scale quadrupedal beast; the forest contains massive trees and thick moss.",
+  "scene_required_anchor_catalog": [
+    "massive_tree_trunk",
+    "thick_moss_patch"
+  ],
+  "scene_start_state": "Lion exhibits cowardice/fear amidst a group of observing animals.",
+  "scene_end_state": "Lion assumes a bravado-filled posture, claiming the role of potential King.",
+  "dominant_action_line": "Tiger describes the monster; Lion seizes the opportunity to strike a deal for kingship.",
+  "scene_spatial_layout": [
+    "Open clearing within ancient forest interior",
+    "Animals clustered around the central dialogue zone"
+  ],
+  "character_spatial_map": [
+    "tiger positioned as the primary orator facing the group",
+    "Lion positioned within the animal cluster, transitioning from periphery to center",
+    "Dorothy and companions positioned as observers on the edge of the clearing"
+  ],
+  "environment_subzones": [
+    "mossy_clearing_center",
+    "massive_tree_perimeter"
+  ],
+  "entry_vectors": [
+    "forest_edge_path"
+  ],
+  "exit_vectors": [
+    "forest_edge_path"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Tiger's description heightens tension",
+    "BT002 -> BT003: Lion's realization shifts the power dynamic"
+  ],
+  "characters_required": [
+    {
+      "label": "Lion",
+      "canonical_id": null,
+      "display_name": "Lion",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "Tiger",
+      "canonical_id": "tiger",
+      "display_name": "tiger",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/tiger.md",
+      "notes": "Direct registry match for 'tiger'."
+    },
+    {
+      "label": "various forest beasts",
+      "canonical_id": null,
+      "display_name": "various forest beasts",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "Dorothy and companions (as observers)",
+      "canonical_id": null,
+      "display_name": "Dorothy and companions (as observers)",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Forest Clearing",
+      "canonical_id": "ancient_forest_interior",
+      "display_name": "ancient_forest_interior",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 74,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH021/ancient_forest_interior.md",
+      "notes": "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    }
+  ],
+  "continuity_constraints": [
+    "Maintain consistent eye contact between animals during dialogue",
+    "Precise transition in Lion's posture from cowardice to bravado"
+  ],
+  "visual_coverage_families": [
+    "Over-the-shoulder dialogue coverage",
+    "Close-ups of Tiger describing the monster",
+    "Low-angle hero shots of the Lion"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Tiger describes the spider-like monster terrorizing the forest",
+      "purpose": "",
+      "action_start": "Tiger begins speaking to the group",
+      "action_end": "Description of the beast is complete",
+      "active_subjects": [
+        "tiger"
+      ],
+      "passive_subjects": [
+        "various forest beasts",
+        "Lion",
+        "Dorothy and companions (as observers)"
+      ],
+      "spatial_context": "mossy_clearing_center",
+      "blocking_hint": "Tiger stands/sits facing the gathered animals",
+      "environment_subzone": "mossy_clearing_center",
+      "continuity_focus": "Eye contact between Tiger and beasts",
+      "coverage_hint": "close-ups of Tiger",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The group reacts to the threat",
+      "purpose": "",
+      "action_start": "Silence following description",
+      "action_end": "Lion's expression shifts from fear to realization",
+      "active_subjects": [
+        "various forest beasts",
+        "Lion"
+      ],
+      "passive_subjects": [
+        "tiger"
+      ],
+      "spatial_context": "mossy_clearing_center",
+      "blocking_hint": "Animals reacting in place",
+      "environment_subzone": "mossy_clearing_center",
+      "continuity_focus": "Lion's posture change begins",
+      "coverage_hint": "over-the-shoulder shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Lion strikes the deal for kingship",
+      "purpose": "",
+      "action_start": "Lion speaks up",
+      "action_end": "Lion assumes a position of bravado/authority",
+      "active_subjects": [
+        "Lion"
+      ],
+      "passive_subjects": [
+        "various forest beasts",
+        "tiger"
+      ],
+      "spatial_context": "mossy_clearing_center",
+      "blocking_hint": "Lion moves to center or stands tall",
+      "environment_subzone": "mossy_clearing_center",
+      "continuity_focus": "Lion's posture/expression change from cowardice to bravado",
+      "coverage_hint": "low-angle hero shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish threat",
+      "planned_shot_moment_summary": "Tiger begins describing the spider-like monster",
+      "primary_subject_seed": "tiger",
+      "secondary_subjects_seed": [
+        "various forest beasts",
+        "Lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "mossy_clearing_center",
+      "planned_shot_required_anchor_1": "massive_tree_trunk",
+      "planned_shot_scale_proof_detail": "tiger head size relative to forest beasts",
+      "start_state_seed": "Tiger mid-sentence",
+      "end_state_seed": "Tiger finishing description",
+      "action_seed": "Tiger gesturing/speaking",
+      "blocking_seed": [
+        "Tiger facing the group"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT003",
+      "narrative_function": "hero reveal",
+      "planned_shot_moment_summary": "Lion declares his intent to kill the beast and become King",
+      "primary_subject_seed": "Lion",
+      "secondary_subjects_seed": [
+        "various forest beasts"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "mossy_clearing_center",
+      "planned_shot_required_anchor_1": "thick_moss_patch",
+      "planned_shot_scale_proof_detail": "Lion's height relative to seated animals",
+      "start_state_seed": "Lion looking fearful",
+      "end_state_seed": "Lion standing tall/bravado",
+      "action_seed": "Lion shifts posture and speaks",
+      "blocking_seed": [
+        "Lion moves to center of group"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Lion -> Lion",
+    "Resolve various forest beasts -> various forest beasts",
+    "Resolve Dorothy and companions (as observers) -> Dorothy and companions (as observers)"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH021_chapter_xxi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH006",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH021",
+      "canonical_id": "tiger"
+    }
+  ],
+  "evidence_summary": [
+    "[CH021_SC003] Purpose: Establish the Lion's motivation and the stakes of the quest.",
+    "[CH021_SC003] Summary: A tiger explains that a giant spider-like monster is terrorizing the forest. The Lion seizes the opportunity, striking a deal with the animals: if he kills the beast, they will crown him King of the Forest.",
+    "[CH021_SC003] Emotional arc: Fear to ambitious determination (Lion).",
+    "[CH021_SC003] Coverage: Over-the-shoulder shots during the dialogue; close-ups of the Tiger describing the monster; low-angle hero shots of the Lion.",
+    "[CH021_SC003] Continuity: Eye contact between animals; Lion's posture/expression change from cowardice to bravado.",
+    "[CH021] Chapter summary: **Setting:** A disagreeable country of bogs and marshes, leading into a vast, ancient forest filled with massive trees and thick moss. **Characters:** Dorothy, Toto, the Scarecrow, the Tin Woodman, the Lion, various f...",
+    "[CH021] Chapter XXI (book index hit)",
+    "[CH006] Chapter VI (book index hit)",
+    "[CH007] Chapter VII (book index hit)",
+    "Character tiger: A large-scale, quadrupedal beast characterized by a tiger's head. While the specific body type is not explicitly detailed for this individual entity, it is associated with monstrous \"Kalidah\" creatures that possess bodies like bears and hea..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH021_SC003\n\n## Production Intent\nEstablish the Lion's transition from a fearful observer to an ambitious leader by leveraging the threat of a spider-like monster. The scene must visually communicate the shift in power dynamics through camera height and character posture as the deal is struck with the forest beasts.\n\n## Required Cast\n- Lion\n- tiger\n- various forest beasts\n- Dorothy and companions (as observers)\n\n## Required Environments\n- ancient_forest_interior (massive trees, thick moss, bogs/marshes context)\n\n## Continuity Constraints\n- Maintain consistent eye contact between animals during dialogue.\n- Precise transition in Lion's posture from cowardice to bravado.\n\n## Beat List\n- BT001: Tiger describes the spider-like monster terrorizing the forest.\n- BT002: The group reacts to the threat; Lion realizes the opportunity.\n- BT003: Lion strikes the deal for kingship, declaring his intent to kill the beast.",
+  "metadata": {
+    "artifact_id": "CH021_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "86715c62154101b58373da9af7ab0f7c16540360",
+    "created_at_utc": "2026-04-27T09:06:24.476360+00:00",
+    "updated_at_utc": "2026-04-27T09:06:24.476360+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH021_SC003",
+        "version": "c14936ac7de4e0ee88e5ff4d21581022639298fd"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH021_SC003",
+        "version": "7198c2666ab175b473c43ebf261a98ea3169c0e7"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH021_SC003",
+        "version": "34c5c3bede2920c30aff8cec03562a35b450245c"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T09:07:04.533703+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "86715c62154101b58373da9af7ab0f7c16540360"
+      }
+    ]
+  }
+}

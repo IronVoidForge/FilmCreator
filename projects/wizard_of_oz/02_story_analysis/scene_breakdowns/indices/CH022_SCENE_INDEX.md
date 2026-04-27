@@ -1,0 +1,5 @@
+- [SC001](#SC001) The Ambush at the Rocky Hill
+- [SC002](#SC002) The Golden Cap Summoning
+- [SC003](#SC003) Flight of the Winged Monkeys
+- [SC004](#SC004) Arrival in the Quadling Country
+- [SC005](#SC005) Entry to Glinda's Castle

@@ -1,0 +1,386 @@
+{
+  "scene_id": "CH009_SC003",
+  "chapter_id": "CH009",
+  "scene_title": "SC003",
+  "purpose": "Climax/Action sequence involving the rescue.",
+  "summary": "Dorothy wakes from her poppy-induced sleep to see the mice gathered. The massive force of mice, combined with the pushing of the Scarecrow and Woodman, pulls the heavy, unconscious Cowardly Lion out of the dangerous poppy field and into the safe, green grass.",
+  "emotional_arc": "Confusion $\\rightarrow$ High-Stakes Effort $\\rightarrow$ Relief.",
+  "production_intent": "Execute a high-stakes rescue sequence where a massive force of mice, supported by the Scarecrow and Tin Woodman, drags an unconscious Lion from a poppy field into safe grass. The visual focus must maintain the physical tension of the pulling mechanism and the transition between environments.",
+  "scene_short_description": "A massive swarm of mice pulls an unconscious lion across a boundary from poppies to grass.",
+  "scene_primary_scale_story_point": "Massive mouse swarm vs heavy unconscious Lion.",
+  "scene_required_anchor_catalog": [
+    "poppy_field_bed edge",
+    "the truck/pulling mechanism"
+  ],
+  "scene_start_state": "Dorothy waking up amidst poppies, confused by a gathering swarm of mice.",
+  "scene_end_state": "The Lion resting safely in the green grass, rescue complete.",
+  "dominant_action_line": "The collective pulling force drags the Lion out of danger.",
+  "scene_spatial_layout": [
+    "Linear movement path from poppy bed to green field",
+    "Pulling mechanism (truck/string) acts as the central axis of motion"
+  ],
+  "character_spatial_map": [
+    "dorothy: near the edge of the poppy bed",
+    "cowardly_lion: being dragged through the poppies toward the grass",
+    "the_scarecrow and tin_woodman: positioned at the rear or sides of the Lion to push",
+    "Thousands of Field Mice: clustered around the pulling mechanism/truck"
+  ],
+  "environment_subzones": [
+    "poppy_field_bed (danger zone)",
+    "green field transition (safe zone)"
+  ],
+  "entry_vectors": [
+    "mice swarm entering from the field edges"
+  ],
+  "exit_vectors": [
+    "cowardly_lion exiting the poppy bed into the grass"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Dorothy's realization to the start of the pull",
+    "BT002 -> BT003: The struggle of the pull to the successful arrival in grass"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH009/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Cowardly Lion (unconscious)",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH009/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH009/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH009/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Queen of the Field Mice",
+      "canonical_id": "queen_of_the_field_mice",
+      "display_name": "Queen of the Field Mice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH009/queen_of_the_field_mice.md",
+      "notes": "Direct registry match for 'queen_of_the_field_mice'."
+    },
+    {
+      "label": "Thousands of Field Mice",
+      "canonical_id": null,
+      "display_name": "Thousands of Field Mice",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The edge of the poppy bed and the transition to the green field",
+      "canonical_id": "poppy_field_bed",
+      "display_name": "poppy_field_bed",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 126,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH009/poppy_field_bed.md",
+      "notes": "Chapter-local environment alias match for 'The edge of the poppy bed and the transition to the green field' (key_overlap=3, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Physical connection between string, truck, and Lion must remain unbroken",
+    "Direction of travel must strictly move from poppy field to green grass"
+  ],
+  "visual_coverage_families": [
+    "Tracking shots following the movement of the truck and the Lion",
+    "Low-angle shots looking up at the massive effort of the mice",
+    "Close-ups of Dorothy's waking realization"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Dorothy wakes up in confusion",
+      "purpose": "",
+      "action_start": "Dorothy lying unconscious in poppies",
+      "action_end": "Dorothy looking at the mice",
+      "active_subjects": [
+        "dorothy"
+      ],
+      "passive_subjects": [
+        "Thousands of Field Mice"
+      ],
+      "spatial_context": "within poppy_field_bed",
+      "blocking_hint": "Dorothy is low in the frame among stalks",
+      "environment_subzone": "poppy_field_bed",
+      "continuity_focus": "Dorothy's white clothing visibility",
+      "coverage_hint": "close-ups",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The massive rescue effort begins",
+      "purpose": "",
+      "action_start": "Mice swarm the pulling mechanism",
+      "action_end": "Lion begins moving through poppies",
+      "active_subjects": [
+        "Thousands of Field Mice",
+        "the_scarecrow",
+        "tin_woodman"
+      ],
+      "passive_subjects": [
+        "cowardly_lion"
+      ],
+      "spatial_context": "poppy_field_bed to green field boundary",
+      "blocking_hint": "Mice at front, Scarecrow/Woodman pushing from behind",
+      "environment_subzone": "poppy_field_bed",
+      "continuity_focus": "String and truck connection to Lion",
+      "coverage_hint": "tracking shots, low-angle shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Lion reaches safety",
+      "purpose": "",
+      "action_start": "Lion's body crosses the poppy/grass line",
+      "action_end": "Lion is stationary in the grass",
+      "active_subjects": [
+        "cowardly_lion",
+        "the_scarecrow",
+        "tin_woodman"
+      ],
+      "passive_subjects": [
+        "dorothy"
+      ],
+      "spatial_context": "transition from poppies to green field",
+      "blocking_hint": "Group gathers around Lion in the grass",
+      "environment_subzone": "green field transition",
+      "continuity_focus": "Direction of travel completed",
+      "coverage_hint": "wide tracking",
+      "coverage_priority": "medium",
+      "handoff_to_next": "none"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish character state",
+      "planned_shot_moment_summary": "Dorothy opens eyes amidst poppies",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "Thousands of Field Mice"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "poppy_field_bed",
+      "planned_shot_required_anchor_1": "poppy_field_bed",
+      "planned_shot_scale_proof_detail": "Dorothy's smallness against the poppy stalks",
+      "start_state_seed": "eyes closed",
+      "end_state_seed": "eyes wide/confused",
+      "action_seed": "waking up",
+      "blocking_seed": [
+        "dorothy lying in poppies"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show scale of effort",
+      "planned_shot_moment_summary": "Low angle view of mice and rescuers pulling the Lion",
+      "primary_subject_seed": "Thousands of Field Mice",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "poppy_field_bed",
+      "planned_shot_required_anchor_1": "the truck/pulling mechanism",
+      "planned_shot_scale_proof_detail": "thousands of mice vs the heavy lion",
+      "start_state_seed": "mice gathering",
+      "end_state_seed": "Lion moving through poppies",
+      "action_seed": "dragging and pushing",
+      "blocking_seed": [
+        "mice pulling",
+        "Scarecrow/Woodman pushing Lion"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "conclude rescue",
+      "planned_shot_moment_summary": "Lion reaches the green grass",
+      "primary_subject_seed": "cowardly_lion",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "green field transition",
+      "planned_shot_required_anchor_1": "poppy_field_bed edge",
+      "planned_shot_scale_proof_detail": "transition from poppy texture to grass texture",
+      "start_state_seed": "Lion on edge of poppies",
+      "end_state_seed": "Lion in green grass",
+      "action_seed": "sliding into safety",
+      "blocking_seed": [
+        "Lion moving across the boundary"
+      ],
+      "shot_size": "full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "profile_right"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Thousands of Field Mice -> Thousands of Field Mice"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH009",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH009_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH009",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH009_chapter_ix.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH005",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH009",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH009_SC003] Purpose: Climax/Action sequence involving the rescue.",
+    "[CH009_SC003] Summary: Dorothy wakes from her poppy-induced sleep to see the mice gathered. The massive force of mice, combined with the pushing of the Scarecrow and Woodman, pulls the heavy, unconscious Cowardly Lion out of the dangerous poppy field and in...",
+    "[CH009_SC003] Emotional arc: Confusion $\\rightarrow$ High-Stakes Effort $\\rightarrow$ Relief.",
+    "[CH009_SC003] Coverage: Tracking shots following the movement of the \"truck\" and the Lion. Low-angle shots looking up at the massive effort of the mice. Close-ups of Dorothy's waking realization.",
+    "[CH009_SC003] Continuity: The physical connection between the string, the truck, and the Lion; the direction of travel from poppies to grass.",
+    "[CH009] Chapter summary: **Setting:** A grassy field near a river, adjacent to a poppy bed. **Characters:** - Dorothy - Scarecrow - Tin Woodman - Toto - The Queen of the Field Mice (and her subjects) - The Cowardly Lion (unconscious) **Events...",
+    "[CH009] Chapter IX (book index hit)",
+    "[CH010] Chapter X (book index hit)",
+    "[CH005] Chapter V (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH009_SC003\n\n## Production Intent\nExecute a high-stakes rescue sequence where a massive force of mice, supported by the Scarecrow and Tin Woodman, drags an unconscious Lion from a poppy field into safe grass. The visual focus must maintain the physical tension of the pulling mechanism and the transition between environments.\n\n## Required Cast\n- dorothy\n- cowardly_lion\n- the_scarecrow\n- tin_woodman\n- queen_of_the_field_mice\n- Thousands of Field Mice\n\n## Required Environments\n- poppy_field_bed (including transition to green field)\n\n## Continuity Constraints\n- Physical connection between string, truck, and Lion must remain unbroken.\n- Direction of travel must strictly move from poppy field to green grass.\n\n## Beat List\n- BT001: Dorothy wakes up in confusion.\n- BT002: The massive rescue effort begins (mice pulling/scarecrow & woodman pushing).\n- BT003: The Lion reaches safety in the green grass.",
+  "metadata": {
+    "artifact_id": "CH009_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "a9b44478b0fa9630434918d4254f25f8ac1ea6c9",
+    "created_at_utc": "2026-04-27T08:24:55.344184+00:00",
+    "updated_at_utc": "2026-04-27T08:24:55.344184+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH009_SC003",
+        "version": "59c2e3cddd7e036db31956fafa05438a61389af2"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH009_SC003",
+        "version": "240af0d9a85675362965a6cdbca5ca41d2b70bea"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH009_SC003",
+        "version": "1f5c31f53f07e8acbb924e776bf3a84774b82765"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:25:40.834368+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "a9b44478b0fa9630434918d4254f25f8ac1ea6c9"
+      }
+    ]
+  }
+}

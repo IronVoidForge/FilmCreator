@@ -1,0 +1,346 @@
+{
+  "scene_id": "CH011_SC003",
+  "chapter_id": "CH011",
+  "scene_title": "SC003",
+  "purpose": "Establish the first manifestation of Oz and the personal stakes for Dorothy.",
+  "summary": "Dorothy enters her audience with the Wizard, who appears as a Giant Head. He tells her she can only return home if she kills the Wicked Witch.",
+  "emotional_arc": "Fear $\\rightarrow$ Determination/Despair.",
+  "production_intent": "Establish the overwhelming scale of the Wizard's manifestation to trigger Dorothy's fear and set the high-stakes condition for her journey home. The visual hierarchy must emphasize the disparity between a small human girl and a massive, disembodied head within the palace architecture.",
+  "scene_short_description": "A small girl in white enters a massive chamber to face a giant disembodied head.",
+  "scene_primary_scale_story_point": "The_great_oz towers over dorothy, dwarfing her within the palace_of_oz.",
+  "scene_required_anchor_catalog": [
+    "throne_area",
+    "dorothy_position"
+  ],
+  "scene_start_state": "Dorothy enters the vast audience chamber, looking small and vulnerable.",
+  "scene_end_state": "Dorothy stands resolute or despairing after receiving her impossible task.",
+  "dominant_action_line": "The Wizard issues a lethal ultimatum to Dorothy.",
+  "scene_spatial_layout": [
+    "Massive verticality in the palace_of_oz",
+    "Centralized focus on the throne/head area"
+  ],
+  "character_spatial_map": [
+    "dorothy is positioned at the base of the chamber scale",
+    "the_great_oz occupies the upper vertical third of the frame",
+    "toto is near dorothy's feet"
+  ],
+  "environment_subzones": [
+    "audience_floor",
+    "throne_platform"
+  ],
+  "entry_vectors": [
+    "palace_entrance_path"
+  ],
+  "exit_vectors": [
+    "palace_entrance_path"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: visual intimidation",
+    "BT002 -> BT003: verbal ultimatum"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    },
+    {
+      "label": "The Great Oz (Giant Head)",
+      "canonical_id": "the_great_oz",
+      "display_name": "the_great_oz",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+      "notes": "Direct registry match for 'the_great_oz'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Visual effects scale of the_great_oz relative to dorothy",
+    "Dorothy's white dress/clothing consistency"
+  ],
+  "visual_coverage_families": [
+    "Low-angle shots of the_great_oz to emphasize scale",
+    "Extreme close-ups of dorothy's face",
+    "Wide shots showing size disparity between dorothy and the_great_oz"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Dorothy enters the audience chamber",
+      "purpose": "",
+      "action_start": "dorothy walking through doors",
+      "action_end": "dorothy standing still",
+      "active_subjects": [
+        "dorothy",
+        "toto"
+      ],
+      "passive_subjects": [
+        "the_great_oz"
+      ],
+      "spatial_context": "audience_floor",
+      "blocking_hint": "center of large floor",
+      "environment_subzone": "audience_floor",
+      "continuity_focus": "scale of head vs girl",
+      "coverage_hint": "wide shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Wizard manifests his presence and speaks",
+      "purpose": "",
+      "action_start": "the_great_oz speaking",
+      "action_end": "voice echoes",
+      "active_subjects": [
+        "the_great_oz"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "toto"
+      ],
+      "spatial_context": "throne_platform",
+      "blocking_hint": "head looming above [[ ]]",
+      "environment_subzone": "throne_platform",
+      "continuity_focus": "scale of head vs girl",
+      "coverage_hint": "low-angle shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Wizard delivers the condition to return home",
+      "purpose": "",
+      "action_start": "the_great_oz stating requirement",
+      "action_end": "dorothy's reaction",
+      "active_subjects": [
+        "the_great_oz",
+        "dorothy"
+      ],
+      "passive_subjects": [
+        "toto"
+      ],
+      "spatial_context": "audience_floor/throne_platform",
+      "blocking_hint": "reaction shot on dorothy",
+      "environment_subzone": "audience_floor",
+      "continuity_focus": "dorothy's expression",
+      "coverage_hint": "extreme close-up",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale",
+      "planned_shot_moment_summary": "Dorothy enters the chamber",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_great_oz"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "audience_floor",
+      "planned_shot_required_anchor_1": "throne_area",
+      "planned_shot_scale_proof_detail": "wide shot showing dorothy as a speck against the head",
+      "start_state_seed": "dorothy entering frame",
+      "end_state_seed": "dorothy stopping in center",
+      "action_seed": "walking into space",
+      "blocking_seed": [
+        "center floor"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "convey fear",
+      "planned_shot_moment_summary": "The Wizard speaks",
+      "primary_subject_seed": "the_great_oz",
+      "secondary_subjects_seed": [
+        "dorothy"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "throne_platform",
+      "planned_shot_required_anchor_1": "throne_area",
+      "planned_shot_scale_proof_detail": "low angle looking up at the head",
+      "start_state_seed": "head looming",
+      "end_state_seed": "head speaking",
+      "action_seed": "speaking",
+      "blocking_seed": [
+        "stationary overhead"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "convey stakes",
+      "planned_shot_moment_summary": "The ultimatum is delivered",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "audience_floor",
+      "planned_shot_required_anchor_1": "dorothy_position",
+      "planned_shot_scale_proof_detail": "extreme close up of face",
+      "start_state_seed": "dorothy listening",
+      "end_state_seed": "dorothy reacting",
+      "action_seed": "reacting to news",
+      "blocking_seed": [
+        "stationary"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH011",
+      "scene_id": "CH011_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH011",
+      "scene_id": "CH011_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH011",
+      "scene_id": "CH011_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH011",
+      "scene_id": "CH011_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH011",
+      "scene_id": "CH011_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH011",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH011",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH011_SC003] Purpose: Establish the first manifestation of Oz and the personal stakes for Dorothy.",
+    "[CH011_SC003] Summary: Dorothy enters her audience with the Wizard, who appears as a Giant Head. He tells her she can only return home if she kills the Wicked Witch.",
+    "[CH011_SC003] Emotional arc: Fear $\\rightarrow$ Determination/Despair.",
+    "[CH011_SC003] Coverage: Low-angle shots of the Giant Head to emphasize scale; extreme close-ups of Dorothy's face; wide shots showing the disparity in size between Dorothy and Oz.",
+    "[CH011_SC003] Continuity: The visual effects/scale of the Giant Head relative to Dorothy.",
+    "[CH011] Chapter summary: **Setting:** The Emerald City, characterized by green marble streets, emerald-studded buildings, and citizens dressed entirely in green. The group stays within the Palace of Oz. **Characters:** - Dorothy & Toto - Scar...",
+    "[CH011] Chapter XI (book index hit)",
+    "[CH002] Chapter II (book index hit)",
+    "[CH003] Chapter III (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH011_SC003\n\n## Production Intent\nEstablish the overwhelming scale of the Wizard's manifestation to trigger Dorothy's fear and set the high-stakes condition for her journey home. The visual hierarchy must emphasize the disparity between a small human girl and a massive, disembodied head within the palace architecture.\n\n## Required Cast\n- dorothy\n- toto\n- the_great_oz\n\n## Required Environments\n- palace_of_oz (Audience Chamber)\n\n## Continuity Constraints\n- Visual effects/scale of the_great_oz relative to dorothy\n- Dorothy's white clothing consistency\n\n## Beat List\n- BT001: Dorothy enters the audience chamber.\n- BT002: The Wizard manifests his presence and speaks.\n- BT003: The Wizard delivers the condition to return home (kill the Wicked Witch).",
+  "metadata": {
+    "artifact_id": "CH011_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "ae447e09c5e1f4ec43bfd739496757cbcf783193",
+    "created_at_utc": "2026-04-27T08:30:41.230583+00:00",
+    "updated_at_utc": "2026-04-27T08:30:41.230583+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH011_SC003",
+        "version": "666cb6fbd4b4f4f291a2639f9a42461edcdf6811"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH011_SC003",
+        "version": "df9990491e8927e4ec1330734e86a4cab1d038dd"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH011_SC003",
+        "version": "ec6df55c989f344ada3891c7b9b83ccc8e61ee7d"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:31:21.914158+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "ae447e09c5e1f4ec43bfd739496757cbcf783193"
+      }
+    ]
+  }
+}

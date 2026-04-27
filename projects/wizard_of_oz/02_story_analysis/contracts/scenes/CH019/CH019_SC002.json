@@ -1,0 +1,346 @@
+{
+  "scene_id": "CH019_SC002",
+  "chapter_id": "CH019",
+  "scene_title": "SC002",
+  "purpose": "To provide character development and thematic reflection on their experiences with the Wizard.",
+  "summary": "As the group travels toward the South, they engage in a philosophical discussion regarding the Wizard's true nature and the validity of the gifts (brain, heart, courage) they received.",
+  "emotional_arc": "Contemplative/Melancholic to Determined.",
+  "production_intent": "The group moves through the emerald_city_outskirts, transitioning from a state of doubt regarding their Wizard-given attributes to a unified sense of purpose. The movement must feel continuous and directional toward the South to maintain travel momentum.",
+  "scene_short_description": "A group travels through vast green fields under an open sky.",
+  "scene_primary_scale_story_point": "Wide expanse of emerald_city_outskirts relative to small traveling group.",
+  "scene_required_anchor_catalog": [
+    "horizon_line",
+    "walking_path"
+  ],
+  "scene_start_state": "Group walking in a loose line, heads down, tone is somber.",
+  "scene_end_state": "Group walking with increased pace and upright posture, tone is resolute.",
+  "dominant_action_line": "Continuous walking while engaging in dialogue about the Wizard.",
+  "scene_spatial_layout": [
+    "Linear progression through open terrain",
+    "Characters spaced at intervals to allow for individual close-ups"
+  ],
+  "character_spatial_map": [
+    "dorothy leads or occupies central focus",
+    "the_scarecrow, tin_woodman, and cowardly_lion follow in a staggered line",
+    "toto moves near dorothy"
+  ],
+  "environment_subzones": [
+    "emerald_city_outskirts_open_field"
+  ],
+  "entry_vectors": [
+    "North to South path"
+  ],
+  "exit_vectors": [
+    "Southward path"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: shift from observation to questioning",
+    "BT002 -> BT003: shift from doubt to resolve"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH019/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH019/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH019/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH019/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH019/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Green fields outside the Emerald City",
+      "canonical_id": "emerald_city_outskirts",
+      "display_name": "emerald_city_outskirts",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 112,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH019/emerald_city_outskirts.md",
+      "notes": "Chapter-local environment alias match for 'Green fields outside the Emerald City' (key_overlap=2, label_overlap=4, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Consistent walking direction toward the South",
+    "Fixed character spacing within the walking line"
+  ],
+  "visual_coverage_families": [
+    "Walking tracking shots",
+    "Group medium shots",
+    "Close-ups on individual faces during dialogue"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Group travels through the green fields in silence or low murmurs",
+      "purpose": "",
+      "action_start": "walking rhythmically",
+      "action_end": "pausing dialogue",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "emerald_city_outskirts_open_field",
+      "blocking_hint": "staggered walking line moving South",
+      "environment_subzone": "emerald_city_outskirts_open_field",
+      "continuity_focus": "walking direction toward South",
+      "coverage_hint": "wide tracking shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Philosophical debate regarding the Wizard and the nature of their gifts",
+      "purpose": "",
+      "action_start": "verbal questioning",
+      "action_end": "moment of heavy reflection",
+      "active_subjects": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "toto"
+      ],
+      "spatial_context": "emerald_city_outskirts_open_field",
+      "blocking_hint": "characters turning heads toward each other while walking",
+      "environment_subzone": "emerald_city_outskirts_open_field",
+      "continuity_focus": "maintain character spacing",
+      "coverage_hint": "close-ups on faces",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The group reaches a consensus and regains determination",
+      "purpose": "",
+      "action_start": "resolute statement",
+      "action_end": "walking with purpose",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "passive_subjects": [
+        "toto"
+      ],
+      "spatial_context": "emerald_city_outskirts_open_field",
+      "blocking_hint": "tightening of walking formation/upright posture",
+      "environment_subzone": "emerald_city_outskirts_open_field",
+      "continuity_focus": "consistent Southward movement",
+      "coverage_hint": "group medium shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish_context",
+      "planned_shot_moment_summary": "group walking through fields",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "emerald_city_outskirts_open_field",
+      "planned_shot_required_anchor_1": "horizon_line",
+      "planned_shot_scale_proof_detail": "group size vs field expanse",
+      "start_state_seed": "wide shot of group",
+      "end_state_seed": "medium tracking shot",
+      "action_seed": "walking",
+      "blocking_seed": [
+        "linear line"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "character_depth",
+      "planned_shot_moment_summary": "individual questioning of gifts",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [
+        "dorothy"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "emerald_city_outskirts_open_field",
+      "planned_shot_required_anchor_1": "walking_path",
+      "planned_shot_scale_proof_detail": "face detail vs background blur",
+      "start_state_seed": "medium shot",
+      "end_state_seed": "close-up",
+      "action_seed": "speaking while walking",
+      "blocking_seed": [
+        "staggered line"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH019",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH019_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH019",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH019_chapter_xix.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH019",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH019_SC002] Purpose: To provide character development and thematic reflection on their experiences with the Wizard.",
+    "[CH019_SC002] Summary: As the group travels toward the South, they engage in a philosophical discussion regarding the Wizard's true nature and the validity of the gifts (brain, heart, courage) they received.",
+    "[CH019_SC002] Emotional arc: Contemplative/Melancholic to Determined.",
+    "[CH019_SC002] Coverage: Walking tracking shots; Group medium shots; Close-ups on individual faces during dialogue.",
+    "[CH019_SC002] Continuity: Walking direction (consistent movement toward the South); Character spacing in the walking line.",
+    "[CH019] Chapter summary: **Setting:** The outskirts of the Emerald City, the surrounding green fields, a thick forest, and the edge of a white china wall. **Characters:** Dorothy, Scarecrow, Tin Woodman, Cowardly Lion, Toto, Guardian of the G...",
+    "[CH019] Chapter XIX (book index hit)",
+    "[CH002] Chapter II (book index hit)",
+    "[CH010] Chapter X (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH019_SC002\n\n## Production Intent\nThe group moves through the emerald_city_outskirts, transitioning from a state of doubt regarding their Wizard-given attributes to a unified sense of purpose. The movement must feel continuous and directional toward the South to maintain travel momentum.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n\n## Required Environments\n- emerald_city_outskirts (green fields)\n\n## Continuity Constraints\n- Walking direction must be consistently toward the South.\n- Character spacing in the walking line must remain stable for tracking shots.\n\n## Beat List\n- BT001: Group travels through the green fields in silence or low murmurs.\n- BT002: Philosophical debate regarding the Wizard and the nature of their gifts.\n- BT003: The group reaches a consensus and regains determination.",
+  "metadata": {
+    "artifact_id": "CH019_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "a110f319bc804c5ff4b1d0d3d1eec188840f96d4",
+    "created_at_utc": "2026-04-27T08:58:18.685292+00:00",
+    "updated_at_utc": "2026-04-27T08:58:18.685292+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH019_SC002",
+        "version": "32756bdb98fc61110aad182fcaa74f150b0ac79f"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH019_SC002",
+        "version": "73c47be69e1fa3945daf457695543efc197a8038"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH019_SC002",
+        "version": "0a2ee5c3b837ba59c4b2c6b26eb33d7d0189f22d"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:58:57.261552+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "a110f319bc804c5ff4b1d0d3d1eec188840f96d4"
+      }
+    ]
+  }
+}

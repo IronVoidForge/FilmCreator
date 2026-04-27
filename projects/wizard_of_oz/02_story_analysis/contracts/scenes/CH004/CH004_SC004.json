@@ -1,0 +1,346 @@
+{
+  "scene_id": "CH004_SC004",
+  "chapter_id": "CH004",
+  "scene_title": "SC004",
+  "purpose": "Escalation of tension and environmental shift.",
+  "summary": "As evening falls, the group enters a dense, dark forest where the canopy blocks out the light. The atmosphere shifts from open road to claustrophobic gloom, with Dorothy relying heavily on Toto's sight and Scarecrow's guidance.",
+  "emotional_arc": "Comfort $\\rightarrow$ Apprehension/Fear.",
+  "production_intent": "Transition the visual language from open road dusk to a claustrophobic, low-light forest environment. The lighting must shift from natural evening light to deep canopy gloom as the characters enter dense foliage.",
+  "scene_short_description": "Small travelers move from an open road into a dense, dark forest under a heavy canopy.",
+  "scene_primary_scale_story_point": "Massive tree trunks vs. small human and animal figures.",
+  "scene_required_anchor_catalog": [
+    "heavy_canopy",
+    "thick_brush"
+  ],
+  "scene_start_state": "Open road at dusk transitioning into the edge of dense foliage.",
+  "scene_end_state": "Deep forest gloom with minimal visibility.",
+  "dominant_action_line": "The group navigates through thickening brush, relying on sensory guidance.",
+  "scene_spatial_layout": [
+    "Linear progression from open space to enclosed thicket",
+    "Vertical scale dominated by high canopy blocking light"
+  ],
+  "character_spatial_map": [
+    "dorothy follows the_scarecrow and toto",
+    "the_scarecrow leads the path through brush",
+    "toto moves ahead of dorothy to scout"
+  ],
+  "environment_subzones": [
+    "forest_edge",
+    "dense_undergrowth",
+    "deep_canopy_zone"
+  ],
+  "entry_vectors": [
+    "yellow_brick_road_transition"
+  ],
+  "exit_vectors": [
+    "deep_forest_path"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Light level drop and foliage density increase",
+    "BT002 -> BT003: Shift from group movement to sensory reliance"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "A thick",
+      "canonical_id": "dense_dark_forest",
+      "display_name": "dense_dark_forest",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 46,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH004/dense_dark_forest.md",
+      "notes": "Chapter-local environment alias match for 'A thick' (key_overlap=0, label_overlap=1, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Light levels transition from dusk to deep forest dark",
+    "Foliage density increases as characters progress"
+  ],
+  "visual_coverage_families": [
+    "Low-light cinematography",
+    "POV shots through the brush",
+    "Wide shots showing scale of trees vs. small travelers"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Transition from road to forest edge",
+      "purpose": "",
+      "action_start": "walking on open road",
+      "action_end": "stepping into shadow",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "forest_edge",
+      "blocking_hint": "group moving in single file",
+      "environment_subzone": "forest_edge",
+      "continuity_focus": "dusk to forest dark transition",
+      "coverage_hint": "wide shot scale",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Entering the dense thicket",
+      "purpose": "",
+      "action_start": "brush touching characters",
+      "action_end": "path becomes obscured by foliage",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow"
+      ],
+      "passive_subjects": [
+        "toto"
+      ],
+      "spatial_context": "dense_undergrowth",
+      "blocking_hint": "characters pushing through branches",
+      "environment_subzone": "dense_undergrowth",
+      "continuity_focus": "increasing foliage density",
+      "coverage_hint": "medium shots/POV",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Sensory reliance in gloom",
+      "purpose": "",
+      "action_start": "darkness deepens",
+      "action_end": "group huddled close",
+      "active_subjects": [
+        "dorothy",
+        "toto",
+        "the_scarecrow"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "deep_canopy_zone",
+      "blocking_hint": "dorothy leaning toward the_scarecrow/toto",
+      "environment_subzone": "deep_canopy_zone",
+      "continuity_focus": "low light levels",
+      "coverage_hint": "close-ups/POV",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale and transition",
+      "planned_shot_moment_summary": "group enters the forest edge as light fades",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "forest_edge",
+      "planned_shot_required_anchor_1": "heavy_canopy",
+      "planned_shot_scale_proof_detail": "trees dwarfing travelers",
+      "start_state_seed": "open road dusk",
+      "end_state_seed": "forest edge gloom",
+      "action_seed": "walking into shadows",
+      "blocking_seed": [
+        "linear progression"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "establish claustrophobia",
+      "planned_shot_moment_summary": "brush closes in around the characters",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "dense_undergrowth",
+      "planned_shot_required_anchor_1": "thick_brush",
+      "planned_shot_scale_proof_detail": "foliage obscuring frame edges",
+      "start_state_seed": "walking through light brush",
+      "end_state_seed": "pushing through thick foliage",
+      "action_seed": "navigating obstacles",
+      "blocking_seed": [
+        "tight grouping"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "sensory POV",
+      "planned_shot_moment_summary": "view through the dark brush from toto's perspective",
+      "primary_subject_seed": "toto",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "dense_undergrowth",
+      "planned_shot_required_anchor_1": "thick_brush",
+      "planned_shot_scale_proof_detail": "low camera height vs tall trees",
+      "start_state_seed": "dark foliage",
+      "end_state_seed": "glimpses of path",
+      "action_seed": "scouting ahead",
+      "blocking_seed": [
+        "low to ground"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH004",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH021_chapter_xxi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH004",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH004_SC004] Purpose: Escalation of tension and environmental shift.",
+    "[CH004_SC004] Summary: As evening falls, the group enters a dense, dark forest where the canopy blocks out the light. The atmosphere shifts from open road to claustrophobic gloom, with Dorothy relying heavily on Toto's sight and Scarecrow's guidance.",
+    "[CH004_SC004] Emotional arc: Comfort $\\rightarrow$ Apprehension/Fear.",
+    "[CH004_SC004] Coverage: Low-light cinematography; POV shots through the brush; wide shots showing the scale of the trees vs. the small travelers.",
+    "[CH004_SC004] Continuity: Light levels (transition from dusk to deep forest dark); foliage density.",
+    "[CH004] Chapter summary: **Setting:** A deteriorating stretch of the Yellow Brick Road that transitions from well-tended farmland into a dismal, lonesome landscape, eventually entering a dense, dark forest where the canopy blocks out the dayl...",
+    "[CH004] Chapter IV (book index hit)",
+    "[CH007] Chapter VII (book index hit)",
+    "[CH021] Chapter XXI (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH004_SC004\n\n## Production Intent\nTransition the visual language from open road dusk to a claustrophobic, low-light forest environment. The lighting must shift from natural evening light to deep canopy gloom as the characters enter dense foliage.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- the_scarecrow\n- toto\n\n## Required Environments\n- dense_dark_forest (heavy canopy, thick brush)\n\n## Continuity Constraints\n- Light levels: Transition from dusk to deep forest dark.\n- Foliage density: Increasing thickness as scene progresses.\n\n## Beat List\n- BT001: Transition from road to forest edge.\n- BT002: Entering the dense thicket.\n- BT003: Sensory reliance in gloom.",
+  "metadata": {
+    "artifact_id": "CH004_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "4821166f52d2edcf531e4ff2edf7624febe685b1",
+    "created_at_utc": "2026-04-27T08:08:42.543687+00:00",
+    "updated_at_utc": "2026-04-27T08:08:42.543687+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH004_SC004",
+        "version": "30f39953fa374f6593c72a787839ce2c9160dac6"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH004_SC004",
+        "version": "32df80e34e2af9b1c7ebb8939f1769e11436bdd7"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH004_SC004",
+        "version": "8255f51ae42b3f120f0d4c79ba302954d94e8b26"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:09:21.910551+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "4821166f52d2edcf531e4ff2edf7624febe685b1"
+      }
+    ]
+  }
+}

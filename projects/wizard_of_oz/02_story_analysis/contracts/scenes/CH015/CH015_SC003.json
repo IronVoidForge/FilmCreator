@@ -1,0 +1,412 @@
+{
+  "scene_id": "CH015_SC003",
+  "chapter_id": "CH015",
+  "scene_title": "SC003",
+  "purpose": "The climax of the Wizard's \"Great and Terrible\" persona.",
+  "summary": "The travelers are brought into the Throne Room. They are met with terrifying, massive illusions (the Head, the Beast) designed to intimidate them. The Lion's roar inadvertently triggers a reveal or breaks the tension.",
+  "emotional_arc": "Terror $\\rightarrow$ Confusion/Shock.",
+  "production_intent": "Execute the climactic intimidation sequence where massive illusions overwhelm the travelers within a vast dome. The visual language must pivot from overwhelming scale to intimate terror, concluding with a sudden shift in tension triggered by an auditory event.",
+  "scene_short_description": "Travelers enter a massive hall and face towering, terrifying illusions.",
+  "scene_primary_scale_story_point": "Illusions must dwarf the travelers in height and volume.",
+  "scene_required_anchor_catalog": [
+    "throne_room_grand_hall_dome",
+    "illusion_head_structure",
+    "illusion_beast_structure"
+  ],
+  "scene_start_state": "Travelers enter the vast, dark hall feeling small and vulnerable.",
+  "scene_end_state": "Tension breaks into confusion following a roar.",
+  "dominant_action_line": "The travelers face massive illusions until a roar disrupts the intimidation.",
+  "scene_spatial_layout": [
+    "Vast open floor of the grand hall",
+    "High verticality provided by the dome"
+  ],
+  "character_spatial_map": [
+    "dorothy, the_scarecrow, tin_woodman, cowardly_lion clustered in center/lower third",
+    "The Wizard (as Illusions) looming above and behind characters"
+  ],
+  "environment_subzones": [
+    "throne_room_grand_hall_floor",
+    "throne_room_grand_hall_dome_ceiling"
+  ],
+  "entry_vectors": [
+    "main_entrance_path"
+  ],
+  "exit_vectors": [
+    "none_specified"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Sudden appearance of illusions",
+    "BT002 -> BT003: Auditory disruption/roar"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH015/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH015/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH015/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    },
+    {
+      "label": "The Wizard (as Illusions)",
+      "canonical_id": null,
+      "display_name": "The Wizard (as Illusions)",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Throne Room",
+      "canonical_id": "throne_room_grand_hall",
+      "display_name": "throne_room_grand_hall",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 92,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH015/throne_room_grand_hall.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Illusion size relative to characters",
+    "Lighting shifts during magical displays"
+  ],
+  "visual_coverage_families": [
+    "Low-angle shots emphasizing illusion scale",
+    "Extreme close-ups of character terror",
+    "Wide shots of dome vastness"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Travelers enter the Throne Room",
+      "purpose": "",
+      "action_start": "walking through entrance",
+      "action_end": "stopping in center floor",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "throne_room_grand_hall_floor",
+      "blocking_hint": "group formation moving toward center",
+      "environment_subzone": "throne_room_grand_hall_floor",
+      "continuity_focus": "character spacing",
+      "coverage_hint": "wide shot of dome",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Wizard's illusions manifest",
+      "purpose": "",
+      "action_start": "sudden lighting shift/shadows",
+      "action_end": "characters cowering in terror",
+      "active_subjects": [
+        "The Wizard (as Illusions)"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "spatial_context": "throne_room_grand_hall_dome and floor",
+      "blocking_hint": "illusions looming from above/behind",
+      "environment_subzone": "throne_room_grand_hall_dome",
+      "continuity_focus": "scale of illusions vs characters; lighting shifts",
+      "coverage_hint": "low-angle shots and extreme close-ups",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Lion's roar breaks the tension",
+      "purpose": "",
+      "action_start": "peak terror/silence",
+      "action_end": "confusion/shock",
+      "active_subjects": [
+        "cowardly_lion"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "The Wizard (as Illusions)"
+      ],
+      "spatial_context": "throne_room_grand_hall_floor",
+      "blocking_hint": "lion breaks from group stance",
+      "environment_subzone": "throne_room_grand_hall_floor",
+      "continuity_focus": "emotional shift from terror to shock",
+      "coverage_hint": "medium close-up on lion/reactions",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish_scale",
+      "planned_shot_moment_summary": "travelers enter the hall",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "throne_room_grand_hall_floor",
+      "planned_shot_required_anchor_1": "throne_room_grand_hall_dome",
+      "planned_shot_scale_proof_detail": "characters appear tiny against dome height",
+      "start_state_seed": "walking into frame",
+      "end_state_seed": "standing still in center",
+      "action_seed": "entering the hall",
+      "blocking_seed": [
+        "group walking toward center"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "establish_threat",
+      "planned_shot_moment_summary": "massive illusions manifest",
+      "primary_subject_seed": "The Wizard (as Illusions)",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "throne_room_grand_hall_dome",
+      "planned_shot_required_anchor_1": "illusion_head_structure",
+      "planned_shot_scale_proof_detail": "illusion height vs character height",
+      "start_state_seed": "darkness/shadows",
+      "end_state_seed": "towering presence",
+      "action_seed": "illusions loom over group",
+      "blocking_seed": [
+        "characters cowering"
+      ],
+      "shot_size": "low_angle_wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "tilt_up",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT002",
+      "narrative_function": "character_reaction",
+      "planned_shot_moment_summary": "terror in faces",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "throne_room_grand_hall_floor",
+      "planned_shot_required_anchor_1": "none",
+      "planned_shot_scale_proof_detail": "n/a",
+      "start_state_seed": "frozen in fear",
+      "end_state_seed": "eyes wide",
+      "action_seed": "reacting to illusions",
+      "blocking_seed": [
+        "tight cluster"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH004",
+      "beat_id": "BT003",
+      "narrative_function": "tension_break",
+      "planned_shot_moment_summary": "the roar occurs",
+      "primary_subject_seed": "cowardly_lion",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "throne_room_grand_hall_floor",
+      "planned_shot_required_anchor_1": "none",
+      "planned_shot_scale_proof_detail": "n/a",
+      "start_state_seed": "terror",
+      "end_state_seed": "confusion",
+      "action_seed": "lion roars",
+      "blocking_seed": [
+        "lion lunging or head back"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve The Wizard (as Illusions) -> The Wizard (as Illusions)"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH015",
+      "scene_id": "CH015_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH015",
+      "scene_id": "CH015_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH015",
+      "scene_id": "CH015_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH015",
+      "scene_id": "CH015_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH015",
+      "scene_id": "CH015_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH015",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH015_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH015",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH015",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH015_SC003] Purpose: The climax of the Wizard's \"Great and Terrible\" persona.",
+    "[CH015_SC003] Summary: The travelers are brought into the Throne Room. They are met with terrifying, massive illusions (the Head, the Beast) designed to intimidate them. The Lion's roar inadvertently triggers a reveal or breaks the tension.",
+    "[CH015_SC003] Emotional arc: Terror $\\rightarrow$ Confusion/Shock.",
+    "[CH015_SC003] Coverage: Low-angle shots to emphasize the scale of the illusions; extreme close-ups of the characters' terrified faces; wide shots showing the vastness of the dome.",
+    "[CH015_SC003] Continuity: Scale of the illusions relative to the characters; lighting shifts during the \"magical\" displays.",
+    "[CH015] Chapter summary: **Summary:** After returning to the Emerald City and reporting the death of the Wicked Witch of the West, Dorothy and her companions demand that the Wizard fulfill his promises. After a period of tense waiting and a t...",
+    "[CH015] Chapter XV (book index hit)",
+    "[CH011] Chapter XI (book index hit)",
+    "[CH010] Chapter X (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH015_SC003\n\n## Production Intent\nExecute the climactic intimidation sequence where massive illusions overwhelm the travelers within a vast dome. The visual language must pivot from overwhelming scale to intimate terror, concluding with a sudden shift in tension triggered by an auditory event.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- The Wizard (as Illusions)\n\n## Required Environments\n- throne_room_grand_hall\n\n## Continuity Constraints\n- Scale of illusions relative to characters must remain consistent across shots.\n- Lighting shifts must synchronize with magical/illusion displays.\n\n## Beat List\n- BT001: Travelers enter the Throne Room.\n- BT002: The Wizard's illusions manifest (The Head, The Beast).\n- BT003: The Lion's roar breaks the tension.",
+  "metadata": {
+    "artifact_id": "CH015_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "18305b0f8e07f817e5af6a2590962c7afcfcf155",
+    "created_at_utc": "2026-04-27T08:46:23.755272+00:00",
+    "updated_at_utc": "2026-04-27T08:46:23.755272+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH015_SC003",
+        "version": "609f2a9517f6908adf50776f8226fc95e666422c"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH015_SC003",
+        "version": "8f945f1506c709646a93808f1302241d76eb6cac"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH015_SC003",
+        "version": "d08aa41ce88028ac799aca5cedf84ac8d910651b"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:47:11.943817+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "18305b0f8e07f817e5af6a2590962c7afcfcf155"
+      }
+    ]
+  }
+}

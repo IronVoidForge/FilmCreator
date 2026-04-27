@@ -1,0 +1,45 @@
+[
+  {
+    "entity_type": "environment",
+    "subject_ids": [
+      "yellow_brick_road",
+      "yellow_brick_road_pathway",
+      "yellow_brick_road_transit"
+    ],
+    "action": "flag_for_human_review",
+    "target_id": null,
+    "new_canonical_id": null,
+    "new_entity_kind": null,
+    "reason": "Decision subject ids did not match candidate ids.",
+    "confidence": "low",
+    "requires_human_review": true
+  },
+  {
+    "entity_type": "character",
+    "subject_ids": [
+      "farmer",
+      "farmer_woman_family"
+    ],
+    "action": "keep_separate",
+    "target_id": null,
+    "new_canonical_id": null,
+    "new_entity_kind": null,
+    "reason": "taxonomy primary_type conflict: individual vs group (guardrail violation for merge)",
+    "confidence": "high",
+    "requires_human_review": false
+  },
+  {
+    "entity_type": "character",
+    "subject_ids": [
+      "oz",
+      "oz_the_wizard"
+    ],
+    "action": "merge_into_existing",
+    "target_id": "oz",
+    "new_canonical_id": null,
+    "new_entity_kind": null,
+    "reason": "High confidence match; oz_the_wizard is a descriptive variant of the canonical entity oz.",
+    "confidence": "high",
+    "requires_human_review": false
+  }
+]

@@ -1,0 +1,349 @@
+{
+  "scene_id": "CH003_SC003",
+  "chapter_id": "CH003",
+  "scene_title": "SC003",
+  "purpose": "Transition from the safety of Munchkin hospitality to the uncertainty of the road.",
+  "summary": "After a night's rest, Dorothy continues her journey. Boq offers a warning about the dangers ahead. While resting near a cornfield, Dorothy encounters a Scarecrow perched on a pole who suddenly comes to life.",
+  "emotional_arc": "From cautious optimism to sudden shock/surprise.",
+  "production_intent": "Establish the transition from Munchkin safety to road uncertainty through a character encounter that shifts from travel fatigue to sudden shock. The sequence must emphasize the isolation of the cornfield and the physical transformation of the scarecrow from an object to a living entity.",
+  "scene_short_description": "A traveler rests near a tall cornfield before encountering a living scarecrow.",
+  "scene_primary_scale_story_point": "Vertical hierarchy between the ground-level traveler and the elevated scarecrow.",
+  "scene_required_anchor_catalog": [
+    "pole_structure",
+    "yellow_brick_road"
+  ],
+  "scene_start_state": "Dorothy traveling along the road with visible fatigue.",
+  "scene_end_state": "Dorothy in a state of shock facing the living scarecrow.",
+  "dominant_action_line": "Dorothy rests near a cornfield and is startled by a scarecrow coming to life.",
+  "scene_spatial_layout": [
+    "linear path of yellow_brick_road",
+    "verticality of the pole at the edge of the cornfield"
+  ],
+  "character_spatial_map": [
+    "dorothy walking along yellow_brick_road",
+    "boq positioned briefly near dorothy",
+    "the_scarecrow perched high on pole_structure"
+  ],
+  "environment_subzones": [
+    "yellow_brick_road",
+    "cornfield_scarecrow_post"
+  ],
+  "entry_vectors": [
+    "yellow_brick_road (dorothy)"
+  ],
+  "exit_vectors": [
+    "yellow_brick_road (dorothy)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: dialogue/warning transition",
+    "BT002 -> BT003: environmental shift to rest and encounter"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Boq (briefly)",
+      "canonical_id": "boq",
+      "display_name": "Boq",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/boq.md",
+      "notes": "Direct registry match for 'boq'."
+    },
+    {
+      "label": "The Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+      "notes": "Direct registry match for 'the_scarecrow'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Yellow Brick Road",
+      "canonical_id": "yellow_brick_road",
+      "display_name": "yellow_brick_road",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 124,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH005/yellow_brick_road.md",
+      "notes": "Direct registry match for 'yellow_brick_road'."
+    },
+    {
+      "label": "Edge of a large cornfield",
+      "canonical_id": "cornfield_scarecrow_post",
+      "display_name": "cornfield_scarecrow_post",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 58,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH003/cornfield_scarecrow_post.md",
+      "notes": "Chapter-local environment alias match for 'Edge of a large cornfield' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Dorothy's level of fatigue and dishevelment post-travel",
+    "Physical positioning of the_scarecrow on the pole"
+  ],
+  "visual_coverage_families": [
+    "Low angle looking up at the scarecrow on the pole",
+    "Close-ups of straw movement and awakening mechanics",
+    "Wide shots emphasizing cornfield isolation"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Dorothy continues journey",
+      "purpose": "",
+      "action_start": "walking along road",
+      "action_end": "approaching boq",
+      "active_subjects": [
+        "dorothy"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "yellow_brick_road",
+      "blocking_hint": "linear movement",
+      "environment_subzone": "yellow_brick_road",
+      "continuity_focus": "white clothing dishevelment",
+      "coverage_hint": "medium_full shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Boq's warning",
+      "purpose": "",
+      "action_start": "boq approaches dorothy",
+      "action_end": "boq departs",
+      "active_subjects": [
+        "boq",
+        "dorothy"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "yellow_brick_road",
+      "blocking_hint": "stationary interaction",
+      "environment_subzone": "yellow_brick_road",
+      "continuity_focus": "dorothy's fatigue level",
+      "coverage_hint": "medium shot",
+      "coverage_priority": "low",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Scarecrow awakens",
+      "purpose": "",
+      "action_start": "dorothy rests near cornfield",
+      "action_end": "the_scarecrow moves/lives",
+      "active_subjects": [
+        "the_scarecrow",
+        "dorothy"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "cornfield_scarecrow_post",
+      "blocking_hint": "dorothy seated/resting below pole",
+      "environment_subzone": "cornfield_scarecrow_post",
+      "continuity_focus": "pole positioning and straw movement",
+      "coverage_hint": "low angle / close-up",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish travel fatigue",
+      "planned_shot_moment_summary": "dorothy walking the road",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "yellow_brick_road",
+      "planned_shot_required_anchor_1": "yellow_brick_road",
+      "planned_shot_scale_proof_detail": "dorothy's disheveled white clothing",
+      "start_state_seed": "walking",
+      "end_state_seed": "stopping",
+      "action_seed": "traveling",
+      "blocking_seed": [
+        "linear movement along road"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "deliver warning",
+      "planned_shot_moment_summary": "boq warns dorothy",
+      "primary_subject_seed": "boq",
+      "secondary_subjects_seed": [
+        "dorothy"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "yellow_brick_road",
+      "planned_shot_required_anchor_1": "yellow_brick_road",
+      "planned_shot_scale_proof_detail": "proximity of characters",
+      "start_state_seed": "standing",
+      "end_state_seed": "departing",
+      "action_seed": "warning",
+      "blocking_seed": [
+        "side-by-side interaction"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "reveal supernatural element",
+      "planned_shot_moment_summary": "the_scarecrow awakens",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [
+        "dorothy"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "cornfield_scarecrow_post",
+      "planned_shot_required_anchor_1": "pole_structure",
+      "planned_shot_scale_proof_detail": "height of pole relative to dorothy",
+      "start_state_seed": "static object",
+      "end_state_seed": "living entity",
+      "action_seed": "awakening/movement",
+      "blocking_seed": [
+        "vertical movement on pole"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "portrait",
+      "camera_motion": "tilt",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH003",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH003_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH003",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH003_SC003] Purpose: Transition from the safety of Munchkin hospitality to the uncertainty of the road.",
+    "[CH003_SC003] Summary: After a night's rest, Dorothy continues her journey. Boq offers a warning about the dangers ahead. While resting near a cornfield, Dorothy encounters a Scarecrow perched on a pole who suddenly comes to life.",
+    "[CH003_SC003] Emotional arc: From cautious optimism to sudden shock/surprise.",
+    "[CH003_SC003] Coverage: Low angle: Looking up at the Scarecrow on his pole. Close-ups: The movement of the straw as the Scarecrow awakens. Wide shots: The isolation of the cornfield setting.",
+    "[CH003_SC003] Continuity: Dorothy's level of fatigue/dishevelment after traveling; the physical positioning of the Scarecrow on the pole.",
+    "[CH003] Chapter summary: **Setting:** The Munchkin Country (characterized by blue houses and round domes) and the Yellow Brick Road, specifically near a large cornfield. **Characters:** - **Dorothy:** A young girl traveling to the Emerald Cit...",
+    "[CH004] Chapter IV (book index hit)",
+    "[CH003] Chapter III (book index hit)",
+    "[CH010] Chapter X (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH003_SC003\n\n## Production Intent\nEstablish the transition from Munchkin safety to road uncertainty through a character encounter that shifts from travel fatigue to sudden shock. The sequence must emphasize the isolation of the cornfield and the physical transformation of the scarecrow from an object to a living entity.\n\n## Required Cast\n- dorothy (white clothing/dress, expressive face)\n- boq (brief appearance)\n- the_scarecrow (straw-based, perched on pole)\n\n## Required Environments\n- yellow_brick_road\n- cornfield_scarecrow_post (edge of large cornfield with pole structure)\n\n## Continuity Constraints\n- Dorothy's level of fatigue/dishevelment after traveling.\n- The physical positioning of the_scarecrow on the pole.\n\n## Beat List\n- BT001: Dorothy continues journey along the road.\n- BT002: Boq offers a warning about dangers ahead.\n- BT003: Dorothy rests near cornfield; the_scarecrow awakens on his pole.",
+  "metadata": {
+    "artifact_id": "CH003_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "1b31823564f4b0b7c8c81ef3e90d0b1d3a7463b9",
+    "created_at_utc": "2026-04-27T08:05:09.457093+00:00",
+    "updated_at_utc": "2026-04-27T08:05:09.457093+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH003_SC003",
+        "version": "27ee871a6ebc4eb2096657519d1348c2532e4af1"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH003_SC003",
+        "version": "bdde8cc591d935f490f78628ab1764f5c0b7d218"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH003_SC003",
+        "version": "51d0c432754c4e1a0e973a2c4c03c5a3f31366bd"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:05:51.003339+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "1b31823564f4b0b7c8c81ef3e90d0b1d3a7463b9"
+      }
+    ]
+  }
+}

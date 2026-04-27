@@ -1,0 +1,348 @@
+{
+  "scene_id": "CH017_SC003",
+  "chapter_id": "CH017",
+  "scene_title": "SC003",
+  "purpose": "Establish the political transition and public stakes.",
+  "summary": "Oz makes a formal announcement to the citizens of the Emerald City. He claims he is traveling to visit a \"brother Wizard\" in the clouds. To maintain order, he appoints the Scarecrow as the temporary ruler of the city.",
+  "emotional_arc": "From public spectacle to a sense of formal transition.",
+  "production_intent": "Establish the political transition of the Emerald City through a formal public announcement. The scene must visually communicate the shift from Oz's established authority to the Scarecrow's temporary regency, utilizing the scale of the palace exterior to emphasize the weight of the public stakes.",
+  "scene_short_description": "A formal announcement at the palace exterior where power is transferred to a new ruler.",
+  "scene_primary_scale_story_point": "The vertical hierarchy between Oz on the palace elevation and the Citizens in the square below.",
+  "scene_required_anchor_catalog": [
+    "emerald_city_palace_exterior_steps",
+    "central_podium"
+  ],
+  "scene_start_state": "Oz stands before a large crowd, preparing to speak from an elevated position.",
+  "scene_end_state": "The Scarecrow stands in a new official capacity as the crowd reacts to the transition.",
+  "dominant_action_line": "Oz announces his departure and appoints the Scarecrow as temporary ruler.",
+  "scene_spatial_layout": [
+    "Vertical separation between the speaker (Oz) and the audience (Citizens).",
+    "Centralized focus on the podium/steps area."
+  ],
+  "character_spatial_map": [
+    "oz is positioned at the elevated palace steps.",
+    "the_scarecrow is positioned near oz for the appointment.",
+    "Citizens of the Emerald City occupy the lower public square."
+  ],
+  "environment_subzones": [
+    "emerald_city_palace_exterior_steps",
+    "emerald_city_public_square"
+  ],
+  "entry_vectors": [
+    "Citizens enter from the periphery of the square."
+  ],
+  "exit_vectors": [
+    "Oz exits toward the palace/clouds."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Transition from announcement to explanation.",
+    "BT002 -> BT003: Transition from explanation to formal appointment."
+  ],
+  "characters_required": [
+    {
+      "label": "Oz (The Wizard)",
+      "canonical_id": "oz",
+      "display_name": "oz",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/oz_the_wizard.md",
+      "notes": "Direct registry match for 'oz_the_wizard'."
+    },
+    {
+      "label": "The Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 130,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+      "notes": "Direct registry match for 'the_scarecrow'."
+    },
+    {
+      "label": "Citizens of the Emerald City",
+      "canonical_id": null,
+      "display_name": "Citizens of the Emerald City",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Palace Exterior/Public Square",
+      "canonical_id": "emerald_city_palace_exterior",
+      "display_name": "emerald_city_palace_exterior",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 114,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH017/emerald_city_palace_exterior.md",
+      "notes": "Chapter-local environment alias match for 'Palace Exterior/Public Square' (key_overlap=2, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Crowd density and placement must remain consistent across coverage.",
+    "the_scarecrow must maintain a regal/official posture during the appointment."
+  ],
+  "visual_coverage_families": [
+    "Wide shots: Oz addressing the crowd.",
+    "Reaction shots: Citizens' curiosity and Scarecrow's reaction to his new role.",
+    "Medium shot: The official appointment of the Scarecrow."
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Oz makes a formal announcement to the citizens",
+      "purpose": "",
+      "action_start": "Oz stands before the crowd",
+      "action_end": "The crowd falls silent for the announcement",
+      "active_subjects": [
+        "oz"
+      ],
+      "passive_subjects": [
+        "Citizens of the Emerald City"
+      ],
+      "spatial_context": "emerald_city_palace_exterior_steps",
+      "blocking_hint": "Oz elevated, Citizens below",
+      "environment_subzone": "emerald_city_palace_exterior_steps",
+      "continuity_focus": "Crowd density/placement",
+      "coverage_hint": "Wide shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Oz claims he is traveling to visit a \"brother Wizard\" in the clouds",
+      "purpose": "",
+      "action_start": "Oz begins explaining his departure",
+      "action_end": "The claim of the brother Wizard is made",
+      "active_subjects": [
+        "oz"
+      ],
+      "passive_subjects": [
+        "Citizens of the Emerald City"
+      ],
+      "spatial_context": "emerald_city_palace_exterior_steps",
+      "blocking_hint": "Oz gesturing upward",
+      "environment_subzone": "emerald_city_palace_exterior_steps",
+      "continuity_focus": "Oz's formal mannerisms/bowing",
+      "coverage_hint": "Medium shot/Reaction shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Oz appoints the Scarecrow as temporary ruler",
+      "purpose": "",
+      "action_start": "Oz introduces the new authority",
+      "action_end": "The Scarecrow assumes a regal posture",
+      "active_subjects": [
+        "oz",
+        "the_scarecrow"
+      ],
+      "passive_subjects": [
+        "Citizens of the Emerald City"
+      ],
+      "spatial_context": "emerald_city_palace_exterior_steps",
+      "blocking_hint": "the_scarecrow moves to a position of prominence near Oz",
+      "environment_subzone": "emerald_city_palace_exterior_steps",
+      "continuity_focus": "Scarecrow's regal/official posture",
+      "coverage_hint": "Medium shot/Reaction shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "End of scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale and authority",
+      "planned_shot_moment_summary": "Oz addresses the massive crowd",
+      "primary_subject_seed": "oz",
+      "secondary_subjects_seed": [
+        "Citizens of the Emerald City"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "emerald_city_palace_exterior_steps",
+      "planned_shot_required_anchor_1": "emerald_city_palace_exterior_steps",
+      "planned_shot_scale_proof_detail": "crowd vs palace height",
+      "start_state_seed": "Oz facing crowd",
+      "end_state_seed": "Oz finishing opening statement",
+      "action_seed": "Oz speaking to the masses",
+      "blocking_seed": [
+        "Oz centered on steps"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "convey motivation/deception",
+      "planned_shot_moment_summary": "Oz explains his journey to the clouds",
+      "primary_subject_seed": "oz",
+      "secondary_subjects_seed": [
+        "Citizens of the Emerald City"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "emerald_city_palace_exterior_steps",
+      "planned_shot_required_anchor_1": "central_podium",
+      "planned_shot_scale_proof_detail": "Oz's formal mannerisms/bowing",
+      "start_state_seed": "Oz mid-sentence",
+      "end_state_seed": "Oz finishing the claim of a brother Wizard",
+      "action_seed": "Oz gesturing toward the sky",
+      "blocking_seed": [
+        "Oz leaning slightly forward"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "execute political transition",
+      "planned_shot_moment_summary": "The Scarecrow is appointed ruler",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [
+        "oz"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "emerald_city_palace_exterior_steps",
+      "planned_shot_required_anchor_1": "central_podium",
+      "planned_shot_scale_proof_detail": "Scarecrow's regal posture",
+      "start_state_seed": "Oz gesturing to Scarecrow",
+      "end_state_seed": "Scarecrow assuming official stance",
+      "action_seed": "The appointment of the Scarecrow",
+      "blocking_seed": [
+        "the_scarecrow stepping into frame near Oz"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Citizens of the Emerald City -> Citizens of the Emerald City"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH017",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH017_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH015",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH017",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH017_chapter_xvii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH017",
+      "canonical_id": "oz"
+    }
+  ],
+  "evidence_summary": [
+    "[CH017_SC003] Purpose: Establish the political transition and public stakes.",
+    "[CH017_SC003] Summary: Oz makes a formal announcement to the citizens of the Emerald City. He claims he is traveling to visit a \"brother Wizard\" in the clouds. To maintain order, he appoints the Scarecrow as the temporary ruler of the city.",
+    "[CH017_SC003] Emotional arc: From public spectacle to a sense of formal transition.",
+    "[CH017_SC003] Coverage: Wide shots: Oz addressing the crowd. Reaction shots: The citizens' curiosity; Scarecrow's reaction to his new role. Medium shot: The official appointment of the Scarecrow.",
+    "[CH017_SC003] Continuity: Crowd density and placement; Scarecrow's regal/official posture.",
+    "[CH017] Chapter summary: **Setting:** The Throne Room and the exterior of the Palace in the Emerald City. **Characters:** - Dorothy: Longing to return to Kansas. - Oz (The Wizard): A \"humbug\" seeking to escape his life of deception by returni...",
+    "[CH015] Chapter XV (book index hit)",
+    "[CH017] Chapter XVII (book index hit)",
+    "[CH010] Chapter X (book index hit)",
+    "Character oz: Oz is a human male of human scale. While his specific clothing and physical build are not explicitly detailed, he carries himself with formal mannerisms, such as bowing low in greeting. He is associated with the use of spectacles or visual app..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH017_SC003\n\n## Production Intent\nEstablish the political transition of the Emerald City through a formal public announcement. The scene must visually communicate the shift from Oz's established authority to the Scarecrow's temporary regency, utilizing the scale of the palace exterior to emphasize the weight of the public stakes.\n\n## Required Cast\n- oz (Human male, human scale, formal mannerisms)\n- the_scarecrow (Regal/official posture required)\n- Citizens of the Emerald City (Crowd density must be maintained)\n\n## Required Environments\n- emerald_city_palace_exterior (Steps and Public Square)\n\n## Continuity Constraints\n- Maintain consistent crowd density and placement.\n- Ensure the_scarecrow maintains a regal/official posture during the appointment.\n- Oz's formal mannerisms (e.g., bowing) must be consistent with his characterization.\n\n## Beat List\n- BT001: Oz makes a formal announcement to the citizens.\n- BT002: Oz claims he is traveling to visit a \"brother Wizard\" in the clouds.\n- BT003: Oz appoints the Scarecrow as temporary ruler of the city.",
+  "metadata": {
+    "artifact_id": "CH017_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "96268b1cb0858503afc9fff34a37fd72f57046ad",
+    "created_at_utc": "2026-04-27T08:52:59.764852+00:00",
+    "updated_at_utc": "2026-04-27T08:52:59.764852+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH017_SC003",
+        "version": "300e4292346a570130077476c1a691e3cde92a20"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH017_SC003",
+        "version": "840955f6ca38f1718aa8cecf4d387484c8545a53"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH017_SC003",
+        "version": "557bf7bce5460b19111d315e6dc47e96f6f2e82e"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:53:46.909976+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "96268b1cb0858503afc9fff34a37fd72f57046ad"
+      }
+    ]
+  }
+}

@@ -1,0 +1,400 @@
+{
+  "scene_id": "CH007_SC004",
+  "chapter_id": "CH007",
+  "scene_title": "SC004",
+  "purpose": "Transition to a new environment and provide an emotional beat of longing/hope.",
+  "summary": "The group reaches a swift river, seeing a beautiful meadow on the far side. Exhausted, they camp by the bank while the Tin Woodman begins building a raft. Dorothy falls asleep, dreaming of the Emerald City.",
+  "emotional_arc": "Exhaustion $\\rightarrow$ Hope/Dreaminess.",
+  "production_intent": "Establish a transition from the dense forest to a riverine landscape. The sequence must visually communicate physical exhaustion through character staging and then pivot to emotional hope via the distant meadow view and Dorothy's dream state.",
+  "scene_short_description": "Exhausted travelers camp by a swift river overlooking a distant, beautiful meadow.",
+  "scene_primary_scale_story_point": "The vastness of the river and meadow relative to the small campsite.",
+  "scene_required_anchor_catalog": [
+    "swift river edge",
+    "unfinished raft structure",
+    "distant meadow horizon"
+  ],
+  "scene_start_state": "Group arrives at the bank, visibly fatigued by travel.",
+  "scene_end_state": "Dorothy sleeps under soft lighting as the group rests.",
+  "dominant_action_line": "The group settles to camp while the Tin Woodman begins building a raft.",
+  "scene_spatial_layout": [
+    "Campfire/resting zone near the riverbank",
+    "Construction zone at the water's edge",
+    "Distant meadow across the water"
+  ],
+  "character_spatial_map": [
+    "dorothy and toto resting in the camp zone",
+    "tin_woodman working at the river's edge",
+    "the_scarecrow and cowardly_lion positioned near the campsite"
+  ],
+  "environment_subzones": [
+    "riverbank_edge",
+    "distant_meadow_view",
+    "campsite_zone"
+  ],
+  "entry_vectors": [
+    "forest_to_riverbank_path"
+  ],
+  "exit_vectors": [
+    "river_crossing_direction"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Arrival and exhaustion",
+    "BT002 -> BT003: Transition to labor and rest",
+    "BT003 -> BT004: Shift into dream state"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH007/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH007/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH007/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH007/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH007/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Riverbank (overlooking a beautiful meadow)",
+      "canonical_id": "swift_riverbank_and_meadow_view",
+      "display_name": "swift_riverbank_and_meadow_view",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 102,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH007/swift_riverbank_and_meadow_view.md",
+      "notes": "Chapter-local environment alias match for 'Riverbank (overlooking a beautiful meadow)' (key_overlap=2, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Incremental progress of the raft construction",
+    "Lighting transition from dusk to night"
+  ],
+  "visual_coverage_families": [
+    "Wide sweeping shots of river and distant meadow",
+    "Medium shots of raft construction",
+    "Soft ethereal lighting for dream sequence"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Arrival at the riverbank",
+      "purpose": "",
+      "action_start": "group emerges from forest",
+      "action_end": "group stops to view meadow",
+      "active_subjects": [
+        "the_scarecrow",
+        "dorothy",
+        "toto",
+        "cowardly_lion",
+        "tin_woodman"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "riverbank_edge",
+      "blocking_hint": "characters spread out looking across water",
+      "environment_subzone": "riverbank_edge",
+      "continuity_focus": "lighting is dusk",
+      "coverage_hint": "wide sweeping shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Settling and labor",
+      "purpose": "",
+      "action_start": "characters sit/lie down",
+      "action_end": "raft construction begins",
+      "active_subjects": [
+        "tin_woodman"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "cowardly_lion",
+        "toto"
+      ],
+      "spatial_context": "campsite_zone and riverbank_edge",
+      "blocking_hint": "tin_woodman moves to water's edge; others settle near bank",
+      "environment_subzone": "riverbank_edge",
+      "continuity_focus": "raft progress starts at zero",
+      "coverage_hint": "medium shots of woodman",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Rest and transition to night",
+      "purpose": "",
+      "action_start": "sun sets further",
+      "action_end": "darkness falls over camp",
+      "active_subjects": [
+        "dorothy",
+        "toto"
+      ],
+      "passive_subjects": [
+        "tin_woodman",
+        "the_scarecrow",
+        "cowardly_lion"
+      ],
+      "spatial_context": "campsite_zone",
+      "blocking_hint": "characters becoming still/sleeping",
+      "environment_subzone": "campsite_zone",
+      "continuity_focus": "lighting transition dusk to night",
+      "coverage_hint": "medium shots of group",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT004"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "The dream state",
+      "purpose": "",
+      "action_start": "dorothy's eyes close",
+      "action_end": "ethereal focus on face",
+      "active_subjects": [
+        "dorothy"
+      ],
+      "passive_subjects": [
+        "toto"
+      ],
+      "spatial_context": "campsite_zone",
+      "blocking_hint": "dorothy lying still",
+      "environment_subzone": "campsite_zone",
+      "continuity_focus": "soft ethereal lighting",
+      "coverage_hint": "close up/dream sequence",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish environment",
+      "planned_shot_moment_summary": "group reaches the riverbank",
+      "primary_subject_seed": "the_scarecrow",
+      "secondary_subjects_seed": [
+        "dorothy",
+        "toto",
+        "cowardly_lion",
+        "tin_woodman"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "riverbank_edge",
+      "planned_shot_required_anchor_1": "swift river edge",
+      "planned_shot_scale_proof_detail": "wide vista of meadow across water",
+      "start_state_seed": "group walking into frame",
+      "end_state_seed": "group stopping at bank",
+      "action_seed": "characters slowing down and looking out",
+      "blocking_seed": [
+        "group spreads along the bank"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "dusk",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "character action",
+      "planned_shot_moment_summary": "tin_woodman begins raft work",
+      "primary_subject_seed": "tin_woodman",
+      "secondary_subjects_seed": [
+        "the_scarecrow"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "riverbank_edge",
+      "planned_shot_required_anchor_1": "unfinished raft structure",
+      "planned_shot_scale_proof_detail": "medium shot of wood/tools",
+      "start_state_seed": "tin_woodman kneeling",
+      "end_state_seed": "tin_woodman working",
+      "action_seed": "assembling logs",
+      "blocking_seed": [
+        "tin_woodman at water's edge"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "dusk",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT004",
+      "narrative_function": "emotional shift",
+      "planned_shot_moment_summary": "dorothy dreams of Emerald City",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "campsite_zone",
+      "planned_shot_required_anchor_1": "dorothy sleeping position",
+      "planned_shot_scale_proof_detail": "ethereal focus on face",
+      "start_state_seed": "eyes closing",
+      "end_state_seed": "dream state",
+      "action_seed": "sleeping peacefully",
+      "blocking_seed": [
+        "dorothy lying down"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH007",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH007_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH008",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH008_chapter_viii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH007",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH007_SC004] Purpose: Transition to a new environment and provide an emotional beat of longing/hope.",
+    "[CH007_SC004] Summary: The group reaches a swift river, seeing a beautiful meadow on the far side. Exhausted, they camp by the bank while the Tin Woodman begins building a raft. Dorothy falls asleep, dreaming of the Emerald City.",
+    "[CH007_SC004] Emotional arc: Exhaustion $\\rightarrow$ Hope/Dreaminess.",
+    "[CH007_SC004] Coverage: Wide sweeping shots of the river and the distant meadow. Medium shots of the Woodman working on the raft. Soft, ethereal lighting/focus for Dorothy's dream sequence.",
+    "[CH007_SC004] Continuity: The progress of the raft construction; the lighting transition from dusk to night.",
+    "[CH007] Chapter summary: **Setting:** A dense forest containing deep ditches, a riverbank, and eventually a view of a beautiful, fruit-filled meadow across a swift river. **Characters:** Dorothy (and Toto), Scarecrow, Tin Woodman, Cowardly Li...",
+    "[CH008] Chapter VIII (book index hit)",
+    "[CH007] Chapter VII (book index hit)",
+    "[CH012] Chapter XII (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH007_SC004\n\n## Production Intent\nEstablish a transition from the dense forest to a riverine landscape. The sequence must visually communicate physical exhaustion through character staging and then pivot to emotional hope via the distant meadow view and Dorothy's dream state.\n\n## Required Cast\n- dorothy\n- toto\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n\n## Required Environments\n- swift_riverbank_and_meadow_view\n\n## Continuity Constraints\n- Incremental progress of the raft construction\n- Lighting transition from dusk to night\n\n## Beat List\n- BT001: Arrival at the riverbank\n- BT002: Settling and labor\n- BT003: Rest and transition to night\n- BT004: The dream state",
+  "metadata": {
+    "artifact_id": "CH007_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "c530ca7ed68b5268485b780462809cfd1f2a5b2b",
+    "created_at_utc": "2026-04-27T08:18:53.506350+00:00",
+    "updated_at_utc": "2026-04-27T08:18:53.506350+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH007_SC004",
+        "version": "b8fde603d52376429b7ecd4a760cc3bd7b38184d"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH007_SC004",
+        "version": "4e75051287ad80bf3eea90c06c10905e5f5e2f68"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH007_SC004",
+        "version": "b0544a55788952b129f05cad95dd8624d4fe148f"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:19:37.566224+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "c530ca7ed68b5268485b780462809cfd1f2a5b2b"
+      }
+    ]
+  }
+}

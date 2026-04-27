@@ -1,0 +1,340 @@
+{
+  "scene_id": "CH017_SC001",
+  "chapter_id": "CH017",
+  "scene_title": "SC001",
+  "purpose": "Establish the new objective and reveal the Wizard's true motivation.",
+  "summary": "After three days of silence, Oz summons Dorothy. He proposes a journey via balloon to cross the desert but reveals his secret identity as a former circus performer. He expresses a desperate need to flee before his fraud is discovered.",
+  "emotional_arc": "From suspenseful waiting to revelation and shared desperation.",
+  "production_intent": "Establish the Wizard's transition from a powerful figure to a desperate fraud while presenting the balloon journey as the primary objective for Dorothy. The scale of the throne room must emphasize the isolation and weight of his secret.",
+  "scene_short_description": "A massive, isolated throne room where a secret is revealed amidst plans for desert flight.",
+  "scene_primary_scale_story_point": "The vastness of the emerald_city_throne_room relative to the two characters.",
+  "scene_required_anchor_catalog": [
+    "Oz's throne",
+    "Balloon components/proposals"
+  ],
+  "scene_start_state": "Dorothy standing in silence within the large, empty expanse of the throne room.",
+  "scene_end_state": "A shared sense of desperation between Dorothy and Oz regarding the upcoming flight.",
+  "dominant_action_line": "Oz breaks his silence to propose a balloon journey and confesses his true identity.",
+  "scene_spatial_layout": [
+    "Large open floor space in emerald_city_throne_room.",
+    "Centralized focus on the throne area."
+  ],
+  "character_spatial_map": [
+    "dorothy positioned as an observer/summoned guest.",
+    "oz seated or standing near the throne."
+  ],
+  "environment_subzones": [
+    "throne_area",
+    "central_floor"
+  ],
+  "entry_vectors": [
+    "Dorothy enters from palace corridors."
+  ],
+  "exit_vectors": [
+    "Exit toward balloon staging area."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Transition from silence to verbal proposal.",
+    "BT002 -> BT003: Transition from plan discussion to personal confession."
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Oz (The Wizard)",
+      "canonical_id": "oz",
+      "display_name": "oz",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/oz_the_wizard.md",
+      "notes": "Direct registry match for 'oz_the_wizard'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Throne Room",
+      "canonical_id": "emerald_city_throne_room",
+      "display_name": "emerald_city_throne_room",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 92,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH017/emerald_city_throne_room.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    },
+    {
+      "label": "Emerald City Palace",
+      "canonical_id": "emerald_city_palace_exterior",
+      "display_name": "emerald_city_palace_exterior",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH017/emerald_city_palace_exterior.md",
+      "notes": "Chapter-local environment alias match for 'Emerald City Palace' (key_overlap=3, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Oz physical demeanor transition from Wizard persona to Humbug performer.",
+    "Dorothy attire consistency in white clothing or white dress."
+  ],
+  "visual_coverage_families": [
+    "Two-shot: Dorothy and Oz discussing the plan.",
+    "Close-ups: Oz's face during his confession/revelation.",
+    "Medium shots: The scale of the Throne Room to emphasize isolation."
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The silence of three days is broken",
+      "purpose": "",
+      "action_start": "Dorothy standing in the throne room",
+      "action_end": "Oz speaks for the first time",
+      "active_subjects": [
+        "dorothy",
+        "oz"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "emerald_city_throne_room",
+      "blocking_hint": "Dorothy isolated in large space",
+      "environment_subzone": "central_floor",
+      "continuity_focus": "Oz's Wizard persona",
+      "coverage_hint": "medium shot scale",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Balloon Proposal",
+      "purpose": "",
+      "action_start": "Oz proposes crossing the desert",
+      "action_end": "The plan is established",
+      "active_subjects": [
+        "oz",
+        "dorothy"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "emerald_city_throne_room",
+      "blocking_hint": "Characters move closer to discuss details",
+      "environment_subzone": "throne_area",
+      "continuity_focus": "Dorothy in white clothing",
+      "coverage_hint": "two-shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Humbug Revelation",
+      "purpose": "",
+      "action_start": "Oz reveals his circus past",
+      "action_end": "Shared desperation is established",
+      "active_subjects": [
+        "oz",
+        "dorothy"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "emerald_city_throne_room",
+      "blocking_hint": "Oz breaks formal posture",
+      "environment_subzone": "throne_area",
+      "continuity_focus": "Transition from Wizard to Humbug demeanor",
+      "coverage_hint": "close-up on Oz",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish isolation",
+      "planned_shot_moment_summary": "Dorothy waiting in the silence",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "oz"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "central_floor",
+      "planned_shot_required_anchor_1": "emerald_city_throne_room",
+      "planned_shot_scale_proof_detail": "wide shot showing distance to throne",
+      "start_state_seed": "Dorothy standing still",
+      "end_state_seed": "Oz breaks silence",
+      "action_seed": "waiting",
+      "blocking_seed": [
+        "Dorothy center frame",
+        "distant throne in background"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "present objective",
+      "planned_shot_moment_summary": "Oz proposes the balloon journey",
+      "primary_subject_seed": "oz",
+      "secondary_subjects_seed": [
+        "dorothy"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "throne_area",
+      "planned_shot_required_anchor_1": "Oz's throne",
+      "planned_shot_scale_proof_detail": "two-shot framing both characters",
+      "start_state_seed": "Oz speaking",
+      "end_state_seed": "Dorothy reacting to the plan",
+      "action_seed": "discussing desert crossing",
+      "blocking_seed": [
+        "Oz and Dorothy facing each other"
+      ],
+      "shot_size": "two_shot",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "reveal motivation",
+      "planned_shot_moment_summary": "Oz confesses he is a circus performer",
+      "primary_subject_seed": "oz",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "throne_area",
+      "planned_shot_required_anchor_1": "Oz's throne",
+      "planned_shot_scale_proof_detail": "tight framing on Oz's face",
+      "start_state_seed": "Oz lowering his guard",
+      "end_state_seed": "Oz expressing desperation",
+      "action_seed": "confessing fraud",
+      "blocking_seed": [
+        "Oz leaning forward"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH017",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH017_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH015",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH017",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH017_chapter_xvii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH018",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH017",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH017_SC001] Purpose: Establish the new objective and reveal the Wizard's true motivation.",
+    "[CH017_SC001] Summary: After three days of silence, Oz summons Dorothy. He proposes a journey via balloon to cross the desert but reveals his secret identity as a former circus performer. He expresses a desperate need to flee before his fraud is discovered.",
+    "[CH017_SC001] Emotional arc: From suspenseful waiting to revelation and shared desperation.",
+    "[CH017_SC001] Coverage: Two-shot: Dorothy and Oz discussing the plan. Close-ups: Oz's face during his confession/revelation. Medium shots: The scale of the Throne Room to emphasize isolation.",
+    "[CH017_SC001] Continuity: Oz's physical demeanor (transitioning from \"Wizard\" persona to \"Humbug\" performer).",
+    "[CH017] Chapter summary: **Setting:** The Throne Room and the exterior of the Palace in the Emerald City. **Characters:** - Dorothy: Longing to return to Kansas. - Oz (The Wizard): A \"humbug\" seeking to escape his life of deception by returni...",
+    "[CH015] Chapter XV (book index hit)",
+    "[CH017] Chapter XVII (book index hit)",
+    "[CH018] Chapter XVIII (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH017_SC001\n\n## Production Intent\nEstablish the Wizard's transition from a powerful figure to a desperate fraud while presenting the balloon journey as the primary objective for Dorothy. The scale of the throne room must emphasize the isolation and weight of his secret.\n\n## Required Cast\n- dorothy (Young human girl, expressive face, white clothing/dress)\n- oz (The Wizard; transitioning from \"Wizard\" persona to \"Humbug\" performer)\n\n## Required Environments\n- emerald_city_throne_room (Large scale, emphasizes isolation)\n\n## Continuity Constraints\n- Oz: Physical demeanor shift from authoritative Wizard to desperate circus performer.\n- Dorothy: Maintain white clothing/dress throughout the scene.\n\n## Beat List\n- BT001: The silence of three days is broken.\n- BT002: The Balloon Proposal (crossing the desert).\n- BT003: The Humbug Revelation (confession of circus identity and fraud).",
+  "metadata": {
+    "artifact_id": "CH017_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "84379f2a6fdd2f0525c4aff30831da1bae899d9c",
+    "created_at_utc": "2026-04-27T08:51:35.712646+00:00",
+    "updated_at_utc": "2026-04-27T08:51:35.712646+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH017_SC001",
+        "version": "60a299dd3caabff9ad53e9842fac41db3ba36da8"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH017_SC001",
+        "version": "f863ff699d609687e0ebcaa79996d9ea89ed1daf"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH017_SC001",
+        "version": "16b63c1f51d5b8e02c73fe582f888a582036736f"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T08:52:17.646205+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "84379f2a6fdd2f0525c4aff30831da1bae899d9c"
+      }
+    ]
+  }
+}

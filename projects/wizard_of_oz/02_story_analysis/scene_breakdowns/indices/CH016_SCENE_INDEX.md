@@ -1,0 +1,4 @@
+- [SC001](#SC001) The Scarecrow's Wisdom
+- [SC002](#SC002) The Tin Woodman's Heart
+- [SC003](#SC003) The Lion's Courage
+- [SC004](#SC004) The Humbug's Reflection

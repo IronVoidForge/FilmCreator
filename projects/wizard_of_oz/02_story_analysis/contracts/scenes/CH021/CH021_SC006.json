@@ -1,0 +1,352 @@
+{
+  "scene_id": "CH021_SC006",
+  "chapter_id": "CH021",
+  "scene_title": "SC006",
+  "purpose": "Provide emotional payoff and resolve the immediate conflict.",
+  "summary": "The Lion returns to the clearing, triumphant. He is officially recognized as the King of Beasts. He promises to return to rule once Dorothy has safely reached Kansas.",
+  "emotional_arc": "Triumph and solemnity.",
+  "production_intent": "Establish the Lion's transition from combatant to sovereign within the ancient forest interior. The scene must balance the physical grit of recent battle with the ceremonial weight of a coronation, utilizing scale to contrast the small traveling party against the mass of forest beasts.",
+  "scene_short_description": "A triumphant lion enters a mossy forest clearing to receive recognition from gathered beasts.",
+  "scene_primary_scale_story_point": "The Lion stands as a central vertical axis against a horizontal mass of bowing animals.",
+  "scene_required_anchor_catalog": [
+    "massive trees",
+    "thick moss floor"
+  ],
+  "scene_start_state": "Lion enters the clearing, physically marked by battle.",
+  "scene_end_state": "Lion delivers his promise to rule after Dorothy's departure.",
+  "dominant_action_line": "The Lion accepts his title and pledges future rule.",
+  "scene_spatial_layout": [
+    "Circular arrangement of beasts around a central mossy opening",
+    "Traveling party positioned as observers within the circle"
+  ],
+  "character_spatial_map": [
+    "Lion at center of clearing",
+    "Various forest beasts in a perimeter ring",
+    "Dorothy and companions in a secondary grouping facing the Lion"
+  ],
+  "environment_subzones": [
+    "central_clearing",
+    "thicket_perimeter"
+  ],
+  "entry_vectors": [
+    "forest_path_to_clearing"
+  ],
+  "exit_vectors": [
+    "forest_path_to_clearing"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Lion's entrance to animal recognition",
+    "BT002 -> BT003: Recognition to Lion's solemn promise"
+  ],
+  "characters_required": [
+    {
+      "label": "Lion",
+      "canonical_id": null,
+      "display_name": "Lion",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "various forest beasts",
+      "canonical_id": null,
+      "display_name": "various forest beasts",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "Dorothy and companions",
+      "canonical_id": null,
+      "display_name": "Dorothy and companions",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Forest Clearing",
+      "canonical_id": "ancient_forest_interior",
+      "display_name": "ancient_forest_interior",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 80,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH021/ancient_forest_interior.md",
+      "notes": "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Lion must maintain visible scratches and dirt from battle",
+    "Animal positioning in the clearing must remain consistent during ceremony"
+  ],
+  "visual_coverage_families": [
+    "Low-angle hero shots of the Lion",
+    "Wide shots of animals bowing/celebrating",
+    "Medium close-ups of Dorothy's reaction"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Lion's triumphant return",
+      "purpose": "",
+      "action_start": "Lion emerges from forest edge",
+      "action_end": "Lion reaches center of clearing",
+      "active_subjects": [
+        "Lion"
+      ],
+      "passive_subjects": [
+        "various forest beasts",
+        "Dorothy and companions"
+      ],
+      "spatial_context": "central_clearing",
+      "blocking_hint": "Lion moves toward the mossy center",
+      "environment_subzone": "central_clearing",
+      "continuity_focus": "scratches/dirt on Lion",
+      "coverage_hint": "low-angle hero shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Official recognition of the King",
+      "purpose": "",
+      "action_start": "Beasts begin to bow",
+      "action_end": "Celebration reaches peak",
+      "active_subjects": [
+        "various forest beasts"
+      ],
+      "passive_subjects": [
+        "Lion",
+        "Dorothy and companions"
+      ],
+      "spatial_context": "thicket_perimeter",
+      "blocking_hint": "Animals form a ring around Lion",
+      "environment_subzone": "thicket_perimeter",
+      "continuity_focus": "animal positioning",
+      "coverage_hint": "wide shots of bowing animals",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The King's promise",
+      "purpose": "",
+      "action_start": "Lion speaks solemnly",
+      "action_end": "Lion concludes his vow to return after Dorothy reaches Kansas",
+      "active_subjects": [
+        "Lion"
+      ],
+      "passive_subjects": [
+        "Dorothy and companions",
+        "various forest beasts"
+      ],
+      "spatial_context": "central_clearing",
+      "blocking_hint": "Lion stands tall amidst the silence",
+      "environment_subzone": "central_clearing",
+      "continuity_focus": "Lion's facial expression/solemnity",
+      "coverage_hint": "medium close-ups of reactions",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish_hero",
+      "planned_shot_moment_summary": "Lion enters clearing with battle wounds",
+      "primary_subject_seed": "Lion",
+      "secondary_subjects_seed": [
+        "various forest beasts"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "central_clearing",
+      "planned_shot_required_anchor_1": "massive trees",
+      "planned_shot_scale_proof_detail": "Lion's height relative to thick moss",
+      "start_state_seed": "Lion stepping into light",
+      "end_state_seed": "Lion reaching center",
+      "action_seed": "walking triumphantly",
+      "blocking_seed": [
+        "center path"
+      ],
+      "shot_size": "full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "establish_scale",
+      "planned_shot_moment_summary": "Beasts bowing in unison",
+      "primary_subject_seed": "various forest beasts",
+      "secondary_subjects_seed": [
+        "Lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "thicket_perimeter",
+      "planned_shot_required_anchor_1": "thick moss floor",
+      "planned_shot_scale_proof_detail": "mass of animals vs single Lion",
+      "start_state_seed": "animals standing",
+      "end_state_seed": "animals bowed",
+      "action_seed": "bowing/celebrating",
+      "blocking_seed": [
+        "perimeter ring"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "emotional_reaction",
+      "planned_shot_moment_summary": "Dorothy witnessing the coronation",
+      "primary_subject_seed": "Dorothy and companions",
+      "secondary_subjects_seed": [
+        "Lion"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "central_clearing",
+      "planned_shot_required_anchor_1": "massive trees",
+      "planned_shot_scale_proof_detail": "human scale vs beast scale",
+      "start_state_seed": "Dorothy watching",
+      "end_state_seed": "Dorothy nodding",
+      "action_seed": "reacting to the new King",
+      "blocking_seed": [
+        "observer group"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Lion -> Lion",
+    "Resolve various forest beasts -> various forest beasts",
+    "Resolve Dorothy and companions -> Dorothy and companions"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC006"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC006"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC006"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC006"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC006"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH021_chapter_xxi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH023",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH023_chapter_xxiii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH018",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+    },
+    {
+      "source": "environment_bible",
+      "chapter_id": "CH021",
+      "canonical_id": "ancient_forest_interior"
+    }
+  ],
+  "evidence_summary": [
+    "[CH021_SC006] Purpose: Provide emotional payoff and resolve the immediate conflict.",
+    "[CH021_SC006] Summary: The Lion returns to the clearing, triumphant. He is officially recognized as the King of Beasts. He promises to return to rule once Dorothy has safely reached Kansas.",
+    "[CH021_SC006] Emotional arc: Triumph and solemnity.",
+    "[CH021_SC006] Coverage: Low-angle \"hero\" shots of the Lion; wide shots of animals bowing/celebrating; medium close-ups of Dorothy's reaction to the new King.",
+    "[CH021_SC006] Continuity: Lion's physical state (scratches/dirt from battle); animal positioning in the clearing.",
+    "[CH021] Chapter summary: **Setting:** A disagreeable country of bogs and marshes, leading into a vast, ancient forest filled with massive trees and thick moss. **Characters:** Dorothy, Toto, the Scarecrow, the Tin Woodman, the Lion, various f...",
+    "[CH021] Chapter XXI (book index hit)",
+    "[CH023] Chapter XXIII (book index hit)",
+    "[CH018] Chapter XVIII (book index hit)",
+    "Environment ancient_forest_interior: No specific visual details are provided in the current evidence. The location is identified as a primary setting within an ancient forest interior."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH021_SC006\n\n## Production Intent\nEstablish the Lion's transition from combatant to sovereign within the ancient forest interior. The scene must balance the physical grit of recent battle with the ceremonial weight of a coronation, utilizing scale to contrast the small traveling party against the mass of forest beasts.\n\n## Required Cast\n- Lion\n- various forest beasts\n- Dorothy and companions\n\n## Required Environments\n- ancient_forest_interior (central_clearing, thicket_perimeter)\n\n## Continuity Constraints\n- Lion must maintain visible scratches and dirt from battle\n- Animal positioning in the clearing must remain consistent during ceremony\n\n## Beat List\n- BT001: Lion's triumphant return\n- BT002: Official recognition of the King\n- BT003: The King's promise",
+  "metadata": {
+    "artifact_id": "CH021_SC006_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "c968ed3b54f93397a0333c8a0ba05de765ebda28",
+    "created_at_utc": "2026-04-27T09:08:29.215560+00:00",
+    "updated_at_utc": "2026-04-27T09:08:29.215560+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH021_SC006",
+        "version": "2190f516b206c6023a5b798cb6a4564e24771051"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH021_SC006",
+        "version": "6870a9ad52ee902cf6db518519458ae354563237"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH021_SC006",
+        "version": "991bf6f1b8d0f52b463a9b22e411375f549b64b8"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T09:09:08.964439+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "c968ed3b54f93397a0333c8a0ba05de765ebda28"
+      }
+    ]
+  }
+}
