@@ -1,0 +1,126 @@
+{
+  "run_type": "resume-check",
+  "project_slug": "wizard_of_oz",
+  "recorded_at_utc": "2026-04-27T16:15:03.713125+00:00",
+  "payload": {
+    "project_slug": "wizard_of_oz",
+    "chapters": null,
+    "resume_from": "shot_packages",
+    "report": [
+      {
+        "stage": "story_analysis",
+        "complete": true,
+        "reason": "24 chapter summaries and global registries found",
+        "details": {
+          "source_count": 24,
+          "summary_count": 24
+        }
+      },
+      {
+        "stage": "character_taxonomy",
+        "complete": true,
+        "reason": "46/46 taxonomy JSONs contain required fields",
+        "details": {
+          "files": 46,
+          "valid": 46
+        }
+      },
+      {
+        "stage": "identity_refinement",
+        "complete": true,
+        "reason": "refinement result, decisions, and refined registries found",
+        "details": {}
+      },
+      {
+        "stage": "character_bibles",
+        "complete": true,
+        "reason": "46/46 character bibles contain taxonomy/fallback fields",
+        "details": {
+          "files": 46,
+          "valid": 46
+        }
+      },
+      {
+        "stage": "character_visual_evidence",
+        "complete": true,
+        "reason": "character visual evidence refinement index found",
+        "details": {
+          "records": 31,
+          "patched_count": 3,
+          "review_count": 31,
+          "bible_count": 46
+        }
+      },
+      {
+        "stage": "environment_bibles",
+        "complete": true,
+        "reason": "56 environment bible JSONs found",
+        "details": {
+          "files": 56
+        }
+      },
+      {
+        "stage": "visual_fallbacks",
+        "complete": true,
+        "reason": "visual fallbacks contain source title, context, fallback buckets, negatives, and source context",
+        "details": {
+          "source_context_files": 72,
+          "has_context_digest": true
+        }
+      },
+      {
+        "stage": "scene_contracts",
+        "complete": true,
+        "reason": "3 scene contract files found",
+        "details": {
+          "files": 3
+        }
+      },
+      {
+        "stage": "scene_bindings",
+        "complete": true,
+        "reason": "112 scene binding files found",
+        "details": {
+          "files": 112
+        }
+      },
+      {
+        "stage": "shot_packages",
+        "complete": false,
+        "reason": "no shot package files found",
+        "details": {
+          "files": 0
+        }
+      },
+      {
+        "stage": "dialogue_timeline",
+        "complete": false,
+        "reason": "dialogue timelines exist but have zero scene and shot bindings",
+        "details": {
+          "total_events": 0,
+          "total_scene_bindings": 0,
+          "total_shot_bindings": 0
+        }
+      },
+      {
+        "stage": "descriptor_enrichment",
+        "complete": false,
+        "reason": "missing DESCRIPTOR_INDEX.json",
+        "details": {}
+      },
+      {
+        "stage": "prompt_preparation",
+        "complete": false,
+        "reason": "descriptor enrichment incomplete, so prompt prep must rerun: missing DESCRIPTOR_INDEX.json",
+        "details": {}
+      },
+      {
+        "stage": "quality_grading",
+        "complete": false,
+        "reason": "missing quality grading index/report with records",
+        "details": {}
+      }
+    ],
+    "command": "resume-check"
+  }
+}
