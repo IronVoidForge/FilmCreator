@@ -34,6 +34,7 @@ from .scene_contracts import run_scene_contract_synthesis
 from .scene_bindings import run_scene_binding_synthesis
 from .shot_planner import run_shot_planning
 from .visual_fallbacks import run_visual_fallback_synthesis
+from .pipeline_menu import run_pipeline_menu
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -211,6 +212,11 @@ def build_parser() -> argparse.ArgumentParser:
     ds.add_argument("project_slug")
     ds.add_argument("--pipeline-key", type=str, default="downstream_pipeline")
 
+    menu = subparsers.add_parser("menu")
+    menu.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
+    menu.add_argument("--chapters", type=str, default=None)
+    menu.add_argument("--mode", choices=["resume", "force"], default="resume")
+
     return parser
 
 
@@ -300,6 +306,13 @@ def main() -> None:
         summary = run_downstream_pipeline(args.project_slug, chapters=args.chapters, start_phase=args.start_phase, pipeline_key=args.pipeline_key, resume=not args.no_resume, use_llm=not args.no_llm, shot_variants=args.shot_variants)
     elif args.command == "summarize-downstream-run":
         summary = summarize_downstream_run(args.project_slug, pipeline_key=args.pipeline_key)
+    elif args.command == "menu":
+        run_pipeline_menu(
+            initial_project=args.project_slug,
+            initial_chapters=args.chapters,
+            initial_mode=args.mode,
+        )
+        return
     else:
         parser.error(f"Unknown command: {args.command}")
         return
