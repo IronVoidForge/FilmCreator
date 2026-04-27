@@ -1,3 +1,5 @@
+﻿Status: 85%
+
 # Quality Grading Calibration
 
 ## Target files

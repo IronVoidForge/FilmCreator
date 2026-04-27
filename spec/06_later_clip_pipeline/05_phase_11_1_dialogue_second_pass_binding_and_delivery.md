@@ -1,3 +1,5 @@
+﻿Status: 25%
+
 # Phase 11.1 - Dialogue Second Pass Binding and Delivery
 
 ## Goal
@@ -96,3 +98,4 @@ orchestrator/dialogue_enrichment.py
 ## Status
 
 - planned
+

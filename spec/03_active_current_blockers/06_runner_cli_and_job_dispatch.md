@@ -1,3 +1,5 @@
+﻿Status: 85%
+
 # 4.1 Runner CLI and Job Dispatch
 
 ## Goal
@@ -25,3 +27,4 @@ Provide a manual local-first runner that can execute still-image stages before t
 ## Acceptance
 
 - A human can run the still-image pipeline locally without editing workflow JSONs by hand.
+

@@ -1,3 +1,5 @@
+﻿Status: 85%
+
 # Phase 09 - Scene Production Contracts
 
 ## Goal
@@ -91,3 +93,4 @@ orchestrator/scene_contracts.py
 
 - validated for baseline synthesis
 - next revision required: strengthen selector-first binding and future environment request emission
+

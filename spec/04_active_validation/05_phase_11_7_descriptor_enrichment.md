@@ -1,3 +1,5 @@
+﻿Status: 85%
+
 # Phase 11.7 - Descriptor Enrichment and Reference Coverage
 
 ## Goal
@@ -747,3 +749,4 @@ Potential launcher:
 - `validated`
 - evidence: `synthesize-descriptor-enrichment` is available through `orchestrator/cli.py`, descriptor artifacts and review indexes are now written by the live pipeline, and character descriptor spot checks are already being used to improve real project outputs
 - next revision required: strengthen scene/environment descriptor quality, prompt-ready field typing, and downstream prompt consumption without placeholder leakage
+

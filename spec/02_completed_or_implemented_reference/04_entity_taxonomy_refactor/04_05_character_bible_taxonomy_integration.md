@@ -1,3 +1,5 @@
+﻿Status: 90%
+
 # 05 - Character Bible Taxonomy Integration
 
 ## Files
@@ -18,3 +20,4 @@ Associated entities remain separate and never become body traits.
 - Mount remains associated entity
 - Human remains human despite exotic clothing
 - Alias candidate preserved, not silently merged
+

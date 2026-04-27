@@ -1,3 +1,5 @@
+﻿Status: 60%
+
 # 4.4 Automated Testing and CI Strategy
 
 ## Goal
@@ -70,3 +72,4 @@ Make automated testing part of the product contract so the orchestrator can evol
 - Core orchestrator behavior can be validated without manual clicking.
 - A regression in path routing, state updates, continuity resolution, or workflow lookup is caught automatically.
 - Manual review remains focused on creative judgment instead of structural debugging.
+

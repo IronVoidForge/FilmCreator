@@ -1,3 +1,5 @@
+﻿Status: 85%
+
 # Phase 11.8 - Quality Grading and Selective Reruns
 
 ## Goal
@@ -286,3 +288,4 @@ Potential launcher:
 
 - `implemented`
 - evidence: the `grade-artifacts` CLI now scans the synthesis outputs, scores them, and writes a project-grade index plus rerun queue without modifying the source artifacts
+

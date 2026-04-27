@@ -1,3 +1,5 @@
+﻿Status: 20%
+
 # 6.1 Video Motion Stage
 
 ## Goal
@@ -39,3 +41,4 @@ Define the video-motion contract so normal movie-style cuts can use short image-
 - Video handoff can reuse the same clip continuity rules instead of inventing a separate source-frame system.
 - Scene coverage can fan out keyframe generation across multiple planned clips before earlier short videos have completed.
 - Experimental motion-time hand repair can be layered in later without changing the default short-cut contract.
+

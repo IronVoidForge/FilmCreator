@@ -1,3 +1,5 @@
+﻿Status: N/A (tracking doc)
+
 # Future Hardening And Known Issues
 
 ## Purpose
@@ -186,7 +188,7 @@ Proposed fix:
 
 - never hardcode a specific book title into pipeline logic
 - never hardcode a specific chapter or scene into validation logic
-- never assume one project’s naming conventions are universal
+- never assume one projectâ€™s naming conventions are universal
 - never convert a review-only artifact into a forced success
 - never let a blank field create broken prompt prose
 - never let a list-shaped payload crash a dict-shaped grader
@@ -198,4 +200,5 @@ Proposed fix:
 - `spec/6_deferred/future_issues/SHOT_PROMPT_HARDENING_NOTES.md`
 - `spec/6_deferred/future_issues/DIALOGUE_TIMELINE_REPAIR_NOTES.md`
 - `spec/6_deferred/future_issues/REFERENCE_ASSET_SLICING_NOTES.md`
+
 

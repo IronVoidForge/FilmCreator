@@ -1,3 +1,5 @@
+﻿Status: 95%
+
 # 01 - Fallback Safety Patch
 
 ## Goal
@@ -24,3 +26,4 @@ Immediately stop overconfident wrong classifications while the taxonomy system i
 ## Validation
 `python -m compileall orchestrator`
 `pytest tests/test_character_bible_production_fallbacks.py -q`
+

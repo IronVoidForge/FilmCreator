@@ -1,3 +1,5 @@
+﻿Status: 80%
+
 # Phase 12 - Character Sheet Generation and Approval
 
 ## Goal
@@ -169,3 +171,4 @@ Character generation prompts should include, at minimum:
 - `orchestrator/reference_assets.py`
 - `orchestrator/prompt_preparation.py`
 - `orchestrator/cli.py` or the future `orchestrator/cli/` package
+

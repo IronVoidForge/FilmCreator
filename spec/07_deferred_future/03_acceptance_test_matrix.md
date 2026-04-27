@@ -1,3 +1,5 @@
+﻿Status: 20%
+
 # 6.2 Acceptance Test Matrix
 
 ## Automation Rule
@@ -73,3 +75,4 @@
 - Validate that independent and soft-reference next-shot keyframes can be planned without waiting for previous shot video completion.
 - Validate that an optional still-image consistency-assist workflow can consume a generated keyframe plus approved character refs and route outputs back into the clip-local still-fix path.
 - Validate that any future hand-fix LoRA toggle for motion remains disabled by default and only appears in smoke tests when explicitly requested.
+

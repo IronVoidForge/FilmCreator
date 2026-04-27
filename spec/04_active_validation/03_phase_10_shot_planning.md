@@ -1,3 +1,5 @@
+﻿Status: 85%
+
 # Phase 10 - Shot Planning and Shot Packages
 
 ## Goal
@@ -81,3 +83,4 @@ orchestrator/shot_planner.py
 - `validated`
 - evidence: `synthesize-shot-packages` runs end to end for `princess_of_mars_test` and writes per-shot packages plus indexes and review queues
 - next revision required: inherit scene bindings and stop per-shot environment discovery
+

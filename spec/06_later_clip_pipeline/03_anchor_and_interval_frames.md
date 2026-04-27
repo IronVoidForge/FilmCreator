@@ -1,3 +1,5 @@
+﻿Status: 30%
+
 # 3.3 Anchor and Interval Frames
 
 ## Goal
@@ -19,3 +21,4 @@ Reserve optional continuity-recovery tools without making them the default path 
 - Every continuation step can determine its source frame from state alone.
 - Camera, identity, and environment continuity remain clip-local and state-driven.
 - Normal short cuts can proceed from approved keyframe to cut motion without requiring anchor or interval generation first.
+

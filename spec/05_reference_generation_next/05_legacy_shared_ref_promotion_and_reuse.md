@@ -1,3 +1,5 @@
+﻿Status: 70% (partly outdated)
+
 # 2.3 Shared Ref Promotion and Reuse
 
 ## Goal
@@ -16,3 +18,4 @@ Define how reusable refs are approved once and reused many times.
 
 - One approved ref can be reused across scenes without copying it into every clip.
 - The canonical approved asset is easy to find and replace if a better version is chosen later.
+

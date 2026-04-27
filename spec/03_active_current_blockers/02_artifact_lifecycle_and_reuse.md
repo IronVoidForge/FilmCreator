@@ -1,3 +1,5 @@
+﻿Status: 25%
+
 # Artifact Lifecycle and Reuse
 
 ## Purpose
@@ -127,7 +129,7 @@ Recommended shape:
 
 ## Reuse Rules
 
-### Rule 1 — reuse current artifacts when upstream is unchanged
+### Rule 1 â€” reuse current artifacts when upstream is unchanged
 
 If:
 
@@ -137,7 +139,7 @@ If:
 
 Then the default behavior should be to reuse the artifact.
 
-### Rule 2 — stale, don’t silently replace
+### Rule 2 â€” stale, donâ€™t silently replace
 
 If upstream changes, the artifact should be marked `stale` first.
 
@@ -147,7 +149,7 @@ It may then be:
 - regenerated
 - regenerated only if the caller requested `only_stale=True`
 
-### Rule 3 — approved and locked artifacts are protected
+### Rule 3 â€” approved and locked artifacts are protected
 
 If an artifact is:
 
@@ -156,7 +158,7 @@ If an artifact is:
 
 Then default reruns must not overwrite it.
 
-### Rule 4 — allow targeted force regeneration
+### Rule 4 â€” allow targeted force regeneration
 
 A caller may explicitly request a force path for:
 
@@ -277,3 +279,4 @@ This spec is considered validated when:
 2. At least one artifact can be marked stale rather than silently overwritten.
 3. Approved or locked artifacts survive a normal rerun.
 4. Manual override fields survive synthesis updates.
+

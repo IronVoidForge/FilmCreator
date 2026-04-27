@@ -1,3 +1,5 @@
+﻿Status: 90%
+
 # 1.3 Workflow Catalog and Registry
 
 ## Goal
@@ -25,3 +27,4 @@ Motion workflow source graphs may live beside the still catalog, but they are no
 - The runner can resolve a stage to a workflow without an if-else chain.
 - A human can inspect the registry and understand what inputs a job needs.
 - Workflow filename changes only require registry updates, not runner rewrites.
+

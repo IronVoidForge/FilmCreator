@@ -1,3 +1,5 @@
+﻿Status: 45%
+
 # Asset Ownership and Lineage
 
 ## Purpose
@@ -211,3 +213,4 @@ Examples:
 - clips own dialogue bindings and motion records
 - prompts are linked to owners and subjects without a spaghetti of direct foreign keys
 - database traversal remains obvious and queryable
+

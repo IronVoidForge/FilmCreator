@@ -1,3 +1,5 @@
+﻿Status: 5%
+
 # 1.6 SQLite Relational Model
 
 ## Goal
@@ -852,3 +854,4 @@ Only after the tables above are stable:
   - which candidate won a review
   - which asset is currently approved for motion continuity
 - The database supports later overnight batching and dependency resolution without replacing the file hierarchy.
+

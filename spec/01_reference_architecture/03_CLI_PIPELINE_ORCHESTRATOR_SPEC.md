@@ -1,3 +1,5 @@
+﻿Status: 85%
+
 # CLI Pipeline Orchestrator Spec
 
 ## Purpose
@@ -420,3 +422,4 @@ That CLI should:
 - reserve explicit space for later phases
 
 The bats can remain temporarily, but the CLI should become the authoritative execution path.
+

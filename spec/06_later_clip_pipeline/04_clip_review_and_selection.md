@@ -1,3 +1,5 @@
+﻿Status: 35%
+
 # 3.4 Clip Review and Selection
 
 ## Goal
@@ -28,3 +30,4 @@ Keep review manual while making the results reproducible and easy to hand off.
 - A teammate can open the clip folder and immediately see candidates, approved outputs, and next steps.
 - A failed opening-keyframe review can redirect the next attempt into an explicit fallback strategy instead of improvising a new continuity rule.
 - Review can distinguish between wrong shot design, identity drift, and local anatomy issues so the next corrective pass is targeted instead of wasteful.
+

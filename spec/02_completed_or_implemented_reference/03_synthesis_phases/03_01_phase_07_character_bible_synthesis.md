@@ -1,4 +1,6 @@
-# Phase 07 — Character Bible Synthesis
+﻿Status: 90%
+
+# Phase 07 â€” Character Bible Synthesis
 
 ## Goal
 
@@ -96,3 +98,4 @@ orchestrator/character_bible_models.py
 - `validated`
 - evidence: `synthesize-character-bibles` is available through `orchestrator/cli.py`, dedicated synthesis modules exist under `orchestrator/character_bible*.py`, and the authoring/full-book launchers already route through this phase; full reruns have produced stable character bible artifacts and review queues
 - next revision required: keep validating locked-field preservation and age/state variant coverage as new evidence lands
+

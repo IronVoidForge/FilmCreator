@@ -1,3 +1,5 @@
+﻿Status: 80%
+
 # Phase 11 - Dialogue, Timing, and Edit Timeline
 
 ## Goal
@@ -82,3 +84,4 @@ orchestrator/dialogue_timeline.py
 
 - dialogue aligns to scenes first, then to shots
 - timeline can drive video assembly
+

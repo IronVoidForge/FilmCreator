@@ -1,3 +1,5 @@
+﻿Status: 75%
+
 # 1.4 Prompt Package Schema
 
 ## Goal
@@ -41,3 +43,4 @@ Define one Markdown contract that both manual authoring and later LLM authoring 
 - The same contract works for characters, environments, shot openers, reframed coverage, inserts, cutaways, anchors, interval continuations, and later video.
 - The same contract can also describe optional identity-consistency and anatomy-repair assists without introducing a second prompt format.
 - The same contract can also carry owner/subject lineage without introducing a second prompt format.
+

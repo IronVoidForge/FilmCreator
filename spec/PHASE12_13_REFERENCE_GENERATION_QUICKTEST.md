@@ -1,3 +1,5 @@
+﻿Status: 90%
+
 # Phase 12/13 Reference Generation Quicktest Spec
 
 ## Goal
@@ -284,3 +286,4 @@ Do not wire these into the overnight resume BAT until the tiny slice succeeds.
 Once validated, the overnight runner can add reference generation after quality grading, but should probably run full-project mode without `--chapters` when no chapter slice is provided and chapter-slice mode when `CHAPTERS` is passed.
 
 Do not add overnight integration in the first implementation pass.
+

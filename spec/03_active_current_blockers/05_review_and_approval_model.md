@@ -1,3 +1,5 @@
+﻿Status: 55%
+
 # Review and Approval Model
 
 ## Purpose
@@ -130,3 +132,4 @@ orchestrator/review_tools.py
 - at least one synthesis artifact can be reviewed and approved
 - approved artifacts can be locked
 - rejections are preserved with context
+

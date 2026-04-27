@@ -1,3 +1,5 @@
+﻿Status: 70%
+
 # 4.3 Output Routing Logging and Manifests
 
 ## Goal
@@ -15,3 +17,4 @@ Make output placement and run history deterministic and reproducible.
 
 - A clip artifact cannot accidentally land in a project-shared folder.
 - A successful run can be reproduced from its manifest without guesswork.
+

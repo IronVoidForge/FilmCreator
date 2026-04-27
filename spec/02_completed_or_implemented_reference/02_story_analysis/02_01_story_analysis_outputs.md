@@ -1,3 +1,5 @@
+﻿Status: 90%
+
 # 5.1 Story Analysis Outputs
 
 ## Goal
@@ -12,7 +14,7 @@ The purpose of this phase is to produce:
 - structured, reviewable story analysis
 - durable evidence for later canonical synthesis
 - continuity-carrying scene decomposition
-- stable inputs for phases 7–11
+- stable inputs for phases 7â€“11
 
 ---
 
@@ -168,7 +170,7 @@ These should capture:
 - snapshot path
 - chapter-bounded continuity notes
 
-These outputs are the continuity substrate for later phases 7–11.
+These outputs are the continuity substrate for later phases 7â€“11.
 
 ---
 
@@ -187,19 +189,19 @@ These outputs are the continuity substrate for later phases 7–11.
 
 ## Relationship To Later Phases
 
-### Analysis → Phase 7 character bible synthesis
+### Analysis â†’ Phase 7 character bible synthesis
 
 Character extraction and registry artifacts provide evidence for canonical character definitions.
 
-### Analysis → Phase 8 environment bible synthesis
+### Analysis â†’ Phase 8 environment bible synthesis
 
 Environment extraction and registry artifacts provide evidence for canonical environment definitions.
 
-### Analysis → Phase 9 scene production contracts
+### Analysis â†’ Phase 9 scene production contracts
 
 Scene decomposition plus continuity state provide the baseline narrative structure for scene contract generation.
 
-### Analysis → Phase 10 shot planning
+### Analysis â†’ Phase 10 shot planning
 
 Legacy beat or clip-oriented planning hints may still be useful, but future shot planning should be driven by scene contracts and canonical bibles rather than raw analysis alone.
 
@@ -231,7 +233,7 @@ orchestrator/world_global.py
 orchestrator/book_librarian.py
 ```
 
-Future synthesis and planning stages should live in new focused modules rather than further expanding this phase’s files.
+Future synthesis and planning stages should live in new focused modules rather than further expanding this phaseâ€™s files.
 
 ---
 
@@ -243,3 +245,4 @@ This phase is considered complete enough to build on when:
 - one full multi-chapter run can complete successfully and produce coherent chapter analysis outputs
 - world snapshots and continuity summaries are usable as upstream evidence for later phases
 - analysis outputs are stable enough that later synthesis phases can decide whether to reuse or rebuild without brute-force regeneration
+

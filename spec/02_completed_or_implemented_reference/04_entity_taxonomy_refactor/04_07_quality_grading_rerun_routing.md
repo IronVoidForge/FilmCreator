@@ -1,3 +1,5 @@
+﻿Status: 85%
+
 # 07 - Quality Grading Rerun Routing
 
 ## Files
@@ -15,3 +17,4 @@
 - bible missing taxonomy -> synthesize-character-bibles
 - fallback contradiction -> repair bibles/fallback
 - prompt contradiction -> run-prompt-preparation
+

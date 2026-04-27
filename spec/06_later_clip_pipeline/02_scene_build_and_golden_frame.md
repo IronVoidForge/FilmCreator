@@ -1,3 +1,5 @@
+﻿Status: 45%
+
 # 3.2 Scene Build and Golden Frame
 
 ## Goal
@@ -16,3 +18,4 @@ Create the opening still for a clip-shot, then promote one selected image to the
 
 - Golden-frame promotion is a distinct step, not an implied side effect.
 - Downstream continuation generation reads the approved golden frame from clip state until a newer approved frame replaces it.
+

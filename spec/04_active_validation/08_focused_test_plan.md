@@ -1,3 +1,5 @@
+﻿Status: 65%
+
 # Focused Test Plan (No Full Pipeline Required)
 
 ## Fast compile check
@@ -42,3 +44,4 @@ Then inspect:
 - cave prompts mention cave geometry
 - prompts with known issues no longer score A
 - silent dialogue timelines stop polluting rerun queue
+

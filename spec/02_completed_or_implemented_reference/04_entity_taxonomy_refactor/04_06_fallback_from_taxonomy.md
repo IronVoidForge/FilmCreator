@@ -1,3 +1,5 @@
+﻿Status: 90%
+
 # 06 - Fallback From Taxonomy
 
 ## Files
@@ -19,3 +21,4 @@ Fallback consumes taxonomy instead of classifying from prose.
 ## Tests
 - Associated mount cannot override taxonomy
 - Unknown taxonomy stays conservative
+

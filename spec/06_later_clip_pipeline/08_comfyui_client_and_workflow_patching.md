@@ -1,3 +1,5 @@
+﻿Status: 80%
+
 # 4.2 ComfyUI Client and Workflow Patching
 
 ## Goal
@@ -27,3 +29,4 @@ Patch known workflow controls at runtime and submit the job to ComfyUI consisten
 ## Acceptance
 
 - The same patcher can operate on multiple workflows as long as the registry defines the patch points.
+

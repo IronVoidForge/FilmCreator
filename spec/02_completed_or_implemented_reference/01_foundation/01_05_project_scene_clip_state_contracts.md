@@ -1,3 +1,5 @@
+﻿Status: 85%
+
 # 1.5 Project Scene Clip State Contracts
 
 ## Goal
@@ -39,3 +41,4 @@ Make approvals and handoffs explicit through state files instead of relying only
 - Downstream stages do not need manual path hunting for refs or continuity inputs.
 - The system can tell from state and planning whether a new clip should wait on a prior video output or can generate its opening keyframe independently.
 - The system can also tell whether downstream motion should use the original approved keyframe or a later corrected still.
+

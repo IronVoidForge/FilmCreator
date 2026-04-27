@@ -1,3 +1,5 @@
+﻿Status: 30%
+
 # Deferred: KupkaProd Cinema Pipeline Lessons and FilmCreator Integration Plan
 
 ## Source Reviewed
@@ -639,4 +641,5 @@ FilmCreator successfully incorporates these lessons when:
 - Rejected candidates become useful prompt repair data.
 - Multiple takes can be compared by prompt variant, seed, workflow, and rank.
 - A small vertical slice can go from approved refs to keyframe to I2V clip.
+
 

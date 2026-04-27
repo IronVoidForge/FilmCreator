@@ -1,3 +1,5 @@
+﻿Status: 55%
+
 # 3.1 Clip Input Contract
 
 ## Goal
@@ -44,3 +46,4 @@ Define what a clip needs before the runner can generate stills for it.
 - A continuation run can determine its source frame from state without manual folder browsing.
 - Independent and soft-reference clips can prepare their opening keyframes without waiting for previous cut videos to finish.
 - A corrective still pass can declare when it needs character-sheet refs in addition to the current approved still.
+

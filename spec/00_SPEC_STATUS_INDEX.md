@@ -1,3 +1,5 @@
+﻿Status: 95%
+
 # Spec Status Index
 
 **Purpose**: This index tracks the reorganization of spec files into a planned work taxonomy.
@@ -155,3 +157,4 @@ See: `03_active_current_blockers/01_smart_resume_validation.md`
 3. Verify prompt package schema alignment with implementation
 4. Review legacy 2.x shared asset specs against current implementation
 5. Consider moving to Phase 12/13 reference generation after validation passes
+

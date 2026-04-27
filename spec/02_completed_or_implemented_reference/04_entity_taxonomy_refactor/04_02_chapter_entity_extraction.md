@@ -1,3 +1,5 @@
+﻿Status: 90%
+
 # 02 - Chapter Entity Extraction
 
 ## Goal
@@ -35,3 +37,4 @@ If uncertain, output `unknown` with reason.
 - Role label captured as alias candidate
 - Group of warriors => group
 - Animal mount => animal/creature
+

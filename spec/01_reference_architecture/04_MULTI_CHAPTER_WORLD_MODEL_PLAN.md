@@ -1,3 +1,5 @@
+﻿Status: 85%
+
 # Multi-Chapter World Model Plan (Updated)
 
 ## Goal
@@ -13,12 +15,12 @@ Evolve FilmCreator from chapter-level analysis into a persistent, synthesis-driv
 
 ## Core Principles
 
-- Do NOT overwrite — always evolve
+- Do NOT overwrite â€” always evolve
 - Preserve uncertainty instead of forcing incorrect merges
 - Separate identity from description
 - Separate canonical truth from contextual state
 - Track evidence and revisions
-- All structure is derived locally (Markdown → JSON → optional DB)
+- All structure is derived locally (Markdown â†’ JSON â†’ optional DB)
 - Synthesis stages must be explainable and auditable
 
 ---
@@ -38,7 +40,7 @@ This is no longer the problem space.
 
 The problem space is now:
 
-→ turning this data into stable, reusable production assets
+â†’ turning this data into stable, reusable production assets
 
 ---
 
@@ -65,13 +67,13 @@ This is the required base for all synthesis work.
 
 ## World Model Evolution Path
 
-### Stage 1 – Evidence Accumulation (complete enough)
+### Stage 1 â€“ Evidence Accumulation (complete enough)
 
 - extraction from chapters
 - accumulation in registries
 - continuity tracking
 
-### Stage 2 – Identity Refinement (partially complete)
+### Stage 2 â€“ Identity Refinement (partially complete)
 
 - duplicate detection
 - alias resolution
@@ -79,7 +81,7 @@ This is the required base for all synthesis work.
 
 This remains a standalone batch step and should not be fused into ingest.
 
-### Stage 3 – Canonical Synthesis (NEW PRIMARY FOCUS)
+### Stage 3 â€“ Canonical Synthesis (NEW PRIMARY FOCUS)
 
 #### Character Bible Synthesis
 
@@ -97,7 +99,7 @@ Outputs become the canonical world layer.
 
 ---
 
-### Stage 4 – Scene Production Contracts
+### Stage 4 â€“ Scene Production Contracts
 
 Scenes become production-ready units:
 
@@ -107,11 +109,11 @@ Scenes become production-ready units:
 - required environments
 - continuity constraints
 
-This stage bridges analysis → filmmaking.
+This stage bridges analysis â†’ filmmaking.
 
 ---
 
-### Stage 5 – Shot-Level World Interaction
+### Stage 5 â€“ Shot-Level World Interaction
 
 Shots reference world state:
 
@@ -123,7 +125,7 @@ Shots become the first fully generation-ready units.
 
 ---
 
-### Stage 6 – Timeline and State Evolution
+### Stage 6 â€“ Timeline and State Evolution
 
 Add temporal awareness:
 
@@ -135,7 +137,7 @@ This supports long-form coherence.
 
 ---
 
-### Stage 7 – Production Asset Integration
+### Stage 7 â€“ Production Asset Integration
 
 World model feeds:
 
@@ -229,3 +231,4 @@ With this model in place, FilmCreator becomes:
 
 The next steps are not about ingest.
 They are about synthesis, contracts, and production.
+

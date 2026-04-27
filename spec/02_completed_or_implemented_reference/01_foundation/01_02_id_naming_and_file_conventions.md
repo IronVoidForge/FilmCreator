@@ -1,3 +1,5 @@
+﻿Status: 95%
+
 # 1.2 ID Naming and File Conventions
 
 ## Goal
@@ -26,3 +28,4 @@ Standardize the naming system across project state, prompts, outputs, and review
 - A filename is enough to identify the owning scene, clip, and stage.
 - Humans can scan a folder and understand what is approved versus exploratory.
 - The runner can compute the next output name without custom logic per stage.
+

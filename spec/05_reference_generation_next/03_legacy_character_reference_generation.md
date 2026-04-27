@@ -1,3 +1,5 @@
+﻿Status: 75% (partly outdated)
+
 # 2.1 Character Reference Generation
 
 ## Goal
@@ -31,3 +33,4 @@ The generation path should be staged:
 - The stage does not require a scene or shot folder unless a spec explicitly marks it clip-local.
 - The approved portrait can act as the identity anchor for image-to-image full-body generation.
 - The approved full-body ref can act as the source for supporting variants.
+

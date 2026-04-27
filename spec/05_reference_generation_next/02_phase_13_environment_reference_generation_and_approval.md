@@ -1,3 +1,5 @@
+﻿Status: 80%
+
 # Phase 13 - Environment Reference Generation and Approval
 
 ## Goal
@@ -83,7 +85,7 @@ Once an establishing view is approved, derive a stable spatial reference using t
 
 Purpose:
 
-- lock the environment’s spatial identity
+- lock the environmentâ€™s spatial identity
 - preserve layout and major landmarks
 - reduce drift before variant generation
 
@@ -164,3 +166,4 @@ Environment generation prompts should include, at minimum:
 - `orchestrator/reference_assets.py`
 - `orchestrator/prompt_preparation.py`
 - `orchestrator/cli.py` or the future `orchestrator/cli/` package
+

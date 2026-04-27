@@ -1,3 +1,5 @@
+﻿Status: 85%
+
 # 09 - Fix Phase 3 / Phase 5 Taxonomy Ownership
 
 Base reviewed commit: `f61d7f8c2030faa1d98f273223ff7c9900c3339a`.
@@ -476,3 +478,4 @@ This fix is complete only when:
 - CharacterBible serializes taxonomy fields.
 - fallback receives taxonomy via bible data.
 - all targeted tests pass.
+

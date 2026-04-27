@@ -1,3 +1,5 @@
+﻿Status: 70%
+
 # 11 - Final Cleanup Before Cross-Book Validation
 
 Base reviewed commit: `21ced09b8fc51e4c69e70d43bb38d2955ee1cbd8`.
@@ -525,3 +527,4 @@ This cleanup is complete only when:
 - alias rerun routing is consistent
 - taxonomy artifacts preserve evidence strings/source refs
 - all targeted tests pass
+

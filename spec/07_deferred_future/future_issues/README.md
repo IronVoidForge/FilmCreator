@@ -1,3 +1,5 @@
+﻿Status: 100%
+
 # Future Issues And Hardening
 
 This folder tracks known gaps, reliability work, and future hardening items that are **not** required to ship the current pipeline slice.
@@ -20,3 +22,4 @@ Current focus areas:
 Primary issue log:
 
 - [HARDENING_AND_KNOWN_ISSUES.md](./HARDENING_AND_KNOWN_ISSUES.md)
+

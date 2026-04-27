@@ -1,3 +1,5 @@
+﻿Status: 20%
+
 # Dependency Graph and Staleness
 
 ## Purpose
@@ -77,9 +79,9 @@ Staleness should propagate downstream.
 
 Example:
 
-- character bible changes → scene contracts stale
-- scene contract changes → shot packages stale
-- shot packages change → dialogue timeline stale
+- character bible changes â†’ scene contracts stale
+- scene contract changes â†’ shot packages stale
+- shot packages change â†’ dialogue timeline stale
 
 ---
 
@@ -117,4 +119,5 @@ orchestrator/staleness.py
 
 - Changing one upstream artifact marks downstream artifacts stale
 - Rebuild-stale mode regenerates only affected artifacts
+
 

@@ -1,3 +1,5 @@
+﻿Status: 95%
+
 # 1.1 Repo Project Scene Clip Hierarchy
 
 ## Goal
@@ -34,3 +36,4 @@ Define the canonical filesystem layout for FilmCreator so every handoff has one 
 - A clip artifact never needs to live in a shared reference folder.
 - Shared references can be reused across scenes and clips without duplication becoming the source of truth.
 - A story scene can expand into multiple shots and multiple clips without inventing a second parallel filesystem structure.
+

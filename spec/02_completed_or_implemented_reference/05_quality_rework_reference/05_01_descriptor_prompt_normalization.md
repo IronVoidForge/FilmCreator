@@ -1,3 +1,5 @@
+﻿Status: 95%
+
 # Descriptor Prompt Normalization
 
 ## Target files

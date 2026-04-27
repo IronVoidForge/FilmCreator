@@ -1,3 +1,5 @@
+﻿Status: 75% (partly outdated)
+
 # 2.2 Environment Reference Generation
 
 ## Goal
@@ -20,3 +22,4 @@ Generate reusable environment references at the project scope so clip work can c
 
 - Scene and clip work can consume a stable approved environment ref by state reference.
 - Environment generation remains project-scoped unless a future feature intentionally overrides that rule.
+

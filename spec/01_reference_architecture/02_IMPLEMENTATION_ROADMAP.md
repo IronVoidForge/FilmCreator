@@ -1,4 +1,6 @@
-﻿# FilmCreator Implementation Roadmap
+﻿Status: 90%
+
+# FilmCreator Implementation Roadmap
 
 ## Goal
 
@@ -694,5 +696,6 @@ The first SQLite release should remain:
 - file-synced
 - read-mostly
 - optimized for querying and reporting rather than replacing canonical file artifacts.
+
 
 

@@ -1,3 +1,5 @@
+﻿Status: 70%
+
 # Smart Resume Validation
 
 ## Current behavior
@@ -52,3 +54,4 @@ Should validate:
 ## Testing strategy
 
 Tests should be unit/focused tests, not full pipeline reruns.
+

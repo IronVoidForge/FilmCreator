@@ -1,3 +1,5 @@
+﻿Status: 95%
+
 # Proposed Structure 1.0
 
 ## Purpose
@@ -522,3 +524,4 @@ The first SQLite release should:
 - aggressive normalization of every prompt field
 - hard migration of all evidence text into 3NF
 - generated asset binaries
+

@@ -1,3 +1,5 @@
+﻿Status: 90%
+
 # 03 - Character Taxonomy Stage
 
 ## Goal
@@ -36,3 +38,4 @@ Create a first-class taxonomy artifact that becomes the source of truth.
 - Rider remains humanoid, mount stays associated
 - Group => group
 - Conflicts => review queue
+

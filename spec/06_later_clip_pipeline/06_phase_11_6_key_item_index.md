@@ -1,3 +1,5 @@
+﻿Status: 20%
+
 # Phase 11.6 - Key Item Index and Reference Pack Assembly
 
 ## Goal
@@ -131,3 +133,4 @@ Potential launcher:
 
 - `planned`
 - evidence: the project already tracks characters, environments, scenes, and shots, so this is the right time to add a dedicated canonical item layer
+

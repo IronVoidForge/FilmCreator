@@ -1,3 +1,5 @@
+﻿Status: 100%
+
 # FilmCreator Specs
 
 This folder breaks the project into numbered implementation chunks by feature and handoff boundary.
@@ -94,3 +96,4 @@ Phase B is now focused on:
 - post-ingest world refinement for safe duplicate/name/type cleanup
 - Phase 12 character sheet generation and approval
 - Phase 13 environment reference generation and approval
+

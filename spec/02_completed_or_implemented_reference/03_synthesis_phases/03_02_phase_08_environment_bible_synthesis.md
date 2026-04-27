@@ -1,4 +1,6 @@
-# Phase 08 — Environment Bible Synthesis
+﻿Status: 85%
+
+# Phase 08 â€” Environment Bible Synthesis
 
 ## Goal
 
@@ -56,3 +58,4 @@ orchestrator/environment_bible.py
 - `validated`
 - evidence: `synthesize-environment-bibles` is available through `orchestrator/cli.py`, `orchestrator/environment_bible.py` exists, and the authoring/full-book launchers already route through this phase; full reruns have produced stable environment bible artifacts and review queues
 - next revision required: keep tightening hierarchy-aware environment reuse and chapter-local alias resolution
+

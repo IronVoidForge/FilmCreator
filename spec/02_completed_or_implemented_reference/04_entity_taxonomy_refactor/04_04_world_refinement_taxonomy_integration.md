@@ -1,3 +1,5 @@
+﻿Status: 85%
+
 # 04 - World Refinement Taxonomy Integration
 
 ## Goal
@@ -21,3 +23,4 @@ n- group vs individual
 - Role label becomes review candidate
 - Proper alias can merge
 - Human vs animal blocks merge
+

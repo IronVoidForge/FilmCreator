@@ -1,3 +1,5 @@
+﻿Status: 85%
+
 # Deferred: Generic Prompt Quality Booster Libraries
 
 ## Purpose
@@ -98,4 +100,5 @@ These are specs first. Runtime code can later load them into `orchestrator/promp
 - Character, environment, and scene boosters are separate.
 - Candidate metadata records which bundle IDs were used.
 - Manual review can later compare bundle performance.
+
 
