@@ -1,0 +1,231 @@
+# Shot Package Review Queue
+
+- `SH003` / `CH002_SC004`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH003_SC005`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH003_SC005`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH004_SC001`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH004_SC001`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH004_SC001`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH004_SC002`
+  - 2 cast reference(s) need review.
+- `SH002` / `CH004_SC002`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH004_SC003`
+  - 2 cast reference(s) need review.
+- `SH002` / `CH004_SC003`
+  - 2 cast reference(s) need review.
+- `SH003` / `CH004_SC003`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH004_SC004`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH004_SC004`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH004_SC004`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH006_SC001`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH006_SC001`
+  - 2 cast reference(s) need review.
+- `SH003` / `CH006_SC001`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH006_SC002`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH006_SC002`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH006_SC002`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH006_SC003`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH006_SC003`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH006_SC003`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH007_SC001`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH007_SC001`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH007_SC001`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH007_SC002`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH007_SC002`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH007_SC002`
+  - 2 cast reference(s) need review.
+- `SH001` / `CH008_SC003`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH008_SC003`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH008_SC003`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH009_SC001`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH009_SC001`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH009_SC003`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH009_SC003`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH009_SC004`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH009_SC004`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH009_SC005`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH010_SC001`
+  - Resolve environment for SH001.
+- `SH002` / `CH010_SC001`
+  - Resolve environment for SH002.
+- `SH003` / `CH010_SC001`
+  - Resolve environment for SH003.
+- `SH001` / `CH010_SC002`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH010_SC003`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH010_SC003`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH010_SC003`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH010_SC004`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH010_SC004`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH011_SC003`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH012_SC004`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH012_SC004`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH013_SC001`
+  - Resolve environment for SH001.
+- `SH002` / `CH013_SC001`
+  - Resolve environment for SH002.
+- `SH003` / `CH013_SC001`
+  - Resolve environment for SH003.
+- `SH001` / `CH013_SC002`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH013_SC002`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH013_SC004`
+- `SH001` / `CH015_SC002`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH015_SC002`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH016_SC004`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH017_SC001`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH017_SC001`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH017_SC001`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH017_SC002`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH017_SC002`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH017_SC003`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH017_SC003`
+  - 2 cast reference(s) need review.
+- `SH003` / `CH017_SC003`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH017_SC004`
+  - 2 cast reference(s) need review.
+- `SH002` / `CH017_SC004`
+  - 2 cast reference(s) need review.
+- `SH003` / `CH017_SC004`
+  - 2 cast reference(s) need review.
+- `SH003` / `CH018_SC001`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH018_SC002`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH018_SC003`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH018_SC003`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH018_SC003`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH018_SC005`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH018_SC005`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH018_SC005`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH019_SC003`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH019_SC004`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH021_SC001`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH021_SC006`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH021_SC006`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH022_SC002`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH022_SC002`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH023_SC003`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH023_SC003`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH023_SC003`
+  - 1 cast reference(s) need review.
+- `SH004` / `CH023_SC003`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH024_SC001`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH024_SC001`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH024_SC003`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH024_SC003`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH024_SC004`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH024_SC004`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH024_SC005`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH024_SC005`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH024_SC005`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH025_SC001`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH025_SC001`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH025_SC002`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH025_SC003`
+  - 2 cast reference(s) need review.
+- `SH001` / `CH025_SC004`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH025_SC004`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH026_SC001`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH026_SC001`
+  - 1 cast reference(s) need review.
+- `SH004` / `CH026_SC001`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH026_SC002`
+  - 1 cast reference(s) need review.
+- `SH002` / `CH026_SC002`
+  - 1 cast reference(s) need review.
+- `SH001` / `CH026_SC003`
+  - 2 cast reference(s) need review.
+- `SH002` / `CH026_SC003`
+  - 3 cast reference(s) need review.
+- `SH003` / `CH027_SC005`
+  - 1 cast reference(s) need review.
+- `SH004` / `CH027_SC005`
+  - 1 cast reference(s) need review.
+- `SH003` / `CH028_SC005`
+  - 1 cast reference(s) need review.

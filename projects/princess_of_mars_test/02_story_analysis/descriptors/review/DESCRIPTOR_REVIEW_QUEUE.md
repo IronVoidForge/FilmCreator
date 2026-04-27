@@ -1,0 +1,897 @@
+# Descriptor Review Queue
+
+## Character
+
+- `DESC_CHAR_ape_man_1`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_ape_man_2`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_assistant_keeper_assassin`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_bar_comas`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_black_haired_woman`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_bull_ape`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_bull_ape_mate`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_captive_woman`
+  - status=provisional
+- `DESC_CHAR_caretaker`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_colossal_ape_creature`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_dead_friend`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_female_healer`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_female_prisoner`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_former_self`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_grotesque_creatures`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_hideous_creature`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_james_k_powell`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_kantos_kan`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_little_boy`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_lorquas_ptomel_jed`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_martian_warrior`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_martian_warrior_leader`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_martian_youth`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_mors_kajak`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_mummified_woman`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_notan`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_red_martian_prisoner`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_red_prisoner`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_sab_than`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_solas_mother`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_than_kosis`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_the_chieftain`
+  - status=resolved_into
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_the_colossal_creature`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_the_healer`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_the_jailer`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_the_keeper`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_the_old_man`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_the_prisoner`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_the_watch_dog`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_visionary_child`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_warhoon_horde`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_watch_dog`
+  - status=resolved_into
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_watch_thing`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_watchdog`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_zodangan_cousin`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_zodangan_scout`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_physical_build
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+- `DESC_CHAR_zodangan_sentry`
+  - generated_field_placeholder_height
+  - generated_field_placeholder_build
+  - generated_field_placeholder_skin_tone
+  - generated_field_placeholder_hair_color
+  - generated_field_placeholder_hair_style
+  - generated_field_placeholder_eye_color
+  - generated_field_placeholder_face_shape
+  - generated_field_placeholder_facial_hair
+  - generated_field_placeholder_costume_materials
+  - generated_field_placeholder_posture
+  - generated_field_placeholder_expression_tendency
+
+## Environment
+
+- `DESC_ENV_aerial_battle_skies`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_aerial_battlefield_mars`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_ancient_cliffside_cave`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_ancient_luxurious_quarters`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_ancient_martian_city_plaza`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_ancient_martian_city_ruins`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_ancient_opulent_quarters`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_ancient_sea_bottom`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_ancient_tableland_city`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_apache_plateau_camp`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_arizona_cave_system`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_arizona_desert_landscape`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_arizona_gold_vein_claim`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_arizona_mountain_cave`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_arizona_mountain_cave_ledge`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_arizona_mountain_mining_site`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_arizona_quartz_vein_basin`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_arizona_quartz_vein_location`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_atmosphere_factory`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_atmosphere_plant_complex`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_audience_chamber`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_barsoomian_sky_transit`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_barsoomian_wilderness`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_battlefield_plains`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_captive_chamber_murals`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_caravan_camp_hills`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_caravan_camp_landscape`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_caravan_camp_southern_hills`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_carters_apartment_quarters`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_carters_quarters_building`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_chieftain_audience_chamber`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_circular_moss_basin`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_city_of_helium_procession_route`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_city_of_thark`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_colossal_creature_lair`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_communal_sleeping_quarters`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_dead_city_interior`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_dead_city_plaza`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_dead_sea_bottom`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_dead_sea_bottom_expanse`
+  - status=resolved_into
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_dead_sea_bottom_incubator`
+  - status=resolved_into
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_dead_sea_bottom_valley`
+  - status=resolved_into
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_deep_space_void`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_dejah_thoris_quarters`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_deserted_martian_city`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_deserted_martian_city_plaza`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_deserted_martian_cityscape`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_desolate_martian_wasteland`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_duel_arena_open_plains`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_eastern_martian_hills`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_grand_audience_chamber`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_green_martian_city`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_green_martian_city_complex`
+  - status=resolved_into
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_helium_city_interior`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_helium_palace_gardens`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_helium_palace_sunken_gardens`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_helium_plains`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_heliumite_flagship_interior`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_hudson_river_study`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_jeddak_vaults_and_quarters`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_lorquas_ptomel_audience_chamber`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_lorquas_ptomel_city_plazas`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_low_mountains_hills`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_marble_audience_chamber`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_agricultural_tracts`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_arid_territory`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_avenues`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_city_outskirts`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_city_plaza`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_city_streets`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_distant_hills`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_incubator_enclosure`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_interior_chamber`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_night_expanse`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_night_plaza`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_plains_and_march_route`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_plains_march_route`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_plaza`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_plaza_city`
+  - status=resolved_into
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_sea_bottoms_and_canals`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_sky_aerial_corridors`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_sleeping_chamber`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_sleeping_quarters`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_valley_battlefield`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_valley_skyline`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_wilderness`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_martian_wilderness_corridor`
+  - status=resolved_into
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_mossy_sea_bottom`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_mossy_waste`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_mossy_waste_expanse`
+  - status=resolved_into
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_plaza_training_grounds`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_ptor_farmstead`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_remote_incubator_complex`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_rocky_gorge_canyon`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_rocky_gorge_nightscape`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_royal_palace_quarters`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_rugged_low_mountains`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_subterranean_amphitheater_arena`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_subterranean_dungeon`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_thark_audience_chamber`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_thark_city_and_surroundings`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_thark_city_complex`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_thark_city_interior`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_thark_city_plaza`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_thark_city_quarters`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_thark_city_settlement`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_thark_expedition_march_route`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_thark_plaza_audience_chamber`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_thark_plaza_quarters`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_thark_residential_quarters`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_thark_settlement_plaza`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_the_dead_city`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_the_incubator_enclosure`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_valley_overlook_exterior`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_vast_cosmic_void`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_warhoon_camp_interior`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_warhoon_city`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_warhoon_eastern_hills`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_warhoon_incubator_site`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_warhoon_mobile_camp`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_warhoon_subterranean_amphitheater`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_warhoon_subterranean_dungeon`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_zodanga_audience_chamber`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_zodanga_central_plaza`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_zodanga_city_gates`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_zodanga_city_streets`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_zodanga_cityscape`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_zodanga_dungeons`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_zodanga_palace_dungeons`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_zodanga_palace_interior`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_zodanga_palace_throne_room`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_zodanga_urban_complex`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_zodanga_walled_city`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_zodangan_aviation_training_grounds`
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_zodangan_land_camps`
+  - low_confidence_spatial_fields
+  - reference_fields_repaired_from_visual_fallbacks
+- `DESC_ENV_zodangan_palace_quarters`
+  - reference_fields_repaired_from_visual_fallbacks
+

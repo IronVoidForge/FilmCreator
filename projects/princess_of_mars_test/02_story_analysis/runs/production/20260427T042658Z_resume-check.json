@@ -1,0 +1,119 @@
+{
+  "run_type": "resume-check",
+  "project_slug": "princess_of_mars_test",
+  "recorded_at_utc": "2026-04-27T04:26:58.401128+00:00",
+  "payload": {
+    "project_slug": "princess_of_mars_test",
+    "chapters": "2-3",
+    "resume_from": "scene_contracts",
+    "report": [
+      {
+        "stage": "story_analysis",
+        "complete": true,
+        "reason": "28 chapter summaries and global registries found",
+        "details": {
+          "source_count": 28,
+          "summary_count": 28
+        }
+      },
+      {
+        "stage": "character_taxonomy",
+        "complete": true,
+        "reason": "74/74 taxonomy JSONs contain required fields",
+        "details": {
+          "files": 74,
+          "valid": 74
+        }
+      },
+      {
+        "stage": "identity_refinement",
+        "complete": true,
+        "reason": "refinement result, decisions, and refined registries found",
+        "details": {}
+      },
+      {
+        "stage": "character_bibles",
+        "complete": true,
+        "reason": "74/74 character bibles contain taxonomy/fallback fields",
+        "details": {
+          "files": 74,
+          "valid": 74
+        }
+      },
+      {
+        "stage": "environment_bibles",
+        "complete": true,
+        "reason": "136 environment bible JSONs found",
+        "details": {
+          "files": 136
+        }
+      },
+      {
+        "stage": "visual_fallbacks",
+        "complete": true,
+        "reason": "visual fallbacks contain source title, context, fallback buckets, negatives, and source context",
+        "details": {
+          "source_context_files": 80,
+          "has_context_digest": true
+        }
+      },
+      {
+        "stage": "scene_contracts",
+        "complete": false,
+        "reason": "missing scene contracts for CH002, CH003",
+        "details": {
+          "CH002": 0,
+          "CH003": 0
+        }
+      },
+      {
+        "stage": "scene_bindings",
+        "complete": true,
+        "reason": "scene bindings found for requested chapters",
+        "details": {
+          "CH002": 5,
+          "CH003": 5
+        }
+      },
+      {
+        "stage": "shot_packages",
+        "complete": false,
+        "reason": "missing shot packages for CH002, CH003",
+        "details": {
+          "CH002": 0,
+          "CH003": 0
+        }
+      },
+      {
+        "stage": "dialogue_timeline",
+        "complete": false,
+        "reason": "missing dialogue timeline files: CH002_DIALOGUE_TIMELINE.json, CH003_DIALOGUE_TIMELINE.json",
+        "details": {
+          "missing": [
+            "CH002_DIALOGUE_TIMELINE.json",
+            "CH003_DIALOGUE_TIMELINE.json"
+          ]
+        }
+      },
+      {
+        "stage": "descriptor_enrichment",
+        "complete": false,
+        "reason": "missing DESCRIPTOR_INDEX.json",
+        "details": {}
+      },
+      {
+        "stage": "prompt_preparation",
+        "complete": false,
+        "reason": "descriptor enrichment incomplete, so prompt prep must rerun: missing DESCRIPTOR_INDEX.json",
+        "details": {}
+      },
+      {
+        "stage": "quality_grading",
+        "complete": false,
+        "reason": "missing quality grading index/report with records",
+        "details": {}
+      }
+    ],
+    "command": "resume-check"
+  }
+}

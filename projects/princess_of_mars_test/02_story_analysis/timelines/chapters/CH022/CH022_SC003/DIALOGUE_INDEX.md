@@ -1,0 +1,23 @@
+# Scene Dialogue Index: CH022_SC003
+
+- `CH022_DLG019` -> `SH001` speaker=john_carter
+- `CH022_DLG020` -> `SH001` speaker=dejah_thoris
+- `CH022_DLG021` -> `SH001` speaker=john_carter
+- `CH022_DLG022` -> `SH001` speaker=john_carter
+- `CH022_DLG023` -> `SH001` speaker=john_carter
+- `CH022_DLG024` -> `SH001` speaker=dejah_thoris
+- `CH022_DLG025` -> `SH001` speaker=john_carter
+- `CH022_DLG026` -> `SH002` speaker=john_carter
+- `CH022_DLG027` -> `SH002` speaker=john_carter
+- `CH022_DLG028` -> `SH002` speaker=dejah_thoris
+- `CH022_DLG029` -> `SH002` speaker=john_carter
+- `CH022_DLG030` -> `SH002` speaker=john_carter
+- `CH022_DLG031` -> `SH002` speaker=unresolved
+- `CH022_DLG032` -> `SH002` speaker=unresolved
+- `CH022_DLG033` -> `SH003` speaker=unresolved
+- `CH022_DLG034` -> `SH003` speaker=unresolved
+- `CH022_DLG035` -> `SH003` speaker=john_carter
+- `CH022_DLG036` -> `SH003` speaker=john_carter
+- `CH022_DLG037` -> `SH003` speaker=john_carter
+- `CH022_DLG038` -> `SH003` speaker=john_carter
+- `CH022_DLG039` -> `SH003` speaker=john_carter
