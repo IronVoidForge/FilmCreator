@@ -5,39 +5,37 @@
   "purpose": "Backstory exposition and establishing the Scarecrow's motivation.",
   "summary": "The Scarecrow recounts his creation by a farmer and a Munchkin. He describes his first moments of consciousness on a pole and the pivotal moment when a crow informed him that he lacked brains.",
   "emotional_arc": "Calm $\\rightarrow$ Existential longing/Inadequacy.",
-  "production_intent": "Establish the Scarecrow's origin through a narrative transition from present-day reflection to stylized memory. The sequence must bridge the calm of the brookside with the existential realization triggered by the crow in the cornfield.",
-  "scene_short_description": "A narrator recounts his creation amidst a brookside transitioning into a memory of a cornfield.",
-  "scene_primary_scale_story_point": "Subject scale shifts from intimate close-up to expansive, dream-like field vistas.",
+  "production_intent": "Establish the Scarecrow's origin through a narrative bridge between present-day reflection and stylized memory. The sequence must transition from the grounded, calm atmosphere of the brookside to a dream-like cornfield flashback that emphasizes his lack of cognitive faculty.",
+  "scene_short_description": "A narrator recounts his straw-filled origins amidst a transition from meadow to memory.",
+  "scene_primary_scale_story_point": "Micro-focus on facial expression transitioning to wide, dream-like agricultural vistas.",
   "scene_required_anchor_catalog": [
-    "Scarecrow's face (present)",
-    "Wooden pole (flashback)",
-    "Corn stalks (flashback)"
+    "Scarecrow's face",
+    "Cornfield pole"
   ],
-  "scene_start_state": "Calm narration at the brookside.",
-  "scene_end_state": "Existential longing following the crow's revelation.",
-  "dominant_action_line": "The Scarecrow recounts his creation and the realization of his lack of brains.",
+  "scene_start_state": "Scarecrow sitting calmly by the brookside.",
+  "scene_end_state": "Scarecrow expressing existential longing/inadequacy.",
+  "dominant_action_line": "The narration of creation and the subsequent realization of missing brains.",
   "scene_spatial_layout": [
     "Present: Brookside meadow setting.",
-    "Flashback: Cornfield environment."
+    "Flashback: Expansive cornfield landscape."
   ],
   "character_spatial_map": [
-    "Scarecrow (as narrator) positioned at brookside.",
-    "farmer and munchkin implied/flashback within cornfield.",
-    "Crow (flashback/implied) hovering near cornfield pole."
+    "Scarecrow (as narrator) positioned in brookside_meadow.",
+    "farmer and munchkin implied/staged within A cornfield (memory/flashback)."
   ],
   "environment_subzones": [
     "brookside_meadow",
     "A cornfield (memory/flashback)"
   ],
   "entry_vectors": [
-    "brookside_meadow edge"
+    "Narration entry from Scarecrow"
   ],
   "exit_vectors": [
-    "brookside_meadow edge"
+    "Emotional exit into existential longing"
   ],
   "beat_transition_map": [
     "BT001 -> BT002: Visual/Lighting shift to flashback",
-    "BT002 -> BT003: Narrative escalation via Crow interaction"
+    "BT002 -> BT003: Subjective memory transition"
   ],
   "characters_required": [
     {
@@ -104,37 +102,37 @@
     }
   ],
   "continuity_constraints": [
-    "Transition between present day and flashback lighting/color grading"
+    "Lighting/color grade shift between brookside_meadow and A cornfield (memory/flashback)"
   ],
   "visual_coverage_families": [
-    "Close-up on Scarecrow's face",
-    "Stylized or dream-like flashback coverage"
+    "Close-up on Scarecrow's face (Present)",
+    "Stylized or dream-like coverage (Flashback)"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Calm narration of existence",
+      "summary": "Present day narration of calm reflection",
       "purpose": "",
-      "action_start": "Scarecrow speaking at brookside",
-      "action_end": "Transition to memory begins",
+      "action_start": "Scarecrow speaking",
+      "action_end": "Transition to memory",
       "active_subjects": [
         "Scarecrow (as narrator)"
       ],
       "passive_subjects": [],
       "spatial_context": "brookside_meadow",
-      "blocking_hint": "stationary near water",
+      "blocking_hint": "Seated near water",
       "environment_subzone": "brookside_meadow",
-      "continuity_focus": "present day lighting/color",
-      "coverage_hint": "close-up",
+      "continuity_focus": "Maintain present-day color grade",
+      "coverage_hint": "Close-up",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "The memory of creation",
+      "summary": "Flashback to creation by farmer and munchkin",
       "purpose": "",
-      "action_start": "Visual shift to cornfield",
-      "action_end": "Scarecrow is fully formed on the pole",
+      "action_start": "Dream-like fade in",
+      "action_end": "Scarecrow is fully formed on pole",
       "active_subjects": [
         "farmer",
         "munchkin"
@@ -143,18 +141,18 @@
         "Scarecrow (as narrator)"
       ],
       "spatial_context": "A cornfield (memory/flashback)",
-      "blocking_hint": "characters moving around a central pole",
+      "blocking_hint": "Figures working near a central pole",
       "environment_subzone": "A cornfield (memory/flashback)",
-      "continuity_focus": "stylized flashback lighting/color",
-      "coverage_hint": "dream-like wide/medium shots",
+      "continuity_focus": "Shift to stylized lighting/grading",
+      "coverage_hint": "Stylized wide/medium",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "The Crow's revelation",
+      "summary": "The pivotal moment of realization via the Crow",
       "purpose": "",
-      "action_start": "Crow appears in the field",
+      "action_start": "Consciousness on pole",
       "action_end": "Realization of lacking brains",
       "active_subjects": [
         "Crow (flashback/implied)"
@@ -163,12 +161,12 @@
         "Scarecrow (as narrator)"
       ],
       "spatial_context": "A cornfield (memory/flashback)",
-      "blocking_hint": "Crow interacting with the pole area",
+      "blocking_hint": "Crow interacting with the Scarecrow's head area",
       "environment_subzone": "A cornfield (memory/flashback)",
-      "continuity_focus": "maintain flashback grading",
-      "coverage_hint": "medium-close on reaction",
+      "continuity_focus": "Maintain flashback grading",
+      "coverage_hint": "Medium-close on pole/head",
       "coverage_priority": "high",
-      "handoff_to_next": "end_of_scene"
+      "handoff_to_next": "End of scene"
     }
   ],
   "planned_shots": [
@@ -176,19 +174,19 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish narrator state",
-      "planned_shot_moment_summary": "Scarecrow begins recounting at the brookside",
+      "planned_shot_moment_summary": "Scarecrow begins recounting his history",
       "primary_subject_seed": "Scarecrow (as narrator)",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "brookside_meadow",
       "planned_shot_required_anchor_1": "Scarecrow's face",
-      "planned_shot_scale_proof_detail": "tight framing on facial features",
+      "planned_shot_scale_proof_detail": "close-up detail of straw texture",
       "start_state_seed": "calm expression",
-      "end_state_seed": "contemplative gaze",
+      "end_state_seed": "reflective gaze",
       "action_seed": "speaking",
       "blocking_seed": [
-        "seated or stationary near water"
+        "seated"
       ],
       "shot_size": "close_up",
       "camera_angle": "eye_level",
@@ -196,14 +194,14 @@
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
-      "lighting_style": "soft_even",
+      "lighting_style": "diffuse_ambient",
       "primary_subject_angle": "front_three_quarter_right"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "depict creation memory",
-      "planned_shot_moment_summary": "The farmer and Munchkin assemble the Scarecrow",
+      "narrative_function": "depict creation flashback",
+      "planned_shot_moment_summary": "The farmer and munchkin assemble the Scarecrow",
       "primary_subject_seed": "farmer",
       "secondary_subjects_seed": [
         "munchkin"
@@ -211,13 +209,13 @@
       "subject_visibility": "on_screen",
       "narration_mode": "voiceover_off_screen",
       "environment_subzone": "A cornfield (memory/flashback)",
-      "planned_shot_required_anchor_1": "wooden pole",
-      "planned_shot_scale_proof_detail": "subject relative to corn stalks",
+      "planned_shot_required_anchor_1": "Cornfield pole",
+      "planned_shot_scale_proof_detail": "scale of human figures against corn stalks",
       "start_state_seed": "dream-like haze",
       "end_state_seed": "assembly complete",
-      "action_seed": "placing straw and clothing",
+      "action_seed": "tending to corn and straw",
       "blocking_seed": [
-        "working around the pole"
+        "standing near pole"
       ],
       "shot_size": "medium_full",
       "camera_angle": "low_angle",
@@ -231,8 +229,8 @@
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "trigger existential crisis",
-      "planned_shot_moment_summary": "The Crow informs the Scarecrow he lacks brains",
+      "narrative_function": "convey realization of inadequacy",
+      "planned_shot_moment_summary": "A crow informs the Scarecrow he lacks brains",
       "primary_subject_seed": "Crow (flashback/implied)",
       "secondary_subjects_seed": [
         "Scarecrow (as narrator)"
@@ -240,19 +238,19 @@
       "subject_visibility": "on_screen",
       "narration_mode": "voiceover_off_screen",
       "environment_subzone": "A cornfield (memory/flashback)",
-      "planned_shot_required_anchor_1": "corn stalks",
-      "planned_shot_scale_proof_detail": "crow size relative to Scarecrow's head",
-      "start_state_seed": "peaceful consciousness",
-      "end_state_seed": "shocked realization",
-      "action_seed": "crow landing or flying near pole",
+      "planned_shot_required_anchor_1": "Cornfield pole",
+      "planned_shot_scale_proof_detail": "bird vs straw head scale",
+      "start_state_seed": "consciousness on pole",
+      "end_state_seed": "existential realization",
+      "action_seed": "crow landing or flying near head",
       "blocking_seed": [
-        "movement around the pole area"
+        "perched on pole"
       ],
       "shot_size": "medium_close",
       "camera_angle": "eye_level",
       "lens_family": "telephoto",
-      "camera_motion": "handheld",
-      "zoom_behavior": "subtle_in",
+      "camera_motion": "subtle_in",
+      "zoom_behavior": "none",
       "focus_strategy": "rack_focus",
       "lighting_style": "hard_directional",
       "primary_subject_angle": "front"
@@ -325,16 +323,16 @@
     "[CH003] Chapter III (book index hit)",
     "[CH004] Chapter IV (book index hit)",
     "[CH005] Chapter V (book index hit)",
-    "Character farmer: A rustic individual situated within the Great Kansas prairies. The character is defined by a connection to agricultural labor, wearing assumed rustic clothing suitable for a prairie farm setting. Specific physical dimensions and facial fea..."
+    "Character farmer: A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in agricultural tasks, such as tending to corn (ears). Visual identity is defined by practical, rustic clothin..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH004_SC003\n\n## Production Intent\nEstablish the Scarecrow's origin through a narrative transition from present-day reflection to stylized memory. The sequence must bridge the calm of the brookside with the existential realization triggered by the crow in the cornfield.\n\n## Required Cast\n- Scarecrow (as narrator)\n- farmer\n- munchkin\n- Crow (flashback/implied)\n\n## Required Environments\n- brookside_meadow\n- A cornfield (memory/flashback)\n\n## Continuity Constraints\n- Transition between present day and flashback lighting/color grading.\n\n## Beat List\n- BT001: Calm narration of existence.\n- BT002: The memory of creation by farmer and Munchkin.\n- BT003: The Crow's revelation regarding lack of brains.",
+  "storyboard_markdown": "# Scene Contract: CH004_SC003\n\n## Production Intent\nEstablish the Scarecrow's origin through a narrative bridge between present-day reflection and stylized memory. The sequence must transition from the grounded, calm atmosphere of the brookside to a dream-like cornfield flashback that emphasizes his lack of cognitive faculty.\n\n## Required Cast\n- Scarecrow (as narrator)\n- farmer\n- munchkin\n- Crow (flashback/implied)\n\n## Required Environments\n- brookside_meadow\n- A cornfield (memory/flashback)\n\n## Continuity Constraints\n- Transition between present day and flashback lighting/color grading.\n\n## Beat List\n- BT001: Present day narration of calm reflection.\n- BT002: Flashback to creation by farmer and munchkin.\n- BT003: The pivotal moment of realization via the Crow.",
   "metadata": {
     "artifact_id": "CH004_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "b56514e10dfcc74be69640f61d2620eeed7c8b99",
+    "source_fingerprint": "434d9c0133f004b33cdd91d3453dfef5a186f358",
     "created_at_utc": "2026-04-27T08:07:59.406606+00:00",
-    "updated_at_utc": "2026-04-27T08:07:59.406606+00:00",
+    "updated_at_utc": "2026-04-27T13:09:45.631776+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -359,6 +357,11 @@
         "timestamp_utc": "2026-04-27T08:08:41.449709+00:00",
         "action": "synthesized",
         "source_fingerprint": "b56514e10dfcc74be69640f61d2620eeed7c8b99"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:10:29.779992+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "434d9c0133f004b33cdd91d3453dfef5a186f358"
       }
     ]
   }

@@ -5,37 +5,37 @@
   "purpose": "Provide character backstory and raise the stakes of the journey's emotional weight.",
   "summary": "As they travel along the Yellow Brick Road, the Woodman uses his axe to clear the path. He recounts how he was once a human wood-chopper who was transformed into tin by the Wicked Witch of the East.",
   "emotional_arc": "From rhythmic travel to melancholy/tragedy.",
-  "production_intent": "Establish the tragic origin of the tin_woodman through physical labor and monologue while moving the group along the yellow_brick_road. The visual progression must track the clearing of heavy brush to maintain environmental continuity.",
-  "scene_short_description": "A group travels a branch-choked path as one member clears the way with an axe.",
-  "scene_primary_scale_story_point": "The scale of the obstruction relative to the width of the yellow_brick_road.",
+  "production_intent": "Establish the emotional weight of the journey through a character backstory reveal. The sequence transitions from physical labor and rhythmic movement to a heavy, tragic monologue as the Tin Woodman recounts his transformation.",
+  "scene_short_description": "A group travels a branch-choked yellow road while one member clears the way with an axe.",
+  "scene_primary_scale_story_point": "The scale of the overgrown forest versus the narrowness of the cleared path.",
   "scene_required_anchor_catalog": [
     "yellow_brick_road",
-    "tin_woodman's axe"
+    "tin_woodman_axe"
   ],
-  "scene_start_state": "Group walking through thick, branch-heavy forest path.",
-  "scene_end_state": "Group moving forward on a partially cleared path with heavy atmosphere.",
-  "dominant_action_line": "tin_woodman uses an axe to clear branches from the yellow_brick_road while recounting his transformation.",
+  "scene_start_state": "Rhythmic movement through thick branches and debris.",
+  "scene_end_state": "Heavy silence following a tragic revelation.",
+  "dominant_action_line": "The Tin Woodman clears the path with an axe while recounting his past.",
   "scene_spatial_layout": [
-    "Linear progression along the yellow_brick_road",
-    "Obstruction zone ahead of the group"
+    "Linear progression along the yellow brick road",
+    "Obstruction of path by heavy branches"
   ],
   "character_spatial_map": [
     "tin_woodman leads at the front of the line",
-    "dorothy and the_scarecrow follow behind the clearing path"
+    "dorothy and the_scarecrow follow in a staggered file"
   ],
   "environment_subzones": [
-    "uncleared_brush_zone",
-    "cleared_path_zone"
+    "cleared_path",
+    "overgrown_brush_perimeter"
   ],
   "entry_vectors": [
-    "yellow_brick_road (forward)"
+    "forward along yellow_brick_road"
   ],
   "exit_vectors": [
-    "yellow_brick_road (forward)"
+    "forward along yellow_brick_road"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: rhythmic labor to verbal disclosure",
-    "BT002 -> BT003: monologue to emotional weight/melancholy"
+    "BT001 -> BT002: transition from physical labor to verbal storytelling",
+    "BT002 -> BT003: transition from monologue to emotional weight/silence"
   ],
   "characters_required": [
     {
@@ -82,20 +82,20 @@
     }
   ],
   "continuity_constraints": [
-    "Cumulative volume of brush and branches removed from yellow_brick_road"
+    "Cumulative volume of cleared brush along the yellow brick path"
   ],
   "visual_coverage_families": [
-    "Wide shots of the road being cleared",
-    "Medium shots of the Woodman working",
-    "Stylized or flashback-adjacent lighting during monologue"
+    "Wide shots of road clearing",
+    "Medium shots of woodman labor",
+    "Stylized flashback-adjacent lighting for monologue"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Rhythmic travel and clearing the path",
+      "summary": "Rhythmic travel and path clearing",
       "purpose": "",
-      "action_start": "group walking through branches",
-      "action_end": "path is partially cleared",
+      "action_start": "group enters thick brush",
+      "action_end": "path is widened",
       "active_subjects": [
         "tin_woodman"
       ],
@@ -104,19 +104,19 @@
         "the_scarecrow"
       ],
       "spatial_context": "yellow_brick_road",
-      "blocking_hint": "tin_woodman leads the line",
-      "environment_subzone": "uncleared_brush_zone",
-      "continuity_focus": "amount of brush removed",
-      "coverage_hint": "wide shots of road clearing",
-      "coverage_priority": "high",
+      "blocking_hint": "tin_woodman at head of line [[chopping]]",
+      "environment_subzone": "overgrown_brush_perimeter",
+      "continuity_focus": "amount of brush cleared",
+      "coverage_hint": "wide shots of road being cleared",
+      "coverage_priority": "medium",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "The Woodman's revelation",
+      "summary": "The Woodman's Monologue",
       "purpose": "",
-      "action_start": "axe strikes pause",
-      "action_end": "recounting the transformation",
+      "action_start": "axe strikes stop",
+      "action_end": "revelation of transformation",
       "active_subjects": [
         "tin_woodman"
       ],
@@ -125,32 +125,33 @@
         "the_scarecrow"
       ],
       "spatial_context": "cleared section of road",
-      "blocking_hint": "tin_woodman turns to group",
-      "environment_subzone": "cleared_path_zone",
-      "continuity_focus": "character positioning",
+      "blocking_hint": "tin_woodman stands still facing group",
+      "environment_subzone": "cleared_path",
+      "continuity_focus": "position of cleared brush",
       "coverage_hint": "medium shots/stylized lighting",
       "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Emotional weight settles",
+      "summary": "Emotional aftermath",
       "purpose": "",
-      "action_start": "silence after story",
-      "action_end": "group resumes travel",
+      "action_start": "end of speech",
+      "action_end": "resumption of travel",
       "active_subjects": [
         "dorothy",
-        "the_scarecrow",
+        "the_scarecrow"
+      ],
+      "passive_subjects": [
         "tin_woodman"
       ],
-      "passive_subjects": [],
       "spatial_context": "yellow_brick_road",
-      "blocking_hint": "slowed movement",
-      "environment_subzone": "cleared_path_zone",
-      "continuity_focus": "brush clearance level",
-      "coverage_hint": "medium/wide",
-      "coverage_priority": "medium",
-      "handoff_to_next": "end_of_scene"
+      "blocking_hint": "group reacts with silence",
+      "environment_subzone": "cleared_path",
+      "continuity_focus": "brush pile location",
+      "coverage_hint": "medium shots of reactions",
+      "coverage_priority": "low",
+      "handoff_to_next": "none"
     }
   ],
   "planned_shots": [
@@ -166,15 +167,14 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "uncleared_brush_zone",
+      "environment_subzone": "overgrown_brush_perimeter",
       "planned_shot_required_anchor_1": "yellow_brick_road",
-      "planned_shot_scale_proof_detail": "thickness of branches vs road width",
-      "start_state_seed": "group entering thicket",
-      "end_state_seed": "first branch struck",
-      "action_seed": "tin_woodman swings axe",
+      "planned_shot_scale_proof_detail": "visible brush density",
+      "start_state_seed": "dense foliage blocking view",
+      "end_state_seed": "path partially visible",
+      "action_seed": "walking and chopping",
       "blocking_seed": [
-        "tin_woodman in front",
-        "others trailing"
+        "staggered file"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
@@ -188,8 +188,8 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "character backstory delivery",
-      "planned_shot_moment_summary": "tin_woodman stops working to speak",
+      "narrative_function": "character backstory reveal",
+      "planned_shot_moment_summary": "woodman stops to speak of his past",
       "primary_subject_seed": "tin_woodman",
       "secondary_subjects_seed": [
         "dorothy",
@@ -197,12 +197,12 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "cleared_path_zone",
-      "planned_shot_required_anchor_1": "tin_woodman's axe",
-      "planned_shot_scale_proof_detail": "distance between characters",
-      "start_state_seed": "axe resting on branch",
-      "end_state_seed": "monologue completion",
-      "action_seed": "recounting transformation by Wicked Witch of the East",
+      "environment_subzone": "cleared_path",
+      "planned_shot_required_anchor_1": "tin_woodman_axe",
+      "planned_shot_scale_proof_detail": "axe resting on ground",
+      "start_state_seed": "chopping motion",
+      "end_state_seed": "stillness during speech",
+      "action_seed": "recounting transformation",
       "blocking_seed": [
         "tin_woodman centered",
         "others listening"
@@ -280,16 +280,16 @@
     "[CH005] Chapter V (book index hit)",
     "[CH007] Chapter VII (book index hit)",
     "[CH008] Chapter VIII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH005_SC004\n\n## Production Intent\nEstablish the tragic origin of the tin_woodman through physical labor and monologue while moving the group along the yellow_brick_road. The visual progression must track the clearing of heavy brush to maintain environmental continuity.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n\n## Required Environments\n- yellow_brick_road (thick with branches)\n\n## Continuity Constraints\n- Cumulative volume of brush and branches removed from yellow_brick_road must match visual progression.\n\n## Beat List\n- BT001: Rhythmic travel and clearing the path.\n- BT002: The Woodman's revelation regarding his transformation by the Wicked Witch of the East.\n- BT003: Emotional weight settles as the journey continues.",
+  "storyboard_markdown": "# Scene Contract: CH005_SC004\n\n## Production Intent\nEstablish the emotional weight of the journey through a character backstory reveal. The sequence transitions from physical labor and rhythmic movement to a heavy, tragic monologue as the Tin Woodman recounts his transformation.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n\n## Required Environments\n- yellow_brick_road (thick with branches)\n\n## Continuity Constraints\n- Cumulative volume of cleared brush along the yellow brick path must match the progression of travel.\n\n## Beat List\n- BT001: Rhythmic travel and path clearing.\n- BT002: The Woodman's Monologue regarding his transformation by the Wicked Witch of the East.\n- BT003: Emotional aftermath/silence.",
   "metadata": {
     "artifact_id": "CH005_SC004_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "5f24564336067f207adccc66f40d8eb33e7309e4",
+    "source_fingerprint": "95def6f3bebe444c91413477297273ff5fed0d39",
     "created_at_utc": "2026-04-27T08:12:09.318027+00:00",
-    "updated_at_utc": "2026-04-27T08:12:09.318027+00:00",
+    "updated_at_utc": "2026-04-27T13:14:03.370202+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -314,6 +314,11 @@
         "timestamp_utc": "2026-04-27T08:12:47.298741+00:00",
         "action": "synthesized",
         "source_fingerprint": "5f24564336067f207adccc66f40d8eb33e7309e4"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:14:40.451118+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "95def6f3bebe444c91413477297273ff5fed0d39"
       }
     ]
   }

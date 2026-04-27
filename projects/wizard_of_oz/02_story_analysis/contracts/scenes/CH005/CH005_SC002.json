@@ -5,23 +5,24 @@
   "purpose": "Introduce the secondary companion and create a moment of tension/mystery.",
   "summary": "While searching, the group hears strange groaning sounds. They discover the Tin Woodman, who is completely immobilized by rust.",
   "emotional_arc": "From curiosity to alarm/pity.",
-  "production_intent": "Establish the discovery of a new companion through auditory tension and visual reveal. The sequence must transition from an active search to a static, high-detail examination of a rusted mechanical figure.",
-  "scene_short_description": "A group searches a forest clearing and discovers a rusted metal man frozen in place.",
+  "production_intent": "Establish a sense of mystery and tension through auditory cues before revealing the immobilized tin_woodman. The sequence must transition from the group's active searching to a static, heavy realization of the character's condition.",
+  "scene_short_description": "A group searches a forest clearing and discovers a rusted, immobile metallic figure.",
   "scene_primary_scale_story_point": "The scale of the tin_woodman relative to dorothy and the_scarecrow.",
   "scene_required_anchor_catalog": [
     "rust_texture_on_tin_woodman",
     "forest_clearing_center"
   ],
-  "scene_start_state": "Group moving through forest clearing hearing groaning sounds.",
-  "scene_end_state": "Group standing in pity/alarm around the immobilized tin_woodman.",
+  "scene_start_state": "Group moving through forest clearing, reacting to strange groaning sounds.",
+  "scene_end_state": "Group standing in stunned silence before the frozen tin_woodman.",
   "dominant_action_line": "Searching for sound source leads to discovery of a rusted companion.",
   "scene_spatial_layout": [
-    "open forest clearing near cottage",
-    "central focal point occupied by immobile figure"
+    "Open forest clearing near cottage",
+    "Dense foliage surrounding central path"
   ],
   "character_spatial_map": [
-    "dorothy and the_scarecrow moving through subzones",
-    "tin_woodman stationary at center"
+    "dorothy and the_scarecrow leading the search",
+    "toto sniffing near ground level",
+    "tin_woodman positioned as a static obstacle in the clearing"
   ],
   "environment_subzones": [
     "forest_clearing_center",
@@ -31,11 +32,11 @@
     "forest_path_approach"
   ],
   "exit_vectors": [
-    "forest_path_departure"
+    "forest_path_retreat"
   ],
   "beat_transition_map": [
     "BT001 -> BT002: auditory trigger to visual search",
-    "BT002 -> BT003: discovery to detailed inspection"
+    "BT002 -> BT003: search movement to discovery reveal"
   ],
   "characters_required": [
     {
@@ -92,21 +93,41 @@
     }
   ],
   "continuity_constraints": [
-    "tin_woodman must maintain a specific frozen pose throughout the discovery",
-    "dorothy white clothing cleanliness relative to forest environment"
+    "tin_woodman must maintain a specific frozen pose throughout the scene",
+    "rust texture consistency on metal surfaces"
   ],
   "visual_coverage_families": [
-    "POV searching for sound source",
-    "Low-angle reveal of tin_woodman",
-    "Macro close-ups of rust and mechanical joints"
+    "POV search sequences",
+    "Low-angle reveals of tin_woodman",
+    "Macro mechanical rust details"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Auditory discovery of groaning sounds",
+      "summary": "Auditory disturbance",
       "purpose": "",
-      "action_start": "searching through clearing",
-      "action_end": "stopping to listen",
+      "action_start": "walking through clearing",
+      "action_end": "sudden halt",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "forest_clearing_center",
+      "blocking_hint": "group stops in a cluster",
+      "environment_subzone": "forest_clearing_center",
+      "continuity_focus": "sound directionality",
+      "coverage_hint": "medium shots of reactions",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Active searching",
+      "purpose": "",
+      "action_start": "looking around curiously",
+      "action_end": "spotting something metallic",
       "active_subjects": [
         "dorothy",
         "the_scarecrow"
@@ -115,54 +136,34 @@
         "toto"
       ],
       "spatial_context": "forest_clearing_center",
-      "blocking_hint": "group moving in loose formation",
+      "blocking_hint": "characters move toward sound source",
       "environment_subzone": "forest_clearing_center",
-      "continuity_focus": "sound directionality",
-      "coverage_hint": "POV shots of group looking for source",
-      "coverage_priority": "high",
-      "handoff_to_next": "BT002"
-    },
-    {
-      "beat_id": "BT002",
-      "summary": "Visual discovery of the Tin Woodman",
-      "purpose": "",
-      "action_start": "looking toward sound",
-      "action_end": "group freezing in alarm",
-      "active_subjects": [
-        "dorothy",
-        "the_scarecrow"
-      ],
-      "passive_subjects": [
-        "tin_woodman"
-      ],
-      "spatial_context": "forest_clearing_center",
-      "blocking_hint": "group approaches central figure",
-      "environment_subzone": "forest_clearing_center",
-      "continuity_focus": "tin_woodman frozen pose",
-      "coverage_hint": "low-angle reveal",
-      "coverage_priority": "high",
+      "continuity_focus": "movement direction",
+      "coverage_hint": "POV shots",
+      "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Inspection of the rust/immobilization",
+      "summary": "The Discovery",
       "purpose": "",
-      "action_start": "approaching tin_woodman",
-      "action_end": "pity/alarm realization",
+      "action_start": "approaching the object",
+      "action_end": "standing in pity/alarm",
       "active_subjects": [
         "dorothy",
-        "the_scarecrow"
-      ],
-      "passive_subjects": [
+        "the_scarecrow",
         "tin_woodman"
       ],
+      "passive_subjects": [
+        "toto"
+      ],
       "spatial_context": "forest_clearing_center",
-      "blocking_hint": "characters leaning in to see details",
+      "blocking_hint": "group surrounds or stands before tin_woodman",
       "environment_subzone": "forest_clearing_center",
-      "continuity_focus": "mechanical rust details",
-      "coverage_hint": "close-ups on mechanical details",
-      "coverage_priority": "medium",
-      "handoff_to_next": "end_scene"
+      "continuity_focus": "tin_woodman frozen pose",
+      "coverage_hint": "low-angle reveal and macro details",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
     }
   ],
   "planned_shots": [
@@ -170,7 +171,7 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish tension",
-      "planned_shot_moment_summary": "group hears groaning sounds while searching",
+      "planned_shot_moment_summary": "group hears groaning sounds",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "the_scarecrow",
@@ -180,7 +181,7 @@
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "forest_clearing_center",
       "planned_shot_required_anchor_1": "forest_clearing_center",
-      "planned_shot_scale_proof_detail": "character height vs trees",
+      "planned_shot_scale_proof_detail": "human height vs foliage",
       "start_state_seed": "walking movement",
       "end_state_seed": "sudden halt",
       "action_seed": "stopping to listen",
@@ -189,7 +190,7 @@
       ],
       "shot_size": "medium_full",
       "camera_angle": "eye_level",
-      "lens_family": "wide",
+      "lens_family": "normal",
       "camera_motion": "handheld",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
@@ -199,25 +200,25 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "reveal character",
-      "planned_shot_moment_summary": "low angle reveal of the rusted figure",
-      "primary_subject_seed": "tin_woodman",
+      "narrative_function": "search progression",
+      "planned_shot_moment_summary": "POV looking through brush",
+      "primary_subject_seed": "forest_foliage",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "forest_clearing_center",
-      "planned_shot_required_anchor_1": "rust_texture_on_tin_woodman",
-      "planned_shot_scale_proof_detail": "metal texture vs organic forest",
-      "start_state_seed": "searching gaze",
-      "end_state_seed": "shocked stillness",
-      "action_seed": "group discovers tin_woodman",
+      "planned_shot_required_anchor_1": "forest_clearing_center",
+      "planned_shot_scale_proof_detail": "n/a",
+      "start_state_seed": "moving camera",
+      "end_state_seed": "brush clearing",
+      "action_seed": "searching for sound source",
       "blocking_seed": [
-        "group surrounds the stationary figure"
+        "camera moves through foliage"
       ],
-      "shot_size": "low_angle_full",
-      "camera_angle": "low_angle",
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
       "lens_family": "wide",
-      "camera_motion": "tilt",
+      "camera_motion": "push_in",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
@@ -226,28 +227,55 @@
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "detail character state",
-      "planned_shot_moment_summary": "close up on rust and mechanical joints",
+      "narrative_function": "character reveal",
+      "planned_shot_moment_summary": "low angle reveal of tin_woodman",
+      "primary_subject_seed": "tin_woodman",
+      "secondary_subjects_seed": [
+        "dorothy"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "forest_clearing_center",
+      "planned_shot_required_anchor_1": "rust_texture_on_tin_woodman",
+      "planned_shot_scale_proof_detail": "metal height vs dorothy",
+      "start_state_seed": "static foliage",
+      "end_state_seed": "reveal of metal limbs",
+      "action_seed": "unveiling the rusted figure",
+      "blocking_seed": [
+        "group approaches tin_woodman"
+      ],
+      "shot_size": "low_angle_full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "tilt",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH004",
+      "beat_id": "BT003",
+      "narrative_function": "detail emphasis",
+      "planned_shot_moment_summary": "close up on rust",
       "primary_subject_seed": "tin_woodman",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "forest_clearing_center",
       "planned_shot_required_anchor_1": "rust_texture_on_tin_woodman",
-      "planned_shot_scale_proof_detail": "macro detail of oxidation",
-      "start_state_seed": "static pose",
-      "end_state_seed": "static pose",
-      "action_seed": "observing the immobilization",
-      "blocking_seed": [
-        "camera moves close to joints"
-      ],
+      "planned_shot_scale_proof_detail": "macro texture detail",
+      "start_state_seed": "smooth metal",
+      "end_state_seed": "cracked rust",
+      "action_seed": "showing immobilization",
+      "blocking_seed": [],
       "shot_size": "extreme_close_up",
       "camera_angle": "eye_level",
       "lens_family": "telephoto",
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
-      "lighting_style": "diffuse_ambient",
+      "lighting_style": "hard_directional",
       "primary_subject_angle": "profile_left"
     }
   ],
@@ -314,16 +342,16 @@
     "[CH009] Chapter IX (book index hit)",
     "[CH005] Chapter V (book index hit)",
     "[CH006] Chapter VI (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH005_SC002\n\n## Production Intent\nEstablish the discovery of a new companion through auditory tension and visual reveal. The sequence must transition from an active search to a static, high-detail examination of a rusted mechanical figure.\n\n## Required Cast\n- dorothy (white clothing)\n- toto\n- the_scarecrow\n- tin_woodman (immobile/rusted)\n\n## Required Environments\n- forest_and_cottage_setting (specifically forest_clearing_center)\n\n## Continuity Constraints\n- tin_woodman must maintain a specific \"frozen\" pose throughout the discovery.\n- rust texture and mechanical joint details must remain consistent during macro shots.\n\n## Beat List\n- BT001: Auditory discovery of groaning sounds.\n- BT002: Visual discovery of the Tin Woodman.\n- BT003: Inspection of the rust/immobilization.",
+  "storyboard_markdown": "# Scene Contract: CH005_SC002\n\n## Production Intent\nEstablish a sense of mystery and tension through auditory cues before revealing the immobilized tin_woodman. The sequence must transition from the group's active searching to a static, heavy realization of the character's condition.\n\n## Required Cast\n- dorothy\n- toto\n- the_scarecrow\n- tin_woodman (immobile)\n\n## Required Environments\n- forest_and_cottage_setting\n\n## Continuity Constraints\n- tin_woodman must maintain a specific frozen pose throughout the scene\n- rust texture consistency on metal surfaces\n\n## Beat List\n- BT001: Auditory disturbance\n- BT002: Active searching\n- BT003: The Discovery",
   "metadata": {
     "artifact_id": "CH005_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "5d8d0887b83c1c52eb229b7afb7ee9498de5f88b",
+    "source_fingerprint": "d08971c55ab91ee9d9a2cbd088de22900f328a97",
     "created_at_utc": "2026-04-27T08:10:45.796270+00:00",
-    "updated_at_utc": "2026-04-27T08:10:45.796270+00:00",
+    "updated_at_utc": "2026-04-27T13:12:33.634372+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -348,6 +376,11 @@
         "timestamp_utc": "2026-04-27T08:11:26.664983+00:00",
         "action": "synthesized",
         "source_fingerprint": "5d8d0887b83c1c52eb229b7afb7ee9498de5f88b"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:13:17.689090+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d08971c55ab91ee9d9a2cbd088de22900f328a97"
       }
     ]
   }

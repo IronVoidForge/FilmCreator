@@ -5,31 +5,30 @@
   "purpose": "Transition to a new environment and provide an emotional beat of longing/hope.",
   "summary": "The group reaches a swift river, seeing a beautiful meadow on the far side. Exhausted, they camp by the bank while the Tin Woodman begins building a raft. Dorothy falls asleep, dreaming of the Emerald City.",
   "emotional_arc": "Exhaustion $\\rightarrow$ Hope/Dreaminess.",
-  "production_intent": "Establish a transition from the dense forest to a riverine landscape. The sequence must visually communicate physical exhaustion through character staging and then pivot to emotional hope via the distant meadow view and Dorothy's dream state.",
-  "scene_short_description": "Exhausted travelers camp by a swift river overlooking a distant, beautiful meadow.",
-  "scene_primary_scale_story_point": "The vastness of the river and meadow relative to the small campsite.",
+  "production_intent": "Establish a transition from the dense forest to a river crossing point. The sequence must visually communicate physical exhaustion through character posture and lighting shifts, moving from dusk into night while introducing a sense of hope via the distant meadow view.",
+  "scene_short_description": "Weary travelers camp by a swift river overlooking a bright, fruit-filled meadow.",
+  "scene_primary_scale_story_point": "Large scale river and distant meadow vs small scale campsite.",
   "scene_required_anchor_catalog": [
-    "swift river edge",
-    "unfinished raft structure",
-    "distant meadow horizon"
+    "swift_riverbank_and_meadow_view",
+    "raft_construction_site"
   ],
-  "scene_start_state": "Group arrives at the bank, visibly fatigued by travel.",
-  "scene_end_state": "Dorothy sleeps under soft lighting as the group rests.",
-  "dominant_action_line": "The group settles to camp while the Tin Woodman begins building a raft.",
+  "scene_start_state": "Group arrives at the bank, visibly exhausted by travel.",
+  "scene_end_state": "Dorothy asleep in a dreamlike state under night sky.",
+  "dominant_action_line": "The group settles to camp while tin_woodman builds a raft.",
   "scene_spatial_layout": [
-    "Campfire/resting zone near the riverbank",
-    "Construction zone at the water's edge",
-    "Distant meadow across the water"
+    "Campfire/resting area set back from the water's edge",
+    "Raft construction occurring at the immediate shoreline",
+    "Meadow visible across the expanse of the river"
   ],
   "character_spatial_map": [
     "dorothy and toto resting in the camp zone",
-    "tin_woodman working at the river's edge",
-    "the_scarecrow and cowardly_lion positioned near the campsite"
+    "tin_woodman working at the water's edge",
+    "the_scarecrow and cowardly_lion near the campsite"
   ],
   "environment_subzones": [
     "riverbank_edge",
-    "distant_meadow_view",
-    "campsite_zone"
+    "meadow_horizon",
+    "campsite_interior"
   ],
   "entry_vectors": [
     "forest_to_riverbank_path"
@@ -38,9 +37,9 @@
     "river_crossing_direction"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Arrival and exhaustion",
+    "BT001 -> BT002: Arrival and exhaustion realization",
     "BT002 -> BT003: Transition to labor and rest",
-    "BT003 -> BT004: Shift into dream state"
+    "BT003 -> BT004: Shift from reality to dream state"
   ],
   "characters_required": [
     {
@@ -112,8 +111,8 @@
   ],
   "visual_coverage_families": [
     "Wide sweeping shots of river and distant meadow",
-    "Medium shots of raft construction",
-    "Soft ethereal lighting for dream sequence"
+    "Medium shots of tin_woodman raft construction",
+    "Soft ethereal focus for dorothy dream sequence"
   ],
   "beat_list": [
     {
@@ -131,7 +130,7 @@
       ],
       "passive_subjects": [],
       "spatial_context": "riverbank_edge",
-      "blocking_hint": "characters spread out looking across water",
+      "blocking_hint": "group halts at the bank edge",
       "environment_subzone": "riverbank_edge",
       "continuity_focus": "lighting is dusk",
       "coverage_hint": "wide sweeping shots",
@@ -142,8 +141,8 @@
       "beat_id": "BT002",
       "summary": "Settling and labor",
       "purpose": "",
-      "action_start": "characters sit/lie down",
-      "action_end": "raft construction begins",
+      "action_start": "characters sit/collapse from exhaustion",
+      "action_end": "tin_woodman begins raft work",
       "active_subjects": [
         "tin_woodman"
       ],
@@ -153,53 +152,53 @@
         "cowardly_lion",
         "toto"
       ],
-      "spatial_context": "campsite_zone and riverbank_edge",
-      "blocking_hint": "tin_woodman moves to water's edge; others settle near bank",
+      "spatial_context": "campsite_interior to riverbank_edge",
+      "blocking_hint": "tin_woodman moves toward water; others settle in camp",
       "environment_subzone": "riverbank_edge",
-      "continuity_focus": "raft progress starts at zero",
-      "coverage_hint": "medium shots of woodman",
+      "continuity_focus": "raft construction progress starts",
+      "coverage_hint": "medium shots",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Rest and transition to night",
+      "summary": "Night falls and rest",
       "purpose": "",
       "action_start": "sun sets further",
-      "action_end": "darkness falls over camp",
+      "action_end": "characters are asleep or resting in dark",
       "active_subjects": [
         "dorothy",
         "toto"
       ],
       "passive_subjects": [
-        "tin_woodman",
         "the_scarecrow",
-        "cowardly_lion"
+        "cowardly_lion",
+        "tin_woodman"
       ],
-      "spatial_context": "campsite_zone",
-      "blocking_hint": "characters becoming still/sleeping",
-      "environment_subzone": "campsite_zone",
-      "continuity_focus": "lighting transition dusk to night",
-      "coverage_hint": "medium shots of group",
-      "coverage_priority": "medium",
+      "spatial_context": "campsite_interior",
+      "blocking_hint": "characters settling into sleep positions",
+      "environment_subzone": "campsite_interior",
+      "continuity_focus": "transition from dusk to night",
+      "coverage_hint": "medium shots",
+      "coverage_priority": "low",
       "handoff_to_next": "BT004"
     },
     {
       "beat_id": "BT004",
-      "summary": "The dream state",
+      "summary": "The Dream",
       "purpose": "",
       "action_start": "dorothy's eyes close",
-      "action_end": "ethereal focus on face",
+      "action_end": "ethereal vision of Emerald City",
       "active_subjects": [
         "dorothy"
       ],
       "passive_subjects": [
         "toto"
       ],
-      "spatial_context": "campsite_zone",
-      "blocking_hint": "dorothy lying still",
-      "environment_subzone": "campsite_zone",
-      "continuity_focus": "soft ethereal lighting",
+      "spatial_context": "campsite_interior",
+      "blocking_hint": "stationary lying position",
+      "environment_subzone": "campsite_interior",
+      "continuity_focus": "lighting becomes soft/ethereal",
       "coverage_hint": "close up/dream sequence",
       "coverage_priority": "high",
       "handoff_to_next": "end_of_scene"
@@ -209,8 +208,8 @@
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish environment",
-      "planned_shot_moment_summary": "group reaches the riverbank",
+      "narrative_function": "establish_location",
+      "planned_shot_moment_summary": "group arrives at the riverbank looking at the meadow",
       "primary_subject_seed": "the_scarecrow",
       "secondary_subjects_seed": [
         "dorothy",
@@ -221,11 +220,11 @@
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "riverbank_edge",
-      "planned_shot_required_anchor_1": "swift river edge",
-      "planned_shot_scale_proof_detail": "wide vista of meadow across water",
+      "planned_shot_required_anchor_1": "swift_riverbank_and_meadow_view",
+      "planned_shot_scale_proof_detail": "meadow visible across river",
       "start_state_seed": "group walking into frame",
-      "end_state_seed": "group stopping at bank",
-      "action_seed": "characters slowing down and looking out",
+      "end_state_seed": "group stopping to look at view",
+      "action_seed": "stopping and looking out",
       "blocking_seed": [
         "group spreads along the bank"
       ],
@@ -234,29 +233,27 @@
       "lens_family": "wide",
       "camera_motion": "pan",
       "zoom_behavior": "none",
-      "focus_strategy": "environment_priority",
+      "focus_strategy": "deep_focus",
       "lighting_style": "dusk",
-      "primary_subject_angle": "front_three_quarter_left"
+      "primary_subject_angle": "front_three_quarter_right"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "character action",
-      "planned_shot_moment_summary": "tin_woodman begins raft work",
+      "narrative_function": "character_action",
+      "planned_shot_moment_summary": "tin_woodman begins assembling raft components",
       "primary_subject_seed": "tin_woodman",
-      "secondary_subjects_seed": [
-        "the_scarecrow"
-      ],
+      "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "riverbank_edge",
-      "planned_shot_required_anchor_1": "unfinished raft structure",
-      "planned_shot_scale_proof_detail": "medium shot of wood/tools",
+      "planned_shot_required_anchor_1": "raft_construction_site",
+      "planned_shot_scale_proof_detail": "raft parts visible on ground",
       "start_state_seed": "tin_woodman kneeling",
       "end_state_seed": "tin_woodman working",
-      "action_seed": "assembling logs",
+      "action_seed": "gathering wood/assembling",
       "blocking_seed": [
-        "tin_woodman at water's edge"
+        "kneeling by water"
       ],
       "shot_size": "medium",
       "camera_angle": "eye_level",
@@ -265,27 +262,27 @@
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "dusk",
-      "primary_subject_angle": "profile_right"
+      "primary_subject_angle": "profile_left"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT004",
-      "narrative_function": "emotional shift",
-      "planned_shot_moment_summary": "dorothy dreams of Emerald City",
+      "narrative_function": "emotional_beat",
+      "planned_shot_moment_summary": "dorothy falls asleep dreaming of Emerald City",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "toto"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "campsite_zone",
-      "planned_shot_required_anchor_1": "dorothy sleeping position",
-      "planned_shot_scale_proof_detail": "ethereal focus on face",
+      "environment_subzone": "campsite_interior",
+      "planned_shot_required_anchor_1": "dorothy_resting_spot",
+      "planned_shot_scale_proof_detail": "soft focus on face",
       "start_state_seed": "eyes closing",
       "end_state_seed": "dream state",
-      "action_seed": "sleeping peacefully",
+      "action_seed": "sleeping",
       "blocking_seed": [
-        "dorothy lying down"
+        "lying down in camp area"
       ],
       "shot_size": "close_up",
       "camera_angle": "eye_level",
@@ -360,16 +357,16 @@
     "[CH008] Chapter VIII (book index hit)",
     "[CH007] Chapter VII (book index hit)",
     "[CH012] Chapter XII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH007_SC004\n\n## Production Intent\nEstablish a transition from the dense forest to a riverine landscape. The sequence must visually communicate physical exhaustion through character staging and then pivot to emotional hope via the distant meadow view and Dorothy's dream state.\n\n## Required Cast\n- dorothy\n- toto\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n\n## Required Environments\n- swift_riverbank_and_meadow_view\n\n## Continuity Constraints\n- Incremental progress of the raft construction\n- Lighting transition from dusk to night\n\n## Beat List\n- BT001: Arrival at the riverbank\n- BT002: Settling and labor\n- BT003: Rest and transition to night\n- BT004: The dream state",
+  "storyboard_markdown": "# Scene Contract: CH007_SC004\n\n## Production Intent\nEstablish a transition from the dense forest to a river crossing point. The sequence must visually communicate physical exhaustion through character posture and lighting shifts, moving from dusk into night while introducing a sense of hope via the distant meadow view.\n\n## Required Cast\n- dorothy\n- toto\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n\n## Required Environments\n- swift_riverbank_and_meadow_view (Riverbank overlooking a beautiful meadow)\n\n## Continuity Constraints\n- Incremental progress of the raft construction\n- Lighting transition from dusk to night\n\n## Beat List\n- BT001: Arrival at the riverbank\n- BT002: Settling and labor\n- BT003: Night falls and rest\n- BT004: The Dream",
   "metadata": {
     "artifact_id": "CH007_SC004_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "c530ca7ed68b5268485b780462809cfd1f2a5b2b",
+    "source_fingerprint": "cf17af5b4794f70cbebfa2040eeefe0fb07f268c",
     "created_at_utc": "2026-04-27T08:18:53.506350+00:00",
-    "updated_at_utc": "2026-04-27T08:18:53.506350+00:00",
+    "updated_at_utc": "2026-04-27T13:20:42.627929+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -394,6 +391,11 @@
         "timestamp_utc": "2026-04-27T08:19:37.566224+00:00",
         "action": "synthesized",
         "source_fingerprint": "c530ca7ed68b5268485b780462809cfd1f2a5b2b"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:21:28.146402+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "cf17af5b4794f70cbebfa2040eeefe0fb07f268c"
       }
     ]
   }

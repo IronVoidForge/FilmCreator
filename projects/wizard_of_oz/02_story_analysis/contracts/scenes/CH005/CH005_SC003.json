@@ -5,34 +5,34 @@
   "purpose": "Resolve the immediate physical conflict (the rust) and expand the party.",
   "summary": "Dorothy finds an oil-can in the Woodman's cottage. She lubricates his joints, restoring his movement. The Woodman awakens and expresses his desire to seek Oz for a heart.",
   "emotional_arc": "From tension to relief and newfound companionship.",
-  "production_intent": "Resolve the physical immobilization of the Tin Woodman through lubrication, transitioning the group dynamic from a rescue mission to an expanding party.",
-  "scene_short_description": "A young girl lubricates a frozen metal man inside a forest cottage.",
+  "production_intent": "Resolve the physical immobilization of the Tin Woodman through lubrication, transitioning the group dynamic from a rescue mission to an expanded traveling party.",
+  "scene_short_description": "A weary girl finds an oil can to lubricate a frozen metal man in a forest cottage.",
   "scene_primary_scale_story_point": "Human scale interaction with mechanical/metal textures.",
   "scene_required_anchor_catalog": [
     "oil-can",
     "tin_woodman joints"
   ],
-  "scene_start_state": "tin_woodman is immobile and rusted within the cottage.",
-  "scene_end_state": "tin_woodman is mobile and joins dorothy and the_scarecrow.",
-  "dominant_action_line": "Dorothy applies oil to the Woodman's joints to restore movement.",
+  "scene_start_state": "tin_woodman is immobile and rusted within the cottage vicinity.",
+  "scene_end_state": "tin_woodman is mobile and joined with dorothy and the_scarecrow.",
+  "dominant_action_line": "Dorothy applies oil to the Tin Woodman's joints to restore movement.",
   "scene_spatial_layout": [
-    "Interior cottage setting with proximity to forest elements",
-    "Tight grouping around the immobile tin_woodman"
+    "tight cluster around the immobile tin_woodman",
+    "cottage interior/immediate threshold"
   ],
   "character_spatial_map": [
-    "dorothy positioned near tin_woodman's limbs",
-    "the_scarecrow observing from a medium distance",
-    "tin_woodman centered as the focal point of movement"
+    "dorothy positioned near tin_woodman joints",
+    "the_scarecrow observing from mid-ground",
+    "tin_woodman central and stationary"
   ],
   "environment_subzones": [
     "cottage_interior",
-    "cottage_threshold"
+    "forest_edge"
   ],
   "entry_vectors": [
-    "cottage_doorway"
+    "cottage entrance"
   ],
   "exit_vectors": [
-    "cottage_doorway toward forest"
+    "path toward Yellow Brick Road"
   ],
   "beat_transition_map": [
     "BT001 -> BT002: discovery to application",
@@ -83,11 +83,12 @@
     }
   ],
   "continuity_constraints": [
-    "Visible sheen or wetness of oil on tin surfaces"
+    "Visible sheen or wetness of oil on tin surfaces",
+    "Progression of joint movement from rigid to fluid"
   ],
   "visual_coverage_families": [
-    "Close-ups of oil application to joints",
-    "Medium shots of mechanical limb movement/jerking",
+    "Close-ups of oil application to mechanical joints",
+    "Medium shots of jerking limb movements during restoration",
     "Reaction shots of dorothy and the_scarecrow"
   ],
   "beat_list": [
@@ -105,19 +106,19 @@
         "tin_woodman"
       ],
       "spatial_context": "cottage_interior",
-      "blocking_hint": "dorothy moving between furniture/objects",
+      "blocking_hint": "dorothy moves toward objects near tin_woodman",
       "environment_subzone": "cottage_interior",
       "continuity_focus": "oil-can appearance",
-      "coverage_hint": "medium shot of dorothy",
+      "coverage_hint": "medium shots of dorothy",
       "coverage_priority": "medium",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "lubrication and restoration",
+      "summary": "lubrication process",
       "purpose": "",
-      "action_start": "oil applied to joints",
-      "action_end": "limbs jerking into life",
+      "action_start": "oil touches metal",
+      "action_end": "limbs begin to move",
       "active_subjects": [
         "dorothy",
         "tin_woodman"
@@ -125,31 +126,31 @@
       "passive_subjects": [
         "the_scarecrow"
       ],
-      "spatial_context": "proximal to tin_woodman limbs",
-      "blocking_hint": "dorothy kneeling/leaning over tin_woodman",
+      "spatial_context": "immediate vicinity of tin_woodman",
+      "blocking_hint": "dorothy kneeling at the joints",
       "environment_subzone": "cottage_interior",
-      "continuity_focus": "oil sheen on metal surfaces",
-      "coverage_hint": "close-ups of joints and mechanical movement",
+      "continuity_focus": "oil sheen/wetness on metal",
+      "coverage_hint": "close-ups of joints and oil application",
       "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "verbal resolution and companionship",
+      "summary": "awakening and intent",
       "purpose": "",
-      "action_start": "tin_woodman awakens",
-      "action_end": "group intent established",
+      "action_start": "tin_woodman moves limbs",
+      "action_end": "tin_woodman expresses desire for a heart",
       "active_subjects": [
         "tin_woodman",
         "dorothy",
         "the_scarecrow"
       ],
       "passive_subjects": [],
-      "spatial_context": "cottage center",
-      "blocking_hint": "characters facing each other in a loose circle",
+      "spatial_context": "cottage_interior/forest_edge",
+      "blocking_hint": "characters forming a group circle",
       "environment_subzone": "cottage_interior",
-      "continuity_focus": "movement fluidity",
-      "coverage_hint": "reaction shots and medium group shot",
+      "continuity_focus": "fluidity of movement",
+      "coverage_hint": "reaction shots and medium shots",
       "coverage_priority": "medium",
       "handoff_to_next": "end_of_scene"
     }
@@ -158,7 +159,7 @@
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish_discovery",
+      "narrative_function": "establish discovery",
       "planned_shot_moment_summary": "dorothy finds the oil-can",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
@@ -168,12 +169,12 @@
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "cottage_interior",
       "planned_shot_required_anchor_1": "oil-can",
-      "planned_shot_scale_proof_detail": "handheld size vs cottage objects",
-      "start_state_seed": "dorothy searching",
-      "end_state_seed": "dorothy holding oil-can",
-      "action_seed": "searching and finding",
+      "planned_shot_scale_proof_detail": "handheld size of can vs dorothy",
+      "start_state_seed": "searching cottage",
+      "end_state_seed": "holding oil-can",
+      "action_seed": "dorothy lifts the object",
       "blocking_seed": [
-        "dorothy moving through cottage interior"
+        "dorothy moving through cottage space"
       ],
       "shot_size": "medium_close",
       "camera_angle": "eye_level",
@@ -187,8 +188,8 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "mechanical_resolution",
-      "planned_shot_moment_summary": "oil hitting the rusted joints",
+      "narrative_function": "show mechanical restoration",
+      "planned_shot_moment_summary": "oil hits the rusted joints",
       "primary_subject_seed": "tin_woodman",
       "secondary_subjects_seed": [
         "dorothy"
@@ -197,10 +198,10 @@
       "narration_mode": "none",
       "environment_subzone": "cottage_interior",
       "planned_shot_required_anchor_1": "tin_woodman joints",
-      "planned_shot_scale_proof_detail": "visceral texture of oil on metal",
+      "planned_shot_scale_proof_detail": "viscous liquid on metal surface",
       "start_state_seed": "static rusted limb",
       "end_state_seed": "jerking moving limb",
-      "action_seed": "lubricating and movement returning",
+      "action_seed": "oil being applied to joints",
       "blocking_seed": [
         "dorothy kneeling by tin_woodman"
       ],
@@ -209,15 +210,15 @@
       "lens_family": "macro",
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
+      "focus_strategy": "shallow_subject",
       "lighting_style": "hard_directional",
       "primary_subject_angle": "profile_right"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "character_expansion",
-      "planned_shot_moment_summary": "tin_woodman expresses desire for a heart",
+      "narrative_function": "character resolution",
+      "planned_shot_moment_summary": "tin_woodman speaks of his desire for a heart",
       "primary_subject_seed": "tin_woodman",
       "secondary_subjects_seed": [
         "dorothy",
@@ -226,22 +227,22 @@
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "cottage_interior",
-      "planned_shot_required_anchor_1": "tin_woodman torso",
-      "planned_shot_scale_proof_detail": "grouping of three characters",
-      "start_state_seed": "tin_woodman awakening",
-      "end_state_seed": "tin_woodman speaking",
-      "action_seed": "speaking and moving",
+      "planned_shot_required_anchor_1": "tin_woodman head",
+      "planned_shot_scale_proof_detail": "eye level contact between characters",
+      "start_state_seed": "awakening movement",
+      "end_state_seed": "resolved expression",
+      "action_seed": "tin_woodman articulates his goal",
       "blocking_seed": [
-        "trio gathered in cottage center"
+        "tin_woodman sitting up/moving limbs"
       ],
-      "shot_size": "medium_full",
+      "shot_size": "medium",
       "camera_angle": "eye_level",
-      "lens_family": "wide",
-      "camera_motion": "pan",
+      "lens_family": "portrait",
+      "camera_motion": "subtle_in",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "soft_even",
-      "primary_subject_angle": "front"
+      "primary_subject_angle": "front_three_quarter_right"
     }
   ],
   "unresolved_questions": [],
@@ -307,16 +308,16 @@
     "[CH005] Chapter V (book index hit)",
     "[CH011] Chapter XI (book index hit)",
     "[CH023] Chapter XXIII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH005_SC003\n\n## Production Intent\nResolve the physical immobilization of the Tin Woodman through lubrication, transitioning the group dynamic from a rescue mission to an expanding party.\n\n## Required Cast\n- dorothy (young girl, white clothing)\n- the_scarecrow\n- tin_woodman (metal/tin construction)\n\n## Required Environments\n- forest_and_cottage_setting (specifically cottage_interior)\n\n## Continuity Constraints\n- The \"wetness\" or sheen of the oil on the tin surfaces must be consistent during lubrication and subsequent movement.\n\n## Beat List\n- BT001: discovery of the oil-can\n- BT002: lubrication and restoration of mechanical movement\n- BT003: verbal resolution and establishment of companionship",
+  "storyboard_markdown": "# Scene Contract: CH005_SC003\n\n## Production Intent\nResolve the physical immobilization of the Tin Woodman through lubrication, transitioning the group dynamic from a rescue mission to an expanded traveling party.\n\n## Required Cast\n- dorothy (young human girl, weary traveler, white dress)\n- the_scarecrow (companion)\n- tin_woodman (metal/tin character, initially rusted/immobile)\n\n## Required Environments\n- forest_and_cottage_setting (specifically cottage_interior)\n\n## Continuity Constraints\n- The \"wetness\" or sheen of the oil on the tin surfaces must be consistent during application and movement.\n- Mechanical movement must transition from jerking/staccato to fluid as lubrication progresses.\n\n## Beat List\n- BT001: Discovery of the oil-can in the cottage.\n- BT002: Application of oil to the Tin Woodman's joints and restoration of movement.\n- BT003: The Tin Woodman awakens and declares his quest for a heart.",
   "metadata": {
     "artifact_id": "CH005_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "f18d7d415e25ed3a84ae6203094ea555ba434526",
+    "source_fingerprint": "184a0dd229b5d59d2f00f419d978588f779f535f",
     "created_at_utc": "2026-04-27T08:11:27.760554+00:00",
-    "updated_at_utc": "2026-04-27T08:11:27.760554+00:00",
+    "updated_at_utc": "2026-04-27T13:13:18.749337+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -341,6 +342,11 @@
         "timestamp_utc": "2026-04-27T08:12:08.241319+00:00",
         "action": "synthesized",
         "source_fingerprint": "f18d7d415e25ed3a84ae6203094ea555ba434526"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:14:02.128059+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "184a0dd229b5d59d2f00f419d978588f779f535f"
       }
     ]
   }

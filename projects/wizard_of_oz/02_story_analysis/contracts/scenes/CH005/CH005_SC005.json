@@ -5,36 +5,36 @@
   "purpose": "Establish the internal group dynamic and thematic conflict.",
   "summary": "A debate breaks out between the Scarecrow (who wants brains) and the Woodman (who wants a heart). Dorothy remains caught in the middle, distracted by the practical worry of their dwindling food supplies.",
   "emotional_arc": "From philosophical debate to grounded anxiety.",
-  "production_intent": "Establish the internal group dynamic and thematic conflict through a walking debate. The tension shifts from abstract philosophical desires to immediate survival concerns, using character proximity to signal emotional cohesion or isolation.",
-  "scene_short_description": "Three travelers walk along a yellow path debating abstract needs while food supplies dwindle.",
-  "scene_primary_scale_story_point": "Character hierarchy shifts from intellectual debate to practical survival dominance.",
+  "production_intent": "Establish the internal group dynamic and thematic conflict through a walking debate. The tension shifts from abstract philosophical desires to immediate survival anxiety, using the physical movement along the road to define character relationships.",
+  "scene_short_description": "Three travelers walk along a yellow path while debating abstract needs and food supplies.",
+  "scene_primary_scale_story_point": "The group is centered on the width of the yellow brick road.",
   "scene_required_anchor_catalog": [
     "yellow_brick_road"
   ],
-  "scene_start_state": "The trio walks in a loose formation along the road, engaged in discussion.",
-  "scene_end_state": "Dorothy is visually separated by her preoccupation with food supplies.",
-  "dominant_action_line": "A walking debate regarding brains and hearts transitions into a worry over food.",
+  "scene_start_state": "Characters walking in a loose line, engaged in philosophical discussion.",
+  "scene_end_state": "Group movement continues but with an atmosphere of practical worry and tension.",
+  "dominant_action_line": "A debate over brains versus hearts transitions into a concern for food.",
   "scene_spatial_layout": [
-    "Linear progression along yellow_brick_road",
-    "Variable spacing between characters to reflect engagement levels"
+    "Linear progression along the yellow_brick_road",
+    "Characters spaced at walking intervals"
   ],
   "character_spatial_map": [
-    "the_scarecrow and tin_woodman positioned in active dialogue proximity",
-    "dorothy positioned slightly offset or trailing, visually isolated by her focus"
+    "the_scarecrow and tin_woodman positioned as debating poles",
+    "dorothy positioned in the center/gap between them"
   ],
   "environment_subzones": [
     "yellow_brick_road path",
-    "road periphery"
+    "road shoulders"
   ],
   "entry_vectors": [
-    "walking forward along yellow_brick_road"
+    "forward along yellow_brick_road"
   ],
   "exit_vectors": [
-    "walking forward along yellow_brick_road"
+    "forward along yellow_brick_road"
   ],
   "beat_transition_map": [
     "BT001 -> BT002: Shift from Scarecrow's desire to Woodman's rebuttal",
-    "BT002 -> BT003: Shift from philosophical debate to Dorothy's practical anxiety"
+    "BT002 -> BT003: Shift from philosophical debate to Dorothy's practical interruption"
   ],
   "characters_required": [
     {
@@ -81,7 +81,7 @@
     }
   ],
   "continuity_constraints": [
-    "Physical distance between travelers must remain consistent with walking pace"
+    "Physical distance between travelers must remain consistent during walking dialogue"
   ],
   "visual_coverage_families": [
     "Over-the-shoulder shots during the debate",
@@ -91,10 +91,10 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "the_scarecrow advocates for brains",
+      "summary": "Scarecrow advocates for brains",
       "purpose": "",
-      "action_start": "walking discussion",
-      "action_end": "the_scarecrow finishes point",
+      "action_start": "walking_debate",
+      "action_end": "scarecrow_finishes_point",
       "active_subjects": [
         "the_scarecrow"
       ],
@@ -103,40 +103,40 @@
         "dorothy"
       ],
       "spatial_context": "yellow_brick_road",
-      "blocking_hint": "the_scarecrow leads or walks central",
+      "blocking_hint": "scarecrow_leading_or_side-by-side",
       "environment_subzone": "yellow_brick_road",
-      "continuity_focus": "walking pace and spacing",
-      "coverage_hint": "medium_full",
-      "coverage_priority": "high",
+      "continuity_focus": "walking_cadence",
+      "coverage_hint": "over_the_shoulder",
+      "coverage_priority": "medium",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "tin_woodman advocates for a heart",
+      "summary": "Woodman advocates for a heart",
       "purpose": "",
-      "action_start": "rebuttal begins",
-      "action_end": "debate reaches peak tension",
+      "action_start": "woodman_interrupts",
+      "action_end": "debate_reaches_peak",
       "active_subjects": [
-        "tin_woodman",
-        "the_scarecrow"
+        "tin_woodman"
       ],
       "passive_subjects": [
+        "the_scarecrow",
         "dorothy"
       ],
       "spatial_context": "yellow_brick_road",
-      "blocking_hint": "the_scarecrow and tin_woodman move closer for debate",
+      "blocking_hint": "woodman_facing_scarecrow",
       "environment_subzone": "yellow_brick_road",
-      "continuity_focus": "physical distance between debaters",
-      "coverage_hint": "over-the-shoulder/close-ups",
-      "coverage_priority": "medium",
+      "continuity_focus": "walking_cadence",
+      "coverage_hint": "close_ups",
+      "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "dorothy shifts focus to food supplies",
+      "summary": "Dorothy shifts focus to food supplies",
       "purpose": "",
-      "action_start": "dorothy interrupts or drifts",
-      "action_end": "group continues walking with new tension",
+      "action_start": "dorothy_speaks_up",
+      "action_end": "group_silence_or_anxiety",
       "active_subjects": [
         "dorothy"
       ],
@@ -145,10 +145,10 @@
         "tin_woodman"
       ],
       "spatial_context": "yellow_brick_road",
-      "blocking_hint": "dorothy pulls away visually from the debate",
+      "blocking_hint": "dorothy_in_middle_looking_away",
       "environment_subzone": "yellow_brick_road",
-      "continuity_focus": "dorothy's isolation distance",
-      "coverage_hint": "medium shot",
+      "continuity_focus": "walking_cadence",
+      "coverage_hint": "medium_shot_isolation",
       "coverage_priority": "high",
       "handoff_to_next": "end_of_scene"
     }
@@ -157,8 +157,8 @@
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish group dynamic",
-      "planned_shot_moment_summary": "the_scarecrow expresses desire for brains",
+      "narrative_function": "establish_conflict",
+      "planned_shot_moment_summary": "the_scarecrow_argues_for_brains",
       "primary_subject_seed": "the_scarecrow",
       "secondary_subjects_seed": [
         "tin_woodman",
@@ -168,12 +168,12 @@
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "yellow_brick_road",
       "planned_shot_required_anchor_1": "yellow_brick_road",
-      "planned_shot_scale_proof_detail": "character spacing relative to road width",
-      "start_state_seed": "walking group shot",
-      "end_state_seed": "close on the_scarecrow",
-      "action_seed": "the_scarecrow speaking while walking",
+      "planned_shot_scale_proof_detail": "character_height_vs_road_width",
+      "start_state_seed": "walking_formation",
+      "end_state_seed": "walking_formation",
+      "action_seed": "the_scarecrow_gestures_while_walking",
       "blocking_seed": [
-        "linear walk"
+        "linear_walk"
       ],
       "shot_size": "medium_full",
       "camera_angle": "eye_level",
@@ -182,27 +182,28 @@
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front_three_quarter_right"
+      "primary_subject_angle": "front_three_quarter_left"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "establish conflict",
-      "planned_shot_moment_summary": "tin_woodman counters with desire for a heart",
+      "narrative_function": "establish_conflict",
+      "planned_shot_moment_summary": "tin_woodman_argues_for_heart",
       "primary_subject_seed": "tin_woodman",
       "secondary_subjects_seed": [
-        "the_scarecrow"
+        "the_scarecrow",
+        "dorothy"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "yellow_brick_road",
       "planned_shot_required_anchor_1": "yellow_brick_road",
-      "planned_shot_scale_proof_detail": "eye level height of tin_woodman vs the_scarecrow",
-      "start_state_seed": "close on the_scarecrow",
-      "end_state_seed": "over-the-shoulder on tin_woodman",
-      "action_seed": "tin_woodman debating",
+      "planned_shot_scale_proof_detail": "character_height_vs_road_width",
+      "start_state_seed": "walking_formation",
+      "end_state_seed": "walking_formation",
+      "action_seed": "tin_woodman_responds_with_conviction",
       "blocking_seed": [
-        "walking side-by-side"
+        "linear_walk"
       ],
       "shot_size": "close_up",
       "camera_angle": "eye_level",
@@ -211,13 +212,13 @@
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "profile_left"
+      "primary_subject_angle": "front_three_quarter_right"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "establish emotional shift",
-      "planned_shot_moment_summary": "dorothy worries about food supplies",
+      "narrative_function": "shift_tone",
+      "planned_shot_moment_summary": "dorothy_expresses_food_worry",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "the_scarecrow",
@@ -227,21 +228,21 @@
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "yellow_brick_road",
       "planned_shot_required_anchor_1": "yellow_brick_road",
-      "planned_shot_scale_proof_detail": "dorothy's distance from the debaters",
-      "start_state_seed": "medium shot of group",
-      "end_state_seed": "medium shot on dorothy",
-      "action_seed": "dorothy looking distracted and anxious",
+      "planned_shot_scale_proof_detail": "character_height_vs_road_width",
+      "start_state_seed": "walking_formation",
+      "end_state_seed": "walking_formation",
+      "action_seed": "dorothy_looks_distracted_and_worried",
       "blocking_seed": [
-        "dorothy trailing or offset"
+        "linear_walk"
       ],
       "shot_size": "medium",
       "camera_angle": "eye_level",
       "lens_family": "normal",
       "camera_motion": "track",
-      "zoom_behavior": "subtle_in",
+      "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front_three_quarter_left"
+      "primary_subject_angle": "front"
     }
   ],
   "unresolved_questions": [],
@@ -307,16 +308,16 @@
     "[CH005] Chapter V (book index hit)",
     "[CH008] Chapter VIII (book index hit)",
     "[CH014] Chapter XIV (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH005_SC005\n\n## Production Intent\nEstablish the internal group dynamic and thematic conflict through a walking debate. The tension shifts from abstract philosophical desires to immediate survival concerns, using character proximity to signal emotional cohesion or isolation.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- the_scarecrow\n- tin_woodman\n\n## Required Environments\n- yellow_brick_road\n\n## Continuity Constraints\n- Physical distance between travelers must remain consistent with walking pace\n\n## Beat List\n- BT001: the_scarecrow advocates for brains\n- BT002: tin_woodman advocates for a heart\n- BT003: dorothy shifts focus to food supplies",
+  "storyboard_markdown": "# Scene Contract: CH005_SC005\n\n## Production Intent\nEstablish the internal group dynamic and thematic conflict through a walking debate. The tension shifts from abstract philosophical desires to immediate survival anxiety, using the physical movement along the road to define character relationships.\n\n## Required Cast\n- dorothy (weary traveler, expressive face)\n- the_scarecrow (seeking brains)\n- tin_woodman (seeking heart)\n\n## Required Environments\n- yellow_brick_road\n\n## Continuity Constraints\n- Physical distance between travelers must remain consistent during walking dialogue.\n\n## Beat List\n- BT001: Scarecrow advocates for brains.\n- BT002: Woodman advocates for a heart.\n- BT003: Dorothy shifts focus to food supplies.",
   "metadata": {
     "artifact_id": "CH005_SC005_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "163aaaa6c3dd0179439b2e589a6d68b1ddad5c2c",
+    "source_fingerprint": "63ee85041302916f0f35a7f2542b564f3aad531a",
     "created_at_utc": "2026-04-27T08:12:48.349527+00:00",
-    "updated_at_utc": "2026-04-27T08:12:48.349527+00:00",
+    "updated_at_utc": "2026-04-27T13:14:41.541629+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -341,6 +342,11 @@
         "timestamp_utc": "2026-04-27T08:13:30.220845+00:00",
         "action": "synthesized",
         "source_fingerprint": "163aaaa6c3dd0179439b2e589a6d68b1ddad5c2c"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:15:24.096064+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "63ee85041302916f0f35a7f2542b564f3aad531a"
       }
     ]
   }

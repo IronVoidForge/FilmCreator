@@ -5,40 +5,39 @@
   "purpose": "Introduce the first physical obstacle and showcase the Lion's unexpected utility.",
   "summary": "The group encounters a wide, deep chasm. The Cowardly Lion overcomes his fear to leap across the gap, acting as a ferry by carrying each companion on his back one by one.",
   "emotional_arc": "Anxiety $\\rightarrow$ Relief/Awe.",
-  "production_intent": "Establish the physical scale of the forest obstacle through low-angle perspectives and demonstrate the cowardly_lion's transition from fear to utility via a series of repetitive ferry leaps.",
-  "scene_short_description": "A group encounters a wide deep chasm in a dense forest requiring a ferry crossing.",
+  "production_intent": "Establish the physical scale of the forest chasm to create tension, then pivot to a display of character competence through the cowardly lion's leap-and-ferry sequence.",
+  "scene_short_description": "A group of travelers confronts a wide, deep forest chasm before crossing via a leaping lion.",
   "scene_primary_scale_story_point": "The vertical depth of the ditch relative to character height.",
   "scene_required_anchor_catalog": [
-    "Chasm edge",
-    "Far side landing zone"
+    "Chasm edge (near side)",
+    "Chasm edge (far side)"
   ],
-  "scene_start_state": "Group standing at the precipice of a wide deep ditch looking down in anxiety.",
-  "scene_end_state": "Entire group assembled on the far side of the chasm after the final leap.",
-  "dominant_action_line": "The cowardly_lion leaps across the gap repeatedly to carry companions one by one.",
+  "scene_start_state": "Group stands at the precipice of a wide, deep forest ditch looking across in anxiety.",
+  "scene_end_state": "The entire group is reunited on the far side of the chasm.",
+  "dominant_action_line": "The cowardly_lion leaps across the gap and carries each companion back and forth one by one.",
   "scene_spatial_layout": [
     "Linear progression from near edge to far edge via jumping",
-    "Vertical separation between ditch floor and forest floor"
+    "Chasm acts as a central dividing void"
   ],
   "character_spatial_map": [
-    "Group clustered at near edge during initial hesitation",
-    "cowardly_lion moving between edges in transit",
-    "characters staggered on far side as they arrive"
+    "dorothy, the_scarecrow, tin_woodman, toto at near edge initially",
+    "cowardly_lion moving between edges"
   ],
   "environment_subzones": [
-    "arizona_dense_forest_and_ditches_near_edge",
-    "arizona_dense_forest_and_ditches_chasm_floor",
-    "arizona_dense_forest_and_ditches_far_edge"
+    "near_edge_rim",
+    "chasm_void",
+    "far_edge_rim"
   ],
   "entry_vectors": [
-    "forest path leading to near edge"
+    "approach from forest toward near_edge_rim"
   ],
   "exit_vectors": [
-    "forest path leading away from far edge"
+    "departure from far_edge_rim into deep forest"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Physical leap across the void",
-    "BT002 -> BT003: Return trip for next passenger",
-    "BT003 -> BT004: Final crossing completion"
+    "BT001 -> BT002: realization of the obstacle",
+    "BT002 -> BT003: first successful leap",
+    "BT003 -> BT004: repetitive ferry cycle"
   ],
   "characters_required": [
     {
@@ -105,8 +104,8 @@
     }
   ],
   "continuity_constraints": [
-    "Chasm depth and width consistency across all leap cycles",
-    "Sequential order of character transport (Dorothy, Scarecrow, Tin Woodman)"
+    "Chasm width and depth must remain constant across all leap sequences",
+    "Character ferry order must be strictly maintained for logical progression"
   ],
   "visual_coverage_families": [
     "Low-angle shots of the deep ditch to emphasize scale",
@@ -116,101 +115,78 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Discovery of the chasm",
+      "summary": "Encountering the chasm",
       "purpose": "",
-      "action_start": "group approaches edge",
-      "action_end": "group stops at precipice",
+      "action_start": "group walking through forest",
+      "action_end": "group stopping at edge",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
         "tin_woodman",
-        "cowardly_lion"
-      ],
-      "passive_subjects": [
+        "cowardly_lion",
         "toto"
       ],
-      "spatial_context": "near edge of ditch",
-      "blocking_hint": "characters lined up facing the void",
-      "environment_subzone": "arizona_dense_forest_and_ditches_near_edge",
+      "passive_subjects": [],
+      "spatial_context": "near_edge_rim",
+      "blocking_hint": "characters clustered at the rim looking down",
+      "environment_subzone": "near_edge_rim",
       "continuity_focus": "chasm width visibility",
-      "coverage_hint": "low-angle scale shots",
+      "coverage_hint": "wide reaction shots",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "The first ferry leap",
+      "summary": "Assessing the gap",
       "purpose": "",
-      "action_start": "lion prepares to jump",
-      "action_end": "lion lands on far side with passenger",
+      "action_start": "group staring in silence",
+      "action_end": "lion preparing to move",
       "active_subjects": [
-        "cowardly_lion",
-        "dorothy"
+        "cowardly_lion"
       ],
       "passive_subjects": [
+        "dorothy",
         "the_scarecrow",
-        "tin_woodman"
+        "tin_woodman",
+        "toto"
       ],
-      "spatial_context": "crossing the chasm",
-      "blocking_hint": "lion carries dorothy on back",
-      "environment_subzone": "arizona_dense_forest_and_ditches_chasm_floor",
-      "continuity_focus": "order of characters",
-      "coverage_hint": "dynamic tracking shots",
-      "coverage_priority": "high",
+      "spatial_context": "near_edge_rim",
+      "blocking_hint": "characters looking at lion for leadership",
+      "environment_subzone": "near_edge_rim",
+      "continuity_focus": "character anxiety levels",
+      "coverage_hint": "close-ups of faces",
+      "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "The return and subsequent leaps",
+      "summary": "The first leap and ferry cycle",
       "purpose": "",
-      "action_start": "lion jumps back to near side",
-      "action_end": "all companions moved to far side",
+      "action_start": "lion running toward edge",
+      "action_end": "all characters on far side",
       "active_subjects": [
         "cowardly_lion",
-        "the_scarecrow",
-        "tin_woodman"
-      ],
-      "passive_subjects": [
-        "dorothy"
-      ],
-      "spatial_context": "repetitive transit between edges",
-      "blocking_hint": "characters waiting at respective edges",
-      "environment_subzone": "arizona_dense_forest_and_ditches_near_edge",
-      "continuity_focus": "character count on far side vs near side",
-      "coverage_hint": "reaction shots and tracking leaps",
-      "coverage_priority": "medium",
-      "handoff_to_next": "BT004"
-    },
-    {
-      "beat_id": "BT004",
-      "summary": "Group reunion",
-      "purpose": "",
-      "action_start": "final character lands on far side",
-      "action_end": "group stands together on far edge",
-      "active_subjects": [
         "dorothy",
         "the_scarecrow",
         "tin_woodman",
-        "cowardly_lion"
-      ],
-      "passive_subjects": [
         "toto"
       ],
-      "spatial_context": "far edge of ditch",
-      "blocking_hint": "group gathers away from edge",
-      "environment_subzone": "arizona_dense_forest_and_ditches_far_edge",
-      "continuity_focus": "all characters present",
-      "coverage_hint": "reaction shots",
-      "coverage_priority": "low",
-      "handoff_to_next": "none"
+      "passive_subjects": [],
+      "spatial_context": "chasm_void to far_edge_rim",
+      "blocking_hint": "lion jumping back and forth carrying passengers",
+      "environment_subzone": "chasm_void",
+      "continuity_focus": "order of characters carried",
+      "coverage_hint": "dynamic tracking shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT004"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish scale",
-      "planned_shot_moment_summary": "group stares into the deep ditch",
+      "narrative_function": "establish obstacle",
+      "planned_shot_moment_summary": "group stares into the void",
       "primary_subject_seed": "the_scarecrow",
       "secondary_subjects_seed": [
         "dorothy",
@@ -219,19 +195,19 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "arizona_dense_forest_and_ditches_near_edge",
-      "planned_shot_required_anchor_1": "chasm_edge",
+      "environment_subzone": "near_edge_rim",
+      "planned_shot_required_anchor_1": "chasm_edge_near",
       "planned_shot_scale_proof_detail": "low-angle view of ditch depth",
-      "start_state_seed": "group at edge",
-      "end_state_seed": "group looking down",
-      "action_seed": "hesitation and anxiety",
+      "start_state_seed": "group approaching edge",
+      "end_state_seed": "group frozen at edge",
+      "action_seed": "looking down into chasm",
       "blocking_seed": [
-        "tight cluster at edge"
+        "line at rim"
       ],
       "shot_size": "wide",
       "camera_angle": "low_angle",
       "lens_family": "ultra_wide",
-      "camera_motion": "pan",
+      "camera_motion": "push_in",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
@@ -239,21 +215,21 @@
     },
     {
       "planned_shot_id": "SH002",
-      "beat_id": "BT002",
+      "beat_id": "BT003",
       "narrative_function": "showcase utility",
-      "planned_shot_moment_summary": "lion leaps with passenger on back",
+      "planned_shot_moment_summary": "lion leaps across the gap",
       "primary_subject_seed": "cowardly_lion",
       "secondary_subjects_seed": [
         "dorothy"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "arizona_dense_forest_and_ditches_chasm_floor",
-      "planned_shot_required_anchor_1": "chasm_edge",
-      "planned_shot_scale_proof_detail": "distance of leap vs ditch width",
-      "start_state_seed": "near edge jump",
-      "end_state_seed": "far edge landing",
-      "action_seed": "leaping across gap",
+      "environment_subzone": "chasm_void",
+      "planned_shot_required_anchor_1": "chasm_edge_far",
+      "planned_shot_scale_proof_detail": "distance between edges",
+      "start_state_seed": "lion at near edge",
+      "end_state_seed": "lion landing on far edge",
+      "action_seed": "leaping across void",
       "blocking_seed": [
         "mid-air trajectory"
       ],
@@ -330,16 +306,16 @@
     "[CH007] Chapter VII (book index hit)",
     "[CH006] Chapter VI (book index hit)",
     "[CH009] Chapter IX (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH007_SC002\n\n## Production Intent\nEstablish the physical scale of the forest obstacle through low-angle perspectives and demonstrate the cowardly_lion's transition from fear to utility via a series of repetitive ferry leaps.\n\n## Required Cast\n- dorothy\n- toto\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n\n## Required Environments\n- arizona_dense_forest_and_ditches\n\n## Continuity Constraints\n- Chasm depth and width consistency across all leap cycles\n- Sequential order of character transport (Dorothy, Scarecrow, Tin Woodman)\n\n## Beat List\n- BT001: Discovery of the chasm\n- BT002: The first ferry leap\n- BT003: The return and subsequent leaps\n- BT004: Group reunion",
+  "storyboard_markdown": "# Scene Contract: CH007_SC002\n\n## Production Intent\nEstablish the physical scale of the forest chasm to create tension, then pivot to a display of character competence through the cowardly lion's leap-and-ferry sequence.\n\n## Required Cast\n- dorothy\n- toto\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n\n## Required Environments\n- arizona_dense_forest_and_ditches (specifically near_edge_rim, chasm_void, far_edge_rim)\n\n## Continuity Constraints\n- Chasm width and depth must remain constant across all leap sequences.\n- Character ferry order must be strictly maintained for logical progression.\n\n## Beat List\n- BT001: Encountering the chasm.\n- BT002: Assessing the gap.\n- BT003: The first leap and ferry cycle.",
   "metadata": {
     "artifact_id": "CH007_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "d03a4e869cfdc6eb4bdfd97a612bd0f1e9bdcaf3",
+    "source_fingerprint": "7781a9387e74c954c7fb8804eb7cd2047d43863f",
     "created_at_utc": "2026-04-27T08:17:14.446634+00:00",
-    "updated_at_utc": "2026-04-27T08:17:14.446634+00:00",
+    "updated_at_utc": "2026-04-27T13:19:10.570336+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -364,6 +340,11 @@
         "timestamp_utc": "2026-04-27T08:17:57.725285+00:00",
         "action": "synthesized",
         "source_fingerprint": "d03a4e869cfdc6eb4bdfd97a612bd0f1e9bdcaf3"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:19:49.729568+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "7781a9387e74c954c7fb8804eb7cd2047d43863f"
       }
     ]
   }

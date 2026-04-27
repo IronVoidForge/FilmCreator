@@ -5,37 +5,37 @@
   "purpose": "Introduce the Lion as a physical threat and establish the group's vulnerability.",
   "summary": "While traveling through the dark, obscured forest, the group is suddenly ambushed by a large Lion. The beast attacks the Scarecrow and the Tin Woodman, creating immediate chaos.",
   "emotional_arc": "Calm/Travel $\\rightarrow$ Terror/Chaos.",
-  "production_intent": "Establish the physical dominance of the cowardly_lion through a sudden ambush within the thick_dark_forest. The sequence must transition from a rhythmic travel pace to high-intensity chaos, utilizing handheld movement and low angles to emphasize the scale difference between the predator and the group.",
-  "scene_short_description": "A group travels through a dark, debris-strewn forest before being ambushed by a large predator.",
-  "scene_primary_scale_story_point": "The predatory scale of the cowardly_lion relative to the human and construct characters.",
+  "production_intent": "Establish the thick_dark_forest as a claustrophobic and dangerous environment through an ambush. The sequence must transition from steady travel to high-intensity chaos, using the cowardly_lion to disrupt the group's formation and emphasize their physical vulnerability.",
+  "scene_short_description": "A group travels through a dark forest before being ambushed by a large predator.",
+  "scene_primary_scale_story_point": "The predatory scale of the cowardly_lion relative to the traveling group.",
   "scene_required_anchor_catalog": [
     "yellow_brick_road",
-    "dried branches/dead leaves"
+    "dried branches and dead leaves"
   ],
-  "scene_start_state": "The group moves steadily through the thick_dark_forest along the partially obscured yellow_brick_road.",
+  "scene_start_state": "Group walking steadily along the partially obscured yellow_brick_road in low light.",
   "scene_end_state": "Immediate chaos following a direct attack on the_scarecrow and tin_woodman.",
-  "dominant_action_line": "A sudden ambush by the cowardly_lion disrupts the group's travel.",
+  "dominant_action_line": "The cowardly_lion charges from the thick_dark_forest to attack the group members.",
   "scene_spatial_layout": [
-    "Group follows the path of the yellow_brick_road through dense foliage.",
-    "The cowardly_lion enters from the thicket/off-path."
+    "Group follows the line of the yellow_brick_road",
+    "Forest density limits sightlines beyond the immediate path"
   ],
   "character_spatial_map": [
-    "dorothy and toto lead or follow within the central group cluster.",
-    "the_scarecrow and tin_woodman are positioned as primary targets for the initial charge."
+    "dorothy and toto lead or follow within the central cluster",
+    "the_scarecrow and tin_woodman positioned as primary targets for the charge"
   ],
   "environment_subzones": [
     "yellow_brick_road (partially obscured)",
-    "thick_dark_forest (dense foliage/debris)"
+    "thick_dark_forest (dense foliage/branches)"
   ],
   "entry_vectors": [
-    "cowardly_lion enters from forest periphery toward the road."
+    "cowardly_lion enters from the thick_dark_forest into the road path"
   ],
   "exit_vectors": [
-    "none established in this scene."
+    "none specified"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Sudden auditory or visual trigger of predator presence.",
-    "BT002 -> BT003: Physical impact/charge of the cowardly_lion."
+    "BT001 -> BT002: Sudden auditory or visual trigger of predator presence",
+    "BT002 -> BT003: Physical impact/charge of the cowardly_lion"
   ],
   "characters_required": [
     {
@@ -112,8 +112,8 @@
     }
   ],
   "continuity_constraints": [
-    "Position of the group relative to the obscured yellow_brick_road",
-    "Direction of the cowardly_lion charge"
+    "Position of the group relative to the yellow_brick_road",
+    "Direction of the cowardly_lion's charge"
   ],
   "visual_coverage_families": [
     "Wide shots of the dense forest environment",
@@ -126,7 +126,7 @@
       "beat_id": "BT001",
       "summary": "Group travels through the forest",
       "purpose": "",
-      "action_start": "steady walking rhythm",
+      "action_start": "steady walking",
       "action_end": "walking continues",
       "active_subjects": [
         "dorothy",
@@ -135,10 +135,10 @@
         "toto"
       ],
       "passive_subjects": [],
-      "spatial_context": "along yellow_brick_road in thick_dark_forest",
-      "blocking_hint": "linear group formation",
+      "spatial_context": "yellow_brick_road within thick_dark_forest",
+      "blocking_hint": "linear formation along road",
       "environment_subzone": "yellow_brick_road",
-      "continuity_focus": "group position relative to road debris",
+      "continuity_focus": "group position relative to road visibility",
       "coverage_hint": "wide shots of forest",
       "coverage_priority": "medium",
       "handoff_to_next": "BT002"
@@ -148,7 +148,7 @@
       "summary": "The predator is sensed/revealed",
       "purpose": "",
       "action_start": "sudden movement in brush",
-      "action_end": "lion enters visual field",
+      "action_end": "lion visible and charging",
       "active_subjects": [
         "cowardly_lion"
       ],
@@ -159,9 +159,9 @@
         "toto"
       ],
       "spatial_context": "edge of yellow_brick_road",
-      "blocking_hint": "lion breaks from thicket",
+      "blocking_hint": "lion breaks from forest line",
       "environment_subzone": "thick_dark_forest",
-      "continuity_focus": "direction of lion charge",
+      "continuity_focus": "direction of charge",
       "coverage_hint": "low-angle shots",
       "coverage_priority": "high",
       "handoff_to_next": "BT003"
@@ -170,8 +170,8 @@
       "beat_id": "BT003",
       "summary": "The ambush/attack occurs",
       "purpose": "",
-      "action_start": "lion lunges",
-      "action_end": "chaos and immediate threat realized",
+      "action_start": "lion impact",
+      "action_end": "immediate chaos",
       "active_subjects": [
         "cowardly_lion",
         "the_scarecrow",
@@ -181,20 +181,20 @@
         "dorothy",
         "toto"
       ],
-      "spatial_context": "on or adjacent to yellow_brick_road",
-      "blocking_hint": "collision/attack on scarecrow and woodman",
+      "spatial_context": "yellow_brick_road",
+      "blocking_hint": "collision between lion and group members",
       "environment_subzone": "yellow_brick_road",
-      "continuity_focus": "impact location relative to road",
+      "continuity_focus": "position of characters post-impact",
       "coverage_hint": "handheld/shaky cam and close-ups",
       "coverage_priority": "high",
-      "handoff_to_next": "end of scene"
+      "handoff_to_next": "end_of_scene"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish environment and travel rhythm",
+      "narrative_function": "establish environment and group status",
       "planned_shot_moment_summary": "group walking through forest",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
@@ -208,7 +208,7 @@
       "planned_shot_required_anchor_1": "yellow_brick_road",
       "planned_shot_scale_proof_detail": "group size relative to dense trees",
       "start_state_seed": "steady walking",
-      "end_state_seed": "walking continues",
+      "end_state_seed": "walking",
       "action_seed": "traveling through forest",
       "blocking_seed": [
         "linear progression along road"
@@ -225,7 +225,7 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "introduce threat scale",
+      "narrative_function": "introduce threat",
       "planned_shot_moment_summary": "lion emerges from shadows",
       "primary_subject_seed": "cowardly_lion",
       "secondary_subjects_seed": [
@@ -235,17 +235,17 @@
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "thick_dark_forest",
-      "planned_shot_required_anchor_1": "dried branches/dead leaves",
-      "planned_shot_scale_proof_detail": "low angle looking up at lion",
-      "start_state_seed": "shadows in forest",
-      "end_state_seed": "lion fully visible",
-      "action_seed": "lion lunges forward",
+      "planned_shot_required_anchor_1": "dried branches and dead leaves",
+      "planned_shot_scale_proof_detail": "low-angle height vs characters",
+      "start_state_seed": "shadows/foliage",
+      "end_state_seed": "lion visible",
+      "action_seed": "emerging from brush",
       "blocking_seed": [
-        "lion breaks from foliage toward road"
+        "lunging toward road"
       ],
       "shot_size": "full",
       "camera_angle": "low_angle",
-      "lens_family": "wide",
+      "lens_family": "normal",
       "camera_motion": "handheld",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
@@ -255,8 +255,8 @@
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "capture reaction and chaos",
-      "planned_shot_moment_summary": "characters reacting to attack",
+      "narrative_function": "depict chaos and vulnerability",
+      "planned_shot_moment_summary": "attack on scarecrow and woodman",
       "primary_subject_seed": "the_scarecrow",
       "secondary_subjects_seed": [
         "tin_woodman",
@@ -266,19 +266,19 @@
       "narration_mode": "none",
       "environment_subzone": "yellow_brick_road",
       "planned_shot_required_anchor_1": "yellow_brick_road",
-      "planned_shot_scale_proof_detail": "close up on facial expression",
-      "start_state_seed": "shocked stillness",
-      "end_state_seed": "chaotic movement",
-      "action_seed": "lion attacks the_scarecrow and tin_woodman",
+      "planned_shot_scale_proof_detail": "impact force",
+      "start_state_seed": "charge beginning",
+      "end_state_seed": "collision/chaos",
+      "action_seed": "lion attacks targets",
       "blocking_seed": [
-        "group scatters/reacts to impact"
+        "scattered/chaotic movement"
       ],
-      "shot_size": "close_up",
+      "shot_size": "medium_close",
       "camera_angle": "eye_level",
       "lens_family": "normal",
       "camera_motion": "handheld",
       "zoom_behavior": "none",
-      "focus_strategy": "shallow_subject",
+      "focus_strategy": "rack_focus",
       "lighting_style": "low_key_night",
       "primary_subject_angle": "front"
     }
@@ -346,16 +346,16 @@
     "[CH007] Chapter VII (book index hit)",
     "[CH021] Chapter XXI (book index hit)",
     "[CH012] Chapter XII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH006_SC001\n\n## Production Intent\nEstablish the physical dominance of the cowardly_lion through a sudden ambush within the thick_dark_forest. The sequence must transition from a rhythmic travel pace to high-intensity chaos, utilizing handheld movement and low angles to emphasize the scale difference between the predator and the group.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- toto\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n\n## Required Environments\n- thick_dark_forest (dense, dark, obscured)\n- yellow_brick_road (partially obscured by dried branches and dead leaves)\n\n## Continuity Constraints\n- Maintain group position relative to the partially obscured yellow_brick_road.\n- Ensure consistent direction of the cowardly_lion's charge from forest to road.\n\n## Beat List\n- BT001: Group travels through the forest.\n- BT002: The predator is sensed/revealed.\n- BT003: The ambush/attack occurs.",
+  "storyboard_markdown": "# Scene Contract: CH006_SC001\n\n## Production Intent\nEstablish the thick_dark_forest as a claustrophobic and dangerous environment through an ambush. The sequence must transition from steady travel to high-intensity chaos, using the cowardly_lion to disrupt the group's formation and emphasize their physical vulnerability.\n\n## Required Cast\n- dorothy\n- toto\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n\n## Required Environments\n- thick_dark_forest\n- yellow_brick_road (partially obscured by dried branches/dead leaves)\n\n## Continuity Constraints\n- Maintain group position relative to the partially obscured yellow_brick_road.\n- Ensure consistent direction of the cowardly_lion's charge from forest to road.\n\n## Beat List\n- BT001: Group travels through the forest.\n- BT002: The predator is sensed/revealed.\n- BT003: The ambush/attack occurs.",
   "metadata": {
     "artifact_id": "CH006_SC001_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "4b839591485439ab287aeab1d671c2803a52c757",
+    "source_fingerprint": "2bfb79b9b101215dc0c31fe127d8e215ba613723",
     "created_at_utc": "2026-04-27T08:13:31.331868+00:00",
-    "updated_at_utc": "2026-04-27T08:13:31.331868+00:00",
+    "updated_at_utc": "2026-04-27T13:15:25.170768+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -380,6 +380,11 @@
         "timestamp_utc": "2026-04-27T08:14:16.872384+00:00",
         "action": "synthesized",
         "source_fingerprint": "4b839591485439ab287aeab1d671c2803a52c757"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:16:10.006379+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "2bfb79b9b101215dc0c31fe127d8e215ba613723"
       }
     ]
   }

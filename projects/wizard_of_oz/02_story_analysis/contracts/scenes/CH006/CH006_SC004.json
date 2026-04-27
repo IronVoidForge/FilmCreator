@@ -5,27 +5,28 @@
   "purpose": "Resolve the immediate physical crisis and reinforce character themes.",
   "summary": "The Scarecrow uses an oil-can to lubricate the Tin Woodman's jaw, restoring his ability to speak. The Woodman expresses a renewed vow to walk with extreme care to protect all living things.",
   "emotional_arc": "Panic/Frustration $\\rightarrow$ Relief/Resolution.",
-  "production_intent": "Resolve the physical crisis of the Tin Woodman's seized jaw through lubrication to transition the group from panic to a state of renewed purpose.",
+  "production_intent": "The Scarecrow performs mechanical maintenance on the Tin Woodman using an oil-can to resolve a speech impediment. The group transitions from high-stress panic regarding the Woodman's physical state to a moment of quiet resolution and renewed purpose.",
   "scene_short_description": "A group gathers on a dark forest path to lubricate a frozen metal jaw.",
   "scene_primary_scale_story_point": "The small scale of the oil-can application versus the large presence of the group.",
   "scene_required_anchor_catalog": [
-    "oil-can",
-    "tin_woodman_jaw"
+    "tin_woodman_jaw",
+    "oil_can"
   ],
-  "scene_start_state": "High tension; Tin Woodman is unable to speak due to seized joints.",
+  "scene_start_state": "High tension; Tin Woodman is unable to speak, causing frustration among the group.",
   "scene_end_state": "Calm resolution; Tin Woodman speaks clearly and makes a vow.",
-  "dominant_action_line": "The Scarecrow applies oil to the Tin Woodman's jaw to restore speech.",
+  "dominant_action_line": "The Scarecrow lubricates the Tin Woodman's jaw to restore speech.",
   "scene_spatial_layout": [
-    "Tight cluster around the seated or kneeling Tin Woodman",
-    "Obscured path defined by dried branches and dead leaves"
+    "Tight cluster around the Tin Woodman on the forest path.",
+    "Obscured visibility due to dried branches and dead leaves."
   ],
   "character_spatial_map": [
-    "the_scarecrow positioned at tin_woodman_jaw",
-    "dorothy, cowardly_lion, and tin_woodman in a tight semi-circle"
+    "tin_woodman is central/seated or kneeling.",
+    "the_scarecrow is in close proximity to the jaw.",
+    "dorothy, cowardly_lion are gathered in a medium group arc."
   ],
   "environment_subzones": [
     "thick_dark_forest_path",
-    "debris_zone (dried branches/dead leaves)"
+    "dried_branch_cluster"
   ],
   "entry_vectors": [
     "forest_path_approach"
@@ -34,8 +35,8 @@
     "forest_path_continuation"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Physical success of lubrication",
-    "BT002 -> BT003: Verbal transition to vow"
+    "BT001 -> BT002: Mechanical success (speech restored)",
+    "BT002 -> BT003: Emotional shift (vow made)"
   ],
   "characters_required": [
     {
@@ -92,21 +93,21 @@
     }
   ],
   "continuity_constraints": [
-    "Cumulative volume of oil applied to jaw",
-    "Mechanical state of jaw (stuck vs. moving)"
+    "Volume of oil dispensed from the can.",
+    "State of Tin Woodman's jaw (stuck vs. moving)."
   ],
   "visual_coverage_families": [
-    "Close-up of oil-can application to metal joints",
-    "Medium shot of group gathered around Tin Woodman",
-    "Profile shots of Tin Woodman delivering vow"
+    "Close-up of the oil-can being applied to the metal joints.",
+    "Medium shot of the group gathered around the Woodman.",
+    "Profile shots of the Woodman as he makes his vow."
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "The Scarecrow lubricates the jaw",
+      "summary": "The Scarecrow attempts to lubricate the jaw",
       "purpose": "",
-      "action_start": "Scarecrow holds oil-can to metal",
-      "action_end": "Oil enters joints and jaw moves",
+      "action_start": "Scarecrow holds oil-can near metal joint",
+      "action_end": "Oil is applied to the mechanism",
       "active_subjects": [
         "the_scarecrow",
         "tin_woodman"
@@ -116,40 +117,41 @@
         "cowardly_lion"
       ],
       "spatial_context": "thick_dark_forest_path",
-      "blocking_hint": "Scarecrow leaning over Tin Woodman",
+      "blocking_hint": "Scarecrow hunched over Woodman's head",
       "environment_subzone": "thick_dark_forest_path",
-      "continuity_focus": "monitor oil volume and jaw movement",
+      "continuity_focus": "amount of oil used; jaw position",
       "coverage_hint": "close-up on joints",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Restoration of speech",
+      "summary": "Speech is restored",
       "purpose": "",
-      "action_start": "First audible words from tin_woodman",
-      "action_end": "Group tension breaks into relief",
+      "action_start": "Metal grinding sound/movement",
+      "action_end": "Woodman speaks his first words",
       "active_subjects": [
-        "tin_woodman",
-        "dorothy",
-        "cowardly_lion",
-        "the_scarecrow"
+        "tin_woodman"
       ],
-      "passive_subjects": [],
+      "passive_subjects": [
+        "the_scarecrow",
+        "dorothy",
+        "cowardly_lion"
+      ],
       "spatial_context": "thick_dark_forest_path",
-      "blocking_hint": "Characters leaning in to hear",
+      "blocking_hint": "Group reacts with relief",
       "environment_subzone": "thick_dark_forest_path",
-      "continuity_focus": "jaw must remain mobile",
+      "continuity_focus": "jaw is now moving",
       "coverage_hint": "medium shot of group",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "The Vow",
+      "summary": "The Woodman's vow",
       "purpose": "",
-      "action_start": "Tin Woodman becomes solemn",
-      "action_end": "Vow completed",
+      "action_start": "Woodman settles into a serious tone",
+      "action_end": "Vow to walk with care is completed",
       "active_subjects": [
         "tin_woodman"
       ],
@@ -159,12 +161,12 @@
         "cowardly_lion"
       ],
       "spatial_context": "thick_dark_forest_path",
-      "blocking_hint": "Tin Woodman remains still/centered",
+      "blocking_hint": "Woodman remains centered and still",
       "environment_subzone": "thick_dark_forest_path",
-      "continuity_focus": "maintain solemn tone",
-      "coverage_hint": "profile shots",
+      "continuity_focus": "none",
+      "coverage_hint": "profile shots of Woodman",
       "coverage_priority": "medium",
-      "handoff_to_next": "end_of_scene"
+      "handoff_to_next": "end_scene"
     }
   ],
   "planned_shots": [
@@ -172,7 +174,7 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish crisis",
-      "planned_shot_moment_summary": "Scarecrow approaches with oil-can",
+      "planned_shot_moment_summary": "Scarecrow approaches the frozen jaw",
       "primary_subject_seed": "the_scarecrow",
       "secondary_subjects_seed": [
         "tin_woodman"
@@ -180,13 +182,13 @@
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "thick_dark_forest_path",
-      "planned_shot_required_anchor_1": "oil-can",
-      "planned_shot_scale_proof_detail": "close proximity to metal joints",
+      "planned_shot_required_anchor_1": "tin_woodman_jaw",
+      "planned_shot_scale_proof_detail": "oil-can size relative to metal joints",
       "start_state_seed": "stuck jaw",
-      "end_state_seed": "oil contact",
-      "action_seed": "applying oil",
+      "end_state_seed": "oil application begins",
+      "action_seed": "Scarecrow holds oil-can to the jaw",
       "blocking_seed": [
-        "kneeling beside tin_woodman"
+        "scarecrow leans over woodman"
       ],
       "shot_size": "close_up",
       "camera_angle": "eye_level",
@@ -200,29 +202,29 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "show relief",
-      "planned_shot_moment_summary": "Group reacts to restored speech",
+      "narrative_function": "resolve crisis",
+      "planned_shot_moment_summary": "The jaw begins to move freely",
       "primary_subject_seed": "tin_woodman",
       "secondary_subjects_seed": [
         "dorothy",
-        "cowardly_lion",
-        "the_scarecrow"
+        "the_scarecrow",
+        "cowardly_lion"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "thick_dark_forest_path",
       "planned_shot_required_anchor_1": "tin_woodman_jaw",
-      "planned_shot_scale_proof_detail": "group proximity",
-      "start_state_seed": "first words spoken",
-      "end_state_seed": "laughter/relief",
-      "action_seed": "speaking and moving jaw",
+      "planned_shot_scale_proof_detail": "visible movement of metal parts",
+      "start_state_seed": "oil application",
+      "end_state_seed": "first words spoken",
+      "action_seed": "Woodman speaks",
       "blocking_seed": [
-        "gathered in semi-circle"
+        "group leans in closer"
       ],
       "shot_size": "medium",
       "camera_angle": "eye_level",
       "lens_family": "normal",
-      "camera_motion": "pan",
+      "camera_motion": "subtle_push_in",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
@@ -232,7 +234,7 @@
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "reinforce theme",
-      "planned_shot_moment_summary": "Woodman makes his vow",
+      "planned_shot_moment_summary": "Woodman makes his vow to protect life",
       "primary_subject_seed": "tin_woodman",
       "secondary_subjects_seed": [
         "dorothy"
@@ -241,18 +243,19 @@
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "thick_dark_forest_path",
       "planned_shot_required_anchor_1": "tin_woodman_jaw",
-      "planned_shot_scale_proof_detail": "profile view of face",
-      "start_state_seed": "solemn expression",
-      "end_state_seed": "resolved expression",
-      "action_seed": "vowing to walk with care",
+      "planned_shot_scale_proof_detail": "facial expression clarity",
+      "start_state_seed": "speaking",
+      "end_state_seed": "vow completed",
+      "action_seed": "Woodman speaks with intent",
       "blocking_seed": [
-        "stationary profile"
+        "woodman remains still",
+        "focused"
       ],
       "shot_size": "medium_close",
       "camera_angle": "eye_level",
       "lens_family": "portrait",
       "camera_motion": "locked_off",
-      "zoom_behavior": "subtle_in",
+      "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "diffuse_ambient",
       "primary_subject_angle": "profile_left"
@@ -321,16 +324,16 @@
     "[CH007] Chapter VII (book index hit)",
     "[CH006] Chapter VI (book index hit)",
     "[CH012] Chapter XII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH006_SC004\n\n## Production Intent\nResolve the physical crisis of the Tin Woodman's seized jaw through lubrication to transition the group from panic to a state of renewed purpose.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n\n## Required Environments\n- thick_dark_forest\n\n## Continuity Constraints\n- Cumulative volume of oil applied to jaw\n- Mechanical state of jaw (moving vs. stuck)\n\n## Beat List\n- BT001: The Scarecrow lubricates the jaw\n- BT002: Restoration of speech\n- BT003: The Vow",
+  "storyboard_markdown": "# Scene Contract: CH006_SC004\n\n## Production Intent\nThe Scarecrow performs mechanical maintenance on the Tin Woodman using an oil-can to resolve a speech impediment. The group transitions from high-stress panic regarding the Woodman's physical state to a moment of quiet resolution and renewed purpose.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n\n## Required Environments\n- thick_dark_forest (specifically the path with dried branches/dead leaves)\n\n## Continuity Constraints\n- Volume of oil dispensed from the can.\n- State of Tin Woodman's jaw (stuck vs. moving).\n\n## Beat List\n- BT001: The Scarecrow attempts to lubricate the jaw.\n- BT002: Speech is restored.\n- BT003: The Woodman's vow.",
   "metadata": {
     "artifact_id": "CH006_SC004_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "9d05fe08d0999aa7109bd85cd562815db9a4b247",
+    "source_fingerprint": "598fbede3fee49e2f3374f42fdd37fbf5c926fb7",
     "created_at_utc": "2026-04-27T08:15:48.109298+00:00",
-    "updated_at_utc": "2026-04-27T08:15:48.109298+00:00",
+    "updated_at_utc": "2026-04-27T13:17:41.574182+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -355,6 +358,11 @@
         "timestamp_utc": "2026-04-27T08:16:29.343534+00:00",
         "action": "synthesized",
         "source_fingerprint": "9d05fe08d0999aa7109bd85cd562815db9a4b247"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:18:25.872122+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "598fbede3fee49e2f3374f42fdd37fbf5c926fb7"
       }
     ]
   }

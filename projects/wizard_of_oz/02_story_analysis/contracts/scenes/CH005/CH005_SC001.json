@@ -5,19 +5,19 @@
   "purpose": "Establish the immediate post-waking reality and the physical struggle of the journey.",
   "summary": "Dorothy and Toto, accompanied by the Scarecrow, navigate the forest in search of basic necessities like food and water.",
   "emotional_arc": "From disorientation to weary determination.",
-  "production_intent": "Establish the immediate post-waking reality and the physical struggle of a journey through dense forest. The sequence must emphasize the transition from disorientation to weary determination as characters search for sustenance.",
-  "scene_short_description": "A small group navigates dense forest terrain searching for food and water.",
-  "scene_primary_scale_story_point": "Characters are dwarfed by the scale of the forest environment.",
+  "production_intent": "Establish the physical toll of travel through a forest environment. The sequence must visually communicate the transition from post-waking disorientation to a weary, survival-driven determination as characters search for sustenance.",
+  "scene_short_description": "A weary trio navigates dense forest terrain near a cottage and spring searching for food.",
+  "scene_primary_scale_story_point": "Small human scale relative to large forest canopy.",
   "scene_required_anchor_catalog": [
-    "spring of clear water",
-    "small cottage"
+    "small cottage",
+    "clear water spring"
   ],
-  "scene_start_state": "Disoriented movement through thick foliage.",
-  "scene_end_state": "Determined progression toward a destination.",
-  "dominant_action_line": "Navigating difficult terrain to locate basic necessities.",
+  "scene_start_state": "Characters emerging from post-waking disorientation within the forest.",
+  "scene_end_state": "Trio moving forward with weary determination toward sustenance.",
+  "dominant_action_line": "Navigating difficult terrain to locate food and water.",
   "scene_spatial_layout": [
-    "Dense forest floor with uneven footing",
-    "Proximity to a cottage and water source"
+    "Dense forest floor surrounding a cottage/spring subzone",
+    "Path leading from cottage area toward deeper woods"
   ],
   "character_spatial_map": [
     "dorothy leads the group",
@@ -25,19 +25,18 @@
     "the_scarecrow follows or walks alongside"
   ],
   "environment_subzones": [
-    "forest_dense_foliage",
-    "spring_area",
-    "cottage_perimeter"
+    "forest_and_cottage_setting/spring_zone",
+    "forest_and_cottage_setting/dense_undergrowth"
   ],
   "entry_vectors": [
-    "through dense forest brush"
+    "cottage/spring clearing"
   ],
   "exit_vectors": [
-    "toward the yellow brick road"
+    "deeper forest path"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: transition from disorientation to active searching",
-    "BT002 -> BT003: transition from searching to weary movement"
+    "BT001 -> BT002: physical movement into terrain",
+    "BT002 -> BT003: shift from searching to walking with purpose"
   ],
   "characters_required": [
     {
@@ -84,75 +83,74 @@
     }
   ],
   "continuity_constraints": [
-    "Cumulative dirt/exhaustion levels on dorothy, toto, and the_scarecrow",
+    "Cumulative dirt/exhaustion levels on dorothy and the_scarecrow",
     "Constant proximity of toto to dorothy"
   ],
   "visual_coverage_families": [
-    "Wide shots of the forest environment",
-    "Medium tracking shots of the trio walking",
-    "Close-ups on Dorothy's fatigue and searching eyes"
+    "Wide shots of forest environment",
+    "Medium tracking shots of trio walking",
+    "Close-ups on fatigue and searching eyes"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Disorientation in the forest",
+      "summary": "Post-waking disorientation in the forest",
       "purpose": "",
-      "action_start": "characters stumbling through brush",
-      "action_end": "trio finding footing",
-      "active_subjects": [
-        "dorothy",
-        "the_scarecrow"
-      ],
-      "passive_subjects": [
-        "toto"
-      ],
-      "spatial_context": "forest_dense_foliage",
-      "blocking_hint": "staggered movement through foliage",
-      "environment_subzone": "forest_dense_foliage",
-      "continuity_focus": "initial dirt levels on white clothing",
-      "coverage_hint": "wide shots",
-      "coverage_priority": "high",
-      "handoff_to_next": "BT002"
-    },
-    {
-      "beat_id": "BT002",
-      "summary": "Searching for necessities",
-      "purpose": "",
-      "action_start": "dorothy stops to look around",
-      "action_end": "eyes find a potential direction",
-      "active_subjects": [
-        "dorothy",
-        "toto"
-      ],
-      "passive_subjects": [
-        "the_scarecrow"
-      ],
-      "spatial_context": "near spring or cottage area",
-      "blocking_hint": "dorothy stands center, scanning",
-      "environment_subzone": "spring_area",
-      "continuity_focus": "sweat/fatigue visible on face",
-      "coverage_hint": "close-ups",
-      "coverage_priority": "medium",
-      "handoff_to_next": "BT003"
-    },
-    {
-      "beat_id": "BT003",
-      "summary": "Weary determination",
-      "purpose": "",
-      "action_start": "trio resumes walking",
-      "action_end": "trio moves out of frame",
+      "action_start": "characters emerging from rest",
+      "action_end": "characters standing near spring",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
         "toto"
       ],
       "passive_subjects": [],
-      "spatial_context": "forest path",
-      "blocking_hint": "linear progression through forest",
-      "environment_subzone": "forest_dense_foliage",
-      "continuity_focus": "increased dirt/exhaustion levels",
-      "coverage_hint": "medium tracking shots",
+      "spatial_context": "forest_and_cottage_setting/spring_zone",
+      "blocking_hint": "trio clustered near water source",
+      "environment_subzone": "spring_zone",
+      "continuity_focus": "initial dirt levels on clothing",
+      "coverage_hint": "wide shot",
       "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The search for necessities",
+      "purpose": "",
+      "action_start": "searching through foliage",
+      "action_end": "finding nothing/moving on",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow"
+      ],
+      "passive_subjects": [
+        "toto"
+      ],
+      "spatial_context": "forest_and_cottage_setting/dense_undergrowth",
+      "blocking_hint": "characters parting slightly to look around",
+      "environment_subzone": "dense_undergrowth",
+      "continuity_focus": "increasing dirt/sweat on dorothy",
+      "coverage_hint": "medium tracking and close-ups",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Weary determination in movement",
+      "purpose": "",
+      "action_start": "heavy footsteps",
+      "action_end": "walking into distance",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "toto"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "forest_and_cottage_setting/dense_undergrowth",
+      "blocking_hint": "trio moving in single file line",
+      "environment_subzone": "dense_undergrowth",
+      "continuity_focus": "consistent toto position to dorothy",
+      "coverage_hint": "medium tracking",
+      "coverage_priority": "medium",
       "handoff_to_next": "end_of_scene"
     }
   ],
@@ -161,90 +159,58 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish environment",
-      "planned_shot_moment_summary": "trio emerging through brush",
-      "primary_subject_seed": "the_scarecrow",
+      "planned_shot_moment_summary": "wide view of forest and cottage proximity",
+      "primary_subject_seed": "forest_and_cottage_setting",
       "secondary_subjects_seed": [
         "dorothy",
-        "toto"
+        "the_scarecrow"
       ],
       "subject_visibility": "on_screen",
-      "narration_mode": "in_scene_speaker",
-      "environment_subzone": "forest_dense_foliage",
-      "planned_shot_required_anchor_1": "forest_and_cottage_setting",
-      "planned_shot_scale_proof_detail": "wide forest canopy vs small characters",
-      "start_state_seed": "characters obscured by leaves",
-      "end_state_seed": "trio visible in clearing",
-      "action_seed": "pushing through brush",
+      "narration_mode": "none",
+      "environment_subzone": "forest_and_cottage_setting/spring_zone",
+      "planned_shot_required_anchor_1": "small cottage",
+      "planned_shot_scale_proof_detail": "wide shot showing forest scale",
+      "start_state_seed": "static wide",
+      "end_state_seed": "static wide",
+      "action_seed": "trio enters frame",
       "blocking_seed": [
-        "walking forward from depth"
+        "walking from spring toward camera"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
       "lens_family": "wide",
-      "camera_motion": "track",
+      "camera_motion": "locked_off",
       "zoom_behavior": "none",
-      "focus_strategy": "environment_priority",
+      "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
       "primary_subject_angle": "front_three_quarter_right"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "character fatigue",
-      "planned_shot_moment_summary": "dorothy scanning for water",
+      "narrative_function": "convey fatigue",
+      "planned_shot_moment_summary": "close up on dorothy's face",
       "primary_subject_seed": "dorothy",
-      "secondary_subjects_seed": [
-        "toto"
-      ],
+      "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "spring_area",
-      "planned_shot_required_anchor_1": "spring of clear water",
-      "planned_shot_scale_proof_detail": "close up on eyes vs wide spring",
-      "start_state_seed": "dorothy looking down",
-      "end_state_seed": "dorothy looking ahead",
-      "action_seed": "searching eyes scanning horizon",
+      "environment_subzone": "forest_and_cottage_setting/dense_undergrowth",
+      "planned_shot_required_anchor_1": "dorothy",
+      "planned_shot_scale_proof_detail": "tight framing on facial expression",
+      "start_state_seed": "searching eyes",
+      "end_state_seed": "weary gaze",
+      "action_seed": "scanning environment for food/water",
       "blocking_seed": [
-        "stopping briefly"
+        "walking through brush"
       ],
       "shot_size": "close_up",
       "camera_angle": "eye_level",
       "lens_family": "portrait",
-      "camera_motion": "locked_off",
-      "zoom_behavior": "subtle_in",
-      "focus_strategy": "shallow_subject",
-      "lighting_style": "soft_even",
-      "primary_subject_angle": "front"
-    },
-    {
-      "planned_shot_id": "SH003",
-      "beat_id": "BT003",
-      "narrative_function": "group progression",
-      "planned_shot_moment_summary": "trio walking toward destination",
-      "primary_subject_seed": "dorothy",
-      "secondary_subjects_seed": [
-        "the_scarecrow",
-        "toto"
-      ],
-      "subject_visibility": "on_screen",
-      "narration_mode": "none",
-      "environment_subzone": "forest_dense_foliage",
-      "planned_shot_required_anchor_1": "forest_and_cottage_setting",
-      "planned_shot_scale_proof_detail": "medium shot of trio vs large trees",
-      "start_state_seed": "walking slowly",
-      "end_state_seed": "walking with purpose",
-      "action_seed": "navigating uneven ground",
-      "blocking_seed": [
-        "trio walking in line"
-      ],
-      "shot_size": "medium_full",
-      "camera_angle": "eye_level",
-      "lens_family": "normal",
       "camera_motion": "track",
       "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
+      "focus_strategy": "shallow_subject",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "profile_left"
+      "primary_subject_angle": "front"
     }
   ],
   "unresolved_questions": [],
@@ -310,16 +276,16 @@
     "[CH012] Chapter XII (book index hit)",
     "[CH005] Chapter V (book index hit)",
     "[CH007] Chapter VII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH005_SC001\n\n## Production Intent\nEstablish the immediate post-waking reality and the physical struggle of the journey. The sequence must emphasize the transition from disorientation to weary determination as characters search for sustenance.\n\n## Required Cast\n- dorothy (white clothing/dress, expressive face)\n- toto (dog, positioned near dorothy)\n- the_scarecrow (companion)\n\n## Required Environments\n- forest_and_cottage_setting (dense foliage, spring of clear water, small cottage)\n\n## Continuity Constraints\n- Cumulative dirt and exhaustion levels on characters.\n- Constant proximity of toto to dorothy.\n\n## Beat List\n- BT001: Disorientation in the forest.\n- BT002: Searching for necessities (food/water).\n- BT003: Weary determination in movement.",
+  "storyboard_markdown": "# Scene Contract: CH005_SC001\n\n## Production Intent\nEstablish the physical toll of travel through a forest environment. The sequence must visually communicate the transition from post-waking disorientation to a weary, survival-driven determination as characters search for sustenance.\n\n## Required Cast\n- dorothy (weary traveler, white dress/clothing)\n- toto (dog, proximal to dorothy)\n- the_scarecrow (companion)\n\n## Required Environments\n- forest_and_cottage_setting (including small cottage and clear water spring)\n\n## Continuity Constraints\n- Cumulative dirt/exhaustion levels on dorothy and the_scarecrow\n- Constant proximity of toto to dorothy\n\n## Beat List\n- BT001: Post-waking disorientation in the forest\n- BT002: The search for necessities\n- BT003: Weary determination in movement",
   "metadata": {
     "artifact_id": "CH005_SC001_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "c6082da0c959abe834c47dff71589b80cfa44d52",
+    "source_fingerprint": "4a4a955d39c2fd747b79c651ded0ecba0574115b",
     "created_at_utc": "2026-04-27T08:10:04.766368+00:00",
-    "updated_at_utc": "2026-04-27T08:10:04.766368+00:00",
+    "updated_at_utc": "2026-04-27T13:11:54.819332+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -344,6 +310,11 @@
         "timestamp_utc": "2026-04-27T08:10:44.702510+00:00",
         "action": "synthesized",
         "source_fingerprint": "c6082da0c959abe834c47dff71589b80cfa44d52"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:12:32.570998+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "4a4a955d39c2fd747b79c651ded0ecba0574115b"
       }
     ]
   }

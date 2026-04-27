@@ -5,39 +5,38 @@
   "purpose": "Escalation of tension and environmental shift.",
   "summary": "As evening falls, the group enters a dense, dark forest where the canopy blocks out the light. The atmosphere shifts from open road to claustrophobic gloom, with Dorothy relying heavily on Toto's sight and Scarecrow's guidance.",
   "emotional_arc": "Comfort $\\rightarrow$ Apprehension/Fear.",
-  "production_intent": "Transition the visual language from open road dusk to a claustrophobic, low-light forest environment. The lighting must shift from natural evening light to deep canopy gloom as the characters enter dense foliage.",
-  "scene_short_description": "Small travelers move from an open road into a dense, dark forest under a heavy canopy.",
-  "scene_primary_scale_story_point": "Massive tree trunks vs. small human and animal figures.",
+  "production_intent": "Transition the visual language from open dusk landscapes to a claustrophobic, low-light forest environment. The lighting must shift from natural evening light to deep canopy gloom, emphasizing the scale of massive trees against small travelers.",
+  "scene_short_description": "Small travelers move through a dense, dark forest under a heavy canopy blocking all light.",
+  "scene_primary_scale_story_point": "Massive tree trunks vs small human/animal scale.",
   "scene_required_anchor_catalog": [
-    "heavy_canopy",
-    "thick_brush"
+    "thick_canopy",
+    "dense_foliage"
   ],
-  "scene_start_state": "Open road at dusk transitioning into the edge of dense foliage.",
-  "scene_end_state": "Deep forest gloom with minimal visibility.",
-  "dominant_action_line": "The group navigates through thickening brush, relying on sensory guidance.",
+  "scene_start_state": "Group enters the edge of the forest as evening falls.",
+  "scene_end_state": "Group is deep within claustrophobic gloom, relying on sensory guidance.",
+  "dominant_action_line": "Navigating through thickening brush and darkness using sight and guidance.",
   "scene_spatial_layout": [
-    "Linear progression from open space to enclosed thicket",
-    "Vertical scale dominated by high canopy blocking light"
+    "Tightening corridors formed by dense foliage",
+    "Verticality emphasized by heavy canopy"
   ],
   "character_spatial_map": [
-    "dorothy follows the_scarecrow and toto",
-    "the_scarecrow leads the path through brush",
-    "toto moves ahead of dorothy to scout"
+    "dorothy follows the_scarecrow closely",
+    "toto leads or stays near dorothy's feet for visual cues",
+    "the_scarecrow provides directional guidance"
   ],
   "environment_subzones": [
     "forest_edge",
-    "dense_undergrowth",
-    "deep_canopy_zone"
+    "deep_canopy_undergrowth"
   ],
   "entry_vectors": [
-    "yellow_brick_road_transition"
+    "transition from open road into dense_dark_forest"
   ],
   "exit_vectors": [
-    "deep_forest_path"
+    "deeper into dense_dark_forest"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Light level drop and foliage density increase",
-    "BT002 -> BT003: Shift from group movement to sensory reliance"
+    "BT001 -> BT002: Light level drop",
+    "BT002 -> BT003: Increased physical obstruction/brush density"
   ],
   "characters_required": [
     {
@@ -85,20 +84,20 @@
   ],
   "continuity_constraints": [
     "Light levels transition from dusk to deep forest dark",
-    "Foliage density increases as characters progress"
+    "Foliage density increases throughout the scene"
   ],
   "visual_coverage_families": [
     "Low-light cinematography",
-    "POV shots through the brush",
-    "Wide shots showing scale of trees vs. small travelers"
+    "POV shots through brush",
+    "Wide shots (scale of trees vs. travelers)"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Transition from road to forest edge",
+      "summary": "Transition from open road to forest edge",
       "purpose": "",
-      "action_start": "walking on open road",
-      "action_end": "stepping into shadow",
+      "action_start": "walking on open ground",
+      "action_end": "stepping into shade",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -106,51 +105,50 @@
       ],
       "passive_subjects": [],
       "spatial_context": "forest_edge",
-      "blocking_hint": "group moving in single file",
+      "blocking_hint": "moving from light to shadow",
       "environment_subzone": "forest_edge",
-      "continuity_focus": "dusk to forest dark transition",
+      "continuity_focus": "dusk lighting levels",
       "coverage_hint": "wide shot scale",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Entering the dense thicket",
+      "summary": "Canopy closure and light drop",
       "purpose": "",
-      "action_start": "brush touching characters",
-      "action_end": "path becomes obscured by foliage",
+      "action_start": "walking under trees",
+      "action_end": "standing in deep gloom",
       "active_subjects": [
         "dorothy",
-        "the_scarecrow"
-      ],
-      "passive_subjects": [
+        "the_scarecrow",
         "toto"
       ],
-      "spatial_context": "dense_undergrowth",
-      "blocking_hint": "characters pushing through branches",
-      "environment_subzone": "dense_undergrowth",
-      "continuity_focus": "increasing foliage density",
-      "coverage_hint": "medium shots/POV",
+      "passive_subjects": [],
+      "spatial_context": "deep_canopy_undergrowth",
+      "blocking_hint": "group slows down as light fades",
+      "environment_subzone": "deep_canopy_undergrowth",
+      "continuity_focus": "transition to deep forest dark",
+      "coverage_hint": "low-light cinematography",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Sensory reliance in gloom",
+      "summary": "Navigating the claustrophobic gloom",
       "purpose": "",
-      "action_start": "darkness deepens",
-      "action_end": "group huddled close",
+      "action_start": "searching through brush",
+      "action_end": "moving deeper into darkness",
       "active_subjects": [
         "dorothy",
         "toto",
         "the_scarecrow"
       ],
       "passive_subjects": [],
-      "spatial_context": "deep_canopy_zone",
-      "blocking_hint": "dorothy leaning toward the_scarecrow/toto",
-      "environment_subzone": "deep_canopy_zone",
-      "continuity_focus": "low light levels",
-      "coverage_hint": "close-ups/POV",
+      "spatial_context": "dense_foliage corridors",
+      "blocking_hint": "tightly grouped for guidance",
+      "environment_subzone": "deep_canopy_undergrowth",
+      "continuity_focus": "increased foliage density",
+      "coverage_hint": "POV shots through brush",
       "coverage_priority": "high",
       "handoff_to_next": "end_of_scene"
     }
@@ -159,21 +157,21 @@
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish scale and transition",
-      "planned_shot_moment_summary": "group enters the forest edge as light fades",
+      "narrative_function": "establish_setting",
+      "planned_shot_moment_summary": "group enters the forest edge at dusk",
       "primary_subject_seed": "the_scarecrow",
       "secondary_subjects_seed": [
         "dorothy",
         "toto"
       ],
       "subject_visibility": "on_screen",
-      "narration_mode": "none",
+      "narration_mode": "in_scene_speaker",
       "environment_subzone": "forest_edge",
-      "planned_shot_required_anchor_1": "heavy_canopy",
-      "planned_shot_scale_proof_detail": "trees dwarfing travelers",
-      "start_state_seed": "open road dusk",
-      "end_state_seed": "forest edge gloom",
-      "action_seed": "walking into shadows",
+      "planned_shot_required_anchor_1": "thick_canopy",
+      "planned_shot_scale_proof_detail": "wide shot showing trees vs travelers",
+      "start_state_seed": "open road view",
+      "end_state_seed": "forest edge entry",
+      "action_seed": "walking into shade",
       "blocking_seed": [
         "linear progression"
       ],
@@ -184,63 +182,67 @@
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "profile_right"
+      "primary_subject_angle": "front_three_quarter_right"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "establish claustrophobia",
-      "planned_shot_moment_summary": "brush closes in around the characters",
+      "narrative_function": "establish_claustrophobia",
+      "planned_shot_moment_summary": "canopy blocks out remaining light",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
+        "toto",
         "the_scarecrow"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "dense_undergrowth",
-      "planned_shot_required_anchor_1": "thick_brush",
-      "planned_shot_scale_proof_detail": "foliage obscuring frame edges",
-      "start_state_seed": "walking through light brush",
-      "end_state_seed": "pushing through thick foliage",
-      "action_seed": "navigating obstacles",
+      "environment_subzone": "deep_canopy_undergrowth",
+      "planned_shot_required_anchor_1": "dense_foliage",
+      "planned_shot_scale_proof_detail": "low angle looking up at canopy",
+      "start_state_seed": "dim light",
+      "end_state_seed": "deep gloom",
+      "action_seed": "looking upward/around in apprehension",
       "blocking_seed": [
-        "tight grouping"
+        "huddled group"
       ],
       "shot_size": "medium_full",
       "camera_angle": "low_angle",
-      "lens_family": "normal",
+      "lens_family": "wide",
       "camera_motion": "push_in",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "low_key_night",
-      "primary_subject_angle": "front_three_quarter_left"
+      "primary_subject_angle": "front"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "sensory POV",
-      "planned_shot_moment_summary": "view through the dark brush from toto's perspective",
+      "narrative_function": "sensory_reliance",
+      "planned_shot_moment_summary": "dorothy relies on toto and scarecrow in dark",
       "primary_subject_seed": "toto",
-      "secondary_subjects_seed": [],
+      "secondary_subjects_seed": [
+        "dorothy",
+        "the_scarecrow"
+      ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "dense_undergrowth",
-      "planned_shot_required_anchor_1": "thick_brush",
-      "planned_shot_scale_proof_detail": "low camera height vs tall trees",
-      "start_state_seed": "dark foliage",
-      "end_state_seed": "glimpses of path",
-      "action_seed": "scouting ahead",
+      "environment_subzone": "deep_canopy_undergrowth",
+      "planned_shot_required_anchor_1": "dense_foliage",
+      "planned_shot_scale_proof_detail": "POV through brush",
+      "start_state_seed": "darkness",
+      "end_state_seed": "darkness",
+      "action_seed": "navigating thicket",
       "blocking_seed": [
-        "low to ground"
+        "tight cluster"
       ],
-      "shot_size": "medium_close",
+      "shot_size": "close_up",
       "camera_angle": "eye_level",
-      "lens_family": "wide",
+      "lens_family": "normal",
       "camera_motion": "handheld",
       "zoom_behavior": "none",
       "focus_strategy": "rack_focus",
       "lighting_style": "low_key_night",
-      "primary_subject_angle": "front"
+      "primary_subject_angle": "profile_left"
     }
   ],
   "unresolved_questions": [],
@@ -306,16 +308,16 @@
     "[CH004] Chapter IV (book index hit)",
     "[CH007] Chapter VII (book index hit)",
     "[CH021] Chapter XXI (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH004_SC004\n\n## Production Intent\nTransition the visual language from open road dusk to a claustrophobic, low-light forest environment. The lighting must shift from natural evening light to deep canopy gloom as the characters enter dense foliage.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- the_scarecrow\n- toto\n\n## Required Environments\n- dense_dark_forest (heavy canopy, thick brush)\n\n## Continuity Constraints\n- Light levels: Transition from dusk to deep forest dark.\n- Foliage density: Increasing thickness as scene progresses.\n\n## Beat List\n- BT001: Transition from road to forest edge.\n- BT002: Entering the dense thicket.\n- BT003: Sensory reliance in gloom.",
+  "storyboard_markdown": "# Scene Contract: CH004_SC004\n\n## Production Intent\nTransition the visual language from open dusk landscapes to a claustrophobic, low-light forest environment. The lighting must shift from natural evening light to deep canopy gloom, emphasizing the scale of massive trees against small travelers.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- toto\n\n## Required Environments\n- dense_dark_forest\n\n## Continuity Constraints\n- Light levels transition from dusk to deep forest dark\n- Foliage density increases throughout the scene\n\n## Beat List\n- BT001: Transition from open road to forest edge.\n- BT002: Canopy closure and light drop.\n- BT003: Navigating the claustrophobic gloom.",
   "metadata": {
     "artifact_id": "CH004_SC004_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "4821166f52d2edcf531e4ff2edf7624febe685b1",
+    "source_fingerprint": "ceaa421873283d9bc49b5d15c0b3cdc5a567dfa1",
     "created_at_utc": "2026-04-27T08:08:42.543687+00:00",
-    "updated_at_utc": "2026-04-27T08:08:42.543687+00:00",
+    "updated_at_utc": "2026-04-27T13:10:30.860877+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -340,6 +342,11 @@
         "timestamp_utc": "2026-04-27T08:09:21.910551+00:00",
         "action": "synthesized",
         "source_fingerprint": "4821166f52d2edcf531e4ff2edf7624febe685b1"
+      },
+      {
+        "timestamp_utc": "2026-04-27T13:11:11.579023+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "ceaa421873283d9bc49b5d15c0b3cdc5a567dfa1"
       }
     ]
   }
