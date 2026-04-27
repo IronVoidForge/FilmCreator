@@ -18,6 +18,7 @@ from .production_pipeline import (
     run_prompt_prep_refresh,
     run_story_analysis_pipeline,
 )
+from .production_run_state import persist_run_summary
 from .production_status import format_production_status, get_production_status
 
 
@@ -192,8 +193,14 @@ def _select_mode(state: PipelineMenuState, input_fn: InputFn, output_fn: OutputF
 
 def _show_status(state: PipelineMenuState, output_fn: OutputFn) -> None:
     summary = get_production_status(state.project_slug, chapters=state.chapters)
+    run_path = persist_run_summary(
+        project_slug=state.project_slug,
+        run_type="project_status",
+        payload=summary.to_dict(),
+    )
     for line in format_production_status(summary):
         output_fn(line)
+    output_fn(f"Run record: {run_path}")
 
 
 def _run_full_pipeline(state: PipelineMenuState, output_fn: OutputFn) -> None:
@@ -464,9 +471,22 @@ def _show_cleanup_plan(state: PipelineMenuState, scope: str, output_fn: OutputFn
     state.last_cleanup_scope = scope
     for line in format_cleanup_plan(summary):
         output_fn(line)
+    persist_run_summary(
+        project_slug=state.project_slug,
+        run_type=f"cleanup_plan_{scope}",
+        payload=_to_dict(summary),
+    )
 
 
 def _emit_summary(summary: dict[str, object], output_fn: OutputFn) -> None:
+    project_slug = summary.get("project_slug") if isinstance(summary, dict) else None
+    run_type = summary.get("profile") if isinstance(summary, dict) else None
+    if isinstance(project_slug, str) and project_slug:
+        persist_run_summary(
+            project_slug=project_slug,
+            run_type=str(run_type or summary.get("command") or "menu_action"),
+            payload=summary,
+        )
     output_fn(json.dumps(summary, indent=2))
 
 

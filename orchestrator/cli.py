@@ -30,6 +30,15 @@ from .identity_refinement import run_identity_refinement
 from .quality_grading import run_quality_grading
 from .selective_rerun import run_selective_reruns
 from .prompt_preparation import run_prompt_preparation
+from .production_cleanup import create_cleanup_plan, execute_cleanup_plan
+from .production_pipeline import (
+    plan_trusted_resume_pipeline,
+    run_full_production_pipeline,
+    run_quicktest_composite,
+    run_story_analysis_pipeline,
+)
+from .production_run_state import persist_run_summary
+from .production_status import get_production_status
 from .scene_contracts import run_scene_contract_synthesis
 from .scene_bindings import run_scene_binding_synthesis
 from .shot_planner import run_shot_planning
@@ -212,6 +221,33 @@ def build_parser() -> argparse.ArgumentParser:
     ds.add_argument("project_slug")
     ds.add_argument("--pipeline-key", type=str, default="downstream_pipeline")
 
+    ps = subparsers.add_parser("project-status")
+    ps.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
+    ps.add_argument("--chapters", type=str, default=None)
+
+    rp = subparsers.add_parser("run-production")
+    rp.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
+    rp.add_argument("--chapters", type=str, default=None)
+    rp.add_argument("--mode", choices=["resume", "force"], default="resume")
+    rp.add_argument("--profile", choices=["full", "post-taxonomy"], default="full")
+    rp.add_argument("--skip-taxonomy", action="store_true")
+    rp.add_argument("--plan-only", action="store_true")
+
+    rsa = subparsers.add_parser("run-story-analysis")
+    rsa.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
+    rsa.add_argument("--chapters", type=str, default=None)
+    rsa.add_argument("--mode", choices=["resume", "force"], default="resume")
+
+    rqc = subparsers.add_parser("run-quicktest-composite")
+    rqc.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
+    rqc.add_argument("--chapters", type=str, default="2-3")
+    rqc.add_argument("--composite", choices=["09_to_14", "11_to_14", "13_to_14"], required=True)
+
+    cp = subparsers.add_parser("clear-production")
+    cp.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
+    cp.add_argument("--scope", choices=["prompt_prep_only", "downstream_only", "taxonomy_and_downstream"], required=True)
+    cp.add_argument("--execute", action="store_true")
+
     menu = subparsers.add_parser("menu")
     menu.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
     menu.add_argument("--chapters", type=str, default=None)
@@ -306,6 +342,41 @@ def main() -> None:
         summary = run_downstream_pipeline(args.project_slug, chapters=args.chapters, start_phase=args.start_phase, pipeline_key=args.pipeline_key, resume=not args.no_resume, use_llm=not args.no_llm, shot_variants=args.shot_variants)
     elif args.command == "summarize-downstream-run":
         summary = summarize_downstream_run(args.project_slug, pipeline_key=args.pipeline_key)
+    elif args.command == "project-status":
+        summary = get_production_status(args.project_slug, chapters=args.chapters)
+    elif args.command == "run-production":
+        if args.plan_only:
+            summary = plan_trusted_resume_pipeline(args.project_slug, chapters=args.chapters)
+        elif args.profile == "post-taxonomy":
+            summary = run_full_production_pipeline(
+                args.project_slug,
+                chapters=args.chapters,
+                mode=args.mode,
+                start_phase="character_bibles" if args.skip_taxonomy else "character_taxonomy",
+            )
+        else:
+            summary = run_full_production_pipeline(
+                args.project_slug,
+                chapters=args.chapters,
+                mode=args.mode,
+            )
+    elif args.command == "run-story-analysis":
+        summary = run_story_analysis_pipeline(
+            args.project_slug,
+            chapters=args.chapters,
+            mode=args.mode,
+        )
+    elif args.command == "run-quicktest-composite":
+        summary = run_quicktest_composite(
+            args.project_slug,
+            chapters=args.chapters,
+            composite=args.composite,
+        )
+    elif args.command == "clear-production":
+        if args.execute:
+            summary = execute_cleanup_plan(args.project_slug)
+        else:
+            summary = create_cleanup_plan(args.project_slug, scope=args.scope)
     elif args.command == "menu":
         run_pipeline_menu(
             initial_project=args.project_slug,
@@ -318,9 +389,16 @@ def main() -> None:
         return
 
     if hasattr(summary, 'to_dict'):
-        print(json.dumps(summary.to_dict(), indent=2))
+        payload = summary.to_dict()
     else:
-        print(json.dumps(summary, indent=2))
+        payload = summary
+    if isinstance(payload, dict) and isinstance(payload.get("project_slug"), str):
+        persist_run_summary(
+            project_slug=payload["project_slug"],
+            run_type=str(payload.get("profile") or payload.get("command") or args.command),
+            payload=payload,
+        )
+    print(json.dumps(payload, indent=2))
 
 
 if __name__ == "__main__":
