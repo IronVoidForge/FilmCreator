@@ -71,6 +71,7 @@
 | 04_active_validation/07_quality_grading_calibration.md | spec/quality_rework_2026_04/04_QUALITY_GRADING_CALIBRATION.md | Quality | active_validation | Quality grading calibration needs validation |
 | 04_active_validation/08_focused_test_plan.md | spec/quality_rework_2026_04/06_TEST_PLAN.md | Testing | active_validation | Focused test plan for validation |
 | 04_active_validation/09_final_cleanup_before_cross_book_validation.md | spec/refactor_entity_taxonomy/11_FINAL_CLEANUP_BEFORE_CROSS_BOOK_VALIDATION.md | Taxonomy | active_validation | Final cleanup before cross-book validation |
+| 04_active_validation/10_phase_10_shot_coverage_density_plan.md | new | Phase | active_validation | Plan for low/medium/high shot coverage density and beat-based coverage recipes |
 | **05_reference_generation_next/** | | | | **Next phase: reference generation and approval** |
 | 05_reference_generation_next/01_phase_12_character_sheet_generation_and_approval.md | spec/phases/PHASE_12_CHARACTER_SHEET_GENERATION_AND_APPROVAL.md | Phase | next_phase | Character sheet generation and approval |
 | 05_reference_generation_next/02_phase_13_environment_reference_generation_and_approval.md | spec/phases/PHASE_13_ENVIRONMENT_REFERENCE_GENERATION_AND_APPROVAL.md | Phase | next_phase | Environment reference generation and approval |
