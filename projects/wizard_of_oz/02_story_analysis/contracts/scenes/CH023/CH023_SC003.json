@@ -5,37 +5,37 @@
   "purpose": "To provide the \"how-to\" for the climax and deliver the emotional payoff of the journey.",
   "summary": "Glinda reveals the secret power of the Silver Shoes. The companions share a final, tearful goodbye, realizing they have gained the wisdom, heart, and courage they sought. Dorothy prepares to leave.",
   "emotional_arc": "Revelation $\\rightarrow$ Bittersweet Nostalgia.",
-  "production_intent": "Establish the mechanical and magical solution for Dorothy's return to Kansas through Glinda's revelation. The scene must transition from a moment of high-stakes discovery to an intimate, sentimental farewell among the companions, emphasizing their internal growth before the final departure.",
+  "production_intent": "Establish the mechanical and magical mechanism for Dorothy's departure via the Silver Shoes. The scene must transition from a moment of high-stakes revelation to a sentimental farewell, ensuring the emotional weight of the companions' growth is captured through intimate close-ups before the final physical action of clicking heels.",
   "scene_short_description": "A magical revelation in a throne room leads to a tearful farewell among travelers.",
-  "scene_primary_scale_story_point": "Glinda's Throne Room serves as the central authority hub for the climax.",
+  "scene_primary_scale_story_point": "Glinda's presence dominates the scale, dwarfing the weary travelers.",
   "scene_required_anchor_catalog": [
     "Silver Shoes",
     "Glinda's Throne"
   ],
-  "scene_start_state": "Glinda reveals the secret power of the shoes to a gathered group.",
-  "scene_end_state": "Dorothy prepares her stance to click her heels and depart.",
-  "dominant_action_line": "Glinda explains the shoes, companions realize their growth, and Dorothy readies for departure.",
+  "scene_start_state": "Glinda stands before Dorothy, preparing to reveal the shoes' power.",
+  "scene_end_state": "Dorothy is poised to click her heels and depart.",
+  "dominant_action_line": "Glinda explains the shoes; companions realize their internal growth; Dorothy prepares for departure.",
   "scene_spatial_layout": [
-    "Centralized grouping around Glinda's throne",
-    "Open floor space for Dorothy's final movement"
+    "Centralized around the throne area",
+    "Companions clustered in a semi-circle facing Dorothy and Glinda"
   ],
   "character_spatial_map": [
-    "Glinda positioned near or on the throne",
-    "Dorothy and companions clustered in a semi-circle facing Glinda"
+    "dorothy: center stage, positioned near Glinda",
+    "Glinda the Good Witch (and departing companions in farewell): surrounding or facing Dorothy"
   ],
   "environment_subzones": [
-    "glinda_castle_throne_room_throne_area",
-    "glinda_castle_throne_room_center_floor"
+    "glinda_castle_throne_room_central",
+    "glinda_castle_throne_room_companion_cluster"
   ],
   "entry_vectors": [
-    "Central aisle toward throne"
+    "Glinda's throne approach"
   ],
   "exit_vectors": [
-    "Dorothy's departure path from center floor"
+    "Dorothy's departure path"
   ],
   "beat_transition_map": [
     "BT001 -> BT002: Revelation to realization",
-    "BT002 -> BT003: Realization to farewell/departure preparation"
+    "BT002 -> BT003: Realization to farewell"
   ],
   "characters_required": [
     {
@@ -72,8 +72,8 @@
     }
   ],
   "continuity_constraints": [
-    "Visual state of the Silver Shoes (reflectivity/position)",
-    "Dorothy's physical stance for heel clicking"
+    "Visual state/reflectivity of the Silver Shoes",
+    "Dorothy's physical stance and foot positioning for heel clicking"
   ],
   "visual_coverage_families": [
     "Extreme close-ups on the Silver Shoes",
@@ -88,55 +88,54 @@
       "action_start": "Glinda begins explanation",
       "action_end": "The shoes' function is understood",
       "active_subjects": [
-        "Glinda the Good Witch (and departing companions in farewell)"
-      ],
-      "passive_subjects": [
+        "Glinda the Good Witch (and departing companions in farewell)",
         "dorothy"
       ],
-      "spatial_context": "glinda_castle_throne_room_throne_area",
-      "blocking_hint": "Glinda gesturing toward Dorothy's feet",
-      "environment_subzone": "glinda_castle_throne_room_throne_area",
+      "passive_subjects": [],
+      "spatial_context": "glinda_castle_throne_room_central",
+      "blocking_hint": "Glinda stands over Dorothy; focus on feet",
+      "environment_subzone": "glinda_castle_throne_room_central",
       "continuity_focus": "Silver Shoes visual state",
-      "coverage_hint": "Extreme close-ups on the Silver Shoes",
+      "coverage_hint": "extreme close-ups on shoes",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "The companions realize their internal growth",
+      "summary": "Companions realize their internal gains",
       "purpose": "",
-      "action_start": "Companions look at one another",
-      "action_end": "A moment of shared wisdom/heart/courage",
+      "action_start": "Companions listening",
+      "action_end": "Companions acknowledge wisdom, heart, and courage",
       "active_subjects": [
-        "dorothy",
         "Glinda the Good Witch (and departing companions in farewell)"
       ],
-      "passive_subjects": [],
-      "spatial_context": "glinda_castle_throne_room_center_floor",
-      "blocking_hint": "Tight grouping for emotional intimacy",
-      "environment_subzone": "glinda_castle_throne_room_center_floor",
-      "continuity_focus": "Emotional expressions/tearful eyes",
-      "coverage_hint": "Tight emotional close-ups",
+      "passive_subjects": [
+        "dorothy"
+      ],
+      "spatial_context": "glinda_castle_throne_room_companion_cluster",
+      "blocking_hint": "Companions grouped together looking at Dorothy/Glinda",
+      "environment_subzone": "glinda_castle_throne_room_companion_cluster",
+      "continuity_focus": "Emotional consistency of companions",
+      "coverage_hint": "tight emotional close-ups",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Dorothy prepares to leave via the shoes",
+      "summary": "Final farewell and departure preparation",
       "purpose": "",
-      "action_start": "Dorothy shifts her stance",
-      "action_end": "Dorothy is poised to click heels",
+      "action_start": "Tearful goodbyes",
+      "action_end": "Dorothy prepares to click heels",
       "active_subjects": [
-        "dorothy"
-      ],
-      "passive_subjects": [
+        "dorothy",
         "Glinda the Good Witch (and departing companions in farewell)"
       ],
-      "spatial_context": "glinda_castle_throne_room_center_floor",
-      "blocking_hint": "Dorothy moves slightly away from group to center herself",
-      "environment_subzone": "glinda_castle_throne_room_center_floor",
-      "continuity_focus": "Dorothy's physical stance/feet position",
-      "coverage_hint": "Medium shot of Dorothy and shoes",
+      "passive_subjects": [],
+      "spatial_context": "glinda_castle_throne_room_central",
+      "blocking_hint": "Dorothy center; others receding or standing back",
+      "environment_subzone": "glinda_castle_throne_room_central",
+      "continuity_focus": "Dorothy's physical stance/feet",
+      "coverage_hint": "medium close-ups on Dorothy",
       "coverage_priority": "high",
       "handoff_to_next": "End of scene"
     }
@@ -146,56 +145,56 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "reveal mechanism",
-      "planned_shot_moment_summary": "Glinda points out the shoes' power",
+      "planned_shot_moment_summary": "Glinda points to the shoes",
+      "primary_subject_seed": "Silver Shoes",
+      "secondary_subjects_seed": [
+        "dorothy"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "glinda_castle_throne_room_central",
+      "planned_shot_required_anchor_1": "Silver Shoes",
+      "planned_shot_scale_proof_detail": "shoes must be clearly visible and distinct",
+      "start_state_seed": "Glinda speaking",
+      "end_state_seed": "shoes highlighted",
+      "action_seed": "Glinda gestures to feet",
+      "blocking_seed": [
+        "Dorothy looking down"
+      ],
+      "shot_size": "insert_detail",
+      "camera_angle": "low_angle",
+      "lens_family": "telephoto",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "emotional payoff",
+      "planned_shot_moment_summary": "Companions realize their wisdom/heart/courage",
       "primary_subject_seed": "Glinda the Good Witch (and departing companions in farewell)",
       "secondary_subjects_seed": [
         "dorothy"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "glinda_castle_throne_room_throne_area",
-      "planned_shot_required_anchor_1": "Silver Shoes",
-      "planned_shot_scale_proof_detail": "extreme close-up on shoes vs Glinda's hands",
-      "start_state_seed": "Glinda speaking",
-      "end_state_seed": "shoes catching light",
-      "action_seed": "pointing/explaining",
+      "environment_subzone": "glinda_castle_throne_room_companion_cluster",
+      "planned_shot_required_anchor_1": "Glinda's Throne",
+      "planned_shot_scale_proof_detail": "facial expressions must be legible",
+      "start_state_seed": "Companions nodding",
+      "end_state_seed": "tears/smiles",
+      "action_seed": "companions sharing looks of realization",
       "blocking_seed": [
-        "Glinda seated or standing near throne"
-      ],
-      "shot_size": "insert_detail",
-      "camera_angle": "eye_level",
-      "lens_family": "telephoto",
-      "camera_motion": "locked_off",
-      "zoom_behavior": "none",
-      "focus_strategy": "shallow_subject",
-      "lighting_style": "soft_even",
-      "primary_subject_angle": "front_three_quarter_right"
-    },
-    {
-      "planned_shot_id": "SH002",
-      "beat_id": "BT002",
-      "narrative_function": "emotional payoff",
-      "planned_shot_moment_summary": "Companions realize they have heart, wisdom, and courage",
-      "primary_subject_seed": "dorothy",
-      "secondary_subjects_seed": [
-        "Glinda the Good Witch (and departing companions in farewell)"
-      ],
-      "subject_visibility": "on_screen",
-      "narration_mode": "in_scene_speaker",
-      "environment_subzone": "glinda_castle_throne_room_center_floor",
-      "planned_shot_required_anchor_1": "Silver Shoes",
-      "planned_shot_scale_proof_detail": "tight facial framing",
-      "start_state_seed": "tearful realization",
-      "end_state_seed": "nodding/smiling through tears",
-      "action_seed": "sharing a final look",
-      "blocking_seed": [
-        "companions in tight cluster"
+        "tight group cluster"
       ],
       "shot_size": "close_up",
       "camera_angle": "eye_level",
       "lens_family": "portrait",
       "camera_motion": "subtle_in",
-      "zoom_behavior": "none",
+      "zoom_behavior": "subtle_in",
       "focus_strategy": "shallow_subject",
       "lighting_style": "soft_even",
       "primary_subject_angle": "front"
@@ -207,27 +206,28 @@
       "planned_shot_moment_summary": "Dorothy prepares to click heels",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
-        "Glinda the Good Witch (and departing companions in farewell)"
+        "Silver Shoes"
       ],
       "subject_visibility": "on_screen",
-      "narration_mode": "none",
-      "environment_subzone": "glinda_castle_throne_room_center_floor",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "glinda_castle_throne_room_central",
       "planned_shot_required_anchor_1": "Silver Shoes",
-      "planned_shot_scale_proof_detail": "feet to torso ratio",
-      "start_state_seed": "standing still",
+      "planned_shot_scale_proof_detail": "feet must be positioned for clicking action",
+      "start_state_seed": "Dorothy standing still",
       "end_state_seed": "heels ready to click",
-      "action_seed": "shifting weight/positioning feet",
+      "action_seed": "Dorothy shifts weight and prepares feet",
       "blocking_seed": [
-        "Dorothy center stage"
+        "dorothy center",
+        "facing camera/Glinda"
       ],
-      "shot_size": "medium_full",
+      "shot_size": "medium_close",
       "camera_angle": "low_angle",
       "lens_family": "normal",
-      "camera_motion": "push_in",
+      "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "soft_even",
-      "primary_subject_angle": "front_three_quarter_left"
+      "primary_subject_angle": "front"
     }
   ],
   "unresolved_questions": [
@@ -295,16 +295,16 @@
     "[CH012] Chapter XII (book index hit)",
     "[CH003] Chapter III (book index hit)",
     "[CH023] Chapter XXIII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH023_SC003\n\n## Production Intent\nEstablish the mechanical and magical solution for Dorothy's return to Kansas through Glinda's revelation. The scene must transition from a moment of high-stakes discovery to an intimate, sentimental farewell among the companions, emphasizing their internal growth before the final departure.\n\n## Required Cast\n- dorothy\n- Glinda the Good Witch (and departing companions in farewell)\n\n## Required Environments\n- glinda_castle_throne_room\n\n## Continuity Constraints\n- Visual state of the Silver Shoes (reflectivity/position)\n- Dorothy's physical stance for heel clicking\n\n## Beat List\n- BT001: Glinda reveals the secret power of the Silver Shoes.\n- BT002: The companions realize their internal growth (wisdom, heart, courage).\n- BT003: Dorothy prepares to leave via the shoes.",
+  "storyboard_markdown": "# Scene Contract: CH023_SC003\n\n## Production Intent\nEstablish the mechanical and magical mechanism for Dorothy's departure via the Silver Shoes. The scene must transition from a moment of high-stakes revelation to a sentimental farewell, ensuring the emotional weight of the companions' growth is captured through intimate close-ups before the final physical action of clicking heels.\n\n## Required Cast\n- dorothy\n- Glinda the Good Witch (and departing companions in farewell)\n\n## Required Environments\n- glinda_castle_throne_room\n\n## Continuity Constraints\n- Visual state/reflectivity of the Silver Shoes\n- Dorothy's physical stance and foot positioning for heel clicking\n\n## Beat List\n- BT001: Glinda reveals the secret power of the Silver Shoes.\n- BT002: Companions realize their internal gains (wisdom, heart, courage).\n- BT003: Final farewell and departure preparation.",
   "metadata": {
     "artifact_id": "CH023_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "93cbe2e0b8764d2d31e51274d3ba32c2bb8f3f2e",
+    "source_fingerprint": "f512da30c1dad4cfdfabfe5d0b32a4888a588f49",
     "created_at_utc": "2026-04-27T09:14:44.438910+00:00",
-    "updated_at_utc": "2026-04-27T09:14:44.438910+00:00",
+    "updated_at_utc": "2026-04-27T14:17:30.531714+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -329,6 +329,11 @@
         "timestamp_utc": "2026-04-27T09:15:29.726726+00:00",
         "action": "synthesized",
         "source_fingerprint": "93cbe2e0b8764d2d31e51274d3ba32c2bb8f3f2e"
+      },
+      {
+        "timestamp_utc": "2026-04-27T14:18:15.429684+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "f512da30c1dad4cfdfabfe5d0b32a4888a588f49"
       }
     ]
   }

@@ -1,0 +1,349 @@
+{
+  "scene_id": "CH024_SC001",
+  "chapter_id": "CH024",
+  "scene_title": "SC001",
+  "purpose": "",
+  "summary": "Dorothy arrives back at the farm in Kansas and runs toward a shocked Aunt Em, leading to an emotional embrace where Dorothy explains her return from Oz with Toto.",
+  "emotional_arc": "From exhaustion/anticipation to overwhelming relief and joy.",
+  "production_intent": "Establish the return to reality by transitioning from dreamlike Oz aesthetics to grounded, natural Kansas lighting. The sequence must capture the physical exhaustion of a weary traveler meeting the sudden emotional release of a family reunion within the vastness of the farmstead.",
+  "scene_short_description": "A weary traveler runs across a vast farmstead toward a shocked relative for an emotional embrace.",
+  "scene_primary_scale_story_point": "The scale of the wide kansas_farmstead emphasizes the isolation and distance traveled before reaching the house.",
+  "scene_required_anchor_catalog": [
+    "farmhouse structure",
+    "dirt path"
+  ],
+  "scene_start_state": "dorothy appears on the horizon of the farmstead, looking weary.",
+  "scene_end_state": "dorothy and aunt_em are locked in a tight embrace near the farmhouse.",
+  "dominant_action_line": "Dorothy runs from the landscape toward Aunt Em to deliver news of her return.",
+  "scene_spatial_layout": [
+    "open expanse leading to a central farmhouse",
+    "dirt path connecting the horizon to the house entrance"
+  ],
+  "character_spatial_map": [
+    "dorothy moving from far background to mid-ground foreground",
+    "aunt_em stationary near the farmhouse structure"
+  ],
+  "environment_subzones": [
+    "kansas_farmstead exterior fields",
+    "farmhouse porch/entrance area"
+  ],
+  "entry_vectors": [
+    "dorothy enters via distant horizon path"
+  ],
+  "exit_vectors": [
+    "none (scene concludes in embrace)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: physical movement/approach",
+    "BT002 -> BT003: emotional collision/contact"
+  ],
+  "characters_required": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH024/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Aunt Em",
+      "canonical_id": "aunt_em",
+      "display_name": "aunt_em",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH024/aunt_em.md",
+      "notes": "Direct registry match for 'aunt_em'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH024/toto.md",
+      "notes": "Direct registry match for 'toto'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Farm (Kansas)",
+      "canonical_id": "kansas_farmstead",
+      "display_name": "kansas_farmstead",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 58,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH024/kansas_farmstead.md",
+      "notes": "Chapter-local environment alias match for 'The Farm (Kansas)' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "dorothy physical appearance: dirt and wear from travel vs. home attire",
+    "toto position and movement during the run and embrace",
+    "lighting transition from dreamlike Oz to grounded natural Kansas light"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of kansas_farmstead landscape",
+    "Tracking shots following dorothy's run toward the house",
+    "Medium close-ups of aunt_em's reaction",
+    "Tight close-ups/Two-shot for the embrace"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Arrival at the farmstead",
+      "purpose": "",
+      "action_start": "dorothy visible on horizon",
+      "action_end": "dorothy approaching house",
+      "active_subjects": [
+        "dorothy",
+        "toto"
+      ],
+      "passive_subjects": [
+        "aunt_em"
+      ],
+      "spatial_context": "kansas_farmstead exterior fields",
+      "blocking_hint": "dorothy running across open ground",
+      "environment_subzone": "kansas_farmstead exterior fields",
+      "continuity_focus": "dirt/wear on dorothy's clothing",
+      "coverage_hint": "wide shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Shock of Recognition",
+      "purpose": "",
+      "action_start": "aunt_em spotting movement",
+      "action_end": "aunt_em reacting to dorothy's presence",
+      "active_subjects": [
+        "aunt_em"
+      ],
+      "passive_subjects": [
+        "dorothy"
+      ],
+      "spatial_context": "farmhouse porch/entrance area",
+      "blocking_hint": "aunt_em frozen then moving toward the path",
+      "environment_subzone": "farmhouse porch/entrance area",
+      "continuity_focus": "lighting transition to grounded natural light",
+      "coverage_hint": "medium close-ups",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Reunion and Explanation",
+      "purpose": "",
+      "action_start": "dorothy reaching aunt_em",
+      "action_end": "dorothy explaining the return from Oz",
+      "active_subjects": [
+        "dorothy",
+        "aunt_em"
+      ],
+      "passive_subjects": [
+        "toto"
+      ],
+      "spatial_context": "farmhouse porch/entrance area",
+      "blocking_hint": "tight physical embrace",
+      "environment_subzone": "farmhouse porch/entrance area",
+      "continuity_focus": "toto's position during embrace",
+      "coverage_hint": "tight close-ups/two-shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "none"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale and arrival",
+      "planned_shot_moment_summary": "dorothy appearing in the distance",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "kansas_farmstead exterior fields",
+      "planned_shot_required_anchor_1": "farmhouse structure",
+      "planned_shot_scale_proof_detail": "wide landscape vs small figure",
+      "start_state_seed": "distant horizon",
+      "end_state_seed": "mid-distance approach",
+      "action_seed": "running across field",
+      "blocking_seed": [
+        "dorothy running toward camera/house"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "capture reaction",
+      "planned_shot_moment_summary": "aunt_em seeing dorothy",
+      "primary_subject_seed": "aunt_em",
+      "secondary_subjects_seed": [
+        "dorothy"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "farmhouse porch/entrance area",
+      "planned_shot_required_anchor_1": "farmhouse structure",
+      "planned_shot_scale_proof_detail": "medium shot framing character against house",
+      "start_state_seed": "stationary shock",
+      "end_state_seed": "moving to embrace",
+      "action_seed": "reacting with shock",
+      "blocking_seed": [
+        "aunt_em stepping forward"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "emotional resolution",
+      "planned_shot_moment_summary": "the embrace and explanation",
+      "primary_subject_seed": "dorothy",
+      "secondary_subjects_seed": [
+        "aunt_em",
+        "toto"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "farmhouse porch/entrance area",
+      "planned_shot_required_anchor_1": "farmhouse structure",
+      "planned_shot_scale_proof_detail": "tight framing of two subjects",
+      "start_state_seed": "collision of characters",
+      "end_state_seed": "sustained embrace",
+      "action_seed": "embracing and speaking",
+      "blocking_seed": [
+        "dorothy and aunt_em entwined"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH024",
+      "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH024_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH023",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH023_chapter_xxiii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH024",
+      "canonical_id": "dorothy"
+    }
+  ],
+  "evidence_summary": [
+    "[CH024_SC001] Purpose:",
+    "[CH024_SC001] Summary: Dorothy arrives back at the farm in Kansas and runs toward a shocked Aunt Em, leading to an emotional embrace where Dorothy explains her return from Oz with Toto.",
+    "[CH024_SC001] Emotional arc: From exhaustion/anticipation to overwhelming relief and joy.",
+    "[CH024_SC001] Coverage: Wide shots of the Kansas landscape/farmstead Tracking shots following Dorothy's run toward the house Medium close-ups of Aunt Em's reaction (shock) Tight close-ups/Two-shot for the embrace",
+    "[CH024_SC001] Continuity: Dorothy's physical appearance (dirt/wear from travel vs. home attire) Toto's position and movement during the run and embrace Lighting transition from the 'dreamlike' Oz to the grounded, natural light of Kansas",
+    "[CH024] Chapter summary: Dorothy returns to her farm in Kansas, running toward Aunt Em. Upon seeing her, Aunt Em is shocked and embraces her. Dorothy informs her aunt that she has returned from the Land of Oz, accompanied by Toto, expressing...",
+    "[CH012] Chapter XII (book index hit)",
+    "[CH023] Chapter XXIII (book index hit)",
+    "[CH003] Chapter III (book index hit)",
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH024_SC001\n\n## Production Intent\nEstablish the return to reality by transitioning from dreamlike Oz aesthetics to grounded, natural Kansas lighting. The sequence must capture the physical exhaustion of a weary traveler meeting the sudden emotional release of a family reunion within the vastness of the farmstead.\n\n## Required Cast\n- dorothy (weary traveler appearance, dirt/wear on clothing)\n- aunt_em (shocked, then relieved)\n- toto (mobile during run and embrace)\n\n## Required Environments\n- kansas_farmstead (wide landscape, farmhouse structure, porch/entrance area)\n\n## Continuity Constraints\n- dorothy: physical wear/dirt from travel vs home attire\n- toto: position and movement during the run and embrace\n- lighting: transition from dreamlike Oz to grounded natural Kansas light\n\n## Beat List\n- BT001: Arrival at the farmstead (Wide landscape, running)\n- BT002: The Shock of Recognition (Medium close-up reaction)\n- BT003: The Reunion and Explanation (Tight embrace/Two-shot)",
+  "metadata": {
+    "artifact_id": "CH024_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "5cc9e8669243c309b663f211eb8731f17ec7824c",
+    "created_at_utc": "2026-04-27T14:19:03.674530+00:00",
+    "updated_at_utc": "2026-04-27T14:19:03.674530+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH024_SC001",
+        "version": "89d2632f3a36e0d772ca2f0c93b48102f5a53a03"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH024_SC001",
+        "version": "00bf2b1454352a43c7e9c69defea1a5e5bf27dfe"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH024_SC001",
+        "version": "3b0e6c03bb699b250563c4f54d4fe02a4154660d"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-27T14:19:46.814278+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "5cc9e8669243c309b663f211eb8731f17ec7824c"
+      }
+    ]
+  }
+}

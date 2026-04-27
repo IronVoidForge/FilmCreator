@@ -5,27 +5,27 @@
   "purpose": "Introduce the central conflict and the scale of the threat.",
   "summary": "The travelers stumble upon a clearing filled with a massive gathering of wild animals, all appearing terrified.",
   "emotional_arc": "Confusion to intense fear/tension.",
-  "production_intent": "Establish the massive scale of the forest threat by contrasting the small group of travelers against a vast, unnaturally quiet assembly of terrified wild animals. The visual language must shift from the dense, mossy enclosure of the ancient forest to an expansive clearing that feels overwhelmed by the sheer volume of diverse fauna.",
-  "scene_short_description": "Travelers emerge from thick mossy woods into a massive clearing filled with terrified wild animals.",
-  "scene_primary_scale_story_point": "The travelers are dwarfed by the sheer number and variety of large forest beasts.",
+  "production_intent": "Establish the massive scale of the forest threat by contrasting the small group of travelers against a vast, unnaturally crowded assembly of terrified wild animals. The visual language must shift from the curiosity of discovery to the visceral tension of an impending threat.",
+  "scene_short_description": "Travelers stumble into a massive, crowded clearing filled with terrified wild animals.",
+  "scene_primary_scale_story_point": "The sheer volume of diverse predators and prey gathered in one space.",
   "scene_required_anchor_catalog": [
-    "ancient_forest_interior_edge",
-    "central_clearing_floor"
+    "ancient_forest_interior mossy floor",
+    "central clearing perimeter"
   ],
-  "scene_start_state": "Travelers push through thick moss and massive trees into a sudden opening.",
-  "scene_end_state": "The travelers stand frozen, facing an overwhelming assembly of anxious predators and prey.",
-  "dominant_action_line": "The group stumbles into the clearing and discovers the mass gathering of terrified beasts.",
+  "scene_start_state": "Travelers emerge from thick forest into a bright, open clearing.",
+  "scene_end_state": "High tension as the travelers realize the scale of the animal gathering.",
+  "dominant_action_line": "The travelers discover and react to the massive assembly of frightened beasts.",
   "scene_spatial_layout": [
-    "Dense forest perimeter surrounding a wide central clearing",
-    "Animals clustered in large, non-aggressive groups within the open space"
+    "Open central clearing surrounded by massive trees and thick moss",
+    "Dense forest perimeter providing enclosure"
   ],
   "character_spatial_map": [
-    "dorothy, toto, the_scarecrow, tin_woodman, Lion positioned at the forest edge",
-    "various forest beasts (tigers, elephants, bears, wolves, foxes) distributed across the clearing floor"
+    "dorothy, toto, the_scarecrow, tin_woodman, Lion positioned at the edge of the clearing",
+    "various forest beasts (tigers, elephants, bears, wolves, foxes) distributed throughout the central expanse"
   ],
   "environment_subzones": [
     "thick_mossy_perimeter",
-    "central_clearing"
+    "open_clearing_center"
   ],
   "entry_vectors": [
     "forest_edge_path"
@@ -34,8 +34,8 @@
     "forest_edge_path"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: visual discovery of the clearing scale",
-    "BT002 -> BT003: realization of animal behavior/terror"
+    "BT001 -> BT002: visual discovery of the clearing",
+    "BT002 -> BT003: realization of animal behavior and scale"
   ],
   "characters_required": [
     {
@@ -112,8 +112,8 @@
     }
   ],
   "continuity_constraints": [
-    "Animal placement within the clearing relative to one another",
-    "Lighting consistency in the forest opening transition"
+    "Animal placement within the clearing must remain consistent across coverage",
+    "Lighting consistency in the forest opening relative to the thick mossy interior"
   ],
   "visual_coverage_families": [
     "Extreme wide shots of the animal assembly",
@@ -123,69 +123,71 @@
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Travelers emerge from the thick forest into a clearing",
+      "summary": "Discovery of the clearing",
       "purpose": "",
-      "action_start": "pushing through moss and trees",
-      "action_end": "stopping at the edge of the opening",
+      "action_start": "travelers walking through thick moss",
+      "action_end": "travelers stopping at the edge",
       "active_subjects": [
         "dorothy",
+        "toto",
         "the_scarecrow",
         "tin_woodman",
-        "Lion",
-        "toto"
-      ],
-      "passive_subjects": [
-        "various forest beasts (tigers, elephants, bears, wolves, foxes)"
-      ],
-      "spatial_context": "thick_mossy_perimeter",
-      "blocking_hint": "travelers moving in a line from dense woods to edge",
-      "environment_subzone": "thick_mossy_perimeter",
-      "continuity_focus": "lighting transition from shade to clearing light",
-      "coverage_hint": "wide shot of entry",
-      "coverage_priority": "medium",
-      "handoff_to_next": "BT002"
-    },
-    {
-      "beat_id": "BT002",
-      "summary": "Discovery of the massive animal gathering",
-      "purpose": "",
-      "action_start": "travelers looking out",
-      "action_end": "camera revealing the scale of animals",
-      "active_subjects": [
-        "various forest beasts (tigers, elephants, bears, wolves, foxes)"
-      ],
-      "passive_subjects": [
-        "dorothy",
-        "the_scarecrow",
-        "tin_woodman",
-        "Lion",
-        "toto"
-      ],
-      "spatial_context": "central_clearing",
-      "blocking_hint": "animals scattered across the clearing floor",
-      "environment_subzone": "central_clearing",
-      "continuity_focus": "animal placement consistency",
-      "coverage_hint": "extreme wide shot",
-      "coverage_priority": "high",
-      "handoff_to_next": "BT003"
-    },
-    {
-      "beat_id": "BT003",
-      "summary": "Realization of the animals' terror and tension",
-      "purpose": "",
-      "action_start": "observing animal stillness",
-      "action_end": "travelers reacting with fear",
-      "active_subjects": [
-        "dorothy",
         "Lion"
       ],
       "passive_subjects": [
         "various forest beasts (tigers, elephants, bears, wolves, foxes)"
       ],
-      "spatial_context": "forest edge looking into clearing",
-      "blocking_hint": "travelers frozen at the perimeter",
+      "spatial_context": "edge of ancient_forest_interior",
+      "blocking_hint": "travelers move from dense trees to open light",
       "environment_subzone": "thick_mossy_perimeter",
-      "continuity_focus": "facial expressions matching animal anxiety",
+      "continuity_focus": "lighting transition from shade to clearing",
+      "coverage_hint": "wide/extreme wide",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Observation of the assembly",
+      "purpose": "",
+      "action_start": "travelers looking into the clearing",
+      "action_end": "camera scanning the crowd of animals",
+      "active_subjects": [
+        "various forest beasts (tigers, elephants, bears, wolves, foxes)"
+      ],
+      "passive_subjects": [
+        "dorothy",
+        "toto",
+        "the_scarecrow",
+        "tin_woodman",
+        "Lion"
+      ],
+      "spatial_context": "open_clearing_center",
+      "blocking_hint": "animals are scattered but all facing a common direction/threat",
+      "environment_subzone": "open_clearing_center",
+      "continuity_focus": "animal placement consistency",
+      "coverage_hint": "medium shots of diverse animals",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Realization of terror",
+      "purpose": "",
+      "action_start": "travelers noticing animal anxiety",
+      "action_end": "travelers feeling the tension/fear",
+      "active_subjects": [
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "Lion"
+      ],
+      "passive_subjects": [
+        "various forest beasts (tigers, elephants, bears, wolves, foxes)"
+      ],
+      "spatial_context": "edge of clearing looking inward",
+      "blocking_hint": "travelers pull back or huddle",
+      "environment_subzone": "thick_mossy_perimeter",
+      "continuity_focus": "facial expressions matching the scale of threat",
       "coverage_hint": "reaction shots",
       "coverage_priority": "high",
       "handoff_to_next": "end_of_scene"
@@ -195,86 +197,89 @@
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish environment and entry",
-      "planned_shot_moment_summary": "travelers break through the mossy tree line",
-      "primary_subject_seed": "dorothy",
+      "narrative_function": "establish scale",
+      "planned_shot_moment_summary": "travelers enter the clearing seeing the mass of animals",
+      "primary_subject_seed": "various forest beasts (tigers, elephants, bears, wolves, foxes)",
       "secondary_subjects_seed": [
+        "dorothy",
+        "toto",
         "the_scarecrow",
         "tin_woodman",
-        "Lion",
-        "toto"
+        "Lion"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "thick_mossy_perimeter",
-      "planned_shot_required_anchor_1": "ancient_forest_interior_edge",
-      "planned_shot_scale_proof_detail": "massive trees vs small travelers",
-      "start_state_seed": "dense foliage view",
-      "end_state_seed": "clearing reveal",
-      "action_seed": "travelers stepping forward",
+      "environment_subzone": "open_clearing_center",
+      "planned_shot_required_anchor_1": "ancient_forest_interior mossy floor",
+      "planned_shot_scale_proof_detail": "comparison of travelers to massive elephants/tigers",
+      "start_state_seed": "travelers entering frame",
+      "end_state_seed": "wide view of assembly",
+      "action_seed": "travelers stop abruptly",
       "blocking_seed": [
-        "walking through brush"
-      ],
-      "shot_size": "wide",
-      "camera_angle": "eye_level",
-      "lens_family": "wide",
-      "camera_motion": "push_in",
-      "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
-      "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front_three_quarter_right"
-    },
-    {
-      "planned_shot_id": "SH002",
-      "beat_id": "BT002",
-      "narrative_function": "establish scale of threat",
-      "planned_shot_moment_summary": "extreme wide view of the animal assembly",
-      "primary_subject_seed": "various forest beasts (tigers, elephants, bears, wolves, foxes)",
-      "secondary_subjects_seed": [],
-      "subject_visibility": "on_screen",
-      "narration_mode": "none",
-      "environment_subzone": "central_clearing",
-      "planned_shot_required_anchor_1": "central_clearing_floor",
-      "planned_shot_scale_proof_detail": "hundreds of animals filling the frame",
-      "start_state_seed": "empty clearing view",
-      "end_state_seed": "full assembly reveal",
-      "action_seed": "animals standing still/anxious",
-      "blocking_seed": [
-        "static massed groups"
+        "travelers halt at clearing edge"
       ],
       "shot_size": "extreme_wide",
-      "camera_angle": "high_angle",
+      "camera_angle": "eye_level",
       "lens_family": "ultra_wide",
       "camera_motion": "pan",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front"
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "convey emotion",
+      "planned_shot_moment_summary": "close up on animals looking anxious",
+      "primary_subject_seed": "various forest beasts (tigers, elephants, bears, wolves, foxes)",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "open_clearing_center",
+      "planned_shot_required_anchor_1": "ancient_forest_interior mossy floor",
+      "planned_shot_scale_proof_detail": "individual animal expressions",
+      "start_state_seed": "animal staring",
+      "end_state_seed": "animal twitching/looking around",
+      "action_seed": "animals showing signs of terror",
+      "blocking_seed": [
+        "stationary animals in clearing"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "convey emotional shift",
-      "planned_shot_moment_summary": "close up of travelers reacting to the animals",
+      "narrative_function": "character reaction",
+      "planned_shot_moment_summary": "travelers reacting to the sight",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
+        "the_scarecrow",
+        "tin_woodman",
         "Lion"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "thick_mossy_perimeter",
-      "planned_shot_required_anchor_1": "ancient_forest_interior_edge",
-      "planned_shot_scale_proof_detail": "facial expression detail",
-      "start_state_seed": "neutral face",
-      "end_state_seed": "fearful/confused face",
-      "action_seed": "staring in shock",
+      "planned_shot_required_anchor_1": "ancient_forest_interior mossy floor",
+      "planned_shot_scale_proof_detail": "facial expression of weary traveler",
+      "start_state_seed": "neutral/confused face",
+      "end_state_seed": "fearful expression",
+      "action_seed": "travelers recoil",
       "blocking_seed": [
-        "frozen in place"
+        "travelers huddling together"
       ],
-      "shot_size": "close_up",
+      "shot_size": "medium_close",
       "camera_angle": "eye_level",
       "lens_family": "portrait",
-      "camera_motion": "locked_off",
+      "camera_motion": "push_in",
       "zoom_behavior": "subtle_in",
       "focus_strategy": "shallow_subject",
       "lighting_style": "diffuse_ambient",
@@ -347,16 +352,16 @@
     "[CH021] Chapter XXI (book index hit)",
     "[CH006] Chapter VI (book index hit)",
     "[CH009] Chapter IX (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH021_SC002\n\n## Production Intent\nEstablish the massive scale of the forest threat by contrasting the small group of travelers against a vast, unnaturally quiet assembly of terrified wild animals. The visual language must shift from the dense, mossy enclosure of the ancient forest to an expansive clearing that feels overwhelmed by the sheer volume of diverse fauna.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- toto\n- the_scarecrow\n- tin_woodman\n- Lion\n- various forest beasts (tigers, elephants, bears, wolves, foxes)\n\n## Required Environments\n- ancient_forest_interior (thick mossy perimeter and central clearing)\n\n## Continuity Constraints\n- Animal placement within the clearing relative to one another\n- Lighting consistency in the forest opening transition\n\n## Beat List\n- BT001: Travelers emerge from the thick forest into a clearing.\n- BT002: Discovery of the massive animal gathering.\n- BT003: Realization of the animals' terror and tension.",
+  "storyboard_markdown": "# Scene Contract: CH021_SC002\n\n## Production Intent\nEstablish the massive scale of the forest threat by contrasting the small group of travelers against a vast, unnaturally crowded assembly of terrified wild animals. The visual language must shift from the curiosity of discovery to the visceral tension of an impending threat.\n\n## Required Cast\n- dorothy\n- toto\n- the_scarecrow\n- tin_woodman\n- Lion\n- various forest beasts (tigers, elephants, bears, wolves, foxes)\n\n## Required Environments\n- ancient_forest_interior (thick mossy perimeter and open clearing center)\n\n## Continuity Constraints\n- Animal placement within the clearing must remain consistent across coverage.\n- Lighting consistency in the forest opening relative to the thick mossy interior.\n\n## Beat List\n- BT001: Discovery of the clearing.\n- BT002: Observation of the assembly.\n- BT003: Realization of terror.",
   "metadata": {
     "artifact_id": "CH021_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "48d8677bb62a0efb69a6811ea53ab02df9cca6a1",
+    "source_fingerprint": "029d68bf4cd3a5e4a28da63a18c1f5303d2207b7",
     "created_at_utc": "2026-04-27T09:05:37.505236+00:00",
-    "updated_at_utc": "2026-04-27T09:05:37.505236+00:00",
+    "updated_at_utc": "2026-04-27T14:08:32.451923+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -381,6 +386,11 @@
         "timestamp_utc": "2026-04-27T09:06:22.162952+00:00",
         "action": "synthesized",
         "source_fingerprint": "48d8677bb62a0efb69a6811ea53ab02df9cca6a1"
+      },
+      {
+        "timestamp_utc": "2026-04-27T14:09:17.563636+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "029d68bf4cd3a5e4a28da63a18c1f5303d2207b7"
       }
     ]
   }

@@ -3,7 +3,7 @@
 - scene_id: `CH003_SC003`
 - chapter_id: `CH003`
 - binding_mode: `scene_level`
-- resolved_environment: yellow_brick_road (yellow_brick_road)
+- resolved_environment: cornfield_scarecrow_post (cornfield_scarecrow_post)
 
 ## Resolved Cast
 

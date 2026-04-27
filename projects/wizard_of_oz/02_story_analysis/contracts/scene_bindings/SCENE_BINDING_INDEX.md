@@ -9,9 +9,9 @@
 - `CH002_SC003` - mode=unresolved, env=The clearing near the house, cast=3, flags=1
 - `CH002_SC004` - mode=unresolved, env=The clearing near the house, cast=3, flags=1
 - `CH002_SC005` - mode=scene_level, env=yellow_brick_road_pathway, cast=2, flags=0
-- `CH003_SC001` - mode=scene_level, env=yellow_brick_road, cast=3, flags=2
+- `CH003_SC001` - mode=scene_level, env=munchkin_country_farms, cast=3, flags=2
 - `CH003_SC002` - mode=scene_level, env=munchkin_country_farms, cast=3, flags=1
-- `CH003_SC003` - mode=scene_level, env=yellow_brick_road, cast=3, flags=1
+- `CH003_SC003` - mode=scene_level, env=cornfield_scarecrow_post, cast=3, flags=1
 - `CH003_SC004` - mode=scene_level, env=yellow_brick_road, cast=3, flags=0
 - `CH004_SC001` - mode=scene_level, env=deteriorating_yellow_brick_road, cast=3, flags=0
 - `CH004_SC002` - mode=scene_level, env=deteriorating_yellow_brick_road, cast=2, flags=0
@@ -59,7 +59,7 @@
 - `CH012_SC006` - mode=scene_level, env=wicked_witch_castle_courtyard, cast=4, flags=1
 - `CH013_SC001` - mode=scene_level, env=yellow_castle, cast=3, flags=0
 - `CH013_SC002` - mode=scene_level, env=rocky_plain, cast=4, flags=1
-- `CH013_SC003` - mode=scene_level, env=rocky_plain, cast=5, flags=1
+- `CH013_SC003` - mode=scene_level, env=tall_tree_location, cast=5, flags=1
 - `CH013_SC004` - mode=scene_level, env=yellow_castle, cast=6, flags=0
 - `CH014_SC001` - mode=scene_level, env=scarlet_flower_fields, cast=5, flags=0
 - `CH014_SC002` - mode=scene_level, env=scarlet_flower_fields, cast=6, flags=0
@@ -108,3 +108,4 @@
 - `CH023_SC002` - mode=scene_level, env=glinda_castle_throne_room, cast=6, flags=1
 - `CH023_SC003` - mode=scene_level, env=glinda_castle_throne_room, cast=2, flags=1
 - `CH023_SC004` - mode=scene_level, env=kansas_prairie_farmstead, cast=3, flags=0
+- `CH024_SC001` - mode=scene_level, env=kansas_farmstead, cast=3, flags=0

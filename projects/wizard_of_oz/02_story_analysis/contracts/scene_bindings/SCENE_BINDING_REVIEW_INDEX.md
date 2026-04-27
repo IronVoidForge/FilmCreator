@@ -7,9 +7,9 @@
 - `CH002_SC002` - mode=unresolved, env=The site of the house landing, cast=3, flags=1
 - `CH002_SC003` - mode=unresolved, env=The clearing near the house, cast=3, flags=1
 - `CH002_SC004` - mode=unresolved, env=The clearing near the house, cast=3, flags=1
-- `CH003_SC001` - mode=scene_level, env=yellow_brick_road, cast=3, flags=2
+- `CH003_SC001` - mode=scene_level, env=munchkin_country_farms, cast=3, flags=2
 - `CH003_SC002` - mode=scene_level, env=munchkin_country_farms, cast=3, flags=1
-- `CH003_SC003` - mode=scene_level, env=yellow_brick_road, cast=3, flags=1
+- `CH003_SC003` - mode=scene_level, env=cornfield_scarecrow_post, cast=3, flags=1
 - `CH004_SC003` - mode=scene_level, env=brookside_meadow, cast=4, flags=1
 - `CH006_SC001` - mode=scene_level, env=thick_dark_forest, cast=5, flags=1
 - `CH007_SC003` - mode=chapter_fallback, env=arizona_dense_forest_and_ditches, cast=6, flags=1
@@ -25,7 +25,7 @@
 - `CH012_SC005` - mode=scene_level, env=wicked_witch_castle_interior, cast=2, flags=1
 - `CH012_SC006` - mode=scene_level, env=wicked_witch_castle_courtyard, cast=4, flags=1
 - `CH013_SC002` - mode=scene_level, env=rocky_plain, cast=4, flags=1
-- `CH013_SC003` - mode=scene_level, env=rocky_plain, cast=5, flags=1
+- `CH013_SC003` - mode=scene_level, env=tall_tree_location, cast=5, flags=1
 - `CH015_SC003` - mode=scene_level, env=throne_room_grand_hall, cast=5, flags=1
 - `CH017_SC001` - mode=scene_level, env=emerald_city_throne_room, cast=2, flags=1
 - `CH017_SC003` - mode=scene_level, env=emerald_city_palace_exterior, cast=3, flags=1

@@ -3,7 +3,7 @@
 - scene_id: `CH013_SC003`
 - chapter_id: `CH013`
 - binding_mode: `scene_level`
-- resolved_environment: rocky_plain (rocky_plain)
+- resolved_environment: tall_tree_location (tall_tree_location)
 
 ## Resolved Cast
 

@@ -5,36 +5,36 @@
   "purpose": "Move the plot toward the next major destination (Glinda).",
   "summary": "Following directions, the travelers arrive at Glinda's castle. They are met by guards in red uniforms who grant them immediate access to see the Good Witch.",
   "emotional_arc": "Curiosity $\\rightarrow$ Formal/Grandeur.",
-  "production_intent": "Establish the grandeur and scale of Glinda's castle through architectural wide shots and formal guard interactions. The sequence transitions from the travelers' curiosity to a sense of ceremonial importance as they are granted access to the Good Witch.",
+  "production_intent": "Establish the grandeur of Glinda's castle through architectural scale and formal guard presence. The travelers transition from weary wanderers to guests under official supervision, moving from the red-themed exterior into the castle interior.",
   "scene_short_description": "Travelers approach a massive red-themed castle and are met by uniformed guards.",
   "scene_primary_scale_story_point": "The castle entrance must dwarf the travelers to emphasize grandeur.",
   "scene_required_anchor_catalog": [
     "glindas_castle_approach_entrance",
     "castle_guards_formation"
   ],
-  "scene_start_state": "Travelers emerge from the red-themed landscape toward the castle silhouette.",
-  "scene_end_state": "The group moves through the threshold into the interior.",
-  "dominant_action_line": "The travelers arrive at the gates and are formally admitted by guards.",
+  "scene_start_state": "Travelers emerge into view of the massive red-themed architecture.",
+  "scene_end_state": "Travelers follow guards through the threshold into the interior.",
+  "dominant_action_line": "The group arrives at the gates and is granted immediate access by the guards.",
   "scene_spatial_layout": [
-    "Open approach leading to a massive vertical entrance",
-    "Formal guard line blocking/opening the path"
+    "Wide open approach leading to a centralized, large-scale entrance",
+    "Formal guard formation blocking/opening the path"
   ],
   "character_spatial_map": [
-    "dorothy, the_scarecrow, tin_woodman, cowardly_lion clustered in center frame",
-    "castle_guards positioned symmetrically at the entrance"
+    "dorothy, the_scarecrow, tin_woodman, cowardly_lion clustered as a group",
+    "castle_guards positioned in rigid, symmetrical lines at the entrance"
   ],
   "environment_subzones": [
     "glindas_castle_approach_exterior",
     "glindas_castle_approach_entrance"
   ],
   "entry_vectors": [
-    "approach path from rocky hill/red landscape"
+    "approach path from the red-themed country"
   ],
   "exit_vectors": [
     "interior threshold of the castle"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Arrival at gates",
+    "BT001 -> BT002: Arrival at the gates",
     "BT002 -> BT003: Formal greeting and entry"
   ],
   "characters_required": [
@@ -102,21 +102,21 @@
     }
   ],
   "continuity_constraints": [
-    "Scale relationship between characters and massive castle entrance",
-    "Uniformity of appearance for all castle_guards"
+    "Scale relationship between the massive castle entrance and the character heights",
+    "Uniformity and identical appearance of the castle_guards"
   ],
   "visual_coverage_families": [
-    "Establishing shots of castle architecture",
-    "Medium shots of guards in red uniforms",
-    "Tracking shots following group into interior"
+    "Establishing shots of the castle architecture",
+    "Medium shots of the guards in red uniforms",
+    "Tracking shots following the group as they are led inside"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Arrival at the castle gates",
+      "summary": "Arrival at the castle",
       "purpose": "",
       "action_start": "travelers walking through red landscape",
-      "action_end": "travelers stop before entrance",
+      "action_end": "castle architecture fills frame",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -125,10 +125,10 @@
       ],
       "passive_subjects": [],
       "spatial_context": "glindas_castle_approach_exterior",
-      "blocking_hint": "group moves in a loose cluster toward the castle [[CH022_SC005]]",
+      "blocking_hint": "group moving toward center-frame castle [[CH022_SC005]]",
       "environment_subzone": "glindas_castle_approach_exterior",
       "continuity_focus": "scale of architecture vs characters",
-      "coverage_hint": "establishing shot",
+      "coverage_hint": "establishing shots",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
@@ -136,30 +136,31 @@
       "beat_id": "BT002",
       "summary": "Meeting the guards",
       "purpose": "",
-      "action_start": "guards step forward to intercept",
-      "action_end": "guards grant access",
+      "action_start": "group reaches entrance",
+      "action_end": "guards acknowledge group",
       "active_subjects": [
-        "castle_guards",
+        "castle_guards"
+      ],
+      "passive_subjects": [
         "dorothy",
         "the_scarecrow",
         "tin_woodman",
         "cowardly_lion"
       ],
-      "passive_subjects": [],
       "spatial_context": "glindas_castle_approach_entrance",
-      "blocking_hint": "guards form a formal line [[CH022_SC005]]",
+      "blocking_hint": "guards in red uniforms standing in formation",
       "environment_subzone": "glindas_castle_approach_entrance",
-      "continuity_focus": "uniformity of red uniforms",
+      "continuity_focus": "uniform appearance of guards",
       "coverage_hint": "medium shots of guards",
       "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Entering the castle",
+      "summary": "Granted access",
       "purpose": "",
       "action_start": "guards step aside",
-      "action_end": "group crosses threshold",
+      "action_end": "group enters castle interior",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -169,7 +170,7 @@
       ],
       "passive_subjects": [],
       "spatial_context": "glindas_castle_approach_entrance",
-      "blocking_hint": "group follows guards through entrance [[CH022_SC005]]",
+      "blocking_hint": "travelers following guards through threshold",
       "environment_subzone": "glindas_castle_approach_entrance",
       "continuity_focus": "movement direction into interior",
       "coverage_hint": "tracking shots",
@@ -182,7 +183,7 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish_location",
-      "planned_shot_moment_summary": "travelers see the castle for the first time",
+      "planned_shot_moment_summary": "travelers view the castle architecture",
       "primary_subject_seed": "glindas_castle_approach",
       "secondary_subjects_seed": [
         "dorothy",
@@ -195,18 +196,18 @@
       "environment_subzone": "glindas_castle_approach_exterior",
       "planned_shot_required_anchor_1": "glindas_castle_approach_entrance",
       "planned_shot_scale_proof_detail": "characters appear small against architecture",
-      "start_state_seed": "wide view of red landscape and castle",
+      "start_state_seed": "wide view of castle",
       "end_state_seed": "travelers walking toward gates",
-      "action_seed": "walking",
+      "action_seed": "walking toward destination",
       "blocking_seed": [
-        "group moving toward center frame"
+        "group moving center frame"
       ],
       "shot_size": "wide",
       "camera_angle": "eye_level",
-      "lens_family": "wide",
-      "camera_motion": "track",
+      "lens_family": "ultra_wide",
+      "camera_motion": "push_in",
       "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
+      "focus_strategy": "environment_priority",
       "lighting_style": "diffuse_ambient",
       "primary_subject_angle": "rear_three_quarter_left"
     },
@@ -223,18 +224,18 @@
         "cowardly_lion"
       ],
       "subject_visibility": "on_screen",
-      "narration_mode": "in_scene_speaker",
+      "narration_mode": "none",
       "environment_subzone": "glindas_castle_approach_entrance",
       "planned_shot_required_anchor_1": "castle_guards_formation",
       "planned_shot_scale_proof_detail": "uniformity of red uniforms",
       "start_state_seed": "guards standing still",
       "end_state_seed": "guards acknowledging travelers",
-      "action_seed": "standing/interacting",
+      "action_seed": "guards blocking path then stepping aside",
       "blocking_seed": [
-        "guards in formal line"
+        "symmetrical guard line"
       ],
-      "shot_size": "medium",
-      "camera_angle": "eye_level",
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
       "lens_family": "normal",
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
@@ -245,34 +246,33 @@
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "resolve_access",
-      "planned_shot_moment_summary": "group is led inside",
+      "narrative_function": "drive_plot",
+      "planned_shot_moment_summary": "group enters the castle",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "the_scarecrow",
         "tin_woodman",
-        "cowardly_lion",
-        "castle_guards"
+        "cowardly_lion"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "glindas_castle_approach_entrance",
       "planned_shot_required_anchor_1": "glindas_castle_approach_entrance",
-      "planned_shot_scale_proof_detail": "group passing through large threshold",
-      "start_state_seed": "guards stepping aside",
-      "end_state_seed": "group entering interior",
-      "action_seed": "walking",
+      "planned_shot_scale_proof_detail": "group moving through the large threshold",
+      "start_state_seed": "guards opening way",
+      "end_state_seed": "group passing into interior",
+      "action_seed": "walking forward following guards",
       "blocking_seed": [
-        "group following guards through entrance"
+        "tracking group from behind/side"
       ],
       "shot_size": "medium_full",
       "camera_angle": "eye_level",
       "lens_family": "wide",
       "camera_motion": "track",
       "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
-      "lighting_style": "high_contrast_ceremonial",
-      "primary_subject_angle": "front_three_quarter_right"
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_right"
     }
   ],
   "unresolved_questions": [],
@@ -338,16 +338,16 @@
     "[CH012] Chapter XII (book index hit)",
     "[CH014] Chapter XIV (book index hit)",
     "[CH015] Chapter XV (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH022_SC005\n\n## Production Intent\nEstablish the grandeur and scale of Glinda's castle through architectural wide shots and formal guard interactions. The sequence transitions from the travelers' curiosity to a sense of ceremonial importance as they are granted access to the Good Witch.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- castle_guards (in red uniforms)\n\n## Required Environments\n- glindas_castle_approach (Red-themed, large scale architecture)\n\n## Continuity Constraints\n- Scale relationship between characters and massive castle entrance.\n- Uniform appearance of all castle_guards in red uniforms.\n\n## Beat List\n- BT001: Arrival at the castle gates.\n- BT002: Meeting the guards.\n- BT003: Entering the castle.",
+  "storyboard_markdown": "# Scene Contract: CH022_SC005\n\n## Production Intent\nEstablish the grandeur of Glinda's castle through architectural scale and formal guard presence. The travelers transition from weary wanderers to guests under official supervision, moving from the red-themed exterior into the castle interior.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- castle_guards (in red uniforms)\n\n## Required Environments\n- glindas_castle_approach (Red-themed, large scale architecture)\n\n## Continuity Constraints\n- Scale relationship between the massive castle entrance and character heights.\n- Uniformity and identical appearance of the castle_guards in red uniforms.\n\n## Beat List\n- BT001: Arrival at the castle.\n- BT002: Meeting the guards.\n- BT003: Granted access and entry.",
   "metadata": {
     "artifact_id": "CH022_SC005_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "627118f2a9e8058553e19ab82db2fc0daebda645",
+    "source_fingerprint": "5b7d7c157ad92bae030a12be5ae71ae7511dce37",
     "created_at_utc": "2026-04-27T09:12:20.556727+00:00",
-    "updated_at_utc": "2026-04-27T09:12:20.556727+00:00",
+    "updated_at_utc": "2026-04-27T14:15:07.912017+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -372,6 +372,11 @@
         "timestamp_utc": "2026-04-27T09:13:04.697396+00:00",
         "action": "synthesized",
         "source_fingerprint": "627118f2a9e8058553e19ab82db2fc0daebda645"
+      },
+      {
+        "timestamp_utc": "2026-04-27T14:15:51.915519+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "5b7d7c157ad92bae030a12be5ae71ae7511dce37"
       }
     ]
   }

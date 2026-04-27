@@ -5,38 +5,40 @@
   "purpose": "To resolve the subplots of the companions through magical intervention.",
   "summary": "Dorothy surrenders the Golden Cap to Glinda. Glinda uses the cap's magic to command the Winged Monkeys to transport the Scarecrow, Tin Woodman, and Lion to their respective destinations.",
   "emotional_arc": "Tension $\\rightarrow$ Magical Resolution/Release.",
-  "production_intent": "Execute the magical resolution of companion subplots through a structured handoff of the Golden Cap and subsequent command sequence. The scene requires precise timing for three distinct magical commands to ensure each character's departure is clearly delineated.",
-  "scene_short_description": "A magical transfer of power leads to the airborne departure of three companions.",
-  "scene_primary_scale_story_point": "Glinda's elevated presence relative to the seated or standing companions.",
+  "production_intent": "Resolve companion subplots through the transfer of the Golden Cap and subsequent magical command of the Winged Monkeys. The sequence must transition from high-tension negotiation to a sense of magical release as characters are physically removed from the space.",
+  "scene_short_description": "A weary traveler surrenders a golden artifact to a witch, triggering a magical mass departure.",
+  "scene_primary_scale_story_point": "Glinda sits at the top of the hierarchy; companions are positioned as recipients of her command.",
   "scene_required_anchor_catalog": [
     "Glinda's Throne",
     "The Golden Cap"
   ],
-  "scene_start_state": "Dorothy holds the Golden Cap in a state of tension.",
-  "scene_end_state": "The throne room is empty of companions as monkeys ascend.",
-  "dominant_action_line": "Dorothy surrenders the cap, and Glinda commands the monkeys to transport the group.",
+  "scene_start_state": "Dorothy stands before Glinda holding the Golden Cap in a state of tension.",
+  "scene_end_state": "The throne room is empty of companions; only Dorothy and Glinda remain.",
+  "dominant_action_line": "Dorothy surrenders the cap, Glinda commands the monkeys, monkeys transport the companions.",
   "scene_spatial_layout": [
-    "Centralized focus on Glinda's throne area",
-    "Companions positioned in a semi-circle or grouping facing Glinda"
+    "Vertical hierarchy with Glinda elevated on a throne",
+    "Companions grouped in a receiving area below the throne"
   ],
   "character_spatial_map": [
-    "Glinda at the throne anchor",
-    "Dorothy approaching the throne",
-    "Scarecrow, Tin Woodman, and Lion grouped for departure"
+    "Glinda the Good Witch: Seated at glinda_castle_throne_room throne",
+    "Dorothy: Standing mid-ground between throne and companions",
+    "Scarecrow, Tin Woodman, Lion: Grouped in lower foreground/mid-ground"
   ],
   "environment_subzones": [
-    "glinda_castle_throne_room_throne_zone",
-    "glinda_castle_throne_room_companion_zone"
+    "throne_zone",
+    "transition_zone",
+    "companion_grouping_zone"
   ],
   "entry_vectors": [
-    "Dorothy moving toward Glinda"
+    "Dorothy enters from transition_zone to throne_zone"
   ],
   "exit_vectors": [
-    "Winged monkeys/companions ascending vertically"
+    "Scarecrow, Tin Woodman, Lion exit via vertical ascent"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Physical handoff of the cap",
-    "BT002 -> BT003: Sequential magical commands and departures"
+    "BT001 -> BT002: Physical handoff of the Golden Cap",
+    "BT002 -> BT003: Magical activation and monkey arrival",
+    "BT003 -> BT004: Sequential departure of companions"
   ],
   "characters_required": [
     {
@@ -113,21 +115,21 @@
     }
   ],
   "continuity_constraints": [
-    "Physical handoff of Golden Cap from Dorothy to Glinda",
-    "Sequential timing of the three distinct commands"
+    "Handover of Golden Cap from Dorothy to Glinda",
+    "Precise timing of three distinct magical commands"
   ],
   "visual_coverage_families": [
     "Low angle shots of Glinda performing magic",
-    "Reaction shots of companions during transport",
+    "Reaction shots of companions being whisked away",
     "Tracking shots following winged monkeys' ascent"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Dorothy surrenders the Golden Cap to Glinda",
+      "summary": "Dorothy surrenders the Golden Cap",
       "purpose": "",
-      "action_start": "Dorothy approaches Glinda with cap",
-      "action_end": "Glinda holds the cap",
+      "action_start": "Dorothy holds cap tightly",
+      "action_end": "Glinda takes possession of cap",
       "active_subjects": [
         "dorothy",
         "Glinda the Good Witch"
@@ -137,23 +139,22 @@
         "tin_woodman",
         "Lion"
       ],
-      "spatial_context": "near the throne",
-      "blocking_hint": "Dorothy moves from companion zone to throne zone",
-      "environment_subzone": "glinda_castle_throne_room_throne_zone",
-      "continuity_focus": "cap movement direction and grip",
-      "coverage_hint": "medium shots of handoff",
+      "spatial_context": "throne_zone",
+      "blocking_hint": "Dorothy approaches throne",
+      "environment_subzone": "throne_zone",
+      "continuity_focus": "cap movement direction",
+      "coverage_hint": "medium shot of hands/faces",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Glinda performs the magical command",
+      "summary": "Glinda prepares the magic",
       "purpose": "",
-      "action_start": "Glinda holds cap aloft",
-      "action_end": "First monkey responds",
+      "action_start": "Glinda holds cap",
+      "action_end": "Glinda speaks command",
       "active_subjects": [
-        "Glinda the Good Witch",
-        "winged_monkeys"
+        "Glinda the Good Witch"
       ],
       "passive_subjects": [
         "dorothy",
@@ -161,59 +162,58 @@
         "tin_woodman",
         "Lion"
       ],
-      "spatial_context": "throne area",
-      "blocking_hint": "Glinda remains anchored to throne",
-      "environment_subzone": "glinda_castle_throne_room_throne_zone",
-      "continuity_focus": "timing of commands",
-      "coverage_hint": "low angle shots",
-      "coverage_priority": "high",
+      "spatial_context": "throne_zone",
+      "blocking_hint": "Glinda remains seated",
+      "environment_subzone": "throne_zone",
+      "continuity_focus": "cap position in Glinda's hands",
+      "coverage_hint": "low angle shot of Glinda",
+      "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "The companions are transported away",
+      "summary": "The Winged Monkeys arrive and receive commands",
       "purpose": "",
-      "action_start": "Monkeys descend/grab companions",
-      "action_end": "Companions exit the frame via ascent",
+      "action_start": "Monkeys enter frame",
+      "action_end": "Three distinct commands issued",
       "active_subjects": [
         "winged_monkeys",
+        "Glinda the Good Witch"
+      ],
+      "passive_subjects": [
         "the_scarecrow",
         "tin_woodman",
         "Lion"
       ],
-      "passive_subjects": [
-        "dorothy",
-        "Glinda the Good Witch"
-      ],
-      "spatial_context": "companion zone to vertical ascent",
-      "blocking_hint": "vertical movement away from camera",
-      "environment_subzone": "glinda_castle_throne_room_companion_zone",
-      "continuity_focus": "order of departure (Scarecrow, then Tin Woodman, then Lion)",
-      "coverage_hint": "tracking shots and reaction shots",
-      "coverage_priority": "medium",
-      "handoff_to_next": "End Scene"
+      "spatial_context": "throne_zone to companion_grouping_zone",
+      "blocking_hint": "Monkeys descend from above [[/SECTION]]",
+      "environment_subzone": "",
+      "continuity_focus": "",
+      "coverage_hint": "",
+      "coverage_priority": "",
+      "handoff_to_next": ""
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish handoff",
-      "planned_shot_moment_summary": "Dorothy presents the cap to Glinda",
+      "narrative_function": "establish tension and handoff",
+      "planned_shot_moment_summary": "Dorothy extends the Golden Cap toward Glinda",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "Glinda the Good Witch"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "glinda_castle_throne_room_throne_zone",
+      "environment_subzone": "throne_zone",
       "planned_shot_required_anchor_1": "Glinda's Throne",
-      "planned_shot_scale_proof_detail": "cap movement from Dorothy to Glinda",
-      "start_state_seed": "Dorothy holding cap",
-      "end_state_seed": "Glinda holding cap",
-      "action_seed": "handing over the Golden Cap",
+      "planned_shot_scale_proof_detail": "cap size relative to Dorothy's hands",
+      "start_state_seed": "Dorothy holding cap at chest height",
+      "end_state_seed": "Cap held by Glinda",
+      "action_seed": "handover of artifact",
       "blocking_seed": [
-        "Dorothy approaches throne"
+        "Dorothy steps forward toward throne"
       ],
       "shot_size": "medium_close",
       "camera_angle": "eye_level",
@@ -222,67 +222,67 @@
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
       "lighting_style": "high_contrast_ceremonial",
-      "primary_subject_angle": "front_three_quarter_left"
+      "primary_subject_angle": "front_three_quarter_right"
     },
     {
       "planned_shot_id": "SH002",
-      "beat_id": "BT002",
+      "beat_id": "BT003",
       "narrative_function": "show magical power",
-      "planned_shot_moment_summary": "Glinda uses the cap to command monkeys",
+      "planned_shot_moment_summary": "Glinda commands the monkeys using the cap",
       "primary_subject_seed": "Glinda the Good Witch",
       "secondary_subjects_seed": [
         "winged_monkeys"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "glinda_castle_throne_room_throne_zone",
-      "planned_shot_required_anchor_1": "The Golden Cap",
-      "planned_shot_scale_proof_detail": "low angle perspective of Glinda",
+      "environment_subzone": "throne_zone",
+      "planned_shot_required_anchor_1": "Glinda's Throne",
+      "planned_shot_scale_proof_detail": "Glinda's height relative to throne backrest",
       "start_state_seed": "Glinda holding cap",
-      "end_state_seed": "Glinda completing command",
-      "action_seed": "performing magic with the cap",
+      "end_state_seed": "Glinda lowering cap",
+      "action_seed": "magical command",
       "blocking_seed": [
-        "Glinda remains seated/stationary at throne"
+        "Glinda remains seated",
+        "monkeys descend"
       ],
-      "shot_size": "medium_full",
+      "shot_size": "low_angle_medium",
       "camera_angle": "low_angle",
       "lens_family": "wide",
-      "camera_motion": "locked_off",
-      "zoom_behavior": "subtle_in",
+      "camera_motion": "tilt",
+      "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "high_contrast_ceremonial",
       "primary_subject_angle": "front"
     },
     {
       "planned_shot_id": "SH003",
-      "beat_id": "BT003",
-      "narrative_function": "resolve subplots",
+      "beat_id": "BT004",
+      "narrative_function": "resolve subplots via departure",
       "planned_shot_moment_summary": "Companions are whisked away by monkeys",
-      "primary_subject_seed": "winged_monkeys",
+      "primary_subject_seed": "the_scarecrow",
       "secondary_subjects_seed": [
-        "the_scarecrow",
         "tin_woodman",
         "Lion"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "glinda_castle_throne_room_companion_zone",
+      "environment_subzone": "companion_grouping_zone",
       "planned_shot_required_anchor_1": "Glinda's Throne",
-      "planned_shot_scale_proof_detail": "tracking monkeys' ascent",
-      "start_state_seed": "companions standing",
-      "end_state_seed": "companions gone",
-      "action_seed": "monkeys transporting companions away",
+      "planned_shot_scale_proof_detail": "companions moving upward away from floor level",
+      "start_state_seed": "Companions standing on ground",
+      "end_state_seed": "Companions out of frame/ascending",
+      "action_seed": "monkeys lifting companions",
       "blocking_seed": [
-        "monkeys lift companions vertically"
+        "vertical movement away from camera"
       ],
       "shot_size": "wide",
-      "camera_angle": "eye_level",
+      "camera_angle": "low_angle",
       "lens_family": "wide",
       "camera_motion": "track",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "profile_left"
+      "primary_subject_angle": "front_three_quarter_left"
     }
   ],
   "unresolved_questions": [
@@ -351,16 +351,16 @@
     "[CH022] Chapter XXII (book index hit)",
     "[CH023] Chapter XXIII (book index hit)",
     "[CH012] Chapter XII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH023_SC002\n\n## Production Intent\nExecute the magical resolution of companion subplots through a structured handoff of the Golden Cap and subsequent command sequence. The scene requires precise timing for three distinct magical commands to ensure each character's departure is clearly delineated.\n\n## Required Cast\n- dorothy (white clothing/dress)\n- the_scarecrow\n- tin_woodman\n- Lion\n- Glinda the Good Witch\n- winged_monkeys (action/implied)\n\n## Required Environments\n- glinda_castle_throne_room\n\n## Continuity Constraints\n- Physical handoff of Golden Cap from Dorothy to Glinda.\n- Sequential timing of the three distinct commands for Scarecrow, Tin Woodman, and Lion.\n\n## Beat List\n- BT001: Dorothy surrenders the Golden Cap to Glinda.\n- BT002: Glinda performs the magical command using the cap.\n- BT003: The companions are transported away by winged monkeys.",
+  "storyboard_markdown": "# Scene Contract: CH023_SC002\n\n## Production Intent\nResolve companion subplots through the transfer of the Golden Cap and subsequent magical command of the Winged Monkeys. The sequence must transition from high-tension negotiation to a sense of magical release as characters are physically removed from the space.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- Lion\n- Glinda the Good Witch\n- winged_monkeys (action/implied)\n\n## Required Environments\n- glinda_castle_throne_room\n\n## Continuity Constraints\n- The movement of the Golden Cap from Dorothy to Glinda.\n- The timing of the three distinct commands issued by Glinda.\n\n## Beat List\n- BT001: Dorothy surrenders the Golden Cap to Glinda.\n- BT002: Glinda prepares the magic.\n- BT003: The Winged Monkeys arrive and receive commands.\n- BT004: Sequential departure of Scarecrow, Tin Woodman, and Lion.",
   "metadata": {
     "artifact_id": "CH023_SC002_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "e5621d7b1e39d604ef4fb3d6bf08f1573bdbf0d9",
+    "source_fingerprint": "2395e805e318389f6d11b14e9a09926bc1f4b2fe",
     "created_at_utc": "2026-04-27T09:13:58.502216+00:00",
-    "updated_at_utc": "2026-04-27T09:13:58.502216+00:00",
+    "updated_at_utc": "2026-04-27T14:16:45.028767+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -385,6 +385,11 @@
         "timestamp_utc": "2026-04-27T09:14:43.768116+00:00",
         "action": "synthesized",
         "source_fingerprint": "e5621d7b1e39d604ef4fb3d6bf08f1573bdbf0d9"
+      },
+      {
+        "timestamp_utc": "2026-04-27T14:17:29.859997+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "2395e805e318389f6d11b14e9a09926bc1f4b2fe"
       }
     ]
   }

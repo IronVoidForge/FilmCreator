@@ -5,37 +5,35 @@
   "purpose": "Resolve the chapter with a climax of accidental destruction and an exit from the setting.",
   "summary": "The group reaches the far wall to exit. As they climb, the Cowardly Lion's tail accidentally smashes a china church. They successfully scale the wall and leave the country, reflecting on the fragility of their journey.",
   "emotional_arc": "Urgency $\\rightarrow$ Climax (Accident) $\\rightarrow$ Relief/Reflection.",
-  "production_intent": "Execute a high-stakes exit sequence involving physical climbing and accidental destruction of porcelain assets. The scene must transition from the frantic energy of scaling a barrier to a quiet, reflective wide shot as the group leaves the fragile landscape behind.",
-  "scene_short_description": "A group scales a massive barrier, accidentally smashing a porcelain structure before exiting the fragile land.",
-  "scene_primary_scale_story_point": "Characters are large relative to the tiny colorful china houses and porcelain inhabitants.",
+  "production_intent": "Execute a high-stakes climb up The far wall that transitions from urgent physical exertion to a sudden moment of accidental destruction, concluding with the group exiting dainty_china_country.",
+  "scene_short_description": "A group scales a massive wall, accidentally smashing a porcelain church before exiting a fragile land.",
+  "scene_primary_scale_story_point": "Tiny china houses vs. the massive scale of The far wall.",
   "scene_required_anchor_catalog": [
-    "The far wall",
-    "China church"
+    "china_church",
+    "The far wall"
   ],
   "scene_start_state": "Group approaching the base of The far wall with urgency.",
-  "scene_end_state": "Group positioned outside dainty_china_country looking back at the land.",
-  "dominant_action_line": "Scaling the wall and accidental destruction of a china church by a tail.",
+  "scene_end_state": "Group positioned outside dainty_china_country looking back at the landscape.",
+  "dominant_action_line": "Scaling the wall and accidental destruction of a porcelain structure.",
   "scene_spatial_layout": [
     "Vertical ascent along The far wall",
-    "Horizontal expanse of dainty_china_country below"
+    "Transition from the smooth white floor to the exterior boundary"
   ],
   "character_spatial_map": [
-    "Group clustered at the base of The far wall",
-    "Characters ascending vertically in staggered positions"
+    "dorothy, the_scarecrow, tin_woodman, cowardly_lion, toto clustered at the base/climbing surface"
   ],
   "environment_subzones": [
-    "The far wall",
-    "dainty_china_country (porcelain landscape)"
+    "primary scene playing area"
   ],
   "entry_vectors": [
-    "Approach from dainty_china_country floor"
+    "Approach from dainty_china_country interior"
   ],
   "exit_vectors": [
-    "Over the top of The far wall into new territory"
+    "Over the top of The far wall to the exterior"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Physical impact/climax",
-    "BT002 -> BT003: Transition from chaos to stillness"
+    "BT001 -> BT002: Physical exertion leads to accidental movement",
+    "BT002 -> BT003: Destruction triggers immediate exit/climb completion"
   ],
   "characters_required": [
     {
@@ -112,21 +110,21 @@
     }
   ],
   "continuity_constraints": [
-    "Transition of china church from pristine to broken state",
-    "Character physical positioning relative to the wall height during exit"
+    "Church state must transition from intact to broken/smashed",
+    "Character physical positions must align with the scaling of The far wall"
   ],
   "visual_coverage_families": [
-    "Climbing action sequences",
-    "Destruction of china church via tail impact",
-    "Wide environmental departure shots"
+    "Climbing action shots",
+    "Destruction shot of china church hit by tail",
+    "Wide shot of group looking back at land from outside"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "The group climbs the wall with urgency",
+      "summary": "The group climbs The far wall with urgency",
       "purpose": "",
       "action_start": "group reaches base of wall",
-      "action_end": "characters are mid-climb",
+      "action_end": "characters mid-climb",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -136,9 +134,9 @@
       ],
       "passive_subjects": [],
       "spatial_context": "The far wall",
-      "blocking_hint": "vertical staggered climb",
+      "blocking_hint": "vertical ascent along the surface",
       "environment_subzone": "The far wall",
-      "continuity_focus": "character height relative to wall texture",
+      "continuity_focus": "character height/position on wall",
       "coverage_hint": "action shots of climbing",
       "coverage_priority": "medium",
       "handoff_to_next": "BT002"
@@ -147,7 +145,7 @@
       "beat_id": "BT002",
       "summary": "The Cowardly Lion's tail smashes a china church",
       "purpose": "",
-      "action_start": "lion moves upward",
+      "action_start": "tail swings accidentally",
       "action_end": "church is destroyed",
       "active_subjects": [
         "cowardly_lion"
@@ -155,19 +153,19 @@
       "passive_subjects": [
         "china_church"
       ],
-      "spatial_context": "dainty_china_country below the wall",
-      "blocking_hint": "lion positioned above the porcelain structure",
+      "spatial_context": "dainty_china_country floor near wall",
+      "blocking_hint": "lion positioned near porcelain structures",
       "environment_subzone": "dainty_china_country",
-      "continuity_focus": "church state changes from intact to broken",
+      "continuity_focus": "church state: broken",
       "coverage_hint": "destruction shot",
       "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "The group scales the wall and exits, reflecting on the journey",
+      "summary": "The group scales the wall and exits the country",
       "purpose": "",
-      "action_start": "characters cresting the top of the wall",
+      "action_start": "group cresting the top of the wall",
       "action_end": "group looking back at the land",
       "active_subjects": [
         "dorothy",
@@ -177,11 +175,11 @@
         "toto"
       ],
       "passive_subjects": [],
-      "spatial_context": "edge of The far wall overlooking dainty_china_country",
-      "blocking_hint": "characters spread along the top edge",
-      "environment_subzone": "The far wall",
-      "continuity_focus": "physical position of characters exiting",
-      "coverage_hint": "wide shot looking back",
+      "spatial_context": "The far wall exit point",
+      "blocking_hint": "standing on the boundary edge",
+      "environment_subzone": "dainty_china_country exterior",
+      "continuity_focus": "group position outside the country",
+      "coverage_hint": "wide shot of landscape",
       "coverage_priority": "medium",
       "handoff_to_next": "end_of_scene"
     }
@@ -191,7 +189,7 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish urgency",
-      "planned_shot_moment_summary": "group begins climbing the wall",
+      "planned_shot_moment_summary": "group climbing the wall surface",
       "primary_subject_seed": "the_scarecrow",
       "secondary_subjects_seed": [
         "dorothy",
@@ -203,12 +201,12 @@
       "narration_mode": "none",
       "environment_subzone": "The far wall",
       "planned_shot_required_anchor_1": "The far wall",
-      "planned_shot_scale_proof_detail": "characters dwarfing china houses below",
-      "start_state_seed": "group at base of wall",
-      "end_state_seed": "characters mid-climb",
-      "action_seed": "climbing upward",
+      "planned_shot_scale_proof_detail": "characters appearing small against the verticality",
+      "start_state_seed": "group reaching base",
+      "end_state_seed": "mid-climb position",
+      "action_seed": "climbing/pulling up",
       "blocking_seed": [
-        "staggered vertical ascent"
+        "vertical spread on wall"
       ],
       "shot_size": "medium_full",
       "camera_angle": "low_angle",
@@ -217,13 +215,13 @@
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front_three_quarter_left"
+      "primary_subject_angle": "profile_left"
     },
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "climax/destruction",
-      "planned_shot_moment_summary": "tail hits the church",
+      "narrative_function": "climax of accident",
+      "planned_shot_moment_summary": "tail hitting the church",
       "primary_subject_seed": "cowardly_lion",
       "secondary_subjects_seed": [
         "china_church"
@@ -232,12 +230,12 @@
       "narration_mode": "none",
       "environment_subzone": "dainty_china_country",
       "planned_shot_required_anchor_1": "china_church",
-      "planned_shot_scale_proof_detail": "tail size vs house size",
-      "start_state_seed": "lion mid-climb",
-      "end_state_seed": "church in pieces",
-      "action_seed": "tail smashes church",
+      "planned_shot_scale_proof_detail": "tail size relative to tiny porcelain structure",
+      "start_state_seed": "tail swinging",
+      "end_state_seed": "church shattered",
+      "action_seed": "smashing",
       "blocking_seed": [
-        "lion positioned above the church structure"
+        "cowardly_lion near china_church"
       ],
       "shot_size": "medium",
       "camera_angle": "eye_level",
@@ -246,13 +244,13 @@
       "zoom_behavior": "none",
       "focus_strategy": "rack_focus",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "profile_right"
+      "primary_subject_angle": "rear_three_quarter_left"
     },
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
       "narrative_function": "resolution/reflection",
-      "planned_shot_moment_summary": "group looks back from outside",
+      "planned_shot_moment_summary": "group looking back at the land",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
         "the_scarecrow",
@@ -262,14 +260,14 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "dainty_china_country",
+      "environment_subzone": "dainty_china_country exterior",
       "planned_shot_required_anchor_1": "The far wall",
-      "planned_shot_scale_proof_detail": "view of the entire porcelain landscape",
-      "start_state_seed": "characters cresting wall",
+      "planned_shot_scale_proof_detail": "view of the tiny china houses from above/outside",
+      "start_state_seed": "group cresting wall",
       "end_state_seed": "group looking back",
-      "action_seed": "looking back at the land",
+      "action_seed": "looking back",
       "blocking_seed": [
-        "group spread along the top edge of the wall"
+        "standing on edge of boundary"
       ],
       "shot_size": "wide",
       "camera_angle": "high_angle",
@@ -278,7 +276,7 @@
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "rear_three_quarter_left"
+      "primary_subject_angle": "back"
     }
   ],
   "unresolved_questions": [
@@ -346,16 +344,16 @@
     "[CH010] Chapter X (book index hit)",
     "[CH020] Chapter XX (book index hit)",
     "[CH021] Chapter XXI (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH020_SC005\n\n## Production Intent\nExecute a high-stakes exit sequence involving physical climbing and accidental destruction of porcelain assets. The scene must transition from the frantic energy of scaling a barrier to a quiet, reflective wide shot as the group leaves the fragile landscape behind.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n\n## Required Environments\n- The far wall\n- dainty_china_country\n\n## Continuity Constraints\n- Transition of china church from pristine to broken state\n- Character physical positioning relative to the wall height during exit\n\n## Beat List\n- BT001: The group climbs the wall with urgency.\n- BT002: The Cowardly Lion's tail smashes a china church.\n- BT003: The group scales the wall and exits, reflecting on the journey.",
+  "storyboard_markdown": "# Scene Contract: CH020_SC005\n\n## Production Intent\nExecute a high-stakes climb up The far wall that transitions from urgent physical exertion to a sudden moment of accidental destruction, concluding with the group exiting dainty_china_country.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n\n## Required Environments\n- The far wall\n- dainty_china_country (including china_church)\n\n## Continuity Constraints\n- Church state must transition from intact to broken/smashed.\n- Character physical positions must align with the scaling of The far wall.\n\n## Beat List\n- BT001: The group climbs The far wall with urgency.\n- BT002: The Cowardly Lion's tail smashes a china church.\n- BT003: The group scales the wall and exits the country.",
   "metadata": {
     "artifact_id": "CH020_SC005_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "a1973a514b4a0a0de55dbbd99003c655568122d5",
+    "source_fingerprint": "0d412a4892ff692458b595f0fffa96b7f14fa16c",
     "created_at_utc": "2026-04-27T09:04:08.140208+00:00",
-    "updated_at_utc": "2026-04-27T09:04:08.140208+00:00",
+    "updated_at_utc": "2026-04-27T14:07:03.776456+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -380,6 +378,11 @@
         "timestamp_utc": "2026-04-27T09:04:48.850902+00:00",
         "action": "synthesized",
         "source_fingerprint": "a1973a514b4a0a0de55dbbd99003c655568122d5"
+      },
+      {
+        "timestamp_utc": "2026-04-27T14:07:45.662223+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "0d412a4892ff692458b595f0fffa96b7f14fa16c"
       }
     ]
   }

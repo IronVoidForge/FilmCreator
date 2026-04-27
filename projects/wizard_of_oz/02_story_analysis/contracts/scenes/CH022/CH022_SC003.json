@@ -5,38 +5,37 @@
   "purpose": "Transition the characters from one geographic region to another via aerial movement.",
   "summary": "The Winged Monkeys arrive and pick up the travelers. They fly over the hill, bypassing the frustrated Hammer-Heads, and transport the group across the landscape.",
   "emotional_arc": "Fear $\\rightarrow$ Awe/Exhilaration.",
-  "production_intent": "Execute a high-altitude aerial transition to move the ensemble from the rocky hill territory toward the red-themed Quadling landscape. The sequence must emphasize the scale of the terrain and the shift in character emotion through varying flight speeds and heights.",
-  "scene_short_description": "Winged monkeys lift the group into the sky, soaring over rocky hills and receding figures below.",
-  "scene_primary_scale_story_point": "Aerial perspective contrasting small travelers against vast rocky_hill_territory.",
+  "production_intent": "Execute a high-altitude transition sequence moving the travelers from the rocky hill territory toward the red-themed Country of the Quadlings. The sequence must emphasize the scale of the landscape and the shift in character emotion through aerial movement and speed.",
+  "scene_short_description": "Aerial transport of a group across rocky hills via winged creatures.",
+  "scene_primary_scale_story_point": "Vertical distance between the flying travelers and the hammer_heads below.",
   "scene_required_anchor_catalog": [
-    "hammer_heads (receding ground anchor)",
-    "rocky_hill_peaks (terrain anchor)"
+    "rocky_hill_territory peaks",
+    "receding hammer_heads ground zone"
   ],
-  "scene_start_state": "Travelers are grounded in the rocky hill territory facing imminent threat or transition.",
-  "scene_end_state": "Travelers are airborne, soaring over the landscape toward a new region.",
-  "dominant_action_line": "winged_monkeys arrive and transport dorothy, the_scarecrow, tin_woodman, cowardly_lion, and toto across the sky.",
+  "scene_start_state": "Winged_monkeys descend toward the group on the rocky terrain.",
+  "scene_end_state": "The group flies over the landscape, leaving the hills behind.",
+  "dominant_action_line": "Winged_monkeys pick up travelers and fly them across the landscape.",
   "scene_spatial_layout": [
-    "Verticality increases from ground level to high altitude.",
-    "Horizontal movement follows a flight path bypassing rocky terrain."
+    "Vertical separation between flight path and ground level",
+    "Horizontal movement from rocky terrain toward lush landscapes"
   ],
   "character_spatial_map": [
-    "travelers clustered in center of winged_monkeys formation",
-    "hammer_heads positioned at lowest vertical plane"
+    "dorothy, the_scarecrow, tin_woodman, cowardly_lion, toto held by winged_monkeys",
+    "hammer_heads positioned far below in the valley/hill base"
   ],
   "environment_subzones": [
-    "rocky_hill_territory (ground/low altitude)",
-    "sky_transit_zone (high altitude)"
+    "rocky_hill_territory upper air",
+    "rocky_hill_territory ground level"
   ],
   "entry_vectors": [
-    "winged_monkeys descend from sky into rocky_hill_territory"
+    "winged_monkeys descending from sky"
   ],
   "exit_vectors": [
-    "travelers and winged_monkeys exit via high-altitude flight path"
+    "travelers moving toward red-themed landscape"
   ],
   "beat_transition_map": [
     "BT001 -> BT002: Arrival and pickup",
-    "BT002 -> BT003: Ascent and bypass",
-    "BT003 -> BT004: High-altitude transit"
+    "BT002 -> BT003: Ascent and flight over terrain"
   ],
   "characters_required": [
     {
@@ -124,45 +123,20 @@
   ],
   "continuity_constraints": [
     "Flight height and velocity consistency",
-    "Character grip and posture during transport"
+    "Character grip and posture during aerial transport"
   ],
   "visual_coverage_families": [
-    "Extreme wide shots (aerial) showing landscape scale",
+    "Extreme wide shots (aerial) showing journey scale",
     "Tracking shots following winged_monkeys flight path",
     "POV shots from travelers looking down at hammer_heads"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "winged_monkeys arrival",
+      "summary": "Winged_monkeys arrive and pick up the travelers",
       "purpose": "",
-      "action_start": "monkeys appearing in sky",
-      "action_end": "monkeys hovering near travelers",
-      "active_subjects": [
-        "winged_monkeys"
-      ],
-      "passive_subjects": [
-        "dorothy",
-        "the_scarecrow",
-        "tin_woodman",
-        "cowardly_lion",
-        "toto",
-        "hammer_heads"
-      ],
-      "spatial_context": "rocky_hill_territory",
-      "blocking_hint": "monkeys descend toward center group",
-      "environment_subzone": "rocky_hill_territory",
-      "continuity_focus": "initial height of monkeys",
-      "coverage_hint": "wide shot",
-      "coverage_priority": "medium",
-      "handoff_to_next": "BT002"
-    },
-    {
-      "beat_id": "BT002",
-      "summary": "The Pickup",
-      "purpose": "",
-      "action_start": "travelers reacting to arrival",
-      "action_end": "travelers lifted off ground",
+      "action_start": "winged_monkeys descend toward group",
+      "action_end": "travelers are secured to winged_monkeys",
       "active_subjects": [
         "winged_monkeys",
         "dorothy",
@@ -174,20 +148,45 @@
       "passive_subjects": [
         "hammer_heads"
       ],
-      "spatial_context": "rocky_hill_territory",
-      "blocking_hint": "monkeys physically engage with travelers",
-      "environment_subzone": "rocky_hill_territory",
-      "continuity_focus": "grip/posture of characters during lift",
-      "coverage_hint": "medium shots",
+      "spatial_context": "rocky hill terrain",
+      "blocking_hint": "monkeys surround and lift travelers",
+      "environment_subzone": "rocky_hill_territory ground level",
+      "continuity_focus": "character grip/posture during pickup",
+      "coverage_hint": "medium to wide shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Ascent over the hills",
+      "purpose": "",
+      "action_start": "group lifting off ground",
+      "action_end": "group clearing the rocky hill crest",
+      "active_subjects": [
+        "winged_monkeys",
+        "dorothy",
+        "the_scarecrow",
+        "tin_woodman",
+        "cowardly_lion",
+        "toto"
+      ],
+      "passive_subjects": [
+        "hammer_heads"
+      ],
+      "spatial_context": "transition from ground to air",
+      "blocking_hint": "vertical movement upward",
+      "environment_subzone": "rocky_hill_territory upper air",
+      "continuity_focus": "flight height and speed",
+      "coverage_hint": "extreme wide aerials",
       "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Bypassing the Hammer-Heads",
+      "summary": "Flight across the landscape bypassing hammer_heads",
       "purpose": "",
-      "action_start": "group ascending over hill crest",
-      "action_end": "hammer_heads receding below",
+      "action_start": "group in steady flight",
+      "action_end": "group moving toward new region",
       "active_subjects": [
         "winged_monkeys",
         "dorothy",
@@ -199,34 +198,11 @@
       "passive_subjects": [
         "hammer_heads"
       ],
-      "spatial_context": "transition from ground to sky",
-      "blocking_hint": "flight path moves away from hammer_heads",
-      "environment_subzone": "rocky_hill_territory",
-      "continuity_focus": "speed of flight and vertical ascent rate",
-      "coverage_hint": "extreme wide aerial",
-      "coverage_priority": "high",
-      "handoff_to_next": "BT004"
-    },
-    {
-      "beat_id": "BT004",
-      "summary": "Aerial Transit",
-      "purpose": "",
-      "action_start": "group in stable high-altitude flight",
-      "action_end": "group moving toward new region",
-      "active_subjects": [
-        "dorothy",
-        "the_scarecrow",
-        "tin_woodman",
-        "cowardly_lion",
-        "toto",
-        "winged_monkeys"
-      ],
-      "passive_subjects": [],
-      "spatial_context": "sky_transit_zone",
-      "blocking_hint": "characters looking down/around in awe",
-      "environment_subzone": "sky_transit_zone",
-      "continuity_focus": "consistent flight speed and height",
-      "coverage_hint": "POV and tracking shots",
+      "spatial_context": "aerial view of landscape",
+      "blocking_hint": "horizontal movement across sky",
+      "environment_subzone": "rocky_hill_territory upper air",
+      "continuity_focus": "speed and height consistency",
+      "coverage_hint": "tracking shots and POV",
       "coverage_priority": "medium",
       "handoff_to_next": "end_of_scene"
     }
@@ -236,7 +212,7 @@
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
       "narrative_function": "establish arrival",
-      "planned_shot_moment_summary": "winged_monkeys descend toward the group",
+      "planned_shot_moment_summary": "winged_monkeys descend to travelers",
       "primary_subject_seed": "winged_monkeys",
       "secondary_subjects_seed": [
         "dorothy",
@@ -247,17 +223,17 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "in_scene_speaker",
-      "environment_subzone": "rocky_hill_territory",
-      "planned_shot_required_anchor_1": "hammer_heads",
+      "environment_subzone": "rocky_hill_territory ground level",
+      "planned_shot_required_anchor_1": "rocky_hill_territory peaks",
       "planned_shot_scale_proof_detail": "size of monkeys relative to travelers",
       "start_state_seed": "monkeys approaching from sky",
-      "end_state_seed": "monkeys landing/hovering near group",
-      "action_seed": "descent and approach",
+      "end_state_seed": "monkeys landing/reaching travelers",
+      "action_seed": "descent and contact",
       "blocking_seed": [
-        "monkeys circle the travelers"
+        "monkeys circling group"
       ],
       "shot_size": "wide",
-      "camera_angle": "low_angle",
+      "camera_angle": "eye_level",
       "lens_family": "wide",
       "camera_motion": "track",
       "zoom_behavior": "none",
@@ -268,95 +244,60 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "show transition of state",
-      "planned_shot_moment_summary": "travelers are lifted from the ground",
-      "primary_subject_seed": "dorothy",
-      "secondary_subjects_seed": [
-        "the_scarecrow",
-        "tin_woodman",
-        "cowardly_lion",
-        "toto"
-      ],
-      "subject_visibility": "on_screen",
-      "narration_mode": "none",
-      "environment_subzone": "rocky_hill_territory",
-      "planned_shot_required_anchor_1": "hammer_heads",
-      "planned_shot_scale_proof_detail": "distance between travelers and hammer_heads increasing",
-      "start_state_seed": "travelers on ground",
-      "end_state_seed": "travelers suspended in air",
-      "action_seed": "lifting/pickup",
-      "blocking_seed": [
-        "monkeys grab characters and ascend"
-      ],
-      "shot_size": "medium_full",
-      "camera_angle": "low_angle",
-      "lens_family": "normal",
-      "camera_motion": "crane",
-      "zoom_behavior": "none",
-      "focus_strategy": "shallow_subject",
-      "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front"
-    },
-    {
-      "planned_shot_id": "SH003",
-      "beat_id": "BT003",
-      "narrative_function": "establish scale and bypass",
-      "planned_shot_moment_summary": "group flies over the hill bypassing hammer_heads",
+      "narrative_function": "show scale of departure",
+      "planned_shot_moment_summary": "group lifted above the hills",
       "primary_subject_seed": "winged_monkeys",
       "secondary_subjects_seed": [
         "hammer_heads"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "rocky_hill_territory",
-      "planned_shot_required_anchor_1": "rocky_hill_peaks",
-      "planned_shot_scale_proof_detail": "tiny hammer_heads below large flying group",
-      "start_state_seed": "group clearing the hill crest",
-      "end_state_seed": "hammer_heads becoming small dots",
-      "action_seed": "flight bypass",
+      "environment_subzone": "rocky_hill_territory upper air",
+      "planned_shot_required_anchor_1": "hammer_heads ground zone",
+      "planned_shot_scale_proof_detail": "distance between flight and hammer_heads",
+      "start_state_seed": "group leaving ground",
+      "end_state_seed": "group clearing hill crest",
+      "action_seed": "ascent",
       "blocking_seed": [
-        "monkeys fly in formation over terrain"
+        "monkeys lifting group upward"
       ],
       "shot_size": "extreme_wide",
       "camera_angle": "high_angle",
       "lens_family": "ultra_wide",
-      "camera_motion": "track",
+      "camera_motion": "crane",
       "zoom_behavior": "none",
       "focus_strategy": "environment_priority",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "rear_three_quarter_left"
+      "primary_subject_angle": "rear_three_quarter_right"
     },
     {
-      "planned_shot_id": "SH004",
-      "beat_id": "BT004",
-      "narrative_function": "character emotional payoff",
-      "planned_shot_moment_summary": "travelers look down at the receding landscape",
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "character perspective",
+      "planned_shot_moment_summary": "travelers looking down at receding ground",
       "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
-        "the_scarecrow",
-        "tin_woodman",
-        "cowardly_lion",
-        "toto"
+        "hammer_heads"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "sky_transit_zone",
-      "planned_shot_required_anchor_1": "rocky_hill_peaks",
-      "planned_shot_scale_proof_detail": "rapidly receding ground features",
-      "start_state_seed": "travelers looking down",
-      "end_state_seed": "faces showing awe/exhilaration",
-      "action_seed": "looking down at landscape",
+      "environment_subzone": "rocky_hill_territory upper air",
+      "planned_shot_required_anchor_1": "hammer_heads ground zone",
+      "planned_shot_scale_proof_detail": "receding size of hammer_heads",
+      "start_state_seed": "looking down from height",
+      "end_state_seed": "looking toward horizon",
+      "action_seed": "viewing landscape",
       "blocking_seed": [
-        "characters clinging to monkeys/each other"
+        "dorothy gripping monkey/companion"
       ],
       "shot_size": "medium_close",
-      "camera_angle": "eye_level",
-      "lens_family": "portrait",
-      "camera_motion": "track",
-      "zoom_behavior": "subtle_in",
+      "camera_angle": "high_angle",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
-      "lighting_style": "backlit",
-      "primary_subject_angle": "front_three_quarter_right"
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
     }
   ],
   "unresolved_questions": [],
@@ -422,16 +363,16 @@
     "[CH022] Chapter XXII (book index hit)",
     "[CH012] Chapter XII (book index hit)",
     "[CH007] Chapter VII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH022_SC003\n\n## Production Intent\nExecute a high-altitude aerial transition to move the ensemble from the rocky hill territory toward the red-themed Quadling landscape. The sequence must emphasize the scale of the terrain and the shift in character emotion through varying flight speeds and heights.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n- winged_monkeys\n- hammer_heads (below)\n\n## Required Environments\n- rocky_hill_territory\n- sky_transit_zone\n\n## Continuity Constraints\n- Flight height and velocity consistency\n- Character grip and posture during transport\n\n## Beat List\n- BT001: winged_monkeys arrival\n- BT002: The Pickup\n- BT003: Bypassing the Hammer-Heads\n- BT004: Aerial Transit",
+  "storyboard_markdown": "# Scene Contract: CH022_SC003\n\n## Production Intent\nExecute a high-altitude transition sequence moving the travelers from the rocky hill territory toward the red-themed Country of the Quadlings. The sequence must emphasize the scale of the landscape and the shift in character emotion through aerial movement and speed.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n- winged_monkeys\n- hammer_heads (below)\n\n## Required Environments\n- rocky_hill_territory\n\n## Continuity Constraints\n- Flight height and velocity consistency\n- Character grip and posture during aerial transport\n\n## Beat List\n- BT001: Winged_monkeys arrive and pick up the travelers.\n- BT002: Ascent over the hills.\n- BT003: Flight across the landscape bypassing hammer_heads.",
   "metadata": {
     "artifact_id": "CH022_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "cf16543e4fe221707dc324ec78b1f7ed0e4d6ed2",
+    "source_fingerprint": "3f6b4477bd0d757252d2a7192b3ca16c66bcf9dc",
     "created_at_utc": "2026-04-27T09:10:38.969956+00:00",
-    "updated_at_utc": "2026-04-27T09:10:38.969956+00:00",
+    "updated_at_utc": "2026-04-27T14:13:37.685671+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -456,6 +397,11 @@
         "timestamp_utc": "2026-04-27T09:11:31.837072+00:00",
         "action": "synthesized",
         "source_fingerprint": "cf16543e4fe221707dc324ec78b1f7ed0e4d6ed2"
+      },
+      {
+        "timestamp_utc": "2026-04-27T14:14:21.743634+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "3f6b4477bd0d757252d2a7192b3ca16c66bcf9dc"
       }
     ]
   }

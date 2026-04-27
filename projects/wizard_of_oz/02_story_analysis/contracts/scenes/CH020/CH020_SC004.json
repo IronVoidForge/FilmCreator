@@ -5,37 +5,37 @@
   "purpose": "Add character texture and a moment of levity/absurdity to the journey.",
   "summary": "The group encounters Mr. Joker, a cracked China Clown whose appearance is a result of his own foolishness (standing on his head too often).",
   "emotional_arc": "Tension $\\rightarrow$ Bewilderment/Amusement.",
-  "production_intent": "Introduce the fragile, porcelain nature of the Dainty China Country through a character encounter that shifts from high tension to absurd amusement. The interaction must emphasize the physical vulnerability of the inhabitants and the specific history of mr_joker's cracks.",
-  "scene_short_description": "A group of travelers encounters a cracked porcelain clown on a smooth white platter floor.",
-  "scene_primary_scale_story_point": "Fragile porcelain inhabitants relative to the vast, smooth white platter-like ground.",
+  "production_intent": "Introduce character texture and absurdity through a meeting with a fragile, damaged porcelain entity. The scene must balance the tension of encountering an unknown inhabitant with the comedic reveal of his physical defects caused by foolishness.",
+  "scene_short_description": "A weary group encounters a cracked porcelain clown on a smooth white platter floor.",
+  "scene_primary_scale_story_point": "Fragile inhabitants vs large traveling group.",
   "scene_required_anchor_catalog": [
     "smooth white platter floor",
     "tiny colorful china houses"
   ],
-  "scene_start_state": "The group moves cautiously across the white expanse, sensing potential danger.",
-  "scene_end_state": "The group stands in a state of bewildered amusement facing mr_joker.",
-  "dominant_action_line": "The travelers encounter and react to the absurd appearance of mr_joker.",
+  "scene_start_state": "The group enters the dainty_china_country, wary of the fragile environment.",
+  "scene_end_state": "The group reacts with amusement/bewilderment to mr_joker's condition.",
+  "dominant_action_line": "Encountering and observing the damaged mr_joker.",
   "scene_spatial_layout": [
-    "Open, flat expanse of white porcelain floor",
-    "Scattered tiny colorful china houses providing scale reference"
+    "open white floor space",
+    "clusters of tiny china houses in background"
   ],
   "character_spatial_map": [
-    "dorothy, the_scarecrow, tin_woodman, cowardly_lion clustered in a defensive group",
-    "mr_joker positioned centrally as the point of encounter"
+    "dorothy, the_scarecrow, tin_woodman, cowardly_lion clustered as a unit",
+    "mr_joker positioned as an isolated figure on the platter floor"
   ],
   "environment_subzones": [
     "white platter floor",
     "china house cluster"
   ],
   "entry_vectors": [
-    "travel path across the white expanse"
+    "group approach from edge of frame"
   ],
   "exit_vectors": [
-    "continued path through dainty_china_country"
+    "group movement past mr_joker"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: sudden encounter/tension spike",
-    "BT002 -> BT003: realization of absurdity/amusement"
+    "BT001 -> BT002: visual discovery",
+    "BT002 -> BT003: reveal of damage"
   ],
   "characters_required": [
     {
@@ -102,19 +102,19 @@
     }
   ],
   "continuity_constraints": [
-    "Exact pattern and placement of cracks on mr_joker"
+    "The specific pattern and location of cracks on mr_joker"
   ],
   "visual_coverage_families": [
-    "Medium shots of group reaction to mr_joker",
-    "Close-ups on mr_joker crack patterns"
+    "Medium shots of the group reacting to mr_joker",
+    "Close-ups on mr_joker cracks"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "The group encounters mr_joker amidst tension",
+      "summary": "Group encounters mr_joker",
       "purpose": "",
-      "action_start": "group walking cautiously",
-      "action_end": "group stops in alarm",
+      "action_start": "group walking through dainty_china_country",
+      "action_end": "group stops abruptly",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -124,70 +124,70 @@
       "passive_subjects": [
         "mr_joker"
       ],
-      "spatial_context": "white platter floor near china houses",
-      "blocking_hint": "defensive group cluster",
+      "spatial_context": "white platter floor",
+      "blocking_hint": "group in a tight formation",
       "environment_subzone": "white platter floor",
-      "continuity_focus": "group formation",
-      "coverage_hint": "wide shot of encounter",
+      "continuity_focus": "group spacing",
+      "coverage_hint": "medium shots of group",
       "coverage_priority": "high",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
-      "summary": "Discovery of mr_joker's appearance",
+      "summary": "Visual identification of mr_joker",
       "purpose": "",
-      "action_start": "tension peak",
-      "action_end": "visual focus on cracks",
+      "action_start": "eyes scanning the horizon",
+      "action_end": "focus settles on clown figure",
       "active_subjects": [
+        "dorothy",
         "mr_joker"
       ],
       "passive_subjects": [
-        "dorothy",
         "the_scarecrow",
         "tin_woodman",
         "cowardly_lion"
       ],
-      "spatial_context": "center of white floor",
-      "blocking_hint": "mr_joker stationary",
+      "spatial_context": "open floor near china houses",
+      "blocking_hint": "mr_joker isolated",
       "environment_subzone": "white platter floor",
-      "continuity_focus": "crack pattern on mr_joker",
-      "coverage_hint": "close-up on cracks",
-      "coverage_priority": "high",
+      "continuity_focus": "mr_joker's pose",
+      "coverage_hint": "medium shot of mr_joker",
+      "coverage_priority": "medium",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
-      "summary": "Shift to bewilderment and amusement",
+      "summary": "Discovery of the cracks",
       "purpose": "",
-      "action_start": "visual realization of absurdity",
-      "action_end": "group relaxes into amusement",
+      "action_start": "group observing mr_joker",
+      "action_end": "realization of his foolishness via damage",
       "active_subjects": [
         "dorothy",
+        "mr_joker"
+      ],
+      "passive_subjects": [
         "the_scarecrow",
         "tin_woodman",
         "cowardly_lion"
       ],
-      "passive_subjects": [
-        "mr_joker"
-      ],
-      "spatial_context": "facing mr_joker",
-      "blocking_hint": "loosening group formation",
+      "spatial_context": "close proximity to mr_joker",
+      "blocking_hint": "camera moves in on cracks",
       "environment_subzone": "white platter floor",
-      "continuity_focus": "facial expressions",
-      "coverage_hint": "medium reaction shots",
-      "coverage_priority": "medium",
-      "handoff_to_next": "end of scene"
+      "continuity_focus": "crack pattern on mr_joker",
+      "coverage_hint": "close-ups on cracks",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_scene"
     }
   ],
   "planned_shots": [
     {
       "planned_shot_id": "SH001",
       "beat_id": "BT001",
-      "narrative_function": "establish tension",
-      "planned_shot_moment_summary": "group spotting mr_joker in the distance",
-      "primary_subject_seed": "the_scarecrow",
+      "narrative_function": "establish encounter",
+      "planned_shot_moment_summary": "group spots mr_joker in distance",
+      "primary_subject_seed": "dorothy",
       "secondary_subjects_seed": [
-        "dorothy",
+        "the_scarecrow",
         "tin_woodman",
         "cowardly_lion"
       ],
@@ -195,14 +195,14 @@
       "narration_mode": "in_scene_speaker",
       "environment_subzone": "white platter floor",
       "planned_shot_required_anchor_1": "smooth white platter floor",
-      "planned_shot_scale_proof_detail": "tiny china houses for scale",
+      "planned_shot_scale_proof_detail": "group size relative to tiny houses",
       "start_state_seed": "group walking",
-      "end_state_seed": "group stopping abruptly",
-      "action_seed": "group halts in caution",
+      "end_state_seed": "group stopping",
+      "action_seed": "stopping in surprise",
       "blocking_seed": [
-        "group formation tight"
+        "group halt in center frame"
       ],
-      "shot_size": "wide",
+      "shot_size": "medium_full",
       "camera_angle": "eye_level",
       "lens_family": "wide",
       "camera_motion": "track",
@@ -214,24 +214,26 @@
     {
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
-      "narrative_function": "reveal character detail",
-      "planned_shot_moment_summary": "close up of mr_joker's cracks",
+      "narrative_function": "character reveal",
+      "planned_shot_moment_summary": "mr_joker is seen clearly",
       "primary_subject_seed": "mr_joker",
-      "secondary_subjects_seed": [],
-      "subject_visibility": "on_screen",
-      "narration_mode": "none",
-      "environment_subzone": "white platter floor",
-      "planned_shot_required_anchor_1": "mr_joker",
-      "planned_shot_scale_proof_detail": "crack texture vs porcelain surface",
-      "start_state_seed": "static clown",
-      "end_state_seed": "clown standing still",
-      "action_seed": "reveal the foolishness of the cracks",
-      "blocking_seed": [
-        "centered"
+      "secondary_subjects_seed": [
+        "dorothy"
       ],
-      "shot_size": "close_up",
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "white platter floor",
+      "planned_shot_required_anchor_1": "smooth white platter floor",
+      "planned_shot_scale_proof_detail": "mr_joker height vs group",
+      "start_state_seed": "static mr_joker",
+      "end_state_seed": "mr_joker standing",
+      "action_seed": "standing/posing",
+      "blocking_seed": [
+        "mr_joker center stage"
+      ],
+      "shot_size": "medium",
       "camera_angle": "eye_level",
-      "lens_family": "portrait",
+      "lens_family": "normal",
       "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "shallow_subject",
@@ -241,33 +243,29 @@
     {
       "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "capture reaction",
-      "planned_shot_moment_summary": "group reacting with bewilderment",
-      "primary_subject_seed": "dorothy",
-      "secondary_subjects_seed": [
-        "the_scarecrow",
-        "tin_woodman",
-        "cowardly_lion"
-      ],
+      "narrative_function": "detail reveal",
+      "planned_shot_moment_summary": "close up of cracks on mr_joker",
+      "primary_subject_seed": "mr_joker",
+      "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
-      "narration_mode": "in_scene_speaker",
+      "narration_mode": "none",
       "environment_subzone": "white platter floor",
-      "planned_shot_required_anchor_1": "smooth white platter floor",
-      "planned_shot_scale_proof_detail": "human vs china scale",
-      "start_state_seed": "tense faces",
-      "end_state_seed": "amused/bewildered faces",
-      "action_seed": "group shifts from fear to amusement",
+      "planned_shot_required_anchor_1": "mr_joker surface",
+      "planned_shot_scale_proof_detail": "crack detail vs porcelain texture",
+      "start_state_seed": "smooth porcelain",
+      "end_state_seed": "cracked porcelain",
+      "action_seed": "showing damage",
       "blocking_seed": [
-        "medium group shot"
+        "extreme close up on face/body"
       ],
-      "shot_size": "medium",
+      "shot_size": "close_up",
       "camera_angle": "eye_level",
-      "lens_family": "normal",
-      "camera_motion": "pan",
+      "lens_family": "telephoto",
+      "camera_motion": "locked_off",
       "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
+      "focus_strategy": "shallow_subject",
       "lighting_style": "diffuse_ambient",
-      "primary_subject_angle": "front_three_quarter_right"
+      "primary_subject_angle": "front"
     }
   ],
   "unresolved_questions": [],
@@ -333,16 +331,16 @@
     "[CH020] Chapter XX (book index hit)",
     "[CH003] Chapter III (book index hit)",
     "[CH005] Chapter V (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH020_SC004\n\n## Production Intent\nIntroduce the fragile, porcelain nature of the Dainty China Country through a character encounter that shifts from high tension to absurd amusement. The interaction must emphasize the physical vulnerability of the inhabitants and the specific history of mr_joker's cracks.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- mr_joker\n\n## Required Environments\n- dainty_china_country (specifically the white platter floor and tiny china houses)\n\n## Continuity Constraints\n- The pattern of cracks on mr_joker must remain consistent across all coverage.\n\n## Beat List\n- BT001: Group encounters mr_joker amidst tension.\n- BT002: Discovery of mr_joker's cracked appearance/foolishness.\n- BT003: Shift to bewilderment and amusement.",
+  "storyboard_markdown": "# Scene Contract: CH020_SC004\n\n## Production Intent\nIntroduce character texture and absurdity through a meeting with a fragile, damaged porcelain entity. The scene must balance the tension of encountering an unknown inhabitant with the comedic reveal of his physical defects caused by foolishness.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- mr_joker\n\n## Required Environments\n- dainty_china_country (white platter floor, tiny colorful china houses)\n\n## Continuity Constraints\n- The specific pattern and location of cracks on mr_joker (result of standing on head).\n\n## Beat List\n- BT001: Group encounters mr_joker.\n- BT002: Visual identification of mr_joker.\n- BT003: Discovery of the cracks.",
   "metadata": {
     "artifact_id": "CH020_SC004_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "b0777e94315ae6dc7137766b3444f2b2339b63ff",
+    "source_fingerprint": "9a43b3d034619635836c41263b7d2636bc286af0",
     "created_at_utc": "2026-04-27T09:03:25.086408+00:00",
-    "updated_at_utc": "2026-04-27T09:03:25.086408+00:00",
+    "updated_at_utc": "2026-04-27T14:06:20.648819+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -367,6 +365,11 @@
         "timestamp_utc": "2026-04-27T09:04:06.671085+00:00",
         "action": "synthesized",
         "source_fingerprint": "b0777e94315ae6dc7137766b3444f2b2339b63ff"
+      },
+      {
+        "timestamp_utc": "2026-04-27T14:07:02.298124+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9a43b3d034619635836c41263b7d2636bc286af0"
       }
     ]
   }

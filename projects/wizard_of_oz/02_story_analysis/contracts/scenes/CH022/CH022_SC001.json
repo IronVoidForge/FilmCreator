@@ -5,31 +5,31 @@
   "purpose": "Establish the physical obstacle and the threat of the Hammer-Heads.",
   "summary": "The travelers attempt to scale a rocky hill but are intercepted by the armless Hammer-Heads. The creatures use their projectile heads to knock the Scarecrow and the Lion down the slope, demonstrating their unique combat style.",
   "emotional_arc": "Determination $\\rightarrow$ Confusion $\\rightarrow$ Terror/Defeat.",
-  "production_intent": "Establish the rocky hill as a physical barrier and introduce the hammer_heads as a high-threat combatant via projectile head attacks.",
-  "scene_short_description": "A group attempts to climb a steep rocky slope before being attacked by projectile-launching creatures.",
+  "production_intent": "Establish the rocky hill as a physical barrier and introduce the hammer_heads as a lethal threat via their projectile head combat style.",
+  "scene_short_description": "Travelers struggle up a steep rocky incline before being attacked by armless creatures.",
   "scene_primary_scale_story_point": "The verticality of the rocky_hill_territory vs the small scale of the travelers.",
   "scene_required_anchor_catalog": [
-    "steep rock face",
-    "slope descent path"
+    "steep slope gradient",
+    "projectile impact crater/mark"
   ],
   "scene_start_state": "Travelers are actively climbing the incline with determination.",
   "scene_end_state": "Characters are scattered or falling down the slope in terror.",
-  "dominant_action_line": "The hammer_heads launch their heads to knock travelers off the hill.",
+  "dominant_action_line": "The travelers ascend the hill until intercepted by hammer_heads launching their heads as projectiles.",
   "scene_spatial_layout": [
-    "Vertical ascent on a steep rocky incline",
-    "Combat zone located at the crest/mid-slope of the hill"
+    "Vertical ascent along a steep rocky gradient",
+    "Hammer_heads positioned above or level with the climbing path"
   ],
   "character_spatial_map": [
-    "dorothy, the_scarecrow, tin_woodman, cowardly_lion, toto climbing in formation",
-    "hammer_heads positioned above or intercepting the climb"
+    "dorothy, tin_woodman, and toto clustered in the center of the climb",
+    "the_scarecrow and cowardly_lion positioned on the periphery of the group",
+    "hammer_heads emerging from higher elevations or rocky crevices"
   ],
   "environment_subzones": [
-    "ascent_zone",
-    "impact_slope",
-    "creature_emergence_point"
+    "upper slope (hammer_head territory)",
+    "climbing path (traveler zone)"
   ],
   "entry_vectors": [
-    "upward climb via rocky_hill_territory"
+    "upward ascent via rocky_hill_territory"
   ],
   "exit_vectors": [
     "downward slide/fall along the slope"
@@ -118,17 +118,17 @@
   ],
   "visual_coverage_families": [
     "Wide shots of terrain and group ascent",
-    "Medium shots of hammer_heads emergence",
+    "Medium shots of hammer_heads emerging",
     "Action close-ups/tracking shots of projectile heads",
     "Low angle shots of characters falling"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Travelers scale the rocky hill",
+      "summary": "Travelers attempt to scale the hill",
       "purpose": "",
-      "action_start": "climbing upward",
-      "action_end": "reaching mid-slope",
+      "action_start": "travelers beginning ascent",
+      "action_end": "travelers pausing mid-climb",
       "active_subjects": [
         "dorothy",
         "the_scarecrow",
@@ -137,20 +137,20 @@
         "toto"
       ],
       "passive_subjects": [],
-      "spatial_context": "ascent_zone",
-      "blocking_hint": "vertical staggered line",
-      "environment_subzone": "ascent_zone",
-      "continuity_focus": "character spacing on rocks",
+      "spatial_context": "rocky_hill_territory climbing path",
+      "blocking_hint": "staggered vertical line of characters",
+      "environment_subzone": "climbing path",
+      "continuity_focus": "character spacing and height on slope",
       "coverage_hint": "wide shot of terrain",
-      "coverage_priority": "high",
+      "coverage_priority": "medium",
       "handoff_to_next": "BT002"
     },
     {
       "beat_id": "BT002",
       "summary": "Hammer-Heads intercept the group",
       "purpose": "",
-      "action_start": "creatures emerge from crest",
-      "action_end": "heads are primed for launch",
+      "action_start": "hammer_heads emerge from rocks",
+      "action_end": "hammer_heads launch heads",
       "active_subjects": [
         "hammer_heads"
       ],
@@ -161,20 +161,20 @@
         "cowardly_lion",
         "toto"
       ],
-      "spatial_context": "creature_emergence_point",
-      "blocking_hint": "creatures looking down from above",
-      "environment_subzone": "creature_emergence_point",
-      "continuity_focus": "hammer_heads being armless",
+      "spatial_context": "upper slope looking down",
+      "blocking_hint": "creatures positioned above travelers",
+      "environment_subzone": "upper slope",
+      "continuity_focus": "hammer_head armless anatomy",
       "coverage_hint": "medium shots of creatures",
-      "coverage_priority": "medium",
+      "coverage_priority": "high",
       "handoff_to_next": "BT003"
     },
     {
       "beat_id": "BT003",
       "summary": "Projectile attack and descent",
       "purpose": "",
-      "action_start": "heads launched",
-      "action_end": "characters tumbling down slope",
+      "action_start": "heads launched as projectiles",
+      "action_end": "characters falling down the slope",
       "active_subjects": [
         "hammer_heads",
         "the_scarecrow",
@@ -185,10 +185,10 @@
         "tin_woodman",
         "toto"
       ],
-      "spatial_context": "impact_slope",
-      "blocking_hint": "trajectory from top to bottom of frame",
-      "environment_subzone": "impact_slope",
-      "continuity_focus": "head trajectory and impact points",
+      "spatial_context": "climbing path/slope",
+      "blocking_hint": "diagonal movement of heads and vertical descent of characters",
+      "environment_subzone": "climbing path",
+      "continuity_focus": "trajectory and impact points",
       "coverage_hint": "action close-ups and low angle falls",
       "coverage_priority": "high",
       "handoff_to_next": "none"
@@ -209,12 +209,12 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "ascent_zone",
-      "planned_shot_required_anchor_1": "steep rock face",
-      "planned_shot_scale_proof_detail": "verticality of hill vs character height",
-      "start_state_seed": "climbing motion",
-      "end_state_seed": "climbing motion",
-      "action_seed": "group scales rocks",
+      "environment_subzone": "climbing path",
+      "planned_shot_required_anchor_1": "steep slope gradient",
+      "planned_shot_scale_proof_detail": "full body height relative to rock size",
+      "start_state_seed": "travelers moving upward",
+      "end_state_seed": "travelers pausing in confusion",
+      "action_seed": "climbing",
       "blocking_seed": [
         "staggered vertical line"
       ],
@@ -231,21 +231,21 @@
       "planned_shot_id": "SH002",
       "beat_id": "BT002",
       "narrative_function": "introduce threat",
-      "planned_shot_moment_summary": "hammer_heads appear to intercept",
+      "planned_shot_moment_summary": "hammer_heads emerge from rocks",
       "primary_subject_seed": "hammer_heads",
       "secondary_subjects_seed": [
-        "dorothy"
+        "the_scarecrow"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "creature_emergence_point",
-      "planned_shot_required_anchor_1": "crest of hill",
-      "planned_shot_scale_proof_detail": "creatures looming over travelers",
-      "start_state_seed": "static emergence",
-      "end_state_seed": "launching motion",
-      "action_seed": "hammer_heads emerge and prepare heads",
+      "environment_subzone": "upper slope",
+      "planned_shot_required_anchor_1": "rocky crevices",
+      "planned_shot_scale_proof_detail": "creature size vs rock face",
+      "start_state_seed": "hammer_heads appearing",
+      "end_state_seed": "heads launching",
+      "action_seed": "emerging and preparing attack",
       "blocking_seed": [
-        "positioned above the climbers"
+        "stationary above travelers"
       ],
       "shot_size": "medium",
       "camera_angle": "low_angle",
@@ -268,14 +268,14 @@
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "impact_slope",
-      "planned_shot_required_anchor_1": "descent path",
-      "planned_shot_scale_proof_detail": "projectile speed vs character size",
-      "start_state_seed": "head launch",
-      "end_state_seed": "impact",
-      "action_seed": "heads launched like projectiles hitting targets",
+      "environment_subzone": "climbing path",
+      "planned_shot_required_anchor_1": "projectile impact points",
+      "planned_shot_scale_proof_detail": "speed of projectile vs character size",
+      "start_state_seed": "head leaves body",
+      "end_state_seed": "impact with character",
+      "action_seed": "projectile flight and collision",
       "blocking_seed": [
-        "trajectory from crest to slope"
+        "diagonal trajectory across frame"
       ],
       "shot_size": "close_up",
       "camera_angle": "eye_level",
@@ -290,26 +290,26 @@
       "planned_shot_id": "SH004",
       "beat_id": "BT003",
       "narrative_function": "show defeat",
-      "planned_shot_moment_summary": "characters falling down the hill",
+      "planned_shot_moment_summary": "characters falling down the slope",
       "primary_subject_seed": "the_scarecrow",
       "secondary_subjects_seed": [
         "cowardly_lion"
       ],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "impact_slope",
-      "planned_shot_required_anchor_1": "descent path",
-      "planned_shot_scale_proof_detail": "gravity/fall distance",
-      "start_state_seed": "impact",
-      "end_state_seed": "sliding down slope",
-      "action_seed": "characters knocked down the slope",
+      "environment_subzone": "climbing path",
+      "planned_shot_required_anchor_1": "steep slope gradient",
+      "planned_shot_scale_proof_detail": "falling speed vs terrain",
+      "start_state_seed": "impact occurs",
+      "end_state_seed": "characters at bottom of frame",
+      "action_seed": "tumbling down hill",
       "blocking_seed": [
-        "tumbling downward"
+        "descending the slope"
       ],
       "shot_size": "medium_full",
       "camera_angle": "low_angle",
       "lens_family": "wide",
-      "camera_motion": "pan",
+      "camera_motion": "tilt",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
       "lighting_style": "diffuse_ambient",
@@ -379,16 +379,16 @@
     "[CH022] Chapter XXII (book index hit)",
     "[CH023] Chapter XXIII (book index hit)",
     "[CH007] Chapter VII (book index hit)",
-    "Character dorothy: Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and func..."
+    "Character dorothy: Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is mo..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH022_SC001\n\n## Production Intent\nEstablish the rocky hill as a physical barrier and introduce the hammer_heads as a high-threat combatant via projectile head attacks.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n- hammer_heads\n\n## Required Environments\n- rocky_hill_territory\n\n## Continuity Constraints\n- Precise positioning of travelers prior to the first impact\n- Trajectory paths and specific impact points of projectile heads\n\n## Beat List\n- BT001: Travelers scale the rocky hill\n- BT002: Hammer-Heads intercept the group\n- BT003: Projectile attack and descent",
+  "storyboard_markdown": "# Scene Contract: CH022_SC001\n\n## Production Intent\nEstablish the rocky hill as a physical barrier and introduce the hammer_heads as a lethal threat via their projectile head combat style.\n\n## Required Cast\n- dorothy\n- the_scarecrow\n- tin_woodman\n- cowardly_lion\n- toto\n- hammer_heads\n\n## Required Environments\n- rocky_hill_territory\n\n## Continuity Constraints\n- Precise positioning of travelers prior to the first impact\n- Trajectory paths and specific impact points of projectile heads\n\n## Beat List\n- BT001: Travelers attempt to scale the hill\n- BT002: Hammer-Heads intercept the group\n- BT003: Projectile attack and descent",
   "metadata": {
     "artifact_id": "CH022_SC001_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "552cccb60a5dfce114f3e42520c0d82ce9c24079",
+    "source_fingerprint": "2b2862f8bed4e5000c26b6865e92f0cc58985876",
     "created_at_utc": "2026-04-27T09:09:10.074199+00:00",
-    "updated_at_utc": "2026-04-27T09:09:10.074199+00:00",
+    "updated_at_utc": "2026-04-27T14:12:06.801410+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -413,6 +413,11 @@
         "timestamp_utc": "2026-04-27T09:09:54.518293+00:00",
         "action": "synthesized",
         "source_fingerprint": "552cccb60a5dfce114f3e42520c0d82ce9c24079"
+      },
+      {
+        "timestamp_utc": "2026-04-27T14:12:51.984067+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "2b2862f8bed4e5000c26b6865e92f0cc58985876"
       }
     ]
   }
