@@ -1,0 +1,228 @@
+# Edit Timeline
+
+- project_slug: `princess_of_mars_test`
+- chapters: `28`
+
+## CH001
+
+- chapter_title: CHAPTER I
+- scene_count: `5`
+- dialogue_events: `0`
+- estimated_duration_seconds: `25`
+- transition_note: From hard labor/prospecting to sudden euphoria and ambitious planning. / Establish the transition from active pursuit...
+
+## CH002
+
+- chapter_title: CHAPTER II
+- scene_count: `5`
+- dialogue_events: `0`
+- estimated_duration_seconds: `25`
+- transition_note: From alertness/combat readiness to helpless terror and sensory isolation. / Establish the transition from a terrestri...
+
+## CH003
+
+- chapter_title: CHAPTER III
+- scene_count: `5`
+- dialogue_events: `0`
+- estimated_duration_seconds: `25`
+- transition_note: Confusion $\rightarrow$ Disorientation $\rightarrow$ Physical shock/Surprise. / Establish a diplomatic connection bet...
+
+## CH004
+
+- chapter_title: CHAPTER IV
+- scene_count: `4`
+- dialogue_events: `4`
+- estimated_duration_seconds: `32`
+- transition_note: Awe $\rightarrow$ Disquiet/Dread / Transition the narrative from high-stakes physical exertion to domestic Martian li...
+
+## CH005
+
+- chapter_title: CHAPTER V
+- scene_count: `5`
+- dialogue_events: `0`
+- estimated_duration_seconds: `25`
+- transition_note: Isolation $\rightarrow$ Curiosity/Observation. / Execute a high-tension reversal where the protagonist's moment of sa...
+
+## CH006
+
+- chapter_title: CHAPTER VI
+- scene_count: `5`
+- dialogue_events: `0`
+- estimated_duration_seconds: `25`
+- transition_note: Terror $\rightarrow$ Desperation/Hope. / Establish the aftermath of conflict through quietude and character reflectio...
+
+## CH007
+
+- chapter_title: CHAPTER VII
+- scene_count: `4`
+- dialogue_events: `1`
+- estimated_duration_seconds: `23`
+- transition_note: Awe/Grandeur $\rightarrow$ Tension/Performance (the leap). / Establish the protagonist's specialized mental defense t...
+
+## CH008
+
+- chapter_title: CHAPTER VIII
+- scene_count: `3`
+- dialogue_events: `0`
+- estimated_duration_seconds: `15`
+- transition_note: Calm/Routine $\rightarrow$ Sudden Alarm $\rightarrow$ Intense Observation of Warfare. / Establish the existence of a...
+
+## CH009
+
+- chapter_title: CHAPTER IX
+- scene_count: `5`
+- dialogue_events: `9`
+- estimated_duration_seconds: `52`
+- transition_note: From intimidation (the gift) to communal cooperation and adaptation. / Establish Sola's moral compass through a verba...
+
+## CH010
+
+- chapter_title: CHAPTER X
+- scene_count: `6`
+- dialogue_events: `24`
+- estimated_duration_seconds: `102`
+- transition_note: From tension/confinement to mutual trust and dominance. / Establish the new status of john_carter as a chieftain and...
+
+## CH011
+
+- chapter_title: CHAPTER XI
+- scene_count: `3`
+- dialogue_events: `20`
+- estimated_duration_seconds: `75`
+- transition_note: From tension/hostility to decisive control/security. / Establish the disruption of a peaceful domestic moment within...
+
+## CH012
+
+- chapter_title: CHAPTER XII
+- scene_count: `4`
+- dialogue_events: `11`
+- estimated_duration_seconds: `53`
+- transition_note: From wary respect to mounting political pressure and threat. / Establish the transition of Carter from a combatant to...
+
+## CH013
+
+- chapter_title: CHAPTER XIII
+- scene_count: `4`
+- dialogue_events: `24`
+- estimated_duration_seconds: `92`
+- transition_note: From struggle/aggression to mastery/harmony. / Establish the romantic bond between Carter and Dejah Thoris through in...
+
+## CH014
+
+- chapter_title: CHAPTER XIV
+- scene_count: `5`
+- dialogue_events: `33`
+- estimated_duration_seconds: `124`
+- transition_note: Melancholy and social tension $\rightarrow$ Resignation. / Execute a high-intensity melee transition into sudden, loc...
+
+## CH015
+
+- chapter_title: CHAPTER XV
+- scene_count: `3`
+- dialogue_events: `19`
+- estimated_duration_seconds: `72`
+- transition_note: Relief (survival) $\rightarrow$ Melancholy/Pathos (Dejah's grief). / Establish the high-stakes narrative connection b...
+
+## CH016
+
+- chapter_title: CHAPTER XVI
+- scene_count: `4`
+- dialogue_events: `30`
+- estimated_duration_seconds: `110`
+- transition_note: Exhaustion/Anticipation $\rightarrow$ Relief/Intimacy. / Establish a high-tension infiltration sequence that transiti...
+
+## CH017
+
+- chapter_title: CHAPTER XVII
+- scene_count: `4`
+- dialogue_events: `9`
+- estimated_duration_seconds: `47`
+- transition_note: Tension/Terror $\rightarrow$ Action/Relief. / A high-intensity combat sequence where a lone defender is systematicall...
+
+## CH018
+
+- chapter_title: CHAPTER XVIII
+- scene_count: `5`
+- dialogue_events: `7`
+- estimated_duration_seconds: `46`
+- transition_note: Confusion/Pain $\rightarrow$ Dread/Helplessness. / Execute a high-tension transition from isolation to violent outbur...
+
+## CH019
+
+- chapter_title: CHAPTER XIX
+- scene_count: `5`
+- dialogue_events: `5`
+- estimated_duration_seconds: `40`
+- transition_note: Security $\rightarrow$ Vulnerability/Panic / Establish the transition from the chaotic arena environment to a stealth...
+
+## CH020
+
+- chapter_title: CHAPTER XX
+- scene_count: `4`
+- dialogue_events: `14`
+- estimated_duration_seconds: `62`
+- transition_note: Exhaustion/Survival $\rightarrow$ Awe/Intrigue. / Establish the transition of john_carter from a vulnerable wanderer...
+
+## CH021
+
+- chapter_title: CHAPTER XXI
+- scene_count: `6`
+- dialogue_events: `20`
+- estimated_duration_seconds: `90`
+- transition_note: Wonder/Curiosity $\rightarrow$ Somberness/Grief. / Establish the formal elevation of john_carter from outsider to pad...
+
+## CH022
+
+- chapter_title: CHAPTER XXII
+- scene_count: `5`
+- dialogue_events: `63`
+- estimated_duration_seconds: `214`
+- transition_note: Devotion/Hope $\rightarrow$ Shock/Heartbreak. / Establish the character's transition from a hunted fugitive to an act...
+
+## CH023
+
+- chapter_title: CHAPTER XXIII
+- scene_count: `4`
+- dialogue_events: `21`
+- estimated_duration_seconds: `83`
+- transition_note: Desperation $\rightarrow$ Determined Resolve. / Establish the immediate aftermath of a crash and transition into a st...
+
+## CH024
+
+- chapter_title: CHAPTER XXIV
+- scene_count: `5`
+- dialogue_events: `26`
+- estimated_duration_seconds: `103`
+- transition_note: Chaos/Peril $\rightarrow$ Heroic Triumph $\rightarrow$ Relief/Bonding. / Execute a high-stakes night infiltration of...
+
+## CH025
+
+- chapter_title: CHAPTER XXV
+- scene_count: `5`
+- dialogue_events: `11`
+- estimated_duration_seconds: `58`
+- transition_note: Tension $\rightarrow$ Aggression/Momentum. / Establish a quiet, intimate romantic resolution following the high-inten...
+
+## CH026
+
+- chapter_title: CHAPTER XXVI
+- scene_count: `4`
+- dialogue_events: `10`
+- estimated_duration_seconds: `50`
+- transition_note: Tension/Chaos $\rightarrow$ Intense Combat $\rightarrow$ Somber Victory. / Execute a grand triumphal procession throu...
+
+## CH027
+
+- chapter_title: CHAPTER XXVII
+- scene_count: `5`
+- dialogue_events: `18`
+- estimated_duration_seconds: `79`
+- transition_note: Bliss $\rightarrow$ Terror/Urgency. / Resolve the central conflict by demonstrating the protagonist's mental breakthr...
+
+## CH028
+
+- chapter_title: CHAPTER XXVIII
+- scene_count: `5`
+- dialogue_events: `11`
+- estimated_duration_seconds: `58`
+- transition_note: Confusion $\rightarrow$ Disorientation/Physical discomfort. / Establish the protagonist's profound isolation on Earth...
