@@ -69,6 +69,9 @@ echo ========================================
 cd /d "%REPO_ROOT%"
 if errorlevel 1 goto :fail
 
+call :ensure_book_ingested
+if errorlevel 1 goto :end_with_error
+
 if /I NOT "%NO_CLEAR%"=="NO_CLEAR" (
     call :clear_artifacts
     if errorlevel 1 goto :end_with_error
@@ -226,6 +229,46 @@ echo DONE: 00 Clear generated artifacts exit code !EXIT_CODE!
 if not "!EXIT_CODE!"=="0" goto :stepfail_clear
 exit /b 0
 
+:ensure_book_ingested
+echo.
+echo ----------------------------------------
+echo START: 00 Source book ingest preflight
+echo ----------------------------------------
+>> "%LOG_FILE%" echo.
+>> "%LOG_FILE%" echo ----------------------------------------
+>> "%LOG_FILE%" echo START: 00 Source book ingest preflight
+>> "%LOG_FILE%" echo ----------------------------------------
+
+echo import sys > "%TEMP_PY_SCRIPT%"
+echo sys.path.insert(0, '.') >> "%TEMP_PY_SCRIPT%"
+echo from json import dumps >> "%TEMP_PY_SCRIPT%"
+echo from orchestrator.book_ingest import ensure_book_ingested >> "%TEMP_PY_SCRIPT%"
+echo summary = ensure_book_ingested(project_slug='%PROJECT_SLUG%') >> "%TEMP_PY_SCRIPT%"
+echo if summary is None: >> "%TEMP_PY_SCRIPT%"
+echo     print(dumps({'project_slug': '%PROJECT_SLUG%', 'status': 'already_ingested'}, indent=2)) >> "%TEMP_PY_SCRIPT%"
+echo else: >> "%TEMP_PY_SCRIPT%"
+echo     payload = summary.to_dict() >> "%TEMP_PY_SCRIPT%"
+echo     payload['status'] = 'ingested' >> "%TEMP_PY_SCRIPT%"
+echo     print(dumps(payload, indent=2)) >> "%TEMP_PY_SCRIPT%"
+
+cd /d "%REPO_ROOT%"
+python "%TEMP_PY_SCRIPT%" > "%TEMP_LOG%" 2>&1
+set "EXIT_CODE=%ERRORLEVEL%"
+
+type "%TEMP_LOG%"
+type "%TEMP_LOG%" >> "%LOG_FILE%"
+type "%TEMP_LOG%" >> "%LATEST_LOG%"
+del "%TEMP_LOG%" >nul 2>nul
+del "%TEMP_PY_SCRIPT%" >nul 2>nul
+
+echo.
+echo DONE: 00 Source book ingest preflight exit code !EXIT_CODE!
+>> "%LOG_FILE%" echo DONE: 00 Source book ingest preflight exit code !EXIT_CODE!
+>> "%LATEST_LOG%" echo DONE: 00 Source book ingest preflight exit code !EXIT_CODE!
+
+if not "!EXIT_CODE!"=="0" goto :stepfail_ingest
+exit /b 0
+
 :lm_studio_check
 echo.
 echo ----------------------------------------
@@ -339,6 +382,10 @@ exit /b 0
 
 :stepfail_clear
 set "STEP_NAME=00 Clear generated artifacts"
+goto :stepfail_common
+
+:stepfail_ingest
+set "STEP_NAME=00 Source book ingest preflight"
 goto :stepfail_common
 
 :stepfail_lm

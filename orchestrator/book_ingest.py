@@ -96,6 +96,32 @@ def ingest_book_text(
     )
 
 
+def ensure_book_ingested(*, project_slug: str) -> BookIngestSummary | None:
+    project_dir = create_project(project_slug)
+    book_dir = project_dir / "01_source" / "book"
+    manifest_path = book_dir / "book_manifest.md"
+    if manifest_path.exists():
+        return None
+
+    raw_book_path = book_dir / "raw_book.txt"
+    book_input_path = book_dir / "book_input.txt"
+    if raw_book_path.exists():
+        raw_text = raw_book_path.read_text(encoding="utf-8")
+    elif book_input_path.exists():
+        raw_text = book_input_path.read_text(encoding="utf-8")
+    else:
+        raise FileNotFoundError(
+            "Book ingest has not run and no source text was found. Expected one of: "
+            f"{raw_book_path}, {book_input_path}"
+        )
+
+    return ingest_book_text(
+        project_slug=project_slug,
+        raw_text=raw_text,
+        source_name="raw_book.txt",
+    )
+
+
 def split_book_into_chapters(raw_text: str) -> list[dict[str, str]]:
     matches = list(CHAPTER_HEADING_RE.finditer(raw_text))
     if not matches:

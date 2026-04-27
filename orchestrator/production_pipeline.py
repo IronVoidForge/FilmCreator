@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Any
 
 from .book_authoring import _chapter_id_from_path, _read_manifest_chapter_paths, analyze_book
+from .book_ingest import ensure_book_ingested
 from .authoring import lmstudio_check
 from .character_bible import run_character_bible_synthesis
 from .character_taxonomy import run_character_taxonomy
@@ -140,15 +141,19 @@ def run_story_analysis_pipeline(
     mode: str = "resume",
 ) -> ProductionRunSummary:
     _validate_mode(mode)
+    ingest_summary = ensure_book_ingested(project_slug=project_slug)
     if mode == "resume" and not chapters:
         summary = run_resume_book_analysis(project_slug=project_slug, fail_fast=False)
+        phase_summaries: dict[str, Any] = {"story_analysis": summary}
+        if ingest_summary is not None:
+            phase_summaries["book_ingest"] = ingest_summary.to_dict()
         return ProductionRunSummary(
             profile="story_analysis",
             project_slug=project_slug,
             chapters=chapters,
             mode=mode,
             completed_phases=["story_analysis"],
-            phase_summaries={"story_analysis": summary},
+            phase_summaries=phase_summaries,
         )
 
     requested_paths = _resolve_story_analysis_chapter_paths(project_slug, chapters)
@@ -162,13 +167,16 @@ def run_story_analysis_pipeline(
         warnings.append(
             "Story analysis resume mode with a chapter slice runs the selected chapters directly instead of using the full resume planner."
         )
+    phase_summaries = {"story_analysis": _to_dict(summary)}
+    if ingest_summary is not None:
+        phase_summaries["book_ingest"] = ingest_summary.to_dict()
     return ProductionRunSummary(
         profile="story_analysis",
         project_slug=project_slug,
         chapters=chapters,
         mode=mode,
         completed_phases=["story_analysis"],
-        phase_summaries={"story_analysis": _to_dict(summary)},
+        phase_summaries=phase_summaries,
         warnings=warnings,
     )
 
@@ -427,8 +435,20 @@ def run_full_production_pipeline(
     start_phase: str = "character_taxonomy",
 ) -> ProductionRunSummary:
     _validate_mode(mode)
+    ingest_summary = ensure_book_ingested(project_slug=project_slug)
     if mode == "resume":
-        return run_trusted_resume_pipeline(project_slug, chapters=chapters)
+        summary = run_trusted_resume_pipeline(project_slug, chapters=chapters)
+        if ingest_summary is not None:
+            return ProductionRunSummary(
+                profile=summary.profile,
+                project_slug=summary.project_slug,
+                chapters=summary.chapters,
+                mode=summary.mode,
+                completed_phases=summary.completed_phases,
+                phase_summaries={"book_ingest": ingest_summary.to_dict(), **summary.phase_summaries},
+                warnings=summary.warnings,
+            )
+        return summary
     if start_phase not in FULL_PRODUCTION_PHASES:
         raise ValueError(f"Unsupported full production start phase: {start_phase}")
 
@@ -497,7 +517,11 @@ def run_full_production_pipeline(
         chapters=chapters,
         mode=mode,
         completed_phases=completed_phases,
-        phase_summaries=phase_summaries,
+        phase_summaries=(
+            {"book_ingest": ingest_summary.to_dict(), **phase_summaries}
+            if ingest_summary is not None
+            else phase_summaries
+        ),
         warnings=warnings,
     )
 

@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 
+from .book_ingest import ensure_book_ingested
 from .character_bible import run_character_bible_synthesis
 from .character_taxonomy import run_character_taxonomy
 from .character_references import (
@@ -211,6 +212,9 @@ def build_parser() -> argparse.ArgumentParser:
     ct.add_argument("--force", action="store_true")
     ct.add_argument("--limit", type=int, default=None)
 
+    bi = subparsers.add_parser("ensure-book-ingested")
+    bi.add_argument("project_slug")
+
     dp = subparsers.add_parser("run-downstream-pipeline")
     dp.add_argument("project_slug")
     dp.add_argument("--chapters", type=str, default=None)
@@ -352,6 +356,13 @@ def main() -> None:
         summary = run_identity_refinement(args.project_slug, use_llm=not args.no_llm, apply_merge=args.apply)
     elif args.command == "synthesize-character-taxonomy":
         summary = run_character_taxonomy(args.project_slug, force=args.force, limit=args.limit)
+    elif args.command == "ensure-book-ingested":
+        ingest_summary = ensure_book_ingested(project_slug=args.project_slug)
+        summary = (
+            {"project_slug": args.project_slug, "status": "already_ingested"}
+            if ingest_summary is None
+            else {"project_slug": args.project_slug, "status": "ingested", **ingest_summary.to_dict()}
+        )
     elif args.command == "run-downstream-pipeline":
         summary = run_downstream_pipeline(args.project_slug, chapters=args.chapters, start_phase=args.start_phase, pipeline_key=args.pipeline_key, resume=not args.no_resume, use_llm=not args.no_llm, shot_variants=args.shot_variants)
     elif args.command == "summarize-downstream-run":

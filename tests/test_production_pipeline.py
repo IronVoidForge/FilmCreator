@@ -36,6 +36,10 @@ def test_run_prompt_prep_refresh_force_runs_both(monkeypatch) -> None:
 
 def test_run_full_production_force_runs_remaining_pipeline(monkeypatch) -> None:
     monkeypatch.setattr(
+        "orchestrator.production_pipeline.ensure_book_ingested",
+        lambda project_slug: None,
+    )
+    monkeypatch.setattr(
         "orchestrator.production_pipeline.get_production_status",
         lambda project_slug, chapters=None: SimpleNamespace(
             phases=[
@@ -82,6 +86,10 @@ def test_run_full_production_force_runs_remaining_pipeline(monkeypatch) -> None:
 
 
 def test_run_story_analysis_pipeline_resume_uses_resume_runner(monkeypatch) -> None:
+    monkeypatch.setattr(
+        "orchestrator.production_pipeline.ensure_book_ingested",
+        lambda project_slug: None,
+    )
     monkeypatch.setattr(
         "orchestrator.production_pipeline.run_resume_book_analysis",
         lambda project_slug, fail_fast=False: {"project_slug": project_slug, "resume": True},
