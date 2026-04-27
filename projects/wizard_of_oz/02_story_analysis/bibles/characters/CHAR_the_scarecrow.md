@@ -19,10 +19,10 @@
 - physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: (none)
-[source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/the_scarecrow.md] Prompt Phrases: scarecrow, straw-filled humanoid, clumsy movement, rustic construction, cornfield origin. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/the_scarecrow.md] Physical Description: Non-flesh entity; immune to poppy scent. Recovered visual evidence: “Well,” said the girl, “let us go.” And she handed the basket to the Scarecrow.
+[source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/the_scarecrow.md] Prompt Phrases: scarecrow, straw-filled humanoid, clumsy movement, rustic construction, cornfield origin. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/the_scarecrow.md] Physical Description: Non-flesh entity; immune to poppy scent.
 
 - physical_traits: (none)
-- costume_signature: Source-supported costume/equipment: “Well,” said the girl, “let us go.” And she handed the basket to the Scarecrow.
+- costume_signature: (none)
 - distinguishing_features: (none)
 - state_variants: (none)
 
@@ -48,7 +48,6 @@
 - [CH003] Chapter III (query appears in paragraph preview)
 - [CH004] Chapter IV (query appears in paragraph preview)
 - [CH005] Chapter V (query appears in paragraph preview)
-- [visual-evidence:CH004 p27] “Well,” said the girl, “let us go.” And she handed the basket to the Scarecrow.
 
 ## Metadata
 

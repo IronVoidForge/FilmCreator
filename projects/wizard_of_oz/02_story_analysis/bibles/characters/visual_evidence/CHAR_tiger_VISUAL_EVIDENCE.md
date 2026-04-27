@@ -1,8 +1,8 @@
 # Character Visual Evidence: tiger
 
-- candidate_count: 6
+- candidate_count: 5
 - auto_patch_count: 0
-- review_candidate_count: 6
+- review_candidate_count: 5
 
 ## CH021 p12 s2
 
@@ -36,7 +36,7 @@ Its legs were quite as long as the tiger had said, and its body covered with coa
 - anchor_type: pronoun_continuity
 - confidence: 0.78
 - visual_terms: body, head
-- risk_flags: (none)
+- risk_flags: competing_subject_near_pronoun
 
 This gave the Lion a hint of the best way to attack the creature, and as he knew it was easier to fight it asleep than awake, he gave a great spring and landed directly upon the monster’s back. Then, with one blow of his heavy paw, all armed with sharp claws, he knocked the spider’s head from its body. Jumping down, he watched it until the long legs stopped wiggling, when he knew it was quite dead.
 
@@ -48,12 +48,3 @@ This gave the Lion a hint of the best way to attack the creature, and as he knew
 - risk_flags: (none)
 
 Then, with one blow of his heavy paw, all armed with sharp claws, he knocked the spider’s head from its body. Jumping down, he watched it until the long legs stopped wiggling, when he knew it was quite dead.
-
-## CH021 p22 s2
-
-- anchor_type: direct_name
-- confidence: 0.72
-- visual_terms: black, body, hair, legs
-- risk_flags: weak_direct_anchor
-
-The great spider was lying asleep when the Lion found him, and it looked so ugly that its foe turned up his nose in disgust. Its legs were quite as long as the tiger had said, and its body covered with coarse black hair. It had a great mouth, with a row of sharp teeth a foot long; but its head was joined to the pudgy body by a neck as slender as a wasp’s waist.

@@ -4,6 +4,15 @@
 - auto_patch_count: 0
 - review_candidate_count: 3
 
+## CH023 p21 s2
+
+- anchor_type: pronoun_continuity
+- confidence: 0.78
+- visual_terms: cap
+- risk_flags: competing_subject_near_pronoun
+
+“My third command to the Winged Monkeys,” said Glinda, “shall be to carry you to your forest. Then, having used up the powers of the Golden Cap, I shall give it to the King of the Monkeys, that he and his band may thereafter be free for evermore.”
+
 ## CH018 p34 s2
 
 - anchor_type: direct_name
@@ -21,12 +30,3 @@
 - risk_flags: weak_direct_anchor
 
 Glinda leaned forward and kissed the sweet, upturned face of the loving little girl.
-
-## CH023 p13 s1
-
-- anchor_type: direct_name
-- confidence: 0.72
-- visual_terms: cap
-- risk_flags: weak_direct_anchor
-
-“By means of the Golden Cap I shall command the Winged Monkeys to carry you to the gates of the Emerald City,” said Glinda, “for it would be a shame to deprive the people of so wonderful a ruler.”

@@ -441,11 +441,11 @@ def _candidate_from_sentence(
         else:
             confidence = 0.72
             risk_flags.append("weak_direct_anchor")
-    elif previous_subject == character_id and _has_character_pronoun(sentence, pronoun_kind):
+    elif previous_subject == character_id and _has_character_continuity_reference(sentence, pronoun_kind):
         anchor_type = "pronoun_continuity"
         confidence = 0.78
-        anchor_text = _first_pronoun(sentence, pronoun_kind)
-        if _has_competing_subject(previous_sentence, sentence):
+        anchor_text = _first_pronoun(sentence, pronoun_kind) or "continuity_reference"
+        if _has_competing_subject(previous_sentence, sentence, aliases):
             risk_flags.append("competing_subject_near_pronoun")
     else:
         return None
@@ -670,29 +670,28 @@ def _bible_from_dict(data: dict[str, Any]) -> CharacterBible:
 def _character_aliases(bible_data: dict[str, Any]) -> list[str]:
     aliases = [str(bible_data.get("display_name") or ""), str(bible_data.get("character_id") or "").replace("_", " ")]
     aliases.extend(_string_list(bible_data.get("aliases")))
-    aliases.extend(_role_aliases(bible_data))
+    aliases.extend(_article_aliases(aliases))
     return sorted(_dedupe([alias for alias in aliases if len(alias.strip()) >= 3]), key=len, reverse=True)
 
 
-def _role_aliases(bible_data: dict[str, Any]) -> list[str]:
-    text = " ".join(str(bible_data.get(key) or "") for key in ["display_name", "character_id", "identity_baseline", "role"]).lower()
-    aliases: list[str] = []
-    if "scarecrow" in text:
-        aliases.extend(["the scarecrow"])
-    if "woodman" in text or "tin" in text:
-        aliases.extend(["the tin woodman", "the woodman", "the tin man"])
-    if "lion" in text:
-        aliases.extend(["the lion"])
-    if "wizard" in text:
-        aliases.extend(["the wizard"])
-    return aliases
+def _article_aliases(aliases: list[str]) -> list[str]:
+    out: list[str] = []
+    for alias in aliases:
+        normalized = re.sub(r"\s+", " ", str(alias or "").strip().lower())
+        if not normalized:
+            continue
+        if normalized.startswith("the "):
+            out.append(normalized.removeprefix("the "))
+        else:
+            out.append(f"the {normalized}")
+    return out
 
 
 def _pronoun_kind(bible_data: dict[str, Any]) -> str:
     text = " ".join(str(bible_data.get(key) or "") for key in ["display_name", "identity_baseline", "role", "stable_visual_summary"]).lower()
-    if any(term in text for term in ["girl", "woman", "aunt", "witch", "dorothy", "glinda", "princess", "wife"]):
+    if any(term in text for term in ["girl", "woman", "aunt", "mother", "sister", "daughter", "queen", "princess", "wife"]):
         return "feminine"
-    if any(term in text for term in ["man", "woodman", "wizard", "uncle", "scarecrow", "lion", "king", "soldier", "farmer"]):
+    if any(term in text for term in ["man", "boy", "father", "brother", "son", "king", "prince", "uncle", "husband"]):
         return "masculine"
     return "neutral"
 
@@ -763,18 +762,44 @@ def _first_pronoun(text: str, pronoun_kind: str) -> str:
     return ""
 
 
-def _has_competing_subject(previous_sentence: str, sentence: str) -> bool:
-    text = f"{previous_sentence} {sentence}".lower()
-    subject_terms = ["dorothy", "witch", "girl", "woman", "man", "woodman", "scarecrow", "lion", "toto", "munchkin"]
-    return sum(1 for term in subject_terms if re.search(rf"\b{term}\b", text)) > 2
+def _has_character_continuity_reference(text: str, pronoun_kind: str) -> bool:
+    if _has_character_pronoun(text, pronoun_kind):
+        return True
+    normalized = text.lower()
+    return bool(
+        re.search(
+            r"\b(?:the rest of|rest of|the figure|the body|the head|the face|the hands|the arms|the legs|the clothes|the clothing|the costume)\b",
+            normalized,
+        )
+    )
+
+
+def _has_competing_subject(previous_sentence: str, sentence: str, aliases: list[str]) -> bool:
+    text = f"{previous_sentence} {sentence}"
+    alias_hits = _matching_aliases(text, aliases)
+    proper_nouns = set(re.findall(r"\b[A-Z][a-z]{2,}(?:\s+[A-Z][a-z]{2,}){0,2}\b", text))
+    role_terms = {
+        term
+        for term in re.findall(
+            r"\b(?:girl|boy|woman|man|child|mother|father|aunt|uncle|sister|brother|queen|king|princess|prince|soldier|guard|servant|farmer|keeper|captain|leader|creature|beast|animal)\b",
+            text.lower(),
+        )
+    }
+    normalized_aliases = {alias.lower().removeprefix("the ") for alias in aliases}
+    competing_roles = {term for term in role_terms if term not in normalized_aliases}
+    return len(proper_nouns) + len(competing_roles) > max(2, len(alias_hits) + 1)
 
 
 def _mentions_multiple_named_subjects(sentence: str, aliases: list[str]) -> bool:
-    text = sentence.lower()
-    common_subjects = ["dorothy", "toto", "scarecrow", "woodman", "lion", "witch", "wizard", "glinda", "munchkin"]
-    hits = {term for term in common_subjects if re.search(rf"\b{term}\b", text)}
-    alias_hits = {alias.lower() for alias in aliases if re.search(rf"\b{re.escape(alias.lower())}\b", text)}
-    return len(hits - alias_hits) >= 1 and len(hits) >= 2
+    alias_hits = _matching_aliases(sentence, aliases)
+    proper_nouns = set(re.findall(r"\b[A-Z][a-z]{2,}(?:\s+[A-Z][a-z]{2,}){0,2}\b", sentence))
+    normalized_aliases = {alias.lower() for alias in aliases}
+    non_alias_names = {
+        name
+        for name in proper_nouns
+        if name.lower() not in normalized_aliases and f"the {name.lower()}" not in normalized_aliases
+    }
+    return bool(alias_hits and non_alias_names)
 
 
 def _looks_like_dialogue_only(sentence: str) -> bool:
