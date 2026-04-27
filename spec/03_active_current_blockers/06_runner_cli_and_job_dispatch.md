@@ -31,7 +31,10 @@ Smart resume validation is now part of the CLI-era flow, not only the BAT-era fl
 - Run shared environment reference jobs
 - Register, approve, reject, and lock reference assets
 - Run a future clip scene-build job
+- Run a future opening-frame image-to-image reframe job
 - Run a future clip anchor or interval job
+- Review, approve, reject, regenerate, and lock future frame candidates
+- Block future I2V jobs when their approved opener is missing
 - Promote an approved future asset
 
 ## Dispatch Rules
@@ -39,6 +42,8 @@ Smart resume validation is now part of the CLI-era flow, not only the BAT-era fl
 - Resolve the project, scene, and clip context from arguments or state.
 - Resolve the workflow from the registry.
 - Resolve the latest approved continuity source from clip state for continuation jobs.
+- Respect `opening_keyframe_strategy`; do not treat every next shot as either fully fresh or direct continuation.
+- If `opening_keyframe_strategy=previous_last_frame_reframe`, verify the previous approved video last frame and approved secondary-view opener before I2V dispatch.
 - Validate required prompt files and image refs before execution.
 - Route outputs according to the declared output scope.
 - Authoring and rendering are separate local phases; the runner must not require LM Studio to remain loaded while ComfyUI executes a render job.
@@ -59,3 +64,4 @@ Smart resume validation is now part of the CLI-era flow, not only the BAT-era fl
 - A human can run the current still-image pipeline locally without editing workflow JSONs by hand.
 - A human can ask the CLI where resume should begin and get a trustworthy answer.
 - The same operator surface can later absorb scene-build and golden-frame work without requiring a second orchestration layer.
+- The runner can distinguish independent frame-generation jobs from sequential jobs blocked by prior approved video output.

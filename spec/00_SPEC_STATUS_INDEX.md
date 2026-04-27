@@ -87,6 +87,8 @@
 | 06_later_clip_pipeline/07_phase_11_9_quality_smoothing_and_patch_repair.md | spec/phases/PHASE_11_9_QUALITY_SMOOTHING_AND_PATCH_REPAIR.md | Phase | later_phase | Quality smoothing and patch repair |
 | 06_later_clip_pipeline/08_comfyui_client_and_workflow_patching.md | spec/4_orchestration/4.2_comfyui_client_and_workflow_patching.md | Orchestration | later_phase | **NOTE**: Core implemented, but live ComfyUI smoke validation belongs later |
 | 06_later_clip_pipeline/09_automated_testing_and_ci_strategy.md | spec/4_orchestration/4.4_automated_testing_and_ci_strategy.md | Testing | later_phase | Automated testing and CI strategy |
+| 06_later_clip_pipeline/10_phase_14_frame_generation_strategy.md | new | Clip | later_phase | Phase 14 frame generation strategy, opener dependencies, and I2V-aware still approval |
+| 06_later_clip_pipeline/11_phase_14_16_review_queue_prompt_repair_and_auto_review.md | new | Review | later_phase | Human review queues, LLM repair variants, and future auto image review for Phase 14/16 |
 | **07_deferred_future/** | | | | **Deferred to future** |
 | 07_deferred_future/01_sqlite_relational_model.md | spec/1_foundation/1.6_sqlite_relational_model.md | Foundation | deferred | SQLite relational model |
 | 07_deferred_future/02_video_motion_stage.md | spec/6_deferred/6.1_video_motion_stage.md | Video | deferred | Video motion stage |

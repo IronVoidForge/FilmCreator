@@ -1,6 +1,6 @@
-﻿Status: 30%
+Status: 70%
 
-# Deferred: KupkaProd Cinema Pipeline Lessons and FilmCreator Integration Plan
+# KupkaProd Lessons and FilmCreator Integration Plan
 
 ## Source Reviewed
 
@@ -10,79 +10,125 @@ External reference repo:
 https://github.com/Matticusnicholas/KupkaProd-Cinema-Pipeline
 ```
 
-This document captures what FilmCreator can learn from KupkaProd, what we should not copy, and how each lesson maps into our file-first phased pipeline.
+Reviewed against the public README and repository structure on 2026-04-27, plus FilmCreator's current specs for prompt preparation, reference generation, quality grading, and the later clip pipeline.
 
 ## Executive Summary
 
-KupkaProd is strongest at getting from a prompt/script to a complete local video quickly. Its pipeline emphasizes self-contained scene prompts, style locks, keyframe review, video takes, prompt rewriting after failures, and final assembly.
+KupkaProd is strongest at practical end-to-end local production: prompt/script intake, scene planning, storyboard keyframes, review, multiple video takes, and final assembly.
 
-FilmCreator is stronger at long-form canon management: registries, aliases, bibles, prompt packages, reference approval/locking, selective reruns, and reusable assets.
+FilmCreator is stronger at long-form canon management: project registries, aliases, bibles, source evidence, locked references, selective reruns, prompt packages, and reviewable file-first artifacts.
 
-The best path is not to copy KupkaProd architecture wholesale. Instead, pull in targeted lessons that improve prompt quality and downstream video validation while preserving FilmCreator's staged file-first design.
+The right move is not to copy KupkaProd wholesale. FilmCreator should absorb the production lessons that make downstream image/video generation more reliable while preserving its canon-aware, review-gated, rerunnable architecture.
 
-## High-Value Lessons
+FilmCreator's generation path is different from KupkaProd's because we expect to use image-to-video for most real shots. That means the most important prompt is often not a standalone text-to-video prompt. The critical artifacts are:
 
-| Lesson | Value to FilmCreator | Integration Difficulty | Priority |
-|---|---:|---:|---:|
-| Full world reconstruction in every generation prompt | Very high | Medium | Immediate |
-| Project-level style lock | Very high | Low-Medium | Immediate |
-| Rich character/environment descriptor minimums | Very high | Medium | Immediate |
-| Strict visual candidate evaluation rubric | High | Medium | Near-term |
-| Failure-driven prompt repair | High | Medium-High | Near-term |
-| Dialogue timing from word count/WPM | Medium-High | Medium | Near-term |
-| Multiple takes per shot/scene | Medium-High | Medium | Phase 14/16 |
-| Keyframe-to-video vertical validation lane | High | Medium-High | Phase 14 |
-| GUI-style review flow | Medium | High | Later |
-| Voice/audio bibles | Medium | Medium | Phase 15 |
+- approved character references
+- approved environment references
+- approved opening keyframes
+- approved previous-shot last frames
+- image-to-image alternate-angle keyframes
+- I2V prompts that explain motion, continuity, and what must change or remain stable
+
+Even with I2V, rich detail still matters. The model needs explicit subject, environment, style, camera, lighting, action, and continuity constraints so the conditioning image does not become the only source of truth.
+
+## Priority Matrix
+
+Difficulty score uses 1-5:
+
+- 1 = small prompt/spec/code addition
+- 2 = contained implementation
+- 3 = moderate cross-phase wiring
+- 4 = complex lifecycle or workflow integration
+- 5 = major system/UX change
+
+| Priority | Lesson | Why It Matters | Difficulty |
+|---:|---|---|---:|
+| 1 | I2V continuity chain with previous-shot last frame to alternate-angle next keyframe | This is the core future shot-to-shot workflow and affects how scenes can be generated, reviewed, and resumed | 4 |
+| 2 | Project-level style lock | Prevents style drift across refs, keyframes, I2V, and video clips | 2 |
+| 3 | Self-contained generation prompt packs for I2V/keyframes | Conditioning images help, but final prompts still need full world/detail reconstruction | 3 |
+| 4 | Rich descriptor minimums before visual generation | Prevents generic characters/environments and weak keyframes | 3 |
+| 5 | Workflow preflight for ComfyUI / local model stack | Prevents expensive runs from failing because nodes, models, paths, or dimensions are wrong | 3 |
+| 6 | Structured visual candidate evaluation rubric | Makes approval/rejection reproducible and useful for repairs | 3 |
+| 7 | Failure-driven prompt and keyframe repair | Converts rejected candidates into targeted regeneration instead of broad reruns | 4 |
+| 8 | Multiple takes / candidates with approval and selected outputs | AI generation is stochastic; final production needs choice, not one-shot acceptance | 3 |
+| 9 | Dialogue timing from word count, WPM, and action seconds | Needed for I2V clip duration, audio, and assembly | 3 |
+| 10 | Vertical validation lane from refs to keyframe to I2V clip | Proves the stack early before a full-book run | 4 |
+| 11 | Local model lifecycle / VRAM hygiene | Prevents LM Studio, ComfyUI, and video models from starving or hanging each other | 3 |
+| 12 | Workflow template manifests and node validation | Keeps ComfyUI workflow JSONs controllable and portable | 3 |
+| 13 | Resolution and frame-count validation | Avoids invalid dimensions or unsupported frame counts before queueing jobs | 2 |
+| 14 | Voice/audio bibles | Useful for later synchronized audio and performance continuity | 3 |
+| 15 | GUI review flow | Helpful, but file-first reports can carry us for now | 5 |
 
 ---
 
-# 1. Full World Reconstruction
+# 1. I2V Continuity Chain: Previous Last Frame to Alternate-Angle Next Keyframe
 
 ## Lesson
 
-KupkaProd assumes the model has no memory between scenes. Every prompt fully rebuilds the character, setting, lighting, camera, action, sound, and style from scratch.
+KupkaProd emphasizes storyboard keyframes before video generation. FilmCreator should go further for I2V: approved video outputs should feed the next still-generation decision when continuity requires it.
+
+The important FilmCreator workflow is:
+
+```text
+approved shot N video
+  -> extract / register last approved frame
+  -> use last frame as image-to-image source
+  -> generate alternate-angle / zoom / camera-position candidates for shot N+1 opener
+  -> review and approve one secondary view
+  -> use approved secondary view as first frame for shot N+1 I2V
+```
+
+This is not the same as asking the video model to continuously follow the prior shot. The image-to-image step deliberately creates a new camera view while preserving identity, wardrobe, setting continuity, and state.
 
 ## Why It Matters
 
-FilmCreator already stores all the parts, but final generation prompts can still become too abstract if they rely on IDs, summaries, or previous context.
+Many sequences cannot safely generate all first frames independently. The first shot of a scene or shot sequence may be straightforward from references, but later shots may need the approved previous video last frame before they can create a believable next opener.
 
-Scene/keyframe/video prompts must never depend on phrases like:
+This creates a real dependency chain:
 
 ```text
-same character
-same outfit
-same location
-continues from previous scene
-as before
+shot 1 keyframe -> shot 1 video -> approve last frame -> shot 2 alternate-angle opener -> shot 2 video
 ```
+
+For action scenes, dialogue coverage, reveal shots, and camera push/pull changes, this may be the difference between coherent continuity and visual drift.
 
 ## FilmCreator Integration
 
-Add a rule to Phase 14 prompt assembly:
+Add explicit clip/keyframe strategy values:
 
 ```text
-Every final generation prompt must be self-contained and include all active character, environment, style, camera, lighting, action, and continuity details.
+fresh_from_refs
+soft_scene_reframe
+previous_last_frame_reframe
+direct_continuous_follow
+manual_keyframe_override
 ```
 
-## Files / Modules Likely Affected
+Default guidance:
+
+- Use `fresh_from_refs` for the first shot in a scene or sequence.
+- Use `previous_last_frame_reframe` when shot N+1 must preserve exact state but change camera angle, zoom, or composition.
+- Use `direct_continuous_follow` only when the next clip is truly a continuation, not a cut.
+- Require human approval before a previous-last-frame-derived opener becomes the next shot's first frame.
+
+## Files / Specs Affected
 
 ```text
-spec/phases/PHASE_14_SHOT_KEYFRAME_GENERATION.md
-orchestrator/prompt_preparation.py
+spec/06_later_clip_pipeline/01_clip_input_contract.md
+spec/06_later_clip_pipeline/03_anchor_and_interval_frames.md
+spec/06_later_clip_pipeline/04_clip_review_and_selection.md
 future orchestrator/shot_keyframes.py
+future orchestrator/video_generation.py
+future orchestrator/clip_state.py
 ```
 
-## Implementation Steps
+## Acceptance Criteria
 
-1. Add a `world_reconstruction_required` flag to scene/shot prompt packages.
-2. In final keyframe generation prompt assembly, expand IDs into full text summaries.
-3. Include approved reference IDs and short reference descriptors.
-4. Add validation that rejects prompts containing weak continuity phrases like `same as before`.
-
-## Difficulty
-
-Medium. The data exists, but final prompt assembly needs discipline and validation.
+- Clip state records `approved_video_last_frame`.
+- Clip plans can declare `opening_keyframe_strategy: previous_last_frame_reframe`.
+- The runner refuses to generate shot N+1 I2V when its required reframe source is missing or unapproved.
+- The alternate-angle opener records source frame, camera change request, seed, prompt variant, and approval status.
+- Review can approve the secondary view before the next I2V clip starts.
 
 ---
 
@@ -90,15 +136,9 @@ Medium. The data exists, but final prompt assembly needs discipline and validati
 
 ## Lesson
 
-KupkaProd creates a short style anchor and injects it into every scene prompt.
+KupkaProd stores a short style anchor and injects it into every scene prompt. FilmCreator needs the same concept, but as a file-first artifact shared by refs, keyframes, and video prompts.
 
-## Why It Matters
-
-FilmCreator needs consistent visual direction across character refs, environment refs, keyframes, and video. Without a style lock, each phase may drift.
-
-## FilmCreator Integration
-
-Create a file-first style lock artifact:
+## Artifact
 
 ```text
 projects/<project>/02_story_analysis/world/global/STYLE_LOCK.json
@@ -108,58 +148,73 @@ Suggested fields:
 
 ```json
 {
-  "rendering_style": "photoreal cinematic adventure illustration",
-  "color_palette": "warm ochres, dusty reds, muted golds, deep blue shadows",
-  "lighting_style": "naturalistic cinematic lighting with readable faces",
-  "camera_style": "classic widescreen adventure framing",
-  "texture_finish": "film-quality detail, not painterly unless requested",
-  "negative_style_rules": ["no modern UI text", "no inconsistent cartoon style"]
+  "rendering_style": "cinematic illustrated realism",
+  "color_palette": "project-specific dominant and accent colors",
+  "lighting_style": "readable cinematic lighting",
+  "camera_style": "widescreen film coverage with clear subject staging",
+  "texture_finish": "consistent material detail",
+  "negative_style_rules": ["no modern UI text", "no random style shifts"]
 }
 ```
 
-## Files / Modules Likely Affected
+## Integration
 
-```text
-orchestrator/prompt_preparation.py
-orchestrator/descriptor_enrichment.py
-orchestrator/quality_grading.py
-spec/IMPLEMENTATION_ROADMAP.md
-```
-
-## Implementation Steps
-
-1. Add a style lock synthesis step or simple default generator.
-2. Store style lock in global story analysis.
-3. Include style lock in character/environment/scene prompt packages.
-4. Let prompt booster variants append to style, but never replace it.
+- Include style lock in character reference prompts.
+- Include style lock in environment reference prompts.
+- Include style lock in shot keyframe and I2V prompts.
+- Let prompt boosters add local emphasis, but never replace the style lock.
 
 ## Difficulty
 
-Low-Medium. This is mostly artifact creation and prompt-prep inclusion.
+2. The main work is artifact creation, prompt-prep injection, and quality validation.
 
 ---
 
-# 3. Rich Descriptor Minimums
+# 3. Self-Contained Generation Prompt Packs For I2V And Keyframes
 
 ## Lesson
 
-KupkaProd requires concrete descriptor fields for characters and settings. Characters include face, hair, build, clothing, mannerisms. Settings include room/location, props, surfaces, background, lighting, and atmosphere.
+KupkaProd's README stresses that every generation prompt rebuilds the scene because video models have no memory. FilmCreator's I2V prompts are different because they have image conditioning, but they still need full production context.
 
-## Why It Matters
+## FilmCreator Rule
 
-FilmCreator's first generated refs exposed the weakness of generic descriptors like:
+Every final visual generation prompt package must include:
+
+- active character identity and locked visual fields
+- active environment descriptor and subzone
+- style lock
+- camera angle, lens, framing, zoom/motion intent
+- lighting and mood
+- action start and action end
+- continuity from previous shot
+- what may change from the source image
+- what must remain stable from the source image
+
+Avoid weak phrases:
 
 ```text
-described character with stable costume and silhouette
+same as before
+same character
+same outfit
+continue the scene
+as previously shown
 ```
 
-Prompt packages need enough visible detail to generate consistent assets.
+For I2V and image-to-image, those phrases should be replaced by explicit continuity fields.
 
-## FilmCreator Integration
+## Difficulty
 
-Strengthen descriptor enrichment and prompt-prep validation.
+3. The data mostly exists; the challenge is final assembly and validation discipline.
 
-### Character Minimum Fields
+---
+
+# 4. Rich Descriptor Minimums
+
+## Lesson
+
+KupkaProd keeps concrete character and setting descriptions close to generation prompts. FilmCreator should enforce minimum visual descriptor fields before expensive generation.
+
+## Character Minimum Fields
 
 ```text
 age_or_life_stage
@@ -176,7 +231,7 @@ silhouette_anchors
 locked_visual_fields
 ```
 
-### Environment Minimum Fields
+## Environment Minimum Fields
 
 ```text
 location_type
@@ -192,55 +247,63 @@ camera_readability_notes
 locked_visual_fields
 ```
 
-## Files / Modules Likely Affected
+## Integration
 
-```text
-orchestrator/descriptor_enrichment.py
-orchestrator/prompt_preparation.py
-orchestrator/quality_grading.py
-spec/phases/PHASE_11_DESCRIPTOR_ENRICHMENT.md
-```
-
-## Implementation Steps
-
-1. Update descriptor enrichment prompts to require minimum fields.
-2. Add prompt-prep warnings when required visual fields are blank or generic.
-3. Add quality grading rule for weak descriptors.
-4. Block or review Phase 12/13 generation if visual descriptors are too thin.
+- Descriptor enrichment should mark missing fields explicitly.
+- Prompt preparation should warn on generic descriptors.
+- Quality grading should block or review Phase 12/13 and Phase 14 candidates when visual fields are too thin.
 
 ## Difficulty
 
-Medium. Requires prompt tuning and validation rules, but not major architecture changes.
+3. This requires prompt tuning, validation, and grading rules.
 
 ---
 
-# 4. Strict Visual Candidate Evaluation Rubric
+# 5. Workflow Preflight
 
 ## Lesson
 
-KupkaProd evaluates keyframes with explicit categories and hard fail rules.
-
-## Why It Matters
-
-FilmCreator needs consistent manual and future AI-assisted candidate review. The ranking system should not be just `good/bad`; it should store why.
+KupkaProd tells users to dry-run ComfyUI workflows before production. FilmCreator should make this a first-class preflight instead of an operator memory task.
 
 ## FilmCreator Integration
 
-Extend reference candidate metadata with a structured review rubric.
+Add a preflight command that validates:
 
-Suggested categories:
+- ComfyUI reachable
+- required custom nodes present
+- workflow JSON loads
+- expected node ids or auto-detected nodes exist
+- model files resolve
+- input/output folders exist
+- image dimensions satisfy workflow multiples
+- video frame counts are valid
+
+## Difficulty
+
+3. Straightforward, but it touches Comfy client, workflow metadata, and launchers.
+
+---
+
+# 6. Structured Visual Candidate Evaluation Rubric
+
+## Lesson
+
+KupkaProd evaluates storyboard/keyframe candidates before video generation. FilmCreator should store manual and future AI-assisted evaluation as structured data.
+
+## Candidate Rubric
 
 ```text
 character_accuracy
 environment_accuracy
 composition
+camera_match
 lighting_mood
-image_quality
 continuity
+image_quality
 downstream_usability
 ```
 
-Suggested values:
+Values:
 
 ```text
 good
@@ -249,108 +312,97 @@ poor
 unknown
 ```
 
-Suggested fail rules:
+Hard fail rules:
 
-```text
-character_accuracy poor = fail for character/scene refs
-environment_accuracy poor = fail for environment/scene refs
-image_quality poor = fail
-any hard continuity mismatch = fail
-two or more fair scores = review-needed or fail
-```
-
-## Files / Modules Likely Affected
-
-```text
-orchestrator/reference_assets.py
-orchestrator/character_references.py
-orchestrator/environment_references.py
-spec/deferred/REFERENCE_CANDIDATE_RANKING_AND_PROMPT_VARIATION.md
-```
-
-## Implementation Steps
-
-1. Add optional `review_rubric` object to candidate records.
-2. Add CLI/manual fields for score and tags.
-3. Add markdown review index displaying rubric fields.
-4. Later add AI/vision evaluator that populates a first-pass rubric.
+- `character_accuracy=poor` fails character/shot candidates.
+- `environment_accuracy=poor` fails environment/shot candidates.
+- `continuity=poor` fails sequence-derived keyframes.
+- `image_quality=poor` fails.
+- Two or more `fair` fields require review.
 
 ## Difficulty
 
-Medium. Candidate metadata changes are straightforward, but UX/reporting needs care.
+3. Candidate metadata is manageable; reporting and review ergonomics need care.
 
 ---
 
-# 5. Failure-Driven Prompt Repair
+# 7. Failure-Driven Prompt And Keyframe Repair
 
 ## Lesson
 
-KupkaProd collects keyframe failure reasons and rewrites prompts based on those failures.
+KupkaProd regenerates rejected storyboard images with notes. FilmCreator should turn rejection reasons into targeted repair variants.
 
-## Why It Matters
-
-FilmCreator already has repair notes in prompt packages. We should turn rejection data into structured repair notes and prompt variants.
-
-## FilmCreator Integration
-
-Add a repair loop:
+## Repair Flow
 
 ```text
 candidate rejected
-  -> rejection tags + notes
+  -> rejection tags and notes
   -> repair note synthesis
-  -> repaired generation prompt variant
+  -> repaired prompt variant
   -> regenerate candidate
+  -> preserve original canonical prompt package
 ```
 
-Example mapping:
+Example mappings:
 
 | Review Tag | Repair Action |
 |---|---|
-| `too_dark` | Add explicit even lighting and negative underexposure terms |
-| `weak_face` | Move face descriptor earlier and add face readability booster |
-| `wrong_costume` | Repeat costume fields verbatim and add costume readability booster |
-| `bad_environment_layout` | Simplify spatial layout and foreground/midground/background |
-| `identity_drift` | Require locked reference image and reinforce identity anchors |
-
-## Files / Modules Likely Affected
-
-```text
-orchestrator/prompt_boosters.py
-orchestrator/reference_assets.py
-orchestrator/character_references.py
-orchestrator/environment_references.py
-future orchestrator/prompt_repair.py
-```
-
-## Implementation Steps
-
-1. Store rejection tags and fail reasons.
-2. Add `repair_prompt_variant` generation using the original prompt plus failure notes.
-3. Save repaired prompt as a temporary generation prompt, not as the canonical prepared prompt.
-4. Track repaired variants in candidate metadata.
+| `too_dark` | add explicit readable lighting and underexposure negatives |
+| `weak_face` | move face descriptor earlier and add face readability booster |
+| `wrong_costume` | repeat locked costume fields verbatim |
+| `bad_environment_layout` | simplify foreground / midground / background layout |
+| `identity_drift` | require approved character reference image and identity anchors |
+| `bad_reframe` | narrow image-to-image change request to angle/zoom only |
 
 ## Difficulty
 
-Medium-High. The core is manageable, but we need robust metadata and review discipline.
+4. The metadata is easy; the lifecycle and variant tracking are the hard part.
 
 ---
 
-# 6. Dialogue Timing and WPM Estimation
+# 8. Multiple Takes And Candidates
 
 ## Lesson
 
-KupkaProd calculates scene duration from dialogue word count, WPM, and action seconds.
+KupkaProd generates multiple takes and lets the user choose. FilmCreator should treat reference images, keyframes, alternate-angle openers, and videos as candidate families.
 
-## Why It Matters
+## Integration
 
-FilmCreator will need reliable shot durations for image-to-video, audio, and final edit planning.
+Support:
 
-## FilmCreator Integration
+```bash
+--takes 3
+--seed-mode random
+--stop-on-approved
+--prompt-variant readability
+```
 
-Add timing fields to dialogue timeline, scene contracts, and shot packages.
+Candidate metadata should include:
 
-Suggested fields:
+```text
+take_number
+seed
+workflow_id
+prompt_variant
+booster_ids
+source_frame_id
+approval_status
+selected_for_downstream
+```
+
+## Difficulty
+
+3. We already have reference candidate lifecycle patterns.
+
+---
+
+# 9. Dialogue Timing And WPM Estimation
+
+## Lesson
+
+KupkaProd calculates scene duration from dialogue word count plus action time. FilmCreator needs this for I2V clip duration, audio, and final assembly.
+
+## Suggested Fields
 
 ```json
 {
@@ -363,133 +415,107 @@ Suggested fields:
 }
 ```
 
-## Files / Modules Likely Affected
-
-```text
-orchestrator/dialogue_timeline.py
-orchestrator/shot_planner.py
-orchestrator/scene_contracts.py
-spec/phases/PHASE_15_AUDIO.md
-spec/phases/PHASE_16_VIDEO.md
-```
-
-## Implementation Steps
-
-1. Add a WPM utility module.
-2. Count words in dialogue timeline lines.
-3. Estimate clip duration per shot and scene.
-4. Use duration targets when generating video clips.
-
 ## Difficulty
 
-Medium. Word counting is simple; aligning timing with shot structure is the real work.
+3. Word counting is simple; aligning dialogue to shots and motion segments is the real work.
 
 ---
 
-# 7. Multiple Takes Per Shot / Scene
+# 10. Vertical Validation Lane
 
 ## Lesson
 
-KupkaProd generates multiple video takes and lets the user pick the best.
+KupkaProd proves the stack quickly by going from planning to storyboard to video. FilmCreator should add a small validation lane before full-book production.
 
-## Why It Matters
-
-AI generation is stochastic. One output is rarely enough. FilmCreator's ranking system should apply not only to reference images but also to keyframes and video clips.
-
-## FilmCreator Integration
-
-For Phase 14 and Phase 16, support:
-
-```bash
---takes 3
---seed-mode random
---stop-on-approved
---prompt-variant readability
-```
-
-## Files / Modules Likely Affected
-
-```text
-future orchestrator/shot_keyframes.py
-future orchestrator/video_generation.py
-orchestrator/reference_assets.py
-orchestrator/prompt_boosters.py
-```
-
-## Implementation Steps
-
-1. Treat keyframes/video clips as candidates, like reference assets.
-2. Store take number, seed, workflow ID, prompt variant, booster IDs.
-3. Add approval/lock behavior for selected keyframes/clips.
-4. Add final assembly inputs that use selected clips only.
-
-## Difficulty
-
-Medium. We already have candidate lifecycle patterns from references.
-
----
-
-# 8. Keyframe-to-Video Vertical Validation Lane
-
-## Lesson
-
-KupkaProd has a short path from storyboard keyframe to video generation.
-
-## Why It Matters
-
-FilmCreator needs to validate the whole stack early, even before perfect art direction.
-
-## FilmCreator Integration
-
-Add a small validation path:
+## FilmCreator Lane
 
 ```text
 approved character ref
 approved environment ref
 one shot package
-one keyframe
-one image-to-video clip
+one opening keyframe
+one I2V clip
 manual review
+optional previous-last-frame reframe into next opener
 ```
-
-## Files / Modules Likely Affected
-
-```text
-future orchestrator/shot_keyframes.py
-future orchestrator/video_generation.py
-launchers/quick_pipeline_test/
-spec/CLI_PIPELINE_ORCHESTRATOR_SPEC.md
-```
-
-## Implementation Steps
-
-1. Add `generate-shot-keyframes --validation-slice`.
-2. Use approved refs and one shot package.
-3. Generate 1-3 keyframe candidates.
-4. Approve one keyframe.
-5. Run I2V test using that keyframe.
 
 ## Difficulty
 
-Medium-High. Requires Phase 14 wiring and workflow validation.
+4. Requires Phase 14/16 wiring and real workflow validation.
 
 ---
 
-# 9. Voice and Audio Bibles
+# 11. Local Model Lifecycle And VRAM Hygiene
 
 ## Lesson
 
-KupkaProd stores voice descriptions with pitch, timbre, accent, cadence, delivery, and verbal tics.
+KupkaProd unloads/restarts local models to prevent hangs and free VRAM before ComfyUI work. FilmCreator should have explicit rules for LM Studio, ComfyUI, and video models.
 
-## Why It Matters
+## Integration
 
-FilmCreator's dialogue timeline will eventually need audio generation or voice direction.
+- Detect active local model servers.
+- Avoid launching heavy generation while LM Studio is still processing synthesis.
+- Add operator-visible preflight warnings.
+- Record model/process state in run manifests.
 
-## FilmCreator Integration
+## Difficulty
 
-Add voice bibles as Phase 15 prep.
+3.
 
-Suggested artifact:
+---
+
+# 12. Workflow Template Manifests
+
+## Lesson
+
+KupkaProd ships workflow templates and can export API-format templates from ComfyUI. FilmCreator should treat workflow JSON as versioned artifacts with manifests.
+
+## Integration
+
+Each workflow should have:
+
+```text
+workflow_id
+workflow_json_path
+expected_node_roles
+model_requirements
+dimension_requirements
+known_good_test_output
+last_preflight_status
+```
+
+## Difficulty
+
+3.
+
+---
+
+# 13. Resolution And Frame Validation
+
+## Lesson
+
+KupkaProd snaps dimensions to workflow-valid multiples. FilmCreator should reject invalid dimensions before queueing.
+
+## Integration
+
+- Validate image dimensions by workflow requirements.
+- Validate video dimensions by workflow requirements.
+- Validate frame count and FPS.
+- Store resolved dimensions in candidate metadata.
+
+## Difficulty
+
+2.
+
+---
+
+# 14. Voice And Audio Bibles
+
+## Lesson
+
+KupkaProd stores voice-style descriptions and uses synchronized audio/video workflows. FilmCreator can defer this until audio phases, but should keep the schema in mind.
+
+## Suggested Artifact
 
 ```text
 projects/<project>/02_story_analysis/bibles/voices/VOICE_<character_id>.json
@@ -509,51 +535,21 @@ emotional_range
 continuity_notes
 ```
 
-## Files / Modules Likely Affected
-
-```text
-orchestrator/dialogue_timeline.py
-future orchestrator/audio.py
-spec/phases/PHASE_15_AUDIO.md
-```
-
-## Implementation Steps
-
-1. Add deferred spec for voice bibles.
-2. Extract voice hints from dialogue and narration.
-3. Link voice bibles to character IDs.
-4. Use voice bibles in audio/video prompts later.
-
 ## Difficulty
 
-Medium. Not urgent until audio/video phase.
+3.
 
 ---
 
-# 10. GUI Review Flow
+# 15. GUI Review Flow
 
 ## Lesson
 
-KupkaProd includes storyboard and take review GUIs.
-
-## Why It Matters
-
-FilmCreator's file-first review is powerful but slower for visual selection. A simple review UI would help when ranking hundreds of generations.
-
-## FilmCreator Integration
-
-Defer full GUI. First, improve markdown/JSON review reports. Later, build a lightweight local review viewer.
-
-## Files / Modules Likely Affected
-
-```text
-orchestrator/reference_assets.py
-future review_ui/
-```
+KupkaProd has storyboard and take review GUIs. FilmCreator should eventually have a visual review UI, but the near-term requirement is better JSON/Markdown review reports and stable candidate folders.
 
 ## Difficulty
 
-High for GUI, low for better reports.
+5 for full GUI, 2 for better reports.
 
 ---
 
@@ -566,9 +562,10 @@ Avoid importing these architectural choices directly:
 - GUI-first orchestration
 - run-local state as the main source of truth
 - fully autonomous accept/reject behavior
-- public-figure-specific voice anchors
 - prompt generation that bypasses canonical bibles and registries
 - first-pass `PASS` as final production acceptance
+- public-figure-specific voice shortcuts
+- text-to-video assumptions as the default for FilmCreator
 
 FilmCreator should stay:
 
@@ -579,67 +576,56 @@ canon-aware
 rerunnable
 reference-locked
 prompt-package-driven
+I2V-aware
 ```
 
 ---
 
-# Recommended Implementation Roadmap
+# Recommended Roadmap
 
-## Immediate: Prompt and Descriptor Quality
+## Immediate After Current Oz Validation
 
-1. Add style lock artifact.
-2. Update descriptor enrichment minimum fields.
-3. Add world reconstruction rules to prompt-prep and Phase 14 docs.
-4. Keep booster libraries generic and generation-time only.
+1. Add project-level `STYLE_LOCK.json`.
+2. Add descriptor minimum validation before Phase 12/13 generation.
+3. Add world-reconstruction checks to final visual prompt packages.
+4. Update clip specs and future Phase 14 docs around `previous_last_frame_reframe`.
+5. Add workflow preflight planning for ComfyUI/local model readiness.
 
-## Near-Term: Review and Repair
+## Near-Term Reference / Keyframe Work
 
-1. Add structured visual candidate rubric.
-2. Add manual ranking fields to candidates.
-3. Add rejection tags and repair note synthesis.
-4. Add prompt repair variants.
+1. Add structured candidate rubric.
+2. Add selected/approved candidate metadata.
+3. Add rejection tags and repair variants.
+4. Add alternate-angle opener candidates sourced from approved previous video last frames.
 
-## Phase 14 Validation
+## Phase 14/16 Validation
 
-1. Generate one shot keyframe using approved character/environment refs.
-2. Generate multiple keyframe takes with raw/boosted variants.
-3. Approve one keyframe.
-4. Run one I2V clip.
+1. Generate one approved first-shot keyframe from refs.
+2. Generate one I2V clip.
+3. Approve clip and register last frame.
+4. Generate next-shot opener via image-to-image reframe.
+5. Approve that secondary view.
+6. Use it as first frame for the next I2V clip.
 
-## Phase 15/16
+## Later
 
-1. Add dialogue timing estimates.
-2. Add voice bibles.
-3. Add video take lifecycle.
-4. Add final assembly candidate selection.
-
----
-
-# Proposed New Deferred Specs
-
-Create or update:
-
-```text
-spec/deferred/STYLE_LOCK_AND_WORLD_RECONSTRUCTION.md
-spec/deferred/VISUAL_CANDIDATE_EVALUATION_RUBRIC.md
-spec/deferred/FAILURE_DRIVEN_PROMPT_REPAIR.md
-spec/deferred/DIALOGUE_TIMING_AND_TAKE_PLANNING.md
-spec/deferred/VOICE_BIBLES_AND_AUDIO_IDENTITY.md
-```
+1. Add dialogue timing and WPM estimates.
+2. Add video take lifecycle.
+3. Add voice bibles.
+4. Add lightweight visual review UI.
 
 ---
 
 # Acceptance Criteria For Adoption
 
-FilmCreator successfully incorporates these lessons when:
+FilmCreator has incorporated these lessons when:
 
-- Base prompt packages remain canonical and clean.
-- Generation prompts are fully self-contained.
-- Style lock appears in every visual generation prompt.
-- Character/environment descriptors are specific enough to avoid generic outputs.
-- Candidate review captures why an output succeeded or failed.
-- Rejected candidates become useful prompt repair data.
-- Multiple takes can be compared by prompt variant, seed, workflow, and rank.
-- A small vertical slice can go from approved refs to keyframe to I2V clip.
-
-
+- Style lock appears in every visual generation package.
+- Final generation packages are self-contained and I2V-aware.
+- Descriptor minimums prevent generic references and keyframes.
+- Candidate review captures why outputs pass or fail.
+- Rejected candidates produce targeted repair variants.
+- Multiple takes can be compared by seed, workflow, source frame, and prompt variant.
+- A previous shot's approved last frame can produce an approved alternate-angle opener for the next shot.
+- The runner can block a dependent next shot until its opener is approved.
+- Workflow preflight catches missing nodes/models/dimension errors before expensive runs.

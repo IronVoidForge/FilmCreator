@@ -6,6 +6,8 @@ Status: 70%
 
 Create the opening still for a clip-shot, then promote one selected image to the golden frame.
 
+This is the first concrete Phase 14 still-generation path. It covers independent openers first, then expands to image-to-image alternate-angle openers when the clip plan requires continuity from the previous approved video last frame.
+
 ## Current Position
 
 This stage is not active yet. The operator layer, prompt-package schema, smart resume path, reference approval flow, and artifact lifecycle core are now far enough along that scene-build can be designed against real upstream contracts instead of a hypothetical pipeline.
@@ -16,6 +18,8 @@ The next implementation should start only after:
 - Phase 12 and 13 have produced at least one approved and locked reference asset in a real run
 - prompt-preparation outputs are confirmed usable for the target scene or shot slice
 
+Before perfecting this stage, run one complete pipeline pass far enough to see real downstream artifacts. Character/environment/keyframe quality can be imperfect during that first end-to-end validation; the purpose is to expose missing dependencies and weak gates before deep prompt refinement.
+
 ## Flow
 
 - Run the clip shot-opener scene-build prompt against the correct scene-build workflow.
@@ -24,6 +28,15 @@ The next implementation should start only after:
 - Promote the selected image to `stills/golden_frame/` as `SC###_CL###_GF01.png`.
 - Update `clip_state.json` with the approved golden frame path and mark it as the current continuity source.
 
+For dependent next-shot openers:
+
+- wait for the previous clip's approved video last frame
+- use that frame as an image-to-image source
+- generate several alternate camera/zoom candidates
+- route candidates into `stills/alternate_angle_openers/`
+- approve one as this clip's golden/opening frame
+- only then allow the I2V clip job to run
+
 ## Required Inputs
 
 - approved character reference assets from Phase 12 when characters are present
@@ -31,6 +44,8 @@ The next implementation should start only after:
 - shot package and prompt package outputs for the target scene and clip
 - source lineage metadata showing which subject, scene, shot, and prompt variant drove the generation
 - workflow registry entry for the scene-build workflow
+- `opening_keyframe_strategy` from the clip plan
+- previous approved video last frame when `opening_keyframe_strategy=previous_last_frame_reframe`
 
 ## Suggested Artifact Layout
 
@@ -45,9 +60,11 @@ If `04_stills` proves too narrow later, that can still be revised, but scene-bui
 The future CLI shape should be explicit and conservative:
 
 - `python -m orchestrator run-scene-build <project> --scene ... --clip ...`
+- `python -m orchestrator run-opener-reframe <project> --scene ... --clip ... --source previous-last-frame`
 - `python -m orchestrator register-scene-build-candidate <project> ...`
 - `python -m orchestrator approve-golden-frame <project> ...`
 - `python -m orchestrator lock-golden-frame <project> ...`
+- `python -m orchestrator request-frame-regeneration <project> ... --reason ... --notes ...`
 - `python -m orchestrator clip-status <project> --scene ... --clip ...`
 
 Golden-frame promotion should remain a distinct approval step, not an implicit side effect of generation.
@@ -67,6 +84,7 @@ Golden-frame promotion should remain a distinct approval step, not an implicit s
 - no image-to-video generation yet
 - no attempt to infer continuity state purely from filenames
 - no hidden auto-promotion of best candidate
+- no automatic final approval by image-review LLM
 
 ## Validation Plan
 
@@ -93,3 +111,4 @@ The first implementation should be validated without requiring a full book rerun
 - Downstream continuation generation reads the approved golden frame from clip state until a newer approved frame replaces it.
 - The operator can inspect, approve, and lock a golden frame without editing workflow JSON by hand.
 - The first scene-build implementation can be tested on a tiny validated slice without restarting the whole upstream pipeline.
+- Dependent next-shot openers remain blocked until required previous-video last-frame inputs exist.
