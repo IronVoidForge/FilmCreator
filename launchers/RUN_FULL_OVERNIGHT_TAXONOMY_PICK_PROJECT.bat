@@ -2,15 +2,26 @@
 setlocal EnableExtensions EnableDelayedExpansion
 
 set "PROJECT_SLUG=%~1"
-if "%PROJECT_SLUG%"=="" set "PROJECT_SLUG=princess_of_mars_test"
-
 set "CHAPTERS=%~2"
-if "%CHAPTERS%"=="" set "CHAPTERS=2-3"
-
 set "NO_CLEAR=%~3"
 
 call "%~dp0_shared\resolve_filmcreator_root.bat" "%~dp0" || goto :fail_resolver
 set "REPO_ROOT=%FILMCREATOR_ROOT%"
+
+if "%PROJECT_SLUG%"=="" (
+    call :pick_project
+    if errorlevel 1 exit /b 1
+)
+
+if "%CHAPTERS%"=="" (
+    call :pick_chapters
+    if errorlevel 1 exit /b 1
+)
+
+if "%NO_CLEAR%"=="" (
+    call :pick_clear_mode
+    if errorlevel 1 exit /b 1
+)
 
 set "LOG_DIR=%REPO_ROOT%\logs\overnight"
 if not exist "%LOG_DIR%" mkdir "%LOG_DIR%"
@@ -357,3 +368,51 @@ exit /b 1
 :fail_resolver
 echo Failed to resolve FilmCreator root
 exit /b 1
+
+:pick_project
+echo.
+echo ========================================
+echo Select FilmCreator project
+echo ========================================
+set /a PROJECT_COUNT=0
+for /f "delims=" %%P in ('dir /b /ad "%REPO_ROOT%\projects" 2^>nul') do (
+    set /a PROJECT_COUNT+=1
+    set "PROJECT_!PROJECT_COUNT!=%%P"
+    echo !PROJECT_COUNT!. %%P
+)
+if "%PROJECT_COUNT%"=="0" (
+    echo No project folders were found under:
+    echo   %REPO_ROOT%\projects
+    exit /b 1
+)
+echo.
+set /p PROJECT_CHOICE=Project number:
+if "%PROJECT_CHOICE%"=="" (
+    echo No project selected.
+    exit /b 1
+)
+call set "PROJECT_SLUG=%%PROJECT_%PROJECT_CHOICE%%%"
+if "%PROJECT_SLUG%"=="" (
+    echo Invalid project selection: %PROJECT_CHOICE%
+    exit /b 1
+)
+echo Selected project: %PROJECT_SLUG%
+exit /b 0
+
+:pick_chapters
+echo.
+echo Chapter selector examples: 1-999, 1-3, CH001-CH003, 4, 7, 12
+set /p CHAPTERS=Chapters [1-999]:
+if "%CHAPTERS%"=="" set "CHAPTERS=1-999"
+exit /b 0
+
+:pick_clear_mode
+echo.
+echo Existing generated artifacts will be preserved by default.
+set /p CLEAR_CONFIRM=Clear and regenerate artifacts first? Type Y to clear [N]:
+if /I "%CLEAR_CONFIRM%"=="Y" (
+    set "NO_CLEAR="
+) else (
+    set "NO_CLEAR=NO_CLEAR"
+)
+exit /b 0
