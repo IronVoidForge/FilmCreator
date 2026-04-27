@@ -10,17 +10,17 @@ set "REPO_ROOT=%FILMCREATOR_ROOT%"
 
 if "%PROJECT_SLUG%"=="" (
     call :pick_project
-    if errorlevel 1 exit /b 1
+    if errorlevel 1 goto :picker_failed
 )
 
 if "%CHAPTERS%"=="" (
     call :pick_chapters
-    if errorlevel 1 exit /b 1
+    if errorlevel 1 goto :picker_failed
 )
 
 if "%NO_CLEAR%"=="" (
     call :pick_clear_mode
-    if errorlevel 1 exit /b 1
+    if errorlevel 1 goto :picker_failed
 )
 
 set "LOG_DIR=%REPO_ROOT%\logs\overnight"
@@ -391,7 +391,7 @@ if "%PROJECT_CHOICE%"=="" (
     echo No project selected.
     exit /b 1
 )
-call set "PROJECT_SLUG=%%PROJECT_%PROJECT_CHOICE%%%"
+for %%N in (%PROJECT_CHOICE%) do set "PROJECT_SLUG=!PROJECT_%%N!"
 if "%PROJECT_SLUG%"=="" (
     echo Invalid project selection: %PROJECT_CHOICE%
     exit /b 1
@@ -416,3 +416,9 @@ if /I "%CLEAR_CONFIRM%"=="Y" (
     set "NO_CLEAR=NO_CLEAR"
 )
 exit /b 0
+
+:picker_failed
+echo.
+echo Project/chapter selection failed.
+pause
+exit /b 1
