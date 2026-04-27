@@ -1,5 +1,0 @@
-# Shot Index
-
-- `SH001` - Establishing Wide 1: Sneaking through the city perimeter (type=establishing_wide, target=5.5s, beat_ids=BT001, cast=1, env=thark_city_and_surroundings, prev=(none), next=SH002)
-- `SH002` - Establishing Wide 2: Arrival at the rendezvous point (type=establishing_wide, target=5.3s, beat_ids=BT002, cast=1, env=thark_city_and_surroundings, prev=SH001, next=SH003)
-- `SH003` - Reaction Closeup 3: Realization of failure (type=reaction_closeup, target=5.1s, beat_ids=BT003, cast=1, env=thark_city_and_surroundings, prev=SH002, next=(none))

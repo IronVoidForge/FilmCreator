@@ -1,5 +1,0 @@
-1. [SC001: Awakening and Gravity Discovery](#sc001)
-2. [SC002: The Incubator Observation](#sc002)
-3. [SC003: Confrontation with the Martian Cavalry](#sc003)
-4. [SC004: The Leap of Survival](#sc004)
-5. [SC005: Peace Offering and Departure](#sc005)

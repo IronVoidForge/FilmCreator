@@ -1,4 +1,0 @@
-- [SC001](#sc001) The Wilderness and the Discovery of the Factory
-- [SC002](#sc002) Inside the Atmosphere Factory: The Host's Deception
-- [SC003](#sc003) The Escape: Telepathic Breach
-- [SC004](#sc004) Arrival at the Ptor Farm and Transformation

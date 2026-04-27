@@ -1,5 +1,0 @@
-- [SC001](#sc001) The Battle and the Rescue
-- [SC002](#sc002) Political Maneuvering and Sarkoja's Flight
-- [SC003](#sc003) The Council Challenge and Duel
-- [SC004](#sc004) The Call to War: Planning the Raid on Zodanga
-- [SC005](#sc005) Infiltration of Zodanga

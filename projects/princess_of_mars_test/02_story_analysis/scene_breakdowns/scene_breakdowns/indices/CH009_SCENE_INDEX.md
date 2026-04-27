@@ -1,5 +1,0 @@
-- [SC001](#sc001) - The Warrior's Gift and Remodeling
-- [SC002](#sc002) - Combat Training in the Plaza
-- [SC003](#sc003) - Language Mastery and Eavesdropping
-- [SC004](#sc004) - The Revelation of the Red Prisoner
-- [SC005](#sc005) - Sola's Philosophical Defiance

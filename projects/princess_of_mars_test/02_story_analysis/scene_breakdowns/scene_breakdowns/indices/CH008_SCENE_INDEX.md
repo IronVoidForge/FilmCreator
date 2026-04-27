@@ -1,3 +1,0 @@
-- [SC001](#sc001) The Aerial Skirmish
-- [SC002](#sc002) The Drifting Pyre
-- [SC003](#sc003) The Encounter in the Plaza
