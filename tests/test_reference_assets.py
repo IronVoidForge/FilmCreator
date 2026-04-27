@@ -103,3 +103,76 @@ def test_register_approve_lock_updates_approved_reference_manifest(monkeypatch, 
     assert approved[0]["locked"] is True
     assert queue[0]["selected_candidate_id"] == candidate_id
     assert queue[0]["status"] == "locked"
+    assert approved[0]["metadata"]["status"] == "locked"
+    assert approved[0]["metadata"]["locked_fields"]["__artifact__"] is True
+
+
+def test_locked_approved_reference_survives_later_approval(monkeypatch, tmp_path: Path) -> None:
+    _set_projects_root(monkeypatch, tmp_path)
+    project_slug = "demo"
+    project_dir = common_module.PROJECTS_ROOT / project_slug
+    prompt_path = project_dir / "03_prompt_packages" / "prepared" / "characters" / "hero" / "bust_portrait_prompt.md"
+    prompt_path.parent.mkdir(parents=True, exist_ok=True)
+    prompt_path.write_text(
+        "\n".join(
+            [
+                "# Title",
+                "Hero Reference Prompt",
+                "",
+                "# ID",
+                "hero_bust_portrait_prompt",
+                "",
+                "# Purpose",
+                "Reference generation validation",
+                "",
+                "# Workflow Type",
+                "still.t2i.klein.distilled",
+                "",
+                "# Positive Prompt",
+                "cinematic portrait reference",
+                "",
+                "# Negative Prompt",
+                "blurry",
+                "",
+                "# Inputs",
+                "- subject_kind: character",
+                "- subject_id: hero",
+                "- source_artifact_ids: prompt_prep_index",
+                "- reference_mode: canonical_reference_generation",
+                "- variant_name: bust_portrait",
+                "- reuse_policy: reuse canonical visual canon",
+                "",
+                "# Continuity Notes",
+                "- keep continuity",
+                "",
+                "# Sources",
+                "- 03_prompt_packages/prepared/PROMPT_PREPARATION_INDEX.json",
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    request = make_reference_request(
+        asset_kind="character",
+        asset_id="hero",
+        variant_key="bust_portrait",
+        prompt_path=prompt_path,
+        priority="high",
+        warnings=[],
+    )
+    request["status"] = "prepared"
+    write_reference_queue(project_dir, "character", [request])
+
+    register_reference_candidate(project_slug, asset_kind="character", asset_id="hero", variant_key="bust_portrait", image_path="C:/tmp/hero_locked.png")
+    first_candidate_id = load_candidates(project_dir, "character", "hero")[0]["candidate_id"]
+    approve_reference_candidate(project_slug, asset_kind="character", candidate_id=first_candidate_id)
+    lock_reference_candidate(project_slug, asset_kind="character", candidate_id=first_candidate_id)
+
+    register_reference_candidate(project_slug, asset_kind="character", asset_id="hero", variant_key="bust_portrait", image_path="C:/tmp/hero_new.png")
+    second_candidate_id = load_candidates(project_dir, "character", "hero")[1]["candidate_id"]
+    approve_reference_candidate(project_slug, asset_kind="character", candidate_id=second_candidate_id)
+
+    approved = load_approved_manifest(project_dir, "character")
+    assert approved[0]["canonical_reference_candidate_id"] == first_candidate_id
+    assert approved[0]["canonical_reference_image"] == "C:/tmp/hero_locked.png"
+    assert approved[0]["locked"] is True

@@ -7,6 +7,14 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+from .artifact_lifecycle import (
+    ArtifactMetadata,
+    is_locked,
+    mark_stale,
+    metadata_sidecar_path,
+    read_artifact_sidecar,
+    write_artifact_with_metadata,
+)
 from .character_bible import _is_film_facing_character
 from .chapter_selection import any_chapter_matches, chapter_matches, parse_chapter_selector, normalize_chapter_id
 from .core.json_io import read_json, write_json
@@ -543,11 +551,61 @@ def _prompt_package_exists_with_same_content(path: Path, content: str) -> bool:
 
 
 def _write_prompt_package_if_changed(path: Path, package: PromptPackage, *, force: bool) -> bool:
+    return _write_prompt_package_if_changed_with_metadata(path, package, force=force, source_fingerprint=_fingerprint(package.to_manifest_dict()))
+
+
+def _write_prompt_package_if_changed_with_metadata(path: Path, package: PromptPackage, *, force: bool, source_fingerprint: str) -> bool:
     content = package.to_markdown()
+    existing_sidecar = read_artifact_sidecar(path)
+    existing_metadata = ArtifactMetadata.from_dict(existing_sidecar.get("metadata") if isinstance(existing_sidecar, dict) else None)
     if not force and _prompt_package_exists_with_same_content(path, content):
+        _write_prompt_package_metadata_sidecar(path, package, source_fingerprint=source_fingerprint, status=existing_metadata.status or "generated")
+        return False
+    if not force and path.exists() and is_locked(existing_metadata):
+        stale_metadata = mark_stale(existing_metadata, "prompt package content changed while artifact is locked")
+        _write_prompt_package_metadata_sidecar(path, package, source_fingerprint=source_fingerprint, metadata_override=stale_metadata)
         return False
     write_prompt_package(path, package)
+    _write_prompt_package_metadata_sidecar(path, package, source_fingerprint=source_fingerprint, status="generated")
     return True
+
+
+def _write_prompt_package_metadata_sidecar(
+    path: Path,
+    package: PromptPackage,
+    *,
+    source_fingerprint: str,
+    status: str | None = None,
+    metadata_override: ArtifactMetadata | None = None,
+) -> None:
+    sidecar_path = metadata_sidecar_path(path)
+    previous_payload = read_artifact_sidecar(path)
+    if metadata_override is not None:
+        payload = {
+            "artifact_id": package.prompt_id,
+            "artifact_type": "prompt_package",
+            "path": str(path),
+            "prompt_id": package.prompt_id,
+            "title": package.title,
+            "workflow_type": package.workflow_type,
+            "metadata": metadata_override.to_dict(),
+        }
+        write_json(sidecar_path, payload)
+        return
+    write_artifact_with_metadata(
+        sidecar_path,
+        {
+            "artifact_id": package.prompt_id,
+            "path": str(path),
+            "prompt_id": package.prompt_id,
+            "title": package.title,
+            "workflow_type": package.workflow_type,
+        },
+        artifact_type="prompt_package",
+        status=status or "generated",
+        source_fingerprint=source_fingerprint,
+        previous_payload=previous_payload,
+    )
 
 
 def _ensure_visual_fallbacks(project_slug: str, project_dir: Path) -> dict[str, Any]:
@@ -2185,10 +2243,11 @@ def run_prompt_preparation(
         if run_tracker is not None and run_tracker.is_item_completed(phase_name, package.prompt_id, fp) and path.exists():
             reused_count += 1
             return False
-        wrote = _write_prompt_package_if_changed(path, package, force=(force or run_tracker is not None))
+        wrote = _write_prompt_package_if_changed_with_metadata(path, package, force=(force or run_tracker is not None), source_fingerprint=fp)
         if wrote:
             synthesized_count += 1
             written_files.append(str(path))
+            written_files.append(str(metadata_sidecar_path(path)))
             if run_tracker is not None:
                 run_tracker.mark_item_completed(phase_name, package.prompt_id, fp, outputs=[str(path)])
         else:

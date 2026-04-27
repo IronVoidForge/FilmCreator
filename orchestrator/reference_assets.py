@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from .artifact_lifecycle import ArtifactMetadata, compute_source_fingerprint, is_locked, merge_preserving_locked_fields
 from .core.json_io import read_json, write_json
 from .prompt_package import parse_prompt_package
 from .scaffold import create_project
@@ -298,6 +299,16 @@ def register_reference_candidate(
         "review_notes": [],
         "created_at": utc_now(),
         "updated_at": utc_now(),
+        "metadata": _metadata_for_payload(
+            {
+                "candidate_id": candidate_id,
+                "asset_kind": kind,
+                "asset_id": normalized_asset_id,
+                "variant_key": normalized_variant,
+                "image_path": image_path,
+            },
+            status="generated",
+        ),
     }
     candidates.append(candidate)
     written = write_candidates(project_dir, kind, normalized_asset_id, candidates)
@@ -348,6 +359,20 @@ def set_candidate_state(
     if reason:
         notes.append(reason)
     candidate["review_notes"] = notes
+    candidate["metadata"] = _transition_metadata(
+        candidate.get("metadata"),
+        payload={
+            "candidate_id": str(candidate.get("candidate_id", "")),
+            "asset_kind": kind,
+            "asset_id": asset_id,
+            "variant_key": str(candidate.get("variant_key", "")),
+            "image_path": str(candidate.get("image_path", "")),
+            "approval_state": state,
+        },
+        status=state,
+        lock_artifact=(state == "locked"),
+        revision_note={"at_utc": utc_now(), "action": "set_candidate_state", "state": state, "reason": reason or ""},
+    )
     written = write_candidates(project_dir, kind, asset_id, candidates)
     queue = load_reference_queue(project_dir, kind)
     request = find_queue_entry(queue, asset_id, str(candidate.get("variant_key", "")))
@@ -385,23 +410,102 @@ def upsert_approved_reference(project_dir: Path, asset_kind: str, candidate: dic
             "usable_for_downstream": False,
             "review_notes": [],
             "updated_at": utc_now(),
+            "metadata": _metadata_for_payload({"asset_kind": kind, "asset_id": asset_id}, status="generated"),
         }
         approved.append(existing)
     if state in {"approved", "locked"}:
         image_path = str(candidate.get("image_path", ""))
+        incoming = {
+            "schema_version": REFERENCE_ASSET_SCHEMA_VERSION,
+            "asset_kind": kind,
+            "asset_id": asset_id,
+            "canonical_reference_candidate_id": str(existing.get("canonical_reference_candidate_id", "")),
+            "canonical_reference_image": str(existing.get("canonical_reference_image", "")),
+            "supporting_references": dict(existing.get("supporting_references", {})) if isinstance(existing.get("supporting_references", {}), dict) else {},
+            "locked": bool(existing.get("locked")),
+            "usable_for_downstream": bool(existing.get("usable_for_downstream")),
+            "review_notes": list(existing.get("review_notes", [])) if isinstance(existing.get("review_notes", []), list) else [],
+            "updated_at": utc_now(),
+        }
         if variant == canonical_variant(kind) or not existing.get("canonical_reference_candidate_id"):
-            existing["canonical_reference_candidate_id"] = str(candidate.get("candidate_id", ""))
-            existing["canonical_reference_image"] = image_path
+            incoming["canonical_reference_candidate_id"] = str(candidate.get("candidate_id", ""))
+            incoming["canonical_reference_image"] = image_path
         else:
-            supporting = existing.get("supporting_references", {})
+            supporting = incoming.get("supporting_references", {})
             if not isinstance(supporting, dict):
                 supporting = {}
             supporting[variant] = image_path
-            existing["supporting_references"] = supporting
-        existing["locked"] = bool(existing.get("locked")) or state == "locked"
-        existing["usable_for_downstream"] = bool(existing.get("canonical_reference_image")) and (bool(existing.get("locked")) or state == "approved")
-        existing["updated_at"] = utc_now()
+            incoming["supporting_references"] = supporting
+        incoming["locked"] = bool(existing.get("locked")) or state == "locked"
+        incoming["usable_for_downstream"] = bool(incoming.get("canonical_reference_image")) and (bool(incoming.get("locked")) or state == "approved")
+        incoming["metadata"] = _transition_metadata(
+            existing.get("metadata"),
+            payload={
+                "asset_kind": kind,
+                "asset_id": asset_id,
+                "canonical_reference_candidate_id": incoming.get("canonical_reference_candidate_id", ""),
+                "canonical_reference_image": incoming.get("canonical_reference_image", ""),
+                "supporting_references": incoming.get("supporting_references", {}),
+                "locked": incoming.get("locked", False),
+                "usable_for_downstream": incoming.get("usable_for_downstream", False),
+            },
+            status=state,
+            lock_artifact=(state == "locked"),
+            extra_locked_fields={
+                "canonical_reference_candidate_id": state == "locked",
+                "canonical_reference_image": state == "locked",
+                "supporting_references": state == "locked",
+                "usable_for_downstream": state == "locked",
+            },
+            revision_note={"at_utc": utc_now(), "action": "upsert_approved_reference", "state": state, "candidate_id": str(candidate.get("candidate_id", ""))},
+        )
+        merged = merge_preserving_locked_fields(existing, incoming)
+        existing.clear()
+        existing.update(merged)
     return approved
+
+
+def _metadata_for_payload(payload: dict[str, Any], *, status: str, locked_fields: dict[str, bool] | None = None, manual_overrides: dict[str, Any] | None = None) -> dict[str, Any]:
+    metadata = ArtifactMetadata(
+        status=status,
+        created_at_utc=utc_now(),
+        updated_at_utc=utc_now(),
+        source_fingerprint=compute_source_fingerprint(payload),
+        locked_fields=dict(locked_fields or {}),
+        manual_overrides=dict(manual_overrides or {}),
+        revision_history=[],
+    )
+    return metadata.to_dict()
+
+
+def _transition_metadata(
+    existing_metadata: dict[str, Any] | None,
+    *,
+    payload: dict[str, Any],
+    status: str,
+    lock_artifact: bool = False,
+    extra_locked_fields: dict[str, bool] | None = None,
+    revision_note: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    previous = ArtifactMetadata.from_dict(existing_metadata, default_status=status)
+    locked_fields = dict(previous.locked_fields)
+    if lock_artifact:
+        locked_fields["__artifact__"] = True
+    for key, value in (extra_locked_fields or {}).items():
+        if value:
+            locked_fields[str(key)] = True
+    history = list(previous.revision_history)
+    if revision_note:
+        history.append(dict(revision_note))
+    return ArtifactMetadata(
+        status=previous.status if is_locked(previous) and status != "locked" else status,
+        created_at_utc=previous.created_at_utc,
+        updated_at_utc=utc_now(),
+        source_fingerprint=compute_source_fingerprint(payload),
+        locked_fields=locked_fields,
+        manual_overrides=dict(previous.manual_overrides),
+        revision_history=history,
+    ).to_dict()
 
 
 def summarize_reference_phase(

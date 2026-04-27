@@ -1,4 +1,4 @@
-﻿Status: 25%
+﻿Status: 60%
 
 # Artifact Lifecycle and Reuse
 
@@ -20,6 +20,14 @@ It applies to:
 - generated media assets
 
 Without this layer, reruns become destructive and the pipeline becomes difficult to trust.
+
+Implementation note (2026-04-26):
+
+- `orchestrator/artifact_lifecycle.py` now provides the first shared lifecycle core.
+- Approved reference assets are wired as the first protected JSON artifact type.
+- Locked approved references now preserve their canonical selection during ordinary later approvals.
+- Prepared prompt packages now write lifecycle sidecars and locked prompt packages survive normal reruns without markdown overwrite.
+- Bibles, contracts, timelines, and stale-only rebuild orchestration are still pending broader adoption.
 
 ---
 
